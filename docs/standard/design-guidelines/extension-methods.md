@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
-ms.openlocfilehash: 6fedd41e901035290995d7ece1b5aa23e76f345e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621755"
 ---
 # <a name="extension-methods"></a>扩展方法
 扩展方法是一种语言特性，允许使用实例方法调用语法来调用静态方法。 这些方法必须至少使用一个参数，该参数表示方法要操作的实例。  
@@ -44,9 +44,9 @@ ms.locfileid: "53148284"
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [成员设计准则](../../../docs/standard/design-guidelines/member.md)  
+- [成员设计准则](../../../docs/standard/design-guidelines/member.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

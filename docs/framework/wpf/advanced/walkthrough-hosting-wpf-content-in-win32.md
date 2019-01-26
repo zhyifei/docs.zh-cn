@@ -1,19 +1,19 @@
 ---
-title: 演练：在 Win32 中承载 WPF 内容
+title: 演练：Win32 中承载 WPF 内容
 ms.date: 03/30/2017
 dev_langs:
 - cpp
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 692105d464c005109cbf1ff704045efa7d1e9173
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c56ef33d1a44b263466a293b06aa988885b2008d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725592"
 ---
-# <a name="walkthrough-hosting-wpf-content-in-win32"></a>演练：在 Win32 中承载 WPF 内容
+# <a name="walkthrough-hosting-wpf-content-in-win32"></a>演练：Win32 中承载 WPF 内容
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当你对 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 代码有大量投入时，向应用程序添加 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能（而不是重写原始代码）可能更有效。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一个简单的机制，用于托管[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的内容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口。  
   
  本教程介绍如何编写示例应用程序，[在 Win32 窗口示例中承载 WPF 内容](https://go.microsoft.com/fwlink/?LinkID=160004)，则该主机[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的内容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口。 你可以扩展此示例，使其可托管任何 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口。 由于涉及混合托管代码和非托管代码，应用程序是在 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 中编写的。  
@@ -180,7 +180,7 @@ ms.locfileid: "48842796"
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>布局
- [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中的元素[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容包含的五个<xref:System.Windows.Controls.TextBox>控制，与关联<xref:System.Windows.Controls.Label>控件： 名称、 地址、 城市、 州和 Zip。 还有两个<xref:System.Windows.Controls.Button>控件，**确定**和**取消**
+ [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中的元素[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容包含的五个<xref:System.Windows.Controls.TextBox>控制，与关联<xref:System.Windows.Controls.Label>控件：名称、 地址、 城市、 州和 Zip。 还有两个<xref:System.Windows.Controls.Button>控件，**确定**和**取消**
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容在 `WPFPage` 类中实现。 布局通过 <xref:System.Windows.Controls.Grid> 布局元素进行处理。 该类继承自实际使其成为 <xref:System.Windows.Controls.Grid> 内容根元素的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。
 

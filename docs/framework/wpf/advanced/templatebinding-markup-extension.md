@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 7c076172424baab4553a277baab2faca634c1e87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3ae17dc98137bd417d2468fb0415fb2078acf20f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686018"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 标记扩展
 连接某一控件模板中的属性值，使之成为模板化控件上另一个属性的值。  
@@ -60,11 +60,11 @@ ms.locfileid: "43512822"
   
  `TemplateBinding` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 在 XAML 使用的所有标记扩展`{`和`}`约定所依据的 XAML 处理器识别标记扩展必须处理该属性其特性语法中的字符。 有关详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Style>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [RelativeSource 标记扩展](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
- [绑定标记扩展](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Style>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [RelativeSource 标记扩展](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)
+- [绑定标记扩展](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)

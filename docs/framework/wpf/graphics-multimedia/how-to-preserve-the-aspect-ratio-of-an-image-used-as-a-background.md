@@ -6,12 +6,12 @@ helpviewer_keywords:
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-ms.openlocfilehash: 8cf0a3804172b90af33318299d60aa6c7eaa53f0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f8133ac4fcd01e08f41861b7a441e9ff1325f6ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698318"
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>如何：保持背景图像的长宽比
 此示例演示如何使用<xref:System.Windows.Media.TileBrush.Stretch%2A>属性的<xref:System.Windows.Media.ImageBrush>为了保持图像的纵横比。  
@@ -35,10 +35,10 @@ ms.locfileid: "43863081"
   
  请注意，<xref:System.Windows.Media.TileBrush.Stretch%2A>属性适用于其他的行为相同<xref:System.Windows.Media.TileBrush>对象，也就是说，对于<xref:System.Windows.Media.DrawingBrush>和<xref:System.Windows.Media.VisualBrush>。 有关详细信息<xref:System.Windows.Media.ImageBrush>和其他<xref:System.Windows.Media.TileBrush>对象，请参阅[使用图像、 绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
   
- 另请注意，尽管<xref:System.Windows.Media.TileBrush.Stretch%2A>属性将显示以指定如何<xref:System.Windows.Media.TileBrush>内容将进行拉伸以适合其输出区域，实际上指定了<xref:System.Windows.Media.TileBrush>内容拉伸以填充其基本磁贴。 有关详细信息，请参阅<xref:System.Windows.Media.TileBrush>。  
+ 另请注意，尽管<xref:System.Windows.Media.TileBrush.Stretch%2A>属性将显示以指定如何<xref:System.Windows.Media.TileBrush>内容将进行拉伸以适合其输出区域，实际上指定了<xref:System.Windows.Media.TileBrush>内容拉伸以填充其基本磁贴。 有关详细信息，请参阅 <xref:System.Windows.Media.TileBrush>。  
   
  此代码示例是为提供一个更大示例的一部分<xref:System.Windows.Media.ImageBrush>类。 有关完整示例，请参阅[ImageBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160005)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.TileBrush>  
- [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.TileBrush>
+- [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

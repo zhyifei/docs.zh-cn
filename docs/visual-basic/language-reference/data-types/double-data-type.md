@@ -19,12 +19,12 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 456383dd2f38e96a8ff18472ff44c65ba7b4a341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626476"
 ---
 # <a name="double-data-type-visual-basic"></a>Double 数据类型 (Visual Basic)
 保存有符号 IEEE 64 位 （8 字节） 双精度浮点数，范围为从-1.79769313486231570 e + 308 到-4.94065645841246544 e-324 负值，从 4.94065645841246544 e-324 1.79769313486231570 e + 308 到正值。 双精度的数字存储一个实数的近似值。  
@@ -55,13 +55,13 @@ ms.locfileid: "44180223"
   
 -   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.Double?displayProperty=nameWithType> 结构。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Double?displayProperty=nameWithType>  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [Decimal 数据类型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
- [Single 数据类型](../../../visual-basic/language-reference/data-types/single-data-type.md)  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [数据类型疑难解答](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [类型字符](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Double?displayProperty=nameWithType>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [Decimal 数据类型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
+- [Single 数据类型](../../../visual-basic/language-reference/data-types/single-data-type.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [数据类型疑难解答](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [类型字符](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

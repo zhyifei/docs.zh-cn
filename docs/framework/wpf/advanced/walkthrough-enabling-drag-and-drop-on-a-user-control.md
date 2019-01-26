@@ -1,5 +1,5 @@
 ---
-title: 演练：对用户控件启用拖放功能
+title: 演练：启用拖放用户控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 7ca4987da8422c00e3fc34ff4605ddd13e4091b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ffaab4115edec1fc0115b27b8904970854f79d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600669"
 ---
-# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>演练：对用户控件启用拖放功能
+# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>演练：启用拖放用户控件
 
 本演练演示如何创建可在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中参与拖放数据传输的自定义用户控件。
 
@@ -33,7 +33,7 @@ ms.locfileid: "47193698"
 
 ## <a name="prerequisites"></a>系统必备
 
-需要 Visual Studio 来完成本演练。
+若要完成本演练，必须具有 Visual Studio。
 
 ## <a name="create-the-application-project"></a>创建应用程序项目
  在本部分中，您将创建应用程序基础结构，其中包括主页，其中两个面板和<xref:System.Windows.Controls.TextBox>。

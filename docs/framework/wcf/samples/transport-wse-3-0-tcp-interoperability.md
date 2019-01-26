@@ -1,15 +1,15 @@
 ---
-title: 传输：WSE 3.0 TCP 互操作性
+title: 传输:WSE 3.0 TCP 互操作性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: b727da998736944afd23f7dcfbf45a1f6049d1d0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 870a0de493a4e60404d11115de58735e5fbb968f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653003"
 ---
-# <a name="transport-wse-30-tcp-interoperability"></a>传输：WSE 3.0 TCP 互操作性
+# <a name="transport-wse-30-tcp-interoperability"></a>传输:WSE 3.0 TCP 互操作性
 WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自定义 Windows Communication Foundation (WCF) 传输。 还演示如何通过网络，使用通道层的扩展性与已经过部署的现有系统进行交互。 以下步骤演示如何生成此自定义 WCF 传输：  
   
 1.  从 TCP 套接字开始，创建 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的客户端和服务器实现以使用 DIME 组帧来描述消息边界。  
@@ -23,7 +23,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何实现 TCP 双工会话作为自
 5.  添加一个用来向通道堆栈中添加自定义传输的绑定元素。 有关详细信息，请参阅 [添加绑定元素]。  
   
 ## <a name="creating-iduplexsessionchannel"></a>创建 IDuplexSessionChannel  
- 编写 WSE 3.0 TCP 互操作性传输的第一步是在 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的顶部创建 <xref:System.Net.Sockets.Socket> 的实现。 `WseTcpDuplexSessionChannel` 派生自 <xref:System.ServiceModel.Channels.ChannelBase>。 消息的发送逻辑主要由以下两个部分组成：(1) 将消息编码为字节；(2) 对这些字节进行组帧并通过网络发送它们。  
+ 编写 WSE 3.0 TCP 互操作性传输的第一步是在 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的顶部创建 <xref:System.Net.Sockets.Socket> 的实现。 `WseTcpDuplexSessionChannel` 派生自 <xref:System.ServiceModel.Channels.ChannelBase>。 发送消息的逻辑包含两个主要部分：（1） 将消息编码为字节，和 (2) 这些字节进行组帧并将它们发送在网络上。  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   

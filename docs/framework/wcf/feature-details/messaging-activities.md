@@ -2,12 +2,12 @@
 title: 消息传递活动
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-ms.openlocfilehash: 3391f7442ef4922a847a58b6316eb177cbcfbd5e
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 839e9225db7b5d76cf05f148811634389e81502a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086327"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617624"
 ---
 # <a name="messaging-activities"></a>消息传递活动
 消息传递活动使工作流能够发送和接收 WCF 消息。 通过将消息传递活动添加到工作流，您可以对任意复杂的消息交换模式 (MEP) 进行建模。

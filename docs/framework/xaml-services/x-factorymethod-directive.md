@@ -6,12 +6,12 @@ helpviewer_keywords:
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-ms.openlocfilehash: 436caa9b93467dcf2a0763bcc0962a2beb722315
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2d5656e6328e1902bddcda3d1ac4b4eabb148d28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731356"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod 指令
 指定应使用 XAML 处理器正在解析其后备类型后初始化对象的构造函数以外的方法。  
@@ -56,5 +56,5 @@ ms.locfileid: "47397525"
   
  `x:FactoryMethod` 如某个元素必须位于任何其他属性元素之前，必须在任何之前`x:Arguments`还作为元素，提供，并且必须在之前的任何内容/内部文本/初始化文本。  
   
-## <a name="see-also"></a>请参阅  
- [x:Arguments 指令](../../../docs/framework/xaml-services/x-arguments-directive.md)
+## <a name="see-also"></a>请参阅
+- [x:Arguments 指令](../../../docs/framework/xaml-services/x-arguments-directive.md)

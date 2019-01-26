@@ -4,16 +4,16 @@ description: Azure 事件网格是可靠事件交付和支付每个事件模型�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143657"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145861"
 ---
 # <a name="event-grid"></a>事件网格
 
-[Azure 事件网格](/azure-event-grid/overview)为基于事件的应用程序提供无服务器基础结构。 可以从任何源发布到事件网格，并使用从任何平台的消息。 事件网格还提供来自 Azure 资源，以简化您的应用程序与集成的事件的内置支持。 例如，您可以订阅 blob 存储事件，以在文件上传时通知您的应用程序。 你的应用程序然后可以将发布供其他云或本地应用程序的自定义事件网格消息。 事件网格旨在可靠地处理很大的规模。 获取发布和订阅消息，而不必设置必要的基础结构的开销的优势。
+[Azure 事件网格](/azure/event-grid/overview)为基于事件的应用程序提供无服务器基础结构。 可以从任何源发布到事件网格，并使用从任何平台的消息。 事件网格还提供来自 Azure 资源，以简化您的应用程序与集成的事件的内置支持。 例如，您可以订阅 blob 存储事件，以在文件上传时通知您的应用程序。 你的应用程序然后可以将发布供其他云或本地应用程序的自定义事件网格消息。 事件网格旨在可靠地处理很大的规模。 获取发布和订阅消息，而不必设置必要的基础结构的开销的优势。
 
 ![事件网格徽标](./media/event-grid-logo.png)
 

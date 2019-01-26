@@ -2,12 +2,12 @@
 title: 选择消息编码器
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44248925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538422"
 ---
 # <a name="choosing-a-message-encoder"></a>选择消息编码器
 本主题讨论在包含 Windows Communication Foundation (WCF) 中的消息编码器之间选择条件： 二进制、 文本和消息传输优化机制 (MTOM)。  
@@ -41,7 +41,7 @@ ms.locfileid: "44248925"
 |第三方工具支持|编码的支持范围包括开发和诊断。 对于用于处理以 POX 格式编码的消息的库和工具包，第三方开发人员已经进行了很大的投入。|文本 (POX)|  
 |互操作性|这一因素是指 WCF 编码器能够与非 WCF 服务进行互操作。|Text<br /><br /> MTOM（部分）|  
   
-注意：使用二进制编码器时，在创建 XMLReader 时使用 IgnoreWhitespace 设置不会有任何影响。  例如，如果您在服务操作内执行以下操作：  
+注意:当使用二进制编码器，创建 XMLReader 时使用 IgnoreWhitespace 设置不会影响。  例如，如果您在服务操作内执行以下操作：  
 
 ```csharp
 public void OperationContract(XElement input)
@@ -84,4 +84,4 @@ IgnoreWhitespace 设置被忽略。
   
 ## <a name="see-also"></a>请参阅
 
-[绑定](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [绑定](../../../../docs/framework/wcf/feature-details/bindings.md)

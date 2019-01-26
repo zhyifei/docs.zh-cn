@@ -4,20 +4,20 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 31f4807c956a8b4fb9381145f8e9b5eaffafe698
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b8f19fc55437d3a3b89c8a131c47813751b4d8bc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149492"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147832"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>使用枚举类（而不是枚举类型）
 
-[枚举](../../../../docs/csharp/language-reference/keywords/enum.md)（或枚举类型）是围绕整型类型的精简语言包装器。 建议在存储一组封闭值中的一个值时，限制对它们的使用。 基于大小（小、中、大）的分类是一个很好的示例。 对控制流或更强健的抽象使用枚举可成为[代码气味](http://deviq.com/code-smells/)。 这种使用方式会使代码很脆弱，并且会使许多控制流语句检查枚举值。
+[枚举](../../../../docs/csharp/language-reference/keywords/enum.md)（或枚举类型）是围绕整型类型的精简语言包装器。 建议在存储一组封闭值中的一个值时，限制对它们的使用。 基于大小（小、中、大）的分类是一个很好的示例。 对控制流或更强健的抽象使用枚举可成为[代码气味](https://deviq.com/code-smells/)。 这种使用方式会使代码很脆弱，并且会使许多控制流语句检查枚举值。
 
 相反，你可以创建枚举类，启动面向对象语言的所有丰富功能。
 
-但这不是关键点，在许多情况下，为了简便起见，如果喜欢，仍然可以使用常规[枚举类型](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/enum)。 总之，枚举类的使用与业务相关概念的关系更密切。
+但这不是关键点，在许多情况下，为了简便起见，如果喜欢，仍然可以使用常规[枚举类型](../../../csharp/language-reference/keywords/enum.md)。 总之，枚举类的使用与业务相关概念的关系更密切。
 
 ## <a name="implement-an-enumeration-base-class"></a>实现枚举基类
 

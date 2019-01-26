@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f37bbe7d9e76d76bfe4c0f80b6f2343a5598bbfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec7e303e5145e16f4c17074d557410ffe4521c20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549832"
 ---
 # <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a>ICLRErrorReportingManager::GetBucketParametersForCurrentException 方法
-获取在调用线程上的当前异常的 Watson bucket。  
+获取调用线程上的当前异常的 Watson 存储桶。  
   
- A*存储桶*是与相同的代码缺陷相关的错误数据的集合。 *Watson*指一套用于收集和分析与异常关联的数据的技术。  
+ 一个*存储桶*是与相同的代码缺陷相关的错误数据的集合。 *Watson*指一组技术，用于收集和分析与异常关联的数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,16 +39,16 @@ HRESULT GetBucketParametersForCurrentException(
   
 #### <a name="parameters"></a>参数  
  `pParams`  
- [out]指向的指针[BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md)包含异常的错误数据的结构。  
+ [out]一个指向[BucketParameters](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md)结构，其中包含异常的错误数据。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRErrorReportingManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICLRErrorReportingManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)

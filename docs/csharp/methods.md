@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7ddc79a7d9864ecd7834cb75e23c9ad3a4320a91
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127441"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415502"
 ---
 # <a name="methods"></a>方法 #
 
@@ -197,10 +197,7 @@ C# 中的所有类型不是值类型就是引用类型。 有关内置值类型�
 public (string, string, string, int) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -208,8 +205,7 @@ public (string, string, string, int) GetPersonalInfo(string id)
 
 ```csharp
 var person = GetPersonalInfo("111111111")
-if (person != null)
-   Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
+Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
 还可向元组类型定义中的元组元素分配名称。 下面的示例展示 `GetPersonalInfo` 方法的替代版本，该方法使用命名的元素：
@@ -218,10 +214,7 @@ if (person != null)
 public (string FName, string MName, string LName, int Age) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -229,15 +222,14 @@ public (string FName, string MName, string LName, int Age) GetPersonalInfo(strin
 
 ```csharp
 var person = GetPersonalInfo("111111111");
-if (person != null)
-   Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
+Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 ```
 
 如果将数组作为自变量传递给一个方法，并修改各个元素的值，则该方法不一定会返回该数组，尽管选择这么操作的原因是为了实现更好的样式或功能性的值流。  这是因为 C# 会按值传递所有引用类型，而数组引用的值是指向该数组的指针。 在下面的示例中，引用该数组的任何代码都能观察到在 `DoubleValues` 方法中对 `values` 数组内容的更改。
 
 [!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
 
- <a name="exten"></a>
+ <a name="extension"></a>
  ## <a name="extension-methods"></a>扩展方法 ##
 
 通常，可以通过两种方式向现有类型添加方法：

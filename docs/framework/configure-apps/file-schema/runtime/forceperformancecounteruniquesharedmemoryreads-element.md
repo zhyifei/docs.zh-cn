@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b53debd8f71bddb353ff7709decf0142c339e5d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b8ae2c87a135c8ef9a43b6d11a62b833ef43c9a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680996"
 ---
 # <a name="ltforceperformancecounteruniquesharedmemoryreadsgt-element"></a>&lt;forcePerformanceCounterUniqueSharedMemoryReads&gt;元素
 指定 PerfCounter.dll 是否使用 .NET Framework 版本 1.1 应用程序中的 CategoryOptions 注册表设置，以确定是否加载来自特定于类别的共享内存或全局内存的性能计数器数据。  
   
  \<configuration>  
 \<运行时 >  
-\<forcePerformanceCounterUniqueSharedMemoryReads >  
+\<forcePerformanceCounterUniqueSharedMemoryReads>  
   
 ## <a name="syntax"></a>语法  
   
@@ -79,6 +79,6 @@ enabled="true|false"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

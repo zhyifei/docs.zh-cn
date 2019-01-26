@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 84c5aee8d2bc7d31ebcfee98930d9a0847c527d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a738d52cfb01fff1cb21d0e6ebb8f1b7b28d57f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695762"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>如何：绑定到 Web 服务
 此示例演示如何将绑定到由 Web 服务方法调用返回的对象。  
@@ -45,7 +45,7 @@ ms.locfileid: "47397080"
   
  有关结构的信息**getContentResponse**，请参阅[内容服务文档](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。  
   
-## <a name="see-also"></a>请参阅  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [让数据可供 XAML 中的绑定使用](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)
+## <a name="see-also"></a>请参阅
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)
+- [让数据可供 XAML 中的绑定使用](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)

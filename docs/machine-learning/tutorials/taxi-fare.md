@@ -3,15 +3,15 @@ title: 在 ML.NET 中使用回归学习器预测纽约出租车费用
 description: 在 ML.NET 中使用回归学习器预测费用。
 author: aditidugar
 ms.author: johalex
-ms.date: 11/06/2018
+ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 36da24f0cd2d2b9c4884101d97026307174f4130
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b17b4e31a60d6eaf432577281004bcf2c7ca1da2
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236344"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333780"
 ---
 # <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>教程：在 ML.NET 中使用回归学习器预测纽约出租车费用
 
@@ -90,23 +90,25 @@ ms.locfileid: "53236344"
 
 [!code-csharp[DefineTaxiTrip](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
-`TaxiTrip` 是输入数据类且具有针对每个数据集列的定义。 使用 <xref:Microsoft.ML.Runtime.Api.ColumnAttribute> 属性在数据集中指定源列的索引。
+`TaxiTrip` 是输入数据类且具有针对每个数据集列的定义。 使用 <xref:Microsoft.ML.Data.ColumnAttribute> 属性在数据集中指定源列的索引。
 
-`TaxiTripFarePrediction` 类表示预测的结果。 它应用了单个浮动 `FareAmount` 字段，附带 `Score` <xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute> 属性。 对于回归任务，“分数”列包含预测的标签值。
+`TaxiTripFarePrediction` 类表示预测的结果。 它应用了单个浮动 `FareAmount` 字段，附带 `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> 属性。 对于回归任务，“分数”列包含预测的标签值。
 
 > [!NOTE]
 > 使用 `float` 类型来表示输入和预测数据类中的浮点值。
 
 ## <a name="define-data-and-model-paths"></a>定义数据和模型路径
 
-将以下附加的 `using` 语句添加到“Program.cs”文件顶部：[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
+将以下附加的 `using` 语句添加到“Program.cs”文件顶部：
+
+[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
 需要创建三个字段，以保存具有数据集的文件的路径以及用于保存模型的文件的路径，以及一个 `TextLoader` 全局变量：
 
 * `_trainDataPath` 包含具有用于定型模型的数据集的文件的路径。
 * `_testDataPath` 包含具有用于评估模型的数据集的文件的路径。
 * `_modelPath` 包含用于存储定型模型的文件的路径。
-* `_textLoader` 是用于加载和转换数据集的 <xref:Microsoft.ML.Runtime.Data.TextLoader>。
+* `_textLoader` 是用于加载和转换数据集的 <xref:Microsoft.ML.Data.TextLoader>。
 
 将以下代码添加到 `Main` 方法正上方，以指定这些路径和 `_textLoader` 变量：
 
@@ -120,9 +122,9 @@ ms.locfileid: "53236344"
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
 
-下一步，为设置数据加载，请初始化 `_textLoader` 全局变量以便重用它。  请注意，我们将使用 `TextReader`。 当使用 `TextReader` 创建 `TextLoader` 时，请传入需要的上下文和启用自定义的 <xref:Microsoft.ML.Runtime.Data.TextLoader.Arguments> 类。 通过将包含所有列名及其类型的 <xref:Microsoft.ML.Runtime.Data.TextLoader.Column> 对象数组传递给 `TextReader` 来指定数据模式。 我们以前在创建 `TaxiTrip` 类时定义了数据模式。
+下一步，为设置数据加载，请初始化 `_textLoader` 全局变量以便重用它。  请注意，我们将使用 `TextReader`。 当使用 `TextReader` 创建 `TextLoader` 时，请传入需要的上下文和启用自定义的 <xref:Microsoft.ML.Data.TextLoader.Arguments> 类。 通过将包含所有列名及其类型的 <xref:Microsoft.ML.Data.TextLoader.Column> 对象数组传递给 `TextReader` 来指定数据模式。 我们以前在创建 `TaxiTrip` 类时定义了数据模式。
 
-`TextReader` 类返回完全初始化的 <xref:Microsoft.ML.Runtime.Data.TextLoader>  
+`TextReader` 类返回完全初始化的 <xref:Microsoft.ML.Data.TextLoader>  
 
 若要初始化 `_textLoader` 全局变量以将其重复用于所需的数据集，请在 `mlContext` 初始化后添加以下代码：
 
@@ -153,7 +155,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>加载和转换数据
 
-我们将使用带有 `dataPath` 参数的 `_textLoader` 全局变量加载数据。 它将返回 <xref:Microsoft.ML.Runtime.Data.IDataView>。 作为转换的输入和输出，`DataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
+我们将使用带有 `dataPath` 参数的 `_textLoader` 全局变量加载数据。 它将返回 <xref:Microsoft.ML.Data.IDataView>。 作为转换的输入和输出，`DataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
 
 在 ML.NET 中，数据类似于 SQL 视图。 它是异源数据，会延迟计算并进行架构化。 该对象是管道的第一部分，并加载数据。 在本教程中，它会加载一个包含出租车行程信息的数据集，这些信息有助于预测费用。 这用于创建模型并对其进行定型。
 
@@ -187,7 +189,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="train-the-model"></a>定型模型
 
-最后一步是定型模型。 根据已加载和转换的数据集定型模型 <xref:Microsoft.ML.Data.TransformerChain>。 一旦定义了估算器，我们将使用 <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> 定型模型，同时提供已经加载的定型数据。 这将返回要用于预测的模型。 `pipeline.Fit()` 定型管道，并返回基于传入的 `DataView` 的 `Transformer`。 在发生这种情况之前不会执行此试验。
+最后一步是定型模型。 根据已加载和转换的数据集定型模型 <xref:Microsoft.ML.Data.TransformerChain>。 一旦定义了估算器，我们将使用 <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> 定型模型，同时提供已经加载的定型数据。 这将返回要用于预测的模型。 `pipeline.Fit()` 定型管道，并返回基于传入的 `DataView` 的 `Transformer`。 在发生这种情况之前不会执行此试验。
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
 
@@ -214,7 +216,7 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 
 * 将模型保存为 .zip 文件。
 
-我们需要创建一个方法来保存模型，以便它可以在其他应用程序中重用和使用。 `ITransformer` 有一个在 `_modelPath` 全局字段中采用的 <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.Runtime.IHostEnvironment,System.IO.Stream)> 方法和一个 <xref:System.IO.Stream> 方法。 由于我们想将其保存为 zip 文件，我们将在调用 `SaveTo` 方法之前立即创建 `FileStream`。 将以下代码作为下一行添加到 `SaveModelAsFile` 方法中：
+我们需要创建一个方法来保存模型，以便它可以在其他应用程序中重用和使用。 `ITransformer` 有一个在 `_modelPath` 全局字段中采用的 <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> 方法和一个 <xref:System.IO.Stream> 方法。 由于我们想将其保存为 zip 文件，我们将在调用 `SaveTo` 方法之前立即创建 `FileStream`。 将以下代码作为下一行添加到 `SaveModelAsFile` 方法中：
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#13 "Add the SaveTo Method")]
 
@@ -255,7 +257,7 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 [!code-csharp[PredictWithTransformer](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 
-`RegressionContext.Evaluate` 方法使用指定数据集计算 `PredictionModel` 的质量指标。 它返回一个 <xref:Microsoft.ML.Runtime.Data.RegressionEvaluator.Result> 对象，其中包含由回归计算器计算出的总体指标。 若要显示这些指标来确定模型质量，需要先获取指标。 将以下代码作为下一行添加到 `Evaluate` 方法中：
+`RegressionContext.Evaluate` 方法使用指定数据集计算 `PredictionModel` 的质量指标。 它返回一个 <xref:Microsoft.ML.Data.RegressionMetrics> 对象，其中包含由回归计算器计算出的总体指标。 若要显示这些指标来确定模型质量，需要先获取指标。 将以下代码作为下一行添加到 `Evaluate` 方法中：
 
 [!code-csharp[ComputeMetrics](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Compute Metrics")]
 
@@ -305,15 +307,15 @@ private static void TestSinglePrediction(MLContext mlContext)
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#21 "Load the model")]
 
-虽然 `model` 是对多行数据进行操作的 `transformer`，但是一个非常常见的生产场景是，需要对单个示例进行预测。 <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> 是从 `MakePredictionFunction` 方法返回的包装器。 让我们添加以下代码来创建 `PredictionFunction`，作为 `Predict` 方法中的第一行：
+虽然 `model` 是对多行数据进行操作的 `transformer`，但是一个非常常见的生产场景是，需要对单个示例进行预测。 <xref:Microsoft.ML.PredictionEngine%602> 是从 `CreatePredictionEngine` 方法返回的包装器。 让我们添加以下代码来创建 `PredictionEngine`，作为 `Predict` 方法中的第一行：
 
-[!code-csharp[MakePredictionFunction](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
+[!code-csharp[MakePredictionEngine](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
   
 本教程使用此类中的一个测试行程。 稍后可以添加其他方案，以尝试使用此模型。 通过创建一个 `TaxiTrip` 实例，在 `Predict` 方法中添加一个行程来测试定型模型的成本预测：
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
- 我们可以使用它根据出租车行程数据的单个实例来预测费用。 要获得预测，请对数据使用 <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602.Predict(%600)>。 请注意，输入数据是一个字符串，且模型包含特征化。 管道在定型和预测期间同步。 不必专门为预测编写预处理/特征化代码，并且相同 API 负责批处理和一次性预测。
+ 我们可以使用它根据出租车行程数据的单个实例来预测费用。 要获得预测，请对数据使用 <xref:Microsoft.ML.PredictionEngine%602.Predict%2A>。 请注意，输入数据是一个字符串，且模型包含特征化。 管道在定型和预测期间同步。 不必专门为预测编写预处理/特征化代码，并且相同 API 负责批处理和一次性预测。
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 

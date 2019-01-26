@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: 7ae99bec5797591e53c6c77f5d9f88589352104c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b3a486cb886e8f39081f30a2849e2d14573cf5e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676336"
 ---
 # <a name="mywebservices-object"></a>My.WebServices 对象
 提供用于创建和访问当前项目所引用的每个 XML Web 服务的单个实例的属性。  
@@ -24,7 +24,7 @@ ms.locfileid: "43862391"
   
  对象和其属性不适用于 Web 应用程序。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  每个属性`My.WebServices`对象提供对当前项目所引用的 Web 服务的实例访问。 属性的名称访问该属性，Web 服务的名称相同，属性类型是 Web 服务的类型相同。  
   
 > [!NOTE]
@@ -62,7 +62,7 @@ ms.locfileid: "43862391"
 |Windows 服务|**是**|  
 |网站|否|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>  
- <xref:System.ArgumentException>  
- [访问应用程序 Web 服务](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>
+- <xref:System.ArgumentException>
+- [访问应用程序 Web 服务](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)

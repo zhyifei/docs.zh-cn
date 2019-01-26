@@ -3,12 +3,12 @@ title: 使用 XML 注释来记录代码
 description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 70da976861a9bca024d41dd329dc7be043d67c94
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129658"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151002"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 注释来记录代码
 
@@ -136,7 +136,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 ### <a name="ltparamgt"></a>&lt;param&gt;
 
-使用 `<param>` 标记来描述方法的参数。 下面是关于双 `Add` 方法的示例：标记所描述的参数在**必需**的 `name` 属性中指定。
+使用 `<param>` 标记来描述方法的参数。 以下是关于双 `Add` 方法的示例：标记描述的参数在所需的 `name` 属性中指定。
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -205,7 +205,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 ### <a name="user-defined-tags"></a>用户定义的标记
 
 上述所有标记均表示由 C# 编译器识别的标记。 但用户可随意定义自己的标记。
-Sandcastle 等工具支持其他标记，如 [`<event>`](http://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)、 [`<note>`](http://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)，甚至支持[编制命名空间文档](http://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)。
+Sandcastle 等工具支持其他标记，如 [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)、 [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)，甚至支持[编制命名空间文档](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)。
 自定义或内部文档生成工具也可与标准标记配合使用，并支持 HTML 到 PDF 等多种输出格式。
 
 ## <a name="recommendations"></a>建议

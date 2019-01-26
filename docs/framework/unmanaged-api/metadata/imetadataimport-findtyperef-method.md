@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 375dbaf03384b4d05a7815a11612814d8b427170
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b47369e8cee2215b3e7a21e9f069d18dffda847a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691734"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>IMetaDataImport::FindTypeRef 方法
-获取一个指向 TypeRef 标记，表示<xref:System.Type>中指定的作用域并具有指定的名称的引用。  
+获取一个指向 TypeRef 标记，表示<xref:System.Type>指定作用域中并具有指定的名称的引用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ HRESULT FindTypeRef (
   
 #### <a name="parameters"></a>参数  
  `tkResolutionScope`  
- [in]指定模块、 程序集或类型的 ModuleRef、 AssemblyRef 或 TypeRef 令牌分别在类型引用该定义。  
+ [in]ModuleRef、 AssemblyRef 或 TypeRef 标记，用于指定模块、 程序集或类型，分别在它们引用类型定义。  
   
  `szName`  
  [in]要搜索的类型引用的名称。  
@@ -48,14 +48,14 @@ HRESULT FindTypeRef (
  [out]指向匹配的 TypeRef 标记的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

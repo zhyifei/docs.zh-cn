@@ -1,15 +1,15 @@
 ---
-title: 如何： 使用批注以转换 LINQ to XML 树的 XSLT 样式 (Visual Basic)
+title: 如何：使用批注以转换 LINQ to XML 树中 XSLT 样式 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: c19d290e5b7acdf2702e24383a176ed06c9c7a1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed31e00b6d67a6707a98977c58e4e7afe35c8ad7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746294"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何： 使用批注以转换 LINQ to XML 树的 XSLT 样式 (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何：使用批注以转换 LINQ to XML 树中 XSLT 样式 (Visual Basic)
 使用批注可帮助进行 XML 树的转换。  
   
  有些 XML 文档“以文档为中心兼有混合内容”。 对于这样的文档，您不必知道元素的子节点的形状。 例如，包含文本的节点可能具有像下面这样的外观：  
@@ -18,7 +18,7 @@ ms.locfileid: "33650252"
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- 任何给定的文本节点都可以具有任意数量的子 `<b>` 和 `<i>` 元素。 此方法可扩展到很多其他情况： 例如，可以包含各种子元素，如规则段落、 带项目符号的段落和位图的页。 表中的单元格可以包含文本，下拉列表或位图。 以文档为中心的 XML 的一个主要特性是您不必知道任一特定元素将具有哪些子元素。  
+ 任何给定的文本节点都可以具有任意数量的子 `<b>` 和 `<i>` 元素。 此方法可扩展到很多其他情况： 如页面可以包含各种子元素，如规则段落、 带项目符号的段落和位图。 表中的单元格可以包含文本，下拉列表或位图。 以文档为中心的 XML 的一个主要特性是您不必知道任一特定元素将具有哪些子元素。  
   
  如果在转换树中的元素时不必知道有关要转换元素的子级的太多信息，则这种方法（使用批注）就是一种有效的方法。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "33650252"
   
 -   作为批注添加的新元素可以包含新的子节点，它可以形成一个具有任意形状的子树。  
   
--   有一条特殊规则：如果新元素的子节点位于不同的命名空间，即专门为此建立的命名空间（在本示例中，此命名空间为 `http://www.microsoft.com/LinqToXmlTransform/2007`），则不会将该子元素复制到新树。 而如果命名空间是上面提到的特殊命名空间，并且元素的本地名称为 `ApplyTransforms`，则会迭代源树中该元素的子节点并将其复制到新树（但批注的子元素本身例外，它们将根据这些规则进行转换）。  
+-   还有一个特殊规则：如果将新元素的子节点位于不同的命名空间，实现此目的组成的命名空间 (在此示例中，命名空间是`http://www.microsoft.com/LinqToXmlTransform/2007`)，则该子元素不会复制到新树。 而如果命名空间是上面提到的特殊命名空间，并且元素的本地名称为 `ApplyTransforms`，则会迭代源树中该元素的子节点并将其复制到新树（但批注的子元素本身例外，它们将根据这些规则进行转换）。  
   
 -   这有些类似于 XSL 中的转换规范。 用于选择一组节点的查询类似于用于模板的 XPath 表达式。 用于创建以批注形式保存的新 <xref:System.Xml.Linq.XElement> 的代码类似于 XSL 中的序列构造函数，`ApplyTransforms` 元素的功能类似于 XSL 中的 `xsl:apply-templates` 元素。  
   
@@ -378,5 +378,5 @@ After Transform
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>请参阅
+- [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

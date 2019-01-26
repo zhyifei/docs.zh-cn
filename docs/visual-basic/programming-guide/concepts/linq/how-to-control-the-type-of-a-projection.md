@@ -1,15 +1,15 @@
 ---
-title: 如何： 控制投影 (Visual Basic) 的类型
+title: 如何：控制投影 (Visual Basic 中) 的类型
 ms.date: 07/20/2015
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
-ms.openlocfilehash: efeb247c2b7662c71ec97ea1d8c1839361d82e14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e892e6328576a9727a13a4c1acd951d44ce4daa8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628865"
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>如何： 控制投影 (Visual Basic) 的类型
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>如何：控制投影 (Visual Basic 中) 的类型
 投影是一个过程，这一过程包括：获取一组数据，筛选这些数据，更改数据形状，甚至更改数据的类型。 大多数查询表达式都可执行投影。 本节中介绍的大多数查询表达式的计算结果都是 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，不过，可以控制投影的类型从而创建其他类型的集合。 本主题演示如何执行此操作。  
   
 ## <a name="example"></a>示例  
@@ -86,6 +86,6 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq.Enumerable.Select%2A>  
- [投影和转换 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Linq.Enumerable.Select%2A>
+- [投影和转换 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

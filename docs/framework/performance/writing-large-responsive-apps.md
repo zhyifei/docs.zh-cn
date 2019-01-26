@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540658"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 本文提供用于改进大型 .NET Framework 应用或处理大量数据（如文件或数据库）的应用的性能的提示。 这些提示来自在托管代码中重写的 C# 和 Visual Basic 编译器，并且本文包括来自 C# 编译器的几个真实示例。 
@@ -463,12 +463,12 @@ class Compilation { /*...*/
   
 ## <a name="see-also"></a>请参阅
 
-- [本主题的演示视频](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
-- [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
-- [性能](../../../docs/framework/performance/index.md)  
-- [.NET 性能提示](https://msdn.microsoft.com/library/ms973839.aspx)  
-- [Windows Phone 性能分析工具](https://msdn.microsoft.com/magazine/hh781024.aspx)  
-- [查找与 Visual Studio Profiler 的应用程序瓶颈](https://msdn.microsoft.com/magazine/cc337887.aspx)  
-- [通道 9 PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)  
+- [本主题的演示视频](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
+- [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [性能](../../../docs/framework/performance/index.md)
+- [.NET 性能提示](https://msdn.microsoft.com/library/ms973839.aspx)
+- [Windows Phone 性能分析工具](https://msdn.microsoft.com/magazine/hh781024.aspx)
+- [查找与 Visual Studio Profiler 的应用程序瓶颈](https://msdn.microsoft.com/magazine/cc337887.aspx)
+- [通道 9 PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET 编译器平台 SDK](../../csharp/roslyn-sdk/index.md)
 - [GitHub 上的 dotnet/roslyn 存储库](https://github.com/dotnet/roslyn)

@@ -2,43 +2,44 @@
 title: '&lt;dynamicEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
-ms.openlocfilehash: 215bc9d8540b2d782a0c63f2f5be96f6fcde6812
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dcb52143c874b14c9241940f9b326a07b3fa6a82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540243"
 ---
 # <a name="ltdynamicendpointgt"></a>&lt;dynamicEndpoint&gt;
 此配置元素定义一个标准终结点，应用程序通过利用该终结点包含的信息，能够充当可在运行时动态查找终结点地址的客户端程序。  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <dynamicEndpoint>
       <standardEndpoint>
-      <discoveryClientSettings discoveryEndpoint="String">
-        <findCriteria duration="TimeSpan" 
-                      maxResults="Integer" 
-                      scopeMatchBy="Uri">
-          <contractTypeNames>
-            <add name="String" namespace="String" />
-          <contractTypeNames>
-          <extensions />
-          <scopes>
-            <add scope="URI" />
-          </scopes>
-        </findCriteria>
-      </discoveryClientSettings>
+        <discoveryClientSettings discoveryEndpoint="String">
+          <findCriteria duration="TimeSpan"
+                        maxResults="Integer"
+                        scopeMatchBy="Uri">
+            <contractTypeNames>
+              <add name="String"
+                   namespace="String" />
+            <contractTypeNames>
+            <extensions />
+            <scopes>
+              <add scope="URI" />
+            </scopes>
+          </findCriteria>
+        </discoveryClientSettings>
       <standardEndpoint>
     </dynamicEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -51,14 +52,14 @@ ms.locfileid: "32746756"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<discoveryClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryclientsettings.md)|包含应用程序以客户端形式参与服务发现过程所需的设置。|  
+|[\<discoveryClientSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryclientsettings.md)|包含应用程序以客户端形式参与服务发现过程所需的设置。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
- <xref:System.ServiceModel.Discovery.Configuration.DynamicEndpointElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Discovery.DynamicEndpoint>
+- <xref:System.ServiceModel.Discovery.Configuration.DynamicEndpointElement>

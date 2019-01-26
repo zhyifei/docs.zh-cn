@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: badab8200a4b10fdc13987dfe39ebfebd4d1f7cf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 19983e4d17ac2843385685a6b8b247d16f4cc081
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700452"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt;元素
 包含类的 ASN.1 对象标识符 (OID) 映射。  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<oidMap >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<oidMap>  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ ms.locfileid: "53143157"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|将 ASN.1 OID 映射到友好名称。|  
+|[\<oidEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|将 ASN.1 OID 映射到友好名称。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -75,9 +75,9 @@ ms.locfileid: "53143157"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
-- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+## <a name="see-also"></a>请参阅
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [将对象标识符映射到加密算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

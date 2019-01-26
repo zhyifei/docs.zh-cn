@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a97c8708c7d57d1a8f5335ef19e8e74cb6487276
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9a37e41aa653fb3cd5990b75f3c5467a88660113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610900"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622255"
 ---
 # <a name="ltshadowcopyverifybytimestampgt-element"></a>&lt;shadowCopyVerifyByTimestamp&gt;元素
 指定卷影复制是否使用 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 中引入的默认启动行为，或恢复到 .NET Framework 的早期版本的启动行为。  
@@ -67,7 +67,7 @@ ms.locfileid: "53610900"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [卷影复制程序集](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)

@@ -1,5 +1,5 @@
 ---
-title: 演练：在 WPF 中承载 Windows 窗体复合控件
+title: 演练：承载在 WPF 中的 Windows 窗体复合控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: cd5a416c4eafa5b6260b49873fe2d4c2ed3a6af8
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f18d6e98e40c8517bbee32702f03dad57064051a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266783"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661320"
 ---
-# <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>演练：在 WPF 中承载 Windows 窗体复合控件
+# <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>演练：承载在 WPF 中的 Windows 窗体复合控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当您有大量投入时[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]代码，它可以更有效地重复使用至少某些中的代码在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序而不是从头开始重新编写。 最常见的方案是具有现有 Windows 窗体控件。 在某些情况下，你甚至可能无法使用这些控件的源代码。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一个简单的过程中的此类控件承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 例如，可以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]对于大多数应用编程，同时承载专用<xref:System.Windows.Forms.DataGridView>控件。  
   
- 本演练将指导你逐步承载 Windows 窗体复合控件以执行中的数据输入的应用程序[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 复合控件打包在一个 DLL 中。 此常规步骤可扩展到更复杂的应用程序和控件。 本演练旨在几乎完全相同的外观和功能提供给[演练： 承载 WPF 复合控件在 Windows 窗体中](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)。 主要区别在于承载方案是相反的。  
+ 本演练将指导你逐步承载 Windows 窗体复合控件以执行中的数据输入的应用程序[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 复合控件打包在一个 DLL 中。 此常规步骤可扩展到更复杂的应用程序和控件。 本演练旨在几乎完全相同的外观和功能到[演练：承载 WPF 复合控件在 Windows 窗体中的](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)。 主要区别在于承载方案是相反的。  
   
  本演练分为两个部分。 第一部分简要介绍 Windows 窗体复合控件的实现。 第二个部分详细讨论如何托管中的复合控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序，接收来自控件的事件和访问的某些控件的属性。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48266783"
   
 ## <a name="prerequisites"></a>系统必备  
 
-需要 Visual Studio 来完成本演练。
+若要完成本演练，必须具有 Visual Studio。
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>实现 Windows 窗体复合控件  
  在此示例中使用的 Windows 窗体复合控件是一个简单的数据输入窗体。 此窗体需要用户名和地址，然后使用自定义事件将该信息返回到主机。 下图显示呈现的控件。  
@@ -235,9 +235,9 @@ using MyControls;
   
  生成并运行应用程序。 在 Windows 窗体复合控件中添加一些文本，然后单击**确定**。 文本将显示在标签中。 单击不同的单选按钮查看在控件上的效果。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [演练：在 WPF 中承载 Windows 窗体控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)  
- [演练：在 Windows 窗体中承载 WPF 复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [演练：承载在 WPF 中的 Windows 窗体控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [演练：承载 WPF 复合控件在 Windows 窗体中](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

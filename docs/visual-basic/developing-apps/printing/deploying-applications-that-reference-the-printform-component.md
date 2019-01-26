@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic], deploying
 ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
-ms.openlocfilehash: 6384ad6e3bf0520362267eddc8f7bbb05b37f283
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 78d332c88b45fa9b1204d9d5352a6027409254e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562422"
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>部署引用 PrintForm 组件 (Visual Basic 中) 的应用程序
 如果你想要部署引用 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 组件的应用程序，则必须在目标计算机上安装该组件。  
   
- 在 Visual Studio 中，不再包含 PowerPack 控件，但您可以下载它们从[下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)。  
+ Visual Studio 中不再包含 PowerPack 控件，但你可以从 [下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)下载它们。  
   
 ## <a name="installing-the-printform-as-a-prerequisite"></a>将 PrintForm 安装为必备项  
  若要成功部署应用程序，你还必须部署应用程序引用的所有组件。 安装必备组件的过程称为 *引导*。  
@@ -30,6 +30,6 @@ ms.locfileid: "43787641"
   
  作为引导的替代方法，你可以使用电子软件分发系统（如 Microsoft Systems Management Server）预先部署 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 组件。  
   
-## <a name="see-also"></a>请参阅  
- [如何：与 ClickOnce 应用程序一起安装系统必备组件](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)  
- [PrintForm 组件](../../../visual-basic/developing-apps/printing/printform-component.md)
+## <a name="see-also"></a>请参阅
+- [如何：将系统必备与 ClickOnce 应用程序一起安装](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)
+- [PrintForm 组件](../../../visual-basic/developing-apps/printing/printform-component.md)

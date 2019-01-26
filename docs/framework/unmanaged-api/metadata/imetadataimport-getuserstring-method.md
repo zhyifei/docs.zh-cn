@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 474338ff1780ce9b442208cd06f8b14bc411be5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e806bae1911ea6ffc5bb6e9af76d99524636d39e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491139"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString 方法
 获取指定元数据标记所表示的文字字符串。  
@@ -43,23 +43,23 @@ HRESULT GetUserString (
  [in]要返回的关联的字符串的字符串标记。  
   
  `szString`  
- [out]请求的字符串的副本。  
+ [out]所需字符串的副本。  
   
  `cchString`  
  [in]以宽字符为单位的所请求的最大大小`szString`。  
   
  `pchString`  
- [out]在返回的宽字符的大小`szString`。  
+ [out]以宽字符为单位返回大小`szString`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

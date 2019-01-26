@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: a2349fa82b790182fa5d160bd29091c7524e2cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622593"
 ---
 # <a name="auditing-security-events"></a>审核安全事件
 创建使用 Windows Communication Foundation (WCF) 的应用程序可以利用审核功能记录安全事件 （成功、 失败，或两者）。 这些事件被写入 Windows 系统事件日志，并且可以使用事件查看器进行检查。  
@@ -98,12 +98,12 @@ ms.locfileid: "54030563"
 |审核策略管理|不适用。|除配置以外，Security 日志还受到本地安全机构 (LSA) 策略的控制。 还必须启用“审核对象访问”类别。|  
 |默认用户体验|所有通过身份验证的用户都可以写入 Application 日志，因此对于应用程序进程，不需要执行其他权限步骤。|应用程序进程（上下文）必须具有 `SeAuditPrivilege`。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- <xref:System.ServiceModel.AuditLogLocation>  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [如何：审核安全事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
- [\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- <xref:System.ServiceModel.AuditLogLocation>
+- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [如何：审核安全事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
+- [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

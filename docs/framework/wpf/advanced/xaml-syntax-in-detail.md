@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 33e811369d7f1d419eb593b430ab939279d3713b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510190"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义的术语，用于描述的 XAML 语法的元素。 这些条款通常使用，本文档中，同时用于 WPF 文档的其余部分专门以及其他使用 XAML 或通过 XAML 语言支持在 System.Xaml 级别启用的基本 XAML 概念的框架。 本主题进一步在本主题中引入的基本术语[XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
@@ -315,10 +315,10 @@ ms.locfileid: "54030290"
   
  但是，正如*typeName*。*memberName*属性，用于窗体*b t y p*。*memberName*是在标记中，良好的样式，应避免它。  
   
-## <a name="see-also"></a>请参阅  
- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XAML Namespace （x:）语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [WPF XAML 扩展](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [TypeConverter 和 XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a>请参阅
+- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XAML Namespace （x:）语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)
+- [WPF XAML 扩展](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)
+- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [TypeConverter 和 XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)
+- [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

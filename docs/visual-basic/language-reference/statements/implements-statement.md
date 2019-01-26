@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: 805813506b957afb326c71ee4bbb15837726e4e5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cdcbe20157b9647040e3610d0632bd8e3fb9df65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681061"
 ---
 # <a name="implements-statement"></a>Implements 语句
 指定一个或多个接口，或必须在类中实现的接口成员或结构定义中的出现。  
@@ -29,10 +29,10 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>部件  
  `interfacename`  
- 必须的。 一个其属性、 过程和事件是由类或结构中的相应成员来实现的接口。  
+ 必需。 一个其属性、 过程和事件是由类或结构中的相应成员来实现的接口。  
   
  `interfacemember`  
- 必须的。 正在实现的接口的成员。  
+ 必需。 正在实现的接口的成员。  
   
 ## <a name="remarks"></a>备注  
  接口是集合接口封装的原型表示的成员 （属性、 过程和事件）。 接口包含仅成员; 的声明类和结构实现这些成员。 有关详细信息，请参阅[接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  
@@ -55,7 +55,7 @@ Implements interfacename.interfacemember [, ...]
   
  [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
- [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>请参阅
+- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)
+- [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

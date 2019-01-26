@@ -1,5 +1,5 @@
 ---
-title: 如何：调用 Windows API (Visual Basic)
+title: 如何：调用 Windows Api (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - API calls [Visual Basic]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 081f4242ef5883a8b25b8819ba3aff835b1e6ac7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5db6e299012982024f34d46906de1a3be9b20ff1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650677"
 ---
-# <a name="how-to-call-windows-apis-visual-basic"></a>如何：调用 Windows API (Visual Basic)
+# <a name="how-to-call-windows-apis-visual-basic"></a>如何：调用 Windows Api (Visual Basic)
 此示例中定义和调用`MessageBox`user32.dll 中的函数，然后将字符串传递给它。  
   
 ## <a name="example"></a>示例  
@@ -36,9 +36,9 @@ ms.locfileid: "44208265"
   
 ## <a name="see-also"></a>请参阅
 
-- [平台调用详解](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)  
-- [平台调用示例](../../../framework/interop/platform-invoke-examples.md)  
-- [使用非托管 DLL 函数](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
-- [定义方法使用反射发出](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  
-- [演练：调用 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
+- [平台调用详解](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
+- [平台调用示例](../../../framework/interop/platform-invoke-examples.md)
+- [使用非托管 DLL 函数](../../../framework/interop/consuming-unmanaged-dll-functions.md)
+- [定义方法使用反射发出](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)
+- [演练：调用 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 - [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)

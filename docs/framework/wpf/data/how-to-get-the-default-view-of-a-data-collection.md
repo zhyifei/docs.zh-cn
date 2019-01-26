@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data collections [WPF], creating views of
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
-ms.openlocfilehash: e8e6928391a98a132f1dbb39edfda0d73d2eebdb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 386c25998c85de2f674200fe7d269ae2fdabd72d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588389"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>如何：获取数据集合的默认视图
 可以通过视图以不同的方式查看同一数据集合，具体取决于排序、筛选或分组规则。 每个集合都有一个共享的默认视图，在绑定指定一个集合作为其源时用作实际绑定源。 此示例演示如何获取集合的默认视图。  
@@ -32,6 +32,6 @@ ms.locfileid: "33557168"
   
  有关集合视图提供的功能的示例，请参阅[在视图中对数据进行排序](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)、[在视图中筛选数据](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)和[在数据 CollectionView 中的对象之间导航](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)。  
   
-## <a name="see-also"></a>请参阅  
- [在 XAML 中使用视图对数据进行排序和分组](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [在 XAML 中使用视图对数据进行排序和分组](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

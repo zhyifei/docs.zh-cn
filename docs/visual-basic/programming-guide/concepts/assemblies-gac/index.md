@@ -2,12 +2,6 @@
 title: 程序集和全局程序集缓存 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
-ms.openlocfilehash: 6d1692d6b62e1f1f3a8f979d3de242003f034ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644246"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>程序集和全局程序集缓存 (Visual Basic)
 程序集构成了 .NET 应用程序的部署、版本控制、重用、激活范围和安全权限的基本单元。 作为 .NET Framework 的构建基块，程序集采用可执行文件 (.exe) 或动态链接库文件 (.dll) 的形式。 它们向公共语言运行时提供了注意类型实现代码所需的信息。 可以将程序集视为一组构成功能逻辑单元并旨在配合使用的类型和资源。  
@@ -48,12 +42,12 @@ ms.locfileid: "33644246"
 > [!NOTE]
 >  若要在 Visual Studio 中生成程序集，请选择“生成”菜单上的“生成”。  
   
-## <a name="see-also"></a>请参阅  
- [Assemblies in the Common Language Runtime](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
- [友元程序集 (Visual Basic)](friend-assemblies.md)  
- [如何： 与其他应用程序 (Visual Basic) 共享程序集](how-to-share-an-assembly-with-other-applications.md)  
- [如何： 加载和卸载程序集 (Visual Basic)](how-to-load-and-unload-assemblies.md)  
- [如何： 确定文件是否为程序集 (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)  
- [如何： 创建和使用程序集使用命令行 (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [演练： 在 Visual Studio (Visual Basic 中) 中嵌入托管程序集中的类型](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
- [演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+## <a name="see-also"></a>请参阅
+- [Assemblies in the Common Language Runtime](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）
+- [友元程序集 (Visual Basic)](friend-assemblies.md)
+- [如何：共享程序集与其他应用程序 (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)
+- [如何：加载和卸载程序集 (Visual Basic)](how-to-load-and-unload-assemblies.md)
+- [如何：确定文件是否为程序集 (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)
+- [如何：创建和使用程序集使用命令行 (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [演练：在 Visual Studio (Visual Basic 中) 中嵌入托管程序集中的类型](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [演练：在 Visual Studio (Visual Basic 中) 中嵌入 Microsoft Office 程序集中的类型信息](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

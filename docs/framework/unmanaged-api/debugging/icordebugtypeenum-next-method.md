@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9812fa4248533ccb898c98082e42e288c091f776
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf70d8665d3984c379da9d9058cd97315def7b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677675"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next 方法
-获取由指定的"ICorDebugType"实例数`celt`从枚举中的当前位置开始。  
+获取由指定的"ICorDebugType"实例数`celt`枚举，从当前位置开始。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,16 +46,16 @@ HRESULT Next (
  [out]一个指针，其中每个指向数组`ICorDebugType`对象。  
   
  `pceltFetched`  
- [out]指向数`ICorDebugType`实际返回的实例。 此值可能为 null 如果`celt`是之一。  
+ [out]指向数`ICorDebugType`实际返回的实例。 此值可能为 null 如果`celt`是其中一个。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- 
+## <a name="see-also"></a>请参阅
+

@@ -2,12 +2,12 @@
 title: 编写实体框架数据提供程序
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 513af001392ae0b7abe8e6c62dc74f09469b3655
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 254207b9c3f5edd55fff867b784d71359f6c94c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627939"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>编写实体框架数据提供程序
 本部分讨论如何编写[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供程序以支持 SQL Server 以外的数据源。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]包括支持 SQL Server 的提供程序。  
@@ -41,5 +41,5 @@ ms.locfileid: "53148439"
   
  [提供程序清单规范](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
   
-## <a name="see-also"></a>请参阅  
- [使用数据提供程序](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+## <a name="see-also"></a>请参阅
+- [使用数据提供程序](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

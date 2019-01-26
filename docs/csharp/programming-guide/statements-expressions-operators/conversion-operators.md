@@ -8,19 +8,21 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: a55a2148ce161deca79d8ba8e64a217e474f0284
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 927640b63773d24be93cc90427668f9568a39652
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236812"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362725"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>转换运算符（C# 编程指南）
+
 C# 允许程序员在类或结构上声明转换，以便类或结构能够与其他类或结构或者基本类型进行相互转换。 以类似于运算符的方式定义转换，并根据它们所转换为的类型命名。 要转换的参数类型或转换结果的类型必须是包含类型（但不能两者同时都是）。  
   
  [!code-csharp[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
-## <a name="conversion-operators-overview"></a>转换运算符概述  
+## <a name="conversion-operators-overview"></a>转换运算符概述
+
  转换运算符具有以下属性：  
   
 -   声明为 `implicit` 的转换在需要时自动执行。  
@@ -29,7 +31,8 @@ C# 允许程序员在类或结构上声明转换，以便类或结构能够与�
   
 -   所有转换都必须都声明为 `static`。  
   
-## <a name="related-sections"></a>相关章节  
+## <a name="related-sections"></a>相关章节
+
  更多相关信息：  
   
 -   [使用转换运算符](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  

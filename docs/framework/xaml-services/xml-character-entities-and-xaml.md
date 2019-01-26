@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 03ce1645b859e9c3ebe470131ae2aee578cb366f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33564736"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661327"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 字符实体和 XAML
 XAML 使用在 XML 中为特殊字符定义的字符实体。 本主题介绍一些特定的字符实体和 XAML 中其他 XML 概念的一般注意事项。  
@@ -62,8 +62,8 @@ XAML 使用在 XML 中为特殊字符定义的字符实体。 本主题介绍一
 ## <a name="xml-processing-instructions"></a>XML 处理指令  
  XAML 根据 XML 规范处理 XML 处理指令，该规范说明必须传递指令。 在.NET Framework XAML 服务中处理的 XAML 不使用任何处理指令。 使用 XAML 的其他现有框架也不会使用 XAML 中的处理指令。  
   
-## <a name="see-also"></a>请参阅  
- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [标记扩展和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [XamlName 语法](../../../docs/framework/xaml-services/xamlname-grammar.md)  
- [在 XAML 中处理空白](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+## <a name="see-also"></a>请参阅
+- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [标记扩展和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XamlName 语法](../../../docs/framework/xaml-services/xamlname-grammar.md)
+- [在 XAML 中处理空白](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)

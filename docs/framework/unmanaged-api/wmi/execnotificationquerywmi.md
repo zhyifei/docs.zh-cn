@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d314d85e7c1297636e8dd5cecaf050a527151518
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd00a1fa8099d5a87577271487c46e68a46794c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43453046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566978"
 ---
-# <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 函数
+# <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi function
 执行查询以接收事件。 调用立即返回，并且调用方可以轮询返回的枚举器的事件到达。 释放返回的枚举器取消查询。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -52,7 +52,7 @@ HRESULT ExecNotificationQueryWmi (
 [in]具有支持的 Windows 管理的有效的查询语言的字符串。 它必须是"WQL"，WMI 查询语言的缩写词。
 
 `strQuery`  
-[in]查询的文本。 此参数不能为`null`。
+[in]查询的文本。 此参数不能为 `null`。
 
 `lFlags`   
 [in]影响此函数的行为的以下两个标志的组合。 这些值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中。 
@@ -89,7 +89,7 @@ HRESULT ExecNotificationQueryWmi (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 用户没有权限查看一个或多个函数可以返回的类。 |
 | `WBEM_E_FAILED` | 0x80041001 | 发生未知的错误。 |
@@ -117,11 +117,11 @@ HRESULT ExecNotificationQueryWmi (
 如果函数调用失败，则可以通过调用获取其他错误信息[GetErrorInfo](geterrorinfo.md)函数。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

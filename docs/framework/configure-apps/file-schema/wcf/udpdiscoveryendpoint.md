@@ -1,26 +1,34 @@
 ---
-title: '&lt;为 UdpDiscoveryEndpoint&gt;'
+title: '&lt;udpDiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: 01808594d54d5c79a6530bc7f6a03b66dde7ee99
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b46da83a175c2a9cff38abc211d462f3d43c1b9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569214"
 ---
-# <a name="ltudpdiscoveryendpointgt"></a>&lt;为 UdpDiscoveryEndpoint&gt;
+# <a name="ltudpdiscoveryendpointgt"></a>&lt;udpDiscoveryEndpoint&gt;
 此配置元素定义一个通过 UDP 多播绑定为发现操作预先配置的标准终结点。 此终结点具有固定协定并支持两个 WS-Discovery 协议版本。 此外，根据 WS-Discovery 规范（WS-Discovery 2005 年 4 月版或 WS-Discovery 1.1 版）中的规定，它还具有固定 UDP 绑定和默认地址。  
   
  \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.serviceModel>  
-    <standardEndpoints>       <discoveryEndpoint>           <standardEndpoint                  discoveryMode="Adhoc/Managed"                  discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"                  maxResponseDelay="Timespan"                  multicastAddress="Uri"                   name="String" />       </discoveryEndpoint>            </standardEndpoints>  
-</system.serviceModel>  
+<system.serviceModel>
+  <standardEndpoints>
+    <discoveryEndpoint>
+      <standardEndpoint discoveryMode="Adhoc/Managed"
+                        discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
+                        maxResponseDelay="Timespan"
+                        multicastAddress="Uri"
+                        name="String" />
+    </discoveryEndpoint>
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -40,35 +48,35 @@ ms.locfileid: "53144749"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<u d >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|一个设置集合，用于为 UDP 终结点配置 UDP 传输。|  
+|[\<udpTransportSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|一个设置集合，用于为 UDP 终结点配置 UDP 传输。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
   
 ## <a name="example"></a>示例  
  下面的示例演示通过 UDP 多播传输侦听发现消息的服务。  
   
-```xml
-<services>  
-  <service name="CalculatorService"  
-           behaviorConfiguration="CalculatorServiceBehavior">  
-    <endpoint binding="basicHttpBinding"   
-              address="calculator" 
-              contract="ICalculatorService" />  
-    <endpoint name="DiscoveryEndpoint"  
-              kind="udpDiscoveryEndpoint" />  
-  </service>  
-  <standardEndpoints>  
-    <udpDiscoveryEndpoint>  
-      <standardEndpoint name="DiscoveryEndpoint"                         
-                        version="WSDiscoveryApril2005" />  
-    </udpDiscoveryEndpoint>  
+```xml  
+<services>
+  <service name="CalculatorService"
+           behaviorConfiguration="CalculatorServiceBehavior">
+    <endpoint binding="basicHttpBinding"
+              address="calculator"
+              contract="ICalculatorService" />
+    <endpoint name="DiscoveryEndpoint"
+              kind="udpDiscoveryEndpoint" />
+  </service>
+  <standardEndpoints>
+    <udpDiscoveryEndpoint>
+      <standardEndpoint name="DiscoveryEndpoint"
+                        version="WSDiscoveryApril2005" />
+    </udpDiscoveryEndpoint>
   </standardEndpoints>
 </services>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>

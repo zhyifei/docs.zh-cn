@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 19b28c3391a10cc522f17c5353c9ec0726b0a2f8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 044d446b97f0899b9575085a15c3faa399ce776e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624608"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;筛选器&gt;的元素&lt;添加&gt;有关&lt;侦听器&gt;为&lt;源&gt;
 将筛选器添加到跟踪源的 `Listeners` 集合中的侦听器。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<源 >  
-\<源 >  
-\<侦听器 >  
+\<system.diagnostics>  
+\<sources>  
+\<source>  
+\<listeners>  
 \<add>  
-\<筛选器 >  
+\<filter>  
   
 ## <a name="syntax"></a>语法  
   
@@ -92,9 +92,9 @@ ms.locfileid: "48033423"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>  
- <xref:System.Diagnostics.TraceFilter>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
+- <xref:System.Diagnostics.TraceFilter>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

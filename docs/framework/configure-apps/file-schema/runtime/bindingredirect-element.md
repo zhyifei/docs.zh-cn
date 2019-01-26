@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: fc2c5fb906856365e901c27bfe6624375f1e0137
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7fb610357772b3c74129074096c53bf3f149501a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714745"
 ---
 # <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt;元素
 将一个程序集版本重定向到另一个版本。  
   
  \<configuration>  
 \<运行时 >  
-\<assemblyBinding >  
-\<dependentAssembly >  
-\<bindingRedirect >  
+\<assemblyBinding>  
+\<dependentAssembly>  
+\<bindingRedirect>  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ newVersion="new assembly version"/>
   
 |特性|描述|  
 |---------------|-----------------|  
-|`oldVersion`|必需的特性。<br /><br /> 指定最初请求的程序集的版本。 程序集版本号的格式*major.minor.build.revision*。 该版本号的每个部分的有效值介于 0 和 65535 之间。<br /><br /> 你还可以按下列格式指定版本范围：<br /><br /> *n.n.n.n-n.n.n.n*|  
+|`oldVersion`|必需的特性。<br /><br /> 指定最初请求的程序集的版本。 程序集版本号的格式*major.minor.build.revision*。 该版本号的每个部分的有效值介于 0 和 65535 之间。<br /><br /> 你还可以按下列格式指定版本范围：<br /><br /> *n.n.n.n - n.n.n.n*|  
 |`newVersion`|必需的特性。<br /><br /> 指定要使用而不是最初请求的版本格式的程序集的版本： *n.n.n.n*<br /><br /> 此值可以指定 `oldVersion` 之前的版本。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -86,7 +86,7 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 21ca15d6a6939d884c7e6abedc1f7919be079edd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4c92e7b3892fa35035935d5db317c72d74814ab8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512978"
 ---
 # <a name="property-statement"></a>Property Statement
 声明的属性，以及用来存储和检索属性的值的属性过程的名称。  
@@ -62,11 +62,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
-    - [受保护的友元](../../language-reference/modifiers/protected-friend.md) 
+    - [Protected Friend](../../language-reference/modifiers/protected-friend.md) 
 
-    - [专用受保护](../../language-reference/modifiers/private-protected.md)
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)
   
-     请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+     请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 -   `propertymodifiers`  
   
@@ -108,7 +108,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `name`  
   
-     必须的。 属性的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+     必需。 属性的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
 -   `parameterlist`  
   
@@ -134,8 +134,8 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     |部件|描述|  
     |---|---|  
-    |`interface`|必须的。 实现此属性的接口的名称的包含类或结构。|  
-    |`definedname`|必须的。 所依据的属性定义中的名称`interface`。|  
+    |`interface`|必需。 实现此属性的接口的名称的包含类或结构。|  
+    |`definedname`|必需。 所依据的属性定义中的名称`interface`。|  
   
 -   `Get`  
   
@@ -207,10 +207,10 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
  [!code-vb[VbVbalrStatements#51](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [自动实现的属性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
- [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Get 语句](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)  
- [参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [默认](../../../visual-basic/language-reference/modifiers/default.md)
+## <a name="see-also"></a>请参阅
+- [自动实现的属性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Get 语句](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)
+- [参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [默认](../../../visual-basic/language-reference/modifiers/default.md)

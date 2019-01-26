@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664003"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 基础概念
 本文档提供 Windows Communication Foundation (WCF) 体系结构的高级视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建 WCF 服务和客户端的最简单版本的教程，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解 WCF 编程，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "53286554"
  消息  
  消息是一个独立的数据单元，它可能由几个部分组成，包括消息正文和消息头。  
   
- service  
+ 服务  
  服务是一个构造，它公开一个或多个终结点，其中每个终结点都公开一个或多个服务操作。  
   
  endpoint（终结点）  
@@ -65,7 +65,7 @@ ms.locfileid: "53286554"
  基础结构终结点  
  一个终结点，由基础结构公开，以便实现与服务协定无关的服务需要或提供的功能。 例如，服务可能拥有一个提供元数据信息的基础结构终结点。  
   
- address  
+ 地址  
  地址用于指定接收消息的位置。 地址以统一资源标识符 (URI) 的形式指定。 URI 架构部分指定用于到达地址的传输机制，如 HTTP 和 TCP。 URI 的层次结构部分包含一个唯一的位置，其格式取决于传输机制。  
   
  使用终结点地址可以为服务中的每个终结点创建唯一的终结点地址，或者在某些条件下在终结点之间共享一个地址。 下面的示例演示了一个将 HTTPS 协议和一个非默认端口结合使用的地址：  
@@ -152,7 +152,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WS-*  
  一组不断增加的、在 WCF 中实现的 Web 服务 (WS) 规范（如 WS-Security、WS-ReliableMessaging 等）的简写。  
   
-## <a name="see-also"></a>请参阅  
- [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation 体系结构](../../../docs/framework/wcf/architecture.md)  
- [安全体系结构](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>请参阅
+- [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation 体系结构](../../../docs/framework/wcf/architecture.md)
+- [安全体系结构](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

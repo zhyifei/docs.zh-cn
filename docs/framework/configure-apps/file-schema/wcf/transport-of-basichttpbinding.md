@@ -2,41 +2,41 @@
 title: '&lt;basicHttpBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 01fe2bc98326e3cef2b3df8bdf4aa03055df5e65
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: b98f6940c39fe8450f5c58ddd8d35d8829fc26b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602489"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; 的 &lt;transport&gt;
 为 HTTP 传输定义控制身份验证参数的属性。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<basicHttpBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
 \<transport>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<basicHttpBinding>  
-    <binding>  
-        <security  
-        mode="None|Transport|Message|TransportWithMessageCredential|TransportCredentialOnly">  
-            <transport clientCredentialType="None|Basic|Digest|Ntlm|Windows"  
-             proxyCredentialType="None|Basic|Digest|Ntlm|Windows" realm="string" >  
-                <extendedProtectionPolicy  
-                     policyEnforcement="Never|WhenSupported|Always"  
-                     protectionScenario="TransportSelected|TrustedProxy">  
-                    <customServiceNames></customServiceNames>  
-                        </extendedProtectionPolicy>  
-            </transport>  
-        </security>  
-    </binding>  
-</basicHttpBinding>  
+<basicHttpBinding>
+  <binding>
+    <security mode="None|Transport|Message|TransportWithMessageCredential|TransportCredentialOnly">
+      <transport clientCredentialType="None|Basic|Digest|Ntlm|Windows"
+                 proxyCredentialType="None|Basic|Digest|Ntlm|Windows"
+                 realm="String">
+        <extendedProtectionPolicy policyEnforcement="Never|WhenSupported|Always"
+                                  protectionScenario="TransportSelected|TrustedProxy">
+          <customServiceNames>
+          </customServiceNames>
+        </extendedProtectionPolicy>
+      </transport>
+    </security>
+  </binding>
+</basicHttpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -86,44 +86,44 @@ ms.locfileid: "54030329"
  下面的示例演示如何对基本绑定使用 SSL 传输安全。 默认情况下，基本绑定支持 HTTP 通信。  
   
 ```xml  
-<system.serviceModel>  
-   <services>  
-      <service   
-          type="Microsoft.ServiceModel.Samples.CalculatorService"  
-          behaviorConfiguration="CalculatorServiceBehavior">  
-         <endpoint address=""  
-               binding="basicHttpBinding"  
-               bindingConfiguration="Binding1"   
-               contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-      </service>  
-   </services>  
-    <bindings>  
-        <basicHttpBinding>  
-        <!-- Configure basicHttpBinding with Transport security -->  
-        <!-- mode and clientCredentialType set to None. -->  
-           <binding name="Binding1">  
-               <security mode="Transport">  
-                   <transport clientCredentialType="None"  
-                              proxyCredentialType="None">  
-                       <extendedProtectionPolicy  
-                          policyEnforcement="WhenSupported"  
-                          protectionScenario="TransportSelected">  
-                    <customServiceNames></customServiceNames>  
-                       </extendedProtectionPolicy>  
-               </security>  
-           </binding>  
-        </basicHttpBinding>  
-    </bindings>  
-</system.serviceModel>  
+<system.serviceModel>
+  <services>
+    <service type="Microsoft.ServiceModel.Samples.CalculatorService"
+             behaviorConfiguration="CalculatorServiceBehavior">
+      <endpoint address=""
+                binding="basicHttpBinding"
+                bindingConfiguration="Binding1"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </service>
+  </services>
+  <bindings>
+    <basicHttpBinding>
+      <!-- Configure basicHttpBinding with Transport security -->
+      <!-- mode and clientCredentialType set to None. -->
+      <binding name="Binding1">
+        <security mode="Transport">
+          <transport clientCredentialType="None"
+                     proxyCredentialType="None">
+            <extendedProtectionPolicy policyEnforcement="WhenSupported"
+                                      protectionScenario="TransportSelected">
+              <customServiceNames>
+              </customServiceNames>
+            </extendedProtectionPolicy>
+          </transport>
+        </security>
+      </binding>
+    </basicHttpBinding>
+  </bindings>
+</system.serviceModel>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

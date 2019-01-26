@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: KrzysztofCwalina
-ms.openlocfilehash: 93b294c4b535e015c7f4b021e0f950f038a60361
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b13f9e1551aec7e53ba1ac2ed0b9049d46b0a756
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636646"
 ---
 # <a name="member-overloading"></a>成员重载
 成员重载意味着创建两个或多个成员上的相同类型的区别只体现在数量或类型参数，但具有相同的名称。 例如，在以下内容，`WriteLine`重载方法：  
@@ -55,9 +55,9 @@ public static class Console {
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [成员设计准则](../../../docs/standard/design-guidelines/member.md)  
+- [成员设计准则](../../../docs/standard/design-guidelines/member.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

@@ -2,12 +2,12 @@
 title: '&lt;idn&gt;元素 （Uri 设置）'
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: e68fa040123180ee31af40e82f45d6efd076d8aa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 21950beeefb23e81066623534774148e1f5d92ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580729"
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;idn&gt;元素 （Uri 设置）
 指定是否对域名应用国际化域名 (IDN) 分析。  
@@ -17,7 +17,7 @@ ms.locfileid: "53153353"
   
  [\<Uri > 元素 （Uri 设置）](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [\<idn >](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
+ [\<idn>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ ms.locfileid: "53153353"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[Uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
+|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
   
 ## <a name="remarks"></a>备注  
  现有<xref:System.Uri>类具有.NET Framework 3.5 中进行了扩展。 3.0 SP1 和 2.0 SP1 中的对国际资源标识符 (IRI) 和国际化域名 (IDN) 的支持。 当前用户不会看到从.NET Framework 2.0 行为的任何更改，除非专门启用 IRI 和 IDN 支持。 这确保了 NET Framework 以前版本的应用程序兼容性。  
@@ -93,7 +93,7 @@ ms.locfileid: "53153353"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

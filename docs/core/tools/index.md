@@ -3,12 +3,6 @@ title: .NET Core 命令行接口 (CLI) 工具
 description: 概述了 .NET Core 命令行接口 (CLI) 工具和功能。
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 698e6188d2cc73c30a7003f53199065d1eff2ec0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170180"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令行接口 (CLI) 工具
 
@@ -146,5 +140,5 @@ dotnet /build_output/my_app.dll
 
 ## <a name="see-also"></a>请参阅
 
-* [dotnet/CLI GitHub 存储库](https://github.com/dotnet/cli/)  
-* [.NET Core 安装指南](https://aka.ms/dotnetcoregs)  
+- [dotnet/CLI GitHub 存储库](https://github.com/dotnet/cli/)
+- [.NET Core 安装指南](https://aka.ms/dotnetcoregs)

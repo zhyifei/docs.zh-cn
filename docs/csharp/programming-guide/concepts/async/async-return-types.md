@@ -2,12 +2,12 @@
 title: 异步返回类型 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 3d3c7d610dd1287d2c7284a5edd9c92810a74dba
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3dfc0c0505d827009dd3d179453869d3af6ab210
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036235"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53774584"
 ---
 # <a name="async-return-types-c"></a>异步返回类型 (C#)
 异步方法可以具有以下返回类型：
@@ -33,7 +33,7 @@ ms.locfileid: "48036235"
 
 在 `ShowTodaysInfo` 方法中从 await 表达式内调用 `GetLeisureHours` 时，await 表达式检索存储在由 `GetLeisureHours` 方法返回的任务中的整数值（`leisureHours` 的值）。 有关 await 表达式的详细信息，请参阅 [await](../../../../csharp/language-reference/keywords/await.md)。  
   
-通过从应用程序 `await` 中分离对 `GetLeisureHours` 的调用，你可以更好地了解此操作，如下面的代码所示。 对非立即等待的方法 `GetLeisureHours` 的调用返回 `Task<int>`，正如你从方法声明预料的一样。 该任务指派给示例中的 `infoTask` 变量。 因为 `infoTask` 是 <xref:System.Threading.Tasks.Task%601>，所以它包含类型 `TResult` 的 <xref:System.Threading.Tasks.Task%601.Result> 属性。 在这种情况下，`TResult` 表示整数类型。 `await` 应用于 `infoTask`，await 表达式的计算结果为 `infoTask` 的 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性内容。 此值分配给 `ret` 变量。  
+通过从应用程序 `await` 中分离对 `GetLeisureHours` 的调用，你可以更好地了解此操作，如下面的代码所示。 对非立即等待的方法 `GetLeisureHours` 的调用返回 `Task<int>`，正如你从方法声明预料的一样。 该任务指派给示例中的 `integerTask` 变量。 因为 `integerTask` 是 <xref:System.Threading.Tasks.Task%601>，所以它包含类型 `TResult` 的 <xref:System.Threading.Tasks.Task%601.Result> 属性。 在这种情况下，`TResult` 表示整数类型。 `await` 应用于 `integerTask`，await 表达式的计算结果为 `integerTask` 的 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性内容。 此值分配给 `ret` 变量。  
   
 > [!IMPORTANT]
 >  <xref:System.Threading.Tasks.Task%601.Result%2A> 属性为阻止属性。 如果你在其任务完成之前尝试访问它，当前处于活动状态的线程将被阻止，直到任务完成且值为可用。 在大多数情况下，应通过使用 `await` 访问此值，而不是直接访问属性。 <br/> 上一示例通过检索 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性的值来阻止主线程，从而使 `ShowTodaysInfo` 方法可在应用程序结束之前完成执行。  

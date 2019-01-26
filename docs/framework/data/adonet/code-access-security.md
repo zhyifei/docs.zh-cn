@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: a5e5826dddbf60e92a50fd4f83322e7c1062f636
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fcba4ea556d1f5036c2bbd0beaeb5f349dec4e36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688101"
 ---
 # <a name="code-access-security-and-adonet"></a>代码访问安全性和 ADO.NET
 .NET Framework 提供基于角色的安全性和代码访问安全性 (CAS)，这两种安全性都可以通过公共语言运行库 (CLR) 提供的公共基础结构实现。 对于非托管代码，大多数应用程序都可以使用用户或主体权限执行。 因此，当拥有提升权限的用户运行恶意软件或包含错误的软件时，计算机系统可能会受到损坏并危及私有数据。  
@@ -194,8 +194,8 @@ Failed, as expected: Request failed.
   
  .NET Framework 可以通过 COM 互操作提供访问，因此还支持与现有 COM 组件的向后兼容。 通过使用 COM 互操作工具导入相关的 COM 类型，可以将 COM 组件合并到 .NET Framework 应用程序中。 一旦导入后，就可以使用 COM 类型了。 通过将程序集元数据导出到类型库并将托管组件注册为 COM 组件，COM 互操作还可以使 COM 客户端访问托管代码。 有关详细信息，请参阅[高级 COM 互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)。  
   
-## <a name="see-also"></a>请参阅  
- [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [本机代码和 .NET Framework 代码的安全性](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [基于角色的安全性](../../../../docs/standard/security/role-based-security.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [本机代码和 .NET Framework 代码的安全性](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [基于角色的安全性](../../../../docs/standard/security/role-based-security.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

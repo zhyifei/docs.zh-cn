@@ -2,12 +2,12 @@
 title: TCP 激活
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 1939f611067d65d70849748604e0589a8928b09d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5e7f441873ec4d3ad087d1ff28510d92d87db9b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677820"
 ---
 # <a name="tcp-activation"></a>TCP 激活
 本示例演示承载一个服务，该服务使用 Windows 进程激活服务 (WAS) 的服务来激活通过 net.tcp 协议通信的服务。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -146,7 +146,7 @@ Press <ENTER> to terminate client.
   
      此外，必须安装 WCF 非 HTTP 激活组件：  
   
-    1.  从**启动**菜单中，选择**控制面板**。  
+    1.  从“开始”菜单中，选择“控制面板”。  
   
     2.  选择**程序和功能**。  
   
@@ -205,5 +205,5 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  必须以单行文本的形式键入此命令。  
   
-## <a name="see-also"></a>请参阅  
- [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>请参阅
+- [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

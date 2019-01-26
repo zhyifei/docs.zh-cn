@@ -1,41 +1,41 @@
 ---
-title: '&lt;u d&gt;'
+title: '&lt;udpTransportSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: 50e3b283bb10ba3f34303acbbd76b42d37fa7078
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 58931cb70f83378740093615adf89a437e32ff2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667188"
 ---
-# <a name="ltudptransportsettingsgt"></a>&lt;u d&gt;
+# <a name="ltudptransportsettingsgt"></a>&lt;udpTransportSettings&gt;
 此配置元素公开的 UDP 传输设置[ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)。  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
-\<为 udpDiscoveryEndpoint >  
+\<standardEndpoints>  
+\<udpDiscoveryEndpoint>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <udpDiscoveryEndpoint>
       <standardEndpoint>
-        <updTransportSettings duplicateMessageHistoryLength="Integer" 
-                              maxBufferPoolSize="Integer" 
-                              maxMulticastRetransmitCount="Integer" 
-                              maxPendingMessageCount="Integer" 
-                              maxReceivedMessageSize="Integer" 
-                              maxUnicastRetransmitCount="Integer" 
-                              multicastInterfaceId="String" 
-                              socketReceiveBufferSize="Integer" 
+        <updTransportSettings duplicateMessageHistoryLength="Integer"
+                              maxBufferPoolSize="Integer"
+                              maxMulticastRetransmitCount="Integer"
+                              maxPendingMessageCount="Integer"
+                              maxReceivedMessageSize="Integer"
+                              maxUnicastRetransmitCount="Integer"
+                              multicastInterfaceId="String"
+                              socketReceiveBufferSize="Integer"
                               timeToLive="Integer" />
       </standardEndpoint>
     </udpDiscoveryEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -62,7 +62,7 @@ ms.locfileid: "53127792"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<为 udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|具有固定发现协定和 UDP 传输绑定的标准终结点。|  
+|[\<udpDiscoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|具有固定发现协定和 UDP 传输绑定的标准终结点。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Discovery.UdpTransportSettings>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Discovery.UdpTransportSettings>

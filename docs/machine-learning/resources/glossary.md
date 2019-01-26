@@ -3,12 +3,12 @@ title: 机器学习术语表 - ML.NET
 description: 一个重要的机器学习术语表，可在 ML.NET 中生成自定义模型时使用。
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53760388"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415372"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>机器学习重要术语词汇表
 
@@ -17,8 +17,6 @@ ms.locfileid: "53760388"
 ## <a name="accuracy"></a>准确性
 
 在[分类](#classification)中，准确性是正确分类的项数目除以测试集内的项总数。 范围从 0（最不准确）到 1（最准确）。 准确性是模型性能的评估指标之一。 将其与[精度](#precision)、[撤回](#recall)和 [F 分数](#f-score)结合考虑。
-
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>。
 
 ## <a name="area-under-the-curve-auc"></a>曲线下面积 (AUC)
 
@@ -87,8 +85,6 @@ ms.locfileid: "53760388"
 ## <a name="precision"></a>精度
 
 在[分类](#classification)中，类的精度是正确预测为属于该类的项目的数量，除以预测为属于该类的项目的总数。
-
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>、<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>。
 
 ## <a name="recall"></a>撤回
 

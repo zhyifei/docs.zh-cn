@@ -2,12 +2,12 @@
 title: 配置示例
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: ae1b98d4afcc4a7bc97a4668ef7d974b27cafed9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6273b6b0f84887f031539581fbf664b9dbf50300
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579454"
 ---
 # <a name="configuration-sample"></a>配置示例
 此示例演示如何使用配置文件使服务成为可发现的服务。  

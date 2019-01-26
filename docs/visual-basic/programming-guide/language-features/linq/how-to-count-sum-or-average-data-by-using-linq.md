@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ 对数据进行计数、求和与求平均值计算 (Visual Basic)
+title: 如何：计数、 求和或通过使用 LINQ (Visual Basic 中) 的平均数据
 ms.date: 07/20/2015
 helpviewer_keywords:
 - average operator [LINQ in Visual Basic]
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 942cb889c595f8caaf86dee1c025a935bd7db1b1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e95f9d75ab9db07b55257bbf6ca951a898b2fb2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735086"
 ---
-# <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>如何：使用 LINQ 对数据进行计数、求和与求平均值计算 (Visual Basic)
+# <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>如何：计数、 求和或通过使用 LINQ (Visual Basic 中) 的平均数据
 语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。  
   
  下面的示例演示如何创建新的应用程序对 SQL Server 数据库执行查询。 示例计数、 求和，和使用计算结果的平均值`Aggregate`和`Group By`子句。 有关详细信息，请参阅[Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)并[组 By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
@@ -77,10 +77,10 @@ ms.locfileid: "44041306"
   
 4.  按 F5 以运行您的项目并查看结果。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查询](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Group By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+## <a name="see-also"></a>请参阅
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [查询](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Group By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)

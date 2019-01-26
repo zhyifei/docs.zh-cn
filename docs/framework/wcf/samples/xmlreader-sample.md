@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: 5ac97afd2efc1bb57a81f5cd2d78fed18ca3804d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dc943f944d710e9e858827fd1a8a2e19c93c7ed3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573408"
 ---
 # <a name="xmlreader-sample"></a>XmlReader 示例
 XmlReader 示例演示如何使用 <xref:System.Xml.XmlReader> 处理消息正文。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它可实现计算器服务。 示例中还添加了一个服务操作 `Sum`，它接受包含要加在一起的值数组的消息。 该服务使用 <xref:System.Xml.XmlReader> 读取消息。  

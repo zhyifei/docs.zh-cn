@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 47a795fa63c4d143689804cd5b3d36ac34d141be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 967d0e67ed0ce106de291e1e47b7d72e06560342
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655954"
 ---
 # <a name="wpf-brushes-overview"></a>WPF 画笔概述
 在屏幕上可见的所有内容是可见的因为它通过画笔绘制。 例如，画笔用于描述背景的按钮、 文本、 前的景色和形状的填充。 本主题介绍的概念与绘制[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]画笔，并提供示例。 借助画笔，可以利用任意内容（从简单的纯色到复杂的图案和图像集）绘制 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 对象。  
@@ -28,11 +28,11 @@ ms.locfileid: "43521680"
   
 |类|画笔属性|  
 |-----------|----------------------|  
-|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
+|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>， <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  
 |<xref:System.Windows.Controls.Panel>|<xref:System.Windows.Controls.Panel.Background%2A>|  
 |<xref:System.Windows.Media.Pen>|<xref:System.Windows.Media.Pen.Brush%2A>|  
-|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
+|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>， <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
 |<xref:System.Windows.Controls.TextBlock>|<xref:System.Windows.Controls.TextBlock.Background%2A>|  
   
  以下各节介绍了不同<xref:System.Windows.Media.Brush>类型，并提供每个示例。  
@@ -160,14 +160,14 @@ ms.locfileid: "43521680"
   
  有关原因的详细信息<xref:System.Windows.Media.VisualBrush>对象不能为冻结，请参阅<xref:System.Windows.Media.VisualBrush>类型页。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Brushes>  
- [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)  
- [ImageBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160049)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Brushes>
+- [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)
+- [ImageBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

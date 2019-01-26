@@ -2,28 +2,33 @@
 title: '&lt;defaultPorts&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-ms.openlocfilehash: 28ddc98bd66c1f74f857448aa710d3998ddbd3dc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8b7a4730af6690616058a91cf23bb39734d81abc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541711"
 ---
 # <a name="ltaddgt-of-ltdefaultportsgt"></a>&lt;defaultPorts&gt; 的 &lt;add&gt;
 客户端应用程序侦听的默认通信终结点。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
-\<useRequestHeadersForMetadataAddress >  
-\<d d >  
+\<behavior>  
+\<useRequestHeadersForMetadataAddress>  
+\<defaultPorts>  
 \<add>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<useRequestHeadersForMetadataAddress>   <defaultPorts>      <add port="Integer" scheme="String" />   </defaultPorts></useRequestHeadersForMetadataAddress>  
+<useRequestHeadersForMetadataAddress>
+  <defaultPorts>
+    <add port="Integer"
+         scheme="String" />
+  </defaultPorts>
+</useRequestHeadersForMetadataAddress>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -43,7 +48,7 @@ ms.locfileid: "32748745"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<d d >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|一个默认端口集合，列出客户端应用程序侦听的默认通信终结点。|  
+|[\<defaultPorts>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|一个默认端口集合，列出客户端应用程序侦听的默认通信终结点。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.DefaultPortElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.DefaultPortElement>

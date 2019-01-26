@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [WPF], animating with key frames
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-ms.openlocfilehash: 1b55afd5938073a326789e67b66fec9cfce12015
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4cadc1e7e4b7ee70e3a71ddaf433327a7561125d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45596190"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670824"
 ---
 # <a name="how-to-animate-a-string-by-using-key-frames"></a>如何：使用关键帧对字符串进行动画处理
 此示例演示如何对字符串，它在此示例中为动画处理<xref:System.Windows.Controls.ContentControl.Content%2A>属性的<xref:System.Windows.Controls.Button>控件，使用关键帧。  
@@ -25,10 +25,10 @@ ms.locfileid: "45596190"
   
  有关完整示例，请参阅[关键帧动画示例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>  
- <xref:System.Windows.Controls.ContentControl.Content%2A>  
- <xref:System.Windows.Controls.Button>  
- <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>  
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [关键帧操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>
+- <xref:System.Windows.Controls.ContentControl.Content%2A>
+- <xref:System.Windows.Controls.Button>
+- <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>
+- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [关键帧操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

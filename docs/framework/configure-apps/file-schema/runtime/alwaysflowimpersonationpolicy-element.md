@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfdc2d434b61d1c1e16ebfdcc2ea423f96254be5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fcad683ace327caf06a4a9a6ef5b7cf1d9a9334f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596431"
 ---
 # <a name="ltalwaysflowimpersonationpolicygt-element"></a>&lt;alwaysFlowImpersonationPolicy&gt;元素
 指定 Windows 标识始终流经异步点，而不考虑执行模拟的方式。  
@@ -108,7 +108,7 @@ ms.locfileid: "50187827"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<legacyImpersonationPolicy > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)

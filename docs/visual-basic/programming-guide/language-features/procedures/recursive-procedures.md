@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 0bb89ac855d65d7677a062346db8665698dbb805
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1802785e38b58ce2c057d6ddbe1e54e73e079761
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660718"
 ---
 # <a name="recursive-procedures-visual-basic"></a>递归过程 (Visual Basic)
 一个*递归*过程是指调用其自身。 一般情况下，这不是编写 Visual Basic 代码的最有效方法。  
@@ -37,15 +37,15 @@ ms.locfileid: "43514337"
   
  **测试**。 如果您编写一个递归过程时，应对其进行测试应非常小心以确保其始终满足某些限制条件。 你还应确保您不能运行由于递归调用过多的内存不足。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.StackOverflowException>  
- [过程](./index.md)  
- [Sub 过程](./sub-procedures.md)  
- [Function 过程](./function-procedures.md)  
- [属性过程](./property-procedures.md)  
- [运算符过程](./operator-procedures.md)  
- [过程参数和自变量](./procedure-parameters-and-arguments.md)  
- [过程重载](./procedure-overloading.md)  
- [过程疑难解答](./troubleshooting-procedures.md)  
- [循环结构](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [异常疑难解答：System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)
+## <a name="see-also"></a>请参阅
+- <xref:System.StackOverflowException>
+- [过程](./index.md)
+- [Sub 过程](./sub-procedures.md)
+- [Function 过程](./function-procedures.md)
+- [属性过程](./property-procedures.md)
+- [运算符过程](./operator-procedures.md)
+- [过程参数和自变量](./procedure-parameters-and-arguments.md)
+- [过程重载](./procedure-overloading.md)
+- [过程疑难解答](./troubleshooting-procedures.md)
+- [循环结构](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [异常疑难解答：System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 9a88a979a6b46f897e5f04f4481d4a23e245b165
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0f2a0c646b5af91d5296bafb01f5261d7ee6b9fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574308"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
 一个*泛型过程*，也称为*泛型方法*，是使用至少一个类型参数定义的过程。 这使得调用代码来定制其要求的数据类型的每次调用该过程。  
@@ -64,11 +64,11 @@ End Sub
   
  上述调用`MsgBox`分别显示"0"、"1"和"-1"。  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [如何：定义可对不同数据类型提供相同功能的类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
- [如何：使用泛型类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [过程](../../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [过程参数和自变量](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)  
- [类型列表](../../../../visual-basic/language-reference/statements/type-list.md)  
- [参数列表](../../../../visual-basic/language-reference/statements/parameter-list.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [如何：定义可对不同数据类型提供相同功能的类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [如何：使用泛型类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [过程](../../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [过程参数和自变量](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
+- [类型列表](../../../../visual-basic/language-reference/statements/type-list.md)
+- [参数列表](../../../../visual-basic/language-reference/statements/parameter-list.md)

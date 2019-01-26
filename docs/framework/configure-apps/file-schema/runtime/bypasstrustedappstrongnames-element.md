@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fe6beb359575c818131e1ae502fdebcec5096c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 725e2ee19c97cf2642134058ece07b32455516a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565470"
 ---
 # <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;bypassTrustedAppStrongNames&gt;元素
 指定是否以跳过上加载到完全信任的完全信任程序集的强名称验证<xref:System.AppDomain>。  
   
  \<configuration>  
 \<运行时 >  
-\<bypassTrustedAppStrongNames >  
+\<bypassTrustedAppStrongNames>  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,7 +70,7 @@ ms.locfileid: "53613747"
 -   签名没有延迟。  
   
 > [!NOTE]
->  如果跳过功能已禁用的计算机上的所有应用程序使用注册表项，则此配置文件设置无效。 有关更多信息，请参见[如何：禁用强名称跳过功能](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
+>  如果跳过功能已禁用的计算机上的所有应用程序使用注册表项，则此配置文件设置无效。 有关详细信息，请参阅[如何：禁用强名称跳过功能](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何指定验证上完全信任程序集的强名称签名的行为。  
@@ -83,7 +83,7 @@ ms.locfileid: "53613747"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [如何：禁用强名称跳过功能](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

@@ -2,12 +2,12 @@
 title: F#组件设计准则
 description: 了解以进行写入的准则F#面向消费由其他调用方的组件。
 ms.date: 05/14/2018
-ms.openlocfilehash: bc8d4908912c4630f649ba30593d43a557278efa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d72bfac1de5a57d5cce86f996f144af4bc181463
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145668"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415632"
 ---
 # <a name="f-component-design-guidelines"></a>F#组件设计准则
 
@@ -47,7 +47,7 @@ ms.locfileid: "53145668"
 type Point =
 
     /// Computes the distance between this point and another
-    member DistanceTo : otherPoint:Point -> float
+    member DistanceTo: otherPoint:Point -> float
 ```
 
 您可以使用缩写形式 XML 注释 (`/// comment`)，或标准的 XML 注释 (`///<summary>comment</summary>`)。
@@ -72,19 +72,19 @@ type Point =
 
 | 构造 | Case | 部件 | 示例 | 说明 |
 |-----------|------|------|----------|-------|
-| 具体的类型 | Pascal 命名法 | 名词 / 形容词 | 列表中，双精度，复杂 | 具体类型是结构、 类、 枚举、 委托、 记录和联合。 尽管类型名称为 OCaml，在传统上小写F#已采用了.NET 类型的命名方案。
-| DLL           | Pascal 命名法 |                 | Fabrikam.Core.dll |  |
-| 联合标记     | Pascal 命名法 | 名词 | 一些，添加成功 | 不要在公共 Api 中使用前缀。 （可选） 使用的前缀时内部的如 `键入团队 = TAlpha | TBeta | TDelta` |
-| 事件          | Pascal 命名法 | 谓词 | ValueChanged / ValueChanging |  |
-| Exceptions     | Pascal 命名法 |      | WebException | 名称应以"Exception"结尾。 |
-| 字段          | Pascal 命名法 | 名词 | CurrentName  | |
-| 接口类型 |  Pascal 命名法 | 名词 / 形容词 | IDisposable | 名称应以"I"开头。 |
-| 方法 |  Pascal 命名法 |  谓词 | ToString | |
-| 命名空间 | Pascal 命名法 | | Microsoft.FSharp.Core | 通常情况下使用`<Organization>.<Technology>[.<Subnamespace>]`，但是如果独立于组织的技术是删除组织。 |
-| 参数 | 驼峰式大小写 | 名词 |  类型名称、 转换、 范围 | |
+| 具体的类型 | PascalCase | 名词 / 形容词 | 列表中，双精度，复杂 | 具体类型是结构、 类、 枚举、 委托、 记录和联合。 尽管类型名称为 OCaml，在传统上小写F#已采用了.NET 类型的命名方案。
+| DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
+| 联合标记     | PascalCase | 名词 | 一些，添加成功 | 不要在公共 Api 中使用前缀。 （可选） 使用的前缀时内部的如 `键入团队 = TAlpha | TBeta | TDelta` |
+| 事件          | PascalCase | 谓词 | ValueChanged / ValueChanging |  |
+| Exceptions     | PascalCase |      | WebException | 名称应以"Exception"结尾。 |
+| 字段          | PascalCase | 名词 | CurrentName  | |
+| 接口类型 |  PascalCase | 名词 / 形容词 | IDisposable | 名称应以"I"开头。 |
+| 方法 |  PascalCase |  谓词 | ToString | |
+| 命名空间 | PascalCase | | Microsoft.FSharp.Core | 通常情况下使用`<Organization>.<Technology>[.<Subnamespace>]`，但是如果独立于组织的技术是删除组织。 |
+| 参数 | camelCase | 名词 |  类型名称、 转换、 范围 | |
 | 允许值 （内部） | 驼峰式大小写或 pascal 命名法 | 名词 / 动词 |  getValue myTable |
-| 允许值 （外部） | 驼峰式大小写或 pascal 命名法 | 名词/动词  | List.map Dates.Today | let 绑定值通常是公共的遵循传统的功能性设计模式时。 但是，通常使用 pascal 命名法标识符可以使用从其他.NET 语言时如此。 |
-| 属性  | Pascal 命名法  | 名词 / 形容词  | IsEndOfFile，背景色  | 布尔型属性通常使用是的可以并应该是肯定的如 IsEndOfFile，不 IsNotEndOfFile 中所示。
+| 允许值 （外部） | 驼峰式大小写或 pascal 命名法 | 名词/动词  | List.map, Dates.Today | let 绑定值通常是公共的遵循传统的功能性设计模式时。 但是，通常使用 pascal 命名法标识符可以使用从其他.NET 语言时如此。 |
+| 属性  | PascalCase  | 名词 / 形容词  | IsEndOfFile，背景色  | 布尔型属性通常使用是的可以并应该是肯定的如 IsEndOfFile，不 IsNotEndOfFile 中所示。
 
 #### <a name="avoid-abbreviations"></a>避免缩写
 
@@ -191,16 +191,16 @@ type Counter() =
 
 ```fsharp
 type Serializer =
-    abstract Serialize<'T> : preserveRefEq: bool -> value: 'T -> string
-    abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
+    abstract Serialize<'T>: preserveRefEq: bool -> value: 'T -> string
+    abstract Deserialize<'T>: preserveRefEq: bool -> pickle: string -> 'T
 ```
 
 在优先于：
 
 ```fsharp
 type Serializer<'T> = {
-    Serialize : bool -> 'T -> string
-    Deserialize : bool -> string -> 'T
+    Serialize: bool -> 'T -> string
+    Deserialize: bool -> string -> 'T
 }
 ```
 
@@ -243,13 +243,13 @@ module CollectionType =
 有时类用于建模数学构造，例如向量。 当要建模的域具有众所周知的运算符时，将其定义为类中的内部成员非常有用。
 
 ```fsharp
-type Vector(x:float) =
+type Vector(x: float) =
 
     member v.X = x
 
-    static member (*) (vector:Vector, scalar:float) = Vector(vector.X * scalar)
+    static member (*) (vector: Vector, scalar: float) = Vector(vector.X * scalar)
 
-    static member (+) (vector1:Vector, vector2:Vector) = Vector(vector1.X + vector2.X)
+    static member (+) (vector1: Vector, vector2: Vector) = Vector(vector1.X + vector2.X)
 
 let v = Vector(5.0)
 
@@ -306,7 +306,7 @@ type Logger() =
 下面是在返回类型中使用元组的一个很好示例：
 
 ```fsharp
-val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
+val divrem: BigInteger -> BigInteger -> BigInteger * BigInteger
 ```
 
 对于返回类型包含许多组件，或如果单个身份实体与相关组件，应考虑使用命名的类型而不元组。
@@ -317,9 +317,9 @@ val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
 
 ```fsharp
 type SomeType =
-    member this.Compute(x:int) : int =
+    member this.Compute(x:int): int =
         ...
-    member this.AsyncCompute(x:int) : Async<int> =
+    member this.AsyncCompute(x:int): Async<int> =
         ...
 
 type System.ServiceModel.Channels.IInputChannel with
@@ -503,13 +503,13 @@ F#记录类型编译为一个简单的.NET 类。 这些是适用于 Api 中的�
 
 例如，以下F#代码会公开公共 APIC#使用者：
 
-F#:
+F#：
 
 ```fsharp
 [<NoEquality; NoComparison>]
 type MyRecord =
-    { FirstThing : int
-        SecondThing : string }
+    { FirstThing: int
+        SecondThing: string }
 ```
 
 C#：
@@ -574,7 +574,7 @@ type MyBadType() =
     [<CLIEvent>]
     member this.MyEvent = myEv.Publish
 
-type MyEventArgs(x:int) =
+type MyEventArgs(x: int) =
     inherit System.EventArgs()
     member this.X = x
 
@@ -596,7 +596,7 @@ type MyGoodType() =
 /// A type in a component designed for use from other .NET languages
 type MyType() =
 
-    let compute (x: int) : Async<int> = async { ... }
+    let compute (x: int): Async<int> = async { ... }
 
     member this.ComputeAsync(x) = compute x |> Async.StartAsTask
 ```
@@ -606,7 +606,7 @@ type MyType() =
 ```fsharp
 /// A type in a component designed for use from other .NET languages
 type MyType() =
-    let compute(x:int) : Async<int> = async { ... }
+    let compute(x: int): Async<int> = async { ... }
     member this.ComputeAsTask(x, cancellationToken) = Async.StartAsTask(compute x, cancellationToken)
 ```
 
@@ -617,14 +617,14 @@ type MyType() =
 而不是以下内容：
 
 ```fsharp
-member this.Transform(f:int->int) =
+member this.Transform(f: int->int) =
     ...
 ```
 
 执行此操作：
 
 ```fsharp
-member this.Transform(f:Func<int,int>) =
+member this.Transform(f: Func<int,int>) =
     ...
 ```
 
@@ -639,18 +639,18 @@ F#函数类型显示为`class FSharpFunc<T,U>`与其他.NET 语言，并不太�
 ```fsharp
 member this.ReturnOption() = Some 3
 
-member this.ReturnBoolAndOut(outVal : byref<int>) =
+member this.ReturnBoolAndOut(outVal: byref<int>) =
     outVal <- 3
     true
 
-member this.ParamOption(x : int, y : int option) =
+member this.ParamOption(x: int, y: int option) =
     match y with
     | Some y2 -> x + y2
     | None -> x
 
-member this.ParamOverload(x : int) = x
+member this.ParamOverload(x: int) = x
 
-member this.ParamOverload(x : int, y : int) = x + y
+member this.ParamOverload(x: int, y: int) = x + y
 ```
 
 #### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>使用.NET 集合接口类型 IEnumerable\<T\>和 IDictionary\<键，值\>参数和返回值
@@ -660,14 +660,14 @@ member this.ParamOverload(x : int, y : int) = x + y
 而不是F#列出了：
 
 ```fsharp
-member this.PrintNames(names : string list) =
+member this.PrintNames(names: string list) =
     ...
 ```
 
 使用F#序列：
 
 ```fsharp
-member this.PrintNames(names : seq<string>) =
+member this.PrintNames(names: seq<string>) =
     ...
 ```
 
@@ -678,13 +678,13 @@ member this.PrintNames(names : seq<string>) =
 ```fsharp
 ✔ member this.NoArguments() = 3
 
-✔ member this.ReturnVoid(x : int) = ()
+✔ member this.ReturnVoid(x: int) = ()
 ```
 
 这是错误的：
 
 ```fsharp
-member this.WrongUnit( x:unit, z:int) = ((), ())
+member this.WrongUnit( x: unit, z: int) = ((), ())
 ```
 
 #### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>检查在普通的.NET API 边界上的 null 值

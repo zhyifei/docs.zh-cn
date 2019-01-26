@@ -3,12 +3,12 @@ title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: bc81dc5c201fea6caa752248c2b59636bd7465ec
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 74cde39a0bbba65d252d64bcedb91c3949dcf6f2
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286567"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222059"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -62,7 +62,7 @@ ms.locfileid: "53286567"
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 </PropertyGroup>
 ```
-将此属性设置为 `false` 将替代隐式包含，且该行为将恢复到以前的 SDK，在这种情况下，必须在项目中指定默认 glob。 
+将此属性设置为 `false` 将禁用隐式包含，并还原到以前 SDK 的行为，在这种情况下，必须在项目中指定默认 glob。
 
 此更改不会修改其他包含项的主要机制。 但是，如果要指定（例如，指定某些文件通过应用发布），仍可以使用 *csproj* 中相应的已知机制来实现（例如，`<Content>` 元素）。
 
@@ -88,7 +88,7 @@ ms.locfileid: "53286567"
 ## <a name="additions"></a>新增内容
 
 ### <a name="sdk-attribute"></a>Sdk 特性 
-*.csproj* 文件的 `<Project>` 元素具有名为 `Sdk` 的新特性。 `Sdk` 指定项目将使用的 SDK。 如[分层文档](cli-msbuild-architecture.md)中所述，SDK 是一组可生成 .NET Core 代码的 MSBuild [任务](/visualstudio/msbuild/msbuild-tasks)和[目标](/visualstudio/msbuild/msbuild-targets)。 .NET Core 工具随附了三个主要 SDK：
+.csproj 文件的根 `<Project>` 元素具有名为 `Sdk` 的新特性。 `Sdk` 指定项目将使用的 SDK。 如[分层文档](cli-msbuild-architecture.md)中所述，SDK 是一组可生成 .NET Core 代码的 MSBuild [任务](/visualstudio/msbuild/msbuild-tasks)和[目标](/visualstudio/msbuild/msbuild-targets)。 .NET Core 工具随附了三个主要 SDK：
 
 1. ID 为 `Microsoft.NET.Sdk` 的 .NET Core SDK
 2. ID 为 `Microsoft.NET.Sdk.Web` 的 .NET Core Web SDK
@@ -97,13 +97,13 @@ ms.locfileid: "53286567"
 需要在 `<Project>` 元素上将 `Sdk` 属性设置为这两个 ID 之一，以使用 .NET Core 工具和生成代码。 
 
 ### <a name="packagereference"></a>PackageReference
-用于指定项目中 NuGet 依赖项的项。 `Include` 属性指定包 ID。 
+`<PackageReference>` 项元素指定项目中的 NuGet 依赖项。 `Include` 属性指定包 ID。 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
-#### <a name="version"></a>版本
+#### <a name="version"></a>Version
 `Version` 指定要还原的包的版本。 此属性遵循 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)方案规则。 默认行为是精确的版本匹配。 例如，指定 `Version="1.2.3"` 等效于包的 1.2.3 版本的 NuGet 表示法 `[1.2.3]`。
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets 和 PrivateAssets
@@ -137,25 +137,27 @@ ms.locfileid: "53286567"
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-#### <a name="version"></a>版本
+#### <a name="version"></a>Version
 `Version` 指定要还原的包的版本。 此属性遵循 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)方案规则。 默认行为是精确的版本匹配。 例如，指定 `Version="1.2.3"` 等效于包的 1.2.3 版本的 NuGet 表示法 `[1.2.3]`。
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
-`<RuntimeIdentifiers>` 元素可用于指定项目的[运行时标识符 (RID)](../rid-catalog.md) 的列表（以分号分隔）。 使用 RID ，可发布独立部署。 
+`<RuntimeIdentifiers>` 属性元素可用于指定项目的[运行时标识符 (RID)](../rid-catalog.md) 的列表（以分号分隔）。 RID 允许发布独立部署。 
 
 ```xml
 <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 ```
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
-`<RuntimeIdentifier>` 元素可用于指定项目的唯一[运行时标识符 (RID)](../rid-catalog.md)。 使用 RID ，可发布独立部署。 
+`<RuntimeIdentifier>` 属性元素可用于指定项目的唯一[运行时标识符 (RID)](../rid-catalog.md)。 RID 支持发布独立部署。
 
 ```xml
 <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
 ```
 
+如果需要为多个运行时发布，请使用 `<RuntimeIdentifiers>`（复数）。 如果只需要单个运行时，`<RuntimeIdentifier>` 可以进行较快的生成。
+
 ### <a name="packagetargetfallback"></a>PackageTargetFallback 
-`<PackageTargetFallback>` 元素可用于指定要在还原包时使用的一组兼容目标。 旨在允许使用 dotnet [TxM（目标 x 名字对象）](/nuget/schema/target-frameworks) 的包处理未声明 dotnet TxM 的包。 如果项目使用 dotnet TxM，那么所依赖的所有包也必须有 dotnet TxM，除非将 `<PackageTargetFallback>` 添加到项目中，以允许非 dotnet 平台与 dotnet 兼容。 
+`<PackageTargetFallback>` 属性元素可用于指定要在还原包时使用的一组兼容目标。 旨在允许使用 dotnet [TxM（目标 x 名字对象）](/nuget/schema/target-frameworks) 的包处理未声明 dotnet TxM 的包。 如果项目使用 dotnet TxM，那么所依赖的所有包也必须有 dotnet TxM，除非将 `<PackageTargetFallback>` 添加到项目中，以允许非 dotnet 平台与 dotnet 兼容。 
 
 以下示例展示了项目中所有目标的回退： 
 
@@ -173,7 +175,7 @@ ms.locfileid: "53286567"
 </PackageTargetFallback >
 ```
 
-## <a name="nuget-metadata-properties"></a>NuGet 元数据属性
+## <a name="nuget-metadata-properties"></a>NugetMetadataProperties
 迁移到 MSBuild 后，我们已将在打包 NuGet 包时使用的输入元数据从 project.json 移到 .csproj 文件中。 输入为 MSBuild 属性，因此它们必须转到 `<PropertyGroup>` 组中。 下面列出了在使用 `dotnet pack` 命令或属于 SDK 的 `Pack` MSBuild 目标时，用作打包进程的输入的属性。 
 
 ### <a name="ispackable"></a>IsPackable
@@ -185,17 +187,17 @@ ms.locfileid: "53286567"
 ### <a name="packageid"></a>PackageId
 指定生成的包的名称。 如果未指定，`pack` 操作将默认使用 `AssemblyName` 或目录名称作为包的名称。 
 
-### <a name="title"></a>标题
+### <a name="title"></a>Title
 明了易用的包标题，通常用在 UI 显示中，如 nuget.org 上和 Visual Studio 中包管理器上的那样。 如果未指定，则改为使用包 ID。
 
-### <a name="authors"></a>作者
+### <a name="authors"></a>Authors
 其中名称以分号分隔的包作者列表，其中名称与 nuget.org 上的配置文件名称匹配。这些信息显示在 nuget.org 上的 NuGet 库中，并用于交叉引用同一作者的包。
 
 ### <a name="packagedescription"></a>PackageDescription
 
 用于 UI 显示的包的详细说明。
 
-### <a name="description"></a>说明
+### <a name="description"></a>Description
 程序集的详细说明。 如果未指定 `PackageDescription`，则此属性还可用作程序包的说明。
 
 ### <a name="copyright"></a>Copyright
@@ -267,10 +269,10 @@ ms.locfileid: "53286567"
 ### <a name="nuspecproperties"></a>NuspecProperties
 键=值对的分号分隔列表。
 
-## <a name="assemblyinfo-properties"></a>AssemblyInfo 属性
+## <a name="assemblyinfo-properties"></a>AssemblyInfoProperties
 现在，*AssemblyInfo* 文件中通常存在的[程序集特性](../../framework/app-domains/set-assembly-attributes.md)将自动从属性生成。
 
-### <a name="properties-per-attribute"></a>每个特性的属性
+### <a name="properties-per-attribute"></a>PropertiesPerAttribute
 
 每个特性都有一个可控制其内容的属性，还有一个可以禁用其生成的属性，如下表所示：
 

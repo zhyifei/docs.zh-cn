@@ -3,13 +3,13 @@ title: 机器学习数据转换 - ML.NET
 description: 了解在 ML.NET 中受支持的特征工程组件。
 author: JRAlexander
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: 72e4077151d35b9bff661c28c9a20626098a5c69
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.date: 01/14/2019
+ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451087"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415346"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>机器学习数据转换 - ML.NET
 
@@ -23,11 +23,6 @@ ms.locfileid: "53451087"
 | Transform | 定义 |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.GroupTransform> | 根据相邻的组 ID，将标量列的值汇集到矢量中。 |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureCombiner> | 将所有功能合并到一个功能列中。 |
-| <xref:Microsoft.ML.Legacy.Transforms.ManyHeterogeneousModelCombiner> | 将一系列 TransformModel 和一个 PredictorModel 合并到一个 PredictorModel 中。 |
-| <xref:Microsoft.ML.Legacy.Transforms.ModelCombiner> | 将一系列 TransformModel 合并到一个模型中。 |
-| <xref:Microsoft.ML.Legacy.Transforms.Segregator> | 将矢量列取消组合为一系列行；组转换的逆向。 |
-| <xref:Microsoft.ML.Legacy.Transforms.TwoHeterogeneousModelCombiner> | 将一个 TransformModel 和一个 PredictorModel 合并到一个 PredictorModel 中。 |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | 将矢量列取消组合为一系列行；组转换的逆向。 |
 
 ## <a name="conversions"></a>转换 
@@ -35,7 +30,6 @@ ms.locfileid: "53451087"
 | Transform | 定义 |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | 哈希为单值列或矢量列。 对于矢量列，它分别散列每个槽。 它可以散列文本值或键值。 |
-| <xref:Microsoft.ML.Legacy.Transforms.HashConverter> | 将列值转换为哈希。 此转换接受数字和文本输入，包括单值和矢量值列。 |
 | <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | 将多个列值转换为哈希。 此转换接受数字和文本输入，包括单值和矢量值列。 |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToBinaryVectorMappingTransformer> | 将键转换为二进制矢量列。 |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToValueMappingTransformer > | 利用 KeyValues 元数据将键索引映射到 KeyValues 元数据中的相应值。 |
@@ -56,10 +50,10 @@ ms.locfileid: "53451087"
 | Transform | 定义 |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | 通过将单个令牌（比较不区分大小写）与非索引字进行比较，删除指定的非索引字列表。| 
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageGrayscaleTransform> | 获取一个或多个 ImageType 列，并将其转换为同一图像的灰度表示形式。|
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageLoaderTransform> | 获取一个或多个 ReadOnlyMemory 列，并将其作为 ImageType 加载。 |
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImagePixelExtractorTransform> | 获取一个或多个 ImageType 列，并将其转换为矢量表示形式。|
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageResizerTransform> | 采用一个或多个 ImageType 列，并将其大小调整为提供的高度和宽度。|
+| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | 获取一个或多个 ImageType 列，并将其转换为同一图像的灰度表示形式。|
+| <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | 获取一个或多个 ReadOnlyMemory 列，并将其作为 ImageType 加载。 |
+| <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | 获取一个或多个 ImageType 列，并将其转换为矢量表示形式。|
+| <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | 采用一个或多个 ImageType 列，并将其大小调整为提供的高度和宽度。|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | 实现 LightLDA，这是潜在狄利克雷分布的最先进的实现。|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | 从指定的模型文件加载特定转换。 允许从序列化链中挑选转换，或将预定型的转换应用于不同（但仍然符合）的数据视图。 |
 | <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | 在给定的键矢量中生成一组 ngrams 计数（长度为 1-n 的连续值的序列）。 它通过生成 ngram 字典并使用字典中的 ID 作为包中的索引来实现。 | 
@@ -70,7 +64,6 @@ ms.locfileid: "53451087"
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | 计算特征矢量到低秩子空间的投影。 |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | 使用预先训练的情绪模型对输入字符串进行评分。 |
 | <xref:Microsoft.ML.Transforms.Text.StopWordsRemovingTransformer> | 通过将单个令牌（比较不区分大小写）与非索引字进行比较，以删除特定语言的非索引字列表（最常见的单词）。 |
-| <xref:Microsoft.ML.Transforms.Categorical.TermLookupTransformer> | 使用通过自变量提供的地图数据集将文本值列映射到新列。 |
 | <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | 在给定的文本中生成一组 ngrams 计数（连续单词的序列）。 它通过生成 ngram 字典并使用字典中的 ID 作为包中的索引来实现。 |
 | <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | 在给定的文本中生成一组 ngrams 计数（长度为 1-n 的连续单词的序列）。 它通过散列每个 ngram 并使用哈希值作为包中的索引来实现。 |
 | <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | 使用分隔符字符将文本拆分成单词。 |
@@ -89,12 +82,8 @@ ms.locfileid: "53451087"
 
 | Transform | 定义 |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.Dictionarizer> | 将输入值（单词、数字等）转换为字典中的索引。 |
-| <xref:Microsoft.ML.Legacy.Transforms.LabelColumnKeyBooleanConverter> | 将标签转换为键或布尔值（如果需要），使其适用于分类。 |
 | <xref:Microsoft.ML.Transforms.LabelConvertTransform> |  转换标签。 |
 | <xref:Microsoft.ML.Transforms.LabelIndicatorTransform> | 将多类标签重新映射为二进制 True、False 标签，主要用于 OVA。|
-| <xref:Microsoft.ML.Legacy.Transforms.LabelToFloatConverter> | 将标签转换为浮点，使其适用于回归。 |
-| <xref:Microsoft.ML.Legacy.Transforms.PredictedLabelColumnOriginalValueConverter> | 将预测标签列转换为其原始值，除非它是布尔值类型。 |
 
 ## <a name="missing-values"></a>缺失值
 
@@ -103,7 +92,6 @@ ms.locfileid: "53451087"
 | <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | 删除列中的缺失值。 |
 | <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | 创建一个布尔值输出列，其槽数与输入列相同，如果缺少输入列中的值，则输出值为 true。 |
 | <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | 通过将缺失值替换为默认值或平均值/最小值/最大值（仅适用于非文本列）来处理缺失值。 |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | 创建一个布尔值输出列，其槽数与输入列相同，如果缺少输入列中的值，则输出值为 true。 |
 
 ## <a name="normalization"></a>标准化
 
@@ -113,7 +101,6 @@ ms.locfileid: "53451087"
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | 计算矢量值列的均值和方差。 它跟踪当前平均值和 M2（平均值的平方差的总和）、NaNs 的数量和非零元素的数量。 |
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarSngAggregator> | 计算矢量值列的均值和方差。 它跟踪当前平均值和 M2（平均值的平方差的总和）、NaNs 的数量和非零元素的数量。 |
 | <xref:Microsoft.ML.Transforms.Normalizers.MinMaxDblAggregator> | 跟踪矢量值列的最小值、最大值、非稀疏值 (vCount) 和 ProcessValue() 调用 (trainCount) 的数量。 |
-| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxSngAggregator> | 跟踪矢量值列的最小值、最大值、非稀疏值 (vCount) 和 ProcessValue() 调用 (trainCount) 的数量。 |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizeTransform> | 标准化特征范围。 |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizingTransformer> |标准化特征范围。 |
 
@@ -148,7 +135,6 @@ ms.locfileid: "53451087"
 | <xref:Microsoft.ML.Transforms.ColumnCopyingTransformer> | 复制数据集中的列。|
 | <xref:Microsoft.ML.Transforms.ColumnSelectingTransformer> | 选择要从给定输入中删除或保留的一组列。 |
 | <xref:Microsoft.ML.Transforms.FeatureSelection.SlotsDroppingTransformer> | 删除列中的槽。|
-| <xref:Microsoft.ML.Legacy.Transforms.KeyToTextConverter> | KeyToValueTransform 利用 KeyValues 元数据将键索引映射到 KeyValues 元数据中的相应值。 |
 | <xref:Microsoft.ML.Transforms.OptionalColumnTransform> | 使用指定的类型和默认值创建新列。 |
 | <xref:Microsoft.ML.Transforms.RangeFilter> | 在 Single、Double 或 Key 类型的列上筛选数据视图（相邻）。 保留指定的最小/最大范围内的值。 总是筛选出 NaN。如果输入是 Key 类型，则最小值/最大值将被视为值数量的百分比。 |
 
@@ -169,15 +155,15 @@ ms.locfileid: "53451087"
 
 | Transform | 定义 |
 | --- | --- |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.ExponentialAverageTransform> | 采用值的加权平均值：ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1))。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidChangePointDetector> | 实现 i.i.d 的更改点检测器转换。 基于自适应内核密度估计和鞅的序列（随机样本）。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidSpikeDetector> | 实现 i.i.d 的峰值检测器转换。 基于自适应内核密度估计的序列（随机样本）。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.MovingAverageTransform> | 提供滑动窗口值的加权平均值。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PercentileThresholdTransform> | 确定时序当前值是否属于滑动窗口排在前列的几个值的百分比。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PValueTransform> | 根据滑动窗口中的其他值计算该系列当前值经验 p 值。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SlidingWindowTransform> | 在 Single 类型的时序上输出滑动窗口。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaChangePointDetector> | 基于时序的奇异谱建模实现更改点检测器转换。 |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaSpikeDetector> | 基于时序的奇异谱建模实现峰值检测器转换。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | 采用值的加权平均值：ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1))。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidChangePointDetector> | 实现 i.i.d 的更改点检测器转换。 基于自适应内核密度估计和鞅的序列（随机样本）。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidSpikeDetector> | 实现 i.i.d 的峰值检测器转换。 基于自适应内核密度估计的序列（随机样本）。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.MovingAverageTransform> | 提供滑动窗口值的加权平均值。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PercentileThresholdTransform> | 确定时序当前值是否属于滑动窗口排在前列的几个值的百分比。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PValueTransform> | 根据滑动窗口中的其他值计算该系列当前值经验 p 值。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SlidingWindowTransform> | 在 Single 类型的时序上输出滑动窗口。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaChangePointDetector> | 基于时序的奇异谱建模实现更改点检测器转换。 |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaSpikeDetector> | 基于时序的奇异谱建模实现峰值检测器转换。 |
 
 ## <a name="miscellaneous"></a>杂项
 
@@ -188,4 +174,3 @@ ms.locfileid: "53451087"
 | <xref:Microsoft.ML.Transforms.GenerateNumberTransform> | 添加具有已生成数字序列的列。 |
 | <xref:Microsoft.ML.Transforms.ProduceIdTransform> | 生成以游标的 ID 作为列的列。 |
 | <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | 生成随机数。 |
-| <xref:Microsoft.ML.Transforms.ScoringTransformer> | 结合来自多个预测模型的信息，通过使用已定型的模型的分数在管道中生成新模型。 |

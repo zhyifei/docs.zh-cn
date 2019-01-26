@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b2cd047367820d249272ca220669835975dbf2d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 33d4c023b7a649fd2aa3d9d52a90bb7111c59743
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683029"
 ---
 # <a name="ltgeneratepublisherevidencegt-element"></a>&lt;generatePublisherEvidence&gt;元素
 指定是否在运行时创建<xref:System.Security.Policy.Publisher>代码访问安全性 (CAS) 的证据。  
   
  \<configuration>  
 \<运行时 >  
-\<generatePublisherEvidence >  
+\<generatePublisherEvidence>  
   
 ## <a name="syntax"></a>语法  
   
@@ -78,6 +78,6 @@ ms.locfileid: "53611160"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

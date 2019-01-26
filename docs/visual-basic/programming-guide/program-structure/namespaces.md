@@ -16,17 +16,17 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 6b320d21c33fa798ca2fd3ef5a04363d141f99f2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b56644cdf44ac5bd9c755d1ee7ba7013c0245293
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492307"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic 中的命名空间
 命名空间组织程序集中定义的对象。 程序集可以包含多个命名空间，命名空间又可以包含其他命名空间。 使用大组对象（比如类库）时，命名空间可以避免多义性和简化引用。  
   
- 例如，[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 在 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间中定义 <xref:System.Windows.Forms.ListBox> 类。 以下代码段演示如何使用此类的完全限定名称声明变量：  
+ 例如， [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 在 <xref:System.Windows.Forms.ListBox> 命名空间中定义 <xref:System.Windows.Forms?displayProperty=nameWithType> 类。 以下代码段演示如何使用此类的完全限定名称声明变量：  
   
  [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48030439"
  在命名空间中，可以定义项，如模块、接口、类、委托、枚举、结构和其他命名空间。 无法在命名空间级别定义属性、过程、变量和事件等项。 这些项必须在模块、结构或类等容器内部进行声明。  
   
 ## <a name="global-keyword-in-fully-qualified-names"></a>完全限定名中的全局关键字  
- 如果定义了命名空间的嵌套层次结构，该层次结构内的代码可能会被阻止访问 .NET Framework 的 <xref:System?displayProperty=nameWithType> 命名空间。 下面的示例阐释了 `SpecialSpace.System` 命名空间阻止访问 <xref:System?displayProperty=nameWithType> 的层次结构。  
+ 如果定义了命名空间的嵌套层次结构，该层次结构内的代码可能会被阻止访问 .NET Framework 的 <xref:System?displayProperty=nameWithType> 命名空间。 下面的示例阐释了 `SpecialSpace.System` 命名空间阻止访问 <xref:System?displayProperty=nameWithType>的层次结构。  
   
 ```vb  
 Namespace SpecialSpace  
@@ -81,7 +81,7 @@ Namespace SpecialSpace
 End Namespace  
 ```  
   
- 结果是，Visual Basic 编译器无法成功地解析对 <xref:System.Int32?displayProperty=nameWithType> 的引用，因为 `SpecialSpace.System` 没有定义 `Int32`。 可以使用 `Global` 关键字在.NET Framework 类库的最外层级别上启动限定链。 这将允许你指定类库中的 <xref:System?displayProperty=nameWithType> 命名空间或任何其他命名空间。 下面的示例阐释了这一点。  
+ 结果是，Visual Basic 编译器无法成功地解析对 <xref:System.Int32?displayProperty=nameWithType>的引用，因为 `SpecialSpace.System` 没有定义 `Int32`。 可以使用 `Global` 关键字在.NET Framework 类库的最外层级别上启动限定链。 这将允许你指定类库中的 <xref:System?displayProperty=nameWithType> 命名空间或任何其他命名空间。 下面的示例阐释了这一点。  
   
 ```vb  
 Namespace SpecialSpace  
@@ -96,7 +96,7 @@ Namespace SpecialSpace
 End Namespace  
 ```  
   
- 可以使用 `Global` 访问其他根级别的命名空间，如 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 和与项目相关联的任何命名空间。  
+ 可以使用 `Global` 访问其他根级别的命名空间，如 <xref:Microsoft.VisualBasic?displayProperty=nameWithType>和与项目相关联的任何命名空间。  
   
 ## <a name="global-keyword-in-namespace-statements"></a>命名空间语句中的全局关键字  
  还可以使用 `Global` 中的 [Global](../../../visual-basic/language-reference/statements/namespace-statement.md)。 这将允许你定义项目根命名空间之外的命名空间。  
@@ -109,7 +109,7 @@ End Namespace
   
  在命名空间声明中， `Global` 不能嵌套于另一个命名空间中。  
   
- 可以使用[应用程序页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)可以查看和修改**根 Namespace**的项目。  对于新项目，“根命名空间”  默认为该项目的名称。 若要使 `Global` 成为顶级命名空间，可以清除“根命名空间”  条目，以便此框为空。 清除“根命名空间”  移除了命名空间声明中需要的 `Global` 关键字。  
+ 可以使用 [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) 查看和修改项目的“根命名空间”  。  对于新项目，“根命名空间”  默认为该项目的名称。 若要使 `Global` 成为顶级命名空间，可以清除“根命名空间”  条目，以便此框为空。 清除“根命名空间”  移除了命名空间声明中需要的 `Global` 关键字。  
   
  如果 `Namespace` 语句声明一个名称，而该名称也是.NET Framework 中的命名空间，则如果 `Global` 关键字未在完全限定名中使用，.NET Framework 命名空间会变得不可用。 在不使用 `Global` 关键字的情况下，若要启用对该 .NET Framework 命名空间的访问，可以将 `Global` 关键字包括到 `Namespace` 语句中。  
   
@@ -121,10 +121,10 @@ End Namespace
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Windows.Forms.ListBox>  
-- <xref:System.Windows.Forms?displayProperty=nameWithType>  
-- [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
-- [如何：使用命令行创建和使用程序集](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)  
-- [引用和 Imports 语句](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
-- [Imports 语句（.NET 命名空间和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
-- [在 Office 解决方案中编写代码](/visualstudio/vsto/writing-code-in-office-solutions)
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms?displayProperty=nameWithType>
+- [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [如何：使用命令行创建和使用程序集](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
+- [引用和 Imports 语句](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Imports 语句（.NET 命名空间和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Writing Code in Office Solutions](/visualstudio/vsto/writing-code-in-office-solutions)

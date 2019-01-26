@@ -2,12 +2,12 @@
 title: 从命令目录树生成 SQL - 最佳做法
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 0087c67b12b4b6ea36cabd5800b7be0a72fc4a90
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 476a2b9d6d3a8efb6094afce0143abed765bdb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659090"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>从命令目录树生成 SQL - 最佳做法
 输出查询命令目录树高度模拟可使用 SQL 表示的查询。 但是，对于提供程序编写者而言，从输出命令目录树生成 SQL 还是存在一些常见的难题。 本主题讨论这些难题。 在下一主题中，示例提供程序将演示如何解决这些难题。  
@@ -130,7 +130,7 @@ ON b.y = d.z
  此外，当平展联接时，参与的表（或子查询）可能存在互相冲突的别名，这种情况下需要进行重命名。  
   
 ## <a name="avoid-select-"></a>避免 SELECT *  
- 不要使用 `SELECT *` 从基表中进行选择。 中的存储模型[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序可能仅包括的数据库表中的列的子集。 在这种情况下，`SELECT *` 可能产生不正确的结果。 替代方法是，应通过使用参与的表达式的结果类型中的列名，指定所有参与的列。  
+ 不要使用 `SELECT *` 从基表中进行选择。 中的存储模型[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序可能仅包括在数据库表中的列的子集。 在这种情况下，`SELECT *` 可能产生不正确的结果。 替代方法是，应通过使用参与的表达式的结果类型中的列名，指定所有参与的列。  
   
 ## <a name="reuse-of-expressions"></a>重用表达式  
  在由[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]传递的查询命令目录树中可以重用表达式。 不要假定每个表达式在查询命令目录树中仅出现一次。  
@@ -138,5 +138,5 @@ ON b.y = d.z
 ## <a name="mapping-primitive-types"></a>映射基元类型  
  在将概念 (EDM) 类型映射到提供程序类型时，应映射到最宽的类型 (Int32)，以便适合所有可能的值。 此外，避免映射到不能用于许多操作，如 BLOB 类型的类型 (例如， `ntext` SQL Server 中)。  
   
-## <a name="see-also"></a>请参阅  
- [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>请参阅
+- [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

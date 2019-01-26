@@ -2,39 +2,41 @@
 title: '&lt;netHttpBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 3a35be198a4e60922861c49e911bd498d44c974f
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 0195708d24e61dfee4c396518c94d5e21b7783bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578882"
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; 的 &lt;transport&gt;
 为 HTTP 传输定义控制身份验证参数的属性。  
   
 \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<netHttpBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
 \<transport>  
   
 ## <a name="syntax"></a>语法  
   
-```xml
-<netHttpBinding>  
-  <binding>  
-    <security mode="None|Transport|Message|TransportWithMessageCredential|TransportCredentialOnly">  
-      <transport clientCredentialType="None|Basic|Digest|Ntlm|Windows"  
-                 proxyCredentialType="None|Basic|Digest|Ntlm|Windows" realm="string">  
-        <extendedProtectionPolicy policyEnforcement="Never|WhenSupported|Always"  
-                                  protectionScenario="TransportSelected|TrustedProxy">  
-          <customServiceNames></customServiceNames>  
-        </extendedProtectionPolicy>  
-      </transport>  
-    </security>  
-  </binding>  
-</netHttpBinding>  
+```xml  
+<netHttpBinding>
+  <binding>
+    <security mode="None|Transport|Message|TransportWithMessageCredential|TransportCredentialOnly">
+      <transport clientCredentialType="None|Basic|Digest|Ntlm|Windows"
+                 proxyCredentialType="None|Basic|Digest|Ntlm|Windows"
+                 realm="string">
+        <extendedProtectionPolicy policyEnforcement="Never|WhenSupported|Always"
+                                  protectionScenario="TransportSelected|TrustedProxy">
+          <customServiceNames>
+          </customServiceNames>
+        </extendedProtectionPolicy>
+      </transport>
+    </security>
+  </binding>
+</netHttpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -83,42 +85,44 @@ ms.locfileid: "54030316"
 ## <a name="example"></a>示例  
  下面的示例演示如何对基本绑定使用 SSL 传输安全。 默认情况下，基本绑定支持 HTTP 通信。  
   
-```xml
-<system.serviceModel>  
-  <services>  
-    <service type="Microsoft.ServiceModel.Samples.CalculatorService"  
-             behaviorConfiguration="CalculatorServiceBehavior">  
-      <endpoint address=""  
-                binding="netHttpBinding"  
-                bindingConfiguration="Binding1"   
-                contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-    </service>  
-  </services>  
-  <bindings>  
-    <netHttpBinding>  
-      <!-- Configure basicHttpBinding with Transport security -->  
-      <!-- mode and clientCredentialType set to None. -->  
-      <binding name="Binding1">  
-        <security mode="Transport">  
-          <transport clientCredentialType="None"  
-                     proxyCredentialType="None">  
-            <extendedProtectionPolicy policyEnforcement="WhenSupported"  
-                                      protectionScenario="TransportSelected">  
-              <customServiceNames></customServiceNames>  
+```xml  
+<system.serviceModel>
+  <services>
+    <service type="Microsoft.ServiceModel.Samples.CalculatorService"
+             behaviorConfiguration="CalculatorServiceBehavior">
+      <endpoint address=""
+                binding="netHttpBinding"
+                bindingConfiguration="Binding1"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </service>
+  </services>
+  <bindings>
+    <netHttpBinding>
+      <!-- Configure basicHttpBinding with Transport security -->
+      <!-- mode and clientCredentialType set to None. -->
+      <binding name="Binding1">
+        <security mode="Transport">
+          <transport clientCredentialType="None"
+                     proxyCredentialType="None">
+            <extendedProtectionPolicy policyEnforcement="WhenSupported"
+                                      protectionScenario="TransportSelected">
+              <customServiceNames>
+              </customServiceNames>
             </extendedProtectionPolicy>
-          </transport> 
-        </security>  
-      </binding>  
-    </netHttpBinding>  
-  </bindings>  
-</system.serviceModel>  
+          </transport>
+        </security>
+      </binding>
+    </netHttpBinding>
+  </bindings>
+</system.serviceModel>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>
+- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: 06c6899895f278fdf652725a05ecc7229805f4d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0e3ed08a62e9a52efa231c573a8061ff92d3cee0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604144"
 ---
 # <a name="ltcgt-visual-basic"></a>&lt;c&gt; (Visual Basic)
 指示说明中的文本是代码。  
@@ -37,5 +37,5 @@ ms.locfileid: "44041117"
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/c_1.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>请参阅
+- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

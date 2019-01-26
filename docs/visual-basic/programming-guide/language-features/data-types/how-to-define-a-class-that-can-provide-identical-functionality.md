@@ -1,5 +1,5 @@
 ---
-title: 如何：定义可对不同数据类型提供相同功能的类 (Visual Basic)
+title: 如何：定义一个类，可对不同的数据类型 (Visual Basic 中) 提供相同的功能
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 3570a1c851bb8fead33f4cd208489c4ae087a68d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f6faf7b9ba2338784fda2cec2efc2b3991d415e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667474"
 ---
-# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>如何：定义可对不同数据类型提供相同功能的类 (Visual Basic)
+# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>如何：定义一个类，可对不同的数据类型 (Visual Basic 中) 提供相同的功能
 你可以定义这样一个类：你可以通过该类创建可在不同数据类型上提供相同功能的对象。 为此，你可以在定义中指定一个或多个 *类型形参* 。 然后，该类将能够充当使用不同数据类型的对象的模板。 通过这种方式定义的类称为 *泛型类*。  
   
  定义泛型类这种做法的优点在于：你只需定义一次泛型类，代码便可以利用它来创建使用各种数据类型的多个对象。 相对于使用 `Object` 类型定义类而言，这样做的性能将会更好。  
@@ -74,11 +74,11 @@ ms.locfileid: "33650343"
   
      [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [语言独立性和与语言无关的组件](../../../../standard/language-independence-and-language-independent-components.md)  
- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
- [类型列表](../../../../visual-basic/language-reference/statements/type-list.md)  
- [如何：使用泛型类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+## <a name="see-also"></a>请参阅
+- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [语言独立性和与语言无关的组件](../../../../standard/language-independence-and-language-independent-components.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [类型列表](../../../../visual-basic/language-reference/statements/type-list.md)
+- [如何：使用泛型类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)

@@ -2,15 +2,15 @@
 title: 如何：使用消息传递活动创建工作流服务
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a90f525e23fcad0e46ebc378d22b8282e613643a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584972"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>如何：使用消息传递活动创建工作流服务
-此主题说明如何使用消息传递活动创建简单工作流服务， 本主题着重介绍工作流服务的创建机制，其中的服务仅包含消息传递活动。 在实际服务中，工作流包含其他许多活动。 该服务实现一个名为 Echo 的操作，来获取一个字符串并将该字符串返回到调用方。 本主题是一系列主题（包含两个主题）中的第一个。 下一个主题[如何： 访问服务从工作流应用程序一](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)讨论如何创建可以调用在本主题中创建服务工作流应用程序。  
+此主题说明如何使用消息传递活动创建简单工作流服务， 本主题着重介绍工作流服务的创建机制，其中的服务仅包含消息传递活动。 在实际服务中，工作流包含其他许多活动。 该服务实现一个名为 Echo 的操作，来获取一个字符串并将该字符串返回到调用方。 本主题是一系列主题（包含两个主题）中的第一个。 下一主题[How To:访问服务从工作流应用程序一](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)讨论如何创建可以调用在本主题中创建服务工作流应用程序。  
   
 ### <a name="to-create-a-workflow-service-project"></a>创建工作流服务项目  
   
@@ -87,9 +87,9 @@ ms.locfileid: "48580416"
   
      ![WCF 帮助页](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")  
   
-4.  继续阅读[如何： 访问服务从工作流应用程序一](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)主题，以创建调用此服务的工作流客户端。  
+4.  继续阅读[如何：访问服务从工作流应用程序一](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)主题，以创建调用此服务的工作流客户端。  
   
-## <a name="see-also"></a>请参阅  
- [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [承载工作流服务概述](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
- [消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+## <a name="see-also"></a>请参阅
+- [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [承载工作流服务概述](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

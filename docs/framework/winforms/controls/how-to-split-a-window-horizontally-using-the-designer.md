@@ -6,12 +6,12 @@ helpviewer_keywords:
 - split windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: 3872a176-891f-4c70-9779-b2ce85b0b102
-ms.openlocfilehash: c2b605a08ea29d1d0a1e92cb2b7e4dc1f2059c26
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3fab2eab07d9c632d10ceb06fbffcfeacfc10df1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535549"
 ---
 # <a name="how-to-split-a-window-horizontally-using-the-designer"></a>如何：使用设计器水平拆分窗口
 此示例使拆分器将划分<xref:System.Windows.Forms.SplitContainer>控制水平。  
@@ -23,6 +23,6 @@ ms.locfileid: "44206479"
   
 1.  在中**属性**窗口中，将<xref:System.Windows.Forms.SplitContainer.Orientation%2A>的属性<xref:System.Windows.Forms.SplitContainer>控制对<xref:System.Windows.Forms.Orientation.Horizontal>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer 控件](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer 控件](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

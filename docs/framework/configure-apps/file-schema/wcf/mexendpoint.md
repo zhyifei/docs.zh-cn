@@ -2,12 +2,12 @@
 title: '&lt;mexEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: c9823060-0a5d-4f9d-99d4-4d113b758247
-ms.openlocfilehash: aceff3e373d9a5f7e57c28d85870af19ae8ef3e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4e2fb4946ee68b3cbd5bd6bfbafe6bb5e9c9106f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747780"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149145"
 ---
 # <a name="ltmexendpointgt"></a>&lt;mexEndpoint&gt;
 此配置元素定义具有固定 IMetadataExchange 协定的标准终结点。 由于所有元数据交换终结点都指定 IMetadataExchange 作为其协定，因此可以使用此标准终结点，而不必定义您自己的终结点。  
@@ -18,13 +18,13 @@ ms.locfileid: "32747780"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <mexEndpoint>
       <standardEndpoint name="String" />
     </mexEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  

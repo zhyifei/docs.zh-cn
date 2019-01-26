@@ -2,12 +2,12 @@
 title: 发出用户代码跟踪
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5ecc0c2110362f715275729b5e4c4c7e1ec03496
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492659"
 ---
 # <a name="emitting-user-code-traces"></a>发出用户代码跟踪
 除了启用跟踪以收集检测数据生成由 Windows Communication Foundation (WCF)，您还可以发出以编程方式在用户代码中的跟踪。 这样，您就可以主动创建检测数据，过后您可以细读这些数据以进行诊断。 本主题讨论如何实现这一目的。  
@@ -123,7 +123,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  在下图中，我们还看到跟踪在“Calculator activity”（计算器活动）中来回转移，而且每个请求活动都具有两对“开始”和“停止”跟踪，一对用于客户端，另一对用于服务（每个跟踪源一对）。  
   
- ![跟踪查看器： 发出用户&#45;代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
+ ![跟踪查看器：发出用户&#45;代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 按创建时间（左面板）及其嵌套活动（右上面板）排列的活动列表  
   
  如果活动代码引发的异常会导致客户端引发异常（例如，当客户端没有获得请求的响应时），将在同一个直接相关的活动中显示服务和客户端警告或错误消息。 在下图中，该服务会引发一个异常，指示"服务拒绝处理在用户代码中的此请求。" 客户端还会引发一个异常，指示"服务器无法处理请求，因为出现内部错误。"  
@@ -140,5 +140,5 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  定义活动和传播活动 ID 使得我们可以对各终结点执行直接错误关联。 这样，我们就可以更快地找到错误的根本原因。  
   
-## <a name="see-also"></a>请参阅  
- [扩展跟踪](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+## <a name="see-also"></a>请参阅
+- [扩展跟踪](../../../../../docs/framework/wcf/samples/extending-tracing.md)

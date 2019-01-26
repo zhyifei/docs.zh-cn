@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a7b32f9cf797729aa0ca0d176b31732d06e73907
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701919"
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt;元素
 指定由性能计数器共享的全局内存的大小。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
 \<performanceCounters>  
   
 ## <a name="syntax"></a>语法  
@@ -56,8 +56,8 @@ ms.locfileid: "48032460"
   
  对于单独共享内存的大小，在注册表中的 DWORD FileMappingSize 值密钥 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<类别名称 >* \Performance 引用首先后, 跟为全局共享内存配置文件中指定的值。 如果 FileMappingSize 值不存在，则单独的共享的内存大小设置为一个第四个 (1/4) 配置文件中的全局设置。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.PerformanceCounter>  
- <xref:System.Diagnostics.PerformanceCounterCategory>  
- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>  
- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.PerformanceCounter>
+- <xref:System.Diagnostics.PerformanceCounterCategory>
+- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>
+- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 4dfe14f7680ad0c3a302334c07bb17e3e92011b0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 18c249348fe0daafc24dc939fe796f513128139e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746730"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>利用 Visual Basic 自定义项目并扩展 My 对象
 你可以自定义项目模板，以提供其他`My`对象。 这样方便其他开发人员查找并使用您的对象。  
@@ -45,5 +45,5 @@ ms.locfileid: "44083528"
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
  介绍`My`提供属性、 方法和事件的对象与当前应用程序相关。  
   
-## <a name="see-also"></a>请参阅  
- [使用 Visual Basic 开发应用程序](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a>请参阅
+- [使用 Visual Basic 开发应用程序](../../../visual-basic/developing-apps/index.md)

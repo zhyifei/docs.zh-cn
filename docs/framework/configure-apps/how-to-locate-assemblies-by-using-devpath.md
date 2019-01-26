@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 DEVPATH 查找程序集
+title: 如何：通过使用 devpath 查找程序集查找程序集
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 3a9ae9c60ad7de80d04f16984b3b2fb048421cc2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 11ed84b01adf57eb526eaa1e71c6968e48c64cc2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627534"
 ---
-# <a name="how-to-locate-assemblies-by-using-devpath"></a>如何：使用 DEVPATH 查找程序集
+# <a name="how-to-locate-assemblies-by-using-devpath"></a>如何：通过使用 devpath 查找程序集查找程序集
 开发人员可能想要确保它们生成的共享程序集与多个应用程序一起正常运行。 而不是不断地将在全局程序集缓存中的程序集放在开发周期中，开发人员可以创建指向程序集的生成输出目录 DEVPATH 环境变量。  
   
  例如，假设您要构建调用 MySharedAssembly 共享程序集和输出目录是 C:\MySharedAssembly\Debug。 可以将 C:\MySharedAssembly\Debug 放 devpath 查找程序集变量中。 然后，必须指定[ \<developmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)计算机配置文件中的元素。 此元素指示公共语言运行时使用 devpath 查找程序集来定位程序集。  
@@ -45,5 +45,5 @@ ms.locfileid: "49452742"
 > [!NOTE]
 >  仅在开发期间使用此设置。 在运行时不会检查位于 devpath 查找程序集强名称的程序集上的版本。 它只需使用它找到的第一个程序集。  
   
-## <a name="see-also"></a>请参阅  
- [配置.NET Framework 应用](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a>请参阅
+- [配置.NET Framework 应用](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: ed0f638975c232638de4a46db5db82bb1e85668c
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 36b1ad197b5c8e38c77a9a6a92ba1b3b659efbb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661322"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 语言功能
-XAML 2009 是新 XAML 语言功能的简写术语，其扩展现有的 XAML 语言规范。 XAML 2009 引入了几个新指令和结构。 其中包括[X:arguments 指令](../../../docs/framework/xaml-services/x-arguments-directive.md); [X:factorymethod 指令](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [X:reference 标记扩展](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [X:typearguments 指令](../../../docs/framework/xaml-services/x-typearguments-directive.md); 以及共同语言元素的内置类型 (例如`x:Char`)。  
+XAML 2009 是新 XAML 语言功能的简写术语，其扩展现有的 XAML 语言规范。 XAML 2009 引入了几个新指令和结构。 其中包括[X:arguments 指令](../../../docs/framework/xaml-services/x-arguments-directive.md); [X:factorymethod 指令](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [X:reference 标记扩展](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [X:typearguments 指令](../../../docs/framework/xaml-services/x-typearguments-directive.md); 以及常见语言基元的内置类型 (例如`x:Char`)。  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>在 WPF 和 Visual Studio 中支持 XAML 2009  
@@ -32,5 +32,5 @@ XAML 2009 是新 XAML 语言功能的简写术语，其扩展现有的 XAML 语�
 ### <a name="event-attributes"></a>事件特性  
  对于由事件支持的特性，XAML 2006 会假定涉及到了标记编译并将事件提交给标记编译。 XAML 2009 支持类似标记扩展的标记窗体，其不同于事件布线，直至运行时解析/加载 XAML。 但是，WPF 应用程序和 WPF UI 的 XAML 方案通常不使用此功能。 WPF 和其 XAML 2006 实现使用在 <xref:System.Windows.UIElement> 级别定义的路由事件的事件处理程序布线组合及其标记编译器步骤，用于其众多事件特性处理。 标记编译器还预处理生成操作声明用于标记编译器的 XAML 中找到任何事件属性。  
   
-## <a name="see-also"></a>请参阅  
- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>请参阅
+- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

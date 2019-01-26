@@ -1,20 +1,20 @@
 ---
-title: 如何：使用 PrintForm 组件打印窗体 (Visual Basic)
+title: 如何：打印窗体使用 PrintForm 组件 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Form [Visual Basic], printing
 ms.assetid: df963bf6-3ee1-49f4-8b2e-1d95d1beb0be
-ms.openlocfilehash: 723524c7c9876d353624ad47d504ea2528a31cfe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0a1a62627390c8839625862b9d43d61fc07ebf12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521564"
 ---
-# <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>如何：使用 PrintForm 组件打印窗体 (Visual Basic)
+# <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>如何：打印窗体使用 PrintForm 组件 (Visual Basic)
 通过 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 组件，可以在不使用 <xref:System.Drawing.Printing.PrintDocument> 组件的情况下如实快速打印窗体的图像。 以下过程介绍如何将窗体打印到打印机、打印预览窗口和封装的 PostScript 文件。  
   
- 在 Visual Studio 中，不再包含 PowerPack 控件，但您可以下载它们从[下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)。  
+ Visual Studio 中不再包含 PowerPack 控件，但你可以从 [下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=25169)下载它们。  
   
 ### <a name="to-print-a-form-to-the-default-printer"></a>将窗体打印到默认打印机  
   
@@ -62,10 +62,10 @@ ms.locfileid: "43422722"
     PrintForm1.Print()  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintFileName%2A>  
- [如何：打印窗体的工作区](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
- [如何：打印窗体的工作区和非工作区](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
- [如何：打印可滚动的窗体](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)  
- [PrintForm 组件](../../../visual-basic/developing-apps/printing/printform-component.md)
+## <a name="see-also"></a>请参阅
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintFileName%2A>
+- [如何：打印窗体的工作区](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
+- [如何：打印窗体的工作区和非工作区](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
+- [如何：打印可滚动的窗体](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+- [PrintForm 组件](../../../visual-basic/developing-apps/printing/printform-component.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 2b2d487484f026be7637185ef759fb87db571b3a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8c5f94cb7f815e4aebef10d930843971219baef6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623113"
 ---
 # <a name="queries-in-linq-to-dataset"></a>在 LINQ to DataSet 中查询
 查询是一种从数据源检索数据的表达式。 查询通常用专用查询语言表示，如用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们查询的每种类型的数据源或数据格式，都不得不学习一种新的查询语言。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 提供了一种较为简单的一致模型，适用于各种数据源和格式的数据。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查询中，您始终使用编程对象。  
@@ -59,8 +59,8 @@ ms.locfileid: "53145801"
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
   
-## <a name="see-also"></a>请参阅  
- [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
- [查询数据集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- [C# 中的 LINQ 入门](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Visual Basic 中的 LINQ 入门](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>请参阅
+- [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+- [查询数据集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
+- [C# 中的 LINQ 入门](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Visual Basic 中的 LINQ 入门](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

@@ -2,12 +2,12 @@
 title: X.509 证书验证程序
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: f8bc5c1976e61cbb81d0bc8463a57cfad750a2a7
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 8c87e1d8c84af500e1f415b79e7f3ec006b51860
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510125"
 ---
 # <a name="x509-certificate-validator"></a>X.509 证书验证程序
 此示例演示如何实现自定义 X.509 证书验证程序。 当内置的 X.509 证书验证模式都不能满足应用程序的需求时，实现自定义证书验证程序很有用。 此示例演示了具有自定义验证程序的服务，该验证程序接受自行颁发的证书。 客户端使用此类证书对服务进行身份验证。
@@ -329,21 +329,21 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 4.  将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
   
-5.  在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat service`。 运行`setup.bat`与`service`参数创建一个服务证书的完全限定域名的则导出到名为 Service.cer 的文件的服务证书。  
+5.  在服务器上运行`setup.bat service`使用管理员特权打开在 Visual Studio 的开发人员命令提示。 运行`setup.bat`与`service`参数创建一个服务证书的完全限定域名的则导出到名为 Service.cer 的文件的服务证书。  
   
 6.  编辑 Service.exe.config 以反映新的证书名称 (在`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 与计算机的名称的完全限定域名相同。 此外更改中的计算机名称\<服务 > /\<baseAddresses > 元素从本地主机到服务计算机的完全限定名称。  
   
 7.  将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
-8.  在客户端上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat client`。 如果使用 `setup.bat` 自变量运行 `client`，则会创建一个名为 client.com 的客户端证书，并将此客户端证书导出到名为 Client.cer 的文件中。  
+8.  在客户端上运行`setup.bat client`使用管理员特权打开在 Visual Studio 的开发人员命令提示。 如果使用 `setup.bat` 自变量运行 `client`，则会创建一个名为 client.com 的客户端证书，并将此客户端证书导出到名为 Client.cer 的文件中。  
   
 9. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。 通过用服务器的完全限定域名替换 localhost 来执行此操作。  
   
 10. 将客户端目录中的 Client.cer 文件复制到服务器上的服务目录中。  
   
-11. 在客户端上，在使用管理员特权打开的 Visual Studio 命令提示中运行 ImportServiceCert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
+11. 在客户端上运行 ImportServiceCert.bat 在开发人员命令提示符下使用管理员特权打开 Visual Studio。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
   
-12. 在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 ImportClientCert。 这会将 Client.cer 文件中的客户端证书导入 LocalMachine - TrustedPeople 存储区。  
+12. 在服务器上，运行 ImportClientCert.bat 在开发人员命令提示符下使用管理员特权打开 Visual Studio。 这会将 Client.cer 文件中的客户端证书导入 LocalMachine - TrustedPeople 存储区。  
   
 13. 在服务器计算机上，从命令提示窗口中启动 Service.exe。  
   

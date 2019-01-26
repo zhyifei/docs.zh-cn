@@ -2,176 +2,173 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: c927ba59ccdb6e5a717fcaccde9294845a2c41cc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c67161ddd0698a74f073b10e79674529b198e9f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500508"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 提供了对用户消息堆栈的完全控制。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<customBinding>  
-    <binding name="string"  
-        closeTimeout="TimeSpan"  
-        openTimeout="TimeSpan"   
-        receiveTimeout="TimeSpan"  
-        sendTimeout="TimeSpan"  
-       <compositeDuplex clientBaseAddress="Uri"/>  
-       <reliableSession acknowledgementInterval="TimeSpan"  
-           advancedFlowControl="Boolean"   
-           bufferedMessagesQuota="Integer"  
-           inactivityTimeout="TimeSpan"  
-           maxPendingChannels="Integer"  
-           maxRetryCount="Integer"   
-           ordered="Boolean" />  
-       <pnrpPeerResolver />  
-       <windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign"/>  
-       <sslStreamSecurity requireClientCertificate="Boolean" />  
-              <transactionFlow transactionProtocol="OleTransactions/WSAtomicTransactionOctober2004"/>  
-       <security   
-          defaultAlgorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-           authenticationMode="UserNameForAnonymous"  
-           contextMode="Cookie"   
-           defaultProtectionLevel="Sign"  
-           enableKeyDerivation="false"  
-           keyEntropyMode="ClientEntropy"   
-                  messageProtectionOrder="SignBeforeEncryptAndEncryptSignature"   
-           securityVersion="WSSecurityXXX2005">  
-           <localClientSettings cacheCookies="false"  
-               detectReplays="false"  
-               maxCookieCachingTime="00:07:24" />  
-           <localServiceSettings replayCacheSize="9"  
-               maxClockSkew="00:00:03"   
-               replayWindow="00:07:22.2190000" />  
-       </security>  
-       <binaryMessageEncoding maxReadPoolSize="Integer"  
-           maxWritePoolSize="Integer"  
-           maxSessionSize="Integer" />  
-       <httpsTransport manualAddressing="Boolean"  
-           maxMessageSize="Integer"  
-           authenticationScheme="Negotiate"   
-           bypassProxyOnLocal="Boolean"  
-           hostNameComparisonMode="Exact"   
-           mapAddressingHeadersToHttpHeaders="Boolean"   
-           proxyaddress="Uri"  
-           realm="String"   
-           requireClientCertificate="Boolean" />  
-       <peerTransport manualAddressing="false"  
-          maxMessageSize="20002"  
-          listenIPAddress="202.10.1.9"   
-          messageAuthentication="false"  
-          peerNodeAuthenticationMode="None"  
-          port="1000" />  
-  
-<security   
-      defaultAlgorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-   authenticationMode="UserNameForAnonymous"  
-   bootstrapBindingConfiguration="String"  
-   bootstrapBindingSectionName="String"  
-   defaultProtectionLevel="None/Sign/EncryptAndSign"  
-      requireDerivedKeys="Boolean"  
-   securityHeaderLayout="Strict/Lax/LaxTimestampFirst/LaxTimestampLast"  
-   includeTimestamp="Boolean"  
-   keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"   
-   messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"   
-   protectTokens="Boolean"  
-   requireSecurityContextCancellation="Boolean"  
-   securityVersion=" WSSecurityJan2004/WSSecurityXXX2005"  
-   requireSignatureConfirmation="Boolean" >  
-   <localClientSettings cacheCookies="Boolean"  
-      detectReplays="Boolean"  
-      replayCacheSize="Integer"  
-      maxClockSkew="TimeSpan"  
-      maxCookieCachingTime="TimeSpan"  
-      replayWindow="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      reconnectOnTransportFailure="Boolean"  
-      timestampValidityDuration="TimeSpan"  
-      cookieRenewalThresholdPercentage="Integer" />  
-   <localServiceSettings detectReplays="Boolean"  
-      issuedCookieLifeTime="TimeSpan"  
-      maxStatefulNegotiations="Integer"  
-            replayCacheSize="Integer"  
-      maxClockSkew="TimeSpan"   
-      negotiationTimeout="TimeSpan"  
-      replayWindow="TimeSpan"  
-      inactivityTimeout="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      reconnectOnTransportFailure="Boolean"  
-      maxConcurrentSessions="Integer"  
-      timestampValidityDuration="TimeSpan" />  
-   <federationParameters trustVersion="WSTrustApr2004/WSTrustFeb2005" />  
-<security   
-   defaultAlgorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/ Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-   authenticationMode="UserNameForAnonymous"  
-   bootstrapBindingConfiguration="String"  
-   bootstrapBindingSectionName="String"  
-   defaultProtectionLevel="None/Sign/EncryptAndSign"  
-      requireDerivedKeys="Boolean"  
-   securityHeaderLayout="Strict/Lax/LaxTimestampFirst/LaxTimestampLast"  
-   includeTimestamp="Boolean"  
-   keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"   
-   messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"   
-   protectTokens="Boolean"  
-   requireSecurityContextCancellation="Boolean"  
-   securityVersion=" WSSecurityJan2004/WSSecurityXXX2005"  
-   requireSignatureConfirmation="Boolean" >  
-   <localClientSettings cacheCookies="Boolean"  
-      detectReplays="Boolean"  
-      replayCacheSize="Integer"  
-      maxClockSkew="TimeSpan"  
-      maxCookieCachingTime="TimeSpan"  
-      replayWindow="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      reconnectOnTransportFailure="Boolean"  
-      timestampValidityDuration="TimeSpan"  
-      cookieRenewalThresholdPercentage="Integer" />  
-   <localServiceSettings detectReplays="Boolean"  
-      issuedCookieLifeTime="TimeSpan"  
-      maxStatefulNegotiations="Integer"  
-            replayCacheSize="Integer"  
-      maxClockSkew="TimeSpan"   
-      negotiationTimeout="TimeSpan"  
-      replayWindow="TimeSpan"  
-      inactivityTimeout="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      reconnectOnTransportFailure="Boolean"  
-      maxConcurrentSessions="Integer"  
-      timestampValidityDuration="TimeSpan" />  
-   <federationParameters trustVersion="WSTrustApr2004/WSTrustFeb2005" />  
-   <GenericIssuedTokenParameters>   
-      <LocalIssuerIssuedTokenParameters keyType=" SymmeticKey/PublicKey"  
-        keySize="Integer"  
-        tokenType="String" />  
-     <IssuedTokenParametersEndpointAddress address="URI"  
-        bindingConfiguration="String"  
-        binding="String" />  
-     <IssuedTokenClient localIssuerChannelBehaviors="String"  
-        cacheIssuedTokens="Boolean"  
-        maxIssuedTokenCachingTime="TimeSpan"  
-        keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy" />  
-     <IssuedTokenClientBehavior issuerAddress="String"  
-        behaviorConfiguration="String" />  
-     <IssuedTokenClientBehavior address="URI"  
-        bindingConfiguration="String"  
-        binding="String" />  
-   </GenericIssuedTokenParameters>   
-</security>  
-</binding>  
-</customBinding>  
+<customBinding>
+  <binding name="String"
+           closeTimeout="TimeSpan"
+           openTimeout="TimeSpan"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan">
+    <compositeDuplex clientBaseAddress="Uri" />
+    <reliableSession acknowledgementInterval="TimeSpan"
+                     advancedFlowControl="Boolean"
+                     bufferedMessagesQuota="Integer"
+                     inactivityTimeout="TimeSpan"
+                     maxPendingChannels="Integer"
+                     maxRetryCount="Integer"
+                     ordered="Boolean" />
+    <pnrpPeerResolver />
+    <windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign" />
+    <sslStreamSecurity requireClientCertificate="Boolean" />
+    <transactionFlow transactionProtocol="OleTransactions/WSAtomicTransactionOctober2004" />
+    <security defaultAlgorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+              authenticationMode="UserNameForAnonymous"
+              contextMode="Cookie"
+              defaultProtectionLevel="Sign"
+              enableKeyDerivation="false"
+              keyEntropyMode="ClientEntropy"
+              messageProtectionOrder="SignBeforeEncryptAndEncryptSignature"
+              securityVersion="WSSecurityXXX2005">
+      <localClientSettings cacheCookies="false"
+                           detectReplays="false"
+                           maxCookieCachingTime="00:07:24" />
+      <localServiceSettings replayCacheSize="9"
+                            maxClockSkew="00:00:03"
+                            replayWindow="00:07:22.2190000" />
+    </security>
+    <binaryMessageEncoding maxReadPoolSize="Integer"
+                           maxWritePoolSize="Integer"
+                           maxSessionSize="Integer" />
+    <httpsTransport manualAddressing="Boolean"
+                    maxMessageSize="Integer"
+                    authenticationScheme="Negotiate"
+                    bypassProxyOnLocal="Boolean"
+                    hostNameComparisonMode="Exact"
+                    mapAddressingHeadersToHttpHeaders="Boolean"
+                    proxyaddress="Uri"
+                    realm="String"
+                    requireClientCertificate="Boolean" />
+    <peerTransport manualAddressing="false"
+                   maxMessageSize="20002"
+                   listenIPAddress="202.10.1.9"
+                   messageAuthentication="false"
+                   peerNodeAuthenticationMode="None"
+                   port="1000" />
+    <security defaultAlgorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+              authenticationMode="UserNameForAnonymous"
+              bootstrapBindingConfiguration="String"
+              bootstrapBindingSectionName="String"
+              defaultProtectionLevel="None/Sign/EncryptAndSign"
+              requireDerivedKeys="Boolean"
+              securityHeaderLayout="Strict/Lax/LaxTimestampFirst/LaxTimestampLast"
+              includeTimestamp="Boolean"
+              keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"
+              messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"
+              protectTokens="Boolean"
+              requireSecurityContextCancellation="Boolean"
+              securityVersion=" WSSecurityJan2004/WSSecurityXXX2005"
+              requireSignatureConfirmation="Boolean">
+      <localClientSettings cacheCookies="Boolean"
+                           detectReplays="Boolean"
+                           replayCacheSize="Integer"
+                           maxClockSkew="TimeSpan"
+                           maxCookieCachingTime="TimeSpan"
+                           replayWindow="TimeSpan"
+                           sessionKeyRenewalInterval="TimeSpan"
+                           sessionKeyRolloverInterval="TimeSpan"
+                           reconnectOnTransportFailure="Boolean"
+                           timestampValidityDuration="TimeSpan"
+                           cookieRenewalThresholdPercentage="Integer" />
+      <localServiceSettings detectReplays="Boolean"
+                            issuedCookieLifeTime="TimeSpan"
+                            maxStatefulNegotiations="Integer"
+                            replayCacheSize="Integer"
+                            maxClockSkew="TimeSpan"
+                            negotiationTimeout="TimeSpan"
+                            replayWindow="TimeSpan"
+                            inactivityTimeout="TimeSpan"
+                            sessionKeyRenewalInterval="TimeSpan"
+                            sessionKeyRolloverInterval="TimeSpan"
+                            reconnectOnTransportFailure="Boolean"
+                            maxConcurrentSessions="Integer"
+                            timestampValidityDuration="TimeSpan" />
+      <federationParameters trustVersion="WSTrustApr2004/WSTrustFeb2005" />
+    </security>
+    <security defaultAlgorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+              authenticationMode="UserNameForAnonymous"
+              bootstrapBindingConfiguration="String"
+              bootstrapBindingSectionName="String"
+              defaultProtectionLevel="None/Sign/EncryptAndSign"
+              requireDerivedKeys="Boolean"
+              securityHeaderLayout="Strict/Lax/LaxTimestampFirst/LaxTimestampLast"
+              includeTimestamp="Boolean"
+              keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"
+              messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"
+              protectTokens="Boolean"
+              requireSecurityContextCancellation="Boolean"
+              securityVersion=" WSSecurityJan2004/WSSecurityXXX2005"
+              requireSignatureConfirmation="Boolean" >
+      <localClientSettings cacheCookies="Boolean"
+                           detectReplays="Boolean"
+                           replayCacheSize="Integer"
+                           maxClockSkew="TimeSpan"
+                           maxCookieCachingTime="TimeSpan"
+                           replayWindow="TimeSpan"
+                           sessionKeyRenewalInterval="TimeSpan"
+                           sessionKeyRolloverInterval="TimeSpan"
+                           reconnectOnTransportFailure="Boolean"
+                           timestampValidityDuration="TimeSpan"
+                           cookieRenewalThresholdPercentage="Integer" />
+      <localServiceSettings detectReplays="Boolean"
+                           issuedCookieLifeTime="TimeSpan"
+                           maxStatefulNegotiations="Integer"
+                           replayCacheSize="Integer"
+                           maxClockSkew="TimeSpan"
+                           negotiationTimeout="TimeSpan"
+                           replayWindow="TimeSpan"
+                           inactivityTimeout="TimeSpan"
+                           sessionKeyRenewalInterval="TimeSpan"
+                           sessionKeyRolloverInterval="TimeSpan"
+                           reconnectOnTransportFailure="Boolean"
+                           maxConcurrentSessions="Integer"
+                           timestampValidityDuration="TimeSpan" />
+      <federationParameters trustVersion="WSTrustApr2004/WSTrustFeb2005" />
+      <genericIssuedTokenParameters>
+        <localIssuerIssuedTokenParameters keyType=" SymmeticKey/PublicKey"
+                                          keySize="Integer"
+                                          tokenType="String" />
+        <issuedTokenParametersEndpointAddress address="URI"
+                                              bindingConfiguration="String"
+                                              binding="String" />
+        <issuedTokenClient localIssuerChannelBehaviors="String"
+                           cacheIssuedTokens="Boolean"
+                           maxIssuedTokenCachingTime="TimeSpan"
+                           keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy" />
+        <issuedTokenClientBehavior issuerAddress="String"
+                                   behaviorConfiguration="String" />
+        <issuedTokenClientBehavior address="URI"
+                                   bindingConfiguration="String"
+                                   binding="String" />
+      </genericIssuedTokenParameters>
+    </security>
+  </binding>
+</customBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -293,16 +290,16 @@ ms.locfileid: "53153899"
  有关如何使用的自定义绑定修改系统提供的绑定的讨论，请参阅[如何：自定义系统提供的绑定](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
     
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.Configuration.BindingsSection>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [customBinding 元素](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.Configuration.BindingsSection>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [customBinding 元素](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

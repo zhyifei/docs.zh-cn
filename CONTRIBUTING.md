@@ -27,7 +27,7 @@
 **步骤 1：** 对于小更改，可跳过这一步。 如果有意编写新内容或彻底修改现有内容，请打开[问题](https://github.com/dotnet/docs/issues)，描述要执行的操作。
 “文档”文件夹中的内容划分为在目录 (TOC) 中反应的不同部分。 定义主题在 TOC 中的位置。 获取对建议的反馈。
 
-- 或 -
+或
 
 还可以从现有问题中进行选择，了解哪些是热门的社区发布内容。 [.NET 社区参与者项目](https://github.com/dotnet/docs/projects/35)列出了许多可用于社区参与者的工作项。 根据你的兴趣和承诺水平，可从以下类别的问题中作出选择：
 
@@ -39,7 +39,7 @@
 
 此外可以查看我们的[待解决问题](https://github.com/dotnet/docs/issues)列表，并自愿参与你感兴趣的工作。 我们使用[空缺](https://github.com/dotnet/docs/labels/up-for-grabs)标签来标记公开供参与的问题。 
 
-**步骤 2：** 根据需要对 `/dotnet/docs`、`dotnet/samples` 或 `dotnet/dotnet-api-docs` 存储库进行分支，并为所做更改创建分支。
+**步骤 2：** 根据需要对 `dotnet/docs`、`dotnet/samples` 或 `dotnet/dotnet-api-docs` 存储库进行分支，并为所做更改创建分支。
 
 对于较小的更改，可以使用 GitHub 的 Web 界面。 只需单击要更改的文件上的“编辑此项目分支中的文件”。 在提交所做的更改时，GitHub 会为你创建新分支。
 
@@ -101,7 +101,7 @@ PR 应始终面向主分支。 你应从不打开面向活动分支的 PR。
 我们可以在文档存储库添加新内容时扩展这些目录。 例如，我们将添加 Xamarin 目录，如 `xamarin-ios` 和 `xamarin-android` 目录。
 
 创建的每个完整示例都应包含“readme.md”文件。 此文件应包含示例的简短说明（一个或两个段落）。 “readme.md”应告知读者通过研究此示例他们将了解到的内容。 “Readme.md”文件还应包含到 [.NET 文档站点](https://docs.microsoft.com/dotnet/welcome)上实时文档的链接。
-要确定存储库中给定文件映射到该站点的位置，请将存储库路径中的 `/docs` 替换为 `http://docs.microsoft.com/dotnet/articles`。
+要确定存储库中给定文件映射到该站点的位置，请将存储库路径中的 `/docs` 替换为 `https://docs.microsoft.com/dotnet`。
 
 主题还将包含该示例的链接。 直接链接到 GitHub 上的示例文件夹。
 
@@ -140,7 +140,7 @@ C# 交互式体验改变了我们使用示例的方式。 访问者可以运行�
 
 ## <a name="contributor-license-agreement"></a>贡献者许可协议
 
-在合并 PR 前，必须签署 [.NET Foundation 贡献许可协议 (CLA)](https://cla.dotnetfoundation.org)。 对于 .NET Foundation 中的项目，只需签署一次即可。 可在维基百科上详细了解[贡献许可协议 (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement)。
+在合并 PR 前，必须签署 [.NET Foundation 贡献许可协议 (CLA)](https://cla.dotnetfoundation.org)。 对于 .NET Foundation 中的项目，只需签署一次即可。 可在维基百科上详细了解[贡献许可协议 (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement)。
 
 协议：[net-foundation-contribution-license-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 

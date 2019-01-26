@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 18f9920891e35517efe7adcfd4c03e03ac771478
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 16f4fb28ab030ccebed2a8d1b93a3a6c29d075c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254736"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501251"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>对已声明元素的引用 (Visual Basic)
 当你的代码引用已声明的元素时，Visual Basic 编译器匹配中该名称的相应声明您引用的名称。 如果多个元素具有相同名称声明，则可以控制哪些元素是由引用*合格*其名称。  
@@ -193,11 +193,11 @@ Dim xDoc As xD.XmlDocument
 ## <a name="shadowing"></a>隐藏  
  当两个编程元素共享相同的名称时，可以隐藏其中一个，或*卷影*，另一个。 隐藏的元素不是可用于引用;相反，当你的代码使用隐藏的元素名称时，Visual Basic 编译器将其解析为隐藏的元素。 有关示例的更多详细说明，请参阅[Visual Basic 中的隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
   
-## <a name="see-also"></a>请参阅  
- [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)  
- [变量](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
+## <a name="see-also"></a>请参阅
+- [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
+- [变量](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Public](../../../../visual-basic/language-reference/modifiers/public.md)

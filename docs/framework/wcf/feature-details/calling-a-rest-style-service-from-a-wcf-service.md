@@ -2,12 +2,12 @@
 title: 从 WCF 服务调用 REST 样式服务
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: be9f15d35ec00ba91a06abf5a0a413b59452270b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: df57433b01df9faf49eada8189ba8864fe7a9093
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596782"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>从 WCF 服务调用 REST 样式服务
 当从常规（基于 SOAP）的 WCF 服务调用 REST 样式服务时，服务方法的操作上下文（包含有关传入请求的信息）将重写应由传出请求使用的上下文。 这会导致 HTTP GET 请求更改为 HTTP POST 请求。 要强制 WCF 服务使用正确的上下文来调用 REST 样式服务，请创建一个新的 <xref:System.ServiceModel.OperationContextScope>，并从操作上下文作用域内调用 REST 样式服务。 本主题将介绍如何创建一个用于说明此方法的简单示例。  
@@ -233,6 +233,6 @@ public class CallingRESTSample
 }
 ```
   
-## <a name="see-also"></a>请参阅  
- [如何：创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+## <a name="see-also"></a>请参阅
+- [如何：创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)
+- [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

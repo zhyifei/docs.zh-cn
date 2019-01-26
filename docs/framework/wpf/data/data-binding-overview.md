@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 1b34b3369e5a045f45251d3285f10bf74b6f0d33
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4cce0d56a629ca01e0174235b1e84291e9fa2f57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503204"
 ---
 # <a name="data-binding-overview"></a>数据绑定概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定为应用程序呈现数据并与数据交互提供了一种简单且一致的方式。 元素能够以 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 形式绑定到来自各种数据源的数据。 <xref:System.Windows.Controls.ContentControl>如 s<xref:System.Windows.Controls.Button>并<xref:System.Windows.Controls.ItemsControl>如 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>具有内置功能，使灵活的样式设置单个数据项的集合。 可基于数据生成排序、筛选和分组视图。  
@@ -429,11 +429,11 @@ ms.locfileid: "45990071"
 ## <a name="debugging-mechanism"></a>调试机制  
  可以设置附加的属性<xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType>上与绑定相关的对象，以接收特定绑定状态信息。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Controls.DataErrorValidationRule>  
- [WPF 版本 4.5 中的新增功能](../../../../docs/framework/wpf/getting-started/whats-new.md)  
- [绑定到 LINQ 查询结果](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [数据绑定演示](https://go.microsoft.com/fwlink/?LinkID=163703)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [绑定到 ADO.NET 数据源](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Controls.DataErrorValidationRule>
+- [WPF 版本 4.5 中的新增功能](../../../../docs/framework/wpf/getting-started/whats-new.md)
+- [绑定到 LINQ 查询结果](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
+- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [数据绑定演示](https://go.microsoft.com/fwlink/?LinkID=163703)
+- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [绑定到 ADO.NET 数据源](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

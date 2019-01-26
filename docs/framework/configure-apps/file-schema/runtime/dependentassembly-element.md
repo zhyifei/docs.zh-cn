@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5b0d3bfb7e4db2fec39f37c9fb794731cdf5bbc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b2cf4d9940873c04ee6f0ab2d378a3d1253be4ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729192"
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt;元素
 封装每个程序集的绑定策略和程序集位置。 使用一个`dependentAssembly`每个程序集的元素。  
   
  \<configuration>  
 \<运行时 >  
-\<assemblyBinding >  
-\<dependentAssembly >  
+\<assemblyBinding>  
+\<dependentAssembly>  
   
 ## <a name="syntax"></a>语法  
   
@@ -80,7 +80,7 @@ ms.locfileid: "53613292"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

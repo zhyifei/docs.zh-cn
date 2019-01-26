@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ 查询数据库 (Visual Basic)
+title: 如何：通过使用 LINQ (Visual Basic 中) 来查询数据库
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query samples [LINQ]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: bcf5e9c3-a236-4399-9a7f-3991eca7cf56
-ms.openlocfilehash: 75f3d71e76c81a016a4e2c6fac754b91db31873e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a76eb5a010c8c5f750336935f0044e8dcc4322f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514850"
 ---
-# <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>如何：使用 LINQ 查询数据库 (Visual Basic)
+# <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>如何：通过使用 LINQ (Visual Basic 中) 来查询数据库
 语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。  
   
  下面的示例演示如何创建新的应用程序对 SQL Server 数据库执行查询。  
@@ -76,8 +76,8 @@ ms.locfileid: "42924872"
      [!code-vb[VbLINQToSQLHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_2.vb)]  
     [!code-vb[VbLINQToSQLHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_3.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查询](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>请参阅
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [查询](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)

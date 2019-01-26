@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 1fa4c2347448e23bbf740093541ec2b834df6705
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c8bee03cc3a72e1938cca182d59818f9bc2eabc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626045"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>演练：在 WPF 中承载 Direct3D9 内容
 本演练演示如何承载 Windows Presentation Foundation (WPF) 应用程序中的 Direct3D9 内容。  
@@ -32,7 +32,7 @@ ms.locfileid: "48849864"
   
 -   DirectX 9 或更高版本的 SDK。  
   
--   包含 WPF 兼容格式的 Direct3D9 内容的 DLL。 有关详细信息，请参阅[WPF 和 Direct3D9 互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)并[演练： 创建内容为在 WPF 中承载的 Direct3D9](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。  
+-   包含 WPF 兼容格式的 Direct3D9 内容的 DLL。 有关详细信息，请参阅[WPF 和 Direct3D9 互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)和[演练：创建在 WPF 中承载的 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。  
   
 ## <a name="creating-the-wpf-project"></a>创建 WPF 项目  
  第一步是创建 WPF 应用程序的项目。  
@@ -71,6 +71,6 @@ ms.locfileid: "48849864"
   
      Direct3D9 内容出现在 WPF 应用程序。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Interop.D3DImage>  
- [Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Interop.D3DImage>
+- [Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)

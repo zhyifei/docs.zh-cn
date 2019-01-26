@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f67bd427c83385b2433b9f2e97f0b54e3b29a76f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d6dc245a53c9ec7cbe56e20313abc4269e33f45c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582313"
 ---
 # <a name="icordebugclassgettoken-method"></a>ICorDebugClass::GetToken 方法
-获取`TypeDef`引用此类定义的元数据标记。  
+获取`TypeDef`元数据标记所引用的此类定义。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,16 +37,16 @@ HRESULT GetToken (
   
 #### <a name="parameters"></a>参数  
  `pTypeDef`  
- [out]指向的指针`mdTypeDef`引用此类定义的令牌。  
+ [out]一个指向`mdTypeDef`引用此类定义的令牌。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

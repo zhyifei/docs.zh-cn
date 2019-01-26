@@ -4,16 +4,16 @@ description: 了解如何分析外部依赖项，以便将项目从 .NET Framewo
 author: cartermp
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: dce8e6cd4986b15cf926154b378964db4beef398
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 6451099bfc7f3afa5c9c1585862403a0a9fb2186
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170310"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415216"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>分析依赖项将代码移植到 .NET Core
 
-若要将代码移植到 .NET Core 或.NET Standard，必须了解依赖项。 外部依赖项是在项目中引用但没有构建的 [NuGet 包](#analyze-referenced-nuget-packages-on-your-project)或 [Dll](#analyze-dependencies-that-arent-nuget-packages)。 评估每个依赖项并为与 .NET Core 不兼容的依赖项制定应变计划。 下面介绍了如何确定依赖项是否与 .NET Core 兼容。
+若要将代码移植到 .NET Core 或.NET Standard，必须了解依赖项。 外部依赖项是在项目中引用但没有构建的 [NuGet 包](#analyze-referenced-nuget-packages-in-your-projects)或 [Dll](#analyze-dependencies-that-arent-nuget-packages)。 评估每个依赖项并为与 .NET Core 不兼容的依赖项制定应变计划。 下面介绍了如何确定依赖项是否与 .NET Core 兼容。
 
 ## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>分析项目中引用的 NuGet 包
 
@@ -77,7 +77,7 @@ portable-net45-win8-wpa8-wpa81
 
 从 .NET Standard 2.0 开始，引入了 .NET Framework 兼容性模式。 此兼容性模式允许 .NET Standard 和 .NET Core 项目引用 .NET Framework 库。 引用 .NET Framework 库不适用于所有项目（如库使用 Windows Presentation Foundation (WPF) API 时），但它的开启了很多移植方案。
 
-在项目中引用面向 .NET Framework 的 NuGet 包时（如 [Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections)），会收到与以下示例类似的包回退警告 ([NU1701](/nuget/reference/errors-and-warnings#nu1701))：
+在项目中引用面向 .NET Framework 的 NuGet 包时（如 [Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections)），会收到与以下示例类似的包回退警告 ([NU1701](/nuget/reference/errors-and-warnings/nu1701))：
 
 `NU1701: Package ‘Huitian.PowerCollections 1.0.0’ was restored using ‘.NETFramework,Version=v4.6.1’ instead of the project target framework ‘.NETStandard,Version=v2.0’. This package may not be fully compatible with your project.`
 
@@ -91,7 +91,7 @@ portable-net45-win8-wpa8-wpa81
 </ItemGroup>
 ```
 
-有关如何在 Visual Studio 中取消编译器警告的详细信息，请参阅[取消 NuGet 包的警告](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages)。
+有关如何在 Visual Studio 中取消编译器警告的详细信息，请参阅[取消 NuGet 包的警告](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages)。
 
 ### <a name="port-your-packages-to-packagereference"></a>将包移植到 `PackageReference`
 

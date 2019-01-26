@@ -2,17 +2,17 @@
 title: 自定义编码器
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
-ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
+ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "50034319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509358"
 ---
 # <a name="custom-encoders"></a>自定义编码器
 本主题讨论如何创建自定义编码器。  
   
- 在 Windows Communication Foundation (WCF) 中，使用*绑定*指定终结点之间通过网络传输数据的方式。 绑定由一系列组成*绑定元素*。 绑定包括多个可选协议绑定元素，如安全性、 所需*消息编码器*绑定元素和必需的传输绑定元素。 消息编码器由消息编码绑定元素表示。 WCF 中包含三种消息编码器： 二进制、 消息传输优化机制 (MTOM) 和文本。  
+ 在 Windows Communication Foundation (WCF) 中，使用*绑定*指定终结点之间通过网络传输数据的方式。 绑定由一系列组成*绑定元素*。 绑定包括多个可选协议绑定元素，如安全性、 所需*消息编码器*绑定元素和必需的传输绑定元素。 消息编码器由消息编码绑定元素表示。 WCF 中包含三种消息编码器：二进制文件中，消息传输优化机制 (MTOM) 和文本。  
   
  消息编码绑定元素将序列化传出 <xref:System.ServiceModel.Channels.Message> 并将其传递到传输层，或从传输层接收已序列化的消息并将其传递到协议层（如果存在），如果不存在协议层，则传递到应用程序。  
   
@@ -30,11 +30,11 @@ ms.locfileid: "50034319"
   
  WCF 提供了以下类型的绑定元素派生自<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>可以为文本、 二进制和消息传输优化机制 (MTOM) 编码提供的类：  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>：互操作性最强，但效率最低的 XML 消息编码器。 Web 服务或 Web 服务客户端通常都能理解文本 XML。 但是，将大型二进制数据块作为文本传输不是有效的传输方式。  
+-   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>：互操作性最但效率最低的 XML 消息编码器。 Web 服务或 Web 服务客户端通常都能理解文本 XML。 但是，将大型二进制数据块作为文本传输不是有效的传输方式。  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>：表示指定基于二进制的 XML 消息所使用的字符编码和消息版本管理的绑定元素。 这是最有效的编码选项，但互操作性最低，因为它仅支持由 WCF 终结点。  
+-   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>：表示绑定元素，它指定的字符编码和消息版本控制用于基于二进制的 XML 消息。 这是最有效的编码选项，但互操作性最低，因为它仅支持由 WCF 终结点。  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>：表示指定使用消息传输优化机制 (MTOM) 编码的消息所使用的字符编码和消息版本管理的绑定元素。 MTOM 是一种用于在 WCF 消息中传输二进制数据的有效技术。 MTOM 编码器力图在效率和互操作性之间取得平衡。 MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>：表示用于使用消息传输优化机制 (MTOM) 编码的消息的消息版本控制和指定的字符编码的绑定元素。 MTOM 是一种用于在 WCF 消息中传输二进制数据的有效技术。 MTOM 编码器力图在效率和互操作性之间取得平衡。 MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。  
   
  绑定元素创建二进制、MTOM 或文本 <xref:System.ServiceModel.Channels.MessageEncoderFactory>。 工厂创建二进制、MTOM 或文本 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 实例。 通常，只有一个实例。 但是如果使用会话，将为每个会话提供一个不同的编码器。 二进制编码器用此来调整动态字典（请参见“XML 基础结构”）。  
   
@@ -89,12 +89,12 @@ ms.locfileid: "50034319"
   
  然后通过重写 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 方法将自定义的 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> 连接至用于配置服务或客户端的绑定元素堆栈，以便返回此工厂的实例。  
   
- 有两个示例使用 WCF 提供的说明此过程的示例代码：[自定义消息编码器： 自定义文本编码器](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)并[自定义消息编码器： 压缩编码器](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)。  
+ 有两个示例提供使用 WCF 来说明此过程的示例代码：[自定义消息编码器：自定义文本编码器](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)和[自定义消息编码器：压缩编码器](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
- <xref:System.ServiceModel.Channels.MessageEncoder>  
- [数据传输体系结构概述](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- [选择消息编码器](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>
+- <xref:System.ServiceModel.Channels.MessageEncoder>
+- [数据传输体系结构概述](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
+- [选择消息编码器](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

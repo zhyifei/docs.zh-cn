@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8643a4d207fb570195caa00a1ac659c78c2ff2b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0bdd5e92ce7423fbbe0708f8a35368b871508a70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493421"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps 方法
 修改指定的 `ExportedType` 元数据结构。  
@@ -43,25 +43,25 @@ HRESULT SetExportedTypeProps (
  [in]指定的元数据标记`ExportedType`要修改的元数据结构。  
   
  `tkImplementation`  
- [in]类型的标记， `File`， `AssemblyRef`，或`ExportedType`，，指定如何实现此类型。  
+ [in]类型的标记`File`， `AssemblyRef`，或`ExportedType`，指定此类型的实现方式。  
   
  `tkTypeDef`  
  [in]`TypeDef`代码文件中引用的令牌。  
   
  `dwExportedTypeFlags`  
- [in]指定的类型属性的值的按位组合。  
+ [in]指定类型的属性的值的按位组合。  
   
 ## <a name="remarks"></a>备注  
  若要创建`ExportedType`元数据结构，使用[imetadataassemblyemit:: Defineexportedtype](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

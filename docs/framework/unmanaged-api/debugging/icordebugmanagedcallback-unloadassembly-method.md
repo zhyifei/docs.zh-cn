@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a892012e872dcf44512adbe0d6890812d84ed899
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93d44006dd6652a8d34c23209eb957b23064f976
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703999"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>ICorDebugManagedCallback::UnloadAssembly 方法
-通知调试器公共语言运行时程序集中已被卸载。  
+通知调试器公共语言运行时程序集已被卸载。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +38,7 @@ HRESULT UnloadAssembly (
   
 #### <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个表示包含程序集的应用程序域的 ICorDebugAppDomain 对象的指针。  
+ [in]指向一个 ICorDebugAppDomain 对象，表示包含程序集的应用程序域的指针。  
   
  `pAssembly`  
  [in]指向表示程序集的 icor 调试程序集对象的指针。  
@@ -47,14 +47,14 @@ HRESULT UnloadAssembly (
  不应在此回调后使用该程序集。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [LoadAssembly 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)  
- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>请参阅
+- [LoadAssembly 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)
+- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

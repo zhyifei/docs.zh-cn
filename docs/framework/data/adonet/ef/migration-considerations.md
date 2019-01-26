@@ -2,12 +2,12 @@
 title: 迁移注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: cf705caa84742d654465a2dba005f2d8f32abcca
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 14f71de4a05c821ec21bf018fe2e2383d747c41b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575614"
 ---
 # <a name="migration-considerations-entity-framework"></a>迁移注意事项（实体框架）
 现有的应用程序可以从多方面受益于 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 实体框架。 其中最重要的益处之一在于能够使用概念模型将应用程序使用的数据结构与数据源中的架构分离。 这样，日后便可轻松地对存储模型或数据源本身进行更改，而无需对应用程序进行补偿更改。 有关使用的优点的详细信息[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，请参阅[实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)并[实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "48837490"
  将现有应用程序迁移到[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的途径取决于应用程序的类型以及现有的数据访问策略。 但是，在将现有应用程序迁移到[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]时，总是要执行以下任务。  
   
 > [!NOTE]
->  当您使用实体数据模型工具从 Visual Studio 2008 开始，所有这些任务会自动执行。 有关详细信息，请参阅[如何： 使用实体数据模型向导](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。  
+>  当您使用实体数据模型工具从 Visual Studio 2008 开始，所有这些任务会自动执行。 有关详细信息，请参阅[如何：使用实体数据模型向导](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。  
   
 1.  升级应用程序。  
   
@@ -37,23 +37,23 @@ ms.locfileid: "48837490"
   
 2.  定义模型和映射。  
   
-     模型和映射文件定义概念模型中的实体、数据源中的结构（如表、存储过程和视图）以及实体与数据源结构之间的映射。 有关详细信息，请参阅[如何： 手动定义模型和映射文件](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a)。  
+     模型和映射文件定义概念模型中的实体、数据源中的结构（如表、存储过程和视图）以及实体与数据源结构之间的映射。 有关详细信息，请参阅[如何：手动定义模型和映射文件](https://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a)。  
   
-     在存储模型中定义的类型必须与数据源中对象的名称相匹配。 如果现有应用程序将数据作为对象公开，则必须确保在概念模型中定义的实体和属性与这些现有数据类和属性的名称相匹配。 有关详细信息，请参阅[如何： 自定义建模和映射文件以使用自定义对象](https://msdn.microsoft.com/library/bb40c4db-0121-4e45-a167-8fb06707a708)。  
+     在存储模型中定义的类型必须与数据源中对象的名称相匹配。 如果现有应用程序将数据作为对象公开，则必须确保在概念模型中定义的实体和属性与这些现有数据类和属性的名称相匹配。 有关详细信息，请参阅[如何：自定义建模和映射文件以使用自定义对象](https://msdn.microsoft.com/library/bb40c4db-0121-4e45-a167-8fb06707a708)。  
   
     > [!NOTE]
     >  可以使用实体数据模型设计器重命名概念模型中的实体以匹配现有对象。 有关详细信息，请参阅[实体数据模型设计器](https://msdn.microsoft.com/library/4ccd7ad6-b934-4f7c-82a0-cfd2d4a95faf)。  
   
 3.  定义连接字符串。  
   
-     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]在对概念模型执行查询时使用特殊格式的连接字符串。 此连接字符串包装有关模型和映射文件和到数据源的连接的信息。 有关详细信息，请参阅[如何： 定义连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)。  
+     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]在对概念模型执行查询时使用特殊格式的连接字符串。 此连接字符串包装有关模型和映射文件和到数据源的连接的信息。 有关详细信息，请参阅[如何：定义连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)。  
   
 4.  Visual Studio 项目配置。  
   
-     对引用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]必须将程序集的模型和映射文件添加到 Visual Studio 项目。 可以将这些映射文件添加到项目中，以确保这些文件随应用程序一起部署在连接字符串中所指示的位置。 有关详细信息，请参阅[如何： 手动配置实体框架项目](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)。  
+     对引用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]必须将程序集的模型和映射文件添加到 Visual Studio 项目。 可以将这些映射文件添加到项目中，以确保这些文件随应用程序一起部署在连接字符串中所指示的位置。 有关详细信息，请参阅[如何：手动配置实体框架项目](https://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)。  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>有关包含现有对象的应用程序的注意事项  
- 从 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4 开始，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]就支持“纯旧式”CLR 对象 (POCO)，也称为持久性未知对象。 大多数情况下，通过进行少量修改，现有对象可以使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 有关详细信息，请参阅[使用 POCO 实体](https://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3)。 此外可以将迁移到应用程序[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]和使用实体框架工具生成的数据类。 有关详细信息，请参阅[如何： 使用实体数据模型向导](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。  
+ 从 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4 开始，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]就支持“纯旧式”CLR 对象 (POCO)，也称为持久性未知对象。 大多数情况下，通过进行少量修改，现有对象可以使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 有关详细信息，请参阅[使用 POCO 实体](https://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3)。 此外可以将迁移到应用程序[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]和使用实体框架工具生成的数据类。 有关详细信息，请参阅[如何：使用实体数据模型向导](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>有关使用 ADO.NET 提供程序的应用程序的注意事项  
  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供程序，例如 SqlClient，使你能够查询要返回表格数据的数据源。 此外可以将数据加载到[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]数据集。 下表介绍在升级使用现有 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供程序的应用程序时的注意事项：  
@@ -86,7 +86,7 @@ ms.locfileid: "48837490"
  基于 Windows Communication Foundation (WCF) 的 Web 服务和应用程序使用 XML 请求/响应消息格式公开基础数据源中的数据。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]使用二进制、XML 或 WCF 数据约定序列化支持实体对象的序列化。 二进制和 WCF 序列化都支持对象图的整体序列化。 有关详细信息，请参阅[生成 N 层应用程序](https://msdn.microsoft.com/library/9439d2ba-6b5f-44e8-be65-8a442d922cbb)。  
   
  使用 XML 数据的应用程序。  
- 通过对象序列化可以创建[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]数据服务。 这些服务为使用 XML 数据的应用程序（如基于 AJAX 的 Internet 应用程序）提供数据。 在这类情况下，请考虑使用 [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]。 这些数据服务基于实体数据模型和通过使用标准具象状态传输 (REST) HTTP 操作提供对实体数据的动态访问、 如 GET、 PUT 和 POST。 有关详细信息，请参阅[WCF 数据服务 4.5](../../../../../docs/framework/data/wcf/index.md)。  
+ 通过对象序列化可以创建[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]数据服务。 这些服务为使用 XML 数据的应用程序（如基于 AJAX 的 Internet 应用程序）提供数据。 在这类情况下，请考虑使用 [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]。 这些数据服务基于实体数据模型和通过使用标准具象状态传输 (REST) HTTP 操作提供对实体数据的动态访问、 如 GET、 PUT 和 POST。 有关详细信息，请参阅 [WCF Data Services 4.5](../../../../../docs/framework/data/wcf/index.md)。  
   
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]不支持本机 XML 数据类型。 这意味着在将实体映射到包含 XML 列的表时，该 XML 列的等效实体属性是一个字符串。 对象可以断开连接，并序列化为 XML。 有关详细信息，请参阅[序列化对象](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99)。  
   
@@ -95,6 +95,6 @@ ms.locfileid: "48837490"
  维护状态的应用程序。  
  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web 应用程序需要经常维护网页或用户会话的状态。 中的对象<xref:System.Data.Objects.ObjectContext>可以存储在客户端视图状态或在服务器上的会话状态中实例，和更高版本能检索和重新附加到新的对象上下文。 有关详细信息，请参阅[附加和分离对象](https://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23)。  
   
-## <a name="see-also"></a>请参阅  
- [部署注意事项](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [实体框架术语](../../../../../docs/framework/data/adonet/ef/terminology.md)
+## <a name="see-also"></a>请参阅
+- [部署注意事项](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [实体框架术语](../../../../../docs/framework/data/adonet/ef/terminology.md)

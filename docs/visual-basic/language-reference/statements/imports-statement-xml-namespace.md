@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e137b27ae5128e54eca466632cadad9908232045
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655980"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports 语句（XML 命名空间）
 导入在 XML 文本和 XML 轴属性中使用的 XML 命名空间前缀。  
@@ -30,7 +30,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
  可选。 由哪些 XML 元素和属性可以引用的字符串`xmlNamespaceName`。 如果没有`xmlNamespacePrefix`是提供，导入的 XML 命名空间是默认 XML 命名空间。 必须是有效的 XML 标识符。 有关详细信息，请参阅[名称的声明 XML 元素和属性](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。  
   
  `xmlNamespaceName`  
- 必须的。 标识要导入的 XML 命名空间的字符串。  
+ 必需。 标识要导入的 XML 命名空间的字符串。  
   
 ## <a name="remarks"></a>备注  
  可以使用`Imports`语句来定义与 XML 文本和 XML 轴属性，或作为参数传递到可以使用的全局 XML 命名空间`GetXmlNamespace`运算符。 (有关使用信息`Imports`语句导入别名，可在代码中，使用类型名称，请参阅[Imports 语句 （.NET Namespace 和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。)通过使用声明 XML 命名空间的语法`Imports`语句等同于在 XML 中使用的语法。 因此，您可以从 XML 文件中复制的命名空间声明，并使用它在`Imports`语句。  
@@ -88,8 +88,8 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>请参阅  
- [XML 元素文本](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML 轴属性](../../../visual-basic/language-reference/xml-axis/index.md)  
- [已声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
- [GetXmlNamespace 运算符](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+## <a name="see-also"></a>请参阅
+- [XML 元素文本](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML 轴属性](../../../visual-basic/language-reference/xml-axis/index.md)
+- [已声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [GetXmlNamespace 运算符](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

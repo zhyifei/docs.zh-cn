@@ -1,5 +1,5 @@
 ---
-title: 如何：设置 Windows 窗体上的 Tab 键顺序
+title: 如何：设置 Windows 窗体上 tab 键顺序
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 74244ae4e3692ed210b2a8f1513b035c85e98376
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 118785e14dddcd5ff19aa8c143f9e8df05d8980b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675167"
 ---
-# <a name="how-to-set-the-tab-order-on-windows-forms"></a>如何：设置 Windows 窗体上的 Tab 键顺序
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a>如何：设置 Windows 窗体上 tab 键顺序
 Tab 键顺序是在其中用户焦点从一个控件移到另一个通过按 TAB 键顺序。 每个窗体具有其自己的 tab 键顺序。 默认情况下，tab 键顺序是在其中创建控件的顺序相同。 Tab 键顺序编号从 0 开始。  
   
 > [!NOTE]
@@ -54,8 +54,8 @@ Tab 键顺序是在其中用户焦点从一个控件移到另一个通过按 TAB
     > [!NOTE]
     >  单选按钮组具有一个选项卡在运行时停止。 选定的按钮 (即，具有按钮及其<xref:System.Windows.Forms.RadioButton.Checked%2A>属性设置为`true`) 具有其<xref:System.Windows.Forms.Control.TabStop%2A>属性自动设置为`true`，而其他按钮都有其<xref:System.Windows.Forms.Control.TabStop%2A>属性设置为`false`。 有关分组的详细信息<xref:System.Windows.Forms.RadioButton>控件，请参阅[分组 Windows 窗体 RadioButton 控件按功能](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  
- [在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [按功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>请参阅
+- [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)
+- [在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [按功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 7128b23790588a604989cb18918a7a7e8b598191
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ba0d508881d6500d53e9e9781c3cce7185ed845d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584182"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724338"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>演练：绑定到混合应用程序中的数据
 无论您使用数据源绑定到控件是必需的用户提供对基础数据的访问[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 本演练演示如何在混合应用程序中包含这两个使用数据绑定[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件。  
@@ -122,7 +122,7 @@ ms.locfileid: "48584182"
   
 1.  从**数据**菜单中，选择**添加新数据源**。  
   
-2.  在中**数据源配置向导**，使用数据集创建到 Northwind 数据库的连接。 有关详细信息，请参阅[如何： 连接到数据库中的数据](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)。  
+2.  在中**数据源配置向导**，使用数据集创建到 Northwind 数据库的连接。 有关详细信息，请参阅[如何：连接到数据库中的数据](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)。  
   
 3.  当提示你**数据源配置向导**，保存连接字符串作为`NorthwindConnectionString`。  
   
@@ -173,10 +173,10 @@ ms.locfileid: "48584182"
   
 10. 按 F5 生成并运行该应用程序。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [混合应用程序示例中的数据绑定](https://go.microsoft.com/fwlink/?LinkID=159983)  
- [演练：在 WPF 中托管 Windows 窗体复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [演练：在 Windows 窗体中承载 WPF 复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [混合应用程序示例中的数据绑定](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [演练：承载在 WPF 中的 Windows 窗体复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [演练：承载 WPF 复合控件在 Windows 窗体中](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

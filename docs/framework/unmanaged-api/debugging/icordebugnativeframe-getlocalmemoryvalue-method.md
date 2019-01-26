@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5419d2e6932e08d05c8336d473cf68bd16058a48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e8d0c16000c78fab0371b68c3a350bd2018aa1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664520"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryValue 方法
-获取自变量或存储在此本机框架的指定的内存位置的本地变量的值。  
+获取参数或存储在指定的内存位置的此本机帧中的本地变量的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,25 +40,25 @@ HRESULT GetLocalMemoryValue (
   
 #### <a name="parameters"></a>参数  
  `address`  
- [in]A`CORDB_ADDRESS`值，该值指定内存位置包含的值。  
+ [in]一个`CORDB_ADDRESS`值，该值指定内存位置包含的值。  
   
  `cbSigBlob`  
- [in]一个整数，指定的二进制元数据签名，这由引用的大小`pvSigBlob`参数。  
+ [in]一个整数，指定的二进制元数据签名的由引用大小`pvSigBlob`参数。  
   
  `pvSigBlob`  
- [in]A`PCCOR_SIGNATURE`值，该值指向的值类型的二进制元数据签名。  
+ [in]一个`PCCOR_SIGNATURE`指向值类型的二进制元数据签名的值。  
   
  `ppValue`  
- [out]指向表示检索到存储在指定的内存位置的值的"ICorDebugValue"对象的地址的指针。  
+ [out]指向表示检索到的值存储在指定的内存位置中的"ICorDebugValue"对象的地址的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- 
+## <a name="see-also"></a>请参阅
+

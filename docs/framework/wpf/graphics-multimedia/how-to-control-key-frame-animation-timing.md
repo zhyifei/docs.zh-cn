@@ -8,12 +8,12 @@ helpviewer_keywords:
 - key frames [WPF], timing
 - timing key-fram animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
-ms.openlocfilehash: d65bf6f7643adf1d98d468853ae8017a4a6554ac
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3a8e11ee8bfbbe87ca5a1c51b815dd21c124a951
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712020"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>如何：控制关键帧动画的计时
 此示例演示如何控制关键帧动画中的关键帧的时间。 像其他动画关键帧动画具有<xref:System.Windows.Media.Animation.Timeline.Duration%2A>属性。 除了指定动画的持续时间，您需要指定该持续时间的哪一部分分配给每个其关键帧。 若要分配的时间，则指定<xref:System.Windows.Media.Animation.KeyTime>中每个关键帧动画。  
@@ -65,7 +65,7 @@ ms.locfileid: "44086188"
   
  有关完整示例，请参阅[关键帧动画示例](https://go.microsoft.com/fwlink/?LinkID=160012)。 关键帧动画的详细信息，请参阅[关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

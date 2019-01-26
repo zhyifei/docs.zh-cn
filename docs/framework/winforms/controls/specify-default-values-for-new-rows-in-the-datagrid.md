@@ -1,5 +1,5 @@
 ---
-title: 如何：为 Windows 窗体 DataGridView 控件中的新行指定默认值
+title: 如何：指定 Windows 窗体 DataGridView 控件中的新行的默认值
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: c28d969f9d4976c7432e7293afb13e7f340f7e97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dab9ba7ca16cf0c886601e3c8fea579e70b2f30d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596769"
 ---
-# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>如何：为 Windows 窗体 DataGridView 控件中的新行指定默认值
-当应用程序在默认填充新添加的行的值时，可以使数据输入更方便。 与<xref:System.Windows.Forms.DataGridView>类，你可以填充默认值与<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。 当用户输入新记录的行时，引发此事件。 当你的代码处理此事件时，你可以填充具有你选择的值的所需单元格。  
+# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>如何：指定 Windows 窗体 DataGridView 控件中的新行的默认值
+应用程序填充默认值为新添加的行时，可以进行数据输入更方便。 与<xref:System.Windows.Forms.DataGridView>类，您可以填充默认值与<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。 当用户输入新记录的行时，引发此事件。 当你的代码处理此事件时，可以填充具有所选的值的所需单元格。  
   
- 下面的代码示例演示如何指定使用的新行的默认值<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。  
+ 下面的代码示例演示如何指定默认值的新行使用<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#120)]
@@ -31,12 +31,12 @@ ms.locfileid: "33535228"
   
 -   名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。  
   
--   A`NewCustomerId`函数，用于生成唯一`CustomerID`值。  
+-   一个`NewCustomerId`函数，用于生成唯一`CustomerID`值。  
   
 -   对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>  
- [Windows 窗体 DataGridView 控件中的数据输入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
- [在 Windows 窗体 DataGridView 控件中对新记录使用行](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
+- [Windows 窗体 DataGridView 控件中的数据输入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
+- [在 Windows 窗体 DataGridView 控件中对新记录使用行](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

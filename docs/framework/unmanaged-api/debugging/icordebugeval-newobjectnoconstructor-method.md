@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e99cafe39a030a412bf33aeb9d96d5006ca02df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d9db6853d3bd4bb7faae54b746a5a940c7dec8a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415956"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561786"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor 方法
 分配新的对象实例的指定类型，而不尝试调用构造函数方法。  
   
- 此方法是.NET Framework 2.0 版中过时。 使用[icordebugeval2:: Newparameterizedobjectnoconstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)相反。  
+ 此方法是在.NET Framework 2.0 版中已过时。 使用[ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)相反。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,16 +39,16 @@ HRESULT NewObjectNoConstructor (
   
 #### <a name="parameters"></a>参数  
  `pClass`  
- [in]指向一个 ICorDebugClass 对象，表示要进行实例化的对象类型的指针。  
+ [in]ICorDebugClass 对象，表示要进行实例化的对象类型的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** 1.1、 1.0  
+ **.NET framework 版本：** 1.1, 1.0  
   
-## <a name="see-also"></a>请参阅  
- [NewParameterizedObjectNoConstructor 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)
+## <a name="see-also"></a>请参阅
+- [NewParameterizedObjectNoConstructor 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)

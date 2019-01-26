@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: d065d3cead1ed9746a9615ce2bb6d3ec4cbd614d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c4aab17958180710c392491a27cc22fa006f8c5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855425"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688969"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>如何：使用 Polyline 元素来绘制折线
 此示例演示如何来绘制折线，这是通过使用一系列相互连接的直线，<xref:System.Windows.Shapes.Polyline>元素。  
@@ -34,9 +34,9 @@ ms.locfileid: "43855425"
   
  此示例摘自一个更大的示例;有关完整示例，请参阅[形状元素示例](https://go.microsoft.com/fwlink/?LinkID=160037)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Shapes.Polyline>  
- <xref:System.Windows.Shapes.Polygon>  
- <xref:System.Windows.Shapes.Shape>  
- [形状元素示例](https://go.microsoft.com/fwlink/?LinkID=160037)  
- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Shapes.Polyline>
+- <xref:System.Windows.Shapes.Polygon>
+- <xref:System.Windows.Shapes.Shape>
+- [形状元素示例](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)

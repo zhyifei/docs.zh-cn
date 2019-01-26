@@ -1,5 +1,5 @@
 ---
-title: 演练：创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件
+title: 演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: aa30842ca72bb50767513cf387f59e29e40574e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8c5ab9ac832ebf98584273bb8c4a7de12b3b8085
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865860"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595274"
 ---
-# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>演练：创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件
+# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件
 可以通过创作的关联的自定义设计器增强自定义控件的设计时体验。  
   
  本演练演示如何创建自定义控件的自定义设计器。 将实现`MarqueeControl`类型和关联的设计器类，名为`MarqueeControlRootDesigner`。  
@@ -60,7 +60,7 @@ ms.locfileid: "43865860"
   
  ![可能的 MarqueeControl 排列](../../../../docs/framework/winforms/controls/media/demomarqueecontrol.gif "器")  
   
- 有关完整代码列表，请参阅[如何： 创建 Windows 窗体控件，需要利用设计时功能](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。  
+ 有关完整代码列表，请参阅[如何：创建利用设计时功能的 Windows 窗体控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -84,18 +84,18 @@ ms.locfileid: "43865860"
   
 1.  向解决方案添加 Windows 窗体控件库项目。 命名项目"MarqueeControlLibrary。"  
   
-2.  使用**解决方案资源管理器**，通过删除源文件，具体取决于你选择的语言中名为"UserControl1.cs"或"UserControl1.vb"来删除项目的默认控件。 有关详细信息，请参阅[NIB： 如何： 删除、 删除和排除项](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+2.  使用**解决方案资源管理器**，通过删除源文件，具体取决于你选择的语言中名为"UserControl1.cs"或"UserControl1.vb"来删除项目的默认控件。 有关详细信息，请参阅[如何：移除、 删除和排除项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))。  
   
 3.  添加一个新<xref:System.Windows.Forms.UserControl>项`MarqueeControlLibrary`项目。 新的源文件基名称指定为"MarqueeControl。"  
   
-4.  使用**解决方案资源管理器**，创建一个新文件夹中的`MarqueeControlLibrary`项目。 有关详细信息，请参阅[NIB： 如何： 添加新项目项](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 将新文件夹命名为"设计"。  
+4.  使用**解决方案资源管理器**，创建一个新文件夹中的`MarqueeControlLibrary`项目。 有关详细信息，请参阅[如何：添加新项目项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))。 将新文件夹命名为"设计"。  
   
 5.  右键单击**设计**文件夹并添加新类。 源文件基名称指定为"MarqueeControlRootDesigner。"  
   
 6.  将需要使用来自 System.Design 程序集类型，因此添加到此引用`MarqueeControlLibrary`项目。  
   
     > [!NOTE]
-    >  若要使用 System.Design 程序集，你的项目必须面向.NET Framework 中，而非.NET Framework 客户端配置文件的完整版本。 若要更改目标框架，请参阅[如何： 面向.NET Framework 版本](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。  
+    >  若要使用 System.Design 程序集，你的项目必须面向.NET Framework 中，而非.NET Framework 客户端配置文件的完整版本。 若要更改目标框架，请参阅[如何：面向 .NET Framework 的某个版本](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。  
   
 ## <a name="referencing-the-custom-control-project"></a>引用自定义控件项目  
  将使用`MarqueeControlTest`项目，以测试自定义控件。 测试项目就会变得注意的自定义控件添加到项目引用`MarqueeControlLibrary`程序集。  
@@ -168,7 +168,7 @@ using MarqueeControlLibrary;
 5.  生成项目。  
   
 ## <a name="setting-up-the-project-for-design-time-debugging"></a>设置设计时调试项目  
- 当你正在开发的自定义设计时体验时，将需要调试控件和组件。 没有将项目设置以允许在设计时调试的简单方法。 有关详细信息，请参阅[演练： 调试在设计时自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)。  
+ 当你正在开发的自定义设计时体验时，将需要调试控件和组件。 没有将项目设置以允许在设计时调试的简单方法。 有关详细信息，请参见[演练：在设计时调试自定义 Windows 窗体的控件](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)。  
   
 #### <a name="to-set-up-the-project-for-design-time-debugging"></a>若要设置项目以便进行设计时调试  
   
@@ -219,9 +219,9 @@ using MarqueeControlLibrary;
 ## <a name="creating-a-child-control-for-your-custom-control"></a>创建子控件的自定义控件  
  `MarqueeControl`将承载的子控件的两种类型：`MarqueeBorder`控件和`MarqueeText`控件。  
   
--   `MarqueeBorder`： 此控件绘制"lights"其边缘周围的边框。 灯光闪烁在序列中，使其显示以围绕着边框移动。 由一个名为属性控制在其灯闪烁的速度`UpdatePeriod`。 多个其他自定义属性确定控件的外观的其他方面。 两种方法，称为`StartMarquee`和`StopMarquee`，控制动画启动和停止时。  
+-   `MarqueeBorder`：此控件绘制"lights"其边缘周围的边框。 灯光闪烁在序列中，使其显示以围绕着边框移动。 由一个名为属性控制在其灯闪烁的速度`UpdatePeriod`。 多个其他自定义属性确定控件的外观的其他方面。 两种方法，称为`StartMarquee`和`StopMarquee`，控制动画启动和停止时。  
   
--   `MarqueeText`： 此控件将绘制一个闪烁的字符串。 像`MarqueeBorder`控件中，文本会闪烁的速度由控制`UpdatePeriod`属性。 `MarqueeText`控件还具有`StartMarquee`并`StopMarquee`方法与`MarqueeBorder`控件。  
+-   `MarqueeText`：此控件将绘制一个闪烁的字符串。 像`MarqueeBorder`控件中，文本会闪烁的速度由控制`UpdatePeriod`属性。 `MarqueeText`控件还具有`StartMarquee`并`StopMarquee`方法与`MarqueeBorder`控件。  
   
  在设计时`MarqueeControlRootDesigner`允许这些两个控件的类型添加到`MarqueeControl`的任意组合。  
   
@@ -457,9 +457,9 @@ using MarqueeControlLibrary;
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#560](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#560)]  
   
 ## <a name="adding-designer-verbs-to-your-custom-designer"></a>将设计器谓词添加到自定义设计器  
- 设计器谓词是链接到一个事件处理程序的菜单命令。 设计器谓词在设计时添加到组件的快捷菜单。 有关详细信息，请参阅<xref:System.ComponentModel.Design.DesignerVerb>。  
+ 设计器谓词是链接到一个事件处理程序的菜单命令。 设计器谓词在设计时添加到组件的快捷菜单。 有关详细信息，请参阅 <xref:System.ComponentModel.Design.DesignerVerb>。  
   
- 将两个设计器谓词添加到您的设计人员：**运行测试**并**停止测试**。 这些谓词将允许您查看的运行时行为`MarqueeControl`在设计时。 这些谓词将添加到`MarqueeControlRootDesigner`。  
+ 会将两个设计器谓词添加到您的设计人员：**运行测试**并**停止测试**。 这些谓词将允许您查看的运行时行为`MarqueeControl`在设计时。 这些谓词将添加到`MarqueeControlRootDesigner`。  
   
  当**运行测试**是调用，则谓词事件处理程序将调用`StartMarquee`方法`MarqueeControl`。 当**停止测试**是调用，则谓词事件处理程序将调用`StopMarquee`方法`MarqueeControl`。 实现`StartMarquee`并`StopMarquee`方法的实现包含控件上调用这些方法`IMarqueeWidget`，因此任何包含`IMarqueeWidget`控件还将参与测试。  
   
@@ -476,7 +476,7 @@ using MarqueeControlLibrary;
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]  
   
 ## <a name="creating-a-custom-uitypeeditor"></a>创建自定义 UITypeEditor  
- 时创建用户提供自定义设计时体验，它通常是需要创建与属性窗口的自定义式交互。 您可以完成此操作通过创建<xref:System.Drawing.Design.UITypeEditor>。 有关详细信息，请参阅[如何： 创建 UI 类型编辑器](https://msdn.microsoft.com/library/292c6e33-8d85-4012-9b51-05835a6f6dfd)。  
+ 时创建用户提供自定义设计时体验，它通常是需要创建与属性窗口的自定义式交互。 您可以完成此操作通过创建<xref:System.Drawing.Design.UITypeEditor>。 有关详细信息，请参阅[如何：创建 UI 类型编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120))。  
   
  `MarqueeBorder`控件公开多个属性在属性窗口中的。 这些属性的两个`MarqueeSpinDirection`和`MarqueeLightShape`枚举表示。 举例说明的 UI 类型编辑器，使用`MarqueeLightShape`属性将具有一个关联<xref:System.Drawing.Design.UITypeEditor>类。  
   
@@ -583,7 +583,7 @@ private IWindowsFormsEditorService editorService;
   
 6.  右键单击`DemoMarqueeControl`并从快捷菜单选择**运行测试**选项来启动动画。 单击**停止测试**停止动画。  
   
-7.  打开**Form1**在设计视图中。  
+7.  在设计视图中打开“Form1”。  
   
 8.  放置两个<xref:System.Windows.Forms.Button>窗体控件。 命名它们`startButton`和`stopButton`，并将更改<xref:System.Windows.Forms.Control.Text%2A>属性值复制到**启动**并**停止**分别。  
   
@@ -628,19 +628,19 @@ private void stopButton_Click(object sender, System.EventArgs e)
   
 -   进一步自定义设计时体验。 您可以尝试隐藏更多属性比<xref:System.Windows.Forms.Control.Enabled%2A>和<xref:System.Windows.Forms.Control.Visible%2A>，可以添加新属性。 添加新的设计器谓词来简化常见任务，例如停靠子控件。  
   
--   许可证`MarqueeControl`。 有关详细信息，请参阅[如何： 许可组件和控件](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)。  
+-   许可证`MarqueeControl`。 有关详细信息，请参阅[如何：授予组件和控件许可](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))。  
   
 -   控制如何序列化您的控件以及如何为其生成代码。 有关详细信息，请参阅[动态源代码生成和编译](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.UserControl>  
- <xref:System.Windows.Forms.Design.ParentControlDesigner>  
- <xref:System.Windows.Forms.Design.DocumentDesigner>  
- <xref:System.ComponentModel.Design.IRootDesigner>  
- <xref:System.ComponentModel.Design.DesignerVerb>  
- <xref:System.Drawing.Design.UITypeEditor>  
- <xref:System.ComponentModel.BackgroundWorker>  
- [如何：创建利用设计时功能的 Windows 窗体控件](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)  
- [扩展设计时支持](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [自定义设计器](https://msdn.microsoft.com/library/ca11988e-d38e-44d8-a05d-71362ae7844d)  
- [.NET 形状库： 示例设计器](http://windowsforms.net/articles/shapedesigner.aspx)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Windows.Forms.UserControl>
+- <xref:System.Windows.Forms.Design.ParentControlDesigner>
+- <xref:System.Windows.Forms.Design.DocumentDesigner>
+- <xref:System.ComponentModel.Design.IRootDesigner>
+- <xref:System.ComponentModel.Design.DesignerVerb>
+- <xref:System.Drawing.Design.UITypeEditor>
+- <xref:System.ComponentModel.BackgroundWorker>
+- [如何：创建利用设计时功能的 Windows 窗体控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [扩展设计时支持](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [自定义设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h51z5c0x(v=vs.120))

@@ -2,12 +2,12 @@
 title: SQL Server 中的查询通知
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: c4e58a3eecc18fb5693e9850163533b0a1a6a574
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 87335b5c9ad626e998fdb7bf0e71cae2542386f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636685"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server 中的查询通知
 查询通知建立在 Service Broker 基础结构的基础上，使应用程序可以在数据更改时收到通知。 如果应用程序提供数据库中信息的缓存（例如 Web 应用程序），需要在源数据更改时接收通知，此功能特别有用。  
@@ -61,6 +61,6 @@ ms.locfileid: "45749394"
  <xref:System.Web.Caching.SqlCacheDependency>  
  描述 <xref:System.Web.Caching.SqlCacheDependency> 类及其所有成员。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

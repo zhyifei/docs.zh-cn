@@ -6,18 +6,18 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 5e91ab9fbd2fdeb0aa5d836a1eedfb5e0b45ecba
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e752ad5c3160ac7b73adac55b02a06bf802190ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678351"
 ---
 # <a name="how-to-implement-binding-validation"></a>如何：实现绑定验证
 此示例演示如何在用户输入无效值后，基于自定义验证规则使用 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 和样式触发器来提供视觉反馈，以便通知用户。  
   
 ## <a name="example"></a>示例  
- 文本内容<xref:System.Windows.Controls.TextBox>在下面的示例绑定到`Age`属性 （类型为 int) 的一个名为的绑定源对象`ods`。 该绑定设置为使用名为 `AgeRangeRule` 的验证规则，以便当用户输入了非数值字符或输入的值小于 21 或者大于 130 时，文本框旁边将显示一个红色感叹号，并且当用户将鼠标移动到该文本框上时，将显示包含错误消息的工具提示。  
+ 在下面的示例中，<xref:System.Windows.Controls.TextBox> 的文本内容绑定到一个名为 `ods` 的绑定源对象的 `Age` 属性（类型为 int) 。 该绑定已设置为使用名为 `AgeRangeRule` 的验证规则。因此，当用户输入了非数值字符或输入的值小于 21 或者大于 130 时，文本框旁边会显示一个红色感叹号，而当用户将鼠标移动到该文本框上时，会显示包含错误消息的工具提示。  
   
  [!code-xaml[BindValidation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]  
   
@@ -37,6 +37,6 @@ ms.locfileid: "43510447"
   
  请注意，如果未提供自定义 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A>，则当验证出错时,系统会使用默认错误模板向用户提供可视反馈。 有关详细信息，请参阅[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)中的“数据验证”。 另外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还提供了内置验证规则，该规则捕获在更新绑定源属性期间引发的异常。 有关详细信息，请参阅 <xref:System.Windows.Controls.ExceptionValidationRule>。  
   
-## <a name="see-also"></a>请参阅  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

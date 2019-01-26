@@ -13,12 +13,12 @@ helpviewer_keywords:
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: KrzysztofCwalina
-ms.openlocfilehash: b140be34d9359cfdca1250a924db787563127d19
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 68192e3b75a120c73b82c34005d4dee650540bf3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722161"
 ---
 # <a name="constructor-design"></a>构造函数设计
 有两种类型的构造函数：类型构造函数和实例构造函数。  
@@ -76,9 +76,9 @@ ms.locfileid: "53127779"
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [成员设计准则](../../../docs/standard/design-guidelines/member.md)  
+- [成员设计准则](../../../docs/standard/design-guidelines/member.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

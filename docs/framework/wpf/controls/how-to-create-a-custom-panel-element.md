@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF]
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
-ms.openlocfilehash: bca8900ccb3c31a78066a43709a5e9334bc09eab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 93d9ebacda8c753ab5a4446999e1aa86828a2b9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776708"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621927"
 ---
 # <a name="how-to-create-a-custom-panel-element"></a>如何：创建自定义 Panel 元素
 ## <a name="example"></a>示例  
@@ -28,7 +28,7 @@ ms.locfileid: "43776708"
  [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
  [!code-vb[PlotPanel#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Controls.Panel>  
- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [创建自定义内容换行面板示例](https://go.microsoft.com/fwlink/?LinkID=159979)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Controls.Panel>
+- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [创建自定义内容换行面板示例](https://go.microsoft.com/fwlink/?LinkID=159979)

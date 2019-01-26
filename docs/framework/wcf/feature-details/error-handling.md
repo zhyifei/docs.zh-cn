@@ -2,12 +2,12 @@
 title: 错误处理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695551"
 ---
 # <a name="error-handling"></a>错误处理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation 中的错误处理  
@@ -67,5 +67,5 @@ ms.locfileid: "49452844"
   
  可通过安装错误处理程序，像许多其他类型的调度失败一样检查类型转换调度失败。 调用 IErrorHandler 扩展点处理服务级别异常。 从中，可以选择要发送回调用方的响应，以及执行任何自定义任务和报告。  
   
-## <a name="see-also"></a>请参阅  
- [基本 WCF 编程](../basic-wcf-programming.md)
+## <a name="see-also"></a>请参阅
+- [基本 WCF 编程](../basic-wcf-programming.md)

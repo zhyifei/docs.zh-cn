@@ -2,12 +2,12 @@
 title: 自定义令牌
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 8aa41a1f9651d0a385836178bc791c14706c17e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 93de9ae8d1d0604efbbc07fae61463599a8b9acf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572703"
 ---
 # <a name="custom-token"></a>自定义令牌
 此示例演示如何将添加到 Windows Communication Foundation (WCF) 应用程序自定义令牌的实现。 示例使用 `CreditCardToken` 将客户端的信用卡相关信息安全地传递到服务。 令牌在 WS-Security 消息头中传递，并连同消息正文和其他消息头一起使用对称安全绑定元素进行签名和加密。 当内置令牌不足时可以进行这样的操作。 本示例演示如何向服务提供自定义安全令牌而不必使用某个内置令牌。 该服务实现定义“请求-答复”通信模式的协定。
@@ -609,7 +609,7 @@ string GetCallerCreditCardNumber()
   
 2.  将服务程序文件复制到服务计算机上的服务目录。 不要忘记复制 CreditCardFile.txt，否则信用卡身份验证器将不能验证从客户端发送的信用卡信息。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-3.  必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 如果您将 `%SERVER_NAME%` 变量更改为承载服务的计算机的完全限定的名称，您可以使用 Setup.bat 来创建一个这样的证书。 请注意，必须在使用管理员特权打开的 Visual Studio 命令提示中运行 Setup.bat 文件。  
+3.  必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 如果您将 `%SERVER_NAME%` 变量更改为承载服务的计算机的完全限定的名称，您可以使用 Setup.bat 来创建一个这样的证书。 请注意，Setup.bat 文件必须在运行在开发人员命令提示符下使用管理员特权打开 Visual studio。  
   
 4.  将服务器证书复制到客户端上的 CurrentUser-TrustedPeople 存储区中。 只有当服务器证书不是由受信任的颁发者颁发的情况下才需要执行此操作。  
   

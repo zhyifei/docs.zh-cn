@@ -6,25 +6,25 @@ helpviewer_keywords:
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-ms.openlocfilehash: 17da86d6d10fb1602c16fc2a8c4d6f9f8acf8ff7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a01fdc9d0541b5d277c2f283e25e9a1cef3b862
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636334"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>如何：修改 XML 文本 (Visual Basic)
-Visual Basic 提供方便的方法来修改 XML 文本。 你可以添加或删除元素和属性，并还可以用新的 XML 元素替换现有元素。 本主题提供如何修改现有 XML 文本的几个示例。  
+Visual Basic 提供方便的方式来修改 XML 文本。 可以添加或删除元素和属性，并还可以使用新的 XML 元素来替换现有元素。 本主题提供如何修改现有 XML 文本的几个示例。  
   
-### <a name="to-modify-the-value-of-an-xml-literal"></a>若要修改的 XML 文本的值  
+### <a name="to-modify-the-value-of-an-xml-literal"></a>若要修改的 XML 文本值  
   
-1.  若要修改的 XML 文本的值，获取对 XML 文本，并设置引用`Value`到所需的值的属性。  
+1.  若要修改的 XML 文本的值，获取对 XML 文本，并且已设置的引用`Value`属性设置为所需的值。  
   
-     下面的代码示例将更新的所有值\<价格 > XML 文档中的元素。  
+     以下代码示例将更新的所有值\<价格 > XML 文档中的元素。  
   
      [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_1.vb)]  
   
-     下面显示了示例源 XML 并修改此代码示例中的 XML。  
+     下面显示了示例源为 XML 并修改此代码示例中的 XML。  
   
     ```  
     Source XML:  
@@ -59,15 +59,15 @@ Visual Basic 提供方便的方法来修改 XML 文本。 你可以添加或删�
     ```  
   
     > [!NOTE]
-    >  `Value`属性是指集合中的第一个 XML 元素。 如果没有在集合中具有相同名称的多个元素，则将设置`Value`属性会影响仅在集合中的第一个元素。  
+    >  `Value`属性是指集合中的第一个 XML 元素。 如果不存在具有相同的名称在集合中的多个元素，则将设置`Value`属性会影响仅在集合中的第一个元素。  
   
 ### <a name="to-add-an-attribute-to-an-xml-literal"></a>将属性添加到 XML 文本  
   
-1.  若要将属性添加到 XML 文本，首先获取对 XML 文本的引用。 然后，您可以通过添加新的 XML 特性轴属性添加属性。 你还可以添加一个新<xref:System.Xml.Linq.XAttribute>对象与 XML 文本使用<xref:System.Xml.Linq.XContainer.Add%2A>方法。 下面的示例演示这两个选项。  
+1.  若要将属性添加到 XML 文本，首先获取对 XML 文本的引用。 然后可以通过添加新的 XML 特性轴属性添加一个属性。 您还可以添加一个新<xref:System.Xml.Linq.XAttribute>对象与 XML 文本使用<xref:System.Xml.Linq.XContainer.Add%2A>方法。 下面的示例显示了这两个选项。  
   
      [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_2.vb)]  
   
-     下面显示了示例源 XML 并修改此代码示例中的 XML。  
+     下面显示了示例源为 XML 并修改此代码示例中的 XML。  
   
     ```  
     Source XML:  
@@ -105,15 +105,15 @@ Visual Basic 提供方便的方法来修改 XML 文本。 你可以添加或删�
   
 ### <a name="to-add-an-element-to-an-xml-literal"></a>若要将元素添加到 XML 文本  
   
-1.  若要将元素添加到 XML 文本，首先获取对 XML 文本的引用。 然后添加新<xref:System.Xml.Linq.XElement>对象使用的元素的最后一个子元素作为<xref:System.Xml.Linq.XContainer.Add%2A>方法。 你可以添加新<xref:System.Xml.Linq.XElement>对象作为第一个子元素使用<xref:System.Xml.Linq.XContainer.AddFirst%2A>方法。  
+1.  若要将元素添加到 XML 文本，首先获取对 XML 文本的引用。 然后，可以添加一个新<xref:System.Xml.Linq.XElement>对象使用的元素的最后一个子元素作为<xref:System.Xml.Linq.XContainer.Add%2A>方法。 您可以添加一个新<xref:System.Xml.Linq.XElement>对象使用的第一个子元素作为<xref:System.Xml.Linq.XContainer.AddFirst%2A>方法。  
   
-     若要相对于其他子元素的特定位置添加一个新的元素，首先获取对相邻的子元素的引用。 然后，可以添加新<xref:System.Xml.Linq.XElement>对象使用的相邻子元素之前<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>方法。 你还可以添加新<xref:System.Xml.Linq.XElement>后使用该相邻子元素的对象<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>方法。  
+     若要在特定位置相对于其他子元素添加一个新的元素，请首先获取对相邻的子元素的引用。 然后，可以添加新<xref:System.Xml.Linq.XElement>对象使用相邻的子元素之前的<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>方法。 您还可以添加新<xref:System.Xml.Linq.XElement>通过使用相邻的子元素之后的对象<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>方法。  
   
-     下面的示例演示上述每种方法的示例。  
+     下面的示例显示了每种技术的示例。  
   
      [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_3.vb)]  
   
-     下面显示了示例源 XML 并修改此代码示例中的 XML。  
+     下面显示了示例源为 XML 并修改此代码示例中的 XML。  
   
     ```  
     Source XML:  
@@ -151,13 +151,13 @@ Visual Basic 提供方便的方法来修改 XML 文本。 你可以添加或删�
     </Catalog>  
     ```  
   
-### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a>若要从 XML 文本中删除元素或属性  
+### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a>若要从 XML 文本中移除的元素或属性  
   
-1.  若要从 XML 文本中删除一个元素或属性，获取到元素或属性并调用引用`Remove`方法，如下面的示例中所示。  
+1.  若要从 XML 文本中删除一个元素或属性，请获取对元素或属性与调用的引用`Remove`方法，如以下示例所示。  
   
      [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_4.vb)]  
   
-     下面显示了示例源 XML 并修改此代码示例中的 XML。  
+     下面显示了示例源为 XML 并修改此代码示例中的 XML。  
   
     ```  
     Source XML:  
@@ -193,19 +193,19 @@ Visual Basic 提供方便的方法来修改 XML 文本。 你可以添加或删�
       </Book></Catalog>  
     ```  
   
-     若要从 XML 文本中删除所有元素或属性，获取对 XML 文本的引用，然后调用<xref:System.Xml.Linq.XElement.RemoveAll%2A>方法。  
+     若要从 XML 文本中移除所有元素或属性，获取对 XML 文本的引用，并调用<xref:System.Xml.Linq.XElement.RemoveAll%2A>方法。  
   
 ### <a name="to-modify-an-xml-literal"></a>若要修改 XML 文本  
   
-1.  若要更改的 XML 元素的名称，首先获取对元素的引用。 你可以然后创建一个新<xref:System.Xml.Linq.XElement>有一个新的命名并传递新的对象<xref:System.Xml.Linq.XElement>对象传递给<xref:System.Xml.Linq.XNode.ReplaceWith%2A>方法的现有<xref:System.Xml.Linq.XElement>对象。  
+1.  若要更改的 XML 元素的名称，首先获取对元素的引用。 然后创建一个新<xref:System.Xml.Linq.XElement>有一个新的命名并传递新的对象<xref:System.Xml.Linq.XElement>对象传递给<xref:System.Xml.Linq.XNode.ReplaceWith%2A>方法的现有<xref:System.Xml.Linq.XElement>对象。  
   
-     如果你正在替换的元素具有必须保留的子元素，将新的值设置<xref:System.Xml.Linq.XElement>对象传递给<xref:System.Xml.Linq.XContainer.Nodes%2A>现有元素的属性。 这将设置为现有元素的内部 XML 的新元素的值。 否则，你可以设置到新的元素的值`Value`现有元素的属性。  
+     如果要替换的元素具有必须保留的子元素，将新的值设置<xref:System.Xml.Linq.XElement>对象传递给<xref:System.Xml.Linq.XContainer.Nodes%2A>现有元素的属性。 这会将新元素的值设置为现有元素的内部 XML。 另外，可以将新元素的值设置`Value`现有元素的属性。  
   
-     下面的代码示例将替换所有\<说明 > 元素\<抽象 > 元素。 内容\<说明 > 元素保留在新\<抽象 > 元素中的使用<xref:System.Xml.Linq.XContainer.Nodes%2A>属性\<说明 ><xref:System.Xml.Linq.XElement>对象。  
+     下面的代码示例替换所有\<说明 > 的元素\<抽象 > 元素。 内容\<说明 > 元素保留在新\<抽象 > 元素中的使用<xref:System.Xml.Linq.XContainer.Nodes%2A>的属性\<说明 ><xref:System.Xml.Linq.XElement>对象。  
   
      [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_5.vb)]  
   
-     下面显示了示例源 XML 并修改此代码示例中的 XML。  
+     下面显示了示例源为 XML 并修改此代码示例中的 XML。  
   
     ```  
     Source XML:  
@@ -265,9 +265,9 @@ Visual Basic 提供方便的方法来修改 XML 文本。 你可以添加或删�
     </Catalog>  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [在 Visual Basic 中操控 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [如何：从文件、字符串或流加载 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>请参阅
+- [在 Visual Basic 中操控 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [如何：从文件、 字符串或 Stream 加载 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

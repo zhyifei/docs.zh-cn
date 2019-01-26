@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 15e2ddd7e103857054973d6c4ed7401d6f91af0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1938876bcf72fccd7582ede332d052fb3d759395
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502159"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656188"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的继承
 
@@ -33,7 +33,7 @@ ms.locfileid: "43502159"
 
 1. 输入 [dotnet run](../../core/tools/dotnet-run.md) 命令，编译并执行示例。
 
-## <a name="background-what-is-inheritance"></a>背景知识：什么是继承？
+## <a name="background-what-is-inheritance"></a>背景：什么是继承？
 
 *继承*是面向对象的编程的一种基本特性。 借助继承，能够定义可重用（继承）、扩展或修改父类行为的子类。 成员被继承的类称为*基类*。 继承基类成员的类称为*派生类*。
 
@@ -98,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-继承仅适用于类和接口。 其他各种类型（结构、委托和枚举）均不支持继承。 因为这些规则的存在，如果尝试编译以下代码，则会生成编译器错误 CS0527：“接口列表中的类型 'ValueType' 不是接口。” 此错误消息指明，尽管可以定义结构实现的接口，但不支持继承。
+继承仅适用于类和接口。 其他各种类型（结构、委托和枚举）均不支持继承。 因为这些规则的存在，如果尝试编译以下代码，则会生成编译器错误 CS0527：“接口列表中的类型“ValueType”不是接口。” 此错误消息指明，尽管可以定义结构实现的接口，但不支持继承。
 
 ```csharp
 using System;
@@ -143,7 +143,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 | 类型类别 | 隐式继承自                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
 | class         | <xref:System.Object>                                                          |
-| struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
+| struct        | <xref:System.ValueType>， <xref:System.Object>                                 |
 | enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
 | 委托      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
 
@@ -249,7 +249,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 两个构造函数
 
-  两个 `Book` 构造函数共用三个常见参数。 其中两个参数（*title* 和 *publisher*）对应于 `Publication` 构造函数的相应参数。 第三个参数是 *author*，存储在 `authorName` 私有字段中。 其中一个构造函数包含存储在 `ISBN` 自动属性中的 isbn 参数。
+  两个 `Book` 构造函数共用三个常见参数。 其中两个参数（*title* 和 *publisher*）对应于 `Publication` 构造函数的相应参数。 第三个参数是 *author*，存储在不可变的 `Author` 属性中。 其中一个构造函数包含存储在 `ISBN` 自动属性中的 isbn 参数。
 
   第一个构造函数使用 [this](../language-reference/keywords/this.md) 关键字来调用另一个构造函数。 构造函数链是常见的构造函数定义模式。 调用参数最多的构造函数时，由参数较少的构造函数提供默认值。
 
@@ -257,11 +257,11 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 只读 `ISBN` 属性，用于返回 `Book` 对象的国际标准书号，即 10 位或 13 位的专属编号。 ISBN 作为参数提供给 `Book` 构造函数之一。 ISBN 存储在私有支持字段中，由编译器自动生成。
 
-- 只读 `Author` 属性。 作者姓名作为自变量提供给两个 `Book` 构造函数，并存储在 `authorName` 私有字段中。
+- 只读 `Author` 属性。 作者姓名作为参数提供给两个 `Book` 构造函数，并存储在属性中。
 
-- 两个与价格相关的只读属性（`Price` 和 `Currency`）。 值作为自变量提供给调用的 `SetPrice` 方法。 价格存储在 `bookPrice` 私有字段中。 `Currency` 属性是三位的 ISO 货币符号（例如，USD 表示美元），并存储在 `ISOCurrencySymbol` 私有字段中。 可以从 <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> 属性检索 ISO 货币符号。
+- 两个与价格相关的只读属性（`Price` 和 `Currency`）。 值作为自变量提供给调用的 `SetPrice` 方法。 `Currency` 属性是三位的 ISO 货币符号（例如，USD 表示美元）。 可以从 <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> 属性检索 ISO 货币符号。 这两个属性均为外部只读，但均可在 `Book` 类中由代码设置。
 
-- `SetPrice` 方法，用于设置 `bookPrice` 和 `ISOCurrencySymbol` 字段的值。 这些值由 `Price` 和 `Currency` 属性返回。
+- `SetPrice` 方法，用于设置 `Price` 和 `Currency` 属性的值。 这些值由那些相同属性返回。
 
 - 重写 `ToString` 方法（继承自 `Publication`）、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 和 <xref:System.Object.GetHashCode%2A> 方法（继承自 <xref:System.Object>）。
 

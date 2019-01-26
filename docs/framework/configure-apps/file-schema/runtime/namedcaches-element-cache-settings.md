@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d6f741f4ecd3ea52dacc9f981024690a0031a533
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a824e958a2b75b28aa66a15212e0276d6c127739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536524"
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt;元素 （缓存设置）
 指定的配置设置的命名集合<xref:System.Runtime.Caching.MemoryCache>实例。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>属性引用的配置设置集合中一个或多个`namedCaches`配置文件中的元素。  
   
  \<configuration>  
-\< system.runtime.caching >  
+\< system.runtime.caching>  
 \<memoryCache>  
-\<namedCaches >  
+\<namedCaches>  
   
 ## <a name="syntax"></a>语法  
   
@@ -89,5 +89,5 @@ ms.locfileid: "53611082"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 - [\<memoryCache > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: abe54fe163919c6ad6b746d70baac2482e80b948
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 79ae5f1c2184f99390b1ef36a91f556cc617e51f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861606"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746726"
 ---
 # <a name="queries-visual-basic"></a>查询 (Visual Basic)
 Visual Basic，能够创建[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]在代码中的表达式。  
@@ -58,6 +58,6 @@ Visual Basic，能够创建[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md
  [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)  
  介绍`Where`子句，指定查询的筛选条件。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>请参阅
+- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

@@ -2,12 +2,12 @@
 title: 编程模型项树
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f6f625ae7cd5251f7d7935d018142b32ea71b13f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fe2076740331df861d1861b0cecef43cf96039b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694147"
 ---
 # <a name="programming-model-item-tree"></a>编程模型项树
 此示例演示如何导航<xref:System.Activities.Presentation.Model.ModelItem>树使用的 Windows Presentation Foundation (WPF) 树视图中的声明性数据绑定。
@@ -48,5 +48,5 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Data.IValueConverter>
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Data.IValueConverter>

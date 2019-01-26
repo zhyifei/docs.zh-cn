@@ -2,32 +2,32 @@
 title: '&lt;udpAnnoucementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: a6dbec19beb3800603bd745bacbd6cbcbcdaa739
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ab0e786ec4b21f25682c52fb7609d24e901f6eac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582426"
 ---
 # <a name="ltudpannoucementendpointgt"></a>&lt;udpAnnoucementEndpoint&gt;
 此配置元素定义服务通过 UDP 绑定发送公告消息所使用的标准终结点。 它具有固定协定并支持两个发现版本。 此外，根据 WS-Discovery 规范（WS-Discovery 2005 年 4 月版或 WS-Discovery 1.1 版）中的规定，它还具有固定 UDP 绑定和默认地址值。 您可以指定用于发送和接收公告消息的多播地址。  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <announcementEndpoint>
-      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005" 
+      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
                         maxAnnouncementDelay="Timespan"
                         multicastAddress="Uri"
                         name="String" />
     </announcementEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -46,38 +46,38 @@ ms.locfileid: "32766785"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<n t >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|一个设置集合，用于为 UDP 终结点配置 UDP 传输。|  
+|[\<udpTransportSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|一个设置集合，用于为 UDP 终结点配置 UDP 传输。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
   
 ## <a name="example"></a>示例  
  下面的示例演示一个客户端，该客户端分别通过采用默认多播地址和所指定多播地址的 UDP 多播传输侦听公告。  
   
 ```xml  
-<services>  
-  <service name="ServiceAnnouncementListener">  
-      <endpoint name="udpAnnouncementEndpointStandard"  
-                kind="udpAnnouncementEndpoint"  
-                bindingConfiguration="..." />  
-      <endpoint name="udpAnnouncementEndpoint2"  
-                kind="udpAnnouncementEndpoint"  
-                endpointConfiguration="AnnouncementConfiguration3702"  
-                bindingConfiguration="..." />  
-...  
-  </service>  
-</services>  
-<standardEndpoints>  
-  <udpAnnouncementEndpoint>  
-     <standardEndpoint name="AnnouncementConfiguration2"   
-          version="WSDiscoveryApril2005"   
-          multicastAddress="soap.udp://239.255.255.250:3703"/>          
-  </udpAnnouncementEndpoint>  
-</standardEndpoints>  
+<services>
+  <service name="ServiceAnnouncementListener">
+    <endpoint name="udpAnnouncementEndpointStandard"
+              kind="udpAnnouncementEndpoint"
+              bindingConfiguration="..." />
+    <endpoint name="udpAnnouncementEndpoint2"
+              kind="udpAnnouncementEndpoint"
+              endpointConfiguration="AnnouncementConfiguration3702"
+              bindingConfiguration="..." />
+    ...
+  </service>
+</services>
+<standardEndpoints>
+  <udpAnnouncementEndpoint>
+    <standardEndpoint name="AnnouncementConfiguration2"
+                      version="WSDiscoveryApril2005"
+                      multicastAddress="soap.udp://239.255.255.250:3703"/>
+  </udpAnnouncementEndpoint>
+</standardEndpoints>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>

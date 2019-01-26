@@ -2,12 +2,12 @@
 title: 实体 SQL 引用
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: ae0aec999d30d099467be690b8920d1413b564f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 75f9c61a24ffdcba890ae04ccc5c656460c13088
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522149"
 ---
 # <a name="entity-sql-reference"></a>实体 SQL 引用
 
@@ -108,7 +108,7 @@ Entity SQL 提供了各种强大的一组操作。 这包括集运算符类似�
 |[EXCEPT](except-entity-sql.md)|也不会返回从查询表达式由 EXCEPT 操作数右侧由 EXCEPT 操作数左侧的查询表达式返回所有非重复值的集合。|
 |[\[不\]EXISTS](exists-entity-sql.md)|确定集合是否为空。|
 |[FLATTEN](flatten-entity-sql.md)|将一个由多个集合组成的集合转换为一个平展集合。|
-|[\[不\]IN](in-entity-sql.md)|确定某个值是否与某个集合中的任何值匹配。|
+|[\[NOT\] IN](in-entity-sql.md)|确定某个值是否与某个集合中的任何值匹配。|
 |[INTERSECT](intersect-entity-sql.md)|返回 INTERSECT 操作数左右两边的两个查询表达式均返回的所有非重复值的集合。|
 |[OVERLAPS](overlaps-entity-sql.md)|确定两个集合是否具有公共元素。|
 |[SET](set-entity-sql.md)|用于通过生成一个新集合（其中移除了所有重复元素）将对象集合转换为一个集。|
@@ -142,4 +142,4 @@ Entity SQL 提供了各种强大的一组操作。 这包括集运算符类似�
 
 ## <a name="see-also"></a>请参阅
 
-[实体 SQL 语言](entity-sql-language.md)
+- [实体 SQL 语言](entity-sql-language.md)

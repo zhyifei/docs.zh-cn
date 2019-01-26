@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 92a20e5fbe60c71ec3375ed35c919e1f88cf0a9c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1a43cabfd3ab22ad9035ecb30435b21b75040308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718788"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic 中的变量声明
 声明一个变量来指定其名称和特征。 变量声明语句是[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。 其位置和内容确定变量的特征。  
@@ -73,17 +73,17 @@ Dim l, m As Long, x, y As Single
 ## <a name="characteristics-of-declared-variables"></a>声明的变量的特征  
  *生存期*的变量是的时间段期间它是可供使用。 一般情况下，变量存在，只要继续存在 （如过程或类） 声明的元素。 如果该变量并不需要它的包含元素的生存期过后继续存在，则不需要执行任何特殊的声明中。 如果变量需要一直存在时间超过其包含元素，则可以包括`Static`或`Shared`中的关键字及其`Dim`语句。 有关详细信息，请参阅[在 Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)。  
   
- *作用域*的变量是一组的所有代码都可以引用它而无需限定其名称。 声明位置取决于变量的作用域。 位于给定区域中的代码可以使用而无需限定其名称在该区域中定义的变量。 有关详细信息，请参阅[在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)。  
+ *作用域*的变量是一组的所有代码都可以引用它而无需限定其名称。 声明位置取决于变量的作用域。 位于给定区域中的代码可以使用而无需限定其名称在该区域中定义的变量。 有关详细信息，请参阅 [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)。  
   
  变量的*访问级别*是有权访问它的代码的范围。 这由访问修饰符 (如[公共](../../../../visual-basic/language-reference/modifiers/public.md)或[专用](../../../../visual-basic/language-reference/modifiers/private.md)) 中使用的`Dim`语句。 有关详细信息，请参阅[访问 Visual Basic 中的级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
-## <a name="see-also"></a>请参阅  
- [如何：创建新变量](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [如何：将数据移入和移出变量](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)  
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
- [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Infer 语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+## <a name="see-also"></a>请参阅
+- [如何：创建新的变量](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [如何：将数据移入和移出变量](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
+- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
+- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
+- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
+- [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Option Infer 语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 9fe2f01b-f7d8-49a8-a185-d4472b9976c0
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d8c65be9135049be81694c3aa375df0b27641bf2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 328adccc2224d27230a06e8d98a691d12c5be218
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539046"
 ---
 # <a name="raise-events-from-a-ui-automation-provider"></a>从 UI 自动化提供程序中引发事件
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题包含演示如何从 UI 自动化提供程序中引发事件的代码示例。  
   
@@ -27,5 +27,5 @@ ms.locfileid: "47398964"
   
  [!code-csharp[UIAProvider_snip#150](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#150)]  
   
-## <a name="see-also"></a>请参阅  
- [UI 自动化提供程序概述](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+## <a name="see-also"></a>请参阅
+- [UI 自动化提供程序概述](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)

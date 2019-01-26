@@ -4,38 +4,38 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: 082d72250f147ebcdc83ec941ce4b1019b1bc4af
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 045d5649ae7f59087eacd035d7be09d0024b6fd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841425"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725657"
 ---
 # <a name="ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt;
 为特定于对等通道的 TCP 消息定义绑定。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<netPeerTcpBinding>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<netPeerBinding>  
-    <binding name="string"  
-         closeTimeout="TimeSpan"  
-         openTimeout="TimeSpan"   
-         receiveTimeout="TimeSpan"  
-         sendTimeout="TimeSpan"  
-         listenIPAddress="String"  
-          maxBufferPoolSize="integer"  
-         maxReceiveMessageSize="Integer"   
-         port="Integer"  
-         <security mode="None/Transport/Message/TransportWithMessageCredential">  
-            <transport credentialType="Certificate/Password" />  
-        </security>  
-    </binding>  
-</netPeerBinding>  
+<netPeerBinding>
+  <binding name="string"
+           closeTimeout="TimeSpan"
+           openTimeout="TimeSpan"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan"
+           listenIPAddress="String"
+           maxBufferPoolSize="integer"
+           maxReceiveMessageSize="Integer"
+           port="Integer">
+    <security mode="None/Transport/Message/TransportWithMessageCredential">
+      <transport credentialType="Certificate/Password" />
+    </security>
+  </binding>
+</netPeerBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -67,7 +67,7 @@ ms.locfileid: "48841425"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
  此绑定为使用 TCP 上的对等传输创建对等应用程序或多方应用程序提供支持。 每个对等节点均可承载使用此绑定类型定义的多个对等通道。  
@@ -76,37 +76,36 @@ ms.locfileid: "48841425"
  下面的示例演示如何使用 NetPeerTcpBinding 绑定，该绑定使用对等通道提供多方通信。 使用此绑定的详细方案，请参阅[Net 的对等 TCP](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)。  
   
 ```xml  
-<configuration>  
-<system.ServiceModel>  
-<bindings>  
-<netPeerBinding>  
-    <binding   
-         closeTimeout="00:00:10"  
-         openTimeout="00:00:20"   
-         receiveTimeout="00:00:30"  
-         sendTimeout="00:00:40"  
-         maxBufferSize="1001"  
-         maxConnections="123"   
-         maxReceiveMessageSize="1000">  
-        <reliableSession ordered="false"  
-            inactivityTimeout="00:02:00"  
-            enabled="true" />  
-        <security mode="TransportWithMessageCredential">  
-            <message clientCredentialType="CardSpace" />  
-        </security>  
-    </binding>  
-</netPeerBinding>  
-</bindings>  
-</system.ServiceModel>  
-</configuration>  
+<configuration>
+  <system.ServiceModel>
+    <bindings>
+      <netPeerBinding>
+        <binding closeTimeout="00:00:10"
+                 openTimeout="00:00:20"
+                 receiveTimeout="00:00:30"
+                 sendTimeout="00:00:40"
+                 maxBufferSize="1001"
+                 maxConnections="123"
+                 maxReceiveMessageSize="1000">
+          <reliableSession ordered="false"
+                           inactivityTimeout="00:02:00"
+                           enabled="true" />
+          <security mode="TransportWithMessageCredential">
+            <message clientCredentialType="CardSpace" />
+          </security>
+        </binding>
+      </netPeerBinding>
+    </bindings>
+  </system.ServiceModel>
+</configuration>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.NetPeerTcpBinding>  
- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)  
- [网络对等 TCP](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)  
- [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.NetPeerTcpBinding>
+- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [网络对等 TCP](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)
+- [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)

@@ -2,17 +2,17 @@
 title: ADO.NET 实体框架中的连接字符串
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497454"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET 实体框架中的连接字符串
 连接字符串包含作为参数从数据提供程序传递到数据源的初始化信息。 其语法取决于数据提供程序，并且会在试图打开连接的过程中对连接字符串进行分析。 实体框架使用的连接字符串包含用于连接到支持实体框架的基础 ADO.NET 数据提供程序的信息。 它们还包含有关所需的模型和映射文件的信息。  
   
- 在访问模型，映射元数据以及连接到数据源时，EntityClient 提供程序将使用该连接字符串。 连接字符串可通过 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 属性访问或设置。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 类可用于以编程方式构造或访问连接字符串中的参数。 有关详细信息，请参阅[如何： 生成 EntityConnection 连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。  
+ 在访问模型，映射元数据以及连接到数据源时，EntityClient 提供程序将使用该连接字符串。 连接字符串可通过 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 属性访问或设置。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 类可用于以编程方式构造或访问连接字符串中的参数。 有关详细信息，请参阅[如何：生成 EntityConnection 连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。  
   
  [Entity Data Model 工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)生成应用程序的配置文件中存储的连接字符串。 在创建对象查询时，<xref:System.Data.Objects.ObjectContext> 将自动检索此连接信息。 可通过 <xref:System.Data.EntityClient.EntityConnection> 属性访问 <xref:System.Data.Objects.ObjectContext> 实例所使用的 <xref:System.Data.Objects.ObjectContext.Connection%2A>。 有关详细信息，请参阅[管理连接和事务](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
 
@@ -48,7 +48,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |选项|描述|  
 |-|-|  
-|`assemblyFullName`|包含嵌入资源的程序集的完整名称。 该名称包含简单名称、版本名称、支持的区域性以及公钥，如下所示：<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 资源可嵌入到应用程序能够访问的任何程序集中。<br /><br /> 如果指定通配符 (\*) 为`assemblyFullName`，Entity Framework 运行时将搜索以下位置，按此顺序中的资源：<br /><br /> 1.调用程序集。<br />2.引用的程序集。<br />3.应用程序的 bin 目录中的程序集。<br /><br /> 如果文件不在这些位置，则引发异常。 **注意：** 时使用通配符 （*），实体框架必须仔细查看具有正确名称的资源的所有程序集。 若要提高性能，请指定程序集名称而不使用通配符。|  
+|`assemblyFullName`|包含嵌入资源的程序集的完整名称。 该名称包含简单名称、版本名称、支持的区域性以及公钥，如下所示：<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 资源可嵌入到应用程序能够访问的任何程序集中。<br /><br /> 如果指定通配符 (\*) 为`assemblyFullName`，Entity Framework 运行时将搜索以下位置，按此顺序中的资源：<br /><br /> 1.调用程序集。<br />2.引用的程序集。<br />3.应用程序的 bin 目录中的程序集。<br /><br /> 如果文件不在这些位置，则引发异常。 **注意：** 如果使用通配符 (*)，则实体框架将在所有程序集中查找具有正确名称的资源。 若要提高性能，请指定程序集名称而不使用通配符。|  
 |`resourceName`|包含的资源的名称，如 AdvendtureWorksModel.csdl。 元数据服务仅查找具有以下任一扩展名的文件或资源：.csdl、.ssdl、或 .msl。 如果未指定 `resourceName`，则将加载所有元数据资源。 资源应在程序集中具有唯一的名称。 如果在程序集中的不同目录中为多个文件定义了相同的名称，则 `resourceName` 必须在资源名称前面包含文件夹结构，例如 FolderName.FileName.csdl。<br /><br /> 如果为 `resourceName` 指定通配符 (*)，则无需指定 `assemblyFullName`。|  
   
 > [!NOTE]
@@ -108,8 +108,8 @@ Metadata=.\
   
  对 `DataDirectory` 替代字符串和 ~ 运算符的解析不是递归进行的。 例如，如果 `DataDirectory` 包含 `~` 字符，则引发异常。 这样可以避免无穷递归。  
   
-## <a name="see-also"></a>请参阅  
- [使用数据提供程序](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
- [部署注意事项](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [管理连接和事务](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
- [连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)
+## <a name="see-also"></a>请参阅
+- [使用数据提供程序](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [部署注意事项](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [管理连接和事务](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)

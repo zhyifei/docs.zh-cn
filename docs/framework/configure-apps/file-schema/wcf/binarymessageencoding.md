@@ -2,29 +2,29 @@
 title: '&lt;binaryMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: b3b359c9d3e80186e0296e6fbb0ba5683210f2a6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7753340be01c407157d9a0576f31db4245c0b4f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672826"
 ---
 # <a name="ltbinarymessageencodinggt"></a>&lt;binaryMessageEncoding&gt;
 定义一个在网络上以二进制形式对 Windows Communication Foundation (WCF) 消息进行编码的二进制消息编码器。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
+\<binding>  
 \<binaryMessageEncoding>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<binaryMessageEncoding   
-      maxReadPoolSize="Integer"  
-   maxSessionSize="Integer"   
-   maxWritePoolSize="Integer"   messageVersion="Soap11Addressing10/Soap12Addressing10" />  
+<binaryMessageEncoding maxReadPoolSize="Integer"
+                       maxSessionSize="Integer"
+                       maxWritePoolSize="Integer"
+                       messageVersion="Soap11Addressing10/Soap12Addressing10" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -49,29 +49,29 @@ ms.locfileid: "43510241"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
- 编码是将消息转换为一个字节序列的过程。 解码是反向过程。 Windows Communication Foundation (WCF) 包含三种类型的 SOAP 消息编码：文本、二进制和消息传输优化机制 (MTOM)。  
+ 编码是将消息转换为一个字节序列的过程。 解码是反向过程。 Windows Communication Foundation (WCF) 包含三种类型的 SOAP 消息编码：文本、 二进制和消息传输优化机制 (MTOM)。  
   
  `binaryMessageEncoding` 元素为 XML 指定 .NET 二进制格式，且包含可用于指定要使用的字符编码以及 SOAP 和 WS-Addressing 版本的选项。 二进制消息编码器在网络上以二进制形式对 Windows Communication Foundation (WCF) 消息进行编码。 虽然这种编码有助于非常快速地传输消息，但是丢失了基于 WS-* 标准的互操作性。  
   
 ## <a name="example"></a>示例  
   
 ```xml  
-<binaryMessageEncoding maxReadPoolSize="211"  
-   maxWritePoolSize="2132"  
-   maxSessionSize="3141" />  
+<binaryMessageEncoding maxReadPoolSize="211"
+                       maxWritePoolSize="2132"
+                       maxSessionSize="3141" />
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
- [消息编码](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [选择消息编码器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
+- [消息编码](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [选择消息编码器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

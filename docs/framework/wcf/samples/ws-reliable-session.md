@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: ec9163eded7f77053b94b7cb0ff0995dca575612
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 660fb9a7f60bc95a5039cdf3bad098c330ac969e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682675"
 ---
 # <a name="ws-reliable-session"></a>WS 可靠会话
 此示例演示可靠会话的用法。 可靠会话为可靠消息传递和会话提供支持。 可靠消息传递在失败时会重新尝试通信，并允许指定传递保证（如消息按顺序抵达）。 会话在调用之间将保持客户端的状态。 此示例实现了用来保持客户端状态的会话，并指定了按顺序传递保证。  

@@ -2,12 +2,12 @@
 title: 路由简介
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: e540e084305aee51d6820cc9ae43f7791d5c07d6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d13a5cc86b7f0bbd67e1ef3ab6094bfb004972c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842758"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563764"
 ---
 # <a name="routing-introduction"></a>路由简介
 路由服务提供的泛型可插入 SOAP 中介能够根据消息内容路由消息。 使用路由服务，您可以创建复杂的路由逻辑，以便实现服务聚合、服务版本管理、优先级路由和多播路由等方案。 路由服务还提供了错误处理功能，使您可以设置备份终结点的列表。如果将消息发送到主目标终结点时失败，则会发送到这些备份终结点。  
@@ -401,7 +401,7 @@ using (ServiceHost serviceHost =
   
  要将 Windows 凭据模拟用于路由服务，您需要同时配置凭据和服务。 客户端凭据对象（<xref:System.ServiceModel.Security.WindowsClientCredential>，可从 <xref:System.ServiceModel.ChannelFactory> 访问）定义了一个 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 属性，此属性必须设置为允许模拟。 最后，您需要在服务上配置 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 行为，以便将 `ImpersonateCallerForAllOperations` 设置为 `true`。 路由服务使用此标志来决定是否创建客户端，以便转发启用模拟的消息。  
   
-## <a name="see-also"></a>请参阅  
- [消息筛选器](message-filters.md)  
- [路由协定](routing-contracts.md)  
- [选择筛选器](choosing-a-filter.md)
+## <a name="see-also"></a>请参阅
+- [消息筛选器](message-filters.md)
+- [路由协定](routing-contracts.md)
+- [选择筛选器](choosing-a-filter.md)

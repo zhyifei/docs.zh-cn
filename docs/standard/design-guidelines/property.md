@@ -7,12 +7,12 @@ helpviewer_keywords:
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
 author: KrzysztofCwalina
-ms.openlocfilehash: 1d119b48f0524b3e997aa2cb9ea2cbbd855afdf0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e4ed4fd39a9ebd63b9d5dbff38dc15647d65934f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708982"
 ---
 # <a name="property-design"></a>属性设计
 虽然属性在技术上与方法非常相似，但它们的使用场景却截然不同。 属性应被视为聪明的字段。 它们兼具字段的调用语法和方法的灵活性。  
@@ -46,13 +46,13 @@ ms.locfileid: "53131451"
   
  **✓ 考虑**使用索引器以提供对存储在内部数组中的数据访问。  
   
- **✓ 考虑**为表示项目集合的类型提供索引器。  
+ **✓ 考虑** 提供索引器上表示的项的集合的类型。  
   
- **X 避免**使用带有一个以上参数的索引属性。  
+ **X 避免** 使用索引与多个参数的属性。  
   
  如果设计需要多个参数，请重新考虑该属性是否真正代表逻辑集合的访问者。 如果不是，请改用方法。 考虑使用 `Get` 或 `Set` 开头的方法名称。  
   
- **X 避免** 使用具有 <xref:System.Int32?displayProperty=nameWithType>、<xref:System.Int64?displayProperty=nameWithType>、<xref:System.String?displayProperty=nameWithType>、<xref:System.Object?displayProperty=nameWithType> 以外参数类型的索引器，或枚举。  
+ **X 避免** 具有以外的其他参数类型的索引器<xref:System.Int32?displayProperty=nameWithType>， <xref:System.Int64?displayProperty=nameWithType>， <xref:System.String?displayProperty=nameWithType>， <xref:System.Object?displayProperty=nameWithType>，或枚举。  
   
  如果设计需要其他类型的参数，请仔细重新评估 API 是否真正代表逻辑集合的访问者。 如果不是，请使用方法。 考虑使用 `Get` 或 `Set` 开头的方法名称  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53131451"
   
  **X 切忌**提供索引器和在语义上等效的方法。    
   
- **X 切忌**在一种类型中提供多个重载索引器系列。  
+ **X 切忌** 提供多个系列中一种类型的重载索引器。  
   
  此准则由 C# 编译器强制执行。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "53131451"
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [成员设计准则](../../../docs/standard/design-guidelines/member.md)  
+- [成员设计准则](../../../docs/standard/design-guidelines/member.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

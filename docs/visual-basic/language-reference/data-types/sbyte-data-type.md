@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: c353aa8c5ac1d1912bc303f8f741ff0911cdf021
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1da5de4971928ca23a23c4dcfc5f338c4d7a3875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719568"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte 数据类型 (Visual Basic)
 
@@ -64,7 +64,7 @@ Dim number As SByte = &H_F9
 
 ## <a name="programming-tips"></a>编程提示
   
--   **CLS 遵从性。** `SByte`数据类型不属于[公共语言规范](http://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。
+-   **CLS 遵从性。** `SByte`数据类型不属于[公共语言规范](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。
 
 -   **扩大转换。** `SByte`数据类型加宽到`Short`， `Integer`， `Long`， `Decimal`， `Single`，和`Double`。 这意味着可以将转换`SByte`而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。
   
@@ -74,11 +74,11 @@ Dim number As SByte = &H_F9
   
 ## <a name="see-also"></a>请参阅
 
- <xref:System.SByte?displayProperty=nameWithType>  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.SByte?displayProperty=nameWithType>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

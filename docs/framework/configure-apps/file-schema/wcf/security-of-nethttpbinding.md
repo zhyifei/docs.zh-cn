@@ -2,34 +2,32 @@
 title: '&lt;netHttpBinding 的 &gt;security&lt;'
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: 1c8a96759625da858d1491b7af59bf32e7e42a9e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7273aaf187882a6f72bd901e03581524e919770f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584922"
 ---
 # <a name="ltsecuritygt-of-ltnethttpbinding"></a>&lt;netHttpBinding 的 &gt;security&lt;
 定义的安全功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
   
 \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<netHttpBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<security mode="Message/None/Transport/TransportWithCredential">  
-   <transport  
-      clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
-      proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-      realm="string" />  
-   <message  
-      algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-            clientCredentialType="Certificate/IssuedToken/None/UserName/Windows" />  
-</security>  
+<security mode="Message/None/Transport/TransportWithCredential">
+  <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+             proxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+             realm="string" />
+  <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+           clientCredentialType="Certificate/IssuedToken/None/UserName/Windows" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -67,12 +65,12 @@ ms.locfileid: "50193846"
 ## <a name="remarks"></a>备注  
  默认情况下，不会对 SOAP 消息进行保护，也不会对客户端进行身份验证。 使用此元素，您可以配置 `netHttpBinding` 元素的其他安全设置。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.NetHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetHttpBindingElement.Security%2A>    
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [选择凭据类型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.NetHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetHttpBindingElement.Security%2A>
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [选择凭据类型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

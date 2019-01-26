@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e29c9c246649229900beba2fcc9ab482071ae46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f809395de68b596f769f9396da8668bf296b1aa2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675036"
 ---
 # <a name="createalink-function"></a>CreateALink 函数
-创建的程序集链接器实例并设置为指定接口的指针。  
+创建程序集链接器的实例并设置为指定接口的指针。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,10 +41,10 @@ HRESULT CreateALink (
 |参数|描述|  
 |---------------|-----------------|  
 |`riid`|一个程序集链接器接口的物理名称。|  
-|`ppInterface`|在成功完成，包含的指针的位置`riid`接口。|  
+|`ppInterface`|在成功完成，包含一个指向的位置`riid`接口。|  
   
 ## <a name="requirements"></a>要求  
  **库**: alink.dll  
   
-## <a name="see-also"></a>请参阅  
- [Al.exe（程序集链接器）](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>请参阅
+- [Al.exe（程序集链接器）](../../../../docs/framework/tools/al-exe-assembly-linker.md)

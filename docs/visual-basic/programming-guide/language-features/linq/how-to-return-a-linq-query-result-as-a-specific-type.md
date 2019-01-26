@@ -1,5 +1,5 @@
 ---
-title: 如何：以特定类型返回 LINQ 查询结果 (Visual Basic)
+title: 如何：LINQ 查询结果返回为特定的类型 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], specific type returned
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 720660153cb357c11168ab45ebf8343559faf82a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7d281de2005f1ee9227b3e3496125c8af9acba35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500611"
 ---
-# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>如何：以特定类型返回 LINQ 查询结果 (Visual Basic)
+# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>如何：LINQ 查询结果返回为特定的类型 (Visual Basic)
 语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。 默认情况下，LINQ 查询以匿名类型返回的对象的列表。 此外可以指定一个查询使用返回特定类型的列表`Select`子句。  
   
  下面的示例演示如何创建新应用程序对 SQL Server 数据库执行查询并将结果投影为特定的命名类型。 有关详细信息，请参阅[匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)并[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)。  
@@ -75,8 +75,8 @@ ms.locfileid: "43514280"
   
 5.  按 F5 以运行您的项目并查看结果。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查询](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>请参阅
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [查询](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)

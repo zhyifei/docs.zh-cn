@@ -1,5 +1,5 @@
 ---
-title: 如何：在字符串中放置引号（Windows 窗体）
+title: 如何：在字符串 （Windows 窗体） 中放置引号
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 7fcc2e8692880f1e5c2b8df807cf7943a5575c56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24d7ea17384a912fda454bfb1136696ab18d9843
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651638"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>如何：在字符串中放置引号（Windows 窗体）
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>如何：在字符串 （Windows 窗体） 中放置引号
 有时可能需要将引号（“”）放入文本字符串中。 例如：  
   
  她说：“该好好款待你了！”  
   
- 作为替代方法，你可以使用<xref:Microsoft.VisualBasic.ControlChars.Quote>字段为常数。  
+ 或者，还可以使用<xref:Microsoft.VisualBasic.ControlChars.Quote>字段作为常数。  
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>在代码中的字符串内放置引号  
   
-1.  在 Visual Basic 中，将作为一个嵌入的引号插入行中的两个引号引起来。 在 Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]，插入此转义序列\\"作为一个嵌入的引号。 例如，若要创建前面提到的字符串，请使用下面的代码。  
+1.  在 Visual Basic 中，将作为嵌入引号插入行中的两个引号。 视觉对象中C#并[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]，插入转义序列\\"作为嵌入的引号。 例如，若要创建前面提到的字符串，请使用下面的代码。  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -48,9 +48,9 @@ ms.locfileid: "33534828"
        }  
     ```  
   
-     -或-  
+     或  
   
-2.  插入 ASCII 字符或 Unicode 字符表示引号。 在 Visual Basic 中，使用 ASCII 字符 (34)。 在 Visual C# 中，使用 Unicode 字符 (\u0022)。  
+2.  插入 ASCII 字符或 Unicode 字符表示引号。 在 Visual Basic 中，使用 ASCII 字符 (34)。 视觉对象中C#，使用 Unicode 字符 (\u0022)。  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -67,7 +67,7 @@ ms.locfileid: "33534828"
     > [!NOTE]
     >  在本示例中，不能使用 \u0022，因为不能使用指定基本字符集中字符的通用字符名。 否则，将产生 C3851。 有关详细信息，请参阅[编译器错误 C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851)。  
   
-     -或-  
+     或  
   
 3.  还可以为该字符定义一个常数，然后在需要时使用。  
   
@@ -88,13 +88,13 @@ ms.locfileid: "33534828"
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.TextBox>  
- <xref:Microsoft.VisualBasic.ControlChars.Quote>  
- [TextBox 控件概述](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [如何：在 Windows 窗体 TextBox 控件中控制插入点](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- [如何：使用 Windows 窗体 TextBox 控件创建密码文本框](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- [如何：创建只读文本框](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [如何：在 Windows 窗体 TextBox 控件中选择文本](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- [如何：在 Windows 窗体 TextBox 控件中查看多个行](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [TextBox 控件](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.TextBox>
+- <xref:Microsoft.VisualBasic.ControlChars.Quote>
+- [TextBox 控件概述](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+- [如何：控制 Windows 窗体 TextBox 控件中的插入点](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [如何：使用 Windows 窗体 TextBox 控件创建密码文本框](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [如何：创建只读文本框](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
+- [如何：在 Windows 窗体 TextBox 控件中选择文本](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [如何：查看 Windows 窗体 TextBox 控件中的多个行](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox 控件](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

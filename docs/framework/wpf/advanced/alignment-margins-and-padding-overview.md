@@ -10,12 +10,12 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: 44c8814362ebb490d5e7676496309b2124782b78
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c716c07fabe5b93f13c86f8d347e4fd4d058145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800883"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569948"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Alignment、Margin 和 Padding 概述
 <xref:System.Windows.FrameworkElement>类公开多个用于精确定位子元素的属性。 本主题讨论了 4 个最重要的属性： <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>， <xref:System.Windows.Controls.Border.Padding%2A>，和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>。 了解这些属性的作用非常重要，因为这些属性是控制元素在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中的位置的基础。  
@@ -139,13 +139,13 @@ ms.locfileid: "43800883"
 ## <a name="whats-next"></a>下一步  
  定义的位置属性<xref:System.Windows.FrameworkElement>类可以精确地控制中的元素布局[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 至此你已了解多种方法，可使用这些方法更好地通过 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 来定位元素。  
   
- 我们还提供了一些附加资源，这些资源更详细地介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局。 [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)主题包含有关的各种详细信息<xref:System.Windows.Controls.Panel>元素。 本主题[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)引入了使用布局元素来定位组件并将其操作绑定到数据源的高级的技术。  
+ 我们还提供了一些附加资源，这些资源更详细地介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局。 [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)主题包含有关的各种详细信息<xref:System.Windows.Controls.Panel>元素。 本主题[演练：我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)引入了使用布局元素来定位组件并将其操作绑定到数据源的高级的技术。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.Margin%2A>  
- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [布局](../../../../docs/framework/wpf/advanced/layout.md)  
- [WPF 布局库示例](https://go.microsoft.com/fwlink/?LinkID=160054)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.Margin%2A>
+- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [布局](../../../../docs/framework/wpf/advanced/layout.md)
+- [WPF 布局库示例](https://go.microsoft.com/fwlink/?LinkID=160054)

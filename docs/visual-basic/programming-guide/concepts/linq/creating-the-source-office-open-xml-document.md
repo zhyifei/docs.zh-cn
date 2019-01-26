@@ -2,12 +2,12 @@
 title: 创建源 Office Open XML 文档 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 3db168b2c2971c3b44e54aefc24a9e08edb232d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 124f22e3a4b3e43dd454aca9389691a89debcf6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617437"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>创建源 Office Open XML 文档 (Visual Basic)
 本主题演示如何创建本教程其他示例中使用的 Office Open XML WordprocessingML 文档。 如果您按照这些说明操作，您的输出结果将与每个示例中提供的输出相匹配。  
@@ -53,5 +53,5 @@ ms.locfileid: "33640438"
     > [!NOTE]
     >  如果使用的是 Microsoft Word 2003，请在“保存类型”下拉列表中选择“Word 2007 文档”。  
   
-## <a name="see-also"></a>请参阅  
- [教程： 操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>请参阅
+- [教程：操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a94f9c650927aee0f120ee3c0b1199b6c977ef0e
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 50ea2b1fefe5c41f0c67ab8c12362f19ea125b5b
+ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53776727"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54186210"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 部署指南（针对管理员）
 本文分步说明系统管理员可以如何使用 Microsoft System Center Configuration Manager 在网络中部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系统依赖项。 本文假定所有目标客户端计算机都满足 .NET Framework 的最低要求。 有关安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的软件和硬件要求列表，请参阅[系统需求](../../../docs/framework/get-started/system-requirements.md)。  
@@ -254,10 +254,11 @@ ms.locfileid: "53776727"
   
  其他错误代码：  
   
--   [Windows Installer 错误代码](/windows/desktop/msi/error-codes)  
-  
--   [Windows 更新代理结果代码](/security-updates/WindowsUpdateServices/18127055)  
-  
-## <a name="see-also"></a>请参阅  
-- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+-   [Windows Installer 错误代码](/windows/desktop/msi/error-codes)
+
+-   [Windows 更新代理结果代码](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
+
+## <a name="see-also"></a>请参阅
+
+- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [系统要求](../../../docs/framework/get-started/system-requirements.md)

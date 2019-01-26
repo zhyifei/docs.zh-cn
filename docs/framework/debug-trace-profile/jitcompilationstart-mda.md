@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d73c299231a588a5ae0b252dd2b5a0a834685f2d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cd4d1be3ec3c64c7c6669a2c85ba6bf68db6da68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536758"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 激活 `jitCompilationStart` 托管调试助手 (MDA) 以报告实时 (MDA) 编译器何时开始编译函数。  
@@ -157,7 +157,7 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)

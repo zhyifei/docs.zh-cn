@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d9a8f9aa910054a4541e4ff8c1f7cad63077ba8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: da25055917743481f5a8314023ed94d552fe49ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526413"
 ---
 # <a name="iobjecthandleunwrap-method"></a>IObjectHandle::Unwrap 方法
-解包中间接寻址的封送按值对象。  
+解包从间接寻址的按值封送的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,16 +37,16 @@ HRESULT Unwrap (
   
 #### <a name="parameters"></a>参数  
  `ppv`  
- [out]指向要为解包的对象的指针。  
+ [out]指向要解包的对象的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- 
+## <a name="see-also"></a>请参阅
+

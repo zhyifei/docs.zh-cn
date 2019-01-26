@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: ab9eacc3fb3796139d8ed8382146a4a6c2b28a97
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 25a868afded83f28f5f56a9f19e050bbd32b24c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189496"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490825"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>扩展索引器属性 (Visual Basic)
 提供对集合中各个元素的访问。  
@@ -29,10 +29,10 @@ object(index)
   
 |术语|定义|  
 |---|---|  
-|`object`|必须的。 可查询的集合。 也就是说，集合实现<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。|  
-|(|必须的。 表示索引器属性的开头。|  
-|`index`|必须的。 一个整数表达式，指定集合的元素的从零开始的位置。|  
-|)|必须的。 表示索引器属性的结尾。|  
+|`object`|必需。 可查询的集合。 也就是说，集合实现<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。|  
+|(|必需。 表示索引器属性的开头。|  
+|`index`|必需。 一个整数表达式，指定集合的元素的从零开始的位置。|  
+|)|必需。 表示索引器属性的结尾。|  
   
 ## <a name="return-value"></a>返回值  
  从集合中指定的位置的对象或`Nothing`如果索引超出范围。  
@@ -55,9 +55,9 @@ object(index)
   
  `Second phone number: 425-555-0145`  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Linq.XElement>  
- [XML 轴属性](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML 文本](../../../visual-basic/language-reference/xml-literals/index.md)  
- [在 Visual Basic 中创建 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML 值属性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Xml.Linq.XElement>
+- [XML 轴属性](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML 文本](../../../visual-basic/language-reference/xml-literals/index.md)
+- [在 Visual Basic 中创建 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML 值属性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

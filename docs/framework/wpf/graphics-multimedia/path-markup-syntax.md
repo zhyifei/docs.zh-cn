@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671260"
 ---
 # <a name="path-markup-syntax"></a>路径标记语法
 路径中讨论[形状和基本绘图中 WPF 概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)和[几何概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)，但是，本主题详细介绍了功能强大且复杂的微型语言，可用于指定路径使用更简洁的几何图形[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -40,20 +40,20 @@ ms.locfileid: "45591927"
 ### <a name="a-note-about-white-space"></a>有关空格的注意事项  
  为简洁起见，随后的语法部分中显示一个空格，但在显示一个空格的地方，多个空格也可以接受。  
   
- 两个数字实际上无需分隔逗号或空格，但这仅可以生成的字符串不明确时。 例如，`2..3`是实际的两个数字:"2"。 和“.3”。 同样，`2-3`是"2"和"-3"。 命令前面或后面也无需加空格。  
+ 两个数字实际上无需分隔逗号或空格，但这仅可以生成的字符串不明确时。 例如，`2..3`是实际的两个数字："2." 和“.3”。 同样，`2-3`是"2"和"-3"。 命令前面或后面也无需加空格。  
   
 ### <a name="syntax"></a>语法  
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]属性使用语法<xref:System.Windows.Media.StreamGeometry>组成的可选<xref:System.Windows.Media.FillRule>值和一个或多个图说明。  
   
 |StreamGeometry XAML 属性用法|  
 |-----------------------------------------|  
-|`<` *对象**属性* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]属性使用语法<xref:System.Windows.Media.PathFigureCollection>由一个或多个图形说明组成。  
   
 |PathFigureCollection XAML Attribute Usage|  
 |-----------------------------------------------|  
-|`<` *对象**属性* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
   
 |术语|描述|  
 |----------|-----------------|  
@@ -224,11 +224,11 @@ ms.locfileid: "45591927"
   
  也可使用科学计数法。 例如，`+1.e17`是有效的值。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.StreamGeometry>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.PathFigureCollection>  
- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.StreamGeometry>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.PathFigureCollection>
+- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

@@ -2,31 +2,30 @@
 title: '&lt;wsHttpBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-ms.openlocfilehash: db0825d0abe05564d040903304d8654fa75ed0ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c114c75391e3c2e56be6b711ff04eaefb3fd05fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651014"
 ---
 # <a name="ltmessagegt-of-ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt; 的 &lt;message&gt;
 定义的消息级安全性设置[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<wsHttpBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
 \<message>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<message   
-   algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-   clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"  
-   establishSecurityContext="Boolean"  
-   negotiateServiceCredential="Boolean" />  
+<message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+         clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"
+         establishSecurityContext="Boolean"
+         negotiateServiceCredential="Boolean" />
 ```  
   
 ## <a name="type"></a>类型  
@@ -84,13 +83,13 @@ ms.locfileid: "53126219"
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|定义的安全设置[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>  
- <xref:System.ServiceModel.WSHttpSecurity.Message%2A>  
- <xref:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement>  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>
+- <xref:System.ServiceModel.WSHttpSecurity.Message%2A>
+- <xref:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement>
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

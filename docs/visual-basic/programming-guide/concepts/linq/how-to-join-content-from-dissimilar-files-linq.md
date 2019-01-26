@@ -1,15 +1,15 @@
 ---
-title: 如何： 联接不同文件 (LINQ) (Visual Basic) 的内容
+title: 如何：联接不同文件 (LINQ) (Visual Basic 中) 的内容
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: a3dbfc6593d838af0285d8dab73ceecf1b0340f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655460"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>如何： 联接不同文件 (LINQ) (Visual Basic) 的内容
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>如何：联接不同文件 (LINQ) (Visual Basic 中) 的内容
 
 本示例演示如何联接两个逗号分隔文件中的数据，这两个文件共享一个用作匹配键的公共值。 如果需要合并来自两个电子表格的数据，或者从一个电子表格和具有另一种格式的文件合并到一个新文件时，此技术很有用。 可以修改此示例以用于任何类型的结构化文本。  
   
@@ -123,13 +123,13 @@ End Class
 
 ## <a name="compiling-the-code"></a>编译代码
 
-创建和编译的项目是面向以下选项之一：
+创建并编译面向下列选项之一的项目：
 
-- .NET framework 版本 3.5 具有对 System.Core.dll 的引用。
-- .NET framework 版本 4.0 或更高版本。
-- .NET core 版本 1.0 或更高版本。
+- .NET Framework 版本 3.5，含对 System.Core.dll 的引用。
+- .NET Framework 版本 4.0或更高版本。
+- .NET Core 版本 1.0 或更高版本。
   
 ## <a name="see-also"></a>请参阅
 
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

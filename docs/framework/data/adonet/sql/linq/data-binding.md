@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: 440a7eb5af425a3cea46de142e4a7d41f95559c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f967f75627debfd000a0d417c426d40109c20d59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666514"
 ---
 # <a name="data-binding"></a>数据绑定
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持绑定到公共控件，如网格控件。 具体而言，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 定义用于绑定到数据网格和处理主-从绑定的基本模式，这两者都与显示和更新有关。  
   
 ## <a name="underlying-principle"></a>基本原理  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查询转换成 SQL 以便在数据库上执行。 所得结果为强类型化的 `IEnumerable`。 因为这些对象是一般的公共语言运行时 (CLR) 对象，可以使用一般的对象数据绑定来显示结果。 另一方面，更改操作（插入、更新和删除）则需要额外的步骤。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查询转换成 SQL 以便在数据库上执行。 所得结果为强类型化的 `IEnumerable`。 由于这些对象是一般的公共语言运行时 (CLR) 对象，可以使用普通对象数据绑定来显示结果。 另一方面，更改操作（插入、更新和删除）则需要额外的步骤。  
   
 ## <a name="operation"></a>操作  
- 隐式绑定到 Windows 窗体控件是通过实现 <xref:System.ComponentModel.IListSource> 完成的。 数据源泛型<xref:System.Data.Linq.Table%601>(`Table<T>`在 C# 或`Table(Of T)`在 Visual Basic 中) 和泛型`DataQuery`已经更新，以实现<xref:System.ComponentModel.IListSource>。 用户界面 (UI) 数据绑定引擎（Windows 窗体和 Windows Presentation Foundation）都会测试其数据源是否实现了 <xref:System.ComponentModel.IListSource>。 因此，如果将查询的直接影响结果写入控件的数据源，则会隐式调用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 集合生成，如下例中所示：  
+ 隐式绑定到 Windows 窗体控件是通过实现 <xref:System.ComponentModel.IListSource> 完成的。 数据源泛型<xref:System.Data.Linq.Table%601>(`Table<T>`中C#或`Table(Of T)`Visual Basic 中) 和泛型`DataQuery`已更新，以实现<xref:System.ComponentModel.IListSource>。 用户界面 (UI) 数据绑定引擎（Windows 窗体和 Windows Presentation Foundation）都会测试其数据源是否实现了 <xref:System.ComponentModel.IListSource>。 因此，如果将查询的直接影响结果写入控件的数据源，则会隐式调用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 集合生成，如下例中所示：  
   
  [!code-csharp[DLinqDataBinding#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDataBinding/cs/Program.cs#1)]
  [!code-vb[DLinqDataBinding#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDataBinding/vb/Module1.vb#1)]  
@@ -40,7 +40,7 @@ ms.locfileid: "33365165"
   
     -   如果 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 从 <xref:System.Data.Linq.Table%601> 中找到基础 <xref:System.Linq.IQueryable%601>，则源允许进行编辑，这种情形与第一项中的情形相同。  
   
-    -   如果[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]找不到基础<xref:System.Data.Linq.Table%601>，源不允许进行编辑 (例如， `groupby`)。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 浏览相应的查询以填充泛型`SortableBindingList`，是一个简单<xref:System.ComponentModel.BindingList%601>，实现根据给定属性对 T 实体进行排序的功能。  
+    -   如果[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]找不到基础<xref:System.Data.Linq.Table%601>，源不允许进行编辑 (例如， `groupby`)。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 浏览相应的查询以填充泛型`SortableBindingList`，这是一个简单<xref:System.ComponentModel.BindingList%601>，实现根据给定属性对 T 实体进行排序的功能。  
   
 ## <a name="specialized-collections"></a>专用集合  
  对于本文档前面部分介绍的许多功能而言，已将 <xref:System.ComponentModel.BindingList%601> 专门用于某些不同的类。 这些类为泛型 `SortableBindingList` 和泛型 `DataBindingList`。 这两种类都声明为内部类。  
@@ -73,7 +73,7 @@ ms.locfileid: "33365165"
   
  当使用 System.Windows.Forms.BindingSource 并将绑定 EntitySet\<TEntity > 到 system.windows.forms.bindingsource.datasource 时，必须调用 EntitySet\<Tentity >。GetNewBindingList 来更新 BindingSource.List。  
   
- 如果使用 System.Windows.Forms.BindingSource，设置 BindingSource.DataMember 属性并将 BindingSource.DataSource 设置为具有名为中公开 EntitySet BindingSource.DataMember 的属性的类\<TEntity >，你无需调用 EntitySet\<Tentity >。GetNewBindingList 来更新 BindingSource.List，但将失去排序功能。  
+ 如果使用 System.Windows.Forms.BindingSource，设置 BindingSource.DataMember 属性并将 BindingSource.DataSource 设置为具有一个名为 bindingsource.datamember 公开 EntitySet 属性的类，\<TEntity >，您无需调用 EntitySet\<Tentity >。GetNewBindingList 来更新 BindingSource.List，但将失去排序功能。  
   
 ## <a name="caching"></a>缓存  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询实现 <xref:System.ComponentModel.IListSource.GetList%2A>。 当 Windows 窗体 BindingSource 类遇到此接口时，它会为单个连接调用 GetList() 三次。 为避免出现这种情况，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 为每个实例实现一个缓存，以存储并始终返回生成的同一个集合。  
@@ -100,11 +100,11 @@ ms.locfileid: "33365165"
   
 -   您必须使用属性；仅使用字段是不够的。 Windows 窗体需要这种用法。  
   
--   默认情况下， `image`， `varbinary`，和`timestamp`数据库类型映射到字节数组。 由于在这种方案中不支持 `ToString()`，因此无法显示这些对象。  
+-   默认情况下`image`， `varbinary`，和`timestamp`数据库类型映射到字节数组。 由于在这种方案中不支持 `ToString()`，因此无法显示这些对象。  
   
 -   映射到主键的类成员具有 setter，但 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持对象标识更改。 因此，在映射中使用的主键/唯一键无法在数据库中更新。 当您调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 时，如果网格中发生更改，则会引发异常。  
   
 -   如果一个实体绑定在两个不同的网格（例如，一个是主网格，另一个是从网格）中，则不会将主网格中发生的 `Delete` 传播到从网格。  
   
-## <a name="see-also"></a>请参阅  
- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>请参阅
+- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

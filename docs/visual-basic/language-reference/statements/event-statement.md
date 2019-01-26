@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 14e70a07469d6bb2701884d8646d161c78e65dc0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a13b1a3d3e44f2c309e031e23972a5326ed3faa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653614"
 ---
 # <a name="event-statement"></a>Event 语句
 声明用户定义的事件。  
@@ -91,7 +91,7 @@ End Event
   
  只能在模块级别使用 `Event`。 这意味着*声明上下文*事件必须是类、 结构、 模块或接口，并且不能为源文件、 命名空间、 过程或块。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
- 在大多数情况下，可以使用本主题的“语法”部分中的第一个语法来声明事件。 但是，某些情况要求更好地控制事件的详细行为。 使用本主题“语法”部分中的最后一个语法（该语法使用 `Custom` 关键字）可通过使你可以定义自定义事件来提供这种控制。 在自定义事件中，可精确地指定在代码对事件添加或移除事件处理程序时，或是代码引发事件时发生的情况。 有关示例，请参阅[如何：声明自定义事件以节省内存](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)和[如何：声明自定义事件以避免阻止](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)。  
+ 在大多数情况下，可以使用本主题的“语法”部分中的第一个语法来声明事件。 但是，某些情况要求更好地控制事件的详细行为。 使用本主题“语法”部分中的最后一个语法（该语法使用 `Custom` 关键字）可通过使你可以定义自定义事件来提供这种控制。 在自定义事件中，可精确地指定在代码对事件添加或移除事件处理程序时，或是代码引发事件时发生的情况。 相关示例，请参阅[如何：声明自定义事件以节省内存](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)和[如何：声明自定义事件以避免阻止](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例使用事件从 10 秒到 0 秒进行倒计时。 代码演示了几个与事件相关的方法、属性和语句。 这包括 `RaiseEvent` 语句。  
@@ -117,15 +117,15 @@ End Event
 > [!NOTE]
 >  `My.Application.DoEvents` 方法不会按照与窗体相同的方式来处理事件。 若要使窗体可以直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[托管线程处理](../../../standard/threading/index.md)。  
   
-## <a name="see-also"></a>请参阅  
- [RaiseEvent 语句](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
- [Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)  
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)  
- [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
- [Delegate 语句](../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [如何：声明自定义事件以节省内存](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
- [如何：声明自定义事件以避免阻止](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+## <a name="see-also"></a>请参阅
+- [RaiseEvent 语句](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Delegate 语句](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [如何：声明自定义事件以节省内存](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [如何：声明自定义事件以避免阻止](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
+- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)

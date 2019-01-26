@@ -2,21 +2,21 @@
 title: '&lt;serviceAuthenticationManager&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: 34c50e0e8c259190d3f66aa7ad1369befc629d44
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fd04b10c0ac0bef4087daa1012a1b8bd3a5880e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493633"
 ---
 # <a name="ltserviceauthenticationmanagergt"></a>&lt;serviceAuthenticationManager&gt;
 提供一个工作流配置元素，该元素在服务级别建立传输、消息或发起方的有效性。  
   
 \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
-\<serviceAuthenticationManager >  
+\<behavior>  
+\<serviceAuthenticationManager>  
   
 ## <a name="syntax"></a>语法  
   
@@ -27,7 +27,7 @@ ms.locfileid: "53154070"
       <serviceAuthenticationManager serviceAuthenticationManagerType="String" />
     </behavior>
   </serviceBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -46,7 +46,7 @@ ms.locfileid: "53154070"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ServiceAuthenticationElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ServiceAuthenticationElement>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b3b009d7c25e813a73fe4f32c3eced632b052f13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543469"
 ---
 # <a name="annotations-overview"></a>批注概述
 在纸质文档上编写说明或注释毫不稀奇，我们几乎认为这是理所当然的。 这些说明或注释就是“批注”，我们将其添加到文档，用于标注信息或突出显示兴趣项以供日后参考。 虽然在打印文档上编写注释很简单也很平常，但是就算在所有电子文档上添加个人注释，功能上却通常有很多限制。  
@@ -64,15 +64,15 @@ ms.locfileid: "43861697"
   
  另一个示例方案涉及到应用程序，使交换批注和文档通过电子邮件的读取者之间的粘滞便笺。 凭借此功能，这些应用程序可以将读取器导航到包含要交换的批注的页面。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
- <xref:System.Windows.Controls.DocumentViewer>  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>  
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
- <xref:System.Windows.Controls.FlowDocumentReader>  
- <xref:System.Windows.Annotations.IAnchorInfo>  
- [注释架构](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
- [ContextMenu 概述](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
- [命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [如何：将命令添加到菜单项](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
+- <xref:System.Windows.Controls.DocumentViewer>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer>
+- <xref:System.Windows.Controls.FlowDocumentScrollViewer>
+- <xref:System.Windows.Controls.FlowDocumentReader>
+- <xref:System.Windows.Annotations.IAnchorInfo>
+- [注释架构](../../../../docs/framework/wpf/advanced/annotations-schema.md)
+- [ContextMenu 概述](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
+- [命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [如何：将命令添加到菜单项](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

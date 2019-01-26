@@ -1,5 +1,5 @@
 ---
-title: 控件
+title: Controls
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: fcef506f6be21b0c11a1c160ef6891a7ee53a5ec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83f044f403fe6d4d9c77c5b4d2045d58b50b97a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700658"
 ---
-# <a name="controls"></a>控件
+# <a name="controls"></a>Controls
 <a name="introduction"></a>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 附带许多中几乎每个 Windows 应用程序中，如使用的常见 UI 组件<xref:System.Windows.Controls.Button>， <xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.TextBox>， <xref:System.Windows.Controls.Menu>，和<xref:System.Windows.Controls.ListBox>。 以前，这些对象称为控件。 虽然[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]SDK 继续使用术语"控件"泛指任何代表应用程序中的可见对象的类务必要注意类不需要从继承<xref:System.Windows.Controls.Control>类即可具有可见外观。 继承的类<xref:System.Windows.Controls.Control>类包含<xref:System.Windows.Controls.ControlTemplate>，它允许控件的使用方从根本上更改控件的外观，而无需创建新子类。  本主题讨论如何控件 (那些从继承<xref:System.Windows.Controls.Control>类和一些未) 中常用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
 
@@ -98,13 +98,13 @@ ms.locfileid: "50189662"
   
  有关这些基类的类的详细信息，请参阅[WPF 内容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)。  
   
-## <a name="see-also"></a>请参阅  
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [按类别分类的控件](../../../../docs/framework/wpf/controls/controls-by-category.md)  
- [控件库](../../../../docs/framework/wpf/controls/control-library.md)  
- [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [输入](../../../../docs/framework/wpf/advanced/input-wpf.md)  
- [启用命令](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [演练：创建采用动画效果的自定义按钮](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)  
- [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)
+## <a name="see-also"></a>请参阅
+- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [按类别分类的控件](../../../../docs/framework/wpf/controls/controls-by-category.md)
+- [控件库](../../../../docs/framework/wpf/controls/control-library.md)
+- [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [输入](../../../../docs/framework/wpf/advanced/input-wpf.md)
+- [启用命令](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)
+- [演练：创建自定义的动画的按钮](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)
+- [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)

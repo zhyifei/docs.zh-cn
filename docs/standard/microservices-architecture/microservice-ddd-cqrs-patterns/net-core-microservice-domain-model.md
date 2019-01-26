@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 1c21ba1cc4c02336a204b1fe91b72e5f3e89228c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a0b3e75c6a93aebf979b8df758fe37460c046a15
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127129"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415931"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 实现微服务域模型 
 
@@ -33,7 +33,7 @@ ms.locfileid: "53127129"
 
 事务一致性意味着，保证聚合在业务操作结束时保持一致且处于最新状态。 例如，eShopOnContainers 订购微服务域模型中订单聚合的组成如图 7-11 所示。
 
-![OrderAggregate 文件夹的详细视图：Address.cs 是值对象，IOrderRepository 是存储库接口， Order.cs 是聚合根，OrderItem.cs 是子实体，而 OrderStatus.cs 是枚举类。](./media/image12.png)
+![OrderAggregate 文件夹的详细视图：Address.cs 是值对象，IOrderRepository 是存储库接口，Order.cs 是聚合根，OrderItem.cs 是子实体，而 OrderStatus.cs 是枚举类。](./media/image12.png)
 
 **图 7-11**。 Visual Studio 解决方案中的订单聚合
 
@@ -152,7 +152,7 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 使用 Entity Framework Core 1.1 或更高版本时，可以更好地表示 DDD 实体，因为它允许[映射到字段](https://docs.microsoft.com/ef/core/modeling/backing-field)以及属性。 这在保护子实体或值对象集合时很有用。 借助此增强功能，你可以使用简单的私有字段，而不必使用属性，并且可以在公共方法中实现对字段集合的任何更新，并通过 AsReadOnly 方法提供只读访问。
 
-在 DDD 中，你想通过实体（或构造函数）中的方法只更新实体，以便控制任何不变量和数据一致性，因此，属性定义为仅具有 get 取值函数。 这些属性受私有字段支持。 只能从类中访问私有成员。 但是有一个例外：EF Core 还需要设置这些字段（因此它可以返回具有适当值的对象）。
+在 DDD 中，你想通过实体（或构造函数）中的方法只更新实体，以便控制任何不变量和数据一致性，因此，属性定义为仅具有 get 取值函数。 这些属性受私有字段支持。 只能从类中访问私有成员。 但是，有一个例外：EF Core 也需要设置这些字段（这样它就可以返回具有适当值的对象）。
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>将仅具有 get 取值函数的属性映射到数据库表中的字段
 
@@ -171,8 +171,8 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 - **Vaughn Vernon。Modeling Aggregates with DDD and Entity Framework**（使用 DDD 和 Entity Framework 对聚合建模）。 请注意，*不*是 Entity Framework Core。 \
   [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
-- **Julie Lerman.Coding for Domain-Driven Design: Tips for Data-Focused Devs** \（域驱动设计的编码：数据聚焦型开发的技巧）
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
+- **Julie Lerman.域驱动设计的编码：面向数据聚焦型开发人员的提示** \
+  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
 
 - **Udi Dahan.How to create fully encapsulated Domain Models** \（如何创建完全封装的域模型）
   [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)

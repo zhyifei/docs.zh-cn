@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: ec7072e7af15bdff373962f776abf0aad89361bb
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 784dcb88e92169ff8698234e59899cc4d58dd52c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220771"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563751"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概述 (WPF)
 本主题介绍 XAML 语言的功能，并演示如何使用 XAML 编写 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序。 本主题专门介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现的 XAML。 XAML 本身是一个比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 大的语言概念。  
@@ -137,7 +137,7 @@ ms.locfileid: "39220771"
   
 -   **省略的 StackPanel.Children 属性元素：** <xref:System.Windows.Controls.StackPanel>派生自<xref:System.Windows.Controls.Panel>。 <xref:System.Windows.Controls.Panel> 定义<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>作为其 XAML 内容属性。  
   
--   **省略的 UIElementCollection 对象元素：** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>属性采用类型<xref:System.Windows.Controls.UIElementCollection>，它可以实现<xref:System.Collections.IList>。 可以省略集合的元素标记，如处理集合的 XAML 规则基于<xref:System.Collections.IList>。 (在这种情况下，<xref:System.Windows.Controls.UIElementCollection>实际无法实例化，因为它不公开默认构造函数，而这正是<xref:System.Windows.Controls.UIElementCollection>对象元素显示为注释掉)。  
+-   **省略的 UIElementCollection 对象元素：**<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>属性采用类型<xref:System.Windows.Controls.UIElementCollection>，它可以实现<xref:System.Collections.IList>。 可以省略集合的元素标记，如处理集合的 XAML 规则基于<xref:System.Collections.IList>。 (在这种情况下，<xref:System.Windows.Controls.UIElementCollection>实际无法实例化，因为它不公开默认构造函数，而这正是<xref:System.Windows.Controls.UIElementCollection>对象元素显示为注释掉)。  
   
 ```xaml  
 <StackPanel>  
@@ -175,7 +175,7 @@ ms.locfileid: "39220771"
 [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources2)]  
 [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources3)]  
   
- 有关特定在 WPF 中实现的所有 XAML 标记扩展的参考列表，请参阅 [WPF XAML 扩展](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)。 有关由 System.Xaml 定义并且可更广泛用于 .NET Framework XAML 实现的标记扩展的参考列表，请参阅 [XAML 命名空间 (x:) 语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)。 有关标记扩展概念的详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
+ 有关特定在 WPF 中实现的所有 XAML 标记扩展的参考列表，请参阅 [WPF XAML 扩展](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)。 有关由 System.Xaml 和可更广泛的.NET Framework XAML 实现定义的标记扩展的引用列表，请参阅[XAML Namespace （x:）语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)。 有关标记扩展概念的详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>类型转换器  
@@ -212,17 +212,17 @@ ms.locfileid: "39220771"
 ### <a name="the-x-prefix"></a>X： 前缀  
  在之前的根元素示例中，前缀 `x:` 用于映射 XAML 命名空间 [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]，该命名空间是支持 XAML 语言构造的专用 XAML 命名空间。 在这整个 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 的项目模板、示例以及文档中，此 `x:` 前缀用于映射该 XAML 命名空间。 XAML 语言的 XAML 命名空间包含多个将在 XAML 中频繁使用的编程构造。 下面列出了最常用的 `x:` 前缀编程构造：  
   
--   [X:key](../../../../docs/framework/xaml-services/x-key-directive.md)： 设置的每个资源的唯一键<xref:System.Windows.ResourceDictionary>（或其他框架中的类似字典概念）。 在典型的 WPF 应用程序标记中的所有 `x:` 用法中，`x:Key` 可能占到 90%。  
+-   [X:key](../../../../docs/framework/xaml-services/x-key-directive.md):设置的每个资源的唯一键<xref:System.Windows.ResourceDictionary>（或其他框架中的类似字典概念）。 在典型的 WPF 应用程序标记中的所有 `x:` 用法中，`x:Key` 可能占到 90%。  
   
--   [x:Class](../../../../docs/framework/xaml-services/x-class-directive.md)：向为 XAML 页提供代码隐藏的类指定 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空间和类名。 必须具有这样一个类才能支持每个 WPF 编程模型的代码隐藏，因此即使没有资源，也几乎总是能看到映射的 `x:`。  
+-   [x： 类](../../../../docs/framework/xaml-services/x-class-directive.md):指定[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]为 XAML 页提供代码隐藏类的命名空间和类名。 必须具有这样一个类才能支持每个 WPF 编程模型的代码隐藏，因此即使没有资源，也几乎总是能看到映射的 `x:`。  
   
--   [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md)：处理对象元素后，为运行时代码中存在的实例指定运行时对象名称。 通常，经常为 [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md) 使用 WPF 定义的等效属性。 此类属性特定映射到 CLR 后备属性，因此更便于进行应用程序编程，在应用程序编程中，经常使用运行时代码从初始化的 XAML 中查找命名元素。 最常见的此类属性是<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>。 仍然可以使用[X:name](../../../../docs/framework/xaml-services/x-name-directive.md)时等效的 WPF 框架级<xref:System.Windows.FrameworkElement.Name%2A>特定类型中不支持属性。 某些动画方案中会发生这种情况。  
+-   [x： 名称](../../../../docs/framework/xaml-services/x-name-directive.md):处理对象元素后，在运行时代码中指定存在的实例的运行时对象名称。 通常，经常为 [x:Name](../../../../docs/framework/xaml-services/x-name-directive.md) 使用 WPF 定义的等效属性。 此类属性特定映射到 CLR 后备属性，因此更便于进行应用程序编程，在应用程序编程中，经常使用运行时代码从初始化的 XAML 中查找命名元素。 最常见的此类属性是<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>。 仍然可以使用[X:name](../../../../docs/framework/xaml-services/x-name-directive.md)时等效的 WPF 框架级<xref:System.Windows.FrameworkElement.Name%2A>特定类型中不支持属性。 某些动画方案中会发生这种情况。  
   
--   [x:Static](../../../../docs/framework/xaml-services/x-static-markup-extension.md)：启用一个返回静态值的引用，该静态值不是与 XAML 兼容的属性。  
+-   [x:Static](../../../../docs/framework/xaml-services/x-static-markup-extension.md):可以返回一个静态值，否则不是 XAML 兼容属性的引用。  
   
--   [X:type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)： 构造<xref:System.Type>引用基于类型名称。 这用于指定需要的属性<xref:System.Type>，如<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>，但属性经常具有本机字符串-到-<xref:System.Type>转换的方式， [x： 类型](../../../../docs/framework/xaml-services/x-type-markup-extension.md)标记扩展用法是可选。  
+-   [x： 类型](../../../../docs/framework/xaml-services/x-type-markup-extension.md):构造<xref:System.Type>引用基于类型名称。 这用于指定需要的属性<xref:System.Type>，如<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>，但属性经常具有本机字符串-到-<xref:System.Type>转换的方式， [x： 类型](../../../../docs/framework/xaml-services/x-type-markup-extension.md)标记扩展用法是可选。  
   
- `x:` 前缀/XAML 命名空间中还有其他一些不太常见的编程构造。 有关详细信息，请参阅 [XAML 命名空间 (x:) 语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)。  
+ `x:` 前缀/XAML 命名空间中还有其他一些不太常见的编程构造。 有关详细信息，请参阅[XAML Namespace （x:）语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)。  
   
 <a name="custom_prefixes_and_custom_types_in_xaml"></a>   
 ## <a name="custom-prefixes-and-custom-types-in-xaml"></a>自定义前缀和 XAML 中的自定义类型  
@@ -319,7 +319,7 @@ ms.locfileid: "39220771"
 ## <a name="whats-next"></a>后续步骤  
  本主题简单介绍适用于 WPF 的 XAML 语法概念和术语。 若要深入了解本文使用的术语，请参阅 [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
   
- 如果尚未这样做，请尝试教程主题中的练习[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。 创建该教程中介绍的以标记为中心的应用程序时，该练习有助于巩固本主题中介绍的许多概念。  
+ 如果尚未这样做，请尝试教程主题中的练习[演练：我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。 创建该教程中介绍的以标记为中心的应用程序时，该练习有助于巩固本主题中介绍的许多概念。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用特定应用程序模型为基础的<xref:System.Windows.Application>类。 有关详细信息，请参阅[应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)。  
   
@@ -327,10 +327,10 @@ ms.locfileid: "39220771"
   
  [依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)详细介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中属性的多样性，并介绍依赖属性的概念。  
   
-## <a name="see-also"></a>请参阅  
- [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [XAML 命名空间 (x:) 语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [WPF XAML 扩展](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [基元素概述](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [WPF 中的树](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+## <a name="see-also"></a>请参阅
+- [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [XAML Namespace （x:）语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)
+- [WPF XAML 扩展](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)
+- [基元素概述](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [WPF 中的树](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)

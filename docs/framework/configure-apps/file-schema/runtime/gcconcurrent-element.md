@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fa802ab9d1025bd130a6265b50050284aae0150
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4c83576c5c46d9a32f990d23fa20b116be36e4c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611990"
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt;元素
 指定公共语言运行时是否在单独线程上运行垃圾回收。  
   
  \<configuration>  
 \<运行时 >  
-\<gcConcurrent >  
+\<gcConcurrent>  
   
 ## <a name="syntax"></a>语法  
   
@@ -89,7 +89,7 @@ ms.locfileid: "53612382"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [垃圾回收的基础知识](../../../../../docs/standard/garbage-collection/fundamentals.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: df4aa7f3bf046ec871333f665ab77fa460c4095c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6d79d3330154fff33abe5a401a70c6b9a20aad72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660419"
 ---
 # <a name="animation-tips-and-tricks"></a>动画提示和技巧
 使用中的动画时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，有一些提示和技巧，可使动画更好地执行，并避免挫折。  
@@ -105,7 +105,7 @@ ms.locfileid: "48842759"
   
  删除动画有多种不同的方法。 可以使用以下方法删除属于的动画<xref:System.Windows.Media.Animation.Storyboard>。  
   
--   若要删除<xref:System.Windows.Media.Animation.Storyboard>开始使用事件触发器，请参阅[如何： 删除情节提要](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90))。  
+-   若要删除<xref:System.Windows.Media.Animation.Storyboard>开始使用事件触发器，请参阅[如何：删除情节提要](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749412(v=vs.90))。  
   
 -   若要使用代码来删除<xref:System.Windows.Media.Animation.Storyboard>，请参阅<xref:System.Windows.Media.Animation.Storyboard.Remove%2A>方法。  
   
@@ -128,5 +128,5 @@ ms.locfileid: "48842759"
   
  有关时钟对象的详细信息，请参阅[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>请参阅
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84c362dca7f617aeb929f050af23e96998c4e1d5
-ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
+ms.openlocfilehash: ba59d9d47d5c120eb2ff0a3a3c65e0fe8cdf75e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42754596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498289"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi 函数
 返回将返回满足指定的选择条件指定类的实例的枚举器。 
@@ -48,7 +48,7 @@ HRESULT CreateInstanceEnumWmi (
 ## <a name="parameters"></a>参数
 
 `strFilter`    
-[in]为其实例所需的类的名称。 此参数不能为`null`。
+[in]为其实例所需的类的名称。 此参数不能为 `null`。
 
 `lFlags`   
 [in]影响此函数的行为的标志的组合。 以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中： 
@@ -111,11 +111,11 @@ HRESULT CreateInstanceEnumWmi (
 如果函数调用失败，则可以通过调用获取其他错误信息[GetErrorInfo](geterrorinfo.md)函数。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

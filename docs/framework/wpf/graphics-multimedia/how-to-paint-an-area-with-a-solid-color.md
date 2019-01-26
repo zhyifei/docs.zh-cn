@@ -6,12 +6,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with solid colors
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
-ms.openlocfilehash: 017c685139979ec3aa411be6e6b5fdf0e91657de
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: db1ff6048ab30554767459863c0fd5e261851f59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647802"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>如何：使用纯色绘制区域
 若要绘制使用纯色区域，可以使用预定义的系统画笔，如<xref:System.Windows.Media.Brushes.Red%2A>或<xref:System.Windows.Media.Brushes.Blue%2A>，也可以创建一个新<xref:System.Windows.Media.SolidColorBrush>并描述其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 alpha、 红色、 绿色和蓝色值。 在 XAML 中，还可以使用十六进制表示法来利用纯色绘制区域。  
@@ -49,5 +49,5 @@ ms.locfileid: "44213509"
   
  此代码示例是为提供一个更大示例的一部分<xref:System.Windows.Media.SolidColorBrush>类。 有关完整示例，请参阅[画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Brushes>
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Brushes>

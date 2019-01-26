@@ -5,19 +5,18 @@ helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 721a27b4bba239f0d22a24e0e159ef36b742d1b7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d4af79920e38f0e3db8265256a9a7a706048d7e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003771"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697538"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>如何：重写编码的 SOAP XML 序列化
-[代码示例](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
   
- 将对象的 XML 序列化重写为 SOAP 消息的过程类似于重写标准 XML 序列化的过程。 有关重写标准 XML 序列化的信息，请参见[如何：指定 XML 流的备用元素名称](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。  
+ 将对象的 XML 序列化重写为 SOAP 消息的过程类似于重写标准 XML 序列化的过程。 有关重写标准 XML 序列化的信息，请参阅[如何：指定 XML Stream 的替代元素名称](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。  
   
-### <a name="to-override-serialization-of-objects-as-soap-messages"></a>将对象的序列化重写为 SOAP 消息  
+## <a name="to-override-serialization-of-objects-as-soap-messages"></a>将对象的序列化重写为 SOAP 消息  
   
 1.  创建 <xref:System.Xml.Serialization.SoapAttributeOverrides> 类的一个实例。  
   
@@ -280,9 +279,9 @@ public class Run
   
 ## <a name="see-also"></a>请参阅
 
-- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [用来控制编码的 SOAP 序列化的属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
-- [使用 XML Web services 进行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
-- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
-- [如何：将对象序列化为 SOAP 编码的 XML 流](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [用来控制编码的 SOAP 序列化的属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
+- [使用 XML Web services 进行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
+- [如何：将对象序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [如何：将对象序列化为 SOAP 编码的 XML Stream](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

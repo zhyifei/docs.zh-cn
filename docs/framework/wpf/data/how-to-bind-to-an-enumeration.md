@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], enumeration
 - enumeration [WPF]
 ms.assetid: b9091eba-1119-424e-868b-d1a4168b3732
-ms.openlocfilehash: 921f15a32eeb5ccb20e879466fcfee3233bbd29e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db7b02a961c148bbdc31b05e7c71ea5b5d301c54
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586561"
 ---
 # <a name="how-to-bind-to-an-enumeration"></a>如何：绑定到枚举
 此示例演示如何将绑定到通过绑定到枚举的 GetValues 方法的枚举。  
@@ -21,7 +21,7 @@ ms.locfileid: "33554942"
   
  [!code-xaml[BindToEnum#BindToEnum](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToEnum/CS/Window1.xaml#bindtoenum)]  
   
-## <a name="see-also"></a>请参阅  
- [绑定到方法](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [绑定到方法](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

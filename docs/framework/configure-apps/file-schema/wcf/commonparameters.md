@@ -2,31 +2,32 @@
 title: '&lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: 5e4c19c48709ffd81cb00e9820e6c3cdb297ec7e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2b8a6e5ba670657afda6fd8c64024a330650a9b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626831"
 ---
 # <a name="ltcommonparametersgt"></a>&lt;commonParameters&gt;
 表示在多个服务之间全局使用的参数的集合。 此集合通常将包括可由持久性服务共享的数据库连接字符串。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
+\<behavior>  
 \<workflowRuntime>  
 \<commonParameters>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<workflowRuntime>  
-   <commonParameters>  
-      <add name="String" value="String" />  
-   </commonParameters>  
-</workflowRuntime>  
+<workflowRuntime>
+  <commonParameters>
+    <add name="String"
+         value="String" />
+  </commonParameters>
+</workflowRuntime>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -62,15 +63,20 @@ ms.locfileid: "47207948"
  对于提交批处理工作进行永久性存储的服务，如 <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> 和 <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>，可以通过使用 `EnableRetries` 参数来允许它们重试其事务，如以下示例所示：  
   
 ```xml  
-<WorkflowRuntime Name="SampleApplication" UnloadOnIdle="false">  
-    <commonParameters>  
-        <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />  
-        <add name="EnableRetries" value="True" />  
-    </commonParameters>  
-    <Services>  
-        <add type="System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" EnableRetries="False" />   
-     </Services>  
-</WorkflowRuntime>  
+<workflowRuntime name="SampleApplication"
+                 unloadOnIdle="false">
+  <commonParameters>
+    <add name="ConnectionString"
+         value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />
+    <add name="EnableRetries"
+         value="True" />
+  </commonParameters>
+  <services>
+    <add type="System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService, System.Workflow.Runtime,
+               Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+         enableRetries="False" />
+  </services>
+</workflowRuntime>
 ```  
   
  请注意，`EnableRetries`参数可以设置在全局级别 (如中所示*CommonParameters*部分) 或为个别支持的服务`EnableRetries`(如中所示*服务*部分)。  
@@ -90,17 +96,19 @@ config.Save();
 ## <a name="example"></a>示例  
   
 ```xml  
-<commonParameters>  
-   <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;"/>  
-   <add name="EnableRetries" value="true"/>  
-</commonParameters>  
+<commonParameters>
+   <add name="ConnectionString"
+        value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />
+   <add name="EnableRetries"
+        value="true" />
+</commonParameters>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
- <xref:System.Workflow.Runtime.WorkflowRuntime>  
- <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
- <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
- [工作流配置文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))  
- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
+- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
+- <xref:System.Workflow.Runtime.WorkflowRuntime>
+- <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
+- <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
+- [工作流配置文件](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)

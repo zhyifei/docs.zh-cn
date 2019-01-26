@@ -2,38 +2,39 @@
 title: '&lt;ws2007HttpBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: fb92e7549b86a2c4a4a8453d13f6c4f08d696348
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6a07fb258a0a7c01293eddaf1eab4f82c4f632cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493750"
 ---
 # <a name="ltsecuritygt-of-ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt; 的 &lt;security&gt;
 表示与一起使用的安全设置[ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)元素。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<ws2007HttpBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.serviceModel>  
-    <bindings>  
-        <ws2007HttpBinding>  
-            <binding name = "string">  
-              <security mode="None/Message/Transport/TransportWithMessageCredential">  
-                  <transport>  
-                  </transport>  
-                  <message>  
-                  </message>  
-              </security  
-        </ws2007HttpBinding>  
-    </bindings>  
-</system.ServiceModel>  
+<system.serviceModel>
+  <bindings>
+    <ws2007HttpBinding>
+      <binding name = "String">
+        <security mode="None/Message/Transport/TransportWithMessageCredential">
+          <transport>
+          </transport>
+          <message>
+          </message>
+        </security>
+      </binding>
+    </ws2007HttpBinding>
+  </bindings>
+</system.ServiceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -70,14 +71,14 @@ ms.locfileid: "53129774"
 ## <a name="remarks"></a>备注  
  此元素专用于与实现 WS-* 规范的服务进行互操作。 此绑定的传输安全为 HTTP 上的安全套接字层 (SSL)，即 HTTPS。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.WSHttpSecurity>  
- <xref:System.ServiceModel.WSHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
- <xref:System.ServiceModel.BasicHttpSecurity>  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.WSHttpSecurity>
+- <xref:System.ServiceModel.WSHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
+- <xref:System.ServiceModel.BasicHttpSecurity>
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

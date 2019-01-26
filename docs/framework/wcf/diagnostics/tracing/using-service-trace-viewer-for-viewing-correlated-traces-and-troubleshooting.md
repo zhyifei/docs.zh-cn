@@ -2,12 +2,12 @@
 title: 使用服务跟踪查看器查看相关跟踪和进行故障诊断
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: b43c7f3d8018c119dbabf8f55ec115a00e1ac077
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594799"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>使用服务跟踪查看器查看相关跟踪和进行故障诊断
 本主题介绍跟踪数据的格式，如何查看它，以及使用服务跟踪查看器对应用程序进行故障诊断的方法。  
@@ -119,7 +119,7 @@ ms.locfileid: "50188789"
   
 -   处理了加操作。  
   
--   设置了安全会话（这发生在第一个请求上）并处理三个安全基础结构响应消息：RST、RSTR、SCT（处理消息 1、2、3）。  
+-   设置安全会话 （这发生在首次请求） 和已处理的三个安全基础结构响应消息：RST、 RSTR、 SCT （处理消息 1，2，3）。  
   
 -   处理了减、乘和除请求。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "50188789"
  如果双击左面板中添加活动的处理操作，我们可以看到添加到与相关的客户端 WCF 活动的图形表示形式。 左侧的第一个活动是根活动 (0000)，它是默认活动。 环境活动之外的 WCF 传输。 如果未定义，WCF 将到 0000 之外传输。 在这里，第二个活动“处理操作添加”在 0 之外传输。 然后可看到“设置安全会话”。  
   
  ![使用跟踪查看器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-WCF 客户端活动的图形视图：“环境活动”（此处为 0）、“处理操作”和“设置安全会话”  
+WCF 客户端活动的关系图视图：环境活动 (此处为 0)、 处理操作和设置安全会话  
   
  在右上面板中，可以看到与“处理操作添加”活动相关的所有跟踪。 具体说来，已发送请求消息（“通过通道发送消息”）并在同一活动中收到了响应（“通过通道收到消息”）。 如下图所示。 为清楚起见，在图形中折叠了“设置安全会话”活动。  
   
@@ -198,7 +198,7 @@ WCF 客户端和服务活动的图形视图
  ![使用跟踪查看器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
 若要开始进行故障诊断，也可以选取一个红色或黄色的消息跟踪，并双击它以查明根本原因  
   
-## <a name="see-also"></a>请参阅  
- [端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>请参阅
+- [端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

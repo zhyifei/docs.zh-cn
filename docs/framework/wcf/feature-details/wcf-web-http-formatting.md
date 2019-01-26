@@ -2,12 +2,12 @@
 title: WCF Web HTTP 格式设置
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 3a5164cb6271c8fd1d67b3c59fd35705d997f9fe
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e3db2be1a4f40bc0ae85c3d42faca20cef5308d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698734"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP 格式设置
 通过 WCF Web HTTP 编程模型，你可以动态确定服务操作返回其响应所采用的最佳格式。 支持使用以下两种方法来确定相应格式：即自动和显式。  
@@ -163,10 +163,10 @@ public class Service : IService
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.UriTemplate>  
- <xref:System.UriTemplateMatch>  
- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- [WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.UriTemplate>
+- <xref:System.UriTemplateMatch>
+- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
+- [WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

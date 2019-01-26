@@ -2,12 +2,12 @@
 title: '&lt;net.tcp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: c67aeca183eb476460fa0be2c6dcd9c6077165d8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7df24d816b4eed8ceed542e14261413fbe7651a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728721"
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 指定允许多个进程共享同一 TCP 端口的 NET.TCP 端口共享服务的配置设置。  
@@ -18,28 +18,28 @@ ms.locfileid: "48842341"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<configuration>  
-   <system.serviceModel.activation>  
-       <net.tcp listenBacklog="Integer"  
-          maxPendingAccepts="Integer"  
-          maxPendingConnections="Integer"  
-          receiveTimeout="TimeSpan"  
-          teredoEnabled="Boolean">  
-          <allowAccounts>  
-             <!-- LocalSystem account -->   
-             <add securityIdentifier="S-1-5-18"/>  
-             <!-- LocalService account -->   
-             <add securityIdentifier="S-1-5-19"/>  
-             <!-- Administrators account -->   
-             <add securityIdentifier="S-1-5-20"/>  
-             <!-- Network Service account -->   
-             <add securityIdentifier="S-1-5-32-544" />  
-             <!-- IIS_IUSRS account (Vista only)-->   
-             <add securityIdentifier="S-1-5-32-568"/>  
-           </allowAccounts>  
-       </net.tcp>  
-   </system.serviceModel.activation>  
-</configuration>  
+<configuration>
+  <system.serviceModel.activation>
+    <net.tcp listenBacklog="Integer"
+             maxPendingAccepts="Integer"
+             maxPendingConnections="Integer"
+             receiveTimeout="TimeSpan"
+             teredoEnabled="Boolean">
+      <allowAccounts>
+        <!-- LocalSystem account -->
+        <add securityIdentifier="S-1-5-18"/>
+        <!-- LocalService account -->
+        <add securityIdentifier="S-1-5-19"/>
+        <!-- Administrators account -->
+        <add securityIdentifier="S-1-5-20"/>
+        <!-- Network Service account -->
+        <add securityIdentifier="S-1-5-32-544" />
+        <!-- IIS_IUSRS account (Vista only)-->
+        <add securityIdentifier="S-1-5-32-568"/>
+      </allowAccounts>
+    </net.tcp>
+  </system.serviceModel.activation>
+</configuration>
 ```  
   
 ## <a name="type"></a>类型  
@@ -73,7 +73,7 @@ ms.locfileid: "48842341"
 ## <a name="remarks"></a>备注  
  端口共享的详细信息，请参阅[Net.TCP 端口共享](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)。 若要了解如何配置端口共享服务，请参阅[配置 Net.TCP 端口共享服务](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Net.TCP 端口共享](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- [配置 Net.TCP 端口共享服务](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>
+- [Net.TCP 端口共享](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
+- [配置 Net.TCP 端口共享服务](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

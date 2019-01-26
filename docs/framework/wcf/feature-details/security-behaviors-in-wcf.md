@@ -2,12 +2,12 @@
 title: WCF 中的安全行为
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 221e9cb23e05378b68e4b53bc9d678c119738af5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3040f2af2f9db030d8434e977167810ac83f09dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592804"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全行为
 在 Windows Communication Foundation (WCF) 行为修改运行时行为在服务级别或终结点级别。 (有关行为一般情况下，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全行为*允许控制凭据、 身份验证、 授权和审核日志。 可以通过编程或通过配置来使用行为。 本主题重点讨论如何配置下列与安全功能相关的行为：  
@@ -18,7 +18,7 @@ ms.locfileid: "53127415"
   
 -   [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)。  
   
--   [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)。  
+-   [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
 -   [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)，这还可以指定客户端可以访问元数据的安全终结点。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "53127415"
   
 -   将有效 URI 添加到此集合，以指定有效 URI 集。 若要执行此操作，插入[\<添加 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)为每个 URI  
   
- 有关详细信息，请参阅 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 。  
+ 有关详细信息，请参阅 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>。  
   
  有关使用此配置元素的详细信息，请参阅[如何：联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   
@@ -115,18 +115,18 @@ ms.locfileid: "53127415"
 ```  
   
 #### <a name="clientcertifictate-element"></a>\<clientCertifictate > 元素  
- 可以使用此元素设置用于对客户端进行身份验证的证书。 有关更多信息，请参见[如何：指定客户端凭据值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 可以使用此元素设置用于对客户端进行身份验证的证书。 有关详细信息，请参阅[如何：指定客户端凭据值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
-#### <a name="httpdigest"></a>\<httpDigest >  
+#### <a name="httpdigest"></a>\<httpDigest>  
  必须使用 Windows 上的 Active Directory 和 Internet 信息服务 (IIS) 启用此功能。 有关详细信息，请参阅[摘要式身份验证在 IIS 6.0 中](https://go.microsoft.com/fwlink/?LinkId=88443)。  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > 元素  
  [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)包含用于配置本地颁发者的令牌，或者使用与安全令牌服务的行为的元素。 有关配置客户端以使用本地颁发者的说明，请参阅[如何：配置本地颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
-#### <a name="localissueraddress"></a>\<localIssuerAddress >  
+#### <a name="localissueraddress"></a>\<localIssuerAddress>  
  指定默认的安全令牌服务地址。 使用此时<xref:System.ServiceModel.WSFederationHttpBinding>不提供安全令牌服务，或者当联合绑定的颁发者地址的 URL`http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`或`null`。 在这些情况下，必须使用本地颁发机构的地址和用来与该颁发机构进行通信的绑定来配置 <xref:System.ServiceModel.Description.ClientCredentials>。  
   
-#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
+#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors>  
  使用[ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)添加与安全令牌服务通信时使用的 WCF 客户端行为。 定义中的客户端行为[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)部分。 若要使用已定义的行为，添加 <`add`> 元素`<issuerChannelBehaviors>`具有两个属性的元素。 将 `issuerAddress` 设置为安全令牌服务的 URL，将 `behaviorConfiguration` 特性设置为已定义终结点行为的名称，如下面的示例所示。  
   
 ```xml  
@@ -144,7 +144,7 @@ ms.locfileid: "53127415"
   
  使用[ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)并[\<添加 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)设置与特定服务关联的服务证书。 `<add>` 元素包含一个 `targetUri` 属性，该属性用于将证书与服务相关联。  
   
- [\<身份验证 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)元素指定用于对证书进行身份验证的信任级别。 默认情况下，该级别设置为“ChainTrust”，它指定每个证书都必须存在于某个证书层次结构中，而该层次结构以位于证书链顶端的受信任的证书颁发机构结束。 这是最安全的模式。 还可以将此值设置为“PeerOrChainTrust”，该值指定受信任的链中的证书以及自行颁发的证书（对等信任）都被接受。 因为不需要从受信任的证书颁发机构那里购买自行颁发的证书，所以可以在开发和调试客户端和服务时使用此值。 在部署客户端时，请改用“ChainTrust”值。 还可以将此值设置为“Custom”或“None”。 若要使用“Custom”值，您还必须将 `CustomCertificateValidatorType` 属性设置为用于验证证书的程序集和类型。 若要创建您自己的自定义验证程序，必须从 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 抽象类进行继承。 有关更多信息，请参见[如何：创建使用自定义证书验证程序的服务](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
+ [\<身份验证 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)元素指定用于对证书进行身份验证的信任级别。 默认情况下，该级别设置为“ChainTrust”，它指定每个证书都必须存在于某个证书层次结构中，而该层次结构以位于证书链顶端的受信任的证书颁发机构结束。 这是最安全的模式。 还可以将此值设置为“PeerOrChainTrust”，该值指定受信任的链中的证书以及自行颁发的证书（对等信任）都被接受。 因为不需要从受信任的证书颁发机构那里购买自行颁发的证书，所以可以在开发和调试客户端和服务时使用此值。 在部署客户端时，请改用“ChainTrust”值。 还可以将此值设置为“Custom”或“None”。 若要使用“Custom”值，您还必须将 `CustomCertificateValidatorType` 属性设置为用于验证证书的程序集和类型。 若要创建您自己的自定义验证程序，必须从 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 抽象类进行继承。 有关详细信息，请参阅[如何：创建使用自定义证书验证程序的服务](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
   
  [\<身份验证 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)元素包含`RevocationMode`的特性，指定如何检查证书是否已吊销。 默认值为“online”，指示自动检查证书是否已吊销。 有关详细信息，请参阅[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
@@ -217,6 +217,6 @@ ms.locfileid: "53127415"
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>请参阅
+- [审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

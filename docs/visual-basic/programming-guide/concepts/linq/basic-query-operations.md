@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: bcaefce4621fbfe3b3ac1a65ca634136fd9870e4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d066b282604a53e2cf973ce0425af729fba6a118
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585612"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查询操作 (Visual Basic)
 本主题提供了简要介绍了[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]表达式在 Visual Basic 中和某些典型查询中执行的操作。 有关详细信息，请参阅下列主题：  
@@ -29,7 +29,7 @@ ms.locfileid: "43461019"
   
  [查询](../../../../visual-basic/language-reference/queries/index.md)  
   
- [演练： 在 Visual Basic 中编写查询](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
+ [演练：在 Visual Basic 中编写查询](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>指定数据源 (From)  
  在[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询，第一步是指定您想要查询的数据源。 因此，`From`在查询中的子句始终第一个出现。 查询运算符选择，并基于源的类型结果的形式。  
@@ -103,7 +103,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  [!code-vb[VbLINQBasicOps#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_9.vb)]  
   
 > [!NOTE]
->  您可以运行此代码中创建的学生列表[如何： 创建列表项](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。  
+>  您可以运行此代码中创建的学生列表[如何：创建的项列表](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)。  
   
  `Join`关键字等效于`INNER JOIN`SQL 中。 它结合了两个集合根据两个集合中元素之间的匹配项的值。 查询将返回具有匹配的键值对集合元素的全部或部分。 例如，下面的代码复制上一个隐式联接操作。  
   
@@ -116,9 +116,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_11.vb)]  
   
- 如果运行此代码中使用的列表中创建的学生[如何： 创建列表项](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)，从输出`For Each`语句是：  
+ 如果运行此代码中使用的列表中创建的学生[如何：创建列表项](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)，从输出`For Each`语句是：  
   
- 年份： 初级  
+ 年份：初级  
   
  Tucker Michael  
   
@@ -128,9 +128,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Tucker Lance  
   
- 年份： 高级  
+ 年份：高级  
   
- Omelchenko Svetlana  
+ Omelchenko, Svetlana  
   
  Osada Michiko  
   
@@ -140,9 +140,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Terry Adams  
   
- 年份： 新生  
+ 年份：新生  
   
- Mortensen Sven  
+ Mortensen, Sven  
   
  Garcia Cesar  
   
@@ -152,9 +152,9 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  有关详细信息`Group By`，请参阅[组 By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [Visual Basic 中的 LINQ 入门](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [查询](../../../../visual-basic/language-reference/queries/index.md)  
- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [Visual Basic 中的 LINQ 入门](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [查询](../../../../visual-basic/language-reference/queries/index.md)
+- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

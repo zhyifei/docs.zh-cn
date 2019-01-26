@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
 author: KrzysztofCwalina
-ms.openlocfilehash: 4ff79af968c8a0a360cade687b8c60cdd71de192
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fcf566c24677630fdbb1fcd0eb7628f830b3be2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702933"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>抽象（抽象类型和接口）
 抽象是一种描述协定但不提供协定的完整实现的类型。 抽象通常作为抽象类或接口实现，并带有一组明确定义的参考文档，该文档描述实现协定的类型的所需语义。 .NET Framework 中一些最重要的抽象包括 <xref:System.IO.Stream>、<xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.Object>。  
@@ -35,9 +35,9 @@ ms.locfileid: "53149908"
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
 - [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

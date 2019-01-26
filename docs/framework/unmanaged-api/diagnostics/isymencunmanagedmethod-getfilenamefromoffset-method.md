@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db3e9cfa73672920ff70d9128541a8f513fca00f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0582714c157de69293eb1e8dfa40e0cd2f44cba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621193"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset 方法
-获取与偏移量关联的行的文件名称。  
+获取与某一偏移量关联的行的文件名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,22 +40,22 @@ HRESULT GetFileNameFromOffset(
   
 #### <a name="parameters"></a>参数  
  `dwOffset`  
- [in]A`ULONG32`包含的偏移量。  
+ [in]一个`ULONG32`包含的偏移量。  
   
  `cchName`  
- [in]A `ULONG32` ，该值指示的大小`szName`缓冲区。  
+ [in]一个`ULONG32`指示的大小`szName`缓冲区。  
   
  `pcchName`  
- [out]指向的指针`ULONG32`接收大小，以字符为单位，以包含的文件名称所需的缓冲区。  
+ [out]一个指向`ULONG32`用于接收大小，以字符为单位，以包含文件名称的缓冲区。  
   
  `szName`  
- [out]包含文件的文件名的缓冲区。  
+ [out]包含文件名称的缓冲区。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl、 CorSym.h  
+ **标头：** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>请参阅  
- [ISymENCUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymENCUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

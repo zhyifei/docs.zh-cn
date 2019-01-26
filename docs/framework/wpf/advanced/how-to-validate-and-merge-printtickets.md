@@ -10,12 +10,12 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 37a1c0600b8429158336968507ddc8cfb6d8f98b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0b9f7b101ea4f06c86f66f8e4e16d1ffeabaa9e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485633"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671936"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>如何：验证和合并 PrintTicket
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [打印架构](https://go.microsoft.com/fwlink/?LinkId=186397)包括灵活且可扩展<xref:System.Printing.PrintCapabilities>和<xref:System.Printing.PrintTicket>元素。 前者详细列举的打印设备的功能，后者用于指定设备应如何使用这些功能来处理特定文档、 单个文档或单页的序列。  
@@ -56,14 +56,14 @@ ms.locfileid: "43485633"
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Printing.PrintCapabilities>  
- <xref:System.Printing.PrintTicket>  
- <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
- <xref:System.Printing.PrintServer>  
- <xref:System.Printing.EnumeratedPrintQueueTypes>  
- <xref:System.Printing.PrintQueue>  
- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [打印架构](https://go.microsoft.com/fwlink/?LinkId=186397)
+## <a name="see-also"></a>请参阅
+- <xref:System.Printing.PrintCapabilities>
+- <xref:System.Printing.PrintTicket>
+- <xref:System.Printing.PrintServer.GetPrintQueues%2A>
+- <xref:System.Printing.PrintServer>
+- <xref:System.Printing.EnumeratedPrintQueueTypes>
+- <xref:System.Printing.PrintQueue>
+- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
+- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [打印架构](https://go.microsoft.com/fwlink/?LinkId=186397)

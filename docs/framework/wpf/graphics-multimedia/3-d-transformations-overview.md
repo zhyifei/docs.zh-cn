@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: d27e1bda296a153343b450c84c65fa35d55d72f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 427840430a37f675ccc0f0ee4f423370f2a55550
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520587"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646365"
 ---
 # <a name="3-d-transformations-overview"></a>三维变换概述
 本主题描述如何向 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 图形系统中的 3D 模型应用转换。 开发人员可以借助转换功能对模型进行重定位、大小调整和重定向，而无需更改用来定义模型的基值。  
@@ -67,7 +67,7 @@ ScaleVector 示例
   
  [!code-xaml[animation3dgallery_snip#Rotate3DUsingAxisAngleRotation3DExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotat3DUsingAxisAngleRotation3DExample.xaml#rotate3dusingaxisanglerotation3dexamplewholepage)]  
   
- 注意：[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D 是一个右手系统，这意味着，如果旋转角度为正数，则将围绕轴逆时针旋转。  
+ 注意：[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]三维效果是一个右手系统，这意味着，旋转的正角度值会导致围绕轴逆时针旋转。  
   
  如果没有为指定一个值，轴和角度的旋转假设围绕原点旋转<xref:System.Windows.Media.Media3D.RotateTransform3D.CenterX%2A>， <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterY%2A>，和<xref:System.Windows.Media.Media3D.RotateTransform3D.CenterZ%2A>RotateTransform3D 上的属性。 与缩放一样，牢记旋转时会转换模型的整个坐标空间，这会很有帮助。 如果模型不是围绕原点创建，或者它以前平移过，则旋转可能会围绕原点“转动”，而不是就地旋转。  
   
@@ -105,7 +105,7 @@ ScaleVector 示例
   
  由于照相机也是模型，因此也可以对照相机属性进行转换。  尽管确实可以通过改变照相机的位置或平面距离来改变场景的外观（实际上是变换整个场景的投影），但应注意，对于观察者来说，以这种方法实现的许多效果不如将转换应用于场景中模型的地点或位置更有“视觉意义”。  
   
-## <a name="see-also"></a>请参阅  
- [3D 图形概述](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
- [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [2D 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>请参阅
+- [3D 图形概述](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [2D 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)

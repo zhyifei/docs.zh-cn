@@ -2,12 +2,12 @@
 title: 使用操作来实现服务器端行为
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c478c09ada879bdb237cff1e3c914a5990aba765
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204474"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622606"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用操作来实现服务器端行为
 
@@ -48,7 +48,7 @@ OData 操作提供了用于实现这样一种行为方法，即该行为将作�
   
  参数可作为标记进行传递。 这是因为可以编写与表示资源的标记结合使用的数据服务提供程序，如果是这种情况，则您可能需要将这些标记转换（封送处理）为实际资源，然后才能调度到实际动作。 在封送处理此参数之后，此参数必须处于可编辑状态，以便将在调用动作时对资源所做的任何更改保存并写入到磁盘中。  
   
- 此接口需要两个方法：Invoke 和 GetResult。 Invoke 调用用于实现动作行为的委托，而 GetResult 返回此动作的结果。  
+ 此接口需要两个方法：调用和 GetResult。 Invoke 调用用于实现动作行为的委托，而 GetResult 返回此动作的结果。  
   
 ## <a name="invoking-a-wcf-data-service-action"></a>调用 WCF 数据服务动作  
  可以使用 HTTP POST 请求来调用动作。 URL 指定资源（后跟动作名称）。 参数在请求的正文中传递。 例如，假设有一个名为 MovieService 的服务，该服务公开了一个名为 Rate 的动作。 您可以使用下面的 URL 针对特定电影调用 Rate 动作：  
@@ -80,8 +80,8 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
   
  在上面的代码段中，通过使用 Visual Studio 将服务引用添加到 WCF 数据服务，从而生成了 `MoviesModel` 类。  
   
-## <a name="see-also"></a>请参阅  
- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [开发和部署 WCF 数据服务](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
- [自定义数据服务提供程序](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+## <a name="see-also"></a>请参阅
+- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
+- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [开发和部署 WCF 数据服务](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
+- [自定义数据服务提供程序](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

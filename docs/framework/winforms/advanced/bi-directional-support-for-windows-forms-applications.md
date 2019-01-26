@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9e35f097380272822e9dbcda01617cce9fed8fc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676843"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows 窗体应用程序的双向支持
 Visual Studio 可用于创建基于 Windows 的应用程序支持阿拉伯语和希伯来语等双向 （右到左） 语言。 这包括标准窗体、对话框、MDI 窗体以及可在这些窗体中使用的所有控件 — 即，<xref:System.Windows.Forms.Control> 命名空间中的所有对象。  
@@ -23,7 +23,7 @@ Visual Studio 可用于创建基于 Windows 的应用程序支持阿拉伯语和
  区域性和 UI 区域性设置确定应用程序如何使用日期、时间、货币和其他信息。 区域性和 UI 区域性对双向语言的支持与对其他所有语言的支持相同。   另请参阅[全球 Windows 窗体和 Web 窗体的区域性特定类](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\))或[全球 Windows 窗体和 Web 窗体的区域性特定类](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft 和 RightToLeftLayout 属性  
- 可派生设备的 <xref:System.Windows.Forms.Control> 基类包含可设置用于更改窗体及其控件阅读顺序的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 属性。 如果设置窗体的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 属性，则默认情况下窗体上的控件将继承此设置。 但是，也可在大多数控件上单独设置 <xref:System.Windows.Forms.Control.RightToLeft%2A> 属性。 另请参阅[如何：为全球化在 Windows 窗体中按从右到左的顺序显示文本](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\))。  
+ 可派生设备的 <xref:System.Windows.Forms.Control> 基类包含可设置用于更改窗体及其控件阅读顺序的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 属性。 如果设置窗体的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 属性，则默认情况下窗体上的控件将继承此设置。 但是，也可在大多数控件上单独设置 <xref:System.Windows.Forms.Control.RightToLeft%2A> 属性。 另请参阅[如何：为全球化 Windows 窗体中显示从右到左文本](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\))。  
   
  <xref:System.Windows.Forms.Control.RightToLeft%2A> 属性对不同控件的影响可能各有不同。 在某些控件中此属性只设置阅读顺序，如 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.TreeView> 和 <xref:System.Windows.Forms.ToolTip> 控件。 在其他控件中，<xref:System.Windows.Forms.Control.RightToLeft%2A> 属性同时更改阅读顺序和布局。 这包括 <xref:System.Windows.Forms.RadioButton>、<xref:System.Windows.Forms.ComboBox> 和 <xref:System.Windows.Forms.CheckBox> 控件。 其他控件要求将 <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> 属性用于从右到左镜像其布局。 下表提供了有关 <xref:System.Windows.Forms.Control.RightToLeft%2A> 和 <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> 属性如何影响单个 Windows 窗体控件的详细信息。  
   
@@ -119,5 +119,5 @@ Visual Studio 可用于创建基于 Windows 的应用程序支持阿拉伯语和
   
 ## <a name="see-also"></a>请参阅
 
-[ASP.NET Web 应用程序的双向支持](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
-[全球化 Windows 窗体应用程序](globalizing-windows-forms.md)
+- [ASP.NET Web 应用程序的双向支持](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)
+- [全球化 Windows 窗体应用程序](globalizing-windows-forms.md)

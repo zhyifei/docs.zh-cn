@@ -2,12 +2,12 @@
 title: WCF 的 &lt;states&gt;，&lt;workflowInstanceQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: a6c54f0903f30b5a7c3147cf4b874516a766c2b8
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 56e3c6ce5c86e468c9a4dd63021264703ab75b02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540814"
 ---
 # <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a>WCF 的 &lt;states&gt;，&lt;workflowInstanceQuery&gt;
 
@@ -15,17 +15,17 @@ ms.locfileid: "49121939"
   
 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-\<system.serviceModel >\<跟踪 >  
+\<system.serviceModel> \<tracking>  
 \<配置文件 >  
 \<trackingProfile>  
-\<工作流 >  
+\<workflow>  
 \<workflowInstanceQueries>  
-\<workflowInstanceQuery >  
-\<状态 >  
+\<workflowInstanceQuery>  
+\<states>  
   
 ## <a name="syntax"></a>语法  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -33,7 +33,7 @@ ms.locfileid: "49121939"
         <workflowInstanceQueries>
           <workflowInstanceQuery>
             <states>
-              <state name="Name"/>
+              <state name="Name" />
             </states>
           </workflowInstanceQuery>
         </workflowInstanceQueries>
@@ -41,7 +41,7 @@ ms.locfileid: "49121939"
     </trackingProfile>
   </profiles>
 </tracking>
-```
+```  
   
 ## <a name="attributes-and-elements"></a>特性和元素
 
@@ -55,7 +55,7 @@ ms.locfileid: "49121939"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<状态 >](state-of-wcf-workflowinstancequery.md)|创建跟踪记录时已跟踪工作流实例中的一个已订阅状态。|  
+|[\<states>](state-of-wcf-workflowinstancequery.md)|创建跟踪记录时已跟踪工作流实例中的一个已订阅状态。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -90,19 +90,19 @@ ms.locfileid: "49121939"
 下面的配置使用此查询订阅 `Started` 实例状态的工作流实例级跟踪记录。  
   
 ```xml  
-<workflowInstanceQueries>  
-    <workflowInstanceQuery>  
-      <states>  
-        <state name="Started"/>  
-      </states>  
-    </workflowInstanceQuery>  
-</workflowInstanceQueries>  
+<workflowInstanceQueries>
+  <workflowInstanceQuery>
+    <states>
+      <state name="Started" />
+    </states>
+  </workflowInstanceQuery>
+</workflowInstanceQueries>
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>       
-- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
+- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

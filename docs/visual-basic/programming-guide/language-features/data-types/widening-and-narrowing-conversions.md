@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: ad49e5443016dc4fed57be4a991df9f6d6095b55
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d1b573dbafbead20330a4fd0f62e8f21f27dce81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610924"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>扩大转换和收缩转换 (Visual Basic)
 类型转换的一个重要考虑因素是转换的结果是否在目标数据类型的范围内。  
@@ -47,12 +47,12 @@ ms.locfileid: "43519272"
 |[Long](../../../../visual-basic/language-reference/data-types/long-data-type.md)|`Long`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|`ULong`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[小数](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`, `Single`, `Double`<sup>2</sup>|  
-|[单精度](../../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`, `Double`|  
-|[双精度](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
+|[Single](../../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`， `Double`|  
+|[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
 |任何枚举类型 ([枚举](../../../../visual-basic/language-reference/statements/enum-statement.md))|其基础整型类型和任何类型的基础类型扩大。|  
-|[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
+|[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`， `String`|  
 |`Char` 数组|`Char` 数组， `String`|  
-|任何类型|[对象](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
+|任何类型|[Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |任何派生的类型|任何基的类型派生自<sup>3</sup>。|  
 |任何类型|它实现任何接口。|  
 |[Nothing](../../../../visual-basic/language-reference/nothing.md)|任何数据类型或对象类型。|  
@@ -107,12 +107,12 @@ Dim square As cSquare = New cSquare
 shape = square  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [隐式转换和显式转换](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [字符串和其他类型之间的转换](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [如何： 将对象转换为 Visual Basic 中的另一种类型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [数组转换](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
- [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>请参阅
+- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [隐式转换和显式转换](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [字符串和其他类型之间的转换](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [如何：将对象转换为 Visual Basic 中的另一种类型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [数组转换](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
+- [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

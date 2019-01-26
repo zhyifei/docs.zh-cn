@@ -2,12 +2,12 @@
 title: Oracle 架构集合
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 80623a1abcaeee642b9206edc106d1a4ea74d63b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694459"
 ---
 # <a name="oracle-schema-collections"></a>Oracle 架构集合
 除了通用架构集合之外，Microsoft Oracle .NET Framework 数据提供程序还支持下列特定的架构集合：  
@@ -107,7 +107,7 @@ ms.locfileid: "44217342"
 |SECONDARY|String|索引是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y&#124;N)。|  
 |BUFFER_POOL|String|用于索引块的默认缓冲区池的名称。|  
 |USER_STATS|String|统计信息是否已由用户直接输入。|  
-|DURATION|String|指示临时表的持续时间：1)SYS$SESSION：在会话期间保留行，2) SYS$TRANSACTION：在 COMMIT 之后删除行，3) Null 表示永久表。|  
+|DURATION|String|指示临时表的持续时间：1) SYS$ SESSION: 2) SYS$ TRANSACTION 会话的持续时间内保留行： 之后提交，3) Null 表示永久表删除行。|  
 |PCT_DIRECT_ACCESS|Decimal|对于通过索引组织的表上的辅助索引，为具有 VALID 猜测的行的百分比。|  
 |ITYP_OWNER|String|对于域索引，为索引类型的所有者。|  
 |ITYP_NAME|String|对于域索引，为索引类型的名称。|  
@@ -115,7 +115,7 @@ ms.locfileid: "44217342"
 |GLOBAL_STATS|String|对于分区索引，指示统计信息通过整体分析索引进行收集 (YES) 还是通过基础索引分区和子分区上的统计信息进行估计 (NO)。|  
 |DOMIDX_STATUS|String|反映域索引的状态。 NULL：指定的索引不是域索引。 VALID：索引是有效的域索引。 IDXTYP_INVLD：此域索引的索引类型无效。|  
 |DOMIDX_OPSTATUS|String|反映在域索引上执行的操作的状态：NULL：指定的索引不是域索引。 VALID：执行操作而未发生错误。 FAILED：操作发生错误并失败。|  
-|FUNCIDX_STATUS|String|指示基于函数的索引的状态：NULL：这不是基于函数的索引，ENABLED：已启用基于函数的索引，DISABLED：已禁用基于函数的索引。|  
+|FUNCIDX_STATUS|String|指示基于函数的索引的状态：NULL： 这不是基于函数的索引，ENABLED： 启用基于函数的索引，禁用： 禁用基于函数的索引。|  
 |JOIN_INDEX|String|指示此索引是否是联接索引。|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
@@ -145,7 +145,7 @@ ms.locfileid: "44217342"
 |TIMESTAMP|String|指定对象（字符数据）的时间戳。|  
 |STATUS|String|对象的状态（VALID、INVALID 或 N/A）。|  
 |TEMPORARY|String|对象是否是临时对象（当前会话只能看到其放入此对象本身的数据）。|  
-|GENERATED|String|此对象的名称是否由系统生成？ (Y &AMP;#124; N)。|  
+|GENERATED|String|此对象的名称是否由系统生成？ (Y &#124; N).|  
 |SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124; N)。|  
 |CREATED|DateTime|创建对象的日期。|  
   
@@ -220,7 +220,7 @@ ms.locfileid: "44217342"
 |TIMESTAMP|String|指定对象（字符数据）的时间戳。|  
 |STATUS|String|对象的状态（VALID、INVALID 或 N/A）。|  
 |TEMPORARY|String|对象是否是临时对象（当前会话只能看到其放入此对象本身的数据）。|  
-|GENERATED|String|此对象的名称是否由系统生成？ (Y &AMP;#124; N)。|  
+|GENERATED|String|此对象的名称是否由系统生成？ (Y &#124; N).|  
 |SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124; N)。|  
   
 ## <a name="packages"></a>包  
@@ -236,7 +236,7 @@ ms.locfileid: "44217342"
 |TIMESTAMP|String|指定对象（字符数据）的时间戳。|  
 |STATUS|String|对象的状态（VALID、INVALID 或 N/A）。|  
 |TEMPORARY|String|对象是否是临时对象（当前会话只能看到其放入此对象本身的数据）。|  
-|GENERATED|String|此对象的名称是否由系统生成？ (Y &AMP;#124; N)。|  
+|GENERATED|String|此对象的名称是否由系统生成？ (Y &#124; N).|  
 |SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124; N)。|  
 |CREATED|DateTime|创建对象的日期。|  
   
@@ -253,7 +253,7 @@ ms.locfileid: "44217342"
 |TIMESTAMP|String|指定对象（字符数据）的时间戳。|  
 |STATUS|String|对象的状态（VALID、INVALID 或 N/A）。|  
 |TEMPORARY|String|对象是否是临时对象（当前会话只能看到其放入此对象本身的数据）。|  
-|GENERATED|String|此对象的名称是否由系统生成？ (Y &AMP;#124; N)。|  
+|GENERATED|String|此对象的名称是否由系统生成？ (Y &#124; N).|  
 |SECONDARY|String|这是否是由 Oracle9i Data Cartridge 的 ODCIIndexCreate 方法创建的辅助对象 (Y &#124; N)。|  
 |CREATED|DateTime|创建对象的日期。|  
   
@@ -379,5 +379,5 @@ ms.locfileid: "44217342"
 |CHAR_LENGTH|Decimal|字符串数据类型的字符限制。|  
 |CHAR_USED|String|指示字节限制 (B) 或字符限制 (C) 是否正式用于字符串。|  
   
-## <a name="see-also"></a>请参阅  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

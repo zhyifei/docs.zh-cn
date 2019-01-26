@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 67466bbb5fd7e7a46c312e14666c23048bf43d80
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 60d939e9b63767a7efef059581983e8d8e8721ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742580"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639388"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>如何：使用关键帧对双精度属性值进行动画处理
 此示例演示如何采用的属性的值进行动画处理<xref:System.Double>使用关键帧。  
@@ -36,11 +36,11 @@ ms.locfileid: "45742580"
   
  与其他动画示例保持一致，对于此示例中的代码版本使用<xref:System.Windows.Media.Animation.Storyboard>对象来应用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>。 或者，应用单个动画在代码中的，它时，使用更加简便<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法而不是使用<xref:System.Windows.Media.Animation.Storyboard>。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
- <xref:System.Windows.Shapes.Rectangle>  
- <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>  
- <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>  
- <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>  
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [关键帧操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
+- <xref:System.Windows.Shapes.Rectangle>
+- <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>
+- <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>
+- <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>
+- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [关键帧操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

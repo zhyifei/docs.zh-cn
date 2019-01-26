@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74df7ee71fc541c35bc393f637ad1d7b9f7aa2a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec1e2b59c15c956a4657b224a937829dbd3b14cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549897"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables 方法
 返回一个非本地变量，给定的父级和名称。  
@@ -49,13 +49,13 @@ HRESULT GetVariables (
  [out]指向接收的变量中返回数的变量的指针`pVars`。  
   
  `pVars`  
- [out]指向接收这些变量的变量的指针。  
+ [out]指向接收变量的变量的指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl、 CorSym.h  
+ **标头：** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedReader 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

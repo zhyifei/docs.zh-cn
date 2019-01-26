@@ -1,20 +1,20 @@
 ---
-title: 如何：对 JSON 数据进行序列化和反序列化
+title: 如何：序列化和反序列化 JSON 数据
 ms.date: 03/30/2017
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: f51ffb180adfc8310c91ff3c1ec7b7725f6b8b15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 797b29fd7ddecd3e3ed85f8cb3a6df93044942ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704337"
 ---
-# <a name="how-to-serialize-and-deserialize-json-data"></a>如何：对 JSON 数据进行序列化和反序列化
+# <a name="how-to-serialize-and-deserialize-json-data"></a>如何：序列化和反序列化 JSON 数据
 JSON（JavaScript 对象符号）是一种高效的数据编码格式，可用于在客户端浏览器和支持 AJAX 的 Web 服务之间快速交换少量数据。  
   
  本主题演示如何使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 将 .NET 类型对象序列化为 JSON 编码数据，然后将 JSON 格式的数据反序列化回 .NET 类型的实例。 本示例使用数据协定来演示用户定义的 `Person` 类型的序列化和反序列化。  
   
- 通常，JSON 序列化和反序列化将自动处理由 Windows Communication Foundation (WCF) 时通过支持 AJAX 的终结点公开的服务操作中使用数据协定类型。 但是，在某些情况下您可能需要直接处理 JSON 数据，这正是本主题演示的方案。  
+ 通常情况下，JSON 序列化和反序列化自动处理由 Windows Communication Foundation (WCF) 通过启用 AJAX 的终结点公开的服务操作中使用数据协定类型时。 但是，在某些情况下您可能需要直接处理 JSON 数据，这正是本主题演示的方案。  
   
 > [!NOTE]
 >  如果在服务器上序列化传出答复期间出现错误，或者答复操作由于某个其他原因引发异常，则可能不会将其作为错误返回到客户端。  
@@ -23,7 +23,7 @@ JSON（JavaScript 对象符号）是一种高效的数据编码格式，可用�
   
 ### <a name="to-define-the-data-contract-for-a-person"></a>定义 Person 的数据协定  
   
-1.  通过将 `Person` 附加到类并将 <xref:System.Runtime.Serialization.DataContractAttribute> 特性附加到要序列化的成员，为 <xref:System.Runtime.Serialization.DataMemberAttribute> 定义数据协定。 有关数据协定的详细信息，请参阅[设计服务协定](../../../../docs/framework/wcf/designing-service-contracts.md)。  
+1.  通过将 `Person` 附加到类并将 <xref:System.Runtime.Serialization.DataContractAttribute> 特性附加到要序列化的成员，为 <xref:System.Runtime.Serialization.DataMemberAttribute> 定义数据协定。 有关数据协定的详细信息，请参阅[Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)。  
   
     ```csharp  
     [DataContract]  
@@ -135,6 +135,6 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [独立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
- [支持 JSON 和其他数据传输格式](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+## <a name="see-also"></a>请参阅
+- [独立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)
+- [支持 JSON 和其他数据传输格式](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

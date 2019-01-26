@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (point animation)
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
-ms.openlocfilehash: d6dc79cd7a15aef2a4168fffb293c5e1f33cde08
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 521caa4411f1c0137769e7c221176b5693934ad0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259777"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610521"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>如何：沿着路径针对对象进行动画处理（点动画）
 此示例演示如何使用<xref:System.Windows.Media.Animation.PointAnimationUsingPath>对象进行动画处理<xref:System.Windows.Point>沿着曲线路径。  
@@ -30,7 +30,7 @@ ms.locfileid: "44259777"
   
  使用前面示例的代码版本<xref:System.Windows.Media.Animation.Storyboard>进行动画处理<xref:System.Windows.Media.EllipseGeometry>，即使只有一个动画已应用。 一个<xref:System.Windows.Media.Animation.Storyboard>通常是因为这些动画可以控制由同一个应用多个动画的最简单方式<xref:System.Windows.Media.Animation.Storyboard>。 但是，使用代码时，将一个动画应用到属性的更简单方法是使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
   
-## <a name="see-also"></a>请参阅  
- [路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [路径动画操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [路径动画操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

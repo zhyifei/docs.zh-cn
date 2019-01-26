@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 5e04aa1a1d209074dbdadcb1df089e31efa84ded
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf9f714878cd1b0b179dc1ced44e3dcfe7c2f9bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517586"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>如何：创建和绑定到 ObservableCollection
-此示例演示如何创建并绑定到一个集合，其中派生自<xref:System.Collections.ObjectModel.ObservableCollection%601>类，它是一个集合类，可在添加或删除项时提供通知。  
+此示例演示如何创建和绑定到一个集合，其中派生<xref:System.Collections.ObjectModel.ObservableCollection%601>类，该类是一个集合类，添加或移除项时提供通知。  
   
 ## <a name="example"></a>示例  
  下面的示例演示 `NameList` 集合的实现：  
@@ -136,13 +136,13 @@ End Class
  此处没有显示 `NameItemTemplate` 的定义。  
   
 > [!NOTE]
->  集合中的对象必须满足[绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)中所述的要求。 具体而言，如果你使用<xref:System.Windows.Data.BindingMode.OneWay>或<xref:System.Windows.Data.BindingMode.TwoWay>(例如，你希望你[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]时动态更改的源属性更新)，则必须实现适当的属性更改通知机制如<xref:System.ComponentModel.INotifyPropertyChanged>接口。  
+>  集合中的对象必须满足[绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)中所述的要求。 具体而言，如果使用的<xref:System.Windows.Data.BindingMode.OneWay>或<xref:System.Windows.Data.BindingMode.TwoWay>(例如，希望你[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]时更新源属性发生显著变化)，必须实现适当的属性更改通知机制，如<xref:System.ComponentModel.INotifyPropertyChanged>接口。  
   
  有关详细信息，请参阅[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)中的“绑定到集合”一节。  
   
-## <a name="see-also"></a>请参阅  
- [在视图中对数据进行排序](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [在视图中筛选数据](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [在 XAML 中使用视图对数据进行排序和分组](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [在视图中对数据进行排序](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)
+- [在视图中筛选数据](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)
+- [在 XAML 中使用视图对数据进行排序和分组](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: c012eeb7ef7dad8c52b8b9a5f153582710c1fd73
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5384a49461886ba184a0a128467c864b37c0efc9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667020"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>截获触笔输入
 <xref:System.Windows.Input.StylusPlugIns>体系结构提供了用于通过实现低级别控制的机制<xref:System.Windows.Input.Stylus>输入和数字墨迹创建<xref:System.Windows.Ink.Stroke>对象。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类提供了一种机制，以实现自定义行为，并将其应用到从触笔设备以获得最佳性能的数据的流。  
@@ -70,6 +70,6 @@ ms.locfileid: "43788160"
 ## <a name="conclusion"></a>结束语  
  通过派生您自己<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类并将它们到插入<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>集合，可以极大地提高你数字墨迹的行为。 你有权<xref:System.Windows.Input.StylusPoint>生成数据时，您可以自定义<xref:System.Windows.Input.Stylus>输入。 因为此类低级别访问<xref:System.Windows.Input.StylusPoint>数据，可以为你的应用程序实现墨迹收集和呈现具有优化性能。  
   
-## <a name="see-also"></a>请参阅  
- [高级墨迹处理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
- [访问和操作笔输入](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+## <a name="see-also"></a>请参阅
+- [高级墨迹处理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [访问和操作笔输入](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

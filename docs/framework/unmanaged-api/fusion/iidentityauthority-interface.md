@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 692ac4ef4fe8ea64c6a63dc2f02cc04244a842c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab8965ca5d6c9c96cea5f5b351547ce2d4dfacc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546275"
 ---
 # <a name="iidentityauthority-interface"></a>IIdentityAuthority 接口
 管理代码对象的标识键。  
@@ -34,27 +34,27 @@ ms.locfileid: "33432516"
 |`IIdentityAuthority::AreReferencesEqual`|获取一个值，该值指示两个指定[IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)实例是否相等。|  
 |`IIdentityAuthority::AreTextualDefinitionsEqual`|获取一个值，该值指示两个指定的字符串定义标识的表示形式是否相等。|  
 |`IIdentityAuthority::AreTextualReferencesEqual`|获取一个值，该值指示两个指定的字符串引用标识的表示形式是否相等。|  
-|`IIdentityAuthority::CreateDefinition`|获取一个指针，到新`IDefinitionIdentity`表示当前范围中的代码对象的实例。|  
-|`IIdentityAuthority::CreateReference`|获取一个指针，到新`IReferenceIdentity`表示当前范围中的代码对象的实例。|  
-|`IIdentityAuthority::DefinitionToText`|获取指定的格式化的字符串版本`IDefinitionIdentity`。|  
-|`IIdentityAuthority::DefinitionToTextBuffer`|用指定的字符串版本填充指定的宽字符缓冲区`IDefinitionIdentity`。|  
+|`IIdentityAuthority::CreateDefinition`|获取一个指向到新`IDefinitionIdentity`实例，它表示当前作用域中的代码对象。|  
+|`IIdentityAuthority::CreateReference`|获取一个指向到新`IReferenceIdentity`实例，它表示当前作用域中的代码对象。|  
+|`IIdentityAuthority::DefinitionToText`|获取指定的带格式的字符串版本`IDefinitionIdentity`。|  
+|`IIdentityAuthority::DefinitionToTextBuffer`|使用指定的字符串版本填充指定的宽字符缓冲区`IDefinitionIdentity`。|  
 |`IIdentityAuthority::DoesDefinitionMatchReference`|获取一个值，该值指示是否指定`IDefinitionIdentity`和`IReferenceIdentity`实例引用相同的代码对象。|  
 |`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|获取一个值，该值指示指定的字符串是否引用相同的代码对象。|  
 |`IIdentityAuthority::GenerateDefinitionKey`|获取一个指针指向新创建的字符串键指定`IDefinitionIdentity`。|  
 |`IIdentityAuthority::GenerateReferenceKey`|获取一个指针指向新创建的字符串键指定`IReferenceIdentity`。|  
 |`IIdentityAuthority::HashDefinition`|获取指定的哈希值`IDefinitionIdentity`。|  
 |`IIdentityAuthority::HashReference`|获取指定的哈希值`IreferenceIdentity`。|  
-|`IIdentityAuthority::ReferenceToText`|获取指定的格式化的字符串版本`IReferenceIdentity`。|  
-|`IIdentityAuthority::ReferenceToTextBuffer`|用指定的字符串版本填充指定的宽字符缓冲区`IReferenceIdentity`。|  
-|`IIdentityAuthority::TextToDefinition`|获取到的接口指针`IDefinitionIdentity`实例生成从指定格式字符串。|  
-|`IIdentityAuthority::TextToReference`|获取到的接口指针`IReferenceIdentity`实例生成从指定格式字符串。|  
+|`IIdentityAuthority::ReferenceToText`|获取指定的带格式的字符串版本`IReferenceIdentity`。|  
+|`IIdentityAuthority::ReferenceToTextBuffer`|使用指定的字符串版本填充指定的宽字符缓冲区`IReferenceIdentity`。|  
+|`IIdentityAuthority::TextToDefinition`|获取到的接口指针`IDefinitionIdentity`实例生成指定的格式设置字符串。|  
+|`IIdentityAuthority::TextToReference`|获取到的接口指针`IReferenceIdentity`实例生成指定的格式设置字符串。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

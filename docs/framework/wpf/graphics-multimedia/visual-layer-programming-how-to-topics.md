@@ -8,15 +8,15 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: e4328e1628028be72d10ee2a59c3f53b18bd6580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b53b5666985305362d093e2e579abe83ce619fc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655850"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>可视化层编程帮助主题
-此部分中的主题演示如何使用可视化层进行命中测试和低级别的组合。  
+在本部分中的主题演示如何使用可视化层进行命中测试和低级别的组合。  
   
 ## <a name="in-this-section"></a>本节内容  
  [获取视觉对象偏移](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
@@ -26,9 +26,9 @@ ms.locfileid: "33561971"
  [使用 Win32 宿主容器进行命中测试](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
  [使用 CompositionTarget 按每帧间隔呈现](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)

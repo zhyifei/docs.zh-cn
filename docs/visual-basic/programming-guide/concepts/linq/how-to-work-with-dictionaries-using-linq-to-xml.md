@@ -1,15 +1,15 @@
 ---
-title: 如何： 使用字典使用 LINQ to XML (Visual Basic)
+title: 如何：使用字典使用 LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: b6e41f61358563472f49b22df389df00e721503e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f08430aeb92b9c6e0b7b08481027fb3b5b77cad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572339"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>如何： 使用字典使用 LINQ to XML (Visual Basic)
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>如何：使用字典使用 LINQ to XML (Visual Basic)
 通常需要将各种数据结构转换为 XML 和将 XML 转换回其他数据结构。 本主题通过 <xref:System.Collections.Generic.Dictionary%602> 和 XML 的相互转换演示这一常规方法的具体实现。  
   
 ## <a name="example"></a>示例  
@@ -70,5 +70,5 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [投影和转换 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+- [投影和转换 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

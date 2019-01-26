@@ -1,5 +1,5 @@
 ---
-title: 对象生存期：如何创建和销毁对象 (Visual Basic)
+title: 对象生存期：如何创建和销毁 (Visual Basic) 对象
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Constructor
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 319d606bcd19397932c05f1d5b808f2f5d8923ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864491"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610326"
 ---
-# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>对象生存期：如何创建和销毁对象 (Visual Basic)
+# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>对象生存期：如何创建和销毁 (Visual Basic) 对象
 使用 `New` 关键字创建类的实例（即对象）。 通常，初始化任务必须在使用之前在新对象上执行。 常见的初始化任务包括打开文件、连接到数据库以及读取注册表项的值。 Visual Basic 控制的使用过程名为的新对象初始化*构造函数*（允许控制初始化的特殊方法）。  
   
  对象离开范围之后，由公共语言运行时 (CLR) 进行释放。 Visual Basic 控制使用过程调用的系统资源的释放*析构函数*。 同时，构造函数和析构函数支持强大、可预测的类库的创建。  
@@ -146,9 +146,9 @@ End Sub
   
  垃圾回收系统间的另一个区别涉及到 `Nothing` 的使用。 为了在 Visual Basic 6.0 及更低版本中利用引用计数，程序员有时将 `Nothing` 分配到对象变量以释放这些变量持有的引用。 如果变量持有对对象的最后引用，则会立即释放该对象的资源。 在 Visual Basic 的更高版本中，虽然可能存在此过程仍有用的情况，但执行此过程不会使引用的对象立即释放其资源。 若要立即释放资源，请使用对象的 <xref:System.IDisposable.Dispose%2A> 方法（如果可用）。 只有当变量的生存期相对于垃圾回收器用于检测孤立对象的时间来说很长时，你才应该将变量设置为 `Nothing`。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IDisposable.Dispose%2A>  
- [组件的初始化和终止](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
- [New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Cleaning Up Unmanaged Resources](../../../../standard/garbage-collection/unmanaged.md)（清理未托管资源）  
- [Nothing](../../../../visual-basic/language-reference/nothing.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.IDisposable.Dispose%2A>
+- [组件的初始化和终止](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)
+- [New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [清理未托管资源](../../../../standard/garbage-collection/unmanaged.md)（清理未托管资源）
+- [Nothing](../../../../visual-basic/language-reference/nothing.md)

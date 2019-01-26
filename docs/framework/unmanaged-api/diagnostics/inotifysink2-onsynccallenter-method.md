@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c2c4f15b3fb1bc5b408382589a1c8213ffd246e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c44a150fa85ff0cbda4ff2b39acefb46045adad1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500284"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter 方法
 输入调用时调用。  
@@ -40,7 +40,7 @@ HRESULT OnSyncCallEnter
   
 #### <a name="parameters"></a>参数  
  `in_CallID`  
- [in]输入的调用 ID。 请参阅[CALL_ID 结构](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)。  
+ [in]调用要输入的 ID。 请参阅[CALL_ID 结构](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)。  
   
  `in_pBuffer`  
  [in]调用缓冲区。  
@@ -54,7 +54,7 @@ HRESULT OnSyncCallEnter
 ## <a name="requirements"></a>要求  
  **标头：** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>请参阅  
- [INotifySink2 接口](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [INotifySource2 接口](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifyConnection2 接口](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a>请参阅
+- [INotifySink2 接口](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifySource2 接口](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifyConnection2 接口](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

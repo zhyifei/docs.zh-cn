@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a363591f5db7a2dbcba1147df35d8c023c9b0707
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7f197851d4d7d470c6c34e4f5607e1791e724770
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681620"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet 函数
 检索特定方法的限定符集。
@@ -72,11 +72,11 @@ HRESULT GetMethodQualifierSet (
 因为每个方法可能具有其自己的限定符[IWbemQualifierSet 指针](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)允许调用方添加、 编辑或删除这些限定符。
 
 ## <a name="requirements"></a>要求  
-**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

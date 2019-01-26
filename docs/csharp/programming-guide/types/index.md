@@ -1,23 +1,17 @@
 ---
-title: 类型 - C# 编程指南
+title: '类型 - C# 编程指南'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- value types [C#]
-- reference types [C#]
-- types [C#]
-- C# language, data types
-- common type system [C#]
-- data types [C#]
-- C# language, types
-- strong typing [C#]
+  - 'value types [C#]'
+  - 'reference types [C#]'
+  - 'types [C#]'
+  - 'C# language, data types'
+  - 'common type system [C#]'
+  - 'data types [C#]'
+  - 'C# language, types'
+  - 'strong typing [C#]'
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 74362642a57bcdffc51a447ef044dc899cc83b71
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237215"
 ---
 # <a name="types-c-programming-guide"></a>类型（C# 编程指南）
 ## <a name="types-variables-and-values"></a>类型、变量和值  
@@ -186,7 +180,7 @@ stringList.Add(4);
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [XML 数据类型转换](../../../standard/data/xml/conversion-of-xml-data-types.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [XML 数据类型转换](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)

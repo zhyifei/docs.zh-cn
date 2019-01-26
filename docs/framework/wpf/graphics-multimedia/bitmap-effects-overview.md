@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: 97b878621d5aa1860cd955755d9bbc344b95b993
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: c0c5019eb122f30ad25fa86164b4ead6db8c83c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715811"
 ---
 # <a name="bitmap-effects-overview"></a>位图效果概述
 位图效果，设计人员和开发人员应用到视觉效果呈现 Windows Presentation Foundation (WPF) 内容。 例如，位图效果，您可以轻松地将应用<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>效果或模糊效果到图像或按钮。  
@@ -60,12 +60,12 @@ ms.locfileid: "48261256"
 ## <a name="creating-custom-effects"></a>创建自定义效果  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 还提供非托管接口，用于创建可在托管 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序中使用的自定义效果。 有关创建自定义位图效果的其他参考资料，请参阅[非托管 WPF 位图效果](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)文档。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Effects.BitmapEffectGroup>  
- <xref:System.Windows.Media.Effects.BitmapEffectInput>  
- <xref:System.Windows.Media.Effects.BitmapEffectCollection>  
- [非托管的 WPF 位图效果](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)  
- [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [安全性](../../../../docs/framework/wpf/security-wpf.md)  
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Effects.BitmapEffectGroup>
+- <xref:System.Windows.Media.Effects.BitmapEffectInput>
+- <xref:System.Windows.Media.Effects.BitmapEffectCollection>
+- [非托管的 WPF 位图效果](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)
+- [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [安全性](../../../../docs/framework/wpf/security-wpf.md)
+- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)

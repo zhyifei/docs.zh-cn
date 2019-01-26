@@ -1,17 +1,17 @@
 ---
 title: 处理部分失败的策略
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 处理部分失败的策略
+description: 了解妥善处理部分失败错误的几种策略。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: ba15258be8caa1a5ed800cef0ebe832aa7328252
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: ad45e357c1656b9346b7bdb5f324bde5fa76eaba
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146113"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362764"
 ---
-# <a name="strategies-for-handling-partial-failure"></a>处理部分失败的策略
+# <a name="strategies-to-handle-partial-failure"></a>处理部分失败错误的策略
 
 处理部分失败的策略如下。
 
@@ -25,24 +25,24 @@ ms.locfileid: "53146113"
 
 **提供回退**。 在此方法中，客户端进程在请求失败时执行回退逻辑，如返回缓存数据或默认值。 这是适用于查询的一种方法，对于更新或命令较复杂。
 
-**限制排队请求数**。 客户端还应对客户端微服务可发送到特定服务的未完成请求的数量设置上限。 如果已达到限制，发出其他请求可能无意义，这些尝试应立即失败。 对于实现，Polly [Bulkhead 隔离](https://github.com/App-vNext/Polly/wiki/Bulkhead)策略可以用于满足此要求。 这种方法实质上是将 <xref:System.Threading.SemaphoreSlim> 作为实现的平行化限制。 它也允许 bulkhead 外的“队列”。 可在执行前主动舍弃额外的负载（例如，由于容量被视为已满）。 这样一来，其对某些失败情景的响应速度比断路器要快，因为断路器会等待失败。 Polly 中的 BulkheadPolicy 对象公开 bulkhead 和队列的已满程度，且提供有关溢出的事件，因此也可用于驱动自动水平缩放。
+**限制排队请求数**。 客户端还应对客户端微服务可发送到特定服务的未完成请求的数量设置上限。 如果已达到限制，发出其他请求可能无意义，这些尝试应立即失败。 对于实现，Polly [Bulkhead 隔离](https://github.com/App-vNext/Polly/wiki/Bulkhead)策略可以用于满足此要求。 这种方法实质上是将 <xref:System.Threading.SemaphoreSlim> 作为实现的平行化限制。 它也允许 bulkhead 外的“队列”。 可在执行前主动舍弃额外的负载（例如，由于容量被视为已满）。 这样一来，其对某些失败情景的响应速度比断路器要快，因为断路器会等待失败。 [Polly](http://www.thepollyproject.org/) 中的 BulkheadPolicy 对象公开 bulkhead 和队列的已满程度，且提供有关溢出的事件，因此也可用于驱动自动水平缩放。
 
 ## <a name="additional-resources"></a>其他资源
 
--   **复原模式**
-    [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
+- **复原模式**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](/azure/architecture/patterns/category/resiliency)
 
--   **添加恢复和优化性能**
-    [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
+- **添加复原能力和优化性能**\
+  [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
--   **Bulkhead。** GitHub 存储库。 使用 Polly 策略的实现。\
-    [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+- **Bulkhead。** GitHub 存储库。 使用 Polly 策略的实现。\
+  [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   **为 Azure 设计恢复应用程序**
-    [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
+- **为 Azure 设计复原应用程序**\
+  [*https://docs.microsoft.com/azure/architecture/resiliency/*](/azure/architecture/resiliency/)
 
--   **瞬时故障处理**
-    <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults>
+- **瞬时故障处理**\
+  [*https://docs.microsoft.com/azure/architecture/best-practices/transient-faults*](/azure/architecture/best-practices/transient-faults)
 
 >[!div class="step-by-step"]
 >[上一页](handle-partial-failure.md)

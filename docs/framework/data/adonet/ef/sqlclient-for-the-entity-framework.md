@@ -2,12 +2,12 @@
 title: 用于实体框架的 SqlClient
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: 430e0e143519f97802c8cef4eee658b482a81880
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1c38567f77d69a894376e23b6d4ff6c669edc806
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569097"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>用于实体框架的 SqlClient
 本节介绍用于 SQL Server (SqlClient) 的 .NET Framework 数据提供程序，该提供程序使实体框架能够在 Microsoft SQL Server 上工作。  
@@ -47,7 +47,7 @@ ms.locfileid: "44252585"
   
  [SqlClient 中的已知问题（实体框架）](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
   
-## <a name="see-also"></a>请参阅  
- [实体 SQL 语言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [语言参考](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
- [用于实体框架的 SqlClient 提供程序中的已知问题](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
+## <a name="see-also"></a>请参阅
+- [实体 SQL 语言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [语言参考](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
+- [用于实体框架的 SqlClient 提供程序中的已知问题](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)

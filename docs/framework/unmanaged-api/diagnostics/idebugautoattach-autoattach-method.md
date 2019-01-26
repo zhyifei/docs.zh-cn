@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5c95423a6918da7cc043f8d46de13d166b8d895
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6b45b5e1a7589329b788160df3ac4493efa48197
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663513"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 方法
 执行服务器调用调试器自动附加。  
@@ -45,7 +45,7 @@ HRESULT AutoAttach
  [in]始终设置为`GUID_NULL`。  
   
  `dwPid`  
- [in]进程 ID，通常使用检索`GetCurrentProcessId`函数。  
+ [in]进程 ID，通常情况下检索与`GetCurrentProcessId`函数。  
   
  `dwProgramType`  
  [in]程序类型： `AUTOATTACH_PROGRAM_WIN32`， `AUTOATTACH_PROGRAM_COMPLUS`，或`AUTOATTACH_PROGRAM_UNKNOWN`。  
@@ -54,7 +54,7 @@ HRESULT AutoAttach
  [in]程序 id。  
   
  `pszSessionId`  
- [in]通过 debug 谓词传递的字符串。  
+ [in]Debug 谓词由传递的字符串。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则为 S_OK。  
@@ -62,5 +62,5 @@ HRESULT AutoAttach
 ## <a name="requirements"></a>要求  
  **标头：** DbgAutoAttach.h  
   
-## <a name="see-also"></a>请参阅  
- [IDebugAutoAttach 接口](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+## <a name="see-also"></a>请参阅
+- [IDebugAutoAttach 接口](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

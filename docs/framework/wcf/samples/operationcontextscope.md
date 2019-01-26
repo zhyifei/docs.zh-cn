@@ -2,12 +2,12 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 499d3e9824ede493043b996d581b079ec23938f8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 46180c47512fd4bdb5955ed0febb63892fc27b19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656786"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 OperationContextScope 示例演示如何发送 Windows Communication Foundation (WCF) 调用使用标头上的额外信息。 在此示例中，服务器和客户端都是控制台应用程序。  

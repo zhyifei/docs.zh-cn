@@ -2,12 +2,12 @@
 title: FILESTREAM 数据
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 843aa890ba80ab2816af0726170eacb77f419d50
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4002f95e47b3c1ac7d8415d590b8c4c8a5d95a91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701087"
 ---
 # <a name="filestream-data"></a>FILESTREAM 数据
 FILESTREAM 存储特性用于 varbinary(max) 列中存储的二进制 (BLOB) 数据。 在 FILESTREAM 之前，存储二进制数据需要特殊处理。 非结构化的数据（例如文本文档、图像和视频）通常存储在数据库之外，从而使得难以管理此类数据。  
@@ -37,7 +37,7 @@ Values(1, 0x00, default)
 GO  
 ```  
   
-### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>示例：读取、覆盖和插入 FILESTREAM 数据  
+### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>示例:读取、 覆盖和插入 FILESTREAM 数据  
  下面的示例演示如何从 FILESTREAM 读取数据。 示例代码获取文件的逻辑路径，并将 `FileAccess` 设置为 `Read`，而将 `FileOptions` 设置为 `SequentialScan`。 然后，示例代码将字节从 SqlFileStream 读入到缓存区中， 最后将这些字节写入到控制台窗口。  
   
  该示例还演示如何将数据写入 FILESTREAM（其中，所有现有的数据都将被覆盖）。 示例代码获取文件的逻辑路径，然后创建 `SqlFileStream`，并将 `FileAccess` 设置为 `Write`，而将 `FileOptions` 设置为 `SequentialScan`。 将一个单字节写入到 `SqlFileStream`，从而替换文件中的任何数据。  
@@ -178,9 +178,9 @@ namespace FileStreamTest
 |[创建 FILESTREAM 数据的客户端应用程序](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|介绍用于处理 FILESTREAM 数据的 Win32 API 函数。|  
 |[FILESTREAM 与其他 SQL Server 功能](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|提供将 FILESTREAM 数据与 SQL Server 的其他功能一起使用时的注意事项、准则和限制。|  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
- [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET 概述](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+## <a name="see-also"></a>请参阅
+- [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
+- [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [ADO.NET 概述](../../../../../docs/framework/data/adonet/ado-net-overview.md)

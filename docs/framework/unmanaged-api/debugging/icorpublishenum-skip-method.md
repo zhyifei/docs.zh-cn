@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a691f61fcd25b7aaaae90e6adcc3c2ee0c421cf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4e7d4e449624f295c4011a4ccdad46226e742a8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681152"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip 方法
 将光标向前移动在枚举中指定数目的项。  
@@ -37,16 +37,16 @@ HRESULT Skip (
   
 #### <a name="parameters"></a>参数  
  `celt`  
- [in]向前移动光标所依据的项的数目。  
+ [in]要向前移动游标的项的数目。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorPub.idl、 CorPub.h  
+ **标头：** CorPub.idl CorPub.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorPublishEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorPublishEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

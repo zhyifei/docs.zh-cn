@@ -2,22 +2,16 @@
 title: 图形和多媒体
 ms.date: 03/30/2017
 dev_langs:
-- csharp
-- vb
+  - csharp
+  - vb
 helpviewer_keywords:
-- media [WPF], features
-- video effects [WPF]
-- sound effects [WPF]
-- animation [WPF], features
-- graphics features [WPF]
-- transition effects [WPF]
+  - 'media [WPF], features'
+  - 'video effects [WPF]'
+  - 'sound effects [WPF]'
+  - 'animation [WPF], features'
+  - 'graphics features [WPF]'
+  - 'transition effects [WPF]'
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: c7cae5be1d7e52186752d67354927084d118beb9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198876"
 ---
 # <a name="graphics-and-multimedia"></a>图形和多媒体
 <a name="introduction"></a>
@@ -145,14 +139,14 @@ End Class
   
  有关详细信息，请参阅[多媒体概述](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media>  
- <xref:System.Windows.Media.Animation>  
- <xref:System.Windows.Media.Media3D>  
- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [动画和计时](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [三维图形](https://msdn.microsoft.com/library/565c1f3c-235b-47de-b05b-3b53ed63f1b8)  
- [多媒体](https://msdn.microsoft.com/library/44a8dcd0-80cb-4db0-a222-87cde68c2fac)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media>
+- <xref:System.Windows.Media.Animation>
+- <xref:System.Windows.Media.Media3D>
+- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [动画和计时](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
+- [三维图形](https://msdn.microsoft.com/library/565c1f3c-235b-47de-b05b-3b53ed63f1b8)
+- [多媒体](https://msdn.microsoft.com/library/44a8dcd0-80cb-4db0-a222-87cde68c2fac)

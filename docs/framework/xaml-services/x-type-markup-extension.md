@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: e4d56c5b5deda0bd1df8827020e0b76cc6276c1c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 2fc44163db99be5a0f2ddb2820053a5bdda3ccbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086630"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668985"
 ---
 # <a name="xtype-markup-extension"></a>x:Type 标记扩展
 提供 CLR<xref:System.Type>是指定的 XAML 类型的基础类型的对象。  
@@ -79,8 +79,8 @@ ms.locfileid: "49086630"
   
  在 WPF 中，可以使用 XAML 2009 功能但仅针对松散 XAML (未标记编译的 XAML) 中。 WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Style>  
- [样式设置和模板化](../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [标记扩展和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Style>
+- [样式设置和模板化](../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [标记扩展和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

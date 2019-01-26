@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-ms.openlocfilehash: f88133a5e927a1a1f59b1aa02826d140c107d002
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 836f61e062b921c7e51166a35d8169f903fcbab9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738295"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>如何：沿着路径针对对象进行动画处理（矩阵动画）
 此示例演示如何使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>类沿着由定义路径针对对象进行动画处理<xref:System.Windows.Media.PathGeometry>。  
@@ -34,7 +34,7 @@ ms.locfileid: "43469981"
   
  有关完整示例，请参阅[路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)。 有关几何路径的详细信息，请参阅[几何概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [路径动画操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [路径动画操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

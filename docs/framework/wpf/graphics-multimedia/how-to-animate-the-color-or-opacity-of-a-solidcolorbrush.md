@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], opacity of SolidColorBrush
 - SolidColorBrush [WPF], animating opacity of
 ms.assetid: d9154354-843f-4713-bad1-35bb0ba6eaeb
-ms.openlocfilehash: 194f01d3d5aa4c2b5a08a6c3fdb3dc195b0e9e3e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a6bd7f27f1cce6169181640bb52edad4a493c228
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738688"
 ---
 # <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>如何：对 SolidColorBrush 的颜色或不透明度进行动画处理
 此示例演示如何进行动画处理<xref:System.Windows.Media.SolidColorBrush.Color%2A>并<xref:System.Windows.Media.Brush.Opacity%2A>的<xref:System.Windows.Media.SolidColorBrush>。  
@@ -34,7 +34,7 @@ ms.locfileid: "43500324"
   
  与其他动画示例保持一致，对于此示例中的代码版本使用<xref:System.Windows.Media.Animation.Storyboard>对象来应用它们的动画。 但是，当应用单个动画在代码中的，它是使用更加简便<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法而不是使用<xref:System.Windows.Media.Animation.Storyboard>。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
   
-## <a name="see-also"></a>请参阅  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)
+## <a name="see-also"></a>请参阅
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)

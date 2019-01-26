@@ -2,12 +2,12 @@
 title: SAML 令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: dfd693e262e7566c865d5b9faed5b9e00a8cfec9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 28b36b4f66d131f966c2c52e9003e48c237dc404
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513680"
 ---
 # <a name="saml-token-provider"></a>SAML 令牌提供程序
 本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。 Windows Communication Foundation (WCF) 中的令牌提供程序来提供凭据的安全基础结构。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了默认凭据管理器令牌提供程序。 WCF 还附带[!INCLUDE[infocard](../../../../includes/infocard-md.md)]令牌提供程序。 自定义令牌提供程序在下列情况下有用：
@@ -379,7 +379,7 @@ ms.locfileid: "49308521"
   
 2.  将服务程序文件复制到服务计算机上的服务目录。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-3.  必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新 Service.exe.config 文件以反映此新证书名称。 可以通过修改 Setup.bat 批处理文件来创建服务器证书。 请注意，必须在使用管理员特权打开的 Visual Studio 命令提示窗口中运行 setup.bat 文件。 必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。  
+3.  必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新 Service.exe.config 文件以反映此新证书名称。 可以通过修改 Setup.bat 批处理文件来创建服务器证书。 请注意，在开发人员命令提示符下使用管理员特权打开 Visual Studio 窗口必须在运行 setup.bat 文件。 必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。  
   
 4.  将服务器证书复制到客户端的 CurrentUser-TrustedPeople 存储中。 如果服务器证书是由客户端受信任的颁发者颁发，则不需要执行此步骤。  
   

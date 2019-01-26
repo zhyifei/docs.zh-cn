@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: 259fcc6f1c59df09e768a08204df81aa8105de53
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: e706650ac6da84d9b4e77fc549811e731be61b92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594156"
 ---
 # <a name="call-statement-visual-basic"></a>Call 语句 (Visual Basic)
 将传输到的控件`Function`， `Sub`，或动态链接库 (DLL) 过程。  
@@ -27,7 +27,7 @@ ms.locfileid: "37936784"
 ## <a name="parts"></a>部件  
 |||
 |---|---|
-|`procedureName`|必须的。 要调用的过程的名称。|
+|`procedureName`|必需。 要调用的过程的名称。|
 |`argumentList`|可选。 变量或表达式表示被调用时传递给过程的参数的列表。 由逗号分隔多个自变量。 如果包含`argumentList`，必须将其括在括号中。|
 |||
   
@@ -43,8 +43,8 @@ ms.locfileid: "37936784"
   
  [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>请参阅
+- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

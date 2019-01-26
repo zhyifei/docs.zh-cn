@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c297c2476cb35fef861cda77f4f6f536fd85557
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5d131e9d8c7a1a2b4e4def75ecfb65bb8235a65e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550664"
 ---
 # <a name="iassemblynamegetproperty-method"></a>IAssemblyName::GetProperty 方法
-获取一个指针指向由指定的属性标识符引用的属性。  
+获取一个指针指向引用指定的属性标识符的属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,14 +45,14 @@ HRESULT GetProperty (
  [out]返回的属性的数据。  
   
  `pcbProperty`  
- [在中，out]大小，以字节为单位的`pvProperty`。  
+ [in、 out]大小，以字节为单位的`pvProperty`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IAssemblyName 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a>请参阅
+- [IAssemblyName 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

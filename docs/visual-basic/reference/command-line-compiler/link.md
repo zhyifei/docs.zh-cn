@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 833c0c017d0a9b758dc18273c1fc48fddc1c261d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: a9ebb05ca3230ff5f838e56dcc004c1958f8c86a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736622"
 ---
 # <a name="-link-visual-basic"></a>-链接 (Visual Basic)
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
@@ -33,7 +33,7 @@ ms.locfileid: "44083245"
   
 |术语|定义|  
 |---|---|  
-|`fileList`|必须的。 程序集文件名的逗号分隔列表。 如果文件名包含空格，则将名称括在引号内。|  
+|`fileList`|必需。 程序集文件名的逗号分隔列表。 如果文件名包含空格，则将名称括在引号内。|  
   
 ## <a name="remarks"></a>备注  
  `-link` 选项使你可以部署具有嵌入类型信息的应用程序。 应用程序随后可以使用运行时程序集中实现嵌入类型信息的类型，而无需引用运行时程序集。 如果发布了各种版本的运行时程序集，则包含嵌入类型信息的应用程序可以使用各种版本，而无需重新编译。 有关示例，请参阅[演练：嵌入托管程序集中的类型](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)。  
@@ -87,10 +87,10 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
   
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [演练：嵌入托管程序集中的类型](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
-- [-参考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
-- [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)  
-- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [演练：嵌入托管程序集中的类型](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [-参考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [COM 互操作介绍](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)

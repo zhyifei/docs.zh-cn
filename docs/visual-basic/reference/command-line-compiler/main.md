@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: eb9d38a7d6f74e5d8636f862c663c0ba0990baa5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 355267331eda73ab4c32ec27dbba1d82d729420f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638777"
 ---
 # <a name="-main"></a>-主
 指定包含 `Sub Main` 过程的类或模块。  
@@ -24,7 +24,7 @@ ms.locfileid: "50180227"
   
 ## <a name="arguments"></a>自变量  
  `location`  
- 必须的。 包含模块的类的名称`Sub Main`在程序启动时要调用的过程。 这可能是在窗体 **-主： module**或 **-main:namespace.module**。  
+ 必需。 包含模块的类的名称`Sub Main`在程序启动时要调用的过程。 这可能是在窗体 **-主： module**或 **-main:namespace.module**。  
   
 ## <a name="remarks"></a>备注  
  创建可执行文件或 Windows 可执行程序时，请使用此选项。 如果 **-主**省略选项，编译器将搜索有效的共享`Sub Main`所有公共类和模块中。  
@@ -52,8 +52,8 @@ ms.locfileid: "50180227"
 vbc t2.vb t3.vb -main:Test2  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [在 Visual Basic 中的主要过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [在 Visual Basic 中的主要过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

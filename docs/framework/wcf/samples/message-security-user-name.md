@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-ms.openlocfilehash: c8be13743de6110658588aa983fd5da0397c5cb0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 791c77999b246c1a63767a937189fc6cb970e08f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607967"
 ---
 # <a name="message-security-user-name"></a>用户名消息安全
 本示例演示如何实现一个应用程序，该应用程序对客户端使用具有用户名身份验证的 WS-Security，并要求使用服务器的 X.509v3 证书对服务器进行身份验证。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 默认情况下，使用客户端提供的用户名和密码登录有效的 Windows 帐户。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)。 本示例由客户端控制台程序 (Client.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (Service.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -199,10 +199,10 @@ Press <ENTER> to terminate client.
   
 1.  请确保路径包括 Makecert.exe 和 FindPrivateKey.exe 所在的文件夹。  
   
-2.  在使用管理员特权打开的 Visual Studio 命令提示中运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。  
+2.  使用管理员特权打开 Visual Studio，请从示例安装文件夹在开发人员命令提示符上运行 Setup.bat。 这将安装运行示例所需的所有证书。  
   
     > [!NOTE]
-    >  Setup.bat 批处理文件设计为通过 Visual Studio 命令提示符运行。 这要求路径环境变量指向 SDK 的安装目录。 将在 Visual Studio 命令提示中自动设置此环境变量。  
+    >  Setup.bat 批处理文件设计为 Visual Studio 的开发人员命令提示符运行。 这要求路径环境变量指向 SDK 的安装目录。 此环境变量自动设置为 Visual Studio 在开发人员命令提示中。  
   
 3.  验证是否可以通过输入地址使用浏览器的服务访问 `http://localhost/servicemodelsamples/service.svc` 。
   
@@ -220,7 +220,7 @@ Press <ENTER> to terminate client.
   
 4.  将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
   
-5.  在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat service`。 运行`setup.bat`与`service`参数与计算机的名称的完全限定域名创建一个服务证书并将服务证书导出到名为 Service.cer 的文件。  
+5.  在服务器上运行`setup.bat service`使用管理员特权打开在 Visual Studio 的开发人员命令提示。 运行`setup.bat`与`service`参数与计算机的名称的完全限定域名创建一个服务证书并将服务证书导出到名为 Service.cer 的文件。  
   
 6.  编辑 Web.config 以反映新的证书名称（在 serviceCertificate 元素的 findValue 属性中），该名称与计算机的完全限定域名相同`.`。  
   
@@ -228,7 +228,7 @@ Press <ENTER> to terminate client.
   
 8.  在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  
   
-9. 在客户端上，在使用管理员特权打开的 Visual Studio 命令提示中运行 ImportServiceCert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
+9. 在客户端上运行 ImportServiceCert.bat 在开发人员命令提示符下使用管理员特权打开 Visual Studio。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
   
 10. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
@@ -237,6 +237,6 @@ Press <ENTER> to terminate client.
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 ## <a name="see-also"></a>请参阅

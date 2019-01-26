@@ -2,12 +2,12 @@
 title: WCF 测试客户端 (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: 4e3531b91382c4d47aed73198bd8dd954ae4ca1f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d48caebed857a3a61842b1ea1d3e8b2977d749ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611379"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 测试客户端 (WcfTestClient.exe)
 Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是一个 GUI 工具，使用户能够输入测试参数、 将该输入到服务，提交并查看服务发回的响应。 它提供了完美的服务测试体验与 WCF 服务主机结合使用时。  
@@ -165,5 +165,5 @@ Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是�
   
 -   右键单击**WCF 服务主机**在通知区域中，然后单击图标**退出。** 这会关闭 WCF 服务自动主机和 WCF 测试客户端并停止 Visual Studio 调试过程。  
   
-## <a name="see-also"></a>请参阅  
- [WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+## <a name="see-also"></a>请参阅
+- [WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 600d8528125606c6e1af5b031e2fc31aabb79206
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: eaaa8ad5273331941bc6915231460100e8ac24b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646235"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>在 WPF 中的墨迹入门
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) 具有墨迹功能，可以轻松地将数
 
 ## <a name="prerequisites"></a>系统必备
 
-若要使用以下示例中，首先[安装 Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 它还有助于了解如何编写基本的 WPF 应用程序。 WPF 入门的帮助，请参阅[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。
+若要使用以下示例中，首先[安装 Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 它还有助于了解如何编写基本的 WPF 应用程序。 WPF 入门的帮助，请参阅[演练：我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 
 ## <a name="quick-start"></a>快速入门
 

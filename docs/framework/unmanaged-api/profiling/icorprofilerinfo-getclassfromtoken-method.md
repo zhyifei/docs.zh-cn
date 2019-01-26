@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4b6b7b7b0dbb36724ff5eee2f3f78a3a7422cb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12524de994264d83abf5b5338654e89a0964adff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453328"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667695"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>ICorProfilerInfo::GetClassFromToken 方法
-获取给定元数据标记的类 ID。 此方法是.NET Framework 2.0 版中过时。 使用[icorprofilerinfo2:: Getclassfromtokenandtypeargs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md)相反。  
+获取给定元数据标记的类的 ID。 此方法是在.NET Framework 2.0 版中已过时。 使用[ICorProfilerInfo2::GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md)相反。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ HRESULT GetClassFromToken(
  [in]包含的类模块的 ID。  
   
  `typeDef`  
- [in]`mdTypeDef`引用类的元数据标记。  
+ [in]`mdTypeDef`元数据标记所引用的类。  
   
  `cTypeArgs`  
  [out]指向类 id。  
@@ -50,13 +50,13 @@ HRESULT GetClassFromToken(
  此方法已过时;请改用`ICorProfilerInfo2::GetClassFromTokenAndTypeArgs`对于所有类型。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** 1.0、 1.1  
+ **.NET framework 版本：** 1.0, 1.1  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

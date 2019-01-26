@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], creating reflections
 - reflections [WPF], creating
 ms.assetid: 4f017e16-ab80-43c7-98df-03b6bddbb203
-ms.openlocfilehash: 716adff5c5c41e6601e384b6669516cb6ba1041d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0fae98966481003c7906f5cbb34afaea666d583d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559029"
 ---
 # <a name="how-to-create-a-reflection"></a>如何：创建反射
 此示例演示如何使用<xref:System.Windows.Media.VisualBrush>创建反射。 因为<xref:System.Windows.Media.VisualBrush>可以显示现有视觉对象，可以使用此功能来生成有趣的视觉效果，例如反射和放大。  
@@ -31,6 +31,6 @@ ms.locfileid: "48838386"
   
  有关完整示例，其中包括显示如何放大屏幕的部分以及如何创建反射的示例，请参阅[VisualBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160049)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.VisualBrush>  
- [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.VisualBrush>
+- [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

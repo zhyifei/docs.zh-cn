@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-ms.openlocfilehash: 57b1bebb95c1b3f24e550d554fe369d931d6f6b4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 59765dbcad6c28cf2ad9f3df2052df19cafd08f1
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241796"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307274"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>如何使用指针访问数组元素（C# 编程指南）
 
@@ -24,7 +24,7 @@ for (int i = 65; i < 123; i++)
 }
 ```
 
-方括号中的表达式必须可隐式转换为 `int`、`uint`、`long` 或 `ulong`。 p[e] 运算等效于 \* (p+e)。 与 C 和 C++ 一样，指针元素访问不检查越界错误。
+方括号中的表达式必须可隐式转换为 `int`、`uint`、`long` 或 `ulong`。 `p[e]` 操作等效于 `*(p+e)`。 与 C 和 C++ 一样，指针元素访问不检查越界错误。
 
 ## <a name="example"></a>示例
 
@@ -36,10 +36,10 @@ for (int i = 65; i < 123; i++)
 
 [!code-csharp[csProgGuidePointers#12](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-access-an-array-element-with-a-pointer_2.cs)]
 
-大写字母：
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
-小写字母：
-abcdefghijklmnopqrstuvwxyz****************
+大写字母：  
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+小写字母：  
+abcdefghijklmnopqrstuvwxyz  
 
 ## <a name="see-also"></a>请参阅
 

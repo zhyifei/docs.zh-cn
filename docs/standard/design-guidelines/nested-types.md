@@ -11,12 +11,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: KrzysztofCwalina
-ms.openlocfilehash: 7e5fe66106ad34e88bbf435794a08a159c045b02
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 22c14d05105154ff642cb8a44eda8e7c5d0575e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559536"
 ---
 # <a name="nested-types"></a>嵌套类型
 嵌套的类型是另一种类型，称为封闭类型的范围内定义的类型。 嵌套的类型有权访问其封闭类型的所有成员。 例如，它有权访问在封闭类型和受保护的封闭类型的所有祖先中定义的字段定义的私有字段。  
@@ -43,9 +43,9 @@ ms.locfileid: "53148871"
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [类型设计准则](../../../docs/standard/design-guidelines/type.md)  
+- [类型设计准则](../../../docs/standard/design-guidelines/type.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

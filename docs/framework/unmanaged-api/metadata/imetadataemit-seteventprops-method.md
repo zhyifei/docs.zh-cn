@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 42dc78ff3c58b67801cd99512781d8c8509dd272
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab479aab56b429c104a44b1fae192bc7f20a389d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656916"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 方法
-设置或更新指定的功能，通过调用定义的事件的[imetadataemit:: Defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)。  
+设置或更新的定义通过以前调用的事件指定的功能[imetadataemit:: Defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,29 +49,29 @@ HRESULT SetEventProps (
  [in]事件的标志。 这是一个位掩码的`CorEventAttr`值。  
   
  `tkEventType`  
- [in]Event 类令牌。 这可以是`mdTypeDef`或`mdTypeRef`令牌。  
+ [in]事件类标记。 这可以是`mdTypeDef`或`mdTypeRef`令牌。  
   
  `mdAddOn`  
- [in]用于订阅的事件或为 null 的方法。  
+ [in]用来订阅事件或为 null 的方法。  
   
  `mdRemoveOn`  
- [in]用于取消订阅事件，或者为 null 的方法。  
+ [in]用于取消订阅事件，则为 null 的方法。  
   
  `mdFire`  
- [in]（由派生类） 中用于引发事件的方法。  
+ [in]（由派生类） 用于引发事件的方法。  
   
  `rmdOtherMethods[]`  
- [in]有关其他方法与事件关联的令牌的数组。 数组的最后一个元素必须是`mdMethodDefNil`。  
+ [in]有关其他方法与事件关联的标记的数组。 数组的最后一个元素必须是`mdMethodDefNil`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

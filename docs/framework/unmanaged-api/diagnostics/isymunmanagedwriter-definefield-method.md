@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d5b3c60845fce39ce7f904c6871e7feb16e8970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03c0a9d7315f5158948701d4322887104f0844c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603659"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField 方法
-定义一个不在方法内的变量。 此方法是使用类中的某些字段，位字段，依次类推。  
+定义一个不在方法内的变量。 此方法是使用类中的某些字段、 位域等。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,16 +50,16 @@ HRESULT DefineField(
  [in]字段名称。  
   
  `attributes`  
- [in]中的字段特性。  
+ [in]字段特性。  
   
  `cSig`  
- [in]A`ULONG32`即的大小，以字符为单位，包含字段签名所需的缓冲区。  
+ [in]一个`ULONG32`，它是大小，以字符为单位，包含字段签名所需的缓冲区。  
   
  `signature`  
  [in]字段签名的数组。  
   
  `addrKind`  
- [in]地址类型中。  
+ [in]地址类型。  
   
  `addr1`  
  [in]字段规格的第一个地址。  
@@ -71,10 +71,10 @@ HRESULT DefineField(
  [in]字段规格的第三个地址。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl、 CorSym.h  
+ **标头：** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

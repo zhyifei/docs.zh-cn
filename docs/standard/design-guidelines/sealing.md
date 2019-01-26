@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
-ms.openlocfilehash: fd1abdb4ff6f4850eea96bcfc3afbfe00a4ae56a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646654"
 ---
 # <a name="sealing"></a>密封
 面向对象的框架的一个特性是开发人员可以以框架设计者未曾预料到的方式扩展和定制它们。 这是可扩展设计的强大和危险之处。 因此，在设计框架时，必须根据需要仔细设计可扩展性并在不安全的情况下对其进行限制。  
@@ -45,10 +45,10 @@ ms.locfileid: "53127688"
   
  *部分版权 © 2005，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
-- [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
+- [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [未密封类](../../../docs/standard/design-guidelines/unsealed-classes.md)

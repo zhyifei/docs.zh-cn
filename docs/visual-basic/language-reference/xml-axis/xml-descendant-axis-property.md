@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: 6040401ce3e98c835677be3c4cc7698013348f37
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 3b8d13e606f28896cae88162d572470e49af3739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730277"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML 后代轴属性 (Visual Basic)
 提供对以下的后代的访问：<xref:System.Xml.Linq.XElement>对象，<xref:System.Xml.Linq.XDocument>对象、 一系列<xref:System.Xml.Linq.XElement>对象或一系列<xref:System.Xml.Linq.XDocument>对象。  
@@ -28,21 +28,21 @@ object...<descendant>
   
 ## <a name="parts"></a>部件  
  `object`  
- 必须的。 <xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象、<xref:System.Xml.Linq.XElement> 对象的集合或 <xref:System.Xml.Linq.XDocument> 对象的集合。  
+ 必需。 <xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象、<xref:System.Xml.Linq.XElement> 对象的集合或 <xref:System.Xml.Linq.XDocument> 对象的集合。  
   
  ...<  
- 必须的。 表示子代轴属性的开头。  
+ 必需。 表示子代轴属性的开头。  
   
  `descendant`  
- 必须的。 若要访问，窗体的子代节点的名称 [`prefix``:`]`name`。  
+ 必需。 若要访问，窗体的子代节点的名称 [`prefix``:`]`name`。  
   
 |部件|描述|  
 |----------|-----------------|  
 |`prefix`|可选。 子代节点的 XML 命名空间前缀。 必须使用定义的全局 XML 命名空间`Imports`语句。|  
-|`name`|必须的。 子代节点的本地名称。 请参阅[声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
+|`name`|必需。 子代节点的本地名称。 请参阅[声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
   
  \>  
- 必须的。 表示子代轴属性的结尾。  
+ 必需。 表示子代轴属性的结尾。  
   
 ## <a name="return-value"></a>返回值  
  <xref:System.Xml.Linq.XElement> 对象的集合。  
@@ -75,9 +75,9 @@ object...<descendant>
   
  `Name: Patrick Hines`  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Linq.XElement>  
- [XML 轴属性](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML 文本](../../../visual-basic/language-reference/xml-literals/index.md)  
- [在 Visual Basic 中创建 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [已声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Xml.Linq.XElement>
+- [XML 轴属性](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML 文本](../../../visual-basic/language-reference/xml-literals/index.md)
+- [在 Visual Basic 中创建 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [已声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

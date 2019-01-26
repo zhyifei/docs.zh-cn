@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-ms.openlocfilehash: 5ccdcb3d166e1b703faff1dc8046e61ee213d12a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a1b567356588d6798bae5d73d3d410882d087986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538669"
 ---
 # <a name="how-to-position-the-child-elements-of-a-grid"></a>如何：定位网格的子元素
 此示例演示如何使用 get 和 set 方法上定义的<xref:System.Windows.Controls.Grid>来定位子元素。  
@@ -30,6 +30,6 @@ ms.locfileid: "50186981"
  
  ![屏幕快照描述了具有两个列的 WPF 用户界面、 右侧有一个 3x3 网格和左侧具有按钮的网格行和列之间移动一个有色的矩形](./media/grid-methods-sample.png) 
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Controls.Grid>  
- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Controls.Grid>
+- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)

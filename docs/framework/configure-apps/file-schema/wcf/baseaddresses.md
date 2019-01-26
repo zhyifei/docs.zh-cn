@@ -1,29 +1,29 @@
 ---
-title: '&lt;基址&gt;'
+title: '&lt;baseAddresses&gt;'
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-ms.openlocfilehash: 8de962cc70e1399dd1e9459473055651f9aca5fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 34d400e74b24e9eb4140d1b43597b0217b23d80c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730121"
 ---
-# <a name="ltbaseaddressesgt"></a>&lt;基址&gt;
+# <a name="ltbaseaddressesgt"></a>&lt;baseAddresses&gt;
 表示一个 `baseAddress` 元素集合，这些元素是自承载环境中服务主机的基址。 如果存在基址，则可以使用相对于基址的地址配置终结点。  
   
  \<system.ServiceModel>  
-\<客户端 >  
-\<终结点 >  
-\<主机 >  
-\<基址 >  
+\<client>  
+\<endpoint>  
+\<host>  
+\<baseAddresses>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<baseAddresses>  
-   <add baseAddress="string" />  
-</baseAddresses>  
+<baseAddresses>
+  <add baseAddress="string" />
+</baseAddresses>
 ```  
   
 ## <a name="type"></a>类型  
@@ -45,10 +45,10 @@ ms.locfileid: "32747481"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<主机 >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|一个指定服务主机设置的配置元素。|  
+|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|一个指定服务主机设置的配置元素。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.HostElement>  
- <xref:System.ServiceModel.ServiceHost>  
- <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>  
- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.HostElement>
+- <xref:System.ServiceModel.ServiceHost>
+- <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>
+- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)

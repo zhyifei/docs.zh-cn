@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d93c50968192a7789cbf08968d7ec272c9775d6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b6133b558e62d66cfaac201317f66d784aac264c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513706"
 ---
 # <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a>IHostMemoryManager::AcquiredVirtualAddressSpace 方法
-通知主机公共语言运行时 (CLR) 已获取从操作系统指定的内存。  
+通知宿主公共语言运行时 (CLR) 已获得从操作系统指定的内存。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,22 +38,22 @@ HRESULT AcquiredVirtualAddressSpace(
   
 #### <a name="parameters"></a>参数  
  `startAddress`  
- [in]内存起始地址。  
+ [in]起始内存地址。  
   
  `size`  
- [in]以字节为单位，内存的大小。  
+ [in]以字节为单位的内存的大小。  
   
 ## <a name="remarks"></a>备注  
- `AcquiredVirtualAddressSpace`方法是一个回调方法，必须在承载应用程序的编写器实现。 它是由 CLR 调用。  
+ `AcquiredVirtualAddressSpace`方法是回调方法，必须由主机应用程序的编写器实现。 它是由 CLR 进行调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IHostMemoryManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a>请参阅
+- [IHostMemoryManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

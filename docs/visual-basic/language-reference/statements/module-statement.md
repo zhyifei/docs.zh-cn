@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 5628224a08fe5f12cf2a81b179c4998001174354
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 0503292dca81ef7b249b391f54c0aba2bba2cb10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349012"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524177"
 ---
 # <a name="module-statement"></a>Module 语句
 声明模块的名称，并引入的变量、 属性、 事件和该模块包含的过程的定义。  
@@ -45,7 +45,7 @@ End Module
  请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `name`  
- 必须的。 此模块的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ 必需。 此模块的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  `statements`  
  可选。 定义变量、 属性、 事件、 过程和嵌套的类型，此模块的语句。  
@@ -96,10 +96,10 @@ End Module
 ## <a name="example"></a>示例  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Namespace 语句](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
- [类型提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+## <a name="see-also"></a>请参阅
+- [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Namespace 语句](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)
+- [类型提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)

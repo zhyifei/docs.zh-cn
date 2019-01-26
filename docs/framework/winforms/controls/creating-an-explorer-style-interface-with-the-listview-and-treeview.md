@@ -1,5 +1,5 @@
 ---
-title: 演练：使用设计器创建带有 ListView 和 TreeView 控件的资源管理器样式的界面
+title: 演练：创建带有 ListView 和 TreeView 控件使用设计器的资源管理器样式界面
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 73d3a0bef1ab075aee8e06f676ef17b853773552
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e62f2a9831a4a88a67c5fea1f24432c508c66eae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595615"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517092"
 ---
-# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>演练：使用设计器创建带有 ListView 和 TreeView 控件的资源管理器样式的界面
+# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>演练：创建带有 ListView 和 TreeView 控件使用设计器的资源管理器样式界面
 Visual Studio 的优势之一是时间的能够在较短中创建具有专业外观的 Windows 窗体应用程序。 一种常见方案使用创建用户界面 (UI)<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>类似于 Windows 操作系统的 Windows 资源管理器功能的控件。 Windows 资源管理器中显示用户的计算机上的文件和文件夹的层次结构。  
   
 > [!NOTE]
@@ -94,16 +94,16 @@ Visual Studio 的优势之一是时间的能够在较短中创建具有专业外
 ## <a name="next-steps"></a>后续步骤  
  此应用程序提供的一种方法可以使用示例<xref:System.Windows.Forms.TreeView>和<xref:System.Windows.Forms.ListView>一起控制。 有关这些控件的详细信息，请参阅以下主题：  
   
--   [如何：向 TreeView 或 ListView 控件（Windows 窗体）添加自定义信息](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [如何：将自定义信息添加到 TreeView 或 ListView 控件 （Windows 窗体）](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
 -   [如何：向 ListView 控件添加搜索功能](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
   
 -   [如何：将快捷菜单附加到 TreeView 节点](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.ListView>  
- <xref:System.Windows.Forms.TreeView>  
- [ListView 控件](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [如何：使用 Windows 窗体 TreeView 控件添加和删除节点](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
- [如何：使用 Windows 窗体 ListView 控件添加和删除项](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
- [如何：向 Windows 窗体 ListView 控件添加列](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.ListView>
+- <xref:System.Windows.Forms.TreeView>
+- [ListView 控件](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [如何：添加和删除节点使用 Windows 窗体 TreeView 控件](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [如何：添加和删除使用 Windows 窗体 ListView 控件的项](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [如何：将列添加到 Windows 窗体 ListView 控件](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 899d64633447223fffc5a9c7323a9baa7d040297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181548"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702543"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;删除&gt;connectionManagement （网络设置） 的元素
 从连接管理列表中删除 IP 地址或 DNS 名称。  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
 \<remove>  
   
 ## <a name="syntax"></a>语法  
@@ -74,7 +74,7 @@ ms.locfileid: "50181548"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

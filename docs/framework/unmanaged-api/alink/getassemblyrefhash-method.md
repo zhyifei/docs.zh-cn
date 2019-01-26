@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ccf60d067af356dda1870a2fb1dcca21966f16a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e5698e5555e82fd8f64fd029f78cda361a367ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585219"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash 方法
-检索给定的程序集哈希 blob。  
+检索给定程序集哈希 blob。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,12 +47,12 @@ HRESULT GetAssemblyRefHash(
  接收大小，以字节为单位的哈希 blob。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回，则为 S_OK。  
+ 如果该方法成功，返回，则为 S_OK。  
   
 ## <a name="requirements"></a>要求  
  需要 alink.h  
   
-## <a name="see-also"></a>请参阅  
- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>请参阅
+- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

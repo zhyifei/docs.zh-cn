@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80012d030d0ea51ab3d150a7fd346b78e29dbde5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 709769c336d875ee5ddd00b4e1cf919c61e2c394
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746617"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext 函数
-此函数支持的.NET Framework 基础结构，不宜在代码中直接使用。  
+此函数支持.NET Framework 基础结构，不应在代码中直接使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,15 +43,15 @@ HRESULT CreateApplicationContext (
  [out]指向应用程序上下文的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
   
- **库：** 作为中为 Fusion.dll 资源包括  
+ **库：** 包含为 Fusion.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IAssemblyCache 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
- [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
- [全局程序集缓存](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>请参阅
+- [IAssemblyCache 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [全局程序集缓存](../../../../docs/framework/app-domains/gac.md)

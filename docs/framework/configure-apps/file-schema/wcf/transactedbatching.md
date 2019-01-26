@@ -2,26 +2,26 @@
 title: '&lt;transactedBatching&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: f0cf0b78ddcbd3214e30a36ce7641d115275a265
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2f89a1a6c2cc110a4695b792c5aa801b516393be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749707"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565990"
 ---
 # <a name="lttransactedbatchinggt"></a>&lt;transactedBatching&gt;
 指定接收操作是否支持事务批处理。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<endpointBehaviors>  
-\<行为 >  
-\<transactedBatching >  
+\<behavior>  
+\<transactedBatching>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<transactedBatching maxBatchSize="Integer" />  
+<transactedBatching maxBatchSize="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -40,7 +40,7 @@ ms.locfileid: "32749707"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。|  
   
 ## <a name="remarks"></a>备注  
  采用事务批处理配置的传输尝试将若干接收操作成批归入到一个事务中。 这样做可以避免因创建事务以及在每个接收操作中提交事务所产生的相对较高的成本。  
@@ -49,43 +49,40 @@ ms.locfileid: "32749707"
  下面的示例演示如何将事务处理批处理行为添加到配置文件中的服务。  
   
 ```xml  
-<system.serviceModel>  
-  <services>  
-    <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
-             behaviorConfiguration="CalculatorServiceBehavior">  
-      <host>  
-        <baseAddresses>  
-          <add baseAddress="http://localhost:8000/ServiceModelSamples/service"/>  
-        </baseAddresses>  
-      </host>  
-  
-      <!-- Define NetMsmqEndpoint -->  
-      <endpoint address="net.msmq://localhost/private/ServiceModelSamples"  
-                binding="netMsmqBinding"  
-                contract="Microsoft.ServiceModel.Samples.IQueueCalculator" />  
-  
-      <!-- the mex endpoint is explosed at http://localhost:8000/ServiceModelSamples/service/mex -->  
-      <endpoint address="mex"  
-                binding="mexHttpBinding"  
-                contract="IMetadataExchange" />  
-    </service>  
-  </services>  
-  
-  <behaviors>  
-    <endpointBehaviors>  
-      <behavior name="endpointBehavior">  
-        <transactedBatching maxBatchSize="10" />  
-      </behavior>  
-    </endpointBehaviors>  
-    <serviceBehaviors>  
-      <behavior name="CalculatorServiceBehavior">  
-        <serviceMetadata httpGetEnabled="true" />  
-      </behavior>  
-    </serviceBehaviors>  
-  </behaviors>  
-</system.serviceModel>  
+<system.serviceModel>
+  <services>
+    <service name="Microsoft.ServiceModel.Samples.CalculatorService"
+             behaviorConfiguration="CalculatorServiceBehavior">
+      <host>
+        <baseAddresses>
+          <add baseAddress="http://localhost:8000/ServiceModelSamples/service" />
+        </baseAddresses>
+      </host>
+      <!-- Define NetMsmqEndpoint -->
+      <endpoint address="net.msmq://localhost/private/ServiceModelSamples"
+                binding="netMsmqBinding"
+                contract="Microsoft.ServiceModel.Samples.IQueueCalculator" />
+      <!-- the mex endpoint is explosed at http://localhost:8000/ServiceModelSamples/service/mex -->
+      <endpoint address="mex"
+                binding="mexHttpBinding"
+                contract="IMetadataExchange" />
+    </service>
+  </services>
+  <behaviors>
+    <endpointBehaviors>
+      <behavior name="endpointBehavior">
+        <transactedBatching maxBatchSize="10" />
+      </behavior>
+    </endpointBehaviors>
+    <serviceBehaviors>
+      <behavior name="CalculatorServiceBehavior">
+        <serviceMetadata httpGetEnabled="true" />
+      </behavior>
+    </serviceBehaviors>
+  </behaviors>
+</system.serviceModel>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.TransactedBatchingElement>  
- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.TransactedBatchingElement>
+- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>

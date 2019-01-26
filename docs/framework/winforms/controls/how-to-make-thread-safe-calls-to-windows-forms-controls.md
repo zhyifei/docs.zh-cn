@@ -16,12 +16,12 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 60a71aefbf6d180ffe8d68f54d438e5b58a603fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710464"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>如何：对 Windows 窗体控件进行线程安全调用
 
@@ -406,7 +406,7 @@ private:
  以下代码示例是一个完整的 Windows 窗体应用程序，由带有三个按钮和一个文本框的窗体组成。 第一个按钮演示了不安全的跨线程访问，第二个按钮使用 <xref:System.Windows.Forms.Control.Invoke%2A>演示了安全的访问，第三个按钮通过使用 <xref:System.ComponentModel.BackgroundWorker>演示了安全的访问。
 
 > [!NOTE]
-> 有关如何运行该示例的说明，请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416)。 该示例需引用 System.Drawing 和 System.Windows.Forms 程序集。
+> 有关如何运行该示例的说明，请参阅[如何：编译和运行完整的 Windows 窗体代码示例使用 Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416)。 该示例需引用 System.Drawing 和 System.Windows.Forms 程序集。
 
 ```csharp
 using System;
@@ -1046,7 +1046,7 @@ int main()
 ## <a name="robust-programming"></a>可靠编程
 
 > [!CAUTION]
-> 使用任何种类的多线程时，都有可能会遇到非常严重且复杂的 bug。 有关详细信息，请在实现使用多线程处理的任何解决方案之前参阅[托管线程处理的最佳做法](../../../../docs/standard/threading/managed-threading-best-practices.md)。
+> 使用任何种类的多线程时，都有可能会遇到非常严重且复杂的 bug。 有关详细信息，请在实现使用多线程处理的任何解决方案之前参阅 [Managed Threading Best Practices](../../../../docs/standard/threading/managed-threading-best-practices.md) 。
 
 ## <a name="see-also"></a>请参阅
 
@@ -1054,4 +1054,4 @@ int main()
 - [如何：在后台运行操作](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
 - [如何：实现使用后台操作的窗体](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Windows 窗体和非托管应用程序](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
+- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

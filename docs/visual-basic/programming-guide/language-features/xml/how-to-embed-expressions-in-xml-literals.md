@@ -1,23 +1,23 @@
 ---
-title: 如何：在 XML 文本中嵌入表达式 (Visual Basic)
+title: 如何：在 XML 文本 (Visual Basic 中) 中嵌入表达式
 ms.date: 07/20/2015
 helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 41dc6ef8d2ec2ffd6cd1cf793911f2e09f1a1e77
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: fba33bc177641f3fc9f67b1a82919a44d28a11cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681776"
 ---
-# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>如何：在 XML 文本中嵌入表达式 (Visual Basic)
+# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>如何：在 XML 文本 (Visual Basic 中) 中嵌入表达式
 您可以将 XML 文本与嵌入的表达式来创建 XML 文档、 片段或包含在运行时创建的内容的元素。 以下示例演示如何使用嵌入式的表达式在运行时填充元素内容、 属性和元素名称。  
   
  嵌入式表达式的语法是`<%=` `exp` `%>`，这是相同的语法的[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]使用。 有关详细信息，请参阅[XML 中的嵌入式表达式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。  
   
- 此外可以使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Api 来创建[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。 有关详细信息，请参阅<xref:System.Xml.Linq.XElement>。  
+ 此外可以使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Api 来创建[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。 有关详细信息，请参阅 <xref:System.Xml.Linq.XElement>。  
   
 ## <a name="procedures"></a>过程  
   
@@ -65,8 +65,8 @@ ms.locfileid: "42929511"
     </contact>  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [如何：创建 XML 文本](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)  
- [XML 中的嵌入式表达式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
- [在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>请参阅
+- [如何：创建 XML 文本](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
+- [XML 中的嵌入式表达式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

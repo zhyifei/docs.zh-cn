@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 332829d30f10dde49727c63e9e80a91f24e1123a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d37660d3e2a7640383347071adfe969325ddd77b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151182"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152107"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 实现微服务应用层
 
@@ -19,7 +19,7 @@ ms.locfileid: "53151182"
 
 例如，订购微服务的应用层代码直接在 Ordering.API 项目（ASP.NET Core Web API 项目）中实现，如图 7-23 所示。
 
-![Ordering.API 微服务的解决方案资源管理器视图，其中显示 Application 文件夹下的子文件夹：Behaviors、Commands、DomainEventHandlers、IntegrationEvents、Models、Queries 和 Validations。](./media/image20.png)
+![Ordering.API 微服务的解决方案资源管理器视图，显示“应用程序”文件夹下的子文件夹：行为、命令、DomainEventHandler、IntegrationEvent、模型、查询和验证。](./media/image20.png)
 
 **图 7-23**。 Ordering.API ASP.NET Core Web API 项目中的应用程序层
 
@@ -397,7 +397,7 @@ public class CreateOrderCommandHandler
 #### <a name="additional-resources"></a>其他资源
 
 - **Mark Seemann。在边界上，应用程序不是面向对象的** \
-  [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  [*https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
 - **命令和事件** \
   [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
@@ -812,7 +812,7 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 - **结合使用 CQRS 与 MediatR 和 AutoMapper** \
   [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
-- **让控制器“节食”：POST 和命令。** \
+- **简化控制器：POST 和命令。** \
   [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
 - **解决转存进程管道的整合问题** \

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bec35babec96da5ca5d527b19f853b4ce1c384e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d12d952fe540b2ec36d058ae2100f0cf5c8e6bcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710206"
 ---
 # <a name="icordebugclass-interface1"></a>ICorDebugClass 接口 1
 表示基类型或复杂类型（即用户定义的类型）。 如果该类型为泛型类型，则 `ICorDebugClass` 表示实例化的泛型类型。  
@@ -32,24 +32,24 @@ ms.locfileid: "33406931"
 |------------|-----------------|  
 |[GetModule 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|获取定义此类的模块。|  
 |[GetStaticFieldValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|获取指定的静态字段的值。|  
-|[GetToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|获取`TypeDef`元数据标记，此类。|  
+|[GetToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|获取`TypeDef`此类的元数据标记。|  
   
 ## <a name="remarks"></a>备注  
  `ICorDebugClass`接口表示未实例化的泛型类型。 ICorDebugType 接口表示实例化泛型类型。 例如，`Hashtable<K, V>`将由表示`ICorDebugClass`，而`Hashtable<Int32, String>`将由表示`ICorDebugType`。  
   
- 非泛型类型表示两个`ICorDebugClass`和`ICorDebugType`。 类型实例化处理.NET Framework 2.0 版中引入了后者的接口。  
+ 非泛型类型表示由`ICorDebugClass`和`ICorDebugType`。 在处理类型实例化在.NET Framework 2.0 版中引入的后一种接口。  
   
 > [!NOTE]
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

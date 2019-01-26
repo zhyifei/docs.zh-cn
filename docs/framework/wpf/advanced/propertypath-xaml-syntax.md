@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648742"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 语法
 <xref:System.Windows.PropertyPath>对象支持复杂内联[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]设置的各种属性的语法<xref:System.Windows.PropertyPath>类型作为其值。 本主题介绍<xref:System.Windows.PropertyPath>应用于绑定和动画语法的语法。  
@@ -196,7 +196,7 @@ or
   
  一般情况下，<xref:System.Windows.PropertyPath>设计为使用两个不同的构造函数，另一个用于绑定用法和最简单的动画用法，一个用于复杂动画用法。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>签名对绑定用法，其中对象一个字符串。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>单步动画路径，其中对象是签名<xref:System.Windows.DependencyProperty>。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29>复杂动画的签名。 后一种构造函数使用第一个参数的令牌字符串，以及在该令牌字符串中填充位置的对象的数组，以定义属性路径关系。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.PropertyPath>  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.PropertyPath>
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

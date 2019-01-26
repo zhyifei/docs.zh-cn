@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: a3d60747400d570a3e5a930377e9be9c0aca4f35
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 4b21624ea31fd0e11e598bab435b9f3c6f6d9b9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512835"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort 数据类型 (Visual Basic)
 
@@ -33,7 +33,7 @@ ms.locfileid: "50982706"
   
  `UShort` 的默认值为 0。  
 
-# <a name="literal-assignments"></a>文本分配
+## <a name="literal-assignments"></a>文本分配
 
 您可以声明并初始化`UShort`变量由将其分配十进制文本、 十六进制文本八进制文本，或 （Visual Basic 从 2017年开始） 二进制文本。 如果整数文本在 `UShort` 范围之外（即，如果它小于 <xref:System.UInt16.MinValue?displayProperty=nameWithType> 或大于 <xref:System.UInt16.MaxValue?displayProperty=nameWithType>），会发生编译错误。
 
@@ -66,7 +66,7 @@ Dim number = &H_5826us
   
 -   **负号。** 因为`UShort`是无符号的类型，它不能表示为负数。 如果使用一元负 (`-`) 运算符的表达式的计算结果为类型`UShort`，Visual Basic 将转换为表达式`Integer`第一个。  
   
--   **CLS 遵从性。** `UShort`数据类型不属于[公共语言规范](http://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。
+-   **CLS 遵从性。** `UShort`数据类型不属于[公共语言规范](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。
   
 -   **扩大转换。** `UShort`数据类型加宽到`Integer`， `UInteger`， `Long`， `ULong`， `Decimal`， `Single`，和`Double`。 这意味着可以将转换`UShort`而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。  
   
@@ -74,10 +74,10 @@ Dim number = &H_5826us
   
 -   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.UInt16?displayProperty=nameWithType> 结构。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.UInt16>  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [如何：调用采用无符号类型的 Windows 函数](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.UInt16>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [如何：调用需要使用无符号类型的 Windows 函数](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

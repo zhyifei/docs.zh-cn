@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: 0d3feb168acbd623270a2038bf06a3c97126bd05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1a883b2e57d0f055237d68e4f69651ef496795ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590022"
 ---
 # <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt;元素 （网络设置）
 自定义 Web 请求参数。  
   
  \<configuration>  
 \<system.net>  
-\<设置 >  
-\<httpWebRequest >  
+\<settings>  
+\<httpWebRequest>  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,7 +53,7 @@ ms.locfileid: "50205147"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
 ## <a name="remarks"></a>备注  
  默认情况下，.NET Framework 将严格强制执行 RFC 2616 的 URI 分析。 某些服务器响应可能包含控制字符，在被禁止字段中，这将导致<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>方法会引发<xref:System.Net.WebException>。 如果**useUnsafeHeaderParsing**设置为**true**，<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>不会引发这种情况下; 但是，你的应用程序将很容易受到几种形式的 URI 分析攻击。 最佳解决方案是更改的服务器，以便响应不包含控制字符。  
@@ -76,6 +76,6 @@ ms.locfileid: "50205147"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

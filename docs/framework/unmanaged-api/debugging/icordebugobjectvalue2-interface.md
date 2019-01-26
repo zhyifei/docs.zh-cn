@@ -1,5 +1,5 @@
 ---
-title: ICorDebugObjectValue2 接口 1
+title: ICorDebugObjectValue2 Interface1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectValue2
@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 145b4d00f5ceac621274b010e8220a63319e1425
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 63fc2001f611bc4c199d2a8800af8e5210f37c38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653224"
 ---
-# <a name="icordebugobjectvalue2-interface1"></a>ICorDebugObjectValue2 接口 1
-扩展"ICorDebugObjectValue"接口以支持继承和替代。  
+# <a name="icordebugobjectvalue2-interface1"></a>ICorDebugObjectValue2 Interface1
+扩展了"ICorDebugObjectValue"接口以支持继承和重写。  
   
 ## <a name="methods"></a>方法  
   
@@ -38,7 +38,7 @@ ms.locfileid: "33420916"
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
@@ -46,6 +46,6 @@ ms.locfileid: "33420916"
   
  **NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- 
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+

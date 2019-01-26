@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 7b5a91091a0902928eb2b72bdf69612f2e3f2f48
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 52f93acacec434ce6f7ba93678615c104aa94b24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704038"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>为 Windows Communication Foundation 服务配置绑定
 创建应用程序时，您经常需要将一些决策交给管理员在部署应用程序后制定。 例如，通常没有办法提前知道服务地址或统一资源标识符 (URI)。 最好允许管理员在创建服务后指定地址，而不是对地址进行硬编码。 这种灵活性是通过配置实现的。  
@@ -161,8 +161,8 @@ ms.locfileid: "54029406"
 </bindings>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [简化配置](../../../docs/framework/wcf/simplified-configuration.md)  
- [系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)  
- [终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>请参阅
+- [简化配置](../../../docs/framework/wcf/simplified-configuration.md)
+- [系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)
+- [终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

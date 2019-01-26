@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: a0f6d026714f8e933dc75dbb7c3a5e6e8e1bd795
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 9badc41a97043b6e32da4dd93834770f871261c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498526"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic 中的运算符和表达式
 运算符是对包含值的一个或多个代码元素执行运算的代码元素。 值元素包括变量、常量、文本、属性、`Function` 和 `Operator` 过程的返回结果以及表达式。  
@@ -23,7 +23,7 @@ ms.locfileid: "34805443"
  表达式是一系列与运算符结合使用的值元素，将生成新值。 运算符通过执行计算、比较或其他运算来处理值元素。  
   
 ## <a name="types-of-operators"></a>运算符类型  
- Visual Basic 提供以下类型的运算符：  
+ Visual Basic 提供了以下类型的运算符：  
   
 -   [算术运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)：对数字值执行常见计算，包括更改位模式。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "34805443"
   
  [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
- 在前面的示例中，Visual Basic 所执行的赋值运算符右侧的表达式中的操作 (`=`)，然后将生成的值分配给变量`x`左侧。 对于可以合并到表达式中的运算符数量没有实际限制，但需要了解 [Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)，以确保结果符合预期。  
+ 在前面的示例中，Visual Basic 所执行的赋值运算符右侧的表达式中的操作 (`=`)，然后将生成的值分配给该变量`x`左侧。 对于可以合并到表达式中的运算符数量没有实际限制，但需要了解 [Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)，以确保结果符合预期。  
   
  有关详细信息和示例，请参阅 [Visual Basic 2005 中的运算符重载](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx)。  
   
-## <a name="see-also"></a>请参阅  
- [运算符](../../../../visual-basic/language-reference/operators/index.md)  
- [运算符的有效组合](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)  
- [语句](../../../../visual-basic/language-reference/statements/index.md)
+## <a name="see-also"></a>请参阅
+- [运算符](../../../../visual-basic/language-reference/operators/index.md)
+- [运算符的有效组合](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+- [语句](../../../../visual-basic/language-reference/statements/index.md)

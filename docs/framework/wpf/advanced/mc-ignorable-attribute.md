@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: e8fa4c084ae9c775a18de06c344b2c0b439c2b1b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 25f5fb254ec6f952d7cafa2cb893e35daa0e9029
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573931"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 特性
 指定哪些[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]可能会忽略在标记文件中遇到的命名空间前缀[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器。 `mc:Ignorable`属性支持标记兼容性，对自定义的命名空间映射以及[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]版本控制。  
@@ -65,8 +65,8 @@ ms.locfileid: "43517356"
 
  [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]命名空间定义其他元素和属性的未记录的此区域内[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]。 有关详细信息，请参阅[XML 标记兼容性规范](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Markup.XamlReader>  
- [PresentationOptions:Freeze 特性](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)  
- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Markup.XamlReader>
+- [PresentationOptions:Freeze 特性](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
+- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

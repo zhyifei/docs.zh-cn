@@ -2,12 +2,12 @@
 title: 错误协定
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 37b977feffd7ce46d2f4bc7b8a4e5dc89d21b137
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 39bb9b0ebd9feb6066c1c5e83128eb3a594d6d99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653926"
 ---
 # <a name="fault-contract"></a>错误协定
 “错误协定”示例演示如何将错误信息从服务传达到客户端。 示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)，并且一些附加代码添加到服务，以便将内部异常转换为错误。 客户端试图执行除数为零的运算以在服务上强制产生错误情况。  

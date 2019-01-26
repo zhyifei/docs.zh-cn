@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 48deb8684e53f583e3ff4a5407fadd112d45f749
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 212ce43dc50735da71091111a0fd03eca0583315
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577680"
 ---
 # <a name="ltaddgt-element-for-ltschemaimporterextensionsgt"></a>&lt;添加&gt;元素&lt;schemaImporterExtensions&gt;
 添加将 XSD 类型映射到 .NET Framework 类型时 <xref:System.Xml.Serialization.XmlSchemaImporter> 所用的类型。 有关配置文件的详细信息，请参阅[配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "44196824"
 |特性|描述|  
 |---------------|-----------------|  
 |**name**|用于查找实例的简单名称。|  
-|**type**|必须的。 指定要添加的架构扩展类。 type 特性值必须位于一行上，并且包含完全限定的类型名称。 当程序集放置在全局程序集缓存 (GAC) 中时，该特性值还必须包括已签名程序集的版本、区域性和公钥标记。|  
+|**type**|必需。 指定要添加的架构扩展类。 type 特性值必须位于一行上，并且包含完全限定的类型名称。 当程序集放置在全局程序集缓存 (GAC) 中时，该特性值还必须包括已签名程序集的版本、区域性和公钥标记。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -62,6 +62,6 @@ ms.locfileid: "44196824"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Xml.Serialization.XmlSchemaImporter>  
-- [\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+- <xref:System.Xml.Serialization.XmlSchemaImporter>
+- [\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)
 - [\<schemaImporterExtensions> 元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)

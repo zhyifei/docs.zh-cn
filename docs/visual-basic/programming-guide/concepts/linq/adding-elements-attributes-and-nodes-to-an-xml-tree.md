@@ -1,15 +1,15 @@
 ---
-title: 将元素、 特性和节点添加到 XML 树 (Visual Basic)
+title: 将元素、 属性和节点添加到 XML 树 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e243e694-c987-43aa-8b22-1e33dace582c
-ms.openlocfilehash: 86d28f5974e30a9b7f1a1e830cd40c3cd916e8ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b15a3a943425a7443ad0986d8d91973d0090ed3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669336"
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>将元素、 特性和节点添加到 XML 树 (Visual Basic)
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>将元素、 属性和节点添加到 XML 树 (Visual Basic)
 可以向现有的 XML 树中添加内容（包括元素、属性、注释、处理指令、文本和 CDATA）。  
   
 ## <a name="methods-for-adding-content"></a>添加内容的方法  
@@ -80,5 +80,5 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [修改 XML 树 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+- [修改 XML 树 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

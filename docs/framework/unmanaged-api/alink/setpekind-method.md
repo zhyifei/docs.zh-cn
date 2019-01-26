@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b985aeb97621e552e9e97581e67cae029d019ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fe770ffc5a9c187e9069e8a66553976f9a53b2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709879"
 ---
 # <a name="setpekind-method"></a>SetPEKind 方法
 确定特定于计算机或计算机不可知的可移植可执行文件类型。  
@@ -42,22 +42,22 @@ HRESULT SetPEKind(
  程序集的 ID。  
   
  `FileToken`  
- PE 类型要为其设置的文件的令牌。 如果可以为 NULL`AssemblyID`并不表示未绑定的程序集。  
+ PE 类型要为其设置的文件的令牌。 可以为 NULL，如果`AssemblyID`并不表示未绑定的 netmodule。  
   
  `dwPEKind`  
- PE，所述的一种[CorPEKind 枚举](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)。  
+ PE 所示的类型[CorPEKind 枚举](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)。  
   
  `dwMachine`  
- 目标计算机基础结构，如 NT 标头中所示。  
+ 目标计算机体系结构，如 NT 标头中所示。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回，则为 S_OK。  
+ 如果该方法成功，返回，则为 S_OK。  
   
 ## <a name="requirements"></a>要求  
  需要 alink.h。  
   
-## <a name="see-also"></a>请参阅  
- [GetPEKind 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)  
- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>请参阅
+- [GetPEKind 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
+- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

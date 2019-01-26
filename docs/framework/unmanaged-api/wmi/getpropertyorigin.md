@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86c512f25c40f201d818b6789c6410bfb095b878
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b61c0359b8b18cb5082b1739defc65371476af25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529916"
 ---
 # <a name="getpropertyorigin-function"></a>GetPropertyOrigin 函数
 确定声明方法的类。
@@ -57,7 +57,7 @@ HRESULT GetPropertyOrigin (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的属性。 |
@@ -74,11 +74,11 @@ HRESULT GetPropertyOrigin (
 `pstrClassName`参数必须指向有效`BSTR`由于这是调用该函数之前`out`参数; 此函数返回后，会释放指针。
 
 ## <a name="requirements"></a>要求  
-**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

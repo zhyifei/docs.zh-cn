@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3407fcac420b8129dd39eabf84aec84b58651944
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b460c2c4b0d38ec46ee9d7341de9b320a2ecaa7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594637"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions 枚举
 指定用于选择线程安全性选项的标志。  
@@ -41,15 +41,15 @@ typedef enum CorThreadSafetyOptions {
 |成员|描述|  
 |------------|-----------------|  
 |`MDThreadSatetyDefault`|默认值。 与 `MDThreadSatetyOff` 相同。|  
-|`MDThreadSatetyOff`|指示读取器/编写器锁不能设置。|  
-|`MDThreadSatetyOn`|指示可以设置读取器/编写器锁定。|  
+|`MDThreadSatetyOff`|指示不能设置读取器/写入器锁。|  
+|`MDThreadSatetyOn`|指示可以设置读取器/写入器锁。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

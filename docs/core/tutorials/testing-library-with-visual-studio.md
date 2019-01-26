@@ -1,5 +1,5 @@
 ---
-title: 使用 Visual Studio 2017 测试 .NET Core 类库
+title: 在 Visual Studio 2017 中使用 .NET Core 测试 .NET Standard 类库
 description: 为 .NET Core 类库创建单元测试项目。 验证 .NET Core 类库能否正确地进行单元测试。
 author: BillWagner
 ms.author: wiwagn
@@ -8,16 +8,16 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170790"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362686"
 ---
-# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 测试 .NET Core 类库
+# <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 测试 .NET Standard 库
 
-在[使用 Visual Studio 2017 生成 C# .NET Core 类库](library-with-visual-studio.md)或[使用 Visual Studio 2017 生成 Visual Basic .NET Core 类库](vb-library-with-visual-studio.md)中，创建了简单的类库，用于向 <xref:System.String> 类添加扩展方法。 现在，将创建一个单元测试，用于确保此类库能够按预期运行。 向在上一主题中创建的解决方案添加单元测试项目。
+[在 Visual Studio 2017 中使用 C# 和 .NET Core 生成 .NET Standard 库](library-with-visual-studio.md)或[在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 生成 .NET Standard 库](vb-library-with-visual-studio.md)中，创建了简单的类库，用于向 <xref:System.String> 类添加扩展方法。 现在，将创建一个单元测试，用于确保此类库能够按预期运行。 向在上一篇文章中创建的解决方案添加单元测试项目。
 
 ## <a name="creating-a-unit-test-project"></a>创建单元测试项目
 

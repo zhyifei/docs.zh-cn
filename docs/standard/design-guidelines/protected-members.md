@@ -11,12 +11,12 @@ helpviewer_keywords:
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: KrzysztofCwalina
-ms.openlocfilehash: f0ad21f0a5b869332223d96991dd0a7bebeba420
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7d940f10799df2efc6c6d031781e1ef7cf777dd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559330"
 ---
 # <a name="protected-members"></a>受保护的成员
 受保护的成员本身不提供任何可扩展性，但它们可以通过子类化使可扩展性更强大。 它们可用于公开高级自定义选项，而不会毫无必要地使主公共接口复杂化。  
@@ -31,9 +31,9 @@ ms.locfileid: "53149349"
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
 - [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

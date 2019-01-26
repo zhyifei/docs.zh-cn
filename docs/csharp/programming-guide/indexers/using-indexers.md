@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: ad5c6f68f5eb2f62d7c6f389e374e1b2db5417c6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8c0d145fab69e60a12ebb8b28f087ab643e508b9
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241913"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397054"
 ---
 # <a name="using-indexers-c-programming-guide"></a>使用索引器（C# 编程指南）
 
@@ -57,7 +57,7 @@ public int this[int index]   // Indexer declaration
   
 ## <a name="indexing-using-other-values"></a>使用其他值进行索引
 
-C# 不将索引类型限制为整数。 例如，对索引器使用字符串可能有用。 通过搜索集合内的字符串并返回相应的值，可以实现此类索引器。 由于访问器可被重载，字符串和整数版本可以共存。  
+C# 不将索引参数类型限制为整数。 例如，对索引器使用字符串可能有用。 通过搜索集合内的字符串并返回相应的值，可以实现此类索引器。 由于访问器可被重载，字符串和整数版本可以共存。  
   
 ## <a name="example-2"></a>示例 2  
   

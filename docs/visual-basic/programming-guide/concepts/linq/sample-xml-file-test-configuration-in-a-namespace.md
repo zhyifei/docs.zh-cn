@@ -1,15 +1,15 @@
 ---
-title: 示例 XML 文件： 命名空间 3 中的测试配置
+title: 示例 XML 文件：命名空间 3 中的测试配置
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
-ms.openlocfilehash: 2a572bb4d2618bdd6ef002389703ea63ee2ed21b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 642bc270bc502a4119b31decb0e432ec6951e610
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609648"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>示例 XML 文件：测试命名空间中的配置
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>示例 XML 文件：命名空间中的测试配置
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 这是一个测试配置文件。 该 XML 在某个命名空间中。  
   
 ## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
@@ -56,5 +56,5 @@ ms.locfileid: "39243837"
 </Tests>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [示例 XML 文档 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+- [示例 XML 文档 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

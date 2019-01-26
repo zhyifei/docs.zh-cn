@@ -4,12 +4,12 @@ description: 了解微服务体系中的分布式数据管理面临的挑战和�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: adfb3c0be33d18a991ee552a99a2d02cc3ec7bb3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c3da158bf7a7ee2d4b979349299bba7487c9b1a2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151026"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145986"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分布式数据管理的挑战和解决方案
 
@@ -53,7 +53,7 @@ ms.locfileid: "53151026"
 
 **图 4-9**. 微服务不能直接访问另一微服务中的表
 
-目录微服务不应直接更新购物篮表，因为购物篮表属于购物篮微服务。 若要更新购物篮微服务，目录微服务可能应当基于异步通信（例如集成事件，即消息和基于事件的通信）使用最终一致性。 这是 [eShopOnContainers](http://aka.ms/eshoponcontainers) 引用应用程序跨微服务执行此类一致性的方式。
+目录微服务不应直接更新购物篮表，因为购物篮表属于购物篮微服务。 若要更新购物篮微服务，目录微服务可能应当基于异步通信（例如集成事件，即消息和基于事件的通信）使用最终一致性。 这是 [eShopOnContainers](https://aka.ms/eshoponcontainers) 引用应用程序跨微服务执行此类一致性的方式。
 
 如 [CAP 定理](https://en.wikipedia.org/wiki/CAP_theorem)所阐述的，需要选择可用性或 ACID 非常一致性。 大多数基于微服务的方案都需要可用性和高可伸缩性，而不是非常一致性。 任务关键应用程序必须保持最新并且处于运行状态，开发人员可通过用于处理弱或最终一致性的技术来实现非常一致性。 这是大多数基于微服务的体系结构采用的方法。
 
@@ -100,8 +100,8 @@ ms.locfileid: "53151026"
 - **Materialized View** \（具体化视图）
   [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
-- **Charles Row.ACID vs.BASE: The Shifting pH of Database Transaction Processing** \（BASE：数据库事务处理不断变化的 pH）
-  [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+- **Charles Row.ACID vs.BASE：数据库事务处理不断变化的 pH \**
+  [*https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
 - **Compensating Transaction** \（补偿事务）
   [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)

@@ -4,14 +4,14 @@ description: 本文介绍如何针对适用于 PowerShell、Bash 和 zsh 的 .NE
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 10b2e13aad9821295efc5c36d1cad04f1a95477c
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 783868fb8300dd4a25c62a108c1c0f7a485721df
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53784387"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029601"
 ---
-# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>如何为 .NET Core CLI 启用 TAB 自动补全
+# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>如何为 .NET Core CLI 启用 TAB 自动补全功能
 
 从.NET Core 2.0 SDK 开始，NET Core CLI 支持 tab 自动补全。 本文介绍如何为三个 shell、PowerShell、Bash 和 zsh 配置 tab 自动补全。 其他 shell 可能支持自动补全功能。 请参阅有关如何配置自动补全功能的文档，这些步骤应与本文中介绍的步骤类似。
 
@@ -28,7 +28,7 @@ migrate
 pack
 ```
 
-如果该命令不起作用，请确保已安装 .NET Core 2.0 SDK 或更高版本。 如果已安装，但该命令仍不起作用，请确保 `dotnet` 命令解析为 .NET Core 2.0 及更高版本。 使用 `dotnet --version` 命令查看当前路径解析为的 `dotnet` 的版本。 有关详细信息，请参阅[选择要使用的 .NET Core 版本](../versions/selection.md)页面。
+如果该命令不起作用，请确保已安装 .NET Core 2.0 SDK 或更高版本。 如果已安装，但该命令仍不起作用，请确保 `dotnet` 命令解析为 .NET Core 2.0 SDK 及更高版本。 使用 `dotnet --version` 命令查看当前路径解析为的 `dotnet` 的版本。 有关详细信息，请参阅[选择要使用的 .NET Core 版本](../versions/selection.md)页面。
 
 ### <a name="examples"></a>示例
 

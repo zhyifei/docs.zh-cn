@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: ca1d33b2077736a9760f65857bffe4e96c4aeab0
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
+ms.openlocfilehash: 3be617d53ba87c35ae44f143da15a6b647eaa0d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680775"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;添加&gt;bypasslist （网络设置） 的元素
 将 IP 地址或 DNS 名称添加到代理跳过列表。  
@@ -80,6 +80,6 @@ ms.locfileid: "50235721"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

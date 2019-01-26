@@ -2,12 +2,12 @@
 title: 关键字参考
 description: 找到的所有信息的链接F#语言关键字。
 ms.date: 05/16/2016
-ms.openlocfilehash: 75adc609dc6feeda2be9aa76bbb50b47b3d738ea
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611745"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857900"
 ---
 # <a name="keyword-reference"></a>关键字参考
 
@@ -20,7 +20,7 @@ ms.locfileid: "53611745"
 |关键字|链接|描述|
 |-------|----|-----------|
 |`abstract`|[成员](members/index.md)<br /><br />[抽象类](abstract-classes.md)|指示在其中声明或类型，其中是虚拟的但默认实现中具有任何实现的方法。|
-|`and`|[`let` 绑定](functions/let-bindings.md)<br /><br />[成员](members/index.md)<br /><br />[约束](generics/constraints.md)|在相互递归绑定，在属性声明中，并使用多个泛型参数约束中使用。|
+|`and`|[`let` Bindings](functions/let-bindings.md)<br /><br />[记录](records.md)<br /><br />[成员](members/index.md)<br /><br />[约束](generics/constraints.md)|使用中相互递归绑定和记录，在属性声明中，并使用多个泛型参数约束。|
 |`as`|[类](classes.md)<br /><br />[模式匹配](Pattern-Matching.md)|用于为当前类对象的对象名称。 此外用于为中的模式匹配的整个模式提供名称。|
 |`assert`|[断言](assertions.md)|用于在调试过程中验证代码。|
 |`base`|[类](classes.md)<br /><br />[继承](inheritance.md)|用作基类对象的名称。|
@@ -51,7 +51,7 @@ ms.locfileid: "53611745"
 |`interface`|[接口](interfaces.md)|用于声明和实现接口。|
 |`internal`|[访问控制](access-control.md)|用于指定成员是可见程序集内而非其外部。|
 |`lazy`|[延迟计算](lazy-computations.md)|用于指定仅在需要结果时要执行的计算。|
-|`let`|[`let` 绑定](functions/let-bindings.md)|用于将相关联，或将绑定到值或函数的名称。|
+|`let`|[`let` Bindings](functions/let-bindings.md)|用于将相关联，或将绑定到值或函数的名称。|
 |`let!`|[异步工作流](asynchronous-workflows.md)<br /><br />[计算表达式](computation-expressions.md)|用于在异步工作流可将名称绑定到一个异步计算的结果中，或在其他计算表达式中，用于将绑定到一个结果，其计算类型的名称。|
 |`match`|[match 表达式](match-expressions.md)|用于通过一种模式值进行对比的分支。|
 |`match!`|[计算表达式](computation-expressions.md#match)|适用于内联到调用计算表达式和模式匹配其结果。|
@@ -73,7 +73,7 @@ ms.locfileid: "53611745"
 |`return!`|[计算表达式](computation-expressions.md)<br /><br />[异步工作流](asynchronous-workflows.md)|用于指示计算表达式，计算时，提供了包含的计算表达式的结果。|
 |`select`|[查询表达式](query-expressions.md)|在查询表达式中用于指定哪些字段或要提取的列。 请注意，这是上下文关键字，这意味着，它并不实际的保留的字，仅充当相应的上下文中的关键字。|
 |`static`|[成员](members/index.md)|用于指示方法或属性，可以调用而无需类型的实例或类型的所有实例之间共享的值成员。|
-|`struct`|[结构](structures.md)<br /><br />[约束](generics/constraints.md)|用于声明结构类型。<br /><br />此外用于泛型参数约束。<br /><br />用于实现 OCaml 模块定义中的兼容性。|
+|`struct`|[结构](structures.md)<br /><br /> [元组](tuples.md)<br/><br/>[约束](generics/constraints.md)|用于声明结构类型。<br /><br/>用于指定结构元组。<br/><br />此外用于泛型参数约束。<br /><br />用于实现 OCaml 模块定义中的兼容性。|
 |`then`|[条件表达式：`if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[构造函数](members/constructors.md)|在条件表达式中使用。<br /><br />此外用于在对象构造后执行的负面影响。|
 |`to`|[循环：`for...to` 表达式](loops-for-to-expression.md)|在中使用`for`循环，以表示一个范围。|
 |`true`|[基元类型](primitive-types.md)|用作布尔值文字。|

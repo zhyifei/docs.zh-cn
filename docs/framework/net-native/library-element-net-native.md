@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eabaf1dd99fce7cd4c45f80666534f904fcdfdf9
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: e6615ab30fdc0d0ab65f135e1df4e206f5548dc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34311970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743773"
 ---
 # <a name="ltlibrarygt-element-net-native"></a>&lt;Library&gt; 元素 (.NET Native)
 定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。  
@@ -58,7 +58,7 @@ ms.locfileid: "34311970"
   
  `<Library>` 元素充当容器，用来定义其元数据在运行时间需要存在的程序元素；此元素不表示策略。 在编译时间，编译器工具仅搜索由 `<Library>` 元素指定的库，以查找其子元素识别出的程序元素。 相比而言，编译器工具搜索 .NET Framework 核心库等所有库，以查找由 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 元素识别出的子元素。  
   
- `<Library>` 指令可以有条件地使用。 如果名称`<Library>`元素开始和结束的星号 (\*)，则`<Library>`指令仅仅当星号之间指定的程序集引用的应用程序时，才有意义。 例如，以下运行时指令仅在 Utillities.dll 程序库被应用引用时才适用。  
+ `<Library>` 指令可以有条件地使用。 如果的名称`<Library>`元素开始和结束的星号 (\*)，则`<Library>`指令仅在星号之间指定的程序集引用的应用程序有影响。 例如，以下运行时指令仅在 Utillities.dll 程序库被应用引用时才适用。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -68,8 +68,8 @@ ms.locfileid: "34311970"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [\<应用程序 > 元素](../../../docs/framework/net-native/application-element-net-native.md)  
- [\<指令 > 元素](../../../docs/framework/net-native/directives-element-net-native.md)  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>请参阅
+- [\<应用程序 > 元素](../../../docs/framework/net-native/application-element-net-native.md)
+- [\<指令 > 元素](../../../docs/framework/net-native/directives-element-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)

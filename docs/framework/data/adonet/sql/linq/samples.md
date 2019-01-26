@@ -2,12 +2,12 @@
 title: 示例
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: 0732a876d678967d25e41b9fbe767df506257ecb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 55d53642b1d98c798b164ca99d2a59d7ba299d22
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729020"
 ---
 # <a name="samples"></a>示例
 本主题提供了包含 Visual Basic 和 C# 解决方案的链接[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]示例代码。  
@@ -27,6 +27,6 @@ ms.locfileid: "43503942"
   
 -   学习详细介绍的白皮书[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]技术并包含 Visual Basic 和 C# 代码示例。 有关详细信息，请参阅[LINQ to SQL： 关系数据的.net 语言集成查询](https://go.microsoft.com/fwlink/?LinkId=93205)。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- [LINQ to SQL 演练](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)
+## <a name="see-also"></a>请参阅
+- [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ to SQL 演练](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)

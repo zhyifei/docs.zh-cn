@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 22aca20eb3f6bc2e31fb5a01ed7c153cccef0bd8
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 4eded4812d8894b58331f26ec75c592c15e95419
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663201"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>如何：将命令挂钩到支持命令的控件
 以下示例显示如何将 <xref:System.Windows.Input.RoutedCommand> 挂钩到含对该命令的内置支持的 <xref:System.Windows.Controls.Control>。  有关将命令挂钩到多个源的完整示例，请参阅[创建自定义 RoutedCommand 示例](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)示例。  
@@ -36,6 +36,6 @@ ms.locfileid: "34805430"
  [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
  [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
-## <a name="see-also"></a>请参阅  
- [命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [将命令挂钩到不支持命令的控件](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)
+## <a name="see-also"></a>请参阅
+- [命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [将命令挂钩到不支持命令的控件](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

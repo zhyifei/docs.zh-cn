@@ -2,21 +2,21 @@
 title: 元数据的安全注意事项
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 4afa040744b1b1a8a25addb954d5785436899434
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa1a79a0be6682a8459043955a7956f6f8444bf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187590"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585560"
 ---
 # <a name="security-considerations-with-metadata"></a>元数据的安全注意事项
 时使用的元数据功能的 Windows Communication Foundation (WCF) 中，请考虑发布、 检索和使用服务元数据的安全隐患。  
   
 ## <a name="when-to-publish-metadata"></a>何时发布元数据  
- 默认情况下，WCF 服务不要发布元数据。 若要发布的 WCF 服务的元数据必须显式启用元数据发布到你的服务添加元数据终结点 (请参阅[发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md))。 禁用元数据发布可以缩小服务的攻击面，同时降低意外泄漏信息的风险。 并非所有服务都必须发布元数据。 如果不必发布元数据，请考虑使其处于关闭状态。 请注意，仍生成直接从您使用的服务程序集的元数据和客户端代码[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 有关使用 Svcutil.exe 导出元数据的详细信息，请参阅[如何： 使用 Svcutil.exe 导出元数据编译服务代码从](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)。  
+ 默认情况下，WCF 服务不要发布元数据。 若要发布的 WCF 服务的元数据必须显式启用元数据发布到你的服务添加元数据终结点 (请参阅[发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md))。 禁用元数据发布可以缩小服务的攻击面，同时降低意外泄漏信息的风险。 并非所有服务都必须发布元数据。 如果不必发布元数据，请考虑使其处于关闭状态。 请注意，仍生成直接从您使用的服务程序集的元数据和客户端代码[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 有关使用 Svcutil.exe 导出元数据的详细信息，请参阅[如何：使用 Svcutil.exe 从已编译的服务代码中导出元数据](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)。  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>使用安全绑定发布元数据  
- WCF 提供了不安全的默认元数据绑定和它们允许匿名访问的元数据。 WCF 服务发布服务元数据包含有关服务的详细的说明，可能会有意或无意地包含敏感信息。 例如，服务元数据可能包含有关不希望对外公布的基础结构操作信息。 要防止对服务元数据进行未经授权的访问，您可以对元数据终结点使用安全绑定。 元数据终结点响应可以使用安全套接字层 (SSL) 保护元数据的 HTTP/GET 请求。 有关详细信息，请参阅[如何： 保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
+ WCF 提供了不安全的默认元数据绑定和它们允许匿名访问的元数据。 WCF 服务发布服务元数据包含有关服务的详细的说明，可能会有意或无意地包含敏感信息。 例如，服务元数据可能包含有关不希望对外公布的基础结构操作信息。 要防止对服务元数据进行未经授权的访问，您可以对元数据终结点使用安全绑定。 元数据终结点响应可以使用安全套接字层 (SSL) 保护元数据的 HTTP/GET 请求。 有关详细信息，请参阅[如何：保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
   
  保护元数据终结点还为请求者提供一种安全检索服务元数据的方法，避免篡改或伪造的风险。  
   
@@ -38,6 +38,6 @@ ms.locfileid: "50187590"
 ## <a name="protecting-application-configuration-files"></a>保护应用程序配置文件  
  服务的应用程序配置文件可以控制是否发布元数据以及如何发布元数据。 最好利用适当的访问控制列表 (ACL) 来保护应用程序配置文件，以确保攻击者无法修改此类设置。  
   
-## <a name="see-also"></a>请参阅  
- [如何：保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
- [安全性](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>请参阅
+- [如何：保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [安全性](../../../../docs/framework/wcf/feature-details/security.md)

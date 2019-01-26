@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 7075f8258e617d2d13d4585fdd5fb7aefaa50664
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 361240c2d2c140c7bf521ece423df4aaed075ba4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745410"
 ---
 # <a name="xuid-directive"></a>x:Uid 指令
 提供的标记元素的唯一标识符。 在许多情况下，此唯一标识符将使用 XAML 本地化流程和工具。  
@@ -41,7 +41,7 @@ ms.locfileid: "43528383"
 ## <a name="wpf-usage-notes"></a>WPF 用法说明  
  有关角色的详细信息`x:Uid`WPF 在本地化过程中以及 XAML 的 BAML 形式中，请参阅[WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
- <xref:Microsoft.Build.Tasks.Windows.UidManager>  
- [WPF 全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
+- <xref:Microsoft.Build.Tasks.Windows.UidManager>
+- [WPF 全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

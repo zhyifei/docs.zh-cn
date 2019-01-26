@@ -2,12 +2,12 @@
 title: LINQ to XML 与其他 XML Technologies2
 ms.date: 07/20/2015
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
-ms.openlocfilehash: 926f1a1ab49a627331a614ef68790ea289b3dcff
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 2a671e2588dfe5d325caf745d60fcb993f4d0052
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690314"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML 与其他 XML 技术
 本主题将 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 与下面的 XML 技术进行比较：<xref:System.Xml.XmlReader>、XSLT、MSXML 和 XmlLite。 了解这些信息，有助于确定要使用哪种技术。  
@@ -52,5 +52,5 @@ ms.locfileid: "42908071"
   
  XmlLite 未与 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 集成。 它不会使程序员的工作效率得到提高，而工作效率提高正是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 背后的推动力量。  
   
-## <a name="see-also"></a>请参阅  
- [入门 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+- [入门 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

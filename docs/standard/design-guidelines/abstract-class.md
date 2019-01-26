@@ -11,12 +11,12 @@ helpviewer_keywords:
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
 author: KrzysztofCwalina
-ms.openlocfilehash: 1982c7c97802dedd1d49c770be5a7ac00944cbfc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6eec3bb4575b89c6476e6c3410050c705141777f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550405"
 ---
 # <a name="abstract-class-design"></a>抽象类设计
 **X** 请勿在抽象类型中定义公共或受保护的内部构造函数。  
@@ -36,9 +36,9 @@ ms.locfileid: "53130862"
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [类型设计准则](../../../docs/standard/design-guidelines/type.md)  
+- [类型设计准则](../../../docs/standard/design-guidelines/type.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

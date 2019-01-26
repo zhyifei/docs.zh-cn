@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: c4c3214c4998afa23032347e08007f2f1933bba8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 601f8f3a5ea86da060b2d26796b2299d87946443
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547795"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>示例编译命令行 (Visual Basic)
 作为编译 Visual Basic 程序从 Visual Studio 中的替代方法，您可以从命令行以生成可执行文件 (.exe) 文件或动态链接库 (.dll) 文件进行编译。  
@@ -35,6 +35,6 @@ ms.locfileid: "50181116"
 > [!TIP]
 >  通过使用 Visual Studio IDE 生成项目时，可以显示有关关联的信息**vbc**命令使用输出窗口中其编译器选项。 若要显示此信息，请打开[选项对话框、 项目和解决方案、 生成和运行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)，然后设置**MSBuild 项目生成输出详细级别**到**正常**或更高级别的详细级别。   
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

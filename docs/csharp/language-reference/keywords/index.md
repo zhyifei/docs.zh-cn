@@ -1,20 +1,14 @@
 ---
-title: C# 关键字
+title: 'C# 关键字'
 ms.date: 03/07/2017
 f1_keywords:
-- cs.keywords
+  - cs.keywords
 helpviewer_keywords:
-- keywords [C#]
-- C# language, keywords
-- Visual C#, keywords
-- '@ keyword'
+  - 'keywords [C#]'
+  - 'C# language, keywords'
+  - 'Visual C#, keywords'
+  - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 4e4cc7b3a0249836e6c0960208c0158962088c11
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861928"
 ---
 # <a name="c-keywords"></a>C# 关键字
 关键字是预定义的保留标识符，对编译器有特殊意义。 除非前面有 `@` 前缀，否则不能在程序中用作标识符。 例如，`@if` 是有效标识符，而 `if` 则不是，因为 `if` 是关键字。  
@@ -57,10 +51,10 @@ ms.locfileid: "43861928"
 |[let](let-clause.md)|[nameof](nameof.md)|[on](on.md)|
 |[orderby](orderby-clause.md)|[partial（类型）](partial-type.md)|[partial（方法）](partial-method.md)|
 |[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
-|[value](value.md)|[var](var.md)|[when（筛选条件）](when.md)|
+|[值](value.md)|[var](var.md)|[when（筛选条件）](when.md)|
 |[where（泛型类型约束）](where-generic-type-constraint.md)|[where（查询子句）](where-clause.md)|[yield](yield.md)|
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
 - [C# 编程指南](../../../csharp/programming-guide/index.md)

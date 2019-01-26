@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 32bd0912b0bae3340cffed010fc67431d0efb376
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 528e63e6b7d978b3bbdfcb78e4260b4590db6d7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520017"
 ---
 # <a name="date-data-type-visual-basic"></a>Date 数据类型 (Visual Basic)
 保存 IEEE 64 位（8 字节）值，它代表从 0001 年 1 月 1 日到 9999 年 12 月 31 日的日期，12:00:00 AM（午夜）到 11:59:59.9999999 PM 的时间。 每个增量表示自公历 1 年 1 月 1 日开始后经过的 100 纳秒的时间。 最大值表示 10000 年 1 月 1 日开始之前的 100 纳秒。  
@@ -61,7 +61,7 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 ## <a name="programming-tips"></a>编程提示  
   
--   **互操作注意事项。** 如果你与不是为 .NET Framework 编写的组件（如自动化或 COM 对象）交互，请记住，其他环境中的日期/时间类型与 Visual Basic `Date` 类型不兼容。 如果将日期/时间参数传递给此类组件，请在新的 Visual Basic 代码中将其声明为 `Double` 而不是 `Date`，并使用转换方法 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 和 <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>。  
+-   **互操作注意事项。** 如果你与不是为 .NET Framework 编写的组件（如自动化或 COM 对象）交互，请记住，其他环境中的日期/时间类型与 Visual Basic `Date` 类型不兼容。 如果将日期/时间自变量传递给此类组件，请在新的 Visual Basic 代码中将其声明为 `Double` 而不是 `Date`，并使用转换方法 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 和 <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>。  
   
 -   **类型字符。** `Date` 不包含文本类型字符或标识符类型字符。 但是，编译器会将括在数字符号 (`# #`) 内的文本作为 `Date`。  
   
@@ -74,11 +74,11 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
 Dim someDateAndTime As Date = #8/13/2002 12:14 PM#  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.DateTime?displayProperty=nameWithType>  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [标准日期和时间格式字符串](../../../standard/base-types/standard-date-and-time-format-strings.md)  
- [自定义日期和时间格式字符串](../../../standard/base-types/custom-date-and-time-format-strings.md)  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.DateTime?displayProperty=nameWithType>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [标准日期和时间格式字符串](../../../standard/base-types/standard-date-and-time-format-strings.md)
+- [自定义日期和时间格式字符串](../../../standard/base-types/custom-date-and-time-format-strings.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: e2fdb92ad2f044aa74201676ed8cb89bb51de5f5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dfbeb5ff94f39e8d8df03feea9ff55db748d2182
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239834"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058576"
 ---
 # <a name="readonly-c-reference"></a>readonly（C# 参考）
 
@@ -45,7 +45,7 @@ public readonly int y = 5;
 只有在这些构造函数上下文中，将 `readonly` 字段作为 [out](out-parameter-modifier.md) 或 [ref](ref.md) 参数传递才有效。
 
 > [!NOTE]
-> `readonly` 关键字不同于 [const](const.md) 关键字。 `const` 字段只能在该字段的声明中初始化。 可以在字段声明或任何构造函数中多次分配 `readonly` 字段。 因此，根据所使用的构造函数，`readonly` 字段可能具有不同的值。 另外，虽然 `const` 字段是编译时常量，但 `readonly` 字段可用于运行时常量，如下面的示例所示： 
+> `readonly` 关键字不同于 [const](const.md) 关键字。 `const` 字段只能在该字段的声明中初始化。 可以在字段声明和任何构造函数中多次分配 `readonly` 字段。 因此，根据所使用的构造函数，`readonly` 字段可能具有不同的值。 另外，虽然 `const` 字段是编译时常量，但 `readonly` 字段可用于运行时常量，如下面的示例所示： 
 
 ```csharp
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;

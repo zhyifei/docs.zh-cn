@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c7edfc7cf3a55dc8d789b20540af6a4ad9b91299
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191059"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221253"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用强名称为程序集签名
 可通过许多方法为程序集签署强名称：  
@@ -45,7 +45,7 @@ ms.locfileid: "50191059"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>使用程序集链接器创建程序集并为程序集签署强名称  
   
--   在 [Visual Studio 命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)处，键入以下命令：  
+-   在 [Visual Studio 开发人员命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)处，键入以下命令：  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   

@@ -2,12 +2,12 @@
 title: 安全数据访问
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: d7964a084c1d5936b034d76b8c6e46053e8dcb0a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 600ab092d1ae7c890a5d50f3beed52eb8b4110b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129189"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494634"
 ---
 # <a name="secure-data-access"></a>安全数据访问
 要编写安全的 ADO.NET 代码，必须了解基础数据存储（即数据库）中提供的安全机制。 您还需要考虑应用程序可能包含的其他功能或组件对安全性的影响。  
@@ -87,10 +87,10 @@ ms.locfileid: "53129189"
 |[与非托管代码交互操作](../../../../docs/framework/interop/index.md)|包含描述如何向 .NET Framework 公开 COM 组件以及如何向 COM 公开 .NET Framework 组件的主题。|
 |[高级 COM 互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|包含高级主题，如主互操作程序集、线程和自定义封送处理。|
 
-## <a name="see-also"></a>请参阅  
- [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [有关数据访问策略建议](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [有关数据访问策略建议](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

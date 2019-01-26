@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: aec786123357337cbaa6251191a023c092af3049
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 726f13d778fc4cff9bdafed4518e9dee3eeab6b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501277"
 ---
 # <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt;元素
 包含一个密码类，该类具有到 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 元素中的友好名称的映射。  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<cryptoNameMapping >  
-\<cryptoClasses >  
-\<cryptoClass >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<cryptoNameMapping>  
+\<cryptoClasses>  
+\<cryptoClass>  
   
 ## <a name="syntax"></a>语法  
   
@@ -77,8 +77,8 @@ ms.locfileid: "53145749"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>请参阅
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

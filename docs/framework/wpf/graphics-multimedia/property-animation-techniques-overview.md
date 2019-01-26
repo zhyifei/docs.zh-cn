@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: 438b59aa4aa4213960e0bc3d479a2b949f6d374e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 09e778f89f58556a53f19b4c89e3d82ed94cd64b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395957"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614154"
 ---
 # <a name="property-animation-techniques-overview"></a>属性动画技术概述
 本主题介绍了处理动画属性的不同方法：情节提要、本地动画、时钟和基于帧的动画。  
@@ -58,7 +58,7 @@ ms.locfileid: "43395957"
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.EventTrigger>|是|是|是|是|[使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> 和属性 <xref:System.Windows.Trigger>|否|是|是|是|[在属性值更改时触发动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.DataTrigger>|否|是|是|是|[如何：在数据更改时触发动画](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.DataTrigger>|否|是|是|是|[如何：数据发生更改时触发动画](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法|是|No|否|否|[使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  有关详细信息<xref:System.Windows.Media.Animation.Storyboard>对象，请参阅[演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
@@ -108,7 +108,7 @@ ms.locfileid: "43395957"
   
  有关时钟对象的详细信息，请参阅[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。  
   
-## <a name="per-frame-animation-bypass-the-animation-and-timing-system"></a>基于帧的动画：绕过动画和计时系统  
+## <a name="per-frame-animation-bypass-the-animation-and-timing-system"></a>每个帧的动画：绕过动画和计时系统  
  如果需要完全绕过 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统，可以使用此方法。 此方法的一个方案是物理动画，其中的每个动画步骤都要求基于最后一组对象交互来重新计算。  
   
  基于帧的动画无法在样式、控件模板或数据模板内定义。  
@@ -121,8 +121,8 @@ ms.locfileid: "43395957"
   
  有关详细信息，请参阅<xref:System.Windows.Media.CompositionTarget.Rendering>页。  
   
-## <a name="see-also"></a>请参阅  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+## <a name="see-also"></a>请参阅
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

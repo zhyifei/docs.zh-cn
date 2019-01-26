@@ -1,5 +1,5 @@
 ---
-title: 如何：裁切和缩放图像
+title: 如何：裁剪和缩放图像
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,23 +8,24 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: d5acda50a1aa0f0cae6e77a748b011908fcc8c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f6d721edc4f889c2da8ece63f262c7fb55192bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707695"
 ---
-# <a name="how-to-crop-and-scale-images"></a>如何：裁切和缩放图像
-<xref:System.Drawing.Graphics>类提供了若干个<xref:System.Drawing.Graphics.DrawImage%2A>方法，其中一些具有可用于裁剪和缩放图像的源和目标矩形参数。  
+# <a name="how-to-crop-and-scale-images"></a>如何：裁剪和缩放图像
+<xref:System.Drawing.Graphics>类提供了若干<xref:System.Drawing.Graphics.DrawImage%2A>方法，其中一些具有可用于裁剪和缩放图像的源和目标矩形参数。  
   
 ## <a name="example"></a>示例  
- 下面的示例构造<xref:System.Drawing.Image>从磁盘文件 Apple.gif 的对象。 代码中的原始大小绘制整个 apple 映像。 然后，代码调用<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>对象大于原始 apple 映像的目标矩形中绘制 apple 映像的一部分。  
+ 下面的示例构造<xref:System.Drawing.Image>从磁盘文件 Apple.gif 对象。 该代码在其原始大小绘制整个 apple 图像。 然后，代码调用<xref:System.Drawing.Graphics.DrawImage%2A>方法的<xref:System.Drawing.Graphics>对象大于原始 apple 映像的目标矩形中绘制 apple 图像的一部分。  
   
- <xref:System.Drawing.Graphics.DrawImage%2A>方法确定 apple 绘制通过查看源矩形，通过第三个、 第四步： 指定第五个，和第六个自变量的哪个部分。 在这种情况下，apple 裁剪为 75%的其宽度和高度的 75%。  
+ <xref:System.Drawing.Graphics.DrawImage%2A>方法确定 apple 通过查看源矩形，由第三个、 第四，指定第五和第六个参数绘制的哪个部分。 在这种情况下，在 apple 要裁剪成其宽度的 75%和 75%的窗体的高度。  
   
- <xref:System.Drawing.Graphics.DrawImage%2A>方法确定绘制裁剪后的 apple 的位置和大小以使通过查看目标矩形的裁剪的 apple，即第二个自变量所指定。 在这种情况下，目标矩形是 30%宽度和高度大于原始图像的 30%。  
+ <xref:System.Drawing.Graphics.DrawImage%2A>方法确定绘制裁剪后的 apple 的位置和大小以便裁剪后的 apple 通过查看目标矩形，即指定的第二个参数。 在这种情况下，目标矩形是更广的 30%，比原始图像高度的 30%。  
   
- 下图显示原始 apple 和缩放、 裁剪 apple。  
+ 下图显示了原始 apple 和缩放、 裁剪 apple。  
   
  ![裁剪和缩放](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")  
   
@@ -32,8 +33,8 @@ ms.lasthandoff: 05/04/2018
  [!code-vb[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。 请确保将`Apple.gif`用的图像文件名称和你系统有效的路径。  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。 请务必替换`Apple.gif`与图像文件名称和在您的系统都有效的路径。  
   
-## <a name="see-also"></a>请参阅  
- [图像、位图和图元文件](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [使用图像、位图、图标和图元文件](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>请参阅
+- [图像、位图和图元文件](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [使用图像、位图、图标和图元文件](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

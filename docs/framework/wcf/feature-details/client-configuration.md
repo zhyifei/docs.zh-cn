@@ -2,12 +2,12 @@
 title: 客户端配置
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: eef3d4743c26a06bd114618522aff9f68e46628c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2e178f8b08fbadbb5549fa10631d3a57f71a7e0d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527711"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503217"
 ---
 # <a name="client-configuration"></a>客户端配置
 Windows Communication Foundation (WCF) 客户端配置可用于指定地址、 绑定、 行为和协定，客户端终结点，哪些客户端用于连接到服务终结点的"ABC"属性。 [\<客户端 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)元素具有[\<终结点 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素，其属性用于配置终结点的 abc 属性。 这些属性将在本主题的“配置终结点”一节中讨论。  
@@ -84,7 +84,7 @@ Windows Communication Foundation (WCF) 客户端配置可用于指定地址、 �
   
  每个终结点都必须具有一个与之关联的地址，用于查找和标识终结点。 `address` 属性可用来指定提供终结点位置的 URL。 但是，通过创建统一资源标识符 (URI)，也可以在代码中指定服务终结点的地址，使用 <xref:System.ServiceModel.ServiceHost> 方法之一可以将该地址添加到 <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>。 有关详细信息，请参阅[地址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)。 正如简介， [\<标头 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)并[\<标识 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)元素属于<xref:System.ServiceModel.EndpointAddress>和中还讨论了[地址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)主题。  
   
- `binding` 属性指示终结点在连接到服务时期望使用的绑定类型。 该类型必须具有一个已注册的配置节，才能加以引用。 在上一示例中，这是[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)部分中，它指示终结点使用<xref:System.ServiceModel.WSHttpBinding>。 实际上，终结点可以使用某个给定类型的多个绑定。 每个具有其自己[\<绑定 >](../../../../docs/framework/misc/binding.md) (binding) 类型元素中的元素。 `bindingconfiguration` 属性用于区分相同类型的绑定。 其值符合`name`的属性[\<绑定 >](../../../../docs/framework/misc/binding.md)元素。 有关如何配置客户端绑定使用的配置，请参阅[如何： 在配置中指定客户端绑定](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)。  
+ `binding` 属性指示终结点在连接到服务时期望使用的绑定类型。 该类型必须具有一个已注册的配置节，才能加以引用。 在上一示例中，这是[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)部分中，它指示终结点使用<xref:System.ServiceModel.WSHttpBinding>。 实际上，终结点可以使用某个给定类型的多个绑定。 每个具有其自己[\<绑定 >](../../../../docs/framework/misc/binding.md) (binding) 类型元素中的元素。 `bindingconfiguration` 属性用于区分相同类型的绑定。 其值符合`name`的属性[\<绑定 >](../../../../docs/framework/misc/binding.md)元素。 有关如何配置客户端绑定使用的配置，请参阅[如何：在配置中指定客户端绑定](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)。  
   
  `behaviorConfiguration`属性用于指定哪些[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)的[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)终结点应使用。 其值符合`name`的属性[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)元素。 有关使用配置来指定客户端行为的示例，请参阅[配置客户端行为](../../../../docs/framework/wcf/configuring-client-behaviors.md)。  
   
@@ -93,6 +93,6 @@ Windows Communication Foundation (WCF) 客户端配置可用于指定地址、 �
 ### <a name="configuring-metadata"></a>配置元数据  
  [\<元数据 >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)元素用于指定导入扩展的设置用于注册元数据。 有关扩展元数据系统的详细信息，请参阅[扩展元数据系统](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)。  
   
-## <a name="see-also"></a>请参阅  
- [终结点：地址、绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [配置客户端行为](../../../../docs/framework/wcf/configuring-client-behaviors.md)
+## <a name="see-also"></a>请参阅
+- [终结点：地址、 绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [配置客户端行为](../../../../docs/framework/wcf/configuring-client-behaviors.md)

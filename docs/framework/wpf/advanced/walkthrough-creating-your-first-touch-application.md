@@ -1,5 +1,5 @@
 ---
-title: 演练：创建您的第一个触控应用程序
+title: 演练：创建第一个触控应用程序
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,24 +10,24 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-ms.openlocfilehash: 935999fd5ada93bedebb38462f9faa93b8ec923f
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 34a534653455449233c2908f4226cdb3a9bb9867
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724234"
 ---
-# <a name="walkthrough-creating-your-first-touch-application"></a>演练：创建您的第一个触控应用程序
+# <a name="walkthrough-creating-your-first-touch-application"></a>演练：创建第一个触控应用程序
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使应用程序能够响应触摸。 例如，可以使用一个与应用程序交互或敏式设备，如本演练中创建该应用程序，用户可以移动，触摸屏上的多个手指重设大小，或使用触摸来旋转的单个对象。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
 -   Visual Studio。  
   
 -   接受触控输入，如触摸屏，支持 Windows 触摸设备。  
   
- 此外，应该基本了解如何创建中的应用程序的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，尤其是如何订阅和处理事件。 有关详细信息，请参阅[演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
+ 此外，应该基本了解如何创建中的应用程序的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，尤其是如何订阅和处理事件。 有关详细信息，请参见[演练：我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
 ## <a name="creating-the-application"></a>创建应用程序  
   

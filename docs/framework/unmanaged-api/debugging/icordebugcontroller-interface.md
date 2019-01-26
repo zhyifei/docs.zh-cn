@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 230488201b637c5a53f41dd4c3f204b37e8984fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c0651f8cd63f2ebdc6b81e92c0b55d94fe51316b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645296"
 ---
 # <a name="icordebugcontroller-interface1"></a>ICorDebugController 接口 1
 表示可以控制代码执行上下文的 <xref:System.Diagnostics.Process> 或 <xref:System.AppDomain> 范围。  
@@ -32,29 +32,29 @@ ms.locfileid: "33411465"
 |------------|-----------------|  
 |`ICorDebugController::CanCommitChanges`|此方法已过时。|  
 |`ICorDebugController::CommitChanges`|此方法已过时。|  
-|[Continue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)|恢复后调用的托管线程的执行[icordebugcontroller:: Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)。|  
+|[Continue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)|恢复托管线程执行后调用[icordebugcontroller:: Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)。|  
 |[Detach 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-detach-method.md)|从分离调试器进程或应用程序域。|  
-|[EnumerateThreads 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)|在过程中获取活动的托管线程的枚举数。|  
-|[HasQueuedCallbacks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)|获取一个值，该值指示是否任何托管的回调当前正在排队等待指定的线程。|  
-|[IsRunning 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-isrunning-method.md)|获取一个值，该值指示是否在进程中的线程当前自由地运行。|  
-|[SetAllThreadsDebugState 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)|设置进程中的所有托管线程调试状态。|  
-|[Stop 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)|在进程中运行托管的代码的所有线程上执行协作停止。|  
-|[Terminate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-terminate-method.md)|终止指定的退出代码的进程。|  
+|[EnumerateThreads 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)|获取进程中活动的托管线程的枚举数。|  
+|[HasQueuedCallbacks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)|获取一个值，该值指示是否为指定的线程当前正在排队任何托管的回调。|  
+|[IsRunning 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-isrunning-method.md)|获取一个值，该值指示是否此进程中的线程当前自由地运行。|  
+|[SetAllThreadsDebugState 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)|设置过程中的所有托管线程的调试状态。|  
+|[Stop 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)|执行所有线程上的进程中运行托管的代码的同时停止。|  
+|[Terminate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-terminate-method.md)|终止与指定的退出代码的过程。|  
   
 ## <a name="remarks"></a>备注  
- 如果`ICorDebugController`是控制某个进程的作用域包括进程的所有线程。 如果`ICorDebugController`是控制应用程序域的作用域包括仅该特定应用程序域的线程。  
+ 如果`ICorDebugController`是控制某个进程的作用域包括所有进程线程。 如果`ICorDebugController`是控制应用程序域的作用域包括仅该特定应用程序域的线程。  
   
 > [!NOTE]
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

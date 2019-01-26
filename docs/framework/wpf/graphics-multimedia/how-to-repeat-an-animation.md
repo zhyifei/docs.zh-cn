@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Timelines RepeatBehavior property [WPF]
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
-ms.openlocfilehash: 176fc9c31f85361a243cd9357d79608e0ff6a4cd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 213fca0796840ae87035be4f474cfdf4648460a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855291"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609637"
 ---
 # <a name="how-to-repeat-an-animation"></a>如何：重复动画
 此示例演示如何使用<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>属性的<xref:System.Windows.Media.Animation.Timeline>为了控制动画的重复行为。  
@@ -28,10 +28,10 @@ ms.locfileid: "43855291"
   
  有关完整示例，请参阅[动画计时行为示例](https://go.microsoft.com/fwlink/?LinkID=159970)。  
   
-## <a name="see-also"></a>请参阅  
- [在重复循环过程中累积动画值](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [指定时间线是否自动反转](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
- [动画和计时](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [动画计时行为示例](https://go.microsoft.com/fwlink/?LinkID=159970)
+## <a name="see-also"></a>请参阅
+- [在重复循环过程中累积动画值](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)
+- [指定时间线是否自动反转](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)
+- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [动画和计时](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [动画计时行为示例](https://go.microsoft.com/fwlink/?LinkID=159970)

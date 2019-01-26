@@ -2,12 +2,12 @@
 title: 原子化的 XName 和 XNamespace 对象 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-ms.openlocfilehash: e311de901a9a54bd4fc6ee56d425cc16b4978e8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adf766dcb69477fbad8581b075a7c0ee8a82f728
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643268"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623672"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>原子化的 XName 和 XNamespace 对象 (LINQ to XML) (Visual Basic)
 <xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 对象进行了原子化；即，如果这两个对象包含相同的限定名，则它们将引用同一个对象。 这将提高查询性能：当比较两个原子化名称是否相等时，基础中间语言只需确定这两个引用是否指向同一个对象。 基础代码不必进行很耗费时间的字符串比较。  
@@ -69,5 +69,5 @@ Next
 <C1>1</C1>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [性能 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+- [性能 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23c0edd99d09417c8e657045407a02a07338d7b2
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4e2c43a5cfba89df3ae90950f09a7a947729f51b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746591"
 ---
 # <a name="ltappdomainmanagerassemblygt-element"></a>&lt;appDomainManagerAssembly&gt;元素
 指定为过程中的默认应用程序域提供应用程序域管理器的程序集。  
   
  \<configuration>  
 \<运行时 >  
-\<appDomainManagerAssembly >  
+\<appDomainManagerAssembly>  
   
 ## <a name="syntax"></a>语法  
   
@@ -73,10 +73,10 @@ ms.locfileid: "53610185"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>  
-- [\<appDomainManagerType > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)  
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>请参阅
+- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
+- [\<appDomainManagerType > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [SetAppDomainManagerType 方法](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

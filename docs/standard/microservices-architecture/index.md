@@ -4,18 +4,18 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 52435c31e77e7139b982829ae4ab33a5e0f9f045
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152677"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030433"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服务：适用于容器化 .NET 应用程序的体系结构
 
 ![封面](./media/cover-small.png)
 
-**版本 v2.1.02** - 已更新到 ASP.NET Core 2.1
+**版本 v2.1.03** - 已更新到 ASP.NET Core 2.1
 
 本指南介绍如何使用容器开发基于微服务的应用程序并对其进行管理。 本指南探讨使用 .NET Core 和 Docker 容器的体系结构设计和实现方法。 
 
@@ -88,9 +88,9 @@ eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器�
 
 合著者：
 
-> **Cesar de la Torre**，Microsoft Corp. .NET 产品团队的高级项目经理。
+> **Cesar de la Torre**，Microsoft Corp .NET 产品团队的高级项目经理。
 >
-> **Bill Wagner**，Microsoft Corp. C+E 高级内容开发者。
+> **Bill Wagner**，Microsoft Corp C+E 高级内容开发人员。
 >
 > **Mike Rousos**，Microsoft DevDiv CAT 团队的主要软件工程师
 
@@ -116,7 +116,7 @@ eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器�
 >
 > **Diego Vega**，Microsoft 实体框架团队的项目经理主管
 >
-> **Barry Dorrans**，安全高级项目经理
+> **Barry Dorrans**，高级安全项目经理
 >
 > **Rowan Miller**，Microsoft 高级项目经理
 >
@@ -140,7 +140,7 @@ eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器�
 >
 > **Javier Valero**，Grupo Solutio 的首席运营官
 >
-> **Pierre Millet**，Microsoft 的高级顾问
+> **Pierre Millet**，Microsoft 高级顾问
 >
 > **Michael Friis**，Docker Inc 的产品经理
 >

@@ -2,12 +2,12 @@
 title: 在 ADO.NET 中的连接字符串
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 078fdab257115296f9ff00330265cb14ff8674c8
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.openlocfilehash: c765eee661858499240344cb5059fe1fa9a58ab5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50409452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627559"
 ---
 # <a name="connection-strings-in-adonet"></a>在 ADO.NET 中的连接字符串
 
@@ -57,6 +57,6 @@ ms.locfileid: "50409452"
  [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  演示保护用于连接到数据源的信息的各项技术。
   
-## <a name="see-also"></a>请参阅  
- [连接到数据源](/cpp/data/odbc/connecting-to-a-data-source)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [连接到数据源](/cpp/data/odbc/connecting-to-a-data-source)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

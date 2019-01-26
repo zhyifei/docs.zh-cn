@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: e8347f1a82c70f1ce8aa7cc05841bc869abbcc33
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 03d0c5096876305f9a181cc28ff2158066e4d56f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577371"
 ---
 # <a name="advanced-text-formatting"></a>高级文本格式设置
 Windows Presentation Foundation (WPF) 提供了一套稳健的[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]用于在你的应用程序中包括的文本。 布局和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，如<xref:System.Windows.Controls.TextBlock>、 提供了最常见和常规使用用于呈现文本元素。 绘制[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，如<xref:System.Windows.Media.GlyphRunDrawing>和<xref:System.Windows.Media.FormattedText>，在绘图中加入格式化的文本提供一种方法。 在最高级别，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供了一个可扩展的文本格式引擎，用于控制文本呈现，如文本存储管理、 文本运行格式管理和嵌入的对象管理的各个方面。  
@@ -94,6 +94,6 @@ Windows Presentation Foundation (WPF) 提供了一套稳健的[!INCLUDE[TLA#tla_
 ## <a name="specifying-formatting-properties"></a>指定格式设置属性  
  <xref:System.Windows.Media.TextFormatting.TextRun> 使用提供的文本存储属性设置格式的对象。 这些属性有两种类型，<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>。 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> 处理涉及段落的属性，如<xref:System.Windows.TextAlignment>和<xref:System.Windows.FlowDirection>。 <xref:System.Windows.Media.TextFormatting.TextRunProperties> 可以为每个文本运行中一个段落，如前景画笔、 不同的属性<xref:System.Windows.Media.Typeface>，和字体大小。 若要实现自定义段落和自定义文本运行属性类型，你的应用程序必须创建派生的类<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>分别。  
   
-## <a name="see-also"></a>请参阅  
- [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>请参阅
+- [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

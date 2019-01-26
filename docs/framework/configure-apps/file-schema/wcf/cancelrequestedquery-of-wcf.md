@@ -2,12 +2,12 @@
 title: WCF 的 &lt;cancelRequestedQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: 3943d604b586eec37a1d153f10ac049fc9bd5747
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 72fd23097760375738c2116b4535940873436986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498263"
 ---
 # <a name="ltcancelrequestedquerygt-of-wcf"></a>WCF 的 &lt;cancelRequestedQuery&gt;
 
@@ -16,30 +16,30 @@ ms.locfileid: "49347562"
 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。
   
 \<system.serviceModel>  
-\<跟踪 >  
+\<tracking>  
 \<配置文件 >  
 \<trackingProfile>  
-\<工作流 >  
+\<workflow>  
 \<cancelRequestedQueries>  
-\<cancelRequestedQuery >  
+\<cancelRequestedQuery>  
   
 ## <a name="syntax"></a>语法  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
       <workflow>
         <cancelRequestedQueries>
           <cancelRequestedQuery activityName="String"
-                              childActivityName="String"/>
+                                childActivityName="String" />
         </cancelRequestedQueries>
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
+</tracking>
+```  
+  
 ## <a name="attributes-and-elements"></a>特性和元素
 
 下列各节描述了特性、子元素和父元素。
@@ -61,7 +61,7 @@ ms.locfileid: "49347562"
 |-------------|-----------------|  
 |[\<cancelRequestedQueries>](cancelrequestedqueries-of-wcf.md)|表示一个查询集合，这些查询用于跟踪父活动取消子活动的请求。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CancelRequestedQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CancelRequestedQuery?displayProperty=nameWithType>

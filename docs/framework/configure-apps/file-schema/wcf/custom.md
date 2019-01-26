@@ -2,31 +2,31 @@
 title: '&lt;custom&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5180b8866d8b0155a8683ab9cb6135c26f696929
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734982"
 ---
 # <a name="ltcustomgt"></a>&lt;custom&gt;
 指定自定义对等解析程序服务的设置。  
   
 \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<netPeerBinding>  
-\<绑定 >  
+\<binding>  
 \<resolver>  
 \<custom>  
   
 ## <a name="syntax"></a>语法  
   
-```xml
-<custom address="Uri" 
-        resolverType="String">  
-  <headers/>  
-  <identity/>  
-</custom>  
+```xml  
+<custom address="Uri"
+        resolverType="String">
+  <headers/>
+  <identity/>
+</custom>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -43,7 +43,7 @@ ms.locfileid: "48838946"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<标识 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定配置了此元素的自定义对等解析程序的标识。 此元素的类型为 <xref:System.ServiceModel.Configuration.IdentityElement>。|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|指定配置了此元素的自定义对等解析程序的标识。 此元素的类型为 <xref:System.ServiceModel.Configuration.IdentityElement>。|  
 |[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|一个地址标头集合，可用于由自定义对等解析程序处理的 SOAP 消息。|  
   
 ### <a name="parent-elements"></a>父元素  
@@ -55,10 +55,10 @@ ms.locfileid: "48838946"
 ## <a name="remarks"></a>备注  
  此元素可定义自定义对等解析程序服务的基本设置，其中包括执行服务的对等解析程序的终结点地址和所有特定绑定设置。 有关创建自定义冲突解决程序的详细信息，请参阅[PeerChannel 应用程序中添加自定义冲突解决程序](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
- <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>  
- <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
- <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
- [对等解析程序](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [对等通道应用程序中添加自定义冲突解决程序](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>
+- <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>
+- <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>
+- <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>
+- [对等解析程序](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [对等通道应用程序中添加自定义冲突解决程序](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

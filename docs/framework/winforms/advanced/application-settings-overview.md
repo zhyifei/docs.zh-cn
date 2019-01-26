@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: e38be762fbfdaccc7d5ba01a1f24f5f3086ca8bf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b30203aaf36d4fa6c0b06d54da1abc1f99d22afc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576897"
 ---
 # <a name="application-settings-overview"></a>应用程序设置概述
 本主题讨论如何代表你的应用程序和你的用户创建和存储设置数据。  
@@ -47,14 +47,14 @@ ms.locfileid: "43503592"
   
  还可以使用 <xref:System.Windows.Forms.Binding> 类以编程方式将设置绑定到窗体和控件上的属性。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- <xref:System.Configuration.IPersistComponentSettings>  
- [如何：验证应用程序设置](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
- [管理应用程序设置 (.NET)](https://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
- [如何：在运行时使用 C# 读取设置](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
- [使用应用程序设置和用户设置](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
- [应用程序设置体系结构](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [自定义控件的应用程序设置](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- <xref:System.Configuration.IPersistComponentSettings>
+- [如何：验证应用程序设置](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+- [管理应用程序设置 (.NET)](https://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)
+- [如何：在运行时读取设置C#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)
+- [使用应用程序设置和用户设置](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
+- [应用程序设置体系结构](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)

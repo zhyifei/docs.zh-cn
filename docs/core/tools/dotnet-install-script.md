@@ -1,13 +1,13 @@
 ---
 title: dotnet-install 脚本
 description: 了解用于安装 .NET Core CLI 工具和共享运行时的 dotnet-install 脚本。
-ms.date: 11/15/2018
-ms.openlocfilehash: 0f565fee3e4ff4bec65bd196f635e9e9601485c2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/16/2019
+ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148311"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362816"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 脚本引用
 
@@ -73,7 +73,7 @@ macOS/Linux：
 
 * **`-Architecture <ARCHITECTURE>`**
 
-  要安装的 .NET Core 二进制文件的体系结构。 可能的值包括 `auto`、`x64` 和 `x86`。 默认值为 `auto`，它表示当前正在运行的操作系统体系结构。
+  要安装的 .NET Core 二进制文件的体系结构。 可能值为 `<auto>`、`amd64`、`x64`、`x86`、`arm64` 以及 `arm`。 默认值为 `<auto>`，它表示当前正在运行的操作系统体系结构。
 
 * **`-SharedRuntime`**
 

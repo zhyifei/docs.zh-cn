@@ -2,12 +2,12 @@
 title: WCF 的 &lt;activityStateQueries&gt;
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 081dc297912ed5735dd51111936b85b61f463d2d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6b21ad3f5487a924309b8bee6b9ac972f23bdc66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701932"
 ---
 # <a name="ltactivitystatequeriesgt-of-wcf"></a>WCF 的 &lt;activityStateQueries&gt;
 
@@ -16,15 +16,15 @@ ms.locfileid: "49123236"
 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。
 
 \<system.serviceModel>  
-\<跟踪 >  
+\<tracking>  
 \<配置文件 >  
 \<trackingProfile>  
-\<工作流 >  
-\<activityStateQueries >  
+\<workflow>  
+\<activityStateQueries>  
 
 ## <a name="syntax"></a>语法  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -32,13 +32,13 @@ ms.locfileid: "49123236"
         <activityStateQueries>
           <activityStateQuery activityName="String">
             <arguments>
-              <argument name="String"/>
+              <argument name="String" />
             </arguments>
             <states>
-              <state name="String"/>
+              <state name="String" />
             </states>
             <variables>
-              <variable name="String"/>
+              <variable name="String" />
             </variables>
           </activityStateQuery>
         </activityStateQueries>
@@ -60,17 +60,17 @@ ms.locfileid: "49123236"
 
 |元素|描述|
 |-------------|-----------------|
-|[\<activityStateQuery >](activitystatequery-of-wcf.md)|一个查询，用于跟踪在活动中发生的错误的处理。  每次 FaultHandler 处理错误时，都会发生此事件。|
+|[\<activityStateQuery>](activitystatequery-of-wcf.md)|一个查询，用于跟踪在活动中发生的错误的处理。  每次 FaultHandler 处理错误时，都会发生此事件。|
 
 ### <a name="parent-elements"></a>父元素
 
 |元素|描述|
 |-------------|-----------------|
-|[\<工作流 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含 `activityDefinitionId` 属性所标识的特定工作流的所有查询。|
+|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含 `activityDefinitionId` 属性所标识的特定工作流的所有查询。|
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>    
-- <xref:System.Activities.Tracking.ActivityStateQuery>    
-- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>
+- <xref:System.Activities.Tracking.ActivityStateQuery>
+- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

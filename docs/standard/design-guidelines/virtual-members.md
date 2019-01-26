@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
 author: KrzysztofCwalina
-ms.openlocfilehash: 1719e9843252c25d1e799471330c6cb08211245b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4943ddcdf1bc4e3e32c8d664cbcc5c50ae3959bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543823"
 ---
 # <a name="virtual-members"></a>虚拟成员
 可以重写虚拟成员，从而改变子类的行为。 就提供的可扩展性而言，它们与回调非常相似，但在执行性能和内存消耗方面有更好的表现。 此外，虚拟成员在需要创建特殊类型的现有类型（特化）的场景中感觉更自然。  
@@ -40,5 +40,5 @@ ms.locfileid: "53128917"
   
 ## <a name="see-also"></a>请参阅
 
-- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
 - [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

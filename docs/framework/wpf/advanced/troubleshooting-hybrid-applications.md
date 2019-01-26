@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: b43143fb3f27d127f93f5e8edd55b853ad604ef5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3e8b8d6f59525720def413b2d19f048d3cff329c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710113"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>混合应用程序疑难解答
 <a name="introduction"></a>本主题列出了在创作同时使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]技术的混合应用程序时可能发生的一些常见问题。  
@@ -88,7 +88,7 @@ ms.locfileid: "45972749"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>启用视觉样式  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件上的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 视觉样式可能未启用。 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法调用的模板中[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序。 尽管默认情况下不会调用此方法，但如果使用 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 创建项目，并且 Comctl32.dll 版本 6.0 可用，将会获得控件的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 视觉样式。 必须调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法之前在线程上创建句柄。 有关详细信息，请参阅[如何：在混合应用程序中启用视觉样式](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)。  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件上的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 视觉样式可能未启用。 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法调用的模板中[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序。 尽管默认情况下不会调用此方法，但如果使用 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 创建项目，并且 Comctl32.dll 版本 6.0 可用，将会获得控件的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 视觉样式。 必须调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法之前在线程上创建句柄。 有关详细信息，请参阅[如何：混合应用程序中启用视觉样式](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)。  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>授权控件  
@@ -114,13 +114,13 @@ ms.locfileid: "45972749"
 ## <a name="elementhost-and-ime"></a>ElementHost 和 IME  
  WPF 控件中托管<xref:System.Windows.Forms.Integration.ElementHost>目前不支持<xref:System.Windows.Forms.Control.ImeMode%2A>属性。 将更改为<xref:System.Windows.Forms.Control.ImeMode%2A>所承载的控件将被忽略。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [在 WPF 设计器中的互操作性](https://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)  
- [Windows 窗体和 WPF 互操作性输入体系结构](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)  
- [如何：在混合应用程序中启用视觉对象样式](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)  
- [WindowsFormsHost 元素的布局注意事项](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
- [Windows 窗体和 WPF 属性映射](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [Windows 窗体设计器中的设计时错误](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [在 WPF 设计器中的互操作性](https://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)
+- [Windows 窗体和 WPF 互操作性输入体系结构](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)
+- [如何：混合应用程序中启用视觉样式](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [WindowsFormsHost 元素的布局注意事项](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
+- [Windows 窗体和 WPF 属性映射](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [Windows 窗体设计器中的设计时错误](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

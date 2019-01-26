@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 7e52899a953644fc3cf7189bf557f5ade2863161
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 295b2c5dd3eb17ca9ba19e52d9f8e51cf108162d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683146"
 ---
 # <a name="ltcodebasegt-element"></a>&lt;基本代码&gt;元素
 指定公共语言运行时在哪里可以找到程序集。  
   
  \<configuration>  
 \<运行时 >  
-\<assemblyBinding >  
-\<dependentAssembly >  
-\<o d e b >  
+\<assemblyBinding>  
+\<dependentAssembly>  
+\<codeBase>  
   
 ## <a name="syntax"></a>语法  
   
@@ -89,8 +89,8 @@ href="URL of assembly"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [指定程序集的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [指定程序集的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

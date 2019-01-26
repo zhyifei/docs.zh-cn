@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 0bcab736aad1df84713c7a111d23b82a54ec4334
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 63a761b4a79743b0d4a03392ced465c3105db9bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602528"
 ---
 # <a name="sending-and-receiving-faults"></a>发送和接收错误
 SOAP 错误将错误条件信息从服务传送到客户端，并且在双工情况下，将这些信息以互操作方式从客户端传送到服务。 通常情况下，服务会定义自定义错误内容并指定可以返回错误的操作。 (有关详细信息，请参阅[定义和指定错误](../../../docs/framework/wcf/defining-and-specifying-faults.md)。)本主题讨论在出现相应的错误条件时服务或双工客户端如何发送这些错误，以及客户端或服务应用程序如何处理这些错误。 Windows Communication Foundation (WCF) 应用程序中的错误处理的概述，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
@@ -104,9 +104,9 @@ SOAP 错误将错误条件信息从服务传送到客户端，并且在双工情
  [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.FaultException>  
- <xref:System.ServiceModel.FaultException%601>  
- <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  
- [预期异常](../../../docs/framework/wcf/samples/expected-exceptions.md)  
- [使用关闭和中止发布 WCF 客户端资源](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.FaultException>
+- <xref:System.ServiceModel.FaultException%601>
+- <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
+- [预期异常](../../../docs/framework/wcf/samples/expected-exceptions.md)
+- [使用关闭和中止发布 WCF 客户端资源](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

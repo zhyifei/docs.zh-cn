@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: d6ed0da9be32a4a4de4111acfb2d347b7bd5096d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4cb351b0db83bd83c17aa4aca004b310dc957437
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609598"
 ---
 # <a name="use-automatic-layout-overview"></a>使用自动布局概述
 本主题介绍如何编写上面向开发人员的指导原则[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]具有可本地化的应用程序[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。 在过去，UI 的本地化是一个耗时的过程。 UI 适用于每种语言需要按像素逐一调整。 使用适当的设计和编码标准，今天[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可以构建，这样本地化人员较少的调整大小和重新定位的工作量。 种编写可以更轻松地重设大小和重新定位应用程序的方法称为自动布局，可以通过使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序设计。  
@@ -107,7 +107,7 @@ Grid
   
  **请注意**完整的代码示例，请参阅[共享大小调整属性网格之间](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="see-also"></a>请参阅  
- [WPF 全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [使用自动布局创建按钮](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [使用网格进行自动布局](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+## <a name="see-also"></a>请参阅
+- [WPF 全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [使用自动布局创建按钮](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+- [使用网格进行自动布局](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

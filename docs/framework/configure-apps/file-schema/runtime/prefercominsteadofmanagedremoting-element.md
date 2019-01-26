@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 760eeeaaf82bf2014d70fa79ced2bb9166a8cb60
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9292a0973df100acbffa341d7c0ca2604455f7fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522331"
 ---
 # <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt;元素
 指定是否在运行时将使用 COM 互操作而不是远程处理的所有调用跨应用程序域边界。  
   
  \<configuration>  
 \<运行时 >  
-\<PreferComInsteadOfManagedRemoting >  
+\<PreferComInsteadOfManagedRemoting>  
   
 ## <a name="syntax"></a>语法  
   
@@ -73,6 +73,6 @@ ms.locfileid: "53613266"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

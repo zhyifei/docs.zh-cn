@@ -2,12 +2,12 @@
 title: WCF 的 &lt;faultPropagationQuery&gt;
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: c3853c470a9243835e071d35008dfff5b885591d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 1da2a95d27756296aab5a205a90fb028508c4b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601800"
 ---
 # <a name="ltfaultpropagationquerygt-of-wcf"></a>WCF 的 &lt;faultPropagationQuery&gt;
 
@@ -16,29 +16,29 @@ ms.locfileid: "49123314"
 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
   
 \<system.serviceModel>  
-\<跟踪 >  
+\<tracking>  
 \<配置文件 >  
 \<trackingProfile>  
-\<工作流 >  
-\<faultPropagationQueries >  
-\<faultPropagationQuery >  
+\<workflow>  
+\<faultPropagationQueries>  
+\<faultPropagationQuery>  
   
 ## <a name="syntax"></a>语法  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
       <workflow>
         <faultPropagationQueries>
           <faultPropagationQuery faultSourceActivityName="String"
-                                 faultHandlerActivityName="String"/>
+                                 faultHandlerActivityName="String" />
         </faultPropagationQueries>
       </workflow>
     </trackingProfile>
   </profiles>
 </tracking>
-```
+```  
   
 ## <a name="attributes-and-elements"></a>特性和元素
 
@@ -61,8 +61,8 @@ ms.locfileid: "49123314"
 |-------------|-----------------|  
 |[\<faultPropagationQueries>](faultpropagationqueries-of-wcf.md)|表示一个配置元素列表，这些元素用于跟踪某个活动中发生的错误的处理。  每次 FaultHandler 处理错误时，都会发生此事件。|
   
-## <a name="see-also"></a>请参阅  
- 
+## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>
 - [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

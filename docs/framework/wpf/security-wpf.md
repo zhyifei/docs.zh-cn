@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 970fd0483d7e0126b258afd5ac5c3607cbc6aa0a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 699c03d379d105806292a23b09a63d0634a7a2e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44202227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592676"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a> 在开发 Windows Presentation Foundation (WPF) 独立应用程序和浏览器承载的应用程序时，必须考虑的安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 独立应用程序执行无限制的权限 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**的权限集)、 是否使用 Windows Installer (.msi)、 XCopy 部署或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 但是，完全信任的主机应用程序可以创建部分信任<xref:System.AppDomain>使用.NET Framework 外接程序模型。 有关详细信息，请参阅[WPF 外接程序概述](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
@@ -184,7 +184,7 @@ ms.locfileid: "44202227"
  功能控件所应用的实例化 WebBrowser ActiveX 对象的过程。 因此，如果要创建可导航到不受信任的内容的独立应用程序，则应该认真考虑启用附加功能控件。  
   
 > [!NOTE]
->  此建议是根据 MSHTML 和 SHDOCVW 主机安全性的一般性建议提出的。 有关详细信息，请参阅[MSHTML 主机安全性常见问题： 第 I 部分的 II](https://go.microsoft.com/fwlink/?LinkId=179396)和[MSHTML 主机安全性常见问题： 的第 II 部分 II](https://go.microsoft.com/fwlink/?LinkId=179415)。  
+>  此建议是根据 MSHTML 和 SHDOCVW 主机安全性的一般性建议提出的。 有关详细信息，请参阅[MSHTML 主机安全性常见问题：第一部分的 II](https://go.microsoft.com/fwlink/?LinkId=179396)和[MSHTML 主机安全性常见问题：第二部分，共 ii 部分](https://go.microsoft.com/fwlink/?LinkId=179415)。  
   
  对于可执行文件，请考虑通过将注册表值设置为 1 来启用以下功能控件。  
   
@@ -232,11 +232,11 @@ ms.locfileid: "44202227"
   
  此项建立 APTCA 程序集的条目。 还必须在此项中创建值来启用或禁用程序集。 下面是该值的详细信息：  
   
--   值名称： **APTCA_FLAG**。  
+-   值名称：**APTCA_FLAG**。  
   
--   值类型： **REG_DWORD**。  
+-   值类型：**REG_DWORD**。  
   
--   值数据： **1**为禁用;**0**启用。  
+-   值数据：**1**为禁用;**0**启用。  
   
  如果必须为部分受信任的客户端应用程序禁用某程序集，可以编写一个用于创建注册表项和值的更新。  
   
@@ -271,11 +271,11 @@ ms.locfileid: "44202227"
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信任安全](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
   
-## <a name="see-also"></a>请参阅  
- [WPF 部分信任安全](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [WPF 安全策略 - 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
- [WPF 安全策略 - 安全工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)  
- [应用程序的模式和实践安全指南](https://go.microsoft.com/fwlink/?LinkId=117426)  
- [代码访问安全性](../../../docs/framework/misc/code-access-security.md)  
- [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)  
- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>请参阅
+- [WPF 部分信任安全](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [WPF 安全策略 - 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
+- [WPF 安全策略 - 安全工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [应用程序的模式和实践安全指南](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [代码访问安全性](../../../docs/framework/misc/code-access-security.md)
+- [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)
+- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

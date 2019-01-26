@@ -2,12 +2,12 @@
 title: 调用方信息 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 0074ad5bfa5907fb1d02cc92b8b5717897a36b3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b0776425b41c8fef975355f3547a64c33fd96b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619008"
 ---
 # <a name="caller-information-visual-basic"></a>调用方信息 (Visual Basic)
 通过使用调用方信息特性，可获取有关方法的调用方的信息。 可以获取源代码的文件路径、源代码中的行号和调用方的成员名称。 此信息有助于跟踪、调试和创建诊断工具。  
@@ -74,8 +74,8 @@ End Sub
 |特性构造函数|要应用特性的成员的名称。 如果该特性是成员中的任何元素（如参数、返回值或泛型参数），则此结果是与该元素关联的成员的名称。|  
 |无包含的成员（例如，程序集级别或应用于类型的特性）|可选参数的默认值。|  
   
-## <a name="see-also"></a>请参阅  
- [属性 (Visual Basic)](../../../visual-basic/language-reference/attributes.md)  
- [常见特性 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
- [可选参数](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [编程概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>请参阅
+- [属性 (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
+- [常见特性 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
+- [可选参数](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [编程概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: ff06fd6518e67020b4d67d4e081307b8e54bae85
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 01e4b5ef4583d30114720ffe559a342b45fe2b98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640012"
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;套接字&gt;元素 （网络设置）
 指定套接字操作是否使用完成端口。  
   
  \<configuration>  
 \<system.net>  
-\<设置 >  
-\<套接字 >  
+\<settings>  
+\<socket>  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ ms.locfileid: "50194691"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
 ## <a name="remarks"></a>备注  
  `alwaysUseCompletionPortsForAccept` 和 `alwaysUseCompletionPortsForConnect` 特性用于指定 <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace 中的类在使用完全端口时的默认行为。 对于高性能服务器应用程序建议使用完成端口。  
@@ -103,10 +103,10 @@ ms.locfileid: "50194691"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>  
-- <xref:System.Net.Sockets?displayProperty=nameWithType>  
-- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>  
-- <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>
+- <xref:System.Net.Sockets?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

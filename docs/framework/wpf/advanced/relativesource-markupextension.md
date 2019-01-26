@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 6ede7bc8a6c2a45630c48417c7ab90eb8decdc39
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 43201be232a037b14d783ae61546ef0030f486ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559380"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
 指定的属性<xref:System.Windows.Data.RelativeSource>绑定源中使用[绑定标记扩展](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)，或设置时<xref:System.Windows.Data.Binding.RelativeSource%2A>属性<xref:System.Windows.Data.Binding>建立在 XAML 中的元素。  
@@ -38,7 +38,7 @@ ms.locfileid: "54029432"
   </Binding.RelativeSource>  
 </Binding>  
 ```
-- 或 -  
+或  
 ```xml
 <Binding>  
   <Binding.RelativeSource>  
@@ -105,11 +105,11 @@ ms.locfileid: "54029432"
   
  `RelativeSource` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 在 XAML 使用的所有标记扩展`{`和`}`约定所依据的 XAML 处理器识别标记扩展必须处理该属性其特性语法中的字符。 有关详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Data.Binding>  
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [绑定声明概述](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [x:Type 标记扩展](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Data.Binding>
+- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [绑定声明概述](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
+- [x:Type 标记扩展](../../../../docs/framework/xaml-services/x-type-markup-extension.md)

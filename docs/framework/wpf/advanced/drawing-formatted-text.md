@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 4cbf2a9ec9b742af3895f7c30b1a4dbbdbf5a635
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a476b62e62b812b01da8deeb0c605e35ae6624ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562773"
 ---
 # <a name="drawing-formatted-text"></a>绘制格式化文本
 本主题提供的功能的概述<xref:System.Windows.Media.FormattedText>对象。 此对象为在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中绘制文本提供低级别控制。  
@@ -99,7 +99,7 @@ ms.locfileid: "43804929"
 |DrawText 标志|WPF 等效项|说明|  
 |-------------------|--------------------|-----------|  
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|使用<xref:System.Windows.Media.FormattedText.Height%2A>属性计算相应[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DrawText y 位置。|  
-|DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|使用<xref:System.Windows.Media.FormattedText.Height%2A>和<xref:System.Windows.Media.FormattedText.Width%2A>属性计算输出矩形。|  
+|DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>， <xref:System.Windows.Media.FormattedText.Width%2A>|使用<xref:System.Windows.Media.FormattedText.Height%2A>和<xref:System.Windows.Media.FormattedText.Width%2A>属性计算输出矩形。|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|使用<xref:System.Windows.Media.FormattedText.TextAlignment%2A>属性值设置为<xref:System.Windows.TextAlignment.Center>。|  
 |DT_EDITCONTROL|无|不要求。 间距宽度和最后一行的呈现与框架编辑控件中的相同。|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用<xref:System.Windows.Media.FormattedText.Trimming%2A>属性的值<xref:System.Windows.TextTrimming.CharacterEllipsis>。<br /><br /> 使用<xref:System.Windows.TextTrimming.WordEllipsis>若要获取[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DT_END_ELLIPSIS 与 DT_WORD_ELIPSIS 尾部省略号 — 在这种情况下，省略号字符仅出现在单个行上无法容纳的词语。|  
@@ -123,9 +123,9 @@ ms.locfileid: "43804929"
 |DT_WORDBREAK|无|不要求。 自动断词与<xref:System.Windows.Media.FormattedText>对象。 无法禁用它。|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用<xref:System.Windows.Media.FormattedText.Trimming%2A>属性的值<xref:System.Windows.TextTrimming.WordEllipsis>。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.FormattedText>  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [创建空心文本](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [如何：为文本创建 PathGeometry 动画](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.FormattedText>
+- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [创建空心文本](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)
+- [如何：为文本创建 PathGeometry 动画](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)

@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbe94aa67c9cf9ac587b7fca9f5cbeca4870506b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83a1c03c209d68035b3615c83ec0ee13b94eb549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719945"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits 方法
-为第 0 代中设置的段大小和最大大小。  
+设置第 0 代段大小和最大大小。  
   
 > [!IMPORTANT]
->  从开始[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]、 可以设置段大小和最大第 0 代大小值大于`DWORD`使用[igchost2:: Setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)方法。  
+>  从开始[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]，可以设置段大小和最大第 0 代大小值大于`DWORD`通过使用[IGCHost2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,16 +47,16 @@ HRESULT SetGCStartupLimits (
  [in]第 0 代最大大小。  
   
 ## <a name="remarks"></a>备注  
- `SetGCStartupLimits`可能一次调用方法。 以后无法更改这些值。  
+ `SetGCStartupLimits`可能只有一次调用方法。 以后无法更改这些值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** GCHost.idl、 GCHost.h  
+ **标头：** GCHost.idl GCHost.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IGCHost 接口](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a>请参阅
+- [IGCHost 接口](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b49475bf7aea8d28ce057c7d4376cf7ad8285a0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506246"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>编写第一个 LINQ 查询 (Visual Basic)
 *查询*是一种从数据源检索数据的表达式。 查询用专用的查询语言表示。 随着时间推移，不同的语言已针对开发了不同类型的数据源，例如，用于关系数据库的 SQL 和用于 XML 的 XQuery。 这样，就需要为应用程序开发人员若要了解每种类型的数据源或数据格式受支持的新查询语言。  
@@ -60,7 +60,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  有关如何创建特定类型的数据源的详细信息，请参阅各种 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序的文档。 (有关这些提供程序的列表，请参阅[LINQ （语言集成查询）](../../../../visual-basic/programming-guide/concepts/linq/index.md)。)基本规则很简单：[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]数据源是支持泛型的任何对象<xref:System.Collections.Generic.IEnumerable%601>接口或从其继承的接口。  
   
 > [!NOTE]
->  类型，如<xref:System.Collections.ArrayList>支持非泛型<xref:System.Collections.IEnumerable>接口也可以用作[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]数据源。 有关使用示例<xref:System.Collections.ArrayList>，请参阅[如何： 使用 LINQ (Visual Basic) 查询 ArrayList](how-to-query-an-arraylist-with-linq.md)。  
+>  类型，如<xref:System.Collections.ArrayList>支持非泛型<xref:System.Collections.IEnumerable>接口也可以用作[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]数据源。 有关使用示例<xref:System.Collections.ArrayList>，请参阅[如何：使用 LINQ (Visual Basic) 查询 ArrayList](how-to-query-an-arraylist-with-linq.md)。  
   
 ## <a name="the-query"></a>查询  
  在查询中，指定你想要从数据源或源中检索哪些的信息。 此外可以指定如何应排序、 分组或结构化返回前该信息。 若要启用查询创建，Visual Basic 已合并到语言中新的查询语法。  
@@ -120,9 +120,9 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 中的 LINQ 入门](getting-started-with-linq.md)  
-- [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [标准查询运算符概述 (Visual Basic)](standard-query-operators-overview.md)  
-- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Visual Basic 中的 LINQ 入门](getting-started-with-linq.md)
+- [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [标准查询运算符概述 (Visual Basic)](standard-query-operators-overview.md)
+- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [查询](../../../../visual-basic/language-reference/queries/index.md)

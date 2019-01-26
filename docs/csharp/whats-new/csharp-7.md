@@ -3,12 +3,12 @@ title: C# 7.0 中的新增功能 - C# 指南
 description: 大致了解 C# 语言即将发布的版本 7 中将推出的新功能。
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 08e9b9d1a991c6dd18477214dec60fba95afc6c9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155283"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415723"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 中的新增功能
 
@@ -105,7 +105,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 上面的行会生成警告 `CS8123`，告知你赋值右侧的名称 `Alpha` 和 `Beta` 将被忽略，因为它们与左侧的名称 `First` 和 `Second` 冲突。
 
-上面的示例演示了用于声明元组的基本语法。 元组在作为 `private` 和 `internal` 方法的返回类型时是最有用的。 元组为这些方法提供了简单的语法以返回多个离散值：不用再费心创作定义返回类型的 `class` 或 `struct`。 无需创建新类型。
+上面的示例演示了用于声明元组的基本语法。 元组在作为 `private` 和 `internal` 方法的返回类型时是最有用的。 元组为这些方法提供了一个简单语法来返回多个离散值：不用再费心创作定义返回类型的 `class` 或 `struct`。 无需创建新类型。
 
 创建元组更有效且更高效。
 它是一种更简单的轻量级语法，用于定义携带多个值的数据结构。 下面的示例方法返回在一个整数序列中找到的最小值和最大值：
@@ -168,7 +168,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 ### <a name="is-expression"></a>`is` 表达式
 
-`is` 模式表达式扩展了常用 `is` 运算符，使其可查询其类型之外的对象。
+`is` 模式表达式扩展了常用 [`is` 运算符](../language-reference/keywords/is.md#pattern-matching-with-is)，使其可查询其类型之外的对象。
 
 我们以一个简单的方案为例。 我们将在此方案中添加功能，以便演示模式匹配表达式如何使处理不相关类型的算法变得简单。 我们从计算多次掷骰数之和的方法开始：
 
@@ -329,7 +329,7 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 > [!NOTE]
 > 本示例不需要终结器，但显示它是为了演示语法。 不应在类中实现终结器，除非有必要发布非托管资源。 还应考虑使用 <xref:System.Runtime.InteropServices.SafeHandle> 类，而不是直接管理非托管资源。
 
-这些针对 expression-bodied 成员的新位置代表了 C# 语言的一个重要里程碑：这些功能由致力于开放源代码 [Roslyn](https://github.com/dotnet/Roslyn) 项目的社区成员实现。
+这些 expression-bodied 成员的新位置代表了 C# 语言的一个重要里程碑：这些功能由致力于开发开放源代码 [Roslyn](https://github.com/dotnet/Roslyn) 项目的社区成员实现。
 
 将方法更改为 expression bodied 成员是[二进制兼容的更改](version-update-considerations.md#binary-compatible-changes)。
 

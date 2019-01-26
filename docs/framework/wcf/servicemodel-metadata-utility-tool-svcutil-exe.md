@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 10a5be16ef27aedf86f391b661750a953262d29b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533203"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 元数据实用工具 (Svcutil.exe)
 
@@ -59,7 +59,7 @@ ServiceModel Metadata Utility Tool 可在 Windows SDK 安装位置，具体而�
 
 |选项|描述|
 |------------|-----------------|
-|/ 目录：\<目录 >|要在其中创建文件的目录。<br /><br /> 默认值：当前目录中。<br /><br /> 缩写形式：`/d`|
+|/ 目录：\<目录 >|要在其中创建文件的目录。<br /><br /> 默认：当前目录中。<br /><br /> 缩写形式：`/d`|
 |/help|显示此工具的命令语法和选项。<br /><br /> 缩写形式：`/?`|
 |/noLogo|取消版权和标题消息。|
 |/svcutilConfig:\<configFile>|指定要取代 App.config 文件使用的自定义配置文件。 可以使用该自定义配置文件来注册 system.serviceModel 扩展，而无需更改工具的配置文件。|
@@ -69,7 +69,7 @@ ServiceModel Metadata Utility Tool 可在 Windows SDK 安装位置，具体而�
 
 Svcutil.exe 可以依据元数据文档为服务协定、客户端和数据类型生成代码。 这些元数据文档可以位于持久存储区上，也可以联机检索。 联机检索采用 WS-Metadata Exchange 协议或 DISCO 协议（有关详细信息，请参见“元数据下载”一节）。
 
-可以使用*SvcUtil.exe*工具生成基于预定义的 WSDL 文档的服务和数据协定。 使用 /serviceContract 开关并指定可以从中下载或找到 WSDL 文档的 URL 或文件位置。 这将生成用于实现投诉服务在 WSDL 文档中定义的服务和数据约定。 有关更多信息，请参见[如何：检索元数据并实现兼容服务](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)。
+可以使用*SvcUtil.exe*工具生成基于预定义的 WSDL 文档的服务和数据协定。 使用 /serviceContract 开关并指定可以从中下载或找到 WSDL 文档的 URL 或文件位置。 这将生成用于实现投诉服务在 WSDL 文档中定义的服务和数据约定。 有关详细信息，请参阅[如何：检索元数据并实现兼容服务](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)。
 
 对于使用 BasicHttpContextbinding 终结点，服务*Svcutil.exe*生成的 BasicHttpBinding`allowCookies`属性设置为`true`相反。 Cookie 用于服务器上的上下文。 如果在服务使用 Cookie 时，您要管理客户端上的上下文，则可以手动修改配置以使用上下文绑定。
 
@@ -88,7 +88,7 @@ Svcutil.exe 可以依据元数据文档为服务协定、客户端和数据类�
 |------------|-----------------|
 |/async|同时生成同步和异步方法签名。<br /><br /> 默认设置：只生成同步方法签名。<br /><br /> 缩写形式：`/a`|
 |/collectionType:\<type>|为 WCF 客户端指定列表集合类型。<br/><br /> 默认值： 集合类型是 System.Array。 <br /><br /> 缩写形式：`/ct`|
-|/config:\<configFile >|为生成的配置文件指定文件名。<br /><br /> 默认设置：output.config|
+|/config:\<configFile>|为生成的配置文件指定文件名。<br /><br /> 默认设置：output.config|
 |/dataContractOnly|只为数据协定类型生成代码。 不生成服务协定类型。<br /><br /> 只应为此选项指定本地元数据文件。<br /><br /> 缩写形式：`/dconly`|
 |/enableDataBinding|在所有数据协定类型上实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口以启用数据绑定。<br /><br /> 缩写形式：`/edb`|
 |/excludeType:\<type>|指定要从引用的协定类型中排除的完全限定或程序集限定类型名称。<br /><br /> 从单独的 DLL 中将此开关与 `/r` 一起使用时，将引用 XSD 类的全名。<br /><br /> 缩写形式：`/et`|
@@ -97,10 +97,10 @@ Svcutil.exe 可以依据元数据文档为服务协定、客户端和数据类�
 |/language:\<语言 >|指定要用于代码生成的编程语言。 应提供在 Machine.config 文件中，注册的语言名称或继承的类的完全限定的名称<xref:System.CodeDom.Compiler.CodeDomProvider>。<br /><br /> 值：c#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 默认设置：csharp<br /><br /> 缩写形式：`/l`|
 |/mergeConfig|将生成的配置合并到现有文件中，而不是覆盖现有文件。|
 |/messageContract|生成消息协定类型。<br /><br /> 缩写形式：`/mc`|
-|/namespace:\<字符串、 字符串 >|指定从 WSDL 或 XML 架构 targetNamespace 到 CLR 命名空间的映射。 使用\*用于 targetNamespace 映射所有 Targetnamespace，而不显式映射到该 CLR 命名空间。<br /><br /> 为了确保消息协定名称与操作名称不冲突，您应使用 `::` 限定类型引用，或确保名称是唯一的。<br /><br /> 默认值：数据协定的派生架构文档的目标命名空间中。 默认命名空间用于所有其他生成的类型。<br /><br /> 缩写形式：`/n` **注意：** 在生成时要使用与 XmlSerializer 类型，支持单个命名空间映射。 所有生成的类型可以是默认命名空间或指定的命名空间中 *。|
+|/namespace:\<string,string>|指定从 WSDL 或 XML 架构 targetNamespace 到 CLR 命名空间的映射。 使用\*用于 targetNamespace 映射所有 Targetnamespace，而不显式映射到该 CLR 命名空间。<br /><br /> 为了确保消息协定名称与操作名称不冲突，您应使用 `::` 限定类型引用，或确保名称是唯一的。<br /><br /> 默认：数据协定的派生架构文档的目标命名空间中。 默认命名空间用于所有其他生成的类型。<br /><br /> 缩写形式：`/n` **注意：** 在生成时要使用与 XmlSerializer 类型，支持单个命名空间映射。 所有生成的类型可以是默认命名空间或指定的命名空间中 *。|
 |/noConfig|不生成配置文件。|
-|/noStdLib|不引用标准库。<br /><br /> 默认值：引用 Mscorlib.dll 和 System.servicemodel.dll。|
-|/out:\<文件 >|为生成的代码指定文件名。<br /><br /> 默认值：派生自的 WSDL 定义名称，WSDL 服务名称或其中一个架构的目标命名空间。<br /><br /> 缩写形式：`/o`|
+|/noStdLib|不引用标准库。<br /><br /> 默认：引用 Mscorlib.dll 和 System.servicemodel.dll。|
+|/out:\<文件 >|为生成的代码指定文件名。<br /><br /> 默认：派生自的 WSDL 定义名称，WSDL 服务名称或其中一个架构的目标命名空间。<br /><br /> 缩写形式：`/o`|
 |/reference:\<文件路径 >|引用指定程序集中的类型。 在生成客户端时，使用此选项来指定可能包含类型的程序集，这些类型表示所导入的元数据。<br /><br /> 无法使用此开关指定消息协定和 <xref:System.Xml.Serialization.XmlSerializer> 类型。<br /><br /> 如果引用了 <xref:System.DateTimeOffset>，则会使用此类型，而不是生成新类型。 如果应用程序是使用 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 编写的，则 SvcUtil.exe 会自动引用 <xref:System.DateTimeOffset>。<br /><br /> 缩写形式：`/r`|
 |/serializable|生成用 Serializable 属性标记的类。<br /><br /> 缩写形式：`/s`|
 |/serviceContract|仅生成服务协定的代码。 不会生成客户端类和配置<br /><br /> 缩写形式：`/sc`|
@@ -176,7 +176,7 @@ Svcutil 会同时发出以下元数据请求以检索元数据。
 > [!NOTE]
 > 预生成的序列化代码只能在客户端应用程序中使用，不能在服务中使用。
 
-Svcutil.exe 可依据应用程序的已编译程序集生成必要的 C# 序列化代码，因而可提高这些应用程序的启动性能。 有关更多信息，请参见[如何：改善启动时间的 WCF 客户端应用程序的使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。
+Svcutil.exe 可依据应用程序的已编译程序集生成必要的 C# 序列化代码，因而可提高这些应用程序的启动性能。 有关详细信息，请参阅[如何：改善启动时间的 WCF 客户端应用程序的使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。
 
 > [!NOTE]
 > Svcutil.exe 只会为输入程序集中的服务协定使用的类型生成代码。
@@ -191,7 +191,7 @@ Svcutil.exe 可依据应用程序的已编译程序集生成必要的 C# 序列�
 |------------|-----------------|
 |/reference:\<文件路径 >|将指定程序集添加到用于解析类型引用的一组程序集中。<br /><br /> 缩写形式：`/r`|
 |/excludeType:\<type>|指定要从导出或验证中排除的类型的完全限定或程序集限定名称。<br /><br /> 缩写形式：`/et`|
-|/out:\<文件 >|为生成的代码指定文件名。 如果将多个程序集作为输入传递到工具，则会忽略此选项。<br /><br /> 默认值：派生自程序集名称。<br /><br /> 缩写形式：`/o`|
+|/out:\<文件 >|为生成的代码指定文件名。 如果将多个程序集作为输入传递到工具，则会忽略此选项。<br /><br /> 默认：派生自程序集名称。<br /><br /> 缩写形式：`/o`|
 |/UseSerializerForFaults|指定应该使用 <xref:System.Xml.Serialization.XmlSerializer>（而不是默认的 <xref:System.Runtime.Serialization.DataContractSerializer>）来读取和写入错误。|
 
 ## <a name="examples"></a>示例

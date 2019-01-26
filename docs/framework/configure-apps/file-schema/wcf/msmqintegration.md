@@ -2,44 +2,43 @@
 title: '&lt;msmqIntegration&gt;'
 ms.date: 03/30/2017
 ms.assetid: ab677405-1ffe-457a-803f-00c1770e51e2
-ms.openlocfilehash: 092f882b9e135595c63d7b49c9aee77203b19740
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 42197706a0c3f0f1940f8815fe0e41bb609a457a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603048"
 ---
 # <a name="ltmsmqintegrationgt"></a>&lt;msmqIntegration&gt;
 指定自定义绑定的 MSMQ 传输。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
-\<msmqIntegration >  
+\<binding>  
+\<msmqIntegration>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<msmqIntegration>  
-        customDeadLetterQueue="Uri"  
-        deadLetterQueue="Custom/None/System"  
-    durable="Boolean"  
-    exactlyOnce="Boolean"  
-    manualAddressing="Boolean"  
-    maxBufferPoolSize="Integer"  
-    maxImmediateRetries="Integer"  
-    maxReceivedMessageSize="Integer"  
-    maxRetryCycles="Integer"  
-    rejectAfterLastRetry="Boolean"  
-    retryCycleDelay="TimeSpan"  
-    serializationFormat="XML/Binary/ActiveX/ByteArray/Stream"  
-    timeToLive="TimeSpan"  
-    useSourceJournal="Boolean"  
-    useMsmqTracing="Boolean"  
-    <msmqTransportSecurity>  
-    </msmqTransportSecurity>  
-</msmqIntegration>  
+<msmqIntegration customDeadLetterQueue="Uri"
+                 deadLetterQueue="Custom/None/System"
+                 durable="Boolean"
+                 exactlyOnce="Boolean"
+                 manualAddressing="Boolean"
+                 maxBufferPoolSize="Integer"
+                 maxImmediateRetries="Integer"
+                 maxReceivedMessageSize="Integer"
+                 maxRetryCycles="Integer"
+                 rejectAfterLastRetry="Boolean"
+                 retryCycleDelay="TimeSpan"
+                 serializationFormat="XML/Binary/ActiveX/ByteArray/Stream"
+                 timeToLive="TimeSpan"
+                 useSourceJournal="Boolean"
+                 useMsmqTracing="Boolean">
+  <msmqTransportSecurity>
+  </msmqTransportSecurity>
+</msmqIntegration>
 ```  
   
 ## <a name="type"></a>类型  
@@ -78,16 +77,16 @@ ms.locfileid: "53151054"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [WCF 中的队列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [WCF 中的队列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

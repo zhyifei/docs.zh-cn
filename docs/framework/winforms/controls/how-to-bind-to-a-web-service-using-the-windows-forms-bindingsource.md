@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows 窗体 BindingSource 绑定到 Web 服务
+title: 如何：将绑定到使用 Windows 窗体 BindingSource 的 Web 服务
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: 34d40cb9b0f4929330473ae0dc2f4c12dd309270
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4f3bec715858f1d618957b61d3e15f9251f9fd55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639128"
 ---
-# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>如何：使用 Windows 窗体 BindingSource 绑定到 Web 服务
+# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>如何：将绑定到使用 Windows 窗体 BindingSource 的 Web 服务
 如果想要将 Windows 窗体控件绑定到因调用 XML Web 服务获取的结果，可使用 <xref:System.Windows.Forms.BindingSource> 组件。 此过程类似于将 <xref:System.Windows.Forms.BindingSource> 组件绑定到类型。 必须创建客户端代理，其中包含 Web 服务公开的方法和类型。 从 Web 服务 (.asmx) 本身或其 Web 服务描述语言 (WSDL) 文件生成客户端代理。 此外，客户端代理必须公开 Web 服务用作公共属性的复杂类型字段。 然后将 <xref:System.Windows.Forms.BindingSource> 绑定到 Web 服务代理中公开的某个类型。  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>若要创建并绑定到客户端代理  
@@ -70,8 +70,8 @@ ms.locfileid: "48840162"
   
 -   对 System, System.Drawing、System.Web.Services、System.Windows.Forms 和 System.Xml 程序集的引用。  
   
- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：编译和运行完整的 Windows 窗体代码示例使用 Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
-## <a name="see-also"></a>请参阅  
- [BindingSource 组件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [如何：将 Windows 窗体控件绑定到类型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+## <a name="see-also"></a>请参阅
+- [BindingSource 组件](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [如何：将 Windows 窗体控件绑定到类型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)

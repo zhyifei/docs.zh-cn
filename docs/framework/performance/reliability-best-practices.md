@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6f29d15297fc7faff6bb3bb07ee535647c2bb7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 280e73ccd3d8a90b2f2b3a485d3f4240b434359b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714849"
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳做法
 以下可靠性规则是面向 SQL Server 的；但是，它们也适用于任何基于主机的服务器应用程序。 对 SQL Server 等服务器而言，不泄露资源且不会遭遇停机是极其重要的。  然而，这不能通过为改变对象状态的每个方法写入退出代码来实现。  目标不在于编写出将结合退出代码从每个位置的错误进行恢复的 100% 可靠的托管代码。  那将是一项艰巨的任务，并且成功的可能性较小。  公共语言运行时 (CLR) 无法轻松地向托管代码提供足够强大的保证以使编写出完美的代码成为可行的做法。  请注意，不同于 ASP.NET，SQL Server 仅使用一个进程，在没有将数据库关闭相当长的一段时间的情况下，此进程是无法被回收的。  
@@ -249,7 +249,7 @@ public static MyClass SingletonProperty
  请考虑更改捕获所有异常的所有位置以捕获期待将引发的特定类型的异常，例如来自字符串格式化方法的 <xref:System.FormatException>。  这将阻止 catch 块针对意外异常运行，并且将帮助确保代码不会通过捕获意外异常来隐藏 bug。  按照一般规则，绝不要在库代码中处理异常（要求你捕获异常的代码可能指示正在调用的代码中存在设计缺陷）。  在某些情况下，你可能想捕获异常并且引发不同的异常类型以提供更多的数据。  在此情况下则使用嵌套异常，以将失败的真实原因存储在新异常的 <xref:System.Exception.InnerException%2A> 属性中。  
   
 #### <a name="code-analysis-rule"></a>代码分析规则  
- 查看托管代码中捕获所有对象或捕获所有异常的所有 catch 块。  在 C# 中，这意味着标记同时`catch`{}和`catch(Exception)` {}。  请考虑将异常类型描述得非常具体，或者查看代码以确保在它捕获到意外异常类型时不会以错误的方式执行。  
+ 查看托管代码中捕获所有对象或捕获所有异常的所有 catch 块。  在C#，这意味着同时标记`catch`{}并`catch(Exception)` {}。  请考虑将异常类型描述得非常具体，或者查看代码以确保在它捕获到意外异常类型时不会以错误的方式执行。  
   
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>不要假设托管线程是 Win32 线程 – 它是纤程  
  虽然使用托管线程本地存储的确有效，但你不能再次使用非托管线程本地存储或再次假设代码将在当前操作系统线程上运行。  不要更改如线程的区域设置等设置。  不要通过平台调用对 `InitializeCriticalSection` 或 `CreateMutex` 进行调用，因为它们要求进入锁的操作系统线程也能退出锁。  由于使用纤程时将不存在此问题，所以不能直接在 SQL 中使用 Win32 临界区和互斥。  请注意，托管 <xref:System.Threading.Mutex> 类不会处理这些线程关联问题。  
@@ -278,6 +278,6 @@ public static MyClass SingletonProperty
   
  这样做将指示实时编译器首先在 finally 块中准备所有代码，然后才运行 `try` 块。 这保证代码会在 finally 块中生成并且将在所有情况下运行。 CER 中具有空 `try` 块的情况并不罕见。 使用 CER 防止出现异步线程中止和内存不足异常。 有关进一步为极深代码处理堆栈溢出的 CER 形式，请参阅 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.ConstrainedExecution>  
- [SQL Server 编程和主机保护特性](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.ConstrainedExecution>
+- [SQL Server 编程和主机保护特性](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)

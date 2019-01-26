@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: be2eefdc52d38df3071d457b7a71dbac6eaa2657
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fb116d91ab7da076f2d883be3350a6d4259482ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499747"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>演练：在 Visual Basic 中实现 IEnumerable(Of T)
 <xref:System.Collections.Generic.IEnumerable%601>接口由类实现，可以一次返回一系列值的一项。 返回的数据一次的一项是不需要完整的数据集加载到内存中才能使用它的优点。 只需使用足够的内存将数据从加载单个项。 类实现`IEnumerable(T)`接口可与`For Each`循环或 LINQ 查询。  
@@ -93,8 +93,8 @@ ms.locfileid: "48836993"
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_10.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [控制流](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [循环结构](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [For Each...Next 语句](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [控制流](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [循环结构](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [For Each...Next 语句](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

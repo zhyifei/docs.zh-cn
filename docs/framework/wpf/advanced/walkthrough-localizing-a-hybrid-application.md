@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: e1d06085b4edb5c1e102eaab766ec7636194b991
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3d658d0dfb07a636a7338c69cae93b7e8a54383e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613865"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>演练：本地化混合应用程序
 
@@ -48,7 +48,7 @@ ms.locfileid: "47402693"
 
 2.  添加[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl>元素称为`SimpleControl`到项目。
 
-3.  使用<xref:System.Windows.Forms.Integration.ElementHost>控件中放置`SimpleControl`窗体上的元素。 有关详细信息，请参阅[演练： 承载 3-D WPF 复合控件在 Windows 窗体中](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)。
+3.  使用<xref:System.Windows.Forms.Integration.ElementHost>控件中放置`SimpleControl`窗体上的元素。 有关详细信息，请参见[演练：承载 3-D WPF 复合控件在 Windows 窗体中的](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)。
 
 ## <a name="adding-localizable-content"></a>添加可本地化的内容
 
@@ -118,7 +118,7 @@ Windows 窗体设计器提供用于在附属程序集中启用本地化的设置
 
 ### <a name="to-assign-resource-identifiers"></a>分配资源标识符
 
-1.  从开始菜单中，打开 Visual Studio 命令提示符。
+1.  从开始菜单中，打开 Visual Studio 开发人员命令提示。
 
 2.  使用以下命令将资源标识符分配到可本地化内容。
 
@@ -177,5 +177,5 @@ Windows 窗体设计器提供用于在附属程序集中启用本地化的设置
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [对应用程序进行本地化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
-- [演练： 本地化 Windows 窗体](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+- [演练：本地化 Windows 窗体](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

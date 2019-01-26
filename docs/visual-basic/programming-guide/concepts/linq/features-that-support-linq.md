@@ -5,24 +5,24 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 557e3607443066a863946ff08958197a14662a88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519359"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>支持 LINQ 的 Visual Basic 功能
 名称[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]指的是在 Visual Basic 支持查询语法和其他语言构造大大降低直接在语言中的技术。 使用[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，无需学习新语言对外部数据源的查询。 可以通过使用 Visual Basic 针对关系数据库、 XML 存储或对象中的数据进行查询。 此集成的语言的查询功能，编译时检查语法错误和类型安全。 这种集成还可确保您已知道大多数您需要了解在 Visual Basic 中编写丰富而各不相同的查询。  
   
- 以下部分介绍在足够的详细信息，以便可以开始阅读介绍性文档、 代码示例和示例应用程序中支持 LINQ 的语言构造。 您还可以单击链接，以了解如何语言功能组合在一起以实现语言集成查询的更详细的解释。 是一个良好起点[演练： 在 Visual Basic 中编写查询](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)。  
+ 以下部分介绍在足够的详细信息，以便可以开始阅读介绍性文档、 代码示例和示例应用程序中支持 LINQ 的语言构造。 您还可以单击链接，以了解如何语言功能组合在一起以实现语言集成查询的更详细的解释。 启动的好时机是[演练：在 Visual Basic 中编写查询](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)。  
   
 ## <a name="query-expressions"></a>查询表达式  
  在 Visual Basic 中的查询表达式可以用类似于 SQL 或 XQuery 的声明性语法来表示。 在编译时，查询语法转换为对标准查询运算符扩展方法的 LINQ 提供程序实现的方法调用。 应用程序控制的标准查询运算符是在范围内通过指定适当的命名空间与`Imports`语句。 Visual Basic 查询表达式的语法如下所示：  
   
  [!code-vb[VbLINQVbFeatures#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_1.vb)]  
   
- 有关详细信息，请参阅[在 Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。  
+ 有关详细信息，请参阅[Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)。  
   
 ## <a name="implicitly-typed-variables"></a>隐式类型化的变量  
  而不是显式指定类型声明和初始化一个变量时，可以使编译器能够推断和分配类型。 这被称为*局部类型推理*。  
@@ -44,7 +44,7 @@ ms.locfileid: "39199142"
   
  [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
   
- 有关详细信息，请参阅[对象初始值设定项： 命名类型和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。  
+ 有关详细信息，请参阅[对象初始值设定项：命名和匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)。  
   
 ## <a name="anonymous-types"></a>匿名类型  
  匿名类型提供的一组属性临时分组你想要在查询结果中包含的元素的简便方法。 这使您可以在查询中，按任意顺序中，选择可用字段的任意组合，而无需定义元素的已命名的数据类型。  
@@ -93,9 +93,9 @@ ms.locfileid: "39199142"
   
  有关详细信息，请参阅 [Lambda 表达式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
-## <a name="see-also"></a>请参阅  
- [语言集成查询 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- [Visual Basic 中的 LINQ 入门](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [Option Infer 语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>请参阅
+- [语言集成查询 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Visual Basic 中的 LINQ 入门](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [Option Infer 语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

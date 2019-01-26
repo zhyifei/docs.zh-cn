@@ -2,30 +2,28 @@
 title: '&lt;webMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: eddda5e805d7e2cc361b6925d34d13eb8fd614f9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 90102c25c1c5b83af8f629d18b790af9297fa88c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773619"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640246"
 ---
 # <a name="ltwebmessageencodinggt"></a>&lt;webMessageEncoding&gt;
 允许在 Windows Communication Foundation (WCF) 绑定中使用纯文本 XML、JavaScript 对象表示法 (JSON) 消息编码和“原始”二进制内容时对其进行读写。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
-\<webMessageEncoding >  
+\<binding>  
+\<webMessageEncoding>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<webMessageEncoding   
-      maxReadPoolSize="Integer"  
-   maxWritePoolSize="Integer"  
-  
-writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />  
+<webMessageEncoding maxReadPoolSize="Integer"
+                    maxWritePoolSize="Integer"
+                    writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -37,7 +35,7 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 |---------------|-----------------|  
 |`maxReadPoolSize`|无需分配新的读取器便可同时读取的消息数。 池越大，系统允许的活动峰值就越大，但工作集也会随之增大。 默认情况下将为每个内部编码器（文本、JSON 和“原始”）分配 64 个读取器。<br /><br /> 增大此数字将会增加内存消耗，但能够让编码器处理传入消息的突现高峰，因为编码器可以使用池中已创建的读取器，而不必创建新的读取器。|  
 |`maxWritePoolSize`|无需分配新的编写器便可同时发送的消息数。 池越大，系统允许的活动峰值就越大，但工作集也会随之增大。 默认情况下将为每个内部编码器（文本、JSON 和“原始”）分配 16 个编写器。<br /><br /> 增大此数字将会增加内存消耗，但能够让编码器处理传出消息的突现高峰，因为编码器可以使用池中已创建的编写器，而不必创建新的编写器。|  
-|`writeEncoding`|指定要用来在绑定上发出消息的字符集编码。 有效值为：<br /><br /> -UnicodeFffeTextEncoding: Unicode Big Endian 编码。<br />-Utf16textencoding:unicode 编码。<br />-Utf8TextEncoding: 8 位编码。<br /><br /> 默认值为 Utf8TextEncoding。 此属性的类型为 <xref:System.Text.Encoding>。|  
+|`writeEncoding`|指定要用来在绑定上发出消息的字符集编码。 有效值为：<br /><br /> -UnicodeFffeTextEncoding:Unicode Big Endian 编码。<br />-Utf16TextEncoding:Unicode 编码。<br />-Utf8TextEncoding:8 位编码。<br /><br /> 默认值为 Utf8TextEncoding。 此属性的类型为 <xref:System.Text.Encoding>。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -49,7 +47,7 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  编码是将消息转换为一个字节序列的过程。 解码是反向过程。 这些过程都需要字符编码规范。  
@@ -67,22 +65,20 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 ## <a name="example"></a>示例  
   
 ```xml  
-<webMessageEncoding   
-    maxReadPoolSize="256"  
-    maxWritePoolSize="128"  
-    messageVersion="None"  
-    textEncoding="utf-8"   
-/>  
+<webMessageEncoding maxReadPoolSize="256"
+                    maxWritePoolSize="128"
+                    messageVersion="None"
+                    textEncoding="utf-8" />
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
- [消息编码](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [选择消息编码器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
+- [消息编码](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [选择消息编码器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

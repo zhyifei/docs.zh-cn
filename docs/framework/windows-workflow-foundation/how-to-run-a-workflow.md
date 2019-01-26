@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3b2081cee307e80396a9af4b9cfdbdea001113e6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e609c2b1a24ba01bf23226187b6d87e56395ff99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530397"
 ---
 # <a name="how-to-run-a-workflow"></a>如何：运行工作流
-本主题是 Windows Workflow Foundation 入门教程的延续，讨论如何创建工作流宿主并运行上一主题 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 中定义的工作流。
+本主题是 Windows Workflow Foundation 入门教程的延续，讨论如何创建工作流宿主并运行在以前定义的工作流[如何：创建工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)主题。
 
 > [!NOTE]
->  入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须先完成 [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) 和 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)。
+>  入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须首先完成[如何：创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)和[如何：创建工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)。
 
 > [!NOTE]
->  若要下载本教程的完整的版本，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  若要下载完整版教程，请参阅 [Windows Workflow Foundation (WF45) — 入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ### <a name="to-create-the-workflow-host-project"></a>创建工作流宿主项目  
   
-1.  从以前打开的解决方案[如何： 创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)通过使用 Visual Studio 2012 的主题。  
+1.  从以前打开的解决方案[如何：创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)通过使用 Visual Studio 2012 的主题。  
   
 2.  在 **解决方案资源管理器** 中右键单击 **WF45GettingStartedTutorial** 解决方案，选择 **“添加”** 和 **“新建项目”**。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48836913"
      用以下基本 <xref:System.Activities.WorkflowInvoker> 承载代码替换使用 <xref:System.Activities.WorkflowApplication> 的代码行。 此示例承载代码演示承载和调用工作流的基本步骤，但尚不包含用于成功运行本主题中的工作流的功能。 在以下步骤中，将修改此基本代码并添加其他功能，直到完成应用程序。
 
     > [!NOTE]
-    >  请将以下示例中的 `Workflow1` 替换为 `FlowchartNumberGuessWorkflow`和 `SequentialNumberGuessWorkflow`或 `StateMachineNumberGuessWorkflow`（取决于在上一步骤 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 中完成的工作流）。 如果不替换 `Workflow1` ，在尝试生成或运行工作流时会出现生成错误。
+    >  请替换`Workflow1`在这些示例中使用`FlowchartNumberGuessWorkflow`， `SequentialNumberGuessWorkflow`，或`StateMachineNumberGuessWorkflow`，具体在以前完成的工作流取决于[如何：创建工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)步骤。 如果不替换 `Workflow1` ，在尝试生成或运行工作流时会出现生成错误。
 
      [!code-csharp[CFX_WF_GettingStarted#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/extrasnippets.cs#4)]
      [!code-vb[CFX_WF_GettingStarted#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/extrasnippets.vb#4)]
@@ -94,7 +94,7 @@ ms.locfileid: "48836913"
 2.  将创建新 <xref:System.Activities.WorkflowApplication> 的代码行替换为以下代码，该代码创建一个参数字典并在创建后将其传递给工作流。
 
     > [!NOTE]
-    >  请将以下示例中的 `Workflow1` 替换为 `FlowchartNumberGuessWorkflow`和 `SequentialNumberGuessWorkflow`或 `StateMachineNumberGuessWorkflow`（取决于在上一步骤 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 中完成的工作流）。 如果不替换 `Workflow1` ，在尝试生成或运行工作流时会出现生成错误。
+    >  请替换`Workflow1`在这些示例中使用`FlowchartNumberGuessWorkflow`， `SequentialNumberGuessWorkflow`，或`StateMachineNumberGuessWorkflow`，具体在以前完成的工作流取决于[如何：创建工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)步骤。 如果不替换 `Workflow1` ，在尝试生成或运行工作流时会出现生成错误。
 
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
@@ -148,13 +148,13 @@ ms.locfileid: "48836913"
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
 
-     有关如何向工作流应用程序添加持久性的说明，请参阅下一主题 [How to: Create and Run a Long Running Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)。
+     有关如何向工作流应用程序添加持久性的说明，请参阅下一主题[如何：创建和运行长时间运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)。
 
 ## <a name="example"></a>示例
  下面的示例是 `Main` 方法的完整代码清单。
 
 > [!NOTE]
->  请将以下示例中的 `Workflow1` 替换为 `FlowchartNumberGuessWorkflow`和 `SequentialNumberGuessWorkflow`或 `StateMachineNumberGuessWorkflow`（取决于在上一步骤 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 中完成的工作流）。 如果不替换 `Workflow1` ，在尝试生成或运行工作流时会出现生成错误。
+>  请替换`Workflow1`在这些示例中使用`FlowchartNumberGuessWorkflow`， `SequentialNumberGuessWorkflow`，或`StateMachineNumberGuessWorkflow`，具体在以前完成的工作流取决于[如何：创建工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)步骤。 如果不替换 `Workflow1` ，在尝试生成或运行工作流时会出现生成错误。
 
  [!code-csharp[CFX_WF_GettingStarted#12](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#12)]
  [!code-vb[CFX_WF_GettingStarted#12](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#12)]
@@ -166,6 +166,6 @@ ms.locfileid: "48836913"
 - [Windows Workflow Foundation 编程](../../../docs/framework/windows-workflow-foundation/programming.md)
 - [入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
 - [如何：创建工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [如何：创建和运行长时间运行的工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)
+- [如何：创建和运行长时间运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)
 - [在工作流中等待输入](../../../docs/framework/windows-workflow-foundation/waiting-for-input-in-a-workflow.md)
 - [托管工作流](../../../docs/framework/windows-workflow-foundation/hosting-workflows.md)

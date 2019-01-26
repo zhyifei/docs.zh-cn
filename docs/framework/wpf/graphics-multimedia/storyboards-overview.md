@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: d6b33df8574d9c25380d6d9319480d3c9df28660
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa0143aac4253b6a7648da589e01ac8abf9d4341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492680"
 ---
 # <a name="storyboards-overview"></a>演示图板概述
 本主题演示如何使用<xref:System.Windows.Media.Animation.Storyboard>对象来组织和应用动画。 它介绍了如何以交互方式操作<xref:System.Windows.Media.Animation.Storyboard>对象，并介绍间接属性目标语法。  
@@ -63,7 +63,7 @@ ms.locfileid: "44222469"
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.EventTrigger>|是|是|是|是|[使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> 和属性 <xref:System.Windows.Trigger>|否|是|是|是|[在属性值更改时触发动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.DataTrigger>|否|是|是|是|[如何：在数据更改时触发动画](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.DataTrigger>|否|是|是|是|[如何：数据发生更改时触发动画](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法|是|No|否|否|[使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  下面的示例使用<xref:System.Windows.Media.Animation.Storyboard>进行动画处理<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>元素和<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>用于绘制的<xref:System.Windows.Shapes.Rectangle>。  
@@ -225,17 +225,17 @@ ms.locfileid: "44222469"
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>在 XAML 中以交互方式控制情节提要  
  若要在启动情节提要[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，则使用<xref:System.Windows.Media.Animation.BeginStoryboard>触发操作。 <xref:System.Windows.Media.Animation.BeginStoryboard> 将动画分发到的对象和属性，它们进行动画处理，并启动情节提要。 (有关此过程的详细信息，请参阅[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。)如果您为提供<xref:System.Windows.Media.Animation.BeginStoryboard>通过指定的名称及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>属性，您使它可控制情节提要。 然后，可以在情节提要启动后以交互方式对它进行控制。 下面列出了可与事件触发器一起使用来控制情节提要的可控制情节提要操作。  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>： 暂停情节提要。  
+-   <xref:System.Windows.Media.Animation.PauseStoryboard>：暂停情节提要。  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>： 恢复暂停的情节提要。  
+-   <xref:System.Windows.Media.Animation.ResumeStoryboard>：恢复暂停的情节提要。  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>： 更改情节提要的速度。  
+-   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>：更改情节提要的速度。  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>： 如果有的话，前进到其填充期，末尾情节提要。  
+-   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>：如果有，请转到其填充期，末尾情节提要。  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>： 停止情节提要。  
+-   <xref:System.Windows.Media.Animation.StopStoryboard>：停止情节提要。  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>： 删除情节提要。  
+-   <xref:System.Windows.Media.Animation.RemoveStoryboard>：删除情节提要。  
   
  在下面的示例中，使用可控制的情节提要操作来以交互方式控制情节提要。  
   
@@ -261,7 +261,7 @@ ms.locfileid: "44222469"
   
  使用这些方法的优点是不需要创建<xref:System.Windows.Trigger>或<xref:System.Windows.TriggerAction>对象; 只需对可控制引用<xref:System.Windows.Media.Animation.Storyboard>要进行处理。  
   
- **注意：** 执行的所有交互操作<xref:System.Windows.Media.Animation.Clock>，并因此同样，在<xref:System.Windows.Media.Animation.Storyboard>会在下一步呈现之前短暂发生在计时引擎的下一步刻度线上发生。 例如，如果您使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>方法跳转到动画，属性值中的另一个点不会立即更改、 的值而不是，计时引擎的下一计时周期发生更改。  
+ **注意：** 对所执行的所有交互操作<xref:System.Windows.Media.Animation.Clock>，并因此同样，在<xref:System.Windows.Media.Animation.Storyboard>会在下一步呈现之前短暂发生在计时引擎的下一步刻度线上发生。 例如，如果您使用<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>方法跳转到动画，属性值中的另一个点不会立即更改、 的值而不是，计时引擎的下一计时周期发生更改。  
   
  下面的示例演示如何应用和控制动画使用交互式方法对的<xref:System.Windows.Media.Animation.Storyboard>类。  
   
@@ -302,7 +302,7 @@ ms.locfileid: "44222469"
   
  应用属性的动画<xref:System.Windows.Trigger>对象的行为以更复杂的方式比<xref:System.Windows.EventTrigger>动画开始使用<xref:System.Windows.Media.Animation.Storyboard>方法。  在"切换"时使用动画定义由其他<xref:System.Windows.Trigger>对象，但是在编写使用<xref:System.Windows.EventTrigger>和方法触发的动画。  
   
-## <a name="see-also"></a>请参阅  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+## <a name="see-also"></a>请参阅
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)

@@ -1,15 +1,15 @@
 ---
-title: '&lt;筛选器&gt;'
+title: '&lt;filters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 37a87222-ec78-4728-8105-9ca1bd961f0c
-ms.openlocfilehash: af0821d6477ed7f3525cd0fe8d46f3699c48acb0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5f50b1ad4abfa77022a17d6497b614721382ec1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600188"
 ---
-# <a name="ltfiltersgt"></a>&lt;筛选器&gt;
+# <a name="ltfiltersgt"></a>&lt;filters&gt;
 
 `filters` 元素包含用于控制所记录的消息类型的 XPath 筛选器集合。
 
@@ -20,21 +20,30 @@ ms.locfileid: "32749184"
 筛选器支持完整的 XPath 语法，并按照其在配置文件中出现的顺序进行应用。 存在语法错误的筛选器会导致配置异常。
 
 下面的示例演示如何配置一个筛选器，它仅记录具有 SOAP 标头部分的消息。
-
-```xml
+  
+```xml  
 <messageLogging logEntireMessage="true"
                 logMalformedMessages="true"
                 logMessagesAtServiceLevel="true"
                 logMessagesAtTransportLevel="true"
-                maxMessagesToLog="420">  
-  <filters>  
-    <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">  
-      /soap:Envelope/soap:Headers  
-    </add>  
-  </filters>  
+                maxMessagesToLog="420">
+  <filters>
+    <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+      /soap:Envelope/soap:Headers
+    </add>
+  </filters>
 </messageLogging>
-```
-
+```  
+  
 ## <a name="see-also"></a>请参阅
 
- <xref:System.ServiceModel.Configuration.DiagnosticSection> <xref:System.ServiceModel.Diagnostics> <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> <xref:System.ServiceModel.Configuration.MessageLoggingElement> <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A> <xref:System.ServiceModel.Configuration.XPathMessageFilterElementCollection> <xref:System.ServiceModel.Configuration.XPathMessageFilterElement> <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> [配置消息日志记录](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) [ \<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>
+- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
+- <xref:System.ServiceModel.Configuration.MessageLoggingElement>
+- <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
+- <xref:System.ServiceModel.Configuration.XPathMessageFilterElementCollection>
+- <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
+- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
+- [配置消息日志记录](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)

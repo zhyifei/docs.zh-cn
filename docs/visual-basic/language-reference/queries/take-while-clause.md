@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: 181cc641bb12329c898cc3bb226ea49f0836e979
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3dfb70066d88683e60f3bf4199441ab3024ef36c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565100"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While 子句 (Visual Basic)
 包括集合中指定条件为 `true` 的任何元素，并绕过剩余元素。  
@@ -28,7 +28,7 @@ Take While expression
   
 |术语|定义|  
 |---|---|  
-|`expression`|必须的。 一个表达式，表示要测试的元素的条件。 该表达式必须返回`Boolean`值或功能上等效，如`Integer`被视为`Boolean`。|  
+|`expression`|必需。 一个表达式，表示要测试的元素的条件。 该表达式必须返回`Boolean`值或功能上等效，如`Integer`被视为`Boolean`。|  
   
 ## <a name="remarks"></a>备注  
  `Take While`子句之前提供包括查询结果的开始元素`expression`返回`false`。 之后`expression`返回`false`，查询将跳过所有剩余元素。 `expression`忽略其余的结果。  
@@ -40,11 +40,11 @@ Take While expression
   
  [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查询](../../../visual-basic/language-reference/queries/index.md)  
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Take 子句](../../../visual-basic/language-reference/queries/take-clause.md)  
- [Skip While 子句](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>请参阅
+- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查询](../../../visual-basic/language-reference/queries/index.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Take 子句](../../../visual-basic/language-reference/queries/take-clause.md)
+- [Skip While 子句](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)

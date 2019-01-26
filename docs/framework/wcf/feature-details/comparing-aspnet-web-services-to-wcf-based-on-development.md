@@ -2,12 +2,12 @@
 title: 从开发的角度比较 ASP.NET Web 服务与 WCF
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: c4c07d24ba322c957aac5ba9fa6ed3a5f337fb9a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6bf9743410d3138efd5f3ea151b58f61e46ef683
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496788"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>从开发的角度比较 ASP.NET Web 服务与 WCF
 Windows Communication Foundation (WCF) 提供用于启用 WCF 应用程序进行编程和配置类似于 ASP.NET Web 服务，并模拟其行为的 ASP.NET 兼容模式选项。 以下部分进行了比较 ASP.NET Web 服务和 WCF 基于使用这两种技术开发应用程序的要求。  
@@ -750,5 +750,5 @@ public void Receive(Message input)
 ## <a name="globalization"></a>全球化  
  通过 ASP.NET 配置语言，您可以为这些服务单独指定区域性。 在 ASP.NET 兼容模式下，WCF 不支持除该配置设置。 若要本地化不使用 ASP.NET 兼容模式的 WCF 服务，编译为特定于区域性的程序集的服务类型和每个特定于区域性的程序集具有单独的特定于区域性的终结点。  
   
-## <a name="see-also"></a>请参阅  
- [基于目标和使用的标准比较 ASP.NET Web 服务与 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+## <a name="see-also"></a>请参阅
+- [基于目标和使用的标准比较 ASP.NET Web 服务与 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

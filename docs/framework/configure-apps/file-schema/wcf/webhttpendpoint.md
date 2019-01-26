@@ -2,32 +2,32 @@
 title: '&lt;webHttpEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: 46691a36b62898583132b5668b06de5659926d66
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b69ace451e90c824cdf8b911d596fdd158eb3f73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491714"
 ---
 # <a name="ltwebhttpendpointgt"></a>&lt;webHttpEndpoint&gt;
-此配置元素定义具有固定的标准终结点[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)绑定，它自动添加[ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)行为。 在编写 REST 服务时，请使用此终结点。  
+此配置元素定义具有固定的标准终结点[ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)自动绑定，它将添加[ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)行为。 在编写 REST 服务时，请使用此终结点。  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <webHttpEndpoint>
-      <standardEndpoint automaticFormatSelectionEnabled="String" 
-                        defaultOutgoingResponseFormat="Xml/Json" 
-                        helpEnabled="Boolean" 
-                        webEndpointType="String"/>
+      <standardEndpoint automaticFormatSelectionEnabled="String"
+                        defaultOutgoingResponseFormat="Xml/Json"
+                        helpEnabled="Boolean"
+                        webEndpointType="String" />
     </webHttpEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -49,8 +49,8 @@ ms.locfileid: "32767084"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description.WebHttpEndpoint>  
- <xref:System.ServiceModel.Configuration.WebHttpEndpointElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description.WebHttpEndpoint>
+- <xref:System.ServiceModel.Configuration.WebHttpEndpointElement>

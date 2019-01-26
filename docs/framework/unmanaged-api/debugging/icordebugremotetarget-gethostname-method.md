@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1536a89d0e85480d3829939c40cd986fe65883df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf35715564e58f1811618b6859a860008e9660c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655395"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName 方法
 返回远程调试目标计算机的完全限定域名或 IPv4 地址。 此时不支持 IPV6。  
@@ -55,10 +55,10 @@ HRESULT GetHostName (
  无法返回主机名或 IP 地址。  
   
 ## <a name="remarks"></a>备注  
- 此方法由调试器编写器实现。 它必须遵循多次调用范例：第一次调用时，调用方将 null 传递到 `cchHostName` 和 `szHostName`，并且 `pcchHostName` 返回所需缓冲区的大小。 第二次调用时，先前返回的大小在 `cchHostName` 中传递，相应大小的缓冲区在 `szHostName` 中传递。  
+ 此方法由调试器编写器实现。 它必须遵循多次调用范例：在首次调用，调用方将 null 传递到两者`cchHostName`并`szHostName`，和`pcchHostName`返回所需的缓冲区的大小。 第二次调用时，先前返回的大小在 `cchHostName` 中传递，相应大小的缓冲区在 `szHostName` 中传递。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl  
   
@@ -66,6 +66,6 @@ HRESULT GetHostName (
   
  **.NET framework 版本：** 3.5 SP1  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugRemoteTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugRemoteTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

@@ -2,12 +2,12 @@
 title: 自定义消息编码器：压缩编码器
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: dc1241f0652c55fee0db7ca7ff19b28fea656c16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583611"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>自定义消息编码器：压缩编码器
 此示例演示如何实现自定义编码器使用 Windows Communication Foundation (WCF) 平台。  

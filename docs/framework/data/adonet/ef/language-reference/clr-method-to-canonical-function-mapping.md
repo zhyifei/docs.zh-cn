@@ -2,12 +2,12 @@
 title: CLR 方法至规范函数映射
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 07d488eb8caba8309857ef7fba42e67e155363e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 31e6bfaf86ffb6721491a8d6681d713075a628f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766590"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551574"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>CLR 方法至规范函数映射
 实体框架提供了一组规范函数（如字符串操作函数和数学函数），这些函数可以实现很多数据库系统通用的功能。 这使开发人员可以面向广泛的数据库系统。 通过查询技术（如 LINQ to Entities）调用时，这些规范函数将转换为要使用的提供程序的相应正确存储区函数。 这样，可以用一种数据源通用的形式表示函数调用，从而在数据源之间提供一致的查询体验。 如果操作数是数值类型，则按位 AND、OR、NOT 和 XOR 运算符也将映射到规范函数。 对于布尔操作数，按位 AND、OR、NOT 和 XOR 运算符将计算其操作数的逻辑 AND、OR、NOT 和 XOR 运算。 有关详细信息，请参阅[规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)。  
@@ -40,14 +40,14 @@ ms.locfileid: "32766590"
 |System.String 方法（实例）|规范函数|备注|  
 |---------------------------------------|------------------------|-----------|  
 |Boolean Contains(String `value`)|`this` LIKE '%`value`%'|如果 `value` 不是常量，则它映射到 IndexOf(`this`, `value`) > 0|  
-|Boolean EndsWith(String `value`)|`this` 如`'` % `value`|如果 `value` 不是常量，则它映射到 Right(`this`, length(`value`)) = `value`。|  
+|Boolean EndsWith(String `value`)|`this` 像`'` % `value`|如果 `value` 不是常量，则它映射到 Right(`this`, length(`value`)) = `value`。|  
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|如果 `value` 不是常量，则它映射到 IndexOf(`this`, `value`) = 1。|  
 |长度|Length(`this`)||  
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||  
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||  
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||  
-|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (子字符串 (`this`、 1、 `startIndex`)，子字符串 (`this`， `startIndex`  +  `count` + 1，长度 (`this`)-(`startIndex` + `count`)))|Remove(`startIndex`, `count`) 仅在 `count` 是大于或等于 0 的整数时才受支持。|  
-系统。字符串替换 (字符串`oldValue`，字符串`newValue`)|Replace(`this`, `oldValue`, `newValue`)||  
+|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (子字符串 (`this`，1， `startIndex`)，子字符串 (`this`， `startIndex`  +  `count` + 1，长度 (`this`)-(`startIndex` + `count`)))|Remove(`startIndex`, `count`) 仅在 `count` 是大于或等于 0 的整数时才受支持。|  
+运行至关重要。替换的字符串 (字符串`oldValue`，字符串`newValue`)|Replace(`this`, `oldValue`, `newValue`)||  
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||  
 |System.String Substring(Int32 `startIndex`, Int32 `length`)|子字符串 (`this`， `startIndex` + 1， `length`)||  
 |System.String ToLower()|ToLower(`this`)||  
@@ -196,5 +196,5 @@ icrosoft.VisualBasic.DateAndTime.Day(DateTime `TimeValue`)|Day()||
 |------------|------------------------|  
 |Guid.NewGuid()|NewGuid()|  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+## <a name="see-also"></a>请参阅
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

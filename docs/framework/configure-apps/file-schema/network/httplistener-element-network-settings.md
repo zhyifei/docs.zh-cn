@@ -2,20 +2,20 @@
 title: '&lt;httpListener&gt;元素 （网络设置）'
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 58228eed71dd6a5f5af8e26c02db9633da6ceef6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 896b6633ef4a741b9a7460d8ce3d879253d542da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197777"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577693"
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt;元素 （网络设置）
 自定义使用参数<xref:System.Net.HttpListener>类。  
   
  \<configuration>  
 \<system.net>  
-\<设置 >  
-\<httpListener >  
+\<settings>  
+\<httpListener>  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ ms.locfileid: "50197777"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
 ## <a name="remarks"></a>备注  
  **UnescapeRequestUrl**属性指示如果<xref:System.Net.HttpListener>使用未经转义的原始 URI，而不是经过转换的 URI 其中任何百分比编码值转换和执行其他任何规范化步骤。  
@@ -137,8 +137,8 @@ ms.locfileid: "50197777"
 |验证文件||  
 |可以为空||  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.Configuration.HttpListenerElement>  
-- <xref:System.Net.HttpListener>  
-- <xref:System.Net.HttpListenerRequest.Url%2A>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.Configuration.HttpListenerElement>
+- <xref:System.Net.HttpListener>
+- <xref:System.Net.HttpListenerRequest.Url%2A>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

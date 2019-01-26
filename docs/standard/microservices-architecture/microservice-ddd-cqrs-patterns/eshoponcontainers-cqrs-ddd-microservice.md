@@ -4,18 +4,20 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143631"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362824"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
 
 eShopOnContainers 引用应用程序处的订单微服务设计基于 CQRS 原则。 但是，它使用最简单的方法：只需将查询与命令分离，且执行这两种操作时使用相同的数据库。
 
-这些模式的本质，以及这里的要点是，查询是幂等的：无论查询一个系统多少次，该系统的状态都不会改变。 你甚至可以使用不同的“读取”数据模型而不是事务逻辑的“写入”域模型，尽管排序微服务使用的是相同的数据库。 因此这是简化的 CQRS 方法。
+这些模式的本质，以及这里的要点是，查询是幂等的：无论查询一个系统多少次，该系统的状态都不会改变。 换而言之，查询没有副作用。
+
+因此，可以使用不同的“读取”数据模型而不是事务逻辑的“写入”域模型，尽管排序微服务使用的是相同的数据库。 因此，这是简化的 CQRS 方法。
 
 另一方面，用于触发事务和数据更新的命令在系统中会更改状态。 在处理复杂问题和不断变化的业务规则的过程中，使用命令时需小心谨慎。 这正是应用 DDD 技术的时候，可以获取更好的模型化系统。
 

@@ -4,12 +4,12 @@ description: 使用 dotnet test 和 NUnit 分步构建一个示例解决方案�
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 80c831a6d8ab9aa35435d0ff8f13334f7d169a3a
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 00be8c2fdef88861cc1119b1593155e027a3ade5
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169020"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307209"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>使用 NUnit 和 .NET Core 进行 C# 单元测试
 
@@ -109,10 +109,10 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeService.Tests.csproj
 ```
 
-在 unit-testing-using-dotnet-test 目录中执行以下命令：
+在 unit-testing-using-nunit 目录中执行以下命令：
 
 ```console
-dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
+dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
 ## <a name="creating-the-first-test"></a>创建第一个测试

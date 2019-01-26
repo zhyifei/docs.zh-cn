@@ -9,12 +9,12 @@ helpviewer_keywords:
 - RectangleGeometry objects [WPF], animating with key frames
 - animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-ms.openlocfilehash: 9b4a620ea58026c3be1b09d01a595e965e4c2b45
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 8e3da6ddf5a49ce690dfe1fc08732376a0998d67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645055"
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>如何：使用关键帧对矩形几何形状进行动画处理
 此示例演示如何进行动画处理<xref:System.Windows.Media.RectangleGeometry.Rect%2A>属性的<xref:System.Windows.Media.RectangleGeometry>使用关键帧。  
@@ -34,9 +34,9 @@ ms.locfileid: "46002939"
   
  有关完整示例，请参阅[关键帧动画示例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.RectangleGeometry>  
- <xref:System.Windows.Media.RectangleGeometry.Rect%2A>  
- <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>  
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [关键帧操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.RectangleGeometry>
+- <xref:System.Windows.Media.RectangleGeometry.Rect%2A>
+- <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>
+- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [关键帧操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

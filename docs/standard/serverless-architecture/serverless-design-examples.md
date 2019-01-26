@@ -4,12 +4,12 @@ description: 了解各种支持的无服务器体系结构，从计划和基于�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146701"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149672"
 ---
 # <a name="serverless-design-examples"></a>无服务器设计示例
 
@@ -65,7 +65,7 @@ ms.locfileid: "53146701"
 
 ## <a name="stream-processing"></a>Stream 处理
 
-设备和传感器通常实时生成必须处理的数据的数据流。 有许多可以捕获消息和从流的技术[事件中心](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)并[IoT 中心](https://docs.microsoft.com/azure/iot-hub)到[Service Bus](/service-bus)。 传输，无论无服务器是一种理想机制来处理传入消息和数据的数据流。 无服务器可以快速缩放以满足数据量很大的需求。 无服务器代码可以应用业务逻辑以分析数据和输出的操作和分析结构化格式。
+设备和传感器通常实时生成必须处理的数据的数据流。 有许多可以捕获消息和从流的技术[事件中心](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)并[IoT 中心](https://docs.microsoft.com/azure/iot-hub)到[Service Bus](https://docs.microsoft.com/azure/service-bus)。 传输，无论无服务器是一种理想机制来处理传入消息和数据的数据流。 无服务器可以快速缩放以满足数据量很大的需求。 无服务器代码可以应用业务逻辑以分析数据和输出的操作和分析结构化格式。
 
 ![无服务器的流处理](./media/serverless-stream-processing.png)
 

@@ -2,12 +2,12 @@
 title: 如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: cd630fa8a583b5d1efdaefaf899cb6e345e7c7ad
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638283"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF
 本主题概述将基本的 ASP.NET AJAX 服务迁移到等效的启用了 AJAX 的 Windows Communication Foundation (WCF) 服务的过程。 它演示如何创建 ASP.NET AJAX 服务的功能上等效 WCF 版本。 然后可以使用并排显示，这两项服务或 WCF 服务可以用于替换 ASP.NET AJAX 服务。
@@ -22,7 +22,7 @@ ms.locfileid: "48840909"
 
  从本主题概述的过程中得到的代码将在过程后面的示例中提供。
 
- 有关将通过启用 AJAX 的终结点的 WCF 服务公开的详细信息，请参阅[如何： 使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主题。
+ 有关将通过启用 AJAX 的终结点的 WCF 服务公开的详细信息，请参阅[如何：使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主题。
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>创建并测试 ASP.NET Web 服务应用程序
 
@@ -36,7 +36,7 @@ ms.locfileid: "48840909"
 
 5.  从**构建**菜单中，选择**生成解决方案**。
 
-6.  从**调试**菜单中，选择**启动但不调试**。
+6.  在“调试”菜单中，选择“启动但不调试”。
 
 7.  在生成的网页上，选择 `HelloWorld` 操作。
 
@@ -213,4 +213,4 @@ d.Add("two", 2);
 |转义符|始终应带有转义正斜杠 (/)；切勿使用非转义的无效 JSON 字符，例如“\n”。|对于 DateTime 值，带有转义正斜杠 (/)。|
 
 ## <a name="see-also"></a>请参阅
- [如何：使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [如何：使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

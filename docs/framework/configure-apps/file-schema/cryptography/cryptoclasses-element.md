@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 8363351efd0b6cbcfee5b137cf9f222e16dcc425
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e3bc8fbb103d59b825e07cc52b155f1ea8061f31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649370"
 ---
 # <a name="ltcryptoclassesgt-element"></a>&lt;cryptoClasses&gt;元素
 包含密码类的列表，这些类具有到 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 元素中的友好名称的映射。  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<cryptoNameMapping >  
-\<cryptoClasses >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<cryptoNameMapping>  
+\<cryptoClasses>  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ ms.locfileid: "50188737"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|包含一个密码类，该类具有到 **\<nameEntry>** 元素中的友好名称的映射。|  
+|[\<cryptoClass>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|包含一个密码类，该类具有到 **\<nameEntry>** 元素中的友好名称的映射。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -78,10 +78,10 @@ ms.locfileid: "50188737"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Security.Cryptography>  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)  
+## <a name="see-also"></a>请参阅
+- <xref:System.Security.Cryptography>
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
 - [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

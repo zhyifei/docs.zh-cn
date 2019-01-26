@@ -2,12 +2,12 @@
 title: ODBC 架构集合
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: bdedbb11960f02b99dcca6388abf663635238f74
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 072a9cd365031cd5660d1824bc229d459abc5af8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525828"
 ---
 # <a name="odbc-schema-collections"></a>ODBC 架构集合
 本节讨论对适用于 Microsoft SQL Server、Oracle 和 Microsoft Jet 的 ODBC 驱动程序的架构集合支持。  
@@ -332,5 +332,5 @@ ms.locfileid: "43877526"
 |ORDINAL_POSITION|Int32|  
 |IS_NULLABLE|String|  
   
-## <a name="see-also"></a>请参阅  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

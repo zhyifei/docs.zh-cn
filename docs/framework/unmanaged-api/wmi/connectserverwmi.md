@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b8968ab7c3b6fee1e29a7389020c26232e34c1e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567004"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 函数
 通过 DCOM 创建到指定计算机上的 WMI 命名空间的连接。  
@@ -63,7 +63,7 @@ HRESULT ConnectServerWmi (
 
 `strAuthority` [in]用户的域名。 可以有下列值：
 
-| “值” | 描述 |
+| 值 | 描述 |
 |---------|---------|
 | 空白 | 使用 NTLM 身份验证，并使用当前用户的 NTLM 域。 如果`strUser`指定域 （推荐位置），它必须未在此处指定。 该函数将返回`WBEM_E_INVALID_PARAMETER`如果两个参数中指定的域。 |
 | Kerberos:*主体名称* | 使用 Kerberos 身份验证，并且此参数包含 Kerberos 主体名称。 |
@@ -85,7 +85,7 @@ HRESULT ConnectServerWmi (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
@@ -102,11 +102,11 @@ HRESULT ConnectServerWmi (
 
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

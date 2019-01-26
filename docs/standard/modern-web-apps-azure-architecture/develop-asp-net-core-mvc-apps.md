@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 开�
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aed0ba4621eab91dd47df9ef760fdf8c39ff1103
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152769"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058498"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用
 
@@ -69,13 +69,13 @@ public class ProductsController : Controller
 > ### <a name="references--mapping-requests-to-responses"></a>参考 - 将请求映射到响应
 >
 > - **路由到控制器操作**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
 > - **模型绑定**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **模型验证**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **筛选器**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 
 ## <a name="working-with-dependencies"></a>处理依赖关系
 
@@ -213,7 +213,7 @@ ASP.NET Core MVC 还使用约定来确定视图的位置。 可以使用自定�
 
 图 7-2 请求执行通过各过滤器和请求管道。
 
-过滤器通常作为属性实现，因此可应用于控制器或操作。 以这种方式添加时，在操作级别指定的筛选器会覆盖在控制器级别指定的筛选器（会覆盖全局筛选器）或在其基础之上生成。 例如，\[Route\] 属性可用来生成控制器和操作之间的路由。 同样，可以在控制器级别配置授权，然后被各操作覆盖，如下所示：
+筛选器通常作为属性实现，因此可应用于控制器或操作（甚至全局）。 以这种方式添加时，在操作级别指定的过滤器会覆盖在控制器级别指定的过滤器（会覆盖全局过滤器）或在其基础之上生成。 例如，\[Route\] 属性可用来生成控制器和操作之间的路由。 同样，可以在控制器级别配置授权，然后被各操作覆盖，如下所示：
 
 ```csharp
 [Authorize]
@@ -282,7 +282,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 > - **区域**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN 杂志 - ASP.NET Core MVC 的功能切分**  
- > <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **过滤器**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN - 真实的 ASP.NET Core MVC 过滤器**  

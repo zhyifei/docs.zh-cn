@@ -2,40 +2,41 @@
 title: '&lt;wsHttpBinding&gt; 的 &lt;transport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: 5a62eefa6865a6908caecef87b0e457040df0b21
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: a759f74e923c9d81391abf82fa08491f3b31c990
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517939"
 ---
 # <a name="lttransportgt-of-ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt; 的 &lt;transport&gt;
 定义 HTTP 传输的身份验证设置。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<wsHttpBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
 \<transport>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<wsHttpBinding>  
-    <binding>  
-        <security mode="None|Transport|TransportWithMessageCredential|TransportCredentialOnly">  
-            <transport  
-            clientCredentialType="Basic|Certificate|Digest|None|Ntlm|Windows"  
-            proxyCredentialType="Basic|Digest|None|Ntlm|Windows"  
-            realm="string" />  
-                <extendedProtectionPolicy policyEnforcement="Never|WhenSupported|Always" protectionScenario="TransportSelected|TrustedProxy">  
-                    <customServiceNames></customServiceNames>  
-                </extendedProtecutionPolicy>  
-            </transport>  
-        </security>  
-    </binding>  
-</wsHttpBinding>  
+<wsHttpBinding>
+  <binding>
+    <security mode="None|Transport|TransportWithMessageCredential|TransportCredentialOnly">
+      <transport clientCredentialType="Basic|Certificate|Digest|None|Ntlm|Windows"
+                 proxyCredentialType="Basic|Digest|None|Ntlm|Windows"
+                 realm="string" />
+        <extendedProtectionPolicy policyEnforcement="Never|WhenSupported|Always"
+                                  protectionScenario="TransportSelected|TrustedProxy">
+          <customServiceNames>
+          </customServiceNames>
+        </extendedProtecutionPolicy>
+      </transport>
+    </security>
+  </binding>
+</wsHttpBinding>
 ```  
   
 ## <a name="type"></a>类型  
@@ -84,13 +85,13 @@ ms.locfileid: "49316202"
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|表示的安全功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: df8ac7e7db74d4e8df8872b5ec7f8f2ec774b3c8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b7a657af2d6caf2217aedf56422f135f0b2d667e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619406"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>如何：冻结 Windows 窗体 DataGridView 控件中的列
 用户查看 Windows 窗体 <xref:System.Windows.Forms.DataGridView> 控件中显示的数据时，有时需要频繁地引用单个列或列集。 例如，显示包含许多列的客户信息表时，使其他列可在可使区域外滚动的同时始终显示客户姓名非常有用。  
@@ -26,7 +26,7 @@ ms.locfileid: "44183400"
   
  列的 <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> 属性决定列在网格内是否始终可见。  
   
- Visual Studio 中对此任务提供支持。  另请参阅[如何： 在 Windows 窗体 DataGridView 控件中使用设计器冻结列](https://msdn.microsoft.com/library/717ss6s6\(v=vs.110\))。  
+ Visual Studio 中对此任务提供支持。  另请参阅[如何：冻结列在 Windows 窗体 DataGridView 控件使用设计器](https://msdn.microsoft.com/library/717ss6s6\(v=vs.110\))。  
   
 ### <a name="to-freeze-a-column-programmatically"></a>以编程方式冻结列  
   
@@ -42,8 +42,8 @@ ms.locfileid: "44183400"
   
 -   对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView>  
- [Windows 窗体 DataGridView 控件中的列、行和单元格基本功能](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
- [如何：在 Windows 窗体 DataGridView 控件中启用列重新排序](../../../../docs/framework/winforms/controls/how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataGridView>
+- [Windows 窗体 DataGridView 控件中的列、行和单元格基本功能](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [如何：启用 Windows 窗体 DataGridView 控件中的列重新排序](../../../../docs/framework/winforms/controls/how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)

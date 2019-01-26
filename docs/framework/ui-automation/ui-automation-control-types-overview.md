@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 75159ef8-bd43-4d13-acb7-1f1fe9253160
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: f59549d83e5662f236a44f112b473b2d233f4669
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1e51d5347581ed0da77abb8ea8eec18915f41b83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555448"
 ---
 # <a name="ui-automation-control-types-overview"></a>UI 自动化控件类型概述
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 控件类型是已知的标识符，可用于指示特定元素显示的控件类型，例如组合框或按钮。  
   
@@ -114,5 +114,5 @@ ms.locfileid: "47197768"
   
 -   [UI 自动化对 Window 控件类型的支持](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Automation.ControlType>
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Automation.ControlType>

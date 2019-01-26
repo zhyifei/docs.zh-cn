@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf56a2720ab407d05b8356280913445c15a17020
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 97bb5912ec4d384260e3809166efacded8e2b389
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611069"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679092"
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt;元素
 确定是否日期和时间分析方法使用调整后的规则集来分析日期字符串包含天、 月、 小时和 AM/PM 指示符。  
   
  \<configuration>  
  \<运行时 >  
-\<EnableAmPmParseAdjustment >  
+\<EnableAmPmParseAdjustment>  
   
 ## <a name="syntax"></a>语法  
   
@@ -76,11 +76,11 @@ ms.locfileid: "53611069"
   
  下表说明了中的差异<xref:System.DateTime>值时<xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType>方法用于分析字符串""4/10 6 AM"与`<EnableAmPmParseAdjustment>`元素的`enabled`属性设置为"0"或"1"。 它假定今天的日期为 2017 年 1 月 5 日，并像使用特定的区域性的"G"格式字符串格式化显示的日期。  
   
-|区域性名称|已启用 ="0"|已启用 ="1"|  
+|区域性名称|enabled="0"|enabled="1"|  
 |------------------|------------------|------------------|  
 |en-US|2017 年 1 月 5 日 4:00:00 AM|2017 年 4 月 10 日上午 6:00:00|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
-## <a name="see-also"></a>请参阅  
-- [\<运行时 > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
+## <a name="see-also"></a>请参阅
+- [\<运行时 > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
 - [\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

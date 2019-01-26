@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b0ac45c9d2c5b7ff9630bbeaed4bfcee5ec46fcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209121"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609981"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;添加&gt;元素&lt;开关&gt;
 指定对跟踪开关设置的级别。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<开关 >  
+\<system.diagnostics>  
+\<switches>  
 \<add>  
   
 ## <a name="syntax"></a>语法  
@@ -39,7 +39,7 @@ ms.locfileid: "47209121"
 |特性|描述|  
 |---------------|-----------------|  
 |**name**|必需的特性。<br /><br /> 指定的交换机的名称。 此属性的值对应于*displayName*传递切换构造函数的参数。|  
-|**value**|必需的特性。<br /><br /> 指定此开关的级别。|  
+|**值**|必需的特性。<br /><br /> 指定此开关的级别。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -69,8 +69,8 @@ ms.locfileid: "47209121"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.Switch>  
- <xref:System.Diagnostics.TraceSwitch>  
- <xref:System.Diagnostics.BooleanSwitch>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.Switch>
+- <xref:System.Diagnostics.TraceSwitch>
+- <xref:System.Diagnostics.BooleanSwitch>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

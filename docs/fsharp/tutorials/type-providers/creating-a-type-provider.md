@@ -2,12 +2,12 @@
 title: 教程：创建类型提供程序
 description: 了解如何创建你自己的F#类型中的提供程序F#3.0 通过检查几个简单类型提供程序来演示基本概念。
 ms.date: 05/16/2016
-ms.openlocfilehash: c5a68df5f0b89fe9496ad86ab88208e0ec4bcdc9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b16981b70db0896805754c60afa96a07623a1263
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614527"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223203"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教程：创建类型提供程序
 
@@ -156,7 +156,7 @@ let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-若要通过使用 Visual Studio 中调试此提供程序，使用管理凭据打开 Visual Studio 命令提示符并运行以下命令：
+若要通过使用 Visual Studio 中调试此提供程序，使用管理凭据打开 Visual Studio 开发人员命令提示符并运行以下命令：
 
 ```fsharp
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx

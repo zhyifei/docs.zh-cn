@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 640e8976b95b5228f1caa967c053ffd95d2553ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147667"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651599"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 连接池 (ADO.NET)
 连接到数据库服务器通常由几个需要很长时间的步骤组成。 必须建立物理通道（例如套接字或命名管道），必须与服务器进行初次握手，必须分析连接字符串信息，必须由服务器对连接进行身份验证，必须运行检查以便在当前事务中登记，等等。  
@@ -129,8 +129,8 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="application-role-alternatives"></a>应用程序角色替代项  
  建议您利用可以使用的安全机制，而不使用应用程序角色。 有关详细信息，请参阅[SQL Server 中创建应用程序角色](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)。  
   
-## <a name="see-also"></a>请参阅  
- [连接池](../../../../docs/framework/data/adonet/connection-pooling.md)  
- [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [性能计数器](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [连接池](../../../../docs/framework/data/adonet/connection-pooling.md)
+- [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [性能计数器](../../../../docs/framework/data/adonet/performance-counters.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

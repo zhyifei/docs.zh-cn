@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 8719ffc458297191514cfe65714d5b6dd862dd60
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5d3bc2b4e5fbb8cc36cf4688bd4fa5e4c0851dcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597627"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 代码示例
 本主题中的代码列表演示如何使用下面的 ADO.NET 技术从数据库中检索数据：
@@ -344,9 +344,9 @@ End Class
 ```
 
 ## <a name="see-also"></a>请参阅
- [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [创建数据应用程序](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
- [查询实体数据模型 （实体框架任务）](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [如何：执行返回匿名类型对象的查询](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)  
+- [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [创建数据应用程序](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)
+- [查询实体数据模型 （实体框架任务）](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)
+- [如何：执行返回匿名类型对象的查询](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

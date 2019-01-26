@@ -3,12 +3,12 @@ title: 在 ML.NET 中使用排列功能的重要性来确定模型功能的重�
 description: 在 ML.NET 中使用排列功能的重要性来理解模型功能的重要性
 ms.date: 12/04/2018
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4b93e085dbb99e7f6f5a0a839b863aad1c69c7ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebad89aaee1155d7c116b8536307756227dced31
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156565"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307105"
 ---
 # <a name="determine-the-feature-importance-of-models-with-permutation-feature-importance-in-mlnet"></a>在 ML.NET 中使用排列功能的重要性来确定模型功能的重要性
 
@@ -33,6 +33,6 @@ for (int i = 0; i < featureNames.Length; i++)
   Console.WriteLine($"{featureNames[i]}\t{permutationMetrics[i].rSquared:G4}");
 ```
 
-有关使用 PFI 来分析模型功能重要性的示例，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/PermutationFeatureImportance.cs)。
+有关使用 PFI 来分析模型功能重要性的示例，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/samples/Microsoft.ML.Samples/Dynamic/PermutationFeatureImportance)。
 
 /* 其实并不是完全随机的，而是在一组示例中排列。

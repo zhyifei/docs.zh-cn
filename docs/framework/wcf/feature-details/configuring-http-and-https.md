@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 3094c82382292be3295238ef9cf2687f6eeb98f8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c87b0f411c187e1497c8ec55771b80bb94c3629
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635667"
 ---
 # <a name="configuring-http-and-https"></a>配置 HTTP 和 HTTPS
 WCF 服务和客户端可以通过 HTTP 和 HTTPS 通信。 通过使用 Internet Information Services (IIS) 或命令行工具可以配置 HTTP/HTTPS 设置。 当某个 WCF 服务承载于 IIS 之下时，可以在 IIS 中配置 HTTP 或 HTTPS 设置（使用 inetmgr.exe 工具）。 如果 WCF 服务是自承载的，则可使用命令行工具配置 HTTP 或 HTTPS 设置。  
@@ -90,6 +90,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 ## <a name="issues-specific-to-windows-xp"></a>Windows XP 特有的问题  
  IIS 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上不支持端口共享。 如果 IIS 正在运行并且 WCF 服务尝试与同一个端口使用的命名空间，WCF 服务将无法启动。 IIS 和 WCF 均默认设置使用端口 80。 请更改其中一个服务的端口分配或使用 IP 侦听列表将分配到 IIS 未使用的网络适配器的 WCF 服务。 IIS 6.0 和更高版本已经过重新设计，可以使用 HTTP 服务器 API。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- [如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- [如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

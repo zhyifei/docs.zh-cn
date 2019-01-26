@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: d43d22c1e8c0b05e06582d63d3998c64940a3f7a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d35d5115f6005578164d13b94c9940152ddc1c56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734456"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 本示例演示在同一台计算机上提供跨进程通信的 `netNamedPipeBinding` 绑定。 命名管道不能跨计算机工作。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)计算器服务。  

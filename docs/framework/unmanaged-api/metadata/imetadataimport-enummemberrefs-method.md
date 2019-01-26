@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c148ee0b2c96f2a387dac54eaff690ab3f05ebf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 34a6762618780b22bcd8be376209912390524578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592004"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs 方法
 枚举表示指定类型成员的 MemberRef 标记。  
@@ -41,36 +41,36 @@ HRESULT EnumMemberRefs (
   
 #### <a name="parameters"></a>参数  
  `phEnum`  
- [在中，out]枚举数指向的指针。  
+ [in、 out]一个指向枚举器。  
   
  `tkParent`  
- [in]要枚举其成员的类型 TypeDef、 TypeRef、 MethodDef 或 ModuleRef 标记。  
+ [in]要枚举其成员的类型的 TypeDef、 TypeRef、 MethodDef 或 ModuleRef 标记。  
   
  `rMemberRefs`  
- [out]用于存储 MemberRef 标记的数组。  
+ [out]用于存储 MemberRef 令牌的数组。  
   
  `cMax`  
  [in] `rMemberRefs` 数组的最大大小。  
   
  `pcTokens`  
- [out]在中返回的 MemberRef 标记的实际数`rMemberRefs`。  
+ [out]MemberRef 令牌中返回的实际数目`rMemberRefs`。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMemberRefs` 已成功返回。|  
-|`S_FALSE`|没有要枚举的 MemberRef 标记。 在这种情况下，`pcTokens`将为零。|  
+|`S_FALSE`|没有要枚举的 MemberRef 标记。 在这种情况下，`pcTokens`是为零。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

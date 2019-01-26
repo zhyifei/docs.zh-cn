@@ -4,12 +4,12 @@ description: 发现用于安排微服务和多容器应用程序以便实现高�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c3a40d5a9229ec754f5a5c2e2637af964f25ba08
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152711"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307430"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -17,7 +17,7 @@ ms.locfileid: "53152711"
 
 图 4-23 介绍如何部署到由多个微服务（容器）组成的应用程序群集。
 
-![包含在群集中的 Docker 应用程序：对每个服务实例使用一个容器。 Docker 容器是“部署单元”，一个容器是 Docker 的一个实例。一个主机会处理许多容器](./media/image23.png)
+![群集中的组合 Docker 应用程序：为每个服务实例使用一个容器。 Docker 容器是“部署单元”，一个容器是 Docker 的一个实例。一个主机会处理许多容器](./media/image23.png)
 
 图 4-23。 容器群集
 
@@ -87,7 +87,7 @@ AKS 提供了一种方法，可在 Azure 中简化虚拟机（预配置为运行
 
 Azure Kubernetes 服务优化了专门针对 Azure 的常用 Docker 群集开源和技术的配置。 可以获得一个开放的解决方案，该解决方案为容器和应用程序配置提供可移植性。 用户选择主机的大小和数量以及业务流程协调程序工具，然后 AKS 可处理其他操作。
 
-![Kubernetes 群集结构：有一个处理 DNS、计划程序、代理等的主节点，以及多个承载容器的工作节点。](media/image36.png)
+![Kubernetes 群集结构：有一个处理 DNS、计划程序、代理等的主节点，以及多个托管容器的工作节点。](media/image36.png)
 
 图 4-24。 Kubernetes 群集的简化结构和拓扑
 

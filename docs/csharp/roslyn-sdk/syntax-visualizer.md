@@ -3,12 +3,12 @@ title: 使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 description: 语法可视化工具提供了可视化工具，用于浏览 .NET Compiler Platform SDK 为代码生成的模型。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143554"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307196"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 
@@ -80,11 +80,11 @@ ms.locfileid: "53143554"
 
 另一种选择在双监视器配置中，将语法关系图窗口放在第二个监视器上。
 
-# <a name="inspecting-semantics"></a>检查语义
+## <a name="inspecting-semantics"></a>检查语义
 
 语法可视化工具可以对符号和语义信息进行基本检查。 在 C# 示例中的 Main() 内键入 `double x = 1 + 1;`。 然后在代码编辑器窗口中选择表达式 `1 + 1`。 可视化工具突出显示了 AddExpression 节点。 右键单击 AddExpression，然后单击“查看符号(如果有)”。 请注意，大部分菜单项都带有“如果有”这个限定条件。 语法可视化工具检查节点的属性，包括不是所有节点都有的属性。 
 
-可视化工具中的属性网格会更新，如下图所示：该表达式的符号为 SynthesizedIntrinsicOperatorSymbol，其中 Kind = Method。
+可视化工具中的属性网格更新如下图所示：该表达式的符号是 SynthesizedIntrinsicOperatorSymbol，其中种类 = 方法。
 
 ![符号属性](media/syntax-visualizer/symbol-properties.png)
 

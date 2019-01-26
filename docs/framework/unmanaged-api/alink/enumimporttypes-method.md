@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90319886dfe149a3d2d76451c1a8526299cf5b89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4e437868138d7ae31d233853ecc0f709de3ee39d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512717"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes 方法
-枚举中每个作用域的每个类型。  
+枚举每个作用域中的每个类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,21 +43,21 @@ HRESULT EnumImportTypes(
  枚举器的句柄。  
   
  `dwMax`  
- 要检索的类型的最大数量。  
+ 要检索的类型的最大数目。  
   
  `aTypeDefs`  
  接收类型标记，不能超过`dwMax`。  
   
  `pdwCount`  
- 接收的类型中实际数`aTypeDefs`。  
+ 接收中的类型的实际数目`aTypeDefs`。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回，则为 S_OK。  
+ 如果该方法成功，返回，则为 S_OK。  
   
 ## <a name="requirements"></a>要求  
  需要 alink.h  
   
-## <a name="see-also"></a>请参阅  
- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>请参阅
+- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

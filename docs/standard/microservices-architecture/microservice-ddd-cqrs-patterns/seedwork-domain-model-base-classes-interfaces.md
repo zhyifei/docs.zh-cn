@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 9a7ddbc8a15e4064b4446ff322148720312e7937
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3804ac13580a967bc95617acbce86a3a0c8e7292
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152216"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058537"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork（适用于域模型的可重用基类和接口）
 
@@ -25,7 +25,7 @@ ms.locfileid: "53152216"
 
 ## <a name="the-custom-entity-base-class"></a>自定义实体基类
 
-以下代码是实体基类的示例，可在其中放置可由任何域实体以相同方式使用的代码，例如实体 ID、[相等运算符](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-comparison-operator)、每个实体的域事件列表等。
+以下代码是实体基类的示例，可在其中放置可由任何域实体以相同方式使用的代码，例如实体 ID、[相等运算符](~/docs/csharp/language-reference/operators/equality-comparison-operator.md)、每个实体的域事件列表等。
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)

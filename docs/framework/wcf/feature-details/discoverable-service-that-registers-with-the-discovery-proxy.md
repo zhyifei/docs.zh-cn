@@ -1,16 +1,16 @@
 ---
-title: 如何：实现向发现代理注册的可检测到的服务
+title: 如何：实现向发现代理注册的可发现服务
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30cf098b97b1e0188f264bee2ce3dbcdcdb8921b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623685"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>如何：实现向发现代理注册的可检测到的服务
-本主题是讨论如何实现发现代理的四个主题中的第二个主题。 在前面的主题中，[如何： 实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，实现发现代理。 在本主题中，你将创建将发送公告消息的 WCF 服务 (`Hello`和`Bye`) 向发现代理，从而可以注册和注销自身向发现代理。  
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>如何：实现向发现代理注册的可发现服务
+本主题是讨论如何实现发现代理的四个主题中的第二个主题。 在上一主题中，[如何：实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，实现发现代理。 在本主题中，创建将发送公告消息的 WCF 服务 (`Hello`和`Bye`) 到发现代理，从而导致它来注册和注销本身向发现代理。  
   
 ### <a name="to-define-the-service-contract"></a>定义服务协定  
   
@@ -154,7 +154,7 @@ ms.locfileid: "33490592"
     }  
     ```  
   
- 至此您已完成可检测到的服务的实现过程。 继续[如何： 实现使用发现代理查找服务的客户端应用](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)。  
+ 至此您已完成可检测到的服务的实现过程。 继续阅读[如何：实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)。  
   
 ## <a name="example"></a>示例  
  下面是本主题中使用的代码的完整清单。  
@@ -284,7 +284,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
 
-## <a name="see-also"></a>请参阅  
- [WCF 发现](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [如何：实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [如何：实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+## <a name="see-also"></a>请参阅
+- [WCF 发现](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [如何：实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [如何：实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

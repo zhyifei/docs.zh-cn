@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID11
 ms.assetid: 5b9bc5d6-792e-48bc-a974-012e07ad95f3
-ms.openlocfilehash: 105a607a7b7bf6b6d3824d80f902a2f82ebe9607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ea0cbb04556dce0f39c82e159fc4a89cad32e44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595404"
 ---
 # <a name="division-by-zero-visual-basic-run-time-error"></a>除数为零（Visual Basic 运行时错误）
 用作除数的表达式有一个值为零。  
@@ -20,6 +20,6 @@ ms.locfileid: "33636508"
   
 2.  检查之前对表达式中的变量进行的操作，尤其是那些从其他过程作为参数传递给该过程的操作。  
   
-## <a name="see-also"></a>请参阅  
- [按值和按引用传递自变量](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
- 
+## <a name="see-also"></a>请参阅
+- [按值和按引用传递自变量](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+

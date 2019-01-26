@@ -8,12 +8,12 @@ helpviewer_keywords:
 - line segments [WPF], creating
 - graphics [WPF], line segments
 ms.assetid: 0155ed47-a20d-49a7-a306-186d8e07fbc4
-ms.openlocfilehash: 61425a68d83c8078b8420be01e0e59d3cba6a4e2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9aa17a361e8e0ca5b43b2646c38926e0123818c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712124"
 ---
 # <a name="how-to-create-a-linesegment-in-a-pathgeometry"></a>如何：在 PathGeometry 中创建 LineSegment
 此示例演示如何创建一条线段。 若要创建一条线段，请使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.LineSegment>类。  
@@ -101,9 +101,9 @@ Dim myPathFigure As New PathFigure()
   
  此示例是更大示例的组成部分；有关完整示例，请参阅[几何图形示例](https://go.microsoft.com/fwlink/?LinkID=159989)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.PathFigure>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.GeometryDrawing>  
- <xref:System.Windows.Shapes.Path>  
- [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.PathFigure>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.GeometryDrawing>
+- <xref:System.Windows.Shapes.Path>
+- [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

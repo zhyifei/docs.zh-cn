@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 869780f2b6a625923ce869bcaafbbd2319f6cb23
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738821"
 ---
 # <a name="layout"></a>布局
 本主题介绍 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 布局系统。 了解布局计算发生的方式和时间对于在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中创建用户界面非常重要。  
@@ -146,11 +146,11 @@ ms.locfileid: "46703019"
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>下一步  
- 了解元素的测量和排列方式是了解布局的第一步。 有关可用的详细信息<xref:System.Windows.Controls.Panel>元素，请参阅[面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)。 若要更好地了解可能影响布局的各种定位属性，请参阅[对齐、边距和填充概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)。 有关自定义的示例<xref:System.Windows.Controls.Panel>元素，请参阅[自定义径向面板示例](https://go.microsoft.com/fwlink/?LinkID=159982)。 当准备好将其全部放在轻型应用程序，请参阅[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
+ 了解元素的测量和排列方式是了解布局的第一步。 有关可用的详细信息<xref:System.Windows.Controls.Panel>元素，请参阅[面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)。 若要更好地了解可能影响布局的各种定位属性，请参阅[对齐、边距和填充概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)。 有关自定义的示例<xref:System.Windows.Controls.Panel>元素，请参阅[自定义径向面板示例](https://go.microsoft.com/fwlink/?LinkID=159982)。 当准备好将其全部放在轻型应用程序，请参阅[演练：我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.UIElement>  
- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [对齐、边距和填充概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [布局和示例](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.UIElement>
+- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [对齐、边距和填充概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [布局和示例](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

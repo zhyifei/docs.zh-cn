@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: a4a8f33b45fa8433013cfa34fbc55f0db90737c4
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 05cc71ffb5d55c926dca50876a2329feeed8aedf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648464"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控件概述（Windows 窗体）
 > [!NOTE]
@@ -42,19 +42,19 @@ ms.locfileid: "48850682"
   
  <xref:System.Windows.Forms.DataGrid> 可提供数据集、相关表之间导航以及丰富格式设置和编辑功能的用户界面。  
   
- 显示数据和操作数据是两项单独的功能：控件处理用户界面，而数据更新则由 Windows 窗体数据绑定结构和 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序进行处理。 因此绑定到同一数据源的多个控件将保持同步。  
+ 显示和操作数据是单独的函数：该控件处理用户界面，而由 Windows 窗体数据绑定体系结构和处理数据更新[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]数据提供程序。 因此绑定到同一数据源的多个控件将保持同步。  
   
 > [!NOTE]
 >  如果你熟悉 Visual Basic 6.0 中的 DataGrid 控件，就会发现 Windows 窗体 <xref:System.Windows.Forms.DataGrid> 控件中的一些重要差异。  
   
- 当网格绑定到 <xref:System.Data.DataSet> 时，会自动创建列和行，同时对其格式进行设置并填充数据。 有关详细信息，请参阅[数据绑定和 Windows 窗体](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)。 生成 <xref:System.Windows.Forms.DataGrid> 控件后，可根据需要对列和行进行添加、删除、重新排列以及设置格式。  
+ 当网格绑定到 <xref:System.Data.DataSet> 时，会自动创建列和行，同时对其格式进行设置并填充数据。 有关更多信息，请参见 [Data Binding and Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)。 生成 <xref:System.Windows.Forms.DataGrid> 控件后，可根据需要对列和行进行添加、删除、重新排列以及设置格式。  
   
 ## <a name="binding-data-to-the-control"></a>将数据绑定到控件  
  若要使 <xref:System.Windows.Forms.DataGrid> 控件起作用，应在设计时使用 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 和 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 属性或在运行时使用 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 方法将该控件绑定到数据源。 通过这种绑定，可以使 <xref:System.Windows.Forms.DataGrid> 指向一个实例化的数据源对象，如 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable>。 <xref:System.Windows.Forms.DataGrid> 控件显示对数据执行操作所产生的结果。 大多数特定于数据的操作并不是通过 <xref:System.Windows.Forms.DataGrid> 执行的，而是通过数据源执行。  
   
  如果绑定数据集中的数据通过任何机制进行了更新，那么 <xref:System.Windows.Forms.DataGrid> 控件会反映这些变化。 如果数据网格及其表样式和列样式`ReadOnly`属性设置为`false`，可以通过更新数据集中<xref:System.Windows.Forms.DataGrid>控件。  
   
- <xref:System.Windows.Forms.DataGrid> 一次只能显示一张表。 如果在表与表之间定义了父-子关系，则用户可以在相关表之间移动以选择要显示在 <xref:System.Windows.Forms.DataGrid> 控件中的表。 有关绑定信息<xref:System.Windows.Forms.DataGrid>控制对[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]数据源在设计时或运行的时，请参阅[如何： 将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
+ <xref:System.Windows.Forms.DataGrid> 一次只能显示一张表。 如果在表与表之间定义了父-子关系，则用户可以在相关表之间移动以选择要显示在 <xref:System.Windows.Forms.DataGrid> 控件中的表。 有关绑定信息<xref:System.Windows.Forms.DataGrid>控制对[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]数据源在设计时或运行的时，请参阅[如何：将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
   
  <xref:System.Windows.Forms.DataGrid> 的有效数据源包括：  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48850682"
  ![DataGrid 控件中包含的对象](../../../../docs/framework/winforms/controls/media/vbcolumns1.gif "vbColumns1")  
 下图显示 DataGrid 控件中包含的对象。  
   
- 通过将表样式和列样式的 `MappingName` 属性设置为相应的 <xref:System.Data.DataTable.TableName%2A> 和 <xref:System.Data.DataColumn.ColumnName%2A> 属性，使它们与 <xref:System.Data.DataTable> 对象和 <xref:System.Data.DataColumn> 对象保持同步。 当将没有列样式的 <xref:System.Windows.Forms.DataGridTableStyle> 添加至绑定到有效数据源的 <xref:System.Windows.Forms.DataGrid> 控件，并且将该表样式的 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 属性设置为有效的 <xref:System.Data.DataTable.TableName%2A> 属性时，会针对该表样式创建 <xref:System.Windows.Forms.DataGridColumnStyle> 对象集合。 对于在 <xref:System.Data.DataTable> 的 <xref:System.Data.DataTable.Columns%2A> 集合中发现的每个 <xref:System.Data.DataColumn>，都会将相应的 <xref:System.Windows.Forms.DataGridColumnStyle> 添加至 <xref:System.Windows.Forms.GridColumnStylesCollection>。 通过 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 属性访问 <xref:System.Windows.Forms.GridColumnStylesCollection>。 通过对 <xref:System.Windows.Forms.GridColumnStylesCollection> 使用 <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> 或 <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> 方法在网格中添加或删除列。 有关详细信息，请参阅[如何：向 Windows 窗体 DataGrid 控件添加表和列](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)和[如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)。  
+ 通过将表样式和列样式的 `MappingName` 属性设置为相应的 <xref:System.Data.DataTable.TableName%2A> 和 <xref:System.Data.DataColumn.ColumnName%2A> 属性，使它们与 <xref:System.Data.DataTable> 对象和 <xref:System.Data.DataColumn> 对象保持同步。 当将没有列样式的 <xref:System.Windows.Forms.DataGridTableStyle> 添加至绑定到有效数据源的 <xref:System.Windows.Forms.DataGrid> 控件，并且将该表样式的 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 属性设置为有效的 <xref:System.Data.DataTable.TableName%2A> 属性时，会针对该表样式创建 <xref:System.Windows.Forms.DataGridColumnStyle> 对象集合。 对于在 <xref:System.Data.DataTable> 的 <xref:System.Data.DataTable.Columns%2A> 集合中发现的每个 <xref:System.Data.DataColumn>，都会将相应的 <xref:System.Windows.Forms.DataGridColumnStyle> 添加至 <xref:System.Windows.Forms.GridColumnStylesCollection>。 通过 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 属性访问 <xref:System.Windows.Forms.GridColumnStylesCollection>。 通过对 <xref:System.Windows.Forms.GridColumnStylesCollection> 使用 <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> 或 <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> 方法在网格中添加或删除列。 有关详细信息，请参阅[如何：添加表和列到 Windows 窗体 DataGrid 控件](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)和[如何：删除或隐藏列在 Windows 窗体 DataGrid 控件](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)。  
   
  列类型的集合可扩展具有丰富格式设置和编辑功能的 <xref:System.Windows.Forms.DataGridColumnStyle> 类。 所有列类型都继承自 <xref:System.Windows.Forms.DataGridColumnStyle> 基类。 创建的类取决于 <xref:System.Web.UI.WebControls.DataGridColumn> 基于的 <xref:System.Data.DataColumn> 的 <xref:System.Data.DataColumn.DataType%2A> 属性。 例如，<xref:System.Data.DataColumn.DataType%2A> 属性设置为 <xref:System.Boolean> 的 <xref:System.Data.DataColumn> 将与 <xref:System.Windows.Forms.DataGridBoolColumn> 关联。 下表描述了每种列类型。  
   
@@ -139,9 +139,9 @@ ms.locfileid: "48850682"
 ## <a name="events"></a>事件  
  除了常见的控件事件（如 <xref:System.Windows.Forms.Control.MouseDown>、<xref:System.Windows.Forms.Control.Enter> 和 <xref:System.Windows.Forms.DataGrid.Scroll>），<xref:System.Windows.Forms.DataGrid> 控件还支持在网格内进行编辑和导航。 <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> 属性用于确定选择哪个单元格。 当用户导航到新的单元格时，将引发 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 事件。 当用户通过父/子关系导航到新表时，将引发 <xref:System.Windows.Forms.DataGrid.Navigate> 事件。 当用户单击后退按钮和查看子表时，将引发 <xref:System.Windows.Forms.DataGrid.BackButtonClick> 事件；当单击“显示/隐藏父行”图标时，将引发 <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> 事件。  
   
-## <a name="see-also"></a>请参阅  
- [DataGrid 控件](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [如何：将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- [如何：向 Windows 窗体 DataGrid 控件添加表和列](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
- [如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- [如何：设置 Windows 窗体 DataGrid 控件的格式](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a>请参阅
+- [DataGrid 控件](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [如何：将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [如何：向 Windows 窗体 DataGrid 控件添加表和列](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [如何：删除或隐藏 Windows 窗体 DataGrid 控件中的列](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [如何：设置 Windows 窗体 DataGrid 控件的格式](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md)

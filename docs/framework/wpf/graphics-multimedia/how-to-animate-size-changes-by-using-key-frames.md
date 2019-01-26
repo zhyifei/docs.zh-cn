@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: 69845d1d75f81042bbeb20ee6b1015f5c2f53b81
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9efaaebdf08a6079bff7179e9ec035b4f38bb3ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678442"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>如何：使用关键帧对大小变化进行动画处理
 此示例演示如何使用关键帧对大小变化进行动画处理。  
@@ -29,12 +29,12 @@ ms.locfileid: "43803748"
   
  有关完整示例，请参阅[关键帧动画示例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>  
- <xref:System.Windows.Media.ArcSegment.Size%2A>  
- <xref:System.Windows.Media.ArcSegment>  
- <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>  
- <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>  
- <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>  
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [关键帧操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>
+- <xref:System.Windows.Media.ArcSegment.Size%2A>
+- <xref:System.Windows.Media.ArcSegment>
+- <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>
+- <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>
+- <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>
+- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [关键帧操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

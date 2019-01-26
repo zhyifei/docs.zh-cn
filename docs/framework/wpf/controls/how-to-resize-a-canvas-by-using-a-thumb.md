@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Thumb control [WPF]
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-ms.openlocfilehash: be267e832180b49686079f426dfa5c30ffdd81b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d0873656e71df928ac3bd5a767b5e15d2f2c7836
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591453"
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>如何：使用 Thumb 调整画布的大小
 此示例演示如何使用<xref:System.Windows.Controls.Primitives.Thumb>控件来调整大小<xref:System.Windows.Controls.Canvas>控件。  
@@ -46,8 +46,8 @@ ms.locfileid: "43518058"
   
  有关完整示例，请参阅[Thumb 拖放功能示例](https://go.microsoft.com/fwlink/?LinkID=160042)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Controls.Primitives.Thumb>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Controls.Primitives.Thumb>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202902"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415528"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系统上的大型对象堆
 
@@ -52,8 +52,8 @@ ms.locfileid: "50202902"
 
 图 2 显示了第 2 代 GC 发现 `Obj1` 和 `Obj2` 被清除后，GC 在内存中形成了相邻的可用空间，由 `Obj1` 和 `Obj2` 占用，然后用于满足 `Obj4` 的分配要求。 从最后一个对象 `Obj3` 到此段末尾的空间仍可用于满足分配请求。
 
-![图 2：第 2 代 GC 之后](media/loh/loh-figure-2.jpg)  
-图 2：第 2 代 GC 之后
+![图 2：第 2 代 GC 后](media/loh/loh-figure-2.jpg)  
+图 2：第 2 代 GC 后
 
 如果没有足够的可用空间来容纳大型对象分配请求，GC 首先尝试从操作系统获取更多段。 如果失败了，它将触发第 2 代 GC，试图释放部分空间。
 
@@ -144,7 +144,7 @@ ms.locfileid: "50202902"
 
 ### <a name="net-clr-memory-performance-counters"></a>.NET CLR 内存性能计数器
 
-这些性能计数器通常是调查性能问题的第一步（但是推荐使用 [ETW 事件](#etw)）。 通过添加所需计数器配置性能监视器，如图 4 所示。 与 LOH 相关的是：
+这些性能计数器通常是调查性能问题的第一步（但是推荐使用 [ETW 事件](#etw-events)）。 通过添加所需计数器配置性能监视器，如图 4 所示。 与 LOH 相关的是：
 
 - 第 2 代回收次数
 

@@ -2,28 +2,28 @@
 title: '&lt;serviceActivations&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: 1a25ad517e26e037c588bb14844e38147e251d96
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d0e1f45cc8ff5b544eff5ff5dae33d5989aaf405
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587630"
 ---
 # <a name="ltaddgt-of-ltserviceactivationsgt"></a>&lt;serviceActivations&gt; 的 &lt;add&gt;
-一个配置元素，允许你定义虚拟服务激活设置映射到你的 Windows Communication Foundation (WCF) 服务类型。 使用此配置元素可以在不使用 .svc 文件的情况下激活承载在 WAS/IIS 中的服务。  
+一个配置元素，允许你定义虚拟服务激活设置映射到 Windows Communication Foundation (WCF) 服务类型。 使用此配置元素可以在不使用 .svc 文件的情况下激活承载在 WAS/IIS 中的服务。  
   
  \<system.ServiceModel>  
-\<ServiceHostingEnvironment >  
+\<ServiceHostingEnvironment>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<serviceHostingEnvironment>   
-   <serviceActivations>  
-      <add factory="String"  
-           service="String"/>  
-   </serviceActivations>  
-</serviceHostingEnvironment>  
+<serviceHostingEnvironment>
+    <serviceActivations>
+      <add factory="String"
+           service="String" />
+  </serviceActivations>
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -44,21 +44,21 @@ ms.locfileid: "32745820"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|一个描述激活设置的配置节。|  
+|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|一个描述激活设置的配置节。|  
   
 ## <a name="remarks"></a>备注  
  下面的示例演示如何在 web.config 文件中配置激活设置。  
   
 ```xml  
-<configuration>  
-  <system.serviceModel>  
-    <serviceHostingEnvironment>  
-      <serviceActivations>  
-        <add service="GreetingService"/>  
-      </serviceActivations>  
-    </serviceHostingEnvironment>  
-  </system.serviceModel>  
-</configuration>  
+<configuration>
+  <system.serviceModel>
+    <serviceHostingEnvironment>
+      <serviceActivations>
+        <add service="GreetingService" />
+      </serviceActivations>
+    </serviceHostingEnvironment>
+  </system.serviceModel>
+</configuration>
 ```  
   
  使用此配置，您可以在不使用 .svc 文件的情况下激活 GreetingService。  
@@ -67,7 +67,7 @@ ms.locfileid: "32745820"
   
  基于配置的激活支持通过 http 协议和非 http 协议进行激活。 它要求在 relatativeAddress 中使用扩展名，即 .svc、.xoml 或 .xamlx。 您可以将自己的扩展名映射到已知的 buildProviders，然后就可以通过任意扩展名激活服务。 如果发生冲突，`<serviceActivations>` 节将重写 .svc 注册。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ServiceActivationElement>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ServiceActivationElement>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>

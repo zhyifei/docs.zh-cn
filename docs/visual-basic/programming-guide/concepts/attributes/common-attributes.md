@@ -1,16 +1,16 @@
 ---
-title: 公共特性 (Visual Basic)
+title: 常见特性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5a91b0aa48a22db4ea7fb56a9c632ff0cb44dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690899"
 ---
-# <a name="common-attributes-visual-basic"></a>公共特性 (Visual Basic)
-本主题介绍在 Visual Basic 程序中最常使用的属性。  
+# <a name="common-attributes-visual-basic"></a>常见特性 (Visual Basic)
+本主题介绍在 Visual Basic 程序中最常用的属性。  
   
 -   [全局特性](#Global)  
   
@@ -20,7 +20,7 @@ ms.locfileid: "33644155"
   
 -   [调用方信息特性](#CallerInfo)  
   
--   [Visual Basic 属性](#VB)  
+-   [Visual Basic 特性](#VB)  
   
 ##  <a name="Global"></a> 全局特性  
  大多数特性应用于特定语言元素，如类或方法；但是，一些特性是全局特性 - 它们应用于整个程序集或模块。 例如，<xref:System.Reflection.AssemblyVersionAttribute> 属性可用于将版本信息嵌入程序集，如下所示：  
@@ -29,7 +29,7 @@ ms.locfileid: "33644155"
 <Assembly: AssemblyVersion("1.0.0.0")>  
 ```  
   
- 全局特性在源代码中出现后任何顶级`Imports`语句和任何类型、 模块或命名空间声明之前。 全局特性可以出现在多个源文件中，但必须在单个编译过程中编译这些文件。 为 Visual Basic 项目中，通常将全局特性放 AssemblyInfo.vb 创建的文件中 （该文件是自动在 Visual Studio 中创建项目时）。  
+ 全局特性之后出现在源代码中顶级`Imports`语句和任何类型、 模块或命名空间声明之前。 全局特性可以出现在多个源文件中，但必须在单个编译过程中编译这些文件。 对于 Visual Basic 项目，通常将全局特性放 AssemblyInfo.vb 文件 （该文件时自动创建 Visual Studio 中创建一个项目） 中。  
   
  程序集特性是提供程序集相关信息的值。 它们分为以下几类：  
   
@@ -218,28 +218,28 @@ End Class
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含调用方的源文件的完整路径。 这是编译时的路径。|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|源文件中调用方法的行号。|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|调用方的方法名称或属性名称。 有关详细信息，请参阅[调用方信息 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/caller-information.md)。|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|调用方的方法名称或属性名称。 有关详细信息，请参阅[调用方信息 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)。|`String`|  
   
- 有关调用方信息特性的详细信息，请参阅[调用方信息 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/caller-information.md)。  
+ 有关调用方信息特性的详细信息，请参阅[调用方信息 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)。  
   
-##  <a name="VB"></a> Visual Basic 属性  
- 下表列出了特定于 Visual Basic 的特性。  
+##  <a name="VB"></a> Visual Basic 特性  
+ 下表列出了特定于 Visual Basic 的属性。  
   
 |特性|目标|  
 |---------------|-------------|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|向编译器指示应将类公开为 COM 对象。|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|允许使用仅该模块所需的资格访问模块成员。|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|指定用于结构中的固定长度字符串的大小，使用文件输入和输出函数。|  
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|向编译器指示应将此类公开为 COM 对象。|  
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|允许使用所需的模块限定访问模块成员。|  
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|使用文件输入和输出使用的结构中指定的固定长度字符串大小的函数。|  
 |<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|指定用于结构中的固定数组的大小，使用文件输入和输出函数。|  
   
 ### <a name="comclassattribute"></a>COMClassAttribute  
- 使用`COMClassAttribute`来简化从 Visual Basic 创建 COM 组件的过程。 COM 对象有很大差异，从.NET Framework 程序集，而`COMClassAttribute`，你需要遵循的步骤以从 Visual Basic 生成 COM 对象数。 为类标记为`COMClassAttribute`，编译器自动执行的许多这些步骤。  
+ 使用`COMClassAttribute`来简化从 Visual Basic 创建 COM 组件的过程。 COM 对象有很大差异，从.NET Framework 程序集，而无需`COMClassAttribute`，你需要遵循的步骤，在 Visual Basic 中生成的 COM 对象数。 类标记为与`COMClassAttribute`，编译器会自动执行许多这样的步骤。  
   
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute  
- 使用`HideModuleNameAttribute`以允许通过使用仅该模块所需的资格访问模块成员。  
+ 使用`HideModuleNameAttribute`以允许通过使用所需的模块限定访问模块成员。  
   
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute  
- 使用`VBFixedStringAttribute`强制 Visual Basic 创建固定长度字符串。 字符串的变量长度在默认情况下，并将存储到文件的字符串时，此属性很有用。 下面的代码演示此：  
+ 使用`VBFixedStringAttribute`强制 Visual Basic 创建一个固定长度的字符串。 默认情况下的可变长度的字符串是的此属性时，可以将字符串存储到文件。 下面的代码演示此：  
   
 ```vb  
 Structure Worker  
@@ -252,12 +252,12 @@ End Structure
 ```  
   
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute  
- 使用`VBFixedArrayAttribute`声明固定大小的数组。 Visual Basic 字符串，如数组是默认情况下的可变长度。 此属性是序列化或数据写入文件时非常有用。  
+ 使用`VBFixedArrayAttribute`声明固定大小的数组。 类似于 Visual Basic 字符串，数组是默认情况下的可变长度。 此属性是序列化或向文件写入数据时非常有用。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)  
- [特性](../../../../standard/attributes/index.md)  
- [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)
+- [属性](../../../../standard/attributes/index.md)
+- [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

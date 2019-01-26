@@ -2,35 +2,35 @@
 title: '&lt;webSocketSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 94a5883c37221a8d637a188fe42aad220a332575
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 00c6bc45f06d97d4f95bd6be1515d16141be4e1d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565912"
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 用来指定 Web Socket 设置的配置元素。  
   
 \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<netHttpBinding>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<netHttpBinding>  
-  <binding>   
-    <webSocketSettings createNotificationOnConnection="boolean" 
-                       disablePayloadMasking="boolean" 
-                       keepAliveInterval="TimeSpan" 
-                       maxPendingConnections="Integer" 
-                       receiveBufferSize="Integer" 
-                       sendBufferSize="Integer" 
-                       subProtocol="String" 
-                       transportUsage="WhenDuplex/Always/Never"/>
-  </binding>  
-</netHttpBinding>  
+<netHttpBinding>
+  <binding>
+    <webSocketSettings createNotificationOnConnection="Boolean"
+                       disablePayloadMasking="Boolean"
+                       keepAliveInterval="TimeSpan"
+                       maxPendingConnections="Integer"
+                       receiveBufferSize="Integer"
+                       sendBufferSize="Integer"
+                       subProtocol="String"
+                       transportUsage="WhenDuplex/Always/Never" />
+  </binding>
+</netHttpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -70,27 +70,26 @@ ms.locfileid: "48582393"
  下面的示例演示如何使用\<webSocketSettings > 元素。  
   
 ```xml  
-<netHttpBinding>  
-        <binding>  
-          <webSocketSettings createNotificationOnConnection="true"  
-                              disablePayloadMasking="false  
-                              keepAliveInterval="00:10:00"  
-                              maxPendingConnections="100"  
-                              receiveBufferSize="1000"  
-                              sendBufferSize="1000"  
-                              subProtocol="Soap"  
-                              transportUsage="WhenDuplex/Always/Never"/>  
-  
-        </binding>  
-      </netHttpBinding>  
+<netHttpBinding>
+  <binding>
+    <webSocketSettings createNotificationOnConnection="true"
+                       disablePayloadMasking="false"
+                       keepAliveInterval="00:10:00"
+                       maxPendingConnections="100"
+                       receiveBufferSize="1000"
+                       sendBufferSize="1000"
+                       subProtocol="Soap"
+                       transportUsage="WhenDuplex/Always/Never" />
+  </binding>
+</netHttpBinding>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

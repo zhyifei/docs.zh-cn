@@ -1,15 +1,15 @@
 ---
-title: 如何： 从 CSV 文件 (Visual Basic 中) 生成 XML
+title: 如何：从 CSV 文件 (Visual Basic 中) 生成 XML
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 535704cb2cb5a702c524f306e561b1154f4b2e1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5facb31c33c777a5d7ed083dbfda5bd18a67e6a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706672"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>如何： 从 CSV 文件 (Visual Basic 中) 生成 XML
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>如何：从 CSV 文件 (Visual Basic 中) 生成 XML
 本示例演示如何使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 从逗号分隔值 (CSV) 文件生成 XML 文件。  
   
 ## <a name="example"></a>示例  
@@ -107,5 +107,5 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [投影和转换 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+- [投影和转换 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

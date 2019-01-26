@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: d3b14881cc1366cefb4d11c9d14654c15952624b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562865"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620222"
 ---
 # <a name="shapes-how-to-topics"></a>形状帮助主题
-此部分中的主题演示如何使用<xref:System.Windows.Shapes.Shape>屏幕绘制基本形状的对象。  
+在本部分中的主题演示如何使用<xref:System.Windows.Shapes.Shape>要在屏幕上绘制基本形状的对象。  
   
 ## <a name="in-this-section"></a>本节内容  
  [使用多边形元素绘制闭合形状](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
@@ -27,6 +27,6 @@ ms.locfileid: "33562865"
  [绘制矩形](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
  [修改直线或线段末端的线帽](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Shapes.Shape>  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Shapes.Shape>
+- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)

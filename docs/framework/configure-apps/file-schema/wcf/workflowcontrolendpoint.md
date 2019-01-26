@@ -2,29 +2,29 @@
 title: '&lt;workflowControlEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
-ms.openlocfilehash: 87c745cfb8f7cd98c25cd34fc1aa94a26a5ba507
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9c641d4081d88b059e1d778f6383f85c064af7f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558665"
 ---
 # <a name="ltworkflowcontrolendpointgt"></a>&lt;workflowControlEndpoint&gt;
 此配置元素定义用于控制工作流实例的执行（创建、运行、挂起、终止等）的标准终结点。  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <workflowControlEndpoint>
       <standardEndpoint name="String" />
     </workflowControlEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -43,7 +43,7 @@ ms.locfileid: "32754780"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>

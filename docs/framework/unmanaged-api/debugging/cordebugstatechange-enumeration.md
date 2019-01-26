@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 841108457293e3377ee87f9c7d7c6898340e51b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f0f692b692628d50755ce813c66823f940dccb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513774"
 ---
 # <a name="cordebugstatechange-enumeration"></a>“Cor调试状态已更改”枚举
 描述基于进程变化必须删除的缓存数据数量。  
@@ -40,20 +40,20 @@ typedef enum CorDebugStateChange
 |`SET_CONTEXT_FLAG_UNWIND_FRAME`|进程的内存可能与以往截然不同。|  
   
 ## <a name="remarks"></a>备注  
- 成员`CorDebugStateChange`当调试器调用时，作为参数提供的枚举[进程状态已更改](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md)方法  
+ 成员`CorDebugStateChange`调试程序调用时，作为参数提供枚举[进程状态已更改](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md)方法  
   
 > [!NOTE]
 >  此枚举仅用于 .NET Native 调试方案。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 0ad8d071a91edaef184c4cc1fa28298f8ec3d71a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 52ed421ee92eed29bf16815d22e3ec7a8b718a84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632343"
 ---
 # <a name="packaging-fonts-with-applications"></a>将字体与应用程序一起打包
 本主题提供概述了如何使用包字体在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。  
@@ -166,16 +166,16 @@ ms.locfileid: "43391761"
   
 -   **使用包的绝对 URI： 表示法：** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序不允许您创建<xref:System.Windows.Media.FontFamily>对象以编程方式使用"pack:"作为一部分绝对[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]对字体引用。 例如，`"pack://application:,,,/resources/#Pericles Light"`是无效的字体引用。  
   
--   **自动嵌入字体：** 在设计时，不支持搜索应用程序对字体的使用情况，而且不支持自动在应用程序的资源中嵌入字体。  
+-   **自动嵌入字体：** 在设计时，没有用于搜索应用程序使用的字体和自动在应用程序的资源中嵌入字体支持。  
   
 -   **字体子集：**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序不支持为非固定文档创建字体子集。  
   
 -   如果存在不正确的引用，应用程序将回退到使用可用字体。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Documents.Typography>  
- <xref:System.Windows.Media.FontFamily>  
- [Microsoft 版式： 链接、 新闻和联系人](https://www.microsoft.com/typography/links/)  
- [OpenType 规范](https://www.microsoft.com/typography/otspec/)  
- [OpenType 字体功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [示例 OpenType 字体包](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Documents.Typography>
+- <xref:System.Windows.Media.FontFamily>
+- [Microsoft 版式：链接、 新闻和联系人](https://www.microsoft.com/typography/links/)
+- [OpenType 规范](https://www.microsoft.com/typography/otspec/)
+- [OpenType 字体功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [示例 OpenType 字体包](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

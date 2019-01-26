@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 1ac7acda0b9065fde4ab04c80e9d26a1ec23fa6e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 03b37dae72be0ffa589159b2aedc2ac16e35139e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130983"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583202"
 ---
 # <a name="accessing-services-using-a-client"></a>使用客户端访问服务
 客户端应用程序必须创建、 配置和使用 WCF 客户端或通道对象与服务进行通信。 [WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)主题提供了对象和步骤中创建基本的客户端和通道对象并使用它们所涉及的概述。  
@@ -70,7 +70,7 @@ ms.locfileid: "53130983"
   
  无论使用何种消息交换模式，大的数据块都会降低客户端的处理速度。 若要了解如何处理这些问题，请参阅[Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   
- 如果操作完成时，你的应用程序必须执行更多的工作，应在 WCF 客户端实现服务协定接口上创建一个异步方法对。 若要执行此操作的最简单方法是使用`/async`开启[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 有关示例，请参阅[如何：以异步方式调用服务操作](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
+ 如果操作完成时，你的应用程序必须执行更多的工作，应在 WCF 客户端实现服务协定接口上创建一个异步方法对。 若要执行此操作的最简单方法是使用`/async`开启[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 有关示例，请参见 [如何：以异步方式调用服务操作](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
  不断增加的客户端性能的详细信息，请参阅[中间层客户端应用程序](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。  
   
@@ -93,11 +93,11 @@ ms.locfileid: "53130983"
   
  使用隐式方法的应用程序调用用户界面初始值设定项，但是如果应用程序的用户没有在绑定的发送超时期限内做出响应，则当用户界面返回时，将引发异常。  
   
-## <a name="see-also"></a>请参阅  
- [双工服务](../../../../docs/framework/wcf/feature-details/duplex-services.md)  
- [如何：访问服务使用单向和请求-答复协定](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [如何：使用双工协定访问服务](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [如何：访问 WSE 3.0 服务](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [如何：考虑使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
- [如何：以异步方式调用服务操作](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [中间层客户端应用程序](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)
+## <a name="see-also"></a>请参阅
+- [双工服务](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [如何：访问服务使用单向和请求-答复协定](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [如何：使用双工协定访问服务](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [如何：访问 WSE 3.0 服务](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [如何：考虑使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [如何：以异步方式调用服务操作](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [中间层客户端应用程序](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

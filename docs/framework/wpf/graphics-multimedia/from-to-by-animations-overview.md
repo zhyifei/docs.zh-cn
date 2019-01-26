@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-ms.openlocfilehash: c1aaaca83b8631a87a8987b9676b53161e821117
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 39a3cd059c0fa9aad1ef2c1ae50fa37b95df52d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650439"
 ---
 # <a name="fromtoby-animations-overview"></a>From/To/By 动画概述
 本主题介绍如何使用 From/To/By 动画对依赖属性进行动画处理。 From/To/By 动画创建两个值之间的转换。  
@@ -106,7 +106,7 @@ ms.locfileid: "43502511"
 ### <a name="by"></a>间距  
  如果只设置<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>动画属性，则动画继续从进行动画处理，该属性的基值或组合动画值和由指定的值的总和的输出<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性。  
   
- 下面的示例只是设置<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性的<xref:System.Windows.Media.Animation.DoubleAnimation>为 300。 由于该示例未指定起始值，<xref:System.Windows.Media.Animation.DoubleAnimation>使用的基础价值<xref:System.Windows.FrameworkElement.Width%2A>属性，100，作为其起始值。 结束值确定添加<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>动画，300，为其起始值 100: 400 值。 因此，<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>从 100 到 400 的动画。  
+ 下面的示例只是设置<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性的<xref:System.Windows.Media.Animation.DoubleAnimation>为 300。 由于该示例未指定起始值，<xref:System.Windows.Media.Animation.DoubleAnimation>使用的基础价值<xref:System.Windows.FrameworkElement.Width%2A>属性，100，作为其起始值。 结束值确定添加<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>动画，300，为其起始值 100 的值：400. 因此，<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>从 100 到 400 的动画。  
   
  [!code-csharp[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#byanimationinline)]
  [!code-vb[basicvalues_snip#ByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#byanimationinline)]  
@@ -114,7 +114,7 @@ ms.locfileid: "43502511"
 ### <a name="fromby"></a>From/By  
  当您将设置<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>动画的属性，动画从指定的值<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性，为之和指定值<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性。  
   
- 下面的示例设置<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>的属性<xref:System.Windows.Media.Animation.DoubleAnimation>为 50 和其<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性设置为 300。 结束值确定添加<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>动画，300，为其起始值 50: 350 值。 因此，<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>从 50 到 350 的动画。  
+ 下面的示例设置<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>的属性<xref:System.Windows.Media.Animation.DoubleAnimation>为 50 和其<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性设置为 300。 结束值确定添加<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>动画，其起始值 50 到 300 的值：350. 因此，<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>从 50 到 350 的动画。  
   
  [!code-csharp[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#frombyanimationinline)]
  [!code-vb[basicvalues_snip#FromByAnimationInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#frombyanimationinline)]  
@@ -140,12 +140,12 @@ ms.locfileid: "43502511"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还支持创建自己的自定义动画类型。 有关详细信息，请参阅[自定义动画概述](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Animation.Timeline>  
- <xref:System.Windows.Media.Animation.Storyboard>  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [路径动画概述](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
- [自定义动画概述](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)  
- [From、To 和 By 动画目标值示例](https://go.microsoft.com/fwlink/?LinkID=159988)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Animation.Timeline>
+- <xref:System.Windows.Media.Animation.Storyboard>
+- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [路径动画概述](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
+- [自定义动画概述](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)
+- [From、To 和 By 动画目标值示例](https://go.microsoft.com/fwlink/?LinkID=159988)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e557cc0da7bc684843ae3969242ffb84d811c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 006360203518f74adb964634af52505a71d51473
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587094"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile 方法
-指定要生成的程序集的名称。 不是针对使用时生成未绑定的模块。  
+分配要生成的程序集的名称。 不是针对生成未绑定的模块时使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,12 +51,12 @@ HRESULT SetAssemblyFile(
  指向生成的程序集的 ID。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回，则为 S_OK。  
+ 如果该方法成功，返回，则为 S_OK。  
   
 ## <a name="requirements"></a>要求  
  需要 alink.h。  
   
-## <a name="see-also"></a>请参阅  
- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>请参阅
+- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

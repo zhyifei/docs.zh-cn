@@ -10,17 +10,18 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 30bcbd8b7cdd4c184560aaa4a2799137da51fc8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694082"
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>如何：在单击标题时对 GridView 列进行排序
-此示例演示如何创建<xref:System.Windows.Controls.ListView>实现控件<xref:System.Windows.Controls.GridView>查看模式和排序数据内容当用户单击列标题。  
+此示例演示如何创建<xref:System.Windows.Controls.ListView>实现控件<xref:System.Windows.Controls.GridView>查看模式和数据内容，当用户单击列标题排序。  
   
 ## <a name="example"></a>示例  
- 下面的示例定义<xref:System.Windows.Controls.GridView>具有三列绑定到<xref:System.DateTime.Year%2A>， <xref:System.DateTime.Month%2A>，和<xref:System.DateTime.Day%2A>，属性<xref:System.DateTime>结构。  
+ 下面的示例定义<xref:System.Windows.Controls.GridView>包含三列的绑定到<xref:System.DateTime.Year%2A>， <xref:System.DateTime.Month%2A>，和<xref:System.DateTime.Day%2A>，属性的<xref:System.DateTime>结构。  
   
 ```xaml  
 <GridView>  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
 </GridView>  
 ```  
   
- 下面的示例演示定义为数据项<xref:System.Collections.ArrayList>的<xref:System.DateTime>对象。 <xref:System.Collections.ArrayList>定义为<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>为<xref:System.Windows.Controls.ListView>控件。  
+ 下面的示例演示定义为数据项<xref:System.Collections.ArrayList>的<xref:System.DateTime>对象。 <xref:System.Collections.ArrayList>指<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>为<xref:System.Windows.Controls.ListView>控件。  
   
 ```xaml  
 <ListView.ItemsSource>  
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/04/2018
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- 若要根据列的内容对数据进行排序，该示例定义一个事件处理程序来处理<xref:System.Windows.Controls.Primitives.ButtonBase.Click>按列标头按钮时发生的事件。 下面的示例演示如何指定的事件处理程序<xref:System.Windows.Controls.GridViewColumnHeader>控件。  
+ 若要根据列的内容数据进行排序，该示例定义一个事件处理程序以处理<xref:System.Windows.Controls.Primitives.ButtonBase.Click>按列标题按钮时发生的事件。 下面的示例演示如何指定的事件处理程序<xref:System.Windows.Controls.GridViewColumnHeader>控件。  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -222,9 +223,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.GridView>  
- [ListView 概述](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView 概述](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.GridView>
+- [ListView 概述](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [GridView 概述](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [帮助主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

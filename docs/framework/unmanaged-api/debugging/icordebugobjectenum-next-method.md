@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59b37c30df6467439d04e367e13b0fc4ffff0ec6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a5f21855ce83f5c1fb68637e3eeb6d3c831bce2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745141"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next 方法
-从当前位置开始在枚举中获取指定数目的对象的相对虚拟地址 (Rva)。  
+从当前位置开始枚举中获取指定数目的对象的相对虚拟地址 (Rva)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,16 +46,16 @@ HRESULT Next (
  [out]一个指针数组，其中每个指向 CORDB_ADDRESS 对象。  
   
  `pceltFetched`  
- [out]对实际返回的对象的数量的指针。 此值可能为 null 如果`celt`是之一。  
+ [out]指向实际返回的对象数。 此值可能为 null 如果`celt`是其中一个。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- 
+## <a name="see-also"></a>请参阅
+

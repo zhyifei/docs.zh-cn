@@ -5,12 +5,12 @@ helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: 78311651593d3d4a47c723f64a9a74d4660f7c90
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: afc67d744a04f404a275077ecac42556c963d472
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44248873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721904"
 ---
 # <a name="ltseegt-visual-basic"></a>&lt;请参阅&gt;(Visual Basic)
 指定指向另一个成员的链接。  
@@ -23,7 +23,7 @@ ms.locfileid: "44248873"
   
 #### <a name="parameters"></a>参数  
  `member`  
- 对可从当前编译环境调用的成员或字段的引用。 编译器检查是否存在给定的代码元素，并将传递`member`为输出 XML 中的元素名称。 `member` 必须出现在双引号 (" ") 内。  
+ 对可从当前编译环境调用的成员或字段的引用。 编译器检查是否存在给定的码位元素，并将 `member` 传递到输出 XML 中的元素名称。 `member` 必须出现在双引号 (" ") 内。  
   
 ## <a name="remarks"></a>备注  
  使用`<see>`标记来指定从文本中的链接。 使用[ \<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md)以指示你可能想要的"另请参见"部分中显示的文本。  
@@ -35,5 +35,5 @@ ms.locfileid: "44248873"
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/see_1.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>请参阅
+- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

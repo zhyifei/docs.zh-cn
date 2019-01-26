@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 61731c4d9590892bdae8e90717d77b4dddf1d71d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0abb1bd25c40ba55806fe80b39db1ac418f3f308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700944"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 类型不匹配
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以自动完成对象模型和 SQL Server 之间的大量转换。 不过，有一些情况会阻碍进行精确转换。 以下各部分将介绍公共语言运行库 (CLR) 类型与 SQL Server 数据库类型之间的主要不匹配。 您可以找到有关特定类型映射和函数转换在更多详细信息[SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)并[数据类型及函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)。  
@@ -293,5 +293,5 @@ Where Col1 + Col2 > 4
   
  除了语义差异，考虑在 SQL Server 与 CLR 类型系统之间切换时对性能的影响非常重要。 对于大型数据集，此类性能问题可能决定应用程序是否可部署。  
   
-## <a name="see-also"></a>请参阅  
- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>请参阅
+- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

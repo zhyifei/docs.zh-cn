@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ 排序查询结果 (Visual Basic)
+title: 如何：使用 LINQ (Visual Basic 中) 的查询结果进行排序
 ms.date: 07/20/2015
 helpviewer_keywords:
 - sorting query results, multiple columns
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: 5104ef5714819bd69cfd5b6d754e81b97f235e31
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 04e8f6eaa06577ac556dbed89088f6268aae81df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672768"
 ---
-# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>如何：使用 LINQ 排序查询结果 (Visual Basic)
+# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>如何：使用 LINQ (Visual Basic 中) 的查询结果进行排序
 语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。  
   
  下面的示例演示如何创建新应用程序对 SQL Server 数据库执行查询并对按多个字段对结果进行排序通过使用`Order By`子句。 可以按升序或降序排序的每个字段的排序顺序。 有关详细信息，请参阅[Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)。  
@@ -73,8 +73,8 @@ ms.locfileid: "43529216"
   
 4.  按 F5 以运行您的项目并查看结果。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查询](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>请参阅
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [查询](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)

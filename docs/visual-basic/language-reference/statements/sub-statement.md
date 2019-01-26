@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 7baa4e25bc876ebfbe03c316b2020e01aedbc88d
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e7015474a0617b76ca537d2e84e8d7bfc72b6e12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737658"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 语句 (Visual Basic)
 声明名称、 参数和定义的代码`Sub`过程。  
@@ -72,11 +72,11 @@ End Sub
   
     -   [Private](../modifiers/private.md)  
   
-    - [受保护的友元](../../language-reference/modifiers/protected-friend.md)
+    - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
 
-    - [专用受保护](../../language-reference/modifiers/private-protected.md)
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)
   
-     请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+     请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 -   `proceduremodifiers`  
   
@@ -110,7 +110,7 @@ End Sub
   
 -   `name`  
   
-     必须的。 该过程的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要创建一个类的构造函数过程，请设置的名称`Sub`过程`New`关键字。 有关详细信息，请参阅[对象生存期： 对象的方式创建和销毁](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
+     必需。 该过程的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要创建一个类的构造函数过程，请设置的名称`Sub`过程`New`关键字。 有关详细信息，请参阅[对象生存期：如何创建和销毁对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
   
 -   `typeparamlist`  
   
@@ -136,8 +136,8 @@ End Sub
   
     |部件|描述|  
     |---|---|  
-    |`interface`|必须的。 此过程实现的接口的名称的包含类或结构。|  
-    |`definedname`|必须的。 在 `interface` 中用于定义过程的名称。|  
+    |`interface`|必需。 此过程实现的接口的名称的包含类或结构。|  
+    |`definedname`|必需。 在 `interface` 中用于定义过程的名称。|  
   
 -   `Handles`  
   
@@ -155,8 +155,8 @@ End Sub
   
     |部件|描述|  
     |---|---|  
-    |`eventvariable`|必须的。 声明的类或结构，它会引发事件的数据类型的对象变量。|  
-    |`event`|必须的。 此过程处理的事件的名称。|  
+    |`eventvariable`|必需。 声明的类或结构，它会引发事件的数据类型的对象变量。|  
+    |`event`|必需。 此过程处理的事件的名称。|  
   
 -   `statements`  
   
@@ -226,14 +226,14 @@ End Sub
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   
-## <a name="see-also"></a>请参阅  
- [Implements 语句](implements-statement.md)  
- [Function 语句](function-statement.md)  
- [参数列表](parameter-list.md)  
- [Dim 语句](dim-statement.md)  
- [Call 语句](call-statement.md)  
- [Of](of-clause.md)  
- [参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [如何：使用泛型类](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [过程疑难解答](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [分部方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+## <a name="see-also"></a>请参阅
+- [Implements 语句](implements-statement.md)
+- [Function 语句](function-statement.md)
+- [参数列表](parameter-list.md)
+- [Dim 语句](dim-statement.md)
+- [Call 语句](call-statement.md)
+- [Of](of-clause.md)
+- [参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+- [如何：使用泛型类](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [过程疑难解答](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [分部方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

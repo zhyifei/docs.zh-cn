@@ -1,22 +1,22 @@
 ---
-title: 演练：使用 Async 和 Await 访问 Web (Visual Basic)
+title: 演练：访问 Web 使用 Async 和 Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 8998ed715306402f4d8cc98be82cbb8e4aac3f8e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 51fb2a90a7398da5334e2fd4508f90d4594e5dc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709489"
 ---
-# <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>演练：使用 Async 和 Await 访问 Web (Visual Basic)
+# <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>演练：访问 Web 使用 Async 和 Await (Visual Basic)
 使用 async/await 功能可以更轻松直观地编写异步程序。 你可以编写类似于同步代码的异步代码，并让编译器处理异步代码通常需要的疑难回调函数和延续。  
   
  有关 Async 功能的详细信息，请参阅[使用 Async 和 Await (Visual Basic 中) 的异步编程](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
   
  本演练从对网站列表中的字节数进行求和的同步 Windows Presentation Foundation (WPF) 应用程序入手， 然后使用新功能将该应用程序转换为异步解决方案。  
   
- 如果不想自行生成应用程序，可以从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载“Async 示例：访问 Web 演练（C# 和 Visual Basic）”。  
+ 如果不想自行生成应用程序，则可以下载"Async 示例：访问 Web 演练 (C#和 Visual Basic)"从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)。  
   
  在本演练中，你将完成下列任务：  
   
@@ -282,7 +282,7 @@ ms.locfileid: "50194158"
   
      对 `webReq.GetResponseAsync` 的调用返回 `Task(Of WebResponse)` 或 `Task<WebResponse>`。 然后`Await`运算符应用于任务以检索`WebResponse`值。  
   
-     如果你的异步方法需要完成不依赖于任务的完成的工作，则在调用异步方法之后及应用 await 运算符之前的这段时间，该方法可以在这两个语句之间继续完成该工作。 有关示例，请参阅[如何： 使用 Async 和 Await (Visual Basic 中) 的同时使多个 Web 请求](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)并[如何： 扩展异步演练使用 task.whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
+     如果你的异步方法需要完成不依赖于任务的完成的工作，则在调用异步方法之后及应用 await 运算符之前的这段时间，该方法可以在这两个语句之间继续完成该工作。 相关示例，请参阅[如何：并行发起多个 Web 请求，使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)和[如何：使用 (Visual Basic) Task.WhenAll 扩展异步演练](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
   
 3.  因为在上一步中添加了 `Await` 运算符，所以会发生编译器错误。 可以使用标记的方法中仅使用运算符[异步](../../../../visual-basic/language-reference/modifiers/async.md)修饰符。 当你重复转换步骤以使用对 `CopyToAsync` 的调用替换对 `CopyTo` 的调用时，请忽略该错误。  
   
@@ -673,12 +673,12 @@ Class MainWindow
 End Class  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)（异步示例：访问 Web 演练（C# 和 Visual Basic））  
- [Await 运算符](../../../../visual-basic/language-reference/operators/await-operator.md)  
- [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [异步返回类型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [基于任务的异步编程 (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)  
- [如何：使用 Task.WhenAll 扩展异步演练 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
- [如何：使用 Async 和 Await 并行发出多个 Web 请求 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+## <a name="see-also"></a>请参阅
+- [异步示例：访问 Web 演练 (C#和 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Await 运算符](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
+- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [异步返回类型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [基于任务的异步编程 (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
+- [如何：使用 (Visual Basic) Task.WhenAll 扩展异步演练](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [如何：并行发起多个 Web 请求，使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
