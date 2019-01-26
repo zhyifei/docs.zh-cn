@@ -7,14 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3969f066c0a17424d2c4527d2b4661b30f5bb6d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b69d6add9a01b890cdcc1c6f3be1b1d35f3cd78
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530520"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083504"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：创建发布服务器策略
 程序集的供应商可以声明应用程序应通过包括发布服务器策略文件与升级后的程序集使用的程序集的较新版本。 发布服务器策略文件指定程序集重定向和基本代码设置，并为应用程序配置文件使用相同的格式。 发布服务器策略文件编译到程序集中，放置在全局程序集缓存中。  

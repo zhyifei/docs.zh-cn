@@ -2,16 +2,20 @@
 title: 密码设置架构
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'configuration schema [.NET Framework], cryptography'
-  - 'elements [.NET Framework], cryptography'
-  - schema configuration settings
-  - 'cryptography, settings schema'
-  - 'cryptography, mapping algorithm names'
-  - 'configuration sections [.NET Framework]'
-  - 'configuration settings [.NET Framework], cryptography'
+- configuration schema [.NET Framework], cryptography
+- elements [.NET Framework], cryptography
+- schema configuration settings
+- cryptography, settings schema
+- cryptography, mapping algorithm names
+- configuration sections [.NET Framework]
+- configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-author: mcleblanc
-ms.author: markl
+ms.openlocfilehash: 2958ab01cb92872026437e31d2225d12d8606e97
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083374"
 ---
 # <a name="cryptography-settings-schema"></a>密码设置架构
 加密设置架构包含元素，这些元素指定如何将友好算法名称映射到实现加密算法的类。  

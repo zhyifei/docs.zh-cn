@@ -1,16 +1,16 @@
 ---
 title: 使用 DataReader 检索 ADO 数据
-ms.date: 10/259/2018
+ms.date: 10/29/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 134bb68b9cf60cc5082afefdd9eb87d991b6e0ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75d1dba6678be0bfa45be5f3e60e8e76f80a7e9e
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692751"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083842"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>使用 DataReader 检索数据
 若要检索的数据使用**DataReader**，创建的实例**命令**对象，并创建**DataReader**通过调用**Command.ExecuteReader**从数据源中检索行。 **DataReader**提供未缓冲的数据流使过程逻辑可以有效地按顺序处理数据源的结果的数据。 **DataReader**时要检索的数据量大，因为这些数据不在内存中缓存是一个不错的选择。
