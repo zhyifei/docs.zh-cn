@@ -21,12 +21,12 @@ ML.NET是一个免费的，开源的，跨平台的机器学习框架，使您�
 
 从顶级数据科学家的五个简短视频中快速了解 *数据科学初学者* 的机器学习和数据科学基础知识。 无论您是对数据科学感兴趣还是与数据科学家合作，这些视频基本都是有用的。
 
-* 视频 1: [关于5个数据科学问题的答案](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers) *(5 min 14 sec)*.
+* 视频 1: [关于5个数据科学问题的答案](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers) *(5 分 14 秒)*.
 
-* 视频 2: [您的数据准备好用于数据科学了吗？](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science) *(4 min 56 sec)*
+* 视频 2: [您的数据准备好用于数据科学了吗？](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science) *(4 分 56 秒)*
 
-* 视频 3: [提出一个可以用数据回答的问题](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data) *(4 min 17 sec)*
+* 视频 3: [提出一个可以用数据回答的问题](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data) *(4 分 17 秒)*
 
-* 视频 4: [用简单的模型预测答案](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-predict-an-answer-with-a-simple-model) *(7 min 42 sec)*
+* 视频 4: [用简单的模型预测答案](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-predict-an-answer-with-a-simple-model) *(7 分 42 sec)*
 
-* 视频 5: [复制其他人的工作来做数据科学](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-copy-other-peoples-work-to-do-data-science) *(3 min 18 sec)*
+* 视频 5: [复制其他人的工作来做数据科学](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-copy-other-peoples-work-to-do-data-science) *(3 分 18 秒)*
