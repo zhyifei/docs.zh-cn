@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691471"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066007"
 ---
 # <a name="securing-method-access"></a>保护方法访问
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -234,7 +234,7 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Virtual Internal 重写或 Overloads Overridable Friend  
   
 > [!NOTE]
->  本部分中的安全问题时将方法声明为同时发出警告`virtual`并`internal`(`Overloads``Overridable``Friend`在 Visual Basic 中)。 此警告仅适用于.NET framework 1.0 和 1.1 版，不适用于更高版本。  
+>  本部分中的安全问题时将方法声明为同时发出警告`virtual`并`internal`(`Overloads` `Overridable` `Friend`在 Visual Basic 中)。 此警告仅适用于.NET framework 1.0 和 1.1 版，不适用于更高版本。  
   
  在.NET framework 1.0 和 1.1 版中，您必须注意类型系统可访问性的细微差别时确认你的代码对其他程序集不可用。 声明的方法**虚拟**并**内部**(**Overloads Overridable Friend**在 Visual Basic 中) 可以重写父类的 vtable 条目，并可以仅通过使用在同一程序集中因为它是内部。 但是，由重写的可访问性**虚拟**关键字，并且可以覆盖从另一个程序集，只要该代码有权访问类本身。 如果重写可能会出现问题，使用声明性安全来解决问题，或删除**虚拟**如果不是绝对必需的关键字。  
   

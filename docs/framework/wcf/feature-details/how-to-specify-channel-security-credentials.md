@@ -2,12 +2,12 @@
 title: 如何：指定通道安全凭据
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: b24178b9810d9ab4cde3190ab372a2c342823ca1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495196"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066189"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>如何：指定通道安全凭据
 Windows Communication Foundation (WCF) 服务标记允许 COM 应用程序可以调用 WCF 服务。 大多数 WCF 服务需要客户端指定要用于身份验证和授权的凭据。 在从 WCF 客户端调用 WCF 服务，可以指定这些凭据，在托管代码或应用程序配置文件中。 在 COM 应用程序中调用 WCF 服务，可以使用<xref:System.ServiceModel.ComIntegration.IChannelCredentials>接口指定凭据。 本主题将介绍使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口指定凭据的各种方法。  
@@ -23,9 +23,9 @@ Windows Communication Foundation (WCF) 服务标记允许 COM 应用程序可以
   
 2.  打开消息安全项目。  
   
-3.  添加`[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]`到`ICalculator`接口定义。  
+3.  添加`[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]`到`ICalculator`接口定义。  
   
-4.  添加`bindingNamespace=``http://Microsoft.ServiceModel.Samples`到服务 App.config 中的终结点标记。  
+4.  添加`bindingNamespace="http://Microsoft.ServiceModel.Samples"`到服务 App.config 中的终结点标记。  
   
 5.  生成消息安全示例并运行 Service.exe。 使用 Internet Explorer 并浏览到服务的 URI (http://localhost:8000/ServiceModelSamples/Service)以确保服务正在运行。  
   

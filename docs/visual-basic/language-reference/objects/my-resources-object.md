@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: df9538bfb778d6838b51d3b0c525a433812d8131
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571816"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065864"
 ---
 # <a name="myresources-object"></a>My.Resources 对象
 提供用于访问应用程序的资源的属性和类。  
@@ -26,9 +26,9 @@ ms.locfileid: "54571816"
  您可以访问应用程序的特定于区域性的资源文件从`My.Resources`对象。 默认情况下`My.Resources`对象查找匹配的区域中的资源文件中的资源<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A>属性。 但是，可以重写此行为，并指定特定区域性的资源使用。 有关详细信息，请参阅[桌面应用中的资源](../../../framework/resources/index.md)。  
   
 ## <a name="properties"></a>Properties  
- 属性`My.Resources`对象提供对应用程序的资源的只读访问。 若要添加或删除资源，请使用**项目设计器**。 您可以访问资源通过添加**项目设计器**通过使用`My.Resources.``resourceName`。  
+ 属性`My.Resources`对象提供对应用程序的资源的只读访问。 若要添加或删除资源，请使用**项目设计器**。 您可以访问资源通过添加**项目设计器**通过使用`My.Resources.` *resourceName*。  
   
- 此外可以添加或删除选择的项目中的资源文件**解决方案资源管理器**，然后单击**添加新项**或**添加现有项**从**项目**菜单。 你可以访问通过使用这种方式添加的资源`My.Resources.``resourceFileName`、`resourceName`。  
+ 此外可以添加或删除选择的项目中的资源文件**解决方案资源管理器**，然后单击**添加新项**或**添加现有项**从**项目**菜单。 您可以访问资源使用，以这种方式添加了`My.Resources.` *resourceFileName*`.`*resourceName*。  
   
  每个资源都有名称、 类别和值，并且这些资源设置确定要访问的资源的属性中的显示方式`My.Resources`对象。 在中添加的资源**项目设计器**:  
   

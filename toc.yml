@@ -78,6 +78,12 @@ items:
       - name: 文件和流 I/O
         tocHref: /dotnet/standard/io/
         topicHref: /dotnet/standard/io/index
+      - name: 内存和跨度相关类型
+        tocHref: /dotnet/standard/memory-and-spans/
+        topicHref: /dotnet/standard/memory-and-spans/index
+      - name: 本机互操作性
+        tocHref: /dotnet/standard/native-interop/
+        topicHref: /dotnet/standard/native-interop/index
       - name: .NET 中的并行编程
         tocHref: /dotnet/standard/parallel-programming/
         topicHref: /dotnet/standard/parallel-programming/index
@@ -610,9 +616,9 @@ items:
       - name: 教程
         tocHref: /dotnet/machine-learning/tutorials/
         topicHref: /dotnet/machine-learning/tutorials/index
-ms.openlocfilehash: fa81883a0229859aa78d0775122e492951f99f10
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: ad992762872d2e2ef7454aba6c45f262aff33246
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307339"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857968"

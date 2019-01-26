@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8ae7149e1f104863825fdea128729dcc80847c19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127922"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679927"
 ---
 # <a name="handling-and-raising-events"></a>处理和引发事件
 .NET Framework 中的事件基于委托模型。 委托模型遵守观察者设计模式，使订阅者能够向提供方注册并接收相关通知。 事件发送方推送事件发生的通知，事件接收器接收该通知并定义对它的响应。 本文介绍委托模型的主要组件、如何在应用程序中使用事件以及如何在你的代码中实现事件。  
@@ -45,7 +45,7 @@ ms.locfileid: "53127922"
   
  委托是多路广播，这意味着它们可以引用多个事件处理方法。 有关详细信息，请参阅 <xref:System.Delegate> 参考页。 委托提供了事件处理中的灵活性和精确控制。 委托人通过维护事件的已注册事件处理程序列表来充当引发事件的类的事件调度程序。  
   
- 在 <xref:System.EventHandler> 和 <xref:System.EventHandler%601> 委托不可用的场景下，您可以定义一个委托。 要求您定义委托的场景非常少见的，例如，当您必须处理无法识别泛型的代码时。 您在声明中使用 `delegate` (C#) 和 `Delegate` (Visual Basic) 关键字标记委托。 下面的示例说明如何声明 `ThresholdReachedEventHandler` 委托。  
+ 在 <xref:System.EventHandler> 和 <xref:System.EventHandler%601> 委托不可用的场景下，您可以定义一个委托。 要求你定义委托的场景非常少见的，例如，当你必须处理无法识别泛型的代码时。 您在声明中使用 `delegate` (C#) 和 `Delegate` (Visual Basic) 关键字标记委托。 下面的示例说明如何声明 `ThresholdReachedEventHandler` 委托。  
   
  [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
  [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
@@ -80,19 +80,19 @@ ms.locfileid: "53127922"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|说明|  
+|Title|说明|  
 |-----------|-----------------|  
-|[如何：引发和使用事件](../../../docs/standard/events/how-to-raise-and-consume-events.md)|包含引发和使用事件的示例。|  
+|[如何：抛出和使用事件](../../../docs/standard/events/how-to-raise-and-consume-events.md)|包含引发和使用事件的示例。|  
 |[如何：使用事件属性处理多个事件](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|演示如何使用事件属性处理多个事件。|  
 |[观察程序设计模式](../../../docs/standard/events/observer-design-pattern.md)|描述允许订阅者向提供方注册和接收通知的设计模式。|  
 |[如何：在 Web 窗体应用程序中使用事件](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|演示如何处理 Web 窗体控件引发的事件。|  
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.EventHandler>  
-- <xref:System.EventHandler%601>  
-- <xref:System.EventArgs>  
-- <xref:System.Delegate>  
-- [事件和路由事件概述（UWP 应用）](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
-- [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- <xref:System.EventHandler>
+- <xref:System.EventHandler%601>
+- <xref:System.EventArgs>
+- <xref:System.Delegate>
+- [事件和路由事件概述（UWP 应用）](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
 - [事件（C# 编程指南）](../../csharp/programming-guide/events/index.md)

@@ -1,12 +1,12 @@
 ---
 title: 特性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f211e8af48bdfef0bb9bf4341c7a5911b5695101
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573328"
 ---
 # <a name="attributes-c"></a>特性 (C#)
 
@@ -75,7 +75,7 @@ ms.locfileid: "44214142"
 |`event`|事件|
 |`method`|方法或 `get` 和 `set` 属性访问器|
 |`param`|方法参数或 `set` 属性访问器参数|
-|`property`|属性|
+|`property`|Property|
 |`return`|方法、属性索引器或 `get` 属性访问器的返回值|
 |`type`|结构、类、接口、枚举或委托|
 
@@ -119,13 +119,13 @@ using System.Reflection;
 
 - [创建自定义特性 (C#)](creating-custom-attributes.md)  
 - [使用反射访问特性 (C#)](accessing-attributes-by-using-reflection.md)  
-- [如何：使用特性创建 C/C++ 联合 (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [如何：使用属性创建 C/C++ 联合 (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [通用特性 (C#)](common-attributes.md)  
 - [调用方信息 (C#)](../caller-information.md)  
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../index.md)  
-- [反射 (C#)](../reflection.md)  
-- [特性](../../../../standard/attributes/index.md)  
-- [在 C# 中使用特性](../../../tutorials/attributes.md)  
+- [C# 编程指南](../../index.md)
+- [反射 (C#)](../reflection.md)
+- [特性](../../../../standard/attributes/index.md)
+- [在 C# 中使用特性](../../../tutorials/attributes.md)
