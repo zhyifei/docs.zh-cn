@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aedc7b1941268184b71713d31913dbfbd8b74643
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 587ae32c27a3c779f5f2e4f27bf521e2ca557106
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688995"
 ---
 # <a name="default-marshaling-behavior"></a>默认封送处理行为
 互操作封送处理根据规则进行操作，该规则指定与方法参数相关联的数据在托管和非托管内存之间传递时的行为方式。 这些内置规则控制诸如此类的封送处理活动：数据类型转换、被调用方是否可以更改传递给它的数据并将这些更改返回给调用方以及在何种情况下封送拆收器提供性能优化。  
@@ -304,7 +304,7 @@ class Win32API {
 }  
 ```  
   
- 请注意，`SystemTime` 参数并不类型化为引用参数，因为 `SystemTime` 是一个类，而不是值类型。 与值类型不同，类始终由引用传递。  
+ 请注意，`SystemTime` 自变量并不类型化为引用自变量，因为 `SystemTime` 是一个类，而不是值类型。 与值类型不同，类始终由引用传递。  
   
  下面的代码示例显示一个不同的 `Point` 类，此类具有一个名为 `SetXY` 的方法。 因为该类型具有顺序布局，因此可以传递到非托管代码并作为一种结构封送。 但是，`SetXY` 成员不能从非托管代码中调用，即使由引用传递对象。  
   
@@ -440,9 +440,9 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)  
- [复制和锁定](copying-and-pinning.md)  
- [数组的默认封送处理](default-marshaling-for-arrays.md)  
- [对象的默认封送处理](default-marshaling-for-objects.md)  
- [字符串的默认封送处理](default-marshaling-for-strings.md)
+## <a name="see-also"></a>请参阅
+- [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)
+- [复制和锁定](copying-and-pinning.md)
+- [数组的默认封送处理](default-marshaling-for-arrays.md)
+- [对象的默认封送处理](default-marshaling-for-objects.md)
+- [字符串的默认封送处理](default-marshaling-for-strings.md)

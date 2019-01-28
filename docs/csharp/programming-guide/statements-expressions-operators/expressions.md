@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600487"
 ---
 # <a name="expressions-c-programming-guide"></a>表达式（C# 编程指南）
 表达式是由一个或多个操作数以及零个或多个运算符组成的序列，其计算结果为一个值、对象、方法或命名空间。 表达式可以包含文本值、方法调用、运算符及其操作数，或简单名称。 简单名称可以是变量名、类型成员名、方法参数名、命名空间名或类型名。  
@@ -75,9 +75,9 @@ C# 支持“Expression-Bodied 成员”，这允许为方法、构造函数、�
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [委托](../../../csharp/programming-guide/delegates/index.md)  
-- [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
-- [类型](../../../csharp/programming-guide/types/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [委托](../../../csharp/programming-guide/delegates/index.md)
+- [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [类型](../../../csharp/programming-guide/types/index.md)
 - [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)

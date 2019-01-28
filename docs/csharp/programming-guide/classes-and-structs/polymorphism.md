@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 489fdf87f973de6137587fc2280ef0fa72ab78ba
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: ab0cf58bec2d9072fbc3af78e477a84726dd7a81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286450"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659639"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多态性（C# 编程指南）
 多态性常被视为自封装和继承之后，面向对象的编程的第三个支柱。 Polymorphism（多态性）是一个希腊词，指“多种形态”，多态性具有两个截然不同的方面：  
@@ -98,10 +98,10 @@ ms.locfileid: "53286450"
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [事件](../../../csharp/programming-guide/events/index.md)  
-- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [索引器](../../../csharp/programming-guide/indexers/index.md)  
+- [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [抽象类、密封类及类成员](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [事件](../../../csharp/programming-guide/events/index.md)
+- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [索引器](../../../csharp/programming-guide/indexers/index.md)
 - [类型](../../../csharp/programming-guide/types/index.md)

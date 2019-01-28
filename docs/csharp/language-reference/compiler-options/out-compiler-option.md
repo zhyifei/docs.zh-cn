@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: ea371dc968c8d8bf1569d17531cf7f6faff1d315
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 62a8835361e2e55d3d970cf3ae7cd2699e3c79fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725735"
 ---
 # <a name="-out-c-compiler-options"></a>-out（C# 编译器选项）
 -out 选项指定输出文件的名称。  
@@ -64,8 +64,8 @@ ms.locfileid: "46004200"
 csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
-- [友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
