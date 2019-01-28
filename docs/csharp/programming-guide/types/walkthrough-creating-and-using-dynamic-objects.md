@@ -1,5 +1,5 @@
 ---
-title: 演练：创建和使用动态对象（C# 和 Visual Basic）
+title: 演练：创建并使用动态对象（C# 和 Visual Basic）
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 8134a7c7c1f2c4e6432dd19889faf796a9284553
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: ff46fcc14a8a8e3d6c6d31dcb8c922640d6478c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691736"
 ---
-# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>演练：创建和使用动态对象（C# 和 Visual Basic）
+# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>演练：创建并使用动态对象（C# 和 Visual Basic）
 
 动态对象会在运行时（而非编译时）公开属性和方法等成员。 这使你能够创建对象以处理与静态类型或格式不匹配的结构。 例如，可以使用动态对象来引用 HTML 文档对象模型 (DOM)，该模型包含有效 HTML 标记元素和特性的任意组合。 由于每个 HTML 文档都是唯一的，因此在运行时将确定特定 HTML 文档的成员。 引用 HTML 元素的特性的常用方法是，将该特性的名称传递给该元素的 `GetProperty` 方法。 若要引用 HTML 元素 `<div id="Div1">` 的 `id` 特性，首先获取对 `<div>` 元素的引用，然后使用 `divElement.GetProperty("id")`。 如果使用动态对象，则可以将 `id` 特性引用为 `divElement.id`。  
   
@@ -159,9 +159,9 @@ ms.locfileid: "49347963"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Dynamic?displayProperty=nameWithType>  
-- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
-- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [早期绑定和后期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+- <xref:System.Dynamic?displayProperty=nameWithType>
+- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
+- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [早期绑定和后期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
 - [实现动态接口（可从 Microsoft TechNet 下载 PDF）](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

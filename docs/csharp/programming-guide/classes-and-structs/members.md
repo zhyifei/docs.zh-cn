@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: e8429df6ef633f11df50ee5526496f9688f845ea
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592845"
 ---
 # <a name="members-c-programming-guide"></a>成员（C# 编程指南）
 类和结构具有表示其数据和行为的成员。 类的成员包括在类中声明的所有成员，以及在该类的继承层次结构中的所有类中声明的所有成员（构造函数和析构函数除外）。 基类中的私有成员被继承，但不能从派生类访问。  
@@ -33,15 +33,15 @@ ms.locfileid: "53245098"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [字段](../../../csharp/programming-guide/classes-and-structs/fields.md)  
-- [索引器](../../../csharp/programming-guide/indexers/index.md)  
-- [事件](../../../csharp/programming-guide/events/index.md)  
-- [嵌套类型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
-- [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [字段](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [索引器](../../../csharp/programming-guide/indexers/index.md)
+- [事件](../../../csharp/programming-guide/events/index.md)
+- [嵌套类型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)
+- [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
 - [可重载运算符](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

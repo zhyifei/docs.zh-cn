@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: bc9fc81a74d438aca57779fa565fdbeba3968087
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ecbac4608cfd42aa099a0cd66d7d22241a93265
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557703"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>如何：声明、实例化和使用委托（C# 编程指南）
 在 C# 1.0 和更高版本中，可以如下面的示例所示声明委托。  
@@ -74,6 +74,6 @@ ms.locfileid: "53237059"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [事件](../../../csharp/programming-guide/events/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [事件](../../../csharp/programming-guide/events/index.md)
 - [委托](../../../csharp/programming-guide/delegates/index.md)

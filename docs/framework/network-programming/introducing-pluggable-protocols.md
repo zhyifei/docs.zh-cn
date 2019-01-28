@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 213a714a04c31954b0091071b0625449916d154d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebc238f6739f7db23d570688ea3c6e2031f9699f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729127"
 ---
 # <a name="introducing-pluggable-protocols"></a>可插入协议简介
 Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且托管的实现，可以快速、轻松地将其集成到应用程序中。 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空间的 Internet 访问类可用于实现基于 Web 和基于 Internet 的应用程序。  
@@ -66,8 +66,8 @@ Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且
   
  熟悉 Windows Sockets 接口的开发人员或需要通过套接字级编程提供的控件的开发人员将发现 System.Net.Sockets 类能够满足他们的需求。 System.Net.Sockets 类是从托管到 System.Net 类中的本机代码的转换点。 大多数情况下，System.Net.Sockets 类将数据封送到 Windows 32 位对应项，并处理任何必要的安全检查。  
   
-## <a name="see-also"></a>请参阅  
- [对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)  
- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN 代码库中的 .NET 联网示例](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a>请参阅
+- [对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)
+- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)
+- [MSDN 代码库中的 .NET 联网示例](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

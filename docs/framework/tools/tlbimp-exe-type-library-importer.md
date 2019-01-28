@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: f39f793d3d0a2cf815028ccdb49253c46dac2ec4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631303"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe（类型库导入程序）
 类型库导入程序将 COM 类型库中的类型定义转换为公共语言运行时程序集中的等效定义。 Tlbimp.exe 的输出是一个二进制文件（程序集），其中包含在原始类型库中定义的类型的运行时元数据。 可以使用 [Ildasm.exe](ildasm-exe-il-disassembler.md) 这样的工具检查此文件。  
@@ -125,13 +125,13 @@ bool SomeMethod();
 void SomeMethod(out bool x);  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [工具](index.md)  
- [Tlbexp.exe（类型库导出程序）](tlbexp-exe-type-library-exporter.md)  
- [将类型库作为程序集导入](../interop/importing-a-type-library-as-an-assembly.md)  
- [有关从类型库转换到程序集的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Ildasm.exe（IL 反汇编程序）](ildasm-exe-il-disassembler.md)  
- [Sn.exe（强名称工具）](sn-exe-strong-name-tool.md)  
- [具有强名称的程序集](../app-domains/strong-named-assemblies.md)  
- [用于向互操作程序集导入类型库的特性](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))  
- [命令提示](developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>请参阅
+- [工具](index.md)
+- [Tlbexp.exe（类型库导出程序）](tlbexp-exe-type-library-exporter.md)
+- [将类型库作为程序集导入](../interop/importing-a-type-library-as-an-assembly.md)
+- [有关从类型库转换到程序集的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Ildasm.exe（IL 反汇编程序）](ildasm-exe-il-disassembler.md)
+- [Sn.exe（强名称工具）](sn-exe-strong-name-tool.md)
+- [具有强名称的程序集](../app-domains/strong-named-assemblies.md)
+- [用于向互操作程序集导入类型库的特性](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))
+- [命令提示](developer-command-prompt-for-vs.md)

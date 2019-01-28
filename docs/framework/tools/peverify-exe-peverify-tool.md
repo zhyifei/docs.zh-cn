@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50513d62ab67afe88a147de9581ae7bbbfd0a417
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: cd1f7679a3c2ecc234724e6417c5b12a78ff7ddc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598281"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe（PEVerify 工具）
 PEVerify 工具有助于生成 Microsoft 中间语言 (MSIL) 的开发人员（如编译器编写者、脚本引擎开发人员等）确定其 MSIL 代码及关联的元数据是否满足类型安全要求。 某些编译器仅当你避免使用某些语言构造时才生成可验证的类型安全代码。 如果你作为开发人员正在使用此类编译器，则可能需要确认你未危害代码的类型安全性。 在这种情况下，你可以对文件运行 PEVerify 工具来检查 MSIL 和元数据。  
@@ -120,8 +120,8 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 0xABCD1234  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [工具](../../../docs/framework/tools/index.md)  
- [编写可验证类型安全代码](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)  
- [类型安全和安全性](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)  
- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>请参阅
+- [工具](../../../docs/framework/tools/index.md)
+- [编写可验证类型安全代码](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
+- [类型安全和安全性](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)
+- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

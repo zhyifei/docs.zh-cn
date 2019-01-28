@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 569f2d59bb2abf013a87bdaa694a7fcf36c70042
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c13a00ddad974ebba8eea4fceddd6a9fe3ed942
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597575"
 ---
 # <a name="working-with-resx-files-programmatically"></a>以编程方式使用 .resx 文件
 由于 XML 资源 (.resx) 文件必须由定义完善的 XML 组成，这些 XML 的标头必须遵循特定架构（后跟名称/值对的数据），因此你会发现手动创建这些文件很容易出错。 作为一种替代方法，可以使用 .NET Framework 类库中的类型和成员以编程方式创建 .resx 文件。 你还可以使用 .NET Framework 类库来检索存储在 .resx 文件中的资源。 本主题说明如何使用 <xref:System.Resources> 命名空间的类型和成员来操作 .resx 文件。  
@@ -50,7 +50,7 @@ ms.locfileid: "33398828"
  你无法将 .resx 文件嵌入运行时可执行文件中或将其编译到附属程序集。 必须使用 [资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)将 .resx 文件转换为二进制资源 (.resources) 文件 。 然后可以将生成的 .resources 文件嵌入应用程序集或附属程序集。 有关详细信息，请参阅 [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。  
   
 ## <a name="enumerating-resources"></a>枚举资源  
- 在某些情况下，你可能想要从 .resx 文件中检索所有资源，而不是某个特定资源。 若要执行此操作，可以使用 <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> 类，该类为 .resx 文件中的所有资源提供枚举器。 <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> 类将实现 <xref:System.Collections.IDictionaryEnumerator>，并返回 <xref:System.Collections.DictionaryEntry> 对象，该对象代表用于循环的每个迭代的特定资源。 此对象的 <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> 属性返回资源的键， <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> 属性返回资源的值。  
+ 在某些情况下，你可能想要从 .resx 文件中检索所有资源，而不是某个特定资源。 若要执行此操作，可以使用 <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> 类，该类为 .resx 文件中的所有资源提供枚举器。  <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> 类将实现 <xref:System.Collections.IDictionaryEnumerator>，并返回 <xref:System.Collections.DictionaryEntry> 对象，该对象代表用于循环的每个迭代的特定资源。 此对象的 <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> 属性返回资源的键， <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> 属性返回资源的值。  
   
  下面的示例为前面的示例中创建的 CarResources.resx 文件创建 <xref:System.Resources.ResXResourceReader> 对象，并在整个资源文件中进行迭代。 该示例将资源文件中定义的两个 `Automobile` 对象添加到 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 对象，以及将六个字符串中的五个添加到 <xref:System.Collections.SortedList> 对象。 <xref:System.Collections.SortedList> 对象中的值将转换为一个参数数组，该参数数组用于向控制台显示列标题。 还将向控制台显示 `Automobile` 属性值。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "33398828"
  [!code-vb[Conceptual.Resources.ResX#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/enumerate1.vb#2)]  
   
 ## <a name="retrieving-a-specific-resource"></a>检索特定的资源  
- 除了枚举 .resx 文件中的项，你可以使用 <xref:System.Resources.ResXResourceSet?displayProperty=nameWithType> 类按名称检索特定资源。 <xref:System.Resources.ResourceSet.GetString%28System.String%29?displayProperty=nameWithType> 方法用于检索命名字符串资源的值。 <xref:System.Resources.ResourceSet.GetObject%28System.String%29?displayProperty=nameWithType> 方法用于检索命名对象或二进制数据的值。 该方法返回的对象之后必须转换为（C# 中的 cast 或 Visual Basic 中的 convert）相应类型的对象。  
+ 除了枚举 .resx 文件中的项，你可以使用 <xref:System.Resources.ResXResourceSet?displayProperty=nameWithType> 类按名称检索特定资源。  <xref:System.Resources.ResourceSet.GetString%28System.String%29?displayProperty=nameWithType> 方法用于检索命名字符串资源的值。  <xref:System.Resources.ResourceSet.GetObject%28System.String%29?displayProperty=nameWithType> 方法用于检索命名对象或二进制数据的值。 该方法返回的对象之后必须转换为（C# 中的 cast 或 Visual Basic 中的 convert）相应类型的对象。  
   
  以下示例按资源名称检索窗体的标题字符串和图标， 还将检索前面示例中使用的应用程序定义的 `Automobile` 对象，并在 <xref:System.Windows.Forms.DataGridView> 控件中显示这些对象。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "33398828"
   
  al resourcesFilename -out: assemblyFilename  
   
-## <a name="see-also"></a>请参阅  
- [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Resgen.exe（资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>请参阅
+- [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Resgen.exe（资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)

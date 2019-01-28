@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: e3b77af312abcc99945a22abf2b73ebd47556026
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 28c07331931450f41f8c93d24e119f8a981ae9ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53234521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500598"
 ---
 # <a name="ltvaluegt-c-programming-guide"></a>&lt;value&gt;（C# 编程指南）
 ## <a name="syntax"></a>语法  
@@ -36,5 +36,5 @@ ms.locfileid: "53234521"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

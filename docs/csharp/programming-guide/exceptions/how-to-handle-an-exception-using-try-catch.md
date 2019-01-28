@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-ms.openlocfilehash: db83eca52b204df1bb8273e94ae8664e61175aa7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 17b3be52bb89a1cf74bb8171ca937e434a8d94f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552523"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>如何：使用 try/catch 处理异常（C# 编程指南）
 [try-catch](../../../csharp/language-reference/keywords/try-catch.md) 块的用途是捕获并处理工作代码产生的异常。 某些异常可以在 `catch` 块中进行处理，问题得以解决并不再出现异常；但是，大多数情况下你唯一可做的是确保引发的异常是合理异常。  
@@ -27,6 +27,6 @@ ms.locfileid: "53244918"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [异常和异常处理](../../../csharp/programming-guide/exceptions/index.md)
 - [异常处理](../../../csharp/programming-guide/exceptions/exception-handling.md)

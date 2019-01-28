@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7366bfd6459a9387e8c57092ba85cac5f4da125b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0832489d74abc3aec78218f87d2bce72e6e68f75
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632785"
 ---
 # <a name="runtime-callable-wrapper"></a>运行时可调用包装
 公共语言运行时通过名为运行时可调用包装 (RCW) 的代理公开 COM 对象。 尽管 RCW 似乎是 .NET 客户端的普通对象，但它的主要功能是封送处理 .NET 客户端和 COM 对象之间的调用。  
@@ -41,7 +41,7 @@ COM 接口和运行时可调用包装
   
  RCW 使用下表列出的接口，这些接口由其包装的对象公开。  
   
-|接口|描述|  
+|接口|说明|  
 |---------------|-----------------|  
 |**IDispatch**|用于通过反射后期绑定到 COM 对象。|  
 |**IErrorInfo**|提供以下内容的文字描述：错误、错误源、帮助文件，帮助上下文以及定义错误的接口的 GUID（.NET 类始终为 GUID_NULL）。|  
@@ -50,15 +50,15 @@ COM 接口和运行时可调用包装
   
  RCW 选择性地使用下表中列出的接口，这些接口由其包装的对象公开。  
   
-|接口|描述|  
+|接口|说明|  
 |---------------|-----------------|  
 |**IConnectionPoint** 和 **IConnectionPointContainer**|RCW 对向基于委托的事件公开连接点事件样式的对象执行转换。|  
 |**IDispatchEx**|如果类实现 IDispatchEx，则 RCW 实现 IExpando。 IDispatchEx 接口是 IDispatch 接口的扩展，与 IDispatch 不同，它可枚举、添加、删除和以区分大小的方式调用成员。|  
 |**IEnumVARIANT**|使支持枚举的 COM 类型可被视为集合。|  
   
-## <a name="see-also"></a>请参阅  
- [COM 包装](com-wrappers.md)  
- [封送处理所选接口](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))  
- [COM 可调用包装器](com-callable-wrapper.md)  
- [有关从类型库转换到程序集的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [将类型库作为程序集导入](importing-a-type-library-as-an-assembly.md)
+## <a name="see-also"></a>请参阅
+- [COM 包装](com-wrappers.md)
+- [封送处理所选接口](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))
+- [COM 可调用包装器](com-callable-wrapper.md)
+- [有关从类型库转换到程序集的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [将类型库作为程序集导入](importing-a-type-library-as-an-assembly.md)
