@@ -4,12 +4,12 @@ description: 查看 project.json 和 csproj 元素之间的映射。
 author: natemcmaster
 ms.date: 03/13/2017
 ms.custom: seodec18
-ms.openlocfilehash: 581ff7cd3fe02e22d481c8386776317a5251cc5c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: dc78a6fc43eeb2a9e556bc5a4d8e27db9067ce94
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682847"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 和 csproj 属性之间的映射
 
@@ -676,4 +676,4 @@ MSBuild 中没有 `owners` 元素的等效项。
 
 ## <a name="see-also"></a>请参阅
 
-* [CLI 中更改的简要概述](../tools/cli-msbuild-architecture.md)
+- [CLI 中更改的简要概述](../tools/cli-msbuild-architecture.md)
