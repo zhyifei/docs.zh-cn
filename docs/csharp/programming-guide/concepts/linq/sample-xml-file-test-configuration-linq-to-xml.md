@@ -2,17 +2,17 @@
 title: 示例 XML 文件：测试配置 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 45bfb509-c1d4-4b4f-9690-1cb0c9816516
-ms.openlocfilehash: 2d1a5b18f9e660959a8c9656cc82ac0686c7d7ca
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a001d7433bcf19e5bcecf7ba49cb233559906d87
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43741982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496135"
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="06dac-102">示例 XML 文件：测试配置 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="06dac-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
-<span data-ttu-id="06dac-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="06dac-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="06dac-104">这是一个测试配置文件。</span><span class="sxs-lookup"><span data-stu-id="06dac-104">This is a test configuration file.</span></span>  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="2c721-102">示例 XML 文件：测试配置 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="2c721-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="2c721-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="2c721-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="2c721-104">这是一个测试配置文件。</span><span class="sxs-lookup"><span data-stu-id="2c721-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a><span data-ttu-id="06dac-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="06dac-105">TestConfig.xml</span></span>  
+## <a name="testconfigxml"></a><span data-ttu-id="2c721-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="2c721-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,6 +56,6 @@ ms.locfileid: "43741982"
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="06dac-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="06dac-106">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c721-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="2c721-106">See also</span></span>
 
-- [<span data-ttu-id="06dac-107">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="06dac-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="2c721-107">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="2c721-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
