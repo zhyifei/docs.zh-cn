@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e35ddc0346f73eafaece1bd17ab52e1b847e8e11
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151221"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722657"
 ---
 # <a name="common-type-system"></a>常规类型系统
 通用类型系统定义了如何在公共语言运行时中声明、使用和管理类型，同时也是运行时跨语言集成支持的一个重要组成部分。 常规类型系统执行以下功能：  
@@ -324,6 +324,6 @@ ms.locfileid: "53151221"
   
 ## <a name="see-also"></a>请参阅
 
-- [.NET API 浏览器](/dotnet/api)  
-- [公共语言运行时](../../../docs/standard/clr.md)  
+- [.NET API 浏览器](/dotnet/api)
+- [公共语言运行时](../../../docs/standard/clr.md)
 - [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)

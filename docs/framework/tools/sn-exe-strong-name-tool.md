@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 127a059865250642c604288b0296b4152cf91f52
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 02568de0a1cc5cec6b92e646e000e69ae79b1646
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221643"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066384"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe（强名称工具）
 强名称工具 (Sn.exe) 有助于使用[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)对程序集进行签名。 Sn.exe 提供了用于密钥管理、签名生成和签名验证的选项。  
@@ -65,7 +65,7 @@ sn [-quiet][option [parameter(s)]]
 |-t[p] infile|显示存储在 infile 中的公钥的标记。 infile 的内容必须是以前使用 -p 从密钥对文件生成的公钥。  不要使用 -t[p] 选项直接从密钥对文件提取标记。<br /><br /> Sn.exe 将使用公钥的哈希函数计算标记。 为节省空间，公共语言运行时在记录对具有强名称的程序集的依赖性时，将公钥标记存储在清单中，作为对另一个程序集的引用的一部分。 -tp 选项除显示标记外还显示公钥。 如果 <xref:System.Reflection.AssemblySignatureKeyAttribute> 特性已应用于程序集，则标记用于标识密钥，并显示哈希算法和标识密钥的名称。<br /><br /> 请注意，此选项不验证程序集签名，而且不应用于做出信任决策。  此选项仅显示原始公钥标记数据。|  
 |-T[p] assembly|显示 assembly 的公钥标记。 assembly 必须是包含程序集清单的文件的名称。<br /><br /> Sn.exe 将使用公钥的哈希函数计算标记。 为节省空间，公共语言运行时在记录对具有强名称的程序集的依赖性时，将公钥标记存储在清单中，作为对另一个程序集的引用的一部分。 -Tp 选项除显示标记外还显示公钥。 如果 <xref:System.Reflection.AssemblySignatureKeyAttribute> 特性已应用于程序集，则标记用于标识密钥，并显示哈希算法和标识密钥的名称。<br /><br /> 请注意，此选项不验证程序集签名，而且不应用于做出信任决策。  此选项仅显示原始公钥标记数据。|  
 |`-TS` `assembly` `infile`|使用 `assembly` 中的密钥对，对已签名或部分签名的 `infile` 进行测试签名。|  
-|-`TSc``assembly``container`|使用密钥容器 `assembly` 中的密钥对，对已签名或部分签名的 `container` 进行测试签名。|  
+|-`TSc` `assembly` `container`|使用密钥容器 `assembly` 中的密钥对，对已签名或部分签名的 `container` 进行测试签名。|  
 |-v assembly|验证 assembly 中的强名称，其中 assembly 是包含程序集清单的文件的名称。|  
 |-vf assembly|验证 assembly 中的强名称。 与 -v 选项不同，-vf 会强制实施验证，即使已使用 -Vr 选项禁用了验证也是如此。|  
 |-Vk regfile.reg assembly [userlist] [infile]|创建一个注册项 (.reg) 文件，你可以使用它注册要跳过验证的指定程序集。 应用于 -Vr 选项的程序集命名规则也应用于 -Vk。 有关 userlist 和 infile 选项的信息，请参阅 -Vr 选项。|  
@@ -124,8 +124,8 @@ sn -v MyAsm.dll
 sn -d MyContainer  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [工具](../../../docs/framework/tools/index.md)  
- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>请参阅
+- [工具](../../../docs/framework/tools/index.md)
+- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

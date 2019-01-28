@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cbf7db4d9369eade62767e55035df4118d5248ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47235278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646641"
 ---
 # <a name="managed-thread-states"></a>托管线程状态
-<xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> 属性提供了位掩码，以指明线程的当前状态。 一个线程始终处于 <xref:System.Threading.ThreadState> 枚举中的至少一个可能状态，并且可以同时处于多个状态。  
+<xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> 属性提供了一个位掩码，用以指示线程的当前状态。 一个线程始终处于 <xref:System.Threading.ThreadState> 枚举中的至少一个可能状态，并且可以同时处于多个状态。  
   
 > [!IMPORTANT]
 >  线程状态仅涉及几个调试方案。 因此，始终不应在代码中使用线程状态来同步线程活动。  
@@ -44,13 +44,13 @@ ms.locfileid: "47235278"
 if ((state & (Unstarted | Stopped)) == 0)   // implies Running     
 ```  
   
- 在任何给定时间，线程通常处于多个状态。 例如，如果线程在 <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> 调用中受阻止，并且另一个线程对相同的线程调用 <xref:System.Threading.Thread.Abort%2A>，那么线程就会同时处于 <xref:System.Threading.ThreadState.WaitSleepJoin> 和 <xref:System.Threading.ThreadState.AbortRequested> 状态。 在这种情况下，一旦该线程从对 <xref:System.Threading.Monitor.Wait%2A> 的调用返回或该线程中断，它就会收到 <xref:System.Threading.ThreadAbortException>。  
+ 在任何给定时间，线程通常处于多个状态。 例如，如果某个线程在 <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> 调用上被阻止并且另一个线程在该线程上调用 <xref:System.Threading.Thread.Abort%2A> ，则该线程将同时处于 <xref:System.Threading.ThreadState.WaitSleepJoin> 和 <xref:System.Threading.ThreadState.AbortRequested> 状态。 在这种情况下，一旦该线程从对 <xref:System.Threading.Monitor.Wait%2A> 的调用返回或该线程中断，它就会收到 <xref:System.Threading.ThreadAbortException>。  
   
  线程由于调用 <xref:System.Threading.ThreadState.Unstarted> 而离开 <xref:System.Threading.Thread.Start%2A>状态后，它将无法再返回到 <xref:System.Threading.ThreadState.Unstarted> 状态。 同样，线程也永远无法离开 <xref:System.Threading.ThreadState.Stopped> 状态。  
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.ThreadAbortException>  
-- <xref:System.Threading.Thread>  
-- <xref:System.Threading.ThreadState>  
+- <xref:System.Threading.ThreadAbortException>
+- <xref:System.Threading.Thread>
+- <xref:System.Threading.ThreadState>
 - [线程处理](../../../docs/standard/threading/index.md)

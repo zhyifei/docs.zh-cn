@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982862"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066315"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基础
 <a name="top"></a> 在公共语言运行时 (CLR) 中，垃圾回收器用作自动内存管理器。 它提供如下优点：  
@@ -96,9 +96,9 @@ ms.locfileid: "50982862"
 ## <a name="the-managed-heap"></a>托管堆  
  在垃圾回收器由 CLR 初始化之后，它会分配一段内存用于存储和管理对象。 此内存称为托管堆（与操作系统中的本机堆相对）。  
   
- 每个托管进程都有一个托管堆。 进程中的所有线程都在同一堆上为对象分配内存。  
+ 每个托管进程都有一个托管堆。 进程中的所有线程都在同一堆上分配对象记忆。  
   
- 若要保留内存，垃圾回收器将调用 Win32 [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) 函数，并且每次会为托管应用程序保留一个内存段。 垃圾回收器还会根据需要保留段，并通过调用 Win32 [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) 函数将段释放回操作系统（在清除所有对象的段之后）。  
+ 若要保留内存，垃圾回收器将调用 Win32 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 函数，并且每次会为托管应用程序保留一个内存段。 垃圾回收器还会根据需要保留段，并通过调用 Win32 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) 函数将段释放回操作系统（在清除所有对象的段之后）。  
   
 > [!IMPORTANT]
 >  垃圾回收器分配的段大小特定于实现，并且随时可能更改（包括定期更新）。 应用程序不应假设特定段的大小或依赖于此大小，也不应尝试配置段分配可用的内存量。  

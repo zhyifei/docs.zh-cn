@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35b8e062c9f207eba19bcee5593425095de2e267
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 465d5e8f37be3dad0d548387f9928a9f79fcebf6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565782"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>开发全球通用应用程序的最佳做法
 本节描述在开发全球通用的应用程序时应遵循的最佳做法。  
@@ -102,5 +102,5 @@ ms.locfileid: "44041465"
   
 ## <a name="see-also"></a>请参阅
 
-- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)  
+- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)
 - [桌面应用中的资源](../../../docs/framework/resources/index.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a1921f1a0f0e724bfc8d8289ac1b654cc8198d2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cff235fe45c75fda51e04d5b0b54bb3ee03051b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654303"
 ---
 # <a name="asynchronous-programming-model-apm"></a>异步编程模型 (APM)
 使用 <xref:System.IAsyncResult> 设计模式的异步操作是通过名为 `BeginOperationName` 和 `EndOperationName` 的两个方法来实现的，这两个方法分别开始和结束异步操作 OperationName。 例如， <xref:System.IO.FileStream> 类提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法来从文件异步读取字节。 这两个方法实现了 <xref:System.IO.FileStream.Read%2A> 方法的异步版本。  
@@ -38,7 +38,7 @@ ms.locfileid: "53152378"
 |<xref:System.IAsyncResult.CompletedSynchronously%2A>|一个值，指示异步操作是否是在用于调用 `BeginOperationName` 的线程上完成，而不是在单独的 <xref:System.Threading.ThreadPool> 线程上完成。|  
 |<xref:System.IAsyncResult.IsCompleted%2A>|一个值，指示异步操作是否已完成。|  
   
- `BeginOperationName` 方法采用该方法的同步版本的签名中声明的任何参数（由值传递或由引用传递）。 `BeginOperationName` 方法签名中不包含任何输出参数。 `BeginOperationName` 方法签名另外还包括两个其他参数。 第一个参数定义一个 <xref:System.AsyncCallback> 委托，此委托引用在异步操作完成时调用的方法。 如果调用方不希望在操作完成后调用方法，它可以指定 `null`（在 Visual Basic 中为 `Nothing`）。 第二个参数是一个用户定义的对象。 此对象可用来向异步操作完成时调用的方法传递应用程序特定的状态信息。 如果 `BeginOperationName` 方法还采用其他一些操作特定的参数（例如，一个用于存储从文件读取的字节的字节数组），则 <xref:System.AsyncCallback> 和应用程序状态对象将是 `BeginOperationName` 方法签名中的最后两个参数。  
+ `BeginOperationName` 方法采用该方法的同步版本的签名中声明的任何参数（由值传递或由引用传递）。 `BeginOperationName` 方法签名中不包含任何输出参数。 `BeginOperationName` 方法签名另外还包括两个其他参数。 第一个参数定义一个 <xref:System.AsyncCallback> 委托，此委托引用在异步操作完成时调用的方法。 如果调用方不希望在操作完成后调用方法，它可以指定 `null` （在 Visual Basic 中为`Nothing` ）。 第二个参数是一个用户定义的对象。 此对象可用来向异步操作完成时调用的方法传递应用程序特定的状态信息。 如果 `BeginOperationName` 方法还采用其他一些操作特定的参数（例如，一个用于存储从文件读取的字节的字节数组），则 <xref:System.AsyncCallback> 和应用程序状态对象将是 `BeginOperationName` 方法签名中的最后两个参数。  
   
  `BeginOperationName` 立即返回对调用线程的控制。 如果 `BeginOperationName` 方法引发异常，则会在开始异步操作之前引发异常。 如果 `BeginOperationName` 方法引发异常，则意味着没有调用回调方法。  
   
@@ -67,6 +67,6 @@ ms.locfileid: "53152378"
   
 ## <a name="see-also"></a>请参阅
 
-- [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
-- [使用异步方式调用同步方法](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+- [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [使用异步方式调用同步方法](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
 - [使用 AsyncCallback 委托和状态对象](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)
