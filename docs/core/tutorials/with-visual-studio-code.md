@@ -4,12 +4,12 @@ description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: bd1e5bf9df929c2c38f737ec3112d3687dba877c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ea8b93128e4acd435ad95fc42257df6ab22812fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620547"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -140,5 +140,5 @@ Visual Studio Code C# 扩展可生成用于生成和调试的资产。 首次打
 
 ## <a name="see-also"></a>请参阅
 
-* [设置 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-* [在 Visual Studio Code 中进行调试](https://code.visualstudio.com/Docs/editor/debugging)
+- [设置 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+- [在 Visual Studio Code 中进行调试](https://code.visualstudio.com/Docs/editor/debugging)
