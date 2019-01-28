@@ -7,53 +7,53 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: f342f26ee8abe29e6c5a1477469c8b7292cd702e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 32a06c596c44cdf28e5c1bb3422b9cf8262f2c08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738087"
 ---
-# <a name="-c-compiler-options"></a><span data-ttu-id="0548e-102">@（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="0548e-102">@ (C# Compiler Options)</span></span>
-<span data-ttu-id="0548e-103">通过 @ 选项，可以指定包含编译器选项和要编译的源代码文件的文件。</span><span class="sxs-lookup"><span data-stu-id="0548e-103">The @ option lets you specify a file that contains compiler options and source code files to compile.</span></span>  
+# <a name="-c-compiler-options"></a><span data-ttu-id="f1fb1-102">@（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="f1fb1-102">@ (C# Compiler Options)</span></span>
+<span data-ttu-id="f1fb1-103">通过 @ 选项，可以指定包含编译器选项和要编译的源代码文件的文件。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-103">The @ option lets you specify a file that contains compiler options and source code files to compile.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0548e-104">语法</span><span class="sxs-lookup"><span data-stu-id="0548e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1fb1-104">语法</span><span class="sxs-lookup"><span data-stu-id="f1fb1-104">Syntax</span></span>  
   
 ```  
 @response_file  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="0548e-105">自变量</span><span class="sxs-lookup"><span data-stu-id="0548e-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="f1fb1-105">自变量</span><span class="sxs-lookup"><span data-stu-id="f1fb1-105">Arguments</span></span>  
  `response_file`  
- <span data-ttu-id="0548e-106">列出了编译器选项或要编译的源代码文件的文件。</span><span class="sxs-lookup"><span data-stu-id="0548e-106">A file that lists compiler options or source code files to compile.</span></span>  
+ <span data-ttu-id="f1fb1-106">列出了编译器选项或要编译的源代码文件的文件。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-106">A file that lists compiler options or source code files to compile.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0548e-107">备注</span><span class="sxs-lookup"><span data-stu-id="0548e-107">Remarks</span></span>  
- <span data-ttu-id="0548e-108">编译器选项和源代码文件将由编译器处理，如同在命令行被指定一样。</span><span class="sxs-lookup"><span data-stu-id="0548e-108">The compiler options and source code files will be processed by the compiler just as if they had been specified on the command line.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f1fb1-107">备注</span><span class="sxs-lookup"><span data-stu-id="f1fb1-107">Remarks</span></span>  
+ <span data-ttu-id="f1fb1-108">编译器选项和源代码文件将由编译器处理，如同在命令行被指定一样。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-108">The compiler options and source code files will be processed by the compiler just as if they had been specified on the command line.</span></span>  
   
- <span data-ttu-id="0548e-109">若要在一次编译中指定多个响应文件，请指定多个响应文件选项。</span><span class="sxs-lookup"><span data-stu-id="0548e-109">To specify more than one response file in a compilation, specify multiple response file options.</span></span> <span data-ttu-id="0548e-110">例如:</span><span class="sxs-lookup"><span data-stu-id="0548e-110">For example:</span></span>  
+ <span data-ttu-id="f1fb1-109">若要在一次编译中指定多个响应文件，请指定多个响应文件选项。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-109">To specify more than one response file in a compilation, specify multiple response file options.</span></span> <span data-ttu-id="f1fb1-110">例如:</span><span class="sxs-lookup"><span data-stu-id="f1fb1-110">For example:</span></span>  
   
 ```  
 @file1.rsp @file2.rsp  
 ```  
   
- <span data-ttu-id="0548e-111">在响应文件中，多个编译器选项和源代码文件可以出现在同一行中。</span><span class="sxs-lookup"><span data-stu-id="0548e-111">In a response file, multiple compiler options and source code files can appear on one line.</span></span> <span data-ttu-id="0548e-112">单个编译器选项的指定必须出现在同一行中（不能跨行）。</span><span class="sxs-lookup"><span data-stu-id="0548e-112">A single compiler option specification must appear on one line (cannot span multiple lines).</span></span> <span data-ttu-id="0548e-113">响应文件的注释可以 # 符号开始。</span><span class="sxs-lookup"><span data-stu-id="0548e-113">Response files can have comments that begin with the # symbol.</span></span>  
+ <span data-ttu-id="f1fb1-111">在响应文件中，多个编译器选项和源代码文件可以出现在同一行中。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-111">In a response file, multiple compiler options and source code files can appear on one line.</span></span> <span data-ttu-id="f1fb1-112">单个编译器选项的指定必须出现在同一行中（不能跨行）。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-112">A single compiler option specification must appear on one line (cannot span multiple lines).</span></span> <span data-ttu-id="f1fb1-113">响应文件的注释可以 # 符号开始。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-113">Response files can have comments that begin with the # symbol.</span></span>  
   
- <span data-ttu-id="0548e-114">从响应文件内指定编译器选项就如同在命令行发出这些命令。</span><span class="sxs-lookup"><span data-stu-id="0548e-114">Specifying compiler options from within a response file is just like issuing those commands on the command line.</span></span> <span data-ttu-id="0548e-115">有关详细信息，请参阅[从命令行生成](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。</span><span class="sxs-lookup"><span data-stu-id="0548e-115">See [Building from the Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) for more information.</span></span>  
+ <span data-ttu-id="f1fb1-114">从响应文件内指定编译器选项就如同在命令行发出这些命令。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-114">Specifying compiler options from within a response file is just like issuing those commands on the command line.</span></span> <span data-ttu-id="f1fb1-115">有关详细信息，请参阅[从命令行生成](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-115">See [Building from the Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) for more information.</span></span>  
   
- <span data-ttu-id="0548e-116">编译器在遇到命令选项时会进行处理。</span><span class="sxs-lookup"><span data-stu-id="0548e-116">The compiler processes the command options as they are encountered.</span></span> <span data-ttu-id="0548e-117">因此，命令行参数可以重写先前在响应文件中列出的选项。</span><span class="sxs-lookup"><span data-stu-id="0548e-117">Therefore, command line arguments can override previously listed options in response files.</span></span> <span data-ttu-id="0548e-118">反之，响应文件中的选项也将重写先前在命令行或其他响应文件中列出的选项。</span><span class="sxs-lookup"><span data-stu-id="0548e-118">Conversely, options in a response file will override options listed previously on the command line or in other response files.</span></span>  
+ <span data-ttu-id="f1fb1-116">编译器在遇到命令选项时会进行处理。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-116">The compiler processes the command options as they are encountered.</span></span> <span data-ttu-id="f1fb1-117">因此，命令行参数可以重写先前在响应文件中列出的选项。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-117">Therefore, command line arguments can override previously listed options in response files.</span></span> <span data-ttu-id="f1fb1-118">反之，响应文件中的选项也将重写先前在命令行或其他响应文件中列出的选项。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-118">Conversely, options in a response file will override options listed previously on the command line or in other response files.</span></span>  
   
- <span data-ttu-id="0548e-119">C# 提供 csc.rsp 文件，该文件与 csc.exe 文件位于同一目录。</span><span class="sxs-lookup"><span data-stu-id="0548e-119">C# provides the csc.rsp file, which is located in the same directory as the csc.exe file.</span></span> <span data-ttu-id="0548e-120">有关 csc.rsp 的详细信息，请参阅 [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)。</span><span class="sxs-lookup"><span data-stu-id="0548e-120">See [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) for more information on csc.rsp.</span></span>  
+ <span data-ttu-id="f1fb1-119">C# 提供 csc.rsp 文件，该文件与 csc.exe 文件位于同一目录。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-119">C# provides the csc.rsp file, which is located in the same directory as the csc.exe file.</span></span> <span data-ttu-id="f1fb1-120">有关 csc.rsp 的详细信息，请参阅 [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-120">See [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) for more information on csc.rsp.</span></span>  
   
- <span data-ttu-id="0548e-121">不能在 Visual Studio 开发环境中设置此编译器选项，也不能以编程方式对其进行更改。</span><span class="sxs-lookup"><span data-stu-id="0548e-121">This compiler option cannot be set in the Visual Studio development environment, nor can it be changed programmatically.</span></span>  
+ <span data-ttu-id="f1fb1-121">不能在 Visual Studio 开发环境中设置此编译器选项，也不能以编程方式对其进行更改。</span><span class="sxs-lookup"><span data-stu-id="f1fb1-121">This compiler option cannot be set in the Visual Studio development environment, nor can it be changed programmatically.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0548e-122">示例</span><span class="sxs-lookup"><span data-stu-id="0548e-122">Example</span></span>  
- <span data-ttu-id="0548e-123">以下几行来自示例响应文件：</span><span class="sxs-lookup"><span data-stu-id="0548e-123">The following are a few lines from a sample response file:</span></span>  
+## <a name="example"></a><span data-ttu-id="f1fb1-122">示例</span><span class="sxs-lookup"><span data-stu-id="f1fb1-122">Example</span></span>  
+ <span data-ttu-id="f1fb1-123">以下几行来自示例响应文件：</span><span class="sxs-lookup"><span data-stu-id="f1fb1-123">The following are a few lines from a sample response file:</span></span>  
   
 ```console  
 # build the first output file  
 -target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0548e-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="0548e-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f1fb1-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="f1fb1-124">See also</span></span>
 
-- [<span data-ttu-id="0548e-125">C# 编译器选项</span><span class="sxs-lookup"><span data-stu-id="0548e-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="f1fb1-125">C# 编译器选项</span><span class="sxs-lookup"><span data-stu-id="f1fb1-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)

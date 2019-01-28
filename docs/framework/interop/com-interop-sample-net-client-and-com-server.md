@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85e7213342984276d8509fca8caefb2661865733
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c7e2f0f239ffded3d9f16a32b1f8e6601e27d06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685843"
 ---
-# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="ca41d-102">COM 互操作示例：.NET 客户端和 COM 服务器</span><span class="sxs-lookup"><span data-stu-id="ca41d-102">COM Interop Sample: .NET Client and COM Server</span></span>
-<span data-ttu-id="ca41d-103">本示例演示为访问 [COM 服务器](#cpconcominteropsamplenetclientcomserveranchor2)而生成的 [.NET client](#cpconcominteropsamplenetclientcomserveranchor1) 如何创建 COM 组件类的实例并调用类成员来执行抵押贷款计算。</span><span class="sxs-lookup"><span data-stu-id="ca41d-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
+# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="32cf4-102">COM 互操作示例：.NET 客户端和 COM 服务器</span><span class="sxs-lookup"><span data-stu-id="32cf4-102">COM Interop Sample: .NET Client and COM Server</span></span>
+<span data-ttu-id="32cf4-103">本示例演示为访问 [COM 服务器](#cpconcominteropsamplenetclientcomserveranchor2)而生成的 [.NET client](#cpconcominteropsamplenetclientcomserveranchor1) 如何创建 COM 组件类的实例并调用类成员来执行抵押贷款计算。</span><span class="sxs-lookup"><span data-stu-id="32cf4-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
   
- <span data-ttu-id="ca41d-104">在本示例中，客户端将创建并调用 Loan 组件类的一个实例，将四个参数（其中一个等于零）传递给该实例，并显示计算结果。</span><span class="sxs-lookup"><span data-stu-id="ca41d-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="ca41d-105">本示例中出现的代码片段将贯穿本节。</span><span class="sxs-lookup"><span data-stu-id="ca41d-105">Code fragments from this sample appear throughout this section.</span></span>  
+ <span data-ttu-id="32cf4-104">在本示例中，客户端将创建并调用 Loan 组件类的一个实例，将四个参数（其中一个等于零）传递给该实例，并显示计算结果。</span><span class="sxs-lookup"><span data-stu-id="32cf4-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="32cf4-105">本示例中出现的代码片段将贯穿本节。</span><span class="sxs-lookup"><span data-stu-id="32cf4-105">Code fragments from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## <a name="net-client"></a><span data-ttu-id="ca41d-106">.NET 客户端</span><span class="sxs-lookup"><span data-stu-id="ca41d-106">.NET Client</span></span>  
+## <a name="net-client"></a><span data-ttu-id="32cf4-106">.NET 客户端</span><span class="sxs-lookup"><span data-stu-id="32cf4-106">.NET Client</span></span>  
   
 ```vb  
 Imports System  
@@ -154,7 +154,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>   
-## <a name="com-server"></a><span data-ttu-id="ca41d-107">COM 服务器</span><span class="sxs-lookup"><span data-stu-id="ca41d-107">COM Server</span></span>  
+## <a name="com-server"></a><span data-ttu-id="32cf4-107">COM 服务器</span><span class="sxs-lookup"><span data-stu-id="32cf4-107">COM Server</span></span>  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -299,5 +299,5 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ca41d-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="ca41d-108">See Also</span></span>  
- [<span data-ttu-id="ca41d-109">向 .NET Framework 公开 COM 组件</span><span class="sxs-lookup"><span data-stu-id="ca41d-109">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a><span data-ttu-id="32cf4-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="32cf4-108">See also</span></span>
+- [<span data-ttu-id="32cf4-109">向 .NET Framework 公开 COM 组件</span><span class="sxs-lookup"><span data-stu-id="32cf4-109">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)

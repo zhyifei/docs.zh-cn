@@ -8,32 +8,32 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: ee40db31aeb39a37c6ab15b26b48f1f7d02d6780
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d3e1cb9d6fb37617c6e2aa7070b006c594d39762
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661706"
 ---
-# <a name="implicit-c-reference"></a><span data-ttu-id="4c18f-102">implicit（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="4c18f-102">implicit (C# Reference)</span></span>
+# <a name="implicit-c-reference"></a><span data-ttu-id="a15cd-102">implicit（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="a15cd-102">implicit (C# Reference)</span></span>
 
-<span data-ttu-id="4c18f-103">`implicit` 关键字用于声明隐式的用户定义类型转换运算符。</span><span class="sxs-lookup"><span data-stu-id="4c18f-103">The `implicit` keyword is used to declare an implicit user-defined type conversion operator.</span></span> <span data-ttu-id="4c18f-104">如果可以确保转换过程不会造成数据丢失，则可使用该关键字在用户定义类型和其他类型之间进行隐式转换。</span><span class="sxs-lookup"><span data-stu-id="4c18f-104">Use it to enable implicit conversions between a user-defined type and another type, if the conversion is guaranteed not to cause a loss of data.</span></span>
+<span data-ttu-id="a15cd-103">`implicit` 关键字用于声明隐式的用户定义类型转换运算符。</span><span class="sxs-lookup"><span data-stu-id="a15cd-103">The `implicit` keyword is used to declare an implicit user-defined type conversion operator.</span></span> <span data-ttu-id="a15cd-104">如果可以确保转换过程不会造成数据丢失，则可使用该关键字在用户定义类型和其他类型之间进行隐式转换。</span><span class="sxs-lookup"><span data-stu-id="a15cd-104">Use it to enable implicit conversions between a user-defined type and another type, if the conversion is guaranteed not to cause a loss of data.</span></span>
 
-## <a name="example"></a><span data-ttu-id="4c18f-105">示例</span><span class="sxs-lookup"><span data-stu-id="4c18f-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="a15cd-105">示例</span><span class="sxs-lookup"><span data-stu-id="a15cd-105">Example</span></span>
 
 [!code-csharp[csrefKeywordsConversion#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#5)]
 
-<span data-ttu-id="4c18f-106">隐式转换可以通过消除不必要的强制转换来提高源代码的可读性。</span><span class="sxs-lookup"><span data-stu-id="4c18f-106">By eliminating unnecessary casts, implicit conversions can improve source code readability.</span></span> <span data-ttu-id="4c18f-107">但是，因为隐式转换不需要程序员将一种类型显式强制转换为另一种类型，所以使用隐式转换时必须格外小心，以免出现意外结果。</span><span class="sxs-lookup"><span data-stu-id="4c18f-107">However, because implicit conversions do not require programmers to explicitly cast from one type to the other, care must be taken to prevent unexpected results.</span></span> <span data-ttu-id="4c18f-108">一般情况下，隐式转换运算符应当从不引发异常并且从不丢失信息，以便可以在程序员不知晓的情况下安全使用它们。</span><span class="sxs-lookup"><span data-stu-id="4c18f-108">In general, implicit conversion operators should never throw exceptions and never lose information so that they can be used safely without the programmer's awareness.</span></span> <span data-ttu-id="4c18f-109">如果转换运算符不能满足那些条件，则应将其标记为 `explicit`。</span><span class="sxs-lookup"><span data-stu-id="4c18f-109">If a conversion operator cannot meet those criteria, it should be marked `explicit`.</span></span> <span data-ttu-id="4c18f-110">有关详细信息，请参阅[使用转换运算符](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)。</span><span class="sxs-lookup"><span data-stu-id="4c18f-110">For more information, see [Using Conversion Operators](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).</span></span>
+<span data-ttu-id="a15cd-106">隐式转换可以通过消除不必要的强制转换来提高源代码的可读性。</span><span class="sxs-lookup"><span data-stu-id="a15cd-106">By eliminating unnecessary casts, implicit conversions can improve source code readability.</span></span> <span data-ttu-id="a15cd-107">但是，因为隐式转换不需要程序员将一种类型显式强制转换为另一种类型，所以使用隐式转换时必须格外小心，以免出现意外结果。</span><span class="sxs-lookup"><span data-stu-id="a15cd-107">However, because implicit conversions do not require programmers to explicitly cast from one type to the other, care must be taken to prevent unexpected results.</span></span> <span data-ttu-id="a15cd-108">一般情况下，隐式转换运算符应当从不引发异常并且从不丢失信息，以便可以在程序员不知晓的情况下安全使用它们。</span><span class="sxs-lookup"><span data-stu-id="a15cd-108">In general, implicit conversion operators should never throw exceptions and never lose information so that they can be used safely without the programmer's awareness.</span></span> <span data-ttu-id="a15cd-109">如果转换运算符不能满足那些条件，则应将其标记为 `explicit`。</span><span class="sxs-lookup"><span data-stu-id="a15cd-109">If a conversion operator cannot meet those criteria, it should be marked `explicit`.</span></span> <span data-ttu-id="a15cd-110">有关详细信息，请参阅[使用转换运算符](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)。</span><span class="sxs-lookup"><span data-stu-id="a15cd-110">For more information, see [Using Conversion Operators](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="4c18f-111">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="4c18f-111">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="a15cd-111">C# 语言规范</span><span class="sxs-lookup"><span data-stu-id="a15cd-111">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="4c18f-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="4c18f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a15cd-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="a15cd-112">See also</span></span>
 
-- [<span data-ttu-id="4c18f-113">C# 参考</span><span class="sxs-lookup"><span data-stu-id="4c18f-113">C# Reference</span></span>](../index.md)  
-- [<span data-ttu-id="4c18f-114">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="4c18f-114">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-- [<span data-ttu-id="4c18f-115">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="4c18f-115">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="4c18f-116">explicit</span><span class="sxs-lookup"><span data-stu-id="4c18f-116">explicit</span></span>](explicit.md)  
-- [<span data-ttu-id="4c18f-117">运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="4c18f-117">operator (C# Reference)</span></span>](operator.md)  
-- [<span data-ttu-id="4c18f-118">如何：在结构之间实现用户定义的转换</span><span class="sxs-lookup"><span data-stu-id="4c18f-118">How to: Implement User-Defined Conversions Between Structs</span></span>](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [<span data-ttu-id="a15cd-113">C# 参考</span><span class="sxs-lookup"><span data-stu-id="a15cd-113">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="a15cd-114">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="a15cd-114">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="a15cd-115">C# 关键字</span><span class="sxs-lookup"><span data-stu-id="a15cd-115">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="a15cd-116">explicit</span><span class="sxs-lookup"><span data-stu-id="a15cd-116">explicit</span></span>](explicit.md)
+- [<span data-ttu-id="a15cd-117">运算符（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="a15cd-117">operator (C# Reference)</span></span>](operator.md)
+- [<span data-ttu-id="a15cd-118">如何：在结构之间实现用户定义的转换</span><span class="sxs-lookup"><span data-stu-id="a15cd-118">How to: Implement User-Defined Conversions Between Structs</span></span>](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
