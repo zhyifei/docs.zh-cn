@@ -2,12 +2,12 @@
 title: dotnet new 命令
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
 ms.date: 10/24/2018
-ms.openlocfilehash: 3a10aaa93af57e7beb86771e7d3b00b06fca14b2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 5177c920fee6fa946d2bf5d96644f26309ed0a99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516143"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -536,7 +536,7 @@ console、angular、react、reactredux、razorclasslib
 
 ## <a name="see-also"></a>请参阅
 
-* [dotnet new 自定义模板](custom-templates.md)  
-* [创建 dotnet new 自定义模板](~/docs/core/tutorials/create-custom-template.md)  
-* [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)  
-* [dotnet new 可用模板](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+- [dotnet new 自定义模板](custom-templates.md)
+- [创建 dotnet new 自定义模板](~/docs/core/tutorials/create-custom-template.md)
+- [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)
+- [dotnet new 可用模板](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
