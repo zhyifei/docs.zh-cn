@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3440e0869bfd131f8a57a74af6105716d4b72935
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 897f49dc783885728f7d7242482a2b42f3a114bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498068"
 ---
 # <a name="latency-modes"></a>滞后时间模式
 若要回收对象，垃圾回收器必须停止应用程序中所有正在执行的线程。 在某些情况下（例如当应用程序检索数据或显示内容时），关键时刻可能发生完整的垃圾回收，从而妨碍性能。 可以通过将 <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 属性设置为其中一个 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 值来调节垃圾回收的干扰。  
@@ -56,6 +56,6 @@ ms.locfileid: "43883717"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.GC?displayProperty=nameWithType>  
-- [已引发回收](../../../docs/standard/garbage-collection/induced.md)  
+- <xref:System.GC?displayProperty=nameWithType>
+- [已引发回收](../../../docs/standard/garbage-collection/induced.md)
 - [垃圾回收](../../../docs/standard/garbage-collection/index.md)

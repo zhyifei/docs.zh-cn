@@ -1,14 +1,14 @@
 ---
 title: ML.NET 内容指南
 description: 了解如何使用 ML.NET 生成自定义 AI 解决方案并将其集成到 .NET 应用程序。
-ms.date: 11/06/2018
+ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550456"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET 内容指南
 
@@ -28,6 +28,8 @@ ms.locfileid: "53126245"
 ## <a name="tutorials"></a>教程
 
 [使用二元分类模型分析情绪](tutorials/sentiment-analysis.md)演示如何构建确定情绪是积极还是消极的应用程序。
+
+[使用多类分类模型对 GitHub 问题分类](tutorials/github-issue-classification.md)展示了如何生成可确定 GitHub 问题的“区域”标签的应用。
 
 [使用回归模型预测出租车费用](tutorials/taxi-fare.md)演示如何构建一个使用历史数据中的许多因素来确定答案的预测性应用程序。
 

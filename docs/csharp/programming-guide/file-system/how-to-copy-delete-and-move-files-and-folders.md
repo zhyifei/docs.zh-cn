@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [C#]
 ms.assetid: 62e52cd7-9597-4e4a-acf9-1315f5cdbf05
-ms.openlocfilehash: 498f266597032a4c35dbc8783994095b5c08fc3d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3e6c08050186642ceec4e2301524919379e12aaa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527700"
 ---
 # <a name="how-to-copy-delete-and-move-files-and-folders-c-programming-guide"></a>如何：复制、删除和移动文件和文件夹（C# 编程指南）
 以下示例演示如何从 <xref:System.IO?displayProperty=nameWithType> 命名空间使用 <xref:System.IO.File?displayProperty=nameWithType>、<xref:System.IO.Directory?displayProperty=nameWithType>、<xref:System.IO.FileInfo?displayProperty=nameWithType> 和 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 类以同步方式复制、移动和删除文件与文件夹。 这些示例未提供进度栏或其他任何用户界面。 若要提供标准进度对话框，请参阅[操作说明：提供文件操作进度对话框](how-to-provide-a-progress-dialog-box-for-file-operations.md)。  
@@ -34,9 +34,9 @@ ms.locfileid: "53240237"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [文件系统和注册表（C# 编程指南）](index.md)  
-- [如何：提供文件操作进度对话框](how-to-provide-a-progress-dialog-box-for-file-operations.md)  
-- [文件和流 I/O](../../../standard/io/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [文件系统和注册表（C# 编程指南）](index.md)
+- [如何：提供文件操作进度对话框](how-to-provide-a-progress-dialog-box-for-file-operations.md)
+- [文件和流 I/O](../../../standard/io/index.md)
 - [通用 I/O 任务](../../../standard/io/common-i-o-tasks.md)

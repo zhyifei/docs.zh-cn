@@ -8,14 +8,12 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 85d81beead84be48730ba3a4469e8efdff1bbb0b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b53c3e4cc2362a1f1dc0312d59aff403ca924b5e
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523683"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084180"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a>&lt;筛选器&gt;的元素&lt;添加&gt;有关&lt;侦听器&gt;为&lt;跟踪&gt;
 将筛选器添加到中的侦听器`Listeners`跟踪的集合。  

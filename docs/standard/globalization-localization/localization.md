@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee7de15130644e63b17a6d067c5cce9088d199a0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5ba8a897ba0840d6e159c4d48c2ca9427bb2937c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579493"
 ---
 # <a name="localization"></a>本地化
 本地化是针对应用支持的每个区域性，将应用资源转换为本地化版本的过程。 只有在完成[可本地化评审](../../../docs/standard/globalization-localization/localizability-review.md)步骤，以验证全球化应用是否做好本地化准备后，才应继续执行本地化步骤。  
@@ -34,7 +34,7 @@ ms.locfileid: "48840410"
   
 ## <a name="see-also"></a>请参阅
 
-- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)  
-- [可本地化性审核](../../../docs/standard/globalization-localization/localizability-review.md)  
-- [全球化](../../../docs/standard/globalization-localization/globalization.md)  
+- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)
+- [可本地化性审核](../../../docs/standard/globalization-localization/localizability-review.md)
+- [全球化](../../../docs/standard/globalization-localization/globalization.md)
 - [桌面应用中的资源](../../../docs/framework/resources/index.md)

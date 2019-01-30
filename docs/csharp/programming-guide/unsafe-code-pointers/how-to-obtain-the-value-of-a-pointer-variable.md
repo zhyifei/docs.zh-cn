@@ -8,12 +8,12 @@ helpviewer_keywords:
 - variables [C#], pointers
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
-ms.openlocfilehash: b20642344b34b5426512ef64bde2ab33d55136b9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5fbc925b6770bc951a0d7ec856898f62c265462e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236630"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577147"
 ---
 # <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>如何：获取指针变量的值（C# 编程指南）
 使用指针间接寻址运算符在指针指向的位置获取变量。 表达式采用以下形式，其中 `p` 为指针类型：  
@@ -40,10 +40,10 @@ ms.locfileid: "53236630"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [类型](../../../csharp/language-reference/keywords/types.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [指针表达式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
+- [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
+- [类型](../../../csharp/language-reference/keywords/types.md)
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)
+- [fixed 语句](../../../csharp/language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

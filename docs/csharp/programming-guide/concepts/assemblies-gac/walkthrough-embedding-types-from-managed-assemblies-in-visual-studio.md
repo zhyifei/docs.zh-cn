@@ -2,12 +2,12 @@
 title: 演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 33686dcfee90db2d0a99339a728eb6e2bd7139f5
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 39452702a3e757456ff00ee22e6eb1f90160ef38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500624"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)
 如果嵌入强命名托管程序集中的类型信息，则可以对应用程序中的类型进行松耦合，以实现版本独立性。 也就是说，可以将程序编写为使用多个托管库版本中的类型，而不必对每个版本重新编译程序。  
@@ -234,7 +234,7 @@ ms.locfileid: "54415710"
   
 ## <a name="see-also"></a>请参阅
 
-- [/link（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
-- [使用程序集编程](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [/link（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+- [使用程序集编程](../../../../framework/app-domains/programming-with-assemblies.md)
 - [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

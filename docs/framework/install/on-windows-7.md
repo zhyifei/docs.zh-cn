@@ -5,12 +5,12 @@ description: 了解如何在 Windows 7 SP1 上安装 .NET Framework。
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 74b457eba9642eb4d54873769014a7db5d28003b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 22b5f128bd797fda23d14008e016dcdc2432b3f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645127"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>在 Windows 7 SP1 和 Windows Server 2008 R2 上安装 .NET Framework
 
@@ -39,6 +39,6 @@ ms.locfileid: "53155426"
 
 ## <a name="see-also"></a>请参阅
 
-[下载 .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[安装和卸载 .NET Framework 受阻疑难解答](troubleshoot-blocked-installations-and-uninstallations.md)   
-[安装面向开发者的 .NET Framework](guide-for-developers.md)
+- [下载 .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [安装和卸载 .NET Framework 受阻疑难解答](troubleshoot-blocked-installations-and-uninstallations.md)
+- [安装面向开发者的 .NET Framework](guide-for-developers.md)

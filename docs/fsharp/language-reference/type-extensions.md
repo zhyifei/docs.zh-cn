@@ -1,13 +1,13 @@
 ---
 title: 类型扩展
 description: 了解如何F#类型扩展允许将新成员添加到以前定义的对象类型。
-ms.date: 07/20/2018
-ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/23/2019
+ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614044"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066150"
 ---
 # <a name="type-extensions"></a>类型扩展
 
@@ -121,7 +121,7 @@ type IEnumerable<'T> with
 
 * 原样`Sum`成员都有不同的约束`'T`(`static member get_Zero`和`static member (+)`) 比类型扩展的定义。
 * 修改类型扩展具有同一约束作为`Sum`将不再匹配上定义的约束`IEnumerable<'T>`。
-* 进行更改的成员`member inline Sum`将产生类型约束不匹配错误
+* 更改`member this.Sum`到`member inline this.Sum`将产生错误类型约束不匹配。
 
 所需的内容是"空间中浮动"，可以提供好像它们扩展类型的静态方法。 这是其中的扩展方法变得非常必要。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: e985da878ca4160938f29911d4313ee6cd731aeb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c57ba732c5139d7ead85372323f9433bd3137622
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570208"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>显式接口实现（C# 编程指南）
 如果一个[类](../../../csharp/language-reference/keywords/class.md)实现的两个接口包含签名相同的成员，则在该类上实现此成员会导致这两个接口将此成员用作其实现。 如下示例中，所有对 `Paint` 的调用皆调用同一方法。  
@@ -36,7 +36,7 @@ ms.locfileid: "53244825"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [接口](../../../csharp/programming-guide/interfaces/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [接口](../../../csharp/programming-guide/interfaces/index.md)
 - [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

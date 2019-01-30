@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d24f379bcfdb494369b84173cad4daa800fb7a9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 634c76c3510d594584f06ea14bed84b1b0423c31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502166"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>使用 LINQ to XML 处理 XML 数据
 LINQ to XML 是 .NET Framework 3.5 版中用于处理 XML 数据的新模型。 LINQ to XML 允许开发人员对 XML 数据执行任何需要的操作：查询、修改、创建、保存，和序列化 XML 文档。 真正的优势在于查询和创建功能。  
@@ -23,7 +23,7 @@ LINQ to XML 是 .NET Framework 3.5 版中用于处理 XML 数据的新模型。 
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Xml.Linq>  
-- <xref:System.Linq>  
-- [LINQ to XML 与DOM](https://msdn.microsoft.com/library/19b5ed02-feb2-455a-8897-f7f0fd76aca3)  
+- <xref:System.Xml.Linq>
+- <xref:System.Linq>
+- [LINQ to XML 与DOM](https://msdn.microsoft.com/library/19b5ed02-feb2-455a-8897-f7f0fd76aca3)
 - [LINQ to XML 与其他 XML 技术](https://msdn.microsoft.com/library/7ba1eecf-f09a-42de-bc80-22ca5b2e42d3)

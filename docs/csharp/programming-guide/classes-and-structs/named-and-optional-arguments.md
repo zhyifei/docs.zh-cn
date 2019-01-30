@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: df590cf9d18b6de81caccfb77e544451da9ee0df
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 57a368f6aadee608297124a9cc72dc76b0e36f30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681906"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>命名实参和可选实参（C# 编程指南）
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  
@@ -131,7 +131,7 @@ AutoFormat 形参
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：在 Office 编程中使用命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
-- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [使用构造函数](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+- [如何：在 Office 编程中使用命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [使用构造函数](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
 - [使用索引器](../../../csharp/programming-guide/indexers/using-indexers.md)

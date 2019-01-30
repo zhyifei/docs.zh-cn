@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe590022f1354b3a41c709e4fed30f89e865fa0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 867a11eae14c3e7b2fb09acac5849698119e72c7
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548045"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065968"
 ---
 # <a name="ltimpliestypegt-element-net-native"></a>&lt;暗示类型&gt;元素 (.NET Native)
 如果该策略已应用到该包含类型或方法，将该策略应用到一个类型。  
@@ -99,7 +99,7 @@ ms.locfileid: "54548045"
 </Type>  
 ```  
   
- `<ImpliesType>` 元素也可能出现在 `<Method>` 元素内部，因为在某些情况下泛型方法暗示着反射到了一个类型实例化上。 例如，想象一个特定的库可以动态访问的泛型方法 `IEnumerable<T> MakeEnumerable<T>(string` `spelling``, T` `defaultValue``)` 以及相关的 <xref:System.Collections.Generic.List%601> 和 <xref:System.Array> 类型。 这可以表示为：  
+ `<ImpliesType>` 元素也可能出现在 `<Method>` 元素内部，因为在某些情况下泛型方法暗示着反射到了一个类型实例化上。 例如，假设一个泛型方法`IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)`的给定的库可以动态访问以及相关<xref:System.Collections.Generic.List%601>和<xref:System.Array>类型。 这可以表示为：  
   
 ```xml  
 <Type Name="MyType">  

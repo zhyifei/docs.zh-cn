@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 8c0b8e9814bf692e486624dd8a4a99d98337bca9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3257d365bb9816f4cb41d354f78c88ad4fa0f567
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523826"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>抽象类、密封类及类成员（C# 编程指南）
 使用 [abstract](../../../csharp/language-reference/keywords/abstract.md) 关键字可以创建不完整且必须在派生类中实现的类和 [class](../../../csharp/language-reference/keywords/class.md) 成员。  
@@ -50,9 +50,9 @@ ms.locfileid: "53235850"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [字段](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [字段](../../../csharp/programming-guide/classes-and-structs/fields.md)
 - [如何：定义抽象属性](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)

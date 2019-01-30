@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
-ms.openlocfilehash: e7dc10706257b2c1fa8574f193523272339f61ff
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: df184bf32fa09b10c7f3de508ffb73b9cf156b92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663397"
 ---
 # <a name="sbyte-c-reference"></a>sbyte（C# 参考）
 
@@ -108,11 +108,11 @@ sbyte y = (sbyte)3.0;  // OK: explicit conversion
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.SByte>  
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- <xref:System.SByte>
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

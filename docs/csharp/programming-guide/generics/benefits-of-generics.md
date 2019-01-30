@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: f97d3ce7a67638719d02c31879c00679405118bc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ba4b81db0ea352f82127a838ab6b13f09d259e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650975"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>泛型的优点（C# 编程指南）
 公共语言运行时和 C# 语言早期版本中存在一个局限，其中通过将类型与通用基类型 <xref:System.Object> 相互强制完成泛化，泛型提供了此局限的解决方案。 通过创建泛型类，可在编译时创建类型安全的集合。  
@@ -37,9 +37,9 @@ ms.locfileid: "53245007"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Collections.Generic>  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
-- [何时使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)  
-- [集合准则](../../../standard/design-guidelines/guidelines-for-collections.md)   
+- <xref:System.Collections.Generic>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+- [何时使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)
+- [集合准则](../../../standard/design-guidelines/guidelines-for-collections.md)

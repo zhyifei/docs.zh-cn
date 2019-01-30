@@ -2,12 +2,12 @@
 title: 通用属性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4a1dd6200f7eb9e69caefe62d9e9defd90856ce1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558576"
 ---
 # <a name="common-attributes-c"></a>通用属性 (C#)
 本主题介绍在 C# 程序中最常用的属性。  
@@ -221,7 +221,7 @@ class SampleClass
   
  若要获取成员调用方信息，可以使用应用于可选参数的特性。 每个可选参数指定一个默认值。 下表列出在 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空间中定义的调用方信息特性：  
   
-|特性|描述|类型|  
+|特性|说明|类型|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含调用方的源文件的完整路径。 这是编译时的路径。|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|源文件中调用方法的行号。|`Integer`|  
@@ -231,9 +231,9 @@ class SampleClass
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
-- [特性](../../../../../docs/standard/attributes/index.md)  
-- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+- [特性](../../../../../docs/standard/attributes/index.md)
+- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
 - [使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

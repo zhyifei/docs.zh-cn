@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: a0ff04bf67faea4c834570e8faa4197369289fb7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 25d18b4e362481dfde8fb440911bac67f27eab40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636230"
 ---
 # <a name="additional-resources"></a>其他资源
 
@@ -64,5 +64,5 @@ ms.locfileid: "50195666"
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Basic 入门](../../visual-basic/getting-started/index.md)  
-[与我们交流](/visualstudio/ide/talk-to-us)  
+- [Visual Basic 入门](../../visual-basic/getting-started/index.md)
+- [与我们交流](/visualstudio/ide/talk-to-us)

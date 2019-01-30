@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 19d8d20ae630573b44399f8f5c5351f02b9fb1df
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e01f8d5e8868c11a88d99c42fba06d8fefa5dc92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491683"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>如何：使用全局命名空间别名（C# 编程指南）
 当具有同一名称的其他实体可能隐藏了成员时，访问全局[命名空间](../../../csharp/language-reference/keywords/namespace.md)中的成员的功能将十分有用。  
@@ -48,8 +48,8 @@ ms.locfileid: "53236598"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [命名空间](../../../csharp/programming-guide/namespaces/index.md)  
-- [。运算符](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [::运算符](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [命名空间](../../../csharp/programming-guide/namespaces/index.md)
+- [。运算符](../../../csharp/language-reference/operators/member-access-operator.md)
+- [::运算符](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

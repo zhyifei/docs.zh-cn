@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#endif directive [C#]'
 ms.assetid: 6a5fca55-5aee-441f-86f6-1c99fbe9ec05
-ms.openlocfilehash: 13b43919b666dcc8c5adfc3490eaad73960547ae
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 58e29363ca1298966ecf88e6b456f33f43a176b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243891"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573041"
 ---
 # <a name="endif-c-reference"></a>#endif（C# 参考）
 `#endif` 指定条件指令的末尾，以 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 指令开头。 例如，应用于对象的  
@@ -30,6 +30,6 @@ ms.locfileid: "53243891"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)

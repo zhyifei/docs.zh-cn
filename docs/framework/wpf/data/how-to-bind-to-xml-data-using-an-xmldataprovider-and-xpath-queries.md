@@ -28,11 +28,11 @@ ms.locfileid: "54509297"
   
  如此示例中所示，若要使用属性语法创建相同的绑定声明，必须对特殊字符进行正确转义。 有关详细信息，请参阅 [XML 字符实体和 XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)。  
   
- 运行此示例时，<xref:System.Windows.Controls.ListBox> 将显示以下项。 它们是 *Books* 中，*Stock* 值为“*out*”，或者 *Number* 值为 3 或者大于等于 8 的所有元素的 *Title*。 请注意，没有返回 *CD* 项，因为 <xref:System.Windows.Data.XmlDataProvider> 中设置的 <xref:System.Windows.Data.XmlDataProvider.XPath%2A> 值指定了仅公开*Books*元素（实质上设置了一个筛选器）。  
+ 运行此示例时，<xref:System.Windows.Controls.ListBox> 将显示以下项。 它们是 *Books* 中，*Stock* 值为“*out*”，或者 *Number* 值为 3 或者大于等于 8 的所有元素的 *Title*。 请注意，没有返回 *CD* 项，因为 <xref:System.Windows.Data.XmlDataProvider> 中设置的 <xref:System.Windows.Data.XmlDataProvider.XPath%2A> 值指定了仅公开 *Books* 元素（实质上设置了一个筛选器）。  
   
  ![XPath 示例](../../../../docs/framework/wpf/data/media/xpathexample.PNG "XPathExample")  
   
- 在此示例中，显示书名是因为在 <xref:System.Windows.DataTemplate> 中，<xref:System.Windows.Controls.TextBlock> 中的绑定的 <xref:System.Windows.Data.Binding.XPath%2A> 被设置为"*Title*"。 如果你想要显示某个属性的值，如*ISBN*，则可以将 <xref:System.Windows.Data.Binding.XPath%2A> 的值赋为 "`@ISBN`"。  
+ 在此示例中，显示书名是因为在 <xref:System.Windows.DataTemplate> 中，<xref:System.Windows.Controls.TextBlock> 绑定的 <xref:System.Windows.Data.Binding.XPath%2A> 被设置为 "*Title*"。 若要显示某个属性（如 *ISBN*）的值，则可将该 <xref:System.Windows.Data.Binding.XPath%2A> 值设置为 "`@ISBN`"。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 **XPath** 属性使用 XmlNode.SelectNodes 方法处理。 可以修改 **XPath** 查询以获取不同的结果。 以下是前一示例中被绑定 <xref:System.Windows.Controls.ListBox> 的 <xref:System.Windows.Data.Binding.XPath%2A> 查询的一些示例：  
   

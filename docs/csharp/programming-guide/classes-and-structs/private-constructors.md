@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: a0ff8f69f7725b40eaac01acef74857c2a99247c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e406b72e5d2932464c407dce014dd8eceee59fb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577290"
 ---
 # <a name="private-constructors-c-programming-guide"></a>私有构造函数（C# 编程指南）
 私有构造函数是一种特殊的实例构造函数。 它通常用于只包含静态成员的类中。 如果类具有一个或多个私有构造函数而没有公共构造函数，则其他类（除嵌套类外）无法创建该类的实例。 例如:  
@@ -37,9 +37,9 @@ ms.locfileid: "53240497"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-- [private](../../../csharp/language-reference/keywords/private.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [终结器](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [private](../../../csharp/language-reference/keywords/private.md)
 - [public](../../../csharp/language-reference/keywords/public.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: 40cf14936fef7c29f00112a143203ced605f482b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f89a0ad79dbf46c6d75d56106ad05a683482a501
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511600"
 ---
 # <a name="using-udp-services"></a>使用 UDP 服务
 <xref:System.Net.Sockets.UdpClient> 类使用 UDP与网络服务通信。 <xref:System.Net.Sockets.UdpClient> 类的属性和方法概要说明了使用 UDP 创建 <xref:System.Net.Sockets.Socket> 以请求和接收数据的详情。
@@ -159,4 +159,5 @@ class Program
 ```
 
 ## <a name="see-also"></a>请参阅
- <xref:System.Net.Sockets.UdpClient> <xref:System.Net.IPAddress>
+- <xref:System.Net.Sockets.UdpClient>
+- <xref:System.Net.IPAddress>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3764916263f6f88615d61badaf2c32807bcc09b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48f24187d0c9992008e7471ffe1a5b75f9768239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494353"
 ---
 # <a name="passing-structures"></a>传递结构
 许多未托管的函数希望你以函数参数的形式传递结构成员（Visual Basic 中用户定义的类型），或托管代码中定义的类的成员。 使用平台调用将结构或类传递给非托管代码时，必须提供其他信息以保留原始布局和对齐方式。 本主题介绍用于定义格式化类型的 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性。 对于托管结构和类，可从 LayoutKind 枚举提供的几种可预测布局行为中进行选择。  
@@ -175,8 +175,8 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [调用 DLL 函数](../../../docs/framework/interop/calling-a-dll-function.md)  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
+## <a name="see-also"></a>请参阅
+- [调用 DLL 函数](../../../docs/framework/interop/calling-a-dll-function.md)
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

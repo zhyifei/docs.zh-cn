@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae4dd9adbdad313afa53721e83d7b7d5212df91e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564287"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在托管代码中创建原型
 本主题介绍了如何访问非托管函数，并介绍了在托管代码中批注方法定义的若干属性字段。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](marshaling-data-with-platform-invoke.md)。  
@@ -79,7 +79,7 @@ using namespace System::Runtime::InteropServices;
   
  下表列出了与平台调用相关的完整的属性字段集。 对于每个字段，此表包括了默认值以及有关如何使用这些字段来定义非托管 DLL 函数的信息的链接。  
   
-|字段|描述|  
+|字段|说明|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|启用或禁用最佳映射。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|指定要用于传递方法自变量的调用约定。 默认值是 `WinAPI`，此值对应于 32 位基于 Intel 的平台的 `__stdcall`。|  
@@ -221,12 +221,12 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用非托管 DLL 函数](consuming-unmanaged-dll-functions.md)  
- [指定入口点](specifying-an-entry-point.md)  
- [指定字符集](specifying-a-character-set.md)  
- [平台调用示例](platform-invoke-examples.md)  
- [平台调用安全注意事项](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
- [标识 DLL 中的函数](identifying-functions-in-dlls.md)  
- [创建用于容纳 DLL 函数的类](creating-a-class-to-hold-dll-functions.md)  
- [调用 DLL 函数](calling-a-dll-function.md)
+## <a name="see-also"></a>请参阅
+- [使用非托管 DLL 函数](consuming-unmanaged-dll-functions.md)
+- [指定入口点](specifying-an-entry-point.md)
+- [指定字符集](specifying-a-character-set.md)
+- [平台调用示例](platform-invoke-examples.md)
+- [平台调用安全注意事项](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))
+- [标识 DLL 中的函数](identifying-functions-in-dlls.md)
+- [创建用于容纳 DLL 函数的类](creating-a-class-to-hold-dll-functions.md)
+- [调用 DLL 函数](calling-a-dll-function.md)

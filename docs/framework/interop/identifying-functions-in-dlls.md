@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc160678817266dc649f60dc3f2cc77044c05691
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb1aba9e794928b0eb905722e2a5d7df84100ea4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729201"
 ---
 # <a name="identifying-functions-in-dlls"></a>标识 DLL 中的函数
 DLL 函数的标识由以下元素组成：  
@@ -45,9 +45,9 @@ DLL 函数的标识由以下元素组成：
   
  有关 Win32 API 的完整文档，请参阅平台 SDK。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
   
-## <a name="see-also"></a>请参阅  
- [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [指定入口点](../../../docs/framework/interop/specifying-an-entry-point.md)  
- [创建用于容纳 DLL 函数的类](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
- [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [调用 DLL 函数](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>请参阅
+- [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+- [指定入口点](../../../docs/framework/interop/specifying-an-entry-point.md)
+- [创建用于容纳 DLL 函数的类](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
+- [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [调用 DLL 函数](../../../docs/framework/interop/calling-a-dll-function.md)

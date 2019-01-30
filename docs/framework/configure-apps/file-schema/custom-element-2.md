@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 3a16952c5cd3759873faeb0fce45b8aa5170b083
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 74496726aa2fe5c88a273a22f096c585aa54de0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693789"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler 和 DictionarySectionHandler 的自定义元素
 
-定义使用的自定义配置节设置<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类。
+定义使用的自定义配置部分设置<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;**\<sectionName>**
@@ -38,13 +38,13 @@ ms.locfileid: "32752044"
 | --- | ----------- |
 | [**\<添加 >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md)为<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler>  | 添加自定义应用程序设置。 |
 | [**\<删除 >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md)为<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler> |    删除以前定义的设置。 |
-| [**\<清除 >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md)为<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler> | 清除节中的所有以前定义的设置。 |
+| [**\<清除 >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md)为<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler> | 清除部分中的所有以前定义的设置。 |
 
 ## <a name="remarks"></a>备注
 
-**\<SectionName >** 元素是由定义的自定义元素**\<部分 >** 中标记 **\<configSections >** 元素。
+ **\<SectionName >** 元素是通过定义的自定义元素**\<部分 >** 标记中的 **\<configSections >** 元素。
 
-下表显示每个配置节处理程序返回的对象 ConfigurationSettings.GetConfig 方法的类型：
+下表显示了为每个配置节处理程序返回的对象 ConfigurationSettings.GetConfig 方法的类型：
 
 | 配置节处理程序                        | 返回类型                                                |
 | ---------------------------------------------------- | ---------------------------------------------------------- |
@@ -78,8 +78,8 @@ ms.locfileid: "32752044"
 
 ## <a name="configuration-file"></a>配置文件
 
-此元素可在应用程序配置文件中，计算机配置文件 (*Machine.config*)，和*Web.config*不在应用程序的目录级别上的文件。
+在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。
 
 ## <a name="see-also"></a>请参阅
 
-[.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)

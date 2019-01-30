@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: 92ac601719ccb1c5e9f769c286a1d2dd443c713a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6217b741a4dfabb67fc182a58543187ac37987ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695668"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>如何：在查询表达式中使用隐式类型本地变量和数组（C# 编程指南）
 每当需要编译器确定本地变量类型时，均可使用隐式类型本地变量。 必须使用隐式类型本地变量来存储匿名类型，匿名类型通常用于查询表达式中。 以下示例说明了在查询中可以使用和必须使用隐式类型本地变量的情况。  
@@ -29,8 +29,8 @@ ms.locfileid: "53237800"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [扩展方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
-- [LINQ（语言集成查询）](../../../csharp/linq/index.md)  
-- [var](../../../csharp/language-reference/keywords/var.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [扩展方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [LINQ（语言集成查询）](../../../csharp/linq/index.md)
+- [var](../../../csharp/language-reference/keywords/var.md)
 - [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)

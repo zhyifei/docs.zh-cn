@@ -9,14 +9,12 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 295b2c5dd3eb17ca9ba19e52d9f8e51cf108162d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c4856085574792f567ff0e4bce34fc76a9c1565
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683146"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083296"
 ---
 # <a name="ltcodebasegt-element"></a>&lt;基本代码&gt;元素
 指定公共语言运行时在哪里可以找到程序集。  
@@ -47,7 +45,7 @@ href="URL of assembly"/>
   
 ## <a name="version-attribute"></a>版本属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |每个部分的版本号的有效值为 0 到 65535。|不适用。|  
   

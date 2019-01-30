@@ -9,12 +9,12 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: e753f10acd33234d7f5e0c1a4203125ab880e2ae
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce0321d91835fbdf6c37f4b7736f0de900e9f838
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237137"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666795"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>如何：写入到文本文件（C# 编程指南）
 以下示例给出了将文本写入文件的各种方法。 前两个示例对 <xref:System.IO.File?displayProperty=nameWithType> 类使用静态便捷方法以将任何 `IEnumerable<string>` 的每个元素和字符串写入文本文件。 示例 3 展示了在写入文件时必须分别处理文本的每一行时，如何将文本添加到文件。 示例 1-3 覆盖文件中的所有现有内容，但示例 4 展示如何将文本追加到现有文件。  
@@ -35,6 +35,6 @@ ms.locfileid: "53237137"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)
 - [示例：将集合保存到应用程序存储](https://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)

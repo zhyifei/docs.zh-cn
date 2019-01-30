@@ -4,12 +4,12 @@ description: 帮助希望针对 .NET Framework 和 .NET Core 并行编译解决�
 author: conniey
 ms.date: 04/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: 97673e1ccaeb094bf8c7cb835a84ae9389fac502
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 52205a32af212dc74b000025c0e4fc8cde3ae134
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498656"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>组织项目以支持 .NET Framework 和 .NET Core
 

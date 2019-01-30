@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: 3b8d13e606f28896cae88162d572470e49af3739
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 862a9177d9e10e9561da389fdbffa3e35aa3b51a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730277"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065929"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML 后代轴属性 (Visual Basic)
 提供对以下的后代的访问：<xref:System.Xml.Linq.XElement>对象，<xref:System.Xml.Linq.XDocument>对象、 一系列<xref:System.Xml.Linq.XElement>对象或一系列<xref:System.Xml.Linq.XDocument>对象。  
@@ -34,7 +34,7 @@ object...<descendant>
  必需。 表示子代轴属性的开头。  
   
  `descendant`  
- 必需。 若要访问，窗体的子代节点的名称 [`prefix``:`]`name`。  
+ 必需。 若要访问，窗体的子代节点的名称 [`prefix:]name`。  
   
 |部件|描述|  
 |----------|-----------------|  

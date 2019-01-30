@@ -6,12 +6,12 @@ helpviewer_keywords:
 - jump statements [C#]
 - branch statements [C#]
 ms.assetid: 58da6ae7-7388-491e-828f-e74485d87d53
-ms.openlocfilehash: 0083406a4ba3cf5d3d70ca1b17630ceb73c17dce
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1661c551c576e5f6dd7180fbc40ec837f40622bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242823"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645257"
 ---
 # <a name="jump-statements-c-reference"></a>跳转语句（C# 参考）
 使用跳转语句执行分支，这将立即转移程序控制。 跳转语句中使用下列关键字：  
@@ -28,7 +28,7 @@ ms.locfileid: "53242823"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
 - [语句关键字](../../../csharp/language-reference/keywords/statement-keywords.md)

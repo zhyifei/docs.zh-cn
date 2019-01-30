@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 141da196869d3867a9a85087a073dbec095d5118
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2115b0be2ee2e989b10d2d1834a51efb0b7e2ebb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651781"
 ---
 # <a name="generic-classes-c-programming-guide"></a>泛型类（C# 编程指南）
 泛型类封装不特定于特定数据类型的操作。 泛型类最常见用法是用于链接列表、哈希表、堆栈、队列和树等集合。 无论存储数据的类型如何，添加项和从集合删除项等操作的执行方式基本相同。  
@@ -68,8 +68,8 @@ ms.locfileid: "53244396"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Collections.Generic>  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [泛型](../../../csharp/programming-guide/generics/index.md)  
-- [Saving the State of Enumerators](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)（保存枚举器状态）  
+- <xref:System.Collections.Generic>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [泛型](../../../csharp/programming-guide/generics/index.md)
+- [Saving the State of Enumerators](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)（保存枚举器状态）
 - [An Inheritance Puzzle, Part One](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)（继承测验，第一部分）

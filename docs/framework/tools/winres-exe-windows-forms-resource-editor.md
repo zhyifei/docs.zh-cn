@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c56685e2b9bef811f0fa987be976790eca83e91c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6732eef46f87d9e2e3aeada138ea28853d3f0479
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43386402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663154"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe（Windows 资源本地化编辑器）
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>自变量
 
-|参数|描述|
+|参数|说明|
 |--------------|-----------------|
 |`resourceFile`|要本地化的资源文件。 此文件必须是由 Visual Studio 设计器生成的 Windows 窗体 .resx 或 .resources 文件。 Winres.exe 无法打开一般的 .resx 或 .resources 文件。|
 
-|选项|描述|
+|选项|说明|
 |------------|-----------------|
 |**/?**|显示该工具的命令语法和选项。|
 
