@@ -4,12 +4,12 @@ description: 了解移植过程以及发现在将 .NET Framework 项目移植到
 author: cartermp
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 5c7cd8b01672e71b0db7255dad23d994a95ce532
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170036"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266567"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>将代码从 .NET Framework 移植到 .NET Core
 
@@ -41,7 +41,7 @@ ms.locfileid: "53170036"
 
 以下列表显示了在移植过程中使用可能有所帮助的工具：
 
-* .NET Portability Analyzer - [命令行工具](https://github.com/Microsoft/dotnet-apiport/releases)或 [Visual Studio 扩展](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)，可生成有关 .NET Framework 和 .NET Core 之间代码移植性的报表的工具链，并且带有程序集到程序集的问题细目。 有关详细信息，请参阅 [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md)。
+* .NET Portability Analyzer - [命令行工具](https://github.com/Microsoft/dotnet-apiport/releases)或 [Visual Studio 扩展](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)，可生成有关 .NET Framework 和 .NET Core 之间代码移植性的报表的工具链，并且带有程序集到程序集的问题细目。 有关详细信息，请参阅 [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md)。
 * .NET API 分析器 - 一个 Roslyn 分析器，可用于发现不同平台上的潜在 C# API 兼容性风险，并检测是否调用了弃用的 API。 有关详细信息，请参阅 [.NET API 分析器](../../standard/analyzers/api-analyzer.md)。
 * Reverse Package Search - 一个[有用的 Web 服务](https://packagesearch.azurewebsites.net)，能够实现搜索某一类型并找到包含该类型的包。
 
