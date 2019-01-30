@@ -12,25 +12,22 @@ helpviewer_keywords:
 - properties [WPF], restoring
 - application-scope properties [WPF], restoring
 ms.assetid: 55d5904a-f444-4eb5-abd3-6bc74dd14226
-ms.openlocfilehash: ff95833920ead040f1812637721fdd402186898c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c64b13717a427bf7ad8f9cab0a450162ad0c6cde
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550093"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204695"
 ---
-# <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a><span data-ttu-id="bfdfd-102">如何：跨应用程序会话保持和还原应用程序范围的属性</span><span class="sxs-lookup"><span data-stu-id="bfdfd-102">How to: Persist and Restore Application-Scope Properties Across Application Sessions</span></span>
-<span data-ttu-id="bfdfd-103">此示例演示如何保留应用程序作用域属性，当应用程序关闭时和还原应用程序作用域属性当应用程序下一次启动后如何。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-103">This example shows how to persist application-scope properties when an application shuts down, and how to restore application-scope properties when an application is next launch.</span></span>  
+# <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a><span data-ttu-id="61b38-102">如何：跨应用程序会话保持和还原应用程序范围的属性</span><span class="sxs-lookup"><span data-stu-id="61b38-102">How to: Persist and Restore Application-Scope Properties Across Application Sessions</span></span>
+<span data-ttu-id="61b38-103">此示例演示如何保留应用程序关闭时，以及如何还原应用程序作用域属性时应用程序下一步是启动应用程序作用域属性。</span><span class="sxs-lookup"><span data-stu-id="61b38-103">This example shows how to persist application-scope properties when an application shuts down, and how to restore application-scope properties when an application is next launch.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bfdfd-104">示例</span><span class="sxs-lookup"><span data-stu-id="bfdfd-104">Example</span></span>  
- <span data-ttu-id="bfdfd-105">应用程序仍然存在应用程序作用域属性，并将其还原从独立存储。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-105">The application persists application-scope properties to, and restores them from, isolated storage.</span></span> <span data-ttu-id="bfdfd-106">独立的存储是不具备文件访问权限的应用程序可以安全地使用受保护的存储区域。</span><span class="sxs-lookup"><span data-stu-id="bfdfd-106">Isolated storage is a protected storage area that can safely be used by applications without file access permission.</span></span>  
+## <a name="example"></a><span data-ttu-id="61b38-104">示例</span><span class="sxs-lookup"><span data-stu-id="61b38-104">Example</span></span>  
+ <span data-ttu-id="61b38-105">应用程序仍然存在，应用程序作用域属性，并将其还原从独立存储。</span><span class="sxs-lookup"><span data-stu-id="61b38-105">The application persists application-scope properties to, and restores them from, isolated storage.</span></span> <span data-ttu-id="61b38-106">独立的存储是由没有文件访问权限的应用程序可以安全使用的受保护的存储区域。</span><span class="sxs-lookup"><span data-stu-id="61b38-106">Isolated storage is a protected storage area that can safely be used by applications without file access permission.</span></span>  <span data-ttu-id="61b38-107">*App.xaml*文件定义`App_Startup`为处理程序方法<xref:System.Windows.Application.Startup?displayProperty=nameWithType>事件，并且`App_Exit`为处理程序方法<xref:System.Windows.Application.Exit?displayProperty=nameWithType>事件，如突出显示的行的第一个示例中所示。</span><span class="sxs-lookup"><span data-stu-id="61b38-107">The *App.xaml* file defines the `App_Startup` method as the handler for the <xref:System.Windows.Application.Startup?displayProperty=nameWithType> event, and the `App_Exit` method as the handler for the  <xref:System.Windows.Application.Exit?displayProperty=nameWithType> event, as shown in the highlighted lines of the first example.</span></span> <span data-ttu-id="61b38-108">第二个示例显示了部分*App.xaml.cs*并*App.xaml.vb*突出显示的代码文件`App_Startup`方法，后者将恢复应用程序作用域属性和`App_Exit`方法，将保存应用程序范围的属性。</span><span class="sxs-lookup"><span data-stu-id="61b38-108">The second example shows a portion of the *App.xaml.cs* and *App.xaml.vb* files that highlights the code for the `App_Startup` method, which restores application-scope properties, and the `App_Exit` method, which saves application-scope properties.</span></span>
+ 
   
- [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
-[!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
+ [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml?highlight=1-7)]
   
- [!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistrestoreappscopepropertiescodebehind1)]
- [!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind1)]  
-[!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistrestoreappscopepropertiescodebehind2)]
-[!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind2)]  
-[!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistrestoreappscopepropertiescodebehind3)]
-[!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind3)]
+ [!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=17-55)]
+ [!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind1)]
+ 
