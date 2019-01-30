@@ -4,7 +4,7 @@
 ## [强命名](strong-naming.md)
 ## [NuGet](nuget.md)
 ### [依赖项](dependencies.md)
-### [SourceLink](sourcelink.md)
+### [源链接](sourcelink.md)
 ### [发布](publish-nuget-package.md)
 ## [版本控制](versioning.md)
 ### [中断性变更](breaking-changes.md)
