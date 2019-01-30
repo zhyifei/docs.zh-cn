@@ -21,13 +21,13 @@ ms.locfileid: "54600344"
   
  `<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">`  
   
- 可以使用 <xref:System.Windows.Data.XmlNamespaceMapping> 元素将命名空间映射到 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>，如下面的示例所示。 然后就可以用 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> 来指代 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间。 此示例中的 <xref:System.Windows.Controls.ListBox> 显示每个 *item* 的 *title* 和 *dc:date*。  
+ 可以使用 <xref:System.Windows.Data.XmlNamespaceMapping> 元素将命名空间映射到 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>，如以下示例所示。然后，可以使用 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> 来引用 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间。此示例中的 ListBox 显示了每一项的标题和 dc:date******。  
   
  [!code-xaml[XmlnsBindSnippet#XmlNamespaceMapping](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBindSnippet/CS/Window1.xaml#xmlnamespacemapping)]  
   
- 请注意，指定的 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> 不需要匹配于 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 源中使用的; 如果 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 源中的前缀发生变化，映射仍然能正常工作。  
+ 请注意，指定的 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> 不需要与 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 源中使用的相匹配；如果 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 源中的前缀发生更改，映射仍然能正常工作。  
   
- 在此特定示例中，[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据来自于 web 服务，但 <xref:System.Windows.Data.XmlNamespaceMapping> 元素也能处理内联 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 或嵌入文件中的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 的数据。  
+ 在此特定示例中，[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据来自于 Web 服务，但 <xref:System.Windows.Data.XmlNamespaceMapping> 元素也可用于处理内联 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 或嵌入文件中的 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据。  
   
 ## <a name="see-also"></a>请参阅
 - [使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
