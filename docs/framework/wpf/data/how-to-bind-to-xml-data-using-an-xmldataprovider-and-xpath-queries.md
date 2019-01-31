@@ -34,25 +34,25 @@ ms.locfileid: "54509297"
   
  在此示例中，显示书名是因为在 <xref:System.Windows.DataTemplate> 中，<xref:System.Windows.Controls.TextBlock> 绑定的 <xref:System.Windows.Data.Binding.XPath%2A> 被设置为 "*Title*"。 若要显示某个属性（如 *ISBN*）的值，则可将该 <xref:System.Windows.Data.Binding.XPath%2A> 值设置为 "`@ISBN`"。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 **XPath** 属性使用 XmlNode.SelectNodes 方法处理。 可以修改 **XPath** 查询以获取不同的结果。 下面是有关一些示例<xref:System.Windows.Data.Binding.XPath%2A>查询上绑定了<xref:System.Windows.Controls.ListBox>来自前面的示例：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 **XPath** 属性使用 XmlNode.SelectNodes 方法处理。 可以修改 **XPath** 查询以获取不同的结果。 以下是前一示例中被绑定 <xref:System.Windows.Controls.ListBox> 的 <xref:System.Windows.Data.Binding.XPath%2A> 查询的一些示例：  
   
 -   `XPath="Book[1]"` 将返回第一个 Book 元素（“XML in Action”）。 请注意，**XPath** 索引从 1 而不是从 0 开始。  
   
 -   `XPath="Book[@*]"` 将返回带有任意属性的所有 Book 元素。  
   
--   `XPath="Book[last()-1]"` 将返回第二个至最后一个 Book 元素（“Introducing Microsoft .NET”）。  
+-   `XPath="Book[last()-1]"` 将返回倒数第二个 Book 元素（“Introducing Microsoft .NET”）。  
   
 -   `XPath="*[position()>3]"` 将返回除前 3 个元素之外的所有 Book 元素。  
   
- 在运行时**XPath**查询，它将返回<xref:System.Xml.XmlNode>或 Xmlnode 列表。 <xref:System.Xml.XmlNode> 是[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象，这意味着可以使用<xref:System.Windows.Data.Binding.Path%2A>要绑定到属性[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]属性。 再以上述示例为例。 如果该示例的其余部分保持不变，并且你更改<xref:System.Windows.Controls.TextBlock>绑定到以下，将看到在返回的 Xmlnode 的名称<xref:System.Windows.Controls.ListBox>。 在此情况下，所有返回节点的名称为“*Book*”。  
+ 运行 **XPath** 查询时，它将返回 <xref:System.Xml.XmlNode> 或 XmlNode 的列表。 <xref:System.Xml.XmlNode> 是[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象，这意味着你可以使用 <xref:System.Windows.Data.Binding.Path%2A> 属性来绑定到[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]属性。 再以上述示例为例。 如果该示例的其余部分保持不变，而你将 <xref:System.Windows.Controls.TextBlock> 绑定更改为如下所示，则会在 <xref:System.Windows.Controls.ListBox> 中看到返回的 XmlNode 的名称。 在此情况下，所有返回节点的名称为“*Book*”。  
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
- 在某些应用程序中，将 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 作为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页的源内的数据岛嵌入可能很不方便，因为在编译时必须知道该数据的确切内容。 因此，还支持从外部 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 文件获取该数据，如下面的示例所示：  
+ 在某些应用程序中，将 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 作为 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面源码内的数据岛嵌入可能很不方便，因为在编译时必须知道该数据的确切内容。 因此，也支持从外部 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 文件获取数据，如下面的示例所示：  
   
  [!code-xaml[XMLDataSource2#XmlFileExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
- 如果[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据驻留在远程[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]文件中，您将通过定义访问权限的数据分配一个适当[!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]到<xref:System.Windows.Data.XmlDataProvider.Source%2A>属性，如下所示：  
+ 如果 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据驻留在远程 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 文件中，则可通过指定 <xref:System.Windows.Data.XmlDataProvider.Source%2A> 属性的相应 [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] 来定义对数据的访问权限，如下所示：  
   
 ```xml  
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  
