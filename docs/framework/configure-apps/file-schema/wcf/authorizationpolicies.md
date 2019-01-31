@@ -1,15 +1,15 @@
 ---
-title: '&lt;authorizationPolicies&gt;'
+title: <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 5b367489-54d7-408b-8f56-cb157dd68eaf
-ms.openlocfilehash: 7648c221a61efb99b4dc486f9b4d121439632c63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8ca43a7b633d7d19dd37ceb0ff64075931b6c5c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519549"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254754"
 ---
-# <a name="ltauthorizationpoliciesgt"></a>&lt;authorizationPolicies&gt;
+# <a name="authorizationpolicies"></a>\<authorizationPolicies>
 本配置节包含可使用 `add` 关键字添加的授权策略类型的集合。 每个授权类型都包含一个所需的 `policyType` 属性，此属性是一个字符串。 该属性指定一个授权策略，可以将一组输入声明转换为另一组声明。 可以根据该授权策略来授予或拒绝访问控制。 授权策略的工作原理的详细信息，请参阅<xref:System.IdentityModel.Policy.IAuthorizationPolicy>并[授权策略](../../../../../docs/framework/wcf/samples/authorization-policy.md)。  
   
 ## <a name="see-also"></a>请参阅

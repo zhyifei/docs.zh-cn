@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;的元素&lt;侦听器&gt;为&lt;跟踪&gt;'
+title: <add> 的 <listeners> 的 <trace> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-ms.openlocfilehash: 4edefcfdd56be56ccc0ccaf2bff118ba8266e226
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 31ab58d6817c6c5064182ab5ef8b9595e92bef7d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083634"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260641"
 ---
-# <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;添加&gt;的元素&lt;侦听器&gt;为&lt;跟踪&gt;
+# <a name="add-element-for-listeners-for-trace"></a>\<添加 > 元素\<侦听器 > 为\<跟踪 >
 将侦听器添加到**侦听器**集合。  
   
  \<configuration>  

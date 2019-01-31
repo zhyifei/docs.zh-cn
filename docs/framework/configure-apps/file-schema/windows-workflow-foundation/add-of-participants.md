@@ -1,16 +1,16 @@
 ---
-title: '&lt;participants&gt; 的 &lt;add&gt;'
+title: <add> 的 <participants>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
-ms.openlocfilehash: bc32b9b55ef8767be44cc69b9277c81d62a1944d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65b8a34250a22da79e900f6bee894b501c5ad6ba
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575890"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284539"
 ---
-# <a name="ltaddgt-of-ltparticipantsgt"></a>&lt;participants&gt; 的 &lt;add&gt;
+# <a name="add-of-participants"></a>\<add> of \<participants>
 配置一个跟踪参与者，它侦听直接从运行时发出的跟踪记录，并按照配置跟踪参与者的任何方式处理这些记录。 这包括写入特定输出（例如，文件、控制台、ETW）、处理/聚合记录或可能需要的任何其他组合。  
   
  工作流跟踪和跟踪参与者的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)并[跟踪参与者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)。  

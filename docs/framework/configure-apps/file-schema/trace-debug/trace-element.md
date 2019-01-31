@@ -1,5 +1,5 @@
 ---
-title: '&lt;跟踪&gt;元素'
+title: <trace> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 668e69b534617dbe05bbefde6e85b905601961fc
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: d930e1fe9a9a4012e363bbbffe83e1ea7cc1c595
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083517"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257793"
 ---
-# <a name="lttracegt-element"></a>&lt;跟踪&gt;元素
+# <a name="trace-element"></a>\<跟踪 > 元素
 包含用于收集、存储和路由跟踪消息的侦听器。  
   
  \<configuration>  
@@ -45,14 +45,14 @@ ms.locfileid: "55083517"
   
 ## <a name="autoflush-attribute"></a>自动刷新属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`false`|不自动刷新输出缓冲区。 这是默认设置。|  
 |`true`|自动刷新输出缓冲区。|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock Attribute  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`false`|侦听器是线程安全; 如果不使用全局锁否则，将使用全局锁。|  
 |`true`|使用全局锁，而不管侦听器是线程安全。 这是默认设置。|  

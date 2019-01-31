@@ -1,5 +1,5 @@
 ---
-title: 此第一条语句&#39;Sub New&#39;必须是对调用&#39;MyBase.New&#39;或&#39;MyClass.New&#39; （没有可访问构造函数不带参数）
+title: 该“Sub New”的第一个语句必须是对“MyBase.New”或“MyClass.New”的调用（没有不带参数的可访问构造函数）
 ms.date: 07/20/2015
 f1_keywords:
 - bc30148
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30148
 ms.assetid: 4426e8fc-cb39-4eb8-ba95-503cd32fcc89
-ms.openlocfilehash: 75832ae88908094c1cb74ce04ad84c0d2ae91e68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d29d7609f8f3f38eadda9a9c763f3ba8e6b99e61
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728890"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278533"
 ---
-# <a name="first-statement-of-this-39sub-new39-must-be-a-call-to-39mybasenew39-or-39myclassnew39-no-accessible-constructor-without-parameters"></a>此第一条语句&#39;Sub New&#39;必须是对调用&#39;MyBase.New&#39;或&#39;MyClass.New&#39; （没有可访问构造函数不带参数）
+# <a name="first-statement-of-this-sub-new-must-be-a-call-to-mybasenew-or-myclassnew-no-accessible-constructor-without-parameters"></a>该“Sub New”的第一个语句必须是对“MyBase.New”或“MyClass.New”的调用（没有不带参数的可访问构造函数）
 此 Sub New 的第一个语句必须是对 MyBase.New 或 MyClass.New 的调用，因为基类 '\<basename > 的\<derivedname > 不具有可访问 Sub New，可以调用不带任何参数。  
   
  在派生类中，每个构造函数必须调用基类构造函数 (`MyBase.New`)。 如果基类具有不带任何参数是可用于派生类的构造函数`MyBase.New`可以自动调用。 如果没有，则必须使用参数，调用基类构造函数，这不能自动完成。 在这种情况下，每个派生的类构造函数的第一个语句必须在基础类上调用参数化构造函数或调用另一个构造函数可以调用基类构造函数在派生类中。  

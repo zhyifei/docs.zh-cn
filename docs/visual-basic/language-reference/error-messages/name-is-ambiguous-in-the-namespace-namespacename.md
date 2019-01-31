@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;名称&gt;&#39;不明确的命名空间中&#39;&lt;命名空间名称&gt;&#39;'
+title: “<name>”在命名空间“<namespacename>”中不明确
 ms.date: 07/20/2015
 f1_keywords:
 - bc30560
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30560
 ms.assetid: 7f032293-054b-4eae-8d97-3db8e7ddde3b
-ms.openlocfilehash: 9f23106880671dc6cc3856df4cf9c29f4ea24ee4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 621ef368ab29c4a5481020a001c4e1caf335a3f6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719529"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259069"
 ---
-# <a name="39ltnamegt39-is-ambiguous-in-the-namespace-39ltnamespacenamegt39"></a>&#39;&lt;名称&gt;&#39;不明确的命名空间中&#39;&lt;命名空间名称&gt;&#39;
+# <a name="name-is-ambiguous-in-the-namespace-namespacename"></a>'\<名称 > 在命名空间中不明确\<命名空间名称 >
 你提供的名称不明确，因此与另一个名称冲突。 Visual Basic 编译器不具有任何冲突解决规则;你必须自己区分名称。  
   
  **错误 ID:** BC30560  

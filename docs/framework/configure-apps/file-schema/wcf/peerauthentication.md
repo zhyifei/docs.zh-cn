@@ -1,15 +1,15 @@
 ---
-title: '&lt;peerAuthentication&gt;'
+title: <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ad545e6f-f06e-4549-ac92-09d758d5c636
-ms.openlocfilehash: 355a96daf480125282d4a68cd626e083015cc10e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff050a1abe11b85dc85cd844892886fc168e53a4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556359"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257806"
 ---
-# <a name="ltpeerauthenticationgt"></a>&lt;peerAuthentication&gt;
+# <a name="peerauthentication"></a>\<peerAuthentication>
 指定对等节点使用的对等证书的身份验证设置。  
   
  \<system.ServiceModel>  

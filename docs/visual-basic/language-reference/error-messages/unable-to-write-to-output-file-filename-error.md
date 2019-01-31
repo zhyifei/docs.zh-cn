@@ -1,5 +1,5 @@
 ---
-title: 无法写入输出文件&#39;&lt;文件名&gt;&#39;:&lt;错误&gt;
+title: 无法写入输出文件“<filename>”：<error>
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: c82f1e6e4a01af87cc7dce49cfaa78f9be1631db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f7580c53535c28c97213a5a0488c3fc0365c4ac
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572690"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274100"
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>无法写入输出文件&#39;&lt;文件名&gt;&#39;:&lt;错误&gt;
+# <a name="unable-to-write-to-output-file-filename-error"></a>无法写入输出文件\<文件名 >:\<错误 >
 创建文件时出现问题。  
   
  无法打开输出文件以进行写入。 文件（或包含该文件的文件夹）可能由另一个进程打开以供独占使用，或者可能设置了只读特性。  

@@ -1,5 +1,5 @@
 ---
-title: 如何：更改的 X.509 证书的加密提供程序&#39;s 私钥
+title: 如何：更改 X.509 证书的私钥的加密提供程序
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 40c98d17a52643f451ec01bc8b97c60f2b011b36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce2ce082f41700b1b86786abfa2dfe4a673fd6e0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498968"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265943"
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>如何：更改的 X.509 证书的加密提供程序&#39;s 私钥
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>如何：更改 X.509 证书的私钥的加密提供程序
 本主题说明如何更改用于提供 X.509 证书的私钥的加密提供程序以及如何将提供程序集成到 Windows Communication Foundation (WCF) 安全框架。 有关使用证书的详细信息，请参阅[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
  WCF 安全框架提供了一种引入新的安全令牌类型，如中所述[如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。 还可以使用自定义令牌替换系统提供的现有令牌类型。  
