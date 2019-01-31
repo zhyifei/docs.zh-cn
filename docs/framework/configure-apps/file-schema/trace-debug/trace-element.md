@@ -1,5 +1,5 @@
 ---
-title: '&lt;跟踪&gt;元素'
+title: <trace> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 668e69b534617dbe05bbefde6e85b905601961fc
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: d930e1fe9a9a4012e363bbbffe83e1ea7cc1c595
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083517"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257793"
 ---
-# <a name="lttracegt-element"></a><span data-ttu-id="68b24-102">&lt;跟踪&gt;元素</span><span class="sxs-lookup"><span data-stu-id="68b24-102">&lt;trace&gt; Element</span></span>
-<span data-ttu-id="68b24-103">包含用于收集、存储和路由跟踪消息的侦听器。</span><span class="sxs-lookup"><span data-stu-id="68b24-103">Contains listeners that collect, store, and route tracing messages.</span></span>  
+# <a name="trace-element"></a><span data-ttu-id="92f8d-102">\<跟踪 > 元素</span><span class="sxs-lookup"><span data-stu-id="92f8d-102">\<trace> Element</span></span>
+<span data-ttu-id="92f8d-103">包含用于收集、存储和路由跟踪消息的侦听器。</span><span class="sxs-lookup"><span data-stu-id="92f8d-103">Contains listeners that collect, store, and route tracing messages.</span></span>  
   
- <span data-ttu-id="68b24-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="68b24-104">\<configuration></span></span>  
-<span data-ttu-id="68b24-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="68b24-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="68b24-106">\<trace></span><span class="sxs-lookup"><span data-stu-id="68b24-106">\<trace></span></span>  
+ <span data-ttu-id="92f8d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="92f8d-104">\<configuration></span></span>  
+<span data-ttu-id="92f8d-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="92f8d-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="92f8d-106">\<trace></span><span class="sxs-lookup"><span data-stu-id="92f8d-106">\<trace></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68b24-107">语法</span><span class="sxs-lookup"><span data-stu-id="68b24-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="92f8d-107">语法</span><span class="sxs-lookup"><span data-stu-id="92f8d-107">Syntax</span></span>  
   
 ```xml  
 <trace autoflush="true|false"   
@@ -32,46 +32,46 @@ ms.locfileid: "55083517"
        useGlobalLock="true| false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="68b24-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="68b24-108">Attributes and Elements</span></span>  
- <span data-ttu-id="68b24-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="68b24-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="92f8d-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="92f8d-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="92f8d-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="92f8d-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="68b24-110">特性</span><span class="sxs-lookup"><span data-stu-id="68b24-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="92f8d-110">特性</span><span class="sxs-lookup"><span data-stu-id="92f8d-110">Attributes</span></span>  
   
-|<span data-ttu-id="68b24-111">特性</span><span class="sxs-lookup"><span data-stu-id="68b24-111">Attribute</span></span>|<span data-ttu-id="68b24-112">描述</span><span class="sxs-lookup"><span data-stu-id="68b24-112">Description</span></span>|  
+|<span data-ttu-id="92f8d-111">特性</span><span class="sxs-lookup"><span data-stu-id="92f8d-111">Attribute</span></span>|<span data-ttu-id="92f8d-112">描述</span><span class="sxs-lookup"><span data-stu-id="92f8d-112">Description</span></span>|  
 |---------------|-----------------|  
-|`autoflush`|<span data-ttu-id="68b24-113">可选特性。</span><span class="sxs-lookup"><span data-stu-id="68b24-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="68b24-114">指定的跟踪侦听器是否在每个写入操作后会自动刷新输出缓冲区。</span><span class="sxs-lookup"><span data-stu-id="68b24-114">Specifies whether the trace listeners automatically flush the output buffer after every write operation.</span></span>|  
-|`indentsize`|<span data-ttu-id="68b24-115">可选特性。</span><span class="sxs-lookup"><span data-stu-id="68b24-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="68b24-116">指定要缩进空格的数。</span><span class="sxs-lookup"><span data-stu-id="68b24-116">Specifies the number of spaces to indent.</span></span>|  
-|`useGlobalLock`|<span data-ttu-id="68b24-117">可选特性。</span><span class="sxs-lookup"><span data-stu-id="68b24-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="68b24-118">指示是否应使用全局锁。</span><span class="sxs-lookup"><span data-stu-id="68b24-118">Indicates whether the global lock should be used.</span></span>|  
+|`autoflush`|<span data-ttu-id="92f8d-113">可选特性。</span><span class="sxs-lookup"><span data-stu-id="92f8d-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="92f8d-114">指定的跟踪侦听器是否在每个写入操作后会自动刷新输出缓冲区。</span><span class="sxs-lookup"><span data-stu-id="92f8d-114">Specifies whether the trace listeners automatically flush the output buffer after every write operation.</span></span>|  
+|`indentsize`|<span data-ttu-id="92f8d-115">可选特性。</span><span class="sxs-lookup"><span data-stu-id="92f8d-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="92f8d-116">指定要缩进空格的数。</span><span class="sxs-lookup"><span data-stu-id="92f8d-116">Specifies the number of spaces to indent.</span></span>|  
+|`useGlobalLock`|<span data-ttu-id="92f8d-117">可选特性。</span><span class="sxs-lookup"><span data-stu-id="92f8d-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="92f8d-118">指示是否应使用全局锁。</span><span class="sxs-lookup"><span data-stu-id="92f8d-118">Indicates whether the global lock should be used.</span></span>|  
   
-## <a name="autoflush-attribute"></a><span data-ttu-id="68b24-119">自动刷新属性</span><span class="sxs-lookup"><span data-stu-id="68b24-119">autoflush Attribute</span></span>  
+## <a name="autoflush-attribute"></a><span data-ttu-id="92f8d-119">自动刷新属性</span><span class="sxs-lookup"><span data-stu-id="92f8d-119">autoflush Attribute</span></span>  
   
-|<span data-ttu-id="68b24-120">值</span><span class="sxs-lookup"><span data-stu-id="68b24-120">Value</span></span>|<span data-ttu-id="68b24-121">描述</span><span class="sxs-lookup"><span data-stu-id="68b24-121">Description</span></span>|  
+|<span data-ttu-id="92f8d-120">“值”</span><span class="sxs-lookup"><span data-stu-id="92f8d-120">Value</span></span>|<span data-ttu-id="92f8d-121">描述</span><span class="sxs-lookup"><span data-stu-id="92f8d-121">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="68b24-122">不自动刷新输出缓冲区。</span><span class="sxs-lookup"><span data-stu-id="68b24-122">Does not automatically flush the output buffer.</span></span> <span data-ttu-id="68b24-123">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="68b24-123">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="68b24-124">自动刷新输出缓冲区。</span><span class="sxs-lookup"><span data-stu-id="68b24-124">Automatically flushes the output buffer.</span></span>|  
+|`false`|<span data-ttu-id="92f8d-122">不自动刷新输出缓冲区。</span><span class="sxs-lookup"><span data-stu-id="92f8d-122">Does not automatically flush the output buffer.</span></span> <span data-ttu-id="92f8d-123">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="92f8d-123">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="92f8d-124">自动刷新输出缓冲区。</span><span class="sxs-lookup"><span data-stu-id="92f8d-124">Automatically flushes the output buffer.</span></span>|  
   
-## <a name="usegloballock-attribute"></a><span data-ttu-id="68b24-125">useGlobalLock Attribute</span><span class="sxs-lookup"><span data-stu-id="68b24-125">useGlobalLock Attribute</span></span>  
+## <a name="usegloballock-attribute"></a><span data-ttu-id="92f8d-125">useGlobalLock Attribute</span><span class="sxs-lookup"><span data-stu-id="92f8d-125">useGlobalLock Attribute</span></span>  
   
-|<span data-ttu-id="68b24-126">值</span><span class="sxs-lookup"><span data-stu-id="68b24-126">Value</span></span>|<span data-ttu-id="68b24-127">描述</span><span class="sxs-lookup"><span data-stu-id="68b24-127">Description</span></span>|  
+|<span data-ttu-id="92f8d-126">“值”</span><span class="sxs-lookup"><span data-stu-id="92f8d-126">Value</span></span>|<span data-ttu-id="92f8d-127">描述</span><span class="sxs-lookup"><span data-stu-id="92f8d-127">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="68b24-128">侦听器是线程安全; 如果不使用全局锁否则，将使用全局锁。</span><span class="sxs-lookup"><span data-stu-id="68b24-128">Does not use the global lock if the listener is thread safe; otherwise, uses the global lock.</span></span>|  
-|`true`|<span data-ttu-id="68b24-129">使用全局锁，而不管侦听器是线程安全。</span><span class="sxs-lookup"><span data-stu-id="68b24-129">Uses the global lock regardless of whether the listener is thread safe.</span></span> <span data-ttu-id="68b24-130">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="68b24-130">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="92f8d-128">侦听器是线程安全; 如果不使用全局锁否则，将使用全局锁。</span><span class="sxs-lookup"><span data-stu-id="92f8d-128">Does not use the global lock if the listener is thread safe; otherwise, uses the global lock.</span></span>|  
+|`true`|<span data-ttu-id="92f8d-129">使用全局锁，而不管侦听器是线程安全。</span><span class="sxs-lookup"><span data-stu-id="92f8d-129">Uses the global lock regardless of whether the listener is thread safe.</span></span> <span data-ttu-id="92f8d-130">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="92f8d-130">This is the default.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="68b24-131">子元素</span><span class="sxs-lookup"><span data-stu-id="68b24-131">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="92f8d-131">子元素</span><span class="sxs-lookup"><span data-stu-id="92f8d-131">Child Elements</span></span>  
   
-|<span data-ttu-id="68b24-132">元素</span><span class="sxs-lookup"><span data-stu-id="68b24-132">Element</span></span>|<span data-ttu-id="68b24-133">描述</span><span class="sxs-lookup"><span data-stu-id="68b24-133">Description</span></span>|  
+|<span data-ttu-id="92f8d-132">元素</span><span class="sxs-lookup"><span data-stu-id="92f8d-132">Element</span></span>|<span data-ttu-id="92f8d-133">描述</span><span class="sxs-lookup"><span data-stu-id="92f8d-133">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="68b24-134">\<listeners></span><span class="sxs-lookup"><span data-stu-id="68b24-134">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|<span data-ttu-id="68b24-135">指定的侦听器，可收集、 存储，并将消息路由。</span><span class="sxs-lookup"><span data-stu-id="68b24-135">Specifies a listener that collects, stores, and routes messages.</span></span>|  
+|[<span data-ttu-id="92f8d-134">\<listeners></span><span class="sxs-lookup"><span data-stu-id="92f8d-134">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|<span data-ttu-id="92f8d-135">指定的侦听器，可收集、 存储，并将消息路由。</span><span class="sxs-lookup"><span data-stu-id="92f8d-135">Specifies a listener that collects, stores, and routes messages.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="68b24-136">父元素</span><span class="sxs-lookup"><span data-stu-id="68b24-136">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="92f8d-136">父元素</span><span class="sxs-lookup"><span data-stu-id="92f8d-136">Parent Elements</span></span>  
   
-|<span data-ttu-id="68b24-137">元素</span><span class="sxs-lookup"><span data-stu-id="68b24-137">Element</span></span>|<span data-ttu-id="68b24-138">描述</span><span class="sxs-lookup"><span data-stu-id="68b24-138">Description</span></span>|  
+|<span data-ttu-id="92f8d-137">元素</span><span class="sxs-lookup"><span data-stu-id="92f8d-137">Element</span></span>|<span data-ttu-id="92f8d-138">描述</span><span class="sxs-lookup"><span data-stu-id="92f8d-138">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="68b24-139">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="68b24-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="68b24-140">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="68b24-140">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`configuration`|<span data-ttu-id="92f8d-139">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="92f8d-139">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="92f8d-140">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="92f8d-140">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="68b24-141">示例</span><span class="sxs-lookup"><span data-stu-id="68b24-141">Example</span></span>  
- <span data-ttu-id="68b24-142">下面的示例演示如何使用`<trace>`元素添加侦听器`MyListener`到`Listeners`集合。</span><span class="sxs-lookup"><span data-stu-id="68b24-142">The following example shows how to use the `<trace>` element to add the listener `MyListener` to the `Listeners` collection.</span></span> <span data-ttu-id="68b24-143">`MyListener` 创建一个名为的文件`MyListener.log`并将输出写入到该文件。</span><span class="sxs-lookup"><span data-stu-id="68b24-143">`MyListener` creates a file that is named `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="68b24-144">`useGlobalLock`属性设置为`false`，这将导致非用于如果跟踪侦听器是线程安全的全局锁。</span><span class="sxs-lookup"><span data-stu-id="68b24-144">The `useGlobalLock` attribute is set to `false`, which causes the global lock not to be used if the trace listener is thread safe.</span></span> <span data-ttu-id="68b24-145">`autoflush`属性设置为`true`，这将导致跟踪侦听器写入到文件而不考虑是否<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>调用方法。</span><span class="sxs-lookup"><span data-stu-id="68b24-145">The `autoflush` attribute is set to `true`, which causes the trace listener to write to the file regardless of whether the <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> method is called.</span></span> <span data-ttu-id="68b24-146">`indentsize`属性设置为 0 （零），这会导致要缩进没有任何空间的侦听器时<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>调用方法。</span><span class="sxs-lookup"><span data-stu-id="68b24-146">The `indentsize` attribute is set to 0 (zero), which causes the listener to indent zero spaces when the <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> method is called.</span></span>  
+## <a name="example"></a><span data-ttu-id="92f8d-141">示例</span><span class="sxs-lookup"><span data-stu-id="92f8d-141">Example</span></span>  
+ <span data-ttu-id="92f8d-142">下面的示例演示如何使用`<trace>`元素添加侦听器`MyListener`到`Listeners`集合。</span><span class="sxs-lookup"><span data-stu-id="92f8d-142">The following example shows how to use the `<trace>` element to add the listener `MyListener` to the `Listeners` collection.</span></span> <span data-ttu-id="92f8d-143">`MyListener` 创建一个名为的文件`MyListener.log`并将输出写入到该文件。</span><span class="sxs-lookup"><span data-stu-id="92f8d-143">`MyListener` creates a file that is named `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="92f8d-144">`useGlobalLock`属性设置为`false`，这将导致非用于如果跟踪侦听器是线程安全的全局锁。</span><span class="sxs-lookup"><span data-stu-id="92f8d-144">The `useGlobalLock` attribute is set to `false`, which causes the global lock not to be used if the trace listener is thread safe.</span></span> <span data-ttu-id="92f8d-145">`autoflush`属性设置为`true`，这将导致跟踪侦听器写入到文件而不考虑是否<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>调用方法。</span><span class="sxs-lookup"><span data-stu-id="92f8d-145">The `autoflush` attribute is set to `true`, which causes the trace listener to write to the file regardless of whether the <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> method is called.</span></span> <span data-ttu-id="92f8d-146">`indentsize`属性设置为 0 （零），这会导致要缩进没有任何空间的侦听器时<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>调用方法。</span><span class="sxs-lookup"><span data-stu-id="92f8d-146">The `indentsize` attribute is set to 0 (zero), which causes the listener to indent zero spaces when the <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> method is called.</span></span>  
   
 ```xml  
 <configuration>  
@@ -85,9 +85,9 @@ ms.locfileid: "55083517"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="68b24-147">请参阅</span><span class="sxs-lookup"><span data-stu-id="68b24-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="92f8d-147">请参阅</span><span class="sxs-lookup"><span data-stu-id="92f8d-147">See also</span></span>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [<span data-ttu-id="68b24-148">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="68b24-148">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [<span data-ttu-id="92f8d-148">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="92f8d-148">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
