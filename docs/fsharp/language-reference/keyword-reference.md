@@ -3,10 +3,10 @@ title: 关键字参考
 description: 找到的所有信息的链接F#语言关键字。
 ms.date: 05/16/2016
 ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
+ms.lasthandoff: 01/31/2019
 ms.locfileid: "54857900"
 ---
 # <a name="keyword-reference"></a>关键字参考
@@ -64,7 +64,7 @@ ms.locfileid: "54857900"
 |`null`|[Null 值](values/null-values.md)<br /><br />[约束](generics/constraints.md)|表示一个对象不存在。<br /><br />此外用于泛型参数约束。|
 |`of`|[可区分联合](discriminated-unions.md)<br /><br />[委托](delegates.md)<br /><br />[异常类型](exception-handling/exception-types.md)|在可区分联合来指示类型的类别的值，并在委托和异常声明中使用。|
 |`open`|[导入声明：`open` 关键字](import-declarations-the-open-keyword.md)|用于使命名空间或模块的内容无需限定即可。|
-|`or`|[符号和运算符参考](symbol-and-operator-reference/index.md)<br /><br />[约束](generics/constraints.md)|一个布尔值，使用布尔条件用作`or`运算符。 等效于||`.<br /><br />此外用于成员约束。|
+|`or`|[符号和运算符参考](symbol-and-operator-reference/index.md)<br /><br />[约束](generics/constraints.md)|一个布尔值，使用布尔条件用作`or`运算符。 等效于 `||`。<br /><br />此外用于成员约束。|
 |`override`|[成员](members/index.md)|用于实现的版本与基版本不同的抽象或虚拟方法。|
 |`private`|[访问控制](access-control.md)|将访问限制为成员添加到相同类型或模块中的代码。|
 |`public`|[访问控制](access-control.md)|允许访问外部类型中的成员。|

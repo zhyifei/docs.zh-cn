@@ -9,15 +9,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7083c4b15e2693c0c76e6ca7c9a00e4c4dab56c
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513719"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480057"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>演练：缓存在 WPF 应用程序的应用程序数据
-缓存可以将数据存储在内存中以便快速访问。 当再次访问数据时，应用程序可以改为从原始源检索缓存中获取数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。
+缓存可以将数据存储在内存中以便快速访问。 再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。
 
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供了使你能够使用缓存中的类[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]应用程序。 这些类都位于<xref:System.Runtime.Caching>命名空间。
 
@@ -218,7 +218,7 @@ ms.locfileid: "54513719"
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     如果未不提供任何逐出或过期的信息，默认值是<xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>，这意味着缓存项永远不会过期时间取决于只有一个绝对时间。 相反，缓存条目过期仅当内存压力时。 作为最佳做法，应始终显式提供绝对或可调过期。
+     如果未不提供任何逐出或过期的信息，默认值是<xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>，这意味着缓存项永远不会过期时间取决于只有一个绝对时间。 相反，缓存条目过期仅当内存压力时。 作为最佳做法，应始终显式提供绝对或可调到期。
 
 7.  内部`if/then`阻止和上一步中添加的代码，添加以下代码以创建你想要监视，并将文本文件的路径添加到集合的文件路径的集合：
 
@@ -254,7 +254,7 @@ ms.locfileid: "54513719"
     ```
 
     ```csharp
-    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + + "\n" + DateTime.Now;
+    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
      以便你将能够看到该缓存项过期时添加的日期和时间的时间戳。
@@ -296,7 +296,7 @@ ms.locfileid: "54513719"
 
      在消息框中显示文本文件中缓存的内容。 请注意，该文件上的时间戳。
 
-3.  关闭消息框，然后单击**获取缓存**再次 **。**
+3.  关闭消息框，然后单击**获取缓存**试。
 
      时间戳保持不变。 这将指示显示缓存的内容。
 
@@ -306,7 +306,7 @@ ms.locfileid: "54513719"
 
 5.  在文本编辑器中，打开您创建的文本文件。 不进行任何更改。
 
-6.  关闭消息框，然后单击**获取缓存**再次 **。**
+6.  关闭消息框，然后单击**获取缓存**试。
 
      请再次注意时间戳。
 
