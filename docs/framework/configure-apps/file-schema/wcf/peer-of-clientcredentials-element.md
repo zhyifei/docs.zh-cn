@@ -1,15 +1,15 @@
 ---
-title: '&lt;clientCredentials&gt; 的 &lt;peer&gt; 元素'
+title: <peer> <clientCredentials>元素
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: f933e4c6719437d530e0cf90e3aa1da3a8143060
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8970100b1ad3019ff4a639d835d1db1430968008
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616207"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275136"
 ---
-# <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 的 &lt;peer&gt; 元素
+# <a name="peer-of-clientcredentials-element"></a>\<对等方 > 的\<clientCredentials > 元素
 指定在向对等客户端进行身份验证时使用的凭据。  
   
  \<system.ServiceModel>  

@@ -1,5 +1,5 @@
 ---
-title: 构造函数&#39;&lt;名称&gt;&#39;不能调用自身
+title: 构造函数“<name>”不能调用自身
 ms.date: 07/20/2015
 f1_keywords:
 - bc30298
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: 4a02277893147716098a3dcc327e221e0775d476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67933e9365b1aa18063f0ccf3c2146a261e7eafc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662720"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276037"
 ---
-# <a name="constructor-39ltnamegt39-cannot-call-itself"></a>构造函数&#39;&lt;名称&gt;&#39;不能调用自身
+# <a name="constructor-name-cannot-call-itself"></a>构造函数\<名称 > 不能调用自身
 一个`Sub New`类或结构中的过程调用其自身。  
   
  结构首次创建或构造函数的用途是初始化类的实例。 类或结构可以具有多个构造函数，前提是它们都具有不同的参数列表。 构造函数可以调用另一个构造函数来执行其功能，此外还是其自身。 它是构造函数来调用本身，这对于没有意义，但实际上这会导致无限递归如果允许。  

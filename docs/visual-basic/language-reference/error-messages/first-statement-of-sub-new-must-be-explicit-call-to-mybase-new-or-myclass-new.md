@@ -1,5 +1,5 @@
 ---
-title: 此第一条语句&#39;Sub New&#39;必须是显式调用&#39;MyBase.New&#39;或&#39;MyClass.New&#39;因为&#39; &lt;constructorname&gt; &#39;在基类中&#39;&lt;a m e&gt; &#39;的&#39; &lt;derivedclassname&gt; &#39;标记为已过时： &#39; &lt;errormessage&gt;&#39;
+title: 此“Sub New”的第一条语句必须是对“MyBase.New”或“MyClass.New”的显式调用，因为“<constructorname>”的基类“<baseclassname>”中的“<derivedclassname>”被标记为已过时：“<errormessage>”
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30920
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 9d07a68fd8d9790178427c512375323f23f46772
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31f92d1e52e50b2a87fd6a6af6e3c87292f4437f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566762"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268786"
 ---
-# <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>此第一条语句&#39;Sub New&#39;必须是显式调用&#39;MyBase.New&#39;或&#39;MyClass.New&#39;因为&#39; &lt;constructorname&gt; &#39;在基类中&#39;&lt;a m e&gt; &#39;的&#39; &lt;derivedclassname&gt; &#39;标记为已过时： &#39; &lt;errormessage&gt;&#39;
+# <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>此 Sub New 的第一个语句必须是对 MyBase.New 或 MyClass.New 的显式调用，因为\<constructorname > 在基类的\<a m e >' 的 '\<derivedclassname > 标记为已过时:\<错误消息 >'
 类构造函数不显式调用基类构造函数，并且隐式基类构造函数标有 <xref:System.ObsoleteAttribute> 特性和将其视为错误的指令。  
   
  当在派生的类构造函数未调用基类构造函数时，Visual Basic 将尝试生成对无参数基类构造函数的隐式调用。 如果可以调用不带参数的基类中没有任何可访问的构造函数，Visual Basic 不能生成的隐式调用。 在这种情况下，所需的构造函数标有<xref:System.ObsoleteAttribute>属性，因此 Visual Basic 不能调用它。  

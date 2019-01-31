@@ -1,15 +1,15 @@
 ---
-title: '&lt;claimTypeRequirements&gt; 元素'
+title: <claimTypeRequirements> 元素
 ms.date: 03/30/2017
 ms.assetid: a26efe73-4bad-4731-8cad-27f00d54354b
-ms.openlocfilehash: 32eafa3ce235b2087012bd5810a685ad5276e09d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95cc1adf7ab37475e8d3eeb01750531a7f8ab249
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632877"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279625"
 ---
-# <a name="ltclaimtyperequirementsgt-element"></a>&lt;claimTypeRequirements&gt; 元素
+# <a name="claimtyperequirements-element"></a>\<claimTypeRequirements > 元素
 指定所需声明类型的集合。  
   
  在联合方案中，服务规定有关传入凭据的要求。 例如，传入凭据必须具有某组声明类型。 此集合中的每个子元素都指定希望出现在联合凭据中的必选和可选的声明类型。  

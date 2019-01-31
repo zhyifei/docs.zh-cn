@@ -1,5 +1,5 @@
 ---
-title: '&lt;enforceFIPSPolicy&gt;元素'
+title: <enforceFIPSPolicy> 元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - enforceFIPSPolicy element
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 990add41d5f48da19f6bc20e4bbff19f36132df6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a4e5ba5ac1a5a3c08c351531efc84291925ba4b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742102"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267464"
 ---
-# <a name="ltenforcefipspolicygt-element"></a>&lt;enforceFIPSPolicy&gt;元素
+# <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy > 元素
 指定是否强制执行以下计算机配置要求：加密算法必须符合美国联邦信息处理标准 (FIPS)。  
   
  \<配置 > 元素  

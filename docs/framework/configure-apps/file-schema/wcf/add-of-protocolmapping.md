@@ -1,15 +1,15 @@
 ---
-title: '&lt;protocolMapping&gt; 的 &lt;add&gt;'
+title: <add> 的 <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: ce970b9ef71e2a28de680926f96f83500948619b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18b50ec2d848bc6bb920fb8f630ac7703654b286
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632811"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280730"
 ---
-# <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;protocolMapping&gt; 的 &lt;add&gt;
+# <a name="add-of-protocolmapping"></a>\<add> of \<protocolMapping>
 表示传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 Windows Communication Foundation (WCF) 绑定之间的默认协议映射。 当在运行时创建默认终结点，WCF 查看已配置的映射，并决定要用于特定的绑定基于此地址。  
   
  \<system.serviceModel>  

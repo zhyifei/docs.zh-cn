@@ -1,5 +1,5 @@
 ---
-title: 后期绑定重载决策不能应用于&#39;&lt;过程名称&gt;&#39;因为访问实例是一个接口类型
+title: 后期绑定重载决策不能应用于“<procedurename>”，因为访问实例是一个接口类型
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30933
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: db0ce88f63be8d58cc1c1abf91eda6a0e56456c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7215be3f454f4a799124620fb5db520282988035
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651508"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272626"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>后期绑定重载决策不能应用于&#39;&lt;过程名称&gt;&#39;因为访问实例是一个接口类型
+# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>后期绑定重载决策不能应用于\<过程名称 > 因为访问实例是一个接口类型
 编译器尝试解析对重载的属性或过程中，但引用失败，因为参数的类型`Object`和引用对象具有一个接口的数据类型。 `Object`参数强制编译器将引用解析为后期绑定。  
   
  在这些情况下，编译器将通过实现类而不是通过基础接口的重载解析。 如果类重命名其中一个重载版本，则编译器将不考虑该版本是重载方法，因为其名称不同。 这反过来会导致编译器忽略重命名的版本时可能已正确的选择来解析引用。  

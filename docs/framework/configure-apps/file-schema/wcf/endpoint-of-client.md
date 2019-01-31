@@ -1,15 +1,15 @@
 ---
-title: '&lt;client&gt; 的 &lt;endpoint&gt;'
+title: <endpoint> 的 <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: a7d95ee819c911d80178e38a37aeaccc5b1f1764
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c934ac26a648eea4822cc7ae782dfbbfe0d99e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598300"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287763"
 ---
-# <a name="ltendpointgt-of-ltclientgt"></a>&lt;client&gt; 的 &lt;endpoint&gt;
+# <a name="endpoint-of-client"></a>\<终结点 > 的\<客户端 >
 指定通道终结点的协定、绑定和地址属性，客户端使用通道终结点与服务器上的服务终结点连接。  
   
  \<system.ServiceModel>  

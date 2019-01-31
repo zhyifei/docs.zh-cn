@@ -1,5 +1,5 @@
 ---
-title: '&#39;设置&#39;属性访问器&#39; &lt;propertyname&gt; &#39;不可访问'
+title: 属性“<propertyname>”的“Set”访问器不可访问
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31102
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31102
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
-ms.openlocfilehash: a543506b06742f3ee9101edbac962e761ddd531d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1539eb1652d93402c349c65f77a3edc65b3beb57
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606564"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277558"
 ---
-# <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;设置&#39;属性访问器&#39; &lt;propertyname&gt; &#39;不可访问
+# <a name="set-accessor-of-property-propertyname-is-not-accessible"></a>Set 访问器属性的\<属性名称 > 不可访问
 语句试图存储属性的值不包含属性的访问权限时`Set`过程。  
   
  如果[Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)标记具有限制性更强的访问权限级别比其[Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)，尝试设置属性值在以下情况下可能会失败：  

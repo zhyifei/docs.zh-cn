@@ -1,5 +1,5 @@
 ---
-title: 如何：托管和运行基本 Windows Communication Foundation 服务
+title: 如何托管并运行基本的 Windows Communication Foundation 服务
 ms.date: 09/14/2018
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a029ef23ba3e9a0dd62e410739fa8734acc202a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129371"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277766"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>如何：托管和运行基本 Windows Communication Foundation 服务
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>如何托管并运行基本的 Windows Communication Foundation 服务
 
-这是创建 Windows Communication Foundation (WCF) 应用程序所需六项任务中的第三项。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。
+这是创建 Windows Communication Foundation (WCF) 应用程序所需六项任务中的第三项。 有关全部六项任务的概述，请参阅[入门教程](getting-started-tutorial.md)主题。
 
 本主题说明如何在控制台应用程序中承载 Windows Communication Foundation (WCF) 服务。 此过程包含以下步骤：
 
@@ -142,14 +142,14 @@ End Module
 
 **步骤 2** – 创建的实例<xref:System.ServiceModel.ServiceHost>类以承载服务。 构造函数采用两个参数：实现服务协定的类的类型，以及服务的基址。
 
-**步骤 3** – 创建<xref:System.ServiceModel.Description.ServiceEndpoint>实例。 服务终结点由地址、绑定和服务协定组成。 因此<xref:System.ServiceModel.Description.ServiceEndpoint> 构造函数采用服务协定接口类型、绑定和地址。 服务协定是在服务类型中定义和实现的 `ICalculator`。 在此示例中使用的绑定是 <xref:System.ServiceModel.WSHttpBinding>，这是用于连接到符合 WS-＊ 规范的终结点的内置绑定。 有关 WCF 绑定的详细信息，请参阅 [WCF 绑定概述](../../../docs/framework/wcf/bindings-overview.md)。 该地址追加到基址以标识终结点。 在此代码中指定的地址为"CalculatorService"，因此终结点的完全限定的地址是`"http://localhost:8000/GettingStarted/CalculatorService"`。
+**步骤 3** – 创建<xref:System.ServiceModel.Description.ServiceEndpoint>实例。 服务终结点由地址、绑定和服务协定组成。 因此<xref:System.ServiceModel.Description.ServiceEndpoint> 构造函数采用服务协定接口类型、绑定和地址。 服务协定是在服务类型中定义和实现的 `ICalculator`。 在此示例中使用的绑定是 <xref:System.ServiceModel.WSHttpBinding>，这是用于连接到符合 WS-＊ 规范的终结点的内置绑定。 有关 WCF 绑定的详细信息，请参阅 [WCF 绑定概述](bindings-overview.md)。 该地址追加到基址以标识终结点。 在此代码中指定的地址为"CalculatorService"，因此终结点的完全限定的地址是`"http://localhost:8000/GettingStarted/CalculatorService"`。
 
     > [!IMPORTANT]
-    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](simplified-configuration.md) and [Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md).
 
-**步骤 4** -启用元数据交换。 客户端将使用元数据交换来生成将用于调用服务操作的代理。 要启用元数据交换，请创建 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 实例，将其 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 属性设置为 `true`，并将行为添加到 <xref:System.ServiceModel.ServiceHost> 实例的 <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` 集合。
+**步骤 4** -启用元数据交换。 客户端将使用元数据交换来生成将用于调用服务操作的代理。 要启用元数据交换，请创建 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 实例，将其 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 属性设置为 `true`，并将行为添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 实例的 <xref:System.ServiceModel.ServiceHost> 集合。
 
-**步骤 5** – 打开<xref:System.ServiceModel.ServiceHost>侦听传入消息。 注意，代码会等待用户按 Enter。 如果不这样做，应用程序将立即关闭，并且服务将关闭。另请注意，使用了 try/catch 块。 在实例化 <xref:System.ServiceModel.ServiceHost> 后，所有其他代码放置在 try/catch 块中。 有关安全捕获引发的异常详细信息<xref:System.ServiceModel.ServiceHost>，请参阅[使用关闭和中止发布 WCF 客户端资源](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+**步骤 5** – 打开<xref:System.ServiceModel.ServiceHost>侦听传入消息。 注意，代码会等待用户按 Enter。 如果不这样做，应用程序将立即关闭，并且服务将关闭。另请注意，使用了 try/catch 块。 在实例化 <xref:System.ServiceModel.ServiceHost> 后，所有其他代码放置在 try/catch 块中。 有关安全捕获引发的异常详细信息<xref:System.ServiceModel.ServiceHost>，请参阅[使用关闭和中止发布 WCF 客户端资源](samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > 编辑 App.config 中 GettingStartedLib 以反映在代码中所做的更改：
@@ -396,18 +396,18 @@ End Module
 ```
 
 > [!NOTE]
-> 此类服务需要在计算机上注册 HTTP 地址以进行侦听的权限。 管理员帐户具有此权限，但对于非管理员帐户来说，必须授予对 HTTP 命名空间的权限。 有关如何配置命名空间预留的详细信息，请参阅[配置 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 在 Visual Studio 下运行时，必须使用管理员特权运行 service.exe。
+> 此类服务需要在计算机上注册 HTTP 地址以进行侦听的权限。 管理员帐户具有此权限，但对于非管理员帐户来说，必须授予对 HTTP 命名空间的权限。 有关如何配置命名空间预留的详细信息，请参阅[配置 HTTP 和 HTTPS](feature-details/configuring-http-and-https.md)。 在 Visual Studio 下运行时，必须使用管理员特权运行 service.exe。
 
 ## <a name="next-steps"></a>后续步骤
 
 此时服务正在运行。 在下一个任务中，将创建 WCF 客户端。
 
 > [!div class="nextstepaction"]
-> [如何：创建 WCF 客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [如何：创建 WCF 客户端](how-to-create-a-wcf-client.md)
 
-有关疑难解答的信息，请参阅[疑难解答入门教程](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。
+有关疑难解答的信息，请参阅[疑难解答入门教程](troubleshooting-the-getting-started-tutorial.md)。
 
 ## <a name="see-also"></a>请参阅
 
-- [入门](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [自承载](../../../docs/framework/wcf/samples/self-host.md)
+- [入门](samples/getting-started-sample.md)
+- [自承载](samples/self-host.md)

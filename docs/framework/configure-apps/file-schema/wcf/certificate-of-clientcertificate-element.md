@@ -1,15 +1,15 @@
 ---
-title: '&lt;clientCertificate&gt; 的 &lt;certificate&gt; 元素'
+title: <certificate> <clientCertificate>元素
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
-ms.openlocfilehash: 37eef7a435447d22b56e865ac72ef5d4c1ff0674
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94241d022e8a97253100a67e2a779593861c093c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708891"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286450"
 ---
-# <a name="ltcertificategt-of-ltclientcertificategt-element"></a>&lt;clientCertificate&gt; 的 &lt;certificate&gt; 元素
+# <a name="certificate-of-clientcertificate-element"></a>\<证书 > 的\<clientCertificate > 元素
 指定用于对消息进行签名和加密的 X.509 证书。  
   
  \<system.ServiceModel>  

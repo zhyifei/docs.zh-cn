@@ -1,5 +1,5 @@
 ---
-title: 从隐式转换&#39; &lt;typename1&gt; &#39;到&#39; &lt;typename2&gt; &#39;的值复制&#39;ByRef&#39;参数&#39; &lt;parametername&gt; &#39;返回到匹配的参数。
+title: 将“ByRef”参数“<typename1>”的值复制回匹配参数时，发生从“<typename2>”到“<parametername>”的隐式转换。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc41999
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 9f05a5fbcbef828b4ffa920d8cade475cedb64d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f875206b15ee048311e43624e197e78413de522e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537227"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279612"
 ---
-# <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>从隐式转换&#39; &lt;typename1&gt; &#39;到&#39; &lt;typename2&gt; &#39;的值复制&#39;ByRef&#39;参数&#39; &lt;parametername&gt; &#39;返回到匹配的参数。
+# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>从隐式转换\<typename1 > 到\<typename2 >' ByRef 参数的值复制\<参数名 > 返回到匹配的参数。
 与调用了过程[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)比其对应的参数的不同类型的参数。  
   
  如果传递参数`ByRef`，Visual Basic 有时会将参数值复制到本地变量中而不是传递一个引用，该过程。 在这种情况下，当过程返回时，Visual Basic 必须然后将本地变量值复制回调用代码中的参数。  

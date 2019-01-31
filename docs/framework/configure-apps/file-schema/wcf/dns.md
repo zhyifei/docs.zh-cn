@@ -1,15 +1,15 @@
 ---
-title: '&lt;dns&gt;'
+title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: 68cbb25b79bbda301c29d72800a125c7a6ba0b6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb5459625cf58feeef5ba29d76e74691a4f87cc8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616454"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278416"
 ---
-# <a name="ltdnsgt"></a>&lt;dns&gt;
+# <a name="dns"></a>\<dns>
 指定服务器的所需标识。 如果服务器的证书包含具有相同值的 DNS，则此标识对于 X509 证书身份验证模式有效。 如果 SPN 具有相同值，则它对于 Windows 身份验证模式同样有效。  
   
  有关设置元素值的详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
