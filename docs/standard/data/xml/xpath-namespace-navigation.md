@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6d4f63dacc09208176b47dbca38783f1e9bc0a1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 373d1e4e5089b23ecaeffd10fd167b701b75760c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45743977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702894"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath 命名空间浏览
 要对 XML 文档使用 XPath 查询，必须正确定位 XML 命名空间以及命名空间中包含的元素。 命名空间可防止在多个上下文中使用名称时可能产生的混淆情况；例如，名称 `ID` 可能引用与 XML 文档的不同元素相关联的多个标识符。 命名空间语法指定了 URI、名称和前缀，可区分 XML 文档的各个元素。  
@@ -20,7 +20,7 @@ ms.locfileid: "45743977"
 ## <a name="namespace-declarations"></a>命名空间声明  
  命名空间声明使得在使用 <xref:System.Xml.XPath.XPathNavigator> 的实例时，很容易区分和定位 XML 文档的各个元素。 命名空间前缀提供了一种简化的语法，用来定位命名空间。  
   
- 前缀可按此形式定义：`<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` 在此语法中，前缀“`e`”是命名空间的正式 URI 的缩写。 使用此语法可以将 `Body` 元素标识为 `Envelope` 命名空间的成员：`e:Body`。  
+ 前缀由以下形式定义：`<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` 在此语法中，前缀“`e`”是命名空间的正式 URI 的缩写。 使用此语法可以将 `Body` 元素标识为 `Envelope` 命名空间的成员：`e:Body`。  
   
  在下一节的浏览示例中，下面的 XML 文档将用作 `response.xml`。  
   
@@ -72,5 +72,5 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
   
 ## <a name="see-also"></a>请参阅
 
-- [使用 XPathNavigator 访问 XML 数据](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+- [使用 XPathNavigator 访问 XML 数据](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
 - [使用 XPathNavigator 选择、计算和匹配 XML 数据](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

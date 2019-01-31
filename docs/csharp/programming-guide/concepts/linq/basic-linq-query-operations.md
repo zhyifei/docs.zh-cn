@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 60b9e1862c7ffd212f19cdc331930e3b5d120763
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: efd4c41731b196b55676d72342e359ccb0736f91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728346"
 ---
 # <a name="basic-linq-query-operations-c"></a>基本 LINQ 查询操作 (C#)
 本主题简要介绍了 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式和一些在查询中执行的典型操作。 下面各主题中提供了更具体的信息：  
@@ -44,7 +44,7 @@ ms.locfileid: "53131287"
  范围变量就像 `foreach` 循环中的迭代变量，但查询表达式中不会真正发生迭代。 当执行查询时，范围变量将充当对 `customers` 中每个连续的元素的引用。 由于编译器可以推断 `cust` 的类型，因此无需显式指定它。 可通过 `let` 子句引入其他范围变量。 有关详细信息，请参阅 [let 子句](../../../../csharp/language-reference/keywords/let-clause.md)。  
   
 > [!NOTE]
->  对于非泛型数据源（例如 <xref:System.Collections.ArrayList>），必须显式键入范围变量。 有关详细信息，请参阅[如何：使用 LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) 和 [From 子句](../../../../csharp/language-reference/keywords/from-clause.md)查询 ArrayList。  
+>  对于非泛型数据源（例如 <xref:System.Collections.ArrayList>），必须显式键入范围变量。 有关详细信息，请参阅[如何：使用 LINQ 查询 ArrayList (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) 和 [from 子句](../../../../csharp/language-reference/keywords/from-clause.md)。  
   
 ## <a name="filtering"></a>筛选  
  或许，最常见的查询操作是以布尔表达式的形式应用筛选器。 筛选器使查询仅返回表达式为 true 的元素。 将通过使用 `where` 子句生成结果。 筛选器实际指定要从源序列排除哪些元素。 在下列示例中，仅返回地址位于“London”的 `customers`。  
@@ -101,8 +101,8 @@ from order in Customer.Orders...
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 中的 LINQ 入门](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [LINQ 查询表达式](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [演练：用 C# 编写查询](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [查询关键字 (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
+- [C# 中的 LINQ 入门](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ 查询表达式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [演练：用 C# 编写查询](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [查询关键字 (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
 - [匿名类型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

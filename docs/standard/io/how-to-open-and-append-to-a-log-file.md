@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35a7d481cf82818054a852f7c2e142f615022fcb
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 351daa2a13c4a8c4b1551ce74d2eaa6d032f1f17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48848148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622724"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>如何：打开并追加到日志文件
 <xref:System.IO.StreamWriter> 和 <xref:System.IO.StreamReader> 对流执行字符写入和读取操作。 下面的代码示例打开 `log.txt` 文件以供输入，或创建文件（如果尚无文件的话），并将信息追加到文件末尾。 然后，将文件内容写入标准输出以供显示。 作为此示例的替换方法，可以将信息存储为一个字符串或字符串数组，并能使用 <xref:System.IO.File.WriteAllText%2A> 或 <xref:System.IO.File.WriteAllLines%2A> 方法实现相同的功能。  
@@ -32,15 +32,15 @@ ms.locfileid: "48848148"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.IO.StreamWriter>  
-- <xref:System.IO.StreamReader>  
-- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>  
-- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
-- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
-- [如何：枚举目录和文件](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [如何：对新建的数据文件进行读取和写入](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [如何：从文件读取文本](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [如何：向文件写入文本](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [如何：从字符串中读取字符](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [如何：向字符串写入字符](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- <xref:System.IO.StreamWriter>
+- <xref:System.IO.StreamReader>
+- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>
+- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>
+- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>
+- [如何：枚举目录和文件](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [如何：对新建的数据文件进行读取和写入](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [如何：从文件中读取文本](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [如何：将文本写入文件](../../../docs/standard/io/how-to-write-text-to-a-file.md)
+- [如何：从字符串中读取字符](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- [如何：向字符串写入字符](../../../docs/standard/io/how-to-write-characters-to-a-string.md)
 - [文件和流 I/O](../../../docs/standard/io/index.md)

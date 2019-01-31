@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4d3bf7db928f926b802c08ee5e61edf86055b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 32b212f336e622719d9979d46ea885deb919c51c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635021"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中的过时类型
 <a name="introduction"></a>本文中的表格列出了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中由程序集组织的过时的类型。 使用以下链接可查看每个程序集中过时的类型和建议的备选项的列表。 由于这些类型已过时，因此其所有成员也已过时。 有关 .NET Framework 类库中其他过时成员的列表，请参阅[过时成员](../../../docs/framework/whats-new/obsolete-members.md)。
@@ -84,7 +84,7 @@ ms.locfileid: "47196743"
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|请改用 <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType>。|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|<xref:System.Configuration.Assemblies.AssemblyHash> 类已弃用。|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|在 .NET Framework 4.5 中首次被废弃。 请改用 System.Runtime.CompilerServices 命名空间中的 <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> 类。|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|备用 API 可用：改为发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自定义特性。|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|有一个可用的备用 API：发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自定义特性。|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>。|
@@ -777,4 +777,5 @@ ms.locfileid: "47196743"
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll 是已过时的程序集，仅出于向后兼容目的而存在。|
 
 ## <a name="see-also"></a>请参阅
- [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md) [过时成员](../../../docs/framework/whats-new/obsolete-members.md)
+- [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)
+- [过时成员](../../../docs/framework/whats-new/obsolete-members.md)

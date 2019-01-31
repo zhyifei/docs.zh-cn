@@ -2,12 +2,12 @@
 title: 演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3320e866-01f1-4b7f-8932-049a7b2d2a9b
-ms.openlocfilehash: 381173eedc209930e011dfa7f1711167f16d5ef6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 20ed45b1796062973a1d4a9bcaa86782655d3867
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732695"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (C#)
 如果在引用 COM 对象的应用程序中嵌入类型信息，则无需使用主互操作程序集 (PIA)。 此外，利用嵌入的类型信息可实现应用程序的版本独立性。 也就是说，可将程序编写为使用多个 COM 库版本中的类型，而无需使用每个版本的特定 PIA。 对于使用 Microsoft Office 库中对象的应用程序，这是一种常用方案。 通过嵌入类型信息，程序的同一个生成可以使用不同计算机上的不同 Microsoft Office 版本，而无需为 Microsoft Office 的每个版本重新部署该程序或 PIA。  
@@ -126,5 +126,5 @@ ms.locfileid: "44187963"
   
 ## <a name="see-also"></a>请参阅
 
-- [演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [/link（C# 编译器选项）](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)

@@ -2,15 +2,15 @@
 title: 面向对象的编程 (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8e211fec25ceb2e8e42620ff3f421e6943d8b5e5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8f7a810b3f3ec74723ca5e715b7428e1b60928f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702478"
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
-C# 提供对面向对象的编程（包括封装、继承和多态性）的完整支持。  
+C# 提供对面向对象的编程（包括封装、继承和多形性）的完整支持。  
   
  “封装”意味着将一组相关属性、方法和其他成员视为一个单元或对象。  
   
@@ -226,7 +226,7 @@ Container.Nested nestedInstance = new Container.Nested()
 |------------------|----------------|  
 |[public](../../../csharp/language-reference/keywords/public.md)|同一程序集中的任何其他代码或引用该程序集的其他程序集都可以访问该类型或成员。|  
 |[private](../../../csharp/language-reference/keywords/private.md)|只有同一类中的代码可以访问该类型或成员。|  
-|[protected](../../../csharp/language-reference/keywords/protected.md)|只有同一类或派生类中的代码可以访问该类型或成员。|  
+|[受保护](../../../csharp/language-reference/keywords/protected.md)|只有同一类或派生类中的代码可以访问该类型或成员。|  
 |[internal](../../../csharp/language-reference/keywords/internal.md)|同一程序集中的任何代码都可以访问该类型或成员，但其他程序集中的代码不可以。|  
 |[受保护的内部](../../../csharp/language-reference/keywords/protected-internal.md)|同一程序集中的任何代码或其他程序集中的任何派生类都可以访问该类型或成员。|  
 |[专用受保护](../../../csharp/language-reference/keywords/private-protected.md)|同一类或基类程序集内派生类中的代码可以访问该类型或成员。|  
@@ -296,7 +296,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };  
 ```  
   
- 有关详细信息，请参阅：[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
+ 有关详细信息，请参见:[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
   
 ##  <a name="Inheritance"></a> 继承  
  通过继承，可以创建一个新类，它重用、扩展和修改另一个类中定义的行为。 其成员被继承的类称为“基类”，继承这些成员的类称为“派生类”。 但是，C# 中的所有类都隐式继承自 <xref:System.Object> 类，该类支持 .NET 类层次结构，并为所有类提供低级别服务。  
@@ -432,7 +432,7 @@ class SampleClass
   
 -   [委托](../../../csharp/programming-guide/delegates/index.md)  
   
--   [委托](../../../csharp/language-reference/keywords/delegate.md)  
+-   [delegate](../../../csharp/language-reference/keywords/delegate.md)  
   
 ## <a name="see-also"></a>请参阅
 

@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用 | 在 ASP.NET
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a30d6708b87687ee4d5cdb13452662e264a1b54c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532677"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>在 ASP.NET Core 应用中使用数据
 
@@ -21,7 +21,7 @@ ms.locfileid: "53147169"
 
 ## <a name="entity-framework-core-for-relational-databases"></a>Entity Framework Core（适用于关系数据库）
 
-如果要编写需要使用关系数据的新的 ASP.NET Core 应用程序，则 Entity Framework Core (EF Core) 是应用程序访问数据的建议方式。 EF Core 是一种支持 .NET 开发人员将对象保存到数据源或从数据源中保存的对象关系映射程序 (O/RM)。 它不要求提供开发人员通常需要编写的大部分数据访问代码。 与 ASP.NET Core 一样，EF Core 经过完全重新编写以支持模块化跨平台应用程序。 将其作为 NuGet 包添加到应用程序中，在启动中配置它，并在需要的任何位置通过依赖关系注入请求它。
+如果要编写需要使用关系数据的新的 ASP.NET Core 应用程序，则 Entity Framework Core (EF Core) 是应用程序访问数据的建议方式。 EF Core 是一种支持 .NET 开发人员将对象保存到数据源或从数据源中保存的对象关系映射程序 (O/RM)。 它不要求提供开发人员通常需要编写的大部分数据访问代码。 与 ASP.NET Core 一样，EF Core 经过完全重新编写以支持模块化跨平台应用程序。 将其添加到应用程序作为 NuGet 包，在启动中配置它，并在需要的任何位置通过依赖关系注入请求它。
 
 若要将 EF Core 用于 SQL Server，请运行以下 dotnet CLI 命令：
 
@@ -165,7 +165,7 @@ public class Startup
 
 在 EF Core 连接中启用重试时，使用 EF Core 执行的每项操作都会成为其自己的可重试操作。 如果发生暂时性故障，每个查询和 SaveChanges 的每次调用都会作为一个单元进行重试。
 
-但是，如果代码使用 BeginTransaction 启动事务，这表示在定义一组自己的操作，这些操作需要被视为一个单元 - 如果发生故障，事务内的所有内容都会回退。 如果在使用 EF 执行策略（重试策略）时尝试执行该事务，并且事务中包含一些来自多个 DbContext 的 SaveChanges，则会看到与下列情况类似的异常。
+但是，如果代码使用 BeginTransaction 启动事务，这表示在定义一组自己的操作，这些操作需要被视为一个单元；如果发生故障，事务内的所有内容都会回退。 如果在使用 EF 执行策略（重试策略）时尝试执行该事务，并且事务中包含一些来自多个 DbContext 的 SaveChanges，则会看到与下列情况类似的异常。
 
 System.InvalidOperationException：已配置的执行策略“SqlServerRetryingExecutionStrategy”不支持用户启动的事务。 使用由“DbContext.Database.CreateExecutionStrategy()”返回的执行策略执行事务（作为一个可回溯单元）中的所有操作。
 
@@ -200,7 +200,7 @@ await strategy.ExecuteAsync(async () =>
 >
 > - **EF Core 文档**  
 >   <https://docs.microsoft.com/ef/>
-> - **EF Core：相关数据**  
+> - **EF Core：关联数据**  
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **避免延迟加载 ASPNET 应用程序中的实体**  
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8717d00b706edf37ce1112bc6d96048d6daa9cd
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: ae6cb54d73c56db7c118b617e070ea86944adeaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53781071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720205"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>安装和卸载 .NET Framework 受阻疑难解答
 
@@ -24,7 +24,7 @@ ms.locfileid: "53781071"
 > [!IMPORTANT]
 > 由于 .NET Framework 4.x 版本是就地更新，不能在已装有更高版本 .NET Framework 4.x 的系统上安装其早期版本。 例如，在使用 Windows 10 Fall Creators Update 的系统上无法安装 .NET Framework 4.6.2，因为 .NET Framework 4.7.1 已随操作系统预安装。
 
-可以确定系统上安装了哪些版本的 .NET Framework。 请参阅[操作说明：确定已安装的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)以获取详细信息。
+可以确定系统上安装了哪些版本的 .NET Framework。 请参阅[如何：确定已安装的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)以获取详细信息。
 
 在此表中，4.5.x 指 .NET Framework 4.5 及其单点版本 4.5.1 和 4.5.2，4.6.x 指 .NET Framework 4.6 及其单点版本 4.6.1 和 4.6.2，4.7.x 指 .NET Framework 4.7 及其单点版本 4.7.1 和 4.7.2。
 
@@ -33,7 +33,7 @@ ms.locfileid: "53781071"
 |卸载 Microsoft .NET Framework 可能会导致某些应用程序无法正常工作。|通常，你不应卸载计算机上安装的 .NET Framework 的任何版本，因为你使用的应用程序可能取决于 .NET Framework 的特定版本。 有关详细信息，请参阅*入门*指南中的[面向用户的 .NET Framework](../../../docs/framework/get-started/index.md#ForUsers)。|  
 |此计算机上已安装 .NET Framework 4.5.x/4.6.x/4.7.x (ENU) 或更高版本。|无需执行任何操作。<br /><br /> 要确定系统上安装了哪些版本的 .NET Framework，请参阅[如何：确定已安装的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。|  
 |.NET Framework 4.5.x/4.6.x/4.7.x (语言) 需要 .NET Framework 4.5.x/4.6.x/4.7.x。 请从下载中心安装 .NET Framework 4.5.x/4.6.x/4.7.x 并重新运行安装程序。|你必须先安装 .NET Framework 指定版本的英文版，然后再安装语言包。 有关详细信息，请参阅安装指南中有关[安装语言包](../../../docs/framework/install/guide-for-developers.md#to-install-language-packs)一节。|  
-|无法安装 .NET Framework 4.5.x/4.6.x/4.7.x。 你的计算机上的其他应用程序与此程序不兼容。<br /><br /> - 或 -<br /><br /> 你的计算机上的其他应用程序与此程序不兼容。|导致出现此消息的最可能的原因是安装了 .NET Framework 的预览版或 RC 版。 卸载预览版或 RC 版，然后重新运行安装程序。|  
+|无法安装 .NET Framework 4.5.x/4.6.x/4.7.x。 你的计算机上的其他应用程序与此程序不兼容。<br /><br /> 或<br /><br /> 你的计算机上的其他应用程序与此程序不兼容。|导致出现此消息的最可能的原因是安装了 .NET Framework 的预览版或 RC 版。 卸载预览版或 RC 版，然后重新运行安装程序。|  
 |无法使用此程序包卸载 .NET Framework 4.5.x/4.6.x/4.7.x。 若要从计算机中卸载 .NET Framework 4.5.x/4.6.x/4.7.x，请转到“控制面板”，然后依次选择“程序和功能”、“查看已安装的更新”、“Microsoft Windows (KB2828152) 的更新”和“卸载”。|你正在安装的程序包不会卸载 .NET Framework 的预览版或 RC 版。<br /><br /> 从“控制面板”卸载预览版或 RC 版。|  
 |无法卸载 .NET Framework 4.5.x/4.6.x/4.7.x。 计算机上的其他应用程序依赖于此程序。|通常，你不应该从计算机卸载 .NET Framework 的任何版本，因为你使用的应用程序可能基于 .NET Framework 的特定版本。 有关详细信息，请参阅*入门*指南中的[面向用户的 .NET Framework](../../../docs/framework/get-started/index.md#ForUsers)。|  
 |.NET Framework 4.5.x/4.6.x/4.7.x 可再发行组件不适用于此操作系统。 请从 Microsoft 下载中心下载适合你的操作系统的 .NET Framework 4.5.x/4.6.x/4.7.x。|可能是因为尝试在不受支持的平台上安装 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2，也可能是因为已选择的安装程序包不包含适用于所有受支持操作系统的组件。 使用适用于 [4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090) 或 [4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863265) 的脱机安装程序（[适用于 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=309493)、[4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)、[4.6](https://go.microsoft.com/fwlink/p/?LinkId=528233)、[4.6.1](https://go.microsoft.com/fwlink/p/?LinkId=671744)、[4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604)、[4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)）再次运行安装。 有关详细信息，请参阅适用于受支持操作系统的[安装指南](../../../docs/framework/install/guide-for-developers.md)和[系统需求](../../../docs/framework/get-started/system-requirements.md)。|  
@@ -77,6 +77,6 @@ ms.locfileid: "53781071"
 
 ## <a name="see-also"></a>请参阅
 
-[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
-[如何：确定已安装的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
-[版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)
+- [如何：确定已安装的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)

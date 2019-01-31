@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 720c33fb4af197198f8ee1a21c5e1dc6dad24ce3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e0635d03e7d1b31642a6669aecefd2b0099e9c78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150858"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066280"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>将 NoSQL 数据库用作持久性基础结构
 
@@ -151,7 +151,7 @@ Cosmos DB 数据库支持 .NET 的 MongoDB API 以及本地 MongoDB 网络协议
 
 若要进一步比较在云中仅使用 MongoDB 和 Cosmos DB 的差异，请参阅此页中[使用 Azure Cosmos DB 的好处](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)。 
 
-### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>分析生产应用程序的方法：MongoDB API 与Cosmos DB API
+### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>分析适用于生产应用程序的方法：MongoDB API vs.Cosmos DB API
 
 我们在 eShopOnContainers 中使用 MongoDB API，因为我们的首要任务是从根本上拥有使用 NoSQL 数据库的一致开发/测试环境，该数据库也可以与 Azure Cosmos DB 一起使用。
 
@@ -317,12 +317,12 @@ services:
   [*https://docs.microsoft.com/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
 
 - **Vaughn Vernon。The Ideal Domain-Driven Design Aggregate Store?**（理想的域驱动设计聚合存储？） \
-  [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
+  <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
-- **Introduction to Azure Cosmos DB: API for MongoDB**  \（Azure Cosmos DB 简介：适用于 MongoDB 的 API）
+- **Introduction to Azure Cosmos DB:API for MongoDB**  \（Azure Cosmos DB 简介：适用于 MongoDB 的 API）
   [*https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
 
-- **Azure Cosmos DB: Build a MongoDB API web app with .NET and the Azure portal**  \（Azure Cosmos DB：使用 .NET 和 Azure 门户生成 MongoDB API Web 应用）
+- **Azure Cosmos DB：Build a MongoDB API web app with .NET and the Azure portal**  \（使用 .NET 和 Azure 门户生成 MongoDB API Web 应用）
   [*https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet*](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
 
 - **Use the Azure Cosmos DB Emulator for local development and testing**  \（将 Azure Cosmos DB 仿真器用于本地开发和测试）
@@ -337,7 +337,7 @@ services:
 - **The MongoDB Docker image (Linux and Windows Container)**  \（MongoDB Docker 映像 [Linux 和 Windows 容器]）
   [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
 
-- **Use MongoChef (Studio 3T) with an Azure Cosmos DB: API for MongoDB account**  \（将 MongoChef [Studio 3T] 用于 Azure Cosmos DB：适用于 MongoDB 的 API 帐户）
+- **Use MongoChef (Studio 3T) with an Azure Cosmos DB:API for MongoDB account**  \（将 MongoChef [Studio 3T] 用于 Azure Cosmos DB：适用于 MongoDB 的 API 帐户）
   [*https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef)
 
 >[!div class="step-by-step"]

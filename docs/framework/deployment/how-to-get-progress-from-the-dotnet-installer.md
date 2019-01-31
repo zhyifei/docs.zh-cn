@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bec27165d1bfd6a501ba8b96a1eb133276fe7269
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 22c44340edf5e7a625524500838ab32d516ad97b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614557"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：获取 .NET Framework 4.5 安装程序的进度
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 是可再发行运行时。 如果开发基于此 .NET framework 版本的应用程序，则可以将（链）[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序作为必备组件包括在应用的安装程序中。 若要提供自定义或统一的安装体验，可能需要以无提示方式启动 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序并跟踪其进度，同时显示应用的安装进度。 若要启用无提示跟踪，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序（可观察）通过使用内存映射 I/O (MMIO) 段来定义协议，以便与安装程序（观察程序或链接器）进行通信。 此协议定义链接器获取进度信息、详细结果，响应消息和取消 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装的方式。  
@@ -35,7 +35,7 @@ ms.locfileid: "50197946"
   
          请使用对于安装程序唯一的名称替换这些名称。  
   
-    2.  从 MMIO 节读取。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，下载和安装操作同时进行：一边下载 .NET Framework 的一个组件，一边安装另一个组件。 因此，进度会以从 0 到 255 递增的两个数字（`m_downloadSoFar` 和 `m_installSoFar`）形式发送回（即写入）MMIO 节。 如果写入 255 且 .NET Framework 存在，则表示安装完成。  
+    2.  从 MMIO 节读取。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，下载和安装操作是同时进行的：下载 .NET Framework 一部分的同时，可能正在安装另一部分。 因此，进度会以从 0 到 255 递增的两个数字（`m_downloadSoFar` 和 `m_installSoFar`）形式发送回（即写入）MMIO 节。 如果写入 255 且 .NET Framework 存在，则表示安装完成。  
   
 -   退出代码。 以下命令中的退出代码用于调用 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可再发行程序，指示安装是成功还是失败：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "50197946"
   
  可从 MSDN 示例库下载针对 [.NET Framework 4.5 链接器示例](https://go.microsoft.com/fwlink/?LinkId=231345)的完整 Visual Studio 解决方案。  
   
- 以下各节描述此示例中的重要文件：MMIOChainer.h、ChainingdotNet4.cpp 和 IProgressObserver.h。  
+ 以下章节对此示例中的重要文件进行了介绍：MMIOChainer.h、ChainingdotNet4.cpp 和 IProgressObserver.h。  
   
 #### <a name="mmiochainerh"></a>MMIOChainer.h  
   
@@ -309,6 +309,6 @@ ms.locfileid: "50197946"
   
  典型的服务器会创建随机 MMIO 文件名、创建文件（如上一个代码示例 `Server::CreateSection` 中所示），并通过使用 `CreateProcess` 和借助 `-pipe someFileSectionName` 选项传递管道名称来启动可再发行组件。 服务器应使用特定于应用程序 UI 的代码来实现 `OnProgress`、`Send` 和 `Finished` 方法。  
   
-## <a name="see-also"></a>请参阅  
-- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+## <a name="see-also"></a>请参阅
+- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [部署](../../../docs/framework/deployment/index.md)

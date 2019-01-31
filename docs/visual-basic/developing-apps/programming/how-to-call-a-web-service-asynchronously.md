@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: bf109780f26ce2fa4d5dbaa63832e765970b5cb4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9127b0edce029f8b2944ddf692e85166ee8c89b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616142"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>如何：异步调用 Web 服务 (Visual Basic)
 此示例在 Web 服务的异步处理程序事件中附加了一个处理程序，以便它能检索异步方法调用的结果。 此示例使用了 DemoTemperatureService Web 服务（位于 `http://www.xmethods.net`）。  
@@ -65,6 +65,6 @@ ms.locfileid: "48842685"
   
      若要以异步方式调用 `getTemp` Web 方法，请调用 `CallGetTempAsync` 方法。 当 Web 方法执行完成后，其返回值将被传递到 `getTempCompletedHandler` 事件处理程序。  
   
-## <a name="see-also"></a>请参阅  
- [访问应用程序 Web 服务](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
- [My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a>请参阅
+- [访问应用程序 Web 服务](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
+- [My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)

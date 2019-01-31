@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517677"
 ---
 # <a name="composite-formatting"></a>复合格式设置
 
@@ -67,7 +67,7 @@ ms.locfileid: "53126856"
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- 通过指定相同的参数说明符，多个格式项可以引用对象列表中的同一个元素。 例如，通过指定“0x{0:X} {0:E} {0:N}”等复合格式字符串，可以将同一个数值设置为十六进制、科学记数法和数字格式，如下面的示例所示。  
+ 通过指定相同的参数说明符，多个格式项可以引用对象列表中的同一个元素。 例如，可以将同一个数值设置为十六进制、科学记数法和数字格式，方法是通过指定复合格式字符串（例如：“0x{0:X} {0:E} {0:N}”），如以下示例所示。  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -161,15 +161,15 @@ ms.locfileid: "53126856"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Console.WriteLine%2A>  
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- [字符串内插 (C#)](../../csharp/language-reference/tokens/interpolated.md)  
-- [字符串内插 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
-- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
-- [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
-- [自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
-- [标准 TimeSpan 格式字符串](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
-- [自定义 TimeSpan 格式字符串](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- <xref:System.Console.WriteLine%2A>
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- [字符串内插 (C#)](../../csharp/language-reference/tokens/interpolated.md)
+- [字符串内插 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)
+- [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [标准 TimeSpan 格式字符串](../../../docs/standard/base-types/standard-timespan-format-strings.md)
+- [自定义 TimeSpan 格式字符串](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

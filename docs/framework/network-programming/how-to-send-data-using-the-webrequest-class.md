@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 1f10c5e0c6c266b7b31d658ec561bd8d6d85697b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dac372ce4f9da99b91b6f8d140d69ce9f1238f30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562890"
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>如何：使用 WebRequest 类发送数据
 以下过程描述将数据发送到服务器的步骤。 此过程通常用于将数据发布到 Web 页。  
@@ -255,9 +255,9 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [创建 Internet 请求](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [在网络上使用流](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [请求数据](../../../docs/framework/network-programming/requesting-data.md)  
- [如何：使用 WebRequest 类请求数据](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+## <a name="see-also"></a>请参阅
+- [创建 Internet 请求](../../../docs/framework/network-programming/creating-internet-requests.md)
+- [在网络上使用流](../../../docs/framework/network-programming/using-streams-on-the-network.md)
+- [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [请求数据](../../../docs/framework/network-programming/requesting-data.md)
+- [如何：使用 WebRequest 类请求数据](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)

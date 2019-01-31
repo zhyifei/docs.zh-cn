@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 3f8dfff59acaa10fa99874dde2eb6eb6ed04e8fb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 02ea82bf224349e6ea7a5afbfb3c38ba50df46f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720361"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>如何：调试 Windows 服务应用程序
 必须从服务控制管理器的上下文中而不是 Visual Studio 中运行服务。 因此，调试服务不像调试其他 Visual Studio 应用程序类型一样简单。 要调试服务，必须启动该服务，然后将调试器附加到该服务正在其中运行的进程中。 然后你可以使用所有 Visual Studio 的标准调试功能来调试你的应用程序。  
@@ -38,7 +38,7 @@ ms.locfileid: "48035943"
   
 1.  在调试配置中生成你的服务。  
   
-2.  安装你的服务。 有关更多信息，请参见 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
+2.  安装你的服务。 有关详细信息，请参阅[如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
 3.  从“服务控制管理器”、“服务器资源管理器”或代码启动服务。 有关详细信息，请参阅[如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48035943"
   
 5.  （可选）在 Visual Studio 菜单栏上，选择“工具”、“选项”。 在“选项”对话框中，选择“调试”、“符号”，选择“Microsoft 符号服务器”复选框，然后选择“确定”按钮。  
   
-6.  在菜单栏上，从“调试”或“工具”菜单选择“附加到进程”。 （键盘：Ctrl + Alt + P）  
+6.  在菜单栏上，从“调试”或“工具”菜单选择“附加到进程”。 （键盘：Ctrl+Alt+P）  
   
      这将显示“进程”对话框。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48035943"
   
 10. 设置任意你想要在代码中使用的断点。  
   
-11. 访问服务控制管理器并操作你的服务，发送停止、暂停和继续命令以命中你的断点。 有关运行服务控制管理器的详细信息，请参阅[如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)。 另请参阅[疑难解答：调试 Windows 服务](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)。  
+11. 访问服务控制管理器并操作你的服务，发送停止、暂停和继续命令以命中你的断点。 有关运行服务控制管理器的详细信息，请参阅[如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)。 请参见[疑难解答：调试 Windows 服务](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)。  
   
 ## <a name="debugging-tips-for-windows-services"></a>Windows 服务的调试提示  
  附加到服务的进程使你可调试该服务的大多数代码，但不是全部。 例如，由于服务已经启动，你无法调试服务的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中的代码或 `Main` 方法中用于在此处加载服务的代码。 避免这种限制的一种方法是在你的仅用于辅助调试的服务应用程序中创建一个临时辅助服务。 你可以安装两个服务，然后启动该虚拟服务来加载服务进程。 临时服务启动进程后，可以使用 Visual Studio 中的“调试”菜单来附加到服务进程。  
@@ -113,8 +113,8 @@ ms.locfileid: "48035943"
   
  在某些情况下，你必须使用 Windows 调试器，比如当你想要调试仅在系统启动时发生的问题时。 安装[Windows 调试工具](https://msdn.microsoft.com/windows/hardware/hh852365)并查看[如何调试 Windows 服务](https://support.microsoft.com/kb/824344)。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)  
- [调试服务](/windows/desktop/Services/debugging-a-service)
+## <a name="see-also"></a>请参阅
+- [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)
+- [调试服务](/windows/desktop/Services/debugging-a-service)

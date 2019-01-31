@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 0feff32f3a2264b8e6cbd4746fdeaaaad728b8e5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 91d972f468f80c509a90ea293937b117d54a2e7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737515"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 表达式（C# 编程指南）
 
@@ -89,7 +89,8 @@ namespace ConsoleApplication1
 
  在上一个示例中，请注意表达式 Lambda 的主体可以包含一个方法调用。 但是，如果要创建在 .NET Framework 之外计算的表达式目录树（例如，在 SQL Server 中），则不应在 lambda 表达式中使用方法调用。 在 .NET 公共语言运行时上下文之外，方法将没有任何意义。  
   
-## <a name="statement-lambdas"></a>语句 lambda  
+## <a name="statement-lambdas"></a>语句 lambda
+
  语句 lambda 与表达式 lambda 表达式类似，只是语句括在大括号中：  
   
 (input-parameters) => { statement; }
@@ -102,7 +103,8 @@ namespace ConsoleApplication1
 
  像匿名方法一样，语句 lambda 也不能用于创建表达式目录树。  
   
-## <a name="async-lambdas"></a>异步 lambda  
+## <a name="async-lambdas"></a>异步 lambda
+
  通过使用 [async](../../../csharp/language-reference/keywords/async.md) 和 [await](../../../csharp/language-reference/keywords/await.md) 关键字，你可以轻松创建包含异步处理的 lambda 表达式和语句。 例如，下面的 Windows 窗体示例包含一个调用和等待异步方法 `ExampleMethodAsync`的事件处理程序。  
   
 ```csharp
@@ -154,7 +156,8 @@ public partial class Form1 : Form
 
  有关如何创建和使用异步方法的详细信息，请参阅[使用 Async 和 Await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)。  
   
-## <a name="lambdas-with-the-standard-query-operators"></a>带有标准查询运算符的 lambda  
+## <a name="lambdas-with-the-standard-query-operators"></a>含标准查询运算符的 lambda
+
  许多标准查询运算符都具有输入参数，其类型是泛型委托系列 <xref:System.Func%602> 中的一种。 这些委托使用类型参数来定义输入参数的数量和类型，以及委托的返回类型。 `Func` 委托对于封装用户定义的表达式非常有用，这些表达式将应用于一组源数据中的每个元素。 例如，请考虑以下委托类型：  
   
 ```csharp  
@@ -191,7 +194,8 @@ var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);
 var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);  
 ```  
   
-## <a name="type-inference-in-lambdas"></a>Lambda 中的类型推理  
+## <a name="type-inference-in-lambdas"></a>lambda 中的类型推理
+
  在编写 lambda 时，通常不必为输入参数指定类型，因为编译器可以根据 lambda 主体、参数的委托类型以及 C# 语言规范中描述的其他因素来推断类型。 对于大多数标准查询运算符，第一个输入是源序列中的元素类型。 因此，如果要查询 `IEnumerable<Customer>`，则输入变量将被推断为 `Customer` 对象，这意味着你可以访问其方法和属性：  
   
 ```csharp  
@@ -208,7 +212,8 @@ customers.Where(c => c.City == "London");
   
  请注意，lambda 表达式本身没有类型，因为常规类型系统没有“Lambda 表达式”这一内部概念。 但是，有时以一种非正式的方式谈论 lambda 表达式的“类型”会很方便。 在这些情况下，类型是指委托类型或 lambda 表达式所转换到的 <xref:System.Linq.Expressions.Expression> 类型。  
   
-## <a name="variable-scope-in-lambda-expressions"></a>Lambda 表达式中的变量范围  
+## <a name="variable-scope-in-lambda-expressions"></a>lambda 表达式中的变量范围
+
  在定义 lambda 函数的方法内或包含 Lambda 表达式的类型内，Lambda 可以引用范围内的外部变量（请参阅[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)）。 以这种方式捕获的变量将进行存储以备在 lambda 表达式中使用，即使在其他情况下，这些变量将超出范围并进行垃圾回收。 必须明确地分配外部变量，然后才能在 lambda 表达式中使用该变量。 下面的示例演示这些规则：  
   
 ```csharp  
@@ -269,18 +274,20 @@ class Test
   
 -   如果跳转语句的目标在块外部，则 lambda 表达式不能包含位于 lambda 函数内部的 `goto` 语句、 `break` 语句或 `continue` 语句。 同样，如果目标在块内部，则在 lambda 函数块外部使用跳转语句也是错误的。  
   
-## <a name="c-language-specification"></a>C# 语言规范  
+## <a name="c-language-specification"></a>C# 语言规范
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="featured-book-chapter"></a>重要章节  
+## <a name="featured-book-chapter"></a>特别推荐书籍章节
+
  [C# 3.0 手册（第三版）：面向 C# 3.0 程序员的超过 250 个解决方案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)中的[委托、事件和 Lambda 表达式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29)  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [LINQ（语言集成查询）](../../../csharp/programming-guide/concepts/linq/index.md)  
-- [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
-- [is](../../../csharp/language-reference/keywords/is.md)  
-- [表达式树](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-- [Visual Studio 2008 C# 示例（请参阅 LINQ 示例查询文件和 XQuery 程序）](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [LINQ（语言集成查询）](../../../csharp/programming-guide/concepts/linq/index.md)
+- [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [is](../../../csharp/language-reference/keywords/is.md)
+- [表达式树](../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Visual Studio 2008 C# 示例（请参阅 LINQ 示例查询文件和 XQuery 程序）](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [递归 lambda 表达式](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

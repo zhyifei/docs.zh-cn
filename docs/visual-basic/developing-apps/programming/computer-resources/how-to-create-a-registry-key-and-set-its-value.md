@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 4f74d41aa8055e26f5a707829449ddd310ff576f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b41d05a1394e009541bed47fa4d2d8ccadd4bb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585937"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>如何：在 Visual Basic 中创建注册表项并设置其值
 `My.Computer.Registry` 对象的 `CreateSubKey` 方法可用于创建注册表项。  
@@ -70,9 +70,9 @@ ms.locfileid: "33590746"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  若要运行此进程，程序集需要 <xref:System.Security.Permissions.RegistryPermission> 类授予的特权等级。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 同样，用户必须具有用于创建或写入设置的正确 ACL。 例如，具有代码访问安全性权限的本地应用程序可能没有操作系统权限。 有关详细信息，请参阅[代码访问安全性基础知识](../../../../framework/misc/code-access-security-basics.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>  
- <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>  
- [读取和写入注册表](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
- [代码访问安全性基础知识](../../../../framework/misc/code-access-security-basics.md)
+## <a name="see-also"></a>请参阅
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
+- <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
+- [读取和写入注册表](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [代码访问安全性基础知识](../../../../framework/misc/code-access-security-basics.md)

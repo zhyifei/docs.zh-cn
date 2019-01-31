@@ -2,12 +2,12 @@
 title: 如何：确定文件是否为程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: 0cf9258aa4a5a1a633ee0bb04808d384de8f48d0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a147081d16a6b9f7252466a06ebd8fc204e47c2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125530"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681763"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>如何：确定文件是否为程序集 (C#)
 当且仅当程序集处于托管状态，并在其元数据中包含程序集条目时，该文件才为程序集。 有关程序集和元数据的详细信息，请参阅主题[程序集清单](../../../../../docs/framework/app-domains/assembly-manifest.md)。  
@@ -18,7 +18,7 @@ ms.locfileid: "53125530"
   
 2.  加载要测试的文件。  
   
-3.  如果 **ILDASM** 报告文件不是可移植的可执行 (PE) 文件，则不是程序集。 有关详细信息，请参阅主题 [How to: View Assembly Contents](../../../../framework/app-domains/how-to-view-assembly-contents.md)（如何：查看程序集内容）。  
+3.  如果 **ILDASM** 报告文件不是可移植的可执行 (PE) 文件，则不是程序集。 有关详细信息，请参阅主题[如何：查看程序集内容](../../../../framework/app-domains/how-to-view-assembly-contents.md)。  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>如何以编程方式确定文件是否为程序集  
   
@@ -68,6 +68,6 @@ class TestAssembly
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Reflection.AssemblyName>  
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
+- <xref:System.Reflection.AssemblyName>
+- [C# 编程指南](../../../../csharp/programming-guide/index.md)
 - [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

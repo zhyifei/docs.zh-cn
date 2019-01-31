@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127545"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066345"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新增功能
 
@@ -96,23 +96,30 @@ dotnet tool install -g dotnetsay
 从 .NET Core 2.0 开始，如果在其中构建应用程序的 .NET Core 版本在运行时不存在，应用程序将针对最新安装的次要版本的 .NET Core 自动运行。 换而言之，如果应用程序在 .NET Core 2.0 中生成，而主机系统未安装 .NET Core 2.0 但安装了 .NET Core 2.1，则应用程序将通过 .NET Core 2.1 运行。
 
 > [!IMPORTANT]
-> 此前滚行为不适用于预览版本。 也不适用于主要版本。 例如，.NET Core 1.0 应用程序不会将前滚到 .NET Core 2.0 或 .NET Core 2.1。
+> 此前滚行为不适用于预览版本。 默认情况下，它也不适用于主要版本，但可以通过以下设置进行更改。
 
-你也可以通过以下任意三种方式禁用次要版本前滚：
+可以通过在没有候选共享框架的情况下更改前滚设置来修改此行为。 可用设置如下：
+- `0` - 禁用次要版本前滚行为。 使用此设置，为 .NET Core 2.0.0 构建的应用程序将前滚到 .NET Core 2.0.1，但不会前滚到 .NET Core 2.2.0 或 .NET Core 3.0.0。
+- `1` - 启用次要版本前滚行为。 这是设置的默认值。 使用此设置，为 .NET Core 2.0.0 构建的应用程序将前滚到 .NET Core 2.0.1 或 .NET Core 2.2.0，具体取决于安装的版本，但它不会前滚到 .NET Core3.0.0。
+- `2` - 启用次要和主要版本前滚行为。 即使考虑不同的主要版本，如果这样设置，为 .NET Core 2.0.0 构建的应用程序将前滚到 .NET Core 3.0.0。
 
-- 将 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` 环境变量设置为 0。
+可以通过以下三种方式之一修改此设置：
 
-- 将以下行添加到 runtimeconfig.json 文件：
+- 将 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` 环境变量设置为所需的值。
+
+- 使用所需的值将下列行添加到 `runtimeconfig.json` 文件：
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- 使用 [.NET Core CLI 工具](../tools/index.md)时，请使用 .NET Core 命令（如 `run`）包含以下选项：
+- 使用 [.NET Core CLI 工具](../tools/index.md)时，请使用所需的值将下列选项添加到 .NET Core 命令，例如 `run`：
 
    ```console
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
+
+修补程序版本前滚与此设置无关，并且在应用任何潜在的次要或主要版本前滚之后完成。
 
 ## <a name="deployment"></a>部署
 
@@ -239,6 +246,6 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 ## <a name="see-also"></a>请参阅
 
-* [.NET Core 的新增功能](index.md)  
-* [EF Core 2.1 中的新增功能](/ef/core/what-is-new/ef-core-2.1)  
-* [ASP.NET Core 2.1 的新增功能](/aspnet/core/aspnetcore-2.1)
+- [.NET Core 的新增功能](index.md)
+- [EF Core 2.1 中的新增功能](/ef/core/what-is-new/ef-core-2.1)
+- [ASP.NET Core 2.1 的新增功能](/aspnet/core/aspnetcore-2.1)

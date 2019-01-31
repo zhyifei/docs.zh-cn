@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 9ebc90b3d4f610aec58f950f375d97fd2abf3617
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ee23c962d8ea9adecabc5146af75419c87fcc75a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516793"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion（C# 编译器选项）
 
@@ -65,12 +65,12 @@ ms.locfileid: "43857266"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](index.md)  
-- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)  
+- [C# 编译器选项](index.md)
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
 
 ### <a name="c-language-specification"></a>C# 语言规范
 
-|版本|链接|描述|
+|Version|链接|说明|
 |-------|----|-----------|
 |C# 1.0|[下载 DOC](https://download.microsoft.com/download/a/9/e/a9e229b9-fee5-4c3e-8476-917dee385062/csharp%20language%20specification%20v1.0.doc)|C# 语言规范版本 1.0：Microsoft Corporation|
 |C# 1.2|[下载 DOC](https://download.microsoft.com/download/5/e/5/5e58be0a-b02b-41ac-a4a3-7a22286214ff/csharp%20language%20specification%20v1.2.doc)|C# 语言规范版本 1.2：Microsoft Corporation|
@@ -82,7 +82,7 @@ ms.locfileid: "43857266"
 
 ### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>支持所有语言功能所需的最低编译器版本
 
-[↩](#TISO1)<a name="FISO1">ISO1</a>：Microsoft Visual Studio/生成工具 .Net 2002 或捆绑 .Net Framework 1.0 编译器[↩](#TISO2)<a name="FISO2">ISO2</a>：Microsoft Visual Studio/生成工具 2005 或捆绑 .Net Framework 2.0 编译器[↩](#TCS3)<a name="FCS3">CS3</a>：Microsoft Visual Studio/生成工具 2008 或捆绑 .Net Framework 3.5 编译器[↩](#TCS4) <a name="FCS4">CS4</a>：Microsoft Visual Studio/生成工具 2010 或捆绑 .Net Framework 4.0 编译器[↩](#TCS5)<a name="FCS5">CS5</a>：Microsoft Visual Studio/生成工具 2012 或捆绑 .Net Framework 4.5 编译器[↩](#TCS6)<a name="FCS6">CS6</a>：Microsoft Visual Studio/生成工具 2015[↩](#TCS7)<a name="FCS7">CS7</a>：Microsoft Visual Studio /生成工具 2017[↩](#TCS71)<a name="FCS71">CS71</a>：Microsoft Visual Studio/生成工具 2017，版本 15.3[↩](#TCS72)<a name="FCS72">CS72</a>：Microsoft Visual Studio/生成工具 2017，版本 15.5 [↩](#TCS73)<a name="FCS73">CS73</a>：Microsoft Visual Studio/生成工具 2017，版本 15.7
+[↩](#TISO1)<a name="FISO1">ISO1</a>：Microsoft Visual Studio/生成工具 .Net 2002 或捆绑的 .Net Framework 1.0 编译器[↩](#TISO2)<a name="FISO2">ISO2</a>：Microsoft Visual Studio/生成工具 2005 或捆绑的 .Net Framework 2.0 编译器[↩](#TCS3)<a name="FCS3">CS3</a>：Microsoft Visual Studio/生成工具 2008 或捆绑的 .Net Framework 3.5 编译器[↩](#TCS4)<a name="FCS4">CS4</a>：Microsoft Visual Studio/生成工具 2010 或捆绑的 .Net Framework 4.0 编译器[↩](#TCS5)<a name="FCS5">CS5</a>：Microsoft Visual Studio/生成工具 2012 或捆绑的 .Net Framework 4.5 编译器[↩](#TCS6)<a name="FCS6">CS6</a>：Microsoft Visual Studio/生成工具 2015 [↩](#TCS7)<a name="FCS7">CS7</a>：Microsoft Visual Studio/生成工具 2017 [↩](#TCS71)<a name="FCS71">CS71</a>：Microsoft Visual Studio/生成工具 2017，版本 15.3 [↩](#TCS72)<a name="FCS72">CS72</a>：Microsoft Visual Studio/生成工具 2017，版本 15.5 [↩](#TCS73)<a name="FCS73">CS73</a>：Microsoft Visual Studio/生成工具 2017，版本 15.7
 
 <!--- Uncomment and add to the above when they become officially released
 [↩](#TCS8)<a name="FCS8">CS8</a>: Microsoft Visual Studio/Build Tools 20??    

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - persistence [Visual Basic], persisting user settings [Visual Basic]
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
-ms.openlocfilehash: e9d3ab96ffece3c7f441721b90c8c82c734b1405
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dab285f175838fb71e4218cbafdd4f7593c9e786
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584561"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611288"
 ---
 # <a name="how-to-persist-user-settings-in-visual-basic"></a>如何：在 Visual Basic 中保存用户设置
 可以使用 `My.Settings.Save` 方法来保存对用户设置的更改。  
@@ -30,9 +30,9 @@ ms.locfileid: "33584561"
   
  若要使用本示例，应用程序必须具有类型为 `Date` 的 `LastChanged` 用户设置。 有关详细信息，请参阅[管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
   
-## <a name="see-also"></a>请参阅  
- [My.Settings 对象](../../../../visual-basic/language-reference/objects/my-settings-object.md)  
- [如何：在 Visual Basic 中读取应用程序设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)  
- [如何：在 Visual Basic 中更改用户设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)  
- [如何：在 Visual Basic 中创建用户设置的属性网格](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)  
- [管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
+## <a name="see-also"></a>请参阅
+- [My.Settings 对象](../../../../visual-basic/language-reference/objects/my-settings-object.md)
+- [如何：在 Visual Basic 中读取应用程序设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [如何：在 Visual Basic 中更改用户设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [如何：在 Visual Basic 中为用户设置创建属性网格](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

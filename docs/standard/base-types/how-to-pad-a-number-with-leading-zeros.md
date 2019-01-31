@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cc6e4d96378cfd8c065a3b04aab865f9b787438
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b48462e79c3e8ef3fdd6e0a91f5abecffc022b5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673028"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>如何：用前导零填充数字
 通过结合使用“D”[标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)和精度说明符，将前导零添加到整数。 你可以通过使用[自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)，将前导零添加到整数和浮点数。 本主题介绍如何通过这两种方法用前导零填充数字。  
@@ -95,6 +95,6 @@ ms.locfileid: "44086717"
   
 ## <a name="see-also"></a>请参阅
 
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [复合格式设置](../../../docs/standard/base-types/composite-formatting.md)

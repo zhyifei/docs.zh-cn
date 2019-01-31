@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: 2b19b6d29d0117d4822f370dcc9abc840a18ad3d
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 763d1106a289e4aa6530eb07971d6ffb7e6095b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527843"
 ---
 # <a name="listening-with-sockets"></a>使用套接字侦听
 侦听器或服务器套接字打开网络上的端口，然后等待客户端连接到该端口。 虽然存在其他网络地址系列和协议，但本示例演示如何创建 TCP/IP 网络的远程服务。  
@@ -59,9 +59,9 @@ listener.Listen(100);
   
  Listen 方法使用一个参数，该参数指定在服务器忙错误返回到连接客户端之前，允许的挂起套接字连接的数目。 在这种情况下，在服务器忙响应返回到客户端编号 101 前，最多 100 个客户端置于连接队列中。  
   
-## <a name="see-also"></a>请参阅  
- [使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [使用异步服务器套接字](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [使用客户端套接字](../../../docs/framework/network-programming/using-client-sockets.md)  
- [如何：创建套接字](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
- [套接字](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>请参阅
+- [使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [使用异步服务器套接字](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [使用客户端套接字](../../../docs/framework/network-programming/using-client-sockets.md)
+- [如何：创建套接字](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [套接字](../../../docs/framework/network-programming/sockets.md)

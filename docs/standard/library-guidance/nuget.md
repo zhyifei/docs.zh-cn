@@ -4,12 +4,12 @@ description: 使用 .NET 库的 NuGet 打包的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 6c3c7feb95f0ebe6b348f42cdd243ce1d14b9c50
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 2ad8d2ed77610a3acead69b7c864785261ea5e7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724299"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -112,11 +112,14 @@ NuGet.org 托管了自己的[符号服务器存储库](/nuget/create-packages/sy
 </Project>
 ```
 
-✔️请考虑将符号文件嵌入在主 NuGet 包中。
+嵌入式符号文件的缺点是，对于使用 SDK 样式项目编译的 .NET 库，它们会将包的大小增加约 30%。 如果要考虑包大小，应改成在符号包中发布符号。
 
-> 默认情况下，将符号文件嵌入主 NuGet 包可为开发人员提供更好的调试体验。 他们不需要在其 IDE 中查找和配置 NuGet 符号服务器来获取符号文件。
+“✔️考虑”将符号作为符号包 (`*.snupkg`) 发布到 NuGet.org
+
+> 符号包 (`*.snupkg`) 为开发人员提供了良好的按需调试体验，而不会使主程序包大小膨胀，也不会影响那些不打算调试 NuGet 包的用户的还原性能。
 >
-> 嵌入式符号文件的缺点是，对于使用 SDK 样式项目编译的 .NET 库，它们会将包的大小增加约 30%。 如果要考虑包大小，应改成在符号包中发布符号。
+> 需要注意的是，他们需要在其 IDE 中查找和配置 NuGet 符号服务器（作为一次性设置）来获取符号文件。 Visual Studio 2019 计划将 NuGet.org 符号服务器作为现成选项之一提供。 
+
 
 >[!div class="step-by-step"]
 >[上一页](strong-naming.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620079"
 ---
 # <a name="selecting-a-collection-class"></a>选择集合类
 请务必仔细选择你的集合类。 使用错误的类型可能会限制集合的使用。 一般情况下，应避免使用 <xref:System.Collections> 命名空间中的类型，除非特别面向 .NET Framework 版本 1.1。 由于集合的泛型版本和并发版本具有更高的类型安全性和其他改进，将首选这些版本。  
@@ -52,9 +52,9 @@ ms.locfileid: "48836506"
   
     -   一个键和一个值：使用任何基于 <xref:System.Collections.IDictionary> 接口或 <xref:System.Collections.Generic.IDictionary%602> 泛型接口的集合。  
   
-    -   带有嵌入键的一个值：使用 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型类。  
+    -   带有嵌入键的值：使用 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型类。  
   
-    -   一个键列和多个值：使用 <xref:System.Collections.Specialized.NameValueCollection> 类。  
+    -   一个键和多个值：使用 <xref:System.Collections.Specialized.NameValueCollection> 类。  
   
 -   是否需要以与输入方式不同的方式对元素进行排序？  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48836506"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Collections>  
-- <xref:System.Collections.Specialized>  
-- <xref:System.Collections.Generic>  
+- <xref:System.Collections>
+- <xref:System.Collections.Specialized>
+- <xref:System.Collections.Generic>
 - [线程安全集合](../../../docs/standard/collections/thread-safe/index.md)

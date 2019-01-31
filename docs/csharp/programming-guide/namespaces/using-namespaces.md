@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: d29de118e928522dcc3a4b4ab32fe2d2c4d1f2f9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e52e5857d9fbe70cbd71ec91f8aa0c49b0e85df8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552302"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>使用命名空间（C# 编程指南）
 在 C# 编程中，命名空间在两个方面被大量使用。 首先，.NET Framework 类使用命名空间来组织它的众多类。 其次，在较大的编程项目中，声明自己的命名空间可以帮助控制类名称和方法名称的范围。  
@@ -39,7 +39,7 @@ ms.locfileid: "53235768"
  [!code-csharp[csProgGuideNamespaces#7](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_4.cs)]  
   
 ## <a name="using-namespaces-to-control-scope"></a>使用命名空间控制范围  
- `namespace` 关键字用于声明范围。 在项目内创建范围有助于整理代码，并允许创建全局唯一类型。 在下面的示例中，名为 `SampleClass` 的类在两个命名空间中定义，其中一个嵌套在另一个之中。 [。运算符](../../../csharp/language-reference/operators/member-access-operator.md) 用于区分调用的方法。  
+ `namespace` 关键字用于声明范围。 在项目内创建范围有助于整理代码，并允许创建全局唯一类型。 在下面的示例中，名为 `SampleClass` 的类在两个命名空间中定义，其中一个嵌套在另一个之中。 [运算符](../../../csharp/language-reference/operators/member-access-operator.md) 用于区分调用的方法。  
   
  [!code-csharp[csProgGuideNamespaces#8](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_5.cs)]  
   
@@ -90,9 +90,9 @@ ms.locfileid: "53235768"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [命名空间](../../../csharp/programming-guide/namespaces/index.md)  
-- [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [。运算符](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [::运算符](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [命名空间](../../../csharp/programming-guide/namespaces/index.md)
+- [命名空间关键字](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [。运算符](../../../csharp/language-reference/operators/member-access-operator.md)
+- [::运算符](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)
