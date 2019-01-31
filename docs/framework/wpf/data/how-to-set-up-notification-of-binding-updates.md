@@ -17,9 +17,9 @@ ms.locfileid: "54511860"
 本示例演示如何设置在绑定的绑定目标（目标）或绑定源（源）属性更新时收到通知。  
   
 ## <a name="example"></a>示例  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 在每次更新绑定源或目标时都会引发数据更新事件。 在内部，此事件用于通知 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 执行更新，因为绑定数据已更改。 注意，要确保这些事件起作用，并且确保单向或双向绑定正常工作，数据类需要实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口。 有关详细信息，请参阅[实现属性更改通知](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 在每次更新绑定源或目标时都会引发数据更新事件。从内部来看，此事件用于通知用户界面 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 执行更新，因为绑定数据已更改。 注意，要确保这些事件起作用，并确保单向或双向绑定正常工作，需要使用 <xref:System.ComponentModel.INotifyPropertyChanged> 接口实现数据类。有关详细信息，请参阅[实现属性更改通知](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)。  
   
- 设置绑定中的 <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> 或 <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> 属性（或两者）为`true`。 用户提供的用于侦听此事件的处理程序必须直接附加到希望收到更改通知的元素，或者如果希望在上下文中的任何内容发生变化时得到通知，则附加到整个数据上下文。  
+ 将绑定中的 <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> 或 <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> 属性（或两者）设置为 `true`。提供的用于侦听此事件的处理程序必须直接附加到希望收到更改通知的元素，但如果希望在上下文中的任何内容发生变化时得到通知，则必须附加到整个数据上下文。  
   
  下面的示例演示如何设置当目标属性更新时收到通知。  
   
