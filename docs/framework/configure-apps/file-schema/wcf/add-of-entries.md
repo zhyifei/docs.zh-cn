@@ -1,25 +1,25 @@
 ---
-title: '&lt;entries&gt; 的 &lt;add&gt;'
+title: <add> 的 <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 082b19cd4515deb19ee7190dfeb8ae04ab834830
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7267b8719987ecd25bcca78a7897a0d4172a42ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645361"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264565"
 ---
-# <a name="ltaddgt-of-ltentriesgt"></a><span data-ttu-id="b9665-102">&lt;entries&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="b9665-102">&lt;add&gt; of &lt;entries&gt;</span></span>
-<span data-ttu-id="b9665-103">表示将筛选器映射到以前定义的客户端终结点的路由项。</span><span class="sxs-lookup"><span data-stu-id="b9665-103">Represents a routing entry that maps a filter to a client endpoint that was previously defined.</span></span> <span data-ttu-id="b9665-104">与此筛选器匹配的消息将发送到此目标。</span><span class="sxs-lookup"><span data-stu-id="b9665-104">Messages matching this filter will be sent to this destination.</span></span>  
+# <a name="add-of-entries"></a><span data-ttu-id="99c49-102">\<添加 > 的\<条目 ></span><span class="sxs-lookup"><span data-stu-id="99c49-102">\<add> of \<entries></span></span>
+<span data-ttu-id="99c49-103">表示将筛选器映射到以前定义的客户端终结点的路由项。</span><span class="sxs-lookup"><span data-stu-id="99c49-103">Represents a routing entry that maps a filter to a client endpoint that was previously defined.</span></span> <span data-ttu-id="99c49-104">与此筛选器匹配的消息将发送到此目标。</span><span class="sxs-lookup"><span data-stu-id="99c49-104">Messages matching this filter will be sent to this destination.</span></span>  
   
- <span data-ttu-id="b9665-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="b9665-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="b9665-106">\<路由 ></span><span class="sxs-lookup"><span data-stu-id="b9665-106">\<routing></span></span>  
-<span data-ttu-id="b9665-107">\<filterTables></span><span class="sxs-lookup"><span data-stu-id="b9665-107">\<filterTables></span></span>  
-<span data-ttu-id="b9665-108">\<filterTable></span><span class="sxs-lookup"><span data-stu-id="b9665-108">\<filterTable></span></span>  
-<span data-ttu-id="b9665-109">\<entries></span><span class="sxs-lookup"><span data-stu-id="b9665-109">\<entries></span></span>  
-<span data-ttu-id="b9665-110">\<add></span><span class="sxs-lookup"><span data-stu-id="b9665-110">\<add></span></span>  
+ <span data-ttu-id="99c49-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="99c49-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="99c49-106">\<路由 ></span><span class="sxs-lookup"><span data-stu-id="99c49-106">\<routing></span></span>  
+<span data-ttu-id="99c49-107">\<filterTables></span><span class="sxs-lookup"><span data-stu-id="99c49-107">\<filterTables></span></span>  
+<span data-ttu-id="99c49-108">\<filterTable></span><span class="sxs-lookup"><span data-stu-id="99c49-108">\<filterTable></span></span>  
+<span data-ttu-id="99c49-109">\<entries></span><span class="sxs-lookup"><span data-stu-id="99c49-109">\<entries></span></span>  
+<span data-ttu-id="99c49-110">\<add></span><span class="sxs-lookup"><span data-stu-id="99c49-110">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b9665-111">语法</span><span class="sxs-lookup"><span data-stu-id="b9665-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="99c49-111">语法</span><span class="sxs-lookup"><span data-stu-id="99c49-111">Syntax</span></span>  
   
 ```xml  
 <routing>
@@ -39,27 +39,27 @@ ms.locfileid: "54645361"
 ```csharp  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b9665-112">特性和元素</span><span class="sxs-lookup"><span data-stu-id="b9665-112">Attributes and Elements</span></span>  
- <span data-ttu-id="b9665-113">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="b9665-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="99c49-112">特性和元素</span><span class="sxs-lookup"><span data-stu-id="99c49-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="99c49-113">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="99c49-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b9665-114">特性</span><span class="sxs-lookup"><span data-stu-id="b9665-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="99c49-114">特性</span><span class="sxs-lookup"><span data-stu-id="99c49-114">Attributes</span></span>  
   
-|<span data-ttu-id="b9665-115">特性</span><span class="sxs-lookup"><span data-stu-id="b9665-115">Attribute</span></span>|<span data-ttu-id="b9665-116">描述</span><span class="sxs-lookup"><span data-stu-id="b9665-116">Description</span></span>|  
+|<span data-ttu-id="99c49-115">特性</span><span class="sxs-lookup"><span data-stu-id="99c49-115">Attribute</span></span>|<span data-ttu-id="99c49-116">描述</span><span class="sxs-lookup"><span data-stu-id="99c49-116">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="b9665-117">backupList</span><span class="sxs-lookup"><span data-stu-id="b9665-117">backupList</span></span>|<span data-ttu-id="b9665-118">一个字符串，指定对终结点备份列表的引用。</span><span class="sxs-lookup"><span data-stu-id="b9665-118">A string that specifies a reference to a backup list of endpoints.</span></span>|  
-|<span data-ttu-id="b9665-119">endpoint（终结点）</span><span class="sxs-lookup"><span data-stu-id="b9665-119">endpoint</span></span>|<span data-ttu-id="b9665-120">一个字符串，指定对客户端终结点的引用，该终结点将接收与 `filterName` 特性所指定的筛选器匹配的消息。</span><span class="sxs-lookup"><span data-stu-id="b9665-120">A string that specifies a reference to a client endpoint that will receive messages that match the filter specified by the `filterName` attribute.</span></span>|  
-|<span data-ttu-id="b9665-121">filterName</span><span class="sxs-lookup"><span data-stu-id="b9665-121">filterName</span></span>|<span data-ttu-id="b9665-122">一个字符串，指定对筛选器元素的引用。</span><span class="sxs-lookup"><span data-stu-id="b9665-122">A string that specifies a reference to a filter element.</span></span>|  
-|<span data-ttu-id="b9665-123">priority</span><span class="sxs-lookup"><span data-stu-id="b9665-123">priority</span></span>|<span data-ttu-id="b9665-124">一个整数，指定此项的优先级。</span><span class="sxs-lookup"><span data-stu-id="b9665-124">An integer that specifies the priority of this entry.</span></span><br /><br /> <span data-ttu-id="b9665-125">将根据优先级计算路由表中的项，0 表示优先级最低。</span><span class="sxs-lookup"><span data-stu-id="b9665-125">Entries in the routing table will be evaluated based on priority, with 0 being the lowest priority.</span></span> <span data-ttu-id="b9665-126">将同时计算某个特定优先级的所有项，如果未找到当前优先级的匹配项，将计算下一个优先级。</span><span class="sxs-lookup"><span data-stu-id="b9665-126">All entries for a specific priority are evaluated simultaneously, if no matching entry is found for the current priority, the next priority level will be evaluated.</span></span><br /><br /> <span data-ttu-id="b9665-127">此值为可选值。</span><span class="sxs-lookup"><span data-stu-id="b9665-127">This value is optional.</span></span>|  
+|<span data-ttu-id="99c49-117">backupList</span><span class="sxs-lookup"><span data-stu-id="99c49-117">backupList</span></span>|<span data-ttu-id="99c49-118">一个字符串，指定对终结点备份列表的引用。</span><span class="sxs-lookup"><span data-stu-id="99c49-118">A string that specifies a reference to a backup list of endpoints.</span></span>|  
+|<span data-ttu-id="99c49-119">endpoint（终结点）</span><span class="sxs-lookup"><span data-stu-id="99c49-119">endpoint</span></span>|<span data-ttu-id="99c49-120">一个字符串，指定对客户端终结点的引用，该终结点将接收与 `filterName` 特性所指定的筛选器匹配的消息。</span><span class="sxs-lookup"><span data-stu-id="99c49-120">A string that specifies a reference to a client endpoint that will receive messages that match the filter specified by the `filterName` attribute.</span></span>|  
+|<span data-ttu-id="99c49-121">filterName</span><span class="sxs-lookup"><span data-stu-id="99c49-121">filterName</span></span>|<span data-ttu-id="99c49-122">一个字符串，指定对筛选器元素的引用。</span><span class="sxs-lookup"><span data-stu-id="99c49-122">A string that specifies a reference to a filter element.</span></span>|  
+|<span data-ttu-id="99c49-123">priority</span><span class="sxs-lookup"><span data-stu-id="99c49-123">priority</span></span>|<span data-ttu-id="99c49-124">一个整数，指定此项的优先级。</span><span class="sxs-lookup"><span data-stu-id="99c49-124">An integer that specifies the priority of this entry.</span></span><br /><br /> <span data-ttu-id="99c49-125">将根据优先级计算路由表中的项，0 表示优先级最低。</span><span class="sxs-lookup"><span data-stu-id="99c49-125">Entries in the routing table will be evaluated based on priority, with 0 being the lowest priority.</span></span> <span data-ttu-id="99c49-126">将同时计算某个特定优先级的所有项，如果未找到当前优先级的匹配项，将计算下一个优先级。</span><span class="sxs-lookup"><span data-stu-id="99c49-126">All entries for a specific priority are evaluated simultaneously, if no matching entry is found for the current priority, the next priority level will be evaluated.</span></span><br /><br /> <span data-ttu-id="99c49-127">此值为可选值。</span><span class="sxs-lookup"><span data-stu-id="99c49-127">This value is optional.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="b9665-128">子元素</span><span class="sxs-lookup"><span data-stu-id="b9665-128">Child Elements</span></span>  
- <span data-ttu-id="b9665-129">无。</span><span class="sxs-lookup"><span data-stu-id="b9665-129">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="99c49-128">子元素</span><span class="sxs-lookup"><span data-stu-id="99c49-128">Child Elements</span></span>  
+ <span data-ttu-id="99c49-129">无。</span><span class="sxs-lookup"><span data-stu-id="99c49-129">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="b9665-130">父元素</span><span class="sxs-lookup"><span data-stu-id="b9665-130">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="99c49-130">父元素</span><span class="sxs-lookup"><span data-stu-id="99c49-130">Parent Elements</span></span>  
   
-|<span data-ttu-id="b9665-131">元素</span><span class="sxs-lookup"><span data-stu-id="b9665-131">Element</span></span>|<span data-ttu-id="b9665-132">描述</span><span class="sxs-lookup"><span data-stu-id="b9665-132">Description</span></span>|  
+|<span data-ttu-id="99c49-131">元素</span><span class="sxs-lookup"><span data-stu-id="99c49-131">Element</span></span>|<span data-ttu-id="99c49-132">描述</span><span class="sxs-lookup"><span data-stu-id="99c49-132">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="b9665-133">\<routing></span><span class="sxs-lookup"><span data-stu-id="b9665-133">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|<span data-ttu-id="b9665-134">一个包含路由映射项的配置节。</span><span class="sxs-lookup"><span data-stu-id="b9665-134">A configuration section that contains routing mapping entries.</span></span>|  
+|[<span data-ttu-id="99c49-133">\<routing></span><span class="sxs-lookup"><span data-stu-id="99c49-133">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|<span data-ttu-id="99c49-134">一个包含路由映射项的配置节。</span><span class="sxs-lookup"><span data-stu-id="99c49-134">A configuration section that contains routing mapping entries.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="b9665-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="b9665-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="99c49-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="99c49-135">See also</span></span>
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>

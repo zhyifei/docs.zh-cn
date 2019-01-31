@@ -1,16 +1,16 @@
 ---
-title: '&lt;扩展插件&gt;'
+title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-ms.openlocfilehash: 9589eaf8ee133f0be670782574dfd30272f29b45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: feac4999438a67043899eef98bb8b49644ee30d9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556345"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270012"
 ---
-# <a name="ltextensionsgt"></a><span data-ttu-id="daf5d-102">&lt;扩展插件&gt;</span><span class="sxs-lookup"><span data-stu-id="daf5d-102">&lt;extensions&gt;</span></span>
-<span data-ttu-id="daf5d-103">此配置元素包含一个 XML 元素集合，该集合包含随可检测到的标准元数据（EPR、ContractTypeName、BindingName、Scope 和 ListenURI）一起发布的自定义元数据。</span><span class="sxs-lookup"><span data-stu-id="daf5d-103">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="daf5d-104">下面是使用此配置元素的示例。</span><span class="sxs-lookup"><span data-stu-id="daf5d-104">The following is an example of using this configuration element.</span></span>  
+# <a name="extensions"></a><span data-ttu-id="1858e-101">\<扩展 ></span><span class="sxs-lookup"><span data-stu-id="1858e-101">\<extensions></span></span>
+<span data-ttu-id="1858e-102">此配置元素包含一个 XML 元素集合，该集合包含随可检测到的标准元数据（EPR、ContractTypeName、BindingName、Scope 和 ListenURI）一起发布的自定义元数据。</span><span class="sxs-lookup"><span data-stu-id="1858e-102">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="1858e-103">下面是使用此配置元素的示例。</span><span class="sxs-lookup"><span data-stu-id="1858e-103">The following is an example of using this configuration element.</span></span>  
   
 ```xml  
 <services>
@@ -45,5 +45,5 @@ ms.locfileid: "54556345"
 </behaviors>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="daf5d-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="daf5d-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1858e-104">请参阅</span><span class="sxs-lookup"><span data-stu-id="1858e-104">See also</span></span>
 - <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

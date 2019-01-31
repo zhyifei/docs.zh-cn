@@ -1,5 +1,5 @@
 ---
-title: '&lt;PreferComInsteadOfManagedRemoting&gt;元素'
+title: <PreferComInsteadOfManagedRemoting> 元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
@@ -7,63 +7,63 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9292a0973df100acbffa341d7c0ca2604455f7fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f143429c1f579ae98a03fd69a8cf3dcdd26ad2c2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522331"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260354"
 ---
-# <a name="ltprefercominsteadofmanagedremotinggt-element"></a><span data-ttu-id="7c8fe-102">&lt;PreferComInsteadOfManagedRemoting&gt;元素</span><span class="sxs-lookup"><span data-stu-id="7c8fe-102">&lt;PreferComInsteadOfManagedRemoting&gt; Element</span></span>
-<span data-ttu-id="7c8fe-103">指定是否在运行时将使用 COM 互操作而不是远程处理的所有调用跨应用程序域边界。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-103">Specifies whether the runtime will use COM interop instead of remoting for all calls across application domain boundaries.</span></span>  
+# <a name="prefercominsteadofmanagedremoting-element"></a><span data-ttu-id="69ec4-102">\<PreferComInsteadOfManagedRemoting > 元素</span><span class="sxs-lookup"><span data-stu-id="69ec4-102">\<PreferComInsteadOfManagedRemoting> Element</span></span>
+<span data-ttu-id="69ec4-103">指定是否在运行时将使用 COM 互操作而不是远程处理的所有调用跨应用程序域边界。</span><span class="sxs-lookup"><span data-stu-id="69ec4-103">Specifies whether the runtime will use COM interop instead of remoting for all calls across application domain boundaries.</span></span>  
   
- <span data-ttu-id="7c8fe-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7c8fe-104">\<configuration></span></span>  
-<span data-ttu-id="7c8fe-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="7c8fe-105">\<runtime></span></span>  
-<span data-ttu-id="7c8fe-106">\<PreferComInsteadOfManagedRemoting></span><span class="sxs-lookup"><span data-stu-id="7c8fe-106">\<PreferComInsteadOfManagedRemoting></span></span>  
+ <span data-ttu-id="69ec4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="69ec4-104">\<configuration></span></span>  
+<span data-ttu-id="69ec4-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="69ec4-105">\<runtime></span></span>  
+<span data-ttu-id="69ec4-106">\<PreferComInsteadOfManagedRemoting></span><span class="sxs-lookup"><span data-stu-id="69ec4-106">\<PreferComInsteadOfManagedRemoting></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7c8fe-107">语法</span><span class="sxs-lookup"><span data-stu-id="7c8fe-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="69ec4-107">语法</span><span class="sxs-lookup"><span data-stu-id="69ec4-107">Syntax</span></span>  
   
 ```xml  
 <PreferComInsteadOfManagedRemoting enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7c8fe-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="7c8fe-108">Attributes and Elements</span></span>  
- <span data-ttu-id="7c8fe-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="69ec4-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="69ec4-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="69ec4-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="69ec4-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7c8fe-110">特性</span><span class="sxs-lookup"><span data-stu-id="7c8fe-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="69ec4-110">特性</span><span class="sxs-lookup"><span data-stu-id="69ec4-110">Attributes</span></span>  
   
-|<span data-ttu-id="7c8fe-111">特性</span><span class="sxs-lookup"><span data-stu-id="7c8fe-111">Attribute</span></span>|<span data-ttu-id="7c8fe-112">描述</span><span class="sxs-lookup"><span data-stu-id="7c8fe-112">Description</span></span>|  
+|<span data-ttu-id="69ec4-111">特性</span><span class="sxs-lookup"><span data-stu-id="69ec4-111">Attribute</span></span>|<span data-ttu-id="69ec4-112">描述</span><span class="sxs-lookup"><span data-stu-id="69ec4-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="7c8fe-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="7c8fe-114">指示是否在运行时将跨应用程序域边界而不是远程处理中使用 COM 互操作。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-114">Indicates whether the runtime will use COM interop instead of remoting across application domain boundaries.</span></span>|  
+|`enabled`|<span data-ttu-id="69ec4-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="69ec4-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="69ec4-114">指示是否在运行时将跨应用程序域边界而不是远程处理中使用 COM 互操作。</span><span class="sxs-lookup"><span data-stu-id="69ec4-114">Indicates whether the runtime will use COM interop instead of remoting across application domain boundaries.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="7c8fe-115">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="7c8fe-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="69ec4-115">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="69ec4-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="7c8fe-116">值</span><span class="sxs-lookup"><span data-stu-id="7c8fe-116">Value</span></span>|<span data-ttu-id="7c8fe-117">描述</span><span class="sxs-lookup"><span data-stu-id="7c8fe-117">Description</span></span>|  
+|<span data-ttu-id="69ec4-116">值</span><span class="sxs-lookup"><span data-stu-id="69ec4-116">Value</span></span>|<span data-ttu-id="69ec4-117">描述</span><span class="sxs-lookup"><span data-stu-id="69ec4-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="7c8fe-118">在运行时将使用远程处理跨应用程序域边界。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-118">The runtime will use remoting across application domain boundaries.</span></span> <span data-ttu-id="7c8fe-119">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="7c8fe-120">运行时将跨应用程序域边界使用 COM 互操作。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-120">The runtime will use COM interop across application domain boundaries.</span></span>|  
+|`false`|<span data-ttu-id="69ec4-118">在运行时将使用远程处理跨应用程序域边界。</span><span class="sxs-lookup"><span data-stu-id="69ec4-118">The runtime will use remoting across application domain boundaries.</span></span> <span data-ttu-id="69ec4-119">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="69ec4-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="69ec4-120">运行时将跨应用程序域边界使用 COM 互操作。</span><span class="sxs-lookup"><span data-stu-id="69ec4-120">The runtime will use COM interop across application domain boundaries.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="7c8fe-121">子元素</span><span class="sxs-lookup"><span data-stu-id="7c8fe-121">Child Elements</span></span>  
- <span data-ttu-id="7c8fe-122">无。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="69ec4-121">子元素</span><span class="sxs-lookup"><span data-stu-id="69ec4-121">Child Elements</span></span>  
+ <span data-ttu-id="69ec4-122">无。</span><span class="sxs-lookup"><span data-stu-id="69ec4-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="7c8fe-123">父元素</span><span class="sxs-lookup"><span data-stu-id="7c8fe-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="69ec4-123">父元素</span><span class="sxs-lookup"><span data-stu-id="69ec4-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="7c8fe-124">元素</span><span class="sxs-lookup"><span data-stu-id="7c8fe-124">Element</span></span>|<span data-ttu-id="7c8fe-125">描述</span><span class="sxs-lookup"><span data-stu-id="7c8fe-125">Description</span></span>|  
+|<span data-ttu-id="69ec4-124">元素</span><span class="sxs-lookup"><span data-stu-id="69ec4-124">Element</span></span>|<span data-ttu-id="69ec4-125">描述</span><span class="sxs-lookup"><span data-stu-id="69ec4-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="7c8fe-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="7c8fe-127">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="69ec4-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="69ec4-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="69ec4-127">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="69ec4-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7c8fe-128">备注</span><span class="sxs-lookup"><span data-stu-id="7c8fe-128">Remarks</span></span>  
- <span data-ttu-id="7c8fe-129">当您将设置`enabled`属性为`true`，运行时的行为，如下所示：</span><span class="sxs-lookup"><span data-stu-id="7c8fe-129">When you set the `enabled` attribute to `true`, the runtime behaves as follows:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="69ec4-128">备注</span><span class="sxs-lookup"><span data-stu-id="69ec4-128">Remarks</span></span>  
+ <span data-ttu-id="69ec4-129">当您将设置`enabled`属性为`true`，运行时的行为，如下所示：</span><span class="sxs-lookup"><span data-stu-id="69ec4-129">When you set the `enabled` attribute to `true`, the runtime behaves as follows:</span></span>  
   
--   <span data-ttu-id="7c8fe-130">在运行时不会调用[iunknown:: Queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867)有关[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口时[IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003)接口进入域通过 COM 接口。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-130">The runtime does not call [IUnknown::QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface when an [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) interface enters the domain through a COM interface.</span></span> <span data-ttu-id="7c8fe-131">相反，它构造[运行时可调用包装器](../../../../../docs/framework/interop/runtime-callable-wrapper.md)(RCW) 对象周围。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-131">Instead, it constructs a [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) around the object.</span></span>  
+-   <span data-ttu-id="69ec4-130">在运行时不会调用[iunknown:: Queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867)有关[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口时[IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003)接口进入域通过 COM 接口。</span><span class="sxs-lookup"><span data-stu-id="69ec4-130">The runtime does not call [IUnknown::QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface when an [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) interface enters the domain through a COM interface.</span></span> <span data-ttu-id="69ec4-131">相反，它构造[运行时可调用包装器](../../../../../docs/framework/interop/runtime-callable-wrapper.md)(RCW) 对象周围。</span><span class="sxs-lookup"><span data-stu-id="69ec4-131">Instead, it constructs a [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) around the object.</span></span>  
   
--   <span data-ttu-id="7c8fe-132">在接收时，运行时将返回 E_NOINTERFACE`QueryInterface`寻求[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口的任何[COM 可调用包装器](../../../../../docs/framework/interop/com-callable-wrapper.md)(CCW) 已在此域中创建。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-132">The runtime returns E_NOINTERFACE when it receives a `QueryInterface` call for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface for any [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) that has been created in this domain.</span></span>  
+-   <span data-ttu-id="69ec4-132">在接收时，运行时将返回 E_NOINTERFACE`QueryInterface`寻求[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)接口的任何[COM 可调用包装器](../../../../../docs/framework/interop/com-callable-wrapper.md)(CCW) 已在此域中创建。</span><span class="sxs-lookup"><span data-stu-id="69ec4-132">The runtime returns E_NOINTERFACE when it receives a `QueryInterface` call for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface for any [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) that has been created in this domain.</span></span>  
   
- <span data-ttu-id="7c8fe-133">请确保这两种行为，COM 上的所有调用之间的都接口的托管的对象跨应用程序域边界使用 COM 和 COM 互操作而不是远程处理。</span><span class="sxs-lookup"><span data-stu-id="7c8fe-133">These two behaviors ensure that all calls over COM interfaces between managed objects across application domain boundaries use COM and COM interop instead of remoting.</span></span>  
+ <span data-ttu-id="69ec4-133">请确保这两种行为，COM 上的所有调用之间的都接口的托管的对象跨应用程序域边界使用 COM 和 COM 互操作而不是远程处理。</span><span class="sxs-lookup"><span data-stu-id="69ec4-133">These two behaviors ensure that all calls over COM interfaces between managed objects across application domain boundaries use COM and COM interop instead of remoting.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7c8fe-134">示例</span><span class="sxs-lookup"><span data-stu-id="7c8fe-134">Example</span></span>  
- <span data-ttu-id="7c8fe-135">下面的示例演示如何指定运行时应使用 COM 互操作跨隔离边界：</span><span class="sxs-lookup"><span data-stu-id="7c8fe-135">The following example shows how to specify that the runtime should use COM interop across isolation boundaries:</span></span>  
+## <a name="example"></a><span data-ttu-id="69ec4-134">示例</span><span class="sxs-lookup"><span data-stu-id="69ec4-134">Example</span></span>  
+ <span data-ttu-id="69ec4-135">下面的示例演示如何指定运行时应使用 COM 互操作跨隔离边界：</span><span class="sxs-lookup"><span data-stu-id="69ec4-135">The following example shows how to specify that the runtime should use COM interop across isolation boundaries:</span></span>  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ ms.locfileid: "54522331"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7c8fe-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="7c8fe-136">See also</span></span>
-- [<span data-ttu-id="7c8fe-137">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="7c8fe-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="7c8fe-138">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="7c8fe-138">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="69ec4-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="69ec4-136">See also</span></span>
+- [<span data-ttu-id="69ec4-137">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="69ec4-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="69ec4-138">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="69ec4-138">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

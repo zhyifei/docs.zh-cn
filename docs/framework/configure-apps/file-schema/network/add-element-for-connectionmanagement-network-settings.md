@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;connectionManagement （网络设置） 的元素'
+title: connectionManagement -> <add> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 32b84412edf2d7c9943391909659dc91d8060cc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7a4cfe952a32c859a113f0903696fec3681f800
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625740"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267611"
 ---
-# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="93099-102">&lt;添加&gt;connectionManagement （网络设置） 的元素</span><span class="sxs-lookup"><span data-stu-id="93099-102">&lt;add&gt; Element for connectionManagement (Network Settings)</span></span>
-<span data-ttu-id="93099-103">将 IP 地址或 DNS 名称添加到连接管理列表。</span><span class="sxs-lookup"><span data-stu-id="93099-103">Adds an IP address or DNS name to the connection management list.</span></span>  
+# <a name="add-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="bdf22-102">\<添加 > connectionManagement （网络设置） 的元素</span><span class="sxs-lookup"><span data-stu-id="bdf22-102">\<add> Element for connectionManagement (Network Settings)</span></span>
+<span data-ttu-id="bdf22-103">将 IP 地址或 DNS 名称添加到连接管理列表。</span><span class="sxs-lookup"><span data-stu-id="bdf22-103">Adds an IP address or DNS name to the connection management list.</span></span>  
   
- <span data-ttu-id="93099-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="93099-104">\<configuration></span></span>  
-<span data-ttu-id="93099-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="93099-105">\<system.net></span></span>  
-<span data-ttu-id="93099-106">\<connectionManagement></span><span class="sxs-lookup"><span data-stu-id="93099-106">\<connectionManagement></span></span>  
-<span data-ttu-id="93099-107">\<add></span><span class="sxs-lookup"><span data-stu-id="93099-107">\<add></span></span>  
+ <span data-ttu-id="bdf22-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="bdf22-104">\<configuration></span></span>  
+<span data-ttu-id="bdf22-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="bdf22-105">\<system.net></span></span>  
+<span data-ttu-id="bdf22-106">\<connectionManagement></span><span class="sxs-lookup"><span data-stu-id="bdf22-106">\<connectionManagement></span></span>  
+<span data-ttu-id="bdf22-107">\<add></span><span class="sxs-lookup"><span data-stu-id="bdf22-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93099-108">语法</span><span class="sxs-lookup"><span data-stu-id="93099-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bdf22-108">语法</span><span class="sxs-lookup"><span data-stu-id="bdf22-108">Syntax</span></span>  
   
 ```xml  
 <add   
@@ -34,35 +34,35 @@ ms.locfileid: "54625740"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="93099-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="93099-109">Attributes and Elements</span></span>  
- <span data-ttu-id="93099-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="93099-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="bdf22-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="bdf22-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="bdf22-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="bdf22-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="93099-111">特性</span><span class="sxs-lookup"><span data-stu-id="93099-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="bdf22-111">特性</span><span class="sxs-lookup"><span data-stu-id="bdf22-111">Attributes</span></span>  
   
-|<span data-ttu-id="93099-112">**特性**</span><span class="sxs-lookup"><span data-stu-id="93099-112">**Attribute**</span></span>|<span data-ttu-id="93099-113">**说明**</span><span class="sxs-lookup"><span data-stu-id="93099-113">**Description**</span></span>|  
+|<span data-ttu-id="bdf22-112">**特性**</span><span class="sxs-lookup"><span data-stu-id="bdf22-112">**Attribute**</span></span>|<span data-ttu-id="bdf22-113">**说明**</span><span class="sxs-lookup"><span data-stu-id="bdf22-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`address`|<span data-ttu-id="93099-114">描述 IP 地址或 DNS 名称的字符串。</span><span class="sxs-lookup"><span data-stu-id="93099-114">A string describing an IP address or DNS name.</span></span>|  
-|`maxconnection`|<span data-ttu-id="93099-115">允许连接至服务器的最大连接数。</span><span class="sxs-lookup"><span data-stu-id="93099-115">The maximum number of connections allowed to a server.</span></span> <span data-ttu-id="93099-116">如果未提供，则默认为 2。</span><span class="sxs-lookup"><span data-stu-id="93099-116">If not supplied, the default is 2.</span></span>|  
+|`address`|<span data-ttu-id="bdf22-114">描述 IP 地址或 DNS 名称的字符串。</span><span class="sxs-lookup"><span data-stu-id="bdf22-114">A string describing an IP address or DNS name.</span></span>|  
+|`maxconnection`|<span data-ttu-id="bdf22-115">允许连接至服务器的最大连接数。</span><span class="sxs-lookup"><span data-stu-id="bdf22-115">The maximum number of connections allowed to a server.</span></span> <span data-ttu-id="bdf22-116">如果未提供，则默认为 2。</span><span class="sxs-lookup"><span data-stu-id="bdf22-116">If not supplied, the default is 2.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="93099-117">子元素</span><span class="sxs-lookup"><span data-stu-id="93099-117">Child Elements</span></span>  
- <span data-ttu-id="93099-118">无。</span><span class="sxs-lookup"><span data-stu-id="93099-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="bdf22-117">子元素</span><span class="sxs-lookup"><span data-stu-id="bdf22-117">Child Elements</span></span>  
+ <span data-ttu-id="bdf22-118">无。</span><span class="sxs-lookup"><span data-stu-id="bdf22-118">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="93099-119">父元素</span><span class="sxs-lookup"><span data-stu-id="93099-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="bdf22-119">父元素</span><span class="sxs-lookup"><span data-stu-id="bdf22-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="93099-120">**元素**</span><span class="sxs-lookup"><span data-stu-id="93099-120">**Element**</span></span>|<span data-ttu-id="93099-121">**说明**</span><span class="sxs-lookup"><span data-stu-id="93099-121">**Description**</span></span>|  
+|<span data-ttu-id="bdf22-120">**元素**</span><span class="sxs-lookup"><span data-stu-id="bdf22-120">**Element**</span></span>|<span data-ttu-id="bdf22-121">**说明**</span><span class="sxs-lookup"><span data-stu-id="bdf22-121">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="93099-122">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="93099-122">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="93099-123">指定到网络主机的最大连接数。</span><span class="sxs-lookup"><span data-stu-id="93099-123">Specifies the maximum number of connections to a network host.</span></span>|  
+|[<span data-ttu-id="bdf22-122">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="bdf22-122">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="bdf22-123">指定到网络主机的最大连接数。</span><span class="sxs-lookup"><span data-stu-id="bdf22-123">Specifies the maximum number of connections to a network host.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="93099-124">备注</span><span class="sxs-lookup"><span data-stu-id="93099-124">Remarks</span></span>  
- <span data-ttu-id="93099-125">`address` 特性的值应该是一个星号以指示所有连接，或为 `<schema>://<idn_hostname>[:<port>]` 格式的字符串。</span><span class="sxs-lookup"><span data-stu-id="93099-125">The value of the `address` attribute should be either an asterisk to indicate all connections, or a string of the form `<schema>://<idn_hostname>[:<port>]`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bdf22-124">备注</span><span class="sxs-lookup"><span data-stu-id="bdf22-124">Remarks</span></span>  
+ <span data-ttu-id="bdf22-125">`address` 特性的值应该是一个星号以指示所有连接，或为 `<schema>://<idn_hostname>[:<port>]` 格式的字符串。</span><span class="sxs-lookup"><span data-stu-id="bdf22-125">The value of the `address` attribute should be either an asterisk to indicate all connections, or a string of the form `<schema>://<idn_hostname>[:<port>]`.</span></span>  
   
- <span data-ttu-id="93099-126">如果传递到任何 HTTP API 的 URI 包含 Unicode，那么将使用 <xref:System.Uri.DnsSafeHost%2A> 内部转换名称，这可能会返回一个 punicode 字符串（行为取决于当前 IDN 配置）。</span><span class="sxs-lookup"><span data-stu-id="93099-126">If the URI passed to any HTTP APIs contains Unicode, the name will be converted internally using <xref:System.Uri.DnsSafeHost%2A> which might return a punicode string (behavior dependent on the current IDN configuration).</span></span>  
+ <span data-ttu-id="bdf22-126">如果传递到任何 HTTP API 的 URI 包含 Unicode，那么将使用 <xref:System.Uri.DnsSafeHost%2A> 内部转换名称，这可能会返回一个 punicode 字符串（行为取决于当前 IDN 配置）。</span><span class="sxs-lookup"><span data-stu-id="bdf22-126">If the URI passed to any HTTP APIs contains Unicode, the name will be converted internally using <xref:System.Uri.DnsSafeHost%2A> which might return a punicode string (behavior dependent on the current IDN configuration).</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="93099-127">配置文件</span><span class="sxs-lookup"><span data-stu-id="93099-127">Configuration Files</span></span>  
- <span data-ttu-id="93099-128">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="93099-128">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="bdf22-127">配置文件</span><span class="sxs-lookup"><span data-stu-id="bdf22-127">Configuration Files</span></span>  
+ <span data-ttu-id="bdf22-128">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="bdf22-128">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="93099-129">示例</span><span class="sxs-lookup"><span data-stu-id="93099-129">Example</span></span>  
- <span data-ttu-id="93099-130">下面的示例配置应用程序使用与服务器的四个连接`www.contoso.com`和两个连接到所有其他服务器。</span><span class="sxs-lookup"><span data-stu-id="93099-130">The following example configures an application to use four connections to the server `www.contoso.com` and two connections to all other servers.</span></span>  
+## <a name="example"></a><span data-ttu-id="bdf22-129">示例</span><span class="sxs-lookup"><span data-stu-id="bdf22-129">Example</span></span>  
+ <span data-ttu-id="bdf22-130">下面的示例配置应用程序使用与服务器的四个连接`www.contoso.com`和两个连接到所有其他服务器。</span><span class="sxs-lookup"><span data-stu-id="bdf22-130">The following example configures an application to use four connections to the server `www.contoso.com` and two connections to all other servers.</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,7 +75,7 @@ ms.locfileid: "54625740"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="93099-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="93099-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bdf22-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="bdf22-131">See also</span></span>
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [<span data-ttu-id="93099-132">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="93099-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="bdf22-132">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="bdf22-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

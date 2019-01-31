@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;membername&gt; &#39;继承的接口之间不明确&#39; &lt;interfacename1&gt; &#39;和&#39; &lt;interfacename2&gt;&#39;'
+title: “<membername>”在继承接口“<interfacename1>”和“<interfacename2>”之间不明确
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30685
@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: e6d6a82331185060d6f08c3375dc5a628b65df1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1548c9894d476cc4b92d6581362d309e7b4d00d4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506278"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264983"
 ---
-# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a><span data-ttu-id="ec471-102">&#39;&lt;membername&gt; &#39;继承的接口之间不明确&#39; &lt;interfacename1&gt; &#39;和&#39; &lt;interfacename2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="ec471-102">&#39;&lt;membername&gt;&#39; is ambiguous across the inherited interfaces &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;interfacename2&gt;&#39;</span></span>
-<span data-ttu-id="ec471-103">接口从多个接口继承具有相同名称的两个或多个成员。</span><span class="sxs-lookup"><span data-stu-id="ec471-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="e834a-102">'\<成员名称 > 之间的继承接口的不明确\<interfacename1 > 和\<interfacename2 ></span><span class="sxs-lookup"><span data-stu-id="e834a-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
+<span data-ttu-id="e834a-103">接口从多个接口继承具有相同名称的两个或多个成员。</span><span class="sxs-lookup"><span data-stu-id="e834a-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
   
- <span data-ttu-id="ec471-104">**错误 ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="ec471-104">**Error ID:** BC30685</span></span>  
+ <span data-ttu-id="e834a-104">**错误 ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="e834a-104">**Error ID:** BC30685</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ec471-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="ec471-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e834a-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="e834a-105">To correct this error</span></span>  
   
--   <span data-ttu-id="ec471-106">将值转换为你想要使用; 的基接口例如：</span><span class="sxs-lookup"><span data-stu-id="ec471-106">Cast the value to the base interface that you want to use; for example:</span></span>  
+-   <span data-ttu-id="e834a-106">将值转换为你想要使用; 的基接口例如：</span><span class="sxs-lookup"><span data-stu-id="e834a-106">Cast the value to the base interface that you want to use; for example:</span></span>  
   
     ```  
     Interface Left  
@@ -46,5 +46,5 @@ ms.locfileid: "54506278"
     End Module  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ec471-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="ec471-107">See also</span></span>
-- [<span data-ttu-id="ec471-108">接口</span><span class="sxs-lookup"><span data-stu-id="ec471-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="e834a-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="e834a-107">See also</span></span>
+- [<span data-ttu-id="e834a-108">接口</span><span class="sxs-lookup"><span data-stu-id="e834a-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

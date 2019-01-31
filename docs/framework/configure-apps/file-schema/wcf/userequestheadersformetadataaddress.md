@@ -1,24 +1,24 @@
 ---
-title: '&lt;useRequestHeadersForMetadataAddress&gt;'
+title: <useRequestHeadersForMetadataAddress>
 ms.date: 03/30/2017
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
-ms.openlocfilehash: 6c03057fca23b037702c702b9a574045ebb302b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 842f989ab1f2f0b9e8fe08e8fd729f983e846ffc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656617"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261563"
 ---
-# <a name="ltuserequestheadersformetadataaddressgt"></a><span data-ttu-id="ba3bb-102">&lt;useRequestHeadersForMetadataAddress&gt;</span><span class="sxs-lookup"><span data-stu-id="ba3bb-102">&lt;useRequestHeadersForMetadataAddress&gt;</span></span>
-<span data-ttu-id="ba3bb-103">允许从请求消息头中检索元数据地址信息。</span><span class="sxs-lookup"><span data-stu-id="ba3bb-103">Enables the retrieval of metadata address information from the request message headers.</span></span>  
+# <a name="userequestheadersformetadataaddress"></a><span data-ttu-id="2360d-101">\<useRequestHeadersForMetadataAddress></span><span class="sxs-lookup"><span data-stu-id="2360d-101">\<useRequestHeadersForMetadataAddress></span></span>
+<span data-ttu-id="2360d-102">允许从请求消息头中检索元数据地址信息。</span><span class="sxs-lookup"><span data-stu-id="2360d-102">Enables the retrieval of metadata address information from the request message headers.</span></span>  
   
-<span data-ttu-id="ba3bb-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="ba3bb-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="ba3bb-105">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="ba3bb-105">\<behaviors></span></span>  
-<span data-ttu-id="ba3bb-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="ba3bb-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="ba3bb-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="ba3bb-107">\<behavior></span></span>  
-<span data-ttu-id="ba3bb-108">\<useRequestHeadersForMetadataAddress></span><span class="sxs-lookup"><span data-stu-id="ba3bb-108">\<useRequestHeadersForMetadataAddress></span></span>  
+<span data-ttu-id="2360d-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="2360d-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="2360d-104">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="2360d-104">\<behaviors></span></span>  
+<span data-ttu-id="2360d-105">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="2360d-105">\<serviceBehaviors></span></span>  
+<span data-ttu-id="2360d-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="2360d-106">\<behavior></span></span>  
+<span data-ttu-id="2360d-107">\<useRequestHeadersForMetadataAddress></span><span class="sxs-lookup"><span data-stu-id="2360d-107">\<useRequestHeadersForMetadataAddress></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ba3bb-109">语法</span><span class="sxs-lookup"><span data-stu-id="ba3bb-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2360d-108">语法</span><span class="sxs-lookup"><span data-stu-id="2360d-108">Syntax</span></span>  
   
 ```xml  
 <useRequestHeadersForMetadataAddress>
@@ -29,23 +29,23 @@ ms.locfileid: "54656617"
 </useRequestHeadersForMetadataAddress>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ba3bb-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="ba3bb-110">Attributes and Elements</span></span>  
- <span data-ttu-id="ba3bb-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="ba3bb-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2360d-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="2360d-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="2360d-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="2360d-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ba3bb-112">特性</span><span class="sxs-lookup"><span data-stu-id="ba3bb-112">Attributes</span></span>  
- <span data-ttu-id="ba3bb-113">无。</span><span class="sxs-lookup"><span data-stu-id="ba3bb-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2360d-111">特性</span><span class="sxs-lookup"><span data-stu-id="2360d-111">Attributes</span></span>  
+ <span data-ttu-id="2360d-112">无。</span><span class="sxs-lookup"><span data-stu-id="2360d-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="ba3bb-114">子元素</span><span class="sxs-lookup"><span data-stu-id="ba3bb-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2360d-113">子元素</span><span class="sxs-lookup"><span data-stu-id="2360d-113">Child Elements</span></span>  
   
-|<span data-ttu-id="ba3bb-115">元素</span><span class="sxs-lookup"><span data-stu-id="ba3bb-115">Element</span></span>|<span data-ttu-id="ba3bb-116">描述</span><span class="sxs-lookup"><span data-stu-id="ba3bb-116">Description</span></span>|  
+|<span data-ttu-id="2360d-114">元素</span><span class="sxs-lookup"><span data-stu-id="2360d-114">Element</span></span>|<span data-ttu-id="2360d-115">描述</span><span class="sxs-lookup"><span data-stu-id="2360d-115">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="ba3bb-117">\<defaultPorts></span><span class="sxs-lookup"><span data-stu-id="ba3bb-117">\<defaultPorts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|<span data-ttu-id="ba3bb-118">一个默认端口集合，列出客户端应用程序侦听的默认通信终结点。</span><span class="sxs-lookup"><span data-stu-id="ba3bb-118">A collection of default ports listing the default communications endpoints that the client application listens to.</span></span>|  
+|[<span data-ttu-id="2360d-116">\<defaultPorts></span><span class="sxs-lookup"><span data-stu-id="2360d-116">\<defaultPorts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|<span data-ttu-id="2360d-117">一个默认端口集合，列出客户端应用程序侦听的默认通信终结点。</span><span class="sxs-lookup"><span data-stu-id="2360d-117">A collection of default ports listing the default communications endpoints that the client application listens to.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="ba3bb-119">父元素</span><span class="sxs-lookup"><span data-stu-id="ba3bb-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2360d-118">父元素</span><span class="sxs-lookup"><span data-stu-id="2360d-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="ba3bb-120">元素</span><span class="sxs-lookup"><span data-stu-id="ba3bb-120">Element</span></span>|<span data-ttu-id="ba3bb-121">描述</span><span class="sxs-lookup"><span data-stu-id="ba3bb-121">Description</span></span>|  
+|<span data-ttu-id="2360d-119">元素</span><span class="sxs-lookup"><span data-stu-id="2360d-119">Element</span></span>|<span data-ttu-id="2360d-120">描述</span><span class="sxs-lookup"><span data-stu-id="2360d-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="ba3bb-122">\<behavior></span><span class="sxs-lookup"><span data-stu-id="ba3bb-122">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="ba3bb-123">指定行为元素。</span><span class="sxs-lookup"><span data-stu-id="ba3bb-123">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="2360d-121">\<behavior></span><span class="sxs-lookup"><span data-stu-id="2360d-121">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="2360d-122">指定行为元素。</span><span class="sxs-lookup"><span data-stu-id="2360d-122">Specifies a behavior element.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="ba3bb-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="ba3bb-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2360d-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="2360d-123">See also</span></span>
 - <xref:System.ServiceModel.Configuration.UseRequestHeadersForMetadataAddressElement>

@@ -1,21 +1,21 @@
 ---
-title: '&lt;serviceActivations&gt; 的 &lt;add&gt;'
+title: <add> 的 <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: d0e1f45cc8ff5b544eff5ff5dae33d5989aaf405
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e87a79137641d2697452a4862c5449da166ecfda
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587630"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262671"
 ---
-# <a name="ltaddgt-of-ltserviceactivationsgt"></a><span data-ttu-id="30361-102">&lt;serviceActivations&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="30361-102">&lt;add&gt; of &lt;serviceActivations&gt;</span></span>
-<span data-ttu-id="30361-103">一个配置元素，允许你定义虚拟服务激活设置映射到 Windows Communication Foundation (WCF) 服务类型。</span><span class="sxs-lookup"><span data-stu-id="30361-103">A configuration element that allows you to define virtual service activation settings that map to your Windows Communication Foundation (WCF) service types.</span></span> <span data-ttu-id="30361-104">使用此配置元素可以在不使用 .svc 文件的情况下激活承载在 WAS/IIS 中的服务。</span><span class="sxs-lookup"><span data-stu-id="30361-104">This makes it possible to activate services hosted in WAS/IIS without an .svc file.</span></span>  
+# <a name="add-of-serviceactivations"></a><span data-ttu-id="61602-102">\<add> of \<serviceActivations></span><span class="sxs-lookup"><span data-stu-id="61602-102">\<add> of \<serviceActivations></span></span>
+<span data-ttu-id="61602-103">一个配置元素，允许你定义虚拟服务激活设置映射到 Windows Communication Foundation (WCF) 服务类型。</span><span class="sxs-lookup"><span data-stu-id="61602-103">A configuration element that allows you to define virtual service activation settings that map to your Windows Communication Foundation (WCF) service types.</span></span> <span data-ttu-id="61602-104">使用此配置元素可以在不使用 .svc 文件的情况下激活承载在 WAS/IIS 中的服务。</span><span class="sxs-lookup"><span data-stu-id="61602-104">This makes it possible to activate services hosted in WAS/IIS without an .svc file.</span></span>  
   
- <span data-ttu-id="30361-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="30361-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="30361-106">\<ServiceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="30361-106">\<ServiceHostingEnvironment></span></span>  
+ <span data-ttu-id="61602-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="61602-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="61602-106">\<ServiceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="61602-106">\<ServiceHostingEnvironment></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30361-107">语法</span><span class="sxs-lookup"><span data-stu-id="30361-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61602-107">语法</span><span class="sxs-lookup"><span data-stu-id="61602-107">Syntax</span></span>  
   
 ```xml  
 <serviceHostingEnvironment>
@@ -26,28 +26,28 @@ ms.locfileid: "54587630"
 </serviceHostingEnvironment>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="30361-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="30361-108">Attributes and Elements</span></span>  
- <span data-ttu-id="30361-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="30361-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="61602-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="61602-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="61602-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="61602-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="30361-110">特性</span><span class="sxs-lookup"><span data-stu-id="30361-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="61602-110">特性</span><span class="sxs-lookup"><span data-stu-id="61602-110">Attributes</span></span>  
   
-|<span data-ttu-id="30361-111">特性</span><span class="sxs-lookup"><span data-stu-id="30361-111">Attribute</span></span>|<span data-ttu-id="30361-112">描述</span><span class="sxs-lookup"><span data-stu-id="30361-112">Description</span></span>|  
+|<span data-ttu-id="61602-111">特性</span><span class="sxs-lookup"><span data-stu-id="61602-111">Attribute</span></span>|<span data-ttu-id="61602-112">描述</span><span class="sxs-lookup"><span data-stu-id="61602-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="30361-113">factory</span><span class="sxs-lookup"><span data-stu-id="30361-113">factory</span></span>|<span data-ttu-id="30361-114">一个字符串，指定生成服务激活元素的工厂的 CLR 类型名称。</span><span class="sxs-lookup"><span data-stu-id="30361-114">A string that specifies the CLR type name of the factory that generates a service activation element.</span></span>|  
-|<span data-ttu-id="30361-115">service</span><span class="sxs-lookup"><span data-stu-id="30361-115">service</span></span>|<span data-ttu-id="30361-116">实现服务的 ServiceType（完全限定的 Typename 或短的 Typename（将它置于 App_Code 文件夹中时））。</span><span class="sxs-lookup"><span data-stu-id="30361-116">The ServiceType that implements the service (either the full qualified Typename or the short Typename (when it is placed in the App_Code folder).</span></span>|  
-|<span data-ttu-id="30361-117">relativeAddress</span><span class="sxs-lookup"><span data-stu-id="30361-117">relativeAddress</span></span>|<span data-ttu-id="30361-118">当前 IIS 应用程序内的相对地址，例如“Service.svc”。</span><span class="sxs-lookup"><span data-stu-id="30361-118">The relative address within the current IIS application - for example "Service.svc".</span></span> <span data-ttu-id="30361-119">在 WCF4.0 中，此相对地址必须包含其中一个已知文件扩展名（.svc、.xamlx、...）之一。relativeUrl 不存在于任何物理文件中</span><span class="sxs-lookup"><span data-stu-id="30361-119">In WCF 4.0 this relative address has to contain one of the known file extensions (.svc, .xamlx, ...). No physical file has to exist for the relativeUrl</span></span>|  
+|<span data-ttu-id="61602-113">factory</span><span class="sxs-lookup"><span data-stu-id="61602-113">factory</span></span>|<span data-ttu-id="61602-114">一个字符串，指定生成服务激活元素的工厂的 CLR 类型名称。</span><span class="sxs-lookup"><span data-stu-id="61602-114">A string that specifies the CLR type name of the factory that generates a service activation element.</span></span>|  
+|<span data-ttu-id="61602-115">service</span><span class="sxs-lookup"><span data-stu-id="61602-115">service</span></span>|<span data-ttu-id="61602-116">实现服务的 ServiceType（完全限定的 Typename 或短的 Typename（将它置于 App_Code 文件夹中时））。</span><span class="sxs-lookup"><span data-stu-id="61602-116">The ServiceType that implements the service (either the full qualified Typename or the short Typename (when it is placed in the App_Code folder).</span></span>|  
+|<span data-ttu-id="61602-117">relativeAddress</span><span class="sxs-lookup"><span data-stu-id="61602-117">relativeAddress</span></span>|<span data-ttu-id="61602-118">当前 IIS 应用程序内的相对地址，例如“Service.svc”。</span><span class="sxs-lookup"><span data-stu-id="61602-118">The relative address within the current IIS application - for example "Service.svc".</span></span> <span data-ttu-id="61602-119">在 WCF4.0 中，此相对地址必须包含其中一个已知文件扩展名（.svc、.xamlx、...）之一。relativeUrl 不存在于任何物理文件中</span><span class="sxs-lookup"><span data-stu-id="61602-119">In WCF 4.0 this relative address has to contain one of the known file extensions (.svc, .xamlx, ...). No physical file has to exist for the relativeUrl</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="30361-120">子元素</span><span class="sxs-lookup"><span data-stu-id="30361-120">Child Elements</span></span>  
- <span data-ttu-id="30361-121">无。</span><span class="sxs-lookup"><span data-stu-id="30361-121">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="61602-120">子元素</span><span class="sxs-lookup"><span data-stu-id="61602-120">Child Elements</span></span>  
+ <span data-ttu-id="61602-121">无。</span><span class="sxs-lookup"><span data-stu-id="61602-121">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="30361-122">父元素</span><span class="sxs-lookup"><span data-stu-id="30361-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="61602-122">父元素</span><span class="sxs-lookup"><span data-stu-id="61602-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="30361-123">元素</span><span class="sxs-lookup"><span data-stu-id="30361-123">Element</span></span>|<span data-ttu-id="30361-124">描述</span><span class="sxs-lookup"><span data-stu-id="30361-124">Description</span></span>|  
+|<span data-ttu-id="61602-123">元素</span><span class="sxs-lookup"><span data-stu-id="61602-123">Element</span></span>|<span data-ttu-id="61602-124">描述</span><span class="sxs-lookup"><span data-stu-id="61602-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="30361-125">\<serviceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="30361-125">\<serviceHostingEnvironment></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|<span data-ttu-id="30361-126">一个描述激活设置的配置节。</span><span class="sxs-lookup"><span data-stu-id="30361-126">A configuration section that describes activation settings.</span></span>|  
+|[<span data-ttu-id="61602-125">\<serviceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="61602-125">\<serviceHostingEnvironment></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|<span data-ttu-id="61602-126">一个描述激活设置的配置节。</span><span class="sxs-lookup"><span data-stu-id="61602-126">A configuration section that describes activation settings.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="30361-127">备注</span><span class="sxs-lookup"><span data-stu-id="30361-127">Remarks</span></span>  
- <span data-ttu-id="30361-128">下面的示例演示如何在 web.config 文件中配置激活设置。</span><span class="sxs-lookup"><span data-stu-id="30361-128">The following example shows how to configure activation settings within your web.config file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="61602-127">备注</span><span class="sxs-lookup"><span data-stu-id="61602-127">Remarks</span></span>  
+ <span data-ttu-id="61602-128">下面的示例演示如何在 web.config 文件中配置激活设置。</span><span class="sxs-lookup"><span data-stu-id="61602-128">The following example shows how to configure activation settings within your web.config file.</span></span>  
   
 ```xml  
 <configuration>
@@ -61,13 +61,13 @@ ms.locfileid: "54587630"
 </configuration>
 ```  
   
- <span data-ttu-id="30361-129">使用此配置，您可以在不使用 .svc 文件的情况下激活 GreetingService。</span><span class="sxs-lookup"><span data-stu-id="30361-129">Using this configuration, you can activate the GreetingService without using an .svc file.</span></span>  
+ <span data-ttu-id="61602-129">使用此配置，您可以在不使用 .svc 文件的情况下激活 GreetingService。</span><span class="sxs-lookup"><span data-stu-id="61602-129">Using this configuration, you can activate the GreetingService without using an .svc file.</span></span>  
   
- <span data-ttu-id="30361-130">请注意，`<serviceHostingEnvironment>` 是应用程序级配置。</span><span class="sxs-lookup"><span data-stu-id="30361-130">Note that `<serviceHostingEnvironment>` is an application level configuration.</span></span> <span data-ttu-id="30361-131">必须将包含此配置的 `web.config` 放置到虚拟应用程序的根目录下。</span><span class="sxs-lookup"><span data-stu-id="30361-131">You have to place the `web.config` containing the configuration under the root of the virtual Application.</span></span> <span data-ttu-id="30361-132">此外，`serviceHostingEnvironment` 是一个可继承的 machinetoApplication 节。</span><span class="sxs-lookup"><span data-stu-id="30361-132">In addition, `serviceHostingEnvironment` is a machinetoApplication inheritable section.</span></span> <span data-ttu-id="30361-133">如果在计算机的根目录中注册了一个服务，应用程序中的每个服务都将继承此服务。</span><span class="sxs-lookup"><span data-stu-id="30361-133">If you register a single service in the root of the machine, every service in the application will inherit this service.</span></span>  
+ <span data-ttu-id="61602-130">请注意，`<serviceHostingEnvironment>` 是应用程序级配置。</span><span class="sxs-lookup"><span data-stu-id="61602-130">Note that `<serviceHostingEnvironment>` is an application level configuration.</span></span> <span data-ttu-id="61602-131">必须将包含此配置的 `web.config` 放置到虚拟应用程序的根目录下。</span><span class="sxs-lookup"><span data-stu-id="61602-131">You have to place the `web.config` containing the configuration under the root of the virtual Application.</span></span> <span data-ttu-id="61602-132">此外，`serviceHostingEnvironment` 是一个可继承的 machinetoApplication 节。</span><span class="sxs-lookup"><span data-stu-id="61602-132">In addition, `serviceHostingEnvironment` is a machinetoApplication inheritable section.</span></span> <span data-ttu-id="61602-133">如果在计算机的根目录中注册了一个服务，应用程序中的每个服务都将继承此服务。</span><span class="sxs-lookup"><span data-stu-id="61602-133">If you register a single service in the root of the machine, every service in the application will inherit this service.</span></span>  
   
- <span data-ttu-id="30361-134">基于配置的激活支持通过 http 协议和非 http 协议进行激活。</span><span class="sxs-lookup"><span data-stu-id="30361-134">Configuration-based activation supports activation over both http and non-http protocol.</span></span> <span data-ttu-id="30361-135">它要求在 relatativeAddress 中使用扩展名，即 .svc、.xoml 或 .xamlx。</span><span class="sxs-lookup"><span data-stu-id="30361-135">It requires extensions in the relatativeAddress, i.e. .svc, .xoml or .xamlx.</span></span> <span data-ttu-id="30361-136">您可以将自己的扩展名映射到已知的 buildProviders，然后就可以通过任意扩展名激活服务。</span><span class="sxs-lookup"><span data-stu-id="30361-136">You can map your own extensions to the know buildProviders, which will then enable you to activate service over any extension.</span></span> <span data-ttu-id="30361-137">如果发生冲突，`<serviceActivations>` 节将重写 .svc 注册。</span><span class="sxs-lookup"><span data-stu-id="30361-137">Upon conflict, the `<serviceActivations>` section overrides .svc registrations.</span></span>  
+ <span data-ttu-id="61602-134">基于配置的激活支持通过 http 协议和非 http 协议进行激活。</span><span class="sxs-lookup"><span data-stu-id="61602-134">Configuration-based activation supports activation over both http and non-http protocol.</span></span> <span data-ttu-id="61602-135">它要求在 relatativeAddress 中使用扩展名，即 .svc、.xoml 或 .xamlx。</span><span class="sxs-lookup"><span data-stu-id="61602-135">It requires extensions in the relatativeAddress, i.e. .svc, .xoml or .xamlx.</span></span> <span data-ttu-id="61602-136">您可以将自己的扩展名映射到已知的 buildProviders，然后就可以通过任意扩展名激活服务。</span><span class="sxs-lookup"><span data-stu-id="61602-136">You can map your own extensions to the know buildProviders, which will then enable you to activate service over any extension.</span></span> <span data-ttu-id="61602-137">如果发生冲突，`<serviceActivations>` 节将重写 .svc 注册。</span><span class="sxs-lookup"><span data-stu-id="61602-137">Upon conflict, the `<serviceActivations>` section overrides .svc registrations.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="30361-138">请参阅</span><span class="sxs-lookup"><span data-stu-id="30361-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61602-138">请参阅</span><span class="sxs-lookup"><span data-stu-id="61602-138">See also</span></span>
 - <xref:System.ServiceModel.Configuration.ServiceActivationElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>

@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;NameValueSectionHandler 和 DictionarySectionHandler 的元素'
+title: <add> NameValueSectionHandler 和 DictionarySectionHandler 的元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -9,47 +9,47 @@ helpviewer_keywords:
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 502f86e49d68e456d8e64e00e7632aa603cafbe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b421b4bab32c1aae7a6ba7d69b9f4aea2ab99a5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523904"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278273"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="d167b-102">\<添加 > NameValueSectionHandler 和 DictionarySectionHandler 的元素</span><span class="sxs-lookup"><span data-stu-id="d167b-102">\<add> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="19faf-102">\<添加 > NameValueSectionHandler 和 DictionarySectionHandler 的元素</span><span class="sxs-lookup"><span data-stu-id="19faf-102">\<add> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
 
-<span data-ttu-id="d167b-103">添加自定义应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="d167b-103">Adds custom application settings.</span></span> <span data-ttu-id="d167b-104">每个**\<添加 >** 标记包含键/值对。</span><span class="sxs-lookup"><span data-stu-id="d167b-104">Each **\<add>** tag contains a key/value pair.</span></span>
+<span data-ttu-id="19faf-103">添加自定义应用程序设置。</span><span class="sxs-lookup"><span data-stu-id="19faf-103">Adds custom application settings.</span></span> <span data-ttu-id="19faf-104">每个**\<添加 >** 标记包含键/值对。</span><span class="sxs-lookup"><span data-stu-id="19faf-104">Each **\<add>** tag contains a key/value pair.</span></span>
 
-<span data-ttu-id="d167b-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="d167b-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="d167b-106">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="d167b-106">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span></span>  
-<span data-ttu-id="d167b-107">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span><span class="sxs-lookup"><span data-stu-id="d167b-107">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>
+<span data-ttu-id="19faf-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="19faf-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="19faf-106">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="19faf-106">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span></span>  
+<span data-ttu-id="19faf-107">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span><span class="sxs-lookup"><span data-stu-id="19faf-107">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="d167b-108">语法</span><span class="sxs-lookup"><span data-stu-id="d167b-108">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="19faf-108">语法</span><span class="sxs-lookup"><span data-stu-id="19faf-108">Syntax</span></span>
 
 ```xml
 <add key="key" value="value" />
 ```
 
-## <a name="attributes"></a><span data-ttu-id="d167b-109">特性</span><span class="sxs-lookup"><span data-stu-id="d167b-109">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="19faf-109">特性</span><span class="sxs-lookup"><span data-stu-id="19faf-109">Attributes</span></span>
 
-| <span data-ttu-id="d167b-110">特性</span><span class="sxs-lookup"><span data-stu-id="d167b-110">Attribute</span></span> | <span data-ttu-id="d167b-111">描述</span><span class="sxs-lookup"><span data-stu-id="d167b-111">Description</span></span> |
+| <span data-ttu-id="19faf-110">特性</span><span class="sxs-lookup"><span data-stu-id="19faf-110">Attribute</span></span> | <span data-ttu-id="19faf-111">描述</span><span class="sxs-lookup"><span data-stu-id="19faf-111">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="d167b-112">**key**</span><span class="sxs-lookup"><span data-stu-id="d167b-112">**key**</span></span>   | <span data-ttu-id="d167b-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="d167b-113">Required attribute.</span></span><br><br><span data-ttu-id="d167b-114">指定的设置的名称。</span><span class="sxs-lookup"><span data-stu-id="d167b-114">Specifies the name of the setting.</span></span> |
-| <span data-ttu-id="d167b-115">**值**</span><span class="sxs-lookup"><span data-stu-id="d167b-115">**value**</span></span> | <span data-ttu-id="d167b-116">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="d167b-116">Required attribute.</span></span><br><br><span data-ttu-id="d167b-117">指定的设置的值。</span><span class="sxs-lookup"><span data-stu-id="d167b-117">Specifies the value of the setting.</span></span> |
+| <span data-ttu-id="19faf-112">**key**</span><span class="sxs-lookup"><span data-stu-id="19faf-112">**key**</span></span>   | <span data-ttu-id="19faf-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="19faf-113">Required attribute.</span></span><br><br><span data-ttu-id="19faf-114">指定的设置的名称。</span><span class="sxs-lookup"><span data-stu-id="19faf-114">Specifies the name of the setting.</span></span> |
+| <span data-ttu-id="19faf-115">**值**</span><span class="sxs-lookup"><span data-stu-id="19faf-115">**value**</span></span> | <span data-ttu-id="19faf-116">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="19faf-116">Required attribute.</span></span><br><br><span data-ttu-id="19faf-117">指定的设置的值。</span><span class="sxs-lookup"><span data-stu-id="19faf-117">Specifies the value of the setting.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="d167b-118">父元素</span><span class="sxs-lookup"><span data-stu-id="d167b-118">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="19faf-118">父元素</span><span class="sxs-lookup"><span data-stu-id="19faf-118">Parent element</span></span>
 
-| <span data-ttu-id="d167b-119">元素</span><span class="sxs-lookup"><span data-stu-id="d167b-119">Element</span></span> | <span data-ttu-id="d167b-120">描述</span><span class="sxs-lookup"><span data-stu-id="d167b-120">Description</span></span> |
+| <span data-ttu-id="19faf-119">元素</span><span class="sxs-lookup"><span data-stu-id="19faf-119">Element</span></span> | <span data-ttu-id="19faf-120">描述</span><span class="sxs-lookup"><span data-stu-id="19faf-120">Description</span></span> |
 | ------- | ------------|
-| [<span data-ttu-id="d167b-121">**\<sectionName >** 元素</span><span class="sxs-lookup"><span data-stu-id="d167b-121">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="d167b-122">定义使用的自定义配置部分设置<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类。</span><span class="sxs-lookup"><span data-stu-id="d167b-122">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
+| [<span data-ttu-id="19faf-121">**\<sectionName >** 元素</span><span class="sxs-lookup"><span data-stu-id="19faf-121">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="19faf-122">定义使用的自定义配置部分设置<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>类。</span><span class="sxs-lookup"><span data-stu-id="19faf-122">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="d167b-123">子元素</span><span class="sxs-lookup"><span data-stu-id="d167b-123">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="19faf-123">子元素</span><span class="sxs-lookup"><span data-stu-id="19faf-123">Child elements</span></span>
 
-<span data-ttu-id="d167b-124">无</span><span class="sxs-lookup"><span data-stu-id="d167b-124">None</span></span>
+<span data-ttu-id="19faf-124">无</span><span class="sxs-lookup"><span data-stu-id="19faf-124">None</span></span>
 
-## <a name="example"></a><span data-ttu-id="d167b-125">示例</span><span class="sxs-lookup"><span data-stu-id="d167b-125">Example</span></span>
+## <a name="example"></a><span data-ttu-id="19faf-125">示例</span><span class="sxs-lookup"><span data-stu-id="19faf-125">Example</span></span>
 
-<span data-ttu-id="d167b-126">下面的示例演示如何定义一个自定义配置节，并使用**\<添加 >** 元素将设置放入部分：</span><span class="sxs-lookup"><span data-stu-id="d167b-126">The following example shows how to define a custom configuration section and use the **\<add>** element to put settings into the section:</span></span>
+<span data-ttu-id="19faf-126">下面的示例演示如何定义一个自定义配置节，并使用**\<添加 >** 元素将设置放入部分：</span><span class="sxs-lookup"><span data-stu-id="19faf-126">The following example shows how to define a custom configuration section and use the **\<add>** element to put settings into the section:</span></span>
 
 ```xml
 <configuration>
@@ -62,10 +62,10 @@ ms.locfileid: "54523904"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="d167b-127">配置文件</span><span class="sxs-lookup"><span data-stu-id="d167b-127">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="19faf-127">配置文件</span><span class="sxs-lookup"><span data-stu-id="19faf-127">Configuration file</span></span>
 
-<span data-ttu-id="d167b-128">在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。</span><span class="sxs-lookup"><span data-stu-id="d167b-128">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="19faf-128">在应用程序配置文件中，计算机配置文件可以使用此元素 (*Machine.config*)，并*Web.config*不在应用程序目录级别上的文件。</span><span class="sxs-lookup"><span data-stu-id="19faf-128">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d167b-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="d167b-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19faf-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="19faf-129">See also</span></span>
 
-- [<span data-ttu-id="d167b-130">.NET Framework 的配置文件架构</span><span class="sxs-lookup"><span data-stu-id="d167b-130">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="19faf-130">.NET Framework 的配置文件架构</span><span class="sxs-lookup"><span data-stu-id="19faf-130">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)

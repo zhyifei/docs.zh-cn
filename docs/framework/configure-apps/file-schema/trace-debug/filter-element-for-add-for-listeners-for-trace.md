@@ -1,5 +1,5 @@
 ---
-title: '&lt;筛选器&gt;的元素&lt;添加&gt;有关&lt;侦听器&gt;为&lt;跟踪&gt;'
+title: <filter> 的 <add> 的 <listeners> 的 <trace> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-ms.openlocfilehash: b53c3e4cc2362a1f1dc0312d59aff403ca924b5e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: f364590a419c3f31af49ea2c3dd6fa5901bf0272
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084180"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283174"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="dbd9d-102">&lt;筛选器&gt;的元素&lt;添加&gt;有关&lt;侦听器&gt;为&lt;跟踪&gt;</span><span class="sxs-lookup"><span data-stu-id="dbd9d-102">&lt;filter&gt; Element for &lt;add&gt; for &lt;listeners&gt; for &lt;trace&gt;</span></span>
-<span data-ttu-id="dbd9d-103">将筛选器添加到中的侦听器`Listeners`跟踪的集合。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-103">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>  
+# <a name="filter-element-for-add-for-listeners-for-trace"></a><span data-ttu-id="68115-102">\<筛选器 > 元素\<添加 > 有关\<侦听器 > 为\<跟踪 ></span><span class="sxs-lookup"><span data-stu-id="68115-102">\<filter> Element for \<add> for \<listeners> for \<trace></span></span>
+<span data-ttu-id="68115-103">将筛选器添加到中的侦听器`Listeners`跟踪的集合。</span><span class="sxs-lookup"><span data-stu-id="68115-103">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>  
   
- <span data-ttu-id="dbd9d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="dbd9d-104">\<configuration></span></span>  
-<span data-ttu-id="dbd9d-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="dbd9d-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="dbd9d-106">\<trace></span><span class="sxs-lookup"><span data-stu-id="dbd9d-106">\<trace></span></span>  
-<span data-ttu-id="dbd9d-107">\<listeners></span><span class="sxs-lookup"><span data-stu-id="dbd9d-107">\<listeners></span></span>  
-<span data-ttu-id="dbd9d-108">\<add></span><span class="sxs-lookup"><span data-stu-id="dbd9d-108">\<add></span></span>  
-<span data-ttu-id="dbd9d-109">\<filter></span><span class="sxs-lookup"><span data-stu-id="dbd9d-109">\<filter></span></span>  
+ <span data-ttu-id="68115-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="68115-104">\<configuration></span></span>  
+<span data-ttu-id="68115-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="68115-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="68115-106">\<trace></span><span class="sxs-lookup"><span data-stu-id="68115-106">\<trace></span></span>  
+<span data-ttu-id="68115-107">\<listeners></span><span class="sxs-lookup"><span data-stu-id="68115-107">\<listeners></span></span>  
+<span data-ttu-id="68115-108">\<add></span><span class="sxs-lookup"><span data-stu-id="68115-108">\<add></span></span>  
+<span data-ttu-id="68115-109">\<filter></span><span class="sxs-lookup"><span data-stu-id="68115-109">\<filter></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dbd9d-110">语法</span><span class="sxs-lookup"><span data-stu-id="dbd9d-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68115-110">语法</span><span class="sxs-lookup"><span data-stu-id="68115-110">Syntax</span></span>  
   
 ```xml  
 <filter   
@@ -33,36 +33,36 @@ ms.locfileid: "55084180"
   initializeData="data" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="dbd9d-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="dbd9d-111">Attributes and Elements</span></span>  
- <span data-ttu-id="dbd9d-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="68115-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="68115-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="68115-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="68115-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="dbd9d-113">特性</span><span class="sxs-lookup"><span data-stu-id="dbd9d-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="68115-113">特性</span><span class="sxs-lookup"><span data-stu-id="68115-113">Attributes</span></span>  
   
-|<span data-ttu-id="dbd9d-114">特性</span><span class="sxs-lookup"><span data-stu-id="dbd9d-114">Attribute</span></span>|<span data-ttu-id="dbd9d-115">描述</span><span class="sxs-lookup"><span data-stu-id="dbd9d-115">Description</span></span>|  
+|<span data-ttu-id="68115-114">特性</span><span class="sxs-lookup"><span data-stu-id="68115-114">Attribute</span></span>|<span data-ttu-id="68115-115">描述</span><span class="sxs-lookup"><span data-stu-id="68115-115">Description</span></span>|  
 |---------------|-----------------|  
-|`type`|<span data-ttu-id="dbd9d-116">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="dbd9d-117">指定的筛选器，它应继承自类型<xref:System.Diagnostics.TraceFilter>类。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-117">Specifies the type of the filter, which should inherit from the <xref:System.Diagnostics.TraceFilter> class.</span></span> <span data-ttu-id="dbd9d-118">可以使用的类型相对应的类型的命名空间限定名称<xref:System.Type.FullName%2A>属性，也可以使用完全限定的类型名称包括程序集信息，它对应于<xref:System.Type.AssemblyQualifiedName%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-118">You can use the namespace-qualified name of the type, which corresponds to the type's <xref:System.Type.FullName%2A> property, or you can use the fully qualified type name including the assembly information, which corresponds to the <xref:System.Type.AssemblyQualifiedName%2A> property.</span></span> <span data-ttu-id="dbd9d-119">有关完全限定的类型名称的信息，请参阅[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-119">For information about fully qualified type names, see [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
-|`initializeData`|<span data-ttu-id="dbd9d-120">可选特性。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="dbd9d-121">传递给构造函数指定的筛选器类的字符串。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-121">The string passed to the constructor for the specified filter class.</span></span>|  
+|`type`|<span data-ttu-id="68115-116">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="68115-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="68115-117">指定的筛选器，它应继承自类型<xref:System.Diagnostics.TraceFilter>类。</span><span class="sxs-lookup"><span data-stu-id="68115-117">Specifies the type of the filter, which should inherit from the <xref:System.Diagnostics.TraceFilter> class.</span></span> <span data-ttu-id="68115-118">可以使用的类型相对应的类型的命名空间限定名称<xref:System.Type.FullName%2A>属性，也可以使用完全限定的类型名称包括程序集信息，它对应于<xref:System.Type.AssemblyQualifiedName%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="68115-118">You can use the namespace-qualified name of the type, which corresponds to the type's <xref:System.Type.FullName%2A> property, or you can use the fully qualified type name including the assembly information, which corresponds to the <xref:System.Type.AssemblyQualifiedName%2A> property.</span></span> <span data-ttu-id="68115-119">有关完全限定的类型名称的信息，请参阅[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。</span><span class="sxs-lookup"><span data-stu-id="68115-119">For information about fully qualified type names, see [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|`initializeData`|<span data-ttu-id="68115-120">可选特性。</span><span class="sxs-lookup"><span data-stu-id="68115-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="68115-121">传递给构造函数指定的筛选器类的字符串。</span><span class="sxs-lookup"><span data-stu-id="68115-121">The string passed to the constructor for the specified filter class.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="dbd9d-122">子元素</span><span class="sxs-lookup"><span data-stu-id="dbd9d-122">Child Elements</span></span>  
- <span data-ttu-id="dbd9d-123">无。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="68115-122">子元素</span><span class="sxs-lookup"><span data-stu-id="68115-122">Child Elements</span></span>  
+ <span data-ttu-id="68115-123">无。</span><span class="sxs-lookup"><span data-stu-id="68115-123">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="dbd9d-124">父元素</span><span class="sxs-lookup"><span data-stu-id="dbd9d-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="68115-124">父元素</span><span class="sxs-lookup"><span data-stu-id="68115-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="dbd9d-125">元素</span><span class="sxs-lookup"><span data-stu-id="dbd9d-125">Element</span></span>|<span data-ttu-id="dbd9d-126">描述</span><span class="sxs-lookup"><span data-stu-id="dbd9d-126">Description</span></span>|  
+|<span data-ttu-id="68115-125">元素</span><span class="sxs-lookup"><span data-stu-id="68115-125">Element</span></span>|<span data-ttu-id="68115-126">描述</span><span class="sxs-lookup"><span data-stu-id="68115-126">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="dbd9d-127">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="dbd9d-128">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`trace`|<span data-ttu-id="dbd9d-129">包含用于收集、存储和路由跟踪消息的侦听器。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-129">Contains listeners that collect, store, and route tracing messages.</span></span>|  
-|`listeners`|<span data-ttu-id="dbd9d-130">包含用于收集、 存储和路由消息的侦听器。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-130">Contains listeners that collect, store, and route messages.</span></span> <span data-ttu-id="dbd9d-131">侦听器将跟踪输出定向到适当的目标。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-131">Listeners direct the tracing output to an appropriate target.</span></span>|  
-|`add`|<span data-ttu-id="dbd9d-132">将侦听器添加到 `Listeners` 集合中。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-132">Adds a listener to the `Listeners` collection.</span></span>|  
+|`configuration`|<span data-ttu-id="68115-127">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="68115-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="68115-128">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="68115-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`trace`|<span data-ttu-id="68115-129">包含用于收集、存储和路由跟踪消息的侦听器。</span><span class="sxs-lookup"><span data-stu-id="68115-129">Contains listeners that collect, store, and route tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="68115-130">包含用于收集、 存储和路由消息的侦听器。</span><span class="sxs-lookup"><span data-stu-id="68115-130">Contains listeners that collect, store, and route messages.</span></span> <span data-ttu-id="68115-131">侦听器将跟踪输出定向到适当的目标。</span><span class="sxs-lookup"><span data-stu-id="68115-131">Listeners direct the tracing output to an appropriate target.</span></span>|  
+|`add`|<span data-ttu-id="68115-132">将侦听器添加到 `Listeners` 集合中。</span><span class="sxs-lookup"><span data-stu-id="68115-132">Adds a listener to the `Listeners` collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="dbd9d-133">备注</span><span class="sxs-lookup"><span data-stu-id="dbd9d-133">Remarks</span></span>  
- <span data-ttu-id="dbd9d-134">`<filter>`元素必须包含在`<add>`中定义的跟踪侦听器，用于指定该侦听器的类型的元素，而不仅仅是侦听器的名称[ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-134">The `<filter>` element must be contained in an `<add>` element for a trace listener that specifies the type of the listener, not just the name of a listener defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).</span></span> <span data-ttu-id="dbd9d-135">如果在中定义侦听器[ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)，必须在该元素中定义为该侦听器的筛选器。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-135">If the listener is defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), the filter for that listener must be defined in that element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="68115-133">备注</span><span class="sxs-lookup"><span data-stu-id="68115-133">Remarks</span></span>  
+ <span data-ttu-id="68115-134">`<filter>`元素必须包含在`<add>`中定义的跟踪侦听器，用于指定该侦听器的类型的元素，而不仅仅是侦听器的名称[ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)。</span><span class="sxs-lookup"><span data-stu-id="68115-134">The `<filter>` element must be contained in an `<add>` element for a trace listener that specifies the type of the listener, not just the name of a listener defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).</span></span> <span data-ttu-id="68115-135">如果在中定义侦听器[ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)，必须在该元素中定义为该侦听器的筛选器。</span><span class="sxs-lookup"><span data-stu-id="68115-135">If the listener is defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), the filter for that listener must be defined in that element.</span></span>  
   
- <span data-ttu-id="dbd9d-136">计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+ <span data-ttu-id="68115-136">计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。</span><span class="sxs-lookup"><span data-stu-id="68115-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dbd9d-137">示例</span><span class="sxs-lookup"><span data-stu-id="dbd9d-137">Example</span></span>  
- <span data-ttu-id="dbd9d-138">下面的示例演示如何使用`<filter>`元素添加到侦听器的筛选器`console`中`Listeners`的跟踪，同时指定为筛选器事件级别收集`Error`。</span><span class="sxs-lookup"><span data-stu-id="dbd9d-138">The following example shows how to use the `<filter>` element to add a filter to the listener `console` in the `Listeners` collection for trace, specifying the filter event level as `Error`.</span></span>  
+## <a name="example"></a><span data-ttu-id="68115-137">示例</span><span class="sxs-lookup"><span data-stu-id="68115-137">Example</span></span>  
+ <span data-ttu-id="68115-138">下面的示例演示如何使用`<filter>`元素添加到侦听器的筛选器`console`中`Listeners`的跟踪，同时指定为筛选器事件级别收集`Error`。</span><span class="sxs-lookup"><span data-stu-id="68115-138">The following example shows how to use the `<filter>` element to add a filter to the listener `console` in the `Listeners` collection for trace, specifying the filter event level as `Error`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,9 +81,9 @@ ms.locfileid: "55084180"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dbd9d-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="dbd9d-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68115-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="68115-139">See also</span></span>
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceFilter>
-- [<span data-ttu-id="dbd9d-140">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="dbd9d-140">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [<span data-ttu-id="68115-140">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="68115-140">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
