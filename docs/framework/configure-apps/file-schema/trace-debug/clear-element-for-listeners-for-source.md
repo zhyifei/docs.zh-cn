@@ -1,5 +1,5 @@
 ---
-title: '&lt;清除&gt;的元素&lt;侦听器&gt;为&lt;源&gt;'
+title: <clear> 的 <listeners> 的 <source> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,56 +7,56 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 362e1d7a4ac4c39309aa86561683df1d239f2ab1
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ee4d5f1880cf6b7aac871149bf7bf59a06903bf2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083856"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286736"
 ---
-# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a><span data-ttu-id="d204d-102">&lt;清除&gt;的元素&lt;侦听器&gt;为&lt;源&gt;</span><span class="sxs-lookup"><span data-stu-id="d204d-102">&lt;clear&gt; Element for &lt;listeners&gt; for &lt;source&gt;</span></span>
-<span data-ttu-id="d204d-103">清除跟踪源的 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="d204d-103">Clears the `Listeners` collection for a trace source.</span></span>  
+# <a name="clear-element-for-listeners-for-source"></a><span data-ttu-id="6f920-102">\<清除 > 元素\<侦听器 > 为\<源 ></span><span class="sxs-lookup"><span data-stu-id="6f920-102">\<clear> Element for \<listeners> for \<source></span></span>
+<span data-ttu-id="6f920-103">清除跟踪源的 `Listeners` 集合。</span><span class="sxs-lookup"><span data-stu-id="6f920-103">Clears the `Listeners` collection for a trace source.</span></span>  
   
- <span data-ttu-id="d204d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d204d-104">\<configuration></span></span>  
-<span data-ttu-id="d204d-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="d204d-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="d204d-106">\<sources></span><span class="sxs-lookup"><span data-stu-id="d204d-106">\<sources></span></span>  
-<span data-ttu-id="d204d-107">\<source></span><span class="sxs-lookup"><span data-stu-id="d204d-107">\<source></span></span>  
-<span data-ttu-id="d204d-108">\<listeners></span><span class="sxs-lookup"><span data-stu-id="d204d-108">\<listeners></span></span>  
-<span data-ttu-id="d204d-109">\<clear></span><span class="sxs-lookup"><span data-stu-id="d204d-109">\<clear></span></span>  
+ <span data-ttu-id="6f920-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="6f920-104">\<configuration></span></span>  
+<span data-ttu-id="6f920-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="6f920-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="6f920-106">\<sources></span><span class="sxs-lookup"><span data-stu-id="6f920-106">\<sources></span></span>  
+<span data-ttu-id="6f920-107">\<source></span><span class="sxs-lookup"><span data-stu-id="6f920-107">\<source></span></span>  
+<span data-ttu-id="6f920-108">\<listeners></span><span class="sxs-lookup"><span data-stu-id="6f920-108">\<listeners></span></span>  
+<span data-ttu-id="6f920-109">\<clear></span><span class="sxs-lookup"><span data-stu-id="6f920-109">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d204d-110">语法</span><span class="sxs-lookup"><span data-stu-id="d204d-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f920-110">语法</span><span class="sxs-lookup"><span data-stu-id="6f920-110">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d204d-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="d204d-111">Attributes and Elements</span></span>  
- <span data-ttu-id="d204d-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="d204d-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6f920-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="6f920-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="6f920-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="6f920-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d204d-113">特性</span><span class="sxs-lookup"><span data-stu-id="d204d-113">Attributes</span></span>  
- <span data-ttu-id="d204d-114">无。</span><span class="sxs-lookup"><span data-stu-id="d204d-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="6f920-113">特性</span><span class="sxs-lookup"><span data-stu-id="6f920-113">Attributes</span></span>  
+ <span data-ttu-id="6f920-114">无。</span><span class="sxs-lookup"><span data-stu-id="6f920-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="d204d-115">子元素</span><span class="sxs-lookup"><span data-stu-id="d204d-115">Child Elements</span></span>  
- <span data-ttu-id="d204d-116">无。</span><span class="sxs-lookup"><span data-stu-id="d204d-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="6f920-115">子元素</span><span class="sxs-lookup"><span data-stu-id="6f920-115">Child Elements</span></span>  
+ <span data-ttu-id="6f920-116">无。</span><span class="sxs-lookup"><span data-stu-id="6f920-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d204d-117">父元素</span><span class="sxs-lookup"><span data-stu-id="d204d-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="6f920-117">父元素</span><span class="sxs-lookup"><span data-stu-id="6f920-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="d204d-118">元素</span><span class="sxs-lookup"><span data-stu-id="d204d-118">Element</span></span>|<span data-ttu-id="d204d-119">描述</span><span class="sxs-lookup"><span data-stu-id="d204d-119">Description</span></span>|  
+|<span data-ttu-id="6f920-118">元素</span><span class="sxs-lookup"><span data-stu-id="6f920-118">Element</span></span>|<span data-ttu-id="6f920-119">描述</span><span class="sxs-lookup"><span data-stu-id="6f920-119">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="d204d-120">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="d204d-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="d204d-121">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="d204d-121">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`sources`|<span data-ttu-id="d204d-122">包含用于启动跟踪消息的跟踪源。</span><span class="sxs-lookup"><span data-stu-id="d204d-122">Contains trace sources that initiate tracing messages.</span></span>|  
-|`source`|<span data-ttu-id="d204d-123">指定用于启动跟踪消息的跟踪源。</span><span class="sxs-lookup"><span data-stu-id="d204d-123">Specifies a trace source that initiates tracing messages.</span></span>|  
-|`listeners`|<span data-ttu-id="d204d-124">指定侦听器，用于收集、 存储和路由消息。</span><span class="sxs-lookup"><span data-stu-id="d204d-124">Specifies listeners that collect, store, and route messages.</span></span>|  
+|`configuration`|<span data-ttu-id="6f920-120">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="6f920-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="6f920-121">指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。</span><span class="sxs-lookup"><span data-stu-id="6f920-121">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="6f920-122">包含用于启动跟踪消息的跟踪源。</span><span class="sxs-lookup"><span data-stu-id="6f920-122">Contains trace sources that initiate tracing messages.</span></span>|  
+|`source`|<span data-ttu-id="6f920-123">指定用于启动跟踪消息的跟踪源。</span><span class="sxs-lookup"><span data-stu-id="6f920-123">Specifies a trace source that initiates tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="6f920-124">指定侦听器，用于收集、 存储和路由消息。</span><span class="sxs-lookup"><span data-stu-id="6f920-124">Specifies listeners that collect, store, and route messages.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d204d-125">备注</span><span class="sxs-lookup"><span data-stu-id="d204d-125">Remarks</span></span>  
- <span data-ttu-id="d204d-126">`<clear>`元素中移除所有侦听器`Listeners`集合跟踪源，包括<xref:System.Diagnostics.DefaultTraceListener>。</span><span class="sxs-lookup"><span data-stu-id="d204d-126">The `<clear>` element removes all listeners from the `Listeners` collection for a trace source, including the <xref:System.Diagnostics.DefaultTraceListener>.</span></span> <span data-ttu-id="d204d-127">可以使用`<clear>`元素之前使用`<add>`元素为特定集合中没有任何其他活动的侦听器。</span><span class="sxs-lookup"><span data-stu-id="d204d-127">You can use the `<clear>` element before using the `<add>` element to be certain there are no other active listeners in the collection.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6f920-125">备注</span><span class="sxs-lookup"><span data-stu-id="6f920-125">Remarks</span></span>  
+ <span data-ttu-id="6f920-126">`<clear>`元素中移除所有侦听器`Listeners`集合跟踪源，包括<xref:System.Diagnostics.DefaultTraceListener>。</span><span class="sxs-lookup"><span data-stu-id="6f920-126">The `<clear>` element removes all listeners from the `Listeners` collection for a trace source, including the <xref:System.Diagnostics.DefaultTraceListener>.</span></span> <span data-ttu-id="6f920-127">可以使用`<clear>`元素之前使用`<add>`元素为特定集合中没有任何其他活动的侦听器。</span><span class="sxs-lookup"><span data-stu-id="6f920-127">You can use the `<clear>` element before using the `<add>` element to be certain there are no other active listeners in the collection.</span></span>  
   
-## <a name="configuration-file"></a><span data-ttu-id="d204d-128">配置文件</span><span class="sxs-lookup"><span data-stu-id="d204d-128">Configuration File</span></span>  
- <span data-ttu-id="d204d-129">计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。</span><span class="sxs-lookup"><span data-stu-id="d204d-129">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+## <a name="configuration-file"></a><span data-ttu-id="6f920-128">配置文件</span><span class="sxs-lookup"><span data-stu-id="6f920-128">Configuration File</span></span>  
+ <span data-ttu-id="6f920-129">计算机配置文件 (Machine.config) 和应用程序配置文件中，可以使用此元素。</span><span class="sxs-lookup"><span data-stu-id="6f920-129">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d204d-130">示例</span><span class="sxs-lookup"><span data-stu-id="d204d-130">Example</span></span>  
- <span data-ttu-id="d204d-131">下面的示例演示如何使用`<clear>`之前使用的元素`<add>`元素添加侦听器`console`并`textListener`到`Listeners`跟踪源集合`TraceSourceApp`。</span><span class="sxs-lookup"><span data-stu-id="d204d-131">The following example shows how to use the `<clear>` element before using the `<add>` elements to add the listeners `console` and `textListener` to the `Listeners` collection for the trace source `TraceSourceApp`.</span></span>  
+## <a name="example"></a><span data-ttu-id="6f920-130">示例</span><span class="sxs-lookup"><span data-stu-id="6f920-130">Example</span></span>  
+ <span data-ttu-id="6f920-131">下面的示例演示如何使用`<clear>`之前使用的元素`<add>`元素添加侦听器`console`并`textListener`到`Listeners`跟踪源集合`TraceSourceApp`。</span><span class="sxs-lookup"><span data-stu-id="6f920-131">The following example shows how to use the `<clear>` element before using the `<add>` elements to add the listeners `console` and `textListener` to the `Listeners` collection for the trace source `TraceSourceApp`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -84,8 +84,8 @@ ms.locfileid: "55083856"
 </configuration>   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d204d-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="d204d-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f920-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="6f920-132">See also</span></span>
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [<span data-ttu-id="d204d-133">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="d204d-133">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [<span data-ttu-id="d204d-134">跟踪侦听器</span><span class="sxs-lookup"><span data-stu-id="d204d-134">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [<span data-ttu-id="6f920-133">跟踪和调试设置架构</span><span class="sxs-lookup"><span data-stu-id="6f920-133">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [<span data-ttu-id="6f920-134">跟踪侦听器</span><span class="sxs-lookup"><span data-stu-id="6f920-134">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

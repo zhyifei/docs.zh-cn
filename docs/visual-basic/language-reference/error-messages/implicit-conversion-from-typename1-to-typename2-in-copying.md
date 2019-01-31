@@ -1,5 +1,5 @@
 ---
-title: 从隐式转换&#39; &lt;typename1&gt; &#39;到&#39; &lt;typename2&gt; &#39;的值复制&#39;ByRef&#39;参数&#39; &lt;parametername&gt; &#39;返回到匹配的参数。
+title: 将“ByRef”参数“<typename1>”的值复制回匹配参数时，发生从“<typename2>”到“<parametername>”的隐式转换。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc41999
@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 9f05a5fbcbef828b4ffa920d8cade475cedb64d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f875206b15ee048311e43624e197e78413de522e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537227"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279612"
 ---
-# <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a><span data-ttu-id="60b27-102">从隐式转换&#39; &lt;typename1&gt; &#39;到&#39; &lt;typename2&gt; &#39;的值复制&#39;ByRef&#39;参数&#39; &lt;parametername&gt; &#39;返回到匹配的参数。</span><span class="sxs-lookup"><span data-stu-id="60b27-102">Implicit conversion from &#39;&lt;typename1&gt;&#39; to &#39;&lt;typename2&gt;&#39; in copying the value of &#39;ByRef&#39; parameter &#39;&lt;parametername&gt;&#39; back to the matching argument.</span></span>
-<span data-ttu-id="60b27-103">与调用了过程[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)比其对应的参数的不同类型的参数。</span><span class="sxs-lookup"><span data-stu-id="60b27-103">A procedure is called with a [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argument of a different type than that of its corresponding parameter.</span></span>  
+# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a><span data-ttu-id="a4496-102">从隐式转换\<typename1 > 到\<typename2 >' ByRef 参数的值复制\<参数名 > 返回到匹配的参数。</span><span class="sxs-lookup"><span data-stu-id="a4496-102">Implicit conversion from '\<typename1>' to '\<typename2>' in copying the value of 'ByRef' parameter '\<parametername>' back to the matching argument.</span></span>
+<span data-ttu-id="a4496-103">与调用了过程[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)比其对应的参数的不同类型的参数。</span><span class="sxs-lookup"><span data-stu-id="a4496-103">A procedure is called with a [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argument of a different type than that of its corresponding parameter.</span></span>  
   
- <span data-ttu-id="60b27-104">如果传递参数`ByRef`，Visual Basic 有时会将参数值复制到本地变量中而不是传递一个引用，该过程。</span><span class="sxs-lookup"><span data-stu-id="60b27-104">If you pass an argument `ByRef`, Visual Basic sometimes copies the argument value into a local variable in the procedure instead of passing a reference.</span></span> <span data-ttu-id="60b27-105">在这种情况下，当过程返回时，Visual Basic 必须然后将本地变量值复制回调用代码中的参数。</span><span class="sxs-lookup"><span data-stu-id="60b27-105">In such a case, when the procedure returns, Visual Basic must then copy the local variable value back into the argument in the calling code.</span></span>  
+ <span data-ttu-id="a4496-104">如果传递参数`ByRef`，Visual Basic 有时会将参数值复制到本地变量中而不是传递一个引用，该过程。</span><span class="sxs-lookup"><span data-stu-id="a4496-104">If you pass an argument `ByRef`, Visual Basic sometimes copies the argument value into a local variable in the procedure instead of passing a reference.</span></span> <span data-ttu-id="a4496-105">在这种情况下，当过程返回时，Visual Basic 必须然后将本地变量值复制回调用代码中的参数。</span><span class="sxs-lookup"><span data-stu-id="a4496-105">In such a case, when the procedure returns, Visual Basic must then copy the local variable value back into the argument in the calling code.</span></span>  
   
- <span data-ttu-id="60b27-106">如果将 `ByRef` 实参值复制到过程中，并且实参与形参为同一类型，则不必进行转换。</span><span class="sxs-lookup"><span data-stu-id="60b27-106">If a `ByRef` argument value is copied into the procedure and the argument and parameter are of the same type, no conversion is necessary.</span></span> <span data-ttu-id="60b27-107">但如果类型不同，必须将 Visual Basic 转换两个方向。</span><span class="sxs-lookup"><span data-stu-id="60b27-107">But if the types are different, Visual Basic must convert in both directions.</span></span> <span data-ttu-id="60b27-108">因为不能使用`CType`或任何其他转换关键字上过程自变量或参数，此类转换始终是隐式。</span><span class="sxs-lookup"><span data-stu-id="60b27-108">Because you cannot use `CType` or any of the other conversion keywords on a procedure argument or parameter, such a conversion is always implicit.</span></span>  
+ <span data-ttu-id="a4496-106">如果将 `ByRef` 实参值复制到过程中，并且实参与形参为同一类型，则不必进行转换。</span><span class="sxs-lookup"><span data-stu-id="a4496-106">If a `ByRef` argument value is copied into the procedure and the argument and parameter are of the same type, no conversion is necessary.</span></span> <span data-ttu-id="a4496-107">但如果类型不同，必须将 Visual Basic 转换两个方向。</span><span class="sxs-lookup"><span data-stu-id="a4496-107">But if the types are different, Visual Basic must convert in both directions.</span></span> <span data-ttu-id="a4496-108">因为不能使用`CType`或任何其他转换关键字上过程自变量或参数，此类转换始终是隐式。</span><span class="sxs-lookup"><span data-stu-id="a4496-108">Because you cannot use `CType` or any of the other conversion keywords on a procedure argument or parameter, such a conversion is always implicit.</span></span>  
   
- <span data-ttu-id="60b27-109">默认情况下，此消息是一个警告。</span><span class="sxs-lookup"><span data-stu-id="60b27-109">By default, this message is a warning.</span></span> <span data-ttu-id="60b27-110">有关隐藏警告或将警告视为错误的信息，请参见 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="60b27-110">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="a4496-109">默认情况下，此消息是一个警告。</span><span class="sxs-lookup"><span data-stu-id="a4496-109">By default, this message is a warning.</span></span> <span data-ttu-id="a4496-110">有关隐藏警告或将警告视为错误的信息，请参见 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="a4496-110">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="60b27-111">**错误 ID:** BC41999</span><span class="sxs-lookup"><span data-stu-id="60b27-111">**Error ID:** BC41999</span></span>  
+ <span data-ttu-id="a4496-111">**错误 ID:** BC41999</span><span class="sxs-lookup"><span data-stu-id="a4496-111">**Error ID:** BC41999</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="60b27-112">更正此错误</span><span class="sxs-lookup"><span data-stu-id="60b27-112">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a4496-112">更正此错误</span><span class="sxs-lookup"><span data-stu-id="a4496-112">To correct this error</span></span>  
   
--   <span data-ttu-id="60b27-113">如果可能，请与过程参数，使用相同类型的调用参数，因此 Visual Basic 不需要执行任何转换。</span><span class="sxs-lookup"><span data-stu-id="60b27-113">If possible, use a calling argument of the same type as the procedure parameter, so Visual Basic does not need to do any conversion.</span></span>  
+-   <span data-ttu-id="a4496-113">如果可能，请与过程参数，使用相同类型的调用参数，因此 Visual Basic 不需要执行任何转换。</span><span class="sxs-lookup"><span data-stu-id="a4496-113">If possible, use a calling argument of the same type as the procedure parameter, so Visual Basic does not need to do any conversion.</span></span>  
   
--   <span data-ttu-id="60b27-114">如果需要调用实参类型与形参类型不同的过程，但不需要将值返回到调用实参中，请将形参定义为 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) 而不是 `ByRef`。</span><span class="sxs-lookup"><span data-stu-id="60b27-114">If you need to call the procedure with an argument type different from the parameter type but do not need to return a value into the calling argument, define the parameter to be [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) instead of `ByRef`.</span></span>  
+-   <span data-ttu-id="a4496-114">如果需要调用实参类型与形参类型不同的过程，但不需要将值返回到调用实参中，请将形参定义为 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) 而不是 `ByRef`。</span><span class="sxs-lookup"><span data-stu-id="a4496-114">If you need to call the procedure with an argument type different from the parameter type but do not need to return a value into the calling argument, define the parameter to be [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) instead of `ByRef`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="60b27-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="60b27-115">See also</span></span>
-- [<span data-ttu-id="60b27-116">过程</span><span class="sxs-lookup"><span data-stu-id="60b27-116">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [<span data-ttu-id="60b27-117">过程参数和自变量</span><span class="sxs-lookup"><span data-stu-id="60b27-117">Procedure Parameters and Arguments</span></span>](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
-- [<span data-ttu-id="60b27-118">按值和按引用传递自变量</span><span class="sxs-lookup"><span data-stu-id="60b27-118">Passing Arguments by Value and by Reference</span></span>](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
-- [<span data-ttu-id="60b27-119">隐式转换和显式转换</span><span class="sxs-lookup"><span data-stu-id="60b27-119">Implicit and Explicit Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="a4496-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="a4496-115">See also</span></span>
+- [<span data-ttu-id="a4496-116">过程</span><span class="sxs-lookup"><span data-stu-id="a4496-116">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [<span data-ttu-id="a4496-117">过程参数和自变量</span><span class="sxs-lookup"><span data-stu-id="a4496-117">Procedure Parameters and Arguments</span></span>](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
+- [<span data-ttu-id="a4496-118">按值和按引用传递自变量</span><span class="sxs-lookup"><span data-stu-id="a4496-118">Passing Arguments by Value and by Reference</span></span>](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="a4496-119">隐式转换和显式转换</span><span class="sxs-lookup"><span data-stu-id="a4496-119">Implicit and Explicit Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

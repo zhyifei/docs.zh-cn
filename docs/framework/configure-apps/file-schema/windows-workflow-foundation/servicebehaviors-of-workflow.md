@@ -1,19 +1,19 @@
 ---
-title: 工作流的 &lt;serviceBehaviors&gt;
+title: <serviceBehaviors> 工作流
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 51aba42d-0674-4726-a313-af6ed3aaa8f2
-ms.openlocfilehash: 7ca33d3632aa384e7358ddc14f53b33ac6f46db0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b2fa5885e40b0e3554251750641e737bab2ba84
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562071"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268036"
 ---
-# <a name="ltservicebehaviorsgt-of-workflow"></a><span data-ttu-id="d1e02-102">工作流的 &lt;serviceBehaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="d1e02-102">&lt;serviceBehaviors&gt; of workflow</span></span>
-<span data-ttu-id="d1e02-103">此配置节描述为特定服务定义的所有行为。</span><span class="sxs-lookup"><span data-stu-id="d1e02-103">This configuration section represents all the behaviors defined for a specific service.</span></span>  
+# <a name="servicebehaviors-of-workflow"></a><span data-ttu-id="9bc71-102">\<serviceBehaviors > 的工作流</span><span class="sxs-lookup"><span data-stu-id="9bc71-102">\<serviceBehaviors> of workflow</span></span>
+<span data-ttu-id="9bc71-103">此配置节描述为特定服务定义的所有行为。</span><span class="sxs-lookup"><span data-stu-id="9bc71-103">This configuration section represents all the behaviors defined for a specific service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1e02-104">请参阅</span><span class="sxs-lookup"><span data-stu-id="d1e02-104">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9bc71-104">请参阅</span><span class="sxs-lookup"><span data-stu-id="9bc71-104">See also</span></span>
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>
-- [<span data-ttu-id="d1e02-105">指定服务运行时行为</span><span class="sxs-lookup"><span data-stu-id="d1e02-105">Specifying Service Run-Time Behavior</span></span>](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+- [<span data-ttu-id="9bc71-105">指定服务运行时行为</span><span class="sxs-lookup"><span data-stu-id="9bc71-105">Specifying Service Run-Time Behavior</span></span>](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

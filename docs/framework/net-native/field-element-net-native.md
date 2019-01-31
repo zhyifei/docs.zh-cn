@@ -1,20 +1,20 @@
 ---
-title: '&lt;Field&gt; 元素 (.NET Native)'
+title: <Field>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de8569c55ef50e3f18d084f7d7ad60c733e58e50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f4a062e060e7b367f0d56b3633238de74ae8ed88
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623100"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281666"
 ---
-# <a name="ltfieldgt-element-net-native"></a><span data-ttu-id="8a2dc-102">&lt;Field&gt; 元素 (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="8a2dc-102">&lt;Field&gt; Element (.NET Native)</span></span>
-<span data-ttu-id="8a2dc-103">将运行时反射策略应用到一个字段。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-103">Applies runtime reflection policy to a field.</span></span>  
+# <a name="field-element-net-native"></a><span data-ttu-id="f8578-102">\<字段 > 元素 (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="f8578-102">\<Field> Element (.NET Native)</span></span>
+<span data-ttu-id="f8578-103">将运行时反射策略应用到一个字段。</span><span class="sxs-lookup"><span data-stu-id="f8578-103">Applies runtime reflection policy to a field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8a2dc-104">语法</span><span class="sxs-lookup"><span data-stu-id="8a2dc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8578-104">语法</span><span class="sxs-lookup"><span data-stu-id="f8578-104">Syntax</span></span>  
   
 ```xml  
 <Field Name="field_name"  
@@ -23,44 +23,44 @@ ms.locfileid: "54623100"
        Serialize="policy_type" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8a2dc-105">特性和元素</span><span class="sxs-lookup"><span data-stu-id="8a2dc-105">Attributes and Elements</span></span>  
- <span data-ttu-id="8a2dc-106">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f8578-105">特性和元素</span><span class="sxs-lookup"><span data-stu-id="f8578-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="f8578-106">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="f8578-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8a2dc-107">特性</span><span class="sxs-lookup"><span data-stu-id="8a2dc-107">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f8578-107">特性</span><span class="sxs-lookup"><span data-stu-id="f8578-107">Attributes</span></span>  
   
-|<span data-ttu-id="8a2dc-108">特性</span><span class="sxs-lookup"><span data-stu-id="8a2dc-108">Attribute</span></span>|<span data-ttu-id="8a2dc-109">特性类型</span><span class="sxs-lookup"><span data-stu-id="8a2dc-109">Attribute type</span></span>|<span data-ttu-id="8a2dc-110">描述</span><span class="sxs-lookup"><span data-stu-id="8a2dc-110">Description</span></span>|  
+|<span data-ttu-id="f8578-108">特性</span><span class="sxs-lookup"><span data-stu-id="f8578-108">Attribute</span></span>|<span data-ttu-id="f8578-109">特性类型</span><span class="sxs-lookup"><span data-stu-id="f8578-109">Attribute type</span></span>|<span data-ttu-id="f8578-110">描述</span><span class="sxs-lookup"><span data-stu-id="f8578-110">Description</span></span>|  
 |---------------|--------------------|-----------------|  
-|`Name`|<span data-ttu-id="8a2dc-111">常规</span><span class="sxs-lookup"><span data-stu-id="8a2dc-111">General</span></span>|<span data-ttu-id="8a2dc-112">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-112">Required attribute.</span></span> <span data-ttu-id="8a2dc-113">指定字段名称。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-113">Specifies the field name.</span></span>|  
-|`Browse`|<span data-ttu-id="8a2dc-114">映像</span><span class="sxs-lookup"><span data-stu-id="8a2dc-114">Reflection</span></span>|<span data-ttu-id="8a2dc-115">可选特性。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-115">Optional attribute.</span></span> <span data-ttu-id="8a2dc-116">控制对该字段信息的查询或列举该字段，但并不在运行时间启用任何动态访问。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-116">Controls querying for information about or enumerating the field but does not enable any dynamic access at run time.</span></span>|  
-|`Dynamic`|<span data-ttu-id="8a2dc-117">映像</span><span class="sxs-lookup"><span data-stu-id="8a2dc-117">Reflection</span></span>|<span data-ttu-id="8a2dc-118">可选特性。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-118">Optional attribute.</span></span> <span data-ttu-id="8a2dc-119">控制运行时对该字段的访问，以启用动态编程。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-119">Controls runtime access to the field to enable dynamic programming.</span></span> <span data-ttu-id="8a2dc-120">该策略确保一个字段可在运行时间内得到设置或动态检索。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-120">This policy ensures that a field can be set or retrieved dynamically at run time.</span></span>|  
-|`Serialize`|<span data-ttu-id="8a2dc-121">序列化</span><span class="sxs-lookup"><span data-stu-id="8a2dc-121">Serialization</span></span>|<span data-ttu-id="8a2dc-122">可选特性。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-122">Optional attribute.</span></span> <span data-ttu-id="8a2dc-123">控制运行时对一个字段的访问以启用类型实例，使其通过程序库得到序列化，例如通过 Newtonsoft JSON 序列化程序，或被用于绑定数据。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-123">Controls runtime access to a field to enable type instances to be serialized by libraries such as the Newtonsoft JSON serializer or to be used for data binding.</span></span>|  
+|`Name`|<span data-ttu-id="f8578-111">常规</span><span class="sxs-lookup"><span data-stu-id="f8578-111">General</span></span>|<span data-ttu-id="f8578-112">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="f8578-112">Required attribute.</span></span> <span data-ttu-id="f8578-113">指定字段名称。</span><span class="sxs-lookup"><span data-stu-id="f8578-113">Specifies the field name.</span></span>|  
+|`Browse`|<span data-ttu-id="f8578-114">映像</span><span class="sxs-lookup"><span data-stu-id="f8578-114">Reflection</span></span>|<span data-ttu-id="f8578-115">可选特性。</span><span class="sxs-lookup"><span data-stu-id="f8578-115">Optional attribute.</span></span> <span data-ttu-id="f8578-116">控制对该字段信息的查询或列举该字段，但并不在运行时间启用任何动态访问。</span><span class="sxs-lookup"><span data-stu-id="f8578-116">Controls querying for information about or enumerating the field but does not enable any dynamic access at run time.</span></span>|  
+|`Dynamic`|<span data-ttu-id="f8578-117">映像</span><span class="sxs-lookup"><span data-stu-id="f8578-117">Reflection</span></span>|<span data-ttu-id="f8578-118">可选特性。</span><span class="sxs-lookup"><span data-stu-id="f8578-118">Optional attribute.</span></span> <span data-ttu-id="f8578-119">控制运行时对该字段的访问，以启用动态编程。</span><span class="sxs-lookup"><span data-stu-id="f8578-119">Controls runtime access to the field to enable dynamic programming.</span></span> <span data-ttu-id="f8578-120">该策略确保一个字段可在运行时间内得到设置或动态检索。</span><span class="sxs-lookup"><span data-stu-id="f8578-120">This policy ensures that a field can be set or retrieved dynamically at run time.</span></span>|  
+|`Serialize`|<span data-ttu-id="f8578-121">序列化</span><span class="sxs-lookup"><span data-stu-id="f8578-121">Serialization</span></span>|<span data-ttu-id="f8578-122">可选特性。</span><span class="sxs-lookup"><span data-stu-id="f8578-122">Optional attribute.</span></span> <span data-ttu-id="f8578-123">控制运行时对一个字段的访问以启用类型实例，使其通过程序库得到序列化，例如通过 Newtonsoft JSON 序列化程序，或被用于绑定数据。</span><span class="sxs-lookup"><span data-stu-id="f8578-123">Controls runtime access to a field to enable type instances to be serialized by libraries such as the Newtonsoft JSON serializer or to be used for data binding.</span></span>|  
   
-## <a name="name-attribute"></a><span data-ttu-id="8a2dc-124">Name 特性</span><span class="sxs-lookup"><span data-stu-id="8a2dc-124">Name attribute</span></span>  
+## <a name="name-attribute"></a><span data-ttu-id="f8578-124">Name 特性</span><span class="sxs-lookup"><span data-stu-id="f8578-124">Name attribute</span></span>  
   
-|<span data-ttu-id="8a2dc-125">值</span><span class="sxs-lookup"><span data-stu-id="8a2dc-125">Value</span></span>|<span data-ttu-id="8a2dc-126">描述</span><span class="sxs-lookup"><span data-stu-id="8a2dc-126">Description</span></span>|  
+|<span data-ttu-id="f8578-125">值</span><span class="sxs-lookup"><span data-stu-id="f8578-125">Value</span></span>|<span data-ttu-id="f8578-126">描述</span><span class="sxs-lookup"><span data-stu-id="f8578-126">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="8a2dc-127">method_name</span><span class="sxs-lookup"><span data-stu-id="8a2dc-127">*method_name*</span></span>|<span data-ttu-id="8a2dc-128">字段名。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-128">The field name.</span></span> <span data-ttu-id="8a2dc-129">该字段的类型是由 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 父元素定义的。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-129">The type of the field is defined by the parent [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) or [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) element.</span></span>|  
+|<span data-ttu-id="f8578-127">method_name</span><span class="sxs-lookup"><span data-stu-id="f8578-127">*method_name*</span></span>|<span data-ttu-id="f8578-128">字段名。</span><span class="sxs-lookup"><span data-stu-id="f8578-128">The field name.</span></span> <span data-ttu-id="f8578-129">该字段的类型是由 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 或 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 父元素定义的。</span><span class="sxs-lookup"><span data-stu-id="f8578-129">The type of the field is defined by the parent [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) or [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) element.</span></span>|  
   
-## <a name="all-other-attributes"></a><span data-ttu-id="8a2dc-130">所有其他特性</span><span class="sxs-lookup"><span data-stu-id="8a2dc-130">All other attributes</span></span>  
+## <a name="all-other-attributes"></a><span data-ttu-id="f8578-130">所有其他特性</span><span class="sxs-lookup"><span data-stu-id="f8578-130">All other attributes</span></span>  
   
-|<span data-ttu-id="8a2dc-131">值</span><span class="sxs-lookup"><span data-stu-id="8a2dc-131">Value</span></span>|<span data-ttu-id="8a2dc-132">描述</span><span class="sxs-lookup"><span data-stu-id="8a2dc-132">Description</span></span>|  
+|<span data-ttu-id="f8578-131">值</span><span class="sxs-lookup"><span data-stu-id="f8578-131">Value</span></span>|<span data-ttu-id="f8578-132">描述</span><span class="sxs-lookup"><span data-stu-id="f8578-132">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="8a2dc-133">policy_setting</span><span class="sxs-lookup"><span data-stu-id="8a2dc-133">*policy_setting*</span></span>|<span data-ttu-id="8a2dc-134">该设置将应用到这个字段的策略类型。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-134">The setting to apply to this policy type for the field.</span></span> <span data-ttu-id="8a2dc-135">可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-135">Possible values are `Auto`, `Excluded`, `Included`, and `Required`.</span></span> <span data-ttu-id="8a2dc-136">有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-136">For more information, see [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span></span>|  
+|<span data-ttu-id="f8578-133">policy_setting</span><span class="sxs-lookup"><span data-stu-id="f8578-133">*policy_setting*</span></span>|<span data-ttu-id="f8578-134">该设置将应用到这个字段的策略类型。</span><span class="sxs-lookup"><span data-stu-id="f8578-134">The setting to apply to this policy type for the field.</span></span> <span data-ttu-id="f8578-135">可能值为 `Auto`、`Excluded`、`Included` 和 `Required`。</span><span class="sxs-lookup"><span data-stu-id="f8578-135">Possible values are `Auto`, `Excluded`, `Included`, and `Required`.</span></span> <span data-ttu-id="f8578-136">有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="f8578-136">For more information, see [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="8a2dc-137">子元素</span><span class="sxs-lookup"><span data-stu-id="8a2dc-137">Child Elements</span></span>  
- <span data-ttu-id="8a2dc-138">无。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-138">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f8578-137">子元素</span><span class="sxs-lookup"><span data-stu-id="f8578-137">Child Elements</span></span>  
+ <span data-ttu-id="f8578-138">无。</span><span class="sxs-lookup"><span data-stu-id="f8578-138">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="8a2dc-139">父元素</span><span class="sxs-lookup"><span data-stu-id="8a2dc-139">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f8578-139">父元素</span><span class="sxs-lookup"><span data-stu-id="f8578-139">Parent Elements</span></span>  
   
-|<span data-ttu-id="8a2dc-140">元素</span><span class="sxs-lookup"><span data-stu-id="8a2dc-140">Element</span></span>|<span data-ttu-id="8a2dc-141">描述</span><span class="sxs-lookup"><span data-stu-id="8a2dc-141">Description</span></span>|  
+|<span data-ttu-id="f8578-140">元素</span><span class="sxs-lookup"><span data-stu-id="f8578-140">Element</span></span>|<span data-ttu-id="f8578-141">描述</span><span class="sxs-lookup"><span data-stu-id="f8578-141">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="8a2dc-142">\<Type></span><span class="sxs-lookup"><span data-stu-id="8a2dc-142">\<Type></span></span>](../../../docs/framework/net-native/type-element-net-native.md)|<span data-ttu-id="8a2dc-143">将反射策略应用到一种类型及其所有成员。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-143">Applies reflection policy to a type and all its members.</span></span>|  
-|[<span data-ttu-id="8a2dc-144">\<TypeInstantiation></span><span class="sxs-lookup"><span data-stu-id="8a2dc-144">\<TypeInstantiation></span></span>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|<span data-ttu-id="8a2dc-145">将反射策略应用到一种构造泛型类型及其所有成员。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-145">Applies reflection policy to a constructed generic type and all its members.</span></span>|  
+|[<span data-ttu-id="f8578-142">\<Type></span><span class="sxs-lookup"><span data-stu-id="f8578-142">\<Type></span></span>](../../../docs/framework/net-native/type-element-net-native.md)|<span data-ttu-id="f8578-143">将反射策略应用到一种类型及其所有成员。</span><span class="sxs-lookup"><span data-stu-id="f8578-143">Applies reflection policy to a type and all its members.</span></span>|  
+|[<span data-ttu-id="f8578-144">\<TypeInstantiation></span><span class="sxs-lookup"><span data-stu-id="f8578-144">\<TypeInstantiation></span></span>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|<span data-ttu-id="f8578-145">将反射策略应用到一种构造泛型类型及其所有成员。</span><span class="sxs-lookup"><span data-stu-id="f8578-145">Applies reflection policy to a constructed generic type and all its members.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8a2dc-146">备注</span><span class="sxs-lookup"><span data-stu-id="8a2dc-146">Remarks</span></span>  
- <span data-ttu-id="8a2dc-147">如果一个字段的策略没有得到显式定义，它将继承其父元素的运行时策略。</span><span class="sxs-lookup"><span data-stu-id="8a2dc-147">If a field's policy is not explicitly defined, it inherits the runtime policy of its parent element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f8578-146">备注</span><span class="sxs-lookup"><span data-stu-id="f8578-146">Remarks</span></span>  
+ <span data-ttu-id="f8578-147">如果一个字段的策略没有得到显式定义，它将继承其父元素的运行时策略。</span><span class="sxs-lookup"><span data-stu-id="f8578-147">If a field's policy is not explicitly defined, it inherits the runtime policy of its parent element.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a2dc-148">请参阅</span><span class="sxs-lookup"><span data-stu-id="8a2dc-148">See also</span></span>
-- [<span data-ttu-id="8a2dc-149">运行时指令元素</span><span class="sxs-lookup"><span data-stu-id="8a2dc-149">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [<span data-ttu-id="8a2dc-150">运行时指令 (rd.xml) 配置文件参考</span><span class="sxs-lookup"><span data-stu-id="8a2dc-150">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [<span data-ttu-id="8a2dc-151">运行时指令策略设置</span><span class="sxs-lookup"><span data-stu-id="8a2dc-151">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a><span data-ttu-id="f8578-148">请参阅</span><span class="sxs-lookup"><span data-stu-id="f8578-148">See also</span></span>
+- [<span data-ttu-id="f8578-149">运行时指令元素</span><span class="sxs-lookup"><span data-stu-id="f8578-149">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [<span data-ttu-id="f8578-150">运行时指令 (rd.xml) 配置文件参考</span><span class="sxs-lookup"><span data-stu-id="f8578-150">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [<span data-ttu-id="f8578-151">运行时指令策略设置</span><span class="sxs-lookup"><span data-stu-id="f8578-151">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
