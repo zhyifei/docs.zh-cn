@@ -1,4 +1,4 @@
----
+﻿---
 title: 如何：绑定到 ADO.NET 数据源
 ms.date: 03/30/2017
 dev_langs:

@@ -1,4 +1,4 @@
----
+﻿---
 title: 如何：绑定到 XDocument、XElement 或 LINQ for XML 查询结果
 ms.date: 03/30/2017
 dev_langs:

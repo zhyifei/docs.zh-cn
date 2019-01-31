@@ -1,4 +1,4 @@
----
+﻿---
 title: 如何：绑定到方法
 ms.date: 03/30/2017
 helpviewer_keywords:

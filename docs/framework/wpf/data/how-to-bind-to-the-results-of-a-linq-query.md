@@ -1,4 +1,4 @@
----
+﻿---
 title: 如何：绑定到 LINQ 查询的结果
 ms.date: 03/30/2017
 helpviewer_keywords:
