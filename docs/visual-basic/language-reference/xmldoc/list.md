@@ -1,5 +1,5 @@
 ---
-title: '&lt;列表&gt;(Visual Basic)'
+title: <list> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - listheader XML tag
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 8d9bcffc32a1d1670aba1ce0e7b0ff0a6dc7112d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 522450e4efcecaf74968ddb492b536aa98dc0b13
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521109"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260280"
 ---
-# <a name="ltlistgt-visual-basic"></a>&lt;列表&gt;(Visual Basic)
+# <a name="list-visual-basic"></a>\<列表 > (Visual Basic)
 定义列表或表。  
   
 ## <a name="syntax"></a>语法  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceActivations&gt; 的 &lt;add&gt;'
+title: <add> 的 <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: d0e1f45cc8ff5b544eff5ff5dae33d5989aaf405
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e87a79137641d2697452a4862c5449da166ecfda
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587630"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262671"
 ---
-# <a name="ltaddgt-of-ltserviceactivationsgt"></a>&lt;serviceActivations&gt; 的 &lt;add&gt;
+# <a name="add-of-serviceactivations"></a>\<add> of \<serviceActivations>
 一个配置元素，允许你定义虚拟服务激活设置映射到 Windows Communication Foundation (WCF) 服务类型。 使用此配置元素可以在不使用 .svc 文件的情况下激活承载在 WAS/IIS 中的服务。  
   
  \<system.ServiceModel>  

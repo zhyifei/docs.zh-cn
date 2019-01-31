@@ -1,5 +1,5 @@
 ---
-title: 需要对程序集的引用&#39; &lt;assemblyidentity&gt; &#39;包含类型&#39; &lt;typename&gt;&#39;，但由于之间存在多义性。 找不到合适的引用项目&#39; &lt;projectname1&gt; &#39;和&#39;&lt;项目名称 2>&gt;&#39;
+title: 需要引用包含类型“<assemblyidentity>”的程序集“<typename>”，但由于项目“<projectname1>”和“<projectname2>”之间存在二义性，未能找到合适的引用
 ms.date: 07/20/2015
 f1_keywords:
 - bc30969
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 1a0c2a2fd235026729901153a0c0c300f914a78f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c74ed916e43bee6857df819c19ab03bef80b3c4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553004"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285189"
 ---
-# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>需要对程序集的引用&#39; &lt;assemblyidentity&gt; &#39;包含类型&#39; &lt;typename&gt;&#39;，但由于之间存在多义性。 找不到合适的引用项目&#39; &lt;projectname1&gt; &#39;和&#39;&lt;项目名称 2>&gt;&#39;
+# <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>需要对程序集的引用\<assemblyidentity > 包含类型\<类型名称 >，但由于项目之间存在多义性。 找不到合适的引用\<projectname1 > 和\<项目名称 2> >
 表达式使用在项目外部定义的类型，如类、结构、接口、枚举或委托。 但是，你具有对定义该类型的多个程序集的项目引用。  
   
  引用的项目会生成名称相同的程序集。 因此，编译器无法确定对要访问的类型使用哪一个程序集。  

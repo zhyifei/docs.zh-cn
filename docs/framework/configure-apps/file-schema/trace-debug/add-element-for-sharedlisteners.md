@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;元素&lt;sharedListeners&gt;'
+title: <add> 的 <sharedListeners> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-ms.openlocfilehash: 645b5beca2f65ad54b194d656309d850e1ff9fa7
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: cbce115c6a485c5642a60528614480324e3e5665
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083543"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274003"
 ---
-# <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;添加&gt;元素&lt;sharedListeners&gt;
+# <a name="add-element-for-sharedlisteners"></a>\<添加 > 元素\<sharedListeners >
 将侦听器添加到 `sharedListeners` 集合中。 `sharedListeners` 是侦听器的集合的任何[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)可以引用。  默认情况下，在侦听器`sharedListeners`集合未按放置`Listeners`集合。 它们肯定会添加到名称[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。 不能获取侦听器`sharedListeners`在运行时在代码中的集合。  
   
  \<configuration>  

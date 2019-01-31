@@ -1,17 +1,17 @@
 ---
-title: '&lt;netTcpBinding&gt;'
+title: <netTcpBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: 0dc07bfb7b26e433fd3ff2b004253d8d2d90bf62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbe2ae5923e4cd46abadc7103655dea410a97b60
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573423"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258040"
 ---
-# <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
+# <a name="nettcpbinding"></a>\<netTcpBinding>
 
 指定一种适合于跨计算机通信的安全、可靠且进行了优化的绑定。 默认情况下，它会生成一个运行时通信堆栈，该堆栈包含 Windows Security 以保证消息安全性和进行身份验证，包含 TCP 以便进行消息传递，并且包含二进制消息编码机制。
 

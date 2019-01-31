@@ -1,15 +1,15 @@
 ---
-title: '&lt;messageSenderAuthentication&gt; 元素'
+title: <messageSenderAuthentication> 元素
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: 9b5155e579973555db1fefb6b22bd6c1ff38ea70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac10dbdb7267eb4f1a83ccad7cc5605fa588aa6b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579896"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271230"
 ---
-# <a name="ltmessagesenderauthenticationgt-element"></a>&lt;messageSenderAuthentication&gt; 元素
+# <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > 元素
 指定用于对等消息发送方的身份验证选项。  
   
  有关对等编程的详细信息，请参阅[对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  

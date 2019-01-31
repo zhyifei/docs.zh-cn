@@ -1,5 +1,5 @@
 ---
-title: '&lt;清除&gt;的元素&lt;侦听器&gt;为&lt;跟踪&gt;'
+title: <clear> 的 <listeners> 的 <trace> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-ms.openlocfilehash: c0bb2cabafbaba33f8dde7cbf3399387876e0158
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b199f24a2c1e1c8154c0ec22bef6367e5ba0ec26
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083582"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262596"
 ---
-# <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;清除&gt;的元素&lt;侦听器&gt;为&lt;跟踪&gt;
+# <a name="clear-element-for-listeners-for-trace"></a>\<清除 > 元素\<侦听器 > 为\<跟踪 >
 清除跟踪的 `Listeners` 集合。  
   
  \<configuration>  

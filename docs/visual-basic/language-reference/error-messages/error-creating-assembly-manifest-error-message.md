@@ -1,5 +1,5 @@
 ---
-title: 创建程序集清单时出错：&lt;错误消息&gt;
+title: 创建程序集清单时出错：<error message>
 ms.date: 07/20/2015
 f1_keywords:
 - bc30140
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: 7efdfa09ad7bf58fc3ddc8f702377a4d41b2fed6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9c8d9fe4b8bea45e4b655415b044937f248deab
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655382"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266476"
 ---
-# <a name="error-creating-assembly-manifest-lterror-messagegt"></a>创建程序集清单时出错：&lt;错误消息&gt;
+# <a name="error-creating-assembly-manifest-error-message"></a>创建程序集清单时出错：\<错误消息 >
 Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集。 该链接器已报告在创建程序集的预发出阶段中出错。  
   
  如果指定的密钥文件或密钥容器有问题，就可能发生错误。 若要对程序集进行完全签名，必须提供包含公钥和私钥信息的有效密钥文件。 若要延迟对程序集的签名，必须选择“仅延迟签名”复选框，并提供包含公钥信息的有效密钥文件。 当程序集为延迟签名时，不需要使用私有密钥。 有关详细信息，请参阅[如何：使用强名称为程序集签名](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。  

@@ -1,19 +1,19 @@
 ---
-title: '&lt;namedCaches&gt;元素 （缓存设置）'
+title: <namedCaches> 元素（缓存设置）
 ms.date: 03/30/2017
 helpviewer_keywords:
 - namedCaches element
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: f00d973a2faff1709a98842d1164d69c59027c53
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 1dedd3ca192b5fb0ee561ce138f0948c52581f89
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083608"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287477"
 ---
-# <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt;元素 （缓存设置）
+# <a name="namedcaches-element-cache-settings"></a>\<namedCaches > 元素 （缓存设置）
 指定的配置设置的命名集合<xref:System.Runtime.Caching.MemoryCache>实例。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>属性引用的配置设置集合中一个或多个`namedCaches`配置文件中的元素。  
   
  \<configuration>  

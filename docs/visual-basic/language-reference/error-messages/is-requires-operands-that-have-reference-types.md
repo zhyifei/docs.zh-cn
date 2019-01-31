@@ -1,5 +1,5 @@
 ---
-title: '&#39;是&#39;需要操作数具有引用类型，但此操作数具有值类型&#39; &lt;typename&gt;&#39;'
+title: “Is”要求具有引用类型的操作数，但此操作数的值类型为“<typename>”。
 ms.date: 07/20/2015
 f1_keywords:
 - bc30020
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
-ms.openlocfilehash: 0b3f80e98087e455ec730dea8c57478528e9259c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbd0011e76ccecc605b0355025b7ca131e44724e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722915"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263925"
 ---
-# <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a>&#39;是&#39;需要操作数具有引用类型，但此操作数具有值类型&#39; &lt;typename&gt;&#39;
+# <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>Is 要求具有引用类型的操作数，但此操作数具有值类型\<类型名称 >
 `Is`比较运算符确定两个对象变量是否引用同一个实例。 对于值类型未定义此比较。  
   
  **错误 ID:** BC30020  

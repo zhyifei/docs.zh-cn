@@ -1,5 +1,5 @@
 ---
-title: 创建 Win32 资源时出错：&lt;错误消息&gt;
+title: 创建 Win32 资源时出错：<error message>
 ms.date: 07/20/2015
 f1_keywords:
 - bc30136
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-ms.openlocfilehash: 00ad9b30a354794647f9b4c097732cd572c100b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56de1554480fdb31f64859da2d94a81618f01c50
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566757"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270456"
 ---
-# <a name="error-creating-win32-resources-lterror-messagegt"></a>创建 Win32 资源时出错：&lt;错误消息&gt;
+# <a name="error-creating-win32-resources-error-message"></a>创建 Win32 资源时出错：\<错误消息 >
 Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集。 该链接器已报告在创建内存中资源时出错。 原因可能是环境有问题，或计算机的内存不足。  
   
  **错误 ID:** BC30136  

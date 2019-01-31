@@ -1,16 +1,16 @@
 ---
-title: '&lt;cancelRequestedQueries&gt;'
+title: <cancelRequestedQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: eab5af7e-76fa-434d-9d36-873e995cee05
-ms.openlocfilehash: 5bc2e3ffeb93bdfcd45638d6b50e218c03706f42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 989d6e99457108336c38fb1eece4c9ac2444c974
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520680"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271494"
 ---
-# <a name="ltcancelrequestedqueriesgt"></a>&lt;cancelRequestedQueries&gt;
+# <a name="cancelrequestedqueries"></a>\<cancelRequestedQueries>
 表示一个查询集合，这些查询用于跟踪父活动取消子活动的请求。 跟踪参与者需要用此查询来订阅取消请求记录对象。  
   
  有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

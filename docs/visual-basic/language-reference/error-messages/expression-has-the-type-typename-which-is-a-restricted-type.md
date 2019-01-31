@@ -1,5 +1,5 @@
 ---
-title: 表达式具有类型&#39; &lt;typename&gt; &#39;这是受限的类型，不能用于访问成员继承自&#39;对象&#39;或&#39;ValueType&#39;
+title: 表达式的类型为“<typename>”，这是受限类型，不能用于访问从“Object”或“ValueType”继承的成员
 ms.date: 07/20/2015
 f1_keywords:
 - bc31393
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: d44b9a29f0848508d8cd814e857d9b01819ce7ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d366ec750ea5a4505ae5ea618e27f47406ba959
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535952"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274000"
 ---
-# <a name="expression-has-the-type-39lttypenamegt39-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-39object39-or-39valuetype39"></a>表达式具有类型&#39; &lt;typename&gt; &#39;这是受限的类型，不能用于访问成员继承自&#39;对象&#39;或&#39;ValueType&#39;
+# <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>表达式具有类型\<类型名称 > 这是受限的类型，不能用于访问从 Object 或 ValueType 继承的成员
 一个表达式的计算结果为不能由公共语言运行时 (CLR) 装箱的类型，但访问需要进行装箱的成员。  
   
  *装箱* 是指将一个类型转换为 `Object` ，或有时转换为 <xref:System.ValueType>所需的处理。 公共语言运行时不能装箱某些结构类型，例如<xref:System.ArgIterator>， <xref:System.RuntimeArgumentHandle>，和<xref:System.TypedReference>。  

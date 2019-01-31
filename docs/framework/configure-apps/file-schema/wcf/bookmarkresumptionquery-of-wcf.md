@@ -1,27 +1,27 @@
 ---
-title: WCF 的 &lt;bookmarkResumptionQuery&gt;
+title: <bookmarkResumptionQuery> WCF 的
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 6463404e17edff8eb1efe3f96e44b5b9997ffca3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 38c87cefc49821b03d119299ef60e3fbbad21d7e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147806"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255110"
 ---
-# <a name="ltbookmarkresumptionquerygt-of-wcf"></a>WCF 的 &lt;bookmarkResumptionQuery&gt;
+# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery > 的 WCF
 
 表示一个查询，该查询用于跟踪工作流实例中的书签恢复。 跟踪参与者需要用此查询来订阅书签恢复记录。  
   
 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
   
 \<system.serviceModel>  
-\<跟踪 >  
+\<tracking>  
 \<配置文件 >  
 \<trackingProfile>  
-\<工作流 >  
-\<bookmarkResumptionQueries >  
-\<bookmarkResumptionQuery >  
+\<workflow>  
+\<bookmarkResumptionQueries>  
+\<bookmarkResumptionQuery>  
   
 ## <a name="syntax"></a>语法  
   

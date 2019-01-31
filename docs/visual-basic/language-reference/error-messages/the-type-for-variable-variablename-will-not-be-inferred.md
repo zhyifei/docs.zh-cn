@@ -1,5 +1,5 @@
 ---
-title: 变量的类型&#39; &lt;variablename&gt; &#39;到封闭范围中的字段绑定，因此将不会推断
+title: 无法推断出变量“<variablename>”的类型，因为它绑定到封闭范围中的某个字段
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42110
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: 6adcc1c2a449c9192e488a5d714e1c3271568be0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7289b8ab0a141d6efdb0f4ca4b4547f15e0e182
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672378"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259236"
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>变量的类型&#39; &lt;variablename&gt; &#39;到封闭范围中的字段绑定，因此将不会推断
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>变量的类型\<变量名 >' 绑定到封闭范围中的字段，因此将不会推断
 变量的类型\<变量名 >' 绑定到封闭范围中的字段，因此将不会推断。 请更改名称\<变量名 >，或使用完全限定的名称 （例如，Me.variablename 或 MyBase.variablename）。  
   
  在代码中的循环控制变量与类或其他封闭范围内的字段具有相同的名称。 因为控制变量用在无需`As`子句，它绑定到封闭范围中的字段和编译器不为其创建一个新的变量或推断出类型。  

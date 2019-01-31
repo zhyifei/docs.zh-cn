@@ -1,5 +1,5 @@
 ---
-title: 基础类型&lt;typename&gt;枚举的不符合 cls 的
+title: 枚举的基础类型 <typename> 不符合 CLS
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40032
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: ceda7e6ed6fc1744de14afcb0245ebabbd7fa733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a75f66c79bcf6c857fb19acf7c5a75320b16a43d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674789"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258614"
 ---
-# <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>基础类型&lt;typename&gt;枚举的不符合 cls 的
+# <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>基础类型\<类型名称 > 的枚举不符合 cls 的
 为此枚举不是指定的数据类型的一部分[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)。 这不是在组件中，一个错误，因为[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]和 Visual Basic 支持此数据类型。 但是，在严格符合 cls 的代码中编写的另一个组件可能不支持此数据类型。 此类组件可能不能成功与您的组件进行交互。  
   
  以下 Visual Basic 数据类型不符合 CLS 規格：  

@@ -1,5 +1,5 @@
 ---
-title: 表达式递归调用包含属性&#39; &lt;propertyname&gt;&#39;
+title: 表达式递归调用包含属性“<propertyname>”
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42026
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 88dbecfe6e63248e07b3fdb9102a5cbba4b1b628
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9382c6b6850036f3ca3795f0aa80f49b892c0a5e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553069"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259756"
 ---
-# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>表达式递归调用包含属性&#39; &lt;propertyname&gt;&#39;
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>表达式递归调用包含属性\<属性名称 >
 中的语句`Set`属性定义的过程将值存储到的属性的名称。  
   
  保存属性值的建议的方法是定义`Private`变量中的属性的容器并将其同时`Get`和`Set`过程。 `Set`过程应传入值存储在此`Private`变量。  

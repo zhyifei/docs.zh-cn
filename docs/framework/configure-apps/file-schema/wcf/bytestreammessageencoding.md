@@ -1,15 +1,15 @@
 ---
-title: '&lt;byteStreamMessageEncoding&gt;'
+title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: 92ae3dc10e0ae734a3113e22f175f4d010ca55b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1215f864822de7c2df181ff92858cb73700c0d7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541850"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286262"
 ---
-# <a name="ltbytestreammessageencodinggt"></a>&lt;byteStreamMessageEncoding&gt;
+# <a name="bytestreammessageencoding"></a>\<byteStreamMessageEncoding>
 指定消息编码作为字节流，也可以选择指定字符编码。  
   
  \<system.serviceModel>  

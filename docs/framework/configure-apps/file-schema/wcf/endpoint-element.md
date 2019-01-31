@@ -1,15 +1,15 @@
 ---
-title: '&lt;endpoint&gt; 元素'
+title: <endpoint> 元素
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: f0701f522874e9e77ba8cb8f013016dd66fbfa30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94b6cc6225171d90164e6d6880e1095513f16ece
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509696"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254452"
 ---
-# <a name="ltendpointgt-element"></a>&lt;endpoint&gt; 元素
+# <a name="endpoint-element"></a>\<终结点 > 元素
 指定用于公开服务的服务终结点的绑定、协定和地址属性。  
   
  \<system.ServiceModel>  

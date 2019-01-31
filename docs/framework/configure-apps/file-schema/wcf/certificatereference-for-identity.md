@@ -1,15 +1,15 @@
 ---
-title: '&lt;标识&gt;的&lt; certificateReference&gt;'
+title: <certificateReference> 的 <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: ff831cebc78113e1808f9fe3911717f19127c4f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44bfb2fd77c4f4db6f7fede296b1cdb74e8d5e7c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626623"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254823"
 ---
-# <a name="ltcertificatereferencegt-for-ltidentitygt"></a>&lt;标识&gt;的&lt; certificateReference&gt;
+# <a name="certificatereference-for-identity"></a>\<certificateReference > 为\<标识 >
 指定 X.509 证书验证的设置。 连接到此标识的终结点的安全 Windows Communication Foundation (WCF) 客户端验证服务器提供的声明包含用于构造此标识的标识声明。  
   
  \<identity>  

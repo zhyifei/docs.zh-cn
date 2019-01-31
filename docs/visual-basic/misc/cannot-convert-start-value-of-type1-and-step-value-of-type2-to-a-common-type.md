@@ -1,17 +1,17 @@
 ---
-title: 无法转换类型的起始值&lt;type1&gt;和类型的步长值&lt;type2&gt;为通用类型
+title: 无法转换类型的起始值<type1>和类型的步长值<type2>为通用类型
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_CommonType2
 ms.assetid: ce400fe1-5edd-4aee-94d8-530be03cfd9a
-ms.openlocfilehash: 22732abd58a4cbc2d1c4cf8dba28a935d9ed0be1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3a6ac206082c6adaf35659db93e6535a433c6bd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490583"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262697"
 ---
-# <a name="cannot-convert-start-value-of-type-lttype1gt-and-step-value-of-type-lttype2gt-to-a-common-type"></a>无法转换类型的起始值&lt;type1&gt;和类型的步长值&lt;type2&gt;为通用类型
+# <a name="cannot-convert-start-value-of-type-type1-and-step-value-of-type-type2-to-a-common-type"></a>无法转换类型的起始值\<type1 > 的步长值和\<y p e 2 > 为通用类型
 指定的 `For...Next` 控制值具有不同的类型，因此无效，其原因是它们不能转换为通用类型。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  

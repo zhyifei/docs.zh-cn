@@ -1,15 +1,15 @@
 ---
-title: WCF 的 &lt;participants&gt;
+title: <participants> WCF 的
 ms.date: 03/30/2017
 ms.assetid: d99dbddc-0057-4e18-8e42-f91411d39970
-ms.openlocfilehash: 892392454b9969e0c63e0ad7eb15f788466ad963
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1f43fc425a172ce630b48d046ed75d09c74c2e3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630965"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264721"
 ---
-# <a name="ltparticipantsgt-of-wcf"></a>WCF 的 &lt;participants&gt;
+# <a name="participants-of-wcf"></a>\<参与方 > 的 WCF
 配置一列跟踪参与者，它们侦听直接从运行时发出的跟踪记录，并按照它们的任何方式处理这些记录。 这包括写入特定输出（例如，文件、控制台、ETW）、处理/聚合记录或可能需要的任何其他组合。  
   
  工作流跟踪和跟踪参与者的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)并[跟踪参与者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)。  

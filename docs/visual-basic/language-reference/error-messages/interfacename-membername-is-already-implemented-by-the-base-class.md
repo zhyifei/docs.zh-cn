@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;interfacename&gt;。&lt;membername&gt; &#39;已经由基类实现&#39; &lt;a m e&gt;&#39;。 重新实现&lt;类型&gt;假定'
+title: "'<interfacename>.<membername>已经由基类实现<baseclassname>。 重新实现<type>假定"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42015
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-ms.openlocfilehash: 22a3bd4e8c09c0d070e7fa5e75571a7215c3a274
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d5d9f21069c7b9aa54940525b7678bc3987b77c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507195"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264146"
 ---
-# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>&#39;&lt;interfacename&gt;。&lt;membername&gt; &#39;已经由基类实现&#39; &lt;a m e&gt;&#39;。 重新实现&lt;类型&gt;假定
+# <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>\<interfacename >。\<成员名称 > 已经由基类的实现\<a m e >。 重新实现\<类型 > 假定
 属性、 过程或派生类中的事件使用`Implements`子句，用于指定已在基类中实现的接口成员。  
   
  派生类可以重新实现由其基类实现的接口成员。 这与重写基类实现不同。 有关详细信息，请参阅 [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)。  

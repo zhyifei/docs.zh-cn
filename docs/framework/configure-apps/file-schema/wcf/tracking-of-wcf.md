@@ -1,15 +1,15 @@
 ---
-title: WCF 的 &lt;tracking&gt;
+title: <tracking> WCF 的
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: 52efc1b5284c2a64eae30ea18995e5ee761dc2e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddaf6f7871b4d10961b615f74d1ed49dd76d379a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582599"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268244"
 ---
-# <a name="lttrackinggt-of-wcf"></a>WCF 的 &lt;tracking&gt;
+# <a name="tracking-of-wcf"></a>\<跟踪 > 的 WCF
 表示一个配置节，用于定义工作流服务的跟踪设置。  
   
  工作流跟踪和其配置的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)并[工作流配置跟踪](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
