@@ -1,5 +1,5 @@
 ---
-title: '&lt;appSettings&gt;元素&lt;配置&gt;'
+title: <appSettings> 的 <configuration> 元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 0ba57f51d3b1e78239677317933507ff009db035
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dcdf8d0f11ae65353da08bba1f8d2fe5ab415c6b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190926"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289583"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > 元素\<配置 >
 
 包含自定义应用程序设置。 这是.NET Framework 提供的预定义的配置部分。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<appSettings >**
+&nbsp;&nbsp;**\<appSettings>**
 
 ## <a name="syntax"></a>语法
 
@@ -53,7 +53,7 @@ ms.locfileid: "50190926"
 
 ## <a name="remarks"></a>备注
 
-**\<AppSettings >** 元素将自定义应用程序配置信息，如数据库连接字符串、 文件路径、 XML Web service Url 或任何其他自定义配置信息存储应用程序。 中指定的键/值对 **\<appSettings >** 在代码中使用访问元素<xref:System.Configuration.ConfigurationSettings>类。
+ **\<AppSettings >** 元素将自定义应用程序配置信息，如数据库连接字符串、 文件路径、 XML Web service Url 或任何其他自定义配置信息存储应用程序。 中指定的键/值对 **\<appSettings >** 在代码中使用访问元素<xref:System.Configuration.ConfigurationSettings>类。
 
 可以使用**文件**属性中 **\<appSettings >** 元素的*Web.config*和应用程序配置文件。 此属性指定提供其他设置或重写中指定的设置的配置文件 **\<appSettings >** 元素。 **文件**属性可以在源代码管理团队开发方案，例如当用户需要重写应用程序配置文件中指定的项目设置中使用。
 
