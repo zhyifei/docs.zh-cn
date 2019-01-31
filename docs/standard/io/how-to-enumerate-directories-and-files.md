@@ -1,6 +1,6 @@
 ---
 title: 如何：枚举目录和文件
-ms.date: 03/30/2017
+ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,61 +10,59 @@ helpviewer_keywords:
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3de83395df9e8c89a92e85b96ddd15e9f0be6ad5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 463c751ab03875b6af89c325981c65b7bc69d0ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580455"
 ---
-# <a name="how-to-enumerate-directories-and-files"></a><span data-ttu-id="e9f54-102">如何：枚举目录和文件</span><span class="sxs-lookup"><span data-stu-id="e9f54-102">How to: Enumerate Directories and Files</span></span>
-<span data-ttu-id="e9f54-103">通过使用可返回目录和文件名的可枚举字符串集合的方法，可枚举目录和文件。</span><span class="sxs-lookup"><span data-stu-id="e9f54-103">You can enumerate directories and files by using methods that return an enumerable collection of strings of their names.</span></span> <span data-ttu-id="e9f54-104">也可以使用返回 <xref:System.IO.DirectoryInfo>、<xref:System.IO.FileInfo> 或 <xref:System.IO.FileSystemInfo> 对象的可枚举集合的方法。</span><span class="sxs-lookup"><span data-stu-id="e9f54-104">You can also use methods that return an enumerable collection of <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo>, or <xref:System.IO.FileSystemInfo> objects.</span></span> <span data-ttu-id="e9f54-105">在处理目录和文件的大型集合时，可枚举的集合能够比数组提供更好的性能。</span><span class="sxs-lookup"><span data-stu-id="e9f54-105">Enumerable collections provide better performance than arrays when you work with large collections of directories and files.</span></span>  
+# <a name="how-to-enumerate-directories-and-files"></a><span data-ttu-id="0c88c-102">如何：枚举目录和文件</span><span class="sxs-lookup"><span data-stu-id="0c88c-102">How to: Enumerate directories and files</span></span>
+<span data-ttu-id="0c88c-103">在处理目录和文件的大型集合时，可枚举的集合能够比数组提供更好的性能。</span><span class="sxs-lookup"><span data-stu-id="0c88c-103">Enumerable collections provide better performance than arrays when you work with large collections of directories and files.</span></span> <span data-ttu-id="0c88c-104">要枚举目录和文件，请使用可返回目录和文件名的可枚举集合的方法或其 <xref:System.IO.DirectoryInfo>、<xref:System.IO.FileInfo> 或 <xref:System.IO.FileSystemInfo> 对象。</span><span class="sxs-lookup"><span data-stu-id="0c88c-104">To enumerate directories and files, use methods that return an enumerable collection of directory or file names, or their <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo>, or <xref:System.IO.FileSystemInfo> objects.</span></span>  
   
- <span data-ttu-id="e9f54-106">还可以使用通过这些方法获取的可枚举集合，为集合类（如 <xref:System.Collections.Generic.List%601> 类）的构造函数提供 <xref:System.Collections.Generic.IEnumerable%601> 参数。</span><span class="sxs-lookup"><span data-stu-id="e9f54-106">You can also use enumerable collections obtained from these methods to supply the <xref:System.Collections.Generic.IEnumerable%601> parameter for constructors of collection classes such as the <xref:System.Collections.Generic.List%601> class.</span></span>  
+<span data-ttu-id="0c88c-105">如果只想搜索并返回目录名称或文件名，请使用 <xref:System.IO.Directory> 类的枚举方法。</span><span class="sxs-lookup"><span data-stu-id="0c88c-105">If you want to search and return only the names of directories or files, use the enumeration methods of the <xref:System.IO.Directory> class.</span></span> <span data-ttu-id="0c88c-106">若要搜索并返回目录或文件的其他属性，请使用 <xref:System.IO.DirectoryInfo> 和 <xref:System.IO.FileSystemInfo> 类。</span><span class="sxs-lookup"><span data-stu-id="0c88c-106">If you want to search and return other properties of directories or files, use the <xref:System.IO.DirectoryInfo> and <xref:System.IO.FileSystemInfo> classes.</span></span>  
   
- <span data-ttu-id="e9f54-107">如果只想获取目录名称或文件名，请使用 <xref:System.IO.Directory> 类的枚举方法。</span><span class="sxs-lookup"><span data-stu-id="e9f54-107">If you want to obtain only the names of directories or files, use the enumeration methods of the <xref:System.IO.Directory> class.</span></span> <span data-ttu-id="e9f54-108">若要获取目录或文件的其他属性，请使用 <xref:System.IO.DirectoryInfo> 和 <xref:System.IO.FileSystemInfo> 类。</span><span class="sxs-lookup"><span data-stu-id="e9f54-108">If you want to obtain other properties of directories or files, use the <xref:System.IO.DirectoryInfo> and <xref:System.IO.FileSystemInfo> classes.</span></span>  
+<span data-ttu-id="0c88c-107">可以使用这些方法中的可枚举集合作为集合类（如 <xref:System.Collections.Generic.List%601>）的构造函数的 <xref:System.Collections.Generic.IEnumerable%601> 参数。</span><span class="sxs-lookup"><span data-stu-id="0c88c-107">You can use enumerable collections from these methods as the <xref:System.Collections.Generic.IEnumerable%601> parameter for constructors of collection classes like <xref:System.Collections.Generic.List%601>.</span></span>  
   
- <span data-ttu-id="e9f54-109">下表列出了与返回可枚举集合的方法相关的指南。</span><span class="sxs-lookup"><span data-stu-id="e9f54-109">The following table provides a guide to the methods that return enumerable collections.</span></span>  
+<span data-ttu-id="0c88c-108">下表总结了返回可枚举的文件和目录集合的方法：</span><span class="sxs-lookup"><span data-stu-id="0c88c-108">The following table summarizes the methods that return enumerable collections of files and directories:</span></span>  
   
-|<span data-ttu-id="e9f54-110">要枚举的内容</span><span class="sxs-lookup"><span data-stu-id="e9f54-110">To enumerate</span></span>|<span data-ttu-id="e9f54-111">要返回的可枚举集合</span><span class="sxs-lookup"><span data-stu-id="e9f54-111">Enumerable collection to return</span></span>|<span data-ttu-id="e9f54-112">要使用的方法</span><span class="sxs-lookup"><span data-stu-id="e9f54-112">Method to use</span></span>|  
+|<span data-ttu-id="0c88c-109">搜索并返回</span><span class="sxs-lookup"><span data-stu-id="0c88c-109">To search and return</span></span>|<span data-ttu-id="0c88c-110">使用方法</span><span class="sxs-lookup"><span data-stu-id="0c88c-110">Use method</span></span>|  
 |------------------|-------------------------------------|-------------------|  
-|<span data-ttu-id="e9f54-113">目录</span><span class="sxs-lookup"><span data-stu-id="e9f54-113">Directories</span></span>|<span data-ttu-id="e9f54-114">目录名称</span><span class="sxs-lookup"><span data-stu-id="e9f54-114">Directory names</span></span>|<xref:System.IO.Directory.EnumerateDirectories%2A?displayProperty=nameWithType>|  
-||<span data-ttu-id="e9f54-115">目录信息 (<xref:System.IO.DirectoryInfo>)</span><span class="sxs-lookup"><span data-stu-id="e9f54-115">Directory information (<xref:System.IO.DirectoryInfo>)</span></span>|<xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="e9f54-116">文件</span><span class="sxs-lookup"><span data-stu-id="e9f54-116">Files</span></span>|<span data-ttu-id="e9f54-117">文件名</span><span class="sxs-lookup"><span data-stu-id="e9f54-117">File names</span></span>|<xref:System.IO.Directory.EnumerateFiles%2A?displayProperty=nameWithType>|  
-||<span data-ttu-id="e9f54-118">文件信息 (<xref:System.IO.FileInfo>)</span><span class="sxs-lookup"><span data-stu-id="e9f54-118">File information (<xref:System.IO.FileInfo>)</span></span>|<xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="e9f54-119">文件系统信息</span><span class="sxs-lookup"><span data-stu-id="e9f54-119">File system information</span></span>|<span data-ttu-id="e9f54-120">文件系统项</span><span class="sxs-lookup"><span data-stu-id="e9f54-120">File system entries</span></span>|<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
-||<span data-ttu-id="e9f54-121">文件系统信息 (<xref:System.IO.FileSystemInfo>)</span><span class="sxs-lookup"><span data-stu-id="e9f54-121">File system information (<xref:System.IO.FileSystemInfo>)</span></span>|<xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A?displayProperty=nameWithType>|  
-  
- <span data-ttu-id="e9f54-122">虽然可以使用 <xref:System.IO.SearchOption.AllDirectories> 枚举提供的 <xref:System.IO.SearchOption> 搜索选项迅速枚举父目录的子目录中的所有文件，但未经授权的访问异常 (<xref:System.UnauthorizedAccessException>) 可能会导致枚举不完整。</span><span class="sxs-lookup"><span data-stu-id="e9f54-122">Although you can immediately enumerate all the files in the subdirectories of a parent directory by using the <xref:System.IO.SearchOption.AllDirectories> search option provided by the <xref:System.IO.SearchOption> enumeration, unauthorized access exceptions (<xref:System.UnauthorizedAccessException>) may cause the enumeration to be incomplete.</span></span> <span data-ttu-id="e9f54-123">如果这些异常可能会抛出，可以捕获它们并继续执行，通过先枚举目录，再枚举文件。</span><span class="sxs-lookup"><span data-stu-id="e9f54-123">If these exceptions are possible, you can catch them and continue by first enumerating directories and then enumerating files.</span></span>  
-  
-### <a name="to-enumerate-directory-names"></a><span data-ttu-id="e9f54-124">枚举目录名称的具体步骤</span><span class="sxs-lookup"><span data-stu-id="e9f54-124">To enumerate directory names</span></span>  
-  
--   <span data-ttu-id="e9f54-125">使用 <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> 方法，获取指定路径中顶级目录名称的列表。</span><span class="sxs-lookup"><span data-stu-id="e9f54-125">Use the <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> method to obtain a list of the top-level directory names in a specified path.</span></span>  
-  
-     [!code-csharp[System.IO.EnumDirs1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.enumdirs1/cs/program.cs#1)]
-     [!code-vb[System.IO.EnumDirs1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.enumdirs1/vb/program.vb#1)]  
-  
-### <a name="to-enumerate-file-names-in-a-directory-and-subdirectories"></a><span data-ttu-id="e9f54-126">枚举目录和子目录中的文件名</span><span class="sxs-lookup"><span data-stu-id="e9f54-126">To enumerate file names in a directory and subdirectories</span></span>  
-  
--   <span data-ttu-id="e9f54-127">使用 <xref:System.IO.Directory.EnumerateFiles%28System.String%2CSystem.String%2CSystem.IO.SearchOption%29?displayProperty=nameWithType> 方法可搜索目录及其子目录（可选），并获取与指定搜索模式匹配的文件名称的列表。</span><span class="sxs-lookup"><span data-stu-id="e9f54-127">Use the <xref:System.IO.Directory.EnumerateFiles%28System.String%2CSystem.String%2CSystem.IO.SearchOption%29?displayProperty=nameWithType> method to search a directory and (optionally) its subdirectories, and to obtain a list of file names that match a specified search pattern.</span></span>  
-  
-     [!code-csharp[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/cs/program.cs#1)]
-     [!code-vb[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/vb/program.vb#1)]  
-  
-### <a name="to-enumerate-a-collection-of-directoryinfo-objects"></a><span data-ttu-id="e9f54-128">枚举 DirectoryInfo 对象集合的具体步骤</span><span class="sxs-lookup"><span data-stu-id="e9f54-128">To enumerate a collection of DirectoryInfo objects</span></span>  
-  
--   <span data-ttu-id="e9f54-129">使用 <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType> 方法，获取顶级目录的集合。</span><span class="sxs-lookup"><span data-stu-id="e9f54-129">Use the <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType> method to obtain a collection of top-level directories.</span></span>  
-  
-     [!code-csharp[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/cs/program.cs#1)]
-     [!code-vb[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/vb/module1.vb#1)]  
-  
-### <a name="to-enumerate-a-collection-of-fileinfo-objects-in-all-directories"></a><span data-ttu-id="e9f54-130">枚举所有目录中 FileInfo 对象集合的具体步骤</span><span class="sxs-lookup"><span data-stu-id="e9f54-130">To enumerate a collection of FileInfo objects in all directories</span></span>  
-  
--   <span data-ttu-id="e9f54-131">使用 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType> 方法，获取与所有目录中指定搜索模式匹配的文件集合。</span><span class="sxs-lookup"><span data-stu-id="e9f54-131">Use the <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType> method to obtain a collection of files that match a specified search pattern in all directories.</span></span> <span data-ttu-id="e9f54-132">此示例先枚举顶级目录以捕获可能的未授权访问异常，再枚举文件。</span><span class="sxs-lookup"><span data-stu-id="e9f54-132">This example first enumerates the top-level directories to catch possible unauthorized access exceptions, and then enumerates the files.</span></span>  
-  
-     [!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
-     [!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
-  
-## <a name="see-also"></a><span data-ttu-id="e9f54-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="e9f54-133">See also</span></span>
+|<span data-ttu-id="0c88c-111">目录名称</span><span class="sxs-lookup"><span data-stu-id="0c88c-111">Directory names</span></span>|<xref:System.IO.Directory.EnumerateDirectories%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="0c88c-112">目录信息 (<xref:System.IO.DirectoryInfo>)</span><span class="sxs-lookup"><span data-stu-id="0c88c-112">Directory information (<xref:System.IO.DirectoryInfo>)</span></span>|<xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="0c88c-113">文件名</span><span class="sxs-lookup"><span data-stu-id="0c88c-113">File names</span></span>|<xref:System.IO.Directory.EnumerateFiles%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="0c88c-114">文件信息 (<xref:System.IO.FileInfo>)</span><span class="sxs-lookup"><span data-stu-id="0c88c-114">File information (<xref:System.IO.FileInfo>)</span></span>|<xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="0c88c-115">文件系统条目名称</span><span class="sxs-lookup"><span data-stu-id="0c88c-115">File system entry names</span></span>|<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="0c88c-116">文件系统条目信息 (<xref:System.IO.FileSystemInfo>)</span><span class="sxs-lookup"><span data-stu-id="0c88c-116">File system entry information (<xref:System.IO.FileSystemInfo>)</span></span>|<xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="0c88c-117">目录和文件名称</span><span class="sxs-lookup"><span data-stu-id="0c88c-117">Directory and file names</span></span> |<xref:System.IO.Directory.EnumerateFileSystemEntries%2A?displayProperty=nameWithType>|  
 
-- [<span data-ttu-id="e9f54-134">文件和流 I/O</span><span class="sxs-lookup"><span data-stu-id="e9f54-134">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)
+> [!NOTE]
+> <span data-ttu-id="0c88c-118">虽然可以使用可选的 <xref:System.IO.SearchOption> 枚举的 <xref:System.IO.SearchOption.AllDirectories> 选项迅速枚举父目录的子目录中的所有文件，但 <xref:System.UnauthorizedAccessException> 错误可能会使枚举不完整。</span><span class="sxs-lookup"><span data-stu-id="0c88c-118">Although you can immediately enumerate all the files in the subdirectories of a parent directory by using the <xref:System.IO.SearchOption.AllDirectories> option of the optional <xref:System.IO.SearchOption> enumeration, <xref:System.UnauthorizedAccessException> errors may make the enumeration incomplete.</span></span> <span data-ttu-id="0c88c-119">可以通过先枚举目录，然后枚举文件来捕获这些异常。</span><span class="sxs-lookup"><span data-stu-id="0c88c-119">You can catch these exceptions by first enumerating directories and then enumerating files.</span></span>  
+  
+## <a name="examples-use-the-directory-class"></a><span data-ttu-id="0c88c-120">示例：使用目录类</span><span class="sxs-lookup"><span data-stu-id="0c88c-120">Examples: Use the Directory class</span></span>  
+  
+<span data-ttu-id="0c88c-121">以下示例使用 <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> 方法获取指定路径中顶级目录名称的列表。</span><span class="sxs-lookup"><span data-stu-id="0c88c-121">The following example uses the <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> method to get a list of the top-level directory names in a specified path.</span></span>  
+
+[!code-csharp[System.IO.EnumDirs1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.enumdirs1/cs/program.cs#1)]
+[!code-vb[System.IO.EnumDirs1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.enumdirs1/vb/program.vb#1)]  
+
+<span data-ttu-id="0c88c-122">以下示例使用 <xref:System.IO.Directory.EnumerateFiles%28System.String%2CSystem.String%2CSystem.IO.SearchOption%29?displayProperty=nameWithType> 方法递归枚举目录中的所有文件名以及与特定模式匹配的子目录。</span><span class="sxs-lookup"><span data-stu-id="0c88c-122">The following example uses the <xref:System.IO.Directory.EnumerateFiles%28System.String%2CSystem.String%2CSystem.IO.SearchOption%29?displayProperty=nameWithType> method to recursively enumerate all file names in a directory and subdirectories that match a certain pattern.</span></span> <span data-ttu-id="0c88c-123">然后它读取每个文件的每一行，并显示包含指定字符串的行及其文件名和路径。</span><span class="sxs-lookup"><span data-stu-id="0c88c-123">It then reads each line of each file and displays the lines that contain a specified string, with their filenames and paths.</span></span>
+
+[!code-csharp[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/cs/program.cs#1)]
+[!code-vb[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/vb/program.vb#1)]  
+  
+## <a name="examples-use-the-directoryinfo-class"></a><span data-ttu-id="0c88c-124">示例：使用 DirectoryInfo 类</span><span class="sxs-lookup"><span data-stu-id="0c88c-124">Examples: Use the DirectoryInfo class</span></span>  
+  
+<span data-ttu-id="0c88c-125">下面的示例使用 <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType> 方法列出顶级目录的集合，这些顶级目录的 <xref:System.IO.FileSystemInfo.CreationTimeUtc> 早于某个 <xref:System.DateTime> 值。</span><span class="sxs-lookup"><span data-stu-id="0c88c-125">The following example uses the <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType> method to list a collection of top-level directories whose <xref:System.IO.FileSystemInfo.CreationTimeUtc> is earlier than a certain <xref:System.DateTime> value.</span></span>  
+
+[!code-csharp[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/cs/program.cs)]
+[!code-vb[System.IO.DirectoryInfo.EnumDirs#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumdirs/vb/module1.vb)]  
+  
+<span data-ttu-id="0c88c-126">下例使用 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType> 方法列出 <xref:System.IO.FileInfo.Length> 超过 10MB 的所有文件。</span><span class="sxs-lookup"><span data-stu-id="0c88c-126">The following example uses the <xref:System.IO.DirectoryInfo.EnumerateFiles%2A?displayProperty=nameWithType> method to list all files whose <xref:System.IO.FileInfo.Length> exceeds 10MB.</span></span> <span data-ttu-id="0c88c-127">此示例先枚举顶级目录以捕获可能的未授权访问异常，再枚举文件。</span><span class="sxs-lookup"><span data-stu-id="0c88c-127">This example first enumerates the top-level directories, to catch possible unauthorized access exceptions, and then enumerates the files.</span></span>  
+
+[!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
+[!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
+  
+## <a name="see-also"></a><span data-ttu-id="0c88c-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="0c88c-128">See also</span></span>
+
+[<span data-ttu-id="0c88c-129">文件和流 I/O</span><span class="sxs-lookup"><span data-stu-id="0c88c-129">File and stream I/O</span></span>](../../../docs/standard/io/index.md)

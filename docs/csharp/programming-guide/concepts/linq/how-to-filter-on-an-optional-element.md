@@ -2,18 +2,18 @@
 title: 如何：筛选可选元素 (C#)
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: c781db261dbf673af7a11150971956b4c07da774
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 1aeb234365fa5d02911f70bb70a860258ce62f30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47076592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540099"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a><span data-ttu-id="aa383-102">如何：筛选可选元素 (C#)</span><span class="sxs-lookup"><span data-stu-id="aa383-102">How to: Filter on an Optional Element (C#)</span></span>
-<span data-ttu-id="aa383-103">有时，尽管不能确定某个元素是否存在于 XML 文档中，您还是会尝试筛选该元素。</span><span class="sxs-lookup"><span data-stu-id="aa383-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="aa383-104">应当执行搜索，这样如果特定元素没有子元素，就不会因为筛选它而触发空引用异常。</span><span class="sxs-lookup"><span data-stu-id="aa383-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="aa383-105">在下面的示例中，`Child5` 元素没有 `Type` 子元素，但是查询仍可以正确执行。</span><span class="sxs-lookup"><span data-stu-id="aa383-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  
+# <a name="how-to-filter-on-an-optional-element-c"></a><span data-ttu-id="4dc21-102">如何：筛选可选元素 (C#)</span><span class="sxs-lookup"><span data-stu-id="4dc21-102">How to: Filter on an Optional Element (C#)</span></span>
+<span data-ttu-id="4dc21-103">有时，尽管不能确定某个元素是否存在于 XML 文档中，您还是会尝试筛选该元素。</span><span class="sxs-lookup"><span data-stu-id="4dc21-103">Sometimes you want to filter for an element even though you are not sure it exists in your XML document.</span></span> <span data-ttu-id="4dc21-104">应当执行搜索，这样如果特定元素没有子元素，就不会因为筛选它而触发空引用异常。</span><span class="sxs-lookup"><span data-stu-id="4dc21-104">The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it.</span></span> <span data-ttu-id="4dc21-105">在下面的示例中，`Child5` 元素没有 `Type` 子元素，但是查询仍可以正确执行。</span><span class="sxs-lookup"><span data-stu-id="4dc21-105">In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="aa383-106">示例</span><span class="sxs-lookup"><span data-stu-id="aa383-106">Example</span></span>  
- <span data-ttu-id="aa383-107">本示例使用 <xref:System.Xml.Linq.Extensions.Elements%2A> 扩展方法。</span><span class="sxs-lookup"><span data-stu-id="aa383-107">This example uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method.</span></span>  
+## <a name="example"></a><span data-ttu-id="4dc21-106">示例</span><span class="sxs-lookup"><span data-stu-id="4dc21-106">Example</span></span>  
+ <span data-ttu-id="4dc21-107">本示例使用 <xref:System.Xml.Linq.Extensions.Elements%2A> 扩展方法。</span><span class="sxs-lookup"><span data-stu-id="4dc21-107">This example uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -45,7 +45,7 @@ foreach(string str in cList)
     Console.WriteLine(str);  
 ```  
   
- <span data-ttu-id="aa383-108">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="aa383-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="4dc21-108">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="4dc21-108">This code produces the following output:</span></span>  
   
 ```  
 Child One Text  
@@ -53,8 +53,8 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="example"></a><span data-ttu-id="aa383-109">示例</span><span class="sxs-lookup"><span data-stu-id="aa383-109">Example</span></span>  
- <span data-ttu-id="aa383-110">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="aa383-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="aa383-111">有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="aa383-111">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="4dc21-109">示例</span><span class="sxs-lookup"><span data-stu-id="4dc21-109">Example</span></span>  
+ <span data-ttu-id="4dc21-110">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="4dc21-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="4dc21-111">有关详细信息，请参阅[使用 XML 命名空间 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="4dc21-111">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  
@@ -87,7 +87,7 @@ foreach (string str in cList)
     Console.WriteLine(str);  
 ```  
   
- <span data-ttu-id="aa383-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="aa383-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="4dc21-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="4dc21-112">This code produces the following output:</span></span>  
   
 ```  
 Child One Text  
@@ -95,11 +95,11 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="aa383-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="aa383-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4dc21-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="4dc21-113">See also</span></span>
 
-- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
-- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
-- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
-- [<span data-ttu-id="aa383-114">基本查询 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="aa383-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
-- [<span data-ttu-id="aa383-115">标准查询运算符概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="aa383-115">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [<span data-ttu-id="aa383-116">投影运算 (C#)</span><span class="sxs-lookup"><span data-stu-id="aa383-116">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
+- [<span data-ttu-id="4dc21-114">基本查询 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="4dc21-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="4dc21-115">标准查询运算符概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="4dc21-115">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="4dc21-116">投影运算 (C#)</span><span class="sxs-lookup"><span data-stu-id="4dc21-116">Projection Operations (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)

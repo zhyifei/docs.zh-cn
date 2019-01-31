@@ -10,40 +10,40 @@ helpviewer_keywords:
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 224f9273b0c8c9445a6a9e25f064e9726acc84f0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3cc468da70d3c62c139a98a6637e7a3c7990c378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45750188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602047"
 ---
-# <a name="how-to-unwrap-a-nested-task"></a><span data-ttu-id="604d6-102">如何：解除嵌套任务的包装</span><span class="sxs-lookup"><span data-stu-id="604d6-102">How to: Unwrap a Nested Task</span></span>
-<span data-ttu-id="604d6-103">可以从方法返回任务，再等待或继续执行此任务，如下面的示例所示：</span><span class="sxs-lookup"><span data-stu-id="604d6-103">You can return a task from a method, and then wait on or continue from that task, as shown in the following example:</span></span>  
+# <a name="how-to-unwrap-a-nested-task"></a><span data-ttu-id="31b47-102">如何：解除嵌套任务的包装</span><span class="sxs-lookup"><span data-stu-id="31b47-102">How to: Unwrap a Nested Task</span></span>
+<span data-ttu-id="31b47-103">可以从方法返回任务，再等待或继续执行此任务，如下面的示例所示：</span><span class="sxs-lookup"><span data-stu-id="31b47-103">You can return a task from a method, and then wait on or continue from that task, as shown in the following example:</span></span>  
   
  [!code-csharp[TPL_Unwrap#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#01)]
  [!code-vb[TPL_Unwrap#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippets1-3.vb#01)]  
   
- <span data-ttu-id="604d6-104">在上面的示例中，<xref:System.Threading.Tasks.Task%601.Result%2A> 属性的类型为 `string`（Visual Basic 中的 `String`）。</span><span class="sxs-lookup"><span data-stu-id="604d6-104">In the previous example, the <xref:System.Threading.Tasks.Task%601.Result%2A> property is of type `string` (`String` in Visual Basic).</span></span>  
+ <span data-ttu-id="31b47-104">在上面的示例中，<xref:System.Threading.Tasks.Task%601.Result%2A> 属性的类型为 `string`（Visual Basic 中的 `String`）。</span><span class="sxs-lookup"><span data-stu-id="31b47-104">In the previous example, the <xref:System.Threading.Tasks.Task%601.Result%2A> property is of type `string` (`String` in Visual Basic).</span></span>  
   
- <span data-ttu-id="604d6-105">不过，在某些情况下，建议在另一个任务中创建任务，再返回嵌套任务。</span><span class="sxs-lookup"><span data-stu-id="604d6-105">However, in some scenarios, you might want to create a task within another task, and then return the nested task.</span></span> <span data-ttu-id="604d6-106">在这种情况下，封闭任务的 `TResult` 本身就是任务。</span><span class="sxs-lookup"><span data-stu-id="604d6-106">In this case, the `TResult` of the enclosing task is itself a task.</span></span> <span data-ttu-id="604d6-107">在下面的示例中，Result 属性是 C# 中的 `Task<Task<string>>` 或 Visual Basic 中的 `Task(Of Task(Of String))`。</span><span class="sxs-lookup"><span data-stu-id="604d6-107">In the following example, the Result property is a `Task<Task<string>>` in C# or `Task(Of Task(Of String))` in Visual Basic.</span></span>  
+ <span data-ttu-id="31b47-105">不过，在某些情况下，建议在另一个任务中创建任务，再返回嵌套任务。</span><span class="sxs-lookup"><span data-stu-id="31b47-105">However, in some scenarios, you might want to create a task within another task, and then return the nested task.</span></span> <span data-ttu-id="31b47-106">在这种情况下，封闭任务的 `TResult` 本身就是任务。</span><span class="sxs-lookup"><span data-stu-id="31b47-106">In this case, the `TResult` of the enclosing task is itself a task.</span></span> <span data-ttu-id="31b47-107">在下面的示例中，Result 属性是 C# 中的 `Task<Task<string>>` 或 Visual Basic 中的 `Task(Of Task(Of String))`。</span><span class="sxs-lookup"><span data-stu-id="31b47-107">In the following example, the Result property is a `Task<Task<string>>` in C# or `Task(Of Task(Of String))` in Visual Basic.</span></span>  
   
  [!code-csharp[TPL_Unwrap#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#02)]
  [!code-vb[TPL_Unwrap#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippets1-3.vb#02)]  
   
- <span data-ttu-id="604d6-108">虽然可以编写代码来取消包装外部任务并检索原始任务及其 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性，但此类代码不易编写，因为必须处理异常和取消请求。</span><span class="sxs-lookup"><span data-stu-id="604d6-108">Although it is possible to write code to unwrap the outer task and retrieve the original task and its <xref:System.Threading.Tasks.Task%601.Result%2A> property, such code is not easy to write because you must handle exceptions and also cancellation requests.</span></span> <span data-ttu-id="604d6-109">在这种情况下，建议使用 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 扩展方法之一，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="604d6-109">In this situation, we recommend that you use one of the <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> extension methods, as shown in the following example.</span></span>  
+ <span data-ttu-id="31b47-108">虽然可以编写代码来取消包装外部任务并检索原始任务及其 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性，但此类代码不易编写，因为必须处理异常和取消请求。</span><span class="sxs-lookup"><span data-stu-id="31b47-108">Although it is possible to write code to unwrap the outer task and retrieve the original task and its <xref:System.Threading.Tasks.Task%601.Result%2A> property, such code is not easy to write because you must handle exceptions and also cancellation requests.</span></span> <span data-ttu-id="31b47-109">在这种情况下，建议使用 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 扩展方法之一，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="31b47-109">In this situation, we recommend that you use one of the <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> extension methods, as shown in the following example.</span></span>  
   
  [!code-csharp[TPL_UnWrap#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#03)]
  [!code-vb[TPL_UnWrap#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippets1-3.vb#03)]  
   
- <span data-ttu-id="604d6-110"><xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 方法可用于将任何 `Task<Task>` 或 `Task<Task<TResult>>`（Visual Basic 中的 `Task(Of Task)` 或 `Task(Of Task(Of TResult))`）转换为 `Task` 或 `Task<TResult>`（Visual Basic 中的 `Task(Of TResult)`）。</span><span class="sxs-lookup"><span data-stu-id="604d6-110">The <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> methods can be used to transform any `Task<Task>` or `Task<Task<TResult>>` (`Task(Of Task)` or `Task(Of Task(Of TResult))` in Visual Basic) to a `Task` or `Task<TResult>` (`Task(Of TResult)` in Visual Basic).</span></span> <span data-ttu-id="604d6-111">新任务完全表示内部嵌套任务，并包含取消状态和所有异常。</span><span class="sxs-lookup"><span data-stu-id="604d6-111">The new task fully represents the inner nested task, and includes cancellation state and all exceptions.</span></span>  
+ <span data-ttu-id="31b47-110"><xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 方法可用于将任何 `Task<Task>` 或 `Task<Task<TResult>>`（Visual Basic 中的 `Task(Of Task)` 或 `Task(Of Task(Of TResult))`）转换为 `Task` 或 `Task<TResult>`（Visual Basic 中的 `Task(Of TResult)`）。</span><span class="sxs-lookup"><span data-stu-id="31b47-110">The <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> methods can be used to transform any `Task<Task>` or `Task<Task<TResult>>` (`Task(Of Task)` or `Task(Of Task(Of TResult))` in Visual Basic) to a `Task` or `Task<TResult>` (`Task(Of TResult)` in Visual Basic).</span></span> <span data-ttu-id="31b47-111">新任务完全表示内部嵌套任务，并包含取消状态和所有异常。</span><span class="sxs-lookup"><span data-stu-id="31b47-111">The new task fully represents the inner nested task, and includes cancellation state and all exceptions.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="604d6-112">示例</span><span class="sxs-lookup"><span data-stu-id="604d6-112">Example</span></span>  
- <span data-ttu-id="604d6-113">下面的示例展示了如何使用 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 扩展方法。</span><span class="sxs-lookup"><span data-stu-id="604d6-113">The following example demonstrates how to use the <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> extension methods.</span></span>  
+## <a name="example"></a><span data-ttu-id="31b47-112">示例</span><span class="sxs-lookup"><span data-stu-id="31b47-112">Example</span></span>  
+ <span data-ttu-id="31b47-113">下面的示例展示了如何使用 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 扩展方法。</span><span class="sxs-lookup"><span data-stu-id="31b47-113">The following example demonstrates how to use the <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> extension methods.</span></span>  
   
  [!code-csharp[TPL_UnWrap#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#04)]
  [!code-vb[TPL_UnWrap#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippet04.vb#04)]  
   
-## <a name="see-also"></a><span data-ttu-id="604d6-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="604d6-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="31b47-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="31b47-114">See also</span></span>
 
-- <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>  
-- [<span data-ttu-id="604d6-115">基于任务的异步编程</span><span class="sxs-lookup"><span data-stu-id="604d6-115">Task-based Asynchronous Programming</span></span>](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>
+- [<span data-ttu-id="31b47-115">基于任务的异步编程</span><span class="sxs-lookup"><span data-stu-id="31b47-115">Task-based Asynchronous Programming</span></span>](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

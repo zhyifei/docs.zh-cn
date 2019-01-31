@@ -2,18 +2,18 @@
 title: 如何：使用特性创建 C-C++ 联合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: 8b5a88656b1172407c3e5b9f5198d5acae7bf9e0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a8b902536cd09ac732bf2144536605a66b5bbc56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599031"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a><span data-ttu-id="3ccbe-102">如何：使用特性创建 C/C++ 联合 (C#)</span><span class="sxs-lookup"><span data-stu-id="3ccbe-102">How to: Create a C/C++ Union by Using Attributes (C#)</span></span>
-<span data-ttu-id="3ccbe-103">通过使用特性，可自定义结构在内存中的布局方式。</span><span class="sxs-lookup"><span data-stu-id="3ccbe-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="3ccbe-104">例如，可使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 特性在 C/C++ 中创建所谓的联合。</span><span class="sxs-lookup"><span data-stu-id="3ccbe-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a><span data-ttu-id="91ab4-102">如何：使用属性创建 C/C++ 联合 (C#)</span><span class="sxs-lookup"><span data-stu-id="91ab4-102">How to: Create a C/C++ Union by Using Attributes (C#)</span></span>
+<span data-ttu-id="91ab4-103">通过使用特性，可自定义结构在内存中的布局方式。</span><span class="sxs-lookup"><span data-stu-id="91ab4-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="91ab4-104">例如，可使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 特性在 C/C++ 中创建所谓的联合。</span><span class="sxs-lookup"><span data-stu-id="91ab4-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3ccbe-105">示例</span><span class="sxs-lookup"><span data-stu-id="3ccbe-105">Example</span></span>  
- <span data-ttu-id="3ccbe-106">在此代码段中，`TestUnion` 的所有字段均从内存中的同一位置开始。</span><span class="sxs-lookup"><span data-stu-id="3ccbe-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
+## <a name="example"></a><span data-ttu-id="91ab4-105">示例</span><span class="sxs-lookup"><span data-stu-id="91ab4-105">Example</span></span>  
+ <span data-ttu-id="91ab4-106">在此代码段中，`TestUnion` 的所有字段均从内存中的同一位置开始。</span><span class="sxs-lookup"><span data-stu-id="91ab4-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
   
 ```csharp  
 // Add a using directive for System.Runtime.InteropServices.  
@@ -35,8 +35,8 @@ ms.locfileid: "43798504"
        }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="3ccbe-107">示例</span><span class="sxs-lookup"><span data-stu-id="3ccbe-107">Example</span></span>  
- <span data-ttu-id="3ccbe-108">下面是另一个示例，其中的字段从不同的显式设置位置开始。</span><span class="sxs-lookup"><span data-stu-id="3ccbe-108">The following is another example where fields start at different explicitly set locations.</span></span>  
+## <a name="example"></a><span data-ttu-id="91ab4-107">示例</span><span class="sxs-lookup"><span data-stu-id="91ab4-107">Example</span></span>  
+ <span data-ttu-id="91ab4-108">下面是另一个示例，其中的字段从不同的显式设置位置开始。</span><span class="sxs-lookup"><span data-stu-id="91ab4-108">The following is another example where fields start at different explicitly set locations.</span></span>  
   
 ```csharp  
 // Add a using directive for System.Runtime.InteropServices.  
@@ -64,15 +64,15 @@ ms.locfileid: "43798504"
        }  
 ```  
   
- <span data-ttu-id="3ccbe-109">两个整数字段 `i1` 和 `i2` 共享与 `lg` 相同的内存位置。</span><span class="sxs-lookup"><span data-stu-id="3ccbe-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="3ccbe-110">使用平台调用时，这种对结构布局的控制很有用。</span><span class="sxs-lookup"><span data-stu-id="3ccbe-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
+ <span data-ttu-id="91ab4-109">两个整数字段 `i1` 和 `i2` 共享与 `lg` 相同的内存位置。</span><span class="sxs-lookup"><span data-stu-id="91ab4-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="91ab4-110">使用平台调用时，这种对结构布局的控制很有用。</span><span class="sxs-lookup"><span data-stu-id="91ab4-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ccbe-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="3ccbe-111">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="91ab4-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="91ab4-111">See also</span></span>
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [<span data-ttu-id="3ccbe-112">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="3ccbe-112">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="3ccbe-113">特性</span><span class="sxs-lookup"><span data-stu-id="3ccbe-113">Attributes</span></span>](../../../../../docs/standard/attributes/index.md)  
-- [<span data-ttu-id="3ccbe-114">反射 (C#)</span><span class="sxs-lookup"><span data-stu-id="3ccbe-114">Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/reflection.md)  
-- [<span data-ttu-id="3ccbe-115">特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="3ccbe-115">Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/index.md)  
-- [<span data-ttu-id="3ccbe-116">创建自定义特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="3ccbe-116">Creating Custom Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
-- [<span data-ttu-id="3ccbe-117">使用反射访问特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="3ccbe-117">Accessing Attributes by Using Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [<span data-ttu-id="91ab4-112">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="91ab4-112">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="91ab4-113">特性</span><span class="sxs-lookup"><span data-stu-id="91ab4-113">Attributes</span></span>](../../../../../docs/standard/attributes/index.md)
+- [<span data-ttu-id="91ab4-114">反射 (C#)</span><span class="sxs-lookup"><span data-stu-id="91ab4-114">Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/reflection.md)
+- [<span data-ttu-id="91ab4-115">特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="91ab4-115">Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/index.md)
+- [<span data-ttu-id="91ab4-116">创建自定义特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="91ab4-116">Creating Custom Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [<span data-ttu-id="91ab4-117">使用反射访问特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="91ab4-117">Accessing Attributes by Using Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

@@ -4,30 +4,30 @@ ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f05dfab89fa5f811769687c467b2186745ecd5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc2e80a050e3b2e14663ba4bb67f650a16a6c619
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738308"
 ---
-# <a name="mitigation-wcf-services-and-certificate-authentication"></a><span data-ttu-id="cc713-102">缓解：WCF 服务和证书身份验证</span><span class="sxs-lookup"><span data-stu-id="cc713-102">Mitigation: WCF Services and Certificate Authentication</span></span>
-<span data-ttu-id="cc713-103">.NET Framework 4.6 向 WCF SSL 协议默认列表添加了 TLS 1.1 和 TLS 1.2。</span><span class="sxs-lookup"><span data-stu-id="cc713-103">The .NET Framework 4.6 adds TLS 1.1 and TLS 1.2 to the WCF SSL protocol default list.</span></span> <span data-ttu-id="cc713-104">客户端和服务器计算机都安装了 .NET Framework 4.6 或更高版本时，TLS 1.2 用于协商。</span><span class="sxs-lookup"><span data-stu-id="cc713-104">When both client and server machines have  the .NET Framework 4.6 or later installed, TLS 1.2 is used for negotiation.</span></span>  
+# <a name="mitigation-wcf-services-and-certificate-authentication"></a><span data-ttu-id="dd889-102">缓解：WCF 服务和证书身份验证</span><span class="sxs-lookup"><span data-stu-id="dd889-102">Mitigation: WCF Services and Certificate Authentication</span></span>
+<span data-ttu-id="dd889-103">.NET Framework 4.6 向 WCF SSL 协议默认列表添加了 TLS 1.1 和 TLS 1.2。</span><span class="sxs-lookup"><span data-stu-id="dd889-103">The .NET Framework 4.6 adds TLS 1.1 and TLS 1.2 to the WCF SSL protocol default list.</span></span> <span data-ttu-id="dd889-104">客户端和服务器计算机都安装了 .NET Framework 4.6 或更高版本时，TLS 1.2 用于协商。</span><span class="sxs-lookup"><span data-stu-id="dd889-104">When both client and server machines have  the .NET Framework 4.6 or later installed, TLS 1.2 is used for negotiation.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="cc713-105">影响</span><span class="sxs-lookup"><span data-stu-id="cc713-105">Impact</span></span>  
- <span data-ttu-id="cc713-106">TLS 1.2 不支持 MD5 证书身份验证。</span><span class="sxs-lookup"><span data-stu-id="cc713-106">TLS 1.2 does not support MD5 certificate authentication.</span></span> <span data-ttu-id="cc713-107">因此，如果客户使用的 SSL 证书对哈希算法使用 MD5，WCF 客户端就无法连接 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="cc713-107">As a result, if a customer uses an SSL  certificate which uses MD5 for the hash algorithm, the WCF client fails to connect to the WCF service.</span></span> <span data-ttu-id="cc713-108">有关详细信息，请参阅[缓解：WCF 服务和证书身份验证](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md)。</span><span class="sxs-lookup"><span data-stu-id="cc713-108">For more information, see [Mitigation: WCF Services and Certificate Authentication](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md).</span></span>  
+## <a name="impact"></a><span data-ttu-id="dd889-105">影响</span><span class="sxs-lookup"><span data-stu-id="dd889-105">Impact</span></span>  
+ <span data-ttu-id="dd889-106">TLS 1.2 不支持 MD5 证书身份验证。</span><span class="sxs-lookup"><span data-stu-id="dd889-106">TLS 1.2 does not support MD5 certificate authentication.</span></span> <span data-ttu-id="dd889-107">因此，如果客户使用的 SSL 证书对哈希算法使用 MD5，WCF 客户端就无法连接 WCF 服务。</span><span class="sxs-lookup"><span data-stu-id="dd889-107">As a result, if a customer uses an SSL  certificate which uses MD5 for the hash algorithm, the WCF client fails to connect to the WCF service.</span></span> <span data-ttu-id="dd889-108">有关详细信息，请参阅[缓解：WCF 服务和证书身份验证](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md)。</span><span class="sxs-lookup"><span data-stu-id="dd889-108">For more information, see [Mitigation: WCF Services and Certificate Authentication](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md).</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="cc713-109">缓解</span><span class="sxs-lookup"><span data-stu-id="cc713-109">Mitigation</span></span>  
- <span data-ttu-id="cc713-110">可以通过执行下列任一操作来解决此问题，以便 WCF 客户端可以连接 WCF 服务器：</span><span class="sxs-lookup"><span data-stu-id="cc713-110">You can work around this issue so that a WCF client can connect to a WCF server by doing any of the following:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="dd889-109">缓解</span><span class="sxs-lookup"><span data-stu-id="dd889-109">Mitigation</span></span>  
+ <span data-ttu-id="dd889-110">可以通过执行下列任一操作来解决此问题，以便 WCF 客户端可以连接 WCF 服务器：</span><span class="sxs-lookup"><span data-stu-id="dd889-110">You can work around this issue so that a WCF client can connect to a WCF server by doing any of the following:</span></span>  
   
--   <span data-ttu-id="cc713-111">将证书更新为不使用 MD5 算法。</span><span class="sxs-lookup"><span data-stu-id="cc713-111">Update the certificate to not use the MD5 algorithm.</span></span> <span data-ttu-id="cc713-112">建议采用此解决方案。</span><span class="sxs-lookup"><span data-stu-id="cc713-112">This is the recommended solution.</span></span>  
+-   <span data-ttu-id="dd889-111">将证书更新为不使用 MD5 算法。</span><span class="sxs-lookup"><span data-stu-id="dd889-111">Update the certificate to not use the MD5 algorithm.</span></span> <span data-ttu-id="dd889-112">建议采用此解决方案。</span><span class="sxs-lookup"><span data-stu-id="dd889-112">This is the recommended solution.</span></span>  
   
--   <span data-ttu-id="cc713-113">如果未在源代码中动态配置绑定，将应用程序的配置文件更新为使用 TLS 1.1 或更低版本的协议。</span><span class="sxs-lookup"><span data-stu-id="cc713-113">If the binding is not dynamically configured in source code, update the application's configuration file to use TLS 1.1 or an earlier version of the protocol.</span></span> <span data-ttu-id="cc713-114">这样便可以继续将证书和 MD5 哈希算法结合使用。</span><span class="sxs-lookup"><span data-stu-id="cc713-114">This allows you to continue to use a certificate with the MD5 hash algorithm.</span></span>  
+-   <span data-ttu-id="dd889-113">如果未在源代码中动态配置绑定，将应用程序的配置文件更新为使用 TLS 1.1 或更低版本的协议。</span><span class="sxs-lookup"><span data-stu-id="dd889-113">If the binding is not dynamically configured in source code, update the application's configuration file to use TLS 1.1 or an earlier version of the protocol.</span></span> <span data-ttu-id="dd889-114">这样便可以继续将证书和 MD5 哈希算法结合使用。</span><span class="sxs-lookup"><span data-stu-id="dd889-114">This allows you to continue to use a certificate with the MD5 hash algorithm.</span></span>  
   
     > [!CAUTION]
-    >  <span data-ttu-id="cc713-115">不建议采用此解决方法，因为使用 MD5 哈希算法的证书被视为不安全。</span><span class="sxs-lookup"><span data-stu-id="cc713-115">This workaround is not recommended, since a certificate with the MD5 hash algorithm is considered insecure.</span></span>  
+    >  <span data-ttu-id="dd889-115">不建议采用此解决方法，因为使用 MD5 哈希算法的证书被视为不安全。</span><span class="sxs-lookup"><span data-stu-id="dd889-115">This workaround is not recommended, since a certificate with the MD5 hash algorithm is considered insecure.</span></span>  
   
-     <span data-ttu-id="cc713-116">下面的配置文件就采用了此解决方法：</span><span class="sxs-lookup"><span data-stu-id="cc713-116">The following configuration file does this:</span></span>  
+     <span data-ttu-id="dd889-116">下面的配置文件就采用了此解决方法：</span><span class="sxs-lookup"><span data-stu-id="dd889-116">The following configuration file does this:</span></span>  
   
     ```xml  
     <configuration>  
@@ -48,10 +48,10 @@ ms.locfileid: "33388932"
     </configuration>  
     ```  
   
--   <span data-ttu-id="cc713-117">如果在源代码中动态配置了绑定，将 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> 属性更新为使用 TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) 或源代码中的早期版本协议。</span><span class="sxs-lookup"><span data-stu-id="cc713-117">If the binding is dynamically configured in source code, update the <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> property to use TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) or an  earlier version of the protocol in the source code.</span></span>  
+-   <span data-ttu-id="dd889-117">如果在源代码中动态配置了绑定，将 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> 属性更新为使用 TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) 或源代码中的早期版本协议。</span><span class="sxs-lookup"><span data-stu-id="dd889-117">If the binding is dynamically configured in source code, update the <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> property to use TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) or an  earlier version of the protocol in the source code.</span></span>  
   
     > [!CAUTION]
-    >  <span data-ttu-id="cc713-118">不建议采用此解决方法，因为使用 MD5 哈希算法的证书被视为不安全。</span><span class="sxs-lookup"><span data-stu-id="cc713-118">This workaround is not recommended, since a certificate with the MD5 hash algorithm is considered insecure.</span></span>  
+    >  <span data-ttu-id="dd889-118">不建议采用此解决方法，因为使用 MD5 哈希算法的证书被视为不安全。</span><span class="sxs-lookup"><span data-stu-id="dd889-118">This workaround is not recommended, since a certificate with the MD5 hash algorithm is considered insecure.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc713-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="cc713-119">See Also</span></span>  
- [<span data-ttu-id="cc713-120">运行时更改</span><span class="sxs-lookup"><span data-stu-id="cc713-120">Runtime Changes</span></span>](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a><span data-ttu-id="dd889-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="dd889-119">See also</span></span>
+- [<span data-ttu-id="dd889-120">运行时更改</span><span class="sxs-lookup"><span data-stu-id="dd889-120">Runtime Changes</span></span>](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

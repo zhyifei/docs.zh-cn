@@ -10,20 +10,20 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
-ms.openlocfilehash: 0912ff0909ffa5b22bed07543a2e514de4fb1ff5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 998c7a3f5ca405b3bd66b877d027126f6c76cc15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494413"
 ---
-# <a name="troubleshooting-service-application-won39t-install"></a><span data-ttu-id="324c3-102">疑难解答：服务应用程序无法安装</span><span class="sxs-lookup"><span data-stu-id="324c3-102">Troubleshooting: Service Application Won&#39;t Install</span></span>
-<span data-ttu-id="324c3-103">如果服务应用程序无法正确安装，请检查以确保服务类的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性设置为与该服务安装程序中显示的值相同的值。</span><span class="sxs-lookup"><span data-stu-id="324c3-103">If your service application will not install correctly, check to make sure that the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property for the service class is set to the same value as is shown in the installer for that service.</span></span> <span data-ttu-id="324c3-104">两个实例中的值必须相同才能正确安装服务。</span><span class="sxs-lookup"><span data-stu-id="324c3-104">The value must be the same in both instances in order for your service to install correctly.</span></span>  
+# <a name="troubleshooting-service-application-won39t-install"></a><span data-ttu-id="83e1d-102">疑难解答：服务应用程序无法安装</span><span class="sxs-lookup"><span data-stu-id="83e1d-102">Troubleshooting: Service Application Won&#39;t Install</span></span>
+<span data-ttu-id="83e1d-103">如果服务应用程序无法正确安装，请检查以确保服务类的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 属性设置为与该服务安装程序中显示的值相同的值。</span><span class="sxs-lookup"><span data-stu-id="83e1d-103">If your service application will not install correctly, check to make sure that the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property for the service class is set to the same value as is shown in the installer for that service.</span></span> <span data-ttu-id="83e1d-104">两个实例中的值必须相同才能正确安装服务。</span><span class="sxs-lookup"><span data-stu-id="83e1d-104">The value must be the same in both instances in order for your service to install correctly.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="324c3-105">还可以查看安装日志以获取有关安装进程的反馈。</span><span class="sxs-lookup"><span data-stu-id="324c3-105">You can also look at the installation logs to get feedback on the installation process.</span></span>  
+>  <span data-ttu-id="83e1d-105">还可以查看安装日志以获取有关安装进程的反馈。</span><span class="sxs-lookup"><span data-stu-id="83e1d-105">You can also look at the installation logs to get feedback on the installation process.</span></span>  
   
- <span data-ttu-id="324c3-106">还应该检查以确定是否已安装具有相同名称的其他服务。</span><span class="sxs-lookup"><span data-stu-id="324c3-106">You should also check to determine whether you have another service with the same name already installed.</span></span> <span data-ttu-id="324c3-107">服务名称必须唯一，安装才能成功。</span><span class="sxs-lookup"><span data-stu-id="324c3-107">Service names must be unique for installation to succeed.</span></span>  
+ <span data-ttu-id="83e1d-106">还应该检查以确定是否已安装具有相同名称的其他服务。</span><span class="sxs-lookup"><span data-stu-id="83e1d-106">You should also check to determine whether you have another service with the same name already installed.</span></span> <span data-ttu-id="83e1d-107">服务名称必须唯一，安装才能成功。</span><span class="sxs-lookup"><span data-stu-id="83e1d-107">Service names must be unique for installation to succeed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="324c3-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="324c3-108">See Also</span></span>  
- [<span data-ttu-id="324c3-109">Windows 服务应用程序介绍</span><span class="sxs-lookup"><span data-stu-id="324c3-109">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+## <a name="see-also"></a><span data-ttu-id="83e1d-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="83e1d-108">See also</span></span>
+- [<span data-ttu-id="83e1d-109">Windows 服务应用程序介绍</span><span class="sxs-lookup"><span data-stu-id="83e1d-109">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

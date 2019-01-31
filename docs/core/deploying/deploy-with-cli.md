@@ -1,207 +1,168 @@
 ---
-title: 使用命令行接口 (CLI) 工具部署 .NET Core 应用
-description: 了解如何使用命令行接口 (CLI) 工具部署 .NET Core 应用
-author: rpetrusha
-ms.author: ronpet
-ms.date: 09/05/2018
+title: 使用 CLI 发布 .NET Core 应用
+description: 了解如何使用 .NET Core SDK 命令行接口 (CLI) 工具发布 .NET Core 应用。
+author: thraka
+ms.author: adegeo
+ms.date: 01/16/2019
 dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503997"
 ---
-# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a><span data-ttu-id="f9326-103">使用命令行接口 (CLI) 工具部署 .NET Core 应用</span><span class="sxs-lookup"><span data-stu-id="f9326-103">Deploy .NET Core apps with command-line interface (CLI) tools</span></span>
+# <a name="publish-net-core-apps-with-the-cli"></a><span data-ttu-id="e2945-103">使用 CLI 发布 .NET Core 应用</span><span class="sxs-lookup"><span data-stu-id="e2945-103">Publish .NET Core apps with the CLI</span></span>
 
-<span data-ttu-id="f9326-104">可将 .NET Core 应用程序部署为依赖框架的部署或独立部署，前者包含应用程序二进制文件，但依赖目标系统上存在的 .NET Core，而后者同时包含应用程序和 .NET Core 二进制文件。</span><span class="sxs-lookup"><span data-stu-id="f9326-104">You can deploy a .NET Core application either as a *framework-dependent deployment*, which includes your application binaries but depends on the presence of .NET Core on the target system, or as a *self-contained deployment*, which includes both your application and the .NET Core binaries.</span></span> <span data-ttu-id="f9326-105">请参阅 [.NET Core 应用程序部署](index.md)了解相关概述。</span><span class="sxs-lookup"><span data-stu-id="f9326-105">For an overview, see [.NET Core Application Deployment](index.md).</span></span>
+<span data-ttu-id="e2945-104">本文演示了如何使用命令行发布 .NET Core 应用程序。</span><span class="sxs-lookup"><span data-stu-id="e2945-104">This article demonstrates how you can publish your .NET Core application from the command line.</span></span> <span data-ttu-id="e2945-105">.NET Core 提供了三种发布应用程序的方式。</span><span class="sxs-lookup"><span data-stu-id="e2945-105">.NET Core provides three ways to publish your applications.</span></span> <span data-ttu-id="e2945-106">依赖于框架的部署生成一个跨平台 .dll 文件，该文件使用本地安装的 .NET Core 运行时。</span><span class="sxs-lookup"><span data-stu-id="e2945-106">Framework-dependent deployment produces a cross-platform .dll file that uses the locally installed .NET Core runtime.</span></span> <span data-ttu-id="e2945-107">依赖于框架的可执行文件生成特定于平台的可执行文件，后者使用本地安装的 .NET Core 运行时。</span><span class="sxs-lookup"><span data-stu-id="e2945-107">Framework-dependent executable produces a platform-specific executable that uses the locally installed .NET Core runtime.</span></span> <span data-ttu-id="e2945-108">独立可执行文件生成特定于平台的可执行文件，并包含 .NET Core 运行时的本地副本。</span><span class="sxs-lookup"><span data-stu-id="e2945-108">Self-contained executable produces a platform-specific executable and includes a local copy of the .NET Core runtime.</span></span>
 
-<span data-ttu-id="f9326-106">以下各节演示如何使用 [.NET Core 命令行接口工具](../tools/index.md)创建下列各类部署：</span><span class="sxs-lookup"><span data-stu-id="f9326-106">The following sections show how to use [.NET Core command-line interface tools](../tools/index.md) to create the following kinds of deployments:</span></span>
+<span data-ttu-id="e2945-109">请参阅 [.NET Core 应用程序部署](index.md)了解有关这些发布模式的概述。</span><span class="sxs-lookup"><span data-stu-id="e2945-109">For an overview of these publishing modes, see [.NET Core Application Deployment](index.md).</span></span> 
 
-- <span data-ttu-id="f9326-107">依赖框架的部署</span><span class="sxs-lookup"><span data-stu-id="f9326-107">Framework-dependent deployment</span></span>
-- <span data-ttu-id="f9326-108">包含第三方依赖项的依赖框架的部署</span><span class="sxs-lookup"><span data-stu-id="f9326-108">Framework-dependent deployment with third-party dependencies</span></span>
-- <span data-ttu-id="f9326-109">独立部署</span><span class="sxs-lookup"><span data-stu-id="f9326-109">Self-contained deployment</span></span>
-- <span data-ttu-id="f9326-110">包含第三方依赖项的独立部署</span><span class="sxs-lookup"><span data-stu-id="f9326-110">Self-contained deployment with third-party dependencies</span></span>
+<span data-ttu-id="e2945-110">正在查找有关 CLI 的快速帮助？</span><span class="sxs-lookup"><span data-stu-id="e2945-110">Looking for some quick help on using the CLI?</span></span> <span data-ttu-id="e2945-111">下表列出了一些关于如何发布应用的示例。</span><span class="sxs-lookup"><span data-stu-id="e2945-111">The following table shows some examples of how to publish your app.</span></span> <span data-ttu-id="e2945-112">可以使用 `-f <TFM>` 参数或通过编辑项目文件来指定目标框架。</span><span class="sxs-lookup"><span data-stu-id="e2945-112">You can specify the target framework with the `-f <TFM>` parameter or by editing the project file.</span></span> <span data-ttu-id="e2945-113">有关详细信息，请参阅[发布基本知识](#publishing-basics)。</span><span class="sxs-lookup"><span data-stu-id="e2945-113">For more information, see [Publishing basics](#publishing-basics).</span></span>
 
-<span data-ttu-id="f9326-111">从命令行工作时，可使用所选的程序编辑器。</span><span class="sxs-lookup"><span data-stu-id="f9326-111">When working from the command line, you can use a program editor of your choice.</span></span> <span data-ttu-id="f9326-112">如果使用的程序编辑器是 [Visual Studio Code](https://code.visualstudio.com)，则可通过选择“视图” > “集成终端”打开 Visual Studio Code 环境中的命令控制台。</span><span class="sxs-lookup"><span data-stu-id="f9326-112">If your program editor is [Visual Studio Code](https://code.visualstudio.com), you can open a command console inside your Visual Studio Code environment by selecting **View** > **Integrated Terminal**.</span></span>
+| <span data-ttu-id="e2945-114">发布模式</span><span class="sxs-lookup"><span data-stu-id="e2945-114">Publish Mode</span></span> | <span data-ttu-id="e2945-115">SDK 版本</span><span class="sxs-lookup"><span data-stu-id="e2945-115">SDK Version</span></span> | <span data-ttu-id="e2945-116">命令</span><span class="sxs-lookup"><span data-stu-id="e2945-116">Command</span></span> |
+| ------------ | ----------- | ------- |
+| <span data-ttu-id="e2945-117">依赖框架的部署</span><span class="sxs-lookup"><span data-stu-id="e2945-117">Framework-dependent deployment</span></span> | <span data-ttu-id="e2945-118">2.x</span><span class="sxs-lookup"><span data-stu-id="e2945-118">2.x</span></span> | `dotnet publish -c Release` |
+| <span data-ttu-id="e2945-119">依赖于框架的可执行文件</span><span class="sxs-lookup"><span data-stu-id="e2945-119">Framework-dependent executable</span></span> | <span data-ttu-id="e2945-120">2.2</span><span class="sxs-lookup"><span data-stu-id="e2945-120">2.2</span></span> | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | <span data-ttu-id="e2945-121">3.0</span><span class="sxs-lookup"><span data-stu-id="e2945-121">3.0</span></span> | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | <span data-ttu-id="e2945-122">3.0\*</span><span class="sxs-lookup"><span data-stu-id="e2945-122">3.0\*</span></span> | `dotnet publish -c Release` |
+| <span data-ttu-id="e2945-123">独立部署</span><span class="sxs-lookup"><span data-stu-id="e2945-123">Self-contained deployment</span></span>      | <span data-ttu-id="e2945-124">2.1</span><span class="sxs-lookup"><span data-stu-id="e2945-124">2.1</span></span> | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | <span data-ttu-id="e2945-125">2.2</span><span class="sxs-lookup"><span data-stu-id="e2945-125">2.2</span></span> | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | <span data-ttu-id="e2945-126">3.0</span><span class="sxs-lookup"><span data-stu-id="e2945-126">3.0</span></span> | `dotnet publish -c Release -r <RID> --self-contained true` |
 
-## <a name="framework-dependent-deployment"></a><span data-ttu-id="f9326-113">依赖框架的部署</span><span class="sxs-lookup"><span data-stu-id="f9326-113">Framework-dependent deployment</span></span>
+>[!IMPORTANT]
+><span data-ttu-id="e2945-127">\*使用 SDK 版本 3.0 时，依赖于框架的可执行文件是运行基本 `dotnet publish` 命令时的默认发布模式。</span><span class="sxs-lookup"><span data-stu-id="e2945-127">\*When using SDK version 3.0, framework-dependent executable this is the default publishing mode when running the basic `dotnet publish` command.</span></span> <span data-ttu-id="e2945-128">这仅适用于面向 .NET Core 2.1 或 .NET Core 3.0 的项目。</span><span class="sxs-lookup"><span data-stu-id="e2945-128">This only applies to projects that target **.NET Core 2.1** or **.NET Core 3.0**.</span></span>
 
-<span data-ttu-id="f9326-114">如果不使用第三方依赖项，部属依赖框架的部署只包括生成、测试和发布应用。</span><span class="sxs-lookup"><span data-stu-id="f9326-114">Deploying a framework-dependent deployment with no third-party dependencies simply involves building, testing, and publishing the app.</span></span> <span data-ttu-id="f9326-115">一个用 C# 编写的简单示例可说明此过程。</span><span class="sxs-lookup"><span data-stu-id="f9326-115">A simple example written in C# illustrates the process.</span></span>
+## <a name="publishing-basics"></a><span data-ttu-id="e2945-129">发布基本知识</span><span class="sxs-lookup"><span data-stu-id="e2945-129">Publishing basics</span></span>
 
-1. <span data-ttu-id="f9326-116">创建项目目录。</span><span class="sxs-lookup"><span data-stu-id="f9326-116">Create a project directory.</span></span>
+<span data-ttu-id="e2945-130">发布应用时，项目文件的 `<TargetFramework>` 设置指定默认目标框架。</span><span class="sxs-lookup"><span data-stu-id="e2945-130">The `<TargetFramework>` setting of the project file specifies the default target framework when you publish your app.</span></span> <span data-ttu-id="e2945-131">可以将目标框架更改为任意有效[目标框架名字对象 (TFM)](../../standard/frameworks.md)。</span><span class="sxs-lookup"><span data-stu-id="e2945-131">You can change the target framework to any valid [Target Framework Moniker (TFM)](../../standard/frameworks.md).</span></span> <span data-ttu-id="e2945-132">例如，如果项目使用 `<TargetFramework>netcoreapp2.2</TargetFramework>`，则会创建面向 .NET Core 2.2 的二进制文件。</span><span class="sxs-lookup"><span data-stu-id="e2945-132">For example, if your project uses `<TargetFramework>netcoreapp2.2</TargetFramework>`, a binary that targets .NET Core 2.2 is created.</span></span> <span data-ttu-id="e2945-133">此设置中指定的 TFM 是[`dotnet publish`][dotnet-publish] 命令使用的默认目标。</span><span class="sxs-lookup"><span data-stu-id="e2945-133">The TFM specified in this setting is the default target used by the [`dotnet publish`][dotnet-publish] command.</span></span>
 
-   <span data-ttu-id="f9326-117">为项目创建一个目录，并将其设为当前目录。</span><span class="sxs-lookup"><span data-stu-id="f9326-117">Create a directory for your project and make it your current directory.</span></span>
+<span data-ttu-id="e2945-134">如果要以多个框架为目标，可以将 `<TargetFrameworks>` 设置设置为多个以分号分隔的 TFM 值。</span><span class="sxs-lookup"><span data-stu-id="e2945-134">If you want to target more than one framework, you can set the `<TargetFrameworks>` setting to more than one TFM value separated by a semicolon.</span></span> <span data-ttu-id="e2945-135">可以使用 `dotnet publish -f <TFM>` 命令发布其中一个框架。</span><span class="sxs-lookup"><span data-stu-id="e2945-135">You can publish one of the frameworks with the `dotnet publish -f <TFM>` command.</span></span> <span data-ttu-id="e2945-136">例如，如果有 `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` 并运行 `dotnet publish -f netcoreapp2.1`，则会创建面向 .NET Core 2.1 的二进制文件。</span><span class="sxs-lookup"><span data-stu-id="e2945-136">For example, if you have `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` and run `dotnet publish -f netcoreapp2.1`, a binary that targets .NET Core 2.1 is created.</span></span>
 
-1. <span data-ttu-id="f9326-118">创建项目。</span><span class="sxs-lookup"><span data-stu-id="f9326-118">Create the project.</span></span>
+<span data-ttu-id="e2945-137">除非另有设置，否则 [`dotnet publish`][dotnet-publish] 命令的输出目录为 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`。</span><span class="sxs-lookup"><span data-stu-id="e2945-137">Unless otherwise set, the output directory of the [`dotnet publish`][dotnet-publish] command is `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`.</span></span> <span data-ttu-id="e2945-138">除非使用 `-c` 参数进行更改，否则默认的 BUILD-CONFIGURATION 模式为 Debug。</span><span class="sxs-lookup"><span data-stu-id="e2945-138">The default **BUILD-CONFIGURATION** mode is **Debug** unless changed with the `-c` parameter.</span></span> <span data-ttu-id="e2945-139">例如，`dotnet publish -c Release -f netcoreapp2.1` 发布到 `myfolder/bin/Release/netcoreapp2.1/publish/`。</span><span class="sxs-lookup"><span data-stu-id="e2945-139">For example, `dotnet publish -c Release -f netcoreapp2.1` publishes to `myfolder/bin/Release/netcoreapp2.1/publish/`.</span></span> 
 
-   <span data-ttu-id="f9326-119">在命令行中，键入 [dotnet new console](../tools/dotnet-new.md) 以创建新的 C# 控制台项目或键入 [dotnet new console -lang vb](../tools/dotnet-new.md) 以在该目录中创建新的 Visual Basic 控制台项目。</span><span class="sxs-lookup"><span data-stu-id="f9326-119">From the command line, type [dotnet new console](../tools/dotnet-new.md) to create a new C# console project or [dotnet new console -lang vb](../tools/dotnet-new.md) to create a new Visual Basic console project in that directory.</span></span>
+<span data-ttu-id="e2945-140">如果使用 .NET Core SDK 3.0，则面向 .NET Core 版本 2.1、2.2 或 3.0 的应用的默认发布模式为依赖于框架的可执行文件。</span><span class="sxs-lookup"><span data-stu-id="e2945-140">If you use .NET Core SDK 3.0, the default publish mode for apps that target .NET Core versions 2.1, 2.2, or 3.0 is framework-dependent executable.</span></span>
 
-1. <span data-ttu-id="f9326-120">添加应用程序的源代码。</span><span class="sxs-lookup"><span data-stu-id="f9326-120">Add the application's source code.</span></span>
+<span data-ttu-id="e2945-141">如果使用 .NET Core SDK 2.1，则面向 .NET Core 版本 2.1、2.2 的应用的默认发布模式为依赖于框架的部署。</span><span class="sxs-lookup"><span data-stu-id="e2945-141">If you use .NET Core SDK 2.1, the default publish mode for apps that target .NET Core versions 2.1, 2.2 is framework-dependent deployment.</span></span>
 
-   <span data-ttu-id="f9326-121">在编辑器中打开 Program.cs 文件或 Program.vb 文件，然后使用下列代码替换自动生成的代码。</span><span class="sxs-lookup"><span data-stu-id="f9326-121">Open the *Program.cs* or *Program.vb* file in your editor and replace the auto-generated code with the following code.</span></span> <span data-ttu-id="f9326-122">它会提示用户输入文本，并显示用户输入的个别词。</span><span class="sxs-lookup"><span data-stu-id="f9326-122">It prompts the user to enter text and displays the individual words entered by the user.</span></span> <span data-ttu-id="f9326-123">它使用正则表达式 `\w+` 来将输入文本中的词分开。</span><span class="sxs-lookup"><span data-stu-id="f9326-123">It uses the regular expression `\w+` to separate the words in the input text.</span></span>
+### <a name="native-dependencies"></a><span data-ttu-id="e2945-142">本机依赖项</span><span class="sxs-lookup"><span data-stu-id="e2945-142">Native dependencies</span></span>
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+<span data-ttu-id="e2945-143">如果应用具有本机依赖项，则只能在相同操作系统上运行。</span><span class="sxs-lookup"><span data-stu-id="e2945-143">If your app has native dependencies, it may not run on a different operating system.</span></span> <span data-ttu-id="e2945-144">例如，如果应用使用本机 Win32 API，则不能在 macOS 或 Linux 上运行。</span><span class="sxs-lookup"><span data-stu-id="e2945-144">For example, if your app uses the native Win32 API, it won't run on macOS or Linux.</span></span> <span data-ttu-id="e2945-145">需要提供特定于平台的代码并为每个平台编译可执行文件。</span><span class="sxs-lookup"><span data-stu-id="e2945-145">You would need to provide platform-specific code and compile an executable for each platform.</span></span> 
 
-1. <span data-ttu-id="f9326-124">更新项目的依赖项和工具。</span><span class="sxs-lookup"><span data-stu-id="f9326-124">Update the project's dependencies and tools.</span></span>
+<span data-ttu-id="e2945-146">另外，如果引用的库具有本机依赖项，则应用可能无法在每个平台上运行。</span><span class="sxs-lookup"><span data-stu-id="e2945-146">Consider also, if a library you referenced has a native dependency, your app may not run on every platform.</span></span> <span data-ttu-id="e2945-147">但是，引用的 NuGet 包可能包含特定于平台的版本，以便处理所需的本机依赖项。</span><span class="sxs-lookup"><span data-stu-id="e2945-147">However, it's possible a NuGet package you're referencing has included platform-specific versions to handle the required native dependencies for you.</span></span>
 
-   <span data-ttu-id="f9326-125">运行 [dotnet restore](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)）命令，还原项目中指定的依赖项。</span><span class="sxs-lookup"><span data-stu-id="f9326-125">Run the [dotnet restore](../tools/dotnet-restore.md) ([see note](#dotnet-restore-note)) command to restore the dependencies specified in your project.</span></span>
+<span data-ttu-id="e2945-148">使用本机依赖项分发应用时，可能需要使用 `dotnet publish -r <RID>` 开关来指定想要发布的目标平台。</span><span class="sxs-lookup"><span data-stu-id="e2945-148">When distributing an app with native dependencies, you may need to use the `dotnet publish -r <RID>` switch to specify the target platform you want to publish for.</span></span> <span data-ttu-id="e2945-149">有关运行时标识符的详细信息，请参阅[运行时标识符 (RID) 目录](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="e2945-149">For a list of runtime identifiers, see [Runtime Identifier (RID) catalog](../rid-catalog.md).</span></span>
 
-1. <span data-ttu-id="f9326-126">创建应用的调试版本。</span><span class="sxs-lookup"><span data-stu-id="f9326-126">Create a Debug build of your app.</span></span>
+<span data-ttu-id="e2945-150">有关特定于平台的二进制文件的详细信息，请参阅[依赖于框架的可执行文件](#framework-dependent-executable)和[独立部署](#self-contained-deployment)部分。</span><span class="sxs-lookup"><span data-stu-id="e2945-150">More information about platform-specific binaries is covered in the [Framework-dependent executable](#framework-dependent-executable) and [Self-contained deployment](#self-contained-deployment) sections.</span></span>
 
-   <span data-ttu-id="f9326-127">使用 [dotnet 生成](../tools/dotnet-build.md)命令生成应用程序，或使用 [dotnet 运行](../tools/dotnet-run.md)命令生成并运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="f9326-127">Use the [dotnet build](../tools/dotnet-build.md) command to build your application or the [dotnet run](../tools/dotnet-run.md) command to build and run it.</span></span>
+## <a name="sample-app"></a><span data-ttu-id="e2945-151">示例应用</span><span class="sxs-lookup"><span data-stu-id="e2945-151">Sample app</span></span>
 
-1. <span data-ttu-id="f9326-128">部署应用。</span><span class="sxs-lookup"><span data-stu-id="f9326-128">Deploy your app.</span></span>
+<span data-ttu-id="e2945-152">可以使用以下应用来探索发布命令。</span><span class="sxs-lookup"><span data-stu-id="e2945-152">You can use either the following app to explore the publishing commands.</span></span> <span data-ttu-id="e2945-153">通过在终端中运行以下命令来创建应用：</span><span class="sxs-lookup"><span data-stu-id="e2945-153">The app is created by running the following commands in your terminal:</span></span>
 
-   <span data-ttu-id="f9326-129">完成程序调试和测试后，使用下列命令创建部署：</span><span class="sxs-lookup"><span data-stu-id="f9326-129">After you've debugged and tested the program, create the deployment by using the following command:</span></span>
-
-      ```console
-      dotnet publish -f netcoreapp2.1 -c Release
-      ```
-   <span data-ttu-id="f9326-130">这将创建一个应用的发行版（而不是调试版）。</span><span class="sxs-lookup"><span data-stu-id="f9326-130">This creates a Release (rather than a Debug) version of your app.</span></span> <span data-ttu-id="f9326-131">生成的文件位于名为“发布”的目录中，该目录位于项目的 bin 目录的子目录中。</span><span class="sxs-lookup"><span data-stu-id="f9326-131">The resulting files are placed in a directory named *publish*      that's in a subdirectory of your project's *bin* directory.</span></span>
-
-   <span data-ttu-id="f9326-132">与应用程序的文件一起，发布过程将发出包含应用调试信息的程序数据库 (.pdb) 文件。</span><span class="sxs-lookup"><span data-stu-id="f9326-132">Along with your application's files, the publishing process emits a program database (.pdb) file that contains debugging information about your app.</span></span> <span data-ttu-id="f9326-133">该文件主要用于调试异常。</span><span class="sxs-lookup"><span data-stu-id="f9326-133">The file is useful primarily for debugging exceptions.</span></span> <span data-ttu-id="f9326-134">可以选择不将其与应用程序的文件一起分布。</span><span class="sxs-lookup"><span data-stu-id="f9326-134">You can choose not to distribute it with your application's files.</span></span> <span data-ttu-id="f9326-135">但是，如果要调试应用的发布版本，则应保存该文件。</span><span class="sxs-lookup"><span data-stu-id="f9326-135">You should, however, save it in the event that you want to debug the Release build of your app.</span></span>
-
-   <span data-ttu-id="f9326-136">可以采用任何喜欢的方式部署完整的应用程序文件集。</span><span class="sxs-lookup"><span data-stu-id="f9326-136">You can deploy the complete set of application files in any way you like.</span></span> <span data-ttu-id="f9326-137">例如，可以使用简单的 `copy` 命令将其打包为 Zip 文件，或者使用选择的安装包进行部署。</span><span class="sxs-lookup"><span data-stu-id="f9326-137">For example, you can package them in a Zip file, use a simple `copy` command, or deploy them with any installation package of your choice.</span></span>
-
-1. <span data-ttu-id="f9326-138">运行你的应用</span><span class="sxs-lookup"><span data-stu-id="f9326-138">Run your app</span></span>
-
-   <span data-ttu-id="f9326-139">安装成功后，用户可通过使用 `dotnet` 命令或提供应用程序文件名（如 `dotnet fdd.dll`）来执行应用程序。</span><span class="sxs-lookup"><span data-stu-id="f9326-139">Once installed, users can execute your application by using the `dotnet` command and providing the application filename, such as `dotnet fdd.dll`.</span></span>
-
-   <span data-ttu-id="f9326-140">除应用程序二进制文件外，安装程序还应捆绑共享框架安装程序，或在安装应用程序的过程中将其作为先决条件进行检查。</span><span class="sxs-lookup"><span data-stu-id="f9326-140">In addition to the application binaries, your installer should also either bundle the shared framework installer or check for it as a prerequisite as part of the application installation.</span></span>  <span data-ttu-id="f9326-141">安装共享框架需要管理员/根访问权限。</span><span class="sxs-lookup"><span data-stu-id="f9326-141">Installation of the shared framework requires Administrator/root access.</span></span>
-
-## <a name="framework-dependent-deployment-with-third-party-dependencies"></a><span data-ttu-id="f9326-142">包含第三方依赖项的依赖框架的部署</span><span class="sxs-lookup"><span data-stu-id="f9326-142">Framework-dependent deployment with third-party dependencies</span></span>
-
-<span data-ttu-id="f9326-143">要使用一个或多个第三方依赖项来部署依赖框架的部署，需要这些依赖项都可供项目使用。</span><span class="sxs-lookup"><span data-stu-id="f9326-143">Deploying a framework-dependent deployment with one or more third-party dependencies requires that those dependencies be available to your project.</span></span> <span data-ttu-id="f9326-144">在运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）命令之前，还需执行额外两个步骤：</span><span class="sxs-lookup"><span data-stu-id="f9326-144">Two additional steps are required before you can run the `dotnet restore` ([see note](#dotnet-restore-note)) command:</span></span>
-
-1. <span data-ttu-id="f9326-145">向 csproj 文件的 `<ItemGroup>` 部分添加对所需第三方库的引用。</span><span class="sxs-lookup"><span data-stu-id="f9326-145">Add references to required third-party libraries to the `<ItemGroup>` section of your *csproj* file.</span></span> <span data-ttu-id="f9326-146">以下 `<ItemGroup>` 部分包含 [Json.NET](https://www.newtonsoft.com/json) 的依赖项（作为第三方库）：</span><span class="sxs-lookup"><span data-stu-id="f9326-146">The following `<ItemGroup>` section contains a dependency on [Json.NET](https://www.newtonsoft.com/json) as a third-party library:</span></span>
-
-      ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-      ```
-
-1. <span data-ttu-id="f9326-147">如果尚未安装，请下载包含第三方依赖项的 NuGet 包。</span><span class="sxs-lookup"><span data-stu-id="f9326-147">If you haven't already, download the NuGet package containing the third-party dependency.</span></span> <span data-ttu-id="f9326-148">若要下载该包，请在添加依赖项后执行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）命令。</span><span class="sxs-lookup"><span data-stu-id="f9326-148">To download the package, execute the `dotnet restore` ([see note](#dotnet-restore-note)) command after adding the dependency.</span></span> <span data-ttu-id="f9326-149">因为依赖项在发布时已从本地 NuGet 缓存解析出来，因此它一定适用于你的系统。</span><span class="sxs-lookup"><span data-stu-id="f9326-149">Because the dependency is resolved out of the local NuGet cache at publish time, it must be available on your system.</span></span>
-
-<span data-ttu-id="f9326-150">请注意，如果依赖框架的部署具有第三方依赖项，则其可移植性只与第三方依赖项相同。</span><span class="sxs-lookup"><span data-stu-id="f9326-150">Note that a framework-dependent deployment with third-party dependencies is only as portable as its third-party dependencies.</span></span> <span data-ttu-id="f9326-151">例如，如果某个第三方库只支持 macOS，该应用将无法移植到 Windows 系统。</span><span class="sxs-lookup"><span data-stu-id="f9326-151">For example, if a third-party library only supports macOS, the app isn't portable to Windows systems.</span></span> <span data-ttu-id="f9326-152">当第三方依赖项本身取决于本机代码时，也可能发生此情况。</span><span class="sxs-lookup"><span data-stu-id="f9326-152">This happens if the third-party dependency itself depends on native code.</span></span> <span data-ttu-id="f9326-153">[Kestrel 服务器](/aspnet/core/fundamentals/servers/kestrel)就是一个很好的示例，它需要 [libuv](https://github.com/libuv/libuv) 的本机依赖项。</span><span class="sxs-lookup"><span data-stu-id="f9326-153">A good example of this is [Kestrel server](/aspnet/core/fundamentals/servers/kestrel), which requires a native dependency on [libuv](https://github.com/libuv/libuv).</span></span> <span data-ttu-id="f9326-154">当为具有此类第三方依赖项的应用程序创建 FDD 时，已发布的输出会针对每个本机依赖项支持（存在于 NuGet 包中）的[运行时标识符 (RID)](../rid-catalog.md) 包含一个文件夹。</span><span class="sxs-lookup"><span data-stu-id="f9326-154">When an FDD is created for an application with this kind of third-party dependency, the published output contains a folder for each [Runtime Identifier (RID)](../rid-catalog.md) that the native dependency supports (and that exists in its NuGet package).</span></span>
-
-## <a name="simpleSelf"></a><span data-ttu-id="f9326-155">不包含第三方依赖项的独立部署</span><span class="sxs-lookup"><span data-stu-id="f9326-155">Self-contained deployment without third-party dependencies</span></span>
-
-<span data-ttu-id="f9326-156">部署没有第三方依赖项的独立部署包括创建项目、修改 csproj 文件、生成、测试以及发布应用。</span><span class="sxs-lookup"><span data-stu-id="f9326-156">Deploying a self-contained deployment without third-party dependencies involves creating the project, modifying the *csproj* file, building, testing, and publishing the app.</span></span> <span data-ttu-id="f9326-157">一个用 C# 编写的简单示例可说明此过程。</span><span class="sxs-lookup"><span data-stu-id="f9326-157">A simple example written in C# illustrates the process.</span></span> <span data-ttu-id="f9326-158">该示例演示如何使用命令行中的 [dotnet 实用工具](../tools/dotnet.md)创建独立部署。</span><span class="sxs-lookup"><span data-stu-id="f9326-158">The example shows how to create a self-contained deployment using the [dotnet utility](../tools/dotnet.md) from the command line.</span></span>
-
-1. <span data-ttu-id="f9326-159">为项目创建目录。</span><span class="sxs-lookup"><span data-stu-id="f9326-159">Create a directory for the project.</span></span>
-
-   <span data-ttu-id="f9326-160">为项目创建一个目录，并将其设为当前目录。</span><span class="sxs-lookup"><span data-stu-id="f9326-160">Create a directory for your project, and make it your current directory.</span></span>
-
-1. <span data-ttu-id="f9326-161">创建项目。</span><span class="sxs-lookup"><span data-stu-id="f9326-161">Create the project.</span></span>
-
-   <span data-ttu-id="f9326-162">在命令栏行中，键入 [dotnet new console](../tools/dotnet-new.md)，在该目录中创建新的 C# 控制台项目。</span><span class="sxs-lookup"><span data-stu-id="f9326-162">From the command line, type [dotnet new console](../tools/dotnet-new.md) to create a new C# console project in that directory.</span></span>
-
-1. <span data-ttu-id="f9326-163">添加应用程序的源代码。</span><span class="sxs-lookup"><span data-stu-id="f9326-163">Add the application's source code.</span></span>
-
-   <span data-ttu-id="f9326-164">在编辑器中打开 Program.cs 文件，然后使用下列代码替换自动生成的代码。</span><span class="sxs-lookup"><span data-stu-id="f9326-164">Open the *Program.cs* file in your editor and replace the auto-generated code with the following code.</span></span> <span data-ttu-id="f9326-165">它会提示用户输入文本，并显示用户输入的个别词。</span><span class="sxs-lookup"><span data-stu-id="f9326-165">It prompts the user to enter text and displays the individual words entered by the user.</span></span> <span data-ttu-id="f9326-166">它使用正则表达式 `\w+` 来将输入文本中的词分开。</span><span class="sxs-lookup"><span data-stu-id="f9326-166">It uses the regular expression `\w+` to separate the words in the input text.</span></span>
-
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
-1. <span data-ttu-id="f9326-167">定义应用的目标平台。</span><span class="sxs-lookup"><span data-stu-id="f9326-167">Define the platforms that your app will target.</span></span>
-
-   <span data-ttu-id="f9326-168">在 csproj 文件（该文件用于定义应用的目标平台）的 `<PropertyGroup>` 部分中创建 `<RuntimeIdentifiers>` 标记，然后指定每个目标平台的运行时标识符 (RID)。</span><span class="sxs-lookup"><span data-stu-id="f9326-168">Create a `<RuntimeIdentifiers>` tag in the `<PropertyGroup>` section of your *csproj* file that defines the platforms your app targets and specify the runtime identifier (RID) for each platform that you target.</span></span> <span data-ttu-id="f9326-169">请注意，还需要添加分号来分隔 RID。</span><span class="sxs-lookup"><span data-stu-id="f9326-169">Note that you also need to add a semicolon to separate the RIDs.</span></span> <span data-ttu-id="f9326-170">请查看[运行时标识符目录](../rid-catalog.md)，获取运行时标识符列表。</span><span class="sxs-lookup"><span data-stu-id="f9326-170">See [Runtime IDentifier catalog](../rid-catalog.md) for a list of runtime identifiers.</span></span>
-
-   <span data-ttu-id="f9326-171">例如，以下 `<PropertyGroup>` 部分表明应用在 64 位 Windows 10 操作系统和 64 位 OS X 10.11 版本的操作系统上运行。</span><span class="sxs-lookup"><span data-stu-id="f9326-171">For example, the following `<PropertyGroup>` section indicates that the app runs on 64-bit Windows 10 operating systems and the 64-bit OS X Version 10.11 operating system.</span></span>
-
-     ```xml
-     <PropertyGroup>
-         <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-     </PropertyGroup>
-     ```
-
-   <span data-ttu-id="f9326-172">请注意，`<RuntimeIdentifiers>` 元素可能出现在 csproj 文件的任何 `<PropertyGroup>` 中。</span><span class="sxs-lookup"><span data-stu-id="f9326-172">Note that the `<RuntimeIdentifiers>` element can appear in any `<PropertyGroup>` in your *csproj* file.</span></span> <span data-ttu-id="f9326-173">本节后面部分将显示完整的示例 csproj 文件。</span><span class="sxs-lookup"><span data-stu-id="f9326-173">A complete sample *csproj* file appears later in this section.</span></span>
-
-1. <span data-ttu-id="f9326-174">更新项目的依赖项和工具。</span><span class="sxs-lookup"><span data-stu-id="f9326-174">Update the project's dependencies and tools.</span></span>
-
-   <span data-ttu-id="f9326-175">运行 [dotnet restore](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)）命令，还原项目中指定的依赖项。</span><span class="sxs-lookup"><span data-stu-id="f9326-175">Run the [dotnet restore](../tools/dotnet-restore.md) ([see note](#dotnet-restore-note)) command to restore the dependencies specified in your project.</span></span>
-
-1. <span data-ttu-id="f9326-176">确定是否要使用全球化固定模式。</span><span class="sxs-lookup"><span data-stu-id="f9326-176">Determine whether you want to use globalization invariant mode.</span></span>
-
-   <span data-ttu-id="f9326-177">特别是如果应用面向 Linux，则可以通过利用[全球化固定模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)来减小部署的总规模。</span><span class="sxs-lookup"><span data-stu-id="f9326-177">Particularly if your app targets Linux, you can reduce the total size of your deployment by taking advantage of [globalization invariant mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).</span></span> <span data-ttu-id="f9326-178">全球化固定模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。</span><span class="sxs-lookup"><span data-stu-id="f9326-178">Globalization invariant mode is useful for applications that are not globally aware and that can use the formatting conventions, casing conventions, and string comparison and sort order of the [invariant culture](xref:System.Globalization.CultureInfo.InvariantCulture).</span></span>
-
-   <span data-ttu-id="f9326-179">要启用固定模式，右键单击“解决方案资源管理器”中的项目（不是解决方案），然后选择“编辑 SCD.csproj”或“编辑 SCD.vbproj”。</span><span class="sxs-lookup"><span data-stu-id="f9326-179">To enable invariant mode, right-click on your project (not the solution) in **Solution Explorer**, and select **Edit SCD.csproj** or **Edit SCD.vbproj**.</span></span> <span data-ttu-id="f9326-180">然后将以下突出显示的行添加到文件中：</span><span class="sxs-lookup"><span data-stu-id="f9326-180">Then add the following highlighted lines to the file:</span></span>
-
- [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
-
-1. <span data-ttu-id="f9326-181">创建应用的调试版本。</span><span class="sxs-lookup"><span data-stu-id="f9326-181">Create a Debug build of your app.</span></span>
-
-   <span data-ttu-id="f9326-182">在命令行中，使用 [dotnet 生成](../tools/dotnet-build.md)命令。</span><span class="sxs-lookup"><span data-stu-id="f9326-182">From the command line, use the [dotnet build](../tools/dotnet-build.md) command.</span></span>
-
-1. <span data-ttu-id="f9326-183">调试并测试程序后，为应用的每个目标平台创建要与应用一起部署的文件。</span><span class="sxs-lookup"><span data-stu-id="f9326-183">After you've debugged and tested the program, create the files to be deployed with your app for each platform that it targets.</span></span>
-
-   <span data-ttu-id="f9326-184">同时对两个目标平台使用 `dotnet publish` 命令，如下所示：</span><span class="sxs-lookup"><span data-stu-id="f9326-184">Use the `dotnet publish` command for both target platforms as follows:</span></span>
-
-      ```console
-      dotnet publish -c Release -r win10-x64
-      dotnet publish -c Release -r osx.10.11-x64
-      ```
-
-   <span data-ttu-id="f9326-185">这将为每个目标平台创建一个应用的发行版（而不是调试版）。</span><span class="sxs-lookup"><span data-stu-id="f9326-185">This creates a Release (rather than a Debug) version of your app for each target platform.</span></span> <span data-ttu-id="f9326-186">生成的文件位于名为“发布”的子目录中，该子目录位于项目的 .\bin\Release\netcoreapp2.1\<runtime_identifier> 子目录的子目录中。</span><span class="sxs-lookup"><span data-stu-id="f9326-186">The resulting files are placed in a subdirectory named *publish* that's in a subdirectory of your project's *.\bin\Release\netcoreapp2.1\<runtime_identifier>* subdirectory.</span></span> <span data-ttu-id="f9326-187">请注意，每个子目录中都包含完整的启动应用所需的文件集（既有应用文件，也有所有 .NET Core 文件）。</span><span class="sxs-lookup"><span data-stu-id="f9326-187">Note that each subdirectory contains the complete set of files (both your app files and all .NET Core files) needed to launch your app.</span></span>
-
-<span data-ttu-id="f9326-188">与应用程序的文件一起，发布过程将发出包含应用调试信息的程序数据库 (.pdb) 文件。</span><span class="sxs-lookup"><span data-stu-id="f9326-188">Along with your application's files, the publishing process emits a program database (.pdb) file that contains debugging information about your app.</span></span> <span data-ttu-id="f9326-189">该文件主要用于调试异常。</span><span class="sxs-lookup"><span data-stu-id="f9326-189">The file is useful primarily for debugging exceptions.</span></span> <span data-ttu-id="f9326-190">可以选择不使用应用程序文件打包该文件。</span><span class="sxs-lookup"><span data-stu-id="f9326-190">You can choose not to package it with your application's files.</span></span> <span data-ttu-id="f9326-191">但是，如果要调试应用的发布版本，则应保存该文件。</span><span class="sxs-lookup"><span data-stu-id="f9326-191">You should, however, save it in the event that you want to debug the Release build of your app.</span></span>
-
-<span data-ttu-id="f9326-192">可按照任何喜欢的方式部署已发布的文件。</span><span class="sxs-lookup"><span data-stu-id="f9326-192">Deploy the published files in any way you like.</span></span> <span data-ttu-id="f9326-193">例如，可以使用简单的 `copy` 命令将其打包为 Zip 文件，或者使用选择的安装包进行部署。</span><span class="sxs-lookup"><span data-stu-id="f9326-193">For example, you can package them in a Zip file, use a simple `copy` command, or deploy them with any installation package of your choice.</span></span>
-
-<span data-ttu-id="f9326-194">下面是此项目完整的 csproj 文件。</span><span class="sxs-lookup"><span data-stu-id="f9326-194">The following is the complete *csproj* file for this project.</span></span>
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-</Project>
+```dotnetcli
+mkdir apptest1
+cd apptest1
+dotnet new console
+dotnet add package Figgle
 ```
 
-## <a name="self-contained-deployment-with-third-party-dependencies"></a><span data-ttu-id="f9326-195">包含第三方依赖项的独立部署</span><span class="sxs-lookup"><span data-stu-id="f9326-195">Self-contained deployment with third-party dependencies</span></span>
+<span data-ttu-id="e2945-154">控制台模板生成的 `Program.cs` 或 `Program.vb` 文件需要进行以下更改：</span><span class="sxs-lookup"><span data-stu-id="e2945-154">The `Program.cs` or `Program.vb` file that is generated by the console template needs to be changed to the following:</span></span>
 
-<span data-ttu-id="f9326-196">部署包含一个或多个第三方依赖项的独立部署包括添加依赖项。</span><span class="sxs-lookup"><span data-stu-id="f9326-196">Deploying a self-contained deployment with one or more third-party dependencies involves adding the dependencies.</span></span> <span data-ttu-id="f9326-197">在运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）命令之前，还需执行额外两个步骤：</span><span class="sxs-lookup"><span data-stu-id="f9326-197">Two additional steps are required before you can run the `dotnet restore` ([see note](#dotnet-restore-note)) command:</span></span>
+```csharp
+using System;
 
-1. <span data-ttu-id="f9326-198">将对任何第三方库的引用添加到 csproj 文件的 `<ItemGroup>` 部分。</span><span class="sxs-lookup"><span data-stu-id="f9326-198">Add references to any third-party libraries to the `<ItemGroup>` section of your *csproj* file.</span></span> <span data-ttu-id="f9326-199">以下 `<ItemGroup>` 部分使用 Json.NET 作为第三方库。</span><span class="sxs-lookup"><span data-stu-id="f9326-199">The following `<ItemGroup>` section uses Json.NET as a third-party library.</span></span>
+namespace apptest1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"));
+        }
+    }
+}
+```
+```vb
+Imports System
 
-    ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-    ```
-
-1. <span data-ttu-id="f9326-200">如果尚未安装，请将包含第三方依赖项的 NuGet 包下载到系统。</span><span class="sxs-lookup"><span data-stu-id="f9326-200">If you haven't already, download the NuGet package containing the third-party dependency to your system.</span></span> <span data-ttu-id="f9326-201">若要使依赖项对应用适用，请在添加依赖项后执行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）命令。</span><span class="sxs-lookup"><span data-stu-id="f9326-201">To make the dependency available to your app, execute the `dotnet restore` ([see note](#dotnet-restore-note)) command after adding the dependency.</span></span> <span data-ttu-id="f9326-202">因为依赖项在发布时已从本地 NuGet 缓存解析出来，因此它一定适用于你的系统。</span><span class="sxs-lookup"><span data-stu-id="f9326-202">Because the dependency is resolved out of the local NuGet cache at publish time, it must be available on your system.</span></span>
-
-<span data-ttu-id="f9326-203">下面是此项目的完整 csproj 文件：</span><span class="sxs-lookup"><span data-stu-id="f9326-203">The following is the complete *csproj* file for this project:</span></span>
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-  </ItemGroup>
-</Project>
+Module Program
+    Sub Main(args As String())
+        Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"))
+    End Sub
+End Module
 ```
 
-<span data-ttu-id="f9326-204">部署应用程序时，应用中使用的任何第三方依赖项也包含在应用程序文件中。</span><span class="sxs-lookup"><span data-stu-id="f9326-204">When you deploy your application, any third-party dependencies used in your app are also contained with your application files.</span></span> <span data-ttu-id="f9326-205">运行应用的系统上不需要第三方库。</span><span class="sxs-lookup"><span data-stu-id="f9326-205">Third-party libraries aren't required on the system on which the app is running.</span></span>
+<span data-ttu-id="e2945-155">运行应用 ([`dotnet run`][dotnet-run]) 时，将显示以下输出：</span><span class="sxs-lookup"><span data-stu-id="e2945-155">When you run the app ([`dotnet run`][dotnet-run]), the following output is displayed:</span></span>
 
-<span data-ttu-id="f9326-206">请注意，可以只将具有一个第三方库的独立部署部署到该库支持的平台。</span><span class="sxs-lookup"><span data-stu-id="f9326-206">Note that you can only deploy a self-contained deployment with a third-party library to platforms supported by that library.</span></span> <span data-ttu-id="f9326-207">这与依赖框架的部署中具有本机依赖项和第三方依赖项相似，其中的本机依赖项必须与部署应用的平台兼容。</span><span class="sxs-lookup"><span data-stu-id="f9326-207">This is similar to having third-party dependencies with native dependencies in a framework-dependent deployment, where the native dependencies must be compatible with the platform to which the app is deployed.</span></span>
+```terminal
+  _   _      _ _         __        __         _     _ _
+ | | | | ___| | | ___    \ \      / /__  _ __| | __| | |
+ | |_| |/ _ \ | |/ _ \    \ \ /\ / / _ \| '__| |/ _` | |
+ |  _  |  __/ | | (_) |    \ V  V / (_) | |  | | (_| |_|
+ |_| |_|\___|_|_|\___( )    \_/\_/ \___/|_|  |_|\__,_(_)
+                     |/
+```
 
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="framework-dependent-deployment"></a><span data-ttu-id="e2945-156">依赖框架的部署</span><span class="sxs-lookup"><span data-stu-id="e2945-156">Framework-dependent deployment</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f9326-208">请参阅</span><span class="sxs-lookup"><span data-stu-id="f9326-208">See also</span></span>
+<span data-ttu-id="e2945-157">对于 .NET Core SDK 2.x CLI，依赖于框架的部署 (FDD) 是基本 `dotnet publish` 命令的默认模式。</span><span class="sxs-lookup"><span data-stu-id="e2945-157">For the .NET Core SDK 2.x CLI, framework-dependent deployment (FDD) is the default mode for the basic `dotnet publish` command.</span></span>
 
-* [<span data-ttu-id="f9326-209">.NET Core 应用程序部署</span><span class="sxs-lookup"><span data-stu-id="f9326-209">.NET Core Application Deployment</span></span>](index.md)
-* [<span data-ttu-id="f9326-210">.NET Core 运行时标识符 (RID) 目录</span><span class="sxs-lookup"><span data-stu-id="f9326-210">.NET Core Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
+<span data-ttu-id="e2945-158">将应用作为 FDD 发布时，会在 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` 文件夹中创建 `<PROJECT-NAME>.dll` 文件。</span><span class="sxs-lookup"><span data-stu-id="e2945-158">When you publish your app as an FDD, a `<PROJECT-NAME>.dll` file is created in the `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` folder.</span></span> <span data-ttu-id="e2945-159">若要运行应用，请导航到输出文件夹并使用 `dotnet <PROJECT-NAME>.dll` 命令。</span><span class="sxs-lookup"><span data-stu-id="e2945-159">To run your app, navigate to the output folder and use the `dotnet <PROJECT-NAME>.dll` command.</span></span>
+
+<span data-ttu-id="e2945-160">应用配置为面向 .NET Core 的特定版本。</span><span class="sxs-lookup"><span data-stu-id="e2945-160">Your app is configured to target a specific version of .NET Core.</span></span> <span data-ttu-id="e2945-161">目标 .NET Core 运行时需要位于要运行应用程序的计算机上。</span><span class="sxs-lookup"><span data-stu-id="e2945-161">That targeted .NET Core runtime is required to be on the machine where you want to run your app.</span></span> <span data-ttu-id="e2945-162">例如，如果应用面向 .NET Core 2.2，则运行应用的任何计算机都必须已安装 .NET Core 2.2 运行时。</span><span class="sxs-lookup"><span data-stu-id="e2945-162">For example, if your app targets .NET Core 2.2, any machine that your app runs on must have the .NET Core 2.2 runtime installed.</span></span> <span data-ttu-id="e2945-163">如[发布基础知识](#publishing-basics)部分中所述，可以编辑项目文件为更改默认目标框架或面向多个框架。</span><span class="sxs-lookup"><span data-stu-id="e2945-163">As stated in the [Publishing basics](#publishing-basics) section, you can edit your project file to change the default target framework or to target more than one framework.</span></span>
+
+<span data-ttu-id="e2945-164">发布 FDD 会创建一个应用，该应用会自动前滚到运行该应用的系统上可用的最新 .NET Core 安全修补程序。</span><span class="sxs-lookup"><span data-stu-id="e2945-164">Publishing an FDD creates an app that automatically rolls-forward to the latest .NET Core security patch available on the system that runs the app.</span></span> <span data-ttu-id="e2945-165">有关编译时的版本绑定的详细信息，请参阅[选择要使用的 .NET Core 版本](../versions/selection.md#framework-dependent-apps-roll-forward)。</span><span class="sxs-lookup"><span data-stu-id="e2945-165">For more information on version binding at compile time, see [Select the .NET Core version to use](../versions/selection.md#framework-dependent-apps-roll-forward).</span></span>
+
+## <a name="framework-dependent-executable"></a><span data-ttu-id="e2945-166">依赖于框架的可执行文件</span><span class="sxs-lookup"><span data-stu-id="e2945-166">Framework-dependent executable</span></span>
+
+<span data-ttu-id="e2945-167">对于 .NET Core SDK 3.x CLI，依赖于框架的可执行文件 (FDE) 是基本 `dotnet publish` 命令的默认模式。</span><span class="sxs-lookup"><span data-stu-id="e2945-167">For the .NET Core SDK 3.x CLI, framework-dependent executable (FDE) the default mode for the basic `dotnet publish` command.</span></span> <span data-ttu-id="e2945-168">只要想要面向当前操作系统，就不需要指定任何其他参数。</span><span class="sxs-lookup"><span data-stu-id="e2945-168">You don't need to specify any other parameters as long as you want to target the current operating system.</span></span>
+
+<span data-ttu-id="e2945-169">在此模式下，将创建特定于平台的可执行主机来托管跨平台应用。</span><span class="sxs-lookup"><span data-stu-id="e2945-169">In this mode, a platform-specific executable host is created to host your cross-platform app.</span></span> <span data-ttu-id="e2945-170">此模式类似于 FDD，因为 FDD 需要 `dotnet` 命令形式的主机。</span><span class="sxs-lookup"><span data-stu-id="e2945-170">This mode is similar to FDD as FDD requires a host in the form of the `dotnet` command.</span></span> <span data-ttu-id="e2945-171">每个平台的主机可执行文件名各不相同，其文件名类似于 `<PROJECT-FILE>.exe`。</span><span class="sxs-lookup"><span data-stu-id="e2945-171">The host executable filename varies per platform, and is named something similar to `<PROJECT-FILE>.exe`.</span></span> <span data-ttu-id="e2945-172">可以直接运行此可执行文件，而不是调用 `dotnet <PROJECT-FILE>.dll`，这仍然是运行应用的可接受方式。</span><span class="sxs-lookup"><span data-stu-id="e2945-172">You can run this executable directly instead of calling `dotnet <PROJECT-FILE>.dll` which is still an acceptable way to run the app.</span></span>
+
+<span data-ttu-id="e2945-173">应用配置为面向 .NET Core 的特定版本。</span><span class="sxs-lookup"><span data-stu-id="e2945-173">Your app is configured to target a specific version of .NET Core.</span></span> <span data-ttu-id="e2945-174">目标 .NET Core 运行时需要位于要运行应用程序的计算机上。</span><span class="sxs-lookup"><span data-stu-id="e2945-174">That targeted .NET Core runtime is required to be on the machine where you want to run your app.</span></span> <span data-ttu-id="e2945-175">例如，如果应用面向 .NET Core 2.2，则运行应用的任何计算机都必须已安装 .NET Core 2.2 运行时。</span><span class="sxs-lookup"><span data-stu-id="e2945-175">For example, if your app targets .NET Core 2.2, any machine that your app runs on must have the .NET Core 2.2 runtime installed.</span></span> <span data-ttu-id="e2945-176">如[发布基础知识](#publishing-basics)部分中所述，可以编辑项目文件为更改默认目标框架或面向多个框架。</span><span class="sxs-lookup"><span data-stu-id="e2945-176">As stated in the [Publishing basics](#publishing-basics) section, you can edit your project file to change the default target framework or to target more than one framework.</span></span>
+
+<span data-ttu-id="e2945-177">发布 FDE 会创建一个应用，该应用会自动前滚到运行该应用的系统上可用的最新 .NET Core 安全修补程序。</span><span class="sxs-lookup"><span data-stu-id="e2945-177">Publishing an FDE creates an app that automatically rolls-forward to the latest .NET Core security patch available on the system that runs the app.</span></span> <span data-ttu-id="e2945-178">有关编译时的版本绑定的详细信息，请参阅[选择要使用的 .NET Core 版本](../versions/selection.md#framework-dependent-apps-roll-forward)。</span><span class="sxs-lookup"><span data-stu-id="e2945-178">For more information on version binding at compile time, see [Select the .NET Core version to use](../versions/selection.md#framework-dependent-apps-roll-forward).</span></span>
+
+<span data-ttu-id="e2945-179">必须通过 `dotnet publish` 命令使用以下开关来发布 FDE（面向当前平台时，.NET Core 3.x 除外）：</span><span class="sxs-lookup"><span data-stu-id="e2945-179">You must (except for .NET Core 3.x when you target the current platform) use the following switches with the `dotnet publish` command to publish an FDE:</span></span>
+
+- `-r <RID>`  
+  <span data-ttu-id="e2945-180">此开关使用标识符 (RID) 来指定目标平台。</span><span class="sxs-lookup"><span data-stu-id="e2945-180">This switch uses an identifier (RID) to specify the target platform.</span></span> <span data-ttu-id="e2945-181">有关运行时标识符的详细信息，请参阅[运行时标识符 (RID) 目录](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="e2945-181">For a list of runtime identifiers, see [Runtime Identifier (RID) catalog](../rid-catalog.md).</span></span>
+
+- `--self-contained false`  
+  <span data-ttu-id="e2945-182">此开关告知 .NET Core SDK 创建可执行文件作为 FDE。</span><span class="sxs-lookup"><span data-stu-id="e2945-182">This switch tells the .NET Core SDK to create an executable as an FDE.</span></span>
+
+<span data-ttu-id="e2945-183">每次使用 `-r` 开关时，输出文件路都将更改为：`./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`</span><span class="sxs-lookup"><span data-stu-id="e2945-183">Whenever you use the `-r` switch, the output folder path changes to: `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`</span></span>
+
+<span data-ttu-id="e2945-184">如果使用[示例应用](#sample-app)，请运行 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`。</span><span class="sxs-lookup"><span data-stu-id="e2945-184">If you use the [example app](#sample-app), run `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`.</span></span> <span data-ttu-id="e2945-185">此命令将创建以下可执行文件：`./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`</span><span class="sxs-lookup"><span data-stu-id="e2945-185">This command creates the following executable: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`</span></span>
+
+> [!Note]
+> <span data-ttu-id="e2945-186">可以通过启用全局固定模式来降低部署的总大小。</span><span class="sxs-lookup"><span data-stu-id="e2945-186">You can reduce the total size of your deployment by enabling **globalization invariant mode**.</span></span> <span data-ttu-id="e2945-187">此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。</span><span class="sxs-lookup"><span data-stu-id="e2945-187">This mode is useful for applications that are not globally aware and that can use the formatting conventions, casing conventions, and string comparison and sort order of the [invariant culture](xref:System.Globalization.CultureInfo.InvariantCulture).</span></span> <span data-ttu-id="e2945-188">有关全局固定模式及其启用方式的详细信息，请参阅 [.NET Core 全局固定模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)</span><span class="sxs-lookup"><span data-stu-id="e2945-188">For more information about **globalization invariant mode** and how to enable it, see [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)</span></span>
+
+## <a name="self-contained-deployment"></a><span data-ttu-id="e2945-189">独立部署</span><span class="sxs-lookup"><span data-stu-id="e2945-189">Self-contained deployment</span></span>
+
+<span data-ttu-id="e2945-190">发布独立部署 (SCD) 时，.NET Core SDK 创建特定于平台的可执行文件。</span><span class="sxs-lookup"><span data-stu-id="e2945-190">When you publish a self-contained deployment (SCD), the .NET Core SDK creates a platform-specific executable.</span></span> <span data-ttu-id="e2945-191">发布 SCD 包括运行应用所需的所有 .NET Core 文件，但它不包含 [.NET Core 的本机依赖项](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)。</span><span class="sxs-lookup"><span data-stu-id="e2945-191">Publishing an SCD includes all  required .NET Core files to run your app but it doesn't include the [native dependencies of .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md).</span></span> <span data-ttu-id="e2945-192">这些依赖项必须在应用运行前存在于系统中。</span><span class="sxs-lookup"><span data-stu-id="e2945-192">These dependencies must be present on the system before the app runs.</span></span> 
+
+<span data-ttu-id="e2945-193">发布 SCD 会创建一个不会前滚到最新可用 .NET Core 安全修补程序的应用。</span><span class="sxs-lookup"><span data-stu-id="e2945-193">Publishing an SCD creates an app that doesn't roll-forward to the latest available .NET Core security patch.</span></span> <span data-ttu-id="e2945-194">有关编译时的版本绑定的详细信息，请参阅[选择要使用的 .NET Core 版本](../versions/selection.md#self-contained-deployments-include-the-selected-runtime)。</span><span class="sxs-lookup"><span data-stu-id="e2945-194">For more information on version binding at compile time, see [Select the .NET Core version to use](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).</span></span>
+
+<span data-ttu-id="e2945-195">必须通过 `dotnet publish` 命令使用以下开关来发布 SCD：</span><span class="sxs-lookup"><span data-stu-id="e2945-195">You must use the following switches with the `dotnet publish` command to publish an SCD:</span></span>
+
+- `-r <RID>`  
+  <span data-ttu-id="e2945-196">此开关使用标识符 (RID) 来指定目标平台。</span><span class="sxs-lookup"><span data-stu-id="e2945-196">This switch uses an identifier (RID) to specify the target platform.</span></span> <span data-ttu-id="e2945-197">有关运行时标识符的详细信息，请参阅[运行时标识符 (RID) 目录](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="e2945-197">For a list of runtime identifiers, see [Runtime Identifier (RID) catalog](../rid-catalog.md).</span></span>
+
+- `--self-contained true`  
+  <span data-ttu-id="e2945-198">此开关告知 .NET Core SDK 创建可执行文件作为 SCD。</span><span class="sxs-lookup"><span data-stu-id="e2945-198">This switch tells the .NET Core SDK to create an executable as an SCD.</span></span>
+
+> [!Note]
+> <span data-ttu-id="e2945-199">可以通过启用全局固定模式来降低部署的总大小。</span><span class="sxs-lookup"><span data-stu-id="e2945-199">You can reduce the total size of your deployment by enabling **globalization invariant mode**.</span></span> <span data-ttu-id="e2945-200">此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。</span><span class="sxs-lookup"><span data-stu-id="e2945-200">This mode is useful for applications that are not globally aware and that can use the formatting conventions, casing conventions, and string comparison and sort order of the [invariant culture](xref:System.Globalization.CultureInfo.InvariantCulture).</span></span> <span data-ttu-id="e2945-201">有关全局固定模式及其启用方式的详细信息，请参阅 [.NET Core 全局固定模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)</span><span class="sxs-lookup"><span data-stu-id="e2945-201">For more information about **globalization invariant mode** and how to enable it, see [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)</span></span>
+
+
+## <a name="see-also"></a><span data-ttu-id="e2945-202">请参阅</span><span class="sxs-lookup"><span data-stu-id="e2945-202">See also</span></span>
+
+- [<span data-ttu-id="e2945-203">.NET Core 应用程序部署概述</span><span class="sxs-lookup"><span data-stu-id="e2945-203">.NET Core Application Deployment Overview</span></span>](index.md)
+- [<span data-ttu-id="e2945-204">.NET Core 运行时标识符 (RID) 目录</span><span class="sxs-lookup"><span data-stu-id="e2945-204">.NET Core Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
+
+[dotnet-publish]: ../tools/dotnet-publish.md
+[dotnet-run]: ../tools/dotnet-run.md

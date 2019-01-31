@@ -9,64 +9,64 @@ helpviewer_keywords:
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be4935d74affa227386aa6c63dad13e7e2f7d3dd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 052773c615bcc4ddb5b735ae8164d44ed70bd935
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513485"
 ---
-# <a name="event-based-asynchronous-pattern-eap"></a><span data-ttu-id="566e7-102">基于事件的异步模式 (EAP)</span><span class="sxs-lookup"><span data-stu-id="566e7-102">Event-based Asynchronous Pattern (EAP)</span></span>
+# <a name="event-based-asynchronous-pattern-eap"></a><span data-ttu-id="c615c-102">基于事件的异步模式 (EAP)</span><span class="sxs-lookup"><span data-stu-id="c615c-102">Event-based Asynchronous Pattern (EAP)</span></span>
 
-<span data-ttu-id="566e7-103">有多种方式可向客户端代码公开异步功能。</span><span class="sxs-lookup"><span data-stu-id="566e7-103">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="566e7-104">基于事件的异步模式规定了类呈现异步行为的一种方式。</span><span class="sxs-lookup"><span data-stu-id="566e7-104">The Event-based Asynchronous Pattern prescribes one way for classes to present asynchronous behavior.</span></span>  
+<span data-ttu-id="c615c-103">有多种方式可向客户端代码公开异步功能。</span><span class="sxs-lookup"><span data-stu-id="c615c-103">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="c615c-104">基于事件的异步模式规定了类呈现异步行为的一种方式。</span><span class="sxs-lookup"><span data-stu-id="c615c-104">The Event-based Asynchronous Pattern prescribes one way for classes to present asynchronous behavior.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="566e7-105">从 .NET Framework 4 开始，任务并行库为异步和并行编程提供了一种新模型。</span><span class="sxs-lookup"><span data-stu-id="566e7-105">Starting with the .NET Framework 4, the Task Parallel Library provides a new model for asynchronous and parallel programming.</span></span> <span data-ttu-id="566e7-106">有关详细信息，请参阅 [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md) 和 [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md)。</span><span class="sxs-lookup"><span data-stu-id="566e7-106">For more information, see [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md) and [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md).</span></span>
+> <span data-ttu-id="c615c-105">从 .NET Framework 4 开始，任务并行库为异步和并行编程提供了一种新模型。</span><span class="sxs-lookup"><span data-stu-id="c615c-105">Starting with the .NET Framework 4, the Task Parallel Library provides a new model for asynchronous and parallel programming.</span></span> <span data-ttu-id="c615c-106">有关详细信息，请参阅 [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md) 和 [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md)。</span><span class="sxs-lookup"><span data-stu-id="c615c-106">For more information, see [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md) and [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md).</span></span>
   
-## <a name="in-this-section"></a><span data-ttu-id="566e7-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="566e7-107">In This Section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="c615c-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="c615c-107">In This Section</span></span>
 
- [<span data-ttu-id="566e7-108">基于事件的异步模式概述</span><span class="sxs-lookup"><span data-stu-id="566e7-108">Event-based Asynchronous Pattern Overview</span></span>](event-based-asynchronous-pattern-overview.md)  
- <span data-ttu-id="566e7-109">描述基于事件的异步模式如何在隐藏多线程设计中固有的许多复杂问题的同时，提供多线程应用程序的优点。</span><span class="sxs-lookup"><span data-stu-id="566e7-109">Describes how the Event-based Asynchronous Pattern makes available the advantages of multithreaded applications while hiding many of the complex issues inherent in multithreaded design.</span></span>  
+ [<span data-ttu-id="c615c-108">基于事件的异步模式概述</span><span class="sxs-lookup"><span data-stu-id="c615c-108">Event-based Asynchronous Pattern Overview</span></span>](event-based-asynchronous-pattern-overview.md)  
+ <span data-ttu-id="c615c-109">描述基于事件的异步模式如何在隐藏多线程设计中固有的许多复杂问题的同时，提供多线程应用程序的优点。</span><span class="sxs-lookup"><span data-stu-id="c615c-109">Describes how the Event-based Asynchronous Pattern makes available the advantages of multithreaded applications while hiding many of the complex issues inherent in multithreaded design.</span></span>  
   
- [<span data-ttu-id="566e7-110">实现基于事件的异步模式</span><span class="sxs-lookup"><span data-stu-id="566e7-110">Implementing the Event-based Asynchronous Pattern</span></span>](implementing-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="566e7-111">描述打包具有异步功能的类的标准方式。</span><span class="sxs-lookup"><span data-stu-id="566e7-111">Describes the standardized way to package a class that has asynchronous features.</span></span>  
+ [<span data-ttu-id="c615c-110">实现基于事件的异步模式</span><span class="sxs-lookup"><span data-stu-id="c615c-110">Implementing the Event-based Asynchronous Pattern</span></span>](implementing-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="c615c-111">描述打包具有异步功能的类的标准方式。</span><span class="sxs-lookup"><span data-stu-id="c615c-111">Describes the standardized way to package a class that has asynchronous features.</span></span>  
   
- [<span data-ttu-id="566e7-112">实现基于事件的异步模式的最佳做法</span><span class="sxs-lookup"><span data-stu-id="566e7-112">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="566e7-113">描述根据基于事件的异步模式公开异步功能的需求。</span><span class="sxs-lookup"><span data-stu-id="566e7-113">Describes the requirements for exposing asynchronous features according to the Event-based Asynchronous Pattern.</span></span>  
+ [<span data-ttu-id="c615c-112">实现基于事件的异步模式的最佳做法</span><span class="sxs-lookup"><span data-stu-id="c615c-112">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="c615c-113">描述根据基于事件的异步模式公开异步功能的需求。</span><span class="sxs-lookup"><span data-stu-id="c615c-113">Describes the requirements for exposing asynchronous features according to the Event-based Asynchronous Pattern.</span></span>  
   
- [<span data-ttu-id="566e7-114">确定何时实现基于事件的异步模式</span><span class="sxs-lookup"><span data-stu-id="566e7-114">Deciding When to Implement the Event-based Asynchronous Pattern</span></span>](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="566e7-115">描述如何确定何时应选择实现基于事件的异步模式而不是由[异步编程模型 (APM)](asynchronous-programming-model-apm.md) 表示的 <xref:System.IAsyncResult> 模式</span><span class="sxs-lookup"><span data-stu-id="566e7-115">Describes how to determine when you should choose to implement the Event-based Asynchronous Pattern instead of the <xref:System.IAsyncResult> pattern represented by the [Asynchronous Programming Model (APM)](asynchronous-programming-model-apm.md)</span></span>
+ [<span data-ttu-id="c615c-114">确定何时实现基于事件的异步模式</span><span class="sxs-lookup"><span data-stu-id="c615c-114">Deciding When to Implement the Event-based Asynchronous Pattern</span></span>](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="c615c-115">描述如何确定何时应选择实现基于事件的异步模式而不是由[异步编程模型 (APM)](asynchronous-programming-model-apm.md) 表示的 <xref:System.IAsyncResult> 模式</span><span class="sxs-lookup"><span data-stu-id="c615c-115">Describes how to determine when you should choose to implement the Event-based Asynchronous Pattern instead of the <xref:System.IAsyncResult> pattern represented by the [Asynchronous Programming Model (APM)](asynchronous-programming-model-apm.md)</span></span>
   
- [<span data-ttu-id="566e7-116">如何：实现支持基于事件的异步模式的组件</span><span class="sxs-lookup"><span data-stu-id="566e7-116">How to: Implement a Component That Supports the Event-based Asynchronous Pattern</span></span>](component-that-supports-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="566e7-117">说明如何创建实现基于事件的异步模式的组件。</span><span class="sxs-lookup"><span data-stu-id="566e7-117">Describes how to create a component that implements the Event-based Asynchronous Pattern.</span></span> <span data-ttu-id="566e7-118">它是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空间的帮助器类实现的，这可确保该组件在任何应用程序模型下均可正常工作。</span><span class="sxs-lookup"><span data-stu-id="566e7-118">It is implemented using helper classes from the <xref:System.ComponentModel?displayProperty=nameWithType> namespace, which ensures that the component works correctly under any application model.</span></span>  
+ [<span data-ttu-id="c615c-116">如何：实现支持基于事件的异步模式的组件</span><span class="sxs-lookup"><span data-stu-id="c615c-116">How to: Implement a Component That Supports the Event-based Asynchronous Pattern</span></span>](component-that-supports-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="c615c-117">说明如何创建实现基于事件的异步模式的组件。</span><span class="sxs-lookup"><span data-stu-id="c615c-117">Describes how to create a component that implements the Event-based Asynchronous Pattern.</span></span> <span data-ttu-id="c615c-118">它是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空间的帮助器类实现的，这可确保该组件在任何应用程序模型下均可正常工作。</span><span class="sxs-lookup"><span data-stu-id="c615c-118">It is implemented using helper classes from the <xref:System.ComponentModel?displayProperty=nameWithType> namespace, which ensures that the component works correctly under any application model.</span></span>  
 
- [<span data-ttu-id="566e7-119">如何：实现基于事件的异步模式的客户端</span><span class="sxs-lookup"><span data-stu-id="566e7-119">How to: Implement a Client of the Event-based Asynchronous Pattern</span></span>](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="566e7-120">说明如何创建使用实现基于事件的异步模式的组件的客户端。</span><span class="sxs-lookup"><span data-stu-id="566e7-120">Describes how to create a client that uses a component that implements the Event-based Asynchronous Pattern.</span></span>
+ [<span data-ttu-id="c615c-119">如何：实现基于事件的异步模式的客户端</span><span class="sxs-lookup"><span data-stu-id="c615c-119">How to: Implement a Client of the Event-based Asynchronous Pattern</span></span>](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="c615c-120">说明如何创建使用实现基于事件的异步模式的组件的客户端。</span><span class="sxs-lookup"><span data-stu-id="c615c-120">Describes how to create a client that uses a component that implements the Event-based Asynchronous Pattern.</span></span>
   
- [<span data-ttu-id="566e7-121">如何：使用支持基于事件的异步模式的组件</span><span class="sxs-lookup"><span data-stu-id="566e7-121">How to: Use Components That Support the Event-based Asynchronous Pattern</span></span>](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="566e7-122">描述如何使用支持基于事件的异步模式的组件。</span><span class="sxs-lookup"><span data-stu-id="566e7-122">Describes how to use a component that supports the Event-based Asynchronous Pattern.</span></span>  
+ [<span data-ttu-id="c615c-121">如何：使用支持基于事件的异步模式的组件</span><span class="sxs-lookup"><span data-stu-id="c615c-121">How to: Use Components That Support the Event-based Asynchronous Pattern</span></span>](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="c615c-122">描述如何使用支持基于事件的异步模式的组件。</span><span class="sxs-lookup"><span data-stu-id="c615c-122">Describes how to use a component that supports the Event-based Asynchronous Pattern.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="566e7-123">参考</span><span class="sxs-lookup"><span data-stu-id="566e7-123">Reference</span></span>
+## <a name="reference"></a><span data-ttu-id="c615c-123">参考</span><span class="sxs-lookup"><span data-stu-id="c615c-123">Reference</span></span>
 
  <xref:System.ComponentModel.AsyncOperation>  
- <span data-ttu-id="566e7-124">描述 <xref:System.ComponentModel.AsyncOperation> 类并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="566e7-124">Describes the <xref:System.ComponentModel.AsyncOperation> class and has links to all its members.</span></span>  
+ <span data-ttu-id="c615c-124">描述 <xref:System.ComponentModel.AsyncOperation> 类并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="c615c-124">Describes the <xref:System.ComponentModel.AsyncOperation> class and has links to all its members.</span></span>  
   
  <xref:System.ComponentModel.AsyncOperationManager>  
- <span data-ttu-id="566e7-125">描述 <xref:System.ComponentModel.AsyncOperationManager> 类并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="566e7-125">Describes the <xref:System.ComponentModel.AsyncOperationManager> class and has links to all its members.</span></span>  
+ <span data-ttu-id="c615c-125">描述 <xref:System.ComponentModel.AsyncOperationManager> 类并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="c615c-125">Describes the <xref:System.ComponentModel.AsyncOperationManager> class and has links to all its members.</span></span>  
   
  <xref:System.ComponentModel.BackgroundWorker>  
- <span data-ttu-id="566e7-126">描述 <xref:System.ComponentModel.BackgroundWorker> 组件并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="566e7-126">Describes the <xref:System.ComponentModel.BackgroundWorker> component and has links to all its members.</span></span>  
+ <span data-ttu-id="c615c-126">描述 <xref:System.ComponentModel.BackgroundWorker> 组件并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="c615c-126">Describes the <xref:System.ComponentModel.BackgroundWorker> component and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="566e7-127">相关章节</span><span class="sxs-lookup"><span data-stu-id="566e7-127">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="c615c-127">相关章节</span><span class="sxs-lookup"><span data-stu-id="c615c-127">Related Sections</span></span>
 
- [<span data-ttu-id="566e7-128">任务并行库 (TPL)</span><span class="sxs-lookup"><span data-stu-id="566e7-128">Task Parallel Library (TPL)</span></span>](../parallel-programming/task-parallel-library-tpl.md)  
- <span data-ttu-id="566e7-129">描述用于异步和并行操作的编程模型。</span><span class="sxs-lookup"><span data-stu-id="566e7-129">Describes a programming model for asynchronous and parallel operations.</span></span>  
+ [<span data-ttu-id="c615c-128">任务并行库 (TPL)</span><span class="sxs-lookup"><span data-stu-id="c615c-128">Task Parallel Library (TPL)</span></span>](../parallel-programming/task-parallel-library-tpl.md)  
+ <span data-ttu-id="c615c-129">描述用于异步和并行操作的编程模型。</span><span class="sxs-lookup"><span data-stu-id="c615c-129">Describes a programming model for asynchronous and parallel operations.</span></span>  
   
- [<span data-ttu-id="566e7-130">线程处理</span><span class="sxs-lookup"><span data-stu-id="566e7-130">Threading</span></span>](../../../docs/standard/threading/index.md)  
- <span data-ttu-id="566e7-131">描述 .NET 中的多线程处理功能。</span><span class="sxs-lookup"><span data-stu-id="566e7-131">Describes multithreading features in .NET.</span></span>  
+ [<span data-ttu-id="c615c-130">线程处理</span><span class="sxs-lookup"><span data-stu-id="c615c-130">Threading</span></span>](../../../docs/standard/threading/index.md)  
+ <span data-ttu-id="c615c-131">描述 .NET 中的多线程处理功能。</span><span class="sxs-lookup"><span data-stu-id="c615c-131">Describes multithreading features in .NET.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="566e7-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="566e7-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c615c-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="c615c-132">See also</span></span>
 
-- [<span data-ttu-id="566e7-133">托管线程处理的最佳做法</span><span class="sxs-lookup"><span data-stu-id="566e7-133">Managed Threading Best Practices</span></span>](../threading/managed-threading-best-practices.md)  
-- [<span data-ttu-id="566e7-134">事件</span><span class="sxs-lookup"><span data-stu-id="566e7-134">Events</span></span>](../events/index.md)  
-- [<span data-ttu-id="566e7-135">异步编程设计模式</span><span class="sxs-lookup"><span data-stu-id="566e7-135">Asynchronous Programming Design Patterns</span></span>](index.md)
+- [<span data-ttu-id="c615c-133">托管线程处理的最佳做法</span><span class="sxs-lookup"><span data-stu-id="c615c-133">Managed Threading Best Practices</span></span>](../threading/managed-threading-best-practices.md)
+- [<span data-ttu-id="c615c-134">事件</span><span class="sxs-lookup"><span data-stu-id="c615c-134">Events</span></span>](../events/index.md)
+- [<span data-ttu-id="c615c-135">异步编程设计模式</span><span class="sxs-lookup"><span data-stu-id="c615c-135">Asynchronous Programming Design Patterns</span></span>](index.md)

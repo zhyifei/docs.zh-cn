@@ -3,23 +3,23 @@ title: 从方法中返回查询
 description: 如何返回查询。
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: 1c5fa534f3f39f8201d93b986e687d85bb303736
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fe2192a3edb683d7284ffae3b66cb9f70e8854b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519094"
 ---
-# <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a><span data-ttu-id="db438-103">如何：从方法中返回查询（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="db438-103">How to: Return a Query from a Method (C# Programming Guide)</span></span>
-<span data-ttu-id="db438-104">此示例演示如何以返回值和 `out` 参数形式从方法中返回查询。</span><span class="sxs-lookup"><span data-stu-id="db438-104">This example shows how to return a query from a method as the return value and as an `out` parameter.</span></span>  
+# <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a><span data-ttu-id="1be96-103">如何：从方法中返回查询（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="1be96-103">How to: Return a Query from a Method (C# Programming Guide)</span></span>
+<span data-ttu-id="1be96-104">此示例演示如何以返回值和 `out` 参数形式从方法中返回查询。</span><span class="sxs-lookup"><span data-stu-id="1be96-104">This example shows how to return a query from a method as the return value and as an `out` parameter.</span></span>  
   
- <span data-ttu-id="db438-105">查询对象可编写，这意味着你可以从方法中返回查询。</span><span class="sxs-lookup"><span data-stu-id="db438-105">Query objects are composable, meaning that you can return a query from a method.</span></span> <span data-ttu-id="db438-106">表示查询的对象不会存储生成的集合，而会根据需要存储生成结果的步骤。</span><span class="sxs-lookup"><span data-stu-id="db438-106">Objects that represent queries do not store the resulting collection, but rather the steps to produce the results when needed.</span></span> <span data-ttu-id="db438-107">从方法中返回查询对象的好处是可以进一步编写或修改这些对象。</span><span class="sxs-lookup"><span data-stu-id="db438-107">The advantage of returning query objects from methods is that they can be further composed or modified.</span></span> <span data-ttu-id="db438-108">因此，返回查询的方法的任何返回值或 `out` 输出参数也必须具有该类型。</span><span class="sxs-lookup"><span data-stu-id="db438-108">Therefore any return value or `out` parameter of a method that returns a query must also have that type.</span></span> <span data-ttu-id="db438-109">如果某个方法可将查询具体化为具体的 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array> 类型，则认为该方法在返回查询结果（而不是查询本身）。</span><span class="sxs-lookup"><span data-stu-id="db438-109">If a method materializes a query into a concrete <xref:System.Collections.Generic.List%601> or <xref:System.Array> type, it is considered to be returning the query results instead of the query itself.</span></span> <span data-ttu-id="db438-110">仍然能够编写或修改从方法中返回的查询变量。</span><span class="sxs-lookup"><span data-stu-id="db438-110">A query variable that is returned from a method can still be composed or modified.</span></span>  
+ <span data-ttu-id="1be96-105">查询对象可编写，这意味着你可以从方法中返回查询。</span><span class="sxs-lookup"><span data-stu-id="1be96-105">Query objects are composable, meaning that you can return a query from a method.</span></span> <span data-ttu-id="1be96-106">表示查询的对象不会存储生成的集合，而会根据需要存储生成结果的步骤。</span><span class="sxs-lookup"><span data-stu-id="1be96-106">Objects that represent queries do not store the resulting collection, but rather the steps to produce the results when needed.</span></span> <span data-ttu-id="1be96-107">从方法中返回查询对象的好处是可以进一步编写或修改这些对象。</span><span class="sxs-lookup"><span data-stu-id="1be96-107">The advantage of returning query objects from methods is that they can be further composed or modified.</span></span> <span data-ttu-id="1be96-108">因此，返回查询的方法的任何返回值或 `out` 输出参数也必须具有该类型。</span><span class="sxs-lookup"><span data-stu-id="1be96-108">Therefore any return value or `out` parameter of a method that returns a query must also have that type.</span></span> <span data-ttu-id="1be96-109">如果某个方法可将查询具体化为具体的 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array> 类型，则认为该方法在返回查询结果（而不是查询本身）。</span><span class="sxs-lookup"><span data-stu-id="1be96-109">If a method materializes a query into a concrete <xref:System.Collections.Generic.List%601> or <xref:System.Array> type, it is considered to be returning the query results instead of the query itself.</span></span> <span data-ttu-id="1be96-110">仍然能够编写或修改从方法中返回的查询变量。</span><span class="sxs-lookup"><span data-stu-id="1be96-110">A query variable that is returned from a method can still be composed or modified.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="db438-111">示例</span><span class="sxs-lookup"><span data-stu-id="db438-111">Example</span></span>  
- <span data-ttu-id="db438-112">在下面的示例中，第一个方法以返回值的形式返回查询，第二个方法以 `out` 参数的形式返回查询。</span><span class="sxs-lookup"><span data-stu-id="db438-112">In the following example, the first method returns a query as a return value, and the second method returns a query as an `out` parameter.</span></span> <span data-ttu-id="db438-113">请注意，在这两种情况下，返回的都是查询，而不是查询结果。</span><span class="sxs-lookup"><span data-stu-id="db438-113">Note that in both cases it is a query that is  returned, not query results.</span></span>  
+## <a name="example"></a><span data-ttu-id="1be96-111">示例</span><span class="sxs-lookup"><span data-stu-id="1be96-111">Example</span></span>  
+ <span data-ttu-id="1be96-112">在下面的示例中，第一个方法以返回值的形式返回查询，第二个方法以 `out` 参数的形式返回查询。</span><span class="sxs-lookup"><span data-stu-id="1be96-112">In the following example, the first method returns a query as a return value, and the second method returns a query as an `out` parameter.</span></span> <span data-ttu-id="1be96-113">请注意，在这两种情况下，返回的都是查询，而不是查询结果。</span><span class="sxs-lookup"><span data-stu-id="1be96-113">Note that in both cases it is a query that is  returned, not query results.</span></span>  
   
  [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
-## <a name="see-also"></a><span data-ttu-id="db438-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="db438-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1be96-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="1be96-114">See also</span></span>
 
-- [<span data-ttu-id="db438-115">语言集成查询 (LINQ)</span><span class="sxs-lookup"><span data-stu-id="db438-115">Language Integrated Query (LINQ)</span></span>](index.md)
+- [<span data-ttu-id="1be96-115">语言集成查询 (LINQ)</span><span class="sxs-lookup"><span data-stu-id="1be96-115">Language Integrated Query (LINQ)</span></span>](index.md)

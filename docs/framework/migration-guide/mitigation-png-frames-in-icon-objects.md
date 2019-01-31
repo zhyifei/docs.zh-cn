@@ -1,38 +1,38 @@
 ---
-title: 缓解操作：图标对象中的 PNG 帧
+title: 缓解：图标对象中的 PNG 帧
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3ee5cc03f684acf103c96ecd14387f119bf0bdc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d67b2fac0c1d55bfa5594e90998d9613de4ad271
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659782"
 ---
-# <a name="mitigation-png-frames-in-icon-objects"></a><span data-ttu-id="3ab82-102">缓解操作：图标对象中的 PNG 帧</span><span class="sxs-lookup"><span data-stu-id="3ab82-102">Mitigation: PNG Frames in Icon Objects</span></span>
-<span data-ttu-id="3ab82-103">从 .NET Framework 4.6 开始， <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 方法成功将带 PNG 帧的图标转换为 <xref:System.Drawing.Bitmap> 对象。</span><span class="sxs-lookup"><span data-stu-id="3ab82-103">Starting with the .NET Framework 4.6, the <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> method successfully converts icons with PNG frames into <xref:System.Drawing.Bitmap> objects.</span></span>  
+# <a name="mitigation-png-frames-in-icon-objects"></a><span data-ttu-id="d2487-102">缓解：图标对象中的 PNG 帧</span><span class="sxs-lookup"><span data-stu-id="d2487-102">Mitigation: PNG Frames in Icon Objects</span></span>
+<span data-ttu-id="d2487-103">从 .NET Framework 4.6 开始， <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 方法成功将带 PNG 帧的图标转换为 <xref:System.Drawing.Bitmap> 对象。</span><span class="sxs-lookup"><span data-stu-id="d2487-103">Starting with the .NET Framework 4.6, the <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> method successfully converts icons with PNG frames into <xref:System.Drawing.Bitmap> objects.</span></span>  
   
- <span data-ttu-id="3ab82-104">在面向 .NET Framework 4.5.2 和更早版本的应用中， <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 方法在 <xref:System.ArgumentOutOfRangeException> 对象具有 PNG 帧时引发 <xref:System.Drawing.Icon> 异常。</span><span class="sxs-lookup"><span data-stu-id="3ab82-104">In apps that target the .NET Framework 4.5.2 and earlier versions, the <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> method throws an <xref:System.ArgumentOutOfRangeException> exception if the <xref:System.Drawing.Icon> object has PNG frames.</span></span>  
+ <span data-ttu-id="d2487-104">在面向 .NET Framework 4.5.2 和更早版本的应用中， <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 方法在 <xref:System.ArgumentOutOfRangeException> 对象具有 PNG 帧时引发 <xref:System.Drawing.Icon> 异常。</span><span class="sxs-lookup"><span data-stu-id="d2487-104">In apps that target the .NET Framework 4.5.2 and earlier versions, the <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> method throws an <xref:System.ArgumentOutOfRangeException> exception if the <xref:System.Drawing.Icon> object has PNG frames.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="3ab82-105">影响</span><span class="sxs-lookup"><span data-stu-id="3ab82-105">Impact</span></span>  
- <span data-ttu-id="3ab82-106">此更改会影响以下应用：重新编译为面向 .NET Framework 4.6 的应用，以及对在 <xref:System.ArgumentOutOfRangeException> 对象具有 PNG 帧时引发的 <xref:System.Drawing.Icon> 实施特殊处理的应用。</span><span class="sxs-lookup"><span data-stu-id="3ab82-106">This change affects apps that are recompiled to target the .NET Framework 4.6 and that implement special handling for the <xref:System.ArgumentOutOfRangeException> that is thrown when an <xref:System.Drawing.Icon> object has PNG frames.</span></span> <span data-ttu-id="3ab82-107">在.NET Framework 4.6 下运行时，转换成功，不再引发 <xref:System.ArgumentOutOfRangeException> ，因此不再调用异常处理程序。</span><span class="sxs-lookup"><span data-stu-id="3ab82-107">When running under the .NET Framework 4.6, the conversion is successful, an <xref:System.ArgumentOutOfRangeException> is no longer thrown, and therefore the exception handler is no longer invoked.</span></span>  
+## <a name="impact"></a><span data-ttu-id="d2487-105">影响</span><span class="sxs-lookup"><span data-stu-id="d2487-105">Impact</span></span>  
+ <span data-ttu-id="d2487-106">此更改会影响以下应用：重新编译为面向 .NET Framework 4.6 的应用，以及对在 <xref:System.ArgumentOutOfRangeException> 对象具有 PNG 帧时引发的 <xref:System.Drawing.Icon> 实施特殊处理的应用。</span><span class="sxs-lookup"><span data-stu-id="d2487-106">This change affects apps that are recompiled to target the .NET Framework 4.6 and that implement special handling for the <xref:System.ArgumentOutOfRangeException> that is thrown when an <xref:System.Drawing.Icon> object has PNG frames.</span></span> <span data-ttu-id="d2487-107">在.NET Framework 4.6 下运行时，转换成功，不再引发 <xref:System.ArgumentOutOfRangeException> ，因此不再调用异常处理程序。</span><span class="sxs-lookup"><span data-stu-id="d2487-107">When running under the .NET Framework 4.6, the conversion is successful, an <xref:System.ArgumentOutOfRangeException> is no longer thrown, and therefore the exception handler is no longer invoked.</span></span>  
   
-### <a name="mitigation"></a><span data-ttu-id="3ab82-108">缓解</span><span class="sxs-lookup"><span data-stu-id="3ab82-108">Mitigation</span></span>  
- <span data-ttu-id="3ab82-109">如果不需要此行为，可以在 app.config 文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的元素，从而保留旧行为：</span><span class="sxs-lookup"><span data-stu-id="3ab82-109">If this behavior is undesirable, you can retain the previous behavior by adding the following element to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of your app.config file:</span></span>  
+### <a name="mitigation"></a><span data-ttu-id="d2487-108">缓解</span><span class="sxs-lookup"><span data-stu-id="d2487-108">Mitigation</span></span>  
+ <span data-ttu-id="d2487-109">如果不需要此行为，可以在 app.config 文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的元素，从而保留旧行为：</span><span class="sxs-lookup"><span data-stu-id="d2487-109">If this behavior is undesirable, you can retain the previous behavior by adding the following element to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of your app.config file:</span></span>  
   
 ```xml  
 <AppContextSwitchOverrides   
       value="Switch.System.Drawing.DontSupportPngFramesInIcons=true" />  
 ```  
   
- <span data-ttu-id="3ab82-110">如果 app.config 文件中已包含 `AppContextSwitchOverrides` 元素，新值应与 `value` 特性合并，如下所示：</span><span class="sxs-lookup"><span data-stu-id="3ab82-110">If the app.config file already contains the `AppContextSwitchOverrides` element, the new value should be merged with the `value` attribute like this:</span></span>  
+ <span data-ttu-id="d2487-110">如果 app.config 文件中已包含 `AppContextSwitchOverrides` 元素，新值应与 `value` 特性合并，如下所示：</span><span class="sxs-lookup"><span data-stu-id="d2487-110">If the app.config file already contains the `AppContextSwitchOverrides` element, the new value should be merged with the `value` attribute like this:</span></span>  
   
 ```xml  
 <AppContextSwitchOverrides   
       value="Switch.System.Drawing.DontSupportPngFramesInIcons=true;<previous key>=<previous value>" />  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3ab82-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="3ab82-111">See Also</span></span>  
- [<span data-ttu-id="3ab82-112">重定目标更改</span><span class="sxs-lookup"><span data-stu-id="3ab82-112">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a><span data-ttu-id="d2487-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="d2487-111">See also</span></span>
+- [<span data-ttu-id="d2487-112">重定目标更改</span><span class="sxs-lookup"><span data-stu-id="d2487-112">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
