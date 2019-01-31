@@ -16,23 +16,23 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54511561"
 ---
 # <a name="how-to-find-datatemplate-generated-elements"></a>如何：查找由 DataTemplate 生成的元素
-此示例演示如何查找生成的元素<xref:System.Windows.DataTemplate>。  
+此示例演示如何查找由 <xref:System.Windows.DataTemplate> 生成的元素。  
   
 ## <a name="example"></a>示例  
- 在此示例中，没有<xref:System.Windows.Controls.ListBox>绑定到一些[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据：  
+ 在此示例中，有一个 <xref:System.Windows.Controls.ListBox> 已绑定到一些 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据：    
   
  [!code-xaml[FindGeneratedItems#LB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml#lb)]  
   
- <xref:System.Windows.Controls.ListBox>使用以下<xref:System.Windows.DataTemplate>:  
+ <xref:System.Windows.Controls.ListBox> 使用以下 <xref:System.Windows.DataTemplate>:  
   
  [!code-xaml[FindGeneratedItems#DT](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml#dt)]  
   
- 如果你想要检索<xref:System.Windows.Controls.TextBlock>元素生成的<xref:System.Windows.DataTemplate>具有特定<xref:System.Windows.Controls.ListBoxItem>，您需要先获取<xref:System.Windows.Controls.ListBoxItem>，找到<xref:System.Windows.Controls.ContentPresenter>在其中<xref:System.Windows.Controls.ListBoxItem>，然后调用<xref:System.Windows.FrameworkTemplate.FindName%2A>上<xref:System.Windows.DataTemplate>上的设置<xref:System.Windows.Controls.ContentPresenter>。 下面的示例演示如何执行这些步骤。 出于演示目的，此示例将创建一个消息框，显示的文本内容的<xref:System.Windows.DataTemplate>-生成文本块。  
+ 如果想要检索由特定 <xref:System.Windows.Controls.ListBoxItem> 的 <xref:System.Windows.DataTemplate> 生成的 <xref:System.Windows.Controls.TextBlock> 元素，需要先获取 <xref:System.Windows.Controls.ListBoxItem>，在该 <xref:System.Windows.Controls.ListBoxItem> 中查找 <xref:System.Windows.Controls.ContentPresenter>，然后在该 <xref:System.Windows.Controls.ContentPresenter> 设置的 <xref:System.Windows.DataTemplate> 上调用 <xref:System.Windows.FrameworkTemplate.FindName%2A> 。以下示例演示如何执行这些步骤。出于演示目的，此示例会创建一个消息框，显示 <xref:System.Windows.DataTemplate> 生成的文本块的文本内容。。  
   
  [!code-csharp[FindGeneratedItems#DTFindElement](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml.cs#dtfindelement)]
  [!code-vb[FindGeneratedItems#DTFindElement](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#dtfindelement)]  
   
- 以下是实现`FindVisualChild`，使用<xref:System.Windows.Media.VisualTreeHelper>方法：  
+ 以下是 `FindVisualChild` 的实现，使用了 <xref:System.Windows.Media.VisualTreeHelper> 方法：  
   
  [!code-csharp[FindGeneratedItems#FVC](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml.cs#fvc)]
  [!code-vb[FindGeneratedItems#FVC](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#fvc)]  
