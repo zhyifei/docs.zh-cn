@@ -14,15 +14,15 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54509297"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>如何：使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据
-此示例演示如何将绑定到[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]数据使用<xref:System.Windows.Data.XmlDataProvider>。  
+此示例演示如何通过 <xref:System.Windows.Data.XmlDataProvider> 绑定到 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 数据。  
   
- 与<xref:System.Windows.Data.XmlDataProvider>，则基础可以通过在应用程序中的数据绑定访问的数据可以是任何树[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]节点。 换而言之，<xref:System.Windows.Data.XmlDataProvider>提供了方便地使用的任意树[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]用作绑定源的节点。  
+ 使用 <xref:System.Windows.Data.XmlDataProvider> 时，可以在应用程序中通过数据绑定访问的底层数据可以是任何 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 节点树。 换言之，可以通过 <xref:System.Windows.Data.XmlDataProvider> 很方便地将任何 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 节点树用作绑定源。  
   
 ## <a name="example"></a>示例  
- 在以下示例中，嵌入数据作为直接[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]*数据岛*内<xref:System.Windows.FrameworkElement.Resources%2A>部分。 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据岛必须包装在 `<x:XData>` 标记中，并始终具有一个单一根节点，在本示例中根节点为 *Inventory*。  
+ 在以下示例中，数据作为 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据岛直接嵌入 <xref:System.Windows.FrameworkElement.Resources%2A> 节中。 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据岛必须包装在 `<x:XData>` 标记中，并且始终有一个根节点，在本示例中根节点为 *Inventory*。  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据的根节点具有一个将 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间设置为空字符串的 **xmlns** 属性。 将 XPath 查询应用到 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页中内联的数据岛时，需要此属性。 在本例内联[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，因此数据岛，它继承<xref:System.Windows>命名空间。 因此，您需要设置命名空间为空，以防止 XPath 查询正在由限定<xref:System.Windows>命名空间，而误导查询。  
+>  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据的根节点有一个将 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 命名空间设置为空字符串的 **xmlns** 属性。 将 XPath 查询应用到 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页中内联的数据岛时，需要此属性。 在本内联示例中，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 继承 <xref:System.Windows> 命名空间，数据岛也是如此。 因此，需要将命名空间设置为空，以防止 XPath 查询被限制在 <xref:System.Windows> 命名空间，从而误导查询。  
   
  [!code-xaml[XMLDataSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
