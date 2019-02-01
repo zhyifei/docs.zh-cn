@@ -20,7 +20,7 @@ ms.locfileid: "54508426"
 此示例演示如何从对象中清除绑定。  
   
 ## <a name="example"></a>示例  
- 若要从对象中某一个属性清除绑定，可以调用 <xref:System.Windows.Data.BindingOperations.ClearBinding%2A>，如以下示例所示。以下示例将从 mytext（<xref:System.Windows.Controls.TextBlock> 对象）的 <xref:System.Windows.Controls.TextBlock.TextProperty> 删除绑定。  
+ 若要从对象中某一个属性清除绑定，可以调用 <xref:System.Windows.Data.BindingOperations.ClearBinding%2A>，如以下示例所示。 以下示例将从 mytext（<xref:System.Windows.Controls.TextBlock> 对象）的 <xref:System.Windows.Controls.TextBlock.TextProperty> 删除绑定。  
   
  [!code-csharp[CodeOnlyBinding#ClearBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#clearbinding)]
  [!code-vb[CodeOnlyBinding#ClearBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#clearbinding)]  
