@@ -3,12 +3,12 @@ title: 类和对象 - C# 简介教程
 description: 创建首个 C# 程序，并探索面向对象的概念
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 6ce0c86a4b746b8ea2db82899a82734a68e46957
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 6b4c135b7adf96de3a234cde02485a1e84fc9fd3
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066060"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204777"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>使用类和对象探索面向对象的编程
 
@@ -156,14 +156,14 @@ using System.Collections.Generic;
 ```csharp
 account.MakeWithdrawal(500, DateTime.Now, "Rent payment");
 Console.WriteLine(account.Balance);
-account.MakeDeposit(100, DateTime.Now, "friend paid me back");
+account.MakeDeposit(100, DateTime.Now, "Friend paid me back");
 Console.WriteLine(account.Balance);
 ```
 
 接下来，尝试创建初始余额为负数的帐户，测试能否捕获到错误条件：
 
 ```csharp
-// Test that the initial balances must be positive:
+// Test that the initial balances must be positive.
 try
 {
     var invalidAccount = new BankAccount("invalid", -55);
@@ -178,7 +178,7 @@ catch (ArgumentOutOfRangeException e)
 使用 [`try` 和 `catch` 语句](../../language-reference/keywords/try-catch.md)，标记可能会引发异常的代码块，并捕获预期错误。 可以使用相同的技术，测试代码能否在取款后的余额为负数时引发异常：
 
 ```csharp
-// Test for a negative balance
+// Test for a negative balance:
 try
 {
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");

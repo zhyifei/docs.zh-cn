@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 3a615bd1db3742787a5fb41ea5b309dd72746e43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53908a21e573b7ac7d8347ebfe7f11202612fae1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492472"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675096"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>C# 程序的通用结构（C# 编程指南）
 C# 程序可由一个或多个文件组成。 每个文件均可包含零个或多个命名空间。 一个命名空间除了可包含其他命名空间外,还可包含类、结构、接口、枚举、委托等类型。 下面是包含所有这些元素的 C# 程序主干。  
@@ -39,4 +39,3 @@ C# 程序可由一个或多个文件组成。 每个文件均可包含零个或�
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [在 C# 程序内部](../../../csharp/programming-guide/inside-a-program/index.md)
 - [C# 参考](../../../csharp/language-reference/index.md)
-- [C# 示例应用程序](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066397"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282030"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe（.NET Framework 命令行调试程序）
 .NET Framework 命令行调试器可以帮助工具供应商和应用程序开发人员查找并修复面向 .NET Framework 公共语言运行时的程序中的 Bug。 此工具使用运行时调试 API 提供调试服务。 可以使用 MDbg.exe 来仅调试托管代码；不支持调试非托管代码。  
@@ -103,8 +103,6 @@ mdbg>
  `mdbg>` 提示符指示你处于调试器中。  
   
  处于调试器中之后，请使用上一部分所述的命令和参数。  
-  
-## <a name="examples"></a>示例  
   
 ## <a name="see-also"></a>请参阅
 - [工具](../../../docs/framework/tools/index.md)

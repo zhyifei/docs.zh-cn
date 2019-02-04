@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b346da9174d77fbc6a861a8b12f2cc5035b6c291
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517612"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479693"
 ---
 # <a name="data-structures-for-parallel-programming"></a>用于并行编程的数据结构
 .NET Framework 版本 4 引入了几种对并行编程非常有用的新类型，包括一组并发回收类、轻型同步基元和迟缓初始化类型。 可以将这些类型与任何多线程应用代码（包括任务并行库和 PLINQ）结合使用。  
@@ -22,7 +22,7 @@ ms.locfileid: "54517612"
   
  下表列出了新引入的并发回收类：  
   
-|类型|说明|  
+|类型|说明​​|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|为实现 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> 的线程安全集合提供阻塞和限制功能。 如果没有槽可用或回收已满，阻止制作者线程。 如果回收为空，阻止使用者线程。 此类型还支持使用者和制作者执行非阻止访问。 可以将 <xref:System.Collections.Concurrent.BlockingCollection%601> 用作基类或后备存储，以便为支持 <xref:System.Collections.Generic.IEnumerable%601> 的任何回收类提供阻止和绑定。|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|提供可缩放的添加和获取操作的线程安全包实现。|  
@@ -37,11 +37,11 @@ ms.locfileid: "54517612"
   
  下表列出了新引入的同步类型：  
   
-|类型|说明|  
+|类型|说明​​|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|通过让每个任务可以在某一点指示自己已到达，并一直阻止到部分或全部任务已到达，让多个线程可以并行处理算法。 有关详细信息，请参阅 [Barrier](../../../docs/standard/threading/barrier.md)。|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|通过提供简单的回收机制，简化分支和联接方案。 有关详细信息，请参阅 [CountdownEvent](../../../docs/standard/threading/countdownevent.md)。|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|类似于 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 的同步基元。 虽然 <xref:System.Threading.ManualResetEventSlim> 是轻型基元，但只能用于进程内通信。 有关详细信息，请参阅 [ManualResetEvent 和 ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)。|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|类似于 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 的同步基元。 虽然 <xref:System.Threading.ManualResetEventSlim> 是轻型基元，但只能用于进程内通信。|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|限制可同时访问资源或资源池的线程数的同步基元。 有关详细信息，请参阅 [Semaphore 和 SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)。|  
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|互斥锁基元，导致尝试获取锁的线程先在循环中等待或旋转一段时间，再生成量程。 在应缩短锁等待时间的情况下，<xref:System.Threading.SpinLock> 的性能优于其他形式的锁定。 有关详细信息，请参阅 [SpinLock](../../../docs/standard/threading/spinlock.md)。|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|小的轻型类型，它会旋转一段指定的时间，并最终将线程置于等待状态（如果超出旋转计数的话）。  有关详细信息，请参阅 [SpinWait](../../../docs/standard/threading/spinwait.md)。|  
@@ -57,7 +57,7 @@ ms.locfileid: "54517612"
   
  下表列出了迟缓初始化类型：  
   
-|类型|说明|  
+|类型|说明​​|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|提供线程安全的轻型迟缓初始化。|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|每线程提供迟缓初始化值，其中每线程迟缓调用初始化函数。|  

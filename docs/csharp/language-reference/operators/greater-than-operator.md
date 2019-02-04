@@ -1,5 +1,5 @@
 ---
-title: '&gt; 运算符 - C# 参考'
+title: '> 运算符 - C# 参考'
 ms.custom: seodec18
 ms.date: 12/18/2018
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - '> operator [C#]'
 - greater than operator (>) [C#]
 ms.assetid: 26d3cb69-9c0b-4cc5-858b-5be1abd6659d
-ms.openlocfilehash: 0c9d414d159b5e2f1faa24e9bd5f073d1ca874a4
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 3b036c491d9663bf4ab0971d84a0a8d58d902ee6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655967"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287204"
 ---
-# <a name="gt-operator-c-reference"></a>&gt; 运算符（C# 参考）
+# <a name="-operator-c-reference"></a>> 运算符（C# 参考）
 
 如果第一操作数大于第二操作数，“大于”关系运算符 `>` 返回 `true`，否则返回 `false`。 所有数值和枚举类型都支持 `>` 运算符。 对于相同[枚举](../keywords/enum.md)类型的操作数，基础整数类型的相应值会进行比较。
 

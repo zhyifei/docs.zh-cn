@@ -2,12 +2,12 @@
 title: 集合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 1f73081cacbc08fdaaca3cbc57dfe731eddab7ee
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ddbbc60c497b324bdeb2614149569d5de5f4c114
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084115"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675408"
 ---
 # <a name="collections-c"></a>集合 (C#)
 对于许多应用程序，你会想要创建和管理相关对象的组。 有两种方法对对象进行分组：通过创建对象的数组，以及通过创建对象的集合。  
@@ -193,7 +193,7 @@ public class Galaxy
   
  下表列出了 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的一些常用类：  
 
-|类|说明| 
+|类|说明​​| 
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|表示基于键进行组织的键/值对的集合。|  
 |<xref:System.Collections.Generic.List%601>|表示可按索引访问的对象的列表。 提供用于对列表进行搜索、排序和修改的方法。|  
@@ -219,7 +219,7 @@ public class Galaxy
   
  下表列出了 `System.Collections` 命名空间中的一些常用类：  
   
-|类|说明|  
+|类|说明​​|  
 |---|---|  
 |<xref:System.Collections.ArrayList>|表示对象的数组，这些对象的大小会根据需要动态增加。|  
 |<xref:System.Collections.Hashtable>|表示根据键的哈希代码进行组织的键/值对的集合。|  
@@ -583,7 +583,6 @@ private static IEnumerable<int> EvenSequence(
 - [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [并行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [集合和数据结构](../../../standard/collections/index.md)
-- [创建和操作集合](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
 - [选择集合类](../../../standard/collections/selecting-a-collection-class.md)
 - [集合内的比较和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [何时使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)
