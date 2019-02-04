@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: d96be73fc63856e317b129c1fdd8c381c9df6c07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 529b7094ad36861cacc4009ea8faf152f056c20e
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627260"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066215"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 数据提供程序
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序用于连接到数据库、执行命令和检索结果。 这些结果将被直接处理，放置在 <xref:System.Data.DataSet> 中以便根据需要向用户公开、与多个源中的数据组合，或在层之间进行远程处理。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序是轻量的，它在数据源和代码之间创建最小的分层，并在不降低功能性的情况下提高性能。  
@@ -151,8 +151,8 @@ using System.Data.OracleClient;
 |--------------|-----------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server 的数据提供程序|建议使用 Microsoft SQL Server 的中间层应用程序。<br /><br /> 建议使用 Microsoft 数据库引擎 (MSDE) 或 SQL Server 的单层应用程序。<br /><br /> 建议为 SQL Server (SQLOLEDB) 与 OLE DB 访问接口使用[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]OLE DB 数据提供程序。|  
 |用于 OLE DB 的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序|对于 SQL Server，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]而不是此提供程序建议使用 SQL Server 的数据提供程序。<br /><br /> 建议用于使用 Microsoft Access 数据库的单层应用程序。 不建议将 Access 数据库用于中间层应用程序。|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ODBC 数据提供程序|建议用于使用 ODBC 数据源的中间层应用程序和单层应用程序。|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ' Oracle 数据提供程序|建议用于使用 Oracle 数据源的中间层应用程序和单层应用程序。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 用于 ODBC 的数据提供程序|建议用于使用 ODBC 数据源的中间层应用程序和单层应用程序。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 用于 Oracle 的数据提供程序|建议用于使用 Oracle 数据源的中间层应用程序和单层应用程序。|  
   
 ## <a name="entityclient-provider"></a>EntityClient 提供程序  
  EntityClient 提供程序可用来基于实体数据模型 (EDM) 访问数据。 与其他 .NET Framework 数据提供程序不同，该提供程序不直接与数据源进行交互， 而是使用实体 SQL 与基础数据提供程序进行通信。 有关详细信息，请参阅 [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527)。  

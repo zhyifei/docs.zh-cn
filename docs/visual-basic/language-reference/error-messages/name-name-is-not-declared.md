@@ -1,5 +1,5 @@
 ---
-title: 名称&#39;&lt;名称&gt;&#39;未声明
+title: 名称“<name>”未声明
 ms.date: 10/10/2018
 f1_keywords:
 - bc30451
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-ms.openlocfilehash: e52b93980cfc2d162d35b86bd93ce9eeb9875c9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3aadc49f91021409123550ba2712f1acf5b99d83
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574815"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260121"
 ---
-# <a name="name-39ltnamegt39-is-not-declared"></a>名称&#39;&lt;名称&gt;&#39;未声明
+# <a name="name-name-is-not-declared"></a>名称\<名称 > 未声明
 语句引用的编程元素，但编译器找不到具有相同名称的元素。  
   
  **错误 ID:** BC30451  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669310"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065851"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>如何：调用采用无符号的类型 (Visual Basic 中) 的 Windows 函数
 如果您正在使用类、 模块或结构，它具有无符号的整数类型的成员，可以访问这些成员与 Visual Basic。  
@@ -32,7 +32,7 @@ ms.locfileid: "54669310"
   
 3.  要调用若要查找的名称和值的常量，它使用的 Windows 函数，请参阅文档。 其中许多 WinUser.h 文件中定义。  
   
-4.  声明在代码中的必要常量。 许多 Windows 常量是 32 位无符号的值，并应声明这些`As``UInteger`。  
+4.  声明在代码中的必要常量。 许多 Windows 常量是 32 位无符号的值，并应声明这些`As UInteger`。  
   
 5.  以正常方式调用函数。 下面的示例调用 Windows 函数`MessageBox`，其将无符号的整数自变量。  
   

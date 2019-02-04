@@ -1,5 +1,5 @@
 ---
-title: Lambda 表达式不是有效的第一个表达式中&#39;Select Case&#39;语句
+title: Lambda 表达式在“Select Case”语句的第一个表达式中无效
 ms.date: 07/20/2015
 f1_keywords:
 - bc36635
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: afefa821f9695dbbfe2a96aee5afd3171ae5b1db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d56515093020a4c987d132491957ce6db9e21683
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700216"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287789"
 ---
-# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>Lambda 表达式不是有效的第一个表达式中&#39;Select Case&#39;语句
+# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Lambda 表达式在“Select Case”语句的第一个表达式中无效
 不能使用 lambda 表达式中的测试表达式`Select Case`语句。 返回的函数，测试表达式的 lambda 表达式定义`Select Case`语句必须是基本数据类型。  
   
  下面的代码会导致此错误：  

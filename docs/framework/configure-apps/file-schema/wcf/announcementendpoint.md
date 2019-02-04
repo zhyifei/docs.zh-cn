@@ -1,15 +1,15 @@
 ---
-title: '&lt;announcementEndpoint&gt;'
+title: <announcementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: 8e180d53260ccf3364ab3c8d7b076f78917526d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8977a36d9eee48505a65fa52272a95665fea7972
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729874"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267087"
 ---
-# <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
+# <a name="announcementendpoint"></a>\<announcementEndpoint>
 此配置元素定义具有固定公告协定的标准终结点。 当分别打开或关闭服务时，服务可以选择通过发送一条联机和脱机公告消息来公告其可用性。 Windows Communication Foundation (WCF) 服务指定公告终结点在[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)元素，并使用 AnnouncementClient 执行公告。 客户端希望侦听来自其他服务的公告的实际充当 WCF 服务;因此，必须在该客户端配置公告终结点[\<服务 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)部分。  
   
 \<system.ServiceModel>  

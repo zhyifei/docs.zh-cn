@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 1be7184a37e98e72118065de262d1484476d1cb8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ad6b5767c349379121352930341be5b916131e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238660"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502061"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互操作性概述（C# 编程指南）
 本主题描述在 C# 托管代码和非托管代码之间实现互操作性的方法。  
@@ -60,9 +60,9 @@ ms.locfileid: "53238660"
   
 ## <a name="see-also"></a>请参阅
 
-- [Improving Interop Performance](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)（提高互操作性能）  
-- [COM 和 .NET 之间的互操作性简介](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)  
-- [Visual Basic 中的 COM 互操作简介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
-- [托管代码与非托管代码之间的封送处理](../../../../docs/framework/interop/interop-marshaling.md)  
-- [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  
+- [Improving Interop Performance](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)（提高互操作性能）
+- [COM 和 .NET 之间的互操作性简介](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
+- [Visual Basic 中的 COM 互操作简介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+- [托管代码与非托管代码之间的封送处理](../../../../docs/framework/interop/interop-marshaling.md)
+- [与非托管代码交互操作](../../../../docs/framework/interop/index.md)
 - [C# 编程指南](../../../csharp/programming-guide/index.md)

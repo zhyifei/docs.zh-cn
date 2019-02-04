@@ -1,5 +1,5 @@
 ---
-title: '&lt;nameEntry&gt;元素'
+title: <nameEntry> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a4c29db3f84570d4d5e99a1deaf8beb3145c8ea1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5f92ca2956f32382b12c9a1dec4e5d41ea4ee2a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626935"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285916"
 ---
-# <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt;元素
+# <a name="nameentry-element"></a>\<nameEntry > 元素
 将类名称映射到友好算法名称，允许一个类具有多个友好名称。  
   
  \<configuration>  

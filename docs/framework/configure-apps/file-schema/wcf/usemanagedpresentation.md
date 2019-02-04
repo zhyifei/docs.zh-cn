@@ -1,15 +1,15 @@
 ---
-title: '&lt;useManagedPresentation&gt;'
+title: <useManagedPresentation>
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
-ms.openlocfilehash: 96490421addfadd9cef6b65bddaed0aae3370d15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1134c4d5f18f60bb2986f4239a788b836fa9113e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720270"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287243"
 ---
-# <a name="ltusemanagedpresentationgt"></a>&lt;useManagedPresentation&gt;
+# <a name="usemanagedpresentation"></a>\<useManagedPresentation>
 一个绑定元素，用于与支持 WS-Trust 的 CardSpace 配置文件的 CardSpace 安全令牌服务进行通信。 此元素没有属性并且以空开关形式存在。  
   
  \<system.serviceModel>  

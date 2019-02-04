@@ -1,5 +1,5 @@
 ---
-title: '&lt;运行时&gt;元素'
+title: <runtime> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 10cc81bee24fb757e4d826eb42d4ccf2324e6dab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05a94116d3b3cc662036b2ed15e255d4f8eda2c4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659522"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285943"
 ---
-# <a name="ltruntimegt-element"></a>&lt;运行时&gt;元素
+# <a name="runtime-element"></a>\<运行时 > 元素
 提供公共语言运行时用于配置应用程序的信息。  
   
  \<configuration>  

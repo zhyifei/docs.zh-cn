@@ -1,15 +1,15 @@
 ---
-title: '&lt;transportConfigurationType&gt; 的 &lt;add&gt;'
+title: <add> 的 <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: 2a72fe8cfa78c7e6edfec9f9f6ff8f1f55eceb15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84ad745e7789fc2de8dcc23f3607b63702af05a1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656812"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263442"
 ---
-# <a name="ltaddgt-of-lttransportconfigurationtypegt"></a>&lt;transportConfigurationType&gt; 的 &lt;add&gt;
+# <a name="add-of-transportconfigurationtype"></a>\<add> of \<transportConfigurationType>
 此元素是一个键/值对，可标识特定传输的类型。  
   
  \<system.ServiceModel>  

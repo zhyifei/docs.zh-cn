@@ -1,15 +1,15 @@
 ---
-title: '&lt;peer&gt; 的 &lt;certificate&gt;'
+title: <certificate> 的 <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: 785c0a6d8f009d8ab643dcc3c90e98b95c24a8f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57f011bd0d6311c71871773ea866ef4c52513b17
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707942"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674602"
 ---
-# <a name="ltcertificategt-of-ltpeergt"></a>&lt;peer&gt; 的 &lt;certificate&gt;
+# <a name="certificate-of-peer"></a>\<证书 > 的\<对等 >
 指定对等方使用的证书。  
   
  \<system.ServiceModel>  
@@ -63,7 +63,7 @@ ms.locfileid: "54707942"
 - <xref:System.ServiceModel.Security.PeerCredential>
 - [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [对等通道消息身份验证](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
-- [对等通道自定义身份验证](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [对等通道消息身份验证](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [对等通道自定义身份验证](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
 - [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

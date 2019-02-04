@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;connectionManagement （网络设置） 的元素'
+title: connectionManagement -> <add> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 32b84412edf2d7c9943391909659dc91d8060cc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7a4cfe952a32c859a113f0903696fec3681f800
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625740"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267611"
 ---
-# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;添加&gt;connectionManagement （网络设置） 的元素
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<添加 > connectionManagement （网络设置） 的元素
 将 IP 地址或 DNS 名称添加到连接管理列表。  
   
  \<configuration>  

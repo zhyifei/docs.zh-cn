@@ -1,5 +1,5 @@
 ---
-title: '&lt;supportedRuntime&gt;元素'
+title: <supportedRuntime> 元素
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 93084b34e5795ef35e8c433f50646e5da088adfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93e69290062e1b82dddbb68f7a139763695a42fb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600513"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271767"
 ---
-# <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt;元素
+# <a name="supportedruntime-element"></a>\<supportedRuntime > 元素
 
 指定应用程序支持的公共语言运行时版本。 此元素应由用 .NET Framework 1.1 版或更高版本生成的所有应用程序使用。  
   

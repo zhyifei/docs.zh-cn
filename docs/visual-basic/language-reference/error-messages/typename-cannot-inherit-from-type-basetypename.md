@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;typename&gt; &#39;不能继承自&lt;类型&gt; &#39; &lt;b t y p&gt; &#39;扩展的基本访问权限，因此&lt;类型&gt;程序集外部的'
+title: “<typename>”将对基 <type> 的访问扩展到程序集的外部，因此无法从 <basetypename>“<type>”继承
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30910
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: 108025132bdd0fa86df5ed142aaa39c7b7e18062
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226c85f887ecc706a5cb554c2163742f10896141
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556478"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269817"
 ---
-# <a name="39lttypenamegt39-cannot-inherit-from-lttypegt-39ltbasetypenamegt39-because-it-expands-the-access-of-the-base-lttypegt-outside-the-assembly"></a>&#39;&lt;typename&gt; &#39;不能继承自&lt;类型&gt; &#39; &lt;b t y p&gt; &#39;扩展的基本访问权限，因此&lt;类型&gt;程序集外部的
+# <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>\<类型名称 > 不能继承自\<类型 >\<基类型名称 > 扩展的基本访问权限，因此\<类型 > 程序集外部的
 类或接口继承自的基类或接口但具有限制性较弱的访问级别。  
   
  例如，`Public`接口继承自`Friend`接口，或`Protected`类继承自`Private`类。 这会公开的基类或接口来访问超出了预期的级别。  

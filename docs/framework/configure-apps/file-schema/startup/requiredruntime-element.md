@@ -1,5 +1,5 @@
 ---
-title: '&lt;requiredRuntime&gt;元素'
+title: <requiredRuntime> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requiredRuntime
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: 66de3e30ce862cd317e80ea267bf22ce728aca82
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5e528a8b81fa3d9abc4f345d18f01e33f483a4a9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222124"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254725"
 ---
-# <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt;元素
+# <a name="requiredruntime-element"></a>\<requiredRuntime > 元素
 
 指定应用程序仅支持 1.0 版本的公共语言运行时。 此元素已弃用，应不再使用。 [ `supportedRuntime` ](supportedruntime-element.md)元素应改为使用。
 
-\<配置 >\<启动 > \<requiredRuntime >
+\<configuration> \<startup> \<requiredRuntime>
 
 ## <a name="syntax"></a>语法
 
@@ -43,7 +43,7 @@ safemode="true|false"/>
 
 ## <a name="safemode-attribute"></a>安全模式属性
 
-|“值”|描述|
+|值|描述|
 |-----------|-----------------|
 |`false`|在注册表中查找运行时启动代码。 这是默认值。|
 |`true`|运行时启动代码不会在注册表中查找。|
@@ -86,4 +86,4 @@ safemode="true|false"/>
 
 - [启动设置架构](index.md)
 - [配置文件架构](../index.md)
-- [如何：配置应用以支持.NET Framework 4 或更高版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [如何：将应用配置为支持 .NET Framework 4 或更高版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

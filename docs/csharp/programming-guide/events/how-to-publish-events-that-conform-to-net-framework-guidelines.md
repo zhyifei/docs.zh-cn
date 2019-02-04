@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 8269c976f161ba6ae11bee8cbef44b2f7c878e61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bdc512ae1ac7fa51dec1307a9e759e5b1f97bf53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563192"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>如何：发布符合 .NET Framework 准则的事件（C# 编程指南）
 下面的过程演示了如何将遵循标准 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 模式的事件添加到类和结构中。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库中的所有事件均基于 <xref:System.EventHandler> 委托，定义如下：  
@@ -76,7 +76,7 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Delegate>  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [事件](../../../csharp/programming-guide/events/index.md)  
+- <xref:System.Delegate>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [事件](../../../csharp/programming-guide/events/index.md)
 - [委托](../../../csharp/programming-guide/delegates/index.md)

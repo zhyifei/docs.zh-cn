@@ -4,12 +4,12 @@ description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NE
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fe6aa28b456d3a83b15dfcb3a65147e77b9d5f85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699501"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -103,11 +103,11 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 
 ## <a name="see-also"></a>请参阅
 
-* [在 ASP.NET 和 ASP.NET Core 之间进行选择](/aspnet/core/choose-aspnet-framework)
-* [面向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
-* [目标框架](frameworks.md)
-* [.NET Core 指南](../core/index.md)  
-* [从 .NET Framework 移植到 .NET Core](../core/porting/index.md)  
-* [Docker 上的 .NET Framework 指南](../framework/docker/index.md)  
-* [.NET 组件概述](components.md)  
-* [.NET 微服务 - 适用于容器化 .NET 应用程序的体系结构](microservices-architecture/index.md)
+- [在 ASP.NET 和 ASP.NET Core 之间进行选择](/aspnet/core/choose-aspnet-framework)
+- [面向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
+- [目标框架](frameworks.md)
+- [.NET Core 指南](../core/index.md)
+- [从 .NET Framework 移植到 .NET Core](../core/porting/index.md)
+- [Docker 上的 .NET Framework 指南](../framework/docker/index.md)
+- [.NET 组件概述](components.md)
+- [.NET 微服务 - 适用于容器化 .NET 应用程序的体系结构](microservices-architecture/index.md)

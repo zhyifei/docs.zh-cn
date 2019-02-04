@@ -1,20 +1,18 @@
 ---
-title: '&lt;删除&gt;元素&lt;namedCaches&gt;'
+title: <remove> 的 <namedCaches> 元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 7e183a624b95e207d34697c906cc3f278c967ae9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22d06ab1df0d5ed74073772302421a680f1665ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499758"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257014"
 ---
-# <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;删除&gt;元素&lt;namedCaches&gt;
+# <a name="remove-element-for-namedcaches"></a>\<删除 > 元素\<namedCaches >
 从内存缓存的 `namedCaches` 集合中删除一个命名的缓存条目。  
   
  \<system.runtime.caching>  

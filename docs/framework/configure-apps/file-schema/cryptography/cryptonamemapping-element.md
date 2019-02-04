@@ -1,5 +1,5 @@
 ---
-title: '&lt;cryptoNameMapping&gt;元素'
+title: <cryptoNameMapping> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ef916b0950e179f6782ce8d4d6fa380fd3804aa0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff3300f57fd4681875e2791610cc5a0d0dcba31b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577161"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281471"
 ---
-# <a name="ltcryptonamemappinggt-element"></a>&lt;cryptoNameMapping&gt;元素
+# <a name="cryptonamemapping-element"></a>\<cryptoNameMapping > 元素
 包含类到友好名称的映射。  
   
  \<configuration>  

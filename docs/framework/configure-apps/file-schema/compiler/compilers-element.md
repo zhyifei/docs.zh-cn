@@ -1,5 +1,5 @@
 ---
-title: '&lt;编译器&gt;元素'
+title: <compilers> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#compilers
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e51298e86c1b3167f822e060693d0a2ee4193b67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15beb15d7927d616cc09c7e318ef26a6627926af
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723467"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260601"
 ---
-# <a name="ltcompilersgt-element"></a>&lt;编译器&gt;元素
+# <a name="compilers-element"></a>\<编译器 > 元素
 编译器配置元素的容器；包含零个或多个 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 元素。  
   
  \<configuration>  

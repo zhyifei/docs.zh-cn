@@ -1,17 +1,17 @@
 ---
-title: '&lt;Method&gt; 元素 (.NET Native)'
+title: <Method>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdfec7ce93dd3954af03f6f4822ac00576a7e043
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 008a61a75aa96faad801e6da8bb0f8a86f65829c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562919"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288075"
 ---
-# <a name="ltmethodgt-element-net-native"></a>&lt;Method&gt; 元素 (.NET Native)
+# <a name="method-element-net-native"></a>\<方法 > 元素 (.NET Native)
 将运行时反射策略应用到一个构造函数或方法。  
   
 ## <a name="syntax"></a>语法  

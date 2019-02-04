@@ -1,5 +1,5 @@
 ---
-title: 导入中指定的 Namespace 或类型&#39; &lt;qualifiedelementname&gt; &#39;没有&#39;t 包含任何公共成员或找不到
+title: Imports“<qualifiedelementname>”中指定的命名空间或类型不包含任何公共成员，或者找不到该命名空间或类型
 ms.date: 07/20/2015
 f1_keywords:
 - bc40056
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 21c0794fb4ed6104204fba5d49e37394eff24865
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19a769b33b3b63b7f431b73841f49632e41f9e6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552133"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288270"
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>导入中指定的 Namespace 或类型&#39; &lt;qualifiedelementname&gt; &#39;没有&#39;t 包含任何公共成员或找不到
+# <a name="namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>中的导入指定的 Namespace 或类型\<qualifiedelementname > 不包含任何公共成员，或者找不到
 中的导入指定的 Namespace 或类型\<qualifiedelementname > 不包含任何公共成员，或者找不到。 请确保该命名空间或类型定义，其中包含至少一个公共成员。 请确保别名名称中不包含其他别名。  
   
  `Imports`语句指定的包含元素不能为找到或未定义任何`Public`成员。  

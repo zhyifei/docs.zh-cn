@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyBinding&gt;元素&lt;运行时&gt;'
+title: <assemblyBinding> 的 <runtime> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0060115360cd077fd1e390be916f2f8afbadd9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e75f8e0561711fea8646c9da84f1b7553b3f7553
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713988"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284396"
 ---
-# <a name="ltassemblybindinggt-element-for-ltruntimegt"></a>&lt;assemblyBinding&gt;元素&lt;运行时&gt;
+# <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding > 元素\<运行库 >
 包含有关程序集版本重定向和程序集位置的信息。  
   
  \<configuration>  

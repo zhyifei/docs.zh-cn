@@ -9,14 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 11ed84b01adf57eb526eaa1e71c6968e48c64cc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d238ceb4f96905031cb4a30f50727050381277e
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627534"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084492"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>如何：通过使用 devpath 查找程序集查找程序集
 开发人员可能想要确保它们生成的共享程序集与多个应用程序一起正常运行。 而不是不断地将在全局程序集缓存中的程序集放在开发周期中，开发人员可以创建指向程序集的生成输出目录 DEVPATH 环境变量。  

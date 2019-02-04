@@ -1,5 +1,5 @@
 ---
-title: '&lt;performanceCounters&gt;元素'
+title: <performanceCounters> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/performanceCounters
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - performanceCounters element
 - <perfomanceCounters> element
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a7b32f9cf797729aa0ca0d176b31732d06e73907
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e893b0cedcfcce2ca17d0c02c5e3e30f4221ff6f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701919"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262658"
 ---
-# <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt;元素
+# <a name="performancecounters-element"></a>\<performanceCounters > 元素
 指定由性能计数器共享的全局内存的大小。  
   
  \<configuration>  

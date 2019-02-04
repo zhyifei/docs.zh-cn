@@ -1,15 +1,15 @@
 ---
-title: '&lt;contractTypeNames&gt;'
+title: <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
-ms.openlocfilehash: 2c3f501f44d9e3c601e654041eb9d5a7de8a0a07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8f2b600b700a19cf587a6c8c4cc3f0e851edbd9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626766"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261273"
 ---
-# <a name="ltcontracttypenamesgt"></a>&lt;contractTypeNames&gt;
+# <a name="contracttypenames"></a>\<contractTypeNames>
 一个指定协定类型名称列表的配置节，这些名称是所搜索服务的协定名称以及搜索服务时通常采用的条件。 如果指定多个协定名称，则只有与全部协定都匹配的服务终结点才会进行答复。 请注意，在 Windows Communication Foundation (WCF) 终结点只能支持一个协定。  
   
  \<system.ServiceModel>  

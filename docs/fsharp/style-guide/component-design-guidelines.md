@@ -2,12 +2,12 @@
 title: F#组件设计准则
 description: 了解以进行写入的准则F#面向消费由其他调用方的组件。
 ms.date: 05/14/2018
-ms.openlocfilehash: d72bfac1de5a57d5cce86f996f144af4bc181463
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415632"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066020"
 ---
 # <a name="f-component-design-guidelines"></a>F#组件设计准则
 
@@ -708,7 +708,7 @@ let checkNonNull` argName (arg: obj) =
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>避免使用科的参数
 
-请改用.NET 调用约定``Method(arg1,arg2,…,argN)``。
+请改用.NET 调用约定`Method(arg1,arg2,…,argN)`。
 
 ```fsharp
 member this.TupledArguments(str, num) = String.replicate num str

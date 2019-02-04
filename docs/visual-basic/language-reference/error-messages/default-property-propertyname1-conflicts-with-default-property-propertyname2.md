@@ -1,5 +1,5 @@
 ---
-title: 默认属性&#39; &lt;propertyname1&gt; &#39;默认属性与冲突&#39; &lt;propertyname2&gt; &#39;在&#39; &lt;classname&gt; &#39;，因此应声明&#39;Shadows&#39;
+title: 默认属性“<propertyname1>”与“<propertyname2>”中的默认属性“<classname>”冲突，因此应声明为“Shadows”
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40007
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: 3099467fa3c5a162c13c9235fb8d55375953ba3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc75b01532ffb112622d7f9bc837490c627883b3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521421"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270371"
 ---
-# <a name="default-property-39ltpropertyname1gt39-conflicts-with-default-property-39ltpropertyname2gt39-in-39ltclassnamegt39-and-so-should-be-declared-39shadows39"></a>默认属性&#39; &lt;propertyname1&gt; &#39;默认属性与冲突&#39; &lt;propertyname2&gt; &#39;在&#39; &lt;classname&gt; &#39;，因此应声明&#39;Shadows&#39;
+# <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>默认属性\<propertyname1 > 与默认属性冲突\<propertyname2 > 中\<类名 >'，因此应声明为 Shadows
 使用与基类中定义的属性相同的名称声明属性。 在这种情况下，在此类的属性应隐藏基类属性。  
   
  此消息是一个警告。 默认假定`Shadows` 。 若要深入了解如何隐藏警告或将警告视为错误，请参阅 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;基本代码&gt;元素'
+title: <codeBase> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#codeBase
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 295b2c5dd3eb17ca9ba19e52d9f8e51cf108162d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebf7e2624cc36fb6a758afef38e2054669061dff
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683146"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269648"
 ---
-# <a name="ltcodebasegt-element"></a>&lt;基本代码&gt;元素
+# <a name="codebase-element"></a>\<b a s e > 元素
 指定公共语言运行时在哪里可以找到程序集。  
   
  \<configuration>  
@@ -47,7 +45,7 @@ href="URL of assembly"/>
   
 ## <a name="version-attribute"></a>版本属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |每个部分的版本号的有效值为 0 到 65535。|不适用。|  
   

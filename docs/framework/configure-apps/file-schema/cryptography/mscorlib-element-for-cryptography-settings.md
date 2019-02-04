@@ -1,5 +1,5 @@
 ---
-title: '&lt;mscorlib&gt;加密设置的元素'
+title: 加密设置的 <mscorlib> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 0615a68add60b02a875921b1abb3776267db1731
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84eb12916c2d1ec2d35830fae2c6ce07f1c7c664
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527583"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259609"
 ---
-# <a name="ltmscorlibgt-element-for-cryptography-settings"></a>&lt;mscorlib&gt;加密设置的元素
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > 加密设置的元素
 包含[ \<cryptographySettings > 元素](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)。  
   
  \<configuration>  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;certificate&gt; 元素'
+title: <certificate> 元素
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: d1449cc6c40ae16190bacf378df3bd60c49d060c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0cec2ad0e7747ddbc0ef566b4e8cbc7f8795b02
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538318"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675382"
 ---
-# <a name="ltcertificategt-element"></a>&lt;certificate&gt; 元素
+# <a name="certificate-element"></a>\<证书 > 元素
 指定要用于为对等客户端的消息进行签名和加密的 X.509 证书。  
   
  \<system.ServiceModel>  
@@ -81,6 +81,6 @@ ms.locfileid: "54538318"
 - <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
 - [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [对等通道消息身份验证](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
-- [对等通道自定义身份验证](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [对等通道消息身份验证](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [对等通道自定义身份验证](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

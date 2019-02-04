@@ -1,15 +1,15 @@
 ---
-title: '&lt;behaviorExtensions&gt;'
+title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: 6698da198c4e1798af4a63e72e1d7ef9e09a5d92
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3554db2ee037eceb43126968a02e826b65928a0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599018"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285895"
 ---
-# <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
+# <a name="behaviorextensions"></a>\<behaviorExtensions>
 用户可以使用行为扩展来创建用户定义的行为元素。 这些元素可与标准的 Windows Communication Foundation (WCF) 行为元素一起使用。 `behaviorExtensions` 节定义了元素，使其可用于配置中。 下面是一个典型的行为扩展示例。  
   
 ```xml  

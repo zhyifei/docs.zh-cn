@@ -1,5 +1,5 @@
 ---
-title: 二进制文件中的第一个操作数&#39;如果&#39;表达式必须是可以为 null 或为类型引用
+title: 二元“If”表达式中的第一个操作数必须是可以为 null 的类型或引用类型
 ms.date: 07/20/2015
 f1_keywords:
 - bc33107
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: 85094ba6d6a44bf2e6cc4fba7946598c286a08a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb47670e8417e903b2886887394b972d1ac138b0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668260"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284630"
 ---
-# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>二进制文件中的第一个操作数&#39;如果&#39;表达式必须是可以为 null 或为类型引用
+# <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>二元“If”表达式中的第一个操作数必须是可以为 null 的类型或引用类型
 `If`表达式可以采用两个或三个参数。 当你发送只有两个参数时，第一个参数必须是引用类型或可以为 null 的类型。 如果第一个参数的计算结果为任何值不是`Nothing`，则返回其值。 如果第一个参数的计算结果为`Nothing`，进行计算并返回第二个参数。  
   
  例如，下面的代码包含两个`If`表达式，一个带有三个参数，另一个具有两个参数。 表达式计算并返回相同的值。  

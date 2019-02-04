@@ -1,5 +1,5 @@
 ---
-title: 名称&lt;membername&gt;不符合 cls 的
+title: 名称 <membername> 不符合 CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40031
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-ms.openlocfilehash: b950be530eb80fd1c65b48e1625eb344c642d260
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74b625cc3a60e591417530c6a6229c01666038e2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626363"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271247"
 ---
-# <a name="name-ltmembernamegt-is-not-cls-compliant"></a>名称&lt;membername&gt;不符合 cls 的
+# <a name="name-membername-is-not-cls-compliant"></a>名称\<成员名称 > 不符合 cls 的
 程序集标记为`<CLSCompliant(True)>`公开的成员名称以下划线开头的名称，但 (`_`)。  
   
  编程元素可以包含一个或多个下划线，但要符合[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)，它必须不以下划线开头。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  

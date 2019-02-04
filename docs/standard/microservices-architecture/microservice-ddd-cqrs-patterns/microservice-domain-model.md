@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d98d0f0fee0692bb447779e7f62750931a9773ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143599"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066250"
 ---
 # <a name="design-a-microservice-domain-model"></a>设计微服务域模型
 
@@ -82,16 +82,17 @@ EF Core 2.0 包含[实体](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/an
 
 #### <a name="additional-resources"></a>其他资源
 
-- **Martin Fowler。值对象模式**
+- **Martin Fowler。Value Object pattern** \（值对象模式）
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **值对象**
+- Value Object \（值对象）
   [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
-- **测试驱动开发中的值对象**
+- Value Objects in Test-Driven Development \（测试驱动开发中的值对象）
   [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道。） （书；包括值对象的讨论）[https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道） （书；包括值对象的讨论）\
+  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>聚合模式
 
@@ -134,14 +135,14 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>其他资源
 
-- **Vaughn Vernon。Effective Aggregate Design - Part I: Modeling a Single Aggregate** \（高效聚合设计 - 第 I 部分：创建单个聚合模型）
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Vaughn Vernon。Effective Aggregate Design - Part I:Modeling a Single Aggregate**（来自 <http://dddcommunity.org/>）\（有效的聚合设计 - 第 1 部分：单个聚合建模）
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon。Effective Aggregate Design Part II: Making Aggregates Work Together** \（高效聚合设计第 II 部分：协同聚合）
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Vaughn Vernon。Effective Aggregate Design - Part II:Making Aggregates Work Together**（来自 <http://dddcommunity.org/>）\（有效的聚合设计 - 第 2 部分：让聚合共同工作）
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon。Effective Aggregate Design - Part III: Gaining Insight Through Discovery** \（高效聚合设计 - 第 III 部分：通过发现获得见解）
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Vaughn Vernon。Effective Aggregate Design - Part III:Gaining Insight Through Discovery**（来自 <http://dddcommunity.org/>）\（有效的聚合设计 - 第 3 部分：通过发现获取见解）
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak。DDD Tactical Design Patterns** \（DDD 战术设计模式）
   [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)

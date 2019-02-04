@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 63e1c55aa3aad1923ac34070784e8b4de7251a7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592752"
 ---
 # <a name="task-based-asynchronous-programming"></a>基于任务的异步编程
 任务并行库 (TPL) 以“任务”的概念为基础，后者表示异步操作。 在某些方面，任务类似于线程或 <xref:System.Threading.ThreadPool> 工作项，但是抽象级别更高。 术语“任务并行”是指一个或多个独立的任务同时运行。 任务提供两个主要好处：  
@@ -42,7 +42,7 @@ ms.locfileid: "47171369"
 > [!NOTE]
 >  <xref:System.Threading.Tasks.Task> 在后台创建的 <xref:System.Threading.Tasks.Parallel.Invoke%2A> 实例数不一定与所提供的委托数相等。 TPL 可能会使用各种优化，特别是对于大量的委托。  
   
- 有关详细信息，请参阅[如何：使用 Parallel.Invoke 执行并行操作](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。  
+ 有关详细信息，请参阅[如何：使用 Parallel.Invoke 来执行并行操作](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。  
   
  为了更好地控制任务执行或从任务返回值，必须更加显式地使用 <xref:System.Threading.Tasks.Task> 对象。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47171369"
  [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
  [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]  
   
- 有关详细信息，请参阅[如何：从任务返回值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)。  
+ 有关详细信息，请参阅[如何：从任务中返回值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)。  
   
  使用 lambda 表达式创建委托时，你有权访问源代码中当时可见的所有变量。 然而，在某些情况下，特别是在循环中，lambda 不按照预期的方式捕获变量。 它仅捕获最终值，而不是它每次迭代后更改的值。 以下示例演示了该问题。 它将循环计数器传递给实例化 `CustomData` 对象并使用循环计数器作为对象标识符的 lambda 表达式。 如示例输出所示，每个 `CustomData` 对象都具有相同的标识符。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47171369"
  [!code-csharp[TPL_TaskIntro#21](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/iteration1a.cs#21)]
  [!code-vb[TPL_TaskIntro#21](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/iteration1a.vb#21)]  
   
- 此状态作为参数传递给任务委托，并且可通过使用 <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> 属性从任务对象访问。  以下示例在上一示例的基础上演变而来。 它使用 <xref:System.Threading.Tasks.Task.AsyncState%2A> 属性显示关于传递到 lambda 表达式的 `CustomData` 对象的信息。  
+ 此状态作为自变量传递给任务委托，并且可通过使用 <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> 属性从任务对象访问。  以下示例在上一示例的基础上演变而来。 它使用 <xref:System.Threading.Tasks.Task.AsyncState%2A> 属性显示关于传递到 lambda 表达式的 `CustomData` 对象的信息。  
   
  [!code-csharp[TPL_TaskIntro#23](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
  [!code-vb[TPL_TaskIntro#23](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]  
@@ -92,7 +92,7 @@ ms.locfileid: "47171369"
 ## <a name="task-creation-options"></a>任务创建选项  
  创建任务的大多数 API 提供接受 <xref:System.Threading.Tasks.TaskCreationOptions> 参数的重载。 通过指定下列选项之一，可指示任务计划程序如何在线程池中安排任务计划。 下表列出了各种任务创建选项。  
   
-|<xref:System.Threading.Tasks.TaskCreationOptions> 参数值|描述|  
+|<xref:System.Threading.Tasks.TaskCreationOptions> 参数值|说明|  
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|未指定任何选项时的默认值。 计划程序将使用其默认试探法来计划任务。|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|指定应当计划任务，以使越早创建的任务将更可能越早执行，而越晚创建的任务将更可能越晚执行。|  
@@ -201,7 +201,7 @@ ms.locfileid: "47171369"
  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 方法将生成在指定时间后完成的 <xref:System.Threading.Tasks.Task> 对象。 你可使用此方法来生成偶尔轮询数据的循环，引入超时，将对用户输入的处理延迟预定的一段时间等。  
   
 ### <a name="tasktfromresult"></a>Task(T).FromResult  
- 通过使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法，你可以创建包含预计算结果的 <xref:System.Threading.Tasks.Task%601> 对象。 执行返回 <xref:System.Threading.Tasks.Task%601> 对象的异步运算，且已计算该 <xref:System.Threading.Tasks.Task%601> 对象的结果时，此方法将十分有用。 有关使用 <xref:System.Threading.Tasks.Task.FromResult%2A> 检索缓存中包含的异步下载操作结果的示例，请参阅[如何：创建预先计算的任务](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)。  
+ 通过使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法，你可以创建包含预计算结果的 <xref:System.Threading.Tasks.Task%601> 对象。 执行返回 <xref:System.Threading.Tasks.Task%601> 对象的异步运算，且已计算该 <xref:System.Threading.Tasks.Task%601> 对象的结果时，此方法将十分有用。 有关使用 <xref:System.Threading.Tasks.Task.FromResult%2A> 检索缓存中包含的异步下载运算结果的示例，请参阅[如何：创建预先计算的任务](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)。  
   
 ## <a name="handling-exceptions-in-tasks"></a>处理任务中的异常  
  当某个任务抛出一个或多个异常时，异常包装在 <xref:System.AggregateException> 异常中。 该异常传播回与该任务联接的线程，通常该线程正在等待该任务完成或该线程访问 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性。 此行为用于强制实施 .NET Framework 策略 - 默认所有未处理的异常应终止进程。 调用代码可以通过使用 `try`/`catch` 块中的以下任意方法来处理异常：  
@@ -221,9 +221,9 @@ ms.locfileid: "47171369"
 ## <a name="canceling-tasks"></a>取消任务  
  `Task` 类支持协作取消，并与 .NET Framework 4 中新增的 <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> 类和 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 类完全集成。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类中的大多数构造函数采用 <xref:System.Threading.CancellationToken> 对象作为输入参数。 许多 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> 和 <xref:System.Threading.Tasks.Task.Run%2A> 重载还包括 <xref:System.Threading.CancellationToken> 参数。  
   
- 你可以创建标记，并使用 <xref:System.Threading.CancellationTokenSource> 类在以后某一时间发出取消请求。 可以将该标记作为参数传递给 <xref:System.Threading.Tasks.Task>，还可以在执行响应取消请求的工作的用户委托中引用同一标记。  
+ 你可以创建标记，并使用 <xref:System.Threading.CancellationTokenSource> 类在以后某一时间发出取消请求。 可以将该标记作为自变量传递给 <xref:System.Threading.Tasks.Task>，还可以在执行响应取消请求的工作的用户委托中引用同一标记。  
   
- 有关详细信息，请参阅[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[如何：取消任务及其子任务](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。  
+ 有关详细信息，请参阅[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[如何：取消任务及其子级](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。  
   
 ## <a name="the-taskfactory-class"></a>TaskFactory 类  
  <xref:System.Threading.Tasks.TaskFactory> 类提供静态方法，这些方法封装了用于创建和启动任务和延续任务的一些常用模式。  
@@ -252,7 +252,7 @@ ms.locfileid: "47171369"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|说明|  
 |-|-|  
 |[使用延续任务来链接任务](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|描述延续任务的工作方式。|  
 |[附加和分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|描述附加子任务和分离子任务之间的差异。|  
@@ -269,5 +269,5 @@ ms.locfileid: "47171369"
   
 ## <a name="see-also"></a>请参阅
 
-- [并行编程](../../../docs/standard/parallel-programming/index.md)  
+- [并行编程](../../../docs/standard/parallel-programming/index.md)
 - [使用 .NET Framework 进行并行编程的示例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

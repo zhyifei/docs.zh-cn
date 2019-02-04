@@ -1,16 +1,16 @@
 ---
-title: 什么&#39;s Windows Communication Foundation 4.5 中的新增功能
+title: Windows Communication Foundation 4.5 中的新增功能
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 1fe3ea53be6305553e789f8644e378d95bfac71b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8d079613d1970d2a50ddb3449c2a3072010b2c55
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873513"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280002"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5 中的新增功能
 
@@ -58,7 +58,7 @@ ms.locfileid: "48873513"
  某些第三方 WSDL 处理堆栈不能通过 xsd:import 来处理对其他文档有依赖关系的 WSDL 文档。  您现在可通过 WCF 来指定在单个文档中返回的所有 WSDL 信息。 若要请求单个 WSDL 文档将追加"？ singleWSDL"时从服务请求元数据的 uri。
 
 ## <a name="websocket-support"></a>WebSocket 支持
- WebSocket 是一种通过端口 80 和 443 提供真正双向通信的技术，其性能特性与 TCP 类似。 添加了两个新的绑定以支持通过 WebSocket 传输进行通信。 <xref:System.ServiceModel.NetHttpBinding> 和 <xref:System.ServiceModel.NetHttpsBinding>。 有关详细信息请参阅： [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。
+ WebSocket 是一种通过端口 80 和 443 提供真正双向通信的技术，其性能特性与 TCP 类似。 添加了两个新的绑定以支持通过 WebSocket 传输进行通信。 <xref:System.ServiceModel.NetHttpBinding> 和 <xref:System.ServiceModel.NetHttpsBinding>。 有关更多信息，请参见：[系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)。
 
 ## <a name="new-transport-default-values"></a>新传输默认值
  下表描述了已更改的设置以及可在何处找到其他信息。

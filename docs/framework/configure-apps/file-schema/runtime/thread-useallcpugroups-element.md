@@ -1,17 +1,17 @@
 ---
-title: '&lt;Thread_UseAllCpuGroups&gt;元素'
+title: < Thread_UseAllCpuGroups > 元素
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80f67502c61df13b17cfb3b75564d710e5fad2f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95411f5adde07c0d00124b2793b495c7ed8f49ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579936"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288933"
 ---
-# <a name="ltthreaduseallcpugroupsgt-element"></a>&lt;Thread_UseAllCpuGroups&gt;元素
+# <a name="threaduseallcpugroups-element"></a>\<Thread_UseAllCpuGroups > 元素
 指定运行时是否跨所有 CPU 组分发托管的线程。  
   
  \<configuration>  

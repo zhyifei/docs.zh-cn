@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: a4c205d61e6de3e835954e405cece143520b4d2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086500"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623973"
 ---
 # <a name="localizability-review"></a>本地化评审
 本地化分析检查是全球通用应用程序开发中的一个中间步骤。 它验证全球化应用程序是否已准备好进行本地化，以及是否能够识别需要特别处理的所有代码或所有用户界面元素。 此步骤还有助于确保本地化过程不会将任何功能缺陷引入应用程序。 一旦本地化分析检查提出的所有问题都得到解决，就意味着可以对应用程序进行本地化了。 如果本地化分析检查详尽彻底，则在本地化过程中应该不需要修改任何源代码。  
@@ -75,7 +75,7 @@ ms.locfileid: "49086500"
   
 ## <a name="see-also"></a>请参阅
 
-- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)  
-- [本地化](../../../docs/standard/globalization-localization/localization.md)  
-- [全球化](../../../docs/standard/globalization-localization/globalization.md)  
+- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)
+- [本地化](../../../docs/standard/globalization-localization/localization.md)
+- [全球化](../../../docs/standard/globalization-localization/globalization.md)
 - [桌面应用中的资源](../../../docs/framework/resources/index.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;cryptoClass&gt;元素'
+title: <cryptoClass> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses/cryptoClass
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 726f13d778fc4cff9bdafed4518e9dee3eeab6b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 161c9212600a417a97fa5a4e0edeac02db0f17a1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501277"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287529"
 ---
-# <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt;元素
+# <a name="cryptoclass-element"></a>\<cryptoClass > 元素
 包含一个密码类，该类具有到 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 元素中的友好名称的映射。  
   
  \<configuration>  

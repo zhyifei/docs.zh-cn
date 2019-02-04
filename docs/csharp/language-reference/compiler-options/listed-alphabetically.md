@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 22574df77250479250f1ce1369c4bfb59c456d26
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653744"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>按字母顺序列出的 C# 编译器选项
 
@@ -29,7 +29,7 @@ ms.locfileid: "43525680"
 |[-baseaddress](baseaddress-compiler-option.md)|指定要生成的库的基址。|
 |[-bugreport](bugreport-compiler-option.md)|创建“Bug 报告”文件。 如果与 -errorreport:prompt 或 -errorreport:send 一起使用，则发送任何崩溃信息时都将随附此文件。|
 |[/checked](checked-compiler-option.md)|使编译器生成溢出检查。|
-|-checksumalgorithm:\<alg>|指定用于计算 PDB 中存储的源文件校验和的算法。  支持的值为：SHA1（默认值）或 SHA256。|
+|-checksumalgorithm:\<alg>|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA1（默认值）或 SHA256。|
 |[-codepage](codepage-compiler-option.md)|指定在打开源文件时使用的代码页。|
 |[-debug](debug-compiler-option.md)|发出调试信息。|
 |[-define](define-compiler-option.md)|定义条件编译符号。|
@@ -44,7 +44,7 @@ ms.locfileid: "43525680"
 |-incremental|启用增量编译 [已过时]。|
 |[-keycontainer](keycontainer-compiler-option.md)|指定强名称密钥容器。|
 |[-keyfile](keyfile-compiler-option.md)|指定强名称密钥文件。|
-|[-langversion:\<string>](langversion-compiler-option.md)|指定语言版本：默认、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3 或最新版 |
+|[-langversion:\<string>](langversion-compiler-option.md)|指定语言版本：默认、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3 或最新版本 |
 |[/lib](lib-compiler-option.md)|指定要在其中搜索引用的附加目录。|
 |[-link](link-compiler-option.md)|使指定程序集中的 COM 类型信息对项目可用。|
 |[-linkresource](linkresource-compiler-option.md)|将指定的资源链接到此程序集。|
@@ -82,7 +82,7 @@ ms.locfileid: "43525680"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](index.md)  
-- [按类别列出的 C# 编译器选项](listed-by-category.md)  
-- [如何：为 Visual Studio 命令行设置环境变量](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+- [C# 编译器选项](index.md)
+- [按类别列出的 C# 编译器选项](listed-by-category.md)
+- [如何：设置 Visual Studio 命令行的环境变量](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [\<compiler> Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

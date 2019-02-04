@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726645"
 ---
 # <a name="ref-c-reference"></a>ref（C# 参考）
 
@@ -154,12 +154,12 @@ Ref readonly 局部变量用于指代在其签名中具有 `ref readonly` 并使
   
 ## <a name="see-also"></a>请参阅
 
-- [编写安全高效的代码](../../write-safe-efficient-code.md)  
+- [编写安全高效的代码](../../write-safe-efficient-code.md)
 - [ref 返回结果和局部变量](../../programming-guide/classes-and-structs/ref-returns.md)
 - [条件 ref 表达式](../operators/conditional-operator.md#conditional-ref-expression)
 - [ref 赋值运算符](../operators/assignment-operator.md#ref-assignment-operator)
-- [传递参数](../../programming-guide/classes-and-structs/passing-parameters.md)  
-- [方法参数](method-parameters.md)  
-- [C# 参考](../index.md)  
-- [C# 编程指南](../../programming-guide/index.md)  
+- [传递参数](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [方法参数](method-parameters.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)

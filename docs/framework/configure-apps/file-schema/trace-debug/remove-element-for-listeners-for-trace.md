@@ -1,5 +1,5 @@
 ---
-title: '&lt;删除&gt;的元素&lt;侦听器&gt;为&lt;跟踪&gt;'
+title: <remove> 的 <listeners> 的 <trace> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,16 +7,14 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d2e68a93840022776530bb9ed2f94a7505a8a3b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a6b94756cb1b451d40229674dd887dd9f84676b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642787"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267061"
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;删除&gt;的元素&lt;侦听器&gt;为&lt;跟踪&gt;
+# <a name="remove-element-for-listeners-for-trace"></a>\<删除 > 元素\<侦听器 > 为\<跟踪 >
 从侦听器中移除**侦听器**集合。  
   
  \<configuration>  

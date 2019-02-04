@@ -1,17 +1,17 @@
 ---
-title: 进程&lt;processname&gt;找不到
+title: 进程的<processname>找不到
 ms.date: 07/20/2015
 f1_keywords:
 - vbrProcessNotFound
 ms.assetid: d6095a7f-6168-4b00-8639-11fb64dd2ebe
-ms.openlocfilehash: 3ab58ead57e7f4416ed531fdd9b872909cbfc6ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fec0b23dc9cbc4a6223271f19aedee971be0f152
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564719"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260549"
 ---
-# <a name="process-ltprocessnamegt-was-not-found"></a>进程&lt;processname&gt;找不到
+# <a name="process-processname-was-not-found"></a>进程的\<processname > 找不到
 无法定位指定的进程。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  

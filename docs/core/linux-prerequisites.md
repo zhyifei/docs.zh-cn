@@ -4,12 +4,12 @@ description: 支持的 Linux 版本和 .NET Core 依赖项，用于在 Linux 计
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 7a2b0b3af97500ab0988e5de7a44713a8c05ccb9
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 5ef1737185ad41de7bd5e7a9b8db048ff577811f
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656045"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083881"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的先决条件
 
@@ -69,7 +69,7 @@ ms.locfileid: "53656045"
 
 以下 Linux 发行版本/版本支持 .NET Core 3.0 预览版 1。 
 
-(OS)                            | 版本               | 体系结构  
+(OS)                            | Version               | 体系结构  
 ------------------------------|-----------------------|----------------
 Red Hat Enterprise Linux      | 6                     | X64
 Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
@@ -100,7 +100,8 @@ Alpine Linux                  | 3.8+                  | x64、ARM64
 Ubuntu 发行版本需要安装以下库：
 
 * liblttng-ust0
-* libcurl3
+* libcurl3（针对 14.x 和 16.x）
+* libcurl4（针对 18.x）
 * libssl1.0.0
 * libkrb5-3
 * zlib1g

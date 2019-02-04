@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 453ace4af7ce07c8d81b6d7ece71140e04bfa9bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531507"
 ---
 # <a name="packaging-an-assembly-for-com"></a>将 COM 的程序集打包
 COM 开发人员可从其计划纳入应用程序的托管类型相关信息中受益：  
@@ -80,13 +80,13 @@ COM 开发人员可从其计划纳入应用程序的托管类型相关信息中�
 ## <a name="net-services-installation-tool"></a>.NET 服务安装工具  
  [.NET 服务安装工具 (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) 将托管类添加到 Windows 2000 组件服务，并在单个工具中组合多个任务。 除加载和注册程序集外，Regsvcs.exe 还可将类型库生成、注册和安装到现有 COM+ 1.0 应用程序。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.InteropServices.TypeLibConverter>  
- <xref:System.Runtime.InteropServices.ITypeLibConverter>  
- [向 COM 公开 .NET Framework 组件](exposing-dotnet-components-to-com.md)  
- [为互操作限定 .NET 类型](qualifying-net-types-for-interoperation.md)  
- [类接口简介](com-callable-wrapper.md#introducing-the-class-interface)  
- [程序集安全注意事项](../app-domains/assembly-security-considerations.md)  
- [Tlbexp.exe（类型库导出程序）](../tools/tlbexp-exe-type-library-exporter.md)  
- [向 COM 注册程序集](registering-assemblies-with-com.md)  
- [如何：将类型库作为 Win32 资源嵌入应用程序](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.InteropServices.TypeLibConverter>
+- <xref:System.Runtime.InteropServices.ITypeLibConverter>
+- [向 COM 公开 .NET Framework 组件](exposing-dotnet-components-to-com.md)
+- [为互操作限定 .NET 类型](qualifying-net-types-for-interoperation.md)
+- [类接口简介](com-callable-wrapper.md#introducing-the-class-interface)
+- [程序集安全注意事项](../app-domains/assembly-security-considerations.md)
+- [Tlbexp.exe（类型库导出程序）](../tools/tlbexp-exe-type-library-exporter.md)
+- [向 COM 注册程序集](registering-assemblies-with-com.md)
+- [如何：将类型库作为 Win32 资源嵌入应用程序](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))

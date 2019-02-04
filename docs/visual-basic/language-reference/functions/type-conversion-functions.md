@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: ea20569b207100886ddd4b40c8d4c86c55d5ddf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be5e1b5fff1feb8ef4cc2ff7fcbca193aafcd781
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743538"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674875"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>类型转换函数 (Visual Basic)
 这些函数是代码的内联方式编译，这意味着转换代码计算表达式的值的一部分。 有时是没有调用过程，以完成转换，从而提高性能。 每个函数都强制转换为特定的数据类型的表达式。  
@@ -128,7 +128,7 @@ CUShort(expression)
 |`CDbl`|[Double 数据类型](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570 e + 308 到-4.94065645841246544 e-324 对于负值;4.94065645841246544 e-324 到 1.79769313486231570 e + 308 的正值。|  
 |`CDec`|[Decimal 数据类型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+ /-79228162514264337593543950335 为零的数字，即，没有小数位的数字。 对于具有 28 位小数的数字，范围为 + /--7.9228162514264337593543950335 之间。 最小可能的非零数字为 0.0000000000000000000000000001 （+ /-1E 28)。|  
 |`CInt`|[Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2,147,483,648) 通过<xref:System.Int32.MaxValue?displayProperty=nameWithType>(2,147,483,647); 小数部分舍入。<sup>1</sup> <br/><br/>从 Visual Basic 15.8 开始，Visual Basic 可优化的性能与整数转换为浮点`CInt`函数; 请参阅[备注](#remarks)部分，了解详细信息。 请参阅[CInt 示例](#cint-example)有关示例。 |  
-|`CLng`|[Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MaxValue?displayProperty=nameWithType> (-9223372036854775808) 通过<xref:System.Int64.MaxValue?displayProperty=nameWithType>(9,223,372,036,854,775,807); 小数部分舍入。<sup>1</sup><br/><br/>从 Visual Basic 15.8 开始，Visual Basic 可优化的性能与 64 位整数转换为浮点`CLng`函数; 请参阅[备注](#remarks)部分，了解详细信息。 请参阅[CInt 示例](#cint-example)有关示例。|  
+|`CLng`|[Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9223372036854775808) 通过<xref:System.Int64.MaxValue?displayProperty=nameWithType>(9,223,372,036,854,775,807); 小数部分舍入。<sup>1</sup><br/><br/>从 Visual Basic 15.8 开始，Visual Basic 可优化的性能与 64 位整数转换为浮点`CLng`函数; 请参阅[备注](#remarks)部分，了解详细信息。 请参阅[CInt 示例](#cint-example)有关示例。|  
 |`CObj`|[Object 数据类型](../../../visual-basic/language-reference/data-types/object-data-type.md)|任何有效表达式。|  
 |`CSByte`|[SByte 数据类型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (-128) 通过<xref:System.SByte.MaxValue?displayProperty=nameWithType>(127); 小数部分舍入。<sup>1</sup><br/><br/>从 Visual Basic 15.8 开始，Visual Basic 来优化性能的使用的有符号的字节转换为浮点`CSByte`函数; 请参阅[备注](#remarks)部分，了解详细信息。 请参阅[CInt 示例](#cint-example)有关示例。|  
 |`CShort`|[Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32,768) 通过<xref:System.Int16.MaxValue?displayProperty=nameWithType>(32,767); 小数部分舍入。<sup>1</sup><br/><br/>从 Visual Basic 15.8 开始，Visual Basic 来优化性能的使用 16 位整数转换为浮点`CShort`函数; 请参阅[备注](#remarks)部分，了解详细信息。 请参阅[CInt 示例](#cint-example)有关示例。|  

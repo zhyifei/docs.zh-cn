@@ -1,15 +1,15 @@
 ---
-title: 如何：使用批注以 XSLT 样式转换 LINQ to XML 树 (C#)
+title: 如何：使用批注转换 XSLT 样式中的 LINQ to XML 树 (C#)
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: c93ba3209b80cf2467c0f3b49dc25e729c6a14c6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 64287abbf8a411d8c231ceaf3311c51738d7ea96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733956"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>如何：使用批注以 XSLT 样式转换 LINQ to XML 树 (C#)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>如何：使用批注转换 XSLT 样式中的 LINQ to XML 树 (C#)
 使用批注可帮助进行 XML 树的转换。  
   
  有些 XML 文档“以文档为中心兼有混合内容”。 对于这样的文档，您不必知道元素的子节点的形状。 例如，包含文本的节点可能具有像下面这样的外观：  

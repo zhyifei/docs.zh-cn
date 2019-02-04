@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 598f0e75a96a43162d0c626d00320effb418c7fd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4bb5a8134bb9cbcdb70830628895338ec83b28a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614115"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 编码约定（C# 编程指南）
  编码约定可实现以下目的：  
@@ -198,5 +198,5 @@ ms.locfileid: "53241426"
   
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 编码约定](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
+- [Visual Basic 编码约定](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [安全编码准则](../../../standard/security/secure-coding-guidelines.md)

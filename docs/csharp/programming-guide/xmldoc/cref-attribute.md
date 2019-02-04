@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: af83ae8c6c209886649d4eb1543c47e63bd97449
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: acbf45b5ccd4fcb9cb1c23b843072c2abdeeca25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235576"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685940"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 特性（C# 编程指南）
 XML 文档标记中的 `cref` 属性是指“代码引用”。 它指定标记的内部文本是一个代码元素，例如类型、方法或属性。 文档工具（例如 [Sandcastle](https://github.com/EWSoftware/SHFB)）使用 `cref` 属性自动生成指向记录类型或成员的页面的超链接。  
@@ -121,5 +121,5 @@ XML 文档标记中的 `cref` 属性是指“代码引用”。 它指定标记�
   
 ## <a name="see-also"></a>请参阅
 
-- [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
 - [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

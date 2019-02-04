@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89479ca4a41f761d4aacaf6d8d962bfba62be811
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e346b326255ea46babc2e4c9101a1724671514d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517562"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>将类型库当作程序集导入
 COM 类型定义通常位于类型库中。 而符合 CLS 的编译器则在程序集中生成类型元数据。 类型信息的这两种来源具有很大的区别。 本主题将说明从类型库中生成元数据的技术。 生成的程序集称为互操作程序集，其中包含的类型信息允许 .NET Framework 应用程序使用 COM 类型。  
@@ -70,15 +70,15 @@ COM 类型定义通常位于类型库中。 而符合 CLS 的编译器则在程�
   
  有关 COM 互操作导入过程的详细信息，请参阅[有关从类型库转换到程序集的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.InteropServices.TypeLibConverter>  
- [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)  
- [有关从类型库转换到程序集的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Tlbimp.exe（类型库导入程序）](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [自定义标准包装器](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
- [在托管代码中使用 COM 类型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
- [编译互操作项目](../../../docs/framework/interop/compiling-an-interop-project.md)  
- [部署互操作应用程序](../../../docs/framework/interop/deploying-an-interop-application.md)  
- [如何：添加对类型库的引用](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  
- [如何：从类型库生成互操作程序集](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)  
- [演练：嵌入 Microsoft Office 程序集中的类型信息](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.InteropServices.TypeLibConverter>
+- [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)
+- [有关从类型库转换到程序集的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Tlbimp.exe（类型库导入程序）](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [自定义标准包装器](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))
+- [在托管代码中使用 COM 类型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))
+- [编译互操作项目](../../../docs/framework/interop/compiling-an-interop-project.md)
+- [部署互操作应用程序](../../../docs/framework/interop/deploying-an-interop-application.md)
+- [如何：添加对类型库的引用](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
+- [如何：从类型库生成互操作程序集](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
+- [演练：嵌入 Microsoft Office 程序集中的类型信息](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))

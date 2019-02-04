@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 89c3e335-3f5b-4e24-8c5a-b8036561fe8a
-ms.openlocfilehash: 79c798bb6ec16fc639d37defc40da5af770e5bba
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5dfddb0faf77e40397eafd70955e233a9a320163
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635814"
 ---
 # <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>如何：使用 foreach 访问命令行参数（C# 编程指南）
 循环访问数组的另一种方法是使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 语句，如本例所示。 `foreach` 语句可用于循环访问数组、.NET Framework 集合类或任何实现 <xref:System.Collections.IEnumerable> 接口的类或结构。  
@@ -27,11 +27,11 @@ ms.locfileid: "53242427"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Array>  
-- <xref:System.Collections>  
-- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
-- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- <xref:System.Array>
+- <xref:System.Collections>
+- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)
+- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 - [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;AppContextSwitchOverrides&gt;元素'
+title: <AppContextSwitchOverrides> 元素
 ms.custom: updateeachrelease
 ms.date: 09/19/2018
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc68ba1d87a6dcb638eae5bfa041baeaf0846800
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d78909c3529bb96b973b914742e9b83bc2e21d0f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699930"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288049"
 ---
-# <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt;元素
+# <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 元素
 定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。  
   
  \<configuration>  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;GCCpuGroup&gt;元素'
+title: <GCCpuGroup> 元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GCCpuGroup element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f4d135bc74a753b3968baaccf3e35633c8ba253
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7998275ae1e80a87354dd5b3a8b0a1aa73b3b987
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535796"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674771"
 ---
-# <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt;元素
+# <a name="gccpugroup-element"></a>\<GCCpuGroup > 元素
 指定垃圾回收是否支持多个 CPU 组。  
   
  \<configuration>  
@@ -75,5 +75,5 @@ ms.locfileid: "54535796"
 ## <a name="see-also"></a>请参阅
 - [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [如何：禁用并发垃圾回收](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+- [若要禁用并发垃圾回收](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [工作站和服务器垃圾回收](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

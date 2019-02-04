@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], arrays
 - arrays [C#], generics
 ms.assetid: 7d956536-3851-41b5-94ad-3e7c0a5fe485
-ms.openlocfilehash: 50d649c4662114e76fdc0a6161ab0cbbeb04756d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 541313bb0b530251ef4d1d18414c9ffd14fb010b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607418"
 ---
 # <a name="generics-and-arrays-c-programming-guide"></a>泛型和数组（C# 编程指南）
 在 C# 2.0 和更高版本中，下限为零的单维数组自动实现 <xref:System.Collections.Generic.IList%601>。 这可使你创建可使用相同代码循环访问数组和其他集合类型的泛型方法。 此技术的主要用处在于读取集合中的数据。 <xref:System.Collections.Generic.IList%601> 接口无法用于添加元素或从数组删除元素。 如果在此上下文中尝试对数组调用 <xref:System.Collections.Generic.IList%601> 方法（例如 <xref:System.Collections.Generic.IList%601.RemoveAt%2A>），则会引发异常。  
@@ -22,8 +22,8 @@ ms.locfileid: "53237449"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Collections.Generic>  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [泛型](../../../csharp/programming-guide/generics/index.md)  
-- [数组](../../../csharp/programming-guide/arrays/index.md)  
+- <xref:System.Collections.Generic>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [泛型](../../../csharp/programming-guide/generics/index.md)
+- [数组](../../../csharp/programming-guide/arrays/index.md)
 - [泛型](~/docs/standard/generics/index.md)

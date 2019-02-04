@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202915"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282030"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe（.NET Framework 命令行调试程序）
 .NET Framework 命令行调试器可以帮助工具供应商和应用程序开发人员查找并修复面向 .NET Framework 公共语言运行时的程序中的 Bug。 此工具使用运行时调试 API 提供调试服务。 可以使用 MDbg.exe 来仅调试托管代码；不支持调试非托管代码。  
@@ -77,7 +77,7 @@ MDbg [ProgramName[arguments]] [options]
 |sh[ow] [lines]|指定要显示的行数。|  
 |s[tep]|开始执行当前行的下一个函数；如果没有要单步执行的函数，则移动到下一行。|  
 |su[spend] [\* &#124; [~]threadNumber]|挂起当前线程或 threadNumber 参数指定的线程。  如果 threadNumber 指定为 `*`，则该命令将应用于所有线程。 如果线程号以 `~` 开头，则该命令应用于除 threadNumber 指定的线程之外的所有线程。 使用 go 或 step 命令运行进程时，不会运行挂起的线程。 如果进程中没有未挂起的线程，即使发出 go 命令，该进程也不会继续。 在这种情况下，按 Ctrl-C 可中断进程。|  
-|sy[mbol] commandName [commandValue]|指定下列命令之一：<br /><br /> -   `symbol path` [`"``value``"`] - 显示或设置当前符号路径。<br />-   `symbol addpath` `"` `value` `"` - 添加到当前符号路径。<br />-   `symbol reload` [`"``module``"`]- 重新加载所有符号或指定模块的符号。<br />-   `symbol list` [`module`] - 显示当前为所有模块或指定模块加载的符号。|  
+|sy[mbol] commandName [commandValue]|指定下列命令之一：<br /><br /> -   `symbol path` [`"value"`] - 显示或设置当前符号路径。<br />-   `symbol addpath` `"value"` - 添加到当前符号路径。<br />-   `symbol reload` [`"module"`]- 重新加载所有符号或指定模块的符号。<br />-   `symbol list` [`module`] - 显示当前为所有模块或指定模块加载的符号。|  
 |t[hread] [newThread] [-nick nickname`]`|不带参数的线程命令显示当前进程中的所有托管线程。 线程通常由其线程号标识；但是，如果线程有分配的别名，则显示该别名。 可使用 `-nick` 参数将别号分配给线程。<br /><br /> -   thread `-nick` threadName 为当前运行的线程分配一个昵称。<br /><br /> 别名不能为数字。 如果已为当前线程分配了别名，则使用新的别名来替换旧的别名。 如果新别名为空字符串 ("")，则删除当前线程的别名并且不为线程分配新别名。|  
 |u[p]|上移活动堆栈帧。|  
 |uwgc[handle] [var] &#124 [address]|打印句柄所跟踪的变量。 可以按名称或地址来指定句柄。|  
@@ -104,8 +104,6 @@ mdbg>
   
  处于调试器中之后，请使用上一部分所述的命令和参数。  
   
-## <a name="examples"></a>示例  
-  
-## <a name="see-also"></a>请参阅  
- [工具](../../../docs/framework/tools/index.md)  
- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>请参阅
+- [工具](../../../docs/framework/tools/index.md)
+- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

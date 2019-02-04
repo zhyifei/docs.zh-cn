@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;元素&lt;开关&gt;'
+title: <add> 的 <switches> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
@@ -7,16 +7,14 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b0ac45c9d2c5b7ff9630bbeaed4bfcee5ec46fcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88cd8c9ba7244256ca9ddd3b2957f86d9485933c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609981"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273288"
 ---
-# <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;添加&gt;元素&lt;开关&gt;
+# <a name="add-element-for-switches"></a>\<添加 > 元素\<开关 >
 指定对跟踪开关设置的级别。  
   
  \<configuration>  

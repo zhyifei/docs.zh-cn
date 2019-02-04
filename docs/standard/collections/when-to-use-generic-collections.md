@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9831212cf65e3913bae2431e4746b5def03430b6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 5ae6f76ba358d07101f56de321a9453b3eee1bf2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674032"
 ---
 # <a name="when-to-use-generic-collections"></a>何时使用泛型集合
 通常建议使用泛型集合，因为这样你可以获得类型安全的直接优点而无需从基集合类型派生和实现特定类型的成员。 当集合元素为值类型时，泛型集合类型也通常优于对应的非泛型集合类型（比从非泛型基集合类型派生的类型好），因为使用泛型时不必对元素进行装箱。  
@@ -55,6 +55,6 @@ ms.locfileid: "48261230"
   
 ## <a name="see-also"></a>请参阅
 
-- [集合和数据结构](../../../docs/standard/collections/index.md)  
-- [常用的集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)  
+- [集合和数据结构](../../../docs/standard/collections/index.md)
+- [常用的集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)
 - [泛型](../../../docs/standard/generics/index.md)

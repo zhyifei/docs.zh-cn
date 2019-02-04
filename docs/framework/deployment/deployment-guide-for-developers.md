@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 72cf3e2e60f27ed4faac12882fcc17974601f6e6
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 8e54c564fbd81f9a52bae5ea8a02514569902d00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589173"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
 本主题为想要随自己的应用一起安装任何 .NET Framework 版本（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)] ）的开发人员提供了相关信息。
@@ -245,7 +245,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 > [!IMPORTANT]
 > 当尝试检测是否存在特定版本时，应检查是否存在  **大于或等于** 版本关键字值的值。
 
-|版本|Release DWORD 的值|
+|Version|Release DWORD 的值|
 |-------------|--------------------------------|
 |安装在 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 上的 .NET Framework 4.7.2|461808|
 |.NET Framework 4.7.2，安装在除 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 之外的所有 OS 版本上。 这包括 Windows 10 2018 年 10 月更新。 |461814|
@@ -403,9 +403,9 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |3082|西班牙语 - 西班牙（现代排序）|es|
 
 ## <a name="see-also"></a>请参阅
-- [面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)  
-- [系统要求](../../../docs/framework/get-started/system-requirements.md)  
-- [安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)  
-- [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
-- [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)  
+- [面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)
+- [系统要求](../../../docs/framework/get-started/system-requirements.md)
+- [安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)
+- [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)
 - [如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

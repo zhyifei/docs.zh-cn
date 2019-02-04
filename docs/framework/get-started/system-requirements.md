@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9d1c6dff4a1a8722a2ca196763756336d512631
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 765dac0a6cf8a3403880bead1716b8477662052c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529523"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
@@ -53,7 +53,7 @@ ms.locfileid: "50203938"
 
 ## <a name="supported-client-operating-systems"></a>支持的客户端操作系统
 
-| 操作系统 | 支持的版本 | 随 OS 预安装 | 可安装单独 |
+| 操作系统 | 支持的版本 | 随 OS 预安装 | 可单独安装 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
 | Windows 10 2018 年 10 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 |--|
 | Windows 10 2018 年 4 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 |--|
@@ -108,6 +108,6 @@ ms.locfileid: "50203938"
 
 ## <a name="see-also"></a>请参阅
 
-- [安装指南](../../../docs/framework/install/index.md)   
-- [入门](../../../docs/framework/get-started/index.md)   
+- [安装指南](../../../docs/framework/install/index.md)
+- [入门](../../../docs/framework/get-started/index.md)
 - [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

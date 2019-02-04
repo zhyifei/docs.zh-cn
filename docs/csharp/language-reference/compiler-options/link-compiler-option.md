@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 00cfda489feb468c7e3c140ab63369b408b09152
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 08b09a762a62e758c1c396b80b46648725b835b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500559"
 ---
 # <a name="-link-c-compiler-options"></a>-link（C# 编译器选项）
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
@@ -31,7 +31,7 @@ ms.locfileid: "45698255"
   
 ## <a name="arguments"></a>自变量  
  `fileList`  
- 必须的。 程序集文件名的逗号分隔列表。 如果文件名包含空格，则将名称括在引号内。  
+ 必需。 程序集文件名的逗号分隔列表。 如果文件名包含空格，则将名称括在引号内。  
   
 ## <a name="remarks"></a>备注  
  `-link` 选项使你可以部署具有嵌入类型信息的应用程序。 应用程序随后可以使用运行时程序集中实现嵌入类型信息的类型，而无需引用运行时程序集。 如果发布了各种版本的运行时程序集，则包含嵌入类型信息的应用程序可以使用各种版本，而无需重新编译。 有关示例，请参阅[演练：嵌入托管程序集中的类型](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)。  
@@ -83,9 +83,9 @@ csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
-- [演练：嵌入托管程序集中的类型](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
-- [-reference（C# 编译器选项）](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)  
-- [-noconfig（C# 编译器选项）](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)  
-- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [演练：嵌入托管程序集中的类型](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [-reference（C# 编译器选项）](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
+- [-noconfig（C# 编译器选项）](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)
+- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [互操作性概述](../../../csharp/programming-guide/interop/interoperability-overview.md)

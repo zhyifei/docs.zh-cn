@@ -3,13 +3,13 @@ title: API 网关模式与客户端到微服务直接通信
 description: 了解 API 网关模式与客户端到微服务直接通信之间的差异及二者的用途。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/20/2018
-ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 35bebd9429dabbe0e3ddc3549a504719321e47e1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030537"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675447"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 网关模式与客户端到微服务直接通信
 
@@ -25,7 +25,7 @@ ms.locfileid: "54030537"
 
 在此方法中，每个微服务都有一个公共终结点，有时每个微服务会有不同的 TCP 端口。 特定服务的 URL 示例可能是 Azure 中的以下 URL：
 
-<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
+`http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
 在基于群集的生产环境中，该 URL 将映射到群集中使用的负载均衡器，该负载均衡器随后在微服务中分布请求。 在生产环境中，可以在微服务和 Internet 之间使用 [Azure 应用程序网关](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction)等应用程序传送控制器 (ADC)。 该控制器将充当透明层，不仅执行负载均衡，还可通过提供 SSL 终端来保护服务。 这通过卸载 CPU 密集型 SSL 终端和其他到 Azure 应用程序网关的路由任务来提高主机负载。 在任何情况下，从逻辑应用程序体系结构的角度看，负载均衡器和 ADC 都是透明的。
 
@@ -134,7 +134,7 @@ API 网关可以提供多个功能。 然而，根据产品，它可能提供更
 
 图 4-14。 为 API 网关使用 Azure API 管理
 
-在这种情况下，使用如 Azure API 管理之类的产品时，拥有单个 API 网关不会存在较大风险，因为这类 API 网关“更精细”，这意味着不会实现可能发展成整体式组件的自定义 C# 代码。 这些产品表现为用于入口通信的反向代理，也可以从内部微服务筛选 API，并授权此单层中的已发布 API。
+在这种情况下，使用如 Azure API 管理之类的产品时，拥有单个 API 网关不会存在较大风险，因为这类 API 网关“更精细”，这意味着不会实现可能发展成整体式组件的自定义 C# 代码。 
 
 API 网关产品通常表现为用于入口通信的反向代理，也可以从内部微服务筛选 API，并授权此单层中的已发布 API。
 

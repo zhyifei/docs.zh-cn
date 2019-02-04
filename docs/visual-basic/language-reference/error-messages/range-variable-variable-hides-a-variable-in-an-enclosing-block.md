@@ -1,5 +1,5 @@
 ---
-title: 范围变量&lt;变量&gt;隐藏封闭块、 以前定义的范围变量或在查询表达式中隐式声明的变量中的变量
+title: 范围变量 <variable> 隐藏封闭块中的变量、以前定义的范围变量或在查询表达式中隐式声明的变量
 ms.date: 07/20/2015
 f1_keywords:
 - bc36633
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36633
 ms.assetid: 5d5470e4-3de5-49c2-8831-1087625f4a77
-ms.openlocfilehash: aef52ea912a4180a6505949c8077296628592c72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d898d2d3c5f36177a6363c1a24940fe46de83d3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748111"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259863"
 ---
-# <a name="range-variable-ltvariablegt-hides-a-variable-in-an-enclosing-block-a-previously-defined-range-variable-or-an-implicitly-declared-variable-in-a-query-expression"></a>范围变量&lt;变量&gt;隐藏封闭块、 以前定义的范围变量或在查询表达式中隐式声明的变量中的变量
+# <a name="range-variable-variable-hides-a-variable-in-an-enclosing-block-a-previously-defined-range-variable-or-an-implicitly-declared-variable-in-a-query-expression"></a>范围变量\<变量 > 隐藏封闭块、 以前定义的范围变量或在查询表达式中隐式声明的变量中的变量
 范围变量名称中指定`Select`， `From`， `Aggregate`，或`Let`子句的查询或查询，隐式声明的变量名称中之前已指定的范围变量名称重复例如，字段名称或聚合函数的名称。  
   
  **错误 ID:** BC36633  

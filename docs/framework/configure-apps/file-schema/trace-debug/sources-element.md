@@ -1,5 +1,5 @@
 ---
-title: '&lt;源&gt;元素'
+title: <sources> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2d97bd3175de5d0c0587e27c375f2d2bae378a6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7d92f91838a8d1914ffe574f018cc701477d767
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600396"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262499"
 ---
-# <a name="ltsourcesgt-element"></a>&lt;源&gt;元素
+# <a name="sources-element"></a>\<源 > 元素
 指定启动跟踪消息的跟踪源。  
   
  \<configuration>  

@@ -1,16 +1,16 @@
 ---
-title: '&lt;bookmarkResumptionQuery&gt;'
+title: <bookmarkResumptionQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 226de75d-d25c-48d5-b069-4b7d80a6852b
-ms.openlocfilehash: a5eb00d1e094484e3ec01e0db18719ec50e4b953
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fb298bcbc5b4bf5d699d3c79936ca3c15f67c0e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515060"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268179"
 ---
-# <a name="ltbookmarkresumptionquerygt"></a>&lt;bookmarkResumptionQuery&gt;
+# <a name="bookmarkresumptionquery"></a>\<bookmarkResumptionQuery>
 表示一个查询，该查询用于跟踪工作流实例中的书签恢复。 跟踪参与者需要用此查询来订阅书签恢复记录。  
   
  有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

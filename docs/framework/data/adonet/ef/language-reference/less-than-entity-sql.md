@@ -1,15 +1,15 @@
 ---
-title: '&lt;（小于）(Entity SQL)'
+title: <（小于）(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
-ms.openlocfilehash: 0c2185f824cfbe201b4138d0082e3edcf93e6a7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7762696405bbd9aa4637b4e3d91414ad38723e1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598299"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284773"
 ---
-# <a name="lt-less-than-entity-sql"></a>&lt;（小于）(Entity SQL)
+# <a name="-less-than-entity-sql"></a>\<（小于）(Entity SQL)
 比较两个表达式以确定左侧表达式的值是否小于右侧表达式的值。  
   
 ## <a name="syntax"></a>语法  

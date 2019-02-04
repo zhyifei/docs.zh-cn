@@ -1,5 +1,5 @@
 ---
-title: '&lt;筛选器&gt;的元素&lt;添加&gt;为&lt;sharedListeners&gt;'
+title: <filter> 的 <add> 的 <sharedListeners> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3de58fa9df1f856a6612d01d3ec9748c37e4a13e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 739acedcc83cd207a7ef4c10c220d27695dd713d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501316"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269293"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;筛选器&gt;的元素&lt;添加&gt;为&lt;sharedListeners&gt;
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<筛选器 > 元素\<添加 > 为\<sharedListeners >
 将筛选器添加到 `sharedListeners` 集合中的侦听器。  
   
  \<configuration>  

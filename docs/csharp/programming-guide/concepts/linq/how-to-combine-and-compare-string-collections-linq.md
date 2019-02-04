@@ -1,15 +1,15 @@
 ---
-title: 如何：合并和比较字符串集合 (LINQ) (C#)
+title: 如何：组合和比较字符串集合 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: c95736f184f3298fb7142b8f8c7b29c65b3f7227
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9788973df42b91aa2da690c5bf1b0f6b4d41b127
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514772"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>如何：合并和比较字符串集合 (LINQ) (C#)
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>如何：组合和比较字符串集合 (LINQ) (C#)
 此示例演示如何合并包含文本行的文件，并对结果排序。 具体而言，此示例演示如何对两组文本行执行简单的串联、联合和交集。  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>设置项目和文本文件  
@@ -173,5 +173,5 @@ class MergeStrings
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ 和文件目录 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

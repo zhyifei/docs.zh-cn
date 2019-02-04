@@ -1,17 +1,17 @@
 ---
-title: 没有可访问重载&lt;methodname&gt;可以使用这些自变量进行收缩转换名为：&lt;列表&gt;
+title: 没有可访问重载<methodname>可以用而无需收缩转换这些参数调用： <list>
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall2
 ms.assetid: 13b20ffa-9f02-4971-a3cb-e08b402fd971
-ms.openlocfilehash: 2a34365c9f978f88e1e2b8c4cd4e673e6a49389b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 392c8937f7b12a4628b57be37388c350df8fa9c3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495820"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289999"
 ---
-# <a name="no-accessible-overloaded-ltmethodnamegt-can-be-called-with-these-arguments-without-a-narrowing-conversion-ltlistgt"></a>没有可访问重载&lt;methodname&gt;可以使用这些自变量进行收缩转换名为：&lt;列表&gt;
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion-list"></a>没有可访问重载\<m h o d > 可以使用这些自变量进行收缩转换名为：\<列表 >
 调用了重载方法，但是该方法必须进行缩放转换才能与提供的参数列表匹配。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  

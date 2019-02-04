@@ -1,5 +1,5 @@
 ---
-title: '&lt;启动&gt;元素'
+title: <startup> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup
@@ -9,20 +9,18 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 82ee7b163efcefae0f2a169b74d29ea4c9f5398a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5047cb0ab1c8206abd88dc795e50272d69f1fd3f
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222735"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674563"
 ---
-# <a name="ltstartupgt-element"></a>&lt;启动&gt;元素
+# <a name="startup-element"></a>\<启动 > 元素
 
 指定公共语言运行时启动信息。
 
- \<配置 >\<启动 >
+ \<configuration> \<startup>
 
 ## <a name="syntax"></a>语法
 
@@ -72,7 +70,7 @@ ms.locfileid: "54222735"
  此特性会非常有用，如果你的应用程序使用旧式激活路径，例如[CorBindToRuntimeEx 函数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)，并且希望这些路径来激活而不是早期版本的 CLR 版本 4 或如果你的应用程序使用生成[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]但在使用.NET Framework 的早期版本构建的混合模式程序集具有依赖项。 在这些情况下，将属性设置为`true`。
 
 > [!NOTE]
-> 将属性设置为`true`防止 CLR 版本 1.1 或 CLR 版本 2.0 加载到同一个进程，有效地禁用进程内并行的功能 (请参阅[COM 互操作的并行执行](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32))。
+> 将属性设置为`true`防止 CLR 版本 1.1 或 CLR 版本 2.0 加载到同一个进程，有效地禁用进程内并行的功能 (请参阅[COM 互操作的并行执行](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100)))。
 
 ## <a name="example"></a>示例
 
@@ -98,6 +96,6 @@ ms.locfileid: "54222735"
 
 - [启动设置架构](index.md)
 - [配置文件架构](../index.md)
-- [如何：配置应用以支持.NET Framework 4 或更高版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [COM 互操作的的并行执行](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
+- [如何：将应用配置为支持 .NET Framework 4 或更高版本](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [COM 互操作的的并行执行](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
 - [进程内并行执行](../../../deployment/in-process-side-by-side-execution.md)

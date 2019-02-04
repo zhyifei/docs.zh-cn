@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;表达式&gt;&#39;不能用作类型约束'
+title: “<expression>”不能用作类型约束
 ms.date: 07/20/2015
 f1_keywords:
 - bc32061
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: b7f77c8113f8af113b4c8515994093958970864a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02d5035daa1ff3da4d7d3bac7c95ef8e8379b3f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742128"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264669"
 ---
-# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;表达式&gt;&#39;不能用作类型约束
+# <a name="expression-cannot-be-used-as-a-type-constraint"></a>\<表达式 > 不能用作类型约束
 约束列表包含的表达式不表示对类型形参的有效约束。  
   
  约束列表对传递给类型形参的类型实参有一定要求。 你可以采用任意组合指定以下要求：  

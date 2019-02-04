@@ -1,5 +1,5 @@
 ---
-title: '&lt;bindingRedirect&gt;元素'
+title: <bindingRedirect> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/bindingRedirect
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 7fb610357772b3c74129074096c53bf3f149501a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1db46d4eb4418682613624182cca133980206ea6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714745"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281198"
 ---
-# <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt;元素
+# <a name="bindingredirect-element"></a>\<bindingRedirect > 元素
 将一个程序集版本重定向到另一个版本。  
   
  \<configuration>  

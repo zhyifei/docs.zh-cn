@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 84e44f0112a5d1b5fd38daf488d865f6e228f82b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713936"
 ---
 # <a name="globalization"></a>全球化
 全球化涉及到设计和开发世界通用的应用，这些应用支持本地化界面和区域数据，供位于多个区域性的用户使用。 在设计阶段开始之前，应确定应用将支持哪些区域性。 虽然应用以单一区域性或区域作为默认目标，但可设计和编写应用，使其能够轻松地供其他区域性或区域的用户使用。  
@@ -204,7 +204,7 @@ ms.locfileid: "49453354"
   
 <a name="DatesAndTimes_TimeZones"></a>   
 ### <a name="serialization-and-time-zone-awareness"></a>序列化和时区识别能力  
- 一个日期和时间值可能有多个解释，从常规时间（“商店于 2013 年 1 月 2 日上午 9 点开门。”）到某个特定时刻（“出生日期：2013 年 1 月 2 日上午 6 点 32 分。”）。 当时间值表示某个特定时刻并且将它从序列化的值中还原时，无论用户处于哪个地理位置或时区，都应确保它表示的是同一时刻。  
+ 一个日期和时间值可能有多个解释，从常规时间（“商店于 2013 年 1 月 2 日上午 9 点开门。”）到某个特定时刻（“出生日期：2013 年 1 月 2 日上午 6:32:00。”）。 当时间值表示某个特定时刻并且将它从序列化的值中还原时，无论用户处于哪个地理位置或时区，都应确保它表示的是同一时刻。  
   
  以下示例阐释了此问题。 它将一个本地日期和时间值保存为字符串，采用 3 种[标准格式](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)（"G" 表示常规日期长时间，"s" 表示可排序日期/时间，"o" 表示往返日期/时间）以及二进制格式。  
   
@@ -371,5 +371,5 @@ ms.locfileid: "49453354"
   
 ## <a name="see-also"></a>请参阅
 
-- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)  
+- [全球化和本地化](../../../docs/standard/globalization-localization/index.md)
 - [有关使用字符串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)

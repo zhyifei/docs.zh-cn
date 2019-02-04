@@ -1,5 +1,5 @@
 ---
-title: '&lt;loadFromRemoteSources&gt;元素'
+title: <loadFromRemoteSources> 元素
 ms.date: 05/24/2018
 helpviewer_keywords:
 - loadFromRemoteSources element
@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b2a5301defabde44c4f5a98e57bd302fe390d53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7568129f30267b212737ec8aa688cf882e19bbff
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671871"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675304"
 ---
-# <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt;元素
+# <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 元素
 指定是否应为从远程源加载的程序集授予完全信任在.NET Framework 4 及更高版本。
   
 > [!NOTE]
->  如果由于中的 Visual Studio 项目错误列表或生成错误的错误消息被转到本主题，请参阅[如何：使用 Visual Studio 中的程序集从 Web](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)。  
+>  如果你已由于中的 Visual Studio 项目错误列表或生成错误的错误消息定向到这篇文章，请参阅[如何：使用 Visual Studio 中的程序集从 Web](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))。  
   
  \<configuration>  
 \<运行时 >  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;cryptographySettings&gt;元素'
+title: <cryptographySettings> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 0d1dfe5cadf59122994f1a751f985e186c6cf5b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11f07bbf5de04edc98a5a5bc0ba07f1629763a9f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602502"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258703"
 ---
-# <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographySettings&gt;元素
+# <a name="cryptographysettings-element"></a>\<cryptographySettings > 元素
 包含加密设置。  
   
  \<configuration>  

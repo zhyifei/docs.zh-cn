@@ -1,15 +1,15 @@
 ---
-title: 如何：查询程序集&#39;使用反射 (LINQ) (Visual Basic 中) 的元数据
+title: 如何：查询使用反射 (LINQ) (Visual Basic 中) 的程序集的元数据
 ms.date: 07/20/2015
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-ms.openlocfilehash: fb46cef7eb9b4827cb5e4b7ca7366c0910fcef26
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7966b85172af48c7762027877a03b12dd6e2b62d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609819"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255154"
 ---
-# <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>如何：查询程序集&#39;使用反射 (LINQ) (Visual Basic 中) 的元数据
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a>如何：查询使用反射 (LINQ) (Visual Basic 中) 的程序集的元数据
 下面的示例演示了如何将 LINQ 与反射配合使用以检索有关与指定搜索条件匹配的方法的特定元数据。 在这种情况下，该查询将在返回数组等可枚举类型的程序集中查找所有方法的名称。  
   
 ## <a name="example"></a>示例  

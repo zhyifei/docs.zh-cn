@@ -1,15 +1,15 @@
 ---
-title: '&lt;routing&gt; 的 &lt;filters&gt;'
+title: <filters> 的 <routing>
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-ms.openlocfilehash: 468c10bc06b60f80ce93cf413c02582fe3861f70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b2c735a19c4cece16dcb77e3ec548eb2d39ec18
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704428"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272655"
 ---
-# <a name="ltfiltersgt-of-ltroutinggt"></a>&lt;routing&gt; 的 &lt;filters&gt;
+# <a name="filters-of-routing"></a>\<筛选器 > 的\<路由 >
 
 表示一个配置节，用于定义一组路由筛选器，确定类型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>要评估传入消息时使用。
 

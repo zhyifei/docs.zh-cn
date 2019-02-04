@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e60aae158d822a3cfba93f6d714d83bcd7aa0e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155020"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600760"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)
 使用 <xref:System.IO> 命名空间中的类与驱动器、文件和目录一起工作。  
@@ -58,8 +58,8 @@ ms.locfileid: "53155020"
 |到|查看|
 |---|---|   
 |读取和写入数据文件|[如何：对新建的数据文件进行读取和写入](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|从文件中读取文本|[如何：从文件读取文本](../../../../standard/io/how-to-read-text-from-a-file.md)|  
-|将文本写入文件|[如何：向文件写入文本](../../../../standard/io/how-to-write-text-to-a-file.md)|  
+|从文件中读取文本|[如何：从文件中读取文本](../../../../standard/io/how-to-read-text-from-a-file.md)|  
+|将文本写入文件|[如何：将文本写入文件](../../../../standard/io/how-to-write-text-to-a-file.md)|  
 |从字符串中读取字符|[如何：从字符串中读取字符](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
 |向字符串写入字符|[如何：向字符串写入字符](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
 |加密数据|[加密数据](../../../../standard/security/encrypting-data.md)|  
@@ -98,8 +98,8 @@ ms.locfileid: "53155020"
 ## <a name="file-events"></a>文件事件  
  <xref:System.IO.FileSystemWatcher> 组件允许监视系统上或任何你对其具有网络访问权限的计算机上的文件和目录所作的更改。 例如，如果修改了文件，可能想要向用户发送更改警报。 发生更改时，会引发一个或多个事件并将其存储在缓冲区中，然后移交给 <xref:System.IO.FileSystemWatcher> 组件进行处理。  
   
-## <a name="see-also"></a>请参阅  
- [撰写流](../../../../standard/io/composing-streams.md)  
- [文件和流 I/O](../../../../standard/io/index.md)  
- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
- [在 .NET Framework 文件 I/O 和文件系统中使用的类 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>请参阅
+- [撰写流](../../../../standard/io/composing-streams.md)
+- [文件和流 I/O](../../../../standard/io/index.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [在 .NET Framework 文件 I/O 和文件系统中使用的类 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

@@ -2,12 +2,12 @@
 title: 如何：查找相关元素 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 57cbba6e52feec05ed6381899017f1ce5d1e8ec1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 47609f9bf047000585c56387acf648bcfa6ee5b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617403"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>如何：查找相关元素 (XPath-LINQ to XML) (C#)
 本主题演示如何在由其他元素的值所引用的属性上获取元素选择。  

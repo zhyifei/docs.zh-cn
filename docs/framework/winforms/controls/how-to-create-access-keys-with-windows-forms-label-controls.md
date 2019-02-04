@@ -25,7 +25,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54680312"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>如何：使用 Windows 窗体 Label 控件创建访问键
-Windows 窗体<xref:System.Windows.Forms.Label>控件可用于定义其他控件的访问密钥。 当标签控件中定义的访问键时，用户可以按 ALT 键的同时指定要将焦点移到控件的 tab 键顺序后面的字符。 因为标签不能接收焦点，焦点将自动移动到下一个控件的 tab 键顺序。 使用此方法将访问密钥分配给文本框、 组合框、 列表框和数据网格。  
+Windows 窗体<xref:System.Windows.Forms.Label>控件可用于定义其他控件的访问键。 在标签控件中定义访问键时，用户可以同时按 ALT 键和指定的字符，以便将焦点移到 Tab 键顺序中排在其后面的控件。 由于标签不能接收焦点，因此焦点会自动移到 Tab 键顺序中的下一个控件。 使用此方法可将访问键分配给文本框、组合框、列表框和数据网格。  
   
 ### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>若要向使用标签控件分配访问键  
   
@@ -37,10 +37,10 @@ Windows 窗体<xref:System.Windows.Forms.Label>控件可用于定义其他控件
   
 2.  设置的标签<xref:System.Windows.Forms.Label.UseMnemonic%2A>属性设置为`true`。  
   
-3.  使用与号 (&) 中标签的<xref:System.Windows.Forms.Label.Text%2A>要分配为标签的访问密钥属性。 有关详细信息，请参阅[的 Windows 窗体控件创建访问密钥](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)。  
+3.  在标签的 <xref:System.Windows.Forms.Label.Text%2A> 属性中使用与号 (&) 来分配标签的访问键。 有关详细信息，请参阅[为 Windows 窗体控件创建访问键](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)。  
   
     > [!NOTE]
-    >  您可能想要显示与号中的标签控件，而不使用它们来创建访问键。 如果将标签控件绑定到其中的数据包括与号在记录集中的字段，这可能会出现。 若要在标签控件中显示与号，请设置<xref:System.Windows.Forms.Label.UseMnemonic%2A>属性设置为`false`。 如果你想要显示与号，并且还具有访问密钥，设置<xref:System.Windows.Forms.Label.UseMnemonic%2A>属性设置为`true`并指示访问密钥与一个 & 号 (&) 和与符号以显示两个 & 号。  
+    >  可能需要显示标签控件中的与号，而不使用它们来创建访问键。 如果将标签控件绑定到记录集中的一个字段，而该记录集中的数据包含与号，则可能会出现这种情况。 若要在标签控件中显示与号，请将 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 属性设置为 `false`。 若要显示与号，同时还要设置访问键，请将 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 属性设置为 `true`，并用一个与号 (&) 来表示访问键，用两个与号来表示与号。  
   
     ```vb  
     Label1.UseMnemonic = True  

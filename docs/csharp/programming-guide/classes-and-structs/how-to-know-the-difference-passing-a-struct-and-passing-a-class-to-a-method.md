@@ -7,12 +7,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: c5963f45ee233f4413c4281a063c9c3d2a4c2a93
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f131f647d5335a011c5f446f847ed43fda019ade
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559266"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>如何：了解向方法传递结构与类引用的区别（C# 编程指南）
 下面的示例演示向方法传递[结构](../../../csharp/language-reference/keywords/struct.md)和向方法传递[类](../../../csharp/language-reference/keywords/class.md)实例之间的区别。 在此示例中，这两个参数（结构和类实例）都按值传递，并且两个方法都更改了参数的一个字段的值。 但是，由于传递结构和传递类实例时所传递的内容不同，所以这两个方法的结果不同。  
@@ -28,7 +28,7 @@ ms.locfileid: "53245449"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)
 - [传递参数](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)

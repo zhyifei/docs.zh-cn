@@ -1,16 +1,16 @@
 ---
-title: '&lt;activityStateQuery&gt;'
+title: <activityStateQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9f8c3e4f-e2e3-4402-9760-03bf918ece7b
-ms.openlocfilehash: 7b872d933d07af329601063b3d769bc43a22007c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ddb3f1d070531d76201c0b9b5e71f14e2fac496
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568668"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257083"
 ---
-# <a name="ltactivitystatequerygt"></a>&lt;activityStateQuery&gt;
+# <a name="activitystatequery"></a>\<activityStateQuery>
 表示一个查询，该查询用于跟踪构成工作流实例的活动的生命周期更改。 例如，你可能想要跟踪的每次在"发送电子邮件"活动完成工作流实例内。 跟踪参与者需要用此查询来订阅活动状态记录对象。 在 ActivityStates 中指定了要订阅的可用状态。  
   
  有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  

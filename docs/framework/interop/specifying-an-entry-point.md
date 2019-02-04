@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31bb28b5bda51fb1579021e47b8d5ec49adb644e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c278eca421020bea4f36f87eb6c8a9a8ba7d2a43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658281"
 ---
 # <a name="specifying-an-entry-point"></a>指定入口点
 入口点标识 DLL 中的函数位置。 在托管项目中，目标函数的原始名称或序号入口点跨越互操作边界标识该函数。 此外，可将入口点映射到其他名称，有效地重命名该函数。  
@@ -88,8 +88,8 @@ extern "C" int MsgBox(HWND hWnd,
                       unsigned int uType);  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [平台调用示例](../../../docs/framework/interop/platform-invoke-examples.md)  
- [用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [平台调用示例](../../../docs/framework/interop/platform-invoke-examples.md)
+- [用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：更改 Windows 窗体 MonthCalendar 控件&#39;的外观
+title: 如何：更改 Windows 窗体 MonthCalendar 控件的外观
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: 5afee81d3db9452be352c875dbba0f7885592c02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7f321c1557bc7ea19213f2fc67767fe56328cf4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624338"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258912"
 ---
-# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>如何：更改 Windows 窗体 MonthCalendar 控件&#39;的外观
+# <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>如何：更改 Windows 窗体 MonthCalendar 控件的外观
 Windows 窗体<xref:System.Windows.Forms.MonthCalendar>让您可以自定义在很多方面的日历的外观。 例如，可以设置配色方案，并选择要显示或隐藏周数和当前日期。  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>若要更改月日历的配色方案  

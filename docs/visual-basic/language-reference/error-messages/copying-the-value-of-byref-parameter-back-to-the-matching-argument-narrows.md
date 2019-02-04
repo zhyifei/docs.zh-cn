@@ -1,5 +1,5 @@
 ---
-title: 值复制&#39;ByRef&#39;参数&#39; &lt;parametername&gt; &#39;返回到匹配的参数用于限制从类型&#39; &lt;typename1&gt; &#39;类型&#39; &lt;typename2&gt;&#39;
+title: 将“ByRef”参数“<parametername>”的值复制回匹配的参数将导致从类型“<typename1>”到类型“<typename2>”的收缩转换
 ms.date: 07/20/2015
 f1_keywords:
 - bc32053
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: ec733ecd605d0a9db840ea3f0c3e0e3b5b698054
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5d427495e8eedae9dc0163c97401338fb6d0bbd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506263"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276609"
 ---
-# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>值复制&#39;ByRef&#39;参数&#39; &lt;parametername&gt; &#39;返回到匹配的参数用于限制从类型&#39; &lt;typename1&gt; &#39;类型&#39; &lt;typename2&gt;&#39;
+# <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>复制的 ByRef 参数值\<parametername > 返回到匹配的参数用于限制从类型\<typename1 > 类型\<typename2 >
 加宽到相应的参数类型，由自变量调用过程时，从参数的参数转换为收缩转换。  
   
  在定义类或结构时，可以定义一个或多个转换运算符来将该类或结构类型转换为其他类型。 也可以定义反向转换运算符来将这些其他类型转换回类或结构类型。 当在过程调用中使用你的类或结构类型时，Visual Basic 可以使用这些转换运算符来将自变量的类型转换为其对应的参数类型。  

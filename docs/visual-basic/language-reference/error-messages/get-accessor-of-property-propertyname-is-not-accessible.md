@@ -1,5 +1,5 @@
 ---
-title: '&#39;获取&#39;属性访问器&#39; &lt;propertyname&gt; &#39;不可访问'
+title: 属性“<propertyname>”的“Get”访问器不可访问
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31103
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-ms.openlocfilehash: 10b7168ac40ca7c7d696cd63cd823454f404bb94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72675f882676d3ded9ccc9ff245a1d757fa4393a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582209"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257780"
 ---
-# <a name="39get39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;获取&#39;属性访问器&#39; &lt;propertyname&gt; &#39;不可访问
+# <a name="get-accessor-of-property-propertyname-is-not-accessible"></a>Get 访问器属性的\<属性名称 > 不可访问
 语句试图检索属性的值不包含属性的访问权限时`Get`过程。  
   
  如果[Get 语句](../../../visual-basic/language-reference/statements/get-statement.md)标记具有限制性更强的访问权限级别比其[Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)，尝试读取属性值在以下情况下可能会失败：  

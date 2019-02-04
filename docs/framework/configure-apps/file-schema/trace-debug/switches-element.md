@@ -1,5 +1,5 @@
 ---
-title: '&lt;开关&gt;元素'
+title: <switches> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f046e1142209b519ecf71e67a11592f9aa578f84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: afd0e955698dfc7ff3d5c843dd8db10f648265b8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666704"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254660"
 ---
-# <a name="ltswitchesgt-element"></a>&lt;开关&gt;元素
+# <a name="switches-element"></a>\<开关 > 元素
 包含跟踪开关和对该跟踪开关设置的级别。  
   
  \<configuration>  

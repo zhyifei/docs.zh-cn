@@ -1,15 +1,15 @@
 ---
-title: '&lt;filter&gt;'
+title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: 9fae9a599299fdd8cf1e996593514fc0ef38b6ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bff19f106d86c73dea80b8b57bb73442eaa2cf9f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645504"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278780"
 ---
-# <a name="ltfiltergt"></a>&lt;filter&gt;
+# <a name="filter"></a>\<filter>
 
 定义路由筛选器，确定类型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>若要在评估传入消息，以及任何支持的数据和所需的筛选器参数时使用。
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：在 .NET Framework 流与 Windows 运行时流之间转换
+title: 如何：在 .NET Framework 流和 Windows 运行时流之间进行转换
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,16 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 6a006d739b6fa9a31ad238702dd0b2d26254deca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087474"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492754"
 ---
-# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>如何：在 .NET Framework 流与 Windows 运行时流之间转换
+# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>如何：在 .NET Framework 流和 Windows 运行时流之间进行转换
 
-适用于 Windows 应用商店应用的 .NET Framework 是完整的 .NET Framework 的子集。 由于 Windows 应用商店应用的安全性和其他要求，你无法使用整套 .NET Framework API 来打开和读取文件。 有关详细信息，请参阅[适用于 Windows 应用商店应用的 .NET 概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))。 但是，你可能需要将 .NET Framework API 用于其他流处理操作。 若要操作这些流，可能会发现在 .NET Framework 流类型（如 <xref:System.IO.MemoryStream> 或 <xref:System.IO.FileStream>）和 Windows 运行时流（如 <xref:Windows.Storage.Streams.IInputStream>、<xref:Windows.Storage.Streams.IOutputStream> 或 <xref:Windows.Storage.Streams.IRandomAccessStream>）之间进行转换非常重要。
+适用于 Windows 应用商店应用的 .NET Framework 是完整的 .NET Framework 的子集。 由于 Windows 应用商店应用的安全性和其他要求，你无法使用整套 .NET Framework API 来打开和读取文件。 有关详细信息，请参阅 [适用于 Windows 应用商店应用的 .NET 概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))。 但是，你可能需要将 .NET Framework API 用于其他流处理操作。 若要操作这些流，可能会发现在 .NET Framework 流类型（如 <xref:System.IO.MemoryStream> 或 <xref:System.IO.FileStream>）和 Windows 运行时流（如 <xref:Windows.Storage.Streams.IInputStream>、<xref:Windows.Storage.Streams.IOutputStream> 或 <xref:Windows.Storage.Streams.IRandomAccessStream>）之间进行转换非常重要。
 
 [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx) 类包含简化这些转换的方法。 但是，.NET Framework 中的流与 Windows 运行时中的流之间存在一些基本差异，这将影响使用这些方法所获得的结果。 后续各节描述了详细信息。
 
@@ -79,6 +79,6 @@ Windows 运行时提供支持只读、只写或读写的流类型，并且在将
 
 ## <a name="see-also"></a>请参阅
 
-- [快速入门：对文件执行读取和写入操作 (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-- [适用于 Microsoft Store 应用的 .NET 概述](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-- [适用于 Windows 应用商店应用的 .NET - 支持的 API](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [快速入门：对文件执行读取和写入操作 (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)
+- [适用于 Microsoft Store 应用的 .NET 概述](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)
+- [适用于 Windows 应用商店应用的 .NET - 支持的 API](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

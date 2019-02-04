@@ -2,12 +2,12 @@
 title: 事务协议
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 559b7ec1539a43ec27010031320be144d6f5e24b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b9da567e8c82edf505a974c9884f6f1738747b
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533762"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066229"
 ---
 # <a name="transaction-protocols"></a>事务协议
 Windows Communication Foundation (WCF) 实现 Ws-atomic Transaction 和 Ws-coordination 协议。  
@@ -118,7 +118,7 @@ Windows Communication Foundation (WCF) 实现 Ws-atomic Transaction 和 Ws-coord
   
  R1232:传出`wscoor:Register`消息必须使用`IssuedTokenOverTransport`身份验证模式中所述[安全协议](../../../../docs/framework/wcf/feature-details/security-protocols.md)。  
   
- `wsse:Timestamp`必须使用签名元素`SecurityContextToken``STx`颁发。 此签名是拥有与特定事务关联的令牌的证明，用于对登记事务的参与者进行身份验证。 RegistrationResponse 消息通过 HTTPS 发回。  
+ `wsse:Timestamp`必须使用签名元素`SecurityContextToken STx`颁发。 此签名是拥有与特定事务关联的令牌的证明，用于对登记事务的参与者进行身份验证。 RegistrationResponse 消息通过 HTTPS 发回。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 协议绑定配置  
  WCF 通过 HTTPS 支持单向 （数据报） 消息。 消息中的关联作为实现详细信息保留。  

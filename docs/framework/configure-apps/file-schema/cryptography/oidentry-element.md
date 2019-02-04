@@ -1,5 +1,5 @@
 ---
-title: '&lt;oidEntry&gt;元素'
+title: <oidEntry> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c891b5d67c7f2ef46682233ad555a1276f8e027d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1dc4c788576fd3cab55db5255617cc55e68594b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606895"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259054"
 ---
-# <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt;元素
+# <a name="oidentry-element"></a>\<oidEntry > 元素
 将 ASN.1 对象标识符 (OID) 映射到友好名称。  
   
  \<configuration>  

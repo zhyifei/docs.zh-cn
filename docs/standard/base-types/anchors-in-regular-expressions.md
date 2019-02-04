@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f0e42c0032dc6f9dac0895a29db9de79547c0a49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675334"
 ---
 # <a name="anchors-in-regular-expressions"></a>正则表达式中的定位点
 <a name="top"></a> 定位点（原子零宽度断言）指定字符串中必须出现匹配的位置。 在搜索表达式中使用定位点时，正则表达式引擎不在字符串中前进或使用字符，它仅在指定位置查找匹配。 例如， `^` 指定必须从行或字符串的开头开始匹配。 因此，正则表达式 `^http:` 仅当 "http:" 出现在行开头时才与之匹配。 下表列出了 .NET 中正则表达式支持的定位点。  
@@ -58,7 +58,7 @@ ms.locfileid: "53155033"
 |模式|说明|  
 |-------------|-----------------|  
 |`^`|从输入字符串的开头开始匹配（如果在调用该方法时选择了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项，则从行的开头开始匹配）。|  
-|`((\w+(\s?)){2,}`|匹配刚好两次后跟零个或一个空格的一个或多个单词字符。 这是第一个捕获组。 此表达式还定义第二个和第三个捕获组：第二组包括捕获的单词，第三组包括捕获的空格。|  
+|`((\w+(\s?)){2,}`|匹配刚好两次后跟零个或一个空格的一个或多个单词字符。 这是第一个捕获组。 此表达式还定义第二个和第三个捕获组：第二个捕获组由捕获的单词组成，第三个捕获组由捕获的空格组成。|  
 |`,\s`|匹配后跟一个空白字符的逗号。|  
 |`(\w+\s\w+)`|匹配后跟一个空格再后跟一个或多个单词字符的一个或多个单词字符。 这是第四个捕获组。|  
 |`,`|匹配逗号。|  
@@ -95,7 +95,7 @@ ms.locfileid: "53155033"
   
 <a name="EndOrNOnly"></a>   
 ## <a name="end-of-string-or-before-ending-newline-z"></a>字符串末尾或结束换行之前：\Z  
- `\Z` 定位点指定匹配项必须出现在输入字符串的末尾，或出现在输入字符串末尾的 `\n` 之前。 它等同于 `$` 定位点，只不过 `\Z` 忽略了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项。 因此，在多行字符串中，它只能匹配最后一行的末尾，或 `\n` 前的最后一行。  
+ `\Z` 定位点指定匹配项必须出现在输入字符串的末尾，或出现在输入字符串末尾的 `\n` 之前。 它等同于 `$` 定位点，只不过 `\Z` 忽略了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项。 因此，在多行字符串中，它只能匹配最后一行的末尾，或 `\n`前的最后一行。  
   
  请注意， `\Z` 与 `\n` 匹配但与 `\r\n` （CR/LF 字符组合）不匹配。 若要匹配 CR/LF，请将 `\r?\Z` 包括到正则表达式模式中。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "53155033"
   
 <a name="EndOnly"></a>   
 ## <a name="end-of-string-only-z"></a>仅字符串末尾：\z  
- `\z` 定位点指定匹配必须出现在输入字符串末尾。 与 `$` 语言元素类似，`\z` 忽略了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项。 与 `\Z` 语言元素不同，`\z` 不匹配字符串末尾的 `\n` 字符。 因此，它只能匹配输入字符串的最后一行。  
+ `\z` 定位点指定匹配必须出现在输入字符串末尾。 与 `$` 语言元素类似， `\z` 忽略了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项。 与 `\Z` 语言元素不同， `\z` 不匹配字符串末尾的 `\n` 字符。 因此，它只能匹配输入字符串的最后一行。  
   
  以下示例在正则表达式中使用 `\z` 定位点，与上一部分的示例中使用的定位点在其他方面相同，用于提取有关某些职业棒球队存在年限的信息。 此示例尝试使用正则表达式模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`匹配字符串数组中五个元素的每一个。 两个字符串以回车符和换行符结尾，一个字符串以换行符结尾，另外两个既不以回车符也不以换行符结尾。 如输出所示，只有不包含回车符或换行符的字符串与模式匹配。  
   
@@ -178,5 +178,5 @@ ms.locfileid: "53155033"
   
 ## <a name="see-also"></a>请参阅
 
-- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)

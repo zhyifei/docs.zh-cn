@@ -1,5 +1,5 @@
 ---
-title: 默认属性访问之间不明确继承的接口成员&#39; &lt;defaultpropertyname&gt; &#39;接口的&#39; &lt;interfacename1&gt; &#39;和&#39; &lt;defaultpropertyname&gt; &#39;接口的&#39; &lt;interfacename2&gt;&#39;
+title: 默认属性访问在接口“<defaultpropertyname>”的继承接口成员“<interfacename1>”和接口“<defaultpropertyname>”的“<interfacename2>”之间不明确
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30686
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7079ff3b56b94cb969a77707dbd79b1d7dd4bb1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518639"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270584"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>默认属性访问之间不明确继承的接口成员&#39; &lt;defaultpropertyname&gt; &#39;接口的&#39; &lt;interfacename1&gt; &#39;和&#39; &lt;defaultpropertyname&gt; &#39;接口的&#39; &lt;interfacename2&gt;&#39;
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>默认属性访问之间不明确继承的接口成员的\<defaultpropertyname > 的接口\<interfacename1 >' 和 '\<defaultpropertyname > 的接口\<interfacename2 >
 接口继承自两个接口，其中每个声明具有相同名称的默认属性。 编译器无法解析所需的访问而无需限定此默认属性。 下面的示例阐释了这一点。  
   
 ```  

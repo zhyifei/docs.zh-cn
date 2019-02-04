@@ -1,5 +1,5 @@
 ---
-title: 如何使用 WebRequest 类请求数据
+title: 如何：使用 WebRequest 类请求数据
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: 8a740d2eecd4d866fd3042985f1f6f3194a12ec5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ac7f9fc4a3c7a376d96d7cf820d2051bf2103e51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623061"
 ---
-# <a name="how-to-request-data-using-the-webrequest-class"></a>如何使用 WebRequest 类请求数据
+# <a name="how-to-request-data-using-the-webrequest-class"></a>如何：使用 WebRequest 类请求数据
 以下过程描述从服务器请求资源（如 Web 页或文件）所需的步骤。 资源必须由 URI 标识。  
   
 ### <a name="to-request-data-from-a-host-server"></a>从主机服务器请求数据  
@@ -172,9 +172,9 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [创建 Internet 请求](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [在网络上使用流](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [请求数据](../../../docs/framework/network-programming/requesting-data.md)  
- [如何：使用 WebRequest 类发送数据](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
+## <a name="see-also"></a>请参阅
+- [创建 Internet 请求](../../../docs/framework/network-programming/creating-internet-requests.md)
+- [在网络上使用流](../../../docs/framework/network-programming/using-streams-on-the-network.md)
+- [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [请求数据](../../../docs/framework/network-programming/requesting-data.md)
+- [如何：使用 WebRequest 类发送数据](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)

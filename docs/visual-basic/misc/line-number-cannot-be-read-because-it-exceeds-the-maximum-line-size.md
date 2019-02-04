@@ -1,17 +1,17 @@
 ---
-title: 行&lt;数&gt;无法读取，因为它超过了最大行大小。
+title: 行<number>无法读取，因为它超过了最大行大小。
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MaxLineSizeExceeded
 ms.assetid: c59116d9-9856-47af-b32d-616d8f2d10d3
-ms.openlocfilehash: 6288f50a28ed4edac876dd1ea08d9d09dbca90be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f9a784676777fa1419dc85f07ef26a614768ab8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671403"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256885"
 ---
-# <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>行&lt;数&gt;无法读取，因为它超过了最大行大小。
+# <a name="line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>行\<数 > 无法读取，因为它超过了最大行大小。
 无法读取行，因为它超过了最大行大小。 通常这意味着在文件中有一个左引号缺少对应的右引号。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  

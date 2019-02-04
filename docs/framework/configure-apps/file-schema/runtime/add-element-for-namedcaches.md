@@ -1,20 +1,18 @@
 ---
-title: '&lt;添加&gt;元素&lt;namedCaches&gt;'
+title: <add> 的 <namedCaches> 元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: fa11cea7e78a56c3f5cbfd9d0678e1ed671f6f3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbe7c98e9603e51aa381f07ea35ffe46e6d3adfb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506038"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257351"
 ---
-# <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;添加&gt;元素&lt;namedCaches&gt;
+# <a name="add-element-for-namedcaches"></a>\<添加 > 元素\<namedCaches >
 将添加`namedCache`进入`namedCaches`内存缓存的集合。  
   
  \<system.runtime.caching>  

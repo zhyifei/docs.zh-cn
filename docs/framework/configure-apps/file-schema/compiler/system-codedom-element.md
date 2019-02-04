@@ -1,5 +1,5 @@
 ---
-title: '&lt;system.codedom&gt;元素'
+title: < System.codedom > 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 235f3c2474acb488fecf34a64515973b45409e1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2c65044b99e2d5fda7025f24d1d4c4082ded4ec
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649422"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268218"
 ---
-# <a name="ltsystemcodedomgt-element"></a>&lt;system.codedom&gt;元素
+# <a name="systemcodedom-element"></a>\<system.codedom > 元素
 指定可用语言提供程序的编译器配置设置。  
   
  \<配置 > 元素  

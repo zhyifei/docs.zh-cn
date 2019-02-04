@@ -1,5 +1,5 @@
 ---
-title: '&lt;删除&gt;的元素&lt;侦听器&gt;为&lt;源&gt;'
+title: <remove> 的 <listeners> 的 <source> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -7,16 +7,14 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 8beb3ef041b153535afcb8bd92e1c29787e1f161
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 522319c64ddff6eb6872584937d540a8955b7c8f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654407"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260328"
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;删除&gt;的元素&lt;侦听器&gt;为&lt;源&gt;
+# <a name="remove-element-for-listeners-for-source"></a>\<删除 > 元素\<侦听器 > 为\<源 >
 从跟踪源的 `Listeners` 集合中删除侦听器。  
   
  \<configuration>  

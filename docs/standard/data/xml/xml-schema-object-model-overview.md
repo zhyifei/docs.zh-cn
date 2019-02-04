@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab7f3075d46ef0e8b98af471ae3943f7500128e5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c63a21ed871bf967674d09230f897b7ab98dfa4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554941"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML 架构对象模型概述
 Microsoft .NET Framework 中的架构对象模型 (SOM) 是一个丰富 API，可以通过编程创建、编辑和验证架构。 SOM 对 XML 架构文档的作用类似与文档对象模型 (DOM) 对 XML 文档的作用。 XML 架构文档是有效的 XML 文件，在加载到 SOM 之后，传达其他符合该架构的 XML 文档的结构和有效性的含义。  
@@ -40,10 +40,10 @@ Microsoft .NET Framework 中的架构对象模型 (SOM) 是一个丰富 API，�
   
 ## <a name="see-also"></a>请参阅
 
-- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
-- [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [后架构编译信息集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
