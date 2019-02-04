@@ -2,12 +2,12 @@
 title: <basicHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-ms.openlocfilehash: 9cb42904228f9faf29e0f892c773c2cc8b050bbc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c0f045210e386c7ad3ae1ca5ba953b4c501a2012
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280015"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674784"
 ---
 # <a name="basichttpcontextbinding"></a>\<basicHttpContextBinding>
 指定一个绑定，该绑定为将通过启用 HTTP Cookie 作为交换机制来进行交换的 <xref:System.ServiceModel.BasicHttpBinding> 提供上下文。  
@@ -85,7 +85,7 @@ ms.locfileid: "55280015"
 |元素|描述|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定义绑定的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>。|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   

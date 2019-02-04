@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2295ebd919a91ae9942ec225f2bfe784e5ee151
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c1e1c3236ed2d79592bca46e925c9f67e5ac9c51
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267789"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675330"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > 元素
 通过禁用将程序集视为等效于应用程序可移植性用途的默认行为来指定应用程序可以在两种不同的 .NET Framework 实现中引用同一程序集。  
@@ -80,4 +80,4 @@ ms.locfileid: "55267789"
   
 ## <a name="see-also"></a>请参阅
 - [/appconfig （C# 编译器选项）](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [.NET framework 程序集统一概述](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+- [.NET framework 程序集统一概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

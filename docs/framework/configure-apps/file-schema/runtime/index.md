@@ -2,12 +2,18 @@
 title: 运行时设置架构
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - schema runtime settings
-  - 'configuration schema [.NET Framework], runtime settings'
-  - runtime settings schema
+- schema runtime settings
+- configuration schema [.NET Framework], runtime settings
+- runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: b6c0ead0715221354970ddee90e89bae7c583266
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675421"
 ---
 # <a name="runtime-settings-schema"></a>运行时设置架构
 运行设置由公共语言运行时用于配置面向 .NET Framework 的应用程序。  
@@ -127,5 +133,5 @@ ms.author: ronpet
   
 ## <a name="see-also"></a>请参阅
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [如何：禁用并发垃圾回收](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+- [若要禁用并发垃圾回收](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

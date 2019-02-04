@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a389403d58bb0b4fb4f98e25d2c9a6b2cf337281
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7998275ae1e80a87354dd5b3a8b0a1aa73b3b987
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264621"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674771"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > 元素
 指定垃圾回收是否支持多个 CPU 组。  
@@ -75,5 +75,5 @@ ms.locfileid: "55264621"
 ## <a name="see-also"></a>请参阅
 - [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [如何：禁用并发垃圾回收](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+- [若要禁用并发垃圾回收](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [工作站和服务器垃圾回收](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
