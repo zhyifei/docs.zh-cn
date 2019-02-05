@@ -5,19 +5,19 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-ms.openlocfilehash: 1199fa4e126c3d15e56a6c895aecf6afcae17f0b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ceee1b47fb66cfb8e24b6871af3be6475031504f
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678507"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738872"
 ---
-# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a><span data-ttu-id="14004-102">如何：使对象变量不引用任何实例 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="14004-102">How to: Make an Object Variable Not Refer to Any Instance (Visual Basic)</span></span>
-<span data-ttu-id="14004-103">您可以通过将其设置为解除关联，从任何对象实例的对象变量[Nothing](../../../../visual-basic/language-reference/nothing.md)。</span><span class="sxs-lookup"><span data-stu-id="14004-103">You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).</span></span>  
+# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a><span data-ttu-id="a0435-102">如何：使对象变量不引用任何实例 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0435-102">How to: Make an Object Variable Not Refer to Any Instance (Visual Basic)</span></span>
+<span data-ttu-id="a0435-103">您可以通过将其设置为解除关联，从任何对象实例的对象变量[Nothing](../../../../visual-basic/language-reference/nothing.md)。</span><span class="sxs-lookup"><span data-stu-id="a0435-103">You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).</span></span>  
   
-### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a><span data-ttu-id="14004-104">若要解除关联从任何对象实例的对象变量</span><span class="sxs-lookup"><span data-stu-id="14004-104">To disassociate an object variable from any object instance</span></span>  
+### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a><span data-ttu-id="a0435-104">若要解除关联从任何对象实例的对象变量</span><span class="sxs-lookup"><span data-stu-id="a0435-104">To disassociate an object variable from any object instance</span></span>  
   
--   <span data-ttu-id="14004-105">将变量设置为`Nothing`在赋值语句中。</span><span class="sxs-lookup"><span data-stu-id="14004-105">Set the variable to `Nothing` in an assignment statement.</span></span>  
+-   <span data-ttu-id="a0435-105">将变量设置为`Nothing`在赋值语句中。</span><span class="sxs-lookup"><span data-stu-id="a0435-105">Set the variable to `Nothing` in an assignment statement.</span></span>  
   
     ```  
     ' Assume account is a defined class  
@@ -25,16 +25,15 @@ ms.locfileid: "54678507"
     currentAccount = Nothing  
     ```  
   
-## <a name="robust-programming"></a><span data-ttu-id="14004-106">可靠编程</span><span class="sxs-lookup"><span data-stu-id="14004-106">Robust Programming</span></span>  
- <span data-ttu-id="14004-107">如果你的代码尝试访问已被设置为对象变量的成员`Nothing`、<xref:System.NullReferenceException>时发生。</span><span class="sxs-lookup"><span data-stu-id="14004-107">If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs.</span></span> <span data-ttu-id="14004-108">如果对象变量设置为`Nothing`频繁，或者它是否可以将变量未初始化，它是一个好办法将中的成员访问`Try...Catch...Finally`块。</span><span class="sxs-lookup"><span data-stu-id="14004-108">If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="a0435-106">可靠编程</span><span class="sxs-lookup"><span data-stu-id="a0435-106">Robust Programming</span></span>  
+ <span data-ttu-id="a0435-107">如果你的代码尝试访问已被设置为对象变量的成员`Nothing`、<xref:System.NullReferenceException>时发生。</span><span class="sxs-lookup"><span data-stu-id="a0435-107">If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs.</span></span> <span data-ttu-id="a0435-108">如果对象变量设置为`Nothing`频繁，或者它是否可以将变量未初始化，它是一个好办法将中的成员访问`Try...Catch...Finally`块。</span><span class="sxs-lookup"><span data-stu-id="a0435-108">If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="14004-109">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="14004-109">.NET Framework Security</span></span>  
- <span data-ttu-id="14004-110">如果使用包含机密或敏感数据的对象的对象变量，可以将变量设置为`Nothing`当您在不主动处理这些对象之一。</span><span class="sxs-lookup"><span data-stu-id="14004-110">If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects.</span></span> <span data-ttu-id="14004-111">这将减少恶意代码获得对数据的访问的可能性。</span><span class="sxs-lookup"><span data-stu-id="14004-111">This reduces the chance of malicious code gaining access to the data.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="a0435-109">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="a0435-109">.NET Framework Security</span></span>  
+ <span data-ttu-id="a0435-110">如果使用包含机密或敏感数据的对象的对象变量，可以将变量设置为`Nothing`当您在不主动处理这些对象之一。</span><span class="sxs-lookup"><span data-stu-id="a0435-110">If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects.</span></span> <span data-ttu-id="a0435-111">这将减少恶意代码获得对数据的访问的可能性。</span><span class="sxs-lookup"><span data-stu-id="a0435-111">This reduces the chance of malicious code gaining access to the data.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="14004-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="14004-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0435-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="a0435-112">See also</span></span>
 - <xref:System.NullReferenceException>
-- [<span data-ttu-id="14004-113">对象变量</span><span class="sxs-lookup"><span data-stu-id="14004-113">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="14004-114">对象变量赋值</span><span class="sxs-lookup"><span data-stu-id="14004-114">Object Variable Assignment</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [<span data-ttu-id="14004-115">Nothing</span><span class="sxs-lookup"><span data-stu-id="14004-115">Nothing</span></span>](../../../../visual-basic/language-reference/nothing.md)
-- [<span data-ttu-id="14004-116">Try...Catch...Finally 语句</span><span class="sxs-lookup"><span data-stu-id="14004-116">Try...Catch...Finally Statement</span></span>](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [<span data-ttu-id="14004-117">异常疑难解答：System.NullReferenceException</span><span class="sxs-lookup"><span data-stu-id="14004-117">Troubleshooting Exceptions: System.NullReferenceException</span></span>](https://msdn.microsoft.com/library/4822b0b4-8105-43fb-887a-3cc51ff02899)
+- [<span data-ttu-id="a0435-113">对象变量</span><span class="sxs-lookup"><span data-stu-id="a0435-113">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="a0435-114">对象变量赋值</span><span class="sxs-lookup"><span data-stu-id="a0435-114">Object Variable Assignment</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
+- [<span data-ttu-id="a0435-115">Nothing</span><span class="sxs-lookup"><span data-stu-id="a0435-115">Nothing</span></span>](../../../../visual-basic/language-reference/nothing.md)
+- [<span data-ttu-id="a0435-116">Try...Catch...Finally 语句</span><span class="sxs-lookup"><span data-stu-id="a0435-116">Try...Catch...Finally Statement</span></span>](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
