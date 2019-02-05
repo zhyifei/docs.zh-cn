@@ -1,11 +1,17 @@
 ---
-title: '委托 - C# 编程指南'
+title: 委托 - C# 编程指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, delegates'
-  - 'delegates [C#]'
+- C# language, delegates
+- delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
+ms.openlocfilehash: 1c272dd9ab4f810a0eb1a1064b4c7731873d2c80
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675369"
 ---
 # <a name="delegates-c-programming-guide"></a>委托（C# 编程指南）
 [委托](../../../csharp/language-reference/keywords/delegate.md)是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。  
@@ -40,7 +46,7 @@ ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
   
 -   [使用委托](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
--   [何时使用委托，而不是接口（C# 编程指南）](https://msdn.microsoft.com/library/2e759bdf-7ca4-4005-8597-af92edf6d8f0)  
+-   [何时使用委托，而不是接口（C# 编程指南）](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
 -   [带有命名方法的委托与带有匿名方法的委托](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   
