@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5222d51ff2f60dd31ec52a8d5d6d52f37e02443
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524048"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739197"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic 中的 LINQ 简介
 语言集成查询 (LINQ) 将查询功能添加到 Visual Basic，并提供了简单而强大的功能用于与所有种类的数据处理。 而不是将查询发送到数据库进行处理，或使用你要搜索的数据的每种类型的不同的查询语法，LINQ 引入了查询作为 Visual Basic 语言的一部分。 它使用统一语法，而不考虑数据的类型。  
@@ -240,7 +240,7 @@ ms.locfileid: "54524048"
   
  [如何：查找查询结果中的最小值或最大值](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
- [如何：分配存储过程以便执行更新、插入和删除操作（O/R 设计器）](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
+ [如何：分配存储过程以便执行更新、插入和删除操作（O/R 设计器）](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)  
   
 ## <a name="featured-book-chapters"></a>重要的章节  
  [第 17 章：LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10))在[Visual Basic 2008 编程](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  

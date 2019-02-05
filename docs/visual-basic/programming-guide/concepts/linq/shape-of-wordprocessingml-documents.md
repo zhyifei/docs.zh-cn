@@ -2,12 +2,12 @@
 title: WordprocessingML 文档 (Visual Basic 中) 的形状
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-ms.openlocfilehash: ddd48823ded78fe5547e53ee5e9b1ffa8c696b7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 635f8a2f97f1d8568230e17f9998fa87d6a7c02c
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549660"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738846"
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>WordprocessingML 文档 (Visual Basic 中) 的形状
 本主题介绍 WordprocessingML 文档的 XML 形状。  
@@ -90,7 +90,7 @@ End Module
 ## <a name="external-resources"></a>外部资源  
  [介绍 Office (2007) Open XML 文件格式](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))  
   
- [Overview of WordprocessingML](https://msdn.microsoft.com/library/aa212812(office.11).aspx)（WordprocessingML 概述）  
+ [Overview of WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812(v=office.11))（WordprocessingML 概述）  
   
  [Office 2003：XML 参考架构下载页](https://go.microsoft.com/fwlink/?LinkId=98095)  
   

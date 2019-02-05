@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 5c87b0f411c187e1497c8ec55771b80bb94c3629
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635667"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738924"
 ---
 # <a name="configuring-http-and-https"></a>配置 HTTP 和 HTTPS
 WCF 服务和客户端可以通过 HTTP 和 HTTPS 通信。 通过使用 Internet Information Services (IIS) 或命令行工具可以配置 HTTP/HTTPS 设置。 当某个 WCF 服务承载于 IIS 之下时，可以在 IIS 中配置 HTTP 或 HTTPS 设置（使用 inetmgr.exe 工具）。 如果 WCF 服务是自承载的，则可使用命令行工具配置 HTTP 或 HTTPS 设置。  
@@ -33,7 +33,7 @@ WCF 服务和客户端可以通过 HTTP 和 HTTPS 通信。 通过使用 Interne
  下面演示的是带有 `set urlacl` 选项的 Httpcfg 命名的语法。  
   
 ```console  
-httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL  
+httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /a ACL  
 ```  
   
  使用 `/u` 时需要 `set urlacl` 参数。 该参数接受一个包含完全限定的 URL 的字符串，该 URL 用作所要生成的预留的记录密钥。  

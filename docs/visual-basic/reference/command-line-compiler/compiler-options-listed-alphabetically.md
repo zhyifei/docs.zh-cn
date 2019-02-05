@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 8c16cf910546dcbe0a19efa13b552ffd4d9b6411
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66c576df7499c90ae29399ab9b0bd93f0fda6cb2
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580964"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738976"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>按字母顺序列出的 Visual Basic 编译器选项
 Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的开发环境 (IDE) 的程序的替代方法。 下面是 Visual Basic 命令行编译器选项按字母顺序排序的列表。  
@@ -25,7 +25,7 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
 |`-analyzer`|从此程序集（缩写形式：-a）运行分析器|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|指定的 DLL 的基址。|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|创建一个文件，其中包含可以轻松报告 bug 的信息。|  
-|`-checksumalgorithm:<alg>`|指定用于计算 PDB 中存储的源文件校验和的算法。  支持的值为：SHA1 （默认值） 或 SHA256。|  
+|`-checksumalgorithm:<alg>`|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA1（默认值）或 SHA256。|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|指定要用于编译中所有源代码文件的代码页。|  
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|生成调试信息。|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|定义条件编译的符号。|  
@@ -82,6 +82,4 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
   
 ## <a name="see-also"></a>请参阅
 - [按类别列出的 Visual Basic 编译器选项](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
-- [项目设计器简介](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)
-- [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-- [按类别列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)

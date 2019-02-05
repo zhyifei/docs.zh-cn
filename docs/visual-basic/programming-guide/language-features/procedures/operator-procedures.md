@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: 611195143fd216caab0b5f89badefb93d7dea017
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b9912f5206633a45d5d5d2d9c8c25ffab94ed9b
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589105"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739561"
 ---
 # <a name="operator-procedures-visual-basic"></a>运算符过程 (Visual Basic)
 运算符过程是一系列定义标准运算符的行为的 Visual Basic 语句 (如`*`， `<>`，或`And`) 上的类或结构定义。 这也称为*运算符重载*。  
@@ -79,7 +79,6 @@ ms.locfileid: "54589105"
   
  [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
- 有关详细信息和示例，请参阅 [Visual Basic 2005 中的运算符重载](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx)。  
   
 ## <a name="see-also"></a>请参阅
 - [过程](./index.md)

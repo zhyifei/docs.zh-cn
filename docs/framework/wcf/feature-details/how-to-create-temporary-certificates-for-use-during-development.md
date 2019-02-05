@@ -1,18 +1,18 @@
 ---
-title: 如何：创建开发期间使用的临时证书
+title: 如何：创建开发期间使用临时证书
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 2d0301b040d0fd9865eaf5c3f96fe320ccfd8488
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698579"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738625"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>如何：创建开发期间使用的临时证书
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>如何：创建开发期间使用临时证书
 
 开发时的安全服务或使用 Windows Communication Foundation (WCF) 客户端，它通常是需要提供要用作凭据的 X.509 证书。 该证书通常是证书链的一部分，在计算机的受信任的根证书颁发机构存储区中可找到根证书颁发机构。 拥有一个证书链，使您可以限定一组证书，其中根证书颁发机构通常来自于您的组织或业务单元。 若要在开发时模拟此情况，请创建两个证书以满足安全要求。 第一个证书是自签名证书，放置在受信任的根证书颁发机构存储区中；第二个证书是从第一个证书创建的，放置在本地计算机位置的个人存储区中或当前用户位置的个人存储区中。 本主题将指导完成创建使用 Powershell 这两个证书的步骤[New-selfsignedcertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet。
 
@@ -21,7 +21,7 @@ ms.locfileid: "46698579"
 >
 > 默认情况下[New-selfsignedcertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet 创建的是自签名证书和这些证书将不安全。 将自签名的证书放入受信任的根证书颁发机构存储区，可创建更紧密地模拟你的部署环境的开发环境。
 
- 有关创建和使用证书的详细信息，请参阅[Working with Certificates](working-with-certificates.md)。 有关使用证书作为凭据的详细信息，请参阅[保护服务和客户端](securing-services-and-clients.md)。 有关使用 Microsoft Authenticode 技术的教程，请参阅[Authenticode 概述和教程](https://go.microsoft.com/fwlink/?LinkId=88919)。
+ 有关创建和使用证书的详细信息，请参阅[Working with Certificates](working-with-certificates.md)。 有关使用证书作为凭据的详细信息，请参阅[保护服务和客户端](securing-services-and-clients.md)。 有关使用 Microsoft Authenticode 技术的教程，请参阅 [Authenticode Overviews and Tutorials](https://go.microsoft.com/fwlink/?LinkId=88919)（Authenticode 概述和教程）。
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>创建一个自签名根证书颁发机构证书并导出私钥
 
@@ -70,7 +70,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 4. 右击 **“证书”** 文件夹，再单击 **“所有任务”**，然后单击 **“导入”**。
 
-5. 按照屏幕向导说明，将 TempCa.cer 导入到存储区中。
+5. 按照屏幕向导说明 RootCA.pfx 导入的存储。
 
 ## <a name="using-certificates-with-wcf"></a>使用证书与 WCF
 
@@ -106,7 +106,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 </behaviors>
 ```
 
-在 WCF 中使用证书的详细信息，请参阅[Working with Certificates](working-with-certificates.md)。
+有关在 WCF 中使用证书的详细信息，请参阅 [Working with Certificates](working-with-certificates.md)。
 
 ## <a name="net-framework-security"></a>.NET Framework 安全性
 

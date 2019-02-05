@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: e31bc2f9a0b20ce168004fa3ea2210d39a23761e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065851"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738612"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>如何：调用采用无符号的类型 (Visual Basic 中) 的 Windows 函数
 如果您正在使用类、 模块或结构，它具有无符号的整数类型的成员，可以访问这些成员与 Visual Basic。  
@@ -75,7 +75,7 @@ ms.locfileid: "55065851"
     >  Windows 应用程序编程接口 (API)，如在非托管代码调用公开您的代码与潜在的安全风险。  
   
     > [!IMPORTANT]
-    >  调用 Windows API 要求非托管的代码的权限，这可能会影响在部分信任情况下执行。 有关详细信息，请参阅<xref:System.Security.Permissions.SecurityPermission>并[代码访问权限](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675)。  
+    >  调用 Windows API 要求非托管的代码的权限，这可能会影响在部分信任情况下执行。 有关详细信息，请参阅<xref:System.Security.Permissions.SecurityPermission>并[代码访问权限](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))。  
   
 ## <a name="see-also"></a>请参阅
 - [数据类型](../../../visual-basic/language-reference/data-types/index.md)

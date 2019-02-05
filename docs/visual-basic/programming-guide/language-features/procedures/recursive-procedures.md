@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 1802785e38b58ce2c057d6ddbe1e54e73e079761
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5cbe0dfa8053a93cde9c92ffe87f0eae15d3efd
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660718"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739288"
 ---
 # <a name="recursive-procedures-visual-basic"></a>递归过程 (Visual Basic)
 一个*递归*过程是指调用其自身。 一般情况下，这不是编写 Visual Basic 代码的最有效方法。  
@@ -48,4 +48,3 @@ ms.locfileid: "54660718"
 - [过程重载](./procedure-overloading.md)
 - [过程疑难解答](./troubleshooting-procedures.md)
 - [循环结构](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [异常疑难解答：System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

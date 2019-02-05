@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: fd1cfa8c3391861b87e8aec718b63287c1225263
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bb0e3ff0d021e9923f2e1bd8ced882c6a263d15
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733943"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738560"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>演练：验证密码是否复杂 (Visual Basic)
 此方法检查某些强密码特性，并使用有关检查密码失败的信息更新的字符串参数。  
@@ -31,7 +31,7 @@ ms.locfileid: "54733943"
 -   对 <xref:System.Text.RegularExpressions> 命名空间成员的访问权限。 如果未在代码中完全限定成员名称，则添加 `Imports` 语句。 有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
 ## <a name="security"></a>安全性  
- 如果在通过网络迁移密码，需要使用安全的方法来传输数据。 有关详细信息，请参阅[ASP.NET Web 应用程序安全性](https://msdn.microsoft.com/library/330a99hc)。  
+ 如果你正在通过网络迁移密码，需要使用安全的方法来传输数据。 有关详细信息，请参阅[ASP.NET Web 应用程序安全性](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))。
   
  您可以提高准确性`ValidatePassword`通过添加其他复杂性检查函数：  
   
@@ -45,4 +45,4 @@ ms.locfileid: "54733943"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Text.RegularExpressions.Regex>
-- [ASP.NET Web 应用程序安全性](https://msdn.microsoft.com/library/330a99hc)
+- [ASP.NET Web 应用程序安全性](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))
