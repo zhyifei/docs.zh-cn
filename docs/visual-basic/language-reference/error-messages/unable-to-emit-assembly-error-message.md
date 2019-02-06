@@ -7,61 +7,61 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 404a8255adcdc414a40b40395ada1c90c1078325
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: d564f4f4462a691504297d65575956c5f06691ca
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754222"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759218"
 ---
-# <a name="unable-to-emit-assembly-error-message"></a><span data-ttu-id="704b0-102">无法发出程序集：\<错误消息 ></span><span class="sxs-lookup"><span data-stu-id="704b0-102">Unable to emit assembly: \<error message></span></span>
+# <a name="unable-to-emit-assembly-error-message"></a><span data-ttu-id="c8ab9-102">无法发出程序集：\<错误消息 ></span><span class="sxs-lookup"><span data-stu-id="c8ab9-102">Unable to emit assembly: \<error message></span></span>
 
-<span data-ttu-id="704b0-103">Visual Basic 编译器调用程序集链接器 (*Al.exe*，也称为 Alink) 生成的程序集具有一个清单和链接器可创建程序集的发出阶段报告错误。</span><span class="sxs-lookup"><span data-stu-id="704b0-103">The Visual Basic compiler calls the Assembly Linker (*Al.exe*, also known as Alink) to generate an assembly with a manifest, and the linker reports an error in the emission stage of creating the assembly.</span></span>
+<span data-ttu-id="c8ab9-103">Visual Basic 编译器调用程序集链接器 (*Al.exe*，也称为 Alink) 生成的程序集具有一个清单和链接器可创建程序集的发出阶段报告错误。</span><span class="sxs-lookup"><span data-stu-id="c8ab9-103">The Visual Basic compiler calls the Assembly Linker (*Al.exe*, also known as Alink) to generate an assembly with a manifest, and the linker reports an error in the emission stage of creating the assembly.</span></span>
 
-<span data-ttu-id="704b0-104">**错误 ID:** BC30145</span><span class="sxs-lookup"><span data-stu-id="704b0-104">**Error ID:** BC30145</span></span>
+<span data-ttu-id="c8ab9-104">**错误 ID:** BC30145</span><span class="sxs-lookup"><span data-stu-id="c8ab9-104">**Error ID:** BC30145</span></span>
 
-## <a name="to-correct-this-error"></a><span data-ttu-id="704b0-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="704b0-105">To correct this error</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="c8ab9-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="c8ab9-105">To correct this error</span></span>
 
-1. <span data-ttu-id="704b0-106">检查引用的错误信息并参考主题[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)以获得进一步的解释和建议。</span><span class="sxs-lookup"><span data-stu-id="704b0-106">Examine the quoted error message and consult the topic [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) for further explanation and advice.</span></span>
+1. <span data-ttu-id="c8ab9-106">检查引用的错误信息并参考主题[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)以获得进一步的解释和建议。</span><span class="sxs-lookup"><span data-stu-id="c8ab9-106">Examine the quoted error message and consult the topic [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) for further explanation and advice.</span></span>
 
-2. <span data-ttu-id="704b0-107">请尝试使用手动签名程序集[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)或[Sn.exe （强名称工具）](../../../framework/tools/sn-exe-strong-name-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="704b0-107">Try signing the assembly manually, using either the [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) or the [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md).</span></span>
+2. <span data-ttu-id="c8ab9-107">请尝试使用手动签名程序集[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)或[Sn.exe （强名称工具）](../../../framework/tools/sn-exe-strong-name-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="c8ab9-107">Try signing the assembly manually, using either the [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) or the [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md).</span></span>
 
-3. <span data-ttu-id="704b0-108">如果仍然出现错误，则收集有关该情况的信息并通知 Microsoft 产品支持服务。</span><span class="sxs-lookup"><span data-stu-id="704b0-108">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>
+3. <span data-ttu-id="c8ab9-108">如果仍然出现错误，则收集有关该情况的信息并通知 Microsoft 产品支持服务。</span><span class="sxs-lookup"><span data-stu-id="c8ab9-108">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>
 
-### <a name="to-sign-the-assembly-manually"></a><span data-ttu-id="704b0-109">手动对程序集进行签名</span><span class="sxs-lookup"><span data-stu-id="704b0-109">To sign the assembly manually</span></span>
+### <a name="to-sign-the-assembly-manually"></a><span data-ttu-id="c8ab9-109">手动对程序集进行签名</span><span class="sxs-lookup"><span data-stu-id="c8ab9-109">To sign the assembly manually</span></span>
 
-1. <span data-ttu-id="704b0-110">使用[Sn.exe （强名称工具）](../../../framework/tools/sn-exe-strong-name-tool.md)) 创建公钥/私钥对文件。</span><span class="sxs-lookup"><span data-stu-id="704b0-110">Use the [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)) to create a public/private key pair file.</span></span>
+1. <span data-ttu-id="c8ab9-110">使用[Sn.exe （强名称工具）](../../../framework/tools/sn-exe-strong-name-tool.md)) 创建公钥/私钥对文件。</span><span class="sxs-lookup"><span data-stu-id="c8ab9-110">Use the [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)) to create a public/private key pair file.</span></span>
 
-   <span data-ttu-id="704b0-111">此文件具有 *.snk*扩展。</span><span class="sxs-lookup"><span data-stu-id="704b0-111">This file has an *.snk* extension.</span></span>
+   <span data-ttu-id="c8ab9-111">此文件具有 *.snk*扩展。</span><span class="sxs-lookup"><span data-stu-id="c8ab9-111">This file has an *.snk* extension.</span></span>
 
-2. <span data-ttu-id="704b0-112">从项目中删除生成错误的 COM 引用。</span><span class="sxs-lookup"><span data-stu-id="704b0-112">Delete the COM reference that is generating the error from your project.</span></span>
+2. <span data-ttu-id="c8ab9-112">从项目中删除生成错误的 COM 引用。</span><span class="sxs-lookup"><span data-stu-id="c8ab9-112">Delete the COM reference that is generating the error from your project.</span></span>
 
-3. <span data-ttu-id="704b0-113">打开[Visual Studio 的开发人员命令提示](../../../framework/tools/developer-command-prompt-for-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="704b0-113">Open the [Developer Command Prompt for Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).</span></span>
+3. <span data-ttu-id="c8ab9-113">打开[Visual Studio 的开发人员命令提示](../../../framework/tools/developer-command-prompt-for-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="c8ab9-113">Open the [Developer Command Prompt for Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).</span></span>
 
-   <span data-ttu-id="704b0-114">在 Windows 10 中，输入**开发人员命令提示**任务栏上的搜索框。</span><span class="sxs-lookup"><span data-stu-id="704b0-114">In Windows 10, enter **Developer command prompt** into the search box on the task bar.</span></span> <span data-ttu-id="704b0-115">然后，选择**VS 2017 开发人员命令提示**从结果列表中。</span><span class="sxs-lookup"><span data-stu-id="704b0-115">Then, select **Developer Command Prompt for VS 2017** from the results list.</span></span>
+   <span data-ttu-id="c8ab9-114">在 Windows 10 中，输入**开发人员命令提示**任务栏上的搜索框。</span><span class="sxs-lookup"><span data-stu-id="c8ab9-114">In Windows 10, enter **Developer command prompt** into the search box on the task bar.</span></span> <span data-ttu-id="c8ab9-115">然后，选择**VS 2017 开发人员命令提示**从结果列表中。</span><span class="sxs-lookup"><span data-stu-id="c8ab9-115">Then, select **Developer Command Prompt for VS 2017** from the results list.</span></span>
 
-4. <span data-ttu-id="704b0-116">将目录更改为你想要放置程序集包装的目录。</span><span class="sxs-lookup"><span data-stu-id="704b0-116">Change the directory to the directory where you want to place your assembly wrapper.</span></span>
+4. <span data-ttu-id="c8ab9-116">将目录更改为你想要放置程序集包装的目录。</span><span class="sxs-lookup"><span data-stu-id="c8ab9-116">Change the directory to the directory where you want to place your assembly wrapper.</span></span>
 
-5. <span data-ttu-id="704b0-117">输入以下命令：</span><span class="sxs-lookup"><span data-stu-id="704b0-117">Enter the following command:</span></span>
+5. <span data-ttu-id="c8ab9-117">输入以下命令：</span><span class="sxs-lookup"><span data-stu-id="c8ab9-117">Enter the following command:</span></span>
 
     ```cmd
     tlbimp <path to COM reference file> /out:<output assembly name> /keyfile:<path to .snk file>
     ```
 
-   <span data-ttu-id="704b0-118">可能输入的实际命令的一个示例是：</span><span class="sxs-lookup"><span data-stu-id="704b0-118">An example of the actual command you might enter is:</span></span>
+   <span data-ttu-id="c8ab9-118">可能输入的实际命令的一个示例是：</span><span class="sxs-lookup"><span data-stu-id="c8ab9-118">An example of the actual command you might enter is:</span></span>
 
     ```cmd
     tlbimp c:\windows\system32\msi.dll /out:Interop.WindowsInstaller.dll /keyfile:"c:\documents and settings\mykey.snk"
     ```
 
    > [!TIP]
-   > <span data-ttu-id="704b0-119">如果路径或文件名包含空格，请使用双引号引起来。</span><span class="sxs-lookup"><span data-stu-id="704b0-119">Use double quotation marks if a path or file contains spaces.</span></span>
+   > <span data-ttu-id="c8ab9-119">如果路径或文件名包含空格，请使用双引号引起来。</span><span class="sxs-lookup"><span data-stu-id="c8ab9-119">Use double quotation marks if a path or file contains spaces.</span></span>
 
-6. <span data-ttu-id="704b0-120">在 Visual Studio 中，添加对刚创建的文件的.NET 程序集引用。</span><span class="sxs-lookup"><span data-stu-id="704b0-120">In Visual Studio, add a .NET Assembly reference to the file you just created.</span></span>
+6. <span data-ttu-id="c8ab9-120">在 Visual Studio 中，添加对刚创建的文件的.NET 程序集引用。</span><span class="sxs-lookup"><span data-stu-id="c8ab9-120">In Visual Studio, add a .NET Assembly reference to the file you just created.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="704b0-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="704b0-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8ab9-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="c8ab9-121">See also</span></span>
 
-- <span data-ttu-id="704b0-122">[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)。</span><span class="sxs-lookup"><span data-stu-id="704b0-122">[Al.exe](../../../framework/tools/al-exe-assembly-linker.md).</span></span>
-- <span data-ttu-id="704b0-123">[Sn.exe （强名称工具）][Sn.exe （强名称工具）](../../../framework/tools/sn-exe-strong-name-tool.md))</span><span class="sxs-lookup"><span data-stu-id="704b0-123">[Sn.exe (Strong Name Tool)][Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md))</span></span>
-- [<span data-ttu-id="704b0-124">如何：创建公钥/私钥对</span><span class="sxs-lookup"><span data-stu-id="704b0-124">How to: Create a Public-Private Key Pair</span></span>](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)
-- [<span data-ttu-id="704b0-125">与我们交流</span><span class="sxs-lookup"><span data-stu-id="704b0-125">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+- [<span data-ttu-id="c8ab9-122">Al.exe</span><span class="sxs-lookup"><span data-stu-id="c8ab9-122">Al.exe</span></span>](../../../framework/tools/al-exe-assembly-linker.md)
+- [<span data-ttu-id="c8ab9-123">Sn.exe（强名称工具）</span><span class="sxs-lookup"><span data-stu-id="c8ab9-123">Sn.exe (Strong Name Tool)</span></span>](../../../framework/tools/sn-exe-strong-name-tool.md)
+- [<span data-ttu-id="c8ab9-124">如何：创建公钥/私钥对</span><span class="sxs-lookup"><span data-stu-id="c8ab9-124">How to: Create a Public-Private Key Pair</span></span>](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [<span data-ttu-id="c8ab9-125">与我们交流</span><span class="sxs-lookup"><span data-stu-id="c8ab9-125">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
