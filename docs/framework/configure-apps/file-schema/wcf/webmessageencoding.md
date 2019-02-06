@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: e263062d47708983e7771a8db63ba20d2193ece3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e13f23d6894083c8b507bdb73bea897c4845300f
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260029"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759635"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
 允许在 Windows Communication Foundation (WCF) 绑定中使用纯文本 XML、JavaScript 对象表示法 (JSON) 消息编码和“原始”二进制内容时对其进行读写。  
@@ -41,7 +41,7 @@ ms.locfileid: "55260029"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -60,7 +60,7 @@ ms.locfileid: "55260029"
   
  属性 `maxReadPoolSize` 与 `maxWritePoolSize` 也可以分别用来设置要分配的读取器和编写器最大数目。 默认情况下，将分配 64 个读取器和 16 个编写器。  
   
- 此外可使用设置的默认复杂性约束[ \<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)元素以防止某种类型的拒绝服务 (DOS) 攻击攻击该试图利用消息复杂性来占用终结点处理资源。  
+ 此外可使用设置的默认复杂性约束[ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))元素以防止某种类型的拒绝服务 (DOS) 攻击攻击该试图利用消息复杂性来占用终结点处理资源。  
   
 ## <a name="example"></a>示例  
   

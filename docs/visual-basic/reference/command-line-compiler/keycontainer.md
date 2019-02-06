@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 1666c7743f1116f86bc4457af53711cb6f1a6b7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9ceb7b4351d2278835014235bc1f3b5f15b65c0
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579818"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758282"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 指定密钥对的密钥容器名称从而为程序集赋予强名称。  
@@ -29,7 +29,7 @@ ms.locfileid: "54579818"
 |`container`|必需。 包含密钥的容器文件。 将文件名括在引号 ("") 如果名称包含空格。|  
   
 ## <a name="remarks"></a>备注  
- 通过将公钥插入到程序集清单，并使用私钥签名最终程序集，编译器创建可共享的组件。 若要生成密钥文件，请在命令行键入 `sn -k file`。 `-i`选项将密钥对安装到容器。 有关详细信息，请参阅 [Sn.exe （强名称工具）][Sn.exe （强名称工具）](../../../framework/tools/sn-exe-strong-name-tool.md))。  
+ 通过将公钥插入到程序集清单，并使用私钥签名最终程序集，编译器创建可共享的组件。 若要生成密钥文件，请在命令行键入 `sn -k file`。 `-i`选项将密钥对安装到容器。 有关详细信息，请参阅[Sn.exe （强名称工具）](../../../framework/tools/sn-exe-strong-name-tool.md))。  
   
  如果使用编译`-target:module`，保存在模块和合并到编译为程序集时创建的程序集密钥文件的名称[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)。  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30143
 ms.assetid: 319e95b5-5176-4fe1-bc04-90075594b397
-ms.openlocfilehash: 532c2a789fa366cc38056ebec6d1bd09eaa4c327
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9c56007518ba2efef5b4e42fe60d99112f3b33bd
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276011"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758152"
 ---
 # <a name="unable-to-embed-resource-file-filename-error-message"></a>无法嵌入资源文件\<文件名 >:\<错误消息 >
 Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集。 该链接器已报告在将本机 COM+ 资源文件直接嵌入到程序集时出错。  
@@ -27,5 +27,5 @@ Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成
   
 ## <a name="see-also"></a>请参阅
 
- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)。  
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [与我们交流](/visualstudio/ide/talk-to-us)

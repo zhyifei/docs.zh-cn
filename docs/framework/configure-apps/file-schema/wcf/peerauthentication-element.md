@@ -2,12 +2,12 @@
 title: <peerAuthentication> 元素
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 6e9fd69af5bce4da0bb14442cddcbecd536535f3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7607f5bab6083c190303fd0a9121ffab55c620c3
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277714"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759439"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication > 元素
 指定用于对等客户端的身份验证选项。  
@@ -108,6 +108,6 @@ ms.locfileid: "55277714"
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [对等通道消息身份验证](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
-- [对等通道自定义身份验证](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [对等通道消息身份验证](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [对等通道自定义身份验证](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

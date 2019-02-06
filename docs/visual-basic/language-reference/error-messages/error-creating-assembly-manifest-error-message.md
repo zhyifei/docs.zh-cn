@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: f9c8d9fe4b8bea45e4b655415b044937f248deab
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 86c1fabe1116e5b5d7e81022777f861f6d57e3e6
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266476"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758360"
 ---
 # <a name="error-creating-assembly-manifest-error-message"></a>创建程序集清单时出错：\<错误消息 >
 Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集。 该链接器已报告在创建程序集的预发出阶段中出错。  
@@ -29,6 +29,6 @@ Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成
   
 ## <a name="see-also"></a>请参阅
 - [如何：使用强名称为程序集签名](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
-- [签名页，项目设计器](/visualstudio/ide/reference/signing-page-project-designer)
- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)。  
+- [“项目设计器”->“签名”页](/visualstudio/ide/reference/signing-page-project-designer)
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [与我们交流](/visualstudio/ide/talk-to-us)

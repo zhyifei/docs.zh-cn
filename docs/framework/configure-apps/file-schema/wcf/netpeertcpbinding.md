@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: a039e805bc4378582d7a7bcf6ef84591ec3d2b6b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3a41cb85ac2917f34bd7e5f33e241853777f045f
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261433"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759166"
 ---
 # <a name="netpeertcpbinding"></a>\<netPeerTcpBinding>
 为特定于对等通道的 TCP 消息定义绑定。  
@@ -59,7 +59,7 @@ ms.locfileid: "55261433"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
 |[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|指定一个对等解析程序，此绑定将使用该解析程序将对等网格 ID 解析为对等网格中节点的终结点 IP 地址。|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|定义消息的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.PeerSecurityElement>。|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "55261433"
  此绑定为使用 TCP 上的对等传输创建对等应用程序或多方应用程序提供支持。 每个对等节点均可承载使用此绑定类型定义的多个对等通道。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 NetPeerTcpBinding 绑定，该绑定使用对等通道提供多方通信。 使用此绑定的详细方案，请参阅[Net 的对等 TCP](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)。  
+ 下面的示例演示如何使用 NetPeerTcpBinding 绑定，该绑定使用对等通道提供多方通信。 使用此绑定的详细方案，请参阅[Net 的对等 TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))。  
   
 ```xml  
 <configuration>
@@ -107,5 +107,5 @@ ms.locfileid: "55261433"
 - [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [网络对等 TCP](https://msdn.microsoft.com/library/31f4db66-edb2-40a6-b92a-14098e92acae)
+- [网络对等 TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))
 - [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)

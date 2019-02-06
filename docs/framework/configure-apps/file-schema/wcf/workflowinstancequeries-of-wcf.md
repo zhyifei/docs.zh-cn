@@ -2,12 +2,12 @@
 title: <workflowInstanceQueries> WCF 的
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
-ms.openlocfilehash: 544ca868485a409554ece9d9b000beb1a472d344
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 89e122b87743a81a80ce63b382ae235c1c4863bc
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255297"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759244"
 ---
 # <a name="workflowinstancequeries-of-wcf"></a>\<workflowInstanceQueries > 的 WCF
 
@@ -60,7 +60,7 @@ ms.locfileid: "55255297"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含由标识为特定工作流的所有查询[activityDefinitionId](https://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx)属性。|  
+|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含由标识为特定工作流的所有查询[activityDefinitionId](xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId)属性。|  
   
 ## <a name="remarks"></a>备注
 
