@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 648a4d9e2f9be2cd8a5912ebfe272331a70ee76e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a417e964c2f44c291892f9ddec6e32438fbff9a1
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707877"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758426"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中处理和引发异常
 
@@ -48,7 +48,7 @@ ms.locfileid: "54707877"
 
 下表列出了一些常见的异常，以及会引发这些异常的原因的示例。
 
-| 异常类型 | 说明 | 示例 |
+| 异常类型 | 说明​​ | 示例 |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | 所有异常的基类。 | 无（使用此异常的派生类）。 |
 | <xref:System.IndexOutOfRangeException> | 仅当错误地对数组进行索引时，才由运行时引发。 | 在数组的有效范围外对数组进行索引： <br /> `arr[arr.Length+1]` |
@@ -69,4 +69,4 @@ ms.locfileid: "54707877"
 - [如何：使用 Finally 块](how-to-use-finally-blocks.md)
 - [处理 COM 互操作异常](handling-com-interop-exceptions.md)
 - [与异常有关的最佳做法](best-practices-for-exceptions.md)
-- [每个开发人员都需要了解的有关运行时异常方面的内容](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)。
+- [每个开发人员都需要了解的有关运行时异常方面的内容](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)
