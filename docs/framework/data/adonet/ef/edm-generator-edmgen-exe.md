@@ -2,12 +2,12 @@
 title: EDM 生成器 (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: cd43b6ca31eea2cc4265c7f2e1a045f0f12a256c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c3d3ce58770999d7b4a02194cdcac2b3d0dd07a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722110"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827755"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 生成器 (EdmGen.exe)
 EdmGen.exe 是用于处理[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]模型和映射文件的命令行工具。 使用 EdmGen.exe 工具可以执行以下任务：  
@@ -18,7 +18,7 @@ EdmGen.exe 是用于处理[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef
   
 -   生成包含从概念模型 (.csdl) 文件生成的对象类的 C# 或 Visual Basic 代码文件。 有关详细信息，请参阅[如何：使用 EdmGen.exe 生成对象层代码](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)。  
   
--   生成包含现有模型的预生成视图的 C# 或 Visual Basic 代码文件。 有关详细信息，[如何：预生成视图以提高查询性能](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)。  
+-   生成包含现有模型的预生成视图的 C# 或 Visual Basic 代码文件。 有关详细信息，[如何：预生成视图以提高查询性能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。  
   
  EdmGen.exe 工具安装在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 目录中。 多数情况下，它位于 C:\windows\Microsoft.NET\Framework\v4.0 中。 对于 64 位系统，它位于 C:\windows\Microsoft.NET\Framework64\v4.0 中。 此外可以访问 EdmGen.exe 工具从 Visual Studio 命令提示 (单击**启动**，依次指向**所有程序**，指向**Microsoft Visual Studio 2010**，依次指向**Visual Studio Tools**，然后单击**Visual Studio 2010 命令提示**)。  
   
@@ -72,6 +72,6 @@ EdmGen /mode:choice [options]
  [如何：使用 EdmGen.exe 验证模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
 ## <a name="see-also"></a>请参阅
-- [ADO.NET 实体数据模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [ADO.NET 实体数据模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)
 - [CSDL、SSDL 和 MSL 规范](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

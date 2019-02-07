@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d1d767de88b239c96cb98130b6ff006e3f75b09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5dd77783c03d6a61d0b5831e44db97a731d8074
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495027"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825883"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator 接口
 由数据访问服务层来在目标进程中查找程序集的元数据。  
@@ -42,7 +42,7 @@ ms.locfileid: "54495027"
   
  **库：** CorGuids.lib  
   
- **.** **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 - [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 84c0319c49534cc9a09ffd15d9a07b8ec18882b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0a22a4ec4ed508a06e385d954a8ed5b9e9ff6a9
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728734"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825584"
 ---
 # <a name="generating-strongly-typed-datasets"></a>生成强类型化数据集
 如果给定符合 XML 架构定义语言 (XSD) 标准的 XML 架构，您就可以使用随 <xref:System.Data.DataSet> 提供的 XSD.exe 工具生成强类型 [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)]。  
   
- (若要从数据库表创建 xsd，请参阅<xref:System.Data.DataSet.WriteXmlSchema%2A>或[使用 Visual Studio 中的数据集](https://msdn.microsoft.com/library/8bw9ksd6.aspx))。  
+ (若要从数据库表创建 xsd，请参阅<xref:System.Data.DataSet.WriteXmlSchema%2A>或[使用 Visual Studio 中的数据集](/visualstudio/data-tools/dataset-tools-in-visual-studio))。  
   
  下面的代码显示了生成的语法**数据集**使用此工具。  
   

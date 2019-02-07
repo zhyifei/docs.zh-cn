@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 737f98dd11d6172bb79aaa925ac153c64728e9ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 115960c076e8bf1692bcd4bd158407e719608740
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629601"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825727"
 ---
 # <a name="annotating-typed-datasets"></a>为类型化的数据集进行批注
 批注使您能够在不修改基础架构的情况下修改类型化 <xref:System.Data.DataSet> 中元素的名称。 如果修改基础架构中的元素的名称会使类型化**数据集**要引用的对象执行不存在于数据源，并且会丢失对存在于数据源中的对象的引用。  
@@ -74,7 +74,7 @@ ms.locfileid: "54629601"
 |**父**访问器|TableNameRow|typedParent|  
 |**数据集**事件|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- 若要使用类型化**数据集**批注，您必须包括以下**xmlns** XML 架构定义语言 (XSD) 架构中的引用。 (若要从数据库表创建 xsd，请参阅<xref:System.Data.DataSet.WriteXmlSchema%2A>或[使用 Visual Studio 中的数据集](https://msdn.microsoft.com/library/8bw9ksd6.aspx))。  
+ 若要使用类型化**数据集**批注，您必须包括以下**xmlns** XML 架构定义语言 (XSD) 架构中的引用。 若要从数据库表创建 xsd，请参阅<xref:System.Data.DataSet.WriteXmlSchema%2A>或[使用 Visual Studio 中的数据集](/visualstudio/data-tools/dataset-tools-in-visual-studio)。  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  

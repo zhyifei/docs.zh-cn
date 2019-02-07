@@ -2,19 +2,19 @@
 title: ADO.NET 实体框架中的连接字符串
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30972edb7877127eb2e4c60f7e6377e4d893aecc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497454"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826468"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET 实体框架中的连接字符串
 连接字符串包含作为参数从数据提供程序传递到数据源的初始化信息。 其语法取决于数据提供程序，并且会在试图打开连接的过程中对连接字符串进行分析。 实体框架使用的连接字符串包含用于连接到支持实体框架的基础 ADO.NET 数据提供程序的信息。 它们还包含有关所需的模型和映射文件的信息。  
   
  在访问模型，映射元数据以及连接到数据源时，EntityClient 提供程序将使用该连接字符串。 连接字符串可通过 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 属性访问或设置。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 类可用于以编程方式构造或访问连接字符串中的参数。 有关详细信息，请参阅[如何：生成 EntityConnection 连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。  
   
- [Entity Data Model 工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)生成应用程序的配置文件中存储的连接字符串。 在创建对象查询时，<xref:System.Data.Objects.ObjectContext> 将自动检索此连接信息。 可通过 <xref:System.Data.EntityClient.EntityConnection> 属性访问 <xref:System.Data.Objects.ObjectContext> 实例所使用的 <xref:System.Data.Objects.ObjectContext.Connection%2A>。 有关详细信息，请参阅[管理连接和事务](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
+ [Entity Data Model 工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))生成应用程序的配置文件中存储的连接字符串。 在创建对象查询时，<xref:System.Data.Objects.ObjectContext> 将自动检索此连接信息。 可通过 <xref:System.Data.EntityClient.EntityConnection> 属性访问 <xref:System.Data.Objects.ObjectContext> 实例所使用的 <xref:System.Data.Objects.ObjectContext.Connection%2A>。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
 
 ## <a name="connection-string-syntax"></a>连接字符串语法
 
@@ -31,7 +31,7 @@ ms.locfileid: "54497454"
 |`Metadata`|此关键字在未指定 `Name` 关键字时是必需的。 一个由竖线分隔的目录、文件和资源位置的列表，供查找元数据和映射信息使用。 下面是一个示例：<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> 竖线分隔符两侧的空格将被忽略。<br /><br /> 此关键字与 `Name` 关键字互斥。|  
 |`Name`|应用程序可以选择在应用程序配置文件中指定连接名称，以用于提供所需的关键字/值连接字符串值。 在此情况下，无法在连接字符串中直接提供这些值。 配置文件中不允许出现 `Name` 关键字。<br /><br /> 如果连接字符串中未包含 `Name` 关键字，则需要一个非空的 Provider 关键字值。<br /><br /> 此关键字与所有其他连接字符串关键字互斥。|  
   
- 以下是针对的连接字符串的示例[AdventureWorks 销售模型](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)存储在应用程序配置文件：  
+ 以下是针对的连接字符串的示例[AdventureWorks 销售模型](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)存储在应用程序配置文件：  
   
   
   
@@ -111,5 +111,5 @@ Metadata=.\
 ## <a name="see-also"></a>请参阅
 - [使用数据提供程序](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
 - [部署注意事项](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
-- [管理连接和事务](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)

@@ -1,6 +1,6 @@
 ---
 title: IXCLRDataMethodInstance 接口
-ms.date: 01/16/2019
+ms.date: 02/01/2019
 api.name:
 - IXCLRDataMethodInstance Interface
 api.location:
@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 0eef69cea9f59911b5076f56579b0192be357431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7185802a3857fcd73c63d097090a2a7809f65279
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659106"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825922"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>IXCLRDataMethodInstance 接口
 
@@ -33,6 +33,8 @@ ms.locfileid: "54659106"
 | 方法                                                                                                                  | 描述                                 |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
 | [GetILAddressMap](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getiladdressmap-method.md) | 获取到地址映射信息的 IL。 |
+| [GetRepresentativeEntryAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | 获取用于本机编译的方法的所有可能的入口点的最具代表性的入口点地址... |
+
 
 ## <a name="remarks"></a>备注
 

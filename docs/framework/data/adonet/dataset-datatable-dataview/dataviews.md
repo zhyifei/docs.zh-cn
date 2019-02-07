@@ -2,12 +2,12 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 4731b0c94f9ecd03dc3d1229f27cb8ede7e0e203
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcf370e30c50bf5d992279c7abe02bfc6262ea40
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592895"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825870"
 ---
 # <a name="dataviews"></a>DataView
 你可以利用 <xref:System.Data.DataView> 创建存储在 <xref:System.Data.DataTable>（一种通常在数据绑定应用程序中使用的功能）中的数据的不同视图。 使用**DataView**，您可以公开具有不同的排序顺序的表中的数据，并且可以按行状态或基于筛选器表达式来筛选数据。  
@@ -44,10 +44,10 @@ ms.locfileid: "54592895"
  介绍如何使用**DataViewManager**来管理**DataView**的每个表中设置**数据集**。  
   
 ## <a name="related-sections"></a>相关章节  
- [ASP.NET Web 应用程序](https://msdn.microsoft.com/library/a812d7b7-049e-4234-a4c2-6acf690301f6)  
+ [ASP.NET Web 应用程序](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
  提供创建 ASP.NET 应用程序、Web 窗体和 Web 服务的概述和详细步骤信息。  
   
- [Windows 应用程序](https://msdn.microsoft.com/library/a6bb2180-09b1-4738-b9fd-7fb05fc92f23)  
+ [Windows 应用程序](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
  提供有关使用 Windows 窗体和控制台应用程序的详细信息。  
   
  [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  

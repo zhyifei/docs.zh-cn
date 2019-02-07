@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 5d3bc2b4e5fbb8cc36cf4688bd4fa5e4c0851dcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa91646a46807f26053b3d0df28c412bcc5a2f21
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597627"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825896"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 代码示例
 本主题中的代码列表演示如何使用下面的 ADO.NET 技术从数据库中检索数据：
@@ -137,7 +137,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>类型化 ObjectQuery
-此示例中的代码使用 <xref:System.Data.Objects.ObjectQuery%601> 以 Categories 对象的形式返回数据。 有关详细信息，请参阅[对象查询](https://msdn.microsoft.com/0768033c-876f-471d-85d5-264884349276)。
+此示例中的代码使用 <xref:System.Data.Objects.ObjectQuery%601> 以 Categories 对象的形式返回数据。 有关详细信息，请参阅[对象查询](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))。
 
 ```csharp
 using System;
@@ -346,7 +346,7 @@ End Class
 ## <a name="see-also"></a>请参阅
 - [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [创建数据应用程序](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)
-- [查询实体数据模型 （实体框架任务）](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)
-- [如何：执行返回匿名类型对象的查询](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)
+- [创建数据应用程序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
+- [查询实体数据模型 （实体框架任务）](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
+- [如何：执行返回匿名类型对象的查询](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

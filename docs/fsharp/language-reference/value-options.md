@@ -1,13 +1,13 @@
 ---
 title: 值选项
 description: 了解如何F#值选项的类型，即选项类型的结构版本。
-ms.date: 06/16/2018
-ms.openlocfilehash: d5209e620d53e12e9344faea09321f640af21491
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/06/2019
+ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613422"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828028"
 ---
 # <a name="value-options"></a>值选项
 
@@ -16,7 +16,7 @@ ms.locfileid: "53613422"
 1. 一种方案是适用于[F#选项](options.md)。
 2. 使用结构提供了在你的方案中可以提高性能。
 
-并非所有性能敏感方案"都解决"通过使用结构。 您必须考虑复制而不引用类型中使用它们时的额外成本。 但是，大型F#程序在结构有时可以产生更好的程序的整个生命周期的整体性能，因此通常实例化流经热路径的许多可选类型。
+并非所有性能敏感方案"都解决"通过使用结构。 您必须考虑复制而不引用类型中使用它们时的额外成本。 但是，大型F#程序通常实例化许多可选类型流过热路径中，并在这种情况下，结构通常可以产生更好的程序的整个生命周期的整体性能。
 
 ## <a name="definition"></a>定义
 

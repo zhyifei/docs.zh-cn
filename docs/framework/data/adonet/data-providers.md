@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 529b7094ad36861cacc4009ea8faf152f056c20e
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: c4b656d1ee7edcdc7e0e5cd41f7d57266ad5ad26
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066215"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828353"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 数据提供程序
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序用于连接到数据库、执行命令和检索结果。 这些结果将被直接处理，放置在 <xref:System.Data.DataSet> 中以便根据需要向用户公开、与多个源中的数据组合，或在层之间进行远程处理。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序是轻量的，它在数据源和代码之间创建最小的分层，并在不降低功能性的情况下提高性能。  
@@ -24,7 +24,7 @@ ms.locfileid: "55066215"
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]用于 ODBC 的数据提供程序|提供对使用 ODBC 公开的数据源中数据的访问。 使用 <xref:System.Data.Odbc> 命名空间。|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 用于 Oracle 的数据提供程序|适用于 Oracle 数据源。 用于 Oracle 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序支持 Oracle 客户端软件 8.1.7 和更高版本，并使用 <xref:System.Data.OracleClient> 命名空间。|  
 |EntityClient 提供程序|提供对实体数据模型 (EDM) 应用程序的数据访问。 使用 <xref:System.Data.EntityClient> 命名空间。|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序适用于 SQL Server Compact 4.0。|提供的 Microsoft SQL Server Compact 4.0 数据访问。 使用 [System.Data.SqlServerCe](https://msdn.microsoft.com/library/system.data.sqlserverce.aspx) 命名空间。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序适用于 SQL Server Compact 4.0。|提供的 Microsoft SQL Server Compact 4.0 数据访问。 使用 [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) 命名空间。|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>.NET Framework 数据提供程序的核心对象  
  下表概述了组成 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序的四个核心对象。  
