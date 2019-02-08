@@ -2,12 +2,12 @@
 title: LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 743e3755-3ecb-45a2-8d9b-9ed41f0dcf17
-ms.openlocfilehash: 5e23ff825c609d5e9fea3a1870775f85a626db4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9769e98d1046bbe795040782ca5d8164140b4b0d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589277"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904854"
 ---
 # <a name="linq-to-dataset"></a>LINQ to DataSet
 使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可以更快更容易地查询在 <xref:System.Data.DataSet> 对象中缓存的数据。 具体而言，通过使开发人员能够使用编程语言本身而不是通过使用单独的查询语言来编写查询，[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可以简化查询。 这是非常适合 Visual Studio 开发人员，他们现在可以充分利用编译时语法检查、 静态类型化，并在其查询中的 Visual Studio 提供 IntelliSense 支持。  
@@ -31,6 +31,7 @@ ms.locfileid: "54589277"
  <xref:System.Data.DataRowComparer>  
   
 ## <a name="see-also"></a>请参阅
-- [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [语言集成查询 (LINQ)-C#](../../../csharp/programming-guide/concepts/linq/index.md)
+- [语言集成查询 (LINQ) 的 Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ 和 ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)

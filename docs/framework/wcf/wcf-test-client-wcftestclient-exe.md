@@ -2,12 +2,12 @@
 title: WCF 测试客户端 (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: d48caebed857a3a61842b1ea1d3e8b2977d749ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edce9d2eb2d0bcd915beae0c75d3474d93d8fd51
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611379"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904002"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 测试客户端 (WcfTestClient.exe)
 Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是一个 GUI 工具，使用户能够输入测试参数、 将该输入到服务，提交并查看服务发回的响应。 它提供了完美的服务测试体验与 WCF 服务主机结合使用时。  
@@ -125,7 +125,7 @@ Windows Communication Foundation (WCF) 测试客户端 (WcfTestClient.exe) 是�
  在代理生成、二进制编译或服务调用期间，支持刷新服务的菜单项被禁用。 服务调用也被禁用。  
   
 ## <a name="location-of-files-generated-by-the-test-client"></a>测试客户端生成的文件的位置  
- 默认情况下，WCF 测试客户端存储在"%appdata%\Local\temp\Test Client Projects"文件夹中生成客户端代码和配置文件。 WCF 测试客户端退出后，将删除此文件夹。 如果在 WCF 测试客户端中修改配置文件和**始终重新生成启动服务时配置**选项处于禁用状态，修改后的文件复制到"My Documents\Test Client Projects 下的"Cached Config"文件夹使用映射 （元数据地址-到-文件的名称） 的 XML 文件，作为索引 Documents\Test Client 项目"。  
+ 默认情况下，WCF 测试客户端存储在"%appdata%\Local\temp\Test Client Projects"文件夹中生成客户端代码和配置文件。 WCF 测试客户端退出后，将删除此文件夹。 如果在 WCF 测试客户端中修改配置文件和**始终重新生成启动服务时配置**选项处于禁用状态，修改后的文件复制到"My Documents\Test Client Projects"下的"Cached Config"文件夹使用映射 （元数据的地址-到--文件名） XML 文件的索引。  
   
  你还可以在命令行中，使用启动 WCF 测试客户端`/ProjectPath`开关来指定新的所需的路径用于存储生成的文件，或者使用`/RestoreProjectPath`开关还原默认位置。 语法如下所示：  
   

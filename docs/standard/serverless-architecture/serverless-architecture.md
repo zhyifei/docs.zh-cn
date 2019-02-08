@@ -4,16 +4,16 @@ description: 各种体系结构和应用程序所支持的无服务器体系结�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150298"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904783"
 ---
 # <a name="serverless-architecture"></a>无服务器体系结构
 
-有许多方法使用无服务器体系结构。 这一章介绍了集成无服务器的常见体系结构的示例。 它还介绍了可能会带来额外挑战或实现无服务器时需要额外考虑的问题。 最后，设计的几个示例都是提供说明不同的无服务器的使用方案。
+有许多方法使用[无服务器](http://azure.com/serverless)体系结构。 这一章介绍了集成无服务器的常见体系结构的示例。 它还介绍了可能会带来额外挑战或实现无服务器时需要额外考虑的问题。 最后，设计的几个示例都是提供说明不同的无服务器的使用方案。
 
 无服务器主机通常使用现有的基于容器的或 PaaS 层来管理无服务器的实例。 例如，基于 Azure Functions [Azure 应用服务](https://docs.microsoft.com/azure/app-service/)。 应用服务用于横向扩展实例和管理执行 Azure Functions 代码的运行时。 对于基于 Windows 的函数，作为 PaaS 和可扩展的主机运行带.NET 运行时。 对于基于 Linux 的函数，主机会利用容器。
 

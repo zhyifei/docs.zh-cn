@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: c7a2cdd9fe0be020584ab87216a9d1322be185f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cff900d7328eed2cbe12afca35c77c7ac836fa7
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606804"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904484"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 架构定义 (Xsd.exe) 工具从 XDR、XML 和 XSD 文件或者从运行时程序集中的类生成 XML 架构或公共语言运行时类。  
@@ -53,7 +53,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |------------|-----------------|  
 |**/e\[lement\]:**_element_|指定架构中要为其生成代码的元素。 默认情况下，键入所有元素。 可以多次指定该参数。|  
 |**/enableDataBinding**|在所有生成的类型上实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口以启用数据绑定。 缩写形式为 `/edb`。|  
-|**/enableLinqDataSet**|（缩写形式：`/eld`。）指定可使用 LINQ to DataSet 查询的生成的数据集。 此选项在同时指定 /dataset 选项的情况下使用。 有关详细信息，请参阅 [LINQ to DataSet 概述](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查询类型化数据集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 有关使用 LINQ 的一般信息，请参阅 [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。|  
+|**/enableLinqDataSet**|（缩写形式：`/eld`。）指定可使用 LINQ to DataSet 查询的生成的数据集。 此选项在同时指定 /dataset 选项的情况下使用。 有关详细信息，请参阅 [LINQ to DataSet 概述](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查询类型化数据集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 有关使用 LINQ 的常规信息，请参阅[语言集成查询 (LINQ) 的C#](../../csharp/programming-guide/concepts/linq/index.md)或[语言集成查询 (LINQ) 的 Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)。|  
 |**/f\[ields\]**|生成字段，而不是生成属性。 默认情况下生成属性。|  
 |**/l\[anguage\]:**_language_|指定要使用的编程语言。 从 `CS`（默认情况下为 C#）、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#) 中进行选择。 也可指定实现 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的类的完全限定名|  
 |**/n\[amespace\]:**_namespace_|为生成的类型指定运行时命名空间。 默认命名空间为 `Schemas`。|  

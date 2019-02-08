@@ -2,15 +2,15 @@
 title: LINQ to DataSet 示例
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 8e6cce8ba79cad42ade6ac373631094f9e2d4e04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae43111a5b56e1edf3e1b4089902a8ca1d822d0d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634527"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903800"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ to DataSet 示例
-本部分提供了[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]编程使用标准查询运算符的示例。 <xref:System.Data.DataSet>这些示例中使用通过使用填充`FillDataSet`方法中指定[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 有关详细信息，请参阅[标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
+本部分提供 LINQ to DataSet 编程示例，使用标准查询运算符。 <xref:System.Data.DataSet>这些示例中使用通过使用填充`FillDataSet`方法中指定[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 有关详细信息，请参阅[标准查询运算符概述 (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)或[标准查询运算符概述 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [查询表达式示例](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  

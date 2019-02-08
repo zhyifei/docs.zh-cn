@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 132a4c72f6abc4b1510c4d28b4ec0de6f80c1261
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd8aeeb1ed56acfca0d57cb3c2c56cabab184683
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539644"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904090"
 ---
 # <a name="optimistic-concurrency"></a>开放式并发
 在多用户环境中，有两种用于更新数据库中数据的模型：开放式并发和保守式并发。 设计 <xref:System.Data.DataSet> 对象的目的是为了促进将开放式并发用于长时间运行的活动，例如对数据进行远程处理以及与数据进行交互时。  
@@ -123,7 +123,7 @@ adapter.UpdateCommand.Parameters.Add( _
   "@CompanyName", SqlDbType.NVarChar, 30, "CompanyName")  
   
 ' Pass the original values to the WHERE clause parameters.  
-Dim parameter As SqlParameter = dataSet.UpdateCommand.Parameters.Add( _  
+Dim parameter As SqlParameter = adapter.UpdateCommand.Parameters.Add( _  
   "@oldCustomerID", SqlDbType.NChar, 5, "CustomerID")  
 parameter.SourceVersion = DataRowVersion.Original  
 parameter = adapter.UpdateCommand.Parameters.Add( _  
