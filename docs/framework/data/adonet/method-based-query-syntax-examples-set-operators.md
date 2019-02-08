@@ -5,60 +5,61 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa93af15-28af-4b5e-846b-897308410edb
-ms.openlocfilehash: d7b5729c8213a0d6c38dedb8244faee60e4f8587
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31421b1e6ece783f52021c1af22b819f8aacea66
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538643"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903427"
 ---
-# <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a><span data-ttu-id="d530d-102">基于方法的查询语法示例：集合运算符 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="d530d-102">Method-Based Query Syntax Examples: Set Operators (LINQ to DataSet)</span></span>
-<span data-ttu-id="d530d-103">本主题中的示例演示如何使用<xref:System.Linq.Enumerable.Distinct%2A>， <xref:System.Linq.Enumerable.Except%2A>， <xref:System.Linq.Enumerable.Intersect%2A>，和<xref:System.Linq.Enumerable.Union%2A>运算符以对数据行集执行基于值的比较运算。[正在加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)请参阅[比较 Datarow](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)有关详细信息<xref:System.Data.DataRowComparer>。</span><span class="sxs-lookup"><span data-stu-id="d530d-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, and <xref:System.Linq.Enumerable.Union%2A> operators to perform value-based comparison operations on sets of data rows.[Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md) See [Comparing DataRows](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md) for more information on <xref:System.Data.DataRowComparer>.</span></span>  
+# <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a><span data-ttu-id="23318-102">基于方法的查询语法示例：集合运算符 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="23318-102">Method-Based Query Syntax Examples: Set Operators (LINQ to DataSet)</span></span>
+<span data-ttu-id="23318-103">本主题中的示例演示如何使用<xref:System.Linq.Enumerable.Distinct%2A>， <xref:System.Linq.Enumerable.Except%2A>， <xref:System.Linq.Enumerable.Intersect%2A>，和<xref:System.Linq.Enumerable.Union%2A>运算符以对数据行集执行基于值的比较运算。[正在加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)请参阅[比较 Datarow](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)有关详细信息<xref:System.Data.DataRowComparer>。</span><span class="sxs-lookup"><span data-stu-id="23318-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, and <xref:System.Linq.Enumerable.Union%2A> operators to perform value-based comparison operations on sets of data rows.[Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md) See [Comparing DataRows](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md) for more information on <xref:System.Data.DataRowComparer>.</span></span>  
   
- <span data-ttu-id="d530d-104">`FillDataSet`中指定这些示例中使用的方法[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="d530d-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="23318-104">`FillDataSet`中指定这些示例中使用的方法[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="23318-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="d530d-105">本主题中的示例使用 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 表。</span><span class="sxs-lookup"><span data-stu-id="d530d-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="23318-105">本主题中的示例使用 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 表。</span><span class="sxs-lookup"><span data-stu-id="23318-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="d530d-106">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="d530d-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="23318-106">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="23318-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- <span data-ttu-id="d530d-107">有关详细信息，请参阅[如何：在 Visual Studio 中创建 LINQ to DataSet 项目](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="d530d-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="23318-107">有关详细信息，请参阅[如何：在 Visual Studio 中创建 LINQ to DataSet 项目](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="23318-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="distinct"></a><span data-ttu-id="d530d-108">Distinct</span><span class="sxs-lookup"><span data-stu-id="d530d-108">Distinct</span></span>  
+## <a name="distinct"></a><span data-ttu-id="23318-108">Distinct</span><span class="sxs-lookup"><span data-stu-id="23318-108">Distinct</span></span>  
   
-### <a name="example"></a><span data-ttu-id="d530d-109">示例</span><span class="sxs-lookup"><span data-stu-id="d530d-109">Example</span></span>  
- <span data-ttu-id="d530d-110">此示例使用 <xref:System.Linq.Enumerable.Distinct%2A> 方法移除序列中的重复元素。</span><span class="sxs-lookup"><span data-stu-id="d530d-110">This example uses the <xref:System.Linq.Enumerable.Distinct%2A> method to remove duplicate elements in a sequence.</span></span>  
+### <a name="example"></a><span data-ttu-id="23318-109">示例</span><span class="sxs-lookup"><span data-stu-id="23318-109">Example</span></span>  
+ <span data-ttu-id="23318-110">此示例使用 <xref:System.Linq.Enumerable.Distinct%2A> 方法移除序列中的重复元素。</span><span class="sxs-lookup"><span data-stu-id="23318-110">This example uses the <xref:System.Linq.Enumerable.Distinct%2A> method to remove duplicate elements in a sequence.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#DistinctRows](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#distinctrows)]
  [!code-vb[DP LINQ to DataSet Examples#DistinctRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#distinctrows)]  
   
-## <a name="except"></a><span data-ttu-id="d530d-111">Except</span><span class="sxs-lookup"><span data-stu-id="d530d-111">Except</span></span>  
+## <a name="except"></a><span data-ttu-id="23318-111">Except</span><span class="sxs-lookup"><span data-stu-id="23318-111">Except</span></span>  
   
-### <a name="example"></a><span data-ttu-id="d530d-112">示例</span><span class="sxs-lookup"><span data-stu-id="d530d-112">Example</span></span>  
- <span data-ttu-id="d530d-113">此示例使用 <xref:System.Linq.Enumerable.Except%2A> 方法返回出现在第一个表中但不出现在第二个表中的联系人。</span><span class="sxs-lookup"><span data-stu-id="d530d-113">This example uses the <xref:System.Linq.Enumerable.Except%2A> method to return contacts that appear in the first table but not in the second.</span></span>  
+### <a name="example"></a><span data-ttu-id="23318-112">示例</span><span class="sxs-lookup"><span data-stu-id="23318-112">Example</span></span>  
+ <span data-ttu-id="23318-113">此示例使用 <xref:System.Linq.Enumerable.Except%2A> 方法返回出现在第一个表中但不出现在第二个表中的联系人。</span><span class="sxs-lookup"><span data-stu-id="23318-113">This example uses the <xref:System.Linq.Enumerable.Except%2A> method to return contacts that appear in the first table but not in the second.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Except2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#except2)]
  [!code-vb[DP LINQ to DataSet Examples#Except2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#except2)]  
   
-## <a name="intersect"></a><span data-ttu-id="d530d-114">Intersect</span><span class="sxs-lookup"><span data-stu-id="d530d-114">Intersect</span></span>  
+## <a name="intersect"></a><span data-ttu-id="23318-114">Intersect</span><span class="sxs-lookup"><span data-stu-id="23318-114">Intersect</span></span>  
   
-### <a name="example"></a><span data-ttu-id="d530d-115">示例</span><span class="sxs-lookup"><span data-stu-id="d530d-115">Example</span></span>  
- <span data-ttu-id="d530d-116">此示例使用 <xref:System.Linq.Enumerable.Intersect%2A> 方法返回同时出现在两个表中的联系人。</span><span class="sxs-lookup"><span data-stu-id="d530d-116">This example uses the <xref:System.Linq.Enumerable.Intersect%2A> method to return contacts that appear in both tables.</span></span>  
+### <a name="example"></a><span data-ttu-id="23318-115">示例</span><span class="sxs-lookup"><span data-stu-id="23318-115">Example</span></span>  
+ <span data-ttu-id="23318-116">此示例使用 <xref:System.Linq.Enumerable.Intersect%2A> 方法返回同时出现在两个表中的联系人。</span><span class="sxs-lookup"><span data-stu-id="23318-116">This example uses the <xref:System.Linq.Enumerable.Intersect%2A> method to return contacts that appear in both tables.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Intersect2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#intersect2)]
  [!code-vb[DP LINQ to DataSet Examples#Intersect2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#intersect2)]  
   
-## <a name="union"></a><span data-ttu-id="d530d-117">联合</span><span class="sxs-lookup"><span data-stu-id="d530d-117">Union</span></span>  
+## <a name="union"></a><span data-ttu-id="23318-117">联合</span><span class="sxs-lookup"><span data-stu-id="23318-117">Union</span></span>  
   
-### <a name="example"></a><span data-ttu-id="d530d-118">示例</span><span class="sxs-lookup"><span data-stu-id="d530d-118">Example</span></span>  
- <span data-ttu-id="d530d-119">此示例使用 <xref:System.Linq.Enumerable.Union%2A> 方法返回这两个表的任一表中特有的联系人。</span><span class="sxs-lookup"><span data-stu-id="d530d-119">This example uses the <xref:System.Linq.Enumerable.Union%2A> method to return unique contacts from either of the two tables.</span></span>  
+### <a name="example"></a><span data-ttu-id="23318-118">示例</span><span class="sxs-lookup"><span data-stu-id="23318-118">Example</span></span>  
+ <span data-ttu-id="23318-119">此示例使用 <xref:System.Linq.Enumerable.Union%2A> 方法返回这两个表的任一表中特有的联系人。</span><span class="sxs-lookup"><span data-stu-id="23318-119">This example uses the <xref:System.Linq.Enumerable.Union%2A> method to return unique contacts from either of the two tables.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Union2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#union2)]
  [!code-vb[DP LINQ to DataSet Examples#Union2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#union2)]  
   
-## <a name="see-also"></a><span data-ttu-id="d530d-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="d530d-120">See also</span></span>
-- [<span data-ttu-id="d530d-121">将数据加载到数据集中</span><span class="sxs-lookup"><span data-stu-id="d530d-121">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [<span data-ttu-id="d530d-122">LINQ to DataSet 示例</span><span class="sxs-lookup"><span data-stu-id="d530d-122">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [<span data-ttu-id="d530d-123">标准查询运算符概述</span><span class="sxs-lookup"><span data-stu-id="d530d-123">Standard Query Operators Overview</span></span>](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+## <a name="see-also"></a><span data-ttu-id="23318-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="23318-120">See also</span></span>
+- [<span data-ttu-id="23318-121">将数据加载到数据集中</span><span class="sxs-lookup"><span data-stu-id="23318-121">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [<span data-ttu-id="23318-122">LINQ to DataSet 示例</span><span class="sxs-lookup"><span data-stu-id="23318-122">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [<span data-ttu-id="23318-123">标准查询运算符概述 (C#)</span><span class="sxs-lookup"><span data-stu-id="23318-123">Standard Query Operators Overview (C#)</span></span>](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="23318-124">标准查询运算符概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="23318-124">Standard Query Operators Overview (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
