@@ -9,12 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 0d238ceb4f96905031cb4a30f50727050381277e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 5c4041f42b0a9d1d1e4bc8438e662911534daa42
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084492"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826676"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>如何：通过使用 devpath 查找程序集查找程序集
 开发人员可能想要确保它们生成的共享程序集与多个应用程序一起正常运行。 而不是不断地将在全局程序集缓存中的程序集放在开发周期中，开发人员可以创建指向程序集的生成输出目录 DEVPATH 环境变量。  
@@ -44,4 +44,5 @@ ms.locfileid: "55084492"
 >  仅在开发期间使用此设置。 在运行时不会检查位于 devpath 查找程序集强名称的程序集上的版本。 它只需使用它找到的第一个程序集。  
   
 ## <a name="see-also"></a>请参阅
-- [配置.NET Framework 应用](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+
+- [使用配置文件配置应用程序](index.md)

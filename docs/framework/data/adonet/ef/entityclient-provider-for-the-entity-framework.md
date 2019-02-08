@@ -2,12 +2,12 @@
 title: 用于实体框架的 EntityClient 提供程序
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 33ad1e89260296f09426e335450d9d8ba3461d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b094f6d0fbd7c1dc8d56fc43a05fc4d22a80e981
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541191"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826442"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>用于实体框架的 EntityClient 提供程序
 EntityClient 提供程序是一种数据提供程序，实体框架应用程序使用该提供程序访问在概念模型中描述的数据。 有关概念模型的信息，请参阅[建模和映射](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。 EntityClient 使用其他 .NET Framework 数据提供程序访问数据源。 例如，EntityClient 在访问 SQL Server 数据库时使用 SQL Server .NET Framework 数据提供程序 (SqlClient)。 有关 SqlClient 提供程序的信息，请参阅[用于实体框架的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)。 EntityClient 提供程序是在 <xref:System.Data.EntityClient> 命名空间中实现的。  
@@ -40,7 +40,7 @@ EntityClient 提供程序是一种数据提供程序，实体框架应用程序�
 ## <a name="managing-transactions"></a>管理事务  
  在实体框架中，有两种使用事务的方法：自动和显式。 自动事务使用 <xref:System.Transactions> 命名空间，而显式事务使用 <xref:System.Data.EntityClient.EntityTransaction> 类。  
   
- 若要更新通过概念模型中; 公开的数据请参阅[如何：管理实体框架中的事务](https://msdn.microsoft.com/library/4a55eb7f-f826-4a48-9df1-aebe2352ebef)。  
+ 若要更新通过概念模型公开的数据，请参阅[如何：管理实体框架中的事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738523(v=vs.100))。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：生成 EntityConnection 连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
@@ -64,6 +64,6 @@ EntityClient 提供程序是一种数据提供程序，实体框架应用程序�
  [如何：使用导航关系导航运算符](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>请参阅
-- [管理连接和事务](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [ADO.NET 实体框架](../../../../../docs/framework/data/adonet/ef/index.md)
 - [语言参考](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
