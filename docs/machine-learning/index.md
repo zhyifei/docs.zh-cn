@@ -3,12 +3,12 @@ title: ML.NET 内容指南
 description: 了解如何使用 ML.NET 生成自定义 AI 解决方案并将其集成到 .NET 应用程序。
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550456"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826253"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET 内容指南
 
@@ -31,7 +31,7 @@ ms.locfileid: "54550456"
 
 [使用多类分类模型对 GitHub 问题分类](tutorials/github-issue-classification.md)展示了如何生成可确定 GitHub 问题的“区域”标签的应用。
 
-[使用回归模型预测出租车费用](tutorials/taxi-fare.md)演示如何构建一个使用历史数据中的许多因素来确定答案的预测性应用程序。
+[使用回归模型预测价格](tutorials/taxi-fare.md)演示如何构建一个使用历史数据中的许多因素来确定答案的预测性应用程序。
 
 [根据特征对鸢尾花进行分类](tutorials/iris-clustering.md)演示如何使用聚类分析模型来分析鸢尾花数据集。 
 

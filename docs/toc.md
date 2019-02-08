@@ -1189,7 +1189,7 @@
 ## [教程](machine-learning/tutorials/index.md)
 ### [情绪分析（二元分类）](machine-learning/tutorials/sentiment-analysis.md)
 ### [问题分类（多类分类）](machine-learning/tutorials/github-issue-classification.md)
-### [出租车费预测器（回归）](machine-learning/tutorials/taxi-fare.md)
+### [价格预测（回归）](machine-learning/tutorials/taxi-fare.md)
 ### [鸢尾花（群集）](machine-learning/tutorials/iris-clustering.md)
 ## [操作指南](machine-learning/how-to-guides/index.md)
 ### 准备数据
@@ -1200,7 +1200,7 @@
 #### [从文本文件加载数据](machine-learning/how-to-guides/load-data-from-text-file-ml-net.MD)
 #### [使用标准化程序预处理数据](machine-learning/how-to-guides/normalizers-preprocess-data-ml-net.md)
 ### 训练、评估和解释模型
-#### [使用不在文本文件中的数据定型模型](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
+#### [使用实时数据源训练模型](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
 #### [使用交叉验证定型模型](machine-learning/how-to-guides/train-cross-validation-ml-net.md)
 #### [检查中间管道数据值](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [定型回归模型](machine-learning/how-to-guides/train-regression-model-ml-net.md)
