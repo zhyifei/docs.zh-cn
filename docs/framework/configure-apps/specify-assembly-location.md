@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: b76537a347cdf30c65bfd6e56f274108e796a315
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 328fe08872a2b57d0bdf87ea9be9224795ca9ad9
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258983"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825402"
 ---
 # <a name="specifying-an-assemblys-location"></a>指定程序集的位置
 有两种方法来指定程序集的位置：  
@@ -20,7 +20,7 @@ ms.locfileid: "55258983"
   
 -   使用[\<探测 >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)元素。  
   
- 此外可以使用[.NET Framework 配置工具 (Mscorcfg.msc)](https://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764)来指定程序集的位置或指定公共语言运行时来探测程序集的位置。  
+ 此外可以使用[.NET Framework 配置工具 (Mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100))来指定程序集的位置或指定公共语言运行时来探测程序集的位置。  
   
 ## <a name="using-the-codebase-element"></a>使用\<b a s e > 元素  
  可以使用 **\<b a s e >** 只能机配置或发布服务器策略在文件中还将程序集版本重定向的元素。 当运行时确定要使用的程序集版本时，则会应用确定版本的文件的基本代码设置。 如果指示没有基本代码，运行时探测程序集以正常方式。 有关详细信息，请参阅[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。  
@@ -69,4 +69,4 @@ ms.locfileid: "55258983"
 - [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）
 - [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [配置.NET Framework 应用](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [使用配置文件配置应用程序](index.md)
