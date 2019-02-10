@@ -2,14 +2,14 @@
 title: 分析依赖项将代码移植到 .NET Core
 description: 了解如何分析外部依赖项，以便将项目从 .NET Framework 移植到 .NET Core。
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6451099bfc7f3afa5c9c1585862403a0a9fb2186
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415216"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904338"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>分析依赖项将代码移植到 .NET Core
 
@@ -93,13 +93,13 @@ portable-net45-win8-wpa8-wpa81
 
 有关如何在 Visual Studio 中取消编译器警告的详细信息，请参阅[取消 NuGet 包的警告](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages)。
 
-### <a name="port-your-packages-to-packagereference"></a>将包移植到 `PackageReference`
+## <a name="port-your-packages-to-packagereference"></a>将包移植到 `PackageReference`
 
 .NET Core 使用 [PackageReference](/nuget/consume-packages/package-references-in-project-files) 来指定包依赖项。 如果使用 [packages.config](/nuget/reference/packages-config) 来指定包，将需要转换为 `PackageReference`。
 
 有关详细信息，请参阅[从 packages.config 迁移到 PackageReference](/nuget/reference/migrate-packages-config-to-package-reference)。
 
-### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 包依赖项未在.NET Core 上运行时应执行的操作
+## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 包依赖项未在.NET Core 上运行时应执行的操作
 
 如果所依赖的 NuGet 包无法在 .NET Core 上运行，可以执行以下几项操作：
 
@@ -119,6 +119,5 @@ portable-net45-win8-wpa8-wpa81
 
 用户可能拥有不是 NuGet 包的依赖项，如文件系统中的 DLL。 确定该依赖项是否可移植的唯一方法是运行 [.NET 可移植性分析器](https://github.com/Microsoft/dotnet-apiport)工具。 该工具可以分析面向 .NET Framework 的程序集，并识别不可移植到其他 .NET 平台（如 .NET Core）的 API。 可将该工具作为控制台应用程序或作为 [Visual Studio 扩展](../../standard/analyzers/portability-analyzer.md)来运行。
 
-## <a name="next-steps"></a>后续步骤
-
-若要移植库，请参阅 [Porting your Libraries](libraries.md)（移植库）。
+>[!div class="step-by-step"]
+>[下一页](libraries.md)
