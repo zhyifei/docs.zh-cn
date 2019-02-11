@@ -8,12 +8,12 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: d782899c3b29851f020cd9fc07cde8f408bf2ac5
-  ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+  ms.openlocfilehash: c44d16e543f85852cee39106688fd3870dff7c4d
+  ms.sourcegitcommit: c3cf1ace8a1d403aeae76d8976d01995893d2536
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 01/23/2019
-  ms.locfileid: "54634254"
+  ms.lasthandoff: 02/07/2019
+  ms.locfileid: "55807042"
 items:
 - durationInMinutes: 1
   content: >
@@ -51,7 +51,7 @@ items:
     ```
 
 
-    使用 `Caps` 方法，执行相同操作。 这是一个小的改进，但是如果使用得当，它会创建更具可读性的代码，特别是对于数据传输对象 (DTO) 和其他具有最小行为的类型。
+    使用 `AllCaps` 方法，执行相同操作。 这是一个小的改进，但是如果使用得当，它会创建更具可读性的代码，特别是对于数据传输对象 (DTO) 和其他具有最小行为的类型。
 - title: 导入单个类
   durationInMinutes: 2
   content: "如果在整个代码中反复使用类的静态方法，则每次包含类名都会模糊代码的含义。 `Person` 类目前导入 `System` 命名空间，尽管只会使用 <xref:System.Console?displayProperty=nameWithType>。 修改 `using` 语句，如下所示：\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#UsingStatic)]  \n\n在广泛使用具有许多静态方法的单个类（比如 [`string`](xref:System.String) 类或 <xref:System.Math?displayProperty=nameWithType> 类）的大型程序中，`static using` 语句变得更加有用。\n"
