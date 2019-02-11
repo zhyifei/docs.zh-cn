@@ -3,13 +3,13 @@ title: 关于 ASP.NET Core Web 应用的 Azure 托管建议
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 关于 ASP.NET Web 应用的 Azure 托管建议
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/27/2018
-ms.openlocfilehash: 221ea2a9fc154468f16ce09195a0415883ada9df
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: cda4c002c73e2dd0db1b2d5d1fa8bc76903c5c62
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125927"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828379"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>关于 ASP.NET Core Web 应用的 Azure 托管建议
 

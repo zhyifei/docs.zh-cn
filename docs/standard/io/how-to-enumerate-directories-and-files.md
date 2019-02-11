@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 463c751ab03875b6af89c325981c65b7bc69d0ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 863335cf080dbccd76b38c7222b74637b99ae2f0
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580455"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758659"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>如何：枚举目录和文件
 在处理目录和文件的大型集合时，可枚举的集合能够比数组提供更好的性能。 要枚举目录和文件，请使用可返回目录和文件名的可枚举集合的方法或其 <xref:System.IO.DirectoryInfo>、<xref:System.IO.FileInfo> 或 <xref:System.IO.FileSystemInfo> 对象。  
@@ -65,4 +65,4 @@ ms.locfileid: "54580455"
   
 ## <a name="see-also"></a>请参阅
 
-[文件和流 I/O](../../../docs/standard/io/index.md)
+- [文件和流 I/O](../../../docs/standard/io/index.md)
