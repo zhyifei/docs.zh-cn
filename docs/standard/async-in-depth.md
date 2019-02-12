@@ -6,18 +6,18 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 7aa2bcdad9584ecf05dfee35e0887ed70737795d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492828"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285020"
 ---
 # <a name="async-in-depth"></a>深入了解异步
 
 使用基于 .NET 任务的异步模型可直接编写绑定 I/O 和 CPU 的异步代码。 该模型由 `Task` 和 `Task<T>` 类型以及 C# 和 Visual Basic 中的 `async` 和 `await` 关键字公开。 （有关特定语言的资源，请参见[另请参阅](#see-also)部分。）本文解释如何使用 .NET 异步，并深入介绍其中使用的异步框架。
 
-## <a name="task-and-tasklttgt"></a>任务和 Task&lt;T&gt;
+## <a name="task-and-taskt"></a>任务和 Task\<T>
 
 任务是用于实现称之为[并发 Promise 模型](https://en.wikipedia.org/wiki/Futures_and_promises)的构造。  简单地说，它们“承诺”，会在稍后完成工作，让你使用干净的 API 与 promise 协作。
 
@@ -114,7 +114,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 此外，使用 `async` 方法将工作调度到 UI 线程（例如，更新 UI）十分简单，且无需额外的工作（例如调用线程安全的委托）。
 
-## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>深入了解绑定 CPU 的操作的任务和 Task&lt;T&gt;
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>深入了解绑定 CPU 的操作的任务和 Task\<T>
 
 绑定 CPU 的 `async` 代码与绑定 I/O 的 `async` 代码有些许不同。  由于工作在 CPU 上执行，无法解决线程专用于计算的问题。  `async` 和 `await` 的运用使得可以与后台线程交互并让异步方法调用方可响应。  请注意这不会为共享数据提供任何保护。  如果正在使用共享数据，仍需要采用合适的同步策略。
 

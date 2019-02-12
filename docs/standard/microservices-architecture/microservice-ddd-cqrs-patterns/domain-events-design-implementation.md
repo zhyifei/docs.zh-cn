@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc71e661a5fd2de2a69da36df0fc60616b149802
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 84ab1a67aca30aa1967ef2fb11f930bf14ec45e3
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127844"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675473"
 ---
 # <a name="domain-events-design-and-implementation"></a>域事件：设计和实现
 
@@ -31,7 +31,7 @@ ms.locfileid: "53127844"
 
 请务必确保与域事件相关的所有操作都成功完成，或是都未成功完成，正如数据库事务一样。
 
-域事件类似于消息样式事件，但有一个重要的区别。 对于真正的消息传送、消息队列、消息中转站或使用 AMPQ 的服务总线，消息始终异步发送，并跨进程和计算机传达。 这对于集成多个绑定上下文、微服务或不同应用程序很有用。 但是，对于域事件，需要从当前运行的域操作引发事件，但需要在相同的域中发生副作用。
+域事件类似于消息样式事件，但有一个重要的区别。 对于真正的消息传送、消息队列、消息中转站或使用 AMQP 的服务总线，消息始终异步发送，并跨进程和计算机传达。 这对于集成多个绑定上下文、微服务或不同应用程序很有用。 但是，对于域事件，需要从当前运行的域操作引发事件，但需要在相同的域中发生副作用。
 
 域事件和副作用（过后触发的操作，由事件处理程序管理）应几乎立即发生，通常在进程内或在相同的域中。 因此，域事件可以是同步或异步。 但是集成事件应始终是异步。
 
@@ -132,7 +132,7 @@ public class OrderStartedDomainEvent : INotification
 
 下一个问题是如何引发域事件，使其到达相关的事件处理程序。 可使用多个方法。
 
-Udi Dahan 最初建议（例如在 [Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/)（域事件 – Take 2）等一系列文章中）将静态类用于管理和引发事件。 这可能包括名为 DomainEvents 的静态类，该类会在调用时，使用 `DomainEvents.Raise(Event myEvent)` 等语法立即引发域事件。 Jimmy Bogard 在其博客文章 ([Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/))（强化你的域：域事件）中建议使用类似方法。
+Udi Dahan 最初建议（例如在 [Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/)（域事件 – Take 2）等一系列文章中）将静态类用于管理和引发事件。 这可能包括名为 DomainEvents 的静态类，该类会在调用时，使用 `DomainEvents.Raise(Event myEvent)` 等语法立即引发域事件。 Jimmy Bogard 写了过一篇博客文章（[强化你的域：域事件](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)），其中建议了类似的方法。
 
 但是，如果域事件类是静态的，它也会立即调度给处理程序。 这使得测试和调试更加困难，因为会在引发事件后立即执行具有副作用逻辑的事件处理程序。 测试和调试时，你希望专注于当前聚合类发生的事件；不希望突然重定向到其他事件处理程序，处理与其他聚合或应用程序逻辑相关的副作用。 因此，其他方法应运而生，下一节将进行介绍。
 
@@ -218,7 +218,7 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 > 跨聚合的任何规则都不会始终保持最新状态。 通过事件处理、批处理或其他更新机制，其他依赖项可在特定时间内解析。 （第 128 页）
 
-Vaughn Vernon 在 [Effective Aggregate Design.Part II: Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)（有效聚合设计。第二部分：让聚合共同工作）中提到：
+Vaughn Vernon 在 [Effective Aggregate Design.第 II 部分：让聚合共同工作](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)：
 
 > 因此，如果在一个聚合实例上执行命令需要在一个或多个聚合上执行其他业务规则，则使用最终一致性。\[...\]有一个实用方法可在 DDD 模型中支持最终一致性。 聚合方法发布及时交付到一个或多个异步订阅服务器的域事件。
 
@@ -355,10 +355,10 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 - **Jimmy Bogard。A better domain events pattern** \（更好的域事件模式）
   [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
-- **Vaughn Vernon。Effective Aggregate Design Part II: Making Aggregates Work Together** \（高效聚合设计第 II 部分：协同聚合）
+- **Vaughn Vernon。有效聚合设计，第 II 部分：让聚合共同工作** \
   [*https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard。Strengthening your domain: Domain Events** \（强化域：域事件）
+- **Jimmy Bogard。强化域：域事件** \
   [*https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/*](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
 
 - **Tony Truong。Domain Events Pattern Example** \（域事件模式示例）

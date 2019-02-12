@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a355c2e996ddb00dad804dfeb22987923d91aa6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 745cd1e17e2c06a513c6fdafe8f6b5f464b95d5f
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144515"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479654"
 ---
 # <a name="threading-objects-and-features"></a>线程处理对象和功能
 
@@ -24,7 +24,7 @@ ms.locfileid: "53144515"
 |[托管线程池](the-managed-thread-pool.md)|描述 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 类，它提供由 .NET 托管的工作线程池。|  
 |[计时器](timers.md)|介绍可在多线程环境中使用的 .NET 计时器。|
 |[同步基元概述](overview-of-synchronization-primitives.md)|描述可用于同步对共享资源的访问或控制线程交互的类型。|
-|[EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|描述用于通过发送和等待信号同步线程活动的托管事件等待句柄。|
+|[EventWaitHandle、CountdownEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|描述用于通过发送和等待信号同步线程活动的托管事件等待句柄。|
 |[Mutex](mutexes.md)|描述 <xref:System.Threading.Mutex?displayProperty=nameWithType>，它可授予对共享资源的独占访问权限。|
 |[Semaphore 和 SemaphoreSlim](semaphore-and-semaphoreslim.md)|描述 <xref:System.Threading.Semaphore?displayProperty=nameWithType>，它用于限制可同时访问某一共享资源或资源池的线程数。|
 |[Barrier](barrier.md)|描述 <xref:System.Threading.Barrier?displayProperty=nameWithType> 类，它可实现分阶段操作中的线程协调屏障模式。|

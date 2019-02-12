@@ -3,12 +3,12 @@ title: 使用可为空引用类型进行设计
 description: 本高级教程介绍了可为空引用类型。 你将学习在引用值可能为 NULL 时表达你的设计意图，并在引用值不能为 NULL 时让编译器强制执行。
 ms.date: 12/03/2018
 ms.custom: mvc
-ms.openlocfilehash: 7e4cb423658287e5260770a680f189c227b9cd01
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eec0c54c041db98595202ab982494df6ae3f743c
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156685"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204764"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教程：使用可为空和不可为空引用类型更清晰地表达设计意图
 
@@ -68,7 +68,7 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 
 这些类型将使用可为空和不可为空引用类型来表示哪些成员是必需的，哪些成员是可选的。 可为空引用类型清楚地传达了设计意图：
 
-- 作为调查一部分的问题永远不会为 NULL：提出一个空问题毫无意义。
+- 调查中的问题不可为 null：提出空问题没有任何意义。
 - 回应者永远不能为 NULL。 你需要跟踪所联系的人员，即便回应者拒绝参与也是如此。
 - 对某个问题的任何响应都可能为 NULL。 回应者可拒绝回答部分或全部问题。
 
@@ -88,7 +88,7 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 
 ## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>使用可为空和不可为空类型构建调查
 
-你将编写的第一个代码创建调查。 你将编写类来为调查问题和调查运行建模。 调查有三种类型的问题，通过答案格式进行区分：答案为是/否、答案为数字以及答案为文本。 创建名为 `public` `SurveyQuestion` 类。 在 `using` 语句后立即包括 `#nullable enable` 杂注：
+你将编写的第一个代码创建调查。 你将编写类来为调查问题和调查运行建模。 调查有三种类型的问题，通过答案格式进行区分：答案为“是”/“否”、答案为数字以及答案为文本。 创建名为 `public` `SurveyQuestion` 类。 在 `using` 语句后立即包括 `#nullable enable` 杂注：
 
 ```csharp
 #nullable enable
@@ -146,7 +146,7 @@ namespace NullableIntroduction
 }
 ```
 
-和以前一样，你必须将列表对象初始化为非空值，否则编译器会发出警告。 在 `AddQuestion` 的第二次重载中没有 NULL 检查，因为不需要进行二次检查：你已声明该变量不可为空。 其值不可为 `null`。
+和以前一样，你必须将列表对象初始化为非空值，否则编译器会发出警告。 在 `AddQuestion` 的第二次重载中没有 NULL 检查，因为不需要进行二次检查：已声明该变量不可为空。 其值不可为 `null`。
 
 切换到编辑器中的 `Program.cs`，并使用以下代码行替换 `Main` 的内容：
 
@@ -190,7 +190,7 @@ namespace NullableIntroduction
 1. 要求参加这项调查。 如果此人不同意，则返回缺失（或 NULL）响应。
 1. 询问每个问题并记录答案。 每个答案也可能会缺失（或 NULL）。
 
-将以下代码添加到 `SurveyRespondent` 类：
+将以下代码添加到 `SurveyResponse` 类：
 
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
@@ -228,7 +228,7 @@ namespace NullableIntroduction
 
 ## <a name="get-the-code"></a>获取代码
 
-你可以从 [csharp/IntroToNullables](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) 文件夹中的[示例](https://github.com/dotnet/samples)存储库获取已完成教程的代码。
+你可以从 [csharp/NullableIntroduction](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) 文件夹中的[示例](https://github.com/dotnet/samples)存储库获取已完成教程的代码。
 
 通过更改可为空和不可为空引用类型之间的类型声明进行试验。 了解如何生成不同的警告以确保不会意外取消引用 `null`。
 

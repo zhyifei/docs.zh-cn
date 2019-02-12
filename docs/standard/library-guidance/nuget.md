@@ -4,12 +4,12 @@ description: 使用 .NET 库的 NuGet 打包的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 2ad8d2ed77610a3acead69b7c864785261ea5e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724299"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204608"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -46,7 +46,7 @@ NuGet 包 (`*.nupkg`) 是一个 zip 文件，其中包含 .NET 程序集和关�
 
 NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含 NuGet.org 上的每个包应提供的核心元数据：
 
-| MSBuild 属性名称              | Nuspec 名称              | 说明  |
+| MSBuild 属性名称              | Nuspec 名称              | 说明​​  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | 包标识符。 如果标识符的前缀满足[条件](/nuget/reference/id-prefix-reservation)，则可以保留该前缀。 |
 | `PackageVersion`                   | `version`                  | NuGet 包版本。 有关详细信息，请参阅 [NuGet 包版本](./versioning.md#nuget-package-version)。             |
@@ -69,9 +69,9 @@ NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含 
 
 ✔️请使用属于 64x64 并具有透明背景的包图标图像以获得最佳查看结果。
 
-**✔️ 请考虑**设置 [SourceLink](./sourcelink.md) 以将源代码管理元数据添加到程序集和 NuGet 包中。
+**✔️ 请考虑**设置[源链接](./sourcelink.md)以将源代码管理元数据添加到程序集和 NuGet 包中。
 
-> SourceLink 会自动将 `RepositoryUrl` 和 `RepositoryType` 元数据添加到 NuGet 包中。 SourceLink 还会添加用于构建包的确切源代码的相关信息。 例如，从 Git 存储库创建的包将添加提交哈希作为元数据。
+> 源链接会自动将 `RepositoryUrl` 和 `RepositoryType` 元数据添加到 NuGet 包中。 源链接还会添加用于构建包的确切源代码的相关信息。 例如，从 Git 存储库创建的包将添加提交哈希作为元数据。
 
 ## <a name="pre-release-packages"></a>预发行包
 

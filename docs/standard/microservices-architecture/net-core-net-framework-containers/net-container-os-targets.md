@@ -3,13 +3,13 @@ title: 使用 .NET 容器时定位的操作系统
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 .NET 容器时定位的操作系统
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: f6a5cf8d5e32e527977b7c142f5686310e88a068
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: bef268a180584c47486a16960ca13fd63201fbe2
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147195"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479862"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>使用 .NET 容器时定位的操作系统
 
@@ -38,21 +38,21 @@ ms.locfileid: "53147195"
 </thead>
 <tbody>
 <tr>
-<td>microsoft/dotnet:2.1-runtime</td>
-<td>.NET Core 2.1 多体系结构：支持 Linux 和 Windows Nano Server，具体取决于 Docker 主机。</td>
+<td>microsoft/dotnet:2.2-runtime</td>
+<td>.NET Core 2.2 多体系结构：支持 Linux 和 Windows Nano Server，具体取决于 Docker 主机。</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime</td>
-<td><p>ASP.NET Core 2.1 多体系结构：支持 Linux 和 Windows Nano Server，具体取决于 Docker 主机。</p>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime</td>
+<td><p>ASP.NET Core 2.2 多体系结构：支持 Linux 和 Windows Nano Server，具体取决于 Docker 主机。</p>
 <p>ASP.NET Core 的 aspnetcore 映像具有多个优化。</p></td>
 </tr>
 <tr class="even">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime-alpine</td>
-<td>.NET Core 2.1 运行时 - 仅在 Linux Alpine 发行版上</td>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime-alpine</td>
+<td>Linux Alpine 发行版上的 .NET Core 2.2 仅运行时</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1803</td>
-<td>.NET Core 2.1 运行时 - 仅在 Windows Nano Server（Windows Server 版本 1803）上</td>
+<td>microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1803</td>
+<td>Windows Nano Server（Windows Server 版本 1803）上的 .NET Core 2.2 仅运行时</td>
 </tr>
 </tbody>
 </table>

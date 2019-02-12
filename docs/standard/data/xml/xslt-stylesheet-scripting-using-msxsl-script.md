@@ -1,5 +1,5 @@
 ---
-title: 使用 &lt;msxsl:script&gt; 编写 XSLT 样式表脚本
+title: 使用 <msxsl:script> 编写 XSLT 样式表脚本
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c57f8964172d351ddae048ea36e63a13cf2578d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3abaa8115d2e52a98f0b42588860dece6361df5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563426"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267295"
 ---
-# <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>使用 &lt;msxsl:script&gt; 编写 XSLT 样式表脚本
+# <a name="xslt-stylesheet-scripting-using-msxslscript"></a>使用 \<msxsl:script> 编写 XSLT 样式表脚本
 <xref:System.Xml.Xsl.XslTransform> 类使用 `script` 元素支持嵌入的脚本。  
   
 > [!NOTE]
@@ -49,7 +49,7 @@ ms.locfileid: "54563426"
   
  函数可以在 `msxsl:script` 元素内声明。 下表显示了默认情况下支持的命名空间。 可以在列出的命名空间的外部使用类。 然而，这些类必须是完全限定的。  
   
-|默认命名空间|说明|  
+|默认命名空间|说明​​|  
 |------------------------|-----------------|  
 |系统|系统类。|  
 |System.Collection|集合类。|  

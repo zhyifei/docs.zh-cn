@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 765dac0a6cf8a3403880bead1716b8477662052c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2655cf5d5fb211149bdbe09179707ec53c737d3
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529523"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204556"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
@@ -53,7 +53,7 @@ ms.locfileid: "54529523"
 
 ## <a name="supported-client-operating-systems"></a>支持的客户端操作系统
 
-| 操作系统 | 支持的版本 | 随 OS 预安装 | 可单独安装 |
+| 操作系统 | 支持的版本 | 随 OS 预安装 | 可安装单独 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
 | Windows 10 2018 年 10 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 |--|
 | Windows 10 2018 年 4 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 |--|
@@ -84,6 +84,8 @@ ms.locfileid: "54529523"
 
 | 操作系统 | 支持的版本 | 随 OS 预安装 | 可安装单独 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Windows Server 2019 | 64 位 | .NET Framework 4.7.2 | -- |
+| Windows Server 版本 1809 | 64 位 | .NET Framework 4.7.2 | -- |
 | Windows Server 版本 1803 | 64 位 | .NET Framework 4.7.2 | -- |
 | Windows Server 版本 1709 | 64 位 | .NET Framework 4.7.1 | .NET Framework 4.7.2 | 
 | Windows 2016 Server | 64 位 | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] | .NET Framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |

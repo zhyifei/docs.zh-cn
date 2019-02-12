@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 24df4140e515483adb94fa542a7063bd2ae2120b
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146571"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479773"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步基元概述
 
@@ -112,7 +112,7 @@ ms.locfileid: "53146571"
 
 在 Windows 上，可以将 <xref:System.Threading.EventWaitHandle> 用于进程间同步。 为此，通过使用指定了名称或 <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType> 方法的 [EventWaitHandle 构造函数](<xref:System.Threading.EventWaitHandle.%23ctor%2A>)之一来创建表示指定了已命名系统信号量的 <xref:System.Threading.EventWaitHandle> 实例。
 
-有关详细信息，请参阅 [EventWaitHandle](eventwaithandle.md)、[AutoResetEvent](autoresetevent.md) 以及 [ManualResetEvent 和 ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md) 文章。 对于 API 参考，请参阅 <xref:System.Threading.EventWaitHandle>、<xref:System.Threading.AutoResetEvent>、<xref:System.Threading.ManualResetEvent> 和 <xref:System.Threading.ManualResetEventSlim>。
+有关详细信息，请参阅文章 [EventWaitHandle](eventwaithandle.md)。 对于 API 参考，请参阅 <xref:System.Threading.EventWaitHandle>、<xref:System.Threading.AutoResetEvent>、<xref:System.Threading.ManualResetEvent> 和 <xref:System.Threading.ManualResetEventSlim>。
 
 ### <a name="countdownevent-class"></a>CountdownEvent 类
 

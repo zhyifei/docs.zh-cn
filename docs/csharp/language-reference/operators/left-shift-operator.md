@@ -1,5 +1,5 @@
 ---
-title: '&lt;&lt; 运算符 - C# 参考'
+title: << 运算符 - C# 参考
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - left shift operator (<<) [C#]
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
-ms.openlocfilehash: 79a48d88e2c83b5ad78804367ee3c07f78622c08
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 0271c97bc624a8946b90508e9ce39d217a128c05
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333520"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261745"
 ---
-# <a name="ltlt-operator-c-reference"></a>&lt;&lt; 运算符（C# 参考）
+# <a name="-operator-c-reference"></a>\<\< 运算符（C# 参考）
 
 左移运算符 (`<<`) 将第一个操作数向左移动第二个操作数指定的位数。 第二个操作数的类型必须为 [int](../keywords/int.md) 或预定义隐式数值转换为 `int` 的类型。
 

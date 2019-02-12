@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 3f19d0485939e1923c479c1c9fdeb06572a11e14
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 609169d4624802f679f9661b7aa0596403cc48e7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240380"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261612"
 ---
 # <a name="structs-c-programming-guide"></a>结构（C# 编程指南）
 
@@ -28,8 +28,8 @@ ms.locfileid: "53240380"
 - 与类不同，无需使用 `new` 运算符即可对结构进行实例化。  
 - 结构可以声明具有参数的构造函数。 
 - 一个结构无法继承自另一个结构或类，并且它不能为类的基类。 所有结构都直接继承自 <xref:System.ValueType>，后者继承自 <xref:System.Object>。  
-- 结构可以实现接口。  
-- 结构可用作可以为 null 的类型，并且可以向其分配一个 null 值。  
+- 结构可以实现接口。 
+- 结构不能为 `null`，并且不能向结构变量分配 `null`，除非将变量声明为可为 null 的类型。
   
 ## <a name="related-sections"></a>相关章节  
 

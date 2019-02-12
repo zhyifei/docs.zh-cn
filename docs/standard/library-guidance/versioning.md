@@ -4,12 +4,12 @@ description: 版本控制 .NET 库的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169594"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204738"
 ---
 # <a name="versioning"></a>版本管理
 
@@ -87,7 +87,7 @@ Windows .NET Framework CLR 要求完全匹配以便加载具有强名称的程�
 
 ### <a name="assembly-informational-version"></a>程序集信息性版本
 
-程序集信息性版本用于记录附加版本信息，并且对运行时行为没有影响。 设置此版本是可选的。 如果使用的是 SourceLink，则将在具有 NuGet 包版本以及源代码管理版本的内部版本上设置此版本。 例如，`1.0.0-beta1+204ff0a` 包括从中生成程序集的源代码的提交哈希。 有关详细信息，请参阅 [SourceLink](./sourcelink.md)。
+程序集信息性版本用于记录附加版本信息，并且对运行时行为没有影响。 设置此版本是可选的。 如果使用的是源链接，则将在具有 NuGet 包版本以及源代码管理版本的内部版本上设置此版本。 例如，`1.0.0-beta1+204ff0a` 包括从中生成程序集的源代码的提交哈希。 有关详细信息，请参阅[源链接](./sourcelink.md)。
 
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>

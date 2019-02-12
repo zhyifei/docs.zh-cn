@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f32b32a8eeeaae00084bd0a69a94beeb837036a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a327cdeb69c5143b1720ff67ea493b7a088f399
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582162"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204868"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和依赖关系
 每个版本的 .NET framework 都包含公共语言运行时 (CLR)、基类库和其他托管库。 本主题按版本介绍了 .NET Framework 的关键功能，提供了有关基础 CLR 版本和相关开发环境的信息，并标识了 Windows 操作系统所安装的版本。  
@@ -30,7 +30,7 @@ ms.locfileid: "54582162"
   
 |.NET Framework 版本|CLR 版本|包含于<br /> Visual Studio<br/>version|✓ 包括在内<br />+ 可在其上安装<br />Windows|✓ 包括在内<br />+ 可在其上安装<br />Windows Server|确定已安装的 .NET 版本|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
-|4.7.2<br/><br/>[新增功能](../whats-new/index.md#whats-new-in-the-net-framework-472)<br/><br/>[辅助功能的新增功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-the-net-framework-472)|4| | ✓ 10 2018 年 10 月更新（版本 1809） <br/><br/> ✓ 10 2018 年 4 月更新（版本 1803） <br/><br/> + 10 Fall Creators Update（版本 1709） <br/> <br/> + 10 创意者更新（版本 1703） <br/> + 10 周年更新（版本 1607） <br/> + 8.1 <br/> +7 | ✓ Windows Server 版本 1803 <br/> + Windows Server 版本 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461814（Windows 10 2018 年 10 月更新） <br/> - 461808（Windows 10 2018 年 4 月更新和 Windows Server 版本 1803） <br/> - 461814（所有其他操作系统版本） <br/><br/> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|
+|4.7.2<br/><br/>[新增功能](../whats-new/index.md#whats-new-in-the-net-framework-472)<br/><br/>[辅助功能的新增功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-the-net-framework-472)|4| | ✓ 10 2018 年 10 月更新（版本 1809） <br/><br/> ✓ 10 2018 年 4 月更新（版本 1803） <br/><br/> + 10 Fall Creators Update（版本 1709） <br/> <br/> + 10 创意者更新（版本 1703） <br/> + 10 周年更新（版本 1607） <br/> + 8.1 <br/> +7 | ✓ Windows Server 2019<br/> ✓ Windows Server 版本 1809 <br/> ✓ Windows Server 版本 1803 <br/> + Windows Server 版本 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461814（Windows 10 2018 年 10 月更新） <br/> - 461808（Windows 10 2018 年 4 月更新和 Windows Server 版本 1803） <br/> - 461814（所有其他操作系统版本） <br/><br/> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|
 |4.7.1<br/><br/>[新增功能](../whats-new/index.md#whats-new-in-the-net-framework-471)<br/><br/>[辅助功能的新增功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-the-net-framework-471)|4| | ✓ 10 Fall Creators Update（版本 1709） <br/> <br/> + 10 创意者更新（版本 1703） <br/> + 10 周年更新（版本 1607） <br/> + 8.1 <br/> +7| + Windows Server 版本 1803 <br/> ✓ Windows Server 版本 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461308（Windows 10 创意者更新和 Windows Server 版本 1709） <br/> - 461310（所有其他操作系统版本） <br/><br/> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）| 
 |4.7<br/><br/>[新增功能](../whats-new/index.md#whats-new-in-the-net-framework-47)|4| | ✓ 10 创意者更新（版本 1703） <br/> <br/> + 10 周年更新（版本 1607） <br/> + 8.1 <br/> +7| + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 460798（Windows 10 创意者更新） <br/> - 460805（所有其他操作系统版本） <br/><br/> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)） |  
 |4.6.2<br/><br/>[新增功能](../whats-new/index.md#whats-new-in-the-net-framework-462)|4||✓ 10 周年更新（版本 1607） <br /><br /> + 10 十一月更新（版本 1511） <br/> + 10 <br/> + 8.1<br />+ 7|✓ 2016<br /><br /> + 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|使用 `Release` DWORD：<br /><br /> - 394802（Windows 10 周年更新和 Windows Server 2016） <br />- 394806（所有其他操作系统版本）<br /><br /> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|  

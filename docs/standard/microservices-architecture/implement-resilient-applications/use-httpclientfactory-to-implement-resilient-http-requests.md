@@ -3,13 +3,13 @@ title: 使用 HttpClientFactory 实现复原 HTTP 请求
 description: 了解如何使用自 .NET Core 2.1 起可用的 HttpClientFactory 来创建 `HttpClient` 实例，使其更轻松地在应用程序中使用。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 6af30ae3b5111e026be6ec89d266338b88cf22b2
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: 73faa847dae2f844784ae5d85ce905b7e1e64cd0
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362636"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479810"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 实现复原 HTTP 请求
 
@@ -25,7 +25,7 @@ ms.locfileid: "54362636"
 
 但将 `HttpClient` 对象用作单一对象或静态对象时还有一个问题。 在这种情况下，单一或静态 `HttpClient` 不考虑 DNS 更改，请参阅 [.NET Core GitHub 存储库的问题](https://github.com/dotnet/corefx/issues/11224)一文的说明。 
 
-为解决上述问题并使 `HttpClient` 实例管理更轻松，.NET Core 2.1 提供新的 `HttpClientFactory`，后者可与 Polly 集成来实现复原 HTTP 调用。   
+为解决上述问题并使 `HttpClient` 实例管理更轻松，.NET Core 2.1 引入了新的 `HttpClientFactory`，后者可与 Polly 集成来实现弹性 HTTP 调用。   
 
 ## <a name="what-is-httpclientfactory"></a>什么是 HttpClientFactory
 
@@ -157,7 +157,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
 ## <a name="additional-resources"></a>其他资源
 
-- **在 .NET Core 2.1 中使用 HttpClientFactory**\
+- **在 .NET Core 中使用 HttpClientFactory**\
   [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 - **HttpClientFactory GitHub 存储库**\

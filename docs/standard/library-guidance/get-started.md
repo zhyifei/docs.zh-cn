@@ -4,12 +4,12 @@ description: 开始构建 .NET 库。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e26c6632252257ab8cb5598f1b201559b760dc6b
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145720"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204635"
 ---
 # <a name="get-started"></a>入门
 
@@ -29,9 +29,9 @@ ms.locfileid: "53145720"
 
 NuGet 使构建 .NET 库时可以轻松地使用现有包。 了解 NuGet 依赖项的常见冲突来源以及如何避免冲突。
 
-### <a name="sourcelinksourcelinkmd"></a>[SourceLink](./sourcelink.md)
+### <a name="source-linksourcelinkmd"></a>[源链接](./sourcelink.md)
 
-SourceLink 是一个很棒的工具，.NET 库的用户在调试时可以使用它进入其源代码。 本文概述了 SourceLink 是什么以及为什么要使用它。
+源链接是一个很棒的工具，.NET 库的用户在调试时可以使用它进入其源代码。 本文概述了源链接是什么以及为什么要使用它。
 
 ### <a name="publishingpublish-nuget-packagemd"></a>[发布](./publish-nuget-package.md)
 

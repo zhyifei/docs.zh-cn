@@ -1,5 +1,5 @@
 ---
-title: '&gt;&gt; 运算符 - C# 参考'
+title: '>> 运算符 - C# 参考'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - '>> operator [C#]'
 - right shift operator (>>) [C#]
 ms.assetid: a07f8679-d318-4ef8-b38b-65903efb8056
-ms.openlocfilehash: f7cacd740966f0716e125887568a39abf0d9e454
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 703d4ee50bb9f49c66df029de9c5a280449d11fa
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725423"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255310"
 ---
-# <a name="gtgt-operator-c-reference"></a>&gt;&gt; 运算符（C# 参考）
+# <a name="-operator-c-reference"></a>>> 运算符（C# 参考）
 
 右移运算符 (`>>`) 将第一个操作数向右移动第二个操作数指定的位数。
 

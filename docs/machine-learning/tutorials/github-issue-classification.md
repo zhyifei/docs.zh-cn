@@ -4,12 +4,12 @@ description: 了解如何在多类分类方案中使用 ML.NET 对 GitHub 问题
 ms.date: 01/24/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6f01357906fd4398f68dadfb35dbce816f4302c0
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: a951e884a7494b0dcc808fc3dafbfadebc5577dc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066193"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254985"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>教程：在多类分类场景中使用 ML.NET 对 GitHub 问题进行分类。
 
@@ -106,6 +106,8 @@ ms.locfileid: "55066193"
 
 * 二元：A 或 B。
 * 多类：可以通过使用单个模型来预测多个类别。
+
+对于此类问题，请使用多类分类任务，因为你的问题类别预测可能是多个类别（多类）而不是仅两个（二元）中的一个。
 
 ## <a name="create-a-console-application"></a>创建控制台应用程序
 
