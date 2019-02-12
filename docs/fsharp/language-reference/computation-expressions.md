@@ -2,12 +2,12 @@
 title: 计算表达式
 description: 了解如何创建方便的语法中编写计算F#，可以进行序列化和组合使用控制流构造和绑定。
 ms.date: 07/27/2018
-ms.openlocfilehash: 79159146e24dc50f851c29e3cf7fffe892c6d196
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7524a42f8efb951be255ca6cc285740ef1fa12c3
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610692"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093510"
 ---
 # <a name="computation-expressions"></a>计算表达式
 
@@ -218,6 +218,7 @@ F#核心库定义了三个内置的计算表达式：[序列表达式](sequences
 |`Yield`|`'T -> M<'T>`|为调用`yield`中计算表达式的表达式。|
 |`YieldFrom`|`M<'T> -> M<'T>`|为调用`yield!`中计算表达式的表达式。|
 |`Zero`|`unit -> M<'T>`|调用空`else`的分支`if...then`中计算表达式的表达式。|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|指示计算表达式传递给`Run`作为报价的成员。 它将转换到报价计算的所有实例。|
 
 许多生成器类中的方法使用并返回`M<'T>`构造，这通常是已单独定义的类型特征的计算种类的组合，例如，`Async<'T>`对异步工作流和`Seq<'T>`表示序列工作流。 这些方法的签名启用它们要合并且相互嵌套，以便从一个构造返回的工作流对象可以传递到下一步。 编译器分析计算表达式时使用上表中的方法和计算表达式中的代码，为一系列嵌套的函数调用的转换表达式。
 

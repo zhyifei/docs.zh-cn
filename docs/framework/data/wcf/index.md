@@ -2,9 +2,15 @@
 title: WCF 数据服务 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Astoria
-  - 'WCF Data Services, getting started'
+- Astoria
+- WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
+ms.openlocfilehash: 6fd81a6bd4449cc0ef11b68320f366368d5edb7e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092483"
 ---
 # <a name="wcf-data-services-45"></a>WCF 数据服务 4.5
 
@@ -112,7 +118,7 @@ WCF Data Services 还包括一组客户端库，一个用于常规.NET Framework
 
  提供的功能和 WCF 数据服务中提供的功能的概述。
 
- [WCF Data Services 新增功能](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
+ [什么是 WCF 数据服务 5.0 中的新增功能](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 
  介绍 WCF 数据服务和对新 OData 功能的支持中的新功能。
 

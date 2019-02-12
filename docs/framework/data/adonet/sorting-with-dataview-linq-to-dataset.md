@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 11002ea61d53b16817714a4b03481383311b7c4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63dcfd80cca0db67dfad87c491d607506057a532
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733241"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092262"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>使用 DataView 进行排序 (LINQ to DataSet)
 基于特定条件对数据进行排序，然后通过 UI 控件向客户端表示该数据的能力是数据绑定的一个重要特征。 <xref:System.Data.DataView> 提供多种方式对数据进行排序并返回按指定排序条件排序的数据行。 除了基于字符串的排序功能，<xref:System.Data.DataView>还可以使用[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]排序条件的表达式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 表达式允许执行比基于字符串的排序更复杂而功能强大的排序操作。 本主题介绍这两种使用 <xref:System.Data.DataView> 的排序方法。  
@@ -84,4 +84,4 @@ ms.locfileid: "54733241"
 ## <a name="see-also"></a>请参阅
 - [数据绑定和 LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
 - [使用 DataView 进行筛选](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
-- [对数据进行排序](https://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)
+- [对数据进行排序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

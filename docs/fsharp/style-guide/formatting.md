@@ -1,13 +1,13 @@
 ---
 title: F#代码格式设置准则
 description: 了解有关格式设置准则F#代码。
-ms.date: 11/26/2018
-ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 02/08/2019
+ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254816"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093614"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#代码格式设置准则
 
@@ -354,7 +354,7 @@ type PostalAddress =
     }
 ```
 
-将打开标记放置在一个新行和新行中的右令牌是考虑可取的如果要声明接口实现或成员的记录：
+将打开标记放置在一个新行和新行中的右令牌是更可取，如果要声明接口实现或成员的记录：
 
 ```fsharp
 // Declaring additional members on PostalAddress
@@ -389,7 +389,7 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-将放置在打开令牌在新的一行，内容选项卡式通过一个作用域，并置于新行的结束标记是如果您是考虑可取：
+放置在打开令牌在新的一行，内容选项卡式通过一个作用域，并置于新行的结束标记是如果您是更可取：
 
 * 四处移动记录，在代码中使用不同的缩进作用域
 * 通过管道将它们传递到函数
@@ -423,6 +423,42 @@ let foo a =
 ```
 
 相同的规则适用于列表和数组元素。
+
+## <a name="formatting-copy-and-update-record-expressions"></a>设置复制更新记录表达式格式
+
+复制更新记录表达式仍然是一条记录，因此类似的准则适用于。
+
+短表达式可以适合某个行：
+
+```fsharp
+let point2 = { point with X = 1; Y = 2 }
+```
+
+较长的表达式应使用新行：
+
+```fsharp
+let rainbow2 =
+    { rainbow with
+        Boss = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"] }
+```
+
+和记录的指导，您可能想要将专用的大括号的单独的行和缩进到右侧的表达式的一个作用域。 请注意，在某些特殊情况，例如 wrapping 具有不带括号，可选的值中你可能需要保留在同一行的大括号：
+
+```fsharp    
+type S = { F1: int; F2: string }
+type State = { F:  S option }
+
+let state = { F = Some { F1 = 1; F2 = "Hello" } }
+let newState = 
+    {
+        state with
+            F = Some {
+                    F1 = 0
+                    F2 = ""
+                }
+    }
+```
 
 ## <a name="formatting-lists-and-arrays"></a>格式设置的列表和数组
 
@@ -759,7 +795,7 @@ type MyRecord =
 
 ## <a name="formatting-literals"></a>设置文本的格式
 
-[F#文字](../language-reference/literals.md)使用`Literal`属性应应在各自的行上放置属性并使用驼峰式大小写命名：
+[F#文字](../language-reference/literals.md)使用`Literal`属性应置于各自的行的属性，然后使用驼峰式大小写命名：
 
 ```fsharp
 [<Literal>]

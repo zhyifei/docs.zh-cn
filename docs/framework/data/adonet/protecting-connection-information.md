@@ -2,12 +2,12 @@
 title: 保护连接信息
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 4c96861afc47c67c8e8c1f3721b09672ca3f48ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c8992abc30690be8e9ef9c208b0a0bd3ddf6116
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662213"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091950"
 ---
 # <a name="protecting-connection-information"></a>保护连接信息
 保护应用程序时，最重要的目标之一是保护对数据源的访问。 如果连接字符串未受保护，那么它就是一个潜在漏洞。 如果以纯文本形式存储连接信息或者使连接信息持续位于内存中，则可能会损害整个系统。 可以使用读取嵌入在源代码中的连接字符串[Ildasm.exe （IL 反汇编程序）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)若要查看 Microsoft 中间语言 (MSIL) 中编译的程序集。  
@@ -41,6 +41,6 @@ ms.locfileid: "54662213"
   
 ## <a name="see-also"></a>请参阅
 - [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [使用受保护的配置加密配置信息](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)
-- [本机代码和 .NET Framework 代码的安全性](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [使用受保护的配置加密配置信息](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
+- [.NET 中的安全性](../../../standard/security/index.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 9b1db3b3628719eca178ababd0dc9728b491e7b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6f0e51319da8c2edcb914170aa14837229163c1
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658151"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093666"
 ---
 # <a name="wcf-data-services-resources"></a>WCF 数据服务资源
 可以在以下位置找到有关 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的介绍性主题。 其中的许多主题还包含指向包含更多详细信息的相关主题的链接。  
@@ -23,7 +23,7 @@ ms.locfileid: "54658151"
  [应用程序方案](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  提供基于任务的方法来创建[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和应用程序的访问[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。  
   
- [Visual Studio 和.NET Framework 术语表](https://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
+ [.NET 术语表](../../../standard/glossary.md)  
  包括中使用的术语[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]文档。  
   
 ## <a name="external-resources"></a>外部资源  

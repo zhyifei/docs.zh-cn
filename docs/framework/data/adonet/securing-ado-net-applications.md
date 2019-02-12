@@ -2,12 +2,12 @@
 title: 保证 ADO.NET 应用程序的安全
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 935d963ed19175518191006c2cc367f88d69e2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7429393df980757e5fea326489d84cec8b6c131a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585362"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092236"
 ---
 # <a name="securing-adonet-applications"></a>保证 ADO.NET 应用程序的安全
 编写安全 ADO.NET 应用程序不仅仅是避免常见的编码缺陷（如不验证用户输入）。 访问数据的应用程序具有许多潜在的故障点，攻击者可以利用这些故障点来检索、操作或损坏敏感数据。 因此，了解安全性的各个方面（从应用程序设计阶段期间的威胁建模过程到应用程序的最终部署和不断的维护）非常重要。  
@@ -42,10 +42,10 @@ ms.locfileid: "54585362"
  [安全性](../../../../docs/standard/security/index.md)  
  包含描述 .NET 中各个安全方面的主题的链接。  
   
- [安全性工具](https://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
+ [安全性工具](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
  用于保证安全策略的安全和对其进行管理的 .NET Framework 工具。  
   
- [创建安全应用程序的资源](https://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [创建安全应用程序的资源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  提供用于创建安全应用程序的主题的链接。  
   
  [安全性参考书目](/visualstudio/ide/security-bibliography)  

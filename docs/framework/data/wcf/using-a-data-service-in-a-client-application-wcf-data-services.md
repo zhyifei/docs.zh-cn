@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: db802e127cacec2243741310b8a885c7ffcd24e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff68a8bee17b55f7865d6f6c289ba514729be70d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736989"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093433"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>在客户端应用程序中使用数据服务（WCF 数据服务）
 您可以访问公开的服务[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源向 Web 浏览器提供 URI。 URI 提供某个资源的地址，系统将向这些地址发送请求消息以访问或更改该资源表示的基础数据。 浏览器发出 HTTP GET 命令，并以 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源的形式返回请求的资源。 有关详细信息，请参阅[从 Web 浏览器访问服务](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "54736989"
  将在 HTTP 请求消息的标头中请求负载的消息格式。 有关详细信息，请参阅[OData:操作](https://go.microsoft.com/fwlink/?LinkID=185792)。  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>使用客户端库访问和更改数据  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包括一些客户端库，使您能够更轻松地使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源从.NET Framework 和基于 Silverlight 的客户端应用程序。 这些库简化了 HTTP 消息的发送和接收。 它们还可将消息负载转换为代表实体数据的 CLR 对象。 客户端库具有两个核心类 <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601>。 通过使用这些类，可以查询数据服务，然后作为 CLR 对象使用返回的实体数据。 有关详细信息，请参阅[WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)并[WCF 数据服务 (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包括一些客户端库，使您能够更轻松地使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源从.NET Framework 和基于 Silverlight 的客户端应用程序。 这些库简化了 HTTP 消息的发送和接收。 它们还可将消息负载转换为代表实体数据的 CLR 对象。 客户端库具有两个核心类 <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601>。 通过使用这些类，可以查询数据服务，然后作为 CLR 对象使用返回的实体数据。 有关详细信息，请参阅[WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)并[WCF 数据服务 (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))。  
   
  可以使用**添加服务引用**对话框在 Visual Studio 中添加对数据服务的引用。 此工具将向所引用的数据服务请求服务元数据，然后生成代表数据服务的 <xref:System.Data.Services.Client.DataServiceContext>，并生成代表实体的客户端数据服务类。 有关详细信息，请参阅[生成数据服务客户端库](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。  
   

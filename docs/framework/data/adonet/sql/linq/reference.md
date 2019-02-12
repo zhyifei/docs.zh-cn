@@ -2,12 +2,12 @@
 title: 参考
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: b474530cd9c45ef16d004bb2445c349fdd418394
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 467bc9f482fa24e679814de3be0fdb7d9363320c
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904716"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093354"
 ---
 # <a name="reference"></a>参考
 本节提供针对 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 开发人员的参考信息。  
@@ -44,5 +44,5 @@ ms.locfileid: "55904716"
  [语言集成查询 (LINQ) 的 Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  提供了适用于门户[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]主题。  
   
- [LinqDataSource 技术概述](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ [LinqDataSource Web 服务器控件概述](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
  介绍 <xref:System.Web.UI.WebControls.LinqDataSource> 控件如何通过 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 数据源控件结构向 Web 开发人员公开 [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)]。

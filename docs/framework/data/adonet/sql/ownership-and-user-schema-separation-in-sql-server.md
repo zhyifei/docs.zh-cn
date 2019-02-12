@@ -2,12 +2,12 @@
 title: SQL Server 中的所有权和用户架构分离
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: adeed5ff4961a33d8f7d330941a5680f11a88b96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68a65cb950c54be9a4f9354a6ca20cbeeaafb938
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694797"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092600"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server 中的所有权和用户架构分离
 SQL Server 安全性的核心概念是对象的所有者具有管理这些对象的不可撤消的权限。 您不能取消对象所有者的特权，并且如果用户在数据库中拥有对象，您也不能将用户从数据库中删除。  
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |资源|描述|  
 |--------------|-----------------|  
-|[用户架构分离](https://msdn.microsoft.com/library/ms190387.aspx)SQL Server 联机丛书中|描述用户架构分离引发的变化， 包括新行为及其对所有权、目录视图和权限的影响。|  
+|[用户架构分离](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|描述用户架构分离引发的变化， 包括新行为及其对所有权、目录视图和权限的影响。|  
   
 ## <a name="see-also"></a>请参阅
 - [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

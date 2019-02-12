@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-ms.openlocfilehash: 7ddecf910b5f76fdb5e75300118fa0a063269116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50b6d6992664f4b0a87984af8243b195fc479b8a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556397"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091573"
 ---
 # <a name="getting-started"></a>入门
 通过使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，可以使用[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]技术访问 SQL 数据库，就像你访问的内存中集合。  
@@ -31,5 +31,6 @@ ms.locfileid: "54556397"
   
 ## <a name="see-also"></a>请参阅
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [LINQ 简介](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)
+- [LINQ 简介 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)
+- [LINQ 简介 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
 - [LINQ to SQL 对象模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

@@ -1,13 +1,13 @@
 ---
 title: 文本
 description: 了解有关在中的文本类型F#编程语言。
-ms.date: 05/16/2016
-ms.openlocfilehash: dfc02f0ff8ac3ad8600be5f3b6c9359f02bd25be
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/08/2019
+ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612447"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092158"
 ---
 # <a name="literals"></a>文本
 
@@ -41,7 +41,7 @@ ms.locfileid: "53612447"
 |String|Unicode 字符串|无|`"text\n"`<br /><br />或<br /><br />`@"c:\filename"`<br /><br />或<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />或<br /><br />`"string1" + "string2"`<br /><br />另请参阅[字符串](Strings.md)。|
 |byte|ASCII 字符|B|`'a'B`|
 |byte[]|ASCII 字符串|B|`"text"B`|
-|字符串或 byte]|逐字字符串|@ 前缀|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
+|字符串或 byte]|逐字字符串|@ prefix|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>备注
 
@@ -51,16 +51,16 @@ Unicode 字符串可包含可以通过使用指定的显式编码`\u`跟 16 位�
 
 ```fsharp
 [<Literal>]
-let literal1 = "a" + "b"
+let Literal1 = "a" + "b"
 
 [<Literal>]
-let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let literal2 = 1 ||| 64
+let Literal2 = 1 ||| 64
 
 [<Literal>]
-let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 不允许使用其他按位运算符。
@@ -76,8 +76,8 @@ let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 有符号的 32 位整数，还可以指定在使用十六进制、 八进制或二进制`0x`，`0o`或`0b`分别前缀。
 
 ```fsharp
-let Numbers = (0x9F, 0o77, 0b1010)
-// Result: Numbers : int * int * int = (159, 63, 10)
+let numbers = (0x9F, 0o77, 0b1010)
+// Result: numbers : int * int * int = (159, 63, 10)
 ```
 
 ## <a name="underscores-in-numeric-literals"></a>数值文字中的下划线

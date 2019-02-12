@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588569"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093926"
 ---
 # <a name="standard-query-operator-translation"></a>标准查询运算符转换
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将标准查询运算符转换为 SQL 命令。 数据库的查询处理器决定了 SQL 转换的执行语义。  
   
- 标准查询运算符定义针对*序列*。 序列是*排序*和依赖于序列的每个元素的引用标识。 有关详细信息，请参阅[标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
+ 标准查询运算符定义针对*序列*。 序列是*排序*和依赖于序列的每个元素的引用标识。 有关详细信息，请参阅[标准查询运算符概述 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)或[标准查询运算符概述 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
  SQL 主要处理*无序值集的*。 排序通常是显式声明的后续处理操作，应用于查询的最终结果而不是中间结果。 标识由值定义。 出于此原因，SQL 查询理解为处理多重集 (*袋*) 而不是*设置*。  
   
@@ -112,7 +112,7 @@ ORDER BY [t0].[CustomerID]
   
  <xref:System.Linq.Enumerable.Except%2A>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持相等性和比较*平面*参数，而不是或者包含序列的自变量。 平自变量是一种能映射到 SQL 行的类型。 可以静态方式确定不包含序列的一个或多个实体类型的投影被视为平参数。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持相等性和比较*平面*参数，而不是或者包含序列的自变量。 平参数是一种能映射到 SQL 行的类型。 可以静态方式确定不包含序列的一个或多个实体类型的投影被视为平参数。  
   
  以下是平参数的一些示例：  
   

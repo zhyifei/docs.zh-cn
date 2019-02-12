@@ -2,12 +2,12 @@
 title: 安全数据访问
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 600ab092d1ae7c890a5d50f3beed52eb8b4110b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fad9145cde499d7f0fc1b158810b75ff85c039b
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494634"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094030"
 ---
 # <a name="secure-data-access"></a>安全数据访问
 要编写安全的 ADO.NET 代码，必须了解基础数据存储（即数据库）中提供的安全机制。 您还需要考虑应用程序可能包含的其他功能或组件对安全性的影响。  
@@ -24,7 +24,7 @@ ms.locfileid: "54494634"
 |资源|描述|  
 |--------------|-----------------|  
 |[保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)|描述用于保护连接信息的最佳安全做法和技术，例如使用受保护配置来加密连接字符串。|  
-|[有关数据访问策略建议](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供用于访问数据和执行数据库操作的建议。|  
+|[有关数据访问策略建议](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|提供用于访问数据和执行数据库操作的建议。|  
 |[连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)|描述如何在运行时根据用户输入生成连接字符串。|  
 |[SQL Server 安全性概述](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|描述 SQL Server 安全架构。|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "54494634"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[脚本侵入概述](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|描述如何抵御脚本攻击和 SQL 语句攻击。|  
+|[脚本侵入概述](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|描述如何抵御脚本攻击和 SQL 语句攻击。|  
   
 ## <a name="probing-attacks"></a>探测攻击  
  攻击者通常使用异常信息（如服务器、数据库或表的名称）来发动对系统的攻击。 由于异常包含有关您的应用程序或数据源的特定信息，因此您可以通过仅向客户端公开必要信息来帮助更好地保护应用程序和数据源。  
@@ -75,7 +75,7 @@ ms.locfileid: "54494634"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[COM + 基于角色的安全性和.NET Framework](https://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|讨论如何集成托管代码与 COM+ 安全服务。|  
+|[基于角色的安全性](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|讨论如何集成托管代码与 COM+ 安全服务。|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>与非托管代码交互操作  
  .NET Framework 提供与非托管代码（包括 COM 组件、COM+ 服务、外部类型库及许多操作系统服务）的交互。 使用非托管代码时会超出托管代码的安全边界。 您的代码和调用它的任何代码都必须具有非托管代码权限（指定了 <xref:System.Security.Permissions.SecurityPermission> 标志的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>）。 非托管代码会无意中将安全漏洞引入您的应用程序中。 因此，除非绝对必要，否则应避免与非托管代码进行交互。  
@@ -90,7 +90,7 @@ ms.locfileid: "54494634"
 ## <a name="see-also"></a>请参阅
 - [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [有关数据访问策略建议](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [有关数据访问策略建议](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

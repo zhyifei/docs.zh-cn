@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 7e24bf24785538863738fe2c006834a77f47e1ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ea8960b74cd44734eb68a07c6959727bf1ac797
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496083"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093965"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>实现业务逻辑 (LINQ to SQL)
 本主题中的术语“业务逻辑”指的是在对数据库数据进行插入、更新或删除操作之前，应用于数据的任何自定义规则或验证测试。 业务逻辑有时也称为“业务规则”或“域逻辑”。 在 n 层应用程序中，业务逻辑通常设计为逻辑层，因此可以独立于表示层或数据访问层进行修改。 在对数据库数据进行任何更新、插入或删除操作前后，数据访问层可以调用业务逻辑。  
@@ -71,7 +71,8 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
   
  如果在分部类中实现插入、更新和删除方法，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 运行时将在调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 时调用这些方法，而不是自己的默认方法。 这使您能够重写创建/读取/更新/删除操作的默认行为。 有关详细信息，请参见[演练：自定义插入、 更新和删除实体类的行为](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)。  
   
- `OnCreated` 方法在类构造函数中调用。  
+ 
+  `OnCreated` 方法在类构造函数中调用。  
   
 ```vb  
 Public Sub New(ByVal connection As String)  
@@ -181,10 +182,10 @@ partial class Customer
   
  [演练：自定义实体类的插入、更新和删除行为](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [演练：向实体类添加验证](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
+ [演练：向实体类添加验证](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   
 ## <a name="see-also"></a>请参阅
-- [分部类和方法](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
+- [分部类和方法](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
 - [分部方法](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

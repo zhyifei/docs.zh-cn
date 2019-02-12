@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 2efa46abf5a1fcedee4a4055331f7a59963be794
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380ebeaa4c6265cccfe0e264884f509292b31eab
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709151"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093289"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>应用程序方案（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持为公开和使用数据作为一组核心方案[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 本主题提供与这些方案相关的主题的链接。  
@@ -37,11 +37,11 @@ ms.locfileid: "54709151"
 -   [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  在基于 Silverlight 的客户端应用程序中使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源。  
- -   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
 -   [异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [如何：将数据服务数据绑定到控件 (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [如何：将数据服务数据绑定到控件 （Silverlight 客户端）](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))  
   
  在基于 AJAX 的客户端应用程序中使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源。  
  -   [在客户端应用程序中使用数据服务](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "54709151"
   
 -   [异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
  公开和使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源和访问和更改以流的形式的二进制大型对象。  
  -   [流提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  

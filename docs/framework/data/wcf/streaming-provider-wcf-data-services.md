@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697343"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093835"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>流提供程序（WCF 数据服务）
 数据服务可公开二进制大型对象数据。 此二进制数据可以表示视频和音频流、图像、文档文件或其他类型的二进制媒体。 当数据模型中的某个实体包括一个或多个二进制属性时，数据服务会在响应源的入口内以 base-64 编码形式返回此二进制数据。 加载和序列化大型二进制数据，以这种方式会影响性能，因为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定义用于检索独立于其所属的实体的二进制数据的机制。 这一点是通过将实体和二进制数据分隔到一个或多个数据流来实现的。  
@@ -89,7 +89,7 @@ ms.locfileid: "54697343"
   
  有关详细信息，请参阅[Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)并[传输配额](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。  
   
- 默认情况下，Internet 信息服务 (IIS) 还将请求的大小限制为 4MB。 若要启用您的数据服务接收超过 4MB 的流，IIS 上运行时，还必须设置`maxRequestLength`的属性[httpRuntime 元素 （ASP.NET 设置架构）](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369)中`<system.web />`配置部分中，为以下示例中所示：  
+ 默认情况下，Internet 信息服务 (IIS) 还将请求的大小限制为 4MB。 若要启用您的数据服务接收超过 4MB 的流，IIS 上运行时，还必须设置`maxRequestLength`的属性[httpRuntime 元素 （ASP.NET 设置架构）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))中`<system.web />`配置部分中，为以下示例中所示：  
   
   
   
@@ -119,7 +119,7 @@ ms.locfileid: "54697343"
   
 -   当实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>、<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> 或 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 方法时，您必须使用以方法参数的形式提供的 eTag 和 Content-Type 值。 不要在 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 提供程序实现中设置 eTag 或 Content-Type 标头。  
   
--   默认情况下，客户端通过使用分块的 HTTP 传输编码发送大型二进制数据流。 因为[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]开发服务器不支持此类编码，您不能使用此 Web 服务器来承载必须接受大型二进制数据流的流数据服务。 有关详细信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]开发服务器，请参阅[对于 ASP.NET Web 项目的 Visual Studio 中的 Web 服务器](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328)。  
+-   默认情况下，客户端通过使用分块的 HTTP 传输编码发送大型二进制数据流。 因为[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]开发服务器不支持此类编码，您不能使用此 Web 服务器来承载必须接受大型二进制数据流的流数据服务。 有关详细信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]开发服务器，请参阅[对于 ASP.NET Web 项目的 Visual Studio 中的 Web 服务器](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))。  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>版本控制要求  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e74fc1e4ab48e73365d41594a7a84cbad6ec044
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4630e6d02b0137021765f954ab0dae19f2f6199
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496105"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093978"
 ---
 # <a name="enabling-jit-attach-debugging"></a>启用 JIT 附加调试
 JIT 附加调试是用于描述如何在发生错误时将调试器附加到进程的词组，它也可以由特定的方法或函数触发。  
@@ -38,4 +38,3 @@ JIT 附加调试是用于描述如何在发生错误时将调试器附加到进�
 ## <a name="see-also"></a>请参阅
 - [调试、跟踪和分析](../../../docs/framework/debug-trace-profile/index.md)
 - [使映像更易于调试](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)
-- [启用分析](https://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

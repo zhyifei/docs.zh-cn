@@ -1,13 +1,13 @@
 ---
 title: 类型扩展
 description: 了解如何F#类型扩展允许将新成员添加到以前定义的对象类型。
-ms.date: 01/23/2019
-ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.date: 02/08/2019
+ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066150"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092470"
 ---
 # <a name="type-extensions"></a>类型扩展
 
@@ -100,6 +100,8 @@ type IEnumerable<'T> with
 可选扩展不显示在当反射检查时，扩展的类型。 可选扩展必须在模块中，并且时，它们仅在作用域中包含扩展的模块是打开的或者在作用域中的其他方面。
 
 可选扩展成员将会编译成静态成员，为其对象实例隐式传递的第一个参数。 但是，它们的作用像是实例成员或根据它们的声明的静态成员。
+
+可选扩展成员也看不到C#或 VB 的使用者。 因此，可以仅使用其他F#代码。
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>泛型的内部函数和可选类型扩展限制
 

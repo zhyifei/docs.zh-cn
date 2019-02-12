@@ -2,12 +2,12 @@
 title: ADO.NET 新增功能
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: efba4d3f0822aa6654eb55bd0aff059dbf84d02e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2acbd6a766d91e31db71ce193bcc4081e5f32c9d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283694"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092509"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET 新增功能
 以下是 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 的新增功能。  
@@ -43,7 +43,8 @@ ms.locfileid: "55283694"
   
 -   `Type System Version=SQL Server 2012;` 是传递给 `Type System Version` 连接属性的新值。 `Type System Version=Latest;` 值现已过时，它与 `Type System Version=SQL Server 2008;` 等效。 有关详细信息，请参阅<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
   
--   SqlClient 为稀疏列（SQL Server 2008 中新增的功能）提供额外支持。 如果应用程序已访问使用稀疏列的表中的数据，应看到性能有所提高。 <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 IsColumnSet 列指示某列是否为属于列集成员的稀疏列。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 指示列是否为稀疏列 (请参阅[SQL Server 架构集合](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)有关详细信息)。 有关稀疏列的详细信息，请参阅[使用稀疏列](https://go.microsoft.com/fwlink/?LinkId=224244)。  
+-   SqlClient 为稀疏列（SQL Server 2008 中新增的功能）提供额外支持。 如果应用程序已访问使用稀疏列的表中的数据，应看到性能有所提高。 
+  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 IsColumnSet 列指示某列是否为属于列集成员的稀疏列。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 指示列是否为稀疏列 (请参阅[SQL Server 架构集合](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)有关详细信息)。 有关稀疏列的详细信息，请参阅[使用稀疏列](https://go.microsoft.com/fwlink/?LinkId=224244)。  
   
 -   包含空间数据类型的程序集 Microsoft.SqlServer.Types.dll 已从 10.0 版本升级到版本 11.0。 引用此程序集的应用程序可能失败。 有关详细信息，请参阅[数据库引擎功能的重大更改](https://go.microsoft.com/fwlink/?LinkId=224367)。  
   
@@ -54,5 +55,5 @@ ms.locfileid: "55283694"
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [WCF Data Services 新增功能](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
+- [什么是 WCF 数据服务 5.0 中的新增功能](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 - [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,15 +2,15 @@
 title: 在 SQL Server 中授予行级权限
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 28e552e005cdfa0b4c69ff95927b938fa3898193
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 092520f04ba828c9589a16b4ffd6574d04170249
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553760"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092990"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>在 SQL Server 中授予行级权限
-在某些情况下，会要求更为细致地控制数据访问，而不仅仅是授予、撤消或拒绝提供的权限。 例如，医院数据库应用程序可能需要限制各个医生只访问与自己的患者相关的信息。 在很多环境（包括财务、法律、政府和军事应用程序）中都存在类似的要求。 为了满足这些情况，SQL Server 2016 提供了 [行级安全](https://msdn.microsoft.com/library/dn765131.aspx) 功能，可以用于简化并集中化安全策略中的行级访问逻辑。 对于 SQL Server 的早期版本，可以通过使用视图制定行级筛选来实现类似功能。  
+在某些情况下，会要求更为细致地控制数据访问，而不仅仅是授予、撤消或拒绝提供的权限。 例如，医院数据库应用程序可能需要限制各个医生只访问与自己的患者相关的信息。 在很多环境（包括财务、法律、政府和军事应用程序）中都存在类似的要求。 为了满足这些情况，SQL Server 2016 提供了 [行级安全](/sql/relational-databases/security/row-level-security) 功能，可以用于简化并集中化安全策略中的行级访问逻辑。 对于 SQL Server 的早期版本，可以通过使用视图制定行级筛选来实现类似功能。  
   
 ## <a name="implementing-row-level-filtering"></a>实现行级筛选  
  行级筛选适用于在类似以上医院示例中的单个表格中存储信息的应用程序。 若要实现行级筛选，每行都有一个定义区别性参数（如用户名、标签或其他标识符）的列。 在表格上创建安全策略或视图，利用该表格可以筛选用户可以访问的行。 然后创建参数化存储的过程，利用该过程可以控制用户可以执行的查询的类型。  
@@ -60,7 +60,7 @@ ms.locfileid: "54553760"
 -   为数据库角色授予对存储过程的 EXECUTE 权限。 用户只能通过提供的存储过程访问数据。  
   
 ## <a name="see-also"></a>请参阅
-- [行级别安全性](https://msdn.microsoft.com/library/dn765131.aspx)
+- [行级别安全性](/sql/relational-databases/security/row-level-security)
 - [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

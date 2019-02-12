@@ -2,12 +2,12 @@
 title: 具有 Web 服务的 LINQ to SQL N 层
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: caa7105e4f64cce78c34237279fd357fdfe92d55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e621063a2bd38b8ed473b8092c65a2aa9a645511
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623607"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092717"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>具有 Web 服务的 LINQ to SQL N 层
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 尤其是对于如 Web 服务的松耦合数据访问层 (DAL) 中的中间层上使用而设计。 如果表示层为 ASP.NET 网页，则使用 <xref:System.Web.UI.WebControls.LinqDataSource> Web 服务器控件管理用户界面与中间层上的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 之间的数据传输。 如果表示层不是 ASP.NET 页，则中间层和表示层都必须执行一些附加工作以管理数据的序列化和反序列化。  
@@ -38,4 +38,4 @@ ms.locfileid: "54623607"
   
 ## <a name="see-also"></a>请参阅
 - [使用 LINQ to SQL 的 N 层和远程应用程序](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
-- [NIB:LinqDataSource Web 服务器控件概述](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)
+- [LinqDataSource Web 服务器控件概述](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))
