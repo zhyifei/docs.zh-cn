@@ -1,15 +1,15 @@
 ---
 title: Docker 应用程序生命周期的介绍
-description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+description: 开始此处的容器化应用程序开发过程。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: ea97631f1a5147129c8ac3b1a4b9fa18999d21b9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 4ce6ac42a9605da029eb71d404bcf182fc0d3b9e
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147562"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219279"
 ---
 # <a name="introduction-tothe-docker-application-life-cycle"></a>Docker 应用程序生命周期简介
  

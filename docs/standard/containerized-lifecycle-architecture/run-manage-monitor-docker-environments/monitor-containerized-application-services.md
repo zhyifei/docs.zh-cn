@@ -1,15 +1,15 @@
 ---
 title: 监视容器化应用程序服务
-description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+description: 了解监视容器体系结构的一些重要层面
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: e1be3c36f17fc5f85c9deacaa29031cee45226cc
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153913"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221181"
 ---
 # <a name="monitor-containerized-application-services"></a>监视容器化应用程序服务
 

@@ -1,19 +1,19 @@
 ---
 title: Docker 应用的开发环境
-description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+description: 初步了解支持 Docker 开发生命周期的最重要的开发工具选项。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 471b52fd577e5560bd93e6da50f2032d63eb2e6f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 1d22b45a8eee9198d337df9f0b8b4b78371fa31a
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152405"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219992"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 应用的开发环境
 
-## <a name="development-tools-choices-ide-or-editor"></a>开发工具选项：IDE 或编辑器
+## <a name="development-tools-choices-ide-or-editor"></a>开发工具选择：IDE 或编辑器
 
 无论如果更喜欢完整且功能强大的 IDE 或轻巧便捷编辑器，Microsoft 拥有你的需求时涉及到开发 Docker 应用程序。
 
@@ -47,5 +47,5 @@ ms.locfileid: "53152405"
 基本上，您可以使用支持 Docker Linux 或 Windows 中的任何现代语言。
 
 >[!div class="step-by-step"]
->[上一页](orchestrate-high-scalability-availability.md)
+>[上一页](deploy-azure-kubernetes-service.md)
 >[下一页](docker-apps-inner-loop-workflow.md)

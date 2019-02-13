@@ -1,15 +1,15 @@
 ---
 title: Docker 应用的内部循环开发工作流
-description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+description: 了解开发 Docker 应用程序的"内部循环"工作流。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: f7acb60e6136c0250d18bdce23ac21fb6aa80b34
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 03eb4662e55551678105fa9ef25b42cc05c132a5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148849"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219083"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 应用的内部循环开发工作流
 
@@ -225,7 +225,7 @@ cesardl/netcore-webapi-microservice-docker:first
 
 有关[DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/)并[Kubernetes](https://kubernetes.io/docs/user-guide/deployments/#creating-a-deployment)不同的部署命令和脚本，也会使用。
 
-### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>步骤 6:测试 Docker 应用程序 （在本地，本地 CD VM)
+### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>步骤 6：测试 Docker 应用程序 （在本地，本地 CD VM)
 
 根据您的应用程序正在执行什么操作，此步骤会有所不同。
 

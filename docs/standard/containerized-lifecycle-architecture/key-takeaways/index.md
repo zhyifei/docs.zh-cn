@@ -1,15 +1,15 @@
 ---
 title: 关键结论
-description: 使用 Microsoft 平台和工具 (e-book)_v1.1 的容器化 Docker 应用程序的生命周期
+description: 查看本指南的几个关键点。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 3783bdde100aa83bd7fbbc2a0f2ee616ef9a729d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 31ecd6eff3590dded69b48c6ee718a94a2d697cd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148622"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219225"
 ---
 # <a name="key-takeaways"></a>关键结论
 

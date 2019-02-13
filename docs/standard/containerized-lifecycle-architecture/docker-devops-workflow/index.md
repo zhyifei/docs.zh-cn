@@ -1,15 +1,15 @@
 ---
 title: 使用 Microsoft 工具的 Docker 应用程序 DevOps 工作流
-description: 使用 Microsoft 平台的容器化 Docker 应用程序生命周期和使用 Microsoft 工具的 ToolsDevOps 工作流
+description: 使用 Microsoft 工具的 Microsoft 平台和工具 DevOps 工作流使用的容器化的 Docker 应用程序生命周期
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: a78b6cbae88dcc39d7452a67a2bc5239135dedf9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: a2d88dda9f3560675fcb6826960c6e76fa7daf92
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128435"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219070"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>使用 Microsoft 工具的 Docker 应用程序 DevOps 工作流
 
@@ -34,5 +34,5 @@ Microsoft 工具可以自动完成的容器化应用程序的具体实现管道-
 -   组织可以使用 Azure 资源管理器和熟悉的工具，轻松从 Azure 容器注册表中存储的专用映像配置 Docker 容器以及 Azure 组件（数据、PaaS 等）的任何依赖项。
 
 >[!div class="step-by-step"]
->[上一页](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+>[上一页](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md)
 >[下一页](docker-application-outer-loop-devops-workflow.md)

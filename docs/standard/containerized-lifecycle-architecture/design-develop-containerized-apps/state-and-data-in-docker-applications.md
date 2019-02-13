@@ -1,15 +1,15 @@
 ---
 title: Docker 应用程序中的状态和数据
-description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+description: 了解可用的选项以在容器化应用程序中保存状态。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 7454b25cdb1bede87c6f0bd179fcabd489922263
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 9d924f0fffca73b57626910bc3c3ca95b4478300
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154172"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218744"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 应用程序中的状态和数据
 

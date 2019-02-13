@@ -1,15 +1,15 @@
 ---
 title: 单一式应用程序
-description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+description: 了解用于容器化整体式应用程序的核心概念。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 11/23/2018
+ms.openlocfilehash: 056f4bd8abf5c482855f38e45435b67b487769fb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52743264"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221350"
 ---
 # <a name="monolithic-applications"></a>单一式应用程序
 
@@ -21,7 +21,7 @@ ms.locfileid: "52743264"
 
 ![](./media/image1.png)
 
-图 4-1： 整体式应用程序体系结构的示例
+图 4-1:整体式应用程序体系结构示例
 
 这种方法的缺点是如果或应用程序的增长，需要它进行缩放。 如果整个应用程序都已缩放，这就不是问题了。 但是，在大多数情况下，应用程序的几个部分是瓶颈，需要缩放，而不使用其他组件。
 
@@ -35,13 +35,13 @@ ms.locfileid: "52743264"
 
 ![](./media/image2.png)
 
-图 4-2: 运行多个应用/容器主机
+图 4-2:运行多个应用/容器的主机
 
 可以通过使用每个实例的专用的 Vm 部署在 Azure 中的整体式应用程序。 使用[Azure VM 规模集](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)，可以轻松地缩放 Vm。 [Azure 应用服务](https://azure.microsoft.com/services/app-service/) 可运行整体式应用程序并轻松缩放实例，无需管理 VM。 自 2016，Azure 应用服务就可以运行单个实例的 Docker 容器，以及简化部署。 然后使用 Docker，可以部署单个 VM 作为 Docker 主机并运行多个实例。 使用 Azure 均衡器，在图 4-3 所示，可以管理缩放。
 
 ![](./media/image3.png)
 
-图 4-3： 多个主机向外扩展单个的 Docker 应用程序的应用/容器
+图 4-3:多个主机向外扩展单个的 Docker 应用程序的应用/容器
 
 你可以管理各种主机通过传统的部署技术部署。 可以使用类似的命令来管理 Docker 主机`docker run`手动，通过持续交付 (CD) 管道，我们介绍本电子书中更高版本之类的自动化。
 
@@ -65,7 +65,7 @@ ms.locfileid: "52743264"
 
 ![](./media/image4.png)
 
-图 4-4： 发布到 Azure 应用服务从 Visual Studio 应用/容器的容器
+图 4-4:从 Visual Studio 应用/容器发布到 Azure 应用服务的容器
 
 图 4-4 还显示了发布流推送到容器注册表，可以是 Azure 容器注册表 （注册表附近你在 Azure 中的部署和保护的 Azure Active Directory 组和帐户） 或任何其他 Docker 注册表的映像如 Docker 中心或在本地注册表。
 

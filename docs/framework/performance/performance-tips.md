@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b998240b6ecf692b00e16c2ad311c804edc0d7e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2969551bef279e6b13d2b08ff7f0e4711a80794
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518216"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219238"
 ---
 # <a name="net-performance-tips"></a>.NET 性能提示
 术语“性能”通常指程序的执行速度。 有时通过遵循源代码中的一些基本规则便可以提高执行速度。 在某些程序中，十分重要的一点是需要仔细检查代码并使用探查器确保程序尽可能快地运行。 而在其他程序中，由于代码在编写时便运行得足够快，因此不必执行此类优化。 本文列出了一些性能可能遭受影响的常见领域以及相关改进建议，并提供其他性能主题的链接。 有关规划和测量性能的详细信息，请参阅[性能](../../../docs/framework/performance/index.md)  
@@ -44,6 +44,5 @@ ms.locfileid: "54518216"
   
 ## <a name="see-also"></a>请参阅
 - [性能](../../../docs/framework/performance/index.md)
-- [编程概念](https://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)
 - [Visual Basic 编程指南](../../visual-basic/programming-guide/index.md)
 - [C# 编程指南](../../csharp/programming-guide/index.md)

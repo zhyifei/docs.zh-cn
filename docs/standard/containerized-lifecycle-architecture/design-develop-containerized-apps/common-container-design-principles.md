@@ -1,15 +1,15 @@
 ---
 title: 常见容器设计原则
-description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+description: 了解很好的容器设计的基本原则，它是一个容器应承载只是一个过程。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 8aa388c7c19f532829d64208a48b6e556e43d802
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: ce51eb296591490fba2d37e753be7881a55ea556
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152872"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220330"
 ---
 # <a name="common-container-design-principles"></a>常见容器设计原则
 

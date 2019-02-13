@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2f2bff0d86d3c3fed443628a5c437fe1ebdcc15
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540658"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219836"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 本文提供用于改进大型 .NET Framework 应用或处理大量数据（如文件或数据库）的应用的性能的提示。 这些提示来自在托管代码中重写的 C# 和 Visual Basic 编译器，并且本文包括来自 C# 编译器的几个真实示例。 
@@ -37,7 +37,7 @@ ms.locfileid: "54540658"
  你应该为应用中的关键客户体验或方案设定性能目标，并编写测试来测量性能。 应用科学的方法调查失败的测试：使用配置文件来指导你、假设有可能是什么问题，并用利用试验或代码更改来测试你的假设。 使用定期测试建立一段时间内的基线性能测量，以便你可以隔离导致性能衰退的更改。 通过以严格的方式处理性能工作，你可以避免将时间浪费在不需要的代码更新上。 
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事实 3:好的工具使一切大不相同  
- 好的工具可以让你快速深入地了解最大的性能问题（CPU、内存或磁盘）并帮助你找到导致那些瓶颈的代码。 Microsoft 提供多种性能工具，如 [Visual Studio 探查器](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone 分析工具](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)和 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。 
+ 好的工具可以让你快速深入地了解最大的性能问题（CPU、内存或磁盘）并帮助你找到导致那些瓶颈的代码。 Microsoft 提供多种性能工具，如[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)并[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。 
   
  PerfView 是一个免费且功能极为强大的工具，它可以帮助你专注于深层问题，如磁盘 I/O、GC 事件和内存。 可以捕获与性能相关的 [Windows 事件跟踪](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) 事件，并很轻松地查看每个应用、每个进程、每个堆栈和每个线程信息。 PerfView 向你显示应用分配了多少内存以及分配了何种内存，并显示哪些函数或调用堆栈提供了内存分配以及他们提供了多少。 有关详细信息，请参见丰富的帮助主题、演示以及工具随附的视频（如第 9 频道上的 [PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)）。 
   
@@ -195,7 +195,8 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- `WriteFormattedDocComment()` 的第一个版本分配了一个数组、多个子字符串、一个修整的子字符串和一个空 `params` 数组。 它还会检查为"/ /"。 修改后的代码仅使用索引且不执行分配。 它找到的第一个字符不是空白区域，然后检查逐字符以查看字符串是否以与"/ /"。 新代码将使用`IndexOfFirstNonWhiteSpaceChar`而不是<xref:System.String.TrimStart%2A>返回出现非空白字符的位置 （在指定的开始索引） 的第一个索引。 修复并不完整，但你可以看到如何为完整解决方案应用类似的修复。 通过在整个代码中应用此方法，你可以删除 `WriteFormattedDocComment()` 中的所有分配。 
+ 
+  `WriteFormattedDocComment()` 的第一个版本分配了一个数组、多个子字符串、一个修整的子字符串和一个空 `params` 数组。 它还会检查为"/ /"。 修改后的代码仅使用索引且不执行分配。 它找到的第一个字符不是空白区域，然后检查逐字符以查看字符串是否以与"/ /"。 新代码将使用`IndexOfFirstNonWhiteSpaceChar`而不是<xref:System.String.TrimStart%2A>返回出现非空白字符的位置 （在指定的开始索引） 的第一个索引。 修复并不完整，但你可以看到如何为完整解决方案应用类似的修复。 通过在整个代码中应用此方法，你可以删除 `WriteFormattedDocComment()` 中的所有分配。 
   
  **示例 4:StringBuilder**  
   
@@ -366,7 +367,7 @@ public Symbol FindMatchingSymbol(string name)
   
  **示例 6：在异步方法中缓存**  
   
- 在新的 C# 和 Visual Basic 编译器上构建的 Visual Studio IDE 功能频繁地提取语法树，并且编译器在执行此操作时使用异步来保持 Visual Studio 的响应性。 以下是你可以编写的、用于获取语法树的该代码的第一个版本：  
+ 在新的 C# 和 Visual Basic 编译器上构建的 Visual Studio IDE 功能频繁地获取语法树，并且编译器在执行此操作时使用异步来保持 Visual Studio 的响应性。 以下是你可以编写的、用于获取语法树的该代码的第一个版本：  
   
 ```csharp  
 class SyntaxTree { /*...*/ }  
@@ -466,9 +467,8 @@ class Compilation { /*...*/
 - [本主题的演示视频](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [性能](../../../docs/framework/performance/index.md)
-- [.NET 性能提示](https://msdn.microsoft.com/library/ms973839.aspx)
+- [.NET 性能提示](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Windows Phone 性能分析工具](https://msdn.microsoft.com/magazine/hh781024.aspx)
-- [查找与 Visual Studio Profiler 的应用程序瓶颈](https://msdn.microsoft.com/magazine/cc337887.aspx)
 - [通道 9 PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET 编译器平台 SDK](../../csharp/roslyn-sdk/index.md)
 - [GitHub 上的 dotnet/roslyn 存储库](https://github.com/dotnet/roslyn)

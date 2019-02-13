@@ -1,15 +1,15 @@
 ---
 title: Docker 应用程序的外部循环 DevOps 工作流中的步骤
-description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+description: 了解 DevOps 工作流的"外部循环"的步骤
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/10/2018
-ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: b75e9df1c31e8bcebcaa6d56336a6aa499d13e1d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143644"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220934"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 应用程序的外部循环 DevOps 工作流中的步骤
 
@@ -227,7 +227,7 @@ Mesosphere DC/OS: <https://mesosphere.com/product/>
 
 因为运行和管理应用程序在企业生产级别为主要使用者在和的本身，并由于操作的类型，并且在该级别 （IT 操作） 以及此区域的大范围的人员，我们另辟整个接下来为解释它的一章。
 
-## <a name="step-6-monitor-and-diagnose"></a>步骤 6:监视和诊断
+## <a name="step-6-monitor-and-diagnose"></a>步骤 6：监视和诊断
 
 本主题还介绍了下一步一章中的 IT 操作在生产系统; 执行的任务的一部分但是，务必要突出显示在此步骤中获得的见解必须馈送回到开发团队，以便应用程序不断得到改进。 从该角度来看，它也是一部分的 DevOps，尽管任务和操作通常由执行 IT。
 
@@ -235,4 +235,4 @@ Mesosphere DC/OS: <https://mesosphere.com/product/>
 
 >[!div class="step-by-step"]
 >[上一页](index.md)
->[下一页](../run-manage-monitor-docker-environments/index.md)
+>[下一页](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)

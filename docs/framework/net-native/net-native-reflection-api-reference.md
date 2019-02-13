@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38894f57ec93fd44610b5c612326b399d477b723
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35dcabcf65af1634533edfba1e300a8746bc97ec
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531179"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221363"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native 本机反射 API 参考
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 包括三个新的异常类型：[System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)， [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)，和[System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). 请注意有关所有三种异常类型的以下内容：  
@@ -25,7 +25,7 @@ ms.locfileid: "54531179"
 -   方法的 [MissingMetadataException 故障排除程序](https://dotnet.github.io/native/troubleshooter/method.html) 。  
   
 > [!NOTE]
->  此引用记录了三种对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]唯一的异常类型。 要查看 .NET Framework 核心反射 API 的引用文档，请参阅 [System.Reflection 命名控件](https://msdn.microsoft.com/library/gg145033.aspx)。 要查看 .NET Framework 核心互操作 API 的应用文档，请参阅 <xref:System.Runtime.InteropServices>。  
+>  此引用记录了三种对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]唯一的异常类型。 .NET Framework 核心反射 API 的参考文档，请参阅<xref:System.Reflection>，<xref:System.Reflection.Context>和<xref:System.Reflection.Emit>命名空间。 要查看 .NET Framework 核心互操作 API 的应用文档，请参阅 <xref:System.Runtime.InteropServices>。  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection 命名空间  
  <xref:System.Reflection> 命名空间包含用于 .NET Framework 中的反射的核心类型。 对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，它也包括两个新的异常类型：  
