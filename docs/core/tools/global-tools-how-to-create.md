@@ -4,16 +4,16 @@ description: 介绍如何创建全局工具。 全局工具是一个通过 .NET 
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: e544ab51920015e0f1ea48ad83ba9b637d98aa0c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144571"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826416"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>使用 .NET Core CLI 创建 .NET Core 全局工具
 
-本文介绍如何创建和打包 .NET Core 全局工具。 使用 .NET Core CLI，可以创建一个控制台应用程序作为全局工具，便于其他人轻松地安装并运行。 .NET core 全局工具是从 .NET Core CLI 安装的 NuGet 包。 有关全局工具的详细信息，请参阅 [.NET Core 全局工具概述][global-tool-info]。
+本文介绍如何创建和打包 .NET Core 全局工具。 使用 .NET Core CLI，可以创建一个控制台应用程序作为全局工具，便于其他人轻松地安装并运行。 .NET core 全局工具是从 .NET Core CLI 安装的 NuGet 包。 有关全局工具的详细信息，请参阅 [.NET Core 全局工具概述](global-tools.md)。
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
@@ -170,7 +170,7 @@ dotnet pack
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
-`--add-source` 参数指示 .NET Core CLI 临时使用 `./nupkg` 文件夹（我们的 `<PackageOutputPath>` 文件夹）作为 NuGet 包的附加源数据源。 有关安装全局工具的详细信息，请参阅 [.NET Core 全局工具概述][global-tool-info]。
+`--add-source` 参数指示 .NET Core CLI 临时使用 `./nupkg` 文件夹（我们的 `<PackageOutputPath>` 文件夹）作为 NuGet 包的附加源数据源。 有关安装全局工具的详细信息，请参阅 [.NET Core 全局工具概述](global-tools.md)。
 
 如果安装成功，会出现一条消息，显示用于调用工具的命令以及所安装的版本，类似于以下示例：
 
@@ -191,5 +191,3 @@ Tool 'botsay' (version '1.0.0') was successfully installed.
 ```console
 dotnet tool uninstall -g botsay
 ```
-
-[global-tool-info]: global-tools.md

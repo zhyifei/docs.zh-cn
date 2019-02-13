@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ae7149e1f104863825fdea128729dcc80847c19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d692f440354583e645606def4303f0c7c8f1e777
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679927"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093588"
 ---
 # <a name="handling-and-raising-events"></a>处理和引发事件
 .NET Framework 中的事件基于委托模型。 委托模型遵守观察者设计模式，使订阅者能够向提供方注册并接收相关通知。 事件发送方推送事件发生的通知，事件接收器接收该通知并定义对它的响应。 本文介绍委托模型的主要组件、如何在应用程序中使用事件以及如何在你的代码中实现事件。  
@@ -45,7 +45,7 @@ ms.locfileid: "54679927"
   
  委托是多路广播，这意味着它们可以引用多个事件处理方法。 有关详细信息，请参阅 <xref:System.Delegate> 参考页。 委托提供了事件处理中的灵活性和精确控制。 委托人通过维护事件的已注册事件处理程序列表来充当引发事件的类的事件调度程序。  
   
- 在 <xref:System.EventHandler> 和 <xref:System.EventHandler%601> 委托不可用的场景下，您可以定义一个委托。 要求你定义委托的场景非常少见的，例如，当你必须处理无法识别泛型的代码时。 您在声明中使用 `delegate` (C#) 和 `Delegate` (Visual Basic) 关键字标记委托。 下面的示例说明如何声明 `ThresholdReachedEventHandler` 委托。  
+ 在 <xref:System.EventHandler> 和 <xref:System.EventHandler%601> 委托不可用的场景下，您可以定义一个委托。 要求你定义委托的场景非常少见的，例如，当你必须处理无法识别泛型的代码时。 在声明中使用 `delegate`（在 C# 中）和 `Delegate`（在 Visual Basic 中）关键字标记委托。 下面的示例说明如何声明 `ThresholdReachedEventHandler` 委托。  
   
  [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
  [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
@@ -53,7 +53,9 @@ ms.locfileid: "54679927"
 ## <a name="event-data"></a>事件数据  
  与事件相关的数据可以通过事件数据类提供。 .NET Framework 提供了许多事件数据类，您可以在您的应用程序中使用它们。 例如，<xref:System.IO.Ports.SerialDataReceivedEventArgs> 类是 <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType> 事件的事件数据类。 .NET Framework 遵循所有事件数据类以 `EventArgs` 结束的命名模式。 您通过查看事件的委托来确定哪个事件数据类与事件相关联。 例如，<xref:System.IO.Ports.SerialDataReceivedEventHandler> 委托包含 <xref:System.IO.Ports.SerialDataReceivedEventArgs> 类作为它的一个参数。  
   
- <xref:System.EventArgs> 类是所有事件数据类的基类型。 当一个事件没有任何与其相关联的数据时，您也会用到 <xref:System.EventArgs> 类。 当您创建一个事件仅用来通知其他类出问题了，不需要传递任何数据时，请包括 <xref:System.EventArgs> 类作为委托中的第二个参数。 当没有数据提供时，您可以传递 <xref:System.EventArgs.Empty?displayProperty=nameWithType> 值。 <xref:System.EventHandler> 委托包括 <xref:System.EventArgs> 类作为一个参数。  
+ 
+  <xref:System.EventArgs> 类是所有事件数据类的基类型。 当一个事件没有任何与其相关联的数据时，您也会用到 <xref:System.EventArgs> 类。 当您创建一个事件仅用来通知其他类出问题了，不需要传递任何数据时，请包括 <xref:System.EventArgs> 类作为委托中的第二个参数。 当没有数据提供时，您可以传递 <xref:System.EventArgs.Empty?displayProperty=nameWithType> 值。 
+  <xref:System.EventHandler> 委托包括 <xref:System.EventArgs> 类作为一个参数。  
   
  当您想创建一个自定义的事件数据类时，请创建一个派生自 <xref:System.EventArgs> 的类，然后提供所需的所有成员，来传递与该事件相关的数据。 通常，您应使用 .NET Framework 的命名模式并且您的事件数据类名称应以 `EventArgs` 结束。  
   
@@ -71,7 +73,7 @@ ms.locfileid: "54679927"
  [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>静态和动态事件处理程序  
- .NET Framework 允许订户为获得事件通知而进行静态或动态注册。 对于其事件由静态事件处理程序进行处理的类，静态事件处理程序对其整个生命周期有效。 通常为响应某些条件程序逻辑，会在程序执行期间显式激活和停用动态事件处理程序。 例如，如果仅在特定条件下需要事件通知，或如果应用程序提供多个事件处理程序且由运行时条件定义要使用的适当事件处理程序，则可以使用动态事件处理程序。 上一节中的示例演示如何动态添加事件处理程序。 有关详细信息，请参阅[事件](../../visual-basic/programming-guide/language-features/events/index.md)和[事件](../../csharp/programming-guide/events/index.md)。  
+ .NET Framework 允许订户为获得事件通知而进行静态或动态注册。 对于其事件由静态事件处理程序进行处理的类，静态事件处理程序对其整个生命周期有效。 通常为响应某些条件程序逻辑，会在程序执行期间显式激活和停用动态事件处理程序。 例如，如果仅在特定条件下需要事件通知，或如果应用程序提供多个事件处理程序且由运行时条件定义要使用的适当事件处理程序，则可以使用动态事件处理程序。 上一节中的示例演示如何动态添加事件处理程序。 有关详细信息，请查看 Visual Basic 中的[事件](../../visual-basic/programming-guide/language-features/events/index.md)和 C# 中的[事件](../../csharp/programming-guide/events/index.md)。  
   
 ## <a name="raising-multiple-events"></a>引发多个事件  
  如果您的类引发多个事件，编译器会为每一个事件委托实例生成一个字段。 如果事件数量很大，则可能无法接受按一个委托计算一个字段的存储成本。 对于这些情况，.NET Framework 提供一个事件属性，您可以将其与另一选择的数据结构一起用于存储事件委托。  
@@ -80,7 +82,7 @@ ms.locfileid: "54679927"
   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|说明|  
+|Title|说明​​|  
 |-----------|-----------------|  
 |[如何：抛出和使用事件](../../../docs/standard/events/how-to-raise-and-consume-events.md)|包含引发和使用事件的示例。|  
 |[如何：使用事件属性处理多个事件](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|演示如何使用事件属性处理多个事件。|  

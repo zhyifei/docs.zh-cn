@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: af2ae5e1b0f9e6146975c6838cca8b22837bb012
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 556da93d6237836dc32fc3f6715909593907ba74
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168983"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738729"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 在 .NET Core 中进行 C# 单元测试
 
@@ -66,7 +66,7 @@ dotnet sln add .\PrimeService\PrimeService.csproj
     /PrimeService.Tests
 ```
 
-将 *PrimeService.Tests* 目录作为当前目录，并使用 [`dotnet new xunit`](../tools/dotnet-new.md) 创建一个新项目。 此命令会创建将 xUnit 用作测试库的测试项目。 生成的模板在 PrimeServiceTests.csproj 文件中配置测试运行程序，类似以下代码：
+将 *PrimeService.Tests* 目录作为当前目录，并使用 [`dotnet new xunit`](../tools/dotnet-new.md) 创建一个新项目。 此命令会创建将 [xUnit](https://xunit.github.io/) 用作测试库的测试项目。 生成的模板在 PrimeServiceTests.csproj 文件中配置测试运行程序，类似以下代码：
 
 ```xml
 <ItemGroup>
@@ -172,4 +172,5 @@ if (candidate < 2)
 
 ### <a name="additional-resources"></a>其他资源
 
+- [xUnit.net 官方网站](https://xunit.github.io)
 - [ASP.NET Core 中的测试控制器逻辑](/aspnet/core/mvc/controllers/testing)

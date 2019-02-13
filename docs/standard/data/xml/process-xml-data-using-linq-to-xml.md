@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 634c76c3510d594584f06ea14bed84b1b0423c31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26d763884cc392a08e8cef7f5321d23f1c52a7fa
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502166"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903515"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>使用 LINQ to XML 处理 XML 数据
 LINQ to XML 是 .NET Framework 3.5 版中用于处理 XML 数据的新模型。 LINQ to XML 允许开发人员对 XML 数据执行任何需要的操作：查询、修改、创建、保存，和序列化 XML 文档。 真正的优势在于查询和创建功能。  
@@ -19,7 +19,7 @@ LINQ to XML 是 .NET Framework 3.5 版中用于处理 XML 数据的新模型。 
   
  LINQ to XML 利用 .NET Framework 3.5 版中的语言集成查询 (LINQ) 技术。 LINQ 扩展了 C# 和 Visual Basic 的语言语法，提供可以扩展到几乎任何数据存储区的强大的查询功能。  
   
- 有关用法的详细介绍，请参阅 [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)；有关 LINQ 框架概述，请参阅 [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。  
+ 有关其用法的详细讨论，请参阅 [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)。 有关 LINQ 框架的概述，请参阅[语言集成查询 (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md) 或[语言集成查询 (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)。  
   
 ## <a name="see-also"></a>请参阅
 

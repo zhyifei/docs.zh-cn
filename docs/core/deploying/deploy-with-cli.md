@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503997"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826455"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>使用 CLI 发布 .NET Core 应用
 
@@ -38,11 +38,11 @@ ms.locfileid: "54503997"
 
 ## <a name="publishing-basics"></a>发布基本知识
 
-发布应用时，项目文件的 `<TargetFramework>` 设置指定默认目标框架。 可以将目标框架更改为任意有效[目标框架名字对象 (TFM)](../../standard/frameworks.md)。 例如，如果项目使用 `<TargetFramework>netcoreapp2.2</TargetFramework>`，则会创建面向 .NET Core 2.2 的二进制文件。 此设置中指定的 TFM 是[`dotnet publish`][dotnet-publish] 命令使用的默认目标。
+发布应用时，项目文件的 `<TargetFramework>` 设置指定默认目标框架。 可以将目标框架更改为任意有效[目标框架名字对象 (TFM)](../../standard/frameworks.md)。 例如，如果项目使用 `<TargetFramework>netcoreapp2.2</TargetFramework>`，则会创建面向 .NET Core 2.2 的二进制文件。 此设置中指定的 TFM 是[`dotnet publish`](../tools/dotnet-publish.md) 命令使用的默认目标。
 
 如果要以多个框架为目标，可以将 `<TargetFrameworks>` 设置设置为多个以分号分隔的 TFM 值。 可以使用 `dotnet publish -f <TFM>` 命令发布其中一个框架。 例如，如果有 `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` 并运行 `dotnet publish -f netcoreapp2.1`，则会创建面向 .NET Core 2.1 的二进制文件。
 
-除非另有设置，否则 [`dotnet publish`][dotnet-publish] 命令的输出目录为 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`。 除非使用 `-c` 参数进行更改，否则默认的 BUILD-CONFIGURATION 模式为 Debug。 例如，`dotnet publish -c Release -f netcoreapp2.1` 发布到 `myfolder/bin/Release/netcoreapp2.1/publish/`。 
+除非另有设置，否则 [`dotnet publish`](../tools/dotnet-publish.md) 命令的输出目录为 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`。 除非使用 `-c` 参数进行更改，否则默认的 BUILD-CONFIGURATION 模式为 Debug。 例如，`dotnet publish -c Release -f netcoreapp2.1` 发布到 `myfolder/bin/Release/netcoreapp2.1/publish/`。 
 
 如果使用 .NET Core SDK 3.0，则面向 .NET Core 版本 2.1、2.2 或 3.0 的应用的默认发布模式为依赖于框架的可执行文件。
 
@@ -95,7 +95,7 @@ Module Program
 End Module
 ```
 
-运行应用 ([`dotnet run`][dotnet-run]) 时，将显示以下输出：
+运行应用 ([`dotnet run`](../tools/dotnet-run.md)) 时，将显示以下输出：
 
 ```terminal
   _   _      _ _         __        __         _     _ _
@@ -163,6 +163,3 @@ End Module
 
 - [.NET Core 应用程序部署概述](index.md)
 - [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
-
-[dotnet-publish]: ../tools/dotnet-publish.md
-[dotnet-run]: ../tools/dotnet-run.md

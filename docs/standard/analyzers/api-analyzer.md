@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696879"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759127"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -55,7 +55,7 @@ API 分析器使用 API 专用错误代码，这些代码以 DE（全称是“De
 
 ### <a name="suppressing-warnings-locally"></a>在本地禁止显示警告
 
-若要在本地禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构” > “禁止诊断 ID \<诊断 ID> > “在源中”。 此时，[#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告预处理器指令会添加到源代码中定义的范围内：![“用 #pragma 警告禁用指令框定的代码屏幕截图”](media/api-analyzer/suppress-in-source.jpg)
+若要在本地禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构” > “禁止诊断 ID \<诊断 ID> > “在源中”。 此时，[#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告预处理器指令会添加到定义的范围内的源代码中：![“用 #pragma 警告禁用指令框定的代码屏幕截图”](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>在全局禁止显示警告
 
@@ -112,5 +112,5 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ## <a name="see-also"></a>请参阅
 
-* [API 分析器简介](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/)博客文章。
-* YouTube 上的 [API 分析器](https://youtu.be/eeBEahYXGd0)演示视频。
+- [API 分析器简介](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/)博客文章。
+- YouTube 上的 [API 分析器](https://youtu.be/eeBEahYXGd0)演示视频。
