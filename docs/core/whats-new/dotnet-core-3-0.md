@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: baaa2676865c475e331ec889e7b10ae326b552fa
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 9a43f9407d530224b5ad4775ef3a8c0ef2a9fe27
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675083"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828405"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0（预览版 2）的新增功能
 
@@ -20,11 +20,12 @@ ms.locfileid: "55675083"
 
 .NET Core 3.0 添加了对 C#8.0 的支持。
 
-在 Windows、Mac 和 Linux 上立即[下载并开始使用 .NET Core 3 预览版 2](https://aka.ms/netcore3download)。 有关版本的完整详细信息，请参阅 [.NET Core 3 预览版 2 发行说明](https://aka.ms/netcore3releasenotes)。
+立即在 Windows、Mac 和 Linux 上[下载并开始使用 .NET Core 3.0 预览版 2](https://aka.ms/netcore3download)。 有关版本的完整详细信息，请参阅 [.NET Core 3.0 预览版 2 发行说明](https://aka.ms/netcore3releasenotes)。
 
-有关预览版 1 发布内容的详细信息，请参阅 [.NET Core 3.0 预览版 1 公告](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)。
+要详细了解每个版本的发布内容，请参阅以下文档：
 
-有关预览版 2 发布内容的详细信息，请参阅 [.NET Core 3.0 预览版 1 公告]()。
+- [.NET Core 3.0 预览版 1 公告](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [.NET Core 3.0 预览版 2 公告](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 
@@ -308,7 +309,7 @@ Visual Studio 2017 15.9 添加了[支持 .NET Core 预览版](https://blogs.msdn
 
 [MSIX](https://docs.microsoft.com/windows/msix/) 是新的 Windows 应用包格式。 可以使用它将 .NET Core 3.0 桌面应用程序部署到 Windows 10。
 
-Visual Studio 2019 预览版 2 中提供 [Windows 应用程序打包项目](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)，允许用户使用[独立式](../deploying/#self-contained-deployments-scd) .NET Core 应用程序创建 MSIX 包。
+Visual Studio 2019 预览版 2 中提供 [Windows 应用程序打包项目](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)，允许用户使用[独立式](../deploying/index.md#self-contained-deployments-scd) .NET Core 应用程序创建 MSIX 包。
 
 >注意:.NET Core 项目文件必须在 `<RuntimeIdentifiers>` 属性中指定支持的运行时：
 ```xml
