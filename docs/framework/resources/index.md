@@ -2,24 +2,30 @@
 title: .NET 应用中的资源
 ms.date: 07/25/2018
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], resources'
-  - 'deploying applications [.NET Core], resources'
-  - application resources
-  - resource files
-  - satellite assemblies
-  - localization
-  - packaging application resources
-  - localizing resources
+- deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
+- application resources
+- resource files
+- satellite assemblies
+- localization
+- packaging application resources
+- localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: e42255378e4a2fdd50d9c1539e3bcee43012e56c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221038"
 ---
 # <a name="resources-in-net-apps"></a>.NET 应用中的资源
 几乎每一个生产性应用都需要使用资源。 资源是在逻辑上随应用部署的任何不可执行的数据。 资源可以在应用中作为错误消息显示，或者作为用户界面的一部分显示。 资源可以包含多种形式的数据，包括字符串、图像和持久的对象。 （若要将持久对象写入资源文件，这些对象必须是可序列化的。）通过在资源文件中存储数据，无需重新编译整个应用即可更改这些数据。 还可以将数据存储在一个位置，而无需依赖存储在多个位置的硬编码数据。  
   
  .NET Framework 和 .NET Core 为资源的创建和本地化提供全面的支持。 此外，.NET 还支持一种用于打包和部署本地化资源的简单模型。  
   
- 有关 ASP.NET 中的资源的信息，请参阅 [ASP.NET 网页资源概述](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd)。  
+ 有关 ASP.NET 中的资源的信息，请参阅 [ASP.NET 网页资源概述](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))。  
   
  ## <a name="creating-and-localizing-resources"></a>创建和本地化资源  
  在非本地化的应用中，可以使用资源文件作为应用数据的存储库，特别用于存储本来可能在源代码中的多个位置为硬编码的字符串。 通常以文本 (.txt) 或 XML (.resx) 文件形式创建资源，并使用 [Resgen.exe（资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)将其编译为二进制 .resources 文件。 随后，这些文件可由语言编译器嵌入到应用的可执行文件中。 有关创建资源的详细信息，请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。  
