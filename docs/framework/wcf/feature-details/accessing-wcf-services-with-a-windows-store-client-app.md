@@ -2,12 +2,12 @@
 title: 使用 Windows Store 应用商店客户端应用访问 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 95a717f139983be8291c2d156d8dd1626a43372a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 484fad33614ca2b9507ed88aadfc1a41bb216c28
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613657"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261110"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows Store 应用商店客户端应用访问 WCF 服务
 Windows 8 引入了一种新应用程序，称为 Windows 应用商店应用程序。 这些应用程序是围绕触摸屏界面设计的。 通过 .NET Framework 4.5，Windows 商店应用程序可以调用 WCF 服务。  
@@ -55,7 +55,7 @@ Windows 8 引入了一种新应用程序，称为 Windows 应用商店应用程�
  支持文本编码和二进制编码。 支持所有 WCF 传输模式。 有关更多信息，请参见 [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)。  
   
 ### <a name="add-service-reference"></a>添加服务引用  
- 若要从 Windows 应用商店应用程序调用 WCF 服务，请使用 Visual Studio 2012 的“添加服务引用”功能。 在 Windows 应用商店应用程序中完成操作后，您将注意到添加服务引用功能发生了一些变化。 首先，不会生成配置文件。 Windows 应用商店应用程序不使用配置文件，因此，必须用代码来对这些应用程序进行配置。 此配置代码可在由添加服务引用功能生成的 References.cs 文件中找到。 若要查看此文件，请确保在解决方案资源管理器中选择"显示所有文件"。 该文件位于项目中“服务引用”的 Reference.svcmap 节点下面。 为 Windows 应用商店应用程序中的 WCF 服务生成的所有操作都将使用基于任务的异步模式实现异步。 有关更多信息，请参见 [基于任务的异步模式](https://msdn.microsoft.com/magazine/ff959203.aspx)。  
+ 若要从 Windows 应用商店应用程序调用 WCF 服务，请使用 Visual Studio 2012 的“添加服务引用”功能。 在 Windows 应用商店应用程序中完成操作后，您将注意到添加服务引用功能发生了一些变化。 首先，不会生成配置文件。 Windows 应用商店应用程序不使用配置文件，因此，必须用代码来对这些应用程序进行配置。 此配置代码可在由添加服务引用功能生成的 References.cs 文件中找到。 若要查看此文件，请确保在解决方案资源管理器中选择"显示所有文件"。 该文件位于项目中“服务引用”的 Reference.svcmap 节点下面。 为 Windows 应用商店应用程序中的 WCF 服务生成的所有操作都将使用基于任务的异步模式实现异步。 有关详细信息，请参阅[异步任务-使用任务简化异步编程](https://msdn.microsoft.com/magazine/ff959203.aspx)。  
   
  由于现在将使用代码生成配置，因此，每次更新服务引用时，都会覆盖 Reference.cs 文件中所做的任何更改。 为了纠正这种情况，将在一个部分方法中生成配置代码，您可以在客户端代理类中实现此部分方法。 该部分方法的声明如下：  
   

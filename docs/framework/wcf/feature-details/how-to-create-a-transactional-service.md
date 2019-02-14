@@ -2,12 +2,12 @@
 title: 如何：创建事务性服务
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: c4d2db0ca912be8840788bc363f86d621fa76e34
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 98346c0fd8990d3122ceb7c25950dc815bd5bed5
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245634"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261136"
 ---
 # <a name="how-to-create-a-transactional-service"></a>如何：创建事务性服务
 本示例演示创建事务性服务和使用客户端启动的事务协调服务操作的各个方面。  
@@ -65,7 +65,7 @@ ms.locfileid: "53245634"
     }  
     ```  
   
-3.  在配置文件中配置绑定，指定事务上下文应进行流处理，并指定要使用的协议执行此操作。 有关详细信息，请参阅[ServiceModel 事务配置](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)。 具体地说，绑定类型是在终结点元素的 `binding` 属性中指定的。 [\<终结点 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素包含`bindingConfiguration`引用一个名为的绑定配置的属性`transactionalOleTransactionsTcpBinding`，下面的示例配置中所示。  
+3.  在配置文件中配置绑定，指定事务上下文应进行流处理，并指定要使用的协议执行此操作。 有关详细信息，请参阅[ServiceModel 事务配置](servicemodel-transaction-configuration.md)。 具体地说，绑定类型是在终结点元素的 `binding` 属性中指定的。 [\<终结点 >](../../configure-apps/file-schema/wcf/endpoint-element.md)元素包含`bindingConfiguration`引用一个名为的绑定配置的属性`transactionalOleTransactionsTcpBinding`，下面的示例配置中所示。  
   
     ```xml  
     <service name="CalculatorService">  
@@ -162,7 +162,7 @@ ms.locfileid: "53245634"
     }  
     ```  
   
-2.  出于事务关联的目的而将 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 属性设置为 `false` 需要使用会话绑定。 这一要求使用 `SessionMode` 属性在 <xref:System.ServiceModel.ServiceContractAttribute> 上指定。  
+2.  出于事务关联的目的而将 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 属性设置为 `false` 需要使用会话绑定。 这一需求使用 `SessionMode` 属性在 <xref:System.ServiceModel.ServiceContractAttribute> 上指定。  
   
     ```csharp
     [ServiceContract(SessionMode = SessionMode.Required)]  
