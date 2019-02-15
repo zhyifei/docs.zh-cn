@@ -12,12 +12,12 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: 52030b78b95d88432a5cac9b089ab87ca6d4f534
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3899d06fce08eed5953181b9af232b6b2bb29e50
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500702"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305489"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>如何：Windows 窗体 ListView 控件中的项进行分组
 使用的分组功能<xref:System.Windows.Forms.ListView>控件，可以在组中显示的项的相关的集。 由包含组标题的水平组标头在屏幕上分隔这些组。 可以使用<xref:System.Windows.Forms.ListView>组以使大型列表对项目分组按字母顺序，按日期，或任何其他逻辑分组的导航。 下图显示了一些分组的项。  
@@ -62,5 +62,4 @@ ListView 的分组项
 - <xref:System.Windows.Forms.ListViewGroup>
 - [ListView 控件](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
 - [ListView 控件概述](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
-- [Windows XP 功能和 Windows 窗体控件](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)
 - [如何：添加和删除使用 Windows 窗体 ListView 控件的项](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

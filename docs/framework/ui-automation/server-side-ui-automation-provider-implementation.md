@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 94e9c510f7f3c183bf6cbde31e2ead04cc66bfb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8a6d604e78e1568714d5b574594af752abe221e
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744110"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305502"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>服务器端 UI 自动化提供程序的实现
 > [!NOTE]
@@ -178,5 +178,3 @@ ms.locfileid: "54744110"
 - [从 UI 自动化提供程序引发事件](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
 - [在 UI 自动化片段提供程序中启用导航](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
 - [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [简单的提供程序示例](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)
-- [片段提供程序示例](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 66fb814bbf0a40ccaa9339eb24dcc49332861deb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 543546de4f9b93deb5fa70c98608246e9c06e4f7
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647656"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304552"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时排列 Windows 窗体上的 WPF 内容
 本演练演示如何使用 Windows 窗体布局功能（例如锚定和对齐线）排列 Windows Presentation Foundation (WPF) 控件。
@@ -56,7 +56,7 @@ ms.locfileid: "54647656"
   
 1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 添加到项目。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
-2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何：选择并在设计图面上移动元素](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)。  
+2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何：选择并在设计图面上移动元素](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。  
   
 3.  在中**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>并<xref:System.Windows.FrameworkElement.Height%2A>属性设置为`200`。  
   
@@ -79,11 +79,12 @@ ms.locfileid: "54647656"
   
 5.  在中**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`中的第一个单元<xref:System.Windows.Forms.TableLayoutPanel>控件。  
   
-     `UserControl1` 的实例承载在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
+     
+  `UserControl1` 的实例承载在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
   
 6.  在中**工具箱**，双击`UserControl1`的第二个单元格中创建另一个实例<xref:System.Windows.Forms.TableLayoutPanel>控件。  
   
-7.  在中**文档大纲**窗口中，选择`tableLayoutPanel1`。 有关详细信息，请参阅[文档大纲窗口](https://msdn.microsoft.com/library/9054f2bc-f6f8-4242-9fe0-be71089b12f8)。  
+7.  在中**文档大纲**窗口中，选择`tableLayoutPanel1`。 有关详细信息，请参阅[文档大纲窗口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/46xf4h0w(v=vs.100)#using-the-document-outline-window-for-silverlight-and-wpf)。  
   
 8.  在中**属性**窗口中，设置的值<xref:System.Windows.Forms.Control.Padding%2A>属性设置为`10, 10, 10, 10`。  
   
@@ -96,7 +97,8 @@ ms.locfileid: "54647656"
   
 1.  从**工具箱**，一个实例的拖放`UserControl1`拖到窗体并将它放在下方的空间<xref:System.Windows.Forms.TableLayoutPanel>控件。  
   
-     `UserControl1` 的实例承载在名为 `elementHost3` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
+     
+  `UserControl1` 的实例承载在名为 `elementHost3` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
   
 2.  使用对齐线，将 `elementHost3` 的左边缘与 <xref:System.Windows.Forms.TableLayoutPanel> 控件的左边缘对齐。  
   

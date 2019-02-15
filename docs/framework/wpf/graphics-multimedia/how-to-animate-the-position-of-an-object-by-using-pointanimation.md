@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], animation
 - animation [WPF], PointAnimation
 ms.assetid: 42310977-cc90-438a-8a47-0345898e01be
-ms.openlocfilehash: e359e712f533c861a694c53848ca0eaeb289eb21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0551ba7c22e6c13ef2875e5f4ba681fc6df14d
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495548"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304786"
 ---
 # <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>如何：使用 PointAnimation 针对对象的位置进行动画处理
 此示例演示如何使用<xref:System.Windows.Media.Animation.PointAnimation>类进行动画处理的对象沿<xref:System.Windows.Shapes.Path>。  
@@ -31,6 +31,5 @@ ms.locfileid: "54495548"
 - <xref:System.Windows.Media.EllipseGeometry.Center%2A>
 - [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
 - [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)
-- [动画和计时](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
-- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [图形操作指南主题](graphics-how-to-topics.md)
+- [动画和计时操作指南主题](animation-and-timing-how-to-topics.md)

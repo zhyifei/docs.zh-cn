@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: d058fd43649b8096ce2a65d8537cf4b663f58594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f337164043014ed14d42e219f26ee2ec8be06662
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585414"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305839"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件
 某些应用程序需要这样一个窗体，该窗体的布局可在窗体重新调整大小或在内容更改大小时对自身进行排列。 当你需要动态布局并且不希望在代码中显式处理 <xref:System.Windows.Forms.Control.Layout> 事件时，请考虑使用布局面板。  
@@ -22,7 +22,7 @@ ms.locfileid: "54585414"
   
  <xref:System.Windows.Forms.TableLayoutPanel>排列其内容在网格中，提供的功能类似的 html\<表 > 元素。 <xref:System.Windows.Forms.TableLayoutPanel>让您可以将控件放在网格布局，而无需精确指定每个控件的位置。 其单元格排列为行和列，并且这些行和列可具有不同的大小。 可在中的行和列合并单元格。 单元格可以包含一个窗体可以包含，并在作为容器的大多数其他方面的行为的任何内容。  
   
- <xref:System.Windows.Forms.TableLayoutPanel>控件还提供了按比例调整大小功能在运行时，这样窗体调整大小时，你的布局可以顺利地更改。 这使得<xref:System.Windows.Forms.TableLayoutPanel>控件非常适合用于数据输入窗体和本地化的应用程序等目的。 有关详细信息，请参见[演练：创建数据输入可调整大小的 Windows 窗体](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)和[演练：创建可本地化 Windows 窗体](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)。  
+ <xref:System.Windows.Forms.TableLayoutPanel>控件还提供了按比例调整大小功能在运行时，这样窗体调整大小时，你的布局可以顺利地更改。 这使得<xref:System.Windows.Forms.TableLayoutPanel>控件非常适合用于数据输入窗体和本地化的应用程序等目的。 有关详细信息，请参见[演练：创建数据输入可调整大小的 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))和[演练：创建可本地化 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))。  
   
  一般情况下，不应使用<xref:System.Windows.Forms.TableLayoutPanel>作为整个布局的容器的控件。 使用<xref:System.Windows.Forms.TableLayoutPanel>控件提供的布局部分按比例调整大小的功能。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54585414"
   
 #### <a name="to-create-the-project"></a>要创建项目  
   
-1.  创建一个名为"TableLayoutPanelExample"的 Windows 应用程序项目。 有关详细信息，请参阅[如何：创建 Windows 应用程序项目](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  创建一个名为"TableLayoutPanelExample"的 Windows 应用程序项目。 有关详细信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)。  
   
 2.  选择中的窗体**Windows** **窗体设计器**。  
   
@@ -184,8 +184,8 @@ ms.locfileid: "54585414"
 - [演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [演练：使用对齐线的 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Microsoft Windows 用户体验，用户界面开发人员和设计人员的官方指南。Redmond，WA:Microsoft Press，1999年。(USBN:0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
-- [演练：创建数据输入可调整大小的 Windows 窗体](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)
-- [演练：创建可本地化 Windows 窗体](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)
+- [演练：创建数据输入可调整大小的 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
+- [演练：创建可本地化 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [有关 TableLayoutPanel 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
 - [AutoSize 属性概述](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
 - [如何：在 Windows 窗体上停靠控件](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
