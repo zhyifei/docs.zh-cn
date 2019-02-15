@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664003"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305540"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 基础概念
 本文档提供 Windows Communication Foundation (WCF) 体系结构的高级视图。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建 WCF 服务和客户端的最简单版本的教程，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解 WCF 编程，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
@@ -84,7 +84,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  行为是控制服务、终结点、特定操作或客户端的各个运行时方面的要素。 行为按照范围进行分组：常见行为在全局范围内影响所有终结点，服务行为仅影响与服务相关的方面，终结点行为仅影响与终结点相关的属性，操作级行为影响特定操作。 例如，有一种服务行为是遏制，它指定当过多的消息可能超出服务的处理能力时，服务应该如何反应。 另一方面，终结点行为仅控制与终结点相关的方面，如查找安全凭据的方式和位置。  
   
  系统提供的绑定  
- WCF 包含许多系统提供的绑定。 这些绑定是针对特定方案进行优化的绑定元素的集合。 例如，<xref:System.ServiceModel.WSHttpBinding> 是为了与实现各种 WS* 规范的服务进行互操作而专门设计的。 通过仅提供那些可以正确应用于特定方案的选项，这些预定义的绑定可以节省时间。 如果预定义的绑定不能满足您的要求，则可以创建您自己的自定义绑定。  
+ WCF 包含许多系统提供的绑定。 这些绑定是针对特定方案进行优化的绑定元素的集合。 例如，<xref:System.ServiceModel.WSHttpBinding> 是为了与实现各种 WS* 规范的服务进行互操作而专门设计的。 通过仅提供那些可以正确应用于特定方案的选项，这些预定义的绑定可以节省时间。 如果预定义的绑定不能满足你的需求，则可以创建你自己的自定义绑定。  
   
  配置与编码  
  可以通过代码编写、配置或将两者结合在一起对应用程序进行控制。 配置的优点在于，它使非开发人员（如网络管理员）可以在代码编写完成后直接对客户端和服务参数进行设置，而不必重新进行编译。 使用配置不仅可以设置值（如终结点地址），还可以通过添加终结点、绑定和行为来实施进一步的控制。 通过代码编写，开发人员可以保持对服务或客户端的所有组件的严格控制，而且可以对通过配置完成的所有设置进行检查，并根据需要通过代码进行重写。  
@@ -96,7 +96,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  服务协定将多个相关的操作联系在一起，组成单个功能单元。 协定可以定义服务级设置，如服务的命名空间、对应的回调协定以及其他此类设置。 在大多数情况下，协定的定义方法是用所选的编程语言创建一个接口，然后将 <xref:System.ServiceModel.ServiceContractAttribute> 属性应用于该接口。 通过实现该接口，可生成实际的服务代码。  
   
  操作协定  
- 操作协定定义参数并返回操作的类型。 在创建定义服务协定的接口时，可以通过将 <xref:System.ServiceModel.OperationContractAttribute> 属性应用于协定中包含的每个方法定义来表示一个操作协定。 可以将操作建模为采用单个消息作为参数并返回单个消息，或者建模为采用一组类型作为参数并返回一个类型。 在后一种情况下，系统将确定需要为该操作交换的消息的格式。  
+ 操作协定定义参数和操作的返回类型。 在创建定义服务协定的接口时，可以通过将 <xref:System.ServiceModel.OperationContractAttribute> 属性应用于协定中包含的每个方法定义来表示一个操作协定。 可以将操作建模为采用单个消息作为参数并返回单个消息，或者建模为采用一组类型作为参数并返回一个类型。 在后一种情况下，系统将确定需要为该操作交换的消息的格式。  
   
  消息协定  
  消息协定描述消息的格式。 例如，它会声明消息元素应包含在消息头中还是包含在消息正文中，应该对消息的何种元素应用何种级别的安全性，等等。  
@@ -108,13 +108,13 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  服务使用的数据类型必须在元数据中进行描述， 以使其他各方可以与该服务进行交互操作。 数据类型可以在消息的任何部分使用（例如，作为参数或返回类型）。 如果服务仅使用简单类型，则无需显式使用数据协定。  
   
  承载  
- 服务必须承载于某个进程中。 一个*主机*是控制服务的生存期的应用程序。 服务可以是自承载的，也可以由现有的托管进程进行管理。  
+ 服务必须承载于某个进程中。 一个*主机*是控制服务的生存期的应用程序。 服务可以是自承载的，也可以由现有的宿主进程进行管理。  
   
  自我承载的服务  
  自承载服务是在开发人员创建的进程应用程序中运行的服务。 开发人员控制服务的生存期、设置服务的属性、打开服务（这会将服务设置为侦听模式）以及关闭服务。  
   
  承载进程  
- 宿主进程是专为承载服务而设计的应用程序。 这些宿主进程包括 Internet 信息服务 (IIS)、Windows 激活服务 (WAS) 和 Windows 服务。 在这些宿主方案中，由宿主控制服务的生存期。 例如，使用 IIS 可以设置包含服务程序集和配置文件的虚拟目录。 在收到消息时，IIS 将启动服务并控制服务的生存期。  
+ 托管进程是专为承载服务而设计的应用程序。 这些宿主进程包括 Internet 信息服务 (IIS)、Windows 激活服务 (WAS) 和 Windows 服务。 在这些宿主方案中，由宿主控制服务的生存期。 例如，使用 IIS 可以设置包含服务程序集和配置文件的虚拟目录。 在收到消息时，IIS 将启动服务并控制服务的生存期。  
   
  实例化  
  每个服务都具有一个实例化模型。 有三种实例化模型：“单个”，在这种模型中，由单个 CLR 对象为所有客户端提供服务；“每个调用”，在这种模型中，将创建一个新的 CLR 对象来处理每个客户端调用；“每个会话”，在这种模型中，将创建一组 CLR 对象，并且为每个独立的会话使用一个对象。 实例化模型的选择取决于应用程序需求和服务的预期使用模式。  
@@ -155,4 +155,3 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>请参阅
 - [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
 - [Windows Communication Foundation 体系结构](../../../docs/framework/wcf/architecture.md)
-- [安全体系结构](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

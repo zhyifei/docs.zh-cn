@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], rectangles
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
-ms.openlocfilehash: d164a6ecc64c1a4e78be41304cace7515684b488
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbff015bdc5f9ce56d2c366e0d348429efb7f4b5
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530093"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305150"
 ---
 # <a name="how-to-animate-a-rectangle"></a>如何：对矩形进行动画处理
 此示例演示如何对矩形的大小和位置变化进行动画处理。  
@@ -30,6 +30,5 @@ ms.locfileid: "54530093"
 - <xref:System.Windows.Media.RectangleGeometry>
 - [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
 - [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)
-- [动画和计时](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
-- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [图形操作指南主题](graphics-how-to-topics.md)
+- [动画和计时操作指南主题](animation-and-timing-how-to-topics.md)
