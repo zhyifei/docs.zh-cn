@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 示例的一次性安装过程
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 35eeab5daec6f63f4d3bed85442ffe6ca28dc38b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 705314c1eb0318fe7da53108d51f9dc985a3fdfa
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583387"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333451"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 示例的一次性安装过程
 托管在 Internet 信息服务 (IIS) 和从公共虚拟目录中运行的大多数 Windows Communication Foundation (WCF) 示例。 此一次性安装过程的磁盘; 上创建一个文件夹它还添加到名为的 IIS 虚拟目录**ServiceModelSamples**。
@@ -25,7 +25,7 @@ ms.locfileid: "54583387"
   
 3.  如果没有安装 Visual Studio 2012，并且你的操作系统不是 Windows Server 2008 SP2 或更高版本，安装[修补程序 251798](https://go.microsoft.com/fwlink/?LinkId=184693)。  
   
-4.  运行以下命令。 为什么必须运行这些命令的详细信息，请参阅[IIS 宿主服务失败](https://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8)。  
+4.  运行以下命令。 为什么必须运行这些命令的详细信息，请参阅[IIS 宿主服务失败](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90))。  
   
     > [!WARNING]
     >  如果重新安装 IIS，则需要再次运行以下命令。

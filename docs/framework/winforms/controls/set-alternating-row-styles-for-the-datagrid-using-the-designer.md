@@ -8,19 +8,19 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 723dca7b87190b1a2a63427ecc894987f556ab54
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 786f9e9555e49f7cf8880d571c759f5c85e6b2a1
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616233"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332308"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>如何：设置为使用设计器在 Windows 窗体 DataGridView 控件中交替行样式
 表格数据通常显示其中的交替行具有不同的背景色以类似帐目的格式。 这种格式使用户可以更轻松地分辨每一行的单元格，尤其是有多列的宽表。  
   
  借助 <xref:System.Windows.Forms.DataGridView> 控件，可为交替行指定完整的样式信息。 可以使用如前景色和字体、 背景色以及样式特征来区分交替行。 有关详细信息，请参阅[Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。  
   
- 下面的过程需要**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.DataGridView>控件。 有关设置此类项目的信息，请参阅[如何：创建 Windows 应用程序项目](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何：将控件添加到 Windows 窗体](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+ 下面的过程需要**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.DataGridView>控件。 有关设置此类项目的信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[如何：将控件添加到 Windows 窗体](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -43,5 +43,5 @@ ms.locfileid: "54616233"
 - [Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Windows 窗体 DataGridView 控件中的基本格式和样式设置](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
 - [将设计器与 Windows 窗体 DataGridView 控件结合使用](../../../../docs/framework/winforms/controls/using-the-designer-with-the-windows-forms-datagridview-control.md)
-- [如何：创建一个 Windows 应用程序项目](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)
+- [如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
 - [如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

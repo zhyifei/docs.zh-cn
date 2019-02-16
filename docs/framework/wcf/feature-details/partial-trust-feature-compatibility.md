@@ -2,12 +2,12 @@
 title: 部分信任功能兼容性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 404fe1a7fb14f28d264d4a97981eade8404141ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564716"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333494"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能兼容性
 在部分受信任的环境中运行时，Windows Communication Foundation (WCF) 支持有限的功能子集。 部分信任中支持的功能围绕 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主题中所述的一组特定的方案而设计。  
@@ -111,7 +111,7 @@ ms.locfileid: "54564716"
  时在部分信任环境中运行 WCF 消息日志记录无效。 如果在部分信任下启用消息日志记录，不会出现服务激活失败，但不记录消息。  
   
 ### <a name="tracing"></a>跟踪  
- 在部分信任环境中运行时可使用有限的跟踪功能。 在配置文件的 <`listeners`> 元素中，可以添加的类型仅有 <xref:System.Diagnostics.TextWriterTraceListener> 和新的 <xref:System.Diagnostics.EventSchemaTraceListener>。 使用标准的 <xref:System.Diagnostics.XmlWriterTraceListener> 可能会造成日志不完整或不正确。  
+ 在部分信任环境中运行时可使用有限的跟踪功能。 在 <`listeners`> 配置文件中的元素，可以添加的类型仅有<xref:System.Diagnostics.TextWriterTraceListener>和新<xref:System.Diagnostics.EventSchemaTraceListener>。 使用标准的 <xref:System.Diagnostics.XmlWriterTraceListener> 可能会造成日志不完整或不正确。  
   
  支持的跟踪源有：  
   
@@ -127,7 +127,7 @@ ms.locfileid: "54564716"
   
 -   <xref:System.IO.Log>  
 
--   [System.ServiceModel.Internal.TransactionBridge](https://msdn.microsoft.com/library/system.servicemodel.internal.transactionbridge.aspx)]
+-   [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  不应指定下面的 <xref:System.Diagnostics.TraceOptions> 枚举成员：  
   

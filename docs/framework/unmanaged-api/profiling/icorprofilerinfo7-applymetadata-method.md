@@ -1,6 +1,6 @@
 ---
 title: ICorProfilerInfo7::ApplyMetaData 方法
-ms.date: 03/30/2017
+ms.date: 02/15/2019
 dev_langs:
 - cpp
 api_name:
@@ -12,12 +12,12 @@ api_type:
 ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7209314f9cf3170ba0b577395a5134f9549475e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5caf7b5e24ac5e583420b45c563f53b8988f1e00
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536563"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332658"
 ---
 # <a name="icorprofilerinfo7applymetadata-method"></a>ICorProfilerInfo7::ApplyMetaData 方法
 [仅在 .NET Framework 4.6.1 及更高版本中受支持]  
@@ -52,7 +52,13 @@ HRESULT ApplyMetaData(
 -   `MemberSpec` 通过调用创建的记录[IMetaDataEmit2::DefineMethodSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md)方法。  
   
 -   `UserString` 通过调用创建的记录[imetadataemit:: Defineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md)方法。  
-  
+
+从.NET Core 3.0`ApplyMetaData`还支持以下类型：
+
+- `TypeDef` 通过调用创建的记录[imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)方法。
+
+- `MethodDef` 通过调用创建的记录[imetadataemit:: Definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)方法。 但是，不支持将虚拟方法添加到现有的类型。 虚拟方法必须添加之前[ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)回调。
+
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   

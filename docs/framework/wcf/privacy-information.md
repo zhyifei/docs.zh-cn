@@ -6,15 +6,15 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683959"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333399"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
-Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communication Foundation (WCF) 3.0 版，它的应用程序时你的应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向你的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 WCF 不发送任何信息向 Microsoft 从你的应用程序除非你或最终用户选择将其发送给我们。  
+Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communication Foundation (WCF) 3.0 版，它的应用程序时你的应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向您的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 WCF 不发送任何信息向 Microsoft 从你的应用程序除非你或最终用户选择将其发送给我们。  
   
 ## <a name="wcf-in-brief"></a>WCF 概述  
  WCF 是使用 Microsoft.NET Framework，开发人员可以构建分布式应用程序的分布式消息传递框架。 在两个应用程序之间交换的消息包含标头和正文信息。  
@@ -402,5 +402,5 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
  Web 服务描述语言 (WSDL) 包含端口的定义。 每个端口都具有一个终结点地址和一个表示应用程序所使用的服务的绑定。 可以使用配置禁用公开 WSDL。 计算机上不会保留任何信息。  
   
 ## <a name="see-also"></a>请参阅
-- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [Windows Communication Foundation](index.md)
 - [安全性](../../../docs/framework/wcf/feature-details/security.md)

@@ -2,17 +2,17 @@
 title: 基本 AJAX 服务
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: 7a9529b79c9993e045e6bb28a7ad608f453a694e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f488ea1784e41c0c8e4bb815397ab81de95e53b
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509982"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332425"
 ---
 # <a name="basic-ajax-service"></a>基本 AJAX 服务
 此示例演示如何使用 Windows Communication Foundation (WCF) 来创建基本的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务 （使用从 Web 浏览器客户端的 JavaScript 代码可以访问的服务）。 该服务使用 <xref:System.ServiceModel.Web.WebGetAttribute> 属性以确保服务响应 HTTP GET 请求并被配置为对响应使用 JavaScript 对象表示法 (JSON) 数据格式。  
   
- WCF 中的 AJAX 支持适用于与通过 ASP.NET AJAX 一起使用`ScriptManager`控件。 使用 ASP.NET AJAX 使用 WCF 的示例，请参阅[AJAX 示例](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
+ WCF 中的 AJAX 支持适用于与通过 ASP.NET AJAX 一起使用`ScriptManager`控件。 使用 ASP.NET AJAX 使用 WCF 的示例，请参阅[AJAX 示例](ajax.md)。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -48,7 +48,8 @@ public interface ICalculator
 </system.serviceModel>  
 ```  
   
- <xref:System.ServiceModel.Description.WebScriptEndpoint> 将服务的默认数据格式设置为 JSON 而不是 XML。 若要调用服务，导航到`http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200`后完成了一组和生成在本主题后面所示的步骤。 这个测试功能是通过使用 HTTP GET 请求实现的。  
+ 
+  <xref:System.ServiceModel.Description.WebScriptEndpoint> 将服务的默认数据格式设置为 JSON 而不是 XML。 若要调用服务，导航到`http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200`后完成了一组和生成在本主题后面所示的步骤。 这个测试功能是通过使用 HTTP GET 请求实现的。  
   
  客户端 Web 页 SimpleAjaxClientPage.aspx 包含 ASP.NET 代码，无论何时用户单击该页面上的操作按钮之一，就能调用服务。 `ScriptManager` 控件用于使服务的代理可以通过 JavaScript 访问。  
 

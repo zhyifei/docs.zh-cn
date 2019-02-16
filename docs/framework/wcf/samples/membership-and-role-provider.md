@@ -2,12 +2,12 @@
 title: 成员资格和角色提供程序
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 9dde928beb348dcb41c6b908c8e5d2a04243172c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fd3d199a529c96299350aba7f43b0393e1178f5
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671468"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332892"
 ---
 # <a name="membership-and-role-provider"></a>成员资格和角色提供程序
 此“成员资格和角色提供程序”示例演示服务如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格和角色提供程序来对客户端进行身份验证和授权。  
@@ -126,7 +126,8 @@ ms.locfileid: "54671468"
     >  如果运行的是 SQL Server Express Edition，则服务器名称为 .\SQLEXPRESS。 配置 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序服务数据库时应使用该服务器，Web.config 连接字符串中也应使用该服务器。  
   
     > [!NOTE]
-    >  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作进程帐户应对本步骤中创建的数据库具有权限。 使用 sqlcmd 实用工具或 SQL Server Management Studio 来完成该工作。  
+    >  
+  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作进程帐户应对本步骤中创建的数据库具有权限。 使用 sqlcmd 实用工具或 SQL Server Management Studio 来完成该工作。  
   
 3.  若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。  
   
@@ -138,7 +139,7 @@ ms.locfileid: "54671468"
   
 3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -160,7 +161,7 @@ ms.locfileid: "54671468"
   
 9. 在客户端上使用管理权限打开 Visual Studio 开发人员命令提示符并运行 ImportServiceCert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
   
-10. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   

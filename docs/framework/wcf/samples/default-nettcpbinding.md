@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: a96ff1b588bd86ee3c391ea37b7ca5724db5e650
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a07a41fece076731ec8bf53b26bc6a2c935169d2
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589880"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333347"
 ---
 # <a name="default-nettcpbinding"></a>默认 NetTcpBinding
 本示例演示 <xref:System.ServiceModel.NetTcpBinding> 绑定的用法。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。 在本示例中，服务是自承载服务。 客户端和服务都是控制台应用程序。  
@@ -26,7 +26,7 @@ ms.locfileid: "54589880"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- 绑定是在客户端和服务的配置文件中指定的。 中指定的绑定类型`binding`的属性[\<终结点 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素，如下面的示例配置所示。  
+ 绑定是在客户端和服务的配置文件中指定的。 中指定的绑定类型`binding`的属性[\<终结点 >](../../configure-apps/file-schema/wcf/endpoint-element.md)元素，如下面的示例配置所示。  
   
 ```xml  
 <endpoint address=""  

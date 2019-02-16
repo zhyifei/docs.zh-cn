@@ -2,17 +2,18 @@
 title: 自定义绑定安全性
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 49e14fd783fa89f25750aeb00efc105a850c0d3e
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7f4162b26dc64f3108ab77bf7f7587cfdc24339f
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066124"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333438"
 ---
 # <a name="custom-binding-security"></a>自定义绑定安全性
 本示例演示如何使用自定义绑定配置安全性。 并演示如何使用自定义绑定实现消息级安全性和安全传输。 如果在客户端和服务之间传输消息时需要进行安全的传输，同时消息必须在消息级别上保持安全，这非常有用。 系统提供的绑定不支持此配置。
 
- 本示例由客户端控制台程序 (EXE) 和服务控制台程序 (EXE) 组成。 该服务实现双工协定。 该协定由 `ICalculatorDuplex` 接口定义，该接口公开数学运算（加、减、乘和除）。 `ICalculatorDuplex` 接口允许客户端执行数学运算，通过会话计算运行结果。 服务可以独立地在 `ICalculatorDuplexCallback` 接口上返回结果。 双工协定需要会话，因为必须建立上下文才能将客户端和服务之间发送的一组消息关联在一起。 定义的自定义绑定支持双工通信并且是安全的。
+ 本示例由客户端控制台程序 (EXE) 和服务控制台程序 (EXE) 组成。 该服务实现双工协定。 该协定由 `ICalculatorDuplex` 接口定义，该接口公开数学运算（加、减、乘和除）。 
+  `ICalculatorDuplex` 接口允许客户端执行数学运算，通过会话计算运行结果。 服务可以独立地在 `ICalculatorDuplexCallback` 接口上返回结果。 双工协定需要会话，因为必须建立上下文才能将客户端和服务之间发送的一组消息关联在一起。 定义的自定义绑定支持双工通信并且是安全的。
 
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。
@@ -78,7 +79,8 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 -   创建服务器证书。
 
-     Setup.bat 文件中的以下行创建将要使用的服务器证书。 `%SERVER_NAME%`变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 此批处理文件将服务器名默认为 localhost。
+     Setup.bat 文件中的以下行创建将要使用的服务器证书。 
+  `%SERVER_NAME%`变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 此批处理文件将服务器名默认为 localhost。
 
      证书存储在 Web 承载的服务的 CurrentUser 存储中。
 
@@ -122,7 +124,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   

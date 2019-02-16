@@ -2,12 +2,12 @@
 title: 使用传输安全保护消息
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 4a67cc8265254741a58c9b86bc45eff9c9366bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 354b014825b3282e494cf75637fb2434acdb2dbe
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747942"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332335"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用传输安全保护消息
 本节讨论消息队列 (MSMQ) 传输安全，您可将其用于保护发送到队列的消息。  
@@ -45,7 +45,8 @@ ms.locfileid: "54747942"
  了解这些基本知识后，以下各节将详细介绍与 <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 绑定的传输安全属性。  
   
 #### <a name="msmq-authentication-mode"></a>MSMQ 身份验证模式  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 指示是使用 Windows 域安全还是基于外部证书的安全来保护消息。 在这两种身份验证模式，WCF 排队的传输通道使用`CertificateValidationMode`服务配置中指定。 证书验证模式指定用于检查证书有效性的机制。  
+ 
+  <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 指示是使用 Windows 域安全还是基于外部证书的安全来保护消息。 在这两种身份验证模式，WCF 排队的传输通道使用`CertificateValidationMode`服务配置中指定。 证书验证模式指定用于检查证书有效性的机制。  
   
  启用传输安全时，默认的设置为 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>。  
   
@@ -97,6 +98,6 @@ ms.locfileid: "54747942"
  支持的算法包括 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 默认值为 `SHA1`。  
   
 ## <a name="see-also"></a>请参阅
-- [消息队列](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+- [队列概述](queues-overview.md)
 - [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: b0abe7a6b127a254c2f5c72dc66fc128d35374fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd0b7e0d927e53f70515cfa124034a4cacc5ce7
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491358"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332242"
 ---
 # <a name="getting-started-tutorial"></a>入门教程
 在本部分中包含的主题旨在帮助您快速了解到 Windows Communication Foundation (WCF) 编程体验。 这些主题要根据本主题底部的列表中的顺序完成。 通过本教程中，可以初步了解创建 WCF 服务和客户端应用程序所需的步骤。 服务公开一个或多个终结点，其中每个终结点都公开一项或多项服务操作。 *终结点*服务的指定的地址，其中可以找到该服务，包含描述如何在客户端必须与该服务，并定义的功能的协定通信的信息的绑定向其客户端提供服务。
@@ -22,7 +22,7 @@ ms.locfileid: "54491358"
 
 在本部分中的主题假定你使用的 Visual Studio 作为开发环境。 如果使用其他开发环境，忽略的 Visual Studio 的特定说明。
 
-有关示例应用程序，可以下载到您的硬盘和运行，请参阅中的主题[Windows Communication Foundation 示例](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)。 本主题中，请参阅，特别是，对于[Getting Started](../../../docs/framework/wcf/samples/getting-started-sample.md)。
+有关示例应用程序，可以下载到您的硬盘和运行，请参阅中的主题[Windows Communication Foundation (WCF) 示例](./samples/index.md)。 本主题中，请参阅，特别是，对于[Getting Started](../../../docs/framework/wcf/samples/getting-started-sample.md)。
 
 有关创建服务和客户端的更多详细信息，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。
 
@@ -58,7 +58,7 @@ ms.locfileid: "54491358"
 
 ## <a name="related-sections"></a>相关章节
 
-- [Windows Communication Foundation 示例](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Windows Communication Foundation (WCF) 示例](./samples/index.md)
 - [基本编程生命周期](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 
 ## <a name="see-also"></a>请参阅

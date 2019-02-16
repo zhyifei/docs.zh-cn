@@ -2,12 +2,12 @@
 title: 对等解析程序
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: b16358d05b9e457b4542e41297908e225885dad9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7d7b055312fe82bd628f8b07304dc9bb188fffb
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496840"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333373"
 ---
 # <a name="peer-resolvers"></a>对等解析程序
 为了连接到网格，对等节点需要获得其他节点的 IP 地址。 IP 地址可通过联系解析程序服务来获取，该服务获取网格 ID，然后返回与向该特定网格 ID 注册的节点对应的地址列表。 解析程序保持已注册地址的列表，此列表是它通过让网格中的每个节点向该服务注册而创建的。  
@@ -32,7 +32,7 @@ ms.locfileid: "54496840"
 > [!NOTE]
 >  当在本地网络和临时网络中使用自定义解析程序时，强烈建议使用或支持链接本地网络或临时网络的应用程序中包含相应的逻辑，以便选择要在连接时使用的单个链接本地地址。 这可以防止具有多个链接本地地址的计算机产生任何混淆。 有鉴于此，对等通道仅支持在任一时刻使用单个链接本地地址。 可以使用 `ListenIpAddress` 上的 <xref:System.ServiceModel.NetPeerTcpBinding> 属性来指定该地址。  
   
- 有关如何实现自定义冲突解决程序的演示，请参阅[对等通道自定义对等解析程序](https://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)。  
+ 有关如何实现自定义冲突解决程序的演示，请参阅[对等通道自定义对等解析程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Custompeerresolverservice:客户端注册](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  

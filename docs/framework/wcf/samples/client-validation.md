@@ -2,12 +2,12 @@
 title: 客户端验证
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 3a80121894ddbb753efbe047d14a14a57f8dddc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b033695065dfeb130f041563909704acb84bb3be
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639999"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333295"
 ---
 # <a name="client-validation"></a>客户端验证
 服务通常发布元数据以启用客户端代理类型的自动生成和配置。 如果服务不受信任，客户端应用程序应该验证元数据是否符合客户端应用程序有关安全性、事务、服务协定类型等方面的策略。 下面的示例演示如何编写一个客户端终结点行为，用于验证服务终结点以确保可以安全地使用该服务终结点。  
@@ -28,7 +28,7 @@ ms.locfileid: "54639999"
   
 3.  从 \client\bin\Debug 运行客户端应用程序。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 5.  在运行完该示例后运行 Cleanup.bat 移除证书。 其他安全示例使用相同的证书。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54639999"
   
 10. 在客户端计算机上，运行 client.exe。  
   
-    1.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+    1.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   

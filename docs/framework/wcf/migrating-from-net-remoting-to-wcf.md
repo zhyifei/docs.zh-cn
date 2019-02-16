@@ -2,12 +2,12 @@
 title: 从 .NET 远程处理迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 38ec11b529c7b0444d47971938fb711fe40bee3d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415970"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333061"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>从 .NET 远程处理迁移到 WCF
 本文介绍如何迁移借助 .NET 远程处理来使用 Windows Communication Foundation (WCF) 的应用程序。 本文对这些产品之间的相似概念进行比较，并介绍如何在 WCF 中完成若干常见的远程处理方案。  
@@ -207,11 +207,7 @@ public class WCFCustomer
   
  [DataContract] 特性标识此类型为可在客户端和服务器之间进行序列化和反序列化。 [DataMember] 特性标识要序列化的单个属性或字段。  
   
- 当 WCF 跨多个层发送某个对象时，它仅序列化值并在另一个层上创建此对象的新实例。 与此对象的值进行的任何交互仅发生在本地 – 它们不能如 .NET 远程处理中的按引用对象一样与其他层进行通信。 有关详细信息，请参阅下列主题：  
-  
--   [序列化和反序列化](./feature-details/serialization-and-deserialization.md)  
-  
--   [Windows Communication Foundation 中的序列化](https://msdn.microsoft.com/magazine/cc163569.aspx)  
+ 当 WCF 跨多个层发送某个对象时，它仅序列化值并在另一个层上创建此对象的新实例。 与此对象的值进行的任何交互仅发生在本地 – 它们不能如 .NET 远程处理中的按引用对象一样与其他层进行通信。 有关详细信息，请参阅[序列化和反序列化](./feature-details/serialization-and-deserialization.md)。  
   
 ### <a name="exception-handling-capabilities"></a>异常处理功能  
   

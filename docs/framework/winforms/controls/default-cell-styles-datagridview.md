@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 003ddd68de22d60b771ca525cfa5cc6b2e1e1e3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a4cd1e7582e6e7443ceb1f4188eb3359638d8df
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650767"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332203"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>如何：有关使用设计器在 Windows 窗体 DataGridView 控件中设置默认单元格样式和数据格式
 <xref:System.Windows.Forms.DataGridView>控件，可以指定默认单元格样式和单元格整个控件、 特定列、 行和列标题和交替行以创建分类帐效果的数据格式。 设置整个控件的默认样式中被重写默认情况下为列和交替行样式设置。 此外，在单独的行和单元的代码中设置的样式重写默认样式。  
@@ -21,7 +21,7 @@ ms.locfileid: "54650767"
   
  您还可以设置使用的样式<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>属性以影响将添加到控件的所有行。 有关行模板的详细信息，请参阅[如何：使用行模板自定义 Windows 窗体 DataGridView 控件中的行](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)。  
   
- 下面的过程要求**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.DataGridView>控件。 有关设置此类项目的信息，请参阅[如何：创建 Windows 应用程序项目](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何：将控件添加到 Windows 窗体](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+ 下面的过程要求**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.DataGridView>控件。 有关设置此类项目的信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[如何：将控件添加到 Windows 窗体](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -68,5 +68,5 @@ ms.locfileid: "54650767"
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
 - [Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
 - [如何：设置为使用设计器在 Windows 窗体 DataGridView 控件中交替行样式](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
-- [如何：创建一个 Windows 应用程序项目](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)
+- [如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
 - [如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

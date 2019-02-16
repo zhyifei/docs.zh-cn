@@ -2,12 +2,12 @@
 title: 授权策略
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873474"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332671"
 ---
 # <a name="authorization-policy"></a>授权策略
 
@@ -282,7 +282,8 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>
 ```
 
-Windows Communication Foundation (WCF) 提供丰富的基于声明的模型，用于执行访问检查。 <xref:System.ServiceModel.ServiceAuthorizationManager> 对象用于执行访问检查，并确定与客户端关联的声明是否满足访问服务方法的必需要求。
+Windows Communication Foundation (WCF) 提供丰富的基于声明的模型，用于执行访问检查。 
+  <xref:System.ServiceModel.ServiceAuthorizationManager> 对象用于执行访问检查，并确定与客户端关联的声明是否满足访问服务方法的必需要求。
 
 出于演示目的，此示例演示的实现<xref:System.ServiceModel.ServiceAuthorizationManager>，它实现<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>方法，以允许对方法的用户的访问权限基于声明的类型`http://example.com/claims/allowedoperation`其值是为该操作的操作 URI允许调用。
 
@@ -377,7 +378,8 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 }
 ```
 
-上面的代码演示了 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> 方法如何检查尚未添加影响处理的新声明，并添加特定的声明。 允许的声明是从 `GetAllowedOpList` 方法中获得的，实现该方法是为了返回允许用户执行的特定操作的列表。 授权策略添加了访问特定操作的声明。 <xref:System.ServiceModel.ServiceAuthorizationManager> 然后使用此授权策略执行访问检查决策。
+上面的代码演示了 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> 方法如何检查尚未添加影响处理的新声明，并添加特定的声明。 允许的声明是从 `GetAllowedOpList` 方法中获得的，实现该方法是为了返回允许用户执行的特定操作的列表。 授权策略添加了访问特定操作的声明。 
+  <xref:System.ServiceModel.ServiceAuthorizationManager> 然后使用此授权策略执行访问检查决策。
 
 实现自定义 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 后，必须通知服务主机关于要使用的授权策略的信息。
 
@@ -460,7 +462,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 1. 从启动 Client.exe *\client\bin*。 客户端活动将显示在客户端控制台应用程序上。
 
-  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。
+  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
 
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例
 
@@ -500,11 +502,11 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 14. 在客户端计算机上，从命令提示窗口中启动 Client.exe。
 
-   如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。
+   如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
 
 ### <a name="clean-up-after-the-sample"></a>在此示例后清理
 
 若要清除运行示例后，运行*Cleanup.bat*完成后运行示例的 samples 文件夹中。 这将从证书存储区中移除服务器和客户端证书。
 
 > [!NOTE]
-> 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果您运行在计算机之间使用的证书，请确保清除已安装在 CurrentUser-的服务证书的 WCF 示例 TrustedPeople 存储。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
+> 此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果您运行在计算机之间使用的证书，请确保清除已安装在 CurrentUser-的服务证书的 WCF 示例 TrustedPeople 存储。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。

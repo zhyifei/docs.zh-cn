@@ -7,17 +7,17 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-ms.openlocfilehash: 7c101326c89d8f1a4ed139a7acc527b433d673ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01ae8987f7a92abf79a758e82ed0ac863fad57ce
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686951"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332684"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：添加和使用设计器在 Windows 窗体 DataGridView 控件中删除列
 Windows 窗体<xref:System.Windows.Forms.DataGridView>控件必须包含的列才能显示数据。 如果您计划手动填充该控件，您必须自行添加的列。 或者，可以将控件绑定到数据源，生成并自动填充列。 如果数据源包含多于你想要显示的列数，则可以删除不需要的列。  
   
- 下面的过程要求**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.DataGridView>控件。 有关设置此类项目的信息，请参阅[如何：创建 Windows 应用程序项目](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何：将控件添加到 Windows 窗体](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+ 下面的过程要求**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.DataGridView>控件。 有关设置此类项目的信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[如何：将控件添加到 Windows 窗体](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -43,5 +43,5 @@ Windows 窗体<xref:System.Windows.Forms.DataGridView>控件必须包含的列�
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.DataGridView>
-- [如何：创建一个 Windows 应用程序项目](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)
+- [如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
 - [如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

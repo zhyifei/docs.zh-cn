@@ -2,12 +2,12 @@
 title: 消息安全示例
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-ms.openlocfilehash: a6a8fe40cfbd2297b8bd56b8b23db19216c9a72e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e175be732f393382508a28f8a013e58db406a6f
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655785"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332359"
 ---
 # <a name="message-security-sample"></a>消息安全示例
 此示例演示如何实现使用 `basicHttpBinding` 和消息安全性的应用程序。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  
@@ -15,7 +15,8 @@ ms.locfileid: "54655785"
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- `basicHttpBinding` 的安全模式可以设置为下列值：`Message`、`Transport`、`TransportWithMessageCredential`、`TransportCredentialOnly` 和 `None`。 在下面的示例服务 App.config 文件中，终结点定义将指定 `basicHttpBinding` 并引用名为 `Binding1` 的绑定配置，如下面的示例配置中所示：  
+ 
+  `basicHttpBinding` 的安全模式可以设置为下列值：`Message`、`Transport`、`TransportWithMessageCredential`、`TransportCredentialOnly` 和 `None`。 在下面的示例服务 App.config 文件中，终结点定义将指定 `basicHttpBinding` 并引用名为 `Binding1` 的绑定配置，如下面的示例配置中所示：  
   
 ```xml  
 <system.serviceModel>  
@@ -127,7 +128,7 @@ Press <ENTER> to terminate client.
   
 3.  从 \client\bin 运行客户端应用程序。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 5.  在运行完该示例后运行 Cleanup.bat 移除证书。 其他安全示例使用相同的证书。  
   
@@ -161,7 +162,7 @@ Press <ENTER> to terminate client.
   
 14. 在客户端计算机上，从命令提示符窗口中启动 Client.exe。  
   
-    1.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+    1.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   

@@ -2,15 +2,16 @@
 title: WS 双向 Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 93097c5f13a45ba399ec90d6282db8ca277a8ede
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5c6309a183c0bf0b666fd39aea3d760eb7008ad
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640545"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332151"
 ---
 # <a name="ws-dual-http"></a>WS 双向 Http
-双向 Http 示例演示如何配置 `WSDualHttpBinding` 绑定。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现双工协定。 该协定由 `ICalculatorDuplex` 接口定义，该接口公开数学运算（加、减、乘和除）。 在本示例中，`ICalculatorDuplex` 接口允许客户端执行数学运算，通过会话计算运行结果。 服务在 `ICalculatorDuplexCallback` 接口上单独返回结果。 双工协定需要会话，因为必须建立上下文才能将客户端和服务之间发送的一组消息关联在一起。 `WSDualHttpBinding` 绑定支持双工通信。  
+双向 Http 示例演示如何配置 `WSDualHttpBinding` 绑定。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现双工协定。 该协定由 `ICalculatorDuplex` 接口定义，该接口公开数学运算（加、减、乘和除）。 在本示例中，`ICalculatorDuplex` 接口允许客户端执行数学运算，通过会话计算运行结果。 服务在 `ICalculatorDuplexCallback` 接口上单独返回结果。 双工协定需要会话，因为必须建立上下文才能将客户端和服务之间发送的一组消息关联在一起。 
+  `WSDualHttpBinding` 绑定支持双工通信。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -87,7 +88,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
     > [!IMPORTANT]
-    >  当在跨计算机配置运行客户端，请务必替换中的 localhost`address`的属性[终结点](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素和`clientBaseAddress`的属性[ \<绑定 >](../../../../docs/framework/misc/binding.md)的元素[ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)具有相应的计算机，如图所示名称的元素：  
+    >  当在跨计算机配置运行客户端，请务必替换中的 localhost`address`的属性[\<终结点 > 的\<客户端 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)元素和`clientBaseAddress`特性[\<绑定 >](../../../../docs/framework/misc/binding.md)元素的[ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)具有相应的计算机，如图所示名称的元素：  
   
     ```xml  
     <client>  
