@@ -4,12 +4,12 @@ description: 了解如何扩展命令行接口 (CLI) 工具。
 author: blackdwarf
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3aedd1d507fde1cd7402ef97fa00d0c7f13005e3
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e93c9c85383d7c541b8ef55a74045307810cbb05
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170231"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093003"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具扩展性模型
 
@@ -79,7 +79,7 @@ ms.locfileid: "53170231"
 可在 [.NET Core CLI 存储库](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects)中找到有关此过程的更多示例和不同组合。
 还可以在相同存储库中查看[所用工具的实现](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages)。
 
-### <a name="custom-targets"></a>自定义目标
+## <a name="custom-targets"></a>自定义目标
 NuGet 可将[自定义 MSBuild 目标和属性文件打包](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)。 在移动 .NET Core CLI 工具以使用 MSBuild 后，会对 .NET Core 项目应用可扩展性的相同机制。 若要扩展生成过程、访问生成过程中的任何项目（如生成的文件）或检查调用生成时使用的配置等，建议使用该类型的扩展。
 
 在下面的示例中，可看到目标的项目文件，它使用的是 `csproj` 语法。 该语法指示 [`dotnet pack`](dotnet-pack.md) 命令对哪些内容打包，以便将目标文件和程序集放在包中的 build 文件夹内。 请注意将 `Label` 属性设置为 `dotnet pack instructions` 的 `<ItemGroup>` 元素，以及在其下定义的目标。
@@ -137,7 +137,7 @@ NuGet 可将[自定义 MSBuild 目标和属性文件打包](/nuget/create-packag
 
 但是，如果要为用户提供更好的用户体验，可以合并基于项目的工具和自定义目标。 在这种情况下，基于项目的工具实质上只需接受任何所需的参数并将其转换为执行目标所需的 [`dotnet msbuild`](dotnet-msbuild.md) 调用。 有关此类协同作用的示例，请访问 [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) 项目中的 [2016 年编程马拉松 MVP 峰会示例](https://github.com/dotnet/MVPSummitHackathon2016)存储库。
 
-### <a name="path-based-extensibility"></a>基于路径的扩展
+## <a name="path-based-extensibility"></a>基于路径的扩展
 基于路径的扩展常用于开发计算机，此计算机需要在概念上涵盖多个项目的工具。 此扩展机制的主要缺点在于必须将其关联到工具所在的计算机。 如果其他计算机上需要该机制，则必须对其进行部署。
 
 此 CLI 工具集扩展的模式就非常简单。 正如 [.NET Core CLI 概述](index.md)中所述，`dotnet` 驱动程序可以运行以 `dotnet-<command>` 约定命名的任何命令。 默认的解析逻辑将首先探测多个位置，最后探测系统路径。 如果请求的命令存在于系统路径中并且属于可调用的二进制文件，则 `dotnet` 驱动程序将调用它。
