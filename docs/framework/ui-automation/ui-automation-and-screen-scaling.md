@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d4c3801e81efc7af1afbf15d882a9d13ad552524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8de1d1b1f2bfe385a815eb6147b79a1dc2be0206
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717553"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304890"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自动化和屏幕缩放
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "54717553"
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     此函数使得整个进程成为 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知的进程，这意味着属于该进程的所有窗口都不会被缩放。 例如，在 [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)中，构成突出显示矩形的四个窗口位于从 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]获取的物理坐标上，而非逻辑坐标。 如果该示例不是 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知的，将在桌面上的逻辑坐标处绘制突出显示，这将导致在非 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 环境中错误放置。  
+     此函数使得整个过程感知 dpi，这意味着属于的进程的所有窗口都不成比例。 在中[Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)，例如，构成突出显示矩形的四个窗口位于从 UI 自动化，非逻辑坐标获取的物理坐标上。 如果该示例不是 dpi 感知的突出显示绘制的逻辑坐标处的桌面上，这将导致在非 96 dpi 环境中错误放置。  
   
 2.  若要获取光标坐标，请调用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函数 `GetPhysicalCursorPos`。 下面的示例演示如何声明和使用此函数。  
   
@@ -78,4 +78,4 @@ ms.locfileid: "54717553"
  如果你的应用程序与非 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知应用程序进行直接的跨进程通信，你可能需要通过使用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函数 `PhysicalToLogicalPoint` 和 `LogicalToPhysicalPoint`在逻辑和物理坐标之间转换。  
   
 ## <a name="see-also"></a>请参阅
-- [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+- [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)
