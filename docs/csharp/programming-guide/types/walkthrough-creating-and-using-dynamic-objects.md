@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 7031fe21e53b38f686d229b350b8dfef7dd93bdc
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: f02e2de2ce8e2d4d6c8032e826764fd0383b3b3d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204816"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092639"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>演练：创建并使用动态对象（C# 和 Visual Basic）
 
@@ -33,7 +33,8 @@ ms.locfileid: "55204816"
 -   创建使用 `IronPython` 库的项目。  
   
 ## <a name="prerequisites"></a>系统必备  
-需要 [IronPython](http://ironpython.net/) for .NET 才能完成此演练。 转到其[下载页](http://ironpython.net/download/)以获取最新版本。
+
+需要 [IronPython](https://ironpython.net/) for .NET 才能完成此演练。 转到其[下载页](https://ironpython.net/download/)以获取最新版本。
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

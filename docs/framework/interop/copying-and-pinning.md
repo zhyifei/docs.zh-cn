@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42257790b5a6e5005ca142bd5e32d4c6fc545195
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45ac26442adc78c5d1e6a2efe94fc2cefff86562
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507078"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219615"
 ---
 # <a name="copying-and-pinning"></a>复制和锁定
 封送数据时，互操作封送拆收器可以复制或锁定正在封送的数据。 复制数据会将数据副本放置从一个内存位置放到另一个内存位置。 下图显示从托管内存向非托管内存复制值类型和复制按引用传递的类型之间的差异。  
@@ -79,6 +79,5 @@ ms.locfileid: "54507078"
   
 ## <a name="see-also"></a>请参阅
 - [默认封送处理行为](default-marshaling-behavior.md)
-- [使用互操作封送拆收器进行内存管理](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))
-- [方向特性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [方向特性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [互操作封送处理](interop-marshaling.md)

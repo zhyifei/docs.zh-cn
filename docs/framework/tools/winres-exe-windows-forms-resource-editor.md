@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6732eef46f87d9e2e3aeada138ea28853d3f0479
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663154"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221090"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe（Windows 资源本地化编辑器）
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>自变量
 
-|参数|说明|
+|参数|说明​​|
 |--------------|-----------------|
 |`resourceFile`|要本地化的资源文件。 此文件必须是由 Visual Studio 设计器生成的 Windows 窗体 .resx 或 .resources 文件。 Winres.exe 无法打开一般的 .resx 或 .resources 文件。|
 
-|选项|说明|
+|选项|说明​​|
 |------------|-----------------|
 |**/?**|显示该工具的命令语法和选项。|
 
@@ -53,7 +53,7 @@ winres /?
 
 - 区域性资源文件可以另存为其他区域性资源文件。 例如，英语（美国）资源文件可以另存为波兰语资源文件。 通常，可以稍后对新文件进行编辑，以使其与新区域性兼容。
 
-另请参阅[用于本地化的资源的分层组织](https://msdn.microsoft.com/library/756hydy4\(v=vs.110\))或[用于本地化的资源的分层组织](https://msdn.microsoft.com/library/756hydy4\(v=vs.120\))。
+另请参阅[用于本地化的资源的分层组织](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110))或[用于本地化的资源的分层组织](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120))。
 
 Winres.exe 不能将 .resx 文件转换成相应的 .resources 文件；请改用 Resgen.exe 工具。 有关 Resgen.exe 的详细信息，请参阅 [Resgen.exe（资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)。
 

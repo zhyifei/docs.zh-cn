@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41bf58e4b7e9e284606e244cf3cfdf298f7a7ae8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb1fed9455add5a6fa48443bc7b862112b74a871
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667253"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220635"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe（Windows 运行时元数据导出工具）
 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据导出工具 (Winmdexp.exe) 可将 .NET Framework 模块转换为包含 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据的文件。 尽管 .NET Framework 程序集和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元数据文件使用相同的物理格式，但元数据表的内容有差别，这意味着 .NET Framework 程序集不可自动用作 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件。 将 .NET Framework 模块转换为 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件的过程称为*导出*。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 中，生成的 Windows 元数据 (.winmd) 文件同时包含元数据和实现。  
@@ -31,7 +31,7 @@ winmdexp [options] winmdmodule
   
 #### <a name="parameters"></a>参数  
   
-|自变量或选项|说明|  
+|自变量或选项|说明​​|  
 |------------------------|-----------------|  
 |`winmdmodule`|指定要导出的模块 (.winmdobj)。 仅允许一个模块。 若要创建此模块，请将 `/target` 编译器选项与 `winmdobj` 目标一起使用。 请参阅 [/target:winmdobj（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)或 [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md)。|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|指定 Winmdexp.exe 将生成的输出 XML 文档文件。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，输出文件实质上与输入 XML 文档文件相同。|  
@@ -54,4 +54,4 @@ winmdexp [options] winmdmodule
 - [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [用 C# 和 Visual Basic 创建 Windows 运行时组件](https://go.microsoft.com/fwlink/p/?LinkID=238313)
 - [Winmdexp.exe 错误消息](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
-- [生成、部署和配置工具 (.NET Framework)](https://msdn.microsoft.com/library/b8c921be-6012-4181-b8d4-ab15813fc9a7)
+- [生成、部署和配置工具 (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

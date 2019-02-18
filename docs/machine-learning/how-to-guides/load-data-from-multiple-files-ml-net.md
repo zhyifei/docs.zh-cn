@@ -1,14 +1,14 @@
 ---
 title: 从多个文件加载数据用于机器学习处理 - ML.NET
 description: 通过 ML.NET，了解如何从多个文件加载数据用于机器学习模型生成、培训和评分
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: fe6758e46d923dc07908e1334056ea8394c1085e
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: f5108aaed80769f2bc7ed2f974f9a729abe8455e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479979"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092041"
 ---
 # <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a>从多个文件加载数据用于机器学习处理 - ML.NET
 
@@ -23,7 +23,7 @@ ms.locfileid: "55479979"
 var mlContext = new MLContext();
 
 // Create the reader: define the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
         // A boolean column depicting the 'target label'.

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2655cf5d5fb211149bdbe09179707ec53c737d3
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 7cbc639c9fed90b25c034964b5a504e880876b54
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204556"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091833"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
@@ -98,7 +98,7 @@ ms.locfileid: "55204556"
 
 - [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 包括 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，因此，你不必单独安装它。 同样，[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]包含 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]。
 
-- .NET Framework 对 Windows Server 2008 R2 SP1 或更高版本的服务器核心角色的支持有限。 有关不受支持的 API 列表，请参阅[服务器核心 .NET 功能](https://msdn.microsoft.com/library/ee391632.aspx)。
+- .NET Framework 对 Windows Server 2008 R2 SP1 或更高版本的服务器核心角色的支持有限。 有关不受支持的 API 列表，请参阅[服务器核心 .NET 功能](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85))。
 
 - 适用于基于 Itanium 的系统的 Windows Server 2008 R2 不支持 .NET Framework。
 

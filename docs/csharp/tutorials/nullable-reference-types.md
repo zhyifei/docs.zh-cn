@@ -3,12 +3,12 @@ title: 使用可为空引用类型进行设计
 description: 本高级教程介绍了可为空引用类型。 你将学习在引用值可能为 NULL 时表达你的设计意图，并在引用值不能为 NULL 时让编译器强制执行。
 ms.date: 12/03/2018
 ms.custom: mvc
-ms.openlocfilehash: eec0c54c041db98595202ab982494df6ae3f743c
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 535efcdc303c17a55f6a4054ea3f5e5ed87e5f28
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204764"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092197"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教程：使用可为空和不可为空引用类型更清晰地表达设计意图
 
@@ -55,7 +55,7 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 你还可以通过在 .csproj 文件中添加以下元素，为整个项目打开可为空引用类型功能，例如，紧跟在启用 C# 8.0 的 `LangVersion` 元素之后：
 
 ```xml
-<NullableReferenceTypes>true</NullableReferenceTypes>
+<NullableContextOptions>enable</NullableContextOptions>
 ```
 
 ### <a name="design-the-types-for-the-application"></a>设计应用程序的类型

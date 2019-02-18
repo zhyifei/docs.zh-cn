@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e54c564fbd81f9a52bae5ea8a02514569902d00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d41d1ee2ab5e423ca6a1b28a0e10bac4bc58ad79
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589173"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094004"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
 本主题为想要随自己的应用一起安装任何 .NET Framework 版本（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)] ）的开发人员提供了相关信息。
@@ -55,7 +55,7 @@ ms.locfileid: "54589173"
 
 - 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]开始，你的用户可以在安装过程中查看运行中 .NET Framework 应用的列表并轻松关闭这些应用。 这可能有助于避免系统因安装 .NET Framework 而重新启动。 参见 [减少系统重新启动](../../../docs/framework/deployment/reducing-system-restarts.md)。
 
-- 卸载 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或其单点版本之一也会删除预先存在的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 文件。 若要返回到 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，你必须重新安装它以及它的任何更新。 （请参阅 [安装 .NET Framework 4](https://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx)。）
+- 卸载 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或其单点版本之一也会删除预先存在的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 文件。 若要返回到 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，你必须重新安装它以及它的任何更新。 （请参阅 [安装 .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))。）
 
 - .NET Framework 4.5 可再发行组件于 2012 年 10 月 9 日进行了更新，纠正了一个与数字证书中的错误时间戳相关的问题，此问题会导致 Microsoft 生成并签名的文件中的数字签名提前过期。 如果之前安装了日期为 2012 年 8 月 16 日的 .NET framework 4.5 可再发行组件包，则建议使用 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)中的最新的可再发行组件来更新副本。 有关此问题的更多信息，请参阅 [Microsoft 安全公告 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)。
 
@@ -355,7 +355,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 ### <a name="command-line-options"></a>命名行选项
  下表列出了将 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可再发行组件链接到应用安装程序时可以包括的选项。
 
-|选项|说明|
+|选项|说明​​|
 |------------|-----------------|
 |**/CEIPConsent**|覆盖默认行为并向 Microsoft 发送匿名反馈以改善将来的部署体验。 仅当安装程序询问你是否同意安装并且用户授权向 Microsoft 发送匿名反馈时，才可以使用此选项。|
 |**/chainingpackage** `packageName`|指定执行链接的可执行文件的名称。 向 Microsoft 发送此信息作为匿名反馈以帮助改进将来的部署体验。<br /><br /> 如果包名称包含空格，则可以用双引号作为分隔符；例如： **/chainingpackage "Lucerne Publishing"**。 有关链接包的示例，请参阅 MSDN 库中的 [从安装包获取进度信息](https://go.microsoft.com/fwlink/?LinkId=181926) 。|

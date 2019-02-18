@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bef8ce86a3dba5449e50c890b09acdee1375317c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3393adf5beed02a5a4bda2e07bd26e29e47fae2f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719542"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219303"
 ---
 # <a name="msgbox-sample"></a>MsgBox 示例
 此示例演示如何通过值将字符串类型作为 In 参数传递，以及何时使用 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>、<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 和 <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> 字段。  
@@ -46,7 +46,6 @@ ms.locfileid: "54719542"
   
 ## <a name="see-also"></a>请参阅
 - [封送处理字符串](marshaling-strings.md)
-- [平台调用数据类型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
 - [字符串的默认封送处理](default-marshaling-for-strings.md)
 - [在托管代码中创建原型](creating-prototypes-in-managed-code.md)
 - [指定字符集](specifying-a-character-set.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d6550282f9a64912ec3306a3b898845e894d165
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 8451cecc204e8795b7a073422b34c623bce172c2
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827209"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333087"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
 本机映像生成器 (Ngen.exe) 是一种提高托管应用程序性能的工具。 Ngen.exe 创建本机映像（包含经编译的特定于处理器的机器代码的文件），并将它们安装到本地计算机上的本机映像缓存中。 运行时可从缓存中使用本机映像，而不必使用实时 (JIT) 编译器编译原始程序集。  
@@ -53,7 +53,7 @@ ms.locfileid: "55827209"
  有关使用 Ngen.exe 和本机映像服务的其他信息，请参阅[本机映像服务](#native-image-service)。  
   
 > [!NOTE]
->  在[本机映像生成器 (Ngen.exe) 旧式语法](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324)中可以找到 .NET Framework 1.0 和 1.1 版的 Ngen.exe 语法。  
+>  在[本机映像生成器 (Ngen.exe) 旧式语法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))中可以找到 .NET Framework 1.0 和 1.1 版的 Ngen.exe 语法。  
   
  此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
@@ -514,7 +514,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
  有关本机映像服务的相关示例，请参阅[本机映像服务](#native-image-service)。  
   
 ## <a name="native-image-task"></a>本机映像任务  
- 本机映像任务是生成和维护本机映像的 Windows 任务。 本机映像任务为支持方案自动生成并回收本机映像。 （请参阅[创建本机映像](https://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418)。）它还使安装程序能使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)来创建和更新在延迟时间的本机映像。  
+ 本机映像任务是生成和维护本机映像的 Windows 任务。 本机映像任务为支持方案自动生成并回收本机映像。 它还使安装程序能使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)来创建和更新在延迟时间的本机映像。  
   
  本机映像任务对计算机上受支持的每个 CPU 体系结构进行注册后，允许对以每个体系结构为目标的应用程序进行编译：  
   

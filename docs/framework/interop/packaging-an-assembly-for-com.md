@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 453ace4af7ce07c8d81b6d7ece71140e04bfa9bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d51fcbdeeaa1fe30bbdeff5eb85a1c15fa9b4847
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531507"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221077"
 ---
 # <a name="packaging-an-assembly-for-com"></a>将 COM 的程序集打包
 COM 开发人员可从其计划纳入应用程序的托管类型相关信息中受益：  
@@ -60,7 +60,7 @@ COM 开发人员可从其计划纳入应用程序的托管类型相关信息中�
   
      无论选择的机制如何，生成的类型库中仅包含所提供程序集中定义的公共类型。  
   
-     可将类型库打包为单独文件，或将其作为 Win32 资源文件嵌入基于 .NET 的应用程序。 Microsoft Visual Basic 6.0 自动执行此任务；但若 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)]，必须手动嵌入类型库。 有关说明，请参阅[如何：将类型库作为 Win32 资源嵌入基于 .NET 的应用程序](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))。  
+     可将类型库打包为单独文件，或将其作为 Win32 资源文件嵌入基于 .NET 的应用程序。 Microsoft Visual Basic 6.0 自动执行此任务；但若 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)]，必须手动嵌入类型库。 有关说明，请参阅[如何：将类型库作为 Win32 资源嵌入基于 .NET 的应用程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))。  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>类型库导出程序  
@@ -89,4 +89,4 @@ COM 开发人员可从其计划纳入应用程序的托管类型相关信息中�
 - [程序集安全注意事项](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe（类型库导出程序）](../tools/tlbexp-exe-type-library-exporter.md)
 - [向 COM 注册程序集](registering-assemblies-with-com.md)
-- [如何：将类型库作为 Win32 资源嵌入应用程序](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))
+- [如何：将类型库作为 Win32 资源嵌入应用程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))
