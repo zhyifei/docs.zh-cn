@@ -1,22 +1,22 @@
 ---
 title: 从文本文件加载数据以进行机器学习处理 - ML.NET
 description: 通过 ML.NET，了解如何从文本文件加载数据用于机器学习模型生成、定型和评分
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 6a8f74cc5324050ca94e60592f083c35afc68377
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 70c7ccdeaa27b78a412c2bc82f524d4bf42a740a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479667"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091703"
 ---
-# <a name="load-data-from-a-text-file-for-machine-learning-processing---mlnet"></a><span data-ttu-id="16ecd-103">从文本文件加载数据以进行机器学习处理 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="16ecd-103">Load data from a text file for machine learning processing - ML.NET</span></span>
+# <a name="load-data-from-a-text-file-for-machine-learning-processing---mlnet"></a><span data-ttu-id="a388f-103">从文本文件加载数据以进行机器学习处理 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="a388f-103">Load data from a text file for machine learning processing - ML.NET</span></span>
 
-<span data-ttu-id="16ecd-104">`TextLoader` 用于从文本文件加载数据。</span><span class="sxs-lookup"><span data-stu-id="16ecd-104">`TextLoader` is used to load data from text files.</span></span> <span data-ttu-id="16ecd-105">需要在文本文件中指定数据列、类型及其位置。</span><span class="sxs-lookup"><span data-stu-id="16ecd-105">You need to specify the data columns, their types, and their location in the text file.</span></span>
+<span data-ttu-id="a388f-104">`TextLoader` 用于从文本文件加载数据。</span><span class="sxs-lookup"><span data-stu-id="a388f-104">`TextLoader` is used to load data from text files.</span></span> <span data-ttu-id="a388f-105">需要在文本文件中指定数据列、类型及其位置。</span><span class="sxs-lookup"><span data-stu-id="a388f-105">You need to specify the data columns, their types, and their location in the text file.</span></span>
 
-<span data-ttu-id="16ecd-106">注意，读取文件的某些列或多次读取同一列是完全可以接受的。</span><span class="sxs-lookup"><span data-stu-id="16ecd-106">Note that it's perfectly acceptable to read some columns of a file, or read the same column multiple times.</span></span>
+<span data-ttu-id="a388f-106">注意，读取文件的某些列或多次读取同一列是完全可以接受的。</span><span class="sxs-lookup"><span data-stu-id="a388f-106">Note that it's perfectly acceptable to read some columns of a file, or read the same column multiple times.</span></span>
 
-<span data-ttu-id="16ecd-107">[示例文件](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt)：</span><span class="sxs-lookup"><span data-stu-id="16ecd-107">[Example file](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="a388f-107">[示例文件](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt)：</span><span class="sxs-lookup"><span data-stu-id="a388f-107">[Example file](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
 
 ```console
 Label   Workclass   education   marital-status
@@ -26,7 +26,7 @@ Label   Workclass   education   marital-status
 1   Private Some-college    Married-civ-spouse
 ```
 
-<span data-ttu-id="16ecd-108">从文本文件中加载数据：</span><span class="sxs-lookup"><span data-stu-id="16ecd-108">To load the data from a text file:</span></span>
+<span data-ttu-id="a388f-108">从文本文件中加载数据：</span><span class="sxs-lookup"><span data-stu-id="a388f-108">To load the data from a text file:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
@@ -34,7 +34,7 @@ Label   Workclass   education   marital-status
 var mlContext = new MLContext();
 
 // Create the reader: define the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
         // A boolean column depicting the 'target label'.
