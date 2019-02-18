@@ -49,7 +49,7 @@ DDD 通过获取分布式微服务形式的实际边界而从微服务中获益�
 
 ### <a name="additional-resources"></a>其他资源
 
-- **Chris Richardson.模式：每个服务一个数据库 \**
+- **Chris Richardson.模式：每个服务一个数据库** \
   [*https://microservices.io/patterns/data/database-per-service.html*](https://microservices.io/patterns/data/database-per-service.html)
 
 - **Martin Fowler。BoundedContext** \
