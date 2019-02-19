@@ -1,45 +1,51 @@
 ---
 title: <<= 运算符 - C# 参考
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/12/2019
 f1_keywords:
 - <<=_CSharpKeyword
 helpviewer_keywords:
 - <<= operator (left-shift assignment) [C#]
 - left shift assignment operator (<<=) [C#]
 ms.assetid: 3bc99c78-1edb-4827-86fc-bce6c3048871
-ms.openlocfilehash: 0a005efa19be24f9adbf9031f562a30f9c1b0e34
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d2105fbee4ddfe1b2cb3325d82b0f2f8c5559297
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258729"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219444"
 ---
 # <a name="-operator-c-reference"></a>\<\<= 运算符（C# 参考）
 
 左移赋值运算符。
 
-## <a name="remarks"></a>备注
-
-形式如下的表达式
+使用 `<<=` 运算符的表达式，例如
 
 ```csharp
 x <<= y
 ```
 
-计算结果为
+等效于
 
 ```csharp
 x = x << y
 ```
 
-不同的是 `x` 只计算一次。 [<< 运算符](left-shift-operator.md) 将 `x` 向左移动 `y` 指定的位数。
+不同的是 `x` 只计算一次。
 
-不能直接重载 `<<=` 运算符，但用户定义的类型可重载 [<< 运算符](left-shift-operator.md)（参阅[运算符](../keywords/operator.md)）。
+[`<<` 运算符](left-shift-operator.md) 将第一个操作数向左移动第二个操作数定义的位数。
 
-## <a name="example"></a>示例
+下面的示例演示 `<<=` 运算符的用法：
 
-[!code-csharp[csRefOperators#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#12)]
+[!code-csharp-interactive[left shift assignment](~/samples/snippets/csharp/language-reference/operators/ShiftOperatorsExamples.cs#LeftShiftAssignment)]
+
+## <a name="operator-overloadability"></a>运算符可重载性
+
+如果用户定义类型[重载](../keywords/operator.md) [`<<` 运算符](left-shift-operator.md)，则会隐式重载左移赋值运算符 `<<=`。 用户定义类型不得显式重载左移赋值运算符。
+
+## <a name="c-language-specification"></a>C# 语言规范
+
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[复合赋值](~/_csharplang/spec/expressions.md#compound-assignment)部分。
 
 ## <a name="see-also"></a>请参阅
 

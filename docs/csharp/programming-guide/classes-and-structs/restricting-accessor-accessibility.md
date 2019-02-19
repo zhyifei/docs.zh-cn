@@ -10,12 +10,12 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: 2f9580e018684f65762bc40e131a19215e9690c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e097b2208b69f21347c49e253e59a9c14f30e51
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544661"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219407"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>限制访问器可访问性（C# 编程指南）
 属性或索引器的 [get](../../../csharp/language-reference/keywords/get.md) 和 [set](../../../csharp/language-reference/keywords/set.md) 部分称为访问器。 默认情况下，这些访问器具有与其所属属性或索引器相同的可见性或访问级别。 有关详细信息，请参阅[可访问性级别](../../../csharp/language-reference/keywords/accessibility-levels.md)。 不过，有时限制对其中某个访问器的访问是有益的。 通常是在保持 `get` 访问器可公开访问的情况下，限制 `set` 访问器的可访问性。 例如:  
@@ -57,7 +57,7 @@ ms.locfileid: "54544661"
   
  [!code-csharp[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
   
-## <a name="comments"></a>注释  
+## <a name="comments"></a>评论  
  注意，如果将声明 `new private string Id` 替换为 `new public string Id`，则得到如下输出：  
   
  `Name and ID in the base class: Name-BaseClass, ID-BaseClass`  

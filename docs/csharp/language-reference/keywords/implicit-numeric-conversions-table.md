@@ -8,18 +8,18 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: ab6506e619c675ddd68237c4ddca870e9e14098f
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 703f60f48e1e569e0ffcab66ff7ccc91d4a49514
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058459"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093549"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>隐式数值转换表（C# 参考）
 
 下表显示 .NET 数值类型之间的预定义隐式转换。
   
-|From|到|  
+|从|到|  
 |----------|--------|  
 |[sbyte](sbyte.md)|`short`、`int`、`long`、`float`、`double` 或 `decimal`|  
 |[byte](byte.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double` 或 `decimal`|  
@@ -40,7 +40,7 @@ ms.locfileid: "54058459"
   
 - 不存在针对 `char`、`byte` 和 `sbyte` 类型的隐式转换。  
 
-- 不存在从 `char`、`double` 和 `decimal` 类型的隐式转换。
+- 不存在从 `double` 和 `decimal` 类型的隐式转换。
   
 - `decimal` 类型和 `float` 或 `double` 类型之间不存在隐式转换。  
   

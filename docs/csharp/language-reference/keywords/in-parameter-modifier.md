@@ -1,16 +1,16 @@
 ---
 title: in 参数修饰符 - C# 参考
 ms.custom: seodec18
-ms.date: 03/06/2018
+ms.date: 02/12/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: c3644b82a180fe6ed376938c9ff86db900db440e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a765a330e4d9efe22943538503c0822e1c9dfdb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631397"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219550"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 参数修饰符（C# 参考）
 
@@ -20,11 +20,14 @@ ms.locfileid: "54631397"
 
 前面的示例说明调用站点处通常不需要 `in` 修饰符。 仅在方法声明中需要它。
 
+
 > [!NOTE] 
 > `in` 关键字还作为 `foreach` 语句的一部分，或作为 LINQ 查询中 `join` 子句的一部分，与泛型类型参数一起使用来指定该类型参数为逆变。 有关在这些上下文使用 `in` 关键字的详细信息，请参阅 [in](in.md)，其中提供了所有这些用法的链接。
   
  作为 `in` 参数传递的变量在方法调用中传递之前必须进行初始化。 但是，所调用的方法可能不会分配值或修改参数。  
-  
+
+`in` 参数修饰符可在 C# 7.2 及更高版本中使用。 以前的版本生成编译器错误 `CS8107`（“‘readonly 引用’功能在 C# 7.0 中不可用。 请使用语言版本 7.2 或更高版本。”）若要配置编译器语言版本，请参阅[选择 C# 语言版本](../configure-language-version.md)。
+
  尽管 `in`、`ref` 和 `out` 关键字会导致不同的运行时行为，它们并不被视为编译时方法签名的一部分。 因此，如果唯一的不同是一个方法采用 `ref` 或 `in` 参数，而另一个方法采用 `out` 参数，则无法重载这两个方法。 例如，以下代码将不会编译：  
   
 ```csharp

@@ -1,7 +1,7 @@
 ---
 title: '! 运算符 - C# 参考'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/14/2019
 f1_keywords:
 - '!_CSharpKeyword'
 helpviewer_keywords:
@@ -9,24 +9,26 @@ helpviewer_keywords:
 - logical negation operator (!) [C#]
 - NOT operator [C#]
 ms.assetid: f5ae133f-8f64-4560-b34f-cd9cd5eed4ad
-ms.openlocfilehash: 6b6d1796032f536aac0be49d4f101c1380b4e98f
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 464bd658c9bf430191d84d3d5ad8d57173ab87c5
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333221"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303707"
 ---
 # <a name="-operator-c-reference"></a>! 运算符（C# 参考）
 
-逻辑非运算符 (`!`) 是一种否定其操作数的一元运算符。 它针对 `bool` 定义，当且仅当其操作数为 `false` 时返回 `true`。
+逻辑非运算符 `!` 是计算其 [bool](../keywords/bool.md) 操作数的逻辑求反的一元运算符。 也就是说，如果操作数是 `false`，它会生成 `true`，如果操作数为 `true`，则生成 `false`：
 
-## <a name="remarks"></a>备注
+[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/LogicalNegationExamples.cs#Example)]
 
-用户定义的类型可以重载 `!` 运算符（请参阅[运算符](../keywords/operator.md)）。
+## <a name="operator-overloadability"></a>运算符可重载性
 
-## <a name="example"></a>示例
+用户定义的类型可以[重载](../keywords/operator.md) `!` 运算符。
 
-[!code-csharp[csRefOperators#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#7)]
+## <a name="c-language-specification"></a>C# 语言规范
+
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)的[逻辑非运算符](~/_csharplang/spec/expressions.md#logical-negation-operator)部分。
 
 ## <a name="see-also"></a>请参阅
 
