@@ -99,7 +99,7 @@ ms.locfileid: "54649240"
  与数据协定版本管理相似，服务协定版本管理也涉及添加、更改和移除操作。  
   
 ### <a name="specifying-name-namespace-and-action"></a>指定名称、命名空间和动作  
- 默认情况下，服务协定的名称就是接口的名称。 默认命名空间 "http://tempuri.org" ，且每个操作采取任何措施 "http://tempuri.org/contractname/methodname" 。 建议您显式指定的名称和服务协定的命名空间和每个操作以避免使用的一项操作" http://tempuri.org "并防止在服务的协定中暴露接口和方法名称。  
+ 默认情况下，服务协定的名称就是接口的名称。 默认命名空间 "http://tempuri.org" ，且每个操作采取任何措施 "http://tempuri.org/contractname/methodname" 。 建议您显式指定的名称和服务协定的命名空间和每个操作以避免使用的一项操作 "http://tempuri.org" 并防止在服务的协定中暴露接口和方法名称。  
   
 ### <a name="adding-parameters-and-operations"></a>添加参数和操作  
  添加服务公开的服务操作是非中断性更改，因为现有客户端不需要考虑这些新操作。  
