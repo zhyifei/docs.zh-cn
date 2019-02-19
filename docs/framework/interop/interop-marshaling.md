@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a70548231454991060098908ce954bf699eff838
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453250"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221246"
 ---
 # <a name="interop-marshaling"></a>互操作封送处理
 <a name="top"></a> 互操作封送处理控制调用期间，通过方法自变量和返回值在托管内存和非托管内存之间传递数据的方式。 互操作封送处理是由公共语言运行时的封送处理服务执行的运行时活动。  
@@ -42,7 +42,7 @@ ms.locfileid: "49453250"
   
 -   COM 互操作，它使托管代码能够通过接口与组件对象模型 (COM) 对象交互。  
   
- 平台调用和 COM 互操作都使用互操作封送处理在调用方和被调用方之间准确地移动方法自变量，并且如果需要，也可以将数据从被调用方移回调用方。 正如下图所示，除涉及 [回调函数](callback-functions.md) 以外，平台调用方法调用从托管代码流向非托管代码，而绝不会以相反方向流动。 虽然平台调用的调用只能从托管代码流向非托管代码，但是数据仍然可以作为输入参数或输出参数在两个方向流动。 COM 互操作方法调用可以在任一方向流动。  
+ 平台调用和 COM 互操作都使用互操作封送处理在调用方和被调用方之间准确地移动方法参数，并且如果需要，也可以将数据从被调用方移回调用方。 正如下图所示，除涉及 [回调函数](callback-functions.md) 以外，平台调用方法调用从托管代码流向非托管代码，而绝不会以相反方向流动。 虽然平台调用的调用只能从托管代码流向非托管代码，但是数据仍然可以作为输入参数或输出参数在两个方向流动。 COM 互操作方法调用可以在任一方向流动。  
   
  ![平台调用](./media/interopmarshaling.png "interopmarshaling")  
 平台调用和 COM 互操作调用流  
@@ -143,17 +143,17 @@ ms.locfileid: "49453250"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|说明​​|  
 |-----------|-----------------|  
 |[默认封送处理行为](default-marshaling-behavior.md)|描述互操作封送处理服务用于封送数据的规则。|  
-|[用平台调用封送数据](marshaling-data-with-platform-invoke.md)|描述如何声明方法参数以及如何将自变量传递给由非托管库导出的函数。|  
+|[用平台调用封送数据](marshaling-data-with-platform-invoke.md)|描述如何声明方法形参以及如何将实参传递给由非托管库导出的函数。|  
 |[用 COM 互操作对数据进行封送处理](marshaling-data-with-com-interop.md)|描述如何自定义 COM 包装器以更改封送行为。|  
 |[如何：将托管代码 DCOM 迁移到 WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|描述如何从 DCOM 迁移到 WCF。|  
 |[如何：映射 HRESULT 和异常](how-to-map-hresults-and-exceptions.md)|描述如何将自定义异常映射到 HRESULT，并提供从每个 HRESULT 到其在 .NET Framework 中的相似异常类的完整映射。|  
-|[使用泛型类型进行交互操作](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|描述在使用用于 COM 互操作性的泛型类型时，哪些操作受支持。|  
+|[使用泛型类型进行交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|描述在使用用于 COM 互操作性的泛型类型时，哪些操作受支持。|  
 |[与非托管代码交互操作](index.md)|描述由公共语言运行时提供的互操作性服务。|  
 |[高级 COM 互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|提供一些链接，指向关于将 COM 组件并入 .NET Framework 应用程序中的详细信息。|  
-|[互操作的设计注意事项](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|提供有关编写集成 COM 组件的提示。|  
+|[互操作的设计注意事项](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|提供有关编写集成 COM 组件的提示。|  
   
  [返回页首](#top)  
   

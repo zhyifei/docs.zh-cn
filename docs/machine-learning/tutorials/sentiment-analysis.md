@@ -1,15 +1,15 @@
 ---
 title: 在情绪分析二元分类方案中使用 ML.NET
 description: 了解如何在二元分类方案中使用 ML.NET，以了解如何使用情绪预测来采取相应措施。
-ms.date: 01/15/2019
+ms.date: 02/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 47cf9deb9452d15aee8cf4c1ebc5e3d0f1aa10ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6d5cae107e25000add5c8430a35131a79696bc2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627990"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092756"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教程：在情绪分析二元分类方案中使用 ML.NET
 
@@ -21,18 +21,19 @@ ms.locfileid: "54627990"
 在本教程中，你将了解：
 > [!div class="checklist"]
 > * 了解问题
-> * 选择适当的机器学习任务
+> * 选择适当的机器学习算法
 > * 准备数据
-> * 创建学习管道
-> * 加载分类器
+> * 转换数据
 > * 定型模型
-> * 使用不同数据集评估模型
-> * 使用模型预测单个测试数据结果实例
-> * 使用加载模型预测测试数据结果
+> * 评估模型
+> * 使用训练的模型预测
+> * 使用加载模型部署和预测
 
 ## <a name="sentiment-analysis-sample-overview"></a>情绪分析示例概述
 
 该示例是使用 ML.NET 定型模型的控制台应用，以将情绪分类和预测为正面或负面。 它还使用第二个数据集对模型进行评估，以进行质量分析。 情绪数据集来自 WikiDetox 项目。
+
+可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存储库中找到本教程的源代码。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -54,8 +55,8 @@ ms.locfileid: "54627990"
 3. **生成并定型** 
    * **定型模型**
    * **评估模型**
-4. **运行**
-   * **模型使用**
+4. **部署模型**
+   * **使用模型来预测**
 
 ### <a name="understand-the-problem"></a>了解问题
 
@@ -67,7 +68,7 @@ ms.locfileid: "54627990"
 
 然后，需要确定情绪，这将帮助你进行机器学习任务选择。
 
-## <a name="select-the-appropriate-machine-learning-task"></a>选择适当的机器学习任务
+## <a name="select-the-appropriate-machine-learning-algorithm"></a>选择适当的机器学习算法
 
 通过此问题，你将了解以下情况：
 
@@ -77,18 +78,18 @@ ms.locfileid: "54627990"
 * 请避免向 Wikipedia 添加无意义的内容。
 * 他是最棒的，且文章应如此表述。
 
-分类机器学习任务最适合此方案。
+分类机器学习算法最适合此方案。
 
 ### <a name="about-the-classification-task"></a>有关分类任务
 
-分类是一项机器学习任务，它使用数据来确定某个项或数据行的类别、类型或类。 例如，可以使用分类：
+分类是一项机器学习算法，它使用数据来确定某个项或数据行的类别、类型或类。 例如，可以使用分类：
 
 * 识别情绪为正面还是负面。
 * 将电子邮件分类为垃圾邮件或正常邮件。
 * 确定患者的实验室样本是否癌变。
 * 根据客户对销售活动的反应倾向对客户进行分类。
 
-分类任务通常为以下类型之一：
+分类算法通常为以下类型之一：
 
 * 二元：A 或 B。
 * 多类：可以通过使用单个模型来预测多个类别。
@@ -107,7 +108,7 @@ ms.locfileid: "54627990"
 
 ### <a name="prepare-your-data"></a>准备数据
 
-1. 下载 [WikiPedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) 和 [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) 数据集并将它们保存到先前创建的“Data”文件夹。 第一个数据集定型机器学习模型，第二个数据集可用来评估模型的准确度。
+1. 下载 [Wikipedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) 和 [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) 数据集并将它们保存到先前创建的“Data”文件夹。 第一个数据集定型机器学习模型，第二个数据集可用来评估模型的准确度。
 
 2. 在“解决方案资源管理器”中，右键单击每个 \*.tsv 文件，然后选择“属性”。 在“高级”下，将“复制到输出目录”的值更改为“如果较新则复制”。
 
@@ -152,14 +153,14 @@ ms.locfileid: "54627990"
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#3 "Create the ML Context")]
 
-下一步，为设置数据加载，请初始化 `_textLoader` 全局变量以便重用它。  请注意，将使用 `TextReader`。 当使用 `TextReader` 创建 `TextLoader` 时，请传入需要的上下文和启用自定义的 <xref:Microsoft.ML.Data.TextLoader.Arguments> 类。
+下一步，为设置数据加载，请初始化 `_textLoader` 全局变量以便重用它。  当使用 `MLContext.Data.CreateTextLoader` 创建 `TextLoader` 时，请传入需要的上下文和启用自定义的 <xref:Microsoft.ML.Data.TextLoader.Arguments> 类。
 
  通过将包含所有列名及其类型的 <xref:Microsoft.ML.Data.TextLoader.Column> 对象数组传递给加载程序来指定数据模式。 以前在创建 `SentimentData` 类时定义了数据模式。 对于我们的架构，第一列 (Label) 是 <xref:System.Boolean>（预测），第二列 (SentimentText) 是文本/字符串类型功能，用于预测情绪。
-`TextReader` 类返回完全初始化的 <xref:Microsoft.ML.Data.TextLoader>  
+`TextLoader` 类返回完全初始化的 <xref:Microsoft.ML.Data.TextLoader>  
 
 若要初始化 `_textLoader` 全局变量以将其重复用于所需的数据集，请在 `mlContext` 初始化后添加以下代码：
 
-[!code-csharp[initTextReader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#4 "Initialize the TextReader")]
+[!code-csharp[initTextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#4 "Initialize the TextLoader")]
 
 将以下代码作为下一行代码添加到 `Main` 方法中：
 
@@ -186,7 +187,7 @@ ms.locfileid: "54627990"
 
 ## <a name="load-the-data"></a>加载数据
 
-将使用带有 `dataPath` 参数的 `_textLoader` 全局变量加载数据。 它将返回 <xref:Microsoft.ML.Data.IDataView>。 作为 `Transforms` 的输入和输出，`DataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
+将使用带有 `dataPath` 参数的 `_textLoader` 全局变量加载数据。 它将返回 <xref:Microsoft.Data.DataView.IDataView>。 作为 `Transforms` 的输入和输出，`DataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
 
 在 ML.NET 中，数据类似于 SQL 视图。 它是异源数据，会延迟计算并进行架构化。 该对象是管道的第一部分，并加载数据。 对于本教程，它会加载具有注释和相应正面或负面情绪的数据集。 这用于创建模型并对其进行定型。
 
@@ -216,7 +217,7 @@ ML.NET 的转换管道撰写一组自定义转换，在定型或测试数据之�
 
 ## <a name="train-the-model"></a>定型模型
 
-根据已加载和转换的数据集定型模型 <xref:Microsoft.ML.Data.TransformerChain%601>。 一旦定义了估算器，将使用 <xref:Microsoft.ML.Data.EstimatorChain`1.Fit*> 定型模型，同时提供已经加载的定型数据。 这将返回要用于预测的模型。 `pipeline.Fit()` 定型管道，并返回基于传入的 `DataView` 的 `Transformer`。 在发生这种情况之前不会执行此试验。
+根据已加载和转换的数据集定型模型 <xref:Microsoft.ML.Data.TransformerChain%601>。 一旦定义了估算器，将使用 <xref:Microsoft.ML.Data.EstimatorChain%601.Fit*> 定型模型，同时提供已经加载的定型数据。 这将返回要用于预测的模型。 `pipeline.Fit()` 定型管道，并返回基于传入的 `DataView` 的 `Transformer`。 在发生这种情况之前不会执行此试验。
 
 将以下代码添加到 `Train` 方法中：
 
@@ -290,14 +291,13 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 接下来，创建一个方法来保存模型，以便它可以在其他应用程序中重用和使用。 `ITransformer` 有一个在 `_modelPath` 全局字段中采用的 <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> 方法和一个 <xref:System.IO.Stream> 方法。 要将其保存为 zip 文件，将在调用 `SaveTo` 方法之前立即创建 `FileStream`。 将以下代码作为下一行添加到 `SaveModelAsFile` 方法中：
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#24 "Add the SaveTo Method")]
-
-还可以使用以下代码通过使用 `_modelPath` 编写控制台消息来显示文件的写入位置：
+使用加载模型部署和预测。还可以使用以下代码通过使用 `_modelPath` 编写控制台消息来显示文件的写入位置：
 
 ```csharp
 Console.WriteLine("The model is saved to {0}", _modelPath);
 ```
 
-## <a name="predict-the-test-data-outcome-with-the-model-and-a-single-comment"></a>使用模型和单个注释预测测试数据结果
+## <a name="predict-the-test-data-outcome-with-the-saved-model"></a>使用保存的模型预测测试数据结果
 
 使用下面的代码紧随 `Evaluate` 方法后创建 `Predict` 方法：
 
@@ -321,7 +321,7 @@ private static void Predict(MLContext mlContext, ITransformer model)
 
 虽然 `model` 是对多行数据进行操作的 `transformer`，但是一个非常常见的生产场景是，需要对单个示例进行预测。 <xref:Microsoft.ML.PredictionEngine%602> 是从 `CreatePredictionEngine` 方法返回的包装器。 让我们添加以下代码来创建 `PredictionEngine`，作为 `Predict` 方法中的第一行：
 
-[!code-csharp[CreatePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
+[!code-csharp[CreatePredictionEngine](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionEngine")]
   
 通过创建一个 `SentimentData` 实例，在 `Predict` 方法中添加一个注释来测试定型模型的预测：
 
@@ -331,13 +331,13 @@ private static void Predict(MLContext mlContext, ITransformer model)
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create a prediction of sentiment")]
 
-### <a name="model-operationalization-prediction"></a>模型操作化：预测
+### <a name="using-the-model-prediction"></a>使用模型：预测
 
 显示 `SentimentText` 和相应的情绪预测以便共享结果，并采取相应措施。 这称为操作化，使用返回的数据作为操作策略的一部分。 使用以下 <xref:System.Console.WriteLine?displayProperty=nameWithType> 代码创建结果显示：
 
 [!code-csharp[OutputPrediction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#20 "Display prediction output")]
 
-## <a name="predict-the-test-data-outcomes-with-the-saved-model"></a>使用保存的模型预测测试数据结果
+## <a name="deploy-and-predict-with-a-loaded-model"></a>使用加载模型部署和预测
 
 使用下面的代码在 `SaveModelAsFile` 方法前创建 `PredictWithModelLoadedFromFile` 方法：
 
@@ -367,11 +367,11 @@ public static void PredictWithModelLoadedFromFile(MLContext mlContext)
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
 
-现在你有一个模型，可以使用它来预测使用 <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Data.IDataView)> 方法的评论数据的正面或负面情绪。 要获得预测，请使用新数据上的 `Predict`。 请注意，输入数据是一个字符串，且模型包含特征化。 管道在定型和预测期间同步。 不必专门为预测编写预处理/特征化代码，并且相同 API 负责批处理和一次性预测。 在用于预测的 `PredictWithModelLoadedFromFile` 方法中添加以下代码：
+现在你有一个模型，可以使用它来预测使用 <xref:Microsoft.ML.Core.Data.ITransformer.Transform%2A> 方法的评论数据的正面或负面情绪。 要获得预测，请使用新数据上的 `Predict`。 请注意，输入数据是一个字符串，且模型包含特征化。 管道在定型和预测期间同步。 不必专门为预测编写预处理/特征化代码，并且相同 API 负责批处理和一次性预测。 在用于预测的 `PredictWithModelLoadedFromFile` 方法中添加以下代码：
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#28 "Create predictions of sentiments")]
 
-### <a name="model-operationalization-prediction"></a>模型操作化：预测
+### <a name="using-the-loaded-model-for-prediction"></a>使用加载后的模型进行预测
 
 显示 `SentimentText` 和相应的情绪预测以便共享结果，并采取相应措施。 这称为操作化，使用返回的数据作为操作策略的一部分。 使用以下 <xref:System.Console.WriteLine?displayProperty=nameWithType> 代码创建结果标头：
 
@@ -410,12 +410,12 @@ Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.529704
 =============== End of training ===============
 
 
-The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.0\Data\Model.zip
+The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.1\Data\Model.zip
 
 =============== Prediction Test of loaded model with a multiple sample ===============
 
 Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.4585565
-Sentiment: He is the best, and the article should say that. | Prediction: Not Toxic | Probability: 0.9924279
+Sentiment: I love this article. | Prediction: Not Toxic | Probability: 0.09454837
 
 ```
 
@@ -426,13 +426,13 @@ Sentiment: He is the best, and the article should say that. | Prediction: Not To
 在本教程中，你将了解：
 > [!div class="checklist"]
 > * 了解问题
-> * 选择适当的机器学习任务
+> * 选择适当的机器学习算法
 > * 准备数据
-> * 创建学习管道
-> * 加载分类器
+> * 转换数据
 > * 定型模型
-> * 使用不同数据集评估模型
-> * 使用模型预测测试数据结果
+> * 评估模型
+> * 使用训练的模型预测
+> * 使用加载模型部署和预测
 
 进入下一教程了解详细信息
 > [!div class="nextstepaction"]

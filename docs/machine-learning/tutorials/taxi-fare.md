@@ -3,15 +3,15 @@ title: 在 ML.NET 中使用回归学习器预测费用
 description: 在 ML.NET 中使用回归学习器预测费用。
 author: aditidugar
 ms.author: johalex
-ms.date: 01/15/2019
+ms.date: 02/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 10e0fa2cedff3e31575ad2b9c8bc2d9ecc81f3e8
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828392"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092535"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>教程：在 ML.NET 中使用回归学习器预测费用
 
@@ -122,9 +122,9 @@ ms.locfileid: "55828392"
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
 
-下一步，为设置数据加载，请初始化 `_textLoader` 全局变量以便重用它。  请注意，我们将使用 `TextReader`。 当使用 `TextReader` 创建 `TextLoader` 时，请传入需要的上下文和启用自定义的 <xref:Microsoft.ML.Data.TextLoader.Arguments> 类。 通过将包含所有列名及其类型的 <xref:Microsoft.ML.Data.TextLoader.Column> 对象数组传递给 `TextReader` 来指定数据模式。 我们以前在创建 `TaxiTrip` 类时定义了数据模式。
+下一步，为设置数据加载，请初始化 `_textLoader` 全局变量以便重用它。 创建 `TextLoader` 时，请传入需要的上下文和启用自定义的 <xref:Microsoft.ML.Data.TextLoader.Arguments> 类。 通过将包含所有列名及其类型的 <xref:Microsoft.ML.Data.TextLoader.Column> 对象数组传递给 `TextLoader` 来指定数据模式。 我们以前在创建 `TaxiTrip` 类时定义了数据模式。
 
-`TextReader` 类返回完全初始化的 <xref:Microsoft.ML.Data.TextLoader>  
+`TextLoader` 类返回完全初始化的 <xref:Microsoft.ML.Data.TextLoader>  
 
 若要初始化 `_textLoader` 全局变量以将其重复用于所需的数据集，请在 `mlContext` 初始化后添加以下代码：
 
@@ -155,7 +155,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>加载和转换数据
 
-我们将使用带有 `dataPath` 参数的 `_textLoader` 全局变量加载数据。 它将返回 <xref:Microsoft.ML.Data.IDataView>。 作为转换的输入和输出，`DataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
+我们将使用带有 `dataPath` 参数的 `_textLoader` 全局变量加载数据。 它将返回 <xref:Microsoft.Data.DataView.IDataView>。 作为转换的输入和输出，`IDataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
 
 在 ML.NET 中，数据类似于 SQL 视图。 它是异源数据，会延迟计算并进行架构化。 该对象是管道的第一部分，并加载数据。 在本教程中，它会加载一个包含出租车行程信息的数据集，这些信息有助于预测费用。 这用于创建模型并对其进行定型。
 

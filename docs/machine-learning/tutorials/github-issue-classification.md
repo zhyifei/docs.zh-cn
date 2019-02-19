@@ -1,15 +1,15 @@
 ---
 title: 在 GitHub 问题多类分类方案中使用 ML.NET
 description: 了解如何在多类分类方案中使用 ML.NET 对 GitHub 问题进行分类，将其分配到给定区域。
-ms.date: 02/01/2019
+ms.date: 02/14/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 79c0ae1ba38b410c0709659a4e5ee1ac2308b983
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 80f4e322ee94e9c3a41bd1c3945383f89f4347d0
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739418"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333516"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>教程：在多类分类场景中使用 ML.NET 对 GitHub 问题进行分类
 
@@ -20,11 +20,11 @@ ms.locfileid: "55739418"
 > * 了解问题
 > * 选择适当的机器学习算法
 > * 准备数据
-> * 提取功能和转换数据
+> * 转换数据
 > * 定型模型
-> * 使用不同数据集评估模型
-> * 使用经过训练的模型预测单个测试数据结果实例
-> * 使用加载后的模型预测单个测试数据实例
+> * 评估模型
+> * 使用训练的模型预测
+> * 使用加载模型部署和预测
 
 > [!NOTE]
 > 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
@@ -55,8 +55,8 @@ ms.locfileid: "55739418"
 3. **生成并定型** 
    * **定型模型**
    * **评估模型**
-4. **运行**
-   * **模型使用**
+4. **部署模型**
+   * **使用模型来预测**
 
 ### <a name="understand-the-problem"></a>了解问题
 
@@ -146,7 +146,7 @@ ms.locfileid: "55739418"
 * `_testDataPath` 具有用于评估模型的数据集路径。
 * `_modelPath` 具有在其中保存定型模型的路径。
 * `_mlContext` 是用于提供处理上下文的 <xref:Microsoft.ML.MLContext>。
-* `_trainingDataView` 是用于处理定型数据集的 <xref:Microsoft.ML.Data.IDataView>。
+* `_trainingDataView` 是用于处理定型数据集的 <xref:Microsoft.Data.DataView.IDataView>。
 * `_predEngine` 是用于单个预测的 <xref:Microsoft.ML.PredictionEngine%602>。
 * `_reader` 是用于加载和转换数据集的 <xref:Microsoft.ML.Data.TextLoader>。
 
@@ -187,7 +187,7 @@ ms.locfileid: "55739418"
 
 ## <a name="load-the-data"></a>加载数据
 
-接下来，初始化 `_trainingDataView` <xref:Microsoft.ML.Data.IDataView> 全局变量并使用 `_trainDataPath` 参数加载数据。
+接下来，初始化 `_trainingDataView` <xref:Microsoft.Data.DataView.IDataView> 全局变量并使用 `_trainDataPath` 参数加载数据。
 
  作为 [`Transforms`](../basic-concepts-model-training-in-mldotnet.md#transformer) 的输入和输出，`DataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
 
@@ -195,7 +195,7 @@ ms.locfileid: "55739418"
 
 由于先前创建的 `GitHubIssue` 数据模型类型与数据集架构相匹配，因此可以将初始化、映射和数据集加载合并到一行代码中。
 
-该行的第一部分 (`CreateTextReader<GitHubIssue>(hasHeader: true)`) 通过从 `GitHubIssue` 数据模型类型推断数据集架构并使用数据集标头，来创建 <xref:Microsoft.ML.Data.TextLoader>。
+该行的第一部分 (`CreateTextLoader<GitHubIssue>(hasHeader: true)`) 通过从 `GitHubIssue` 数据模型类型推断数据集架构并使用数据集标头，来创建 <xref:Microsoft.ML.Data.TextLoader>。
 
 之前在创建 `GitHubIssue` 类时定义了数据模式。 对于架构：
 
@@ -245,6 +245,9 @@ ML.NET 的转换管道撰写一组自定义 `transforms` 集，要在定型或�
 
 [!code-csharp[FeaturizeText](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#FeaturizeText)]
 
+>[!WARNING]
+> ML.NET 版本 0.10 已更改转换参数的顺序。 这在你构建之前不会错误输出。 使用用于转换的参数名称，如前面的代码片段中所示。
+
 数据准备最后一步使用 `Concatenate` 转换类将所有功能列合并到“功能”列。 默认情况下，学习算法仅处理“特征”列的特征。 使用以下代码将此转换附加到管道：
 
 [!code-csharp[Concatenate](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
@@ -288,13 +291,7 @@ public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(ID
 
 ### <a name="choose-a-learning-algorithm"></a>选择学习算法
 
-要添加学习算法，请使用 <xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer> 对象。  `SdcaMultiClassTrainer` 追加到 `pipeline` 并接受特征化的 `Title` 和 `Description` (`Features`) 以及 `Label` 输入参数，以便从历史数据中学习。
-
-将以下代码添加到 `BuildAndTrainModel` 方法中：
-
-[!code-csharp[SdcaMultiClassTrainer](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SdcaMultiClassTrainer)]
-
-现已创建了学习算法，可将其附加到 `pipeline`。 还需要将标签映射到值以返回其原始可读状态。 使用以下代码执行这两个操作：
+要添加学习算法，请调用返回 <xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer> 对象的 `mlContext.MulticlassClassification.Trainers.StochasticDualCoordinateAscent` 包装器方法。  `SdcaMultiClassTrainer` 追加到 `pipeline` 并接受特征化的 `Title` 和 `Description` (`Features`) 以及 `Label` 输入参数，以便从历史数据中学习。 还需要将标签映射到值以返回其原始可读状态。 使用以下代码执行这两个操作：
 
 [!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTrainer)]
 
@@ -310,6 +307,8 @@ public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(ID
 
 [!code-csharp[CreatePredictionEngine1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine1)]
 
+### <a name="predict-with-the-trained-model"></a>使用训练的模型预测
+
 通过创建一个 `GitHubIssue` 实例，在 `Predict` 方法中添加一个 GitHub 问题来测试定型模型的预测：
 
 [!code-csharp[CreateTestIssue1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateTestIssue1)]
@@ -318,7 +317,7 @@ public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(ID
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Predict)]
 
-### <a name="using-the-model-prediction"></a>使用模型：预测
+### <a name="using-the-model-prediction-results"></a>使用模型：预测结果
 
 显示 `GitHubIssue` 和相应的 `Area` 标签预测以便共享结果，并采取相应措施。  使用以下 <xref:System.Console.WriteLine?displayProperty=nameWithType> 代码创建结果显示：
 
@@ -356,7 +355,7 @@ public static void Evaluate()
 
 [!code-csharp[LoadTestDataset](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTestDataset)]
 
-`MulticlassClassificationContext.Evaluate` 是 <xref:Microsoft.ML.MulticlassClassificationContext.Evaluate%2A> 方法的包装器，它使用指定数据集计算模型的质量指标。 它返回 <xref:Microsoft.ML.Data.MultiClassClassifierMetrics> 对象，其中包含由多类分类计算器计算出的总体指标。
+`MulticlassClassificationContext.Evaluate` 是 <xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A> 方法的包装器，它使用指定数据集计算模型的质量指标。 它返回 <xref:Microsoft.ML.Data.MultiClassClassifierMetrics> 对象，其中包含由多类分类计算器计算出的总体指标。
 要显示指标来确定模型质量，需要先获取这些指标。
 请注意使用机器学习 `_trainedModel` 全局变量（转换器）的 `Transform` 方法来输入要素和返回预测。 将以下代码作为下一行添加到 `Evaluate` 方法中：
 
@@ -409,7 +408,7 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 Console.WriteLine("The model is saved to {0}", _modelPath);
 ```
 
-## <a name="predict-the-test-data-outcome-with-the-saved-model"></a>使用保存的模型预测测试数据结果
+## <a name="deploy-and-predict-with-a-loaded-model"></a>使用加载模型部署和预测
 
 使用下面的代码，在 `Evaluate` 方法调用的正下方，从 `Main` 方法中添加对新方法的调用：
 
@@ -478,11 +477,11 @@ The model is saved to C:\Users\johalex\dotnet-samples\samples\machine-learning\t
 > * 了解问题
 > * 选择适当的机器学习算法
 > * 准备数据
-> * 提取功能和转换数据
+> * 转换数据
 > * 定型模型
-> * 使用不同数据集评估模型
-> * 使用经过训练的模型预测单个测试数据结果实例
-> * 使用加载后的模型预测单个测试数据实例
+> * 评估模型
+> * 使用训练的模型预测
+> * 使用加载模型部署和预测
 
 进入下一教程了解详细信息
 > [!div class="nextstepaction"]

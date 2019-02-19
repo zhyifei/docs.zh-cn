@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebd7599205206e026c7de7b4e7bc2e5352771bd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71c2a6b183890aa9625dcffbef59d14c27ebe754
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522214"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219388"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>如何：添加对类型库的引用
 当添加对类型库的引用时，Visual Studio 将生成包含元数据的互操作程序集。 如果主互操作程序集可用，则 Visual Studio 在生成新的互操作程序集之前将使用现有程序集。  
@@ -47,7 +47,9 @@ ms.locfileid: "54522214"
 ## <a name="see-also"></a>请参阅
 - [将类型库作为程序集导入](importing-a-type-library-as-an-assembly.md)
 - [向 .NET Framework 公开 COM 组件](exposing-com-components.md)
-- [演练：嵌入 Microsoft Office 程序集中的类型信息](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))
-- [演练：嵌入托管程序集中的类型](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)
+- [演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+- [演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+- [演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
+- [演练：在 Visual Studio 中嵌入托管程序集中的类型 (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [/link（C# 编译器选项）](../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

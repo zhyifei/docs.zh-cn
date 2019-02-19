@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 140af66c9ea08d16aa442824ff7333eeeadf5173
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530682"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093536"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 基于 .NET Framework 的组件的免注册激活略复杂于 COM 组件的免注册激活。 安装需要两个清单：  
@@ -105,7 +105,7 @@ ms.locfileid: "54530682"
   
 4.  标识程序集中的每个类。 使用 `<clrClass>` 元素来唯一地标识托管程序集中的每个类。 该元素是 `<assembly>` 元素的子元素，具有下表中描述的属性。  
   
-    |特性|说明|必需|  
+    |特性|说明​​|必需|  
     |---------------|-----------------|--------------|  
     |`clsid`|用于指定要激活的类的标识符。|是|  
     |`description`|用于通知用户组件相关信息的字符串。 空字符串为默认值。|No|  
@@ -174,6 +174,6 @@ ms.locfileid: "54530682"
   
 ## <a name="see-also"></a>请参阅
 - [免注册 COM 互操作](registration-free-com-interop.md)
-- [免注册 COM 互操作的要求](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))
-- [将 COM 组件配置为免注册激活](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))
-- [基于 .NET 组件的免注册激活：演练](https://msdn.microsoft.com/library/ms973915.aspx)
+- [免注册 COM 互操作的需求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [将 COM 组件配置为免注册激活](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [基于 .NET 组件的免注册激活：演练](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

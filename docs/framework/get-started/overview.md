@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e1227cbf85e72570bcb08f7f13168392b7c7b60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592570"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093679"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework 概述
 
@@ -87,7 +87,7 @@ Internet Explorer 是承载运行时（以 MIME 类型扩展的形式）的非�
 
 - 使用 Windows Communication Foundation (WCF) 的面向服务的应用。 请参阅[使用 WCF 的面向服务的应用程序](../../../docs/framework/wcf/index.md)。
 
-- 使用 Windows Workflow Foundation (WF) 的启用工作流程的应用。 请参阅[在 .NET Framework 中生成工作流](https://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a)。
+- 使用 Windows Workflow Foundation (WF) 的启用工作流程的应用。 请参阅[Windows Workflow Foundation](../windows-workflow-foundation/index.md)。
 
 Windows 窗体类是一组综合性的可重用的类型，它们大大简化了 Windows GUI 的开发。 如果要编写 ASP.NET Web 窗体应用，可使用 Web 窗体类。
 
@@ -97,5 +97,5 @@ Windows 窗体类是一组综合性的可重用的类型，它们大大简化了
 - [安装指南](../../../docs/framework/install/index.md)
 - [开发指南](../../../docs/framework/development-guide.md)
 - [工具](../../../docs/framework/tools/index.md)
-- [.NET Framework 示例](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)
+- [.NET 示例和教程](../../samples-and-tutorials/index.md)
 - [.NET Framework 类库](https://go.microsoft.com/fwlink/?LinkID=227195)

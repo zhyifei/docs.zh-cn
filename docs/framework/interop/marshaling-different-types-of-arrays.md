@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3e56faad9e65cff6037f11b332d7b0df52a79fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 147c22758c68bd3b48ab1c5cf8e26ed0afdbce09
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589540"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219459"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送处理不同类型的数组
 数组是包含有一个或多个相同类型的元素的托管代码中的引用类型。 尽管数组是引用类型，但它们却作为 In 参数传递到非托管函数。 此行为与托管数组传递到托管对象的方式不一致，数组作为 In/Out 参数进行传递。 有关其他详细信息，请参阅 [复制和锁定](copying-and-pinning.md)。  
   
  下表列出了数组的封送处理选项，并描述了它们的用法。  
   
-|数组|说明|  
+|数组|说明​​|  
 |-----------|-----------------|  
 |通过值传递的整数。|将整数的数组作为 In 参数进行传递。|  
 |通过引用传递的整数。|将整数的数组作为 In/Out 参数进行传递。|  
@@ -115,6 +115,5 @@ typedef struct _MYPERSON
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
 ## <a name="see-also"></a>请参阅
-- [封送类型数组](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
-- [平台调用数据类型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
+- [平台调用数据类型](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [在托管代码中创建原型](creating-prototypes-in-managed-code.md)

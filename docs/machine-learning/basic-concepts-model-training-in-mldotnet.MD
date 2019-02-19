@@ -1,15 +1,15 @@
 ---
 title: ML.NET 中模型定型的基本概念
 description: 本文介绍与 ML.NET 中模型定型方案相关的基本概念。 并非所有观念均与更简单的方案“使用现有模型预测”相关。
-ms.date: 11/06/2018
+ms.date: 02/13/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: cff833b45583bc752bb42616820a95ca6c5c6b12
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c47d5832527dca1416abfc55756dca48f1daf493
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "55252436"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303655"
 ---
 # <a name="basic-concepts-for-model-training-in-mlnet"></a>ML.NET 中模型定型的基本概念
 
@@ -28,11 +28,11 @@ ms.locfileid: "55252436"
   - 再举一个例子，文本 tokenizer 提取单个文本列，并输出矢量列，包含从文本中提取出来的单个字词。
 - [数据读取器](#data-reader)表示为 `IDataReader<T>` 接口。
   - 数据读取器是用于创建数据的 ML.NET 组件。 它采用 `T` 的实例，并返回其中的数据。 
-  - 例如，TextLoader 是一个 `IDataReader<FileSource>`。 它提取文件源，然后产生数据。 
+  - 例如，TextLoader 是一个 `IDataReader<IMultiStreamSource>`。 它提取源，然后产生数据。 
 - [估算器](#estimator)表示为 `IEstimator<T>` 接口。
   - 这是学习数据的对象。 学习的结果是转换器。
   - 可将机器学习算法视为估算器，依赖数据进行学习并生成机器学习模型。
-- [预测函数](#prediction-function)表示为 `PredictionFunction<TSrc, TDst>` 类。
+- [预测函数](#prediction-function)表示为 `PredictionEngine<TSrc, TDst>` 类。
   - 可将预测函数视为一个向某个行应用转换器的计算机（例如在预测时）。
 
 ## <a name="data"></a>数据
@@ -50,11 +50,11 @@ ms.locfileid: "55252436"
 
 转换器是一种组件，它提取数据，对其执行某些操作，然后返回转换后的新数据。
 
-ML.NET 中的大多数转换器往往一次操作一个输入列，然后生成输出列。 例如，`new HashTransformer("foo", "bar")` 采用列“foo”中的值，对其进行哈希操作，然后将其放到“bar”列。 
+ML.NET 中的大多数转换器往往一次操作一个输入列，然后生成输出列。 例如，`new HashTransformer("bar", "foo")` 采用列“foo”中的值，对其进行哈希操作，然后将其放到“bar”列。 
 
-输入列和输出列名称相同是很常见的。 在这种情况下，旧的列被替换为新的列。 例如，`new HashTransformer("foo")` 采用列“foo”中的值，对其进行哈希操作，然后将其放回“foo”列。 
+输入列和输出列名称相同是很常见的。 在这种情况下，旧的列被替换为新的列。 例如，`new HashTransformer("foo")` 采用列“foo”中的值，对其进行哈希操作，然后将其放到“foo”。 
 
-当然，如果调用 `Transform`，任何转换器都会生成新的数据视图。 请记住，数据视图是不可变的。
+如果调用 `Transform`，任何转换器都会生成新的数据视图。 请记住，数据视图是不可变的。
 
 另一个重要的考虑因素是，由于数据评估延迟，转换器也会延迟。 本质上讲，调用之后
 
@@ -66,13 +66,13 @@ var newData = transformer.Transform(oldData)
 
 ### <a name="transformer-chains"></a>转换器链
 
-转换器有一个有用的属性，是用户可以将一系列转换器的整个应用序列视为另一个转换器：
+转换器有一个有用的属性，是用户可以将一系列转换器的整个应用序列构建为另一个转换器：
 
 ```csharp
 var fullTransformer = transformer1.Append(transformer2).Append(transformer3);
 ```
 
-此属性通常在 ML.NET 中使用：通常情况下，定型的 ML.NET 模型就是一个转换器链，对于所有要实现的用途和目的，它就是一个转换器。 
+此属性通常在 ML.NET 中使用：通常情况下，定型的 ML.NET 模型就是一个转换器链，对于所有要实现的用途和目的，它就是一个转换器。
 
 ## <a name="data-reader"></a>数据读取器
 
@@ -80,11 +80,11 @@ var fullTransformer = transformer1.Append(transformer2).Append(transformer3);
 
 需要注意的一个有趣属性是，可以通过将转换器附加到现有数据读取器，来创建一个数据读取器。 这样便可获得包含转换行为的读取器：
 
-```c#
+```csharp
 var newReader = reader.Append(transformer1).Append(transformer2)
 ```
 
-与转换器的另一个相似之处是，由于数据评估延迟，读取器也延迟：调用 `dataReader.Read()` 后未发生任何（或最小程度的）实际“读取”：仅当生成的数据请求游标时，读取器才开始工作。
+与转换器的另一个相似之处是，由于数据评估延迟，读取器也延迟：调用 `reader.Read()` 后未发生任何（或最小程度的）实际“读取”：仅当生成的数据请求游标时，读取器才开始工作。
 
 ## <a name="estimator"></a>估算器
 
@@ -95,12 +95,12 @@ var newReader = reader.Append(transformer1).Append(transformer2)
 ```csharp
 MLContext mlContext = new MLContext(seed: 0);
 
-var pipeline = new CopyColumnsEstimator(mlContext, "FareAmount", "Label")
-.Append(mlContextml.Transforms.Categorical.OneHotEncoding(mlContext, "VendorId"))
-.Append(mlContextml.Transforms.Categorical.OneHotEncoding(mlContext, "RateCode"))
-.Append(mlContextml.Transforms.Categorical.OneHotEncoding(mlContext, "PaymentType"))
-.Append(new ColumnConcatenatingEstimator(mlContext, "Features", "VendorId", "RateCode", "PassengerCount", "TripTime", "TripDistance", "PaymentType"))
-.Append(mlContext.Regression.Trainers.FastTree("Label", "Features"));
+var pipeline = mlContext.Transforms.CopyColumns("Label","FareAmount")
+    .Append(mlContext.Transforms.Categorical.OneHotEncoding("VendorId"))
+    .Append(mlContext.Transforms.Categorical.OneHotEncoding("RateCode"))
+    .Append(mlContext.Transforms.Categorical.OneHotEncoding("PaymentType"))
+    .Append(mlContext.Transforms.Concatenate("Features","VendorId","RateCode","PassengerCount","TripTime","TripDistance","PaymentType"))
+    .Append(mlContext.Regression.Trainers.FastTree("Label","Features"));
 
 var model = pipeline.Fit(dataView);
 ```
@@ -109,7 +109,7 @@ var model = pipeline.Fit(dataView);
 
 ## <a name="prediction-function"></a>预测函数
 
-可将预测函数视为向某行应用转换器的计算机。
+可将预测函数视为向某行应用转换器的组件。
 
 获取模型（通过 `Fit()` 定型或从其他位置加载的转换器）后，可通过 `model.Transform(data)` 的常规调用，使用模型进行预测。 然而，在实际情景中使用此模型时，通常没有多少可用来进行预测的示例。 往往一次只有一个示例，且需要立即通过示例进行及时预测。
 
@@ -123,17 +123,17 @@ var model = pipeline.Fit(dataView);
 
 可使用[架构理解](https://github.com/dotnet/machinelearning/blob/master/docs/code/SchemaComprehension.md)，通过两个用户定义的对象（`InputExample` 和 `OutputPrediction`）实现上述算法，如下所示：
 
-```c#
-var inputData = env.CreateDataView(new InputExample[] { example });
+```csharp
+var inputData = mlContext.Data.ReadFromEnumerable(new InputExample[] { example });
 var outputData = model.Transform(inputData);
-var output = outputData.AsDynamic.AsEnumerable<OutputPrediction>(env, reuseRowObject: false).Single();
+var output = mlContext.CreateEnumerable<OutputPrediction>(outputData,reuseRowObject:false).First();
 ```
 
-但这很麻烦，并会产生性能成本。 而预测函数对象可通过扩展方法 `MakePredictionFunction` 执行相同的操作，但速度更快、更方便：
+但这很麻烦，并会产生性能成本。 而预测函数对象可通过扩展方法 `CreatePredictionEngine` 执行相同的操作，但速度更快、更方便：
 
-```c#
-var predictionFunc = model.MakePredictionFunction<InputExample, OutputPrediction>(env);
-var output = predictionFunc.Predict(example);
+```csharp
+var predictionEngine = model.CreatePredictionEngine<InputExample,OutputPrediction>(mlContext);
+var prediction = predictionEngine.Predict(example);
 ```
 
 预测函数是不可重入的/线程安全的。 如果想要使用多个线程同时进行预测，每个线程都需要有一个预测函数。

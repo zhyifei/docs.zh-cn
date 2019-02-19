@@ -3,12 +3,12 @@ title: 机器学习术语表 - ML.NET
 description: 一个重要的机器学习术语表，可在 ML.NET 中生成自定义模型时使用。
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415372"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092431"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>机器学习重要术语词汇表
 
@@ -90,7 +90,7 @@ ms.locfileid: "54415372"
 
 在[分类](#classification)中，类的撤回是正确预测为属于该类的项目的数量，除以实际属于该类的项目的总数。
 
-## <a name="regression"></a>回归
+## <a name="regression"></a>回归测试
 
 [监管式机器学习](#supervised-machine-learning)任务，其中输出是一个实际值，例如，双精度值。 示例包括预测股票价格。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[回归](tasks.md#regression)部分。
 

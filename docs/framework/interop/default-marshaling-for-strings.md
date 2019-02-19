@@ -10,15 +10,16 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a91fd9d06e93813d440d6243ad42ea6dd70e739
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df65f54a9a7408a22f8b558f99ab42d6c37ae55b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523085"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221064"
 ---
 # <a name="default-marshaling-for-strings"></a>字符串的默认封送处理
-<xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 类均具有类似的封送处理行为。  
+
+  <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 类均具有类似的封送处理行为。  
   
  字符串以 COM 样式 `BSTR` 类型或以 null 结尾的字符串（以 null 字符结尾的字符数组）进行封送。 字符串中的字符可以采用 Unicode（Windows 系统上的默认值）或 ANSI 进行封送。  
   
@@ -35,7 +36,8 @@ ms.locfileid: "54523085"
 <a name="cpcondefaultmarshalingforstringsanchor1"></a>
 
 ## <a name="strings-used-in-interfaces"></a>在接口中使用的字符串  
- 下表显示以非托管代码的方法参数封送字符串数据类型时的封送处理选项。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性向 COM 接口的封送字符串提供若干个 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值。  
+ 下表显示以非托管代码的方法自变量封送字符串数据类型时的封送处理选项。 
+  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性向 COM 接口的封送字符串提供若干个 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值。  
   
 |枚举类型|非托管格式说明|  
 |----------------------|-------------------------------------|  
@@ -81,7 +83,8 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
 ## <a name="strings-used-in-platform-invoke"></a>在平台调用中使用的字符串  
  平台调用复制字符串参数，将其从.NET Framework 格式 (Unicode) 转换为平台非托管格式。 当调用返回时，字符串固定不变，且不会从非托管内存复制回托管内存。  
   
- 下表列出以平台调用的方法参数封送字符串时的封送处理选项。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性向封送字符串提供若干个 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值。  
+ 下表列出以平台调用的方法参数封送字符串时的封送处理选项。 
+  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性向封送字符串提供若干个 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值。  
   
 |枚举类型|非托管格式说明|  
 |----------------------|-------------------------------------|  
@@ -139,7 +142,8 @@ String s);
   
 <a name="cpcondefaultmarshalingforstringsanchor2"></a>   
 ## <a name="strings-used-in-structures"></a>在结构中使用的字符串  
- 字符串是结构的有效成员，但是 <xref:System.Text.StringBuilder> 缓冲区在结构中无效。 下表显示以字段封送字符串数据类型时的封送处理选项。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性向字段的封送字符串提供若干个 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值。  
+ 字符串是结构的有效成员，但是 <xref:System.Text.StringBuilder> 缓冲区在结构中无效。 下表显示以字段封送字符串数据类型时的封送处理选项。 
+  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性向字段的封送字符串提供若干个 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举值。  
   
 |枚举类型|非托管格式说明|  
 |----------------------|-------------------------------------|  
@@ -149,9 +153,10 @@ String s);
 |`UnmanagedType.LPWStr`|指向以 null 终止的 Unicode 字符数组的指针。|  
 |`UnmanagedType.ByValTStr`|定长字符数组；数组的类型由包含结构的字符集确定。|  
   
- `ByValTStr` 类型用于结构中出现的内联定长字符数组。 其他类型适用于包含指向字符串的指针的结构中包含的字符串引用。  
+ 
+  `ByValTStr` 类型用于结构中出现的内联定长字符数组。 其他类型适用于包含指向字符串的指针的结构中包含的字符串引用。  
   
- 应用于包含结构的 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 特性的 `CharSet` 参数确定结构中字符串的字符格式。 以下示例结构包含字符串引用和内联字符串，以及 ANSI、Unicode 和平台相关字符。  
+ 应用于包含结构的 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 特性的 `CharSet` 自变量确定结构中字符串的字符格式。 以下示例结构包含字符串引用和内联字符串，以及 ANSI、Unicode 和平台相关字符。  
   
 ### <a name="type-library-representation"></a>类型库表示形式  
   
@@ -220,7 +225,7 @@ struct StringInfoT {
   
  解决方法是将 <xref:System.Text.StringBuilder> 缓冲区作为参数而非字符串进行传递。 被调用方可以取消引用和修改 `StringBuilder`，前提是不超过 `StringBuilder` 的容量。 还可以初始化为固定长度。 例如，如果将 `StringBuilder` 缓冲区初始化为 `N` 容量，则封送处理程序提供大小为 (`N`+ 1) 个字符的缓冲区。 +1 解释了非托管字符串具有 null 终止符而帐户 `StringBuilder` 却不具有这一事实。  
   
- 例如，Microsoft Win32 API `GetWindowText` 函数（在 Windows.h 中定义）是一个定长字符缓冲区，必须传递到要操作的非托管代码中。 `LpString` 指向调用方分配的大小为 `nMaxCount` 的缓冲区。 调用方应分配缓冲区，并将 `nMaxCount` 参数设置为已分配缓冲区的大小。 以下代码演示 `GetWindowText` 函数声明，如 Windows.h 中所定义。  
+ 例如，Microsoft Win32 API `GetWindowText` 函数（在 Windows.h 中定义）是一个定长字符缓冲区，必须传递到要操作的非托管代码中。 `LpString` 指向调用方分配的大小为 `nMaxCount` 的缓冲区。 调用方应分配缓冲区，并将 `nMaxCount` 自变量设置为已分配缓冲区的大小。 以下代码演示 `GetWindowText` 函数声明，如 Windows.h 中所定义。  
   
 ```  
 int GetWindowText(  
@@ -266,5 +271,5 @@ public class Window {
 ## <a name="see-also"></a>请参阅
 - [默认封送处理行为](default-marshaling-behavior.md)
 - [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)
-- [方向特性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [方向特性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [复制和锁定](copying-and-pinning.md)
