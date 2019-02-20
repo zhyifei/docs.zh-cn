@@ -2,12 +2,12 @@
 title: 服务跟踪查看器工具 (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: f5401129601f84a5575a544490244f81b1e759ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510593"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442888"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服务跟踪查看器工具 (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助你分析生成的 WCF 的诊断跟踪。 服务跟踪查看器使您能够轻松地合并、 查看和筛选日志中的跟踪消息，以便可以诊断、 修复和验证 WCF 服务问题。  
@@ -259,7 +259,7 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
   
 3.  在出现的对话框中，输入筛选器名称。 在此示例中，输入`Thread ID`。 此外，还可以提供筛选器说明。  
   
-4.  左侧的树视图显示您在步骤 1 中选择的跟踪记录的结构。 通过浏览找到要为其创建条件的元素。 在此示例中，浏览到位于 XPath 的 ThreadID:/E2ETraceEvent/System/Execution/@ThreadID节点。 在树视图中双击“ThreadID”属性。 这样可在对话框右侧为该属性创建一个表达式。  
+4.  左侧的树视图显示你在步骤 1 中选择的跟踪记录的结构。 通过浏览找到要为其创建条件的元素。 在此示例中，浏览到位于 XPath 的 ThreadID:/E2ETraceEvent/System/Execution/@ThreadID节点。 在树视图中双击“ThreadID”属性。 这样可在对话框右侧为该属性创建一个表达式。  
   
 5.  更改将 ThreadID 条件的参数字段从无到{0}。 通过这一步骤，在应用筛选器时就可以配置 ThreadID 值。 （请参见“如何应用筛选器”一节）最多可以定义四个参数。 条件是用“或”运算符组合在一起的。  
   
@@ -452,4 +452,4 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
 ## <a name="see-also"></a>请参阅
 - [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [配置跟踪](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [活动跟踪和传播的端到端跟踪关联的](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
+- [端到端跟踪](./diagnostics/tracing/end-to-end-tracing.md)

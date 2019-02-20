@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, unmanaged
 - Windows Forms, interop
 ms.assetid: 81bc100c-fa49-4614-85a6-0f7ab59eac8a
-ms.openlocfilehash: bc0c848d1c92871dacab93497c674645f3ac83fe
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f54f039fd3477c380a2236a93ad8d80b4f7153b2
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742977"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441809"
 ---
 # <a name="windows-forms-and-unmanaged-applications"></a>Windows 窗体和非托管应用程序
 Windows 窗体应用程序和控件可以与非托管应用程序进行互操作，但有一些需要注意的问题。 以下各节将介绍 Windows 窗体应用程序和控件支持和不支持的方案和配置。  
@@ -22,13 +22,13 @@ Windows 窗体应用程序和控件可以与非托管应用程序进行互操作
  [Windows 窗体和非托管应用程序概述](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications-overview.md)  
  提供有关如何使用和实现运用非托管应用程序的 Windows 窗体控件的常规信息。  
   
- [如何：通过使用 ShowDialog 方法显示 Windows 窗体来支持 COM 互操作](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
+ [如何：通过显示 Windows 窗体使用 ShowDialog 方法来支持 COM 互操作](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
  提供显示如何使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法在非托管应用程序中运行 Windows 窗体的代码示例。  
   
- [如何：通过在每个 Windows 窗体各自的线程上显示该 Windows 窗体来支持 COM 互操作](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
+ [如何：通过在其自己的线程上显示每个 Windows 窗体来支持 COM 互操作](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
  提供显示如何在各自的线程上运行 Windows 窗体的代码示例。  
   
- 另请参阅[演练： 通过显示每个 Windows 窗体各自的线程上支持 COM 互操作](https://msdn.microsoft.com/library/ms233639\(v=vs.110\))。  
+ 另请参阅[演练：通过在其自己的线程上显示每个 Windows 窗体支持 COM 互操作](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100))。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>  

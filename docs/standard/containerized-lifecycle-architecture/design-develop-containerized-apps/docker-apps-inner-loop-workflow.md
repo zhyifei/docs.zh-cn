@@ -4,12 +4,12 @@ description: 了解开发 Docker 应用程序的"内部循环"工作流。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: 03eb4662e55551678105fa9ef25b42cc05c132a5
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 2d592f92153040d910dcf529ec21770693f5973c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219083"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442316"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 应用的内部循环开发工作流
 
@@ -120,7 +120,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 有其他行的这样 Docker 就知道如何运行该应用程序可以在具体取决于你使用的，语言/框架 DockerFile 中添加的配置。 例如，你需要使用的入口点行\["dotnet"，"MyCustomMicroservice.dll"\]运行.NET Core 应用程序中，虽然您可以有多个不同版本，具体取决于生成并运行你的服务的方法。 如果你正在使用的 SDK 和 dotnet CLI 生成并运行.NET 应用程序，则将为略有不同。 底部行是入口点行加上其他行将无法为应用程序选择的语言/平台而异。
 
-**详细信息** 有关生成.NET Core 应用程序的 Docker 映像的信息，请转到<https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>。
+**详细信息** 有关生成.NET Core 应用程序的 Docker 映像的信息，请转到[ https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images ](../../../core/docker/building-net-docker-images.md)。
 
 若要了解有关构建你自己的映像的详细信息，请转到[ https://docs.docker.com/engine/\ 教程/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)。
 

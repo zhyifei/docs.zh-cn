@@ -2,12 +2,12 @@
 title: 迁移指南
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: a07fac293c6e598ff60c635286f8ab808e057b9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3a3e1efee44ef11f3c5a91dddb1172f20ea01ed
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676869"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441211"
 ---
 # <a name="migration-guidance"></a>迁移指南
 在[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，Microsoft 正在发布的第二个主要版本的 Windows Workflow Foundation (WF)。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 发布在 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中（包含 System.Workflow.* 命名空间中的类型；目前称之为 WF3）并在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中得到增强。 WF3 也是属于[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，但伴随新工作流技术 (System.Activities。 中的类型\*命名空间，则称为 WF4)。 考虑何时采用 WF4 时，重要的是首先要认识到您来控制时间安排。  
@@ -35,7 +35,7 @@ ms.locfileid: "54676869"
  [WF 指南：状态机](https://go.microsoft.com/fwlink/?LinkId=153855)  
  讨论在缺乏状态机活动下的 WF4 控制流建模。  
   
- 请注意，本指南仅适用于面向 .NET Framework 4 的工作流项目。 状态机工作流在 .NET 4.0.1 中是通过发布 Platform Update 1 加入的，是 .NET Framework 4.5 的组成部分。 有关在.NET 4.0.1-4.0.3 和.NET Framework 4.5 中的状态机工作流的详细信息请参阅[4.0.1 版更新 Microsoft.NET Framework 4 功能](https://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc)并[状态机工作流](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。  
+ 请注意，本指南仅适用于面向 .NET Framework 4 的工作流项目。 状态机工作流在 .NET 4.0.1 中是通过发布 Platform Update 1 加入的，是 .NET Framework 4.5 的组成部分。 有关在.NET 4.0.1-4.0.3 和.NET Framework 4.5 中的状态机工作流的详细信息请参阅[4.0.1 版更新 Microsoft.NET Framework 4 功能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100))并[状态机工作流](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。  
   
  [WF 迁移实用手册：自定义活动](https://go.microsoft.com/fwlink/?LinkId=153856)  
  提供用于在 WF4 上重新设计 WF3 自定义活动的示例和说明。  

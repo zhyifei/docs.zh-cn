@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 442a6175b1b378cf3489314e190c58312a327c01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26685ff0ff67ac3b7f1b9837cc71cfc0e683b292
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738584"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442108"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>如何：向 Windows 窗体添加无用户界面控件
 非可视控件 （或组件） 提供了与你的应用程序的功能。 不同于其他控件组件不向用户提供用户界面，因此不需要在 Windows 窗体设计器图面上显示。 当一个组件添加到窗体时，Windows 窗体设计器在其中显示所有组件的窗体的底部显示可调整大小的送纸器。 控件添加到组件栏后，你可以选择的组件，并设置其属性，就像任何其他控件在窗体上。  
@@ -29,13 +29,13 @@ ms.locfileid: "54738584"
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>若要将组件添加到 Windows 窗体  
   
-1.  打开窗体。 有关详细信息，请参阅[如何：在设计器中显示 Windows 窗体](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
+1.  打开窗体。 有关详细信息，请参阅[如何：在设计器中显示 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
   
 2.  在中**工具箱**，单击一个组件，并将其拖动到窗体。  
   
      此组件将出现在组件栏中。  
   
- 此外，组件可以在运行时添加到窗体中。 这是一种常见方案，特别是因为组件不具有直观的表达与具有用户界面的控件不同。 在以下示例中，<xref:System.Windows.Forms.Timer>在运行时添加组件。 (请注意，Visual Studio 包含多种不同的计时器; 在这种情况下，使用 Windows 窗体<xref:System.Windows.Forms.Timer>组件。 有关在 Visual Studio 中不同的计时器的详细信息，请参阅[基于服务器的计时器简介](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。)  
+ 此外，组件可以在运行时添加到窗体中。 这是一种常见方案，特别是因为组件不具有直观的表达与具有用户界面的控件不同。 在以下示例中，<xref:System.Windows.Forms.Timer>在运行时添加组件。 (请注意，Visual Studio 包含多种不同的计时器; 在这种情况下，使用 Windows 窗体<xref:System.Windows.Forms.Timer>组件。 有关在 Visual Studio 中不同的计时器的详细信息，请参阅[基于服务器的计时器简介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))。)  
   
 > [!CAUTION]
 >  组件通常具有必须为有效运行该组件设置的特定于控件的属性。 情况下<xref:System.Windows.Forms.Timer>下方的组件，您将设置`Interval`属性。 请确保，在将组件添加到项目中，您设置属性，该组件必需的。  

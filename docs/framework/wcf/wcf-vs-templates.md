@@ -2,12 +2,12 @@
 title: WCF Visual Studio 模板
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: a7529b14c3c83f0df7b41581ef18e5192209bc5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72239f9e0e6d7882e6a29222c0b68f3bfd5d89d5
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624933"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443232"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 模板
 Windows Communication Foundation (WCF) Visual Studio 模板是预定义的项目和项模板可用于在 Visual Studio 中快速构建 WCF 服务和周边应用程序。  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) Visual Studio 模板是预定义的项目
  如果现有项目是 Web 项目，则也会创建服务主机文件 (service1.svc)。  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF 服务项目和项模板。  
- 这些模板创建的 WCF 服务承载工作流服务，这是可以访问类似于 web 服务的工作流。 XAML 或命令式编程模型具有单独的模板。 通过使用模板，可以创建顺序工作流或状态机工作流。 有关这些类型的工作流的详细信息，请参阅[Windows Workflow Foundation 教程](https://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97)。 有关创建工作流项目的详细信息，请参阅[创建旧版工作流项目](/visualstudio/workflow-designer/creating-legacy-workflow-projects)。  
+ 这些模板创建的 WCF 服务承载工作流服务，这是可以访问类似于 web 服务的工作流。 XAML 或命令式编程模型具有单独的模板。 通过使用模板，可以创建顺序工作流或状态机工作流。 有关这些类型的工作流的详细信息，请参阅[如何：创建工作流](../windows-workflow-foundation/how-to-create-a-workflow.md)。 有关创建工作流项目的详细信息，请参阅[创建旧版工作流项目](/visualstudio/workflow-designer/creating-legacy-workflow-projects)。  
   
  使用工作流的 XOML 类型代替基于代码的是，visual Studio 设计器时响应速度更快。 XOML 工作流是要创建的默认工作流类型。  
   

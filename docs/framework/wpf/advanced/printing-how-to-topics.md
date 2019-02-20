@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: 0bf581155bb32951a4614818edb50837f608939e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c920aff295fd22cc7faa90c2f9421840f9b60b69
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726437"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441198"
 ---
 # <a name="printing-how-to-topics"></a>打印帮助主题
 在本部分中的主题演示如何使用打印和打印系统管理功能附带[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以及新[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]打印路径。  
@@ -52,4 +52,4 @@ ms.locfileid: "54726437"
 - <xref:System.Printing.Interop>
 - [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)
 - [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [XPS](https://www.microsoft.com/xps)
+- [XPS 文档](/windows/desktop/printdocs/documents)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 0b3b92e29c5de7365cbf1196a387bc0c9c440755
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b30bb28e816f27cc8661d478758a05e52fb45037
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582072"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442121"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows 窗体的 ClickOnce 部署
 下面的主题描述了 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，这是一种用于将 Windows 窗体应用程序轻松部署到客户端计算机的技术。  
@@ -66,6 +66,6 @@ ms.locfileid: "54582072"
 - [应用程序设置概述](../../../docs/framework/winforms/advanced/application-settings-overview.md)
 - [发布 ClickOnce 应用程序](/visualstudio/deployment/publishing-clickonce-applications)
 - [从命令行生成 ClickOnce 应用程序](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
-- [调试使用 System.Deployment.Application 的 ClickOnce 应用程序](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)
+- [调试使用 System.Deployment.Application 的 ClickOnce 应用程序](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)
 - [使用 ClickOnce 部署 COM 组件](/visualstudio/deployment/deploying-com-components-with-clickonce)
 - [如何：使用发布向导发布 ClickOnce 应用程序](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

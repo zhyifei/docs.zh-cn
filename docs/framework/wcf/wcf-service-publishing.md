@@ -2,12 +2,12 @@
 title: WCF 服务发布
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: ca4a95b606f73800b11416627a27b8174e2bdda9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04912d94568cf144e874513395e6a6f31375fb7c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742993"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441432"
 ---
 # <a name="wcf-service-publishing"></a>WCF 服务发布
 
@@ -21,7 +21,7 @@ WCF 服务发布支持发布的 WCF 服务库模板，以及其相应的项模�
 
 -   联合服务库。
 
-可以通过选择找到这些服务模板**文件** > **新建项目**> [**Visual Basic**或**Visual C#** ] > **WCF**。 对于此位置 （包括 WCF 工作流服务应用程序和 WCF 服务应用程序） 中的其他 WCF 模板，可以发布使用[一键式发布为 web 应用程序](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx)。
+可以通过选择找到这些服务模板**文件** > **新建项目**> [**Visual Basic**或**Visual C#** ] > **WCF**。 对于此位置 （包括 WCF 工作流服务应用程序和 WCF 服务应用程序） 中的其他 WCF 模板，可以发布使用[一键式发布为 web 应用程序](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))。
 
 可以将服务发布到以下目标位置。
 
