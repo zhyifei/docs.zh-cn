@@ -195,8 +195,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- 
-  `WriteFormattedDocComment()` 的第一个版本分配了一个数组、多个子字符串、一个修整的子字符串和一个空 `params` 数组。 它还会检查为"/ /"。 修改后的代码仅使用索引且不执行分配。 它找到的第一个字符不是空白区域，然后检查逐字符以查看字符串是否以与"/ /"。 新代码将使用`IndexOfFirstNonWhiteSpaceChar`而不是<xref:System.String.TrimStart%2A>返回出现非空白字符的位置 （在指定的开始索引） 的第一个索引。 修复并不完整，但你可以看到如何为完整解决方案应用类似的修复。 通过在整个代码中应用此方法，你可以删除 `WriteFormattedDocComment()` 中的所有分配。 
+ `WriteFormattedDocComment()` 的第一个版本分配了一个数组、多个子字符串、一个修整的子字符串和一个空 `params` 数组。 它还会检查为"/ /"。 修改后的代码仅使用索引且不执行分配。 它找到的第一个字符不是空白区域，然后检查逐字符以查看字符串是否以与"/ /"。 新代码将使用`IndexOfFirstNonWhiteSpaceChar`而不是<xref:System.String.TrimStart%2A>返回出现非空白字符的位置 （在指定的开始索引） 的第一个索引。 修复并不完整，但你可以看到如何为完整解决方案应用类似的修复。 通过在整个代码中应用此方法，你可以删除 `WriteFormattedDocComment()` 中的所有分配。 
   
  **示例 4:StringBuilder**  
   
