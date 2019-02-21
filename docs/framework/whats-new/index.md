@@ -3,19 +3,13 @@ title: .NET Framework 中的新增功能
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 dev_langs:
-- csharp
-- vb
+  - csharp
+  - vb
 helpviewer_keywords:
-- what's new [.NET Framework]
+  - 'what''s new [.NET Framework]'
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de919789c369c66c52a137bde811c56bf07a6ec9
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416022"
 ---
 # .NET Framework 中的新增功能<a name="introduction"></a>
 
@@ -612,7 +606,7 @@ WCF 包含大量代码更改，消除了争用条件，从而提升了序列化�
 
 **WPF 打印 API 的新实现代码**
 
-<xref:System.Printing.PrintQueue?displayProperty=nameWithType> 类中的 WPF 打印 API 调用 Windows [打印文档包 API](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx)，而不调用弃用的 [XPS 打印 API](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx)。 若要了解此更改对应用程序兼容性造成的影响，请参阅 [.NET Framework 4.7 中的重定目标更改](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。
+<xref:System.Printing.PrintQueue?displayProperty=nameWithType> 类中的 WPF 打印 API 调用 Windows [打印文档包 API](/windows/desktop/printdocs/tailored-app-printing-api)，而不调用弃用的 [XPS 打印 API](/windows/desktop/printdocs/xps-printing)。 若要了解此更改对应用程序兼容性造成的影响，请参阅 [.NET Framework 4.7 中的重定目标更改](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。
 
 <a name="v462" />
 
@@ -681,7 +675,7 @@ End Class
 
 然后可以创建一个资源文件 DataAnnotation.Localization.fr.resx，它的键为错误消息字符串，值为本地化的错误消息。 该文件必须位于 `App.LocalResources` 文件夹中。 例如，下面列出了键以及它在本地化法语 (fr) 错误消息中的值：
 
-| name                                 | “值”                                     |
+| name                                 | 值                                     |
 | ------------------------------------ | ----------------------------------------- |
 | 分级必须介于 1 和 10 之间。 | La note doit être comprise entre 1 et 10. |
 
@@ -787,7 +781,7 @@ End Function
 
  为解决 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的这一问题，已将以下三种方法添加到了 <xref:System.Security.Cryptography.ECDiffieHellman> 基类，以更清楚地表示这些 KDF 例程及其输入：
 
-|ECDiffieHellman 方法|说明|
+|ECDiffieHellman 方法|说明​​|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用下面的公式派生密钥材料<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 算法的计算结果。|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用下面的公式派生密钥材料<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 算法的计算结果。|
@@ -838,7 +832,8 @@ End Function
 
  **对 SHA-2 哈希的 SignedXml 支持**
 
- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 向 <xref:System.Security.Cryptography.Xml.SignedXml> 类添加了对 RSA-SHA256、RSA-SHA384 和 RSA-SHA512 PKCS#1 签名方法以及 SHA256、SHA384 和 SHA512 引用摘要算法的支持。
+ 
+  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 向 <xref:System.Security.Cryptography.Xml.SignedXml> 类添加了对 RSA-SHA256、RSA-SHA384 和 RSA-SHA512 PKCS#1 签名方法以及 SHA256、SHA384 和 SHA512 引用摘要算法的支持。
 
  URI 常量都在 <xref:System.Security.Cryptography.Xml.SignedXml> 上公开：
 
@@ -1168,7 +1163,7 @@ SqlClient 现在可自动提供与 AlwaysOn 可用性组 (AG) 之间的更快连
 
 **示例**
 
- MSDN 上有一些 [WPF 示例](https://msdn.microsoft.com/library/ms771633.aspx)。 200 多个最受欢迎的示例（基于其使用情况）会移动到[开放源代码 GitHub 存储库](https://github.com/Microsoft/WPF-Samples)中。 可通过向我们发送拉取请求或建立 [GitHub 问题](https://github.com/Microsoft/WPF-Samples/issues)来帮助我们改进示例。
+ [Microsoft/WPF 示例](https://github.com/Microsoft/WPF-Samples) GitHub 存储库中具有大量的 WPF 示例。 可通过向我们发送拉取请求或建立 [GitHub 问题](https://github.com/Microsoft/WPF-Samples/issues)来帮助我们改进示例。
 
  **DirectX 扩展**
 
@@ -1316,7 +1311,7 @@ SqlClient 现在可自动提供与 AlwaysOn 可用性组 (AG) 之间的更快连
 
     - **加密更新**
 
-         <xref:System.Security.Cryptography?displayProperty=nameWithType> API 更新为支持 [Windows CNG 加密 API](/windows/desktop/SecCNG/cng-reference)。 以前版本的 .NET Framework 完全依赖于[早期版本的 Windows 加密 API](/windows/desktop/SecCrypto/cryptography-portal)，以用作 <xref:System.Security.Cryptography?displayProperty=nameWithType> 实现的基础。 我们已经请求支持 CNG API，因为它支持[现代加密算法](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support)，这对某些类别的应用十分重要。
+         <xref:System.Security.Cryptography?displayProperty=nameWithType> API 更新为支持 [Windows CNG 加密 API](/windows/desktop/SecCNG/cng-reference)。 以前版本的 .NET Framework 完全依赖于[早期版本的 Windows 加密 API](/windows/desktop/SecCrypto/cryptography-portal)，以用作 <xref:System.Security.Cryptography?displayProperty=nameWithType> 实现的基础。 我们已经请求支持 CNG API，因为它支持[现代加密算法](/windows/desktop/SecCNG/cng-features#suite-b-support)，这对某些类别的应用十分重要。
 
          .NET Framework 4.6 包括以下新的增强功能以支持 Windows CNG 加密 API：
 
@@ -1765,7 +1760,7 @@ SqlClient 现在可自动提供与 AlwaysOn 可用性组 (AG) 之间的更快连
 
 ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、性能增强和许多其他功能添加了模型绑定。 有关更多信息，请参见以下资源：
 
-- [ASP.NET 4.5 和 Visual Studio 2012](https://msdn.microsoft.com/library/hh420390(v=vs.110).aspx)
+- [ASP.NET 4.5 和 Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
 - [适用于 Visual Studio 2013 的 ASP.NET 和 Web 工具发行说明](/aspnet/visual-studio/overview/2013/release-notes)
 

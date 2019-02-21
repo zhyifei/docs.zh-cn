@@ -1,12 +1,6 @@
 ---
-title: 特性 (C#)
+title: '特性 (C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: f211e8af48bdfef0bb9bf4341c7a5911b5695101
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573328"
 ---
 # <a name="attributes-c"></a>特性 (C#)
 
@@ -57,7 +51,7 @@ ms.locfileid: "54573328"
 
 ### <a name="attribute-targets"></a>特性目标
 
-特性的*目标*是指应用特性的实体。 例如，特性可应用于类、特定方法或整个程序集。 默认情况下，特性应用于它后面紧接着的元素。 不过，还可以进行显式标识。例如，可以标识为将特性应用于方法，还是应用于其参数或返回值。
+特性目标是指应用特性的实体。 例如，特性可应用于类、特定方法或整个程序集。 默认情况下，特性应用于它后面紧接着的元素。 不过，还可以进行显式标识。例如，可以标识为将特性应用于方法，还是应用于其参数或返回值。
 
 若要显式标识特性目标，请使用以下语法：
 

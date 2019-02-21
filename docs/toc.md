@@ -259,6 +259,7 @@
 ### [探索 C# 6](csharp/tutorials/exploration/csharp-6.yml)
 ### [使用可为空引用类型](csharp/tutorials/nullable-reference-types.md)
 ### [生成和使用异步流](csharp/tutorials/generate-consume-asynchronous-stream.md)
+### [将应用升级为可以为 null 的引用类型](csharp/tutorials/upgrade-to-nullable-references.md)
 ### [控制台应用程序](csharp/tutorials/console-teleprompter.md)
 ### [REST 客户端](csharp/tutorials/console-webapiclient.md)
 ### [C# 和 .NET 中的继承](csharp/tutorials/inheritance.md)
