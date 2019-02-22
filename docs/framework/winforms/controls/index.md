@@ -2,16 +2,10 @@
 title: Windows 窗体控件
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Windows Forms controls
-- controls [Windows Forms]
-- Windows Forms controls, about Windows Forms controls
+  - Windows Forms controls
+  - 'controls [Windows Forms]'
+  - 'Windows Forms controls, about Windows Forms controls'
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
-ms.openlocfilehash: 5b3b49ca61d491a2593db7b43bf3efd0b63af650
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526242"
 ---
 # <a name="windows-forms-controls"></a>Windows 窗体控件
 设计和修改 Windows 窗体应用程序的用户界面时，需要添加、对齐和定位控件。 控件是窗体对象内包含的对象。 每种类型的控件都有自己的一组属性、方法和事件，使其适用于特定用途。 可以在设计器中控制控件，并将代码编写为在运行时动态添加控件。  
@@ -39,5 +33,3 @@ ms.locfileid: "43526242"
  [客户端应用程序](../../../../docs/framework/develop-client-apps.md)  
  概述了如何开发基于 Windows 的应用程序。  
   
- [Windows 窗体演练](https://msdn.microsoft.com/library/fd44d13d-4733-416f-aefc-32592e59e5d9)  
- 列出了关于 Windows 窗体和控件的演练主题。

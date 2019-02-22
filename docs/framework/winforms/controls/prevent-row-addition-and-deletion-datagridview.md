@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data entry [Windows Forms], disabling in grids
 - data grids [Windows Forms], disabling data entry
 ms.assetid: ef9539ce-539b-404e-84b6-ac282b64b88c
-ms.openlocfilehash: 0af92d43269685245d1732762a71d465e91d6c10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f579720b4f3ff561ecd807e09db8d464abc9001
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634553"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664583"
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a>如何：防止添加和 Windows 窗体 DataGridView 控件中的删除行
 有时想要阻止用户在 <xref:System.Windows.Forms.DataGridView> 控件中输入新的数据行或删除现有行。 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 属性指示新记录的行是否显示在控件底部，而 <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> 属性指示行是否可删除。 以下代码示例使用这些属性，并设置 <xref:System.Windows.Forms.DataGridView.ReadOnly%2A> 属性以使控件完全只读。  
   
- Visual Studio 中对此任务提供支持。  另请参阅[如何：防止行中添加和删除 Windows 窗体 DataGridView 控件使用设计器](https://msdn.microsoft.com/library/k5c88sw3\(v=vs.110\))。  
+ Visual Studio 中对此任务提供支持。 另请参阅[如何：防止行中添加和删除 Windows 窗体 DataGridView 控件使用设计器](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#090](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#090)]

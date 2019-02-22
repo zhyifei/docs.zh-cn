@@ -13,15 +13,16 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 55e10a929be9c76bd8b33771945cf84f6228980f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c4aecb4c7c7a15a7a0aad668b697af3ca0b033f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679313"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664921"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows 窗体中更加安全的文件和数据访问
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用权限帮助保护资源和数据。 你的应用程序可以读取或写入数据的位置取决于授予该应用程序的权限。 在部分信任环境中运行应用程序时，可能不具有对数据的访问权限，或可能必须更改访问数据的方式。  
+
+  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用权限帮助保护资源和数据。 你的应用程序可以读取或写入数据的位置取决于授予该应用程序的权限。 在部分信任环境中运行应用程序时，可能不具有对数据的访问权限，或可能必须更改访问数据的方式。  
   
  遇到安全限制时，你有两个选择：断言该权限（假设已将该权限授予你的应用程序），或者使用编写为用于部分信任中的功能版本。 以下各节探讨如何使用文件、数据库和在部分信任环境中运行的应用程序中的注册表访问。  
   
@@ -348,10 +349,10 @@ public void Write()
 }  
 ```  
   
-## <a name="database-access"></a>数据库访问  
+## <a name="database-access"></a>数据库访问权限  
  访问数据库所需的权限因数据库提供程序而异；但是，只有使用相应权限运行的应用程序可以通过数据连接访问数据库。 有关访问数据库所需的权限的详细信息，请参阅[代码访问安全性和 ADO.NET](../../../docs/framework/data/adonet/code-access-security.md)。  
   
- 如果因为要使应用程序以部分信任权限运行而不能直接访问数据库，作为一种替代方法，可将 Web 服务作为备份方法来访问你的数据。 Web 服务是一种软件，可通过网络以编程方式进行访问。 通过 Web 服务，应用程序可以跨代码组区域共享数据。 默认情况下，本地 Intranet 和 Internet 区域中的应用程序被授予了访问其源站点的权限，使其能够调用同一台服务器上托管的 Web 服务。 有关详细信息请参阅[ASP.NET AJAX 中的 Web 服务](https://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b)或[Windows Communication Foundation](https://msdn.microsoft.com/library/ms735119.aspx)。  
+ 如果因为要使应用程序以部分信任权限运行而不能直接访问数据库，作为一种替代方法，可将 Web 服务作为备份方法来访问你的数据。 Web 服务是一种软件，可通过网络以编程方式进行访问。 通过 Web 服务，应用程序可以跨代码组区域共享数据。 默认情况下，本地 Intranet 和 Internet 区域中的应用程序被授予了访问其源站点的权限，使其能够调用同一台服务器上托管的 Web 服务。 有关详细信息请参阅[ASP.NET AJAX 中的 Web 服务](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100))或[Windows Communication Foundation](../wcf/index.md)。  
   
 ## <a name="registry-access"></a>注册表访问  
  <xref:System.Security.Permissions.RegistryPermission> 类控制对操作系统注册表的访问。 默认情况下，只有在本地运行的应用程序可以访问注册表。  <xref:System.Security.Permissions.RegistryPermission> 仅授予应用程序尝试进行注册表访问的权限；它不保证访问一定成功，因为操作系统仍对注册表强制安全。  

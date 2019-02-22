@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: ceee83c9deb318f5912eb724cbd237c3d7b73152
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a251aabe7acdc8e59b31d9534e27f0afeab3633
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733332"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664219"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>演练：在设计时调试自定义 Windows 窗体控件
 时创建自定义控件，您通常会发现它需要调试其设计时行为。 这是如果自定义设计器创作自定义控件尤其如此。 有关详细信息，请参阅[演练：创建 Windows 窗体控件都使用了 Visual Studio 设计时功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
@@ -60,9 +60,9 @@ ms.locfileid: "54733332"
   
 1.  添加**Windows 控件库**到解决方案。  
   
-2.  添加一个新**UserControl** DebugControlLibrary 项目项。 有关详细信息，请参阅[NIB： 如何：添加新项目项](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 新的源文件基名称指定为"DebugControl"。  
+2.  添加一个新**UserControl** DebugControlLibrary 项目项。 有关详细信息，请参阅[如何：添加新项目项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))。 新的源文件基名称指定为"DebugControl"。  
   
-3.  使用**解决方案资源管理器**，通过删除代码文件的基名称中删除项目的默认控件"`UserControl1`"。 有关详细信息，请参阅[NIB： 如何：移除、 删除和排除项](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+3.  使用**解决方案资源管理器**，通过删除代码文件的基名称中删除项目的默认控件"`UserControl1`"。 有关详细信息，请参阅[如何：移除、 删除和排除项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))。  
   
 4.  生成解决方案。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "54733332"
 ## <a name="next-steps"></a>后续步骤  
  现在，可以在设计时调试自定义控件，有许多可能的扩展与 Visual Studio IDE 的控件的交互。  
   
--   可以使用<xref:System.ComponentModel.Component.DesignMode%2A>属性的<xref:System.ComponentModel.Component>类来编写代码，将仅在设计时执行。 有关详细信息，请参阅<xref:System.ComponentModel.Component.DesignMode%2A>。  
+-   可以使用<xref:System.ComponentModel.Component.DesignMode%2A>属性的<xref:System.ComponentModel.Component>类来编写代码，将仅在设计时执行。 有关详细信息，请参阅 <xref:System.ComponentModel.Component.DesignMode%2A>。  
   
 -   有几个特性可应用于控件的属性，以处理与设计器的自定义控件的交互。 您可以找到这些属性在<xref:System.ComponentModel?displayProperty=nameWithType>命名空间。  
   
@@ -174,5 +174,5 @@ ms.locfileid: "54733332"
   
 ## <a name="see-also"></a>请参阅
 - [演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)
-- [如何：访问设计时服务](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)
-- [如何：在 Windows 窗体中访问设计时支持](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+- [如何：访问设计时服务](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
+- [如何：在 Windows 窗体中访问设计时支持](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

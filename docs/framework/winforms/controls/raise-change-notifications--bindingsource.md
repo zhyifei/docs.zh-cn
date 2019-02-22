@@ -13,15 +13,16 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], using with BindingSource
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
-ms.openlocfilehash: cf6f39154b7b896a835bda7f946134fbff8dbe17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3ac3982905bf3d84c9cc570d901d95ca14cc92e
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543953"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664063"
 ---
 # <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>如何：使用 BindingSource 和 INotifyPropertyChanged 接口引发更改通知
-<xref:System.Windows.Forms.BindingSource> 组件将在数据源中包含的类型实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口时自动删除数据源中的更改，并在属性值更改时引发 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件。 上述操作非常有用，因为已绑定到 <xref:System.Windows.Forms.BindingSource> 的控件之后会在数据源值更改时自动更新。  
+
+  <xref:System.Windows.Forms.BindingSource> 组件将在数据源中包含的类型实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口时自动删除数据源中的更改，并在属性值更改时引发 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件。 上述操作非常有用，因为已绑定到 <xref:System.Windows.Forms.BindingSource> 的控件之后会在数据源值更改时自动更新。  
   
 > [!NOTE]
 >  如果数据源实现 <xref:System.ComponentModel.INotifyPropertyChanged>，并且你正在执行异步操作，则不应更改后台线程上的数据源。 相反，应读取后台线程上的数据，并将数据合并到 UI 线程上的列表。  
@@ -29,7 +30,7 @@ ms.locfileid: "54543953"
 ## <a name="example"></a>示例  
  下面的代码示例演示了如何简单实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口。 它还演示了当将 <xref:System.Windows.Forms.BindingSource> 绑定到 <xref:System.ComponentModel.INotifyPropertyChanged> 类型的列表时，<xref:System.Windows.Forms.BindingSource> 如何将数据源更改自动传递到绑定控件。  
   
- 如果使用 `CallerMemberName` 特性，则调用 `NotifyPropertyChanged` 方法不必将属性名称指定为字符串自变量。 有关详细信息，请参阅[调用方信息](https://msdn.microsoft.com/library/9cb2b8c0-c4f6-44b8-9c90-38948455b373)。  
+ 如果使用 `CallerMemberName` 特性，则调用 `NotifyPropertyChanged` 方法不必将属性名称指定为字符串参数。 有关详细信息，请参阅[调用方信息 (C#)](../../../csharp/programming-guide/concepts/caller-information.md)或[调用方信息 (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)。  
   
  [!code-csharp[System.ComponentModel.IPropertyChangeExample#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/CS/Form1.cs#1)]
  [!code-vb[System.ComponentModel.IPropertyChangeExample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/VB/Form1.vb#1)]  

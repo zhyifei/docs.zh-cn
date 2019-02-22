@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b37c57093662c94f5ad20bf9d01c63223b5901fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 354375d4758e4ab34d34571257f6414e6a8584f0
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581972"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664193"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何：从命令行创建 Windows 窗体应用程序
-下面的过程介绍从命令行创建和运行 Windows 窗体应用程序所必须完成的基本步骤。 在 Visual Studio 中没有对这些过程的扩展支持。  另请参阅[演练：创建简单 Windows 窗体](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))。  
+下面的过程介绍从命令行创建和运行 Windows 窗体应用程序所必须完成的基本步骤。 在 Visual Studio 中没有对这些过程的扩展支持。  另请参阅[演练：在 WPF 中承载 Windows 窗体控件](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。  
   
 ## <a name="procedure"></a>过程  
   

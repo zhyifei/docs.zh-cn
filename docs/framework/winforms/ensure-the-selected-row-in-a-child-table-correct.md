@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: ef2c72fb941aa40eff85af4a83f6c76843dc2d6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ecac036bf081959b8ce2ba0afe8fdeed9ed9099
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547626"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664232"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>如何：请确保子表中的选定的行保持在正确的位置
 通常当在 Windows 窗体中使用数据绑定时，将显示称为父/子视图或母版/详细视图中的数据。 这是指一个数据绑定方案，其中来自同一源的数据将显示在两个控件中。 更改一个控件中的选定内容会导致在第二个控件中显示的数据变动。 例如，第一个控件可能会包含一个客户列表，而第二个控件则可能包含与第一个控件中选定客户相关的订单列表。  
@@ -81,7 +81,7 @@ ms.locfileid: "54547626"
   
 -   对 System、System.Data、System.Drawing、System.Windows.Forms 和 System.Xml 程序集的引用。  
   
- 有关如何为 Visual Basic 或 Visual C# 构建此示例从命令行的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：编译和运行完整的 Windows 窗体代码示例使用 Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ 有关如何为 Visual Basic 或 Visual C# 构建此示例从命令行的信息，请参阅[从命令行生成](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
 ## <a name="see-also"></a>请参阅
 - [如何：确保多个控件绑定到相同的数据源保持同步](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)

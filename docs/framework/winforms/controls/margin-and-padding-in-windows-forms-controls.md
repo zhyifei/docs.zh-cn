@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: be5d1ae308b9412f914f1cde91d1cc5834212df8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3218ad029735f4a5d70b3166951dcd93e061c26
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570546"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665220"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Windows 窗体控件中的边距和填充
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间给你提供许多布局功能来实现此目的。 其中两个最重要的功能是 <xref:System.Windows.Forms.Control.Margin%2A> 和 <xref:System.Windows.Forms.Control.Padding%2A> 属性。  
@@ -25,7 +25,7 @@ ms.locfileid: "54570546"
   
  ![填充和边距的 Windows 窗体控件](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- Visual Studio 中具有对此功能的设计时支持。  另请参阅[演练：对 Windows 窗体控件使用 Padding、 Margins 和 AutoSize 属性](https://msdn.microsoft.com/library/3z3f9e8b\(v=vs.110\))。  
+ Visual Studio 中具有对此功能的设计时支持。 另请参阅[演练：对 Windows 窗体控件使用 Padding、 Margins 和 AutoSize 属性](windows-forms-controls-padding-autosize.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
