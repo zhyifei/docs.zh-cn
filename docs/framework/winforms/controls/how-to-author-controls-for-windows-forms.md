@@ -6,18 +6,18 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: a6ea57dda8f034684e8590ce4c3b6d37ab01230e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbb14e30e3ed2bebdabcf9163291c647e05b1cc5
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579519"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584377"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>如何：Windows 窗体的作者控件
 控件表示用户和程序之间的图形链接。 控件可以提供或处理数据、接受用户输入、响应事件或执行连接用户和应用程序的其他功能（任意数量）。 因为控件本质上是具有图形界面的组件，所以它能提供组件所提供的所有功能并提供用户交互。 控件是针对特定目的而创建的，而创作控件只是另一种编程任务。 考虑到这一点，以下步骤概述了控件的创作过程。 链接提供有关各个步骤的附加信息。  
   
 > [!NOTE]
->  如果想要创作在 Web 窗体上使用的自定义控件，请参阅[开发自定义 ASP.NET 服务器控件](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
+>  如果想要创作在 Web 窗体上使用的自定义控件，请参阅[开发自定义 ASP.NET 服务器控件](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))。  
 >   
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54579519"
   
 9. 重复上述步骤，优化设计。  
   
-10. 打包和部署控件。 有关详细信息，请参阅[部署应用程序、服务和组件](https://msdn.microsoft.com/library/wtzawcsz)。  
+10. 打包和部署控件。 有关详细信息，请参阅[首先看一下 Visual Studio 中的部署](/visualstudio/deployment/deploying-applications-services-and-components)。  
   
 ## <a name="see-also"></a>请参阅
 - [演练：创作复合控件使用 Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)

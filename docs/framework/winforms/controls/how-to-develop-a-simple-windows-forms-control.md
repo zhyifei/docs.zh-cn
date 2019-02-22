@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 4afa4b9e2c92569df4c8023d7dbfdfb025bf94b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36891a5acbb2fe06b4ab61573e26612927587c01
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527622"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583831"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>如何：开发的简单 Windows 窗体控件
 本部分演示创建自定义 Windows 窗体控件的关键步骤。 在本演练中开发的简单控件允许的对齐方式及其<xref:System.Windows.Forms.Control.Text%2A>要更改属性。 它不会引发或处理事件。  
@@ -34,7 +34,7 @@ ms.locfileid: "54527622"
     public class FirstControl:Control {}  
     ```  
   
-2.  定义属性。 (不需要定义属性，因为控件继承许多属性从<xref:System.Windows.Forms.Control>类，但大多数自定义控件通常会定义其他属性。)以下代码片段定义名为的属性`TextAlignment`该`FirstControl`使用的显示格式<xref:System.Windows.Forms.Control.Text%2A>属性继承自<xref:System.Windows.Forms.Control>。 有关定义属性的详细信息，请参阅[属性概述](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。  
+2.  定义属性。 (不需要定义属性，因为控件继承许多属性从<xref:System.Windows.Forms.Control>类，但大多数自定义控件通常会定义其他属性。)以下代码片段定义名为的属性`TextAlignment`该`FirstControl`使用的显示格式<xref:System.Windows.Forms.Control.Text%2A>属性继承自<xref:System.Windows.Forms.Control>。 有关定义属性的详细信息，请参阅[属性概述](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120))。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
@@ -46,7 +46,7 @@ ms.locfileid: "54527622"
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  为控件提供属性。 特性让视觉设计器能够在设计时适当显示控件及其属性和事件。 以下代码片段将特性应用于 `TextAlignment` 属性。 在设计器中 Visual Studio 中，如<xref:System.ComponentModel.CategoryAttribute.Category%2A>属性 （如代码段所示） 会导致在逻辑类别下显示的属性。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>属性使描述性字符串显示在底部**属性**窗口时`TextAlignment`选择属性。 有关属性的详细信息，请参阅[组件的设计时属性](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)。  
+4.  为控件提供属性。 特性让视觉设计器能够在设计时适当显示控件及其属性和事件。 以下代码片段将特性应用于 `TextAlignment` 属性。 在设计器中 Visual Studio 中，如<xref:System.ComponentModel.CategoryAttribute.Category%2A>属性 （如代码段所示） 会导致在逻辑类别下显示的属性。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>属性使描述性字符串显示在底部**属性**窗口时`TextAlignment`选择属性。 有关属性的详细信息，请参阅[组件的设计时属性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  

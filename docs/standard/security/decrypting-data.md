@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f41a61fe929bb3eaf691deb75749777c0880aea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cb0b010a7b5f3e9baaf1c075bfbcf25cea842fe
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530679"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583480"
 ---
 # <a name="decrypting-data"></a>解密数据
 解密是加密的反向操作。 对于私钥加密，必须知道用于加密数据的密钥和 IV。 对于公钥加密，必须知道公钥（如果使用了私钥来加密数据）或私钥（如果使用了公钥来加密数据）。  
@@ -26,16 +26,16 @@ ms.locfileid: "54530679"
 ## <a name="symmetric-decryption"></a>对称解密  
  解密用对称算法加密的数据类似于用对称算法加密数据的过程。 若要对从任何托管流对象中读取的数据进行解密，应将 <xref:System.Security.Cryptography.CryptoStream> 与 .NET Framework 提供的对称加密类一起使用。  
   
- 下面的示例演示如何创建 <xref:System.Security.Cryptography.RijndaelManaged> 类的新实例，并使用该实例对 <xref:System.Security.Cryptography.CryptoStream> 对象执行解密。 此示例首先创建 **RijndaelManaged** 类的一个新实例。 接下来，它创建一个 **CryptoStream** 对象并将其初始化为称作 `MyStream`的托管流的值。 随后，将用于加密的同一个密钥和 IV 传递给 **RijndaelManaged** 类的 **CreateDecryptor** 方法，然后将该方法传递给 **CryptoStream** 构造函数。 最后，将 **CryptoStreamMode.Read** 枚举传递给 **CryptoStream** 构造函数，以指定对流的读取访问权限。  
+ 下面的示例演示如何创建 <xref:System.Security.Cryptography.RijndaelManaged> 类的新实例，并使用该实例对 <xref:System.Security.Cryptography.CryptoStream> 对象执行解密。 此示例首先创建 **RijndaelManaged** 类的一个新实例。 接下来，它创建一个 **CryptoStream** 对象并将其初始化为称作 `myStream`的托管流的值。 随后，将用于加密的同一个密钥和 IV 传递给 **RijndaelManaged** 类的 **CreateDecryptor** 方法，然后将该方法传递给 **CryptoStream** 构造函数。 最后，将 **CryptoStreamMode.Read** 枚举传递给 **CryptoStream** 构造函数，以指定对流的读取访问权限。  
   
 ```vb  
-Dim RMCrypto As New RijndaelManaged()  
-Dim CryptStream As New CryptoStream(MyStream, RMCrypto.CreateDecryptor(RMCrypto.Key, RMCrypto.IV), CryptoStreamMode.Read)  
+Dim rmCrypto As New RijndaelManaged()  
+Dim cryptStream As New CryptoStream(myStream, rmCrypto.CreateDecryptor(rmCrypto.Key, rmCrypto.IV), CryptoStreamMode.Read)  
 ```  
   
 ```csharp  
-RijndaelManaged RMCrypto = new RijndaelManaged();  
-CryptoStream CryptStream = new CryptoStream(MyStream, RMCrypto.CreateDecryptor(Key, IV), CryptoStreamMode.Read);  
+RijndaelManaged rmCrypto = new RijndaelManaged();  
+CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateDecryptor(Key, IV), CryptoStreamMode.Read);  
 ```  
   
  下面的示例显示创建流、解密流、从流中读取和关闭流的整个过程。 创建一个 <xref:System.Net.Sockets.TcpListener> 对象，它在建立到侦听对象的连接时初始化一个网络流。 然后，使用 **CryptoStream** 类和 **RijndaelManaged** 类解密该网络流。 此示例假定已成功传输或已预先商定密钥和 IV。 它不会显示加密和传输这些值所需的代码。  
@@ -52,47 +52,47 @@ Module Module1
     Sub Main()  
             'The key and IV must be the same values that were used  
             'to encrypt the stream.    
-            Dim Key As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}  
-            Dim IV As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}  
+            Dim key As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}  
+            Dim iv As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}  
         Try  
             'Initialize a TCPListener on port 11000  
             'using the current IP address.  
-            Dim TCPListen As New TcpListener(IPAddress.Any, 11000)  
+            Dim tcpListen As New TcpListener(IPAddress.Any, 11000)  
   
             'Start the listener.  
-            TCPListen.Start()  
+            tcpListen.Start()  
   
             'Check for a connection every five seconds.  
-            While Not TCPListen.Pending()  
+            While Not tcpListen.Pending()  
                 Console.WriteLine("Still listening. Will try in 5 seconds.")  
   
                 Thread.Sleep(5000)  
             End While  
   
             'Accept the client if one is found.  
-            Dim TCP As TcpClient = TCPListen.AcceptTcpClient()  
+            Dim tcp As TcpClient = tcpListen.AcceptTcpClient()  
   
             'Create a network stream from the connection.  
-            Dim NetStream As NetworkStream = TCP.GetStream()  
+            Dim netStream As NetworkStream = tcp.GetStream()  
   
             'Create a new instance of the RijndaelManaged class  
             'and decrypt the stream.  
-            Dim RMCrypto As New RijndaelManaged()  
+            Dim rmCrypto As New RijndaelManaged()  
   
             'Create an instance of the CryptoStream class, pass it the NetworkStream, and decrypt   
             'it with the Rijndael class using the key and IV.  
-            Dim CryptStream As New CryptoStream(NetStream, RMCrypto.CreateDecryptor(Key, IV), CryptoStreamMode.Read)  
+            Dim cryptStream As New CryptoStream(netStream, rmCrypto.CreateDecryptor(key, iv), CryptoStreamMode.Read)  
   
             'Read the stream.  
-            Dim SReader As New StreamReader(CryptStream)  
+            Dim sReader As New StreamReader(cryptStream)  
   
             'Display the message.  
-            Console.WriteLine("The decrypted original message: {0}", SReader.ReadToEnd())  
+            Console.WriteLine("The decrypted original message: {0}", sReader.ReadToEnd())  
   
             'Close the streams.  
-            SReader.Close()  
-            NetStream.Close()  
-            TCP.Close()  
+            sReader.Close()  
+            netStream.Close()  
+            tcp.Close()  
             'Catch any exceptions.   
         Catch  
             Console.WriteLine("The Listener Failed.")  
@@ -115,50 +115,50 @@ class Class1
    {  
       //The key and IV must be the same values that were used  
       //to encrypt the stream.    
-      byte[] Key = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};  
-      byte[] IV = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};  
+      byte[] key = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};  
+      byte[] iv = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};  
       try  
       {  
          //Initialize a TCPListener on port 11000  
          //using the current IP address.  
-         TcpListener TCPListen = new TcpListener(IPAdress.Any, 11000);  
+         TcpListener tcpListen = new TcpListener(IPAdress.Any, 11000);  
   
          //Start the listener.  
-         TCPListen.Start();  
+         tcpListen.Start();  
   
          //Check for a connection every five seconds.  
-         while(!TCPListen.Pending())  
+         while(!tcpListen.Pending())  
          {  
             Console.WriteLine("Still listening. Will try in 5 seconds.");  
             Thread.Sleep(5000);  
          }  
   
          //Accept the client if one is found.  
-         TcpClient TCP = TCPListen.AcceptTcpClient();  
+         TcpClient tcp = tcpListen.AcceptTcpClient();  
   
          //Create a network stream from the connection.  
-         NetworkStream NetStream = TCP.GetStream();  
+         NetworkStream netStream = tcp.GetStream();  
   
          //Create a new instance of the RijndaelManaged class  
          // and decrypt the stream.  
-         RijndaelManaged RMCrypto = new RijndaelManaged();  
+         RijndaelManaged rmCrypto = new RijndaelManaged();  
   
          //Create a CryptoStream, pass it the NetworkStream, and decrypt   
          //it with the Rijndael class using the key and IV.  
-         CryptoStream CryptStream = new CryptoStream(NetStream,   
-            RMCrypto.CreateDecryptor(Key, IV),   
+         CryptoStream cryptStream = new CryptoStream(netStream,   
+            rmCrypto.CreateDecryptor(key, iv),   
             CryptoStreamMode.Read);  
   
          //Read the stream.  
-         StreamReader SReader = new StreamReader(CryptStream);  
+         StreamReader sReader = new StreamReader(cryptStream);  
   
          //Display the message.  
-         Console.WriteLine("The decrypted original message: {0}", SReader.ReadToEnd());  
+         Console.WriteLine("The decrypted original message: {0}", sReader.ReadToEnd());  
   
          //Close the streams.  
-         SReader.Close();  
-         NetStream.Close();  
-         TCP.Close();  
+         sReader.Close();  
+         netStream.Close();  
+         tcp.Close();  
       }  
       //Catch any exceptions.   
       catch  
@@ -180,26 +180,26 @@ class Class1
   
 ```vb  
 'Create a new instance of the RSACryptoServiceProvider class.  
-Dim RSA As New RSACryptoServiceProvider()  
+Dim rsa As New RSACryptoServiceProvider()  
   
 ' Export the public key information and send it to a third party.  
 ' Wait for the third party to encrypt some data and send it back.  
-  
+
 'Decrypt the symmetric key and IV.  
-SymmetricKey = RSA.Decrypt(EncryptedSymmetricKey, False)  
-SymmetricIV = RSA.Decrypt(EncryptedSymmetricIV, False)  
+symmetricKey = rsa.Decrypt(encryptedSymmetricKey, False)  
+symmetricIV = rsa.Decrypt(encryptedSymmetricIV, False)  
 ```  
   
 ```csharp  
 //Create a new instance of the RSACryptoServiceProvider class.  
-RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();  
+RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();  
   
 // Export the public key information and send it to a third party.  
 // Wait for the third party to encrypt some data and send it back.  
-  
+
 //Decrypt the symmetric key and IV.  
-SymmetricKey = RSA.Decrypt( EncryptedSymmetricKey, false);  
-SymmetricIV = RSA.Decrypt( EncryptedSymmetricIV , false);  
+symmetricKey = rsa.Decrypt(encryptedSymmetricKey, false);  
+symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);  
 ```  
   
 ## <a name="see-also"></a>请参阅

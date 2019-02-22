@@ -7,18 +7,18 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: f2dc0ca7c2514ad444904b707a2cea9d57849660
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2ccbfaf8305270116e3a85578e3e560ed0b4836
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549793"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584208"
 ---
 # <a name="how-to-author-composite-controls"></a>如何：创作复合控件
 可通过多种方式使用复合控件。 可将其作为 Windows 桌面应用程序项目的一部分创作，并只在该项目的窗体上使用它们。 或者，可在 Windows 控件库项目中创作它们，将该项目编译为程序集，在其他项目中使用这些控件。 甚至可以从它们继承，并针对特殊目的使用视觉对象继承快速对它们进行自定义。  
   
 > [!NOTE]
->  如果想要编写在 Web 窗体上使用的复合控件，请参阅[开发自定义 ASP.NET 服务器控件](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
+>  如果想要编写在 Web 窗体上使用的复合控件，请参阅[开发自定义 ASP.NET 服务器控件](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))。  
 >   
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   

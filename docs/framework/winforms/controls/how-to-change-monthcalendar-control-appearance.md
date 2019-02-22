@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: b7f321c1557bc7ea19213f2fc67767fe56328cf4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f182a65a74507411f2474aca294c479e3b2b9ca6
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258912"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584039"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>如何：更改 Windows 窗体 MonthCalendar 控件的外观
 Windows 窗体<xref:System.Windows.Forms.MonthCalendar>让您可以自定义在很多方面的日历的外观。 例如，可以设置配色方案，并选择要显示或隐藏周数和当前日期。  
@@ -42,7 +42,7 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>让您可以自定义在�
     ```  
   
     > [!NOTE]
-    >  从开始使用 Windows Vista，具体取决于主题，设置某些属性可能会更改日历的外观。 例如，如果 Windows 设置为使用 Aero 主题，则将设置<xref:System.Windows.Forms.MonthCalendar.BackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>，或<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>属性不起作用。 这是因为该日历的更新的版本呈现在运行时派生自当前操作系统主题的外观。 如果你想要使用这些属性，并启用日历的早期版本，则可以为应用程序禁用视觉样式。 禁用视觉样式，可能会影响的外观和行为的应用程序中的其他控件。 若要禁用在 Visual Basic 中的视觉样式，请打开项目设计器，并取消选中**启用 XP 视觉样式**复选框。 若要禁用视觉样式在 C# 中的，打开 Program.cs，并注释掉`Application.EnableVisualStyles();`。 视觉样式的详细信息，请参阅[如何：启用 Windows XP 视觉样式](https://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f)。  
+    >  从开始使用 Windows Vista，具体取决于主题，设置某些属性可能会更改日历的外观。 例如，如果 Windows 设置为使用 Aero 主题，则将设置<xref:System.Windows.Forms.MonthCalendar.BackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>，或<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>属性不起作用。 这是因为该日历的更新的版本呈现在运行时派生自当前操作系统主题的外观。 如果你想要使用这些属性，并启用日历的早期版本，则可以为应用程序禁用视觉样式。 禁用视觉样式，可能会影响的外观和行为的应用程序中的其他控件。 若要禁用在 Visual Basic 中的视觉样式，请打开项目设计器，并取消选中**启用 XP 视觉样式**复选框。 若要禁用视觉样式在 C# 中的，打开 Program.cs，并注释掉`Application.EnableVisualStyles();`。 视觉样式的详细信息，请参阅[启用视觉样式](/windows/desktop/controls/cookbook-overview)。  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>若要在控件的底部显示当前日期  
   

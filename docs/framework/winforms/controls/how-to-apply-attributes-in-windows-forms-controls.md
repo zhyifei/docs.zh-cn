@@ -9,12 +9,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 522c8b207b86608e3bbd9a5831a3adb5c6d6d430
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35cd40a3219c86e8f82f85360bf213d6ef3f9fc6
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735151"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583935"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>如何：应用 Windows 窗体控件中的特性
 若要开发的组件和控件的设计环境与正确交互，并在运行时正确执行，需要正确地将特性应用于类和成员。  
@@ -82,4 +82,4 @@ ms.locfileid: "54735151"
 - <xref:System.Windows.Forms.DataGridView>
 - [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
-- [如何：序列化使用 DesignerSerializationVisibilityAttribute 标准类型的集合](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+- [如何：序列化使用 DesignerSerializationVisibilityAttribute 标准类型的集合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))

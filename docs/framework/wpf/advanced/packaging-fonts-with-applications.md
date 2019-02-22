@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 52ed421ee92eed29bf16815d22e3ec7a8b718a84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a822167ae5b2758a889c61eed5270e5abb01f961
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632343"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583415"
 ---
 # <a name="packaging-fonts-with-applications"></a>将字体与应用程序一起打包
 本主题提供概述了如何使用包字体在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。  
@@ -31,7 +31,7 @@ ms.locfileid: "54632343"
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 和[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字体包含类型标志 fsType，指示字体的字体嵌入许可权。 但是，这个类型标志仅引用存储在文档中的嵌入字体，而不引用嵌入到应用程序中的字体。 您可以检索字体的字体嵌入字体的权限通过创建<xref:System.Windows.Media.GlyphTypeface>对象并引用其<xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>属性。 请参阅的"OS/2 和 Windows 指标"部分[OpenType 规范](https://www.microsoft.com/typography/otspec/os2.htm)有关 fsType 标志的详细信息。  
   
- [Microsoft 版式](https://www.microsoft.com/typography/links/)网站包括可帮助您找到特定的字体供应商或查找自定义工作的字体供应商的联系信息。  
+ [Microsoft 版式](https://docs.microsoft.com/typography/)网站包括可帮助您找到特定的字体供应商或查找自定义工作的字体供应商的联系信息。  
   
 <a name="adding_fonts_as_content_items"></a>   
 ## <a name="adding-fonts-as-content-items"></a>将字体作为内容项添加  
@@ -175,7 +175,7 @@ ms.locfileid: "54632343"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Microsoft 版式：链接、 新闻和联系人](https://www.microsoft.com/typography/links/)
+- [Microsoft 版式：链接、 新闻和联系人](https://docs.microsoft.com/typography/)
 - [OpenType 规范](https://www.microsoft.com/typography/otspec/)
 - [OpenType 字体功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
 - [示例 OpenType 字体包](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

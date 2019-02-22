@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], row styles
 - rows [Windows Forms], data grids
 ms.assetid: 699ef759-458c-426d-ac87-7c7e71b018ae
-ms.openlocfilehash: ba5aaec9e66f1d3c66bb50709f6fbd4afde893ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eea77b7601b7dc81b92f7b08806f3f00b494aecd
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562721"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583883"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>如何：设置 Windows 窗体 DataGridView 控件的交替行样式
 表格数据通常以类似帐目的格式向用户显示，其中的交替行具有不同的背景色。 这种格式使用户可以更轻松地分辨每一行的单元格，尤其是有多列的宽表。  
   
  借助 <xref:System.Windows.Forms.DataGridView> 控件，可为交替行指定完整的样式信息。 这使你可以使用背景色以及样式特性（如前景色和字体）区分交替行。  
   
- Visual Studio 中对此任务提供支持。  另请参阅[如何：设置 Windows 窗体 DataGridView 控件使用设计器的交替行样式](https://msdn.microsoft.com/library/3z9sk148\(v=vs.110\))。  
+ Visual Studio 中对此任务提供支持。  另请参阅[如何：设置 Windows 窗体 DataGridView 控件使用设计器的交替行样式](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)。  
   
 ### <a name="to-set-alternating-row-styles-programmatically"></a>若要以编程方式设置交替行样式  
   

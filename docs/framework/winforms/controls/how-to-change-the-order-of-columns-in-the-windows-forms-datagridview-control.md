@@ -9,19 +9,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
-ms.openlocfilehash: 8e090bcafb66f2d6a997f9b54626d1bf23d7032e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8e18080e757ceb4818bb795926a1eb4c27cf067
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649513"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583350"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>如何：更改 Windows 窗体 DataGridView 控件中的列顺序
 使用 <xref:System.Windows.Forms.DataGridView> 显示来自数据源的数据时，有时数据源架构中的列不会按你想要显示的顺序显示。 可以通过使用 <xref:System.Windows.Forms.DataGridViewColumn> 类的 <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> 属性，更改列的显示顺序。  
   
  以下代码示例将重新定位绑定到 Northwind 示例数据库中的客户表时自动生成的某些列。 有关如何将绑定的详细信息<xref:System.Windows.Forms.DataGridView>控制对数据库表，请参阅[如何：将数据绑定到 Windows 窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)。  
   
- Visual Studio 中对此任务提供支持。  另请参阅[如何：更改使用设计器在 Windows 窗体 DataGridView 控件中的列顺序](https://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))  
+ Visual Studio 中对此任务提供支持。  另请参阅[如何：更改使用设计器在 Windows 窗体 DataGridView 控件中的列顺序](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#040](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#040)]

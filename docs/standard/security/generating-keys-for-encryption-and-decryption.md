@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32f9a5f92ae580839ce46476de9f9c7edcd54685
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c566c54343f1dd7c3da2701c2b7ea9f815e22e7b
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573395"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583662"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>生成加密和解密的密钥
 创建和管理密钥是加密过程的一个重要部分。 对称算法要求创建密钥和初始化向量 (IV)。 密钥必须对不应解密数据的任何人保密。 IV 并不是一定要保密，但应定期更改。 非对称算法要求创建公钥和私钥。 公钥可以公开给任何人，而私钥必须只有将解密用公钥加密的数据的参与方知道。 本节介绍如何生成和管理对称和非对称算法的密钥。  
@@ -34,11 +34,11 @@ ms.locfileid: "54573395"
  下列示例演示如何创建 <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider> 类的新实例，该类会实现 TripleDES 算法。  
   
 ```vb  
-Dim TDES As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
+Dim tdes As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
 ```  
   
 ```csharp  
-TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();  
+TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();  
 ```  
   
  执行前面的代码后，将生成新的密钥和 IV，并分别置于 **Key** 和 **IV** 属性中。  
@@ -46,15 +46,15 @@ TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();
  有时可能需要生成多个密钥。 在这种情况下，你可以创建会实现对称算法的类的新实例，然后通过调用 **GenerateKey** 和 **GenerateIV** 方法来创建新的密钥和 IV。 下面的代码示例说明了如何创建新的密钥和 Iv 后对称加密类的新实例。  
   
 ```vb  
-Dim TDES As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
-TDES.GenerateIV()  
-TDES.GenerateKey()  
+Dim tdes As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
+tdes.GenerateIV()  
+tdes.GenerateKey()  
 ```  
   
 ```csharp  
-TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();  
-TDES.GenerateIV();  
-TDES.GenerateKey();  
+TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();  
+tdes.GenerateIV();  
+tdes.GenerateKey();  
 ```  
   
  执行前面的代码后，在创建 **TripleDESCryptoServiceProvider** 的新实例时会生成一个密钥和 IV。 调用 **GenerateKey** 和 **GenerateIV** 方法时会创建另一个密钥和 IV。  
@@ -76,16 +76,16 @@ TDES.GenerateKey();
   
 ```vb  
 'Generate a public/private key pair.  
-Dim RSA as RSACryptoServiceProvider = new RSACryptoServiceProvider()  
+Dim rsa as RSACryptoServiceProvider = new RSACryptoServiceProvider()  
 'Save the public key information to an RSAParameters structure.  
-Dim RSAKeyInfo As RSAParameters = RSA.ExportParameters(false)  
+Dim rsaKeyInfo As RSAParameters = rsa.ExportParameters(false)  
 ```  
   
 ```csharp  
 //Generate a public/private key pair.  
-RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();  
+RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();  
 //Save the public key information to an RSAParameters structure.  
-RSAParameters RSAKeyInfo = RSA.ExportParameters(false);  
+RSAParameters rsaKeyInfo = rsa.ExportParameters(false);  
 ```  
   
 ## <a name="see-also"></a>请参阅

@@ -1,13 +1,13 @@
 ---
 title: 序列
 description: 了解如何使用F#序列，当你具有较大时排序的数据集合，但不一定希望使用的所有元素。
-ms.date: 05/16/2016
-ms.openlocfilehash: a86d22c834b377d4e92cfa610cdd3b498dd86dfa
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/19/2019
+ms.openlocfilehash: a7791be5e8bd07d81fe9e890fc5896b181f0cb39
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611992"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583922"
 ---
 # <a name="sequences"></a>序列
 
@@ -98,7 +98,7 @@ ms.locfileid: "53611992"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)从使用一个状态和转换以生成序列中的每个后续元素的计算函数生成的序列。 状态为只是一个值，该值用于计算每个元素，并根据计算每个元素可以更改。 第二个参数`Seq.unfold`是用于启动序列的初始值。 `Seq.unfold` 使用状态时，这样就可以通过返回终止序列选项类型`None`值。 下面的代码演示的序列，两个示例`seq1`并`fib`，生成的`unfold`操作。 第一种`seq1`，是只具有最多 100 个数字的简单序列。 第二类是`fib`，使用`unfold`计算斐波那契序列。 斐波那契序列中的每个元素是前两个斐波那契数字的总和，因为状态值将为元组组成的序列中前两个数字。 初始值是`(1,1)`，序列中的前两个数字。
+[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)从使用一个状态和转换以生成序列中的每个后续元素的计算函数生成的序列。 状态为只是一个值，该值用于计算每个元素，并根据计算每个元素可以更改。 第二个参数`Seq.unfold`是用于启动序列的初始值。 `Seq.unfold` 使用状态时，这样就可以通过返回终止序列选项类型`None`值。 下面的代码演示的序列，两个示例`seq1`并`fib`，生成的`unfold`操作。 第一种`seq1`，是只具有最多 20 个数字的简单序列。 第二类是`fib`，使用`unfold`计算斐波那契序列。 斐波那契序列中的每个元素是前两个斐波那契数字的总和，因为状态值将为元组组成的序列中前两个数字。 初始值是`(1,1)`，序列中的前两个数字。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 
