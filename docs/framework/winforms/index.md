@@ -2,51 +2,45 @@
 title: Windows 窗体
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Windows Forms
-- user interface
-- user interface [Windows Forms], forms
+  - Windows Forms
+  - user interface
+  - 'user interface [Windows Forms], forms'
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: bb785860ed3cccbd93273805e5f2bada2f5f9c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542244"
 ---
-# <a name="windows-forms"></a><span data-ttu-id="2d2f9-102">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="2d2f9-102">Windows Forms</span></span>
-<span data-ttu-id="2d2f9-103">因为窗体是应用程序的基本单位，有必要思考一下它们的功能和设计。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-103">As forms are the base unit of your application, it is essential that you give some thought to their function and design.</span></span> <span data-ttu-id="2d2f9-104">窗体最终成为白板，作为开发成员，你要用控件进行增强以创建用户界面，并借助代码操纵数据。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-104">A form is ultimately a blank slate that you, as a developer, enhance with controls to create a user interface and with code to manipulate data.</span></span> <span data-ttu-id="2d2f9-105">为此，Visual Studio 为您提供的集成的开发环境 (IDE) 可帮助编写代码，以及丰富的控件集编写的[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-105">To that end, Visual Studio provides you with an integrated development environment (IDE) to aid in writing code, as well as a rich control set written with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="2d2f9-106">通过使用代码补充这些控件的功能，你可轻松并快速开发所需要的解决方案。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-106">By complementing the functionality of these controls with your code, you can easily and quickly develop the solutions you need.</span></span>  
+# <a name="windows-forms"></a><span data-ttu-id="173aa-102">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="173aa-102">Windows Forms</span></span>
+<span data-ttu-id="173aa-103">因为窗体是应用程序的基本单位，有必要思考一下它们的功能和设计。</span><span class="sxs-lookup"><span data-stu-id="173aa-103">As forms are the base unit of your application, it is essential that you give some thought to their function and design.</span></span> <span data-ttu-id="173aa-104">窗体最终成为白板，作为开发成员，你要用控件进行增强以创建用户界面，并借助代码操纵数据。</span><span class="sxs-lookup"><span data-stu-id="173aa-104">A form is ultimately a blank slate that you, as a developer, enhance with controls to create a user interface and with code to manipulate data.</span></span> <span data-ttu-id="173aa-105">为此，Visual Studio 为您提供的集成的开发环境 (IDE) 来帮助编写代码，以及丰富的控件集使用编写[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="173aa-105">To that end, Visual Studio provides you with an integrated development environment (IDE) to aid in writing code, as well as a rich control set written with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="173aa-106">通过使用代码补充这些控件的功能，你可轻松并快速开发所需要的解决方案。</span><span class="sxs-lookup"><span data-stu-id="173aa-106">By complementing the functionality of these controls with your code, you can easily and quickly develop the solutions you need.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2d2f9-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="2d2f9-107">In This Section</span></span>  
- [<span data-ttu-id="2d2f9-108">Windows 窗体入门</span><span class="sxs-lookup"><span data-stu-id="2d2f9-108">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
- <span data-ttu-id="2d2f9-109">提供以下主题的链接：如何利用 Windows 窗体的功能显示数据、处理用户输入并轻松且更安全地部署应用程序。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-109">Provides links to topics about how to harness the power of Windows Forms to display data, handle user input, and deploy your applications easily and with more robust security.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="173aa-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="173aa-107">In This Section</span></span>  
+ [<span data-ttu-id="173aa-108">Windows 窗体入门</span><span class="sxs-lookup"><span data-stu-id="173aa-108">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
+ <span data-ttu-id="173aa-109">提供以下主题的链接：如何利用 Windows 窗体的功能显示数据、处理用户输入并轻松且更安全地部署应用程序。</span><span class="sxs-lookup"><span data-stu-id="173aa-109">Provides links to topics about how to harness the power of Windows Forms to display data, handle user input, and deploy your applications easily and with more robust security.</span></span>  
   
- [<span data-ttu-id="2d2f9-110">增强 Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="2d2f9-110">Enhancing Windows Forms Applications</span></span>](../../../docs/framework/winforms/advanced/index.md)  
- <span data-ttu-id="2d2f9-111">提供有关借助各种功能增强 Windows 窗体的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-111">Provides links to topics about how to enhance your Windows Forms with a variety of features.</span></span>  
+ [<span data-ttu-id="173aa-110">增强 Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="173aa-110">Enhancing Windows Forms Applications</span></span>](../../../docs/framework/winforms/advanced/index.md)  
+ <span data-ttu-id="173aa-111">提供有关借助各种功能增强 Windows 窗体的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="173aa-111">Provides links to topics about how to enhance your Windows Forms with a variety of features.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="2d2f9-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="2d2f9-112">Related Sections</span></span>  
- [<span data-ttu-id="2d2f9-113">Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="2d2f9-113">Windows Forms Controls</span></span>](../../../docs/framework/winforms/controls/index.md)  
- <span data-ttu-id="2d2f9-114">包含描述 Windows 窗体控件并显示如何实现它们的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-114">Contains links to topics that describe Windows Forms controls and show how to implement them.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="173aa-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="173aa-112">Related Sections</span></span>  
+ [<span data-ttu-id="173aa-113">Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="173aa-113">Windows Forms Controls</span></span>](../../../docs/framework/winforms/controls/index.md)  
+ <span data-ttu-id="173aa-114">包含描述 Windows 窗体控件并显示如何实现它们的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="173aa-114">Contains links to topics that describe Windows Forms controls and show how to implement them.</span></span>  
   
- [<span data-ttu-id="2d2f9-115">Windows 窗体数据绑定</span><span class="sxs-lookup"><span data-stu-id="2d2f9-115">Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- <span data-ttu-id="2d2f9-116">包含描述 Windows 窗体数据绑定体系结构的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-116">Contains links to topics that describe the Windows Forms data-binding architecture.</span></span>  
+ [<span data-ttu-id="173aa-115">Windows 窗体数据绑定</span><span class="sxs-lookup"><span data-stu-id="173aa-115">Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ <span data-ttu-id="173aa-116">包含描述 Windows 窗体数据绑定体系结构的主题的链接。</span><span class="sxs-lookup"><span data-stu-id="173aa-116">Contains links to topics that describe the Windows Forms data-binding architecture.</span></span>  
   
- [<span data-ttu-id="2d2f9-117">图形概述</span><span class="sxs-lookup"><span data-stu-id="2d2f9-117">Graphics Overview</span></span>](../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
- <span data-ttu-id="2d2f9-118">讨论如何使用 Windows 图形设计界面的高级实现创建图形、绘制文本并将图片作为对象操作。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-118">Discusses how to create graphics, draw text, and manipulate graphical images as objects using the advanced implementation of the Windows graphics design interface.</span></span>  
+ [<span data-ttu-id="173aa-117">图形概述</span><span class="sxs-lookup"><span data-stu-id="173aa-117">Graphics Overview</span></span>](../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
+ <span data-ttu-id="173aa-118">讨论如何使用 Windows 图形设计界面的高级实现创建图形、绘制文本并将图片作为对象操作。</span><span class="sxs-lookup"><span data-stu-id="173aa-118">Discusses how to create graphics, draw text, and manipulate graphical images as objects using the advanced implementation of the Windows graphics design interface.</span></span>  
   
- [<span data-ttu-id="2d2f9-119">ClickOnce 安全和部署</span><span class="sxs-lookup"><span data-stu-id="2d2f9-119">ClickOnce Security and Deployment</span></span>](/visualstudio/deployment/clickonce-security-and-deployment)  
- <span data-ttu-id="2d2f9-120">讨论 ClickOnce 部署的原则。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-120">Discusses the principles of ClickOnce deployment.</span></span>  
+ [<span data-ttu-id="173aa-119">ClickOnce 安全和部署</span><span class="sxs-lookup"><span data-stu-id="173aa-119">ClickOnce Security and Deployment</span></span>](/visualstudio/deployment/clickonce-security-and-deployment)  
+ <span data-ttu-id="173aa-120">讨论 ClickOnce 部署的原则。</span><span class="sxs-lookup"><span data-stu-id="173aa-120">Discusses the principles of ClickOnce deployment.</span></span>  
   
- [<span data-ttu-id="2d2f9-121">Windows 窗体/MFC 编程差异</span><span class="sxs-lookup"><span data-stu-id="2d2f9-121">Windows Forms/MFC Programming Differences</span></span>](/cpp/dotnet/windows-forms-mfc-programming-differences)  
- <span data-ttu-id="2d2f9-122">讨论 MFC 应用程序和 Windows 窗体之间的差异。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-122">Discusses the differences between MFC applications and Windows Forms.</span></span>  
+ [<span data-ttu-id="173aa-121">Windows 窗体/MFC 编程差异</span><span class="sxs-lookup"><span data-stu-id="173aa-121">Windows Forms/MFC Programming Differences</span></span>](/cpp/dotnet/windows-forms-mfc-programming-differences)  
+ <span data-ttu-id="173aa-122">讨论 MFC 应用程序和 Windows 窗体之间的差异。</span><span class="sxs-lookup"><span data-stu-id="173aa-122">Discusses the differences between MFC applications and Windows Forms.</span></span>  
   
- [<span data-ttu-id="2d2f9-123">在 Visual Studio 中访问数据</span><span class="sxs-lookup"><span data-stu-id="2d2f9-123">Accessing data in Visual Studio</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- <span data-ttu-id="2d2f9-124">讨论如何将数据访问功能合并到应用程序中。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-124">Discusses incorporating data access functionality into your applications.</span></span>  
+ [<span data-ttu-id="173aa-123">在 Visual Studio 中访问数据</span><span class="sxs-lookup"><span data-stu-id="173aa-123">Accessing data in Visual Studio</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)  
+ <span data-ttu-id="173aa-124">讨论如何将数据访问功能合并到应用程序中。</span><span class="sxs-lookup"><span data-stu-id="173aa-124">Discusses incorporating data access functionality into your applications.</span></span>  
   
- [<span data-ttu-id="2d2f9-125">Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="2d2f9-125">Windows Forms Applications</span></span>](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
- <span data-ttu-id="2d2f9-126">讨论用 Windows 应用程序项目模板创建的应用程序的调试进程，以及如何更改调试和发布配置。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-126">Discusses the process of debugging applications created with the Windows Application project template, as well as how to change the Debug and Release configurations.</span></span>  
+ [<span data-ttu-id="173aa-125">Windows 窗体应用程序</span><span class="sxs-lookup"><span data-stu-id="173aa-125">Windows Forms Applications</span></span>](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
+ <span data-ttu-id="173aa-126">讨论用 Windows 应用程序项目模板创建的应用程序的调试进程，以及如何更改调试和发布配置。</span><span class="sxs-lookup"><span data-stu-id="173aa-126">Discusses the process of debugging applications created with the Windows Application project template, as well as how to change the Debug and Release configurations.</span></span>  
   
- [<span data-ttu-id="2d2f9-127">部署应用程序、服务和组件</span><span class="sxs-lookup"><span data-stu-id="2d2f9-127">Deploying Applications, Services, and Components</span></span>](https://msdn.microsoft.com/library/wtzawcsz)  
- <span data-ttu-id="2d2f9-128">描述分配要安装到其他计算机上的已完成应用程序或组件的进程。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-128">Describes the process by which you distribute a finished application or component to be installed on other computers.</span></span>  
+ [<span data-ttu-id="173aa-127">首先看一下 Visual Studio 中的部署</span><span class="sxs-lookup"><span data-stu-id="173aa-127">First look at deployment in Visual Studio</span></span>](/visualstudio/deployment/deploying-applications-services-and-components)  
+ <span data-ttu-id="173aa-128">描述分配要安装到其他计算机上的已完成应用程序或组件的进程。</span><span class="sxs-lookup"><span data-stu-id="173aa-128">Describes the process by which you distribute a finished application or component to be installed on other computers.</span></span>  
   
- [<span data-ttu-id="2d2f9-129">生成控制台应用程序</span><span class="sxs-lookup"><span data-stu-id="2d2f9-129">Building Console Applications</span></span>](../../../docs/standard/building-console-apps.md)  
- <span data-ttu-id="2d2f9-130">介绍使用 <xref:System.Console> 类创建控制台应用程序的基础。</span><span class="sxs-lookup"><span data-stu-id="2d2f9-130">Describes the basics of creating a console application using the <xref:System.Console> class.</span></span>
+ [<span data-ttu-id="173aa-129">生成控制台应用程序</span><span class="sxs-lookup"><span data-stu-id="173aa-129">Building Console Applications</span></span>](../../../docs/standard/building-console-apps.md)  
+ <span data-ttu-id="173aa-130">介绍使用 <xref:System.Console> 类创建控制台应用程序的基础。</span><span class="sxs-lookup"><span data-stu-id="173aa-130">Describes the basics of creating a console application using the <xref:System.Console> class.</span></span>
