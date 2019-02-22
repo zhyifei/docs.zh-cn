@@ -3,13 +3,13 @@ title: 常见容器设计原则
 description: 了解很好的容器设计的基本原则，它是一个容器应承载只是一个过程。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: ce51eb296591490fba2d37e753be7881a55ea556
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 206963d63cf8e6ab4fc61b9176f1ba095868c6fc
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220330"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664297"
 ---
 # <a name="common-container-design-principles"></a>常见容器设计原则
 

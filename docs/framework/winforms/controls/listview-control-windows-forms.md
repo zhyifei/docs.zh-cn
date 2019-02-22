@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 4472d2a46b27c75d06c5e4cd6fbab18842ed111c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 207b5fcd8bb1242be180898a22ffacf6e5ac9ab1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591937"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664882"
 ---
 # <a name="listview-control-windows-forms"></a>ListView 控件（Windows 窗体）
 Windows 窗体 `ListView` 控件显示带图标的项列表。 你可以使用列表视图创建类似 Windows 资源管理器右窗格的用户界面。  
@@ -81,9 +81,6 @@ Windows 窗体 `ListView` 控件显示带图标的项列表。 你可以使用�
   
  [如何：用 Windows 窗体创建多窗格用户界面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  提供具有多个窗格的 Windows 窗体的布局说明。  
-  
- [Windows XP 功能和 Windows 窗体控件](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- 介绍如何充分利用适用于 <xref:System.Windows.Forms.ListView> 控件的 Windows XP 特定功能。  
   
 ## <a name="see-also"></a>请参阅
 - [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: fa9f35fd5ecd1c6761f363ea2a1e1a67996ecb77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 042861b2d79d0b638600a5463673fb922f3b4881
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543521"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664388"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>演练：实现使用后台操作的窗体
 如果某项操作需要很长时间才能完成，并且您不希望用户界面 (UI) 停止响应或"挂起，可以使用<xref:System.ComponentModel.BackgroundWorker>类，以另一个线程上执行此操作。  
@@ -57,7 +57,7 @@ ms.locfileid: "54543521"
   
 5.  重命名第一个<xref:System.Windows.Forms.Button>控制`startAsyncButton`并设置<xref:System.Windows.Forms.Control.Text%2A>属性设置为`Start Async`。 重命名第二个<xref:System.Windows.Forms.Button>控制`cancelAsyncButton`，并设置<xref:System.Windows.Forms.Control.Text%2A>属性设置为`Cancel Async`。 设置其<xref:System.Windows.Forms.Control.Enabled%2A>属性设置为`false`。  
   
-6.  创建事件处理程序的两个<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件。 有关详细信息，请参阅[如何：创建事件处理程序使用设计器](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
+6.  创建事件处理程序的两个<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件。 有关详细信息，请参阅[如何：创建事件处理程序使用设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))。  
   
 7.  拖动<xref:System.Windows.Forms.Label>控件从**工具箱**拖到窗体并将其重命名`resultLabel`。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "54543521"
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>实现异步事件处理程序  
   
-1.  在中**属性**窗口中，使用<xref:System.ComponentModel.BackgroundWorker>组件仍处于选中状态，单击**事件**按钮。 双击<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件创建事件处理程序。 有关如何使用事件处理程序的详细信息，请参阅[如何：创建事件处理程序使用设计器](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。  
+1.  在中**属性**窗口中，使用<xref:System.ComponentModel.BackgroundWorker>组件仍处于选中状态，单击**事件**按钮。 双击<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件创建事件处理程序。 有关如何使用事件处理程序的详细信息，请参阅[如何：创建事件处理程序使用设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))。  
   
 2.  在窗体中新建一个名为 `ComputeFibonacci` 的新方法。 此方法完成实际的工作，并在后台运行。 这些代码演示了 Fibonacci 算法的递归实现，这种算法的效率非常低，对于较大的数值花费的时间按指数增长。 在这里使用是出于演示的目的，为了说明在应用程序中某项操作可能带来长时间的延迟。  
   

@@ -3,13 +3,13 @@ title: 协调安排微服务和多容器应用程序，实现高可伸缩性和�
 description: 了解如何使用 Azure Kubernetes 服务部署应用。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 984a72c9ca8883b338d10fdaa826a6007580372d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 82a1cf7f3cc367bfb8b8f67a130600815f2a21c4
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221462"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664960"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>将部署到 Azure Kubernetes 服务 (AKS)
 
@@ -26,9 +26,9 @@ ms.locfileid: "56221462"
 > [!NOTE]
 > 若要查找有关完整信息：
 >
-> Azure CLI: [https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest](https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest)
+> Azure CLI: <https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
 >
-> 适用于 Linux 的 Windows 子系统： [https://docs.microsoft.com/windows/wsl/about](https://docs.microsoft.com/windows/wsl/about)
+> 适用于 Linux 的 Windows 子系统： <https://docs.microsoft.com/windows/wsl/about>
 
 ## <a name="create-the-aks-environment-in-azure"></a>在 Azure 中创建的 AKS 环境
 

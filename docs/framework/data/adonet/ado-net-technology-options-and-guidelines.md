@@ -2,12 +2,12 @@
 title: ADO.NET 技术选项和准则
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: e43fa3ae893a8a18e35693cde364d227e7959398
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828470"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664791"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET 技术选项和准则
 ADO.NET 数据平台是一种多版本策略，通过使开发人员能够针对概念性实体数据模型进行编程，减少其所需的编码和维护工作量。 此平台包括 ADO.NET 实体框架和相关技术。  
@@ -28,7 +28,7 @@ ADO.NET 数据平台是一种多版本策略，通过使开发人员能够针对
  实体 SQL 是一种基于文本的查询语言，专门用于与实体数据模型进行交互。 实体 SQL 是一种 SQL 变体，其中包含针对更高级别的建模概念的查询构造，例如继承、复杂类型和显式关系。 开发人员也可以直接将实体 SQL 与对象服务一起使用。 有关详细信息，请参阅[Entity SQL 语言](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)。  
   
 ### <a name="entityclient"></a>EntityClient  
- EntityClient 是一种用于与实体数据模型交互的新的 .NET Framework 数据提供程序。 EntityClient 遵循 .NET Framework 数据提供程序模式，公开可返回 <xref:System.Data.EntityClient.EntityConnection> 的 <xref:System.Data.EntityClient.EntityCommand> 对象和 <xref:System.Data.EntityClient.EntityDataReader> 对象。 EntityClient 与实体 SQL 语言一起使用，可提供与特定于存储的数据提供程序的灵活映射。 有关详细信息，请参阅 [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527)。  
+ EntityClient 是一种用于与实体数据模型交互的新的 .NET Framework 数据提供程序。 EntityClient 遵循 .NET Framework 数据提供程序模式，公开可返回 <xref:System.Data.EntityClient.EntityConnection> 的 <xref:System.Data.EntityClient.EntityCommand> 对象和 <xref:System.Data.EntityClient.EntityDataReader> 对象。 EntityClient 与实体 SQL 语言一起使用，可提供与特定于存储的数据提供程序的灵活映射。 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](./ef/entityclient-provider-for-the-entity-framework.md)。  
   
 ### <a name="entity-data-model-tools"></a>实体数据模型工具  
  实体框架提供了命令行工具、向导和设计器来帮助生成 EDM 应用程序。 EntityDataSource 控件支持基于 EDM 的数据绑定方案。 EntityDataSource 控件的编程接口与 Visual Studio 中的其他数据源控件类似。 有关详细信息，请参阅[ADO.NET 实体数据模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))。  

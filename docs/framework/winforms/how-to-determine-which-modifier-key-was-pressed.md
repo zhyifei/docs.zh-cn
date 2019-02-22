@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Keys.Alt enumeration member
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
-ms.openlocfilehash: e2caf421e25dff3300b3d799582f4260d0aab320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58fdea3df3d82aa9f36244a11c6d353019c7ac49
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586652"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665012"
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>如何：确定按下了哪个修改键
 在创建接受用户的击键的应用程序时，可能还想要监视修改键，如 SHIFT、 ALT 和 CTRL 键。 修改键按下时结合使用其他密钥，或者单击鼠标，你的应用程序做出正确响应。 例如，如果按下字母 S 时，这只是可能导致"s"出现在屏幕上，但如果按下了 CTRL + S 的密钥，可能会保存当前文档。 如果处理<xref:System.Windows.Forms.Control.KeyDown>事件，<xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A>属性的<xref:System.Windows.Forms.KeyEventArgs>收到的事件处理程序指定哪个修改键被按下。 或者，<xref:System.Windows.Forms.KeyEventArgs.KeyData%2A>属性的<xref:System.Windows.Forms.KeyEventArgs>指定按下了也与按位 OR 组合与任何修改键的字符。 但是，如果你是<xref:System.Windows.Forms.Control.KeyPress>事件或鼠标事件，事件处理程序不会接收此信息。 在这种情况下，必须使用<xref:System.Windows.Forms.Control.ModifierKeys%2A>属性的<xref:System.Windows.Forms.Control>类。 在任一情况下，您必须执行相应的按位 AND<xref:System.Windows.Forms.Keys>值和要测试的值。 <xref:System.Windows.Forms.Keys>枚举提供了变体的每个修改键，因此，必须执行的按位并使用正确的值。 例如，由表示 SHIFT 键<xref:System.Windows.Forms.Keys.Shift>， <xref:System.Windows.Forms.Keys.ShiftKey>，<xref:System.Windows.Forms.Keys.RShiftKey>并<xref:System.Windows.Forms.Keys.LShiftKey>正确的值来测试 SHIFT 修改键原样<xref:System.Windows.Forms.Keys.Shift>。 同样，若要测试 CTRL 和 ALT 修饰符作为您应使用<xref:System.Windows.Forms.Keys.Control>和<xref:System.Windows.Forms.Keys.Alt>值，分别。  
@@ -49,4 +49,4 @@ ms.locfileid: "54586652"
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.ModifierKeys%2A>
 - [Windows 窗体应用程序中的键盘输入](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
-- [如何：确定如果 CapsLock 在 Visual Basic 中已启用](https://msdn.microsoft.com/library/91e60f5c-dd61-4222-ba5f-39af803afd8c)
+- [如何：确定如果 CapsLock 在 Visual Basic 中已启用](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9c9d1fz9(v=vs.100))
