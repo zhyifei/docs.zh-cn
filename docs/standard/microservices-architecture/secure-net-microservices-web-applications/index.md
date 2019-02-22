@@ -19,7 +19,7 @@ ms.date: 10/19/2018
 
 **图 9-1**。 使用 API 网关进行集中身份验证
 
-如果可以直接访问服务，则身份验证服务（如 Azure Active Directory）或充当安全令牌服务 (STS) 的专用身份验证微服务可用于对用户进行身份验证。 通过安全令牌或 cookie 在服务之间共享信任决策。 （如有需要，可在 ASP.NET Core 中使用[数据保护服务](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)，在应用程序之间共享这些令牌。）此模式如图 9-2 所示。
+如果可以直接访问服务，则身份验证服务（如 Azure Active Directory）或充当安全令牌服务 (STS) 的专用身份验证微服务可用于对用户进行身份验证。 通过安全令牌或 cookie 在服务之间共享信任决策。 （如有需要，可通过实现 [Cookie 共享](/aspnet/core/security/cookie-sharing)在 ASP.NET Core 应用程序之间共享这些令牌。）此模式如图 9-2 所示。
 
 ![直接访问微服务时，包含身份验证和授权的信任由微服务之间共享的专用微服务颁发的安全令牌处理。](./media/image2.png)
 
@@ -271,7 +271,7 @@ JWT 持有者身份验证中间件还可以支持更高级的方案，例如颁�
 ## <a name="additional-resources"></a>其他资源
 
 - **在应用程序之间共享 cookie** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+  [*https://docs.microsoft.com/aspnet/core/security/cookie-sharing*](/aspnet/core/security/cookie-sharing)
 
 - **标识简介** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
@@ -285,7 +285,7 @@ JWT 持有者身份验证中间件还可以支持更高级的方案，例如颁�
 - **Michell Anicas。OAuth 2 简介** \
   [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
-- **AspNet.Security.OAuth.Providers**（ASP.NET OAuth 提供程序的 GitHub 存储库。 \
+- **AspNet.Security.OAuth.Providers**（ASP.NET OAuth 提供程序的 GitHub 存储库）\
   [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
 - **Danny Strockis。将 Azure AD 集成到 ASP.NET Core Web 应用中** \
