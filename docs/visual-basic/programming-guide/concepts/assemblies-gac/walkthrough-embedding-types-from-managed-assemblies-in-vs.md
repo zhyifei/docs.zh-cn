@@ -1,15 +1,15 @@
 ---
-title: 演练： 在 Visual Studio (Visual Basic 中) 中嵌入托管程序集中的类型
+title: 演练：在 Visual Studio (Visual Basic 中) 中嵌入托管程序集中的类型
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f14a3e41c00ae307086a6d3745d4ec76b772721c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245454"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747539"
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>演练： 在 Visual Studio (Visual Basic 中) 中嵌入托管程序集中的类型
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>演练：在 Visual Studio (Visual Basic 中) 中嵌入托管程序集中的类型
 如果嵌入强命名托管程序集中的类型信息，则可以对应用程序中的类型进行松耦合，以实现版本独立性。 也就是说，可以将程序编写为使用多个托管库版本中的类型，而不必对每个版本重新编译程序。  
   
  类型嵌入经常与 COM 互操作一起使用，例如使用 Microsoft Office 中的自动化对象的应用程序。 通过嵌入类型信息，程序的同一个版本可以处理不同计算机上的不同 Microsoft Office 版本。 但也可以在完全托管的解决方案中使用类型嵌入。  
@@ -222,8 +222,8 @@ End Function
   
 6.  在文件资源管理器中，打开输出路径文件夹（如 C:\TypeEquivalenceSample）。 双击 TypeEquivalenceClient.exe 运行该程序。 程序将反映 TypeEquivalenceRuntime 程序集的未经重新编译的新版本。  
   
-## <a name="see-also"></a>请参阅  
- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)  
- [编程概念](../../../../visual-basic/programming-guide/concepts/index.md)  
- [使用程序集编程](../../../../framework/app-domains/programming-with-assemblies.md)  
- [程序集和全局程序集缓存 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>请参阅
+- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
+- [编程概念](../../../../visual-basic/programming-guide/concepts/index.md)
+- [使用程序集编程](../../../../framework/app-domains/programming-with-assemblies.md)
+- [在.NET 中的程序集](../../../../standard/assembly/index.md)

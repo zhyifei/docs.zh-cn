@@ -5,12 +5,12 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 63b1a4b9b2483d017a686819573f91744d8a565a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0afc1aba32852406b975cc65ab4d4bff334d3ff7
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518802"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745458"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer 控件（Windows 窗体）
 Windows 窗体 `SplitContainer` 控件可视为一个复合控件；它是由可移动条隔开的两个面板。 当鼠标指针位于条上方时，指针将改变形状以表示条可移动。  
@@ -24,16 +24,16 @@ Windows 窗体 `SplitContainer` 控件可视为一个复合控件；它是由可
  [SplitContainer 控件概述](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
  介绍 `SplitContainer` 控件并描述常用的属性、方法和事件。  
   
- [如何：定义拆分窗口中的重设大小和定位行为](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
+ [如何：定义大小调整和拆分窗口中定位行为](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
  描述如何在 `SplitContainer` 控件中控制拆分器。  
   
  [如何：水平拆分窗口](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
  描述如何在 `SplitContainer` 控件中控制拆分器的方向。  
   
- [如何：使用 Windows 窗体创建多窗格用户界面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [如何：用 Windows 窗体创建多窗格用户界面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  创建一个与 Microsoft Outlook 中使用的多窗格用户界面相似的多窗格用户界面。  
   
- 另请参阅[如何： 拆分窗口水平使用设计器](how-to-split-a-window-horizontally-using-the-designer.md)，[如何： 在 Windows 窗体上创建一个 Windows 资源管理器样式界面](https://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\))，[如何： 创建一个具有用户界面，Multipane使用设计器的 Windows 窗体](create-a-multipane-user-interface-with-wf-using-the-designer.md)。  
+ 另请参阅[如何：使用设计器水平拆分窗口](how-to-split-a-window-horizontally-using-the-designer.md)，[如何：在 Windows 窗体上创建一个 Windows 资源管理器样式界面](how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md)，[如何：用 Windows 窗体使用设计器创建多窗格用户界面](create-a-multipane-user-interface-with-wf-using-the-designer.md)。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.SplitContainer> 类  

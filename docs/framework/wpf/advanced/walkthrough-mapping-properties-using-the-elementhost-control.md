@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: bb418b725afd0c38a39e42e50511147d0f616059
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29356f171506ece0fe35418f682681b19830d71c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623207"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746333"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>演练：使用 ElementHost 控件映射属性
 
@@ -62,7 +62,7 @@ ms.locfileid: "54623207"
 
 4.  在 Windows 窗体设计器中打开 `Form1`。 双击要添加的事件处理程序的窗体<xref:System.Windows.Forms.Form.Load>事件。
 
-5.  返回到 Windows 窗体设计器并添加事件处理程序的窗体的<xref:System.Windows.Forms.Control.Resize>事件。 有关详细信息，请参阅[如何：创建事件处理程序使用设计器](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)。
+5.  返回到 Windows 窗体设计器并添加事件处理程序的窗体的<xref:System.Windows.Forms.Control.Resize>事件。 有关详细信息，请参阅[如何：创建事件处理程序使用设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))。
 
 6.  声明<xref:System.Windows.Forms.Integration.ElementHost>字段中`Form1`类。
 

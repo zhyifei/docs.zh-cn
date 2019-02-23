@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 3a029ef23ba3e9a0dd62e410739fa8734acc202a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 73633c2c6119204f2fb608b32ae794a2e07b27d0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277766"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747069"
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>如何托管并运行基本的 Windows Communication Foundation 服务
 
@@ -101,7 +101,7 @@ Module Service
     Class Program
         Shared Sub Main()
             ' Step 1 Create a URI to serve as the base address
-            Dim baseAddress As New Uri("http://localhost:8000/ServiceModelSamples/Service")
+            Dim baseAddress As New Uri("http://localhost:8000/GettingStarted")
 
             ' Step 2 Create a ServiceHost instance
             Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
@@ -144,18 +144,17 @@ End Module
 
 **步骤 3** – 创建<xref:System.ServiceModel.Description.ServiceEndpoint>实例。 服务终结点由地址、绑定和服务协定组成。 因此<xref:System.ServiceModel.Description.ServiceEndpoint> 构造函数采用服务协定接口类型、绑定和地址。 服务协定是在服务类型中定义和实现的 `ICalculator`。 在此示例中使用的绑定是 <xref:System.ServiceModel.WSHttpBinding>，这是用于连接到符合 WS-＊ 规范的终结点的内置绑定。 有关 WCF 绑定的详细信息，请参阅 [WCF 绑定概述](bindings-overview.md)。 该地址追加到基址以标识终结点。 在此代码中指定的地址为"CalculatorService"，因此终结点的完全限定的地址是`"http://localhost:8000/GettingStarted/CalculatorService"`。
 
-    > [!IMPORTANT]
-    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](simplified-configuration.md) and [Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md).
+> [!IMPORTANT]
+> 使用 .NET Framework 4 或更高版本时，添加服务终结点是可选的。 在这些版本中，如果在代码或配置中未添加任何终结点，则 WCF 为该服务实现的基址和协定的每个组合添加一个默认终结点。 有关默认终结点的详细信息，请参阅[指定终结点地址](specifying-an-endpoint-address.md)。 有关默认终结点、绑定和行为的详细信息，请参阅[简化配置](simplified-configuration.md)和 [WCF 服务的简化配置](./samples/simplified-configuration-for-wcf-services.md)。
 
 **步骤 4** -启用元数据交换。 客户端将使用元数据交换来生成将用于调用服务操作的代理。 要启用元数据交换，请创建 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 实例，将其 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 属性设置为 `true`，并将行为添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 实例的 <xref:System.ServiceModel.ServiceHost> 集合。
 
 **步骤 5** – 打开<xref:System.ServiceModel.ServiceHost>侦听传入消息。 注意，代码会等待用户按 Enter。 如果不这样做，应用程序将立即关闭，并且服务将关闭。另请注意，使用了 try/catch 块。 在实例化 <xref:System.ServiceModel.ServiceHost> 后，所有其他代码放置在 try/catch 块中。 有关安全捕获引发的异常详细信息<xref:System.ServiceModel.ServiceHost>，请参阅[使用关闭和中止发布 WCF 客户端资源](samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
-> 编辑 App.config 中 GettingStartedLib 以反映在代码中所做的更改：
-> 1. 更改第 14 行 `<service name="GettingStartedLib.CalculatorService">`
-> 2. 更改到的第 17 行 `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
-> 3. 更改到第 22 行 `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+> 当添加 WCF 服务库时，Visual Studio 可以承载它为您调试通过启动服务主机时。 若要避免冲突可以禁用此。 
+> 1. 打开 GettingStartedLib 项目属性。
+> 2. 转到**WCF 选项**并取消选中**启动 WCF 服务主机时调试**。
 
 ## <a name="verify-the-service-is-working"></a>验证服务正常工作
 
@@ -163,7 +162,7 @@ End Module
 
    必须使用管理员特权运行服务。 使用管理员特权打开 Visual Studio，因为 GettingStartedHost 也是使用管理员特权运行。 此外可以打开新命令提示符处使用**以管理员身份运行**并运行 service.exe。
 
-2. 打开 web 浏览器并浏览到服务的调试页在`http://localhost:8000/GettingStarted/CalculatorService`。
+2. 打开 web 浏览器并浏览到服务的调试页在`http://localhost:8000/GettingStarted/`。 **请注意 ！结束斜杠很重要。**
 
 ## <a name="example"></a>示例
 
@@ -249,7 +248,7 @@ namespace GettingStartedHost
         static void Main(string[] args)
         {
             // Step 1 of the address configuration procedure: Create a URI to serve as the base address.
-            Uri baseAddress = new Uri("http://localhost:8000/ServiceModelSamples/Service");
+            Uri baseAddress = new Uri("http://localhost:8000/GettingStarted/");
 
             // Step 2 of the hosting procedure: Create ServiceHost
             ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
@@ -357,7 +356,7 @@ Module Service
     Class Program
         Shared Sub Main()
             ' Step 1 of the address configuration procedure: Create a URI to serve as the base address.
-            Dim baseAddress As New Uri("http://localhost:8000/ServiceModelSamples/Service")
+            Dim baseAddress As New Uri("http://localhost:8000/GettingStarted/")
 
             ' Step 2 of the hosting procedure: Create ServiceHost
             Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
@@ -411,3 +410,4 @@ End Module
 
 - [入门](samples/getting-started-sample.md)
 - [自承载](samples/self-host.md)
+- [托管服务](hosting-services.md)

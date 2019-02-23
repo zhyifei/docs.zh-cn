@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 697a59d80e152fb78164491c2a0eaaa8707f8914
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685524"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745915"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps 方法
 获取指定的 ParamDef 标记所引用的参数的元数据值。  
@@ -64,7 +64,7 @@ HRESULT GetParamProps (
  [out]在宽字符为单位返回的大小`szName`。  
   
  `pdwAttr`  
- [out]一个指向任何与参数关联的特性标志。  
+ [out]一个指向任何与参数关联的特性标志。 这是一个位掩码的`CorParamAttr`值。  
   
  `pdwCPlusTypeFlag`  
  [out]该参数是指向一个标志，用于指定的指针<xref:System.ValueType>。  
@@ -75,6 +75,10 @@ HRESULT GetParamProps (
  `pcchValue`  
  [out]大小`ppValue`宽字符，或者，如果零`ppValue`不保存字符串。  
   
+## <a name="remarks"></a>备注
+
+中的顺序值`pulSequence`参数 1 开头。 返回值具有的序列号为 0。
+
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   

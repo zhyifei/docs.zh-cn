@@ -6,12 +6,12 @@ helpviewer_keywords:
 - timers
 - timers [Windows Forms], creating
 ms.assetid: 6700e534-6382-43d5-98ed-14205435fff7
-ms.openlocfilehash: 1a00bfa0772273f9374d292e27f5fba174172ca6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1c0ad0b644c0af6a4e0982b1437291e923ca79cc
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499869"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745400"
 ---
 # <a name="timer-component-windows-forms"></a>Timer 组件（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.Timer> 是一种按固定事件间隔引发事件的组件。 此组件专为 Windows 窗体环境设计。  
@@ -23,7 +23,7 @@ Windows 窗体 <xref:System.Windows.Forms.Timer> 是一种按固定事件间隔�
  [Windows 窗体 Timer 组件的 Interval 属性的限制](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)  
  介绍可能会影响计时器使用方式的计时器时间间隔的已知限制。  
   
- [如何：使用 Windows 窗体 Timer 组件按设置的时间间隔运行过程](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
+ [如何：使用 Windows 窗体 Timer 组件的设定间隔运行过程](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
  介绍如何在基于 Windows 的应用程序中响应定时的时间间隔。  
   
 ## <a name="reference"></a>参考  
@@ -36,6 +36,3 @@ Windows 窗体 <xref:System.Windows.Forms.Timer> 是一种按固定事件间隔�
 ## <a name="related-sections"></a>相关章节  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。  
-  
- [Visual Basic 6.0 用户的计时器控件](https://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
- 介绍与先前版本相比，Visual Basic 中的计时器功能有哪些更改。

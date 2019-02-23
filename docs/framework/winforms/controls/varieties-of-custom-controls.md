@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: cd78a0f2513d0e352efa1b1b866627586e6068bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 907355ca78b299b34b231b8b8d88353b0dde19c0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683919"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746599"
 ---
 # <a name="varieties-of-custom-controls"></a>各种自定义控件
 使用 .NET Framework 可以开发和实现新的控件。 可以通过继承来扩展熟悉的用户控件和现有控件的功能。 还可以编写自定义控件，这些控件执行自己的绘制。  
@@ -24,7 +24,7 @@ ms.locfileid: "54683919"
  确定创建何种类型的控件可能令人困惑。 本主题重点介绍各种可继承控件之间的差异，并提供有关如何为项目选择某种特定控件的信息。  
   
 > [!NOTE]
->  有关如何创作用于 Web 窗体的控件的信息，请参阅[开发自定义 ASP.NET 服务器控件](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
+>  有关如何创作用于 Web 窗体的控件的信息，请参阅[开发自定义 ASP.NET 服务器控件](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))。  
   
 ## <a name="base-control-class"></a>基控件类  
  <xref:System.Windows.Forms.Control>类是 Windows 窗体控件的基类。 它提供了在 Windows 窗体应用程序中进行可视显示所需的基础结构。  
@@ -104,11 +104,11 @@ ms.locfileid: "54683919"
 ## <a name="custom-design-experience"></a>自定义设计体验  
  如果需要实现自定义设计时体验，可以创作自己的设计器。 对于复合控件类派生自定义设计器从<xref:System.Windows.Forms.Design.ParentControlDesigner>或<xref:System.Windows.Forms.Design.DocumentDesigner>类。 对于扩展和自定义控件类派生自定义设计器从<xref:System.Windows.Forms.Design.ControlDesigner>类。  
   
- 使用<xref:System.ComponentModel.DesignerAttribute>以将控件与您的设计器相关联。 有关详细信息，请参阅[扩展设计时支持](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)和[如何：创建利用设计时功能的 Windows 窗体控件](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。  
+ 使用<xref:System.ComponentModel.DesignerAttribute>以将控件与您的设计器相关联。 有关详细信息，请参阅[扩展设计时支持](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))和[如何：创建利用设计时功能的 Windows 窗体控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))。  
   
 ## <a name="see-also"></a>请参阅
 - [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [如何：开发的简单 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
 - [开发复合 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
-- [扩展设计时支持](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
-- [如何：创建利用设计时功能的 Windows 窗体控件](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)
+- [扩展设计时支持](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [如何：创建利用设计时功能的 Windows 窗体控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: daaafa4877e9fc5abd7e720c5a91aa61f24a686c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64ac6da99bf304639dfc0de5e24d6d6bdd3e9795
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686044"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746518"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程序的结构
 从标准构建基块是构建 Visual Basic 程序。 一个*解决方案*由一个或多个项目组成。 一个*项目*又可以包含一个或多个程序集。 每个*程序集*从一个或多个源代码文件编译。 一个*源文件*提供定义和实现的类、 结构、 模块和接口，它们最终包含了所有代码。  
   
- 有关这些构建基块的 Visual Basic 程序的详细信息，请参阅[解决方案和项目](/visualstudio/ide/solutions-and-projects-in-visual-studio)并[程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)。  
+ 有关这些构建基块的 Visual Basic 程序的详细信息，请参阅[解决方案和项目](/visualstudio/ide/solutions-and-projects-in-visual-studio)并[.NET 中的程序集](../../../standard/assembly/index.md)。  
   
 ## <a name="file-level-programming-elements"></a>文件级别的编程元素  
  当您启动项目或文件，并打开代码编辑器中时，您将看到一些代码已存在并按正确的顺序。 您编写任何代码都应遵循以下顺序：  

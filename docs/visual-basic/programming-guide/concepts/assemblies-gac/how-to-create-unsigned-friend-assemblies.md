@@ -2,12 +2,12 @@
 title: 如何：创建未签名的友元程序集 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: ed4a818921f26fd5eb70fc4ba52929522627c096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c1d5fb24d0032e88b951eefa1bd7a3a8c6ccb88
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698201"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748123"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>如何：创建未签名的友元程序集 (Visual Basic)
 本示例演示如何将友元程序集和未签名的程序集一起使用。  
@@ -86,7 +86,7 @@ ms.locfileid: "54698201"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [程序集和全局程序集缓存 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [在.NET 中的程序集](../../../../standard/assembly/index.md)
 - [友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [如何：创建签名的友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [编程指南概念](../../../../visual-basic/programming-guide/concepts/index.md)

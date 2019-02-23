@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e3ca368f8b7b2b3cd956bdaac498874a806dd876
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863051"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747027"
 ---
 # <a name="combobox"></a>组合框
 <xref:System.Windows.Controls.ComboBox>控件向用户提供选项的列表。 显示或隐藏控件展开或折叠列表。 在其默认状态下，列表处于折叠状态，仅显示一个选项。 用户单击按钮以查看选项的完整列表。  
@@ -21,9 +21,6 @@ ms.locfileid: "43863051"
   
  ![组合框的默认和按下状态](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
 折叠和展开  
-  
-## <a name="in-this-section"></a>本节内容  
- [如何： 获取 ComboBoxItem](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.ComboBox>

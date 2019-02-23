@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 2a2fd47c3ea2e675292c040f08b981a394e8221b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543219"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748029"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线的 Windows 窗体上排列控件
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 Windows 窗体设计器提供许多布局工具来实现此目的。 一个最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
@@ -222,7 +222,7 @@ ms.locfileid: "54543219"
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>若要禁用设计环境中的对齐线  
   
-1.  从**工具**菜单中，打开**选项**对话框。 打开 Windows 窗体设计器对话框。 有关详细信息，请参阅[选项对话框常规 Windows 窗体设计器](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)。  
+1.  从**工具**菜单中，打开**选项**对话框。 打开 Windows 窗体设计器对话框。 有关详细信息，请参阅[选项对话框常规 Windows 窗体设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))。  
   
 2.  选择**常规**节点。 在中**布局模式下**部分中，更改从所选**对齐线**到**网格线对齐**。  
   

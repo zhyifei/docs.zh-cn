@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: 1d6d9ac86ccc15ccc55d27e4222864c4cda92ad0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa0c07c092b6a1e9e37d9c3695107b845055a981
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546024"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745568"
 ---
 # <a name="properties-wpf"></a>属性 (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一组服务，这些服务可用于扩展 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 属性的功能。 这些服务通常统称为 WPF 属性系统。 由 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 属性系统支持的属性称为依赖属性。  
   
 ## <a name="in-this-section"></a>本节内容  
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [依赖属性回调和验证](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)  
- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [框架属性元数据](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)  
- [依赖项属性值优先级](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
- [只读依赖项属性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [属性值继承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [依赖属性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
- [DependencyObject 的安全构造函数模式](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
- [集合类型依赖属性](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
- [XAML 加载和依赖项属性](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [帮助主题](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
+- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+- [依赖属性回调和验证](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+- [框架属性元数据](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
+- [依赖项属性值优先级](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [只读依赖项属性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
+- [属性值继承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
+- [依赖属性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+- [DependencyObject 的安全构造函数模式](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
+- [集合类型依赖属性](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
+- [XAML 加载和依赖项属性](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
+- [帮助主题](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.DependencyProperty>  

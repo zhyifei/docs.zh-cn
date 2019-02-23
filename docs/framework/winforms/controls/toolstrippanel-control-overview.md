@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStripPanel control [Windows Forms], about ToolStripPanel control
 ms.assetid: ce54a60c-5eba-4b4c-bd77-cf0748a666cc
-ms.openlocfilehash: 104ccfd0370eff48312372a2391031575b53b3bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31f701223912d577d1ef4f738639186e8d413697
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660224"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748357"
 ---
 # <a name="toolstrippanel-control-overview"></a>ToolStripPanel 控件概述
 一个<xref:System.Windows.Forms.ToolStripPanel>提供了单一区域用于定位和漂浮<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，和<xref:System.Windows.Forms.StatusStrip>控件。 多个<xref:System.Windows.Forms.ToolStrip>控件垂直或水平堆叠具体取决于<xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A>的<xref:System.Windows.Forms.ToolStripPanel>。  
@@ -31,4 +31,4 @@ ms.locfileid: "54660224"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.ToolStripContainer>
 - <xref:System.Windows.Forms.ToolStripContentPanel>
-- [ToolStrip 示例](https://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)
+- [ToolStrip 示例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms181005(v=vs.90))

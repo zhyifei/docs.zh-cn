@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662733"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746557"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 外接程序概述
 <a name="Introduction"></a> .NET Framework 包括开发人员可用于创建支持外接程序扩展性的应用程序的外接程序模型。 借助此外接程序模型，可以创建与应用程序功能集成并进行扩展的外接程序。 在某些情况下，应用程序还需要显示外接程序提供的用户界面。本主题介绍 WPF 增加.NET Framework 外接程序模型若要启用这些方案，它、 其优点和局限性的体系结构的内容。  
@@ -100,7 +100,7 @@ ms.locfileid: "54662733"
 -   具有<xref:System.SerializableAttribute>应用属性。  
   
 > [!NOTE]
->  有关创建可远程处理.NET Framework 对象的详细信息，请参阅[使对象可远程处理](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)。  
+>  有关创建可远程处理.NET Framework 对象的详细信息，请参阅[使对象可远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))。  
   
  WPF UI 类型不可远程处理。 若要解决此问题，WPF 扩展了.NET Framework 外接程序模型以启用 WPF UI 的外接程序创建要显示从主机应用程序。 通过两种类型的 wpf 提供此支持：<xref:System.AddIn.Contract.INativeHandleContract>接口和实现的两个静态方法<xref:System.AddIn.Pipeline.FrameworkElementAdapters>类：<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>和<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 从较高层面来看，这些类型和方法按以下方式使用：  
   
@@ -286,6 +286,6 @@ ms.locfileid: "54662733"
 - <xref:System.LoaderOptimizationAttribute>
 - [外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [应用程序域](../../../../docs/framework/app-domains/application-domains.md)
-- [.NET framework 远程处理概述](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
-- [使对象可远程处理](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [.NET framework 远程处理概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [使对象可远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [帮助主题](../../../../docs/framework/wpf/app-development/how-to-topics.md)

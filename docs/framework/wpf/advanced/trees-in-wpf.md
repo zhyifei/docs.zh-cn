@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 69c91a595861dacd3dcd92666684514bc3b6f4ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d49e9dec1cdbd2942fb9d1b94be32e44ca4311a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690405"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748055"
 ---
 # <a name="trees-in-wpf"></a>WPF 中的树
 在许多技术中，元素和组件都按树结构的形式组织。在这种结构中，开发人员可以直接操作树中的对象节点来影响应用程序的绘制或行为。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也使用了若干树结构形式来定义程序元素之间的关系。 多数情况下，在概念层面考虑对象树形式时，WPF 开发人员会用代码创建应用程序，或用 XAML 定义应用程序的组成部分，但他们会调用具体的 API 或使用特定的标记来执行此操作，而不是像在 XML DOM 中那样，使用某些常规对象树操作 API。 WPF 公开提供树形式视图的两个帮助器类<xref:System.Windows.LogicalTreeHelper>和<xref:System.Windows.Media.VisualTreeHelper>。 WPF 文档中还使用了“可视化树”和“逻辑树”两个术语，它们有助于理解某些关键 WPF 功能的行为。 本主题定义的可视化树和逻辑树的表示，讨论这些树与总体对象树概念，并引入了<xref:System.Windows.LogicalTreeHelper>和<xref:System.Windows.Media.VisualTreeHelper>s。  
@@ -29,7 +29,7 @@ ms.locfileid: "54690405"
   
 <a name="logical_tree"></a>   
 ## <a name="the-logical-tree"></a>逻辑树  
- 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，通过为支持 UI 元素的对象设置属性，可以向这些 UI 元素添加内容。 例如，你将项添加到<xref:System.Windows.Controls.ListBox>通过操作控制其<xref:System.Windows.Controls.ItemsControl.Items%2A>属性。 通过执行此操作，你将项放入<xref:System.Windows.Controls.ItemCollection>，它是<xref:System.Windows.Controls.ItemsControl.Items%2A>属性值。 同样，可以将对象添加到<xref:System.Windows.Controls.DockPanel>，则操作其<xref:System.Windows.Controls.Panel.Children%2A>属性值。 在这里，你会将对象添加到<xref:System.Windows.Controls.UIElementCollection>。 有关代码示例，请参阅[动态添加元素](https://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)。  
+ 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，通过为支持 UI 元素的对象设置属性，可以向这些 UI 元素添加内容。 例如，你将项添加到<xref:System.Windows.Controls.ListBox>通过操作控制其<xref:System.Windows.Controls.ItemsControl.Items%2A>属性。 通过执行此操作，你将项放入<xref:System.Windows.Controls.ItemCollection>，它是<xref:System.Windows.Controls.ItemsControl.Items%2A>属性值。 同样，可以将对象添加到<xref:System.Windows.Controls.DockPanel>，则操作其<xref:System.Windows.Controls.Panel.Children%2A>属性值。 在这里，你会将对象添加到<xref:System.Windows.Controls.UIElementCollection>。 有关代码示例，请参阅[如何：动态添加元素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms752374(v=vs.100))。  
   
  中[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，当你将在列表项放入<xref:System.Windows.Controls.ListBox>控件或中的其他 UI 元素<xref:System.Windows.Controls.DockPanel>，还使用<xref:System.Windows.Controls.ItemsControl.Items%2A>和<xref:System.Windows.Controls.Panel.Children%2A>属性，显式或隐式，如以下示例所示。  
   

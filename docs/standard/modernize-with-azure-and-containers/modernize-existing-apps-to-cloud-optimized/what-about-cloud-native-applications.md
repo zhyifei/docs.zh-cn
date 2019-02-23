@@ -4,16 +4,16 @@ description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |云�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 0e390fcc838fc745e5950a8adcaeee0e5aa6e434
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b84eb50c0d425447e3f78f1473608c27254523a7
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152560"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746411"
 ---
 # <a name="what-about-cloud-native-applications"></a>云原生应用程序呢？
 
-尽管[云原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)应用程序不是重点的本指南中，很有帮助，若要了解此更新成熟度级别，并且可用来区分从云优化的应用程序。
+尽管[云原生](https://azure.microsoft.com/overview/cloudnative/)应用程序不是重点的本指南中，很有帮助，若要了解此更新成熟度级别，并且可用来区分从云优化的应用程序。
 
 图 4-3 在应用程序现代化成熟度级别中定位云原生应用：
 
@@ -23,7 +23,7 @@ ms.locfileid: "53152560"
 
 云原生更新成熟度级别通常需要新的开发投资。 将移动到云原生级别通常由业务需求实现现代化，从而尽可能多地以显著提高在大型应用程序中通过创建独立的子系统 （微服务），可部署的规模和规模的应用程序独立驱动从应用程序，同时还可在这些自治应用程序的部件，它们提供的长期限和增加演变灵活性降低成本的其他区域显著竞争优势。 
 
-主要基础之一[云原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)基于微服务体系结构方法，这可以改进与灵活性，并扩展到很难在整体式体系结构中部署到任一实现的限制的应用程序在本地或云环境。
+云原生应用程序的主要核心服务基于微服务体系结构方法，这可以改进与敏捷性并扩展到很难在整体式体系结构中，部署到的本地或云实现的限制环境。
 
 图 4-4 显示了云原生模型的主要特征。  
 
@@ -33,19 +33,19 @@ ms.locfileid: "53152560"
 
 此外，可以通过添加其他服务，如人工智能 (AI)、 机器学习 (ML) 和 IoT 扩展基本的新式 web 应用和云本机应用。 您可能会使用这些服务的任何扩展任何可能的云计算得到优化方法。
 
-在云原生级别的应用程序中的根本区别是在应用程序体系结构。 [云原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)应用程序是，根据定义，基于微服务的应用。 云原生应用需要特殊的体系结构、 技术和平台，相比单一式 web 应用程序或传统 N 层应用程序。
+在云原生级别的应用程序中的根本区别是在应用程序体系结构。 云原生应用程序的定义中，基于微服务的应用程序的不同而不同。 云原生应用需要特殊的体系结构、 技术和平台，相比单一式 web 应用程序或传统 N 层应用程序。
 
 ## <a name="cloud-native-applications-details"></a>云原生应用程序的详细信息
 
-[云原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)是关键的大型应用程序的更高级或成熟状态。 云原生应用程序通常需要体系结构和设计，而不是从头创建的更新现有应用程序。 云原生应用程序和更简单的云优化 web 应用的主要区别是使用云原生方法中的微服务体系结构的建议。 云优化的应用程序也可以是单片 web 应用或 N 层应用程序。
+云原生是关键的大型应用程序的更高级或成熟状态。 云原生应用程序通常需要体系结构和设计，而不是从头创建的更新现有应用程序。 云原生应用程序和更简单的云优化 web 应用的主要区别是使用云原生方法中的微服务体系结构的建议。 云优化的应用程序也可以是单片 web 应用或 N 层应用程序。
 
-[十二因素应用](https://12factor.net/)（与微服务方法密切相关的模式的集合） 也被视为的必要条件[云原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)应用程序体系结构。
+[十二因素应用](https://12factor.net/)（与微服务方法密切相关的模式的集合） 也被视为必需的云本机应用程序体系结构。
 
 [云本机计算基础 (CNCF)](https://www.cncf.io/)是其他云原生原则的主要推动者。 Microsoft 是[CNCF 成员](https://azure.microsoft.com/blog/announcing-cncf/)。
 
 有关示例定义和有关云原生应用程序的特征的详细信息，请参阅 Gartner 文章[如何规划和设计云原生应用程序](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)。 有关如何实现云原生应用程序来自 Microsoft 的特定指南，请参阅[.NET 微服务：容器化.NET 应用程序体系结构](https://aka.ms/microservicesebook)。
 
-要考虑是否迁移到完整的应用程序，最重要的因素[云原生](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms)模型是必须重构到基于微服务的体系结构。 由于涉及的大型重构过程，这显然需要投入大量的开发。 选择此选项通常需要更高级别的可伸缩性和长期的灵活性的任务关键型应用程序。 但是，可以开始通过添加几个新方案的微服务在移至云原生并最终重构完全作为微服务应用程序。 这是递增的方法，即在某些情况下的最佳选项。
+要考虑是否迁移到云原生模型的完整应用程序的最重要因素是必须重构到基于微服务的体系结构。 由于涉及的大型重构过程，这显然需要投入大量的开发。 选择此选项通常需要更高级别的可伸缩性和长期的灵活性的任务关键型应用程序。 但是，可以开始通过添加几个新方案的微服务在移至云原生并最终重构完全作为微服务应用程序。 这是递增的方法，即在某些情况下的最佳选项。
 
 ## <a name="what-about-microservices"></a>微服务呢？ 
 

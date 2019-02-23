@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98d7be5adc81cff09b121265e7d5b5f712122607
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40631a15bd07b5aa54488e5d3b99cee751e2e0bd
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611405"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748331"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps 方法
-获取元数据信息，包括名称、 二进制签名和相对虚拟地址的<xref:System.Type>指定的元数据标记所引用的成员。  
+获取有关指定的成员定义，包括名称、 二进制签名和相对虚拟地址的元数据中存储的信息<xref:System.Type>指定的元数据标记所引用的成员。 这是一个简单的帮助程序方法： 如果*mb*然后是 MethodDef **GetMethodProps**调用; 如果*mb*然后是 FieldDef **GetFieldProps**调用。 查看这些详细信息的其他方法。 
   
 ## <a name="syntax"></a>语法  
   
@@ -79,7 +79,7 @@ HRESULT GetMemberProps (
  [out]与成员关联的任何方法实现标志。  
   
  `pdwCPlusTypeFlag`  
- [out]一个标志，用于将标记<xref:System.ValueType>。  
+ [out]一个标志，用于将标记<xref:System.ValueType>。 它是之一`ELEMENT_TYPE_*`值。
   
  `ppValue`  
  [out]返回此成员的常量字符串值。  

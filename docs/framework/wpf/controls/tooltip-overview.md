@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: 9db511579e273a19c18800f2e0861ef4e9c00ab0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5378744ea43b72bafb77c9d58c1a8d848c3a8fc9
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700567"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745510"
 ---
 # <a name="tooltip-overview"></a>ToolTip 概述
 工具提示，则用户将鼠标指针悬停在元素，通过上时，将显示一个小型弹出窗口<xref:System.Windows.Controls.Button>。 本主题介绍工具提示，并讨论如何创建和自定义工具提示内容。  
@@ -67,7 +67,7 @@ ms.locfileid: "54700567"
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>使用 ToolTipService 的 Time Interval 属性  
  <xref:System.Windows.Controls.ToolTipService>类提供了以下属性用于设置工具提示显示时间： <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>， <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>，和<xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>。  
   
- 使用<xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>并<xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>属性指定的延迟通常很短，之前<xref:System.Windows.Controls.ToolTip>将显示，还指定的时间<xref:System.Windows.Controls.ToolTip>保持可见。 有关详细信息，请参阅[如何：延迟的工具提示显示](https://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7)。  
+ 使用<xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>并<xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>属性指定的延迟通常很短，之前<xref:System.Windows.Controls.ToolTip>将显示，还指定的时间<xref:System.Windows.Controls.ToolTip>保持可见。 有关详细信息，请参阅[如何：延迟的工具提示显示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms747264(v=vs.90))。  
   
  <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>属性确定了快速移动时鼠标指针它们之间不同控件的工具提示是否显示没有初始延迟。 有关详细信息<xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>属性，请参阅[使用 BetweenShowDelay 属性](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)。  
   

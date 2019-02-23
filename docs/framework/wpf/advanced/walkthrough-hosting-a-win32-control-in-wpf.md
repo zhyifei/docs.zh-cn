@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 8e6da9e9e48238c33a3522034c53ecdcb5ec99cc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 047ccd4ea4ba83c8d7427559f3ee76cc3547a430
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691545"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747526"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>演练：中承载 Win32 控件在 WPF 中
 Windows Presentation Foundation (WPF) 提供了用于创建应用程序的丰富环境。 但是，当您在 Win32 代码中有大量投入时，可能会重复使用至少某些更有效的在 WPF 应用程序中的代码而不是完全重写。 WPF 提供了一个简单的机制，用于承载 Win32 窗口中，在 WPF 页上。  
@@ -140,16 +140,16 @@ Windows Presentation Foundation (WPF) 提供了用于创建应用程序的丰富
   
  用户还可以选择某个项的列表框中单击它，就像传统的 Win32 应用程序。 每当用户通过选择、添加或追加项来更改列表框的状态时，都将更新所显示的数据。  
   
- 若要追加项，将发送列表框[`LB_ADDSTRING`消息](https://msdn.microsoft.com/library/windows/desktop/bb775181(v=vs.85).aspx)。 若要删除项，请发送[ `LB_GETCURSEL` ](https://msdn.microsoft.com/library/windows/desktop/bb775197(v=vs.85).aspx)若要获取当前所选内容的索引，然后[ `LB_DELETESTRING` ](https://msdn.microsoft.com/library/windows/desktop/bb775183(v=vs.85).aspx)删除的项。 该示例还会发送[ `LB_GETCOUNT` ](https://msdn.microsoft.com/library/windows/desktop/bb775195(v=vs.85).aspx)，并使用返回的值来更新显示的项数的显示。 这两个实例的[ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx)使用上一节所述的 PInvoke 声明之一。  
+ 若要追加项，将发送列表框[`LB_ADDSTRING`消息](/windows/desktop/Controls/lb-addstring)。 若要删除项，请发送[ `LB_GETCURSEL` ](/windows/desktop/Controls/lb-getcursel)若要获取当前所选内容的索引，然后[ `LB_DELETESTRING` ](/windows/desktop/Controls/lb-deletestring)删除的项。 该示例还会发送[ `LB_GETCOUNT` ](/windows/desktop/Controls/lb-getcount)，并使用返回的值来更新显示的项数的显示。 这两个实例的[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)使用上一节所述的 PInvoke 声明之一。  
   
  [!code-csharp[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
  [!code-vb[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
- 当用户选择一项或更改其选择时，控件通过将其发送通知宿主窗口[`WM_COMMAND`消息](https://msdn.microsoft.com/library/windows/desktop/ms647591(v=vs.85).aspx)，这会引发<xref:System.Windows.Interop.HwndHost.MessageHook>事件页。 处理程序将接收到与宿主窗口的主窗口过程相同的信息。 它还将为布尔值的引用`handled`。 您设置`handled`到`true`指示已经处理该消息，且不进行其他处理需要。  
+ 当用户选择一项或更改其选择时，控件通过将其发送通知宿主窗口[`WM_COMMAND`消息](/windows/desktop/menurc/wm-command)，这会引发<xref:System.Windows.Interop.HwndHost.MessageHook>事件页。 处理程序将接收到与宿主窗口的主窗口过程相同的信息。 它还将为布尔值的引用`handled`。 您设置`handled`到`true`指示已经处理该消息，且不进行其他处理需要。  
   
- [`WM_COMMAND`](https://msdn.microsoft.com/library/windows/desktop/ms647591(v=vs.85).aspx) 将发送的原因，有多种，因此必须检查通知 ID 以确定它是否是你想要处理的事件。 高位字中包含的 ID`wParam`参数。 该示例使用按位运算符提取该 id。 如果用户已选择或更改其选择，该 ID 将是[ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx)。  
+ [`WM_COMMAND`](/windows/desktop/menurc/wm-command) 将发送的原因，有多种，因此必须检查通知 ID 以确定它是否是你想要处理的事件。 高位字中包含的 ID`wParam`参数。 该示例使用按位运算符提取该 id。 如果用户已选择或更改其选择，该 ID 将是[ `LBN_SELCHANGE` ](/windows/desktop/Controls/lbn-selchange)。  
   
- 当[ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx)是收到，该示例通过向控件发送中获取选定项的索引[`LB_GETCURSEL`消息](https://msdn.microsoft.com/library/windows/desktop/bb775197(v=vs.85).aspx)。 若要获取文本，请先创建<xref:System.Text.StringBuilder>。 然后发送该控件[`LB_GETTEXT`消息](https://msdn.microsoft.com/library/windows/desktop/bb761313(v=vs.85).aspx)。 传递空<xref:System.Text.StringBuilder>对象作为`wParam`参数。 当[ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx)返回，<xref:System.Text.StringBuilder>将包含所选的项的文本。 这种用法[ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx)需要另一种 PInvoke 声明。  
+ 当[ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx)是收到，该示例通过向控件发送中获取选定项的索引[`LB_GETCURSEL`消息](/windows/desktop/Controls/lb-getcursel)。 若要获取文本，请先创建<xref:System.Text.StringBuilder>。 然后发送该控件[`LB_GETTEXT`消息](/windows/desktop/Controls/lb-gettext)。 传递空<xref:System.Text.StringBuilder>对象作为`wParam`参数。 当[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)返回，<xref:System.Text.StringBuilder>将包含所选的项的文本。 这种用法[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)需要另一种 PInvoke 声明。  
   
  最后，设置`handled`到`true`以指示消息已得到处理。  
   

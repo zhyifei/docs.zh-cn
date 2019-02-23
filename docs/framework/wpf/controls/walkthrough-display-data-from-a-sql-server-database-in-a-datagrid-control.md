@@ -1,5 +1,5 @@
 ---
-title: 演练：在 DataGrid 控件中显示 SQL Server 数据库中的数据
+title: 演练：DataGrid 控件中显示的 SQL Server 数据库中的数据
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: e3db65c91e53ee0ed7b5e520bbc4989cd7404816
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6cf56a853377a9c062009fb8a4082cd5380905c6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197131"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748409"
 ---
-# <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>演练： 在 DataGrid 控件中显示 SQL Server 数据库中的数据
+# <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>演练：DataGrid 控件中显示的 SQL Server 数据库中的数据
 
 在本演练中，将从 SQL Server 数据库中检索数据和显示中的这些数据<xref:System.Windows.Controls.DataGrid>控件。 ADO.NET 实体框架用于创建表示数据，并使用 LINQ 编写从实体类检索指定的数据的查询的实体类。
 
@@ -75,7 +75,7 @@ ms.locfileid: "47197131"
 
 4.  选择 <xref:System.Windows.Window>。
 
-5.  使用属性窗口或 XAML 编辑器中，创建的事件处理程序<xref:System.Windows.Window>名为`Window_Loaded`为<xref:System.Windows.FrameworkElement.Loaded>事件。 有关详细信息，请参阅[如何： 创建简单的事件处理程序](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)。
+5.  使用属性窗口或 XAML 编辑器中，创建的事件处理程序<xref:System.Windows.Window>名为`Window_Loaded`为<xref:System.Windows.FrameworkElement.Loaded>事件。 有关详细信息，请参阅[如何：创建一个简单的事件处理程序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))。
 
      下图显示 XAML mainwindow.xaml。
 
@@ -100,4 +100,4 @@ ms.locfileid: "47197131"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Controls.DataGrid>
-- [如何执行操作实现： 开始使用 WPF 应用程序中的实体框架？](https://go.microsoft.com/fwlink/?LinkId=159868)
+- [如何实现:开始使用 WPF 应用程序中的实体框架？](https://go.microsoft.com/fwlink/?LinkId=159868)

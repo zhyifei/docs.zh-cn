@@ -2,12 +2,12 @@
 title: 友元程序集 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b3d5716-e6e4-47a7-a3e9-084d7fba5c28
-ms.openlocfilehash: efb22ce25bdd39fd7a511503eb3ff6792639d29e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b91f894f9b10c85eb322b4421fd0473335df7a3
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579792"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748149"
 ---
 # <a name="friend-assemblies-visual-basic"></a>友元程序集 (Visual Basic)
 一个*友元程序集*是可以访问另一个程序集的程序集[友元](../../../../visual-basic/language-reference/modifiers/friend.md)类型和成员。 如果将一个程序集标识为友元程序集，则无需再将类型和成员标记为公共，其他程序集就能访问它们。 此举在下列情境中尤其方便：  
@@ -69,5 +69,5 @@ End Class
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
 - [如何：创建未签名的友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [如何：创建签名的友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [程序集和全局程序集缓存 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [在.NET 中的程序集](../../../../standard/assembly/index.md)
 - [编程概念](../../../../visual-basic/programming-guide/concepts/index.md)

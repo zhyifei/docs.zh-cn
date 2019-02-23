@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: b243ee7fdb72aaf749492a008708da4209a7736e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04bfc2df15829b63e6f2541eb95a4dd14836744c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611977"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747014"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 浏览器应用程序概述
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "54611977"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>创建新的 XAML 浏览器应用程序 (XBAP)  
- 创建新的 XBAP 项目的最简单方法是使用 Microsoft Visual Studio。 创建新项目时，从模板列表中选择“WPF 浏览器应用程序”。 有关详细信息，请参阅[如何：创建新的 WPF 浏览器应用程序项目](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)。  
+ 创建新的 XBAP 项目的最简单方法是使用 Microsoft Visual Studio。 创建新项目时，从模板列表中选择“WPF 浏览器应用程序”。 有关详细信息，请参阅[如何：创建新的 WPF 浏览器应用程序项目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。  
   
  运行 XBAP 项目时，它将在浏览器窗口而不是在单独的窗口中打开。 当调试从 Visual Studio XBAP 时，应用程序通过 Internet 区域权限运行，并因此将引发安全异常，如果超出这些权限。 有关详细信息，请参阅[安全性](../../../../docs/framework/wpf/security-wpf.md)和 [WPF 部分信任安全性](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   

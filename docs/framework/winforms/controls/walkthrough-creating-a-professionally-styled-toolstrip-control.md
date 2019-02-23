@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1585f6e484923d16e1613b436588467b47daeecb
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714888"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746239"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>演练：创建具有专业样式的 ToolStrip 控件
 可以为应用程序的<xref:System.Windows.Forms.ToolStrip>控制专业的外观和行为，通过编写自己的类派生自<xref:System.Windows.Forms.ToolStripProfessionalRenderer>类型。  
@@ -30,7 +30,7 @@ ms.locfileid: "54714888"
   
  完成后，必须具有专业外观的 Microsoft Office® XP 控件的可重用的自定义客户端控件。  
   
- 若要将代码复制本主题中的一个列表，请参阅[如何：创建具有专业样式的 ToolStrip 控件](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)。  
+ 要将本主题中的代码作为单个列表进行复制，请参阅[如何：创建具有专业样式的 ToolStrip 控件](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -49,7 +49,7 @@ ms.locfileid: "54714888"
   
 2.  在中**解决方案资源管理器**，通过删除源文件，具体取决于你选择的语言中名为"UserControl1.cs"或"UserControl1.vb"来删除项目的默认控件。  
   
-     有关详细信息，请参阅[NIB： 如何：移除、 删除和排除项](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+     有关详细信息，请参阅[如何：移除、 删除和排除项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))。  
   
 3.  添加一个新<xref:System.Windows.Forms.UserControl>项**StackViewLibrary**项目。 新的源文件基名称指定为`StackView`。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "54714888"
   
 8.  重命名`mailStackButton_Click`事件处理程序`stackButton_Click`。  
   
-     有关详细信息，请参阅[如何：重命名标识符 (Visual Basic)](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c)。  
+     有关详细信息，请参阅[重命名代码符号重构](/visualstudio/ide/reference/rename)。  
   
 9. 将以下代码插入`stackButton_Click`事件处理程序。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "54714888"
 12. 重复步骤 10 和 11 for`contactsStackButton`和`tasksStackButton`控件。  
   
 ## <a name="defining-icons"></a>定义图标  
- 每个`StackView`按钮都有一个关联的图标。 为方便起见，每个图标表示为 Base64 编码的字符串，其中进行反序列化之前<xref:System.Drawing.Bitmap>从它创建的。 在生产环境中，将位图数据存储为一种资源，并图标将显示在 Windows 窗体设计器。 有关详细信息，请参阅[如何：向 Windows 窗体添加背景图像](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff)。  
+ 每个`StackView`按钮都有一个关联的图标。 为方便起见，每个图标表示为 Base64 编码的字符串，其中进行反序列化之前<xref:System.Drawing.Bitmap>从它创建的。 在生产环境中，将位图数据存储为一种资源，并图标将显示在 Windows 窗体设计器。 有关详细信息，请参阅[如何：向 Windows 窗体添加背景图像](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dff9f95f(v=vs.100))。  
   
 #### <a name="to-define-icons"></a>若要定义的图标  
   
