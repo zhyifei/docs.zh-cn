@@ -7,25 +7,25 @@ helpviewer_keywords:
 - ListBox control [WPF], how-to topics
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
-ms.openlocfilehash: 2d7f37acb2c0e09a0a9104a0bb7bd90b2d324a4d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f4d6b8d9ac3b092e18b87dbf9e8965bfdb064ae0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507945"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746975"
 ---
-# <a name="listbox-how-to-topics"></a><span data-ttu-id="a7446-102">ListBox 帮助主题</span><span class="sxs-lookup"><span data-stu-id="a7446-102">ListBox How-to Topics</span></span>
-<span data-ttu-id="a7446-103">在本部分中的主题介绍如何使用<xref:System.Windows.Controls.ListBox>控件来显示可选择的项的列表。</span><span class="sxs-lookup"><span data-stu-id="a7446-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
+# <a name="listbox-how-to-topics"></a><span data-ttu-id="09b8e-102">ListBox 帮助主题</span><span class="sxs-lookup"><span data-stu-id="09b8e-102">ListBox How-to Topics</span></span>
+<span data-ttu-id="09b8e-103">在本部分中的主题介绍如何使用<xref:System.Windows.Controls.ListBox>控件来显示可选择的项的列表。</span><span class="sxs-lookup"><span data-stu-id="09b8e-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a7446-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="a7446-104">In This Section</span></span>  
- [<span data-ttu-id="a7446-105">将 ListBox 绑定到数据</span><span class="sxs-lookup"><span data-stu-id="a7446-105">Bind a ListBox to Data</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
- [<span data-ttu-id="a7446-106">获取 ListBoxItem</span><span class="sxs-lookup"><span data-stu-id="a7446-106">Get a ListBoxItem</span></span>](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
- [<span data-ttu-id="a7446-107">如何： 将数据添加到 ItemsControl</span><span class="sxs-lookup"><span data-stu-id="a7446-107">How to: Add Data to an ItemsControl</span></span>](https://msdn.microsoft.com/library/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
- [<span data-ttu-id="a7446-108">提升 ListBox 的滚动性能</span><span class="sxs-lookup"><span data-stu-id="a7446-108">Improve the Scrolling Performance of a ListBox</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="09b8e-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="09b8e-104">In This Section</span></span>  
+ [<span data-ttu-id="09b8e-105">将 ListBox 绑定到数据</span><span class="sxs-lookup"><span data-stu-id="09b8e-105">Bind a ListBox to Data</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
+ [<span data-ttu-id="09b8e-106">获取 ListBoxItem</span><span class="sxs-lookup"><span data-stu-id="09b8e-106">Get a ListBoxItem</span></span>](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
+ <span data-ttu-id="09b8e-107">[如何：将数据添加到 ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="09b8e-107">[How to: Add Data to an ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span></span>  
+ [<span data-ttu-id="09b8e-108">提升 ListBox 的滚动性能</span><span class="sxs-lookup"><span data-stu-id="09b8e-108">Improve the Scrolling Performance of a ListBox</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="a7446-109">参考</span><span class="sxs-lookup"><span data-stu-id="a7446-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="09b8e-109">参考</span><span class="sxs-lookup"><span data-stu-id="09b8e-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   
  <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="a7446-110">相关章节</span><span class="sxs-lookup"><span data-stu-id="a7446-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="09b8e-110">相关章节</span><span class="sxs-lookup"><span data-stu-id="09b8e-110">Related Sections</span></span>
