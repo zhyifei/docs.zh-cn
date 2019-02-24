@@ -5,12 +5,12 @@ ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
 ms.custom: seodec18
-ms.openlocfilehash: 6204a28200f1db6350e695a9ab29502c46c25590
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 63fc441d045f62abc6776cac56571a971d64fefd
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129696"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583870"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>如何删除 .NET Core 运行时和 SDK
 
@@ -158,7 +158,7 @@ Linux 还提供其他可用来卸载 .NET Core（SDK 或运行时）的选项。
 - [apt-get(8)](https://linux.die.net/man/8/apt-get) 由基于 Debian 的系统（包括 Ubuntu）使用。
 - [yum(8)](https://linux.die.net/man/8/yum) 用于 Fedora、CentOS 和 Oracle Linux。
 - [zypper(8)](https://en.opensuse.org/SDB:Zypper_manual_(plain)) 用于 openSUSE 和 SUSE Linux Enterprise System (SLES)。
-- [dnf(8)](https://dnf.readthedocs.io/latest/command_ref.html) 用于 Fedora。
+- [dnf(8)](https://dnf.readthedocs.io/en/latest/command_ref.html) 用于 Fedora。
 
 几乎在所有情况下，删除包的命令都是 `remove`。
 

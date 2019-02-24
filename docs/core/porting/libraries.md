@@ -2,14 +2,14 @@
 title: 将库移植到 .NET Core
 description: 了解如何将 .NET Framework 中的库项目移植到 .NET Core。
 author: cartermp
-ms.date: 12/7/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8190dcfd3ffed9051c7724752a19d88e7bef4f4d
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904703"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745555"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>将 .NET Framework 库移植到 .NET Core
 
@@ -26,7 +26,7 @@ ms.locfileid: "55904703"
 
 还应熟悉下列主题的内容：
 
-[.NET Standard](~/docs/standard/net-standard.md)   
+[.NET Standard](../../standard/net-standard.md)\
 此主题介绍了适用于所有 .NET 实现代码的 .NET API 正式规范。
 
 [包、元包和框架](~/docs/core/packages.md)   
