@@ -1,5 +1,5 @@
 ---
-title: 抱歉，我们不&#39;t 对此 C# 错误的详细信息
+title: 很抱歉，我们没有关于此 C# 错误的具体信息
 ms.date: 07/20/2015
 f1_keywords:
 - CS1583
@@ -882,32 +882,33 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314065"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "56797973"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a><span data-ttu-id="1bccf-102">抱歉，我们不&#39;t 对此 C# 错误的详细信息</span><span class="sxs-lookup"><span data-stu-id="1bccf-102">Sorry, we don&#39;t have specifics on this C# error</span></span>
-<span data-ttu-id="1bccf-103">很抱歉，我们没有关于此错误的任何具体信息。</span><span class="sxs-lookup"><span data-stu-id="1bccf-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="1bccf-104">你可以在 Web 中搜索错误号和消息文本，以找到相关信息。</span><span class="sxs-lookup"><span data-stu-id="1bccf-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="1bccf-105">或者，还可以咨询其他开发人员，使用以下论坛之一：</span><span class="sxs-lookup"><span data-stu-id="1bccf-105">Or you can ask other developers using one of these forums:</span></span>  
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a><span data-ttu-id="03061-102">很抱歉，我们没有关于此 C# 错误的具体信息</span><span class="sxs-lookup"><span data-stu-id="03061-102">Sorry, we don't have specifics on this C# error</span></span>
+<span data-ttu-id="03061-103">很抱歉，我们没有关于此错误的任何具体信息。</span><span class="sxs-lookup"><span data-stu-id="03061-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="03061-104">你可以在 Web 中搜索错误号和消息文本，以找到相关信息。</span><span class="sxs-lookup"><span data-stu-id="03061-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="03061-105">或者，您可以咨询其他开发人员使用以下论坛之一：</span><span class="sxs-lookup"><span data-stu-id="03061-105">Or you can ask other developers using one of these forums:</span></span>  
   
- [<span data-ttu-id="1bccf-106">Visual C# 语言</span><span class="sxs-lookup"><span data-stu-id="1bccf-106">Visual C# Language</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- <span data-ttu-id="1bccf-107">提供论坛供有关的问题及常规讨论的 Visual C# 语言的语法和编译器。</span><span class="sxs-lookup"><span data-stu-id="1bccf-107">Provides a forum for questions about and general discussions of the Visual C# language syntax and compiler.</span></span>  
+ [<span data-ttu-id="03061-106">Visual C# 语言</span><span class="sxs-lookup"><span data-stu-id="03061-106">Visual C# Language</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
+ <span data-ttu-id="03061-107">提供了一个论坛问题有关及常规讨论的视觉对象C#语言语法和编译器。</span><span class="sxs-lookup"><span data-stu-id="03061-107">Provides a forum for questions about and general discussions of the Visual C# language syntax and compiler.</span></span>  
   
- [<span data-ttu-id="1bccf-108">Visual C# IDE</span><span class="sxs-lookup"><span data-stu-id="1bccf-108">Visual C# IDE</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- <span data-ttu-id="1bccf-109">提供有关如何在 Visual Studio 环境中的问题的论坛。</span><span class="sxs-lookup"><span data-stu-id="1bccf-109">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
+ [<span data-ttu-id="03061-108">Visual C# IDE</span><span class="sxs-lookup"><span data-stu-id="03061-108">Visual C# IDE</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
+ <span data-ttu-id="03061-109">提供有关如何在 Visual Studio 环境中的问题的论坛。</span><span class="sxs-lookup"><span data-stu-id="03061-109">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
   
- [<span data-ttu-id="1bccf-110">Visual C# 常见问题解答</span><span class="sxs-lookup"><span data-stu-id="1bccf-110">Visual C# General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- <span data-ttu-id="1bccf-111">提供论坛供大家讨论有关，因此会发出与 Visual C# 编写其他论坛中未涉及。</span><span class="sxs-lookup"><span data-stu-id="1bccf-111">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
+ [<span data-ttu-id="03061-110">Visual C# 常见问题解答</span><span class="sxs-lookup"><span data-stu-id="03061-110">Visual C# General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
+ <span data-ttu-id="03061-111">提供了一个论坛问题有关和与视觉对象问题C#不在其他论坛中讨论的。</span><span class="sxs-lookup"><span data-stu-id="03061-111">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
   
- [<span data-ttu-id="1bccf-112">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="1bccf-112">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/c%23)  
- <span data-ttu-id="1bccf-113">提供论坛供大家讨论有关，因此会发出使用 Visual C#。</span><span class="sxs-lookup"><span data-stu-id="1bccf-113">Provides a forum for questions about and issues with Visual C#.</span></span>  
+ [<span data-ttu-id="03061-112">堆栈溢出</span><span class="sxs-lookup"><span data-stu-id="03061-112">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/c%23)  
+ <span data-ttu-id="03061-113">提供了一个论坛问题有关和与视觉对象问题C#。</span><span class="sxs-lookup"><span data-stu-id="03061-113">Provides a forum for questions about and issues with Visual C#.</span></span>  
   
- <span data-ttu-id="1bccf-114">另请参见：</span><span class="sxs-lookup"><span data-stu-id="1bccf-114">Also see:</span></span>  
- [<span data-ttu-id="1bccf-115">为 Visual C# 程序员提供的附加资源</span><span class="sxs-lookup"><span data-stu-id="1bccf-115">Additional Resources for Visual C# Programmers</span></span>](../../csharp/getting-started/additional-resources.md)  
+ <span data-ttu-id="03061-114">另请参见：</span><span class="sxs-lookup"><span data-stu-id="03061-114">Also see:</span></span>  
+ [<span data-ttu-id="03061-115">为 Visual C# 程序员提供的附加资源</span><span class="sxs-lookup"><span data-stu-id="03061-115">Additional Resources for Visual C# Programmers</span></span>](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a><span data-ttu-id="1bccf-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="1bccf-116">See Also</span></span>  
- [<span data-ttu-id="1bccf-117">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="1bccf-117">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="1bccf-118">C# 参考</span><span class="sxs-lookup"><span data-stu-id="1bccf-118">C# Reference</span></span>](../../csharp/language-reference/index.md)  
- [<span data-ttu-id="1bccf-119">与我们交流</span><span class="sxs-lookup"><span data-stu-id="1bccf-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)  
+## <a name="see-also"></a><span data-ttu-id="03061-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="03061-116">See also</span></span>
+
+- [<span data-ttu-id="03061-117">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="03061-117">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="03061-118">C# 参考</span><span class="sxs-lookup"><span data-stu-id="03061-118">C# Reference</span></span>](../../csharp/language-reference/index.md)
+- [<span data-ttu-id="03061-119">与我们交流</span><span class="sxs-lookup"><span data-stu-id="03061-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
