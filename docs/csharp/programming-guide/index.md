@@ -65,7 +65,7 @@ ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
 ## <a name="platform-sections"></a>平台部分  
  [应用程序域](../../framework/app-domains/application-domains.md)  
   
- [程序集和全局程序集缓存](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [.NET 中的程序集](../../standard/assembly/index.md)  
   
  [特性](../../csharp/programming-guide/concepts/attributes/index.md)  
   
