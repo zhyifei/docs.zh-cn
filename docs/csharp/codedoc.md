@@ -3,12 +3,12 @@ title: 使用 XML 注释来记录代码
 description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4e5efacbb3dcc9121a5ef52ae437af263fd86cff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b52fba24750747772c36959324cd16e21067910e
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271351"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583701"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 注释来记录代码
 
@@ -194,9 +194,9 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 现在好了，代码又变得可读了，并且未丢失任何文档信息。
 
-`filename` 属性表示包含文档的 XML 文件的名称。
+`file` 属性表示包含文档的 XML 文件的名称。
 
-`path` 属性表示一个 [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) 查询，该查询的对象为指定的 `filename` 中的 `tag name`。
+`path` 属性表示一个 [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) 查询，该查询的对象为指定的 `file` 中的 `tag name`。
 
 `name` 属性表示位于注释前的标记中的名称说明符。
 
