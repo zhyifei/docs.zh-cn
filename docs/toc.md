@@ -31,7 +31,8 @@
 ### [可移植性分析器](standard/analyzers/portability-analyzer.md)
 ### [框架分析器](standard/analyzers/framework-analyzer.md)
 ## [处理和引发异常](standard/exceptions/)
-## [.NET 程序集文件格式](standard/assembly-format.md)
+## [.NET 中的程序集](standard/assembly/index.md)
+### [.NET 程序集文件格式](standard/assembly/file-format.md) 
 ## [垃圾回收](standard/garbage-collection/)
 ## [泛型类型](standard/generics.md)
 ## [委托和 lambda](standard/delegates-lambdas.md)
@@ -521,7 +522,7 @@
 #### [自定义 My 中可用的对象](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [编程概念](visual-basic/programming-guide/concepts/index.md)
-### [程序集和全局程序集缓存](visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+### [.NET 中的程序集](standard/assembly/index.md)
 ### [使用 Async 和 Await 的异步编程](visual-basic/programming-guide/concepts/async/index.md)
 ### [特性](visual-basic/programming-guide/concepts/attributes/index.md)
 ### [表达式树](visual-basic/programming-guide/concepts/expression-trees/index.md)
