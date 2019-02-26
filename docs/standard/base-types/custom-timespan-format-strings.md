@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c75f9ffe17d04ad4b8e41a6e1402a3cf4be7e07f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0681ff9c59e77650654495ecd6e6d9f9ded82517
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722707"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665090"
 ---
 # <a name="custom-timespan-format-strings"></a>自定义的 TimeSpan 格式字符串
 
@@ -29,7 +29,8 @@ ms.locfileid: "54722707"
 > [!IMPORTANT]
 > 自定义 <xref:System.TimeSpan> 格式说明符不包含占位符分隔符符号，如分隔天与小时、小时与分钟或秒与秒若干分之一的符号。 相反，这些符号必须以字符串形式包含在自定义格式字符串中。 例如，`"dd\.hh\:mm"` 将句点 (.) 定义为天与小时之间的分隔符，将冒号 (:) 定义为小时与分钟之间的分隔符。
 >
-> 自定义 <xref:System.TimeSpan> 格式说明符还不包括正负符号，无法区分正负时间间隔。 若要包含正负符号，必须使用条件逻辑构造格式字符串。 [其他字符](#Other)部分包括一个示例。
+> 自定义 <xref:System.TimeSpan> 格式说明符还不包括正负符号，无法区分正负时间间隔。 若要包含正负符号，必须使用条件逻辑构造格式字符串。 
+  [其他字符](#Other)部分包括一个示例。
 
 <xref:System.TimeSpan> 值的字符串表示形式通过调用 <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> 方法重载由支持复合格式的方法（如 <xref:System.String.Format%2A?displayProperty=nameWithType>）生成。 有关更多信息，请参见[格式设置类型](formatting-types.md)和[复合格式设置](composite-formatting.md)。 下面的示例展示了自定义格式字符串在格式设置操作中的用法。
 
@@ -43,7 +44,7 @@ ms.locfileid: "54722707"
 
 <a name="table"></a> 下表列出了自定义日期和时间格式说明符。
 
-| 格式说明符 | 说明 | 示例 |
+| 格式说明符 | 说明​​ | 示例 |
 |----------------------|-----------------|-------------|
 |“d”，“%d”|时间间隔中的整天数。<br /><br /> 更多信息：[“d”自定义格式说明符](#dSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
 |"dd"-"dddddddd"|时间间隔中的整天数，根据需要使用前导零填充。<br /><br /> 更多信息：[“dd”-“dddddddd”自定义格式说明符](#ddSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|
@@ -54,7 +55,7 @@ ms.locfileid: "54722707"
 |“s”，“%s”|时间间隔中不包含在小时、天数或分钟中的整秒数。 一位数秒没有前导零。<br /><br /> 更多信息：[“s”自定义格式说明符](#sSpecifier)。|`TimeSpan.FromSeconds(12.965)`：<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12.965|
 |“ss”|时间间隔中不包含在小时、天数或分钟中的整秒数。  一位数秒具有前导零。<br /><br /> 更多信息：[“ss”自定义格式说明符](#ssSpecifier)。|`TimeSpan.FromSeconds(6.965)`：<br /><br /> `ss` --> 06<br /><br /> `ss\.fff` --> 06.965|
 |“f”，“%f”|时间间隔中的十分之几秒。<br /><br /> 更多信息：[“f”自定义格式说明符](#fSpecifier)。|`TimeSpan.FromSeconds(6.895)`：<br /><br /> `f` --> 8<br /><br /> `ss\.f` --> 06.8|
-|“ff”|时间间隔中的百分之几秒。<br /><br /> 有关详细信息，请参阅 ["ff" 自定义格式说明符](#ffSpecifier)。|`TimeSpan.FromSeconds(6.895)`：<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
+|“ff”|时间间隔中的百分之几秒。<br /><br /> 更多信息：[“ff”自定义格式说明符](#ffSpecifier)。|`TimeSpan.FromSeconds(6.895)`：<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
 |“fff”|时间间隔中的毫秒。<br /><br /> 更多信息：[“fff”自定义格式说明符](#f3Specifier)。|`TimeSpan.FromSeconds(6.895)`：<br /><br /> `fff` --> 895<br /><br /> `ss\.fff` --> 06.895|
 |“ffff”|时间间隔中的万分之几秒。<br /><br /> 更多信息：[“ffff”自定义格式说明符](#f4Specifier)。|`TimeSpan.Parse("0:0:6.8954321")`：<br /><br /> `ffff` --> 8954<br /><br /> `ss\.ffff` --> 06.8954|
 |“fffff”|时间间隔中的十万分之几秒。<br /><br /> 更多信息：[“fffff”自定义格式说明符](#f5Specifier)。|`TimeSpan.Parse("0:0:6.8954321")`：<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06.89543|
@@ -68,7 +69,7 @@ ms.locfileid: "54722707"
 |“FFFFFF”|时间间隔中的百万分之几秒。 不显示任何小数尾随零。<br /><br /> 更多信息：[“FFFFFF”自定义格式说明符](#F6_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`：329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`：<br /><br /> `ss\.FFFFFF`：03.1|
 |“FFFFFFF”|时间间隔中的千万分之几秒。 不显示任何小数尾随零或七个零。<br /><br /> 更多信息：[“FFFFFFF”自定义格式说明符](#F7_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`：3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`：<br /><br /> `ss\.FFFFFF`：03.19|
 |'string'|文本字符串分隔符。<br /><br /> 更多信息：[其他字符](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
-|\\|转义字符。<br /><br /> 有关详细信息，请参阅[其他字符](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
+|&#92;|转义字符。<br /><br /> 更多信息：[其他字符](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |任何其他字符|任何其他未转义字符会解释为自定义格式说明符。<br /><br /> 详细信息：[其他字符](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
 <a name="dSpecifier"></a> 

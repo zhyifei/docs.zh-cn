@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b00b0021f71097f2c6cedcb1ddea7861f1936f84
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145249"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442225"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定义多容器应用程序 
 
@@ -458,7 +458,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 1.  **sdk**：用于开发和生成方案。
 2.  **runtime**：用于生产方案
-3.  **runtime-deps**：用于[自包含应用程序](https://docs.microsoft.com/dotnet/core/deploying/index#self-contained-deployments-scd)的生产方案。
+3.  **runtime-deps**：用于[自包含应用程序](../../../core/deploying/index.md#self-contained-deployments-scd)的生产方案。
 
 Runtime 映像还提供了端口 80 的 aspnetcore\_urls 自动设置和程序集的 pre-ngend 缓存，以帮助加快启动速度。
 
@@ -468,7 +468,7 @@ Runtime 映像还提供了端口 80 的 aspnetcore\_urls 自动设置和程序�
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 -   **为 .NET Core 应用程序生成 Docker 映像** <br/>
-    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
+    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 >[!div class="step-by-step"]
 >[上一页](data-driven-crud-microservice.md)
