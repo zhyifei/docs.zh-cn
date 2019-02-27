@@ -1,6 +1,6 @@
 ---
 title: 指定完全限定的类型名称
-ms.date: 03/14/2018
+ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
 - reflection, fully qualified type names
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9281906f5500d954f3a0c7abface4ee43adcb64d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d73cad94e0e4343c5dd09a3b12131afeabef873
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628534"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747244"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>指定完全限定的类型名称
 必须指定类型名称才能为各种反射操作提供有效输入。 完全限定的类型名称包含程序集名称规范、命名空间规范和类型名称。 类型名称规范由 <xref:System.Type.GetType%2A?displayProperty=nameWithType>、<xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>、<xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 等方法使用。  
@@ -41,9 +41,12 @@ ReferenceTypeSpec
 
 SimpleTypeSpec
     : PointerTypeSpec
-    | ArrayTypeSpec
+    | GenericTypeSpec
     | TypeName
     ;
+
+GenericTypeSpec
+   : SimpleTypeSpec ` NUMBER
 
 PointerTypeSpec
     : SimpleTypeSpec '*'
@@ -134,7 +137,7 @@ AssemblyProperty
 ## <a name="specifying-assembly-names"></a>指定程序集名称  
  程序集名称规范中至少需要具有程序集的文本名称 (IDENTIFIER)。 可以在 IDENTIFIER 后添加下表所述的以逗号分隔的属性/值对列表。 IDENTIFIER 命名应遵循文件命名的规则。 IDENTIFIER 不区分大小写。  
   
-|属性名称|说明|允许的值|  
+|属性名称|说明​​|允许的值|  
 |-------------------|-----------------|----------------------|  
 |**Version**|程序集版本号|Major.Minor.Build.Revision，其中 Major、Minor、Build 和 Revision 是 0 和 65535 之间（含 0 和 65535）的整数。|  
 |PublicKey|完整公钥|完整公钥十六进制格式的字符串值。 指定 null 引用（在 Visual Basic 中为 Nothing）以显式指示私有程序集。|  
@@ -177,7 +180,10 @@ com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012
 com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,  
     Version=1.0.0.0  
 ```  
-  
+## <a name="specifying-generic-types"></a>指定泛型类型
+
+SimpleTypeSpec\`NUMBER 表示具有从 1 到 n 泛型类型参数的开放式泛型类型。 例如，若要获取对开放式泛型类型 List\<T> 或封闭式泛型类型 List\<String> 的引用，请使用 ``Type.GetType("System.Collections.Generic.List`1")`` 若要获取对泛型类型 Dictionary\<TKey,TValue> 的引用，请使用 ``Type.GetType("System.Collections.Generic.Dictionary`2")``。 
+
 ## <a name="specifying-pointers"></a>指定指针  
  SimpleTypeSpec* 表示未托管的指针。 例如，要获取指向 MyType 类型的指针，请使用 `Type.GetType("MyType*")`。 要获取指向 MyType 类型指针的指针，请使用 `Type.GetType("MyType**")`。  
   
@@ -192,7 +198,6 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 -   `Type.GetType("MyArray[]")` 获取下限为 0 的单维数组。  
   
 -   `Type.GetType("MyArray[*]")` 获取下限未知的单维数组。  
-  
 -   `Type.GetType("MyArray[][]")` 获取二维数组的数组。  
   
 -   `Type.GetType("MyArray[*,*]")` 和 `Type.GetType("MyArray[,]")` 获取下限未知的矩形二维数组。  

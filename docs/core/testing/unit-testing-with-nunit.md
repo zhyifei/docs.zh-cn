@@ -4,12 +4,12 @@ description: 使用 dotnet test 和 NUnit 分步构建一个示例解决方案�
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 00be8c2fdef88861cc1119b1593155e027a3ade5
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 7d3daa344b2a6fb8694a255fdc26b5ba31e2d82a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307209"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747978"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>使用 NUnit 和 .NET Core 进行 C# 单元测试
 
@@ -42,7 +42,7 @@ dotnet new sln
 dotnet new classlib
 ```
 
-将 *Class1.cs* 重命名为 *PrimeService.cs*。 为了使用由测试驱动的开发 (TDD)，需对 `PrimeService` 类创建故障实现：
+将 *Class1.cs* 重命名为 *PrimeService.cs*。 创建 `PrimeService` 类的失败实现：
 
 ```csharp
 using System;
@@ -117,7 +117,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-TDD 方法要求编写一个失败的测试，使其通过测试，然后重复该过程。 在 PrimeService.Tests 目录中，将 UnitTest1.cs 文件重命名为 PrimeService_IsPrimeShould.cs，并将其整个内容替换为以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 在 PrimeService.Tests 目录中，将 UnitTest1.cs 文件重命名为 PrimeService_IsPrimeShould.cs，并将其整个内容替换为以下代码：
 
 ```csharp
 using NUnit.Framework;

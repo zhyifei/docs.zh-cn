@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123665"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665025"
 ---
-# <a name="walkthrough-create-a-windows-service-app"></a>演练：创建 Windows 服务应用程序
+# <a name="walkthrough-create-a-windows-service-app"></a>演练：创建 Windows 服务应用
 
 本文演示了如何在 Visual Studio 中创建可向事件日志中写入消息的简单 Windows 服务应用程序。
 
@@ -431,7 +431,7 @@ Windows 服务像任何其他可执行文件一样，可以接受命令行参数
 
     如果 **installutil.exe** 进程报告失败，请查看安装日志以找出原因。 默认情况下，该日志与服务可执行文件位于同一文件夹中。 如果 `ProjectInstaller` 类上不存在 <xref:System.ComponentModel.RunInstallerAttribute> 类、该属性未设置为 **true**，或者 `ProjectInstaller` 类不标记为 **public**，则安装可能失败。
 
-有关更多信息，请参见 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。
+有关详细信息，请参阅[如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。
 
 ## <a name="start-and-run-the-service"></a>启动并运行服务
 
@@ -452,7 +452,7 @@ Windows 服务像任何其他可执行文件一样，可以接受命令行参数
 1. 通过开始在 Windows 任务栏上的搜索框中键入“事件查看器”并从搜索结果中选择“事件查看器”来打开“事件查看器”。
 
    > [!TIP]
-   > 在 Visual Studio 中，可以通过打开“服务器资源管理器”（键盘：**Ctrl**+**Alt**+**S**）并展开本地计算机的“事件日志”节点来访问事件日志。
+   > 在 Visual Studio 中，若要访问事件日志，可以打开“服务器资源管理器”（键盘：Ctrl+Alt+S），然后展开本地计算机的“事件日志”节点。
 
 2. 在“事件查看器”中，展开“应用程序和服务日志”。
 
@@ -472,11 +472,11 @@ Windows 服务像任何其他可执行文件一样，可以接受命令行参数
     installutil.exe /u MyNewService.exe
     ```
 
-   如果服务成功卸载，**installutil.exe** 将报告已成功移除服务。 有关更多信息，请参见 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。
+   如果服务成功卸载，**installutil.exe** 将报告已成功移除服务。 有关详细信息，请参阅[如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。
 
 ## <a name="next-steps"></a>后续步骤
 
-创建服务后，你可能希望创建一个独立安装程序，以供其他人安装你的 Windows 服务。 ClickOnce 不支持 Windows 服务，但你可以使用 [WiX 工具集](http://wixtoolset.org/)为 Windows 服务创建安装程序。 有关其他提示，请参阅[创建安装程序包](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client)。
+创建服务后，你可能希望创建一个独立安装程序，以供其他人安装你的 Windows 服务。 ClickOnce 不支持 Windows 服务，但你可以使用 [WiX 工具集](http://wixtoolset.org/)为 Windows 服务创建安装程序。 有关其他提示，请参阅[创建安装程序包](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)。
 
 你可能会探索 <xref:System.ServiceProcess.ServiceController> 组件的用法，以便将命令发送到已安装的服务。
 
@@ -487,4 +487,4 @@ Windows 服务像任何其他可执行文件一样，可以接受命令行参数
 - [Windows 服务应用程序](../../../docs/framework/windows-services/index.md)
 - [Windows 服务应用程序简介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [如何：调试 Windows 服务应用程序](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [服务 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+- [服务 (Windows)](/windows/desktop/Services/services)

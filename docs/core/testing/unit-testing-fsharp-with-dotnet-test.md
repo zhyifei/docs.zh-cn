@@ -7,12 +7,12 @@ ms.date: 08/30/2017
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 08ebe39fd6e992fdcdc10e19d87d565e76d909a2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9765c463bb427f79dcd0308e7e4fc643fdc06968
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239194"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745941"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 在 .NET Core 中进行 F# 库单元测试
 
@@ -30,7 +30,7 @@ ms.locfileid: "53239194"
     /MathService
 ```
 
-将 MathService 作为当前目录，然后运行 [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) 以创建源项目。  为了使用由测试驱动的开发 (TDD)，需对数学服务创建故障实现：
+将 MathService 作为当前目录，然后运行 [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) 以创建源项目。  创建数学服务的失败实现：
 
 ```fsharp
 module MyMath =
@@ -87,7 +87,7 @@ dotnet add reference ../MathService/MathService.fsproj
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-TDD 方法要求编写一个失败的测试，使其通过测试，然后重复该过程。 打开 Tests.fs 并添加以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 打开 Tests.fs 并添加以下代码：
 
 ```fsharp
 [<Fact>]

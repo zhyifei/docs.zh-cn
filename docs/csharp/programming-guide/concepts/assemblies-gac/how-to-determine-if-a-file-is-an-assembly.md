@@ -2,12 +2,12 @@
 title: 如何：确定文件是否为程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: a147081d16a6b9f7252466a06ebd8fc204e47c2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 474cc4622e9444cab8e9d611dd9481d5358e10f0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681763"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745245"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>如何：确定文件是否为程序集 (C#)
 当且仅当程序集处于托管状态，并在其元数据中包含程序集条目时，该文件才为程序集。 有关程序集和元数据的详细信息，请参阅主题[程序集清单](../../../../../docs/framework/app-domains/assembly-manifest.md)。  
@@ -70,4 +70,4 @@ class TestAssembly
 
 - <xref:System.Reflection.AssemblyName>
 - [C# 编程指南](../../../../csharp/programming-guide/index.md)
-- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET 中的程序集](../../../../standard/assembly/index.md)

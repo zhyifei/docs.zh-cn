@@ -2,12 +2,12 @@
 title: 如何：加载和卸载程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: eadab1d0e5ddd22fb5c0e92f45162548c9bfd76c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ff3c494b40650da1e30e111b2e7f916e249d78a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509345"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748747"
 ---
 # <a name="how-to-load-and-unload-assemblies-c"></a>如何：加载和卸载程序集 (C#)
 在生成时自动加载程序所引用的程序集，但也可以在运行时将特定的程序集加载到当前的应用程序域。 有关详细信息，请参阅[如何：将程序集加载到应用程序域中](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)。  
@@ -27,5 +27,5 @@ ms.locfileid: "54509345"
 ## <a name="see-also"></a>请参阅
 
 - [C# 编程指南](../../../../csharp/programming-guide/index.md)
-- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET 中的程序集](../../../../standard/assembly/index.md)
 - [如何：将程序集加载到应用程序域中](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

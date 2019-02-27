@@ -4,12 +4,12 @@ description: 了解如何在二元分类方案中使用 ML.NET，以了解如何
 ms.date: 02/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d6d5cae107e25000add5c8430a35131a79696bc2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9afdf1d8369e71f9614ebc2bf327e98d31b988ff
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092756"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748383"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教程：在情绪分析二元分类方案中使用 ML.NET
 
@@ -204,6 +204,9 @@ ML.NET 的转换管道撰写一组自定义转换，在定型或测试数据之�
 下一步，调用将文本列 (`SentimentText`) 列特征化为机器学习算法使用的名为 `Features` 的数值向量的 `mlContext.Transforms.Text.FeaturizeText`。 此为包装器调用，它返回实际上是管道的 <xref:Microsoft.ML.Data.EstimatorChain%601>。 命名此 `pipeline`，因为你将把定型程序附加到 `EstimatorChain`。 将此添加为下一个代码行：
 
 [!code-csharp[TextFeaturizingEstimator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizingEstimator")]
+
+>[!WARNING]
+> ML.NET 版本 0.10 已更改转换参数的顺序。 在运行应用程序和生成模型之前，这不会出错。 使用用于转换的参数名称，如前面的代码片段中所示。
 
 这是预处理/特征化步骤。 使用 ML.NET 中可用的其他组件可以在使用模型时生成更佳结果。
 

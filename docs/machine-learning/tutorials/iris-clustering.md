@@ -3,15 +3,15 @@ title: 使用聚类分析学习器对鸢尾花分类 - ML.NET
 description: 了解如何在聚类分析方案中使用 ML.NET
 author: pkulikov
 ms.author: johalex
-ms.date: 01/11/2019
+ms.date: 02/19/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: fcbd75597d6fdce8dceffc9d47d06cc13dd11570
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093601"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664466"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>教程：借助 ML.NET 使用聚类分析学习器对鸢尾花分类
 
@@ -84,7 +84,7 @@ ms.locfileid: "56093601"
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` 是输入数据类，并且具有针对数据集每个特征的定义。 使用 [Column](xref:Microsoft.ML.Data.ColumnAttribute) 属性在数据集文件中指定源列的索引。
+`IrisData` 是输入数据类，并且具有针对数据集每个特征的定义。 使用 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) 属性在数据集文件中指定源列的索引。
 
 `ClusterPrediction` 类表示应用到 `IrisData` 实例的聚类分析模型的输出。 使用 [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性将 `PredictedClusterId` 和 `Distances` 字段分别绑定至 PredictedLabel 和 Score 列。 在聚类分析任务中，这些列具有以下含义：
 
@@ -127,7 +127,7 @@ ms.locfileid: "56093601"
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-请注意，列名和索引与 `IrisData` 类定义的模式匹配。 <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> 值指定 `float` 类型。
+使用[泛型 `CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%60%601(Microsoft.ML.DataOperationsCatalog,System.Boolean,System.Char,System.Boolean,System.Boolean,System.Boolean)) 方法从 `IrisData` 类定义推断数据集架构。
 
 使用实例化 <xref:Microsoft.ML.Data.TextLoader> 实例创建 <xref:Microsoft.Data.DataView.IDataView> 实例，这表示定型数据集的数据源：
 

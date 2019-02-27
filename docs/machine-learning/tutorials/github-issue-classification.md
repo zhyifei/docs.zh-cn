@@ -1,15 +1,15 @@
 ---
 title: 在 GitHub 问题多类分类方案中使用 ML.NET
 description: 了解如何在多类分类方案中使用 ML.NET 对 GitHub 问题进行分类，将其分配到给定区域。
-ms.date: 02/14/2019
+ms.date: 02/20/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 80f4e322ee94e9c3a41bd1c3945383f89f4347d0
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: fdb6621078854d80f0af484ae1b92526f0f9cbb8
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333516"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584286"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>教程：在多类分类场景中使用 ML.NET 对 GitHub 问题进行分类
 
@@ -114,7 +114,7 @@ ms.locfileid: "56333516"
 
 ### <a name="create-a-project"></a>创建项目
 
-1. 打开 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“SentimentAnalysis”，然后选择“确定”按钮。
+1. 打开 Visual Studio 2017。 从菜单栏中选择“文件” > “新建” > “项目”。 在“新项目”对话框中，依次选择“Visual C#”和“.NET Core”节点。 然后，选择“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“GitHubIssueClassification”，然后选择“确定”按钮。
 
 2. 在项目中创建一个名为“数据”的目录来保存数据集文件：
 
@@ -255,6 +255,9 @@ ML.NET 的转换管道撰写一组自定义 `transforms` 集，要在定型或�
  接下来，附加一个 <xref:Microsoft.ML.Data.EstimatorChain`1.AppendCacheCheckpoint%2A> 来缓存数据视图，以便在使用缓存多次循环访问数据时获得更好的性能，如下面的代码所示：
 
 [!code-csharp[AppendCache](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AppendCache)]
+
+> [!WARNING]
+> 对小/中型数据集使用 AppendCacheCheckpoint 可以降低训练时间。 在处理大型数据集时不使用它（删除 .AppendCacheCheckpoint()）。
 
 在 `ProcessData` 方法的末尾返回管道。
 

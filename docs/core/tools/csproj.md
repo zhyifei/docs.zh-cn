@@ -3,12 +3,12 @@ title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: 74cde39a0bbba65d252d64bcedb91c3949dcf6f2
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222059"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748005"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -97,26 +97,26 @@ ms.locfileid: "54222059"
 需要在 `<Project>` 元素上将 `Sdk` 属性设置为这两个 ID 之一，以使用 .NET Core 工具和生成代码。 
 
 ### <a name="packagereference"></a>PackageReference
-`<PackageReference>` 项元素指定项目中的 NuGet 依赖项。 `Include` 属性指定包 ID。 
+`<PackageReference>` 项元素指定[项目中的 NuGet 依赖项](/nuget/consume-packages/package-references-in-project-files)。 `Include` 属性指定包 ID。 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
 #### <a name="version"></a>Version
-`Version` 指定要还原的包的版本。 此属性遵循 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)方案规则。 默认行为是精确的版本匹配。 例如，指定 `Version="1.2.3"` 等效于包的 1.2.3 版本的 NuGet 表示法 `[1.2.3]`。
+所需的 `Version` 属性指定要还原的包的版本。 此属性遵循 [NuGet 版本控制](/nuget/reference/package-versioning#version-ranges-and-wildcards)方案规则。 默认行为是精确的版本匹配。 例如，指定 `Version="1.2.3"` 等效于包的 1.2.3 版本的 NuGet 表示法 `[1.2.3]`。
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets 和 PrivateAssets
-`IncludeAssets` 属性指定应使用 `<PackageReference>` 指定的包中的哪些资产。 
+`IncludeAssets` 属性指定应使用 `<PackageReference>` 指定的包中的哪些资产。 默认情况下，包含所有包资产。
 
 `ExcludeAssets` 属性指定不应使用 `<PackageReference>` 指定的包中的哪些资产。
 
-`PrivateAssets` 属性指定应使用 `<PackageReference>` 指定的包中的哪些资产，但不得将这些资产传递到下一个项目。 
+`PrivateAssets` 属性指定应使用 `<PackageReference>` 指定的包中的哪些资产，但不得将这些资产传递到下一个项目。 不存在此属性时，`Analyzers`、`Build` 和 `ContentFiles` 资产默认为私有。
 
 > [!NOTE]
 > `PrivateAssets` 等效于 *project.json*/*xproj* `SuppressParent` 元素。
 
-这些属性可以包含下列一个或多个项：
+这些属性可以包含以下一个或多个项，如果列出多个项，则用分号 `;` 字符进行分隔：
 
 * `Compile` - 可对 lib 文件夹内容进行编译。
 * `Runtime` - 分发运行时文件夹内容。
@@ -206,12 +206,64 @@ ms.locfileid: "54222059"
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 一个布尔值，指定客户端是否必须提示使用者接受包许可证后才可安装包。 默认值为 `false`。
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+SPDX 许可证表达式或包中许可证文件的路径，通常显示在 UI 和 nuget.org 中。
+
+下面是 [SPDX 许可证标识符](https://spdx.org/licenses/)的完整列表。 NuGet.org 在使用许可证类型表达式时只接受 OSI 或 FSF 批准的许可证。
+
+许可证表达式的准确语法如下面的 [ABNF](https://tools.ietf.org/html/rfc5234) 所述。
+```cli
+license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
+
+license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
+
+simple-expression = license-id / license-id”+”
+
+compound-expression =  1*1(simple-expression /
+                simple-expression "WITH" license-exception-id /
+                compound-expression "AND" compound-expression /
+                compound-expression "OR" compound-expression ) /                
+                "(" compound-expression ")" )
+
+license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
+```
+
+> [!NOTE]
+> 一次只能指定 `PackageLicenseExpression`、`PackageLicenseFile` 和 `PackageLicenseUrl` 中的一个。
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+如果使用的许可证没有分配 SPDX 标识符，或者它是自定义许可证，则它是包中许可证文件的路径（否则，优先选择 `PackageLicenseExpression`）
+
+> [!NOTE]
+> 一次只能指定 `PackageLicenseExpression`、`PackageLicenseFile` 和 `PackageLicenseUrl` 中的一个。
+
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
-适用于包的许可证的 URL。
 
-### <a name="packageprojecturl"></a>PackageProjectUrl
-包的主页 URL，通常显示在 UI 中以及 nuget.org 中。
+适用于包的许可证的 URL。 （自 Visual Studio 15.9.4、.NET SDK 2.1.502 和 2.2.101 起已弃用）
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+[SPDX 许可证标识符](https://spdx.org/licenses/)或表达式，即 `Apache-2.0`。
+
+替换 `PackageLicenseUrl`，不能与 `PackageLicenseFile` 结合使用，并且需要 Visual Studio 15.9.4、.NET SDK 2.1.502 或 2.2.101 或更高版本。
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+磁盘上许可证文件（相对于项目文件）的路径，即 `LICENSE.txt`。
+
+替换 `PackageLicenseUrl`，不能与 `PackageLicenseExpression` 结合使用，并且需要 Visual Studio 15.9.4、.NET SDK 2.1.502 或 2.2.101 或更高版本。
+
+将需要通过显式地将许可证文件添加到项目中来确保许可证文件已打包，示例用法如下：
+```xml
+<PropertyGroup>
+  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+</PropertyGroup>
+<ItemGroup>
+  <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+</ItemGroup>
+```
 ### <a name="packageiconurl"></a>PackageIconUrl
 64x64 透明背景图像的 URL，用作 UI 显示中包的图标。
 
@@ -276,7 +328,7 @@ ms.locfileid: "54222059"
 
 每个特性都有一个可控制其内容的属性，还有一个可以禁用其生成的属性，如下表所示：
 
-| 特性                                                      | Property               | 要禁用的属性                             |
+| 特性                                                      | 属性               | 要禁用的属性                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|
 | <xref:System.Reflection.AssemblyCompanyAttribute>              | `Company`              | `GenerateAssemblyCompanyAttribute`              |
 | <xref:System.Reflection.AssemblyConfigurationAttribute>        | `Configuration`        | `GenerateAssemblyConfigurationAttribute`        |

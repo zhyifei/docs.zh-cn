@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 9a43f9407d530224b5ad4775ef3a8c0ef2a9fe27
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 47a5ae3e81b0320a094ecc79e6b08035de66e785
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828405"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443070"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0（预览版 2）的新增功能
 
@@ -780,7 +780,7 @@ GPIO 包包括用于 GPIO、SPI、I2C 和 PWM 设备的 API。 IoT 绑定包包�
 以下操作系统支持 .NET Core 3：
 
 * Windows 客户端：7、8.1、10（1607 及更高版本）
-* Windows Server：20012 R2 SP1+
+* Windows Server：2012 R2 SP1+
 * macOS：10.12+
 * RHEL：6+
 * Fedora：26+

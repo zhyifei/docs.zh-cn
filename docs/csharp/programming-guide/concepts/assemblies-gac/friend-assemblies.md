@@ -2,12 +2,12 @@
 title: 友元程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
-ms.openlocfilehash: e464162f12fe386c37262753331635ea82b128b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5de27643be8f5ddbf533ebb75b66666fc6bc148b
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576971"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748188"
 ---
 # <a name="friend-assemblies-c"></a>友元程序集 (C#)
 友元程序集是可以访问其他程序集的[内部](../../../../csharp/language-reference/keywords/internal.md)类型和成员的程序集。 如果将一个程序集标识为友元程序集，则无需再将类型和成员标记为公共，其他程序集就能访问它们。 此举在下列情境中尤其方便：  
@@ -76,5 +76,5 @@ public class ClassWithFriendMethod
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
 - [如何：创建未签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [如何：创建签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET 中的程序集](../../../../standard/assembly/index.md)
 - [C# 编程指南](../../../../csharp/programming-guide/index.md)

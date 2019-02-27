@@ -4,12 +4,12 @@ description: 了解从本机代码托管 .NET Core 运行时，以支持需要�
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: deeda8b166d8a22aac88be313d2555e4b9fa5a1c
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 994cc82745d2c473f1126eae9a889c899f5e741a
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415515"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583844"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>编写自定义 .NET Core 主机以从本机代码控制 .NET 运行时
 
@@ -29,7 +29,7 @@ ms.locfileid: "54415515"
 可以使用两种不同的 API 来承载 .NET Core。 本文档（及其相关的[示例](https://github.com/dotnet/samples/tree/master/core/hosting)）涵盖这两个选项。
 
 * 承载 .NET Core 运行时的首选方法是使用 [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h) API。 此 API 公开一些函数，用于轻松地启动和停止运行时并调用托管代码（通过启动托管 exe 或通过调用静态托管方法）。
-* 也可以使用 [mscoree.h](https://github.com/dotnet/coreclr/blob/master/src/pal/prebuilt/inc/mscoree.h) 中的 `ICLRRuntimeHost2` 接口承载 .NET Core。 此 API 比 CoreClrHost.h 出现的时间更早，因此你可能看到过使用此 API 的较旧版本的主机。 它仍然可用，并且比起 CoreClrHost，它可以对主机进程进行更多控制。 但是对于大多数方案，CoreClrHost.h 现在是首选，因为它的 API 更简单。
+* 也可以使用 [mscoree.h](https://github.com/dotnet/coreclr/blob/master/src/pal/prebuilt/inc/mscoree.h) 中的 `ICLRRuntimeHost4` 接口承载 .NET Core。 此 API 比 CoreClrHost.h 出现的时间更早，因此你可能看到过使用此 API 的较旧版本的主机。 它仍然可用，并且比起 CoreClrHost，它可以对主机进程进行更多控制。 但是对于大多数方案，CoreClrHost.h 现在是首选，因为它的 API 更简单。
 
 ## <a name="sample-hosts"></a>示例主机
 有关展示在下面的教程中所述步骤的[示例主机](https://github.com/dotnet/samples/tree/master/core/hosting)，请访问 dotnet/samples GitHub 存储库。 该示例中的注释清楚地将这些教程中已编号的步骤与它们在示例中的执行位置关联。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
@@ -64,7 +64,7 @@ CoreClrHost 有几个可用于承载 .NET Core 的重要方法：
 
 ### <a name="step-3---prepare-runtime-properties"></a>步骤 3 - 准备运行时属性
 
-在启动运行时之前，有必要准备一些属性来指定行为（特别是关于程序集加载器的行为）。 
+在启动运行时之前，有必要准备一些属性来指定行为（特别是关于程序集加载器的行为）。
 
 常用属性包括：
 
@@ -96,7 +96,7 @@ CoreClrHost 有几个可用于承载 .NET Core 的重要方法：
 
 在此示例中，主机现在可以调用 `managedDelegate` 来运行 `ManagedWorker.DoWork` 方法。
 
-或者，可以使用 `coreclr_execute_assembly` 函数启动托管可执行文件。 此 API 采用程序集路径和实参数组作为输入形参。 它在该路径加载程序集并调用其主方法。 
+或者，可以使用 `coreclr_execute_assembly` 函数启动托管可执行文件。 此 API 采用程序集路径和实参数组作为输入形参。 它在该路径加载程序集并调用其主方法。
 
 ```C++
 int hr = executeAssembly(
@@ -116,12 +116,12 @@ int hr = executeAssembly(
 
 请记住使用 `FreeLibrary`（对于 Windows）或 `dlclose`（对于 Linux/Mac）卸载 CoreCLR 库。
 
-## <a name="creating-a-host-using-mscoreeh"></a>使用 Mscoree.h 创建主机
+## <a name="create-a-host-using-mscoreeh"></a>使用 Mscoree.h 创建主机
 
-如前所述，CoreClrHost.h 现在是承载 .NET Core 运行时的首选方法。 但是，如果 CoreClrHost.h 接口不够用（例如，需要非标准的启动标志，或者在默认域上需要 AppDomainManager），仍然可以使用 `ICLRRuntimeHost2` 接口。 这些说明将指导你使用 mscoree.h 执行承载 .NET Core 的操作。
+如前所述，CoreClrHost.h 现在是承载 .NET Core 运行时的首选方法。 但是，如果 CoreClrHost.h 接口不够用（例如，需要非标准的启动标志，或者在默认域上需要 AppDomainManager），仍然可以使用 `ICLRRuntimeHost4` 接口。 这些说明将指导你使用 mscoree.h 执行承载 .NET Core 的操作。
 
 ### <a name="a-note-about-mscoreeh"></a>有关 mscoree.h 的说明
-`ICLRRuntimeHost2` .NET Core 承载接口在 [MSCOREE.IDL](https://github.com/dotnet/coreclr/blob/master/src/inc/MSCOREE.IDL) 中定义。 主机需要引用的此文件 (mscoree.h) 的标头版本，该版本是在构建 [.NET Core 运行时](https://github.com/dotnet/coreclr/)时通过 MIDL 生成。 如果不想构建 .NET Core 运行时，还可在 dotnet/coreclr 存储库中将 mscoree.h 获取为[预生成的标头](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc)。 [有关构建 .NET Core 运行时的说明](https://github.com/dotnet/coreclr#building-the-repository)可在其 GitHub 存储库中找到。 
+`ICLRRuntimeHost4` .NET Core 承载接口在 [MSCOREE.IDL](https://github.com/dotnet/coreclr/blob/master/src/inc/MSCOREE.IDL) 中定义。 主机需要引用的此文件 (mscoree.h) 的标头版本，该版本是在构建 [.NET Core 运行时](https://github.com/dotnet/coreclr/)时通过 MIDL 生成。 如果不想构建 .NET Core 运行时，还可在 dotnet/coreclr 存储库中将 mscoree.h 获取为[预生成的标头](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc)。 [有关构建 .NET Core 运行时的说明](https://github.com/dotnet/coreclr#building-the-repository)可在其 GitHub 存储库中找到。
 
 ### <a name="step-1---identify-the-managed-entry-point"></a>步骤 1 - 标识托管的入口点
 引用必要的标头后（例如，[mscoree.h](https://github.com/dotnet/coreclr/tree/master/src/pal/prebuilt/inc/mscoree.h) 和 stdio.h），.NET Core 主机必须完成的首要任务之一就是找到要使用的托管入口点。 在示例主机中，通过将主机的第一个命令行参数作为托管的二进制文件（将执行该文件的 `main` 方法）的路径，即可完成此操作。
@@ -129,7 +129,7 @@ int hr = executeAssembly(
 [!code-cpp[NetCoreHost#1](~/samples/core/hosting/HostWithMscoree/host.cpp#1)]
 
 ### <a name="step-2---find-and-load-coreclr"></a>步骤 2 - 查找和加载 CoreCLR
-.NET Core 运行时 API 位于 *CoreCLR.dll*（在 Windows 上）中。 若要获取托管接口 (`ICLRRuntimeHost2`)，就必须查找并加载 *CoreCLR.dll*。 由主机定义用于规定 *CoreCLR.dll* 查找方式的约定。 一些主机会预期文件位于一个常用的计算机范围内的位置（如 %programfiles%\dotnet\shared\Microsoft.NETCore.App\2.1.6）。 其他主机会预期 *CoreCLR.dll* 从主机本身或要托管的应用旁的某个位置进行加载。 还有一些主机可能会参考环境变量来查找库。
+.NET Core 运行时 API 位于 *CoreCLR.dll*（在 Windows 上）中。 若要获取托管接口 (`ICLRRuntimeHost4`)，就必须查找并加载 *CoreCLR.dll*。 由主机定义用于规定 *CoreCLR.dll* 查找方式的约定。 一些主机会预期文件位于一个常用的计算机范围内的位置（如 %programfiles%\dotnet\shared\Microsoft.NETCore.App\2.1.6）。 其他主机会预期 *CoreCLR.dll* 从主机本身或要托管的应用旁的某个位置进行加载。 还有一些主机可能会参考环境变量来查找库。
 
 在 Linux 或 Mac 上，核心运行时库分别是 *libcoreclr.so* 或者 *libcoreclr.dylib*。
 
@@ -137,13 +137,13 @@ int hr = executeAssembly(
 
 [!code-cpp[NetCoreHost#2](~/samples/core/hosting/HostWithMscoree/host.cpp#2)]
 
-### <a name="step-3---get-an-iclrruntimehost2-instance"></a>步骤 3 - 获取 ICLRRuntimeHost2 实例
-通过在 `GetCLRRuntimeHost` 上调用 `GetProcAddress`（或在 Linux/Mac 上调用 `dlsym`），然后再调用该函数来检索 `ICLRRuntimeHost2` 托管接口。 
+### <a name="step-3---get-an-iclrruntimehost4-instance"></a>步骤 3 - 获取 ICLRRuntimeHost4 实例
+通过在 `GetCLRRuntimeHost` 上调用 `GetProcAddress`（或在 Linux/Mac 上调用 `dlsym`），然后再调用该函数来检索 `ICLRRuntimeHost4` 托管接口。
 
 [!code-cpp[NetCoreHost#3](~/samples/core/hosting/HostWithMscoree/host.cpp#3)]
 
-### <a name="step-4---setting-startup-flags-and-starting-the-runtime"></a>步骤 4 - 设置启动标志和启动运行时
-有了 `ICLRRuntimeHost2`，现在便可指定运行时范围内的启动标志并启动该运行时。 启动标志决定要使用的垃圾回收器 (GC)（并发垃圾回收器或服务器）、是使用单个 AppDomain 还是多个 Appdomain，以及要使用的加载程序优化策略（对于非特定于域的程序集加载）。
+### <a name="step-4---set-startup-flags-and-start-the-runtime"></a>步骤 4 - 设置启动标志并启动运行时
+有了 `ICLRRuntimeHost4`，现在便可指定运行时范围内的启动标志并启动该运行时。 启动标志决定要使用的垃圾回收器 (GC)（并发垃圾回收器或服务器）、是使用单个 AppDomain 还是多个 Appdomain，以及要使用的加载程序优化策略（对于非特定于域的程序集加载）。
 
 [!code-cpp[NetCoreHost#4](~/samples/core/hosting/HostWithMscoree/host.cpp#4)]
 
@@ -175,12 +175,12 @@ AppDomain 标志指定与安全性和互操作性相关的 AppDomain 行为。 �
 [!code-cpp[NetCoreHost#6](~/samples/core/hosting/HostWithMscoree/host.cpp#6)]
 
 ### <a name="step-6---create-the-appdomain"></a>步骤 6 - 创建 AppDomain
-所有 AppDomain 标志和属性都准备都就绪后，可使用 `ICLRRuntimeHost2::CreateAppDomainWithManager` 设置 AppDomain。 此函数选择性地采用完全限定的程序集名称和类型名称作为域的 AppDomain 管理器。 AppDomain 管理器可允许主机控制 AppDomain 行为的某些方面，并且如果主机不打算直接调用用户代码，它可能会提供用于启动托管代码的入口点。   
+所有 AppDomain 标志和属性都准备都就绪后，可使用 `ICLRRuntimeHost4::CreateAppDomainWithManager` 设置 AppDomain。 此函数选择性地采用完全限定的程序集名称和类型名称作为域的 AppDomain 管理器。 AppDomain 管理器可允许主机控制 AppDomain 行为的某些方面，并且如果主机不打算直接调用用户代码，它可能会提供用于启动托管代码的入口点。
 
 [!code-cpp[NetCoreHost#7](~/samples/core/hosting/HostWithMscoree/host.cpp#7)]
 
 ### <a name="step-7---run-managed-code"></a>步骤 7 - 运行托管代码！
-现在 AppDomain 启动并运行后，主机可以开始执行托管的代码。 执行此操作的最简单方法是使用 `ICLRRuntimeHost2::ExecuteAssembly` 调用托管程序集的入口点方法。 请注意，此函数仅适用于单一域方案。
+现在 AppDomain 启动并运行后，主机可以开始执行托管的代码。 执行此操作的最简单方法是使用 `ICLRRuntimeHost4::ExecuteAssembly` 调用托管程序集的入口点方法。 请注意，此函数仅适用于单一域方案。
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
@@ -189,23 +189,23 @@ AppDomain 标志指定与安全性和互操作性相关的 AppDomain 行为。 �
 ```C++
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
-  domainId,
-  L"HW, Version=1.0.0.0, Culture=neutral",  // Target managed assembly
-  L"ConsoleApplication.Program",            // Target managed type
-  L"Main",                                  // Target entry point (static method)
-  (INT_PTR*)&pfnDelegate);
+    domainId,
+    L"HW, Version=1.0.0.0, Culture=neutral", // Target managed assembly
+    L"ConsoleApplication.Program",           // Target managed type
+    L"Main",                                 // Target entry point (static method)
+    (INT_PTR*)&pfnDelegate);
 
 ((MainMethodFp*)pfnDelegate)(NULL);
 ```
 
 ### <a name="step-8---clean-up"></a>步骤 8 - 清理
-最后，主机应随后通过卸载 Appdomain、停止运行时并释放 `ICLRRuntimeHost2` 引用来进行清理。
+最后，主机应随后通过卸载 Appdomain、停止运行时并释放 `ICLRRuntimeHost4` 引用来进行清理。
 
 [!code-cpp[NetCoreHost#9](~/samples/core/hosting/HostWithMscoree/host.cpp#9)]
 
 ## <a name="conclusion"></a>结束语
-构建主机后，可以通过从命令行运行主机并传递其所需的任何参数（例如，要运行用于 mscoree 示例主机的托管应用）来对主机进行测试。 指定主机要运行的 .NET Core 应用时，请务必使用 `dotnet build` 生成的 .dll。 `dotnet publish` 为独立应用程序生成的可执行文件（.exe 文件）实际上是默认的 .NET Core 主机（以便可直接从主流方案中的命令行启动应用）；用户代码被编译为具有相同名称的 dll。 
+构建主机后，可以通过从命令行运行主机并传递其所需的任何参数（例如，要运行用于 mscoree 示例主机的托管应用）来对主机进行测试。 指定主机要运行的 .NET Core 应用时，请务必使用 `dotnet build` 生成的 .dll。 `dotnet publish` 为独立应用程序生成的可执行文件（.exe 文件）实际上是默认的 .NET Core 主机（以便可直接从主流方案中的命令行启动应用）；用户代码被编译为具有相同名称的 dll。
 
 如果开始时操作不起作用，请再次检查 *coreclr.dll* 是否在主机预期的位置可用、是否 TPA 列表中包含了所有必需的框架库以及 CoreCLR 的位数（32 位或 64 位）是否匹配主机的构建方式。
 
-托管 .NET Core 运行时是高级方案，许多开发人员并不需要实施这一方案，但对于那些需要从本机进程启动托管代码的人员，或需要更好地控制 .NET Core 运行时的行为的人员而言，它会非常有用。 因为 .NET Core 能够与其自身并行运行，甚至可以创建主机，这些主机能够初始化和启动多个 .NET Core 运行时版本并在同一进程中执行所有这些版本上的应用。 
+托管 .NET Core 运行时是高级方案，许多开发人员并不需要实施这一方案，但对于那些需要从本机进程启动托管代码的人员，或需要更好地控制 .NET Core 运行时的行为的人员而言，它会非常有用。 因为 .NET Core 能够与其自身并行运行，甚至可以创建主机，这些主机能够初始化和启动多个 .NET Core 运行时版本并在同一进程中执行所有这些版本上的应用。

@@ -1,14 +1,14 @@
 ---
 title: 使用可为空引用类型进行设计
 description: 本高级教程介绍了可为空引用类型。 你将学习在引用值可能为 NULL 时表达你的设计意图，并在引用值不能为 NULL 时让编译器强制执行。
-ms.date: 12/03/2018
+ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 535efcdc303c17a55f6a4054ea3f5e5ed87e5f28
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 1c0df9b129e9c434eb3b5e6e50144013c2c0462e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092197"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442095"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教程：使用可为空和不可为空引用类型更清晰地表达设计意图
 
@@ -24,7 +24,7 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 
 ## <a name="prerequisites"></a>系统必备
 
-你需要将计算机设置为运行 .NET Core，包括 C# 8.0 beta 编译器。 C# 8 beta 编译器可用于 [Visual Studio 2019 预览版 1](https://visualstudio.microsoft.com/vs/preview/) 或 [.NET Core 3.0 预览版 1](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
+需要将计算机设置为运行 .NET Core，包括 C# 8.0 beta 编译器。 C# 8 beta 编译器可用于 [Visual Studio 2019 预览版 2](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) 或 [.NET Core 3.0 预览版 2](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
 
 本教程假设你熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
@@ -36,27 +36,16 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>创建应用程序并启用可为空引用类型
 
-在 Visual Studio 中或使用 `dotnet new console` 从命令行创建新的控制台应用程序。 命名应用程序 `NullableIntroduction`。 创建应用程序后，你需要启用 C# 8 beta 功能。 打开 `csproj` 文件，并向 `PropertyGroup` 元素添加 `LangVersion` 元素：
+在 Visual Studio 中或使用 `dotnet new console` 从命令行创建新的控制台应用程序。 命名应用程序 `NullableIntroduction`。 创建应用程序后，你需要启用 C# 8 beta 功能。 打开 `csproj` 文件，并向 `PropertyGroup` 元素添加 `LangVersion` 元素。 必须选择“可为空引用类型”功能，即使在 C# 8 项目中也是如此。 这是因为，一旦启用该功能，现有的引用变量声明将成为不可为空引用类型。 虽然该决定将有助于发现现有代码可能不具有适当的 NULL 检查的问题，但它可能无法准确反映你的原始设计意图。 可以通过将 `NullableContextOptions` 元素设置为 `enable` 来启用该功能：
 
 ```xml
 <LangVersion>8.0</LangVersion>
-```
-
-或者，你可以使用 Visual Studio 项目属性来启用 C# 8。 在“解决方案资源管理器”中，右键单击项目节点，选择“属性”。 接下来，选择“生成”选项卡，然后单击“高级...”。在语言版本的下拉列表中，选择“C# 8.0(beta)”。
-
-必须选择“可为空引用类型”功能，即使在 C# 8 项目中也是如此。 这是因为，一旦启用该功能，现有的引用变量声明将成为不可为空引用类型。 虽然该决定将有助于发现现有代码可能不具有适当的 NULL 检查的问题，但它可能无法准确反映你的原始设计意图。 使用新的杂注打开该功能：
-
-```csharp
-#nullable enable
-```
-
-你可以在源文件中的任何位置添加前面的杂注，并且从该点打开可为空引用类型功能。 该杂注还支持关闭该功能的 `disable` 参数。
-
-你还可以通过在 .csproj 文件中添加以下元素，为整个项目打开可为空引用类型功能，例如，紧跟在启用 C# 8.0 的 `LangVersion` 元素之后：
-
-```xml
 <NullableContextOptions>enable</NullableContextOptions>
 ```
+
+> [!NOTE]
+> 当 C# 8 发布时（不处于预览模式），新项目模板将添加 `NullableContextOptions` 元素。 在此之前，需要手动添加它。
+
 
 ### <a name="design-the-types-for-the-application"></a>设计应用程序的类型
 
@@ -88,10 +77,9 @@ C# 8 引入了可为空引用类型，它们以与可为空值类型补充值类
 
 ## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>使用可为空和不可为空类型构建调查
 
-你将编写的第一个代码创建调查。 你将编写类来为调查问题和调查运行建模。 调查有三种类型的问题，通过答案格式进行区分：答案为“是”/“否”、答案为数字以及答案为文本。 创建名为 `public` `SurveyQuestion` 类。 在 `using` 语句后立即包括 `#nullable enable` 杂注：
+你将编写的第一个代码创建调查。 你将编写类来为调查问题和调查运行建模。 调查有三种类型的问题，通过答案格式进行区分：答案为“是”/“否”、答案为数字以及答案为文本。 创建 `public` `SurveyQuestion` 类：
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyQuestion
@@ -100,10 +88,9 @@ namespace NullableIntroduction
 }
 ```
 
-添加 `#nullable enable` 杂注意味着编译器将每个引用类型变量声明解释为不可为空引用类型。 你可以通过添加问题文本的属性和问题类型来查看第一个警告，如以下代码所示：
+编译器将启用可为空的上下文中的代码的每个引用类型变量声明解释为不可为空引用类型。 你可以通过添加问题文本的属性和问题类型来查看第一个警告，如以下代码所示：
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public enum QuestionType
@@ -127,12 +114,11 @@ namespace NullableIntroduction
 
 添加构造函数会删除警告。 构造函数参数也是不可为空引用类型，因此编译器不会发出任何警告。
 
-接下来，创建一个名为 `SurveyRun` 的 `public` 类。 在 `using` 语句后面加上 `#nullable enable` 杂注。 此类包含 `SurveyQuestion` 对象的列表以及向调查添加问题的方法，如以下代码所示：
+接下来，创建一个名为 `SurveyRun` 的 `public` 类。 此类包含 `SurveyQuestion` 对象的列表以及向调查添加问题的方法，如以下代码所示：
 
 ```csharp
 using System.Collections.Generic;
 
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyRun
@@ -152,7 +138,7 @@ namespace NullableIntroduction
 
 [!code-csharp[AddQuestions](../../../samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-如果文件顶部没有 `#nullable enable` 杂注，则在将 `null` 作为 `AddQuestion` 参数的文本传递时，编译器不会发出警告。 通过在 `using` 语句后面添加 `#nullable enable` 来解决此问题。 通过将以下行添加到 `Main` 进行尝试：
+由于整个项目处于启用可为空的上下文中，因此将 `null` 传递给任何应为不可为空引用类型的方法时，将收到警告。 通过将以下行添加到 `Main` 进行尝试：
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);
@@ -160,7 +146,7 @@ surveyRun.AddQuestion(QuestionType.Text, default);
 
 ## <a name="create-respondents-and-get-answers-to-the-survey"></a>创建回应者并获取调查答案
 
-接下来，编写生成调查答案的代码。 这涉及到多个小型任务：
+接下来，编写生成调查答案的代码。 此过程涉及到多个小型任务：
 
 1. 构建一个生成回应者对象的方法。 这些对象表示要求填写调查的人员。
 1. 生成逻辑以模拟向回应者询问问题并收集答案，或者注意到回应者没有回答。
@@ -169,7 +155,6 @@ surveyRun.AddQuestion(QuestionType.Text, default);
 你需要一个表示调查响应的类，所以现在就添加它。 启用可为空支持。 添加初始化它的 `Id` 属性和构造函数，如以下代码所示：
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyResponse
@@ -195,6 +180,8 @@ namespace NullableIntroduction
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
 调查答案的存储空间为 `Dictionary<int, string>?`，表示它可能为 NULL。 你正在使用新的语言功能向编译器和稍后阅读你的代码的任何人声明你的设计意图。 如果在首先不检查是否为 NULL 值的情况下取消引用 `surveyResponses`，则会收到编译器警告。 你没有在 `AnswerSurvey` 方法中收到警告，因为编译器可以确定 `surveyResponses` 变量已设置为上述非空值。
+
+对缺少的答案使用 `null` 强调了处理可为空引用类型的一个关键点：目标不是从程序中删除所有 `null` 值。 而是确保编写的代码表达设计意图。 缺失值是在代码中进行表达的一个必需概念。 `null` 值是表示这些缺失值的一种明确方法。 尝试删除所有 `null` 值只会导致定义一些其他方法来在没有 `null` 的情况下表示缺失值。
 
 接下来，你需要在 `SurveyRun` 类中编写 `PerformSurvey` 方法。 将下面的代码添加到 `SurveyRun` 类中：
 
@@ -234,6 +221,6 @@ namespace NullableIntroduction
 
 ## <a name="next-steps"></a>后续步骤
 
-阅读可为空引用类型概述，了解详细信息。
+要了解更多信息，请迁移现有应用程序以使用可为空引用类型：
 > [!div class="nextstepaction"]
-> [可为空引用概述](../nullable-references.md)
+> [升级应用程序以使用可为空引用类型](upgrade-to-nullable-references.md)

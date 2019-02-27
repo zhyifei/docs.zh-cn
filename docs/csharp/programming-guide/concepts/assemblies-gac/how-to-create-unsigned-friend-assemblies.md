@@ -2,12 +2,12 @@
 title: 如何：创建未签名的友元程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 4281aa4d507b2150f65d7d7ff05dd2a2fa8aacd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bf9a8bd18a1b98ae5e128ca67ca185baa7d599d
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703219"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745258"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>如何：创建未签名的友元程序集 (C#)
 本示例演示如何将友元程序集和未签名的程序集一起使用。  
@@ -93,7 +93,7 @@ ms.locfileid: "54703219"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET 中的程序集](../../../../standard/assembly/index.md)
 - [友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [如何：创建签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [C# 编程指南](../../../../csharp/programming-guide/index.md)

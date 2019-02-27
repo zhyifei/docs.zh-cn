@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7be62b3a97614faea14eb874be58c79246754903
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653744"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583649"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>按字母顺序列出的 C# 编译器选项
 
@@ -36,6 +36,10 @@ ms.locfileid: "54653744"
 |[-delaysign](delaysign-compiler-option.md)|仅使用强名称密钥公共部分对程序集进行延迟签名。|
 |[-deterministic](deterministic-compiler-option.md)|如果输入相同，则会导致编译器输出的程序集其二进制内容在整个编译中相同。|
 |[-doc](doc-compiler-option.md)|指定要生成的 XML 文档文件。|
+|-embed|在 PDB 中嵌入所有源文件。|
+|-embed:\<file list>|在 PDB 中嵌入特定文件。|
+|-errorendlocation|每个错误结尾位置的输出行和列。|
+|-errorlog:\<file>|指定要记录所有编译器和分析器诊断的文件。|
 |[-errorreport](errorreport-compiler-option.md)|指定如何处理内部编译器错误；prompt、send 或 none。 默认值为 none。|
 |[-filealign](filealign-compiler-option.md)|指定用于输出文件节的对齐方式。|
 |[/fullpaths](fullpaths-compiler-option.md)|使编译器生成完全限定的路径。|
@@ -68,12 +72,14 @@ ms.locfileid: "54653744"
 |[-reference](reference-compiler-option.md)|从指定的程序集文件引用元数据。|
 |[/refout](refout-compiler-option.md)|除主程序集之外，还生成引用程序集。|
 |[/refonly](refonly-compiler-option.md)|生成引用程序集，而不生成主程序集。|
+|-reportanalyzer|报告其他分析器信息，如执行时间。|
 |[-resource](resource-compiler-option.md)|嵌入指定的资源。|
 |-ruleset:\<file>|指定可禁用特定诊断的规则集文件。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|指定可执行文件可以使用的子系统的最低版本。|
 |[-target](target-compiler-option.md)|使用下列四个选项之一指定输出文件的格式：[-target:appcontainerexe](target-appcontainerexe-compiler-option.md)、[-target:exe](target-exe-compiler-option.md)、[-target:library](target-library-compiler-option.md)、[-target:module](target-module-compiler-option.md)、[-target:winexe](target-winexe-compiler-option.md)、[-target:winmdobj](target-winmdobj-compiler-option.md)。|
 |[不安全](unsafe-compiler-option.md)|允许[不安全](../../../csharp/language-reference/keywords/unsafe.md)代码。|
 |[-utf8output](utf8output-compiler-option.md)|以 UTF-8 编码格式输出编译器消息。|
+|-version|显示编译器的版本号并退出。|
 |[/warn](warn-compiler-option.md)|设置警告等级 (0-4)。|
 |[-warnaserror](warnaserror-compiler-option.md)|将特定警告报告为错误。|
 |[-win32icon](win32icon-compiler-option.md)|对输出使用此图标。|

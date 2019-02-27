@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 7403b42a48413d28808b49542727c2f07d0ad026
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2b0668b1d55afc331484339d579752646ffa88b
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546983"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442407"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>按类别列出的 C# 编译器选项
 
@@ -54,7 +54,8 @@ ms.locfileid: "54546983"
 |[-reference](reference-compiler-option.md)|从包含程序集的文件导入元数据。|
 |-analyzer|从此程序集（缩写形式：/a）运行分析器|
 |-additionalfile|命名其他文件，这些文件不会直接影响代码生成，但可能由分析器用于生成错误或警告。|
-
+|-embed|在 PDB 中嵌入所有源文件。|
+|-embed:\<file list>|在 PDB 中嵌入特定文件。|
 ## <a name="debuggingerror-checking"></a>调试/错误检查
 
 |选项|目标|

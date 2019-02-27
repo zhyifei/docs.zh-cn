@@ -3,12 +3,12 @@ title: C# 类型和变量 - C# 语言介绍
 description: 了解如何在 C# 中定义类型和声明变量
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129514"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583948"
 ---
 # <a name="types-and-variables"></a>类型和变量
 

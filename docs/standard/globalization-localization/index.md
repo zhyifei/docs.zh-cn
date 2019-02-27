@@ -16,7 +16,7 @@ ms.author: ronpet
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>对 .NET 应用程序进行全球化和本地化
 
-开发[全球通用的应用程序](https://msdn.microsoft.com/goglobal/bb978433.aspx)（包括可本地化为一种或多种语言的应用程序）分为三步：全球化、可本地化性审核和本地化。
+开发全球通用的应用程序（包括可本地化为一种或多种语言的应用程序）分为三步：全球化、可本地化性审核和本地化。
 
 [全球化](globalization.md)
 

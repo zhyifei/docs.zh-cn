@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 1573e28f2a6f9dec7825d364debcdf1085ef7ff2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4918407c68c7164db023b19cb170aef12fd203
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635658"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663894"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform（C# 编译器选项）
 指定公共语言运行时 (CLR) 的哪个版本可以运行程序集。  
@@ -36,6 +36,8 @@ ms.locfileid: "54635658"
   
 -   ARM 将程序集编译成可以在具有高级 RISC 计算机 (ARM) 处理器的计算机上运行。  
   
+-   ARM64 编译程序集以在由 64 位 CLR 在具有支持 A64 指令集的高级 RISC 计算机 (ARM) 处理器的计算机上运行。  
+
 -   x64 将程序集编译成可由支持 AMD64 或 EM64T 指令集的计算机上的 64 位 CLR 运行。  
   
 -   x86 将程序集编译成可由 32 位、x86 可兼容 CLR 运行。  

@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: 556da93d6237836dc32fc3f6715909593907ba74
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: f84792e5d973f2b2d8bcf418f68e7038fd7a81f5
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738729"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747844"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 在 .NET Core 中进行 C# 单元测试
 
@@ -28,7 +28,7 @@ ms.locfileid: "55738729"
     /PrimeService
 ```
 
-将 *PrimeService* 作为当前目录，然后运行 [`dotnet new classlib`](../tools/dotnet-new.md) 以创建源项目。 将 *Class1.cs* 重命名为 *PrimeService.cs*。 为了使用由测试驱动的开发 (TDD)，需首先对 `PrimeService` 类创建故障实现：
+将 *PrimeService* 作为当前目录，然后运行 [`dotnet new classlib`](../tools/dotnet-new.md) 以创建源项目。 将 *Class1.cs* 重命名为 *PrimeService.cs*。 首先创建 `PrimeService` 类的失败实现：
 
 ```csharp
 using System;
@@ -105,7 +105,7 @@ dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-TDD 方法要求编写一个失败的测试，使其通过测试，然后重复该过程。 从 PrimeService.Tests 目录删除 UnitTest1.cs，并创建一个名为 PrimeService_IsPrimeShould.cs 的新 C# 文件。 添加以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 从 PrimeService.Tests 目录删除 UnitTest1.cs，并创建一个名为 PrimeService_IsPrimeShould.cs 的新 C# 文件。 添加以下代码：
 
 ```csharp
 using Xunit;

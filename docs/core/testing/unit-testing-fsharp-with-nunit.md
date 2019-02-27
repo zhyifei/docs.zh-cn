@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: e919da8910129be027ff7e2dbed8c4564738e023
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 384d0ac9f36f9ef9daba851f52d577d97248cd67
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241757"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746041"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>使用 dotnet test 和 NUnit 在 .NET Core 中进行 F# 库的单元测试
 
@@ -45,7 +45,7 @@ dotnet new sln
 dotnet new classlib -lang F#
 ```
 
-为了使用由测试驱动的开发 (TDD)，需对数学服务创建故障实现：
+创建数学服务的失败实现：
 
 ```fsharp
 module MyMath =
@@ -116,7 +116,7 @@ dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-TDD 方法要求编写一个失败的测试，使其通过测试，然后重复该过程。 打开 UnitTest1.fs 并添加以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 打开 UnitTest1.fs 并添加以下代码：
 
 ```fsharp
 namespace MathService.Tests
