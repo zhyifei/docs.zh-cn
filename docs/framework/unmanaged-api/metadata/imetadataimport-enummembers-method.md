@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88b8f874400d68110fa5e8fb66ca910b8e7231e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4bf2cf647682062fbacb4484ffae905d1b7995
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645959"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835364"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers 方法
 枚举表示指定类型的成员的 MemberDef 标记。  
@@ -39,7 +39,7 @@ HRESULT EnumMembers (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `phEnum`  
  [in、 out]一个指向枚举器。  
   
@@ -63,7 +63,9 @@ HRESULT EnumMembers (
 |`S_FALSE`|没有要枚举的 MemberDef 标记。 在这种情况下，`pcTokens`为零。|  
   
 ## <a name="remarks"></a>备注  
- 枚举的成员的类集合时`EnumMembers`返回只能在类中直接定义的成员。 它不返回任何成员的类继承，即使类提供实现这些继承的成员。 若要枚举继承的成员，调用方必须显式遍历继承链。 请注意，继承链的规则可能会有所不同，具体取决于语言或编译器发出的原始元数据。  
+ 枚举的成员的类集合时`EnumMembers`仅返回成员 (字段和方法，但**不**属性或事件) 在类中直接定义。 它不返回任何成员的类继承，即使类提供实现这些继承的成员。 若要枚举继承的成员，调用方必须显式遍历继承链。 请注意，继承链的规则可能会有所不同，具体取决于语言或编译器发出的原始元数据。
+ 
+ 属性和事件不会枚举`EnumMembers`。 若要枚举的请使用[EnumProperties](imetadataimport-enumproperties-method.md)或[EnumEvents](imetadataimport-enumevents-method.md)。
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c94960478e6b2eb4e7b8f1e9592b0831af3ec686
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21d70b2702a754b554f06de5dad776ae98ae918d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603763"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836261"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls 方法
-枚举表示接口实现的 MethodDef 标记。  
+枚举指定实现的所有接口`TypeDef`。 
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ HRESULT EnumInterfaceImpls (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `phEnum`  
  [in、 out]一个指向枚举器。  
   
@@ -61,6 +61,10 @@ HRESULT EnumInterfaceImpls (
 |-------------|-----------------|  
 |`S_OK`|`EnumInterfaceImpls` 已成功返回。|  
 |`S_FALSE`|没有要枚举的 MethodDef 标记。 在这种情况下，`pcImpls`设置为零。|  
+
+## <a name="remarks"></a>备注
+
+此枚举返回的集合`mdInterfaceImpl`令牌，以实现由指定的每个接口进行`TypeDef`。 指定接口的顺序返回接口标记 (通过`DefineTypeDef`或`SetTypeDefProps`)。 所返回的属性`mdInterfaceImpl`可以使用查询令牌[GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)。
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

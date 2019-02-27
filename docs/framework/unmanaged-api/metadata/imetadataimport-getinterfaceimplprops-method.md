@@ -1,6 +1,6 @@
 ---
 title: IMetaDataImport::GetInterfaceImplProps 方法
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 api_name:
 - IMetaDataImport.GetInterfaceImplProps
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91cb42a5bf1115de82b5fe28693cb77b66915c9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc16d01d45364d1a17f281f859b27c3e48342ff0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600552"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835715"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps 方法
-获取一个指针指向的元数据令牌<xref:System.Type>实现指定的方法和接口，其用于声明该方法。  
+获取一个指针指向的元数据令牌<xref:System.Type>实现指定的方法和接口，其用于声明该方法。
   
 ## <a name="syntax"></a>语法  
   
@@ -46,6 +46,33 @@ HRESULT GetInterfaceImplProps (
   
  `ptkIface`  
  [out]表示定义实现的方法的接口的元数据标记。  
+
+## <a name="remarks"></a>备注
+
+ 获取值以供`iImpl`通过调用[EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md)方法。
+ 
+ 例如，假设类具有`mdTypeDef`令牌 0x02000007 的值，它实现的类型具有令牌的三个接口： 
+
+- 0x02000003 (TypeDef)
+- 0x0100000A (TypeRef)
+- 0x0200001C (TypeDef)
+
+从概念上讲，此信息存储到作为接口实现表：
+
+| 行号 | 类令牌 | 接口令牌 |
+|------------|-------------|-----------------|
+| 4          |             |                 |
+| 5          | 02000007    | 02000003        |
+| 6          | 02000007    | 0100000A        |
+| 7          |             |                 |
+| 8          | 02000007    | 0200001C        |
+
+请注意，该令牌是一个 4 字节值：
+
+- 较低的 3 个字节存储的行号，或 RID。
+- 高位字节包含标记类型 – 为 0x09 `mdtInterfaceImpl`。
+
+`GetInterfaceImplProps` 返回信息保存在行中提供的令牌`iImpl`参数。 
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

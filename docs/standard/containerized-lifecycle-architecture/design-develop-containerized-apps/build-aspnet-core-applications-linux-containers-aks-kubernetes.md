@@ -3,15 +3,15 @@ title: 构建 ASP.NET Core 2.1 应用程序部署到 AKS/Kubernetes 群集与 Li
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: b03b6fab9dcd53e97c2bc4d7e5c958ca4b931077
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/25/2019
+ms.openlocfilehash: a00a5c42facb105a23cd85fce79f9fd16a96ccfa
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221458"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835507"
 ---
-# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-akskubernetes-orchestrator"></a>构建 ASP.NET Core 2.1 应用程序与 Linux 容器部署到 AKS/Kubernetes 业务流程协调程序
+# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>构建 ASP.NET Core 2.1 应用程序与 Linux 容器部署到 AKS/Kubernetes 业务流程协调程序
 
 Azure Kubernetes 服务 (AKS) 是 Azure 的托管的 Kubernetes 业务流程服务可简化容器部署和管理。
 
@@ -35,11 +35,11 @@ ASP.NET Core 是由 Microsoft 和 GitHub 上的.NET 社区维护一个通用开�
 
 **图 4-36**。 创建 ASP.NET Core 应用程序
 
-若要创建示例项目，您必须选择**文件** > **新建** > **项目**上 Visual Studio。 然后您将看到一系列针对多种类型的项目中，模板需要寻找**Web** > **.NET Core**左侧面板上。 对于此示例选择**ASP.NET Core Web 应用程序**。
+若要在 Visual Studio 中创建示例项目，选择**文件** > **新建** > **项目**，选择**Web**项目类型的左窗格中后, 跟**ASP.NET Core Web 应用程序**。
 
-在下一个对话框中确保已选择.NET Core 和 ASP.NET Core 2.1 作为顶级 pulldowns，如图 4-37 中所示中的目标框架，然后选择 API 选项，创建 ASP.NET Core Web API 应用程序。
+Visual Studio 列出了 web 项目的模板。 对于本示例中，选择**API**创建 ASP.NET Web API 应用程序。
 
-.NET Core 2.1 是包含在 Visual Studio 2017 15.7.0 版或更高版本，会自动安装并配置为你选择时 **.NET Core 跨平台开发**在安装过程中的工作负荷。
+验证已作为框架选择 ASP.NET Core 2.1。 .NET core 2.1 中的最后一个版本的 Visual Studio 2017 包含和自动安装和安装 Visual Studio 2017 时为你配置。
 
 ![Visual Studio 对话框用于选择的 API 选项中选择的 ASP.NET Core Web 应用程序的类型。](media/create-web-api-application.png)
 
@@ -47,25 +47,25 @@ ASP.NET Core 是由 Microsoft 和 GitHub 上的.NET 社区维护一个通用开�
 
 如果有任何以前版本的.NET Core，您可以下载并安装中的 2.1 版本<https://www.microsoft.com/net/download/core#/sdk>。
 
-在上一步骤中，或更高版本，如果需要在启动项目后创建项目时，可以添加 Docker 支持。 若要创建项目后添加 Docker 支持，请右键单击项目文件**解决方案资源管理器**，然后选择**添加** > **Docker 支持**上上下文菜单中。
+创建项目时，可以添加 Docker 支持或之后，因此您可以 Docker 项目在任何时间。 若要创建项目后添加 Docker 支持，请右键单击解决方案资源管理器中的项目节点并选择**外** > **Docker 支持**上下文菜单上。
 
 ![若要向现有项目添加 Docker 支持的上下文菜单选项：右键单击 （项目） > 添加 > Docker 支持。](media/add-docker-support-to-project.png)
 
 **图 4-38**。 向现有项目添加 Docker 支持
 
-若要完成添加 Docker 支持，必须选择 Windows 或 Linux。 在这种情况下，选择**Linux**，这是因为 AKS 不支持 Windows 容器 （作为后期 2018)。
+若要完成添加 Docker 支持，可以选择 Windows 或 Linux。 在这种情况下，选择**Linux**，这是因为 AKS 不支持 Windows 容器 （作为后期 2018)。
 
 ![选项对话框，可选择目标 OS 的 Dockerfile。](media/select-linux-docker-support.png)
 
 **图 4-39**。 选择 Linux 容器。
 
-这些简单的步骤，则必须在 Linux 容器上运行 ASP.NET Core 2.1 应用程序。
+使用这些简单的步骤，可以在 Linux 容器上运行 ASP.NET Core 2.1 应用程序。
 
 正如您所看到的 Visual Studio 2017 和 Docker 之间的集成是完全面向开发人员工作效率。
 
-现在可以按**F5**生成并运行你的应用程序。
+现在可以运行应用程序**F5**密钥或通过使用**播放**按钮。
 
-在运行该项目之后, 可以列出使用的映像`docker images`命令。 应会看到`mssampleapplication`创建我们的项目使用 Visual Studio 2017 自动部署映像。
+在运行该项目之后, 可以列出使用的映像`docker images`命令。 应会看到`mssampleapplication`创建自动部署我们的项目使用 Visual Studio 2017 的映像。
 
 ```console
 docker images
@@ -77,17 +77,17 @@ docker images
 
 ## <a name="register-the-solution-in-the-azure-container-registry"></a>在 Azure 容器注册表中注册解决方案
 
-将图像上传到任何 Docker 注册表，如[Azure 容器注册表 (ACR)](https://azure.microsoft.com/services/container-registry/)或 Docker Hub 以便映像可以从该注册表部署到 AKS 群集。 在这种情况下，我们正在正在映像上载到 Azure 容器注册表。
+将图像上传到任何 Docker 注册表，如[Azure 容器注册表 (ACR)](https://azure.microsoft.com/services/container-registry/)或 Docker 中心，以便映像可以从该注册表部署到 AKS 群集。 在这种情况下，我们正在正在映像上载到 Azure 容器注册表。
 
 ### <a name="create-the-image-in-release-mode"></a>在发布模式下创建的映像
 
-创建中的图像**版本**模式 （可用于生产） 切换到版本，如下所示，按 f5 键以运行一次应用程序。
+现在，我们将创建中的图像**发行**模式 （可用于生产） 更改为**发行**，如下所示图 4: 41，并像之前那样运行应用程序。
 
 ![工具栏在 VS 中的选项以在发布模式下生成。](media/select-release-mode.png)
 
 **图 4: 41**。 选择发布模式下
 
-如果您执行`docker image`命令，你将看到创建这两个映像。 一个用于`debug`，另一个用于`release`模式。
+如果您执行`docker image`命令，你将看到这两个映像创建，另一个用于`debug`，另一个用于`release`模式。
 
 ### <a name="create-a-new-tag-for-the-image"></a>为映像创建新标记
 
@@ -111,13 +111,13 @@ az acr list --resource-group MSSampleResourceGroup --query "[].{acrLoginServer:l
 
 在这两种情况下，将获取的名称。 在本例中为`mssampleacr.azurecr.io`。
 
-现在你可以标记该映像，采用最新映像 （版本映像），使用以下命令：
+现在你可以标记该映像，采用最新映像 （版本映像），使用命令：
 
 ```console
 docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksapplication:v1
 ```
 
-运行之后`docker tag`命令，列出与映像`docker images`命令。 应会看到具有新的标记图像。
+运行之后`docker tag`命令，列出与映像`docker images`命令，并且应可以看到具有新的标记的图像。
 
 ![控制台输出从 docker images 命令。](media/tagged-docker-images-list.png)
 
@@ -143,7 +143,7 @@ docker push mssampleacr.azurecr.io/mssampleaksapplication:v1
 
 **图 4 46**。 节点视图
 
-下一步是将容器部署到 AKS 的 Kubernetes 群集。 为此，您需要一个文件 (**.yml 文件部署**)，在这种情况下，包含：
+下一步是将容器部署到 AKS 的 Kubernetes 群集。 为此，需要一个文件 (**.yml 文件部署**) 包含以下：
 
 ```yml
 apiVersion: apps/v1beta1

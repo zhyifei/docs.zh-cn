@@ -3,13 +3,13 @@ title: Docker 应用的开发环境
 description: 初步了解支持 Docker 开发生命周期的最重要的开发工具选项。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 1d22b45a8eee9198d337df9f0b8b4b78371fa31a
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 09d15d4221d948b654912a8890df66052e68f6eb
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219992"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836170"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 应用的开发环境
 
@@ -22,27 +22,29 @@ ms.locfileid: "56219992"
 如果你更青睐支持任何开发语言的轻型、 跨平台编辑器，可以使用 Visual Studio Code 和 Docker CLI。 这些产品提供简单而稳定可靠的体验，这很关键的简化开发人员工作流。 通过安装"Docker for Mac"或"Docker 的 Windows"（开发环境），Docker 开发人员可以使用单个 Docker CLI 为 Windows 或 Linux （运行时环境） 构建应用程序。 此外，Visual Studio Code 支持适用于 Dockerfile 和快捷任务以在编辑器中运行 Docker 命令的 IntelliSense 使用的 Docker 扩展。
 
 > [!NOTE]
+>
 > 若要下载 Visual Studio Code，请转到<https://code.visualstudio.com/download>。
+>
+> 若要下载适用于 Mac 和 Windows 的 Docker，请转到<https://www.docker.com/products/docker>。
 
-若要下载适用于 Mac 和 Windows 的 Docker，请转到<https://www.docker.com/products/docker>。
+### <a name="visual-studio-with-docker-tools-windows-development-machine"></a>Visual Studio 中使用 Docker 工具 （Windows 开发计算机）
 
-### <a name="visual-studio-with-docker-tools"></a>Visual Studio 中使用 Docker 工具
+我们建议你使用 Visual Studio 2017 （或更高版本） 启用的内置 Docker 工具。 使用 Visual Studio 可以开发、 运行和验证应用程序直接在所选的 Docker 环境中。 按 F5 调试应用程序 （单个容器或多个容器） 直接在 Docker 主机时，或按 Ctrl + F5 编辑和刷新应用，而无需重新生成容器。 Windows 开发人员能够创建适用于 Linux 或 Windows 的 Docker 容器的最简单且最强大选择它。
 
-当你使用的 Visual Studio 2015 可以安装外接程序工具"Docker Tools for Visual Studio。" 为 Visual Studio 2017 中，Docker 工具会在生成已。 在这两种情况下可以开发、 运行和验证应用程序直接在所选的 Docker 环境中。 F5 直接在 Docker 应用程序 （单个容器或多个容器） 进行调试，托管或按 Ctrl + F5 编辑和刷新应用，而无需重新生成容器。 这是创建适用于 Linux 或 Windows 的 Docker 容器的 Windows 开发人员的最简单、 更强大的选择。
+### <a name="visual-studio-for-mac-mac-development-machine"></a>Visual Studio for Mac （Mac 开发计算机）
 
-> [!NOTE]
-> 若要下载 Docker Tools for Visual Studio，请转到<https://visualstudiogallery.msdn.microsoft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4>。
+可以使用[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)开发基于 Docker 的应用程序时。 Visual Studio for Mac 提供更丰富的 IDE 与 Visual Studio Code 相比 for mac。
 
 ## <a name="language-and-framework-choices"></a>选择语言和框架
 
-你可以开发 Docker 应用程序和大多数流行语言与 Microsoft 工具。 下面是一个初始的列表，但并不局限于它：
+你可以开发 Docker 应用程序使用 Microsoft 工具和大多数流行语言。 下面是一个初始的列表，但并不局限于它：
 
--   .NET Core 和 ASP.NET Core
--   Node.js
--   Golang
--   Java
--   Ruby
--   Python
+- .NET Core 和 ASP.NET Core
+- Node.js
+- 前往
+- Java
+- Ruby
+- Python
 
 基本上，您可以使用支持 Docker Linux 或 Windows 中的任何现代语言。
 
