@@ -7,57 +7,57 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: cfb54858286ed31d566b5aeb46faed9070f110bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3b4ee9a1bfcc2132d3e9e1239ff2c8f7158e513
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612835"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966757"
 ---
-# <a name="gettype-operator-visual-basic"></a><span data-ttu-id="1533b-102">GetType 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1533b-102">GetType Operator (Visual Basic)</span></span>
-<span data-ttu-id="1533b-103">返回<xref:System.Type>指定类型的对象。</span><span class="sxs-lookup"><span data-stu-id="1533b-103">Returns a <xref:System.Type> object for the specified type.</span></span> <span data-ttu-id="1533b-104"><xref:System.Type>对象提供有关其属性、 方法和事件等类型的信息。</span><span class="sxs-lookup"><span data-stu-id="1533b-104">The <xref:System.Type> object provides information about the type such as its properties, methods, and events.</span></span>  
+# <a name="gettype-operator-visual-basic"></a><span data-ttu-id="53742-102">GetType 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="53742-102">GetType Operator (Visual Basic)</span></span>
+<span data-ttu-id="53742-103">返回<xref:System.Type>指定类型的对象。</span><span class="sxs-lookup"><span data-stu-id="53742-103">Returns a <xref:System.Type> object for the specified type.</span></span> <span data-ttu-id="53742-104"><xref:System.Type>对象提供有关其属性、 方法和事件等类型的信息。</span><span class="sxs-lookup"><span data-stu-id="53742-104">The <xref:System.Type> object provides information about the type such as its properties, methods, and events.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1533b-105">语法</span><span class="sxs-lookup"><span data-stu-id="1533b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53742-105">语法</span><span class="sxs-lookup"><span data-stu-id="53742-105">Syntax</span></span>  
   
 ```  
 GetType(typename)  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1533b-106">参数</span><span class="sxs-lookup"><span data-stu-id="1533b-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="53742-106">参数</span><span class="sxs-lookup"><span data-stu-id="53742-106">Parameters</span></span>  
   
-|<span data-ttu-id="1533b-107">参数</span><span class="sxs-lookup"><span data-stu-id="1533b-107">Parameter</span></span>|<span data-ttu-id="1533b-108">描述</span><span class="sxs-lookup"><span data-stu-id="1533b-108">Description</span></span>|  
+|<span data-ttu-id="53742-107">参数</span><span class="sxs-lookup"><span data-stu-id="53742-107">Parameter</span></span>|<span data-ttu-id="53742-108">描述</span><span class="sxs-lookup"><span data-stu-id="53742-108">Description</span></span>|  
 |---|---|  
-|`typename`|<span data-ttu-id="1533b-109">为其所需的信息类型的名称。</span><span class="sxs-lookup"><span data-stu-id="1533b-109">The name of the type for which you desire information.</span></span>|  
+|`typename`|<span data-ttu-id="53742-109">为其所需的信息类型的名称。</span><span class="sxs-lookup"><span data-stu-id="53742-109">The name of the type for which you desire information.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1533b-110">备注</span><span class="sxs-lookup"><span data-stu-id="1533b-110">Remarks</span></span>  
- <span data-ttu-id="1533b-111">`GetType`运算符将返回<xref:System.Type>的指定对象的`typename`。</span><span class="sxs-lookup"><span data-stu-id="1533b-111">The `GetType` operator returns the <xref:System.Type> object for the specified `typename`.</span></span> <span data-ttu-id="1533b-112">可以在任何已定义类型的名称将传递`typename`。</span><span class="sxs-lookup"><span data-stu-id="1533b-112">You can pass the name of any defined type in `typename`.</span></span> <span data-ttu-id="1533b-113">这包括：</span><span class="sxs-lookup"><span data-stu-id="1533b-113">This includes the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="53742-110">备注</span><span class="sxs-lookup"><span data-stu-id="53742-110">Remarks</span></span>  
+ <span data-ttu-id="53742-111">`GetType`运算符将返回<xref:System.Type>的指定对象的`typename`。</span><span class="sxs-lookup"><span data-stu-id="53742-111">The `GetType` operator returns the <xref:System.Type> object for the specified `typename`.</span></span> <span data-ttu-id="53742-112">可以在任何已定义类型的名称将传递`typename`。</span><span class="sxs-lookup"><span data-stu-id="53742-112">You can pass the name of any defined type in `typename`.</span></span> <span data-ttu-id="53742-113">这包括：</span><span class="sxs-lookup"><span data-stu-id="53742-113">This includes the following:</span></span>  
   
--   <span data-ttu-id="1533b-114">任何 Visual Basic 数据类型，如`Boolean`或`Date`。</span><span class="sxs-lookup"><span data-stu-id="1533b-114">Any Visual Basic data type, such as `Boolean` or `Date`.</span></span>  
+-   <span data-ttu-id="53742-114">任何 Visual Basic 数据类型，如`Boolean`或`Date`。</span><span class="sxs-lookup"><span data-stu-id="53742-114">Any Visual Basic data type, such as `Boolean` or `Date`.</span></span>  
   
--   <span data-ttu-id="1533b-115">任何.NET Framework 类、 结构、 模块或接口，如<xref:System.ArgumentException?displayProperty=nameWithType>或<xref:System.Double?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="1533b-115">Any .NET Framework class, structure, module, or interface, such as <xref:System.ArgumentException?displayProperty=nameWithType> or <xref:System.Double?displayProperty=nameWithType>.</span></span>  
+-   <span data-ttu-id="53742-115">任何.NET Framework 类、 结构、 模块或接口，如<xref:System.ArgumentException?displayProperty=nameWithType>或<xref:System.Double?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="53742-115">Any .NET Framework class, structure, module, or interface, such as <xref:System.ArgumentException?displayProperty=nameWithType> or <xref:System.Double?displayProperty=nameWithType>.</span></span>  
   
--   <span data-ttu-id="1533b-116">任何类、 结构、 模块或接口定义的应用程序。</span><span class="sxs-lookup"><span data-stu-id="1533b-116">Any class, structure, module, or interface defined by your application.</span></span>  
+-   <span data-ttu-id="53742-116">任何类、 结构、 模块或接口定义的应用程序。</span><span class="sxs-lookup"><span data-stu-id="53742-116">Any class, structure, module, or interface defined by your application.</span></span>  
   
--   <span data-ttu-id="1533b-117">任何由你的应用程序定义的数组。</span><span class="sxs-lookup"><span data-stu-id="1533b-117">Any array defined by your application.</span></span>  
+-   <span data-ttu-id="53742-117">任何由你的应用程序定义的数组。</span><span class="sxs-lookup"><span data-stu-id="53742-117">Any array defined by your application.</span></span>  
   
--   <span data-ttu-id="1533b-118">任何由你的应用程序定义的委托。</span><span class="sxs-lookup"><span data-stu-id="1533b-118">Any delegate defined by your application.</span></span>  
+-   <span data-ttu-id="53742-118">任何由你的应用程序定义的委托。</span><span class="sxs-lookup"><span data-stu-id="53742-118">Any delegate defined by your application.</span></span>  
   
--   <span data-ttu-id="1533b-119">任何由 Visual Basic、.NET Framework 中或你的应用程序定义的枚举。</span><span class="sxs-lookup"><span data-stu-id="1533b-119">Any enumeration defined by Visual Basic, the .NET Framework, or your application.</span></span>  
+-   <span data-ttu-id="53742-119">任何由 Visual Basic、.NET Framework 中或你的应用程序定义的枚举。</span><span class="sxs-lookup"><span data-stu-id="53742-119">Any enumeration defined by Visual Basic, the .NET Framework, or your application.</span></span>  
   
- <span data-ttu-id="1533b-120">如果你想要获取的对象变量的类型对象，使用<xref:System.Type.GetType%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="1533b-120">If you want to get the type object of an object variable, use the <xref:System.Type.GetType%2A?displayProperty=nameWithType> method.</span></span>  
+ <span data-ttu-id="53742-120">如果你想要获取的对象变量的类型对象，使用<xref:System.Type.GetType%2A?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="53742-120">If you want to get the type object of an object variable, use the <xref:System.Type.GetType%2A?displayProperty=nameWithType> method.</span></span>  
   
- <span data-ttu-id="1533b-121">`GetType`运算符只能在以下情况下有用：</span><span class="sxs-lookup"><span data-stu-id="1533b-121">The `GetType` operator can be useful in the following circumstances:</span></span>  
+ <span data-ttu-id="53742-121">`GetType`运算符只能在以下情况下有用：</span><span class="sxs-lookup"><span data-stu-id="53742-121">The `GetType` operator can be useful in the following circumstances:</span></span>  
   
--   <span data-ttu-id="1533b-122">必须在运行时访问类型的元数据。</span><span class="sxs-lookup"><span data-stu-id="1533b-122">You must access the metadata for a type at run time.</span></span> <span data-ttu-id="1533b-123"><xref:System.Type>对象提供元数据，例如类型成员和部署信息。</span><span class="sxs-lookup"><span data-stu-id="1533b-123">The <xref:System.Type> object supplies metadata such as type members and deployment information.</span></span> <span data-ttu-id="1533b-124">您需要它，例如，在程序集上进行反射。</span><span class="sxs-lookup"><span data-stu-id="1533b-124">You need this, for example, to reflect over an assembly.</span></span> <span data-ttu-id="1533b-125">有关详细信息，请参阅 <xref:System.Reflection?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="1533b-125">For more information, see <xref:System.Reflection?displayProperty=nameWithType>.</span></span>  
+-   <span data-ttu-id="53742-122">必须在运行时访问类型的元数据。</span><span class="sxs-lookup"><span data-stu-id="53742-122">You must access the metadata for a type at run time.</span></span> <span data-ttu-id="53742-123"><xref:System.Type>对象提供元数据，例如类型成员和部署信息。</span><span class="sxs-lookup"><span data-stu-id="53742-123">The <xref:System.Type> object supplies metadata such as type members and deployment information.</span></span> <span data-ttu-id="53742-124">您需要它，例如，在程序集上进行反射。</span><span class="sxs-lookup"><span data-stu-id="53742-124">You need this, for example, to reflect over an assembly.</span></span> <span data-ttu-id="53742-125">有关详细信息，请参阅 <xref:System.Reflection?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="53742-125">For more information, see <xref:System.Reflection?displayProperty=nameWithType>.</span></span>  
   
--   <span data-ttu-id="1533b-126">你想要比较两个对象引用引用相同类型的实例。</span><span class="sxs-lookup"><span data-stu-id="1533b-126">You want to compare two object references to see if they refer to instances of the same type.</span></span> <span data-ttu-id="1533b-127">如果是这样，`GetType`返回对相同的引用<xref:System.Type>对象。</span><span class="sxs-lookup"><span data-stu-id="1533b-127">If they do, `GetType` returns references to the same <xref:System.Type> object.</span></span>  
+-   <span data-ttu-id="53742-126">你想要比较两个对象引用引用相同类型的实例。</span><span class="sxs-lookup"><span data-stu-id="53742-126">You want to compare two object references to see if they refer to instances of the same type.</span></span> <span data-ttu-id="53742-127">如果是这样，`GetType`返回对相同的引用<xref:System.Type>对象。</span><span class="sxs-lookup"><span data-stu-id="53742-127">If they do, `GetType` returns references to the same <xref:System.Type> object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1533b-128">示例</span><span class="sxs-lookup"><span data-stu-id="1533b-128">Example</span></span>  
- <span data-ttu-id="1533b-129">下面的示例演示`GetType`中使用的运算符。</span><span class="sxs-lookup"><span data-stu-id="1533b-129">The following examples show the `GetType` operator in use.</span></span>  
+## <a name="example"></a><span data-ttu-id="53742-128">示例</span><span class="sxs-lookup"><span data-stu-id="53742-128">Example</span></span>  
+ <span data-ttu-id="53742-129">下面的示例演示`GetType`中使用的运算符。</span><span class="sxs-lookup"><span data-stu-id="53742-129">The following examples show the `GetType` operator in use.</span></span>  
   
- [!code-vb[VbVbalrOperators#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/gettype-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   
-## <a name="see-also"></a><span data-ttu-id="1533b-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="1533b-130">See also</span></span>
-- [<span data-ttu-id="1533b-131">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="1533b-131">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="1533b-132">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="1533b-132">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="1533b-133">运算符和表达式</span><span class="sxs-lookup"><span data-stu-id="1533b-133">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="53742-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="53742-130">See also</span></span>
+- [<span data-ttu-id="53742-131">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="53742-131">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="53742-132">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="53742-132">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="53742-133">运算符和表达式</span><span class="sxs-lookup"><span data-stu-id="53742-133">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
