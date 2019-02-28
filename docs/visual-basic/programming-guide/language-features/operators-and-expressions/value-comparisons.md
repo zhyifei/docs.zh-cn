@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: 23733741a79506730187d5735a20f3848e43da1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50054b9e32f4d49a34c1bb1a5c79129662019aee
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724809"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965890"
 ---
 # <a name="value-comparisons-visual-basic"></a>值的比较 (Visual Basic)
 比较运算符可以用于构造比较数值变量的值的表达式。 两个表达式返回`Boolean`值根据比较是 true 或 false。 此类表达式的示例如下所示。  
@@ -34,15 +34,15 @@ ms.locfileid: "54724809"
   
  比较值的表达式最常用于`If...Then`构造，如以下示例所示。  
   
- [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
+ [!code-vb[VbVbalrOperators#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#84)]  
   
  `=`符号是比较运算符和赋值运算符。 当用作比较运算符，它计算左侧的值是否等于右侧的值，如下面的示例中所示。  
   
- [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
+ [!code-vb[VbVbalrOperators#85](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#85)]  
   
  此外可以任意位置使用比较表达式`Boolean`值是所需，例如，在`If`， `While`， `Loop`，或`ElseIf`语句中，或者当将分配到或将值传递给`Boolean`变量。 在以下示例中，通过比较表达式返回的值分配给`Boolean`变量。  
   
- [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
+ [!code-vb[VbVbalrOperators#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#86)]  
   
 ## <a name="see-also"></a>请参阅
 - [布尔表达式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)

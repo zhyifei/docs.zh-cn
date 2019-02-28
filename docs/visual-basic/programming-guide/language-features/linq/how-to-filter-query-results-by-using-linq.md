@@ -11,12 +11,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: d0260e53be421d36cdc8d351d30d7f8a4ac4fa84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9aa3219cb613082545c0a417ed6972bb51c8815f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684166"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975402"
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>如何：使用 LINQ (Visual Basic) 筛选查询结果
 语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。  
@@ -69,13 +69,13 @@ ms.locfileid: "54684166"
   
      将以下代码添加到`Load`事件以查询作为数据上下文的属性公开的表。 查询筛选结果，并返回位于中的客户`London`。  
   
-     [!code-vb[VbLINQToSQLHowTos#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#11)]  
   
 4.  按 F5 以运行您的项目并查看结果。  
   
 5.  以下是可以尝试一些其他筛选器。  
   
-     [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#12)]  
   
 ## <a name="see-also"></a>请参阅
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

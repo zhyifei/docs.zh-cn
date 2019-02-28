@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 54bd18b050ca58c286bfca3972b242348c61fe45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cf1dbb1d9dafa9c690b4043da5a6f36469e8d7a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737606"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965340"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML 值属性 (Visual Basic)
 提供对一系列的第一个元素的值的访问<xref:System.Xml.Linq.XElement>对象。  
@@ -50,7 +50,7 @@ object.Value
 ## <a name="example"></a>示例  
  下面的示例演示如何使用<xref:System.Xml.Linq.XElement.Value%2A>属性来访问的集合中的第一个节点<xref:System.Xml.Linq.XElement>对象。 该示例使用子轴属性来获取名为的所有子节点的集合`phone`位于`contact`对象。  
   
- [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
+ [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]  
   
  此代码显示以下文本：  
   
@@ -59,7 +59,7 @@ object.Value
 ## <a name="example"></a>示例  
  下面的示例演示如何获取集合中的 XML 特性的值<xref:System.Xml.Linq.XAttribute>对象。 该示例使用特性轴属性来显示的值`type`的所有属性`phone`元素。  
   
- [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
+ [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]  
   
  此代码显示以下文本：  
   

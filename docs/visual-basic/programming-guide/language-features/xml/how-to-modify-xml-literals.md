@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-ms.openlocfilehash: 7a01fdc9d0541b5d277c2f283e25e9a1cef3b862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e11c1ed4cfe4edc1c88dbbff2e9f555b1a028c4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636334"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974713"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>如何：修改 XML 文本 (Visual Basic)
 Visual Basic 提供方便的方式来修改 XML 文本。 可以添加或删除元素和属性，并还可以使用新的 XML 元素来替换现有元素。 本主题提供如何修改现有 XML 文本的几个示例。  
@@ -22,7 +22,7 @@ Visual Basic 提供方便的方式来修改 XML 文本。 可以添加或删除�
   
      以下代码示例将更新的所有值\<价格 > XML 文档中的元素。  
   
-     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_1.vb)]  
+     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]  
   
      下面显示了示例源为 XML 并修改此代码示例中的 XML。  
   
@@ -65,7 +65,7 @@ Visual Basic 提供方便的方式来修改 XML 文本。 可以添加或删除�
   
 1.  若要将属性添加到 XML 文本，首先获取对 XML 文本的引用。 然后可以通过添加新的 XML 特性轴属性添加一个属性。 您还可以添加一个新<xref:System.Xml.Linq.XAttribute>对象与 XML 文本使用<xref:System.Xml.Linq.XContainer.Add%2A>方法。 下面的示例显示了这两个选项。  
   
-     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_2.vb)]  
+     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]  
   
      下面显示了示例源为 XML 并修改此代码示例中的 XML。  
   
@@ -111,7 +111,7 @@ Visual Basic 提供方便的方式来修改 XML 文本。 可以添加或删除�
   
      下面的示例显示了每种技术的示例。  
   
-     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_3.vb)]  
+     [!code-vb[VbXmlSamples2#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#6)]  
   
      下面显示了示例源为 XML 并修改此代码示例中的 XML。  
   
@@ -155,7 +155,7 @@ Visual Basic 提供方便的方式来修改 XML 文本。 可以添加或删除�
   
 1.  若要从 XML 文本中删除一个元素或属性，请获取对元素或属性与调用的引用`Remove`方法，如以下示例所示。  
   
-     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_4.vb)]  
+     [!code-vb[VbXmlSamples2#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#7)]  
   
      下面显示了示例源为 XML 并修改此代码示例中的 XML。  
   
@@ -203,7 +203,7 @@ Visual Basic 提供方便的方式来修改 XML 文本。 可以添加或删除�
   
      下面的代码示例替换所有\<说明 > 的元素\<抽象 > 元素。 内容\<说明 > 元素保留在新\<抽象 > 元素中的使用<xref:System.Xml.Linq.XContainer.Nodes%2A>的属性\<说明 ><xref:System.Xml.Linq.XElement>对象。  
   
-     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_5.vb)]  
+     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]  
   
      下面显示了示例源为 XML 并修改此代码示例中的 XML。  
   

@@ -40,7 +40,7 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
   
 |到|查看|  
 |--------|---------|  
-|使用 Visual Studio 创建新的 Windows 窗体应用程序|[演练：创建简单 Windows 窗体](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|使用 Visual Studio 创建新的 Windows 窗体应用程序|[教程 1:创建图片查看器](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
 |使用窗体上控件|[如何：向 Windows 窗体添加控件](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |创建使用图形 <xref:System.Drawing>|[图形编程入门](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |创建自定义控件|[如何：从 UserControl 类继承](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -48,7 +48,8 @@ Visual Basic 的一个重要部分是能够创建用户的计算机本地运行�
 ## <a name="displaying-and-manipulating-data"></a>显示和操作数据  
  许多应用程序必须显示数据库、XML 文件、XML Web 服务或其他数据源中的数据。 Windows 窗体提供了一个灵活的控件称为<xref:System.Windows.Forms.DataGridView>呈现在传统的行和列的格式，此类表格数据，以便每段数据块均占据其自己的单元格的控件。 使用<xref:System.Windows.Forms.DataGridView>可以自定义各个单元格的外观、 任意行和列锁定在的位置，并显示复杂控件中单元格，此外还具有其他功能。  
   
- 通过网络连接到数据源对于 Windows 窗体智能客户端而言是一个简单的任务。 <xref:System.Windows.Forms.BindingSource>组件，new 与 Visual Studio 2005 中的 Windows 窗体和[!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]，表示与数据源的连接，公开将数据绑定到控件，导航到上一页和下一页记录、 编辑记录和保存方法更改回原始的源。 <xref:System.Windows.Forms.BindingNavigator> 控件通过 <xref:System.Windows.Forms.BindingSource> 组件提供一个简单界面，可供用户在记录间导航。  
+ 通过网络连接到数据源对于 Windows 窗体智能客户端而言是一个简单的任务。 <xref:System.Windows.Forms.BindingSource>组件，new 与 Visual Studio 2005 中的 Windows 窗体和[!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]，表示与数据源的连接，公开将数据绑定到控件，导航到上一页和下一页记录、 编辑记录和保存方法更改回原始的源。 
+  <xref:System.Windows.Forms.BindingNavigator> 控件通过 <xref:System.Windows.Forms.BindingSource> 组件提供一个简单界面，可供用户在记录间导航。  
   
 ### <a name="data-bound-controls"></a>数据绑定控件  
  可以创建数据绑定控件轻松地使用数据源窗口，其中显示您项目中的数据源，例如数据库、 Web 服务和对象。 可以通过将此窗口中的项拖动到项目中的窗体上来创建数据绑定控件。 还可以通过将对象从“数据源”窗口拖动到现有控件上来将现有控件与数据进行数据绑定。  

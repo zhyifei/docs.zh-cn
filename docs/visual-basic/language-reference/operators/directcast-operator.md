@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 4b8ffbe018872c3ae467fb9bf15e3b03595fd640
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03e632bad538f65d010dfaa12f7eb5da15c11091
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659769"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979822"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast 运算符 (Visual Basic)
 引入了基于继承或实现的类型转换运算。  
@@ -37,7 +37,7 @@ ms.locfileid: "54659769"
 ## <a name="example"></a>示例  
  下面的示例演示的两种用法`DirectCast`，一个在运行的时，另一个失败的成功。  
   
- [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/VisualBasic/directcast-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#1)]  
   
  在前面的示例中，运行时类型`q`是`Double`。 `CType` 会成功，因为`Double`可转换为`Integer`。 但是，第一个`DirectCast`在运行时失败，因为运行时类型的`Double`具有不到具有继承关系`Integer`，即使已存在的转换。 第二个`DirectCast`成功，因为它将从类型转换<xref:System.Windows.Forms.Form>键入<xref:System.Windows.Forms.Control>，从其<xref:System.Windows.Forms.Form>继承。  
   

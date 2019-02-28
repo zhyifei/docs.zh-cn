@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 5980549dd063b2c7d5c60ebd4e9762284c072009
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: becbbef008e8a474db198748d45f260fcb90c758
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586613"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966765"
 ---
 # <a name="determining-object-type-visual-basic"></a>确定对象类型 (Visual Basic)
 一般的对象变量 (也就是说，变量声明为`Object`) 可以包含来自任何类的对象。 使用类型的变量时`Object`，可能需要采取不同操作基于对象的类; 例如，某些对象可能的特定属性或方法不支持。 Visual Basic 提供两种方法来确定哪种类型的对象存储在一个对象变量：`TypeName`函数和`TypeOf...Is`运算符。  
@@ -22,15 +22,15 @@ ms.locfileid: "54586613"
 ## <a name="typename-and-typeofis"></a>类型名称和 TypeOf...是  
  `TypeName`函数返回一个字符串，并且是最佳选择，在需要时存储或显示类对象的名称，如下面的代码段中所示：  
   
- [!code-vb[VbVbalrOOP#92](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_1.vb)]  
+ [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
   
  `TypeOf...Is`运算符是用于测试的对象类型的最佳选择，因为它是比等效的字符串比较使用更快`TypeName`。 使用下面的代码段`TypeOf...Is`内`If...Then...Else`语句：  
   
- [!code-vb[VbVbalrOOP#93](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_2.vb)]  
+ [!code-vb[VbVbalrOOP#93](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#93)]  
   
  此处需要注意的一点是因为。 `TypeOf...Is`运算符返回`True`如果属于特定类型或派生自特定类型的对象。 使用 Visual Basic 实现几乎所有内容涉及到对象，其中包括一些通常不被视为对象，如字符串和整数的元素。 这些对象派生自和继承方法从<xref:System.Object>。 当传递`Integer`和使用计算`Object`，则`TypeOf...Is`运算符将返回`True`。 下面的示例报告参数`InParam`既`Object`和`Integer`:  
   
- [!code-vb[VbVbalrOOP#94](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_3.vb)]  
+ [!code-vb[VbVbalrOOP#94](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#94)]  
   
  下面的示例使用这两个`TypeOf...Is`并`TypeName`来确定对象中传递给它的类型`Ctrl`参数。 `TestObject`过程调用`ShowType`与三种不同的控件。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54586613"
   
 3.  将以下代码添加到你的窗体：  
   
-     [!code-vb[VbVbalrOOP#95](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_4.vb)]  
+     [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>

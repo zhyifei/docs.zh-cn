@@ -1,16 +1,16 @@
 ---
-title: 编程概念 (Visual Basic)
-ms.date: 07/20/2015
+title: 编程概念的 Visual Basic
+ms.date: 02/27/2017
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
 ---
 # <a name="programming-concepts-visual-basic"></a>编程概念 (Visual Basic)
+
 此部分介绍了 Visual Basic 语言中的编程概念。  
   
 ## <a name="in-this-section"></a>本节内容  
   
 |标题|描述|  
 |-----------|-----------------|  
-|[在.NET 中的程序集](../../../standard/assembly/index.md)|介绍了如何创建和使用程序集。|  
 |[使用 Async 和 Await 的异步编程 (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|介绍了如何使用 [Async](../../../visual-basic/language-reference/modifiers/async.md) 和 [Await](../../../visual-basic/language-reference/operators/await-operator.md) 关键字编写异步解决方案。 其中包括演练。|  
 |[特性概述 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|介绍了如何使用特性提供编程元素（如类型、字段、方法和属性）的附加信息。|  
 |[调用方信息 (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|介绍了如何获取方法调用方的信息。 此类信息包括源代码的文件路径和行号，以及调用方的成员名称。|  
@@ -27,4 +27,5 @@ ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
   
 |||  
 |---|---|  
+|[.NET 中的程序集](../../../standard/assembly/index.md)|介绍了如何创建和使用程序集。|  
 |[性能提示](../../../framework/performance/performance-tips.md) | 介绍了多项有助于提升应用程序性能的基本规则。|

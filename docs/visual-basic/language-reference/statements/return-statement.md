@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: fb75409a2c26ca966469624de781015db621a825
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00d9f09bed513199d579c9e1c3f831b729e68839
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588388"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977131"
 ---
 # <a name="return-statement-visual-basic"></a>Return 语句 (Visual Basic)
 将控制返回给调用的代码`Function`， `Sub`， `Get`， `Set`，或`Operator`过程。  
@@ -44,7 +44,7 @@ Return expression
 ## <a name="example"></a>示例  
  下面的示例使用`Return`语句数次以返回到调用代码时该过程无需执行任何其他操作。  
   
- [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   
 ## <a name="see-also"></a>请参阅
 - [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)

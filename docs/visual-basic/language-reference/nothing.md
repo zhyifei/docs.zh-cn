@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b4a9acb5a43898ef616bbc6bb97f2f4f96d206b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496944"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981421"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 表示任何数据类型的默认值。 对于引用类型，默认值是`null`引用。 对于值类型，默认值取决于值类型是否可以为 null。  
@@ -30,11 +30,11 @@ ms.locfileid: "54496944"
   
  如果变量是不可为 null 的值类型，分配给`Nothing`到它将其设置为默认值为其声明的类型。 如果该类型包含变量的成员，它们都设置为其默认值。 下面的示例阐释了这一点对于标量类型。  
   
- [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
+ [!code-vb[VbVbalrKeywords#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class2.vb#7)]  
   
  如果引用类型的变量，将分配`Nothing`为该变量设置它为`null`变量的类型的引用。 设置为一个变量`null`引用不与任何对象相关联。 下面的示例演示这一操作。  
   
- [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
+ [!code-vb[VbVbalrKeywords#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class3.vb#8)]  
   
  检查变量是否引用 （或可以为 null 的值类型） 时`null`，请不要使用`= Nothing`或`<> Nothing`。 始终使用`Is Nothing`或`IsNot Nothing`。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54496944"
   
  下面的示例演示使用的比较`Is`和`IsNot`运算符。  
   
- [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
+ [!code-vb[VbVbalrKeywords#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class4.vb#9)]  
   
  如果不使用声明一个变量`As`子句并将其设置为`Nothing`，该变量的类型为`Object`。 此示例是`Dim something = Nothing`。 在这种情况下发生编译时错误时`Option Strict`位于和`Option Infer`处于关闭状态。  
   

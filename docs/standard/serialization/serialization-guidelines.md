@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 20676b53d21931987139288e29c009c8348ce6ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abe593e9c132f4fc151983d6c4dc04bd13627120
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690886"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978405"
 ---
 # <a name="serialization-guidelines"></a>序列化准则
 本文档列出了在设计要序列化的 API 时要考虑的准则。  
@@ -69,8 +69,9 @@ ms.locfileid: "54690886"
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     <xref:System.Runtime.Serialization.OnDeserializedAttribute> 属性是最常用的回调属性。 此系列中的其他属性还有 <xref:System.Runtime.Serialization.OnDeserializingAttribute>、    
-    <xref:System.Runtime.Serialization.OnSerializingAttribute> 和 <xref:System.Runtime.Serialization.OnSerializedAttribute>。 这些特性可分别用来标记在反序列化之前、序列化之前以及序列化之后执行的回调。  
+     
+      <xref:System.Runtime.Serialization.OnDeserializedAttribute> 属性是最常用的回调属性。 此系列中的其他属性还有 <xref:System.Runtime.Serialization.OnDeserializingAttribute>、    
+<xref:System.Runtime.Serialization.OnSerializingAttribute> 和 <xref:System.Runtime.Serialization.OnSerializedAttribute>。 这些特性可分别用来标记在反序列化之前、序列化之前以及序列化之后执行的回调。  
   
 4.  请考虑使用 <xref:System.Runtime.Serialization.KnownTypeAttribute> 指示在反序列化复杂对象关系图时应使用的具体类型。  
   
@@ -87,7 +88,8 @@ ms.locfileid: "54690886"
   
 6.  考虑实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口以允许在类型的两个不同版本之间进行往返。  
   
-     序列化程序可通过此接口确保在往返期间不丢失任何数据。 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 属性可存储类型的未来版本中不为当前版本所知的任何数据。 在随后序列化当前版本并将其反序列化为未来版本时，可通过 ExtensionData 属性值在序列化流中使用附加数据。  
+     序列化程序可通过此接口确保在往返期间不丢失任何数据。 
+  <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 属性可存储类型的未来版本中不为当前版本所知的任何数据。 在随后序列化当前版本并将其反序列化为未来版本时，可通过 ExtensionData 属性值在序列化流中使用附加数据。  
   
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
@@ -144,6 +146,6 @@ ms.locfileid: "54690886"
 - [数据协定序列化程序](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
 - [数据协定序列化程序支持的类型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [二进制序列化](binary-serialization.md)
-- [远程对象](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+- [.NET 远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
 - [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f57b5ae35bf97a04ff235d213ffad27bd015e711
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657969"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981460"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>演练：调用 Windows Api (Visual Basic)
 Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您可以使用它们来执行任务时很难编写你自己的等效过程。 例如，Windows 提供了一个名为函数`FlashWindowEx`允许您进行应用程序的标题栏在浅色和深色阴影之间切换。  
@@ -45,7 +45,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您
   
 4.  以下代码添加到`Declare`函数到类或想要使用该 DLL 的模块：  
   
-     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_1.vb)]  
+     [!code-vb[VbVbalrInterop#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#9)]  
   
 ### <a name="parts-of-the-declare-statement"></a>部件的 Declare 语句  
  `Declare`语句包括以下元素。  
@@ -79,7 +79,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您
   
 3.  添加等效`Const`到类或模块，以使这些常量可用于应用程序的语句。 例如：  
   
-     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_2.vb)]  
+     [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
 ###### <a name="to-call-the-dll-procedure"></a>若要调用的 DLL 过程  
   
@@ -87,7 +87,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您
   
 2.  将代码添加到`Click`您添加的按钮，调用该过程，并提供适当的参数的事件处理程序：  
   
-     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_3.vb)]  
+     [!code-vb[VbVbalrInterop#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#12)]  
   
 3.  通过按 F5 运行项目。 消息框显示两个**是**并**否**响应按钮。 单击其中任何一个。  
   
@@ -100,11 +100,11 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您
   
 2.  若要简化对访问`MarshalAs`特性，请添加`Imports`到类或模块，如以下示例所示的代码的顶部的语句：  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
+     [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
 3.  将导入的函数的函数原型添加到类或模块使用的，并应用`MarshalAs`属性为参数或返回值。 在下面的示例中，需要类型的 API 调用`void*`被封送为`AsAny`:  
   
-     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
+     [!code-vb[VbVbalrInterop#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#14)]  
   
 ## <a name="api-calls-using-dllimport"></a>使用 DllImport 的 API 调用  
  `DllImport`属性提供不带类型库在 Dll 中调用函数的第二个方法。 `DllImport` 大致相当于使用`Declare`语句，但可以更好地控制函数的调用方式。  
@@ -123,23 +123,23 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 您
   
 5.  若要简化对访问`DllImport`，添加`Imports`语句启动窗体类的代码的顶部：  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
+     [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
 6.  声明一个空的函数，前面`End Class`窗体，并将函数命名为语句`MoveFile`。  
   
 7.  将应用`Public`并`Shared`函数声明和设置的参数的修饰符`MoveFile`根据 Windows API 函数使用的参数：  
   
-     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_6.vb)]  
+     [!code-vb[VbVbalrInterop#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#16)]  
   
      你的函数名称可以是任意有效的过程;`DllImport`属性在 DLL 中指定的名称。 它还处理互操作封送处理参数和返回值，因此，可以选择 Visual Studio 的数据类型类似于数据的类型 API 使用。  
   
 8.  将应用`DllImport`属性为空函数。 第一个参数是名称和包含要调用的函数的 dll 的位置。 不需要指定位于 Windows 系统目录中文件的路径。 第二个参数是函数的命名的参数，Windows API 中指定的名称。 在此示例中，`DllImport`属性强制调用`MoveFile`转发到`MoveFileW`KERNEL32 中。DLL。 `MoveFileW`方法将文件复制从路径`src`到路径`dst`。  
   
-     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_7.vb)]  
+     [!code-vb[VbVbalrInterop#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#17)]  
   
 9. 将代码添加到`Button2_Click`事件处理程序调用该函数：  
   
-     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_8.vb)]  
+     [!code-vb[VbVbalrInterop#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#18)]  
   
 10. 创建一个名为 Test.txt 文件并将其放在硬盘上 C:\Tmp 目录中。 如有必要，请创建临时目录。  
   

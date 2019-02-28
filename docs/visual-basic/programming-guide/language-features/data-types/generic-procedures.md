@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 0f2a0c646b5af91d5296bafb01f5261d7ee6b9fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6b7d6a560f2f374c17e011479d6e2e458f9c1ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574308"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976520"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
 一个*泛型过程*，也称为*泛型方法*，是使用至少一个类型参数定义的过程。 这使得调用代码来定制其要求的数据类型的每次调用该过程。  
@@ -29,7 +29,7 @@ ms.locfileid: "54574308"
 ## <a name="type-inference"></a>类型推断  
  未提供任何类型参数在所有情况下，可以调用泛型过程。 如果您以这种方式，编译器将尝试确定要传递给过程的类型参数的相应的数据类型。 这称为*类型推理*。 下面的代码演示如何调用中，编译器推断它应将类型传递`String`对该类型参数`t`。  
   
- [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
  如果编译器无法推断调用上下文的类型参数，则将报告错误。 此类错误的一个可能原因是数组秩不匹配。 例如，假设您定义普通参数作为数组的类型参数。 如果调用的泛型过程提供不同的秩 （维数），数组不匹配会导致类型推理失败。 下面的代码演示如何调用中的二维数组传递给过程所需的一维数组。  
   
@@ -53,14 +53,14 @@ End Sub
  下面的示例定义了一个泛型`Function`过程，用于在数组中查找特定元素。 它定义一个类型参数，并使用它来构建在参数列表中的两个参数。  
   
 ### <a name="code"></a>代码  
- [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
 ### <a name="comments"></a>注释  
  前面的示例要求进行比较的能力`searchValue`针对每个元素的`searchArray`。 若要确保此功能，它可以约束类型参数`T`实现<xref:System.IComparable%601>接口。 该代码使用<xref:System.IComparable%601.CompareTo%2A>方法而不是`=`运算符，因为没有为提供的类型参数不能保证`T`支持`=`运算符。  
   
  你可以测试`findElement`用下面的代码的过程。  
   
- [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
  上述调用`MsgBox`分别显示"0"、"1"和"-1"。  
   

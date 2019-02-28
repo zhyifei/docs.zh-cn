@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 6dd71a01aeb56a6805689b6e898ab9c2c404959b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94d43b7bea48d85e612b5c995e20e286f14b024a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640753"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976494"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic 中的逻辑运算符和位运算符
 逻辑运算符比较`Boolean`表达式，并返回`Boolean`结果。 `And`， `Or`， `AndAlso`， `OrElse`，并`Xor`运算符是*二进制*因为它们采用两个操作数，而`Not`运算符是*一元*因为它采用单个操作数。 这些运算符的一些可以执行对整数值的按位逻辑运算。  
@@ -34,7 +34,7 @@ ms.locfileid: "54640753"
 ## <a name="unary-logical-operator"></a>一元逻辑运算符  
  [Not 运算符](../../../../visual-basic/language-reference/operators/not-operator.md)执行逻辑*求反运算*上`Boolean`表达式。 它将产生其操作数的逻辑反。 如果表达式的计算结果`True`，然后`Not`返回`False`; 如果表达式的计算结果`False`，然后`Not`返回`True`。 下面的示例阐释了这一点。  
   
- [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#77)]  
   
 ## <a name="binary-logical-operators"></a>二元逻辑运算符  
  [And 运算符](../../../../visual-basic/language-reference/operators/and-operator.md)执行逻辑*一起*对两个`Boolean`表达式。 如果这两个表达式的计算结果为`True`，然后`And`返回`True`。 如果至少一个表达式的计算结果为`False`，然后`And`返回`False`。  
@@ -45,7 +45,7 @@ ms.locfileid: "54640753"
   
  下面的示例阐释`And`， `Or`，和`Xor`运算符。  
   
- [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
 ## <a name="short-circuiting-logical-operations"></a>短路逻辑操作  
  [AndAlso 运算符](../../../../visual-basic/language-reference/operators/andalso-operator.md)非常类似于`And`运算符，在于它还对两个执行逻辑与运算`Boolean`表达式。 这两个主要区别在于`AndAlso`表现出*短路*行为。 如果中的第一个表达式`AndAlso`表达式的计算结果`False`，然后第二个表达式未计算值，因为它不会改变最终结果，并`AndAlso`返回`False`。  
@@ -57,18 +57,18 @@ ms.locfileid: "54640753"
   
  下面的示例说明了之间的差异`And`， `Or`，及其短路对应项。  
   
- [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#81)]  
   
- [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#80](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#80)]  
   
- [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#79)]  
   
  在前面的示例，请注意，在一些重要代码`checkIfValid()`调用短路时不会运行。 第一个`If`语句也会调用`checkIfValid()`即使`12 > 45`返回`False`，这是因为`And`不会短路。 第二个`If`语句不会调用`checkIfValid()`，这是因为当`12 > 45`返回`False`，`AndAlso`会短路第二个表达式。 第三个`If`语句也会调用`checkIfValid()`即使`12 < 45`返回`True`，这是因为`Or`不会短路。 第四个`If`语句不会调用`checkIfValid()`，这是因为当`12 < 45`返回`True`，`OrElse`会短路第二个表达式。  
   
 ## <a name="bitwise-operations"></a>按位运算  
  按位运算的计算结果在二进制 (基数为 2) 窗体中的两个整数值。 它们进行比较的相应位置处的位，然后分配基于比较的值。 下面的示例演示`And`运算符。  
   
- [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/logical-and-bitwise-operators_6.vb)]  
+ [!code-vb[VbVbalrConcepts#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#2)]  
   
  前面的示例中设置的值`x`为 1。 由于以下原因发生这种情况：  
   

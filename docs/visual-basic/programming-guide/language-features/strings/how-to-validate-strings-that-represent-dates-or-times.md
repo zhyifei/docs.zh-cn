@@ -5,18 +5,18 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - String data type [Visual Basic], validation
 ms.assetid: ae7d4b29-3436-4032-bdbf-4650eb1c8e19
-ms.openlocfilehash: 1a838d9d156ad9c05a70a4d4d72db1a288731c9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1a3f14354e36dec91aca3afbe8470eff7146318
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685394"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970398"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>如何：验证表示日期或时间的字符串 (Visual Basic)
 下面的代码示例设置`Boolean`值，该值指示字符串是否表示有效的日期或时间。  
   
 ## <a name="example"></a>示例  
- [!code-vb[VbVbcnRegEx#2](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/how-to-validate-strings-that-represent-dates-or-times_1.vb)]  
+ [!code-vb[VbVbcnRegEx#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  替换`("01/01/03")`和`"9:30 PM"`使用日期和你想要验证的时间。 您可以将使用另一个硬编码字符串、 字符串替换为`String`变量，或使用一种方法，返回一个字符串，如`InputBox`。  

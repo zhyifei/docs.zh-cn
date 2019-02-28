@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 3cb11079241da4815c6e7bde4a76123965a95514
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d90b81049197fbbf4a767b17399d3e9c80be0f7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712517"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975467"
 ---
 # <a name="procedure-overloading-visual-basic"></a>过程重载 (Visual Basic)
 *重载*过程是指在多个版本中，使用相同名称但不同的参数列表定义。 重载的目的是定义一个过程的几个密切相关的版本而无需将它们按名称区分开。 通过不同的参数列表执行此操作。  
@@ -67,12 +67,12 @@ ms.locfileid: "54712517"
 ## <a name="multiple-versions-of-a-procedure"></a>一个过程的多个版本  
  假设您要编写`Sub`过程发送事务对客户的余额，和你想要能够按名称或帐户号码，请参阅客户。 若要解决此问题，可以定义两个不同`Sub`过程，如以下示例所示：  
   
- [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
+ [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]  
   
 ### <a name="overloaded-versions"></a>重载的版本  
  一种替代方法是重载的单个过程名称。 可以使用[重载](../../../../visual-basic/language-reference/modifiers/overloads.md)关键字来定义每个参数列表中，该过程的版本，如下所示：  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
+ [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
 #### <a name="additional-overloads"></a>其他重载  
  如果还想要接受在事务量`Decimal`或`Single`，可进一步重载`post`允许用于此变体。 如果执行此操作会为每个重载中前面的示例中，有四个`Sub`过程，所有具有相同名称但具有四个不同的签名。  
@@ -80,9 +80,9 @@ ms.locfileid: "54712517"
 ## <a name="advantages-of-overloading"></a>重载的优点  
  重载过程的优点是在调用的灵活性。 若要使用`post`过程声明在前面的示例中，调用代码可以获取为客户标识`String`或`Integer`，然后在任一情况下调用相同的过程。 下面的示例阐释了这一点：  
   
- [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
+ [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
- [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
+ [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]  
   
 ## <a name="see-also"></a>请参阅
 - [过程](./index.md)

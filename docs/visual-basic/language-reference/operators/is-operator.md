@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: a78189a6b82100665ac07b9d7c89590613ec1e1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4b23bb2d81d1f5272a5813123681da7406c3368
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745618"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980330"
 ---
 # <a name="is-operator-visual-basic"></a>Is 运算符 (Visual Basic)
 两个对象引用变量进行比较。  
@@ -46,7 +46,7 @@ result = object1 Is object2
 ## <a name="example"></a>示例  
  下面的示例使用`Is`运算符进行比较的对象引用对。 结果被赋值给`Boolean`值，该值表示两个对象是否相同。  
   
- [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/is-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
  如前面的示例所示，可以使用`Is`运算符来测试同时早期绑定和后期绑定对象。  
   

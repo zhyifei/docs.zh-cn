@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 8d9c7f3eadfa0095e0ed49b3a7a207fd3f7f8769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10167075e903693df804cba044301e1f1bc6306e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525451"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974453"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>如何：调用过程返回值 (Visual Basic)
 一个`Function`过程返回到调用代码的值。 它通过调用包括其名称和参数放在右边的赋值语句或表达式中。  
@@ -42,7 +42,7 @@ ms.locfileid: "54525451"
 ## <a name="example"></a>示例  
  下面的示例调用 Visual Basic<xref:Microsoft.VisualBasic.Interaction.Environ%2A>检索操作系统环境变量的值。 第一个行调用`Environ`在表达式中，第二个行调用它在赋值语句中。 `Environ` 将变量名称作为其唯一的参数。 它返回到调用代码的变量的值。  
   
- [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
 ## <a name="see-also"></a>请参阅
 - [Function 过程](./function-procedures.md)

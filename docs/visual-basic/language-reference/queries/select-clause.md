@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 0890068d192a137689d06eb081e1a0fc128aabcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 591fa664c56383cf8a7b3492e524a9738e065f8a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519003"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979601"
 ---
 # <a name="select-clause-visual-basic"></a>Select 子句 (Visual Basic)
 定义查询的结果。  
@@ -36,20 +36,20 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  `Select`子句可以引用当前作用域中的任何变量。 这包括中标识的范围变量`From`子句 (或`From`子句)。 它还包括使用的别名创建任何新变量`Aggregate`， `Let`， `Group By`，或`Group Join`子句或从以前的变量`Select`查询表达式中的子句。 `Select`子句还可以包含静态值。 例如，下面的代码示例演示查询表达式所在`Select`子句将查询结果定义为具有四个成员的新匿名类型： `ProductName`， `Price`， `Discount`，和`DiscountedPrice`。 `ProductName`并`Price`成员值取自中定义的产品范围变量`From`子句。 `DiscountedPrice`中计算成员值`Let`子句。 `Discount`成员是静态值。  
   
- [!code-vb[VbSimpleQuerySamples#27](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#27)]  
   
  `Select`子句引入了一组新的后续查询子句的范围变量和之前的范围变量将不再在作用域中。 最后一个`Select`查询表达式中的子句将确定查询的返回值。 例如，以下查询将返回公司名称和订单总计超过 500 的每个客户订单 ID。 第一个`Select`子句标识的范围变量`Where`子句和第二个`Select`子句。 第二个`Select`子句标识作为新的匿名类型的查询返回的值。  
   
- [!code-vb[VbSimpleQuerySamples#28](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#28)]  
   
  如果`Select`子句标识要返回的单个项，在查询表达式返回的单个项的类型的集合。 如果`Select`子句标识要返回的多个项，在查询表达式返回基于所选的项的新匿名类型的集合。 例如，以下两个查询返回基于两个不同类型的集合`Select`子句。 第一个查询返回以字符串形式的公司名称的集合。 第二个查询返回的集合`Customer`使用公司名称和地址信息填充的对象。  
   
- [!code-vb[VbSimpleQuerySamples#29](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>示例  
  下面的查询中使用表达式`From`子句来声明范围变量`cust`为`customers`集合。 `Select`子句中选择客户名称和 ID 值并填充`CompanyName`和`CustomerID`的新范围变量的列。 `For Each`语句循环访问每个返回的对象，并显示`CompanyName`和`CustomerID`为每个记录的列。  
   
- [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
+ [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   
 ## <a name="see-also"></a>请参阅
 - [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

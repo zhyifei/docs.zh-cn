@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: 47034b3699f4dfee67d36e72d4b22898d469c900
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ee0f2e771a938619bf988263b176464080e60e7a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700287"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974830"
 ---
 # <a name="mid-statement"></a>Mid 语句
 替换指定的数目的中的字符`String`变量与另一字符串中的字符。  
@@ -60,7 +60,7 @@ Mid( _
 ## <a name="example"></a>示例  
  此示例使用`Mid`语句，以指定的数量的字符串变量中的字符替换为另一字符串中的字符。  
   
- [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
+ [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>要求  
  **命名空间：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

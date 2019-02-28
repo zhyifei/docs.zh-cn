@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd85ac8b98d8613924a4acd73ac74a69f3d9b41d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e996a299de7b365a1513d5b1fb7ca0e758f6005b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535341"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966055"
 ---
 # <a name="get-function"></a>Get 函数
 检索指定的属性值，如果它存在。
@@ -64,14 +64,14 @@ HRESULT Get (
 |返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 该属性是标准系统属性。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 类：属性继承自的父类。 </br> 实例：属性，继承自的父类，而未已修改的实例。  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 类：属性属于派生类。 </br> 实例：实例; 修改属性也就是说，却提供了值，或限定符已添加或修改。 |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 类：属性继承自的父类。 <br> 实例：属性，继承自的父类，而未已修改的实例。  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 类：属性属于派生类。 <br> 实例：实例; 修改属性也就是说，却提供了值，或限定符已添加或修改。 |
 
 ## <a name="return-value"></a>返回值
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 已存在时的常见错误。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数是无效的。 |

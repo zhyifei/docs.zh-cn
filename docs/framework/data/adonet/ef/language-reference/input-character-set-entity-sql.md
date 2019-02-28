@@ -2,12 +2,12 @@
 title: 输入字符集 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: dce967ea8853f81fedaa53ea706fab4839b9f474
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bed10f6e4a9fb01abe825e5eb798da2d866ca84
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641195"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976754"
 ---
 # <a name="input-character-set-entity-sql"></a>输入字符集 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 接受使用 UTF-16 进行编码的 UNICODE 字符。  
@@ -24,9 +24,9 @@ ms.locfileid: "54641195"
   
  关键字、表达式和标点可以是任何标准化为拉丁语的 UTF-16 字符。 例如，SELECT 在日语代码页中是有效的关键字。  
   
- 关键字、表达式和标点只能是拉丁语字符。 `SELECT` 在日语代码页中不是关键字。 +、-、*、/、=、(、)、‘、[、] 和此处未提及的其他任何语言构造都只能为拉丁字符。  
+ 关键字、表达式和标点只能是拉丁语字符。 `SELECT` 在日语代码页中不是关键字。 +、-， \*、 /、 =、 （、）、，[、] 和此处未提及的其他任何语言构造只能为拉丁字符。  
   
- 简单标识符只能为拉丁字符。 这可以避免比较时的不确定性，因为比较时使用的是原始值。 例如，ABC 在日语代码页和拉丁语代码页中是不同的。  
+ 简单标识符只能为拉丁字符。 这可以避免比较时的不确定性，因为比较时使用的是原始值。 例如，ABC 将日语和拉丁语代码页中不同。  
   
 ## <a name="see-also"></a>请参阅
 - [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

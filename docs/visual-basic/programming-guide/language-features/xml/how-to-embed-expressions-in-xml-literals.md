@@ -5,12 +5,12 @@ helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: fba33bc177641f3fc9f67b1a82919a44d28a11cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ecb6a5d684badba68f4c224d5359ea428cfbbf2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681776"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968707"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>如何：在 XML 文本 (Visual Basic 中) 中嵌入表达式
 您可以将 XML 文本与嵌入的表达式来创建 XML 文档、 片段或包含在运行时创建的内容的元素。 以下示例演示如何使用嵌入式的表达式在运行时填充元素内容、 属性和元素名称。  
@@ -25,7 +25,7 @@ ms.locfileid: "54681776"
   
 -   下面的示例演示如何插入文本中包含的`contactName`变量之间的开始和结束的名称元素。  
   
-     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
      该示例产生下面的输出：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54681776"
   
 -   下面的示例演示如何插入中包含的文本`phoneType`变量的值作为`type`属性。  
   
-     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
      该示例产生下面的输出：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54681776"
   
      创建元素时使用此技术，必须将它们与\</ > 标记。  
   
-     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_3.vb)]  
+     [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   
      该示例产生下面的输出：  
   

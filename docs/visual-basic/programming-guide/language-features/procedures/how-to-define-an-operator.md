@@ -13,12 +13,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 6ced9e2ab71ccb00c9ce3495e38d895a7104fdde
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 1e7d767b1ba370ac7303abfd8aa3606a43c33de9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738651"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973283"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>如何：定义运算符 (Visual Basic)
 如果已定义的类或结构，可以定义标准运算符的行为 (如`*`， `<>`，或`And`) 当一个或两个操作数是类或结构的类型。  
@@ -30,11 +30,11 @@ ms.locfileid: "55738651"
 ## <a name="example"></a>示例  
  下面的示例定义`+`调用的运算符为结构`height`。 该结构的高度以英尺、 英寸为单位。 一个*英寸*2.54 厘米和一个*foot*为 12 英寸。 若要确保规范化的值 (英寸 < 12.0)，该构造函数执行*取模*12 的运算。 `+`运算符使用构造函数生成规范化的值。  
   
- [!code-vb[VbVbcnProcedures#25](./codesnippet/VisualBasic/how-to-define-an-operator_1.vb)]  
+ [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
   
  可以测试结构`height`用下面的代码。  
   
- [!code-vb[VbVbcnProcedures#26](./codesnippet/VisualBasic/how-to-define-an-operator_2.vb)]  
+ [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
   
   
 ## <a name="see-also"></a>请参阅

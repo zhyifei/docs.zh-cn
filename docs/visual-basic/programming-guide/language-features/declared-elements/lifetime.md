@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 4c52d426fe5194a6eb61b232b8f17669b4477f16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667383"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976039"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic 中的生存期
 *生存期*已声明元素的是的时间段期间它是可供使用。 变量是唯一具有生存期的元素。 为此，编译器将过程参数和函数返回值视为变量的特殊情况。 变量的生存期表示，它可以在此期间保存值的时间的段。 其值可以更改其生存期内，但它始终保持某些值。  
@@ -58,7 +58,7 @@ ms.locfileid: "54667383"
  下面的示例声明的变量[静态](../../../../visual-basic/language-reference/modifiers/static.md)关键字。 (请注意，不需要`Dim`关键字时[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)使用修饰符，如`Static`。)  
   
 ### <a name="code"></a>代码  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
 ### <a name="comments"></a>注释  
  在前面的示例中，变量`applesSold`继续执行步骤后存在`runningTotal`返回到调用代码。 下一次`runningTotal`调用时，`applesSold`会保留其以前计算的值。  

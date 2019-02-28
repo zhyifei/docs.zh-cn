@@ -1,5 +1,5 @@
 ---
-title: ICorDebugClass 接口 1
+title: ICorDebugClass 接口
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d12d952fe540b2ec36d058ae2100f0cf5c8e6bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9beb8930143cbb0cc7dd8dd68a65b42d92563e31
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710206"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972048"
 ---
-# <a name="icordebugclass-interface1"></a>ICorDebugClass 接口 1
+# <a name="icordebugclass-interface"></a>ICorDebugClass 接口
+
 表示基类型或复杂类型（即用户定义的类型）。 如果该类型为泛型类型，则 `ICorDebugClass` 表示实例化的泛型类型。  
   
 ## <a name="methods"></a>方法  

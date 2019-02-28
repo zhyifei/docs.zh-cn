@@ -14,12 +14,12 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: cd93316ada1fcf0997922f71a8efc5a3cf411d09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db88b61518a52a70553c037fdd95f9a135dcb268
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614554"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981213"
 ---
 # <a name="not-operator-visual-basic"></a>Not 运算符 (Visual Basic)
 对执行逻辑非运算`Boolean`表达式或对数值表达式的按位求反运算。  
@@ -64,14 +64,14 @@ result = Not expression
 ## <a name="example"></a>示例  
  下面的示例使用`Not`运算符执行逻辑求反`Boolean`表达式。 结果是`Boolean`值，该值表示表达式的值相反。  
   
- [!code-vb[VbVbalrOperators#33](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#33)]  
   
  前面的示例生成的结果`False`和`True`分别。  
   
 ## <a name="example"></a>示例  
  下面的示例使用`Not`运算符执行逻辑求反运算的数值表达式的单个位。 在结果模式位设置为包括符号位的操作数模式中的对应位相反。  
   
- [!code-vb[VbVbalrOperators#34](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#34)]  
   
  前面的示例分别生成-11-9，-7 的结果。  
   

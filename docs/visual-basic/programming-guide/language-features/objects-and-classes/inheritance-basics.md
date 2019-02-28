@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: ae6b53db3a2cdcefa2b05d68ed953c5e17b279dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551782"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970293"
 ---
 # <a name="inheritance-basics-visual-basic"></a>继承的基础知识 (Visual Basic)
 `Inherits`语句用于声明一个名为的新类*派生类*基于现有类，称为*基类*。 派生的类继承，并可以扩展属性、 方法、 事件、 字段和基类中定义的常量。 以下部分介绍了一些有关继承的规则和修饰符可用于更改方式类继承，或将继承：  
@@ -62,14 +62,14 @@ ms.locfileid: "54551782"
   
  下面的示例定义一个基类，`Payroll,`和派生的类`BonusPayroll`，这会重写继承的方法， `PayEmployee`。 一个过程中， `RunPayroll`，创建并随后将传递`Payroll`对象和一个`BonusPayroll`的函数对象`Pay`，用于执行`PayEmployee`这两个对象的方法。  
   
- [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_1.vb)]  
+ [!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]  
   
 ## <a name="the-mybase-keyword"></a>MyBase 关键字  
  `MyBase`关键字的行为类似于一个类的当前实例的基类是指的对象变量。 `MyBase` 通常用于访问基类成员被重写或派生类中被隐藏。 具体而言，`MyBase.New`用于从派生的类构造函数中显式调用基类构造函数。  
   
  例如，假设您要设计一个重写从基类继承的方法的派生的类。 重写的方法可以调用基类中的方法，并修改返回的值，如下面的代码段中所示：  
   
- [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_2.vb)]  
+ [!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]  
   
  以下列表描述对使用的限制`MyBase`:  
   

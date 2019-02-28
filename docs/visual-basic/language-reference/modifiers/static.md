@@ -7,12 +7,12 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: 1205d620fb5b6ec6af14cdeb7c6d78439f9e6b97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ee2c6eb123907a9e25092224a1f45578717a8c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627624"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977144"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 指定一个或多个声明的局部变量继续存在，并在其中声明它们的过程终止后保留最新值。  
@@ -38,7 +38,7 @@ ms.locfileid: "54627624"
 ## <a name="example"></a>示例  
  以下示例演示了 `Static` 的用法。  
   
- [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/VisualBasic/static_1.vb)]  
+ [!code-vb[VbVbalrKeywords#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#5)]  
   
  `Static`变量`totalSales`仅一次初始化为 0。 你输入每次`updateSales`，`totalSales`仍具有为其计算的最新值。  
   

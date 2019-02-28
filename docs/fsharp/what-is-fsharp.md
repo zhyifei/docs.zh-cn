@@ -1,19 +1,19 @@
 ---
-title: '什么是 F #'
-description: '了解有关 F # 编程语言的含义和新增 F # 编程。 了解丰富的数据类型、 函数和它们如何组合在一起。'
+title: 什么F#
+description: 了解F#编程语言是以及F#就像编程。 了解丰富的数据类型、 函数和它们如何组合在一起。
 ms.date: 08/03/2018
-ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: ea82147e4e6d3c980fb224eeafd805c7ed53f8f2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43863291"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966952"
 ---
-# <a name="what-is-f"></a>什么是 F # #
+# <a name="what-is-f"></a>F 是什么\#
 
 F# 是一种函数式编程语言，可用于轻松地编写正确和可维护的代码。
 
-F # 编程主要包括定义类型和函数的类型推断和自动通用化。 这样，你只需重点关注的问题域和操作其数据，而不是编程的详细信息。
+F#编程主要包括定义类型和函数的类型推断和自动通用化。 这样，你只需重点关注的问题域和操作其数据，而不是编程的详细信息。
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
@@ -76,7 +76,7 @@ F#的“记录”和“可区分联合”默认情况下为非 null、不可变�
 
 ## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>利用函数和模式匹配强制实现正确性
 
-F # 函数是轻松地声明和在实践中功能强大。 再加上[模式匹配](language-reference/pattern-matching.md)，它们允许您定义由编译器强制执行其正确性的行为。
+F#函数是轻松地声明和在实践中功能强大。 再加上[模式匹配](language-reference/pattern-matching.md)，它们允许您定义由编译器强制执行其正确性的行为。
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -97,7 +97,7 @@ F# 函数还是头等函数，也就是说，它们可以像参数一样传递�
 
 ## <a name="functions-to-define-operations-on-objects"></a>用于定义对对象执行的操作的函数。
 
-F# 具有对对象的完整支持，即在需要混合数据和功能时非常有用的数据类型。 F # 函数用于操作对象。
+F# 具有对对象的完整支持，即在需要混合数据和功能时非常有用的数据类型。 F#函数用于操作对象。
 
 ```fsharp
 type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) =
@@ -123,4 +123,4 @@ module Set =
 
 ## <a name="next-steps"></a>后续步骤
 
-若要了解有关 F # 功能的一大组的详细信息，请查看[F # 简介](tour.md)。
+若要详细了解大型数据集F#功能，请查看[F#教程](tour.md)。

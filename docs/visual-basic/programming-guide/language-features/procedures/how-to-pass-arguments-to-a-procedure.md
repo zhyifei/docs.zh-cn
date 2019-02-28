@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 6d9daf47b8d9300e9de8add1423fa1824fc62d5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691224"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974388"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>如何：将参数传递给过程 (Visual Basic)
 在调用过程时，过程名后面加上括号中的参数列表。 你提供该过程定义，对应于每个所需的参数的自变量，则可以选择提供参数`Optional`参数。 如果不提供`Optional`中调用的参数，必须包含一个逗号来标记其原位置自变量列表中的，如果你提供的任何后续自变量。  
@@ -39,7 +39,7 @@ ms.locfileid: "54691224"
   
      下面的示例调用 Visual Basic<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函数。  
   
-     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
      前面的示例中提供了所需的第一个参数，它是要显示的消息字符串。 它会省略了可选的第二个参数，它指定要在消息框上显示的按钮的参数。 在调用不会提供一个值，因为`MsgBox`使用默认值`MsgBoxStyle.OKOnly`，后者将仅显示**确定**按钮。  
   

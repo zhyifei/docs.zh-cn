@@ -3,14 +3,14 @@ title: 开始使用 Azure Blob 存储使用F#
 description: 使用 Azure Blob 存储在云中存储非结构化的数据。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664986"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981902"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>开始使用 Azure Blob 存储使用F# #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>开始使用 Azure Blob 存储中使用 F\#
 
 Azure Blob 存储是将非结构化数据作为对象/blob 存储在云中的服务。 Blob 存储可以存储任何类型的文本或二进制数据（如文档、媒体文件或应用程序安装程序）。 Blob 存储也称为对象存储。
 

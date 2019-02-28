@@ -1,5 +1,5 @@
 ---
-title: ICorDebugILFrame 接口 1
+title: ICorDebugILFrame 接口
 ms.date: 03/30/2017
 api_name:
 - ICorDebugILFrame
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73cf7f26b228fa5aa458a6de312df3bf777e0206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a10c39d7df12c86b8fcf0fb40389c087f96e1ee
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580507"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965965"
 ---
-# <a name="icordebugilframe-interface1"></a>ICorDebugILFrame 接口 1
+# <a name="icordebugilframe-interface"></a>ICorDebugILFrame 接口
+
 表示 Microsoft 中间语言 (MSIL) 代码的堆栈帧。 此接口是 ICorDebugFrame 接口子类。  
   
 ## <a name="methods"></a>方法  

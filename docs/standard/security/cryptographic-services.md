@@ -26,17 +26,17 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8193932deac3854b07085cba9faac76e68c4da8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ae6124db6103554e16b1f2d39a9a9c875d97d6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592426"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980238"
 ---
 # <a name="cryptographic-services"></a>加密服务
 <a name="top"></a> 公共网络（如 Internet）不提供实体之间安全通信的方式。 此类网络上的通信易被读取或甚至被未经授权的第三方修改。 加密有助于防止数据被查看，提供检测数据是否已修改的方法，并帮助提供一种跨不安全通道安全通信的方式。 例如，数据可通过使用加密算法进行加密、以加密状态进行传输并在稍后由预期方进行解密。 如果某个第三方截获了加密数据，将很难解密此数据。  
   
- 在 .NET Framework 中，<xref:System.Security.Cryptography?displayProperty=nameWithType> 命名空间中的类将为你管理很多有关加密的详细信息。 一些类是非托管的 Microsoft 加密 API (CryptoAPI) 的包装，而其他类则是纯托管实现。 无需是加密方面的专家，即可使用这些类。 在创建其中一个加密算法类的新实例时，为易于使用，将自动生成密钥，并且默认属性将尽可能地安全可靠。  
+ 在 .NET Framework 中， <xref:System.Security.Cryptography?displayProperty=nameWithType> 命名空间中的类将为你管理很多有关加密的详细信息。 一些类是非托管的 Microsoft 加密 API (CryptoAPI) 的包装，而其他类则是纯托管实现。 无需是加密方面的专家，即可使用这些类。 在创建其中一个加密算法类的新实例时，为易于使用，将自动生成密钥，并且默认属性将尽可能地安全可靠。  
   
  此概述提供了 .NET Framework 支持的加密方法和惯例的概要，包括 ClickOnce 清单、Suite B 和 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]中引入的下一代加密技术 (CNG) 支持。  
   
@@ -68,13 +68,13 @@ ms.locfileid: "33592426"
   
  加密用于实现以下目标：  
   
--   保密性：有助于防止用户的身份或数据被读取。  
+-   保密性：若要帮助保护用户的标识或数据被读取。  
   
--   数据完整性：有助于防止数据被更改。  
+-   数据完整性：若要帮助保护数据不被更改。  
   
--   身份验证：确保数据来自于特定方。  
+-   身份验证:若要确保数据来源于特定的一方。  
   
--   不可否认性：防止特定方否认其发送过消息。  
+-   不可否认性：若要防止特定方否认发送一条消息。  
   
  若要实现这些目标，可以使用称为加密基元的算法和惯例的组合来创建加密方案。 下表列出了加密基元以及其用途。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "33592426"
   
  密钥加密的缺点是它假定双方已商定密钥和 IV，并互相传达了密钥和 IV 的值。 IV 不被视为机密，并可以以纯文本的形式通过消息传输。 但是，密钥必须对未经授权的用户保密。 由于存在这些问题，密钥加密通常与公钥加密一起使用，以秘密地传达密钥和 IV 的值。  
   
- 假定 Alice 和 Bob 是想通过非安全通道进行通信的双方，则他们可能按如下所示使用密钥加密：Alice 和 Bob 同意使用某种具有特定密钥和 IV 的特定算法（例如 AES）。 Alice 撰写一条消息，并在其上发送消息创建一个网络流 （也许是命名管道或网络电子邮件）。 接下来，她使用密钥和 IV 对文本进行加密，然后通过 intranet 向 Bob 发送加密的消息和 IV。 Bob 收到加密文本并使用 IV 和之前商定的密钥对其进行解密。 如果传输遭到截获，侦听者无法恢复原始消息，因为他不知道密钥。 在此方案中，只有密钥必须保持机密。 在实际方案中，Alice 和 Bob 都可以生成密钥并使用公钥（非对称）加密将密钥（对称）传递给另一方。 有关公钥加密的详细信息，请参阅下一节。  
+ 假定 Alice 和 Bob 是想要通过非安全通道进行通信的两个参与方，他们可能按如下所示使用密钥加密：Alice 和 Bob 同意使用某种特定的算法 (例如 AES) 与一个特定的密钥和 IV。 Alice 撰写一条消息，并创建其上发送消息的网络流 （也许是命名管道或网络电子邮件）。 接下来，她使用密钥和 IV 对文本进行加密，然后通过 intranet 向 Bob 发送加密的消息和 IV。 Bob 收到加密文本并使用 IV 和之前商定的密钥对其进行解密。 如果传输遭到截获，侦听者无法恢复原始消息，因为他不知道密钥。 在此方案中，只有密钥必须保持机密。 在实际方案中，Alice 和 Bob 都可以生成密钥并使用公钥（非对称）加密将密钥（对称）传递给另一方。 有关公钥加密的详细信息，请参阅下一节。  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供以下实现密钥加密算法的类：  
   
@@ -127,7 +127,7 @@ ms.locfileid: "33592426"
 ## <a name="public-key-encryption"></a>公钥加密  
  公钥加密使用必须对从未经授权的用户保密的私钥和可以公开给任何人的公钥。 从数学上来讲，公钥和私钥是相互链接的；使用公钥加密的数据只能用私钥解密，而使用私钥签名的数据只能使用公钥进行验证。 公钥可供任何人使用；它用加密要发到送私钥所有者的数据。 公钥加密算法也称为非对称算法，因为加密数据需要一个密钥，而解密数据需要另一个密钥。 基本加密规则禁止密钥重复使用，并且每个通信会话的两个密钥应该是独有的。 但是，在实践中，非对称密钥的生存期通常很长。  
   
- 双方（Alice 和 Bob）可能按如下所示使用公钥加密：首先，Alice 生成公钥/私钥对。 如果 Bob 想要向 Alice 发送一条已加密的消息，他会向她索要公钥。 Alice 通过非安全网络向 Bob 发送她的公钥，然后 Bob 使用此密钥对消息进行加密。 Bob 将加密的消息发送给 Alice，然后她将使用自己的私钥对其进行解密。 如果 Bob 通过非安全通道收到 Alice 的密钥（例如，公用网络），则 Bob 容易受到中间人攻击。 因此，Bob 必须与 Alice 确认他具有其公钥的正确副本。  
+ 两个参与方 （Alice 和 Bob） 可能使用公钥加密，如下所示：首先，Alice 生成公钥/私钥对。 如果 Bob 想要向 Alice 发送一条已加密的消息，他会向她索要公钥。 Alice 通过非安全网络向 Bob 发送她的公钥，然后 Bob 使用此密钥对消息进行加密。 Bob 将加密的消息发送给 Alice，然后她将使用自己的私钥对其进行解密。 如果 Bob 通过非安全通道收到 Alice 的密钥（例如，公用网络），则 Bob 容易受到中间人攻击。 因此，Bob 必须与 Alice 确认他具有其公钥的正确副本。  
   
  在 Alice 公钥的传输期间，未经授权的代理可能会截获此密钥。 此外，同一代理可能会截获来自 Bob 的加密消息。 不过，此代理不能使用公钥解密此消息。 该消息只能用 Alice 的私钥进行解密，而该私钥没有进行传输。 Alice 不使用她的私钥加密给 Bob 的回复消息，因为任何具有公钥的人都可以解密此消息。 如果 Alice 想要将消息回复给 Bob，她会向 Bob 索要他的公钥，并使用此公钥加密消息。 然后，Bob 将使用自己的关联私钥解密消息。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "33592426"
   
 -   Alice 向 Bob 发送纯文本消息和经过哈希处理的消息（数字签名）。 Bob 接收消息并进行哈希处理，然后将其哈希值与从 Alice 处接收到的哈希值进行比较。 如果哈希值相同，则消息未更改。 如果值不同，则消息在 Alice 编写后遭到更改。  
   
-     遗憾的是，此方法不会确定发件人的真伪。 任何人都可以模仿 Alice 并向 Bob 发送消息。 他们可以使用相同的哈希算法来签署消息，而 Bob 可确定的只是消息与它的签名相匹配。 这是中间人攻击的一种形式。 请参阅[NIB： 下一代加密技术 (CNG) 安全通信示例](https://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e)有关详细信息。  
+     遗憾的是，此方法不会确定发件人的真伪。 任何人都可以模仿 Alice 并向 Bob 发送消息。 他们可以使用相同的哈希算法来签署消息，而 Bob 可确定的只是消息与它的签名相匹配。 这是中间人攻击的一种形式。 有关详细信息，请参阅[Cryptography Next Generation (CNG) 安全通信示例](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))。  
   
 -   Alice 通过非安全的公共通道向 Bob 发送纯文本消息。 Alice 通过安全的专用通道向 Bob 发送经过哈希处理的消息。 Bob 接收纯文本消息，对其进行哈希处理并将此哈希值与私下交换的哈希值进行比较。 如果哈希值匹配，则 Bob 知道两件事：  
   
@@ -273,7 +273,7 @@ ms.locfileid: "33592426"
   
 <a name="suite_b"></a>   
 ## <a name="suite-b-support"></a>Suite B 支持  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 支持美国国家安全局 (NSA) 发布的加密算法的 Suite B 集。 有关 Suite B 的详细信息，请参阅[NSA Suite B 加密一览表](https://www.nsa.gov/what-we-do/information-assurance/)。  
+ [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 支持美国国家安全局 (NSA) 发布的加密算法的 Suite B 集。 有关 Suite B 的详细信息，请参阅 [NSA Suite B 加密一览表](https://www.nsa.gov/what-we-do/information-assurance/)。  
   
  包括以下算法：  
   

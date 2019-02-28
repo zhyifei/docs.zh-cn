@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f2288e02c01a40877abbd6a5ce5b2696c0944ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8268aca920c0b9fc8ea3390d80b9164c22c1ad9c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719971"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977851"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi 函数
 创建或更新现有类的实例。 将该实例写入 WMI 存储库。 
@@ -49,7 +49,7 @@ HRESULT PutInstanceWmi (
 
 |返回的常量  |“值”  |描述  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果设置，WMI 不存储任何与限定符**Amended**风格。 </br> 如果不设置，则假定未本地化此对象，并且所有限定符都是 storedwith 此实例。 |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果设置，WMI 不存储任何与限定符**Amended**风格。 <br> 如果不设置，则假定未本地化此对象，并且所有限定符都是 storedwith 此实例。 |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | 如果不存在，或者覆盖它，如果它已存在，请创建该实例。 |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | 更新的实例。 若要成功的调用必须存在的实例。 |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | 创建该实例。 如果该实例已存在，则调用将失败。 |

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 5018aebb0401ce5a1c46ecf04a7c65ca676271e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 947507cb813437facc2b2343ff6f1a5d50f4dd98
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565899"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971632"
 ---
 # <a name="function-statement-visual-basic"></a>Function 语句 (Visual Basic)
 声明名称、 参数和定义的代码`Function`过程。  
@@ -193,11 +193,11 @@ End Function
   
  `Return`语句同时分配返回值，并退出函数，如以下示例所示。  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
   
  以下示例将返回值分配为函数名称`myFunction`，然后使用`Exit Function`语句返回。  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
   
  `Exit Function`并`Return`语句会导致立即退出`Function`过程。 任意数量的`Exit Function`并`Return`语句可以在过程中，任何位置出现，并且可以混合`Exit Function`和`Return`语句。  
   
@@ -240,19 +240,19 @@ End Function
 ## <a name="example"></a>示例  
  下面的示例使用`Function`语句声明名称、 参数和窗体的主体的代码`Function`过程。 `ParamArray`修饰符使函数能够接受数目可变的参数。  
   
- [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>示例  
  下面的示例调用在前面的示例声明的函数。  
   
- [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
 ## <a name="example"></a>示例  
  在以下示例中，`DelayAsync`是`Async``Function`具有返回类型的<xref:System.Threading.Tasks.Task%601>。 `DelayAsync` 具有返回整数的 `Return` 语句。 因此的函数声明`DelayAsync`需要具有返回类型为`Task(Of Integer)`。 因为返回类型是`Task(Of Integer)`的评估`Await`中的表达式`DoSomethingAsync`得出整数。 此语句中对此进行了演示： `Dim result As Integer = Await delayTask`。  
   
  `startButton_Click`过程是一种`Async Sub`过程。 因为`DoSomethingAsync`是`Async`函数，为调用任务`DoSomethingAsync`必须等待，如下面的语句中所示： `Await DoSomethingAsync()`。 `startButton_Click` `Sub`过程必须使用定义`Async`修饰符，因此`Await`表达式。  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
+ [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>请参阅
 - [Sub 语句](sub-statement.md)

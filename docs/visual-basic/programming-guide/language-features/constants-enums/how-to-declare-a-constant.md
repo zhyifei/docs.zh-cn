@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678832"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964913"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>如何：声明常量 (Visual Basic)
 您使用`Const`语句声明一个常量，并将其值设置。 通过声明一个常量，您将有意义的名称分配给一个值。 一旦声明一个常量，不能修改或分配一个新值。  
@@ -43,7 +43,7 @@ ms.locfileid: "54678832"
   
 -   编写包含访问说明符声明`Const`关键字和一个表达式，如以下示例所示：  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
+     [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
      当[Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)是`Off`并[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)是`On`，您必须通过指定数据类型显式声明常量 (`Boolean`， `Byte`， `Char`， `DateTime`， `Decimal`， `Double`， `Integer`， `Long`， `Short`， `Single`，或`String`)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54678832"
   
 -   编写的声明，包括`As`关键字和显式数据类型，如以下示例所示：  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
+     [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
      虽然你的代码是声明单个常量每行更具可读性，可以在单个行上声明多个常量。 如果在单个行上声明多个常量，它们必须都具有相同的访问级别 (`Public`， `Private`， `Friend`， `Protected`，或`Protected Friend`)。  
   

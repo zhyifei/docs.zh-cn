@@ -1,15 +1,9 @@
 ---
-title: F# Interactive (fsi.exe) 参考
-description: 了解如何F#Interactive (fsi.exe) 用于运行F#代码以交互方式在控制台上或执行F#脚本。
+title: 'F# Interactive (fsi.exe) 参考'
+description: '了解如何F#Interactive (fsi.exe) 用于运行F#代码以交互方式在控制台上或执行F#脚本。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0fccc818f0a4b3d6d09a69e91da1f5c337c53a44
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611056"
 ---
-# <a name="interactive-programming-with-f"></a>使用 F# 进行交互式编程 #
+# <a name="interactive-programming-with-f"></a>使用 F 进行交互式编程\#
 
 > [!NOTE]
 > 本文目前仅介绍适用于 Windows 的体验。  它将被重写。
@@ -44,7 +38,7 @@ F# Interactive 试图编译代码，如果成功，它将执行代码并打印�
 你可以通过调整设置控制 F# Interactive 命令行自变量（选项）。 在“工具”菜单上，选择“选项...”，然后展开“F# 工具”。 可以更改的两种设置是 F# Interactive 选项和“64 位F# Interactive”，只有在 64 位计算机上运行 F# Interactive 时，更改才有意义。 此设置确定是否需要运行 fsi.exe 或 fsianycpu.exe 的专用 64 位版本，它使用计算机体系结构确定是作为 32 位还是 64 位进程来运行。
 
 
-## <a name="scripting-with-f"></a>使用 F# 编写脚本 #
+## <a name="scripting-with-f"></a>使用 F 编写脚本\#
 脚本使用 **.fsx** 或 **.fsscript** 文件扩展名。 可以不编译源代码再运行编译的程序集，而仅运行 **fsi.exe** 并指定 F# 源代码脚本的文件名，F# Interactive 会实时读取并执行代码。
 
 

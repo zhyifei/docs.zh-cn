@@ -10,12 +10,12 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: d77c7d3f2e70edcc1028c207150944c5394afbe0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6bb924a3c41e1c586f66c9473a94d1971ee262f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685368"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973764"
 ---
 # <a name="set-statement-visual-basic"></a>Set 语句 (Visual Basic)
 声明`Set`用于将值分配给属性的属性过程。  
@@ -85,7 +85,7 @@ End Set
 ## <a name="example"></a>示例  
  下面的示例使用`Set`语句，用于设置属性的值。  
   
- [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   
 ## <a name="see-also"></a>请参阅
 - [Get 语句](../../../visual-basic/language-reference/statements/get-statement.md)

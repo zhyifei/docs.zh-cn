@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: 8f8e7e992ce312f7f7bf2c9dbad4d14fbb095de1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1464421866ee22f27f9cf0a3611bc09a631c004
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690704"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975831"
 ---
 # <a name="partial-visual-basic"></a>分部 (Visual Basic)
 指示类型声明为类型的分部定义。  
@@ -80,7 +80,8 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
      仅当其完全限定的路径相同时，编译器才将合并分部定义。  
   
- `Partial` 关键字可用于以下上下文中：  
+ 
+  `Partial` 关键字可用于以下上下文中：  
   
  [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -89,7 +90,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 ## <a name="example"></a>示例  
  下面的示例将类 `sampleClass` 的定义拆分到两个声明中，其中每一个均定义一个不同的 `Sub` 过程。  
   
- [!code-vb[VbVbalrKeywords#3](../../../visual-basic/language-reference/codesnippet/VisualBasic/partial_1.vb)]  
+ [!code-vb[VbVbalrKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#3)]  
   
  前面示例中的两个分部定义可能在同一源文件中或在两个不同的源文件中。  
   

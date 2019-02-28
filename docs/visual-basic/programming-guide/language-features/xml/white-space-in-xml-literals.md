@@ -5,12 +5,12 @@ helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: 56466856bc70f4bde428f7087efdf4e71a50021f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef371a984d03485ccaf1ee5d61aa3cf39d80ef32
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689138"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979055"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML 文本中的空白 (Visual Basic)
 Visual Basic 编译器创建时包含的有意义的空白字符将从 XML 文本[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。 它不会合并无意义的空白字符。  
@@ -34,7 +34,7 @@ Visual Basic 编译器创建时包含的有意义的空白字符将从 XML 文�
 ## <a name="examples"></a>示例  
  下面的示例包含两个 XML 元素，外部和内部。 两个元素都包含其文本内容中的空白区域。 外部元素中的空白并不重要，因为它仅包含空格和一个 XML 元素。 内部元素中的空白区域很重要，因为它包含空格和文本。  
   
- [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/white-space-in-xml-literals_1.vb)]  
+ [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
  当运行时，此代码将显示以下文本。  
   

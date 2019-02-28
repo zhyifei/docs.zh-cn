@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: c467b46347539a3cc6c4abfabc368ce494985b95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d9055796687f828cc173a78feb9918cbf70bbd8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560928"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976364"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By 子句 (Visual Basic)
 指定查询结果的排序顺序。  
@@ -38,17 +38,17 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
 ## <a name="example"></a>示例  
  下面的查询中使用表达式`From`子句来声明范围变量`book`为`books`集合。 `Order By`子句对查询结果进行排序的价格以升序 （默认值）。 按标题以升序排序书籍，其价格相同。 `Select`子句中选择`Title`和`Price`由查询返回的值的属性。  
   
- [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>示例  
  下面的查询表达式使用`Order By`子句来按价格以降序对查询结果进行排序。 按标题以升序排序书籍，其价格相同。  
   
- [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>示例  
  下面的查询表达式使用`Select`选择书名、 价格、 发布日期，并编写的子句。 然后填充`Title`， `Price`， `PublishDate`，和`Author`新作用域的范围变量的字段。 `Order By`子句进行排序的作者姓名、 书籍标题和价格的新范围变量。 每个列是按默认顺序 （升序） 排序。  
   
- [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   
 ## <a name="see-also"></a>请参阅
 - [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

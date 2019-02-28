@@ -11,12 +11,12 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 0e8ec5877cba5f5cf97e1677460da06fd87cce1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dda23ef3ff49bd32474f39f5ae1807e57bdc2a62
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587549"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980459"
 ---
 # <a name="new-operator-visual-basic"></a>New 运算符 (Visual Basic)
 引入了`New`子句，以创建新的对象实例，指定类型参数的构造函数约束或标识`Sub`作为类构造函数的过程。  
@@ -26,11 +26,11 @@ ms.locfileid: "54587549"
   
  可以使用`New`声明语句或赋值语句中的子句。 该语句在运行时将调用相应的构造函数的指定的类，并传入具有提供的所有参数。 下面的示例演示这通过创建的实例`Customer`类具有两个构造函数，一个不带参数，一个采用字符串参数。  
   
- [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]  
   
  由于数组是类，`New`可以创建一个新数组实例，如以下示例所示。  
   
- [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
+ [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]  
   
  公共语言运行时 (CLR) 会引发<xref:System.OutOfMemoryException>错误是否存在内存不足，无法创建新实例。  
   
@@ -39,7 +39,8 @@ ms.locfileid: "54587549"
   
  若要创建一个类的构造函数过程，请设置的名称`Sub`过程`New`关键字。 有关详细信息，请参阅[对象生存期：如何创建和销毁对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
   
- `New` 关键字可用于以下上下文中：  
+ 
+  `New` 关键字可用于以下上下文中：  
   
  [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 995c697497876969edc1021350b7bfe28e4018bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc2b90ebf73e23aeee6407eb6cb3551b9672d29
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614505"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972802"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi 函数
 创建新类或更新现有类。  
@@ -49,7 +49,7 @@ HRESULT PutClassWmi (
 
 |返回的常量  |“值”  |描述  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果组，WMI 不存储任何限定符使用已修正的风格。 </br> 如果不设置，则假定未本地化此对象，并且所有限定符都是 storedwith 此实例。 |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果组，WMI 不存储任何限定符使用已修正的风格。 <br> 如果不设置，则假定未本地化此对象，并且所有限定符都是 storedwith 此实例。 |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | 如果不存在，或者覆盖它，如果它已存在，请创建类。 |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | 更新类。 该类必须存在的调用才能成功。 |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | 创建的类。 如果该类已存在，则调用将失败。 |

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: 72263ddb7930373ab2a4843ea08974cb08d1b42f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 269a4c0f069b3837959b04f8463f96e7c5d5fdf7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617311"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970137"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While 语句 (Visual Basic)
 只要给定的条件是运行一系列语句`True`。  
@@ -69,17 +69,17 @@ End While
 ## <a name="example"></a>示例  
  在以下示例中，在循环中的语句继续运行，直到`index`变量是否大于 10。  
   
- [!code-vb[VbVbalrStatements#171](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#171](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#171)]  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用`Continue While`和`Exit While`语句。  
   
- [!code-vb[VbVbalrStatements#172](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#172](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#172)]  
   
 ## <a name="example"></a>示例  
  下面的示例读取在文本文件中的所有行。 <xref:System.IO.File.OpenText%2A>方法打开文件并返回<xref:System.IO.StreamReader>读取字符。 在中`While`条件，请<xref:System.IO.StreamReader.Peek%2A>方法的`StreamReader`确定文件是否包含其他字符。  
   
- [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#173](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#173)]  
   
 ## <a name="see-also"></a>请参阅
 - [循环结构](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

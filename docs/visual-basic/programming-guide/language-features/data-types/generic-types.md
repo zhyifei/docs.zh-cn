@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: b69fc668a63d1b4f834d5aa65ae8e27854d73e63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d990d0167152c2a97315c0540361ba8b537f1946
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595573"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978496"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic 中的泛型类型 (Visual Basic)
 *泛型类型* 是可适应对多种数据类型执行相同功能的单个编程元素。 定义泛型类或过程时，无需为可能需要对其执行该功能的每个数据类型定义单独版本。  
@@ -55,7 +55,7 @@ ms.locfileid: "54595573"
   
  例如，你可能想创建并使用一个处理特定数据类型（例如 `String`）的队列类。 可以通过 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>声明这样的类，如下例所示。  
   
- [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#1)]  
   
  现在，可以使用 `stringQ` 来专门处理 `String` 值。 由于 `stringQ` 专用于 `String` 而未针对 `Object` 值进行泛型化，因此，不会有晚期绑定或类型转换。 从而节省了执行时间并减少了运行时错误。  
   
@@ -64,17 +64,17 @@ ms.locfileid: "54595573"
 ## <a name="example-of-a-generic-class"></a>泛型类的示例。  
  下面的示例演示了泛型类的主干定义。  
   
- [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
   
  在上面的主干中， `t` 是一个 *类型形参*，即你在声明此类时提供的数据类型的占位符。 在代码中的其他地方，可以通过为 `classHolder` 提供不同的数据类型来声明不同版本的 `t` 下面的示例演示了两个此类声明。  
   
- [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
  上面的语句声明了 *构造类*，在这些类中，特定的类型替换了类型形参。 此类替换会在构造类中的代码内进行传播。 下面的示例显示了 `processNewItem` 过程在 `integerClass`中的外观。  
   
- [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- 有关更完整的示例，请参阅[如何：定义一个类，可对不同数据类型提供相同功能](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)。  
+ 有关更完整的示例，请参见[如何：定义一个类，可对不同数据类型提供相同功能](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)。  
   
 ## <a name="eligible-programming-elements"></a>合格的编程元素  
  你可以定义并使用泛型类、结构、接口、过程和委托。 请注意， [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 定义了几个代表常用泛型元素的泛型类、结构和接口。 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间提供字典、列表、队列和堆栈。 在定义自己的泛型元素之前，请查看 <xref:System.Collections.Generic?displayProperty=nameWithType>中是否已提供了此元素。  
@@ -110,7 +110,7 @@ ms.locfileid: "54595573"
 ### <a name="example-of-a-constraint"></a>约束的示例  
  下面的示例演示了带有约束（要求类型实参实现 <xref:System.IComparable>）的类的主干定义。  
   
- [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_5.vb)]  
+ [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
   
  如果后续代码尝试从提供未实现 `itemManager` 的类型的 <xref:System.IComparable>中构造一个类，则编译器会提示错误。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "54595573"
 ### <a name="example-of-multiple-constraints"></a>多个约束的示例  
  下面的示例演示了带有类型形参约束列表的泛型类的主干定义。 在创建此类的实例的代码中，类型实参必须实现 <xref:System.IComparable> 和 <xref:System.IDisposable> 接口，必须是引用类型，并且必须公开一个可访问的无参数构造函数。  
   
- [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_6.vb)]  
+ [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
 ## <a name="important-terms"></a>重要术语  
  泛型类型引入并使用了以下术语：  

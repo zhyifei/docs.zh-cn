@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 865270cfc8089d0bf229d9de7a7775dd2a3361d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb9d214d7bb226a4e14cb42e78bffd940049838d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731513"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967524"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>使用字符串名调用属性或方法 (Visual Basic)
 在大多数情况下，可以在设计时发现的属性和方法的一个对象，并编写代码来处理它们。 但是，在某些情况下您可能事先不知道有关对象的属性和方法，或者您可能只是想启用最终用户可以指定属性或在运行时执行方法的灵活性。  
@@ -35,11 +35,11 @@ ms.locfileid: "54731513"
   
  假设您添加对包含一个名为类的程序集的引用`MathClass`，其中包含一个名为的新函数`SquareRoot`，如下面的代码中所示：  
   
- [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_1.vb)]  
+ [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
  你的应用程序可以使用文本框控件来控制将调用哪些方法和其参数。 例如，如果`TextBox1`包含要计算的表达式并`TextBox2`是用于输入的函数的名称，可以使用以下代码来调用`SquareRoot`函数中的表达式`TextBox1`:  
   
- [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_2.vb)]  
+ [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
  如果在输入"64" `TextBox1`，"SquareRoot"中的`TextBox2`，然后调用`CallMath`过程中，数字的平方根`TextBox1`进行评估。 在示例代码会调用`SquareRoot`函数 （采用一个字符串，包含要评估为必需的参数的表达式），并返回"8"中`TextBox1`（64 的平方根）。 当然，如果用户输入中的无效字符串`TextBox2`，如果该字符串包含名称的属性而不是一种方法，或如果该方法具有一个额外的必需的参数，会发生运行时错误。 您必须使用时添加可靠的错误处理代码`CallByName`以应对预期的这些或任何其他错误。  
   

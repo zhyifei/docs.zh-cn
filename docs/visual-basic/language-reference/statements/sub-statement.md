@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: e7015474a0617b76ca537d2e84e8d7bfc72b6e12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6984e7e9f8695ff5bccdde01171733e740a5d6a7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737658"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965951"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 语句 (Visual Basic)
 声明名称、 参数和定义的代码`Sub`过程。  
@@ -217,14 +217,14 @@ End Sub
 ## <a name="example"></a>示例  
  下面的示例使用`Sub`语句来定义名称、 参数和窗体的主体的代码`Sub`过程。  
   
- [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]  
   
 ## <a name="example"></a>示例  
  在以下示例中，`DelayAsync`是`Async``Function`具有返回类型的<xref:System.Threading.Tasks.Task%601>。 `DelayAsync` 具有返回整数的 `Return` 语句。 因此，函数声明`DelayAsync`必须具有返回类型为`Task(Of Integer)`。 因为返回类型是`Task(Of Integer)`的评估`Await`中的表达式`DoSomethingAsync`如下语句所示得出整数： `Dim result As Integer = Await delayTask`。  
   
  `startButton_Click`过程是一种`Async Sub`过程。 因为`DoSomethingAsync`是`Async`函数，为调用任务`DoSomethingAsync`必须等待，如以下语句所示： `Await DoSomethingAsync()`。 `startButton_Click` `Sub`过程必须使用定义`Async`修饰符，因此`Await`表达式。  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
+ [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>请参阅
 - [Implements 语句](implements-statement.md)

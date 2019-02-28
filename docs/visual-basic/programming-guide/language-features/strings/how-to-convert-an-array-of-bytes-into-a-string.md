@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [Visual Basic], strings
 - arrays [Visual Basic], converting to strings
 ms.assetid: d0dc8317-9ab3-4324-99f7-3f5788c0e72a
-ms.openlocfilehash: 577cce6322bf80bf2abdb963f07938b1a8b5d174
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd091d743b04ef9d9709bde2b5a1205f3d7ae292
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718346"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979493"
 ---
 # <a name="how-to-convert-an-array-of-bytes-into-a-string-in-visual-basic"></a>如何：将一个字节数组转换成 Visual Basic 中的字符串
 本主题演示如何将字节从字节数组转换为字符串。  
@@ -20,7 +20,7 @@ ms.locfileid: "54718346"
 ## <a name="example"></a>示例  
  此示例使用<xref:System.Text.Encoding.GetString%2A>方法的<xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>编码类将字节数组中的所有字节转换为字符串。  
   
- [!code-vb[VbVbalrStrings#72](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-an-array-of-bytes-into-a-string_1.vb)]  
+ [!code-vb[VbVbalrStrings#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#72)]  
   
  您可以选择从多个编码选项，以字节数组转换为字符串：  
   

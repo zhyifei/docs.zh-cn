@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 7bbc3bcadb318203688a3b8ecae18e723e82c8ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036985a7b60afedc1e8ef0854c619ea8515e5ffe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560721"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974297"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>如何：计算数值 (Visual Basic)
 您可以计算通过使用数值表达式的数字值。 一个*数值表达式*会包含文本、 常量和变量表示数字值的表达式并处理这些值的运算符。  
@@ -43,7 +43,7 @@ ms.locfileid: "54560721"
   
 -   赋值语句可用于将分配给一个变量，数值表达式所表示的值，如以下示例所示。  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
      在前面的示例中，相等运算符右侧的表达式的值 (`=`) 分配给变量`j`上左侧和右侧的运算符，因此`j`的计算结果为 276。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54560721"
   
 -   使用括号括住您想要首先执行的操作。 下面的示例显示了具有相同的操作数和运算符的两个不同的结果。  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
      在前面的示例的计算`j`执行加法运算符 (`+`) 第一个因为两边的括号`(67 + i)`重写常规优先级和分配给的值`j`为 276 (4 次 69)。 计算`k`按正常优先级执行运算符 (`*`之前`+`)，并分配给的值`k`为 270 （268 加 2）。  
   

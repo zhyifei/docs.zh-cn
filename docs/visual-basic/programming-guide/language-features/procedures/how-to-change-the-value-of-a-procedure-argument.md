@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 096bc6adfa7a8c95674d235f0112d23f7a45caf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea91e88f6833b9a3abbb349688c277be10312a6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672287"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974908"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>如何：更改过程自变量 (Visual Basic 中) 的值
 在调用过程时，您提供每个自变量对应于一个过程中定义的参数。 在某些情况下，过程代码可以更改基础调用代码中的自变量的值。 在其他情况下，该过程可以更改仅其自变量的本地副本。  
@@ -57,11 +57,11 @@ ms.locfileid: "54672287"
 ## <a name="example"></a>示例  
  下面的示例演示两个过程采用一个数组变量并运行它的元素。 `increase`过程只需添加一个到每个元素。 `replace`过程将一个新数组分配给该参数`a()`，然后添加一个到每个元素。  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#36](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_2.vb)]  
+ [!code-vb[VbVbcnProcedures#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#36)]  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  第一个`MsgBox`调用显示"increase(n) 后：11, 21, 31, 41". 因为数组`n`是引用类型，`replace`可以更改其中一个成员，即使传递机制是`ByVal`。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 0c5731fcff3191c192a5e7884c4d5a9566400bc5
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: fd01842bdb3a3b168c00e0366dd6fe4c2daf7121
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204803"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974362"
 ---
 # <a name="examples-of-xml-serialization"></a>XML 序列化示例
 XML 序列化可以采用从简单到复杂的多种形式。 例如，可以序列化只包含公共字段和公共属性的类，如 [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)中所示。 下面的代码示例讨论各种高级方案，包括如何使用 XML 序列化生成符合特定 XML 架构 (XSD) 文档的 XML 流。  
@@ -119,7 +119,7 @@ private void SerializeNode(string filename){
 ```  
   
 ## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a>序列化包含返回复杂对象的字段的类  
- 如果属性或字段返回一个复杂对象（如数组或类实例），则 [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) 会将其转换为嵌套在主 XML 文档内的元素。 例如，以下代码示例中的第一个类返回第二个类的实例。  
+ 如果属性或字段返回一个复杂对象（如数组或类实例），则 <xref:System.Xml.Serialization.XmlSerializer> 将其转换为嵌套在主 XML 文档内的元素。 例如，以下代码示例中的第一个类返回第二个类的实例。  
   
 ```vb  
 Public Class PurchaseOrder  
@@ -363,7 +363,8 @@ public class Employee {
   
  `CreatePO` 方法创建 `PurchaseOrder`、`Address` 和 `OrderedItem` 类对象，并设置公共字段值。 该方法还构造 <xref:System.Xml.Serialization.XmlSerializer> 类的实例，该类用于序列化和反序列化 `PurchaseOrder`。 请注意，代码传递的是将序列化为构造函数的类的类型。 代码还创建可用于将 XML 流写入 XML 文档的 `FileStream`。  
   
- `ReadPo` 方法稍简单一些。 它只创建要反序列化的对象并读出它们的值。 如同`CreatePo`方法，必须先构造<xref:System.Xml.Serialization.XmlSerializer>，传递给构造函数要反序列化的类的类型。 此外，还需要使用 <xref:System.IO.FileStream> 读取 XML 文档。 要反序列化对象，请调用带有 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 参数的 <xref:System.IO.FileStream> 方法。 已反序列化的对象必须强制转换为 `PurchaseOrder` 类型的对象变量。 然后代码读取已反序列化的 `PurchaseOrder` 的值。 请注意，您还可以读取 PO.xml 文件，创建该文件是为了查看实际的 XML 输出。  
+ 
+  `ReadPo` 方法稍简单一些。 它只创建要反序列化的对象并读出它们的值。 如同`CreatePo`方法，必须先构造<xref:System.Xml.Serialization.XmlSerializer>，传递给构造函数要反序列化的类的类型。 此外，还需要使用 <xref:System.IO.FileStream> 读取 XML 文档。 要反序列化对象，请调用带有 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 参数的 <xref:System.IO.FileStream> 方法。 已反序列化的对象必须强制转换为 `PurchaseOrder` 类型的对象变量。 然后代码读取已反序列化的 `PurchaseOrder` 的值。 请注意，您还可以读取 PO.xml 文件，创建该文件是为了查看实际的 XML 输出。  
   
 ```vb  
 Imports System  
@@ -767,6 +768,6 @@ public class Test
 - [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [使用属性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
 - [用来控制 XML 序列化的属性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
-- [XmlSerializer 类](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- [XmlSerializer 类](xref:System.Xml.Serialization.XmlSerializer)
 - [如何：将对象序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

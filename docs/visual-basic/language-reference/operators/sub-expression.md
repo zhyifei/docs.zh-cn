@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: d27ca262aa2349d34d78844e0aea0f96a1ced65c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e8c66f4f2b21a890b8c61e6fc642ce276df6f60
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496304"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966718"
 ---
 # <a name="sub-expression-visual-basic"></a>Sub 表达式 (Visual Basic)
 声明的参数和子例程 lambda 表达式定义的代码。  
@@ -55,7 +55,7 @@ End Sub
 ## <a name="example"></a>示例  
  下面是向控制台写入值的 lambda 表达式的示例。 该示例显示了一个子例程的这两个单行和多行 lambda 表达式语法。 有关更多示例，请参阅[Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
- [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
+ [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
 ## <a name="see-also"></a>请参阅
 - [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)

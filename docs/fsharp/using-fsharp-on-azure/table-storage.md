@@ -3,14 +3,14 @@ title: 开始使用 Azure 表存储使用F#
 description: 使用 Azure 表存储或 Azure Cosmos DB 在云中存储结构化的数据。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2b74a33023065ea809c2d7eb6202b1a254018422
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152068"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966003"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>开始使用 Azure 表存储和 Azure Cosmos DB 表 API 使用F# # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>开始使用 Azure 表存储和使用 F 在 Azure Cosmos DB 表 API\#
 
 Azure 表存储是一种服务，将结构化的 NoSQL 数据存储在云中。 表存储是采用无架构设计的键/属性存储。 表存储是无架构，因为它很容易使数据适应需求的应用程序发展。 对数据的访问是快速且经济高效的所有类型的应用程序。 表存储是通常显著较低的成本比传统 SQL 要类似的数据卷。
 

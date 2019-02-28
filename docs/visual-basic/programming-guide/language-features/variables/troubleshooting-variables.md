@@ -5,12 +5,12 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: a8fdf11887d9ed7a52ac0d5f1abc81dcbb7932a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b03dcba7675793070c54bdadaf6ec418f8896b7d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618904"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965704"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>变量疑难解答 (Visual Basic)
 此页列出了使用 Visual Basic 中的变量时可能发生的一些常见问题。  
@@ -24,7 +24,7 @@ ms.locfileid: "54618904"
   
  当 [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 设置类型检查 `On`时，对象变量仅可访问声明它所用的类的方法和属性。 下面的示例阐释了这一点。  
 
- [!code-vb[VbVbalrVariables#2](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/troubleshooting-variables_1.vb)]  
+ [!code-vb[VbVbalrVariables#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#2)]  
   
  在此示例中， `p` 仅可使用 <xref:System.Object> 类的成员，这不包括 `Left` 属性。 另一方面， `q` 已声明为 <xref:System.Windows.Forms.Label>类型，因此它可以使用 <xref:System.Windows.Forms.Label> 命名空间中 <xref:System.Windows.Forms> 类的所有方法和属性。  
   

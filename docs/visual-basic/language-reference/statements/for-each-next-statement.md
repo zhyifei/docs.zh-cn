@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: a44aff8407a29ef7f3712e116301cfce0aa984ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 269d905ad59a162af4e790e29d3753f090f511bd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700424"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974999"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 语句 (Visual Basic)
 集合中每个元素重复一组语句。  
@@ -64,7 +64,7 @@ Next [ element ]
   
  在以下示例中， `For Each`...`Next` 语句循环访问列表集合的所有元素。  
   
- [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]  
   
  有关更多示例，请参阅[集合](../../../standard/collections/index.md)并[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
@@ -73,7 +73,7 @@ Next [ element ]
   
  下面的示例演示嵌套`For Each`...`Next` 结构。  
   
- [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#122](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#122)]  
   
  当嵌套循环时，每个循环必须具有一个唯一`element`变量。  
   
@@ -86,7 +86,7 @@ Next [ element ]
   
  下面的示例演示如何使用`Continue For`和`Exit For`语句。  
   
- [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#123](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#123)]  
   
  可以将任意数量的`Exit For`中的语句`For Each`循环。 当使用内嵌套`For Each`循环，`Exit For`会导致执行到下一个较高级别的嵌套退出最里面的循环，并将控制权。  
   
@@ -105,7 +105,7 @@ Next [ element ]
   
  以下示例使用迭代器函数。 迭代器函数具有`Yield`内的语句[为...下一步](../../../visual-basic/language-reference/statements/for-next-statement.md)循环。 在中`ListEvenNumbers`方法中，每次迭代`For Each`语句体创建对迭代器函数，并将继续到下一步的调用`Yield`语句。  
   
- [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]  
   
  有关详细信息，请参阅[迭代器](../../programming-guide/concepts/iterators.md)， [Yield 语句](../../../visual-basic/language-reference/statements/yield-statement.md)，并[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。  
   
@@ -133,7 +133,7 @@ Next [ element ]
   
  在下面的示例中，分配`m`作为初始值`n`无法进行编译时`Option Strict`已启用，因为转换`Long`到`Integer`是收缩转换。 在中`For Each`语句，但是，编译器错误，是报告，即使对分配`number`需要从同一个转换`Long`到`Integer`。 在`For Each`语句中有很多，运行时错误发生时<xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A>应用于很多。  
   
- [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class3.vb#89)]  
   
 ### <a name="ienumerator-calls"></a>IEnumerator 调用  
  当执行`For Each`...`Next`循环启动时，Visual Basic 验证`group`引用有效的集合对象。 如果没有，则引发异常。 否则，它会调用<xref:System.Collections.IEnumerator.MoveNext%2A>方法和<xref:System.Collections.IEnumerator.Current%2A>要返回的第一个元素的枚举器对象的属性。 如果`MoveNext`指示已没有下一个元素，即，如果集合为空，`For Each`循环停止并将控制权传递到后面的语句`Next`语句。 否则，Visual Basic 设置`element`到第一个元素和运行的语句块。  
@@ -161,7 +161,7 @@ End Sub
 ## <a name="example"></a>示例  
  下面的示例通过使用列出的 C:\ 目录中的所有文件夹<xref:System.IO.DirectoryInfo>类。  
   
- [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#124](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#124)]  
   
 ## <a name="example"></a>示例  
  以下示例阐释了对集合排序的过程。 该示例的实例进行排序`Car`存储中的类<xref:System.Collections.Generic.List%601>。 `Car` 类实现 <xref:System.IComparable%601> 接口，此操作需要实现 <xref:System.IComparable%601.CompareTo%2A> 方法。  
@@ -170,7 +170,7 @@ End Sub
   
  在 `ListCars` 方法中，`cars.Sort()` 语句对列表进行排序。 对 <xref:System.Collections.Generic.List%601> 的 <xref:System.Collections.Generic.List%601.Sort%2A> 方法的此调用将导致为 `List` 中的 `Car` 对象自动调用 `CompareTo` 方法。  
   
- [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]  
   
 ## <a name="see-also"></a>请参阅
 - [集合](../../../standard/collections/index.md)

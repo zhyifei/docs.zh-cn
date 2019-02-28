@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: a4d5f12c5cf1ba89f7b505fb44c3f8fb19cb09d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 884c5ddf15deb49719915f10e107ba6a3431c4bc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669154"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965938"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>如何：匹配字符串与模式 (Visual Basic)
 如果想要找出的表达式[字符串数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)满足一种模式，则可以使用[Like 运算符](../../../../visual-basic/language-reference/operators/like-operator.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "54669154"
   
      下面的示例测试是否`myString`只包含单个字符`H`。  
   
-     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_1.vb)]  
+     [!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]  
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>在对通配符字符的字符串表达式中的字符进行匹配  
   
@@ -41,7 +41,7 @@ ms.locfileid: "54669154"
   
      下面的示例测试是否`myString`包含单个字符`W`跟两个字符的任何值。  
   
-     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_2.vb)]  
+     [!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]  
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>针对列表的字符的字符串表达式中的字符进行匹配  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54669154"
   
      下面的示例测试是否`myString`包含跟一个字符的任意有效字符`A`， `C`，或`E`。  
   
-     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_3.vb)]  
+     [!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]  
   
      请注意，此匹配区分大小写。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54669154"
   
      下面的示例测试是否`myString`包含的字符`num`正好有一个字符后跟`i`， `j`， `k`， `l`， `m`，或`n`。  
   
-     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_4.vb)]  
+     [!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]  
   
      请注意，此匹配区分大小写。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "54669154"
   
      下面的示例测试的七位数电话号码`phoneNum`为 3 个数字后, 跟一个空格、 连字符 (`–`)，一段 (`.`)，或没有字符后, 跟 4 个数字。  
   
-     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
+     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]  
   
 ## <a name="see-also"></a>请参阅
 - [比较运算符](../../../../visual-basic/language-reference/operators/comparison-operators.md)

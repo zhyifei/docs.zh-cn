@@ -5,12 +5,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], constants
 - constants [Visual Basic], grouping together
 ms.assetid: 09d61da5-c940-4126-a79f-ba93c36653dc
-ms.openlocfilehash: 04697092534daa6f83a29e69dcdc509644fa6147
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63475487c8a35f5b306b28d4e7097324bef00d85
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558678"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977820"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>如何：组相关的常量值组合在一起 (Visual Basic)
 枚举是要分成一组相关的常量的最佳方式。 创建一个枚举，其中`Enum`声明部分中的一个类或模块的语句。 有关详细信息，请参阅[如何：声明枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)。  
@@ -19,11 +19,11 @@ ms.locfileid: "54558678"
   
 1.  编写的声明，包括代码访问级别，`Enum`关键字，并且是有效的名称。 此示例将创建`Private`枚举， `temperatureValues`。  
   
-     [!code-vb[VbEnumsTask#21](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_1.vb)]  
+     [!code-vb[VbEnumsTask#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#21)]  
   
 2.  枚举中定义常量。 此示例将创建`Public`枚举`temperatureValues`并为其赋值。  
   
-     [!code-vb[VbEnumsTask#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_2.vb)]  
+     [!code-vb[VbEnumsTask#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#1)]  
   
 ## <a name="see-also"></a>请参阅
 - [枚举和名称限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
