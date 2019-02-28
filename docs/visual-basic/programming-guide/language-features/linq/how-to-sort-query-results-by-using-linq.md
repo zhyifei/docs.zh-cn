@@ -11,12 +11,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: 04e8f6eaa06577ac556dbed89088f6268aae81df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 937206c5efeb4767f0c1f3d5a98f58314da105d4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672768"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967784"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>如何：使用 LINQ (Visual Basic 中) 的查询结果进行排序
 语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。  
@@ -69,7 +69,7 @@ ms.locfileid: "54672768"
   
      将以下代码添加到`Load`事件，以查询方式被称为数据上下文的属性和对结果进行排序的表。 查询对客户的订单，按降序顺序数排序结果。 具有相同数目的订单的客户按升序排序 （默认值） 的公司名称进行排序。  
   
-     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-sort-query-results-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form4.vb#10)]  
   
 4.  按 F5 以运行您的项目并查看结果。  
   

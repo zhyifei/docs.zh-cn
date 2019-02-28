@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 367cbd373df2a38a56e5362f66bedd5c0ec24efb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9e7f3f97657a1d7de2a53502e99721f0e96a15f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522749"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977326"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out（泛型修饰符）(Visual Basic)
 对于泛型类型参数，`Out`关键字指定的类型是协变。  
@@ -48,12 +48,12 @@ ms.locfileid: "54522749"
 ## <a name="example"></a>示例  
  下面的示例演示如何声明、扩展和实现协变泛型接口。 它还演示如何对实现协变接口的类使用隐式转换。  
   
- [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_1.vb)]  
+ [!code-vb[vbVarianceKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#3)]  
   
 ## <a name="example"></a>示例  
  以下示例演示如何声明、实例化和调用协变泛型委托。 它还显示如何使用隐式转换为委托类型。  
   
- [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
+ [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>请参阅
 - [泛型接口中的变体](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

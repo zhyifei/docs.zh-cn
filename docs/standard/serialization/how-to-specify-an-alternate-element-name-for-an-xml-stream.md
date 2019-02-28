@@ -12,16 +12,16 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 08c686349acc5777343e8e6f2e6084be44a20fe1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f2fe865019b24263f76595654455df7b597c1d8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517391"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968525"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>如何：指定 XML Stream 的替代元素名称
   
-使用 [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) 可以用同一组类生成多个 XML 流。 由于两个不同的 XML Web services 需要的基本信息相同（略有差异），因此您或许希望用同一组类生成多个 XML 流。 例如，假设有两个处理书籍订单的 XML Web services，它们都需要 ISBN 号。 一个服务使用标记 \<ISBN>，而另一个使用标记 \<BookID>。 您已经有一个名为 `Book` 的类，其中包含名为 `ISBN` 的字段。 当序列化 `Book` 类的实例时，该实例将在默认情况下使用成员名称 (ISBN) 作为标记元素名称。 对于第一个 XML Web services，以上行为与预期相同。 但如果要将 XML 流发送至第二个 XML Web services，则必须重写序列化，以便使标记的元素名称采用 `BookID`。  
+使用 <xref:System.Xml.Serialization.XmlSerializer>，可以用同一组类生成多个 XML 流。 由于两个不同的 XML Web services 需要的基本信息相同（略有差异），因此您或许希望用同一组类生成多个 XML 流。 例如，假设有两个处理书籍订单的 XML Web services，它们都需要 ISBN 号。 一个服务使用标记 \<ISBN>，而另一个使用标记 \<BookID>。 您已经有一个名为 `Book` 的类，其中包含名为 `ISBN` 的字段。 当序列化 `Book` 类的实例时，该实例将在默认情况下使用成员名称 (ISBN) 作为标记元素名称。 对于第一个 XML Web services，以上行为与预期相同。 但如果要将 XML 流发送至第二个 XML Web services，则必须重写序列化，以便使标记的元素名称采用 `BookID`。  
   
 ## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>用替代元素名称创建 XML 流  
   
@@ -97,7 +97,7 @@ public class SerializeOverride()
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
 - [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- <xref:System.Xml.Serialization.XmlSerializer>
 - [如何：将对象序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 - [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

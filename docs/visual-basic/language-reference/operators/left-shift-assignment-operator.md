@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator<<=
 - compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
-ms.openlocfilehash: 4c262da906a6033680b05f6a4099a6a1dc8bfab5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b2a642b1187c9a08007ee1eddfa0764198fc0877
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260627"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981642"
 ---
 # <a name="-operator-visual-basic"></a>\<\<= 运算符 (Visual Basic)
 对变量或属性的值执行算术左的移位，并将结果赋回给变量或属性。  
@@ -47,7 +47,7 @@ variableorproperty <<= amount
 ## <a name="example"></a>示例  
  下面的示例使用`<<=`运算符将该位模式移位的`Integer`变量指定的量，并将结果赋留给变量。  
   
- [!code-vb[VbVbalrOperators#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#13)]  
   
 ## <a name="see-also"></a>请参阅
 - [<< 运算符](../../../visual-basic/language-reference/operators/left-shift-operator.md)

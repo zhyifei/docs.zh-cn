@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |生�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 16228321cc788b381603513213130415eb73a95c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128851"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971827"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>生成可复原的准备好使用云服务：包含在云中的暂时性故障
 
@@ -35,7 +35,7 @@ ms.locfileid: "53128851"
 
 在 HTTP 资源和数据库资源，可以使用这些技术。 在图 4-9、 应用程序基于第 3 层体系结构，因此您需要在服务级别 (HTTP) 和数据层级别 (TCP) 这些技术。 在使用仅除了数据库 （任何其他服务或微服务） 的单个应用程序层的单一式应用程序，处理暂时性故障级别的数据库的连接可能已足够。 在这种情况下，只是特定的数据库连接的配置都需要。
 
-实现访问数据库时，具体取决于使用的，.NET 版本的弹性通信时它可能比较简单 (例如， [Entity Framework 6 或更高版本](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)，它是只需配置数据库连接）。 或者，可能需要使用其他库等[暂时性故障处理应用程序块](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)（适用于早期版本的.NET），或者甚至实现您自己的库。
+实现访问数据库时，具体取决于使用的，.NET 版本的弹性通信时它可能比较简单 (例如， [Entity Framework 6 或更高版本](/ef/ef6/fundamentals/connection-resiliency/retry-logic)。 它是只需配置数据库连接。） 或者，可能需要使用其他库等[暂时性故障处理应用程序块](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50))（适用于早期版本的.NET），或者甚至实现您自己的库。
 
 实现 HTTP 重试次数和断路器时，.NET 的推荐方法是使用[Polly](https://github.com/App-vNext/Polly)库，后者面向.NET Framework 4.0、.NET Framework 4.5 和.NET Standard 1.1，包括.NET Core 的支持。
 
@@ -49,11 +49,11 @@ ms.locfileid: "53128851"
 
 -   **实体框架连接复原和重试逻辑 （6 和更高版本）**
 
-    [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
+    [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
 -   **暂时性故障处理应用程序块**
 
--   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
+-   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
 -   **Polly 适用于弹性 HTTP 通信库**
 

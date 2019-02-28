@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: be5e1b5fff1feb8ef4cc2ff7fcbca193aafcd781
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: ea7cc2c7f988617de67bf0ea46aeb3396acdf4b1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674875"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980615"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>类型转换函数 (Visual Basic)
 这些函数是代码的内联方式编译，这意味着转换代码计算表达式的值的一部分。 有时是没有调用过程，以完成转换，从而提高性能。 每个函数都强制转换为特定的数据类型的表达式。  
@@ -198,73 +198,73 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 ## <a name="cbool-example"></a>CBool 示例  
  下面的示例使用`CBool`函数将表达式转换为`Boolean`值。 如果表达式计算结果为非零值，`CBool`将返回`True`; 否则为它将返回`False`。  
   
- [!code-vb[VbVbalrFunctions#1](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_1.vb)]  
+ [!code-vb[VbVbalrFunctions#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#1)]  
   
 ## <a name="cbyte-example"></a>CByte 示例  
  下面的示例使用`CByte`函数将转换为表达式`Byte`。  
   
- [!code-vb[VbVbalrFunctions#2](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_2.vb)]  
+ [!code-vb[VbVbalrFunctions#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#2)]  
   
 ## <a name="cchar-example"></a>CChar 示例  
  下面的示例使用`CChar`函数将转换的第一个字符`String`表达式`Char`类型。  
   
- [!code-vb[VbVbalrFunctions#3](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_3.vb)]  
+ [!code-vb[VbVbalrFunctions#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#3)]  
   
  输入的参数`CChar`的数据类型必须为`Char`或`String`。 不能使用`CChar`若要将数字转换为字符，因为`CChar`不能接受数值数据类型。 以下示例获取一个表示码位 （字符代码） 的数字，并将其转换为相应的字符。 它使用<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>函数获取数字的字符串`CInt`要转换为类型字符串`Integer`，和`ChrW`要转换的编号，以键入`Char`。  
   
- [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
+ [!code-vb[VbVbalrFunctions#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#4)]  
   
 ## <a name="cdate-example"></a>CDate 示例  
  下面的示例使用`CDate`函数将字符串转换为`Date`值。 一般情况下，不建议进行硬编码的日期和时间作为字符串 （如在此示例中所示）。 使用文字日期和时间文字，如 #Feb 12，1969 # 和 # 4:45:23 PM #，而是。  
   
- [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
+ [!code-vb[VbVbalrFunctions#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#5)]  
   
 ## <a name="cdbl-example"></a>CDbl 示例  
- [!code-vb[VbVbalrFunctions#6](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_6.vb)]  
+ [!code-vb[VbVbalrFunctions#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#6)]  
   
 ## <a name="cdec-example"></a>CDec 示例  
  下面的示例使用`CDec`函数将转换为数字值`Decimal`。  
   
- [!code-vb[VbVbalrFunctions#7](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_7.vb)]  
+ [!code-vb[VbVbalrFunctions#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#7)]  
   
 ## <a name="cint-example"></a>CInt 示例  
  下面的示例使用`CInt`函数将值转换为`Integer`。  
   
- [!code-vb[VbVbalrFunctions#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_8.vb)]  
+ [!code-vb[VbVbalrFunctions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#8)]  
 
 ## <a name="clng-example"></a>CLng 示例
  下面的示例使用`CLng`函数以将值转换为`Long`。  
   
- [!code-vb[VbVbalrFunctions#9](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_9.vb)]  
+ [!code-vb[VbVbalrFunctions#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#9)]  
   
 ## <a name="cobj-example"></a>示例中的 CObj  
  下面的示例使用`CObj`函数将转换为数字值`Object`。 `Object`变量本身包含仅一个四字节的指针，用于指向`Double`分配给它的值。  
   
- [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_10.vb)]  
+ [!code-vb[VbVbalrFunctions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#10)]  
   
 ## <a name="csbyte-example"></a>CSByte 示例  
  下面的示例使用`CSByte`函数将转换为数字值`SByte`。  
   
- [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_11.vb)]  
+ [!code-vb[VbVbalrFunctions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#11)]  
   
 ## <a name="cshort-example"></a>CShort 示例  
  下面的示例使用`CShort`函数将转换为数字值`Short`。  
   
- [!code-vb[VbVbalrFunctions#12](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_12.vb)]  
+ [!code-vb[VbVbalrFunctions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#12)]  
   
 ## <a name="csng-example"></a>CSng 示例  
  下面的示例使用`CSng`函数以将值转换为`Single`。  
   
- [!code-vb[VbVbalrFunctions#13](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_13.vb)]  
+ [!code-vb[VbVbalrFunctions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#13)]  
   
 ## <a name="cstr-example"></a>CStr 示例  
  下面的示例使用`CStr`函数将转换为数字值`String`。  
   
- [!code-vb[VbVbalrFunctions#14](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_14.vb)]  
+ [!code-vb[VbVbalrFunctions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#14)]  
   
  下面的示例使用`CStr`函数将转换`Date`值到`String`值。  
   
- [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
+ [!code-vb[VbVbalrFunctions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#15)]  
   
  `CStr` 始终呈现`Date`采用当前区域设置，例如，标准的短格式的值"2003 年 6 月 15 日下午 4:35:47"。 但是，`CStr`禁止*中性值*1/1/0001 的日期和时间的 00:00:00。  
   
@@ -273,17 +273,17 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 ## <a name="cuint-example"></a>CUInt 示例  
  下面的示例使用`CUInt`函数将转换为数字值`UInteger`。  
   
- [!code-vb[VbVbalrFunctions#16](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_16.vb)]  
+ [!code-vb[VbVbalrFunctions#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#16)]  
   
 ## <a name="culng-example"></a>CULng 示例  
  下面的示例使用`CULng`函数将转换为数字值`ULong`。  
   
- [!code-vb[VbVbalrFunctions#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_17.vb)]  
+ [!code-vb[VbVbalrFunctions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#17)]  
   
 ## <a name="cushort-example"></a>CUShort 示例  
  下面的示例使用`CUShort`函数将转换为数字值`UShort`。  
   
- [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
+ [!code-vb[VbVbalrFunctions#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#18)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: a3f4657b22fe0a9186e339d00cd9341e55405244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528870"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980771"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>如何：定义多个版本的过程 (Visual Basic)
 你可以通过多个版本中定义的过程*重载*它为每个版本使用相同名称但不同的参数列表。 重载的目的是定义一个过程的几个密切相关的版本而无需将它们按名称区分开。  
@@ -33,7 +33,7 @@ ms.locfileid: "54528870"
 ## <a name="example"></a>示例  
  下面的示例定义`Sub`过程发送针对客户的帐户余额的事务。 它使用`Overloads`关键字来定义两个版本的过程中，一个接受由名称和其他客户的帐号。  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
  调用代码可以获取为客户标识号`String`或`Integer`，然后在任一情况下使用相同的调用语句。  
   

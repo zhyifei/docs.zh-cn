@@ -2,20 +2,14 @@
 title: Visual Basic 中的运算符和表达式
 ms.date: 07/20/2015
 helpviewer_keywords:
-- operators [Visual Basic], operands
-- operators [Visual Basic]
-- operands [Visual Basic], definition
-- Visual Basic code, operators
-- Visual Basic code, expressions
-- operands
-- expressions [Visual Basic]
+  - 'operators [Visual Basic], operands'
+  - 'operators [Visual Basic]'
+  - 'operands [Visual Basic], definition'
+  - 'Visual Basic code, operators'
+  - 'Visual Basic code, expressions'
+  - operands
+  - 'expressions [Visual Basic]'
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 9d63a458ed747db0a63d2c648460a1a21f7cfbc8
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738989"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic 中的运算符和表达式
 运算符是对包含值的一个或多个代码元素执行运算的代码元素。 值元素包括变量、常量、文本、属性、`Function` 和 `Operator` 过程的返回结果以及表达式。  
@@ -58,7 +52,7 @@ ms.locfileid: "55738989"
   
  多个运算符可以在一个表达式或语句中执行运算，如以下示例所示。  
   
- [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
  在前面的示例中，Visual Basic 所执行的赋值运算符右侧的表达式中的操作 (`=`)，然后将生成的值分配给该变量`x`左侧。 对于可以合并到表达式中的运算符数量没有实际限制，但需要了解 [Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)，以确保结果符合预期。  
   

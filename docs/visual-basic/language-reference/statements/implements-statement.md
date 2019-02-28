@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: cdcbe20157b9647040e3610d0632bd8e3fb9df65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75776e0d78bc1d8a834333ea4c3cc0a9291d1ed1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681061"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965004"
 ---
 # <a name="implements-statement"></a>Implements 语句
 指定一个或多个接口，或必须在类中实现的接口成员或结构定义中的出现。  
@@ -46,14 +46,14 @@ Implements interfacename.interfacemember [, ...]
 ## <a name="example"></a>示例  
  下面的示例演示如何使用`Implements`语句来实现的接口成员。 它定义一个接口，名为`ICustomerInfo`与事件、 属性和过程。 类`customerInfo`实现在接口中定义的所有成员。  
   
- [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
  请注意，该类`customerInfo`使用`Implements`单独的源文件的代码行以指示该类实现的所有成员上的语句`ICustomerInfo`接口。 然后，在类中的每个成员使用`Implements`关键字作为其成员声明，以指示它实现该接口成员的一部分。  
   
 ## <a name="example"></a>示例  
  以下两个过程演示如何使用在前面的示例实现的接口。 若要测试实现，请将这些过程添加到项目中并调用`testImplements`过程。  
   
- [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>请参阅
 - [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)

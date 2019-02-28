@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: 6b9912f5206633a45d5d5d2d9c8c25ffab94ed9b
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: fe08c855e4dd0adca68d48c3b32cb399033a9d46
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739561"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974921"
 ---
 # <a name="operator-procedures-visual-basic"></a>运算符过程 (Visual Basic)
 运算符过程是一系列定义标准运算符的行为的 Visual Basic 语句 (如`*`， `<>`，或`And`) 上的类或结构定义。 这也称为*运算符重载*。  
@@ -73,11 +73,11 @@ ms.locfileid: "55739561"
 ### <a name="illustration-of-declaration-and-call"></a>声明和调用的插图  
  以下结构将 128 位带符号的整数值存储为构成的高序位，低位部分。 它定义`+`运算符将两个`veryLong`值，并生成生成`veryLong`值。  
   
- [!code-vb[VbVbcnProcedures#23](./codesnippet/VisualBasic/operator-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#23)]  
   
  下面的示例演示对典型调用`+`上定义的运算符`veryLong`。  
   
- [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
   
   
 ## <a name="see-also"></a>请参阅

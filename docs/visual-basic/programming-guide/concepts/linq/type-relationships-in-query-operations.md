@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 519b10cfa374290a2d924cce2bd3e39683ca080f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d72a55cadce287979fad25396327680e1f0e0aaf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731122"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979094"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>查询操作中的类型关系 (Visual Basic)
 中使用的变量[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查询操作为强类型，必须相互兼容。 数据源中、 查询本身，以及在查询执行过程中，使用强类型化。 下图标识术语用于描述[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询。 有关查询的部分的详细信息，请参阅[基本查询操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
@@ -28,7 +28,7 @@ LINQ 查询的部分
   
  Visual Basic 使强类型方便通过也称为实现局部类型推理*隐式类型化*。 在上一示例中，使用功能，您将看到在所有[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]示例和文档。 在 Visual Basic 中，局部类型推理是只需通过实现`Dim`语句不带`As`子句。 在以下示例中，`city`强类型化为字符串。  
   
- [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  局部类型推理时才起作用`Option Infer`设置为`On`。 有关详细信息，请参阅[Option Infer 语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。  
@@ -37,16 +37,16 @@ LINQ 查询的部分
   
  您可能需要指定显式类型从数据源返回的类型不匹配的范围变量。 可以通过使用指定的范围变量的类型`As`子句。 但是，这会导致错误如果转换[收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)并`Option Strict`设置为`On`。 因此，我们建议在从数据源检索的值上执行转换。 您可以将值转换从数据源为显式的范围变量类型使用<xref:System.Linq.Enumerable.Cast%2A>方法。 此外可以强制转换中所选值`Select`范围变量的类型不同的显式类型的子句。 在下面的代码说明了这些点。  
   
- [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#4)]  
   
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>返回源数据的整个元素的查询  
  下面的示例演示[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询返回的源数据中的选定元素的序列的操作。 源`names`，包含数组的字符串，并将查询输出是包含以字母 M 开头的字符串序列。  
   
- [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]  
   
  这等效于下面的代码，但它更简短、 更轻松地编写。 依赖于在查询中的局部类型推理是在 Visual Basic 中的首选的样式。  
   
- [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#3)]  
   
  以下关系存在于这两个前面的代码示例，是否隐式或显式确定类型。  
   

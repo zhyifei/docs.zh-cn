@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: b10f679d735d21ba0002c8a3f4e230836298d4e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514252"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972576"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>如何：声明具有混合的访问级别 (Visual Basic 中) 的属性
 如果你想`Get`并`Set`要具有不同的访问级别的属性的过程，您可以使用中的限制性更弱级别`Property`语句，并在限制性更强的级别`Get`或`Set`语句。 当你想要能够获取属性的值的代码的某些部分和某些其他部分的代码要能够更改的值时，可以在属性上使用混合的访问级别。  
@@ -30,7 +30,7 @@ ms.locfileid: "54514252"
   
 3.  不要对其他属性过程指定访问级别。 它假定中声明的访问级别`Property`语句。 你可以限制属性过程之一上的访问。  
   
-     [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
+     [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
      在前面的示例中，`Get`过程具有相同`Protected`与该属性本身的访问权限时`Set`过程包含`Private`访问。 一个类派生自`employee`可以读取`salary`值，但只有`employee`类可以将其设置。  
   

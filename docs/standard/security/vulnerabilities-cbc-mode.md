@@ -4,12 +4,12 @@ description: 了解如何检测和缓解与使用填充的密码块链 (CBC) 模
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066165"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974284"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>计时漏洞 CBC 模式下使用填充的对称解密
 
@@ -92,7 +92,7 @@ Oracle 是指"告诉"它为提供了有关他们正在执行的操作是否是�
   - 这还不会阻止在攻击者可以对相同的纯文本进行加密具有不同的消息的偏移量的多个时间强制转换的情况下的纯文本恢复。
 - 入口解密调用消除计时信号的评估：
   - 计算的保留时间必须至少超出最大，解密操作将需要为包含填充任何数据段的时间量。
-  - 应根据中的指导完成时间计算[获取高分辨率时间戳](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx)，不能通过使用<xref:System.Environment.TickCount?displayProperty=nameWithType>（取决于前的 over/溢出） 或减法 （取决于 NTP 调整的两个系统时间戳错误）。
+  - 应根据中的指导完成时间计算[获取高分辨率时间戳](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps)，不能通过使用<xref:System.Environment.TickCount?displayProperty=nameWithType>（取决于前的 over/溢出） 或减法 （取决于 NTP 调整的两个系统时间戳错误）。
   - 时间计算必须包括解密操作包括中的所有潜在异常管理或 c + + 应用程序，而不仅仅是填充到末尾。
   - 如果尚未确定成功或失败，计时入口将需要它过期时返回失败。
 - 正在执行未经身份验证的解密的服务应具有在来检测大量"无效"消息都监视。
@@ -103,7 +103,7 @@ Oracle 是指"告诉"它为提供了有关他们正在执行的操作是否是�
 有关生成针对 Windows 加密程序：下一代 (CNG) 库：
 
 - 解密调用是对[BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt)，并指定`BCRYPT_BLOCK_PADDING`标志。
-- 通过调用已初始化的密钥句柄[BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty)与[BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE)设置为`BCRYPT_CHAIN_MODE_CBC`。
+- 通过调用已初始化的密钥句柄[BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty)与[BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE)设置为`BCRYPT_CHAIN_MODE_CBC`。
   - 由于`BCRYPT_CHAIN_MODE_CBC`是默认情况下，受影响的代码可能未分配任何值`BCRYPT_CHAINING_MODE`。
 
 针对较旧的 Windows 加密 API 生成的程序：

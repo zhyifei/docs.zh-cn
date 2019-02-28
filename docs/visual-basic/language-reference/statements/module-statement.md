@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 0503292dca81ef7b249b391f54c0aba2bba2cb10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a30b037b5a918f9b760ff0ab5b704dceb280d33f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524177"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980212"
 ---
 # <a name="module-statement"></a>Module 语句
 声明模块的名称，并引入的变量、 属性、 事件和该模块包含的过程的定义。  
@@ -94,7 +94,7 @@ End Module
 -   **限定。** 您可以在项目中，有多个模块，而您可以声明具有两个或多个模块中具有相同名称的成员。 但是，如果引用是从外部该模块必须限定对此类成员具有适当的模块名称的任何引用。 有关详细信息，请参阅 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
 ## <a name="example"></a>示例  
- [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#69)]  
   
 ## <a name="see-also"></a>请参阅
 - [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)

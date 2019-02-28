@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 92aadfe851514dcba713455664cf8f7b0aa1c17b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19cd2dbaa055ab6e927ef1ddc9623723ea8c5f2f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597536"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977495"
 ---
 # <a name="comments-in-code-visual-basic"></a>代码中的注释 (Visual Basic)
 阅读代码示例时，经常会遇到注释符号 (`'`)。 此符号通知 Visual Basic 编译器忽略它，后面的文本或*注释*。 注释是为了方便阅读而为代码添加的简短的解释性说明。  
@@ -28,11 +28,11 @@ ms.locfileid: "54597536"
   
  注释可以和语句同行并跟随其后，也可以另占一整行。 以下代码阐释了这两种情况。  
   
- [!code-vb[VbVbcnConventions#16](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_1.vb)]  
+ [!code-vb[VbVbcnConventions#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#16)]  
   
  如果注释需要多行，请在每行的前面使用注释符号，如以下示例所示。  
   
- [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_2.vb)]  
+ [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>注释原则  
  下表提供了在一段代码前可以加上哪些类型的注释的一般原则。 这些是一些建议;Visual Basic 不会强制实施有关添加注释的规则。 编写注释时，应编写对你和代码的任何其他读者都最为有效的注释。  
@@ -43,7 +43,7 @@ ms.locfileid: "54597536"
 |目标|描述过程的用途（而不是其实现方式）|  
 |假设|列举每个外部变量、控件、打开的文件或过程访问的其他元素|  
 |Effects|列举每个受影响的外部变量、控件、文件以及它的作用（仅在作用不明显时列举）|  
-|输入|指定参数的用途|  
+|输入|指定自变量的用途|  
 |返回|说明过程返回的值|  
   
  请记住以下几点：  

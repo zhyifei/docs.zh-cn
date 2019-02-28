@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: f2b1676ae959c5426af3021bbd340980115c5da6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e036792cf33082fa78cf243887b8ac7db7f8ad5a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724877"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981486"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 编码约定
 Microsoft 开发的示例和文档，请按照本主题中的准则。 如果您遵循相同的编码约定，您可能会获得以下优势：  
@@ -61,7 +61,7 @@ Microsoft 开发的示例和文档，请按照本主题中的准则。 如果您
   
 -   插入注释分隔符 （'） 和注释文本之间的一个空格。  
   
-     [!code-vb[VbVbalrGuidelines#2](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_1.vb)]  
+     [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
 -   环绕在注释格式化的星号块。  
   
@@ -69,7 +69,7 @@ Microsoft 开发的示例和文档，请按照本主题中的准则。 如果您
   
 -   当你使用`Main`方法，使用默认构造进行新控制台应用程序，并使用`My`对命令行参数。  
   
-     [!code-vb[VbVbalrGuidelines#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_2.vb)]  
+     [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
 ## <a name="language-guidelines"></a>语言准则  
   
@@ -77,16 +77,16 @@ Microsoft 开发的示例和文档，请按照本主题中的准则。 如果您
   
 -   若要连接字符串，请使用与号 (&)。  
   
-     [!code-vb[VbVbalrGuidelines#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_3.vb)]  
+     [!code-vb[VbVbalrGuidelines#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#4)]  
   
 -   若要追加在循环中的字符串，请使用<xref:System.Text.StringBuilder>对象。  
   
-     [!code-vb[VbVbalrGuidelines#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_4.vb)]  
+     [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
 ### <a name="relaxed-delegates-in-event-handlers"></a>事件处理程序中的宽松的委托  
  不显式符合条件的参数 （对象和 EventArgs） 到事件处理程序。 如果不使用传递给事件 （例如，发送方为对象，e 为 EventArgs） 的事件参数，使用宽松的委托，并将在代码中的事件参数：  
   
- [!code-vb[VbVbalrGuidelines#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_5.vb)]  
+ [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
   
 ### <a name="unsigned-data-type"></a>无符号数据类型  
   
@@ -96,19 +96,19 @@ Microsoft 开发的示例和文档，请按照本主题中的准则。 如果您
   
 -   在初始化数组声明行上的时，请使用短语法。 例如，使用以下语法。  
   
-     [!code-vb[VbVbalrGuidelines#8](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_6.vb)]  
+     [!code-vb[VbVbalrGuidelines#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#8)]  
   
      不要使用以下语法。  
   
-     [!code-vb[VbVbalrGuidelines#9](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_7.vb)]  
+     [!code-vb[VbVbalrGuidelines#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#9)]  
   
 -   将数组指定符置于类型上而不是变量上。 例如，使用以下语法：  
   
-     [!code-vb[VbVbalrGuidelines#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_8.vb)]  
+     [!code-vb[VbVbalrGuidelines#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#11)]  
   
      不要使用以下语法：  
   
-     [!code-vb[VbVbalrGuidelines#10](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_9.vb)]  
+     [!code-vb[VbVbalrGuidelines#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#10)]  
   
 -   当声明和初始化基本数据类型的数组时，请使用 {} 语法。 例如，使用以下语法：  
   
@@ -116,12 +116,12 @@ Microsoft 开发的示例和文档，请按照本主题中的准则。 如果您
   
      不要使用以下语法：  
   
-     [!code-vb[VbVbalrGuidelines#13](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_11.vb)]  
+     [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>使用 With 关键字  
  当你进行一系列调用到一个对象时，请考虑使用`With`关键字：  
   
- [!code-vb[VbVbalrGuidelines#15](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_12.vb)]  
+ [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
 ### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>可以使用 Try...Catch 和 Using 语句时使用异常处理  
  请勿使用 `On Error Goto`。  
@@ -133,29 +133,29 @@ Microsoft 开发的示例和文档，请按照本主题中的准则。 如果您
   
 -   使用短实例化。 例如，使用以下语法：  
   
-     [!code-vb[VbVbalrGuidelines#21](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_13.vb)]  
+     [!code-vb[VbVbalrGuidelines#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#21)]  
   
      前面的行是等效于此：  
   
-     [!code-vb[VbVbalrGuidelines#22](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_14.vb)]  
+     [!code-vb[VbVbalrGuidelines#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#22)]  
   
 -   使用对象初始值设定项的新对象而不是无参数构造函数：  
   
-     [!code-vb[VbVbalrGuidelines#23](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_15.vb)]  
+     [!code-vb[VbVbalrGuidelines#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#23)]  
   
 ### <a name="event-handling"></a>事件处理  
   
 -   使用`Handles`而非`AddHandler`:  
   
-     [!code-vb[VbVbalrGuidelines#24](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_16.vb)]  
+     [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
 -   使用`AddressOf`，并执行不显式实例化委托：  
   
-     [!code-vb[VbVbalrGuidelines#25](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_17.vb)]  
+     [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
 -   在定义事件时，使用短语法并让编译器定义此委托：  
   
-     [!code-vb[VbVbalrGuidelines#26](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_18.vb)]  
+     [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
 -   不要验证事件是否是`Nothing`(null)，然后再调用`RaiseEvent`方法。 `RaiseEvent` 检查`Nothing`引发事件之前。  
   
@@ -173,37 +173,37 @@ Microsoft 开发的示例和文档，请按照本主题中的准则。 如果您
   
 -   使用嵌入的表达式包括值并创建从现有值而不是使用 API 调用，如 XML`Add`方法：  
   
-     [!code-vb[VbVbalrGuidelines#27](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_19.vb)]  
+     [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
 ### <a name="linq-queries"></a>LINQ 查询  
   
 -   对查询变量使用有意义的名称：  
   
-     [!code-vb[VbVbalrGuidelines#28](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_20.vb)]  
+     [!code-vb[VbVbalrGuidelines#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#28)]  
   
 -   为确保匿名类型的属性名称正确大写使用 Pascal 的查询中的元素提供名称大小写：  
   
-     [!code-vb[VbVbalrGuidelines#29](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_21.vb)]  
+     [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
 -   如果结果中的属性名称模棱两可，请对属性重命名。 例如，如果您的查询返回一个客户名称和一个订单 ID，重命名它们而不是它们保留为`Name`和`ID`结果中：  
   
-     [!code-vb[VbVbalrGuidelines#30](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_22.vb)]  
+     [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
 -   查询变量和范围变量的声明中使用类型推断功能：  
   
-     [!code-vb[VbVbalrGuidelines#31](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_23.vb)]  
+     [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
 -   对齐下的查询子句`From`语句：  
   
-     [!code-vb[VbVbalrGuidelines#32](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_24.vb)]  
+     [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
 -   使用`Where`子句之前其他查询子句，以便更高版本的查询子句作用于筛选的数据集：  
   
-     [!code-vb[VbVbalrGuidelines#33](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_25.vb)]  
+     [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
 -   使用`Join`子句显式定义的联接操作，而不是使用`Where`子句隐式定义联接操作：  
   
-     [!code-vb[VbVbalrGuidelines#34](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_26.vb)]  
+     [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>请参阅
 - [安全编码准则](../../../standard/security/secure-coding-guidelines.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 758d3334fd9d3b01e088246cf2fe28c5b03576d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065864"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973725"
 ---
 # <a name="myresources-object"></a>My.Resources 对象
 提供用于访问应用程序的资源的属性和类。  
@@ -53,29 +53,29 @@ ms.locfileid: "55065864"
 ## <a name="example"></a>示例  
  此示例将窗体的标题设置为命名的字符串资源`Form1Title`在应用程序资源文件中。 若要运行示例，应用程序必须具有一个名为字符串`Form1Title`其资源文件中。  
   
- [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
+ [!code-vb[VbVbalrMyResources#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#1)]  
   
 ## <a name="example"></a>示例  
  此示例设置窗体的图标名为的图标为`Form1Icon`存储在应用程序的资源文件。 若要运行示例，应用程序必须具有名为一个图标`Form1Icon`其资源文件中。  
   
- [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
+ [!code-vb[VbVbalrMyResources#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#2)]  
   
 ## <a name="example"></a>示例  
  此示例将一个窗体的背景图像设置为命名的图像资源`Form1Background`，这是应用程序资源文件中。 此示例正常工作，应用程序必须有一个名为映像资源`Form1Background`其资源文件中。  
   
- [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
+ [!code-vb[VbVbalrMyResources#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>示例  
  此示例中播放的声音，存储为一个名为的音频资源`Form1Greeting`在应用程序的资源文件中。 若要运行示例，该应用程序必须具有一个名为的音频资源`Form1Greeting`其资源文件中。 `My.Computer.Audio.Play`方法是仅适用于 Windows 窗体应用程序。  
   
- [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
+ [!code-vb[VbVbalrMyResources#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>示例  
  此示例检索字符串资源的应用程序的法语区域性版本。 资源名为`Message`。 若要更改区域性的`My.Resources`对象使用，该示例使用<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>。  
   
  此示例正常工作，程序必须具有一个名为字符串`Message`在其资源文件和应用程序应具有的资源文件，Resources.fr-FR.resx 法语区域性版本。 如果应用程序不具有的资源文件中，法语区域性版本`My.Resource`对象将从默认区域性资源文件中检索资源。  
   
- [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
+ [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   
 ## <a name="see-also"></a>请参阅
 - [管理应用程序资源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)

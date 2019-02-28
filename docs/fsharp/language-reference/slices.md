@@ -2,12 +2,12 @@
 title: 切片 (F#)
 description: 了解如何使用现有的切片F#数据类型以及如何定义其他数据类型的切片。
 ms.date: 01/22/2019
-ms.openlocfilehash: c204c6cbb195b33998b92dd940313a132ecc321d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746702"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970099"
 ---
 # <a name="slices"></a>切片
 
@@ -95,7 +95,7 @@ F#核心库不会定义`GetSlice`三维数组。 如果你想要对那些或其�
 
 F#核心库定义了针对一组有限的类型段。 如果你想要定义更多的数据类型的切片，就可以做到本身在类型定义中或在类型扩展中。
 
-例如，下面是可以如何定义切片<xref:System.ArraySegment`1>类，以允许用于方便数据处理：
+例如，下面是可以如何定义切片<xref:System.ArraySegment%601>类，以允许用于方便数据处理：
 
 ```fsharp
 open System
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>使用内联，从而避免装箱，如有必要
 
-如果你正在定义的实际结构类型的切片，我们建议您`inline``GetSlice`成员。 F#编译器会优化的可选参数，避免由于切片任何堆分配。 这是非常重要的如切片构造<xref:System.Span`1>，不能在堆上分配。
+如果你正在定义的实际结构类型的切片，我们建议您`inline``GetSlice`成员。 F#编译器会优化的可选参数，避免由于切片任何堆分配。 这是非常重要的如切片构造<xref:System.Span%601>，不能在堆上分配。
 
 ```fsharp
 open System

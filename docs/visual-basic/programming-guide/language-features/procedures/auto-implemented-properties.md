@@ -9,27 +9,27 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: fdf5b8bcc53a49b31fa0fb2b71dc2702a4900503
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ea9bac1326ebab7ef44fb5541c05be8bc855e7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495456"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967199"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>自动实现的属性 (Visual Basic)
 *自动实现的属性*使您能够快速指定类的属性，而无需编写代码以`Get`和`Set`属性。 为自动实现的属性编写代码时，Visual Basic 编译器会自动创建私有字段以存储属性变量，并且会创建关联的 `Get` 和 `Set` 过程。  
   
  使用自动实现的属性，可以在单行中声明一个属性（包括默认值）。 下面的示例演示三个属性声明。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#1](./codesnippet/VisualBasic/auto-implemented-properties_1.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#1)]  
   
  自动实现的属性等效于其属性值存储在私有字段中的属性。 下面的代码示例演示一个自动实现的属性。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#5](./codesnippet/VisualBasic/auto-implemented-properties_2.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#5)]  
   
  下面的代码示例演示上面自动实现的属性示例的等效代码。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#2](./codesnippet/VisualBasic/auto-implemented-properties_3.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#2)]  
   
  以下代码演示如何实现只读属性：  
   
@@ -63,7 +63,7 @@ End Class
 ## <a name="initializing-an-auto-implemented-property"></a>初始化自动实现的属性  
  任何可以用于实例化字段的表达式对于初始化自动实现的属性都是有效的。 初始化自动实现的属性时，表达式会进行计算并传递给属性的 `Set` 过程。 下面的代码示例演示一些包含初始值的自动实现的属性。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#3](./codesnippet/VisualBasic/auto-implemented-properties_4.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#3)]  
   
  无法初始化作为 `Interface` 的成员或标记为 `MustOverride` 的自动实现的属性。  
   
@@ -71,7 +71,7 @@ End Class
   
  将自动实现的属性声明为数组时，不能指定显式数组边界。 但是，可以使用数组初始值设定项提供值，如下面的示例所示。  
   
- [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>需要标准语法的属性定义  
  自动实现的属性十分方便，支持很多编程方案。 但是，有些情况下，不能使用自动实现的属性并必须改为使用标准，或者*展开*，属性语法。  
@@ -91,7 +91,7 @@ End Class
 -   为支持字段提供 XML 注释。  
   
 ## <a name="expanding-an-auto-implemented-property"></a>扩展自动实现的属性  
- 如果需要将自动实现的属性转换为包含 `Get` 或 `Set` 过程的扩展属性，则 Visual Basic 代码编辑器可以为属性自动生成 `Get` 和 `Set` 过程以及 `End Property` 语句。 如果将光标置于后的空白行上生成的代码`Property`语句中，键入一个`G`(对于`Get`) 或`S`(为`Set`) 并按 ENTER。 在 `Property` 语句末尾按 Enter 时，Visual Basic 代码编辑器会为只读和只写属性自动生成 `Get` 或 `Set` 过程。  
+ 如果需要将自动实现的属性转换为包含 `Get` 或 `Set` 过程的展开属性，则 Visual Basic 代码编辑器可以为属性自动生成 `Get` 和 `Set` 过程以及 `End Property` 语句。 如果将光标置于后的空白行上生成的代码`Property`语句中，键入一个`G`(对于`Get`) 或`S`(为`Set`) 并按 ENTER。 在 `Property` 语句末尾按 Enter 时，Visual Basic 代码编辑器会为只读和只写属性自动生成 `Get` 或 `Set` 过程。  
   
 ## <a name="see-also"></a>请参阅
 - [如何：声明并在 Visual Basic 中调用默认属性](./how-to-declare-and-call-a-default-property.md)

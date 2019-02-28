@@ -9,12 +9,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: 76d0769456e30766b830023c1f27381ceca59cbb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe5c314fe4e39c8a06803037da29b51148188e14
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521525"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974635"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>如何：定义转换运算符 (Visual Basic)
 如果已定义的类或结构，可以定义类或结构的类型与另一种数据类型之间的类型转换运算符 (如`Integer`， `Double`，或`String`)。  
@@ -26,11 +26,11 @@ ms.locfileid: "54521525"
 ## <a name="example"></a>示例  
  下面的示例定义一个称为结构之间的转换运算符`digit`和一个`Byte`。  
   
- [!code-vb[VbVbcnProcedures#27](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_1.vb)]  
+ [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
   
  可以测试结构`digit`用下面的代码。  
   
- [!code-vb[VbVbcnProcedures#28](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_2.vb)]  
+ [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>请参阅
 - [运算符过程](./operator-procedures.md)

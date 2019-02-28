@@ -1,5 +1,5 @@
 ---
-title: AddFile 方法 1
+title: AddFile 方法
 ms.date: 03/30/2017
 api_name:
 - IALink.AddFile
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84b68638ed0f7a86156cf7e5fcc98d3c02cba18a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04bc008d0279601e90d13e6a57c52a458fca1d7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662603"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967875"
 ---
-# <a name="addfile-method1"></a>AddFile 方法 1
+# <a name="addfile-method"></a>AddFile 方法
 将文件添加到该程序集。 此外可以用于创建未绑定的模块。  
   
 ## <a name="syntax"></a>语法  

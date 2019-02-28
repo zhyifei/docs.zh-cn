@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], manipulating [Visual Basic]
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
-ms.openlocfilehash: fa579303ad268a88269f360bdf626f9590c5d6a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a75984d0eb64ef8c18def3ae59d5e1f4b6d20ce2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648490"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980331"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>字符串操作方法的类型 (Visual Basic)
 有几种不同的方法来分析和操作字符串。 某些方法是 Visual Basic 语言的一部分，而有些固有`String`类。  
@@ -18,7 +18,7 @@ ms.locfileid: "54648490"
 ## <a name="visual-basic-language-and-the-net-framework"></a>Visual Basic 语言和.NET Framework  
  Visual Basic 方法用作语言的固有功能。 他们可能使用而无需在代码中的限定。 下面的示例演示 Visual Basic 字符串操作命令的典型用法：  
   
- [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_1.vb)]  
+ [!code-vb[VbVbalrStrings#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#44)]  
   
  在此示例中，`Mid`函数对执行直接运算`aString`并将值分配给`bString`。  
   
@@ -30,14 +30,14 @@ ms.locfileid: "54648490"
 #### <a name="shared-methods"></a>共享的方法  
  共享的方法是源于方法`String`类本身并不需要处理，该类的实例。 这些方法可使用的类名称限定 (`String`)，而非包含的实例`String`类。 例如：  
   
- [!code-vb[VbVbalrStrings#45](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_2.vb)]  
+ [!code-vb[VbVbalrStrings#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#45)]  
   
  在前面的示例中，<xref:System.String.Copy%2A?displayProperty=nameWithType>方法是静态方法，对表达式的行为它给出并将结果值输出到`bString`。  
   
 #### <a name="instance-methods"></a>实例方法  
  实例方法，与此相反，源于的特定实例`String`，并且必须具有实例名称限定。 例如：  
   
- [!code-vb[VbVbalrStrings#46](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_3.vb)]  
+ [!code-vb[VbVbalrStrings#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#46)]  
   
  在此示例中，<xref:System.String.Substring%2A?displayProperty=nameWithType>方法是一种方法的实例的`String`(即， `aString`)。 它对执行操作`aString`并将该值赋予`bString`。  
   

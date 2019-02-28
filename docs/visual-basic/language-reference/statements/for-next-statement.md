@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 703a30a558067b386c6bb5288012094418d61ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b12a1b1b8d116cc906459407240fca4302460e4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746268"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968720"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 语句 (Visual Basic)
 将一组语句重复指定的次数。  
@@ -67,11 +67,11 @@ Next [ counter ]
   
  在以下示例中，`index`变量开头的值为 1，并会在循环结束后的值的每次迭代时递增`index`达到 5。  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]  
   
  在以下示例中，`number`变量从 2 开始，将降低在循环结束后的值的每次迭代 0.25`number`达到 0。 `Step`自变量的`-.25`降低 0.25 循环的每个迭代上的值。  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]  
   
 > [!TIP]
 >  一个[时...While 语句结束](../../../visual-basic/language-reference/statements/while-end-while-statement.md)或[执行操作...循环语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)正常时你事先不知道在多少次循环中运行这些语句。 但是，如果您希望运行特定次数的循环`For`...`Next`循环是更好的选择。 当您首次进入循环时确定迭代的次数。  
@@ -79,7 +79,7 @@ Next [ counter ]
 ## <a name="nesting-loops"></a>嵌套循环  
  可以嵌套`For`放置另一个循环内的循环。 下面的示例演示嵌套`For`...`Next`具有不同的步骤值的结构。 外部循环创建循环每次迭代的字符串。 内部循环减小该循环每次迭代的循环计数器变量。  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]  
   
  当嵌套循环，每个循环必须具有一个唯一`counter`变量。  
   
@@ -160,17 +160,17 @@ Next [ counter ]
 ## <a name="example"></a>示例  
  下面的示例从一个泛型列表中移除所有元素。 而不是[为每个...下一条语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)，该示例演示了`For`...`Next`按降序顺序循环访问的语句。 该示例使用此方法，因为`removeAt`方法将导致触发 after 已移除的元素具有较低的索引值的元素。  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]  
   
 ## <a name="example"></a>示例  
  下面的示例循环访问使用声明的枚举[Enum 语句](../../../visual-basic/language-reference/statements/enum-statement.md)。  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]  
   
 ## <a name="example"></a>示例  
  在以下示例中，语句参数使用具有运算符重载的类`+`， `-`， `>=`，和`<=`运算符。  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Collections.Generic.List%601>

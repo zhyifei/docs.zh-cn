@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: f1086fdc26f1909e751617b78e0cd31f2a8b1b95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 662dc63b69a8229693471909a50b0c4f336b5637
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656656"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965691"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum 语句 (Visual Basic)
 声明枚举并定义其成员的值。  
@@ -139,37 +139,37 @@ End Enum
 ## <a name="example"></a>示例  
  下面的示例演示如何使用 `Enum` 语句。 请注意，该成员被称为`EggSizeEnum.Medium`，而不是作为`Medium`。  
   
- [!code-vb[VbEnumsTask#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_1.vb)]  
+ [!code-vb[VbEnumsTask#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#41)]  
   
 ## <a name="example"></a>示例  
  下面的示例中的方法是外部`Egg`类。 因此，`EggSizeEnum`完全限定为`Egg.EggSizeEnum`。  
   
- [!code-vb[VbEnumsTask#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_2.vb)]  
+ [!code-vb[VbEnumsTask#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#42)]  
   
 ## <a name="example"></a>示例  
  下面的示例使用`Enum`语句来定义一组相关的命名常量的值。 在这种情况下，值是您可能选择设计为数据库的数据输入窗体的颜色。  
   
- [!code-vb[VbEnumsTask#30](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_3.vb)]  
+ [!code-vb[VbEnumsTask#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#30)]  
   
 ## <a name="example"></a>示例  
  下面的示例显示了包括正和负号的值。  
   
- [!code-vb[VbEnumsTask#31](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_4.vb)]  
+ [!code-vb[VbEnumsTask#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#31)]  
   
 ## <a name="example"></a>示例  
  在以下示例中，`As`子句用于指定`datatype`的枚举。  
   
- [!code-vb[VbEnumsTask#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_5.vb)]  
+ [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用按位枚举。 多个值可以分配给的按位枚举的实例。 `Enum`声明包括<xref:System.FlagsAttribute>属性，指示可以将枚举视为一组标志。  
   
- [!code-vb[VbEnumsTask#61](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_6.vb)]  
+ [!code-vb[VbEnumsTask#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#61)]  
   
 ## <a name="example"></a>示例  
  下面的示例循环访问枚举。 它使用<xref:System.Enum.GetNames%2A>方法从枚举检索的成员名称的数组和<xref:System.Enum.GetValues%2A>检索成员值的数组。  
   
- [!code-vb[VbEnumsTask#51](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_7.vb)]  
+ [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Enum>

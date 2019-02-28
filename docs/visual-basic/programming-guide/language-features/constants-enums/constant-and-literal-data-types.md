@@ -9,19 +9,19 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: d85ff343587e8689a4859a09c8dc80932374a82e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 269045dcfec14fafe878c2716490c93e79efe3d7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498643"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978210"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>常量和 Literal 数据类型 (Visual Basic)
 文本是一个值，表示为本身而不是变量的值或表达式，如数字 3 或字符串"Hello"的结果。 常量是有意义的名称，它接受文本的位置，并将保留在整个程序，而不是变量，其值可能会更改此相同的值。  
   
  当[Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)是`Off`并[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)是`On`，您必须显式声明的所有常量具有数据类型。 在下面的示例中的数据类型`MyByte`显式声明数据类型为`Byte`:  
   
- [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_1.vb)]  
+ [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
  当`Option Infer`是`On`或`Option Strict`是`Off`，你可以声明变量，而无需指定数据类型为`As`子句。 编译器确定的常量表达式的类型的类型。 默认情况下强制转换数字的整数文本`Integer`数据类型。 默认数据类型为浮点数`Double`，和关键字`True`并`False`指定`Boolean`常量。  
   
@@ -39,11 +39,11 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  若要使上一个示例工作，您可以将附加`D`类型为文本，这会导致它无法表示为字符`Decimal`:  
   
- [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_2.vb)]  
+ [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
  下面的示例演示如何正确使用类型字符和封闭字符：  
   
- [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
+ [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
  如下表所示的封闭字符和 Visual Basic 中可用的类型字符。  
   

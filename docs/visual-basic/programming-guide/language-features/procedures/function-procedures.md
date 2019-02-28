@@ -9,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: 8b67a6953e7788827ef1ec268f54bddf2f1392c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1e2c707b3caa8c7cc49a6f33840ebdfd0c89f4e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662252"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968642"
 ---
 # <a name="function-procedures-visual-basic"></a>Function 过程 (Visual Basic)
 一个`Function`过程是 Visual Basic 语句括在一系列`Function`和`End Function`语句。 `Function`过程执行一项任务，再将控制权返回到调用代码。 当它返回控制时，它还向调用代码返回一个值。  
@@ -92,11 +92,11 @@ End Function
 ### <a name="illustration-of-declaration-and-call"></a>声明和调用的插图  
  以下`Function`过程计算的最长边或斜边的直角三角形而言，其他两个方面为给定的值。  
   
- [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/function-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
  下面的示例演示对典型调用`hypotenuse`。  
   
- [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/function-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>请参阅
 - [过程](./index.md)

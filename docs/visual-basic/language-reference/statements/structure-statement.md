@@ -12,12 +12,12 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: 64ded285c74d61206618695c1d0bb6f158ce860d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8d312bc14cf4df3825586de0eba5cba64856268
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704899"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977508"
 ---
 # <a name="structure-statement"></a>Structure 语句
 声明结构的名称，并引入的变量、 属性、 事件和结构包含的过程的定义。  
@@ -102,7 +102,7 @@ End Structure
 ## <a name="example"></a>示例  
  下面的示例使用`Structure`语句来为某位员工定义一组相关数据。 它演示如何使用`Public`， `Friend`，和`Private`成员以反映数据项目的敏感度。 它还将显示过程、 属性和事件成员。  
   
- [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#57)]  
   
 ## <a name="see-also"></a>请参阅
 - [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)

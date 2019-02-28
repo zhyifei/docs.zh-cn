@@ -8,14 +8,15 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18bf03fee1a95c898e8273fa839e41a86b2d1c32
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f50db519410b9513725c3dc10637421ba8bb37ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828366"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965223"
 ---
 # <a name="debugging-structures"></a>调试结构
+
 本节描述调试 API 使用的非托管结构。
 
 ## <a name="in-this-section"></a>本节内容
@@ -25,7 +26,7 @@ ms.locfileid: "55828366"
 
  [CLR_DEBUGGING_VERSION 结构](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)定义公共语言运行时 (CLR) 出于调试目的的产品版本。
 
- [CodeChunkInfo 结构 1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)表示单一在内存中的代码块。
+ [CodeChunkInfo 结构](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)表示单一在内存中的代码块。
 
  [COR_ACTIVE_FUNCTION](cor-active-function-structure.md)包含有关当前线程的帧中处于活动状态的函数的信息。
 
@@ -71,9 +72,8 @@ ms.locfileid: "55828366"
 
  [StackTrace_SimpleContext 结构](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)提供了可用于代替完整的简单上下文`CONTEXT`结构。
 
-
-
 ## <a name="related-sections"></a>相关章节
+
  [调试组件类](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
 
  [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

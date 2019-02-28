@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 3a13b1a3d3e44f2c309e031e23972a5326ed3faa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13b1d18592379d7a08e68e84ffba62f1cc977caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653614"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966068"
 ---
 # <a name="event-statement"></a>Event 语句
 声明用户定义的事件。  
@@ -82,7 +82,7 @@ End Event
 ## <a name="remarks"></a>备注  
  一旦声明了事件，便可使用 `RaiseEvent` 语句引发事件。 可以按以下片段所示声明和引发典型事件：  
   
- [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#13)]  
   
 > [!NOTE]
 >  可以正如处理过程的自变量一样来声明事件自变量，不过有以下例外：事件不能具有命名自变量、`ParamArray` 自变量或 `Optional` 自变量。 事件没有返回值。  
@@ -100,22 +100,24 @@ End Event
   
  该示例还使用一个窗体 (`Form1`)，其中包含一个按钮 (`Button1`) 和一个文本框 (`TextBox1`)。 单击该按钮时，第一个文本框显示从 10 秒到 0 秒的倒计时。 经过了全部时间（10 秒）之后，第一个文本框会显示“Done”。  
   
- `Form1` 的代码指定窗体的初始和最终状态。 它还包含引发事件时执行的代码。  
+ 
+  `Form1` 的代码指定窗体的初始和最终状态。 它还包含引发事件时执行的代码。  
   
  若要使用此示例，请打开新的 Windows 窗体项目。 然后向名为 `Form1` 的主窗体添加一个名为 `Button1` 的按钮和一个名为 `TextBox1` 的文本框。 右键单击窗体，然后单击**查看代码**以打开代码编辑器。  
   
  向 `Form1` 类的声明部分添加一个 `WithEvents` 变量：  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
  将下面的代码添加到 `Form1` 的代码： 替换可能存在的任何重复过程，如 `Form_Load` 或 `Button_Click`。  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  按 F5 以运行前面的示例中，并单击标记的按钮**启动**。 第一个文本框中开始倒计时秒数。 经过了全部时间（10 秒）之后，第一个文本框会显示“Done”。  
   
 > [!NOTE]
->  `My.Application.DoEvents` 方法不会按照与窗体相同的方式来处理事件。 若要使窗体可以直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[托管线程处理](../../../standard/threading/index.md)。  
+>  
+  `My.Application.DoEvents` 方法不会按照与窗体相同的方式来处理事件。 若要使窗体可以直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[托管线程处理](../../../standard/threading/index.md)。  
   
 ## <a name="see-also"></a>请参阅
 - [RaiseEvent 语句](../../../visual-basic/language-reference/statements/raiseevent-statement.md)

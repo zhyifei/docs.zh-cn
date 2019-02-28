@@ -17,36 +17,36 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-ms.openlocfilehash: 0336ac54c6a0dadeb9758bcb15477fe96dbfcc65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9edb809624727aba5c40b410d0356804257bf516
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513693"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964651"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>枚举和名称限定 (Visual Basic)
 通常情况下，在引用枚举成员，必须限定为枚举名称的成员名称。 例如，若要引用`Sunday`的成员在`Days`枚举，请使用以下语法：  
   
- [!code-vb[VbEnumsTask#18](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_1.vb)]  
+ [!code-vb[VbEnumsTask#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#18)]  
   
 ## <a name="using-the-imports-statement"></a>使用 Imports 语句  
  您可以通过避免使用完全限定的名称添加`Imports`语句向你的代码，如以下示例所示的命名空间声明部分：  
   
- [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_2.vb)]  
+ [!code-vb[VbEnumsTask#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#22)]  
   
  `Imports`语句导入的命名空间名称，从引用的项目和程序集和与该语句将出现的模块相同的项目。 一旦添加此语句，也可以引用到枚举成员，而无需限定，如以下示例所示：  
   
- [!code-vb[VbEnumsTask#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_3.vb)]  
+ [!code-vb[VbEnumsTask#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#24)]  
   
  通过组织在枚举中的相关常量集，可以使用不同的上下文中相同的常量名称。 例如，可以使用相同的名称为在工作日的常数`Days`和`WorkDays`枚举。 如果使用`Imports`与枚举一起语句，您必须小心，避免不明确的引用。 请看下面的示例：  
   
- [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_2.vb)]  
+ [!code-vb[VbEnumsTask#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#22)]  
   
- [!code-vb[VbEnumsTask#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_4.vb)]  
+ [!code-vb[VbEnumsTask#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#25)]  
   
  假设`Monday`是两个成员`Days`枚举和`Workdays`枚举，此代码将生成编译器错误。 若要避免不明确的引用，当涉及到单个常量时，有资格使用其枚举常量的名称。 下面的代码是指`Saturday`中的常量`Days`和`WorkDays`枚举。  
   
- [!code-vb[VbEnumsTask#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_5.vb)]  
+ [!code-vb[VbEnumsTask#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#32)]  
   
 ## <a name="see-also"></a>请参阅
 - [常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)

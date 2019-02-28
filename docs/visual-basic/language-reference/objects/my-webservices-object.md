@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: b3a486cb886e8f39081f30a2849e2d14573cf5e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b4e703cb3f723ea283f725d0f4ce4711dca3c9e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676336"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967810"
 ---
 # <a name="mywebservices-object"></a>My.WebServices 对象
 提供用于创建和访问当前项目所引用的每个 XML Web 服务的单个实例的属性。  
@@ -42,7 +42,7 @@ ms.locfileid: "54676336"
 ## <a name="example"></a>示例  
  此示例调用`FahrenheitToCelsius`方法的`TemperatureConverter`XML Web 服务，并返回结果。  
   
- [!code-vb[VbVbalrMyWebService#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-webservices-object_1.vb)]  
+ [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
  此示例正常工作，为你的项目必须引用一个名为 Web 服务`Converter`，并且该 Web 服务必须公开`ConvertTemperature`方法。 有关详细信息，请参阅[访问应用程序 Web 服务](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)。  
   

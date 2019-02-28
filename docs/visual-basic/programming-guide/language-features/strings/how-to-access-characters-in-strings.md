@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: 9833b562fc0b4115448ebefb8631f0d73eb15f6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2831333008844c959c3625698fce6c485450683
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618917"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967550"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>如何：在 Visual Basic 中的字符串中的访问字符
 此示例演示如何使用<xref:System.String.Chars%2A>属性来访问位于字符串中的指定位置处的字符。  
@@ -18,7 +18,7 @@ ms.locfileid: "54618917"
 ## <a name="example"></a>示例  
  有时是有关你的字符串和这些字符在字符串中的位置中的字符的数据很有用。 您可以将字符串视为字符数组 (`Char`实例); 您可以通过引用通过该字符的索引检索特定字符<xref:System.String.Chars%2A>属性。  
   
- [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-access-characters-in-strings_1.vb)]  
+ [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
   
  `index`参数的<xref:System.String.Chars%2A>属性是从零开始。  
   

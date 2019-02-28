@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: b19c36018a0938b9b6546e5baefbbc3de1e5dd30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a43d09be53eb5a04d154e482f9388e2ca480118a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619910"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967173"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>如何：拆分和合并语句中的代码 (Visual Basic)
 编写你的代码时，可能有时创建耗时较长的语句都必须采取措施水平滚动代码编辑器中。 尽管这不会影响的方式运行代码，它使得您或任何其他人无法读取代码在监视器上显示。 在这种情况下，应考虑将单个的长语句分成多个行。  
@@ -40,7 +40,7 @@ ms.locfileid: "54619910"
   
      在以下示例中，该语句将划分成四行延续字符终止所有行，但最后一行。  
   
-     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
+     [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]  
   
      这样可以使代码易于阅读，均通过在线和当打印。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54619910"
   
 -   用冒号分隔的语句 (`:`)，如下面的示例。  
   
-     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
+     [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>请参阅
 - [程序结构和代码约定](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

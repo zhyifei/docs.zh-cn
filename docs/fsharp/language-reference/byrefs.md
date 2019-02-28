@@ -2,12 +2,12 @@
 title: Byref
 description: 了解有关 byref 和类似 byref 类型在F#，用于低级编程。
 ms.date: 09/02/2018
-ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611576"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976546"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -105,7 +105,7 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 用途`outref<'T>`是指示指针应仅在从读取。 意外，`outref<'T>`允许读取基础值，尽管其名称。 这是为了实现兼容性。 在语义上，`outref<'T>`没有什么不同`byref<'T>`。
 
-### <a name="interop-with-c"></a>使用 C# 的互操作 #
+### <a name="interop-with-c"></a>与 C 进行互操作\#
 
 C# 支持`in ref`并`out ref`关键字，除了`ref`返回。 下表显示了如何F#解释什么C#发出：
 
@@ -151,7 +151,7 @@ let v2 =  C.M2(res, 4)
 
 ## <a name="byref-like-structs"></a>Byref 类似结构
 
-除了`byref` / `inref` / `outref`三个，你可以定义自己的结构，可以遵循`byref`-等语义。 这通过<xref:System.Runtime.CompilerServices.IsByRefLikeAttribute>属性：
+除了`byref` / `inref` / `outref`三个，你可以定义自己的结构，可以遵循`byref`-等语义。 此操作通过 <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> 属性实现：
 
 ```fsharp
 open System

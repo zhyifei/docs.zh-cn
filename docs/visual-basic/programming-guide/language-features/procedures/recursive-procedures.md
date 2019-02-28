@@ -10,19 +10,19 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: b5cbe0dfa8053a93cde9c92ffe87f0eae15d3efd
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 97cceb833da0ef6f9ee4e3dab5abb1f2ba73a94e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739288"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969318"
 ---
 # <a name="recursive-procedures-visual-basic"></a>递归过程 (Visual Basic)
 一个*递归*过程是指调用其自身。 一般情况下，这不是编写 Visual Basic 代码的最有效方法。  
   
  以下过程使用递归来计算其原始自变量的阶乘。  
   
- [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
 ## <a name="considerations-with-recursive-procedures"></a>递归过程的注意事项  
  **限制条件**。 必须设计的递归过程测试可以终止递归的至少一个条件和您还必须处理任何此类条件均在合理的递归调用数内的情况。 没有可以满足而不会出现的至少一个条件，您的过程在运行高风险的无限循环中执行。  

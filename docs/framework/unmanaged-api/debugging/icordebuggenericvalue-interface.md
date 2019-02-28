@@ -1,5 +1,5 @@
 ---
-title: ICorDebugGenericValue Interface1
+title: ICorDebugGenericValue 接口
 ms.date: 03/30/2017
 api_name:
 - ICorDebugGenericValue
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce4c1b73ab806958627bb68bfdcfcae890bc5e67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad2209c6e28c7749bd149902e5b696955ee7f13f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709827"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981980"
 ---
-# <a name="icordebuggenericvalue-interface1"></a>ICorDebugGenericValue Interface1
+# <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue 接口
+
 适用于所有值的"ICorDebugValue"的子类。 此接口可为值提供 Get 和 Set 方法。  
   
 ## <a name="methods"></a>方法  

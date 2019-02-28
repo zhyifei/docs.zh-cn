@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: f85c7a7edf4d05dc50166ad4f30080c2e595cf65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 899c33e6615e2979ba7abe0f537dbe05fd104beb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590638"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965561"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>如何：调用不返回值 (Visual Basic 中) 的过程
 一个`Sub`过程不会返回到调用代码的值。 显式调用该过程与独立的调用语句。 不能只需使用其名称的表达式内调用它。  
@@ -26,7 +26,7 @@ ms.locfileid: "54590638"
   
      下面的示例调用 Visual Basic<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>函数以激活应用程序窗口。 <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> 将窗口标题作为其唯一的参数。 不会返回到调用代码的值。 如果未运行 Notepad 进程，则本示例引发<xref:System.ArgumentException>。 `Shell`过程假设应用程序中指定的路径。  
   
-     [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
+     [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>

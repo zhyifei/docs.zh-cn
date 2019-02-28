@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 9c4d6397d9a9ab1b95c4708c1e98741c01e9302e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bd78772b35e3f336f49c1d39b5f56a3a2076c30
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706636"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970280"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>如何：强制自变量传递的值 (Visual Basic)
 过程声明确定的传递机制。 如果声明的参数[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 希望按引用传递相应的参数。 这将允许过程来更改调用代码中的参数的基础编程元素的值。 如果你想要防止此类更改基础元素，则可以重写`ByRef`传递机制在过程调用将参数名称括在括号中。 这些括号是除了括号之外的参数列表的调用中。  
@@ -35,9 +35,9 @@ ms.locfileid: "54706636"
 ## <a name="example"></a>示例  
  下面的示例替代`ByRef`参数声明。 强制在调用中`ByVal`，请注意两个级别的括号。  
   
- [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#39)]  
   
- [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#40)]  
   
  时`str`都包含在参数列表中的额外圆括号`setNewString`过程不能更改在调用代码中，其值和`MsgBox`显示"不能替换如果传递 ByVal"。 当`str`不包含在额外的括号，该过程可以更改它，和`MsgBox`显示"这是新 inString 参数的值"。  
   

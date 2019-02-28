@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 - '>>= operator [Visual Basic]'
 ms.assetid: 2bcd9abb-7a8c-4229-b75d-8816ff1dc700
-ms.openlocfilehash: 0ea1e03168da12564f148f525af977f29a43bec8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0ae4eb16727b2b297088170ada04cfd07d6c7a0a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265280"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980108"
 ---
 # <a name="-operator-visual-basic"></a>>>= 运算符 (Visual Basic)
 对变量或属性的值执行算术右移位运算并将结果赋回给变量或属性。  
@@ -46,7 +46,7 @@ variableorproperty >>= amount
 ## <a name="example"></a>示例  
  下面的示例使用`>>=`运算符将该位模式移位的`Integer`变量直接由指定的量和将结果赋给变量。  
   
- [!code-vb[VbVbalrOperators#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#15)]  
   
 ## <a name="see-also"></a>请参阅
 - [>> 运算符](../../../visual-basic/language-reference/operators/right-shift-operator.md)

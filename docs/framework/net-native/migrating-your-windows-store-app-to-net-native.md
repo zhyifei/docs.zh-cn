@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cc3b806043daea9247741b1816c9055378f45cf
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 92e4f416e26e5af9124593f2bef8d8042fcfc953
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443031"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966783"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>将 Windows 应用商店应用迁移到 .NET Native
 .NET 本机提供应用在 Windows 应用商店中或开发人员的计算机上的静态的编译。 这不同于及时生成 (JIT) 编译器或 [本地映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 在该设备上为 Windows 应用商店应用执行的动态编译。 尽管存在不同，.NET Native 尝试保持与兼容性[.NET for Windows Store 应用](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)。 大多数情况下，用于.NET for Windows Store 应用的内容也适用于.NET Native。  然而，在某些情况下，你可能会遇到行为变更。 本文档介绍了以下几个方面之间的标准.NET for Windows Store 应用和.NET Native 的这些差异：  
@@ -622,10 +622,8 @@ ms.locfileid: "56443031"
   
 -   <xref:System.Xml.Serialization.XmlSerializer> 不兼容 <xref:System.Xml.Serialization.IXmlSerializable> 自定义序列化接口。 如果你的类实施此接口， <xref:System.Xml.Serialization.XmlSerializer> 会考虑普通旧 CLR 对象 (POCO) 类型并仅对其公共属性进行序列化。  
   
--   对普通 <xref:System.Exception> 对象的序列化（如以下情况）对 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>无效：  
-  
-  
-  
+-   序列化纯<xref:System.Exception>对象不太适合<xref:System.Runtime.Serialization.DataContractSerializer>和<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。
+
 <a name="VS"></a>   
 ## <a name="visual-studio-differences"></a>Visual Studio 差异  
  **异常和调试**  

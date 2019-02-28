@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: 3dfb70066d88683e60f3bf4199441ab3024ef36c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7e0587d7737d99d48fcc9cd4a102e78248a55e5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565100"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979927"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While 子句 (Visual Basic)
 包括集合中指定条件为 `true` 的任何元素，并绕过剩余元素。  
@@ -38,7 +38,7 @@ Take While expression
 ## <a name="example"></a>示例  
  下面的代码示例使用`Take While`子句来检索结果，直到找到第一个客户，而无需任何订单。  
   
- [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   
 ## <a name="see-also"></a>请参阅
 - [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

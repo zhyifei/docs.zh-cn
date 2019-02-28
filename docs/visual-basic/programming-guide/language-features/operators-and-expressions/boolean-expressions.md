@@ -14,22 +14,22 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: a86df2734d315e5fed0784b0394bb305b15562a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562747"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965535"
 ---
 # <a name="boolean-expressions-visual-basic"></a>布尔表达式 (Visual Basic)
 一个*布尔表达式*是表达式的计算结果为值[布尔数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md):`True`或`False`。 `Boolean` 表达式可以采用多种形式。 简单的方法是直接的值的比较`Boolean`变量`Boolean`文本，如下面的示例中所示。  
   
- [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
+ [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
 ## <a name="two-meanings-of-the--operator"></a>两种含义的 = 运算符  
  请注意，在赋值语句`newCustomer = True`与在前面的示例中，表达式看起来相同，但它执行不同的功能，以不同的方式使用。 在前面的示例中，表达式`newCustomer = True`表示一个布尔值，和`=`符号被解释为比较运算符。 在独立语句中，`=`符号被解释为赋值运算符，分配给左侧变量右侧值。 下面的示例阐释了这一点。  
   
- [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_2.vb)]  
+ [!code-vb[VbVbalrOperators#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#88)]  
   
  有关详细信息，请参阅[值的比较](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)并[语句](../../../../visual-basic/language-reference/statements/index.md)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54562747"
 ## <a name="short-circuiting-operators"></a>短路运算符  
  逻辑运算符`AndAlso`并`OrElse`表现出行为称为*短路*。 短路运算符首先计算左的操作数。 如果左的操作数确定整个表达式的值，然后程序执行继续进行而不计算右侧表达式。 下面的示例阐释了这一点。  
   
- [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
+ [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
  在上述示例中，运算符将计算左侧的表达式`45 < 12`。 由于左侧的表达式的计算结果为`False`，整个逻辑表达式的计算结果必须为`False`。 程序执行因此将跳过执行中的代码`If`而无需计算右侧表达式块`testFunction(3)`。 此示例不会调用`testFunction()`因为左侧的表达式使整个表达式。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54562747"
 ### <a name="comparison-with-non-short-circuiting-operators"></a>与非短路运算符的比较  
  与此相反，计算逻辑运算符的两端时逻辑运算符`And`和`Or`使用。 下面的示例阐释了这一点。  
   
- [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_4.vb)]  
+ [!code-vb[VbVbalrOperators#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#90)]  
   
  前面的示例调用`testFunction()`即使左侧的表达式的计算结果为`False`。  
   

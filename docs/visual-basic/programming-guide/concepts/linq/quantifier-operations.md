@@ -2,12 +2,12 @@
 title: 限定符运算 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-ms.openlocfilehash: 0f732cdb51ed4e26039fc8c1d02b95ad32f901e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 966bc958d6feac77ebe1c229bfe5dbb993031676
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551919"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976741"
 ---
 # <a name="quantifier-operations-visual-basic"></a>限定符运算 (Visual Basic)
 限定符运算返回一个 <xref:System.Boolean> 值，该值指示序列中是否有一些元素满足条件或是否所有元素都满足条件。  
@@ -31,11 +31,11 @@ ms.locfileid: "54551919"
   
  下面的示例使用`Aggregate`子句和<xref:System.Linq.Enumerable.All%2A>扩展方法以返回集合中所有早于指定的期限其宠物这些人员。  
   
- [!code-vb[CsLINQAnyAll#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/quantifier-operations_1.vb)]  
+ [!code-vb[CsLINQAnyAll#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#1)]  
   
  下面的示例使用`Aggregate`子句和<xref:System.Linq.Enumerable.Any%2A>扩展方法以返回集合中至少有一个的人们只宠物的是早于指定的期限。  
   
- [!code-vb[CsLINQAnyAll#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/quantifier-operations_2.vb)]  
+ [!code-vb[CsLINQAnyAll#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#2)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Linq>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: c9f4d9c880e189eb0ad4834736bdc664eb5b4376
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ba8be5051d0723fd2654b9733933cd434ac3ac5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703557"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965184"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 运算符 (Visual Basic)
 执行短路逻辑与运算，对两个表达式。  
@@ -55,14 +55,14 @@ result = expression1 AndAlso expression2
 ## <a name="example"></a>示例  
  下面的示例使用`AndAlso`运算符对两个表达式执行逻辑与运算。 结果是`Boolean`值，该值表示是否整个联合表达式为 true。 如果第一个表达式是`False`，则不计算第二个。  
   
- [!code-vb[VbVbalrOperators#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#24)]  
   
  前面的示例生成的结果`True`， `False`，和`False`分别。 中的计算`secondCheck`，因为第一个已不会计算第二个表达式`False`。 但是，第二个表达式计算的计算中`thirdCheck`。  
   
 ## <a name="example"></a>示例  
  下面的示例演示`Function`搜索给定值的数组元素中的过程。 如果数组为空，或已超过数组长度，`While`语句不会测试针对搜索值的数组元素。  
   
- [!code-vb[VbVbalrOperators#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#25)]  
   
 ## <a name="see-also"></a>请参阅
 - [逻辑/按位运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)

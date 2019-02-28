@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 9f6faf7b9ba2338784fda2cec2efc2b3991d415e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e40890835ddd50d25106e318ee05a874ce355d9b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667474"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977794"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>如何：定义一个类，可对不同的数据类型 (Visual Basic 中) 提供相同的功能
 你可以定义这样一个类：你可以通过该类创建可在不同数据类型上提供相同功能的对象。 为此，你可以在定义中指定一个或多个 *类型形参* 。 然后，该类将能够充当使用不同数据类型的对象的模板。 通过这种方式定义的类称为 *泛型类*。  
@@ -64,7 +64,7 @@ ms.locfileid: "54667474"
   
      下面的示例定义了一个类，用于管理一个非常简单的列表。 它将列表保存在内部数组 `items`中，并且使用代码可声明列表元素的数据类型。 参数化构造函数允许使用代码设置 `items`的上限，默认构造函数将此上限设置为 9（总共 10 项）。  
   
-     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
      你可以声明来自 `simpleList` 的一个类来保存 `Integer` 值的列表，声明另一个类来保存 `String` 值的列表，再声明一个类来保存 `Date` 值。 除了列表成员的数据类型外，依据所有这些类创建的对象的行为方式都相同。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "54667474"
   
      可以使用以下代码测试类 `simpleList` 。  
   
-     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
+     [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
 ## <a name="see-also"></a>请参阅
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

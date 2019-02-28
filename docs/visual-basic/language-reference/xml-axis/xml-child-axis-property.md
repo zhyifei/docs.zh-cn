@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 597a7bef66ac3908345aa5c8b59c838a3e65b2f4
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: f8c0ab8f52e5819f799d21f7e23eb83684144605
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065877"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964445"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML 子轴属性 (Visual Basic)
 提供对以下一项的子级的访问：<xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象、<xref:System.Xml.Linq.XElement> 对象的集合或 <xref:System.Xml.Linq.XDocument> 对象的集合。  
@@ -30,7 +30,8 @@ object.<child>
   
 |术语|定义|  
 |---|---|  
-|`object`|必需。 <xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象、<xref:System.Xml.Linq.XElement> 对象的集合或 <xref:System.Xml.Linq.XDocument> 对象的集合。|  
+|`object`|必需。 
+  <xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象、<xref:System.Xml.Linq.XElement> 对象的集合或 <xref:System.Xml.Linq.XDocument> 对象的集合。|  
 |.<|必需。 表示子轴属性的开头。|  
 |`child`|必需。 若要访问，窗体的子节点的名称 [`prefix:]name`。<br /><br /> -   `Prefix` -可选。 子节点的 XML 命名空间前缀。 必须是使用 `Imports` 语句定义的全局 XML 命名空间。<br />-   `Name` 必需。 本地子节点名。 请参阅[声明的 XML 元素和特性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
 |>|必需。 表示子轴属性的结尾。|  
@@ -49,7 +50,7 @@ object.<child>
 ## <a name="example"></a>示例  
  下面的示例演示如何从 `contact` 对象访问名为 `phone` 的子节点。  
   
- [!code-vb[VbXMLSamples#17](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_1.vb)]  
+ [!code-vb[VbXMLSamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#17)]  
   
  此代码显示以下文本：  
   
@@ -58,7 +59,7 @@ object.<child>
 ## <a name="example"></a>示例  
  下面的示例演示如何从由 `contacts` 对象的 `contact` 子轴属性返回的集合访问名为 `phone` 的子节点。  
   
- [!code-vb[VbXMLSamples#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_2.vb)]  
+ [!code-vb[VbXMLSamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#18)]  
   
  此代码显示以下文本：  
   
@@ -67,7 +68,7 @@ object.<child>
 ## <a name="example"></a>示例  
  下面的示例声明 `ns` 作为 XML 命名空间前缀。 然后它使用该命名空间前缀来创建 XML 文本并访问具有限定名称 `ns:name` 的第一个子节点。  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_3.vb)]  
+ [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]  
   
  此代码显示以下文本：  
   

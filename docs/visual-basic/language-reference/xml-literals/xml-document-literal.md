@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: 09ab9d0bf3feeea70ddbc094183406a6fd646c1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86780d53c2261b6440f515fc09512fba313667dc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690509"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964935"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML 文档文本 (Visual Basic)
 一个文本表示<xref:System.Xml.Linq.XDocument>对象。  
@@ -53,7 +53,7 @@ rootElement
 ## <a name="example"></a>示例  
  以下示例创建具有 XML 声明、 处理指令、 注释和一个包含另一个元素的元素的 XML 文档。  
   
- [!code-vb[VbXMLSamples#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-document-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Xml.Linq.XElement>

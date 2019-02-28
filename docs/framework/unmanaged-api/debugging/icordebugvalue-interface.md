@@ -1,5 +1,5 @@
 ---
-title: ICorDebugValue 接口 1
+title: ICorDebugValue 接口
 ms.date: 03/30/2017
 api_name:
 - ICorDebugValue
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41afc2e4305034340ad408e52ce08372bf8962dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2de5d3a208594a03bfdca837e592f53b3da7f0f0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507442"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981408"
 ---
-# <a name="icordebugvalue-interface1"></a>ICorDebugValue 接口 1
+# <a name="icordebugvalue-interface"></a>ICorDebugValue 接口
 表示正在调试的进程中的值。 值可以是读取或写入值。  
   
 ## <a name="methods"></a>方法  

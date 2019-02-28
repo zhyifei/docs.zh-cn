@@ -6,12 +6,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 38b0673f5725077eec9253021eec4216e66504a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f175de647887a406f8ae87dae492a5fe58cca9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615232"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976728"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>如何：从过程 (Visual Basic 中) 中返回值
 一个`Function`过程返回一个值到调用代码可以通过执行`Return`语句或在遇到`Exit Function`或`End Function`语句。  
@@ -26,11 +26,11 @@ ms.locfileid: "54615232"
   
      以下`Function`过程计算的最长边或斜边的直角三角形而言，并将其返回给调用代码。  
   
-     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
      下面的示例演示对典型调用`hypotenuse`，用于存储返回的值。  
   
-     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ### <a name="to-return-a-value-using-exit-function-or-end-function"></a>返回值使用 Exit 函数或最终函数  
   

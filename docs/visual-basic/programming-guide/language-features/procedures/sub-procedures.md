@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: f558c61d2e81471e167e97816ff47bc4465c5f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 646d7d217891dc8ea5b78f7ce30fce19fab08316
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638114"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977573"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub 过程 (Visual Basic)
 一个`Sub`过程是 Visual Basic 语句括在一系列`Sub`和`End Sub`语句。 `Sub`过程执行一项任务，再将控制权返回到调用代码，但它不会向调用代码返回值。  
@@ -66,11 +66,11 @@ ms.locfileid: "54638114"
 ### <a name="illustration-of-declaration-and-call"></a>声明和调用的插图  
  以下`Sub`过程通知计算机运算符哪个任务应用程序即将执行，并且还显示时间戳。 而不是重复的每个任务开始时此代码，应用程序只需调用`tellOperator`从不同位置。 每次调用将一个字符串中的传递`task`标识要启动的任务的参数。  
   
- [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
  下面的示例演示对典型调用`tellOperator`。  
   
- [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>请参阅
 - [过程](./index.md)

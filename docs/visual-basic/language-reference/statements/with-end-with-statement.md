@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: a3762e3bf0978feeb1155f8cc8249a77f0a497df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9d2ce983398f34747f09d4ffd2cc8fa9e6b2b53
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535264"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968252"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 语句 (Visual Basic)
 执行一系列反复引用单个对象或结构的语句，以便这些语句可在访问对象或结构的成员时使用简化语法。  使用结构时，你只能读取成员或调用的方法的值，如果你尝试为 `With...End With` 语句中使用的结构的成员赋值，则将收到错误。  
@@ -38,7 +38,8 @@ End With
 |术语|定义|  
 |---|---|  
 |`objectExpression`|必需。 计算结果为对象的表达式。 表达式可能是任意复杂的，并且只能计算一次。 表达式可以计算为任何数据类型，包括基本类型。|  
-|`statements`|可选。 `With` 和 `End With` 之间的一个或多个语句，这些语句可能引用通过计算 `objectExpression` 生成的对象的成员。|  
+|`statements`|可选。 
+  `With` 和 `End With` 之间的一个或多个语句，这些语句可能引用通过计算 `objectExpression` 生成的对象的成员。|  
 |`End With`|必需。 终止 `With` 块的定义。|  
   
 ## <a name="remarks"></a>备注  
@@ -52,7 +53,8 @@ End With
   
 -   通过消除反复限定表达式，你提高了代码的可读取性。  
   
- `objectExpression` 的数据类型可以是任何类或结构类型，甚至可以是 Visual Basic 基础类型（如 `Integer`）。  如果 `objectExpression` 生成对象之外的任何内容，则你只能读取其成员或调用的方法的值，如果你尝试为 `With...End With` 语句中使用的结构的成员赋值，则将收到错误。  此错误与你在调用返回一个结构的方法并立即访问函数结果（如 `GetAPoint().x = 1`）的成员并为其赋值时收到的错误一样。  这两种情况的问题是，结构仅存在于调用堆栈上，并且已修改的结构成员在这些情况下无法写入到一个位置以使程序中的所有其他代码可以观察到更改。  
+ 
+  `objectExpression` 的数据类型可以是任何类或结构类型，甚至可以是 Visual Basic 基础类型（如 `Integer`）。  如果 `objectExpression` 生成对象之外的任何内容，则你只能读取其成员或调用的方法的值，如果你尝试为 `With...End With` 语句中使用的结构的成员赋值，则将收到错误。  此错误与你在调用返回一个结构的方法并立即访问函数结果（如 `GetAPoint().x = 1`）的成员并为其赋值时收到的错误一样。  这两种情况的问题是，结构仅存在于调用堆栈上，并且已修改的结构成员在这些情况下无法写入到一个位置以使程序中的所有其他代码可以观察到更改。  
   
  在进入块时仅计算 `objectExpression` 一次。 你无法从 `objectExpression` 块中重新分配 `With`。  
   
@@ -72,12 +74,12 @@ End With
 ## <a name="example"></a>示例  
  在下面的示例中，每个 `With` 块将对单个对象执行一系列语句。  
   
- [!code-vb[VbVbalrWithStatement#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_1.vb)]  
+ [!code-vb[VbVbalrWithStatement#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#2)]  
   
 ## <a name="example"></a>示例  
  下面的示例嵌套 `With…End With` 语句。 在嵌套的 `With` 语句中，语法引用内部对象。  
   
- [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_2.vb)]  
+ [!code-vb[VbVbalrWithStatement#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Collections.Generic.List%601>

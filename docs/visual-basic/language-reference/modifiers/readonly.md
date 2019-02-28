@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 741374cc375e33868239161af23a38af7680b290
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4f13964c09b60d02cd5e9f5fc9e2998d7758c3d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684062"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979302"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 指定的可读取但不是会写入变量或属性。  
@@ -53,9 +53,10 @@ ms.locfileid: "54684062"
 ## <a name="example"></a>示例  
  下面的示例定义`ReadOnly`雇佣员工的日期的属性。 类存储的属性值在内部作为`Private`变量，并且仅在类中的代码可以更改此值。 但是，该属性是`Public`，并可以访问的类的任何代码可以读取该属性。  
   
- [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/VisualBasic/readonly_1.vb)]  
+ [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]  
   
- `ReadOnly` 修饰符可用于下面的上下文中：  
+ 
+  `ReadOnly` 修饰符可用于下面的上下文中：  
   
  [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

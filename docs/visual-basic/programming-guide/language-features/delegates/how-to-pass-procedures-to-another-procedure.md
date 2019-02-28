@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: cf5a8447cbedcd8071da98ac6763ff06eb608199
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9e6165414db00e7d7182e204d86d23debfbf4f6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506753"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967732"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>如何：将过程传递给 Visual Basic 中的另一个过程
 此示例演示如何使用委托来将过程传递给另一个过程。  
@@ -23,25 +23,25 @@ ms.locfileid: "54506753"
   
 1.  创建名为的委托`MathOperator`。  
   
-     [!code-vb[VbVbalrDelegates#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_1.vb)]  
+     [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
 2.  创建一个名为过程`AddNumbers`使用参数和返回值相匹配的`MathOperator`，以便签名匹配。  
   
-     [!code-vb[VbVbalrDelegates#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_2.vb)]  
+     [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
 3.  创建一个名为过程`SubtractNumbers`相匹配的签名与`MathOperator`。  
   
-     [!code-vb[VbVbalrDelegates#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_3.vb)]  
+     [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
 4.  创建一个名为过程`DelegateTest`采用委托作为参数。  
   
      此过程可以接受的引用`AddNumbers`或`SubtractNumbers`，因为它们的签名匹配`MathOperator`签名。  
   
-     [!code-vb[VbVbalrDelegates#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_4.vb)]  
+     [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
 5.  创建一个名为过程`Test`的调用`DelegateTest`一次使用的委托`AddNumbers`作为参数，并再次使用的委托`SubtractNumbers`作为参数。  
   
-     [!code-vb[VbVbalrDelegates#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_5.vb)]  
+     [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
      当`Test`是其调用，首先显示的结果`AddNumbers`作用于`5`和`3`，也就是 8。 然后的结果`SubtractNumbers`对操作`9`和`3`显示，则其为 6。  
   

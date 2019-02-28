@@ -11,12 +11,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 372d3f663109597fc2d25c5d75a9efa6b3648682
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 358e81904f48ad844351a20a448b615a0fef8f89
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640664"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972505"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>如何：使用定义运算符 (Visual Basic) 的类
 如果使用的类或结构，它定义自己的运算符，则可以在 Visual Basic 中访问这些运算符。  
@@ -26,9 +26,9 @@ ms.locfileid: "54640664"
 ## <a name="example"></a>示例  
  以下示例将访问 SQL 结构<xref:System.Data.SqlTypes.SqlString>，用于定义转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)) 中的 SQL 字符串和 Visual Basic 字符串之间的两个方向。 使用`CType(` *SQL 字符串表达式*，`String)`若要将 SQL 字符串转换为 Visual Basic 字符串，并`CType(` *Visual Basic 字符串表达式*， <xref:System.Data.SqlTypes.SqlString> `)`将另一个方向。  
   
- [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
+ [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
- [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
+ [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
  <xref:System.Data.SqlTypes.SqlString>结构定义转换运算符 ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) 从`String`到<xref:System.Data.SqlTypes.SqlString>，从另一个<xref:System.Data.SqlTypes.SqlString>到`String`。 将分配的语句`title`到`jobTitle`利用了第一个运算符和<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函数调用使用第二个。  
   

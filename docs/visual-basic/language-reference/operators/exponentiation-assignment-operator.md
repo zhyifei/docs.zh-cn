@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-ms.openlocfilehash: 73705df376284edd9d8f20baaf4306c41b1d3943
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: efea38d7da13b67490f498658e7739929517dba2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699722"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964915"
 ---
 # <a name="-operator-visual-basic"></a>^= 运算符 (Visual Basic)
 引发的变量或表达式的属性的值，并将结果赋回给变量或属性。  
@@ -47,7 +47,7 @@ variableorproperty ^= expression
 ## <a name="example"></a>示例  
  下面的示例使用`^=`运算符的一个值进行`Integer`变量的第二个变量中，并将结果赋给第一个变量。  
   
- [!code-vb[VbVbalrOperators#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   
 ## <a name="see-also"></a>请参阅
 - [^ 运算符](../../../visual-basic/language-reference/operators/exponentiation-operator.md)

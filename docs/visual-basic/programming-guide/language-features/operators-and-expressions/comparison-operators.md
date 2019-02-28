@@ -15,12 +15,12 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-ms.openlocfilehash: db9eef215b16c95a40dfc622bb29443dd1736943
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd7ee90e749be76012cf7143787bc6f1d096da03
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552029"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969370"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
 比较运算符比较两个表达式并返回`Boolean`值，该值表示其值的关系。 有运算符用于比较数字值、 字符串、 比较运算符和运算符用于比较的对象。 所有三种类型的运算符是此处所述。  
@@ -61,17 +61,17 @@ ms.locfileid: "54552029"
 ## <a name="comparing-objects"></a>比较对象  
  Visual Basic 使用的两个对象引用变量进行比较[Is 运算符](../../../../visual-basic/language-reference/operators/is-operator.md)并[IsNot 运算符](../../../../visual-basic/language-reference/operators/isnot-operator.md)。 可以使用其中任一运算符确定两个引用变量引用同一对象实例。 下面的示例阐释了这一点。  
   
- [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#65)]  
   
  在前面的示例中，`x Is y`计算结果为`True`，因为这两个变量引用同一个实例。 此结果与下面的示例进行对比。  
   
- [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#66)]  
   
  在前面的示例中，`x Is y`计算结果为`False`，因为虽然变量引用相同类型的对象，但它们是指该类型的不同实例。  
   
  当你想要测试两个对象不指向同一个实例，`IsNot`运算符可避免通过编程方式笨拙的组合`Not`和`Is`。 下面的示例阐释了这一点。  
   
- [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#67)]  
   
  在前面的示例中，`If a IsNot b`等效于`If Not a Is b`。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "54552029"
   
  当`typename`指定接口类型，则`TypeOf`...`Is`表达式返回`True`如果对象实现的接口类型。 当`typename`是类类型，则表达式将返回`True`如果对象是指定类或派生自指定类的类的实例。 下面的示例阐释了这一点。  
   
- [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#68)]  
   
  在前面的示例中，`TypeOf x Is Control`表达式的计算结果`True`因为的类型`x`是`Button`，后者又继承`Control`。  
   

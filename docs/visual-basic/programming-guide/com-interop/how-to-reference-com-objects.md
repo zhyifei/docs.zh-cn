@@ -8,12 +8,12 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: c9d6a2ad6146ebd90be330813a44d092c044348b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e88f5f093ce55d3d80da9b38689016872ea12cb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534925"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980186"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>如何：从 Visual Basic 引用 COM 对象
 在 Visual Basic 中，添加对包含类型库的 COM 对象的引用需要互操作程序集创建为 COM 库。 对 COM 对象的成员的引用是路由到互操作程序集，并转发给实际的 COM 对象。 从 COM 对象的响应路由到互操作程序集，并将其转发到你[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]应用程序。  
@@ -30,7 +30,7 @@ ms.locfileid: "54534925"
   
 3.  若要简化对互操作程序集的访问，将添加`Imports`到顶部的类或模块将在其中使用 COM 对象的语句。 例如，下面的代码示例将导入命名空间`INKEDLib`中所引用的对象`Microsoft InkEdit Control 1.0`库。  
   
-     [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-reference-com-objects_1.vb)]  
+     [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   
 ### <a name="to-create-an-interop-assembly-using-tlbimp"></a>若要创建使用 Tlbimp 的互操作程序集  
   

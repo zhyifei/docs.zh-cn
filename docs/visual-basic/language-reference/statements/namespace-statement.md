@@ -12,12 +12,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: 1e7fb55cac1de747c620ea44f320ec9185bfbd3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1268982eb841327d72ce195992f8c4dcad4440a7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612146"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966172"
 ---
 # <a name="namespace-statement"></a>Namespace 语句
 声明命名空间的名称，并使遵循声明在该命名空间中进行编译的源代码。  
@@ -78,17 +78,17 @@ End Namespace
 ## <a name="example"></a>示例  
  下面的示例声明两个命名空间，嵌套在另一个。  
   
- [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#43)]  
   
 ## <a name="example"></a>示例  
  下面的示例在单个行上声明多个嵌套的命名空间，它等效于前面的示例。  
   
- [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#41)]  
   
 ## <a name="example"></a>示例  
  以下示例将访问的上一示例中定义的类。  
   
- [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#42)]  
   
 ## <a name="example"></a>示例  
  下面的示例定义一个新的泛型列表类的框架，并将其添加到<xref:System.Collections.Generic?displayProperty=nameWithType>命名空间。  

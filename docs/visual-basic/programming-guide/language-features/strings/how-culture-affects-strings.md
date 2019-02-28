@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9e9b4e199e4504e21b365706ea60d63c9d5fb87
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543443"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980940"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>区域性对字符串的影响 (Visual Basic)
 此帮助页讨论了 Visual Basic 如何使用区域性信息来执行的字符串转换和比较。  
@@ -44,7 +44,7 @@ ms.locfileid: "54543443"
   
  若要将日期转换为区域性的字符串，将传递<xref:System.Globalization.CultureInfo>对象与日期对象<xref:System.DateTime.ToString%28System.IFormatProvider%29>方法。 例如，下面的代码显示"07/04/2005年 00:00:00"，无论应用程序的区域性设置。  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Date 文本始终解释取决于英语区域性设置。  
@@ -60,11 +60,11 @@ ms.locfileid: "54543443"
   
  `StrComp`函数返回一个整数，指示基于排序顺序比较的两个字符串之间的关系。 结果是正数值指示第一个字符串大于第二个字符串。 产生负数结果指示第一个字符串是较小，零指示字符串相等。  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
  此外可以使用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]合作伙伴`StrComp`函数，<xref:System.String.Compare%2A?displayProperty=nameWithType>方法。 这是基础字符串类的静态，重载方法。 下面的示例演示如何使用此方法：  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
  更好地控制如何执行比较，可以使用的其他重载<xref:System.String.Compare%2A>方法。 与<xref:System.String.Compare%2A?displayProperty=nameWithType>方法中，可以使用`comparisonType`参数，以指定要使用的比较类型。  
   

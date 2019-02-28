@@ -5,17 +5,17 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 160d4a9f560479b3a66b2cf4d7712b24551fabee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c936adb6d4d80032b862994c21178a505da6789b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558693"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964238"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>如何：在设计时创建新的设置
 使用设置设计器，可以在设计时创建一个新的设置。 设置设计器是一个网格样式接口，可用于创建新的设置，并指定这些设置的属性。 必须指定名称、 值、 类型和新的设置的作用域。 一旦创建了设置，就可在代码中访问。  
   
-### <a name="to-create-a-new-setting-at-design-time-in-c"></a>若要在设计时创建新的设置C#  
+### <a name="to-create-a-new-setting-at-design-time-in-c"></a>若要在设计时在 C 中创建新的设置\#
   
 1.  在中**解决方案资源管理器**，展开**属性**在项目节点。  
   

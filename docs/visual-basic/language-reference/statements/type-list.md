@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: dd50435b7cbb5d3d25c0e30618e8733b4eddfe91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655070"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968265"
 ---
 # <a name="type-list-visual-basic"></a>类型列表 (Visual Basic)
 指定*类型参数*有关*泛型*编程元素。 由逗号分隔多个参数。 下面是一个类型参数的语法。  
@@ -80,17 +80,17 @@ ms.locfileid: "54655070"
 ## <a name="example"></a>示例  
  下面的示例演示泛型字典类，包括将新项添加到字典中的主干函数的主干定义。  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>示例  
  因为`dictionary`是泛型类型，使用它的代码，可以创建多个对象，每个具有相同的功能，但却作用于不同的数据类型。 下面的示例演示创建的代码行`dictionary`对象使用`String`条目和`Integer`密钥。  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]  
   
 ## <a name="example"></a>示例  
  下面的示例演示由前面的示例生成等效的主干定义。  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>请参阅
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)
