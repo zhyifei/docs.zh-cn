@@ -1,5 +1,5 @@
 ---
-title: ICorDebugReferenceValue 接口 1
+title: ICorDebugReferenceValue 接口
 ms.date: 03/30/2017
 api_name:
 - ICorDebugReferenceValue
@@ -16,44 +16,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dbe5388d7c18202f4b89269141d33463edb07a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4709d1b8126436d4400c788891960100915cd1bc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544268"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971429"
 ---
-# <a name="icordebugreferencevalue-interface1"></a><span data-ttu-id="0d825-102">ICorDebugReferenceValue 接口 1</span><span class="sxs-lookup"><span data-stu-id="0d825-102">ICorDebugReferenceValue Interface1</span></span>
-<span data-ttu-id="0d825-103">提供管理是对对象的引用的值的方法。</span><span class="sxs-lookup"><span data-stu-id="0d825-103">Provides methods that manage a value that is a reference to an object.</span></span> <span data-ttu-id="0d825-104">（也就是说，此接口提供的指针进行管理的方法。）此接口实现"ICorDebugValue"。</span><span class="sxs-lookup"><span data-stu-id="0d825-104">(That is, this interface provides methods that manage a pointer.) This interface implements "ICorDebugValue".</span></span>  
+# <a name="icordebugreferencevalue-interface"></a><span data-ttu-id="eb8c3-102">ICorDebugReferenceValue 接口</span><span class="sxs-lookup"><span data-stu-id="eb8c3-102">ICorDebugReferenceValue Interface</span></span>
+<span data-ttu-id="eb8c3-103">提供管理是对对象的引用的值的方法。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-103">Provides methods that manage a value that is a reference to an object.</span></span> <span data-ttu-id="eb8c3-104">（也就是说，此接口提供的指针进行管理的方法。）此接口实现"ICorDebugValue"。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-104">(That is, this interface provides methods that manage a pointer.) This interface implements "ICorDebugValue".</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0d825-105">方法</span><span class="sxs-lookup"><span data-stu-id="0d825-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="eb8c3-105">方法</span><span class="sxs-lookup"><span data-stu-id="eb8c3-105">Methods</span></span>  
   
-|<span data-ttu-id="0d825-106">方法</span><span class="sxs-lookup"><span data-stu-id="0d825-106">Method</span></span>|<span data-ttu-id="0d825-107">描述</span><span class="sxs-lookup"><span data-stu-id="0d825-107">Description</span></span>|  
+|<span data-ttu-id="eb8c3-106">方法</span><span class="sxs-lookup"><span data-stu-id="eb8c3-106">Method</span></span>|<span data-ttu-id="eb8c3-107">描述</span><span class="sxs-lookup"><span data-stu-id="eb8c3-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0d825-108">Dereference 方法</span><span class="sxs-lookup"><span data-stu-id="0d825-108">Dereference Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-dereference-method.md)|<span data-ttu-id="0d825-109">获取引用的对象。</span><span class="sxs-lookup"><span data-stu-id="0d825-109">Gets the object that is referenced.</span></span>|  
-|[<span data-ttu-id="0d825-110">DereferenceStrong 方法</span><span class="sxs-lookup"><span data-stu-id="0d825-110">DereferenceStrong Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-dereferencestrong-method.md)|<span data-ttu-id="0d825-111">未实现。</span><span class="sxs-lookup"><span data-stu-id="0d825-111">Not implemented.</span></span> <span data-ttu-id="0d825-112">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="0d825-112">Do not call this method.</span></span>|  
-|[<span data-ttu-id="0d825-113">GetValue 方法</span><span class="sxs-lookup"><span data-stu-id="0d825-113">GetValue Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-getvalue-method.md)|<span data-ttu-id="0d825-114">获取被引用对象的当前内存地址。</span><span class="sxs-lookup"><span data-stu-id="0d825-114">Gets the current memory address of the referenced object.</span></span>|  
-|[<span data-ttu-id="0d825-115">IsNull 方法</span><span class="sxs-lookup"><span data-stu-id="0d825-115">IsNull Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-isnull-method.md)|<span data-ttu-id="0d825-116">获取一个值，该值指示是否这`ICorDebugReferenceValue`这种情况下为空值，`ICorDebugReferenceValue`不指向对象。</span><span class="sxs-lookup"><span data-stu-id="0d825-116">Gets a value that indicates whether this `ICorDebugReferenceValue` is a null value, in which case the `ICorDebugReferenceValue` does not point to an object.</span></span>|  
-|[<span data-ttu-id="0d825-117">SetValue 方法</span><span class="sxs-lookup"><span data-stu-id="0d825-117">SetValue Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-setvalue-method.md)|<span data-ttu-id="0d825-118">设置当前的内存地址。</span><span class="sxs-lookup"><span data-stu-id="0d825-118">Sets the current memory address.</span></span> <span data-ttu-id="0d825-119">此方法，即设置此`ICorDebugReferenceValue`要指向的对象。</span><span class="sxs-lookup"><span data-stu-id="0d825-119">That is, this method sets this `ICorDebugReferenceValue` to point to an object.</span></span>|  
+|[<span data-ttu-id="eb8c3-108">Dereference 方法</span><span class="sxs-lookup"><span data-stu-id="eb8c3-108">Dereference Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-dereference-method.md)|<span data-ttu-id="eb8c3-109">获取引用的对象。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-109">Gets the object that is referenced.</span></span>|  
+|[<span data-ttu-id="eb8c3-110">DereferenceStrong 方法</span><span class="sxs-lookup"><span data-stu-id="eb8c3-110">DereferenceStrong Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-dereferencestrong-method.md)|<span data-ttu-id="eb8c3-111">未实现。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-111">Not implemented.</span></span> <span data-ttu-id="eb8c3-112">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-112">Do not call this method.</span></span>|  
+|[<span data-ttu-id="eb8c3-113">GetValue 方法</span><span class="sxs-lookup"><span data-stu-id="eb8c3-113">GetValue Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-getvalue-method.md)|<span data-ttu-id="eb8c3-114">获取被引用对象的当前内存地址。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-114">Gets the current memory address of the referenced object.</span></span>|  
+|[<span data-ttu-id="eb8c3-115">IsNull 方法</span><span class="sxs-lookup"><span data-stu-id="eb8c3-115">IsNull Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-isnull-method.md)|<span data-ttu-id="eb8c3-116">获取一个值，该值指示是否这`ICorDebugReferenceValue`这种情况下为空值，`ICorDebugReferenceValue`不指向对象。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-116">Gets a value that indicates whether this `ICorDebugReferenceValue` is a null value, in which case the `ICorDebugReferenceValue` does not point to an object.</span></span>|  
+|[<span data-ttu-id="eb8c3-117">SetValue 方法</span><span class="sxs-lookup"><span data-stu-id="eb8c3-117">SetValue Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-setvalue-method.md)|<span data-ttu-id="eb8c3-118">设置当前的内存地址。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-118">Sets the current memory address.</span></span> <span data-ttu-id="eb8c3-119">此方法，即设置此`ICorDebugReferenceValue`要指向的对象。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-119">That is, this method sets this `ICorDebugReferenceValue` to point to an object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0d825-120">备注</span><span class="sxs-lookup"><span data-stu-id="0d825-120">Remarks</span></span>  
- <span data-ttu-id="0d825-121">调试的进程继续执行时，公共语言运行时 (CLR) 可能会执行操作对象上的垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="0d825-121">The common language runtime (CLR) may do a garbage collection on objects when the debugged process is continued.</span></span> <span data-ttu-id="0d825-122">垃圾回收可能会在内存中来回移动对象。</span><span class="sxs-lookup"><span data-stu-id="0d825-122">The garbage collection may move objects around in memory.</span></span> <span data-ttu-id="0d825-123">`ICorDebugReferenceValue`将协同使用垃圾回收，以便垃圾回收后, 更新其信息或将在垃圾回收之前隐式失效。</span><span class="sxs-lookup"><span data-stu-id="0d825-123">An `ICorDebugReferenceValue` will either cooperate with the garbage collection so that its information is updated after the garbage collection, or it will be invalidated implicitly before the garbage collection.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eb8c3-120">备注</span><span class="sxs-lookup"><span data-stu-id="eb8c3-120">Remarks</span></span>  
+ <span data-ttu-id="eb8c3-121">调试的进程继续执行时，公共语言运行时 (CLR) 可能会执行操作对象上的垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-121">The common language runtime (CLR) may do a garbage collection on objects when the debugged process is continued.</span></span> <span data-ttu-id="eb8c3-122">垃圾回收可能会在内存中来回移动对象。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-122">The garbage collection may move objects around in memory.</span></span> <span data-ttu-id="eb8c3-123">`ICorDebugReferenceValue`将协同使用垃圾回收，以便垃圾回收后, 更新其信息或将在垃圾回收之前隐式失效。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-123">An `ICorDebugReferenceValue` will either cooperate with the garbage collection so that its information is updated after the garbage collection, or it will be invalidated implicitly before the garbage collection.</span></span>  
   
- <span data-ttu-id="0d825-124">`ICorDebugReferenceValue`对象可能是隐式失效后继续调试的进程。</span><span class="sxs-lookup"><span data-stu-id="0d825-124">The `ICorDebugReferenceValue` object may be implicitly invalidated after the debugged process has been continued.</span></span> <span data-ttu-id="0d825-125">直到显式释放或公开，不会失效派生"ICorDebugHandleValue"。</span><span class="sxs-lookup"><span data-stu-id="0d825-125">The derived "ICorDebugHandleValue" is not invalidated until it is explicitly released or exposed.</span></span>  
+ <span data-ttu-id="eb8c3-124">`ICorDebugReferenceValue`对象可能是隐式失效后继续调试的进程。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-124">The `ICorDebugReferenceValue` object may be implicitly invalidated after the debugged process has been continued.</span></span> <span data-ttu-id="eb8c3-125">直到显式释放或公开，不会失效派生"ICorDebugHandleValue"。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-125">The derived "ICorDebugHandleValue" is not invalidated until it is explicitly released or exposed.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0d825-126">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="0d825-126">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="eb8c3-126">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-126">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0d825-127">要求</span><span class="sxs-lookup"><span data-stu-id="0d825-127">Requirements</span></span>  
- <span data-ttu-id="0d825-128">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0d825-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb8c3-127">要求</span><span class="sxs-lookup"><span data-stu-id="eb8c3-127">Requirements</span></span>  
+ <span data-ttu-id="eb8c3-128">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="eb8c3-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0d825-129">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0d825-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="eb8c3-129">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eb8c3-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0d825-130">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0d825-130">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eb8c3-130">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eb8c3-130">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0d825-131">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0d825-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="eb8c3-131">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb8c3-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0d825-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="0d825-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb8c3-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="eb8c3-132">See also</span></span>
 
 
-- [<span data-ttu-id="0d825-133">调试接口</span><span class="sxs-lookup"><span data-stu-id="0d825-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="eb8c3-133">调试接口</span><span class="sxs-lookup"><span data-stu-id="eb8c3-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

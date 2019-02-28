@@ -10,39 +10,39 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: db8063cf06ad0735bb4d9290c60548f7ff9af217
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0abbdb9cb96ad9977a9af542f90eaad8a7e160e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611938"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969708"
 ---
-# <a name="region-directive"></a><span data-ttu-id="a9f7a-102">#Region 指令</span><span class="sxs-lookup"><span data-stu-id="a9f7a-102">#Region Directive</span></span>
-<span data-ttu-id="a9f7a-103">折叠并隐藏 Visual Basic 文件中的代码段。</span><span class="sxs-lookup"><span data-stu-id="a9f7a-103">Collapses and hides sections of code in Visual Basic files.</span></span>  
+# <a name="region-directive"></a><span data-ttu-id="4f483-102">#Region 指令</span><span class="sxs-lookup"><span data-stu-id="4f483-102">#Region Directive</span></span>
+<span data-ttu-id="4f483-103">折叠并隐藏 Visual Basic 文件中的代码段。</span><span class="sxs-lookup"><span data-stu-id="4f483-103">Collapses and hides sections of code in Visual Basic files.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a9f7a-104">语法</span><span class="sxs-lookup"><span data-stu-id="a9f7a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4f483-104">语法</span><span class="sxs-lookup"><span data-stu-id="4f483-104">Syntax</span></span>  
 
 ```vb
 #Region "identifier_string"  
 #End Region  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="a9f7a-105">部件</span><span class="sxs-lookup"><span data-stu-id="a9f7a-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="4f483-105">部件</span><span class="sxs-lookup"><span data-stu-id="4f483-105">Parts</span></span>  
   
-|<span data-ttu-id="a9f7a-106">术语</span><span class="sxs-lookup"><span data-stu-id="a9f7a-106">Term</span></span>|<span data-ttu-id="a9f7a-107">定义</span><span class="sxs-lookup"><span data-stu-id="a9f7a-107">Definition</span></span>|  
+|<span data-ttu-id="4f483-106">术语</span><span class="sxs-lookup"><span data-stu-id="4f483-106">Term</span></span>|<span data-ttu-id="4f483-107">定义</span><span class="sxs-lookup"><span data-stu-id="4f483-107">Definition</span></span>|  
 |---|---|  
-|`identifier_string`|<span data-ttu-id="a9f7a-108">必需。</span><span class="sxs-lookup"><span data-stu-id="a9f7a-108">Required.</span></span> <span data-ttu-id="a9f7a-109">当区域处于折叠状态时充当区域标题的字符串。</span><span class="sxs-lookup"><span data-stu-id="a9f7a-109">String that acts as the title of a region when it is collapsed.</span></span> <span data-ttu-id="a9f7a-110">默认情况下，区域处于折叠状态。</span><span class="sxs-lookup"><span data-stu-id="a9f7a-110">Regions are collapsed by default.</span></span>|  
-|`#End Region`|<span data-ttu-id="a9f7a-111">终止 `#Region` 块。</span><span class="sxs-lookup"><span data-stu-id="a9f7a-111">Terminates the `#Region` block.</span></span>|  
+|`identifier_string`|<span data-ttu-id="4f483-108">必需。</span><span class="sxs-lookup"><span data-stu-id="4f483-108">Required.</span></span> <span data-ttu-id="4f483-109">当区域处于折叠状态时充当区域标题的字符串。</span><span class="sxs-lookup"><span data-stu-id="4f483-109">String that acts as the title of a region when it is collapsed.</span></span> <span data-ttu-id="4f483-110">默认情况下，区域处于折叠状态。</span><span class="sxs-lookup"><span data-stu-id="4f483-110">Regions are collapsed by default.</span></span>|  
+|`#End Region`|<span data-ttu-id="4f483-111">终止 `#Region` 块。</span><span class="sxs-lookup"><span data-stu-id="4f483-111">Terminates the `#Region` block.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a9f7a-112">备注</span><span class="sxs-lookup"><span data-stu-id="a9f7a-112">Remarks</span></span>  
- <span data-ttu-id="a9f7a-113">使用 `#Region` 指令指定使用 Visual Studio 代码编辑器的大纲显示功能时要展开或折叠的代码块。</span><span class="sxs-lookup"><span data-stu-id="a9f7a-113">Use the `#Region` directive to specify a block of code to expand or collapse when using the outlining feature of the Visual Studio Code Editor.</span></span> <span data-ttu-id="a9f7a-114">您可以将放置，或*嵌套*中其他区域将类似区域组合在一起, 的区域。</span><span class="sxs-lookup"><span data-stu-id="a9f7a-114">You can place, or *nest*, regions within other regions to group similar regions together.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4f483-112">备注</span><span class="sxs-lookup"><span data-stu-id="4f483-112">Remarks</span></span>  
+ <span data-ttu-id="4f483-113">使用 `#Region` 指令指定使用 Visual Studio Code 编辑器的大纲显示功能时要展开或折叠的代码块。</span><span class="sxs-lookup"><span data-stu-id="4f483-113">Use the `#Region` directive to specify a block of code to expand or collapse when using the outlining feature of the Visual Studio Code Editor.</span></span> <span data-ttu-id="4f483-114">您可以将放置，或*嵌套*中其他区域将类似区域组合在一起, 的区域。</span><span class="sxs-lookup"><span data-stu-id="4f483-114">You can place, or *nest*, regions within other regions to group similar regions together.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a9f7a-115">示例</span><span class="sxs-lookup"><span data-stu-id="a9f7a-115">Example</span></span>  
- <span data-ttu-id="a9f7a-116">此示例使用 `#Region` 指令。</span><span class="sxs-lookup"><span data-stu-id="a9f7a-116">This example uses the `#Region` directive.</span></span>  
+## <a name="example"></a><span data-ttu-id="4f483-115">示例</span><span class="sxs-lookup"><span data-stu-id="4f483-115">Example</span></span>  
+ <span data-ttu-id="4f483-116">此示例使用 `#Region` 指令。</span><span class="sxs-lookup"><span data-stu-id="4f483-116">This example uses the `#Region` directive.</span></span>  
   
- [!code-vb[VbVbalrConditionalComp#4](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/region-directive_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="a9f7a-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="a9f7a-117">See also</span></span>
-- [<span data-ttu-id="a9f7a-118">#If...Then...#Else 指令</span><span class="sxs-lookup"><span data-stu-id="a9f7a-118">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [<span data-ttu-id="a9f7a-119">大纲显示</span><span class="sxs-lookup"><span data-stu-id="a9f7a-119">Outlining</span></span>](/visualstudio/ide/outlining)
-- [<span data-ttu-id="a9f7a-120">如何：折叠和隐藏代码节</span><span class="sxs-lookup"><span data-stu-id="a9f7a-120">How to: Collapse and Hide Sections of Code</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)
+## <a name="see-also"></a><span data-ttu-id="4f483-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="4f483-117">See also</span></span>
+- [<span data-ttu-id="4f483-118">#If...Then...#Else 指令</span><span class="sxs-lookup"><span data-stu-id="4f483-118">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [<span data-ttu-id="4f483-119">大纲显示</span><span class="sxs-lookup"><span data-stu-id="4f483-119">Outlining</span></span>](/visualstudio/ide/outlining)
+- [<span data-ttu-id="4f483-120">如何：折叠和隐藏代码节</span><span class="sxs-lookup"><span data-stu-id="4f483-120">How to: Collapse and Hide Sections of Code</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)
