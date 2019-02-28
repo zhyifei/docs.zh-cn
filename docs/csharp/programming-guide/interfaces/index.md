@@ -15,7 +15,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
   
 可使用 [interface](../../language-reference/keywords/interface.md) 关键字定义接口。 如以下示例所示。  
   
-[!code-csharp[csProgGuideInheritance#47](../classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
 结构名称必须是有效的 C# [标识符名称](../inside-a-program/identifier-names.md)。 按照约定，接口名称以大写字母 `I` 开头。
 
@@ -78,7 +78,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
   
 ## <a name="featured-book-chapter"></a>重要章节
 
-[学习 C# 3.0：掌握 C# 3.0 基础知识](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)中的[接口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29)
+[学习 C# 3.0：掌握 C# 3.0 基础知识](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)中的接口
 
 ## <a name="see-also"></a>请参阅
 
