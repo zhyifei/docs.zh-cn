@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: fafeb6cd47ebab5dd8f197b27d1aee9d7573e6ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de3403be4a23283d27887c149ed62df37e13c334
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717724"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975376"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>扩展 Visual Basic 中的 My 命名空间
 `My`在 Visual Basic 中的命名空间公开属性和方法，您可以轻松地充分利用.NET Framework 的强大功能。 `My`命名空间简化了常见编程问题，通常可一行代码将一个困难的任务。 此外，`My`命名空间可完全扩展，使你可以自定义的行为`My`并将新的服务添加到其层次结构，以适应特定的应用程序需求。 本主题将讨论如何自定义的现有成员`My`命名空间以及如何添加到你自己自定义类`My`命名空间。  
@@ -41,7 +41,7 @@ ms.locfileid: "54717724"
   
  例如，假定您经常使用`My.User`对象来访问运行应用程序的用户的当前安全上下文。 但是，你的公司使用自定义用户对象公开的其他信息和公司内的用户功能。 在此方案中，您可以替换的默认值`My.User.CurrentPrincipal`与您自己自定义主体对象，如下面的示例中所示的实例的属性。  
   
- [!code-vb[VbVbcnExtendingMy#1](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_1.vb)]  
+ [!code-vb[VbVbcnExtendingMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#1)]  
   
  设置`CurrentPrincipal`属性上的`My.User`对象更改运行应用程序的标识。 `My.User`对象，就会返回有关新指定的用户的信息。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54717724"
   
  例如，下面的示例添加名为的属性`DnsServerIPAddresses`到`My.Computer`对象。  
   
- [!code-vb[VbVbcnExtendingMy#2](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_2.vb)]  
+ [!code-vb[VbVbcnExtendingMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class2.vb#2)]  
   
 ##  <a name="addingcustom"></a> 自定义将对象添加到我 Namespace  
  尽管`My`命名空间执行许多常见编程任务提供解决方案，可能会遇到的任务的`My`命名空间不能解决。 例如，你的应用程序可能会访问用户数据的自定义目录服务或应用程序可能使用不使用 Visual Basic 的默认情况下安装的程序集。 您可以扩展`My`命名空间以包含特定于你的环境的常见任务的自定义解决方案。 `My`命名空间可以轻松地进行扩展以添加新成员，以满足不断增长的应用程序需求。 此外，可以部署你`My`命名空间扩展到其他开发人员为 Visual Basic 模板。  
@@ -58,20 +58,20 @@ ms.locfileid: "54717724"
 ###  <a name="addingtonamespace"></a> 将成员添加到我 Namespace  
  因为`My`是一个命名空间等任何其他命名空间，您可以顶级属性向其添加只需添加一个模块，并指定`Namespace`的`My`。 批注与模块`HideModuleName`特性，如以下示例所示。 `HideModuleName`属性可确保显示的成员时，IntelliSense 将不显示模块名称`My`命名空间。  
   
- [!code-vb[VbVbcnExtendingMy#3](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_3.vb)]  
+ [!code-vb[VbVbcnExtendingMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#3)]  
   
  若要将成员添加到`My`命名空间中，根据需要向该模块添加属性。 每个属性添加到`My`命名空间中，添加类型的私有字段`ThreadSafeObjectProvider(Of T)`，其中类型是返回自定义属性的类型。 使用此字段来创建线程安全的对象实例通过调用返回的属性`GetInstance`方法。 因此，每个线程都访问扩展的属性接收它自己的返回类型的实例。 下面的示例添加名为的属性`SampleExtension`类型的`SampleExtension`到`My`命名空间：  
   
- [!code-vb[VbVbcnExtendingMy#4](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_4.vb)]  
+ [!code-vb[VbVbcnExtendingMy#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#4)]  
   
 ##  <a name="addingevents"></a> 将事件添加到自定义 My 对象  
  可以使用`My.Application`对象公开您的自定义事件`My`通过扩展对象`MyApplication`中的分部类`My`命名空间。 对于基于 Windows 的项目，你可以双击**我的项目**中的项目中的节点**解决方案资源管理器**。 在 Visual Basic**项目设计器**，单击`Application`选项卡，然后单击`View Application Events`按钮。 将创建名为 ApplicationEvents.vb 一个新文件。 它包含用于扩展的以下代码`MyApplication`类。  
   
- [!code-vb[VbVbcnExtendingMy#5](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_5.vb)]  
+ [!code-vb[VbVbcnExtendingMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#5)]  
   
  你可以为您的自定义添加事件处理程序`My`对象添加到自定义事件处理程序`MyApplication`类。 自定义事件，可以添加一个事件处理程序添加、 删除或引发该事件时将执行的代码。 请注意，`AddHandler`由用户处理的事件添加代码的情况下，才会运行自定义事件的代码。 例如，考虑`SampleExtension`上文所述的对象具有`Load`你想要添加的自定义事件处理程序的事件。 下面的代码示例显示名为一个自定义事件处理程序`SampleExtensionLoad`会在调用时`My.SampleExtension.Load`事件发生。 当添加代码来处理新`My.SampleExtensionLoad`事件，`AddHandler`执行此自定义事件代码的一部分。 `MyApplication_SampleExtensionLoad`中的代码示例显示的事件处理程序处理的示例包含方法`My.SampleExtensionLoad`事件。 请注意，`SampleExtensionLoad`时选择，可以使用事件**我的应用程序事件**中左侧的下拉列表在代码编辑器上方编辑 ApplicationEvents.vb 文件时的选项。  
   
- [!code-vb[VbVbcnExtendingMy#6](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_6.vb)]  
+ [!code-vb[VbVbcnExtendingMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#6)]  
   
 ##  <a name="design"></a> 设计指南  
  开发扩展时`My`命名空间中，使用以下准则来帮助你扩展组件的维护成本降至最低。  

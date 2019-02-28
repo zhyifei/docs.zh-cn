@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: c6d2600b590e01fff062828f8e0f48d9cfad0190
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f0e50de6217e01a7bcb68ab27a9595d91981dd4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681386"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968815"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML 文本概述 (Visual Basic)
 *XML 文本*允许您将 XML 直接并入您的 Visual Basic 代码。 使用 XML 文本语法表示[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象，它是类似于 XML 1.0 语法。 这使得更轻松地以编程方式创建 XML 元素和文档，因为你的代码具有相同的结构与最终的 XML。  
@@ -26,11 +26,11 @@ ms.locfileid: "54681386"
 ## <a name="simple-literals"></a>简单的文本  
  您可以创建[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]通过键入或粘贴中有效的 XML 在 Visual Basic 代码中的对象。 XML 元素文本返回<xref:System.Xml.Linq.XElement>对象。 有关详细信息，请参阅[XML 元素文本](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)并[XML 文本和 XML 1.0 规范](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。 以下示例创建具有多个子元素的 XML 元素。  
   
- [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_1.vb)]  
+ [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
  可以通过启动 XML 文本与创建 XML 文档`<?xml version="1.0"?>`，如以下示例所示。 XML 文档文本返回<xref:System.Xml.Linq.XDocument>对象。 有关详细信息，请参阅[XML 文档文本](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)。  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 > [!NOTE]
 >  在 Visual Basic 中的 XML 文本语法不是与 XML 1.0 规范中的语法相同。 有关详细信息，请参阅[XML 文本和 XML 1.0 规范](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。  
@@ -47,12 +47,12 @@ ms.locfileid: "54681386"
   
  例如，下面的代码使用嵌入式的查询的成员从创建 XML 元素`phoneNumbers2`数组，然后将这些元素添加为子级`contact2`。  
   
- [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_3.vb)]  
+ [!code-vb[VbXMLSamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#7)]  
   
 ## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>编译器如何从 XML 文本创建对象  
  Visual Basic 编译器将 XML 文本转换为等效的调用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]构造函数来构建[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。 例如，Visual Basic 编译器将转换为下面的代码示例调用到<xref:System.Xml.Linq.XProcessingInstruction>XML 版本指令，构造函数调用到<xref:System.Xml.Linq.XElement>构造函数`<contact>`， `<name>`，和`<phone>`元素，并调用<xref:System.Xml.Linq.XAttribute>构造函数`type`属性。 具体而言，在下面的示例中提供的属性，Visual Basic 编译器将调用<xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29>构造函数两次。 第一个的值将传递`type`有关`name`参数和值`home`为`value`参数。 第二个也将值`type`有关`name`参数，但值`work`为`value`参数。  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Xml.Linq.XElement>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 356230a0b5a2c575ee554ce7f2cdb4a2f741ecac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de5719527216411c7bd156f2cc0d369442eaee20
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543365"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964768"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>如何：获取一个值，从属性 (Visual Basic)
 通过将属性名称包含在表达式中检索属性的值。  
@@ -30,7 +30,7 @@ ms.locfileid: "54543365"
   
      下面的示例读取的值的 Visual basic`Now`属性外，隐式调用其`Get`过程。  
   
-     [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
+     [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
 2.  如果该属性接受参数，请按照使用括号将参数列表括起来的属性名称。 如果没有任何自变量，可以选择性地省略括号。  
   

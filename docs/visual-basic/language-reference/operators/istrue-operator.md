@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: 780e67cf54c0bec230d5b052b877cf97a76d3f6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2ec1a20e815ad38c2fdd984b9f9c35247dae81a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641117"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971307"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue 运算符 (Visual Basic)
 确定表达式是否为`True`。  
@@ -42,7 +42,7 @@ ms.locfileid: "54641117"
 ## <a name="example"></a>示例  
  下面的代码示例定义一个结构，其中包含定义大纲`IsFalse`和`IsTrue`运算符。  
   
- [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/istrue-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>请参阅
 - [IsFalse 运算符](../../../visual-basic/language-reference/operators/isfalse-operator.md)

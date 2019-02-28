@@ -8,18 +8,19 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], contexts
 - ByVal keyword [Visual Basic]
 ms.assetid: 1eaf4e58-b305-4785-9e3d-e416b9c75598
-ms.openlocfilehash: 6fa87db4fbab961dd1aa526e2ac8ff15b031005b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edee47e41ca78175a6fb24ed5eac255c03de0901
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650075"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972553"
 ---
 # <a name="byval-visual-basic"></a>ByVal (Visual Basic)
 指定的被调用的过程或属性不能更改基础调用代码中的参数的变量的值的方式来传递参数。  
   
 ## <a name="remarks"></a>备注  
- `ByVal` 修饰符可用于下面的上下文中：  
+ 
+  `ByVal` 修饰符可用于下面的上下文中：  
   
  [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
@@ -34,7 +35,7 @@ ms.locfileid: "54650075"
 ## <a name="example"></a>示例  
  下面的示例演示如何将`ByVal`参数传递机制与引用类型自变量。 在示例中，参数是`c1`，类的实例`Class1`。 `ByVal` 阻止过程中的代码进行更改的基础值的引用自变量， `c1`，但不会保护的可访问的字段和属性`c1`。  
   
- [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/VisualBasic/byval_1.vb)]  
+ [!code-vb[VbVbalrKeywords#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class5.vb#10)]  
   
 ## <a name="see-also"></a>请参阅
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)

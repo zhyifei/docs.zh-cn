@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: e67339beac42fe6dc32925c8733bec2889739733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e7190f3ba63b6af9f7f402fbc23b4268c329856
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728065"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974739"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>数据类型疑难解答 (Visual Basic)
 此页列出了你对内部数据类型执行操作时可能发生的一些常见问题。  
@@ -40,7 +40,7 @@ ms.locfileid: "54728065"
   
  下面的示例演示两个错误用法和正确比较`Double`值。  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#10)]  
   
  上面的示例使用<xref:System.Double.ToString%2A>方法<xref:System.Double>结构，使它可以指定精度优于`CStr`关键字使用。 默认值为 15 个数字，但是"G17"格式将其扩展到 17 位数字。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54728065"
   
  下面的示例演示可能不精确的浮点操作数。  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#11)]  
   
  上面的示例使用<xref:System.Double.ToString%2A>方法<xref:System.Double>结构，使它可以指定精度优于`CStr`关键字使用。 默认值为 15 个数字，但是"G17"格式将其扩展到 17 位数字。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "54728065"
   
  下面的示例演示如何操作和不成功分配到文字的`Char`变量。  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#12)]  
   
  始终存在风险中没有使用收缩转换，因为它们可以在运行时失败。 例如，从转换`String`到`Char`可能会失败，如果`String`值包含多个字符。 因此，它更好地编程使用`C`键入字符。  
   

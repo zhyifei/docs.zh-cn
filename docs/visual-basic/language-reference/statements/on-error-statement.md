@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 9916c7197b260436a447a84b22df9b76dc5af4cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654876"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976481"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 语句 (Visual Basic)
 启用错误处理例程，并指定该例程在过程; 中的位置此外可以用于禁用错误处理例程。  
@@ -76,7 +76,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="throw-statement"></a>Throw 语句  
  与引发的错误`Err.Raise`方法设置`Exception`属性设置为新创建的实例<xref:System.Exception>类。 为了支持派生的异常类型的异常引发`Throw`语句支持的语言。 这将是要引发的异常实例的单个参数。 下面的示例演示如何使用现有的异常处理支持使用这些功能：  
   
- [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#17)]  
   
  请注意，`On Error GoTo`语句捕获所有错误，而不考虑异常类。  
   
@@ -94,7 +94,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  若要阻止运行时未发生错误的错误处理代码，请将置于`Exit Sub`， `Exit Function`，或`Exit Property`语句之前的错误处理例程，如以下片段中所示：  
   
- [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
+ [!code-vb[VbVbalrErrorHandling#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#18)]  
   
  在这里，错误处理代码如下所示`Exit Sub`语句位于`End Sub`语句以将其与过程流。 可以将错误处理代码放在过程中的任意位置。  
   
@@ -103,7 +103,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  如果创建了访问其他对象的对象，应尝试处理它们可能传回任何未处理的错误。 如果您不能映射中的错误代码`Err.Number`到某个你自己的错误，然后传递它们重新添加到您的对象的调用方。 应通过添加到您的错误代码来指定错误`VbObjectError`常量。 例如，如果您的错误代码为 1052年，将其分配，如下所示：  
   
- [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
+ [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]  
   
 > [!CAUTION]
 >  系统对 Windows 动态链接库 (Dll) 的调用过程中出现错误不会引发异常并不能与 Visual Basic 错误捕获捕获。 当调用 DLL 函数，应检查成功或失败 （根据 API 规范），每个返回值和出现故障时，检查值`Err`对象的`LastDLLError`属性。  

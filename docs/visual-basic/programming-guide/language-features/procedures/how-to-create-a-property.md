@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: cc1222feed338f88142c4a6a7d6520fa458b5c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4afcd57a9133515cecc72da856f67e4e3d5ff717
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734034"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970956"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>如何：创建一个属性 (Visual Basic)
 将属性定义之间`Property`语句和一个`End Property`语句。 在此定义中，定义`Get`过程中，`Set`过程中，或两者。 该属性的所有代码均位于这些过程中。  
@@ -54,11 +54,11 @@ ms.locfileid: "54734034"
 ## <a name="example"></a>示例  
  以下示例创建一个将完整的名称存储为两个构成的名称、 名字和姓氏的读/写属性。 当调用代码中读取`fullName`，则`Get`过程组合姓名的两个组成部分，并返回的完整名称。 当调用代码将分配新的完整名称，`Set`过程尝试将其分为两个构成的名称。 如果找不到空间，它将其存储所有为第一个名称。  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  下面的示例演示的属性过程的典型调用`fullName`。 第一次调用设置的属性值和第二个调用会检索它。  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>请参阅
 - [过程](./index.md)

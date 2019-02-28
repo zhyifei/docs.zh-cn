@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: 9d6360358b08dc0602cbdfe352bb69caee25c7bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fc447e00ca46f251a895f0de82118a11310a8d9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591965"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972646"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider 组件概述（Windows 窗体）
 Windows 窗体[HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)组件用于将 HTML Help 1.x 帮助文件 （.chm 文件，使用 HTML Help Workshop 生成或.htm 文件） 与 Windows 应用程序相关联。 你可以提供多种方式帮助：  
@@ -34,7 +34,7 @@ Windows 窗体[HelpProvider](../../../../docs/framework/winforms/controls/helppr
  如果<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>尚未设置，必须使用<xref:System.Windows.Forms.HelpProvider.SetHelpString%2A>来提供帮助文本。 如果同时设置了<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>和帮助字符串，帮助根据<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>将优先。  
   
 > [!NOTE]
->  您可能会遇到使用相对路径时出现问题时，该值指定帮助文件的路径中<xref:System.Windows.Forms.Help.ShowHelp%2A>方法或<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>属性的<xref:System.Windows.Forms.HelpProvider>控件。 在这种情况下，请务必使用绝对文件路径来指定帮助文件。  
+>  您可能会遇到问题时指定的路径中的帮助文件，使用相对路径<xref:System.Windows.Forms.Help.ShowHelp%2A>方法或<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>属性的<xref:System.Windows.Forms.HelpProvider>控件。 在这种情况下，请务必使用绝对文件路径来指定帮助文件。  
   
 ## <a name="see-also"></a>请参阅
 - [Windows 窗体应用程序中的帮助系统](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)

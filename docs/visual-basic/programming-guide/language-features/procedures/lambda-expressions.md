@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 3d2cab1c40b1a84e9a3b6bed885b2a0020e53f01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529471"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974804"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda 表达式 (Visual Basic)
 一个*lambda 表达式*是函数或子例程没有可用于任何委托是有效的名称。 Lambda 表达式可以是函数或子例程，并且可以是单行或多行。 可以将值从当前作用域传递到 lambda 表达式中。  
@@ -26,19 +26,19 @@ ms.locfileid: "54529471"
   
  下面的示例是递增其参数和返回值的 lambda 表达式。 该示例显示了函数的这两个单行和多行 lambda 表达式语法。  
   
- [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_1.vb)]  
+ [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
  下面的示例是向控制台写入值的 lambda 表达式。 该示例显示了一个子例程的这两个单行和多行 lambda 表达式语法。  
   
- [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_2.vb)]  
+ [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
  请注意，在前面的示例中的 lambda 表达式将分配给变量的名称。 引用的变量，每当您调用 lambda 表达式。 您可以声明和调用 lambda 表达式在相同时，如下面的示例中所示。  
   
- [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_3.vb)]  
+ [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
  Lambda 表达式可以返回作为函数调用的值 (如示例中所示[上下文](#context)本主题后面的部分)，或作为参数传递给参数接受一个委托类型，如以下所示示例。  
   
- [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_4.vb)]  
+ [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]  
   
 ## <a name="lambda-expression-syntax"></a>Lambda 表达式语法  
  Lambda 表达式的语法类似于标准函数或子例程。 差异如下所示：  
@@ -114,7 +114,7 @@ End Class
   
  访问本地变量和参数中包含的作用域可以扩展该作用域生存期。 只要引用 lambda 表达式的委托不能进行垃圾回收，会保留在原始环境变量的访问权限。 在以下示例中，变量`target`本地`makeTheGame`，在其中的方法的 lambda 表达式`playTheGame`定义。 请注意，返回的 lambda 表达式中，分配给`takeAGuess`中`Main`，仍有权访问本地变量`target`。  
   
- [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_5.vb)]  
+ [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]  
   
  下面的示例演示了广泛的嵌套的 lambda 表达式的访问权限。 从执行返回的 lambda 表达式时`Main`作为`aDel`，它将访问这些元素：  
   
@@ -128,16 +128,16 @@ End Class
   
 -   在其中嵌套 lambda 表达式的参数： `level2`  
   
- [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
+ [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
 ## <a name="converting-to-a-delegate-type"></a>将转换为委托类型  
  Lambda 表达式可以隐式转换为兼容的委托类型。 有关兼容性的一般要求的信息，请参阅[宽松委托转换](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。 例如，下面的代码示例显示了 lambda 表达式隐式转换为`Func(Of Integer, Boolean)`或匹配的委托签名。  
   
- [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_7.vb)]  
+ [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]  
   
  下面的代码示例显示了 lambda 表达式隐式转换为`Sub(Of Double, String, Double)`或匹配的委托签名。  
   
- [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_8.vb)]  
+ [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]  
   
  当您将 lambda 表达式分配给委托，或将它们作为参数传递给过程时，可以指定参数名称，但省略其数据类型，以便从委托中获取的类型。  
   
@@ -145,11 +145,11 @@ End Class
   
 -   下面的示例定义返回的 lambda 表达式`True`如果可以为 null 的参数分配的值，并`False`如果其值为`Nothing`。  
   
-     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_9.vb)]  
+     [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
 -   下面的示例定义返回数组中的最后一个元素索引的 lambda 表达式。  
   
-     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
+     [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>请参阅
 - [过程](./index.md)

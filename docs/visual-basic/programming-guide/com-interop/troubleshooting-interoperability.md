@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 413c9331611d3406c13df58f25db1ef0255339b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc5262d62d32ad3f79c4f4e2c4d9f862dbce3727
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517664"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976884"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>互操作性疑难解答 (Visual Basic)
 当 COM 和托管的代码之间互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，可能会遇到一个或多个以下常见的问题。  
@@ -57,11 +57,11 @@ ms.locfileid: "54517664"
 ##  <a name="vbconinteroperabilitymarshalinganchor6"></a> 创建.NET Framework 类的实例  
  通常情况下，创建的实例[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]类使用`New`语句和类名。 互操作程序集所表示的 COM 类是在其中可以使用的一个例子`New`语句用于接口。 除非你使用的 COM 类`Inherits`语句，就像类一样，可以使用该接口。 下面的代码演示如何创建`Command`具有对 Microsoft ActiveX 数据对象 2.8 库 COM 对象的引用的项目中的对象：  
   
- [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_1.vb)]  
+ [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
  但是，如果你使用 COM 类作为基的派生类，必须使用互操作表示的类的 COM 类，如以下代码所示：  
   
- [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_2.vb)]  
+ [!code-vb[VbVbalrInterop#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#21)]  
   
 > [!NOTE]
 >  互操作程序集隐式实现表示 COM 类的接口。 不应尝试使用`Implements`将导致语句来实现这些接口或错误。  
@@ -81,19 +81,19 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  Visual Basic.NET 要求，始终可以使用其方法之前创建的 COM 对象的实例。 若要在 Visual Basic 中使用这些方法，声明的变量的所需的类，并使用新关键字来将对象分配给对象变量。 `Shared`时想要确保可以使用关键字创建只有一个类的实例。  
   
- [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_3.vb)]  
+ [!code-vb[VbVbalrInterop#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#23)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor9"></a> 事件处理程序中未处理的错误  
  一个常见的互操作问题涉及处理引发的 COM 对象事件的事件处理程序中的错误。 此类错误将被忽略，除非您专门检查使用的错误`On Error`或`Try...Catch...Finally`语句。 例如，下面的示例是从 Visual Basic.NET 项目具有对 Microsoft ActiveX 数据对象 2.8 库 COM 对象的引用。  
   
- [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_4.vb)]  
+ [!code-vb[VbVbalrInterop#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#24)]  
   
  此示例将按预期方式引发错误。 但是，如果尝试不相同的示例`Try...Catch...Finally`块中，错误将忽略就使用`OnError Resume Next`语句。 如果没有错误处理机制，被零除将以静默方式失败。 此类错误永远不会引发未处理的异常错误，因为它是异常的使用某种形式处理从 COM 对象的事件的事件处理程序中处理的重要。  
   
 ### <a name="understanding-com-interop-errors"></a>了解 COM 互操作错误  
  如果没有错误处理机制，互操作调用通常生成错误可提供很少信息。 只要可能，使用结构化处理，以提供有关问题的详细信息，它们出现的错误。 调试应用程序时，这可以是特别有用。 例如：  
   
- [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
+ [!code-vb[VbVbalrInterop#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#25)]  
   
  可以通过检查异常对象的内容来查找错误说明、 HRESULT 和 COM 错误的原因等信息。  
   
@@ -113,11 +113,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  如果你有权访问所调用的过程，您可以通过使用来防止出现此错误`ByVal`关键字来声明接受的参数`ReadOnly`属性。 例如：  
   
- [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
+ [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   
  如果你没有访问源代码的被调用的过程，您可以强制要通过添加一组额外的方括号调用过程通过值传递的属性。 例如，在项目中具有对 Microsoft ActiveX 数据对象 2.8 库 COM 对象的引用，您可以使用：  
   
- [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_7.vb)]  
+ [!code-vb[VbVbalrInterop#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#27)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor12"></a> 部署公开互操作的程序集  
  部署公开的 COM 接口的程序集提供了一些独特的挑战。 例如，单独的应用程序引用相同的 COM 程序集时发生的潜在问题。 安装新版本的程序集和另一个应用程序仍在使用旧版本的程序集时，这种情况很常见。 如果您卸载共享某个 DLL 程序集，您可以无意中使其不可用到其他程序集。  

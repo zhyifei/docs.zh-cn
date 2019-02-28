@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c1087f1ea260b61a51126f42703a32075884e54
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666574"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971281"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>演练：在 Visual Basic 中编写查询
 本演练演示如何使用 Visual Basic 语言功能编写[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查询表达式。 本演练演示如何在列表中的学生对象创建查询、 运行查询，以及如何对其进行修改。 查询将合并多个功能，包括对象初始值设定项、 局部类型推理和匿名类型。  
@@ -56,11 +56,11 @@ ms.locfileid: "54666574"
   
 1.  查找中的位置`Main`方法的项目的标记，如下所示：  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#1)]  
   
      将以下代码复制并粘贴到此位置。  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#2)]  
   
 2.  将鼠标指针停留在`studentQuery`若要验证编译器分配的类型是在代码中`IEnumerable(Of Student)`。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "54666574"
   
 1.  以下代码添加到`For Each`循环在项目中查询的下面。  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#3)]  
   
 2.  将鼠标指针停留在循环控制变量`studentRecord`以查看其数据类型。 类型`studentRecord`被推断为`Student`，因为`studentQuery`返回的集合`Student`实例。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "54666574"
   
 1.  将代码添加在本部分介绍在查询表达式中的本地标识符。 本地标识符将用于保存中间结果。 在以下示例中，`name`是包含学生的串联的标识符的名字和姓氏。 为方便起见，可以使用的本地标识符或也可以通过将存储的一个表达式，否则将计算多次结果来提高性能。  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#4)]  
   
 2.  生成并通过按 CTRL + F5 运行该应用程序。 请注意控制台窗口中的结果。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54666574"
   
 1.  添加查询和`For Each`来创建查询，以生成一个序列，其元素与不同源中元素的此部分中的循环。 在以下示例中，源是一系列`Student`返回对象，但只有一个成员的每个对象： 其姓氏为 Garcia 学生的名字。 因为`currentStudent.First`是一个字符串，返回的序列的数据类型`studentQuery3`是`IEnumerable(Of String)`，一个字符串序列。 如前面的示例中所示分配的数据类型为`studentQuery3`留给编译器通过使用局部类型推理来确定。  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#5)]  
   
 2.  将鼠标指针停留在`studentQuery3`以验证是否已分配的类型在代码中`IEnumerable(Of String)`。  
   
@@ -122,14 +122,14 @@ ms.locfileid: "54666574"
   
      以下示例创建的查询返回的名称和的高年级学生其学术排名是介于 1 和 10，学术排名的顺序。 在此示例中，类型`studentQuery4`必须推断，因为`Select`子句将返回一个匿名类型的实例和匿名类型已没有可用的名称。  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#6)]  
   
 2.  生成并通过按 CTRL + F5 运行该应用程序。 请注意控制台窗口中的结果。  
   
 ## <a name="additional-examples"></a>其他示例  
  现在，你已了解基础知识，下面是其他示例来演示灵活的列表，以及利用[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询。 每个示例被前面其用途的简短说明。 将鼠标指针停留在每个查询，以查看推断出的类型的查询结果变量。 使用`For Each`循环生成的结果。  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]  
   
 ## <a name="additional-information"></a>其他信息  
  了解如何使用查询的基本概念后，已准备好读取的特定类型的文档和示例[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]感兴趣的提供程序：  

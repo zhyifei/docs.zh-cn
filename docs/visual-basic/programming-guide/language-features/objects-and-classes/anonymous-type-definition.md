@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 9cb03eab00033c3d08b51de7524e9489198d6d76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e74b4c7298a80f724031cc4ac1feb49ebae8f7cb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678392"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975610"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>匿名类型定义 (Visual Basic)
 在响应的匿名类型的实例声明时，编译器会创建包含类型的指定的属性的新类定义。  
@@ -17,7 +17,7 @@ ms.locfileid: "54678392"
 ## <a name="compiler-generated-code"></a>编译器生成的代码  
  有关的以下定义`product`，编译器会创建一个包含属性的新类定义`Name`， `Price`，和`OnHand`。  
   
- [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]  
   
  类定义包含类似于下面的属性定义。 请注意，没有任何`Set`键属性的方法。 键属性的值是只读的。  
   
@@ -66,13 +66,13 @@ End Class
   
      例如，在以下示例中，`Equals`将返回`True`仅`employee01`和`employee08`。 前面每行指定新的实例不匹配的原因的注释`employee01`。  
   
-     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]  
   
 -   `GetHashcode` 提供了相应唯一的 GetHashCode 算法。 该算法使用只有键属性来计算哈希代码。  
   
 -   `ToString` 返回连接的属性值的字符串，如下面的示例中所示。 包含密钥和非键属性。  
   
-     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]  
   
  显式命名的匿名类型属性不能与这些生成的方法发生冲突。 也就是说，不能使用`.Equals`， `.GetHashCode`，或`.ToString`命名属性。  
   

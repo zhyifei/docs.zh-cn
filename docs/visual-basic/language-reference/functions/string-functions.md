@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 9a716a767563ab2721b3f01663d7566f141fc8e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11ea31ae245d34525ea33d5d2a53a72f1c415b16
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612016"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981447"
 ---
 # <a name="string-functions-visual-basic"></a>字符串函数 (Visual Basic)
 下表列出了 Visual Basic 提供的用于搜索和操作字符串的函数。  
@@ -51,27 +51,27 @@ ms.locfileid: "54612016"
 ## <a name="example"></a>示例  
  此示例使用`UCase`函数以返回字符串的大写版本。  
   
- [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
+ [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>示例  
  此示例使用`LTrim`函数去除前导空格和`RTrim`函数去除尾随空格的字符串变量。 它使用`Trim`函数同时去除这两种类型的空格。  
   
- [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
+ [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>示例  
  此示例使用`Mid`函数从字符串返回指定的数目的字符。  
   
- [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
+ [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
   
 ## <a name="example"></a>示例  
  此示例使用`Len`以返回字符串中的字符数。  
   
- [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
+ [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
 ## <a name="example"></a>示例  
  此示例使用`InStr`函数以返回一个字符串在另一个字符串的第一个匹配项的位置。  
   
- [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
+ [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>示例  
  此示例中演示的各种用法`Format`函数使用的格式值`String`格式和用户定义的格式。 对于日期分隔符 (`/`)，时间分隔符 (`:`)，和 AM/PM 指示符 (`t`和`tt`)，系统显示的实际格式化的输出取决于代码使用的区域设置。 当时间和日期显示在开发环境中，使用短时间格式和短日期格式的代码区域设置。  
@@ -79,7 +79,7 @@ ms.locfileid: "54612016"
 > [!NOTE]
 >  对于使用 24 小时制，AM/PM 指示符的区域设置 (`t`和`tt`) 不显示任何内容。  
   
- [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
+ [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>请参阅
 - [关键字](../../../visual-basic/language-reference/keywords/index.md)

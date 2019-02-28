@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2af8fe5557e452db1ef3a72de35582b18117cc30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0757c3ce0528f76eab5607e20ebca2e66a903900
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553732"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974141"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>演练：处理事件 (Visual Basic)
 这是演示如何使用事件的两个主题的第二个。 第一个主题，[演练：声明和引发事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，演示如何声明和引发事件。 本部分使用窗体和该演练中的类来显示如何处理时其发生的事件。  
@@ -25,7 +25,7 @@ ms.locfileid: "54553732"
   
 1.  将以下代码中的放置`Form1`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
      `WithEvents`关键字指定变量`mWidget`用于处理对象的事件。 通过提供将从其创建该对象的类的名称指定的对象的类型。  
   
@@ -47,13 +47,13 @@ ms.locfileid: "54553732"
   
 3.  将以下代码添加到 `mWidget_PercentDone` 事件处理程序中：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      每当`PercentDone`引发事件、 事件过程会显示在完成百分比`Label`控件。 `DoEvents`方法允许标签重新绘制，并且还提供了用户单击的机会**取消**按钮。  
   
 4.  添加以下代码为`Button2_Click`事件处理程序：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
  如果用户单击**取消**按钮，同时`LongTask`正在运行，`Button2_Click`执行事件就立即`DoEvents`语句可用于对发生的事件处理。 在类级别变量`mblnCancel`设置为`True`，并`mWidget_PercentDone`事件然后测试它，并将`ByRef Cancel`参数`True`。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "54553732"
   
 3.  添加以下代码`Form1_Load`创建事件过程`Widget`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
  此代码执行时，Visual Basic 创建`Widget`对象，并将其事件连接到与关联的事件过程`mWidget`。 自此以后，每当`Widget`引发其`PercentDone`事件，`mWidget_PercentDone`事件过程中执行。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "54553732"
   
 -   将以下代码添加到 `Button1_Click` 事件处理程序中：  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
  之前`LongTask`调用方法时，必须初始化的显示完成百分比的标签和类级别`Boolean`标记为取消该方法必须设置为`False`。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "54553732"
   
 -   添加以下代码行`Button1_Click`过程中，读取的行前面紧邻`mWidget.LongTask(12.2, 0.33)`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_6.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   
  上面的代码创建一个新`Widget`每次单击按钮。 只要`LongTask`方法完成后，对引用`Widget`发布后，和`Widget`被销毁。  
   

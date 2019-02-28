@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 54ad162a1a720a1645a3b413e6518d2ccfd37bbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595911"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979914"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML 元素文本 (Visual Basic)
 
@@ -119,7 +119,7 @@ ms.locfileid: "54595911"
 ## <a name="example"></a>示例  
  下面的示例演示如何创建简单的 XML 元素具有两个嵌套的空元素。  
   
- [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#20)]  
   
  此示例显示以下文本。 请注意，文本会保留为空元素的结构。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "54595911"
 ## <a name="example"></a>示例  
  下面的示例演示如何使用嵌入式的表达式来命名元素和创建属性。  
   
- [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_2.vb)]  
+ [!code-vb[VbXMLSamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#21)]  
   
  此代码显示以下文本：  
   
@@ -144,7 +144,7 @@ ms.locfileid: "54595911"
 ## <a name="example"></a>示例  
  下面的示例声明 `ns` 作为 XML 命名空间前缀。 然后，它使用的命名空间前缀来创建 XML 文本，并显示元素的最终形式。  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_3.vb)]  
+ [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]  
   
  此代码显示以下文本：  
   

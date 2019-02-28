@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: a3ad63472f6a3f7ae1ec13742185790667c7bcf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b25910f5215585914094b7bc4420f537a400934b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699046"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967987"
 ---
 # <a name="rem-statement-visual-basic"></a>REM 语句 (Visual Basic)
 使用要包含在程序的源代码中的说明性备注。  
@@ -45,7 +45,7 @@ REM comment
 ## <a name="example"></a>示例  
  下面的示例演示`REM`用于解释性备注包含在程序中的语句。 它还演示了替代方法，即使用单引号字符 (`'`) 而不是`REM`。  
   
- [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/rem-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>请参阅
 - [代码中的注释](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
