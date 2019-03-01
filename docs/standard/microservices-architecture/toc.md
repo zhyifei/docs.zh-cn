@@ -1,4 +1,4 @@
-# [.NET 微服务：适用于容器化 .NET 应用的体系结构](index.md)
+# [.NET 微服务：适用于容器化 .NET 应用程序的体系结构](index.md)
 ## [容器和 Docker 简介](container-docker-introduction/index.md)
 ### [什么是 Docker？](container-docker-introduction/docker-defined.md)
 ### [Docker 术语](container-docker-introduction/docker-terminology.md)
