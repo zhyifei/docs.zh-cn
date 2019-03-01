@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 2bd0b7e0d927e53f70515cfa124034a4cacc5ce7
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b7ba25795dd69e5bd978c77928f9b9797f4d4e19
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332242"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200879"
 ---
 # <a name="getting-started-tutorial"></a>入门教程
 在本部分中包含的主题旨在帮助您快速了解到 Windows Communication Foundation (WCF) 编程体验。 这些主题要根据本主题底部的列表中的顺序完成。 通过本教程中，可以初步了解创建 WCF 服务和客户端应用程序所需的步骤。 服务公开一个或多个终结点，其中每个终结点都公开一项或多项服务操作。 *终结点*服务的指定的地址，其中可以找到该服务，包含描述如何在客户端必须与该服务，并定义的功能的协定通信的信息的绑定向其客户端提供服务。
@@ -33,7 +33,7 @@ ms.locfileid: "56332242"
 
  [如何：实现服务协定](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 
- 描述如何实现服务协定。 一旦定义了某一协定后，必须使用某一服务类实现该协定。
+ 描述如何实现服务协定。 定义一个协定后，它必须与服务类实现。
 
  [如何：托管并运行基本服务](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
 

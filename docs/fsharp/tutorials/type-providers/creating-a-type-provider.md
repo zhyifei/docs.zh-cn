@@ -2,12 +2,12 @@
 title: 教程：创建类型提供程序
 description: 了解如何创建你自己的F#类型中的提供程序F#3.0 通过检查几个简单类型提供程序来演示基本概念。
 ms.date: 05/16/2016
-ms.openlocfilehash: b16981b70db0896805754c60afa96a07623a1263
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: bd19cfa4c8b64e429bbd3af87949b39cb78012ba
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223203"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203660"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教程：创建类型提供程序
 
@@ -702,7 +702,7 @@ type public CheckedRegexProvider() as this =
                     parameters = [ProvidedParameter("input", typeof<string>)], 
                     returnType = matchTy, 
                     invokeCode = fun args -> <@@ ((%%args.[0]:obj) :?> Regex).Match(%%args.[1]) :> obj @@>)
-                matchMeth.AddXmlDoc "Searches the specified input string for the first occurence of this regular expression"
+                matchMeth.AddXmlDoc "Searches the specified input string for the first occurrence of this regular expression"
 
                 ty.AddMember matchMeth
 

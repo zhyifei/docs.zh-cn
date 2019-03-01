@@ -16,12 +16,12 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: 2036ec8009cfc72a20bcd828d7bc0b252e620cab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d9b02a9c997ffcfdd61e277a6ed3779d8821831
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610820"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202452"
 ---
 # <a name="-operator-visual-basic"></a>/ 运算符 (Visual Basic)
 使两个数字相除，返回浮点结果。  
@@ -76,7 +76,7 @@ expression1 / expression2
 ## <a name="example"></a>示例  
  此示例使用`/`运算符执行浮点除法。 结果是两个操作数的商。  
   
- [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#16)]  
   
  在前面的示例表达式返回值为 2.5 3.333333。 请注意，结果始终是浮点 (`Double`)，即使这两个操作数都是整数常量。  
   

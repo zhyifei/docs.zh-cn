@@ -2,12 +2,12 @@
 title: 如何：查询目录树 (LINQ) (Visual Basic 中) 中的重复文件
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: 8cfa86aa3750b7a102bfe6787bf589b5662efa15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5663c368c319c8c667171f65292667029951dae9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667175"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200619"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>如何：查询目录树 (LINQ) (Visual Basic 中) 中的重复文件
 有时，具有相同名称的文件可能位于多个文件夹中。 例如，在 Visual Studio 安装文件夹下，多个文件夹中都有 readme.htm 文件。 此示例显示如何在指定根文件夹下查询此类重复文件名。 第二个示例显示如何查询大小和创建时间都匹配的文件。  
@@ -55,14 +55,14 @@ Module QueryDuplicateFileNames
         PageOutput(duplicates, trimLength)  
   
     End Sub  
-    ' Pages console diplay for large query results. No more than one group per page.  
+    ' Pages console display for large query results. No more than one group per page.  
     ' This sub specifically works with group queries of FileInfo objects  
     ' but can be modified for any type.  
     Sub PageOutput(ByVal groupQuery, ByVal charsToSkip)  
   
         ' "3" = 1 line for extension key + 1 for "Press any key" + 1 for input cursor.  
         Dim numLines As Integer = Console.WindowHeight - 3  
-        ' Flag to indicate whether there are more results to diplay  
+        ' Flag to indicate whether there are more results to display  
         Dim goAgain As Boolean = True  
   
         For Each fg As IEnumerable(Of System.IO.FileInfo) In groupQuery  

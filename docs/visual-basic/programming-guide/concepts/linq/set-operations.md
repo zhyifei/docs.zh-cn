@@ -2,12 +2,12 @@
 title: 设置操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: b1b515c7eee11f7aadc1d34223dbb4ea1367842d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3aaccd2b91e842bb433fe97e59314860c631341e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741868"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200749"
 ---
 # <a name="set-operations-visual-basic"></a>设置操作 (Visual Basic)
 LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在等效元素来生成结果集的查询运算。  
@@ -48,7 +48,7 @@ LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在
 ## <a name="query-expression-syntax-example"></a>查询表达式语法示例  
  下面的示例使用`Distinct`LINQ 查询从整数列表返回的唯一数字中的子句。  
   
- [!code-vb[CsLINQSetOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
+ [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Linq>

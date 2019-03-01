@@ -30,12 +30,12 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: bf7ff1870a523903babd7140e0d8271f9946064b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a816b1097c0a9628bb2889d39be5c029beaa3c63
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628053"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200983"
 ---
 # <a name="comparison-operators-visual-basic"></a>比较运算符 (Visual Basic)
 以下是定义在 Visual Basic 中的比较运算符。  
@@ -146,7 +146,7 @@ result = string Like pattern
 ## <a name="example"></a>示例  
  下面的示例显示了关系比较运算符，用来比较表达式的各种用法。 关系比较运算符将返回`Boolean`表示是否规定的表达式计算结果为结果`True`。 当应用`>`和`<`运算符对字符串进行比较使用正常的字符串按字母顺序排序顺序。 此顺序可以是依赖于区域设置。 排序是否是区分大小写取决于[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)设置。  
   
- [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#1)]  
   
  在上述示例中，第一次比较将返回`False`和其余的比较返回`True`。  
   

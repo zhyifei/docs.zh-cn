@@ -17,12 +17,12 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 8526f632b7e54c03bd16c3af70375179cd7cf277
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c10fc3998469e19d5be744ea8fb4faed25f1a2a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724468"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201217"
 ---
 # <a name="--operator-visual-basic"></a>- 运算符 (Visual Basic)
 返回两个数值表达式或数值表达式的负值之间的差异。  
@@ -63,7 +63,7 @@ ms.locfileid: "54724468"
 ## <a name="example"></a>示例  
  下面的示例使用`–`运算符以计算并返回两个数字之间的差异，然后以对数字求反。  
   
- [!code-vb[VbVbalrOperators#10](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
  这些语句执行后`binaryResult`包含 124.45 和`unaryResult`包含 –334.90。  
   

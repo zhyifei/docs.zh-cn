@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 19cd2dbaa055ab6e927ef1ddc9623723ea8c5f2f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 71f21a7c2ea1bcc24547a5a045c22c7156397103
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977495"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201672"
 ---
 # <a name="comments-in-code-visual-basic"></a>代码中的注释 (Visual Basic)
 阅读代码示例时，经常会遇到注释符号 (`'`)。 此符号通知 Visual Basic 编译器忽略它，后面的文本或*注释*。 注释是为了方便阅读而为代码添加的简短的解释性说明。  
@@ -60,7 +60,7 @@ ms.locfileid: "56977495"
 >  也可以用在文本前加关键字 `REM` 的方式给代码添加注释。 但是，`'`符号并**注释**/**取消注释**按钮是易于使用和需要较少的空间和内存。  
   
 ## <a name="see-also"></a>请参阅
-- [使用 XML 注释记录代码](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [基本技术-使用 XML 注释记录代码](https://msdn.microsoft.com/magazine/dd722812.aspx)
 - [如何：创建 XML 文档](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
 - [程序结构和代码约定](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

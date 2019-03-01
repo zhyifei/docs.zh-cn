@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: 5ca92324dec1d4fa8885a610a6e246640f4a5752
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 141040a715487b3cbcfff1c3b9969a0869c8a3d8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973023"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201699"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查询操作 (Visual Basic)
 本主题提供了简要介绍了[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]表达式在 Visual Basic 中和某些典型查询中执行的操作。 有关详细信息，请参阅下列主题：  
@@ -85,7 +85,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      在下面的示例返回的元素为匿名类型的实例，因为你不能为类型根据名称引用其他位置在代码中。 编译器指定的类型名称包含不正常的 Visual Basic 代码中有效的字符。 在下面的示例中的查询返回的集合中的元素`londonCusts4`是匿名类型的实例  
   
-     [!code-vb[VbLINQBasicOps#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_6.vb)]  
+     [!code-vb[VbLINQBasicOps#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#6)]  
   
      或  
   

@@ -2,12 +2,12 @@
 title: 聚合操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 7daf4f653d3796eaa3ae426fdbf86a89ebdd2dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe39c2efb5d9f24a7d9d5240b20a9ca687ed1aa9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735378"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202179"
 ---
 # <a name="aggregation-operations-visual-basic"></a>聚合操作 (Visual Basic)
 聚合运算从值的集合中计算出单个值。 例如，从一个月累计的每日温度值计算出日平均温度值就是一个聚合运算。  
@@ -35,32 +35,32 @@ ms.locfileid: "54735378"
 ### <a name="average"></a>平均值  
  下面的代码示例使用`Aggregate Into Average`计算数组中的数字表示温度的平均温度的 Visual Basic 中的子句。  
   
- [!code-vb[CsLINQAggregating#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_1.vb)]  
+ [!code-vb[CsLINQAggregating#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#1)]  
   
 ### <a name="count"></a>计数  
  下面的代码示例使用`Aggregate Into Count`在 Visual Basic 进行计数大于或等于 80 数组中的值中的子句。  
   
- [!code-vb[CsLINQAggregating#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_2.vb)]  
+ [!code-vb[CsLINQAggregating#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#2)]  
   
 ### <a name="longcount"></a>LongCount  
  下面的代码示例使用`Aggregate Into LongCount`子句来计算数组中的值的个数。  
   
- [!code-vb[CsLINQAggregating#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_3.vb)]  
+ [!code-vb[CsLINQAggregating#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#3)]  
   
 ### <a name="max"></a>最大值  
  下面的代码示例使用`Aggregate Into Max`子句来计算表示温度的数字数组中的最大温度。  
   
- [!code-vb[CsLINQAggregating#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_4.vb)]  
+ [!code-vb[CsLINQAggregating#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#4)]  
   
 ### <a name="min"></a>最小值  
  下面的代码示例使用`Aggregate Into Min`子句来计算表示温度的数字数组中的最小温度。  
   
- [!code-vb[CsLINQAggregating#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_5.vb)]  
+ [!code-vb[CsLINQAggregating#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#5)]  
   
 ### <a name="sum"></a>Sum  
  下面的代码示例使用`Aggregate Into Sum`字句来计算费用总额从一个数组，表示费用的值。  
   
- [!code-vb[CsLINQAggregating#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_6.vb)]  
+ [!code-vb[CsLINQAggregating#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#6)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Linq>

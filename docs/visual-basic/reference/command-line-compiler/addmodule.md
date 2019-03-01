@@ -6,12 +6,12 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 3e5c94cce8b16649854050855800ac1bf2fc6572
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a6d367f4b09de600bb744aa2abed0da2c93aa0b
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580572"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202361"
 ---
 # <a name="-addmodule"></a>-addmodule
 使编译器让指定文件中的所有类型信息可供当前正在编译的项目使用。  
@@ -41,11 +41,11 @@ ms.locfileid: "54580572"
 ## <a name="example"></a>示例  
  下面的代码创建一个模块。  
   
- [!code-vb[VbVbalrCompiler#47](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_1.vb)]  
+ [!code-vb[VbVbalrCompiler#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#47)]  
   
  以下代码导入模块的类型。  
   
- [!code-vb[VbVbalrCompiler#48](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_2.vb)]  
+ [!code-vb[VbVbalrCompiler#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#48)]  
   
  在运行时`t1`，它将输出`802`。  
   

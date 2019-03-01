@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704649"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203621"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic 中的访问级别
 *访问级别*已声明元素的是能够对其进行访问的程度，哪些代码，即有权读取或写入到它。 这确定不仅元素本身; 的声明方式，还通过元素的容器的访问级别。 无法访问包含元素的代码无法访问任何其包含的元素，甚至包括那些声明为`Public`。 例如，`Public`变量中`Private`结构可以从访问，在类中包含的结构，但不能从该类的外部。  
@@ -101,8 +101,9 @@ Private Protected internalValue As Integer
 
 有关详细信息请参阅[设置的 Visual Basic 语言版本](../../../language-reference/configure-language-version.md)。
 
- ## <a name="access-modifiers"></a>访问修饰符  
- 指定的访问级别的关键字称为*访问修饰符*。 下表比较了访问修饰符。  
+## <a name="access-modifiers"></a>访问修饰符  
+
+指定的访问级别的关键字称为*访问修饰符*。 下表比较了访问修饰符。  
   
 |访问修饰符|授予的访问级别|您可以使用此访问级别声明的元素|可以在其中使用此修饰符声明上下文|  
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  

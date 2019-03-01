@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf3d422bbcec2754601f6dd07d7b45bab2a716e3
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694134"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201153"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 函数
 写入命名限定符和值。 新限定符将覆盖具有相同名称的以前的值。 如果限定符不存在，则创建它。 
@@ -60,8 +60,8 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | 可以在派生的类或实例中重写限定符。 **这是默认值。** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | 限定符传播到实例。 |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | 将限定符传播给派生类。 |
-| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | 不能在派生类或实例中重写限定符。 |
-| `WBEM_FLAVOR_AMENDED | 0x80 | 本地化限定符。 |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | 不能在派生类或实例中重写限定符。 |
+| `WBEM_FLAVOR_AMENDED` | 0x80 | 本地化限定符。 |
 
 ## <a name="return-value"></a>返回值
 

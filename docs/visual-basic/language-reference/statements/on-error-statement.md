@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5dc432f8e62430d48954b2c049cab3ebae4d442e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976481"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203738"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 语句 (Visual Basic)
 启用错误处理例程，并指定该例程在过程; 中的位置此外可以用于禁用错误处理例程。  
@@ -111,7 +111,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="example"></a>示例  
  此示例首先使用`On Error GoTo`语句指定的位置的过程中的错误处理例程。 在示例中，尝试除以零将产生错误编号为 6。 在错误处理例程中，处理该错误，然后将控件返回到导致该错误的语句。 `On Error GoTo 0`语句关闭错误捕获。 然后`On Error Resume Next`语句用于延迟错误捕获，以确保可以为某些已知的下一个语句所生成错误的上下文。 请注意，`Err.Clear`用于清除`Err`之后处理该错误的对象的属性。  
   
- [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
+ [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]  
   
 ## <a name="requirements"></a>要求  
  **命名空间：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

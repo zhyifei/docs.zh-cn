@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 5ff3b12e85b9ab7fb8341bb8665a057165e78816
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 824481c9c73d496998d5810c620b2317c1ec252a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968010"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203436"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名类型 (Visual Basic)
 Visual Basic 支持匿名类型，以便你能够而无需编写的数据类型的类定义创建对象。 此时，编译器将为你生成类。 类已没有可用的名称，直接继承自<xref:System.Object>，且包含在声明该对象指定的属性。 由于未指定数据类型的名称，因此将它称为*匿名类型*。  
@@ -81,7 +81,7 @@ Visual Basic 支持匿名类型，以便你能够而无需编写的数据类型�
 ### <a name="read-only-values"></a>只读的值  
  不能更改键属性的值。 例如，在`prod8`在上一示例中，`Name`并`Price`字段`read-only`，但`OnHand`可以更改。  
   
- [!code-vb[VbVbalrAnonymousTypes#8](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_8.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
 ## <a name="anonymous-types-from-query-expressions"></a>查询表达式中的匿名类型  
  查询表达式始终不需要创建匿名类型。 如果可能，它们使用现有类型以保存列数据。 查询从数据源或每条记录中的只有一个字段返回任一整条记录时，将发生这种情况。 在下面的代码示例中，`customers`是一系列的对象`Customer`类。 类具有许多属性，并可在查询结果中，按任意顺序包含一个或多个。 在前两个示例中，任何匿名类型不是必需，因为查询中选择的命名类型的元素：  

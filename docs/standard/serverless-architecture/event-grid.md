@@ -4,12 +4,12 @@ description: Azure 事件网格是可靠事件交付和支付每个事件模型�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145861"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212178"
 ---
 # <a name="event-grid"></a>事件网格
 
@@ -124,7 +124,7 @@ Azure 提供了多个消息传送服务，包括[事件中心](https://docs.micr
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Application Insights 分析](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
 * [Azure:将应用迁移到使用无服务器 Azure Functions 在云中](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Azure 事件网格](https://docs.microsoft.com/azure/azure-event-grid/overview)
+* [Azure 事件网格](https://docs.microsoft.com/azure/event-grid/overview)
 * [Azure 事件网格事件架构](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Azure 事件中心](https://docs.microsoft.com/azure/event-hubs)
 * [Azure Functions 文档](https://docs.microsoft.com/azure/azure-functions)

@@ -2,12 +2,12 @@
 title: 查找 Word 文档 (Visual Basic 中) 中的文本
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: 5ab6d337fdf20684027cef3a41fe367bbedd4ee2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ee052f140f7db5c3c53e116d8b295b120436f6f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720858"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200970"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>查找 Word 文档 (Visual Basic 中) 中的文本
 本主题扩展了以前的查询，以执行一些有用的任务：在文档中查找一个字符串的所有匹配项。  

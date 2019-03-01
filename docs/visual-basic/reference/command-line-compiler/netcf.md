@@ -9,12 +9,12 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 2a359f4bf44887e7c7bc5422d485988b24f45600
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 987a948d739f6b9e8e5a3e8fc6eadbfd60003723
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976468"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203053"
 ---
 # <a name="-netcf"></a>-netcf
 设置编译器从而以 [!INCLUDE[Compact](~/includes/compact-md.md)] 为目标。  
@@ -45,7 +45,7 @@ ms.locfileid: "56976468"
   
 -   [自动](../../../visual-basic/language-reference/modifiers/auto.md)， [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)，并[Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)修饰符处于禁用状态。 语法[Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)语句也被修改为`Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`。 下面的代码演示的效果`-netcf`上一次编译。  
   
-     [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
+     [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]  
   
 -   使用已从 Visual Basic 的 Visual Basic 6.0 关键字生成不同的错误时`-netcf`使用。 这会影响以下关键字的错误消息：  
   

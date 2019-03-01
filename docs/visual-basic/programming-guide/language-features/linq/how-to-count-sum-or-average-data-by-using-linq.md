@@ -15,12 +15,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: e95f9d75ab9db07b55257bbf6ca951a898b2fb2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ff57029768c89e584fd2d7381fd79e38fbed14f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735086"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203449"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>如何：计数、 求和或通过使用 LINQ (Visual Basic 中) 的平均数据
 语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。  
@@ -73,7 +73,7 @@ ms.locfileid: "54735086"
   
      将以下代码添加到`Load`事件来查询公开为属性的表在<xref:System.Data.Linq.DataContext>计数、 求和，并计算平均值。 此示例使用`Aggregate`到单个结果的查询子句和`Group By`子句以显示为平均值分组结果。  
   
-     [!code-vb[VbLINQToSQLHowTos#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-count-sum-or-average-data-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form6.vb#13)]  
   
 4.  按 F5 以运行您的项目并查看结果。  
   

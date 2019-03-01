@@ -8,12 +8,12 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-ms.openlocfilehash: 76acee8913df35d4d071017078b38a3c474c3357
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8ef615b6874642fa9ad1b22fe9d7f7745d4ffde
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633802"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200996"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>如何：将十六进制字符串转换为数字 (Visual Basic)
 此示例将十六进制字符串转换为整数使用<xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>方法。  
@@ -24,7 +24,7 @@ ms.locfileid: "54633802"
   
      第一个参数<xref:System.Convert.ToInt32(System.String,System.Int32)>方法是要转换的字符串。 第二个参数用于描述; 表示的数字的基础十六进制是以 16 为基数。  
   
-     [!code-vb[HexConversion](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
+     [!code-vb[VbVbalrStrings#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#62)]  
 
 - 请注意，十六进制字符串有以下限制：
 

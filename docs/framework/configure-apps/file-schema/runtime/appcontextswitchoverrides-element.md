@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e90f551b94e16fc7cecf768feff43e4d084c04a6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b11452e34a802e84a12eb1832234ae5ab60aa992
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966146"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203543"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 元素
 定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。  
@@ -88,6 +88,7 @@ ms.locfileid: "56966146"
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|禁用 SslStream TLS 服务器端将发出警报。|.NET Framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |控件是否[DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer)序列化为基于 ECMAScript V6 和 V8 标准一些控制字符。 有关详细信息，请参阅[缓解：使用 DataContractJsonSerializer 对控制字符的序列化](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|控件是否<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>支持多个调整或仅一次调整时区的。 如果`true`，它使用<xref:System.TimeZoneInfo>类型序列化和反序列化日期和时间数据; 否则，它使用<xref:System.TimeZone>类型，不支持多个调整规则。|.NET Framework 4.6.2|
+|`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|控件是否<xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType>对象序列化和反序列化期间使用更大数组大小。 将此开关设置为`true`以提高性能的序列化和反序列化大型对象类型的关系图如<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>。 |.NET Framework 4.7.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|控件是否<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType>构造函数设置新的对象的<xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType>与现有的对象引用的属性。 有关详细信息，请参阅[缓解：ClaimsIdentity 构造函数](../../../migration-guide/mitigation-claimsidentity-constructor.md)。|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|控件是否尝试重用<xref:System.Security.Cryptography.AesCryptoServiceProvider>解密器会引发<xref:System.Security.Cryptography.CryptographicException>。 有关详细信息，请参阅[AesCryptoServiceProvider 解密器提供了可重用的转换](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)。|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|控件是否的值[CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)属性是[IntPtr](xref:System.IntPtr)表示一个窗口的内存位置处理，或者是否窗口句柄 (HWND)。 有关详细信息，请参阅[缓解：Cspparameters.parentwindowhandle 分配 HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)。 |.NET Framework 4.7|   

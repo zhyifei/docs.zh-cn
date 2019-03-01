@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 7b12a1b1b8d116cc906459407240fca4302460e4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5048d48cc22ebe405ef54dc207ac96b6c274078a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968720"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202621"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 语句 (Visual Basic)
 将一组语句重复指定的次数。  
@@ -92,7 +92,7 @@ Next [ counter ]
   
  下面的示例演示如何使用`Continue For`和`Exit For`语句。  
   
- [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#115](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#115)]  
   
  可以将任意数量的`Exit For`中的语句`For`...`Next` 循环。 当使用内嵌套`For`...`Next` 循环、`Exit For`退出最里面的循环，并将控制转移到下一个较高级别的嵌套。  
   

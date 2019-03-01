@@ -2,12 +2,12 @@
 title: 分区数据 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: afbbd479d3dadd69b81cdd6aead0a4263b92dfe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06db2ac3e556e647fed576a7fa0c89b881b748c9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728263"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202140"
 ---
 # <a name="partitioning-data-visual-basic"></a>分区数据 (Visual Basic)
 LINQ 中的分区是指将输入序列划分为两个部分的操作，无需重新排列元素，然后返回其中一个部分。  
@@ -32,22 +32,22 @@ LINQ 中的分区是指将输入序列划分为两个部分的操作，无需重
 ### <a name="skip"></a>Skip  
  下面的代码示例使用`Skip`子句在 Visual Basic 中要跳过的字符串数组中的前四个字符串，然后返回剩余字符串数组中。  
   
- [!code-vb[CsLINQPartitioning#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_1.vb)]  
+ [!code-vb[CsLINQPartitioning#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#1)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
  下面的代码示例使用`Skip While`子句在 Visual Basic 中字符串的第一个字母时跳过数组中的字符串"a"。 返回数组中剩余的字符串。  
   
- [!code-vb[CsLINQPartitioning#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_2.vb)]  
+ [!code-vb[CsLINQPartitioning#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#2)]  
   
 ### <a name="take"></a>Take  
  下面的代码示例使用`Take`在 Visual Basic 中的字符串数组中返回的前两个字符串中的子句。  
   
- [!code-vb[CsLINQPartitioning#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_3.vb)]  
+ [!code-vb[CsLINQPartitioning#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#3)]  
   
 ### <a name="takewhile"></a>TakeWhile  
  下面的代码示例使用`Take While`来从数组中返回的字符串，但该字符串的长度为五个或更少的 Visual Basic 中的子句。  
   
- [!code-vb[CsLINQPartitioning#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_4.vb)]  
+ [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Linq>
