@@ -1,19 +1,13 @@
 ---
-title: C# 教程
-description: 查看这些 C# 教程，了解生成 C# 程序的方式以及 C# 语言功能。
+title: 'C# 教程'
+description: '查看这些 C# 教程，了解生成 C# 程序的方式以及 C# 语言功能。'
 ms.date: 10/25/2018
-ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084662"
 ---
 # <a name="c-tutorials"></a>C# 教程
 
 欢迎学习 C# 教程。 本系列教程从可以在浏览器中演练的交互式课程入手。 后面的教程和更高级的教程可帮助你使用 .NET 开发工具在你的计算机上创建 C# 程序。
 
-## <a name="introduction-to-c-interactive-tutorials"></a>C# 交互式教程简介 #
+## <a name="introduction-to-c-interactive-tutorials"></a>C# 交互式教程简介
 
 头几个课程通过小篇幅的代码片段介绍了 C# 概念。 读者将了解 C# 语法的基础知识，以及如何使用字符串、数字和布尔值等数据类型。 全都是交互式课程，读者可以在几分钟内编写并运行代码。 无需事先了解编程或 C# 语言，即可学习头几个课程。
 
@@ -47,7 +41,7 @@ ms.locfileid: "54084662"
 
 可以在自己的本地开发环境中学习 Hello World 课程之后的所有入门教程。 每个教程结束时，可以决定是继续在线学习还是在自己的计算机上学习下一节课程。 可以访问相关链接设置自己的环境并继续在自己的计算机上学习下一个教程。
 
-## <a name="explore-new-features-in-c"></a>探索 C# 中的新增功能 #
+## <a name="explore-new-features-in-c"></a>探索 C\# 中的新增功能
 
 在此[交互式探索](exploration/csharp-6.yml)中尝试 [C# 6](../whats-new/csharp-6.md) 中的新增功能。
 

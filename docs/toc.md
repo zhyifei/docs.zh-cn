@@ -27,12 +27,12 @@
 ### [基类型](standard/base-types/)
 ## [.NET 类库](standard/class-libraries.md)
 ## [分析器](standard/analyzers/index.md)
-### [API 分析器](standard/analyzers/api-analyzer.md) 
+### [API 分析器](standard/analyzers/api-analyzer.md)
 ### [可移植性分析器](standard/analyzers/portability-analyzer.md)
 ### [框架分析器](standard/analyzers/framework-analyzer.md)
 ## [处理和引发异常](standard/exceptions/)
 ## [.NET 中的程序集](standard/assembly/index.md)
-### [.NET 程序集文件格式](standard/assembly/file-format.md) 
+### [.NET 程序集文件格式](standard/assembly/file-format.md)
 ## [垃圾回收](standard/garbage-collection/)
 ## [泛型类型](standard/generics.md)
 ## [委托和 lambda](standard/delegates-lambdas.md)
@@ -93,7 +93,6 @@
 ### [.NET Core 2.1 的新增功能](core/whats-new/dotnet-core-2-1.md)
 ### [.NET Core 2.0 的新增功能](core/whats-new/dotnet-core-2-0.md)
 ## [教程](core/tutorials/index.md)
-### [使用 Visual Studio 2017 在 Windows 上构建完整的 .NET Core 解决方案](core/tutorials/using-on-windows-full-solution.md)
 ### [在 macOS 上实现 .NET Core 入门](core/tutorials/using-on-macos.md)
 ### [借助 Visual Studio for Mac 在 macOS 上开始使用 .NET Core](core/tutorials/using-on-mac-vs.md)
 ### [使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案](core/tutorials/using-on-mac-vs-full-solution.md)
@@ -101,7 +100,6 @@
 ### [使用 .NET Core 命令行组织和测试项目](core/tutorials/testing-with-cli.md)
 ### [使用跨平台工具开发库](core/tutorials/libraries.md)
 ### [开发 ASP.NET Core 应用程序](core/tutorials/aspnet-core.md)
-### [如何管理 .NET Core 1.0 的包依赖项版本](core/tutorials/managing-package-dependency-versions.md)
 ### [从本机代码承载 .NET Core](core/tutorials/netcore-hosting.md)
 ### [创建 dotnet new 自定义模板](core/tutorials/create-custom-template.md)
 ## [包、元包和框架](core/packages.md)
@@ -270,7 +268,9 @@
 ## [C# 教程](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
+<!-- markdownlint-disable MD003 -->
 ## C# 中的新增功能
+<!-- markdownlint-enable MD003 -->
 ### [C# 8.0 - 预览版 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
@@ -522,9 +522,11 @@
 #### [自定义 My 中可用的对象](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [编程概念](visual-basic/programming-guide/concepts/index.md)
-### [.NET 中的程序集](standard/assembly/index.md)
 ### [使用 Async 和 Await 的异步编程](visual-basic/programming-guide/concepts/async/index.md)
 ### [特性](visual-basic/programming-guide/concepts/attributes/index.md)
+### [调用方信息](visual-basic/programming-guide/concepts/caller-information.md)
+### [集合](visual-basic/programming-guide/concepts/collections.md)
+### [协变和逆变](visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 ### [表达式树](visual-basic/programming-guide/concepts/expression-trees/index.md)
 ### [迭代器](visual-basic/programming-guide/concepts/iterators.md)
 ### [语言集成查询 (LINQ)](visual-basic/programming-guide/concepts/linq/index.md)
@@ -1211,7 +1213,7 @@
 #### [检查中间管道数据值](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [定型回归模型](machine-learning/how-to-guides/train-regression-model-ml-net.md)
 #### [使用 PFI 确定模型特征的重要性](machine-learning/how-to-guides/determine-global-feature-importance-in-model.md)
-### 使用已定型的模型  
+### 使用已定型的模型
 #### [使用 PredictionEngine 一次执行一个预测](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [操作已定型的模型](machine-learning/how-to-guides/consuming-model-ml-net.md)
 ### Infer.NET
