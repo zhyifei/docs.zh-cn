@@ -4,12 +4,6 @@ description: 总结用于 WMI 的 .NET Framework 非托管 API 和性能计数�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: 6e105bc28b6011c3177216aba996eb85c0766ac8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069506"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Management Instrumentation (WMI) 和性能计数器（非托管 API 参考）
 
@@ -19,7 +13,7 @@ ms.locfileid: "44069506"
   
 API 包括以下函数：
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |---------|---------|
 | [BeginEnumeration 函数](beginenumeration.md) | 将枚举器重置到 WMI 对象属性枚举的起始处。 |
 | [BeginMethodEnumeration 函数](beginmethodenumeration.md) |  开始枚举对象可用的方法。 |
@@ -73,5 +67,6 @@ API 包括以下函数：
 | [VerifyClient 函数](verifyclientkey.md) | 确保客户端密钥具有正确的安全性。 |
 | [WritePropertyValue 函数](writepropertyvalue.md) | 将指定数量的字节写入由属性句柄标识的属性。 |
 
- ## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>请参阅
+
 [非托管 API 参考](../index.md) 
