@@ -16,7 +16,7 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ## <a name="declaring-and-initializing-strings"></a>声明和初始化字符串  
  可以使用各种方法声明和初始化字符串，如以下示例中所示：  
   
- [!code-csharp[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
  请注意，不要使用 [new](../../../csharp/language-reference/keywords/new-operator.md) 运算符创建字符串对象，除非使用字符数组初始化字符串。  
   
@@ -84,16 +84,16 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ## <a name="substrings"></a>子字符串  
  子字符串是包含在字符串中的任何字符序列。 使用 <xref:System.String.Substring%2A> 方法可以通过原始字符串的一部分新建字符串。 可以使用 <xref:System.String.IndexOf%2A> 方法搜索一次或多次出现的子字符串。 使用 <xref:System.String.Replace%2A> 方法可以将出现的所有指定子字符串替换为新字符串。 与 <xref:System.String.Substring%2A> 方法一样，<xref:System.String.Replace%2A> 实际返回的是新字符串，且不修改原始字符串。 有关详细信息，请参阅[如何：搜索字符串](../../how-to/search-strings.md)和[如何：修改字符串内容](../../how-to/modify-string-contents.md)。  
   
- [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
 ## <a name="accessing-individual-characters"></a>访问单个字符  
  可以使用包含索引值的数组表示法来获取对单个字符的只读访问权限，如下面的示例中所示：  
   
- [!code-csharp[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
+ [!code-csharp[csProgGuideStrings#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#8)]  
   
  如果 <xref:System.String> 方法不提供修改字符串中的各个字符所需的功能，可以使用 <xref:System.Text.StringBuilder> 对象“就地”修改各个字符，再新建字符串来使用 <xref:System.Text.StringBuilder> 方法存储结果。 在下面的示例中，假定必须以特定方式修改原始字符串，然后存储结果以供未来使用：  
   
- [!code-csharp[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
+ [!code-csharp[csProgGuideStrings#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#27)]  
   
 ## <a name="null-strings-and-empty-strings"></a>Null 字符串和空字符串  
  空字符串是包含零个字符的 <xref:System.String?displayProperty=nameWithType> 对象实例。 空字符串常用在各种编程方案中，表示空文本字段。 可以对空字符串调用方法，因为它们是有效的 <xref:System.String?displayProperty=nameWithType> 对象。 对空字符串进行了初始化，如下所示：  
@@ -104,12 +104,12 @@ string s = String.Empty;
   
  相比较而言，null 字符串并不指 <xref:System.String?displayProperty=nameWithType> 对象实例，只要尝试对 null 字符串调用方法，都会引发 <xref:System.NullReferenceException>。 但是，可以在串联和与其他字符串的比较操作中使用 null 字符串。 以下示例说明了对 null 字符串的引用会引发和不会引发意外的某些情况：  
   
- [!code-csharp[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
+ [!code-csharp[csProgGuideStrings#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#20)]  
   
 ## <a name="using-stringbuilder-for-fast-string-creation"></a>使用 StringBuilder 快速创建字符串  
  .NET 中的字符串操作进行了高度的优化，在大多数情况下不会显著影响性能。 但是，在某些情况下（例如，执行数百次或数千次的紧密循环），字符串操作可能影响性能。 <xref:System.Text.StringBuilder> 类创建字符串缓冲区，用于在程序执行多个字符串操控时提升性能。 使用 <xref:System.Text.StringBuilder> 字符串，还可以重新分配各个字符，而内置字符串数据类型则不支持这样做。 例如，此代码更改字符串的内容，而无需创建新的字符串：  
   
- [!code-csharp[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
+ [!code-csharp[csProgGuideStrings#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#15)]  
   
  在以下示例中，<xref:System.Text.StringBuilder> 对象用于通过一组数字类型创建字符串：  
   
