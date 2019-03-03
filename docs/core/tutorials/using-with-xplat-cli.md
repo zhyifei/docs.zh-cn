@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: eaa2bd3327cf76522c74dad07a5a9e0e268a3b55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c57326f038eee4069de9064cb2798d2004b0dbdd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605950"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212165"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令行在 Windows/Linux/macOS 上入门 .NET Core
 
@@ -30,13 +30,13 @@ ms.locfileid: "54605950"
 打开命令提示符，创建一个名为“Hello”的文件夹。 导航到创建的文件夹，键入下列内容：
 
 ```console
-$ dotnet new console
-$ dotnet run
+dotnet new console
+dotnet run
 ```
 
 让我们进行快速演练：
 
-1. `$ dotnet new console`
+1. `dotnet new console`
 
    [`dotnet new`](../tools/dotnet-new.md) 会创建一个最新的 `Hello.csproj` 项目文件，其中包含生成控制台应用所必需的依赖项。  它还将创建 `Program.cs`，这是包含应用程序的入口点的基本文件。
 
@@ -59,12 +59,12 @@ $ dotnet run
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-   `dotnet new` 隐式调用 [`dotnet restore`](../tools/dotnet-restore.md)。 `dotnet restore` 调用到 [NuGet](https://www.nuget.org/)（.NET 包管理器）以还原依赖项树。 NuGet 分析 Hello.csproj 文件、下载文件中定义的依赖项（或从计算机缓存中获取）并编写 obj/project.assets.json 文件，在编译和运行示例时需要使用该文件。 
-   
+   `dotnet new` 隐式调用 [`dotnet restore`](../tools/dotnet-restore.md)。 `dotnet restore` 调用到 [NuGet](https://www.nuget.org/)（.NET 包管理器）以还原依赖项树。 NuGet 分析 Hello.csproj 文件、下载文件中定义的依赖项（或从计算机缓存中获取）并编写 obj/project.assets.json 文件，在编译和运行示例时需要使用该文件。
+
    > [!IMPORTANT]
    > 如果你使用的是 .NET Core 1.x 版本的 SDK，在调用 `dotnet new` 后，必须自行调用 `dotnet restore`。
 
-2. `$ dotnet run`
+2. `dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) 调用 [`dotnet build`](../tools/dotnet-build.md) 来确保已生成要生成的目标，然后调用 `dotnet <assembly.dll>` 运行目标应用程序。
 
@@ -74,6 +74,7 @@ $ dotnet run
     ```
 
     或者，还可以执行 [`dotnet build`](../tools/dotnet-build.md) 来编译代码，无需运行已生成的控制台应用程序。 这使得编译的应用程序（作为 DLL 文件）可以在 Windows 上使用 `dotnet bin\Debug\netcoreapp2.1\Hello.dll` 运行（将 `/` 用于非 Windows 系统）。 还可以对应用程序指定参数，相关操作将在本主题稍后部分进行介绍。
+
     ```console
     $ dotnet bin\Debug\netcoreapp2.1\Hello.dll
     Hello World!

@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 14e3dc265991634b4ef4814fb149f0aaebbcfab6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1add3470799b75ebb92c67eed3509523e510ab6c
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170049"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211788"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>如何使用 .NET Core 命令行接口 (CLI) 工具创建 NuGet 包
 
@@ -28,13 +28,13 @@ ms.locfileid: "53170049"
 确认包已还原后，可以导航到库所在的目录：
 
 ```console
-$ cd src/SuperAwesomeLibrary`
+cd src/SuperAwesomeLibrary
 ```
 
 然后，只需在命令行中输入一个命令：
 
 ```console
-$ dotnet pack
+dotnet pack
 ```
 
 `/bin/Debug` 文件夹现在如下所示：
@@ -50,7 +50,7 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 请注意，这将生成能够进行调试的包。 如果想要生成二进制文件版本的 NuGet 包，只需添加 `--configuration`（或`-c`）开关并使用 `release` 作为参数。
 
 ```console
-$ dotnet pack --configuration release
+dotnet pack --configuration release
 ```
 
 `/bin` 文件夹现在将包含一个 `release` 文件夹，后者包含的 NuGet 包为二进制文件版本：

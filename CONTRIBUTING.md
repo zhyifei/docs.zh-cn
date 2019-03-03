@@ -107,7 +107,7 @@ PR 应始终面向主分支。 你应从不打开面向活动分支的 PR。
 
 有关详细信息，请参阅[示例自述文件](https://github.com/dotnet/samples/blob/master/README.md)。
 
-## <a name="the-c-interactive-experience"></a>C# 交互式体验 #
+## <a name="the-c-interactive-experience"></a>C# 交互式体验
 
 C# 中的简短代码示例可以使用 `csharp-interactive` 语言标记来指定浏览器中运行的 C# 示例。 （内联代码示例使用 `csharp-interactive` 标记，对于源代码中包含的代码段，请使用 `code-csharp-interactive` 标记。）这些代码示例在本文中显示一个代码窗口和一个输出窗口。 输出窗口显示用户运行示例后执行交互式代码的任何输出。 
 

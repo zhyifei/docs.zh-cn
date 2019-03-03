@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 79c8e216126353bdf5fca34baf432496aacb93ce
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 812b89ff163c9d39a658f817495ac12616c28f6f
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151522"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836248"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 单元测试最佳做法
 
@@ -18,7 +18,7 @@ ms.locfileid: "54151522"
 
 本指南将介绍一些在编写单元测试时的最佳做法，使测试具有弹性且易于理解。
 
-作者是 [John Reese](https://reesespieces.io) 且特别感谢 [Roy Osherove](http://osherove.com/)
+作者是 [John Reese](https://reese.dev) 且特别感谢 [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>为什么要执行单元测试？
 

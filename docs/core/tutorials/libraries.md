@@ -4,12 +4,12 @@ description: 了解如何使用 .NET Core CLI 工具创建 .NET Core 库。 将�
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169360"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212061"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>使用跨平台工具开发库
 
@@ -58,9 +58,9 @@ ms.locfileid: "53169360"
     ```
 
 2. 可通过修改项目文件 `TargetFramework` 节点中的值来使用更低或更高版本的 .NET Standard。
-    
+
     .NET Standard 版本可后向兼容。 这意味着 `netstandard1.0` 库可在 `netstandard1.1` 平台以及更高版本上运行。 但是，不可向前兼容，即版本较低的 .NET Standard 平台无法引用版本较高的平台。 这意味着 `netstandard1.0` 库不能引用面向 `netstandard1.1` 或更高版本的库。 选择适合所需、恰当混合有 API 和平台支持的 Standard 版本。 目前，我们建议 `netstandard1.4`。
-    
+
 3. 如果希望面向 .NET Framework 版本 4.0 或更低版本，或者要使用 .NET Framework 中提供但 .NET Standard 中不提供的 API（例如 `System.Drawing`），请阅读以下部分，了解如何设定多目标。
 
 ## <a name="how-to-target-the-net-framework"></a>如何以 .NET Framework 为目标
@@ -131,7 +131,7 @@ ms.locfileid: "53169360"
 在此处可看到三项主要更改：
 
 1. `TargetFramework` 节点已替换为 `TargetFrameworks`，其中表示了三个 TFM。
-1. `net40 ` 目标有一个 `<ItemGroup>` 节点，拉取一个 .NET Framework 引用。
+1. `net40` 目标有一个 `<ItemGroup>` 节点，拉取一个 .NET Framework 引用。
 1. `net45` 目标中有一个 `<ItemGroup>` 节点，拉取两个 .NET Framework 引用。
 
 生成系统可识别以下用在 `#if` 指令中的处理器符号：
@@ -256,7 +256,7 @@ netstandard1.4/
    [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. 执行 `dotnet test` 命令，验证 xUnit 是否在运行。 如果选择使用 MSTest，则应改为运行 MSTest 控制台运行程序。
-    
+
 就是这么简单！ 现在可以使用命令行工具跨所有平台测试库。 若要继续测试，现已设置好了所有内容，测试库将非常简单：
 
 1. 对库进行更改。
@@ -321,7 +321,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 引用项目的最佳方式是使用 .NET Core CLI 添加项目引用。 在 AwesomeLibrary.CSharp 和 AwesomeLibrary.FSharp 项目目录中，可运行下列命令：
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 AwesomeLibrary.CSharp 和 AwesomeLibrary.FSharp 的项目文件现在需要将 AwesomeLibrary.Core 作为 `ProjectReference` 目标引用。  可通过检查项目文件和查看其中的下列内容来进行验证：
