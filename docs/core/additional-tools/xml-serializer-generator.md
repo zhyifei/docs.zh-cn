@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 9070c42a7cef389a2a13f6be6f26f7dafd7f25e2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e5b41b6e5d747cd99a80930bb64e36839af4ab66
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244773"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211892"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程序生成器
 
@@ -34,8 +34,8 @@ ms.locfileid: "53244773"
 
 > [!TIP]
 > 需要安装代码编辑器？ 试用 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)！
-  
-## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a>在 .NET Core 控制台应用程序中使用 Microsoft XML 序列化程序生成器 
+
+## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a>在 .NET Core 控制台应用程序中使用 Microsoft XML 序列化程序生成器
 
 以下说明将展示如何在 .NET Core 控制台应用程序中使用 XML 序列化程序生成器。
 
@@ -49,7 +49,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>在 MyApp 项目中向 Microsoft.XmlSerializer.Generator 包添加引用
 
-使用 [`dotnet add package`](../tools//dotnet-add-package.md) 命令在项目中添加引用。 
+使用 [`dotnet add package`](../tools//dotnet-add-package.md) 命令在项目中添加引用。
 
 类型：
 
@@ -107,7 +107,7 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 在控制台窗口中键入以下命令：
 
 ```console
-$ dotnet run
+dotnet run
 ```
 
 > [!NOTE]
@@ -116,7 +116,7 @@ $ dotnet run
 > [!IMPORTANT]
 > 本教程中用来运行应用程序的命令和步骤仅用于开发过程。 准备好部署应用后，查看适用于 .NET Core 应用的不同[部署策略](../deploying/index.md)和 [`dotnet publish`](../tools/dotnet-publish.md) 命令。
 
-如果一切顺利，则会在输出文件夹中生成名为“MyApp.XmlSerializers.dll”的程序集。 
+如果一切顺利，则会在输出文件夹中生成名为“MyApp.XmlSerializers.dll”的程序集。
 
 祝贺你！ 你刚才已完成：
 > [!div class="checklist"]
