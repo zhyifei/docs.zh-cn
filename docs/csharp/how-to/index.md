@@ -1,14 +1,9 @@
 ---
-title: 操作指南（C# 指南）
+title: '操作指南（C# 指南）'
 description: 快速提示及重点短代码示例集合
 ms.date: 12/20/2017
-ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260186"
 ---
+
 # <a name="how-to-c"></a>操作指南 (C#)
 
 在 C# 指南中的操作指南部分快速了解常见问题的答案。 在某些情况下，可能会在多个部分列出相关文章。 我们希望用户可从多个搜索路径找到操作指南。 
@@ -113,7 +108,7 @@ ms.locfileid: "44260186"
 - [对数据源的元素排序](../programming-guide/concepts/linq/how-to-sort-elements.md)。
 - [对多个键上的元素排序](../programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)。
 - [控制投影的类型](../programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md)。
-- [计算源序列中某个值的出现次数](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md)。
+- [对某个值在源序列中出现的次数进行计数](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md)。
 - [计算中间值](../programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)。
 - [合并来自多个源的数据](../programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)。
 - [查找两个序列之间的差集](../programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)。
