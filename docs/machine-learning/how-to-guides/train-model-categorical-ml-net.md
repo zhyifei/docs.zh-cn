@@ -1,33 +1,33 @@
 ---
 title: 应用特征工程学来进行分类数据模型定型 - ML.NET
 description: 了解如何使用 ML.NET 将特征工程学应用于分类数据的机器学习模型定型
-ms.date: 02/06/2018
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c24840ee89917d270bcbacbcf36905b4ee82a4aa
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: eedbe0499784e7a99b0101c42892652daef3a114
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092080"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968408"
 ---
-# <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a><span data-ttu-id="7fdf4-103">应用特征工程学来进行分类数据模型定型 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="7fdf4-103">Apply feature engineering for model training on categorical data - ML.NET</span></span>
+# <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a><span data-ttu-id="3b9f9-103">应用特征工程学来进行分类数据模型定型 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="3b9f9-103">Apply feature engineering for model training on categorical data - ML.NET</span></span>
 
-<span data-ttu-id="7fdf4-104">需要将任何非浮点型数据转换为 `float` 数据类型，因为所有 ML.NET `learners` 都预期特征是 `float vector`。</span><span class="sxs-lookup"><span data-stu-id="7fdf4-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+<span data-ttu-id="3b9f9-104">需要将任何非浮点型数据转换为 `float` 数据类型，因为所有 ML.NET `learners` 都预期特征是 `float vector`。</span><span class="sxs-lookup"><span data-stu-id="3b9f9-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="7fdf4-105">如果数据集包含 `categorical` 数据（例如，“enum”），ML.NET 则提供几种方法来将其转换为功能：</span><span class="sxs-lookup"><span data-stu-id="7fdf4-105">If the dataset contains `categorical` data (for example, 'enum'), ML.NET offers several ways of converting it to features:</span></span>
+<span data-ttu-id="3b9f9-105">如果数据集包含 `categorical` 数据（例如，“enum”），ML.NET 则提供几种方法来将其转换为功能：</span><span class="sxs-lookup"><span data-stu-id="3b9f9-105">If the dataset contains `categorical` data (for example, 'enum'), ML.NET offers several ways of converting it to features:</span></span>
 
-- <span data-ttu-id="7fdf4-106">独热编码</span><span class="sxs-lookup"><span data-stu-id="7fdf4-106">One-hot encoding</span></span>
-- <span data-ttu-id="7fdf4-107">基于哈希的独热编码</span><span class="sxs-lookup"><span data-stu-id="7fdf4-107">Hash-based one-hot encoding</span></span>
-- <span data-ttu-id="7fdf4-108">二进制编码（将类别索引转换为位序列，并将位用作功能）</span><span class="sxs-lookup"><span data-stu-id="7fdf4-108">Binary encoding (convert category index into a bit sequence and use bits as features)</span></span>
+- <span data-ttu-id="3b9f9-106">独热编码</span><span class="sxs-lookup"><span data-stu-id="3b9f9-106">One-hot encoding</span></span>
+- <span data-ttu-id="3b9f9-107">基于哈希的独热编码</span><span class="sxs-lookup"><span data-stu-id="3b9f9-107">Hash-based one-hot encoding</span></span>
+- <span data-ttu-id="3b9f9-108">二进制编码（将类别索引转换为位序列，并将位用作功能）</span><span class="sxs-lookup"><span data-stu-id="3b9f9-108">Binary encoding (convert category index into a bit sequence and use bits as features)</span></span>
 
-<span data-ttu-id="7fdf4-109">如果某些类别的基数非常高（许多不同的值，通常出现一小部分），则 `one-hot encoding` 可能会很浪费。</span><span class="sxs-lookup"><span data-stu-id="7fdf4-109">A `one-hot encoding` can be wasteful if some categories are very high-cardinality (lots of different values, with a small set commonly occurring.</span></span> <span data-ttu-id="7fdf4-110">在这种情况下，使用基于计数的特征选择来减少要编码的插槽数。</span><span class="sxs-lookup"><span data-stu-id="7fdf4-110">In that case, reduce the number of slots to encode with count-based feature selection.</span></span>
+<span data-ttu-id="3b9f9-109">如果某些类别的基数非常高（许多不同的值，通常出现一小部分），则 `one-hot encoding` 可能会很浪费。</span><span class="sxs-lookup"><span data-stu-id="3b9f9-109">A `one-hot encoding` can be wasteful if some categories are very high-cardinality (lots of different values, with a small set commonly occurring.</span></span> <span data-ttu-id="3b9f9-110">在这种情况下，使用基于计数的特征选择来减少要编码的插槽数。</span><span class="sxs-lookup"><span data-stu-id="3b9f9-110">In that case, reduce the number of slots to encode with count-based feature selection.</span></span>
 
-<span data-ttu-id="7fdf4-111">直接在 ML.NET 学习管道中包含分类特征，以确保分类转换：</span><span class="sxs-lookup"><span data-stu-id="7fdf4-111">Include categorical featurization directly in the ML.NET learning pipeline to ensure that the categorical transformation:</span></span>
+<span data-ttu-id="3b9f9-111">直接在 ML.NET 学习管道中包含分类特征，以确保分类转换：</span><span class="sxs-lookup"><span data-stu-id="3b9f9-111">Include categorical featurization directly in the ML.NET learning pipeline to ensure that the categorical transformation:</span></span>
 
-- <span data-ttu-id="7fdf4-112">仅使用定型数据进行“定型”，而不使用测试数据。</span><span class="sxs-lookup"><span data-stu-id="7fdf4-112">is only 'trained' on the training data, and not on your test data,</span></span>
-- <span data-ttu-id="7fdf4-113">正确应用于新传入的数据，而无需在预测时进行额外的预处理。</span><span class="sxs-lookup"><span data-stu-id="7fdf4-113">is correctly applied to new incoming data, without extra pre-processing at prediction time.</span></span>
+- <span data-ttu-id="3b9f9-112">仅使用定型数据进行“定型”，而不使用测试数据。</span><span class="sxs-lookup"><span data-stu-id="3b9f9-112">is only 'trained' on the training data, and not on your test data,</span></span>
+- <span data-ttu-id="3b9f9-113">正确应用于新传入的数据，而无需在预测时进行额外的预处理。</span><span class="sxs-lookup"><span data-stu-id="3b9f9-113">is correctly applied to new incoming data, without extra pre-processing at prediction time.</span></span>
 
-<span data-ttu-id="7fdf4-114">以下示例说明[成人人口普查数据集](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt)的分类处理：</span><span class="sxs-lookup"><span data-stu-id="7fdf4-114">The following example illustrates categorical handling for the [adult census dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="3b9f9-114">以下示例说明[成人人口普查数据集](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt)的分类处理：</span><span class="sxs-lookup"><span data-stu-id="3b9f9-114">The following example illustrates categorical handling for the [adult census dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
 
 ```console
 Label   Workclass   education   marital-status  occupation  relationship    ethnicity   sex native-country-region   age fnlwgt  education-num   capital-gain    capital-loss    hours-per-week

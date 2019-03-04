@@ -6,39 +6,39 @@ helpviewer_keywords:
 - troubleshooting Visual Basic, event logs
 - troubleshooting event logs
 ms.assetid: ac6eb760-3d5d-461e-aedd-40599ee22e49
-ms.openlocfilehash: 3d21024a7ebda749f337a95b0fca419b529d2872
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2dba14ed883b428e47b71533bcb51506167fd49
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662811"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979003"
 ---
-# <a name="troubleshooting-log-listeners-visual-basic"></a><span data-ttu-id="b86dc-102">疑难解答：日志侦听器 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b86dc-102">Troubleshooting: Log Listeners (Visual Basic)</span></span>
-<span data-ttu-id="b86dc-103">可以使用 `My.Application.Log` 和 `My.Log` 对象来记录有关应用程序中所发生事件的信息。</span><span class="sxs-lookup"><span data-stu-id="b86dc-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span>  
+# <a name="troubleshooting-log-listeners-visual-basic"></a><span data-ttu-id="28e2c-102">疑难解答：日志侦听器 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="28e2c-102">Troubleshooting: Log Listeners (Visual Basic)</span></span>
+<span data-ttu-id="28e2c-103">可以使用 `My.Application.Log` 和 `My.Log` 对象来记录有关应用程序中所发生事件的信息。</span><span class="sxs-lookup"><span data-stu-id="28e2c-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span>  
   
- <span data-ttu-id="b86dc-104">要确定哪些日志侦听器接收这些消息，请参阅[演练：确定 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。</span><span class="sxs-lookup"><span data-stu-id="b86dc-104">To determine which log listeners receive those messages, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span></span>  
+ <span data-ttu-id="28e2c-104">要确定哪些日志侦听器接收这些消息，请参阅[演练：确定 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。</span><span class="sxs-lookup"><span data-stu-id="28e2c-104">To determine which log listeners receive those messages, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span></span>  
   
- <span data-ttu-id="b86dc-105">`Log` 对象可以使用日志筛选来限制其记录的信息量。</span><span class="sxs-lookup"><span data-stu-id="b86dc-105">The `Log` object can use log filtering to limit the amount of information that it logs.</span></span> <span data-ttu-id="b86dc-106">如果筛选器配置错误，则日志可能包含错误信息。</span><span class="sxs-lookup"><span data-stu-id="b86dc-106">If the filters are misconfigured, the logs might contain the wrong information.</span></span> <span data-ttu-id="b86dc-107">有关筛选器的详细信息，请参阅[演练：筛选 My.Application.Log 输出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。</span><span class="sxs-lookup"><span data-stu-id="b86dc-107">For more information about filtering, see [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span></span>  
+ <span data-ttu-id="28e2c-105">`Log` 对象可以使用日志筛选来限制其记录的信息量。</span><span class="sxs-lookup"><span data-stu-id="28e2c-105">The `Log` object can use log filtering to limit the amount of information that it logs.</span></span> <span data-ttu-id="28e2c-106">如果筛选器配置错误，则日志可能包含错误信息。</span><span class="sxs-lookup"><span data-stu-id="28e2c-106">If the filters are misconfigured, the logs might contain the wrong information.</span></span> <span data-ttu-id="28e2c-107">有关筛选器的详细信息，请参阅[演练：筛选 My.Application.Log 输出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。</span><span class="sxs-lookup"><span data-stu-id="28e2c-107">For more information about filtering, see [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span></span>  
   
- <span data-ttu-id="b86dc-108">但是，如果日志配置不正确，则可能需要有关其当前配置的详细信息。</span><span class="sxs-lookup"><span data-stu-id="b86dc-108">However, if a log is configured incorrectly, you may need more information about its current configuration.</span></span> <span data-ttu-id="b86dc-109">可通过日志的高级 `TraceSource` 属性获取此信息。</span><span class="sxs-lookup"><span data-stu-id="b86dc-109">You can get to this information through the log's advanced `TraceSource` property.</span></span>  
+ <span data-ttu-id="28e2c-108">但是，如果日志配置不正确，则可能需要有关其当前配置的详细信息。</span><span class="sxs-lookup"><span data-stu-id="28e2c-108">However, if a log is configured incorrectly, you may need more information about its current configuration.</span></span> <span data-ttu-id="28e2c-109">可通过日志的高级 `TraceSource` 属性获取此信息。</span><span class="sxs-lookup"><span data-stu-id="28e2c-109">You can get to this information through the log's advanced `TraceSource` property.</span></span>  
   
-### <a name="to-determine-the-log-listeners-for-the-log-object-in-code"></a><span data-ttu-id="b86dc-110">若要确定代码中日志对象的日志侦听器</span><span class="sxs-lookup"><span data-stu-id="b86dc-110">To determine the log listeners for the Log object in code</span></span>  
+### <a name="to-determine-the-log-listeners-for-the-log-object-in-code"></a><span data-ttu-id="28e2c-110">若要确定代码中日志对象的日志侦听器</span><span class="sxs-lookup"><span data-stu-id="28e2c-110">To determine the log listeners for the Log object in code</span></span>  
   
-1.  <span data-ttu-id="b86dc-111">在代码文件的开头导入 <xref:System.Diagnostics> 命名空间。</span><span class="sxs-lookup"><span data-stu-id="b86dc-111">Import the <xref:System.Diagnostics> namespace at the beginning of the code file.</span></span> <span data-ttu-id="b86dc-112">有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。</span><span class="sxs-lookup"><span data-stu-id="b86dc-112">For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
+1.  <span data-ttu-id="28e2c-111">在代码文件的开头导入 <xref:System.Diagnostics> 命名空间。</span><span class="sxs-lookup"><span data-stu-id="28e2c-111">Import the <xref:System.Diagnostics> namespace at the beginning of the code file.</span></span> <span data-ttu-id="28e2c-112">有关详细信息，请参阅 [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。</span><span class="sxs-lookup"><span data-stu-id="28e2c-112">For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
   
-     [!code-vb[VbVbalrMyApplicationLog#13](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/troubleshooting-log-listeners_1.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#13)]  
   
-2.  <span data-ttu-id="b86dc-113">创建一个函数，该函数返回由每个日志侦听器的信息组成的字符串。</span><span class="sxs-lookup"><span data-stu-id="b86dc-113">Create a function that returns a string consisting of information for each of the log's listeners.</span></span>  
+2.  <span data-ttu-id="28e2c-113">创建一个函数，该函数返回由每个日志侦听器的信息组成的字符串。</span><span class="sxs-lookup"><span data-stu-id="28e2c-113">Create a function that returns a string consisting of information for each of the log's listeners.</span></span>  
   
-     [!code-vb[VbVbalrMyApplicationLog#14](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/troubleshooting-log-listeners_2.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#14)]  
   
-3.  <span data-ttu-id="b86dc-114">将日志跟踪侦听器的集合传递到 `GetListeners` 函数，并显示返回值。</span><span class="sxs-lookup"><span data-stu-id="b86dc-114">Pass the collection of the log's trace listeners to the `GetListeners` function, and display the return value.</span></span>  
+3.  <span data-ttu-id="28e2c-114">将日志跟踪侦听器的集合传递到 `GetListeners` 函数，并显示返回值。</span><span class="sxs-lookup"><span data-stu-id="28e2c-114">Pass the collection of the log's trace listeners to the `GetListeners` function, and display the return value.</span></span>  
   
-     [!code-vb[VbVbalrMyApplicationLog#19](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/troubleshooting-log-listeners_3.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#19)]  
   
-     <span data-ttu-id="b86dc-115">有关更多信息，请参见<xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>。</span><span class="sxs-lookup"><span data-stu-id="b86dc-115">For more information, see <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.</span></span>  
+     <span data-ttu-id="28e2c-115">有关更多信息，请参见<xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>。</span><span class="sxs-lookup"><span data-stu-id="28e2c-115">For more information, see <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b86dc-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="b86dc-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28e2c-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="28e2c-116">See also</span></span>
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [<span data-ttu-id="b86dc-117">使用应用程序日志</span><span class="sxs-lookup"><span data-stu-id="b86dc-117">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [<span data-ttu-id="b86dc-118">演练：确定 My.Application.Log 在哪里写入信息</span><span class="sxs-lookup"><span data-stu-id="b86dc-118">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [<span data-ttu-id="28e2c-117">使用应用程序日志</span><span class="sxs-lookup"><span data-stu-id="28e2c-117">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [<span data-ttu-id="28e2c-118">演练：确定 My.Application.Log 在哪里写入信息</span><span class="sxs-lookup"><span data-stu-id="28e2c-118">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
