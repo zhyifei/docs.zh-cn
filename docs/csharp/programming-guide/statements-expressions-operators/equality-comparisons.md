@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 25ac904b848311639dda1ecf231f0d6565799733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2572599071fdddd15be620e1322d2e38614182c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620170"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972919"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>相等比较（C# 编程指南）
 有时需要比较两个值是否相等。 在某些情况下，测试的是“值相等性”，也称为“等效性”，这意味着两个变量包含的值相等。 在其他情况下，必须确定两个变量是否引用内存中的同一基础对象。 此类型的相等性称为“引用相等性”或“标识”。 本主题介绍这两种相等性，并提供指向其他主题的链接，供用户了解详细信息。  
@@ -18,7 +18,7 @@ ms.locfileid: "54620170"
 ## <a name="reference-equality"></a>引用相等性  
  引用相等性指两个对象引用均引用同一基础对象。 这可以通过简单的赋值来实现，如下面的示例所示。  
   
- [!code-csharp[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
+ [!code-csharp[csProgGuideStatements#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#18)]  
   
  在此代码中，创建了两个对象，但在赋值语句后，这两个引用所引用的是同一对象。 因此，它们具有引用相等性。 使用 <xref:System.Object.ReferenceEquals%2A> 方法确定两个引用是否引用同一对象。  
   

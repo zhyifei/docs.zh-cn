@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8856dfd1c6c8e35399c20b630c0d44493e42b6a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600487"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972191"
 ---
 # <a name="expressions-c-programming-guide"></a>表达式（C# 编程指南）
 表达式是由一个或多个操作数以及零个或多个运算符组成的序列，其计算结果为一个值、对象、方法或命名空间。 表达式可以包含文本值、方法调用、运算符及其操作数，或简单名称。 简单名称可以是变量名、类型成员名、方法参数名、命名空间名或类型名。  
@@ -40,13 +40,13 @@ System.Convert.ToInt32("35");
 ## <a name="literals-and-simple-names"></a>文本和简单名称  
  最简单的两种表达式类型是文本和简单名称。 文本是没有名称的常数值。 例如，在以下代码示例中，`5` 和 `"Hello World"` 都是文本值：  
   
- [!code-csharp[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
+ [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
  有关文本的详细信息，请参阅[类型](../../../csharp/language-reference/keywords/types.md)。  
   
  在前面的示例中，`i` 和 `s` 都是用于标识局部变量的简单名称。 在表达式中使用这些变量时，变量名称计算为当前在该变量的内存位置所存储的值。 下面的示例对此进行了演示：  
   
- [!code-csharp[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
+ [!code-csharp[csProgGuideStatements#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#3)]  
 ## <a name="invocation-expressions"></a>调用表达式  
  在下面的代码示例中，对 `DoWork` 的调用是一个调用表达式。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 456555a34347771c9918341d7d1a797e611f5577
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589306"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203105"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>如何：为类型定义值相等性（C# 编程指南）
 定义类或结构时，需确定为类型创建值相等性（或等效性）的自定义定义是否有意义。 通常，类型的对象预期要添加到某类集合时，或者这些对象主要用于存储一组字段或属性时，需实现值相等性。 可以基于类型中所有字段和属性的比较结果来定义值相等性，也可以基于子集进行定义。 但在任何一种情况下，类和结构中的实现均应遵循 5 个等效性保证条件：  
@@ -48,7 +48,7 @@ ms.locfileid: "54589306"
 ## <a name="example"></a>示例  
  下面的示例演示如何在类（引用类型）中实现值相等性。  
   
- [!code-csharp[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
+ [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
   
  在类（引用类型）上，两种 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法的默认实现均执行引用相等性比较，而不是值相等性检查。 实施者替代虚方法时，目的是为其指定值相等性语义。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "54589306"
 ## <a name="example"></a>示例  
  下面的示例演示如何在结构（值类型）中实现值相等性：  
   
- [!code-csharp[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
+ [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
   
  对于结构，<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>（<xref:System.ValueType?displayProperty=nameWithType> 中的替代版本）的默认实现通过使用反射来比较类型中每个字段的值，从而执行值相等性检查。 实施者替代结构中的 `Equals` 虚方法时，目的是提供更高效的方法来执行值相等性检查，并选择根据结构字段或属性的某个子集来进行比较。  
   

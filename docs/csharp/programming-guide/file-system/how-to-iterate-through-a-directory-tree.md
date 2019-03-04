@@ -6,12 +6,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613839"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976325"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何：循环访问目录树（C# 编程指南）
 短语“循环访问目录树”的意思是访问特定根文件夹下的每个嵌套子目录中的每个文件，可以是任意深度。 不需要打开每个文件。 可以以 `string` 的形式只检索文件或子目录的名称，也可以以 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 对象的形式检索其他信息。  
@@ -41,14 +41,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  在每个文件或文件夹上处理的特定异常和执行的特定操作仅作为示例提供。 你可以修改此代码来满足你的特定要求。 有关详细信息，请参阅代码中的注释。  
   
- [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何不使用递归方式遍历目录树中的文件和文件夹。 此方法使用泛型 <xref:System.Collections.Generic.Stack%601> 集合类型，此集合类型是一个后进先出 (LIFO) 堆栈。  
   
  在每个文件或文件夹上处理的特定异常和执行的特定操作仅作为示例提供。 你可以修改此代码来满足你的特定要求。 有关详细信息，请参阅代码中的注释。  
   
- [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#2)]  
   
  通常，检测每个文件夹以确定应用程序是否有权限打开它是一个很费时的过程。 因此，此代码示例只将此部分操作封装在 `try/catch` 块中。 你可以修改 `catch` 块，以便在拒绝访问某个文件夹时，可以尝试提升权限，然后再次访问此文件夹。 一般来说，仅捕获可以处理的、不会将应用程序置于未知状态的异常。  
   

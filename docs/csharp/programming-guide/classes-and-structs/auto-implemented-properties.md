@@ -6,12 +6,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 6768926c782b23dd495b338125d62b7833b0d9e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5447dea8b510def95041549555de2ed5592e2d2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554512"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203569"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>自动实现的属性（C# 编程指南）
 在 C# 3.0 及更高版本，当属性访问器中不需要任何其他逻辑时，自动实现的属性会使属性声明更加简洁。 它们还允许客户端代码创建对象。 当你声明以下示例中所示的属性时，编译器将创建仅可以通过该属性的 `get` 和 `set` 访问器访问的专用、匿名支持字段。  
@@ -19,7 +19,7 @@ ms.locfileid: "54554512"
 ## <a name="example"></a>示例  
  下列示例演示一个简单的类，它具有某些自动实现的属性：  
   
- [!code-csharp[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#28)]  
   
  在 C# 6 和更高版本中，你可以像字段一样初始化自动实现属性：  
   

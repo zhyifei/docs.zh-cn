@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: dfa3b60e0c76e377a52243c534139d6c9025d46e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a15fade1beb8f3da0d9b6f48a216dda81e669fd
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573317"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202686"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>创建和引发异常（C# 编程指南）
 异常用于指示在运行程序时发生了错误。 此时将创建一个描述错误的异常对象，然后使用 [throw](../../../csharp/language-reference/keywords/throw.md) 关键字引发。 然后，运行时搜索最兼容的异常处理程序。  
@@ -24,19 +24,19 @@ ms.locfileid: "54573317"
   
      例如，如果一种方法的参数具有无效的值：  
   
-     [!code-csharp[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_1.cs)]  
+     [!code-csharp[csProgGuideExceptions#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#12)]  
   
 -   根据对象的状态，对某个对象进行不适当的调用。  
   
      一个示例可能是尝试写入只读文件。 在对象状态不允许操作的情况下，引发 <xref:System.InvalidOperationException> 的实例或基于此类的派生的对象。 这是引发 <xref:System.InvalidOperationException> 对象的方法示例：  
   
-     [!code-csharp[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
+     [!code-csharp[csProgGuideExceptions#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#13)]  
   
 -   方法的参数引发了异常。  
   
      在这种情况下，应捕获原始异常，并创建 <xref:System.ArgumentException> 实例。 应将原始异常作为 <xref:System.Exception.InnerException%2A> 参数传递给 <xref:System.ArgumentException> 的构造函数：  
   
-     [!code-csharp[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
+     [!code-csharp[csProgGuideExceptions#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#14)]  
   
  异常包含一个名为 <xref:System.Exception.StackTrace%2A> 的属性。 此字符串包含当前调用堆栈上的方法的名称，以及为每个方法引发异常的位置（文件名和行号）。 <xref:System.Exception.StackTrace%2A> 对象由公共语言运行时 (CLR) 从 `throw` 语句的位置点自动创建，因此必须从堆栈跟踪的开始点引发异常。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54573317"
 ## <a name="defining-exception-classes"></a>定义异常类  
  程序可以引发 <xref:System> 命名空间中的预定义异常类（前面提到的情况除外），或通过从 <xref:System.Exception> 派生来创建其自己的异常类。 派生类应至少定义四个构造函数：一个默认构造函数、一个用于设置消息属性的构造函数，以及一个用于设置 <xref:System.Exception.Message%2A> 和 <xref:System.Exception.InnerException%2A> 属性的构造函数。 第四个构造函数用于序列化异常。 新的异常类应可序列化。 例如:  
   
- [!code-csharp[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_4.cs)]  
+ [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   
  只有当新属性提供的数据有助于解决异常时，才应将其添加到异常类中。 如果将新属性添加到派生异常类中，则应替代 `ToString()` 以返回添加的信息。  
   

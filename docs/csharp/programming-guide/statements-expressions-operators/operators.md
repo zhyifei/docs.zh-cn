@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 55b1829537224118de9870fa696ec2b1689d5066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603061"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981577"
 ---
 # <a name="operators-c-programming-guide"></a>运算符（C# 编程指南）
 
@@ -20,11 +20,11 @@ ms.locfileid: "54603061"
   
  下面的 C# 语句包含一个一元运算符和一个操作数。 递增运算符 `++`修改操作数 `y`的值。  
   
- [!code-csharp[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#5)]  
   
  下面的 C# 语句包含两个二元运算符，它们分别有两个操作数。 赋值运算符 `=` 将一个整数变量 `y` 和一个表达式 `2 + 3` 作为操作数。 表达式 `2 + 3` 本身由加法运算符和两个操作数 `2` 和 `3` 组成。  
   
- [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#6)]  
   
 ## <a name="operators-evaluation-and-operator-precedence"></a>运算符、计算和运算符优先级
 

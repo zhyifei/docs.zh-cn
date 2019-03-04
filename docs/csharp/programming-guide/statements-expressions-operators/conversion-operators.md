@@ -8,18 +8,18 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: 071eb75d9bab2b91b9cdb8ecc33df249b01e7ac6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 539a554da2ea2f785a54bd7e5ff81d09b908c9e4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619747"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965210"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>转换运算符（C# 编程指南）
 
 C# 允许程序员在类或结构上声明转换，以便类或结构能够与其他类或结构或者基本类型进行相互转换。 以类似于运算符的方式定义转换，并根据它们所转换为的类型命名。 要转换的参数类型或转换结果的类型必须是包含类型（但不能两者同时都是）。  
   
- [!code-csharp[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#10)]  
   
 ## <a name="conversion-operators-overview"></a>转换运算符概述
 

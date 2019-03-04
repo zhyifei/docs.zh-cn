@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: 4ae3a9b09d67896336e3230caca67e3b40c6a676
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e36dfe1117cc724f5388e3486a81310f2326ab7e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635996"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978691"
 ---
 # <a name="example-com-class-c-programming-guide"></a>COM 类示例（C# 编程指南）
 下面是将公开为 COM 对象的类的示例。 在将此代码放置在 .cs 文件中并添加到项目后，将“注册 COM 互操作”属性设置为“True”。 有关详细信息，请参阅[如何：注册 COM 互操作组件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))。
@@ -35,7 +35,7 @@ ms.locfileid: "54635996"
  此类实现此类接口；它可以实现多个接口，但第一个实现将为默认类接口。 在此处实现向 COM 公开的方法和属性。 它们必须标记为公共，并且必须匹配类接口中的声明。 此外，在此处声明此类引发的事件。 它们必须标记为公共，并且必须匹配事件接口中的声明。  
   
 ## <a name="example"></a>示例  
- [!code-csharp[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
+ [!code-csharp[csProgGuideInterop#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/ExampleCOM.cs#8)]  
   
 ## <a name="see-also"></a>请参阅
 

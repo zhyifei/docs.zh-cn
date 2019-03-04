@@ -5,26 +5,26 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 32dcfc8da52fc623473a1cc234e710463f8d28be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c1416566ca59a44b36457c710955de863013417
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722694"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980708"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令行参数（C# 编程指南）
 可以通过以下方式之一定义方法来将自变量发送到 `Main` 方法：  
   
- [!code-csharp[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
+ [!code-csharp[csProgGuideMain#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#2)]  
   
- [!code-csharp[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
+ [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]  
   
 > [!NOTE]
 >  若要在 Windows 窗体应用程序中的 `Main` 方法中启用命令行参数，必须手动修改 program.cs 中 `Main` 的签名。 Windows 窗体设计器生成的代码创建没有输入参数的 `Main`。 还可使用 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 或 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> 从控制台或 Windows 应用程序的任意位置访问命令行参数。  
   
  `Main` 方法的参数是一个表示命令行参数的 <xref:System.String> 数组。 通常，通过测试 `Length` 属性来确定参数是否存在，例如：  
   
- [!code-csharp[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
+ [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]  
   
  还可以使用 <xref:System.Convert> 类或 `Parse` 方法将字符串参数转换为数字类型。 例如，以下语句使用 <xref:System.Int64.Parse%2A> 方法将 `string` 转换为 `long` 数字：  
   
@@ -53,7 +53,7 @@ long num = Convert.ToInt64(s);
   
 1.  将以下代码粘贴到任何文本编辑器中，然后将该文件保存为名为 `Factorial.cs` 的文本文件。  
   
-     [!code-csharp[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
+     [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
 2.  从“开始”屏幕或“开始”菜单中，打开 Visual Studio“开发人员命令提示”窗口，然后导航到包含刚刚创建的文件的文件夹。  
   

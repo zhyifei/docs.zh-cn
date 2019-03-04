@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 5ad58e921b16498139abe403a45b21bb22ef895d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564313"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978641"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ 中的查询语法和方法语法 (C#)
 介绍性的语言集成查询 ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) 文档中的大多数查询是使用 LINQ 声明性查询语法编写的。 但是在编译代码时，查询语法必须转换为针对 .NET 公共语言运行时 (CLR) 的方法调用。 这些方法调用会调用标准查询运算符（名称为 `Where`、`Select`、`GroupBy`、`Join`、`Max` 和 `Average` 等）。 可以使用方法语法（而不查询语法）来直接调用它们。  
@@ -20,7 +20,7 @@ ms.locfileid: "54564313"
 ## <a name="standard-query-operator-extension-methods"></a>标准查询运算符扩展方法  
  下面的示例演示一个简单查询表达式以及编写为基于方法的查询的语义上等效的查询。  
   
- [!code-csharp[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#22)]  
   
  这两个示例的输出是相同的。 可以看到查询变量的类型在两种形式中是相同的：<xref:System.Collections.Generic.IEnumerable%601>。  
   

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: 8f0b375a2e2ed7304c43a27309dbdde5a2f5a476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d94c3624b84b2fea6760ac8f36fc592928a55834
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731876"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970709"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何：创建文件或文件夹（C# 编程指南）
 可通过编程方式在计算机上创建文件夹、子文件夹和子文件夹中的文件，并将数据写入文件。  
   
 ## <a name="example"></a>示例  
- [!code-csharp[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
+ [!code-csharp[csFilesandFolders#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#10)]  
   
  如果文件夹已存在，<xref:System.IO.Directory.CreateDirectory%2A> 不执行任何操作，未引发任何异常。 但 <xref:System.IO.File.Create%2A?displayProperty=nameWithType> 用新文件替换现有文件。 本示例使用 `if`-`else` 语句阻止替换现有文件。  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 12c31db32b2b3ff3da7ed0972ea2cf090701f3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e028ecd6e448237d192894c4a02233c1e0dd4c0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491737"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201490"
 ---
 # <a name="objects-c-programming-guide"></a>对象（C# 编程指南）
 类或结构定义的作用类似于蓝图，指定该类型可以进行哪些操作。 从本质上说，对象是按照此蓝图分配和配置的内存块。 程序可以创建同一个类的多个对象。 对象也称为实例，可以存储在命名变量中，也可以存储在数组或集合中。 使用这些变量来调用对象方法及访问对象公共属性的代码称为客户端代码。 在 C# 等面向对象的语言中，典型的程序由动态交互的多个对象组成。  
@@ -24,11 +24,11 @@ ms.locfileid: "54491737"
   
  类的实例是使用 [new 运算符](../../../csharp/language-reference/keywords/new-operator.md)创建的。 在下面的示例中，`Person` 为类型，`person1` 和 `person 2` 为该类型的实例（即对象）。  
   
- [!code-csharp[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
+ [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
  由于结构是值类型，因此结构对象的变量具有整个对象的副本。 结构的实例也可以使用 `new` 运算符来创建，但这不是必需的，如下面的示例所示：  
   
- [!code-csharp[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
+ [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
  `p1` 和 `p2` 的内存在线程堆栈上进行分配。 该内存随声明它的类型或方法一起回收。 这就是在赋值时复制结构的一个原因。 相比之下，当对类实例对象的所有引用都超出范围时，为该类实例分配的内存将由公共语言运行时自动回收（垃圾回收）。 无法像在 C++ 中那样明确地销毁类对象。 有关 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中的垃圾回收的详细信息，请参阅[垃圾回收](../../../standard/garbage-collection/index.md)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54491737"
   
 -   若要确定两个结构实例中的实例字段是否具有相同的值，可使用 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 方法。 由于所有结构都隐式继承自 <xref:System.ValueType?displayProperty=nameWithType>，因此可以直接在对象上调用该方法，如以下示例所示：  
   
- [!code-csharp[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
+ [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
  `Equals` 的 <xref:System.ValueType?displayProperty=nameWithType> 实现使用反射，因为它必须能够确定任何结构中有哪些字段。 在创建自己的结构时，重写 `Equals` 方法可以提供特定于你的类型的高效求等算法。  
   

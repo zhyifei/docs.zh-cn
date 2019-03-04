@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: c4f05e80fff386a5b0628c01605784c32d7ddaf5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 12898d5cd10d9ecca4ec0fd1f7d06be0761b57b8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261304"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978548"
 ---
 # <a name="summary-c-programming-guide"></a>\<summary>（C# 编程指南）
 ## <a name="syntax"></a>语法  
@@ -35,7 +35,7 @@ ms.locfileid: "55261304"
  使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。 若要基于编译器生成的文件创建最终文档，可以创建一个自定义工具，也可以使用 [DocFX](https://dotnet.github.io/docfx/) 或 [Sandcastle](https://github.com/EWSoftware/SHFB) 等工具。  
   
 ## <a name="example"></a>示例  
- [!code-csharp[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]  
   
  前面的示例生成下面的 XML 文件。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "55261304"
 ## <a name="example"></a>示例  
  下面的示例演示如何对泛型类型进行 `cref` 引用。  
   
- [!code-csharp[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]  
+ [!code-csharp[csProgGuideDocComments#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#11)]  
   
  前面的示例生成下面的 XML 文件。  
   

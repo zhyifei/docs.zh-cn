@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 4ba5c28f6d4842846c55f47b3b40628ec57c9702
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607012"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202348"
 ---
 # <a name="inheritance-c-programming-guide"></a>继承（C# 编程指南）
 
@@ -35,7 +35,7 @@ ms.locfileid: "54607012"
   
  下面的示例演示如何在 C# 中表示前面图中所示的类关系。 该示例还演示了 `WorkItem` 替代虚方法 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 的方式，以及 `ChangeRequest` 类继承该方法的 `WorkItem` 的实现方式。  
   
- [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#49)]  
   
 ## <a name="abstract-and-virtual-methods"></a>抽象方法和虚方法  
  基类将方法声明为[虚拟](../../../csharp/language-reference/keywords/virtual.md) 时，派生类可以使用其自己的实现[重写](../../../csharp/language-reference/keywords/override.md)该方法。 如果基类将成员声明为[抽象](../../../csharp/language-reference/keywords/abstract.md)，则必须在直接继承自该类的任何非抽象类中重写该方法。 如果派生类本身是抽象的，则它会继承抽象成员而不会实现它们。 抽象和虚拟成员是多形性（面向对象的编程的第二个主要特征）的基础。 有关详细信息，请参阅[多态性](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)。  

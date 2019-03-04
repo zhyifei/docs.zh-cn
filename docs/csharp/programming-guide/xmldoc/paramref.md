@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <paramref> C# XML tag
 - paramref C# XML tag
 ms.assetid: 756c24c1-f591-40e8-a838-559761539b0b
-ms.openlocfilehash: 4fd0770bfe6c15c0e9b10239019ec265550dc372
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e6d6c62c97179d74bdb6bdd88eeb1ee129226fed
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262830"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201399"
 ---
 # <a name="paramref-c-programming-guide"></a>\<paramref>（C# 编程指南）
 ## <a name="syntax"></a>语法  
@@ -33,7 +33,7 @@ ms.locfileid: "55262830"
  使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- [!code-csharp[csProgGuideDocComments#7](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/paramref_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#7)]  
   
 ## <a name="see-also"></a>请参阅
 

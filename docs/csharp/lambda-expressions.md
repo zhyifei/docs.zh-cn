@@ -5,14 +5,14 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 74ad1c5ddae69864b85099535e8b83a4504275a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 642422a4cc077ffebb5ee6db9d7ffb937fc1e173
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183121"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212347"
 ---
-# <a name="lambda-expressions"></a>Lambda 表达式 #
+# <a name="lambda-expressions"></a>Lambda 表达式
 
 Lambda 表达式是作为对象处理的代码块（表达式或语句块）。 它可作为参数传递给方法，也可通过方法调用返回。 Lambda 表达式广泛用于：
 
@@ -32,7 +32,7 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda2.cs#2)]
 
-## <a name="expression-lambdas"></a>表达式 lambda ##
+## <a name="expression-lambdas"></a>表达式 lambda
 
  表达式位于 => 运算符右侧的 Lambda 表达式称为“表达式 lambda”。 表达式 lambda 广泛用于[表达式树](expression-trees.md)的构造。 表达式 lambda 会返回表达式的结果，并采用以下基本形式：
 
@@ -54,7 +54,7 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 在上一个示例中，请注意表达式 Lambda 的主体可以包含一个方法调用。 但是，如果要创建在 .NET Framework 外部（例如 SQL Server 或实体框架 (EF)）计算的表达式树，则应避免在 Lambda 表达式中使用方法调用，因为这些方法在 .NET 实现的上下文之外可能没有任何意义。 在这种情况下，如果选择使用方法调用，请务必对其进行全面测试，确保可成功解析此方法调用。
 
-## <a name="statement-lambdas"></a>语句 lambda ##
+## <a name="statement-lambdas"></a>语句 lambda
 
 语句 lambda 与表达式 lambda 表达式类似，只是语句括在大括号中：
 
@@ -68,7 +68,7 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 像匿名方法一样，语句 lambda 也不能用于创建表达式目录树。
 
-## <a name="async-lambdas"></a>异步 lambda ##
+## <a name="async-lambdas"></a>异步 lambda
 
 通过使用 [async](language-reference/keywords/async.md) 和 [await](language-reference/keywords/await.md) 关键字，可以轻松创建包含异步处理的 Lambda 表达式和语句。 例如，本示例调用异步执行的 `ShowSquares` 方法。
 
@@ -76,7 +76,7 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 有关如何创建和使用异步方法的详细信息，请参阅[使用 Async 和 Await 的异步编程](programming-guide/concepts/async/index.md)。
 
-## <a name="lambda-expressions-and-tuples"></a>N/A ##
+## <a name="lambda-expressions-and-tuples"></a>N/A
 
 从 C# 7.0 开始，C# 语言为元组提供内置支持。 可以提供一个元组作为 Lambda 表达式的参数，同时 Lambda 表达式也可以返回元组。 在某些情况下，C# 编译器使用类型推理来确定元组组件的类型。
 
@@ -90,7 +90,7 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 有关对 C# 中元组的支持的详细信息，请参阅 [C# 元组类型](tuples.md)。
 
-## <a name="lambdas-with-the-standard-query-operators"></a>含标准查询运算符的 lambda ##
+## <a name="lambdas-with-the-standard-query-operators"></a>含标准查询运算符的 lambda
 
 在其他实现中，LINQ to Objects 有一个输入参数，其类型是泛型委托 <xref:System.Func%601> 系列中的一种。 这些委托使用类型参数来定义输入参数的数量和类型，以及委托的返回类型。 `Func` 委托对于封装用户定义的表达式非常有用，这些表达式将应用于一组源数据中的每个元素。 例如 <xref:System.Func%601> 委托，其语法为：
 
@@ -118,7 +118,7 @@ Lambda 表达式使用 [lambda 声明运算符](language-reference/operators/lam
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#6)]
 
-## <a name="type-inference-in-lambda-expressions"></a>Lambda 表达式中的类型推理 ##
+## <a name="type-inference-in-lambda-expressions"></a>Lambda 表达式中的类型推理
 
 编写 lambda 时，通常不必为输入参数指定类型，因为编译器可以根据 lambda 主体、参数类型以及 C# 语言规范中描述的其他因素来推断类型。 对于大多数标准查询运算符，第一个输入是源序列中的元素类型。 如果要查询 `IEnumerable<Customer>`，则输入变量将被推断为 `Customer` 对象，这意味着你可以访问其方法和属性：
 
@@ -134,7 +134,7 @@ Lambda 类型推理的一般规则如下：
 
 请注意，lambda 表达式本身没有类型，因为常规类型系统没有“Lambda 表达式”这一内部概念。 但是，有时以一种非正式的方式谈论 lambda 表达式的“类型”会很方便。 在这些情况下，类型是指委托类型或 lambda 表达式所转换到的 <xref:System.Linq.Expressions.Expression> 类型。
 
-## <a name="variable-scope-in-lambda-expressions"></a>Lambda 表达式中的变量范围 ##
+## <a name="variable-scope-in-lambda-expressions"></a>Lambda 表达式中的变量范围
 
 在定义 lambda 函数的方法内或包含 Lambda 表达式的类型内，Lambda 可以引用范围内的外部变量（请参阅[匿名方法](programming-guide/statements-expressions-operators/anonymous-methods.md)）。 以这种方式捕获的变量将进行存储以备在 lambda 表达式中使用，即使在其他情况下，这些变量将超出范围并进行垃圾回收。 必须明确地分配外部变量，然后才能在 lambda 表达式中使用该变量。 以下示例演示了这些规则。
 
@@ -152,7 +152,7 @@ Lambda 类型推理的一般规则如下：
 
 - 如果跳转语句的目标在块外部，则 lambda 表达式不能包含位于 lambda 函数内部的 `goto` 语句、 `break` 语句或 `continue` 语句。 同样，如果目标在块内部，则在 lambda 函数块外部使用跳转语句也是错误的。
 
-## <a name="see-also"></a>请参阅 ##
+## <a name="see-also"></a>请参阅
 
 - [LINQ（语言集成查询）](../standard/using-linq.md)
 - [匿名方法](programming-guide/statements-expressions-operators/anonymous-methods.md)

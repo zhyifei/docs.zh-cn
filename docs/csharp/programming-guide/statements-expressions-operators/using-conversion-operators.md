@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit conversion operators [C#]
 - explicit conversion operators [C#]
 ms.assetid: caf36e89-c6c0-4b87-9f9e-85780a45c9a4
-ms.openlocfilehash: d6b271c0d716a9b5dfb49b825d843d4345471147
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 888339661ba1cb2e0b702f284d9f27b3217e74c1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578567"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973153"
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>使用转换运算符（C# 编程指南）
 您可以使用 `implicit` 转换运算符或者 `explicit` 转换运算符，前者更易于使用，后者能向阅读代码的每个人清楚地指示您要转换类型。 本主题演示转换运算符的两个类型。  
@@ -26,12 +26,12 @@ ms.locfileid: "54578567"
 ## <a name="example"></a>示例  
  这是显式转换运算符的示例。 此运算符从类型 <xref:System.Byte> 转换为名为 `Digit` 的值类型。 由于不是所有字节都可转换为数字，因此该转换是显式的，意味着必须使用转换，如 `Main` 方法所示。  
   
- [!code-csharp[csProgGuideStatements#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-conversion-operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#11)]  
   
 ## <a name="example"></a>示例  
  此示例通过定义撤消前一示例所执行操作的转换运算符来演示隐式转换运算符：它将名为 `Digit` 的值类转换为整型 <xref:System.Byte> 类型。 由于任何数字都可转换为 <xref:System.Byte>，因此没必要非得让用户知道进行的转换。  
   
- [!code-csharp[csProgGuideStatements#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-conversion-operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#12)]  
   
 ## <a name="see-also"></a>请参阅
 

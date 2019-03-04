@@ -7,16 +7,16 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 38b8a0fc8c89975318b42380ca936869544af601
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08863e677413c27461d621c7126c64f2b76c33a8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694966"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202595"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>类型参数的约束（C# 编程指南）
 
-约束告知编译器类型参数必须具备的功能。 在没有任何约束的情况下，类型参数可以是任何类型。 编译器只能假定 <xref:System.Object?displayPropety=nameWithType> 的成员，它是任何 .NET 类型的最终基类。 有关详细信息，请参阅[使用约束的原因](#why-use-constraints)。 如果客户端代码尝试使用约束所不允许的类型来实例化类，则会产生编译时错误。 通过使用 `where` 上下文关键字指定约束。 下表列出了七种类型的约束：
+约束告知编译器类型参数必须具备的功能。 在没有任何约束的情况下，类型参数可以是任何类型。 编译器只能假定 <xref:System.Object?displayProperty=nameWithType> 的成员，它是任何 .NET 类型的最终基类。 有关详细信息，请参阅[使用约束的原因](#why-use-constraints)。 如果客户端代码尝试使用约束所不允许的类型来实例化类，则会产生编译时错误。 通过使用 `where` 上下文关键字指定约束。 下表列出了七种类型的约束：
 
 |约束|说明|
 |----------------|-----------------|

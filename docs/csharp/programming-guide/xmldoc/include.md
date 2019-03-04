@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 1e933647487f966e9f8448cf60a2bdecdd29cdff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 982e80696e0a8831397197c0c12d748d1d85c349
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286255"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978929"
 ---
 # <a name="include-c-programming-guide"></a>\<include>（C# 编程指南）
 ## <a name="syntax"></a>语法  
@@ -44,7 +44,7 @@ ms.locfileid: "55286255"
 ## <a name="example"></a>示例  
  这是多文件示例。 第一个文件使用 \<include>，列在下面：  
   
- [!code-csharp[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]  
   
  第二个文件是 xml_include_tag.doc，包含下列文档注释：  
   

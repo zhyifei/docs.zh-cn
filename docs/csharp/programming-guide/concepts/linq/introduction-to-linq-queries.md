@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: dfbd663384a76298390d216bb2488b00e2535d00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2202641d56a151de2eebe08d4c100c37fb399e5d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605128"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201659"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 查询简介 (C#)
 *查询*是一种从数据源检索数据的表达式。 查询通常用专门的查询语言来表示。 随着时间的推移，人们已经为各种数据源开发了不同的语言；例如，用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们必须支持的每种数据源或数据格式，都不得不学习一种新的查询语言。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 通过提供一种跨各种数据源和数据格式使用数据的一致模型，简化了这一情况。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询中，始终会用到对象。 可以使用相同的基本编码模式来查询和转换 XML 文档、SQL 数据库、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] 数据集、.NET 集合中的数据以及对其有 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序可用的任何其他格式的数据。  
@@ -28,7 +28,7 @@ ms.locfileid: "54605128"
   
  下面的示例演示如何用源代码表示查询操作的三个部分。 为方便起见，此示例将一个整数数组用作数据源；但其中涉及的概念同样适用于其他数据源。 本主题的其余部分也会引用此示例。  
   
- [!code-csharp[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#1)]  
   
  下图演示完整的查询操作。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 中，查询的执行与查询本身截然不同；换句话说，如果只是创建查询变量，则不会检索任何数据。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54605128"
   
  可查询类型不需要进行修改或特殊处理就可以用作 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 数据源。 如果源数据还没有作为可查询类型出现在内存中，则 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供程序必须以此方式表示源数据。 例如，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 将 XML 文档加载到可查询的 <xref:System.Xml.Linq.XElement> 类型中：  
   
- [!code-csharp[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
  借助 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]，首先在 Visual Studio 中手动或使用 [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)在设计时创建对象关系映射。 针对这些对象编写查询，然后由 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 在运行时处理与数据库的通信。 下例中，`Customers` 表示数据库中的特定表，而查询结果的类型 <xref:System.Linq.IQueryable%601> 派生自 <xref:System.Collections.Generic.IEnumerable%601>。  
   
@@ -71,7 +71,7 @@ IQueryable<Customer> custQuery =
 ### <a name="deferred-execution"></a>延迟执行  
  如前所述，查询变量本身只存储查询命令。 查询的实际执行将推迟到在 `foreach` 语句中循环访问查询变量之后进行。 此概念称为*延迟执行*，下面的示例对此进行了演示：  
   
- [!code-csharp[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
+ [!code-csharp[csLinqGettingStarted#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#4)]  
   
  `foreach` 语句也是检索查询结果的地方。 例如，在上一个查询中，迭代变量 `num` 保存了返回的序列中的每个值（一次保存一个值）。  
   
@@ -80,11 +80,11 @@ IQueryable<Customer> custQuery =
 ### <a name="forcing-immediate-execution"></a>强制立即执行  
  对一系列源元素执行聚合函数的查询必须首先循环访问这些元素。 `Count`、`Max`、`Average` 和 `First` 就属于此类查询。 由于查询本身必须使用 `foreach` 以便返回结果，因此这些查询在执行时不使用显式 `foreach` 语句。 另外还要注意，这些类型的查询返回单个值，而不是 `IEnumerable` 集合。 下面的查询返回源数组中偶数的计数：  
   
- [!code-csharp[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
+ [!code-csharp[csLinqGettingStarted#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#5)]  
   
  要强制立即执行任何查询并缓存其结果，可调用 <xref:System.Linq.Enumerable.ToList%2A> 或 <xref:System.Linq.Enumerable.ToArray%2A> 方法。  
   
- [!code-csharp[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
+ [!code-csharp[csLinqGettingStarted#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#6)]  
   
  此外，还可以通过在紧跟查询表达式之后的位置放置一个 `foreach` 循环来强制执行查询。 但是，通过调用 `ToList` 或 `ToArray`，也可以将所有数据缓存在单个集合对象中。  
   

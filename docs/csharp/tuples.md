@@ -3,14 +3,14 @@ title: 元组类型 - C# 指南
 description: 了解 C# 中的未命名元组类型和命名元组类型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332749"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971395"
 ---
-# <a name="c-tuple-types"></a>C# 元组类型 #
+# <a name="c-tuple-types"></a>C# 元组类型
 
 C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的语法，基于元素数量（称为“基数”）和元素类型的转换规则，以及一致的副本、相等测试和赋值规则。 但另一方面，元组不支持一些与继承相关的面向对象的语法。 [C# 7.0 中的新增功能](whats-new/csharp-7.md#tuples)文章中的“元组”一节对其进行了概述。
 

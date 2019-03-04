@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 7c20292a906ecfbf08311a616e05a02cd8f8a25c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5fbf74f30e5fc6abd9e1c5542eaadc7e3fcf552
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731694"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977560"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>访问修饰符（C# 编程指南）
 所有类型和类型成员都具有可访问性级别，该级别可以控制是否可以从你的程序集或其他程序集中的其他代码中使用它们。 可以使用以下访问修饰符在进行声明时指定类型或成员的可访问性：  
@@ -33,7 +33,7 @@ ms.locfileid: "54731694"
   
  下面的示例演示如何在类型和成员上指定访问修饰符：  
   
- [!code-csharp[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
+ [!code-csharp[csProgGuideObjects#72](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#72)]  
   
  并非所有的访问修饰符都可以由所有上下文中的所有类型或成员使用，并且在某些情况下，类型成员的可访问性受其包含类型的可访问性限制。 以下各节提供了有关可访问性的更多详细信息。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54731694"
   
  若要设置类或结构成员的访问级别，向成员声明添加适当的关键字，如以下示例中所示。  
   
- [!code-csharp[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
+ [!code-csharp[csProgGuideObjects#73](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#73)]  
   
 > [!NOTE]
 >  受保护的内部可访问性级别意味着受保护或内部，而非受保护和内部。 换而言之，可以从同一程序集中的任何类（包括派生类）访问受保护的内部成员。 若要将同一程序集中的可访问性限制为仅派生类，请声明类本身为内部，并声明其成员为受保护。 此外，从 C# 7.2 开始，可以使用专用受保护的访问修饰符实现相同的效果，而无需使包含的类属于内部。  
