@@ -33,6 +33,7 @@
 ## [处理和引发异常](standard/exceptions/)
 ## [.NET 中的程序集](standard/assembly/index.md)
 ### [.NET 程序集文件格式](standard/assembly/file-format.md)
+### [如何：在 .NET Core 中使用和调试程序集可卸载性](standard/assembly/unloadability-howto.md)
 ## [垃圾回收](standard/garbage-collection/)
 ## [泛型类型](standard/generics.md)
 ## [委托和 lambda](standard/delegates-lambdas.md)
@@ -268,9 +269,9 @@
 ## [C# 教程](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-<!-- markdownlint-disable MD003 -->
+<!-- markdownlint-disable MD003 MD020 -->
 ## C# 中的新增功能
-<!-- markdownlint-enable MD003 -->
+<!-- markdownlint-enable MD003 MD020 -->
 ### [C# 8.0 - 预览版 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)

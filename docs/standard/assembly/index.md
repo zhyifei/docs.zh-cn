@@ -48,11 +48,12 @@ ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 
 ## <a name="see-also"></a>请参阅
 
- - [.NET 程序集文件格式](file-format.md)  
+ - [.NET 程序集文件格式](file-format.md)
  - [Assemblies in the Common Language Runtime](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
  - [友元程序集 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  - [友元程序集 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  - [如何：加载和卸载程序集 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [如何：加载和卸载程序集 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
+ - [如何：在 .NET Core 中使用和调试程序集可卸载性](unloadability-howto.md)
  - [如何：确定文件是否为程序集 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  
  - [如何：确定文件是否为程序集 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  
