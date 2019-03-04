@@ -5,12 +5,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: 3b1e85cc9e0b0768f7065ff690f6dc969ee040b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0fac312c4c20f57e93dc88d0d6bb6b13932f7682
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676362"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966973"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>如何：在 Visual Basic 中重命名文件
 使用 `My.Computer.FileSystem` 对象的 `RenameFile` 方法可通过提供当前位置、文件名和新文件名来重命名文件。 此方法不能用于移动文件；使用 `MoveFile` 方法可移动并重命名文件。  
@@ -19,7 +19,7 @@ ms.locfileid: "54676362"
   
 -   使用 `My.Computer.FileSystem.RenameFile` 方法可重命名文件。 此示例将名为 `Test.txt` 的文件重命名为 `SecondTest.txt`。  
   
-     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#9)]  
   
  此代码示例也可作为 IntelliSense 代码片段。 在代码片段选取器中，该代码段位于“文件系统 - 处理驱动器、文件夹和文件”。 有关详细信息，请参阅[代码片段](/visualstudio/ide/code-snippets)。  
   

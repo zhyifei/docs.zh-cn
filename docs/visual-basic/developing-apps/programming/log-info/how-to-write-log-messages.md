@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, writing log messags
 ms.assetid: 972a3e0c-2996-4623-a7a9-d7ebc4d207f8
-ms.openlocfilehash: 4b4210983aa5bd57f1b0a89f2f06f089e98670f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c12d0cde7d8128400769cd2e93361bb10e08f59b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594946"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967009"
 ---
 # <a name="how-to-write-log-messages-visual-basic"></a>如何：编写日志消息 (Visual Basic)
 可以使用 `My.Application.Log` 和 `My.Log` 对象来记录有关应用程序的信息。 本示例将演示如何使用 `My.Application.Log.WriteEntry` 方法来记录跟踪信息。  
@@ -19,7 +19,7 @@ ms.locfileid: "54594946"
 ## <a name="example"></a>示例  
  本示例将使用 `My.Application.Log.WriteEntry` 方法来写出跟踪信息。  
   
- [!code-vb[VbVbalrMyApplicationLog#11](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-write-log-messages_1.vb)]  
+ [!code-vb[VbVbalrMyApplicationLog#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#11)]  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  请确保写入日志的数据不包含敏感信息，如用户密码。 有关详细信息，请参阅[使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)。  

@@ -4,12 +4,12 @@ description: 微服务必须能够承受暂时的网络和依赖项故障，必�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 174e9881be50b8c2f8220960e93dce626e776b65
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: c5bd272380f25f801c7b75c8b8e73a080ac89eef
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362231"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970787"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>微服务中的复原和高可用性
 
@@ -71,7 +71,7 @@ ms.locfileid: "54362231"
   [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
 - **记录你的想法：使用语义日志记录应用程序块** \
-  [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+  <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - Splunk 官方网站。 \
   [*https://www.splunk.com/*](https://www.splunk.com/)

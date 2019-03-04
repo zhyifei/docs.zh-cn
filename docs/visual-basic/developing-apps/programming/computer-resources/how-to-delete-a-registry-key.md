@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: 226dc22f42783bec11eb1ddc38f270477bb0fbab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ff6ba8e31638b64fa7100b1807303c61a454c81
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633954"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981668"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>如何：在 Visual Basic 中删除注册表项
 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 和 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> 方法可以用于删除注册表项。  
@@ -27,7 +27,7 @@ ms.locfileid: "54633954"
   
 -   使用 `DeleteSubKey` 方法删除注册表项。 此示例将删除 CurrentUser 配置单元中的软件/TestApp 项。 可在代码中更改为相应的字符串，或使它依赖于用户提供的信息。  
   
-     [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-delete-a-registry-key_1.vb)]  
+     [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
 ## <a name="robust-programming"></a>可靠编程  
  如果键/值对不存在，`DeleteSubKey` 方法将返回一个空字符串。  

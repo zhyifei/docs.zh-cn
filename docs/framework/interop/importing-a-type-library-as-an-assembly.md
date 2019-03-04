@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 133d70058cc8151b22d31a3211d48188095e5f07
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 043fe74f66635c30f12555efb9ccc9415e200ec3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218902"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835234"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>将类型库当作程序集导入
 COM 类型定义通常位于类型库中。 而符合 CLS 的编译器则在程序集中生成类型元数据。 类型信息的这两种来源具有很大的区别。 本主题将说明从类型库中生成元数据的技术。 生成的程序集称为互操作程序集，其中包含的类型信息允许 .NET Framework 应用程序使用 COM 类型。  
@@ -44,7 +44,7 @@ COM 类型定义通常位于类型库中。 而符合 CLS 的编译器则在程�
   
 -   Visual Studio  
   
-     Visual Studio 将类型库中的 COM 类型自动转换为程序集中的元数据。 有关说明，请参阅[如何：添加对类型库的引用](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)，[演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)，和[演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)。  
+     Visual Studio 将类型库中的 COM 类型自动转换为程序集中的元数据。 有关说明，请参阅[如何：添加对类型库的引用](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)中所述。  
   
 -   [类型库导入程序 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -81,5 +81,3 @@ COM 类型定义通常位于类型库中。 而符合 CLS 的编译器则在程�
 - [部署互操作应用程序](../../../docs/framework/interop/deploying-an-interop-application.md)
 - [如何：添加对类型库的引用](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
 - [如何：从类型库生成互操作程序集](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
-- [演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-- [演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

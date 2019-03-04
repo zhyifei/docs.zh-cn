@@ -4,12 +4,12 @@ description: 了解妥善处理部分失败错误的几种策略。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: ad45e357c1656b9346b7bdb5f324bde5fa76eaba
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 2da0dfee97ac9c7c33ab4edeb670e0f813e6c463
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362764"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981317"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>处理部分失败错误的策略
 
@@ -33,7 +33,7 @@ ms.locfileid: "54362764"
   [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](/azure/architecture/patterns/category/resiliency)
 
 - **添加复原能力和优化性能**\
-  [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
+  <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
 - **Bulkhead。** GitHub 存储库。 使用 Polly 策略的实现。\
   [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cb23eb652cd769a0f3387833a9ece507479c464
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 9b9f0cd44e5ab9a33db4dd2ef52681f40ca54080
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218965"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835156"
 ---
 # <a name="compiling-an-interop-project"></a>编译互操作项目
 
@@ -30,7 +30,7 @@ ms.locfileid: "56218965"
 
  这两种方法之间的差异在[在托管代码中使用 COM 类型 ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))中有更详细的讨论。
 
- 有关如何使用 Visual Studio 嵌入互操作类型，请参阅[演练：嵌入 Microsoft Office 程序集中的类型信息（C# 和 Visual Basic）](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee317478(v=vs.100))，[演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#) ](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 和[演练：在 Visual Studio 中嵌入托管程序集中的类型 (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)。
+ 有关如何使用 Visual Studio 嵌入互操作类型，请参阅[演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#) ](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 和[演练：在 Visual Studio 中嵌入托管程序集中的类型 (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)。
 
  若要使用命令行编译器引用互操作程序集，并将类型信息嵌入可执行文件中，请使用 [/link（C# 编译器选项）](../../csharp/language-reference/compiler-options/link-compiler-option.md)或 [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 编译器开关并指定互操作程序集的名称。
 
@@ -44,8 +44,6 @@ ms.locfileid: "56218965"
 - [向 .NET Framework 公开 COM 组件](exposing-com-components.md)
 - [语言独立性和与语言无关的组件](../../standard/language-independence-and-language-independent-components.md)
 - [在托管代码中使用 COM 类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md) 
-- [演练：在 Visual Studio 中嵌入 Microsoft Office 程序集中的类型信息 (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
 - [演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [演练：在 Visual Studio 中嵌入托管程序集中的类型 (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [将类型库作为程序集导入](importing-a-type-library-as-an-assembly.md)

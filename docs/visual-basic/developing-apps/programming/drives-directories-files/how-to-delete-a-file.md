@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-ms.openlocfilehash: 2222c06b71b3063c848495aec52fd4acf0674073
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c083855ea298fa62459d107651e62c13d65c52c5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520615"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972828"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>如何：在 Visual Basic 中删除文件
 通过 `My.Computer.FileSystem` 对象的 `DeleteFile` 方法，可以删除文件。 它提供的选项包括：是否将已删除的文件发送到“回收站”、是否要求用户确认应删除该文件，以及当用户取消操作时要执行的操作。  
@@ -21,19 +21,19 @@ ms.locfileid: "54520615"
   
 -   使用 `DeleteFile` 方法删除文件。 以下代码演示如何删除名为 `test.txt` 的文件。  
   
-     [!code-vb[VbVbcnMyFileSystem#22](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#22)]  
   
 ### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a>删除文本文件，并要求用户确认应删除该文件  
   
 -   使用 `DeleteFile` 方法删除文件，同时将 `showUI` 设置为 `AllDialogs`。 以下代码演示如何删除名为 `test.txt` 的文件，并允许用户确认是否应删除该文件。  
   
-     [!code-vb[VbFileIOMisc#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_2.vb)]  
+     [!code-vb[VbFileIOMisc#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#9)]  
   
 ### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>删除文本文件并将其发送到“回收站”  
   
 -   使用 `DeleteFile` 方法删除文件，并为 `recycle` 参数指定 `SendToRecycleBin`。 以下代码演示如何删除名为 `test.txt` 的文件并将其发送到“回收站”。  
   
-     [!code-vb[VbFileIOMisc#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_3.vb)]  
+     [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  

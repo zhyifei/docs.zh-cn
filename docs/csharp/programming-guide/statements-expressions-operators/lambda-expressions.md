@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 91d972f468f80c509a90ea293937b117d54a2e7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77701653abacbe6d876c0890a11586f0840bad5d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737515"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200892"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 表达式（C# 编程指南）
 
@@ -97,9 +97,9 @@ namespace ConsoleApplication1
 
  语句 lambda 的主体可以包含任意数量的语句；但是，实际上通常不会多于两个或三个。  
   
-[!code-csharp[StatementLamba#1](~/samples/snippets/csharp/programming-guide/lambda-expressions/statements.cs#1)]
+[!code-csharp[StatementLambda#1](~/samples/snippets/csharp/programming-guide/lambda-expressions/statements.cs#1)]
 
-[!code-csharp[StatementLamba#2](~/samples/snippets/csharp/programming-guide/lambda-expressions/statements.cs#2)]
+[!code-csharp[StatementLambda#2](~/samples/snippets/csharp/programming-guide/lambda-expressions/statements.cs#2)]
 
  像匿名方法一样，语句 lambda 也不能用于创建表达式目录树。  
   

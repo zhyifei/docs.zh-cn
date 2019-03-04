@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 268ffe9c5cbbc9490ed91f2b4c28f8f876b8ff5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87be8c94c3d356a81f447f7b9542315783eea10d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574538"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836274"
 ---
 # <a name="what-is-managed-code"></a>什么是“托管代码”？
 
@@ -39,6 +39,6 @@ ms.locfileid: "33574538"
 
 ## <a name="more-resources"></a>更多资源
 
-*   [.NET Framework 概念性概述](https://msdn.microsoft.com/library/zw4w595w.aspx)
-*   [不安全代码和指针](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
-*   [互操作性（C# 编程指南）](https://msdn.microsoft.com/library/ms173184.aspx)
+* [.NET Framework 概述](../framework/get-started/overview.md)
+* [不安全代码和指针](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
+* [本机互操作性](./native-interop/index.md)

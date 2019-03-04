@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1dbd2c991f4b4259caa180375283ecb6d957336
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578103"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836560"
 ---
 # <a name="observer-design-pattern"></a>观察者设计模式
 观察者设计模式使订阅者能够从提供程序注册并接收通知。 它适用于需要基于推送的通知的任何方案。 此模式定义提供程序（亦称为“使用者”或“可观察对象”），以及零个、一个或多个观察者。 观察者注册提供程序，并且每当预定义的条件、事件或状态发生更改时，该提供程序会通过调用其方法之一来自动通知所有观察者。 在此方法调用中，该提供程序还可向观察者提供当前状态信息。 在 .NET Framework 中，通过实现泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和 <xref:System.IObserver%601?displayProperty=nameWithType> 接口来应用观察者设计模式。 泛型类型参数表示提供通知信息的类型。 泛型类型参数表示提供通知信息的类型。  
@@ -46,15 +46,17 @@ ms.locfileid: "33578103"
 -   包含提供程序发送到其观察者的数据的对象。 此对象的类型对应 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 接口的泛型类型参数。 尽管此对象可与 <xref:System.IObservable%601> 实现相同，但通常情况下，它是一个单独的类型。  
   
 > [!NOTE]
->  除实现观察者设计模式外，你还可能对浏览使用 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 接口构建的库感兴趣。 例如，[Reactive Extensions for .NET (Rx)](https://msdn.microsoft.com/library/hh242985.aspx) 包含一组支持异步编程的扩展方法和 LINQ 标准序列运算符。  
+>  除实现观察者设计模式外，你还可能对浏览使用 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 接口构建的库感兴趣。 例如，[Reactive Extensions for .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) 包含一组支持异步编程的扩展方法和 LINQ 标准序列运算符。  
   
 ## <a name="implementing-the-pattern"></a>实现模式  
- 下面的示例使用观察者设计模式来实现机场行李认领信息系统。 `BaggageInfo` 类提供有关到达航班以及可领取每次航班行李的行李传送带的信息。 如以下示例所示。  
+ 下面的示例使用观察者设计模式来实现机场行李认领信息系统。 
+  `BaggageInfo` 类提供有关到达航班以及可领取每次航班行李的行李传送带的信息。 如以下示例所示。  
   
  [!code-csharp[Conceptual.ObserverDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/provider.cs#1)]
  [!code-vb[Conceptual.ObserverDesignPattern#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/provider.vb#1)]  
   
- `BaggageHandler` 类负责接收有关到达航班和行李认领传送带的信息。 在内部，它维护两个集合：  
+ 
+  `BaggageHandler` 类负责接收有关到达航班和行李认领传送带的信息。 在内部，它维护两个集合：  
   
 -   `observers` - 将接收更新的信息的客户端集合。  
   
@@ -81,7 +83,10 @@ ms.locfileid: "33578103"
  [!code-csharp[Conceptual.ObserverDesignPattern#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/observer.cs#4)]
  [!code-vb[Conceptual.ObserverDesignPattern#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/observer.vb#4)]  
   
- `ArrivalsMonitor` 类包括 `Subscribe` 和 `Unsubscribe` 方法。 `Subscribe` 方法使类可将由对 <xref:System.IObservable%601.Subscribe%2A> 的调用返回的 <xref:System.IDisposable> 实现保存到私有变量中。 `Unsubscribe` 方法使类可以通过调用提供程序的 <xref:System.IDisposable.Dispose%2A> 实现来取消订阅通知。 `ArrivalsMonitor` 也提供 <xref:System.IObserver%601.OnNext%2A>、<xref:System.IObserver%601.OnError%2A> 和 <xref:System.IObserver%601.OnCompleted%2A> 方法的实现。 仅 <xref:System.IObserver%601.OnNext%2A> 实现包含大量的代码。 该方法处理私有的、已排序的泛型 <xref:System.Collections.Generic.List%601> 对象，该对象维护有关抵港航班的始发机场以及可提取行李的传送带的信息。 如果 `BaggageHandler` 类报告新的航班抵达，则 <xref:System.IObserver%601.OnNext%2A> 方法实现将该航班的相关信息添加到列表中。 如果 `BaggageHandler` 类报告已卸载该航班的行李，则 <xref:System.IObserver%601.OnNext%2A> 方法从列表中移除该航班。 每当进行了更改，就会对列表进行排序并向控制台显示。  
+ 
+  `ArrivalsMonitor` 类包括 `Subscribe` 和 `Unsubscribe` 方法。 
+  `Subscribe` 方法使类可将由对 <xref:System.IObservable%601.Subscribe%2A> 的调用返回的 <xref:System.IDisposable> 实现保存到私有变量中。 
+  `Unsubscribe` 方法使类可以通过调用提供程序的 <xref:System.IDisposable.Dispose%2A> 实现来取消订阅通知。 `ArrivalsMonitor` 也提供 <xref:System.IObserver%601.OnNext%2A>、<xref:System.IObserver%601.OnError%2A> 和 <xref:System.IObserver%601.OnCompleted%2A> 方法的实现。 仅 <xref:System.IObserver%601.OnNext%2A> 实现包含大量的代码。 该方法处理私有的、已排序的泛型 <xref:System.Collections.Generic.List%601> 对象，该对象维护有关抵港航班的始发机场以及可提取行李的传送带的信息。 如果 `BaggageHandler` 类报告新的航班抵达，则 <xref:System.IObserver%601.OnNext%2A> 方法实现将该航班的相关信息添加到列表中。 如果 `BaggageHandler` 类报告已卸载该航班的行李，则 <xref:System.IObserver%601.OnNext%2A> 方法从列表中移除该航班。 每当进行了更改，就会对列表进行排序并向控制台显示。  
   
  下面的示例包含对 `BaggageHandler` 类以及对 `ArrivalsMonitor` 类的两个实例进行实例化的应用程序入口点，并使用 `BaggageHandler.BaggageStatus` 方法来添加和删除有关抵港航班的信息。 在每种情况下，观察者均接收更新，并且正确显示行李认领信息。  
   
@@ -90,7 +95,7 @@ ms.locfileid: "33578103"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|说明|  
 |-----------|-----------------|  
 |[监视程序设计模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)|描述开发实现观察者设计模式的应用程序时要采用的最佳做法。|  
 |[如何：实现提供程序](../../../docs/standard/events/how-to-implement-a-provider.md)|为温度监控应用程序提供一个提供程序的分步实现。|  

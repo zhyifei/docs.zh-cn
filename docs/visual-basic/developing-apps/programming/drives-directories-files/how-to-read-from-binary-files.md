@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: 6594bd8180688ae453534207170a4befc96c5c37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9b30d119a404396e2bf37aa445a420f7823c57b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647613"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980381"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>如何：在 Visual Basic 中读取二进制文件
 `My.Computer.FileSystem` 对象提供用于读取二进制文件的 `ReadAllBytes` 方法。  
@@ -21,11 +21,11 @@ ms.locfileid: "54647613"
   
 -   使用 `ReadAllBytes` 方法可将文件的内容作为字节数组返回。 此示例读取文件 `C:/Documents and Settings/selfportrait.jpg`。  
   
-     [!code-vb[VbVbcnMyFileSystem#78](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-binary-files_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#78)]  
   
 -   对于大型二进制文件，可以使用 <xref:System.IO.FileStream.Read%2A> 对象的 <xref:System.IO.FileStream> 方法从文件中一次只读取指定数量的内容。 然后，可以限制每次读取操作将文件加载进内存的数量。 以下代码示例将复制文件，并允许调用方指定每次读取操作将文件读入内存的数量。  
   
-     [!code-vb[VbVbcnMyFileSystem#91](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-binary-files_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  

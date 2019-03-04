@@ -6,12 +6,12 @@ helpviewer_keywords:
 - persistence [Visual Basic], persisting user settings [Visual Basic]
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
-ms.openlocfilehash: dab285f175838fb71e4218cbafdd4f7593c9e786
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45d5fbf6fda34407d8b7eb3f959f215e7621f1c5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611288"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966939"
 ---
 # <a name="how-to-persist-user-settings-in-visual-basic"></a>如何：在 Visual Basic 中保存用户设置
 可以使用 `My.Settings.Save` 方法来保存对用户设置的更改。  
@@ -26,7 +26,7 @@ ms.locfileid: "54611288"
 ## <a name="example"></a>示例  
  本示例更改 `LastChanged` 用户设置的值，并通过调用 `My.Settings.Save` 方法来保存此更改。  
   
- [!code-vb[VbVbalrMyResources#5](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-persist-user-settings_1.vb)]  
+ [!code-vb[VbVbalrMyResources#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#5)]  
   
  若要使用本示例，应用程序必须具有类型为 `Date` 的 `LastChanged` 用户设置。 有关详细信息，请参阅[管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
   

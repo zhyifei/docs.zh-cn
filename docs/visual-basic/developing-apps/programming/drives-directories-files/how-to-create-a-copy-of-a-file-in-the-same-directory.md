@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: a221c878fd2a44a9d4cd65d7a297b296cd6aed20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6e5d31df7d507c16b5a84bd1816f12f384e9dab
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667097"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972958"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>如何：在同一目录中创建文件副本 (Visual Basic)
 使用 `My.Computer.FileSystem.CopyFile` 方法复制文件。 使用参数可以覆盖现有文件、重命名文件、显示操作的进度以及允许用户取消操作。  
@@ -23,13 +23,13 @@ ms.locfileid: "54667097"
   
 -   使用 `CopyFile` 方法，提供目标文件和位置。 下面的示例创建名为 `test2.txt` 的 `test.txt` 副本。  
   
-     [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#51)]  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>通过覆盖现有文件在同一文件夹中创建文件副本  
   
 -   使用 `CopyFile` 方法，提供目标文件和位置，并将 `overwrite` 设置为 `True`。 下面的示例创建名为 `test2.txt` 的 `test.txt` 副本，并用该名称覆盖任何现有文件。  
   
-     [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  

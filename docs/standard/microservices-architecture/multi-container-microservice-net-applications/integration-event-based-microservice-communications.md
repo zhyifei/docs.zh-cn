@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务基础结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 844d4bd8ac18bc31b5abeff5882df1f9a4acaab5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147251"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967966"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>在微服务（集成事件）之间实现基于事件的通信
 
@@ -78,7 +78,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>发布-订阅（发布/订阅）模式 
 
-[发布/订阅模式](https://msdn.microsoft.com/library/ff649664.aspx)的用途与观察者模式相同：某些事件发生时，需要告知其他服务。 但观察者模式与发布/订阅模式之间存在重要区别。 在观察者模式中，直接从可观察对象广播到观察者，因此它们“知道”彼此。 但在发布/订阅模式中，存在称为中转站、消息中转站或事件总线的第三个组件，发布服务器和订阅服务器都知道第三个组件。 因此，使用发布/订阅模式时，发布服务器和订阅服务器通过所述的事件总线或消息中转站精确分离。
+[发布/订阅模式](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10))的用途与观察者模式相同：某些事件发生时，需要告知其他服务。 但观察者模式与发布/订阅模式之间存在重要区别。 在观察者模式中，直接从可观察对象广播到观察者，因此它们“知道”彼此。 但在发布/订阅模式中，存在称为中转站、消息中转站或事件总线的第三个组件，发布服务器和订阅服务器都知道第三个组件。 因此，使用发布/订阅模式时，发布服务器和订阅服务器通过所述的事件总线或消息中转站精确分离。
 
 ### <a name="the-middleman-or-event-bus"></a>中转站或事件总线 
 

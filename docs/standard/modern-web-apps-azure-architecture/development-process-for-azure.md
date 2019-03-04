@@ -4,19 +4,19 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | Azure
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b7a6ae343feae7c28fb7debdc8a6b617872d262f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827469"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202101"
 ---
 # <a name="development-process-for-azure"></a>Azure 的开发过程
 
 > “凭借云，个体和小型企业可轻松无忧地立即建立企业级服务。”  
 > - Roy Stephan
 
- ## <a name="vision"></a>愿景
+## <a name="vision"></a>愿景
 
 > 使用 Visual Studio、dotnet CLI、Visual Studio Code 或所选用的编辑器，按照自己喜欢的方式开发出设计优良的 ASP .NET Core 应用程序。
 
