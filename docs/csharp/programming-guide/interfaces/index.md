@@ -33,7 +33,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
   
 下面的示例演示 <xref:System.IEquatable%601> 接口的实现。 实现类 `Car` 必须提供 <xref:System.IEquatable%601.Equals%2A> 方法的实现。  
   
-[!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#48)]  
   
 类的属性和索引器可以为接口中定义的属性或索引器定义额外的访问器。 例如，接口可能会声明包含 [get](../../language-reference/keywords/get.md) 取值函数的属性。 实现此接口的类可以声明包含 `get` 和 [set](../../language-reference/keywords/set.md) 取值函数的同一属性。 但是，如果属性或索引器使用显式实现，则访问器必须匹配。 有关显式实现的详细信息，请参阅[显式接口实现](explicit-interface-implementation.md)和[接口属性](../classes-and-structs/interface-properties.md)。  
 
@@ -78,7 +78,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
   
 ## <a name="featured-book-chapter"></a>重要章节
 
-[学习 C# 3.0：掌握 C# 3.0 基础知识](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)中的接口
+[学习 C# 3.0：掌握 C# 3.0 基础知识](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)中的[接口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29)
 
 ## <a name="see-also"></a>请参阅
 
