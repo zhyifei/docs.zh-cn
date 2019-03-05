@@ -3,12 +3,12 @@ title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 792ec6e5570afd5ecfad483d2a0551df10c61a95
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748005"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981525"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -45,11 +45,14 @@ ms.locfileid: "56748005"
 
 下表显示同时在 SDK 中包含和排除的元素和 [globs](https://en.wikipedia.org/wiki/Glob_(programming))： 
 
-| 元素           | 包含 glob                              | 排除 glob                                                  | 删除 glob                |
+| 元素           | 包含 glob                                | 排除 glob                                                    | 删除 glob                |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Compile           | \*\*/\*.cs（或其他语言扩展名） | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | 不可用                        |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | 不可用                        |
-| None              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
+| None              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
+
+> [!NOTE]
+> 排除 glob 始终排除 `./bin` 和 `./obj` 文件夹，它们分别由 MSBuild 属性 `$(BaseOutputPath)` 和 `$(BaseIntermediateOutputPath)` 表示。 总体上来说，所有排除都由 `$(DefaultItemExcludes)` 表示。
 
 如果项目中有 glob，却又尝试使用最新的 SDK 生成它，则将收到以下错误：
 
@@ -208,7 +211,7 @@ ms.locfileid: "56748005"
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-SPDX 许可证表达式或包中许可证文件的路径，通常显示在 UI 和 nuget.org 中。
+[SPDX 许可证标识符](https://spdx.org/licenses/)或表达式。 例如 `Apache-2.0`。
 
 下面是 [SPDX 许可证标识符](https://spdx.org/licenses/)的完整列表。 NuGet.org 在使用许可证类型表达式时只接受 OSI 或 FSF 批准的许可证。
 
@@ -236,23 +239,6 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 如果使用的许可证没有分配 SPDX 标识符，或者它是自定义许可证，则它是包中许可证文件的路径（否则，优先选择 `PackageLicenseExpression`）
 
-> [!NOTE]
-> 一次只能指定 `PackageLicenseExpression`、`PackageLicenseFile` 和 `PackageLicenseUrl` 中的一个。
-
-### <a name="packagelicenseurl"></a>PackageLicenseUrl
-
-适用于包的许可证的 URL。 （自 Visual Studio 15.9.4、.NET SDK 2.1.502 和 2.2.101 起已弃用）
-
-### <a name="packagelicenseexpression"></a>PackageLicenseExpression
-
-[SPDX 许可证标识符](https://spdx.org/licenses/)或表达式，即 `Apache-2.0`。
-
-替换 `PackageLicenseUrl`，不能与 `PackageLicenseFile` 结合使用，并且需要 Visual Studio 15.9.4、.NET SDK 2.1.502 或 2.2.101 或更高版本。
-
-### <a name="packagelicensefile"></a>PackageLicenseFile
-
-磁盘上许可证文件（相对于项目文件）的路径，即 `LICENSE.txt`。
-
 替换 `PackageLicenseUrl`，不能与 `PackageLicenseExpression` 结合使用，并且需要 Visual Studio 15.9.4、.NET SDK 2.1.502 或 2.2.101 或更高版本。
 
 将需要通过显式地将许可证文件添加到项目中来确保许可证文件已打包，示例用法如下：
@@ -264,6 +250,12 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
   <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
 </ItemGroup>
 ```
+
+### <a name="packagelicenseurl"></a>PackageLicenseUrl
+
+适用于包的许可证的 URL。 （自 Visual Studio 15.9.4、.NET SDK 2.1.502 和 2.2.101 起已弃用）
+
+
 ### <a name="packageiconurl"></a>PackageIconUrl
 64x64 透明背景图像的 URL，用作 UI 显示中包的图标。
 
@@ -328,7 +320,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 每个特性都有一个可控制其内容的属性，还有一个可以禁用其生成的属性，如下表所示：
 
-| 特性                                                      | 属性               | 要禁用的属性                             |
+| 特性                                                      | Property               | 要禁用的属性                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|
 | <xref:System.Reflection.AssemblyCompanyAttribute>              | `Company`              | `GenerateAssemblyCompanyAttribute`              |
 | <xref:System.Reflection.AssemblyConfigurationAttribute>        | `Configuration`        | `GenerateAssemblyConfigurationAttribute`        |

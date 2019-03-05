@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 6db3db3ebe3e1934a8e74212692f07158b88b1d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717514"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836638"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的继承
 
@@ -81,7 +81,7 @@ public class B : A
 }
 ```
 
-在某些情况下，派生类*必须*重写基类实现代码。 标记有 [abstract](../language-reference/keywords/abstract.md) 关键字的基类成员要求派生类必须重写它们。 如果尝试编译以下示例，则会生成编译器错误 CS0534：“<class> 不实现继承的抽象成员 <member>，因为类 `B` 没有提供 `A.Method1` 的实现代码。”
+在某些情况下，派生类*必须*重写基类实现代码。 标记有 [abstract](../language-reference/keywords/abstract.md) 关键字的基类成员要求派生类必须重写它们。 如果尝试编译以下示例，则会生成编译器错误 CS0534：“&lt;class&gt; 不实现继承的抽象成员 &lt;member&gt;”，因为类 `B` 没有提供 `A.Method1` 的实现代码。
 
 ```csharp
 public abstract class A

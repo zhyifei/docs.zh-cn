@@ -3,12 +3,12 @@ title: C# 表达式 - C# 语言介绍
 description: 表达式、操作数和运算符是 C# 语言的构建基块
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 28e1d6952975c6932dc9ae40af28c7201d61d778
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 682f98d51bf4eb3c1641297972afb86956e06d3e
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154929"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212087"
 ---
 # <a name="expressions"></a>表达式
 
@@ -31,10 +31,10 @@ ms.locfileid: "53154929"
     - `x.m`：成员访问
     - `x(...)`：方法和委托调用
     - `x[...]`：数组和索引器访问
-    - `x++`：后置递增
-    - `x--`：后置递减
-    - `new T(...)`：创建对象和委托
-    - `new T(...){...}`：使用初始值设定项的对象创建
+    - `x++`：后递增
+    - `x--`：后递减
+    - `new T(...)`：对象和委托创建
+    - `new T(...){...}`：使用初始值设定项创建对象
     - `new {...}`：匿名对象初始值设定项
     - `new T[...]`：数组创建
     - `typeof(T)`：获取 `T` 的 <xref:System.Type> 对象
@@ -44,39 +44,39 @@ ms.locfileid: "53154929"
     - `delegate {...}`：匿名函数（匿名方法）
 * 一元
     - `+x`：标识
-    - `-x`：取反
-    - `!x`：逻辑取反
-    - `~x`：按位取反
-    - `++x`：前置递增
-    - `--x`：前置递减
-    - `(T)x`：将 `x` 显式转换成类型 `T`
+    - `-x`：求反
+    - `!x`：逻辑求反
+    - `~x`：按位求反
+    - `++x`：前递增
+    - `--x`：前递减
+    - `(T)x`：将 `x` 显式转换为类型 `T`
     - `await x`：异步等待 `x` 完成
 * 乘法
     - `x * y`：乘法
-    - `x / y`：除法
-    - `x % y`：求余
+    - `x / y`：除号
+    - `x % y`：余数
 * 加法
-    - `x + y`：加法、字符串串联、委托组合
-    - `x – y`：减法、委托删除
+    - `x + y`：相加、字符串串联、委托组合
+    - `x – y`：相减、委托移除
 * 移位
-    - `x << y`：左移位
-    - `x >> y`：右移位
+    - `x << y`：左移
+    - `x >> y`：右移
 * 关系和类型测试
     - `x < y`：小于
     - `x > y`：大于
     - `x <= y`：小于或等于
     - `x >= y`：大于或等于
-    - `x is T`：如果 `x` 是 `T`，返回 `true`；否则，返回 `false`
-    - `x as T`：返回类型为 `T` 的 `x`；如果 `x` 的类型不是 `T`，返回 `null`
+    - `x is T`：如果 `x` 是 `T`，则返回 `true`；否则，返回 `false`
+    - `x as T`：返回类型为 `T` 的 `x`；如果 `x` 的类型不是 `T`，则返回 `null`
 * 相等
     - `x == y`：等于
     - `x != y`：不等于
 * 逻辑“与”
-    - `x & y`：整数型位AND，布尔型逻辑 AND
+    - `x & y`：整型按位 AND，布尔型逻辑 AND
 * 逻辑 XOR
-    - `x ^ y`：整数型位 XOR，布尔型逻辑 XOR
+    - `x ^ y`：整型按位 XOR，布尔型逻辑 XOR
 * 逻辑“或”
-    - `x | y`：整数型位 OR，布尔型逻辑 OR
+    - `x | y`：整型按位“或”，布尔型逻辑“或”
 * 条件“与”
     - `x && y`：仅当 `x` 不是 `false` 时，才计算 `y`
 * 条件“或”
@@ -84,13 +84,13 @@ ms.locfileid: "53154929"
 * null 合并
     - `x ?? y`：如果 `x` 为 null，计算结果为 `y`；否则，计算结果为 `x`
 * 条件运算
-    - `x ? y : z`：如果 `x` 为 `true`，计算 `y`；如果 `x` 为 `false`，计算 `z`
+    - `x ? y : z`：如果 `x` 为 `true`，则计算 `y`；如果 `x` 为 `false`，则计算 `z`
 * 赋值或匿名函数
     - `x = y`：赋值
-    - `x op= y`：复合赋值；支持以下运算符
+    - `x op= y`：复合赋值；支持以下运算符：
         - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
     - `(T x) => y`：匿名函数（lambda 表达式）
 
->[!div class="step-by-step"]
->[上一页](types-and-variables.md)
->[下一页](statements.md)
+> [!div class="step-by-step"]
+> [上一页](types-and-variables.md)
+> [下一页](statements.md)

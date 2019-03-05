@@ -3,12 +3,12 @@ title: 标准 .NET 事件模式
 description: 介绍 .NET 事件模式，如何创建标准事件源以及订阅并处理代码中的标准事件。
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129397"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201243"
 ---
 # <a name="standard-net-event-patterns"></a>标准 .NET 事件模式
 
@@ -47,7 +47,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 让我们通过填充 FileSearcher 类来搜索与模式匹配的文件，并在发现匹配时引发正确的事件。
 
-[!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
+[!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="defining-and-raising-field-like-events"></a>定义并引发类似字段的事件
 

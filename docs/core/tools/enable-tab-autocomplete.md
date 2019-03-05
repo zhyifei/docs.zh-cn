@@ -4,12 +4,12 @@ description: 本文介绍如何针对适用于 PowerShell、Bash 和 zsh 的 .NE
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 783868fb8300dd4a25c62a108c1c0f7a485721df
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 16574e02aa9f9167602401eef2ad7a73e07ad107
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029601"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203332"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>如何为 .NET Core CLI 启用 TAB 自动补全功能
 
@@ -17,7 +17,7 @@ ms.locfileid: "54029601"
 
 [!INCLUDE [topic-appliesto-net-core-2plus](~/includes/topic-appliesto-net-core-2plus.md)]
 
-设置完成后，通过在 shell 中键入 `dotnet ` 命令，然后单击 TAB 键来触发 .NET Core CLI 的 tab 自动补全。 当前命令行将发送到 `dotnet complete` 命令，结果将由 shell 处理。 可以通过直接向 `dotnet complete` 命令发送内容来测试结果而无需启用 tab 自动补全。 例如:
+设置完成后，通过在 shell 中键入 `dotnet` 命令，然后按下 TAB 键来触发 .NET Core CLI 的 tab 自动补全。 当前命令行将发送到 `dotnet complete` 命令，结果将由 shell 处理。 可以通过直接向 `dotnet complete` 命令发送内容来测试结果而无需启用 tab 自动补全。 例如:
 
 ```
 > dotnet complete "dotnet a"

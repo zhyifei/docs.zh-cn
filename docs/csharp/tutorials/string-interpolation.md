@@ -3,14 +3,14 @@ title: C# 中的字符串内插
 description: 了解如何在 C# 中使用字符串插值将有格式的表达式结果包括在结果字符串中。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 702a586d6a1d6844e7f5efb14a86ec635d41445c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a637937de2f3cff7f5425f47c223a56efa8d0c2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727854"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976052"
 ---
-# <a name="string-interpolation-in-c"></a>C# 中的字符串内插 #
+# <a name="string-interpolation-in-c"></a>C\# 中的字符串内插
 
 本教程演示如何使用[字符串插值](../language-reference/tokens/interpolated.md)设置表达式结果的格式并将其包含仅结果字符串中。 以下示例假设阅读者熟悉基础 C# 概念和 .NET 类型格式设置。 如果不熟悉字符串插值或 .NET 类型格式设置，请先参阅[交互式字符串内插教程](../tutorials/intro-to-csharp/interpolated-strings.yml)。 有关 .NET 中设置类型格式的详细信息，请参阅[设置 .NET 中类型的格式](../../standard/base-types/formatting-types.md)主题。
 

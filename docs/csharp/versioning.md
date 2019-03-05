@@ -3,14 +3,14 @@ title: C# 版本控制 - C# 指南
 description: 了解 C# 和 .NET 中的版本控制工作原理
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: a0c75e2f1397f43fadf91d145e8b63de1d4d90eb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ba18f82ad83749d5333628bf4431a0282b0964f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243486"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965665"
 ---
-# <a name="versioning-in-c"></a>C# 中的版本控制 #
+# <a name="versioning-in-c"></a>C\# 中的版本控制
 
 本教程将介绍版本控制在 .NET 中的含义。 还将介绍对库进行版本控制以及升级到新版本的库时需要考虑的因素。
 

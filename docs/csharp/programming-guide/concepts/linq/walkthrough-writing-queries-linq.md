@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 085a5f27225589989cf5b9d4b5871226624843ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 083f6c05f433436530326cd02b99cd98f86e8606
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554971"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202413"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>演练：用 C# 编写查询 (LINQ)
 此演练演示用于编写 LINQ 查询表达式的 C# 语言功能。  
@@ -53,7 +53,7 @@ ms.locfileid: "54554971"
   
 -   向项目中的 `Program` 类添加 `Student` 类和经过初始化的学生列表。  
   
-     [!code-csharp[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
+     [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>向学生列表添加新学生  
   
@@ -67,7 +67,7 @@ ms.locfileid: "54554971"
   
      另请注意，查询的范围变量 `student` 用作指向源中每个 `Student` 引用，提供对每个对象的成员访问。  
   
- [!code-csharp[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#12)]  
   
 ## <a name="execute-the-query"></a>执行查询  
   
@@ -81,7 +81,7 @@ ms.locfileid: "54554971"
   
 2.  添加此代码后，生成并运行应用程序，以在“控制台”窗口中查看结果。  
   
- [!code-csharp[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
+ [!code-csharp[CsLINQGettingStarted#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#13)]  
   
 #### <a name="to-add-another-filter-condition"></a>添加其他筛选条件  
   
@@ -121,11 +121,11 @@ ms.locfileid: "54554971"
   
 1.  分组是查询表达式中的强大功能。 包含 group 子句的查询将生成一系列组，每个组本身包含一个 `Key` 和一个序列，该序列由该组的所有成员组成。 以下新查询使用学生的姓的第一个字母作为关键字对学生进行分组。  
   
-     [!code-csharp[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
+     [!code-csharp[CsLINQGettingStarted#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#14)]  
   
 2.  注意，查询类型现已更改。 该查询现在生成一系列将 `char` 类型作为键的组，以及一系列 `Student` 对象。 由于查询的类型已更改，因此以下代码也将更改 `foreach` 执行循环：  
   
-     [!code-csharp[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
+     [!code-csharp[CsLINQGettingStarted#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#15)]  
   
 3.  在“控制台”窗口中运行应用程序并查看结果。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "54554971"
   
 1.  `IGroupings` 的显式编码 `IEnumerables` 将快速变得冗长。 使用 `var` 可以更方便地编写相同的查询和 `foreach` 循环。 `var` 关键字不会更改对象的类型；它仅指示编译器推断类型。 将 `studentQuery` 和迭代变量 `group` 的类型更改为 `var`，然后重新运行查询。 注意，在内部 `foreach` 循环中，该迭代变量仍类型化为 `Student`，并且查询的工作原理和以前一样。 将 `s` 迭代变量更改为 `var`，然后再次运行查询。 将看到完全相同的结果。  
   
-     [!code-csharp[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
+     [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
      有关 [var](../../../../csharp/language-reference/keywords/var.md) 的详细信息，请参阅[隐式类型化局部变量](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "54554971"
   
 1.  运行上一查询时，会发现这些组不是按字母顺序排序的。 若要更改此排序，必须在 `group` 子句后提供 `orderby` 子句。 但若要使用 `orderby` 子句，首先需要一个标识符，用作对 `group` 子句创建的组的引用。 可以使用 `into` 关键字提供该标识符，如下所示：  
   
-     [!code-csharp[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
+     [!code-csharp[csLINQGettingStarted#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#17)]  
   
      运行此查询时，将看到这些组现在已按字母顺序排序。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "54554971"
   
 1.  可以使用 `let` 关键字来引入查询表达式中任何表达式结果的标识符。 此标识符可以提供方便（如下面的示例所示），也可以通过存储表达式的结果来避免多次计算，从而提高性能。  
   
-     [!code-csharp[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
+     [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
      有关详细信息，请参阅 [let 子句](../../../../csharp/language-reference/keywords/let-clause.md)。  
   
@@ -159,17 +159,17 @@ ms.locfileid: "54554971"
   
 1.  如 [LINQ 中的查询语法和方法语法](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) 中所述，某些查询操作只能使用方法语法来表示。 以下代码为源序列中的每个 `Student` 计算总分，然后对该查询的结果调用 `Average()` 方法来计算班级平均分。
   
-     [!code-csharp[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
+     [!code-csharp[csLINQGettingStarted#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#19)]  
   
 #### <a name="to-transform-or-project-in-the-select-clause"></a>在 select 子句转换或投影  
   
 1.  查询生成的序列的元素与源序列中的元素不同，这种情况很常见。 删除或注释掉以前的查询和执行循环，并将其替换为以下代码。 请注意，该查询将返回字符串序列，而不是 `Students`，这种情况将反映在 `foreach` 循环中。  
   
-     [!code-csharp[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
+     [!code-csharp[csLINQGettingStarted#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#20)]  
   
 2.  本演练中前面的代码表明班级平均分大约为 334 分。 若要生成总分数高于班级平均分的 `Students` 及其 `Student ID` 的序列，可以在 `select` 语句中使用匿名类型：  
   
-     [!code-csharp[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
+     [!code-csharp[csLINQGettingStarted#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#21)]  
   
 ## <a name="next-steps"></a>后续步骤  
  熟悉了在 C# 中使用查询的基本情况后，便可以开始阅读你感兴趣的具体类型的 LINQ 提供程序的文档和示例：  

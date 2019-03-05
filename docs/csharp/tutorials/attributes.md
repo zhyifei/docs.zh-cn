@@ -4,14 +4,14 @@ description: 了解特性在 C# 中的工作方式。
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 254c408e854bdf6e923d64a4e8cca42b7a3b11cc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e744f3585fe7be02fb8bdd25f559a12a88b61730
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826819"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975597"
 ---
-# <a name="using-attributes-in-c"></a>在 C# 中使用特性 #
+# <a name="using-attributes-in-c"></a>在 C\# 中使用属性
 
 使用特性，可以声明的方式将信息与代码相关联。 特性还可以提供能够应用于各种目标的可重用元素。
 
@@ -92,7 +92,7 @@ ms.locfileid: "55826819"
 * 方法
 * 模块
 * 参数
-* Property
+* 属性
 * 返回值
 * 结构
 
