@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3abaa8115d2e52a98f0b42588860dece6361df5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267295"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835247"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>使用 \<msxsl:script> 编写 XSLT 样式表脚本
 <xref:System.Xml.Xsl.XslTransform> 类使用 `script` 元素支持嵌入的脚本。  
@@ -45,11 +45,11 @@ ms.locfileid: "55267295"
   
  若要从您的程序集中得到证据，请使用 `this.GetType().Assembly.Evidence`。 若要从统一资源标识符 (URI) 得到证据，请使用 `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`。  
   
- 如果使用接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 但没有 <xref:System.Xml.XmlResolver> 的 `Evidence` 方法，则程序集的安全区域默认为“完全信任”。 有关详细信息，请参阅 <xref:System.Security.SecurityZone> 和[命名权限集](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。  
+ 如果使用接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 但没有 <xref:System.Xml.XmlResolver> 的 `Evidence` 方法，则程序集的安全区域默认为“完全信任”。 有关详细信息，请参阅 <xref:System.Security.SecurityZone> 和[命名权限集](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))。  
   
  函数可以在 `msxsl:script` 元素内声明。 下表显示了默认情况下支持的命名空间。 可以在列出的命名空间的外部使用类。 然而，这些类必须是完全限定的。  
   
-|默认命名空间|说明​​|  
+|默认命名空间|说明|  
 |------------------------|-----------------|  
 |系统|系统类。|  
 |System.Collection|集合类。|  
@@ -62,7 +62,7 @@ ms.locfileid: "55267295"
   
  声明函数时，该函数包含在脚本块中。 样式表可以包含多个脚本块，每个脚本块彼此独立运行。 也就是说，如果在脚本块的内部执行，则无法调用在其他脚本块中定义的函数，除非该脚本块声明为具有同一命名空间和同一脚本语言。 由于每个脚本块都可以使用自己的语言，因此脚本块的分析将遵照语言分析器的语法规则进行，必须使用适合所使用语言的语法。 例如，如果使用的是 C# 脚本块，则在该块中使用 XML 注释节点 `<!-- an XML comment -->` 是错误的。  
   
- 由脚本函数定义的所提供的自变量以及返回值必须是万维网联合会 (W3C) XPath 或 XSLT 类型之一。 下表展示了相应的 W3C 类型、相当的 .NET Framework 类（类型），以及 W3C 类型是 XPath 类型还是 XSLT 类型。  
+ 由脚本函数定义的所提供的参数以及返回值必须是万维网联合会 (W3C) XPath 或 XSLT 类型之一。 下表展示了相应的 W3C 类型、相当的 .NET Framework 类（类型），以及 W3C 类型是 XPath 类型还是 XSLT 类型。  
   
 |类型|相当的 .NET Framework 类（类型）|XPath 类型还是 XSLT 类型|  
 |----------|----------------------------------------------|-----------------------------|  
@@ -72,7 +72,7 @@ ms.locfileid: "55267295"
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- 如果脚本函数使用下列数值类型之一：Int16、UInt16、Int32、UInt32、Int64、UInt64、Single 或 Decimal，则会将其强制转换为 Double，映射为 W3C XPath 类型的数字。 所有其他类型都通过调用 `ToString` 方法强制转换为字符串。  
+ 如果脚本函数使用下列数值类型之一：Int16、UInt16、Int32、UInt32、Int64、UInt64、单数或小数，则会被强制转换为 Double，映射为 W3C XPath 类型的数字。 所有其他类型都通过调用 `ToString` 方法强制转换为字符串。  
   
  如果脚本函数使用上述类型以外的类型，或者如果函数在样式表加载到 <xref:System.Xml.Xsl.XslTransform> 对象中时不进行编译，则会引发异常。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "55267295"
 </msxsl:script>  
 ```  
   
- 由于“&”符没有转义，因此将引发异常。 文档以 XML 形式加载，并且不对 `msxsl:script` 元素标记之间的文本应用任何特殊处理。  
+ 由于“&amp;”符没有转义，因此将引发异常。 文档以 XML 形式加载，并且不对 `msxsl:script` 元素标记之间的文本应用任何特殊处理。  
   
 ## <a name="example"></a>示例  
  已知圆的半径，下面的示例使用嵌入脚本计算圆的周长。  

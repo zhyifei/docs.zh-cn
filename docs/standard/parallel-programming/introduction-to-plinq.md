@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a1cf3ea782752f750f3545a28699a8bc325e4a5
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9227d10e2c12f88d33b283d1f1328d628b64afa0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903886"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975727"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 介绍
 ## <a name="what-is-a-parallel-query"></a>什么是并行查询？  
@@ -33,11 +33,11 @@ ms.locfileid: "55903886"
 ## <a name="the-parallelenumerable-class"></a>ParallelEnumerable 类  
  <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 类公开了几乎所有的 PLINQ 功能。  它和 <xref:System.Linq?displayProperty=nameWithType> 命名空间类型的其余部分一起被编译到 System.Core.dll 程序集中。 Visual Studio 中默认的 C# 和 Visual Basic 项目均会引用该程序集并导入该命名空间。  
   
- 尽管 <xref:System.Linq.ParallelEnumerable> 实现了 LINQ to Objects 支持的所有标准查询运算符，但它不会尝试并行执行每个实现。 如果不熟悉 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)]，请参阅 [LINQ 简介](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)。  
+ 尽管 <xref:System.Linq.ParallelEnumerable> 实现了 LINQ to Objects 支持的所有标准查询运算符，但它不会尝试并行执行每个实现。 如果你不熟悉 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)]，请参阅 [LINQ (C#) 简介](../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)和 [LINQ (Visual Basic) 简介](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)。  
   
  除了标准查询运算符外，<xref:System.Linq.ParallelEnumerable> 类还包含一组启用并行执行专用行为的方法。 下表中列出了这些特定于 PLINQ 的方法。  
   
-|ParallelEnumerable 运算符|说明​​|  
+|ParallelEnumerable 运算符|说明|  
 |---------------------------------|-----------------|  
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|PLINQ 的入口点。 指定如果可能，应并行化查询的其余部分。|  
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|指定查询的其余部分应像非并行的 LINQ 查询一样按顺序运行。|  

@@ -1,15 +1,15 @@
 ---
 title: 使用 docker-compose.yml 定义多容器应用程序
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 如何使用 docker-compose.yml 为多容器应用程序指定微服务组合。
+description: 如何使用 docker-compose.yml 指定多容器应用程序的微服务组合。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b00b0021f71097f2c6cedcb1ddea7861f1936f84
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 908837c470e97e66a6f6b06ef89e87fca80982f2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442225"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973504"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定义多容器应用程序 
 
@@ -468,7 +468,7 @@ Runtime 映像还提供了端口 80 的 aspnetcore\_urls 自动设置和程序�
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 -   **为 .NET Core 应用程序生成 Docker 映像** <br/>
-    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
+    [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 >[!div class="step-by-step"]
 >[上一页](data-driven-crud-microservice.md)

@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5346e5f3e780961e8353c9dec0860bebd4fc6657
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 10e2a05e8fa33ecbf2aec2432c0cf51204fc35c1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148894"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969357"
 ---
 # <a name="asynchronous-message-based-communication"></a>基于消息的异步通信
 
@@ -77,7 +77,7 @@ ms.locfileid: "53148894"
 
 - 使用[事务日志挖掘](https://www.scoop.it/t/sql-server-transaction-log-mining)。
 
-- 使用完整[事件溯源](https://msdn.microsoft.com/library/dn589792.aspx)模式。
+- 使用完整[事件溯源](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)模式。
 
 - 使用[发件箱模式](http://gistlabs.com/2014/05/the-outbox/)：将用作消息队列的事务数据库表作为事件创建器组件的基础，该组件将创建并发布事件。
 
@@ -103,7 +103,7 @@ ms.locfileid: "53148894"
 - **Eventual Consistency** \（最终一致性）
   [*https://en.wikipedia.org/wiki/Eventual_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
-- **Jimmy Bogard。Refactoring Towards Resilience: Evaluating Coupling** \（重构复原能力：评估耦合度）
+- **Jimmy Bogard。重构复原能力：评估耦合度** \
   [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 >[!div class="step-by-step"]

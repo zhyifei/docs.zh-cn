@@ -4,12 +4,12 @@ description: 发现用于安排微服务和多容器应用程序以便实现高�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 0a3ecbb8d186adf3fdc492654e23111ee4c508b1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307430"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980225"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -137,9 +137,11 @@ Azure Dev Spaces 可帮助开发团队在 Kubernetes 上提高工作效率，因
 
 基本上可以在 Azure 中设置共享开发空间。 每位开发者都可以专注于自己负责的应用程序部分，并可以在已包含其方案所依赖的所有其他服务和云资源的开发空间中迭代开发预提交代码。 依赖项始终保持最新，开发者能够以真实反映生产的方式进行工作。
 
-Azure Dev Spaces 提供了空间的概念，可让你独立工作，无需担心会破坏团队成员的工作成果。 此功能基于 URL 前缀，因此如果在 URL 中使用任何开发空间前缀，则对于每个容器的请求，会运行为容器所存在的该空间部署的特殊版本容器。 否则，会运行全局/合并版本。
+Azure Dev Spaces 提供了空间这一概念，允许你在相对隔离的环境中工作，而无需担心干扰你的团队工作。 每个开发空间都是层次结构的一部分，允许你使用你自己进行中的微服务从“顶部”主开发空间替代一个（或多个）微服务。
 
-可以查看 [Azure Dev Spaces 上的 eShopOnContainers wiki 页面](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS)，以实际了解具体示例。
+此功能基于 URL 前缀，因此，在使用 URL 中的任何开发空间前缀时，如果在开发空间中存在该前缀，则将从目标微服务提供请求，否则，它将被转发到在层次结构中找到的目标微服务的第一个实例，并最终达到顶部的主开发空间。
+
+可以查看 [Azure Dev Spaces 上的 eShopOnContainers wiki 页面](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS)，以实际了解具体示例。
 
 有关进一步信息，请查看[使用 Azure Dev Spaces 进行团队开发](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)上的文章。
 

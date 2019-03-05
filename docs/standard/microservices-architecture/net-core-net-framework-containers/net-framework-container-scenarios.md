@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a4da138540d8a2b8c1ac322c00904cff2b329aea
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 4c1149c02c32c357c4817af539eb0cf529266181
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479901"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251009"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>何时为 Docker 容器选择 .NET Framework
 
@@ -23,7 +23,7 @@ ms.locfileid: "55479901"
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>使用不可用于 .NET Core 的第三方 .NET 库或 NuGet 包
 
-第三方库正在迅速采用 [.NET Standard](../../net-standard.md)，这样可跨各种 .NET 版本（包括 .NET Core）共享代码。 在 .NET Standard 库 2.0 及更高版本中，跨不同框架的 API 表面兼容性变得更加庞大；在 .NET Core 2.x 中，应用程序还可以直接引用现有的 .NET Framework 库（请参阅[兼容性填充程序](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20)）。
+第三方库正在迅速采用 [.NET Standard](../../net-standard.md)，这样可跨各种 .NET 版本（包括 .NET Core）共享代码。 在 .NET Standard 2.0 和更高版本中，跨不同框架的 API 表面兼容性显著增强，且在 .NET Core 2.x 中，应用程序也可以直接引用现有的 .NET Framework 库（请参阅[支持 .NET Standard 2.0 的 .NET Framework 4.6.1](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20)）。
 
 此外，[Windows 兼容包](../../../core/porting/windows-compat-pack.md)已于 2017 年 11 月发布，用于扩展可供 Windows 上的 .NET Standard 2.0 使用的 API 接口。 通过此包，只需略微修改或无需修改即可将大多数现有代码重新编译到 .NET Standard 2.x 以在 Windows 上运行。
 

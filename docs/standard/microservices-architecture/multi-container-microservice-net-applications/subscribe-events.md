@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b95e256bf8df7207eed0895587c0945f37b08ecb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128944"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971775"
 ---
 # <a name="subscribing-to-events"></a>订阅事件
 
@@ -93,17 +93,17 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>设计发布到事件总线时的原子性和复原能力
 
-如果通过分布式消息传递系统（如事件总线）发布集成事件，在以原子方式更新原始数据库和发布事件时会出现问题（即，两个操作都已完成，或者都没有完成）。 例如，在前面所示的简化示例中，代码在产品价格发生变动时向数据库提交数据，然后发布 ProductPriceChangedIntegrationEvent 消息。 最开始，这两个操作看起来可能必须以原子方式执行。 但是，如果像在 [Microsoft 消息队列 (MSMQ)](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx) 等早期系统中那样，使用涉及数据库和消息代理的分布式事务，那么根据 [CAP 定理](https://www.quora.com/What-Is-CAP-Theorem-1)所描述的原因，并不推荐这样做。
+如果通过分布式消息传递系统（如事件总线）发布集成事件，在以原子方式更新原始数据库和发布事件时会出现问题（即，两个操作都已完成，或者都没有完成）。 例如，在前面所示的简化示例中，代码在产品价格发生变动时向数据库提交数据，然后发布 ProductPriceChangedIntegrationEvent 消息。 最开始，这两个操作看起来可能必须以原子方式执行。 但是，如果像在 [Microsoft 消息队列 (MSMQ)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 等早期系统中那样，使用涉及数据库和消息代理的分布式事务，那么根据 [CAP 定理](https://www.quora.com/What-Is-CAP-Theorem-1)所描述的原因，并不推荐这样做。
 
 微服务主要用于构建可缩放且高度可用的系统。 简单来说，CAP 定理认为你无法构建一个*兼具*持续可用性、强一致性和分区容错性的（分布式）数据库（或拥有其模型的微服务）。 你只能选择这三种属性中的两种。
 
-在基于微服务的体系结构中，应选择可用性和容错性，而不再强调强一致性。 因此，在大多数基于微服务的现代应用程序中，你通常不希望像在使用 [MSMQ](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx) 基于 Windows 分布式事务处理协调器 (DTC) 实现[分布式事务](https://msdn.microsoft.com/library/ms681205\(v=vs.85\).aspx)时那样，在消息传递中使用分布式事务。
+在基于微服务的体系结构中，应选择可用性和容错性，而不再强调强一致性。 因此，在大多数基于微服务的现代应用程序中，你通常不希望像在使用 [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 基于 Windows 分布式事务处理协调器 (DTC) 实现[分布式事务](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85))时那样，在消息传递中使用分布式事务。
 
 让我们回到最初的问题及其示例。 如果服务在数据库更新之后（在本例中，也就是在运行 \_context.SaveChangesAsync() 代码行之后）但在发布集成事件之前崩溃，则整个系统会变得不一致。 这对业务而言可能很关键，具体取决于你正在处理的具体业务操作。
 
 正如前面在体系结构部分中提到的那样，可以通过以下几种方法来处理此问题：
 
--   使用完整[事件溯源模式](https://msdn.microsoft.com/library/dn589792.aspx)。
+-   使用完整[事件溯源模式](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)。
 
 -   使用[事务日志挖掘](https://www.scoop.it/t/sql-server-transaction-log-mining)。
 
@@ -149,7 +149,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 关于第二种方法：将 EventLog 表用作队列，并始终使用辅助微服务来发布消息。 在这种情况下，其过程如图 6-23 所示。 图中显示了一个附加的微服务，并且该表作为发布事件时的单一事件源。
 
-![处理原子性的另一种方法是：发布到事件日志表，然后由另一个微服务（后台辅助微服务）发布该事件。](./media/image24.png)
+![处理原子性的另一种方法：发布到事件日志表，然后由另一个微服务（后台辅助角色）发布该事件。](./media/image24.png)
 
 图 6-23。 使用辅助微服务将事件发布到事件总线时的原子性
 
@@ -304,7 +304,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 ### <a name="additional-resources"></a>其他资源
 
 -   **遵循消息幂等性** <br/>
-    [*https://msdn.microsoft.com/library/jj591565.aspx#honoring_message_idempotency*](https://msdn.microsoft.com/library/jj591565.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>删除重复的集成事件消息
 
@@ -330,14 +330,14 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 -   **Event Driven Messaging**（事件驱动的消息传递） <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard。Refactoring Towards Resilience: Evaluating Coupling**（重构复原能力：评估耦合度） <br/>
+-   **Jimmy Bogard。重构复原能力：评估耦合度** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 -   **Publish-Subscribe channel**（发布-订阅通道） <br/>
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **绑定上下文之间的通信** <br/>
-    [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 -   **Eventual Consistency**（最终一致性） <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
@@ -352,7 +352,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
 -   **事件溯源简介** <br/>
-    [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 -   **Event Store 数据库**。 官方网站。 <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
@@ -367,24 +367,21 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
 -   **Data Consistency Primer**（数据一致性入门指南） <br/>
-    [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
--   **Rick Saling。CAP 定理：为什么云和 Internet 使“一切不一样”** <br/>
+-   **Rick Saling。CAP 定理：为什么云和 Internet“一切都不同”** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer。CAP Twelve Years Later: How the "Rules" Have Changed**（CAP 十二年之后：“规则”发生了哪些变化） <br/>
+-   **Eric Brewer。CAP 十二年之后：“规则”更改的方式** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Azure 服务总线。Brokered Messaging: Duplicate Detection**（中转消息传送：重复检测）  <br/>
+-   **Azure 服务总线。中转消息传送：重复检测**  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
 -   **Reliability Guide**（可靠性指南）（RabbitMQ 文档）* <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
 
--   **参与外部 (DTC) 事务** (MSMQ) <br/>
-    [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
-
--   **Azure 服务总线。Brokered Messaging: Duplicate Detection**（中转消息传送：重复检测） <br/>
+-   **Azure 服务总线。中转消息传送：重复检测** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
 -   **Reliability Guide**（可靠性指南）（RabbitMQ 文档） <br/>

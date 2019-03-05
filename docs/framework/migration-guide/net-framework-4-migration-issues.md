@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35cac6c93594847f5118849a14c4c5f991601367
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d861aa59b31871d20d21d88d9587239f76ae386d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221311"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203634"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 迁移问题
 
@@ -60,7 +60,7 @@ ms.locfileid: "56221311"
 | **页分析** | ASP.NET 4 中针对 ASP.NET 网页（.aspx 文件）和用户控件（.aspx 文件）的页分析器不仅比早期版本的 ASP.NET 中的页分析器更为严格，而且会将更多的标记设为无效。 | 检查在页运行时产生的错误消息并纠正因无效标记导致的错误。 |
 | **Passport 类型** | 由于 Passport（现在为 Live ID SDK）中的更改，ASP.NET 2.0 中内置的 Passport 支持已过时且不受支持。 因此，现在用 `ObsoleteAttribute` 特性标记 <xref:System.Web.Security> 中与 Passport 相关的类型。 | 更改使用 <xref:System.Web.Security> 命名空间中的 Passport 类型（例如，<xref:System.Web.Security.PassportIdentity>）的所有代码，以使用 [SDK](https://go.microsoft.com/fwlink/?LinkId=106346)。 |
 | **FilePath 属性中的 PathInfo 信息** | ASP.NET 4 不再将 `PathInfo` 值加入从属性（如 <xref:System.Web.HttpRequest.FilePath>、<xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath> 和 <xref:System.Web.HttpRequest.CurrentExecutionFilePath>）返回的值中。 而是在 <xref:System.Web.HttpRequest.PathInfo> 中提供 `PathInfo` 信息。 例如，假定以下 URL 片段：<br><br>`/testapp/Action.mvc/SomeAction`<br><br>在 ASP.NET 的早期版本中，<xref:System.Web.HttpRequest> 属性具有以下值：<br><br>* <xref:System.Web.HttpRequest.FilePath>：`/testapp/Action.mvc/SomeAction`<br>* <xref:System.Web.HttpRequest.PathInfo>：（空）<br><br>而在 ASP.NET 4 中，<xref:System.Web.HttpRequest> 属性具有以下值：<br><br>* <xref:System.Web.HttpRequest.FilePath>：`/testapp/Action.mvc`<br>* <xref:System.Web.HttpRequest.PathInfo>：`SomeAction` | 检查所依赖 <xref:System.Web.HttpRequest> 类的属性所在位置的代码以返回路径信息；更改代码以反映对返回路径信息的方式的更改。 |
-| **请求验证** | 为了改进请求验证，将在请求生命周期中提早调用 ASP.NET 请求验证。 因此，将为不是针对 .aspx 文件的请求（如针对 Web 服务调用和自定义处理程序的请求）运行请求验证。 此外，在请求处理管道中运行自定义 HTTP 模块时，请求验证也处于活动状态。<br><br>进行此更改后，针对 .aspx 文件之外的资源的请求可能会引发请求验证错误。 在请求管道（例如，自定义 HTTP 模块）中运行的自定义代码也可能会引发请求验证错误。 | 如有必要，可通过使用 Web 配置文件中的以下设置，还原为仅让 .aspx 页触发请求验证这一旧行为：<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>警告：如果还原为旧行为，请确保现有处理程序中的所有代码、模块和其他自定义代码对潜在的不安全 HTTP 输入（可能是 XSS 攻击途径）进行检查。 |
+| **请求验证** | 为了改进请求验证，将在请求生命周期中提早调用 ASP.NET 请求验证。 因此，将为不是针对 .aspx 文件的请求（如针对 Web 服务调用和自定义处理程序的请求）运行请求验证。 此外，在请求处理管道中运行自定义 HTTP 模块时，请求验证也处于活动状态。<br><br>进行此更改后，针对 .aspx 文件之外的资源的请求可能会引发请求验证错误。 在请求管道（例如，自定义 HTTP 模块）中运行的自定义代码也可能会引发请求验证错误。 | 如有必要，可通过使用 Web 配置文件中的以下设置，还原为仅让 .aspx 页触发请求验证这一旧行为：<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>警告：如果还原为旧行为，请确保现有处理程序中的所有代码、模块和其他自定义代码对潜在不安全的 HTTP 输入（可能是 XSS 攻击途径）进行检查。 |
 | **路由** | 如果在 Visual Studio 2010 中创建一个文件系统网站，并且该网站位于其名称包含点 (.) 的文件夹中，则 URL 路由不会可靠地工作。 从某些虚拟路径返回 HTTP 404 错误。 发生此情况的原因是，Visual Studio 2010 使用错误的根虚拟目录路径启动了 Visual Studio 开发服务器。 | * 在基于文件的网站的“属性”页中，将“虚拟路径”特性更改为“/”。<br><br>或<br><br>* 创建 Web 应用程序项目而非网站项目。 Web 应用程序项目不会出现此问题，并且 URL 路由会正常工作，即使项目文件夹的名称中包含点也是如此。<br><br>或<br><br>* 创建在 IIS 中托管的基于 HTTP 的网站。 IIS 托管的网站可在虚拟路径和项目文件文件夹中包含点。 |
 | **SharePoint 站点** | 如果尝试运行部署为 SharePoint 网站（包含名为 `WSS_Minimal` 的自定义部分信任级别）的子级的 ASP.NET 4 网站，将出现以下错误：<br><br>`Could not find permission set named 'ASP.Net'.` | 目前，所有版本的 SharePoint 都与 ASP.NET 不兼容。 因此，不应尝试将 ASP.NET 4 网站作为 SharePoint 网站的子级运行。 |
 | **XHTML 1.1 标准** | 为了实现新网站的 XHTML 1.1 符合性，.NET Framework 4 中的 ASP.NET 控件将生成符合 XHTML 1.1 的 HTML。 使用 `<system.Web>` 元素内 Web.config 文件中的以下选项可启用此呈现：<br><br>`<pages controlRenderingCompatibilityVersion="4.0"/>`<br><br>默认情况下，此选项设置为 4.0。 从 Visual Studio 2008 进行升级的 Web 项目启用 3.5 设置以实现兼容性。 | 无。 |

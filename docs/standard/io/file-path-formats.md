@@ -11,16 +11,16 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144853"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835819"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系统中的文件路径格式
 
-<xref:System.IO> 命名空间中很多类型的成员都包括 `path` 参数，让你可以指定指向某个文件系统资源的绝对路径或相对路径。 此路径随后会传递至 [Windows 文件系统 API](https://msdn.microsoft.com/library/windows/desktop/aa364407(v=vs.85).aspx)。 本主题讨论可在 Windows 系统上使用的文件路径格式。
+<xref:System.IO> 命名空间中很多类型的成员都包括 `path` 参数，让你可以指定指向某个文件系统资源的绝对路径或相对路径。 此路径随后会传递至 [Windows 文件系统 API](/windows/desktop/fileio/file-systems)。 本主题讨论可在 Windows 系统上使用的文件路径格式。
 
 ## <a name="traditional-dos-paths"></a>传统 DOS 路径
 
@@ -99,7 +99,7 @@ DOS 设备路径由以下部分组成：
 
 DOS 设备路径通过定义进行完全限定。 不允许使用相对目录段（`.` 和 `..`）。 也不会包含当前目录。
 
-## <a name="example-ways-to-refer-to-the-same-file"></a>示例：引用同一个文件的方法
+## <a name="example-ways-to-refer-to-the-same-file"></a>示例:引用同一个文件的方法
 
 以下示例演示了一些方法，以此可在使用 <xref:System.IO> 命名空间中的 API 时引用文件。 该示例实例化 <xref:System.IO.FileInfo> 对象，并使用它的 <xref:System.IO.FileInfo.Name> 和 <xref:System.IO.FileInfo.Length> 属性来显示文件名以及文件长度。
 

@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 373d1e4e5089b23ecaeffd10fd167b701b75760c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbc45d2c6587f5ff94c5cfbe0251d4b0ebca4231
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702894"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835494"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath 命名空间浏览
 要对 XML 文档使用 XPath 查询，必须正确定位 XML 命名空间以及命名空间中包含的元素。 命名空间可防止在多个上下文中使用名称时可能产生的混淆情况；例如，名称 `ID` 可能引用与 XML 文档的不同元素相关联的多个标识符。 命名空间语法指定了 URI、名称和前缀，可区分 XML 文档的各个元素。  
   
- 本主题中的示例演示了通过 <xref:System.Xml.XPath.XPathNavigator> 在浏览 XML 文档时使用前缀。 若要详细了解命名空间和语法，请参阅[了解 XML 命名空间](https://msdn.microsoft.com/library/aa468565.aspx)。  
+ 本主题中的示例演示了通过 <xref:System.Xml.XPath.XPathNavigator> 在浏览 XML 文档时使用前缀。 有关命名空间和语法的详细信息，请参阅 [XML 文件：了解 XML 命名空间](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10))。  
   
 ## <a name="namespace-declarations"></a>命名空间声明  
  命名空间声明使得在使用 <xref:System.Xml.XPath.XPathNavigator> 的实例时，很容易区分和定位 XML 文档的各个元素。 命名空间前缀提供了一种简化的语法，用来定位命名空间。  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd40e35c001318f7e5e685a68fd591b253cbf051
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620079"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836365"
 ---
 # <a name="selecting-a-collection-class"></a>选择集合类
 请务必仔细选择你的集合类。 使用错误的类型可能会限制集合的使用。 一般情况下，应避免使用 <xref:System.Collections> 命名空间中的类型，除非特别面向 .NET Framework 版本 1.1。 由于集合的泛型版本和并发版本具有更高的类型安全性和其他改进，将首选这些版本。  
@@ -60,7 +60,8 @@ ms.locfileid: "54620079"
   
     -   <xref:System.Collections.Hashtable> 类按其哈希代码对其元素进行排序。  
   
-    -   <xref:System.Collections.SortedList> 类以及 <xref:System.Collections.Generic.SortedDictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型类基于 <xref:System.Collections.IComparer> 接口和 <xref:System.Collections.Generic.IComparer%601> 泛型接口的实施按键对元素进行排序。  
+    -   
+  <xref:System.Collections.SortedList> 类以及 <xref:System.Collections.Generic.SortedDictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型类基于 <xref:System.Collections.IComparer> 接口和 <xref:System.Collections.Generic.IComparer%601> 泛型接口的实施按键对元素进行排序。  
   
     -   <xref:System.Collections.ArrayList> 提供了一种 <xref:System.Collections.ArrayList.Sort%2A> 方法，此方法采用 <xref:System.Collections.IComparer> 实现作为参数。 其泛型对应项（<xref:System.Collections.Generic.List%601> 泛型类）提供一种 <xref:System.Collections.Generic.List%601.Sort%2A> 方法，此方法采用 <xref:System.Collections.Generic.IComparer%601> 泛型接口的实现作为参数。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "54620079"
     -   此外，通过指定其泛型类参数的 <xref:System.String> 类，可以使用 <xref:System.Collections.Generic> 命名空间中的任何泛型集合类作为强类型字符串集合。  
   
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects 与 PLINQ  
- LINQ to Objects 让开发人员能够使用 LINQ 查询访问内存中对象，条件是该对象类型实现 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。 LINQ 查询提供了一种通用的数据访问模式，与标准 `foreach` 循环相比，它通常更加简洁，可读性更高，并且可提供筛选、排序和分组功能。 有关详细信息，请参阅 [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)。  
+ LINQ to Objects 让开发人员能够使用 LINQ 查询访问内存中对象，条件是该对象类型实现 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。 LINQ 查询提供了一种通用的数据访问模式，与标准 `foreach` 循环相比，它通常更加简洁，可读性更高，并且可提供筛选、排序和分组功能。 有关详细信息，请参阅 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) 和 [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)。  
   
  PLINQ 提供 LINQ to Objects 的并行实现，在许多情况下，可通过更有效地利用多核计算机提供更快的查询执行。 有关详细信息，请参阅[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
   

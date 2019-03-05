@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: e0635d03e7d1b31642a6669aecefd2b0099e9c78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7a9c6c64f5aa482b6d21aab0c88fc204c6427a41
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066280"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974778"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>将 NoSQL 数据库用作持久性基础结构
 
@@ -163,7 +163,7 @@ Cosmos DB 数据库支持 .NET 的 MongoDB API 以及本地 MongoDB 网络协议
 
 ### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>代码：在 .NET Core 应用程序中使用 MongoDB API
 
-适用于 .NET 的 MongoDB API 基于需要添加到项目中的 NuGet 包，如下图所示的 Locations.API 项目。
+适用于 .NET 的 MongoDB API 是基于 NuGet 包的，你需要添加到类似于下图所示的 Locations.API 项目中。
 
 ![显示 MongoDB NuGet 包中的依赖项的解决方案资源管理器视图。](./media/image21-bis.png)
 

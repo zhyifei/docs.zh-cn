@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 9ee6e9a06d590d9d8452dcdaea11219070e613c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9e63b16106f69ec35b7713ffc1a28e2cfb19d2d9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188178"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203647"
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 
@@ -65,7 +65,7 @@ ms.locfileid: "50188178"
 
 ## <a name="cls-compliance-rules"></a>CLS 遵从性规则
 
-本节讨论用于创建符合 CLS 的组件的规则。 有关规则的完整列表，请参阅 [ECMA-335 标准：公共语言基础结构](https://www.ecma-international.org/publications/standards/Ecma-335.htm)的第 I 部分的第 11 条。
+本节讨论用于创建符合 CLS 的组件的规则。 有关规则的完整列表，请参阅 [ECMA-335 标准：公共语言基础结构](https://www.ecma-international.org/publications/standards/Ecma-335.htm)的第 I 部分的第 7 条至第 11 条中进行了定义。
 
 > [!NOTE]
 > 公共语言规范讨论 CLS 遵从性的每个规则，因为它应用于使用者（以编程方式访问符合 CLS 的组件的开发人员）、框架（使用语言编译器创建符合 CLS 的库的开发人员）和扩展人员（创建可创建符合 CLS 的组件的语言编译器或代码分析器等工具的开发人员）。 本文重点介绍适用于框架的规则。 但请注意，一些适用于扩展程序的规则也适用于使用 [Reflection.Emit](xref:System.Reflection.Emit) 创建的程序集。 
@@ -158,7 +158,7 @@ End Class
 可访问性 | [成员可访问性](#member-accessibility) | 类型和成员的可见性和可访问性应是这样的：只要任何成员是可见的且可访问的，则该成员签名中的类型应是可见且可访问的。 例如，在其程序集外部可见的公共方法不应具有其类型仅在程序集内可见的参数。 只要任何成员是可见且可访问的，则构成该成员签名中使用的实例化泛型类型的类型应是可见且可访问的。 例如，一个在其程序集外部可见的成员签名中出现的实例化泛型类型不应具有其类型仅在程序集内可见的泛型实参。 | 12
 数组 | [数组](#arrays) | 数组应具有符合 CLS 的类型的元素，且数组的所有维度的下限应为零。 各重载间只需区别：项是数组还是数组的元素类型。 当重载基于两个或更多数组类型时，元素类型应为命名类型。 | 16
 特性 | [特性](#attributes) | 特性应为 [System.Attribute](xref:System.Attribute) 类型或继承自该类型。 | 41
-特性 | [特性](#attributes) | CLS 只允许自定义特性编码的子集。 这些编码中仅应显示的类型（请参阅第 IV 部分）：[System.Type](xref:System.Type)、[System.String](xref:System.String)、[System.Char](xref:System.Char)、[System.Boolean](xref:System.Boolean)、[System.Byte](xref:System.Byte)、[System.Int16](xref:System.Int16)、[System.Int32](xref:System.Int32)、[System.Int64](xref:System.Int64)、[System.Single](xref:System.Single)、[System.Double](xref:System.Double) 以及基于符合 CLS 的基整数类型的任何枚举类型。 | 34
+特性 | [特性](#attributes) | CLS 只允许自定义特性编码的子集。 应在这些编码中出现的唯一类型是（请参阅第 IV 部分）：[System.Type](xref:System.Type)、[System.String](xref:System.String)、[System.Char](xref:System.Char)、[System.Boolean](xref:System.Boolean)、[System.Byte](xref:System.Byte)、[System.Int16](xref:System.Int16)、[System.Int32](xref:System.Int32)、[System.Int64](xref:System.Int64)、[System.Single](xref:System.Single)、[System.Double](xref:System.Double)，以及基于符合 CLS 的基整数类型的任何枚举类型。 | 34
 特性 | [特性](#attributes) | CLS 不允许公开可见的所需修饰符（`modreq`，请参阅第 II 部分)，但允许其不了解的可选修饰符（`modopt`，请参阅第 II 部分）。 | 35
 构造函数 | [构造函数](#constructors) | 在访问继承的实例数据之前，对象构造函数应调用其基类的某个实例构造函数。 （这不适用于不需要构造函数的值类型。)  | 21
 构造函数 | [构造函数](#constructors) | 对象构造函数只能在创建对象的过程中调用，并且不应将对象初始化两次。 | 22
@@ -316,7 +316,7 @@ End Class
 .NET [通用类型系统](common-type-system.md)包括大量直接受公共语言运行时支持且专以程序集的元数据编码的内置类型。 在这些内部类型中，下表中所列的类型都符合 CLS。 
 
 
-符合 CLS 的类型 | 描述
+符合 CLS 的类型 | 说明
 ------------------ | -----------
 [Byte](xref:System.Byte) | 8 位无符号整数 
 [Int16](xref:System.Int16) | 16 位带符号整数 
@@ -333,7 +333,7 @@ End Class
 下表中所列的内部类型不符合 CLS。
 
 
-不符合类型 | 描述 | 符合 CLS 的替代方法
+不符合类型 | 说明 | 符合 CLS 的替代方法
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | 8 位带符号整数数据类型 | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | 16 位无符号整数 | [Int32](xref:System.Int32)
@@ -2058,7 +2058,7 @@ End Class
 
 符合 CLS 的类型的属性必须遵循下列规则：
 
-* 属性必须具有 setter 和/或 getter。 在程序集中，这些作为特殊方法实现，这意味着它们将显示为单独的方法。getter 命名为 `get`\_*propertyname*，setter 是元数据中的 `set*\_*propertyname*) marked as `SpecialName`。 C# 编译器会自动实施此规则，无需应用 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 特性。 
+* 属性必须具有 setter 和/或 getter。 在程序集中，这些作为特殊方法实现，这意味着它们将显示为单独的方法（getter 命名为 `get`\_*propertyname*，setter 命名为 `set`\_*propertyname*），且在程序集元数据中标记为 `SpecialName`。 C# 编译器会自动实施此规则，无需应用 <xref:System.CLSCompliantAttribute> 特性。 
 
 * 属性的类型是属性 getter 的返回类型和 setter 的最后一个自变量。 这些类型必须符合 CLS，并且不能通过引用将参数分配到属性中（即它们不能为托管指针）。 
 
