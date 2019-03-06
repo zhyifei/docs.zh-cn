@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 9e2cd55d0d5eb453ad5d29b707a14b9894d40089
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493698"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358556"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows 窗体和 WPF 属性映射
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]技术有两个相似但不同属性模型。 *属性映射*支持两种体系结构之间的互操作，并提供以下功能：  
@@ -49,7 +49,7 @@ ms.locfileid: "54493698"
   
  完全支持容器元素上的附加的属性<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。  
   
- 有关详细信息，请参见[演练：使用 WindowsFormsHost 元素映射属性](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)。  
+ 有关详细信息，请参见[演练：使用 WindowsFormsHost 元素映射属性](walkthrough-mapping-properties-using-the-windowsformshost-element.md)。  
   
 ## <a name="updates-to-parent-properties"></a>父属性的更新  
  对大多数父属性的更改会导致到承载的子控件的通知。 以下列表介绍它们的值更改时不会导致通知的属性。  
@@ -117,7 +117,7 @@ ms.locfileid: "54493698"
   
  <xref:System.Windows.Forms.Integration.ElementHost>控件将转换的默认[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]属性设置为其[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]通过使用以下转换表的等效项。  
   
- 有关详细信息，请参见[演练：使用 ElementHost 控件映射属性](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)。  
+ 有关详细信息，请参见[演练：使用 ElementHost 控件映射属性](walkthrough-mapping-properties-using-the-elementhost-control.md)。  
   
 |承载 Windows 窗体|Windows Presentation Foundation|互操作行为|  
 |---------------------------|-------------------------------------|-----------------------------|  
@@ -137,7 +137,7 @@ ms.locfileid: "54493698"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [WPF 和 Windows 窗体互操作](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)
-- [演练：使用 WindowsFormsHost 元素映射属性](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [演练：使用 ElementHost 控件映射属性](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [WPF 和 Win32 互操作](wpf-and-win32-interoperation.md)
+- [WPF 和 Windows 窗体互操作](wpf-and-windows-forms-interoperation.md)
+- [演练：使用 WindowsFormsHost 元素映射属性](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [演练：使用 ElementHost 控件映射属性](walkthrough-mapping-properties-using-the-elementhost-control.md)

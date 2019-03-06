@@ -8,12 +8,12 @@ helpviewer_keywords:
 - adorners [WPF], binding to children of Panels
 - Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
-ms.openlocfilehash: ae039243ded93eb2bc7f85f9f07fad1dbe0eac2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f840180edf55c3e10e6859dfc2b9f4b6495b878
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544973"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358183"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>如何：装饰面板的子级
 此示例演示如何以编程方式将装饰器绑定到指定的子级<xref:System.Windows.Controls.Panel>。  
@@ -27,11 +27,11 @@ ms.locfileid: "54544973"
   
  下面的示例将 SimpleCircleAdorner （如上所示） 的子级绑定<xref:System.Windows.Controls.StackPanel>名为*myStackPanel*。  
   
- [!code-csharp[Adorners_SimpleCircleAdorner#_AdornChildren](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornchildren)]
- [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
+ [!code-csharp[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornchildren)]
+ [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 > [!NOTE]
 >  目前不支持使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 将装饰器绑定到另一个元素。  
   
 ## <a name="see-also"></a>请参阅
-- [装饰器概述](../../../../docs/framework/wpf/controls/adorners-overview.md)
+- [装饰器概述](adorners-overview.md)

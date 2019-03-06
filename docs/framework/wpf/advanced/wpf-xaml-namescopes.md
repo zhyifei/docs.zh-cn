@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: 52fc542996f2fe691b62aeff5296e045643fcc7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5a49198d6f55c9a3aa3c7557a96ab791d54351b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498341"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366746"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 名称范围
 XAML 名称范围是关于标识 XAML 中定义的对象的一个概念。 XAML 名称范围中的名称可用于在对象树的对象 XAML 定义名称和其实例等效项之间建立关系。 通常，在加载 XAML 应用程序的各个 XAML 页面根时会以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 托管代码创建 XAML 名称范围。 由定义作为编程对象的 XAML 名称范围<xref:System.Windows.Markup.INameScope>接口，并由实际类还实现<xref:System.Windows.NameScope>。  
@@ -36,7 +36,7 @@ XAML 名称范围是关于标识 XAML 中定义的对象的一个概念。 XAML 
 ### <a name="adding-objects-to-runtime-object-trees"></a>将对象添加到运行时对象树  
  分析 XAML 时即意味着创建并定义 WPF XAML 名称范围的时刻。 如果在分析生成对象树的 XAML 之后的时间点将对象添加到对象树，新对象上的 `Name` 或 `x:Name` 值不会在 XAML 名称范围中自动更新信息。 若要将一个对象的名称添加到 WPF XAML 名称范围，加载 XAML 后，必须调用的相应实现<xref:System.Windows.Markup.INameScope.RegisterName%2A>上定义的 XAML 名称范围的对象，通常是 XAML 页面根。 如果未注册名称，添加的对象不能按名称引用通过方法如<xref:System.Windows.FrameworkElement.FindName%2A>，也不能使用该名称用于动画定位。  
   
- 应用程序开发人员的最常见方案是，将使用<xref:System.Windows.FrameworkElement.RegisterName%2A>名称注册到当前页的根上的 XAML 名称范围。 <xref:System.Windows.FrameworkElement.RegisterName%2A> 是的情节提要的一个重要用途一部分动画的目标对象。 有关详细信息，请参阅[情节提要概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
+ 应用程序开发人员的最常见方案是，将使用<xref:System.Windows.FrameworkElement.RegisterName%2A>名称注册到当前页的根上的 XAML 名称范围。 <xref:System.Windows.FrameworkElement.RegisterName%2A> 是的情节提要的一个重要用途一部分动画的目标对象。 有关详细信息，请参阅[情节提要概述](../graphics-multimedia/storyboards-overview.md)。  
   
  如果您调用<xref:System.Windows.FrameworkElement.RegisterName%2A>上定义的 XAML 名称范围的对象以外的对象，该名称仍会注册到中，保留调用对象的 XAML 名称范围就像已调用<xref:System.Windows.FrameworkElement.RegisterName%2A>上定义对象的 XAML 名称范围。  
   
@@ -49,7 +49,7 @@ XAML 名称范围是关于标识 XAML 中定义的对象的一个概念。 XAML 
   
  如果该对象提供作为`dependencyObject`有关<xref:System.Windows.NameScope.SetNameScope%2A>不是<xref:System.Windows.Markup.INameScope>实现中，<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>，则调用<xref:System.Windows.FrameworkElement.RegisterName%2A>对任何子元素不会产生影响。 如果您不能显式创建新的 XAML 名称范围，然后调用<xref:System.Windows.FrameworkElement.RegisterName%2A>将引发异常。  
   
- 有关以代码方式使用 XAML 名称范围 API 的示例，请参阅[定义名称范围](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)。  
+ 有关以代码方式使用 XAML 名称范围 API 的示例，请参阅[定义名称范围](../graphics-multimedia/how-to-define-a-name-scope.md)。  
   
 <a name="Namescopes_in_Styles_and_Templates"></a>   
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>样式和模板中的 XAML 名称范围  
@@ -57,7 +57,7 @@ XAML 名称范围是关于标识 XAML 中定义的对象的一个概念。 XAML 
   
  请看下面的示例：  
   
- [!code-xaml[XamlOvwSupport#NameScopeTemplates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
+ [!code-xaml[XamlOvwSupport#NameScopeTemplates](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
   
  此处，同一模板应用到两个不同的按钮。 如果模板不具有离散的 XAML 名称范围，则模板中使用的 `TheBorder` 名称会导致 XAML 名称范围中的名称冲突。 模板的每个实例都具有其自己的 XAML 名称范围，因此在本例中，每个实例化模板的 XAML 名称范围仅包含一个名称。  
   
@@ -97,5 +97,5 @@ XAML 名称范围是关于标识 XAML 中定义的对象的一个概念。 XAML 
 -   <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>请参阅
-- [WPF XAML 的 XAML 命名空间和命名空间映射](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
-- [x:Name 指令](../../../../docs/framework/xaml-services/x-name-directive.md)
+- [WPF XAML 的 XAML 命名空间和命名空间映射](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
+- [x:Name 指令](../../xaml-services/x-name-directive.md)

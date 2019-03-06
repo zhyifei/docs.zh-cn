@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: 012590a21ac24b1146c30405c9872355a4b50802
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 623ff5d14db6ae9cc5999aa184b81d6b22f4b201
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627247"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365004"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 如果实现由 PresentationHost.exe 从主机获取自定义进度和错误消息调用。  
@@ -41,9 +41,9 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
  HRESULT：已忽略。  
   
 ## <a name="remarks"></a>备注  
- 主机应用程序可能具有可能不符合 PresentationHost.exe 的默认用户界面的特定主题。 如果是这样，主机应用程序可以实现[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)返回进度和错误的用户界面到 PresentationHost.exe。 将始终调用 PresentationHost.exe [GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)之前使用其默认用户界面。  
+ 主机应用程序可能具有可能不符合 PresentationHost.exe 的默认用户界面的特定主题。 如果是这样，主机应用程序可以实现[GetCustomUI](getcustomui.md)返回进度和错误的用户界面到 PresentationHost.exe。 将始终调用 PresentationHost.exe [GetCustomUI](getcustomui.md)之前使用其默认用户界面。  
   
  一次在 PresentationHost 的初始化期间调用此函数。  
   
 ## <a name="see-also"></a>请参阅
-- [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)
+- [IWpfHostSupport](iwpfhostsupport.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5ad12c9227f089f579ff204dec1ab7026e3d2bcd
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 4c4d3c2f323492cafaa2dc4d52ab994323eba69b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007315"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375319"
 ---
 # <a name="windows-forms-overview"></a>Windows 窗体概述
 
@@ -46,14 +46,15 @@ ms.locfileid: "46007315"
 |描述|帮助主题|
 |-----------------|----------------|
 |在窗体上使用控件|[如何：向 Windows 窗体添加控件](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|使用 <xref:System.Windows.Forms.ToolStrip> 控件|[如何：使用设计器创建含有标准项的基本 ToolStrip](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|使用 <xref:System.Windows.Forms.ToolStrip> 控件|[如何：创建含有标准项使用设计器的基本 ToolStrip](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
 |创建带有 <xref:System.Drawing> 的图形|[图形编程入门](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|
 |创建自定义控件|[如何：从 UserControl 类继承](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>显示和操作数据
  许多应用程序必须显示数据库、XML 文件、XML Web 服务或其他数据源中的数据。 Windows 窗体提供了一个灵活的控件（名为 <xref:System.Windows.Forms.DataGridView> 控件），用于以传统的行和列格式显示此类表格数据，以便使每段数据块均占据其自己的单元格。 使用 <xref:System.Windows.Forms.DataGridView> 时，可以自定义各个单元格的外观，将任意行和列锁定在所需位置，在单元格内部显示复杂控件，此外还具有其他功能。
 
- 通过网络连接到数据源对于 Windows 窗体智能客户端而言是一个简单的任务。 <xref:System.Windows.Forms.BindingSource>组件表示到数据源的连接和公开方法的数据绑定到控件，导航到上一页和下一页记录，编辑记录，并将更改保存回原始的源。 <xref:System.Windows.Forms.BindingNavigator> 控件通过 <xref:System.Windows.Forms.BindingSource> 组件提供一个简单界面，可供用户在记录间导航。
+ 通过网络连接到数据源对于 Windows 窗体智能客户端而言是一个简单的任务。 <xref:System.Windows.Forms.BindingSource>组件表示到数据源的连接和公开方法的数据绑定到控件，导航到上一页和下一页记录，编辑记录，并将更改保存回原始的源。 
+  <xref:System.Windows.Forms.BindingNavigator> 控件通过 <xref:System.Windows.Forms.BindingSource> 组件提供一个简单界面，可供用户在记录间导航。
 
  可以使用“数据源”窗口轻松创建数据绑定控件。 窗口显示数据源，如数据库、Web 服务和项目中的对象。 可以通过将此窗口中的项拖动到项目中的窗体上来创建数据绑定控件。 还可以通过将对象从“数据源”窗口拖动到现有控件上来将现有控件与数据进行数据绑定。
 
@@ -65,9 +66,9 @@ ms.locfileid: "46007315"
 
 |描述|帮助主题|
 |-----------------|----------------|
-|使用 <xref:System.Windows.Forms.BindingSource> 组件|[如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 数据源|[如何：使用 Windows 窗体 BindingSource 组件对 ADO.NET 数据进行排序和筛选](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|使用“数据源”窗口|[演练：在 Windows 窗体上显示数据](https://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|
+|使用 <xref:System.Windows.Forms.BindingSource> 组件|[如何：将 Windows 窗体控件与 BindingSource 组件使用设计器绑定](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 数据源|[如何：排序和筛选 ADO.NET 数据与 Windows 窗体 BindingSource 组件](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|使用“数据源”窗口|[在 Visual Studio 中将 Windows 窗体控件绑定到数据](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |使用应用程序设置|[如何：创建应用程序设置](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>将应用部署到客户端计算机

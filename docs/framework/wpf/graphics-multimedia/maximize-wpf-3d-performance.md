@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-ms.openlocfilehash: aab9759bcadd52c0af03034cc18512ced01046ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48e8310e003dcd3ebca579654b81363efaac9068
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508643"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364003"
 ---
 # <a name="maximize-wpf-3d-performance"></a>最大程度地提高 WPF 三维性能
 因为你使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]若要生成三维控件和应用程序中包含三维场景，务必要考虑性能优化。 本主题提供 3D 类和属性的可能对性能产生影响的应用程序，以及使用它们时优化性能的建议的列表。  
   
- 本主题假定您了解高级的[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 功能。 本文档中的建议适用于"呈现层 2"— 大致定义为支持像素着色器版本 2.0 和顶点着色器版本 2.0 的硬件。 有关更多详细信息，请参阅[图形呈现层](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。  
+ 本主题假定您了解高级的[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 功能。 本文档中的建议适用于"呈现层 2"— 大致定义为支持像素着色器版本 2.0 和顶点着色器版本 2.0 的硬件。 有关更多详细信息，请参阅[图形呈现层](../advanced/graphics-rendering-tiers.md)。  
   
 ## <a name="performance-impact-high"></a>对性能的影响：高  
   
@@ -60,4 +60,4 @@ ms.locfileid: "54508643"
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|若要最大程度减少大型集合中的构造时间[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，如 MeshGeometry3D <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>， <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>， <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>，和<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>，预调整大小之前值填充的集合。 如果可能，请将传递集合的构造函数预先填充的数据结构，例如数组或列表。|  
   
 ## <a name="see-also"></a>请参阅
-- [3D 图形概述](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [3D 图形概述](3-d-graphics-overview.md)

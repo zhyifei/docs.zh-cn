@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-ms.openlocfilehash: 938adf5b20f289cc219821a549a9dd47df297ae1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 300fd8d6c6bc8a73257d71280bbb0b5565c275ec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624036"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375553"
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView 样式和模板
-本主题介绍的样式和模板的<xref:System.Windows.Controls.TreeView>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍的样式和模板的<xref:System.Windows.Controls.TreeView>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
   
 ## <a name="treeview-parts"></a>树视图部分  
  <xref:System.Windows.Controls.TreeView>控件没有任何命名的部件。  
@@ -50,7 +50,7 @@ ms.locfileid: "54624036"
 |已禁用|CommonStates|<xref:System.Windows.Controls.TreeViewItem>被禁用。|  
 |已设定焦点|FocusStates|<xref:System.Windows.Controls.TreeViewItem>具有焦点。|  
 |失去焦点|FocusStates|<xref:System.Windows.Controls.TreeViewItem>不具有焦点。|  
-|已展开|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem>是否展开控件。|  
+|展开|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem>是否展开控件。|  
 |Collapsed|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem>控件处于折叠状态。|  
 |HasItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem>具有项。|  
 |NoItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem>没有项。|  
@@ -64,18 +64,18 @@ ms.locfileid: "54624036"
 ## <a name="treeview-controltemplate-example"></a>TreeView ControlTemplate 示例  
  下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.TreeView>控件和其关联的类型。  
   
- [!code-xaml[ControlTemplateExamples#TreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/treeview.xaml#treeview)]  
+ [!code-xaml[ControlTemplateExamples#TreeView](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/treeview.xaml#treeview)]  
   
  上一示例使用了一个或多个以下资源。  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [控件样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)
-- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [控件样式和模板](control-styles-and-templates.md)
+- [控件自定义](control-customization.md)
+- [样式设置和模板化](styling-and-templating.md)
+- [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)

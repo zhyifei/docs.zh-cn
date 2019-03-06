@@ -2,12 +2,12 @@
 title: 形参和实参
 description: 了解如何F#对定义形参并将参数传递给函数、 方法和属性的语言支持。
 ms.date: 05/16/2016
-ms.openlocfilehash: 65e3b4f8ffb03e81104c963c5e2da7aba2e2b220
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: b68b3fdd14a66a7312efa5adb709adaeceaae282
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583493"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352278"
 ---
 # <a name="parameters-and-arguments"></a>形参和实参
 
@@ -135,17 +135,17 @@ Baud Rate: 4800 Duplex: Half Parity: false
 ```fsharp
 open System
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
         printfn "%s" message
 ```
 
-此外可以作为默认参数值指定一个新的对象。 例如，`Foo`成员可以有一个可选`CanceallationToken`作为输入改为：
+此外可以作为默认参数值指定一个新的对象。 例如，`Foo`成员可以有一个可选`CancellationToken`作为输入改为：
 
 ```fsharp
 open System.Threading
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
         printfn "%A" ct
 ```

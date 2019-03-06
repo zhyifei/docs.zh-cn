@@ -12,12 +12,12 @@ helpviewer_keywords:
 - animation [WPF], color of GradientStop objects
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
-ms.openlocfilehash: 48f10d418c4f584fd9d24f9292efbca5a941643c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d8c1bb5cd133b2ee9d50a7e851d2ca3b4fff023
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711130"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368881"
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>如何：对渐变停止点的位置或颜色进行动画处理
 此示例演示如何进行动画处理<xref:System.Windows.Media.GradientStop.Color%2A>并<xref:System.Windows.Media.GradientStop.Offset%2A>的<xref:System.Windows.Media.GradientStop>对象。  
@@ -31,9 +31,9 @@ ms.locfileid: "54711130"
   
 -   第三个动画，另一个<xref:System.Windows.Media.Animation.ColorAnimation>，对第三个梯度停止点的不透明度进行动画处理<xref:System.Windows.Media.GradientStop.Color%2A>乘以-1，然后返回。 结果是，渐变中的第三个颜色淡出，然后再次变得不透明。  
   
- [!code-csharp[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/GradientStopAnimationExample.cs#graphicsmmgradientanimationexampleswholepage)]
- [!code-vb[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/gradientstopanimationexample.vb#graphicsmmgradientanimationexampleswholepage)]
- [!code-xaml[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/GradientStopAnimationExample.xaml#graphicsmmgradientanimationexampleswholepage)]  
+ [!code-csharp[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/GradientStopAnimationExample.cs#graphicsmmgradientanimationexampleswholepage)]
+ [!code-vb[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/gradientstopanimationexample.vb#graphicsmmgradientanimationexampleswholepage)]
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/GradientStopAnimationExample.xaml#graphicsmmgradientanimationexampleswholepage)]  
   
  虽然此示例使用<xref:System.Windows.Media.LinearGradientBrush>，过程是相同的进行动画处理<xref:System.Windows.Media.GradientStop>对象内<xref:System.Windows.Media.RadialGradientBrush>。  
   
@@ -41,5 +41,5 @@ ms.locfileid: "54711130"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Media.GradientStop>
-- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [动画概述](animation-overview.md)
+- [演示图板概述](storyboards-overview.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OnRender method [WPF], overriding
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
-ms.openlocfilehash: bb2ccffd9eda46eff2c7ee098a5261fc8f128cab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cefeee320e10a9e9de0d38894d4d865ca2e639ec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702868"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368946"
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>如何：重写面板的 OnRender 方法
 此示例演示如何重写<xref:System.Windows.Controls.Panel.OnRender%2A>方法的<xref:System.Windows.Controls.Panel>以便将自定义图形效果添加到布局元素。  
@@ -27,11 +27,11 @@ ms.locfileid: "54702868"
 ## <a name="example"></a>示例  
  使用<xref:System.Windows.Controls.Panel.OnRender%2A>方法，以将图形效果添加到呈现的面板元素。 例如，可以使用此方法添加自定义边框或背景效果。 一个<xref:System.Windows.Media.DrawingContext>对象作为参数，它提供用于绘制形状、 文本、 图像或视频的方法传递。 因此，此方法很有用的面板对象自定义项。  
   
- [!code-csharp[LightWeightCustomPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LightWeightCustomPanel/CSharp/OffsetPanel.cs#1)]
- [!code-vb[LightWeightCustomPanel#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LightWeightCustomPanel/visualbasic/offsetpanel.vb#1)]  
+ [!code-csharp[LightWeightCustomPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LightWeightCustomPanel/CSharp/OffsetPanel.cs#1)]
+ [!code-vb[LightWeightCustomPanel#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LightWeightCustomPanel/visualbasic/offsetpanel.vb#1)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Controls.Panel>
-- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [面板概述](panels-overview.md)
 - [自定义径向面板示例](https://go.microsoft.com/fwlink/?LinkID=159982)
-- [帮助主题](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)
+- [帮助主题](panel-how-to-topics.md)

@@ -2,12 +2,12 @@
 title: 常见特性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690899"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375397"
 ---
 # <a name="common-attributes-visual-basic"></a>常见特性 (Visual Basic)
 本主题介绍在 Visual Basic 程序中最常用的属性。  
@@ -22,7 +22,7 @@ ms.locfileid: "54690899"
   
 -   [Visual Basic 特性](#VB)  
   
-##  <a name="Global"></a> 全局特性  
+## <a name="Global"></a> 全局特性  
  大多数特性应用于特定语言元素，如类或方法；但是，一些特性是全局特性 - 它们应用于整个程序集或模块。 例如，<xref:System.Reflection.AssemblyVersionAttribute> 属性可用于将版本信息嵌入程序集，如下所示：  
   
 ```vb  
@@ -74,7 +74,7 @@ ms.locfileid: "54690899"
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|定义为程序集清单指定程序集配置（如零售或调试）的自定义属性。|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|定义程序集清单的友好默认别名|  
   
-##  <a name="Obsolete"></a> Obsolete 特性  
+## <a name="Obsolete"></a> Obsolete 特性  
  `Obsolete` 特性将程序实体标记为不再推荐使用。 每次使用标记为过时的实体后，将生成警告或错误，具体取决于该特性的配置方式。 例如：  
   
 ```vb  
@@ -116,7 +116,7 @@ b.NewMethod()
   
  `Obsolete` 特性是一次性特性，可以应用于任何允许特性的实体。 `Obsolete` 是 <xref:System.ObsoleteAttribute> 的别名。  
   
-##  <a name="Conditional"></a> Conditional 特性  
+## <a name="Conditional"></a> Conditional 特性  
  `Conditional` 特性使得方法执行依赖于预处理标识符。 `Conditional` 属性是 <xref:System.Diagnostics.ConditionalAttribute> 的别名，可以应用于方法或特性类。  
   
  在此示例中，`Conditional` 应用于启用或禁用显示特定于程序的诊断信息的方法：  
@@ -209,7 +209,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a>调用方信息特性  
+## <a name="CallerInfo"></a>调用方信息特性  
  通过使用调用方信息特性，可获取有关方法的调用方的信息。 可以获取源代码的文件路径、源代码中的行号和调用方的成员名称。  
   
  若要获取成员调用方信息，可以使用应用于可选参数的特性。 每个可选参数指定一个默认值。 下表列出在 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空间中定义的调用方信息特性：  
@@ -222,7 +222,7 @@ End Class
   
  有关调用方信息特性的详细信息，请参阅[调用方信息 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)。  
   
-##  <a name="VB"></a> Visual Basic 特性  
+## <a name="VB"></a> Visual Basic 特性  
  下表列出了特定于 Visual Basic 的属性。  
   
 |特性|目标|  

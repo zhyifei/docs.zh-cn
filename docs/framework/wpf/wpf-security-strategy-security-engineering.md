@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 2ab6981b85d5b0663fd8e464a840bfbe55f6d3b0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: bddb9bb2cf9a601ce7796d17483c1ab8fa6d7aa1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836586"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378950"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF 安全策略 - 安全工程
 可信计算是 Microsoft 为确保生成安全代码而首创的一项技术。 可信计算技术的一个关键元素是 [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 是与标准工程过程一同用于简化提交安全代码的工程实践。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 包含十个阶段，将规范化、可度量性和附加结构的最佳实践结合在一起，包括：  
@@ -87,11 +87,11 @@ ms.locfileid: "56836586"
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>关键代码管理  
- 有关[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]，[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]利用.NET Framework 支持标记和跟踪可提升特权的安全关键代码生成安全沙盒 (请参阅**安全关键方法**中[WPF安全策略-平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md))。 考虑到对安全关键代码有较高的安全质量要求，因此需要对此类代码进行其他级别的源管理控制和安全审核。 大约有 5% 到 10% 的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 由安全关键代码组成，这些代码由专门的审核团队进行审核。 通过跟踪安全关键代码和将每个关键实体（即，包含关键代码的方法）映射到其签署状态来对源代码和签入过程进行管理。 签署状态包括一个或多个审阅者的姓名。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 的每个日常版本都将关键代码与前一版本中的该代码进行比较，以检查未经审批的更改。 如果工程师未经审核团队的批准而自行修改关键代码，则将识别并立即修复该代码。 通过这一过程，可以对 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 沙盒代码应用级别特高的审核并加以维护。  
+ 有关[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]，[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]利用.NET Framework 支持标记和跟踪可提升特权的安全关键代码生成安全沙盒 (请参阅**安全关键方法**中[WPF安全策略-平台安全性](wpf-security-strategy-platform-security.md))。 考虑到对安全关键代码有较高的安全质量要求，因此需要对此类代码进行其他级别的源管理控制和安全审核。 大约有 5% 到 10% 的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 由安全关键代码组成，这些代码由专门的审核团队进行审核。 通过跟踪安全关键代码和将每个关键实体（即，包含关键代码的方法）映射到其签署状态来对源代码和签入过程进行管理。 签署状态包括一个或多个审阅者的姓名。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 的每个日常版本都将关键代码与前一版本中的该代码进行比较，以检查未经审批的更改。 如果工程师未经审核团队的批准而自行修改关键代码，则将识别并立即修复该代码。 通过这一过程，可以对 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 沙盒代码应用级别特高的审核并加以维护。  
   
 ## <a name="see-also"></a>请参阅
-- [安全性](../../../docs/framework/wpf/security-wpf.md)
-- [WPF 部分信任安全](../../../docs/framework/wpf/wpf-partial-trust-security.md)
-- [WPF 安全策略 - 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
+- [安全性](security-wpf.md)
+- [WPF 部分信任安全](wpf-partial-trust-security.md)
+- [WPF 安全策略 - 平台安全性](wpf-security-strategy-platform-security.md)
 - [高信度计算](https://www.microsoft.com/mscorp/twc/default.mspx)
 - [.NET 中的安全性](../../standard/security/index.md)

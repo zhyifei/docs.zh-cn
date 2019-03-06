@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], getting binding objects from bound target properties
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
-ms.openlocfilehash: 6be1cb74b60c4c7779053e5fd79d07d123bd4d35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af18cf3fc155148816690bdd16baa3a2a5515eee
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709840"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368514"
 ---
 # <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>如何：从已绑定的目标属性获取绑定对象
 本示例演示如何从数据绑定的目标属性获取绑定对象。  
@@ -18,7 +18,7 @@ ms.locfileid: "54709840"
 ## <a name="example"></a>示例  
  可以执行以下操作来获取 <xref:System.Windows.Data.Binding> 对象：  
   
- [!code-csharp[BindValidation#GetBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml.cs#getbinding)]  
+ [!code-csharp[BindValidation#GetBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml.cs#getbinding)]  
   
 > [!NOTE]
 >  要获取所需的绑定，必须指定依赖属性，因为目标对象中正在使用数据绑定的属性可能不止一个。  
@@ -31,5 +31,5 @@ ms.locfileid: "54709840"
 >  如果绑定是 <xref:System.Windows.Data.MultiBinding>，则使用 <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>。 如果是 <xref:System.Windows.Data.PriorityBinding>，则使用 <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>。 如果你不确定目标属性是否使用 <xref:System.Windows.Data.Binding>、<xref:System.Windows.Data.MultiBinding> 或 <xref:System.Windows.Data.PriorityBinding> 进行了绑定，可以使用 <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>。  
   
 ## <a name="see-also"></a>请参阅
-- [在代码中创建绑定](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)
-- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [在代码中创建绑定](how-to-create-a-binding-in-code.md)
+- [帮助主题](data-binding-how-to-topics.md)

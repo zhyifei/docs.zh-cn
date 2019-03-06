@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 693c4d0cf0847b90379d409427b173b2c4740311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616793"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358465"
 ---
 # <a name="popup-overview"></a>Popup 概述
 <xref:System.Windows.Controls.Primitives.Popup>控件提供了一种方法来相对于指定元素或屏幕坐标在当前应用程序窗口上浮动的单独窗口中显示内容。 本主题介绍<xref:System.Windows.Controls.Primitives.Popup>控件并提供有关其用法的信息。  
@@ -22,27 +22,27 @@ ms.locfileid: "54616793"
  一个<xref:System.Windows.Controls.Primitives.Popup>控件相对于元素或屏幕上的点的单独窗口中显示内容。 当<xref:System.Windows.Controls.Primitives.Popup>可见，请<xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A>属性设置为`true`。  
   
 > [!NOTE]
->  一个<xref:System.Windows.Controls.Primitives.Popup>不会自动打开当鼠标指针移动到其父对象。 如果你想<xref:System.Windows.Controls.Primitives.Popup>若要自动打开，请使用<xref:System.Windows.Controls.ToolTip>或<xref:System.Windows.Controls.ToolTipService>类。 有关详细信息，请参阅 [ToolTip 概述](../../../../docs/framework/wpf/controls/tooltip-overview.md)。  
+>  一个<xref:System.Windows.Controls.Primitives.Popup>不会自动打开当鼠标指针移动到其父对象。 如果你想<xref:System.Windows.Controls.Primitives.Popup>若要自动打开，请使用<xref:System.Windows.Controls.ToolTip>或<xref:System.Windows.Controls.ToolTipService>类。 有关详细信息，请参阅 [ToolTip 概述](tooltip-overview.md)。  
   
 <a name="APopupExample"></a>   
 ## <a name="creating-a-popup"></a>创建弹出项。  
  下面的示例演示如何定义<xref:System.Windows.Controls.Primitives.Popup>控件的子元素<xref:System.Windows.Controls.Button>控件。 因为<xref:System.Windows.Controls.Button>可以具有只有一个子元素，此示例中的文本放<xref:System.Windows.Controls.Button>并<xref:System.Windows.Controls.Primitives.Popup>中的控件<xref:System.Windows.Controls.StackPanel>。 内容<xref:System.Windows.Controls.Primitives.Popup>将出现在<xref:System.Windows.Controls.TextBlock>控件，用于靠近相关的应用程序窗口上浮动的单独窗口中显示其文本<xref:System.Windows.Controls.Button>控件。  
   
- [!code-xaml[PopupSimple#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
+ [!code-xaml[PopupSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
   
- [!code-xaml[PopupSimple#CreatePopupCodeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
+ [!code-xaml[PopupSimple#CreatePopupCodeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
   
 <a name="PopupUses"></a>   
 ## <a name="controls-that-implement-a-popup"></a>实现 Popup 的控件  
  您可以构建<xref:System.Windows.Controls.Primitives.Popup>控件添加到其他控件。 以下控件实现<xref:System.Windows.Controls.Primitives.Popup>特定用途的控件：  
   
--   <xref:System.Windows.Controls.ToolTip>。 如果你想要创建一个元素的工具提示，使用<xref:System.Windows.Controls.ToolTip>和<xref:System.Windows.Controls.ToolTipService>类。 有关详细信息，请参阅 [ToolTip 概述](../../../../docs/framework/wpf/controls/tooltip-overview.md)。  
+-   <xref:System.Windows.Controls.ToolTip>。 如果你想要创建一个元素的工具提示，使用<xref:System.Windows.Controls.ToolTip>和<xref:System.Windows.Controls.ToolTipService>类。 有关详细信息，请参阅 [ToolTip 概述](tooltip-overview.md)。  
   
--   <xref:System.Windows.Controls.ContextMenu>。 如果你想要创建的元素的上下文菜单，使用<xref:System.Windows.Controls.ContextMenu>控件。 有关详细信息，请参阅 [ContextMenu 概述](../../../../docs/framework/wpf/controls/contextmenu-overview.md)。  
+-   <xref:System.Windows.Controls.ContextMenu>。 如果你想要创建的元素的上下文菜单，使用<xref:System.Windows.Controls.ContextMenu>控件。 有关详细信息，请参阅 [ContextMenu 概述](contextmenu-overview.md)。  
   
 -   <xref:System.Windows.Controls.ComboBox>。 如果你想要创建具有可显示或隐藏，使用下拉列表框的选择控件<xref:System.Windows.Controls.ComboBox>控件。  
   
--   <xref:System.Windows.Controls.Expander>。 如果你想要创建用于显示具有可折叠区域的标头控件的显示内容，请使用<xref:System.Windows.Controls.Expander>控件。 有关详细信息，请参阅 [Expander 概述](../../../../docs/framework/wpf/controls/expander-overview.md)。  
+-   <xref:System.Windows.Controls.Expander>。 如果你想要创建用于显示具有可折叠区域的标头控件的显示内容，请使用<xref:System.Windows.Controls.Expander>控件。 有关详细信息，请参阅 [Expander 概述](expander-overview.md)。  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Popup 行为和外观  
@@ -74,13 +74,13 @@ ms.locfileid: "54616793"
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>定义 Popup 位置  
- 可以通过设置定位 popup <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>， <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，和<xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty>属性。 有关详细信息，请参阅 [Popup 放置行为](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)。 当<xref:System.Windows.Controls.Primitives.Popup>会显示在屏幕上，它不会不会重新定位自身如果器重定位到其父级。  
+ 可以通过设置定位 popup <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>， <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，和<xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty>属性。 有关详细信息，请参阅 [Popup 放置行为](popup-placement-behavior.md)。 当<xref:System.Windows.Controls.Primitives.Popup>会显示在屏幕上，它不会不会重新定位自身如果器重定位到其父级。  
   
 <a name="CustomizingPopupPlacement"></a>   
 ### <a name="customizing-popup-placement"></a>自定义 Popup 放置  
  你可以自定义的位置<xref:System.Windows.Controls.Primitives.Popup>通过指定一组坐标是相对于控件<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>想<xref:System.Windows.Controls.Primitives.Popup>才会显示。  
   
- 若要自定义位置，请设置<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性设置为<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>。 然后，定义<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>委托中，返回一组可能的位置点和主轴 （按优先顺序） <xref:System.Windows.Controls.Primitives.Popup>。 显示的最大一部分的点<xref:System.Windows.Controls.Primitives.Popup>自动选择。 有关示例，请参阅[指定自定义 Popup 位置](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)。  
+ 若要自定义位置，请设置<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性设置为<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>。 然后，定义<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>委托中，返回一组可能的位置点和主轴 （按优先顺序） <xref:System.Windows.Controls.Primitives.Popup>。 显示的最大一部分的点<xref:System.Windows.Controls.Primitives.Popup>自动选择。 有关示例，请参阅[指定自定义 Popup 位置](how-to-specify-a-custom-popup-position.md)。  
   
 <a name="PopupandtheVisualTree"></a>   
 ## <a name="popup-and-the-visual-tree"></a>Popup 和可视化树  
@@ -96,5 +96,5 @@ ms.locfileid: "54616793"
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [帮助主题](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
-- [帮助主题](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+- [帮助主题](popup-how-to-topics.md)
+- [帮助主题](tooltip-how-to-topics.md)

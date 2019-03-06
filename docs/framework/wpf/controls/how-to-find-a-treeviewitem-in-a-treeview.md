@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TreeView control [WPF], finding a TreeViewItem
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-ms.openlocfilehash: bce4f059e76b0ebea29b023eba2e9e2f59813035
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c90db5312d58cfba18910f299386e2884fb36ce6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636022"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360209"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>如何：在 TreeView 中查找 TreeViewItem
 <xref:System.Windows.Controls.TreeView>控件提供了方便地显示分层数据。 如果你<xref:System.Windows.Controls.TreeView>绑定到数据源，<xref:System.Windows.Controls.TreeView.SelectedItem%2A>属性提供的简便方法，以便快速检索所选的数据对象。 通常，最好使用基础数据对象，但有时您可能需要以编程方式处理的数据包含<xref:System.Windows.Controls.TreeViewItem>。 例如，可能需要以编程方式展开<xref:System.Windows.Controls.TreeViewItem>，或选择不同的项在<xref:System.Windows.Controls.TreeView>。  
@@ -29,17 +29,17 @@ ms.locfileid: "54636022"
 >  下面的示例适用于任何<xref:System.Windows.Controls.TreeView>，而不考虑基础数据模型和搜索每个<xref:System.Windows.Controls.TreeViewItem>直到找到该对象。 具有更好的性能的另一个方法是搜索指定对象的数据模型、 跟踪的数据层次结构中的其位置，然后找到相应<xref:System.Windows.Controls.TreeViewItem>在<xref:System.Windows.Controls.TreeView>。 但是，具有更好的性能的技术需要了解数据模型，并且不能使用通用对于任何给定<xref:System.Windows.Controls.TreeView>。  
   
 ## <a name="code"></a>代码  
- [!code-csharp[TreeViewFindTVI#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#1)]
- [!code-vb[TreeViewFindTVI#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#1)]  
+ [!code-csharp[TreeViewFindTVI#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#1)]
+ [!code-vb[TreeViewFindTVI#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#1)]  
   
  前面的代码依赖于自定义<xref:System.Windows.Controls.VirtualizingStackPanel>公开一个名为方法`BringIntoView`。 下面的代码定义自定义<xref:System.Windows.Controls.VirtualizingStackPanel>。  
   
- [!code-csharp[TreeViewFindTVI#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#2)]
- [!code-vb[TreeViewFindTVI#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#2)]  
+ [!code-csharp[TreeViewFindTVI#2](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#2)]
+ [!code-vb[TreeViewFindTVI#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#2)]  
   
  以下 XAML 演示如何创建<xref:System.Windows.Controls.TreeView>，它使用自定义<xref:System.Windows.Controls.VirtualizingStackPanel>。  
   
- [!code-xaml[TreeViewFindTVI#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
+ [!code-xaml[TreeViewFindTVI#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
 ## <a name="see-also"></a>请参阅
-- [提升 TreeView 的性能](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)
+- [提升 TreeView 的性能](how-to-improve-the-performance-of-a-treeview.md)

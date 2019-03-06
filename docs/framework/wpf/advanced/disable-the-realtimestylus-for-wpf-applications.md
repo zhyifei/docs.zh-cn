@@ -2,12 +2,12 @@
 title: '禁用用于 WPF 应用程序的 RealTimeStylus '
 ms.date: 03/30/2017
 ms.assetid: e0525309-5ede-4782-837d-dbf6e5554859
-ms.openlocfilehash: 7b97a451c52b72ee1ddcec5c58e1848a0b10fb7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af7ff3addfe2673ab73ff0f977770f89c6234bb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616899"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371121"
 ---
 # <a name="disable-the-realtimestylus-for-wpf-applications"></a>禁用用于 WPF 应用程序的 RealTimeStylus 
 Windows Presentation Foundation (WPF) 提供了内置支持来处理 Windows 7 触控输入。这种支持是通过为 tablet 平台的实时触笔输入<xref:System.Windows.UIElement.OnStylusDown%2A>， <xref:System.Windows.UIElement.OnStylusUp%2A>，和<xref:System.Windows.UIElement.OnStylusMove%2A>事件。 Windows 7 还提供了作为 Win32 WM_TOUCH 窗口消息的多点触控输入。 这两个 Api 上的同一个 HWND 互相排斥。 启用触控输入通过 tablet 平台 （WPF 应用程序的默认值） 禁用 WM_TOUCH 消息。 因此，若要使用 WM_TOUCH 从 WPF 窗口接收触控消息，则必须禁用在 WPF 中的内置触笔支持。 此选项适用于使用 WM_TOUCH 组件宿主的 WPF 窗口类似的情况。  
@@ -53,4 +53,4 @@ public static void DisableWPFTabletSupport()
 ```  
   
 ## <a name="see-also"></a>请参阅
-- [截获触笔输入](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)
+- [截获触笔输入](intercepting-input-from-the-stylus.md)

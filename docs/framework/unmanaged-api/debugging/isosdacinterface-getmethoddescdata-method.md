@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825948"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352589"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData 方法
 
@@ -41,19 +41,25 @@ HRESULT GetMethodDescData(
 );
 ```
 
-### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
-`methodDesc` [in]MethodDesc 的地址。
+`methodDesc`\
+[in]MethodDesc 的地址。
 
-`ip` [in]该方法的 IP 地址。
+`ip`\
+[in]该方法的 IP 地址。
 
-`data` [out]返回从内部 Api 与 MethodDesc 关联的数据。
+`data`\
+[out]返回从内部 Api 与 MethodDesc 关联的数据。
 
-`cRevertedRejitVersions` [out]已还原的 rejit 版本数。
+`cRevertedRejitVersions`\
+[out]已还原的 rejit 版本数。
 
-`rgRevertedRejitData` [out]返回从内部 Api 与已还原的 rejit 版本关联的数据。
+`rgRevertedRejitData`\
+[out]返回从内部 Api 与已还原的 rejit 版本关联的数据。
 
-`pcNeededRevertedRejitData` [out]存储与已还原的 ReJit 版本关联的数据所需的字节数。
+`pcNeededRevertedRejitData`\
+[out]存储与已还原的 ReJit 版本关联的数据所需的字节数。
 
 ## <a name="remarks"></a>备注
 
@@ -68,5 +74,5 @@ HRESULT GetMethodDescData(
 
 ## <a name="see-also"></a>请参阅
 
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ISOSDacInterface 接口](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [调试](index.md)
+- [ISOSDacInterface 接口](isosdacinterface-interface.md)

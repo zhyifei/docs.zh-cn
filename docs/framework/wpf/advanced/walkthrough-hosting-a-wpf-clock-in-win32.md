@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 5cccc89c8346358bc4f719e1b089a181dd81f970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a58d7e5848ccd62b889b8a7645c08a35822b3352
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579766"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352719"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>演练：承载 WPF 时钟在 Win32 中
 若要将放[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应用程序，使用<xref:System.Windows.Interop.HwndSource>，其中提供了包含的 HWND 你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容。 首先创建<xref:System.Windows.Interop.HwndSource>，为其赋予类似于 CreateWindow 的参数。  然后，通知<xref:System.Windows.Interop.HwndSource>有关[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]您要在其中包含内容。  最后，获取共 HWND <xref:System.Windows.Interop.HwndSource>。 本演练演示如何创建混合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]重新实现操作系统的应用程序**日期和时间属性**对话框。  
   
 ## <a name="prerequisites"></a>系统必备  
- 请参阅[WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)。  
+ 请参阅[WPF 和 Win32 互操作](wpf-and-win32-interoperation.md)。  
   
 ## <a name="how-to-use-this-tutorial"></a>如何使用本教程  
  本教程重点介绍生成互操作应用程序的重要步骤。 本教程采用一个示例中， [Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)，但该示例是反映的最终产品。 本教程中介绍的步骤，因为如果您正在开始与某个现有[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]你自己的项目，可能是一个预先存在的项目，添加一个承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]到你的应用程序。 您可以比较将最终产品与[Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)。  
@@ -25,11 +25,11 @@ ms.locfileid: "54579766"
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Win32 中的 Windows Presentation Framework 的演练 (HwndSource)  
  下图显示了本教程的预期最终产品：  
   
- ![“日期和时间属性”对话框](../../../../docs/framework/wpf/advanced/media/interoparch06.PNG "InteropArch06")  
+ ![“日期和时间属性”对话框](./media/interoparch06.PNG "InteropArch06")  
   
  可以通过创建 c + + 重新创建此对话框[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]项目中[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，并使用对话框编辑器创建以下：  
   
- ![“日期和时间属性”对话框](../../../../docs/framework/wpf/advanced/media/interoparch07.PNG "InteropArch07")  
+ ![“日期和时间属性”对话框](./media/interoparch07.PNG "InteropArch07")  
   
  (不需要使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]若要使用<xref:System.Windows.Interop.HwndSource>，并且不需要使用 c + + 编写[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程序，但这是相当典型的方法来执行此操作，并且非常适合用于分布教程说明)。  
   
@@ -213,19 +213,19 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
   
  此处为标记：  
   
- [!code-xaml[Win32Clock#AllClockXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml#allclockxaml)]  
+ [!code-xaml[Win32Clock#AllClockXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml#allclockxaml)]  
   
  以下是附带的代码隐藏：  
   
- [!code-csharp[Win32Clock#AllClockCS](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml.cs#allclockcs)]  
+ [!code-csharp[Win32Clock#AllClockCS](~/samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml.cs#allclockcs)]  
   
  最终结果如下所示：  
   
- ![“日期和时间属性”对话框](../../../../docs/framework/wpf/advanced/media/interoparch08.PNG "InteropArch08")  
+ ![“日期和时间属性”对话框](./media/interoparch08.PNG "InteropArch08")  
   
  若要进行比较将最终结果与生成此屏幕截图中的代码，请参阅[Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Interop.HwndSource>
-- [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [WPF 和 Win32 互操作](wpf-and-win32-interoperation.md)
 - [Win32 时钟互操作示例](https://go.microsoft.com/fwlink/?LinkID=160051)

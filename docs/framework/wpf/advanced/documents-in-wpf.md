@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 00e983c907c0376b45d2342f393569d045cbf98b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20d90f96647989be35bf2c9cdf6243e8e868cd1e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517729"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361364"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文档
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供丰富的文档功能，可创建旨在比前几代 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 更易于访问和读取的高保真内容文档。 除增强功能和质量外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还对文档显示、打包和安全性能提供集成服务。 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文档类型和文档打包。  
@@ -27,7 +27,7 @@ ms.locfileid: "54517729"
   
  固定文档适用于需要精确的 [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] 表示形式的应用程序，这与使用的显示器或打印机硬件无关。 固定文档的典型用途包括桌面发布、字处理和窗体布局，在这些情况下，遵循原始页面设计非常关键。 作为其布局的一部分，固定文档独立于所使用的显示或打印设备来对内容元素进行精确地定位安放。 例如，一个固定文档页面在 96 dpi 显示器上显示的效果与在 600 dpi 激光打印机或 4800 dpi 照相排字机上输出的效果是完全一样的。 虽然文档质量会根据每台设备的功能达到最优化，但是页面布局在所有情况下都保持不变。  
   
- 比较而言，流文档旨在优化查看和可读性，因此，当易读性是文档的主要使用要求时，最适合使用流文档。 流文档根据运行时变量（例如，窗口大小、设备分辨率和可选的用户首选项）来动态调整和重新排列内容，而不是设置为一个预定义的布局。 网页就是流文档的一个简单示例，网页上的页面内容会动态调整格式以适应当前窗口。 流文档会基于运行时环境来优化用户的查看和阅读体验。 例如，在高分辨率的 19 英寸显示器上或小型 2x3 英寸 PDA 屏幕上，同一流文档会动态调整格式以实现最佳可读性。 此外，流文档还具有很多内置功能，包括搜索、能够优化可读性的查看模式以及更改字体大小和外观的功能。  有关流文档的演示、示例和详细信息，请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
+ 比较而言，流文档旨在优化查看和可读性，因此，当易读性是文档的主要使用要求时，最适合使用流文档。 流文档根据运行时变量（例如，窗口大小、设备分辨率和可选的用户首选项）来动态调整和重新排列内容，而不是设置为一个预定义的布局。 网页就是流文档的一个简单示例，网页上的页面内容会动态调整格式以适应当前窗口。 流文档会基于运行时环境来优化用户的查看和阅读体验。 例如，在高分辨率的 19 英寸显示器上或小型 2x3 英寸 PDA 屏幕上，同一流文档会动态调整格式以实现最佳可读性。 此外，流文档还具有很多内置功能，包括搜索、能够优化可读性的查看模式以及更改字体大小和外观的功能。  有关流文档的演示、示例和详细信息，请参阅[流文档概述](flow-document-overview.md)。  
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>文档控件和文本布局  
@@ -40,7 +40,7 @@ ms.locfileid: "54517729"
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>流文档概述  
- **注意：** 有关更多详细流文档功能以及如何创建它们的信息，请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
+ **注意：** 有关更多详细流文档功能以及如何创建它们的信息，请参阅[流文档概述](flow-document-overview.md)。  
   
  流文档内容的显示由三个控件支持： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54517729"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>用户界面中的文本  
- 除可将文本添加到文档外，文本显然还可以用于应用程序 UI（如窗体）中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括多个用于在屏幕中绘制文本的控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。 一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的例如中的简短句子时，应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文本支持时，可以使用。 有关详细信息，请参阅 [TextBlock 概述](../../../../docs/framework/wpf/controls/textblock-overview.md)。  
+ 除可将文本添加到文档外，文本显然还可以用于应用程序 UI（如窗体）中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括多个用于在屏幕中绘制文本的控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。 一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的例如中的简短句子时，应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文本支持时，可以使用。 有关详细信息，请参阅 [TextBlock 概述](../controls/textblock-overview.md)。  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>文档打包  
@@ -142,7 +142,7 @@ ms.locfileid: "54517729"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [文本](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)
-- [文档序列化和存储](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [文本](optimizing-performance-text.md)
+- [流文档概述](flow-document-overview.md)
+- [打印概述](printing-overview.md)
+- [文档序列化和存储](document-serialization-and-storage.md)

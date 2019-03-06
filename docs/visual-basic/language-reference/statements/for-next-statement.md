@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 5048d48cc22ebe405ef54dc207ac96b6c274078a
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: bcadcdfb2cb15bc6012ebe1964a4fc4379ba649d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202621"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370301"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 语句 (Visual Basic)
 将一组语句重复指定的次数。  
@@ -125,7 +125,7 @@ Next [ counter ]
   
  默认值`step`为 1。  
   
-###  <a name="BKMK_Counter"></a> 计数器参数  
+### <a name="BKMK_Counter"></a> 计数器参数  
  下表指示是否`counter`定义新的本地变量为作用域为整个`For…Next`循环。 此决定取决于是否`datatype`存在以及是否`counter`已定义。  
   
 |是`datatype`存在？|是`counter`已定义？|结果 (是否`counter`定义新的本地变量为作用域为整个`For...Next`循环)|  

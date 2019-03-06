@@ -9,15 +9,15 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ToolTip
 - templates [WPF], ToolTip
 ms.assetid: 405fe385-4de9-49ee-a448-d8f4d1f740dd
-ms.openlocfilehash: 9b87c5c80533e12f5a93e4fc59cb5265a8374a33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 424cfc196474d342f1efdc049350acb71b8fb1eb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521954"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375358"
 ---
 # <a name="tooltip-styles-and-templates"></a>ToolTip 样式和模板
-本主题介绍的样式和模板的<xref:System.Windows.Controls.ToolTip>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍的样式和模板的<xref:System.Windows.Controls.ToolTip>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
   
 ## <a name="tooltip-parts"></a>工具提示部分  
  <xref:System.Windows.Controls.ToolTip>控件没有任何命名的部件。  
@@ -36,18 +36,18 @@ ms.locfileid: "54521954"
 ## <a name="tooltip-controltemplate-example"></a>工具提示的 ControlTemplate 示例  
  下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.ToolTip>控件。  
   
- [!code-xaml[ControlTemplateExamples#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tooltip.xaml#tooltip)]  
+ [!code-xaml[ControlTemplateExamples#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/tooltip.xaml#tooltip)]  
   
  上一示例使用了一个或多个以下资源。  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [控件样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)
-- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [控件样式和模板](control-styles-and-templates.md)
+- [控件自定义](control-customization.md)
+- [样式设置和模板化](styling-and-templating.md)
+- [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)

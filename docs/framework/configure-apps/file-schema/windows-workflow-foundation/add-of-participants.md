@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
 ms.openlocfilehash: 65b8a34250a22da79e900f6bee894b501c5ad6ba
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284539"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368254"
 ---
 # <a name="add-of-participants"></a>\<add> of \<participants>
 配置一个跟踪参与者，它侦听直接从运行时发出的跟踪记录，并按照配置跟踪参与者的任何方式处理这些记录。 这包括写入特定输出（例如，文件、控制台、ETW）、处理/聚合记录或可能需要的任何其他组合。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: 3fadba2fe8036fc558e18f80bd7cb1ffc977b762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fda5330ff75c1744f3ed9d4394e51b5efb737071
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632109"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374422"
 ---
 # <a name="planning-for-application-performance"></a>规划应用程序性能
 实现性能目标的成功取决于如何开发您性能的策略。 规划是在开发的任何产品的第一个阶段。 本主题介绍一些非常简单规则可用于开发良好的性能策略。  
@@ -33,12 +33,12 @@ ms.locfileid: "54632109"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件是本质上是可扩展的从而对广泛自定义其外观，而不修改其控件行为。 通过利用样式、 数据模板和控件模板，可以创建并以增量方式发展可自定义[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]的适应你的性能要求。  
   
 ## <a name="see-also"></a>请参阅
-- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [利用硬件](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [布局和示例](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [对象行为](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [应用程序资源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [文本](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [优化 WPF 应用程序性能](optimizing-wpf-application-performance.md)
+- [利用硬件](optimizing-performance-taking-advantage-of-hardware.md)
+- [布局和示例](optimizing-performance-layout-and-design.md)
+- [2D 图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)
+- [对象行为](optimizing-performance-object-behavior.md)
+- [应用程序资源](optimizing-performance-application-resources.md)
+- [文本](optimizing-performance-text.md)
+- [数据绑定](optimizing-performance-data-binding.md)
+- [其他性能建议](optimizing-performance-other-recommendations.md)

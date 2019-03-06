@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b165501b3e090cf309f3b4053649644b87b47f22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: defd38798453c8b82ec23605d12d41e5b90aaabc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555565"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352901"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo 方法
 定义一组异步等待当前方法中的操作。  
   
- 每个 yield 偏移量与 await 表达式的返回指令，用于标识潜在 yield 相匹配。 每个`breakpointMethod` / `breakpointOffset`对告诉我们其中异步操作将继续，（这可能是在另一种方法。  
+ 每个 yield 偏移量与 await 表达式的返回指令，用于标识潜在 yield 相匹配。 每个`breakpointMethod` / `breakpointOffset`对告诉我们其中异步操作将恢复其可能在不同的方法。  
   
 ## <a name="syntax"></a>语法  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
 ms.openlocfilehash: 8d079613d1970d2a50ddb3449c2a3072010b2c55
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280002"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358309"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5 中的新增功能
 
@@ -52,7 +52,7 @@ ms.locfileid: "55280002"
  添加了对真实异步流的支持，在这种流中，如果接收方没有读取或者读取速度较慢，则发送方现在不会阻止线程，从而提高了可伸缩性。 消除了客户端向 IIS 承载的 WCF 服务发送流消息时对消息缓冲的限制。 有关详细信息，请参阅[WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。
 
 ## <a name="simplifying-exposing-an-endpoint-over-https-with-iis"></a>简化通过 HTTPS 与 IIS 公开终结点
- 为了简化通过 HTTPS 来公开终结点，添加了一个 HTTPS 协议映射。 若要启用 HTTPS 终结点，请确保您的网站已配置 HTTPS 绑定和 SSL 证书，然后，只需为承载该服务的虚拟目录启用 HTTPS。 如果为服务启用了元数据，则也会通过 HTTPS 公开该元数据。
+ 为了简化通过 HTTPS 来公开终结点，添加了一个 HTTPS 协议映射。 若要启用 HTTPS 终结点，请确保你的网站已配置 HTTPS 绑定和 SSL 证书，然后，只需为承载该服务的虚拟目录启用 HTTPS。 如果为服务启用了元数据，则也会通过 HTTPS 公开该元数据。
 
 ## <a name="generating-a-single-wsdl-document"></a>生成单个 WSDL 文档
  某些第三方 WSDL 处理堆栈不能通过 xsd:import 来处理对其他文档有依赖关系的 WSDL 文档。  您现在可通过 WCF 来指定在单个文档中返回的所有 WSDL 信息。 若要请求单个 WSDL 文档将追加"？ singleWSDL"时从服务请求元数据的 uri。
@@ -75,7 +75,7 @@ ms.locfileid: "55280002"
  为了帮助新的和现有 WCF 服务开发人员配置服务，Visual Studio XML 编辑器现在为属于服务配置文件的每个配置元素及其属性提供了工具提示。
 
 ## <a name="configuring-wcf-services-in-code"></a>在代码中配置 WCF 服务
- Windows Communication Foundation (WCF) 允许开发人员使用代码或配置文件配置服务。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许您在代码中配置服务。 在早期版本的代码中的 WCF （4.0 及更早版本） 配置服务很容易在自承载方案中，<xref:System.ServiceModel.ServiceHost>类允许您配置终结点和调用 ServiceHost.Open 之前的行为。 但是，在 Web 承载方案中，你没有访问 <xref:System.ServiceModel.ServiceHost> 类的权限。 若要配置 Web 承载的服务，你需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从.NET 4.5 开始，WCF 提供了更简单的方法同时配置两者自托管，web 托管代码中的服务。 有关详细信息，请参阅[代码中配置 WCF 服务](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)。
+ Windows Communication Foundation (WCF) 允许开发人员使用代码或配置文件配置服务。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 WCF 还允许您在代码中配置服务。 在早期版本的代码中的 WCF （4.0 及更早版本） 配置服务很容易在自承载方案中，<xref:System.ServiceModel.ServiceHost>类允许您配置终结点和调用 ServiceHost.Open 之前的行为。 但是，在 Web 承载方案中，您没有访问 <xref:System.ServiceModel.ServiceHost> 类的权限。 若要配置 Web 承载的服务，你需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从.NET 4.5 开始，WCF 提供了更简单的方法同时配置两者自托管，web 托管代码中的服务。 有关详细信息，请参阅[代码中配置 WCF 服务](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)。
 
 ## <a name="channelfactory-caching"></a>ChannelFactory 缓存
  WCF 客户端应用程序使用 <xref:System.ServiceModel.ChannelFactory%601> 类来创建 WCF 服务的通信通道。  创建 <xref:System.ServiceModel.ChannelFactory%601> 实例会带来一定的开销，因为这涉及以下操作：

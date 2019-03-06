@@ -24,12 +24,12 @@ helpviewer_keywords:
 - startup events [WPF]
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-ms.openlocfilehash: 8b42104522be854fe4e49d08e110497469d64980
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5f38492fff9aa87094542b174becc54ee324a78
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555357"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371484"
 ---
 # <a name="object-lifetime-events"></a>对象生存期事件
 本主题介绍表示对象生存期（创建、使用和销毁）中的阶段的特定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件。  
@@ -38,7 +38,7 @@ ms.locfileid: "54555357"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
- 本主题假设你作为 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 类的现有依赖属性的使用者已经对依赖属性有所了解，并且已经阅读了[依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)主题。 若要理解本主题中的示例，还应当了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]（请参阅 [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)）并知道如何编写 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。  
+ 本主题假设你作为 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 类的现有依赖属性的使用者已经对依赖属性有所了解，并且已经阅读了[依赖属性概述](dependency-properties-overview.md)主题。 若要理解本主题中的示例，还应当了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]（请参阅 [XAML 概述 (WPF)](xaml-overview-wpf.md)）并知道如何编写 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。  
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>对象生存期事件  
@@ -68,12 +68,12 @@ ms.locfileid: "54555357"
 ## <a name="lifetime-events-application-model-elements"></a>生存期事件应用程序模型元素  
  构建在通用生存期事件的元素是以下应用程序模型元素： <xref:System.Windows.Application>， <xref:System.Windows.Window>， <xref:System.Windows.Controls.Page>， <xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>。 这些与特定用途相关的额外事件扩充了常见的生存期事件。 将在以下位置详细介绍这些内容：  
   
--   <xref:System.Windows.Application>：[应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)。  
+-   <xref:System.Windows.Application>：[应用程序管理概述](../app-development/application-management-overview.md)。  
   
--   <xref:System.Windows.Window>：[WPF Windows 概述](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)。  
+-   <xref:System.Windows.Window>：[WPF Windows 概述](../app-development/wpf-windows-overview.md)。  
   
--   <xref:System.Windows.Controls.Page><xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>:[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
+-   <xref:System.Windows.Controls.Page><xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>:[导航概述](../app-development/navigation-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [依赖项属性值优先级](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [依赖项属性值优先级](dependency-property-value-precedence.md)
+- [路由事件概述](routed-events-overview.md)

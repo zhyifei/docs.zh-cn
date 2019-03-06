@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: fa23595359bc210edfd1d55486158a71420699c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45214b5f0e6827c36f87a4d45592ff0989c9a877
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615067"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379468"
 ---
 # <a name="imaging-overview"></a>图像处理概述
 本主题介绍 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]。 借助 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]，开发人员可以显示、转换图像和设置图像的格式。  
@@ -66,35 +66,35 @@ ms.locfileid: "54615067"
   
  下面的示例演示如何<xref:System.Windows.Media.Imaging.BitmapFrame>创建从<xref:System.Windows.Media.Imaging.BitmapSource>，然后添加到[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]映像。  
   
- [!code-csharp[BitmapFrameExample#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#10)]
- [!code-vb[BitmapFrameExample#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
+ [!code-csharp[BitmapFrameExample#10](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#10)]
+ [!code-vb[BitmapFrameExample#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
   
 ### <a name="image-format-decoding"></a>图像格式解码  
  图像解码是指将某种图像格式转换为可以由系统使用的图像数据。 然后，此图像数据可以用于显示、处理或编码为其他格式。 根据图像格式选择解码器。 自动选择编解码器，除非指定了特定解码器。 [在 WPF 中显示图像](#_displayingimages)一节中的示例演示了自动解码。 使用非托管 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 界面开发并向系统注册的自定义格式解码器会自动加入到解码器选择队列。 这将使得自定义格式可以自动显示在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序中。  
   
  以下示例演示使用位图解码器对 [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] 格式图像进行解码。  
   
- [!code-cpp[BmpBitmapDecoderEncoder#5](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#5)]
- [!code-csharp[BmpBitmapDecoderEncoder#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#5)]
- [!code-vb[BmpBitmapDecoderEncoder#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#5)]  
+ [!code-cpp[BmpBitmapDecoderEncoder#5](~/samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#5)]
+ [!code-csharp[BmpBitmapDecoderEncoder#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#5)]
+ [!code-vb[BmpBitmapDecoderEncoder#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#5)]  
   
 ### <a name="image-format-encoding"></a>图像格式编码  
  图像编码是指将图像数据转换为特定的图像格式。 然后，已编码的图像数据可以用于创建新的图像文件。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 为上面介绍的每种图像格式提供编码器。  
   
  以下示例演示使用编码器保存一个新创建的位图图像。  
   
- [!code-cpp[BmpBitmapDecoderEncoder#3](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#3)]
- [!code-csharp[BmpBitmapDecoderEncoder#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#3)]
- [!code-vb[BmpBitmapDecoderEncoder#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#3)]  
+ [!code-cpp[BmpBitmapDecoderEncoder#3](~/samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#3)]
+ [!code-csharp[BmpBitmapDecoderEncoder#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[BmpBitmapDecoderEncoder#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#3)]  
   
 <a name="_displayingimages"></a>   
 ## <a name="displaying-images-in-wpf"></a>在 WPF 中显示图像  
  有几种方法可在 Windows Presentation Foundation (WPF) 应用程序中显示图像。 可以使用显示图像<xref:System.Windows.Controls.Image>控件，visual 使用绘制<xref:System.Windows.Media.ImageBrush>，或使用绘制<xref:System.Windows.Media.ImageDrawing>。  
   
 ### <a name="using-the-image-control"></a>使用 Image 控件  
- <xref:System.Windows.Controls.Image> 是一个框架元素，在应用程序中显示图像的主要方法。 在中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，<xref:System.Windows.Controls.Image>可以采用两种方法; 特性语法或属性语法。 以下示例演示如何使用特性语法或属性标记语法来呈现宽度为 200 像素的图像。 有关特性语法和属性语法的详细信息，请参阅[依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+ <xref:System.Windows.Controls.Image> 是一个框架元素，在应用程序中显示图像的主要方法。 在中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，<xref:System.Windows.Controls.Image>可以采用两种方法; 特性语法或属性语法。 以下示例演示如何使用特性语法或属性标记语法来呈现宽度为 200 像素的图像。 有关特性语法和属性语法的详细信息，请参阅[依赖属性概述](../advanced/dependency-properties-overview.md)。  
   
- [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
+ [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
  许多示例使用<xref:System.Windows.Media.Imaging.BitmapImage>对象，以引用的图像文件。 <xref:System.Windows.Media.Imaging.BitmapImage> 是一个专用<xref:System.Windows.Media.Imaging.BitmapSource>适用于[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]加载和是显示为图像的简单办法<xref:System.Windows.Controls.Image.Source%2A>的<xref:System.Windows.Controls.Image>控件。  
   
@@ -103,32 +103,32 @@ ms.locfileid: "54615067"
 > [!NOTE]
 >  <xref:System.Windows.Media.Imaging.BitmapImage> 实现<xref:System.ComponentModel.ISupportInitialize>接口来优化对多个属性的初始化。 只能在对象初始化过程中进行属性更改。 调用<xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>发出信号的初始化已开始和<xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A>发出信号的初始化已完成。 初始化后，将忽略所做的属性更改。  
   
- [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
- [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
+ [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
+ [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>旋转、转换和剪切图像  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用户能够使用的属性转换图像<xref:System.Windows.Media.Imaging.BitmapImage>或使用其他<xref:System.Windows.Media.Imaging.BitmapSource>对象如<xref:System.Windows.Media.Imaging.CroppedBitmap>或<xref:System.Windows.Media.Imaging.FormatConvertedBitmap>。 上述图像转换可以缩放或旋转图像、更改图像的像素格式或剪切图像。  
   
  使用执行图像旋转<xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A>属性的<xref:System.Windows.Media.Imaging.BitmapImage>。 只能以 90 度为增量进行旋转。 在以下示例中，图像旋转了 90 度。  
   
- [!code-xaml[ImageElementExample#TransformedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml#transformedxaml2)]  
+ [!code-xaml[ImageElementExample#TransformedXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml#transformedxaml2)]  
   
- [!code-csharp[ImageElementExample#TransformedCSharp1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml.cs#transformedcsharp1)]
- [!code-vb[ImageElementExample#TransformedCSharp1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/TransformedImageExample.xaml.vb#transformedcsharp1)]  
+ [!code-csharp[ImageElementExample#TransformedCSharp1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml.cs#transformedcsharp1)]
+ [!code-vb[ImageElementExample#TransformedCSharp1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/TransformedImageExample.xaml.vb#transformedcsharp1)]  
   
  将图像转换为不同的像素格式，如灰度使用<xref:System.Windows.Media.Imaging.FormatConvertedBitmap>。 在以下示例中，图像转换为<xref:System.Windows.Media.PixelFormats.Gray4%2A>。  
   
- [!code-xaml[ImageElementExample_snip#ConvertedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml#convertedxaml2)]  
+ [!code-xaml[ImageElementExample_snip#ConvertedXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml#convertedxaml2)]  
   
- [!code-csharp[ImageElementExample_snip#ConvertedCSharp1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml.cs#convertedcsharp1)]
- [!code-vb[ImageElementExample_snip#ConvertedCSharp1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/FormatConvertedExample.xaml.vb#convertedcsharp1)]  
+ [!code-csharp[ImageElementExample_snip#ConvertedCSharp1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml.cs#convertedcsharp1)]
+ [!code-vb[ImageElementExample_snip#ConvertedCSharp1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/FormatConvertedExample.xaml.vb#convertedcsharp1)]  
   
  若要裁剪图像，或者<xref:System.Windows.UIElement.Clip%2A>的属性<xref:System.Windows.Controls.Image>或<xref:System.Windows.Media.Imaging.CroppedBitmap>可用。 通常情况下，如果只是想要显示的图像的一部分<xref:System.Windows.UIElement.Clip%2A>应使用。 如果需要编码和保存剪切后的图像，<xref:System.Windows.Media.Imaging.CroppedBitmap>应使用。 在以下示例中，使用剪辑属性使用剪切图像<xref:System.Windows.Media.EllipseGeometry>。  
   
- [!code-xaml[ImageElementExample_snip#CroppedXAMLUsingClip1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml#croppedxamlusingclip1)]  
+ [!code-xaml[ImageElementExample_snip#CroppedXAMLUsingClip1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml#croppedxamlusingclip1)]  
   
- [!code-csharp[ImageElementExample_snip#CroppedCSharpUsingClip1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml.cs#croppedcsharpusingclip1)]
- [!code-vb[ImageElementExample_snip#CroppedCSharpUsingClip1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/CroppedImageExample.xaml.vb#croppedcsharpusingclip1)]  
+ [!code-csharp[ImageElementExample_snip#CroppedCSharpUsingClip1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml.cs#croppedcsharpusingclip1)]
+ [!code-vb[ImageElementExample_snip#CroppedCSharpUsingClip1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/CroppedImageExample.xaml.vb#croppedcsharpusingclip1)]  
   
 #### <a name="stretching-images"></a>拉伸图像  
  <xref:System.Windows.Controls.Image.Stretch%2A>属性控制如何拉伸图像以填充其容器。 <xref:System.Windows.Controls.Image.Stretch%2A>属性接受以下值，通过定义<xref:System.Windows.Media.Stretch>枚举：  
@@ -145,22 +145,22 @@ ms.locfileid: "54615067"
   
  下图显示了示例的输出，并演示了不同<xref:System.Windows.Controls.Image.Stretch%2A>时必须设置应用到图像。  
   
- ![Different TileBrush Stretch settings](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
+ ![Different TileBrush Stretch settings](./media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
 不同的拉伸设置  
   
- [!code-xaml[ImageElementExample_snip#ImageStretchExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageStretchExample.xaml#imagestretchexamplewholepage)]  
+ [!code-xaml[ImageElementExample_snip#ImageStretchExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageStretchExample.xaml#imagestretchexamplewholepage)]  
   
 ### <a name="painting-with-images"></a>使用图像进行绘制  
  映像还在应用程序与进行绘制，从而显示<xref:System.Windows.Media.Brush>。 借助画笔，可以利用任意内容（从简单的纯色到复杂的图案和图像集）绘制 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 对象。 若要绘制图像，请使用<xref:System.Windows.Media.ImageBrush>。 <xref:System.Windows.Media.ImageBrush>是一种<xref:System.Windows.Media.TileBrush>其内容定义为位图图像。 <xref:System.Windows.Media.ImageBrush>显示由指定的单个映像及其<xref:System.Windows.Media.ImageBrush.ImageSource%2A>属性。 可以控制图像的拉伸、对齐和平铺方式，从而防止失真并生成图案和其他效果。 下图显示了可以使用实现某些效果<xref:System.Windows.Media.ImageBrush>。  
   
- ![ImageBrush 输出示例](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
+ ![ImageBrush 输出示例](./media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
 图像画笔可以填充形状、控件、文本等  
   
  下面的示例演示了如何绘制一个具有映像使用的按钮的背景<xref:System.Windows.Media.ImageBrush>。  
   
- [!code-xaml[UsingImageBrush#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush/CS/PaintingWithImages.xaml#4)]  
+ [!code-xaml[UsingImageBrush#4](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush/CS/PaintingWithImages.xaml#4)]  
   
- 有关其他信息<xref:System.Windows.Media.ImageBrush>，并绘制图像查看[使用图像、 绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
+ 有关其他信息<xref:System.Windows.Media.ImageBrush>，并绘制图像查看[使用图像、 绘图和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)。  
   
 <a name="_metadata"></a>   
 ## <a name="image-metadata"></a>图像元数据  
@@ -170,15 +170,15 @@ ms.locfileid: "54615067"
   
  为了简化读取元数据的过程<xref:System.Windows.Media.Imaging.BitmapMetadata>提供了可以如轻松访问的多个命名的属性<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>， <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>，和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 许多命名属性还可以用于编写元数据。 元数据查询读取器提供对读取元数据的其他支持。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>方法用于检索元数据查询读取器通过提供字符串查询，如 *"/ app1/exif /"*。 在以下示例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>用于获取存储在文本 *"/text/description"* 位置。  
   
- [!code-cpp[BitmapMetadata#GetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
- [!code-csharp[BitmapMetadata#GetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
- [!code-vb[BitmapMetadata#GetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
+ [!code-cpp[BitmapMetadata#GetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
+ [!code-csharp[BitmapMetadata#GetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
+ [!code-vb[BitmapMetadata#GetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
   
  若要编写元数据，请使用元数据查询编写器。 <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> 获取查询编写器并设置所需的值。 在以下示例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>用于写入中存储的文本 *"/text/description"* 位置。  
   
- [!code-cpp[BitmapMetadata#SetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
- [!code-csharp[BitmapMetadata#SetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
- [!code-vb[BitmapMetadata#SetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]  
+ [!code-cpp[BitmapMetadata#SetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
+ [!code-csharp[BitmapMetadata#SetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
+ [!code-vb[BitmapMetadata#SetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]  
   
 <a name="_extensibility"></a>   
 ## <a name="codec-extensibility"></a>编解码器扩展性  
@@ -194,5 +194,5 @@ ms.locfileid: "54615067"
 - <xref:System.Windows.Media.Imaging.BitmapImage>
 - <xref:System.Windows.Controls.Image>
 - <xref:System.Windows.Media.Imaging.BitmapMetadata>
-- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Win32 示例编解码器](https://go.microsoft.com/fwlink/?LinkID=160052)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 52fdbfa3b0cd79cc9714a13a75716829163e45f6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e6dbaa9201d5c9cd902412797b2427ec488d014
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967368"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371406"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 指定一个或多个声明的编程元素只能在包含其声明的程序集内访问。  
@@ -35,7 +35,7 @@ ms.locfileid: "56967368"
  有关的比较`Friend`和其他访问修饰符，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 > [!NOTE]
->  你可以指定另一个程序集为友元程序集，这使它可以访问所有类型和成员标记为`Friend`。 有关详细信息，请参阅[友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)。  
+>  你可以指定另一个程序集为友元程序集，这使它可以访问所有类型和成员标记为`Friend`。 有关详细信息，请参阅[友元程序集](../../../standard/assembly/friend-assemblies.md)。  
   
 ## <a name="example"></a>示例  
  下面的类使用`Friend`修饰符来允许访问某些成员在同一程序集中的其他编程元素。  

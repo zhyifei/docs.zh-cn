@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 6ee440d91bf241949923074dfd5163a49cfd9979
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740954"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378206"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>在 Win32 和 WPF 之间共享消息循环
 本主题介绍如何实现与互操作的消息循环[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，通过使用现有的消息循环中的进行展示<xref:System.Windows.Threading.Dispatcher>或通过创建单独的消息循环上[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]端的互操作代码。  
@@ -64,6 +64,6 @@ ms.locfileid: "54740954"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
-- [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [线程模型](../../../../docs/framework/wpf/advanced/threading-model.md)
-- [输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [WPF 和 Win32 互操作](wpf-and-win32-interoperation.md)
+- [线程模型](threading-model.md)
+- [输入概述](input-overview.md)

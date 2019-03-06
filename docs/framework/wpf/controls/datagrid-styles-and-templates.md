@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: 1a8eb1acf1143c31197ef12e4be3bd4451d98eaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 582179d8469cabc3551e1bed53c87e045f26e7cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685433"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366070"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid 样式和模板
-本主题介绍的样式和模板的<xref:System.Windows.Controls.DataGrid>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍的样式和模板的<xref:System.Windows.Controls.DataGrid>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
   
 ## <a name="datagrid-parts"></a>DataGrid 部件  
  下表列出了用于命名的部件<xref:System.Windows.Controls.DataGrid>控件。  
@@ -28,7 +28,7 @@ ms.locfileid: "54685433"
   
  当您创建<xref:System.Windows.Controls.ControlTemplate>有关<xref:System.Windows.Controls.DataGrid>，模板可能包含<xref:System.Windows.Controls.ItemsPresenter>内<xref:System.Windows.Controls.ScrollViewer>。 (<xref:System.Windows.Controls.ItemsPresenter>显示在每个项<xref:System.Windows.Controls.DataGrid>;<xref:System.Windows.Controls.ScrollViewer>控件内实现滚动)。  如果<xref:System.Windows.Controls.ItemsPresenter>不是直接子级<xref:System.Windows.Controls.ScrollViewer>，必须授予<xref:System.Windows.Controls.ItemsPresenter>名称， `ItemsPresenter`。  
   
- 默认模板<xref:System.Windows.Controls.DataGrid>包含<xref:System.Windows.Controls.ScrollViewer>控件。 有关定义的部件的详细信息<xref:System.Windows.Controls.ScrollViewer>，请参阅[ScrollViewer 样式和模板](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)。  
+ 默认模板<xref:System.Windows.Controls.DataGrid>包含<xref:System.Windows.Controls.ScrollViewer>控件。 有关定义的部件的详细信息<xref:System.Windows.Controls.ScrollViewer>，请参阅[ScrollViewer 样式和模板](scrollviewer-styles-and-templates.md)。  
   
 ## <a name="datagrid-states"></a>数据网格状态  
  下表列出了的可视状态<xref:System.Windows.Controls.DataGrid>控件。  
@@ -161,18 +161,18 @@ ms.locfileid: "54685433"
 ## <a name="datagrid-controltemplate-example"></a>DataGrid ControlTemplate 示例  
  下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.DataGrid>控件和其关联的类型。  
   
- [!code-xaml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
+ [!code-xaml[ControlTemplateExamples#DataGrid](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
  上一示例使用了一个或多个以下资源。  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [控件样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)
-- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [控件样式和模板](control-styles-and-templates.md)
+- [控件自定义](control-customization.md)
+- [样式设置和模板化](styling-and-templating.md)
+- [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)

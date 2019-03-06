@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 1761fbf1cb8ec337ea5733e3ab693031b1934179
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725528"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374110"
 ---
 # <a name="how-to-localize-an-application"></a>如何：对应用程序进行本地化
 本教程介绍如何通过使用 LocBaml 工具创建本地化应用程序。  
@@ -30,13 +30,14 @@ ms.locfileid: "54725528"
 ## <a name="requirements"></a>要求  
  在此讨论过程中，你将使用 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]，这是一个从命令行运行的编译器。  
   
- 此外，还会指导你使用项目文件。 有关说明如何使用[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]和项目文件，请参阅[生成并部署](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)。  
+ 此外，还会指导你使用项目文件。 有关说明如何使用[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]和项目文件，请参阅[生成并部署](../app-development/building-and-deploying-wpf-applications.md)。  
   
  在此讨论中的所有示例都使用 zh-CN（中文-中国）作为区域设置。 这使你能够而无需安装另一种语言就能完成这些示例的步骤。  
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>创建一个简单的应用程序  
- 在此步骤中，你将准备要用于本地化的应用程序。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 示例提供了 HelloApp 示例，将用于本讨论中的代码示例。 如果想要使用此示例中，下载[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件从[LocBaml 工具示例](https://go.microsoft.com/fwlink/?LinkID=160016)。  
+ 在此步骤中，你将准备要用于本地化的应用程序。 
+  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 示例提供了 HelloApp 示例，将用于本讨论中的代码示例。 如果想要使用此示例中，下载[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件从[LocBaml 工具示例](https://go.microsoft.com/fwlink/?LinkID=160016)。  
   
 1.  将应用程序开发到想要开始进行本地化的位置。  
   
@@ -137,13 +138,13 @@ ms.locfileid: "54725528"
   
    2.  **资源键**。 本地化的资源标识符。  
   
-   3.  **Category**。 值类型。 请参阅[本地化特性和注释](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)。  
+   3.  **Category**。 值类型。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)。  
   
-   4.  **Readability**。 值是否可以由本地化人员读取。 请参阅[本地化特性和注释](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)。  
+   4.  **Readability**。 值是否可以由本地化人员读取。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)。  
   
-   5.  **Modifiability**。 值是否可以由本地化人员修改。 请参阅[本地化特性和注释](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)。  
+   5.  **Modifiability**。 值是否可以由本地化人员修改。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)。  
   
-   6.  **注释**。 值的附加说明，用于确定值被本地化的方式。 请参阅[本地化特性和注释](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)。  
+   6.  **注释**。 值的附加说明，用于确定值被本地化的方式。 请参阅[本地化特性和注释](localization-attributes-and-comments.md)。  
   
    7.  **值**。 要翻译为所需区域性设置的文本值。  
   
@@ -192,9 +193,9 @@ ms.locfileid: "54725528"
   
     -   在你的应用程序中，将下列代码添加到 App.xaml.cs 中：  
   
-   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
-   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
-   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
+   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
+   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
+   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
   
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>使用 LocBaml 的一些提示  
@@ -210,5 +211,5 @@ ms.locfileid: "54725528"
  现在，你应该对如何使用 LocBaml 工具有了一个基本的了解。  你应该能够制作包含 Uid 的文件。 通过使用 LocBaml 工具，你应该能够分析文件以提取可本地化的内容，并且在内容翻译后，你应该能够生成一个合并已翻译内容的 resources.dll 文件。 本主题不包括每个可能的细节，但现在你已经掌握了使用 LocBaml 对应用程序进行本地化的必要知识。  
   
 ## <a name="see-also"></a>请参阅
-- [WPF 全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [WPF 全球化](globalization-for-wpf.md)
+- [使用自动布局概述](use-automatic-layout-overview.md)

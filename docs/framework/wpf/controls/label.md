@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 0ff63027777cd0637238512f01663fe0d81d47ed
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 131eb251493b77f13b5dc59a3a03504be8868e8a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746897"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376154"
 ---
 # <a name="label"></a>Label
 <xref:System.Windows.Controls.Label> 控件通常会提供中的信息[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  从历史上看，<xref:System.Windows.Controls.Label>具有包含纯文本，但由于<xref:System.Windows.Controls.Label>随[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]是<xref:System.Windows.Controls.ContentControl>，它可以包含文本或<xref:System.Windows.UIElement>。  
@@ -21,7 +21,7 @@ ms.locfileid: "56746897"
   
  下图显示<xref:System.Windows.Controls.Label>"主题"面向<xref:System.Windows.Controls.ComboBox>。  当用户按下时，<xref:System.Windows.Controls.ComboBox>接收焦点。  有关详细信息，请参阅[如何：设置标签的目标属性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))。  
   
- ![显示属性显示按用法标记](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
+ ![显示属性显示按用法标记](./media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：创建具有访问键和文本换行的控件](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 8e598b557381bf82b42ea87e2f020ebba4450929
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8acef4a52c9317618485a7c46c1e22cc2524dd69
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520290"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379596"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>演练：创建在 WPF 中承载的 Direct3D9 内容
-本演练演示如何创建适用于 Windows Presentation Foundation (WPF) 应用程序中承载的 Direct3D9 内容。 承载 WPF 应用程序中的 Direct3D9 内容的详细信息，请参阅[WPF 和 Direct3D9 互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)。
+本演练演示如何创建适用于 Windows Presentation Foundation (WPF) 应用程序中承载的 Direct3D9 内容。 承载 WPF 应用程序中的 Direct3D9 内容的详细信息，请参阅[WPF 和 Direct3D9 互操作](wpf-and-direct3d9-interoperation.md)。
 
  在本演练中，你将要执行以下任务：
 
@@ -70,7 +70,7 @@ ms.locfileid: "54520290"
 12. 在解决方案资源管理器，添加新模块定义文件 (.def) 名为`D3DContent.def`到项目。
 
 ## <a name="creating-the-direct3d9-content"></a>创建 Direct3D9 内容
- 若要获得最佳性能，Direct3D9 内容必须使用特定的设置。 下面的代码演示如何创建具有最佳的性能特征的 Direct3D9 曲面。 有关详细信息，请参阅[Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)。
+ 若要获得最佳性能，Direct3D9 内容必须使用特定的设置。 下面的代码演示如何创建具有最佳的性能特征的 Direct3D9 曲面。 有关详细信息，请参阅[Direct3D9 和 WPF 互操作性的性能注意事项](performance-considerations-for-direct3d9-and-wpf-interoperability.md)。
 
 #### <a name="to-create-the-direct3d9-content"></a>若要创建 Direct3D9 内容
 
@@ -84,35 +84,35 @@ ms.locfileid: "54520290"
 
 2.  在代码编辑器中打开 Renderer.h 并自动生成的代码替换为以下代码。
 
-     [!code-cpp[System.Windows.Interop.D3DImage#RendererH](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.h#rendererh)]
+     [!code-cpp[System.Windows.Interop.D3DImage#RendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.h#rendererh)]
 
 3.  在代码编辑器中打开 Renderer.cpp 并自动生成的代码替换为以下代码。
 
-     [!code-cpp[System.Windows.Interop.D3DImage#RendererCPP](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderercpp)]
+     [!code-cpp[System.Windows.Interop.D3DImage#RendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderercpp)]
 
 4.  在代码编辑器中打开 RendererManager.h 并自动生成的代码替换为以下代码。
 
-     [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerH](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.h#renderermanagerh)]
+     [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.h#renderermanagerh)]
 
 5.  在代码编辑器中打开 RendererManager.cpp 并自动生成的代码替换为以下代码。
 
-     [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerCPP](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanagercpp)]
+     [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanagercpp)]
 
 6.  在代码编辑器中打开 TriangleRenderer.h 并自动生成的代码替换为以下代码。
 
-     [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererH](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.h#trianglerendererh)]
+     [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.h#trianglerendererh)]
 
 7.  在代码编辑器中打开 TriangleRenderer.cpp 并自动生成的代码替换为以下代码。
 
-     [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererCPP](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.cpp#trianglerenderercpp)]
+     [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.cpp#trianglerenderercpp)]
 
 8.  在代码编辑器中打开 stdafx.h 和自动生成的代码替换为以下代码。
 
-     [!code-cpp[System.Windows.Interop.D3DImage#StdafxH](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/stdafx.h#stdafxh)]
+     [!code-cpp[System.Windows.Interop.D3DImage#StdafxH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/stdafx.h#stdafxh)]
 
 9. 在代码编辑器中打开 dllmain.cpp 并自动生成的代码替换为以下代码。
 
-     [!code-cpp[System.Windows.Interop.D3DImage#DllMain](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/dllmain.cpp#dllmain)]
+     [!code-cpp[System.Windows.Interop.D3DImage#DllMain](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/dllmain.cpp#dllmain)]
 
 10. 在代码编辑器中打开 D3DContent.def。
 
@@ -137,10 +137,10 @@ ms.locfileid: "54520290"
 
 ## <a name="next-steps"></a>后续步骤
 
--   承载 Direct3D9 内容在 WPF 应用程序。 有关详细信息，请参见[演练：承载 Direct3D9 内容在 WPF 中的](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)。
+-   承载 Direct3D9 内容在 WPF 应用程序。 有关详细信息，请参见[演练：承载 Direct3D9 内容在 WPF 中的](walkthrough-hosting-direct3d9-content-in-wpf.md)。
 
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Interop.D3DImage>
-- [Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [演练：在 WPF 中承载 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Direct3D9 和 WPF 互操作性的性能注意事项](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+- [演练：在 WPF 中承载 Direct3D9 内容](walkthrough-hosting-direct3d9-content-in-wpf.md)

@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 2363042ace7440ee74e4590a2271e87c1389ebcc
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 01d17b39e89b764871c1c70512eae6929cc98554
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836339"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353057"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 - 平台安全性
 虽然 Windows Presentation Foundation (WPF) 提供了各种安全服务，它还利用基础平台 （包括操作系统） 的安全功能[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]，和[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
   
- ![WPF 安全性图示](../../../docs/framework/wpf/media/windowplatformsecurity.PNG "windowplatformsecurity")  
+ ![WPF 安全性图示](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
   
  本主题的其余部分主要讨论与 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 相关的各个层。  
   
@@ -142,14 +142,14 @@ ms.locfileid: "56836339"
   
  下图说明了区域、权限集、权限和资源之间的关系。  
   
- ![CAS 权限集](../../../docs/framework/wpf/media/caspermissionsets.png "CASPermissionSets")  
+ ![CAS 权限集](./media/caspermissionsets.png "CASPermissionSets")  
   
  Internet 区域安全沙盒的限制条件同样适用于 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 从系统库导入的任何代码，包括 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 这可确保代码的每一位都是锁定的，即便 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 也是如此。 遗憾的是，为了能够执行，[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 需要执行要求更多权限的功能，所需的权限比通过 Internet 区域安全沙盒启用的那些功能的权限还要多。  
   
  假设 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 应用程序包括以下页面：  
   
- [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
- [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
+ [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
+ [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  要执行此 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)][!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 基础代码必须执行更多可用功能，而不止是调用 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]包括：  
   
@@ -167,8 +167,8 @@ ms.locfileid: "56836339"
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 通过使用实现这**Assert**权限的方法。 以下代码演示了这种方法。  
   
- [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
- [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
+ [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
+ [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  **Assert**实质上是阻止所需的不受限制的权限[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]不会限制通过 Internet 区域权限[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "56836339"
  
   [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 代码可以使用权限启动 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 应用程序的 Internet 区域沙盒，因此，必须将该代码保留到安全程度最高的审计和控制中。 若要实现此要求，.NET Framework 可提升特权的托管代码提供新的支持。 具体而言，[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]使您能够识别提升特权的代码并将其与标记<xref:System.Security.SecurityCriticalAttribute>; 的任何代码未标有<xref:System.Security.SecurityCriticalAttribute>变得*透明*使用此方法。 反之，禁止未标有 <xref:System.Security.SecurityCriticalAttribute> 的托管代码提升特权。  
   
- 安全关键方法允许的组织[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提升到特权的代码*安全-关键核心*，使剩余部分透明。 隔离安全关键代码可使[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]工程团队关注高于标准安全实践的安全关键内核上的其他安全分析和源控件 (请参阅[WPF 安全策略-安全工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md))。  
+ 安全关键方法允许的组织[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提升到特权的代码*安全-关键核心*，使剩余部分透明。 隔离安全关键代码可使[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]工程团队关注高于标准安全实践的安全关键内核上的其他安全分析和源控件 (请参阅[WPF 安全策略-安全工程](wpf-security-strategy-security-engineering.md))。  
   
  请注意.NET Framework 允许受信任的代码来扩展[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]Internet 区域沙盒： 允许开发人员编写标记为的托管程序集<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA) 并部署到用户的全局程序集缓存 (GAC)。 将程序集标记为 APTCA 是高度敏感的安全操作，因为它允许任何代码调用该程序集，包括来自 Internet 的恶意代码。 执行此操作时，要特别注意并且必须采用最佳做法，用户必须选择信任该软件才能完成安装。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "56836339"
   
 ## <a name="see-also"></a>请参阅
 - [了解 Windows XP SP2 中的 Microsoft Internet Explorer 6 中的安全性](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
-- [代码访问安全性](../../../docs/framework/misc/code-access-security.md)
-- [安全性](../../../docs/framework/wpf/security-wpf.md)
-- [WPF 部分信任安全](../../../docs/framework/wpf/wpf-partial-trust-security.md)
-- [WPF 安全策略 - 安全工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [代码访问安全性](../misc/code-access-security.md)
+- [安全性](security-wpf.md)
+- [WPF 部分信任安全](wpf-partial-trust-security.md)
+- [WPF 安全策略 - 安全工程](wpf-security-strategy-security-engineering.md)

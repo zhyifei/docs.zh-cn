@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 63fa061211e846a6b4d9c88cdf3c7c24e4aac3ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693751"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369924"
 ---
 # <a name="expander-overview"></a>Expander 概述
 <xref:System.Windows.Controls.Expander>控件提供了一种方法来提供类似于一个窗口，并且包括一个标头的可展开区域中的内容。  
@@ -23,7 +23,7 @@ ms.locfileid: "54693751"
 ## <a name="creating-a-simple-expander"></a>创建简单的 Expander  
  下面的示例演示如何创建一个简单<xref:System.Windows.Controls.Expander>控件。 此示例将创建<xref:System.Windows.Controls.Expander>看起来像前面的图示。  
   
- [!code-xaml[ExpanderExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
+ [!code-xaml[ExpanderExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
   
  <xref:System.Windows.Controls.ContentControl.Content%2A>并<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>的<xref:System.Windows.Controls.Expander>还可以包含复杂内容，如<xref:System.Windows.Controls.RadioButton>和<xref:System.Windows.Controls.Image>对象。  
   
@@ -45,15 +45,15 @@ ms.locfileid: "54693751"
   
  **ScrollViewer 中的 Expander**  
   
- ![带有 ScrollBar 的 Expander](../../../../docs/framework/wpf/controls/media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![带有 ScrollBar 的 Expander](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
   
  在将<xref:System.Windows.Controls.Expander>控件中<xref:System.Windows.Controls.ScrollViewer>，请设置<xref:System.Windows.Controls.ScrollViewer>维度属性对应的方向<xref:System.Windows.Controls.Expander>内容的大小会打开<xref:System.Windows.Controls.Expander>内容区域。 例如，如果您设置<xref:System.Windows.Controls.Expander.ExpandDirection%2A>上的属性<xref:System.Windows.Controls.Expander>到<xref:System.Windows.Controls.ExpandDirection.Down>（内容区域向下展开），设置<xref:System.Windows.FrameworkElement.Height%2A>属性上的<xref:System.Windows.Controls.ScrollViewer>内容区域的必需高度控制。 如果在上内容本身，而是设置的高度维度<xref:System.Windows.Controls.ScrollViewer>无法识别此设置，因此，不提供可滚动内容。  
   
  下面的示例演示如何创建<xref:System.Windows.Controls.Expander>控件具有复杂内容并包含<xref:System.Windows.Controls.ScrollViewer>控件。 此示例将创建<xref:System.Windows.Controls.Expander>这是类似于本部分的开头图。  
   
- [!code-csharp[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ExpanderRichContent#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
- [!code-xaml[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
+ [!code-csharp[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ExpanderRichContent#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
+ [!code-xaml[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
   
 <a name="UsingtheAlignmentProperties"></a>   
 ## <a name="using-the-alignment-properties"></a>使用对齐属性  
@@ -62,4 +62,4 @@ ms.locfileid: "54693751"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [帮助主题](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+- [帮助主题](expander-how-to-topics.md)

@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645842"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375241"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用事务范围实现隐式事务
-<xref:System.Transactions.TransactionScope> 类提供了一种简单方法，使您无需与事务自身进行交互，就可以在参与事务时对代码块进行标记。 事务范围可以自动选择和管理环境事务。 由于 <xref:System.Transactions.TransactionScope> 具有简单易用性和高效性，因此建议您在开发事务应用程序时使用该类。  
+
+  <xref:System.Transactions.TransactionScope> 类提供了一种简单方法，使您无需与事务自身进行交互，就可以在参与事务时对代码块进行标记。 事务范围可以自动选择和管理环境事务。 由于 <xref:System.Transactions.TransactionScope> 具有简单易用性和高效性，因此建议您在开发事务应用程序时使用该类。  
   
  此外，还无需将资源显式登记到事务。 任何 <xref:System.Transactions> 资源管理器（如 SQL Server 2005）都可以检测范围所创建的环境事务是否存在，并自动对其进行登记。  
   
@@ -34,14 +35,15 @@ ms.locfileid: "54645842"
   
  如果<xref:System.Transactions.TransactionScope>对象最初，创建了事务的提交事务的事务管理器的实际工作中代码的最后一行后发生**使用**块。 如果该对象未创建事务，则每当 <xref:System.Transactions.CommittableTransaction.Commit%2A> 对象的所有者调用 <xref:System.Transactions.CommittableTransaction> 时都会执行提交。 在该点的事务管理器调用资源管理器，并告知用户提交或回滚，根据是否<xref:System.Transactions.TransactionScope.Complete%2A>上调用了方法<xref:System.Transactions.TransactionScope>对象。  
   
- **使用**语句可确保<xref:System.Transactions.TransactionScope.Dispose%2A>方法的<xref:System.Transactions.TransactionScope>对象称为即使发生异常。 <xref:System.Transactions.TransactionScope.Dispose%2A> 方法标志着事务范围的结束。 在调用此方法之后所发生的异常不会影响事务。 此方法还将环境事务还原到其前一状态。  
+ **使用**语句可确保<xref:System.Transactions.TransactionScope.Dispose%2A>方法的<xref:System.Transactions.TransactionScope>对象称为即使发生异常。 
+  <xref:System.Transactions.TransactionScope.Dispose%2A> 方法标志着事务范围的结束。 在调用此方法之后所发生的异常不会影响事务。 此方法还将环境事务还原到其前一状态。  
   
  如果范围创建事务，则会引发 <xref:System.Transactions.TransactionAbortedException>，从而中止事务。 如果事务管理器无法做出提交决定，则会引发 <xref:System.Transactions.TransactionInDoubtException>。 如果已提交事务，则不会引发异常。  
   
 ## <a name="rolling-back-a-transaction"></a>回滚事务  
  如果要回滚事务，则不应在事务范围中调用 <xref:System.Transactions.TransactionScope.Complete%2A> 方法。 例如，可以在该范围中引发异常。 这样，就会回滚该范围所参与的事务。  
   
-##  <a name="ManageTxFlow"></a> 使用 TransactionScopeOption 管理事务流  
+## <a name="ManageTxFlow"></a> 使用 TransactionScopeOption 管理事务流  
  可通过调用一个方法来嵌套事务范围，该方法在使用其自己范围的方法中使用 <xref:System.Transactions.TransactionScope>，下面示例中的 `RootMethod` 方法就是前者这样的方法。  
   
 ```csharp  

@@ -2,12 +2,12 @@
 title: 调用方信息 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 7b0776425b41c8fef975355f3547a64c33fd96b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3d7c999137b1e62de573470b8327bf070f2b1a9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619008"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375540"
 ---
 # <a name="caller-information-visual-basic"></a>调用方信息 (Visual Basic)
 通过使用调用方信息特性，可获取有关方法的调用方的信息。 可以获取源代码的文件路径、源代码中的行号和调用方的成员名称。 此信息有助于跟踪、调试和创建诊断工具。  
@@ -55,7 +55,7 @@ End Sub
   
  你可显式提供可选参数来控制调用方信息或隐藏调用方信息。  
   
-###  <a name="MEMBERNAMES"></a>成员名称  
+### <a name="MEMBERNAMES"></a>成员名称  
  可以使用 `CallerMemberName` 特性来避免将成员名称指定为所调用的方法的 `String` 参数。 通过使用这种技术，可以避免“重命名重构”不更改 `String` 值的问题。 此好处对于以下任务特别有用：  
   
 -   使用跟踪和诊断例程。  

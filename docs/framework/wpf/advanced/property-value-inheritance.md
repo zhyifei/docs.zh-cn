@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: e6b16bc3fc482e0f640f8b2d083392e6f94de618
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520577"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359870"
 ---
 # <a name="property-value-inheritance"></a>属性值继承
 属性值继承是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的一项功能。 属性值继承使元素树中的子元素可以从父元素获取特定属性的值，并继承该值，就如同它是在最近的父元素中任意位置设置的一样。 父元素可能也已通过属性值继承获得了其值，因此系统有可能一直递归到页面根。 属性值继承不是默认属性系统行为；属性必须用特定的元数据设置来建立，以便使该属性对子元素启动属性值继承。  
@@ -30,7 +30,7 @@ ms.locfileid: "54520577"
 ## <a name="making-a-custom-property-inheritable"></a>使自定义属性可继承  
  通过更改自定义属性的元数据，还可以使自己的自定义属性可继承。 但是，请注意，将属性指定为可继承需要考虑到性能问题。 如果该属性没有已建立的本地值或通过样式、模板或数据绑定获取的值，则可继承的属性会将赋予它的属性值提供给逻辑树中的所有子元素。  
   
- 为了让属性参与值继承，请按照[注册附加属性](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)中所述创建自定义附加属性。 注册元数据属性 (<xref:System.Windows.FrameworkPropertyMetadata>) 并在该元数据内的选项设置中指定"Inherits"选项。 同时确保该属性已建立了默认值，因为该值现将继承。 尽管已将该属性注册为附加属性，可能还需像对“非附加”依赖项属性一样，为所有者类型上的 get/set 访问创建属性“包装”。 这样做之后，可继承的属性可以设置所有者类型或派生的类型上使用直接属性包装或它可以在任何使用附加的属性语法设置<xref:System.Windows.DependencyObject>。  
+ 为了让属性参与值继承，请按照[注册附加属性](how-to-register-an-attached-property.md)中所述创建自定义附加属性。 注册元数据属性 (<xref:System.Windows.FrameworkPropertyMetadata>) 并在该元数据内的选项设置中指定"Inherits"选项。 同时确保该属性已建立了默认值，因为该值现将继承。 尽管已将该属性注册为附加属性，可能还需像对“非附加”依赖项属性一样，为所有者类型上的 get/set 访问创建属性“包装”。 这样做之后，可继承的属性可以设置所有者类型或派生的类型上使用直接属性包装或它可以在任何使用附加的属性语法设置<xref:System.Windows.DependencyObject>。  
   
  附加的属性是从概念上讲类似于全局属性;您可以检查任何值<xref:System.Windows.DependencyObject>并获取有效结果。 附加属性的典型方案是在子元素上设置属性值和该方案会更为有效，如果有问题的属性是将始终作为附加属性的每个元素隐式存在一个附加的属性 (<xref:System.Windows.DependencyObject>) 在树中。  
   
@@ -42,6 +42,6 @@ ms.locfileid: "54520577"
  属性继承通过遍历元素树来工作。 此树通常与逻辑树并行。 但是，每当您包括 WPF 核心级别对象中的标记，用于定义元素树，如<xref:System.Windows.Media.Brush>，已创建一个不连续的逻辑树。 真正的逻辑树不会从概念上讲扩展通过<xref:System.Windows.Media.Brush>，因为逻辑树是 WPF 框架级别概念。 您可以看到这反映在结果中使用的方法时<xref:System.Windows.LogicalTreeHelper>。 但是，属性值继承可填补此间隙逻辑树中的，并且只要可继承的属性注册为附加的属性，而且没有有意的继承阻止边界可以仍可通过继承的值，(例如<xref:System.Windows.Controls.Frame>) 遇到。  
   
 ## <a name="see-also"></a>请参阅
-- [依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [依赖项属性值优先级](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [依赖属性元数据](dependency-property-metadata.md)
+- [附加属性概述](attached-properties-overview.md)
+- [依赖项属性值优先级](dependency-property-value-precedence.md)

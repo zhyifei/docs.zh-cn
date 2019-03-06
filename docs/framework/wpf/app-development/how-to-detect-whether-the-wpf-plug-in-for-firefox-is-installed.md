@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Firefox [WPF], detecting installation
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
-ms.openlocfilehash: f017aec8788d9ed38476262bba457f4621217519
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc2f95627bc35fa4cb6c486d3b8ad61f69d7fea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677974"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372888"
 ---
 # <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>如何：检测是否已安装 Firefox 的 WPF 插件
 Windows Presentation Foundation (WPF) Firefox 的插件使[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]和松散 XAML 文件 Mozilla Firefox 浏览器中运行。 本主题提供了用 HTML 和 JavaScript，管理员可以用于确定是否已安装 Firefox 的插件的 WPF 编写的脚本。  
   
 > [!NOTE]
->  有关安装、 部署和检测的详细信息[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，请参阅[安装面向开发人员的.NET Framework](../../../../docs/framework/install/guide-for-developers.md)。  
+>  有关安装、 部署和检测的详细信息[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，请参阅[安装面向开发人员的.NET Framework](../../install/guide-for-developers.md)。  
   
 ## <a name="example"></a>示例  
  当[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]是安装，客户端计算机配置与 WPF 插件为 Firefox。 以下示例脚本检查 firefox 的 WPF 插件，然后显示相应的状态消息。  
@@ -63,6 +63,6 @@ Windows Presentation Foundation (WPF) Firefox 的插件使[!INCLUDE[TLA#tla_xbap
  `The WPF plug-in for Firefox is not installed. Please install or reinstall the .NET Framework 3.5.`  
   
 ## <a name="see-also"></a>请参阅
-- [检测是否安装了 .NET Framework 3.0](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)
-- [检测是否安装了 .NET Framework 3.5](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)
-- [WPF XAML Browser Applications Overview](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）
+- [检测是否安装了 .NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [检测是否安装了 .NET Framework 3.5](how-to-detect-whether-the-net-framework-3-5-is-installed.md)
+- [WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）

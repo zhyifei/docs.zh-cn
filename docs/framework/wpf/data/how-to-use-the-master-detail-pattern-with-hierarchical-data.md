@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 36eded28085aec3aaea1a2351ae3babc6ad6c700
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41f02013feb1405e5640afa73b954dc84921c924
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689635"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351474"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>如何：对分层数据使用主-从模式
 此示例演示如何实现母版-详细信息方案。  
@@ -18,12 +18,12 @@ ms.locfileid: "54689635"
 ## <a name="example"></a>示例  
  在此示例中，`LeagueList` 是 `Leagues` 的集合。 每个 `League` 有一个 `Name` 和一个 `Divisions` 的集合，每个 `Division` 有一个名称和一个 `Teams` 的集合。 每个 `Team` 有一个团队名称。  
   
- [!code-xaml[MasterDetail#HowTo1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
-[!code-xaml[MasterDetail#HowTo2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto2)]  
+ [!code-xaml[MasterDetail#HowTo1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
+[!code-xaml[MasterDetail#HowTo2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto2)]  
   
  下面是该示例的一个屏幕快照。 `Divisions` 列表框<xref:System.Windows.Controls.ListBox>自动跟踪 `Leagues` 列表框<xref:System.Windows.Controls.ListBox>中的选择并显示相应的数据。 `Teams` 列表框<xref:System.Windows.Controls.ListBox>跟踪其他两个列表框<xref:System.Windows.Controls.ListBox>控件中的选择。  
   
- ![Master&#45;详细信息示例](../../../../docs/framework/wpf/data/media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
+ ![Master&#45;详细信息示例](./media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
   
  在此示例中，有两点需要注意：  
   
@@ -31,11 +31,11 @@ ms.locfileid: "54689635"
   
 2.  对于要跟踪其选择内容的 <xref:System.Windows.Controls.ListBox> 控件, 须将其 <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> 属性设置为 `true`。 设置此属性可确保所选的项始终设置为 <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>。 或者，如果 <xref:System.Windows.Controls.ListBox> 从 <xref:System.Windows.Data.CollectionViewSource> 获取数据，它会自动同步所选内容和货币。  
   
- 使用[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据时，采用的方法略有不同。 有关示例，请参阅[对分层 XML 数据使用主-从模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)。  
+ 使用[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据时，采用的方法略有不同。 有关示例，请参阅[对分层 XML 数据使用主-从模式](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.HierarchicalDataTemplate>
-- [绑定到集合并根据选择的内容显示信息](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
-- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)
-- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [绑定到集合并根据选择的内容显示信息](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
+- [数据绑定概述](data-binding-overview.md)
+- [数据模板化概述](data-templating-overview.md)
+- [帮助主题](data-binding-how-to-topics.md)

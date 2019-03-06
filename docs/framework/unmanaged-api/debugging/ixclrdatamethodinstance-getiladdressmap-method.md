@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8442d1373ede241d262ab41928fd5d9924ec9c80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e6fde6e4e5bf006da00b62b035cee112efae1d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567186"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373486"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance::GetILAddressMap 方法
 
@@ -40,11 +40,14 @@ HRESULT GetILAddressMap(
 
 ### <a name="parameters"></a>参数
 
-`mapLen` [in]提供的映射数组的长度。
+`mapLen`\
+[in]提供的映射数组的长度。
 
-`mapNeeded` [out]方法需要的映射条目数。
+`mapNeeded`\
+[out]方法需要的映射条目数。
 
-`maps` [out，size_is(mapLen)]用于存储映射项数组。
+`maps`\
+[out，size_is(mapLen)]用于存储映射项数组。
 
 ## <a name="remarks"></a>备注
 
@@ -59,5 +62,5 @@ HRESULT GetILAddressMap(
 
 ## <a name="see-also"></a>请参阅
 
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataMethodInstance 接口](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [调试](index.md)
+- [IXCLRDataMethodInstance 接口](ixclrdatamethodinstance-interface.md)

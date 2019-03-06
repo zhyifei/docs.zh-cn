@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: 78031ed80fe83b736a351886457f9200534f470b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02d5d23ec44d9fb7a244fc635ac174cf81ead173
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591508"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362183"
 ---
 # <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator 函数 （WPF 非托管 API 参考）
 此 API 支持 Windows Presentation Foundation (WPF) 基础结构，不应在代码中直接使用。  
@@ -37,7 +37,7 @@ HRESULT ForwardTranslateAccelerator(
  `true` 当应用程序已提供有机会处理输入的消息，但不是处理它;否则为`false`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[.NET Framework 系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[.NET Framework 系统需求](../../get-started/system-requirements.md)。  
   
  **DLL:**  
   
@@ -48,4 +48,4 @@ HRESULT ForwardTranslateAccelerator(
  **.NET framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
-- [WPF 非托管 API 参考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [WPF 非托管 API 参考](wpf-unmanaged-api-reference.md)

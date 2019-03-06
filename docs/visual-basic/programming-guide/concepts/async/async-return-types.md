@@ -2,12 +2,12 @@
 title: 异步返回类型 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 6fffd94a4b9ca531af58138b7613e0b3c5364c56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ddab62543fae5442a15fc5f200ef914ab8d859
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498406"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352576"
 ---
 # <a name="async-return-types-visual-basic"></a>异步返回类型 (Visual Basic)
 异步方法具有三个可能的返回类型：<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>和 void。 在 Visual Basic 中，void 返回类型被写为 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 过程。 有关异步方法的详细信息，请参阅[使用 Async 和 Await (Visual Basic 中) 的异步编程](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
@@ -17,7 +17,7 @@ ms.locfileid: "54498406"
 > [!NOTE]
 >  若要运行该示例，计算机上必须安装 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
   
-##  <a name="BKMK_TaskTReturnType"></a>Task(T) 返回类型  
+## <a name="BKMK_TaskTReturnType"></a>Task(T) 返回类型  
  <xref:System.Threading.Tasks.Task%601>返回类型可用于异步方法，其中包含[返回](../../../../visual-basic/language-reference/statements/return-statement.md)语句在其中操作数含有类型`TResult`。  
   
  在下面的示例中，`TaskOfT_MethodAsync` 异步方法包含返回整数的 return 语句。 因此，该方法声明必须指定 `Task(Of Integer)` 的返回类型。  
@@ -79,7 +79,7 @@ textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, resu
 textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)  
 ```  
   
-##  <a name="BKMK_TaskReturnType"></a>任务返回类型  
+## <a name="BKMK_TaskReturnType"></a>任务返回类型  
  不包含 return 语句或包含不返回操作数的 return 语句的异步方法通常具有返回类型 <xref:System.Threading.Tasks.Task>。 方法将为[Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)如果被编写为以同步方式运行这些过程。 如果在异步方法中使用 `Task` 返回类型，调用方法可以使用 `Await` 运算符暂停调用方的完成，直至被调用的异步方法结束。  
   
  在下面的示例中，异步方法 `Task_MethodAsync` 不包含 return 语句。 因此，为此方法指定 `Task` 返回类型，这将启用 `Task_MethodAsync` 为等待。 `Task` 类型的定义不包括存储返回值的 `Result` 属性。  
@@ -121,7 +121,7 @@ textBox1.Text &= String.Format(vbCrLf & "Application can continue working while 
 Await simpleTask  
 ```  
   
-##  <a name="BKMK_VoidReturnType"></a>返回类型为 void  
+## <a name="BKMK_VoidReturnType"></a>返回类型为 void  
  主要用途`Sub`过程是在事件处理程序，其中没有返回类型 （也称为其他语言中的 void 返回类型）。 Void 返回还可用于替代返回 void 的方法，或者用于执行可分类为"发后不理"活动的方法。 但是，你应尽可能地返回 `Task`，因为不能等待返回 void 的异步方法。 这种方法的任何调用方必须能够继续完成，而无需等待调用的异步方法完成，并且调用方必须独立于异步方法生成的任何值或异常。  
   
  返回 void 的异步方法的调用方无法捕获从该方法引发的异常，且此类未经处理的异常可能会导致应用程序故障。 如果返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的异步方法中出现异常，此异常将存储于返回的任务中，并在等待该任务时再次引发。 因此，请确保可以产生异常的任何异步方法都具有返回类型 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>，并确保会等待对方法的调用。  
@@ -145,7 +145,7 @@ Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.
 End Sub  
 ```  
   
-##  <a name="BKMK_Example"></a>完整示例  
+## <a name="BKMK_Example"></a>完整示例  
  以下 Windows Presentation Foundation (WPF) 项目包含本主题中的代码示例。  
   
  若要运行项目，请执行下列步骤：  
