@@ -8,25 +8,25 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550119"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354630"
 ---
-# <a name="contextmenu"></a><span data-ttu-id="0bb34-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="0bb34-102">ContextMenu</span></span>
-<span data-ttu-id="0bb34-103"><xref:System.Windows.Controls.ContextMenu>允许控件显示<xref:System.Windows.Controls.Menu>特定于控件的上下文。</span><span class="sxs-lookup"><span data-stu-id="0bb34-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="0bb34-104">通常情况下，<xref:System.Windows.Controls.ContextMenu>中公开[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]通过鼠标右键按钮或键盘的菜单按钮。</span><span class="sxs-lookup"><span data-stu-id="0bb34-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
+# <a name="contextmenu"></a><span data-ttu-id="eb65c-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="eb65c-102">ContextMenu</span></span>
+<span data-ttu-id="eb65c-103"><xref:System.Windows.Controls.ContextMenu>允许控件来显示<xref:System.Windows.Controls.Menu>这就是特定于控件的上下文。</span><span class="sxs-lookup"><span data-stu-id="eb65c-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="eb65c-104">通常情况下，<xref:System.Windows.Controls.ContextMenu>中公开[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]通过鼠标右键按钮或键盘上的菜单按钮。</span><span class="sxs-lookup"><span data-stu-id="eb65c-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
   
- <span data-ttu-id="0bb34-105">下图说明了<xref:System.Windows.Controls.ContextMenu>中两个不同状态: 打开状态和的默认状态。</span><span class="sxs-lookup"><span data-stu-id="0bb34-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="0bb34-106">在默认状态下，该控件处于折叠状态。</span><span class="sxs-lookup"><span data-stu-id="0bb34-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="0bb34-107">通过菜单的父按下鼠标右键按钮时，控件将展开，并显示的菜单项。</span><span class="sxs-lookup"><span data-stu-id="0bb34-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
+ <span data-ttu-id="eb65c-105">下图说明了<xref:System.Windows.Controls.ContextMenu>中两个不同的状态： 默认状态，并打开状态。</span><span class="sxs-lookup"><span data-stu-id="eb65c-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="eb65c-106">在默认状态下，该控件处于折叠状态。</span><span class="sxs-lookup"><span data-stu-id="eb65c-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="eb65c-107">通过菜单的父按下鼠标右键时，该控件将展开并显示菜单项。</span><span class="sxs-lookup"><span data-stu-id="eb65c-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
   
- <span data-ttu-id="0bb34-108">![ContextMenu 状态](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="0bb34-108">![ContextMenu states](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
-<span data-ttu-id="0bb34-109">ContextMenu 处于其他状态</span><span class="sxs-lookup"><span data-stu-id="0bb34-109">ContextMenu in different states</span></span>  
+ <span data-ttu-id="eb65c-108">![ContextMenu 状态](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="eb65c-108">![ContextMenu states](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
+<span data-ttu-id="eb65c-109">ContextMenu 在不同的状态</span><span class="sxs-lookup"><span data-stu-id="eb65c-109">ContextMenu in different states</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0bb34-110">本节内容</span><span class="sxs-lookup"><span data-stu-id="0bb34-110">In This Section</span></span>  
- [<span data-ttu-id="0bb34-111">ContextMenu 概述</span><span class="sxs-lookup"><span data-stu-id="0bb34-111">ContextMenu Overview</span></span>](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="eb65c-110">本节内容</span><span class="sxs-lookup"><span data-stu-id="eb65c-110">In This Section</span></span>  
+ [<span data-ttu-id="eb65c-111">ContextMenu 概述</span><span class="sxs-lookup"><span data-stu-id="eb65c-111">ContextMenu Overview</span></span>](contextmenu-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="0bb34-112">参考</span><span class="sxs-lookup"><span data-stu-id="0bb34-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="eb65c-112">参考</span><span class="sxs-lookup"><span data-stu-id="eb65c-112">Reference</span></span>  
  <xref:System.Windows.Controls.ContextMenu>  
   
-## <a name="related-sections"></a><span data-ttu-id="0bb34-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="0bb34-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="eb65c-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="eb65c-113">Related Sections</span></span>

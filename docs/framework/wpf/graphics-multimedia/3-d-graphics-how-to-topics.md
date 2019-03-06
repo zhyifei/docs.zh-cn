@@ -7,36 +7,36 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 4f091835-28d1-498c-b660-9b3acf34ed13
-ms.openlocfilehash: d542ecd7f162e56a8a6e8ae04c0ea60eb6a69f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f78d2f0ff8887ca5cf1cd1129fb946d2224246d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554831"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353551"
 ---
-# <a name="3-d-graphics-how-to-topics"></a><span data-ttu-id="7b9cb-102">三维图形帮助主题</span><span class="sxs-lookup"><span data-stu-id="7b9cb-102">3-D Graphics How-to Topics</span></span>
-<span data-ttu-id="7b9cb-103">此部分中的主题演示如何使用[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]中的图形[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。</span><span class="sxs-lookup"><span data-stu-id="7b9cb-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] graphics in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="3-d-graphics-how-to-topics"></a><span data-ttu-id="c4f59-102">三维图形帮助主题</span><span class="sxs-lookup"><span data-stu-id="c4f59-102">3-D Graphics How-to Topics</span></span>
+<span data-ttu-id="c4f59-103">在本部分中的主题演示如何使用[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]中的图形[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。</span><span class="sxs-lookup"><span data-stu-id="c4f59-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] graphics in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7b9cb-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="7b9cb-104">In This Section</span></span>  
- [<span data-ttu-id="7b9cb-105">创建 3D 场景</span><span class="sxs-lookup"><span data-stu-id="7b9cb-105">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
- [<span data-ttu-id="7b9cb-106">向 3D 模型应用绘图</span><span class="sxs-lookup"><span data-stu-id="7b9cb-106">Apply a Drawing to a 3-D Model</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-drawing-to-a-3-d-model.md)  
- [<span data-ttu-id="7b9cb-107">向 3D 对象的正面和背面应用材料</span><span class="sxs-lookup"><span data-stu-id="7b9cb-107">Apply Material to the Front and Back of a 3-D Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
- [<span data-ttu-id="7b9cb-108">向 3D 对象应用放射材料</span><span class="sxs-lookup"><span data-stu-id="7b9cb-108">Apply Emissive Material to a 3-D Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-emissive-material-to-a-3-d-object.md)  
- [<span data-ttu-id="7b9cb-109">转换 3D 模型的比例</span><span class="sxs-lookup"><span data-stu-id="7b9cb-109">Transform the Scale of a 3-D Model</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)  
- [<span data-ttu-id="7b9cb-110">向 3D 模型应用多个转换</span><span class="sxs-lookup"><span data-stu-id="7b9cb-110">Apply Multiple Transformations to a 3-D Model</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transformations-to-a-3-d-model.md)  
- [<span data-ttu-id="7b9cb-111">为 3D 转换设置动画效果</span><span class="sxs-lookup"><span data-stu-id="7b9cb-111">Animate 3-D Translations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)  
- [<span data-ttu-id="7b9cb-112">使用情节提要为 3D 旋转设置动画效果</span><span class="sxs-lookup"><span data-stu-id="7b9cb-112">Animate a 3-D Rotation Using Storyboards</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
- [<span data-ttu-id="7b9cb-113">使用 Rotation3DAnimation 为 3D 旋转设置动画效果</span><span class="sxs-lookup"><span data-stu-id="7b9cb-113">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
- [<span data-ttu-id="7b9cb-114">使用四元数为 3D 旋转设置动画效果</span><span class="sxs-lookup"><span data-stu-id="7b9cb-114">Animate a 3-D Rotation Using Quaternions</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
- [<span data-ttu-id="7b9cb-115">使用关键帧为 3D 旋转设置动画效果 (Rotation3DAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="7b9cb-115">Animate a 3-D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-key-frames.md)  
- [<span data-ttu-id="7b9cb-116">使用关键帧为 3D 旋转设置动画效果 (QuaternionAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="7b9cb-116">Animate a 3-D Rotation Using Key Frames (QuaternionAnimationUsingKeyFrames)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
- [<span data-ttu-id="7b9cb-117">在 3D 场景中为照相机位置和方向设置动画效果</span><span class="sxs-lookup"><span data-stu-id="7b9cb-117">Animate Camera Position and Direction in a 3D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
- [<span data-ttu-id="7b9cb-118">使用关键帧为照相机位置和方向设置动画效果</span><span class="sxs-lookup"><span data-stu-id="7b9cb-118">Animate Camera Position and Direction Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-using-key-frames.md)  
- [<span data-ttu-id="7b9cb-119">在 3D 场景中为材料属性设置动画效果</span><span class="sxs-lookup"><span data-stu-id="7b9cb-119">Animate Material Properties in a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-material-properties-in-a-3-d-scene.md)  
- [<span data-ttu-id="7b9cb-120">在 Viewport3D 中进行命中测试</span><span class="sxs-lookup"><span data-stu-id="7b9cb-120">Hit Test in a Viewport3D</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-in-a-viewport3d.md)  
- [<span data-ttu-id="7b9cb-121">测试 Point4D 结构是否相等</span><span class="sxs-lookup"><span data-stu-id="7b9cb-121">Test Point4D structures for equality and inequality</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-test-point4d-structures-for-equality-and-inequality.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c4f59-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="c4f59-104">In This Section</span></span>  
+ [<span data-ttu-id="c4f59-105">创建 3D 场景</span><span class="sxs-lookup"><span data-stu-id="c4f59-105">Create a 3-D Scene</span></span>](how-to-create-a-3-d-scene.md)  
+ [<span data-ttu-id="c4f59-106">向 3D 模型应用绘图</span><span class="sxs-lookup"><span data-stu-id="c4f59-106">Apply a Drawing to a 3-D Model</span></span>](how-to-apply-a-drawing-to-a-3-d-model.md)  
+ [<span data-ttu-id="c4f59-107">向 3D 对象的正面和背面应用材料</span><span class="sxs-lookup"><span data-stu-id="c4f59-107">Apply Material to the Front and Back of a 3-D Object</span></span>](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
+ [<span data-ttu-id="c4f59-108">向 3D 对象应用放射材料</span><span class="sxs-lookup"><span data-stu-id="c4f59-108">Apply Emissive Material to a 3-D Object</span></span>](how-to-apply-emissive-material-to-a-3-d-object.md)  
+ [<span data-ttu-id="c4f59-109">转换 3D 模型的比例</span><span class="sxs-lookup"><span data-stu-id="c4f59-109">Transform the Scale of a 3-D Model</span></span>](how-to-transform-the-scale-of-a-3-d-model.md)  
+ [<span data-ttu-id="c4f59-110">向 3D 模型应用多个转换</span><span class="sxs-lookup"><span data-stu-id="c4f59-110">Apply Multiple Transformations to a 3-D Model</span></span>](how-to-apply-multiple-transformations-to-a-3-d-model.md)  
+ [<span data-ttu-id="c4f59-111">为 3D 转换设置动画效果</span><span class="sxs-lookup"><span data-stu-id="c4f59-111">Animate 3-D Translations</span></span>](how-to-animate-3-d-translations.md)  
+ [<span data-ttu-id="c4f59-112">使用情节提要为 3D 旋转设置动画效果</span><span class="sxs-lookup"><span data-stu-id="c4f59-112">Animate a 3-D Rotation Using Storyboards</span></span>](how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [<span data-ttu-id="c4f59-113">使用 Rotation3DAnimation 为 3D 旋转设置动画效果</span><span class="sxs-lookup"><span data-stu-id="c4f59-113">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
+ [<span data-ttu-id="c4f59-114">使用四元数为 3D 旋转设置动画效果</span><span class="sxs-lookup"><span data-stu-id="c4f59-114">Animate a 3-D Rotation Using Quaternions</span></span>](how-to-animate-a-3-d-rotation-using-quaternions.md)  
+ [<span data-ttu-id="c4f59-115">使用关键帧为 3D 旋转设置动画效果 (Rotation3DAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="c4f59-115">Animate a 3-D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](how-to-animate-a-3-d-rotation-using-key-frames.md)  
+ [<span data-ttu-id="c4f59-116">使用关键帧为 3D 旋转设置动画效果 (QuaternionAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="c4f59-116">Animate a 3-D Rotation Using Key Frames (QuaternionAnimationUsingKeyFrames)</span></span>](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
+ [<span data-ttu-id="c4f59-117">在 3D 场景中为照相机位置和方向设置动画效果</span><span class="sxs-lookup"><span data-stu-id="c4f59-117">Animate Camera Position and Direction in a 3D Scene</span></span>](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
+ [<span data-ttu-id="c4f59-118">使用关键帧为照相机位置和方向设置动画效果</span><span class="sxs-lookup"><span data-stu-id="c4f59-118">Animate Camera Position and Direction Using Key Frames</span></span>](how-to-animate-camera-position-and-direction-using-key-frames.md)  
+ [<span data-ttu-id="c4f59-119">在 3D 场景中为材料属性设置动画效果</span><span class="sxs-lookup"><span data-stu-id="c4f59-119">Animate Material Properties in a 3-D Scene</span></span>](how-to-animate-material-properties-in-a-3-d-scene.md)  
+ [<span data-ttu-id="c4f59-120">在 Viewport3D 中进行命中测试</span><span class="sxs-lookup"><span data-stu-id="c4f59-120">Hit Test in a Viewport3D</span></span>](how-to-hit-test-in-a-viewport3d.md)  
+ [<span data-ttu-id="c4f59-121">测试 Point4D 结构是否相等</span><span class="sxs-lookup"><span data-stu-id="c4f59-121">Test Point4D structures for equality and inequality</span></span>](how-to-test-point4d-structures-for-equality-and-inequality.md)  
   
-## <a name="reference"></a><span data-ttu-id="7b9cb-122">参考</span><span class="sxs-lookup"><span data-stu-id="7b9cb-122">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c4f59-122">参考</span><span class="sxs-lookup"><span data-stu-id="c4f59-122">Reference</span></span>  
  <xref:System.Windows.Controls.Viewport3D>  
   
  <xref:System.Windows.Media.Media3D.PerspectiveCamera>  
@@ -45,5 +45,5 @@ ms.locfileid: "33554831"
   
  <xref:System.Windows.Media.Media3D.Material>  
   
-## <a name="related-sections"></a><span data-ttu-id="7b9cb-123">相关章节</span><span class="sxs-lookup"><span data-stu-id="7b9cb-123">Related Sections</span></span>  
- [<span data-ttu-id="7b9cb-124">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="7b9cb-124">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="c4f59-123">相关章节</span><span class="sxs-lookup"><span data-stu-id="c4f59-123">Related Sections</span></span>  
+ [<span data-ttu-id="c4f59-124">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="c4f59-124">Graphics and Multimedia</span></span>](index.md)

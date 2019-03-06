@@ -8,20 +8,20 @@ helpviewer_keywords:
 - GridSplitter control [WPF]
 - content [WPF], GridSplitter control
 ms.assetid: 98b007e8-ea6b-41b5-8120-ca7134e8239f
-ms.openlocfilehash: d173843c17a1881224cffadcfd1538547ce763b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fd1b50e4c3f79218de2d0d54f98d645ebb5fd61
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550889"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359271"
 ---
-# <a name="gridsplitter"></a><span data-ttu-id="f79ce-102">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="f79ce-102">GridSplitter</span></span>
-<span data-ttu-id="f79ce-103"><xref:System.Windows.Controls.GridSplitter>的行或列之间重新分配空间<xref:System.Windows.Controls.Grid>控件。</span><span class="sxs-lookup"><span data-stu-id="f79ce-103">The <xref:System.Windows.Controls.GridSplitter> redistributes space between columns or rows of a <xref:System.Windows.Controls.Grid> control.</span></span>  
+# <a name="gridsplitter"></a><span data-ttu-id="cd45b-102">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="cd45b-102">GridSplitter</span></span>
+<span data-ttu-id="cd45b-103"><xref:System.Windows.Controls.GridSplitter>的行或列之间重新分配空间<xref:System.Windows.Controls.Grid>控件。</span><span class="sxs-lookup"><span data-stu-id="cd45b-103">The <xref:System.Windows.Controls.GridSplitter> redistributes space between columns or rows of a <xref:System.Windows.Controls.Grid> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f79ce-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="f79ce-104">In This Section</span></span>  
- [<span data-ttu-id="f79ce-105">帮助主题</span><span class="sxs-lookup"><span data-stu-id="f79ce-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cd45b-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="cd45b-104">In This Section</span></span>  
+ [<span data-ttu-id="cd45b-105">帮助主题</span><span class="sxs-lookup"><span data-stu-id="cd45b-105">How-to Topics</span></span>](gridsplitter-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="f79ce-106">参考</span><span class="sxs-lookup"><span data-stu-id="f79ce-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cd45b-106">参考</span><span class="sxs-lookup"><span data-stu-id="cd45b-106">Reference</span></span>  
  <xref:System.Windows.Controls.GridSplitter>  
   
-## <a name="related-sections"></a><span data-ttu-id="f79ce-107">相关章节</span><span class="sxs-lookup"><span data-stu-id="f79ce-107">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="cd45b-107">相关章节</span><span class="sxs-lookup"><span data-stu-id="cd45b-107">Related Sections</span></span>
