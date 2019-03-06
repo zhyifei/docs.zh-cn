@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61aece9dd506d6e4af8718e45cc772d120a7d579
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5df5bed730211676acc4770c91cc6551bde0179b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401656"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57464719"
 ---
-# <a name="icordebugbreakpointisactive-method"></a><span data-ttu-id="d634a-102">ICorDebugBreakpoint::IsActive 方法</span><span class="sxs-lookup"><span data-stu-id="d634a-102">ICorDebugBreakpoint::IsActive Method</span></span>
-<span data-ttu-id="d634a-103">获取一个值，该值指示是否这`ICorDebugBreakpoint`处于活动状态。</span><span class="sxs-lookup"><span data-stu-id="d634a-103">Gets a value that indicates whether this `ICorDebugBreakpoint` is active.</span></span>  
+# <a name="icordebugbreakpointisactive-method"></a><span data-ttu-id="b7e71-102">ICorDebugBreakpoint::IsActive 方法</span><span class="sxs-lookup"><span data-stu-id="b7e71-102">ICorDebugBreakpoint::IsActive Method</span></span>
+<span data-ttu-id="b7e71-103">获取一个值，该值指示是否此`ICorDebugBreakpoint`处于活动状态。</span><span class="sxs-lookup"><span data-stu-id="b7e71-103">Gets a value that indicates whether this `ICorDebugBreakpoint` is active.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d634a-104">语法</span><span class="sxs-lookup"><span data-stu-id="d634a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b7e71-104">语法</span><span class="sxs-lookup"><span data-stu-id="b7e71-104">Syntax</span></span>  
   
 ```  
 HRESULT IsActive (  
@@ -35,15 +35,15 @@ HRESULT IsActive (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d634a-105">参数</span><span class="sxs-lookup"><span data-stu-id="d634a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b7e71-105">参数</span><span class="sxs-lookup"><span data-stu-id="b7e71-105">Parameters</span></span>  
  `pbActive`  
- <span data-ttu-id="d634a-106">[out]`true`活动; 否则为此断点是否`false`。</span><span class="sxs-lookup"><span data-stu-id="d634a-106">[out] `true` if this breakpoint is active; otherwise, `false`.</span></span>  
+ <span data-ttu-id="b7e71-106">[out]`true`如果此断点是活动; 否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="b7e71-106">[out] `true` if this breakpoint is active; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d634a-107">要求</span><span class="sxs-lookup"><span data-stu-id="d634a-107">Requirements</span></span>  
- <span data-ttu-id="d634a-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d634a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b7e71-107">要求</span><span class="sxs-lookup"><span data-stu-id="b7e71-107">Requirements</span></span>  
+ <span data-ttu-id="b7e71-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b7e71-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d634a-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d634a-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b7e71-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b7e71-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d634a-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d634a-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b7e71-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b7e71-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d634a-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d634a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b7e71-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b7e71-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
