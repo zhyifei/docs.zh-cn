@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510802"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366382"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>如何：创建作为 UI 的外接程序
 此示例演示如何为 Windows Presentation Foundation (WPF) 的 WPF 独立应用程序是托管的外接程序创建。  
@@ -27,7 +27,7 @@ ms.locfileid: "54510802"
   
 -   了解.NET Framework 外接程序模型，包括管道、 外接程序和主机开发。 如果您不熟悉这些概念，请参阅[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。 有关演示如何实现一个管道、 外接程序和主机应用程序的教程，请参阅[演练：创建可扩展的应用程序](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))。  
   
--   .NET Framework 外接程序模型的 WPF 扩展的知识。 请参阅[WPF 外接程序概述](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
+-   .NET Framework 外接程序模型的 WPF 扩展的知识。 请参阅[WPF 外接程序概述](wpf-add-ins-overview.md)。  
   
 ## <a name="example"></a>示例  
  是一个 WPF UI 的外接程序创建的每个管道段、 外接程序和主机应用程序需要特定代码。  
@@ -37,13 +37,13 @@ ms.locfileid: "54510802"
 ## <a name="implementing-the-contract-pipeline-segment"></a>实现协定管道段  
  当外接程序是一个 UI 时，必须实现外接程序的协定<xref:System.AddIn.Contract.INativeHandleContract>。 在示例中，`IWPFAddInContract`实现<xref:System.AddIn.Contract.INativeHandleContract>，如下面的代码中所示。  
   
- [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
   
 <a name="AddInViewPipeline"></a>   
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>实现外接程序视图管道段  
  由于外接程序作为实现的子类<xref:System.Windows.FrameworkElement>类型外, 接程序视图还必须子类<xref:System.Windows.FrameworkElement>。 下面的代码显示了为实现的协定的外接程序视图`WPFAddInView`类。  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
   
  此处外, 接程序视图派生自<xref:System.Windows.Controls.UserControl>。 因此，加载项 UI 还应派生自<xref:System.Windows.Controls.UserControl>。  
   
@@ -51,12 +51,12 @@ ms.locfileid: "54510802"
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>实现外接程序端适配器管道段  
  协定是<xref:System.AddIn.Contract.INativeHandleContract>外, 接程序是<xref:System.Windows.FrameworkElement>（如指定的外接程序视图管道段）。 因此，<xref:System.Windows.FrameworkElement>必须转换为<xref:System.AddIn.Contract.INativeHandleContract>之前跨越隔离边界。 这一工作由外接程序端适配器通过调用执行<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>，如下面的代码中所示。  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- 在其中的外接程序返回 UI 的外接程序模型 (请参阅[创建外接程序，将返回的用户界面](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)) 外, 接程序适配器转换<xref:System.Windows.FrameworkElement>到<xref:System.AddIn.Contract.INativeHandleContract>通过调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 必须也调用该模型中，尽管您需要实现一种方法从其编写代码来调用它。 执行此操作通过重写<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>和实现调用的代码<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>如果正在调用的代码<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>应为<xref:System.AddIn.Contract.INativeHandleContract>。 在此情况下，调用方将为主机端适配器，这在后续子节中有所介绍。  
+ 在其中的外接程序返回 UI 的外接程序模型 (请参阅[创建外接程序，将返回的用户界面](how-to-create-an-add-in-that-returns-a-ui.md)) 外, 接程序适配器转换<xref:System.Windows.FrameworkElement>到<xref:System.AddIn.Contract.INativeHandleContract>通过调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 必须也调用该模型中，尽管您需要实现一种方法从其编写代码来调用它。 执行此操作通过重写<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>和实现调用的代码<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>如果正在调用的代码<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>应为<xref:System.AddIn.Contract.INativeHandleContract>。 在此情况下，调用方将为主机端适配器，这在后续子节中有所介绍。  
   
 > [!NOTE]
->  此外需要重写<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>在此模型中使用 tab 键切换之间主机应用程序 UI 和外接程序用户界面。 详细信息，请参阅"WPF 外接程序限制"中[WPF 外接程序概述](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
+>  此外需要重写<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>在此模型中使用 tab 键切换之间主机应用程序 UI 和外接程序用户界面。 详细信息，请参阅"WPF 外接程序限制"中[WPF 外接程序概述](wpf-add-ins-overview.md)。  
   
  由于外接程序端适配器实现派生自的接口<xref:System.AddIn.Contract.INativeHandleContract>，还需要实现<xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>，但忽略此时<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>被重写。  
   
@@ -106,4 +106,4 @@ ms.locfileid: "54510802"
   
 ## <a name="see-also"></a>请参阅
 - [外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [WPF 外接程序概述](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+- [WPF 外接程序概述](wpf-add-ins-overview.md)
