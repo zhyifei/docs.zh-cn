@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: bf99d716c5c41b7604244022d2e58423594a9cf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ed44da316ddee5ea3a83262f913da571bf75276
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674867"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378894"
 ---
 # <a name="how-to-use-systemfonts"></a>如何：使用 SystemFonts
 此示例演示如何使用的静态资源<xref:System.Windows.SystemFonts>样式或自定义按钮的类。  
@@ -29,19 +29,19 @@ ms.locfileid: "54674867"
   
  下面的示例演示如何访问和使用的属性<xref:System.Windows.SystemFonts>作为静态值来设置样式或自定义按钮。 此标记示例将分配<xref:System.Windows.SystemFonts>至一个按钮的值。  
   
- [!code-xaml[SystemRes_snip#FontStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#fontstaticresources)]  
+ [!code-xaml[SystemRes_snip#FontStaticResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#fontstaticresources)]  
   
  若要使用的值<xref:System.Windows.SystemFonts>不需要在代码中，使用静态值或动态资源引用。 相反，使用的非键属性<xref:System.Windows.SystemFonts>类。 尽管非键属性已明确定义的运行时行为的静态属性形式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]承载系统将重新评估在真实时间中的属性，并且会适当考虑对系统值面向用户的更改。 以下示例演示如何指定按钮的字体设置。  
   
- [!code-csharp[SystemRes_snip#FontResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
- [!code-vb[SystemRes_snip#FontResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
+ [!code-csharp[SystemRes_snip#FontResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
+ [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.SystemFonts>
-- [使用系统画笔绘制区域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [使用 SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)
-- [使用系统字体键](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)
-- [帮助主题](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
-- [x:Static 标记扩展](../../../../docs/framework/xaml-services/x-static-markup-extension.md)
-- [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [DynamicResource 标记扩展](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+- [使用系统画笔绘制区域](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [使用 SystemParameters](how-to-use-systemparameters.md)
+- [使用系统字体键](how-to-use-system-fonts-keys.md)
+- [帮助主题](resources-how-to-topics.md)
+- [x:Static 标记扩展](../../xaml-services/x-static-markup-extension.md)
+- [XAML 资源](xaml-resources.md)
+- [DynamicResource 标记扩展](dynamicresource-markup-extension.md)

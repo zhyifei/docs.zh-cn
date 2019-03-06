@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
 ms.openlocfilehash: 1f1df0c7391c027994caabadc4b857bec55f5938
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287490"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367175"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>类型\<变量名 > 无法推断，因为循环边界和步骤变量未扩大到同一类型
 您编写`For...Next`循环中的编译器无法推断 for 循环控制变量的数据类型因为以下条件成立：  

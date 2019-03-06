@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TreeView control [WPF], about TreeView control
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
-ms.openlocfilehash: 42e6601ecc65ec3534b82154bffc1076e10db665
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5758aead9811cdbaf7f61bbd710092f6b4474ad8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504283"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369625"
 ---
 # <a name="treeview-overview"></a>TreeView 概述
 <xref:System.Windows.Controls.TreeView>控件提供了一种方法，通过使用可折叠节点在层次结构中显示的信息。 本主题介绍<xref:System.Windows.Controls.TreeView>和<xref:System.Windows.Controls.TreeViewItem>控件，并提供其用法的简单示例。  
@@ -21,7 +21,7 @@ ms.locfileid: "54504283"
 ## <a name="what-is-a-treeview"></a>什么是 TreeView？  
  <xref:System.Windows.Controls.TreeView> 是<xref:System.Windows.Controls.ItemsControl>通过使用嵌套项<xref:System.Windows.Controls.TreeViewItem>控件。 下面的示例创建<xref:System.Windows.Controls.TreeView>。  
   
- [!code-xaml[TreeViewSnips#EmbeddedTVIs](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#embeddedtvis)]  
+ [!code-xaml[TreeViewSnips#EmbeddedTVIs](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#embeddedtvis)]  
   
 <a name="Creating_a_TreeView"></a>   
 ## <a name="creating-a-treeview"></a>创建 TreeView  
@@ -31,7 +31,7 @@ ms.locfileid: "54504283"
   
  此外可以指定<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>作为数据源，然后指定<xref:System.Windows.Controls.HeaderedItemsControl.HeaderTemplate%2A>并<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>可以定义<xref:System.Windows.Controls.TreeViewItem>内容。  
   
- 若要定义的布局<xref:System.Windows.Controls.TreeViewItem>控件，您还可以使用<xref:System.Windows.HierarchicalDataTemplate>对象。 有关详细信息和示例，请参阅[使用 SelectedValue、SelectedValuePath 和 SelectedItem](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)。  
+ 若要定义的布局<xref:System.Windows.Controls.TreeViewItem>控件，您还可以使用<xref:System.Windows.HierarchicalDataTemplate>对象。 有关详细信息和示例，请参阅[使用 SelectedValue、SelectedValuePath 和 SelectedItem](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)。  
   
  如果项不是<xref:System.Windows.Controls.TreeViewItem>控件，它将自动包括<xref:System.Windows.Controls.TreeViewItem>控制何时<xref:System.Windows.Controls.TreeView>显示控件。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54504283"
   
  <xref:System.Windows.Controls.TreeView.SelectedItem%2A>属性上的<xref:System.Windows.Controls.TreeView>控件是只读属性; 因此，您不能显式将其设置。 <xref:System.Windows.Controls.TreeView.SelectedItem%2A>属性设置在用户单击上<xref:System.Windows.Controls.TreeViewItem>控件时，或者当<xref:System.Windows.Controls.TreeViewItem.IsSelected%2A>属性设置为`true`上<xref:System.Windows.Controls.TreeViewItem>控件。  
   
- 使用<xref:System.Windows.Controls.TreeView.SelectedValuePath%2A>属性来指定<xref:System.Windows.Controls.TreeView.SelectedValue%2A>的<xref:System.Windows.Controls.TreeView.SelectedItem%2A>。 有关详细信息，请参阅[使用 SelectedValue、SelectedValuePath 和 SelectedItem](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)。  
+ 使用<xref:System.Windows.Controls.TreeView.SelectedValuePath%2A>属性来指定<xref:System.Windows.Controls.TreeView.SelectedValue%2A>的<xref:System.Windows.Controls.TreeView.SelectedItem%2A>。 有关详细信息，请参阅[使用 SelectedValue、SelectedValuePath 和 SelectedItem](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)。  
   
  可以在注册事件处理程序<xref:System.Windows.Controls.TreeView.SelectedItemChanged>事件，以确定当所选<xref:System.Windows.Controls.TreeViewItem>更改。 <xref:System.Windows.RoutedPropertyChangedEventArgs%601>提供对事件处理程序指定<xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A>，这是以前的选项，和<xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>，这是当前所选内容。 如果应用程序或用户未进行上一个或当前选择，则任一值都可能为 `null`。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54504283"
   
  下面的示例演示如何设置<xref:System.Windows.Controls.Control.Foreground%2A>并<xref:System.Windows.Controls.Control.FontSize%2A>属性值的<xref:System.Windows.Controls.TreeViewItem>控件中的使用<xref:System.Windows.FrameworkElement.Style%2A>。  
   
- [!code-xaml[TreeViewSimple#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#8)]  
+ [!code-xaml[TreeViewSimple#8](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#8)]  
   
 <a name="Adding_Images_and_oOther_Content_to_TreeView_Items"></a>   
 ## <a name="adding-images-and-other-content-to-treeview-items"></a>向 TreeView 项添加图像和其他内容  
@@ -67,14 +67,14 @@ ms.locfileid: "54504283"
   
  下面的示例演示如何定义<xref:System.Windows.Controls.HeaderedItemsControl.Header%2A>的<xref:System.Windows.Controls.TreeViewItem>作为<xref:System.Windows.Controls.CheckBox>并<xref:System.Windows.Controls.TextBlock>，括在<xref:System.Windows.Controls.DockPanel>控件。  
   
- [!code-xaml[TreeViewSnips#TVIHeader](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#tviheader)]  
+ [!code-xaml[TreeViewSnips#TVIHeader](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#tviheader)]  
   
  下面的示例演示如何定义<xref:System.Windows.DataTemplate>，其中包含<xref:System.Windows.Controls.Image>和一个<xref:System.Windows.Controls.TextBlock>括在<xref:System.Windows.Controls.DockPanel>控件。 可以使用<xref:System.Windows.DataTemplate>若要设置<xref:System.Windows.Controls.HeaderedItemsControl.HeaderTemplate%2A>或<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>为<xref:System.Windows.Controls.TreeViewItem>。  
   
- [!code-xaml[TreeViewDataBinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
+ [!code-xaml[TreeViewDataBinding#6](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [帮助主题](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)
-- [WPF 内容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+- [帮助主题](treeview-how-to-topics.md)
+- [WPF 内容模型](wpf-content-model.md)

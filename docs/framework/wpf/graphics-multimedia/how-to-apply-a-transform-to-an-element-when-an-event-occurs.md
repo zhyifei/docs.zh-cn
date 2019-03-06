@@ -11,15 +11,15 @@ helpviewer_keywords:
 - properties [WPF], RenderTransform
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
-ms.openlocfilehash: 3862ffcb8e0dcabd2de67c495204470ac9fa6c14
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c14f746846943d3fa5150fbee405a62249dee9c1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726385"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357921"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>如何：在事件发生时向元素应用变换
-此示例演示如何将应用<xref:System.Windows.Media.ScaleTransform>事件的发生时间。 此处说明的概念与用于应用其他类型的转换的概念相同。 有关可用类型的转换的详细信息，请参阅<xref:System.Windows.Media.Transform>类或[转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)。  
+此示例演示如何将应用<xref:System.Windows.Media.ScaleTransform>事件的发生时间。 此处说明的概念与用于应用其他类型的转换的概念相同。 有关可用类型的转换的详细信息，请参阅<xref:System.Windows.Media.Transform>类或[转换概述](transforms-overview.md)。  
   
  可以通过以下两种方式之一向元素应用转换：  
   
@@ -30,14 +30,14 @@ ms.locfileid: "54726385"
  下面的示例应用<xref:System.Windows.Media.ScaleTransform>到<xref:System.Windows.UIElement.RenderTransform%2A>按钮的属性。 当鼠标在按钮上移<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>和<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>的属性<xref:System.Windows.Media.ScaleTransform>设置为`2`，这会导致该按钮会变得更大。 当鼠标离开按钮时，<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>并<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>设置为`1`，这会导致按钮返回到其原始大小。  
   
 ## <a name="example"></a>示例  
- [!code-xaml[ButtonTransform#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml#1)]  
+ [!code-xaml[ButtonTransform#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml#1)]  
   
- [!code-csharp[ButtonTransform#1cb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml.cs#1cb)]
- [!code-vb[ButtonTransform#1cb](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ButtonTransform/VisualBasic/ButtonTransformExample.xaml.vb#1cb)]  
+ [!code-csharp[ButtonTransform#1cb](~/samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml.cs#1cb)]
+ [!code-vb[ButtonTransform#1cb](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ButtonTransform/VisualBasic/ButtonTransformExample.xaml.vb#1cb)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
-- [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
-- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
-- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [转换概述](transforms-overview.md)
+- [帮助主题](transformations-how-to-topics.md)
+- [路由事件概述](../advanced/routed-events-overview.md)

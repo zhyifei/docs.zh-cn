@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
-ms.openlocfilehash: 18564e0de8f88e89f8fb71d28ee3bfeccceea4ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86910434e572bc19595d1664347f35d7a39eb75b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507559"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365095"
 ---
 # <a name="getrawinputdevices"></a>GetRawInputDevices
 允许 PresentationHost.exe 发现主机应用程序感兴趣的原始输入的设备（人机接口设备）。  
@@ -23,12 +23,12 @@ HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );
 #### <a name="parameters"></a>参数  
  `ppEnum`  
   
- [out]一个指向[IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)用于枚举原始输入的设备。  
+ [out]一个指向[IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)用于枚举原始输入的设备。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  HRESULT：  
   
- S_OK- [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)如果返回 S_OK，则将仅由 PresentationHost.exe 使用。  
+ S_OK- [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)如果返回 S_OK，则将仅由 PresentationHost.exe 使用。  
   
  E_NOTIMPL  
   
@@ -39,4 +39,4 @@ HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );
   
 ## <a name="see-also"></a>请参阅
 - [GetRawInputDeviceList](/windows/desktop/api/winuser/nf-winuser-getrawinputdevicelist)
-- [FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)
+- [FilterInputMessage](filterinputmessage.md)

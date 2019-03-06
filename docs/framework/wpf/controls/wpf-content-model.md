@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: 751cbcc3a3b70f0937a8fe84c0fad5d8771a32ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd9dc7a441987b2089f0f21c81311a628ae3cdfa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718151"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373083"
 ---
 # <a name="wpf-content-model"></a>WPF 内容模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是一个演示平台，提供了许多控件和类似控件的类型，主要用于显示不同类型的内容。 若要确定所要使用的控件或要从其派生的控件，应该了解特定控件可以最佳效果显示的对象类型。  
@@ -40,7 +40,7 @@ ms.locfileid: "54718151"
   
  继承自这些类的控件可以包含相同类型的内容，并可以采用相同方式处理该内容。 下图显示了来自每个内容模型的一个控件，该控件包含了图像和一些文本。  
   
- ![Button、GroupBox、Listbax、TreeViewItem](../../../../docs/framework/wpf/controls/media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
+ ![Button、GroupBox、Listbax、TreeViewItem](./media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
   
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>包含一个任意对象的控件  
  <xref:System.Windows.Controls.ContentControl>类包含一段任意内容。 它的内容属性是<xref:System.Windows.Controls.ContentControl.Content%2A>。 以下控件继承自<xref:System.Windows.Controls.ContentControl>并使用其内容模型：  
@@ -87,7 +87,7 @@ ms.locfileid: "54718151"
   
  下图显示四个按钮，其<xref:System.Windows.Controls.ContentControl.Content%2A>设置为字符串，<xref:System.DateTime>对象， <xref:System.Windows.Shapes.Rectangle>，和一个<xref:System.Windows.Controls.Panel>，其中包含<xref:System.Windows.Shapes.Ellipse>和<xref:System.Windows.Controls.TextBlock>。  
   
- ![四个按钮](../../../../docs/framework/wpf/controls/media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
+ ![四个按钮](./media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
 具有不同类型内容的四个按钮  
   
  有关如何设置的示例<xref:System.Windows.Controls.ContentControl.Content%2A>属性，请参阅<xref:System.Windows.Controls.ContentControl>。  
@@ -105,7 +105,7 @@ ms.locfileid: "54718151"
   
  下图显示了两个<xref:System.Windows.Controls.TabItem>对象。 第一个<xref:System.Windows.Controls.TabItem>已<xref:System.Windows.UIElement>对象作为<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>和<xref:System.Windows.Controls.ContentControl.Content%2A>。 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A>设置为<xref:System.Windows.Controls.StackPanel>，其中包含<xref:System.Windows.Shapes.Ellipse>和一个<xref:System.Windows.Controls.TextBlock>。 <xref:System.Windows.Controls.ContentControl.Content%2A>设置为<xref:System.Windows.Controls.StackPanel>，其中包含<xref:System.Windows.Controls.TextBlock>和一个<xref:System.Windows.Controls.Label>。 第二个<xref:System.Windows.Controls.TabItem>具有一个字符串<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>和一个<xref:System.Windows.Controls.TextBlock>中<xref:System.Windows.Controls.ContentControl.Content%2A>。  
   
- ![TabControl](../../../../docs/framework/wpf/controls/media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
+ ![TabControl](./media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
 在 Header 属性中使用不同类型的 TabControl  
   
  有关如何创建的示例<xref:System.Windows.Controls.TabItem>对象，请参阅<xref:System.Windows.Controls.HeaderedContentControl>。  
@@ -147,7 +147,7 @@ ms.locfileid: "54718151"
   
 -   一个<xref:System.Windows.Controls.Panel>，其中包含<xref:System.Windows.Shapes.Ellipse>和一个<xref:System.Windows.Controls.TextBlock>。  
   
- ![具有四种类型的内容的 ListBox](../../../../docs/framework/wpf/controls/media/controlcontentmodellistbox2.PNG "ControlContentModelListBox2")  
+ ![具有四种类型的内容的 ListBox](./media/controlcontentmodellistbox2.PNG "ControlContentModelListBox2")  
 包含多种类型对象的 ListBox  
   
 ### <a name="controls-that-contain-a-header-and-a-collection-of-arbitrary-objects"></a>包含一个标头和一个任意对象集合的控件  
@@ -189,7 +189,7 @@ ms.locfileid: "54718151"
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
- 有关详细信息，请参阅[面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)。  
+ 有关详细信息，请参阅[面板概述](panels-overview.md)。  
   
 <a name="classes_that_affects_the_appearance_of_a_uielement"></a>   
 ## <a name="classes-that-affect-the-appearance-of-a-uielement"></a>影响 UIElement 外观的类  
@@ -215,12 +215,12 @@ ms.locfileid: "54718151"
   
  如下图所示<xref:System.Windows.Controls.TextBox>具有 （即装饰有）<xref:System.Windows.Controls.Border>围绕它。  
   
- ![具有黑色边框的 TextBox](../../../../docs/framework/wpf/controls/media/layout-border-around-textbox.png "Layout_Border_around_TextBox")  
+ ![具有黑色边框的 TextBox](./media/layout-border-around-textbox.png "Layout_Border_around_TextBox")  
 具有边框的 TextBlock  
   
 <a name="classes_that_provides_visual_feedback_about_a_uielement"></a>   
 ## <a name="classes-that-provide-visual-feedback-about-a-uielement"></a>提供 UIElement 相关视觉反馈的类  
- <xref:System.Windows.Documents.Adorner>类向用户提供可视化提示。 例如，使用<xref:System.Windows.Documents.Adorner>向元素添加功能句柄或提供有关控件的状态信息。 <xref:System.Windows.Documents.Adorner>类提供一个框架，以便您可以创建自己的装饰器。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不会提供任何实现的装饰器。 有关详细信息，请参阅[装饰器概述](../../../../docs/framework/wpf/controls/adorners-overview.md)。  
+ <xref:System.Windows.Documents.Adorner>类向用户提供可视化提示。 例如，使用<xref:System.Windows.Documents.Adorner>向元素添加功能句柄或提供有关控件的状态信息。 <xref:System.Windows.Documents.Adorner>类提供一个框架，以便您可以创建自己的装饰器。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不会提供任何实现的装饰器。 有关详细信息，请参阅[装饰器概述](adorners-overview.md)。  
   
 <a name="classes_that_enable_users_to_enter_text"></a>   
 ## <a name="classes-that-enable-users-to-enter-text"></a>可让用户输入文本的类  
@@ -250,7 +250,7 @@ ms.locfileid: "54718151"
   
 <a name="classes_that_format_text"></a>   
 ## <a name="classes-that-format-your-text"></a>设置文本格式的类  
- <xref:System.Windows.Documents.TextElement> 和及其相关的类可用于设置文本的格式。 <xref:System.Windows.Documents.TextElement> 对象包含和中的文本格式<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>对象。 两种主要类型的<xref:System.Windows.Documents.TextElement>对象是<xref:System.Windows.Documents.Block>元素和<xref:System.Windows.Documents.Inline>元素。 一个<xref:System.Windows.Documents.Block>元素表示的文本，例如段落或列表的块。 <xref:System.Windows.Documents.Inline>元素表示块中的文本的一部分。 许多<xref:System.Windows.Documents.Inline>类指定应用于中文本的格式。 每个<xref:System.Windows.Documents.TextElement>具有其自己的内容模型。 有关详细信息，请参阅 [TextElement 内容模型概述](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)。  
+ <xref:System.Windows.Documents.TextElement> 和及其相关的类可用于设置文本的格式。 <xref:System.Windows.Documents.TextElement> 对象包含和中的文本格式<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>对象。 两种主要类型的<xref:System.Windows.Documents.TextElement>对象是<xref:System.Windows.Documents.Block>元素和<xref:System.Windows.Documents.Inline>元素。 一个<xref:System.Windows.Documents.Block>元素表示的文本，例如段落或列表的块。 <xref:System.Windows.Documents.Inline>元素表示块中的文本的一部分。 许多<xref:System.Windows.Documents.Inline>类指定应用于中文本的格式。 每个<xref:System.Windows.Documents.TextElement>具有其自己的内容模型。 有关详细信息，请参阅 [TextElement 内容模型概述](../advanced/textelement-content-model-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [高级](../../../../docs/framework/wpf/advanced/index.md)
+- [高级](../advanced/index.md)

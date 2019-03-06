@@ -5,12 +5,12 @@ helpviewer_keywords:
 - properties [WPF], FocusVisualStyle
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
-ms.openlocfilehash: ae7820dac011425251d087dd4109c3f40bdd308c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4b379d3c57b6d0ae29952c23a35d7cc2cdf7f96
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493243"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366590"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>如何：对控件应用 FocusVisualStyle
 此示例演示如何在资源中创建焦点视觉样式并将样式应用到控件时，使用<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>属性。  
@@ -20,13 +20,13 @@ ms.locfileid: "54493243"
   
  类似于边框外部矩形放置之外的矩形区域。 除非修改，否则使用的样式的大小调整<xref:System.Windows.FrameworkElement.ActualHeight%2A>和<xref:System.Windows.FrameworkElement.ActualWidth%2A>焦点视觉样式应用的位置的矩形控件。 此示例设置值为负值<xref:System.Windows.FrameworkElement.Margin%2A>以使显示稍有外部具有焦点的控件的边框。  
   
- [!code-xaml[FEFocusVisualStyle#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEFocusVisualStyle/CS/page1.xaml#xaml)]  
+ [!code-xaml[FEFocusVisualStyle#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FEFocusVisualStyle/CS/page1.xaml#xaml)]  
   
  一个<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>是附加到提供任何控件模板样式从显式样式或主题样式; 主样式的控件仍可创建使用<xref:System.Windows.Controls.ControlTemplate>并将该样式设置为<xref:System.Windows.FrameworkElement.Style%2A>属性。  
   
- 焦点视觉样式应始终在主题或 UI，而不是使用另一个用于每个可获得焦点的元素。 有关详细信息，请参阅[的控件和 FocusVisualStyle 焦点设置样式](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)。  
+ 焦点视觉样式应始终在主题或 UI，而不是使用另一个用于每个可获得焦点的元素。 有关详细信息，请参阅[的控件和 FocusVisualStyle 焦点设置样式](styling-for-focus-in-controls-and-focusvisualstyle.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
-- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [为控件中的焦点设置样式以及 FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)
+- [样式设置和模板化](../controls/styling-and-templating.md)
+- [为控件中的焦点设置样式以及 FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)

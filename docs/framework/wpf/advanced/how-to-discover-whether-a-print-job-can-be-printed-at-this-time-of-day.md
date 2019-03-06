@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: 2abb9939917d4fc10a345b6199e2eb67054bf0c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e93fe23a6084fec4e2a251b0361c29a4207e621
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676687"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352732"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>如何：确定此时是否可以打印一项打印作业
 打印队列并不总是可用的一天 24 小时。 它们具有开始和结束时间属性可以设置以使其在一天中的某些时间不可用。 例如，此功能可用于保留专供特定部门的下午 5 点后的打印机。 该部门必须使用其他队列服务比其他部门的打印机。 将设置为其他部门队列以在下午 5 点后将不可用，而队列支持的部门可能被设置为始终可用。  
@@ -47,9 +47,9 @@ ms.locfileid: "54676687"
   
  报告一天中的时间时<xref:System.DateTime.ToShortTimeString%2A>也称为方法，因为此方法取消年、 月和天的输出。 打印队列或打印作业的可用性限于在特定的年、 月或天。  
   
- [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
- [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
- [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
+ [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
+ [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
   
  两个重载**ReportAvailabilityAtThisTime**方法是相同类型传递给它们，因此，只有除外<xref:System.Printing.PrintQueue>版本如下所示。  
   
@@ -64,19 +64,19 @@ ms.locfileid: "54676687"
   
  但是，这两个属性不是<xref:System.DateTime>对象。 它们是<xref:System.Int32>将时间表示为分钟后 UTC 午夜的数字。 因此我们需要转换我们<xref:System.DateTime>午夜分钟后的对象。 完成后，该方法只需检查以查看是否"立即"是队列的开始之间和"截至"时间设置为 false，如果"现在"sentinel 之间两次，并不返回 sentinel。  
   
- [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
- [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
- [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
+ [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
+ [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
  **TimeConverter.ConvertToLocalHumanReadableTime**方法 （如下面的代码示例所示） 不使用任何方法引入了使用 Microsoft.NET Framework，因此进行简要的讨论。 该方法具有一个双精度的转换任务： 它必须采用一个整型表示午夜之后的分钟，并将其转换为人工可读的时间和它必须将其转换为本地时间。 这是通过实现通过首先创建<xref:System.DateTime>对象，它设置为午夜 UTC，然后使用<xref:System.DateTime.AddMinutes%2A>方法添加到该方法传递的分钟数。 这将返回一个新<xref:System.DateTime>传递给该方法将原始时间表示。 <xref:System.DateTime.ToLocalTime%2A>方法然后将此转换为本地时间。  
   
- [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
- [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]
- [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
+ [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]
+ [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.DateTime>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.Printing.PrintQueue>
-- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [WPF 中的文档](documents-in-wpf.md)
+- [打印概述](printing-overview.md)

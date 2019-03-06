@@ -2,12 +2,12 @@
 title: 取消一个异步任务或一组任务 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: e4e0fcb1d706fef09233543487aebdeb01cdfbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81676324145bcf8f6d9a13e757865fa86e6d2e23
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695888"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374448"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>取消一个异步任务或一组任务 (Visual Basic)
 如果不想等待异步应用程序完成，可以设置一个按钮用来取消它。 通过遵循本主题中的示例，可以为下载一个或一组网站内容的应用程序添加一个取消按钮。  
@@ -17,11 +17,11 @@ ms.locfileid: "54695888"
 > [!NOTE]
 >  若要运行该示例，计算机上必须安装有 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
   
-##  <a name="BKMK_CancelaTask"></a>取消任务  
+## <a name="BKMK_CancelaTask"></a>取消任务  
  第一个示例将“取消”按钮与单个下载任务关联。 如果在应用程序下载内容时选择按钮，下载将取消。  
   
 ### <a name="downloading-the-example"></a>下载示例  
- 您可以下载完整的 Windows Presentation Foundation (WPF) 项目，从[异步示例：微调优化应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)然后按照这些步骤进行操作。  
+ 若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）。  
   
 1.  解压缩下载的文件，然后启动 Visual Studio。  
   
@@ -135,11 +135,11 @@ ms.locfileid: "54695888"
     Download canceled.  
     ```  
   
-##  <a name="BKMK_CancelaListofTasks"></a>取消任务列表  
+## <a name="BKMK_CancelaListofTasks"></a>取消任务列表  
  通过将相同的 `CancellationTokenSource` 示例与每个任务关联，可以扩展先前的示例，从而取消多个任务。 如果选择“取消”按钮，则将取消所有尚未完成的任务。  
   
 ### <a name="downloading-the-example"></a>下载示例  
- 您可以下载完整的 Windows Presentation Foundation (WPF) 项目，从[异步示例：微调优化应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)然后按照这些步骤进行操作。  
+ 若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）。  
   
 1.  解压缩下载的文件，然后启动 Visual Studio。  
   
@@ -247,10 +247,10 @@ ms.locfileid: "54695888"
     Downloads canceled.  
     ```  
   
-##  <a name="BKMK_CompleteExamples"></a>完成示例  
+## <a name="BKMK_CompleteExamples"></a>完成示例  
  以下各部分包含每个前面示例的代码。 请注意，必须为 <xref:System.Net.Http> 添加引用。  
   
- 您可以下载的项目从[异步示例：你的应用程序进行微调](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)。  
+ 您可以下载的项目从[异步示例：Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）下载这些项目。  
   
 ### <a name="cancel-a-task-example"></a>取消任务示例  
  以下代码是取消单个任务的示例的完整 MainWindow.xaml.vb 文件。  

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - ListView [WPF], styles and templates
 - templates [WPF], ListView
 ms.assetid: d2387356-2171-4785-822a-7247e024b4ee
-ms.openlocfilehash: 66e9f5d45a4c9b3a04291a8ebbf054ebc055b5a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1171140da352f0f5eb93832a3b6b3557e34d6904
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643632"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362872"
 ---
 # <a name="listview-styles-and-templates"></a>ListView 样式和模板
-本主题介绍的样式和模板的<xref:System.Windows.Controls.ListView>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍的样式和模板的<xref:System.Windows.Controls.ListView>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
   
 ## <a name="listview-parts"></a>ListView 部件  
  <xref:System.Windows.Controls.ListView>控件没有任何命名的部件。  
@@ -56,18 +56,18 @@ ms.locfileid: "54643632"
 ## <a name="listview-controltemplate-examples"></a>ListView ControlTemplate 示例  
  下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.ListView>控件和其关联的类型。  
   
- [!code-xaml[ControlTemplateExamples#ListView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listview.xaml#listview)]  
+ [!code-xaml[ControlTemplateExamples#ListView](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listview.xaml#listview)]  
   
  <xref:System.Windows.Controls.ControlTemplate>示例使用一个或多个以下资源。  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [控件样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)
-- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [控件样式和模板](control-styles-and-templates.md)
+- [控件自定义](control-customization.md)
+- [样式设置和模板化](styling-and-templating.md)
+- [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)

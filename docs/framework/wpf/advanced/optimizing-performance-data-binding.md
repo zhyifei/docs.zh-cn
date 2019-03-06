@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 156d248921499aa78c3638e45af113c5698bdacd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfc58036bc39879009b31d29dc41247a914bcd59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668010"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352017"
 ---
 # <a name="optimizing-performance-data-binding"></a>优化性能：数据绑定
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定为应用程序呈现数据并与数据交互提供了一种简单且一致的方式。 元素能够以 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 形式绑定到来自各种数据源的数据。  
@@ -74,14 +74,14 @@ ms.locfileid: "54668010"
  通过 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可数据绑定到 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 内容；但是，数据绑定到 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 内容与数据绑定到 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象相比速度更慢。 如果目的仅在于数据绑定，请勿将 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象数据转换为 XML。  
   
 ## <a name="see-also"></a>请参阅
-- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [规划应用程序性能](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [利用硬件](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [布局和示例](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [对象行为](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [应用程序资源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [文本](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [演练：缓存在 WPF 应用程序的应用程序数据](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [优化 WPF 应用程序性能](optimizing-wpf-application-performance.md)
+- [规划应用程序性能](planning-for-application-performance.md)
+- [利用硬件](optimizing-performance-taking-advantage-of-hardware.md)
+- [布局和示例](optimizing-performance-layout-and-design.md)
+- [2D 图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)
+- [对象行为](optimizing-performance-object-behavior.md)
+- [应用程序资源](optimizing-performance-application-resources.md)
+- [文本](optimizing-performance-text.md)
+- [其他性能建议](optimizing-performance-other-recommendations.md)
+- [数据绑定概述](../data/data-binding-overview.md)
+- [演练：缓存在 WPF 应用程序的应用程序数据](walkthrough-caching-application-data-in-a-wpf-application.md)

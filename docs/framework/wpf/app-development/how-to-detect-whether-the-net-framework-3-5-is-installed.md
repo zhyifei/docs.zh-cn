@@ -7,18 +7,18 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: cbdac46a52ae92ec7a8f6fb819a3da54ddccce7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f3e3077f78aed90f4e213d61267131019664fdb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636401"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378758"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>如何：检测是否安装了.NET Framework 3.5
 管理员可部署的系统上的 Windows Presentation Foundation (WPF) 应用程序之前[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，它们必须先确认[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]运行时已存在。 本主题提供了编写的脚本在 HTML/JavaScript，管理员可以用于确定是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]系统上存在。  
   
 > [!NOTE]
->  有关更多详细信息上安装、 部署和检测[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，请参阅[安装面向开发人员的.NET Framework](../../../../docs/framework/install/guide-for-developers.md)。  
+>  有关更多详细信息上安装、 部署和检测[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，请参阅[安装面向开发人员的.NET Framework](../../install/guide-for-developers.md)。  
   
 ## <a name="example"></a>示例  
  当[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]是安装，MSI 向".NET CLR"和版本号的 UserAgent 字符串。 下面的示例演示一个简单的 HTML 页面中嵌入的脚本。 脚本搜索用户代理字符串以确定是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]安装，并在搜索结果中显示的状态消息。  
@@ -129,4 +129,4 @@ ms.locfileid: "54636401"
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; MS-RTC LM 8).`  
   
 ## <a name="see-also"></a>请参阅
-- [检测是否安装了 .NET Framework 3.0](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [检测是否安装了 .NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)

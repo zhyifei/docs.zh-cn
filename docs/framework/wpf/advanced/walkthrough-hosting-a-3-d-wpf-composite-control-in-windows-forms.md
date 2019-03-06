@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: d32b98fce3cf5e4fe82745c3d0ba8992ee75339e
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: b1bd003c6a408e7455bb5c45e1f34a740fce67d1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746200"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367435"
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>演练：承载 3-D WPF 复合控件在 Windows 窗体中
 
@@ -44,7 +44,7 @@ ms.locfileid: "56746200"
 
 3.  生成的代码替换为以下代码：
 
-     [!code-xaml[HostingWpfUserControlInWf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]
+     [!code-xaml[HostingWpfUserControlInWf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]
 
      此代码定义<xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>，其中包含两个子控件。 第一个子控件是<xref:System.Windows.Controls.Label?displayProperty=nameWithType>控制; 第二个是<xref:System.Windows.Controls.Viewport3D>显示三维锥体控件。
 
@@ -80,8 +80,8 @@ ms.locfileid: "56746200"
 
      `Form1_Load`事件处理程序创建的实例`UserControl1`，并将添加为<xref:System.Windows.Forms.Integration.ElementHost>子控件的控件的集合。 <xref:System.Windows.Forms.Integration.ElementHost>控件添加到的子控件的窗体的集合。
 
-     [!code-csharp[HostingWpfUserControlInWf#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/WpfUserControlHost/Form1.cs#10)]
-     [!code-vb[HostingWpfUserControlInWf#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWpfUserControlInWf/VisualBasic/WpfUserControlHost/Form1.vb#10)]
+     [!code-csharp[HostingWpfUserControlInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/WpfUserControlHost/Form1.cs#10)]
+     [!code-vb[HostingWpfUserControlInWf#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWpfUserControlInWf/VisualBasic/WpfUserControlHost/Form1.vb#10)]
 
 4.  按 F5 生成并运行该应用程序。
 
@@ -90,6 +90,6 @@ ms.locfileid: "56746200"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [演练：承载 WPF 复合控件在 Windows 窗体中](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [演练：承载在 WPF 中的 Windows 窗体复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [演练：承载 WPF 复合控件在 Windows 窗体中](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [演练：承载在 WPF 中的 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [承载 WPF 复合控件在 Windows 窗体示例](https://go.microsoft.com/fwlink/?LinkID=160001)

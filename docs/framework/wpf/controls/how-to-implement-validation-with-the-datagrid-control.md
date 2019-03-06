@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: 8921d9fd36e011fd33628e15f8a055d79c3959d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3be25fecc58ba41dbb5b2e904eddcb9c2b3c98a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674591"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371081"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>如何：使用 DataGrid 控件实现验证
 <xref:System.Windows.Controls.DataGrid>控件，可以在单元格和行级别执行验证。 与单元格级别验证时用户更新的值验证绑定的数据对象的各个属性。 使用行级验证时用户将更改提交到行验证整个数据对象。 此外可以为验证错误，提供自定义可视反馈，或使用默认的可视反馈的<xref:System.Windows.Controls.DataGrid>控件提供。  
@@ -22,11 +22,11 @@ ms.locfileid: "54674591"
   
 ### <a name="to-validate-individual-cell-values"></a>若要验证单个单元格的值  
   
--   指定的列使用绑定上的一个或多个验证规则。 这是类似于验证简单控件中的数据，如中所述[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
+-   指定的列使用绑定上的一个或多个验证规则。 这是类似于验证简单控件中的数据，如中所述[数据绑定概述](../data/data-binding-overview.md)。  
   
      下面的示例演示<xref:System.Windows.Controls.DataGrid>具有四个列绑定到业务对象的不同属性的控件。 三个列指定<xref:System.Windows.Controls.ExceptionValidationRule>通过设置<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>属性设置为`true`。  
   
-     [!code-xaml[DataGrid_Validation#BasicXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/window1.xaml#basicxaml)]  
+     [!code-xaml[DataGrid_Validation#BasicXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/window1.xaml#basicxaml)]  
   
      当用户输入无效值 （如非整数中的课程 ID 列） 时，在单元格周围将出现一个红色边框。 您可以更改此默认验证反馈，如下面的过程中所述。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54674591"
   
      下面的示例通过添加由验证规则的三个列共享了错误样式更新前面的示例。 当用户输入的值无效时，样式更改单元格背景色，添加工具提示。 请注意，使用的触发器，以确定是否存在验证错误。 这是必需的因为当前单元格没有专用的错误模板。  
   
-     [!code-xaml[DataGrid_Validation#CellValidationXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#cellvalidationxaml)]  
+     [!code-xaml[DataGrid_Validation#CellValidationXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#cellvalidationxaml)]  
   
      您可以通过替换来实现更广泛的自定义<xref:System.Windows.Controls.DataGridColumn.CellStyle%2A>列使用。  
   
@@ -46,14 +46,14 @@ ms.locfileid: "54674591"
   
      下面的示例展示了此过程来验证是否`StartDate`属性值`Course`对象是早于其`EndDate`属性值。  
   
-     [!code-csharp[DataGrid_Validation#CourseValidationRule](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
-     [!code-vb[DataGrid_Validation#CourseValidationRule](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
+     [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
+     [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
 2.  添加验证规则与<xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType>集合。 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>属性提供直接访问权限<xref:System.Windows.Data.BindingGroup.ValidationRules%2A>属性的<xref:System.Windows.Data.BindingGroup>分组控件使用的所有绑定的实例。  
   
      下面的示例设置<xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>在 XAML 中的属性。 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>属性设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>，以便仅在绑定的数据对象更新后进行的验证。  
   
-     [!code-xaml[DataGrid_Validation#RowValidationRulesXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationrulesxaml)]  
+     [!code-xaml[DataGrid_Validation#RowValidationRulesXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationrulesxaml)]  
   
      当用户指定结束日期早于开始日期时，行标题中会显示一个红色感叹号 （！）。 您可以更改此默认验证反馈，如下面的过程中所述。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "54674591"
   
      下面的示例使用一个更可见的指示符替换默认行验证反馈。 当用户输入的值无效时，一个带有白色感叹号红色圆圈显示在行标题中。 这是个行和单元格的验证错误。 工具提示中显示相关联的错误消息。  
   
-     [!code-xaml[DataGrid_Validation#RowValidationFeedbackXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationfeedbackxaml)]  
+     [!code-xaml[DataGrid_Validation#RowValidationFeedbackXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationfeedbackxaml)]  
   
 ## <a name="example"></a>示例  
  下面的示例提供了单元格和行验证的完整演示。 `Course`类提供了实现的示例数据对象<xref:System.ComponentModel.IEditableObject>以支持事务。 <xref:System.Windows.Controls.DataGrid>控件与交互<xref:System.ComponentModel.IEditableObject>以使用户能够通过按 esc 键还原更改。  
@@ -85,14 +85,14 @@ ms.locfileid: "54674591"
   
 -   出现验证错误时，将鼠标指针移动行标题以查看相关联的错误消息中的指示符。  
   
- [!code-csharp[DataGrid_Validation#FullCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
- [!code-vb[DataGrid_Validation#FullCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  
+ [!code-csharp[DataGrid_Validation#FullCode](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
+ [!code-vb[DataGrid_Validation#FullCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  
   
- [!code-xaml[DataGrid_Validation#FullXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
+ [!code-xaml[DataGrid_Validation#FullXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Controls.DataGrid>
-- [数据网格](../../../../docs/framework/wpf/controls/datagrid.md)
-- [数据绑定](../../../../docs/framework/wpf/data/data-binding-wpf.md)
-- [实现绑定验证](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)
-- [在自定义对象上实现验证逻辑](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)
+- [数据网格](datagrid.md)
+- [数据绑定](../data/data-binding-wpf.md)
+- [实现绑定验证](../data/how-to-implement-binding-validation.md)
+- [在自定义对象上实现验证逻辑](../data/how-to-implement-validation-logic-on-custom-objects.md)

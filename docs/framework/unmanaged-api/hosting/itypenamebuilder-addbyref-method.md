@@ -17,30 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a4335bf477f0eeb8c48a50b9f11fb1f32d21448
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93b3ae8c83973c4d981fc42d4a8f616c62b1b28a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690054"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371094"
 ---
 # <a name="itypenamebuilderaddbyref-method"></a>ITypeNameBuilder::AddByRef 方法
-此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-HRESULT AddByRef ( );  
-```  
-  
-## <a name="requirements"></a>要求  
- **平台：** WindoSee[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **标头：** MSCorEE.h  
-  
- **库：** 包含为 MSCorEE.dll 中的资源  
-  
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
+
+此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+HRESULT AddByRef ( );
+```
+
+## <a name="requirements"></a>要求
+
+**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+**标头：** MSCorEE.h
+
+**库：** 包含为 MSCorEE.dll 中的资源
+
+**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+
 ## <a name="see-also"></a>请参阅
+
 - [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

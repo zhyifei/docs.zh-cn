@@ -5,12 +5,12 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-ms.openlocfilehash: aa8d1a33fb415b986bc5e058f5d198c221f9f489
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09b830562444bd51e931a1b5013d2a803319e336
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493161"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352759"
 ---
 # <a name="multimedia-overview"></a>多媒体概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的多媒体功能能够使音频和视频集成到应用程序，增强用户体验。 本主题介绍了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的多媒体功能。  
@@ -21,9 +21,9 @@ ms.locfileid: "54493161"
 ## <a name="media-api"></a>媒体 API  
  <xref:System.Windows.Controls.MediaElement>和<xref:System.Windows.Media.MediaPlayer>类用于提供音频或视频内容。 可以以交互方式或时钟控制这些类。 这些类可以用在 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 控件上进行媒体播放。 要使用哪个类取决于方案。  
   
- <xref:System.Windows.Controls.MediaElement> 是<xref:System.Windows.UIElement>受[布局](../../../../docs/framework/wpf/advanced/layout.md)并且可用作许多控件的内容。 它也可用在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 与代码中。 <xref:System.Windows.Media.MediaPlayer>但是，专为<xref:System.Windows.Media.Drawing>对象，因而缺少布局支持。 加载使用介质<xref:System.Windows.Media.MediaPlayer>仅可以使用呈现<xref:System.Windows.Media.VideoDrawing>或通过直接与交互<xref:System.Windows.Media.DrawingContext>。 <xref:System.Windows.Media.MediaPlayer> 不能在 XAML 中使用。  
+ <xref:System.Windows.Controls.MediaElement> 是<xref:System.Windows.UIElement>受[布局](../advanced/layout.md)并且可用作许多控件的内容。 它也可用在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 与代码中。 <xref:System.Windows.Media.MediaPlayer>但是，专为<xref:System.Windows.Media.Drawing>对象，因而缺少布局支持。 加载使用介质<xref:System.Windows.Media.MediaPlayer>仅可以使用呈现<xref:System.Windows.Media.VideoDrawing>或通过直接与交互<xref:System.Windows.Media.DrawingContext>。 <xref:System.Windows.Media.MediaPlayer> 不能在 XAML 中使用。  
   
- 有关绘图对象和绘图上下文的详细信息，请参阅 [Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)。  
+ 有关绘图对象和绘图上下文的详细信息，请参阅 [Drawing 对象概述](drawing-objects-overview.md)。  
   
 > [!NOTE]
 >  使用应用程序分发媒体时，不可将媒体文件用作项目资源。 在项目文件中，必须改为将媒体类型设置为 `Content` 并将 `CopyToOutputDirectory` 设置为 `PreserveNewest` 或 `Always`。  
@@ -49,7 +49,7 @@ ms.locfileid: "54493161"
   
  要在独立模式下控制媒体播放，可使用媒体对象的控制方法。 可用的控制方法都<xref:System.Windows.Controls.MediaElement.Play%2A>， <xref:System.Windows.Controls.MediaElement.Pause%2A>， <xref:System.Windows.Controls.MediaElement.Close%2A>，和<xref:System.Windows.Controls.MediaElement.Stop%2A>。 有关<xref:System.Windows.Controls.MediaElement>，使用这些方法的交互式控件才可用<xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>设置为<xref:System.Windows.Controls.MediaState.Manual>。 这些方法在媒体对象处于时钟模式时不可用。  
   
- 请参阅[控制 MediaElement（Play、Pause、Stop、Volume 和 Speed）](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)了解独立模式的示例。  
+ 请参阅[控制 MediaElement（Play、Pause、Stop、Volume 和 Speed）](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)了解独立模式的示例。  
   
 ### <a name="clock-mode"></a>时钟模式  
  在时钟模式下，<xref:System.Windows.Media.MediaTimeline>驱动器媒体的播放。 时钟模式具有以下特征：  
@@ -62,15 +62,15 @@ ms.locfileid: "54493161"
   
  在时钟模式下控制媒体播放<xref:System.Windows.Media.Animation.ClockController>必须使用控制方法。 一个<xref:System.Windows.Media.Animation.ClockController>取自<xref:System.Windows.Media.Animation.ClockController>属性的<xref:System.Windows.Media.MediaClock>。 如果尝试使用的控制方法<xref:System.Windows.Controls.MediaElement>或<xref:System.Windows.Media.MediaPlayer>对象在时钟模式下，<xref:System.InvalidOperationException>将引发。  
   
- 请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)了解有关时钟和时间线的更多信息。  
+ 请参阅[动画概述](animation-overview.md)了解有关时钟和时间线的更多信息。  
   
- 请参阅[使用情节提要控制 MediaElement](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md) 了解时钟模式的示例。  
+ 请参阅[使用情节提要控制 MediaElement](how-to-control-a-mediaelement-by-using-a-storyboard.md) 了解时钟模式的示例。  
   
 <a name="mediaelement"></a>   
 ## <a name="mediaelement-class"></a>MediaElement 类  
  将媒体添加到应用程序非常简单，添加<xref:System.Windows.Controls.MediaElement>控制对[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]的应用程序，并提供<xref:System.Uri>到你想要包括的媒体。 所有 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 支持的媒体类型都受到 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 的支持。 下面的示例演示的简单用法<xref:System.Windows.Controls.MediaElement>在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
   
- [!code-xaml[MediaElement_snip#SimpleMediaElementUsageWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
+ [!code-xaml[MediaElement_snip#SimpleMediaElementUsageWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
   
  在此示例中，媒体一旦加载会自动播放。 媒体完成播放后会关闭并且所有媒体资源已发布（包括视频内存）。 这是默认行为<xref:System.Windows.Controls.MediaElement>对象，并由控制<xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>和<xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>属性。  
   
@@ -108,11 +108,11 @@ ms.locfileid: "54493161"
 ### <a name="displaying-a-mediaplayer"></a>显示 MediaPlayer  
  从技术上讲，<xref:System.Windows.Media.MediaPlayer>无法显示，因为它必须没有物理表示形式。 但是，使用它来显示在媒体<xref:System.Windows.Media.Drawing>使用<xref:System.Windows.Media.VideoDrawing>类。 下面的示例演示如何将<xref:System.Windows.Media.VideoDrawing>显示媒体。  
   
- [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
+ [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
   
- 请参阅[Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)有关详细信息<xref:System.Windows.Media.Drawing>对象。  
+ 请参阅[Drawing 对象概述](drawing-objects-overview.md)有关详细信息<xref:System.Windows.Media.Drawing>对象。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Media.DrawingGroup>
-- [布局](../../../../docs/framework/wpf/advanced/layout.md)
-- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)
+- [布局](../advanced/layout.md)
+- [帮助主题](audio-and-video-how-to-topics.md)

@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: d88eca573d09c0c40575718a125a65b2d13593d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d8b3e476488f81e4154c876e555b3090d0287f9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606778"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377093"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>演练：使用 XAML 创建按钮
 本演练的目的是了解如何创建 Windows Presentation Foundation (WPF) 应用程序中使用的动画的按钮。 本演练使用样式和模板来创建自定义的按钮资源允许重用代码和从按钮声明按钮逻辑的分离。 本演练完全在编写[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
   
 > [!IMPORTANT]
->  本演练将指导您完成创建应用程序，通过键入或复制并粘贴步骤[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]到 Microsoft Visual Studio。 如果你想要了解如何使用设计工具 (Microsoft Expression Blend) 来创建相同的应用程序，请参阅[创建一个按钮通过使用 Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)。  
+>  本演练将指导您完成创建应用程序，通过键入或复制并粘贴步骤[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]到 Microsoft Visual Studio。 如果你想要了解如何使用设计工具 (Microsoft Expression Blend) 来创建相同的应用程序，请参阅[创建一个按钮通过使用 Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)。  
   
  下图显示了已完成的按钮。  
   
- ![通过使用 XAML 创建的自定义按钮](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
+ ![通过使用 XAML 创建的自定义按钮](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
   
 ## <a name="create-basic-buttons"></a>创建基本按钮  
  让我们首先创建一个新项目并将几个按钮添加到窗口。  
@@ -49,12 +49,12 @@ ms.locfileid: "54606778"
   
      按 F5 运行该应用程序;您将看到类似于下图的按钮的组。  
   
-     ![三个基本按钮](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")  
+     ![三个基本按钮](./media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")  
   
      现在，已创建的基本按钮，您已完成 Window1.xaml 文件中的工作。 本演练的其余部分重点介绍 app.xaml 文件中，定义样式和模板的按钮。  
   
 ## <a name="set-basic-properties"></a>设置基本属性  
- 接下来，让我们来设置这些按钮来控制按钮外观和布局的某些属性。 而不是单独在按钮上设置属性，将使用的资源来定义整个应用程序的按钮属性。 应用程序资源是从概念上讲类似于外部[!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)]网页; 但是，资源将比强大得多[!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)]，正如您将看到本演练结束。 若要了解有关资源的详细信息，请参阅[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+ 接下来，让我们来设置这些按钮来控制按钮外观和布局的某些属性。 而不是单独在按钮上设置属性，将使用的资源来定义整个应用程序的按钮属性。 应用程序资源是从概念上讲类似于外部[!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)]网页; 但是，资源将比强大得多[!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)]，正如您将看到本演练结束。 若要了解有关资源的详细信息，请参阅[XAML 资源](../advanced/xaml-resources.md)。  
   
 #### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>若要使用样式按钮上设置基本属性  
   
@@ -72,7 +72,7 @@ ms.locfileid: "54606778"
     </Application>  
     ```  
   
-     您在其中定义资源取决于资源范围。 定义中的资源`Application.Resources`在 app.xaml 文件，要使用从任意位置的应用程序中的资源。 若要了解有关定义你的资源范围的详细信息，请参阅[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+     您在其中定义资源取决于资源范围。 定义中的资源`Application.Resources`在 app.xaml 文件，要使用从任意位置的应用程序中的资源。 若要了解有关定义你的资源范围的详细信息，请参阅[XAML 资源](../advanced/xaml-resources.md)。  
   
 2.  **创建一个样式，并定义与它的基本属性值：** 添加以下标记到`Application.Resources`块。 此标记创建<xref:System.Windows.Style>应用于的应用程序设置中的所有按钮<xref:System.Windows.FrameworkElement.Width%2A>的按钮为 90 和<xref:System.Windows.FrameworkElement.Margin%2A>到 10:  
   
@@ -87,9 +87,9 @@ ms.locfileid: "54606778"
   
      <xref:System.Windows.Style.TargetType%2A>属性指定该样式应用于类型的所有对象<xref:System.Windows.Controls.Button>。 每个<xref:System.Windows.Setter>设置为不同的属性值<xref:System.Windows.Style>。 因此，此时应用程序中的每个按钮具有宽度为 90、 边距为 10。  如果按 F5 运行该应用程序时，你会看到以下窗口。  
   
-     ![具有宽度为 90、 边距为 10 的按钮](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")  
+     ![具有宽度为 90、 边距为 10 的按钮](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")  
   
-     没有你可以执行更多使用样式，包括各种的方式来优化对象的目标、 指定复杂属性值，以及甚至使用样式作为输入的其他样式。 有关详细信息，请参阅[样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+     没有你可以执行更多使用样式，包括各种的方式来优化对象的目标、 指定复杂属性值，以及甚至使用样式作为输入的其他样式。 有关详细信息，请参阅[样式设置和模板化](styling-and-templating.md)。  
   
 3.  **样式属性值设置为资源：** 资源启用重用通常定义的对象和值的简单方法。 它是特别有用，可以定义使用的资源以使代码更加模块化的复杂值。 将以下突出显示的标记添加到 app.xaml。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54606778"
   
      按 F5 运行该应用程序。 它应如以下所示。  
   
-     ![具有渐变背景的按钮](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")  
+     ![具有渐变背景的按钮](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")  
   
 ## <a name="create-a-template-that-defines-the-look-of-the-button"></a>创建用于定义按钮的外观的模板  
  在本部分中，你创建自定义按钮的外观 (presentation) 的模板。 按钮演示文稿是组成包括矩形和其他组件的多个对象提供独特外观的按钮。  
@@ -165,7 +165,7 @@ ms.locfileid: "54606778"
   
      按 F5 运行该应用程序。 它应如以下所示。  
   
-     ![](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
+     ![](./media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
 3.  **将玻璃添加到模板：** 接下来将添加玻璃效果。 首先创建一些创建玻璃渐变效果的资源。 添加这些渐变中的资源任意位置`Application.Resources`块：  
   
@@ -244,7 +244,7 @@ ms.locfileid: "54606778"
   
      请注意，<xref:System.Windows.UIElement.Opacity%2A>与矩形的`x:Name`"glassCube"属性为 0，当您运行该示例，看不到玻璃矩形叠加在最前面。 这是因为我们将更高版本时添加触发器用于模板用户交互的按钮。 但是，可以看到该按钮如下所示现在通过更改<xref:System.Windows.UIElement.Opacity%2A>值与 1 和运行应用程序。 请参见下图。 在前进到下一步前, 更改<xref:System.Windows.UIElement.Opacity%2A>回 0。  
   
-     ![通过使用 XAML 创建的自定义按钮](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
+     ![通过使用 XAML 创建的自定义按钮](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
   
 ## <a name="create-button-interactivity"></a>创建按钮交互性  
  在本部分中，将创建属性触发器和事件触发器可以更改属性值和运行动画以响应用户操作，例如将鼠标指针移动到按钮上方并单击。  
@@ -396,7 +396,7 @@ ms.locfileid: "54606778"
   
      当鼠标指针移到该按钮时触发的两个动画 (<xref:System.Windows.UIElement.MouseEnter>引发事件)。 这些动画收缩玻璃矩形沿 X 和 Y 轴。 请注意，属性在<xref:System.Windows.Media.Animation.DoubleAnimation>元素 —<xref:System.Windows.Media.Animation.Timeline.Duration%2A>和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>。 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>指定动画发生超过半秒，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>指定玻璃收缩 10%。  
   
-     第二个事件触发器 (<xref:System.Windows.UIElement.MouseLeave>) 就会停止运行的第一个。 当您停止<xref:System.Windows.Media.Animation.Storyboard>，经过动画处理的所有属性都返回到其默认值。 因此，当用户移动指针离开按钮，按钮将恢复为之前在按钮上移动鼠标指针的方式。 有关动画的详细信息，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+     第二个事件触发器 (<xref:System.Windows.UIElement.MouseLeave>) 就会停止运行的第一个。 当您停止<xref:System.Windows.Media.Animation.Storyboard>，经过动画处理的所有属性都返回到其默认值。 因此，当用户移动指针离开按钮，按钮将恢复为之前在按钮上移动鼠标指针的方式。 有关动画的详细信息，请参阅[动画概述](../graphics-multimedia/animation-overview.md)。  
   
 5.  **添加动画，以单击按钮时：** 最后一步是添加用于的触发器，当用户单击按钮。 添加以下标记内部的任意位置`ControlTemplate.Triggers`块：  
   
@@ -432,8 +432,8 @@ ms.locfileid: "54606778"
 -   自定义行为响应用户操作中的按钮 (如<xref:System.Windows.UIElement.MouseEnter>， <xref:System.Windows.UIElement.MouseLeave>，和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>) 包含的动画效果。  
   
 ## <a name="see-also"></a>请参阅
-- [使用 Microsoft Expression Blend 创建按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [位图效果概述](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+- [使用 Microsoft Expression Blend 创建按钮](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [样式设置和模板化](styling-and-templating.md)
+- [动画概述](../graphics-multimedia/animation-overview.md)
+- [使用纯色和渐变进行绘制概述](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [位图效果概述](../graphics-multimedia/bitmap-effects-overview.md)

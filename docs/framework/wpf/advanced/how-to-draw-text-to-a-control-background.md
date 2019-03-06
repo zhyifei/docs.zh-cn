@@ -8,17 +8,17 @@ helpviewer_keywords:
 - backgrounds [WPF], drawing text to
 - typography [WPF], drawing text to control backgrounds
 ms.assetid: 686d8fba-f61c-4974-a871-c635d67a7f69
-ms.openlocfilehash: 9be4eb92021a62baaf6b43198587616d00cc265e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 025b13d83aeb668fa3a9f8af35d7213ae677eefc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259249"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378738"
 ---
 # <a name="how-to-draw-text-to-a-controls-background"></a>如何：将文本绘制到控件的背景上
 可以直接到控件的背景中绘制文本的文本字符串转换为<xref:System.Windows.Media.FormattedText>对象，并在其中绘制到控件的对象<xref:System.Windows.Media.DrawingContext>。 此外可以使用此技术用于绘制到的对象的背景派生自<xref:System.Windows.Controls.Panel>，如<xref:System.Windows.Controls.Canvas>和<xref:System.Windows.Controls.StackPanel>。  
   
- ![文本显示为背景的控件](../../../../docs/framework/wpf/advanced/media/drawtext2background01.png "DrawText2Background01")  
+ ![文本显示为背景的控件](./media/drawtext2background01.png "DrawText2Background01")  
 具有自定义文本背景的控件的示例  
   
 ## <a name="example"></a>示例  
@@ -26,8 +26,8 @@ ms.locfileid: "55259249"
   
  下面的代码示例演示如何创建<xref:System.Windows.Media.FormattedText>对象，并绘制到背景<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.Button>对象。  
   
- [!code-csharp[DrawTextToControlBackground#DrawTextToControlBackground1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawTextToControlBackground/CSHARP/Window1.xaml.cs#drawtexttocontrolbackground1)]  
+ [!code-csharp[DrawTextToControlBackground#DrawTextToControlBackground1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawTextToControlBackground/CSHARP/Window1.xaml.cs#drawtexttocontrolbackground1)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Media.FormattedText>
-- [绘制格式化文本](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+- [绘制格式化文本](drawing-formatted-text.md)

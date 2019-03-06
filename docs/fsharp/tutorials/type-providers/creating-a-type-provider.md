@@ -1,13 +1,13 @@
 ---
 title: 教程：创建类型提供程序
 description: 了解如何创建你自己的F#类型中的提供程序F#3.0 通过检查几个简单类型提供程序来演示基本概念。
-ms.date: 05/16/2016
-ms.openlocfilehash: bd19cfa4c8b64e429bbd3af87949b39cb78012ba
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.date: 02/02/2019
+ms.openlocfilehash: ec26f25ad39ca432d6ef11238268e1704bd9638b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203660"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371551"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教程：创建类型提供程序
 
@@ -74,7 +74,7 @@ type Type1 =
     /// This is an instance method.
     member InstanceMethod : x:int -> char
 
-    nested type NestedType = 
+    nested type NestedType =
         /// This is StaticProperty1 on NestedType.
         static member StaticProperty1 : string
         …
@@ -91,8 +91,8 @@ type Type100 =
 
 请注意静态已知类型和成员提供的组。 此示例不会利用提供程序能够提供依赖于架构的类型。 类型提供程序的实现下面的代码中所述，本主题的后面部分介绍详细信息。
 
->[!WARNING]
-可能有此代码与联机示例之间的差异。
+> [!WARNING]
+> 可能有此代码与联机示例之间的差异。
 
 ```fsharp
 namespace Samples.FSharp.HelloWorldTypeProvider
@@ -106,9 +106,9 @@ open FSharp.Quotations
 // This type defines the type provider. When compiled to a DLL, it can be added
 // as a reference to an F# command-line compilation, script, or project.
 [<TypeProvider>]
-type SampleTypeProvider(config: TypeProviderConfig) as this = 
+type SampleTypeProvider(config: TypeProviderConfig) as this =
 
-  // Inheriting from this type provides implementations of ITypeProvider 
+  // Inheriting from this type provides implementations of ITypeProvider
   // in terms of the provided types below.
   inherit TypeProviderForNamespaces(config)
 
@@ -116,15 +116,15 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
   let thisAssembly = Assembly.GetExecutingAssembly()
 
   // Make one provided type, called TypeN.
-  let makeOneProvidedType (n:int) = 
+  let makeOneProvidedType (n:int) =
   …
   // Now generate 100 types
-  let types = [ for i in 1 .. 100 -> makeOneProvidedType i ] 
+  let types = [ for i in 1 .. 100 -> makeOneProvidedType i ]
 
   // And add them to the namespace
   do this.AddNamespace(namespaceName, types)
 
-[<assembly:TypeProviderAssembly>] 
+[<assembly:TypeProviderAssembly>]
 do()
 ```
 
@@ -152,13 +152,13 @@ let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 
 若要调试此提供程序通过使用 print 语句，使脚本公开提供程序，问题以及如何将以下代码：
 
-```fsharp
+```
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
 若要通过使用 Visual Studio 中调试此提供程序，使用管理凭据打开 Visual Studio 开发人员命令提示符并运行以下命令：
 
-```fsharp
+```
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
@@ -211,7 +211,7 @@ do this.AddNamespace(namespaceName, types)
 最后，添加程序集属性，指示要创建类型提供程序 DLL:
 
 ```fsharp
-[<assembly:TypeProviderAssembly>] 
+[<assembly:TypeProviderAssembly>]
 do()
 ```
 
@@ -220,14 +220,14 @@ do()
 `makeOneProvidedType`函数行为提供一种类型的实际工作。
 
 ```fsharp
-let makeOneProvidedType (n:int) = 
+let makeOneProvidedType (n:int) =
 …
 ```
 
 此步骤介绍了此函数的实现。 首先，创建所提供的类型 (例如，类型 1，当 n = 1 或 Type57，当 n = 57)。
 
 ```fsharp
-// This is the provided type. It is an erased provided type and, in compiled code, 
+// This is the provided type. It is an erased provided type and, in compiled code,
 // will appear as type 'obj'.
 let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
                                "Type" + string n,
@@ -249,8 +249,8 @@ t.AddXmlDocDelayed (fun () -> sprintf "This provided type %s" ("Type" + string n
 接下来将提供的静态属性添加到该类型：
 
 ```fsharp
-let staticProp = ProvidedProperty(propertyName = "StaticProperty", 
-                                  propertyType = typeof<string>, 
+let staticProp = ProvidedProperty(propertyName = "StaticProperty",
+                                  propertyType = typeof<string>,
                                   isStatic = true,
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
@@ -272,7 +272,7 @@ t.AddMember staticProp
 现在，创建不带任何参数提供构造函数。
 
 ```fsharp
-let ctor = ProvidedConstructor(parameters = [ ], 
+let ctor = ProvidedConstructor(parameters = [ ],
                                invokeCode = (fun args -> <@@ "The object data" :> obj @@>))
 ```
 
@@ -295,8 +295,8 @@ t.AddMember ctor
 创建第二个提供构造函数采用一个参数：
 
 ```fsharp
-let ctor2 = 
-ProvidedConstructor(parameters = [ ProvidedParameter("data",typeof<string>) ], 
+let ctor2 =
+ProvidedConstructor(parameters = [ ProvidedParameter("data",typeof<string>) ],
                     invokeCode = (fun args -> <@@ (%%(args.[0]) : string) :> obj @@>))
 ```
 
@@ -309,10 +309,10 @@ new Type10("ten")
 与基础数据"10"创建所提供的类型实例。 您可能已经注意`InvokeCode`函数返回的引用。 此函数的输入是表达式，其中一个，每个构造函数参数的列表。 在这种情况下，表示单个参数值的表达式现已推出`args.[0]`。 该构造函数调用的代码都强制转换为已清除的类型的返回值`obj`。 向类型添加第二个提供的构造函数后，你创建提供的实例属性：
 
 ```fsharp
-let instanceProp = 
-    ProvidedProperty(propertyName = "InstanceProperty", 
-                     propertyType = typeof<int>, 
-                     getterCode= (fun args -> 
+let instanceProp =
+    ProvidedProperty(propertyName = "InstanceProperty",
+                     propertyType = typeof<int>,
+                     getterCode= (fun args ->
                         <@@ ((%%(args.[0]) : obj) :?> string).Length @@>))
 instanceProp.AddXmlDocDelayed(fun () -> "This is an instance property")
 t.AddMember instanceProp
@@ -321,11 +321,11 @@ t.AddMember instanceProp
 获取此属性将返回字符串，即表示对象的长度。 `GetterCode`属性返回F#指定宿主编译器生成要获取其属性的代码中的引号。 像`InvokeCode`，则`GetterCode`函数返回的引用。 主机编译器将调用此函数的参数列表。 在这种情况下，参数包括只是单个表达式表示的实例对其调用 getter，使用户能够通过使用`args.[0]`。实现`GetterCode`然后拼接到在清除类型结果引号`obj`，以及使用强制转换来满足编译器的机制，用于检查该对象是一个字符串的类型。 下的一部分`makeOneProvidedType`为实例方法提供了一个参数。
 
 ```fsharp
-let instanceMeth = 
-    ProvidedMethod(methodName = "InstanceMethod", 
-                   parameters = [ProvidedParameter("x",typeof<int>)], 
-                   returnType = typeof<char>, 
-                   invokeCode = (fun args -> 
+let instanceMeth =
+    ProvidedMethod(methodName = "InstanceMethod",
+                   parameters = [ProvidedParameter("x",typeof<int>)],
+                   returnType = typeof<char>,
+                   invokeCode = (fun args ->
                        <@@ ((%%(args.[0]) : obj) :?> string).Chars(%%(args.[1]) : int) @@>))
 
 instanceMeth.AddXmlDocDelayed(fun () -> "This is an instance method")
@@ -336,21 +336,21 @@ t.AddMember instanceMeth
 最后，创建包含 100 个嵌套的属性的嵌套的类型。 此创建嵌套类型和其属性将延迟，也就是说，计算按需。
 
 ```fsharp
-t.AddMembersDelayed(fun () -> 
+t.AddMembersDelayed(fun () ->
   let nestedType = ProvidedTypeDefinition("NestedType", Some typeof<obj>)
 
-  nestedType.AddMembersDelayed (fun () -> 
-    let staticPropsInNestedType = 
+  nestedType.AddMembersDelayed (fun () ->
+    let staticPropsInNestedType =
       [ for i in 1 .. 100 do
           let valueOfTheProperty = "I am string "  + string i
 
-          let p = 
-            ProvidedProperty(propertyName = "StaticProperty" + string i, 
-              propertyType = typeof<string>, 
+          let p =
+            ProvidedProperty(propertyName = "StaticProperty" + string i,
+              propertyType = typeof<string>,
               isStatic = true,
               getterCode= (fun args -> <@@ valueOfTheProperty @@>))
 
-          p.AddXmlDocDelayed(fun () -> 
+          p.AddXmlDocDelayed(fun () ->
               sprintf "This is StaticProperty%d on NestedType" i)
 
           yield p ]
@@ -399,7 +399,7 @@ t.AddMembersDelayed(fun () ->
 本文档中的示例使用作为提供的对象的表示形式的字符串。 通常情况下，它可能适合使用其他对象的表示形式。 例如，您可以使用字典作为一个属性包：
 
 ```fsharp
-ProvidedConstructor(parameters = [], 
+ProvidedConstructor(parameters = [],
     invokeCode= (fun args -> <@@ (new Dictionary<string,obj>()) :> obj @@>))
 ```
 
@@ -414,7 +414,7 @@ type DataObject() =
 然后，提供的成员可以构造此对象类型的实例：
 
 ```fsharp
-ProvidedConstructor(parameters = [], 
+ProvidedConstructor(parameters = [],
     invokeCode= (fun args -> <@@ (new DataObject()) :> obj @@>))
 ```
 
@@ -492,32 +492,32 @@ type public CheckedRegexProvider() as this =
     let regexTy = ProvidedTypeDefinition(thisAssembly, rootNamespace, "RegexTyped", Some baseTy)
 
     do regexTy.DefineStaticParameters(
-        parameters=staticParams, 
+        parameters=staticParams,
         instantiationFunction=(fun typeName parameterValues ->
 
-          match parameterValues with 
-          | [| :? string as pattern|] -> 
+          match parameterValues with
+          | [| :? string as pattern|] ->
 
-            // Create an instance of the regular expression. 
+            // Create an instance of the regular expression.
             //
-            // This will fail with System.ArgumentException if the regular expression is not valid. 
+            // This will fail with System.ArgumentException if the regular expression is not valid.
             // The exception will escape the type provider and be reported in client code.
-            let r = System.Text.RegularExpressions.Regex(pattern)            
+            let r = System.Text.RegularExpressions.Regex(pattern)
 
             // Declare the typed regex provided type.
             // The type erasure of this type is 'obj', even though the representation will always be a Regex
             // This, combined with hiding the object methods, makes the IntelliSense experience simpler.
-            let ty = 
+            let ty =
               ProvidedTypeDefinition(
-                thisAssembly, 
-                rootNamespace, 
-                typeName, 
+                thisAssembly,
+                rootNamespace,
+                typeName,
                 baseType = Some baseTy)
 
             ...
 
             ty
-          | _ -> failwith "unexpected parameter values")) 
+          | _ -> failwith "unexpected parameter values"))
 
     do this.AddNamespace(rootNamespace, [regexTy])
 
@@ -542,15 +542,15 @@ do ()
 上面定义的类型不是很有用尚未因为它不包含任何有意义的方法或属性。 首先，添加一个静态`IsMatch`方法：
 
 ```fsharp
-let isMatch = 
+let isMatch =
     ProvidedMethod(
-        methodName = "IsMatch", 
-        parameters = [ProvidedParameter("input", typeof<string>)], 
-        returnType = typeof<bool>, 
+        methodName = "IsMatch",
+        parameters = [ProvidedParameter("input", typeof<string>)],
+        returnType = typeof<bool>,
         isStatic = true,
-        invokeCode = fun args -> <@@ Regex.IsMatch(%%args.[0], pattern) @@>) 
+        invokeCode = fun args -> <@@ Regex.IsMatch(%%args.[0], pattern) @@>)
 
-isMatch.AddXmlDoc "Indicates whether the regular expression finds a match in the specified input string." 
+isMatch.AddXmlDoc "Indicates whether the regular expression finds a match in the specified input string."
 ty.AddMember isMatch
 ```
 
@@ -559,10 +559,10 @@ ty.AddMember isMatch
 接下来，添加一个实例匹配方法。 但是，此方法应返回值提供的`Match`类型，以便可以以强类型方式访问组。 因此，您首先声明`Match`类型。 此类型取决于作为静态自变量提供的模式，因为此类型必须嵌套在参数化的类型定义：
 
 ```fsharp
-let matchTy = 
+let matchTy =
     ProvidedTypeDefinition(
-        "MatchType", 
-        baseType = Some baseTy, 
+        "MatchType",
+        baseType = Some baseTy,
         hideObjectMethods = true)
 
 ty.AddMember matchTy
@@ -574,10 +574,10 @@ ty.AddMember matchTy
 for group in r.GetGroupNames() do
     // Ignore the group named 0, which represents all input.
     if group <> "0" then
-    let prop = 
+    let prop =
       ProvidedProperty(
-        propertyName = group, 
-        propertyType = typeof<Group>, 
+        propertyName = group,
+        propertyType = typeof<Group>,
         getterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
         prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
     matchTy.AddMember prop
@@ -588,14 +588,14 @@ for group in r.GetGroupNames() do
 现在，你可以创建返回此值的实例方法`Match`类型：
 
 ```fsharp
-let matchMethod = 
+let matchMethod =
     ProvidedMethod(
-        methodName = "Match", 
-        parameters = [ProvidedParameter("input", typeof<string>)], 
-        returnType = matchTy, 
+        methodName = "Match",
+        parameters = [ProvidedParameter("input", typeof<string>)],
+        returnType = matchTy,
         invokeCode = fun args -> <@@ ((%%args.[0]:obj) :?> Regex).Match(%%args.[1]) :> obj @@>)
 
-matchMeth.AddXmlDoc "Searches the specified input string for the first ocurrence of this regular expression" 
+matchMeth.AddXmlDoc "Searches the specified input string for the first occurrence of this regular expression"
 
 ty.AddMember matchMeth
 ```
@@ -605,9 +605,9 @@ ty.AddMember matchMeth
 最后，提供一个构造函数，以便可以创建提供的类型的实例。
 
 ```fsharp
-let ctor = 
+let ctor =
     ProvidedConstructor(
-        parameters = [], 
+        parameters = [],
         invokeCode = fun args -> <@@ Regex(pattern, options) :> obj @@>)
 
 ctor.AddXmlDoc("Initializes a regular expression instance.")
@@ -638,35 +638,35 @@ type public CheckedRegexProvider() as this =
     let regexTy = ProvidedTypeDefinition(thisAssembly, rootNamespace, "RegexTyped", Some baseTy)
 
     do regexTy.DefineStaticParameters(
-        parameters=staticParams, 
+        parameters=staticParams,
         instantiationFunction=(fun typeName parameterValues ->
 
-            match parameterValues with 
-            | [| :? string as pattern|] -> 
+            match parameterValues with
+            | [| :? string as pattern|] ->
 
-                // Create an instance of the regular expression. 
+                // Create an instance of the regular expression.
 
-                let r = System.Text.RegularExpressions.Regex(pattern)            
+                let r = System.Text.RegularExpressions.Regex(pattern)
 
                 // Declare the typed regex provided type.
 
-                let ty = 
+                let ty =
                     ProvidedTypeDefinition(
-                        thisAssembly, 
-                        rootNamespace, 
-                        typeName, 
+                        thisAssembly,
+                        rootNamespace,
+                        typeName,
                         baseType = Some baseTy)
 
                 ty.AddXmlDoc "A strongly typed interface to the regular expression '%s'"
 
                 // Provide strongly typed version of Regex.IsMatch static method.
-                let isMatch = 
+                let isMatch =
                     ProvidedMethod(
-                        methodName = "IsMatch", 
-                        parameters = [ProvidedParameter("input", typeof<string>)], 
-                        returnType = typeof<bool>, 
+                        methodName = "IsMatch",
+                        parameters = [ProvidedParameter("input", typeof<string>)],
+                        returnType = typeof<bool>,
                         isStatic = true,
-                        invokeCode = fun args -> <@@ Regex.IsMatch(%%args.[0], pattern) @@>) 
+                        invokeCode = fun args -> <@@ Regex.IsMatch(%%args.[0], pattern) @@>)
 
                 isMatch.AddXmlDoc "Indicates whether the regular expression finds a match in the specified input string"
 
@@ -674,10 +674,10 @@ type public CheckedRegexProvider() as this =
 
                 // Provided type for matches
                 // Again, erase to obj even though the representation will always be a Match
-                let matchTy = 
+                let matchTy =
                     ProvidedTypeDefinition(
-                        "MatchType", 
-                        baseType = Some baseTy, 
+                        "MatchType",
+                        baseType = Some baseTy,
                         hideObjectMethods = true)
 
                 // Nest the match type within parameterized Regex type.
@@ -687,29 +687,29 @@ type public CheckedRegexProvider() as this =
                 for group in r.GetGroupNames() do
                     // Ignore the group named 0, which represents all input.
                     if group <> "0" then
-                        let prop = 
+                        let prop =
                           ProvidedProperty(
-                            propertyName = group, 
-                            propertyType = typeof<Group>, 
+                            propertyName = group,
+                            propertyType = typeof<Group>,
                             getterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
                         prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
                         matchTy.AddMember(prop)
 
                 // Provide strongly typed version of Regex.Match instance method.
-                let matchMeth = 
+                let matchMeth =
                   ProvidedMethod(
-                    methodName = "Match", 
-                    parameters = [ProvidedParameter("input", typeof<string>)], 
-                    returnType = matchTy, 
+                    methodName = "Match",
+                    parameters = [ProvidedParameter("input", typeof<string>)],
+                    returnType = matchTy,
                     invokeCode = fun args -> <@@ ((%%args.[0]:obj) :?> Regex).Match(%%args.[1]) :> obj @@>)
                 matchMeth.AddXmlDoc "Searches the specified input string for the first occurrence of this regular expression"
 
                 ty.AddMember matchMeth
 
                 // Declare a constructor.
-                let ctor = 
+                let ctor =
                   ProvidedConstructor(
-                    parameters = [], 
+                    parameters = [],
                     invokeCode = fun args -> <@@ Regex(pattern) :> obj @@>)
 
                 // Add documentation to the constructor.
@@ -718,7 +718,7 @@ type public CheckedRegexProvider() as this =
                 ty.AddMember ctor
 
                 ty
-            | _ -> failwith "unexpected parameter values")) 
+            | _ -> failwith "unexpected parameter values"))
 
     do this.AddNamespace(rootNamespace, [regexTy])
 
@@ -782,7 +782,7 @@ printfn "%f" (float time)
 // Simple type wrapping CSV data
 type CsvFile(filename) =
     // Cache the sequence of all data lines (all lines but the first)
-    let data = 
+    let data =
         seq { for line in File.ReadAllLines(filename) |> Seq.skip 1 do
                  yield line.Split(',') |> Array.map float }
         |> Seq.cache
@@ -802,7 +802,7 @@ type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
     // Parameterize the type by the file to use as a template.
     let filename = ProvidedStaticParameter("filename", typeof<string>)
     do csvTy.DefineStaticParameters([filename], fun tyName [| :? string as filename |] ->
-    
+
         // Resolve the filename relative to the resolution folder.
         let resolvedFilename = Path.Combine(cfg.ResolutionFolder, filename)
 
@@ -833,31 +833,31 @@ type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
                     // no units, just treat it as a normal float
                     headerText, typeof<float>
 
-            let prop = 
-                ProvidedProperty(fieldName, fieldTy, 
+            let prop =
+                ProvidedProperty(fieldName, fieldTy,
                     getterCode = fun [row] -> <@@ (%%row:float[]).[i] @@>)
 
             // Add metadata that defines the property's location in the referenced file.
             prop.AddDefinitionLocation(1, headers.[i].Index + 1, filename)
-            rowTy.AddMember(prop) 
+            rowTy.AddMember(prop)
 
         // Define the provided type, erasing to CsvFile.
         let ty = ProvidedTypeDefinition(asm, ns, tyName, Some(typeof<CsvFile>))
 
         // Add a parameterless constructor that loads the file that was used to define the schema.
-        let ctor0 = 
-            ProvidedConstructor([], 
+        let ctor0 =
+            ProvidedConstructor([],
                 invokeCode = fun [] -> <@@ CsvFile(resolvedFilename) @@>)
         ty.AddMember ctor0
 
         // Add a constructor that takes the file name to load.
-        let ctor1 = ProvidedConstructor([ProvidedParameter("filename", typeof<string>)], 
+        let ctor1 = ProvidedConstructor([ProvidedParameter("filename", typeof<string>)],
             invokeCode = fun [filename] -> <@@ CsvFile(%%filename) @@>)
         ty.AddMember ctor1
 
         // Add a more strongly typed Data property, which uses the existing property at runtime.
-        let prop = 
-            ProvidedProperty("Data", typedefof<seq<_>>.MakeGenericType(rowTy), 
+        let prop =
+            ProvidedProperty("Data", typedefof<seq<_>>.MakeGenericType(rowTy),
                 getterCode = fun [csvFile] -> <@@ (%%csvFile:CsvFile).Data @@>)
         ty.AddMember prop
 
@@ -892,7 +892,7 @@ type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
 若要向你提供如何使用类型提供程序对应于发出的代码的一些思路，请查看以下函数通过使用`HelloWorldTypeProvider`本主题前面的使用。
 
 ```fsharp
-let function1 () = 
+let function1 () =
     let obj1 = Samples.HelloWorldTypeProvider.Type1("some data")
     obj1.InstanceProperty
 ```
@@ -947,14 +947,14 @@ IL_0017:  ret
 **对于常规编码的实用程序提供程序**。  对于的实用程序类型提供程序，如正则表达式，类型提供程序可能有某个基库的一部分，如以下示例所示：
 
 ```fsharp
-  #r "Fabrikam.Core.Text.Utilities.dll"
+#r "Fabrikam.Core.Text.Utilities.dll"
 ```
 
 在这种情况下，所提供的类型将出现在合适的点根据普通.NET 设计约定：
 
 ```fsharp
   open Fabrikam.Core.Text.RegexTyped
-  
+
   let regex = new RegexTyped<"a+b+a+b+">()
 ```
 
@@ -962,7 +962,7 @@ IL_0017:  ret
 
 ```fsharp
 #r "Fabrikam.Data.Freebase.dll"
-  
+
 let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 ```
 
@@ -1077,7 +1077,7 @@ ProvidedTypes API 提供帮助器提供度量值批注。 例如，若要提供�
 到目前为止，本文档介绍了如何提供已清除的类型。 此外可以使用中的类型提供程序机制F#若要提供生成的类型，这是添加到用户的程序的真实.NET 类型定义。 您必须引用生成提供的使用类型定义的类型。
 
 ```fsharp
-open Microsoft.FSharp.TypeProviders 
+open Microsoft.FSharp.TypeProviders
 
 type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```

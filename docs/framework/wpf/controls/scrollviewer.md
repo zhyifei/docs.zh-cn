@@ -9,19 +9,19 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbed07ac08005e801b56b9538f46361df723bcb0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671975"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367101"
 ---
 # <a name="scrollviewer"></a>ScrollViewer
 <xref:System.Windows.Controls.ScrollViewer>控件创建其中可以水平或垂直滚动内容的可滚动区域。  
   
 ## <a name="in-this-section"></a>本节内容  
- [ScrollViewer 概述](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+ [ScrollViewer 概述](scrollviewer-overview.md)  
+ [帮助主题](scrollviewer-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
@@ -29,5 +29,5 @@ ms.locfileid: "54671975"
  <xref:System.Windows.Controls.ScrollViewer>  
   
 ## <a name="see-also"></a>请参阅
-- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [布局](../../../../docs/framework/wpf/advanced/layout.md)
+- [面板概述](panels-overview.md)
+- [布局](../advanced/layout.md)

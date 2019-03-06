@@ -11,26 +11,26 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b812c78783b2d9ccf6c6e231d5e2a632ccb095f4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670311"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352329"
 ---
 # <a name="drawings-how-to-topics"></a>绘图帮助主题
 在本部分中的主题介绍如何使用<xref:System.Windows.Media.Drawing>对象绘制形状、 图像或文本。  
   
 ## <a name="in-this-section"></a>本节内容  
- [向绘图应用 GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [创建复合绘图](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
-  [创建 GeometryDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
-  [使用 ImageDrawing 绘制图像](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
-  [使用 VideoDrawing 播放媒体](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
-  [将绘图用作图像源](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
+ [向绘图应用 GuidelineSet](how-to-apply-a-guidelineset-to-a-drawing.md)  
+  [创建复合绘图](how-to-create-a-composite-drawing.md)  
+  [创建 GeometryDrawing](how-to-create-a-geometrydrawing.md)  
+  [使用 ImageDrawing 绘制图像](how-to-draw-an-image-using-imagedrawing.md)  
+  [使用 VideoDrawing 播放媒体](how-to-play-media-using-a-videodrawing.md)  
+  [将绘图用作图像源](how-to-use-a-drawing-as-an-image-source.md)  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Media.Drawing>
-- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)
+- [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)
+- [图形和多媒体](index.md)

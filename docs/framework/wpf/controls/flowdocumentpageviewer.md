@@ -7,18 +7,18 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: 4f58ebbb3f0876c8c1aa23bae04fb46573bc234f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40c0ad20e22c06a0b92b71c59ea733b08fbded52
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653757"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366564"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
 <xref:System.Windows.Controls.FlowDocumentPageViewer>控件用于查看<xref:System.Windows.Documents.FlowDocument>每每个页面上的内容。 与之相反<xref:System.Windows.Controls.FlowDocumentScrollViewer>，其中介绍了<xref:System.Windows.Documents.FlowDocument>滚动查看器中的内容。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Documents.FlowDocument>
-- [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [帮助主题](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
-- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [流文档概述](../advanced/flow-document-overview.md)
+- [帮助主题](../advanced/flow-content-elements-how-to-topics.md)
+- [WPF 中的文档](../advanced/documents-in-wpf.md)

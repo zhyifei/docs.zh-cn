@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: f595e75c90ebef480200e9210a57087eb4d20e87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c99f22a1d097c82494ba6eff344820162ed87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608857"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356710"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Direct3D9 和 WPF 互操作性的性能注意事项
 你可以通过使用承载 Direct3D9 内容<xref:System.Windows.Interop.D3DImage>类。 承载 Direct3D9 内容可能会影响应用程序的性能。 本主题介绍承载 Windows Presentation Foundation (WPF) 应用程序中的 Direct3D9 内容时优化性能的最佳做法。 这些最佳实践包括如何使用<xref:System.Windows.Interop.D3DImage>和最佳做法，当你使用的 Windows Vista，Windows XP，并且多监视器显示。  
   
 > [!NOTE]
->  有关代码示例说明了这些最佳实践，请参阅[WPF 和 Direct3D9 互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)。  
+>  有关代码示例说明了这些最佳实践，请参阅[WPF 和 Direct3D9 互操作](wpf-and-direct3d9-interoperation.md)。  
   
 ## <a name="use-d3dimage-sparingly"></a>尽量少使用 D3DImage  
  在中托管 Direct3D9 内容<xref:System.Windows.Interop.D3DImage>实例不会使同样快如纯 Direct3D 应用程序中所示。 复制图面和刷新命令缓冲区可能成本高昂的操作。 为数<xref:System.Windows.Interop.D3DImage>实例会增加，多个刷新发生，并且性能降低的程度。 因此，应使用<xref:System.Windows.Interop.D3DImage>尽量少。  
@@ -47,7 +47,7 @@ ms.locfileid: "54608857"
 ## <a name="best-practices-for-multi-monitor-displays"></a>多监视器显示的最佳做法  
  如果使用了多个监视器的计算机，你应遵循前面所述的最佳做法。 也有多监视器配置的一些额外的性能注意事项。  
   
- 创建后台缓冲区时，创建在特定的设备和适配器，但 WPF 可能会显示任何适配器上的前台缓冲区。 在适配器，以更新前台缓冲区之间复制会产生大量费用。 在配置为用于多个视频卡以及 WDDM 的 Windows Vista 上`IDirect3DDevice9Ex`设备，如果上一个不同的适配器，但仍相同的视频卡前台缓冲区，没有任何性能损失。 但是，在 Windows XP 和具有多个视频卡 XDDM，没有对显著的性能产生负面影响时前台缓冲区，系统会在不同于后台缓冲区的适配器。 有关详细信息，请参阅[WPF 和 Direct3D9 互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)。  
+ 创建后台缓冲区时，创建在特定的设备和适配器，但 WPF 可能会显示任何适配器上的前台缓冲区。 在适配器，以更新前台缓冲区之间复制会产生大量费用。 在配置为用于多个视频卡以及 WDDM 的 Windows Vista 上`IDirect3DDevice9Ex`设备，如果上一个不同的适配器，但仍相同的视频卡前台缓冲区，没有任何性能损失。 但是，在 Windows XP 和具有多个视频卡 XDDM，没有对显著的性能产生负面影响时前台缓冲区，系统会在不同于后台缓冲区的适配器。 有关详细信息，请参阅[WPF 和 Direct3D9 互操作](wpf-and-direct3d9-interoperation.md)。  
   
 ## <a name="performance-summary"></a>性能摘要  
  下表显示了前台缓冲区更新的操作系统、 像素格式和图面上可锁定性的函数的性能。 前台缓冲区和后台缓冲区都假定为同一适配器上。 适配器配置中，根据硬件更新一些通常比软件更新快得多。  
@@ -61,6 +61,6 @@ ms.locfileid: "54608857"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Interop.D3DImage>
-- [WPF 和 Direct3D9 互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)
-- [演练：创建在 WPF 中承载的 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [演练：在 WPF 中承载 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [WPF 和 Direct3D9 互操作](wpf-and-direct3d9-interoperation.md)
+- [演练：创建在 WPF 中承载的 Direct3D9 内容](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [演练：在 WPF 中承载 Direct3D9 内容](walkthrough-hosting-direct3d9-content-in-wpf.md)

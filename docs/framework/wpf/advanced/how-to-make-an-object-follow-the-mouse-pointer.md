@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mouse pointer (cursor), making objects follow
 - cursor (mouse pointer), making objects follow
 ms.assetid: 50b20415-14bc-405c-baf3-2fb254fffde3
-ms.openlocfilehash: 3e39b9459fbc94c9b7684ffd7c597363e46ad717
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b86cadba19e82c487be88bcfb08edb51f93c540
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541815"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358296"
 ---
 # <a name="how-to-make-an-object-follow-the-mouse-pointer"></a>如何：使对象跟随鼠标指针移动
 此示例演示如何在屏幕上移动鼠标指针时更改对象的维度。  
@@ -24,12 +24,12 @@ ms.locfileid: "54541815"
 ## <a name="example"></a>示例  
  以下[!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)]创建[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，其中包括<xref:System.Windows.Shapes.Ellipse>内<xref:System.Windows.Controls.StackPanel>，并将附加的事件处理程序<xref:System.Windows.UIElement.MouseMove>事件。  
   
- [!code-xaml[mouseMoveWithPointer#MouseMoveWithPointerXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml#mousemovewithpointerxaml)]  
+ [!code-xaml[mouseMoveWithPointer#MouseMoveWithPointerXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml#mousemovewithpointerxaml)]  
   
  下面的代码隐藏创建<xref:System.Windows.UIElement.MouseMove>事件处理程序。  当鼠标指针移动，高度和宽度<xref:System.Windows.Shapes.Ellipse>增加和减少。  
   
- [!code-csharp[mouseMoveWithPointer#MouseMovePointerGetPosition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml.cs#mousemovepointergetposition)]
- [!code-vb[mouseMoveWithPointer#MouseMovePointerGetPosition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/mouseMoveWithPointer/VisualBasic/Window1.xaml.vb#mousemovepointergetposition)]  
+ [!code-csharp[mouseMoveWithPointer#MouseMovePointerGetPosition](~/samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml.cs#mousemovepointergetposition)]
+ [!code-vb[mouseMoveWithPointer#MouseMovePointerGetPosition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/mouseMoveWithPointer/VisualBasic/Window1.xaml.vb#mousemovepointergetposition)]  
   
 ## <a name="see-also"></a>请参阅
-- [输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [输入概述](input-overview.md)

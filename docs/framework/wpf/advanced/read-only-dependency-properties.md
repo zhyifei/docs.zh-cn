@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 256790880e6fcf3bd2492d3f3f00b532f6a31eea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568123"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378998"
 ---
 # <a name="read-only-dependency-properties"></a>只读依赖项属性
 本主题介绍只读依赖属性，包括现有只读依赖属性、创建自定义只读依赖属性的方案和技术。  
@@ -19,7 +19,7 @@ ms.locfileid: "54568123"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
- 本主题假定你了解实现依赖属性的基本方案，以及如何将元数据应用于自定义依赖属性。 有关上下文，请参阅[自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。  
+ 本主题假定你了解实现依赖属性的基本方案，以及如何将元数据应用于自定义依赖属性。 有关上下文，请参阅[自定义依赖属性](custom-dependency-properties.md)和[依赖属性元数据](dependency-property-metadata.md)。  
   
 <a name="existing"></a>   
 ## <a name="existing-read-only-dependency-properties"></a>现有只读依赖属性  
@@ -31,7 +31,7 @@ ms.locfileid: "54568123"
 ## <a name="creating-custom-read-only-dependency-properties"></a>创建自定义只读依赖属性  
  请务必阅读上一节中有关只读依赖属性为何不适用于许多典型依赖属性方案的内容。 但是如果有适当的方案，可能需要创建自己的只读依赖属性。  
   
- 创建只读依赖属性的大多数过程与[自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[实现依赖属性](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)主题中介绍的过程相同。 但有三个重要的差异：  
+ 创建只读依赖属性的大多数过程与[自定义依赖属性](custom-dependency-properties.md)和[实现依赖属性](how-to-implement-a-dependency-property.md)主题中介绍的过程相同。 但有三个重要的差异：  
   
 -   当注册属性，调用<xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>方法而非普通<xref:System.Windows.DependencyProperty.Register%2A>属性注册的方法。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "54568123"
   
  无论你具有什么专用字段或值，可使用你确定的任何逻辑来完全编写对只读依赖属性的支持。 但是，在最初或运行时逻辑过程中设置属性的最简单方法是使用属性系统的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，而不是避开属性系统并直接设置专有支持字段。 具体而言，没有的签名<xref:System.Windows.DependencyObject.SetValue%2A>接受类型参数的<xref:System.Windows.DependencyPropertyKey>。 如何以及在何处设置此值以编程方式在应用程序逻辑中你如何可能想要设置的访问将影响<xref:System.Windows.DependencyPropertyKey>首次注册依赖属性时创建。 如果完全在专有类中处理此逻辑，或者如果要求从程序集的其他部分对其进行设置，可以在内部进行设置。 一种方法是调用<xref:System.Windows.DependencyObject.SetValue%2A>通知存储的属性值需要为其更改的类实例的相关事件的类事件处理程序中。 另一种方法是将绑定依赖关系属性在一起使用配对<xref:System.Windows.PropertyChangedCallback>和<xref:System.Windows.CoerceValueCallback>回调在注册过程中的这些属性的元数据的一部分。  
   
- 因为<xref:System.Windows.DependencyPropertyKey>是专用容器，并不会传播由属性系统在代码之外，更好的安全设置比读写依赖属性具有只读依赖属性。 对于读写依赖属性，标识字段是显式或隐式公用的，因此该属性可广泛设置。 有关更多详细信息，请参阅[依赖属性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)。  
+ 因为<xref:System.Windows.DependencyPropertyKey>是专用容器，并不会传播由属性系统在代码之外，更好的安全设置比读写依赖属性具有只读依赖属性。 对于读写依赖属性，标识字段是显式或隐式公用的，因此该属性可广泛设置。 有关更多详细信息，请参阅[依赖属性的安全性](dependency-property-security.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [依赖项属性概述](dependency-properties-overview.md)
+- [自定义依赖属性](custom-dependency-properties.md)
+- [样式设置和模板化](../controls/styling-and-templating.md)

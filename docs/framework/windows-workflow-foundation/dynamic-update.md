@@ -2,12 +2,12 @@
 title: 动态更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: 9b26bde8e524275d2eef34afc3f6442e2ebeea6f
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 63d780852f7deea8263f3c232ec9cc43b48a0526
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323118"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353694"
 ---
 # <a name="dynamic-update"></a>动态更新
 动态更新为工作流应用程序开发人员提供了一种机制，可用于更新持久化工作流实例的工作流定义。 操作可以是实施 bug 修复、实施新的要求或适应意外的变化。 此主题概述了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的动态更新功能。  
@@ -28,7 +28,7 @@ ms.locfileid: "49323118"
   
  本主题将一个新活动添加至已编译 Xaml 工作流的持久性实例中，借此提供对动态更新过程的概述。  
   
-###  <a name="Prepare"></a> 准备动态更新工作流定义  
+### <a name="Prepare"></a> 准备动态更新工作流定义  
  动态更新过程的第一步是准备要更新的工作流定义。 这是通过调用 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 方法并传入要修改的工作流定义来实现的。 方法将验证然后遍历工作流树，以标识所有对象（如需要标记的公共活动和变量），以便稍后将其与修改的工作流定义进行比较。 完成此操作后，将对工作流树进行克隆并将其附加到原始工作流定义。 创建更新映射时，将比较工作流定义的更新版本和原始工作流定义，并根据比较差异生成更新映射。  
   
  若要为动态更新准备 Xaml 工作流，可将其加载到 <xref:System.Activities.ActivityBuilder>，然后 <xref:System.Activities.ActivityBuilder> 将传入 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>。  
@@ -59,7 +59,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 > [!NOTE]
 >  若要下载本主题附带的示例代码，请参阅[动态更新示例代码](https://go.microsoft.com/fwlink/?LinkId=227905)。  
   
-###  <a name="Update"></a> 更新工作流定义以反映所需的更改  
+### <a name="Update"></a> 更新工作流定义以反映所需的更改  
  一旦工作流定义准备好进行更新，就可以作出所需的更改。 您可以添加或删除活动，添加、移动或删除公共变量，添加或删除参数，并对活动委托的签名进行更改。 您不能删除正在运行的活动或更改正在运行的委托的签名。 这些更改可利用代码，或在预先承载的工作流设计器中进行。 在以下示例中，自定义 `VerifyAppraisal` 活动添加到 Sequence，后者构成前例中 `MortgageWorkflow` 的主体。  
   
 ```csharp  
@@ -77,7 +77,7 @@ Sequence s = ab.Implementation as Sequence;
 s.Activities.Insert(2, va);  
 ```  
   
-###  <a name="Create"></a> 创建更新映射  
+### <a name="Create"></a> 创建更新映射  
  修改完准备好进行更新的工作流定义之后，就可以创建更新映射。 为创建动态更新映射，需调用 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> 方法。 这将返回一个 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>，它包含运行时修改持久化工作流实例所需的信息，以便可以使用新的工作流定义加载和恢复该实例。 在以下示例中，为上例中修改的 `MortgageWorkflow` 定义创建了一个动态映射。  
   
 ```csharp  
@@ -106,7 +106,7 @@ XamlServices.Save(xw, ab);
 sw.Close();  
 ```  
   
-###  <a name="Apply"></a> 将更新映射应用于所需的持久化工作流实例  
+### <a name="Apply"></a> 将更新映射应用于所需的持久化工作流实例  
  更新映射创建后在任意时间都可应用。 可以使用 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> 实例（由 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> 返回）立即应用，也可以使用保存的更新映射副本在以后应用。 若要更新工作流实例，可使用 <xref:System.Activities.WorkflowApplicationInstance> 将该实例加载到 <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType> 中。 接下来，使用更新的工作流定义和所需 <xref:System.Activities.WorkflowApplication> 创建一个 <xref:System.Activities.WorkflowIdentity>。 此 <xref:System.Activities.WorkflowIdentity> 可能不同于用来持久化保存原始工作流的标识，通常是为了反映持久化保存的实例已修改。 一旦创建了 <xref:System.Activities.WorkflowApplication>，即使用 <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType>（采用 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>）的重载进行加载，然后通过调用 <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType> 将其卸载。 这适用于动态更新，并持久化保存更新的工作流实例。  
   
 ```csharp  

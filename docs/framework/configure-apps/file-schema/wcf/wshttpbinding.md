@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
 ms.openlocfilehash: d22065abcb04209ebd1ad51b41bfc9167af6d4c9
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758971"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352888"
 ---
 # <a name="wshttpbinding"></a>\<wsHttpBinding>
 定义一个适合于非双工服务约定的安全、可靠且可互操作的绑定。 绑定将实现下列规范：WS 可靠消息传送的可靠性和 Ws-security 的消息安全性和身份验证。 传输协议是 HTTP，消息编码方式是 Text/XML 编码。  
@@ -96,7 +96,8 @@ ms.locfileid: "55758971"
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
- `WSHttpBinding` 与 `BasicHttpBinding` 相似，但是会提供更多的 Web 服务功能。 与 BasicHttpBinding 一样，它也使用 HTTP 传输并提供消息安全，但它还提供事务、可靠消息传递和 WS-Addressing，这些功能要么在默认情况下已启用，要么通过单一控制设置来提供。  
+ 
+  `WSHttpBinding` 与 `BasicHttpBinding` 相似，但是会提供更多的 Web 服务功能。 与 BasicHttpBinding 一样，它也使用 HTTP 传输并提供消息安全，但它还提供事务、可靠消息传递和 WS-Addressing，这些功能要么在默认情况下已启用，要么通过单一控制设置来提供。  
   
 ## <a name="example"></a>示例  
   

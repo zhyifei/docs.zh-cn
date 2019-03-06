@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
-ms.openlocfilehash: def502855168b8e10f57e1426191f4e0c26e9f67
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: fbf40aa8dded4e676828c600ecb634732803dbdb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745724"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377009"
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox 帮助主题
 本部分提供示例来演示如何完成常见任务使用<xref:System.Windows.Controls.RichTextBox>控件。  
   
 ## <a name="in-this-section"></a>本节内容  
- [从 RichTextBox 提取文本内容](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
- [以编程方式在 RichTextBox 中更改选定内容](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
- [保存、加载和打印 RichTextBox 内容](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
- [在 RichTextBox 中确定自定义上下文菜单的位置](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
+ [从 RichTextBox 提取文本内容](how-to-extract-the-text-content-from-a-richtextbox.md)  
+ [以编程方式在 RichTextBox 中更改选定内容](change-selection-in-a-richtextbox-programmatically.md)  
+ [保存、加载和打印 RichTextBox 内容](how-to-save-load-and-print-richtextbox-content.md)  
+ [在 RichTextBox 中确定自定义上下文菜单的位置](how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Controls.TextBox>
-- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [WPF 中的文档](../advanced/documents-in-wpf.md)
+- [流文档概述](../advanced/flow-document-overview.md)

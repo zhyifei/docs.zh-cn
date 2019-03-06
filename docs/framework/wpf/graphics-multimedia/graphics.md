@@ -7,26 +7,26 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 9a8dcc98b6d201825e4880edc2ad77f9e0406586
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662382"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361156"
 ---
 # <a name="graphics"></a>图形
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 产品/服务集成的多媒体、 矢量图形、 动画和内容复合，便于开发人员能够生成有趣的用户界面和内容的支持。  
   
 ## <a name="in-this-section"></a>本节内容  
- [位图效果](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [画笔](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [绘图](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [几何图形](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [图像](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [形状](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [转换](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [图形呈现注册表设置](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [位图效果](bitmap-effects.md)  
+ [画笔](brushes.md)  
+ [绘图](drawings.md)  
+ [几何图形](geometries.md)  
+ [图像](images.md)  
+ [形状](shapes.md)  
+ [转换](transformations.md)  
+ [图形呈现注册表设置](graphics-rendering-registry-settings.md)  
+ [帮助主题](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Shapes.Shape>
@@ -36,6 +36,6 @@ ms.locfileid: "54662382"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [图形和多媒体](index.md)
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)

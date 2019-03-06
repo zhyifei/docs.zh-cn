@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: 93a04ce55a10f54a6770c279f1773491d7aa463f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740133"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370041"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>如何：使用 GridSplitter 调整行的大小
 此示例演示如何使用水平<xref:System.Windows.Controls.GridSplitter>若要重新分发中的两个行之间的间距<xref:System.Windows.Controls.Grid>而无需更改的维度<xref:System.Windows.Controls.Grid>。  
@@ -23,9 +23,9 @@ ms.locfileid: "54740133"
   
  下面的示例演示如何定义水平<xref:System.Windows.Controls.GridSplitter>相邻的行的大小进行调整。  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
   
- 一个<xref:System.Windows.Controls.GridSplitter>未占据其自己的行可能会被中的其他控件遮盖<xref:System.Windows.Controls.Grid>。 有关如何避免此问题的详细信息，请参阅[确保 GridSplitter 可见](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)。  
+ 一个<xref:System.Windows.Controls.GridSplitter>未占据其自己的行可能会被中的其他控件遮盖<xref:System.Windows.Controls.Grid>。 有关如何避免此问题的详细信息，请参阅[确保 GridSplitter 可见](how-to-make-sure-that-a-gridsplitter-is-visible.md)。  
   
  **如何创建占据一行的 GridSplitter**  
   
@@ -33,9 +33,9 @@ ms.locfileid: "54740133"
   
  下面的示例演示如何定义水平<xref:System.Windows.Controls.GridSplitter>的占据一行并调整其大小的任意一侧的行。  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
-[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Controls.GridSplitter>
-- [帮助主题](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+- [帮助主题](gridsplitter-how-to-topics.md)

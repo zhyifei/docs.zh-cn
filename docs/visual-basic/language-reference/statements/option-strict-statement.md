@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: 1fce65b70c663ca56427122abb604d16fcd029d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981538"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355124"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 隐式数据类型将转换限制为仅进行扩大转换，不允许后期绑定，并禁止隐式键入会导致`Object`类型。  
@@ -113,7 +113,7 @@ Option Strict { On | Off }
   
 2.  上**编译**选项卡上，设置中的值**Option Strict**框。  
   
-###  <a name="conditions"></a> 若要在 IDE 中设置警告配置  
+### <a name="conditions"></a> 若要在 IDE 中设置警告配置  
  当你使用[编译页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)而不是`Option Strict`语句中，你可以生成错误的条件的其他控制。 **警告配置**一部分**编译页**具有对应于三个条件会导致编译时错误的设置时`Option Strict`上。 这些设置如下：  
   
 -   隐式转换  

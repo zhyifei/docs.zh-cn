@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 659af630f697d7f2742bc71006241c4bded842c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bc4b2a11927bd2551dc322c5a856ade9a85c8b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718918"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364796"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary 标记扩展
 为集成第三方控件的自定义控件创作者或应用程序提供一种方法，用于加载要在设置控件样式时使用的特定于主题的资源字典。  
@@ -38,7 +38,7 @@ ms.locfileid: "54718918"
   
 |||  
 |-|-|  
-|`assemblyUri`|程序集的 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]，其中包含主题信息。 通常，这是一个引用较大包中程序集的 Pack URI。 程序集资源和 Pack URI 可以简化部署问题。 有关详细信息，请参阅 [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)。|  
+|`assemblyUri`|程序集的 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]，其中包含主题信息。 通常，这是一个引用较大包中程序集的 Pack URI。 程序集资源和 Pack URI 可以简化部署问题。 有关详细信息，请参阅 [WPF 中的 Pack URI](../app-development/pack-uris-in-wpf.md)。|  
   
 ## <a name="remarks"></a>备注  
  此扩展旨在填补只有一个特定属性值： 的值<xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType>。  
@@ -61,10 +61,10 @@ ms.locfileid: "54718918"
   
  在中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器实现中，对此标记扩展的处理由定义<xref:System.Windows.ThemeDictionaryExtension>类。  
   
- `ThemeDictionary` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有标记扩展在其特性语法中都使用 { 和 } 字符，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器通过这一约定确认标记扩展必须处理该特性。 有关详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
+ `ThemeDictionary` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有标记扩展在其特性语法中都使用 { 和 } 字符，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器通过这一约定确认标记扩展必须处理该特性。 有关详细信息，请参阅[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [样式设置和模板化](../controls/styling-and-templating.md)
+- [XAML 概述 (WPF)](xaml-overview-wpf.md)
+- [标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [WPF 应用程序资源、内容和数据文件](../app-development/wpf-application-resource-content-and-data-files.md)

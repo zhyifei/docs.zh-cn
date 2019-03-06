@@ -3,11 +3,11 @@ title: <serviceMetadata>
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
 ms.openlocfilehash: 04bc29e8e842f5bb0252685fc3088a86535f4668
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268530"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379492"
 ---
 # <a name="servicemetadata"></a>\<serviceMetadata>
 指定服务元数据的发布和相关信息。  
@@ -65,7 +65,7 @@ ms.locfileid: "55268530"
   
  有关配置此行为的详细示例，请参阅[元数据发布行为](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)。  
   
- 利用可选的 `httpGetBinding` 和 `httpsGetBinding`属性，您可以配置用于通过 HTTP GET（或 HTTPS GET）检索元数据的绑定。 如果未指定这两个属性，则根据情况使用相应的默认绑定（采用 HTTP 时为 `HttpTransportBindingElement`，采用 HTTPS 时为 `HttpsTransportBindingElement`）进行元数据检索。 请注意：不能将这些属性用于内置 WCF 绑定。 仅支持具有支持 <xref:System.ServiceModel.Channels.IReplyChannel> 的内部绑定元素的绑定。 此外，绑定的 <xref:System.ServiceModel.Channels.MessageVersion> 属性必须为 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>。  
+ 利用可选的 `httpGetBinding` 和 `httpsGetBinding`属性，你可以配置用于通过 HTTP GET（或 HTTPS GET）检索元数据的绑定。 如果未指定这两个属性，则根据情况使用相应的默认绑定（采用 HTTP 时为 `HttpTransportBindingElement`，采用 HTTPS 时为 `HttpsTransportBindingElement`）进行元数据检索。 请注意：不能将这些属性用于内置 WCF 绑定。 仅支持具有支持 <xref:System.ServiceModel.Channels.IReplyChannel> 的内部绑定元素的绑定。 此外，绑定的 <xref:System.ServiceModel.Channels.MessageVersion> 属性必须为 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>。  
   
  为了降低服务被恶意使用者滥用的可能性，可以使用 SSL over HTTP (HTTPS) 机制来确保传输的安全。 为此，必须首先将一个适合的 X.509 证书绑定到承载该服务的计算机上的特定端口。 (有关详细信息，请参阅[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。)然后，将此元素添加到服务配置，并将 `httpsGetEnabled` 属性设置为 `true`。 最后，将 `httpsGetUrl` 属性设置为服务元数据终结点的 URL，如下面的示例所示。  
   
