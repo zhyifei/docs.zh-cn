@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30464956adf09ee4cc55db183c34396beacf070e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ec631c6b5c6d8ffdb74589c00e899b689b5e788
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720444"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468112"
 ---
 # <a name="icordebugprocess6getcode-method"></a>ICorDebugProcess6::GetCode 方法
 获取特定代码地址上的托管代码的相关信息。  
@@ -22,7 +22,7 @@ HRESULT GetCode(
     [out] ICorDebugCode **ppCode);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `codeAddress`  
  [in]一个[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值，该值指定托管的代码段的起始地址。  
   
