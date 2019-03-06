@@ -8,12 +8,12 @@ helpviewer_keywords:
 - routed events [WPF], handling
 - bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
-ms.openlocfilehash: 40cacbf6b36cf474f5267870531e5f4ac048dc56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42f5f247e775fbf0bd323fc693a74d6149c87bb3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561330"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368189"
 ---
 # <a name="how-to-handle-a-routed-event"></a>如何：处理路由事件
 本示例演示了浮升事件的工作原理，以及如何编写可处理路由事件数据的处理程序。  
@@ -27,16 +27,16 @@ ms.locfileid: "54561330"
   
  请注意，在父<xref:System.Windows.Controls.StackPanel>元素中，<xref:System.Windows.Controls.Primitives.ButtonBase.Click>指定为该属性进行部分限定的命名的事件名称<xref:System.Windows.Controls.Button>类。 <xref:System.Windows.Controls.Button>类是<xref:System.Windows.Controls.Primitives.ButtonBase>派生的类具有<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件在其成员列表中的。 如果要处理的事件不在附加路由事件处理程序的元素的成员列表中，则有必要使用这种部分限定技术来附加事件处理程序。  
   
- [!code-xaml[RoutedEventHandle#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
+ [!code-xaml[RoutedEventHandle#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
   
  下面的示例处理<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  该示例会报告哪个元素处理事件以及哪个元素引发事件。 用户单击任一按钮时都将执行事件处理程序。  
   
- [!code-csharp[RoutedEventHandle#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml.cs#handler)]
- [!code-vb[RoutedEventHandle#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
+ [!code-csharp[RoutedEventHandle#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml.cs#handler)]
+ [!code-vb[RoutedEventHandle#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.RoutedEvent>
-- [输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [帮助主题](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
-- [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [输入概述](input-overview.md)
+- [路由事件概述](routed-events-overview.md)
+- [帮助主题](events-how-to-topics.md)
+- [XAML 语法详述](xaml-syntax-in-detail.md)

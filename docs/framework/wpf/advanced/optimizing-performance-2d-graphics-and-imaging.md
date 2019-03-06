@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: d138f7ebc6fe62f03cd80189185c8ba73d3a2006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec03775f42e7f7a60d182eba134f9e1f7ba8466
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630809"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371393"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>优化性能：二维图形和图像处理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了多种可按应用程序要求进行优化的二维图形和图像处理功能。 本主题提供有关这些方面性能优化的信息。  
@@ -49,7 +49,7 @@ ms.locfileid: "54630809"
   
  由于<xref:System.Windows.Shapes.Shape>对象派生自<xref:System.Windows.FrameworkElement>类，使用它们可以在你的应用程序中添加内存消耗显著增加。 如果您确实不需要<xref:System.Windows.FrameworkElement>功能对于图形内容，请考虑使用轻量<xref:System.Windows.Media.Drawing>对象。  
   
- 有关详细信息<xref:System.Windows.Media.Drawing>对象，请参阅[Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)。  
+ 有关详细信息<xref:System.Windows.Media.Drawing>对象，请参阅[Drawing 对象概述](../graphics-multimedia/drawing-objects-overview.md)。  
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry 对象  
@@ -57,13 +57,13 @@ ms.locfileid: "54630809"
   
  下面的示例使用特性语法创建一个三角形<xref:System.Windows.Media.StreamGeometry>在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   
- [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
+ [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
   
- 有关详细信息<xref:System.Windows.Media.StreamGeometry>对象，请参阅[形状使用 StreamGeometry 创建](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)。  
+ 有关详细信息<xref:System.Windows.Media.StreamGeometry>对象，请参阅[形状使用 StreamGeometry 创建](../graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)。  
   
 <a name="DrawingVisual_Objects"></a>   
 ## <a name="drawingvisual-objects"></a>DrawingVisual 对象  
- <xref:System.Windows.Media.DrawingVisual>对象是一个轻量绘图类，用于呈现形状、 图像或文本。 此类之所以为轻量类是因为它不提供布局或事件处理，从而性能得以提升。 因此，绘图非常适用于背景和剪贴画。 有关详细信息，请参阅[使用 DrawingVisual 对象](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)。  
+ <xref:System.Windows.Media.DrawingVisual>对象是一个轻量绘图类，用于呈现形状、 图像或文本。 此类之所以为轻量类是因为它不提供布局或事件处理，从而性能得以提升。 因此，绘图非常适用于背景和剪贴画。 有关详细信息，请参阅[使用 DrawingVisual 对象](../graphics-multimedia/using-drawingvisual-objects.md)。  
   
 <a name="Images"></a>   
 ## <a name="images"></a>图像  
@@ -77,15 +77,15 @@ ms.locfileid: "54630809"
   
 -   如果可能，请将多个图像合并到单个图像中，例如由多个图像构成的胶卷条。  
   
--   有关详细信息，请参阅 [图像概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)。  
+-   有关详细信息，请参阅 [图像概述](../graphics-multimedia/imaging-overview.md)。  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  对任何位图缩放进行动画处理时，默认高质量图像重采样算法有时可能由于消耗过多系统资源导致帧速率下降，从而导致动画明显变慢。 通过设置<xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>的属性<xref:System.Windows.Media.RenderOptions>对象传递给<xref:System.Windows.Media.BitmapScalingMode.LowQuality>缩放位图时，可以创建更为流畅的动画。 <xref:System.Windows.Media.BitmapScalingMode.LowQuality> 模式告知[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]呈现引擎处理图像时从质量优化算法切换到速度优化算法。  
   
  下面的示例演示如何设置<xref:System.Windows.Media.BitmapScalingMode>图像对象。  
   
- [!code-csharp[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
- [!code-vb[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
   
 ### <a name="cachinghint"></a>CachingHint  
  默认情况下[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]不会缓存的已呈现的内容<xref:System.Windows.Media.TileBrush>对象，如<xref:System.Windows.Media.DrawingBrush>和<xref:System.Windows.Media.VisualBrush>。 在静态方案中的内容和使用都不<xref:System.Windows.Media.TileBrush>中更改场景中，这是有意义，因为这可节省视频内存。 如得意义时不会使<xref:System.Windows.Media.TileBrush>中的非静态方法使用具有静态内容-例如，当一个静态<xref:System.Windows.Media.DrawingBrush>或<xref:System.Windows.Media.VisualBrush>映射到旋转 3D 对象的图面。 默认行为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]重新呈现内容的整个<xref:System.Windows.Media.DrawingBrush>或<xref:System.Windows.Media.VisualBrush>对于每个框架，即使内容是不变。  
@@ -96,17 +96,17 @@ ms.locfileid: "54630809"
   
  下面的示例演示如何使用缓存提示选项用于<xref:System.Windows.Media.DrawingBrush>。  
   
- [!code-csharp[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
- [!code-vb[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
 ## <a name="see-also"></a>请参阅
-- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [规划应用程序性能](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [利用硬件](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [布局和示例](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [对象行为](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [应用程序资源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [文本](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [动画提示和技巧](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [优化 WPF 应用程序性能](optimizing-wpf-application-performance.md)
+- [规划应用程序性能](planning-for-application-performance.md)
+- [利用硬件](optimizing-performance-taking-advantage-of-hardware.md)
+- [布局和示例](optimizing-performance-layout-and-design.md)
+- [对象行为](optimizing-performance-object-behavior.md)
+- [应用程序资源](optimizing-performance-application-resources.md)
+- [文本](optimizing-performance-text.md)
+- [数据绑定](optimizing-performance-data-binding.md)
+- [其他性能建议](optimizing-performance-other-recommendations.md)
+- [动画提示和技巧](../graphics-multimedia/animation-tips-and-tricks.md)

@@ -8,48 +8,48 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 58861a036d95fcef41da455b25ad71d6e6afaef5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726814"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379570"
 ---
 # <a name="timing-events-overview"></a>计时事件概述
 本主题介绍如何使用上可用的五个计时事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>对象。  
   
 ## <a name="prerequisites"></a>系统必备  
- 若要了解本主题，应了解如何创建和使用动画。 若要开始使用动画，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+ 若要了解本主题，应了解如何创建和使用动画。 若要开始使用动画，请参阅[动画概述](animation-overview.md)。  
   
  有多个方法中的属性进行动画处理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **使用情节提要对象**（标记和代码）：可以使用<xref:System.Windows.Media.Animation.Storyboard>对象排列和分发到一个或多个对象的动画。 有关示例，请参阅[使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)。  
+-   **使用情节提要对象**（标记和代码）：可以使用<xref:System.Windows.Media.Animation.Storyboard>对象排列和分发到一个或多个对象的动画。 有关示例，请参阅[使用情节提要对属性进行动画处理](how-to-animate-a-property-by-using-a-storyboard.md)。  
   
--   **使用本地动画**（仅代码）：您可以将应用<xref:System.Windows.Media.Animation.AnimationTimeline>直接对它们进行动画处理的属性的对象。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
+-   **使用本地动画**（仅代码）：您可以将应用<xref:System.Windows.Media.Animation.AnimationTimeline>直接对它们进行动画处理的属性的对象。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](how-to-animate-a-property-without-using-a-storyboard.md)。  
   
--   **使用时钟**（仅代码）：您可以显式管理时钟创建并自行分发动画时钟。  有关示例，请参阅[通过使用 AnimationClock 对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)。  
+-   **使用时钟**（仅代码）：您可以显式管理时钟创建并自行分发动画时钟。  有关示例，请参阅[通过使用 AnimationClock 对属性进行动画处理](how-to-animate-a-property-by-using-an-animationclock.md)。  
   
  因为您可以使用这些标记和代码中，此概述中的示例使用<xref:System.Windows.Media.Animation.Storyboard>对象。 但是，所介绍的概念适用于其他对属性进行动画处理的方法。  
   
 ### <a name="what-is-a-clock"></a>是什么时钟？  
- 除了描述时间段外，时间线本身并无其他任何作用。 时间线的<xref:System.Windows.Media.Animation.Clock>对象执行实际工作： 它保留为时间线计时相关运行时状态。 在大多数情况下，比如使用情节提要时，会自动为时间线创建时钟。 此外可以创建<xref:System.Windows.Media.Animation.Clock>通过使用显式<xref:System.Windows.Media.Animation.Timeline.CreateClock%2A>方法。 有关详细信息<xref:System.Windows.Media.Animation.Clock>对象，请参阅[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。  
+ 除了描述时间段外，时间线本身并无其他任何作用。 时间线的<xref:System.Windows.Media.Animation.Clock>对象执行实际工作： 它保留为时间线计时相关运行时状态。 在大多数情况下，比如使用情节提要时，会自动为时间线创建时钟。 此外可以创建<xref:System.Windows.Media.Animation.Clock>通过使用显式<xref:System.Windows.Media.Animation.Timeline.CreateClock%2A>方法。 有关详细信息<xref:System.Windows.Media.Animation.Clock>对象，请参阅[动画和计时系统概述](animation-and-timing-system-overview.md)。  
   
 ## <a name="why-use-events"></a>为什么使用事件？  
  除了一个例外（对齐到上一时钟周期的查找操作），所有交互式计时操作均为异步操作。 无法准确知道它们何时执行。 当存在其他代码依赖于计时操作时，可能会产生问题。 假设你希望停止对矩形进行动画处理的时间线。 在时间线停止后，更改矩形的颜色。  
   
- [!code-csharp[events_procedural#NeedForEventsFragment](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#needforeventsfragment)]
- [!code-vb[events_procedural#NeedForEventsFragment](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#needforeventsfragment)]  
+ [!code-csharp[events_procedural#NeedForEventsFragment](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#needforeventsfragment)]
+ [!code-vb[events_procedural#NeedForEventsFragment](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#needforeventsfragment)]  
   
  在上一示例中，第二行代码可能会在情节提要停止前执行。 这是因为停止操作是异步操作。 告知时间线或时钟停止将创建各种“停止请求”，但它仅在计时引擎的下一时钟周期才会处理。  
   
  若要在时间线完成后执行命令，请使用计时事件。 在下面的示例中，事件处理程序用于在情节提要停止播放后更改矩形的颜色。  
   
- [!code-csharp[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#registerforstoryboardcurrentstateinvalidatedevent)]
- [!code-vb[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#registerforstoryboardcurrentstateinvalidatedevent)]  
-[!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
-[!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
+ [!code-csharp[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#registerforstoryboardcurrentstateinvalidatedevent)]
+ [!code-vb[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#registerforstoryboardcurrentstateinvalidatedevent)]  
+[!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
+[!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
   
- 有关更完整的示例，请参阅[接收通知时在时钟状态更改](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)。  
+ 有关更完整的示例，请参阅[接收通知时在时钟状态更改](how-to-receive-notification-when-clock-state-changes.md)。  
   
 ## <a name="public-events"></a>公共事件  
  <xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>类都提供五种计时事件。 下表列出了这些事件及其触发条件。  
@@ -77,6 +77,6 @@ ms.locfileid: "54726814"
  当你注册<xref:System.Windows.Media.Animation.Timeline.Completed>时间线上的事件，例如，您实际上在告诉系统注册为<xref:System.Windows.Media.Animation.Clock.Completed>事件的时间线创建每个时钟。 在代码中，您必须注册此事件之前<xref:System.Windows.Media.Animation.Clock>创建为此时间线; 否则，不会收到通知。 发生这种情况中自动[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 在之前的事件，分析器自动注册<xref:System.Windows.Media.Animation.Clock>创建。  
   
 ## <a name="see-also"></a>请参阅
-- [动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
-- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [计时行为概述](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+- [动画和计时系统概述](animation-and-timing-system-overview.md)
+- [动画概述](animation-overview.md)
+- [计时行为概述](timing-behaviors-overview.md)

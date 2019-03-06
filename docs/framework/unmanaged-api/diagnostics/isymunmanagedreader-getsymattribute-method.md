@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d43467a0f3ff94eb7903b808e192230e6c0ff1e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 763e698c7149de0fee61770e601032a4160b839f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561058"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378569"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute 方法
 获取根据其名称的自定义属性。 与不同的元数据自定义特性，这些自定义属性保存在符号存储区中。  
@@ -56,7 +56,7 @@ HRESULT GetSymAttribute (
  [out]指向接收属性数据的变量的指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码...  
+ 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
 ## <a name="requirements"></a>要求  
  **标头：** CorSym.idl CorSym.h  

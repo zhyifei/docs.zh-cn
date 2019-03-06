@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: 893b3f7fda3314b158f7c67392a0913e30a92c09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57edaa173b85bc06c6859b08d3edec281e1b8942
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650517"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372850"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>如何：使用 Grid 来构建标准的 UI 对话框
 此示例演示如何创建标准[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]对话框中，通过使用<xref:System.Windows.Controls.Grid>元素。  
@@ -29,11 +29,11 @@ ms.locfileid: "54650517"
   
  最后，该示例将添加三个<xref:System.Windows.Controls.Button>针对最后一行的元素，后者表示**确定**，**取消**，并且**浏览**事件。  
   
- [!code-csharp[GridRunDialog#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
- [!code-vb[GridRunDialog#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
+ [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
+ [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.GridUnitType>
-- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [帮助主题](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)
+- [面板概述](panels-overview.md)
+- [帮助主题](grid-how-to-topics.md)

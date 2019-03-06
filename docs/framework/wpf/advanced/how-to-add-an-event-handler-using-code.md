@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 4e8344ebcb0406a7da29787c5a4377760f55597e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05eaae0f5b893f42d421717ac73373d4c79004c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499127"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352186"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>如何：使用代码添加事件处理程序
 此示例演示如何使用代码将事件处理程序添加到元素。  
@@ -27,16 +27,16 @@ ms.locfileid: "54499127"
   
 -   使用<xref:System.Windows.UIElement.AddHandler%2A>方法，一起`AddressOf`运算符，以引用的事件处理程序实现。  
   
--   使用`Handles`关键字作为事件处理程序定义的一部分。 此处; 未显示这种方法请参阅[Visual Basic 和 WPF 事件处理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
+-   使用`Handles`关键字作为事件处理程序定义的一部分。 此处; 未显示这种方法请参阅[Visual Basic 和 WPF 事件处理](visual-basic-and-wpf-event-handling.md)。  
   
- [!code-xaml[RoutedEventAddRemoveHandler#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
+ [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   
- [!code-csharp[RoutedEventAddRemoveHandler#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml.cs#handler)]
- [!code-vb[RoutedEventAddRemoveHandler#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
+ [!code-csharp[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml.cs#handler)]
+ [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  添加事件处理程序在最初分析[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页是要简单得多。 在对象元素中你想要添加事件处理程序，将添加匹配你想要处理的事件名称的属性。 然后该属性的值指定的代码隐藏文件中定义的事件处理程序方法的名称为[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页。 有关详细信息，请参阅[XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)或[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
+>  添加事件处理程序在最初分析[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页是要简单得多。 在对象元素中你想要添加事件处理程序，将添加匹配你想要处理的事件名称的属性。 然后该属性的值指定的代码隐藏文件中定义的事件处理程序方法的名称为[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页。 有关详细信息，请参阅[XAML 概述 (WPF)](xaml-overview-wpf.md)或[路由事件概述](routed-events-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [帮助主题](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
+- [路由事件概述](routed-events-overview.md)
+- [帮助主题](events-how-to-topics.md)

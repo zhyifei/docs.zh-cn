@@ -2,17 +2,11 @@
 title: .NET Framework 性能
 ms.date: 03/30/2017
 helpviewer_keywords:
-- performance [.NET Framework]
-- reliability [.NET Framework]
+  - 'performance [.NET Framework]'
+  - 'reliability [.NET Framework]'
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f5667d55b8a49ba7b32570ad6a230b220ac8953b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221168"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 性能
 如果想要创建一个具有卓越性能的应用，你应该像设计应用的任何其他功能一样设计和规划性能。 你可以使用由 Microsoft 所提供的用于测量你的应用性能的工具，并对内存使用、代码吞吐量和响应能力进行改进（如果需要）。 本主题列出了 Microsoft 提供的性能分析工具，并提供了介绍应用开发特定领域性能的其他主题的链接。  
@@ -49,7 +43,6 @@ ms.locfileid: "56221168"
 |采用 C++、C# 和 Visual Basic 编写的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用|[使用 C++、C# 和 Visual Basic 的 Windows 应用商店应用的性能最佳做法](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[WPF 性能套件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[ASP.NET 性能概述](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
-|Windows 窗体|[提升 Windows 窗体应用性能的实用提示](https://msdn.microsoft.com/magazine/cc163630.aspx)|  
   
 ## <a name="related-topics"></a>相关主题  
   

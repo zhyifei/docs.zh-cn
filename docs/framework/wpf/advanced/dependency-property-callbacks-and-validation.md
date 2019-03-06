@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: acc8fdeb495bf7a490752a91ec6943346efcb712
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576455"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363925"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>依赖项属性回调和验证
 本主题介绍如何使用与属性相关的功能（如验证确定、更改属性的有效值时调用的回调）的替代自定义实现，并重写对值确定的外部可能影响来创建依赖属性。 本主题还讨论使用这些技术扩展默认属性系统行为所适用的方案。  
@@ -25,14 +25,14 @@ ms.locfileid: "54576455"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
- 本主题假定你了解实现依赖属性的基本方案，以及如何将元数据应用于自定义依赖属性。 有关上下文，请参阅[自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。  
+ 本主题假定你了解实现依赖属性的基本方案，以及如何将元数据应用于自定义依赖属性。 有关上下文，请参阅[自定义依赖属性](custom-dependency-properties.md)和[依赖属性元数据](dependency-property-metadata.md)。  
   
 <a name="Validation_Callbacks"></a>   
 ## <a name="validation-callbacks"></a>验证回叫  
  在首次注册依赖属性时，可以为其分配验证回叫。 验证回叫不属于属性元数据;是的直接输入<xref:System.Windows.DependencyProperty.Register%2A>方法。 因此，在为某个依赖属性创建验证回叫后，新实现无法重写该验证回叫。  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  实现回叫，以便为其提供对象值。 如果提供的值对属性有效，回叫会返回 `true`；否则，回叫返回 `false`。 假定按照向属性系统注册的类型，属性的类型是正确的，因此通常不会在回叫内执行类型检查。 属性系统可在多种不同操作中使用回叫。 这包括按默认值的初始类型初始化、 以编程方式更改通过调用<xref:System.Windows.DependencyObject.SetValue%2A>，或尝试使用提供的新默认值重写元数据。 如果验证回叫是通过其中任何一种操作调用的，并且返回 `false`，则会引发异常。 应用程序编写器必须准备处理这些异常。 验证回叫常用于验证枚举值，或在属性设置的度量值必须大于等于零时约束整数值或双精度型值。  
   
@@ -40,8 +40,8 @@ ms.locfileid: "54576455"
   
  以下是非常简单的验证回叫方案的代码示例： 验证属性被类型化为<xref:System.Double>基元不是<xref:System.Double.PositiveInfinity>或<xref:System.Double.NegativeInfinity>。  
   
- [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
- [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
+ [!code-csharp[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
+ [!code-vb[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
 ## <a name="coerce-value-callbacks-and-property-changed-events"></a>强制值回叫和属性更改事件  
@@ -51,18 +51,18 @@ ms.locfileid: "54576455"
   
  下面是一个非常简短的代码示例，仅针对阐释此关系的三个依赖属性之一。 该示例演示如何注册相关的 *Reading 属性的最小/最大/当前值集的 `CurrentReading` 属性。 它使用上一节中所示的验证。  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  当前值的属性更改回叫用于将更改转发到其他依赖属性，方法是显式调用为这些属性注册的强制值回叫：  
   
- [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
- [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
+ [!code-csharp[DPCallbackOverride#OnPCCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
+ [!code-vb[DPCallbackOverride#OnPCCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
  强制值回叫会检查当前属性可能依赖的属性的值，并在必要时强制当前值：  
   
- [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
- [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
+ [!code-csharp[DPCallbackOverride#CoerceCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
+ [!code-vb[DPCallbackOverride#CoerceCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
 >  不会强制属性的默认值。 如果属性值仍有其初始默认值，或通过清除使用其他值的属性值等于默认值可能会出现<xref:System.Windows.DependencyObject.ClearValue%2A>。  
@@ -81,6 +81,6 @@ ms.locfileid: "54576455"
  属性系统会将任何<xref:System.Windows.CoerceValueCallback>返回的值<xref:System.Windows.DependencyProperty.UnsetValue>作为一种特殊情况。 此特殊情况意味着，导致属性更改<xref:System.Windows.CoerceValueCallback>属性系统中，应会拒绝被调用，并且属性系统应改为报告该属性具有以前的任何值。 该机制可用于检查异步启动的属性更改对当前对象状态是否仍然有效，如果无效，则可取消这些更改。 另一个可能的方案是：可以根据负责所报告的值的属性值确定组件，有选择地取消该值。 若要执行此操作，可以使用<xref:System.Windows.DependencyProperty>回叫和属性标识符作为输入传递<xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>，然后处理<xref:System.Windows.ValueSource>。  
   
 ## <a name="see-also"></a>请参阅
-- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [依赖项属性概述](dependency-properties-overview.md)
+- [依赖属性元数据](dependency-property-metadata.md)
+- [自定义依赖属性](custom-dependency-properties.md)
