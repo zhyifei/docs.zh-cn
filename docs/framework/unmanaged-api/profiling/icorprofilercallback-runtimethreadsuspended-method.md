@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb93dbf35501d44bb21d3d689aebeba3acd19f79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d297f6915af59ad5a24dfdad9dca9397489edb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616794"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468164"
 ---
 # <a name="icorprofilercallbackruntimethreadsuspended-method"></a>ICorProfilerCallback::RuntimeThreadSuspended 方法
 指定的线程已挂起或即将挂起通知探查器。  
@@ -34,7 +34,7 @@ HRESULT RuntimeThreadSuspended(
     [in] ThreadID threadId);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `threadId`  
  [in]已挂起的线程的 ID。  
   
