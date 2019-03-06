@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0dfe2bb234631a733248066e8475c135de288e63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f0ed1aa0d095b13a90ed5b036719e71ccc8e272
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737593"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468190"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName 方法
 获取包含由表示托管调试助手 (MDA) 的名称的字符串[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)。  
@@ -38,7 +38,7 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `cchName`  
  [in] `szName` 数组的大小。  
   
