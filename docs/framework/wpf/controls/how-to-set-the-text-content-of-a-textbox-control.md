@@ -8,25 +8,25 @@ helpviewer_keywords:
 - text content [WPF], setting
 - TextBox control [WPF], setting text content
 ms.assetid: bcd25fc7-a52f-4453-b802-2c8d2b335ab8
-ms.openlocfilehash: 8d37fd4a969de2c6fddb26e2e2151f490cb85e32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c0e6e53518d382a2052efa43993d418e35fa0f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563621"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364120"
 ---
-# <a name="how-to-set-the-text-content-of-a-textbox-control"></a><span data-ttu-id="9cb22-102">如何：设置 TextBox 控件的文本内容</span><span class="sxs-lookup"><span data-stu-id="9cb22-102">How to: Set the Text Content of a TextBox Control</span></span>
-<span data-ttu-id="9cb22-103">此示例演示如何使用<xref:System.Windows.Controls.TextBox.Text%2A>属性设置的初始文本内容<xref:System.Windows.Controls.TextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="9cb22-103">This example shows how to use the <xref:System.Windows.Controls.TextBox.Text%2A> property to set the initial text contents of a <xref:System.Windows.Controls.TextBox> control.</span></span>  
+# <a name="how-to-set-the-text-content-of-a-textbox-control"></a><span data-ttu-id="82008-102">如何：设置 TextBox 控件的文本内容</span><span class="sxs-lookup"><span data-stu-id="82008-102">How to: Set the Text Content of a TextBox Control</span></span>
+<span data-ttu-id="82008-103">此示例演示如何使用<xref:System.Windows.Controls.TextBox.Text%2A>属性设置的初始文本内容<xref:System.Windows.Controls.TextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="82008-103">This example shows how to use the <xref:System.Windows.Controls.TextBox.Text%2A> property to set the initial text contents of a <xref:System.Windows.Controls.TextBox> control.</span></span>  
   
- <span data-ttu-id="9cb22-104">**请注意**尽管[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]版本的示例可以使用`<TextBox.Text>`标记的每个按钮的文本周围<xref:System.Windows.Controls.TextBox>内容，则没有必要因为<xref:System.Windows.Controls.TextBox>适用<xref:System.Windows.Markup.ContentPropertyAttribute>属性<xref:System.Windows.Controls.TextBox.Text%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="9cb22-104">**Note** Although the [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] version of the example could use the `<TextBox.Text>` tags around the text of each button's <xref:System.Windows.Controls.TextBox> content, it is not necessary because the <xref:System.Windows.Controls.TextBox> applies the <xref:System.Windows.Markup.ContentPropertyAttribute> attribute to the <xref:System.Windows.Controls.TextBox.Text%2A> property.</span></span> <span data-ttu-id="9cb22-105">有关详细信息，请参阅[XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="9cb22-105">For more information, see [XAML Overview (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).</span></span>  
+ <span data-ttu-id="82008-104">**请注意**尽管[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]版本的示例可以使用`<TextBox.Text>`标记的每个按钮的文本周围<xref:System.Windows.Controls.TextBox>内容，则没有必要因为<xref:System.Windows.Controls.TextBox>适用<xref:System.Windows.Markup.ContentPropertyAttribute>属性<xref:System.Windows.Controls.TextBox.Text%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="82008-104">**Note** Although the [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] version of the example could use the `<TextBox.Text>` tags around the text of each button's <xref:System.Windows.Controls.TextBox> content, it is not necessary because the <xref:System.Windows.Controls.TextBox> applies the <xref:System.Windows.Markup.ContentPropertyAttribute> attribute to the <xref:System.Windows.Controls.TextBox.Text%2A> property.</span></span> <span data-ttu-id="82008-105">有关详细信息，请参阅[XAML 概述 (WPF)](../advanced/xaml-overview-wpf.md)。</span><span class="sxs-lookup"><span data-stu-id="82008-105">For more information, see [XAML Overview (WPF)](../advanced/xaml-overview-wpf.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9cb22-106">示例</span><span class="sxs-lookup"><span data-stu-id="9cb22-106">Example</span></span>  
- [!code-xaml[TextBox_MiscCode#_TextBoxSetTextXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxsettextxaml)]  
+## <a name="example"></a><span data-ttu-id="82008-106">示例</span><span class="sxs-lookup"><span data-stu-id="82008-106">Example</span></span>  
+ [!code-xaml[TextBox_MiscCode#_TextBoxSetTextXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxsettextxaml)]  
   
-## <a name="example"></a><span data-ttu-id="9cb22-107">示例</span><span class="sxs-lookup"><span data-stu-id="9cb22-107">Example</span></span>  
- [!code-csharp[TextBox_MiscCode#_TextBoxSetText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textboxsettext)]
- [!code-vb[TextBox_MiscCode#_TextBoxSetText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textboxsettext)]  
+## <a name="example"></a><span data-ttu-id="82008-107">示例</span><span class="sxs-lookup"><span data-stu-id="82008-107">Example</span></span>  
+ [!code-csharp[TextBox_MiscCode#_TextBoxSetText](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textboxsettext)]
+ [!code-vb[TextBox_MiscCode#_TextBoxSetText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textboxsettext)]  
   
-## <a name="see-also"></a><span data-ttu-id="9cb22-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="9cb22-108">See also</span></span>
-- [<span data-ttu-id="9cb22-109">TextBox 概述</span><span class="sxs-lookup"><span data-stu-id="9cb22-109">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)
-- [<span data-ttu-id="9cb22-110">RichTextBox 概述</span><span class="sxs-lookup"><span data-stu-id="9cb22-110">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="82008-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="82008-108">See also</span></span>
+- [<span data-ttu-id="82008-109">TextBox 概述</span><span class="sxs-lookup"><span data-stu-id="82008-109">TextBox Overview</span></span>](textbox-overview.md)
+- [<span data-ttu-id="82008-110">RichTextBox 概述</span><span class="sxs-lookup"><span data-stu-id="82008-110">RichTextBox Overview</span></span>](richtextbox-overview.md)
