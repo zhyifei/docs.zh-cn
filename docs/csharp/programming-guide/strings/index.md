@@ -113,7 +113,7 @@ string s = String.Empty;
   
  在以下示例中，<xref:System.Text.StringBuilder> 对象用于通过一组数字类型创建字符串：  
   
- [!code-csharp[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
+ [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>字符串、扩展方法和 LINQ  
  由于 <xref:System.String> 类型实现 <xref:System.Collections.Generic.IEnumerable%601>，因此可以对字符串使用 <xref:System.Linq.Enumerable> 类中定义的扩展方法。 为了避免视觉干扰，这些方法已从 <xref:System.String> 类型的 IntelliSense 中排除，但它们仍然可用。 此外，还可以使用字符串上的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式。 有关详细信息，请参阅 [LINQ 和字符串](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)。  

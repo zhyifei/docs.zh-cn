@@ -10,7 +10,7 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
   
 本主题概述了何时以及如何使用异步编程，并包括指向包含详细信息和示例的支持主题的链接。  
   
-##  <a name="BKMK_WhentoUseAsynchrony"></a> 异步编程提升响应能力  
+## <a name="BKMK_WhentoUseAsynchrony"></a> 异步编程提升响应能力  
  异步对可能会被屏蔽的活动（如 Web 访问）至关重要。 对 Web 资源的访问有时很慢或会延迟。 如果此类活动在同步过程中被屏蔽，整个应用必须等待。 在异步过程中，应用程序可继续执行不依赖 Web 资源的其他工作，直至潜在阻止任务完成。  
   
  下表显示了异步编程提高响应能力的典型区域。 列出的 .NET 和 Windows 运行时 API 包含支持异步编程的方法。  
@@ -28,7 +28,7 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
   
  当设计异步操作时，该基于异步的方法将自动传输的等效对象添加到可从中选择的选项列表中。 开发人员只需要投入较少的工作量即可使你获取传统异步编程的所有优点。  
   
-##  <a name="BKMK_HowtoWriteanAsyncMethod"></a> 异步方法更容易编写  
+## <a name="BKMK_HowtoWriteanAsyncMethod"></a> 异步方法更容易编写  
  C# 中的 [Async](../../../../csharp/language-reference/keywords/async.md) 和 [Await](../../../../csharp/language-reference/keywords/await.md) 关键字是异步编程的核心。 通过这两个关键字，可以使用 .NET Framework、.NET Core 或 Windows 运行时中的资源，轻松创建异步方法（几乎与创建同步方法一样轻松）。 使用 `async` 关键字定义的异步方法简称为“异步方法”。  
   
  下面的示例演示了一种异步方法。 你应对代码中的几乎所有内容都非常熟悉。 注释调出你添加的用来创建异步的功能。  
@@ -97,7 +97,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
   
  若要详细了解旧版 .NET Framework 中的异步性，请参阅 [TPL 和传统 .NET Framework 异步编程](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md)。  
   
-##  <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> 异步方法的运行机制  
+## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> 异步方法的运行机制  
  异步编程中最需弄清的是控制流是如何从方法移动到方法的。 下图可引导你完成该过程。  
   
  ![跟踪异步程序](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
@@ -132,19 +132,19 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
   
 若要详细了解控制流，请参阅[异步程序中的控制流 (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)。  
   
-##  <a name="BKMK_APIAsyncMethods"></a> API 异步方法  
+## <a name="BKMK_APIAsyncMethods"></a> API 异步方法  
  你可能想知道从何处可以找到 `GetStringAsync` 等支持异步编程的方法。 .NET Framework 4.5 或更高版本以及 .NET Core 包含许多可与 `async` 和 `await` 结合使用的成员。 可以通过追加到成员名称的“Async”后缀和 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的返回类型，识别这些成员。 例如，`System.IO.Stream` 类包含 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A> 等方法，以及同步方法 <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A> 和 <xref:System.IO.Stream.Write%2A>。  
   
  Windows 运行时也包含许多可以在 Windows 应用中与 `async` 和 `await` 结合使用的方法。 有关详细信息，请参阅[线程处理和异步编程](/windows/uwp/threading-async/)进行 UWP 开发；如果使用的是旧版 Windows 运行时，还请参阅[异步编程（Windows 应用商店应用）](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10))和[快速入门：在 C# 或 Visual Basic 中调用异步 API](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10))。  
   
-##  <a name="BKMK_Threads"></a>线程  
+## <a name="BKMK_Threads"></a>线程  
 异步方法旨在成为非阻止操作。 异步方法中的 `await` 表达式在等待的任务正在运行时不会阻止当前线程。 相反，表达式在继续时注册方法的其余部分并将控件返回到异步方法的调用方。  
   
 `async` 和 `await` 关键字不会创建其他线程。 因为异步方法不会在其自身线程上运行，因此它不需要多线程。 只有当方法处于活动状态时，该方法将在当前同步上下文中运行并使用线程上的时间。 可以使用 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 将占用大量 CPU 的工作移到后台线程，但是后台线程不会帮助正在等待结果的进程变为可用状态。  
   
 对于异步编程而言，该基于异步的方法优于几乎每个用例中的现有方法。 具体而言，此方法比 <xref:System.ComponentModel.BackgroundWorker> 类更适用于 I/O 绑定操作，因为此代码更简单且无需防止争用条件。 结合 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法使用时，异步编程比 <xref:System.ComponentModel.BackgroundWorker> 更适用于 CPU 绑定操作，因为异步编程将运行代码的协调细节与 `Task.Run` 传输至线程池的工作区分开来。  
   
-##  <a name="BKMK_AsyncandAwait"></a>async 和 await  
+## <a name="BKMK_AsyncandAwait"></a>async 和 await  
  如果使用 [async](../../../../csharp/language-reference/keywords/async.md) 修饰符将某种方法指定为异步方法，即启用以下两种功能。  
   
 -   标记的异步方法可以使用 [await](../../../../csharp/language-reference/keywords/await.md) 来指定暂停点。 `await` 运算符通知编译器异步方法：在等待的异步过程完成后才能继续通过该点。 同时，控制返回至异步方法的调用方。  
@@ -161,7 +161,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
   
 -   [await](../../../../csharp/language-reference/keywords/await.md)  
   
-##  <a name="BKMK_ReturnTypesandParameters"></a> 返回类型和参数  
+## <a name="BKMK_ReturnTypesandParameters"></a> 返回类型和参数  
 异步方法通常返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。 在异步方法中，`await` 运算符应用于通过调用另一个异步方法返回的任务。  
   
 如果方法包含指定 `TResult` 类型操作数的 [return](../../../../csharp/language-reference/keywords/return.md) 语句，将 <xref:System.Threading.Tasks.Task%601> 指定为返回类型。 
@@ -223,12 +223,12 @@ Windows 运行时编程中的异步 API 具有下列返回类型之一（类似�
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
    
   
-##  <a name="BKMK_NamingConvention"></a> 命名约定  
+## <a name="BKMK_NamingConvention"></a> 命名约定  
 按照约定，返回常规可等待类型的方法（例如 `Task`、`Task<T>`、`ValueTask` 和 `ValueTask<T>`）应具有以“Async”结束的名称。 启动异步操作但不返回可等待类型的方法不得具有以“Async”结尾的名称，但其开头可以为“Begin”、“Start”或其他表明此方法不返回或引发操作结果的动词。
   
  如果某一约定中的事件、基类或接口协定建议其他名称，则可以忽略此约定。 例如，你不应重命名常用事件处理程序，例如 `Button1_Click`。  
   
-##  <a name="BKMK_RelatedTopics"></a> 相关主题和示例 (Visual Studio)  
+## <a name="BKMK_RelatedTopics"></a> 相关主题和示例 (Visual Studio)  
   
 |标题|说明|示例|  
 |-----------|-----------------|------------|  
@@ -245,7 +245,7 @@ Windows 运行时编程中的异步 API 具有下列返回类型之一（类似�
 |[基于任务的异步模式 (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|描述 .NET Framework 中异步的新模式。 该模式基于 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 类型。||  
 |[Channel 9 上的异步相关视频](https://channel9.msdn.com/search?term=async%20&type=All#pubDate=year&ch9Search&lang-en=en)|提供指向有关异步编程的各种视频的链接。||  
   
-##  <a name="BKMK_CompleteExample"></a> 完整示例  
+## <a name="BKMK_CompleteExample"></a> 完整示例  
  下面的代码来自于本主题介绍的 Windows Presentation Foundation (WPF) 应用程序的 MainWindow.xaml.cs 文件。 可以从[异步示例：“使用 Async 和 Await 的异步编程”示例](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c)下载此示例。  
   
 ```csharp  

@@ -505,15 +505,6 @@
 ### [访问数据](visual-basic/developing-apps/accessing-data.md)
 ### [创建和使用组件](visual-basic/developing-apps/creating-and-using-components.md)
 
-### [打印和报告](visual-basic/developing-apps/printing/index.md)
-#### [PrintForm 组件](visual-basic/developing-apps/printing/printform-component.md)
-#### [如何：打印可滚动的窗体](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
-#### [如何：打印窗体的工作区和非工作区](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
-#### [如何：打印窗体的工作区](visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
-#### [如何：使用 PrintForm 组件打印窗体](visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)
-#### [部署引用 PrintForm 组件的应用程序](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
-#### [将可打印的报表添加到 Visual Studio 应用程序](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
-
 ### [Windows 窗体应用程序基础知识](visual-basic/developing-apps/windows-forms/index.md)
 
 ### [利用 Visual Basic 自定义项目并扩展 My 对象](visual-basic/developing-apps/customizing-extending-my/index.md)

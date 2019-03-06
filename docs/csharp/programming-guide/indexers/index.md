@@ -48,7 +48,7 @@ ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
   
 -   索引器可以有多个形参，例如当访问二维数组时。  
   
-##  <a name="BKMK_RelatedSections"></a>相关部分  
+## <a name="BKMK_RelatedSections"></a>相关部分  
   
 -   [使用索引器](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

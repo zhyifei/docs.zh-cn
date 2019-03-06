@@ -62,7 +62,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
  [如何：显式实现两个接口的成员](how-to-explicitly-implement-members-of-two-interfaces.md)  
  提供有关如何使用继承显式实现接口的成员的示例。  
   
-##  <a name="BKMK_RelatedSections"></a>相关部分
+## <a name="BKMK_RelatedSections"></a>相关部分
 
 - [接口属性](../classes-and-structs/interface-properties.md)  
 - [接口中的索引器](../indexers/indexers-in-interfaces.md)  

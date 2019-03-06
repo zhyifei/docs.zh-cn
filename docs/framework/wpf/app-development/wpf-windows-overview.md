@@ -28,25 +28,25 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 5cc7c54b78e291c25f1eda62942545acbb893091
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733449"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373092"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
 用户与 Windows Presentation Foundation (WPF) 独立应用程序通过 windows 进行交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序使用来提供自己的窗口<xref:System.Windows.Window>类。 本主题介绍<xref:System.Windows.Window>之前介绍的创建和管理独立应用程序中的 windows 基础知识。  
   
 > [!NOTE]
->  浏览器承载[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序，包括[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]和松散[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]页中，不提供它们自己的窗口。 相反，在 windows 中提供的托管[!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]。 请参阅[WPF XAML 浏览器应用程序概述](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)。  
+>  浏览器承载[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序，包括[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]和松散[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]页中，不提供它们自己的窗口。 相反，在 windows 中提供的托管[!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]。 请参阅[WPF XAML 浏览器应用程序概述](wpf-xaml-browser-applications-overview.md)。  
   
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>窗口类  
  下图展示了窗口的构成部分。  
   
- ![窗口元素](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![窗口元素](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
   
  窗口分为两个区域：非工作区和工作区。  
   
@@ -82,16 +82,16 @@ ms.locfileid: "54733449"
   
  一般情况下，但是，窗口的外观使用实现[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记，其行为实现和使用代码隐藏中，如下面的示例中所示。  
   
- [!code-xaml[WindowsOverviewSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#MarkupAndCodeBehindWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
- [!code-csharp[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
- [!code-vb[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
+ [!code-csharp[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
+ [!code-vb[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
   
  若要启用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记文件和代码隐藏文件协同工作，需要以下项：  
   
 -   在标记中，`Window`元素必须包括`x:Class`属性。 应用程序生成时，是否存在`x:Class`在标记文件会导致[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]来创建`partial`派生的类<xref:System.Windows.Window>并且具有指定的名称`x:Class`属性。 这需要添加[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]命名空间声明[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]架构 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` )。 生成`partial`类实现`InitializeComponent`方法，调用以注册事件并设置标记中实现的属性。  
   
--   在代码隐藏中，类必须是`partial`具有相同名称指定的类`x:Class`属性在标记中，并且它必须派生自<xref:System.Windows.Window>。 这允许要与之关联的代码隐藏文件`partial`生成应用程序时，为标记文件生成的类 (请参阅[构建 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md))。  
+-   在代码隐藏中，类必须是`partial`具有相同名称指定的类`x:Class`属性在标记中，并且它必须派生自<xref:System.Windows.Window>。 这允许要与之关联的代码隐藏文件`partial`生成应用程序时，为标记文件生成的类 (请参阅[构建 WPF 应用程序](building-a-wpf-application-wpf.md))。  
   
 -   在代码隐藏<xref:System.Windows.Window>类必须实现构造函数调用`InitializeComponent`方法。 `InitializeComponent` 实现由标记文件中生成的`partial`类，以注册事件和设置在标记中定义的属性。  
   
@@ -100,10 +100,10 @@ ms.locfileid: "54733449"
   
  使用此配置后，您可以集中精力定义中的窗口的外观[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记和在代码隐藏中实现其行为。 下面的示例演示一个按钮，在中实现的窗口[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记，并为按钮的事件处理程序<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件，在代码隐藏中实现。  
   
- [!code-xaml[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
+ [!code-xaml[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
- [!code-csharp[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
- [!code-vb[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
+ [!code-csharp[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
+ [!code-vb[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>为 MSBuild 配置窗口定义  
@@ -125,7 +125,7 @@ ms.locfileid: "54733449"
 </Project>  
 ```  
   
- 了解如何构建[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序，请参阅[构建 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)。  
+ 了解如何构建[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序，请参阅[构建 WPF 应用程序](building-a-wpf-application-wpf.md)。  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>窗口生存期  
@@ -136,9 +136,9 @@ ms.locfileid: "54733449"
 ### <a name="opening-a-window"></a>打开窗口  
  若要打开窗口，首先要创建窗口实例，下面的示例演示此操作。  
   
- [!code-xaml[WindowsOverviewStartupEventSnippets#AppMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml#appmarkup)]  
+ [!code-xaml[WindowsOverviewStartupEventSnippets#AppMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml#appmarkup)]  
   
- [!code-csharp[WindowsOverviewStartupEventSnippets#AppCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml.cs#appcodebehind)]  
+ [!code-csharp[WindowsOverviewStartupEventSnippets#AppCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml.cs#appcodebehind)]  
   
  在此示例中，`MarkupAndCodeBehindWindow`应用程序启动时，就会出现此实例化时<xref:System.Windows.Application.Startup>引发事件。  
   
@@ -146,18 +146,18 @@ ms.locfileid: "54733449"
   
  通过调用最后打开窗口<xref:System.Windows.Window.Show%2A>方法; 在下图中显示结果。  
   
- ![通过调用 Window.Show 打开的窗口](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![通过调用 Window.Show 打开的窗口](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
   
  通过调用打开的窗口<xref:System.Windows.Window.Show%2A>是无模式窗口中，这意味着在允许用户激活其他窗口在同一应用程序的模式下运行应用程序。  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A> 调用以模式方式打开诸如对话框窗口。 请参阅[对话框概述](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)有关详细信息。  
+>  <xref:System.Windows.Window.ShowDialog%2A> 调用以模式方式打开诸如对话框窗口。 请参阅[对话框概述](dialog-boxes-overview.md)有关详细信息。  
   
  当<xref:System.Windows.Window.Show%2A>是调用，窗口先执行初始化工作显示它是为了建立基础结构，使其能够接收用户输入。 初始化窗口时，<xref:System.Windows.Window.SourceInitialized>引发事件并显示窗口。  
   
  作为快捷方式，<xref:System.Windows.Application.StartupUri%2A>可以设置以指定应用程序启动时自动打开的第一个窗口。  
   
- [!code-xaml[WindowsOverviewSnippets#ApplicationStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/App.xaml#applicationstartupurimarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#ApplicationStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/App.xaml#applicationstartupurimarkup)]  
   
  当应用程序启动时，指定的值的窗口<xref:System.Windows.Application.StartupUri%2A>打开无模式方式; 在内部，打开窗口时通过调用其<xref:System.Windows.Window.Show%2A>方法。  
   
@@ -171,8 +171,8 @@ ms.locfileid: "54733449"
   
  某些窗口要求与打开它们的窗口保持某种关系。 例如，[!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)]应用程序可能打开属性窗口和工具窗口的典型行为是覆盖创建它们的窗口。 此外，此类窗口应始终与创建它们的窗口一起关闭、最小化、最大化和还原。 这种关系可以建立一个窗口，从而*自己*另一个，并通过设置来实现<xref:System.Windows.Window.Owner%2A>的属性*所有者窗口*引用*所有者窗口*。 这在下面的示例中显示。  
   
- [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
- [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
+ [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
+ [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
   
  建立所有权后：  
   
@@ -213,10 +213,10 @@ ms.locfileid: "54733449"
   
  若要处理的一个常见原因<xref:System.Windows.Window.Activated>和<xref:System.Windows.Window.Deactivated>是启用和禁用只能运行一个窗口处于活动状态时的功能。 例如，一些窗口显示需要用户持续输入或关注的交互式内容，这些内容包括游戏和视频播放器。 下面的示例是简化的视频播放器，展示如何处理<xref:System.Windows.Window.Activated>和<xref:System.Windows.Window.Deactivated>来实现此行为。  
   
- [!code-xaml[WindowsOverviewSnippets#ActivationDeactivationMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml#activationdeactivationmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#ActivationDeactivationMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml#activationdeactivationmarkup)]  
   
- [!code-csharp[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml.cs#activationdeactivationcodebehind)]
- [!code-vb[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/CustomMediaPlayerWindow.xaml.vb#activationdeactivationcodebehind)]  
+ [!code-csharp[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml.cs#activationdeactivationcodebehind)]
+ [!code-vb[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/CustomMediaPlayerWindow.xaml.vb#activationdeactivationcodebehind)]  
   
  停用某个窗口后，其他类型的应用程序可能仍会在后台运行代码。 例如，在用户使用其他应用程序时，邮件客户端可能会继续轮询邮件服务器。 类似的应用程序在主窗口停用时，通常将提供不同或其他的行为。 对于邮件程序，这可能意味着将新邮件项添加到收件箱和将通知图标添加到系统任务栏。 在邮件窗口不活动状态，可以通过检查确定时，才需要显示通知图标<xref:System.Windows.Window.IsActive%2A>属性。  
   
@@ -247,17 +247,17 @@ ms.locfileid: "54733449"
   
  若要关闭窗口以响应其中一种自定义机制，您需要调用<xref:System.Windows.Window.Close%2A>方法。 下面的示例实现的功能，通过选择关闭窗口**退出**上**文件**菜单。  
   
- [!code-xaml[WindowsOverviewSnippets#WindowWithFileExitMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml#windowwithfileexitmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowWithFileExitMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml#windowwithfileexitmarkup)]  
   
- [!code-csharp[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml.cs#windowwithfileexitcodebehind)]
- [!code-vb[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/WindowWithFileExit.xaml.vb#windowwithfileexitcodebehind)]  
+ [!code-csharp[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml.cs#windowwithfileexitcodebehind)]
+ [!code-vb[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/WindowWithFileExit.xaml.vb#windowwithfileexitcodebehind)]  
   
  当一个窗口关闭时，它会引发两个事件：<xref:System.Windows.Window.Closing>和<xref:System.Windows.Window.Closed>。  
   
  <xref:System.Windows.Window.Closing> 在窗口关闭，并提供了一种机制，通过哪个窗口可以阻止之前引发。 阻止窗口关闭的一个常见原因是窗口内容包含修改的数据。 在此情况下，<xref:System.Windows.Window.Closing>可以处理事件以确定是否为脏对象数据，如果是这样，询问用户是要继续关闭窗口而不保存数据还是取消关闭窗口。 下面的示例显示了处理的关键方面<xref:System.Windows.Window.Closing>。  
   
- [!code-csharp[WindowClosingSnippets](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
- [!code-vb[WindowClosingSnippets](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
+ [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
+ [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
  
   
  <xref:System.Windows.Window.Closing>事件处理程序传递<xref:System.ComponentModel.CancelEventArgs>，它可以实现`Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>属性设置为`true`可以阻止窗口关闭。  
@@ -265,7 +265,7 @@ ms.locfileid: "54733449"
  如果<xref:System.Windows.Window.Closing>未处理，或已处理但未取消，将关闭此窗口。 只需在窗口真正关闭之前，<xref:System.Windows.Window.Closed>引发。 此时，无法阻止窗口关闭。  
   
 > [!NOTE]
->  可以将应用程序配置为关闭主应用程序窗口关闭时自动 (请参阅<xref:System.Windows.Application.MainWindow%2A>) 或最后一个窗口关闭。 有关详细信息，请参阅<xref:System.Windows.Application.ShutdownMode%2A>。  
+>  可以将应用程序配置为关闭主应用程序窗口关闭时自动 (请参阅<xref:System.Windows.Application.MainWindow%2A>) 或最后一个窗口关闭。 有关详细信息，请参阅 <xref:System.Windows.Application.ShutdownMode%2A>。  
   
  尽管可以通过在非客户端和客户端区域中提供的机制显式关闭窗口，窗口也可能隐式关闭应用程序的其他部分中的行为的结果或[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]，其中包括：  
   
@@ -284,11 +284,11 @@ ms.locfileid: "54733449"
 ### <a name="window-lifetime-events"></a>窗口生存期事件  
  下图显示窗口生存期中的主体事件的顺序。  
   
- ![窗口生存期](../../../../docs/framework/wpf/app-development/media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![窗口生存期](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
   
  下图显示一个窗口，其中会显示为未激活的生存期中的主体事件的序列 (<xref:System.Windows.Window.ShowActivated%2A>设置为`false`显示窗口之前)。  
   
- ![窗口生存期 &#40;Window.ShowActivated &#61; False&#41;](../../../../docs/framework/wpf/app-development/media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![窗口生存期 &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>窗口位置  
@@ -308,7 +308,7 @@ ms.locfileid: "54733449"
 ### <a name="topmost-windows-and-z-order"></a>最顶层窗口和 Z 顺序  
  除了有 x 和 y 位置外，窗口还在 z 维度中有一个位置，该位置确定窗口相对于其他窗口的垂直位置。 它称为窗口的 z 顺序，并且有两种类型：正常 z 顺序和最顶层 z 顺序。 在窗口的位置*正常 z 顺序*由或不是当前处于活动状态。 默认情况下，窗口位于正常 z 顺序中。 在窗口的位置*最顶层 z 顺序*也由或不是当前处于活动状态。 此外，最顶层 z 顺序中的窗口始终位于正常 z 顺序中的窗口之上。 一个窗口位于最顶层 z 顺序通过设置其<xref:System.Windows.Window.Topmost%2A>属性设置为`true`。  
   
- [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
   
  在每个 z 顺序中，当前的活动窗口显示在同一 z 顺序中所有其他窗口之上。  
   
@@ -318,11 +318,11 @@ ms.locfileid: "54733449"
   
  <xref:System.Windows.FrameworkElement.MinWidth%2A><xref:System.Windows.FrameworkElement.Width%2A>，和<xref:System.Windows.FrameworkElement.MaxWidth%2A>用于管理的一个窗口可以在其生存期内，并且在下面的示例所示配置的宽度范围。  
   
- [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
   
  窗口高度由<xref:System.Windows.FrameworkElement.MinHeight%2A>， <xref:System.Windows.FrameworkElement.Height%2A>，和<xref:System.Windows.FrameworkElement.MaxHeight%2A>，配置方式如以下示例所示。  
   
- [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
   
  由于各种宽度值和高度值各自指定了一个范围，所以大小可调整大小的窗口的宽度和高度可以是相应维度中指定范围内的任何值。 若要检测的当前宽度和高度，检查<xref:System.Windows.FrameworkElement.ActualWidth%2A>和<xref:System.Windows.FrameworkElement.ActualHeight%2A>分别。  
   
@@ -338,12 +338,12 @@ ms.locfileid: "54733449"
   
  以下示例显示了一个窗口，它在第一次显示时即自动调整垂直方向和水平方向上的大小以适应内容。  
   
- [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
   
  下面的示例演示如何设置<xref:System.Windows.Window.SizeToContent%2A>代码以指定如何调整窗口大小以适应其内容中的属性。
   
- [!code-csharp[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#setwindowsizetocontentpropertycode)]
- [!code-vb[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#setwindowsizetocontentpropertycode)]  
+ [!code-csharp[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#setwindowsizetocontentpropertycode)]
+ [!code-vb[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#setwindowsizetocontentpropertycode)]  
   
 <a name="OrderOfPrecedence"></a>   
 ## <a name="order-of-precedence-for-sizing-properties"></a>大小调整属性的优先级顺序  
@@ -392,7 +392,7 @@ ms.locfileid: "54733449"
   
  以下示例显示如何创建在打开时最大化显示的窗口。  
   
- [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
   
  一般情况下，应设置<xref:System.Windows.Window.WindowState%2A>配置窗口的初始状态。 显示可调整大小的窗口后，用户可以按窗口标题栏上的“最小化”、“最大化”和“还原”按钮来更改窗口状态。  
   
@@ -419,7 +419,7 @@ ms.locfileid: "54733449"
   
  如同<xref:System.Windows.Window.WindowStyle%2A>，窗口的大小调整模式是不太可能更改在其生存期内，这意味着，您将很可能设置从[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记。  
   
- [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
   
  请注意，可以检测是否已最大化窗口，最小化，或通过检查还原<xref:System.Windows.Window.WindowState%2A>属性。  
   
@@ -439,22 +439,22 @@ ms.locfileid: "54733449"
   
  下图显示了这些窗口样式的效果。  
   
- ![窗口样式](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![窗口样式](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
   
  可以设置<xref:System.Windows.Window.WindowStyle%2A>使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记或代码; 因为它是不太可能更改窗口的生存期内，你将很可能将其配置使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记。  
   
- [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>非矩形窗口样式  
  还有一些情况下的边框样式的<xref:System.Windows.Window.WindowStyle%2A>使你能够在不足够。 例如，你可能想要创建具有非矩形边框的应用程序，如[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]使用。  
   
  下图中显示的对话气泡框就是一个例子。  
   
- ![非矩形窗口](../../../../docs/framework/wpf/app-development/media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![非矩形窗口](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
   
  可以通过设置创建此类型的窗口<xref:System.Windows.Window.WindowStyle%2A>属性设置为<xref:System.Windows.WindowStyle.None>，并通过使用特殊支持<xref:System.Windows.Window>对透明度。  
   
- [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
   
  多个值组合起来可以指示窗口呈现完全透明的效果。 在这种状态下，无法使用窗口的非工作区修饰（“关闭”菜单，“最小化”、“最大化”和“还原”按钮等）。 因此，需要提供自己的修饰。  
   
@@ -462,11 +462,11 @@ ms.locfileid: "54733449"
 ### <a name="task-bar-presence"></a>任务栏显示  
  窗口的默认外观包括任务栏按钮，如下图中所示。  
   
- ![包括任务栏按钮的窗口](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+ ![包括任务栏按钮的窗口](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
   
- 某些类型的窗口没有任务栏按钮，如消息框和对话框 (请参阅[对话框概述](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md))。 您可以控制是否通过设置显示窗口任务栏按钮<xref:System.Windows.Window.ShowInTaskbar%2A>属性 (`true`默认情况下)。  
+ 某些类型的窗口没有任务栏按钮，如消息框和对话框 (请参阅[对话框概述](dialog-boxes-overview.md))。 您可以控制是否通过设置显示窗口任务栏按钮<xref:System.Windows.Window.ShowInTaskbar%2A>属性 (`true`默认情况下)。  
   
- [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
   
 <a name="SecurityConsiderations"></a>   
 ## <a name="security-considerations"></a>安全注意事项  
@@ -474,18 +474,18 @@ ms.locfileid: "54733449"
   
  但是，此权限授予启动从 Internet 或本地 intranet 区域中使用的应用程序的权限集外[!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]。 因此，用户将收到[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]安全警告，需要提升的权限集为完全信任的应用程序。  
   
- 此外，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]默认情况下不能显示窗口或对话框。 独立应用程序安全注意事项的讨论，请参阅[WPF 安全策略-平台安全性](../../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)。  
+ 此外，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]默认情况下不能显示窗口或对话框。 独立应用程序安全注意事项的讨论，请参阅[WPF 安全策略-平台安全性](../wpf-security-strategy-platform-security.md)。  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>其他类型的窗口  
- <xref:System.Windows.Navigation.NavigationWindow> 是一个旨在托管可导航内容的窗口。 有关详细信息，请参阅[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md))。  
+ <xref:System.Windows.Navigation.NavigationWindow> 是一个旨在托管可导航内容的窗口。 有关详细信息，请参阅[导航概述](navigation-overview.md))。  
   
- 对话框是通常用来收集用户信息以完成某项功能的窗口。 例如，当用户想要打开文件时，**打开文件**对话框通常显示应用程序以从用户获取的文件的名称。 有关详细信息，请参阅[对话框概述](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)。  
+ 对话框是通常用来收集用户信息以完成某项功能的窗口。 例如，当用户想要打开文件时，**打开文件**对话框通常显示应用程序以从用户获取的文件的名称。 有关详细信息，请参阅[对话框概述](dialog-boxes-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
-- [对话框概述](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)
-- [生成 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [对话框概述](dialog-boxes-overview.md)
+- [生成 WPF 应用程序](building-a-wpf-application-wpf.md)
