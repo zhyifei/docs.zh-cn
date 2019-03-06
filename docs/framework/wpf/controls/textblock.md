@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], TextBlock
 - TextBlock control [WPF]
 ms.assetid: ea5f7826-7a92-4de9-9eee-10ef700ce7b6
-ms.openlocfilehash: f032476326ac96edbfb7532f30dedd72b78f76fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31ef66ba7e584b88a38185a4d3ad02ca413fad34
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555894"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358907"
 ---
-# <a name="textblock"></a><span data-ttu-id="f867d-102">TextBlock</span><span class="sxs-lookup"><span data-stu-id="f867d-102">TextBlock</span></span>
-<span data-ttu-id="f867d-103"><xref:System.Windows.Controls.TextBlock>控件提供灵活的文本支持[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。</span><span class="sxs-lookup"><span data-stu-id="f867d-103">The <xref:System.Windows.Controls.TextBlock> control provides flexible text support for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="f867d-104">该元素主要面向不需要多个文本段落的基本 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 方案。</span><span class="sxs-lookup"><span data-stu-id="f867d-104">The element is targeted primarily toward basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenarios that do not require more than one paragraph of text.</span></span>  
+# <a name="textblock"></a><span data-ttu-id="39a4b-102">TextBlock</span><span class="sxs-lookup"><span data-stu-id="39a4b-102">TextBlock</span></span>
+<span data-ttu-id="39a4b-103"><xref:System.Windows.Controls.TextBlock>控件提供了灵活的文本支持[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。</span><span class="sxs-lookup"><span data-stu-id="39a4b-103">The <xref:System.Windows.Controls.TextBlock> control provides flexible text support for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="39a4b-104">该元素主要面向不需要多个文本段落的基本 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 方案。</span><span class="sxs-lookup"><span data-stu-id="39a4b-104">The element is targeted primarily toward basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenarios that do not require more than one paragraph of text.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f867d-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="f867d-105">In This Section</span></span>  
- [<span data-ttu-id="f867d-106">TextBlock 概述</span><span class="sxs-lookup"><span data-stu-id="f867d-106">TextBlock Overview</span></span>](../../../../docs/framework/wpf/controls/textblock-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="39a4b-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="39a4b-105">In This Section</span></span>  
+ [<span data-ttu-id="39a4b-106">TextBlock 概述</span><span class="sxs-lookup"><span data-stu-id="39a4b-106">TextBlock Overview</span></span>](textblock-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="f867d-107">参考</span><span class="sxs-lookup"><span data-stu-id="f867d-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="39a4b-107">参考</span><span class="sxs-lookup"><span data-stu-id="39a4b-107">Reference</span></span>  
  <xref:System.Windows.Controls.Label>  
   
-## <a name="related-sections"></a><span data-ttu-id="f867d-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="f867d-108">Related Sections</span></span>  
- [<span data-ttu-id="f867d-109">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="f867d-109">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+## <a name="related-sections"></a><span data-ttu-id="39a4b-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="39a4b-108">Related Sections</span></span>  
+ [<span data-ttu-id="39a4b-109">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="39a4b-109">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)  
   
- [<span data-ttu-id="f867d-110">流文档概述</span><span class="sxs-lookup"><span data-stu-id="f867d-110">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [<span data-ttu-id="39a4b-110">流文档概述</span><span class="sxs-lookup"><span data-stu-id="39a4b-110">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)

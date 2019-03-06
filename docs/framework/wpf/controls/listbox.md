@@ -7,26 +7,26 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: 5363cc3a6939b829a7cde0a87b096932556fc5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551682"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362222"
 ---
-# <a name="listbox"></a><span data-ttu-id="dd15b-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="dd15b-102">ListBox</span></span>
-<span data-ttu-id="dd15b-103">A<xref:System.Windows.Controls.ListBox>控件提供用户提供的可选择项的列表。</span><span class="sxs-lookup"><span data-stu-id="dd15b-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
+# <a name="listbox"></a><span data-ttu-id="14200-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="14200-102">ListBox</span></span>
+<span data-ttu-id="14200-103">一个<xref:System.Windows.Controls.ListBox>控件向用户提供了可选择项的列表。</span><span class="sxs-lookup"><span data-stu-id="14200-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
   
- <span data-ttu-id="dd15b-104">下图说明了典型<xref:System.Windows.Controls.ListBox>。</span><span class="sxs-lookup"><span data-stu-id="dd15b-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
+ <span data-ttu-id="14200-104">下图说明了典型<xref:System.Windows.Controls.ListBox>。</span><span class="sxs-lookup"><span data-stu-id="14200-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
   
- <span data-ttu-id="dd15b-105">![ListBox 屏幕快照](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="dd15b-105">![ListBox screen shot](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
-<span data-ttu-id="dd15b-106">典型的 ListBox</span><span class="sxs-lookup"><span data-stu-id="dd15b-106">Typical ListBox</span></span>  
+ <span data-ttu-id="14200-105">![列表框的屏幕截图](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="14200-105">![ListBox screen shot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
+<span data-ttu-id="14200-106">典型的 ListBox</span><span class="sxs-lookup"><span data-stu-id="14200-106">Typical ListBox</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dd15b-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="dd15b-107">In This Section</span></span>  
- [<span data-ttu-id="dd15b-108">帮助主题</span><span class="sxs-lookup"><span data-stu-id="dd15b-108">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="14200-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="14200-107">In This Section</span></span>  
+ [<span data-ttu-id="14200-108">帮助主题</span><span class="sxs-lookup"><span data-stu-id="14200-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="dd15b-109">参考</span><span class="sxs-lookup"><span data-stu-id="dd15b-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="14200-109">参考</span><span class="sxs-lookup"><span data-stu-id="14200-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="dd15b-110">相关章节</span><span class="sxs-lookup"><span data-stu-id="dd15b-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="14200-110">相关章节</span><span class="sxs-lookup"><span data-stu-id="14200-110">Related Sections</span></span>

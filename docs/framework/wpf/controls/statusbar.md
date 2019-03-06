@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], StatusBar
 - StatusBar control [WPF]
 ms.assetid: aba45aed-7953-4b2c-bc29-315a9be6c440
-ms.openlocfilehash: 5b61255d19340152cd17d12eb60224dc90231607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8998eba8a713cada62c8defc8d7500bf3bc036a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554471"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352515"
 ---
-# <a name="statusbar"></a><span data-ttu-id="7af0d-102">StatusBar</span><span class="sxs-lookup"><span data-stu-id="7af0d-102">StatusBar</span></span>
-<span data-ttu-id="7af0d-103">A<xref:System.Windows.Controls.Primitives.StatusBar>是在应用程序可在其中显示状态信息的窗口底部的水平区域。</span><span class="sxs-lookup"><span data-stu-id="7af0d-103">A <xref:System.Windows.Controls.Primitives.StatusBar> is a horizontal area at the bottom of a window where an application can display status information.</span></span>  
+# <a name="statusbar"></a><span data-ttu-id="16a6c-102">StatusBar</span><span class="sxs-lookup"><span data-stu-id="16a6c-102">StatusBar</span></span>
+<span data-ttu-id="16a6c-103">一个<xref:System.Windows.Controls.Primitives.StatusBar>是在其中应用程序可显示状态信息的窗口底部的水平区域。</span><span class="sxs-lookup"><span data-stu-id="16a6c-103">A <xref:System.Windows.Controls.Primitives.StatusBar> is a horizontal area at the bottom of a window where an application can display status information.</span></span>  
   
- <span data-ttu-id="7af0d-104">下图显示的示例<xref:System.Windows.Controls.Primitives.StatusBar>。</span><span class="sxs-lookup"><span data-stu-id="7af0d-104">The following illustration shows an example of a <xref:System.Windows.Controls.Primitives.StatusBar>.</span></span>  
+ <span data-ttu-id="16a6c-104">下图显示的示例<xref:System.Windows.Controls.Primitives.StatusBar>。</span><span class="sxs-lookup"><span data-stu-id="16a6c-104">The following illustration shows an example of a <xref:System.Windows.Controls.Primitives.StatusBar>.</span></span>  
   
- <span data-ttu-id="7af0d-105">![状态栏](../../../../docs/framework/wpf/controls/media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span><span class="sxs-lookup"><span data-stu-id="7af0d-105">![Status bar](../../../../docs/framework/wpf/controls/media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span></span>  
+ <span data-ttu-id="16a6c-105">![状态栏](./media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span><span class="sxs-lookup"><span data-stu-id="16a6c-105">![Status bar](./media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7af0d-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="7af0d-106">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="16a6c-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="16a6c-106">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="7af0d-107">参考</span><span class="sxs-lookup"><span data-stu-id="7af0d-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="16a6c-107">参考</span><span class="sxs-lookup"><span data-stu-id="16a6c-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.StatusBar>  
   <xref:System.Windows.Controls.Primitives.StatusBarItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="7af0d-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="7af0d-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="16a6c-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="16a6c-108">Related Sections</span></span>

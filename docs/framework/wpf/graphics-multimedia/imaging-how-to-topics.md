@@ -7,41 +7,41 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 872eb510e3e85046818987fc6aaf761fca21b320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80659117ab96a6bdb9a9536d3eba47d13a2c395f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493607"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359531"
 ---
-# <a name="imaging-how-to-topics"></a><span data-ttu-id="7ea92-102">图像处理帮助主题</span><span class="sxs-lookup"><span data-stu-id="7ea92-102">Imaging How-to Topics</span></span>
-<span data-ttu-id="7ea92-103">在本部分中的主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]来显示或改变位图图像。</span><span class="sxs-lookup"><span data-stu-id="7ea92-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.</span></span>  
+# <a name="imaging-how-to-topics"></a><span data-ttu-id="3d7ae-102">图像处理帮助主题</span><span class="sxs-lookup"><span data-stu-id="3d7ae-102">Imaging How-to Topics</span></span>
+<span data-ttu-id="3d7ae-103">在本部分中的主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]来显示或改变位图图像。</span><span class="sxs-lookup"><span data-stu-id="3d7ae-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7ea92-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="7ea92-104">In This Section</span></span>  
- [<span data-ttu-id="7ea92-105">在 XAML 中使用 BitmapImage</span><span class="sxs-lookup"><span data-stu-id="7ea92-105">Use a BitmapImage in XAML</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
- [<span data-ttu-id="7ea92-106">将图像作为缩略图加载</span><span class="sxs-lookup"><span data-stu-id="7ea92-106">Load an Image as a Thumbnail</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
- [<span data-ttu-id="7ea92-107">向位图图像应用转换</span><span class="sxs-lookup"><span data-stu-id="7ea92-107">Apply a Transform to a Bitmap Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
- [<span data-ttu-id="7ea92-108">通过视觉对象创建位图</span><span class="sxs-lookup"><span data-stu-id="7ea92-108">Create a Bitmap from a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
- [<span data-ttu-id="7ea92-109">将视觉对象编码为图像文件</span><span class="sxs-lookup"><span data-stu-id="7ea92-109">Encode a Visual to an Image File</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
- [<span data-ttu-id="7ea92-110">新建 BitmapSource</span><span class="sxs-lookup"><span data-stu-id="7ea92-110">Create a new BitmapSource</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
- [<span data-ttu-id="7ea92-111">将多个 BitmapSource 对象链在一起</span><span class="sxs-lookup"><span data-stu-id="7ea92-111">Chain BitmapSource Objects Together</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
- [<span data-ttu-id="7ea92-112">将 BitmapSource 转换成另一种 PixelFormat</span><span class="sxs-lookup"><span data-stu-id="7ea92-112">Convert a BitmapSource to a Different PixelFormat</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
- [<span data-ttu-id="7ea92-113">将 BitmapSource 转换成索引的像素格式</span><span class="sxs-lookup"><span data-stu-id="7ea92-113">Convert a BitmapSource to an Indexed Pixel Format</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
- [<span data-ttu-id="7ea92-114">编码和解码 JPEG 图像</span><span class="sxs-lookup"><span data-stu-id="7ea92-114">Encode and Decode a JPEG Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
- [<span data-ttu-id="7ea92-115">编码和解码 BMP 图像</span><span class="sxs-lookup"><span data-stu-id="7ea92-115">Encode and Decode a BMP Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
- [<span data-ttu-id="7ea92-116">编码和解码 PNG 图像</span><span class="sxs-lookup"><span data-stu-id="7ea92-116">Encode and Decode a PNG Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
- [<span data-ttu-id="7ea92-117">编码和解码 WDP 图像</span><span class="sxs-lookup"><span data-stu-id="7ea92-117">Encode and Decode a WDP Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
- [<span data-ttu-id="7ea92-118">编码和解码 GIF 图像</span><span class="sxs-lookup"><span data-stu-id="7ea92-118">Encode and Decode a GIF Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
- [<span data-ttu-id="7ea92-119">编码和解码 TIFF 图像</span><span class="sxs-lookup"><span data-stu-id="7ea92-119">Encode and Decode a TIFF Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
- [<span data-ttu-id="7ea92-120">在位图中写入元数据</span><span class="sxs-lookup"><span data-stu-id="7ea92-120">Write Metadata to a Bitmap</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
- [<span data-ttu-id="7ea92-121">从位图读取元数据</span><span class="sxs-lookup"><span data-stu-id="7ea92-121">Read Metadata from a Bitmap</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3d7ae-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="3d7ae-104">In This Section</span></span>  
+ [<span data-ttu-id="3d7ae-105">在 XAML 中使用 BitmapImage</span><span class="sxs-lookup"><span data-stu-id="3d7ae-105">Use a BitmapImage in XAML</span></span>](how-to-use-a-bitmapimage.md)  
+ [<span data-ttu-id="3d7ae-106">将图像作为缩略图加载</span><span class="sxs-lookup"><span data-stu-id="3d7ae-106">Load an Image as a Thumbnail</span></span>](how-to-load-an-image-as-a-thumbnail.md)  
+ [<span data-ttu-id="3d7ae-107">向位图图像应用转换</span><span class="sxs-lookup"><span data-stu-id="3d7ae-107">Apply a Transform to a Bitmap Image</span></span>](how-to-apply-a-transform-to-a-bitmapimage.md)  
+ [<span data-ttu-id="3d7ae-108">通过视觉对象创建位图</span><span class="sxs-lookup"><span data-stu-id="3d7ae-108">Create a Bitmap from a Visual</span></span>](how-to-create-a-bitmap-from-a-visual.md)  
+ [<span data-ttu-id="3d7ae-109">将视觉对象编码为图像文件</span><span class="sxs-lookup"><span data-stu-id="3d7ae-109">Encode a Visual to an Image File</span></span>](how-to-encode-a-visual-to-an-image-file.md)  
+ [<span data-ttu-id="3d7ae-110">新建 BitmapSource</span><span class="sxs-lookup"><span data-stu-id="3d7ae-110">Create a new BitmapSource</span></span>](how-to-create-a-new-bitmapsource.md)  
+ [<span data-ttu-id="3d7ae-111">将多个 BitmapSource 对象链在一起</span><span class="sxs-lookup"><span data-stu-id="3d7ae-111">Chain BitmapSource Objects Together</span></span>](how-to-chain-bitmapsource-objects-together.md)  
+ [<span data-ttu-id="3d7ae-112">将 BitmapSource 转换成另一种 PixelFormat</span><span class="sxs-lookup"><span data-stu-id="3d7ae-112">Convert a BitmapSource to a Different PixelFormat</span></span>](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [<span data-ttu-id="3d7ae-113">将 BitmapSource 转换成索引的像素格式</span><span class="sxs-lookup"><span data-stu-id="3d7ae-113">Convert a BitmapSource to an Indexed Pixel Format</span></span>](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
+ [<span data-ttu-id="3d7ae-114">编码和解码 JPEG 图像</span><span class="sxs-lookup"><span data-stu-id="3d7ae-114">Encode and Decode a JPEG Image</span></span>](how-to-encode-and-decode-a-jpeg-image.md)  
+ [<span data-ttu-id="3d7ae-115">编码和解码 BMP 图像</span><span class="sxs-lookup"><span data-stu-id="3d7ae-115">Encode and Decode a BMP Image</span></span>](how-to-encode-and-decode-a-bmp-image.md)  
+ [<span data-ttu-id="3d7ae-116">编码和解码 PNG 图像</span><span class="sxs-lookup"><span data-stu-id="3d7ae-116">Encode and Decode a PNG Image</span></span>](how-to-encode-and-decode-a-png-image.md)  
+ [<span data-ttu-id="3d7ae-117">编码和解码 WDP 图像</span><span class="sxs-lookup"><span data-stu-id="3d7ae-117">Encode and Decode a WDP Image</span></span>](how-to-encode-and-decode-a-wdp-image.md)  
+ [<span data-ttu-id="3d7ae-118">编码和解码 GIF 图像</span><span class="sxs-lookup"><span data-stu-id="3d7ae-118">Encode and Decode a GIF Image</span></span>](how-to-encode-and-decode-a-gif-image.md)  
+ [<span data-ttu-id="3d7ae-119">编码和解码 TIFF 图像</span><span class="sxs-lookup"><span data-stu-id="3d7ae-119">Encode and Decode a TIFF Image</span></span>](how-to-encode-and-decode-a-tiff-image.md)  
+ [<span data-ttu-id="3d7ae-120">在位图中写入元数据</span><span class="sxs-lookup"><span data-stu-id="3d7ae-120">Write Metadata to a Bitmap</span></span>](how-to-write-metadata-to-a-bitmap.md)  
+ [<span data-ttu-id="3d7ae-121">从位图读取元数据</span><span class="sxs-lookup"><span data-stu-id="3d7ae-121">Read Metadata from a Bitmap</span></span>](how-to-read-metadata-from-a-bitmap.md)  
   
-## <a name="reference"></a><span data-ttu-id="7ea92-122">参考</span><span class="sxs-lookup"><span data-stu-id="7ea92-122">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3d7ae-122">参考</span><span class="sxs-lookup"><span data-stu-id="3d7ae-122">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="7ea92-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="7ea92-123">See also</span></span>
-- [<span data-ttu-id="7ea92-124">图像处理概述</span><span class="sxs-lookup"><span data-stu-id="7ea92-124">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a><span data-ttu-id="3d7ae-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="3d7ae-123">See also</span></span>
+- [<span data-ttu-id="3d7ae-124">图像处理概述</span><span class="sxs-lookup"><span data-stu-id="3d7ae-124">Imaging Overview</span></span>](imaging-overview.md)

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Slider
 - Slider control [WPF]
 ms.assetid: fb037e2a-0002-458b-9e6b-321623fe72a7
-ms.openlocfilehash: 7c50ae717bc8ae4016883965f83a34047ffad271
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d8836bc91283f83c95e63a8b948eed46fc94bca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554403"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353980"
 ---
-# <a name="slider"></a><span data-ttu-id="2df24-102">Slider</span><span class="sxs-lookup"><span data-stu-id="2df24-102">Slider</span></span>
-<span data-ttu-id="2df24-103"><xref:System.Windows.Controls.Slider>允许您从一系列的值选择通过移动<xref:System.Windows.Controls.Primitives.Thumb>沿<xref:System.Windows.Controls.Primitives.Track>。</span><span class="sxs-lookup"><span data-stu-id="2df24-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
+# <a name="slider"></a><span data-ttu-id="4b1cb-102">Slider</span><span class="sxs-lookup"><span data-stu-id="4b1cb-102">Slider</span></span>
+<span data-ttu-id="4b1cb-103"><xref:System.Windows.Controls.Slider>允许您选择从一系列值，通过移动<xref:System.Windows.Controls.Primitives.Thumb>沿<xref:System.Windows.Controls.Primitives.Track>。</span><span class="sxs-lookup"><span data-stu-id="4b1cb-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  
   
- <span data-ttu-id="2df24-104">下图显示的水平示例<xref:System.Windows.Controls.Slider>控件。</span><span class="sxs-lookup"><span data-stu-id="2df24-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
+ <span data-ttu-id="4b1cb-104">下图显示了水平的示例<xref:System.Windows.Controls.Slider>控件。</span><span class="sxs-lookup"><span data-stu-id="4b1cb-104">The following illustration shows an example of a horizontal <xref:System.Windows.Controls.Slider> control.</span></span>  
   
- <span data-ttu-id="2df24-105">![具有刻度线标记的水平滑块](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="2df24-105">![Horizontal slider with tick marks](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
+ <span data-ttu-id="4b1cb-105">![具有刻度线标记的水平滑块](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span><span class="sxs-lookup"><span data-stu-id="4b1cb-105">![Horizontal slider with tick marks](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2df24-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="2df24-106">In This Section</span></span>  
- [<span data-ttu-id="2df24-107">自定义滑块上的刻度</span><span class="sxs-lookup"><span data-stu-id="2df24-107">Customize the Ticks on a Slider</span></span>](../../../../docs/framework/wpf/controls/how-to-customize-the-ticks-on-a-slider.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4b1cb-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="4b1cb-106">In This Section</span></span>  
+ [<span data-ttu-id="4b1cb-107">自定义滑块上的刻度</span><span class="sxs-lookup"><span data-stu-id="4b1cb-107">Customize the Ticks on a Slider</span></span>](how-to-customize-the-ticks-on-a-slider.md)  
   
-## <a name="reference"></a><span data-ttu-id="2df24-108">参考</span><span class="sxs-lookup"><span data-stu-id="2df24-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4b1cb-108">参考</span><span class="sxs-lookup"><span data-stu-id="4b1cb-108">Reference</span></span>  
  <xref:System.Windows.Controls.Slider>  
   <xref:System.Windows.Controls.Primitives.Track>  
   <xref:System.Windows.Controls.Primitives.Thumb>

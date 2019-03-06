@@ -9,24 +9,24 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: 858adfca39d292dad4083b019e3d64e85f21017e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8683b3ba55f3b9d5425c865af7e18127b55be02d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605794"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363641"
 ---
-# <a name="geometries"></a><span data-ttu-id="cbef1-102">几何图形</span><span class="sxs-lookup"><span data-stu-id="cbef1-102">Geometries</span></span>
-<span data-ttu-id="cbef1-103"><xref:System.Windows.Media.Geometry> 是一个通用类，用于呈现[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]图形，命中测试对象，并定义剪辑区域</span><span class="sxs-lookup"><span data-stu-id="cbef1-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  
+# <a name="geometries"></a><span data-ttu-id="aeb52-102">几何图形</span><span class="sxs-lookup"><span data-stu-id="aeb52-102">Geometries</span></span>
+<span data-ttu-id="aeb52-103"><xref:System.Windows.Media.Geometry> 是一个通用类，用于呈现[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]图形，命中测试对象，并定义剪辑区域</span><span class="sxs-lookup"><span data-stu-id="aeb52-103"><xref:System.Windows.Media.Geometry> is a versatile class, used to render [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] graphics, hit-test objects, and define clipping regions</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cbef1-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="cbef1-104">In This Section</span></span>  
- [<span data-ttu-id="cbef1-105">路径标记语法</span><span class="sxs-lookup"><span data-stu-id="cbef1-105">Path Markup Syntax</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [<span data-ttu-id="cbef1-106">Geometry 概述</span><span class="sxs-lookup"><span data-stu-id="cbef1-106">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [<span data-ttu-id="cbef1-107">帮助主题</span><span class="sxs-lookup"><span data-stu-id="cbef1-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="aeb52-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="aeb52-104">In This Section</span></span>  
+ [<span data-ttu-id="aeb52-105">路径标记语法</span><span class="sxs-lookup"><span data-stu-id="aeb52-105">Path Markup Syntax</span></span>](path-markup-syntax.md)  
+ [<span data-ttu-id="aeb52-106">Geometry 概述</span><span class="sxs-lookup"><span data-stu-id="aeb52-106">Geometry Overview</span></span>](geometry-overview.md)  
+ [<span data-ttu-id="aeb52-107">帮助主题</span><span class="sxs-lookup"><span data-stu-id="aeb52-107">How-to Topics</span></span>](geometries-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="cbef1-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="cbef1-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aeb52-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="aeb52-108">See also</span></span>
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [<span data-ttu-id="cbef1-109">2D 图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="cbef1-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="cbef1-110">WPF 中的形状和基本绘图概述</span><span class="sxs-lookup"><span data-stu-id="cbef1-110">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [<span data-ttu-id="cbef1-111">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="cbef1-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="aeb52-109">2D 图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="aeb52-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="aeb52-110">WPF 中的形状和基本绘图概述</span><span class="sxs-lookup"><span data-stu-id="aeb52-110">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="aeb52-111">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="aeb52-111">Graphics and Multimedia</span></span>](index.md)
