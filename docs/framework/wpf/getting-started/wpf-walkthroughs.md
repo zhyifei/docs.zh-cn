@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 1060e755ff5da3a3ef7f40417054cf0e23241652
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ec147d4ec7b59a7ac8e01680266cbd24b644985
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835260"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352407"
 ---
 # <a name="wpf-walkthroughs"></a>WPF 演练
 演练提供了常见方案的分步说明。 这使得它们成为了着手学习产品或特定功能区域的理想地点。  
@@ -31,20 +31,20 @@ ms.locfileid: "56835260"
   
 |标题|描述|  
 |-----------|-----------------|  
-|[演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|演示如何创建 WPF 应用程序使用许多 WPF 包括控件、 布局和数据绑定的常见功能。|  
-|[使用 XAML 创建按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|演示如何创建动画的按钮。|  
-|[使用 Microsoft Expression Blend 创建按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|演示如何使用 Microsoft Expression Blend 创建自定义的按钮的过程。|  
-|[演练：DataGrid 控件中显示的 SQL Server 数据库中的数据](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|演示如何从 SQL Server 数据库检索数据并将这些数据显示在<xref:System.Windows.Controls.DataGrid>控件。|  
+|[演练：我的第一个 WPF 桌面应用程序](walkthrough-my-first-wpf-desktop-application.md)|演示如何创建 WPF 应用程序使用许多 WPF 包括控件、 布局和数据绑定的常见功能。|  
+|[使用 XAML 创建按钮](../controls/walkthrough-create-a-button-by-using-xaml.md)|演示如何创建动画的按钮。|  
+|[使用 Microsoft Expression Blend 创建按钮](../controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|演示如何使用 Microsoft Expression Blend 创建自定义的按钮的过程。|  
+|[演练：DataGrid 控件中显示的 SQL Server 数据库中的数据](../controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|演示如何从 SQL Server 数据库检索数据并将这些数据显示在<xref:System.Windows.Controls.DataGrid>控件。|  
   
 ## <a name="migration-and-interoperability-in-wpf"></a>迁移和互操作性在 WPF 中  
   
 |标题|描述|  
 |-----------|-----------------|  
-|[演练：承载在 WPF 中的 Windows 窗体控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|演示如何承载 Windows 窗体<xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType>WPF 应用程序中的控件。|  
-|[演练：承载在 WPF 中的 Windows 窗体复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|演示如何承载 Windows 窗体数据输入复合控件中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。|  
-|[演练：承载 WPF 复合控件在 Windows 窗体中](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|演示如何承载 Windows 窗体应用程序中的 WPF 数据输入复合控件。|  
-|[演练：在 WPF 中排列 Windows 窗体控件](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|演示如何使用 WPF 布局功能来排列 Windows 窗体控件中的混合应用程序。|  
-|[演练：绑定到混合应用程序中的数据](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|演示如何在包含 Windows 窗体和 WPF 控件的混合应用程序中使用数据绑定。|  
+|[演练：承载在 WPF 中的 Windows 窗体控件](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|演示如何承载 Windows 窗体<xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType>WPF 应用程序中的控件。|  
+|[演练：承载在 WPF 中的 Windows 窗体复合控件](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|演示如何承载 Windows 窗体数据输入复合控件中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。|  
+|[演练：承载 WPF 复合控件在 Windows 窗体中](../advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|演示如何承载 Windows 窗体应用程序中的 WPF 数据输入复合控件。|  
+|[演练：在 WPF 中排列 Windows 窗体控件](../advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|演示如何使用 WPF 布局功能来排列 Windows 窗体控件中的混合应用程序。|  
+|[演练：绑定到混合应用程序中的数据](../advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|演示如何在包含 Windows 窗体和 WPF 控件的混合应用程序中使用数据绑定。|  
   
 ## <a name="related-sections"></a>相关章节  
   

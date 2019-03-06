@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: e4f2b88b075a7806d2ca4c4a1e2cf3f027e71f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706227"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370119"
 ---
 # <a name="attached-properties-overview"></a>附加属性概述
 
@@ -20,7 +20,7 @@ ms.locfileid: "54706227"
 
 ## 系统必备组件 <a name="prerequisites"></a>
 
-本主题假定你从 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 类的现有依赖属性的使用者角度了解依赖属性，并且已阅读[依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。 若要遵循本主题中的示例，您应了解 XAML 并知道如何编写 WPF 应用程序。
+本主题假定你从 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 类的现有依赖属性的使用者角度了解依赖属性，并且已阅读[依赖属性概述](dependency-properties-overview.md)。 若要遵循本主题中的示例，您应了解 XAML 并知道如何编写 WPF 应用程序。
 
 ## 为什么使用附加的属性 <a name="attached_properties_usage"></a>
 
@@ -32,11 +32,11 @@ ms.locfileid: "54706227"
 
 下面是举例说明如何设置<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>在 XAML 中：
 
-[!code-xaml[PropertiesOvwSupport#APBasicUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
+[!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
 请注意，有些类似于静态属性; 使用情况始终引用类型<xref:System.Windows.Controls.DockPanel>，拥有并注册附加的属性，而不是引用通过名称指定的任何实例。
 
-此外，由于 XAML 中的附加属性是在标记中设置的属性，因此，只有设置操作具有相关性。 尽管存在一些用于比较值的间接机制（如在样式中触发），但无法直接在 XAML 中直接获取属性（有关详细信息，请参阅[样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)）。
+此外，由于 XAML 中的附加属性是在标记中设置的属性，因此，只有设置操作具有相关性。 尽管存在一些用于比较值的间接机制（如在样式中触发），但无法直接在 XAML 中直接获取属性（有关详细信息，请参阅[样式设置和模板化](../controls/styling-and-templating.md)）。
 
 ### <a name="attached-property-implementation-in-wpf"></a>WPF 中的附加属性实现
 
@@ -64,8 +64,8 @@ WPF 中的附加的属性不具有典型[!INCLUDE[TLA2#tla_clr](../../../../incl
 
 下面的示例演示如何在代码中设置附加属性。 在此示例中，`myCheckBox`的一个实例<xref:System.Windows.Controls.CheckBox>类。
 
-[!code-csharp[PropertiesOvwSupport#APCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
-[!code-vb[PropertiesOvwSupport#APCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
+[!code-csharp[PropertiesOvwSupport#APCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
+[!code-vb[PropertiesOvwSupport#APCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
 
 类似于 XAML 用例中，如果`myCheckBox`不已添加的子元素作为`myDockPanel`由第三行代码，第四行代码不会引发异常，但属性值不会与交互<xref:System.Windows.Controls.DockPanel>父级，因此将不执行任何操作。 仅<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>值且存在的子元素上设置<xref:System.Windows.Controls.DockPanel>父元素将导致呈现的应用程序中有效的行为。 （在这种情况下，可以设置附加属性，然后附加到树。 或者，可以先附加到该树中，然后设置附加属性。 这两种操作顺序结果都相同。）
 
@@ -73,7 +73,7 @@ WPF 中的附加的属性不具有典型[!INCLUDE[TLA2#tla_clr](../../../../incl
 
 注册该属性时<xref:System.Windows.FrameworkPropertyMetadata>设置为指定的属性，如的属性会影响呈现、 度量等特征。 附加属性的元数据通常与依赖属性上的元数据基本上都相同。 如果在附加属性元数据替代中指定默认值，该值将成为替代类实例上显式附加属性的默认值。 具体而言，当某些进程通过该属性的 `Get` 方法访问器请求附加属性值，并指定在其中指定元数据的类的示例时，将报告默认值，而不会设置该附加属性的值。
 
-如果希望对属性启用属性值继承，应使用附加属性，而不是非附加的依赖属性。 有关详细信息，请参阅[属性值继承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)。
+如果希望对属性启用属性值继承，应使用附加属性，而不是非附加的依赖属性。 有关详细信息，请参阅[属性值继承](property-value-inheritance.md)。
 
 ## 自定义附加属性 <a name="custom"></a>
 
@@ -83,7 +83,7 @@ WPF 中的附加的属性不具有典型[!INCLUDE[TLA2#tla_clr](../../../../incl
 
 使用附加属性的另一种情况是，你的类表示一种服务，且你希望类能够以更透明的方式继承该服务。
 
-但另一个情况是收到 Visual Studio WPF 设计器支持，例如**属性**窗口编辑。 有关详细信息，请参阅[控件创作概述](../../../../docs/framework/wpf/controls/control-authoring-overview.md)。
+但另一个情况是收到 Visual Studio WPF 设计器支持，例如**属性**窗口编辑。 有关详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。
 
 如前文所述，如果想要使用属性值继承，你应该注册为附加属性。
 
@@ -118,8 +118,8 @@ WPF 中的附加的属性不具有典型[!INCLUDE[TLA2#tla_clr](../../../../incl
 
 下面的示例显示了依赖关系属性注册 (使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法)，并将**Get_PropertyName_** 并**Set_PropertyName_** 访问器。 在此示例中，附加属性名称为 `IsBubbleSource`。 因此，访问器必须名为 `GetIsBubbleSource` 和 `SetIsBubbleSource`。
 
-[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
-[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
+[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
+[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>附加属性特性
 
@@ -135,16 +135,16 @@ WPF 定义了多个[!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../include
 
 ## 了解更多关于附加属性 <a name="more"></a>
 
--   有关如何创建附加属性的详细信息，请参阅[注册附加属性](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)。
+-   有关如何创建附加属性的详细信息，请参阅[注册附加属性](how-to-register-an-attached-property.md)。
 
--   有关依赖属性和附加属性的更多高级使用方案，请参阅[自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)。
+-   有关依赖属性和附加属性的更多高级使用方案，请参阅[自定义依赖属性](custom-dependency-properties.md)。
 
 -   还可将属性注册为附加属性和依赖属性，但仍需公开“包装器”实现。 在这种情况下，属性可在该元素上设置，也可通过 XAML 附加属性语法在任何元素上设置。 具有适当的方案的标准和附加用法的属性的一个示例是<xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>。
 
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.DependencyProperty>
-- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [注册附加属性](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)
+- [依赖项属性概述](dependency-properties-overview.md)
+- [自定义依赖属性](custom-dependency-properties.md)
+- [XAML 概述 (WPF)](xaml-overview-wpf.md)
+- [注册附加属性](how-to-register-an-attached-property.md)

@@ -4,6 +4,7 @@ description: '使用 Azure 服务的指南F#'
 author: sylvanc
 ms.date: 09/22/2016
 ---
+
 # <a name="using-f-on-azure"></a>在 Azure 上使用 F#
 
 F# 是一种出色的云编程语言，常用于编写 Web 应用程序、云服务、云托管微服务，也可用于可缩放数据处理。
@@ -87,7 +88,7 @@ Azure Cosmos DB 可与F#通过两种方式：
 
 ## <a name="implementing-webhooks-on-azure-with-f"></a>通过 F 在 Azure 上实现 Webhook\#
 
-[Webhook](https://en.wikipedia.org/wiki/Webhook) 是通过 Web 请求触发的回调。 Webhook 由 GitHub 等站点使用，用以向事件发送信号。 
+[Webhook](https://en.wikipedia.org/wiki/Webhook) 是通过 Web 请求触发的回调。 Webhook 由 GitHub 等站点使用，用以向事件发送信号。
 
 Webhook 可采用 F# 实现，并通过 [Azure Function in F# with a Webhook Binding](/azure/azure-functions/functions-bindings-http-webhook)（具有 Web 绑定的 F# Azure Function）在 Azure 上进行托管。
 
@@ -109,7 +110,7 @@ Webhook 可采用 F# 实现，并通过 [Azure Function in F# with a Webhook Bin
 
 同样，其他 Azure 资源也可用相同的组件通过 F# 脚本进行部署和管理。 例如，创建存储帐户、 部署 Azure 云服务、 创建 Azure Cosmos DB 实例和管理 Azure 通知中心以编程方式从F#脚本。
 
-通常，使用 F# 脚本来部署和管理资源并不必要。 例如，Azure 资源也可直接通过 JSON 模板说明进行部署，可对该模板进行参数化。 请参阅 [Azure 资源管理器模板](/azure/azure-resource-manager/resource-manager-template-best-practices)，包括 [Azure 快速入门模板](https://azure.microsoft.com/resources/templates/)等示例。
+通常，使用 F# 脚本来部署和管理资源并不必要。 例如，还可以直接从可参数化的 JSON 模板说明部署 Azure 资源。 请参阅 [Azure 资源管理器模板](/azure/azure-resource-manager/resource-manager-template-best-practices)，包括 [Azure 快速入门模板](https://azure.microsoft.com/resources/templates/)等示例。
 
 ## <a name="other-resources"></a>其他资源
 

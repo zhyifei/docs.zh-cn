@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 913c7a9f1b5cf891f3e19c4f3126596bad49f79d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d591c85211492e4ad0b7e226cffba309e8d418b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695849"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379635"
 ---
 # <a name="toolbar-overview"></a>ToolBar 概述
 <xref:System.Windows.Controls.ToolBar> 控件是一组命令或控件通常在功能上相关的容器。 一个<xref:System.Windows.Controls.ToolBar>通常包含调用命令的按钮。  
@@ -24,25 +24,25 @@ ms.locfileid: "54695849"
 ## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a>在 ToolBarTray 中指定 ToolBar 位置  
  使用<xref:System.Windows.Controls.ToolBar.Band%2A>并<xref:System.Windows.Controls.ToolBar.BandIndex%2A>属性来定位<xref:System.Windows.Controls.ToolBar>中<xref:System.Windows.Controls.ToolBarTray>。 <xref:System.Windows.Controls.ToolBar.Band%2A> 指示在其中的位置<xref:System.Windows.Controls.ToolBar>放置在其父<xref:System.Windows.Controls.ToolBarTray>。 <xref:System.Windows.Controls.ToolBar.BandIndex%2A> 指示在其中顺序<xref:System.Windows.Controls.ToolBar>其区段内放置。 下面的示例演示如何使用此属性将<xref:System.Windows.Controls.ToolBar>控件内<xref:System.Windows.Controls.ToolBarTray>。  
   
- [!code-xaml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
+ [!code-xaml[ToolBarExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   
 <a name="ToolBars_with_Overflow_Items"></a>   
 ## <a name="toolbars-with-overflow-items"></a>带有溢出项的 ToolBar  
  通常<xref:System.Windows.Controls.ToolBar>控件包含更多的项不是可以适合于工具栏的大小。 在此情况下，<xref:System.Windows.Controls.ToolBar>显示溢出按钮。 若要查看溢出项，用户单击了溢出按钮，并且这些项将显示在下方的弹出窗口中<xref:System.Windows.Controls.ToolBar>。 下图显示<xref:System.Windows.Controls.ToolBar>带有溢出项。  
   
- ![存在溢出的工具栏](../../../../docs/framework/wpf/controls/media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
+ ![存在溢出的工具栏](./media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
 带有溢出项的 ToolBar  
   
  您可以指定工具栏上的项当通过设置在溢出面板上放置<xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType>附加属性设置为<xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>， <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>，或<xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>。 以下示例指定工具栏上的最后四个按钮应始终在溢出面板上。  
   
- [!code-xaml[ToolBarExample#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#3)]  
+ [!code-xaml[ToolBarExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#3)]  
   
  <xref:System.Windows.Controls.ToolBar>使用<xref:System.Windows.Controls.Primitives.ToolBarPanel>和一个<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>中其<xref:System.Windows.Controls.ControlTemplate>。  <xref:System.Windows.Controls.Primitives.ToolBarPanel>负责在工具栏上的项的布局。  <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>负责无法容纳的项的布局<xref:System.Windows.Controls.ToolBar>。 有关的示例<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.ToolBar>，请参阅  
   
- [ToolBar 样式和模板](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)。  
+ [ToolBar 样式和模板](toolbar-styles-and-templates.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Controls.Primitives.ToolBarPanel>
 - <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>
-- [设置 ToolBar 上控件的样式](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)
+- [设置 ToolBar 上控件的样式](how-to-style-controls-on-a-toolbar.md)
 - [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 6dc833ce3dc88b61ed6966c7b5ca2756f5012308
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265345"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368163"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF 版本 4.5 的新增功能
 <a name="introduction"></a> 本主题包含有关新的和增强功能的信息[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]版本 4.5。  
@@ -115,15 +115,15 @@ ms.locfileid: "55265345"
   
 <a name="weak_event_pattern"></a>   
 ## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a>对建立事件的弱引用的增强支持  
- 现在实现弱事件模式更加容易，因为可以借助事件的订阅服务器并且无需实现附加接口。  泛型<xref:System.Windows.WeakEventManager>类还可使订阅服务器参与弱事件模式，如果专用<xref:System.Windows.WeakEventManager>不存在特定事件。  有关详细信息，请参阅[弱事件模式](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)。  
+ 现在实现弱事件模式更加容易，因为可以借助事件的订阅服务器并且无需实现附加接口。  泛型<xref:System.Windows.WeakEventManager>类还可使订阅服务器参与弱事件模式，如果专用<xref:System.Windows.WeakEventManager>不存在特定事件。  有关详细信息，请参阅[弱事件模式](../advanced/weak-event-patterns.md)。  
   
 <a name="async"></a>   
 ## <a name="new-methods-for-the-dispatcher-class"></a>用于调度程序类的新方法  
- 调度程序类定义同步和异步操作的新方法。  同步<xref:System.Windows.Threading.Dispatcher.Invoke%2A>方法定义采用重载<xref:System.Action>或<xref:System.Func%601>参数。 新的异步方法， <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>，还会<xref:System.Action>或<xref:System.Func%601>作为回调参数并返回<xref:System.Windows.Threading.DispatcherOperation>或<xref:System.Windows.Threading.DispatcherOperation%601>。   <xref:System.Windows.Threading.DispatcherOperation>并<xref:System.Windows.Threading.DispatcherOperation%601>类定义<xref:System.Threading.Tasks.Task>属性。  当您调用<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>，可以使用`await`使用的关键字<xref:System.Windows.Threading.DispatcherOperation>或关联<xref:System.Threading.Tasks.Task>。 如果你需要同步等待<xref:System.Threading.Tasks.Task>返回的<xref:System.Windows.Threading.DispatcherOperation>或<xref:System.Windows.Threading.DispatcherOperation%601>，调用<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>扩展方法。 调用<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>在调用线程上排队操作将导致死锁。 有关使用详细信息<xref:System.Threading.Tasks.Task>若要执行异步操作，请参阅[任务并行 （任务并行库）](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)。  
+ 调度程序类定义同步和异步操作的新方法。  同步<xref:System.Windows.Threading.Dispatcher.Invoke%2A>方法定义采用重载<xref:System.Action>或<xref:System.Func%601>参数。 新的异步方法， <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>，还会<xref:System.Action>或<xref:System.Func%601>作为回调参数并返回<xref:System.Windows.Threading.DispatcherOperation>或<xref:System.Windows.Threading.DispatcherOperation%601>。   <xref:System.Windows.Threading.DispatcherOperation>并<xref:System.Windows.Threading.DispatcherOperation%601>类定义<xref:System.Threading.Tasks.Task>属性。  当您调用<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>，可以使用`await`使用的关键字<xref:System.Windows.Threading.DispatcherOperation>或关联<xref:System.Threading.Tasks.Task>。 如果你需要同步等待<xref:System.Threading.Tasks.Task>返回的<xref:System.Windows.Threading.DispatcherOperation>或<xref:System.Windows.Threading.DispatcherOperation%601>，调用<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>扩展方法。 调用<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>在调用线程上排队操作将导致死锁。 有关使用详细信息<xref:System.Threading.Tasks.Task>若要执行异步操作，请参阅[任务并行 （任务并行库）](../../../standard/parallel-programming/task-based-asynchronous-programming.md)。  
   
 <a name="events_markup_extenions"></a>   
 ## <a name="markup-extensions-for-events"></a>事件的标记扩展  
  WPF 4.5 支持事件的标记扩展。  虽然 WPF 未定义用于事件的标记扩展，但第三方能够创建可与事件配合使用的标记扩展。  
   
 ## <a name="see-also"></a>请参阅
-- [.NET Framework 中的新增功能](../../../../docs/framework/whats-new/index.md)
+- [.NET Framework 中的新增功能](../../whats-new/index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: e233503ec6a31b28134afbdaef229901b11fbaa0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0738008766343fa19454cac14e75b318663f34
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741686"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352761"
 ---
 # <a name="optimizing-performance-text"></a>优化性能：Text
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持通过使用功能丰富的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 控件实现的文本内容演示。 通常可以将文本呈现分为三层：  
@@ -49,11 +49,11 @@ ms.locfileid: "54741686"
 -   固定格式的文档演示，包括以前版本的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 客户端和其他计算设备。  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs> 和<xref:System.Windows.Media.GlyphRun>专为固定格式文档演示和打印方案。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 为常规布局提供若干元素和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]如下方案<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.TextBlock>。 有关布局和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 方案的详细信息，请参阅 [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)。  
+>  <xref:System.Windows.Documents.Glyphs> 和<xref:System.Windows.Media.GlyphRun>专为固定格式文档演示和打印方案。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 为常规布局提供若干元素和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]如下方案<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.TextBlock>。 有关布局和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 方案的详细信息，请参阅 [WPF 中的版式](typography-in-wpf.md)。  
   
  以下示例演示如何定义的属性<xref:System.Windows.Documents.Glyphs>对象中[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 <xref:System.Windows.Documents.Glyphs>对象表示的输出<xref:System.Windows.Media.GlyphRun>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 示例假定本地计算机上的 **C:\WINDOWS\Fonts** 文件夹中安装了 Arial、Courier New 和 Times New Roman 字体。  
   
- [!code-xaml[GlyphsOvwSample1#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
+ [!code-xaml[GlyphsOvwSample1#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
 ### <a name="using-drawglyphrun"></a>使用 DrawGlyphRun  
  如果具有自定义控件，并且你想要呈现字形，请使用<xref:System.Windows.Media.DrawingContext.DrawGlyphRun%2A>方法。  
@@ -62,16 +62,16 @@ ms.locfileid: "54741686"
   
 <a name="FormattedText_Object"></a>   
 ## <a name="formattedtext-object"></a>FormattedText 对象  
- <xref:System.Windows.Media.FormattedText>对象可绘制多行文本，在其中的文本中的每个字符可以单独设置格式。 有关详细信息，请参阅[绘制格式化文本](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)。  
+ <xref:System.Windows.Media.FormattedText>对象可绘制多行文本，在其中的文本中的每个字符可以单独设置格式。 有关详细信息，请参阅[绘制格式化文本](drawing-formatted-text.md)。  
   
- 若要创建带格式的文本，请调用<xref:System.Windows.Media.FormattedText.%23ctor%2A>构造函数创建<xref:System.Windows.Media.FormattedText>对象。 创建初始格式化文本字符串后，便可应用某一范围的格式样式。 如果你的应用程序想要实现其自身的布局，则<xref:System.Windows.Media.FormattedText>对象是比使用一个控件，例如更好的选择<xref:System.Windows.Controls.TextBlock>。 有关详细信息<xref:System.Windows.Media.FormattedText>对象，请参阅[绘制格式化文本](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)。  
+ 若要创建带格式的文本，请调用<xref:System.Windows.Media.FormattedText.%23ctor%2A>构造函数创建<xref:System.Windows.Media.FormattedText>对象。 创建初始格式化文本字符串后，便可应用某一范围的格式样式。 如果你的应用程序想要实现其自身的布局，则<xref:System.Windows.Media.FormattedText>对象是比使用一个控件，例如更好的选择<xref:System.Windows.Controls.TextBlock>。 有关详细信息<xref:System.Windows.Media.FormattedText>对象，请参阅[绘制格式化文本](drawing-formatted-text.md)。  
   
  <xref:System.Windows.Media.FormattedText>对象提供低级别的文本格式设置功能。 可向一个或多个字符应用多种格式样式。 例如，您可以调用<xref:System.Windows.Media.FormattedText.SetFontSize%2A>和<xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A>方法来更改格式设置的文本中的前五个字符。  
   
  下面的代码示例创建<xref:System.Windows.Media.FormattedText>对象，并将其呈现。  
   
- [!code-csharp[formattedtextsnippets#FormattedTextSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
- [!code-vb[formattedtextsnippets#FormattedTextSnippets1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
+ [!code-csharp[formattedtextsnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
+ [!code-vb[formattedtextsnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>FlowDocument、TextBlock 和 Label 控件  
@@ -80,21 +80,21 @@ ms.locfileid: "54741686"
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument 对性能的影响比 TextBlock 或 Label 大  
  一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的例如中的简短句子时，应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文本支持时，可以使用。 <xref:System.Windows.Documents.FlowDocument>元素是支持丰富的内容，演示的可重流动文档的容器，因此，具有比使用较好的性能效果<xref:System.Windows.Controls.TextBlock>或<xref:System.Windows.Controls.Label>控件。  
   
- 有关详细信息<xref:System.Windows.Documents.FlowDocument>，请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
+ 有关详细信息<xref:System.Windows.Documents.FlowDocument>，请参阅[流文档概述](flow-document-overview.md)。  
   
 ### <a name="avoid-using-textblock-in-flowdocument"></a>避免在 FlowDocument 中使用 TextBlock  
  <xref:System.Windows.Controls.TextBlock>元素派生自<xref:System.Windows.UIElement>。 <xref:System.Windows.Documents.Run>元素派生自<xref:System.Windows.Documents.TextElement>，这是比使用成本较低<xref:System.Windows.UIElement>-派生的对象。 如果可能，请使用<xref:System.Windows.Documents.Run>而非<xref:System.Windows.Controls.TextBlock>用于显示文本内容中<xref:System.Windows.Documents.FlowDocument>。  
   
  以下标记示例演示了两种方法中设置文本内容<xref:System.Windows.Documents.FlowDocument>:  
   
- [!code-xaml[Performance#PerformanceSnippet13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/FlowDocument.xaml#performancesnippet13)]  
+ [!code-xaml[Performance#PerformanceSnippet13](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/FlowDocument.xaml#performancesnippet13)]  
   
 ### <a name="avoid-using-run-to-set-text-properties"></a>避免使用 Run 来设置文本属性  
  一般情况下，使用<xref:System.Windows.Documents.Run>内<xref:System.Windows.Controls.TextBlock>是更高的性能密集型比不使用显式<xref:System.Windows.Documents.Run>根本对象。 如果使用的<xref:System.Windows.Documents.Run>来设置文本属性，在上直接设置这些属性<xref:System.Windows.Controls.TextBlock>相反。  
   
  以下标记示例阐释了这两种方式设置文本属性，在这种情况下的<xref:System.Windows.Controls.TextBlock.FontWeight%2A>属性：  
   
- [!code-xaml[Performance#PerformanceSnippet12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml#performancesnippet12)]  
+ [!code-xaml[Performance#PerformanceSnippet12](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml#performancesnippet12)]  
   
  下表演示显示 1000 个成本<xref:System.Windows.Controls.TextBlock>对象，无需显式<xref:System.Windows.Documents.Run>。  
   
@@ -124,21 +124,21 @@ ms.locfileid: "54741686"
   
  以下标记示例演示多个<xref:System.Windows.Controls.TextBlock>元素用来显示超链接：  
   
- [!code-xaml[Performance#PerformanceSnippet9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet9)]  
+ [!code-xaml[Performance#PerformanceSnippet9](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet9)]  
   
  以下标记示例演示更有效地显示的超链接，这一次，使用单个<xref:System.Windows.Controls.TextBlock>:  
   
- [!code-xaml[Performance#PerformanceSnippet10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet10)]  
+ [!code-xaml[Performance#PerformanceSnippet10](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet10)]  
   
 ### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>仅在 MouseEnter 事件的超链接中显示下划线  
- 一个<xref:System.Windows.TextDecoration>对象是可以添加到文本的视觉装饰; 但是，它可能会占用实例化。 如果充分利用了<xref:System.Windows.Documents.Hyperlink>元素，请考虑仅在触发事件，如时显示下划线<xref:System.Windows.ContentElement.MouseEnter>事件。 有关详细信息，请参阅[指定是否为超链接添加下划线](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)。  
+ 一个<xref:System.Windows.TextDecoration>对象是可以添加到文本的视觉装饰; 但是，它可能会占用实例化。 如果充分利用了<xref:System.Windows.Documents.Hyperlink>元素，请考虑仅在触发事件，如时显示下划线<xref:System.Windows.ContentElement.MouseEnter>事件。 有关详细信息，请参阅[指定是否为超链接添加下划线](how-to-specify-whether-a-hyperlink-is-underlined.md)。  
   
- ![显示 TextDecorations 的超](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")  
+ ![显示 TextDecorations 的超](./media/textdecoration03.png "TextDecoration03")  
 MouseEnter 上显示的超链接  
   
  以下标记示例演示<xref:System.Windows.Documents.Hyperlink>使用和不使用下划线定义：  
   
- [!code-xaml[Performance#PerformanceSnippet11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
+ [!code-xaml[Performance#PerformanceSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
   
  下表演示显示 1000 个的性能成本<xref:System.Windows.Documents.Hyperlink>元素使用和不使用下划线。  
   
@@ -161,12 +161,12 @@ MouseEnter 上显示的超链接
  最佳段落功能<xref:System.Windows.Documents.FlowDocument>对象对段落进行布局，以便尽可能均匀地分布空白区域。 默认禁用最佳段落功能。 可以通过设置对象的启用此功能<xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A>属性设置为`true`。 但是，启用此功能会影响应用程序的性能。 除非需要，否则不建议使用最佳段落功能。  
   
 ## <a name="see-also"></a>请参阅
-- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [规划应用程序性能](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [利用硬件](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [布局和示例](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [对象行为](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [应用程序资源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [优化 WPF 应用程序性能](optimizing-wpf-application-performance.md)
+- [规划应用程序性能](planning-for-application-performance.md)
+- [利用硬件](optimizing-performance-taking-advantage-of-hardware.md)
+- [布局和示例](optimizing-performance-layout-and-design.md)
+- [2D 图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)
+- [对象行为](optimizing-performance-object-behavior.md)
+- [应用程序资源](optimizing-performance-application-resources.md)
+- [数据绑定](optimizing-performance-data-binding.md)
+- [其他性能建议](optimizing-performance-other-recommendations.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: 0eb14b3f3859983ba4ba0436ab5a0fab9fda5006
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: cf21041a7f3d5b75803378cf05768ee6f1008fdd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745300"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354591"
 ---
 # <a name="how-to-implement-prioritybinding"></a>如何：实现 PriorityBinding
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中 <xref:System.Windows.Data.PriorityBinding> 的工作方式是指定一个绑定列表。 列表中的绑定按优先级从高到低排序。 对最高优先级绑定进行处理时，如果成功返回一个值，就不再需要处理列表中的其他绑定。 在最高优先级绑定需要长时间计算的情况下，则会使用已成功返回值的下一个优先级最高的绑定，直到优先级更高的绑定成功返回值为止。  
@@ -29,12 +29,12 @@ ms.locfileid: "56745300"
 > [!NOTE]
 >  此示例仅供演示。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 准则不建议将比字段设置更慢的操作定义为属性。 有关详细信息，请参阅[选择属性和方法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100))。  
   
- [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
- [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
+ [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
   
  <xref:System.Windows.Controls.TextBlock.Text%2A> 属性使用 <xref:System.Windows.Data.PriorityBinding> 绑定到上述 `AsyncDS`:  
   
- [!code-xaml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
+ [!code-xaml[PriorityBinding#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
   
  绑定引擎在处理 <xref:System.Windows.Data.Binding> 对象时，会从已绑定到 `SlowestDP` 属性的第一个 <xref:System.Windows.Data.Binding> 开始。 处理此 <xref:System.Windows.Data.Binding> 时并未成功返回值，因为它正处于 5 秒的睡眠状态，因此会开始处理下一个 <xref:System.Windows.Data.Binding> 元素。 该 <xref:System.Windows.Data.Binding> 也没有成功返回值，因为它正处于 3 秒的睡眠状态。 绑定引擎随后会转至下一个 <xref:System.Windows.Data.Binding> 元素，该元素已绑定到 `FastDP` 属性。 该 <xref:System.Windows.Data.Binding> 会返回值“Fast Value”。 于是 <xref:System.Windows.Controls.TextBlock> 会显示值“Fast Value”。  
   
@@ -46,5 +46,5 @@ ms.locfileid: "56745300"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
-- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [数据绑定概述](data-binding-overview.md)
+- [帮助主题](data-binding-how-to-topics.md)

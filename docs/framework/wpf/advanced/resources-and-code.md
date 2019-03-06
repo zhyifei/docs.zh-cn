@@ -11,15 +11,15 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: ff259dae06ef7347dd9fa3afbab68ae67e9146a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12f9acccfc23364795cd18ef1da2ced5b442c6f7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725515"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367970"
 ---
 # <a name="resources-and-code"></a>资源和代码
-本概述主要介绍如何使用代码（而非 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 语法）来访问或创建 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 资源。 有关常规资源用法以及 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法角度的资源的详细信息，请参阅 [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+本概述主要介绍如何使用代码（而非 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 语法）来访问或创建 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 资源。 有关常规资源用法以及 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法角度的资源的详细信息，请参阅 [XAML 资源](xaml-resources.md)。  
   
   
   
@@ -29,8 +29,8 @@ ms.locfileid: "54725515"
   
  以下是一个简短的代码示例，通过键查找资源，并使用返回的值来设置属性，作为实现<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件处理程序。  
   
- [!code-csharp[PropertiesOvwSupport#ResourceProceduralGet](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#resourceproceduralget)]
- [!code-vb[PropertiesOvwSupport#ResourceProceduralGet](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#resourceproceduralget)]  
+ [!code-csharp[PropertiesOvwSupport#ResourceProceduralGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#resourceproceduralget)]
+ [!code-vb[PropertiesOvwSupport#ResourceProceduralGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#resourceproceduralget)]  
   
  将分配的资源引用的一种替代方法是<xref:System.Windows.FrameworkElement.SetResourceReference%2A>。 该方法采用两个参数：资源的键，以及特定依赖属性（应向其分配资源值的元素实例上的依赖属性）的标识符。 就功能而言，此方法是相同的，且具有无需强制转换任何返回值的优点。  
   
@@ -44,8 +44,8 @@ ms.locfileid: "54725515"
   
 <a name="objectaskey"></a>   
 ## <a name="using-objects-as-keys"></a>将对象用作键  
- 大多数资源用法都会将资源的键设置为字符串。 但是，各个 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能都特意不使用字符串类型来指定键，而是将此参数设置为对象。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 样式和主题支持使用按对象对资源进行键控的功能。 主题中成为否则非样式的控件的默认样式的样式来进行键控的<xref:System.Type>它们应当应用于的控件。 按类型进行键控提供了一种可靠的查找机制，该机制作用于每个控件类型的默认实例，即使派生类型不具有默认样式，也可以通过反射检测到类型，并将类型用于设置派生类的样式。 您可以指定<xref:System.Type>密钥对中定义的资源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通过使用[X:type 标记扩展](../../../../docs/framework/xaml-services/x-type-markup-extension.md)。 对于支持 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能的其他非字符串键用法，也存在类似扩展，如 [ComponentResourceKey 标记扩展](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)。  
+ 大多数资源用法都会将资源的键设置为字符串。 但是，各个 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能都特意不使用字符串类型来指定键，而是将此参数设置为对象。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 样式和主题支持使用按对象对资源进行键控的功能。 主题中成为否则非样式的控件的默认样式的样式来进行键控的<xref:System.Type>它们应当应用于的控件。 按类型进行键控提供了一种可靠的查找机制，该机制作用于每个控件类型的默认实例，即使派生类型不具有默认样式，也可以通过反射检测到类型，并将类型用于设置派生类的样式。 您可以指定<xref:System.Type>密钥对中定义的资源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通过使用[X:type 标记扩展](../../xaml-services/x-type-markup-extension.md)。 对于支持 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能的其他非字符串键用法，也存在类似扩展，如 [ComponentResourceKey 标记扩展](componentresourcekey-markup-extension.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML 资源](xaml-resources.md)
+- [样式设置和模板化](../controls/styling-and-templating.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-ms.openlocfilehash: e4cfaf2352c3cca2b67a8e6a5d4c933399583e5a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0b25f56caf3f25b6e649c05ecf1cbe50046dd93
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663643"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362365"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>如何：在演示图板启动之后使用事件触发器来控制演示图板
 此示例演示如何控制<xref:System.Windows.Media.Animation.Storyboard>启动后对它。 若要启动<xref:System.Windows.Media.Animation.Storyboard>通过使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，使用<xref:System.Windows.Media.Animation.BeginStoryboard>，这样可以将分发到的对象和属性，它们进行动画处理，然后启动情节提要的动画。 如果您为提供<xref:System.Windows.Media.Animation.BeginStoryboard>通过指定的名称及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>属性，您使它可控制情节提要。 然后您可以以交互方式控制情节提要启动后。  
@@ -33,9 +33,9 @@ ms.locfileid: "54663643"
 ## <a name="example"></a>示例  
  以下示例使用可控制情节提要操作来以交互方式控制情节提要。  
   
- **注意：** 若要查看通过使用代码来控制情节提要的示例，请参阅[控制演示图板后它启动使用其交互式方法](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)。  
+ **注意：** 若要查看通过使用代码来控制情节提要的示例，请参阅[控制演示图板后它启动使用其交互式方法](how-to-control-a-storyboard-after-it-starts.md)。  
   
- [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
+ [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
   
  有关其他示例，请参阅[动画示例库](https://go.microsoft.com/fwlink/?LinkID=159969)。  
   
@@ -46,6 +46,6 @@ ms.locfileid: "54663643"
 - <xref:System.Windows.Media.Animation.PauseStoryboard>
 - <xref:System.Windows.Media.Animation.StopStoryboard>
 - <xref:System.Windows.Media.Animation.SeekStoryboard>
-- [在情节提要启动后使用其交互式方法对其进行控制](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)
-- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [在情节提要启动后使用其交互式方法对其进行控制](how-to-control-a-storyboard-after-it-starts.md)
+- [动画概述](animation-overview.md)
+- [演示图板概述](storyboards-overview.md)

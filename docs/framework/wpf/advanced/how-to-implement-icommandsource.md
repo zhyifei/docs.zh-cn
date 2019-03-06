@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-ms.openlocfilehash: 6d42c3a936114c01eb7b7493a9732597a7d2fab9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42395d2916d58b2119cfe41ca154f258c3b0ec58
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593935"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361455"
 ---
 # <a name="how-to-implement-icommandsource"></a>如何：实现 ICommandSource
 此示例演示如何通过实现来创建命令源<xref:System.Windows.Input.ICommandSource>。  命令源是一个知道如何调用命令的对象。  <xref:System.Windows.Input.ICommandSource>接口公开三个成员： <xref:System.Windows.Input.ICommandSource.Command%2A>， <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>，和<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>。  <xref:System.Windows.Input.ICommandSource.Command%2A> 是将调用该命令。 <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>是用户定义数据类型从命令源传递到处理该命令的方法。 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>是在其执行该命令的对象。  
@@ -26,40 +26,40 @@ ms.locfileid: "54593935"
   
  下面是在类定义。  
   
- [!code-csharp[ImplementICommandSource#ImplementICommandSourceClassDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourceclassdefinition)]
- [!code-vb[ImplementICommandSource#ImplementICommandSourceClassDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourceclassdefinition)]  
+ [!code-csharp[ImplementICommandSource#ImplementICommandSourceClassDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourceclassdefinition)]
+ [!code-vb[ImplementICommandSource#ImplementICommandSourceClassDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourceclassdefinition)]  
   
- 下一步是实现<xref:System.Windows.Input.ICommandSource>成员。  在此示例中，属性实现为<xref:System.Windows.DependencyProperty>对象。  这样，要使用数据绑定的属性。  有关详细信息<xref:System.Windows.DependencyProperty>类，请参阅[依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  有关数据绑定的详细信息，请参阅[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
+ 下一步是实现<xref:System.Windows.Input.ICommandSource>成员。  在此示例中，属性实现为<xref:System.Windows.DependencyProperty>对象。  这样，要使用数据绑定的属性。  有关详细信息<xref:System.Windows.DependencyProperty>类，请参阅[依赖项属性概述](dependency-properties-overview.md)。  有关数据绑定的详细信息，请参阅[数据绑定概述](../data/data-binding-overview.md)。  
   
  仅<xref:System.Windows.Input.ICommandSource.Command%2A>属性如下所示。  
   
- [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandpropertydefinition)]
- [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandpropertydefinition)]  
+ [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandpropertydefinition)]
+ [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandpropertydefinition)]  
   
  下面是<xref:System.Windows.DependencyProperty>更改回调。  
   
- [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandChanged](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandchanged)]
- [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandChanged](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandchanged)]  
+ [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandChanged](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandchanged)]
+ [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandChanged](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandchanged)]  
   
  下一步是添加和删除命令与命令源相关联。  <xref:System.Windows.Input.ICommandSource.Command%2A>属性不能只是被覆盖时添加新的命令，因为与前一个命令中，关联的事件处理程序必须首先删除如果有的话。  
   
- [!code-csharp[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcehookunhookcommands)]
- [!code-vb[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcehookunhookcommands)]  
+ [!code-csharp[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcehookunhookcommands)]
+ [!code-vb[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcehookunhookcommands)]  
   
  最后一步是创建逻辑<xref:System.Windows.Input.ICommand.CanExecuteChanged>处理程序和<xref:System.Windows.Input.ICommand.Execute%2A>方法。  
   
  <xref:System.Windows.Input.ICommand.CanExecuteChanged>事件通知命令源的当前命令目标上执行的命令的能力可能已更改。  当命令源收到此事件时，它通常会调用<xref:System.Windows.Input.ICommand.CanExecute%2A>命令的方法。  如果该命令不能在当前命令目标上执行，命令源通常会禁用自身。  如果该命令可以在当前命令目标上执行，命令源通常会启用自身。  
   
- [!code-csharp[ImplementICommandSource#ImplementICommandCanExecuteChanged](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandcanexecutechanged)]
- [!code-vb[ImplementICommandSource#ImplementICommandCanExecuteChanged](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandcanexecutechanged)]  
+ [!code-csharp[ImplementICommandSource#ImplementICommandCanExecuteChanged](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandcanexecutechanged)]
+ [!code-vb[ImplementICommandSource#ImplementICommandCanExecuteChanged](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandcanexecutechanged)]  
   
  最后一步是<xref:System.Windows.Input.ICommand.Execute%2A>方法。  如果该命令是<xref:System.Windows.Input.RoutedCommand>，则<xref:System.Windows.Input.RoutedCommand><xref:System.Windows.Input.RoutedCommand.Execute%2A>方法是调用; 否则为<xref:System.Windows.Input.ICommand><xref:System.Windows.Input.ICommand.Execute%2A>调用方法。  
   
- [!code-csharp[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandexecute)]
- [!code-vb[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
+ [!code-csharp[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandexecute)]
+ [!code-vb[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Input.ICommandSource>
 - <xref:System.Windows.Input.ICommand>
 - <xref:System.Windows.Input.RoutedCommand>
-- [命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [命令概述](commanding-overview.md)

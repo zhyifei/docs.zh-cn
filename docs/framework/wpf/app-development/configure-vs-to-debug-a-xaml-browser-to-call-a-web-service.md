@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: 505f4d6998b54f5b3af7613184d2cbac90cb8548
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94d362767b92799fa54f46e71724284a92b5bf7e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656451"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358816"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>如何：配置 Visual Studio 以调试 XAML 浏览器应用程序来调用 Web 服务
 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 在 Internet 区域权限集仅限于部分信任安全沙箱中运行。 此权限集将限制仅 Web 服务位于 Web 服务调用[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]应用程序的源站点。 当[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]调试从 Visual Studio 2005 中，不过，它不被视为具有相同的源站点的 Web 服务它的引用。 这会导致安全异常时引发[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]尝试调用 Web 服务。 但是，Visual Studio 2005[!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]项目可以配置为模拟有与它进行调试时将调用 Web 服务相同的源站点。 这允许[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]来安全地调用 Web 服务，而不会导致安全异常。
@@ -63,4 +63,4 @@ ms.locfileid: "54656451"
  `-debugSecurityZoneURL http://services.msdn.microsoft.com`
 
 ## <a name="see-also"></a>请参阅
-- [WPF 主机 (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)
+- [WPF 主机 (PresentationHost.exe)](wpf-host-presentationhost-exe.md)

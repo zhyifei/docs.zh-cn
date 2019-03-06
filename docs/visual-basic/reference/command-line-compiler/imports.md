@@ -6,12 +6,12 @@ helpviewer_keywords:
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 9e5adcce85c4ca4863d28784a7d7f61c441a06c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce59cbc834d84d19ec7f8d6d3d32b545c537173c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588439"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364666"
 ---
 # <a name="-imports-visual-basic"></a>-导入 (Visual Basic)
 从指定的程序集导入命名空间。  
@@ -38,10 +38,16 @@ ms.locfileid: "54588439"
 |1.在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“引用”选项卡。<br />3.旁边的框中输入命名空间名称**添加用户导入**按钮。<br />4.单击**添加用户导入**按钮。|  
   
 ## <a name="example"></a>示例  
- 下面的代码编译时`/imports:system.globalization`指定。 如果没有它，成功编译要求任一`Imports System.Globalization`语句是包含源代码文件中，开始时，或作为完全限定属性`System.Globalization.CultureInfo.CurrentCulture.Name`。 
-  
- [!code-vb[imports example](codesnippet/VisualBasic/imports_2.vb)]  
-  
+ 下面的代码编译时`/imports:system.globalization`指定。 如果没有它，成功编译要求任一`Imports System.Globalization`语句是包含源代码文件中，开始时，或作为完全限定属性`System.Globalization.CultureInfo.CurrentCulture.Name`。
+
+```vb
+Module Example
+   Public Sub Main()
+      Console.WriteLine($"The current culture is {CultureInfo.CurrentCulture.Name}")
+   End Sub
+End Module
+```
+
 ## <a name="see-also"></a>请参阅
 - [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [引用和 Imports 语句](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)

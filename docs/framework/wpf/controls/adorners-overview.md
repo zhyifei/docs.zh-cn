@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: c9ac784223a76d7bf10a888617c0d3d25c916c10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c9d77c9771fd8759530267bd38cb7c0bb59598c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702961"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357935"
 ---
 # <a name="adorners-overview"></a>装饰器概述
 装饰器是一种特殊的<xref:System.Windows.FrameworkElement>，可用来向用户提供可视提示。 装饰器有很多用途，可用来向元素添加功能句柄，或者提供有关某个控件的状态信息。  
@@ -50,12 +50,12 @@ ms.locfileid: "54702961"
   
  下面的示例展示了实现简单装饰器的类。 示例装饰器简单装饰的边角<xref:System.Windows.UIElement>使用圆圈。  
   
- [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
- [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
+ [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
+ [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
   
  下图显示了应用于 SimpleCircleAdorner <xref:System.Windows.Controls.TextBox>。  
   
- ![装饰器示例：经过装饰的文本框](../../../../docs/framework/wpf/controls/media/adornedtextbox.png "AdornedTextBox")  
+ ![装饰器示例：经过装饰的文本框](./media/adornedtextbox.png "AdornedTextBox")  
   
 <a name="rendering_behavior_for_Adorners"></a>   
 ## <a name="rendering-behavior-for-adorners"></a>装饰器的呈现行为  
@@ -70,7 +70,7 @@ ms.locfileid: "54702961"
   
  若要启用传递命中测试装饰器下的元素，请设置命中的测试<xref:System.Windows.UIElement.IsHitTestVisible%2A>属性设置为**false**在装饰器上。  有关命中测试的详细信息，请参阅  
   
- [可视化层中的命中测试](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)。  
+ [可视化层中的命中测试](../graphics-multimedia/hit-testing-in-the-visual-layer.md)。  
   
 <a name="adorn_single_element"></a>   
 ## <a name="adorning-a-single-uielement"></a>装饰单个 UIElement  
@@ -82,8 +82,8 @@ ms.locfileid: "54702961"
   
  下面的示例将 SimpleCircleAdorner （如上所示） 到绑定<xref:System.Windows.Controls.TextBox>名为*myTextBox*。  
   
- [!code-csharp[Adorners_SimpleCircleAdorner#_AdornSingleElement](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornsingleelement)]
- [!code-vb[Adorners_SimpleCircleAdorner#_AdornSingleElement](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornsingleelement)]  
+ [!code-csharp[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornsingleelement)]
+ [!code-vb[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornsingleelement)]  
   
 > [!NOTE]
 >  目前不支持使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 将装饰器绑定到另一个元素。  
@@ -98,12 +98,12 @@ ms.locfileid: "54702961"
   
  下面的示例将 SimpleCircleAdorner （如上所示） 的子级绑定<xref:System.Windows.Controls.StackPanel>名为*myStackPanel*。  
   
- [!code-csharp[Adorners_SimpleCircleAdorner#_AdornChildren](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornchildren)]
- [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
+ [!code-csharp[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornchildren)]
+ [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Media.AdornerHitTestResult>
-- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
-- [帮助主题](../../../../docs/framework/wpf/controls/adorners-how-to-topics.md)
+- [WPF 中的形状和基本绘图概述](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [使用图像、绘图和视觉对象进行绘制](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Drawing 对象概述](../graphics-multimedia/drawing-objects-overview.md)
+- [帮助主题](adorners-how-to-topics.md)

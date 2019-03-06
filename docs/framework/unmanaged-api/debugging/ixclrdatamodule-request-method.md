@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2cc712e6560fc58af7526428ba40c424be388eee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336e47d531fc880571165cd55f117825cd1a2abb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746656"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374864"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule::Request 方法
 
@@ -39,15 +39,20 @@ HRESULT Request([in] ULONG32 reqCode,
 
 ### <a name="parameters"></a>参数
 
-`reqCode` [in]请求类型发送。
+`reqCode`\
+[in]请求类型发送。
 
-`inBufferSize` [in] 要传入的输入缓冲区的大小。
+`inBufferSize`\
+[in] 要传入的输入缓冲区的大小。
 
-`inBuffer` [in，size_is(inBufferSize)]要在请求中发送的原始数据的缓冲区指针。
+`inBuffer`\
+[in，size_is(inBufferSize)]要在请求中发送的原始数据的缓冲区指针。
 
-`outBufferSize` [in]输出缓冲区的大小。
+`outBufferSize`\
+[in]输出缓冲区的大小。
 
-`outBuffer` [out，size_is(outBufferSize)]要用于存储请求响应的缓冲区指针。
+`outBuffer`\
+[out，size_is(outBufferSize)]要用于存储请求响应的缓冲区指针。
 
 ## <a name="remarks"></a>备注
 
@@ -61,5 +66,5 @@ HRESULT Request([in] ULONG32 reqCode,
 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataModule 接口](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
+- [调试](index.md)
+- [IXCLRDataModule 接口](ixclrdatamodule-interface.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: 21f260262d434ffe3685b226193f2d6cd2125549
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2a664f0672f4585649cebad6e62635125db0983
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548425"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354890"
 ---
 # <a name="collection-type-dependency-properties"></a>集合类型依赖项属性
 本主题就如何实现属性类型为集合类型的依赖属性提供相应指导和建议模式。  
@@ -32,20 +32,20 @@ ms.locfileid: "54548425"
   
  请看下面的示例。 示例的以下部分显示类 `Aquarium` 的定义。 类定义集合类型依赖属性`AquariumObjects`，它使用泛型<xref:System.Collections.Generic.List%601>类型具有<xref:System.Windows.FrameworkElement>类型约束。 在中<xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29>依赖属性元数据的调用会建立此默认值为一个新的泛型<xref:System.Collections.Generic.List%601>。  
   
- [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
- [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
+ [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
+ [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   
  但是，如果仅如上所示保留代码，该单一列表默认值会对 `Aquarium` 的所有实例共享。 如果运行以下测试代码（用于演示如何实例化两个单独的 `Aquarium` 实例并向二者皆添加一个不同的 `Fish`），则其结果可能出乎意料：  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
- [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
+ [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
+ [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
   
  每个集合具有两个计数，而不是一个！ 这是因为，每个 `Aquarium` 将其 `Fish` 添加到默认值集合，此默认值集合因元数据中单个构造函数调用而产生，因此会在所有实例之间共享。 而你全然不希望出现这种情况。  
   
  为纠正此问题，必须将集合依赖属性值重置为唯一实例，作为类构造函数调用的一部分。 由于属性是只读的依赖项属性，因此使用<xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>方法以设置它，使用<xref:System.Windows.DependencyPropertyKey>，才可访问的类中。  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
- [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
+ [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
+ [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
   
  现在，如果再次运行此相同测试代码，则每个 `Aquarium` 会仅支持自己的唯一集合，这样的结果更符合预期。  
   
@@ -58,8 +58,8 @@ ms.locfileid: "54548425"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.FreezableCollection%601>
-- [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
-- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+- [XAML 及 WPF 的自定义类](xaml-and-custom-classes-for-wpf.md)
+- [数据绑定概述](../data/data-binding-overview.md)
+- [依赖项属性概述](dependency-properties-overview.md)
+- [自定义依赖属性](custom-dependency-properties.md)
+- [依赖属性元数据](dependency-property-metadata.md)

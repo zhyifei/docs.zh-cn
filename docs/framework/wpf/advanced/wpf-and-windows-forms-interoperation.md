@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: e6bbf6aea1a98b7e1497101ea6a6121525f1c87f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6fe459ab00622860cd10e4e119e943e588f06b2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732019"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352940"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>WPF 和 Windows 窗体互操作
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 提供两种用于创建应用程序接口的不同体系结构。 <xref:System.Windows.Forms.Integration?displayProperty=nameWithType>命名空间提供实现常见互操作方案的类。 实现互操作功能的两个关键类是<xref:System.Windows.Forms.Integration.WindowsFormsHost>和<xref:System.Windows.Forms.Integration.ElementHost>。 本主题介绍支持哪些互操作方案以及不支持哪些互操作方案。  
@@ -60,7 +60,7 @@ ms.locfileid: "54732019"
 ### <a name="ambient-properties"></a>环境属性  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件的某些环境属性具有 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 等效项。 这些环境属性传播到所承载[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件，并公开为公共属性上<xref:System.Windows.Forms.Integration.WindowsFormsHost>控件。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>控件将为每个[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]环境属性转换成其[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]等效。  
   
- 有关详细信息，请参阅 [Windows 窗体和 WPF 属性映射](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)。  
+ 有关详细信息，请参阅 [Windows 窗体和 WPF 属性映射](windows-forms-and-wpf-property-mapping.md)。  
   
 ### <a name="behavior"></a>行为  
  下表介绍互操作行为。  
@@ -103,7 +103,7 @@ ms.locfileid: "54732019"
 ### <a name="ambient-properties"></a>环境属性  
  [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件的某些环境属性具有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 等效项。 这些环境属性传播到所承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件，并公开为公共属性上<xref:System.Windows.Forms.Integration.ElementHost>控件。 <xref:System.Windows.Forms.Integration.ElementHost>控件将为每个[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]环境属性设置为其[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]等效。  
   
- 有关详细信息，请参阅 [Windows 窗体和 WPF 属性映射](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)。  
+ 有关详细信息，请参阅 [Windows 窗体和 WPF 属性映射](windows-forms-and-wpf-property-mapping.md)。  
   
 ### <a name="behavior"></a>行为  
  下表介绍互操作行为。  
@@ -120,7 +120,7 @@ ms.locfileid: "54732019"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [演练：承载在 WPF 中的 Windows 窗体控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [演练：承载在 WPF 中的 Windows 窗体复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [演练：承载 WPF 复合控件在 Windows 窗体中](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Windows 窗体和 WPF 属性映射](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [演练：承载在 WPF 中的 Windows 窗体控件](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [演练：承载在 WPF 中的 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [演练：承载 WPF 复合控件在 Windows 窗体中](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Windows 窗体和 WPF 属性映射](windows-forms-and-wpf-property-mapping.md)

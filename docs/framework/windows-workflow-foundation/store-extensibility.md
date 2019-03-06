@@ -2,12 +2,12 @@
 title: 存储扩展性
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f317e8e0864dd6c4595ac669611594c843b277c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517915"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375423"
 ---
 # <a name="store-extensibility"></a>存储扩展性
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 允许用户提升自定义的特定于应用程序的属性，这些属性可用于查询持久性数据库中的实例。 提升属性的操作将使属性值可用在数据库的特殊视图中。 这些提升的属性（可用于用户查询的属性）可以是简单的类型，如 Int64、Guid、String 和 DateTime，也可以是序列化的二进制类型 (byte[])。  
@@ -37,7 +37,7 @@ ms.locfileid: "33517915"
   
      有关添加自定义持久性参与者的更多详细信息，请参阅[持久性参与者](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)示例。  
   
-3.  DP 应用程序中的自定义活动填充中的各种状态字段**执行**方法。  
+3.  DP 应用程序中的自定义活动填充中的各种状态字段**Execute**方法。  
   
     ```  
     public override void Execute(CodeActivityContext context)  
@@ -51,7 +51,7 @@ ms.locfileid: "33517915"
     }  
     ```  
   
-4.  当工作流实例达到某个持久点时， **CollectValues**方法**DocumentStatusExtension**持久性参与者将这些属性保存到持久性数据集合。  
+4.  当工作流实例达到持久点时， **CollectValues**方法**DocumentStatusExtension**持久性参与者将这些属性保存到持久性数据集合。  
   
     ```  
     class DocumentStatusExtension : PersistenceParticipant  
@@ -75,7 +75,7 @@ ms.locfileid: "33517915"
     > [!NOTE]
     >  所有这些属性传递给**SqlWorkflowInstanceStore**由持久性框架通过**SaveWorkflowCommand.InstanceData**集合。  
   
-5.  DP 应用程序初始化 SQL 工作流实例存储，并调用**Promote**方法来提升此数据。  
+5.  DP 应用程序初始化 SQL 工作流实例存储并调用**Promote**方法来提升此数据。  
   
     ```  
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);  
@@ -91,7 +91,7 @@ ms.locfileid: "33517915"
     store.Promote("DocumentStatus", variantProperties, null);  
     ```  
   
-     根据此提升信息， **SqlWorkflowInstanceStore**放置的列中的数据属性[InstancePromotedProperties](#InstancePromotedProperties)视图。
+     根据此提升信息， **SqlWorkflowInstanceStore**将数据属性放置中的列[InstancePromotedProperties](#InstancePromotedProperties)视图。
   
 6.  为了从提升表中查询某个数据子集，DP 应用程序在提升视图之上添加一个自定义视图。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "33517915"
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] 视图  
+## <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] view  
   
 |列名|列名称|描述|  
 |-----------------|-----------------|-----------------|  

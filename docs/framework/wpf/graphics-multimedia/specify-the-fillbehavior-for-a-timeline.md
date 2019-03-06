@@ -5,12 +5,12 @@ helpviewer_keywords:
 - FillBehavior property for inactive timelines [WPF]
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-ms.openlocfilehash: 2dac9423212b02c509d12fce46af29bb912ae2b4
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 1d6a3ec38a6488d997ce5a4734cc095446354070
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304877"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358127"
 ---
 # <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>如何：为已经到达有效期末尾的时间线指定 FillBehavior
 此示例演示如何指定<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>的非活动<xref:System.Windows.Media.Animation.Timeline>的动画属性。  
@@ -22,7 +22,7 @@ ms.locfileid: "56304877"
   
  一个<xref:System.Windows.Media.Animation.Timeline>已<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>设置为<xref:System.Windows.Media.Animation.FillBehavior.Stop>，这将导致要还原为其非动画的矩形的宽度时值<xref:System.Windows.Media.Animation.Timeline>结束。 另<xref:System.Windows.Media.Animation.Timeline>已<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>的<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>，这将导致保留为其结束的宽度时值<xref:System.Windows.Media.Animation.Timeline>结束。  
   
- [!code-xaml[timingbehaviors_snip#FillBehaviorWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/FillBehaviorExample.xaml#fillbehaviorwholepage)]  
+ [!code-xaml[timingbehaviors_snip#FillBehaviorWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/FillBehaviorExample.xaml#fillbehaviorwholepage)]  
   
  有关完整示例，请参阅[动画示例库](https://go.microsoft.com/fwlink/?LinkID=159969)。  
   
@@ -33,5 +33,5 @@ ms.locfileid: "56304877"
 - <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>
 - <xref:System.Windows.Media.Animation.FillBehavior.Stop>
 - <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>
-- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [动画概述](animation-overview.md)
 - [动画和计时操作指南主题](animation-and-timing-how-to-topics.md)

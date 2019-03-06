@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: f8a7e9adb8ca7d9e21bbc30a346b12d8b584067a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a57b4a656ca5119ac6717579f49950437588328
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695794"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357555"
 ---
 # <a name="image"></a>图像
 <xref:System.Windows.Controls.Image>元素用于显示中的位图图像[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
- [帮助主题](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+ [帮助主题](image-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Image>  
@@ -28,5 +28,5 @@ ms.locfileid: "54695794"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>请参阅
-- [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
-- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+- [图像处理概述](../graphics-multimedia/imaging-overview.md)
+- [帮助主题](../graphics-multimedia/imaging-how-to-topics.md)

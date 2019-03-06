@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: c5dd567fa9f5db69c52072a1cc67b5c574f8e1f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623867"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367931"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>优化性能：布局和设计
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的设计在计算布局和验证对象引用时会产生不必要的开销，从而影响性能。 对象的构造会影响应用程序的性能特征，在运行时更是如此。  
@@ -49,7 +49,7 @@ ms.locfileid: "54623867"
 ### <a name="use-the-most-efficient-panel-where-possible"></a>尽可能使用最高效的面板  
  布局过程的复杂性直接取决于的布局行为<xref:System.Windows.Controls.Panel>-派生您使用的元素。 例如，<xref:System.Windows.Controls.Grid>或<xref:System.Windows.Controls.StackPanel>控件提供了更多的功能比<xref:System.Windows.Controls.Canvas>控件。 功能大幅度改进的代价是性能成本的大幅度提高。 但是，如果您不需要的功能，<xref:System.Windows.Controls.Grid>控件提供了应使用成本较低的替代方法，如<xref:System.Windows.Controls.Canvas>或自定义面板。  
   
- 有关详细信息，请参阅[面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)。  
+ 有关详细信息，请参阅[面板概述](../controls/panels-overview.md)。  
   
 ### <a name="update-rather-than-replace-a-rendertransform"></a>更新而不替换 RenderTransform  
  您可能无法在更新<xref:System.Windows.Media.Transform>而不是替换的值作为<xref:System.Windows.UIElement.RenderTransform%2A>属性。 在涉及动画的方案中，尤其是这样。 通过更新现有<xref:System.Windows.Media.Transform>，可以避免启动不需要的布局计算。  
@@ -64,19 +64,19 @@ ms.locfileid: "54623867"
   
  以下代码示例演示如何从上到下创建树。  
   
- [!code-csharp[Performance#PerformanceSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
- [!code-vb[Performance#PerformanceSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
+ [!code-csharp[Performance#PerformanceSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
+ [!code-vb[Performance#PerformanceSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
   
- 有关逻辑树的详细信息，请参阅 [WPF 中的树](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)。  
+ 有关逻辑树的详细信息，请参阅 [WPF 中的树](trees-in-wpf.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [规划应用程序性能](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [利用硬件](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [对象行为](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [应用程序资源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [文本](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [布局](../../../../docs/framework/wpf/advanced/layout.md)
+- [优化 WPF 应用程序性能](optimizing-wpf-application-performance.md)
+- [规划应用程序性能](planning-for-application-performance.md)
+- [利用硬件](optimizing-performance-taking-advantage-of-hardware.md)
+- [2D 图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)
+- [对象行为](optimizing-performance-object-behavior.md)
+- [应用程序资源](optimizing-performance-application-resources.md)
+- [文本](optimizing-performance-text.md)
+- [数据绑定](optimizing-performance-data-binding.md)
+- [其他性能建议](optimizing-performance-other-recommendations.md)
+- [布局](layout.md)

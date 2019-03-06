@@ -17,47 +17,52 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e437868138d7ae31d233853ecc0f709de3ee39d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d0aefea7345bc3bf37bdb8d13cb2cda19cfe527
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512717"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355735"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes 方法
-枚举每个作用域中的每个类型。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-HRESULT EnumImportTypes(  
-    HALINKENUM   hEnum,  
-    DWORD        dwMax,  
-    mdTypeDef    aTypeDefs[],  
-    DWORD*       pdwCount  
-) PURE;  
-```  
-  
-#### <a name="parameters"></a>参数  
- `hEnum`  
- 枚举器的句柄。  
-  
- `dwMax`  
- 要检索的类型的最大数目。  
-  
- `aTypeDefs`  
- 接收类型标记，不能超过`dwMax`。  
-  
- `pdwCount`  
- 接收中的类型的实际数目`aTypeDefs`。  
-  
-## <a name="return-value"></a>返回值  
- 如果该方法成功，返回，则为 S_OK。  
-  
-## <a name="requirements"></a>要求  
- 需要 alink.h  
-  
+
+枚举每个作用域中的每个类型。
+
+## <a name="syntax"></a>语法
+
+```cpp
+HRESULT EnumImportTypes(
+    HALINKENUM   hEnum,
+    DWORD        dwMax,
+    mdTypeDef    aTypeDefs[],
+    DWORD*       pdwCount
+) PURE;
+```
+
+## <a name="parameters"></a>参数
+
+`hEnum`\
+枚举器的句柄。
+
+`dwMax`\
+要检索的类型的最大数目。
+
+`aTypeDefs`\
+收到令牌类型，不能超过`dwMax`。
+
+`pdwCount`\
+接收中的类型的实际数目`aTypeDefs`。
+
+## <a name="return-value"></a>返回值
+
+如果该方法成功，返回，则为 S_OK。
+
+## <a name="requirements"></a>要求
+
+需要 alink.h
+
 ## <a name="see-also"></a>请参阅
-- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [IALink 接口](ialink-interface.md)
+- [IALink2 接口](ialink2-interface.md)
+- [ALink API](index.md)

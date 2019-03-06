@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: 4aa646ab27044bc26f3787d3edb5f0f15a15bd2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce4c2bd48e819541d942c795307df36629ec05b9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635580"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362625"
 ---
 # <a name="custom-rendering-ink"></a>自定义呈现墨迹
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>笔划的属性，可指定笔划，其大小、 颜色和形状，如的外观，但可能有些时候你想要自定义外观更<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>允许。 建议通过使用喷笔、油画和多种其他效果呈现外观，从而自定义墨迹的外观。 Windows Presentation Foundation (WPF) 允许您为自定义通过实现自定义呈现墨迹<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>和<xref:System.Windows.Ink.Stroke>对象。  
@@ -37,7 +37,7 @@ ms.locfileid: "54635580"
   
  动态呈现墨迹时需要实现三个类。  
   
-1.  **DynamicRenderer**:实现从 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 派生的类。 此类是一个专用<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>的形式对其绘制呈现笔划。 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>上执行呈现一个单独的线程，因此墨迹书写表面显示为收集手写内容，即使应用程序用户界面 (UI) 线程被阻止。 有关线程模型的详细信息，请参阅[墨迹线程模型](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)。 若要自定义动态呈现笔划，请重写<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A>方法。  
+1.  **DynamicRenderer**:实现从 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 派生的类。 此类是一个专用<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>的形式对其绘制呈现笔划。 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>上执行呈现一个单独的线程，因此墨迹书写表面显示为收集手写内容，即使应用程序用户界面 (UI) 线程被阻止。 有关线程模型的详细信息，请参阅[墨迹线程模型](the-ink-threading-model.md)。 若要自定义动态呈现笔划，请重写<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A>方法。  
   
 2.  **笔划**:实现从 <xref:System.Windows.Ink.Stroke> 派生的类。 此类负责的静态呈现<xref:System.Windows.Input.StylusPoint>数据转换为后<xref:System.Windows.Ink.Stroke>对象。 重写<xref:System.Windows.Ink.Stroke.DrawCore%2A>方法，以确保静态呈现笔划的是与动态呈现一致。  
   
@@ -49,10 +49,10 @@ ms.locfileid: "54635580"
   
  下面的示例演示自定义<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>绘制带有线性渐变画笔效果的墨迹。  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
-[!code-vb[AdvancedInkTopicsSamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
+[!code-vb[AdvancedInkTopicsSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
   
 <a name="ImplementingCustomStrokes"></a>   
 ## <a name="implementing-custom-strokes"></a>实现自定义笔划  
@@ -64,10 +64,10 @@ ms.locfileid: "54635580"
   
  以下C#的代码演示了一个自定义<xref:System.Windows.Ink.Stroke>呈现类的<xref:System.Windows.Input.StylusPoint>为三维笔划的数据。  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
-[!code-vb[AdvancedInkTopicsSamples#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
+[!code-vb[AdvancedInkTopicsSamples#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
   
 <a name="ImplementingACustomInkCanvas"></a>   
 ## <a name="implementing-a-custom-inkcanvas"></a>实现自定义 InkCanvas  
@@ -83,7 +83,7 @@ ms.locfileid: "54635580"
   
  以下C#的代码演示了一个自定义<xref:System.Windows.Controls.InkCanvas>类，该类使用自定义<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>，并收集自定义笔划。  
   
- [!code-csharp[AdvancedInkTopicsSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
+ [!code-csharp[AdvancedInkTopicsSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
   
  <xref:System.Windows.Controls.InkCanvas>可以有多个<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>。 可以添加多个<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>对象添加到<xref:System.Windows.Controls.InkCanvas>通过将它们添加到<xref:System.Windows.UIElement.StylusPlugIns%2A>属性。  
   
@@ -92,4 +92,4 @@ ms.locfileid: "54635580"
  您可以通过派生您自己自定义墨迹的外观<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>， <xref:System.Windows.Ink.Stroke>，和<xref:System.Windows.Controls.InkCanvas>类。 将这些类结合使用可以确保用户绘制笔划时和笔划被收集后的笔划外观保持一致。  
   
 ## <a name="see-also"></a>请参阅
-- [高级墨迹处理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [高级墨迹处理](advanced-ink-handling.md)

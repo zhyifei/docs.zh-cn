@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f2f2bff0d86d3c3fed443628a5c437fe1ebdcc15
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219836"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358166"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 本文提供用于改进大型 .NET Framework 应用或处理大量数据（如文件或数据库）的应用的性能的提示。 这些提示来自在托管代码中重写的 C# 和 Visual Basic 编译器，并且本文包括来自 C# 编译器的几个真实示例。 
@@ -467,7 +467,6 @@ class Compilation { /*...*/
 - [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [性能](../../../docs/framework/performance/index.md)
 - [.NET 性能提示](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
-- [Windows Phone 性能分析工具](https://msdn.microsoft.com/magazine/hh781024.aspx)
 - [通道 9 PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET 编译器平台 SDK](../../csharp/roslyn-sdk/index.md)
 - [GitHub 上的 dotnet/roslyn 存储库](https://github.com/dotnet/roslyn)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dependency properties [WPF], backing properties with
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
-ms.openlocfilehash: 90eb15d3cc0d9a6c1d07879b0166da4d45d786be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ee944c521b7e4ec75394c821e8bd509dd4eca74
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727321"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374409"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>如何：实现依赖项属性
 此示例演示如何重新[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]具有属性<xref:System.Windows.DependencyProperty>字段，从而定义依赖项属性。 定义自己的属性并需要其支持 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 功能的诸多方面（包括样式、数据绑定、继承、动画和默认值）时，应将其作为依赖属性实现。  
@@ -27,11 +27,11 @@ ms.locfileid: "54727321"
   
  还可为依赖属性指定默认元数据。 此示例将 `State` 依赖属性的默认值注册为 `false`。  
   
- [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
- [!code-vb[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
+ [!code-csharp[PropertySystemEsoterics#MyStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
+ [!code-vb[PropertySystemEsoterics#MyStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
   
- 若要深入了解实现依赖属性而非仅使用私有字段支持 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性的原因及其实现方式，请参阅[依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+ 若要深入了解实现依赖属性而非仅使用私有字段支持 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 属性的原因及其实现方式，请参阅[依赖属性概述](dependency-properties-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [帮助主题](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+- [依赖项属性概述](dependency-properties-overview.md)
+- [帮助主题](properties-how-to-topics.md)

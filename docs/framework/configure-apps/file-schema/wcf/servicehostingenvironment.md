@@ -3,11 +3,11 @@ title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
 ms.openlocfilehash: 09a796a78cf37b464f5f7c359822d9d0c5001787
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257562"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362404"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 此元素定义服务主机环境要为特定传输实例化的类型。 如果此元素为空，则使用默认类型。 此元素只能在应用程序或计算机级别的配置文件中使用。  

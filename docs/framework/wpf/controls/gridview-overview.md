@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 161c42254144fca0e76bfb5e4aa10f1afb5b11d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578528"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360194"
 ---
 # <a name="gridview-overview"></a>GridView 概述
 <xref:System.Windows.Controls.GridView> 视图模式是一种视图模式的<xref:System.Windows.Controls.ListView>控件。 <xref:System.Windows.Controls.GridView>类和及其支持类使您和您的用户能够查看通常使用按钮作为交互式列标题的表中的项集合。 本主题介绍<xref:System.Windows.Controls.GridView>类，并概述了其用途。  
@@ -29,19 +29,19 @@ ms.locfileid: "54578528"
   
  **ListView 内容的 GridView 视图**  
   
- ![带样式的 ListView](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
+ ![带样式的 ListView](./media/styledlistview.PNG "StyledListView")  
   
  <xref:System.Windows.Controls.GridView> 列由<xref:System.Windows.Controls.GridViewColumn>对象，可以对其内容自动调整大小。 （可选） 可以显式设置<xref:System.Windows.Controls.GridViewColumn>为一个特定宽度。 可通过拖动列标题之间的手柄重设列的大小。 您可以还可以动态地添加、 删除、 替换和对列重新排序，因为此功能内置到<xref:System.Windows.Controls.GridView>。 但是，<xref:System.Windows.Controls.GridView>不能直接更新它显示的数据。  
   
  下面的示例演示如何定义<xref:System.Windows.Controls.GridView>显示员工数据。 在此示例中，<xref:System.Windows.Controls.ListView>定义`EmployeeInfoDataSource`作为<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>。 属性定义<xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>绑定<xref:System.Windows.Controls.GridViewColumn>内容到`EmployeeInfoDataSource`数据类别。  
   
- [!code-xaml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
+ [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
  下图显示了上一示例创建的表格。  
   
  **显示 ItemsSource 中的数据的 GridView**  
   
- ![具有 GridView 输出的 ListView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
+ ![具有 GridView 输出的 ListView](./media/listviewgridview.JPG "ListViewGridView")  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>GridView 布局和样式  
@@ -55,7 +55,7 @@ ms.locfileid: "54578528"
   
  若要指定的列中的内容的对齐方式<xref:System.Windows.Controls.GridView>，定义<xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>。 不要使用<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>并<xref:System.Windows.Controls.Control.VerticalContentAlignment%2A>属性<xref:System.Windows.Controls.ListView>通过使用显示的内容<xref:System.Windows.Controls.GridView>。  
   
- 若要指定列标题的模板和样式属性，请使用<xref:System.Windows.Controls.GridView>， <xref:System.Windows.Controls.GridViewColumn>，和<xref:System.Windows.Controls.GridViewColumnHeader>类。 有关详细信息，请参阅 [GridView 列标题的样式和模板概述](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)。  
+ 若要指定列标题的模板和样式属性，请使用<xref:System.Windows.Controls.GridView>， <xref:System.Windows.Controls.GridViewColumn>，和<xref:System.Windows.Controls.GridViewColumnHeader>类。 有关详细信息，请参阅 [GridView 列标题的样式和模板概述](gridview-column-header-styles-and-templates-overview.md)。  
   
 <a name="AddingVisualElementstoaGridViewView"></a>   
 ### <a name="adding-visual-elements-to-a-gridview"></a>将可视元素添加到 GridView  
@@ -65,7 +65,7 @@ ms.locfileid: "54578528"
   
 <a name="StylingRowsinaGridViewView"></a>   
 ### <a name="styling-rows-in-a-gridview"></a>设置 GridView 中的行的样式  
- 使用<xref:System.Windows.Controls.GridViewRowPresenter>并<xref:System.Windows.Controls.GridViewHeaderRowPresenter>类来格式化和显示的行<xref:System.Windows.Controls.GridView>。 有关如何的示例中的样式行<xref:System.Windows.Controls.GridView>查看模式，请参阅[的行设置样式中 ListView，实现 GridView](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)。  
+ 使用<xref:System.Windows.Controls.GridViewRowPresenter>并<xref:System.Windows.Controls.GridViewHeaderRowPresenter>类来格式化和显示的行<xref:System.Windows.Controls.GridView>。 有关如何的示例中的样式行<xref:System.Windows.Controls.GridView>查看模式，请参阅[的行设置样式中 ListView，实现 GridView](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)。  
   
 <a name="AlignmentIssuesWhenUsingItemContainerStyle"></a>   
 ### <a name="alignment-issues-when-you-use-itemcontainerstyle"></a>使用 ItemContainerStyle 时的对齐问题  
@@ -83,7 +83,7 @@ ms.locfileid: "54578528"
   
      用户可以对中的列重新排序<xref:System.Windows.Controls.GridView>由列标题上时按鼠标左键，然后将该列拖动到新位置。 当用户拖动列标题时，将显示标题的浮动版本以及显示列的插入位置的黑色实线。  
   
-     如果你想要修改的浮动版本的标头的默认样式，指定<xref:System.Windows.Controls.ControlTemplate>有关<xref:System.Windows.Controls.GridViewColumnHeader>，它是键入触发时<xref:System.Windows.Controls.GridViewColumnHeader.Role%2A>属性设置为<xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>。 有关详细信息，请参阅[为拖动的 GridView 列标题创建样式](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)。  
+     如果你想要修改的浮动版本的标头的默认样式，指定<xref:System.Windows.Controls.ControlTemplate>有关<xref:System.Windows.Controls.GridViewColumnHeader>，它是键入触发时<xref:System.Windows.Controls.GridViewColumnHeader.Role%2A>属性设置为<xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>。 有关详细信息，请参阅[为拖动的 GridView 列标题创建样式](how-to-create-a-style-for-a-dragged-gridview-column-header.md)。  
   
 -   **根据列的内容重设其大小。**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "54578528"
   
      用户可以选择中的一个或多个项<xref:System.Windows.Controls.GridView>。  
   
-     如果你想要更改<xref:System.Windows.Style>选定项，请参阅[使用触发器为 ListView 中选定项设置样式](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)。  
+     如果你想要更改<xref:System.Windows.Style>选定项，请参阅[使用触发器为 ListView 中选定项设置样式](how-to-use-triggers-to-style-selected-items-in-a-listview.md)。  
   
 -   **滚动查看最初未显示在屏幕上的内容。**  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54578528"
   
 <a name="Obtaining_Other_Custom_Views"></a>   
 ## <a name="obtaining-other-custom-views"></a>获取其他自定义视图  
- <xref:System.Windows.Controls.GridView>类，该类派生自<xref:System.Windows.Controls.ViewBase>抽象类，只是可能视图模式的一个<xref:System.Windows.Controls.ListView>类。 可以创建其他自定义视图<xref:System.Windows.Controls.ListView>通过派生自<xref:System.Windows.Controls.ViewBase>类。 有关自定义视图模式的示例，请参阅[为 ListView 创建自定义视图模式](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)。  
+ <xref:System.Windows.Controls.GridView>类，该类派生自<xref:System.Windows.Controls.ViewBase>抽象类，只是可能视图模式的一个<xref:System.Windows.Controls.ListView>类。 可以创建其他自定义视图<xref:System.Windows.Controls.ListView>通过派生自<xref:System.Windows.Controls.ViewBase>类。 有关自定义视图模式的示例，请参阅[为 ListView 创建自定义视图模式](how-to-create-a-custom-view-mode-for-a-listview.md)。  
   
 <a name="GridViewSupportingClasses"></a>   
 ## <a name="gridview-supporting-classes"></a>GridView 支持类  
@@ -136,6 +136,6 @@ ms.locfileid: "54578528"
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.ViewBase>
-- [ListView 概述](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [在单击标题时对 GridView 列进行排序](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [帮助主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [ListView 概述](listview-overview.md)
+- [在单击标题时对 GridView 列进行排序](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
+- [帮助主题](listview-how-to-topics.md)

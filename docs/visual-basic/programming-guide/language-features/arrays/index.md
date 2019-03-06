@@ -2,18 +2,13 @@
 title: Visual Basic 中的数组
 ms.date: 12/06/2017
 f1_keywords:
-- vb.Array
+  - vb.Array
 helpviewer_keywords:
-- arrays [Visual Basic]
-- Visual Basic, arrays
+  - 'arrays [Visual Basic]'
+  - 'Visual Basic, arrays'
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149895"
 ---
+
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的数组
 
 数组是一组值，术语上称之为*元素*，逻辑上彼此相关的。 例如，数组可能包含的语法学校; 中的每个年级的学生数量数组的每个元素是单个年级的学生数量。 同样，数组可能包含的一个类; 的学生的成绩数组的每个元素是一个单一的等级。
@@ -87,7 +82,7 @@ Dim sales()() As Double = New Double(11)() {}
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-如果具有现有数组，您可以通过使用来重新定义其大小[ `Redim` ](../../../language-reference/statements/redim-statement.md)语句。 您可以指定`Redim`语句保留数组中的值，也可以指定它创建一个空数组。 下面的示例演示了用 `Redim` 语句来修改现有数组的大小的不同用法。
+如果具有现有数组，您可以通过使用来重新定义其大小[ `ReDim` ](../../../language-reference/statements/redim-statement.md)语句。 您可以指定`ReDim`语句保留数组中的值，也可以指定它创建一个空数组。 下面的示例演示了用 `ReDim` 语句来修改现有数组的大小的不同用法。
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
@@ -209,7 +204,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-前面的示例通过将值分配给交错数组元素的元素按`For...Next`循环。 通过使用嵌套的数组文本，还可以将值分配到交错数组的元素。 但是，尝试使用嵌套数组文本 (例如， ```Dim valuesjagged = {{1, 2}, {2, 3, 4}}```) 会生成编译器错误[BC30568](../../../,,/../misc/bc30568.md)。 若要更正此错误，请用括号括起来将内部数组文本。 圆括号会强制进行计算的数组文本表达式和生成的值用于外部数组文本，如以下示例所示。
+前面的示例通过将值分配给交错数组元素的元素按`For...Next`循环。 通过使用嵌套的数组文本，还可以将值分配到交错数组的元素。 但是，尝试使用嵌套数组文本 (例如， `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) 会生成编译器错误[BC30568](../../../,,/../misc/bc30568.md)。 若要更正此错误，请用括号括起来将内部数组文本。 圆括号会强制进行计算的数组文本表达式和生成的值用于外部数组文本，如以下示例所示。
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
@@ -269,7 +264,7 @@ Dim arrZ(-1) As String
 > [!NOTE]
 > 本部分不讨论联接成单个字符串的字符串数组。 有关联接的字符串数组的信息，请参阅<xref:System.String.Join%2A?displayProperty=nameWithType>方法。
 
-然后再将每个数组的元素复制到新数组，您首先必须确保，这样就足够大到 accompodate 新数组初始化数组。 可以通过两种方法执行此操作：
+然后再将每个数组的元素复制到新数组，您首先必须确保，这样就足够大以容纳新的数组初始化数组。 可以通过两种方法执行此操作：
 
 - 使用[ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md)语句，以便动态地将新元素添加到它之前展开数组。 这是最简单的技术，但它可能会导致性能下降并占用过多内存时要复制大型数组。
 - 计算所需的新的大型数组的元素的总数，然后将每个源数组的元素添加到它。

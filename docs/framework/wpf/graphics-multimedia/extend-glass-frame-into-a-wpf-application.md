@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 9df6adbf9208ee58044b0ba6ef606d693c9dca7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 326cf683c05eae342646efca962cfe9b87ccab79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705818"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364679"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>将玻璃框扩展到 WPF 应用程序
 本主题演示如何扩展[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]到 Windows Presentation Foundation (WPF) 应用程序的客户端区域的玻璃框。  
@@ -28,7 +28,7 @@ ms.locfileid: "54705818"
   
  **玻璃框扩展到地址栏后的 Internet Explorer。**  
   
- ![玻璃框扩展到地址栏后的 IE7。](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")  
+ ![玻璃框扩展到地址栏后的 IE7。](./media/ie7glasstopbar.PNG "IE7glasstopbar")  
   
  若要在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序上扩展玻璃框，需要访问非托管 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。 以下代码示例针对将框扩展到工作区所需的两个 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 执行平台调用 (pinvoke)。 其中每一个 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 都在名为 **NonClientRegionAPI** 的类中声明。  
   
@@ -147,7 +147,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
   
  **扩展到** [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] **应用程序中的玻璃框。**  
   
- ![扩展到 WPF 应用程序中的玻璃框。](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
+ ![扩展到 WPF 应用程序中的玻璃框。](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
 ## <a name="see-also"></a>请参阅
 - [桌面窗口管理器概述](/windows/desktop/dwm/dwm-overview)

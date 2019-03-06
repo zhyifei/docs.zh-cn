@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Transforms [WPF], origins of
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-ms.openlocfilehash: 55007575435ada809b8fba43d08abdd2ce9ddd73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdcc17e2d9bf68170c10dd8e35670f3e072a527c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570611"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352563"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>如何：使用相对值指定变换原点
 此示例演示如何使用相对值来指定原点<xref:System.Windows.UIElement.RenderTransform%2A>应用于<xref:System.Windows.FrameworkElement>。  
@@ -23,23 +23,23 @@ ms.locfileid: "54570611"
   
  下图显示了以下示例的转换结果。  
   
- ![使用 RenderTransform 转换的按钮](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
+ ![使用 RenderTransform 转换的按钮](./media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
 使用 RenderTransform 属性顺时针旋转 45 度  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
  下面的示例也使用<xref:System.Windows.Media.RotateTransform>旋转<xref:System.Windows.Controls.Button>45 度顺时针旋转; 但是，此示例设置<xref:System.Windows.UIElement.RenderTransformOrigin%2A>到按钮的 （0.5，0.5）。 因此，将在按钮的中心（而不是其左上角）应用旋转。  
   
  下图显示了以下示例的转换结果。  
   
- ![围绕中心转换后的按钮](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
+ ![围绕中心转换后的按钮](./media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
 将 RenderTransform 属性与值为 (0.5, 0.5) 的 RenderTransformOrigin 结合使用以旋转 45 度  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
- 有关转换的详细信息<xref:System.Windows.FrameworkElement>对象，请参阅[转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)。  
+ 有关转换的详细信息<xref:System.Windows.FrameworkElement>对象，请参阅[转换概述](transforms-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Media.Transform>
-- [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
-- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [转换概述](transforms-overview.md)
+- [帮助主题](transformations-how-to-topics.md)
