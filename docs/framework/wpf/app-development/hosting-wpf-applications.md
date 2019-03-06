@@ -8,24 +8,24 @@ helpviewer_keywords:
 - application hosting [WPF]
 - hosting applications [WPF]
 ms.assetid: 1f73067d-c60a-4e9a-b513-c817ee7da3a1
-ms.openlocfilehash: b0a334796cdb698f25f03f629785dae2ee732426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7259c6275b4a87eb7c4ef083dda55b24c1564e9b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546886"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352265"
 ---
-# <a name="hosting-wpf-applications"></a><span data-ttu-id="6a456-102">承载 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="6a456-102">Hosting WPF Applications</span></span>
-<span data-ttu-id="6a456-103">WPF XAML 浏览器应用程序 (Xbap) 是胖客户端应用程序可以部署到 Web 服务器并在浏览器中启动。</span><span class="sxs-lookup"><span data-stu-id="6a456-103">WPF XAML Browser Applications (XBAPs) are rich-client applications that can be deployed to a Web server and started in a browser.</span></span> <span data-ttu-id="6a456-104">WPF 主机 (PresentationHost.exe) 注册为 shell 和 MIME XBAP 和 XAML 文件的处理程序。</span><span class="sxs-lookup"><span data-stu-id="6a456-104">The WPF Host (PresentationHost.exe) is registered as the shell and MIME handler for XBAP and XAML files.</span></span> <span data-ttu-id="6a456-105">因此，Internet Explorer 知道 XBAP 启动时启动 WPF 主机。</span><span class="sxs-lookup"><span data-stu-id="6a456-105">Therefore, Internet Explorer knows to start the WPF Host when an XBAP is launched.</span></span> <span data-ttu-id="6a456-106">Firefox 用户可以安装到主机 Xbap 以及启用 Firefox 的 Firefox 外接程序。</span><span class="sxs-lookup"><span data-stu-id="6a456-106">Firefox users can install Firefox add-ons that enable Firefox to host XBAPs as well.</span></span> <span data-ttu-id="6a456-107">XBAP 可以通过使用 wpf 的本机浏览器托管 Api 提供托管在其他浏览器或独立的应用程序。</span><span class="sxs-lookup"><span data-stu-id="6a456-107">An XBAP can be hosted in other browsers or stand-alone applications by using the native browser hosting APIs provided by WPF.</span></span>  
+# <a name="hosting-wpf-applications"></a><span data-ttu-id="3209c-102">承载 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="3209c-102">Hosting WPF Applications</span></span>
+<span data-ttu-id="3209c-103">WPF XAML 浏览器应用程序 (Xbap) 是可以部署到 Web 服务器并启动浏览器中的丰富客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="3209c-103">WPF XAML Browser Applications (XBAPs) are rich-client applications that can be deployed to a Web server and started in a browser.</span></span> <span data-ttu-id="3209c-104">WPF 主机 (PresentationHost.exe) 注册为 shell 和 XBAP 和 XAML 文件的 MIME 处理程序。</span><span class="sxs-lookup"><span data-stu-id="3209c-104">The WPF Host (PresentationHost.exe) is registered as the shell and MIME handler for XBAP and XAML files.</span></span> <span data-ttu-id="3209c-105">因此，Internet Explorer 知道要启动 XBAP 时启动 WPF 宿主。</span><span class="sxs-lookup"><span data-stu-id="3209c-105">Therefore, Internet Explorer knows to start the WPF Host when an XBAP is launched.</span></span> <span data-ttu-id="3209c-106">Firefox 用户可以安装到主机 Xbap 也启用 Firefox 的 Firefox 加载项。</span><span class="sxs-lookup"><span data-stu-id="3209c-106">Firefox users can install Firefox add-ons that enable Firefox to host XBAPs as well.</span></span> <span data-ttu-id="3209c-107">通过使用 wpf 的本机浏览器提供托管的 Api，可以在其他浏览器或独立应用程序中承载 XBAP。</span><span class="sxs-lookup"><span data-stu-id="3209c-107">An XBAP can be hosted in other browsers or stand-alone applications by using the native browser hosting APIs provided by WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6a456-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="6a456-108">In This Section</span></span>  
- <span data-ttu-id="6a456-109">[WPF XAML Browser Applications Overview](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）</span><span class="sxs-lookup"><span data-stu-id="6a456-109">[WPF XAML Browser Applications Overview](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)</span></span>  
-   [<span data-ttu-id="6a456-110">WPF 主机 (PresentationHost.exe)</span><span class="sxs-lookup"><span data-stu-id="6a456-110">WPF Host (PresentationHost.exe)</span></span>](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)  
-  [<span data-ttu-id="6a456-111">支持 .NET 应用程序部署的 Firefox 加载项</span><span class="sxs-lookup"><span data-stu-id="6a456-111">Firefox Add-ons to Support .NET Application Deployment</span></span>](../../../../docs/framework/wpf/app-development/firefox-add-ons-to-support-net-application-deployment.md)  
-  [<span data-ttu-id="6a456-112">托管支持 API 的本机 WPF 浏览器</span><span class="sxs-lookup"><span data-stu-id="6a456-112">Native WPF Browser Hosting Support APIs</span></span>](../../../../docs/framework/wpf/app-development/native-wpf-browser-hosting-support-apis.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3209c-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="3209c-108">In This Section</span></span>  
+ <span data-ttu-id="3209c-109">[WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）</span><span class="sxs-lookup"><span data-stu-id="3209c-109">[WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md)</span></span>  
+   [<span data-ttu-id="3209c-110">WPF 主机 (PresentationHost.exe)</span><span class="sxs-lookup"><span data-stu-id="3209c-110">WPF Host (PresentationHost.exe)</span></span>](wpf-host-presentationhost-exe.md)  
+  [<span data-ttu-id="3209c-111">支持 .NET 应用程序部署的 Firefox 加载项</span><span class="sxs-lookup"><span data-stu-id="3209c-111">Firefox Add-ons to Support .NET Application Deployment</span></span>](firefox-add-ons-to-support-net-application-deployment.md)  
+  [<span data-ttu-id="3209c-112">托管支持 API 的本机 WPF 浏览器</span><span class="sxs-lookup"><span data-stu-id="3209c-112">Native WPF Browser Hosting Support APIs</span></span>](native-wpf-browser-hosting-support-apis.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="6a456-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="6a456-113">Related Sections</span></span>  
- [<span data-ttu-id="6a456-114">应用程序管理概述</span><span class="sxs-lookup"><span data-stu-id="6a456-114">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [<span data-ttu-id="6a456-115">WPF 中的窗口</span><span class="sxs-lookup"><span data-stu-id="6a456-115">Windows in WPF</span></span>](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [<span data-ttu-id="6a456-116">导航概述</span><span class="sxs-lookup"><span data-stu-id="6a456-116">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [<span data-ttu-id="6a456-117">生成和部署</span><span class="sxs-lookup"><span data-stu-id="6a456-117">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="3209c-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="3209c-113">Related Sections</span></span>  
+ [<span data-ttu-id="3209c-114">应用程序管理概述</span><span class="sxs-lookup"><span data-stu-id="3209c-114">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="3209c-115">WPF 中的窗口</span><span class="sxs-lookup"><span data-stu-id="3209c-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
+  [<span data-ttu-id="3209c-116">导航概述</span><span class="sxs-lookup"><span data-stu-id="3209c-116">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="3209c-117">生成和部署</span><span class="sxs-lookup"><span data-stu-id="3209c-117">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)

@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 0f663cd95c979ec9f2b81ccf173b4418321228f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 614f4fac288e53677d072c6c88edfa46df18f40a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570520"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352446"
 ---
-# <a name="transformations"></a><span data-ttu-id="ab56a-102">转换</span><span class="sxs-lookup"><span data-stu-id="ab56a-102">Transformations</span></span>
-<span data-ttu-id="ab56a-103">使用转换来旋转、 缩放、 转换或倾斜<xref:System.Windows.FrameworkElement>对象。</span><span class="sxs-lookup"><span data-stu-id="ab56a-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="e2109-102">转换</span><span class="sxs-lookup"><span data-stu-id="e2109-102">Transformations</span></span>
+<span data-ttu-id="e2109-103">使用转换来旋转、 缩放、 转换或倾斜<xref:System.Windows.FrameworkElement>对象。</span><span class="sxs-lookup"><span data-stu-id="e2109-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ab56a-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="ab56a-104">In This Section</span></span>  
- [<span data-ttu-id="ab56a-105">转换概述</span><span class="sxs-lookup"><span data-stu-id="ab56a-105">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [<span data-ttu-id="ab56a-106">帮助主题</span><span class="sxs-lookup"><span data-stu-id="ab56a-106">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e2109-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="e2109-104">In This Section</span></span>  
+ [<span data-ttu-id="e2109-105">转换概述</span><span class="sxs-lookup"><span data-stu-id="e2109-105">Transforms Overview</span></span>](transforms-overview.md)  
+ [<span data-ttu-id="e2109-106">帮助主题</span><span class="sxs-lookup"><span data-stu-id="e2109-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="ab56a-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="ab56a-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2109-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="e2109-107">See also</span></span>
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="ab56a-108">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="ab56a-108">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [<span data-ttu-id="ab56a-109">WPF 图形呈现概述</span><span class="sxs-lookup"><span data-stu-id="ab56a-109">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="ab56a-110">布局</span><span class="sxs-lookup"><span data-stu-id="ab56a-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+- [<span data-ttu-id="e2109-108">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="e2109-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="e2109-109">WPF 图形呈现概述</span><span class="sxs-lookup"><span data-stu-id="e2109-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="e2109-110">布局</span><span class="sxs-lookup"><span data-stu-id="e2109-110">Layout</span></span>](../advanced/layout.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: b4a97c97-7f88-4a89-b1d1-cf2c0d087955
-ms.openlocfilehash: aefae32182a7bc808ac72f053c233305da32032e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2eb77d478292a5301c0782b860e46edd92ce8478
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543797"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356944"
 ---
-# <a name="fonts-how-to-topics"></a><span data-ttu-id="e06b8-102">字体帮助主题</span><span class="sxs-lookup"><span data-stu-id="e06b8-102">Fonts How-to Topics</span></span>
-<span data-ttu-id="e06b8-103">在本部分中的主题演示如何使用包含的字体特性[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e06b8-103">The topics in this section demonstrate how to use the font features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="fonts-how-to-topics"></a><span data-ttu-id="82eea-102">字体帮助主题</span><span class="sxs-lookup"><span data-stu-id="82eea-102">Fonts How-to Topics</span></span>
+<span data-ttu-id="82eea-103">在本部分中的主题演示如何使用包含的字体特性[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="82eea-103">The topics in this section demonstrate how to use the font features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e06b8-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="e06b8-104">In This Section</span></span>  
- [<span data-ttu-id="e06b8-105">枚举系统字体</span><span class="sxs-lookup"><span data-stu-id="e06b8-105">Enumerate System Fonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-enumerate-system-fonts.md)  
- [<span data-ttu-id="e06b8-106">使用 FontSizeConverter 类</span><span class="sxs-lookup"><span data-stu-id="e06b8-106">Use the FontSizeConverter Class</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-the-fontsizeconverter-class.md)  
+## <a name="in-this-section"></a><span data-ttu-id="82eea-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="82eea-104">In This Section</span></span>  
+ [<span data-ttu-id="82eea-105">枚举系统字体</span><span class="sxs-lookup"><span data-stu-id="82eea-105">Enumerate System Fonts</span></span>](how-to-enumerate-system-fonts.md)  
+ [<span data-ttu-id="82eea-106">使用 FontSizeConverter 类</span><span class="sxs-lookup"><span data-stu-id="82eea-106">Use the FontSizeConverter Class</span></span>](how-to-use-the-fontsizeconverter-class.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e06b8-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="e06b8-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="82eea-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="82eea-107">See also</span></span>
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="e06b8-108">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="e06b8-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [<span data-ttu-id="e06b8-109">WPF 中的版式</span><span class="sxs-lookup"><span data-stu-id="e06b8-109">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [<span data-ttu-id="82eea-108">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="82eea-108">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="82eea-109">WPF 中的版式</span><span class="sxs-lookup"><span data-stu-id="82eea-109">Typography in WPF</span></span>](typography-in-wpf.md)

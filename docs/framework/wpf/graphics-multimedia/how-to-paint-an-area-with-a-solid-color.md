@@ -6,48 +6,48 @@ helpviewer_keywords:
 - brushes [WPF], painting with solid colors
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
-ms.openlocfilehash: db1ff6048ab30554767459863c0fd5e261851f59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae6be062313e9340edefd86c15b7a044996fe280
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647802"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373105"
 ---
-# <a name="how-to-paint-an-area-with-a-solid-color"></a><span data-ttu-id="d11ed-102">如何：使用纯色绘制区域</span><span class="sxs-lookup"><span data-stu-id="d11ed-102">How to: Paint an Area with a Solid Color</span></span>
-<span data-ttu-id="d11ed-103">若要绘制使用纯色区域，可以使用预定义的系统画笔，如<xref:System.Windows.Media.Brushes.Red%2A>或<xref:System.Windows.Media.Brushes.Blue%2A>，也可以创建一个新<xref:System.Windows.Media.SolidColorBrush>并描述其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 alpha、 红色、 绿色和蓝色值。</span><span class="sxs-lookup"><span data-stu-id="d11ed-103">To paint an area with a solid color, you can use a predefined system brush, such as <xref:System.Windows.Media.Brushes.Red%2A> or <xref:System.Windows.Media.Brushes.Blue%2A>, or you can create a new <xref:System.Windows.Media.SolidColorBrush> and describe its <xref:System.Windows.Media.SolidColorBrush.Color%2A> using alpha, red, green, and blue values.</span></span> <span data-ttu-id="d11ed-104">在 XAML 中，还可以使用十六进制表示法来利用纯色绘制区域。</span><span class="sxs-lookup"><span data-stu-id="d11ed-104">In XAML, you may also paint an area with a solid color by using hexidecimal notation.</span></span>  
+# <a name="how-to-paint-an-area-with-a-solid-color"></a><span data-ttu-id="b219c-102">如何：使用纯色绘制区域</span><span class="sxs-lookup"><span data-stu-id="b219c-102">How to: Paint an Area with a Solid Color</span></span>
+<span data-ttu-id="b219c-103">若要绘制使用纯色区域，可以使用预定义的系统画笔，如<xref:System.Windows.Media.Brushes.Red%2A>或<xref:System.Windows.Media.Brushes.Blue%2A>，也可以创建一个新<xref:System.Windows.Media.SolidColorBrush>并描述其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 alpha、 红色、 绿色和蓝色值。</span><span class="sxs-lookup"><span data-stu-id="b219c-103">To paint an area with a solid color, you can use a predefined system brush, such as <xref:System.Windows.Media.Brushes.Red%2A> or <xref:System.Windows.Media.Brushes.Blue%2A>, or you can create a new <xref:System.Windows.Media.SolidColorBrush> and describe its <xref:System.Windows.Media.SolidColorBrush.Color%2A> using alpha, red, green, and blue values.</span></span> <span data-ttu-id="b219c-104">在 XAML 中，还可以使用十六进制表示法来利用纯色绘制区域。</span><span class="sxs-lookup"><span data-stu-id="b219c-104">In XAML, you may also paint an area with a solid color by using hexidecimal notation.</span></span>  
   
- <span data-ttu-id="d11ed-105">下面的示例使用上述每种方法来绘制<xref:System.Windows.Shapes.Rectangle>蓝色。</span><span class="sxs-lookup"><span data-stu-id="d11ed-105">The following examples uses each of these techniques to paint a <xref:System.Windows.Shapes.Rectangle> blue.</span></span>  
+ <span data-ttu-id="b219c-105">下面的示例使用上述每种方法来绘制<xref:System.Windows.Shapes.Rectangle>蓝色。</span><span class="sxs-lookup"><span data-stu-id="b219c-105">The following examples uses each of these techniques to paint a <xref:System.Windows.Shapes.Rectangle> blue.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d11ed-106">示例</span><span class="sxs-lookup"><span data-stu-id="d11ed-106">Example</span></span>  
- <span data-ttu-id="d11ed-107">**使用预定义画笔**</span><span class="sxs-lookup"><span data-stu-id="d11ed-107">**Using a Predefined Brush**</span></span>  
+## <a name="example"></a><span data-ttu-id="b219c-106">示例</span><span class="sxs-lookup"><span data-stu-id="b219c-106">Example</span></span>  
+ <span data-ttu-id="b219c-107">**使用预定义画笔**</span><span class="sxs-lookup"><span data-stu-id="b219c-107">**Using a Predefined Brush**</span></span>  
   
- <span data-ttu-id="d11ed-108">在下面的示例使用预定义的画笔<xref:System.Windows.Media.Brushes.Blue%2A>来绘制一个蓝色矩形。</span><span class="sxs-lookup"><span data-stu-id="d11ed-108">In the following example uses the predefined brush <xref:System.Windows.Media.Brushes.Blue%2A> to paint a rectangle blue.</span></span>  
+ <span data-ttu-id="b219c-108">在下面的示例使用预定义的画笔<xref:System.Windows.Media.Brushes.Blue%2A>来绘制一个蓝色矩形。</span><span class="sxs-lookup"><span data-stu-id="b219c-108">In the following example uses the predefined brush <xref:System.Windows.Media.Brushes.Blue%2A> to paint a rectangle blue.</span></span>  
   
- [!code-xaml[brushsamples_snip#_graphicsmm_PredefinedBrush1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_predefinedbrush1)]  
+ [!code-xaml[brushsamples_snip#_graphicsmm_PredefinedBrush1](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_predefinedbrush1)]  
   
- [!code-csharp[brushsamples_procedural_snip#_graphicsmm_PredefinedBrush1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_predefinedbrush1)]  
+ [!code-csharp[brushsamples_procedural_snip#_graphicsmm_PredefinedBrush1](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_predefinedbrush1)]  
   
- <span data-ttu-id="d11ed-109">**使用十六进制表示法**</span><span class="sxs-lookup"><span data-stu-id="d11ed-109">**Using Hexadecimal Notation**</span></span>  
+ <span data-ttu-id="b219c-109">**使用十六进制表示法**</span><span class="sxs-lookup"><span data-stu-id="b219c-109">**Using Hexadecimal Notation**</span></span>  
   
- <span data-ttu-id="d11ed-110">下一个示例使用 8 位十六进制表示法绘制一个蓝色矩形。</span><span class="sxs-lookup"><span data-stu-id="d11ed-110">The next example uses 8-digit hexadecimal notation to paint a rectangle blue.</span></span>  
+ <span data-ttu-id="b219c-110">下一个示例使用 8 位十六进制表示法绘制一个蓝色矩形。</span><span class="sxs-lookup"><span data-stu-id="b219c-110">The next example uses 8-digit hexadecimal notation to paint a rectangle blue.</span></span>  
   
- [!code-xaml[brushsamples_snip#_graphicsmm_HexNotation8Digit1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_hexnotation8digit1)]  
+ [!code-xaml[brushsamples_snip#_graphicsmm_HexNotation8Digit1](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_hexnotation8digit1)]  
   
- <span data-ttu-id="d11ed-111">**使用 ARGB 值**</span><span class="sxs-lookup"><span data-stu-id="d11ed-111">**Using ARGB Values**</span></span>  
+ <span data-ttu-id="b219c-111">**使用 ARGB 值**</span><span class="sxs-lookup"><span data-stu-id="b219c-111">**Using ARGB Values**</span></span>  
   
- <span data-ttu-id="d11ed-112">下一个示例创建<xref:System.Windows.Media.SolidColorBrush>并介绍了其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 ARGB 值为蓝色。</span><span class="sxs-lookup"><span data-stu-id="d11ed-112">The next example creates a <xref:System.Windows.Media.SolidColorBrush> and describes its <xref:System.Windows.Media.SolidColorBrush.Color%2A> using the ARGB values for the color blue.</span></span>  
+ <span data-ttu-id="b219c-112">下一个示例创建<xref:System.Windows.Media.SolidColorBrush>并介绍了其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 ARGB 值为蓝色。</span><span class="sxs-lookup"><span data-stu-id="b219c-112">The next example creates a <xref:System.Windows.Media.SolidColorBrush> and describes its <xref:System.Windows.Media.SolidColorBrush.Color%2A> using the ARGB values for the color blue.</span></span>  
   
- [!code-xaml[brushsamples_snip#_graphicsmm_RgbNotation1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_rgbnotation1)]  
+ [!code-xaml[brushsamples_snip#_graphicsmm_RgbNotation1](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_rgbnotation1)]  
   
- [!code-csharp[brushsamples_procedural_snip#_graphicsmm_RgbNotation1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_rgbnotation1)]  
+ [!code-csharp[brushsamples_procedural_snip#_graphicsmm_RgbNotation1](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_rgbnotation1)]  
   
- <span data-ttu-id="d11ed-113">有关描述颜色的其他方法，请参阅<xref:System.Windows.Media.Color>结构。</span><span class="sxs-lookup"><span data-stu-id="d11ed-113">For other ways of describing color, see the <xref:System.Windows.Media.Color> structure.</span></span>  
+ <span data-ttu-id="b219c-113">有关描述颜色的其他方法，请参阅<xref:System.Windows.Media.Color>结构。</span><span class="sxs-lookup"><span data-stu-id="b219c-113">For other ways of describing color, see the <xref:System.Windows.Media.Color> structure.</span></span>  
   
- <span data-ttu-id="d11ed-114">**相关主题**</span><span class="sxs-lookup"><span data-stu-id="d11ed-114">**Related Topics**</span></span>  
+ <span data-ttu-id="b219c-114">**相关主题**</span><span class="sxs-lookup"><span data-stu-id="b219c-114">**Related Topics**</span></span>  
   
- <span data-ttu-id="d11ed-115">有关详细信息<xref:System.Windows.Media.SolidColorBrush>和其他示例，请参阅[使用纯色和渐变概述进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)概述。</span><span class="sxs-lookup"><span data-stu-id="d11ed-115">For more information about <xref:System.Windows.Media.SolidColorBrush> and additional examples, see the [Painting with Solid Colors and Gradients Overview](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) overview.</span></span>  
+ <span data-ttu-id="b219c-115">有关详细信息<xref:System.Windows.Media.SolidColorBrush>和其他示例，请参阅[使用纯色和渐变概述进行绘制](painting-with-solid-colors-and-gradients-overview.md)概述。</span><span class="sxs-lookup"><span data-stu-id="b219c-115">For more information about <xref:System.Windows.Media.SolidColorBrush> and additional examples, see the [Painting with Solid Colors and Gradients Overview](painting-with-solid-colors-and-gradients-overview.md) overview.</span></span>  
   
- <span data-ttu-id="d11ed-116">此代码示例是为提供一个更大示例的一部分<xref:System.Windows.Media.SolidColorBrush>类。</span><span class="sxs-lookup"><span data-stu-id="d11ed-116">This code example is part of a larger example provided for the <xref:System.Windows.Media.SolidColorBrush> class.</span></span> <span data-ttu-id="d11ed-117">有关完整示例，请参阅[画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)。</span><span class="sxs-lookup"><span data-stu-id="d11ed-117">For the complete sample, see the [Brushes Sample](https://go.microsoft.com/fwlink/?LinkID=159973).</span></span>  
+ <span data-ttu-id="b219c-116">此代码示例是为提供一个更大示例的一部分<xref:System.Windows.Media.SolidColorBrush>类。</span><span class="sxs-lookup"><span data-stu-id="b219c-116">This code example is part of a larger example provided for the <xref:System.Windows.Media.SolidColorBrush> class.</span></span> <span data-ttu-id="b219c-117">有关完整示例，请参阅[画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)。</span><span class="sxs-lookup"><span data-stu-id="b219c-117">For the complete sample, see the [Brushes Sample](https://go.microsoft.com/fwlink/?LinkID=159973).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d11ed-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="d11ed-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b219c-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="b219c-118">See also</span></span>
 - <xref:System.Windows.Media.Brushes>

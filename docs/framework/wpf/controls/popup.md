@@ -9,26 +9,26 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: c7161439f5b4a0e0e224235b458945376215d273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a36af4730a494448387ad059ff75199a19a1a359
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551747"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370652"
 ---
-# <a name="popup"></a><span data-ttu-id="f3d01-102">弹出项</span><span class="sxs-lookup"><span data-stu-id="f3d01-102">Popup</span></span>
-<span data-ttu-id="f3d01-103"><xref:System.Windows.Controls.Primitives.Popup>控件通过当前的应用程序窗口浮动的单独窗口中显示内容。</span><span class="sxs-lookup"><span data-stu-id="f3d01-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup"></a><span data-ttu-id="a8e6e-102">弹出项</span><span class="sxs-lookup"><span data-stu-id="a8e6e-102">Popup</span></span>
+<span data-ttu-id="a8e6e-103"><xref:System.Windows.Controls.Primitives.Popup>控件当前的应用程序窗口上浮动的单独窗口中显示内容。</span><span class="sxs-lookup"><span data-stu-id="a8e6e-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
   
- <span data-ttu-id="f3d01-104">下图显示<xref:System.Windows.Controls.Primitives.Popup>相对于定位的控件<xref:System.Windows.Controls.Button>，它是其父级。</span><span class="sxs-lookup"><span data-stu-id="f3d01-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent.</span></span>  
+ <span data-ttu-id="a8e6e-104">如下图所示<xref:System.Windows.Controls.Primitives.Popup>相对于定位的控件<xref:System.Windows.Controls.Button>，它是其父级。</span><span class="sxs-lookup"><span data-stu-id="a8e6e-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent.</span></span>  
   
- <span data-ttu-id="f3d01-105">![Popup 图](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")</span><span class="sxs-lookup"><span data-stu-id="f3d01-105">![Popup illustration](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")</span></span>  
+ <span data-ttu-id="a8e6e-105">![Popup 图](./media/popuppicture.JPG "PopupPicture")</span><span class="sxs-lookup"><span data-stu-id="a8e6e-105">![Popup illustration](./media/popuppicture.JPG "PopupPicture")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f3d01-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="f3d01-106">In This Section</span></span>  
- [<span data-ttu-id="f3d01-107">Popup 概述</span><span class="sxs-lookup"><span data-stu-id="f3d01-107">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [<span data-ttu-id="f3d01-108">Popup 放置行为</span><span class="sxs-lookup"><span data-stu-id="f3d01-108">Popup Placement Behavior</span></span>](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
- [<span data-ttu-id="f3d01-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="f3d01-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a8e6e-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="a8e6e-106">In This Section</span></span>  
+ [<span data-ttu-id="a8e6e-107">Popup 概述</span><span class="sxs-lookup"><span data-stu-id="a8e6e-107">Popup Overview</span></span>](popup-overview.md)  
+ [<span data-ttu-id="a8e6e-108">Popup 放置行为</span><span class="sxs-lookup"><span data-stu-id="a8e6e-108">Popup Placement Behavior</span></span>](popup-placement-behavior.md)  
+ [<span data-ttu-id="a8e6e-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="a8e6e-109">How-to Topics</span></span>](popup-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="f3d01-110">参考</span><span class="sxs-lookup"><span data-stu-id="f3d01-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a8e6e-110">参考</span><span class="sxs-lookup"><span data-stu-id="a8e6e-110">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="f3d01-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="f3d01-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="a8e6e-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="a8e6e-111">Related Sections</span></span>
