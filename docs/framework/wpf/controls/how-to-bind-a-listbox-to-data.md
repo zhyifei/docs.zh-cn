@@ -6,23 +6,23 @@ helpviewer_keywords:
 - data binding [WPF], ListBox control
 - binding data [WPF], to ListBox control
 ms.assetid: de93a907-709a-44a7-84bf-578b846a3d8b
-ms.openlocfilehash: 6d37cda057ea1e7ca6761363857a2647da37afee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cbcb0fb859605c33e2d92559b4a47aa1725472c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650647"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372876"
 ---
-# <a name="how-to-bind-a-listbox-to-data"></a><span data-ttu-id="76206-102">如何：将 ListBox 绑定到数据</span><span class="sxs-lookup"><span data-stu-id="76206-102">How to: Bind a ListBox to Data</span></span>
-<span data-ttu-id="76206-103">应用程序开发人员可以创建<xref:System.Windows.Controls.ListBox>而无需指定的每个内容控件<xref:System.Windows.Controls.ListBoxItem>单独。</span><span class="sxs-lookup"><span data-stu-id="76206-103">An application developer can create <xref:System.Windows.Controls.ListBox> controls without specifying the contents of each <xref:System.Windows.Controls.ListBoxItem> separately.</span></span> <span data-ttu-id="76206-104">数据绑定可用于将数据绑定到的各个项。</span><span class="sxs-lookup"><span data-stu-id="76206-104">You can use data binding to bind data to the individual items.</span></span>  
+# <a name="how-to-bind-a-listbox-to-data"></a><span data-ttu-id="3d562-102">如何：将 ListBox 绑定到数据</span><span class="sxs-lookup"><span data-stu-id="3d562-102">How to: Bind a ListBox to Data</span></span>
+<span data-ttu-id="3d562-103">应用程序开发人员可以创建<xref:System.Windows.Controls.ListBox>而无需指定的每个内容控件<xref:System.Windows.Controls.ListBoxItem>单独。</span><span class="sxs-lookup"><span data-stu-id="3d562-103">An application developer can create <xref:System.Windows.Controls.ListBox> controls without specifying the contents of each <xref:System.Windows.Controls.ListBoxItem> separately.</span></span> <span data-ttu-id="3d562-104">数据绑定可用于将数据绑定到的各个项。</span><span class="sxs-lookup"><span data-stu-id="3d562-104">You can use data binding to bind data to the individual items.</span></span>  
   
- <span data-ttu-id="76206-105">下面的示例演示如何创建<xref:System.Windows.Controls.ListBox>填充<xref:System.Windows.Controls.ListBoxItem>通过数据绑定到的数据源的元素*颜色*。</span><span class="sxs-lookup"><span data-stu-id="76206-105">The following example shows how to create a <xref:System.Windows.Controls.ListBox> that populates the <xref:System.Windows.Controls.ListBoxItem> elements by data binding to a data source called *Colors*.</span></span> <span data-ttu-id="76206-106">在这种情况下不需要使用<xref:System.Windows.Controls.ListBoxItem>标记，以指定每个项的内容。</span><span class="sxs-lookup"><span data-stu-id="76206-106">In this case it is not necessary to use <xref:System.Windows.Controls.ListBoxItem> tags to specify the content of each item.</span></span>  
+ <span data-ttu-id="3d562-105">下面的示例演示如何创建<xref:System.Windows.Controls.ListBox>填充<xref:System.Windows.Controls.ListBoxItem>通过数据绑定到的数据源的元素*颜色*。</span><span class="sxs-lookup"><span data-stu-id="3d562-105">The following example shows how to create a <xref:System.Windows.Controls.ListBox> that populates the <xref:System.Windows.Controls.ListBoxItem> elements by data binding to a data source called *Colors*.</span></span> <span data-ttu-id="3d562-106">在这种情况下不需要使用<xref:System.Windows.Controls.ListBoxItem>标记，以指定每个项的内容。</span><span class="sxs-lookup"><span data-stu-id="3d562-106">In this case it is not necessary to use <xref:System.Windows.Controls.ListBoxItem> tags to specify the content of each item.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="76206-107">示例</span><span class="sxs-lookup"><span data-stu-id="76206-107">Example</span></span>  
- [!code-xaml[ListBoxEvent#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#7)]  
-[!code-xaml[ListBoxEvent#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#3)]  
+## <a name="example"></a><span data-ttu-id="3d562-107">示例</span><span class="sxs-lookup"><span data-stu-id="3d562-107">Example</span></span>  
+ [!code-xaml[ListBoxEvent#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#7)]  
+[!code-xaml[ListBoxEvent#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="76206-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="76206-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3d562-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="3d562-108">See also</span></span>
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.Controls.ListBoxItem>
-- [<span data-ttu-id="76206-109">控件</span><span class="sxs-lookup"><span data-stu-id="76206-109">Controls</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+- [<span data-ttu-id="3d562-109">控件</span><span class="sxs-lookup"><span data-stu-id="3d562-109">Controls</span></span>](../advanced/optimizing-performance-controls.md)

@@ -9,27 +9,27 @@ helpviewer_keywords:
 - clearing bindings [WPF]
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
-ms.openlocfilehash: bd0f42b868c316cb9a6344134d4aaf01930519ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bffc34864a2bf929bcbed09f16eac282e1ba2a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508426"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360210"
 ---
-# <a name="how-to-clear-bindings"></a><span data-ttu-id="14b6d-102">如何：清除绑定</span><span class="sxs-lookup"><span data-stu-id="14b6d-102">How to: Clear Bindings</span></span>
-<span data-ttu-id="14b6d-103">此示例演示如何从对象中清除绑定。</span><span class="sxs-lookup"><span data-stu-id="14b6d-103">This example shows how to clear bindings from an object.</span></span>  
+# <a name="how-to-clear-bindings"></a><span data-ttu-id="1923d-102">如何：清除绑定</span><span class="sxs-lookup"><span data-stu-id="1923d-102">How to: Clear Bindings</span></span>
+<span data-ttu-id="1923d-103">此示例演示如何从对象中清除绑定。</span><span class="sxs-lookup"><span data-stu-id="1923d-103">This example shows how to clear bindings from an object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="14b6d-104">示例</span><span class="sxs-lookup"><span data-stu-id="14b6d-104">Example</span></span>  
- <span data-ttu-id="14b6d-105">若要从对象中某一个属性清除绑定，可以调用 <xref:System.Windows.Data.BindingOperations.ClearBinding%2A>，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="14b6d-105">To clear a binding from an individual property on an object, call <xref:System.Windows.Data.BindingOperations.ClearBinding%2A> as shown in the following example.</span></span> <span data-ttu-id="14b6d-106">以下示例将从 mytext（<xref:System.Windows.Controls.TextBlock> 对象）的 <xref:System.Windows.Controls.TextBlock.TextProperty> 删除绑定。</span><span class="sxs-lookup"><span data-stu-id="14b6d-106">The following example removes the binding from the <xref:System.Windows.Controls.TextBlock.TextProperty> of *mytext*, a <xref:System.Windows.Controls.TextBlock> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="1923d-104">示例</span><span class="sxs-lookup"><span data-stu-id="1923d-104">Example</span></span>  
+ <span data-ttu-id="1923d-105">若要从对象中某一个属性清除绑定，可以调用 <xref:System.Windows.Data.BindingOperations.ClearBinding%2A>，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="1923d-105">To clear a binding from an individual property on an object, call <xref:System.Windows.Data.BindingOperations.ClearBinding%2A> as shown in the following example.</span></span> <span data-ttu-id="1923d-106">以下示例将从 mytext（<xref:System.Windows.Controls.TextBlock> 对象）的 <xref:System.Windows.Controls.TextBlock.TextProperty> 删除绑定。</span><span class="sxs-lookup"><span data-stu-id="1923d-106">The following example removes the binding from the <xref:System.Windows.Controls.TextBlock.TextProperty> of *mytext*, a <xref:System.Windows.Controls.TextBlock> object.</span></span>  
   
- [!code-csharp[CodeOnlyBinding#ClearBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#clearbinding)]
- [!code-vb[CodeOnlyBinding#ClearBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#clearbinding)]  
+ [!code-csharp[CodeOnlyBinding#ClearBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#clearbinding)]
+ [!code-vb[CodeOnlyBinding#ClearBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#clearbinding)]  
   
- <span data-ttu-id="14b6d-107">清除绑定会移除绑定，这样依赖属性的值会更改为过去尚未绑定时的值。</span><span class="sxs-lookup"><span data-stu-id="14b6d-107">Clearing the binding removes the binding so that the value of the dependency property is changed to whatever it would have been without the binding.</span></span> <span data-ttu-id="14b6d-108">此值可以是默认值、继承值或来自数据模板绑定的值。</span><span class="sxs-lookup"><span data-stu-id="14b6d-108">This value could be a default value, an inherited value, or a value from a data template binding.</span></span>  
+ <span data-ttu-id="1923d-107">清除绑定会移除绑定，这样依赖属性的值会更改为过去尚未绑定时的值。</span><span class="sxs-lookup"><span data-stu-id="1923d-107">Clearing the binding removes the binding so that the value of the dependency property is changed to whatever it would have been without the binding.</span></span> <span data-ttu-id="1923d-108">此值可以是默认值、继承值或来自数据模板绑定的值。</span><span class="sxs-lookup"><span data-stu-id="1923d-108">This value could be a default value, an inherited value, or a value from a data template binding.</span></span>  
   
- <span data-ttu-id="14b6d-109">若要清除一个对象的所有可操作属性的绑定，请使用 <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>。</span><span class="sxs-lookup"><span data-stu-id="14b6d-109">To clear bindings from all possible properties on an object, use <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.</span></span>  
+ <span data-ttu-id="1923d-109">若要清除一个对象的所有可操作属性的绑定，请使用 <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>。</span><span class="sxs-lookup"><span data-stu-id="1923d-109">To clear bindings from all possible properties on an object, use <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="14b6d-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="14b6d-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1923d-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="1923d-110">See also</span></span>
 - <xref:System.Windows.Data.BindingOperations>
-- [<span data-ttu-id="14b6d-111">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="14b6d-111">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [<span data-ttu-id="14b6d-112">帮助主题</span><span class="sxs-lookup"><span data-stu-id="14b6d-112">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [<span data-ttu-id="1923d-111">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="1923d-111">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="1923d-112">帮助主题</span><span class="sxs-lookup"><span data-stu-id="1923d-112">How-to Topics</span></span>](data-binding-how-to-topics.md)

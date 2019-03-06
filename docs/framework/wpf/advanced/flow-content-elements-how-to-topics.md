@@ -7,37 +7,37 @@ helpviewer_keywords:
 - flow content elements [WPF], how-to topics
 - documents [WPF], flow content reference
 ms.assetid: ef5175df-6ab9-4096-be0c-804003b44c64
-ms.openlocfilehash: e5be189ed6bf5cf2baf676825dffca49e57a3dec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241f3736eef55fcca13d4cb9994bb04aaf4eda66
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546369"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354422"
 ---
-# <a name="flow-content-elements-how-to-topics"></a><span data-ttu-id="a3662-102">流内容元素帮助主题</span><span class="sxs-lookup"><span data-stu-id="a3662-102">Flow Content Elements How-to Topics</span></span>
-<span data-ttu-id="a3662-103">本部分中的主题介绍如何完成使用各种流内容元素和相关的功能的常见任务。</span><span class="sxs-lookup"><span data-stu-id="a3662-103">The topics in this section describe how to accomplish common tasks using various flow content elements and related features.</span></span>  
+# <a name="flow-content-elements-how-to-topics"></a><span data-ttu-id="5d96a-102">流内容元素帮助主题</span><span class="sxs-lookup"><span data-stu-id="5d96a-102">Flow Content Elements How-to Topics</span></span>
+<span data-ttu-id="5d96a-103">在本部分中的主题介绍如何完成常见任务使用各种流内容元素和相关的功能。</span><span class="sxs-lookup"><span data-stu-id="5d96a-103">The topics in this section describe how to accomplish common tasks using various flow content elements and related features.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a3662-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="a3662-104">In This Section</span></span>  
- [<span data-ttu-id="a3662-105">调整段落间距</span><span class="sxs-lookup"><span data-stu-id="a3662-105">Adjust Spacing Between Paragraphs</span></span>](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
- [<span data-ttu-id="a3662-106">以编程方式生成表</span><span class="sxs-lookup"><span data-stu-id="a3662-106">Build a Table Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
- [<span data-ttu-id="a3662-107">以编程方式更改内容的 FlowDirection</span><span class="sxs-lookup"><span data-stu-id="a3662-107">Change the FlowDirection of Content Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
- [<span data-ttu-id="a3662-108">以编程方式更改 TextWrapping 属性</span><span class="sxs-lookup"><span data-stu-id="a3662-108">Change the TextWrapping Property Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-textwrapping-property-programmatically.md)  
- [<span data-ttu-id="a3662-109">使用 XAML 定义表</span><span class="sxs-lookup"><span data-stu-id="a3662-109">Define a Table with XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
- [<span data-ttu-id="a3662-110">修改文本版式</span><span class="sxs-lookup"><span data-stu-id="a3662-110">Alter the Typography of Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-alter-the-typography-of-text.md)  
- [<span data-ttu-id="a3662-111">启用文本截断</span><span class="sxs-lookup"><span data-stu-id="a3662-111">Enable Text Trimming</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-text-trimming.md)  
- [<span data-ttu-id="a3662-112">以编程方式将元素插入文本</span><span class="sxs-lookup"><span data-stu-id="a3662-112">Insert an Element Into Text Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-insert-an-element-into-text-programmatically.md)  
- [<span data-ttu-id="a3662-113">通过 Blocks 属性控制流内容元素</span><span class="sxs-lookup"><span data-stu-id="a3662-113">Manipulate Flow Content Elements through the Blocks Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [<span data-ttu-id="a3662-114">通过 Inlines 属性控制流内容元素</span><span class="sxs-lookup"><span data-stu-id="a3662-114">Manipulate Flow Content Elements through the Inlines Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
- [<span data-ttu-id="a3662-115">通过 Blocks 属性控制 FlowDocument</span><span class="sxs-lookup"><span data-stu-id="a3662-115">Manipulate a FlowDocument through the Blocks Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [<span data-ttu-id="a3662-116">通过 Columns 属性控制表列</span><span class="sxs-lookup"><span data-stu-id="a3662-116">Manipulate a Table's Columns through the Columns Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [<span data-ttu-id="a3662-117">通过 RowGroups 属性操作表的行组</span><span class="sxs-lookup"><span data-stu-id="a3662-117">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [<span data-ttu-id="a3662-118">使用流内容元素</span><span class="sxs-lookup"><span data-stu-id="a3662-118">Use Flow Content Elements</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
- [<span data-ttu-id="a3662-119">使用 FlowDocument 列分隔特性</span><span class="sxs-lookup"><span data-stu-id="a3662-119">Use FlowDocument Column-Separating Attributes</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5d96a-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="5d96a-104">In This Section</span></span>  
+ [<span data-ttu-id="5d96a-105">调整段落间距</span><span class="sxs-lookup"><span data-stu-id="5d96a-105">Adjust Spacing Between Paragraphs</span></span>](how-to-adjust-spacing-between-paragraphs.md)  
+ [<span data-ttu-id="5d96a-106">以编程方式生成表</span><span class="sxs-lookup"><span data-stu-id="5d96a-106">Build a Table Programmatically</span></span>](how-to-build-a-table-programmatically.md)  
+ [<span data-ttu-id="5d96a-107">以编程方式更改内容的 FlowDirection</span><span class="sxs-lookup"><span data-stu-id="5d96a-107">Change the FlowDirection of Content Programmatically</span></span>](how-to-change-the-flowdirection-of-content-programmatically.md)  
+ [<span data-ttu-id="5d96a-108">以编程方式更改 TextWrapping 属性</span><span class="sxs-lookup"><span data-stu-id="5d96a-108">Change the TextWrapping Property Programmatically</span></span>](how-to-change-the-textwrapping-property-programmatically.md)  
+ [<span data-ttu-id="5d96a-109">使用 XAML 定义表</span><span class="sxs-lookup"><span data-stu-id="5d96a-109">Define a Table with XAML</span></span>](how-to-define-a-table-with-xaml.md)  
+ [<span data-ttu-id="5d96a-110">修改文本版式</span><span class="sxs-lookup"><span data-stu-id="5d96a-110">Alter the Typography of Text</span></span>](how-to-alter-the-typography-of-text.md)  
+ [<span data-ttu-id="5d96a-111">启用文本截断</span><span class="sxs-lookup"><span data-stu-id="5d96a-111">Enable Text Trimming</span></span>](how-to-enable-text-trimming.md)  
+ [<span data-ttu-id="5d96a-112">以编程方式将元素插入文本</span><span class="sxs-lookup"><span data-stu-id="5d96a-112">Insert an Element Into Text Programmatically</span></span>](how-to-insert-an-element-into-text-programmatically.md)  
+ [<span data-ttu-id="5d96a-113">通过 Blocks 属性控制流内容元素</span><span class="sxs-lookup"><span data-stu-id="5d96a-113">Manipulate Flow Content Elements through the Blocks Property</span></span>](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [<span data-ttu-id="5d96a-114">通过 Inlines 属性控制流内容元素</span><span class="sxs-lookup"><span data-stu-id="5d96a-114">Manipulate Flow Content Elements through the Inlines Property</span></span>](how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
+ [<span data-ttu-id="5d96a-115">通过 Blocks 属性控制 FlowDocument</span><span class="sxs-lookup"><span data-stu-id="5d96a-115">Manipulate a FlowDocument through the Blocks Property</span></span>](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [<span data-ttu-id="5d96a-116">通过 Columns 属性控制表列</span><span class="sxs-lookup"><span data-stu-id="5d96a-116">Manipulate a Table's Columns through the Columns Property</span></span>](how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [<span data-ttu-id="5d96a-117">通过 RowGroups 属性操作表的行组</span><span class="sxs-lookup"><span data-stu-id="5d96a-117">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [<span data-ttu-id="5d96a-118">使用流内容元素</span><span class="sxs-lookup"><span data-stu-id="5d96a-118">Use Flow Content Elements</span></span>](how-to-use-flow-content-elements.md)  
+ [<span data-ttu-id="5d96a-119">使用 FlowDocument 列分隔特性</span><span class="sxs-lookup"><span data-stu-id="5d96a-119">Use FlowDocument Column-Separating Attributes</span></span>](how-to-use-flowdocument-column-separating-attributes.md)  
   
-## <a name="reference"></a><span data-ttu-id="a3662-120">参考</span><span class="sxs-lookup"><span data-stu-id="a3662-120">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5d96a-120">参考</span><span class="sxs-lookup"><span data-stu-id="5d96a-120">Reference</span></span>  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.Inline>  
   
-## <a name="related-sections"></a><span data-ttu-id="a3662-121">相关章节</span><span class="sxs-lookup"><span data-stu-id="a3662-121">Related Sections</span></span>  
- [<span data-ttu-id="a3662-122">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="a3662-122">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="5d96a-121">相关章节</span><span class="sxs-lookup"><span data-stu-id="5d96a-121">Related Sections</span></span>  
+ [<span data-ttu-id="5d96a-122">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="5d96a-122">Documents in WPF</span></span>](documents-in-wpf.md)

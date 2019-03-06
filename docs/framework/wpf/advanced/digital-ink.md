@@ -7,19 +7,19 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
-ms.openlocfilehash: 66b410c42214719ce688f8965e7a38143a115326
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537468"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353122"
 ---
-# <a name="digital-ink"></a><span data-ttu-id="a5462-102">数字墨迹</span><span class="sxs-lookup"><span data-stu-id="a5462-102">Digital Ink</span></span>
-<span data-ttu-id="a5462-103">此部分讨论了中的数字墨迹使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="a5462-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="a5462-104">传统上只能在 Tablet PC SDK 中找到，数字墨迹现已在核心 Windows Presentation Foundation。</span><span class="sxs-lookup"><span data-stu-id="a5462-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="a5462-105">这意味着你现在可以通过使用 Windows Presentation Foundation 的强大开发完备 Tablet PC 应用程序。</span><span class="sxs-lookup"><span data-stu-id="a5462-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
+# <a name="digital-ink"></a><span data-ttu-id="51649-102">数字墨迹</span><span class="sxs-lookup"><span data-stu-id="51649-102">Digital Ink</span></span>
+<span data-ttu-id="51649-103">本部分介绍如何使用中的数字墨迹[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="51649-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="51649-104">传统上只能在 Tablet PC SDK 中找到，数字墨迹现已在 Windows Presentation Foundation 的核心。</span><span class="sxs-lookup"><span data-stu-id="51649-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="51649-105">这意味着现在可以通过使用 Windows Presentation Foundation 的强大开发成熟的 Tablet PC 应用程序。</span><span class="sxs-lookup"><span data-stu-id="51649-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a5462-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="a5462-106">In This Section</span></span>  
- [<span data-ttu-id="a5462-107">概述</span><span class="sxs-lookup"><span data-stu-id="a5462-107">Overviews</span></span>](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
-  [<span data-ttu-id="a5462-108">帮助主题</span><span class="sxs-lookup"><span data-stu-id="a5462-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="51649-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="51649-106">In This Section</span></span>  
+ [<span data-ttu-id="51649-107">概述</span><span class="sxs-lookup"><span data-stu-id="51649-107">Overviews</span></span>](digital-ink-overviews.md)  
+  [<span data-ttu-id="51649-108">帮助主题</span><span class="sxs-lookup"><span data-stu-id="51649-108">How-to Topics</span></span>](digital-ink-how-to-topics.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="a5462-109">相关章节</span><span class="sxs-lookup"><span data-stu-id="a5462-109">Related Sections</span></span>  
- [<span data-ttu-id="a5462-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="a5462-110">Windows Presentation Foundation</span></span>](../../../../docs/framework/wpf/index.md)
+## <a name="related-sections"></a><span data-ttu-id="51649-109">相关章节</span><span class="sxs-lookup"><span data-stu-id="51649-109">Related Sections</span></span>  
+ [<span data-ttu-id="51649-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="51649-110">Windows Presentation Foundation</span></span>](../index.md)

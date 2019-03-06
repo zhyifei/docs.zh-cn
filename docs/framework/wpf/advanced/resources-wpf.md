@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: c6e81ee119e82c7b07c5c3b92d35f0e0c184685d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545813"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372199"
 ---
-# <a name="resources-wpf"></a><span data-ttu-id="51bba-102">资源 (WPF)</span><span class="sxs-lookup"><span data-stu-id="51bba-102">Resources (WPF)</span></span>
-<span data-ttu-id="51bba-103">资源是可以在应用程序中的不同位置重复使用的对象。</span><span class="sxs-lookup"><span data-stu-id="51bba-103">A resource is an object that can be reused in different places in your application.</span></span> <span data-ttu-id="51bba-104">WPF 支持不同类型的资源。</span><span class="sxs-lookup"><span data-stu-id="51bba-104">WPF supports different types of resources.</span></span> <span data-ttu-id="51bba-105">这些资源是主要两种类型的资源： XAML 资源和资源数据文件。</span><span class="sxs-lookup"><span data-stu-id="51bba-105">These resources are primarily two types of resources: XAML resources and resource data files.</span></span> <span data-ttu-id="51bba-106">XAML 资源的示例包括画笔和样式。</span><span class="sxs-lookup"><span data-stu-id="51bba-106">Examples of XAML resources include brushes and styles.</span></span> <span data-ttu-id="51bba-107">资源数据文件是应用程序所需的非可执行文件数据文件。</span><span class="sxs-lookup"><span data-stu-id="51bba-107">Resource data files are non-executable data files that an application needs.</span></span>  
+# <a name="resources-wpf"></a><span data-ttu-id="84b68-102">资源 (WPF)</span><span class="sxs-lookup"><span data-stu-id="84b68-102">Resources (WPF)</span></span>
+<span data-ttu-id="84b68-103">资源是可以在应用程序中的不同位置重复使用的对象。</span><span class="sxs-lookup"><span data-stu-id="84b68-103">A resource is an object that can be reused in different places in your application.</span></span> <span data-ttu-id="84b68-104">WPF 支持不同类型的资源。</span><span class="sxs-lookup"><span data-stu-id="84b68-104">WPF supports different types of resources.</span></span> <span data-ttu-id="84b68-105">这些资源是主要缺少两种类型的资源：XAML 资源和资源数据文件。</span><span class="sxs-lookup"><span data-stu-id="84b68-105">These resources are primarily two types of resources: XAML resources and resource data files.</span></span> <span data-ttu-id="84b68-106">XAML 资源的示例包括画笔和样式。</span><span class="sxs-lookup"><span data-stu-id="84b68-106">Examples of XAML resources include brushes and styles.</span></span> <span data-ttu-id="84b68-107">资源数据文件是应用程序所需的非可执行文件的数据文件。</span><span class="sxs-lookup"><span data-stu-id="84b68-107">Resource data files are non-executable data files that an application needs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="51bba-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="51bba-108">In This Section</span></span>  
- [<span data-ttu-id="51bba-109">XAML 资源</span><span class="sxs-lookup"><span data-stu-id="51bba-109">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [<span data-ttu-id="51bba-110">WPF 应用程序资源、内容和数据文件</span><span class="sxs-lookup"><span data-stu-id="51bba-110">WPF Application Resource, Content, and Data Files</span></span>](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [<span data-ttu-id="51bba-111">WPF 中的 Pack URI</span><span class="sxs-lookup"><span data-stu-id="51bba-111">Pack URIs in WPF</span></span>](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+## <a name="in-this-section"></a><span data-ttu-id="84b68-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="84b68-108">In This Section</span></span>  
+ [<span data-ttu-id="84b68-109">XAML 资源</span><span class="sxs-lookup"><span data-stu-id="84b68-109">XAML Resources</span></span>](xaml-resources.md)  
+ [<span data-ttu-id="84b68-110">WPF 应用程序资源、内容和数据文件</span><span class="sxs-lookup"><span data-stu-id="84b68-110">WPF Application Resource, Content, and Data Files</span></span>](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [<span data-ttu-id="84b68-111">WPF 中的 Pack URI</span><span class="sxs-lookup"><span data-stu-id="84b68-111">Pack URIs in WPF</span></span>](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a><span data-ttu-id="51bba-112">参考</span><span class="sxs-lookup"><span data-stu-id="51bba-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="84b68-112">参考</span><span class="sxs-lookup"><span data-stu-id="84b68-112">Reference</span></span>  
  <xref:System.Windows.ResourceDictionary>  
   
- [<span data-ttu-id="51bba-113">StaticResource 标记扩展</span><span class="sxs-lookup"><span data-stu-id="51bba-113">StaticResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [<span data-ttu-id="84b68-113">StaticResource 标记扩展</span><span class="sxs-lookup"><span data-stu-id="84b68-113">StaticResource Markup Extension</span></span>](staticresource-markup-extension.md)  
   
- [<span data-ttu-id="51bba-114">DynamicResource 标记扩展</span><span class="sxs-lookup"><span data-stu-id="51bba-114">DynamicResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [<span data-ttu-id="84b68-114">DynamicResource 标记扩展</span><span class="sxs-lookup"><span data-stu-id="84b68-114">DynamicResource Markup Extension</span></span>](dynamicresource-markup-extension.md)  
   
- [<span data-ttu-id="51bba-115">x:Key 指令</span><span class="sxs-lookup"><span data-stu-id="51bba-115">x:Key Directive</span></span>](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [<span data-ttu-id="84b68-115">x:Key 指令</span><span class="sxs-lookup"><span data-stu-id="84b68-115">x:Key Directive</span></span>](../../xaml-services/x-key-directive.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="51bba-116">相关章节</span><span class="sxs-lookup"><span data-stu-id="51bba-116">Related Sections</span></span>  
- [<span data-ttu-id="51bba-117">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="51bba-117">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="84b68-116">相关章节</span><span class="sxs-lookup"><span data-stu-id="84b68-116">Related Sections</span></span>  
+ [<span data-ttu-id="84b68-117">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="84b68-117">XAML in WPF</span></span>](xaml-in-wpf.md)

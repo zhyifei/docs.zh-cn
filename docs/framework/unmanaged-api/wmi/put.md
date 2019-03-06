@@ -16,89 +16,91 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02c8ab3aa7fcc603b76fb4b1d09e7e73d04494be
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625765"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369184"
 ---
-# <a name="put-function"></a><span data-ttu-id="e9013-103">Put 的函数</span><span class="sxs-lookup"><span data-stu-id="e9013-103">Put function</span></span>
-<span data-ttu-id="e9013-104">将命名属性设置为新值。</span><span class="sxs-lookup"><span data-stu-id="e9013-104">Sets a named property to a new value.</span></span>
+# <a name="put-function"></a><span data-ttu-id="ee730-103">Put 的函数</span><span class="sxs-lookup"><span data-stu-id="ee730-103">Put function</span></span>
+
+<span data-ttu-id="ee730-104">将命名属性设置为新值。</span><span class="sxs-lookup"><span data-stu-id="ee730-104">Sets a named property to a new value.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a><span data-ttu-id="e9013-105">语法</span><span class="sxs-lookup"><span data-stu-id="e9013-105">Syntax</span></span>  
-  
-```  
+
+## <a name="syntax"></a><span data-ttu-id="ee730-105">语法</span><span class="sxs-lookup"><span data-stu-id="ee730-105">Syntax</span></span>
+
+```cpp
 HRESULT Put (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LPCWSTR           wszName,
    [in] LONG              lFlags,
    [in] VARIANT*          pVal,
    [in] CIMTYPE           vtType
-); 
-```  
+);
+```
 
-## <a name="parameters"></a><span data-ttu-id="e9013-106">参数</span><span class="sxs-lookup"><span data-stu-id="e9013-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="ee730-106">参数</span><span class="sxs-lookup"><span data-stu-id="ee730-106">Parameters</span></span>
 
-`vFunc`  
-<span data-ttu-id="e9013-107">[in]此参数是未使用。</span><span class="sxs-lookup"><span data-stu-id="e9013-107">[in] This parameter is unused.</span></span>
+`vFunc`\
+<span data-ttu-id="ee730-107">[in]此参数是未使用。</span><span class="sxs-lookup"><span data-stu-id="ee730-107">[in] This parameter is unused.</span></span>
 
-`ptr`  
-<span data-ttu-id="e9013-108">[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。</span><span class="sxs-lookup"><span data-stu-id="e9013-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+`ptr`\
+<span data-ttu-id="ee730-108">[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。</span><span class="sxs-lookup"><span data-stu-id="ee730-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
-`wszName`  
-<span data-ttu-id="e9013-109">[in]属性的名称。</span><span class="sxs-lookup"><span data-stu-id="e9013-109">[in] The name of the property.</span></span> <span data-ttu-id="e9013-110">此参数不能为 `null`。</span><span class="sxs-lookup"><span data-stu-id="e9013-110">This parameter cannot be `null`.</span></span>
+`wszName`\
+<span data-ttu-id="ee730-109">[in]属性的名称。</span><span class="sxs-lookup"><span data-stu-id="ee730-109">[in] The name of the property.</span></span> <span data-ttu-id="ee730-110">此参数不能为 `null`。</span><span class="sxs-lookup"><span data-stu-id="ee730-110">This parameter cannot be `null`.</span></span>
 
-`lFlags`  
-<span data-ttu-id="e9013-111">[in] 保留。</span><span class="sxs-lookup"><span data-stu-id="e9013-111">[in] Reserved.</span></span> <span data-ttu-id="e9013-112">此参数必须为 0。</span><span class="sxs-lookup"><span data-stu-id="e9013-112">This parameter must be 0.</span></span>
+`lFlags`\
+<span data-ttu-id="ee730-111">[in] 保留。</span><span class="sxs-lookup"><span data-stu-id="ee730-111">[in] Reserved.</span></span> <span data-ttu-id="ee730-112">此参数必须为 0。</span><span class="sxs-lookup"><span data-stu-id="ee730-112">This parameter must be 0.</span></span>
 
-`pVal`   
-<span data-ttu-id="e9013-113">[in]指向一个有效的指针`VARIANT`该按钮将变为新的属性值。</span><span class="sxs-lookup"><span data-stu-id="e9013-113">[in] A pointer to a valid `VARIANT` that becomes the new property value.</span></span> <span data-ttu-id="e9013-114">如果`pVal`是`null`或指向`VARIANT`类型的`VT_NULL`，该属性设置为`null`。</span><span class="sxs-lookup"><span data-stu-id="e9013-114">If `pVal` is `null` or points to a `VARIANT` of type `VT_NULL`, the property is set to `null`.</span></span> 
+`pVal`\
+<span data-ttu-id="ee730-113">[in]指向一个有效的指针`VARIANT`该按钮将变为新的属性值。</span><span class="sxs-lookup"><span data-stu-id="ee730-113">[in] A pointer to a valid `VARIANT` that becomes the new property value.</span></span> <span data-ttu-id="ee730-114">如果`pVal`是`null`或指向`VARIANT`类型的`VT_NULL`，该属性设置为`null`。</span><span class="sxs-lookup"><span data-stu-id="ee730-114">If `pVal` is `null` or points to a `VARIANT` of type `VT_NULL`, the property is set to `null`.</span></span>
 
-`vtType`  
-<span data-ttu-id="e9013-115">[in]类型`VARIANT`指向的`pVal`。</span><span class="sxs-lookup"><span data-stu-id="e9013-115">[in] The type of `VARIANT` pointed to by `pVal`.</span></span> <span data-ttu-id="e9013-116">请参阅[备注](#remarks)部分，了解详细信息。</span><span class="sxs-lookup"><span data-stu-id="e9013-116">See the [Remarks](#remarks) section for more information.</span></span>
- 
+`vtType`\
+<span data-ttu-id="ee730-115">[in]类型`VARIANT`指向的`pVal`。</span><span class="sxs-lookup"><span data-stu-id="ee730-115">[in] The type of `VARIANT` pointed to by `pVal`.</span></span> <span data-ttu-id="ee730-116">请参阅[备注](#remarks)部分，了解详细信息。</span><span class="sxs-lookup"><span data-stu-id="ee730-116">See the [Remarks](#remarks) section for more information.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="e9013-117">返回值</span><span class="sxs-lookup"><span data-stu-id="e9013-117">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="ee730-117">返回值</span><span class="sxs-lookup"><span data-stu-id="ee730-117">Return value</span></span>
 
-<span data-ttu-id="e9013-118">此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：</span><span class="sxs-lookup"><span data-stu-id="e9013-118">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="ee730-118">此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：</span><span class="sxs-lookup"><span data-stu-id="ee730-118">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="e9013-119">返回的常量</span><span class="sxs-lookup"><span data-stu-id="e9013-119">Constant</span></span>  |<span data-ttu-id="e9013-120">“值”</span><span class="sxs-lookup"><span data-stu-id="e9013-120">Value</span></span>  |<span data-ttu-id="e9013-121">描述</span><span class="sxs-lookup"><span data-stu-id="e9013-121">Description</span></span>  |
+|<span data-ttu-id="ee730-119">返回的常量</span><span class="sxs-lookup"><span data-stu-id="ee730-119">Constant</span></span>  |<span data-ttu-id="ee730-120">“值”</span><span class="sxs-lookup"><span data-stu-id="ee730-120">Value</span></span>  |<span data-ttu-id="ee730-121">描述</span><span class="sxs-lookup"><span data-stu-id="ee730-121">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | <span data-ttu-id="e9013-122">0x80041001</span><span class="sxs-lookup"><span data-stu-id="e9013-122">0x80041001</span></span> | <span data-ttu-id="e9013-123">已存在时的常见错误。</span><span class="sxs-lookup"><span data-stu-id="e9013-123">There has been a general failure.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="e9013-124">0x80041008</span><span class="sxs-lookup"><span data-stu-id="e9013-124">0x80041008</span></span> | <span data-ttu-id="e9013-125">一个或多个参数是无效的。</span><span class="sxs-lookup"><span data-stu-id="e9013-125">One or more parameters are not valid.</span></span> |
-|`WBEM_E_INVALID_PROPERTY_TYPE` | <span data-ttu-id="e9013-126">0x8004102a</span><span class="sxs-lookup"><span data-stu-id="e9013-126">0x8004102a</span></span> | <span data-ttu-id="e9013-127">未识别属性类型。</span><span class="sxs-lookup"><span data-stu-id="e9013-127">The property type is not recognized.</span></span> <span data-ttu-id="e9013-128">创建类实例，如果该类已存在时返回此值。</span><span class="sxs-lookup"><span data-stu-id="e9013-128">This value is returned when creating class instances if the class already exists.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="e9013-129">0x80041006</span><span class="sxs-lookup"><span data-stu-id="e9013-129">0x80041006</span></span> | <span data-ttu-id="e9013-130">没有足够的内存是可用于完成该操作。</span><span class="sxs-lookup"><span data-stu-id="e9013-130">Not enough memory is available to complete the operation.</span></span> |
-| `WBEM_E_TYPE_MISMATCH` | <span data-ttu-id="e9013-131">0x80041005</span><span class="sxs-lookup"><span data-stu-id="e9013-131">0x80041005</span></span> | <span data-ttu-id="e9013-132">实例：指示`pVal`指向`VARIANT`属性类型不正确。</span><span class="sxs-lookup"><span data-stu-id="e9013-132">For instances: Indicates that `pVal` points to a `VARIANT` of an incorrect type for the property.</span></span> <br/> <span data-ttu-id="e9013-133">查找类定义：属性已存在的父类、 中和新的 COM 类型都不同于旧的 COM 类型。</span><span class="sxs-lookup"><span data-stu-id="e9013-133">For class definitions: The property already exists in the parent class, and the new COM type is different from the old COM type.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="e9013-134">0</span><span class="sxs-lookup"><span data-stu-id="e9013-134">0</span></span> | <span data-ttu-id="e9013-135">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="e9013-135">The function call was successful.</span></span> |
-  
-## <a name="remarks"></a><span data-ttu-id="e9013-136">备注</span><span class="sxs-lookup"><span data-stu-id="e9013-136">Remarks</span></span>
+|`WBEM_E_FAILED` | <span data-ttu-id="ee730-122">0x80041001</span><span class="sxs-lookup"><span data-stu-id="ee730-122">0x80041001</span></span> | <span data-ttu-id="ee730-123">已存在时的常见错误。</span><span class="sxs-lookup"><span data-stu-id="ee730-123">There has been a general failure.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="ee730-124">0x80041008</span><span class="sxs-lookup"><span data-stu-id="ee730-124">0x80041008</span></span> | <span data-ttu-id="ee730-125">一个或多个参数是无效的。</span><span class="sxs-lookup"><span data-stu-id="ee730-125">One or more parameters are not valid.</span></span> |
+|`WBEM_E_INVALID_PROPERTY_TYPE` | <span data-ttu-id="ee730-126">0x8004102a</span><span class="sxs-lookup"><span data-stu-id="ee730-126">0x8004102a</span></span> | <span data-ttu-id="ee730-127">未识别属性类型。</span><span class="sxs-lookup"><span data-stu-id="ee730-127">The property type is not recognized.</span></span> <span data-ttu-id="ee730-128">创建类实例，如果该类已存在时返回此值。</span><span class="sxs-lookup"><span data-stu-id="ee730-128">This value is returned when creating class instances if the class already exists.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="ee730-129">0x80041006</span><span class="sxs-lookup"><span data-stu-id="ee730-129">0x80041006</span></span> | <span data-ttu-id="ee730-130">没有足够的内存是可用于完成该操作。</span><span class="sxs-lookup"><span data-stu-id="ee730-130">Not enough memory is available to complete the operation.</span></span> |
+| `WBEM_E_TYPE_MISMATCH` | <span data-ttu-id="ee730-131">0x80041005</span><span class="sxs-lookup"><span data-stu-id="ee730-131">0x80041005</span></span> | <span data-ttu-id="ee730-132">实例：指示`pVal`指向`VARIANT`属性类型不正确。</span><span class="sxs-lookup"><span data-stu-id="ee730-132">For instances: Indicates that `pVal` points to a `VARIANT` of an incorrect type for the property.</span></span> <br/> <span data-ttu-id="ee730-133">查找类定义：属性已存在的父类、 中和新的 COM 类型都不同于旧的 COM 类型。</span><span class="sxs-lookup"><span data-stu-id="ee730-133">For class definitions: The property already exists in the parent class, and the new COM type is different from the old COM type.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="ee730-134">0</span><span class="sxs-lookup"><span data-stu-id="ee730-134">0</span></span> | <span data-ttu-id="ee730-135">函数调用成功。</span><span class="sxs-lookup"><span data-stu-id="ee730-135">The function call was successful.</span></span> |
 
-<span data-ttu-id="e9013-137">此函数包装对的调用[IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)方法。</span><span class="sxs-lookup"><span data-stu-id="e9013-137">This function wraps a call to the [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) method.</span></span>
+## <a name="remarks"></a><span data-ttu-id="ee730-136">备注</span><span class="sxs-lookup"><span data-stu-id="ee730-136">Remarks</span></span>
 
-<span data-ttu-id="e9013-138">此函数始终覆盖使用新的当前属性值。</span><span class="sxs-lookup"><span data-stu-id="e9013-138">This function always overwrites the current property value with a new one.</span></span> <span data-ttu-id="e9013-139">如果[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向的类定义，`Put`创建或更新的属性值。</span><span class="sxs-lookup"><span data-stu-id="e9013-139">If the [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) points to a class definition, `Put` creates or updates the property value.</span></span> <span data-ttu-id="e9013-140">当[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向 CIM 的实例，`Put`更新属性值; 仅`Put`不能创建一个属性值。</span><span class="sxs-lookup"><span data-stu-id="e9013-140">When [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) points to a CIM instance, `Put` updates the property value only; `Put` cannot create a property value.</span></span>
+<span data-ttu-id="ee730-137">此函数包装对的调用[IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)方法。</span><span class="sxs-lookup"><span data-stu-id="ee730-137">This function wraps a call to the [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) method.</span></span>
 
-<span data-ttu-id="e9013-141">`__CLASS`系统属性才是可写类创建过程时它可能不为空。</span><span class="sxs-lookup"><span data-stu-id="e9013-141">The `__CLASS` system property is only writable during class creation, when it may not be left blank.</span></span> <span data-ttu-id="e9013-142">所有其他系统属性是只读的。</span><span class="sxs-lookup"><span data-stu-id="e9013-142">All other system properties are read-only.</span></span>
+<span data-ttu-id="ee730-138">此函数始终覆盖使用新的当前属性值。</span><span class="sxs-lookup"><span data-stu-id="ee730-138">This function always overwrites the current property value with a new one.</span></span> <span data-ttu-id="ee730-139">如果[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向的类定义，`Put`创建或更新的属性值。</span><span class="sxs-lookup"><span data-stu-id="ee730-139">If the [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) points to a class definition, `Put` creates or updates the property value.</span></span> <span data-ttu-id="ee730-140">当[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向 CIM 的实例，`Put`更新属性值; 仅`Put`不能创建一个属性值。</span><span class="sxs-lookup"><span data-stu-id="ee730-140">When [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) points to a CIM instance, `Put` updates the property value only; `Put` cannot create a property value.</span></span>
 
-<span data-ttu-id="e9013-143">用户不能具有名称的开头或结尾下划线 ("_") 创建属性。</span><span class="sxs-lookup"><span data-stu-id="e9013-143">A user cannot create properties with names that begin or end with an underscore ("_").</span></span> <span data-ttu-id="e9013-144">这被保留给系统类和属性。</span><span class="sxs-lookup"><span data-stu-id="e9013-144">This is reserved for system classes and properties.</span></span>
+<span data-ttu-id="ee730-141">`__CLASS`系统属性才是可写类创建过程时它可能不为空。</span><span class="sxs-lookup"><span data-stu-id="ee730-141">The `__CLASS` system property is only writable during class creation, when it may not be left blank.</span></span> <span data-ttu-id="ee730-142">所有其他系统属性是只读的。</span><span class="sxs-lookup"><span data-stu-id="ee730-142">All other system properties are read-only.</span></span>
 
-<span data-ttu-id="e9013-145">如果该属性设置的`Put`父类中存在的函数，除非属性类型与父类类型不匹配，将更改属性的默认值。</span><span class="sxs-lookup"><span data-stu-id="e9013-145">If the property set by the `Put` function exists in the parent class, the default value of the property is changed unless the property type does not match the parent class type.</span></span> <span data-ttu-id="e9013-146">如果属性不存在，并且它不是类型不匹配，则该属性是创建的。</span><span class="sxs-lookup"><span data-stu-id="e9013-146">If the property does not exist and it is not a type mismatch, the property is ceated.</span></span>
+<span data-ttu-id="ee730-143">用户不能具有名称的开头或结尾下划线 ("_") 创建属性。</span><span class="sxs-lookup"><span data-stu-id="ee730-143">A user cannot create properties with names that begin or end with an underscore ("_").</span></span> <span data-ttu-id="ee730-144">这被保留给系统类和属性。</span><span class="sxs-lookup"><span data-stu-id="ee730-144">This is reserved for system classes and properties.</span></span>
 
-<span data-ttu-id="e9013-147">使用`vtType`参数仅在 CIM 类定义中创建新的属性时，`pVal`是`null`或指向`VARIANT`类型的`VT_NULL`。</span><span class="sxs-lookup"><span data-stu-id="e9013-147">Use the `vtType` parameter only when creating new properties in a CIM class definition and `pVal` is `null` or points to a `VARIANT` of type `VT_NULL`.</span></span> <span data-ttu-id="e9013-148">在这种情况下，`vType`参数指定的属性的 CIM 类型。</span><span class="sxs-lookup"><span data-stu-id="e9013-148">In this case, the `vType` parameter specifies the CIM type of the property.</span></span> <span data-ttu-id="e9013-149">在所有其他情况下，`vtType`必须为 0。</span><span class="sxs-lookup"><span data-stu-id="e9013-149">In every other case, `vtType` must be 0.</span></span> <span data-ttu-id="e9013-150">`vtType` 如果基础对象实例也必须为 0 (即使`Val`是`null`) 由于属性类型固定的不能更改。</span><span class="sxs-lookup"><span data-stu-id="e9013-150">`vtType` must also be 0 if the underlying object is an instance (even if `Val` is `null`) because the type of the property is fixed and cannot be changed.</span></span>   
+<span data-ttu-id="ee730-145">如果该属性设置的`Put`父类中存在的函数，除非属性类型与父类类型不匹配，将更改属性的默认值。</span><span class="sxs-lookup"><span data-stu-id="ee730-145">If the property set by the `Put` function exists in the parent class, the default value of the property is changed unless the property type does not match the parent class type.</span></span> <span data-ttu-id="ee730-146">如果该属性不存在，它不是类型不匹配，则创建属性。</span><span class="sxs-lookup"><span data-stu-id="ee730-146">If the property does not exist and it is not a type mismatch, the property is created.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e9013-151">示例</span><span class="sxs-lookup"><span data-stu-id="e9013-151">Example</span></span>
+<span data-ttu-id="ee730-147">使用`vtType`参数仅在 CIM 类定义中创建新的属性时，`pVal`是`null`或指向`VARIANT`类型的`VT_NULL`。</span><span class="sxs-lookup"><span data-stu-id="ee730-147">Use the `vtType` parameter only when creating new properties in a CIM class definition and `pVal` is `null` or points to a `VARIANT` of type `VT_NULL`.</span></span> <span data-ttu-id="ee730-148">在这种情况下，`vType`参数指定的属性的 CIM 类型。</span><span class="sxs-lookup"><span data-stu-id="ee730-148">In this case, the `vType` parameter specifies the CIM type of the property.</span></span> <span data-ttu-id="ee730-149">在所有其他情况下，`vtType`必须为 0。</span><span class="sxs-lookup"><span data-stu-id="ee730-149">In every other case, `vtType` must be 0.</span></span> <span data-ttu-id="ee730-150">`vtType` 如果基础对象实例也必须为 0 (即使`Val`是`null`) 由于属性类型固定的不能更改。</span><span class="sxs-lookup"><span data-stu-id="ee730-150">`vtType` must also be 0 if the underlying object is an instance (even if `Val` is `null`) because the type of the property is fixed and cannot be changed.</span></span>
 
-<span data-ttu-id="e9013-152">有关示例，请参阅[IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)方法。</span><span class="sxs-lookup"><span data-stu-id="e9013-152">For an example, see the [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) method.</span></span>
+## <a name="example"></a><span data-ttu-id="ee730-151">示例</span><span class="sxs-lookup"><span data-stu-id="ee730-151">Example</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="e9013-153">要求</span><span class="sxs-lookup"><span data-stu-id="e9013-153">Requirements</span></span>  
- <span data-ttu-id="e9013-154">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e9013-154">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="e9013-155">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="e9013-155">**Header:** WMINet_Utils.idl</span></span>  
-  
- <span data-ttu-id="e9013-156">**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="e9013-156">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="e9013-157">请参阅</span><span class="sxs-lookup"><span data-stu-id="e9013-157">See also</span></span>
-- [<span data-ttu-id="e9013-158">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="e9013-158">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+<span data-ttu-id="ee730-152">有关示例，请参阅[IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)方法。</span><span class="sxs-lookup"><span data-stu-id="ee730-152">For an example, see the [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) method.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="ee730-153">要求</span><span class="sxs-lookup"><span data-stu-id="ee730-153">Requirements</span></span>
+
+<span data-ttu-id="ee730-154">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ee730-154">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="ee730-155">**标头：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="ee730-155">**Header:** WMINet_Utils.idl</span></span>
+
+<span data-ttu-id="ee730-156">**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ee730-156">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ee730-157">请参阅</span><span class="sxs-lookup"><span data-stu-id="ee730-157">See also</span></span>
+
+- [<span data-ttu-id="ee730-158">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="ee730-158">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

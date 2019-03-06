@@ -7,26 +7,26 @@ helpviewer_keywords:
 - Grid control [WPF], how-to topics
 - controls [WPF], Grid
 ms.assetid: 90e07c2d-237f-47b4-a632-771570b77fd0
-ms.openlocfilehash: ec9ee608b939c10db295c7b6c37442ef6085f194
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9ef840d98a6c7aa5db841dd0ff860e2fb1d044a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550360"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377672"
 ---
-# <a name="grid-how-to-topics"></a><span data-ttu-id="41129-102">Grid 帮助主题</span><span class="sxs-lookup"><span data-stu-id="41129-102">Grid How-to Topics</span></span>
-<span data-ttu-id="41129-103">本部分中的主题介绍如何定位元素使用<xref:System.Windows.Controls.Grid>元素。</span><span class="sxs-lookup"><span data-stu-id="41129-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
+# <a name="grid-how-to-topics"></a><span data-ttu-id="c1bfc-102">Grid 帮助主题</span><span class="sxs-lookup"><span data-stu-id="c1bfc-102">Grid How-to Topics</span></span>
+<span data-ttu-id="c1bfc-103">在本部分中的主题介绍如何来定位元素使用<xref:System.Windows.Controls.Grid>元素。</span><span class="sxs-lookup"><span data-stu-id="c1bfc-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="41129-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="41129-104">In This Section</span></span>  
- [<span data-ttu-id="41129-105">使用 Grid 生成标准 UI 对话框</span><span class="sxs-lookup"><span data-stu-id="41129-105">Build a Standard UI Dialog Box by Using Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [<span data-ttu-id="41129-106">创建复杂网格</span><span class="sxs-lookup"><span data-stu-id="41129-106">Create a Complex Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [<span data-ttu-id="41129-107">创建 Grid 元素</span><span class="sxs-lookup"><span data-stu-id="41129-107">Create a Grid Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [<span data-ttu-id="41129-108">创建和使用 GridLengthConverter 对象</span><span class="sxs-lookup"><span data-stu-id="41129-108">Create and Use a GridLengthConverter Object</span></span>](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [<span data-ttu-id="41129-109">使用 ColumnDefinitionsCollection 和 RowDefinitionsCollection 控制列和行</span><span class="sxs-lookup"><span data-stu-id="41129-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [<span data-ttu-id="41129-110">确定 Grid 子元素的位置</span><span class="sxs-lookup"><span data-stu-id="41129-110">Position the Child Elements of a Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [<span data-ttu-id="41129-111">在 Grid 之间共用重设大小属性</span><span class="sxs-lookup"><span data-stu-id="41129-111">Share Sizing Properties Between Grids</span></span>](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c1bfc-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="c1bfc-104">In This Section</span></span>  
+ [<span data-ttu-id="c1bfc-105">使用 Grid 生成标准 UI 对话框</span><span class="sxs-lookup"><span data-stu-id="c1bfc-105">Build a Standard UI Dialog Box by Using Grid</span></span>](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [<span data-ttu-id="c1bfc-106">创建复杂网格</span><span class="sxs-lookup"><span data-stu-id="c1bfc-106">Create a Complex Grid</span></span>](how-to-create-a-complex-grid.md)  
+ [<span data-ttu-id="c1bfc-107">创建 Grid 元素</span><span class="sxs-lookup"><span data-stu-id="c1bfc-107">Create a Grid Element</span></span>](how-to-create-a-grid-element.md)  
+ [<span data-ttu-id="c1bfc-108">创建和使用 GridLengthConverter 对象</span><span class="sxs-lookup"><span data-stu-id="c1bfc-108">Create and Use a GridLengthConverter Object</span></span>](how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [<span data-ttu-id="c1bfc-109">使用 ColumnDefinitionsCollection 和 RowDefinitionsCollection 控制列和行</span><span class="sxs-lookup"><span data-stu-id="c1bfc-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [<span data-ttu-id="c1bfc-110">确定 Grid 子元素的位置</span><span class="sxs-lookup"><span data-stu-id="c1bfc-110">Position the Child Elements of a Grid</span></span>](how-to-position-the-child-elements-of-a-grid.md)  
+ [<span data-ttu-id="c1bfc-111">在 Grid 之间共用重设大小属性</span><span class="sxs-lookup"><span data-stu-id="c1bfc-111">Share Sizing Properties Between Grids</span></span>](how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="reference"></a><span data-ttu-id="41129-112">参考</span><span class="sxs-lookup"><span data-stu-id="41129-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c1bfc-112">参考</span><span class="sxs-lookup"><span data-stu-id="c1bfc-112">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -41,9 +41,9 @@ ms.locfileid: "33550360"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="41129-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="41129-113">Related Sections</span></span>  
- [<span data-ttu-id="41129-114">布局</span><span class="sxs-lookup"><span data-stu-id="41129-114">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="c1bfc-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="c1bfc-113">Related Sections</span></span>  
+ [<span data-ttu-id="c1bfc-114">布局</span><span class="sxs-lookup"><span data-stu-id="c1bfc-114">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="41129-115">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="41129-115">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="c1bfc-115">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="c1bfc-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="41129-116">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="41129-116">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="c1bfc-116">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="c1bfc-116">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

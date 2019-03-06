@@ -8,20 +8,20 @@ helpviewer_keywords:
 - StackPanel control [WPF]
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
-ms.openlocfilehash: b901c256491b24c0583835fab36744733c545920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553736"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361223"
 ---
-# <a name="stackpanel"></a><span data-ttu-id="07a65-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="07a65-102">StackPanel</span></span>
-<span data-ttu-id="07a65-103"><xref:System.Windows.Controls.StackPanel>元素用于水平或垂直堆叠子元素。</span><span class="sxs-lookup"><span data-stu-id="07a65-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  
+# <a name="stackpanel"></a><span data-ttu-id="62105-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="62105-102">StackPanel</span></span>
+<span data-ttu-id="62105-103"><xref:System.Windows.Controls.StackPanel>元素用于水平或垂直堆叠子元素。</span><span class="sxs-lookup"><span data-stu-id="62105-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="07a65-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="07a65-104">In This Section</span></span>  
- [<span data-ttu-id="07a65-105">帮助主题</span><span class="sxs-lookup"><span data-stu-id="07a65-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="62105-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="62105-104">In This Section</span></span>  
+ [<span data-ttu-id="62105-105">帮助主题</span><span class="sxs-lookup"><span data-stu-id="62105-105">How-to Topics</span></span>](stackpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="07a65-106">参考</span><span class="sxs-lookup"><span data-stu-id="07a65-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="62105-106">参考</span><span class="sxs-lookup"><span data-stu-id="62105-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "33553736"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="07a65-107">相关章节</span><span class="sxs-lookup"><span data-stu-id="07a65-107">Related Sections</span></span>  
- [<span data-ttu-id="07a65-108">布局</span><span class="sxs-lookup"><span data-stu-id="07a65-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="62105-107">相关章节</span><span class="sxs-lookup"><span data-stu-id="62105-107">Related Sections</span></span>  
+ [<span data-ttu-id="62105-108">布局</span><span class="sxs-lookup"><span data-stu-id="62105-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="07a65-109">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="07a65-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="62105-109">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="62105-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="07a65-110">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="07a65-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="62105-110">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="62105-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

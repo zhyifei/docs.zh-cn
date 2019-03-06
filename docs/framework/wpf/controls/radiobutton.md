@@ -7,22 +7,22 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553918"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365264"
 ---
-# <a name="radiobutton"></a><span data-ttu-id="80008-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="80008-102">RadioButton</span></span>
-<span data-ttu-id="80008-103"><xref:System.Windows.Controls.RadioButton> 控件是通常组合在一起以提供若干选项; 中的单个选项的用户可以选择只包含一个按钮一次。</span><span class="sxs-lookup"><span data-stu-id="80008-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
+# <a name="radiobutton"></a><span data-ttu-id="530f5-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="530f5-102">RadioButton</span></span>
+<span data-ttu-id="530f5-103"><xref:System.Windows.Controls.RadioButton> 控件通常组合在一起以向用户提供若干选项; 中的单个选择可以选择一次只有一个按钮。</span><span class="sxs-lookup"><span data-stu-id="530f5-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
   
- <span data-ttu-id="80008-104">下图显示的示例<xref:System.Windows.Controls.RadioButton>控件。</span><span class="sxs-lookup"><span data-stu-id="80008-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
+ <span data-ttu-id="530f5-104">下图显示的示例<xref:System.Windows.Controls.RadioButton>控件。</span><span class="sxs-lookup"><span data-stu-id="530f5-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
   
- <span data-ttu-id="80008-105">![单选按钮状态](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="80008-105">![Radio button states](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
-<span data-ttu-id="80008-106">典型的单选按钮</span><span class="sxs-lookup"><span data-stu-id="80008-106">Typical RadioButton</span></span>  
+ <span data-ttu-id="530f5-105">![单选按钮状态](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="530f5-105">![Radio button states](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
+<span data-ttu-id="530f5-106">典型的单选按钮</span><span class="sxs-lookup"><span data-stu-id="530f5-106">Typical RadioButton</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="80008-107">参考</span><span class="sxs-lookup"><span data-stu-id="80008-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="530f5-107">参考</span><span class="sxs-lookup"><span data-stu-id="530f5-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="80008-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="80008-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="530f5-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="530f5-108">Related Sections</span></span>
