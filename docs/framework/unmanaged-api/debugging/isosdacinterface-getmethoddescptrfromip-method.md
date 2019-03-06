@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 74853733b1fb7f023d9f192d3e862dbf6875ecda
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 82c4531ac16e8b4bf7ac45bc01eb7128b9507ab5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828597"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358530"
 ---
 # <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>ISOSDacInterface::GetMethodDescPtrFromIP 方法
 
@@ -37,11 +37,13 @@ HRESULT GetMethodDescPtrFromIP(
 );
 ```
 
-### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
-`ip` [in]在运行时方法中的地址。
+`ip`\
+[in]在运行时方法中的地址。
 
-`ppMD` [out]地址`MethodDesc`特定方法。
+`ppMD`\
+[out]地址`MethodDesc`特定方法。
 
 ## <a name="remarks"></a>备注
 
@@ -56,5 +58,5 @@ HRESULT GetMethodDescPtrFromIP(
 
 ## <a name="see-also"></a>请参阅
 
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ISOSDacInterface 接口](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [调试](index.md)
+- [ISOSDacInterface 接口](isosdacinterface-interface.md)

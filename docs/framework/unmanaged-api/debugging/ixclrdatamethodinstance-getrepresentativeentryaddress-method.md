@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 52b2fdaaefd16a49300641f44041b8352141385b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 6f204e2ed9cb1409d53432355467bb11946f8809
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828602"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372446"
 ---
 # <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>IXCLRDataMethodInstance::GetRepresentativeEntryAddress 方法
 
@@ -36,9 +36,10 @@ HRESULT GetRepresentativeEntryAddress(
 );
 ```
 
-### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
-`addr` [out]该方法的最具代表性本机入口点的地址。
+`addr`\
+[out]该方法的最具代表性本机入口点的地址。
 
 ## <a name="remarks"></a>备注
 
@@ -53,5 +54,5 @@ HRESULT GetRepresentativeEntryAddress(
 
 ## <a name="see-also"></a>请参阅
 
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataMethodInstance 接口](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [调试](index.md)
+- [IXCLRDataMethodInstance 接口](ixclrdatamethodinstance-interface.md)

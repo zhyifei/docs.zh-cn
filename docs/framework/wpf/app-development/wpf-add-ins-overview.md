@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746557"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365836"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 外接程序概述
 <a name="Introduction"></a> .NET Framework 包括开发人员可用于创建支持外接程序扩展性的应用程序的外接程序模型。 借助此外接程序模型，可以创建与应用程序功能集成并进行扩展的外接程序。 在某些情况下，应用程序还需要显示外接程序提供的用户界面。本主题介绍 WPF 增加.NET Framework 外接程序模型若要启用这些方案，它、 其优点和局限性的体系结构的内容。  
@@ -56,7 +56,7 @@ ms.locfileid: "56746557"
   
 -   **通信**:允许加载项和主机应用程序彼此通信跨隔离边界，通过调用方法并传递数据。  
   
--   **生存期管理**:加载和卸载应用程序域和进程以干净、 可预测的方式 (请参阅[应用程序域](../../../../docs/framework/app-domains/application-domains.md))。  
+-   **生存期管理**:加载和卸载应用程序域和进程以干净、 可预测的方式 (请参阅[应用程序域](../../app-domains/application-domains.md))。  
   
 -   **版本控制**:确保，主机应用程序和外接程序仍可进行通信时创建的新版本。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "56746557"
   
 6.  主机应用程序显示返回<xref:System.Windows.FrameworkElement>。  
   
- 有关演示如何实现返回 UI 的外接程序示例，请参阅[创建外接程序返回 UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)。  
+ 有关演示如何实现返回 UI 的外接程序示例，请参阅[创建外接程序返回 UI](how-to-create-an-add-in-that-returns-a-ui.md)。  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>外接程序为用户界面  
@@ -148,7 +148,7 @@ ms.locfileid: "56746557"
   
 6.  主机应用程序显示返回<xref:System.Windows.FrameworkElement>。  
   
- 有关演示如何实现作为 ui 的外接程序示例，请参阅[外接程序，它是创建 UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)。  
+ 有关演示如何实现作为 ui 的外接程序示例，请参阅[外接程序，它是创建 UI](how-to-create-an-add-in-that-is-a-ui.md)。  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>从外接程序返回多个 UI  
@@ -219,7 +219,7 @@ ms.locfileid: "56746557"
   
 -   在主机应用程序端，WPF 会重新打包<xref:System.Windows.Interop.HwndSource>作为内部 WPF 类派生自<xref:System.Windows.Interop.HwndHost>，并在使用<xref:System.AddIn.Contract.INativeHandleContract>。 此类的实例返回的<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>到主机应用程序。  
   
- <xref:System.Windows.Interop.HwndHost> 存在能够显示用户界面，标识的窗口句柄，从 WPF 用户界面。 有关详细信息，请参阅 [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)。  
+ <xref:System.Windows.Interop.HwndHost> 存在能够显示用户界面，标识的窗口句柄，从 WPF 用户界面。 有关详细信息，请参阅 [WPF 和 Win32 互操作](../advanced/wpf-and-win32-interoperation.md)。  
   
  总之， <xref:System.AddIn.Contract.INativeHandleContract>， <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>，并<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>存在的目的在于允许传递从外接程序的宿主应用程序中，通过封装了一个 WPF UI 的窗口句柄<xref:System.Windows.Interop.HwndHost>和显示主机应用程序的 UI。  
   
@@ -252,11 +252,11 @@ ms.locfileid: "56746557"
   
 -   从主机应用程序中显示的外接程序用户界面不遵从主机应用程序的剪辑行为。  
   
--   互操作性方案中的“空域”概念也适用于外接程序（请参阅[技术区概述](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)）。  
+-   互操作性方案中的“空域”概念也适用于外接程序（请参阅[技术区概述](../advanced/technology-regions-overview.md)）。  
   
 -   主机应用程序的 UI 服务，如资源继承、 数据绑定和命令，不会自动提供外接程序用户界面。 若要向外接程序提供这些服务，需要更新管道。  
   
--   不能旋转、 缩放、 倾斜，或不受转换一个外接程序的 UI (请参阅[转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md))。  
+-   不能旋转、 缩放、 倾斜，或不受转换一个外接程序的 UI (请参阅[转换概述](../graphics-multimedia/transforms-overview.md))。  
   
 -   通过绘制从操作呈现的外接程序用户界面中的内容<xref:System.Drawing>命名空间可以包含 alpha 值混合处理。 但是，加载项 UI 和主机应用程序 UI，其中包含它必须是 100%不透明的;换而言之，`Opacity`上的属性必须设置为 1。  
   
@@ -280,12 +280,12 @@ ms.locfileid: "56746557"
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>性能优化  
- 默认情况下，当使用多个应用程序域时，每个应用程序所需的各种.NET Framework 程序集是所有加载到该应用程序的域。 因此，创建新应用程序域和在应用程序域中启动应用程序所需的时间可能会影响性能。 但是，.NET Framework 提供了一种方法，从而减少启动时间即指示应用程序在应用程序域之间共享程序集，如果他们已加载。 执行此操作通过使用<xref:System.LoaderOptimizationAttribute>属性，必须应用于入口点方法 (`Main`)。 这种情况下，只能使用代码来实现应用程序定义（请参阅[应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)）。  
+ 默认情况下，当使用多个应用程序域时，每个应用程序所需的各种.NET Framework 程序集是所有加载到该应用程序的域。 因此，创建新应用程序域和在应用程序域中启动应用程序所需的时间可能会影响性能。 但是，.NET Framework 提供了一种方法，从而减少启动时间即指示应用程序在应用程序域之间共享程序集，如果他们已加载。 执行此操作通过使用<xref:System.LoaderOptimizationAttribute>属性，必须应用于入口点方法 (`Main`)。 这种情况下，只能使用代码来实现应用程序定义（请参阅[应用程序管理概述](application-management-overview.md)）。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.LoaderOptimizationAttribute>
 - [外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [应用程序域](../../../../docs/framework/app-domains/application-domains.md)
+- [应用程序域](../../app-domains/application-domains.md)
 - [.NET framework 远程处理概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [使对象可远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [帮助主题](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+- [帮助主题](how-to-topics.md)

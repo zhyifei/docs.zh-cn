@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: b434f30fc187af8b118ac926fec96d28182b0bfc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: b77dd1277e7d23729f30d9d495c5417055a22759
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221414"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378985"
 ---
 # <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::ProcessStateChanged 方法
 
@@ -34,11 +34,10 @@ HRESULT ProcessStateChanged(
 );
 ```
 
-#### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
- `eChange`
-
- [in]成员[CorDebugStateChange 枚举](cordebugstatechange-enumeration.md)描述进程的执行状态的更改。
+ `eChange`\
+[in]成员[CorDebugStateChange 枚举](cordebugstatechange-enumeration.md)描述进程的执行状态的更改。
 
 ## <a name="remarks"></a>备注
 
