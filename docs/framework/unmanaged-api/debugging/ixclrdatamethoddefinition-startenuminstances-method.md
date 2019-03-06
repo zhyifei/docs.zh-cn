@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: c78af112e9239143c4854e34e9b6aa8e99344ec3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e92eea9677731756bdbfcbdcfac1531861fb5dce
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623646"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361338"
 ---
 # <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>IXCLRDataMethodDefinition::StartEnumInstances 方法
 
@@ -37,11 +37,13 @@ HRESULT StartEnumInstances(
 );
 ```
 
-### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
-`appDomain` [in]枚举 AppDomain。
+`appDomain`\
+[in]枚举 AppDomain。
 
-`handle` [out]枚举的实例句柄。
+`handle`\
+[out]枚举的实例句柄。
 
 ## <a name="remarks"></a>备注
 
@@ -56,6 +58,6 @@ HRESULT StartEnumInstances(
 
 ## <a name="see-also"></a>请参阅
 
-- [CLRDataSourceType 枚举](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataMethodDefinition 接口](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
+- [CLRDataSourceType 枚举](clrdatasourcetype-enumeration.md)
+- [调试](index.md)
+- [IXCLRDataMethodDefinition 接口](ixclrdatamethoddefinition-interface.md)

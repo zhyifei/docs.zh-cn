@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 67978e49a8c23c4b25234ecbb3639c696c7232f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 072e775d11d44dfbca27f1616889e388ae61d467
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655642"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365992"
 ---
 # <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::EndEnumMethodInstancesByAddress 方法
 
@@ -36,9 +36,10 @@ HRESULT EndEnumMethodInstancesByAddress(
 );
 ```
 
-### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
-`handle` [out]枚举的方法实例句柄。
+`handle`\
+[out]枚举的方法实例句柄。
 
 ## <a name="remarks"></a>备注
 
@@ -53,6 +54,6 @@ HRESULT EndEnumMethodInstancesByAddress(
 
 ## <a name="see-also"></a>请参阅
 
-- [CLRDataSourceType 枚举](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataProcess 接口](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [CLRDataSourceType 枚举](clrdatasourcetype-enumeration.md)
+- [调试](index.md)
+- [IXCLRDataProcess 接口](ixclrdataprocess-interface.md)

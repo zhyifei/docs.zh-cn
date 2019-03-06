@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 02377b0765144064df8d51fa63768412ca4b606a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974804"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363471"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda 表达式 (Visual Basic)
 一个*lambda 表达式*是函数或子例程没有可用于任何委托是有效的名称。 Lambda 表达式可以是函数或子例程，并且可以是单行或多行。 可以将值从当前作用域传递到 lambda 表达式中。  
@@ -109,7 +109,7 @@ End Class
   
  有关如何创建和使用异步方法的详细信息，请参阅[使用 Async 和 Await 的异步编程](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
   
-##  <a name="context"></a> 上下文  
+## <a name="context"></a> 上下文  
  Lambda 表达式与在其中定义它的作用域共享其上下文。 它具有与包含作用域中编写任何代码的相同访问权限。 这包括访问成员变量、 函数和子例程， `Me`，包含作用域中的局部变量和参数。  
   
  访问本地变量和参数中包含的作用域可以扩展该作用域生存期。 只要引用 lambda 表达式的委托不能进行垃圾回收，会保留在原始环境变量的访问权限。 在以下示例中，变量`target`本地`makeTheGame`，在其中的方法的 lambda 表达式`playTheGame`定义。 请注意，返回的 lambda 表达式中，分配给`takeAGuess`中`Main`，仍有权访问本地变量`target`。  

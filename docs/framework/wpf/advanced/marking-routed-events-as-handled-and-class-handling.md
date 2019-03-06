@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 6e34347212a3dc9d8a64b48360af70366bab2083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595105"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378822"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>将路由事件标记为“已处理”和“类处理”
 路由事件的处理程序可以在事件数据内将事件标记为已处理。 处理事件将有效地缩短路由。 类处理是一个编程概念，受路由事件支持。 类处理程序有机会在类级别使用处理程序处理特定路由事件，在类的任何实例上存在任何实例处理程序之前调用该处理程序。  
@@ -31,7 +31,7 @@ ms.locfileid: "54595105"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
- 本主题将详细介绍[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)中引入的概念。  
+ 本主题将详细介绍[路由事件概述](routed-events-overview.md)中引入的概念。  
   
 <a name="When_to_Mark_Events_as_Handled"></a>   
 ## <a name="when-to-mark-events-as-handled"></a>何时将事件标记为“已处理”  
@@ -47,7 +47,7 @@ ms.locfileid: "54595105"
   
  任意给定的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类引发其声明的路由事件的方式的内部实现可在隧道路由事件与冒泡路由事件之间建立连接，对于成对的输入路由事件也是如此。 但是除非该类级实现存在，否则共享命名方案的隧道路由事件与冒泡路由事件之间将没有连接：没有上述实现，它们将是两个完全独立的路由事件，不会顺次引发，也不会共享事件数据。  
   
- 有关如何在自定义类中实现隧道/冒泡输入路由事件对的详细信息，请参阅[创建自定义路由事件](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)。  
+ 有关如何在自定义类中实现隧道/冒泡输入路由事件对的详细信息，请参阅[创建自定义路由事件](how-to-create-a-custom-routed-event.md)。  
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>类处理程序和实例处理程序  
@@ -100,6 +100,6 @@ ms.locfileid: "54595105"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.EventManager>
-- [预览事件](../../../../docs/framework/wpf/advanced/preview-events.md)
-- [创建自定义路由事件](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)
-- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [预览事件](preview-events.md)
+- [创建自定义路由事件](how-to-create-a-custom-routed-event.md)
+- [路由事件概述](routed-events-overview.md)

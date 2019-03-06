@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 9e2370c1b17bfdf103072ff33bf42c4c77706550
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bee6bffcfe0660d1661cd2c8e2ddf0528e98620
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975194"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360259"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim 语句 (Visual Basic)
 声明，并为一个或多个变量分配存储空间。  
@@ -246,7 +246,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  有关数组文本的详细信息，请参阅[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
-##  <a name="default"></a> 默认数据类型和值  
+## <a name="default"></a> 默认数据类型和值  
  下表描述了指定 `Dim` 语句中数据类型和初始值设定项的各种组合的结果。  
   
 |是否指定数据类型？|是否指定初始值设定项？|示例|结果|  

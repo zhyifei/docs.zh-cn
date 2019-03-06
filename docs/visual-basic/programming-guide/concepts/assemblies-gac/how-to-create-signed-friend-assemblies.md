@@ -2,12 +2,12 @@
 title: 如何：创建签名的友元程序集 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: f0c36d6b134e1c742905ca9081bf3d44e5fe369f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 20d1bb571d9cd354ea3f3dba560743da00c8bf22
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748721"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359011"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>如何：创建签名的友元程序集 (Visual Basic)
 本示例演示如何将友元程序集和具有强名称的程序集一起使用。 这两种程序集必须都使用强名称。 尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。  
@@ -86,8 +86,8 @@ ms.locfileid: "56748721"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [在.NET 中的程序集](../../../../standard/assembly/index.md)
-- [友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [.NET 中的程序集](../../../../standard/assembly/index.md)
+- [友元程序集](../../../../standard/assembly/friend-assemblies.md)
 - [如何：创建未签名的友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe （强名称工具）](../../../../framework/tools/sn-exe-strong-name-tool.md))

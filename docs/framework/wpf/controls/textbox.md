@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: 18f5b6b826d1c5c7ff6fe3087b839eb6947dc695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2a261b72fe3205c9a03292f1f6bbcebdcf8649b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649344"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356970"
 ---
 # <a name="textbox"></a>文本框
 <xref:System.Windows.Controls.TextBox>控件为 WPF 应用程序中的基本的文本输入提供支持。  
   
 ## <a name="in-this-section"></a>本节内容  
- [TextBox 概述](../../../../docs/framework/wpf/controls/textbox-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
+ [TextBox 概述](textbox-overview.md)  
+ [帮助主题](textbox-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.TextBox>  
@@ -32,4 +32,4 @@ ms.locfileid: "54649344"
   
 ## <a name="see-also"></a>请参阅
 - [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [TextBox 样式和模板](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+- [TextBox 样式和模板](textbox-styles-and-templates.md)

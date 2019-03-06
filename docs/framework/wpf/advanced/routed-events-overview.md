@@ -15,19 +15,19 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 637cb6cfb343352561708a7d94e76e84e2ca7ca9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0db690bfd1a0cabf3060067ea23cf01acf3251d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535809"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379206"
 ---
 # <a name="routed-events-overview"></a>路由事件概述
 本主题描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主题定义路由事件术语、描述路由事件如何通过元素树来路由、概述如何处理路由事件，并介绍如何创建你自己的自定义路由事件。
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
- 本主题假定你对如下内容有基本了解：[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]、面向对象的编程以及如何将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素之间的关系概念化为树。 若要理解本主题中的示例，你还应当了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 并知道如何编写非常基本的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序或页。 有关详细信息，请参见[演练：我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)并[XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
+ 本主题假定你对如下内容有基本了解：[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]、面向对象的编程以及如何将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素之间的关系概念化为树。 若要理解本主题中的示例，你还应当了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 并知道如何编写非常基本的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序或页。 有关详细信息，请参见[演练：我第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)并[XAML 概述 (WPF)](xaml-overview-wpf.md)。  
   
 <a name="routing"></a>   
 ## <a name="what-is-a-routed-event"></a>什么是路由事件？  
@@ -41,11 +41,11 @@ ms.locfileid: "54535809"
   
  请思考下面的简单元素树：  
   
- [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
+ [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
  此元素树生成类似如下的内容：  
   
- ![“是”、“否”和“取消”按钮](../../../../docs/framework/wpf/advanced/media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")  
+ ![“是”、“否”和“取消”按钮](./media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")  
   
  在此简化的元素树中，源<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件是之一<xref:System.Windows.Controls.Button>元素，而所<xref:System.Windows.Controls.Button>单击的是有机会处理事件的第一个元素。 但是，如果没有处理程序附加到<xref:System.Windows.Controls.Button>处理的事件，则该事件将向上冒泡到<xref:System.Windows.Controls.Button>在元素树中，这是父<xref:System.Windows.Controls.StackPanel>。 可能的事件冒泡到<xref:System.Windows.Controls.Border>，然后会到达元素树 （未显示） 的页面根。  
   
@@ -60,8 +60,8 @@ ms.locfileid: "54535809"
   
  **单一处理程序附加点：** 在[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]，您将不得不多次的同一处理程序附加到处理可能从多个元素引发的事件。 借助路由事件，可以只附加该处理程序一次（如上例中所示），并在必要时使用处理程序逻辑来确定该事件的源位置。 例如，这可以是前面显示的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的处理程序：  
   
- [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
- [!code-vb[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
+ [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
+ [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
   
  **类处理方式：** 路由事件允许由类定义一个静态处理程序。 此类处理程序能够抢在任何附加的实例处理程序之前处理事件。  
   
@@ -72,15 +72,15 @@ ms.locfileid: "54535809"
   
  下面的示例演示了自定义的声明`Tap`路由的事件，包括注册和公开<xref:System.Windows.RoutedEvent>标识符字段，并`add`并`remove`实现`Tap` [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件。  
   
- [!code-csharp[RoutedEventCustom#AddRemoveHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#addremovehandler)]
- [!code-vb[RoutedEventCustom#AddRemoveHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#addremovehandler)]  
+ [!code-csharp[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#addremovehandler)]
+ [!code-vb[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#addremovehandler)]  
   
 ### <a name="routed-event-handlers-and-xaml"></a>路由事件处理程序和 XAML  
  若要使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 为事件添加处理程序，可将该事件的名称声明为用作事件侦听器的元素的属性。 该属性的值是所实现的处理程序方法的名称，该方法必须存在于代码隐藏文件的分部类中。  
   
- [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
+ [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
- 用来添加标准 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件处理程序的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法与用来添加路由事件处理程序的语法相同，因为实际上是向底层具有路由事件实现的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件包装器添加处理程序。 有关在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中添加事件处理程序的详细信息，请参阅 [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
+ 用来添加标准 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件处理程序的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法与用来添加路由事件处理程序的语法相同，因为实际上是向底层具有路由事件实现的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件包装器添加处理程序。 有关在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中添加事件处理程序的详细信息，请参阅 [XAML 概述 (WPF)](xaml-overview-wpf.md)。  
   
 <a name="routing_strategies"></a>   
 ## <a name="routing-strategies"></a>路由策略  
@@ -114,30 +114,30 @@ ms.locfileid: "54535809"
 ## <a name="adding-and-implementing-an-event-handler-for-a-routed-event"></a>为路由事件添加和实现事件处理程序  
  若要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中添加事件处理程序，只需将事件名称作为属性添加到元素中，并将属性值设置为用来实现相应委托的事件处理程序的名称，如下面的示例中所示。  
   
- [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
+ [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
  `b1SetColor` 包含用于处理的代码实现的处理程序的名称<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 `b1SetColor` 必须具有相同的签名<xref:System.Windows.RoutedEventHandler>委托，委托是事件处理程序委托的<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 所有路由事件处理程序委托的第一个参数都指定要向其中添加事件处理程序的元素，第二个参数指定事件的数据。  
   
-[!code-csharp[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
-[!code-vb[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
+[!code-csharp[EventOvwSupport#SimpleHandlerA](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
+[!code-vb[EventOvwSupport#SimpleHandlerA](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
   
  <xref:System.Windows.RoutedEventHandler> 是基本的路由的事件处理程序委托。 对于针对某些控件或方案的专用路由事件，要用于路由事件处理程序的委托还可能会变得更加专用化，以便可以传输专用的事件数据。 例如，在常见的输入方案中，可能需要处理<xref:System.Windows.UIElement.DragEnter>路由的事件。 您的处理程序应实现<xref:System.Windows.DragEventHandler>委托。 通过使用更具体的委托，可以处理<xref:System.Windows.DragEventArgs>中的处理程序和读取<xref:System.Windows.DragEventArgs.Data%2A>属性，其中包含拖动操作的剪贴板有效负载。  
   
- 有关如何使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 向元素中添加事件处理程序的完整示例，请参阅[处理路由事件](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)。  
+ 有关如何使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 向元素中添加事件处理程序的完整示例，请参阅[处理路由事件](how-to-handle-a-routed-event.md)。  
   
  在用代码创建的应用程序中为路由事件添加处理程序非常简单。 路由的事件处理程序始终可通过一个帮助器方法添加<xref:System.Windows.UIElement.AddHandler%2A>(它是现有支持进行调用的相同方法`add`。)但是，现有的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 路由事件通常借助于支持机制来实现 `add` 和 `remove` 逻辑，这些实现允许使用特定于语言的事件语法来添加路由事件的处理程序，特定于语言的事件语法比 Helper 方法更直观。 下面是 Helper 方法的示例用法：  
   
- [!code-csharp[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
- [!code-vb[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
+ [!code-csharp[EventOvwSupport#AddHandlerCode](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
+ [!code-vb[EventOvwSupport#AddHandlerCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
   
  下面的示例说明C#运算符 （Visual Basic 原因是其处理的取消引用具有略有不同的运算符语法） 的语法：  
   
- [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
- [!code-vb[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
+ [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
+ [!code-vb[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
   
- 有关如何在代码中添加事件处理程序的示例，请参阅[使用代码添加事件处理程序](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)。  
+ 有关如何在代码中添加事件处理程序的示例，请参阅[使用代码添加事件处理程序](how-to-add-an-event-handler-using-code.md)。  
   
- 如果使用的 Visual Basic，您还可以使用`Handles`关键字作为处理程序声明的一部分添加处理程序。 有关详细信息，请参阅 [Visual Basic 和 WPF 事件处理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
+ 如果使用的 Visual Basic，您还可以使用`Handles`关键字作为处理程序声明的一部分添加处理程序。 有关详细信息，请参阅 [Visual Basic 和 WPF 事件处理](visual-basic-and-wpf-event-handling.md)。  
   
 <a name="concept_handled"></a>   
 ### <a name="the-concept-of-handled"></a>“已处理”概念  
@@ -165,7 +165,7 @@ ms.locfileid: "54535809"
   
  此概念设计通过前面所述的路由行为得到增强： 会更加困难 （尽管仍可以在代码或样式） 来调用即使路由前面的处理程序已设置路由事件附加处理程序<xref:System.Windows.RoutedEventArgs.Handled%2A>到`true`。  
   
- 有关详细信息<xref:System.Windows.RoutedEventArgs.Handled%2A>、 的类处理路由事件和有关时建议适当的标记作为路由的事件<xref:System.Windows.RoutedEventArgs.Handled%2A>，请参阅[路由事件标记为已处理，和类处理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)。  
+ 有关详细信息<xref:System.Windows.RoutedEventArgs.Handled%2A>、 的类处理路由事件和有关时建议适当的标记作为路由的事件<xref:System.Windows.RoutedEventArgs.Handled%2A>，请参阅[路由事件标记为已处理，和类处理](marking-routed-events-as-handled-and-class-handling.md)。  
   
  在应用程序中，相当常见的做法是只针对引发浮升路由事件的对象来处理该事件，而根本不考虑事件的路由特征。 但是，在事件数据中将路由事件标记为“已处理”仍是一个不错的做法，因为这样可以防止元素树中位置更高的元素也对同一个路由事件附加了处理程序而出现意外的副作用。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "54535809"
 ## <a name="class-handlers"></a>类处理程序  
  如果定义派生的类以某种方式从<xref:System.Windows.DependencyObject>，还可以定义并附加路由事件是您的类声明或继承事件成员的类处理程序。 每当路由事件到达其路由中的元素实例时，都会先调用类处理程序，然后再调用附加到该类某个实例的任何实例侦听器处理程序。  
   
- 有些 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件对某些路由事件具有固有的类处理。 路由事件可能看起来从未引发过，但实际上正对其进行类处理，如果使用某些技术，路由事件还是可以由实例处理程序进行处理。 此外，许多基类和控件会公开可用来替代类处理行为的虚拟方法。 若要深入了解如何解决不需要的类处理以及如何在自定义类中定义自己的类处理，请参阅[将路由事件标记为“已处理”和类处理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)。  
+ 有些 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件对某些路由事件具有固有的类处理。 路由事件可能看起来从未引发过，但实际上正对其进行类处理，如果使用某些技术，路由事件还是可以由实例处理程序进行处理。 此外，许多基类和控件会公开可用来替代类处理行为的虚拟方法。 若要深入了解如何解决不需要的类处理以及如何在自定义类中定义自己的类处理，请参阅[将路由事件标记为“已处理”和类处理](marking-routed-events-as-handled-and-class-handling.md)。  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events-in-wpf"></a>WPF 中的附加事件  
@@ -181,15 +181,15 @@ ms.locfileid: "54535809"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 输入系统广泛使用附加事件。 但是，几乎所有的附加事件都是通过基本元素转发的。 输入事件随后会显示为作为基本元素类成员的等效非附加路由事件。 例如，基础附加事件<xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType>可以更方便地处理针对任何给定<xref:System.Windows.UIElement>通过使用<xref:System.Windows.UIElement.MouseDown>上的<xref:System.Windows.UIElement>而不是可以处理附加的事件语法中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]或代码。  
   
- 有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中附加事件的详细信息，请参阅[附加事件概述](../../../../docs/framework/wpf/advanced/attached-events-overview.md)。  
+ 有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中附加事件的详细信息，请参阅[附加事件概述](attached-events-overview.md)。  
   
 <a name="Qualifying_Event_Names_in_XAML_for_Anticipated_Routing"></a>   
 ## <a name="qualified-event-names-in-xaml"></a>XAML 中的限定事件名称  
  为子元素所引发的路由事件附加处理程序是另一个语法用法，它与 typename.eventname 附加事件语法相似，但它并非严格意义上的附加事件用法。 可以向公用父级附加处理程序以利用事件路由，即使公用父级可能没有作为成员的相关路由事件，也是如此。 请再次思考下面的示例：  
   
- [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
+ [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
- 在这里，添加了处理程序的父元素侦听器是<xref:System.Windows.Controls.StackPanel>。 但是，它添加声明时，将通过引发的路由事件处理程序<xref:System.Windows.Controls.Button>类 (<xref:System.Windows.Controls.Primitives.ButtonBase>实际上，但是可以由<xref:System.Windows.Controls.Button>通过继承)。 <xref:System.Windows.Controls.Button> "拥有"该事件，但是路由的事件系统允许处理程序附加到任何任何路由事件<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>实例侦听器，否则无法附加侦听器[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件。 对于这些限定的事件特性名来说，默认的 xmlns 命名空间通常是默认的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] xmlns 命名空间，但是还可以为自定义路由事件指定带有前缀的命名空间。 有关 xmlns 的详细信息，请参阅 [WPF XAML 的 XAML 命名空间和命名空间映射](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+ 在这里，添加了处理程序的父元素侦听器是<xref:System.Windows.Controls.StackPanel>。 但是，它添加声明时，将通过引发的路由事件处理程序<xref:System.Windows.Controls.Button>类 (<xref:System.Windows.Controls.Primitives.ButtonBase>实际上，但是可以由<xref:System.Windows.Controls.Button>通过继承)。 <xref:System.Windows.Controls.Button> "拥有"该事件，但是路由的事件系统允许处理程序附加到任何任何路由事件<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>实例侦听器，否则无法附加侦听器[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件。 对于这些限定的事件特性名来说，默认的 xmlns 命名空间通常是默认的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] xmlns 命名空间，但是还可以为自定义路由事件指定带有前缀的命名空间。 有关 xmlns 的详细信息，请参阅 [WPF XAML 的 XAML 命名空间和命名空间映射](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 <a name="how_event_processing_works"></a>   
 ## <a name="wpf-input-events"></a>WPF 输入事件  
@@ -199,7 +199,7 @@ ms.locfileid: "54535809"
   
  为了说明输入事件处理的工作方式，请思考下面的输入事件示例。 在下面的树插图中，`leaf element #2` 是先后发生的 `PreviewMouseDown` 事件和 `MouseDown` 事件的源。  
   
- ![事件路由示意图](../../../../docs/framework/wpf/advanced/media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
+ ![事件路由示意图](./media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
 输入事件的浮升和隧道  
   
  事件的处理顺序如下所述：  
@@ -222,35 +222,35 @@ ms.locfileid: "54535809"
   
  通常情况下，输入的事件标记后<xref:System.Windows.RoutedEventArgs.Handled%2A>，进一步不调用处理程序。 通常，一旦调用了用来对输入事件的含义进行特定于应用程序的逻辑处理的处理程序，就应当将输入事件标记为“已处理”。  
   
- 有关此通用声明异常<xref:System.Windows.RoutedEventArgs.Handled%2A>状态是输入的事件处理程序注册为有意忽略<xref:System.Windows.RoutedEventArgs.Handled%2A>事件数据的状态仍会调用路由。 有关详细信息，请参阅[预览事件](../../../../docs/framework/wpf/advanced/preview-events.md)或[将路由事件标记为“已处理”和类处理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)。  
+ 有关此通用声明异常<xref:System.Windows.RoutedEventArgs.Handled%2A>状态是输入的事件处理程序注册为有意忽略<xref:System.Windows.RoutedEventArgs.Handled%2A>事件数据的状态仍会调用路由。 有关详细信息，请参阅[预览事件](preview-events.md)或[将路由事件标记为“已处理”和类处理](marking-routed-events-as-handled-and-class-handling.md)。  
   
  通常，隧道事件和浮升事件之间的共享事件数据模型以及先引发隧道事件后引发浮升事件的顺序引发并非适用于所有的路由事件的概念。 该行为的实现取决于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 输入设备选择引发和连接输入事件对的具体方式。 实现你自己的输入事件是一个高级方案，但是你也可以选择针对自己的输入事件遵循该模型。  
   
- 一些类选择对某些输入事件进行类处理，其目的通常是重新定义用户驱动的特定输入事件在该控件中的含义并引发新事件。 有关详细信息，请参阅[将路由事件标记为“已处理”和类处理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)。  
+ 一些类选择对某些输入事件进行类处理，其目的通常是重新定义用户驱动的特定输入事件在该控件中的含义并引发新事件。 有关详细信息，请参阅[将路由事件标记为“已处理”和类处理](marking-routed-events-as-handled-and-class-handling.md)。  
   
- 有关输入以及在典型的应用程序方案中输入和事件如何交互的详细信息，请参阅[输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)。  
+ 有关输入以及在典型的应用程序方案中输入和事件如何交互的详细信息，请参阅[输入概述](input-overview.md)。  
   
 <a name="events_styles"></a>   
 ## <a name="eventsetters-and-eventtriggers"></a>EventSetter 和 EventTrigger  
  在样式中，您可以添加一些预先声明[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]事件处理的标记中的语法使用<xref:System.Windows.EventSetter>。 在应用样式时，所引用的处理程序会添加到带样式的实例中。 您可以声明<xref:System.Windows.EventSetter>仅为路由事件。 下面是一个示例。 请注意，此处引用的 `b1SetColor` 方法位于代码隐藏文件中。  
   
- [!code-xaml[EventOvwSupport#XAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]  
+ [!code-xaml[EventOvwSupport#XAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]  
   
  好处是，样式有可能包含大量的其他信息，可应用到你的应用程序中任何按钮和具有<xref:System.Windows.EventSetter>属于该样式将提升甚至在标记级别的代码重用。 此外，<xref:System.Windows.EventSetter>抽象化处理程序进一步从常规的应用程序和页面标记的方法名称。  
   
- 路由的事件和动画功能组合在一起的另一个专用的语法[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是<xref:System.Windows.EventTrigger>。 如同<xref:System.Windows.EventSetter>，只有路由的事件可用于<xref:System.Windows.EventTrigger>。 通常情况下，<xref:System.Windows.EventTrigger>声明为样式的一部分，但<xref:System.Windows.EventTrigger>也可以声明的一部分在页级别的元素<xref:System.Windows.FrameworkElement.Triggers%2A>集合，或在<xref:System.Windows.Controls.ControlTemplate>。 <xref:System.Windows.EventTrigger> ，可指定<xref:System.Windows.Media.Animation.Storyboard>运行每当路由的事件到达其路由中的某个元素声明<xref:System.Windows.EventTrigger>该事件。 利用<xref:System.Windows.EventTrigger>转移只需处理事件并使其启动现有情节提要是<xref:System.Windows.EventTrigger>提供更好地控制情节提要和其运行时行为。 有关详细信息，请参阅[在情节提要启动之后使用事件触发器来控制情节提要](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)。  
+ 路由的事件和动画功能组合在一起的另一个专用的语法[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是<xref:System.Windows.EventTrigger>。 如同<xref:System.Windows.EventSetter>，只有路由的事件可用于<xref:System.Windows.EventTrigger>。 通常情况下，<xref:System.Windows.EventTrigger>声明为样式的一部分，但<xref:System.Windows.EventTrigger>也可以声明的一部分在页级别的元素<xref:System.Windows.FrameworkElement.Triggers%2A>集合，或在<xref:System.Windows.Controls.ControlTemplate>。 <xref:System.Windows.EventTrigger> ，可指定<xref:System.Windows.Media.Animation.Storyboard>运行每当路由的事件到达其路由中的某个元素声明<xref:System.Windows.EventTrigger>该事件。 利用<xref:System.Windows.EventTrigger>转移只需处理事件并使其启动现有情节提要是<xref:System.Windows.EventTrigger>提供更好地控制情节提要和其运行时行为。 有关详细信息，请参阅[在情节提要启动之后使用事件触发器来控制情节提要](../graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)。  
   
 <a name="more_about"></a>   
 ## <a name="more-about-routed-events"></a>有关路由事件的更多信息  
- 本主题主要从以下角度讨论路由事件：描述基本概念；就如何以及何时响应各种基元素和控件中已经存在的路由事件提供指南。 但是，你可以在自定义类上创建自己的路由事件以及所有必要的支持（如专用的事件数据类和委托）。 路由的事件的所有者可以是任何类，但必须由引发并由处理路由的事件<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>这样才可供派生类。 有关自定义事件的详细信息，请参阅[创建自定义路由事件](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)。  
+ 本主题主要从以下角度讨论路由事件：描述基本概念；就如何以及何时响应各种基元素和控件中已经存在的路由事件提供指南。 但是，你可以在自定义类上创建自己的路由事件以及所有必要的支持（如专用的事件数据类和委托）。 路由的事件的所有者可以是任何类，但必须由引发并由处理路由的事件<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>这样才可供派生类。 有关自定义事件的详细信息，请参阅[创建自定义路由事件](how-to-create-a-custom-routed-event.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>
-- [将路由事件标记为“已处理”和“类处理”](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)
-- [输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [WPF 中的树](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
-- [弱事件模式](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)
+- [将路由事件标记为“已处理”和“类处理”](marking-routed-events-as-handled-and-class-handling.md)
+- [输入概述](input-overview.md)
+- [命令概述](commanding-overview.md)
+- [自定义依赖属性](custom-dependency-properties.md)
+- [WPF 中的树](trees-in-wpf.md)
+- [弱事件模式](weak-event-patterns.md)

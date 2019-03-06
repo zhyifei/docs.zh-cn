@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: 73ac80786b95c214cbba5924301b21f9c6e32837
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f313c17a278a7b51379c4da9389c01eedf4a1e62
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649812"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379271"
 ---
 # <a name="framework-property-metadata"></a>框架属性元数据
 对于 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 体系结构中被视为 WPF 框架级的对象元素的属性，将报告框架属性元数据选项。 通常，WPF 框架级指示要求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 演示 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 和可执行文件处理呈现、数据绑定和属性系统优化等功能。 这些系统对框架属性元数据进行查询，以便为特定的元素属性确定特定于功能的特征。  
@@ -19,7 +19,7 @@ ms.locfileid: "54649812"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>先决条件  
- 本主题假定你从 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 类的现有依赖属性的使用者角度了解依赖属性，并且已阅读[依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。 另外，应当已阅读[依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。  
+ 本主题假定你从 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 类的现有依赖属性的使用者角度了解依赖属性，并且已阅读[依赖属性概述](dependency-properties-overview.md)。 另外，应当已阅读[依赖属性元数据](dependency-property-metadata.md)。  
   
 <a name="What_Is_Communicated_by_Framework_Property"></a>   
 ## <a name="what-is-communicated-by-framework-property-metadata"></a>框架属性元数据传达的信息  
@@ -32,11 +32,11 @@ ms.locfileid: "54649812"
 -   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>。 默认情况下，依赖属性不会继承值。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 允许继承纳入可视化树中，这是某些控件复合方案所需的路径。  
   
     > [!NOTE]
-    >  属性值上下文中的术语“继承”指特定于依赖属性的情况；它意味着由于存在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统的 WPF 框架级功能，子元素可以从父元素继承实际的依赖属性值。 它与通过派生类型的托管代码类型和成员继承没有直接关系。 有关详细信息，请参阅[属性值继承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)。  
+    >  属性值上下文中的术语“继承”指特定于依赖属性的情况；它意味着由于存在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统的 WPF 框架级功能，子元素可以从父元素继承实际的依赖属性值。 它与通过派生类型的托管代码类型和成员继承没有直接关系。 有关详细信息，请参阅[属性值继承](property-value-inheritance.md)。  
   
--   报告数据绑定特性 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>， <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>)。 默认情况下，框架中的依赖属性支持具有单向绑定行为的数据绑定。 如果数据绑定没有适用的方案，则可禁用数据绑定（因为这些属性应该是灵活且可扩展的，所以在默认的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 中没有太多此类属性的示例）。 您可能会将绑定设置为具有双向绑定在一起在其组件部分之间的控件的行为的属性默认值 (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>是一个示例) 或双向绑定时的常见、 最期望的方案，为用户的 (<xref:System.Windows.Controls.TextBox.Text%2A>是一个示例)。 更改与数据绑定相关的元数据只会影响默认值；始终可以根据各个绑定更改此默认值。 若要详细了解常规的绑定模式和绑定，请参阅[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
+-   报告数据绑定特性 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>， <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>)。 默认情况下，框架中的依赖属性支持具有单向绑定行为的数据绑定。 如果数据绑定没有适用的方案，则可禁用数据绑定（因为这些属性应该是灵活且可扩展的，所以在默认的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 中没有太多此类属性的示例）。 您可能会将绑定设置为具有双向绑定在一起在其组件部分之间的控件的行为的属性默认值 (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>是一个示例) 或双向绑定时的常见、 最期望的方案，为用户的 (<xref:System.Windows.Controls.TextBox.Text%2A>是一个示例)。 更改与数据绑定相关的元数据只会影响默认值；始终可以根据各个绑定更改此默认值。 若要详细了解常规的绑定模式和绑定，请参阅[数据绑定概述](../data/data-binding-overview.md)。  
   
--   报告属性是否应记录的应用程序或服务支持日记功能 (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>)。 对于一般的元素，默认情况下不会启用日记记录功能，但可针对特定用户输入控件有选择性地启用。 此属性专门由日记记录的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现等日记记录服务读取，并且通常针对用户控件（例如用户在列表中选择的应在各导航步骤中保留的控件）设置此属性。 有关日记的信息，请参阅[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
+-   报告属性是否应记录的应用程序或服务支持日记功能 (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>)。 对于一般的元素，默认情况下不会启用日记记录功能，但可针对特定用户输入控件有选择性地启用。 此属性专门由日记记录的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现等日记记录服务读取，并且通常针对用户控件（例如用户在列表中选择的应在各导航步骤中保留的控件）设置此属性。 有关日记的信息，请参阅[导航概述](../app-development/navigation-overview.md)。  
   
 <a name="Reading_FrameworkPropertyMetadata"></a>   
 ## <a name="reading-frameworkpropertymetadata"></a>读取 FrameworkPropertyMetadata  
@@ -74,6 +74,6 @@ ms.locfileid: "54649812"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
-- [依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [依赖属性元数据](dependency-property-metadata.md)
+- [依赖项属性概述](dependency-properties-overview.md)
+- [自定义依赖属性](custom-dependency-properties.md)

@@ -7,25 +7,25 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 9fd5cc270074a3a2845147bcad8baef8d1f8ba2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9d000ca2da9dd9b4c8a677e85bc9cca5b1b1b1d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529406"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372680"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF 和 Direct3D9 互操作
 可以在 Windows Presentation Foundation (WPF) 应用程序中包含 Direct3D9 内容。 本主题介绍如何创建 Direct3D9 内容，以便它有效地与 WPF 互操作。  
   
 > [!NOTE]
->  在 WPF 中使用 Direct3D9 内容，还需要考虑到性能。 有关如何优化性能的详细信息，请参阅[Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)。  
+>  在 WPF 中使用 Direct3D9 内容，还需要考虑到性能。 有关如何优化性能的详细信息，请参阅[Direct3D9 和 WPF 互操作性的性能注意事项](performance-considerations-for-direct3d9-and-wpf-interoperability.md)。  
   
 ## <a name="display-buffers"></a>显示缓冲区  
  <xref:System.Windows.Interop.D3DImage>类管理两个显示缓冲区，称为*后台缓冲区*并且*前台缓冲区*。 后台缓冲区是 Direct3D9 图面。 对后台缓冲区的更改复制前滚到前台缓冲区调用时<xref:System.Windows.Interop.D3DImage.Unlock%2A>方法。  
   
  下图显示后台缓冲区和前台缓冲区之间的关系。  
   
- ![D3DImage 显示缓冲区](../../../../docs/framework/wpf/advanced/media/d3dimage-buffers.png "D3DImage_buffers")  
+ ![D3DImage 显示缓冲区](./media/d3dimage-buffers.png "D3DImage_buffers")  
   
 ## <a name="direct3d9-device-creation"></a>创建 Direct3D9 设备  
  若要呈现 Direct3D9 内容，必须创建 Direct3D9 设备。 有两个可用于创建设备的 Direct3D9 对象`IDirect3D9`和`IDirect3D9Ex`。 使用这些对象创建`IDirect3DDevice9`和`IDirect3DDevice9Ex`设备，分别。  
@@ -39,14 +39,14 @@ ms.locfileid: "54529406"
  在 Windows Vista 或更高版本操作系统上，使用`Direct3DCreate9Ex`与配置为使用 Windows 显示驱动程序模型 (WDDM) 显示的方法。 使用`Direct3DCreate9`任何其他平台上的方法。  
   
 ### <a name="availability-of-the-direct3dcreate9ex-method"></a>Direct3DCreate9Ex 方法的可用性  
- D3d9.dll 具有`Direct3DCreate9Ex`仅在 Windows Vista 或更高版本操作系统上的方法。 如果直接链接在 Windows XP 上的函数，你的应用程序加载失败。 若要确定是否`Direct3DCreate9Ex`支持方法、 加载 DLL 和查找进程的地址。 下面的代码演示如何为测试`Direct3DCreate9Ex`方法。 有关完整的代码示例，请参阅[演练：创建在 WPF 中承载的 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。  
+ D3d9.dll 具有`Direct3DCreate9Ex`仅在 Windows Vista 或更高版本操作系统上的方法。 如果直接链接在 Windows XP 上的函数，你的应用程序加载失败。 若要确定是否`Direct3DCreate9Ex`支持方法、 加载 DLL 和查找进程的地址。 下面的代码演示如何为测试`Direct3DCreate9Ex`方法。 有关完整的代码示例，请参阅[演练：创建在 WPF 中承载的 Direct3D9 内容](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)。  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureD3DObjects](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensured3dobjects)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureD3DObjects](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensured3dobjects)]  
   
 ### <a name="hwnd-creation"></a>HWND 创建  
  创建设备需要 HWND。 一般情况下，您创建 Direct3D9 使用虚拟 HWND。 下面的代码示例演示如何创建虚拟 HWND。  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureHWND](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensurehwnd)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureHWND](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensurehwnd)]  
   
 ### <a name="present-parameters"></a>存在参数  
  创建设备还需要`D3DPRESENT_PARAMETERS`结构，但只有几个参数非常重要。 这些参数会选择最大程度减少内存占用量。  
@@ -57,7 +57,7 @@ ms.locfileid: "54529406"
   
  下面的代码演示如何初始化`D3DPRESENT_PARAMETERS`结构。  
   
- [!code-cpp[System.Windows.Interop.D3DImage#Renderer_Init](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_init)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#Renderer_Init](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_init)]  
   
 ## <a name="creating-the-back-buffer-render-target"></a>创建后台缓冲区呈现器目标  
  若要显示在 Direct3D9 内容<xref:System.Windows.Interop.D3DImage>，创建 Direct3D9 面并将其分配通过调用<xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>方法。  
@@ -67,14 +67,14 @@ ms.locfileid: "54529406"
   
  下面的代码示例演示如何检查 Direct3D9 的系统上的所有适配器都支持。  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_TestSurfaceSettings](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_testsurfacesettings)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_TestSurfaceSettings](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_testsurfacesettings)]  
   
 ### <a name="creating-the-surface"></a>创建在图面  
- 创建图面之前, 请确认设备功能，在目标操作系统上支持良好的性能。 有关详细信息，请参阅[Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)。  
+ 创建图面之前, 请确认设备功能，在目标操作系统上支持良好的性能。 有关详细信息，请参阅[Direct3D9 和 WPF 互操作性的性能注意事项](performance-considerations-for-direct3d9-and-wpf-interoperability.md)。  
   
  如果你已验证设备功能，可以创建在图面。 下面的代码示例演示如何创建呈现器目标。  
   
- [!code-cpp[System.Windows.Interop.D3DImage#Renderer_CreateSurface](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_createsurface)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#Renderer_CreateSurface](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_createsurface)]  
   
 ### <a name="wddm"></a>WDDM  
  在 Windows Vista 和更高版本的操作系统，已配置为使用 WDDM，可以创建呈现器目标纹理，并将传递到在级别 0 面<xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>方法。 不建议使用此方法在 Windows XP 上因为不能创建可锁定的呈现目标纹理，并会降低性能。  
@@ -125,7 +125,7 @@ ms.locfileid: "54529406"
   
  下面的代码示例演示如何查找当前的监视器。  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_SetAdapter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_setadapter)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_SetAdapter](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_setadapter)]  
   
  更新监视器时<xref:System.Windows.Interop.D3DImage>容器的大小或位置更改或更新使用监视器`DispatcherTimer`每秒几次更新。  
   
@@ -149,6 +149,6 @@ ms.locfileid: "54529406"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Interop.D3DImage>
-- [Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [演练：创建在 WPF 中承载的 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [演练：在 WPF 中承载 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Direct3D9 和 WPF 互操作性的性能注意事项](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+- [演练：创建在 WPF 中承载的 Direct3D9 内容](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [演练：在 WPF 中承载 Direct3D9 内容](walkthrough-hosting-direct3d9-content-in-wpf.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545025"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352979"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>可样式化控件的设计准则
 本文档概述在设计可方便地样式化和模板化的控件时需要考虑的一组最佳做法。 在为内置的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件集处理主题控件样式时，我们通过大量试验和错误总结出了这组最佳做法。 我们已经认识到，成功的样式设置不只是设计完善的对象模型的功能，也是样式本身的功能。 本文档面向控件作者，而不是样式作者。  
@@ -27,7 +27,7 @@ ms.locfileid: "54545025"
   
 -   数据模板。  
   
- 有关样式设置和模板化简介，请参阅[样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+ 有关样式设置和模板化简介，请参阅[样式设置和模板化](styling-and-templating.md)。  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
 ## <a name="before-you-start-understanding-your-control"></a>在开始之前：了解您的控件  
@@ -119,5 +119,5 @@ ms.locfileid: "54545025"
 -   **主题样式不需要在所有主题中具有一致的“布局”语义**。 例如，默认的样式不需要保证控件将在所有主题中占用同样的大小，也不需要保证控件将在所有主题中具有同样的内容边距/空白。  
   
 ## <a name="see-also"></a>请参阅
-- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [控件创作概述](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [样式设置和模板化](styling-and-templating.md)
+- [控件创作概述](control-authoring-overview.md)

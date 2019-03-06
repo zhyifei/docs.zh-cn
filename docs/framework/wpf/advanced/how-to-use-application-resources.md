@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application resources [WPF]
 - resources [WPF], application resources
 ms.assetid: 507ea937-5191-406b-8797-0a3d9f94156d
-ms.openlocfilehash: acd172448ebdefd6395feec6ad50e1c9491d9e27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8712f7c9c60d43cf3d0348b7c3f2f4cbee0b93b1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733592"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378877"
 ---
 # <a name="how-to-use-application-resources"></a>如何：使用应用程序资源
 本示例演示如何使用应用程序资源。  
@@ -18,14 +18,14 @@ ms.locfileid: "54733592"
 ## <a name="example"></a>示例  
  以下示例演示应用程序定义文件。 应用程序定义文件定义资源部分 (值为<xref:System.Windows.Application.Resources%2A>属性)。 构成应用程序的所有其他页均可访问在应用程序级别定义的资源。 这种情况下，资源是声明样式。 包含控件模板的完整样式可能耗时较长，因为此示例中省略中定义的控件模板<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>的样式的属性 setter。  
   
- [!code-xaml[ResourcesApplication#PreTemplateResource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/app.xaml#pretemplateresource)]  
-[!code-xaml[ResourcesApplication#PostTemplateResource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/app.xaml#posttemplateresource)]  
+ [!code-xaml[ResourcesApplication#PreTemplateResource](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/app.xaml#pretemplateresource)]  
+[!code-xaml[ResourcesApplication#PostTemplateResource](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/app.xaml#posttemplateresource)]  
   
- 下面的示例演示[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页引用上例中定义的应用程序级资源。 使用引用资源[StaticResource 标记扩展](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)，它指定请求的资源的唯一资源键。 在当前页中没有找到具有“GelButton”键的资源，所以请求资源的资源查找范围超出当前页，进入已定义的应用程序级资源。  
+ 下面的示例演示[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页引用上例中定义的应用程序级资源。 使用引用资源[StaticResource 标记扩展](staticresource-markup-extension.md)，它指定请求的资源的唯一资源键。 在当前页中没有找到具有“GelButton”键的资源，所以请求资源的资源查找范围超出当前页，进入已定义的应用程序级资源。  
   
- [!code-xaml[ResourcesApplication#ConsumingPage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/page1.xaml#consumingpage)]  
+ [!code-xaml[ResourcesApplication#ConsumingPage](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/page1.xaml#consumingpage)]  
   
 ## <a name="see-also"></a>请参阅
-- [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)
-- [帮助主题](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+- [XAML 资源](xaml-resources.md)
+- [应用程序管理概述](../app-development/application-management-overview.md)
+- [帮助主题](resources-how-to-topics.md)

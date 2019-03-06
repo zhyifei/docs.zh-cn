@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: f8549dedc9c6f37fb8a06a376351ed96b808bfd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae6c8dc3669ed46165f3d78e78735187ebbc3776
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572912"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377012"
 ---
 # <a name="merged-resource-dictionaries"></a>合并资源字典
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 资源支持合并资源字典功能。 此功能提供一种方法，可在编译的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 应用程序外部定义 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的资源部分。 然后可以在应用程序之间共享资源，还可更方便地将资源隔离以进行本地化。  
@@ -18,9 +18,9 @@ ms.locfileid: "54572912"
 ## <a name="introducing-a-merged-resource-dictionary"></a>引入合并资源字典  
  在标记中，使用以下语法将合并资源字典引入页面：  
   
- [!code-xaml[ResourceMergeDictionary#MergedXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
+ [!code-xaml[ResourceMergeDictionary#MergedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
   
- 请注意，<xref:System.Windows.ResourceDictionary>元素不具有[X:key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)，通常需要的资源集合中的所有项。 但另一个<xref:System.Windows.ResourceDictionary>中引用<xref:System.Windows.ResourceDictionary.MergedDictionaries%2A>集合是一种特殊情况，保留此合并的资源字典方案。 <xref:System.Windows.ResourceDictionary>引入了合并资源字典不能有[X:key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)。 通常情况下，每个<xref:System.Windows.ResourceDictionary>内<xref:System.Windows.ResourceDictionary.MergedDictionaries%2A>集合指定<xref:System.Windows.ResourceDictionary.Source%2A>属性。 值<xref:System.Windows.ResourceDictionary.Source%2A>应为[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]解析到要合并的资源文件的位置。 目标[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]必须是另一个[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件中，使用<xref:System.Windows.ResourceDictionary>作为其根元素。  
+ 请注意，<xref:System.Windows.ResourceDictionary>元素不具有[X:key 指令](../../xaml-services/x-key-directive.md)，通常需要的资源集合中的所有项。 但另一个<xref:System.Windows.ResourceDictionary>中引用<xref:System.Windows.ResourceDictionary.MergedDictionaries%2A>集合是一种特殊情况，保留此合并的资源字典方案。 <xref:System.Windows.ResourceDictionary>引入了合并资源字典不能有[X:key 指令](../../xaml-services/x-key-directive.md)。 通常情况下，每个<xref:System.Windows.ResourceDictionary>内<xref:System.Windows.ResourceDictionary.MergedDictionaries%2A>集合指定<xref:System.Windows.ResourceDictionary.Source%2A>属性。 值<xref:System.Windows.ResourceDictionary.Source%2A>应为[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]解析到要合并的资源文件的位置。 目标[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]必须是另一个[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件中，使用<xref:System.Windows.ResourceDictionary>作为其根元素。  
   
 > [!NOTE]
 >  它是合法定义中的资源<xref:System.Windows.ResourceDictionary>作为指定的替代方法指定为合并字典<xref:System.Windows.ResourceDictionary.Source%2A>，或除了任何资源都包含从指定的源。 但是，这不是一种常见方案；合并字典的主要方案是从外部文件位置合并资源。 如果你想要指定页的标记中的资源，则应通常定义这些主<xref:System.Windows.ResourceDictionary>而不是在合并的字典。  
@@ -39,7 +39,7 @@ ms.locfileid: "54572912"
 > [!NOTE]
 >  不要使用“嵌入资源”生成操作。 支持生成操作本身[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序，但的分辨率<xref:System.Windows.ResourceDictionary.Source%2A>不会合并<xref:System.Resources.ResourceManager>，并因此不能将单个资源分离流外。 您仍可以使用嵌入的资源，出于其他目的，只要还使用<xref:System.Resources.ResourceManager>才能访问资源。  
   
- 还有一种相关技术是使用指向 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件的 Pack URI，并将其作为“源”进行引用。 Pack URI 可启用对引用程序集的组件和其他技术的引用。 有关 Pack URI 的详细信息，请参阅 [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。  
+ 还有一种相关技术是使用指向 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件的 Pack URI，并将其作为“源”进行引用。 Pack URI 可启用对引用程序集的组件和其他技术的引用。 有关 Pack URI 的详细信息，请参阅 [WPF 应用程序资源、内容和数据文件](../app-development/wpf-application-resource-content-and-data-files.md)。  
   
  对于不作为项目的一部分编译的资源，URI 将在运行时计算。 可使用常见的 URI 传输（如 file: 或 http:）引用资源文件。 使用非编译资源方法的缺点是：file: 访问需要额外部署步骤，并且 http: 访问意味着需访问 Internet 安全区域。  
   
@@ -49,10 +49,10 @@ ms.locfileid: "54572912"
  另一种合并字典/应用程序部署的可能方案是将合并字典编写为本地应用程序文件或编写到共享存储。  
   
 ### <a name="localization"></a>本地化  
- 如果需要本地化的资源保留为松散的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，并且隔离于将合并为主要字典的字典，则可单独本地化这些文件。 这是本地化附属资源程序集的轻量级替代方法。 有关详细信息，请参阅 [WPF 全球化和本地化概述](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)。  
+ 如果需要本地化的资源保留为松散的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，并且隔离于将合并为主要字典的字典，则可单独本地化这些文件。 这是本地化附属资源程序集的轻量级替代方法。 有关详细信息，请参阅 [WPF 全球化和本地化概述](wpf-globalization-and-localization-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.ResourceDictionary>
-- [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [资源和代码](../../../../docs/framework/wpf/advanced/resources-and-code.md)
-- [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [XAML 资源](xaml-resources.md)
+- [资源和代码](resources-and-code.md)
+- [WPF 应用程序资源、内容和数据文件](../app-development/wpf-application-resource-content-and-data-files.md)

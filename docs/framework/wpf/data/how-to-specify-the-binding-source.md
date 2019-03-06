@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: f2e3fa3352da85c7da394a582cfcd058fe3fadf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 105924fec2956f2f74a2a574ee62f71a37df9366
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577121"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356716"
 ---
 # <a name="how-to-specify-the-binding-source"></a>如何：指定绑定源
 在数据绑定中，绑定源对象是指从其获取数据的对象。 本主题描述了指定绑定源的不同方法。  
@@ -24,16 +24,16 @@ ms.locfileid: "54577121"
   
  在下面的示例中，数据上下文建立在应用程序的根元素上。 这允许所有子元素继承该数据上下文。 绑定的数据来自自定义数据类 `NetIncome`，可通过映射直接引用该类，已为该类分配了 `incomeDataSource` 资源键。  
   
- [!code-xaml[DirectionalBinding#DataContext1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
-[!code-xaml[DirectionalBinding#DataContext2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
+ [!code-xaml[DirectionalBinding#DataContext1](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
+[!code-xaml[DirectionalBinding#DataContext2](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
   
  下面的示例展示了 `NetIncome` 类的定义。  
   
- [!code-csharp[DirectionalBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
- [!code-vb[DirectionalBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
+ [!code-csharp[DirectionalBinding#DataObject](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
+ [!code-vb[DirectionalBinding#DataObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
   
 > [!NOTE]
->  以上示例实例化标记中的对象，并将其用作资源。 如果希望绑定到已在代码中实例化的对象，需要通过编程方式设置 `DataContext` 属性。 有关示例，请参阅[使数据可用于 XAML 中的绑定](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)。  
+>  以上示例实例化标记中的对象，并将其用作资源。 如果希望绑定到已在代码中实例化的对象，需要通过编程方式设置 `DataContext` 属性。 有关示例，请参阅[使数据可用于 XAML 中的绑定](how-to-make-data-available-for-binding-in-xaml.md)。  
   
  另外，如果希望在个别绑定上显式指定源，可以选择以下选项。 这些选项优先于继承的数据上下文。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "54577121"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
-- [属性值继承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
-- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [绑定声明概述](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
-- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [属性值继承](../advanced/property-value-inheritance.md)
+- [数据绑定概述](data-binding-overview.md)
+- [绑定声明概述](binding-declarations-overview.md)
+- [帮助主题](data-binding-how-to-topics.md)

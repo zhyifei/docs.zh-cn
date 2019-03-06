@@ -12,27 +12,27 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-ms.openlocfilehash: ada3abcccac4244819cfbef1101a770761df6a50
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: b6490919163a7c4a618bf9a8d0e2aa145f60eda1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221916"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372303"
 ---
 # <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes 字段
 
 在此专用字段`System.Windows.Diagnostics.VisualDiagnostics`类由 Visual Studio 用来确定是否将执行活动的调试器内部检查。
 
 ## <a name="syntax"></a>语法
-  
-```csharp  
+
+```csharp
 private static bool s_isDebuggerCheckDisabledForTestPurposes
 ```
-  
+
 > [!WARNING]
->  API 中的`System.Windows.Diagnostics.VisualDiagnostics`当在调试器下运行应用程序时，类才可用。 设置`s_isDebuggerCheckDisabledForTestPurposes`到`true`访问调试器外的 Api。  
->   
->  Microsoft 不支持在生产应用程序在任何情况下使用此字段。  
+> 中的 Api`System.Windows.Diagnostics.VisualDiagnostics`当在调试器下运行应用程序时，类才可用。 设置`s_isDebuggerCheckDisabledForTestPurposes`到`true`访问调试器外的 Api。
+>
+> Microsoft 不支持在生产应用程序在任何情况下使用此字段。
 
 ## <a name="requirements"></a>要求
 

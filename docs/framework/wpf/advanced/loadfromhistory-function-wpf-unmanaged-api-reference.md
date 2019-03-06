@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-ms.openlocfilehash: 42be46d836a299139bded938237fe2a06e9794a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 155b83b8b904350bd6faf73ea21d1db4f83085b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646927"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376125"
 ---
 # <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>LoadFromHistory 函数 （WPF 非托管 API 参考）
 此 API 支持 Windows Presentation Foundation (WPF) 基础结构，不应在代码中直接使用。  
@@ -37,7 +37,7 @@ HRESULT LoadFromHistory_export(
  指向绑定上下文的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[.NET Framework 系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[.NET Framework 系统需求](../../get-started/system-requirements.md)。  
   
  **DLL:**  
   
@@ -48,4 +48,4 @@ HRESULT LoadFromHistory_export(
  **.NET framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
-- [WPF 非托管 API 参考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [WPF 非托管 API 参考](wpf-unmanaged-api-reference.md)

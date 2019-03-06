@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: 5d6c660dba1a351df4dafd756bcabd484b9afad6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3fb2559510d85f6e55a4784f2b528f16737a2ab
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554928"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371107"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource 标记扩展
 提供值的任何[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通过查找对已定义资源的引用的属性特性。 对该资源的查找行为是类似于加载时查找，将在当前的标记从先前加载的资源查找[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]以及其他应用程序源页上，将生成与该资源值在运行时对象的属性值。  
@@ -38,18 +38,18 @@ ms.locfileid: "54554928"
   
 |||  
 |-|-|  
-|`key`|所请求资源的密钥。 最初由该键[X:key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)如果资源已在标记中，或作为提供`key`参数调用时<xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>如果资源在代码中创建的。|  
+|`key`|所请求资源的密钥。 最初由该键[X:key 指令](../../xaml-services/x-key-directive.md)如果资源已在标记中，或作为提供`key`参数调用时<xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>如果资源在代码中创建的。|  
   
 ## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]
->  一个`StaticResource`不能尝试使对资源定义前向引用在词法上进一步[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件。 不支持尝试这样做，并且即使此类引用不会失败，尝试前向引用将会产生对加载时间性能产生负面影响时表示的内部哈希表<xref:System.Windows.ResourceDictionary>搜索。 为获得最佳结果，调整资源字典的组合，这样可以避免前向引用。 如果无法避免前向引用，使用[DynamicResource 标记扩展](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)相反。  
+>  一个`StaticResource`不能尝试使对资源定义前向引用在词法上进一步[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件。 不支持尝试这样做，并且即使此类引用不会失败，尝试前向引用将会产生对加载时间性能产生负面影响时表示的内部哈希表<xref:System.Windows.ResourceDictionary>搜索。 为获得最佳结果，调整资源字典的组合，这样可以避免前向引用。 如果无法避免前向引用，使用[DynamicResource 标记扩展](dynamicresource-markup-extension.md)相反。  
   
- 指定<xref:System.Windows.StaticResourceExtension.ResourceKey%2A>应该对应于现有资源，以标识[X:key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)页面、 应用程序，可用的控件的主题和外部资源或系统资源中的某个级别。 资源查找发生的顺序。 有关静态和动态资源的资源查找行为的详细信息，请参阅[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+ 指定<xref:System.Windows.StaticResourceExtension.ResourceKey%2A>应该对应于现有资源，以标识[X:key 指令](../../xaml-services/x-key-directive.md)页面、 应用程序，可用的控件的主题和外部资源或系统资源中的某个级别。 资源查找发生的顺序。 有关静态和动态资源的资源查找行为的详细信息，请参阅[XAML 资源](xaml-resources.md)。  
   
- 资源键可以是任何字符串中定义[XamlName 语法](../../../../docs/framework/xaml-services/xamlname-grammar.md)。 资源键也可以是其他对象类型，如<xref:System.Type>。 一个<xref:System.Type>密钥是如何控件可以设置的样式的主题，通过隐式样式项的基础。 有关详细信息，请参阅[控件创作概述](../../../../docs/framework/wpf/controls/control-authoring-overview.md)。  
+ 资源键可以是任何字符串中定义[XamlName 语法](../../xaml-services/xamlname-grammar.md)。 资源键也可以是其他对象类型，如<xref:System.Type>。 一个<xref:System.Type>密钥是如何控件可以设置的样式的主题，通过隐式样式项的基础。 有关详细信息，请参阅[控件创作概述](../controls/control-authoring-overview.md)。  
   
- 引用资源的可选声明性方式是作为[DynamicResource 标记扩展](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)。  
+ 引用资源的可选声明性方式是作为[DynamicResource 标记扩展](dynamicresource-markup-extension.md)。  
   
  特性语法是最常用于该标记扩展的语法。 在 `StaticResource` 标识符字符串之后提供的字符串标记被指定为基础 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 扩展类的 <xref:System.Windows.StaticResourceExtension> 值。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "54554928"
   
  在中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器实现中，对此标记扩展的处理由定义<xref:System.Windows.StaticResourceExtension>类。  
   
- `StaticResource` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有标记扩展在其特性语法中都使用 { 和 } 字符，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器通过这一约定确认标记扩展必须处理该特性。 有关详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
+ `StaticResource` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有标记扩展在其特性语法中都使用 { 和 } 字符，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器通过这一约定确认标记扩展必须处理该特性。 有关详细信息，请参阅[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [资源和代码](../../../../docs/framework/wpf/advanced/resources-and-code.md)
+- [样式设置和模板化](../controls/styling-and-templating.md)
+- [XAML 概述 (WPF)](xaml-overview-wpf.md)
+- [标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [XAML 资源](xaml-resources.md)
+- [资源和代码](resources-and-code.md)

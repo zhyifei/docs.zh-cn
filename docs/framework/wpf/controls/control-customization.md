@@ -7,22 +7,22 @@ helpviewer_keywords:
 - customizing controls [WPF]
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
-ms.openlocfilehash: 2e3acf3de082db5b2cd586bed06cdb782e52d543
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80873f7a08d241c80dd663ee09d2ea0180fb505d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733397"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359336"
 ---
 # <a name="control-customization"></a>控件自定义
 此类别包含各种基本类、 接口和其他元素和在创建完全正常运行时使用的概念[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控件。  
   
 ## <a name="in-this-section"></a>本节内容  
- [控件创作概述](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [可设置样式的控件的设计指南](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
- [装饰器](../../../../docs/framework/wpf/controls/adorners.md)  
- [控件样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [WPF 自定义控件的 UI 自动化](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
+ [控件创作概述](control-authoring-overview.md)  
+ [可设置样式的控件的设计指南](guidelines-for-designing-stylable-controls.md)  
+ [装饰器](adorners.md)  
+ [控件样式和模板](control-styles-and-templates.md)  
+ [WPF 自定义控件的 UI 自动化](ui-automation-of-a-wpf-custom-control.md)  
   
 ## <a name="see-also"></a>请参阅
-- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [样式设置和模板化](styling-and-templating.md)

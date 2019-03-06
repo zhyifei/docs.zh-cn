@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: eb27f3c902a0fb783d26d14d1ce494eebcffb999
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532144"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364809"
 ---
 # <a name="dependency-property-security"></a>依赖项属性的安全性
 依赖属性通常应当被视为公共属性。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统在本质上无法对依赖属性值提供安全保证。  
@@ -27,7 +27,7 @@ ms.locfileid: "54532144"
   
  如果你正在编写您自己的依赖项属性，应声明包装器和<xref:System.Windows.DependencyProperty>标识符字段为公共成员，以便调用方执行未得到令人误解的该属性的实际访问级别有关的信息 （由于其存储在实现为依赖属性）。  
   
- 对于自定义依赖项属性，可以将属性注册为只读依赖属性，并且这确实提供了一种有效方法阻止任何人都不包含对引用设置的属性的<xref:System.Windows.DependencyPropertyKey>该属性。 有关详细信息，请参阅[只读依赖属性](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)。  
+ 对于自定义依赖项属性，可以将属性注册为只读依赖属性，并且这确实提供了一种有效方法阻止任何人都不包含对引用设置的属性的<xref:System.Windows.DependencyPropertyKey>该属性。 有关详细信息，请参阅[只读依赖属性](read-only-dependency-properties.md)。  
   
 > [!NOTE]
 >  声明<xref:System.Windows.DependencyProperty>不禁止标识符字段专用，并想象可用于帮助减少直接公开命名空间的自定义类，但这样的属性不应被视为"私有"作为相同意义上[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]语言定义所定义的访问级别下, 一节中描述的原因。  
@@ -40,4 +40,4 @@ ms.locfileid: "54532144"
  应用到一个要求<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>并且需要验证失败以防止设置属性上不具有足够的安全性机制。 通过强制执行的 set-value 失效<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>还可能会禁止恶意调用方，如果应用程序域中运行这些调用方。  
   
 ## <a name="see-also"></a>请参阅
-- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [自定义依赖属性](custom-dependency-properties.md)
