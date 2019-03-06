@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], DockPanel
 - DockPanel control [WPF]
 ms.assetid: 8d3d290b-d38c-47d0-918e-cee2baeb92ae
-ms.openlocfilehash: dd50045b7f0da350a75157d8e17e6c41cade78c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92dc0d9982e8ef92f4aa99e2bdd694a8585237cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550808"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361871"
 ---
-# <a name="dockpanel"></a><span data-ttu-id="f65cf-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="f65cf-102">DockPanel</span></span>
-<span data-ttu-id="f65cf-103"><xref:System.Windows.Controls.DockPanel>元素用来定位边缘的布局容器的子内容。</span><span class="sxs-lookup"><span data-stu-id="f65cf-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
+# <a name="dockpanel"></a><span data-ttu-id="641a7-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="641a7-102">DockPanel</span></span>
+<span data-ttu-id="641a7-103"><xref:System.Windows.Controls.DockPanel>元素用来定位子内容的布局容器的边缘。</span><span class="sxs-lookup"><span data-stu-id="641a7-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f65cf-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="f65cf-104">In This Section</span></span>  
- [<span data-ttu-id="f65cf-105">帮助主题</span><span class="sxs-lookup"><span data-stu-id="f65cf-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/dockpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="641a7-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="641a7-104">In This Section</span></span>  
+ [<span data-ttu-id="641a7-105">帮助主题</span><span class="sxs-lookup"><span data-stu-id="641a7-105">How-to Topics</span></span>](dockpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="f65cf-106">参考</span><span class="sxs-lookup"><span data-stu-id="f65cf-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="641a7-106">参考</span><span class="sxs-lookup"><span data-stu-id="641a7-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -35,9 +35,9 @@ ms.locfileid: "33550808"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="f65cf-107">相关章节</span><span class="sxs-lookup"><span data-stu-id="f65cf-107">Related Sections</span></span>  
- [<span data-ttu-id="f65cf-108">布局</span><span class="sxs-lookup"><span data-stu-id="f65cf-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="641a7-107">相关章节</span><span class="sxs-lookup"><span data-stu-id="641a7-107">Related Sections</span></span>  
+ [<span data-ttu-id="641a7-108">布局</span><span class="sxs-lookup"><span data-stu-id="641a7-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="f65cf-109">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="f65cf-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="641a7-109">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="641a7-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="f65cf-110">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="f65cf-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="641a7-110">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="641a7-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

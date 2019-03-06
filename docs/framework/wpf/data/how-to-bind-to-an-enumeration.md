@@ -6,22 +6,22 @@ helpviewer_keywords:
 - data binding [WPF], enumeration
 - enumeration [WPF]
 ms.assetid: b9091eba-1119-424e-868b-d1a4168b3732
-ms.openlocfilehash: db7b02a961c148bbdc31b05e7c71ea5b5d301c54
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df26d2bd08e4691837f739a4e71d3bb1a25bdd00
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586561"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377789"
 ---
-# <a name="how-to-bind-to-an-enumeration"></a><span data-ttu-id="b1e26-102">如何：绑定到枚举</span><span class="sxs-lookup"><span data-stu-id="b1e26-102">How to: Bind to an Enumeration</span></span>
-<span data-ttu-id="b1e26-103">此示例演示如何将绑定到通过绑定到枚举的 GetValues 方法的枚举。</span><span class="sxs-lookup"><span data-stu-id="b1e26-103">This example shows how to bind to an enumeration by binding to the enumeration's GetValues method.</span></span>  
+# <a name="how-to-bind-to-an-enumeration"></a><span data-ttu-id="6dfa7-102">如何：绑定到枚举</span><span class="sxs-lookup"><span data-stu-id="6dfa7-102">How to: Bind to an Enumeration</span></span>
+<span data-ttu-id="6dfa7-103">此示例演示如何将绑定到通过绑定到枚举的 GetValues 方法的枚举。</span><span class="sxs-lookup"><span data-stu-id="6dfa7-103">This example shows how to bind to an enumeration by binding to the enumeration's GetValues method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b1e26-104">示例</span><span class="sxs-lookup"><span data-stu-id="b1e26-104">Example</span></span>  
- <span data-ttu-id="b1e26-105">在下面的示例中，<xref:System.Windows.Controls.ListBox> 通过数据绑定来显示 <xref:System.Windows.HorizontalAlignment> 的枚举值列表。</span><span class="sxs-lookup"><span data-stu-id="b1e26-105">In the following example, the <xref:System.Windows.Controls.ListBox> displays the list of <xref:System.Windows.HorizontalAlignment> enumeration values through data binding.</span></span> <span data-ttu-id="b1e26-106"><xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.Button> 已进行绑定，目的是使你可以通过选择 <xref:System.Windows.Controls.ListBox> 中的值来更改 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 属性值。</span><span class="sxs-lookup"><span data-stu-id="b1e26-106">The <xref:System.Windows.Controls.ListBox> and the <xref:System.Windows.Controls.Button> are bound such that you can change the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property value of the <xref:System.Windows.Controls.Button> by selecting a value in the <xref:System.Windows.Controls.ListBox>.</span></span>  
+## <a name="example"></a><span data-ttu-id="6dfa7-104">示例</span><span class="sxs-lookup"><span data-stu-id="6dfa7-104">Example</span></span>  
+ <span data-ttu-id="6dfa7-105">在下面的示例中，<xref:System.Windows.Controls.ListBox> 通过数据绑定来显示 <xref:System.Windows.HorizontalAlignment> 的枚举值列表。</span><span class="sxs-lookup"><span data-stu-id="6dfa7-105">In the following example, the <xref:System.Windows.Controls.ListBox> displays the list of <xref:System.Windows.HorizontalAlignment> enumeration values through data binding.</span></span> <span data-ttu-id="6dfa7-106"><xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.Button> 已进行绑定，目的是使你可以通过选择 <xref:System.Windows.Controls.ListBox> 中的值来更改 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 属性值。</span><span class="sxs-lookup"><span data-stu-id="6dfa7-106">The <xref:System.Windows.Controls.ListBox> and the <xref:System.Windows.Controls.Button> are bound such that you can change the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property value of the <xref:System.Windows.Controls.Button> by selecting a value in the <xref:System.Windows.Controls.ListBox>.</span></span>  
   
- [!code-xaml[BindToEnum#BindToEnum](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToEnum/CS/Window1.xaml#bindtoenum)]  
+ [!code-xaml[BindToEnum#BindToEnum](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToEnum/CS/Window1.xaml#bindtoenum)]  
   
-## <a name="see-also"></a><span data-ttu-id="b1e26-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="b1e26-107">See also</span></span>
-- [<span data-ttu-id="b1e26-108">绑定到方法</span><span class="sxs-lookup"><span data-stu-id="b1e26-108">Bind to a Method</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)
-- [<span data-ttu-id="b1e26-109">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="b1e26-109">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [<span data-ttu-id="b1e26-110">帮助主题</span><span class="sxs-lookup"><span data-stu-id="b1e26-110">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="6dfa7-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="6dfa7-107">See also</span></span>
+- [<span data-ttu-id="6dfa7-108">绑定到方法</span><span class="sxs-lookup"><span data-stu-id="6dfa7-108">Bind to a Method</span></span>](how-to-bind-to-a-method.md)
+- [<span data-ttu-id="6dfa7-109">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="6dfa7-109">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="6dfa7-110">帮助主题</span><span class="sxs-lookup"><span data-stu-id="6dfa7-110">How-to Topics</span></span>](data-binding-how-to-topics.md)

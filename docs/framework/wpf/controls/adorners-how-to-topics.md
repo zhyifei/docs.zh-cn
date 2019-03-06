@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF], how-to topics
 ms.assetid: e29d7516-d5e6-4500-bd4f-775e6f830984
-ms.openlocfilehash: ba81f8e2d603ee2e734e5afd14182e95804fe69e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 930d0834570529bd958006818cddb8f5692066d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550080"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359245"
 ---
-# <a name="adorners-how-to-topics"></a><span data-ttu-id="40b12-102">装饰器帮助主题</span><span class="sxs-lookup"><span data-stu-id="40b12-102">Adorners How-to Topics</span></span>
-<span data-ttu-id="40b12-103">下面的示例演示如何完成常见任务使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装饰器框架。</span><span class="sxs-lookup"><span data-stu-id="40b12-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.</span></span>  
+# <a name="adorners-how-to-topics"></a><span data-ttu-id="9e476-102">装饰器帮助主题</span><span class="sxs-lookup"><span data-stu-id="9e476-102">Adorners How-to Topics</span></span>
+<span data-ttu-id="9e476-103">下面的示例演示如何完成常见任务使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装饰器框架。</span><span class="sxs-lookup"><span data-stu-id="9e476-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="40b12-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="40b12-104">In This Section</span></span>  
- [<span data-ttu-id="40b12-105">实现装饰器</span><span class="sxs-lookup"><span data-stu-id="40b12-105">Implement an Adorner</span></span>](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
- [<span data-ttu-id="40b12-106">将装饰器绑定到元素</span><span class="sxs-lookup"><span data-stu-id="40b12-106">Bind an Adorner to an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
- [<span data-ttu-id="40b12-107">装饰面板的子元素</span><span class="sxs-lookup"><span data-stu-id="40b12-107">Adorn the Children of a Panel</span></span>](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
- [<span data-ttu-id="40b12-108">从元素中删除装饰器</span><span class="sxs-lookup"><span data-stu-id="40b12-108">Remove an Adorner from an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
- [<span data-ttu-id="40b12-109">从元素中删除所有装饰器</span><span class="sxs-lookup"><span data-stu-id="40b12-109">Remove all Adorners from an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9e476-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="9e476-104">In This Section</span></span>  
+ [<span data-ttu-id="9e476-105">实现装饰器</span><span class="sxs-lookup"><span data-stu-id="9e476-105">Implement an Adorner</span></span>](how-to-implement-an-adorner.md)  
+ [<span data-ttu-id="9e476-106">将装饰器绑定到元素</span><span class="sxs-lookup"><span data-stu-id="9e476-106">Bind an Adorner to an Element</span></span>](how-to-bind-an-adorner-to-an-element.md)  
+ [<span data-ttu-id="9e476-107">装饰面板的子元素</span><span class="sxs-lookup"><span data-stu-id="9e476-107">Adorn the Children of a Panel</span></span>](how-to-adorn-the-children-of-a-panel.md)  
+ [<span data-ttu-id="9e476-108">从元素中删除装饰器</span><span class="sxs-lookup"><span data-stu-id="9e476-108">Remove an Adorner from an Element</span></span>](how-to-remove-an-adorner-from-an-element.md)  
+ [<span data-ttu-id="9e476-109">从元素中删除所有装饰器</span><span class="sxs-lookup"><span data-stu-id="9e476-109">Remove all Adorners from an Element</span></span>](how-to-remove-all-adorners-from-an-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="40b12-110">参考</span><span class="sxs-lookup"><span data-stu-id="40b12-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9e476-110">参考</span><span class="sxs-lookup"><span data-stu-id="9e476-110">Reference</span></span>  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  
   
  <xref:System.Windows.Documents.Adorner>  
@@ -34,4 +34,4 @@ ms.locfileid: "33550080"
   
  <xref:System.Windows.Documents.AdornerLayer>  
   
-## <a name="related-sections"></a><span data-ttu-id="40b12-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="40b12-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="9e476-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="9e476-111">Related Sections</span></span>
