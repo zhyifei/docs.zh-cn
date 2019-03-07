@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7248f4c78684f7211c7b7633095fdc3f3f2fb1f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed2c818ce9e11ff6eca26ac1c6f13b19668551b7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658619"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485325"
 ---
-# <a name="imetadataemitsetpinvokemap-method"></a><span data-ttu-id="95580-102">IMetaDataEmit::SetPinvokeMap 方法</span><span class="sxs-lookup"><span data-stu-id="95580-102">IMetaDataEmit::SetPinvokeMap Method</span></span>
-<span data-ttu-id="95580-103">设置或更改功能的方法的 PInvoke 签名定义的调用之前[imetadataemit:: Definepinvokemap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)。</span><span class="sxs-lookup"><span data-stu-id="95580-103">Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).</span></span>  
+# <a name="imetadataemitsetpinvokemap-method"></a><span data-ttu-id="99d19-102">IMetaDataEmit::SetPinvokeMap 方法</span><span class="sxs-lookup"><span data-stu-id="99d19-102">IMetaDataEmit::SetPinvokeMap Method</span></span>
+<span data-ttu-id="99d19-103">设置或更改功能的方法的 PInvoke 签名定义的调用之前[imetadataemit:: Definepinvokemap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)。</span><span class="sxs-lookup"><span data-stu-id="99d19-103">Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95580-104">语法</span><span class="sxs-lookup"><span data-stu-id="95580-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="99d19-104">语法</span><span class="sxs-lookup"><span data-stu-id="99d19-104">Syntax</span></span>  
   
 ```  
 HRESULT SetPinvokeMap (   
@@ -38,28 +38,28 @@ HRESULT SetPinvokeMap (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="95580-105">参数</span><span class="sxs-lookup"><span data-stu-id="95580-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="99d19-105">参数</span><span class="sxs-lookup"><span data-stu-id="99d19-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="95580-106">[in]`mdToken`信息应用到的映射。</span><span class="sxs-lookup"><span data-stu-id="95580-106">[in] The `mdToken` to which mapping information applies.</span></span>  
+ <span data-ttu-id="99d19-106">[in]`mdToken`信息应用到的映射。</span><span class="sxs-lookup"><span data-stu-id="99d19-106">[in] The `mdToken` to which mapping information applies.</span></span>  
   
  `dwMappingFlags`  
- <span data-ttu-id="95580-107">[in]PInvoke 用于执行映射标志。</span><span class="sxs-lookup"><span data-stu-id="95580-107">[in] Flags used by PInvoke to do the mapping.</span></span> <span data-ttu-id="95580-108">这是一个位掩码的`CorPinvokeMap`值。</span><span class="sxs-lookup"><span data-stu-id="95580-108">This is a bitmask of `CorPinvokeMap` values.</span></span>  
+ <span data-ttu-id="99d19-107">[in]PInvoke 用于执行映射标志。</span><span class="sxs-lookup"><span data-stu-id="99d19-107">[in] Flags used by PInvoke to do the mapping.</span></span> <span data-ttu-id="99d19-108">这是一个位掩码的`CorPinvokeMap`值。</span><span class="sxs-lookup"><span data-stu-id="99d19-108">This is a bitmask of `CorPinvokeMap` values.</span></span>  
   
  `szImportName`  
- <span data-ttu-id="95580-109">[in]本机 DLL 中导出的目标的名称。</span><span class="sxs-lookup"><span data-stu-id="95580-109">[in] The name of the target export in the native DLL.</span></span>  
+ <span data-ttu-id="99d19-109">[in]本机 DLL 中导出的目标的名称。</span><span class="sxs-lookup"><span data-stu-id="99d19-109">[in] The name of the target export in the native DLL.</span></span>  
   
  `mrImportDLL`  
- <span data-ttu-id="95580-110">[in]`mdModuleRef`令牌为目标的非托管 DLL。</span><span class="sxs-lookup"><span data-stu-id="95580-110">[in] The `mdModuleRef` token for the target unmanaged DLL.</span></span>  
+ <span data-ttu-id="99d19-110">[in]`mdModuleRef`令牌为目标的非托管 DLL。</span><span class="sxs-lookup"><span data-stu-id="99d19-110">[in] The `mdModuleRef` token for the target unmanaged DLL.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="95580-111">要求</span><span class="sxs-lookup"><span data-stu-id="95580-111">Requirements</span></span>  
- <span data-ttu-id="95580-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="95580-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="99d19-111">要求</span><span class="sxs-lookup"><span data-stu-id="99d19-111">Requirements</span></span>  
+ <span data-ttu-id="99d19-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="99d19-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="95580-113">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="95580-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="99d19-113">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="99d19-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="95580-114">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="95580-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="99d19-114">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="99d19-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="95580-115">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95580-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="99d19-115">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99d19-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95580-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="95580-116">See also</span></span>
-- [<span data-ttu-id="95580-117">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="95580-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="95580-118">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="95580-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="99d19-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="99d19-116">See also</span></span>
+- [<span data-ttu-id="99d19-117">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="99d19-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="99d19-118">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="99d19-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

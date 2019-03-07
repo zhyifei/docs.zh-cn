@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1909b7123bde23058e42394db86af83d08e2354
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5f4c9b6afd9b0a7a43c279c9a070740100d8f86
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685381"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478617"
 ---
-# <a name="icordebugmanagedcallback2functionremapcomplete-method"></a><span data-ttu-id="63223-102">ICorDebugManagedCallback2::FunctionRemapComplete 方法</span><span class="sxs-lookup"><span data-stu-id="63223-102">ICorDebugManagedCallback2::FunctionRemapComplete Method</span></span>
-<span data-ttu-id="63223-103">通知调试器执行代码已切换到新版本的已编辑函数。</span><span class="sxs-lookup"><span data-stu-id="63223-103">Notifies the debugger that code execution has switched to a new version of an edited function.</span></span>  
+# <a name="icordebugmanagedcallback2functionremapcomplete-method"></a><span data-ttu-id="1d918-102">ICorDebugManagedCallback2::FunctionRemapComplete 方法</span><span class="sxs-lookup"><span data-stu-id="1d918-102">ICorDebugManagedCallback2::FunctionRemapComplete Method</span></span>
+<span data-ttu-id="1d918-103">通知调试器执行代码已切换到新版本的已编辑函数。</span><span class="sxs-lookup"><span data-stu-id="1d918-103">Notifies the debugger that code execution has switched to a new version of an edited function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="63223-104">语法</span><span class="sxs-lookup"><span data-stu-id="63223-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1d918-104">语法</span><span class="sxs-lookup"><span data-stu-id="1d918-104">Syntax</span></span>  
   
 ```  
 HRESULT FunctionRemapComplete (  
@@ -37,28 +37,28 @@ HRESULT FunctionRemapComplete (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="63223-105">参数</span><span class="sxs-lookup"><span data-stu-id="63223-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1d918-105">参数</span><span class="sxs-lookup"><span data-stu-id="1d918-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="63223-106">[in]指向一个 ICorDebugAppDomain 对象，表示包含已编辑的函数的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="63223-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the edited function.</span></span>  
+ <span data-ttu-id="1d918-106">[in]指向一个 ICorDebugAppDomain 对象，表示包含已编辑的函数的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="1d918-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the edited function.</span></span>  
   
  `pThread`  
- <span data-ttu-id="63223-107">[in]指向一个 ICorDebugThread 对象，表示遇到重新映射断点的线程的指针。</span><span class="sxs-lookup"><span data-stu-id="63223-107">[in] A pointer to an ICorDebugThread object that represents the thread on which the remap breakpoint was encountered.</span></span>  
+ <span data-ttu-id="1d918-107">[in]指向一个 ICorDebugThread 对象，表示遇到重新映射断点的线程的指针。</span><span class="sxs-lookup"><span data-stu-id="1d918-107">[in] A pointer to an ICorDebugThread object that represents the thread on which the remap breakpoint was encountered.</span></span>  
   
  `pFunction`  
- <span data-ttu-id="63223-108">[in]指向一个 ICorDebugFunction 对象，表示当前线程上运行的函数的版本的指针。</span><span class="sxs-lookup"><span data-stu-id="63223-108">[in] A pointer to an ICorDebugFunction object that represents the version of the function currently running on the thread.</span></span>  
+ <span data-ttu-id="1d918-108">[in]指向一个 ICorDebugFunction 对象，表示当前线程上运行的函数的版本的指针。</span><span class="sxs-lookup"><span data-stu-id="1d918-108">[in] A pointer to an ICorDebugFunction object that represents the version of the function currently running on the thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="63223-109">备注</span><span class="sxs-lookup"><span data-stu-id="63223-109">Remarks</span></span>  
- <span data-ttu-id="63223-110">此回调使调试器有机会重新创建先前已存在任何分档器。</span><span class="sxs-lookup"><span data-stu-id="63223-110">This callback gives the debugger an opportunity to recreate any steppers that previously existed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1d918-109">备注</span><span class="sxs-lookup"><span data-stu-id="1d918-109">Remarks</span></span>  
+ <span data-ttu-id="1d918-110">此回调使调试器有机会重新创建先前已存在任何分档器。</span><span class="sxs-lookup"><span data-stu-id="1d918-110">This callback gives the debugger an opportunity to recreate any steppers that previously existed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="63223-111">要求</span><span class="sxs-lookup"><span data-stu-id="63223-111">Requirements</span></span>  
- <span data-ttu-id="63223-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="63223-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1d918-111">要求</span><span class="sxs-lookup"><span data-stu-id="1d918-111">Requirements</span></span>  
+ <span data-ttu-id="1d918-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1d918-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="63223-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="63223-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1d918-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1d918-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="63223-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="63223-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1d918-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1d918-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="63223-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63223-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1d918-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d918-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="63223-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="63223-116">See also</span></span>
-- [<span data-ttu-id="63223-117">ICorDebugManagedCallback2 接口</span><span class="sxs-lookup"><span data-stu-id="63223-117">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="63223-118">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="63223-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1d918-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="1d918-116">See also</span></span>
+- [<span data-ttu-id="1d918-117">ICorDebugManagedCallback2 接口</span><span class="sxs-lookup"><span data-stu-id="1d918-117">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="1d918-118">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="1d918-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

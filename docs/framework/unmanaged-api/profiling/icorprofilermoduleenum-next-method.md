@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc33936735c40e2f30189066d80444b9fcb075ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b16a351897b06db74602f1d5b097acd7e03425e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671884"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494241"
 ---
-# <a name="icorprofilermoduleenumnext-method"></a><span data-ttu-id="dbe55-102">ICorProfilerModuleEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="dbe55-102">ICorProfilerModuleEnum::Next Method</span></span>
-<span data-ttu-id="dbe55-103">从模块的序列集合中获取指定的连续模块数，从枚举器在该序列的当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="dbe55-103">Gets the specified number of contiguous modules from a sequential collection of modules, starting at the enumerator's current position in the sequence.</span></span>  
+# <a name="icorprofilermoduleenumnext-method"></a><span data-ttu-id="56246-102">ICorProfilerModuleEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="56246-102">ICorProfilerModuleEnum::Next Method</span></span>
+<span data-ttu-id="56246-103">从模块的序列集合中获取指定的连续模块数，从枚举器在该序列的当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="56246-103">Gets the specified number of contiguous modules from a sequential collection of modules, starting at the enumerator's current position in the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dbe55-104">语法</span><span class="sxs-lookup"><span data-stu-id="dbe55-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="56246-104">语法</span><span class="sxs-lookup"><span data-stu-id="56246-104">Syntax</span></span>  
   
 ```  
 HRESULT Next([in]  ULONG      celt,  
@@ -36,33 +36,33 @@ HRESULT Next([in]  ULONG      celt,
              [out] ULONG *   pceltFetched);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="dbe55-105">参数</span><span class="sxs-lookup"><span data-stu-id="dbe55-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="56246-105">参数</span><span class="sxs-lookup"><span data-stu-id="56246-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="dbe55-106">[in] 要检索的模块的数量。</span><span class="sxs-lookup"><span data-stu-id="dbe55-106">[in] The number of modules to retrieve.</span></span>  
+ <span data-ttu-id="56246-106">[in] 要检索的模块的数量。</span><span class="sxs-lookup"><span data-stu-id="56246-106">[in] The number of modules to retrieve.</span></span>  
   
  `ids`  
- <span data-ttu-id="dbe55-107">[out] `ModuleID` 值的数组，其中每个表示检索的模块。</span><span class="sxs-lookup"><span data-stu-id="dbe55-107">[out] An array of `ModuleID` values, each of which represents a retrieved module.</span></span>  
+ <span data-ttu-id="56246-107">[out] `ModuleID` 值的数组，其中每个表示检索的模块。</span><span class="sxs-lookup"><span data-stu-id="56246-107">[out] An array of `ModuleID` values, each of which represents a retrieved module.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="dbe55-108">[out] 指向 `ids` 数组中实际返回的元素数目的指针。</span><span class="sxs-lookup"><span data-stu-id="dbe55-108">[out] A pointer to the number of elements actually returned in the `ids` array.</span></span>  
+ <span data-ttu-id="56246-108">[out] 指向 `ids` 数组中实际返回的元素数目的指针。</span><span class="sxs-lookup"><span data-stu-id="56246-108">[out] A pointer to the number of elements actually returned in the `ids` array.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="dbe55-109">返回值</span><span class="sxs-lookup"><span data-stu-id="dbe55-109">Return Value</span></span>  
- <span data-ttu-id="dbe55-110">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="dbe55-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="56246-109">返回值</span><span class="sxs-lookup"><span data-stu-id="56246-109">Return Value</span></span>  
+ <span data-ttu-id="56246-110">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="56246-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="dbe55-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="dbe55-111">HRESULT</span></span>|<span data-ttu-id="dbe55-112">描述</span><span class="sxs-lookup"><span data-stu-id="dbe55-112">Description</span></span>|  
+|<span data-ttu-id="56246-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="56246-111">HRESULT</span></span>|<span data-ttu-id="56246-112">描述</span><span class="sxs-lookup"><span data-stu-id="56246-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="dbe55-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="dbe55-113">S_OK</span></span>|<span data-ttu-id="dbe55-114">已返回 `celt` 元素。</span><span class="sxs-lookup"><span data-stu-id="dbe55-114">`celt` elements were returned.</span></span>|  
-|<span data-ttu-id="dbe55-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="dbe55-115">S_FALSE</span></span>|<span data-ttu-id="dbe55-116">返回的元素少于 `celt` 个，表示枚举已完成。</span><span class="sxs-lookup"><span data-stu-id="dbe55-116">Fewer than `celt` elements were returned, which indicates that the enumeration is complete.</span></span>|  
+|<span data-ttu-id="56246-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="56246-113">S_OK</span></span>|<span data-ttu-id="56246-114">已返回 `celt` 元素。</span><span class="sxs-lookup"><span data-stu-id="56246-114">`celt` elements were returned.</span></span>|  
+|<span data-ttu-id="56246-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="56246-115">S_FALSE</span></span>|<span data-ttu-id="56246-116">返回的元素少于 `celt` 个，表示枚举已完成。</span><span class="sxs-lookup"><span data-stu-id="56246-116">Fewer than `celt` elements were returned, which indicates that the enumeration is complete.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="dbe55-117">要求</span><span class="sxs-lookup"><span data-stu-id="dbe55-117">Requirements</span></span>  
- <span data-ttu-id="dbe55-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dbe55-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="56246-117">要求</span><span class="sxs-lookup"><span data-stu-id="56246-117">Requirements</span></span>  
+ <span data-ttu-id="56246-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="56246-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dbe55-119">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="dbe55-119">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="56246-119">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="56246-119">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="dbe55-120">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dbe55-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="56246-120">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="56246-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dbe55-121">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dbe55-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="56246-121">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56246-121">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dbe55-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="dbe55-122">See also</span></span>
-- [<span data-ttu-id="dbe55-123">ICorProfilerModuleEnum 接口</span><span class="sxs-lookup"><span data-stu-id="dbe55-123">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [<span data-ttu-id="dbe55-124">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="dbe55-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="56246-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="56246-122">See also</span></span>
+- [<span data-ttu-id="56246-123">ICorProfilerModuleEnum 接口</span><span class="sxs-lookup"><span data-stu-id="56246-123">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
+- [<span data-ttu-id="56246-124">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="56246-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

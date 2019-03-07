@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1653913ca7410728f0f90a546f613a9d8b88be7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46852ed8ac53c3a7720edff4833f3dc3cce42bbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414048"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475783"
 ---
-# <a name="icordebugilframegetargument-method"></a><span data-ttu-id="b648f-102">ICorDebugILFrame::GetArgument 方法</span><span class="sxs-lookup"><span data-stu-id="b648f-102">ICorDebugILFrame::GetArgument Method</span></span>
-<span data-ttu-id="b648f-103">此 Microsoft 中间语言 (MSIL) 堆栈帧中获取指定的自变量的值。</span><span class="sxs-lookup"><span data-stu-id="b648f-103">Gets the value of the specified argument in this Microsoft intermediate language (MSIL) stack frame.</span></span>  
+# <a name="icordebugilframegetargument-method"></a><span data-ttu-id="7ef70-102">ICorDebugILFrame::GetArgument 方法</span><span class="sxs-lookup"><span data-stu-id="7ef70-102">ICorDebugILFrame::GetArgument Method</span></span>
+<span data-ttu-id="7ef70-103">获取此 Microsoft 中间语言 (MSIL) 堆栈帧中的指定参数的值。</span><span class="sxs-lookup"><span data-stu-id="7ef70-103">Gets the value of the specified argument in this Microsoft intermediate language (MSIL) stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b648f-104">语法</span><span class="sxs-lookup"><span data-stu-id="b648f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7ef70-104">语法</span><span class="sxs-lookup"><span data-stu-id="7ef70-104">Syntax</span></span>  
   
 ```  
 HRESULT GetArgument (  
@@ -36,21 +36,21 @@ HRESULT GetArgument (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b648f-105">参数</span><span class="sxs-lookup"><span data-stu-id="b648f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7ef70-105">参数</span><span class="sxs-lookup"><span data-stu-id="7ef70-105">Parameters</span></span>  
  `dwIndex`  
- <span data-ttu-id="b648f-106">[in]此 MSIL 堆栈帧中的自变量的索引。</span><span class="sxs-lookup"><span data-stu-id="b648f-106">[in] The index of the argument in this MSIL stack frame.</span></span>  
+ <span data-ttu-id="7ef70-106">[in]在此 MSIL 堆栈帧中的参数的索引。</span><span class="sxs-lookup"><span data-stu-id="7ef70-106">[in] The index of the argument in this MSIL stack frame.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="b648f-107">[out]指向一个 ICorDebugValue 对象，表示检索到的值的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="b648f-107">[out] A pointer to the address of an ICorDebugValue object that represents the retrieved value.</span></span>  
+ <span data-ttu-id="7ef70-107">[out]指向表示检索到的值的 ICorDebugValue 对象的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="7ef70-107">[out] A pointer to the address of an ICorDebugValue object that represents the retrieved value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b648f-108">备注</span><span class="sxs-lookup"><span data-stu-id="b648f-108">Remarks</span></span>  
- <span data-ttu-id="b648f-109">`GetArgument` MSIL 堆栈帧中或实时 (JIT) 编译框架中，可以使用方法。</span><span class="sxs-lookup"><span data-stu-id="b648f-109">The `GetArgument` method can be used either in an MSIL stack frame or in a just-in-time (JIT) compiled frame.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7ef70-108">备注</span><span class="sxs-lookup"><span data-stu-id="7ef70-108">Remarks</span></span>  
+ <span data-ttu-id="7ef70-109">`GetArgument` MSIL 堆栈帧中或在实时 (JIT) 编译帧中，可以使用方法。</span><span class="sxs-lookup"><span data-stu-id="7ef70-109">The `GetArgument` method can be used either in an MSIL stack frame or in a just-in-time (JIT) compiled frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b648f-110">要求</span><span class="sxs-lookup"><span data-stu-id="b648f-110">Requirements</span></span>  
- <span data-ttu-id="b648f-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b648f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7ef70-110">要求</span><span class="sxs-lookup"><span data-stu-id="7ef70-110">Requirements</span></span>  
+ <span data-ttu-id="7ef70-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7ef70-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b648f-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b648f-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7ef70-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7ef70-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b648f-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b648f-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7ef70-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7ef70-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b648f-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b648f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="7ef70-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ef70-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

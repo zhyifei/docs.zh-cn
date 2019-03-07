@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78bfc91bdd0f9fa68252c6a07e1362807eb507b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ce1e42d74dc611032d941e833bb8f248a56488b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416018"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486246"
 ---
-# <a name="icordebugmodulegetassembly-method"></a><span data-ttu-id="30b4a-102">ICorDebugModule::GetAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="30b4a-102">ICorDebugModule::GetAssembly Method</span></span>
-<span data-ttu-id="30b4a-103">获取此模块包含程序集。</span><span class="sxs-lookup"><span data-stu-id="30b4a-103">Gets the containing assembly for this module.</span></span>  
+# <a name="icordebugmodulegetassembly-method"></a><span data-ttu-id="38aa3-102">ICorDebugModule::GetAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="38aa3-102">ICorDebugModule::GetAssembly Method</span></span>
+<span data-ttu-id="38aa3-103">获取包含此模块的程序集。</span><span class="sxs-lookup"><span data-stu-id="38aa3-103">Gets the containing assembly for this module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30b4a-104">语法</span><span class="sxs-lookup"><span data-stu-id="30b4a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="38aa3-104">语法</span><span class="sxs-lookup"><span data-stu-id="38aa3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssembly(  
@@ -35,15 +35,15 @@ HRESULT GetAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="30b4a-105">参数</span><span class="sxs-lookup"><span data-stu-id="30b4a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="38aa3-105">参数</span><span class="sxs-lookup"><span data-stu-id="38aa3-105">Parameters</span></span>  
  `ppAssembly`  
- <span data-ttu-id="30b4a-106">[out]指向一个表示包含此模块的程序集的 icor 调试程序集对象的指针。</span><span class="sxs-lookup"><span data-stu-id="30b4a-106">[out] A pointer to an ICorDebugAssembly object that represents the assembly containing this module.</span></span>  
+ <span data-ttu-id="38aa3-106">[out]指向一个 icor 调试程序集对象，表示包含此模块的程序集的指针。</span><span class="sxs-lookup"><span data-stu-id="38aa3-106">[out] A pointer to an ICorDebugAssembly object that represents the assembly containing this module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="30b4a-107">要求</span><span class="sxs-lookup"><span data-stu-id="30b4a-107">Requirements</span></span>  
- <span data-ttu-id="30b4a-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="30b4a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="38aa3-107">要求</span><span class="sxs-lookup"><span data-stu-id="38aa3-107">Requirements</span></span>  
+ <span data-ttu-id="38aa3-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="38aa3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="30b4a-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="30b4a-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="38aa3-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="38aa3-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="30b4a-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="30b4a-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="38aa3-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="38aa3-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="30b4a-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30b4a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="38aa3-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38aa3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cff5d2dd2cf13e8626d1cca7f66c976dad6d90f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8124af428d68606382e4449db3f68b0b61eb432c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620914"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500260"
 ---
-# <a name="inotifysink2onsynccallexit-method"></a><span data-ttu-id="3a357-102">INotifySink2::OnSyncCallExit 方法</span><span class="sxs-lookup"><span data-stu-id="3a357-102">INotifySink2::OnSyncCallExit Method</span></span>
-<span data-ttu-id="3a357-103">退出调用时调用。</span><span class="sxs-lookup"><span data-stu-id="3a357-103">Gets invoked when exiting a call.</span></span>  
+# <a name="inotifysink2onsynccallexit-method"></a><span data-ttu-id="66fbb-102">INotifySink2::OnSyncCallExit 方法</span><span class="sxs-lookup"><span data-stu-id="66fbb-102">INotifySink2::OnSyncCallExit Method</span></span>
+<span data-ttu-id="66fbb-103">退出调用时调用。</span><span class="sxs-lookup"><span data-stu-id="66fbb-103">Gets invoked when exiting a call.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a357-104">语法</span><span class="sxs-lookup"><span data-stu-id="3a357-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="66fbb-104">语法</span><span class="sxs-lookup"><span data-stu-id="66fbb-104">Syntax</span></span>  
   
 ```  
 HRESULT OnSyncCallExit  
@@ -38,23 +38,23 @@ HRESULT OnSyncCallExit
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3a357-105">参数</span><span class="sxs-lookup"><span data-stu-id="3a357-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="66fbb-105">参数</span><span class="sxs-lookup"><span data-stu-id="66fbb-105">Parameters</span></span>  
  `in_CallID`  
- <span data-ttu-id="3a357-106">[in]正在退出的调用 ID。</span><span class="sxs-lookup"><span data-stu-id="3a357-106">[in] ID of the call being exited.</span></span> <span data-ttu-id="3a357-107">请参阅[CALL_ID 结构](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)。</span><span class="sxs-lookup"><span data-stu-id="3a357-107">See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
+ <span data-ttu-id="66fbb-106">[in]正在退出的调用 ID。</span><span class="sxs-lookup"><span data-stu-id="66fbb-106">[in] ID of the call being exited.</span></span> <span data-ttu-id="66fbb-107">请参阅[CALL_ID 结构](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)。</span><span class="sxs-lookup"><span data-stu-id="66fbb-107">See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
   
  `out_ppBuffer`  
- <span data-ttu-id="3a357-108">[out]调用缓冲区。</span><span class="sxs-lookup"><span data-stu-id="3a357-108">[out] Call buffer.</span></span>  
+ <span data-ttu-id="66fbb-108">[out]调用缓冲区。</span><span class="sxs-lookup"><span data-stu-id="66fbb-108">[out] Call buffer.</span></span>  
   
  `out_pBufferSize`  
- <span data-ttu-id="3a357-109">[out]调用缓冲区，以字节为单位的大小。</span><span class="sxs-lookup"><span data-stu-id="3a357-109">[out] Size of the call buffer, in bytes.</span></span>  
+ <span data-ttu-id="66fbb-109">[out]调用缓冲区，以字节为单位的大小。</span><span class="sxs-lookup"><span data-stu-id="66fbb-109">[out] Size of the call buffer, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3a357-110">返回值</span><span class="sxs-lookup"><span data-stu-id="3a357-110">Return Value</span></span>  
- <span data-ttu-id="3a357-111">如果该方法成功，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="3a357-111">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="66fbb-110">返回值</span><span class="sxs-lookup"><span data-stu-id="66fbb-110">Return Value</span></span>  
+ <span data-ttu-id="66fbb-111">如果该方法成功，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="66fbb-111">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3a357-112">要求</span><span class="sxs-lookup"><span data-stu-id="3a357-112">Requirements</span></span>  
- <span data-ttu-id="3a357-113">**标头：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="3a357-113">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="66fbb-112">要求</span><span class="sxs-lookup"><span data-stu-id="66fbb-112">Requirements</span></span>  
+ <span data-ttu-id="66fbb-113">**标头：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="66fbb-113">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a357-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="3a357-114">See also</span></span>
-- [<span data-ttu-id="3a357-115">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="3a357-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="3a357-116">INotifySource2 接口</span><span class="sxs-lookup"><span data-stu-id="3a357-116">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="3a357-117">INotifyConnection2 接口</span><span class="sxs-lookup"><span data-stu-id="3a357-117">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="66fbb-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="66fbb-114">See also</span></span>
+- [<span data-ttu-id="66fbb-115">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="66fbb-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="66fbb-116">INotifySource2 接口</span><span class="sxs-lookup"><span data-stu-id="66fbb-116">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="66fbb-117">INotifyConnection2 接口</span><span class="sxs-lookup"><span data-stu-id="66fbb-117">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

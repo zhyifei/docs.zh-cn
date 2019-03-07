@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac34fbca56c8a0f00ee3a7e0f898b8ee03287b11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f34a2fe2bb1f92e75f77c086b03776ec59495600
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412280"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482092"
 ---
-# <a name="icordebugfunctiongetilcode-method"></a><span data-ttu-id="a5662-102">ICorDebugFunction::GetILCode 方法</span><span class="sxs-lookup"><span data-stu-id="a5662-102">ICorDebugFunction::GetILCode Method</span></span>
-<span data-ttu-id="a5662-103">获取表示与此 ICorDebugFunction 对象关联的 Microsoft 中间语言 (MSIL) 代码的 ICorDebugCode 实例。</span><span class="sxs-lookup"><span data-stu-id="a5662-103">Gets the ICorDebugCode instance that represents the Microsoft intermediate language (MSIL) code associated with this ICorDebugFunction object.</span></span>  
+# <a name="icordebugfunctiongetilcode-method"></a><span data-ttu-id="a0789-102">ICorDebugFunction::GetILCode 方法</span><span class="sxs-lookup"><span data-stu-id="a0789-102">ICorDebugFunction::GetILCode Method</span></span>
+<span data-ttu-id="a0789-103">获取表示与此 ICorDebugFunction 对象关联的 Microsoft 中间语言 (MSIL) 代码的 ICorDebugCode 实例。</span><span class="sxs-lookup"><span data-stu-id="a0789-103">Gets the ICorDebugCode instance that represents the Microsoft intermediate language (MSIL) code associated with this ICorDebugFunction object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5662-104">语法</span><span class="sxs-lookup"><span data-stu-id="a5662-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a0789-104">语法</span><span class="sxs-lookup"><span data-stu-id="a0789-104">Syntax</span></span>  
   
 ```  
 HRESULT GetILCode (  
@@ -35,18 +35,18 @@ HRESULT GetILCode (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a5662-105">参数</span><span class="sxs-lookup"><span data-stu-id="a5662-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a0789-105">参数</span><span class="sxs-lookup"><span data-stu-id="a0789-105">Parameters</span></span>  
  `ppCode`  
- <span data-ttu-id="a5662-106">[out]指向的指针`ICorDebugCode`实例，则为 null，如果函数不编译为 MSIL。</span><span class="sxs-lookup"><span data-stu-id="a5662-106">[out] A pointer to the `ICorDebugCode` instance, or null, if the function was not compiled into MSIL.</span></span>  
+ <span data-ttu-id="a0789-106">[out]一个指向`ICorDebugCode`实例，则为 null，如果该函数不编译为 MSIL。</span><span class="sxs-lookup"><span data-stu-id="a0789-106">[out] A pointer to the `ICorDebugCode` instance, or null, if the function was not compiled into MSIL.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a5662-107">备注</span><span class="sxs-lookup"><span data-stu-id="a5662-107">Remarks</span></span>  
- <span data-ttu-id="a5662-108">如果编辑并继续对该函数，允许有`GetILCode`方法将获取与此函数的公共语言运行时 (CLR) 中的代码编辑版本对应的 MSIL 代码。</span><span class="sxs-lookup"><span data-stu-id="a5662-108">If Edit and Continue has been allowed on this function, the `GetILCode` method will get the MSIL code corresponding to this function's edited version of the code in the common language runtime (CLR).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a0789-107">备注</span><span class="sxs-lookup"><span data-stu-id="a0789-107">Remarks</span></span>  
+ <span data-ttu-id="a0789-108">如果已对此函数，允许编辑并继续`GetILCode`方法将获取对应于此函数的已编辑版本的公共语言运行时 (CLR) 中的代码的 MSIL 代码。</span><span class="sxs-lookup"><span data-stu-id="a0789-108">If Edit and Continue has been allowed on this function, the `GetILCode` method will get the MSIL code corresponding to this function's edited version of the code in the common language runtime (CLR).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5662-109">要求</span><span class="sxs-lookup"><span data-stu-id="a5662-109">Requirements</span></span>  
- <span data-ttu-id="a5662-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a5662-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a0789-109">要求</span><span class="sxs-lookup"><span data-stu-id="a0789-109">Requirements</span></span>  
+ <span data-ttu-id="a0789-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a0789-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a5662-111">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a5662-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a0789-111">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a0789-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a5662-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a5662-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a0789-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a0789-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a5662-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5662-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="a0789-113">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a0789-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

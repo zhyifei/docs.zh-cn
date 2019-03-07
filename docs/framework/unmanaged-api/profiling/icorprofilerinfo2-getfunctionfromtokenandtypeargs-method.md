@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60a9ba78211cd02300cccc7d150bb08fa68b0604
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c069cb375e9cb6011e7e91041d13736f5ef88dfd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556176"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482439"
 ---
-# <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a><span data-ttu-id="92ed2-102">ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs 方法</span><span class="sxs-lookup"><span data-stu-id="92ed2-102">ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs Method</span></span>
-<span data-ttu-id="92ed2-103">获取`FunctionID`通过使用指定的元数据令牌，其中包含类的函数和`ClassID`的任何值类型参数。</span><span class="sxs-lookup"><span data-stu-id="92ed2-103">Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.</span></span>  
+# <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a><span data-ttu-id="5b5f5-102">ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs 方法</span><span class="sxs-lookup"><span data-stu-id="5b5f5-102">ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs Method</span></span>
+<span data-ttu-id="5b5f5-103">获取`FunctionID`通过使用指定的元数据令牌，其中包含类的函数和`ClassID`的任何值类型参数。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-103">Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="92ed2-104">语法</span><span class="sxs-lookup"><span data-stu-id="92ed2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5b5f5-104">语法</span><span class="sxs-lookup"><span data-stu-id="5b5f5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionFromTokenAndTypeArgs(  
@@ -39,41 +39,41 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
     [out] FunctionID* pFunctionID);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="92ed2-105">参数</span><span class="sxs-lookup"><span data-stu-id="92ed2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5b5f5-105">参数</span><span class="sxs-lookup"><span data-stu-id="5b5f5-105">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="92ed2-106">[in]该函数所在的模块的 ID。</span><span class="sxs-lookup"><span data-stu-id="92ed2-106">[in] The ID of the module in which the function resides.</span></span>  
+ <span data-ttu-id="5b5f5-106">[in]该函数所在的模块的 ID。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-106">[in] The ID of the module in which the function resides.</span></span>  
   
  `funcDef`  
- <span data-ttu-id="92ed2-107">[in]`mdMethodDef`引用了函数的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="92ed2-107">[in] An `mdMethodDef` metadata token that references the function.</span></span>  
+ <span data-ttu-id="5b5f5-107">[in]`mdMethodDef`引用了函数的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-107">[in] An `mdMethodDef` metadata token that references the function.</span></span>  
   
  `classId`  
- <span data-ttu-id="92ed2-108">[in]函数的包含类的 ID。</span><span class="sxs-lookup"><span data-stu-id="92ed2-108">[in] The ID of the function's containing class.</span></span>  
+ <span data-ttu-id="5b5f5-108">[in]函数的包含类的 ID。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-108">[in] The ID of the function's containing class.</span></span>  
   
  `cTypeArgs`  
- <span data-ttu-id="92ed2-109">[in]对于给定的函数的类型参数的数目。</span><span class="sxs-lookup"><span data-stu-id="92ed2-109">[in] The number of type parameters for the given function.</span></span> <span data-ttu-id="92ed2-110">此值必须为零的非泛型函数。</span><span class="sxs-lookup"><span data-stu-id="92ed2-110">This value must be zero for non-generic functions.</span></span>  
+ <span data-ttu-id="5b5f5-109">[in]对于给定的函数的类型参数的数目。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-109">[in] The number of type parameters for the given function.</span></span> <span data-ttu-id="5b5f5-110">此值必须为零的非泛型函数。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-110">This value must be zero for non-generic functions.</span></span>  
   
  `typeArgs`  
- <span data-ttu-id="92ed2-111">[in]一个数组`ClassID`值，其中每个是函数的参数。</span><span class="sxs-lookup"><span data-stu-id="92ed2-111">[in] An array of `ClassID` values, each of which is an argument of the function.</span></span> <span data-ttu-id="92ed2-112">值`typeArgs`可以为 NULL，如果`cTypeArgs`设置为零。</span><span class="sxs-lookup"><span data-stu-id="92ed2-112">The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.</span></span>  
+ <span data-ttu-id="5b5f5-111">[in]一个数组`ClassID`值，其中每个是函数的参数。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-111">[in] An array of `ClassID` values, each of which is an argument of the function.</span></span> <span data-ttu-id="5b5f5-112">值`typeArgs`可以为 NULL，如果`cTypeArgs`设置为零。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-112">The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.</span></span>  
   
  `pFunctionID`  
- <span data-ttu-id="92ed2-113">[out]一个指向`FunctionID`指定函数。</span><span class="sxs-lookup"><span data-stu-id="92ed2-113">[out] A pointer to the `FunctionID` of the specified function.</span></span>  
+ <span data-ttu-id="5b5f5-113">[out]一个指向`FunctionID`指定函数。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-113">[out] A pointer to the `FunctionID` of the specified function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="92ed2-114">备注</span><span class="sxs-lookup"><span data-stu-id="92ed2-114">Remarks</span></span>  
- <span data-ttu-id="92ed2-115">调用`GetFunctionFromTokenAndTypeArgs`方法替换`mdMethodRef`元数据，而不是`mdMethodDef`元数据标记可以具有不可预知的结果。</span><span class="sxs-lookup"><span data-stu-id="92ed2-115">Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results.</span></span> <span data-ttu-id="92ed2-116">调用方应解决`mdMethodRef`到`mdMethodDef`时将其传递。</span><span class="sxs-lookup"><span data-stu-id="92ed2-116">Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5b5f5-114">备注</span><span class="sxs-lookup"><span data-stu-id="5b5f5-114">Remarks</span></span>  
+ <span data-ttu-id="5b5f5-115">调用`GetFunctionFromTokenAndTypeArgs`方法替换`mdMethodRef`元数据，而不是`mdMethodDef`元数据标记可以具有不可预知的结果。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-115">Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results.</span></span> <span data-ttu-id="5b5f5-116">调用方应解决`mdMethodRef`到`mdMethodDef`时将其传递。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-116">Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.</span></span>  
   
- <span data-ttu-id="92ed2-117">如果尚未加载该函数，则调用`GetFunctionFromTokenAndTypeArgs`会导致加载发生，这是一种危险操作在多种上下文中的。</span><span class="sxs-lookup"><span data-stu-id="92ed2-117">If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts.</span></span> <span data-ttu-id="92ed2-118">例如，在模块或类型的加载过程中调用此方法在运行时尝试循环加载某些内容导致无限循环。</span><span class="sxs-lookup"><span data-stu-id="92ed2-118">For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.</span></span>  
+ <span data-ttu-id="5b5f5-117">如果尚未加载该函数，则调用`GetFunctionFromTokenAndTypeArgs`会导致加载发生，这是一种危险操作在多种上下文中的。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-117">If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts.</span></span> <span data-ttu-id="5b5f5-118">例如，在模块或类型的加载过程中调用此方法在运行时尝试循环加载某些内容导致无限循环。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-118">For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.</span></span>  
   
- <span data-ttu-id="92ed2-119">一般情况下，使用`GetFunctionFromTokenAndTypeArgs`不建议这样做。</span><span class="sxs-lookup"><span data-stu-id="92ed2-119">In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged.</span></span> <span data-ttu-id="92ed2-120">如果探查器是对特定函数的事件感兴趣，它们应存储`ModuleID`并`mdMethodDef`该函数，并使用[ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)若要检查是否给定`FunctionID`是所需的函数。</span><span class="sxs-lookup"><span data-stu-id="92ed2-120">If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.</span></span>  
+ <span data-ttu-id="5b5f5-119">一般情况下，使用`GetFunctionFromTokenAndTypeArgs`不建议这样做。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-119">In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged.</span></span> <span data-ttu-id="5b5f5-120">如果探查器是对特定函数的事件感兴趣，它们应存储`ModuleID`并`mdMethodDef`该函数，并使用[ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)若要检查是否给定`FunctionID`是所需的函数。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-120">If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="92ed2-121">要求</span><span class="sxs-lookup"><span data-stu-id="92ed2-121">Requirements</span></span>  
- <span data-ttu-id="92ed2-122">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="92ed2-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5b5f5-121">要求</span><span class="sxs-lookup"><span data-stu-id="5b5f5-121">Requirements</span></span>  
+ <span data-ttu-id="5b5f5-122">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5b5f5-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="92ed2-123">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="92ed2-123">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="5b5f5-123">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5b5f5-123">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="92ed2-124">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="92ed2-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5b5f5-124">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5b5f5-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="92ed2-125">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92ed2-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5b5f5-125">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5b5f5-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="92ed2-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="92ed2-126">See also</span></span>
-- [<span data-ttu-id="92ed2-127">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="92ed2-127">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="92ed2-128">ICorProfilerInfo2 接口</span><span class="sxs-lookup"><span data-stu-id="92ed2-128">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5b5f5-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="5b5f5-126">See also</span></span>
+- [<span data-ttu-id="5b5f5-127">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="5b5f5-127">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="5b5f5-128">ICorProfilerInfo2 接口</span><span class="sxs-lookup"><span data-stu-id="5b5f5-128">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

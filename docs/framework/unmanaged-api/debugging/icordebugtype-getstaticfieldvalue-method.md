@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b136f30b0c1ce9f83228f340ac5e147cc02002b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2c6b86c5ce3cc246af600d9b65d2fe12a0427f9f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422024"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485390"
 ---
-# <a name="icordebugtypegetstaticfieldvalue-method"></a><span data-ttu-id="b8e0d-102">ICorDebugType::GetStaticFieldValue 方法</span><span class="sxs-lookup"><span data-stu-id="b8e0d-102">ICorDebugType::GetStaticFieldValue Method</span></span>
-<span data-ttu-id="b8e0d-103">令牌中指定的堆栈帧包含引用的指定字段的静态字段的值的 ICorDebugValue 对象获取的接口指针。</span><span class="sxs-lookup"><span data-stu-id="b8e0d-103">Gets an interface pointer to an ICorDebugValue object that contains the value of the static field referenced by the specified field token in the specified stack frame.</span></span>  
+# <a name="icordebugtypegetstaticfieldvalue-method"></a><span data-ttu-id="30429-102">ICorDebugType::GetStaticFieldValue 方法</span><span class="sxs-lookup"><span data-stu-id="30429-102">ICorDebugType::GetStaticFieldValue Method</span></span>
+<span data-ttu-id="30429-103">获取包含由指定的字段引用的静态字段的值的 ICorDebugValue 对象的接口指针令牌中指定的堆栈帧。</span><span class="sxs-lookup"><span data-stu-id="30429-103">Gets an interface pointer to an ICorDebugValue object that contains the value of the static field referenced by the specified field token in the specified stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b8e0d-104">语法</span><span class="sxs-lookup"><span data-stu-id="b8e0d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="30429-104">语法</span><span class="sxs-lookup"><span data-stu-id="30429-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStaticFieldValue (  
@@ -37,31 +37,31 @@ HRESULT GetStaticFieldValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b8e0d-105">参数</span><span class="sxs-lookup"><span data-stu-id="b8e0d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="30429-105">参数</span><span class="sxs-lookup"><span data-stu-id="30429-105">Parameters</span></span>  
  `fieldDef`  
- <span data-ttu-id="b8e0d-106">[in]`mdFieldDef`指定的静态字段的令牌。</span><span class="sxs-lookup"><span data-stu-id="b8e0d-106">[in] An `mdFieldDef` token that specifies the static field.</span></span>  
+ <span data-ttu-id="30429-106">[in]`mdFieldDef`指定的静态字段的令牌。</span><span class="sxs-lookup"><span data-stu-id="30429-106">[in] An `mdFieldDef` token that specifies the static field.</span></span>  
   
  `pFrame`  
- <span data-ttu-id="b8e0d-107">[in]表示堆栈帧 ICorDebugFrame 指向的指针。</span><span class="sxs-lookup"><span data-stu-id="b8e0d-107">[in] A pointer to an ICorDebugFrame that represents the stack frame.</span></span>  
+ <span data-ttu-id="30429-107">[in]指向表示堆栈帧 ICorDebugFrame 的指针。</span><span class="sxs-lookup"><span data-stu-id="30429-107">[in] A pointer to an ICorDebugFrame that represents the stack frame.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="b8e0d-108">[out]指向的地址的指针`ICorDebugValue`包含静态字段的值。</span><span class="sxs-lookup"><span data-stu-id="b8e0d-108">[out] A pointer to the address of an `ICorDebugValue` that contains the value of the static field.</span></span>  
+ <span data-ttu-id="30429-108">[out]指向的地址的指针`ICorDebugValue`，其中包含静态字段的值。</span><span class="sxs-lookup"><span data-stu-id="30429-108">[out] A pointer to the address of an `ICorDebugValue` that contains the value of the static field.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b8e0d-109">备注</span><span class="sxs-lookup"><span data-stu-id="b8e0d-109">Remarks</span></span>  
- <span data-ttu-id="b8e0d-110">`GetStaticFieldValue`方法可能会使用仅当类型为 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE，由[icordebugtype:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="b8e0d-110">The `GetStaticFieldValue` method may be used only if the type is ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE, as indicated by the [ICorDebugType::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="30429-109">备注</span><span class="sxs-lookup"><span data-stu-id="30429-109">Remarks</span></span>  
+ <span data-ttu-id="30429-110">`GetStaticFieldValue`方法可能仅当使用该类型是 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE，由[icordebugtype:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="30429-110">The `GetStaticFieldValue` method may be used only if the type is ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE, as indicated by the [ICorDebugType::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) method.</span></span>  
   
- <span data-ttu-id="b8e0d-111">对于非泛型类型，该操作由`GetStaticFieldValue`等同于调用[icordebugclass:: Getstaticfieldvalue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)返回 ICorDebugClass 对象上[icordebugtype:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).</span><span class="sxs-lookup"><span data-stu-id="b8e0d-111">For non-generic types, the operation performed by `GetStaticFieldValue` is identical to calling [ICorDebugClass::GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) on the ICorDebugClass object that is returned by [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).</span></span>  
+ <span data-ttu-id="30429-111">对于非泛型类型，由执行该操作`GetStaticFieldValue`等同于调用[icordebugclass:: Getstaticfieldvalue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) ICorDebugClass 对象返回的[icordebugtype:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).</span><span class="sxs-lookup"><span data-stu-id="30429-111">For non-generic types, the operation performed by `GetStaticFieldValue` is identical to calling [ICorDebugClass::GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) on the ICorDebugClass object that is returned by [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).</span></span>  
   
- <span data-ttu-id="b8e0d-112">对于泛型类型，静态字段的值将是相对于特定实例化。</span><span class="sxs-lookup"><span data-stu-id="b8e0d-112">For generic types, a static field value will be relative to a particular instantiation.</span></span> <span data-ttu-id="b8e0d-113">此外，如果可能，静态字段可能是相对于某个线程、 非上下文或应用程序域，堆栈帧将帮助调试器确定适当的值。</span><span class="sxs-lookup"><span data-stu-id="b8e0d-113">Also, if the static field could possibly be relative to a thread, a context, or an application domain, then the stack frame will help the debugger determine the proper value.</span></span>  
+ <span data-ttu-id="30429-112">泛型类型的静态字段的值将相对于特定的实例化。</span><span class="sxs-lookup"><span data-stu-id="30429-112">For generic types, a static field value will be relative to a particular instantiation.</span></span> <span data-ttu-id="30429-113">此外，如果静态字段可能是相对于一个线程、 上下文或应用程序域，堆栈帧将有助于确定适当的值在调试器。</span><span class="sxs-lookup"><span data-stu-id="30429-113">Also, if the static field could possibly be relative to a thread, a context, or an application domain, then the stack frame will help the debugger determine the proper value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b8e0d-114">备注</span><span class="sxs-lookup"><span data-stu-id="b8e0d-114">Remarks</span></span>  
- <span data-ttu-id="b8e0d-115">`GetStaticFieldValue` 仅在调用时可以使用`ICorDebugType::GetType`返回 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE 的值。</span><span class="sxs-lookup"><span data-stu-id="b8e0d-115">`GetStaticFieldValue` can be used only when a call to `ICorDebugType::GetType` returns a value of ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="30429-114">备注</span><span class="sxs-lookup"><span data-stu-id="30429-114">Remarks</span></span>  
+ <span data-ttu-id="30429-115">`GetStaticFieldValue` 可以使用仅在调用`ICorDebugType::GetType`返回 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE 的值。</span><span class="sxs-lookup"><span data-stu-id="30429-115">`GetStaticFieldValue` can be used only when a call to `ICorDebugType::GetType` returns a value of ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b8e0d-116">要求</span><span class="sxs-lookup"><span data-stu-id="b8e0d-116">Requirements</span></span>  
- <span data-ttu-id="b8e0d-117">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b8e0d-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="30429-116">要求</span><span class="sxs-lookup"><span data-stu-id="30429-116">Requirements</span></span>  
+ <span data-ttu-id="30429-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="30429-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b8e0d-118">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b8e0d-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="30429-118">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="30429-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b8e0d-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b8e0d-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="30429-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="30429-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b8e0d-120">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b8e0d-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="30429-120">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30429-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

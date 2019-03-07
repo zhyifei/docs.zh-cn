@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff2258faa8bc766c8c769f4e135f868334516b96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0915027ce6a3768ff854eafc5496c5057081cc4d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422554"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499532"
 ---
-# <a name="icordebugtypegetclass-method"></a><span data-ttu-id="cdea1-102">ICorDebugType::GetClass 方法</span><span class="sxs-lookup"><span data-stu-id="cdea1-102">ICorDebugType::GetClass Method</span></span>
-<span data-ttu-id="cdea1-103">获取表示未实例化泛型类型 ICorDebugClass 接口指针。</span><span class="sxs-lookup"><span data-stu-id="cdea1-103">Gets an interface pointer to an ICorDebugClass that represents the uninstantiated generic type.</span></span>  
+# <a name="icordebugtypegetclass-method"></a><span data-ttu-id="56530-102">ICorDebugType::GetClass 方法</span><span class="sxs-lookup"><span data-stu-id="56530-102">ICorDebugType::GetClass Method</span></span>
+<span data-ttu-id="56530-103">获取表示未实例化泛型类型 ICorDebugClass 接口指针。</span><span class="sxs-lookup"><span data-stu-id="56530-103">Gets an interface pointer to an ICorDebugClass that represents the uninstantiated generic type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cdea1-104">语法</span><span class="sxs-lookup"><span data-stu-id="cdea1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="56530-104">语法</span><span class="sxs-lookup"><span data-stu-id="56530-104">Syntax</span></span>  
   
 ```  
 HRESULT GetClass (  
@@ -35,18 +35,18 @@ HRESULT GetClass (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cdea1-105">参数</span><span class="sxs-lookup"><span data-stu-id="cdea1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="56530-105">参数</span><span class="sxs-lookup"><span data-stu-id="56530-105">Parameters</span></span>  
  `ppClass`  
- <span data-ttu-id="cdea1-106">[out]指向的地址的指针`ICorDebugClass`表示未实例化泛型类型的接口。</span><span class="sxs-lookup"><span data-stu-id="cdea1-106">[out] A pointer to the address of an `ICorDebugClass` interface that represents the uninstantiated generic type.</span></span>  
+ <span data-ttu-id="56530-106">[out]指向的地址的指针`ICorDebugClass`表示未实例化泛型类型的接口。</span><span class="sxs-lookup"><span data-stu-id="56530-106">[out] A pointer to the address of an `ICorDebugClass` interface that represents the uninstantiated generic type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cdea1-107">备注</span><span class="sxs-lookup"><span data-stu-id="cdea1-107">Remarks</span></span>  
- <span data-ttu-id="cdea1-108">`GetClass` 可以仅在某些情况下调用。</span><span class="sxs-lookup"><span data-stu-id="cdea1-108">`GetClass` can be called only under certain conditions.</span></span> <span data-ttu-id="cdea1-109">调用[icordebugtype:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)之前调用`GetClass`。</span><span class="sxs-lookup"><span data-stu-id="cdea1-109">Call [ICorDebugType::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) before calling `GetClass`.</span></span> <span data-ttu-id="cdea1-110">如果`ICorDebugType::GetType`返回 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE，CorElementType 值`GetClass`可以调用来获取泛型类型实例化的类型。</span><span class="sxs-lookup"><span data-stu-id="cdea1-110">If `ICorDebugType::GetType` returns a CorElementType value that is ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE, `GetClass` can be called to get the uninstantiated type for a generic type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="56530-107">备注</span><span class="sxs-lookup"><span data-stu-id="56530-107">Remarks</span></span>  
+ <span data-ttu-id="56530-108">`GetClass` 可以仅在某些情况下调用。</span><span class="sxs-lookup"><span data-stu-id="56530-108">`GetClass` can be called only under certain conditions.</span></span> <span data-ttu-id="56530-109">调用[icordebugtype:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)然后才能调用`GetClass`。</span><span class="sxs-lookup"><span data-stu-id="56530-109">Call [ICorDebugType::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) before calling `GetClass`.</span></span> <span data-ttu-id="56530-110">如果`ICorDebugType::GetType`返回 ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE，CorElementType 值`GetClass`可以调用以获取泛型类型实例化的类型。</span><span class="sxs-lookup"><span data-stu-id="56530-110">If `ICorDebugType::GetType` returns a CorElementType value that is ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE, `GetClass` can be called to get the uninstantiated type for a generic type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cdea1-111">要求</span><span class="sxs-lookup"><span data-stu-id="cdea1-111">Requirements</span></span>  
- <span data-ttu-id="cdea1-112">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cdea1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="56530-111">要求</span><span class="sxs-lookup"><span data-stu-id="56530-111">Requirements</span></span>  
+ <span data-ttu-id="56530-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="56530-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cdea1-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cdea1-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="56530-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="56530-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cdea1-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cdea1-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="56530-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="56530-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cdea1-115">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cdea1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="56530-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56530-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

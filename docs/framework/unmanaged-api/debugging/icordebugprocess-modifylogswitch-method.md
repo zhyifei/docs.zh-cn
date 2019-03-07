@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ceed164631169b3a47809381b2cc4e630ae718
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4b1c85499e5269027da2c2a01ab67aab2c5da626
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418612"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488170"
 ---
-# <a name="icordebugprocessmodifylogswitch-method"></a><span data-ttu-id="b49f2-102">ICorDebugProcess::ModifyLogSwitch 方法</span><span class="sxs-lookup"><span data-stu-id="b49f2-102">ICorDebugProcess::ModifyLogSwitch Method</span></span>
-<span data-ttu-id="b49f2-103">设置指定的日志交换机的严重性级别。</span><span class="sxs-lookup"><span data-stu-id="b49f2-103">Sets the severity level of the specified log switch.</span></span>  
+# <a name="icordebugprocessmodifylogswitch-method"></a><span data-ttu-id="de179-102">ICorDebugProcess::ModifyLogSwitch 方法</span><span class="sxs-lookup"><span data-stu-id="de179-102">ICorDebugProcess::ModifyLogSwitch Method</span></span>
+<span data-ttu-id="de179-103">设置指定的日志开关的严重性级别。</span><span class="sxs-lookup"><span data-stu-id="de179-103">Sets the severity level of the specified log switch.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b49f2-104">语法</span><span class="sxs-lookup"><span data-stu-id="b49f2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="de179-104">语法</span><span class="sxs-lookup"><span data-stu-id="de179-104">Syntax</span></span>  
   
 ```  
 HRESULT ModifyLogSwitch(  
@@ -35,21 +35,21 @@ HRESULT ModifyLogSwitch(
     [in] LONG  lLevel);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b49f2-105">参数</span><span class="sxs-lookup"><span data-stu-id="b49f2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="de179-105">参数</span><span class="sxs-lookup"><span data-stu-id="de179-105">Parameters</span></span>  
  `pLogSwitchName`  
- <span data-ttu-id="b49f2-106">[in]指向一个字符串，指定日志交换机的名称的指针。</span><span class="sxs-lookup"><span data-stu-id="b49f2-106">[in] A pointer to a string that specifies the name of the log switch.</span></span>  
+ <span data-ttu-id="de179-106">[in]指向一个字符串，指定日志交换机的名称的指针。</span><span class="sxs-lookup"><span data-stu-id="de179-106">[in] A pointer to a string that specifies the name of the log switch.</span></span>  
   
  `lLevel`  
- <span data-ttu-id="b49f2-107">[in]要为指定的日志交换机设置的严重性级别。</span><span class="sxs-lookup"><span data-stu-id="b49f2-107">[in] The severity level to be set for the specified log switch.</span></span>  
+ <span data-ttu-id="de179-107">[in]要为指定的日志开关设置的严重性级别。</span><span class="sxs-lookup"><span data-stu-id="de179-107">[in] The severity level to be set for the specified log switch.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b49f2-108">备注</span><span class="sxs-lookup"><span data-stu-id="b49f2-108">Remarks</span></span>  
- <span data-ttu-id="b49f2-109">此方法无效后，才[icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回调发生。</span><span class="sxs-lookup"><span data-stu-id="b49f2-109">This method is valid only after the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback has occurred.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="de179-108">备注</span><span class="sxs-lookup"><span data-stu-id="de179-108">Remarks</span></span>  
+ <span data-ttu-id="de179-109">此方法无效后，才[icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回调发生。</span><span class="sxs-lookup"><span data-stu-id="de179-109">This method is valid only after the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback has occurred.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b49f2-110">要求</span><span class="sxs-lookup"><span data-stu-id="b49f2-110">Requirements</span></span>  
- <span data-ttu-id="b49f2-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b49f2-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="de179-110">要求</span><span class="sxs-lookup"><span data-stu-id="de179-110">Requirements</span></span>  
+ <span data-ttu-id="de179-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="de179-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b49f2-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b49f2-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="de179-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="de179-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b49f2-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b49f2-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="de179-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="de179-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b49f2-114">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b49f2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="de179-114">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="de179-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5a1ae284b4f2474cb824ee9dbff2eb82c5a0ead
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f4d59b3857b9c23ccb61e22319ffd2b3129bd26a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568785"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474843"
 ---
-# <a name="iclrruntimehostexecuteinappdomain-method"></a><span data-ttu-id="61cb0-102">ICLRRuntimeHost::ExecuteInAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="61cb0-102">ICLRRuntimeHost::ExecuteInAppDomain Method</span></span>
-<span data-ttu-id="61cb0-103">指定<xref:System.AppDomain>在其中执行指定的托管的代码。</span><span class="sxs-lookup"><span data-stu-id="61cb0-103">Specifies the <xref:System.AppDomain> in which to execute the specified managed code.</span></span>  
+# <a name="iclrruntimehostexecuteinappdomain-method"></a><span data-ttu-id="599b6-102">ICLRRuntimeHost::ExecuteInAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="599b6-102">ICLRRuntimeHost::ExecuteInAppDomain Method</span></span>
+<span data-ttu-id="599b6-103">指定<xref:System.AppDomain>在其中执行指定的托管的代码。</span><span class="sxs-lookup"><span data-stu-id="599b6-103">Specifies the <xref:System.AppDomain> in which to execute the specified managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61cb0-104">语法</span><span class="sxs-lookup"><span data-stu-id="61cb0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="599b6-104">语法</span><span class="sxs-lookup"><span data-stu-id="599b6-104">Syntax</span></span>  
   
 ```  
 HRESULT ExecuteInAppDomain(  
@@ -37,38 +37,38 @@ HRESULT ExecuteInAppDomain(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="61cb0-105">参数</span><span class="sxs-lookup"><span data-stu-id="61cb0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="599b6-105">参数</span><span class="sxs-lookup"><span data-stu-id="599b6-105">Parameters</span></span>  
  `AppDomainId`  
- <span data-ttu-id="61cb0-106">[in]数字 ID<xref:System.AppDomain>在其中执行指定的方法。</span><span class="sxs-lookup"><span data-stu-id="61cb0-106">[in] The numeric ID of the <xref:System.AppDomain> in which to execute the specified method.</span></span>  
+ <span data-ttu-id="599b6-106">[in]数字 ID<xref:System.AppDomain>在其中执行指定的方法。</span><span class="sxs-lookup"><span data-stu-id="599b6-106">[in] The numeric ID of the <xref:System.AppDomain> in which to execute the specified method.</span></span>  
   
  `pCallback`  
- <span data-ttu-id="61cb0-107">[in]指向要执行在指定的函数的指针<xref:System.AppDomain>。</span><span class="sxs-lookup"><span data-stu-id="61cb0-107">[in] A pointer to the function to execute within the specified <xref:System.AppDomain>.</span></span>  
+ <span data-ttu-id="599b6-107">[in]指向要执行在指定的函数的指针<xref:System.AppDomain>。</span><span class="sxs-lookup"><span data-stu-id="599b6-107">[in] A pointer to the function to execute within the specified <xref:System.AppDomain>.</span></span>  
   
  `cookie`  
- <span data-ttu-id="61cb0-108">[in]指向不透明调用方分配的内存的指针。</span><span class="sxs-lookup"><span data-stu-id="61cb0-108">[in] A pointer to opaque caller-allocated memory.</span></span> <span data-ttu-id="61cb0-109">此参数由公共语言运行时 (CLR) 传递给域回调。</span><span class="sxs-lookup"><span data-stu-id="61cb0-109">This parameter is passed by the common language runtime (CLR) to the domain callback.</span></span> <span data-ttu-id="61cb0-110">它不是运行时托管堆内存;分配和此内存的生存期由调用方控制。</span><span class="sxs-lookup"><span data-stu-id="61cb0-110">It is not runtime-managed heap memory; both the allocation and lifetime of this memory are controlled by the caller.</span></span>  
+ <span data-ttu-id="599b6-108">[in]指向不透明调用方分配的内存的指针。</span><span class="sxs-lookup"><span data-stu-id="599b6-108">[in] A pointer to opaque caller-allocated memory.</span></span> <span data-ttu-id="599b6-109">此参数由公共语言运行时 (CLR) 传递给域回调。</span><span class="sxs-lookup"><span data-stu-id="599b6-109">This parameter is passed by the common language runtime (CLR) to the domain callback.</span></span> <span data-ttu-id="599b6-110">它不是运行时托管堆内存;分配和此内存的生存期由调用方控制。</span><span class="sxs-lookup"><span data-stu-id="599b6-110">It is not runtime-managed heap memory; both the allocation and lifetime of this memory are controlled by the caller.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="61cb0-111">返回值</span><span class="sxs-lookup"><span data-stu-id="61cb0-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="599b6-111">返回值</span><span class="sxs-lookup"><span data-stu-id="599b6-111">Return Value</span></span>  
   
-|<span data-ttu-id="61cb0-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="61cb0-112">HRESULT</span></span>|<span data-ttu-id="61cb0-113">描述</span><span class="sxs-lookup"><span data-stu-id="61cb0-113">Description</span></span>|  
+|<span data-ttu-id="599b6-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="599b6-112">HRESULT</span></span>|<span data-ttu-id="599b6-113">描述</span><span class="sxs-lookup"><span data-stu-id="599b6-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="61cb0-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="61cb0-114">S_OK</span></span>|<span data-ttu-id="61cb0-115">`ExecuteInAppDomain` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="61cb0-115">`ExecuteInAppDomain` returned successfully.</span></span>|  
-|<span data-ttu-id="61cb0-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="61cb0-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="61cb0-117">CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="61cb0-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="61cb0-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="61cb0-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="61cb0-119">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="61cb0-119">The call timed out.</span></span>|  
-|<span data-ttu-id="61cb0-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="61cb0-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="61cb0-121">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="61cb0-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="61cb0-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="61cb0-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="61cb0-123">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="61cb0-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="61cb0-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="61cb0-124">E_FAIL</span></span>|<span data-ttu-id="61cb0-125">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="61cb0-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="61cb0-126">如果方法返回 E_FAIL，CLR 不再在该过程中可用。</span><span class="sxs-lookup"><span data-stu-id="61cb0-126">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="61cb0-127">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="61cb0-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="599b6-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="599b6-114">S_OK</span></span>|<span data-ttu-id="599b6-115">`ExecuteInAppDomain` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="599b6-115">`ExecuteInAppDomain` returned successfully.</span></span>|  
+|<span data-ttu-id="599b6-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="599b6-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="599b6-117">CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="599b6-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="599b6-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="599b6-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="599b6-119">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="599b6-119">The call timed out.</span></span>|  
+|<span data-ttu-id="599b6-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="599b6-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="599b6-121">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="599b6-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="599b6-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="599b6-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="599b6-123">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="599b6-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="599b6-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="599b6-124">E_FAIL</span></span>|<span data-ttu-id="599b6-125">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="599b6-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="599b6-126">如果方法返回 E_FAIL，CLR 不再在该过程中可用。</span><span class="sxs-lookup"><span data-stu-id="599b6-126">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="599b6-127">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="599b6-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="61cb0-128">备注</span><span class="sxs-lookup"><span data-stu-id="61cb0-128">Remarks</span></span>  
- <span data-ttu-id="61cb0-129">`ExecuteInAppDomain` 允许主机以控制在哪个托管<xref:System.AppDomain>应在执行指定的托管的方法。</span><span class="sxs-lookup"><span data-stu-id="61cb0-129">`ExecuteInAppDomain` allows the host to exercise control over which managed <xref:System.AppDomain> the specified managed method should be executed in.</span></span> <span data-ttu-id="61cb0-130">可以获取应用程序域的标识符，对应的值的值<xref:System.AppDomain.Id%2A>属性，通过调用[GetCurrentAppDomainId 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)。</span><span class="sxs-lookup"><span data-stu-id="61cb0-130">You can get the value of an application domain's identifier, which corresponds to the value of the <xref:System.AppDomain.Id%2A> property, by calling [GetCurrentAppDomainId Method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="599b6-128">备注</span><span class="sxs-lookup"><span data-stu-id="599b6-128">Remarks</span></span>  
+ <span data-ttu-id="599b6-129">`ExecuteInAppDomain` 允许主机以控制在哪个托管<xref:System.AppDomain>应在执行指定的托管的方法。</span><span class="sxs-lookup"><span data-stu-id="599b6-129">`ExecuteInAppDomain` allows the host to exercise control over which managed <xref:System.AppDomain> the specified managed method should be executed in.</span></span> <span data-ttu-id="599b6-130">可以获取应用程序域的标识符，对应的值的值<xref:System.AppDomain.Id%2A>属性，通过调用[GetCurrentAppDomainId 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)。</span><span class="sxs-lookup"><span data-stu-id="599b6-130">You can get the value of an application domain's identifier, which corresponds to the value of the <xref:System.AppDomain.Id%2A> property, by calling [GetCurrentAppDomainId Method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="61cb0-131">要求</span><span class="sxs-lookup"><span data-stu-id="61cb0-131">Requirements</span></span>  
- <span data-ttu-id="61cb0-132">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="61cb0-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="599b6-131">要求</span><span class="sxs-lookup"><span data-stu-id="599b6-131">Requirements</span></span>  
+ <span data-ttu-id="599b6-132">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="599b6-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="61cb0-133">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="61cb0-133">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="599b6-133">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="599b6-133">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="61cb0-134">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="61cb0-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="599b6-134">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="599b6-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="61cb0-135">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61cb0-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="599b6-135">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="599b6-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="61cb0-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="61cb0-136">See also</span></span>
-- [<span data-ttu-id="61cb0-137">ICLRRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="61cb0-137">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="599b6-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="599b6-136">See also</span></span>
+- [<span data-ttu-id="599b6-137">ICLRRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="599b6-137">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

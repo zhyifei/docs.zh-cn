@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d36ae3ef63c1324f77786ad55674bbdc257d984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24a2c3baec0d958302101c295966f945ae98fa78
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607129"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490705"
 ---
-# <a name="waitortimercallback-function-pointer"></a><span data-ttu-id="45886-102">WAITORTIMERCALLBACK 函数指针</span><span class="sxs-lookup"><span data-stu-id="45886-102">WAITORTIMERCALLBACK Function Pointer</span></span>
-<span data-ttu-id="45886-103">指向通知主机等待句柄的函数 (<xref:System.Threading.WaitHandle>) 已发出信号或操作已超时。</span><span class="sxs-lookup"><span data-stu-id="45886-103">Points to a function that notifies the host that a wait handle (<xref:System.Threading.WaitHandle>) has either been signaled or timed out.</span></span>  
+# <a name="waitortimercallback-function-pointer"></a><span data-ttu-id="25205-102">WAITORTIMERCALLBACK 函数指针</span><span class="sxs-lookup"><span data-stu-id="25205-102">WAITORTIMERCALLBACK Function Pointer</span></span>
+<span data-ttu-id="25205-103">指向通知主机等待句柄的函数 (<xref:System.Threading.WaitHandle>) 已发出信号或操作已超时。</span><span class="sxs-lookup"><span data-stu-id="25205-103">Points to a function that notifies the host that a wait handle (<xref:System.Threading.WaitHandle>) has either been signaled or timed out.</span></span>  
   
- <span data-ttu-id="45886-104">中已弃用此函数指针[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="45886-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="25205-104">中已弃用此函数指针[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="25205-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="45886-105">语法</span><span class="sxs-lookup"><span data-stu-id="45886-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25205-105">语法</span><span class="sxs-lookup"><span data-stu-id="25205-105">Syntax</span></span>  
   
 ```  
 typedef VOID (__stdcall *WAITORTIMERCALLBACK) (  
@@ -37,24 +37,24 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="45886-106">参数</span><span class="sxs-lookup"><span data-stu-id="45886-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="25205-106">参数</span><span class="sxs-lookup"><span data-stu-id="25205-106">Parameters</span></span>  
  `lpParameter`  
- <span data-ttu-id="45886-107">[in]指向包含由主机定义的信息的对象的指针。</span><span class="sxs-lookup"><span data-stu-id="45886-107">[in] A pointer to an object that contains information defined by the host.</span></span>  
+ <span data-ttu-id="25205-107">[in]指向包含由主机定义的信息的对象的指针。</span><span class="sxs-lookup"><span data-stu-id="25205-107">[in] A pointer to an object that contains information defined by the host.</span></span>  
   
  `TimerOrWaitFired`  
- <span data-ttu-id="45886-108">[in]`true`如果等待句柄已超时，或`false`如果其终止。</span><span class="sxs-lookup"><span data-stu-id="45886-108">[in] `true` if the wait handle timed out, or `false` if it was signaled.</span></span>  
+ <span data-ttu-id="25205-108">[in]`true`如果等待句柄已超时，或`false`如果其终止。</span><span class="sxs-lookup"><span data-stu-id="25205-108">[in] `true` if the wait handle timed out, or `false` if it was signaled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="45886-109">备注</span><span class="sxs-lookup"><span data-stu-id="45886-109">Remarks</span></span>  
- <span data-ttu-id="45886-110">该函数`WAITORTIMERCALLBACK`点是回调函数，必须由主机应用程序的编写器实现。</span><span class="sxs-lookup"><span data-stu-id="45886-110">The function to which `WAITORTIMERCALLBACK` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="25205-109">备注</span><span class="sxs-lookup"><span data-stu-id="25205-109">Remarks</span></span>  
+ <span data-ttu-id="25205-110">该函数`WAITORTIMERCALLBACK`点是回调函数，必须由主机应用程序的编写器实现。</span><span class="sxs-lookup"><span data-stu-id="25205-110">The function to which `WAITORTIMERCALLBACK` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="45886-111">要求</span><span class="sxs-lookup"><span data-stu-id="45886-111">Requirements</span></span>  
- <span data-ttu-id="45886-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="45886-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25205-111">要求</span><span class="sxs-lookup"><span data-stu-id="25205-111">Requirements</span></span>  
+ <span data-ttu-id="25205-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="25205-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="45886-113">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="45886-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="25205-113">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="25205-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="45886-114">**库：** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="45886-114">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="25205-114">**库：** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="25205-114">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="45886-115">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="45886-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="25205-115">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25205-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="45886-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="45886-116">See also</span></span>
-- [<span data-ttu-id="45886-117">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="45886-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="25205-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="25205-116">See also</span></span>
+- [<span data-ttu-id="25205-117">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="25205-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

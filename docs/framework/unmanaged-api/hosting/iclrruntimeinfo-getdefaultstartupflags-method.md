@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4615200bce3aa11401abc9e9c264ab8d8e797b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7ef61c8ae1d8c2e5cf1fee80d8900a0e0e7f73b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720010"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493422"
 ---
-# <a name="iclrruntimeinfogetdefaultstartupflags-method"></a><span data-ttu-id="3db53-102">ICLRRuntimeInfo::GetDefaultStartupFlags 方法</span><span class="sxs-lookup"><span data-stu-id="3db53-102">ICLRRuntimeInfo::GetDefaultStartupFlags Method</span></span>
-<span data-ttu-id="3db53-103">获取启动标志和将用于启动运行时的主机配置文件。</span><span class="sxs-lookup"><span data-stu-id="3db53-103">Gets the startup flags and host configuration file that will be used to start the runtime.</span></span>  
+# <a name="iclrruntimeinfogetdefaultstartupflags-method"></a><span data-ttu-id="a0b22-102">ICLRRuntimeInfo::GetDefaultStartupFlags 方法</span><span class="sxs-lookup"><span data-stu-id="a0b22-102">ICLRRuntimeInfo::GetDefaultStartupFlags Method</span></span>
+<span data-ttu-id="a0b22-103">获取启动标志和将用于启动运行时的主机配置文件。</span><span class="sxs-lookup"><span data-stu-id="a0b22-103">Gets the startup flags and host configuration file that will be used to start the runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3db53-104">语法</span><span class="sxs-lookup"><span data-stu-id="3db53-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a0b22-104">语法</span><span class="sxs-lookup"><span data-stu-id="a0b22-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDefaultStartupFlags(  
@@ -36,36 +36,36 @@ HRESULT GetDefaultStartupFlags(
      [in, out]  DWORD *pcchHostConfigFile);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3db53-105">参数</span><span class="sxs-lookup"><span data-stu-id="3db53-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a0b22-105">参数</span><span class="sxs-lookup"><span data-stu-id="a0b22-105">Parameters</span></span>  
  `pdwStartupFlags`  
- <span data-ttu-id="3db53-106">[out]指向当前设置的主机启动标志的指针。</span><span class="sxs-lookup"><span data-stu-id="3db53-106">[out] A pointer to the host startup flags that are currently set.</span></span>  
+ <span data-ttu-id="a0b22-106">[out]指向当前设置的主机启动标志的指针。</span><span class="sxs-lookup"><span data-stu-id="a0b22-106">[out] A pointer to the host startup flags that are currently set.</span></span>  
   
  `pwzHostConfigFile`  
- <span data-ttu-id="3db53-107">[out]指向当前主机配置文件的目录路径的指针。</span><span class="sxs-lookup"><span data-stu-id="3db53-107">[out] A pointer to the directory path of the current host configuration file.</span></span>  
+ <span data-ttu-id="a0b22-107">[out]指向当前主机配置文件的目录路径的指针。</span><span class="sxs-lookup"><span data-stu-id="a0b22-107">[out] A pointer to the directory path of the current host configuration file.</span></span>  
   
  `pcchHostConfigFile`  
- <span data-ttu-id="3db53-108">[in、 out]在输入的大小`pwzHostConfigFile`，以避免缓冲区溢出。</span><span class="sxs-lookup"><span data-stu-id="3db53-108">[in, out] On input, the size of `pwzHostConfigFile`, to avoid buffer overruns.</span></span> <span data-ttu-id="3db53-109">如果`pwzHostConfigFile`是 null，该方法返回的所需的大小`pwzHostConfigFile`预分配。</span><span class="sxs-lookup"><span data-stu-id="3db53-109">If `pwzHostConfigFile` is null, the method returns the required size of `pwzHostConfigFile` for pre-allocation.</span></span>  
+ <span data-ttu-id="a0b22-108">[in、 out]在输入的大小`pwzHostConfigFile`，以避免缓冲区溢出。</span><span class="sxs-lookup"><span data-stu-id="a0b22-108">[in, out] On input, the size of `pwzHostConfigFile`, to avoid buffer overruns.</span></span> <span data-ttu-id="a0b22-109">如果`pwzHostConfigFile`是 null，该方法返回的所需的大小`pwzHostConfigFile`预分配。</span><span class="sxs-lookup"><span data-stu-id="a0b22-109">If `pwzHostConfigFile` is null, the method returns the required size of `pwzHostConfigFile` for pre-allocation.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3db53-110">返回值</span><span class="sxs-lookup"><span data-stu-id="3db53-110">Return Value</span></span>  
- <span data-ttu-id="3db53-111">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="3db53-111">This method returns the following specific HRESULT as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a0b22-110">返回值</span><span class="sxs-lookup"><span data-stu-id="a0b22-110">Return Value</span></span>  
+ <span data-ttu-id="a0b22-111">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="a0b22-111">This method returns the following specific HRESULT as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="3db53-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3db53-112">HRESULT</span></span>|<span data-ttu-id="3db53-113">描述</span><span class="sxs-lookup"><span data-stu-id="3db53-113">Description</span></span>|  
+|<span data-ttu-id="a0b22-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a0b22-112">HRESULT</span></span>|<span data-ttu-id="a0b22-113">描述</span><span class="sxs-lookup"><span data-stu-id="a0b22-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="3db53-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="3db53-114">S_OK</span></span>|<span data-ttu-id="3db53-115">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="3db53-115">The method completed successfully.</span></span>|  
+|<span data-ttu-id="a0b22-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="a0b22-114">S_OK</span></span>|<span data-ttu-id="a0b22-115">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="a0b22-115">The method completed successfully.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3db53-116">备注</span><span class="sxs-lookup"><span data-stu-id="3db53-116">Remarks</span></span>  
- <span data-ttu-id="3db53-117">此方法返回默认的标志值 (`STARTUP_CONCURRENT_GC`并`NULL`)，或通过以前调用提供的值[iclrruntimeinfo:: Setdefaultstartupflags 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md)，或按任何设置的值`CorBind*`如果它们被绑定到此运行时的方法。</span><span class="sxs-lookup"><span data-stu-id="3db53-117">This method returns the default flag values (`STARTUP_CONCURRENT_GC` and `NULL`), or the values provided by a previous call to the [ICLRRuntimeInfo::SetDefaultStartupFlags method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), or the values set by any of the `CorBind*` methods if they are bound to this runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a0b22-116">备注</span><span class="sxs-lookup"><span data-stu-id="a0b22-116">Remarks</span></span>  
+ <span data-ttu-id="a0b22-117">此方法返回默认的标志值 (`STARTUP_CONCURRENT_GC`并`NULL`)，或通过以前调用提供的值[iclrruntimeinfo:: Setdefaultstartupflags 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md)，或按任何设置的值`CorBind*`如果它们被绑定到此运行时的方法。</span><span class="sxs-lookup"><span data-stu-id="a0b22-117">This method returns the default flag values (`STARTUP_CONCURRENT_GC` and `NULL`), or the values provided by a previous call to the [ICLRRuntimeInfo::SetDefaultStartupFlags method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), or the values set by any of the `CorBind*` methods if they are bound to this runtime.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3db53-118">要求</span><span class="sxs-lookup"><span data-stu-id="3db53-118">Requirements</span></span>  
- <span data-ttu-id="3db53-119">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3db53-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a0b22-118">要求</span><span class="sxs-lookup"><span data-stu-id="a0b22-118">Requirements</span></span>  
+ <span data-ttu-id="a0b22-119">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a0b22-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3db53-120">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="3db53-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="a0b22-120">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a0b22-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="3db53-121">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="3db53-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a0b22-121">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="a0b22-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3db53-122">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3db53-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="a0b22-122">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a0b22-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3db53-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="3db53-123">See also</span></span>
-- [<span data-ttu-id="3db53-124">ICLRRuntimeInfo 接口</span><span class="sxs-lookup"><span data-stu-id="3db53-124">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="3db53-125">承载接口</span><span class="sxs-lookup"><span data-stu-id="3db53-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="3db53-126">承载</span><span class="sxs-lookup"><span data-stu-id="3db53-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="a0b22-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="a0b22-123">See also</span></span>
+- [<span data-ttu-id="a0b22-124">ICLRRuntimeInfo 接口</span><span class="sxs-lookup"><span data-stu-id="a0b22-124">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="a0b22-125">承载接口</span><span class="sxs-lookup"><span data-stu-id="a0b22-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="a0b22-126">承载</span><span class="sxs-lookup"><span data-stu-id="a0b22-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

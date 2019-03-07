@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5227de340bec85620f8c8d45538ad9a9d7f688fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2048062267131f6b6cc6672d74c7f9d76b4b59f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630952"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484740"
 ---
-# <a name="isymunmanagedreadergetnamespaces-method"></a><span data-ttu-id="175bb-102">ISymUnmanagedReader::GetNamespaces 方法</span><span class="sxs-lookup"><span data-stu-id="175bb-102">ISymUnmanagedReader::GetNamespaces Method</span></span>
-<span data-ttu-id="175bb-103">获取全局范围内此符号存储区定义的命名空间。</span><span class="sxs-lookup"><span data-stu-id="175bb-103">Gets the namespaces defined at global scope within this symbol store.</span></span>  
+# <a name="isymunmanagedreadergetnamespaces-method"></a><span data-ttu-id="a5027-102">ISymUnmanagedReader::GetNamespaces 方法</span><span class="sxs-lookup"><span data-stu-id="a5027-102">ISymUnmanagedReader::GetNamespaces Method</span></span>
+<span data-ttu-id="a5027-103">获取全局范围内此符号存储区定义的命名空间。</span><span class="sxs-lookup"><span data-stu-id="a5027-103">Gets the namespaces defined at global scope within this symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="175bb-104">语法</span><span class="sxs-lookup"><span data-stu-id="175bb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5027-104">语法</span><span class="sxs-lookup"><span data-stu-id="a5027-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNamespaces (  
@@ -38,21 +38,21 @@ HRESULT GetNamespaces (
         ISymUnmanagedNamespace*  namespaces[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="175bb-105">参数</span><span class="sxs-lookup"><span data-stu-id="175bb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a5027-105">参数</span><span class="sxs-lookup"><span data-stu-id="a5027-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="175bb-106">[in]命名空间数组的大小。</span><span class="sxs-lookup"><span data-stu-id="175bb-106">[in] The size of the namespaces array.</span></span>  
+ <span data-ttu-id="a5027-106">[in]命名空间数组的大小。</span><span class="sxs-lookup"><span data-stu-id="a5027-106">[in] The size of the namespaces array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="175bb-107">[out]指向一个变量来接收该命名空间列表的长度的指针。</span><span class="sxs-lookup"><span data-stu-id="175bb-107">[out] A pointer to a variable that receives the length of the namespace list.</span></span>  
+ <span data-ttu-id="a5027-107">[out]指向一个变量来接收该命名空间列表的长度的指针。</span><span class="sxs-lookup"><span data-stu-id="a5027-107">[out] A pointer to a variable that receives the length of the namespace list.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="175bb-108">[out]指向一个变量来接收命名空间列表的指针。</span><span class="sxs-lookup"><span data-stu-id="175bb-108">[out] A pointer to a variable that receives the namespace list.</span></span>  
+ <span data-ttu-id="a5027-108">[out]指向一个变量来接收命名空间列表的指针。</span><span class="sxs-lookup"><span data-stu-id="a5027-108">[out] A pointer to a variable that receives the namespace list.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="175bb-109">返回值</span><span class="sxs-lookup"><span data-stu-id="175bb-109">Return Value</span></span>  
- <span data-ttu-id="175bb-110">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="175bb-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a5027-109">返回值</span><span class="sxs-lookup"><span data-stu-id="a5027-109">Return Value</span></span>  
+ <span data-ttu-id="a5027-110">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="a5027-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="175bb-111">要求</span><span class="sxs-lookup"><span data-stu-id="175bb-111">Requirements</span></span>  
- <span data-ttu-id="175bb-112">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="175bb-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a5027-111">要求</span><span class="sxs-lookup"><span data-stu-id="a5027-111">Requirements</span></span>  
+ <span data-ttu-id="a5027-112">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a5027-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="175bb-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="175bb-113">See also</span></span>
-- [<span data-ttu-id="175bb-114">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="175bb-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a5027-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="a5027-113">See also</span></span>
+- [<span data-ttu-id="a5027-114">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="a5027-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

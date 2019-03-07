@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45a7e0c793baa31d9efde2763570cd46a072fe86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2b0273c0e757be9d6d69a02565f8509a196b803
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546314"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478578"
 ---
-# <a name="icorprofilerinfo2getfunctioninfo2-method"></a><span data-ttu-id="23855-102">ICorProfilerInfo2::GetFunctionInfo2 方法</span><span class="sxs-lookup"><span data-stu-id="23855-102">ICorProfilerInfo2::GetFunctionInfo2 Method</span></span>
-<span data-ttu-id="23855-103">获取每个类型参数或某个函数（如果存在）的父类、元数据标记和 `ClassID`。</span><span class="sxs-lookup"><span data-stu-id="23855-103">Gets the parent class, the metadata token, and the `ClassID` of each type argument, if present, of a function.</span></span>  
+# <a name="icorprofilerinfo2getfunctioninfo2-method"></a><span data-ttu-id="a551e-102">ICorProfilerInfo2::GetFunctionInfo2 方法</span><span class="sxs-lookup"><span data-stu-id="a551e-102">ICorProfilerInfo2::GetFunctionInfo2 Method</span></span>
+<span data-ttu-id="a551e-103">获取每个类型参数或某个函数（如果存在）的父类、元数据标记和 `ClassID`。</span><span class="sxs-lookup"><span data-stu-id="a551e-103">Gets the parent class, the metadata token, and the `ClassID` of each type argument, if present, of a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="23855-104">语法</span><span class="sxs-lookup"><span data-stu-id="23855-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a551e-104">语法</span><span class="sxs-lookup"><span data-stu-id="a551e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionInfo2(  
@@ -41,57 +41,57 @@ HRESULT GetFunctionInfo2(
     [out] ClassID typeArgs[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="23855-105">参数</span><span class="sxs-lookup"><span data-stu-id="23855-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a551e-105">参数</span><span class="sxs-lookup"><span data-stu-id="a551e-105">Parameters</span></span>  
  `funcId`  
- <span data-ttu-id="23855-106">[in] 要获取其父类和其他信息的函数的 ID。</span><span class="sxs-lookup"><span data-stu-id="23855-106">[in] The ID of the function for which to get the parent class and other information.</span></span>  
+ <span data-ttu-id="a551e-106">[in] 要获取其父类和其他信息的函数的 ID。</span><span class="sxs-lookup"><span data-stu-id="a551e-106">[in] The ID of the function for which to get the parent class and other information.</span></span>  
   
  `frameInfo`  
- <span data-ttu-id="23855-107">[in] 一个 `COR_PRF_FRAME_INFO` 值，该值指向有关堆栈帧的信息。</span><span class="sxs-lookup"><span data-stu-id="23855-107">[in] A `COR_PRF_FRAME_INFO` value that points to information about a stack frame.</span></span>  
+ <span data-ttu-id="a551e-107">[in] 一个 `COR_PRF_FRAME_INFO` 值，该值指向有关堆栈帧的信息。</span><span class="sxs-lookup"><span data-stu-id="a551e-107">[in] A `COR_PRF_FRAME_INFO` value that points to information about a stack frame.</span></span>  
   
  `pClassId`  
- <span data-ttu-id="23855-108">[out] 一个指向函数的父类的指针。</span><span class="sxs-lookup"><span data-stu-id="23855-108">[out] A pointer to the parent class of the function.</span></span>  
+ <span data-ttu-id="a551e-108">[out] 一个指向函数的父类的指针。</span><span class="sxs-lookup"><span data-stu-id="a551e-108">[out] A pointer to the parent class of the function.</span></span>  
   
  `pModuleId`  
- <span data-ttu-id="23855-109">[out] 一个指向在其中定义函数父类的模块的指针。</span><span class="sxs-lookup"><span data-stu-id="23855-109">[out] A pointer to the module in which the function's parent class is defined.</span></span>  
+ <span data-ttu-id="a551e-109">[out] 一个指向在其中定义函数父类的模块的指针。</span><span class="sxs-lookup"><span data-stu-id="a551e-109">[out] A pointer to the module in which the function's parent class is defined.</span></span>  
   
  `pToken`  
- <span data-ttu-id="23855-110">[out] 指向函数的元数据标记的指针。</span><span class="sxs-lookup"><span data-stu-id="23855-110">[out] A pointer to the metadata token for the function.</span></span>  
+ <span data-ttu-id="a551e-110">[out] 指向函数的元数据标记的指针。</span><span class="sxs-lookup"><span data-stu-id="a551e-110">[out] A pointer to the metadata token for the function.</span></span>  
   
  `cTypeArgs`  
- <span data-ttu-id="23855-111">[in] `typeArgs` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="23855-111">[in] The size of the `typeArgs` array.</span></span>  
+ <span data-ttu-id="a551e-111">[in] `typeArgs` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="a551e-111">[in] The size of the `typeArgs` array.</span></span>  
   
  `pcTypeArgs`  
- <span data-ttu-id="23855-112">[out] 一个指向 `ClassID` 值的总数的指针。</span><span class="sxs-lookup"><span data-stu-id="23855-112">[out] A pointer to the total number of `ClassID` values.</span></span>  
+ <span data-ttu-id="a551e-112">[out] 一个指向 `ClassID` 值的总数的指针。</span><span class="sxs-lookup"><span data-stu-id="a551e-112">[out] A pointer to the total number of `ClassID` values.</span></span>  
   
  `typeArgs`  
- <span data-ttu-id="23855-113">[out] 一个由 `ClassID` 值构成的数组，其中的每个值都是函数的类型参数的 ID。</span><span class="sxs-lookup"><span data-stu-id="23855-113">[out] An array of `ClassID` values, each of which is the ID of a type argument of the function.</span></span> <span data-ttu-id="23855-114">方法返回时，`typeArgs` 将包含部分或全部 `ClassID` 值。</span><span class="sxs-lookup"><span data-stu-id="23855-114">When the method returns, `typeArgs` will contain some or all of the `ClassID` values.</span></span>  
+ <span data-ttu-id="a551e-113">[out] 一个由 `ClassID` 值构成的数组，其中的每个值都是函数的类型参数的 ID。</span><span class="sxs-lookup"><span data-stu-id="a551e-113">[out] An array of `ClassID` values, each of which is the ID of a type argument of the function.</span></span> <span data-ttu-id="a551e-114">方法返回时，`typeArgs` 将包含部分或全部 `ClassID` 值。</span><span class="sxs-lookup"><span data-stu-id="a551e-114">When the method returns, `typeArgs` will contain some or all of the `ClassID` values.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="23855-115">备注</span><span class="sxs-lookup"><span data-stu-id="23855-115">Remarks</span></span>  
- <span data-ttu-id="23855-116">探查器代码可以调用[icorprofilerinfo:: Getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md)来获取[元数据](../../../../docs/framework/unmanaged-api/metadata/index.md)给定模块的接口。</span><span class="sxs-lookup"><span data-stu-id="23855-116">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module.</span></span> <span data-ttu-id="23855-117">然后，返回到 `pToken` 所引用位置的元数据标记便可用于访问该函数的元数据。</span><span class="sxs-lookup"><span data-stu-id="23855-117">The metadata token that is returned to the location referenced by `pToken` can then be used to access the metadata for the function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a551e-115">备注</span><span class="sxs-lookup"><span data-stu-id="a551e-115">Remarks</span></span>  
+ <span data-ttu-id="a551e-116">探查器代码可以调用[icorprofilerinfo:: Getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md)来获取[元数据](../../../../docs/framework/unmanaged-api/metadata/index.md)给定模块的接口。</span><span class="sxs-lookup"><span data-stu-id="a551e-116">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module.</span></span> <span data-ttu-id="a551e-117">然后，返回到 `pToken` 所引用位置的元数据标记便可用于访问该函数的元数据。</span><span class="sxs-lookup"><span data-stu-id="a551e-117">The metadata token that is returned to the location referenced by `pToken` can then be used to access the metadata for the function.</span></span>  
   
- <span data-ttu-id="23855-118">通过 `pClassId` 和 `typeArgs` 参数返回的类 ID 和类型参数取决于传入 `frameInfo` 参数的值，如下表中所示。</span><span class="sxs-lookup"><span data-stu-id="23855-118">The class ID and type arguments that are returned through the `pClassId` and `typeArgs` parameters depend on the value that is passed in the `frameInfo` parameter, as shown in the following table.</span></span>  
+ <span data-ttu-id="a551e-118">通过 `pClassId` 和 `typeArgs` 参数返回的类 ID 和类型参数取决于传入 `frameInfo` 参数的值，如下表中所示。</span><span class="sxs-lookup"><span data-stu-id="a551e-118">The class ID and type arguments that are returned through the `pClassId` and `typeArgs` parameters depend on the value that is passed in the `frameInfo` parameter, as shown in the following table.</span></span>  
   
-|<span data-ttu-id="23855-119">`frameInfo` 参数的值</span><span class="sxs-lookup"><span data-stu-id="23855-119">Value of the `frameInfo` parameter</span></span>|<span data-ttu-id="23855-120">结果</span><span class="sxs-lookup"><span data-stu-id="23855-120">Result</span></span>|  
+|<span data-ttu-id="a551e-119">`frameInfo` 参数的值</span><span class="sxs-lookup"><span data-stu-id="a551e-119">Value of the `frameInfo` parameter</span></span>|<span data-ttu-id="a551e-120">结果</span><span class="sxs-lookup"><span data-stu-id="a551e-120">Result</span></span>|  
 |----------------------------------------|------------|  
-|<span data-ttu-id="23855-121">从 `FunctionEnter2` 回调中获得的 `COR_PRF_FRAME_INFO` 值</span><span class="sxs-lookup"><span data-stu-id="23855-121">A `COR_PRF_FRAME_INFO` value that was obtained from a `FunctionEnter2` callback</span></span>|<span data-ttu-id="23855-122">在 `pClassId` 所引用位置中返回的 `ClassID` 以及在 `typeArgs` 数组中返回的所有类型参数都将是准确的。</span><span class="sxs-lookup"><span data-stu-id="23855-122">The `ClassID`, returned in the location referenced by `pClassId`, and all type arguments, returned in the `typeArgs` array, will be exact.</span></span>|  
-|<span data-ttu-id="23855-123">从 `FunctionEnter2` 回调以外的源中获得的 `COR_PRF_FRAME_INFO`</span><span class="sxs-lookup"><span data-stu-id="23855-123">A `COR_PRF_FRAME_INFO` that was obtained from a source other than a `FunctionEnter2` callback</span></span>|<span data-ttu-id="23855-124">无法确定准确的 `ClassID` 和类型参数。</span><span class="sxs-lookup"><span data-stu-id="23855-124">The exact `ClassID` and type arguments cannot be determined.</span></span> <span data-ttu-id="23855-125">也就是说，`ClassID` 可能为 NULL，并且某些类型参数可能作为 <xref:System.Object> 返回。</span><span class="sxs-lookup"><span data-stu-id="23855-125">That is, the `ClassID` might be null and some type arguments might come back as <xref:System.Object>.</span></span>|  
-|<span data-ttu-id="23855-126">零</span><span class="sxs-lookup"><span data-stu-id="23855-126">Zero</span></span>|<span data-ttu-id="23855-127">无法确定准确的 `ClassID` 和类型参数。</span><span class="sxs-lookup"><span data-stu-id="23855-127">The exact `ClassID` and type arguments cannot be determined.</span></span> <span data-ttu-id="23855-128">也就是说，`ClassID` 可能为 NULL，并且某些类型参数可能作为 <xref:System.Object> 返回。</span><span class="sxs-lookup"><span data-stu-id="23855-128">That is, the `ClassID` might be null and some type arguments might come back as <xref:System.Object>.</span></span>|  
+|<span data-ttu-id="a551e-121">从 `FunctionEnter2` 回调中获得的 `COR_PRF_FRAME_INFO` 值</span><span class="sxs-lookup"><span data-stu-id="a551e-121">A `COR_PRF_FRAME_INFO` value that was obtained from a `FunctionEnter2` callback</span></span>|<span data-ttu-id="a551e-122">在 `pClassId` 所引用位置中返回的 `ClassID` 以及在 `typeArgs` 数组中返回的所有类型参数都将是准确的。</span><span class="sxs-lookup"><span data-stu-id="a551e-122">The `ClassID`, returned in the location referenced by `pClassId`, and all type arguments, returned in the `typeArgs` array, will be exact.</span></span>|  
+|<span data-ttu-id="a551e-123">从 `FunctionEnter2` 回调以外的源中获得的 `COR_PRF_FRAME_INFO`</span><span class="sxs-lookup"><span data-stu-id="a551e-123">A `COR_PRF_FRAME_INFO` that was obtained from a source other than a `FunctionEnter2` callback</span></span>|<span data-ttu-id="a551e-124">无法确定准确的 `ClassID` 和类型参数。</span><span class="sxs-lookup"><span data-stu-id="a551e-124">The exact `ClassID` and type arguments cannot be determined.</span></span> <span data-ttu-id="a551e-125">也就是说，`ClassID` 可能为 NULL，并且某些类型参数可能作为 <xref:System.Object> 返回。</span><span class="sxs-lookup"><span data-stu-id="a551e-125">That is, the `ClassID` might be null and some type arguments might come back as <xref:System.Object>.</span></span>|  
+|<span data-ttu-id="a551e-126">零</span><span class="sxs-lookup"><span data-stu-id="a551e-126">Zero</span></span>|<span data-ttu-id="a551e-127">无法确定准确的 `ClassID` 和类型参数。</span><span class="sxs-lookup"><span data-stu-id="a551e-127">The exact `ClassID` and type arguments cannot be determined.</span></span> <span data-ttu-id="a551e-128">也就是说，`ClassID` 可能为 NULL，并且某些类型参数可能作为 <xref:System.Object> 返回。</span><span class="sxs-lookup"><span data-stu-id="a551e-128">That is, the `ClassID` might be null and some type arguments might come back as <xref:System.Object>.</span></span>|  
   
- <span data-ttu-id="23855-129">`GetFunctionInfo2` 返回后，必须验证 `typeArgs` 缓冲区是否足够大，可包含所有 `ClassID` 值。</span><span class="sxs-lookup"><span data-stu-id="23855-129">After `GetFunctionInfo2` returns, you must verify that the `typeArgs` buffer was large enough to contain all the `ClassID` values.</span></span> <span data-ttu-id="23855-130">为此，请比较 `pcTypeArgs` 指向的值和 `cTypeArgs` 参数的值。</span><span class="sxs-lookup"><span data-stu-id="23855-130">To do this, compare the value that `pcTypeArgs` points to with the value of the `cTypeArgs` parameter.</span></span> <span data-ttu-id="23855-131">如果 `pcTypeArgs` 指向大于`cTypeArgs` 除以 `ClassID` 值大小的值，请分配更大的 `pcTypeArgs` 缓冲区，使用新的、更大的大小更新 `cTypeArgs`，然后再次调用 `GetFunctionInfo2`。</span><span class="sxs-lookup"><span data-stu-id="23855-131">If `pcTypeArgs` points to a value that is larger than `cTypeArgs` divided by the size of a `ClassID` value, allocate a larger `pcTypeArgs` buffer, update `cTypeArgs` with the new, larger size, and call `GetFunctionInfo2` again.</span></span>  
+ <span data-ttu-id="a551e-129">`GetFunctionInfo2` 返回后，必须验证 `typeArgs` 缓冲区是否足够大，可包含所有 `ClassID` 值。</span><span class="sxs-lookup"><span data-stu-id="a551e-129">After `GetFunctionInfo2` returns, you must verify that the `typeArgs` buffer was large enough to contain all the `ClassID` values.</span></span> <span data-ttu-id="a551e-130">为此，请比较 `pcTypeArgs` 指向的值和 `cTypeArgs` 参数的值。</span><span class="sxs-lookup"><span data-stu-id="a551e-130">To do this, compare the value that `pcTypeArgs` points to with the value of the `cTypeArgs` parameter.</span></span> <span data-ttu-id="a551e-131">如果 `pcTypeArgs` 指向大于`cTypeArgs` 除以 `ClassID` 值大小的值，请分配更大的 `pcTypeArgs` 缓冲区，使用新的、更大的大小更新 `cTypeArgs`，然后再次调用 `GetFunctionInfo2`。</span><span class="sxs-lookup"><span data-stu-id="a551e-131">If `pcTypeArgs` points to a value that is larger than `cTypeArgs` divided by the size of a `ClassID` value, allocate a larger `pcTypeArgs` buffer, update `cTypeArgs` with the new, larger size, and call `GetFunctionInfo2` again.</span></span>  
   
- <span data-ttu-id="23855-132">或者，可以先用长度为零的 `pcTypeArgs` 缓冲区调用 `GetFunctionInfo2` 以获取正确的缓冲区大小。</span><span class="sxs-lookup"><span data-stu-id="23855-132">Alternatively, you can first call `GetFunctionInfo2` with a zero-length `pcTypeArgs` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="23855-133">然后，可将缓冲区大小设置为 `pcTypeArgs` 中返回的值除以 `ClassID` 值的大小，然后再次调用 `GetFunctionInfo2`。</span><span class="sxs-lookup"><span data-stu-id="23855-133">You can then set the buffer size to the value returned in `pcTypeArgs` divided by the size of a `ClassID` value, and call `GetFunctionInfo2` again.</span></span>  
+ <span data-ttu-id="a551e-132">或者，可以先用长度为零的 `pcTypeArgs` 缓冲区调用 `GetFunctionInfo2` 以获取正确的缓冲区大小。</span><span class="sxs-lookup"><span data-stu-id="a551e-132">Alternatively, you can first call `GetFunctionInfo2` with a zero-length `pcTypeArgs` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="a551e-133">然后，可将缓冲区大小设置为 `pcTypeArgs` 中返回的值除以 `ClassID` 值的大小，然后再次调用 `GetFunctionInfo2`。</span><span class="sxs-lookup"><span data-stu-id="a551e-133">You can then set the buffer size to the value returned in `pcTypeArgs` divided by the size of a `ClassID` value, and call `GetFunctionInfo2` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="23855-134">要求</span><span class="sxs-lookup"><span data-stu-id="23855-134">Requirements</span></span>  
- <span data-ttu-id="23855-135">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="23855-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a551e-134">要求</span><span class="sxs-lookup"><span data-stu-id="a551e-134">Requirements</span></span>  
+ <span data-ttu-id="a551e-135">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a551e-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="23855-136">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="23855-136">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a551e-136">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a551e-136">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="23855-137">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="23855-137">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a551e-137">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a551e-137">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="23855-138">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23855-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a551e-138">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a551e-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23855-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="23855-139">See also</span></span>
-- [<span data-ttu-id="23855-140">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="23855-140">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="23855-141">ICorProfilerInfo2 接口</span><span class="sxs-lookup"><span data-stu-id="23855-141">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [<span data-ttu-id="23855-142">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="23855-142">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="23855-143">分析</span><span class="sxs-lookup"><span data-stu-id="23855-143">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="a551e-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="a551e-139">See also</span></span>
+- [<span data-ttu-id="a551e-140">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="a551e-140">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="a551e-141">ICorProfilerInfo2 接口</span><span class="sxs-lookup"><span data-stu-id="a551e-141">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="a551e-142">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="a551e-142">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="a551e-143">分析</span><span class="sxs-lookup"><span data-stu-id="a551e-143">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

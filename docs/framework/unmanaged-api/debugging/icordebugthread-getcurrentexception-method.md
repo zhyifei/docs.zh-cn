@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82686fdd14783257987ec5bf9a24db7d87049d42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4baa4eb4da48b923ab0137ca25d9d819c94e33d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421741"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487338"
 ---
-# <a name="icordebugthreadgetcurrentexception-method"></a><span data-ttu-id="e8bcd-102">ICorDebugThread::GetCurrentException 方法</span><span class="sxs-lookup"><span data-stu-id="e8bcd-102">ICorDebugThread::GetCurrentException Method</span></span>
-<span data-ttu-id="e8bcd-103">获取一个表示托管代码所引发的异常的 ICorDebugValue 对象的接口指针。</span><span class="sxs-lookup"><span data-stu-id="e8bcd-103">Gets an interface pointer to an ICorDebugValue object that represents an exception that is currently being thrown by managed code.</span></span>  
+# <a name="icordebugthreadgetcurrentexception-method"></a><span data-ttu-id="b18d3-102">ICorDebugThread::GetCurrentException 方法</span><span class="sxs-lookup"><span data-stu-id="b18d3-102">ICorDebugThread::GetCurrentException Method</span></span>
+<span data-ttu-id="b18d3-103">获取表示当前由托管代码引发的异常的 ICorDebugValue 对象的接口指针。</span><span class="sxs-lookup"><span data-stu-id="b18d3-103">Gets an interface pointer to an ICorDebugValue object that represents an exception that is currently being thrown by managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e8bcd-104">语法</span><span class="sxs-lookup"><span data-stu-id="e8bcd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b18d3-104">语法</span><span class="sxs-lookup"><span data-stu-id="b18d3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentException (  
@@ -35,22 +35,22 @@ HRESULT GetCurrentException (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e8bcd-105">参数</span><span class="sxs-lookup"><span data-stu-id="e8bcd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b18d3-105">参数</span><span class="sxs-lookup"><span data-stu-id="b18d3-105">Parameters</span></span>  
  `ppExceptionObject`  
- <span data-ttu-id="e8bcd-106">[out]指向的地址的指针`ICorDebugValue`表示当前所引发的异常的对象托管代码。</span><span class="sxs-lookup"><span data-stu-id="e8bcd-106">[out] A pointer to the address of an `ICorDebugValue` object that represents the exception that is currently being thrown by managed code.</span></span>  
+ <span data-ttu-id="b18d3-106">[out]指向的地址的指针`ICorDebugValue`对象，表示当前由引发的异常的托管代码。</span><span class="sxs-lookup"><span data-stu-id="b18d3-106">[out] A pointer to the address of an `ICorDebugValue` object that represents the exception that is currently being thrown by managed code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e8bcd-107">备注</span><span class="sxs-lookup"><span data-stu-id="e8bcd-107">Remarks</span></span>  
- <span data-ttu-id="e8bcd-108">从异常结束前的时间将存在的异常对象`catch`块。</span><span class="sxs-lookup"><span data-stu-id="e8bcd-108">The exception object will exist from the time the exception is thrown until the end of the `catch` block.</span></span> <span data-ttu-id="e8bcd-109">由 ICorDebugEval 方法执行，则函数求值将清空在安装中的异常对象，并将其还原完成。</span><span class="sxs-lookup"><span data-stu-id="e8bcd-109">A function evaluation, which is performed by the ICorDebugEval methods, will clear out the exception object on setup and restore it on completion.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b18d3-107">备注</span><span class="sxs-lookup"><span data-stu-id="b18d3-107">Remarks</span></span>  
+ <span data-ttu-id="b18d3-108">从异常到结束的时间将存在的异常对象`catch`块。</span><span class="sxs-lookup"><span data-stu-id="b18d3-108">The exception object will exist from the time the exception is thrown until the end of the `catch` block.</span></span> <span data-ttu-id="b18d3-109">函数求值，由 ICorDebugEval 方法执行，则将清除异常对象上设置，并在完成还原。</span><span class="sxs-lookup"><span data-stu-id="b18d3-109">A function evaluation, which is performed by the ICorDebugEval methods, will clear out the exception object on setup and restore it on completion.</span></span>  
   
- <span data-ttu-id="e8bcd-110">可以嵌套异常，（例如，如果筛选器中或函数求值，将引发异常），所以可能有对单个线程的多个未处理异常。</span><span class="sxs-lookup"><span data-stu-id="e8bcd-110">Exceptions can be nested (for example, if an exception is thrown in a filter or in a function evaluation), so there may be multiple outstanding exceptions on a single thread.</span></span> <span data-ttu-id="e8bcd-111">`GetCurrentException` 返回最新的异常。</span><span class="sxs-lookup"><span data-stu-id="e8bcd-111">`GetCurrentException` returns the most current exception.</span></span>  
+ <span data-ttu-id="b18d3-110">可以嵌套异常，（例如，如果筛选器中或在函数求值，将引发异常），因此可能在单个线程上的多个未处理异常。</span><span class="sxs-lookup"><span data-stu-id="b18d3-110">Exceptions can be nested (for example, if an exception is thrown in a filter or in a function evaluation), so there may be multiple outstanding exceptions on a single thread.</span></span> <span data-ttu-id="b18d3-111">`GetCurrentException` 返回的最新的异常。</span><span class="sxs-lookup"><span data-stu-id="b18d3-111">`GetCurrentException` returns the most current exception.</span></span>  
   
- <span data-ttu-id="e8bcd-112">在异常的生命周期更改可能的异常对象和类型。</span><span class="sxs-lookup"><span data-stu-id="e8bcd-112">The exception object and type may change throughout the life of the exception.</span></span> <span data-ttu-id="e8bcd-113">例如，将引发异常的类型为 x 后，公共语言运行时 (CLR) 可能内存不足的情况并将其升级到内存不足异常。</span><span class="sxs-lookup"><span data-stu-id="e8bcd-113">For example, after an exception of type x is thrown, the common language runtime (CLR) may run out of memory and promote it to an out-of-memory exception.</span></span>  
+ <span data-ttu-id="b18d3-112">异常对象和类型可能会更改整个生命周期中的异常。</span><span class="sxs-lookup"><span data-stu-id="b18d3-112">The exception object and type may change throughout the life of the exception.</span></span> <span data-ttu-id="b18d3-113">例如，将引发异常的类型为 x 后，公共语言运行时 (CLR) 可能导致内存不足，并将其升级到内存不足异常。</span><span class="sxs-lookup"><span data-stu-id="b18d3-113">For example, after an exception of type x is thrown, the common language runtime (CLR) may run out of memory and promote it to an out-of-memory exception.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e8bcd-114">要求</span><span class="sxs-lookup"><span data-stu-id="e8bcd-114">Requirements</span></span>  
- <span data-ttu-id="e8bcd-115">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e8bcd-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b18d3-114">要求</span><span class="sxs-lookup"><span data-stu-id="b18d3-114">Requirements</span></span>  
+ <span data-ttu-id="b18d3-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b18d3-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e8bcd-116">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e8bcd-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b18d3-116">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b18d3-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e8bcd-117">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e8bcd-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b18d3-117">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b18d3-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e8bcd-118">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8bcd-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b18d3-118">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b18d3-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

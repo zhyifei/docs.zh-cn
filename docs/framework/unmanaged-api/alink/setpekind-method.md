@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5fe770ffc5a9c187e9069e8a66553976f9a53b2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e568050a5cc94da865d656adc8a775024dab836c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709879"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500039"
 ---
-# <a name="setpekind-method"></a><span data-ttu-id="52b87-102">SetPEKind 方法</span><span class="sxs-lookup"><span data-stu-id="52b87-102">SetPEKind Method</span></span>
-<span data-ttu-id="52b87-103">确定特定于计算机或计算机不可知的可移植可执行文件类型。</span><span class="sxs-lookup"><span data-stu-id="52b87-103">Determines the portable executable type, either machine-specific or machine-agnostic.</span></span>  
+# <a name="setpekind-method"></a><span data-ttu-id="4ccfb-102">SetPEKind 方法</span><span class="sxs-lookup"><span data-stu-id="4ccfb-102">SetPEKind Method</span></span>
+<span data-ttu-id="4ccfb-103">确定特定于计算机或计算机不可知的可移植可执行文件类型。</span><span class="sxs-lookup"><span data-stu-id="4ccfb-103">Determines the portable executable type, either machine-specific or machine-agnostic.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="52b87-104">语法</span><span class="sxs-lookup"><span data-stu-id="52b87-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ccfb-104">语法</span><span class="sxs-lookup"><span data-stu-id="4ccfb-104">Syntax</span></span>  
   
 ```  
 HRESULT SetPEKind(  
@@ -37,27 +37,27 @@ HRESULT SetPEKind(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="52b87-105">参数</span><span class="sxs-lookup"><span data-stu-id="52b87-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4ccfb-105">参数</span><span class="sxs-lookup"><span data-stu-id="4ccfb-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="52b87-106">程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="52b87-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="4ccfb-106">程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="4ccfb-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="52b87-107">PE 类型要为其设置的文件的令牌。</span><span class="sxs-lookup"><span data-stu-id="52b87-107">Token of file for which the PE type is to be set.</span></span> <span data-ttu-id="52b87-108">可以为 NULL，如果`AssemblyID`并不表示未绑定的 netmodule。</span><span class="sxs-lookup"><span data-stu-id="52b87-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
+ <span data-ttu-id="4ccfb-107">PE 类型要为其设置的文件的令牌。</span><span class="sxs-lookup"><span data-stu-id="4ccfb-107">Token of file for which the PE type is to be set.</span></span> <span data-ttu-id="4ccfb-108">可以为 NULL，如果`AssemblyID`并不表示未绑定的 netmodule。</span><span class="sxs-lookup"><span data-stu-id="4ccfb-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
   
  `dwPEKind`  
- <span data-ttu-id="52b87-109">PE 所示的类型[CorPEKind 枚举](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="52b87-109">The type of PE, as indicated by the [CorPEKind Enumeration](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md).</span></span>  
+ <span data-ttu-id="4ccfb-109">PE 所示的类型[CorPEKind 枚举](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="4ccfb-109">The type of PE, as indicated by the [CorPEKind Enumeration](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md).</span></span>  
   
  `dwMachine`  
- <span data-ttu-id="52b87-110">目标计算机体系结构，如 NT 标头中所示。</span><span class="sxs-lookup"><span data-stu-id="52b87-110">The target machine architecture, as indicated in the NT header.</span></span>  
+ <span data-ttu-id="4ccfb-110">目标计算机体系结构，如 NT 标头中所示。</span><span class="sxs-lookup"><span data-stu-id="4ccfb-110">The target machine architecture, as indicated in the NT header.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="52b87-111">返回值</span><span class="sxs-lookup"><span data-stu-id="52b87-111">Return Value</span></span>  
- <span data-ttu-id="52b87-112">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="52b87-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4ccfb-111">返回值</span><span class="sxs-lookup"><span data-stu-id="4ccfb-111">Return Value</span></span>  
+ <span data-ttu-id="4ccfb-112">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="4ccfb-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="52b87-113">要求</span><span class="sxs-lookup"><span data-stu-id="52b87-113">Requirements</span></span>  
- <span data-ttu-id="52b87-114">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="52b87-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ccfb-113">要求</span><span class="sxs-lookup"><span data-stu-id="4ccfb-113">Requirements</span></span>  
+ <span data-ttu-id="4ccfb-114">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="4ccfb-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="52b87-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="52b87-115">See also</span></span>
-- [<span data-ttu-id="52b87-116">GetPEKind 方法</span><span class="sxs-lookup"><span data-stu-id="52b87-116">GetPEKind Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
-- [<span data-ttu-id="52b87-117">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="52b87-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="52b87-118">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="52b87-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="52b87-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="52b87-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="4ccfb-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="4ccfb-115">See also</span></span>
+- [<span data-ttu-id="4ccfb-116">GetPEKind 方法</span><span class="sxs-lookup"><span data-stu-id="4ccfb-116">GetPEKind Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
+- [<span data-ttu-id="4ccfb-117">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="4ccfb-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="4ccfb-118">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="4ccfb-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="4ccfb-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="4ccfb-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

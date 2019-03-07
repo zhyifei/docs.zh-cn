@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6f8f73eab1ee6e28a75263e06523a2b04ce62d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c938adb518fe8c2bd7ac59fe47d7cd2a4f6df886
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510554"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492759"
 ---
-# <a name="icorpublishprocessenumappdomains-method"></a><span data-ttu-id="ce879-102">ICorPublishProcess::EnumAppDomains 方法</span><span class="sxs-lookup"><span data-stu-id="ce879-102">ICorPublishProcess::EnumAppDomains Method</span></span>
-<span data-ttu-id="ce879-103">获取可枚举的应用程序域中引用此进程[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="ce879-103">Gets an enumerator for the application domains in the process that is referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).</span></span>  
+# <a name="icorpublishprocessenumappdomains-method"></a><span data-ttu-id="7bfdc-102">ICorPublishProcess::EnumAppDomains 方法</span><span class="sxs-lookup"><span data-stu-id="7bfdc-102">ICorPublishProcess::EnumAppDomains Method</span></span>
+<span data-ttu-id="7bfdc-103">获取可枚举的应用程序域中引用此进程[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="7bfdc-103">Gets an enumerator for the application domains in the process that is referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ce879-104">语法</span><span class="sxs-lookup"><span data-stu-id="ce879-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7bfdc-104">语法</span><span class="sxs-lookup"><span data-stu-id="7bfdc-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumAppDomains (  
@@ -35,23 +35,23 @@ HRESULT EnumAppDomains (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ce879-105">参数</span><span class="sxs-lookup"><span data-stu-id="ce879-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7bfdc-105">参数</span><span class="sxs-lookup"><span data-stu-id="7bfdc-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="ce879-106">[out]指向的地址的指针[ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)允许遍历此过程中的应用程序域的集合的实例。</span><span class="sxs-lookup"><span data-stu-id="ce879-106">[out] A pointer to the address of an [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) instance that allows iteration through the collection of application domains in this process.</span></span>  
+ <span data-ttu-id="7bfdc-106">[out]指向的地址的指针[ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)允许遍历此过程中的应用程序域的集合的实例。</span><span class="sxs-lookup"><span data-stu-id="7bfdc-106">[out] A pointer to the address of an [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) instance that allows iteration through the collection of application domains in this process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ce879-107">备注</span><span class="sxs-lookup"><span data-stu-id="ce879-107">Remarks</span></span>  
- <span data-ttu-id="ce879-108">应用程序域的列表取决于存在的应用程序域的快照时`EnumAppDomains`调用方法。</span><span class="sxs-lookup"><span data-stu-id="ce879-108">The list of application domains is based on a snapshot of the application domains that exist when the `EnumAppDomains` method is called.</span></span> <span data-ttu-id="ce879-109">若要创建新的最新列表，可能会超过一次调用此方法。</span><span class="sxs-lookup"><span data-stu-id="ce879-109">This method may be called more than once to create a new up-to-date list.</span></span> <span data-ttu-id="ce879-110">此方法的后续调用不会影响现有列表。</span><span class="sxs-lookup"><span data-stu-id="ce879-110">Existing lists will not be affected by subsequent calls of this method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7bfdc-107">备注</span><span class="sxs-lookup"><span data-stu-id="7bfdc-107">Remarks</span></span>  
+ <span data-ttu-id="7bfdc-108">应用程序域的列表取决于存在的应用程序域的快照时`EnumAppDomains`调用方法。</span><span class="sxs-lookup"><span data-stu-id="7bfdc-108">The list of application domains is based on a snapshot of the application domains that exist when the `EnumAppDomains` method is called.</span></span> <span data-ttu-id="7bfdc-109">若要创建新的最新列表，可能会超过一次调用此方法。</span><span class="sxs-lookup"><span data-stu-id="7bfdc-109">This method may be called more than once to create a new up-to-date list.</span></span> <span data-ttu-id="7bfdc-110">此方法的后续调用不会影响现有列表。</span><span class="sxs-lookup"><span data-stu-id="7bfdc-110">Existing lists will not be affected by subsequent calls of this method.</span></span>  
   
- <span data-ttu-id="ce879-111">如果进程已终止，`EnumAppDomains`将因 CORDBG_E_PROCESS_TERMINATED 的 HRESULT 值。</span><span class="sxs-lookup"><span data-stu-id="ce879-111">If the process has been terminated, `EnumAppDomains` will fail with an HRESULT value of CORDBG_E_PROCESS_TERMINATED.</span></span>  
+ <span data-ttu-id="7bfdc-111">如果进程已终止，`EnumAppDomains`将因 CORDBG_E_PROCESS_TERMINATED 的 HRESULT 值。</span><span class="sxs-lookup"><span data-stu-id="7bfdc-111">If the process has been terminated, `EnumAppDomains` will fail with an HRESULT value of CORDBG_E_PROCESS_TERMINATED.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ce879-112">要求</span><span class="sxs-lookup"><span data-stu-id="ce879-112">Requirements</span></span>  
- <span data-ttu-id="ce879-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ce879-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7bfdc-112">要求</span><span class="sxs-lookup"><span data-stu-id="7bfdc-112">Requirements</span></span>  
+ <span data-ttu-id="7bfdc-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7bfdc-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ce879-114">**标头：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="ce879-114">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="7bfdc-114">**标头：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="7bfdc-114">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="ce879-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ce879-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7bfdc-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7bfdc-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ce879-116">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce879-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7bfdc-116">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7bfdc-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ce879-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="ce879-117">See also</span></span>
-- [<span data-ttu-id="ce879-118">ICorPublishProcess 接口</span><span class="sxs-lookup"><span data-stu-id="ce879-118">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7bfdc-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="7bfdc-117">See also</span></span>
+- [<span data-ttu-id="7bfdc-118">ICorPublishProcess 接口</span><span class="sxs-lookup"><span data-stu-id="7bfdc-118">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 291c8129a790c235ee6e7f163c49c4e1e726cce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ab2b584b4a3e9bef17110f3084dc93efb2e5167
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402707"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481646"
 ---
-# <a name="icordebugchaingetthread-method"></a><span data-ttu-id="ff398-102">ICorDebugChain::GetThread 方法</span><span class="sxs-lookup"><span data-stu-id="ff398-102">ICorDebugChain::GetThread Method</span></span>
-<span data-ttu-id="ff398-103">获取此调用链的物理线程的一部分。</span><span class="sxs-lookup"><span data-stu-id="ff398-103">Gets the physical thread this call chain is part of.</span></span>  
+# <a name="icordebugchaingetthread-method"></a><span data-ttu-id="0061d-102">ICorDebugChain::GetThread 方法</span><span class="sxs-lookup"><span data-stu-id="0061d-102">ICorDebugChain::GetThread Method</span></span>
+<span data-ttu-id="0061d-103">获取此调用链的物理线程的一部分。</span><span class="sxs-lookup"><span data-stu-id="0061d-103">Gets the physical thread this call chain is part of.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff398-104">语法</span><span class="sxs-lookup"><span data-stu-id="ff398-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0061d-104">语法</span><span class="sxs-lookup"><span data-stu-id="0061d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThread (  
@@ -35,15 +35,15 @@ HRESULT GetThread (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ff398-105">参数</span><span class="sxs-lookup"><span data-stu-id="ff398-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0061d-105">参数</span><span class="sxs-lookup"><span data-stu-id="0061d-105">Parameters</span></span>  
  `ppThread`  
- <span data-ttu-id="ff398-106">[out]指向一个 ICorDebugThread 对象，表示物理线程的调用链是的一部分。</span><span class="sxs-lookup"><span data-stu-id="ff398-106">[out] A pointer to an ICorDebugThread object that represents the physical thread this call chain is part of.</span></span>  
+ <span data-ttu-id="0061d-106">[out]指向一个 ICorDebugThread 对象，表示物理线程的此调用链是的一部分。</span><span class="sxs-lookup"><span data-stu-id="0061d-106">[out] A pointer to an ICorDebugThread object that represents the physical thread this call chain is part of.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ff398-107">要求</span><span class="sxs-lookup"><span data-stu-id="ff398-107">Requirements</span></span>  
- <span data-ttu-id="ff398-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ff398-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0061d-107">要求</span><span class="sxs-lookup"><span data-stu-id="0061d-107">Requirements</span></span>  
+ <span data-ttu-id="0061d-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0061d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ff398-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ff398-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0061d-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0061d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ff398-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ff398-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0061d-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0061d-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ff398-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff398-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="0061d-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0061d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
