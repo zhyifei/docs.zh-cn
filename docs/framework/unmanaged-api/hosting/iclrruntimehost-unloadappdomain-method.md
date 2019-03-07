@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6194478922bb1634f8a96de420fb17af10666322
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad87599de1b6c3227f4b413ea84558ad690d250f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560953"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494384"
 ---
 # <a name="iclrruntimehostunloadappdomain-method"></a>ICLRRuntimeHost::UnloadAppDomain 方法
 卸载托管<xref:System.AppDomain>对应于指定的数字标识符。  
@@ -36,7 +36,7 @@ HRESULT UnloadAppDomain(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwAppDomainId`  
  [in]要卸载的应用程序域的数字标识符。  
   

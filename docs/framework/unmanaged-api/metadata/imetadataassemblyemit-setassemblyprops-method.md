@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37d91ca7935e114504864683075f4809de7270fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 738789ee6b21b190302d5e5a204538bd14851b24
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599109"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484662"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps 方法
 修改指定的 `Assembly` 元数据结构。  
@@ -41,7 +41,7 @@ HRESULT SetAssemblyProps (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pma`  
  [in]指定的元数据标记`Assembly`要修改的元数据结构。  
   

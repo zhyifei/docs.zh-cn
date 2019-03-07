@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Clone method [WPF]
 ms.assetid: 2a6a1900-aa55-45fa-9382-241d569a2dc4
-ms.openlocfilehash: a4c5e7db813089d1dd138416ac54dd4be467b87b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: abc8a6e4780c8fe50afcf1b04f7e14aeb6452704
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355010"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485403"
 ---
 # <a name="ienumrawinputdevicclone"></a>IEnumRAWINPUTDEVIC:Clone
 创建一个与当权枚举器相同状态的原始输入设备枚举器，以循环访问相同的列表。  
@@ -20,7 +20,7 @@ ms.locfileid: "57355010"
 HRESULT Clone( [out] IEnumRAWINPUTDEVICE **ppenum);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppenum`  
   
  [out]接收的输出变量的地址[IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)接口指针。 如果该方法不成功，此输出变量的值未定义。  

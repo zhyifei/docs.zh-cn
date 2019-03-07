@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e650b3435bffd8d40bba24100c13f5071fa5dc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b107ceec5c9e88117e8ec1f6f94d60debfdf7201
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630835"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500052"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks 方法
 获取一个值，该值指示是否为指定的线程当前正在排队任何托管的回调。  
@@ -36,7 +36,7 @@ HRESULT HasQueuedCallbacks (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pThread`  
  [in]指向一个"ICorDebugThread"对象，表示在线程的指针。  
   

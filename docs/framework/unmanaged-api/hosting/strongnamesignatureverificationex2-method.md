@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 641aaa42dca173de41afa099c91f78fecf691a7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc8b3096bd0c60e826fec4c8daf535c3c4086630
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689937"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482777"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>StrongNameSignatureVerificationEx2 方法
 签名验证证书的强名称程序集，并提供从 ECMA 键到真实键的映射。  
@@ -38,7 +38,7 @@ HRESULT StrongNameSignatureVerificationEx (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `wszFilePath`  
  [in]要验证的程序集的可移植可执行 （.exe 或.dll） 文件的路径。  
   

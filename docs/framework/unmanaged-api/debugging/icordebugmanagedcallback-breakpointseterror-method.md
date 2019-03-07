@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae0838dd5f4dcfe95cd516b23fef3d5ca429031
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0baecc56df18a8ce346f5c4a9f52dd4006583867
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586349"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476394"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>ICorDebugManagedCallback::BreakpointSetError 方法
 通知调试器，公共语言运行时无法准确地绑定在实时 (JIT) 编译函数之前设置的断点。  
@@ -38,7 +38,7 @@ HRESULT BreakpointSetError (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pAppDomain`  
  [in]指向一个 ICorDebugAppDomain 对象，表示包含未绑定的断点的应用程序域的指针。  
   

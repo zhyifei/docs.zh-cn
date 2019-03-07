@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c463b055f5bd7d965e2df9428ee7c4a1e612dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d53a5bbb353ecec1c51a55532cad6206ca41da70
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675173"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496152"
 ---
 # <a name="ihostcrsttryenter-method"></a>IHostCrst::TryEnter 方法
 尝试进入关键节由当前[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)实例。  
@@ -36,7 +36,7 @@ HRESULT TryEnter (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `option`  
  [in]之一[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)值，它指示主机时应采取什么操作的操作块。  
   

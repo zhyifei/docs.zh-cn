@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cf72d0f41ee916db0e65cc6799217d19893628b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f58e4213959ca1cd6e65bc809a9ad964bebc31ae
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597094"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494787"
 ---
 # <a name="icordebugprocess5gettypeid-method"></a>ICorDebugProcess5::GetTypeID 方法
 将转换的对象地址[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)标识符。  
@@ -38,7 +38,7 @@ HRESULT GetTypeID(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `obj`  
  [in]对象的地址。  
   

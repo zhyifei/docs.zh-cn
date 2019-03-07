@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a9d156d7c7ada8309e501ba44720dfa285ce50d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f2eec9fce1909f6a83190f5ba3e99162461bbc4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552354"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492148"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps 方法
 获取由指定的事件标记，包括声明类型、 添加和删除方法的委托，任何标志及其他关联的数据所表示的事件的元数据信息。  
@@ -47,7 +47,7 @@ HRESULT GetEventProps (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ev`  
  [in]表示要获取的元数据的事件的事件元数据标记。  
   

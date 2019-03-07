@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a253503f3046c004cc7109a31b5aa8fd8e8dc195
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22927b388a62ee6025c987bb107b2dfd51da0e3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618046"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488989"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile 方法
 可以指定或重置链接器在创建程序集时使用的清单文件。  
@@ -34,7 +34,7 @@ HRESULT SetManifestFile(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pszFile`  
   
  Win32 资源的 blob 的内容放入清单文件的名称。  

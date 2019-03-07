@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1453bc0c-6e0d-4d5a-b176-22607f8a3e6c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc5c90cf5006763a84ddc891b9a011dc6cfbe754
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07a543dc918c9c7e3ff5757952c791a85ad1ba18
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738282"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499142"
 ---
 # <a name="icordebugprocess6decodeevent-method"></a>ICorDebugProcess6::DecodeEvent 方法
 对封装于特殊构造的本机异常调试事件有效载荷中的托管调试事件进行解码。  
@@ -27,7 +27,7 @@ HRESULT DecodeEvent(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pRecord`  
  [输入] 包含托管调试事件相关信息的本机异常调试事件中的字节数组指针。  
   

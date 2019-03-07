@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3243429f52bda58953296c4bb32624440792ad02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d5af8196664c63b26f3a10946b69ae922cf13fd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636464"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503133"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a>ICorDebugManagedCallback::EvalComplete 方法
 通知调试器已完成评估。  
@@ -37,7 +37,7 @@ HRESULT EvalComplete (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pAppDomain`  
  [in]指向一个 ICorDebugAppDomain 对象，表示在其中执行计算的应用程序域的指针。  
   

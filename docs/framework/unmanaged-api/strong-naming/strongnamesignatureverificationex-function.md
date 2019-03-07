@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9887a05236b213fb439e334cdf1455f8f445e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3f9dbbdf7ff560f292fed327a2ca1dd26c29a19
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671922"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491888"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx 函数
 获取一个值，该值指示提供的路径中的程序集清单是否包含强名称签名。  
@@ -39,7 +39,7 @@ BOOLEAN StrongNameSignatureVerificationEx (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `wszFilePath`  
  [in]要验证的程序集的可移植可执行 （.exe 或.dll） 文件的路径。  
   

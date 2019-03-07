@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 33bff2b72f2381fea461bb043506ee78f757dea8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5384dd69578dbd912690b9490bd4bfa762ccd56d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504896"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475302"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam 方法
 创建具有指定的签名为指定的标记所引用的方法的参数定义，并为该参数定义中获取的标记。  
@@ -42,7 +42,7 @@ HRESULT DefineParam (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `md`  
  [in]要定义其参数的方法的标记。  
   

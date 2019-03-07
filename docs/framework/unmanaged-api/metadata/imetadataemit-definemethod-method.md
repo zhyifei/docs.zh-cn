@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdd8f8a1120e3e6e82c87cc02afa5c503493da1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2372aac00473786df9b5deefb969fc02abd8daa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719828"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496100"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod 方法
 使用指定的签名中，创建方法或全局函数的定义，并将令牌返回到该方法定义。  
@@ -42,7 +42,7 @@ HRESULT DefineMethod (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `td`  
  [in]`mdTypedef`父类或父接口的方法的令牌。 设置`td`到`mdTokenNil`，如果您要定义全局函数。  
   

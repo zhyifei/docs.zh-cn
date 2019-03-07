@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 467be5a02b2e202b2e0e4f6a36b748ab6e0e8dbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c68668c1d591a8fb53d04d632027b0d8effb0c42
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731213"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474791"
 ---
 # <a name="icorprofilerinfo5geteventmask2-method"></a>ICorProfilerInfo5::GetEventMask2 方法
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
@@ -35,7 +35,7 @@ HRESULT GetEventMask2(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pdwEventsLow`  
  [out] 一个指向指定事件类别的 4 字节值的指针。 每个位都可控制不同的功能、行为或事件类型。 在中描述了这些位[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)枚举。  
   
@@ -43,7 +43,8 @@ HRESULT GetEventMask2(
  [out] 一个指向指定事件类别的 4 字节值的指针。  每个位都可控制不同的功能、行为或事件类型。 在中描述了这些位[COR_PRF_HIGH_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)枚举。  
   
 ## <a name="remarks"></a>备注  
- `GetEventMask2` 方法用于确定探查器已订阅了哪些回调。 通常情况下，执行的逻辑 OR`pdwEventsLow`并`pdwEventsHigh`值以及你想要设置，然后调用任何新位[SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)方法。  
+ 
+  `GetEventMask2` 方法用于确定探查器已订阅了哪些回调。 通常情况下，执行的逻辑 OR`pdwEventsLow`并`pdwEventsHigh`值以及你想要设置，然后调用任何新位[SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)方法。  
   
  此方法是为建议的替代项[GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)方法。  
   

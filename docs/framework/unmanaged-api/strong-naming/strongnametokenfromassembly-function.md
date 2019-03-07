@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe15b855044a7bf45ea172f42436c3557b562037
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46d8013d43dc14807804502e4a0820a2928f917e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687059"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499233"
 ---
 # <a name="strongnametokenfromassembly-function"></a>StrongNameTokenFromAssembly 函数
 从指定的程序集文件创建强名称令牌。  
@@ -38,7 +38,7 @@ BOOLEAN StrongNameTokenFromAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `wszFilePath`  
  [in]程序集可移植可执行 (PE) 文件的路径。  
   

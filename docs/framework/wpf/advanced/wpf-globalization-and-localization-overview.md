@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: e31bea225a699f19e57e5a94f84c1a9f1727a3b6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 55a60a74c246e0eefb854bed3d22cfb97eff15b1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364408"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492659"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和本地化概述
 
@@ -74,7 +74,7 @@ ms.locfileid: "57364408"
   
 -   可以本地化您的生成后。  
   
--   可以从较旧版本 XAML 的 BAML 形式更新到本地化的较新版本 XAML 的 BAML 形式，以便在开发的同时进行本地化。  
+-   以便在开发时可以进行本地化，您可以从较旧版本的 XAML 的 BAML 形式更新本地化使用 XAML 的 BAML 形式的较新版本。  
   
 -   你可以验证原始源元素和语义在编译时由于 XAML 的 BAML 形式的已编译的形式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   

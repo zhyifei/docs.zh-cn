@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d59506b522e1c225912da4bc3bd62ca19d32eb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5c382b3841aa0d36e7b326da27be4b371c9a51c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556072"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474770"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg 函数
 通过使用从 XML 文件中读取的版本信息将公共语言运行时 (CLR) 加载到进程中。  
@@ -41,7 +41,7 @@ HRESULT CorBindToRuntimeByCfg (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pCfgStream`  
  [in]一个指向`IStream`对象，它读取 XML 文件。  
   

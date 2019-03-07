@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6ebba2f6d7f40c835b6ffdc479bdc9f2fdc354e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b712b7e88e6cb5693c0823799e0980d90e34ff0a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568057"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492603"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>IHostMemoryManager::VirtualProtect 方法
 充当相应的 Win32 函数的逻辑包装。 Win32 实现`VirtualProtect`更改调用进程的虚拟地址空间中已提交页面区域上的保护。  
@@ -38,7 +38,7 @@ HRESULT VirtualProtect (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `lpAddress`  
  [in]指向其保护属性是要更改虚拟内存的基址的指针。  
   

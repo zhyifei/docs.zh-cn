@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 36218fa44f1cb49d8d0193d7c72e6feb2d121050
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f45c89572362f380997e7d8247b93c0f8629655
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718840"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478858"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>IMetaDataImport::GetNameFromToken 方法
 获取指定的元数据标记所引用的对象的 UTF-8 名称。 此方法已过时。  
@@ -36,7 +36,7 @@ HRESULT GetNameFromToken (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `tk`  
  [in]表示要返回的名称的对象的标记。  
   

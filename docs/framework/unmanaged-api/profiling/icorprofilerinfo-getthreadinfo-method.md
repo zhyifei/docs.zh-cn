@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03b6f2fe0cc98b469b9b82bfdc4151adafb99c38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53bcc04c8d68a79217ebda5284efe7d8e18fdb91
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665547"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478773"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo 方法
 获取指定线程当前的 Win32 线程标识。  
@@ -35,7 +35,7 @@ HRESULT GetThreadInfo(
     [out] DWORD    *pdwWin32ThreadId);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `threadId`  
  [in]要为其获取当前的 Win32 id。 线程的 ID  
   

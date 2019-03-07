@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93dc268e65578a80fe8562f4c4d4fd71fa6db981
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c778f281224daeec953f2e959444bd1413de433
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711835"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488408"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>ICorDebugDebugEvent::GetEventKind 方法
 指出该 `ICorDebugDebugEvent` 对象代表的事件类型。  
@@ -22,7 +22,7 @@ HRESULT GetEventKind(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  p调试事件类型  
  一个指向[CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)枚举成员，用于指示事件的类型。  
   

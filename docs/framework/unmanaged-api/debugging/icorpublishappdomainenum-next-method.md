@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1492c9eac9d647c2b71c47cf758265152783d991
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e36d48c3747c2d74f4c7f47268219283b07c9a39
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673878"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500184"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next 方法
 在过程中，从当前位置开始获取指定的当前存在的应用程序域数。  
@@ -38,7 +38,7 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `celt`  
  [in]要检索的元素数。  
   

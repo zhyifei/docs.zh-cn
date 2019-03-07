@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8519577bb2b9d3ff8fa2138ba007d04d9fde159
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea0cba1f1b9154ccb14d75f7c377a8153c24f2b0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730147"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499470"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>ISymUnmanagedReader::GetUserEntryPoint 方法
 如果有，请返回被指定为该模块的用户入口点的方法。 例如，此方法可能是用户的主要方法而不是编译器生成存根 （stub） 之前的主要方法。  
@@ -34,7 +34,7 @@ HRESULT GetUserEntryPoint (
     [out, retval]  mdMethodDef  *pToken);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pToken`  
  [out]指向一个变量来接收的入口点的指针。  
   

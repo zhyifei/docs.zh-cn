@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43d3234a6bd579238068dba9b37ff48a758f6ed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97b00ff01125e000dec7840f122ed0c69ec9878f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693780"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502523"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a>ICLRAppDomainResourceMonitor::GetCurrentAllocated 方法
 获取用字节表示，因为它创建的而无需减去已进行垃圾回收的内存进行的应用程序域的所有内存分配的总大小。  
@@ -34,7 +34,7 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
                             [out] ULONGLONG* pBytesAllocated);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwAppDomainId`  
  [in]请求的应用程序域的 ID。  
   

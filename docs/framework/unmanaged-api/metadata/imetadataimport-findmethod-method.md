@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c0f25b50bf2948bb6f096db70fff208cef799bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 857ea06ad8aba2a6de87bdf670ad0462a2f7dde1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587302"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487275"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod 方法
 获取指向 MethodDef 标记所用的方法由指定<xref:System.Type>并具有指定的名称和元数据签名。  
@@ -39,7 +39,7 @@ HRESULT FindMethod (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `td`  
  [in]`mdTypeDef`标记，表示包含要搜索的成员的类型 （类或接口）。 如果此值为`mdTokenNil`，则会对全局函数执行查找。  
   

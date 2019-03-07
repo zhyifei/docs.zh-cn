@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b8c3f102405c9b9fa9af2597658b728e618cabb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d031754c22a62cb8d37cd5f591619d985773727
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559367"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498856"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles 方法
 获取可枚举对象句柄的进程中。  
@@ -34,7 +34,7 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
     [out] ICorDebugGCReferenceEnum **ppEnum);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `types`  
  [in]按位组合[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)值，该值指定要包含在集合中的句柄的类型。  
   

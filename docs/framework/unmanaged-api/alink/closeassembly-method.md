@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa415926f4a818f697812f1a3c5531cb0ab7081b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c89fd080e61db78ed21c03c2aa63c97337c09585
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510164"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497543"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly 方法
 确定程序集操作。 在开始新的程序集或未绑定的模块之前调用此方法。  
@@ -35,7 +35,7 @@ HRESULT CloseAssembly(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `AssemblyID`  
  程序集的 ID。  
   

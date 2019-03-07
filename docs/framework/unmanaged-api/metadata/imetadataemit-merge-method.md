@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ebc86ad9c1f84156e7e228c1ddf3fe7b86b7e60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b59c7393d9d4e9cbdeaa1a2efd9965f969f985
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576260"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497790"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge 方法
 将指定的导入的范围添加到要合并的范围列表。  
@@ -37,7 +37,7 @@ HRESULT Merge (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pImport`  
  [in]一个指向[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)对象，用于标识要合并的导入的作用域。  
   

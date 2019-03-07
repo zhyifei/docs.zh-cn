@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2aed3367e20e32a387c8a1c58ead2899fbf0dcb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec32b285713e3e506359c4c831eb076d2b47a967
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521434"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499756"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap 方法
 获取用于表示 PInvoke 调用的目标程序集的 ModuleRef 标记。  
@@ -40,7 +40,7 @@ HRESULT GetPinvokeMap (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `tk`  
  [in]要获取的 PInvoke 映射元数据的新对象或 FieldDef 标记。  
   

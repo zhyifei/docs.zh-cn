@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 451a5b163499b265396ae2e8f623b448e07ea807
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c4dd73efbad5ffac47c8585facd1717d77147fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590911"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501575"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount 方法
 创建具有同步的重试次数的关键部分对象。  
@@ -36,7 +36,7 @@ HRESULT CreateCrstWithSpinCount (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwSpinCount`  
  [in]指定关键部分对象的旋转计数。  
   

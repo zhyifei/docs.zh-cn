@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c3b7c116410ce3309d970929580f4ec7f65bd657
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5775c249236fdbe488ce11be0c664d2073ccfb67
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558275"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477070"
 ---
 # <a name="imetadataemitdeletepinvokemap-method"></a>IMetaDataEmit::DeletePinvokeMap 方法
 销毁指定标记所引用的对象的 PInvoke 映射元数据。  
@@ -35,7 +35,7 @@ HRESULT DeletePinvokeMap (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `tk`  
  [in]`mdFieldDef`或`mdMethodDef`表示要为其删除 PInvoke 映射元数据对象的令牌。  
   

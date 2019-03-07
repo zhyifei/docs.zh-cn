@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40631a15bd07b5aa54488e5d3b99cee751e2e0bd
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: fa1fa59bf3bb33e115989eae9095752eea00a041
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748331"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487637"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps 方法
 获取有关指定的成员定义，包括名称、 二进制签名和相对虚拟地址的元数据中存储的信息<xref:System.Type>指定的元数据标记所引用的成员。 这是一个简单的帮助程序方法： 如果*mb*然后是 MethodDef **GetMethodProps**调用; 如果*mb*然后是 FieldDef **GetFieldProps**调用。 查看这些详细信息的其他方法。 
@@ -47,7 +47,7 @@ HRESULT GetMemberProps (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `mb`  
  [in]引用的成员，若要获取有关关联的元数据标记。  
   

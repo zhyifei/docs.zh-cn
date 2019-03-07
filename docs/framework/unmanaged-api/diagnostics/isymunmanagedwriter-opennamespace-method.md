@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2a108ec27cc4f8ed9d9d3c9227bf6ab0815fa933
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cf0fbcbf6af53c6a7865e2a2cf7874ea44581e4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739688"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474613"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>ISymUnmanagedWriter::OpenNamespace 方法
 打开一个新的命名空间。 定义一个命名空间的方法或变量之前调用此方法。 可以嵌套命名空间。  
@@ -34,7 +34,7 @@ HRESULT OpenNamespace(
     [in] const WCHAR *name);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `name`  
  [in]一个指向新的命名空间的名称。  
   

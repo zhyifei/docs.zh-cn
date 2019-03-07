@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce53137021fe9ccaf170bed28918b8f5fe87715b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31d4c0488adb38360d096c5827d078b0fbecc635
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504986"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498973"
 ---
 # <a name="icordebugmodulebreakpointgetmodule-method"></a>ICorDebugModuleBreakpoint::GetModule 方法
 "Icor 调试模块"的引用在其中设置此断点的模块中获取的接口指针。  
@@ -35,7 +35,7 @@ HRESULT GetModule (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppModule`  
  [out]指向的地址的指针`ICorDebugModule`引用在其中设置断点的模块的接口。  
   

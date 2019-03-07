@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b5e021116b29045837a5afae14aa560690cc944
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6feee7c5137501dbaf1c8cf8d097dfbf06071906
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595365"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499103"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach 方法
 指示运行时分离探查器。  
@@ -34,7 +34,7 @@ HRESULT RequestProfilerDetach(
    [in] DWORD    dwExpectedCompletionMilliseconds);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwExpectedCompletionMilliseconds`  
  [in] 公共语言运行时 (CLR) 在检查卸载探查器是否安全之前应等待的事件长度（以毫秒计）。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb91c5dfbe5c83e08d786043d7e4732fa19e53db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fa5807a52565a5444334b313dc8dfa315a15c13
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566771"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480554"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>IHostTaskManager::CallNeedsHostHook 方法
 使宿主能够指定公共语言运行时 (CLR) 是否可以内联指定调用非托管函数。  
@@ -36,7 +36,7 @@ HRESULT CallNeedsHostHook (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `target`  
  [in]若要调用的非托管函数的映射的可移植可执行 (PE) 文件内的地址。  
   

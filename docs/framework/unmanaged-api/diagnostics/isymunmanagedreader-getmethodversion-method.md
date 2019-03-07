@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45aaceb2c39703cb1369941ce801c9cff1935ad6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 364742957d16f12508d2df6f4cd7f50d7956d4cb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555838"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479449"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>ISymUnmanagedReader::GetMethodVersion 方法
 获取方法版本。 方法版本从 1 开始，在每的次递增的方法重新编译。 重新编译可发生该方法无需进行更改。  
@@ -35,7 +35,7 @@ HRESULT GetMethodVersion (
     [out] int* version);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pMethod`  
  [in]要为其获取版本方法。  
   

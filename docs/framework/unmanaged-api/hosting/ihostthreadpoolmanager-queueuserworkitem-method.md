@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3faa3762612e4d1fc608291a393e9eb2e79fe67e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03185f3f554c5454b23b0c72c42d68714488e6be
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616844"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501703"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem 方法
 队列的函数的执行，并指定一个包含该函数使用的数据的对象。 该函数执行时在线程变得可用。  
@@ -37,7 +37,7 @@ HRESULT QueueUserWorkItem (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `Function`  
  [in]表示要执行的函数的函数指针。  
   

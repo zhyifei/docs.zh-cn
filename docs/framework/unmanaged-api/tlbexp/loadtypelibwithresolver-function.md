@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9086cff38e0232d6054d6b1f590be6d8d76ed1af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7187076eb338d5a57388d19f62e79af041ee774
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527367"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501040"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函数
 加载类型库并使用所提供[ITypeLibResolver 接口](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)若要解决任何内部引用的类型库。  
@@ -36,7 +36,7 @@ HRESULT LoadTypeLibWithResolver(
     [out] ITypeLib          **pptlib);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `szFile`  
  [in]类型库文件路径。  
   

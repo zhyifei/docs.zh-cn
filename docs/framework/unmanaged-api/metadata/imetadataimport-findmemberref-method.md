@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 057dd7c25821aedddeee57a31200cf35c6df1273
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a58cba0ce4672a479cf5af9467d024a1b1562fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498510"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474283"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef 方法
 获取指向成员的 MemberRef 标记的指针，它是引用包含由指定<xref:System.Type>并具有指定的名称和元数据签名。  
@@ -39,7 +39,7 @@ HRESULT FindMemberRef (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `td`  
  [in]对类或接口，包含要搜索的成员引用的 TypeRef 标记。 如果此值为`mdTokenNil`，在执行查找的全局变量或全局函数引用。  
   

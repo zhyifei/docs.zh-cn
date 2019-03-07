@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fab522adbdb1b50448dfabfd23d663fb223c6da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1aeffbd5d5b22bea87dd7a49a3268822ce84d38
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499192"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481166"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly 方法
 关闭该程序集文件。 在关闭所有其他文件，但在关闭的程序集文件之前，请调用此方法。 请勿对未绑定模块调用此方法。  
@@ -34,7 +34,7 @@ HRESULT PreCloseAssembly(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `AssemblyID`  
  程序集的 ID。  
   

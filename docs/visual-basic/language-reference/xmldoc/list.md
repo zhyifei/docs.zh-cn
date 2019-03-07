@@ -13,12 +13,12 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 8964b34d94daf18e078e515b65588f5273c76199
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 61b0b018b3d06a2307aa280a748b7d07c5fa7915
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970177"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496061"
 ---
 # <a name="list-visual-basic"></a>\<列表 > (Visual Basic)
 定义列表或表。  
@@ -38,7 +38,7 @@ ms.locfileid: "56970177"
 </list>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `type`  
  列表的类型。 对于项目符号列表、 编号的列表，或两列的表"表"的"number"必须为"bullet"。  
   

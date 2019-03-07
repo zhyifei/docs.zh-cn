@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67ec3bf10638538b49f1ec44ff583bdf4ba4ef9e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 952ae17fa288abe6b97f1d8630da2c8f320f955b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572248"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476257"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage 方法
 通知探查器进程已接收到的远程方法调用或激活请求。  
@@ -35,7 +35,7 @@ HRESULT RemotingClientSendingMessage(
     [in] BOOL fIsAsync);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pCookie`  
  [in]中提供的值的值将对应[icorprofilercallback:: Remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)在这些情况下：  
   

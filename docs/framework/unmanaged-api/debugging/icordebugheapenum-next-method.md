@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16f1c7d4b56da93b2f2f0a91d889bde72ec94f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a9e423a35ba8c592bbfd806f9087a88ee251e76
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530124"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502276"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next 方法
 获取指定的数目的[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)包含托管堆上对象的信息的实例。  
@@ -36,7 +36,7 @@ HRESULT Next(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  celt  
  [in] 要检索的对象数。  
   
@@ -47,7 +47,8 @@ HRESULT Next(
  [out]指向数[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)对象中实际返回`objects`。 如果 `celt` 为 1，此值可能为 `null`。  
   
 ## <a name="remarks"></a>备注  
- `COR_HEAPOBJECT.type` 字段是嵌套的引用计数 COM 接口的标识符。 此引用必须由 `ICorDebugHeapEnum::Next` 的调用方释放。  
+ 
+  `COR_HEAPOBJECT.type` 字段是嵌套的引用计数 COM 接口的标识符。 此引用必须由 `ICorDebugHeapEnum::Next` 的调用方释放。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

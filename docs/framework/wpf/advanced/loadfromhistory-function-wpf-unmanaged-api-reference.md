@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-ms.openlocfilehash: 155b83b8b904350bd6faf73ea21d1db4f83085b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4fc083313c99b1b93db380bfbf6ddeacbc784dcb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376125"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487403"
 ---
 # <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>LoadFromHistory 函数 （WPF 非托管 API 参考）
 此 API 支持 Windows Presentation Foundation (WPF) 基础结构，不应在代码中直接使用。  
@@ -29,7 +29,7 @@ HRESULT LoadFromHistory_export(
 )  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  pHistoryStream  
  指向流的历史记录信息的指针。  
   

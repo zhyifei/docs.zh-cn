@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee2ee66a5129bcf5f6c7c6881e50264b3c41773d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbbe4dcec29ba85c64b6e22a4348c56e80daf623
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664468"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479180"
 ---
 # <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>ICorDebugMutableDataTarget::SetThreadContext 方法
 设置某个线程的上下文（寄存器值）。  
@@ -22,7 +22,7 @@ HRESULT SetThreadContext(
    [in] ULONG32 contextSize,   [in, size_is(contextSize)] const BYTE * pContext);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwThreadID`  
  [in] 由操作系统定义的线程标识符。  
   
@@ -33,7 +33,8 @@ HRESULT SetThreadContext(
  [in] 指向要写入的字节的指针。  
   
 ## <a name="remarks"></a>备注  
- `SetThreadContext` 方法将更新由操作系统定义的 `dwThreadID` 自变量指定的当前线程上下文。 上下文记录的格式由所指示的平台[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。 这是 Windows，[上下文](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context)结构。  
+ 
+  `SetThreadContext` 方法将更新由操作系统定义的 `dwThreadID` 参数指定的当前线程上下文。 上下文记录的格式由所指示的平台[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。 这是 Windows，[上下文](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context)结构。  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  

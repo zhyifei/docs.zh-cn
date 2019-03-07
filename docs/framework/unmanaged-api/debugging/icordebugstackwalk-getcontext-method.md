@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 306eee3c0ce4689d1d6295aba1ef7584841dcc72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cd15e3dc8bd9a0bc4ac43860c82a2aab382f7ed
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731044"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482089"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext 方法
 返回的上下文中的当前帧[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)对象。  
@@ -36,7 +36,7 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
                    [out, size_is(contextBufSize)] BYTE contextBuf[]);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `contextFlags`  
  [in]指示请求 （在 WinNT.h 中定义） 的上下文缓冲区的内容的标志。  
   

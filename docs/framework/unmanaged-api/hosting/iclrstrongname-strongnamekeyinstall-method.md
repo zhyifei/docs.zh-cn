@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cadf208fc95cb4c90b0903b0e2de9317ae6b6ec0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9803ca3b5047b6819ef76958a169b62dfe9d675d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735657"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499506"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>ICLRStrongName::StrongNameKeyInstall 方法
 将公钥/私钥对导入容器。  
@@ -37,7 +37,7 @@ HRESULT StrongNameKeyInstall (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `wszKeyContainer`  
  [in]密钥容器的名称。 `wszKeyContainer` 必须为非空字符串。  
   

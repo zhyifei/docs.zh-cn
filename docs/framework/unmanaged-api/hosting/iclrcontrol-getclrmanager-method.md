@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8c92bd83c9a2bd03e9e2187cd8d9ff87af87678
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d3712b9a2100d4efcefe691d68989a1971b045d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521317"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488402"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager 方法
 到任何主机可用于配置公共语言运行时 (CLR) 管理器类型的实例获取的接口指针。  
@@ -36,7 +36,7 @@ HRESULT GetCLRManager (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `riid`  
  [in]`IID`要返回的管理器类型。 以下`IID`支持值。  
   

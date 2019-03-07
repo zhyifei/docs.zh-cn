@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8897eda39a0ff5f1a11a95aeea4e2887912592ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 262895d64b80ca5f382aad66d6cc6a4ca95b53c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519250"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499220"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>ICorRuntimeHost::LocksHeldByLogicalThread 方法
 检索当前线程持有的锁的数目。  
@@ -37,7 +37,7 @@ HRESULT LocksHeldByLogicalThread(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pCount`  
  [out]一个指向当前线程持有的锁的数目。  
   

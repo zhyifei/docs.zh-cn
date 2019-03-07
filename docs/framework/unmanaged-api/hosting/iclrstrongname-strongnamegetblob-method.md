@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3caa9e6f45368f4d09ed79159c650aac1e5b25e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ba606230be7a81fc42644c2fd3883a989bf37ac
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678533"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498986"
 ---
 # <a name="iclrstrongnamestrongnamegetblob-method"></a>ICLRStrongName::StrongNameGetBlob 方法
 使用指定地址处可执行文件的二进制表示形式填充指定的缓冲区。  
@@ -38,7 +38,7 @@ HRESULT StrongNameGetBlob (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `wszFilePath`  
  [in]要加载的可执行文件是有效路径。  
   

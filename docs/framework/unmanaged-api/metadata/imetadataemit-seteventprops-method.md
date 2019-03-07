@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab479aab56b429c104a44b1fae192bc7f20a389d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1159e91004152b6c1393b87f25ff7964456adffc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656916"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498219"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 方法
 设置或更新的定义通过以前调用的事件指定的功能[imetadataemit:: Defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)。  
@@ -41,7 +41,7 @@ HRESULT SetEventProps (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ev`  
  [in]事件标记中。  
   

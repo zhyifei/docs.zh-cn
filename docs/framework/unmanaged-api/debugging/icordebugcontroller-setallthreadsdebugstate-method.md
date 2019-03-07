@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8d14deae1923e2904818fc01ffa3665fdf5ea6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dffe95df75fafe293c225c513db7ff7896765fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710568"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501768"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a>ICorDebugController::SetAllThreadsDebugState 方法
 设置过程中的所有托管线程的调试状态。  
@@ -36,7 +36,7 @@ HRESULT SetAllThreadsDebugState (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `state`  
  [in]指定用于调试线程的状态为"CorDebugThreadState"枚举的值。  
   

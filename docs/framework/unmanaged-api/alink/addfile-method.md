@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c04bc008d0279601e90d13e6a57c52a458fca1d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ec16776550765924e17de35674c5774212427e1a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967875"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498453"
 ---
 # <a name="addfile-method"></a>AddFile 方法
 将文件添加到该程序集。 此外可以用于创建未绑定的模块。  
@@ -39,7 +39,7 @@ HRESULT AddFile(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `AssemblyID`  
  要进行扩充的程序集的唯一 ID。  
   

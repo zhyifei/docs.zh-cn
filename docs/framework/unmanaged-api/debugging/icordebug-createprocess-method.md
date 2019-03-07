@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e9f5af0a79b36f879b75e331d614edfed7476eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf7480eaa0fa38651d139a2fa9d533b43dbdce1b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509969"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496464"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 方法
 启动进程和调试器的控制下其主线程。  
@@ -46,7 +46,7 @@ HRESULT CreateProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `lpApplicationName`  
  [in]指向一个以 null 结尾的字符串，指定要执行的启动进程的模块。 调用进程的安全上下文中执行模块。  
   
