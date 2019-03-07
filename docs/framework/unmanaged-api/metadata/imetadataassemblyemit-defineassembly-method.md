@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d860a6518014e0232f9372a7ccbf34604096adfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf6e0c1de9bfb920932e5c22adb4eb8573125506
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747877"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489951"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly 方法
 创建`Assembly`结构包含元数据，为指定的程序集并返回关联的元数据标记。  
@@ -41,7 +41,7 @@ HRESULT DefineAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pbPublicKey`  
  [in]如果该程序集没有强名称标识的程序集或为 NULL 的发布者公钥。  
   

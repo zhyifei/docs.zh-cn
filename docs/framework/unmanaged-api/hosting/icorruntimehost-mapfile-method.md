@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 814073b766d5d562b414a566ae3f92abd664ce35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 956de98fca1caec0ac1b94afc7251f9741246f94
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707838"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494774"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile 方法
 将指定的文件映射到内存中。 此方法已过时。  
@@ -36,7 +36,7 @@ HRESULT MapFile(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `hFile`  
  [in]要映射的文件句柄。  
   

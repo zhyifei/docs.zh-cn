@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e5ae097314a935bc06272c0e8febfbaad620f13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52a1f30612899fddc29af1a437fb9437e9a2b93c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667630"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490692"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore 方法
 使用增量符号存储区更新现有的符号存储区。 此方法在编辑并继续方案中用于更新符号存储区以匹配的原始的可移植可执行 (PE) 文件的增量。  
@@ -38,7 +38,7 @@ HRESULT UpdateSymbolStore (
     [in] IStream *pIStream);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `filename`  
  [in]包含符号存储区的文件的名称。  
   

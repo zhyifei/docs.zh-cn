@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9bf3e5d427698673576f71e290fde54275b75317
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 876f74d7fe7555f71db0bd77e68f657dfc80b179
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683451"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478955"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo 方法
 获取名称、 行大小、 行数、 列数和指定的表的键列索引。  
@@ -40,7 +40,7 @@ HRESULT GetTableInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ixTbl`  
  [in]表的标识符要返回其属性。  
   

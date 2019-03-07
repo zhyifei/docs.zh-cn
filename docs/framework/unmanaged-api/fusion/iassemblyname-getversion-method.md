@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad71e0f19d4019f8fc919008b9a5c46f6586f9f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7479e8d1eee0c44544b5923d4de66153cb2c3a19
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674500"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490328"
 ---
 # <a name="iassemblynamegetversion-method"></a>IAssemblyName::GetVersion 方法
 获取此引用的程序集的版本信息[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)对象。  
@@ -36,7 +36,7 @@ HRESULT GetVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pdwVersionHi`  
  [out]高 32 位版本。  
   

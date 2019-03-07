@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf68d2284a6b2603ab97b5be27d6659857fd6c63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3292fae0ca78615faee4cb5208aa711fea9a0a24
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656474"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490003"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>ICLRGCManager::SetGCStartupLimits 方法
 设置垃圾回收段的大小和第 0 代垃圾回收系统的最大大小。  
@@ -39,7 +39,7 @@ HRESULT SetGCStartupLimits (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `SegmentSize`  
  [in]垃圾回收段指定的大小。  
   

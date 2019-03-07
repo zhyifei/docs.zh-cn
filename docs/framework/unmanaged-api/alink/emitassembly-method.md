@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d73c158fa9d7b5574e4f875b8d51e932e30041b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1cdcfcaf29cc2b0ec6da1108e0ecd91710db36c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572235"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487299"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly 方法
 创建程序集。 所有其他文件关闭除程序集文件后，请调用此方法。 生成未绑定的模块时，请勿调用此方法。  
@@ -35,7 +35,7 @@ HRESULT EmitAssembly(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `AssemblyID`  
  程序集的 ID。  
   

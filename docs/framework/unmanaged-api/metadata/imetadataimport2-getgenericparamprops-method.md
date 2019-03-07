@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 694fc95a1ad16b61e25a897b778b15ec41af2a01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc2d64a97d02d6f6036646634113cf485119eba7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714264"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490354"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps 方法
 获取与指定的标记表示的泛型参数相关联的元数据。  
@@ -42,7 +42,7 @@ HRESULT GetGenericParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `gp`  
  [in]表示要为其返回的元数据的泛型参数的标记。  
   

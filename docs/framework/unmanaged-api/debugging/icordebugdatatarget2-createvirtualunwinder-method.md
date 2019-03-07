@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3782686f3caad6859aa81957f10e585265be340
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 387dc484b3ada63d62ddc27318e735dfc4ea93b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585476"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492265"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>ICorDebugDataTarget2::CreateVirtualUnwinder 方法
 创建一个从初始上下文（不一定是线程叶）开始展开的新堆栈开卷机。  
@@ -26,7 +26,7 @@ HRESULT CreateVirtualUnwinder(
 };  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  本机线程ID  
  [输入] 线程（其堆栈未展开）的本机线程 ID。  
   

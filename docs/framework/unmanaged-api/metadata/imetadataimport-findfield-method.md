@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b07d75b6a8839f9a223ef2c0be52830e107e4088
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a6f2e428366d2fe96313879ef1256d7b86ddd29
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527596"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490406"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField 方法
 获取指向 FieldDef 标记字段包含由指定<xref:System.Type>并具有指定的名称和元数据签名。  
@@ -39,7 +39,7 @@ HRESULT FindField (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `td`  
  [in]对类或接口，包含要搜索的字段的 TypeDef 标记。 如果此值为`mdTokenNil`，在执行查找的全局变量。  
   

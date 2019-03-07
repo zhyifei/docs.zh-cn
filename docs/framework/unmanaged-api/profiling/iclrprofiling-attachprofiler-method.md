@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3cfc222930359e1d7ab1a1720834e88c93c035e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fcbc75d17f0c154671d5997d7e6cbb59ef8440e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737252"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468996"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 方法
 将指定的探查器附加到指定的进程中。  
@@ -39,7 +39,7 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwProfileeProcessID`  
  [in] 应附加探查器的进程的进程 ID。 在 64 位计算机上，被分析进程的位数必须匹配调用 `AttachProfiler` 的触发进程的位数。 如果调用 `AttachProfiler` 的用户帐户具有管理特权，则目标进程可能是系统上的任何进程。 否则，相同的用户帐户必须拥有目标进程。  
   
@@ -47,13 +47,15 @@ HRESULT AttachProfiler(
  [in] `AttachProfiler` 完成的持续时间（以毫秒为单位）。 触发器进程应传递一个特定探查器足以完成其初始化的已知超时。  
   
  `pClsidProfiler`  
- [in] 指向要加载的探查器 CLSID 的指针。 `AttachProfiler` 返回后，触发器进程可重用此内存。  
+ [in] 指向要加载的探查器 CLSID 的指针。 
+  `AttachProfiler` 返回后，触发器进程可重用此内存。  
   
  `wszProfilerPath`  
  [in] 要加载的探查器 DLL 文件的完整路径。 此字符串应包含不超过 260 个字符，包括 null 终止符。 如果 `wszProfilerPath` 为 null 或为空字符串，公共语言运行时 (CLR) 将通过在 `pClsidProfiler` 指向的 CLSID 的注册表中查找探查器的 DLL 文件的位置。  
   
  `pvClientData`  
- [in]指向要传递给探查器数据[ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法。 `AttachProfiler` 返回后，触发器进程可重用此内存。 如果 `pvClientData` 为 null，`cbClientData` 必须为 0（零）。  
+ [in]指向要传递给探查器数据[ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法。 
+  `AttachProfiler` 返回后，触发器进程可重用此内存。 如果 `pvClientData` 为 null，`cbClientData` 必须为 0（零）。  
   
  `cbClientData`  
  [in] `pvClientData` 指向的数据的大小（以字节为单位）。  

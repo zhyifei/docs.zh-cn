@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3031ce0eb6f23fdf5e5366d33ff075ea7816b0b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16608980505ffc03ef8ecc19cacddabaefaba6ca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649539"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471740"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback 函数指针
 指向以公共语言运行时 (CLR) 以执行托管的代码调用的函数。  
@@ -36,7 +36,7 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `cookie`  
  [in]指向包含要执行的托管的代码的不透明调用方分配的内存的指针。  
   

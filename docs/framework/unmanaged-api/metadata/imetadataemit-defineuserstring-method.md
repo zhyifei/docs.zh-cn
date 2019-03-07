@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb08bad82400523d82e4b8589acb2e74fbbd17d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 820b0c464f591ca71072d35886a910f5409f654e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603711"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478292"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>IMetaDataEmit::DefineUserString 方法
 获取指定文本字符串的元数据令牌。  
@@ -37,7 +37,7 @@ HRESULT DefineUserString (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `szString`  
  [in]要存储的用户字符串。  
   

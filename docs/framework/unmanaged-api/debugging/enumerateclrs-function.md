@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56f7f36baa71a3e58dfa3314ebe06a018cfd3468
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e7532218728aead72186b5156da87db6d3bc0a8c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408224"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469323"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 函数
 提供枚举进程中 CLR 的机制。  
@@ -39,7 +39,7 @@ HRESULT EnumerateCLRs (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `debuggeePID`  
  [in] 要从其枚举已加载的 CLR 的进程的进程标识符。  
   
@@ -70,12 +70,13 @@ HRESULT EnumerateCLRs (
   
  在 Windows 操作系统上，`debuggeePID` 映射到 OS 进程标识符。  
   
- `ppHandleArrayOut` 和 `ppStringArrayOut` 的内存由此函数分配。 若要释放分配的内存，必须调用[CloseCLREnumeration 函数](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)。  
+ 
+  `ppHandleArrayOut` 和 `ppStringArrayOut` 的内存由此函数分配。 若要释放分配的内存，必须调用[CloseCLREnumeration 函数](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)。  
   
  为了在目标进程中返回 CLR 计数，可在两个数组参数均设为 null 的情况下调用此函数。 调用方可以从此计数推断将创建的缓冲区的大小：`(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** dbgshim.h  
   

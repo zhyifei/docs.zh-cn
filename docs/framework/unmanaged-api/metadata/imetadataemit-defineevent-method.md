@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7d42fe17af5b10d718d0e2b6a7ae33644fa4813
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26fd4c89838912e4e07c1d9a8b84aa22f54adeff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730290"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501625"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent 方法
 使用指定的元数据签名中，创建一个事件的定义并获取该事件定义的标记。  
@@ -43,7 +43,7 @@ HRESULT DefineEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `td`  
  [in]目标类或接口的标记。 这可以是`mdTypeDef`或`mdTypeDefNil`令牌。  
   

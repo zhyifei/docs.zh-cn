@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9031ae9b4870c182922baaa41883de4cddb469d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d48006011ae50f1157d357a909eb6c93b25baf7e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676674"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496048"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject 方法
 获取`ClassID`给定的对象，其`ObjectID`。  
@@ -35,7 +35,7 @@ HRESULT GetClassFromObject(
     [out] ClassID *pClassId);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `objectId`  
  [in]要为其获取对象的 ID `ClassID`。  
   

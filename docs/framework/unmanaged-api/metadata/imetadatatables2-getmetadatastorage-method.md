@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e832bbb58a08c50d8c2bb37fa0c310ef3133d02c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c177a315a76009b7ac82055cba2d0b23821333b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583623"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494874"
 ---
 # <a name="imetadatatables2getmetadatastorage-method"></a>IMetaDataTables2::GetMetaDataStorage 方法
 获取大小和指定的节中存储的元数据的内容。  
@@ -36,7 +36,7 @@ HRESULT GetMetaDataStorage (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppvMd`  
  [in、 out]指向元数据部分的指针。  
   

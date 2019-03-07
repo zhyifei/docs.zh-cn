@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30610311d2c48f15ebd85910557892784c0cfe85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0cb64653df7b59703ef87610bcc686a66205e8b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542491"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485222"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen 函数
 创建新的公钥/私钥对，以便强名称使用。  
@@ -39,7 +39,7 @@ BOOLEAN StrongNameKeyGen (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `wszKeyContainer`  
  [in]请求的密钥容器名称。 `wszKeyContainer` 必须为非空字符串，或空值，以生成一个临时名称。  
   

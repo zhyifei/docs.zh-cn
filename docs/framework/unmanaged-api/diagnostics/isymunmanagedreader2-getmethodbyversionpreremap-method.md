@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7e84d912a96752a893230393b59496377b783956
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ff8e2767f8bba618539ecd12c5034ae67d24d0a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494907"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466716"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>ISymUnmanagedReader2::GetMethodByVersionPreRemap 方法
 获取符号读取器方法，给定一个方法标记和编辑并继续的版本号。 版本号从 1 开始，并会在每的次递增的方法更改因执行编辑并继续操作。  
@@ -36,7 +36,7 @@ HRESULT GetMethodByVersionPreRemap(
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `token`  
  [in]方法的元数据标记。  
   

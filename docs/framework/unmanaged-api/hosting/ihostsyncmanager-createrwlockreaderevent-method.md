@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89e6a6e1d2aa90d4f113364693fb5f1e0399c21d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5aef90fa14dac58a0b38316cd5f64b4ac8c9aa1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745449"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495645"
 ---
 # <a name="ihostsyncmanagercreaterwlockreaderevent-method"></a>IHostSyncManager::CreateRWLockReaderEvent 方法
 创建手动重置事件对象的实现的读取器锁。  
@@ -37,7 +37,7 @@ HRESULT CreateRWLockReaderEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `bInitialState`  
  [in]`true`，如果`ppEvent`应为终止状态; 否则为`false`。  
   

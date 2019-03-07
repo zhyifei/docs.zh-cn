@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cb5b091aadbdd503dd7988f713f40a00876a2dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbe0459824499aba86c908012f038256f9923513
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608308"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496674"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop 方法
 执行所有线程上的进程中运行托管的代码的同时停止。  
@@ -35,7 +35,7 @@ HRESULT Stop (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwTimeoutIgnored`  
  未使用。  
   

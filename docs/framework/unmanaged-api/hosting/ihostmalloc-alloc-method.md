@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5a6a992dedacf19c5c06b603c700f9f3c4ec199
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3104fd032f1a5de04f85a895c77cdf777df0a367
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630991"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489938"
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc 方法
 请求主机从堆中分配指定的内存量。  
@@ -37,7 +37,7 @@ HRESULT Alloc (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `cbSize`  
  [in]以字节为单位的当前内存分配请求的大小。  
   

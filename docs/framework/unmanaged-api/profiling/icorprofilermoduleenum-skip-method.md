@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d34c88b52dcc8d07736b6866d467439654faa9a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9472013dcbbeef51753980348652b74c34172ce5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681841"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499207"
 ---
 # <a name="icorprofilermoduleenumskip-method"></a>ICorProfilerModuleEnum::Skip 方法
 将枚举器的游标从其当前位置前移，以便跳过指定数量的元素。  
@@ -33,7 +33,7 @@ ms.locfileid: "54681841"
 HRESULT Skip([in] ULONG celt);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `celt`  
  [in]要跳过的元素数。  
   

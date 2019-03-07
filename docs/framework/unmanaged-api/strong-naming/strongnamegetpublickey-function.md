@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d38879fbb296fa2ce0058e137499e25cd78cdb87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89aaf70b6809ca00b1c8df8b99a4e08e7d86a3a1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702335"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492343"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey 函数
 从私钥/公钥对中获取公钥。 加密服务提供商 (CSP) 中的密钥容器名称或作为原始字节的集合，可提供的密钥对。  
@@ -41,7 +41,7 @@ BOOLEAN StrongNameGetPublicKey (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `szKeyContainer`  
  [in]包含公钥/私钥对的密钥容器的名称。 如果`pbKeyBlob`为 null，`szKeyContainer`必须指定有效的 CSP 中的容器。 在这种情况下，`StrongNameGetPublicKey`从容器中存储的密钥对中提取的公钥。  
   

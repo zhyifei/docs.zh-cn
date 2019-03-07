@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8901d7b5076cc0ac9ddb6d4745b63839fecd025
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99f2b7128ab984d023ce0aed73dd96167a661682
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611223"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497127"
 ---
 # <a name="ihostsyncmanagercreatemonitorevent-method"></a>IHostSyncManager::CreateMonitorEvent 方法
 创建一个受监视的自动重置事件对象。  
@@ -36,7 +36,7 @@ HRESULT CreateMonitorEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `cookie`  
  [in]一个要与事件对象关联的 cookie。  
   

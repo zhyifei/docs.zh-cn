@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a9e5a2f7baa1c15ac54950bf1bfc0d448d08f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e887fb5f4f9667bed7eef4a84899f82cada0fcd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567784"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489574"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>IMetaDataImport::IsValidToken 方法
 获取指示指定的标记是否包含对代码对象的有效引用的值。  
@@ -35,7 +35,7 @@ BOOL IsValidToken (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `tk`  
  [in]要检查有关引用有效性的标记。  
   

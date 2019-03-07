@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e00bc95dd9b54d5451da65cefbfff13395e467f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63e6ec271634a52abe7c640bbbabdaedebd2a31d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511952"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471896"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID 函数
 获取相应的公共语言运行时 (CLR) 版本信息，为具有指定类`CLSID`。  
@@ -40,7 +40,7 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `rclsid`  
  [in] `CLSID`的组件。  
   

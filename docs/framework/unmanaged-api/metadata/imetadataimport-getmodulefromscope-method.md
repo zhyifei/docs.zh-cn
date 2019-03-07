@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 931b17858465d4ff380069fc2cf2bb37cb7a7ffc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1118c29acd926821e3b5db31694df9935bdefb9e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718177"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468801"
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>IMetaDataImport::GetModuleFromScope 方法
 获取在当前元数据范围内引用的模块的元数据令牌。  
@@ -35,7 +35,7 @@ HRESULT GetModuleFromScope (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pmd`  
  [out]指向表示当前元数据范围内引用的模块的标记的指针。  
   

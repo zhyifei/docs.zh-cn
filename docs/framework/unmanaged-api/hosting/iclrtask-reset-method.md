@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f4e25cfabbf18a9f0733d245259d9bb8f9c7757
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae0a2a3af532b81d7b346cdd17da1712dfa3cba8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715538"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499922"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset 方法
 通知公共语言运行时 (CLR)，主机具有完成某项任务，并使 CLR 能够重复使用当前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例来表示另一个任务。  
@@ -35,7 +35,7 @@ HRESULT Reset (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `fFull`  
  [in]`true`，如果在运行时应重置与当前相关的安全和区域设置信息的补充所有相关的帖子的静态值`ICLRTask`实例; 否则为`false`。  
   

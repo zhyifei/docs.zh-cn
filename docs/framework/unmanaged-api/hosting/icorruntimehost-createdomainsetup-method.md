@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ab00a93b0bedb8f7ea1425c65c4940b57f11219
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2758deaabf9db1cbc5465eb9b5976add534e87b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591576"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469660"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup 方法
 获取的接口指针类型到 IAppDomainSetup<xref:System.AppDomainSetup?displayProperty=nameWithType>实例。 `IAppDomainSetup` 提供方法来配置方面的应用程序域，然后创建它。  
@@ -35,7 +35,7 @@ HRESULT CreateDomainSetup (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pAppDomainSetup`  
  [out]接口指针<xref:System.AppDomainSetup?displayProperty=nameWithType>实例。 此参数被类型化为`IUnknown`，因此调用方通常应调用`QueryInterface`this 指针获取类型的接口指针上`IAppDomainSetup`。  
   

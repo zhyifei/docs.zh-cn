@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e897daddee7eec354f79f7d970431c6950a341d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9933948a5e67b91106cdadc6f747c1b1c4121813
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501824"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489990"
 ---
 # <a name="ihostsemaphorewait-method"></a>IHostSemaphore::Wait 方法
 导致当前[IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)等待，直到它拥有的实例或指定的经历的时间量。  
@@ -36,7 +36,7 @@ HRESULT Wait (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwMilliseconds`  
  [in]如果返回前, 等待的毫秒数当前`IHostSemaphore`不属于实例。  
   
