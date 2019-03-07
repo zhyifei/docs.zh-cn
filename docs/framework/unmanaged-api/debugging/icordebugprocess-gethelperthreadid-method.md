@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c3f879e04a710d65f812a5165c3edbfa31f8542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd5e30d08e667dcd5a8be1f9502462f28290068e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419063"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494215"
 ---
-# <a name="icordebugprocessgethelperthreadid-method"></a><span data-ttu-id="6ea4b-102">ICorDebugProcess::GetHelperThreadID 方法</span><span class="sxs-lookup"><span data-stu-id="6ea4b-102">ICorDebugProcess::GetHelperThreadID Method</span></span>
-<span data-ttu-id="6ea4b-103">获取调试器的内部帮助程序线程的操作系统 (OS) 线程 ID。</span><span class="sxs-lookup"><span data-stu-id="6ea4b-103">Gets the operating system (OS) thread ID of the debugger's internal helper thread.</span></span>  
+# <a name="icordebugprocessgethelperthreadid-method"></a><span data-ttu-id="73557-102">ICorDebugProcess::GetHelperThreadID 方法</span><span class="sxs-lookup"><span data-stu-id="73557-102">ICorDebugProcess::GetHelperThreadID Method</span></span>
+<span data-ttu-id="73557-103">获取调试器的内部帮助器线程的操作系统 (OS) 线程 ID。</span><span class="sxs-lookup"><span data-stu-id="73557-103">Gets the operating system (OS) thread ID of the debugger's internal helper thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6ea4b-104">语法</span><span class="sxs-lookup"><span data-stu-id="6ea4b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="73557-104">语法</span><span class="sxs-lookup"><span data-stu-id="73557-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHelperThreadID (  
@@ -35,22 +35,22 @@ HRESULT GetHelperThreadID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6ea4b-105">参数</span><span class="sxs-lookup"><span data-stu-id="6ea4b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="73557-105">参数</span><span class="sxs-lookup"><span data-stu-id="73557-105">Parameters</span></span>  
  `pThreadID`  
- <span data-ttu-id="6ea4b-106">[out]指向操作系统线程的调试器的内部帮助程序线程的 ID。</span><span class="sxs-lookup"><span data-stu-id="6ea4b-106">[out] A pointer to the OS thread ID of the debugger's internal helper thread.</span></span>  
+ <span data-ttu-id="73557-106">[out]指向操作系统线程的调试器的内部帮助器线程的 ID。</span><span class="sxs-lookup"><span data-stu-id="73557-106">[out] A pointer to the OS thread ID of the debugger's internal helper thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6ea4b-107">备注</span><span class="sxs-lookup"><span data-stu-id="6ea4b-107">Remarks</span></span>  
- <span data-ttu-id="6ea4b-108">托管和非托管在调试期间，它将由调试器的负责确保具有指定 ID 的线程保持运行，如果它达到由调试器放置一个断点。</span><span class="sxs-lookup"><span data-stu-id="6ea4b-108">During managed and unmanaged debugging, it is the debugger's responsibility to ensure that the thread with the specified ID remains running if it hits a breakpoint placed by the debugger.</span></span> <span data-ttu-id="6ea4b-109">调试器还可能想要隐藏用户此线程。</span><span class="sxs-lookup"><span data-stu-id="6ea4b-109">A debugger may also wish to hide this thread from the user.</span></span> <span data-ttu-id="6ea4b-110">如果没有帮助程序线程存在于进程中尚未，`GetHelperThreadID`方法返回零 \*`pThreadID`。</span><span class="sxs-lookup"><span data-stu-id="6ea4b-110">If no helper thread exists in the process yet, the `GetHelperThreadID` method returns zero in \*`pThreadID`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="73557-107">备注</span><span class="sxs-lookup"><span data-stu-id="73557-107">Remarks</span></span>  
+ <span data-ttu-id="73557-108">托管和非托管在调试期间，它是调试器的有责任确保具有指定 ID 的线程保持运行，如果它遇到由调试器放置一个断点。</span><span class="sxs-lookup"><span data-stu-id="73557-108">During managed and unmanaged debugging, it is the debugger's responsibility to ensure that the thread with the specified ID remains running if it hits a breakpoint placed by the debugger.</span></span> <span data-ttu-id="73557-109">调试器还可能想要隐藏此线程在用户。</span><span class="sxs-lookup"><span data-stu-id="73557-109">A debugger may also wish to hide this thread from the user.</span></span> <span data-ttu-id="73557-110">如果没有帮助器线程在过程中，存在`GetHelperThreadID`方法将返回 0 中的 \*`pThreadID`。</span><span class="sxs-lookup"><span data-stu-id="73557-110">If no helper thread exists in the process yet, the `GetHelperThreadID` method returns zero in \*`pThreadID`.</span></span>  
   
- <span data-ttu-id="6ea4b-111">无法缓存帮助程序线程的线程 ID，因为它可能会随着时间的推移进行更改。</span><span class="sxs-lookup"><span data-stu-id="6ea4b-111">You cannot cache the thread ID of the helper thread, because it may change over time.</span></span> <span data-ttu-id="6ea4b-112">你必须重新查询每次发生停止事件的线程 ID。</span><span class="sxs-lookup"><span data-stu-id="6ea4b-112">You must re-query the thread ID at every stopping event.</span></span>  
+ <span data-ttu-id="73557-111">您不能缓存帮助程序线程的线程 ID，因为它可能会随着时间的推移进行更改。</span><span class="sxs-lookup"><span data-stu-id="73557-111">You cannot cache the thread ID of the helper thread, because it may change over time.</span></span> <span data-ttu-id="73557-112">您必须重新查询每次停止事件的线程 ID。</span><span class="sxs-lookup"><span data-stu-id="73557-112">You must re-query the thread ID at every stopping event.</span></span>  
   
- <span data-ttu-id="6ea4b-113">将调试器的帮助程序线程的线程 ID 将正确上每个非托管[icordebugmanagedcallback:: Createthread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)事件，从而允许调试器来确定其帮助程序线程的线程 ID 和隐藏用户。</span><span class="sxs-lookup"><span data-stu-id="6ea4b-113">The thread ID of the debugger's helper thread will be correct on every unmanaged [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) event, thus allowing a debugger to determine the thread ID of its helper thread and hide it from the user.</span></span> <span data-ttu-id="6ea4b-114">在非托管过程标识为帮助程序线程的线程`ICorDebugManagedCallback::CreateThread`事件将永远不会运行托管的用户代码。</span><span class="sxs-lookup"><span data-stu-id="6ea4b-114">A thread that is identified as a helper thread during an unmanaged `ICorDebugManagedCallback::CreateThread` event will never run managed user code.</span></span>  
+ <span data-ttu-id="73557-113">调试器的帮助器线程的线程 ID 将是正确的每个非托管[icordebugmanagedcallback:: Createthread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)事件，从而允许调试器来确定其帮助器线程的线程 ID 并将其隐藏从用户。</span><span class="sxs-lookup"><span data-stu-id="73557-113">The thread ID of the debugger's helper thread will be correct on every unmanaged [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) event, thus allowing a debugger to determine the thread ID of its helper thread and hide it from the user.</span></span> <span data-ttu-id="73557-114">在非托管过程标识为帮助器线程的线程`ICorDebugManagedCallback::CreateThread`事件将不会运行托管的用户代码。</span><span class="sxs-lookup"><span data-stu-id="73557-114">A thread that is identified as a helper thread during an unmanaged `ICorDebugManagedCallback::CreateThread` event will never run managed user code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6ea4b-115">要求</span><span class="sxs-lookup"><span data-stu-id="6ea4b-115">Requirements</span></span>  
- <span data-ttu-id="6ea4b-116">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6ea4b-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="73557-115">要求</span><span class="sxs-lookup"><span data-stu-id="73557-115">Requirements</span></span>  
+ <span data-ttu-id="73557-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="73557-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6ea4b-117">**标头：** CorDebug.idl。</span><span class="sxs-lookup"><span data-stu-id="6ea4b-117">**Header:** CorDebug.idl.</span></span> <span data-ttu-id="6ea4b-118">CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6ea4b-118">CorDebug.h</span></span>  
+ <span data-ttu-id="73557-117">**标头：** CorDebug.idl。</span><span class="sxs-lookup"><span data-stu-id="73557-117">**Header:** CorDebug.idl.</span></span> <span data-ttu-id="73557-118">CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="73557-118">CorDebug.h</span></span>  
   
- <span data-ttu-id="6ea4b-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6ea4b-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="73557-119">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="73557-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6ea4b-120">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ea4b-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="73557-120">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="73557-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bb4331b1c55cbda818866c5ff08f9bacd3ebae0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 156c16f73916d2b4efa1c1b3541a772fb43dd470
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413980"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497556"
 ---
-# <a name="icordebugframegetfunctiontoken-method"></a><span data-ttu-id="469a3-102">ICorDebugFrame::GetFunctionToken 方法</span><span class="sxs-lookup"><span data-stu-id="469a3-102">ICorDebugFrame::GetFunctionToken Method</span></span>
-<span data-ttu-id="469a3-103">获取包含与此堆栈帧关联的代码的函数的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="469a3-103">Gets the metadata token for the function that contains the code associated with this stack frame.</span></span>  
+# <a name="icordebugframegetfunctiontoken-method"></a><span data-ttu-id="cae1d-102">ICorDebugFrame::GetFunctionToken 方法</span><span class="sxs-lookup"><span data-stu-id="cae1d-102">ICorDebugFrame::GetFunctionToken Method</span></span>
+<span data-ttu-id="cae1d-103">获取包含与此堆栈帧关联的代码的函数的元数据标记。</span><span class="sxs-lookup"><span data-stu-id="cae1d-103">Gets the metadata token for the function that contains the code associated with this stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="469a3-104">语法</span><span class="sxs-lookup"><span data-stu-id="469a3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cae1d-104">语法</span><span class="sxs-lookup"><span data-stu-id="cae1d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionToken (  
@@ -35,15 +35,15 @@ HRESULT GetFunctionToken (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="469a3-105">参数</span><span class="sxs-lookup"><span data-stu-id="469a3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cae1d-105">参数</span><span class="sxs-lookup"><span data-stu-id="cae1d-105">Parameters</span></span>  
  `pToken`  
- <span data-ttu-id="469a3-106">[out]指向的指针`mdMethodDef`引用函数的元数据的令牌。</span><span class="sxs-lookup"><span data-stu-id="469a3-106">[out] A pointer to an `mdMethodDef` token that references the metadata for the function.</span></span>  
+ <span data-ttu-id="cae1d-106">[out]一个指向`mdMethodDef`引用函数的元数据的令牌。</span><span class="sxs-lookup"><span data-stu-id="cae1d-106">[out] A pointer to an `mdMethodDef` token that references the metadata for the function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="469a3-107">要求</span><span class="sxs-lookup"><span data-stu-id="469a3-107">Requirements</span></span>  
- <span data-ttu-id="469a3-108">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="469a3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cae1d-107">要求</span><span class="sxs-lookup"><span data-stu-id="cae1d-107">Requirements</span></span>  
+ <span data-ttu-id="cae1d-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cae1d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="469a3-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="469a3-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cae1d-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cae1d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="469a3-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="469a3-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cae1d-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cae1d-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="469a3-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="469a3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="cae1d-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cae1d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

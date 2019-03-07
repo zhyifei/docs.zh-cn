@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 580603bf04afe353aeb124a8c1e548d897033d23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82ae78d7e5b91c0955a0be8e8d85f4421dfc1871
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652834"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474301"
 ---
-# <a name="ihostsemaphorereleasesemaphore-method"></a><span data-ttu-id="fcf77-102">IHostSemaphore::ReleaseSemaphore 方法</span><span class="sxs-lookup"><span data-stu-id="fcf77-102">IHostSemaphore::ReleaseSemaphore Method</span></span>
-<span data-ttu-id="fcf77-103">当前计数[IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)实例指定的量。</span><span class="sxs-lookup"><span data-stu-id="fcf77-103">Increases the count of the current [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) instance by the specified amount.</span></span>  
+# <a name="ihostsemaphorereleasesemaphore-method"></a><span data-ttu-id="73c22-102">IHostSemaphore::ReleaseSemaphore 方法</span><span class="sxs-lookup"><span data-stu-id="73c22-102">IHostSemaphore::ReleaseSemaphore Method</span></span>
+<span data-ttu-id="73c22-103">当前计数[IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)实例指定的量。</span><span class="sxs-lookup"><span data-stu-id="73c22-103">Increases the count of the current [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) instance by the specified amount.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fcf77-104">语法</span><span class="sxs-lookup"><span data-stu-id="fcf77-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="73c22-104">语法</span><span class="sxs-lookup"><span data-stu-id="73c22-104">Syntax</span></span>  
   
 ```  
 HRESULT ReleaseSemaphore (  
@@ -36,39 +36,39 @@ HRESULT ReleaseSemaphore (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="fcf77-105">参数</span><span class="sxs-lookup"><span data-stu-id="fcf77-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="73c22-105">参数</span><span class="sxs-lookup"><span data-stu-id="73c22-105">Parameters</span></span>  
  `lReleaseCount`  
- <span data-ttu-id="fcf77-106">[in]当前计数增加的量`IHostSemaphore`实例。</span><span class="sxs-lookup"><span data-stu-id="fcf77-106">[in] The amount by which to increase the count of the current `IHostSemaphore` instance.</span></span> <span data-ttu-id="fcf77-107">此数量必须大于零。</span><span class="sxs-lookup"><span data-stu-id="fcf77-107">This amount must be greater than zero.</span></span>  
+ <span data-ttu-id="73c22-106">[in]当前计数增加的量`IHostSemaphore`实例。</span><span class="sxs-lookup"><span data-stu-id="73c22-106">[in] The amount by which to increase the count of the current `IHostSemaphore` instance.</span></span> <span data-ttu-id="73c22-107">此数量必须大于零。</span><span class="sxs-lookup"><span data-stu-id="73c22-107">This amount must be greater than zero.</span></span>  
   
  `lpPreviousCount`  
- <span data-ttu-id="fcf77-108">[out]一个指向前一个计数或如果调用方不需要前一个计数，则为 null。</span><span class="sxs-lookup"><span data-stu-id="fcf77-108">[out] A pointer to the previous count, or null if the caller does not require the previous count.</span></span>  
+ <span data-ttu-id="73c22-108">[out]一个指向前一个计数或如果调用方不需要前一个计数，则为 null。</span><span class="sxs-lookup"><span data-stu-id="73c22-108">[out] A pointer to the previous count, or null if the caller does not require the previous count.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fcf77-109">返回值</span><span class="sxs-lookup"><span data-stu-id="fcf77-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="73c22-109">返回值</span><span class="sxs-lookup"><span data-stu-id="73c22-109">Return Value</span></span>  
   
-|<span data-ttu-id="fcf77-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="fcf77-110">HRESULT</span></span>|<span data-ttu-id="fcf77-111">描述</span><span class="sxs-lookup"><span data-stu-id="fcf77-111">Description</span></span>|  
+|<span data-ttu-id="73c22-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="73c22-110">HRESULT</span></span>|<span data-ttu-id="73c22-111">描述</span><span class="sxs-lookup"><span data-stu-id="73c22-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="fcf77-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="fcf77-112">S_OK</span></span>|<span data-ttu-id="fcf77-113">`ReleaseSemaphore` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="fcf77-113">`ReleaseSemaphore` returned successfully.</span></span>|  
-|<span data-ttu-id="fcf77-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="fcf77-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="fcf77-115">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="fcf77-115">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="fcf77-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="fcf77-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="fcf77-117">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="fcf77-117">The call timed out.</span></span>|  
-|<span data-ttu-id="fcf77-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="fcf77-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="fcf77-119">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="fcf77-119">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="fcf77-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="fcf77-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="fcf77-121">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="fcf77-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="fcf77-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="fcf77-122">E_FAIL</span></span>|<span data-ttu-id="fcf77-123">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="fcf77-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="fcf77-124">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="fcf77-124">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="fcf77-125">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="fcf77-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="73c22-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="73c22-112">S_OK</span></span>|<span data-ttu-id="73c22-113">`ReleaseSemaphore` 已成功返回。</span><span class="sxs-lookup"><span data-stu-id="73c22-113">`ReleaseSemaphore` returned successfully.</span></span>|  
+|<span data-ttu-id="73c22-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="73c22-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="73c22-115">公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。</span><span class="sxs-lookup"><span data-stu-id="73c22-115">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="73c22-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="73c22-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="73c22-117">呼叫已超时。</span><span class="sxs-lookup"><span data-stu-id="73c22-117">The call timed out.</span></span>|  
+|<span data-ttu-id="73c22-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="73c22-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="73c22-119">调用方不拥有该锁。</span><span class="sxs-lookup"><span data-stu-id="73c22-119">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="73c22-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="73c22-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="73c22-121">事件已取消时被阻塞的线程或纤程正在等待它。</span><span class="sxs-lookup"><span data-stu-id="73c22-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="73c22-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="73c22-122">E_FAIL</span></span>|<span data-ttu-id="73c22-123">发生未知的灾难性故障。</span><span class="sxs-lookup"><span data-stu-id="73c22-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="73c22-124">如果某方法返回 E_FAIL，CLR 不再在进程内可用。</span><span class="sxs-lookup"><span data-stu-id="73c22-124">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="73c22-125">对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="73c22-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fcf77-126">备注</span><span class="sxs-lookup"><span data-stu-id="fcf77-126">Remarks</span></span>  
- <span data-ttu-id="fcf77-127">CLR 通常会调用`ReleaseSemaphore`用于通知宿主，它已完成使用资源，将为 1 的值传递`lReleaseCount`参数。</span><span class="sxs-lookup"><span data-stu-id="fcf77-127">The CLR typically calls `ReleaseSemaphore` to notify the host that it has finished using a resource, passing a value of 1 for the `lReleaseCount` parameter.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="73c22-126">备注</span><span class="sxs-lookup"><span data-stu-id="73c22-126">Remarks</span></span>  
+ <span data-ttu-id="73c22-127">CLR 通常会调用`ReleaseSemaphore`用于通知宿主，它已完成使用资源，将为 1 的值传递`lReleaseCount`参数。</span><span class="sxs-lookup"><span data-stu-id="73c22-127">The CLR typically calls `ReleaseSemaphore` to notify the host that it has finished using a resource, passing a value of 1 for the `lReleaseCount` parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fcf77-128">要求</span><span class="sxs-lookup"><span data-stu-id="fcf77-128">Requirements</span></span>  
- <span data-ttu-id="fcf77-129">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fcf77-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="73c22-128">要求</span><span class="sxs-lookup"><span data-stu-id="73c22-128">Requirements</span></span>  
+ <span data-ttu-id="73c22-129">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="73c22-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fcf77-130">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fcf77-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="73c22-130">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="73c22-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="fcf77-131">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="fcf77-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="73c22-131">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="73c22-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fcf77-132">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fcf77-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="73c22-132">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="73c22-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fcf77-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="fcf77-133">See also</span></span>
-- [<span data-ttu-id="fcf77-134">ICLRSyncManager 接口</span><span class="sxs-lookup"><span data-stu-id="fcf77-134">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="fcf77-135">IHostAutoEvent 接口</span><span class="sxs-lookup"><span data-stu-id="fcf77-135">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [<span data-ttu-id="fcf77-136">IHostManualEvent 接口</span><span class="sxs-lookup"><span data-stu-id="fcf77-136">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [<span data-ttu-id="fcf77-137">IHostSemaphore 接口</span><span class="sxs-lookup"><span data-stu-id="fcf77-137">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [<span data-ttu-id="fcf77-138">IHostSyncManager 接口</span><span class="sxs-lookup"><span data-stu-id="fcf77-138">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="73c22-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="73c22-133">See also</span></span>
+- [<span data-ttu-id="73c22-134">ICLRSyncManager 接口</span><span class="sxs-lookup"><span data-stu-id="73c22-134">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="73c22-135">IHostAutoEvent 接口</span><span class="sxs-lookup"><span data-stu-id="73c22-135">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [<span data-ttu-id="73c22-136">IHostManualEvent 接口</span><span class="sxs-lookup"><span data-stu-id="73c22-136">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [<span data-ttu-id="73c22-137">IHostSemaphore 接口</span><span class="sxs-lookup"><span data-stu-id="73c22-137">IHostSemaphore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
+- [<span data-ttu-id="73c22-138">IHostSyncManager 接口</span><span class="sxs-lookup"><span data-stu-id="73c22-138">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

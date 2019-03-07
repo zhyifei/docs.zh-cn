@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e00bc95dd9b54d5451da65cefbfff13395e467f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63e6ec271634a52abe7c640bbbabdaedebd2a31d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511952"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471896"
 ---
-# <a name="getrequestedruntimeversionforclsid-function"></a><span data-ttu-id="6dcb2-102">GetRequestedRuntimeVersionForCLSID 函数</span><span class="sxs-lookup"><span data-stu-id="6dcb2-102">GetRequestedRuntimeVersionForCLSID Function</span></span>
-<span data-ttu-id="6dcb2-103">获取相应的公共语言运行时 (CLR) 版本信息，为具有指定类`CLSID`。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-103">Gets the appropriate common language runtime (CLR) version information for the class with the specified `CLSID`.</span></span>  
+# <a name="getrequestedruntimeversionforclsid-function"></a><span data-ttu-id="30abc-102">GetRequestedRuntimeVersionForCLSID 函数</span><span class="sxs-lookup"><span data-stu-id="30abc-102">GetRequestedRuntimeVersionForCLSID Function</span></span>
+<span data-ttu-id="30abc-103">获取相应的公共语言运行时 (CLR) 版本信息，为具有指定类`CLSID`。</span><span class="sxs-lookup"><span data-stu-id="30abc-103">Gets the appropriate common language runtime (CLR) version information for the class with the specified `CLSID`.</span></span>  
   
- <span data-ttu-id="6dcb2-104">此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="30abc-104">此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="30abc-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6dcb2-105">语法</span><span class="sxs-lookup"><span data-stu-id="6dcb2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="30abc-105">语法</span><span class="sxs-lookup"><span data-stu-id="30abc-105">Syntax</span></span>  
   
 ```  
 HRESULT GetRequestedRuntimeVersionForCLSID (  
@@ -40,42 +40,42 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6dcb2-106">参数</span><span class="sxs-lookup"><span data-stu-id="6dcb2-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="30abc-106">参数</span><span class="sxs-lookup"><span data-stu-id="30abc-106">Parameters</span></span>  
  `rclsid`  
- <span data-ttu-id="6dcb2-107">[in] `CLSID`的组件。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-107">[in]  The `CLSID` of the component.</span></span>  
+ <span data-ttu-id="30abc-107">[in] `CLSID`的组件。</span><span class="sxs-lookup"><span data-stu-id="30abc-107">[in]  The `CLSID` of the component.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="6dcb2-108">[out] 包含成功完成后的版本字符串的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-108">[out]  A buffer that contains the version number string upon successful completion.</span></span>  
+ <span data-ttu-id="30abc-108">[out] 包含成功完成后的版本字符串的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="30abc-108">[out]  A buffer that contains the version number string upon successful completion.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="6dcb2-109">[in] 大小，以宽字符为单位的`pVersion`缓冲区。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-109">[in]  The size, in wide characters, of the `pVersion` buffer.</span></span>  
+ <span data-ttu-id="30abc-109">[in] 大小，以宽字符为单位的`pVersion`缓冲区。</span><span class="sxs-lookup"><span data-stu-id="30abc-109">[in]  The size, in wide characters, of the `pVersion` buffer.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="6dcb2-110">[out]返回的缓冲区长度 （字节）。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-110">[out] The length, in bytes, of the returned buffer.</span></span>  
+ <span data-ttu-id="30abc-110">[out]返回的缓冲区长度 （字节）。</span><span class="sxs-lookup"><span data-stu-id="30abc-110">[out] The length, in bytes, of the returned buffer.</span></span>  
   
  `dwResolutionFlags`  
- <span data-ttu-id="6dcb2-111">[in] CLSID_RESOLUTION_FLAGS 值之一。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-111">[in]  One of the CLSID_RESOLUTION_FLAGS values.</span></span> <span data-ttu-id="6dcb2-112">支持以下值：</span><span class="sxs-lookup"><span data-stu-id="6dcb2-112">The following values are supported:</span></span>  
+ <span data-ttu-id="30abc-111">[in] CLSID_RESOLUTION_FLAGS 值之一。</span><span class="sxs-lookup"><span data-stu-id="30abc-111">[in]  One of the CLSID_RESOLUTION_FLAGS values.</span></span> <span data-ttu-id="30abc-112">支持以下值：</span><span class="sxs-lookup"><span data-stu-id="30abc-112">The following values are supported:</span></span>  
   
--   <span data-ttu-id="6dcb2-113">CLSID_RESOLUTION_DEFAULT:(0x0) 指定应使用默认互操作行为。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-113">CLSID_RESOLUTION_DEFAULT: (0x0) Specifies that default interop behavior should be used.</span></span>  
+-   <span data-ttu-id="30abc-113">CLSID_RESOLUTION_DEFAULT:(0x0) 指定应使用默认互操作行为。</span><span class="sxs-lookup"><span data-stu-id="30abc-113">CLSID_RESOLUTION_DEFAULT: (0x0) Specifies that default interop behavior should be used.</span></span>  
   
--   <span data-ttu-id="6dcb2-114">CLSID_RESOLUTION_REGISTERED:(0x1) 指定应搜索注册表和应应用填充程序策略。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-114">CLSID_RESOLUTION_REGISTERED: (0x1) Specifies that the registry should be searched and shim policy should be applied.</span></span>  
+-   <span data-ttu-id="30abc-114">CLSID_RESOLUTION_REGISTERED:(0x1) 指定应搜索注册表和应应用填充程序策略。</span><span class="sxs-lookup"><span data-stu-id="30abc-114">CLSID_RESOLUTION_REGISTERED: (0x1) Specifies that the registry should be searched and shim policy should be applied.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6dcb2-115">返回值</span><span class="sxs-lookup"><span data-stu-id="6dcb2-115">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="30abc-115">返回值</span><span class="sxs-lookup"><span data-stu-id="30abc-115">Return Value</span></span>  
   
-|<span data-ttu-id="6dcb2-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="6dcb2-116">HRESULT</span></span>|<span data-ttu-id="6dcb2-117">描述</span><span class="sxs-lookup"><span data-stu-id="6dcb2-117">Description</span></span>|  
+|<span data-ttu-id="30abc-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="30abc-116">HRESULT</span></span>|<span data-ttu-id="30abc-117">描述</span><span class="sxs-lookup"><span data-stu-id="30abc-117">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="6dcb2-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="6dcb2-118">S_OK</span></span>|<span data-ttu-id="6dcb2-119">该函数返回成功。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-119">The function returned successfully.</span></span>|  
-|<span data-ttu-id="6dcb2-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="6dcb2-120">E_INVALIDARG</span></span>|<span data-ttu-id="6dcb2-121">参数之一具有无效的类型或格式。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-121">One of the parameters has an invalid type or format.</span></span>|  
-|<span data-ttu-id="6dcb2-122">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="6dcb2-122">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="6dcb2-123">`pVersion`缓冲区不是大到足以保留完整版本字符串。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-123">The `pVersion` buffer is not large enough to hold the entire version string.</span></span>|  
-|<span data-ttu-id="6dcb2-124">REGDB_E_CLASSNOTREG</span><span class="sxs-lookup"><span data-stu-id="6dcb2-124">REGDB_E_CLASSNOTREG</span></span>|<span data-ttu-id="6dcb2-125">没有与指定注册类`CLSID`。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-125">There is no class registered with the specified `CLSID`.</span></span>|  
-|<span data-ttu-id="6dcb2-126">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="6dcb2-126">E_POINTER</span></span>|<span data-ttu-id="6dcb2-127">`dwLength` 为 null，或`cchBuffer`足够大以保存的版本字符串，但`pVersion`为 null。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-127">`dwLength` is null, or `cchBuffer` is large enough to hold the version string, but `pVersion` is null.</span></span>|  
+|<span data-ttu-id="30abc-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="30abc-118">S_OK</span></span>|<span data-ttu-id="30abc-119">该函数返回成功。</span><span class="sxs-lookup"><span data-stu-id="30abc-119">The function returned successfully.</span></span>|  
+|<span data-ttu-id="30abc-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="30abc-120">E_INVALIDARG</span></span>|<span data-ttu-id="30abc-121">参数之一具有无效的类型或格式。</span><span class="sxs-lookup"><span data-stu-id="30abc-121">One of the parameters has an invalid type or format.</span></span>|  
+|<span data-ttu-id="30abc-122">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="30abc-122">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="30abc-123">`pVersion`缓冲区不是大到足以保留完整版本字符串。</span><span class="sxs-lookup"><span data-stu-id="30abc-123">The `pVersion` buffer is not large enough to hold the entire version string.</span></span>|  
+|<span data-ttu-id="30abc-124">REGDB_E_CLASSNOTREG</span><span class="sxs-lookup"><span data-stu-id="30abc-124">REGDB_E_CLASSNOTREG</span></span>|<span data-ttu-id="30abc-125">没有与指定注册类`CLSID`。</span><span class="sxs-lookup"><span data-stu-id="30abc-125">There is no class registered with the specified `CLSID`.</span></span>|  
+|<span data-ttu-id="30abc-126">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="30abc-126">E_POINTER</span></span>|<span data-ttu-id="30abc-127">`dwLength` 为 null，或`cchBuffer`足够大以保存的版本字符串，但`pVersion`为 null。</span><span class="sxs-lookup"><span data-stu-id="30abc-127">`dwLength` is null, or `cchBuffer` is large enough to hold the version string, but `pVersion` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="6dcb2-128">要求</span><span class="sxs-lookup"><span data-stu-id="6dcb2-128">Requirements</span></span>  
- <span data-ttu-id="6dcb2-129">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6dcb2-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="30abc-128">要求</span><span class="sxs-lookup"><span data-stu-id="30abc-128">Requirements</span></span>  
+ <span data-ttu-id="30abc-129">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="30abc-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6dcb2-130">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6dcb2-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="30abc-130">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="30abc-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="6dcb2-131">**.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6dcb2-131">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="30abc-131">**.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30abc-131">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6dcb2-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="6dcb2-132">See also</span></span>
-- [<span data-ttu-id="6dcb2-133">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="6dcb2-133">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="30abc-132">请参阅</span><span class="sxs-lookup"><span data-stu-id="30abc-132">See also</span></span>
+- [<span data-ttu-id="30abc-133">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="30abc-133">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
