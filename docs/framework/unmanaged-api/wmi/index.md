@@ -5,12 +5,13 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
 ---
+
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Management Instrumentation (WMI) 和性能计数器（非托管 API 参考）
 
 .NET Framework WMI 和性能计数器非托管 API 由一组函数组成，这些函数包含对[本机 Windows Management Instrumentation API](/windows/desktop/WmiSdk/com-api-for-wmi) 的调用。 通过它，用户可开发管理和监视远程计算机系统的工具和库。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
+
 API 包括以下函数：
 
 | 函数 | 说明 |
@@ -27,27 +28,27 @@ API 包括以下函数：
 | [CreateInstanceEnumWmi 函数](createinstanceenumwmi.md) | 返回枚举器，该枚举器返回符合指定选择条件的指定类的实例。 |
 | [Delete 函数](delete.md) | 从类定义及其所有限定符中删除指定属性。 |
 | [DeleteMethod 函数](deletemethod.md) | 从 CIM 类定义中删除指定方法。 |
-| [EndEnumeration 函数](endenumeration.md) | 终止枚举序列。 | 
+| [EndEnumeration 函数](endenumeration.md) | 终止枚举序列。 |
 | [EndMethodEnumeration 函数](endmethodenumeration.md) | 终止通过调用 [BeginMethodEnumeration 函数](beginmethodenumeration.md)开始的枚举序列。 |
 | [ExecNotificationQueryWmi 函数](execnotificationquerywmi.md) | 执行查询以接收事件。 |
 | [ExecQueryWmi 函数](execquerywmi.md) | 执行查询以检索对象。 |
-| [FormatFromRawValue 函数](formatfromrawvalue.md) | 如果格式转换是基于时间的，则将一个或两个原始性能数据值转换为指定格式。 | 
+| [FormatFromRawValue 函数](formatfromrawvalue.md) | 如果格式转换是基于时间的，则将一个或两个原始性能数据值转换为指定格式。 |
 | [Get 函数](get.md) | 检索指定的属性值（如果存在）。 |
 | [GetCurrentApartmentType 函数](getcurrentapartmenttype.md) | 检索调用方执行操作所在的单元类型。 |
 | [GetDemultiplexedStub 函数](getdemultiplexedstub.md) | 创建对象转发器接收器，帮助客户端从 Windows Management 接收异步调用。 |
-| [GetErrorInfo 函数](geterrorinfo.md) | 从上一个函数调用中检索错误信息。 | 
-| [GetMethod 函数](getmethod.md) | 检索有关指定方法的信息。 | 
+| [GetErrorInfo 函数](geterrorinfo.md) | 从上一个函数调用中检索错误信息。 |
+| [GetMethod 函数](getmethod.md) | 检索有关指定方法的信息。 |
 | [GetMethodOrigin 函数](getmethodorigin.md) | 确定声明方法的类。 |
 | [GetMethodQualifierSet 函数](getmethodqualifierset.md) | 检索特定方法的限定符集。 |
 | [GetNames 函数](getnames.md) | 检索对象属性的子集或所有名称。 |
-| [GetObjectText 函数](getobjecttext.md) | 返回 MOF 语法中对象的文本呈现。 | 
+| [GetObjectText 函数](getobjecttext.md) | 返回 MOF 语法中对象的文本呈现。 |
 | [GetPropertyHandle 函数](getpropertyhandle.md) | 返回标识属性的唯一句柄。 |
 | [GetPropertyOrigin 函数](getpropertyorigin.md) | 确定声明方法的类。 |
 | [GetPropertyQualifierSet 函数](getpropertyqualifierset.md) | 检索特定属性的限定符集。  |
 | [GetQualifierSet 函数](getqualifierset.md) | 检索类实例或类定义的限定符集。 |
 | [InheritsFrom 函数](inheritsfrom.md) | 确定当前类或实例是否派生自指定的父类。 |
 | [Initialize 函数](initialize.md) | 执行 WMI 初始化。 |
-| [Next 函数](next.md) | 检索枚举中的下一个属性。 | 
+| [Next 函数](next.md) | 检索枚举中的下一个属性。 |
 | [NextMethod 函数](nextmethod.md) | 检索枚举中的下一个方法。 |
 | [Put 函数](put.md) | 将命名属性设置为新值。 |
 | [PutClassWmi 函数](putclasswmi.md) | 创建新类或更新现有类。 |
@@ -62,11 +63,11 @@ API 包括以下函数：
 | [QualifierSet_Put 函数](qualifierset-put.md) | 写入命名限定符和值。 |
 | [ResetSecurity 函数](resetsecurity.md) | 将提供的模拟令牌分配给当前线程。 |
 | [SetSecurity 函数](setsecurity.md) | 检索与当前线程关联的模拟令牌。 |
-| [SpawnDerivedClass 函数](spawnderivedclass.md) | 从指定对象创建新派生的类对象。 | 
-| [SpawnInstance 函数](spawninstance.md) | 创建类的新实例。 |   
+| [SpawnDerivedClass 函数](spawnderivedclass.md) | 从指定对象创建新派生的类对象。 |
+| [SpawnInstance 函数](spawninstance.md) | 创建类的新实例。 |
 | [VerifyClient 函数](verifyclientkey.md) | 确保客户端密钥具有正确的安全性。 |
 | [WritePropertyValue 函数](writepropertyvalue.md) | 将指定数量的字节写入由属性句柄标识的属性。 |
 
 ## <a name="see-also"></a>请参阅
 
-[非托管 API 参考](../index.md) 
+- [非托管 API 参考](../index.md)
