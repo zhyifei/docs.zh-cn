@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf29b906d524138fdd78b7a4f0286d1c59adc8eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e06a76b4d51245388bf36b8127a470f55ca645fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622115"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494696"
 ---
 # <a name="ihostsecuritymanagersetthreadtoken-method"></a>IHostSecurityManager::SetThreadToken 方法
 设置当前执行线程的句柄。  
@@ -35,7 +35,7 @@ HRESULT SetThreadToken (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `hToken`  
  [in]令牌设置为当前正在执行的线程句柄。  
   

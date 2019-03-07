@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 597c5071f9ea0ceacaf429ca10cc899f115772eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e49c20d7627f666efd6561cee19ca505f723b714
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715629"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474431"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>ICorDebugManagedCallback::LoadModule 方法
 通知调试器已成功加载了公共语言运行时 (CLR) 模块。  
@@ -36,7 +36,7 @@ HRESULT LoadModule (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pAppDomain`  
  [in]指向一个 ICorDebugAppDomain 对象，表示在其中加载的模块的应用程序域的指针。  
   

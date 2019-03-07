@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d809bbfa17ed9e9ae16505852740e874ca11248c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d9671354edfeb4a320a451f355c2125dc8e9dc5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621781"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470022"
 ---
 # <a name="createassemblyenum-function"></a>CreateAssemblyEnum 函数
 获取一个指向[IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)可以枚举中具有指定的程序集的对象的实例[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)。  
@@ -40,7 +40,7 @@ HRESULT CreateAssemblyEnum (
  );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pEnum`  
  [out]指向包含所请求的内存位置`IAssemblyEnum`指针。  
   

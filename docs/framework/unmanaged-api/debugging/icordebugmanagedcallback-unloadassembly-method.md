@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93d44006dd6652a8d34c23209eb957b23064f976
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef4d7993269aa606aa6b22a1544bc2d04d9e6e93
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703999"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476524"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>ICorDebugManagedCallback::UnloadAssembly 方法
 通知调试器公共语言运行时程序集已被卸载。  
@@ -36,7 +36,7 @@ HRESULT UnloadAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pAppDomain`  
  [in]指向一个 ICorDebugAppDomain 对象，表示包含程序集的应用程序域的指针。  
   

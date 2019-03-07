@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f911d99470b9870f5c42d4170a4024123c10e7f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 973062e93e4964da0a21c14c17e0ce1960029ebd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511116"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489067"
 ---
 # <a name="igchostcollect-method"></a>IGCHost::Collect 方法
 强制给定生成，而不考虑当前的垃圾回收状态发生的集合。  
@@ -35,7 +35,7 @@ HRESULT Collect (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `Generation`  
  [in]要对其执行垃圾回收生成。 值为-1 指示所有代将都进行垃圾回收。  
   

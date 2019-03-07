@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7501a8a0f8368049c87b3c90e1e707e12773a853
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8723de93f5d7fa93b1f62764f3774c8719750bd4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531637"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492291"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>ICorDebugProcess3::SetEnableCustomNotification 方法
 启用和禁用的指定类型的自定义调试器通知。  
@@ -34,7 +34,7 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
                                     BOOL fEnable);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pClass`  
  [in]指定自定义调试器通知类型。  
   

@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2abb24a319d8d3aff940ddb7eabd16b3e238862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f2e481942586e1e5ea6364370ff1385db134dd3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611743"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475679"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap 方法
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
@@ -36,7 +36,7 @@ HRESULT GetInstrumentedILMap(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  cMap  
  [in] `map` 数组的存储容量。 有关详细信息，请参阅备注部分。  
   
@@ -49,7 +49,7 @@ HRESULT GetInstrumentedILMap(
 ## <a name="remarks"></a>备注  
  如果探查器通过调用来设置映射[icorprofilerinfo:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)方法，则调试器可以调用此方法来检索该映射，并计算 IL 偏移量的堆栈时在内部使用该映射跟踪和变量生存期。  
   
- 如果`cMap`为 0 和`pcMap`为非**null**，`pcMap`设置为可用 COR_IL_MAP 值的数目。 如果 `cMap` 为非零，则它表示 `map` 数组的存储容量。 方法返回时，`map`最多包含`cMap`项，并`pcMap`设置为实际写入 COR_IL_MAP 值的数目`map`数组。  
+ 如果`cMap`为 0 和`pcMap`为非**null**，`pcMap`设置为可用 COR_IL_MAP 值的数目。 如果 `map``cMap` 为非零，则它表示  数组的存储容量。 方法返回时，`map`最多包含`cMap`项，并`pcMap`设置为实际写入 COR_IL_MAP 值的数目`map`数组。  
   
  如果尚未检测到 IL 或探查器没有提供映射，则此方法将返回 `S_OK` 并将 `pcMap` 设置为 0。  
   

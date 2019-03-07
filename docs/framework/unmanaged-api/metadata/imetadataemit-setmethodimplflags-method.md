@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cffbf01cb8098f30fb026491e0153ac9a651756a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98df83569681dab5a7aa15651181373ee5d559dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692385"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479202"
 ---
 # <a name="imetadataemitsetmethodimplflags-method"></a>IMetaDataEmit::SetMethodImplFlags 方法
 设置或更新指定的标记所引用的继承的方法实现的元数据签名。  
@@ -36,7 +36,7 @@ HRESULT SetMethodImplFlags (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `md`  
  [in]若要更改方法的标记。  
   

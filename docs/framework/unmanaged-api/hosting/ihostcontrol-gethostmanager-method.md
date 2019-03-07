@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 821968fbde6d3f5434b83adf8c9661fe39d96293
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 459691354ec12f61c7ab321fe832d8fc802a36d9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742024"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494293"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager 方法
 获取具有指定的接口指针接口的主机的实现`IID`。  
@@ -36,7 +36,7 @@ HRESULT GetHostManager (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `riid`  
  [in]`IID`公共语言运行时 (CLR) 所查询的接口。  
   

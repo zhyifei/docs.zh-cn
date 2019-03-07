@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6248bb1e1cc3585a1135d76c31d167958e7b6bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8491f80c1b4340756c00b5540520bd76f0f583a0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729793"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486984"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 函数
 通知探查器当前正在执行的函数将要执行到另一个函数的结尾调用并提供有关堆栈帧的信息。  
@@ -36,7 +36,7 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `funcId`  
  [in]当前正在执行即将进行尾调用的函数的标识符。  
   

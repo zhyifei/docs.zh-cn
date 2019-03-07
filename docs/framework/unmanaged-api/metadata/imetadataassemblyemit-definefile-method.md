@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ede66a39de292cd259cb12742e7c6df4ab5814f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dac6bb6790876e28f1a5cd72f0635a1155caa47
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720491"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481035"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile 方法
 创建包含此程序集引用的程序集的元数据的 `File` 元数据结构，并返回关联的元数据标记。  
@@ -39,7 +39,7 @@ HRESULT DefineFile (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `szName`  
  [in]要使用的文件的名称。  
   

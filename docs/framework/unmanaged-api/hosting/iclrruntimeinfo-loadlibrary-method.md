@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dbcbf1b66793a67c815b420e6d5fe221febe719
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 878d68dd690a8764ef26f5f180fabd6c22841a25
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716877"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466826"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>ICLRRuntimeInfo::LoadLibrary 方法
 从公共语言运行时 (CLR) 表示加载的.NET Framework 库[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)接口。  
@@ -37,7 +37,7 @@ HRESULT LoadLibrary(
      [out, retval] HMODULE *phndModule);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pwzDllName`  
  [in]要加载的程序集的名称。  
   
@@ -50,7 +50,7 @@ HRESULT LoadLibrary(
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|E_POINTER|`pwzDllName` 或 `phndModule` 为 null。|  
+|E_POINTER|`pwzDllName` 或`phndModule`为 null。|  
 |E_OUTOFMEMORY|没有足够的内存是可用来处理该请求。|  
   
 ## <a name="remarks"></a>备注  

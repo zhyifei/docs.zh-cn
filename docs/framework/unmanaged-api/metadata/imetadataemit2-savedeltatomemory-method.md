@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84972388f90ea23032ed0524723d59077c732e59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8cc9544279c6be3efe278c3effda00bc2d387ec
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498890"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495359"
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a>IMetaDataEmit2::SaveDeltaToMemory 方法
 将更改从当前会话中编辑和继续保存到内存中。  
@@ -36,7 +36,7 @@ HRESULT SaveDeltaToMemory (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pbData`  
  [out]开始写入的元数据增量的地址。  
   

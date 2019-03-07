@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7bfdcc3c8328d71146732fc4ba5664ebee9bea2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f057896d9dd65a850c0b07e4084bc263e804d20
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574867"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497361"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory 方法
 获取一个值，指示仅在内存中是否存在此模块。  
@@ -35,7 +35,7 @@ HRESULT IsInMemory(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pInMemory`  
  [out]`true`如果此模块只存在于内存; 否则为`false`。  
   

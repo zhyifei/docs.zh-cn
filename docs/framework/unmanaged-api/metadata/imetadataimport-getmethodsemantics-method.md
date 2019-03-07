@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a12310f1281da99706589894a4793c2a28c5b938
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35b99240a99341ddf78ab43c444b503702af66c9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745950"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479163"
 ---
 # <a name="imetadataimportgetmethodsemantics-method"></a>IMetaDataImport::GetMethodSemantics 方法
 获取令牌，该值指示指定的 MethodDef 标记和配对的属性所引用的方法和事件由指定的 EventProp 引用之间的关系的标志。  
@@ -37,7 +37,7 @@ HRESULT GetMethodSemantics (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `mb`  
  [in]表示要获取的语义角色信息的方法的 MethodDef 标记。  
   

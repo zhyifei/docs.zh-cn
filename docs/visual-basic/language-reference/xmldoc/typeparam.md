@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-ms.openlocfilehash: d7fb980545a532e39310ea3e9d663a2b5a81a006
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9e07a0c9d100669215f01a168da98902644a6f0b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968447"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496139"
 ---
 # <a name="typeparam-visual-basic"></a>\<typeparam > (Visual Basic)
 定义的类型参数名称和说明。  
@@ -21,7 +21,7 @@ ms.locfileid: "56968447"
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `name`  
  类型参数的名称。 用双引号 (" ") 将名称引起来。  
   

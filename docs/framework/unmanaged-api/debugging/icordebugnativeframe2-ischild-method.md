@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b330f628256f9d8b21bfb483500c878b7b90d2b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abae0e25f506b930fdb257cea7afab87a630ee0a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652043"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466699"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild 方法
 确定当前帧是否为子框架。  
@@ -33,7 +33,7 @@ ms.locfileid: "54652043"
 HRESULT IsChild([out] BOOL * pIsChild);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pIsChild`  
  [out]一个布尔值，该值指定当前帧是否为子框架。  
   

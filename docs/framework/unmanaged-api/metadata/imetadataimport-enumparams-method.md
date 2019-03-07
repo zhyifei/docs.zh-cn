@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dadfabf1d2507b2bd719b5b73238bb38c9ae7563
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab5200cbd3a37bba31d52f9934e11aecc88c59c0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602424"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502405"
 ---
 # <a name="imetadataimportenumparams-method"></a>IMetaDataImport::EnumParams 方法
 枚举 ParamDef 标记，这些标记表示指定的 MethodDef 标记所引用的方法的参数。  
@@ -39,7 +39,7 @@ HRESULT EnumParams (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `phEnum`  
  [in、 out]一个指向枚举器。 对于首次调用此方法，这必须为 NULL。  
   

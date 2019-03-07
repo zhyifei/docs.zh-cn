@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78cbede0522ce7b78f0a6518ba506b69b4b0515e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb6a9721549087900083b0d5455054abf07362df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712955"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476255"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile 方法
 生成包含当前加载到此代码的代码库文件[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)接口。  
@@ -35,7 +35,7 @@ ms.locfileid: "54712955"
 HRESULT GenerateCeeFile ();  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `GenerateCeeFile` 不带任何参数。  
   
 ## <a name="requirements"></a>要求  

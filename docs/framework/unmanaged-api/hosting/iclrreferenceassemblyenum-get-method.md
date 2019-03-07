@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac7e551cad12766f3472289889907d6972663567
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63351d15cfe5f085940306e204ee5f6200ee8494
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617364"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469165"
 ---
 # <a name="iclrreferenceassemblyenumget-method"></a>ICLRReferenceAssemblyEnum::Get 方法
 提供的索引处获取程序集标识。  
@@ -37,7 +37,7 @@ HRESULT Get (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwIndex`  
  [in]要返回的程序集标识的从零开始的索引。  
   

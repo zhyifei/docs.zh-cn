@@ -4,17 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 086e02601e527229eed7dc3e2fab73df1f918a8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359544"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482686"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的版式
 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要版式功能。 这些功能包括改进的文本呈现质量和性能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 版式支持、增强的国际文本、增强的字体支持和新的文本应用程序编程接口 (API)。  
-  
-
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>改进的文本质量和性能  
@@ -36,13 +34,11 @@ ms.locfileid: "57359544"
   
  Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字体包含其他字形，可为标准自行集提供样式备用项。 以下文本显示样式备用字形。  
   
- ![使用 OpenType 样式备用字形的文本](./media/opentypefont02.gif "opentypefont02")  
-使用 OpenType 样式备用标志符号的文本  
+ ![使用 OpenType 样式备用字形的文本](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "使用 OpenType 样式备用字形的文本")  
   
  花体是使用精美修饰的装饰性字形，通常与书法相关。 以下文本显示 Pescadero 字体的标准和花体字形。  
   
- ![使用 OpenType 标准和花体字形的文本](./media/opentypefont08.gif "opentypefont08")  
-使用 OpenType 标准和花体连字的文本  
+ ![使用 OpenType 标准和花体字形的文本](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "使用 OpenType 标准和花体字形的文本")  
   
  有关 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 功能的详细信息，请参阅 [OpenType 字体功能](opentype-font-features.md)。  
   
@@ -175,4 +171,4 @@ FlowDocumentReader 中承载的文本
 - [绘制格式化文本](drawing-formatted-text.md)
 - [高级文本格式设置](advanced-text-formatting.md)
 - [文本](optimizing-performance-text.md)
-- [Microsoft 版式](https://www.microsoft.com/typography/default.mspx)
+- [Microsoft 版式](https://docs.microsoft.com/typography/)

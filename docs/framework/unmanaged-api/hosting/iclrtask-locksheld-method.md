@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 931395a1bb5f516000097f964ce0372a69420d85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27747b02237672ec302a545e2e0c73ace0cae1fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679625"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487455"
 ---
 # <a name="iclrtasklocksheld-method"></a>ICLRTask::LocksHeld 方法
 获取当前任务上持有的锁数。  
@@ -35,7 +35,7 @@ HRESULT LocksHeld (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pLockCount`  
  [out]在方法调用时，该任务保留的锁数。  
   

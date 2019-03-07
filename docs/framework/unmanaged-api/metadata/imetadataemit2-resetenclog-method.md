@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d18a3b7e309eb71cf37e77818a3181e33bf5ab7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24ecc46d1ca3ef24abd6f9bc0308fc460256c6ad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493439"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475614"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>IMetaDataEmit2::ResetENCLog 方法
 重置编辑并继续日志并启动新会话。  
@@ -33,7 +33,7 @@ ms.locfileid: "54493439"
 HRESULT ResetENCLog ();  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ResetENCLog` 不带任何参数。  
   
 ## <a name="requirements"></a>要求  

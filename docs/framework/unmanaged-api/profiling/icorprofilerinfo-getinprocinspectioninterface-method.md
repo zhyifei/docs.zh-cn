@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c4e2a094f018b4f77423b6dbfe990925632edf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbb4aa43757df86037d9c883e76ee38cef5eeb86
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683854"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494423"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>ICorProfilerInfo::GetInprocInspectionInterface 方法
 对于"ICorDebugProcess"接口获取可查询的对象。 此方法是在.NET Framework 2.0 版中已过时。  
@@ -34,7 +34,7 @@ HRESULT GetInprocInspectionInterface(
     [out] IUnknown **ppicd);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppicd`  
  [out](/cpp/atl/iunknown)对象，可用于查询`ICorDebugProcess`接口。  
   

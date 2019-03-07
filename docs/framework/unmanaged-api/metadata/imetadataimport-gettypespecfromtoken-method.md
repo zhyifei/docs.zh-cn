@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53d0f3bd991d502e4ddcad7df1e24d18af367e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8ecb529534f4ed1a1d12d9613ebd46f8b99fdb8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598389"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487495"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken 方法
 获取指定标记所表示的类型规范的二进制元数据签名。  
@@ -37,7 +37,7 @@ HRESULT GetTypeSpecFromToken (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `typespec`  
  [in]与请求的元数据签名关联的 TypeSpec 标记。  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f40100be3ab05c0c8e8a55d48494569424e88371
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea711cc03716f4cd0a06a96208da942a69f36d66
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637246"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471675"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager 函数
 获取一个指针指向使公共语言运行时 (CLR) 来管理标识的接口。  
@@ -37,7 +37,7 @@ STDAPI GetCLRIdentityManager(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `riid`  
  [in]一个`REFIID`（接口标识符），它指定要获取的接口。 此值必须是 IID_ICLRAssemblyIdentityManager 或 IID_ICLRHostBindingPolicyManager。  
   

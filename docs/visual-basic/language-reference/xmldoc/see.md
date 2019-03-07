@@ -5,12 +5,12 @@ helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: c0f1293fa0161a9a11b4e80301f5c4c4ddffe7b1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c26e818276eb4654fec77230372a0ae090952961
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969292"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474834"
 ---
 # <a name="see-visual-basic"></a>\<请参阅 > (Visual Basic)
 指定指向另一个成员的链接。  
@@ -21,7 +21,7 @@ ms.locfileid: "56969292"
 <see cref="member"/>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `member`  
  对可从当前编译环境调用的成员或字段的引用。 编译器检查是否存在给定的码位元素，并将 `member` 传递到输出 XML 中的元素名称。 `member` 必须出现在双引号 (" ") 内。  
   

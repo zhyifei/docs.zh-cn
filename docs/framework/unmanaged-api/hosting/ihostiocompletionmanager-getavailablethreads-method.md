@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ef25267f6af5d1f8503825e2784383a0eb241e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27922c1b1b576ae34bfbe363f3d46e10d0f2551c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535525"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485169"
 ---
 # <a name="ihostiocompletionmanagergetavailablethreads-method"></a>IHostIoCompletionManager::GetAvailableThreads 方法
 获取由主机管理，当前不处理请求的线程总数的 I/O 完成线程数。  
@@ -35,7 +35,7 @@ HRESULT GetAvailableThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pdwAvailableIoCompletionThreads`  
  [out]为请求提供服务当前可用的 I/O 完成线程管理的主机数指向的指针。  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83e3ba8644af1f630b5c9ad5268ec44750badc88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09fb98c5524446041e0e7a9484322f835b9d9801
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682037"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474457"
 ---
 # <a name="gethashfromassemblyfile-function"></a>GetHashFromAssemblyFile 函数
 使用指定的哈希算法获取指定程序集文件的哈希。  
@@ -40,7 +40,7 @@ HRESULT GetHashFromAssemblyFile (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `szFilePath`  
  [in]要进行哈希处理的文件路径。  
   

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 0de622e96b9138b86cfc77c51d1a215c1868accf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d871ca5dfd62dbca309f4ccc3dcedf959033a41e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375917"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474158"
 ---
 # <a name="ixclrdataprocessstartenummodules-method"></a>IXCLRDataProcess::StartEnumModules 方法
 
@@ -36,7 +36,7 @@ HRESULT StartEnumModules(
 );
 ```
 
-### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
 `handle`\
 [out]枚举模块句柄。

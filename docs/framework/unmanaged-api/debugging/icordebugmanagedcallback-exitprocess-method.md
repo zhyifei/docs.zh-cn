@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4e7b62b7eb038d553b28fbd6422175d511df88d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b33b38b85bd5b8cfb3502e3fadcd739aac37b2dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540541"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476368"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>ICorDebugManagedCallback::ExitProcess 方法
 通知调试器进程已退出。  
@@ -35,7 +35,7 @@ HRESULT ExitProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pProcess`  
  [in]指向表示流程 ICorDebugProcess 对象的指针。  
   

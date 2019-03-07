@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27815cf8cb7fdcd1c01f26391c317d52bbb388ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06e88e7b3f8e4541c8c7058e27cddb41c78076bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628508"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477837"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList 方法
 提供的监视器锁与相关联的事件的线程排队的排序的列表。  
@@ -35,7 +35,7 @@ HRESULT GetMonitorEventWaitList (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppThreadEnum`  
  [out]ICorDebugThreadEnum 枚举器提供的线程的顺序的列表。  
   

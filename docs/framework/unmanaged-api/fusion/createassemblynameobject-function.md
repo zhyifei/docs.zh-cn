@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1412231b53763ce8e6c2400497396d2f178d8e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f7192b97b4fe1013c6ad4268f50288d6231e7f1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666288"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485585"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject 函数
 获取到的接口指针[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)实例，它表示具有指定名称的程序集的唯一标识。  
@@ -39,7 +39,7 @@ HRESULT CreateAssemblyNameObject (
  );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppAssemblyNameObj`  
  [out]返回`IAssemblyName`。  
   

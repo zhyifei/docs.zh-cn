@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b0f4b184a11e769291c64d83d11d57b5b3d19c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6590b455717dfdb3ea43e3622b494e2169047337
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498799"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469608"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromStream 方法
 获取指定的流中的程序集的规范的程序集标识数据。  
@@ -38,7 +38,7 @@ HRESULT GetBindingIdentityFromStream (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pStream`  
  [in]要计算的程序集流。  
   

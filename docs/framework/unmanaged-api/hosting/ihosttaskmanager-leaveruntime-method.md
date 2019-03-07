@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e22ed258390f7adc9bbf8cd425afe208b2f9b12c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2059657a6f4543ee29d795ecae7b93b72876fdf4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607038"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474626"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime 方法
 通知主机当前正在执行的任务是要保持公共语言运行时 (CLR)，然后输入非托管的代码。  
@@ -38,7 +38,7 @@ HRESULT LeaveRuntime (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `target`  
  [in]要调用的非托管函数的映射可移植可执行文件内的地址。  
   

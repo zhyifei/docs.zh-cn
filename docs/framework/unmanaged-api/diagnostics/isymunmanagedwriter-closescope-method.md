@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e33d69e319d7817a54dca76526b6c3ee9bb6384f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 250e58e4153edbee5c327ad46ecde73e94b83584
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729965"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468710"
 ---
 # <a name="isymunmanagedwriterclosescope-method"></a>ISymUnmanagedWriter::CloseScope 方法
 关闭当前词法范围。  
@@ -34,7 +34,7 @@ HRESULT CloseScope(
     [in] ULONG32 endOffset);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `endOffset`  
  [in]从以字节为单位的词法范围中最后一个指令的末尾的点的方法的开头的偏移量。  
   

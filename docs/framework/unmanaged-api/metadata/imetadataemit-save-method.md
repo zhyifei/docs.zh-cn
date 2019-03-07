@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a2be03e82d5be9bae64d7169709d16c40b66e37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90ddc540115a60154953ac6e8cb931103a650752
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511873"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492408"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save 方法
 将所有元数据保存到指定地址处的文件在当前范围内。  
@@ -36,7 +36,7 @@ HRESULT Save (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `wzFile`  
  [in]若要将保存到文件的名称。 如果此值为 null，内存中副本将保存到上次使用的位置。  
   

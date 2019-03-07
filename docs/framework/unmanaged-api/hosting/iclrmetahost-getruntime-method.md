@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 273891b0814d9383d9640c79f5df959f2b9398b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55fd6e6eec0c5107398bd0a7dda0281f69eb471b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707893"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492512"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime 方法
 获取[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)对应于特定版本的公共语言运行时 (CLR) 的接口。 此方法取代[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)函数与一起使用[STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)标志。  
@@ -37,7 +37,7 @@ HRESULT GetRuntime (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pwzVersion`  
  [in]在格式中的元数据中存储的.NET Framework 编译版本"v*A*。*B*[。*X*]"。 *一个*， *B*，和*X*是对应于主版本、 次版本和生成号的十进制数字。  
   
@@ -58,7 +58,7 @@ HRESULT GetRuntime (
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|E_POINTER|`pwzVersion` 或 `ppRuntime` 为 null。|  
+|E_POINTER|`pwzVersion` 或`ppRuntime`为 null。|  
   
 ## <a name="remarks"></a>备注  
  此方法始终与交互旧式界面如[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)如不推荐使用的接口和旧版函数`CorBindTo*`函数 (请参阅[不推荐使用 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)托管 API 在.NET Framework 2.0 中)。 即，使用传统的 API 加载的运行时是可见新的 API，并使用新的 API 加载的运行时对传统的 API 可见。 .  

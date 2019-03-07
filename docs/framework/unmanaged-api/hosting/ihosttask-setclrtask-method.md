@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bce823bd6a9ad26a705649a666aeb97dcfa0cdbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 239a73bac205f111f7ba299af7613c0fd78ab060
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636542"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466897"
 ---
 # <a name="ihosttasksetclrtask-method"></a>IHostTask::SetCLRTask 方法
 将相关联`ICLRTask`实例与当前[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例。  
@@ -35,7 +35,7 @@ HRESULT SetCLRTask (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pCLRTask`  
  [in]接口指针`ICLRTask`实例与当前相关联`IHostTask`实例。  
   

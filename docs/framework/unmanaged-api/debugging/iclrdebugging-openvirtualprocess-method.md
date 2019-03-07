@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cae30dbd1ae9081334e2ff890e1e4cd167a66e04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4ed9526dc38d72b01798215bc602fb8298c2bc3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586320"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478019"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 方法
 获取对应于在进程中加载了公共语言运行时 (CLR) 模块的 ICorDebugProcess 接口。  
@@ -41,7 +41,7 @@ HRESULT OpenVirtualProcess(
     [out] CLR_DEBUGGING_PROCESS_FLAGS * pdwFlags);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `moduleBaseAddress`  
  [in]目标进程中的模块基址。 如果指定的模块不是 CLR 模块，将返回 COR_E_NOT_CLR。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83bd2f3b0c1d58528624ac730756fb3bcdf4ba47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1c8f5ea20d00d692e0eea0cba93ec4e73038e8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744838"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497439"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile 方法
 获取程序集的原始.NET Framework 编译版本 （存储在元数据），给定其文件路径。 此方法取代[GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md)函数。  
@@ -37,7 +37,7 @@ HRESULT GetVersionFromFile (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pwzFilePath`  
  [in]完整的程序集文件路径。  
   
@@ -58,7 +58,7 @@ HRESULT GetVersionFromFile (
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|E_POINTER|`pwzbuffer` 或 `pcchBuffer` 为 null。|  
+|E_POINTER|`pwzbuffer` 或`pcchBuffer`为 null。|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|缓冲区因过小。|  
   
 ## <a name="requirements"></a>要求  

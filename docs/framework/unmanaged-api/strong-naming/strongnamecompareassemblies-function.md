@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e92a59e42674c184209e9c912e9bb2ead07bdaa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd3813d977f94db4168da8c888485b323f4072ad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515701"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471272"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 函数
 确定两个程序集是否仅是强名称签名不同。  
@@ -38,7 +38,7 @@ BOOLEAN StrongNameCompareAssemblies (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `wszAssembly1`  
  [in]第一个程序集的路径。  
   

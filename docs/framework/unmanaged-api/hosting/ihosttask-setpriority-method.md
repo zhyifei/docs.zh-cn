@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9335cb182355931b31040f164c9e51a67598f7b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a73982cb4cb7b6e80579714b32cf7aba620272af
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748033"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467098"
 ---
 # <a name="ihosttasksetpriority-method"></a>IHostTask::SetPriority 方法
 请求主机调整线程优先级级别表示由当前的任务[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例。  
@@ -35,7 +35,7 @@ HRESULT SetPriority (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `newPriority`  
  [in]一个整数，表示由当前任务的请求的线程优先级值`IHostTask`实例。  
   

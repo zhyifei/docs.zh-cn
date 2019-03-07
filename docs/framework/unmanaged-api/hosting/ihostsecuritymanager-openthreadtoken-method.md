@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 886e47028ec445b0a96af367afccd09c0759d0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e3cd977b7709f48ddf9938b9882a4ecb55cd6f0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727594"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484493"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken 方法
 将打开与当前执行线程关联的自由访问令牌。  
@@ -37,7 +37,7 @@ HRESULT OpenThreadToken (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwDesiredAccess`  
  [in]一个掩码，访问指定的值的线程令牌的访问权限的请求的类型。 在 Win32 中定义这些值`OpenThreadToken`函数。 请求的访问类型已得到协调对令牌的自由访问控制列表 (DACL) 来确定哪些类型的访问权限以授予或拒绝。  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f62ad2c9ec6e1c9672ac5c78e838e926b02359f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c529e77cad16f0bde12e34491829b58add17aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512367"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500368"
 ---
 # <a name="cordllmain-function"></a>_CorDllMain 函数
 初始化公共语言运行时 (CLR) 中，查找托管的入口点 DLL 程序集 CLR 头中，并开始执行。  
@@ -36,7 +36,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `hInst`  
  [in]已加载的模块实例句柄。  
   
@@ -54,7 +54,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
  操作系统加载程序调用此方法而不考虑 DLL 文件中指定的入口点。  
   
- 在 Windows 98、 Windows ME、 Windows NT 和 Windows 2000`_CorDllMain`函数间接通过调用 fixupin 操作系统加载程序。 在所有其他版本的 Windows，它是由操作系统加载程序直接进行调用。  
+`_CorDllMain`由操作系统加载程序直接调用函数。
   
  有关其他信息，请参阅中的备注部分[_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)主题。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 335940185324716e27a2efd06ebf714541c27f59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d246e3046cda9031689e625a0c3b054cbcf9f6e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568824"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465941"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>ICLRStrongName::StrongNameHashSize 方法
 使用指定的哈希算法获取哈希所需的缓冲区大小。  
@@ -36,7 +36,7 @@ HRESULT StrongNameHashSize (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ulHashAlg`  
  [in]用于计算缓冲区大小的哈希算法。  
   

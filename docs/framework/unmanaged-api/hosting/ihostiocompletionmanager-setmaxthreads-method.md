@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51ea342b59bc328a5c8e187dc55b68a8e8e8a7c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d867dcfc91a2da256e6857f1594701ab7d58c0b3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657384"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468645"
 ---
 # <a name="ihostiocompletionmanagersetmaxthreads-method"></a>IHostIoCompletionManager::SetMaxThreads 方法
 设置为 I/O 请求提供服务的最大主机分配的线程数。  
@@ -35,7 +35,7 @@ HRESULT SetMaxThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwMaxIoCompletionThreads`  
  [in]最大线程分配给 I/O 请求数。  
   

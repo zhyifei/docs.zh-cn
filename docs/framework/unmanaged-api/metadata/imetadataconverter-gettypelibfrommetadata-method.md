@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a6c39989a37f46d684c3a467d5e099ea7167185
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ab1d39ddb53e08e6fd36016f544162e2b11edb0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624127"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472065"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>IMetaDataConverter::GetTypeLibFromMetaData 方法
 获取一个指向`ITypeLib`实例，它表示具有指定的库和模块名称的类型库。  
@@ -37,7 +37,7 @@ HRESULT GetTypeLibFromMetaData (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `strModule`  
  [in]类型库的模块的名称。  
   

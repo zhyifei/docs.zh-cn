@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1705b9d77d0d91196201d713cceb0ccf0f8635a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e3ab185f1ca5571656ed9b4aa4352a007da4151
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728010"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484532"
 ---
 # <a name="icordebugmanagedcallbackevalexception-method"></a>ICorDebugManagedCallback::EvalException 方法
 通知调试器评估已终止，出现未经处理的异常。  
@@ -37,7 +37,7 @@ HRESULT EvalException (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pAppDomain`  
  [in]指向表示应用程序域计算已终止的 ICorDebugAppDomain 对象的指针。  
   

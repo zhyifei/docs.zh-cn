@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aebfd41a232a3284f79e4229a8845bf5a34f9d1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de333ea1ff376918df8069438ce275fde392ae0b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574763"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503107"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls 方法
 枚举表示指定类型的方法的 MethodBody 和 MethodDeclaration 标记。  
@@ -40,7 +40,7 @@ HRESULT EnumMethodImpls (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `phEnum`  
  [in、 out]一个指向枚举器。 对于首次调用此方法，这必须为 NULL。  
   

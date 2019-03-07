@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0702a7a58e6bd8c13254da5adce17c9adf6fa0cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcb94323c9950b8e1fe56ca3dae5f41a9c801907
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569449"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472117"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream 方法
 将更改从当前会话中编辑和继续保存到指定的流。  
@@ -36,7 +36,7 @@ HRESULT SaveDeltaToStream (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pIStream`  
  [in]指向要将更改保存到可写入的流的接口指针。  
   

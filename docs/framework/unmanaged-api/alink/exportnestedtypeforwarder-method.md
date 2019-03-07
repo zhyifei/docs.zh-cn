@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25b7a708bb2f16433d9de9b5fc1c178cb48874a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed615ea641293f8ea3fdf962e3f84d602934df60
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658463"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494683"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder 方法
 将嵌套类型的类型转发器添加到给定的程序集的 type 表。  
@@ -40,7 +40,7 @@ HRESULT ExportNestedTypeForwarder(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `AssemblyID`  
  要从导出的程序集的 ID。  
   

@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5869bf22c74a232f20fc49fe81a6a35c9738f1db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6327c9d7dee548957a569b587faefe3d6d9cb1b9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735008"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497764"
 ---
 # <a name="createassemblycache-function"></a>CreateAssemblyCache 函数
 获取一个指向到新[IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)实例，它表示全局程序集缓存。  
@@ -37,7 +37,7 @@ HRESULT CreateAssemblyCache (
  );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppAsmCache`  
  [out]返回`IAssemblyCache`指针。  
   

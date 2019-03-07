@@ -9,17 +9,16 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: b96ad3266ce32a26af573a3a35392518055df37f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3bcca1e7d031a9351881a5192370bead18aa7bb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376944"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467150"
 ---
 # <a name="opentype-font-features"></a>OpenType 字体功能
-本主题概述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体技术的一些主要功能。  
-  
 
+本主题概述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体技术的一些主要功能。  
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType 字体格式  
@@ -64,8 +63,7 @@ ms.locfileid: "57376944"
   
  以下文本显示 Palatino Linotype 字体的上标。  
   
- ![使用 OpenType 上标的文本](./media/opentypefont14.gif "opentypefont14")  
-使用 OpenType 上标的文本  
+ ![使用 OpenType 上标的文本](./media/opentype-font-features/opentype-superscripts.gif "使用 OpenType 上标的文本")  
   
  以下标记示例演示如何定义使用的属性的 Palatino Linotype 字体的上标<xref:System.Windows.Documents.Typography>对象。  
   
@@ -73,8 +71,7 @@ ms.locfileid: "57376944"
   
  以下文本显示 Palatino Linotype 字体的下标。  
   
- ![使用 OpenType 下标的文本](./media/opentypefont15.gif "opentypefont15")  
-使用 OpenType 下标的文本  
+ ![使用 OpenType 下标的文本](./media/opentype-font-features/opentype-subscripts.gif "使用 OpenType 下标的文本")  
   
  以下标记示例演示如何定义 Palatino Linotype 字体的使用的属性的下标<xref:System.Windows.Documents.Typography>对象。  
   
@@ -83,9 +80,8 @@ ms.locfileid: "57376944"
 ### <a name="decorative-uses-of-superscripts-and-subscripts"></a>上标和下标的修饰用法  
  也可使用上标和下标来营造混合大小写文本的修饰效果。 以下文本显示 Palatino Linotype 字体的上标和下标文本。 注意，大写字母不受影响。  
   
- ![使用 OpenType 上标和下标的文本](./media/opentypefont16.gif "opentypefont16")  
-使用 OpenType 上标和下标的文本  
-  
+ ![使用 OpenType 上标和下标的文本](./media/opentype-font-features/opentype-superscripts-subscripts.gif "使用 OpenType 上标和下标的文本")  
+
  以下标记示例演示如何定义上标和下标字体使用的属性的<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#14](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
@@ -96,8 +92,7 @@ ms.locfileid: "57376944"
   
  以下文本显示 Pescadero 字体的标准大写字母，其后接样式为“SmallCaps”和“AllSmallCaps”的字母。 本例中，对所有三个单词均使用相同的字体大小。  
   
- ![使用 OpenType 大写字母的文本](./media/opentypefont11.gif "opentypefont11")  
-使用 OpenType 大写字母的文本  
+ ![使用 OpenType 大写字母的文本](./media/opentype-font-features/opentype-capitals.gif "使用 OpenType 大写字母的文本")  
   
  以下标记示例演示如何定义使用的属性的 Pescadero 字体的大写字母<xref:System.Windows.Documents.Typography>对象。 使用“SmallCaps”格式时会忽略任何前导大写字母。  
   
@@ -106,8 +101,7 @@ ms.locfileid: "57376944"
 ### <a name="titling-capitals"></a>标题大写字母  
  标题大写字母权重和比例更小，外观比普通大写字母更加雅致。 标题大写字母通常用于作为标题的大号字体中。 以下文本显示 Pescadero 字体的普通大写字母和标题大写字母。 请注意第二行文本的宽度更窄。  
   
- ![使用 OpenType 标题大写字母的文本](./media/opentypefont20.gif "OpenTypeFont20")  
-使用 OpenType 标题大写字母的文本  
+ ![使用 OpenType 标题大写字母的文本](./media/opentype-font-features/opentype-titling-capitals.gif "使用 OpenType 标题大写字母的文本")  
   
  以下标记示例演示如何定义 Pescadero 字体使用的属性的标题大写字母<xref:System.Windows.Documents.Typography>对象。  
   
@@ -116,9 +110,8 @@ ms.locfileid: "57376944"
 ### <a name="capital-spacing"></a>大写字母间距  
  大写字母间距功能让你可以在使用全大写字母文本时提供更宽的间距。 大写字母通常设计为与小写字母混合使用。 大写字母和小写字母之间看起来比较美观的间距在使用全大写字母时可能会显得过紧。 以下文本显示 Pescadero 字体的普通间距和大写字母间距。  
   
- ![使用 OpenType 大写字母间距的文本](./media/opentypefont21.gif "OpenTypeFont21")  
-使用 OpenType 大写字母间距的文本  
-  
+ ![使用 OpenType 大写字母间距的文本](./media/opentype-font-features/opentype-capital-spacing.gif "使用 OpenType 大写字母间距的文本 ")  
+ 
  以下标记示例演示如何定义使用的属性的 Pescadero 字体的大写字母间距<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet18](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
@@ -137,8 +130,7 @@ ms.locfileid: "57376944"
   
  以下文本显示 Pericles 字体的标准连字字形。  
   
- ![使用 OpenType 标准连字的文本](./media/opentypefont04.gif "opentypefont04")  
-使用 OpenType 标准连字的文本  
+ ![使用 OpenType 标准连字的文本](./media/opentype-font-features/opentype-standard-ligatures.gif "使用 OpenType 标准连字的文本")  
   
  以下标记示例演示如何定义使用的属性的 Pericles 字体的标准连字字形<xref:System.Windows.Documents.Typography>对象。  
   
@@ -146,8 +138,7 @@ ms.locfileid: "57376944"
   
  以下文本显示 Pericles 字体的自由连字字形。  
   
- ![使用 OpenType 自由连字的文本](./media/opentypefont05.gif "opentypefont05")  
-使用 OpenType 自由连字的文本  
+ ![使用 OpenType 自由连字的文本](./media/opentype-font-features/opentype-discretionary-ligatures.gif "使用 OpenType 自由连字的文本")  
   
  以下标记示例演示如何定义使用的属性的 Pericles 字体的自由连字字形<xref:System.Windows.Documents.Typography>对象。  
   
@@ -155,14 +146,12 @@ ms.locfileid: "57376944"
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体默认启用标准连字。 例如，如果使用 Palatino Linotype 字体，则标准连字“fi”、“ff”和“fl”显示为组合字符字形。 请注意，每个标准连字的字符对之间彼此相连。  
   
- ![使用 OpenType 标准连字的文本](./media/opentypefont06.gif "opentypefont06")  
-使用 OpenType 标准连字的文本  
-  
+ ![使用 Palatino Linotype 使用 OpenType 标准连字的文本](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "使用 Palatino Linotype 使用 OpenType 标准连字的文本")    
+   
  但是，可禁用标准连字功能，从而使“ff”等标准连字显示为两个单独的字形，而不显示为一个组合字符字形。  
   
- ![文本使用禁用的 OpenType 标准连字](./media/opentypefont07.gif "opentypefont07")  
-使用禁用的 OpenType 标准连字的文本  
-  
+ ![文本使用禁用的 OpenType 标准连字](./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "文本使用禁用的 OpenType 标准连字")  
+    
  以下标记示例演示如何禁用 Palatino Linotype 字体的使用的属性的标准连字字形<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#6](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
@@ -171,13 +160,12 @@ ms.locfileid: "57376944"
 ## <a name="swashes"></a>花体  
  花体是使用精美修饰的装饰性字形，通常与书法相关。 以下文本显示 Pescadero 字体的标准和花体字形。  
   
- ![使用 OpenType 标准和花体字形的文本](./media/opentypefont08.gif "opentypefont08")  
-使用 OpenType 标准和花体连字的文本  
+ ![使用 OpenType 标准和花体字形的文本](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "使用 OpenType 标准和花体字形的文本")  
+  
   
  花体通常用作事件公告等简短文章中的修饰元素。 以下文本使用花体强调事件名称的大写字母。  
   
- ![使用 OpenType 连接形式花体的文本](./media/opentypefont09.gif "opentypefont09")  
-使用 OpenType 花体的文本  
+ ![使用 OpenType 连接形式花体的文本](./media/opentype-font-features/opentype-swashes.gif "使用 OpenType 连接形式花体的文本")  
   
  以下标记示例演示如何定义字体花体，使用的属性<xref:System.Windows.Documents.Typography>对象。  
   
@@ -186,8 +174,7 @@ ms.locfileid: "57376944"
 ### <a name="contextual-swashes"></a>连接形式花体  
  花体字形的某些组合可能导致文本外观欠佳，例如相邻字母的下行处出现重叠。 通过连接形式花体，可使用能生成更佳外观的替代花体字形。 以下文本显示同一单词应用连接形式花体前后的外观。  
   
- ![使用 OpenType 花体的文本](./media/opentypefont19.gif "OpenTypeFont19")  
-使用 OpenType 连接形式花体的文本  
+ ![使用 OpenType 花体的文本](./media/opentype-font-features/opentype-contextual-swashes.gif "使用 OpenType 花体的文本")  
   
  以下标记示例演示如何定义 Pescadero 字体使用的属性的上下文花体<xref:System.Windows.Documents.Typography>对象。  
   
@@ -197,13 +184,12 @@ ms.locfileid: "57376944"
 ## <a name="alternates"></a>备用项  
  备用项是可替代标准字形的字形。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体（例如以下示例中使用的 Pericles 字体）可包含用于塑造不同文本外观的备用字形。 以下文本显示 Pericles 字体的标准字形。  
   
- ![使用 OpenType 标准字形的文本](./media/opentypefont01.gif "opentypefont01")  
-使用 OpenType 标准字形的文本  
+ ![使用 OpenType 标准字形的文本](./media/opentype-font-features/opentype-standard-glyphs.gif "使用 OpenType 标准字形的文本")  
+  
   
  Pericles [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体包含其他字形，可为标准自行集提供样式备用项。 以下文本显示样式备用字形。  
   
- ![使用 OpenType 样式备用字形的文本](./media/opentypefont02.gif "opentypefont02")  
-使用 OpenType 样式备用标志符号的文本  
+ ![使用 OpenType 样式备用字形的文本](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "使用 OpenType 样式备用字形的文本")  
   
  以下标记示例演示如何定义 Pericles 字体的使用的属性的样式备用字形<xref:System.Windows.Documents.Typography>对象。  
   
@@ -211,9 +197,8 @@ ms.locfileid: "57376944"
   
  以下文本显示 Pericles 字体的几种其他样式备用字形。  
   
- ![使用 OpenType 样式备用字形的文本](./media/opentypefont03.gif "opentypefont03")  
-使用 OpenType 样式备用标志符号的文本  
-  
+ ![使用 OpenType 样式备用字形的 Pericles 字体的文本](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "Pericles 字体的使用 OpenType 样式备用字形的文本")
+
  以下标记示例演示如何定义其他样式备用字形。  
   
  [!code-xaml[OpenTypeFontSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#3)]  
@@ -221,8 +206,7 @@ ms.locfileid: "57376944"
 ### <a name="random-contextual-alternates"></a>随机备用连接形式  
  随机备用连接形式为单个字符提供多种备用字形。 实现脚本类型字体时，此功能可通过使用一组随机选择的外观稍有差异的字形来模拟手写内容。 以下文本使用 Lindsey 字体的随机备用连接形式。 请注意字母“a”外观稍有变化  
   
- ![使用 OpenType 随机备用连接形式的文本](./media/opentypefont23.gif "OpenTypeFont23")  
-使用 OpenType 随机备用连接形式的文本  
+ ![使用 OpenType 随机备用连接形式的文本](./media/opentype-font-features/opentype-random-contextual-alternates.gif "使用 OpenType 随机备用连接形式的文本")  
   
  以下标记示例演示如何定义 Lindsey 字体使用的属性的随机备用<xref:System.Windows.Documents.Typography>对象。  
   
@@ -231,9 +215,8 @@ ms.locfileid: "57376944"
 ### <a name="historical-forms"></a>历史形式  
  历史形式指过去常见的版式约定。 以下文本使用 Palatino Linotype 字体的一种历史字形形式显示短语“Boston, Massachusetts”。  
   
- ![使用 OpenType 历史形式的文本](./media/opentypefont10.gif "opentypefont10")  
-使用 OpenType 历史形式的文本  
-  
+ ![使用 OpenType 历史形式的文本](./media/opentype-font-features/opentype-historical-forms.gif "使用 OpenType 历史形式的文本")  
+   
  以下标记示例演示如何定义 Palatino Linotype 字体的使用的属性的历史记录格式<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
@@ -247,9 +230,8 @@ ms.locfileid: "57376944"
   
  以下文本显示 Palatino Linotype 字体的分数样式。  
   
- ![文本使用 OpenType 横式分数和竖式](./media/opentypefont12.gif "opentypefont12")  
-使用 OpenType 横式分数和竖式分数的文本  
-  
+ ![文本使用 OpenType 横式分数和竖式](./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "文本使用 OpenType 横式分数和竖式")  
+   
  以下标记示例演示如何定义 Palatino Linotype 字体的使用的属性的分数样式<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
@@ -257,13 +239,11 @@ ms.locfileid: "57376944"
 ### <a name="old-style-numerals"></a>旧样式数字  
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体支持旧样式数字格式。 此格式对于显示不再是标准样式的数字非常有用。 以下文本以 Palatino Linotype 字体的标准和旧样式数字格式显示 18 世纪日期。  
   
- ![使用 OpenType 旧样式数字的文本](./media/opentypefont24.gif "OpenTypeFont24")  
-使用 OpenType 旧样式数字的文本  
-  
+ ![使用 OpenType 旧样式数字的文本](./media/opentype-font-features/opentype-old-style-numerals.gif "使用 OpenType 旧样式数字的文本")  
+    
  以下文本显示 Palatino Linotype 字体的标准数字，后跟旧样式数字。  
   
- ![使用 OpenType 旧样式数字集的文本](./media/opentypefont13.gif "opentypefont13")  
-使用 OpenType 旧样式数字集的文本  
+ ![使用 OpenType 旧样式数字集的文本](./media/opentype-font-features/opentype-old-style-numeral-sets.gif "使用 OpenType 旧样式数字集的文本")  
   
  以下标记示例演示如何定义 Palatino Linotype 字体的使用的属性的旧样式数字<xref:System.Windows.Documents.Typography>对象。  
   
@@ -274,9 +254,8 @@ ms.locfileid: "57376944"
   
  以下文本使用 Miramonte 字体显示第一列中的两个表格式数字。 请注意数字“5”和“1”之间的宽度差异。 第二列显示相同的两个数值，并通过使用表格式数字功能调整其宽度。  
   
- ![使用 OpenType 比例数字和表格式数字的文本](./media/opentypefont22.gif "OpenTypeFont22")  
-使用 OpenType 比例数字和表格式数字的文本  
-  
+ ![使用 OpenType 比例数字和表格式数字的文本](./media/opentype-font-features/opentype-proportional-tabular-figures.gif "使用 OpenType 比例数字和表格式数字的文本")  
+    
  以下标记示例演示如何定义比例数字和表格式数字 Miramonte 字体使用的属性的<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
@@ -286,9 +265,8 @@ ms.locfileid: "57376944"
   
  以下文本显示使用 Miramonte 字体的订单标识符。 第一行使用标准数字。 第二行使用斜线零数字，以便更易于与大写字母“O”进行区分。  
   
- ![文本使用 OpenType 斜线零数字](./media/opentypefont17.gif "OpenTypeFont17")  
-使用 OpenType 斜线零数字的文本  
-  
+ ![文本使用 OpenType 斜线零数字](./media/opentype-font-features/opentype-slashed-zero-numerals.gif "文本使用 OpenType 斜线零数字")  
+    
  以下标记示例演示如何定义使用的属性的 Miramonte 字体的斜线零数字<xref:System.Windows.Documents.Typography>对象。  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet15](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
@@ -299,9 +277,8 @@ ms.locfileid: "57376944"
   
  以下文本显示 Pescadero 字体的标准大写字母，其后接样式为“SmallCaps”和“AllSmallCaps”的字母。 本例中，对所有三个单词均使用相同的字体大小。  
   
- ![使用 OpenType 大写字母的文本](./media/opentypefont11.gif "opentypefont11")  
-使用 OpenType 大写字母的文本  
-  
+ ![使用 OpenType 大写字母的文本](./media/opentype-font-features/opentype-capitals.gif "使用 OpenType 大写字母的文本")  
+    
  以下标记示例演示如何定义使用的属性的 Pescadero 字体的大写字母<xref:System.Windows.Documents.Typography>对象。 使用“SmallCaps”格式时会忽略任何前导大写字母。  
   
  [!code-xaml[OpenTypeFontSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  

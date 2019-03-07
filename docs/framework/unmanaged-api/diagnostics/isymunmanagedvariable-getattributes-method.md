@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d418a1088f9ee23a088ab4c8246810d2c9bee4fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1585ccfa560d31fc32dce2f39dd525c51711797
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574334"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466331"
 ---
 # <a name="isymunmanagedvariablegetattributes-method"></a>ISymUnmanagedVariable::GetAttributes 方法
 获取此变量的特性标志。  
@@ -34,7 +34,7 @@ HRESULT GetAttributes(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pRetVal`  
  [out]一个指向`ULONG32`接收属性。 返回的值将是中定义的值之一[CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)枚举。  
   

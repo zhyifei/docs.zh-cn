@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7914257d167d0f54d3625d252076576e5e40296b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0fc82ad87721c31337002dcfc5bbfdb9300afb31
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634931"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479735"
 ---
 # <a name="imetadataassemblyimportgetassemblyfromscope-method"></a>IMetaDataAssemblyImport::GetAssemblyFromScope 方法
 获取一个指向对程序集在当前范围内。  
@@ -35,7 +35,7 @@ HRESULT GetAssemblyFromScope (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ptkAssembly`  
  [out]一个指向检索到的`mdAssembly`令牌，用于标识程序集。  
   

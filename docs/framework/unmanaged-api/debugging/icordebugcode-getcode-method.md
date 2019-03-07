@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d057032f2a46ef29a903ae21ab13af02f9d657f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b69970d50652da203ecf1ae6fe8d604ccee06cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728760"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483570"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode 方法
 获取指定的函数的反汇编格式的所有代码。 .NET Framework 2.0 版中，此方法已弃用。 使用[ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)相反。  
@@ -40,7 +40,7 @@ HRESULT GetCode (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `startOffset`  
  [in]该函数的开头的偏移量。  
   

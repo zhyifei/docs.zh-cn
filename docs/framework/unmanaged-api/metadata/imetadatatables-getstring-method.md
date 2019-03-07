@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c457d8a6b3ab187b7d02c9c9be800c4ef1f0f58c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c71efb9156c503ac88ba558ad7a9f757b608bf40
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537980"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466149"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString 方法
 获取当前引用作用域中从表的列的指定索引处的字符串。  
@@ -36,7 +36,7 @@ HRESULT GetString (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ixString`  
  [in]若要开始搜索下一个值处的索引。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33cffb086609432f5207310fc565bd34cccd7642
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93deb2d0457fef6f190d90cc4084b9bb5997680d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698639"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488478"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask 方法
 主机创建新的任务的请求。  
@@ -38,7 +38,7 @@ HRESULT CreateTask (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `stacksize`  
  [in]请求的大小，以字节为单位的所请求的堆栈或事件的默认大小为 0 （零）。  
   

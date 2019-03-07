@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 164cdc5c04a55e9c33dda51e10dfb37f38ec1b6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16984fe108abd1cfc01c471bcfc091a805b28e83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746539"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501498"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize 方法
 获取当前作用域中的程序集和其元数据的估计二进制大小。  
@@ -36,7 +36,7 @@ HRESULT GetSaveSize (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `fSave`  
  [in]值为[CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md)枚举，用于指定是否要获取的准确或近似大小。 只有三个值都有效： cssAccurate，cssQuick，和 cssDiscardTransientCAs:  
   

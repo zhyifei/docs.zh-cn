@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3d714e83eb0b75b31b08e7a356eb9ea699e1794
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e15b1ab33dd6ab5e9cd9887000c0f91e0bd4a9a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689190"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496646"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime 函数
 使非托管的宿主能够将公共语言运行时 (CLR) 加载到进程中。  
@@ -41,7 +41,7 @@ HRESULT CorBindToRuntime (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pwszVersion`  
  [in]想要加载的 CLR 版本描述的字符串。  
   

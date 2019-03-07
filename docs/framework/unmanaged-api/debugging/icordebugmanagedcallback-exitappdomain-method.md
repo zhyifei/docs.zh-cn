@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baeac4ee3e4a22b023420caa7caffa238ff5a5c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1b6d23ab5d773f6f25becefd45895c365271e6a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696108"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476186"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>ICorDebugManagedCallback::ExitAppDomain 方法
 通知调试器已退出应用程序域。  
@@ -36,7 +36,7 @@ HRESULT ExitAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pProcess`  
  [in]指向表示包含给定的应用程序域的流程 ICorDebugProcess 对象的指针。  
   

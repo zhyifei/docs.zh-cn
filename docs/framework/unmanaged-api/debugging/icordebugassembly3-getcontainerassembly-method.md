@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c01898bcbd76f7e6de9445d5d1f511203c100ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ddae1da8b07afff6ade28fb6dcae942cddd8c2e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585180"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471610"
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>ICorDebugAssembly3::GetContainerAssembly 方法
 返回该 `ICorDebugAssembly3` 对象的容器程序集。  
@@ -22,7 +22,7 @@ HRESULT GetContainerAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppAssembly`  
  一个表示容器程序集的 icor 调试程序集对象的地址的指针或**null**如果方法调用失败。  
   
