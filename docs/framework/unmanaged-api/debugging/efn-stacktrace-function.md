@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e270be8f16de9558e5d5440d621056a3114967
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3187809fadb275ed54a450f456d98d140d1100c9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636386"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485882"
 ---
-# <a name="efnstacktrace-function"></a><span data-ttu-id="76837-102">_EFN_StackTrace 函数</span><span class="sxs-lookup"><span data-stu-id="76837-102">_EFN_StackTrace Function</span></span>
-<span data-ttu-id="76837-103">提供托管堆栈跟踪的文本表示形式以及 `CONTEXT` 记录的数组，其中每项对应非托管代码和托管代码之间的每个转换。</span><span class="sxs-lookup"><span data-stu-id="76837-103">Provides a text representation of a managed stack trace and an array of `CONTEXT` records, one for each transition between unmanaged and managed code.</span></span>  
+# <a name="efnstacktrace-function"></a><span data-ttu-id="d732d-102">_EFN_StackTrace 函数</span><span class="sxs-lookup"><span data-stu-id="d732d-102">_EFN_StackTrace Function</span></span>
+<span data-ttu-id="d732d-103">提供托管堆栈跟踪的文本表示形式以及 `CONTEXT` 记录的数组，其中每项对应非托管代码和托管代码之间的每个转换。</span><span class="sxs-lookup"><span data-stu-id="d732d-103">Provides a text representation of a managed stack trace and an array of `CONTEXT` records, one for each transition between unmanaged and managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="76837-104">语法</span><span class="sxs-lookup"><span data-stu-id="76837-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d732d-104">语法</span><span class="sxs-lookup"><span data-stu-id="d732d-104">Syntax</span></span>  
   
 ```  
 HRESULT CALLBACK _EFN_StackTrace(  
@@ -40,42 +40,42 @@ HRESULT CALLBACK _EFN_StackTrace(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="76837-105">参数</span><span class="sxs-lookup"><span data-stu-id="76837-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d732d-105">参数</span><span class="sxs-lookup"><span data-stu-id="d732d-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="76837-106">[in]正在调试客户端。</span><span class="sxs-lookup"><span data-stu-id="76837-106">[in] The client being debugged.</span></span>  
+ <span data-ttu-id="d732d-106">[in]正在调试客户端。</span><span class="sxs-lookup"><span data-stu-id="d732d-106">[in] The client being debugged.</span></span>  
   
  `wszTextOut`  
- <span data-ttu-id="76837-107">[out]堆栈跟踪的文本表示形式。</span><span class="sxs-lookup"><span data-stu-id="76837-107">[out] The text representation of the stack trace.</span></span>  
+ <span data-ttu-id="d732d-107">[out]堆栈跟踪的文本表示形式。</span><span class="sxs-lookup"><span data-stu-id="d732d-107">[out] The text representation of the stack trace.</span></span>  
   
  `puiTextLength`  
- <span data-ttu-id="76837-108">[out]指向中的字符数的`wszTextOut`。</span><span class="sxs-lookup"><span data-stu-id="76837-108">[out] A pointer to the number of characters in `wszTextOut`.</span></span>  
+ <span data-ttu-id="d732d-108">[out]指向中的字符数的`wszTextOut`。</span><span class="sxs-lookup"><span data-stu-id="d732d-108">[out] A pointer to the number of characters in `wszTextOut`.</span></span>  
   
  `pTransitionContexts`  
- <span data-ttu-id="76837-109">[out]转换上下文的数组。</span><span class="sxs-lookup"><span data-stu-id="76837-109">[out] The array of transition contexts.</span></span>  
+ <span data-ttu-id="d732d-109">[out]转换上下文的数组。</span><span class="sxs-lookup"><span data-stu-id="d732d-109">[out] The array of transition contexts.</span></span>  
   
  `puiTransitionContextCount`  
- <span data-ttu-id="76837-110">[out]一个指向数组中的转换上下文的数目。</span><span class="sxs-lookup"><span data-stu-id="76837-110">[out] A pointer to the number of transition contexts in the array.</span></span>  
+ <span data-ttu-id="d732d-110">[out]一个指向数组中的转换上下文的数目。</span><span class="sxs-lookup"><span data-stu-id="d732d-110">[out] A pointer to the number of transition contexts in the array.</span></span>  
   
  `uiSizeOfContext`  
- <span data-ttu-id="76837-111">[in]上下文结构的大小。</span><span class="sxs-lookup"><span data-stu-id="76837-111">[in] The size of the context structure.</span></span>  
+ <span data-ttu-id="d732d-111">[in]上下文结构的大小。</span><span class="sxs-lookup"><span data-stu-id="d732d-111">[in] The size of the context structure.</span></span>  
   
  `Flags`  
- <span data-ttu-id="76837-112">[in]设置为 0 或 SOS_STACKTRACE_SHOWADDRESSES (0x01) 以显示 EBP 寄存器和 enter 堆栈指针 (ESP) 前面每个`module!functionname`行。</span><span class="sxs-lookup"><span data-stu-id="76837-112">[in] Set to either 0 or SOS_STACKTRACE_SHOWADDRESSES (0x01) to show the EBP register and the enter stack pointer (ESP) in front of each `module!functionname` line.</span></span>  
+ <span data-ttu-id="d732d-112">[in]设置为 0 或 SOS_STACKTRACE_SHOWADDRESSES (0x01) 以显示 EBP 寄存器和 enter 堆栈指针 (ESP) 前面每个`module!functionname`行。</span><span class="sxs-lookup"><span data-stu-id="d732d-112">[in] Set to either 0 or SOS_STACKTRACE_SHOWADDRESSES (0x01) to show the EBP register and the enter stack pointer (ESP) in front of each `module!functionname` line.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="76837-113">备注</span><span class="sxs-lookup"><span data-stu-id="76837-113">Remarks</span></span>  
- <span data-ttu-id="76837-114">`_EFN_StackTrace`结构可从 WinDbg 编程接口调用。</span><span class="sxs-lookup"><span data-stu-id="76837-114">The `_EFN_StackTrace` structure can be called from a WinDbg programmatic interface.</span></span> <span data-ttu-id="76837-115">使用参数，如下所示：</span><span class="sxs-lookup"><span data-stu-id="76837-115">Parameters are used as follows:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d732d-113">备注</span><span class="sxs-lookup"><span data-stu-id="d732d-113">Remarks</span></span>  
+ <span data-ttu-id="d732d-114">`_EFN_StackTrace`结构可从 WinDbg 编程接口调用。</span><span class="sxs-lookup"><span data-stu-id="d732d-114">The `_EFN_StackTrace` structure can be called from a WinDbg programmatic interface.</span></span> <span data-ttu-id="d732d-115">使用参数，如下所示：</span><span class="sxs-lookup"><span data-stu-id="d732d-115">Parameters are used as follows:</span></span>  
   
--   <span data-ttu-id="76837-116">如果`wszTextOut`为 null，`puiTextLength`是不为 null，该函数将返回的字符串长度以`puiTextLength`。</span><span class="sxs-lookup"><span data-stu-id="76837-116">If `wszTextOut` is null and `puiTextLength` is not null, the function returns the string length in `puiTextLength`.</span></span>  
+-   <span data-ttu-id="d732d-116">如果`wszTextOut`为 null，`puiTextLength`是不为 null，该函数将返回的字符串长度以`puiTextLength`。</span><span class="sxs-lookup"><span data-stu-id="d732d-116">If `wszTextOut` is null and `puiTextLength` is not null, the function returns the string length in `puiTextLength`.</span></span>  
   
--   <span data-ttu-id="76837-117">如果`wszTextOut`是不为 null，函数将存储中的文本`wszTextOut`最多所指示的位置`puiTextLength`。</span><span class="sxs-lookup"><span data-stu-id="76837-117">If `wszTextOut` is not null, the function stores text in `wszTextOut` up to the location indicated by `puiTextLength`.</span></span> <span data-ttu-id="76837-118">成功返回是否有足够的空间中的缓冲区，则返回 E_OUTOFMEMORY 如果缓冲区不够长。</span><span class="sxs-lookup"><span data-stu-id="76837-118">It returns successfully if there was enough room in the buffer, or returns E_OUTOFMEMORY if the buffer was not long enough.</span></span>  
+-   <span data-ttu-id="d732d-117">如果`wszTextOut`是不为 null，函数将存储中的文本`wszTextOut`最多所指示的位置`puiTextLength`。</span><span class="sxs-lookup"><span data-stu-id="d732d-117">If `wszTextOut` is not null, the function stores text in `wszTextOut` up to the location indicated by `puiTextLength`.</span></span> <span data-ttu-id="d732d-118">成功返回是否有足够的空间中的缓冲区，则返回 E_OUTOFMEMORY 如果缓冲区不够长。</span><span class="sxs-lookup"><span data-stu-id="d732d-118">It returns successfully if there was enough room in the buffer, or returns E_OUTOFMEMORY if the buffer was not long enough.</span></span>  
   
--   <span data-ttu-id="76837-119">如果该函数的转换部分则将忽略`pTransitionContexts`和`puiTransitionContextCount`都为 null。</span><span class="sxs-lookup"><span data-stu-id="76837-119">The transition portion of the function is ignored if `pTransitionContexts` and `puiTransitionContextCount` are both null.</span></span> <span data-ttu-id="76837-120">在这种情况下，该函数提供了只有函数名称的文本输出的调用方。</span><span class="sxs-lookup"><span data-stu-id="76837-120">In this case, the function provides callers with text output of only the function names.</span></span>  
+-   <span data-ttu-id="d732d-119">如果该函数的转换部分则将忽略`pTransitionContexts`和`puiTransitionContextCount`都为 null。</span><span class="sxs-lookup"><span data-stu-id="d732d-119">The transition portion of the function is ignored if `pTransitionContexts` and `puiTransitionContextCount` are both null.</span></span> <span data-ttu-id="d732d-120">在这种情况下，该函数提供了只有函数名称的文本输出的调用方。</span><span class="sxs-lookup"><span data-stu-id="d732d-120">In this case, the function provides callers with text output of only the function names.</span></span>  
   
--   <span data-ttu-id="76837-121">如果`pTransitionContexts`为 null，`puiTransitionContextCount`是不为 null，则该函数将返回所需数量的上下文中的条目`puiTransitionContextCount`。</span><span class="sxs-lookup"><span data-stu-id="76837-121">If `pTransitionContexts` is null and `puiTransitionContextCount` is not null, the function returns the necessary number of context entries in `puiTransitionContextCount`.</span></span>  
+-   <span data-ttu-id="d732d-121">如果`pTransitionContexts`为 null，`puiTransitionContextCount`是不为 null，则该函数将返回所需数量的上下文中的条目`puiTransitionContextCount`。</span><span class="sxs-lookup"><span data-stu-id="d732d-121">If `pTransitionContexts` is null and `puiTransitionContextCount` is not null, the function returns the necessary number of context entries in `puiTransitionContextCount`.</span></span>  
   
--   <span data-ttu-id="76837-122">如果`pTransitionContexts`是不为 null，则该函数将它作为数组的长度结构`puiTransitionContextCount`。</span><span class="sxs-lookup"><span data-stu-id="76837-122">If `pTransitionContexts` is not null, the function treats it as an array of structures of length `puiTransitionContextCount`.</span></span> <span data-ttu-id="76837-123">通过给定结构大小`uiSizeOfContext`，并且必须是大小[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)或`CONTEXT`体系结构。</span><span class="sxs-lookup"><span data-stu-id="76837-123">The structure size is given by `uiSizeOfContext`, and must be the size of [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) or `CONTEXT` for the architecture.</span></span>  
+-   <span data-ttu-id="d732d-122">如果`pTransitionContexts`是不为 null，则该函数将它作为数组的长度结构`puiTransitionContextCount`。</span><span class="sxs-lookup"><span data-stu-id="d732d-122">If `pTransitionContexts` is not null, the function treats it as an array of structures of length `puiTransitionContextCount`.</span></span> <span data-ttu-id="d732d-123">通过给定结构大小`uiSizeOfContext`，并且必须是大小[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)或`CONTEXT`体系结构。</span><span class="sxs-lookup"><span data-stu-id="d732d-123">The structure size is given by `uiSizeOfContext`, and must be the size of [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) or `CONTEXT` for the architecture.</span></span>  
   
--   <span data-ttu-id="76837-124">`wszTextOut` 采用以下格式：</span><span class="sxs-lookup"><span data-stu-id="76837-124">`wszTextOut` is written in the following format:</span></span>  
+-   <span data-ttu-id="d732d-124">`wszTextOut` 采用以下格式：</span><span class="sxs-lookup"><span data-stu-id="d732d-124">`wszTextOut` is written in the following format:</span></span>  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -84,22 +84,22 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
--   <span data-ttu-id="76837-125">如果以十六进制表示的偏移量为 0x0，写入没有偏移量。</span><span class="sxs-lookup"><span data-stu-id="76837-125">If the offset in hex is 0x0, no offset is written.</span></span>  
+-   <span data-ttu-id="d732d-125">如果以十六进制表示的偏移量为 0x0，写入没有偏移量。</span><span class="sxs-lookup"><span data-stu-id="d732d-125">If the offset in hex is 0x0, no offset is written.</span></span>  
   
--   <span data-ttu-id="76837-126">如果没有任何托管的代码的线程上当前上下文中，该函数将返回 SOS_E_NOMANAGEDCODE。</span><span class="sxs-lookup"><span data-stu-id="76837-126">If there is no managed code on the thread currently in context, the function returns SOS_E_NOMANAGEDCODE.</span></span>  
+-   <span data-ttu-id="d732d-126">如果没有任何托管的代码的线程上当前上下文中，该函数将返回 SOS_E_NOMANAGEDCODE。</span><span class="sxs-lookup"><span data-stu-id="d732d-126">If there is no managed code on the thread currently in context, the function returns SOS_E_NOMANAGEDCODE.</span></span>  
   
--   <span data-ttu-id="76837-127">`Flags`参数为 0 或 SOS_STACKTRACE_SHOWADDRESSES 若要查看每个前面的 EBP 和 ESP`module!functionname`行。</span><span class="sxs-lookup"><span data-stu-id="76837-127">The `Flags` parameter is either 0 or SOS_STACKTRACE_SHOWADDRESSES to see EBP and ESP in front of each `module!functionname` line.</span></span> <span data-ttu-id="76837-128">默认情况下，它为 0。</span><span class="sxs-lookup"><span data-stu-id="76837-128">By default, it is 0.</span></span>  
+-   <span data-ttu-id="d732d-127">`Flags`参数为 0 或 SOS_STACKTRACE_SHOWADDRESSES 若要查看每个前面的 EBP 和 ESP`module!functionname`行。</span><span class="sxs-lookup"><span data-stu-id="d732d-127">The `Flags` parameter is either 0 or SOS_STACKTRACE_SHOWADDRESSES to see EBP and ESP in front of each `module!functionname` line.</span></span> <span data-ttu-id="d732d-128">默认情况下，它为 0。</span><span class="sxs-lookup"><span data-stu-id="d732d-128">By default, it is 0.</span></span>  
   
     ```  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
-## <a name="requirements"></a><span data-ttu-id="76837-129">要求</span><span class="sxs-lookup"><span data-stu-id="76837-129">Requirements</span></span>  
- <span data-ttu-id="76837-130">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="76837-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d732d-129">要求</span><span class="sxs-lookup"><span data-stu-id="d732d-129">Requirements</span></span>  
+ <span data-ttu-id="d732d-130">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d732d-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="76837-131">**标头：** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="76837-131">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="d732d-131">**标头：** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="d732d-131">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="76837-132">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76837-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d732d-132">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d732d-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="76837-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="76837-133">See also</span></span>
-- [<span data-ttu-id="76837-134">调试全局静态函数</span><span class="sxs-lookup"><span data-stu-id="76837-134">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="d732d-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="d732d-133">See also</span></span>
+- [<span data-ttu-id="d732d-134">调试全局静态函数</span><span class="sxs-lookup"><span data-stu-id="d732d-134">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

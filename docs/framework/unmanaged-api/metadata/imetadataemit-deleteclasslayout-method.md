@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ad52580fef538a6878efb0febe41dec7c9de1de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f44b7e073840d4d425cfc91c3156293cee07b4ab
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520628"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501461"
 ---
-# <a name="imetadataemitdeleteclasslayout-method"></a><span data-ttu-id="2b4b0-102">IMetaDataEmit::DeleteClassLayout 方法</span><span class="sxs-lookup"><span data-stu-id="2b4b0-102">IMetaDataEmit::DeleteClassLayout Method</span></span>
-<span data-ttu-id="2b4b0-103">销毁指定的标记所表示的类型的类布局的元数据签名。</span><span class="sxs-lookup"><span data-stu-id="2b4b0-103">Destroys the class layout metadata signature for the type represented by the specified token.</span></span>  
+# <a name="imetadataemitdeleteclasslayout-method"></a><span data-ttu-id="e335a-102">IMetaDataEmit::DeleteClassLayout 方法</span><span class="sxs-lookup"><span data-stu-id="e335a-102">IMetaDataEmit::DeleteClassLayout Method</span></span>
+<span data-ttu-id="e335a-103">销毁指定的标记所表示的类型的类布局的元数据签名。</span><span class="sxs-lookup"><span data-stu-id="e335a-103">Destroys the class layout metadata signature for the type represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b4b0-104">语法</span><span class="sxs-lookup"><span data-stu-id="2b4b0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e335a-104">语法</span><span class="sxs-lookup"><span data-stu-id="e335a-104">Syntax</span></span>  
   
 ```  
 HRESULT DeleteClassLayout (  
@@ -35,19 +35,19 @@ HRESULT DeleteClassLayout (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2b4b0-105">参数</span><span class="sxs-lookup"><span data-stu-id="2b4b0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e335a-105">参数</span><span class="sxs-lookup"><span data-stu-id="e335a-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="2b4b0-106">[in]`mdTypeDef`元数据标记所表示的类型将为其删除的类布局。</span><span class="sxs-lookup"><span data-stu-id="2b4b0-106">[in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.</span></span>  
+ <span data-ttu-id="e335a-106">[in]`mdTypeDef`元数据标记所表示的类型将为其删除的类布局。</span><span class="sxs-lookup"><span data-stu-id="e335a-106">[in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2b4b0-107">要求</span><span class="sxs-lookup"><span data-stu-id="2b4b0-107">Requirements</span></span>  
- <span data-ttu-id="2b4b0-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2b4b0-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e335a-107">要求</span><span class="sxs-lookup"><span data-stu-id="e335a-107">Requirements</span></span>  
+ <span data-ttu-id="e335a-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e335a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2b4b0-109">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2b4b0-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e335a-109">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e335a-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2b4b0-110">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="2b4b0-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e335a-110">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="e335a-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2b4b0-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b4b0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e335a-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e335a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b4b0-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="2b4b0-112">See also</span></span>
-- [<span data-ttu-id="2b4b0-113">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="2b4b0-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="2b4b0-114">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="2b4b0-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e335a-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="e335a-112">See also</span></span>
+- [<span data-ttu-id="e335a-113">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="e335a-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="e335a-114">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="e335a-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4f27b958aa4b25c2662d8a5e9da6bcdc73d5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 26df40297d080d1ccc9464f7b09e7731f135e270
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404451"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489821"
 ---
-# <a name="icordebugchainenumnext-method"></a><span data-ttu-id="41970-102">ICorDebugChainEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="41970-102">ICorDebugChainEnum::Next Method</span></span>
-<span data-ttu-id="41970-103">获取指定的数量的 ICorDebugChain 实例的枚举，从当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="41970-103">Gets the specified number of ICorDebugChain instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugchainenumnext-method"></a><span data-ttu-id="8af81-102">ICorDebugChainEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="8af81-102">ICorDebugChainEnum::Next Method</span></span>
+<span data-ttu-id="8af81-103">从当前位置开始枚举中获取指定的数量的 ICorDebugChain 实例。</span><span class="sxs-lookup"><span data-stu-id="8af81-103">Gets the specified number of ICorDebugChain instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="41970-104">语法</span><span class="sxs-lookup"><span data-stu-id="41970-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8af81-104">语法</span><span class="sxs-lookup"><span data-stu-id="8af81-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="41970-105">参数</span><span class="sxs-lookup"><span data-stu-id="41970-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8af81-105">参数</span><span class="sxs-lookup"><span data-stu-id="8af81-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="41970-106">[in]数`ICorDebugChain`要检索的实例。</span><span class="sxs-lookup"><span data-stu-id="41970-106">[in] The number of `ICorDebugChain` instances to be retrieved.</span></span>  
+ <span data-ttu-id="8af81-106">[in]数`ICorDebugChain`要检索的实例。</span><span class="sxs-lookup"><span data-stu-id="8af81-106">[in] The number of `ICorDebugChain` instances to be retrieved.</span></span>  
   
  `chains`  
- <span data-ttu-id="41970-107">[out]一个指针，其中每个指向数组`ICorDebugChain`表示链的对象。</span><span class="sxs-lookup"><span data-stu-id="41970-107">[out] An array of pointers, each of which points to an `ICorDebugChain` object that represents a chain.</span></span>  
+ <span data-ttu-id="8af81-107">[out]一个指针，其中每个指向数组`ICorDebugChain`对象，表示链。</span><span class="sxs-lookup"><span data-stu-id="8af81-107">[out] An array of pointers, each of which points to an `ICorDebugChain` object that represents a chain.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="41970-108">[out]指向数`ICorDebugChain`实际返回的实例。</span><span class="sxs-lookup"><span data-stu-id="41970-108">[out] A pointer to the number of `ICorDebugChain` instances actually returned.</span></span> <span data-ttu-id="41970-109">此值可能为 null 如果`celt`是之一。</span><span class="sxs-lookup"><span data-stu-id="41970-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="8af81-108">[out]指向数`ICorDebugChain`实际返回的实例。</span><span class="sxs-lookup"><span data-stu-id="8af81-108">[out] A pointer to the number of `ICorDebugChain` instances actually returned.</span></span> <span data-ttu-id="8af81-109">此值可能为 null 如果`celt`是其中一个。</span><span class="sxs-lookup"><span data-stu-id="8af81-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="41970-110">要求</span><span class="sxs-lookup"><span data-stu-id="41970-110">Requirements</span></span>  
- <span data-ttu-id="41970-111">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="41970-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8af81-110">要求</span><span class="sxs-lookup"><span data-stu-id="8af81-110">Requirements</span></span>  
+ <span data-ttu-id="8af81-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8af81-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="41970-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="41970-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8af81-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8af81-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="41970-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="41970-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8af81-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8af81-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="41970-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41970-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="8af81-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8af81-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

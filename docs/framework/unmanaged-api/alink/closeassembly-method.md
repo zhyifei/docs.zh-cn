@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa415926f4a818f697812f1a3c5531cb0ab7081b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c89fd080e61db78ed21c03c2aa63c97337c09585
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510164"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497543"
 ---
-# <a name="closeassembly-method"></a><span data-ttu-id="6d871-102">CloseAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="6d871-102">CloseAssembly Method</span></span>
-<span data-ttu-id="6d871-103">确定程序集操作。</span><span class="sxs-lookup"><span data-stu-id="6d871-103">Finalizes assembly operations.</span></span> <span data-ttu-id="6d871-104">在开始新的程序集或未绑定的模块之前调用此方法。</span><span class="sxs-lookup"><span data-stu-id="6d871-104">Call this method before beginning a new assembly or unbound module.</span></span>  
+# <a name="closeassembly-method"></a><span data-ttu-id="1fedc-102">CloseAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="1fedc-102">CloseAssembly Method</span></span>
+<span data-ttu-id="1fedc-103">确定程序集操作。</span><span class="sxs-lookup"><span data-stu-id="1fedc-103">Finalizes assembly operations.</span></span> <span data-ttu-id="1fedc-104">在开始新的程序集或未绑定的模块之前调用此方法。</span><span class="sxs-lookup"><span data-stu-id="1fedc-104">Call this method before beginning a new assembly or unbound module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6d871-105">语法</span><span class="sxs-lookup"><span data-stu-id="6d871-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1fedc-105">语法</span><span class="sxs-lookup"><span data-stu-id="1fedc-105">Syntax</span></span>  
   
 ```  
 HRESULT CloseAssembly(  
@@ -35,17 +35,17 @@ HRESULT CloseAssembly(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6d871-106">参数</span><span class="sxs-lookup"><span data-stu-id="6d871-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1fedc-106">参数</span><span class="sxs-lookup"><span data-stu-id="1fedc-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="6d871-107">程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="6d871-107">ID of the assembly.</span></span>  
+ <span data-ttu-id="1fedc-107">程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="1fedc-107">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6d871-108">返回值</span><span class="sxs-lookup"><span data-stu-id="6d871-108">Return Value</span></span>  
- <span data-ttu-id="6d871-109">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="6d871-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1fedc-108">返回值</span><span class="sxs-lookup"><span data-stu-id="1fedc-108">Return Value</span></span>  
+ <span data-ttu-id="1fedc-109">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="1fedc-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6d871-110">要求</span><span class="sxs-lookup"><span data-stu-id="6d871-110">Requirements</span></span>  
- <span data-ttu-id="6d871-111">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="6d871-111">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1fedc-110">要求</span><span class="sxs-lookup"><span data-stu-id="1fedc-110">Requirements</span></span>  
+ <span data-ttu-id="1fedc-111">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="1fedc-111">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d871-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="6d871-112">See also</span></span>
-- [<span data-ttu-id="6d871-113">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="6d871-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="6d871-114">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="6d871-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="6d871-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="6d871-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="1fedc-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="1fedc-112">See also</span></span>
+- [<span data-ttu-id="1fedc-113">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="1fedc-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="1fedc-114">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="1fedc-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="1fedc-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="1fedc-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

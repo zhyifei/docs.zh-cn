@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03b6f2fe0cc98b469b9b82bfdc4151adafb99c38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53bcc04c8d68a79217ebda5284efe7d8e18fdb91
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665547"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478773"
 ---
-# <a name="icorprofilerinfogetthreadinfo-method"></a><span data-ttu-id="ab892-102">ICorProfilerInfo::GetThreadInfo 方法</span><span class="sxs-lookup"><span data-stu-id="ab892-102">ICorProfilerInfo::GetThreadInfo Method</span></span>
-<span data-ttu-id="ab892-103">获取指定线程当前的 Win32 线程标识。</span><span class="sxs-lookup"><span data-stu-id="ab892-103">Gets the current Win32 thread identity for the specified thread.</span></span>  
+# <a name="icorprofilerinfogetthreadinfo-method"></a><span data-ttu-id="8e4f9-102">ICorProfilerInfo::GetThreadInfo 方法</span><span class="sxs-lookup"><span data-stu-id="8e4f9-102">ICorProfilerInfo::GetThreadInfo Method</span></span>
+<span data-ttu-id="8e4f9-103">获取指定线程当前的 Win32 线程标识。</span><span class="sxs-lookup"><span data-stu-id="8e4f9-103">Gets the current Win32 thread identity for the specified thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab892-104">语法</span><span class="sxs-lookup"><span data-stu-id="ab892-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e4f9-104">语法</span><span class="sxs-lookup"><span data-stu-id="8e4f9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadInfo(  
@@ -35,21 +35,21 @@ HRESULT GetThreadInfo(
     [out] DWORD    *pdwWin32ThreadId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ab892-105">参数</span><span class="sxs-lookup"><span data-stu-id="ab892-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8e4f9-105">参数</span><span class="sxs-lookup"><span data-stu-id="8e4f9-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="ab892-106">[in]要为其获取当前的 Win32 id。 线程的 ID</span><span class="sxs-lookup"><span data-stu-id="ab892-106">[in] The ID of the thread for which to get the current Win32 ID.</span></span>  
+ <span data-ttu-id="8e4f9-106">[in]要为其获取当前的 Win32 id。 线程的 ID</span><span class="sxs-lookup"><span data-stu-id="8e4f9-106">[in] The ID of the thread for which to get the current Win32 ID.</span></span>  
   
  `pdwWin32ThreadId`  
- <span data-ttu-id="ab892-107">[out]指向指定的线程的当前 Win32 线程的 id。</span><span class="sxs-lookup"><span data-stu-id="ab892-107">[out] A pointer to the specified thread's current Win32 thread ID.</span></span>  
+ <span data-ttu-id="8e4f9-107">[out]指向指定的线程的当前 Win32 线程的 id。</span><span class="sxs-lookup"><span data-stu-id="8e4f9-107">[out] A pointer to the specified thread's current Win32 thread ID.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ab892-108">要求</span><span class="sxs-lookup"><span data-stu-id="ab892-108">Requirements</span></span>  
- <span data-ttu-id="ab892-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ab892-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8e4f9-108">要求</span><span class="sxs-lookup"><span data-stu-id="8e4f9-108">Requirements</span></span>  
+ <span data-ttu-id="8e4f9-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8e4f9-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ab892-110">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ab892-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8e4f9-110">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8e4f9-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ab892-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab892-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8e4f9-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8e4f9-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ab892-112">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab892-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8e4f9-112">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8e4f9-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab892-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="ab892-113">See also</span></span>
-- [<span data-ttu-id="ab892-114">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="ab892-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8e4f9-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="8e4f9-113">See also</span></span>
+- [<span data-ttu-id="8e4f9-114">ICorProfilerInfo 接口</span><span class="sxs-lookup"><span data-stu-id="8e4f9-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8122f1b5017faac3425d59d12d77f84180134d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0aefc19ca0c255c9c8ea40fcc12fc5cba1b00f6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401624"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501432"
 ---
-# <a name="icordebugappdomaingetid-method"></a><span data-ttu-id="6eef1-102">ICorDebugAppDomain::GetId 方法</span><span class="sxs-lookup"><span data-stu-id="6eef1-102">ICorDebugAppDomain::GetId Method</span></span>
-<span data-ttu-id="6eef1-103">获取应用程序域的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="6eef1-103">Gets the unique identifier of the application domain.</span></span>  
+# <a name="icordebugappdomaingetid-method"></a><span data-ttu-id="fbac4-102">ICorDebugAppDomain::GetId 方法</span><span class="sxs-lookup"><span data-stu-id="fbac4-102">ICorDebugAppDomain::GetId Method</span></span>
+<span data-ttu-id="fbac4-103">获取应用程序域的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="fbac4-103">Gets the unique identifier of the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6eef1-104">语法</span><span class="sxs-lookup"><span data-stu-id="6eef1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fbac4-104">语法</span><span class="sxs-lookup"><span data-stu-id="fbac4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetID (  
@@ -35,18 +35,18 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6eef1-105">参数</span><span class="sxs-lookup"><span data-stu-id="6eef1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fbac4-105">参数</span><span class="sxs-lookup"><span data-stu-id="fbac4-105">Parameters</span></span>  
  `pId`  
- <span data-ttu-id="6eef1-106">[out]应用程序域的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="6eef1-106">[out] The unique identifier of the application domain.</span></span>  
+ <span data-ttu-id="fbac4-106">[out]应用程序域的唯一标识符。</span><span class="sxs-lookup"><span data-stu-id="fbac4-106">[out] The unique identifier of the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6eef1-107">备注</span><span class="sxs-lookup"><span data-stu-id="6eef1-107">Remarks</span></span>  
- <span data-ttu-id="6eef1-108">应用程序域的标识符是包含进程内唯一的。</span><span class="sxs-lookup"><span data-stu-id="6eef1-108">The identifier for the application domain is unique within the containing process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fbac4-107">备注</span><span class="sxs-lookup"><span data-stu-id="fbac4-107">Remarks</span></span>  
+ <span data-ttu-id="fbac4-108">应用程序域的标识符是唯一包含进程内。</span><span class="sxs-lookup"><span data-stu-id="fbac4-108">The identifier for the application domain is unique within the containing process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6eef1-109">要求</span><span class="sxs-lookup"><span data-stu-id="6eef1-109">Requirements</span></span>  
- <span data-ttu-id="6eef1-110">**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6eef1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fbac4-109">要求</span><span class="sxs-lookup"><span data-stu-id="fbac4-109">Requirements</span></span>  
+ <span data-ttu-id="fbac4-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fbac4-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6eef1-111">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6eef1-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fbac4-111">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fbac4-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6eef1-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6eef1-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fbac4-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fbac4-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6eef1-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6eef1-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="fbac4-113">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fbac4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

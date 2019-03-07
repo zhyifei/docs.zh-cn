@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 998256d75e5a0efd368ff7eb60d0023c8db0e283
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e7d8344c36fb97a73d0f64ebc3a47645527202e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531049"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494111"
 ---
-# <a name="icordebugexceptionobjectcallstackenumnext-method"></a><span data-ttu-id="87b38-102">ICorDebugExceptionObjectCallStackEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="87b38-102">ICorDebugExceptionObjectCallStackEnum::Next Method</span></span>
-<span data-ttu-id="87b38-103">获取指定的数目的[CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)包含从异常对象的调用堆栈信息的实例。</span><span class="sxs-lookup"><span data-stu-id="87b38-103">Gets the specified number of [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) instances that contain information from an exception object's call stack.</span></span>  
+# <a name="icordebugexceptionobjectcallstackenumnext-method"></a><span data-ttu-id="f6ece-102">ICorDebugExceptionObjectCallStackEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="f6ece-102">ICorDebugExceptionObjectCallStackEnum::Next Method</span></span>
+<span data-ttu-id="f6ece-103">获取指定的数目的[CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)包含从异常对象的调用堆栈信息的实例。</span><span class="sxs-lookup"><span data-stu-id="f6ece-103">Gets the specified number of [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) instances that contain information from an exception object's call stack.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87b38-104">语法</span><span class="sxs-lookup"><span data-stu-id="87b38-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6ece-104">语法</span><span class="sxs-lookup"><span data-stu-id="f6ece-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -37,27 +37,27 @@ HRESULT Next(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="87b38-105">参数</span><span class="sxs-lookup"><span data-stu-id="87b38-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f6ece-105">参数</span><span class="sxs-lookup"><span data-stu-id="f6ece-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="87b38-106">[in]数[CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)要检索的实例。</span><span class="sxs-lookup"><span data-stu-id="87b38-106">[in] The number of [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) instances to be retrieved.</span></span>  
+ <span data-ttu-id="f6ece-106">[in]数[CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)要检索的实例。</span><span class="sxs-lookup"><span data-stu-id="f6ece-106">[in] The number of [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) instances to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="87b38-107">[out]一个指针，其中每个指向数组[CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)对象。</span><span class="sxs-lookup"><span data-stu-id="87b38-107">[out] An array of pointers, each of which points to a [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) object.</span></span>  
+ <span data-ttu-id="f6ece-107">[out]一个指针，其中每个指向数组[CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)对象。</span><span class="sxs-lookup"><span data-stu-id="f6ece-107">[out] An array of pointers, each of which points to a [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="87b38-108">[out]指向数[CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)实际返回的实例。</span><span class="sxs-lookup"><span data-stu-id="87b38-108">[out] A pointer to the number of [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) instances actually returned.</span></span>  
+ <span data-ttu-id="f6ece-108">[out]指向数[CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)实际返回的实例。</span><span class="sxs-lookup"><span data-stu-id="f6ece-108">[out] A pointer to the number of [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) instances actually returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="87b38-109">备注</span><span class="sxs-lookup"><span data-stu-id="87b38-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f6ece-109">备注</span><span class="sxs-lookup"><span data-stu-id="f6ece-109">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="87b38-110">要求</span><span class="sxs-lookup"><span data-stu-id="87b38-110">Requirements</span></span>  
- <span data-ttu-id="87b38-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="87b38-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6ece-110">要求</span><span class="sxs-lookup"><span data-stu-id="f6ece-110">Requirements</span></span>  
+ <span data-ttu-id="f6ece-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f6ece-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="87b38-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="87b38-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f6ece-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f6ece-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="87b38-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="87b38-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f6ece-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f6ece-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="87b38-114">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87b38-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="f6ece-114">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6ece-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87b38-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="87b38-115">See also</span></span>
-- [<span data-ttu-id="87b38-116">ICorDebugExceptionObjectCallStackEnum 接口</span><span class="sxs-lookup"><span data-stu-id="87b38-116">ICorDebugExceptionObjectCallStackEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)
-- [<span data-ttu-id="87b38-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="87b38-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f6ece-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="f6ece-115">See also</span></span>
+- [<span data-ttu-id="f6ece-116">ICorDebugExceptionObjectCallStackEnum 接口</span><span class="sxs-lookup"><span data-stu-id="f6ece-116">ICorDebugExceptionObjectCallStackEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)
+- [<span data-ttu-id="f6ece-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="f6ece-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
