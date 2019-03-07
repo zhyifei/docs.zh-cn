@@ -22,7 +22,7 @@ ms.locfileid: "54498068"
   
 -   <xref:System.Runtime.GCLatencyMode.LowLatency> 禁止第 2 代集合，仅执行第 0 代和第 1 代集合。 只能在短时间内使用。 在更长时间内，如果系统处于内存压力下，垃圾回收器将触发一次回收，这样会暂时暂停应用程序并中断对时间要求很急的操作。 此设置仅对工作站垃圾回收可用。  
   
--   <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> 禁止进行第 2 代回收，仅执行第 0 代、第 1 代和背景第 2 代回收。 它可以长时间使用，并对工作站和服务器垃圾回收都可用。 如果[并发垃圾回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)已禁用，则无法使用此设置。  
+-   <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> 禁止前台第 2 代回收，仅执行第 0 代、第 1 代和后台第 2 代回收。 它可以长时间使用，并对工作站和服务器垃圾回收都可用。 如果[并发垃圾回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)已禁用，则无法使用此设置。
   
  在低延迟期间，除非发生以下情况，否则禁止第 2 代回收：  
   
