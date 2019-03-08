@@ -8,26 +8,24 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 8670b6cca65003a1f86e5caacda9aa4545434c01
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 559c2c3f13aa92f5d4e27504e37fd886334e69bf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036181"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680017"
 ---
-# <a name="ui-automation-providers-for-managed-code-how-to-topics"></a><span data-ttu-id="53721-102">托管代码的 UI 自动化提供程序的帮助主题</span><span class="sxs-lookup"><span data-stu-id="53721-102">UI Automation Providers for Managed Code How-to Topics</span></span>
+# <a name="ui-automation-providers-for-managed-code-how-to-topics"></a><span data-ttu-id="ed1d2-102">托管代码的 UI 自动化提供程序的帮助主题</span><span class="sxs-lookup"><span data-stu-id="ed1d2-102">UI Automation Providers for Managed Code How-to Topics</span></span>
 > [!NOTE]
->  <span data-ttu-id="53721-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="53721-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="53721-104">有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="53721-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="ed1d2-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="ed1d2-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="ed1d2-104">有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="ed1d2-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="53721-105">本节包含演示任务中编写的代码示例[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]的提供程序[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]元素。</span><span class="sxs-lookup"><span data-stu-id="53721-105">This section contains code examples that demonstrate tasks in writing [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.</span></span>  
+ <span data-ttu-id="ed1d2-105">本节包含演示任务中编写的代码示例[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]的提供程序[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]元素。</span><span class="sxs-lookup"><span data-stu-id="ed1d2-105">This section contains code examples that demonstrate tasks in writing [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="53721-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="53721-106">In This Section</span></span>  
- [<span data-ttu-id="53721-107">公开服务器端 UI 自动化提供程序</span><span class="sxs-lookup"><span data-stu-id="53721-107">Expose a Server-side UI Automation Provider</span></span>](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [<span data-ttu-id="53721-108">从 UI 自动化提供程序返回属性</span><span class="sxs-lookup"><span data-stu-id="53721-108">Return Properties from a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [<span data-ttu-id="53721-109">从 UI 自动化提供程序引发事件</span><span class="sxs-lookup"><span data-stu-id="53721-109">Raise Events from a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [<span data-ttu-id="53721-110">在 UI 自动化片段提供程序中启用导航</span><span class="sxs-lookup"><span data-stu-id="53721-110">Enable Navigation in a UI Automation Fragment Provider</span></span>](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [<span data-ttu-id="53721-111">在 UI 自动化提供程序中支持控件模式</span><span class="sxs-lookup"><span data-stu-id="53721-111">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [<span data-ttu-id="53721-112">创建客户端 UI 自动化提供程序</span><span class="sxs-lookup"><span data-stu-id="53721-112">Create a Client-Side UI Automation Provider</span></span>](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
- [<span data-ttu-id="53721-113">在客户端应用程序中实现 UI 自动化提供程序</span><span class="sxs-lookup"><span data-stu-id="53721-113">Implement UI Automation Providers in a Client Application</span></span>](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+## <a name="in-this-section"></a><span data-ttu-id="ed1d2-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="ed1d2-106">In This Section</span></span>  
+ [<span data-ttu-id="ed1d2-107">公开服务器端 UI 自动化提供程序</span><span class="sxs-lookup"><span data-stu-id="ed1d2-107">Expose a Server-side UI Automation Provider</span></span>](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
+ [<span data-ttu-id="ed1d2-108">从 UI 自动化提供程序返回属性</span><span class="sxs-lookup"><span data-stu-id="ed1d2-108">Return Properties from a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
+ [<span data-ttu-id="ed1d2-109">从 UI 自动化提供程序引发事件</span><span class="sxs-lookup"><span data-stu-id="ed1d2-109">Raise Events from a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
+ [<span data-ttu-id="ed1d2-110">在 UI 自动化片段提供程序中启用导航</span><span class="sxs-lookup"><span data-stu-id="ed1d2-110">Enable Navigation in a UI Automation Fragment Provider</span></span>](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
+ [<span data-ttu-id="ed1d2-111">在 UI 自动化提供程序中支持控件模式</span><span class="sxs-lookup"><span data-stu-id="ed1d2-111">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="ed1d2-112">创建客户端 UI 自动化提供程序</span><span class="sxs-lookup"><span data-stu-id="ed1d2-112">Create a Client-Side UI Automation Provider</span></span>](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
+ [<span data-ttu-id="ed1d2-113">在客户端应用程序中实现 UI 自动化提供程序</span><span class="sxs-lookup"><span data-stu-id="ed1d2-113">Implement UI Automation Providers in a Client Application</span></span>](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
