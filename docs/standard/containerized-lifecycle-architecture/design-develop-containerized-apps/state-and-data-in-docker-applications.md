@@ -4,12 +4,12 @@ description: 了解可用的选项以在容器化应用程序中保存状态。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1e30a545ba0003acb8b85dee9896d54934f0d737
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 30dde3ce44aa61fff3fad1841ae4a8b941573877
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745993"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678072"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 应用程序中的状态和数据
 
@@ -19,7 +19,7 @@ ms.locfileid: "56745993"
 
 从 Docker 主机，作为 [Docker 卷](https://docs.docker.com/engine/admin/volumes/)：
 
-- **卷**存储在由 Docker 主机文件系统的区域。
+- **卷**存储在由 Docker 管理的主机文件系统区域中。
 
 - **将绑定装载**可以映射到主机文件系统中任何文件夹中，因此不能从 Docker 进程控制访问，并可带来安全风险，因为容器可以访问敏感的操作系统文件夹。
 
@@ -47,7 +47,7 @@ ms.locfileid: "56745993"
 
 **`tmpfs` 装载**是虚拟文件夹，仅在主机的内存中保留，所以永远不会写入到文件系统。 它们快速且安全，但使用内存且仅适用于非持久性数据。
 
-如图 4-5 所示，常规 Docker 卷可以存储在容器本身之外，但是在主机服务器或 VM 的物理边界内。 但是，Docker 容器不能从一个主机服务器或 VM 访问另一个主机服务器或 VM 的卷。 换而言之，使用这些卷，不能管理在不同的 Docker 主机运行，尽管它可以与支持远程主机的卷驱动程序来实现的容器之间共享的数据。
+如图 4-5 所示，常规 Docker 卷可以存储在容器本身之外，但是在主机服务器或 VM 的物理边界内。 但是，Docker 容器不能从一个主机服务器或 VM 访问另一个主机服务器或 VM 的卷。 换而言之，如果使用这些卷，那么不能管理在不同 Docker 主机上运行的容器之间共享的数据，尽管可通过支持远程主机的卷驱动程序来实现这一功能。
 
 ![卷可在容器之间共享，但仅限于同一台主机，除非使用支持远程主机的远程驱动程序。 ](./media/image5.png)
 

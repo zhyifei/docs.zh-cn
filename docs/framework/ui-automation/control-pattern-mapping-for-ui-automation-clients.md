@@ -5,14 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 7552db2b0d1f9063733ddac29612057e0475570e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b98735b111d634584ec019a75d942f39e38cc8c5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597188"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679575"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 自动化客户端的控件模式映射
 > [!NOTE]
@@ -37,7 +35,7 @@ ms.locfileid: "54597188"
 |控件类型|支持|有条件支持|不支持|  
 |------------------|---------------|-------------------------|-------------------|  
 |Button|无|调用、切换、展开折叠|无|  
-|Calendar|网格、表|选择、滚动|“值”|  
+|Calendar|网格、表|选择、滚动|值|  
 |复选框|切换|无|无|  
 |组合框|展开/折叠|选择、值|Scroll|  
 |数据网格|Grid|滚动、选择、表|无|  

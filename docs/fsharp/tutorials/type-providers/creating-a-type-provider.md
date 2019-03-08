@@ -2,12 +2,12 @@
 title: 教程：创建类型提供程序
 description: 了解如何创建你自己的F#类型中的提供程序F#3.0 通过检查几个简单类型提供程序来演示基本概念。
 ms.date: 02/02/2019
-ms.openlocfilehash: ec26f25ad39ca432d6ef11238268e1704bd9638b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3035d03438aaaa2f6e64210f99e1f149db274
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371551"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678418"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教程：创建类型提供程序
 
@@ -469,7 +469,7 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 
 - 每个命名的组会导致提供的属性，并访问属性导致的匹配项的索引器使用`Groups`集合。
 
-下面的代码的逻辑来实现此类提供程序，core 和此示例中省略为提供的类型的所有成员的添加。 有关每个已添加成员的信息，请参阅本主题后面的相应部分。 如需完整的代码下载中的示例[ F# 3.0 示例包](https://fsharp3sample.codeplex.com)Codeplex 网站上。
+下面的代码的逻辑来实现此类提供程序，core 和此示例中省略为提供的类型的所有成员的添加。 有关每个已添加成员的信息，请参阅本主题后面的相应部分。 如需完整的代码下载中的示例[ F# 3.0 示例包](https://archive.codeplex.com/?p=fsharp3sample)CodePlex 网站上。
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider

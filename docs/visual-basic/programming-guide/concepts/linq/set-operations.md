@@ -2,12 +2,12 @@
 title: 设置操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 3aaccd2b91e842bb433fe97e59314860c631341e
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 8ec7f2785617c354a1aa506ac0df9eef7d051b59
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200749"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679289"
 ---
 # <a name="set-operations-visual-basic"></a>设置操作 (Visual Basic)
 LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在等效元素来生成结果集的查询运算。  
@@ -33,7 +33,7 @@ LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在
 ### <a name="except"></a>Except  
  下图演示 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> 的行为。 返回的序列只包含位于第一个输入序列但不位于第二个输入序列的元素。  
   
- ![显示 Except&#40;&#41; 的操作的图。](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
+ ![显示的操作除外&#40;&#41;。](./media/set-operations/except-behavior-graphic.png "显示的行为除外。")  
   
 ### <a name="intersect"></a>相交  
  下图演示 <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType> 的行为。 返回的序列包含两个输入序列共有的元素。  

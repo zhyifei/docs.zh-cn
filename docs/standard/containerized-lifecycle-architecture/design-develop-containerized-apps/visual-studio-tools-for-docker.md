@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: e4422f325566724e3ea65d47d97c42e57e3fe621
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835598"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680355"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>在 Windows 上的 Visual Studio 2017 中使用 Docker 工具
 
@@ -75,7 +75,7 @@ ms.locfileid: "56835598"
 
 | name | 默认设置 | 适用于 | 描述 |
 | -----|:---------------:|:----------:| ----------- |
-| 自动在项目负载上拉取所需的 Docker 图像 | On | Docker Compose | 为了加快运行速度加载项目时，Visual Studio 会启动 Docker pull 操作在后台，以便当准备好运行你的代码，该图像已下载或下载过程中。 如果只是加载项目，并浏览代码，您可以关闭此以避免下载不需要的容器映像。 |
+| 自动在项目负载上拉取所需的 Docker 图像 | On | Docker Compose | 为了加快运行速度加载项目时，Visual Studio 会启动 Docker pull 操作在后台，以便准备好运行你的代码时，该图像已下载或下载过程中。 如果只是加载项目，并浏览代码，您可以关闭此以避免下载不需要的容器映像。 |
 | 在后台自动启动容器 | On | Docker Compose | 再次以提高性能，Visual Studio 创建一个容器使用卷装载供当生成并运行你的容器。 如果你想要控制创建容器时，关闭此功能。 |
 | 在解决方案上的终止容器自动关闭 | On | Docker Compose | 关闭此功能如果您想要为解决方案之后关闭解决方案或关闭 Visual Studio 继续运行的容器。 |
 | 不提示信任 localhost SSL 证书 | Off | ASP.NET Core 2.1 项目 | 如果不信任 localhost SSL 证书，则 Visual Studio 将提示每次运行你的项目，除非选中此复选框。 |
@@ -85,9 +85,9 @@ ms.locfileid: "56835598"
 
 > [!信息] 的服务实现和使用的 Visual Studio Tools for Docker 的详细信息，请阅读以下文章：
 >
->在本地 Docker 容器中调试应用程序： [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+>在本地 Docker 容器中调试应用程序： <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >
->将 ASP.NET 容器部署到使用 Visual Studio 的容器注册表： [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+>将 ASP.NET 容器部署到使用 Visual Studio 的容器注册表： <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 >[!div class="step-by-step"]
 >[上一页](docker-apps-inner-loop-workflow.md)

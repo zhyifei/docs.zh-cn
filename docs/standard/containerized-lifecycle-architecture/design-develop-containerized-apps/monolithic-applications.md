@@ -4,16 +4,16 @@ description: 了解用于容器化整体式应用程序的核心概念。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: eff764472b4a9fc5b699545fc9629cc12d0186ca
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747257"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676832"
 ---
 # <a name="monolithic-applications"></a>单一式应用程序
 
-在此方案中，是构建单个和整体化 web 应用程序或服务，并将其部署为容器。 在应用程序中的结构可能不为整体化;它可能包含多个库、 组件或甚至层 （应用程序层、 域层、 数据访问层等）。 从外部看，它是单个容器，如单个进程、 单个 web 应用程序或单个服务。
+在此方案中，是生成单个和整体化 web 应用程序或服务，并将其部署为容器。 在应用程序中的结构可能不为整体化;它可能包含多个库、 组件或甚至层 （应用程序层、 域层、 数据访问层等）。 从外部看，它是单个容器，如单个进程、 单个 web 应用程序或单个服务。
 
 若要管理此模型，可部署单个容器来表示应用程序。 若要缩放，只添加与负载均衡器在前几个更多副本。 简单起见，管理单个部署中的单个容器或虚拟机 (VM)。
 
@@ -71,7 +71,7 @@ ms.locfileid: "56747257"
 
 使用 Azure 应用服务是直观和您可以启动并快速运行，因为它提供了很好的 Git 集成，以获取代码，构建在 Microsoft Visual Studio 中，并直接将其部署到 Azure。 但是，传统上 （使用任何 Docker)，如果需要其他功能、 框架或不支持在应用服务中的依赖项需要等待，直到 Azure 团队更新应用服务中的这些依赖项或切换到其他服务，如Service Fabric、 云服务或甚至普通的 Vm，对其具有更多控件且可为你的应用程序安装的所需的组件或框架。
 
-现在，图 4-4 所示在使用 Visual Studio 2017 时，Azure 应用服务中的容器支持会使您能够包括任何所需的应用环境中。 如果因为在容器中运行，可添加到您的应用程序依赖关系，则会在 Dockerfile 或 Docker 映像中包括这些依赖项的功能。
+现在，图 4-4 所示在使用 Visual Studio 2017 时，Azure 应用服务中的容器支持会使您能够包括任何所需的应用环境中。 如果因为要在容器中运行它，可添加到您的应用程序依赖关系，则会在 Dockerfile 或 Docker 映像中包括这些依赖项的功能。
 
 ![Visual Studio 向导将发布到 Azure 应用服务中，突出显示容器注册表的选择器的视图。](./media/image4.png)
 

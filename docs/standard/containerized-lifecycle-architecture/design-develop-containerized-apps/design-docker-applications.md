@@ -4,12 +4,12 @@ description: 查找此处参考微服务体系结构的深入指南，因为这�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 5238ef8d9025f1518d513bfa7ff83eb51c2b88df
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 858147883b3b4a5a5f487856028fdbfa84f6cca9
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748617"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675181"
 ---
 # <a name="design-docker-applications"></a>设计 Docker 应用程序
 

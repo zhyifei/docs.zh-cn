@@ -2,12 +2,12 @@
 title: 切片 (F#)
 description: 了解如何使用现有的切片F#数据类型以及如何定义其他数据类型的切片。
 ms.date: 01/22/2019
-ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970099"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675272"
 ---
 # <a name="slices"></a>切片
 
@@ -86,7 +86,7 @@ printfn "%A" subA'
 
 // Slice a 2x2 matrix out of the full 3x3 matrix
 let twoByTwo = A.[0..1,0..1]
-printfn "%A" twobyTwo
+printfn "%A" twoByTwo
 ```
 
 F#核心库不会定义`GetSlice`三维数组。 如果你想要对那些或其他数组或多个维度进行切片，则必须定义`GetSlice`成员自己。

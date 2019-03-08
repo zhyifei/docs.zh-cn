@@ -4,12 +4,12 @@ description: 实际的生产应用程序必须部署和使用业务流程协调�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e1ff3282c1fdf952177a1faa957398c33045a01c
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b8c947ffc34b62204b6a370f1133111a3e2d3198
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836155"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679038"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>协调安排微服务和多容器应用程序，实现高可伸缩性和高可用性
 
@@ -27,7 +27,7 @@ Docker 命令行接口 (CLI) 满足需求的管理一台主机上的一个容器
 
 超过单个容器或简单的组合式的应用和推动与微服务的大型企业应用程序的管理，则必须转向业务流程和群集平台。
 
-从体系结构和开发的角度看，你是否构建大，企业，基于微服务的应用程序，务必了解以下平台和产品的支持高级的方案：
+从体系结构和开发的角度看，如果你是构建大型企业，基于微服务的应用程序，务必了解以下平台和产品的支持高级的方案：
 
 - **群集和业务流程协调程序。** 当您需要向外扩展应用程序跨多个 Docker 主机，如使用大型基于微服务的应用程序，很重要，以便能够管理所有这些主机作为单个群集通过抽象化基础平台的复杂性。 这就是容器群集和业务流程协调程序所提供的功能。 业务流程协调程序的示例包括 Azure Service Fabric 和 Kubernetes。 Kubernetes 通过 Azure Kubernetes 服务在 Azure 中提供。
 
@@ -56,7 +56,7 @@ AKS 提供了一种方法，可在 Azure 中简化虚拟机（预配置为运行
 
 Azure Kubernetes 服务优化了专门针对 Azure 的常用 Docker 群集开源和技术的配置。 可以获得一个开放的解决方案，该解决方案为容器和应用程序配置提供可移植性。 用户选择主机的大小和数量以及业务流程协调程序工具，然后 AKS 可处理其他操作。
 
-![Kubernetes 群集结构：没有处理 DNS、 计划程序、 代理等的 1 个主节点和多个辅助角色节点，承载容器。](media/image36.png)
+![Kubernetes 群集结构：有一个处理 DNS、计划程序、代理等的主节点，以及多个托管容器的工作节点。](media/image36.png)
 
 图 4-7。 Kubernetes 群集的简化结构和拓扑
 
@@ -80,7 +80,7 @@ Azure Kubernetes 服务优化了专门针对 Azure 的常用 Docker 群集开源
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>使用 Helm 图表部署到 Kubernetes 群集
 
-当应用程序部署到 Kubernetes 群集，可以使用原始`kubectl.exe`CLI 工具，使用部署文件基于本机格式 (`.yaml`文件)，如前面在上一节中所述。 但是，对于更复杂的 Kubernetes 应用程序如时部署复杂的基于微服务的应用程序，建议使用[Helm](https://helm.sh/)。
+当应用程序部署到 Kubernetes 群集，可以使用原始`kubectl.exe`CLI 工具，使用部署文件基于本机格式 (`.yaml`文件)，如前面在上一节中所述。 但是，对于更复杂的 Kubernetes 应用程序（如部署基于微服务的复杂应用程序时），建议使用 [Helm](https://helm.sh/)。
 
 Helm 图表可帮助你定义，版本、 安装、 共享、 升级过程中或即使最复杂 Kubernetes 应用程序回滚。
 
@@ -149,7 +149,7 @@ Service Fabric 未指定服务构建方式，开发人员可使用任何技术�
 
 Service Fabric 是一个平台，一个很好示例，您可以在其中定义的不同逻辑体系结构 （业务微服务或界定的上下文） 与物理实现。 例如，如果您实现[有状态 Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction)中[Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)，在下一部分介绍"[无状态与有状态微服务](#stateless-versus-stateful-microservices)，"有多个物理服务具有一个业务微服务概念。
 
-如图 4-10，并从逻辑/业务微服务角度看，实现 Service Fabric 有状态可靠服务时的考虑中所示，您通常需要实现两个层的服务。 第一层是后端有状态可靠服务，用于处理多个分区（每个分区均为一项有状态服务）。 第二层是前端服务或网关服务，负责跨多个分区或有状态服务实例进行路由，聚合数据。 该网关服务还处理访问后端服务的客户端通信，通信带有重试循环。 如果实现自定义的服务，或另外也可以使用开箱 Service Fabric，称为网关服务[反向代理](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)。
+如图 4-10，并从逻辑/业务微服务角度看，实现 Service Fabric 有状态可靠服务时的考虑中所示，您通常需要实现两个层的服务。 第一层是后端有状态可靠服务，用于处理多个分区（每个分区均为一项有状态服务）。 第二层是前端服务或网关服务，负责跨多个分区或有状态服务实例进行路由，聚合数据。 该网关服务还处理访问后端服务的客户端通信，通信带有重试循环。 如果实现自定义服务，则其称为网关服务；或者，还可使用现成的 Service Fabric [反向代理](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)。
 
 ![Service Fabric 具有规定在容器中支持多个有状态 reliable services。](./media/service-fabric-stateful-business-microservice.png)
 

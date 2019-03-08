@@ -4,16 +4,16 @@ description: 了解开发 Docker 应用程序的"内部循环"工作流。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1134ff439235609db840c85a1e67bc9fe4ccec84
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835676"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676663"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 应用的内部循环开发工作流
 
-触发跨越整个 DevOps 的外部循环工作流之前循环，开始整个过程的每个开发人员的计算机上，应用本身进行编码、 使用其首选的语言或平台，以及本地测试 (图 4-21)。 但在所有情况下，您可以很重要的一点共同点，无论选择何种语言、 框架或平台。 在此特定的工作流，始终是开发和测试 Docker 容器，但却在本地。
+触发跨越整个 DevOps 的外部循环工作流之前循环，开始整个过程的每个开发人员的计算机上，应用本身进行编码、 使用其首选的语言或平台，以及本地测试 (图 4-21)。 但在所有情况下，您必须很重要的一点共同点，无论选择何种语言、 框架或平台。 在此特定的工作流，你始终在开发和测试 Docker 容器，但却在本地。
 
 ![步骤 1-代码/运行/调试](./media/image18.png)
 
@@ -43,7 +43,7 @@ ms.locfileid: "56835676"
 
 ### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>步骤 1：开始在 Visual Studio Code 中编写代码并创建初始应用/服务基线
 
-开发应用程序的方法是执行不带 Docker 的方式类似。 不同之处是，在开发时，在部署和测试应用程序或服务 （如 Windows 或 Linux VM） 在本地环境中放置的 Docker 容器中运行。
+开发应用程序的方法是执行不带 Docker 的方式类似。 不同之处是，在开发时，你在部署和测试应用程序或服务 （如 Windows 或 Linux VM） 在本地环境中放置的 Docker 容器中运行。
 
 **设置本地环境**
 
@@ -93,11 +93,11 @@ Microsoft 提供了 Visual Studio Code 中，这是一个轻量级代码编辑�
 
 你将需要`DockerFile`每个要生成的自定义映像和每个要部署的容器。 如果您的应用程序由一个自定义服务组成，则需要将单个`DockerFile`。 但是如果您的应用程序组成 （如中所示的微服务体系结构） 的多个服务，您将需要一个`Dockerfile`每个服务。
 
-`DockerFile`通常位于应用或服务的根文件夹中并包含所需的命令，以便 Docker 知道如何设置和运行该应用程序或服务。 可以创建你`DockerFile`并将其添加到你的项目以及你的代码 (.NET Core、 node.js 等)，或者，如果您不熟悉的环境，请看看以下提示。
+`DockerFile`通常位于应用或服务的根文件夹中并包含所需的命令，以便 Docker 知道如何设置和运行该应用程序或服务。 可以创建你`DockerFile`并将其添加到你的项目以及你的代码 (.NET Core、 node.js 等)，或者，如果您是初次接触环境，请看看以下提示。
 
 > [!TIP]
 >
-> 可以使用 Docker 扩展时使用指导您`Dockerfile`和`docker-compose.yml`与 Docker 容器相关的文件。 最终，您可能会编写这些种类的文件而无需此工具，但使用 Docker 扩展是很好的起点，可加快学习曲线。
+> 可以使用 Docker 扩展时使用指导您`Dockerfile`和`docker-compose.yml`与 Docker 容器相关的文件。 最终，可能将编写这些种类的文件而无需此工具，但使用 Docker 扩展是很好的起点，可加快学习曲线。
 
 在图 4 至 24 日，您可以看到如何 docker-compose 文件添加通过使用适用于 VS Code Docker 扩展。
 
@@ -105,7 +105,7 @@ Microsoft 提供了 Visual Studio Code 中，这是一个轻量级代码编辑�
 
 图 4-24。 添加使用 docker 文件**添加 Docker 文件复制到工作区命令**
 
-当添加 DockerFile 时，指定要使用的基础 Docker 映像 (如使用`FROM microsoft/aspnetcore`)。 通常将生成自定义映像从在任何官方存储库获取的基本映像之上[Docker Hub 注册表](https://hub.docker.com/)(如[适用于.NET Core 映像](https://hub.docker.com/r/microsoft/dotnet/)或一个[适用于 Node.js](https://hub.docker.com/_/node/)).
+当添加 DockerFile 时，指定要使用的基础 Docker 映像 (如使用`FROM microsoft/aspnetcore`)。 你通常将生成自定义映像从在任何官方存储库获取的基本映像之上[Docker Hub 注册表](https://hub.docker.com/)(如[适用于.NET Core 映像](https://hub.docker.com/r/microsoft/dotnet/)或一个[适用于 Node.js](https://hub.docker.com/_/node/)).
 
 ***使用现有的官方 Docker 映像***
 
@@ -149,7 +149,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 ***从头开始创建您的基础映像***
 
-您可以从头开始创建您自己的 Docker 基础映像在此所述[一文](https://docs.docker.com/engine/userguide/eng-image/baseimages/)从 Docker。 如果您刚开始使用 Docker，但如果你想要设置的基础映像的特定位，您可以执行此操作，这种情况下可能不是最适合您。
+您可以从头开始创建您自己的 Docker 基础映像在此所述[一文](https://docs.docker.com/engine/userguide/eng-image/baseimages/)从 Docker。 如果你刚开始使用 Docker，但如果你想要设置的基础映像的特定位，您可以执行此操作，这种情况下可能不是最适合您。
 
 ### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>步骤 3：创建自定义 Docker 映像中嵌入你的服务
 

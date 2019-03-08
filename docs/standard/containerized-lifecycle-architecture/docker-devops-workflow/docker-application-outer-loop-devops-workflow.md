@@ -4,12 +4,12 @@ description: 了解 DevOps 工作流的"外部循环"的步骤
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7043f34557651c3e8e79baf263bd0bcefd5a847a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 495e717787c346e451c2f79ef4200b478577aa9d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836404"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676195"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 应用程序的外部循环 DevOps 工作流中的步骤
 
@@ -202,7 +202,7 @@ Azure DevOps 服务模板，您生成包含特定的注册表的映像的生成�
 
 ## <a name="step-5-run-and-manage"></a>步骤 5：运行和管理
 
-因为运行和管理应用程序在企业生产级别为主要使用者在和的本身，并由于操作的类型，并且在该级别 （IT 操作） 以及此区域的大范围的人员，我们另辟整个接下来为解释它的一章。
+因为运行和管理应用程序在企业生产级别是主要使用者在和的本身，并由于操作的类型和在该级别 （IT 操作） 以及此区域的大范围的人员，整个的下一章专门介绍解释了它。
 
 ## <a name="step-6-monitor-and-diagnose"></a>步骤 6：监视和诊断
 

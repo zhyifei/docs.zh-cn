@@ -4,12 +4,12 @@ description: 了解使用 Docker 时已使用每天的一些基本术语。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a7f0106eed81c28634a079ce61f48d7d56f6ffd2
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 07371bee6881b1fa7edf64b9bb50d387dcbf9dde
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584195"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677161"
 ---
 # <a name="docker-terminology"></a>Docker 术语
 
@@ -23,7 +23,7 @@ ms.locfileid: "56584195"
 
 **容器**：Docker 映像的实例。 容器表示单个应用程序、进程或服务的执行。 它由 Docker 映像的内容、执行环境和一组标准指令组成。 在缩放服务时，可以从相同的映像创建多个容器实例。 或者，批处理作业可以从同一个映像创建多个容器，向每个实例传递不同的参数。
 
-**卷**：提供一个容器可以使用的可写文件系统。 由于映像只可读取，而多数程序需要写入到文件系统，因此卷在容器映像顶部添加了一个可写层，这样程序就可以访问可写文件系统。 程序并不知道它正在访问的是分层文件系统，此文件系统就是往常的文件系统。 卷位于主机系统中，由 Docker 管理。
+**卷**：提供一个容器可以使用的可写文件系统。 由于映像只可读取，而多数程序需要写入到文件系统，因此卷在容器映像顶部添加了一个可写层，这样程序就可以访问可写文件系统。 程序不知道它正在访问分层文件系统，它是文件系统只需像往常一样。 卷位于主机系统中，由 Docker 管理。
 
 **标记**：可以应用于映像的标记或标签，以便可以识别同一映像的不同映像或版本（具体取决于版本号或目标环境）。
 
@@ -37,15 +37,15 @@ ms.locfileid: "56584195"
 
 **Docker 中心**：上传并使用映像的公共注册表。 Docker 中心提供 Docker 映像托管、公共或私有注册表，生成触发器和 Web 挂钩，以及与 GitHub 和 Bitbucket 集成。
 
-**Azure 容器注册表**：用于在 Azure 中使用 Docker 映像及其组件的公共资源。 这提供了接近 Azure 中部署的注册表，授予控制访问权限，使其可以使用 Azure Active Directory 组和权限。
+**Azure 容器注册表**：用于在 Azure 中使用 Docker 映像及其组件的公共资源。 这提供了的注册表，即将在 Azure 中部署和提供控制访问权限，使其可以使用你的 Azure Active Directory 组和权限。
 
-**Docker 受信任注册表 (DTR)**：Docker 注册表服务（来自 Docker），可以安装在本地，因此它存在于组织的数据中心和网络中。 这对于应该在企业内部管理的私有映像来说很方便。 Docker 受信任注册表是 Docker 数据中心产品的一部分。 有关详细信息，请参阅 [Docker 受信任注册表 (DTR)](https://docs.docker.com/docker-trusted-registry/overview/)。
+**Docker 受信任注册表 (DTR)**：Docker 注册表服务（来自 Docker），可以安装在本地，因此它存在于组织的数据中心和网络中。 它是便于应在企业内部管理的专用映像。 Docker 受信任注册表是 Docker 数据中心产品的一部分。 有关详细信息，请参阅 [Docker 受信任注册表 (DTR)](https://docs.docker.com/docker-trusted-registry/overview/)。
 
 **Docker 社区版 (CE)**：适用于 Windows 和 macOS、用于在本地生成、运行和测试容器的开发工具。 适用于 Windows 的 Docker CE 为 Linux 和 Windows 容器提供了开发环境。 Windows 上的 Linux Docker 主机基于 [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 虚拟机。 适用于 Windows 容器的主机直接基于 Windows。 适用于 Mac 的 Docker CE 基于 Apple 虚拟机监控程序框架和 [xhyve 虚拟机监控程序](https://github.com/mist64/xhyve)，在 Mac OS X 上提供了 Linux Docker 主机虚拟机。适用于 Windows 和 Mac 的 Docker CE 替换了 Docker 工具箱，后者基于 Oracle VirtualBox。
 
 **Docker 企业版 (EE)**：适用于 Linux 和 Windows 开发的 Docker 工具企业级版本。
 
-**撰写**：一种命令行工具和带有元数据的 YAML 文件格式，用于定义和运行多容器应用程序。 基于多个映像定义单个应用程序，其中包含一个或多个 .yml 文件，这些文件可以根据环境替代值。 在创建定义之后，可以使用单个命令 (docker-compose up) 来部署整个多容器应用程序，该命令在 Docker 主机上为每个映像创建容器。
+**撰写**：一种命令行工具和带有元数据的 YAML 文件格式，用于定义和运行多容器应用程序。 基于多个映像定义单个应用程序，其中包含一个或多个 .yml 文件，这些文件可以根据环境替代值。 已创建了定义后，可以部署整个多容器应用程序使用单个命令 (docker-compose up) 的 Docker 主机上创建每个映像的容器。
 
 **群集**：Docker 主机集合像单一虚拟 Docker 主机一样公开，以便应用程序可以扩展到服务分布在群集中多个主机的多个实例。 Docker 群集可以使用 Kubernetes、Azure Service Fabric、Docker Swarm 和 Mesosphere DC/OS创建。
 

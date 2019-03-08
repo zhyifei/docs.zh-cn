@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a0e8d37e834ea0a7623517e2e1228a79d9ea10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa8589b3f27ba97d32e77dbfecb190edc69dbc18
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655707"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677326"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction 枚举
 描述主机可以为通过所述的操作设置的策略操作[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)和所描述的失败[EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)。  
@@ -50,7 +50,7 @@ typedef enum {
 |`eAbortThread`|指定公共语言运行时 (CLR) 应正常中止线程。 包括正常中止： 尝试运行所有`finally`阻止任何`catch`块与线程中止和终结器。|  
 |`eDisableRuntime`|指定 CLR 应进入禁用的状态。 无需再在受影响的过程中，执行托管的代码和线程被阻止进入 CLR。|  
 |`eExitProcess`|指定 CLR 应尝试的进程，包括运行终结器和执行清理和日志记录操作正常退出。|  
-|`eFastExitProcess`|指定的 CLR 应立即退出进程，而无需运行终结器或执行清理和日志记录操作。 但要通知发送到调试器。|  
+|`eFastExitProcess`|指定的 CLR 应立即退出进程，而无需运行终结器或执行清理和日志记录操作。 但是，将通知发送到调试器。|  
 |`eNoAction`|指定应执行任何操作。|  
 |`eRudeAbortThread`|指定 CLR 应执行强制中止线程。 只有那些`catch`并`finally`块标记为<xref:System.EnterpriseServices.MustRunInClientContextAttribute>执行。|  
 |`eRudeExitProcess`|指定 CLR 应退出进程，而无需运行终结器或日志记录操作。|  

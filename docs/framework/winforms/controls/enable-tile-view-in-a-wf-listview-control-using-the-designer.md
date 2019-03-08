@@ -6,19 +6,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 0acd235fe015b3f93364482b83008b388c1b86d9
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: b365ada2d38f8fca97b66bb3d46b2c8e93d7cb1d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303967"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676234"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>如何：启用使用设计器的 Windows 窗体 ListView 控件中的磁贴视图
 磁贴视图功能<xref:System.Windows.Forms.ListView>控件使您可以提供一种视觉平衡图形和文本信息之间。 磁贴视图中，为项目显示的文本信息与为详细信息视图定义的列信息相同。 磁贴视图功能结合的分组或插入标记中的功能<xref:System.Windows.Forms.ListView>控件。  
   
  磁贴视图使用 32x32 图标和若干行文本，如在下图中所示。  
   
- ![使用平铺视图的 ListView 控件中](../../../../docs/framework/winforms/controls/media/listviewtile.gif "ListViewTile")  
+ ![使用平铺视图的 ListView 控件中](./media/enable-tile-view-in-a-wf-listview-control-using-the-designer/tile-view-in-listview-control.gif "磁贴视图图标和文本")  
   
  平铺视图属性和方法使您能够指定哪些列字段显示的每个项，并共同控制的大小和磁贴视图窗口中的所有项的外观。 为清楚起见，将磁贴中的第一行始终是文本的项的名称;不能更改它。  
   

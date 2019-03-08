@@ -2,12 +2,12 @@
 title: 服务跟踪查看器工具 (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442888"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680381"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服务跟踪查看器工具 (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助你分析生成的 WCF 的诊断跟踪。 服务跟踪查看器使您能够轻松地合并、 查看和筛选日志中的跟踪消息，以便可以诊断、 修复和验证 WCF 服务问题。  
@@ -50,7 +50,13 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
 |活动跟踪|处理活动与组件之间的流事件。<br /><br /> 此级别允许管理员和开发人员关联同一应用程序域中的各应用程序。<br /><br /> -活动边界跟踪： 启动/停止。<br />-传输跟踪。|  
   
  可以使用 `add` 指定要使用的跟踪侦听器的名称和类型。 在示例配置中，将侦听器命名为 `sdt` 并作为类型添加了标准 .NET Framework 跟踪侦听器 (`System.Diagnostics.XmlWriterTraceListener`)。 使用 `initializeData` 设置该侦听器的日志文件的名称。 此外，还可以用一个简单文件名来替换完全限定路径。  
-  
+
+从.NET Framework 4.8，在某些高对比度主题中的组合框控件显示在正确的颜色。 可以通过删除中的以下设置来禁用此更改*svcTraceViewer.exe.config*文件：
+
+```xml
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+```
+
 ## <a name="using-the-service-trace-viewer-tool"></a>使用服务跟踪查看器工具  
   
 ### <a name="opening-and-viewing-wcf-trace-files"></a>打开并查看 WCF 跟踪文件  

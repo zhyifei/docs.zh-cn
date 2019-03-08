@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序使用 Azure 云和 Windows 容器 |�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: f5a9d0c7c1c45a6afca390e93384af4c8386fe09
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 15ea074693a75aa04b4f3a03e6e5e3d7f748cea1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150584"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674934"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>演练和技术可帮助入门的概述
 
@@ -35,7 +35,6 @@ ms.locfileid: "53150584"
 
 - **部署到 Azure Service Fabric Windows 基于容器的应用程序**
 
-
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>演练 1:EShop 旧版应用的教程
 
 ### <a name="technical-walkthrough-availability"></a>技术演练可用性
@@ -44,10 +43,10 @@ ms.locfileid: "53150584"
 
 [eShopModernizing wiki 演练](https://github.com/dotnet-architecture/eShopModernizing/wiki)
 
-
 ### <a name="overview"></a>概述
 
-在本演练中，可以浏览对旧版应用程序的三个示例的初始实现。 前两个示例 web 应用具有单一式体系结构，并使用传统的 ASP.NET 创建的。 一个应用程序基于 ASP.NET 4.x MVC;第二个应用程序基于 ASP.NET 4.x Web 窗体。 第三个应用程序是由客户端 WinForms 应用程序和服务器端的 3 层应用程序[Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md)服务。
+在本演练中，可以浏览对旧版应用程序的三个示例的初始实现。 前两个示例 web 应用具有单一式体系结构，并使用传统的 ASP.NET 创建的。 一个应用程序基于 ASP.NET 4.x MVC;第二个应用程序基于 ASP.NET 4.x Web 窗体。
+第三个应用程序是由客户端 WinForms 应用程序和服务器端的 3 层应用程序[Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md)服务。
 
 所有这些应用程序目前[eShopModernizing GitHub 存储库](https://github.com/dotnet-architecture/eShopModernizing)。
 
@@ -59,23 +58,21 @@ ms.locfileid: "53150584"
 
 下图显示了原始的旧版 ASP.NET web 应用程序的简单方案。
 
-> ![简单的体系结构方案中的原始的旧版 ASP.NET web 应用程序](./media/image5-1.png)
->
+![简单的体系结构方案中的原始的旧版 ASP.NET web 应用程序](./media/image5-1.png)
 
-从业务域的角度来看，这两个应用管理功能提供相同的目录。 EShop 企业团队的成员将使用该应用可以查看和编辑产品目录。 
+从业务域的角度来看，这两个应用管理功能提供相同的目录。 EShop 企业团队的成员将使用该应用可以查看和编辑产品目录。
 
 下图显示了初始应用程序的屏幕截图。
 
 ![ASP.NET MVC 和 ASP.NET Web 窗体应用程序 （现有/旧版技术）](./media/image5-2.png)
 
-依赖关系在 ASP.NET 4.x 或更早版本 （不管是 MVC 或 Web 窗体） 意味着除非通过使用 ASP.NET Core MVC 完全重写代码，这些应用程序不会运行.NET Core 上。 
+依赖关系在 ASP.NET 4.x 或更早版本 （不管是 MVC 或 Web 窗体） 意味着除非通过使用 ASP.NET Core MVC 完全重写代码，这些应用程序不会运行.NET Core 上。
 
 ### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>方案 2:WCF 服务和 WinForms 客户端应用程序 （第 3 层应用程序）
 
 下图显示了原始的第 3 层旧应用程序的简单方案。
 
-> ![简单的体系结构方案中的原始的旧版第 3 层应用程序与 WCF 服务和 WinForms 客户端应用程序](./media/image5-1.5.png)
->
+![简单的体系结构方案中的原始的旧版第 3 层应用程序与 WCF 服务和 WinForms 客户端应用程序](./media/image5-1.5.png)
 
 ### <a name="benefits"></a>优点
 
@@ -85,9 +82,8 @@ ms.locfileid: "53150584"
 
 浏览 GitHub wiki 上的更深入此内容：
 
-  - [教程基线 ASP.NET MVC 和 Web 窗体"传统"应用程序](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
-  - [基线 WCF 服务和 WinForms （3 层）"传统"应用程序的教程](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
-
+- [教程基线 ASP.NET MVC 和 Web 窗体"传统"应用程序](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
+-   [基线 WCF 服务和 WinForms （3 层）"传统"应用程序的教程](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>演练 2:容器化现有.NET 应用程序与 Windows 容器
 
@@ -111,16 +107,13 @@ ms.locfileid: "53150584"
 
 下图显示了容器化的 eShop 旧版 web 应用应用程序的方案。
 
-> ![简化的体系结构关系图的适用于容器化 ASP.NET 应用程序在开发环境](./media/image5-3.png)
->
-
+![简化的体系结构关系图的适用于容器化 ASP.NET 应用程序在开发环境](./media/image5-3.png)
 
 ### <a name="scenario-2-containerized-wcf-service"></a>方案 2:容器化的 WCF 服务
 
-下图显示了包含容器化的 WCF 服务的第 3 层应用程序的方案。 
+下图显示了包含容器化的 WCF 服务的第 3 层应用程序的方案。
 
-> ![简化的开发环境中的容器化 WCF 服务的体系结构关系图](./media/image5-3.5.png)
->
+![简化的开发环境中的容器化 WCF 服务的体系结构关系图](./media/image5-3.5.png)
 
 ### <a name="benefits"></a>优点
 
@@ -136,10 +129,8 @@ ms.locfileid: "53150584"
 
 浏览 GitHub wiki 上的更深入此内容：
 
-  - [如何容器化.NET Framework web 应用程序使用 Windows 容器和 Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
-  - [将 Docker 支持添加到 WCF 服务](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
-
-
+- [如何容器化.NET Framework web 应用程序使用 Windows 容器和 Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+- [将 Docker 支持添加到 WCF 服务](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
 
 ## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>演练 3:将 Windows 基于容器的应用部署到 Azure Vm
 
@@ -163,19 +154,19 @@ ms.locfileid: "53150584"
 
 ![从开发人员电脑通过 Docker 引擎连接部署到 Azure VM](./media/image5-4.png)
 
-> **图 5-4**。 从开发人员电脑通过 Docker 引擎连接部署到 Azure VM
+**图 5-4**。 从开发人员电脑通过 Docker 引擎连接部署到 Azure VM
 
 #### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>方案 b:部署到 Azure VM 通过 Docker 注册表
 
 ![部署到 Azure VM 通过 Docker 注册表](./media/image5-5.png)
 
-> **图 5-5**。 部署到 Azure VM 通过 Docker 注册表
+**图 5-5**。 部署到 Azure VM 通过 Docker 注册表
 
 #### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>方案 c:从 Azure DevOps 服务中的 CI/CD 管道部署到 Azure VM
 
 ![从 Azure DevOps 服务中的 CI/CD 管道部署到 Azure VM](./media/image5-6.png)
 
-> **如 5-6**。 从 Azure DevOps 服务中的 CI/CD 管道部署到 Azure VM
+**如 5-6**。 从 Azure DevOps 服务中的 CI/CD 管道部署到 Azure VM
 
 ### <a name="azure-vms-for-windows-containers"></a>用于 Windows 容器的 azure Vm
 
@@ -227,10 +218,9 @@ Azure 容器实例轻松创建和管理 Docker 容器在 Azure 中，而无需�
 
 ## <a name="next-steps"></a>后续步骤
 
-浏览 GitHub wiki 上的更深入此内容： 
+浏览 GitHub wiki 上的更深入此内容：
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
-
 
 ## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>演练 5:将 Windows 基于容器的应用部署到 Azure 容器服务中 Kubernetes
 
@@ -248,9 +238,9 @@ Azure 容器实例轻松创建和管理 Docker 容器在 Azure 中，而无需�
 
 本演练的目的是了解如何基于 Windows 容器应用程序部署到 Kubernetes (也称为*K8s*) 在 Azure 容器服务中。 从零开始部署到 Kubernetes 是一个两步过程：
 
-1.  部署到 Azure 容器服务 Kubernetes 群集。
+1. 部署到 Azure 容器服务 Kubernetes 群集。
 
-2.  将应用程序和相关的资源部署到 Kubernetes 群集。
+2. 将应用程序和相关的资源部署到 Kubernetes 群集。
 
 ### <a name="scenarios"></a>方案
 
@@ -258,13 +248,13 @@ Azure 容器实例轻松创建和管理 Docker 容器在 Azure 中，而无需�
 
 ![将直接部署到 Kubernetes 群集从开发环境](./media/image5-7.png)
 
-> **图 5-7**。 将直接部署到 Kubernetes 群集从开发环境
+**图 5-7**。 将直接部署到 Kubernetes 群集从开发环境
 
 #### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>方案 b:从 Azure DevOps 服务中的 CI/CD 管道部署到 Kubernetes 群集
 
 ![从 Azure DevOps 服务中的 CI/CD 管道部署到 Kubernetes 群集](./media/image5-8.png)
 
-> **图 5-8**。 从 Azure DevOps 服务中的 CI/CD 管道部署到 Kubernetes 群集
+**图 5-8**。 从 Azure DevOps 服务中的 CI/CD 管道部署到 Kubernetes 群集
 
 ### <a name="benefits"></a>优点
 
@@ -308,9 +298,9 @@ Azure 容器服务特别为 Azure 优化了常用的开源工具和技术。 获
 
 本演练的目的是了解如何基于 Windows 容器应用程序部署到 Azure 中的 Service Fabric 群集。 从零开始部署到 Service Fabric 是一个两步过程：
 
-1.  将 Service Fabric 群集部署到 Azure （或不同的环境）。
+1. 将 Service Fabric 群集部署到 Azure （或不同的环境）。
 
-2.  将应用程序和相关的资源部署到 Service Fabric 群集。
+2. 将应用程序和相关的资源部署到 Service Fabric 群集。
 
 ### <a name="scenarios"></a>方案
 
@@ -324,7 +314,7 @@ Azure 容器服务特别为 Azure 优化了常用的开源工具和技术。 获
 
 ![从 Azure DevOps 服务中的 CI/CD 管道部署到 Service Fabric 群集](./media/image5-10.png)
 
-> **图 5-10**。 从 Azure DevOps 服务中的 CI/CD 管道部署到 Service Fabric 群集
+**图 5-10**。 从 Azure DevOps 服务中的 CI/CD 管道部署到 Service Fabric 群集
 
 ## <a name="benefits"></a>优点
 
@@ -366,6 +356,6 @@ Azure Service Fabric 提供了容器和应用程序配置为可移植性。 您�
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
->[!div class="step-by-step"]
->[上一页](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
->[下一页](conclusions.md)
+> [!div class="step-by-step"]
+> [上一页](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
+> [下一页](conclusions.md)

@@ -4,12 +4,12 @@ description: 了解容器来简化开发运营的关键角色。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 752a678be7735f7ae962005e1d373993d1496753
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 4b40837bf2b74d801b9794c88e79eb03bcd72e95
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583727"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679094"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>容器作为 DevOps 协作的基础
 
@@ -53,7 +53,7 @@ DevOps 支柱定义使用在代码存储库中提供的 Dockerfile 生成 – �
 
 - 我们如何使用开源工具/平台的 Microsoft Azure 中的容器？
 
-如果可以解答这些问题，您将更好地准备好移动到 Docker 容器应用程序 （现有或新应用程序）。 
+如果可以解答这些问题，就可以更好地准备好移动到 Docker 容器应用程序 （现有或新应用程序）。 
 
 ## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>泛型的端到端的 Docker 应用程序生命周期工作流简介
 
@@ -63,11 +63,11 @@ DevOps 支柱定义使用在代码存储库中提供的 Dockerfile 生成 – �
 
 **图 2-2。** Docker 容器化应用程序生命周期的高级工作流
 
-开发人员，启动内部循环工作流中编写代码的所有内容开始。 内部循环阶段是开发人员在其中定义发生之前将代码推送到代码存储库 （例如，Git 等源代码管理系统）。 将提交这批后，存储库触发持续集成 (CI) 和工作流的其余部分。
+开发人员，启动内部循环工作流中编写代码的所有内容开始。 内部循环阶段是开发人员在其中定义发生之前将代码推送到代码存储库 （例如，Git 等源代码管理系统）。 在其后已提交，存储库触发器持续集成 (CI) 和工作流的其余部分。
 
 内部循环基本上包括"与代码一样，""运行"，"test"和"调试，"以及在本地运行应用程序前所需的其他步骤的典型步骤。 这是开发人员的过程来运行和测试应用程序作为 Docker 容器。 内部循环工作流将在后面的部分中所述。
 
-后退一步要查看端到端工作流，DevOps 工作流不只是一项技术或工具集： 它是一种心态需要区域性演变。 它是人员、 流程和相应的工具，以使您的应用程序生命周期更快、 更可预测。 企业通常采用容器化工作流重构其组织来表示人员和流程相匹配的容器化工作流。
+后退一步要查看端到端工作流，DevOps 工作流不只是一项技术或工具集： 它是一种心态需要区域性演变。 它的人员、 流程和相应的工具，以使您的应用程序生命周期更快、 更可预测。 企业通常采用容器化工作流重构其组织来表示人员和流程相匹配的容器化工作流。
 
 DevOps 在其中完成练习可帮助团队更快地响应一起竞争压力通过自动化，这会导致改进可跟踪性和可重复的工作流以代替容易出错的手动过程。 组织还可以更有效地管理环境并实现成本节约与在本地和云资源的组合以及紧密集成的工具。
 
