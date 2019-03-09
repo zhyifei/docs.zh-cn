@@ -4,12 +4,6 @@ description: 获取开发基于 Docker 应用程序的选项的高级概述。 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/27/2018
-ms.openlocfilehash: eb87f9a214dbffe71dae1e1739f2563c08fac280
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084922"
 ---
 # <a name="development-process-for-docker-based-applications"></a>基于 Docker 的应用程序的开发流程
 
@@ -42,7 +36,7 @@ ms.locfileid: "54084922"
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>适用于 Docker 容器的 .NET 语言和框架
 
-如本指南的前面几节所述，开发 Docker 容器化 .NET 应用程序时，可以使用 .NET Framework、.NET Core 或开放源 Mono 项目。 面向 Linux 或 Windows 容器时，根据所使用的 .NET 框架，可以用 C\#、F\# 或 Visual Basic 语言进行开发。 有关 .NET 语言的详细信息，请参阅博客文章 [The .NET Language Strategy](https://blogs.msdn.microsoft.com/dotnet/2017/02/01/the-net-language-strategy/)（.NET 语言策略）。
+如本指南的前面几节所述，开发 Docker 容器化 .NET 应用程序时，可以使用 .NET Framework、.NET Core 或开放源 Mono 项目。 面向 Linux 或 Windows 容器时，根据所使用的 .NET 框架，可以用 C\#、F\# 或 Visual Basic 语言进行开发。 有关 .NET 语言的详细信息，请参阅博客文章 [The .NET Language Strategy](https://devblogs.microsoft.com/dotnet/the-net-language-strategy/)（.NET 语言策略）。
 
 >[!div class="step-by-step"]
 >[上一页](../architect-microservice-container-applications/using-azure-service-fabric.md)

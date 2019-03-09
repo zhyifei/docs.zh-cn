@@ -2,12 +2,12 @@
 title: 可为空引用类型
 description: 本文概述了在 C# 8 中添加的可为空引用类型。 你将了解该功能如何为新项目和现有项目提供针对空引用异常的安全性。
 ms.date: 02/19/2019
-ms.openlocfilehash: 1eb4ccb5ec4397cb81aab37c13a31c41533238e9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411542"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725020"
 ---
 # <a name="nullable-reference-types"></a>可为空引用类型
 
@@ -41,7 +41,7 @@ string? name;
 name!.Length;
 ```
 
-你可以在 GitHub 上的[可为空引用类型草稿](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)规范提案中阅读有关此运算符的详细信息。
+你可以在 GitHub 上的[可为空引用类型草稿](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)规范提案中阅读有关此运算符的详细信息。
 
 ## <a name="nullability-of-types"></a>类型为 Null 性
 
