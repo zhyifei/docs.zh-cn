@@ -9,57 +9,58 @@ helpviewer_keywords:
 - images [Windows Forms], working with
 - examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
-ms.openlocfilehash: 6d2f0a2f4acebaac59f2d8180f2de4ccb88b2965
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61d534f8299c920f656abe4280cc3ea5e609c0b2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526829"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710454"
 ---
-# <a name="working-with-images-bitmaps-icons-and-metafiles"></a><span data-ttu-id="54315-102">使用图像、位图、图标和图元文件</span><span class="sxs-lookup"><span data-stu-id="54315-102">Working with Images, Bitmaps, Icons, and Metafiles</span></span>
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="54315-103"> 提供用于处理光栅图像的 `Bitmap` 类以及用于处理矢量图像的 `Metafile` 类。</span><span class="sxs-lookup"><span data-stu-id="54315-103"> provides the `Bitmap` class for working with raster images and the `Metafile` class for working with vector images.</span></span> <span data-ttu-id="54315-104">`Bitmap` 和 `Metafile` 类都继承自 `Image` 类。</span><span class="sxs-lookup"><span data-stu-id="54315-104">The `Bitmap` and the `Metafile` classes both inherit from the `Image` class.</span></span>  
+# <a name="working-with-images-bitmaps-icons-and-metafiles"></a><span data-ttu-id="c9fb8-102">使用图像、位图、图标和图元文件</span><span class="sxs-lookup"><span data-stu-id="c9fb8-102">Working with Images, Bitmaps, Icons, and Metafiles</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="c9fb8-103">提供用于处理光栅图像的 `Bitmap` 类以及用于处理矢量图像的 `Metafile` 类。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-103">provides the `Bitmap` class for working with raster images and the `Metafile` class for working with vector images.</span></span> <span data-ttu-id="c9fb8-104">
+  `Bitmap` 和 `Metafile\` 类都继承自 `Image` 类。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-104">The `Bitmap` and the `Metafile` classes both inherit from the `Image` class.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="54315-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="54315-105">In This Section</span></span>  
- [<span data-ttu-id="54315-106">如何：在屏幕上绘制现有位图</span><span class="sxs-lookup"><span data-stu-id="54315-106">How to: Draw an Existing Bitmap to the Screen</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  
- <span data-ttu-id="54315-107">介绍如何加载和绘制位图。</span><span class="sxs-lookup"><span data-stu-id="54315-107">Describes how to load and draw bitmaps.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="c9fb8-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="c9fb8-105">In This Section</span></span>  
+ [<span data-ttu-id="c9fb8-106">如何：在屏幕上绘制现有位图</span><span class="sxs-lookup"><span data-stu-id="c9fb8-106">How to: Draw an Existing Bitmap to the Screen</span></span>](how-to-draw-an-existing-bitmap-to-the-screen.md)  
+ <span data-ttu-id="c9fb8-107">介绍如何加载和绘制位图。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-107">Describes how to load and draw bitmaps.</span></span>  
   
- [<span data-ttu-id="54315-108">如何：加载和显示图元文件</span><span class="sxs-lookup"><span data-stu-id="54315-108">How to: Load and Display Metafiles</span></span>](../../../../docs/framework/winforms/advanced/how-to-load-and-display-metafiles.md)  
- <span data-ttu-id="54315-109">展示如何加载和绘制图元文件。</span><span class="sxs-lookup"><span data-stu-id="54315-109">Shows how to load and draw metafiles.</span></span>  
+ [<span data-ttu-id="c9fb8-108">如何：加载和显示图元文件</span><span class="sxs-lookup"><span data-stu-id="c9fb8-108">How to: Load and Display Metafiles</span></span>](how-to-load-and-display-metafiles.md)  
+ <span data-ttu-id="c9fb8-109">展示如何加载和绘制图元文件。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-109">Shows how to load and draw metafiles.</span></span>  
   
- [<span data-ttu-id="54315-110">在 GDI+ 中裁剪和缩放图像</span><span class="sxs-lookup"><span data-stu-id="54315-110">Cropping and Scaling Images in GDI+</span></span>](../../../../docs/framework/winforms/advanced/cropping-and-scaling-images-in-gdi.md)  
- <span data-ttu-id="54315-111">说明如何裁剪和缩放矢量图像和光栅图像。</span><span class="sxs-lookup"><span data-stu-id="54315-111">Explains how to crop and scale vector and raster images.</span></span>  
+ [<span data-ttu-id="c9fb8-110">在 GDI+ 中裁剪和缩放图像</span><span class="sxs-lookup"><span data-stu-id="c9fb8-110">Cropping and Scaling Images in GDI+</span></span>](cropping-and-scaling-images-in-gdi.md)  
+ <span data-ttu-id="c9fb8-111">说明如何裁剪和缩放矢量图像和光栅图像。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-111">Explains how to crop and scale vector and raster images.</span></span>  
   
- [<span data-ttu-id="54315-112">如何：旋转、反射和倾斜图像</span><span class="sxs-lookup"><span data-stu-id="54315-112">How to: Rotate, Reflect, and Skew Images</span></span>](../../../../docs/framework/winforms/advanced/how-to-rotate-reflect-and-skew-images.md)  
- <span data-ttu-id="54315-113">描述如何绘制旋转、反射和倾斜图像。</span><span class="sxs-lookup"><span data-stu-id="54315-113">Describes how to draw rotated, reflected and skewed images.</span></span>  
+ [<span data-ttu-id="c9fb8-112">如何：旋转、 反射和倾斜图像</span><span class="sxs-lookup"><span data-stu-id="c9fb8-112">How to: Rotate, Reflect, and Skew Images</span></span>](how-to-rotate-reflect-and-skew-images.md)  
+ <span data-ttu-id="c9fb8-113">描述如何绘制旋转、反射和倾斜图像。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-113">Describes how to draw rotated, reflected and skewed images.</span></span>  
   
- [<span data-ttu-id="54315-114">如何：在缩放期间使用内插模式控制图像质量</span><span class="sxs-lookup"><span data-stu-id="54315-114">How to: Use Interpolation Mode to Control Image Quality During Scaling</span></span>](../../../../docs/framework/winforms/advanced/how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md)  
- <span data-ttu-id="54315-115">展示如何使用 <xref:System.Drawing.Drawing2D.InterpolationMode> 枚举来更改图像质量。</span><span class="sxs-lookup"><span data-stu-id="54315-115">Shows how to use the <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration to change image quality.</span></span>  
+ [<span data-ttu-id="c9fb8-114">如何：在缩放过程时使用插值模式控制图像质量</span><span class="sxs-lookup"><span data-stu-id="c9fb8-114">How to: Use Interpolation Mode to Control Image Quality During Scaling</span></span>](how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md)  
+ <span data-ttu-id="c9fb8-115">展示如何使用 <xref:System.Drawing.Drawing2D.InterpolationMode> 枚举来更改图像质量。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-115">Shows how to use the <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration to change image quality.</span></span>  
   
- [<span data-ttu-id="54315-116">如何：创建缩略图图像</span><span class="sxs-lookup"><span data-stu-id="54315-116">How to: Create Thumbnail Images</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-thumbnail-images.md)  
- <span data-ttu-id="54315-117">描述如何创建缩略图像。</span><span class="sxs-lookup"><span data-stu-id="54315-117">Describes how to create thumbnail images.</span></span>  
+ [<span data-ttu-id="c9fb8-116">如何：创建缩略图图像</span><span class="sxs-lookup"><span data-stu-id="c9fb8-116">How to: Create Thumbnail Images</span></span>](how-to-create-thumbnail-images.md)  
+ <span data-ttu-id="c9fb8-117">描述如何创建缩略图像。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-117">Describes how to create thumbnail images.</span></span>  
   
- [<span data-ttu-id="54315-118">如何：通过避免自动缩放改善性能</span><span class="sxs-lookup"><span data-stu-id="54315-118">How to: Improve Performance by Avoiding Automatic Scaling</span></span>](../../../../docs/framework/winforms/advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)  
- <span data-ttu-id="54315-119">说明如何在不进行自动缩放的情况下绘制图像。</span><span class="sxs-lookup"><span data-stu-id="54315-119">Explains how to draw an image without automatic scaling.</span></span>  
+ [<span data-ttu-id="c9fb8-118">如何：通过避免自动缩放改善性能</span><span class="sxs-lookup"><span data-stu-id="c9fb8-118">How to: Improve Performance by Avoiding Automatic Scaling</span></span>](how-to-improve-performance-by-avoiding-automatic-scaling.md)  
+ <span data-ttu-id="c9fb8-119">说明如何在不进行自动缩放的情况下绘制图像。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-119">Explains how to draw an image without automatic scaling.</span></span>  
   
- [<span data-ttu-id="54315-120">如何：读取图像元数据</span><span class="sxs-lookup"><span data-stu-id="54315-120">How to: Read Image Metadata</span></span>](../../../../docs/framework/winforms/advanced/how-to-read-image-metadata.md)  
- <span data-ttu-id="54315-121">描述如何从图像读取元数据。</span><span class="sxs-lookup"><span data-stu-id="54315-121">Describes how to read metadata from an image.</span></span>  
+ [<span data-ttu-id="c9fb8-120">如何：读取图像元数据</span><span class="sxs-lookup"><span data-stu-id="c9fb8-120">How to: Read Image Metadata</span></span>](how-to-read-image-metadata.md)  
+ <span data-ttu-id="c9fb8-121">描述如何从图像读取元数据。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-121">Describes how to read metadata from an image.</span></span>  
   
- [<span data-ttu-id="54315-122">如何：在运行时创建位图</span><span class="sxs-lookup"><span data-stu-id="54315-122">How to: Create a Bitmap at Run Time</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-bitmap-at-run-time.md)  
- <span data-ttu-id="54315-123">展示如何在运行时绘制位图。</span><span class="sxs-lookup"><span data-stu-id="54315-123">Shows how to draw a bitmap at runtime.</span></span>  
+ [<span data-ttu-id="c9fb8-122">如何：在运行时创建位图</span><span class="sxs-lookup"><span data-stu-id="c9fb8-122">How to: Create a Bitmap at Run Time</span></span>](how-to-create-a-bitmap-at-run-time.md)  
+ <span data-ttu-id="c9fb8-123">展示如何在运行时绘制位图。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-123">Shows how to draw a bitmap at runtime.</span></span>  
   
- [<span data-ttu-id="54315-124">如何：提取与 Windows 窗体中文件相关联的图标</span><span class="sxs-lookup"><span data-stu-id="54315-124">How to: Extract the Icon Associated with a File in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md)  
- <span data-ttu-id="54315-125">描述如何提取作为文件的嵌入资源的图标。</span><span class="sxs-lookup"><span data-stu-id="54315-125">Describes how to extract an icon that is an embedded resource of a file.</span></span>  
+ [<span data-ttu-id="c9fb8-124">如何：提取与 Windows 窗体中的文件关联的图标</span><span class="sxs-lookup"><span data-stu-id="c9fb8-124">How to: Extract the Icon Associated with a File in Windows Forms</span></span>](how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md)  
+ <span data-ttu-id="c9fb8-125">描述如何提取作为文件的嵌入资源的图标。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-125">Describes how to extract an icon that is an embedded resource of a file.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="54315-126">参考</span><span class="sxs-lookup"><span data-stu-id="54315-126">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c9fb8-126">参考</span><span class="sxs-lookup"><span data-stu-id="c9fb8-126">Reference</span></span>  
  <xref:System.Drawing.Image>  
- <span data-ttu-id="54315-127">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="54315-127">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="c9fb8-127">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-127">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Drawing.Imaging.Metafile>  
- <span data-ttu-id="54315-128">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="54315-128">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="c9fb8-128">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-128">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Drawing.Bitmap>  
- <span data-ttu-id="54315-129">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="54315-129">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="c9fb8-129">对此类进行描述，并提供指向其所有成员的链接。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-129">Describes this class and has links to all of its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="54315-130">相关章节</span><span class="sxs-lookup"><span data-stu-id="54315-130">Related Sections</span></span>  
- [<span data-ttu-id="54315-131">图像、位图和图元文件</span><span class="sxs-lookup"><span data-stu-id="54315-131">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- <span data-ttu-id="54315-132">包含指向讨论位图不同类型的主题的链接并在应用程序中对它们进行处操作。</span><span class="sxs-lookup"><span data-stu-id="54315-132">Contains links to topics that discuss different types of bitmaps and manipulating them in your applications.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="c9fb8-130">相关章节</span><span class="sxs-lookup"><span data-stu-id="c9fb8-130">Related Sections</span></span>  
+ [<span data-ttu-id="c9fb8-131">图像、位图和图元文件</span><span class="sxs-lookup"><span data-stu-id="c9fb8-131">Images, Bitmaps, and Metafiles</span></span>](images-bitmaps-and-metafiles.md)  
+ <span data-ttu-id="c9fb8-132">包含指向讨论位图不同类型的主题的链接并在应用程序中对它们进行处操作。</span><span class="sxs-lookup"><span data-stu-id="c9fb8-132">Contains links to topics that discuss different types of bitmaps and manipulating them in your applications.</span></span>

@@ -10,36 +10,36 @@ helpviewer_keywords:
 - ToolStripRenderer class [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c208b2f6-8105-474b-9075-d582e1792870
-ms.openlocfilehash: 1e6455ebabfa5b27301f98b89861348b28d415af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 039bdd3907851d1f5e756652dd1b42765606c0c6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690197"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719281"
 ---
-# <a name="how-to-create-a-professionally-styled-toolstrip-control"></a><span data-ttu-id="a94e1-102">如何：创建具有专业样式的 ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="a94e1-102">How to: Create a Professionally Styled ToolStrip Control</span></span>
-<span data-ttu-id="a94e1-103">可以通过编写自己的派生自 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 类型的类，赋予应用程序的 <xref:System.Windows.Forms.ToolStrip> 控件一个专业的外观和行为（外观和感受）。</span><span class="sxs-lookup"><span data-stu-id="a94e1-103">You can give your application’s <xref:System.Windows.Forms.ToolStrip> controls a professional appearance and behavior (look and feel) by writing your own class derived from the <xref:System.Windows.Forms.ToolStripProfessionalRenderer> type.</span></span>  
+# <a name="how-to-create-a-professionally-styled-toolstrip-control"></a><span data-ttu-id="6a55b-102">如何：创建具有专业样式的 ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="6a55b-102">How to: Create a Professionally Styled ToolStrip Control</span></span>
+<span data-ttu-id="6a55b-103">可以通过编写自己的派生自 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 类型的类，赋予应用程序的 <xref:System.Windows.Forms.ToolStrip> 控件一个专业的外观和行为（外观和感受）。</span><span class="sxs-lookup"><span data-stu-id="6a55b-103">You can give your application’s <xref:System.Windows.Forms.ToolStrip> controls a professional appearance and behavior (look and feel) by writing your own class derived from the <xref:System.Windows.Forms.ToolStripProfessionalRenderer> type.</span></span>  
   
- <span data-ttu-id="a94e1-104">没有对此功能在 Visual Studio 中的广泛支持。</span><span class="sxs-lookup"><span data-stu-id="a94e1-104">There is extensive support for this feature in Visual Studio.</span></span>  
+ <span data-ttu-id="6a55b-104">没有对此功能在 Visual Studio 中的广泛支持。</span><span class="sxs-lookup"><span data-stu-id="6a55b-104">There is extensive support for this feature in Visual Studio.</span></span>  
   
- <span data-ttu-id="a94e1-105">请参阅[演练：创建具有专业样式的 ToolStrip 控件](../../../../docs/framework/winforms/controls/walkthrough-creating-a-professionally-styled-toolstrip-control.md)。</span><span class="sxs-lookup"><span data-stu-id="a94e1-105">See [Walkthrough: Creating a Professionally Styled ToolStrip Control](../../../../docs/framework/winforms/controls/walkthrough-creating-a-professionally-styled-toolstrip-control.md).</span></span>  
+ <span data-ttu-id="6a55b-105">请参阅[演练：创建具有专业样式的 ToolStrip 控件](walkthrough-creating-a-professionally-styled-toolstrip-control.md)。</span><span class="sxs-lookup"><span data-stu-id="6a55b-105">See [Walkthrough: Creating a Professionally Styled ToolStrip Control](walkthrough-creating-a-professionally-styled-toolstrip-control.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a94e1-106">示例</span><span class="sxs-lookup"><span data-stu-id="a94e1-106">Example</span></span>  
- <span data-ttu-id="a94e1-107">下面的代码示例演示如何使用<xref:System.Windows.Forms.ToolStrip>控件，创建复合控件，以模拟**导航窗格**Microsoft Outlook® 提供的。</span><span class="sxs-lookup"><span data-stu-id="a94e1-107">The following code example demonstrates how to use <xref:System.Windows.Forms.ToolStrip> controls to create a composite control that mimics the **Navigation Pane** provided by Microsoft® Outlook®.</span></span>  
+## <a name="example"></a><span data-ttu-id="6a55b-106">示例</span><span class="sxs-lookup"><span data-stu-id="6a55b-106">Example</span></span>  
+ <span data-ttu-id="6a55b-107">下面的代码示例演示如何使用<xref:System.Windows.Forms.ToolStrip>控件，创建复合控件，以模拟**导航窗格**Microsoft Outlook® 提供的。</span><span class="sxs-lookup"><span data-stu-id="6a55b-107">The following code example demonstrates how to use <xref:System.Windows.Forms.ToolStrip> controls to create a composite control that mimics the **Navigation Pane** provided by Microsoft® Outlook®.</span></span>  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.StackView#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#1)]
- [!code-vb[System.Windows.Forms.ToolStrip.StackView#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#1)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.StackView#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStrip.StackView#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a94e1-108">编译代码</span><span class="sxs-lookup"><span data-stu-id="a94e1-108">Compiling the Code</span></span>  
- <span data-ttu-id="a94e1-109">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="a94e1-109">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="6a55b-108">编译代码</span><span class="sxs-lookup"><span data-stu-id="6a55b-108">Compiling the Code</span></span>  
+ <span data-ttu-id="6a55b-109">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="6a55b-109">This example requires:</span></span>  
   
--   <span data-ttu-id="a94e1-110">对 System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="a94e1-110">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="6a55b-110">对 System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="6a55b-110">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="a94e1-111">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="a94e1-111">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="a94e1-112">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="a94e1-112">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="a94e1-113">另请参阅[演练：创建具有专业样式的 ToolStrip 控件](walkthrough-creating-a-professionally-styled-toolstrip-control.md)。</span><span class="sxs-lookup"><span data-stu-id="a94e1-113">Also see [Walkthrough: Creating a Professionally Styled ToolStrip Control](walkthrough-creating-a-professionally-styled-toolstrip-control.md).</span></span>  
+ <span data-ttu-id="6a55b-111">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="6a55b-111">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="6a55b-112">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="6a55b-112">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="6a55b-113">另请参阅[演练：创建具有专业样式的 ToolStrip 控件](walkthrough-creating-a-professionally-styled-toolstrip-control.md)。</span><span class="sxs-lookup"><span data-stu-id="6a55b-113">Also see [Walkthrough: Creating a Professionally Styled ToolStrip Control](walkthrough-creating-a-professionally-styled-toolstrip-control.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a94e1-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="a94e1-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a55b-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="6a55b-114">See also</span></span>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [<span data-ttu-id="a94e1-115">ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="a94e1-115">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
-- [<span data-ttu-id="a94e1-116">如何：向窗体提供标准菜单项</span><span class="sxs-lookup"><span data-stu-id="a94e1-116">How to: Provide Standard Menu Items to a Form</span></span>](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)
+- [<span data-ttu-id="6a55b-115">ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="6a55b-115">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
+- [<span data-ttu-id="6a55b-116">如何：向窗体提供标准菜单项</span><span class="sxs-lookup"><span data-stu-id="6a55b-116">How to: Provide Standard Menu Items to a Form</span></span>](how-to-provide-standard-menu-items-to-a-form.md)
