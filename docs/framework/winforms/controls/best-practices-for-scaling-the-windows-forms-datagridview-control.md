@@ -9,12 +9,12 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-ms.openlocfilehash: 5adbcdb4aa34b3878e278d47337defe4388dd892
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 895dd132c070157355c28a935e43240f2750159e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710867"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706411"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>缩放 Windows 窗体 DataGridView 控件的最佳做法
 <xref:System.Windows.Forms.DataGridView>控件旨在提供最大可伸缩性。 如果需要显示大量的数据，则应遵循本主题，以避免消耗大量的内存或降低响应能力的用户界面 (UI) 中所述的准则。 本主题讨论下列问题：  
@@ -31,16 +31,16 @@ ms.locfileid: "54710867"
   
 -   防止行成为非共享行  
   
- 如果你有特殊性能需求，可以实现虚拟模式并提供你自己的数据管理操作。 有关详细信息，请参阅[Windows 窗体 DataGridView 控件中的数据显示模式](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)。  
+ 如果你有特殊性能需求，可以实现虚拟模式并提供你自己的数据管理操作。 有关详细信息，请参阅[Windows 窗体 DataGridView 控件中的数据显示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="using-cell-styles-efficiently"></a>有效地使用的单元格样式  
  每个单元格、 行和列可以具有其自己的样式信息。 样式的信息存储在<xref:System.Windows.Forms.DataGridViewCellStyle>对象。 创建多个独立单元格样式对象<xref:System.Windows.Forms.DataGridView>元素可以是效率不高，尤其在使用大量的数据时。 若要避免对性能产生影响，请使用以下准则：  
   
 -   避免设置单元格样式属性为各个<xref:System.Windows.Forms.DataGridViewCell>或<xref:System.Windows.Forms.DataGridViewRow>对象。 这包括指定的行对象<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>属性。 每个新行的行模板从克隆会收到其自己的模板的单元格样式对象副本。 最大可伸缩性，设置在单元格样式属性<xref:System.Windows.Forms.DataGridView>级别。 例如，设置<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>属性而不是<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>属性。  
   
--   如果某些单元格需要比默认格式设置的其他格式，使用相同<xref:System.Windows.Forms.DataGridViewCellStyle>跨单元格、 行或列组的实例。 避免直接设置属性类型的<xref:System.Windows.Forms.DataGridViewCellStyle>上各个单元格、 行和列。 单元格样式共享的示例，请参阅[如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。 通过处理单独设置单元格样式时，也可以避免对性能产生负面影响<xref:System.Windows.Forms.DataGridView.CellFormatting>事件处理程序。 有关示例，请参见 [如何：自定义 Windows 窗体 DataGridView 控件中的数据格式设置](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。  
+-   如果某些单元格需要比默认格式设置的其他格式，使用相同<xref:System.Windows.Forms.DataGridViewCellStyle>跨单元格、 行或列组的实例。 避免直接设置属性类型的<xref:System.Windows.Forms.DataGridViewCellStyle>上各个单元格、 行和列。 单元格样式共享的示例，请参阅[如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。 通过处理单独设置单元格样式时，也可以避免对性能产生负面影响<xref:System.Windows.Forms.DataGridView.CellFormatting>事件处理程序。 有关示例，请参见 [如何：自定义 Windows 窗体 DataGridView 控件中的数据格式设置](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。  
   
--   在确定单元格的样式，使用<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType>属性而不是<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>属性。 访问<xref:System.Windows.Forms.DataGridViewCell.Style%2A>属性创建的新实例<xref:System.Windows.Forms.DataGridViewCellStyle>类如果尚未使用该属性。 此外，此对象可能不包含该单元格的完整的样式信息，如果某些样式继承自行、 列或控件。 有关单元格的样式继承的详细信息，请参阅[Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。  
+-   在确定单元格的样式，使用<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType>属性而不是<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>属性。 访问<xref:System.Windows.Forms.DataGridViewCell.Style%2A>属性创建的新实例<xref:System.Windows.Forms.DataGridViewCellStyle>类如果尚未使用该属性。 此外，此对象可能不包含该单元格的完整的样式信息，如果某些样式继承自行、 列或控件。 有关单元格的样式继承的详细信息，请参阅[Windows 窗体 DataGridView 控件中的单元格样式](cell-styles-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="using-shortcut-menus-efficiently"></a>有效地使用快捷菜单  
  每个单元格、 行和列可以具有其自己的快捷菜单。 中的快捷菜单<xref:System.Windows.Forms.DataGridView>控制由<xref:System.Windows.Forms.ContextMenuStrip>控件。 只需与单元格样式对象一样，为许多单个创建快捷方式菜单<xref:System.Windows.Forms.DataGridView>元素会对性能产生负面影响。 若要避免这种下降，请使用以下准则：  
@@ -60,7 +60,7 @@ ms.locfileid: "54710867"
   
 -   最大可伸缩性，关闭自动调整大小和使用以编程方式调整大小。  
   
- 有关详细信息，请参阅[Windows 窗体 DataGridView 控件中调整大小选项](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)。  
+ 有关详细信息，请参阅[Windows 窗体 DataGridView 控件中调整大小选项](sizing-options-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="using-the-selected-cells-rows-and-columns-collections-efficiently"></a>有效使用选定的单元格、 行和列集合  
  <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>集合不会使用大型选择有效地执行。 <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>并<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>集合还可能效率很低，尽管到一定程度上因为有许多较少行，比在典型的单元格<xref:System.Windows.Forms.DataGridView>控制和许多较少的列比行。 若要避免性能损失，使用这些集合时，使用以下准则：  
@@ -137,9 +137,9 @@ ms.locfileid: "54710867"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.DataGridView>
-- [Windows 窗体 DataGridView 控件中的性能调整](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Windows 窗体 DataGridView 控件中的虚拟模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Windows 窗体 DataGridView 控件中的数据显示模式](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
-- [如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Windows 窗体 DataGridView 控件中的重设大小选项](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的性能调整](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的虚拟模式](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的数据显示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的单元格样式](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的重设大小选项](sizing-options-in-the-windows-forms-datagridview-control.md)

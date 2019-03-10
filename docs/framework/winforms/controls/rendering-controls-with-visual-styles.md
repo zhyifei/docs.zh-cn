@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 9ee357e343c5e060393359f0666886bef6b87b50
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: caef9590e57503171ab295f6e99b62d860bc0a81
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664349"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708049"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>使用视觉样式呈现控件
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 使用操作系统中受支持的视觉样式为呈现控件和其他 Windows 用户界面 (UI) 元素提供支持。 本主题讨论 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中对使用操作系统当前视觉样式的呈现控件和其他 UI 元素提供的多种级别的支持。  
@@ -49,7 +49,7 @@ ms.locfileid: "56664349"
   
 -   <xref:System.Windows.Forms.TrackBarRenderer>  
   
- 有关使用这些类绘制控件的详细信息，请参阅[如何：使用控件呈现类](../../../../docs/framework/winforms/controls/how-to-use-a-control-rendering-class.md)。  
+ 有关使用这些类绘制控件的详细信息，请参阅[如何：使用控件呈现类](how-to-use-a-control-rendering-class.md)。  
   
 ## <a name="visual-style-element-and-rendering-classes"></a>视觉样式元素和呈现类  
  <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空间包含用于绘制和获取视觉样式支持的任何控件或 UI 元素信息的类。 支持的控件包括在 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间中具有呈现类的公共控件（请参阅上一节）以及诸如选项卡控件和 rebar 控件的其他控件。 其他受支持的 UI 元素包括“开始”  菜单、任务栏和 Windows 非工作区的各部分。  
@@ -58,7 +58,7 @@ ms.locfileid: "56664349"
   
  <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 提供一些方法，这些方法可以绘制和获取由操作系统当前视觉样式定义的每个 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 的信息。 可以检索的元素信息包括其默认大小、背景类型和颜色定义。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 包装来自 Windows Platform SDK 的 Windows Shell 部分的视觉样式 (UxTheme) API 的功能。 有关详细信息，请参阅[启用视觉样式](/windows/desktop/controls/cookbook-overview)。  
   
- 有关使用详细信息<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>并<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>，请参阅[如何：呈现的视觉样式元素](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md)。  
+ 有关使用详细信息<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>并<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>，请参阅[如何：呈现的视觉样式元素](how-to-render-a-visual-style-element.md)。  
   
 ## <a name="enabling-visual-styles"></a>启用视觉样式  
  若要为针对 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.0 编写的应用程序启用视觉样式，程序员必须将应用清单包含进来。该清单指定使用 ComCtl32.dll 版本 6 或更高版本绘制控件。 使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.1 或更高版本生成的应用可以使用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 类的 <xref:System.Windows.Forms.Application> 方法。  
@@ -79,4 +79,4 @@ ms.locfileid: "56664349"
 >  如果想要在用户启用或切换视觉样式时使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 来呈现控件或 UI 元素，请确保在处理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件而非 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> 事件时这样做。 处理 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 时如果使用 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>类，则会引发异常。  
   
 ## <a name="see-also"></a>请参阅
-- [自定义控件的绘制和呈现](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)
+- [自定义控件的绘制和呈现](custom-control-painting-and-rendering.md)

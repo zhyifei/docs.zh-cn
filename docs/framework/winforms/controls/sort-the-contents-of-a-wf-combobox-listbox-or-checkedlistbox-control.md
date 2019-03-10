@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: 97965dcef1541aec51ba57a7cf314730f892f141
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c00e853299c6eea2c97adb7f94cd7753ffa3d93
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686317"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705256"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：排序的内容的 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件
 Windows 窗体控件不排序操作时它们是数据绑定。 若要显示已排序的数据，请使用支持排序的数据源，然后对其进行排序的数据源。 支持排序的数据源是数据的视图，数据查看管理器，并已排序数组。  
@@ -30,7 +30,7 @@ Windows 窗体控件不排序操作时它们是数据绑定。 若要显示已�
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [Windows 窗体数据绑定](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [如何：添加和删除项从 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)
-- [何时使用 Windows 窗体 ComboBox 而非 ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [用于列出选项的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Windows 窗体数据绑定](../windows-forms-data-binding.md)
+- [如何：添加和删除项从 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件](add-and-remove-items-from-a-wf-combobox.md)
+- [何时使用 Windows 窗体 ComboBox 而非 ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [用于列出选项的 Windows 窗体控件](windows-forms-controls-used-to-list-options.md)

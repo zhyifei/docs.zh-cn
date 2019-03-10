@@ -9,12 +9,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using texture
 - shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
-ms.openlocfilehash: bf1e09548ff9bc4eb650048eb21a9c300f3f6405
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89ebad6773b076514f5a745db653e0e0a18d4b48
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601774"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708439"
 ---
 # <a name="how-to-fill-a-shape-with-an-image-texture"></a>如何：用图像纹理填充形状
 可以通过用纹理填充闭合的形状<xref:System.Drawing.Image>类和<xref:System.Drawing.TextureBrush>类。  
@@ -25,13 +25,13 @@ ms.locfileid: "54601774"
  在下面的代码，<xref:System.Drawing.TextureBrush.Transform%2A>属性包含的转换，以应用于映像。 假设原始图像的宽度为 640 像素，高度为 480 像素。 转换将图像缩小到 75 × 75 设置了水平和垂直缩放值。  
   
 > [!NOTE]
->  在以下示例中，映像大小为 75 × 75，和椭圆大小为 150 × 250 个字符。 由于映像是小于它所填充的椭圆，椭圆与图像平铺。 达到了平铺意味着，重复图像水平和垂直直到形状的边界。 有关平铺的详细信息，请参阅[如何：使用图像形状中平铺](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md)。  
+>  在以下示例中，映像大小为 75 × 75，和椭圆大小为 150 × 250 个字符。 由于映像是小于它所填充的椭圆，椭圆与图像平铺。 达到了平铺意味着，重复图像水平和垂直直到形状的边界。 有关平铺的详细信息，请参阅[如何：使用图像形状中平铺](how-to-tile-a-shape-with-an-image.md)。  
   
- [!code-csharp[System.Drawing.UsingABrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#21)]
- [!code-vb[System.Drawing.UsingABrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#21)]  
+ [!code-csharp[System.Drawing.UsingABrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.UsingABrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
 ## <a name="see-also"></a>请参阅
-- [使用画笔填充形状](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+- [使用画笔填充形状](using-a-brush-to-fill-shapes.md)

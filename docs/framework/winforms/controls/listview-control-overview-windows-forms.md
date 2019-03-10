@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: 8ceed741e72dae46f7f791b7564b7f5c38f82bc2
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: d62c0081c128693861a9fd21360f09f65d485a79
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664622"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709768"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.ListView> 控件显示带图标的项列表。 你可以使用列表视图创建类似 Windows 资源管理器右窗格的用户界面。 控件有四种视图模式：图标、 小、 列表和详细信息。  
@@ -21,9 +21,9 @@ Windows 窗体 <xref:System.Windows.Forms.ListView> 控件显示带图标的项�
 ## <a name="what-you-can-do-with-the-listview-control"></a>可以使用 ListView 控件执行的操作  
   
 > [!NOTE]
->  其他视图模式中，磁贴时，才可在 Windows XP 和 Windows Server 2003 操作系统上。 有关详细信息，请参阅[如何：在 Windows 中的启用平铺视图窗体 ListView 控件](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)。  
+>  其他视图模式中，磁贴时，才可在 Windows XP 和 Windows Server 2003 操作系统上。 有关详细信息，请参阅[如何：在 Windows 中的启用平铺视图窗体 ListView 控件](how-to-enable-tile-view-in-a-windows-forms-listview-control.md)。  
   
- 图标模式显示大图标旁边的项文本;如果该控件为足够大，这些项将显示在多个列。 SmallIcon 模式是相同的只不过它将显示小图标。 列表模式显示小图标，但始终在单个列。 详细信息模式显示多个列中的项。 有关详细信息，请参阅[如何：列到 Windows 窗体 ListView 控件添加](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)。 视图模式由<xref:System.Windows.Forms.ListView.View%2A>属性。 所有视图模式可以显示来自图像列表的图像。 有关详细信息，请参阅[如何：显示 Windows 窗体 ListView 控件的图标](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)。  
+ 图标模式显示大图标旁边的项文本;如果该控件为足够大，这些项将显示在多个列。 SmallIcon 模式是相同的只不过它将显示小图标。 列表模式显示小图标，但始终在单个列。 详细信息模式显示多个列中的项。 有关详细信息，请参阅[如何：列到 Windows 窗体 ListView 控件添加](how-to-add-columns-to-the-windows-forms-listview-control.md)。 视图模式由<xref:System.Windows.Forms.ListView.View%2A>属性。 所有视图模式可以显示来自图像列表的图像。 有关详细信息，请参阅[如何：显示 Windows 窗体 ListView 控件的图标](how-to-display-icons-for-the-windows-forms-listview-control.md)。  
   
  下表列出了一些<xref:System.Windows.Forms.ListView>成员以及它们是有效的中的视图。  
   
@@ -49,14 +49,14 @@ Windows 窗体 <xref:System.Windows.Forms.ListView> 控件显示带图标的项�
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.ListView>
-- [ListView 控件](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [如何：添加和删除使用 Windows 窗体 ListView 控件的项](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [如何：将列添加到 Windows 窗体 ListView 控件](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [如何：Windows 窗体 ListView 控件中显示图标](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [如何：在使用 Windows 窗体 ListView 控件的列中显示子项](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [如何：Windows 窗体 ListView 控件中选择一项](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)
-- [如何：Windows 窗体 ListView 控件中的项进行分组](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)
-- [如何：Windows 窗体 ListView 控件中显示插入标记](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
-- [如何：向 ListView 控件添加搜索功能](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)
-- [如何：将自定义信息添加到 TreeView 或 ListView 控件 （Windows 窗体）](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [如何：用 Windows 窗体创建多窗格用户界面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [ListView 控件](listview-control-windows-forms.md)
+- [如何：添加和删除使用 Windows 窗体 ListView 控件的项](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [如何：将列添加到 Windows 窗体 ListView 控件](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [如何：Windows 窗体 ListView 控件中显示图标](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [如何：在使用 Windows 窗体 ListView 控件的列中显示子项](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [如何：Windows 窗体 ListView 控件中选择一项](how-to-select-an-item-in-the-windows-forms-listview-control.md)
+- [如何：Windows 窗体 ListView 控件中的项进行分组](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [如何：Windows 窗体 ListView 控件中显示插入标记](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
+- [如何：向 ListView 控件添加搜索功能](how-to-add-search-capabilities-to-a-listview-control.md)
+- [如何：将自定义信息添加到 TreeView 或 ListView 控件 （Windows 窗体）](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [如何：用 Windows 窗体创建多窗格用户界面](how-to-create-a-multipane-user-interface-with-windows-forms.md)

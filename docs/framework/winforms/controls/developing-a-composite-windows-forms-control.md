@@ -7,15 +7,15 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 1d2c6419e19aee73717bed6cfc17782d2a3f5a4a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 3b829b1eea68eed7ff8ded80496620af628d3510
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442732"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707351"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>开发复合 Windows 窗体控件
-可以通过组合其它 Windows 窗体控件来开发复合 Windows 窗体控件。 派生的复合控件<xref:System.Web.UI.UserControl>称为用户控件。 基类 <xref:System.Windows.Forms.UserControl> 为子控件提供了键盘路由，从而确保子控件可以接收焦点。 用户控件的示例，请参阅<xref:System.Windows.Forms.UserControl>示例[如何：应用 Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。  
+可以通过组合其它 Windows 窗体控件来开发复合 Windows 窗体控件。 派生的复合控件<xref:System.Web.UI.UserControl>称为用户控件。 基类 <xref:System.Windows.Forms.UserControl> 为子控件提供了键盘路由，从而确保子控件可以接收焦点。 用户控件的示例，请参阅<xref:System.Windows.Forms.UserControl>示例[如何：应用 Windows 窗体控件中的特性](how-to-apply-attributes-in-windows-forms-controls.md)。  
   
  Visual Studio 中的 Windows 窗体设计器为编写用户控件提供丰富的设计时支持。  
   
@@ -54,6 +54,6 @@ ms.locfileid: "56442732"
 -   [如何：创建利用设计时功能的 Windows 窗体控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>请参阅
-- [如何：应用 Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
-- [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [如何：应用 Windows 窗体控件中的特性](how-to-apply-attributes-in-windows-forms-controls.md)
+- [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)
+- [各种自定义控件](varieties-of-custom-controls.md)

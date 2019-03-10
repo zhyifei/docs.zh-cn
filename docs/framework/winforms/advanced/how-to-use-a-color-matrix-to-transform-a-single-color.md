@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 050bb147358636ff9ce250bd5026facd53e9bf51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f19039c69f27f78e838ea1a891690451af3f0cdc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498942"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705592"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>如何：使用颜色矩阵进行转换一种颜色
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>用于存储和操作图像的类。 <xref:System.Drawing.Image> 和<xref:System.Drawing.Bitmap>对象存储为 32 位数字，每个像素的颜色：各 8 位红色、 绿色、 蓝色和 alpha。 每四个组件是一个介于 0 到 255 之间，其中 0 表示没有亮度，255 表示最大亮度。 Alpha 分量指定颜色的透明度：0 表示完全透明，255 表示完全不透明。  
@@ -32,22 +32,22 @@ ms.locfileid: "54498942"
   
  下面的矩阵乘法将按所列顺序执行转换的对。  
   
- ![重新着色](../../../../docs/framework/winforms/advanced/media/recoloring01.gif "recoloring01")  
+ ![重新着色](./media/recoloring01.gif "recoloring01")  
   
  颜色矩阵的元素进行行和列索引 （从零开始）。 例如，第五个行和第三列的矩阵 M 中的项表示由 M [4] [2]。  
   
  5 × 5 单位矩阵 （如以下插图所示） 具有的对角线上的 1 和 0 在其他地方。 如果您要乘以一个向量，颜色恒等矩阵，则不会更改颜色向量。 窗体中的颜色转换矩阵的简便方法是使用恒等矩阵来启动，稍微进行更改，生成所需的转换。  
   
- ![重新着色](../../../../docs/framework/winforms/advanced/media/recoloring02.gif "recoloring02")  
+ ![重新着色](./media/recoloring02.gif "recoloring02")  
   
- 矩阵和转换的更多详细讨论，请参阅[坐标系和坐标转换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)。  
+ 矩阵和转换的更多详细讨论，请参阅[坐标系和坐标转换](coordinate-systems-and-transformations.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例将是一种颜色 （0.2，0.0，0.4，1.0） 和上一段中所述将转换应用的映像。  
   
  下图显示在右侧左侧上的原始映像和转换后的图像。  
   
- ![颜色](../../../../docs/framework/winforms/advanced/media/colortrans1.png "colortrans1")  
+ ![颜色](./media/colortrans1.png "colortrans1")  
   
  在下面的示例代码使用以下步骤进行重新着色：  
   
@@ -57,12 +57,12 @@ ms.locfileid: "54498942"
   
 3.  传递<xref:System.Drawing.Imaging.ImageAttributes>对象传递给<xref:System.Drawing.Graphics.DrawImage%2A>方法的<xref:System.Drawing.Graphics>对象。  
   
- [!code-csharp[System.Drawing.RecoloringImages#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
- [!code-vb[System.Drawing.RecoloringImages#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
+ [!code-csharp[System.Drawing.RecoloringImages#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.RecoloringImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
 ## <a name="see-also"></a>请参阅
-- [对图像重新着色](../../../../docs/framework/winforms/advanced/recoloring-images.md)
-- [坐标系统和转换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+- [对图像重新着色](recoloring-images.md)
+- [坐标系统和转换](coordinate-systems-and-transformations.md)

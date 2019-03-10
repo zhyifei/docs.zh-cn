@@ -10,12 +10,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: 651e265b337b106779aeefdfa49decd3725f1a53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e11e1d6730c6c8c9c0a1ac170aeb5393bf3153b7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701451"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708036"
 ---
 # <a name="how-to-split-a-window-horizontally"></a>如何：水平拆分窗口
 下面的代码示例进行划分的拆分器<xref:System.Windows.Forms.SplitContainer>控制水平。  
@@ -57,4 +57,4 @@ ms.locfileid: "54701451"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.SplitContainer>
-- [SplitContainer 控件](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [SplitContainer 控件](splitcontainer-control-windows-forms.md)

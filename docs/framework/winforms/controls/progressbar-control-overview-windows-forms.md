@@ -7,16 +7,17 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], about ProgressBar control
 - progress controls [Windows Forms], about progress controls
 ms.assetid: a05d9cba-3a6a-4f8f-94b8-8ec12799fb80
-ms.openlocfilehash: 65533bc8f9125666e39c53635f5798573f66ef14
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0a43534080d630323d8c1c95759fd2dcc04a85
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523176"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707933"
 ---
 # <a name="progressbar-control-overview-windows-forms"></a>ProgressBar 控件概述（Windows 窗体）
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripProgressBar> 控件取代了 <xref:System.Windows.Forms.ProgressBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ProgressBar> 控件以实现向后兼容并供将来使用。  
+>  
+  <xref:System.Windows.Forms.ToolStripProgressBar> 控件取代了 <xref:System.Windows.Forms.ProgressBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ProgressBar> 控件以实现向后兼容并供将来使用。  
   
  Windows 窗体<xref:System.Windows.Forms.ProgressBar>控件通过显示适当数量的水平栏中排列矩形指示过程的进度。 该过程完成后，填充栏。 进度条通常用于为用户提供的思路很长时间才能等待进程完成;例如，大型文件正在加载时。  
   
@@ -37,4 +38,4 @@ ms.locfileid: "54523176"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.ProgressBar>
-- [ProgressBar 控件](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)
+- [ProgressBar 控件](progressbar-control-windows-forms.md)
