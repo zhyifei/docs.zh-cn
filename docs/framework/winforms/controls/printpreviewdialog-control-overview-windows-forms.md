@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e28a6c82a8dd40885c04c56f2adfb3d38e674066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667552"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711273"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog 控件概述 （Windows 窗体）
-Windows 窗体<xref:System.Windows.Forms.PrintPreviewDialog>控件是一个预配置的对话框，用于显示如何[PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)打印时的显示。 为简单的解决方案，而不是配置你自己的对话框在基于 Windows 的应用程序中使用它。 该控件包含用于打印、放大、显示一页或多页以及关闭对话框的按钮。  
+Windows 窗体<xref:System.Windows.Forms.PrintPreviewDialog>控件是一个预配置的对话框，用于显示如何[PrintDocument](printdocument-component-windows-forms.md)打印时的显示。 为简单的解决方案，而不是配置你自己的对话框在基于 Windows 的应用程序中使用它。 该控件包含用于打印、放大、显示一页或多页以及关闭对话框的按钮。  
   
 ## <a name="key-properties-and-methods"></a>键属性和方法  
  控件的关键属性是<xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>，用于设置要预览的文档。 文档必须是<xref:System.Drawing.Printing.PrintDocument>对象。 为了显示对话框中，您必须调用其<xref:System.Windows.Forms.Form.ShowDialog%2A>方法。 抗锯齿功能可以使文本显示更加顺利，但它还可以显示更慢;若要使用它，将设置<xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A>属性设置为`true`。  
@@ -53,6 +53,6 @@ Windows 窗体<xref:System.Windows.Forms.PrintPreviewDialog>控件是一个预�
 
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.PrintPreviewDialog>
-- [PrintPreviewControl 控件概述](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)
-- [PrintPreviewDialog 控件](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [对话框控件和组件](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+- [PrintPreviewControl 控件概述](printpreviewcontrol-control-overview-windows-forms.md)
+- [PrintPreviewDialog 控件](printpreviewdialog-control-windows-forms.md)
+- [对话框控件和组件](dialog-box-controls-and-components-windows-forms.md)

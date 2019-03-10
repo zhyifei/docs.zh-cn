@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: cc5e1acd26763e2dd4324497f5d9ecde216ea975
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ed48db399ba47f0e6be96f7bca33d3892b19e433
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441458"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707906"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时在 Windows 窗体上创建新的 WPF 内容
 
@@ -103,16 +103,16 @@ ms.locfileid: "56441458"
 
 Windows 窗体和 WPF 是不同的技术，但它们设计为可以密切地互操作。 若要提供更丰富的外观和行为应用程序中的，请尝试以下方法：
 
-- 在 WPF 页中承载 Windows 窗体控件。 有关详细信息，请参见[演练：在 WPF 中承载 Windows 窗体控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。
+- 在 WPF 页中承载 Windows 窗体控件。 有关详细信息，请参见[演练：在 WPF 中承载 Windows 窗体控件](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。
 
-- 将 Windows 窗体的视觉样式应用于你的 WPF 内容。 有关详细信息，请参阅[如何：混合应用程序中启用视觉样式](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)。
+- 将 Windows 窗体的视觉样式应用于你的 WPF 内容。 有关详细信息，请参阅[如何：混合应用程序中启用视觉样式](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)。
 
-- 更改 WPF 内容的样式。 有关详细信息，请参见[演练：WPF 内容的样式](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)。
+- 更改 WPF 内容的样式。 有关详细信息，请参见[演练：WPF 内容的样式](walkthrough-styling-wpf-content.md)。
 
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [使用 WPF 控件](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [迁移和互操作性](../../wpf/advanced/migration-and-interoperability.md)
+- [使用 WPF 控件](using-wpf-controls.md)
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

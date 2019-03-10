@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 0b61961aff04a089ce12f4b96637e3f05023e929
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 444d85265822b5dd4b3a5fd5f4329ec6cc1427f5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511091"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705007"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>如何：在 Windows 窗体上创建一个 Windows 资源管理器样式界面
 Windows 资源管理器是由于其比较熟悉的应用程序的一个常见用户界面选择。  
@@ -51,7 +51,7 @@ Windows 资源管理器是由于其比较熟悉的应用程序的一个常见用
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.SplitContainer>
-- [如何：用 Windows 窗体创建多窗格用户界面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [如何：定义大小调整和拆分窗口中定位行为](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [如何：水平拆分窗口](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)
-- [SplitContainer 控件](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [如何：用 Windows 窗体创建多窗格用户界面](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [如何：定义大小调整和拆分窗口中定位行为](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [如何：水平拆分窗口](how-to-split-a-window-horizontally.md)
+- [SplitContainer 控件](splitcontainer-control-windows-forms.md)

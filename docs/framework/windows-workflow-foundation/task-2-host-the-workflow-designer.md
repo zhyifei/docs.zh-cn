@@ -2,12 +2,12 @@
 title: 任务 2:承载工作流设计器
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572768"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708634"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>任务 2:承载工作流设计器
 本主题介绍用于托管的实例的过程[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]Windows Presentation Foundation (WPF) 应用程序中。  
@@ -16,7 +16,7 @@ ms.locfileid: "54572768"
   
 ### <a name="to-host-the-workflow-designer"></a>承载工作流设计器  
   
-1.  打开的 HostingApplication 项目中创建[任务 1:创建新的 Windows Presentation Foundation 应用程序](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)。  
+1.  打开的 HostingApplication 项目中创建[任务 1:创建新的 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)。  
   
 2.  调整窗口的大小，以便更轻松地使用 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]。 若要执行此操作，请选择**MainWindow**在设计器中，按 F4 以显示**属性**窗口中，然后在**布局**部分中，将**宽度**值为 600 和**高度**为值 350。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "54572768"
         }  
         ```  
   
-         有关注册活动设计器的详细信息，请参阅[如何：创建自定义活动设计器](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)。  
+         有关注册活动设计器的详细信息，请参阅[如何：创建自定义活动设计器](how-to-create-a-custom-activity-designer.md)。  
   
     5.  在 `MainWindow` 类构造函数中，添加对上文声明的方法的调用，以便注册设计器支持元数据，并创建 <xref:System.Activities.Presentation.WorkflowDesigner>。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "54572768"
   
 9. 按 F5 生成并运行解决方案。  
   
-10. 请参阅[任务 3:创建工具箱和属性网格窗格](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)若要了解如何添加**工具箱**并**PropertyGrid**到重新承载工作流设计器支持。  
+10. 请参阅[任务 3:创建工具箱和属性网格窗格](task-3-create-the-toolbox-and-propertygrid-panes.md)若要了解如何添加**工具箱**并**PropertyGrid**到重新承载工作流设计器支持。  
   
 ## <a name="see-also"></a>请参阅
-- [重新托管工作流设计器](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [任务 1:创建新的 Windows Presentation Foundation 应用程序](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [任务 3:创建工具箱和属性网格窗格](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [重新托管工作流设计器](rehosting-the-workflow-designer.md)
+- [任务 1:创建新的 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)
+- [任务 3:创建工具箱和属性网格窗格](task-3-create-the-toolbox-and-propertygrid-panes.md)

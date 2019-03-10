@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 26685ff0ff67ac3b7f1b9837cc71cfc0e683b292
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 4d99f56710fa1d879aed5000edb5424a0727ae3c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442108"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703619"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>如何：向 Windows 窗体添加无用户界面控件
 非可视控件 （或组件） 提供了与你的应用程序的功能。 不同于其他控件组件不向用户提供用户界面，因此不需要在 Windows 窗体设计器图面上显示。 当一个组件添加到窗体时，Windows 窗体设计器在其中显示所有组件的窗体的底部显示可调整大小的送纸器。 控件添加到组件栏后，你可以选择的组件，并设置其属性，就像任何其他控件在窗体上。  
@@ -80,11 +80,11 @@ ms.locfileid: "56442108"
     >  通过引用恶意 UserControl，可能会使您的本地计算机通过网络安全风险。 这只能在恶意的用户创建一个具有破坏性的自定义控件，跟您错误地将其添加到你的项目的情况下一个问题。  
   
 ## <a name="see-also"></a>请参阅
-- [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)
-- [如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
-- [如何：向 Windows 窗体添加 ActiveX 控件](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
-- [如何：Windows 窗体之间复制控件](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)
-- [将控件置于 Windows 窗体上](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
-- [标记各个 Windows 窗体控件并创建它们的快捷键](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [按功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Windows 窗体控件](index.md)
+- [如何：向 Windows 窗体添加控件](how-to-add-controls-to-windows-forms.md)
+- [如何：向 Windows 窗体添加 ActiveX 控件](how-to-add-activex-controls-to-windows-forms.md)
+- [如何：Windows 窗体之间复制控件](how-to-copy-controls-between-windows-forms.md)
+- [将控件置于 Windows 窗体上](putting-controls-on-windows-forms.md)
+- [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
+- [按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)

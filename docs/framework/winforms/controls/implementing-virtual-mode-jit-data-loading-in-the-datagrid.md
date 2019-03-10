@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: c8290fe7722dba564bf5addab662a9f6b62d924f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44c985cef035e33e88ba246584efcb30fe0e9b97
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607876"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705553"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式
 实现中的虚拟模式的一个原因<xref:System.Windows.Forms.DataGridView>控件是仅在需要时检索数据。 这称为*中实时数据加载*。  
@@ -26,7 +26,7 @@ ms.locfileid: "54607876"
   
  以下部分介绍如何使用<xref:System.Windows.Forms.DataGridView>中实时缓存使用的控件。  
   
- 若要将代码复制本主题中的一个列表，请参阅[如何：实现虚拟模式在 Windows 中实时数据加载窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)。  
+ 要将本主题中的代码作为单个列表进行复制，请参阅[如何：实现虚拟模式在 Windows 中实时数据加载窗体 DataGridView 控件](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)。  
   
 ## <a name="the-form"></a>在窗体  
  下面的代码示例定义一个包含一个只读的窗体<xref:System.Windows.Forms.DataGridView>与交互的控件`Cache`对象，通过<xref:System.Windows.Forms.DataGridView.CellValueNeeded>事件处理程序。 `Cache`对象管理的本地存储的值，并使用`DataRetriever`要从 Northwind 示例数据库的订单表中检索值对象。 `DataRetriever`对象，用于实现`IDataPageRetriever`所需的接口`Cache`类中，还用来初始化<xref:System.Windows.Forms.DataGridView>控制行和列。  
@@ -34,24 +34,24 @@ ms.locfileid: "54607876"
  `IDataPageRetriever`， `DataRetriever`，和`Cache`更高版本中本主题介绍了类型。  
   
 > [!NOTE]
->  将敏感信息（如密码）存储在连接字符串中可能会影响应用程序的安全性。 若要控制对数据库的访问，一种较为安全的方法是使用 Windows 身份验证（也称为集成安全性）。 有关详细信息，请参阅[保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
+>  将敏感信息（如密码）存储在连接字符串中可能会影响应用程序的安全性。 若要控制对数据库的访问，一种较为安全的方法是使用 Windows 身份验证（也称为集成安全性）。 有关详细信息，请参阅[保护连接信息](../../data/adonet/protecting-connection-information.md)。  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
   
 ## <a name="the-idatapageretriever-interface"></a>IDataPageRetriever 接口  
  下面的代码示例定义`IDataPageRetriever`接口，由实现`DataRetriever`类。 在此接口中声明的唯一方法是`SupplyPageOfData`方法，它需要的初始行索引和数据的一页中的行数的计数。 实施者使用这些值来从数据源检索数据的子集。  
   
  一个`Cache`对象使用在构造期间，此接口的实现来加载数据的两个初始页。 无论何时需要未缓存的值，缓存将丢弃这些页之一并请求一个包含中的值的新页面`IDataPageRetriever`。  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
   
 ## <a name="the-dataretriever-class"></a>DataRetriever 类  
  下面的代码示例定义`DataRetriever`类，该类实现`IDataPageRetriever`接口以从服务器中检索的数据页。 `DataRetriever`类还提供了`Columns`并`RowCount`属性，其中<xref:System.Windows.Forms.DataGridView>控件使用以创建必要的列，并添加适当数量的空的行<xref:System.Windows.Forms.DataGridView.Rows%2A>集合。 添加空的行是必需的因此，控件的行为就好像它包含在表中的所有数据。 这意味着，滚动条中的滚动框将具有适当的大小，并且用户将能够访问表中的任何行。 行填充<xref:System.Windows.Forms.DataGridView.CellValueNeeded>事件处理程序仅当它们滚动到视图时。  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
   
 ## <a name="the-cache-class"></a>缓存类  
  下面的代码示例定义`Cache`类，该类管理两个通过填充的数据页`IDataPageRetriever`实现。 `Cache`类定义一个内部`DataPage`结构，其中包含<xref:System.Data.DataTable>若要将值存储在单个缓存页，并且计算的行索引表示页的上限和下限边界。  
@@ -60,8 +60,8 @@ ms.locfileid: "54607876"
   
  假定数据页中的行数是可以同时在屏幕显示的行数相同，此模型允许用户通过表分页若要有效地返回到最近查看的页。  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
   
 ## <a name="additional-considerations"></a>其他注意事项  
  前面的代码示例演示在实时数据加载提供。 你将需要修改自己的需要来达到最高效率的代码。 最小值，需要在缓存中选择适当的值的数据的每页行数。 此值传递到`Cache`构造函数。 每页行数应为不低于可以同时在显示的行数在<xref:System.Windows.Forms.DataGridView>控件。  
@@ -73,8 +73,8 @@ ms.locfileid: "54607876"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Windows 窗体 DataGridView 控件中的性能调整](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [有关缩放 Windows 窗体 DataGridView 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Windows 窗体 DataGridView 控件中的虚拟模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
-- [如何：在 Windows 窗体 DataGridView 控件中实现虚拟模式下在实时数据加载](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [Windows 窗体 DataGridView 控件中的性能调整](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [有关缩放 Windows 窗体 DataGridView 控件的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的虚拟模式](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](implementing-virtual-mode-wf-datagridview-control.md)
+- [如何：在 Windows 窗体 DataGridView 控件中实现虚拟模式下在实时数据加载](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-ms.openlocfilehash: 9fb343cd7ca3f17509353ddd088ab6d945118903
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9348d44697b2c617481b55242faa83ab517e6226
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514174"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707815"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 组件体系结构
 使用<xref:System.Windows.Forms.BindingSource>组件，普遍可以将所有 Windows 窗体控件都绑定到数据源。  
@@ -69,9 +69,9 @@ ms.locfileid: "54514174"
   
 -   可以将附加<xref:System.Windows.Forms.BindingSource>到不同的数据源，同时保留当前的控件绑定。  
   
--   可更改数据源中的项，并通知绑定的控件。 有关详细信息，请参阅[如何：反映在使用 BindingSource 的 Windows 窗体控件中的数据源更新](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)。  
+-   可更改数据源中的项，并通知绑定的控件。 有关详细信息，请参阅[如何：反映在使用 BindingSource 的 Windows 窗体控件中的数据源更新](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)。  
   
--   可以将绑定到<xref:System.Type>而不是在内存中的对象。 有关详细信息，请参阅[如何：将 Windows 窗体控件绑定到类型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)。 你可以然后绑定到对象在运行时。  
+-   可以将绑定到<xref:System.Type>而不是在内存中的对象。 有关详细信息，请参阅[如何：将 Windows 窗体控件绑定到类型](how-to-bind-a-windows-forms-control-to-a-type.md)。 你可以然后绑定到对象在运行时。  
   
 ### <a name="currency-management"></a>当前项管理  
  <xref:System.Windows.Forms.BindingSource>组件实现<xref:System.Windows.Forms.ICurrencyManagerProvider>接口来处理您的货币管理。 与<xref:System.Windows.Forms.ICurrencyManagerProvider>接口，您还可以访问到的货币管理器<xref:System.Windows.Forms.BindingSource>，另一个的货币管理器除了<xref:System.Windows.Forms.BindingSource>绑定到同一<xref:System.Windows.Forms.BindingSource.DataMember%2A>。  
@@ -123,7 +123,7 @@ ms.locfileid: "54514174"
 |<xref:System.Windows.Forms.BindingSource.AddNew%2A> 方法|在基础列表中添加一个新项。 适用于实现的数据源<xref:System.ComponentModel.IBindingList>接口，并允许添加项 (即<xref:System.Windows.Forms.BindingSource.AllowNew%2A>属性设置为`true`)。|  
   
 ### <a name="custom-item-creation"></a>自定义项的创建  
- 您可以处理<xref:System.Windows.Forms.BindingSource.AddingNew>事件，以便提供您自己的项创建逻辑。 <xref:System.Windows.Forms.BindingSource.AddingNew>发生事件的新对象添加到之前<xref:System.Windows.Forms.BindingSource>。 此事件后引发<xref:System.Windows.Forms.BindingSource.AddNew%2A>调用方法时，新项添加到基础列表之前。 通过处理此事件，可以提供自定义项创建行为，而无需派生自<xref:System.Windows.Forms.BindingSource>类。 有关详细信息，请参阅[如何：使用自定义项添加 Windows 窗体 BindingSource](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)。  
+ 您可以处理<xref:System.Windows.Forms.BindingSource.AddingNew>事件，以便提供您自己的项创建逻辑。 <xref:System.Windows.Forms.BindingSource.AddingNew>发生事件的新对象添加到之前<xref:System.Windows.Forms.BindingSource>。 此事件后引发<xref:System.Windows.Forms.BindingSource.AddNew%2A>调用方法时，新项添加到基础列表之前。 通过处理此事件，可以提供自定义项创建行为，而无需派生自<xref:System.Windows.Forms.BindingSource>类。 有关详细信息，请参阅[如何：使用自定义项添加 Windows 窗体 BindingSource](how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)。  
   
 ### <a name="transactional-item-creation"></a>事务的项的创建  
  <xref:System.Windows.Forms.BindingSource>组件实现<xref:System.ComponentModel.ICancelAddNew>接口，这使事务的项的创建。 通过使用调用暂时创建一个新项后<xref:System.Windows.Forms.BindingSource.AddNew%2A>，可能会提交或回滚按以下方式添加：  
@@ -142,7 +142,7 @@ ms.locfileid: "54514174"
 ### <a name="design-time-support"></a>设计时支持  
  某些对象类型不能创建在设计时，例如从工厂类创建的对象或 Web 服务返回的对象。 有时必须将您的控件绑定到这些类型，在设计时，即使在您的控件可以绑定到的内存中没有任何对象。 例如，可能需要标签的列标题<xref:System.Windows.Forms.DataGridView>控件自定义类型的公共属性的名称。  
   
- 若要支持此方案中，<xref:System.Windows.Forms.BindingSource>组件支持绑定到<xref:System.Type>。 将分配<xref:System.Type>到<xref:System.Windows.Forms.BindingSource.DataSource%2A>属性，<xref:System.Windows.Forms.BindingSource>组件创建一个空<xref:System.ComponentModel.BindingList%601>的<xref:System.Type>项。 随后绑定到任何控件<xref:System.Windows.Forms.BindingSource>在设计时或在运行时，会出现的属性或类型的架构收到警报的组件。 有关详细信息，请参阅[如何：将 Windows 窗体控件绑定到类型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)。  
+ 若要支持此方案中，<xref:System.Windows.Forms.BindingSource>组件支持绑定到<xref:System.Type>。 将分配<xref:System.Type>到<xref:System.Windows.Forms.BindingSource.DataSource%2A>属性，<xref:System.Windows.Forms.BindingSource>组件创建一个空<xref:System.ComponentModel.BindingList%601>的<xref:System.Type>项。 随后绑定到任何控件<xref:System.Windows.Forms.BindingSource>在设计时或在运行时，会出现的属性或类型的架构收到警报的组件。 有关详细信息，请参阅[如何：将 Windows 窗体控件绑定到类型](how-to-bind-a-windows-forms-control-to-a-type.md)。  
   
 ### <a name="static-listbindinghelper-methods"></a>静态 ListBindingHelper 方法  
  <xref:System.Windows.Forms.BindingContext?displayProperty=nameWithType>， <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType>，并<xref:System.Windows.Forms.BindingSource>类型的所有共享通用逻辑生成从列表`DataSource` / `DataMember`对。 此外，此常见逻辑将公开用于控件作者和其他第三方在下面的示例`static`方法：  
@@ -166,14 +166,14 @@ ms.locfileid: "54514174"
 |<xref:System.Windows.Forms.BindingSource.Sort%2A> 属性|如果数据源是 <xref:System.ComponentModel.IBindingList>，则获取或设置用于排序的列名称并对顺序信息进行排序。<br /><br /> 或<br /><br /> 如果数据源是<xref:System.ComponentModel.IBindingListView>和支持高级排序，则获取用于排序和排序顺序的多个列名称|  
   
 ### <a name="integration-with-bindingnavigator"></a>与 BindingNavigator 的集成  
- 可以使用<xref:System.Windows.Forms.BindingSource>组件将任何 Windows 窗体控件绑定到数据源，但<xref:System.Windows.Forms.BindingNavigator>控件专门用于处理<xref:System.Windows.Forms.BindingSource>组件。 <xref:System.Windows.Forms.BindingNavigator>控件提供用户界面，用于控制<xref:System.Windows.Forms.BindingSource>组件的当前项。 默认情况下<xref:System.Windows.Forms.BindingNavigator>控件提供导航方法相对应的按钮<xref:System.Windows.Forms.BindingSource>组件。 有关详细信息，请参阅[如何：使用 Windows 窗体 BindingNavigator 控件导航数据](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)。  
+ 可以使用<xref:System.Windows.Forms.BindingSource>组件将任何 Windows 窗体控件绑定到数据源，但<xref:System.Windows.Forms.BindingNavigator>控件专门用于处理<xref:System.Windows.Forms.BindingSource>组件。 <xref:System.Windows.Forms.BindingNavigator>控件提供用户界面，用于控制<xref:System.Windows.Forms.BindingSource>组件的当前项。 默认情况下<xref:System.Windows.Forms.BindingNavigator>控件提供导航方法相对应的按钮<xref:System.Windows.Forms.BindingSource>组件。 有关详细信息，请参阅[如何：使用 Windows 窗体 BindingNavigator 控件导航数据](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
-- [BindingSource 组件概述](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
-- [BindingNavigator 控件](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [Windows 窗体数据绑定](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [如何：将 Windows 窗体控件绑定到类型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
-- [如何：反映在使用 BindingSource 的 Windows 窗体控件中的数据源更新](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+- [BindingSource 组件概述](bindingsource-component-overview.md)
+- [BindingNavigator 控件](bindingnavigator-control-windows-forms.md)
+- [Windows 窗体数据绑定](../windows-forms-data-binding.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
+- [如何：将 Windows 窗体控件绑定到类型](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [如何：反映在使用 BindingSource 的 Windows 窗体控件中的数据源更新](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

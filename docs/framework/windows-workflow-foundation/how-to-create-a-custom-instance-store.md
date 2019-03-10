@@ -2,16 +2,16 @@
 title: 如何：创建自定义实例存储
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: de3602b928a861500e7984fe88bbb2176d58b840
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503185"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707763"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>如何：创建自定义实例存储
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，它是使用 SQL Server 保存工作流数据的实例存储区。 如果您的应用程序需要将工作流数据保存到其他介质，例如不同的数据库或文件系统，则可以实现自定义实例存储区。 通过扩展抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> 类并且实现完成自定义实例存储区所需的方法，创建自定义实例存储区。 自定义实例存储区的完整实现，请参阅[企业采购过程](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)示例。
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，它是使用 SQL Server 保存工作流数据的实例存储区。 如果您的应用程序需要将工作流数据保存到其他介质，例如不同的数据库或文件系统，则可以实现自定义实例存储区。 通过扩展抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> 类并且实现完成自定义实例存储区所需的方法，创建自定义实例存储区。 自定义实例存储区的完整实现，请参阅[企业采购过程](./samples/corporate-purchase-process.md)示例。
 
 ## <a name="implementing-the-begintrycommand-method"></a>实现 BeginTryCommand 方法
 
@@ -227,11 +227,11 @@ ms.locfileid: "57503185"
 
 ## <a name="using-a-custom-instance-store"></a>使用自定义实例存储区
 
-若要实现自定义实例存储区，请将实例存储区的实例分配给 <xref:System.Activities.WorkflowApplication.InstanceStore%2A>，然后执行 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> 方法。  请参阅[如何：创建和运行长时间运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)教程，了解详细信息。
+若要实现自定义实例存储区，请将实例存储区的实例分配给 <xref:System.Activities.WorkflowApplication.InstanceStore%2A>，然后执行 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> 方法。  请参阅[如何：创建和运行长时间运行工作流](how-to-create-and-run-a-long-running-workflow.md)教程，了解详细信息。
 
 ## <a name="a-sample-instance-store"></a>示例实例存储区
 
-下面的代码示例是完整的实例存储区实现，摘自[企业采购过程](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)示例。 该实例存储区使用 XML 将工作流数据保存到某一文件。
+下面的代码示例是完整的实例存储区实现，摘自[企业采购过程](./samples/corporate-purchase-process.md)示例。 该实例存储区使用 XML 将工作流数据保存到某一文件。
 
 ```csharp
 using System;

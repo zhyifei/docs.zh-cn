@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: ff6172d571a7ca449ab21d1f7a7f9a699bf40f8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea4abc38968b929412945cddaca3ca3fe6f377d6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737970"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707425"
 ---
 # <a name="using-transformations-to-scale-colors"></a>使用转换来调整颜色
 缩放转换将乘以一个或多个数字的四个颜色组件。 下表给出表示缩放颜色矩阵项。  
@@ -28,12 +28,12 @@ ms.locfileid: "54737970"
 ## <a name="scaling-one-color"></a>缩放的一种颜色  
  下面的示例构造<xref:System.Drawing.Image>ColorBars2.bmp 文件中的对象。 然后代码会 2 的因素在图中每个像素的蓝色组件。 转换后的图像一起绘制原始图像。  
   
- [!code-csharp[System.Drawing.RecoloringImages#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
- [!code-vb[System.Drawing.RecoloringImages#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
+ [!code-csharp[System.Drawing.RecoloringImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.RecoloringImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
   
  下图显示在右侧左侧上的原始图像和缩放的图像。  
   
- ![调整颜色](../../../../docs/framework/winforms/advanced/media/colortrans3.png "colortrans3")  
+ ![调整颜色](./media/colortrans3.png "colortrans3")  
   
  下表列出了四个条形的颜色矢量之前和之后的蓝色缩放。 请注意，第四个颜色栏中的蓝色组件发送给 0.6 了从 0.8。 这是因为[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]保留仅结果的小数部分。 例如，(2)(0.8) = 1.6，1.6 的小数部分为 0.6。 保留仅的小数部分，可确保结果始终是中间隔 [0，1]。  
   
@@ -47,12 +47,12 @@ ms.locfileid: "54737970"
 ## <a name="scaling-multiple-colors"></a>缩放多个颜色  
  下面的示例构造<xref:System.Drawing.Image>ColorBars2.bmp 文件中的对象。 然后，代码会在图像中每个像素的红色、 绿色和蓝色组件。 红色分量缩小了 25%、 绿色分量缩小了 35%和蓝色分量缩小了 50%。  
   
- [!code-csharp[System.Drawing.RecoloringImages#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
- [!code-vb[System.Drawing.RecoloringImages#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
+ [!code-csharp[System.Drawing.RecoloringImages#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
+ [!code-vb[System.Drawing.RecoloringImages#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
   
  下图显示在右侧左侧上的原始图像和缩放的图像。  
   
- ![调整颜色](../../../../docs/framework/winforms/advanced/media/colortrans4.png "colortrans4")  
+ ![调整颜色](./media/colortrans4.png "colortrans4")  
   
  下表列出了四个条形的颜色矢量之前和之后的红色、 绿色和蓝色的缩放。  
   
@@ -66,5 +66,5 @@ ms.locfileid: "54737970"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [对图像重新着色](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+- [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
+- [对图像重新着色](recoloring-images.md)

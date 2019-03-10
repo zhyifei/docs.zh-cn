@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: e9eab78695db128c0538914c5364aaa54c135403
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509956"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709667"
 ---
 # <a name="user-drawn-controls"></a>用户描述的控件
 .NET Framework 为您提供了轻松开发自己的控件的功能。 可以创建一个用户控件，这是一组标准控件绑定到一起的代码，或您可以设计自己的控件的基础知识，设置。 甚至可以使用继承创建继承自现有控件的控件并将添加到其固有的功能。 无论何种方法使用，.NET Framework 提供了用于绘制用于您创建的任何控件的自定义图形界面的功能。  
@@ -25,7 +25,7 @@ ms.locfileid: "54509956"
   
 -   <xref:System.Drawing.Graphics> 对象-封装一些面向图形的对象和提供必要的功能，绘制控件的方法。  
   
- 有关详细信息<xref:System.Drawing.Graphics>对象以及如何使用它，请参阅[如何：创建用于绘制图形对象](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)。  
+ 有关详细信息<xref:System.Drawing.Graphics>对象以及如何使用它，请参阅[如何：创建用于绘制图形对象](../advanced/how-to-create-graphics-objects-for-drawing.md)。  
   
  <xref:System.Windows.Forms.Control.OnPaint%2A>每当绘制或在屏幕上，刷新控件触发事件和<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>对象表示在其中绘制会发生的矩形。 如果整个控件需要刷新，<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>将表示整个控件的大小。 如果只有一部分的控件需要刷新，但是，<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>对象将表示仅在需要重绘的区域。 这种情况的示例将在另一个控件或窗体用户界面中的部分已遮住控件时。  
   
@@ -81,6 +81,6 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [如何：创建用于绘制图形对象](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
-- [构成控件](../../../../docs/framework/winforms/controls/constituent-controls.md)
-- [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [如何：创建用于绘制图形对象](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [构成控件](constituent-controls.md)
+- [各种自定义控件](varieties-of-custom-controls.md)

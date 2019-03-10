@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 06f2320648bd8fee3465ea1672be886293667879
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 0b87034487ef0f2cabed786354682f394500cafc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664414"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707880"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>如何：测试 UserControl 的运行时行为
 开发时<xref:System.Windows.Forms.UserControl>，您需要测试其运行时行为。 可以创建一个单独的基于 Windows 的应用程序项目，并将你窗体控件的测试，但此过程是不方便。 更快、 更轻松的方法是使用**UserControl 测试容器**Visual Studio 提供的。 此测试容器开始直接从 Windows 控件库项目。  
@@ -68,7 +68,7 @@ ms.locfileid: "56664414"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.UserControl>
-- [如何：创作复合控件](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
-- [演练：创作复合控件使用 Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [演练：创作复合控件通过视觉对象C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [如何：创作复合控件](how-to-author-composite-controls.md)
+- [演练：创作复合控件使用 Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [演练：创作复合控件通过视觉对象C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [用户控件设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

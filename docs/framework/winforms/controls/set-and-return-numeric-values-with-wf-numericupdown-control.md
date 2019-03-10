@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Windows Forms controls, NumericUpDown
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
-ms.openlocfilehash: 4fd995e5f7694616d7b6be7aa9a2eab6611997b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 166b14fca2009d0609fa48a5f07912b33f074071
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688956"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703196"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>如何：设置并返回数字值使用 Windows 窗体 NumericUpDown 控件
 Windows 窗体的数值<xref:System.Windows.Forms.NumericUpDown>控件由其<xref:System.Windows.Forms.NumericUpDown.Value%2A>属性。 就像使用任何其他属性一样，您可以编写控件的值的条件测试。 一次<xref:System.Windows.Forms.NumericUpDown.Value%2A>属性设置，可以直接通过编写代码来执行操作，来调整它也可以调用<xref:System.Windows.Forms.NumericUpDown.UpButton%2A>和<xref:System.Windows.Forms.NumericUpDown.DownButton%2A>方法。  
@@ -95,5 +95,5 @@ Windows 窗体的数值<xref:System.Windows.Forms.NumericUpDown>控件由其<xre
 - <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=nameWithType>
-- [NumericUpDown 控件](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)
-- [NumericUpDown 控件概述](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)
+- [NumericUpDown 控件](numericupdown-control-windows-forms.md)
+- [NumericUpDown 控件概述](numericupdown-control-overview-windows-forms.md)

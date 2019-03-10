@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying images
 - data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
-ms.openlocfilehash: 637cb2f51e8ad1161b0208a3ebd8337859261a11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 280f274a0957f098add7fbf2e3b919c33c4c5233
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523592"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704396"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>如何：在 Windows 窗体 DataGridView 控件的单元格中显示图像
 图片或图形是可以在数据行中显示的值之一。 通常情况下，这些图形需要员工的照片或公司徽标的形式。  
@@ -24,11 +24,11 @@ ms.locfileid: "54523592"
   
  如果<xref:System.Windows.Forms.DataGridView>控件的数据源包含一个映像，将自动显示<xref:System.Windows.Forms.DataGridView>控件。  
   
- 下面的代码示例演示如何从嵌入的资源提取一个图标，并将其转换为 image 列的每个单元格中显示的位图。 文本单元格的值替换为相应的图像的另一个示例，请参阅[如何：自定义 Windows 窗体 DataGridView 控件中的数据格式设置](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。  
+ 下面的代码示例演示如何从嵌入的资源提取一个图标，并将其转换为 image 列的每个单元格中显示的位图。 文本单元格的值替换为相应的图像的另一个示例，请参阅[如何：自定义 Windows 窗体 DataGridView 控件中的数据格式设置](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="example"></a>示例  
- [!code-csharp[System.Windows.Forms.DataGridViewMisc#050](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#050)]
- [!code-vb[System.Windows.Forms.DataGridViewMisc#050](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#050)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#050)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#050)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
@@ -41,5 +41,5 @@ ms.locfileid: "54523592"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.DataGridView>
-- [Windows 窗体 DataGridView 控件中的列、行和单元格基本功能](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [如何：自定义 Windows 窗体 DataGridView 控件中的数据格式设置](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的列、行和单元格基本功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [如何：自定义 Windows 窗体 DataGridView 控件中的数据格式设置](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

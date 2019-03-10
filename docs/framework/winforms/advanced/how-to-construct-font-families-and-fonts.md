@@ -8,12 +8,12 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: 6f939ab90252697d09d594e4d9300ec101c8f2e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b651671e525ae5cfc365a392b96d258ac835a21c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540671"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708547"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>如何：构造字体系列和字体
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 分组为字体系列字样相同但不同的样式使用的字体。 例如，Arial 字体系列包含以下字体：  
@@ -43,12 +43,12 @@ ms.locfileid: "54540671"
   
  <xref:System.Drawing.GraphicsUnit.Pixel> 是的成员<xref:System.Drawing.GraphicsUnit>枚举，并<xref:System.Drawing.FontStyle.Regular>属于<xref:System.Drawing.FontStyle>枚举。  
   
- [!code-csharp[System.Drawing.FontsAndText#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
- [!code-vb[System.Drawing.FontsAndText#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
+ [!code-csharp[System.Drawing.FontsAndText#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
+ [!code-vb[System.Drawing.FontsAndText#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，这是 <xref:System.Windows.Forms.PaintEventHandler> 的参数。  
   
 ## <a name="see-also"></a>请参阅
-- [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
-- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [使用字体和文本](using-fonts-and-text.md)
+- [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)

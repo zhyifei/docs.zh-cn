@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: 06a25179a3afc004029972bbf7d4d5691d42b25b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72965d6968aab256579929acc00e629bcd3c71f0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683906"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707326"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>如何：使用颜色重新映射表
 重新映射是转换颜色重新映射表根据图像中的颜色的过程。 颜色重新映射表是一个数组<xref:System.Drawing.Imaging.ColorMap>对象。 每个<xref:System.Drawing.Imaging.ColorMap>数组中的对象具有<xref:System.Drawing.Imaging.ColorMap.OldColor%2A>属性和一个<xref:System.Drawing.Imaging.ColorMap.NewColor%2A>属性。  
@@ -28,14 +28,14 @@ ms.locfileid: "54683906"
   
  下图显示在右侧左侧上的原始映像和重新映射的图像。  
   
- ![颜色重新映射](../../../../docs/framework/winforms/advanced/media/colortrans7.png "colortrans7")  
+ ![颜色重新映射](./media/colortrans7.png "colortrans7")  
   
- [!code-csharp[System.Drawing.RecoloringImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.RecoloringImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.RecoloringImages#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.RecoloringImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
 ## <a name="see-also"></a>请参阅
-- [对图像重新着色](../../../../docs/framework/winforms/advanced/recoloring-images.md)
-- [图像、位图和图元文件](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [对图像重新着色](recoloring-images.md)
+- [图像、位图和图元文件](images-bitmaps-and-metafiles.md)

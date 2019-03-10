@@ -6,15 +6,15 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 540388e316a761df3c32842cbe626e9e52f7e3f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645478"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718020"
 ---
 # <a name="how-keyboard-input-works"></a>键盘输入工作原理
-Windows 窗体通过引发键盘事件来处理键盘输入，以响应 Windows 消息。 大多数 Windows 窗体应用程序都通过处理键盘事件来以独占方式处理键盘输入。 但是，必须了解键盘消息的工作方式，才能实现更高级的键盘输入方案（如在按键到达控件之前截获它们）。 本主题描述 Windows 窗体能够识别的按键数据的类型，并概述键盘消息的传送方式。 有关键盘事件的信息，请参阅[使用键盘事件](../../../docs/framework/winforms/using-keyboard-events.md)。  
+Windows 窗体通过引发键盘事件来处理键盘输入，以响应 Windows 消息。 大多数 Windows 窗体应用程序都通过处理键盘事件来以独占方式处理键盘输入。 但是，必须了解键盘消息的工作方式，才能实现更高级的键盘输入方案（如在按键到达控件之前截获它们）。 本主题描述 Windows 窗体能够识别的按键数据的类型，并概述键盘消息的传送方式。 有关键盘事件的信息，请参阅[使用键盘事件](using-keyboard-events.md)。  
   
 ## <a name="types-of-keys"></a>按键的类型  
  Windows 窗体将键盘输入标识为虚拟键代码表示的按位<xref:System.Windows.Forms.Keys>枚举。 使用<xref:System.Windows.Forms.Keys>枚举，可以综合一系列按键以生成单个值。 这些值与 WM_KEYDOWN 和 WM_SYSKEYDOWN Windows 消息所伴随的值相对应。 可以通过处理检测大多数物理按键<xref:System.Windows.Forms.Control.KeyDown>或<xref:System.Windows.Forms.Control.KeyUp>事件。 字符键是的子集<xref:System.Windows.Forms.Keys>枚举和 WM_CHAR 和 WM_SYSCHAR Windows 消息所伴随的值相对应。 如果组合按键得到一个字符，您可以通过处理来检测该字符<xref:System.Windows.Forms.Control.KeyPress>事件。 或者，可以使用<xref:Microsoft.VisualBasic.Devices.Keyboard>、 Visual Basic 编程接口，若要发现哪些键已按下的键并发送由其公开。 有关详细信息，请参阅[访问键盘](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)。  
@@ -74,4 +74,4 @@ Windows 窗体通过引发键盘事件来处理键盘输入，以响应 Windows 
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
 - [My.Computer.Keyboard 对象](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [访问键盘](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
-- [使用键盘事件](../../../docs/framework/winforms/using-keyboard-events.md)
+- [使用键盘事件](using-keyboard-events.md)
