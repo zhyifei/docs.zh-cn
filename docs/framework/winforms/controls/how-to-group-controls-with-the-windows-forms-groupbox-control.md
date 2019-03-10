@@ -6,32 +6,32 @@ helpviewer_keywords:
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 44f0116511165c021f8e3dc35fb14e5cfb6f619e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14c832251a76eaff21611c88179c4d2ffa7ab738
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686915"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708532"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a><span data-ttu-id="58173-102">如何：使用 Windows 窗体 GroupBox 控件组控件</span><span class="sxs-lookup"><span data-stu-id="58173-102">How to: Group Controls with the Windows Forms GroupBox Control</span></span>
-<span data-ttu-id="58173-103">Windows 窗体<xref:System.Windows.Forms.GroupBox>控件用于分组其他控件。</span><span class="sxs-lookup"><span data-stu-id="58173-103">Windows Forms <xref:System.Windows.Forms.GroupBox> controls are used to group other controls.</span></span> <span data-ttu-id="58173-104">有三个原因与组控件：</span><span class="sxs-lookup"><span data-stu-id="58173-104">There are three reasons to group controls:</span></span>  
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a><span data-ttu-id="58531-102">如何：使用 Windows 窗体 GroupBox 控件组控件</span><span class="sxs-lookup"><span data-stu-id="58531-102">How to: Group Controls with the Windows Forms GroupBox Control</span></span>
+<span data-ttu-id="58531-103">Windows 窗体<xref:System.Windows.Forms.GroupBox>控件用于分组其他控件。</span><span class="sxs-lookup"><span data-stu-id="58531-103">Windows Forms <xref:System.Windows.Forms.GroupBox> controls are used to group other controls.</span></span> <span data-ttu-id="58531-104">有三个原因与组控件：</span><span class="sxs-lookup"><span data-stu-id="58531-104">There are three reasons to group controls:</span></span>  
   
--   <span data-ttu-id="58173-105">若要创建用于清除用户界面相关的窗体元素的直观分组。</span><span class="sxs-lookup"><span data-stu-id="58173-105">To create a visual grouping of related form elements for a clear user interface.</span></span>  
+-   <span data-ttu-id="58531-105">若要创建用于清除用户界面相关的窗体元素的直观分组。</span><span class="sxs-lookup"><span data-stu-id="58531-105">To create a visual grouping of related form elements for a clear user interface.</span></span>  
   
--   <span data-ttu-id="58173-106">若要创建以编程方式分组 （的单选按钮，例如）。</span><span class="sxs-lookup"><span data-stu-id="58173-106">To create programmatic grouping (of radio buttons, for example).</span></span>  
+-   <span data-ttu-id="58531-106">若要创建以编程方式分组 （的单选按钮，例如）。</span><span class="sxs-lookup"><span data-stu-id="58531-106">To create programmatic grouping (of radio buttons, for example).</span></span>  
   
--   <span data-ttu-id="58173-107">用于在设计时作为一个单元移动控件。</span><span class="sxs-lookup"><span data-stu-id="58173-107">For moving the controls as a unit at design time.</span></span>  
+-   <span data-ttu-id="58531-107">用于在设计时作为一个单元移动控件。</span><span class="sxs-lookup"><span data-stu-id="58531-107">For moving the controls as a unit at design time.</span></span>  
   
-### <a name="to-create-a-group-of-controls"></a><span data-ttu-id="58173-108">若要创建的一组控件</span><span class="sxs-lookup"><span data-stu-id="58173-108">To create a group of controls</span></span>  
+### <a name="to-create-a-group-of-controls"></a><span data-ttu-id="58531-108">若要创建的一组控件</span><span class="sxs-lookup"><span data-stu-id="58531-108">To create a group of controls</span></span>  
   
-1.  <span data-ttu-id="58173-109">绘制<xref:System.Windows.Forms.GroupBox>窗体上的控件。</span><span class="sxs-lookup"><span data-stu-id="58173-109">Draw a <xref:System.Windows.Forms.GroupBox> control on a form.</span></span>  
+1.  <span data-ttu-id="58531-109">绘制<xref:System.Windows.Forms.GroupBox>窗体上的控件。</span><span class="sxs-lookup"><span data-stu-id="58531-109">Draw a <xref:System.Windows.Forms.GroupBox> control on a form.</span></span>  
   
-2.  <span data-ttu-id="58173-110">将其他控件添加到组中，绘制每个组框中。</span><span class="sxs-lookup"><span data-stu-id="58173-110">Add other controls to the group box, drawing each inside the group box.</span></span>  
+2.  <span data-ttu-id="58531-110">将其他控件添加到组中，绘制每个组框中。</span><span class="sxs-lookup"><span data-stu-id="58531-110">Add other controls to the group box, drawing each inside the group box.</span></span>  
   
-     <span data-ttu-id="58173-111">如果你想要将括在组中的现有控件，可以选择所有控件，将它们剪切到剪贴板，再都选择<xref:System.Windows.Forms.GroupBox>控件，然后再将其粘贴到组框。</span><span class="sxs-lookup"><span data-stu-id="58173-111">If you have existing controls that you want to enclose in a group box, you can select all the controls, cut them to the Clipboard, select the <xref:System.Windows.Forms.GroupBox> control, and then paste them into the group box.</span></span> <span data-ttu-id="58173-112">您还可以将它们拖到组。</span><span class="sxs-lookup"><span data-stu-id="58173-112">You can also drag them into the group box.</span></span>  
+     <span data-ttu-id="58531-111">如果你想要将括在组中的现有控件，可以选择所有控件，将它们剪切到剪贴板，再都选择<xref:System.Windows.Forms.GroupBox>控件，然后再将其粘贴到组框。</span><span class="sxs-lookup"><span data-stu-id="58531-111">If you have existing controls that you want to enclose in a group box, you can select all the controls, cut them to the Clipboard, select the <xref:System.Windows.Forms.GroupBox> control, and then paste them into the group box.</span></span> <span data-ttu-id="58531-112">您还可以将它们拖到组。</span><span class="sxs-lookup"><span data-stu-id="58531-112">You can also drag them into the group box.</span></span>  
   
-3.  <span data-ttu-id="58173-113">设置<xref:System.Windows.Forms.GroupBox.Text%2A>分组框为适当标题的属性。</span><span class="sxs-lookup"><span data-stu-id="58173-113">Set the <xref:System.Windows.Forms.GroupBox.Text%2A> property of the group box to an appropriate caption.</span></span>  
+3.  <span data-ttu-id="58531-113">设置<xref:System.Windows.Forms.GroupBox.Text%2A>分组框为适当标题的属性。</span><span class="sxs-lookup"><span data-stu-id="58531-113">Set the <xref:System.Windows.Forms.GroupBox.Text%2A> property of the group box to an appropriate caption.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58173-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="58173-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58531-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="58531-114">See also</span></span>
 - <xref:System.Windows.Forms.GroupBox>
-- [<span data-ttu-id="58173-115">GroupBox 控件</span><span class="sxs-lookup"><span data-stu-id="58173-115">GroupBox Control</span></span>](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+- [<span data-ttu-id="58531-115">GroupBox 控件</span><span class="sxs-lookup"><span data-stu-id="58531-115">GroupBox Control</span></span>](groupbox-control-windows-forms.md)

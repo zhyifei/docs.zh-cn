@@ -5,50 +5,50 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: a59e5997104b9438681702d460dd8f6937df41b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cff3b0a3ba547c15e7b1c896bde49931a6a3c742
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741452"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702641"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a><span data-ttu-id="9b6fb-102">如何：向 Windows 窗体的锁定控件</span><span class="sxs-lookup"><span data-stu-id="9b6fb-102">How to: Lock Controls to Windows Forms</span></span>
-<span data-ttu-id="9b6fb-103">设计 Windows 应用程序用户界面 (UI)，便可锁定控件后它们正确定位，以便不会无意中执行移动或调整其大小设置其他属性时。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-103">When you design the user interface (UI) of your Windows application, you can lock the controls once they are positioned correctly, so that you do not inadvertently move or resize them when setting other properties.</span></span>  
+# <a name="how-to-lock-controls-to-windows-forms"></a><span data-ttu-id="f05d3-102">如何：向 Windows 窗体的锁定控件</span><span class="sxs-lookup"><span data-stu-id="f05d3-102">How to: Lock Controls to Windows Forms</span></span>
+<span data-ttu-id="f05d3-103">设计 Windows 应用程序用户界面 (UI)，便可锁定控件后它们正确定位，以便不会无意中执行移动或调整其大小设置其他属性时。</span><span class="sxs-lookup"><span data-stu-id="f05d3-103">When you design the user interface (UI) of your Windows application, you can lock the controls once they are positioned correctly, so that you do not inadvertently move or resize them when setting other properties.</span></span>  
   
- <span data-ttu-id="9b6fb-104">此外，可以锁定和解锁所有窗体控件，这适用于许多控件与窗体，也可以解锁各个控件。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-104">Additionally, you can lock and unlock all the controls on the form at once, which is helpful for forms with many controls, or you can unlock individual controls.</span></span> <span data-ttu-id="9b6fb-105">一旦已放置的所有控件在窗体上所需的位置，其所有进行锁定以防止错误的移动。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-105">Once you have placed all the controls where you want them on the form, lock them all in place to prevent erroneous movement.</span></span>  
+ <span data-ttu-id="f05d3-104">此外，可以锁定和解锁所有窗体控件，这适用于许多控件与窗体，也可以解锁各个控件。</span><span class="sxs-lookup"><span data-stu-id="f05d3-104">Additionally, you can lock and unlock all the controls on the form at once, which is helpful for forms with many controls, or you can unlock individual controls.</span></span> <span data-ttu-id="f05d3-105">一旦已放置的所有控件在窗体上所需的位置，其所有进行锁定以防止错误的移动。</span><span class="sxs-lookup"><span data-stu-id="f05d3-105">Once you have placed all the controls where you want them on the form, lock them all in place to prevent erroneous movement.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9b6fb-106">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="9b6fb-107">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="9b6fb-108">有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-108">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="f05d3-106">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="f05d3-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="f05d3-107">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="f05d3-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="f05d3-108">有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="f05d3-108">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-lock-a-control"></a><span data-ttu-id="9b6fb-109">若要锁定控件</span><span class="sxs-lookup"><span data-stu-id="9b6fb-109">To lock a control</span></span>  
+### <a name="to-lock-a-control"></a><span data-ttu-id="f05d3-109">若要锁定控件</span><span class="sxs-lookup"><span data-stu-id="f05d3-109">To lock a control</span></span>  
   
-1.  <span data-ttu-id="9b6fb-110">在中**属性**窗口中，单击**锁定**属性，然后选择`true`。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-110">In the **Properties** window, click the **Locked** property and select `true`.</span></span> <span data-ttu-id="9b6fb-111">（双击名称切换属性设置。）</span><span class="sxs-lookup"><span data-stu-id="9b6fb-111">(Double-clicking the name toggles the property setting.)</span></span>  
+1.  <span data-ttu-id="f05d3-110">在中**属性**窗口中，单击**锁定**属性，然后选择`true`。</span><span class="sxs-lookup"><span data-stu-id="f05d3-110">In the **Properties** window, click the **Locked** property and select `true`.</span></span> <span data-ttu-id="f05d3-111">（双击名称切换属性设置。）</span><span class="sxs-lookup"><span data-stu-id="f05d3-111">(Double-clicking the name toggles the property setting.)</span></span>  
   
-     <span data-ttu-id="9b6fb-112">或者，右键单击该控件，选择**锁定控件**。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-112">Alternatively, right-click the control and choose **Lock Controls**.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="9b6fb-113">锁定控件可以防止它们在设计图面上拖动到新的大小或位置。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-113">Locking controls prevents them from being dragged to a new size or location on the design surface.</span></span> <span data-ttu-id="9b6fb-114">但是，你仍可以更改的大小或通过控件的位置**属性**窗口或代码中。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-114">However, you can still change the size or location of controls by means of the **Properties** window or in code.</span></span>  
-  
-### <a name="to-lock-all-the-controls-on-a-form"></a><span data-ttu-id="9b6fb-115">若要在窗体上的所有控件都锁定</span><span class="sxs-lookup"><span data-stu-id="9b6fb-115">To lock all the controls on a form</span></span>  
-  
-1.  <span data-ttu-id="9b6fb-116">从**格式**菜单中，选择**锁定控件**。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-116">From the **Format** menu, choose **Lock Controls**.</span></span>  
+     <span data-ttu-id="f05d3-112">或者，右键单击该控件，选择**锁定控件**。</span><span class="sxs-lookup"><span data-stu-id="f05d3-112">Alternatively, right-click the control and choose **Lock Controls**.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="9b6fb-117">此命令将锁定窗体的大小，因为窗体是一个控件。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-117">This command locks the form's size as well, because a form is a control.</span></span>  
+    >  <span data-ttu-id="f05d3-113">锁定控件可以防止它们在设计图面上拖动到新的大小或位置。</span><span class="sxs-lookup"><span data-stu-id="f05d3-113">Locking controls prevents them from being dragged to a new size or location on the design surface.</span></span> <span data-ttu-id="f05d3-114">但是，你仍可以更改的大小或通过控件的位置**属性**窗口或代码中。</span><span class="sxs-lookup"><span data-stu-id="f05d3-114">However, you can still change the size or location of controls by means of the **Properties** window or in code.</span></span>  
   
-### <a name="to-unlock-all-locked-controls-on-a-form"></a><span data-ttu-id="9b6fb-118">若要解锁窗体上的所有已锁定的控件</span><span class="sxs-lookup"><span data-stu-id="9b6fb-118">To unlock all locked controls on a form</span></span>  
+### <a name="to-lock-all-the-controls-on-a-form"></a><span data-ttu-id="f05d3-115">若要在窗体上的所有控件都锁定</span><span class="sxs-lookup"><span data-stu-id="f05d3-115">To lock all the controls on a form</span></span>  
   
-1.  <span data-ttu-id="9b6fb-119">从**格式**菜单中，选择**锁定控件**。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-119">From the **Format** menu, choose **Lock Controls**.</span></span>  
+1.  <span data-ttu-id="f05d3-116">从**格式**菜单中，选择**锁定控件**。</span><span class="sxs-lookup"><span data-stu-id="f05d3-116">From the **Format** menu, choose **Lock Controls**.</span></span>  
   
-     <span data-ttu-id="9b6fb-120">在窗体上的所有以前锁定的控件现在是解锁。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-120">All previously locked controls on the form are now unlocked.</span></span>  
+    > [!NOTE]
+    >  <span data-ttu-id="f05d3-117">此命令将锁定窗体的大小，因为窗体是一个控件。</span><span class="sxs-lookup"><span data-stu-id="f05d3-117">This command locks the form's size as well, because a form is a control.</span></span>  
   
-### <a name="to-unlock-locked-controls-individually"></a><span data-ttu-id="9b6fb-121">若要单独解锁锁定的控件</span><span class="sxs-lookup"><span data-stu-id="9b6fb-121">To unlock locked controls individually</span></span>  
+### <a name="to-unlock-all-locked-controls-on-a-form"></a><span data-ttu-id="f05d3-118">若要解锁窗体上的所有已锁定的控件</span><span class="sxs-lookup"><span data-stu-id="f05d3-118">To unlock all locked controls on a form</span></span>  
   
-1.  <span data-ttu-id="9b6fb-122">在中**属性**窗口中，单击**锁定**属性，然后选择`false`。</span><span class="sxs-lookup"><span data-stu-id="9b6fb-122">In the **Properties** window, click the **Locked** property and select `false`.</span></span> <span data-ttu-id="9b6fb-123">（双击名称切换属性设置。）</span><span class="sxs-lookup"><span data-stu-id="9b6fb-123">(Double-clicking the name toggles the property setting.)</span></span>  
+1.  <span data-ttu-id="f05d3-119">从**格式**菜单中，选择**锁定控件**。</span><span class="sxs-lookup"><span data-stu-id="f05d3-119">From the **Format** menu, choose **Lock Controls**.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9b6fb-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="9b6fb-124">See also</span></span>
-- [<span data-ttu-id="9b6fb-125">Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="9b6fb-125">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)
-- [<span data-ttu-id="9b6fb-126">在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="9b6fb-126">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [<span data-ttu-id="9b6fb-127">标记各个 Windows 窗体控件并创建它们的快捷键</span><span class="sxs-lookup"><span data-stu-id="9b6fb-127">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [<span data-ttu-id="9b6fb-128">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="9b6fb-128">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [<span data-ttu-id="9b6fb-129">按功能列出的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="9b6fb-129">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+     <span data-ttu-id="f05d3-120">在窗体上的所有以前锁定的控件现在是解锁。</span><span class="sxs-lookup"><span data-stu-id="f05d3-120">All previously locked controls on the form are now unlocked.</span></span>  
+  
+### <a name="to-unlock-locked-controls-individually"></a><span data-ttu-id="f05d3-121">若要单独解锁锁定的控件</span><span class="sxs-lookup"><span data-stu-id="f05d3-121">To unlock locked controls individually</span></span>  
+  
+1.  <span data-ttu-id="f05d3-122">在中**属性**窗口中，单击**锁定**属性，然后选择`false`。</span><span class="sxs-lookup"><span data-stu-id="f05d3-122">In the **Properties** window, click the **Locked** property and select `false`.</span></span> <span data-ttu-id="f05d3-123">（双击名称切换属性设置。）</span><span class="sxs-lookup"><span data-stu-id="f05d3-123">(Double-clicking the name toggles the property setting.)</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="f05d3-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="f05d3-124">See also</span></span>
+- [<span data-ttu-id="f05d3-125">Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="f05d3-125">Windows Forms Controls</span></span>](index.md)
+- [<span data-ttu-id="f05d3-126">在 Windows 窗体上排列控件</span><span class="sxs-lookup"><span data-stu-id="f05d3-126">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
+- [<span data-ttu-id="f05d3-127">标记各个 Windows 窗体控件并创建它们的快捷键</span><span class="sxs-lookup"><span data-stu-id="f05d3-127">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [<span data-ttu-id="f05d3-128">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="f05d3-128">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="f05d3-129">按功能列出的 Windows 窗体控件</span><span class="sxs-lookup"><span data-stu-id="f05d3-129">Windows Forms Controls by Function</span></span>](windows-forms-controls-by-function.md)

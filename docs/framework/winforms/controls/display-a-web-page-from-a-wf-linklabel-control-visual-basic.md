@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: 05b127099b85188b0df2f1f7821ceb147cc41e1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e80dba9cd43385be016506ac2a7e887a68dedf2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698955"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705222"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="f56ff-102">如何：显示 Windows 窗体 LinkLabel 控件 (Visual Basic 中) 中的网页</span><span class="sxs-lookup"><span data-stu-id="f56ff-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
-<span data-ttu-id="f56ff-103">此示例在默认浏览器中显示网页，当用户单击 Windows 窗体<xref:System.Windows.Forms.LinkLabel>控件。</span><span class="sxs-lookup"><span data-stu-id="f56ff-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="7d46e-102">如何：显示 Windows 窗体 LinkLabel 控件 (Visual Basic 中) 中的网页</span><span class="sxs-lookup"><span data-stu-id="7d46e-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
+<span data-ttu-id="7d46e-103">此示例在默认浏览器中显示网页，当用户单击 Windows 窗体<xref:System.Windows.Forms.LinkLabel>控件。</span><span class="sxs-lookup"><span data-stu-id="7d46e-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f56ff-104">示例</span><span class="sxs-lookup"><span data-stu-id="f56ff-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="7d46e-104">示例</span><span class="sxs-lookup"><span data-stu-id="7d46e-104">Example</span></span>  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -37,18 +37,18 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f56ff-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="f56ff-105">Compiling the Code</span></span>  
- <span data-ttu-id="f56ff-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="f56ff-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="7d46e-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="7d46e-105">Compiling the Code</span></span>  
+ <span data-ttu-id="7d46e-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="7d46e-106">This example requires:</span></span>  
   
--   <span data-ttu-id="f56ff-107">名为 Windows 窗体`Form1`。</span><span class="sxs-lookup"><span data-stu-id="f56ff-107">A Windows Form named `Form1`.</span></span>  
+-   <span data-ttu-id="7d46e-107">名为 Windows 窗体`Form1`。</span><span class="sxs-lookup"><span data-stu-id="7d46e-107">A Windows Form named `Form1`.</span></span>  
   
--   <span data-ttu-id="f56ff-108">名为 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控件。</span><span class="sxs-lookup"><span data-stu-id="f56ff-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
+-   <span data-ttu-id="7d46e-108">名为 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控件。</span><span class="sxs-lookup"><span data-stu-id="7d46e-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
   
--   <span data-ttu-id="f56ff-109">活动的 Internet 连接。</span><span class="sxs-lookup"><span data-stu-id="f56ff-109">An active Internet connection.</span></span>  
+-   <span data-ttu-id="7d46e-109">活动的 Internet 连接。</span><span class="sxs-lookup"><span data-stu-id="7d46e-109">An active Internet connection.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="f56ff-110">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="f56ff-110">.NET Framework Security</span></span>  
- <span data-ttu-id="f56ff-111">对调用<xref:System.Diagnostics.Process.Start%2A>方法需要完全信任。</span><span class="sxs-lookup"><span data-stu-id="f56ff-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="f56ff-112">有关详细信息，请参阅 <xref:System.Security.SecurityException>。</span><span class="sxs-lookup"><span data-stu-id="f56ff-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="7d46e-110">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="7d46e-110">.NET Framework Security</span></span>  
+ <span data-ttu-id="7d46e-111">对调用<xref:System.Diagnostics.Process.Start%2A>方法需要完全信任。</span><span class="sxs-lookup"><span data-stu-id="7d46e-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="7d46e-112">有关详细信息，请参阅 <xref:System.Security.SecurityException>。</span><span class="sxs-lookup"><span data-stu-id="7d46e-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f56ff-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="f56ff-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d46e-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="7d46e-113">See also</span></span>
 - <xref:System.Windows.Forms.LinkLabel>
-- [<span data-ttu-id="f56ff-114">LinkLabel 控件</span><span class="sxs-lookup"><span data-stu-id="f56ff-114">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+- [<span data-ttu-id="7d46e-114">LinkLabel 控件</span><span class="sxs-lookup"><span data-stu-id="7d46e-114">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)
