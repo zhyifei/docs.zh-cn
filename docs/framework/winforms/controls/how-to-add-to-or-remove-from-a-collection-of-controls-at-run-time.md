@@ -12,12 +12,12 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 88a743cc6d0a1e90d2912c9ec610fae326ff5770
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec4e41f5a3bee6302996f21afa81f2b5eeb9568
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744903"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720886"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>如何：添加或删除从控件集合在运行时
 应用程序开发中的常见任务是添加到控件和窗体上任何容器控件中移除控件 (如<xref:System.Windows.Forms.Panel>或<xref:System.Windows.Forms.GroupBox>控件或甚至窗体本身)。 在设计时，可直接将控件拖到面板或分组框上。 在运行时，这些控件维护一个 `Controls` 集合，该集合会跟踪集合中放置了哪些控件。  
@@ -102,4 +102,4 @@ ms.locfileid: "54744903"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.Panel>
-- [Panel 控件](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+- [Panel 控件](panel-control-windows-forms.md)

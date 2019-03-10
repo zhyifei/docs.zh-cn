@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: d3b1103cda6d4f61b55f6856cd426779a4f39f2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18077f542b1b49f8e81e68fc1e7a5d3e1e417a21
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639440"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713873"
 ---
 # <a name="how-to-copy-toolstripmenuitems"></a>如何：复制 Toolstripmenuitem
 在设计时，你可以将整个顶级菜单及其子菜单项复制到 <xref:System.Windows.Forms.MenuStrip>上的其他位置。 还可以复制顶级菜单之间的单个菜单项或在菜单中更改菜单项的位置。  
@@ -45,4 +45,4 @@ ms.locfileid: "54639440"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [MenuStrip 控件概述](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [MenuStrip 控件概述](menustrip-control-overview-windows-forms.md)

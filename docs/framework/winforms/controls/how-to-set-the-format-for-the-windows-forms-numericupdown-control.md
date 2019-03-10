@@ -9,12 +9,12 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], formatting values
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
-ms.openlocfilehash: 5574faf858c32752cfa99b6bf339ddf06cb6b345
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5c387fe593082e08ad39cb4582c946ca986a79e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631004"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713925"
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>如何：Windows 窗体 NumericUpDown 控件设置格式
 可以配置在 Windows 窗体中显示值的方式<xref:System.Windows.Forms.NumericUpDown>控件。 <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>属性确定显示小数点后的几位数字; 默认值为 0。 <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>属性确定是否将每隔三个十进制数字之间插入分隔符; 默认值为`false`。 如果控件可以显示的值而不是十进制格式的十六进制<xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A>属性设置为`true`; 默认值是`false`。  
@@ -59,5 +59,5 @@ ms.locfileid: "54631004"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.NumericUpDown>
-- [NumericUpDown 控件](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)
-- [NumericUpDown 控件概述](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)
+- [NumericUpDown 控件](numericupdown-control-windows-forms.md)
+- [NumericUpDown 控件概述](numericupdown-control-overview-windows-forms.md)

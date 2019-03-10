@@ -9,12 +9,12 @@ helpviewer_keywords:
 - menu items [Windows Forms], standard
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
-ms.openlocfilehash: 823cc774e4bfd9ba94ea84efeda493b225a04a35
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 3cf53a6934190cd0e7cd7e18bc57fb5fbfb57a86
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260902"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713860"
 ---
 # <a name="how-to-provide-standard-menu-items-to-a-form"></a>如何：向窗体提供标准菜单项
 可使用 <xref:System.Windows.Forms.MenuStrip> 控件向窗体提供标准菜单。  
@@ -27,8 +27,8 @@ ms.locfileid: "56260902"
  下面的代码示例演示了如何使用 <xref:System.Windows.Forms.MenuStrip> 控件创建带有标准菜单的窗体。 
   <xref:System.Windows.Forms.StatusStrip> 控件中将显示菜单项选择。  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
@@ -41,4 +41,4 @@ ms.locfileid: "56260902"
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [MenuStrip 控件](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+- [MenuStrip 控件](menustrip-control-windows-forms.md)

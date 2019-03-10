@@ -9,26 +9,26 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: 2fe3beaa13def25f8b7311e38a654d2e82922407
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78030dd53f526e7d4403f4696ea54e881b60022
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663974"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720405"
 ---
 # <a name="vector-graphics-overview"></a>向量图形概述
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 绘制线条、 矩形和其他形状的坐标系统上。 可以选择使用不同的坐标系统，但默认坐标系统中都具有原点左上角具有 x 轴指向右，y 轴指向下方。 默认坐标系统中的度量单位为像素。  
   
 ## <a name="the-building-blocks-of-gdi"></a>GDI + 的构建基块  
- ![矢量图形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
+ ![矢量图形](./media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
   
  计算机监视器上点称为图片元素或像素的矩形数组创建其显示。 有所不同到下一步，一台监视器显示在屏幕的像素数，并显示在单个监视器的像素数通常可某种程度上由用户。  
   
- ![矢量图形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
+ ![矢量图形](./media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
  当你使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]若要绘制线条、 矩形或曲线，提供有关要绘制的项的某些关键信息。 例如，可以通过提供两个点，指定的行，并可以通过提供一个点、 高度和宽度指定矩形。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 显示驱动程序软件，以确定哪些像素必须打开以显示行、 矩形或曲线结合工作。 下图显示了已打开，可以显示行的 （4，2） 的点到点 （12、 8） 的像素。  
   
- ![矢量图形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
+ ![矢量图形](./media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   
  随着时间推移，某些基本构造块已被证明是最适用于创建二维图片。 这些构建基块，支持的[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，给出了下面的列表：  
   
@@ -53,11 +53,11 @@ ms.locfileid: "54663974"
   
  绘制方法的所有<xref:System.Drawing.Graphics>类结合工作<xref:System.Drawing.Pen>对象。 若要绘制任何内容，必须创建至少两个对象：<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。 <xref:System.Drawing.Pen>对象将存储属性，例如线条宽度和颜色，要绘制的项。 <xref:System.Drawing.Pen>对象作为一个参数传递给绘图的方法。 例如，一种<xref:System.Drawing.Graphics.DrawLine%2A>方法接收<xref:System.Drawing.Pen>对象，如下面的示例绘制一个宽度为 100，高度为 50 到左上角的矩形中所示的四个整数 （20、 10）：  
   
- [!code-csharp[LinesCurvesAndShapes#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
- [!code-vb[LinesCurvesAndShapes#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
+ [!code-csharp[LinesCurvesAndShapes#11](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
+ [!code-vb[LinesCurvesAndShapes#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
-- [直线、曲线和形状](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [如何：创建用于绘制图形对象](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+- [直线、曲线和形状](lines-curves-and-shapes.md)
+- [如何：创建用于绘制图形对象](how-to-create-graphics-objects-for-drawing.md)

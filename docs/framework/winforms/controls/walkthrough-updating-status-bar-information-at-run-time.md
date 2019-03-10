@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 88aacd77742baea5ebf04ddca311100bd44edb3e
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 3ad76899f86013e3395b5b7859538c4c59c9b1ee
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665142"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716460"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>演练：在运行时的更新状态栏信息
 > [!IMPORTANT]
@@ -30,9 +30,9 @@ ms.locfileid: "56665142"
   
 1.  创建新的 Windows 窗体。  
   
-2.  向窗体添加一个 <xref:System.Windows.Forms.StatusBar> 控件。 有关详细信息，请参阅[如何：将控件添加到 Windows 窗体](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+2.  向窗体添加一个 <xref:System.Windows.Forms.StatusBar> 控件。 有关详细信息，请参阅[如何：将控件添加到 Windows 窗体](how-to-add-controls-to-windows-forms.md)。  
   
-3.  添加到状态栏面板在<xref:System.Windows.Forms.StatusBar>控件。 有关详细信息，请参阅[如何：向 StatusBar 控件添加面板](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)。  
+3.  添加到状态栏面板在<xref:System.Windows.Forms.StatusBar>控件。 有关详细信息，请参阅[如何：向 StatusBar 控件添加面板](how-to-add-panels-to-a-statusbar-control.md)。  
   
 4.  有关<xref:System.Windows.Forms.StatusBar>控件添加到窗体中，设置<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>属性设置为`true`。  
   
@@ -87,6 +87,6 @@ ms.locfileid: "56665142"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [如何：向 StatusBar 控件添加面板](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)
-- [如何：确定已单击 Windows 窗体 StatusBar 控件中的面板](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [StatusBar 控件概述](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [如何：向 StatusBar 控件添加面板](how-to-add-panels-to-a-statusbar-control.md)
+- [如何：确定已单击 Windows 窗体 StatusBar 控件中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar 控件概述](statusbar-control-overview-windows-forms.md)

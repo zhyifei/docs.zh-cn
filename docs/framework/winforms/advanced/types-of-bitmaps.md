@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 3083c075bfbbd21a26f7442f9bbccbe800d73cf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674763"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713210"
 ---
 # <a name="types-of-bitmaps"></a>位图类型
 位图的像素为单位的矩形数组中指定的每个像素的颜色的位数组。 专用于单个像素的比特数确定可以分配给该像素的颜色数。 例如，如果每个像素都由 4 位，则给定的像素可以指定 16 种不同颜色之一 (2 ^4 = 16)。 下表显示了几个示例的给定数目的位可以分配给代表的像素的颜色数。  
@@ -41,7 +41,7 @@ ms.locfileid: "54674763"
   
  通常存储位图的磁盘文件包含一个或多个数组中存储每个像素，每个行中的像素数和行数的比特数等信息的信息块。 此类文件还可能包含颜色表 （有时称为调色板）。 颜色表映射到特定的颜色位图中的数字。 下图显示了放大的图像连同其位图和颜色的表。 每个像素都由一个 4 位数字，因此有 2 ^4 = 16 种颜色的颜色表中。 表中的每个颜色表示为一个 24 位数字：8 位用于表示红色、 绿色、 8 位和 8 位用于蓝色。 数字显示十六进制 (基数为 16) 窗体中：A = 10，B = 11，C = 12，D = 13，E = 14，F = 15。  
   
- ![位图示例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
+ ![位图示例](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
  看看在第 3 行、 第 5 列图像的像素。 位图中的相应编号为 1。 颜色表告诉我们 1 表示红色，因此该像素是红色。 位图的顶行中的所有项都是 3。 颜色表告诉我们，3 表示蓝色，因此图像的顶部行中的所有像素都是蓝色。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54674763"
   
  将索引存储到颜色表的位图称为索引调色板的位图。 某些位图使用颜色表不需要。 例如，如果位图使用每像素 24 位，该位图可以存储颜色本身而不是索引颜色表。 下图显示位图，用于存储直接颜色 （24 位 / 像素），而不是使用颜色表。 该插图还显示相应的映像的放大的视图。 在位图中 FFFFFF 表示白色、 FF0000 表示红色、 00FF00 表示绿色，和 0000ff> 表示蓝色。  
   
- ![位图示例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
+ ![位图示例](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>图形文件格式  
  有许多标准格式的磁盘文件中保存位图。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支持的图形文件格式在以下各段中所述。  
@@ -66,11 +66,11 @@ ms.locfileid: "54674763"
   
  JPEG 图像中的压缩级别可配置，但更高的压缩级别 （较小的文件） 会导致丢失更多的信息。 20:1 的压缩率通常生成人眼查找难以区分从原始的映像。 下图显示了 BMP 图像和从该 BMP 图像压缩的两个 JPEG 图像。 第一个 JPEG 压缩比率 4:1，第二个 JPEG 大约 8:1 的压缩比率。  
   
- ![Filetype 示例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
+ ![Filetype 示例](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
  JPEG 压缩不很适合线型的纯色，块和清晰边界。 下图显示了 BMP 以及两个 Jpeg 和为 gif 图像。 Jpeg 图像和 gif 图像被压缩从 BMP。 压缩率较小的 jpeg，和更大的 jpeg 8:3 是 GIF、 4:1 4:1。 请注意，GIF 维护清晰的边界，代码行，但往往会模糊边界 jpeg 图像。  
   
- ![Filetypes](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
+ ![Filetypes](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
  JPEG 压缩方案，而不是文件格式。 JPEG 文件交换格式 (JFIF) 是常用于存储和传输 JPEG 方案根据已压缩的图像文件格式。 通过 Web 浏览器显示的 JFIF 文件使用.jpg 扩展名。  
   
@@ -89,5 +89,5 @@ ms.locfileid: "54674763"
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
-- [图像、位图和图元文件](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [使用图像、位图、图标和图元文件](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [图像、位图和图元文件](images-bitmaps-and-metafiles.md)
+- [使用图像、位图、图标和图元文件](working-with-images-bitmaps-icons-and-metafiles.md)

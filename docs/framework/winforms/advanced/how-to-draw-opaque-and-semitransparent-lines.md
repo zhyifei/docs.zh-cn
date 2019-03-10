@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing alpha blended
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
-ms.openlocfilehash: 6076ebf6cb75aa4fdb5cf5798b642597d8f84c80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44047b5a35c2ca87f3136d082331d2f31a1abbec
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559042"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721146"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>如何：绘制不透明和半透明的线条
 绘制线条时，必须将 <xref:System.Drawing.Pen> 对象传递给 <xref:System.Drawing.Graphics> 类的 <xref:System.Drawing.Graphics.DrawLine%2A> 方法。 <xref:System.Drawing.Pen.%23ctor%2A> 构造函数的参数之一是 <xref:System.Drawing.Color> 对象。 若要绘制不透明的线条，请将颜色的 alpha 分量设置为 255。 若要绘制半透明的线条，请将 alpha 分量设置为从 1 到 254 的任何值。  
@@ -27,15 +27,15 @@ ms.locfileid: "54559042"
   
  下图显示以下代码的输出。  
   
- ![不透明和半透明](../../../../docs/framework/winforms/advanced/media/compqualline.png "compqualline")  
+ ![不透明和半透明](./media/compqualline.png "compqualline")  
   
- [!code-csharp[System.Drawing.AlphaBlending#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.AlphaBlending#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.AlphaBlending#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.AlphaBlending#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
 ## <a name="see-also"></a>请参阅
-- [alpha 值混合处理直线和填充](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
-- [如何：使控件拥有透明背景](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)
-- [如何：用不透明和半透明的画笔绘制](../../../../docs/framework/winforms/advanced/how-to-draw-with-opaque-and-semitransparent-brushes.md)
+- [alpha 值混合处理直线和填充](alpha-blending-lines-and-fills.md)
+- [如何：使控件拥有透明背景](../controls/how-to-give-your-control-a-transparent-background.md)
+- [如何：用不透明和半透明的画笔绘制](how-to-draw-with-opaque-and-semitransparent-brushes.md)

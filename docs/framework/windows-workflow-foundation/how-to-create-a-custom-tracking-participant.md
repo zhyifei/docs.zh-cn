@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 4afa3f46532e365760c0dd5a9e1880a82e5ae82b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c4c6a8d17180ee00942c1bfd9ddc7bfa04bb962f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150625"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720951"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>如何：创建自定义跟踪参与者
 工作流跟踪用于查看工作流执行的状态。 工作流运行时发出跟踪记录，这些跟踪记录描述工作流生命周期事件、活动生命周期事件、书签摘要和故障。 这些跟踪记录供跟踪参与者使用。 Windows Workflow Foundation (WF) 包括一个标准跟踪参与者，它将作为事件跟踪 Windows (ETW) 事件的跟踪记录写入。 如果这不能满足您的需求，您还可以编写自定义跟踪参与者。 本教程步骤说明如何创建自定义跟踪参与者和跟踪配置文件，该配置文件捕获 `WriteLine` 活动的输出，以便将这些活动显示给用户。  
@@ -328,7 +328,7 @@ ms.locfileid: "54150625"
     ```
     
     > [!NOTE]
-    > 此信息对于确定随机数的范围十分有用，但它并不包含有关先前进行的猜数的任何信息。 此信息位于下一步，[如何：承载多个版本的工作流的并排方案](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
+    > 此信息对于确定随机数的范围十分有用，但它并不包含有关先前进行的猜数的任何信息。 此信息位于下一步，[如何：承载多个版本的工作流的并排方案](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
 
     记下工作流实例 ID，然后播放游戏，直到播完。
   
@@ -342,4 +342,4 @@ ms.locfileid: "54150625"
     Please enter a number between 1 and 10
     ```
 
-    除了缺少用户的猜数之外，此跟踪数据不包含有关工作流的最终猜数的信息。 这是因为，跟踪信息仅包含工作流的 `WriteLine` 输出，而在工作流完成后从 `Completed` 显示的最终消息也是这样的。 在本教程的下一步中[如何：承载多个版本的工作流-并行](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，现有`WriteLine`活动被修改，以显示用户的猜数，和额外`WriteLine`活动添加显示最终结果。 合并这些更改后，[如何：承载多个版本的工作流的并排方案](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)演示如何同时承载多个版本的工作流。
+    除了缺少用户的猜数之外，此跟踪数据不包含有关工作流的最终猜数的信息。 这是因为，跟踪信息仅包含工作流的 `WriteLine` 输出，而在工作流完成后从 `Completed` 显示的最终消息也是这样的。 在本教程的下一步中[如何：承载多个版本的工作流-并行](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，现有`WriteLine`活动被修改，以显示用户的猜数，和额外`WriteLine`活动添加显示最终结果。 合并这些更改后，[如何：承载多个版本的工作流的并排方案](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)演示如何同时承载多个版本的工作流。

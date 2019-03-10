@@ -16,24 +16,24 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], substituting cell values for display
 - data grids [Windows Forms], formatting data
 ms.assetid: a6e72c70-ce18-425f-828d-d57be6f96ab6
-ms.openlocfilehash: 592fd224635fff2138feb131637c82f0eac5d702
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 4a7e74afa985d36281994078bd0ea464f084cfa9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261058"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714900"
 ---
 # <a name="how-to-customize-data-formatting-in-the-windows-forms-datagridview-control"></a>如何：自定义 Windows 窗体 DataGridView 控件中的数据格式设置
 下面的代码示例演示如何实现 <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> 事件的处理程序，该事件根据单元格的列和值更改单元格的显示方式。  
   
- 包含负数的 `Balance` 列中的单元格的背景颜色设为红色。 也可将这些单元格的格式设置为货币，以显示负值两边的括号。 有关详细信息，请参阅[如何：Windows 中的数据格式窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)。  
+ 包含负数的 `Balance` 列中的单元格的背景颜色设为红色。 也可将这些单元格的格式设置为货币，以显示负值两边的括号。 有关详细信息，请参阅[如何：Windows 中的数据格式窗体 DataGridView 控件](how-to-format-data-in-the-windows-forms-datagridview-control.md)。  
   
  `Priority` 列中的单元格显示图像以代替对应文本单元格值。 
   <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> 的 <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> 属性同时用于获取文本单元格的值以及设置相应的图像显示值。  
   
 ## <a name="example"></a>示例  
- [!code-csharp[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/cs/customFormatting.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/vb/customFormatting.vb#00)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/cs/customFormatting.cs#00)]
+ [!code-vb[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/vb/customFormatting.vb#00)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
@@ -50,7 +50,7 @@ ms.locfileid: "56261058"
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Drawing.Bitmap>
-- [在 Windows 窗体 DataGridView 控件中显示数据](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
-- [如何：Windows 中的数据格式窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Windows 窗体 DataGridView 控件中的数据格式设置](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)
+- [在 Windows 窗体 DataGridView 控件中显示数据](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [如何：Windows 中的数据格式窗体 DataGridView 控件](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的单元格样式](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的数据格式设置](data-formatting-in-the-windows-forms-datagridview-control.md)

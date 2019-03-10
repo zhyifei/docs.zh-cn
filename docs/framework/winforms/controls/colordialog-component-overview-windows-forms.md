@@ -7,12 +7,12 @@ helpviewer_keywords:
 - color dialog box [Windows Forms], about color dialog box
 - ColorDialog component [Windows Forms], about ColorDialog
 ms.assetid: 6dbdd8f0-f697-4728-bb09-7ea156f6d800
-ms.openlocfilehash: 9ef7d667b582d3b227f0f0e8af5e7e0335cd4860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7dd48c8df0a36262962df596e8efadf4de1c2cd3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570104"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713327"
 ---
 # <a name="colordialog-component-overview-windows-forms"></a>ColorDialog 组件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.ColorDialog>组件是一个预配置的对话框，允许用户从调色板选择颜色以及将自定义颜色添加到该调色板。 此对话框与在其他基于 Windows 的应用程序中看到的用于选择颜色的对话框相同。 在基于 Windows 的应用程序中，使用它作为一种替代配置自己对话框的简单解决方案。  
@@ -21,6 +21,6 @@ Windows 窗体<xref:System.Windows.Forms.ColorDialog>组件是一个预配置的
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.ColorDialog>
-- [ColorDialog 组件](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)
-- [对话框控件和组件](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
-- [如何：更改 Windows 窗体 ColorDialog 组件的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)
+- [ColorDialog 组件](colordialog-component-windows-forms.md)
+- [对话框控件和组件](dialog-box-controls-and-components-windows-forms.md)
+- [如何：更改 Windows 窗体 ColorDialog 组件的外观](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)

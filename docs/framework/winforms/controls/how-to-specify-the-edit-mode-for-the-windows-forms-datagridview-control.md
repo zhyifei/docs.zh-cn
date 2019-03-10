@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: fcb2014cc92a8a3e4afe7c3ed0365fd5947c70f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00c5bb85eb1b238371e58a631d90b69a41c49140
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628261"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725295"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>如何：Windows 窗体 DataGridView 控件中指定的编辑模式
 默认情况下，用户可以编辑的当前内容<xref:System.Windows.Forms.DataGridView>通过在其中键入内容或按 F2 的文本框单元。 这使该单元格进入编辑模式为如果满足所有以下条件：  
@@ -34,8 +34,8 @@ ms.locfileid: "54628261"
   
 -   设置<xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>属性设置为相应<xref:System.Windows.Forms.DataGridViewEditMode>枚举。  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
-     [!code-vb[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
+     [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
@@ -47,4 +47,4 @@ ms.locfileid: "54628261"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
-- [Windows 窗体 DataGridView 控件中的数据输入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的数据输入](data-entry-in-the-windows-forms-datagridview-control.md)

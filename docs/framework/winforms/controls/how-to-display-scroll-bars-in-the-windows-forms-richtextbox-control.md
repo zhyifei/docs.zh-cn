@@ -6,12 +6,12 @@ helpviewer_keywords:
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 6b6cfb8c21c8f3a48bb85a0591f3390d5b5575b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 119cf736dfa7b8b8fce57b7e8fcb24dd09f01ce0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610391"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716486"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>如何：显示滚动条在 Windows 窗体 RichTextBox 控件
 默认情况下，Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件在必要时将显示水平和垂直滚动条。 有七个可能值为<xref:System.Windows.Forms.RichTextBox.ScrollBars%2A>属性的<xref:System.Windows.Forms.RichTextBox>控件，如下表所述。  
@@ -34,7 +34,7 @@ ms.locfileid: "54610391"
   
 3.  将 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 属性设置为适当的值。  
   
-    |“值”|描述|  
+    |值|描述|  
     |-----------|-----------------|  
     |`false`|控件中的文本不会自动调整来适应控件的宽度，所以它将滚动到右侧，直到到达一个分行符。 如果您在上面选择和 / 或水平滚动条，请使用此值。|  
     |`true`（默认值）|控件中的文本自动调整以适应控件的宽度。 不会出现水平滚动条。 如果选择了垂直滚动条或无、 更高版本，以显示一个或多个段落，请使用此值。|  
@@ -42,5 +42,5 @@ ms.locfileid: "54610391"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox 控件](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox 控件](richtextbox-control-windows-forms.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

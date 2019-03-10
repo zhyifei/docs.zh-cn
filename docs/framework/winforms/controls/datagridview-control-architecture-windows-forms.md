@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: c57f7d22219c0cda91dad174be4e225808a9949d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d215eeaa367156c6228615a8f6e0a7f889efdf60
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494920"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713808"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView 控件体系结构（Windows 窗体）
 <xref:System.Windows.Forms.DataGridView>控件和及其相关的类设计用于灵活、 可扩展的系统，用于显示和编辑表格数据。 这些类都包含在<xref:System.Windows.Forms?displayProperty=nameWithType>命名空间，并且它们都命名为"DataGridView"前缀。  
@@ -17,7 +17,7 @@ ms.locfileid: "54494920"
 ## <a name="architecture-elements"></a>体系结构元素  
  在主<xref:System.Windows.Forms.DataGridView>伴生类派生<xref:System.Windows.Forms.DataGridViewElement>。 下面的对象模型说明了<xref:System.Windows.Forms.DataGridViewElement>继承层次结构。  
   
- ![DataGridViewElement 对象模型](../../../../docs/framework/winforms/controls/media/datagridviewelement.gif "DataGridViewElement")  
+ ![DataGridViewElement 对象模型](./media/datagridviewelement.gif "DataGridViewElement")  
 DataGridViewElement 对象模型  
   
  <xref:System.Windows.Forms.DataGridViewElement>类提供了对父级的引用<xref:System.Windows.Forms.DataGridView>控件并具有<xref:System.Windows.Forms.DataGridViewElement.State%2A>属性，其中包含一个值，表示中值的组合<xref:System.Windows.Forms.DataGridViewElementStates>枚举。  
@@ -51,7 +51,7 @@ DataGridViewElement 对象模型
 ### <a name="datagridviewcell"></a>DataGridViewCell  
  该单元格是交互的基本单位<xref:System.Windows.Forms.DataGridView>。 显示围绕单元格，并通过的单元格通常执行数据输入。 可以通过使用访问的单元格<xref:System.Windows.Forms.DataGridViewRow.Cells%2A>的集合<xref:System.Windows.Forms.DataGridViewRow>类，并且你可以通过使用访问选定的单元格<xref:System.Windows.Forms.DataGridView.SelectedCells%2A>的集合<xref:System.Windows.Forms.DataGridView>控件。 下面的对象模型说明了这种用法，并显示<xref:System.Windows.Forms.DataGridViewCell>继承层次结构。  
   
- ![DataGridViewCell 对象模型](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")  
+ ![DataGridViewCell 对象模型](./media/datagridviewcell.gif "DataGridViewCell")  
 DataGridViewCell 对象模型  
   
  <xref:System.Windows.Forms.DataGridViewCell>类型是一个抽象基类，从中派生所有单元格类型。 <xref:System.Windows.Forms.DataGridViewCell> 和其派生的类型不是 Windows 窗体控件，而某些承载 Windows 窗体控件。 通常由托管控件处理任何支持的单元格的编辑功能。  
@@ -85,7 +85,7 @@ DataGridViewCell 对象模型
 ### <a name="datagridviewcolumn"></a>DataGridViewColumn  
  架构<xref:System.Windows.Forms.DataGridView>以表示控件的附加的数据存储区<xref:System.Windows.Forms.DataGridView>控件的列。 您可以访问<xref:System.Windows.Forms.DataGridView>控件的列使用<xref:System.Windows.Forms.DataGridView.Columns%2A>集合。 可以使用访问所选的列<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>集合。 下面的对象模型说明了这种用法，并显示<xref:System.Windows.Forms.DataGridViewColumn>继承层次结构。  
   
- ![DataGridViewColumn 对象模型](../../../../docs/framework/winforms/controls/media/datagridviewcolumn.gif "DataGridViewColumn")  
+ ![DataGridViewColumn 对象模型](./media/datagridviewcolumn.gif "DataGridViewColumn")  
 DataGridViewColumn 对象模型  
   
  某些关键的单元格类型具有相应的列类型。 这些派生自<xref:System.Windows.Forms.DataGridViewColumn>基类。  
@@ -109,7 +109,7 @@ DataGridViewColumn 对象模型
 ### <a name="datagridview-editing-controls"></a>DataGridView 编辑控件  
  通常支持高级编辑功能的单元格使用派生自的 Windows 窗体控件的托管的控件。 这些控件还实现<xref:System.Windows.Forms.IDataGridViewEditingControl>接口。 下面的对象模型演示了这些控件的用法。  
   
- ![DataGridView 编辑控件对象模型](../../../../docs/framework/winforms/controls/media/datagridviewediting.gif "DataGridViewEditing")  
+ ![DataGridView 编辑控件对象模型](./media/datagridviewediting.gif "DataGridViewEditing")  
 DataGridView 编辑控件对象模型  
   
  以下的编辑控件提供了<xref:System.Windows.Forms.DataGridView>控件：  
@@ -118,7 +118,7 @@ DataGridView 编辑控件对象模型
   
 -   <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
   
- 有关创建自己的编辑控件的信息，请参阅[如何：Windows 窗体 DataGridView 单元格中承载控件](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)。  
+ 有关创建自己的编辑控件的信息，请参阅[如何：Windows 窗体 DataGridView 单元格中承载控件](how-to-host-controls-in-windows-forms-datagridview-cells.md)。  
   
  下表说明了单元格类型、 列类型和编辑控件之间的关系。  
   
@@ -134,14 +134,14 @@ DataGridView 编辑控件对象模型
 ### <a name="datagridviewrow"></a>DataGridViewRow  
  <xref:System.Windows.Forms.DataGridViewRow>类显示记录的数据字段从数据存储到<xref:System.Windows.Forms.DataGridView>附加控件。 您可以访问<xref:System.Windows.Forms.DataGridView>通过使用控件的行<xref:System.Windows.Forms.DataGridView.Rows%2A>集合。 可以使用访问所选的行<xref:System.Windows.Forms.DataGridView.SelectedRows%2A>集合。 下面的对象模型说明了这种用法，并显示<xref:System.Windows.Forms.DataGridViewRow>继承层次结构。  
   
- ![DataGridViewRow 对象模型](../../../../docs/framework/winforms/controls/media/datagridviewrow.gif "DataGridViewRow")  
+ ![DataGridViewRow 对象模型](./media/datagridviewrow.gif "DataGridViewRow")  
 DataGridViewRow 对象模型  
   
  可以派生您自己的类型从<xref:System.Windows.Forms.DataGridViewRow>类，尽管这通常不需要。 <xref:System.Windows.Forms.DataGridView>控件具有多个与行相关的事件和自定义的行为的属性及其<xref:System.Windows.Forms.DataGridViewRow>对象。  
   
- 如果启用<xref:System.Windows.Forms.DataGridView>控件的<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>属性，用于添加新行的特殊行显示为最后一行。 此行属于<xref:System.Windows.Forms.DataGridView.Rows%2A>集合，但它具有您需要注意的特殊功能。 有关详细信息，请参阅[使用 Windows 窗体 DataGridView 控件中的新记录行](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)。  
+ 如果启用<xref:System.Windows.Forms.DataGridView>控件的<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>属性，用于添加新行的特殊行显示为最后一行。 此行属于<xref:System.Windows.Forms.DataGridView.Rows%2A>集合，但它具有您需要注意的特殊功能。 有关详细信息，请参阅[使用 Windows 窗体 DataGridView 控件中的新记录行](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [DataGridView 控件概述](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
-- [自定义 Windows 窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
-- [在 Windows 窗体 DataGridView 控件中对新记录使用行](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+- [DataGridView 控件概述](datagridview-control-overview-windows-forms.md)
+- [自定义 Windows 窗体 DataGridView 控件](customizing-the-windows-forms-datagridview-control.md)
+- [在 Windows 窗体 DataGridView 控件中对新记录使用行](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

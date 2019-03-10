@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 86e61afd0882fea9015cdfe3b40e6d3cd329391b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734946"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703915"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>在 Windows 窗体 DataGridView 控件中使用新记录行
 当你使用<xref:System.Windows.Forms.DataGridView>用于编辑应用程序中的数据，通常要使用户能够将新的数据行添加到数据存储。 <xref:System.Windows.Forms.DataGridView>控件通过其中总是最后一行以显示新记录，提供行来支持此功能。 它是使用其行标题中的星号 （*） 符号进行标记。 以下各节讨论一些应考虑启用程序与用于新记录的行时的情况。  
@@ -24,7 +24,7 @@ ms.locfileid: "54734946"
 ## <a name="populating-the-row-for-new-records-with-default-data"></a>为新记录使用默认数据填充行  
  当用户选择用于新记录的行作为当前行<xref:System.Windows.Forms.DataGridView>控件将引发<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。  
   
- 此事件提供了新的访问权限<xref:System.Windows.Forms.DataGridViewRow>并使您能够填充具有默认数据的新行。 有关详细信息，请参阅[如何：指定 Windows 窗体 DataGridView 控件中的新行的默认值](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
+ 此事件提供了新的访问权限<xref:System.Windows.Forms.DataGridViewRow>并使您能够填充具有默认数据的新行。 有关详细信息，请参阅[如何：指定 Windows 窗体 DataGridView 控件中的新行的默认值](specify-default-values-for-new-rows-in-the-datagrid.md)  
   
 ## <a name="the-rows-collection"></a>行集合  
  用于新记录的行包含在<xref:System.Windows.Forms.DataGridView>控件的<xref:System.Windows.Forms.DataGridView.Rows%2A>集合但其行为以不同的方式在两个方面：  
@@ -34,7 +34,7 @@ ms.locfileid: "54734946"
 -   用于新记录的行后，可以不添加任何行。 <xref:System.InvalidOperationException>如果尝试执行此操作会引发。 因此，为新记录行始终是中的最后一行<xref:System.Windows.Forms.DataGridView>控件。 上的方法<xref:System.Windows.Forms.DataGridViewRowCollection>中添加行 —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>， <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>，和<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— 存在用于新记录的行时在内部调用插入方法。  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Visual 自定义项的行的新记录  
- 创建新记录所对应的行时，它基于指定的行<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>属性。 未指定此行的任何单元格样式继承从其他属性。 有关单元格的样式继承的详细信息，请参阅[Windows 窗体 DataGridView 控件中的单元格样式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。  
+ 创建新记录所对应的行时，它基于指定的行<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>属性。 未指定此行的任何单元格样式继承从其他属性。 有关单元格的样式继承的详细信息，请参阅[Windows 窗体 DataGridView 控件中的单元格样式](cell-styles-in-the-windows-forms-datagridview-control.md)。  
   
  为新的记录检索从每个单元格的单元格的行中所显示的初始值<xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A>属性。 有关类型的单元格<xref:System.Windows.Forms.DataGridViewImageCell>，此属性返回占位符图像。 否则，此属性返回`null`。 您可以重写此属性以返回自定义值。 但是，可以通过替换这些初始值<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>当焦点进入新记录的行时，事件处理程序。  
   
@@ -55,10 +55,10 @@ ms.locfileid: "54734946"
  未选定状态始终创建新记录所对应的行。  
   
 ## <a name="virtual-mode"></a>虚拟模式  
- 如果要实现虚拟模式下，将需要跟踪新记录行需要在数据模型，何时回滚添加行时。 此功能的具体实现取决于实现数据模型和及其事务语义，例如，提交作用域是否在单元格或行级别。 有关详细信息，请参阅[Windows 窗体 DataGridView 控件中的虚拟模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)。  
+ 如果要实现虚拟模式下，将需要跟踪新记录行需要在数据模型，何时回滚添加行时。 此功能的具体实现取决于实现数据模型和及其事务语义，例如，提交作用域是否在单元格或行级别。 有关详细信息，请参阅[Windows 窗体 DataGridView 控件中的虚拟模式](virtual-mode-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Windows 窗体 DataGridView 控件中的数据输入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
-- [如何：指定 Windows 窗体 DataGridView 控件中的新行的默认值](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Windows 窗体 DataGridView 控件中的数据输入](data-entry-in-the-windows-forms-datagridview-control.md)
+- [如何：指定 Windows 窗体 DataGridView 控件中的新行的默认值](specify-default-values-for-new-rows-in-the-datagrid.md)

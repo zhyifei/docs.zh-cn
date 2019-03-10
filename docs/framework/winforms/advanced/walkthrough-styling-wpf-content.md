@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: ef81d9272acdddfc7d547de6f44725481e55dc3e
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303720"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712391"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>演练：WPF 内容的样式
 本演练显示了如何将样式应用到 Windows 窗体上承载的 Windows Presentation Foundation (WPF) 控件中。
@@ -47,7 +47,7 @@ ms.locfileid: "56303720"
   
 #### <a name="to-create-wpf-control-types"></a>创建 WPF 控件类型  
   
-1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
 2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何：选择并在设计图面上移动元素](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "56303720"
   
 4.  在 XAML 视图中，将以下 XAML 插到 `<UserControl>` 开始标记后面。  
   
-     此 XAML 创建具有对比渐变边框的渐变。 单击此控件后，将更改渐变以生成按下按钮的外观。 有关详细信息，请参阅[样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+     此 XAML 创建具有对比渐变边框的渐变。 单击此控件后，将更改渐变以生成按下按钮的外观。 有关详细信息，请参阅[样式设置和模板化](../../wpf/controls/styling-and-templating.md)。  
   
 ```xaml  
 <UserControl.Resources>  
@@ -153,8 +153,8 @@ ms.locfileid: "56303720"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [使用 WPF 控件](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [迁移和互操作性](../../wpf/advanced/migration-and-interoperability.md)
+- [使用 WPF 控件](using-wpf-controls.md)
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML 概述 (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
+- [样式设置和模板化](../../wpf/controls/styling-and-templating.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: b2b73d36230d12f4e1075dde201e941cbe9d228d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615042"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717851"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的列排序模式
 <xref:System.Windows.Forms.DataGridView> 列具有三个排序模式。 通过指定每个列的排序模式<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>属性的列，可以将设置为以下值之一的<xref:System.Windows.Forms.DataGridViewColumnSortMode>枚举值。  
@@ -31,7 +31,7 @@ ms.locfileid: "54615042"
   
  当<xref:System.Windows.Forms.DataGridView>是已排序的您可以确定排序列和排序顺序通过检查的值<xref:System.Windows.Forms.DataGridView.SortedColumn%2A>和<xref:System.Windows.Forms.DataGridView.SortOrder%2A>属性。 自定义排序操作之后，这些值并无意义。 有关自定义排序的详细信息，请参阅本主题后面的自定义排序部分。  
   
- 当<xref:System.Windows.Forms.DataGridView>控件包含绑定和未绑定列进行排序，不能自动维护未绑定列中的值。 若要保留这些值，必须实现虚拟模式下通过设置<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性设置为`true`和处理<xref:System.Windows.Forms.DataGridView.CellValueNeeded>和<xref:System.Windows.Forms.DataGridView.CellValuePushed>事件。 有关详细信息，请参阅[如何：Windows 中的实现虚拟模式窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)。 不支持通过在绑定模式下的未绑定列进行排序。  
+ 当<xref:System.Windows.Forms.DataGridView>控件包含绑定和未绑定列进行排序，不能自动维护未绑定列中的值。 若要保留这些值，必须实现虚拟模式下通过设置<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性设置为`true`和处理<xref:System.Windows.Forms.DataGridView.CellValueNeeded>和<xref:System.Windows.Forms.DataGridView.CellValuePushed>事件。 有关详细信息，请参阅[如何：Windows 中的实现虚拟模式窗体 DataGridView 控件](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)。 不支持通过在绑定模式下的未绑定列进行排序。  
   
 ## <a name="programmatic-sorting"></a>编程排序  
  您可以进行排序<xref:System.Windows.Forms.DataGridView>以编程方式通过调用其<xref:System.Windows.Forms.DataGridView.Sort%2A>方法。  
@@ -65,6 +65,6 @@ ms.locfileid: "54615042"
 - <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
-- [在 Windows 窗体 DataGridView 控件中进行数据排序](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)
-- [如何：设置 Windows 窗体 DataGridView 控件中的列排序模式](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [如何：自定义 Windows 窗体 DataGridView 控件中的排序](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [在 Windows 窗体 DataGridView 控件中进行数据排序](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [如何：设置 Windows 窗体 DataGridView 控件中的列排序模式](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [如何：自定义 Windows 窗体 DataGridView 控件中的排序](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
