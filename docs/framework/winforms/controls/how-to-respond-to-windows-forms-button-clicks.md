@@ -15,12 +15,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: 98b52e914a891baec0b52dcc7b38d4f9f2198c90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6e6d041422a79171ec4b6159f0789b8aa6a50d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539538"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724981"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>如何：响应 Windows 窗体按钮单击
 Windows 窗体的最基本用法<xref:System.Windows.Forms.Button>控件将在单击按钮时运行某些代码。  
@@ -31,7 +31,7 @@ Windows 窗体的最基本用法<xref:System.Windows.Forms.Button>控件将在�
   
 ### <a name="to-respond-to-a-button-click"></a>若要响应按钮单击  
   
--   在按钮的`Click`<xref:System.EventHandler>编写代码来运行。 `Button1_Click` 必须绑定到控件。 有关详细信息，请参阅[如何：在运行时为 Windows 窗体创建事件处理程序](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
+-   在按钮的`Click`<xref:System.EventHandler>编写代码来运行。 `Button1_Click` 必须绑定到控件。 有关详细信息，请参阅[如何：在运行时为 Windows 窗体创建事件处理程序](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -56,6 +56,6 @@ Windows 窗体的最基本用法<xref:System.Windows.Forms.Button>控件将在�
     ```  
   
 ## <a name="see-also"></a>请参阅
-- [Button 控件概述](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
-- [如何选择 Windows 窗体 Button 控件](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
-- [Button 控件](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+- [Button 控件概述](button-control-overview-windows-forms.md)
+- [如何选择 Windows 窗体 Button 控件](ways-to-select-a-windows-forms-button-control.md)
+- [Button 控件](button-control-windows-forms.md)

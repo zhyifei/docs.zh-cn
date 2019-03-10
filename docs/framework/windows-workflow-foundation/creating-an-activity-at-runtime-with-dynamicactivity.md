@@ -2,12 +2,12 @@
 title: 使用 DynamicActivity 在运行时创建活动
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 17dda5643f86690c25067e70680a6b797dd172d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58dea5f6e469f871da35fc57aa4d9d8a1266bfed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733202"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724614"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>使用 DynamicActivity 在运行时创建活动
 <xref:System.Activities.DynamicActivity> 是一个带有公共构造函数的具体的密封类。 通过使用活动 DOM，<xref:System.Activities.DynamicActivity> 可用于在运行时组合活动功能。  
@@ -98,4 +98,4 @@ ms.locfileid: "54733202"
   
 ## <a name="see-also"></a>请参阅
 
-- [使用强制性代码创建工作流、活动和表达式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [使用强制性代码创建工作流、活动和表达式](authoring-workflows-activities-and-expressions-using-imperative-code.md)

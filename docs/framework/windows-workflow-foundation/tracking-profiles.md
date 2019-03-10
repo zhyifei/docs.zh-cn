@@ -2,12 +2,12 @@
 title: 跟踪配置文件
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: f7acb46e16894dd287512541ad4c2be1adafb42a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482296"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721367"
 ---
 # <a name="tracking-profiles"></a>跟踪配置文件
 
@@ -347,7 +347,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 > [!WARNING]
 > 对于使用工作流服务主机的 WF，跟踪配置文件通常是使用配置文件创建的。 也可以通过代码使用跟踪配置文件和跟踪查询 API 来创建跟踪配置文件。
 
-配置为 XML 配置文件的配置文件适用于使用行为扩展的跟踪参与者。 这添加到 WorkflowServiceHost 中的更高版本部分中所述[工作流配置跟踪](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。
+配置为 XML 配置文件的配置文件适用于使用行为扩展的跟踪参与者。 这添加到 WorkflowServiceHost 中的更高版本部分中所述[工作流配置跟踪](configuring-tracking-for-a-workflow.md)。
 
 主机发出的跟踪记录的详细信息由跟踪配置文件中的配置设置确定。 跟踪参与者通过向跟踪配置文件添加查询来订阅跟踪记录。 若要订阅所有跟踪记录，跟踪配置文件需要指定使用的所有跟踪查询"\*"中的每个查询的名称字段中。
 
@@ -390,6 +390,6 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 
 ## <a name="see-also"></a>请参阅
 
-- [SQL 跟踪](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [SQL 跟踪](./samples/sql-tracking.md)
 - [Windows Server App Fabric 监视](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [使用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)

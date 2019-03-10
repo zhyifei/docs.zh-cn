@@ -13,12 +13,12 @@ helpviewer_keywords:
 - menu items [Windows Forms], enabling
 - menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
-ms.openlocfilehash: 2516080708bba207c3a1d028f2e5a2411974ae5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c18935239a4355d5416a0a79d0fa9f5c504cc7e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705331"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720207"
 ---
 # <a name="how-to-disable-toolstripmenuitems"></a>如何：禁用 Toolstripmenuitem
 您可以限制或扩大用户可通过启用和禁用对用户活动的响应中的菜单项的命令。 菜单项时创建，但这可以通过调整默认情况下启用<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>属性。 在设计时使用此属性可**属性**窗口或以编程方式在代码中设置。  
@@ -45,5 +45,5 @@ ms.locfileid: "54705331"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [如何：隐藏 Toolstripmenuitem](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)
-- [MenuStrip 控件概述](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [如何：隐藏 Toolstripmenuitem](how-to-hide-toolstripmenuitems.md)
+- [MenuStrip 控件概述](menustrip-control-overview-windows-forms.md)

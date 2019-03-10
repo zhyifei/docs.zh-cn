@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sorting data
 - DataGridView control [Windows Forms], sorting data
 ms.assetid: c1d4f24c-d961-4181-809d-5a5caa6122e4
-ms.openlocfilehash: 588678b3ba0d75fea58709c1969a3e276d65439e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 606ffc7bd6136b775adaaaa79cf5042cf1e2dd70
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688280"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724916"
 ---
 # <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>对 Windows 窗体 DataGridView 控件中的数据进行排序
 
@@ -19,13 +19,13 @@ ms.locfileid: "54688280"
 
 ## <a name="in-this-section"></a>本节内容
 
-[Windows 窗体 DataGridView 控件中的列排序模式](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
+[Windows 窗体 DataGridView 控件中的列排序模式](column-sort-modes-in-the-windows-forms-datagridview-control.md)  
 介绍了用于对控件中的数据进行排序。
 
-[如何：设置 Windows 窗体 DataGridView 控件中的列排序模式](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+[如何：设置 Windows 窗体 DataGridView 控件中的列排序模式](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
 介绍如何使用户能够按不是默认情况下可排序的列进行排序。
 
-[如何：自定义 Windows 窗体 DataGridView 控件中的排序](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
+[如何：自定义 Windows 窗体 DataGridView 控件中的排序](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
 介绍如何以编程方式对数据进行排序以及如何自定义使用的排序<xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType>事件或通过实现<xref:System.Collections.IComparer>接口。
 
 ## <a name="reference"></a>参考
@@ -44,5 +44,5 @@ ms.locfileid: "54688280"
 
 ## <a name="see-also"></a>请参阅
 
-- [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [Windows 窗体 DataGridView 控件中的列类型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+- [DataGridView 控件](datagridview-control-windows-forms.md)
+- [Windows 窗体 DataGridView 控件中的列类型](column-types-in-the-windows-forms-datagridview-control.md)

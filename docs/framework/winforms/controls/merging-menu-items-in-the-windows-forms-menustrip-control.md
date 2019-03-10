@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-ms.openlocfilehash: 96168c197771cbfebf3a090ac236b21e487cb3a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 292c299bd15cd62eabd9a13db1abab1ed07fe57e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551847"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722336"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>在 Windows 窗体 MenuStrip 控件中合并菜单项
 如果有多文档界面 (MDI) 应用程序，您可以合并到父窗体的菜单的菜单项或整个菜单从子窗体。  
@@ -56,6 +56,6 @@ ms.locfileid: "54551847"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
-- [MenuStrip 控件](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
-- [如何：使用 MenuStrip 创建 MDI 窗口列表](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [如何：设置自动菜单合并为 MDI 应用程序](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [MenuStrip 控件](menustrip-control-windows-forms.md)
+- [如何：使用 MenuStrip 创建 MDI 窗口列表](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
+- [如何：设置自动菜单合并为 MDI 应用程序](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

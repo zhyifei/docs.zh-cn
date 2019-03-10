@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: b2ccbfaf8305270116e3a85578e3e560ed0b4836
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: cd82200706c98df18b1b9f464ebd62d797eea960
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584208"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724448"
 ---
 # <a name="how-to-author-composite-controls"></a>如何：创作复合控件
 可通过多种方式使用复合控件。 可将其作为 Windows 桌面应用程序项目的一部分创作，并只在该项目的窗体上使用它们。 或者，可在 Windows 控件库项目中创作它们，将该项目编译为程序集，在其他项目中使用这些控件。 甚至可以从它们继承，并针对特殊目的使用视觉对象继承快速对它们进行自定义。  
@@ -79,10 +79,10 @@ ms.locfileid: "56584208"
      可看到从 DLL 中的复合控件继承的构成控件，还可以更改“Modifiers”属性为“Public”的控件的属性。 但不能更改“Modifiers”属性为“Private”的控件的属性。  
   
 ## <a name="see-also"></a>请参阅
-- [演练：创作复合控件使用 Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [演练：创作复合控件通过视觉对象C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [演练：从使用 Visual Basic 的 Windows 窗体控件继承](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [演练：从视觉对象的 Windows 窗体控件继承C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
-- [控件类型建议](../../../../docs/framework/winforms/controls/control-type-recommendations.md)
-- [如何：Windows 窗体的作者控件](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)
-- [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [演练：创作复合控件使用 Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [演练：创作复合控件通过视觉对象C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [演练：从使用 Visual Basic 的 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [演练：从视觉对象的 Windows 窗体控件继承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [控件类型建议](control-type-recommendations.md)
+- [如何：Windows 窗体的作者控件](how-to-author-controls-for-windows-forms.md)
+- [各种自定义控件](varieties-of-custom-controls.md)

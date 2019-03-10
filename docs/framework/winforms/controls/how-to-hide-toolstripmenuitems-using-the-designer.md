@@ -6,15 +6,15 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-ms.openlocfilehash: 966ee5a7e038b80eb21b77c5ad5c0b57efa21951
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2af9f31360f667662d4d640b5e449ff6ee8ce381
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517222"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721536"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>如何：使用设计器隐藏 Toolstripmenuitem
-隐藏菜单项是一种方法来控制你的应用程序的用户界面 (UI) 和限制用户命令。 通常情况下，想要在其上的菜单项都不可用时隐藏整个菜单。 这提供了用户很少会分心。 此外，您可能希望能够同时隐藏和禁用的菜单或菜单项，如仅隐藏不会阻止用户使用的快捷键访问菜单命令。 禁用菜单项的详细信息，请参阅[如何：使用设计器禁用 Toolstripmenuitem](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md)。  
+隐藏菜单项是一种方法来控制你的应用程序的用户界面 (UI) 和限制用户命令。 通常情况下，想要在其上的菜单项都不可用时隐藏整个菜单。 这提供了用户很少会分心。 此外，您可能希望能够同时隐藏和禁用的菜单或菜单项，如仅隐藏不会阻止用户使用的快捷键访问菜单命令。 禁用菜单项的详细信息，请参阅[如何：使用设计器禁用 Toolstripmenuitem](how-to-disable-toolstripmenuitems-using-the-designer.md)。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -40,5 +40,5 @@ ms.locfileid: "54517222"
 - <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Available%2A>
 - <xref:System.Windows.Forms.ToolStripMenuItem.Overflow%2A>
-- [MenuStrip 控件概述](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
-- [如何：使用设计器禁用 Toolstripmenuitem](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md)
+- [MenuStrip 控件概述](menustrip-control-overview-windows-forms.md)
+- [如何：使用设计器禁用 Toolstripmenuitem](how-to-disable-toolstripmenuitems-using-the-designer.md)

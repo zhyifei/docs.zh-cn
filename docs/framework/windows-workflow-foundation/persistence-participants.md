@@ -2,12 +2,12 @@
 title: 持久性参与者
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 66178adda593192678542ebf5ed8906e0dffc908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569500"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723759"
 ---
 # <a name="persistence-participants"></a>持久性参与者
 持久性参与者可以参与应用程序宿主触发的持久性操作（保存或加载）。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]附带了两个抽象类**PersistenceParticipant**并**PersistenceIOParticipant**，可以用来创建持久性参与者。 持久性参与者派生自这些类之一，它实现所需的方法，然后将该类的实例添加到 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> 上的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 集合。 应用程序宿主可在持久保存工作流实例时查找此类工作流扩展，并在适当时对持久性参与者调用适当的方法。  
@@ -58,7 +58,7 @@ ms.locfileid: "54569500"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [如何：创建自定义持久性参与者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
+-   [如何：创建自定义持久性参与者](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>请参阅
-- [存储扩展性](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)
+- [存储扩展性](store-extensibility.md)

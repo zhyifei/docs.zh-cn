@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 功能详细信息
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b7fed8c40c998ff0ecc0080139690614d985fc42
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492586"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721848"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能详细信息
 
@@ -45,9 +45,9 @@ ms.locfileid: "57492586"
 - 
   <xref:System.ServiceModel.WorkflowServiceHost> 的示例可在以下部分找到：
 
-    - [执行](samples/execution.md)
+    - [执行](./samples/execution.md)
 
-    - 应用程序：[已挂起的实例管理](samples/suspended-instance-management.md)
+    - 应用程序：[已挂起的实例管理](./samples/suspended-instance-management.md)
 
 - [承载工作流服务概述](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -123,7 +123,7 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 - 用户无法指定他们想要在网络上显示的 xsi:type，例如，使网络上的序列化实例更小一些。
 
-[DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)解决了.NET 4.5 中的这些问题。
+[DataContractResolver](../wcf/samples/datacontractresolver.md)解决了.NET 4.5 中的这些问题。
 
 ### <a name="getting-started"></a>入门
 
@@ -133,9 +133,9 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 - 示例：
 
-    - [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)
+    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../../../docs/framework/wcf/samples/knownassemblyattribute.md)
+    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>数据协定解析程序方案
 
@@ -165,9 +165,9 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 - 示例：
 
-    - [使用 TryCatch 在 Flowchart 活动中进行错误处理](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+    - [使用 TryCatch 在 Flowchart 活动中进行错误处理](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [招聘流程](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [招聘流程](./samples/hiring-process.md)
 
 - 设计器文档：
 
@@ -199,9 +199,9 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 - 示例：
 
-    - [招聘流程](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [招聘流程](./samples/hiring-process.md)
 
-    - [企业采购过程](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)
+    - [企业采购过程](./samples/corporate-purchase-process.md)
 
 - 设计器文档：
 
@@ -239,7 +239,7 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 - 在 Visual Studio 2012 中，创建一个工作流控制台应用程序。 在工作流设计器中添加 <xref:System.Activities.Statements.TryCatch> 活动。
 
-- 示例:[使用 TryCatch 在 Flowchart 活动中进行错误处理](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+- 示例:[使用 TryCatch 在 Flowchart 活动中进行错误处理](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
 - 设计器文档：[Error Handling 活动设计器](/visualstudio/workflow-designer/error-handling-activity-designers)
 
@@ -255,7 +255,7 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 - 在 Visual Studio 2012 中，创建一个工作流控制台应用程序。 在工作流设计器中添加 <xref:System.Activities.Statements.Pick> 活动。
 
-- 示例:[使用 Pick 活动](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)
+- 示例:[使用 Pick 活动](./samples/using-the-pick-activity.md)
 
 - 设计器文档：[Pick 活动设计器](/visualstudio/workflow-designer/pick-activity-designer)
 
@@ -285,9 +285,9 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 ### <a name="getting-started"></a>入门
 
-1. 文档：[路由](../../../docs/framework/wcf/feature-details/routing.md)
+1. 文档：[路由](../wcf/feature-details/routing.md)
 
-2. 示例：[路由服务&#91;WCF 示例&#93;](../../../docs/framework/wcf/samples/routing-services.md)
+2. 示例：[路由服务&#91;WCF 示例&#93;](../wcf/samples/routing-services.md)
 
 3. 博客：[路由规则 ！](https://go.microsoft.com/fwlink/?LinkId=204956)
 
@@ -319,9 +319,9 @@ WCF Discovery 是一种框架技术，可用于将合并到应用程序基础结
 
 ### <a name="getting-started"></a>入门
 
-- 文档：[WCF 发现](../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- 文档：[WCF 发现](../wcf/feature-details/wcf-discovery.md)
 
-- 示例：[发现 （示例）](../../../docs/framework/wcf/samples/discovery-samples.md)
+- 示例：[发现 （示例）](../wcf/samples/discovery-samples.md)
 
 ### <a name="discovery-scenarios"></a>Discovery 方案
 
@@ -346,9 +346,9 @@ WCF Discovery 是一种框架技术，可用于将合并到应用程序基础结
 
     4. 在事件查看器中观察工作流跟踪事件。
 
-3. 示例：[跟踪](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)
+3. 示例：[跟踪](./samples/tracking.md)
 
-4. 概念文档：[工作流跟踪](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+4. 概念文档：[工作流跟踪](workflow-tracking-and-tracing.md)
 
 ## <a name="sql-workflow-instance-store"></a>SQL 工作流实例存储
 
@@ -358,6 +358,6 @@ WCF Discovery 是一种框架技术，可用于将合并到应用程序基础结
 
 1. 在 Visual Studio 2012 中，创建包含隐式或显式的工作流<xref:System.Activities.Statements.Persist>活动。 将 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 行为添加到工作流服务主机。 这可以在代码或应用程序配置文件中完成。
 
-2. 示例：[持久性](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)
+2. 示例：[持久性](./samples/persistence.md)
 
-3. 概念文档：[SQL 工作流实例存储](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。
+3. 概念文档：[SQL 工作流实例存储](sql-workflow-instance-store.md)。

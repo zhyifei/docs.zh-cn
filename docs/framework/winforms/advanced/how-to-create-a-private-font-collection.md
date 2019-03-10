@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: e698e93f96e0b19d45fb40408249aedcb0edeec7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cfd2a1fd29b58019d49c8cd5df9adb5b0873302
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505826"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723772"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>如何：创建专用的字体集合
 <xref:System.Drawing.Text.PrivateFontCollection>类继承自<xref:System.Drawing.Text.FontCollection>抽象基类。 可以使用<xref:System.Drawing.Text.PrivateFontCollection>对象来维护一组专门为应用程序的字体。 专用字体集合可以包含已安装的系统字体，以及在计算机尚未安装的字体。 若要将字体文件添加到专用字体集合，调用<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A>方法的<xref:System.Drawing.Text.PrivateFontCollection>对象。  
@@ -39,18 +39,18 @@ ms.locfileid: "54505826"
   
  以下代码的输出结果类似于下图中所示的输出。  
   
- ![字体文本](../../../../docs/framework/winforms/advanced/media/csfontstext7.png "csfontstext7")  
+ ![字体文本](./media/csfontstext7.png "csfontstext7")  
   
  Arial.tff （其中已添加到下面的代码示例中的专用字体集合） 是 Arial 常规字形的字体文件。 但请注意，该程序的输出显示了几种可用样式不是常规的 Arial 字体系列。 这是因为[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以模拟中的正则样式的粗体、 斜体和粗体斜体样式。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可以还字形生成下划线和从常规的样式。  
   
  同样，[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以模拟从粗体样式或斜体样式的粗体斜体样式。 程序输出显示即使 TimesBd.tff (Times New Roman，粗体显示) 是唯一的粗体斜体样式是可用于时间系列集合中的次文件。  
   
- [!code-csharp[System.Drawing.FontsAndText#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
- [!code-vb[System.Drawing.FontsAndText#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  
+ [!code-csharp[System.Drawing.FontsAndText#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
+ [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，这是 <xref:System.Windows.Forms.PaintEventHandler> 的参数。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Drawing.Text.PrivateFontCollection>
-- [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+- [使用字体和文本](using-fonts-and-text.md)

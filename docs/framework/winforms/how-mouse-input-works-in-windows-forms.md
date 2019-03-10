@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: ac6cdbdb690a1e5e6693f2e5d1c5d2236a643ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496000"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725319"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Windows 窗体中鼠标输入的工作原理
-接收和处理鼠标输入是每个 Windows 应用程序的一个重要部分。 可以处理应用程序中执行操作的鼠标事件，或使用鼠标位置信息来执行命中测试或其他操作。 此外，你可以更改你的应用程序中的控件处理鼠标输入方式。 本主题介绍这些详细信息，以及如何获取和更改鼠标的系统设置中的鼠标事件。 事件和在其中的鼠标单击事件的顺序引发有关使用鼠标提供的数据详细信息，请参阅[Windows 窗体中的鼠标事件](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)。  
+接收和处理鼠标输入是每个 Windows 应用程序的一个重要部分。 可以处理应用程序中执行操作的鼠标事件，或使用鼠标位置信息来执行命中测试或其他操作。 此外，你可以更改你的应用程序中的控件处理鼠标输入方式。 本主题介绍这些详细信息，以及如何获取和更改鼠标的系统设置中的鼠标事件。 事件和在其中的鼠标单击事件的顺序引发有关使用鼠标提供的数据详细信息，请参阅[Windows 窗体中的鼠标事件](mouse-events-in-windows-forms.md)。  
   
 ## <a name="mouse-location-and-hit-testing"></a>鼠标位置和命中测试  
  当用户移动鼠标时，操作系统将鼠标指针移动。 鼠标指针包含一个像素，名为作用点，该操作系统跟踪，并将识别为指针的位置。 当用户移动鼠标或按下鼠标按钮， <xref:System.Windows.Forms.Control> ，其中包含<xref:System.Windows.Forms.Cursor.HotSpot%2A>引发适当的鼠标事件。 你可以获取与当前的鼠标位置<xref:System.Windows.Forms.MouseEventArgs.Location%2A>的属性<xref:System.Windows.Forms.MouseEventArgs>处理鼠标事件时，或通过使用<xref:System.Windows.Forms.Cursor.Position%2A>属性的<xref:System.Windows.Forms.Cursor>类。 你可以随后使用鼠标位置信息来执行命中测试，然后执行一个操作基于鼠标的位置。 命中测试功能内置的 Windows 窗体中的多个控件如<xref:System.Windows.Forms.ListView>， <xref:System.Windows.Forms.TreeView>，<xref:System.Windows.Forms.MonthCalendar>和<xref:System.Windows.Forms.DataGridView>控件。 使用与适当的鼠标事件<xref:System.Windows.Forms.Control.MouseHover>等命中测试，用于确定你的应用程序时应执行特定操作非常有用。  
@@ -23,16 +23,16 @@ ms.locfileid: "54496000"
   
 |鼠标事件|描述|  
 |-----------------|-----------------|  
-|<xref:System.Windows.Forms.Control.Click>|此事件发生时释放鼠标按钮时，通常之前<xref:System.Windows.Forms.Control.MouseUp>事件。 此事件的处理程序接收类型为 <xref:System.EventArgs> 的自变量。 处理此事件时仅需要确定何时发生单击。|  
-|<xref:System.Windows.Forms.Control.MouseClick>|当用户单击鼠标控件，将发生此事件。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的自变量。 处理此事件时您需要先单击发生时获取鼠标的有关信息。|  
-|<xref:System.Windows.Forms.Control.DoubleClick>|双击该控件时，会发生此事件。 此事件的处理程序接收类型为 <xref:System.EventArgs> 的自变量。 处理此事件时只需确定何时发生一次双击。|  
-|<xref:System.Windows.Forms.Control.MouseDoubleClick>|当用户双击鼠标控件时发生此事件。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的自变量。 处理此事件时需要双击发生时获取鼠标的有关信息。|  
-|<xref:System.Windows.Forms.Control.MouseDown>|当鼠标指针位于控件上方并且用户按下鼠标按钮时发生此事件。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的自变量。|  
-|<xref:System.Windows.Forms.Control.MouseEnter>|当鼠标指针进入控件，具体取决于控件类型的边框或客户端区域时发生此事件。 此事件的处理程序接收类型为 <xref:System.EventArgs> 的自变量。|  
-|<xref:System.Windows.Forms.Control.MouseHover>|当鼠标指针停止并停留在控件上时，将发生此事件。 此事件的处理程序接收类型为 <xref:System.EventArgs> 的自变量。|  
-|<xref:System.Windows.Forms.Control.MouseLeave>|当鼠标指针离开控件，具体取决于控件类型的边框或客户端区域时，会发生此事件。 此事件的处理程序接收类型为 <xref:System.EventArgs> 的自变量。|  
-|<xref:System.Windows.Forms.Control.MouseMove>|当鼠标指针在控件上移动时发生此事件。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的自变量。|  
-|<xref:System.Windows.Forms.Control.MouseUp>|当鼠标指针位于控件上方并且用户释放鼠标按钮时发生此事件。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的自变量。|  
+|<xref:System.Windows.Forms.Control.Click>|此事件发生时释放鼠标按钮时，通常之前<xref:System.Windows.Forms.Control.MouseUp>事件。 此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。 处理此事件时仅需要确定何时发生单击。|  
+|<xref:System.Windows.Forms.Control.MouseClick>|当用户单击鼠标控件，将发生此事件。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。 处理此事件时您需要先单击发生时获取鼠标的有关信息。|  
+|<xref:System.Windows.Forms.Control.DoubleClick>|双击该控件时，会发生此事件。 此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。 处理此事件时只需确定何时发生一次双击。|  
+|<xref:System.Windows.Forms.Control.MouseDoubleClick>|当用户双击鼠标控件时发生此事件。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。 处理此事件时需要双击发生时获取鼠标的有关信息。|  
+|<xref:System.Windows.Forms.Control.MouseDown>|当鼠标指针位于控件上方并且用户按下鼠标按钮时发生此事件。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。|  
+|<xref:System.Windows.Forms.Control.MouseEnter>|当鼠标指针进入控件，具体取决于控件类型的边框或客户端区域时发生此事件。 此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。|  
+|<xref:System.Windows.Forms.Control.MouseHover>|当鼠标指针停止并停留在控件上时，将发生此事件。 此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。|  
+|<xref:System.Windows.Forms.Control.MouseLeave>|当鼠标指针离开控件，具体取决于控件类型的边框或客户端区域时，会发生此事件。 此事件的处理程序接收类型为 <xref:System.EventArgs> 的参数。|  
+|<xref:System.Windows.Forms.Control.MouseMove>|当鼠标指针在控件上移动时发生此事件。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。|  
+|<xref:System.Windows.Forms.Control.MouseUp>|当鼠标指针位于控件上方并且用户释放鼠标按钮时发生此事件。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。|  
 |<xref:System.Windows.Forms.Control.MouseWheel>|在控件有焦点并且用户滚动鼠标滚轮时发生此事件。 此事件的处理程序接收类型为 <xref:System.Windows.Forms.MouseEventArgs> 的参数。 可以使用<xref:System.Windows.Forms.MouseEventArgs.Delta%2A>属性的<xref:System.Windows.Forms.MouseEventArgs>以确定鼠标滚动的距离。|  
   
 ## <a name="changing-mouse-input-and-detecting-system-settings"></a>更改鼠标输入及检测系统设置  
@@ -53,6 +53,6 @@ ms.locfileid: "54496000"
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|获取滚动鼠标轮时所滚动过的行数。|  
   
 ## <a name="see-also"></a>请参阅
-- [Windows 窗体应用程序中的鼠标输入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Windows 窗体中的鼠标捕获](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)
-- [Windows 窗体中的鼠标指针](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)
+- [Windows 窗体应用程序中的鼠标输入](mouse-input-in-a-windows-forms-application.md)
+- [Windows 窗体中的鼠标捕获](mouse-capture-in-windows-forms.md)
+- [Windows 窗体中的鼠标指针](mouse-pointers-in-windows-forms.md)

@@ -2,48 +2,48 @@
 title: 协定优先的工作流服务开发
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 3b015b8c58e5ee3acbb1277d00523a85ee96da46
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373057"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721783"
 ---
 # <a name="contract-first-workflow-service-development"></a>协定优先的工作流服务开发
-从开始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，Windows Workflow Foundation (WF) 功能更好的 web 服务和协定优先工作流开发的形式中的工作流之间的集成。 通过协定优先的工作流开发工具，可以在代码中优先设计协定。 然后该工具在工具箱中为协定中的操作自动生成活动模板。 本主题概述工作流服务中的活动和属性如何映射到服务协定的特性。 有关创建协定优先工作流服务的分步示例，请参阅[如何：创建使用现有服务协定的工作流服务](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
+从开始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，Windows Workflow Foundation (WF) 功能更好的 web 服务和协定优先工作流开发的形式中的工作流之间的集成。 通过协定优先的工作流开发工具，可以在代码中优先设计协定。 然后该工具在工具箱中为协定中的操作自动生成活动模板。 本主题概述工作流服务中的活动和属性如何映射到服务协定的特性。 有关创建协定优先工作流服务的分步示例，请参阅[如何：创建使用现有服务协定的工作流服务](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
   
 ## <a name="in-this-topic"></a>在本主题中  
   
--   [服务协定特性映射到的工作流属性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MappingAttributes)  
+-   [服务协定特性映射到的工作流属性](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [服务协定特性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+    -   [服务协定特性](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [操作协定特性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+    -   [操作协定特性](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [消息协定特性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+    -   [消息协定特性](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [数据协定特性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+    -   [数据协定特性](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [错误协定特性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+    -   [错误协定特性](contract-first-workflow-service-development.md#FaultContract)  
   
--   [其他支持和实现信息](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [其他支持和实现信息](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [不支持的服务协定功能](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    -   [不支持的服务协定功能](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [配置消息活动的生成](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+    -   [配置消息活动的生成](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> 服务协定特性映射到的工作流属性  
  下面几节中的表指定不同 WCF 特性和属性，以及它们如何映射到协定优先工作流中的消息活动和属性。  
   
--   [服务协定特性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+-   [服务协定特性](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [操作协定特性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+-   [操作协定特性](contract-first-workflow-service-development.md#OperationContract)  
   
--   [消息协定特性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+-   [消息协定特性](contract-first-workflow-service-development.md#MessageContract)  
   
--   [数据协定特性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+-   [数据协定特性](contract-first-workflow-service-development.md#DataContract)  
   
--   [错误协定特性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+-   [错误协定特性](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> 服务协定特性  
   
@@ -65,7 +65,7 @@ ms.locfileid: "57373057"
 |属性名|支持|描述|WF 验证|  
 |-------------------|---------------|-----------------|-------------------|  
 |操作|是|获取或设置请求消息的 WS-Addressing 操作。|Receive.Action 应当匹配。|  
-|AsyncPattern|否|指示使用 Begin 以异步方式实现某个操作\<m h o d > 和结束\<m h o d > 方法对服务协定中的。|(N/A)|  
+|AsyncPattern|No|指示使用 Begin 以异步方式实现某个操作\<m h o d > 和结束\<m h o d > 方法对服务协定中的。|(N/A)|  
 |HasProtectionLevel|是|获取一个值，该值指示是否必须对此操作的消息进行加密和/或签名。|Receive.ProtectionLevel 不应为 null。|  
 |IsInitiating|No|获取或设置一个值，该值指示方法是否实现可在服务器上启动会话（如果存在会话）的操作。|(N/A)|  
 |IsOneWay|是|获取或设置一个值，该值指示操作是否返回答复消息。|(此 Receive 无对应 SendReply 或此 Send 无对应 ReceiveReply）。|  
@@ -109,9 +109,9 @@ ms.locfileid: "57373057"
   
 ## <a name="AdditionalSupport"></a> 其他支持和实现信息  
   
--   [不支持的服务协定功能](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+-   [不支持的服务协定功能](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [配置消息活动的生成](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+-   [配置消息活动的生成](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> 不支持的服务协定功能  
   

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: a4bb4f0e1c54429e1d014050fc85d956493f9080
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536318"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723161"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>如何：使用后台线程搜索文件
-<xref:System.ComponentModel.BackgroundWorker>组件替换，并添加了功能<xref:System.Threading>命名空间; 但是，<xref:System.Threading>命名空间保留向后兼容性和将来使用，如果您选择。 有关详细信息，请参阅[BackgroundWorker 组件概述](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)。  
+<xref:System.ComponentModel.BackgroundWorker>组件替换，并添加了功能<xref:System.Threading>命名空间; 但是，<xref:System.Threading>命名空间保留向后兼容性和将来使用，如果您选择。 有关详细信息，请参阅[BackgroundWorker 组件概述](backgroundworker-component-overview.md)。  
   
- Windows 窗体使用单线程单元 (STA) 模型，因为在本机 Win32 windows 的本质上是单线程单元的基于 Windows 窗体。 STA 模型意味着可以在任何线程上创建一个窗口，但它不能切换线程一次创建，并对它的所有函数调用必须在其创建的线程上都发生。 Windows 窗体之外.NET Framework 中的类使用自由线程模型。 有关.NET Framework 中的线程处理的信息，请参阅[线程处理](../../../../docs/standard/threading/index.md)。  
+ Windows 窗体使用单线程单元 (STA) 模型，因为在本机 Win32 windows 的本质上是单线程单元的基于 Windows 窗体。 STA 模型意味着可以在任何线程上创建一个窗口，但它不能切换线程一次创建，并对它的所有函数调用必须在其创建的线程上都发生。 Windows 窗体之外.NET Framework 中的类使用自由线程模型。 有关.NET Framework 中的线程处理的信息，请参阅[线程处理](../../../standard/threading/index.md)。  
   
  STA 模型要求，需要从外部控件的创建线程调用控件上的任何方法必须进行封送处理到 （执行） 控件的创建线程。 类的基类<xref:System.Windows.Forms.Control>提供了多种方法 (<xref:System.Windows.Forms.Control.Invoke%2A>， <xref:System.Windows.Forms.Control.BeginInvoke%2A>，和<xref:System.Windows.Forms.Control.EndInvoke%2A>) 实现此目的。 <xref:System.Windows.Forms.Control.Invoke%2A> 使同步方法调用异步方法。<xref:System.Windows.Forms.Control.BeginInvoke%2A>进行异步方法的调用。  
   
@@ -764,5 +764,5 @@ namespace SampleUsage
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.ComponentModel.BackgroundWorker>
-- [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [基于事件的异步模式概述](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)
+- [基于事件的异步模式概述](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

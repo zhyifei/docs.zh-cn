@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 3e1aced8ecb4f85dd81c8a928422cbb7d0b10dcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa4d18c0e3bbc2613502c7232771c57acc7f0dc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564326"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721445"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>演练：演示可视化继承
 通过 Visual 继承，可以查看基本表单上的控件和添加新控件。 在本演练中，你将创建基窗体，并将其编译到类库。 将此类库导入另一个项目，并创建一个从基窗体继承的新窗体。 在本演练中，你将学会如何执行以下任务：  
@@ -140,7 +140,7 @@ ms.locfileid: "54564326"
   
 5.  继承的窗体 (**Form2**) 在设计器中双击它，如果已打开。  
   
-     继承的按钮在设计器中，有一个符号 (![VisualBasicInheritanceSymbol 屏幕截图](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) 在其上角，指示它们继承。  
+     继承的按钮在设计器中，有一个符号 (![VisualBasicInheritanceSymbol 屏幕截图](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) 在其上角，指示它们继承。  
   
 6.  选择**Say Hello**按钮，然后观察调整大小图柄。 由于此按钮受保护，继承者可以对其进行移动、调整大小、更改标题和进行其他修改。  
   
@@ -161,9 +161,9 @@ ms.locfileid: "54564326"
 12. 按 F5 运行此应用程序，并观察继承的窗体的行为。  
   
 ## <a name="next-steps"></a>后续步骤  
- 用户控件的继承方式大致相同。 打开新的类库项目并添加用户控件。 在其上放置构成控件，然后编译项目。 打开另一个新的类库项目，并添加对已编译的类库的引用。 此外，请尝试添加继承的控件 (通过**添加新项**对话框的) 到该项目并使用**继承选择器**。 添加一个用户控件，并将更改`Inherits`(`:`在 Visual C#) 语句。 有关详细信息，请参阅[如何：继承 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。  
+ 用户控件的继承方式大致相同。 打开新的类库项目并添加用户控件。 在其上放置构成控件，然后编译项目。 打开另一个新的类库项目，并添加对已编译的类库的引用。 此外，请尝试添加继承的控件 (通过**添加新项**对话框的) 到该项目并使用**继承选择器**。 添加一个用户控件，并将更改`Inherits`(`:`在 Visual C#) 语句。 有关详细信息，请参阅[如何：继承 Windows 窗体](how-to-inherit-windows-forms.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [如何：继承 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
-- [Windows 窗体可视化继承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
-- [Windows 窗体](../../../../docs/framework/winforms/index.md)
+- [如何：继承 Windows 窗体](how-to-inherit-windows-forms.md)
+- [Windows 窗体可视化继承](windows-forms-visual-inheritance.md)
+- [Windows 窗体](../index.md)

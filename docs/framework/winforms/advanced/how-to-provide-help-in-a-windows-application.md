@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 00ee19f343d8f471d84f3dc8180e61b7354e3985
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738597"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724929"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>如何：在 Windows 应用程序中提供帮助
 可以使用的<xref:System.Windows.Forms.HelpProvider>组件将附加到 Windows 窗体上的特定控件的帮助文件中的帮助主题。 帮助文件可以是 HTML、HTMLHelp 1.x 或更高版本的格式。  
@@ -53,10 +53,10 @@ ms.locfileid: "54738597"
 > [!IMPORTANT]
 >  一定要先仔细检查从客户端发来的所有信息，再在应用程序中使用这些信息。 恶意用户可能会尝试发送或注入可执行脚本、SQL 语句或其他代码。 显示用户的输入、将其存储在数据库中或使用它之前，请确定它没有包含可能的不安全信息。 通常的检查方法是在收到某个用户发来的输入后，使用正则表达式查找关键字，如“SCRIPT”。  
   
- 此外可以使用<xref:System.Windows.Forms.HelpProvider>组件显示弹出帮助，即使将其配置为显示 Windows 窗体上控件的帮助文件。 有关详细信息，请参阅[如何：显示弹出帮助](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)。  
+ 此外可以使用<xref:System.Windows.Forms.HelpProvider>组件显示弹出帮助，即使将其配置为显示 Windows 窗体上控件的帮助文件。 有关详细信息，请参阅[如何：显示弹出帮助](how-to-display-pop-up-help.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [如何：显示弹出帮助](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)
-- [使用工具提示的控件帮助](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
-- [在 Windows 窗体中集成用户帮助](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
-- [Windows 窗体](../../../../docs/framework/winforms/index.md)
+- [如何：显示弹出帮助](how-to-display-pop-up-help.md)
+- [使用工具提示的控件帮助](control-help-using-tooltips.md)
+- [在 Windows 窗体中集成用户帮助](integrating-user-help-in-windows-forms.md)
+- [Windows 窗体](../index.md)

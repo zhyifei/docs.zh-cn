@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: dc91a4a91d26cd51a06b1c08dcb76f8966c52594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d86ded0b93d876eac4b97938678cafbb22c3ac8a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671104"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722433"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>如何：添加负载，保存和取消按钮，为 Windows 窗体 BindingNavigator 控件
 <xref:System.Windows.Forms.BindingNavigator>控件是特殊用途<xref:System.Windows.Forms.ToolStrip>旨在用于导航和操作绑定到数据窗体上的控件的控件。  
@@ -34,7 +34,7 @@ ms.locfileid: "54671104"
   
 5.  选择 <xref:System.Windows.Forms.BindingNavigator> 控件。  
   
-6.  单击智能标记标志符号 (![智能标记标志符号](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，因此**BindingNavigator 任务**对话框，然后选择**编辑项**.  
+6.  单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，因此**BindingNavigator 任务**对话框，然后选择**编辑项**.  
   
      **项集合编辑器**出现。  
   
@@ -113,5 +113,5 @@ ms.locfileid: "54671104"
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.ToolStrip>
-- [BindingNavigator 控件](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [BindingSource 组件概述](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+- [BindingNavigator 控件](bindingnavigator-control-windows-forms.md)
+- [BindingSource 组件概述](bindingsource-component-overview.md)
