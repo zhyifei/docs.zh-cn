@@ -9,21 +9,21 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 2c9c60a3bfd78b7111b9cdff6a791d70c8e53c82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 954087fa893baf3aa623c912efb081491304d3fb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685058"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719437"
 ---
-# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a><span data-ttu-id="3d2ac-102">如何：更改的间距和对齐方式在 Windows 窗体的 ToolStrip 项</span><span class="sxs-lookup"><span data-stu-id="3d2ac-102">How to: Change the Spacing and Alignment of ToolStrip Items in Windows Forms</span></span>
-<span data-ttu-id="3d2ac-103"><xref:System.Windows.Forms.ToolStrip>控件完全支持布局功能，例如调整大小的间距<xref:System.Windows.Forms.ToolStripItem>上的控件相对于彼此，控件的排列<xref:System.Windows.Forms.ToolStrip>，并相对于控件的间距<xref:System.Windows.Forms.ToolStrip>。</span><span class="sxs-lookup"><span data-stu-id="3d2ac-103">The <xref:System.Windows.Forms.ToolStrip> control fully supports layout features such as sizing, the spacing of <xref:System.Windows.Forms.ToolStripItem> controls relative to each other, the arrangement of controls on the <xref:System.Windows.Forms.ToolStrip>, and the spacing of controls relative to the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a><span data-ttu-id="2485f-102">如何：更改的间距和对齐方式在 Windows 窗体的 ToolStrip 项</span><span class="sxs-lookup"><span data-stu-id="2485f-102">How to: Change the Spacing and Alignment of ToolStrip Items in Windows Forms</span></span>
+<span data-ttu-id="2485f-103"><xref:System.Windows.Forms.ToolStrip>控件完全支持布局功能，例如调整大小的间距<xref:System.Windows.Forms.ToolStripItem>上的控件相对于彼此，控件的排列<xref:System.Windows.Forms.ToolStrip>，并相对于控件的间距<xref:System.Windows.Forms.ToolStrip>。</span><span class="sxs-lookup"><span data-stu-id="2485f-103">The <xref:System.Windows.Forms.ToolStrip> control fully supports layout features such as sizing, the spacing of <xref:System.Windows.Forms.ToolStripItem> controls relative to each other, the arrangement of controls on the <xref:System.Windows.Forms.ToolStrip>, and the spacing of controls relative to the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
- <span data-ttu-id="3d2ac-104">因为默认值<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>属性是`true`，除非设置，将自动调整控件<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>属性设置为`false`。</span><span class="sxs-lookup"><span data-stu-id="3d2ac-104">Because the default value of the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property is `true`, controls are sized automatically unless you set the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property to `false`.</span></span>  
+ <span data-ttu-id="2485f-104">因为默认值<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>属性是`true`，除非设置，将自动调整控件<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>属性设置为`false`。</span><span class="sxs-lookup"><span data-stu-id="2485f-104">Because the default value of the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property is `true`, controls are sized automatically unless you set the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property to `false`.</span></span>  
   
-### <a name="to-manually-size-a-toolstripitem"></a><span data-ttu-id="3d2ac-105">若要手动调整大小 ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="3d2ac-105">To manually size a ToolStripItem</span></span>  
+### <a name="to-manually-size-a-toolstripitem"></a><span data-ttu-id="2485f-105">若要手动调整大小 ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="2485f-105">To manually size a ToolStripItem</span></span>  
   
-1.  <span data-ttu-id="3d2ac-106">设置<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>属性设置为`false`为关联的控件。</span><span class="sxs-lookup"><span data-stu-id="3d2ac-106">Set the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property to `false` for the associated control.</span></span>  
+1.  <span data-ttu-id="2485f-106">设置<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>属性设置为`false`为关联的控件。</span><span class="sxs-lookup"><span data-stu-id="2485f-106">Set the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property to `false` for the associated control.</span></span>  
   
     ```vb  
     ToolStripButton1.AutoSize = False  
@@ -33,13 +33,13 @@ ms.locfileid: "54685058"
     toolStripButton1.AutoSize = false;  
     ```  
   
-2.  <span data-ttu-id="3d2ac-107">设置<xref:System.Windows.Forms.ToolStripItem.Size%2A>属性关联的所需的方式<xref:System.Windows.Forms.ToolStripItem>。</span><span class="sxs-lookup"><span data-stu-id="3d2ac-107">Set the <xref:System.Windows.Forms.ToolStripItem.Size%2A> property the way you want for the associated <xref:System.Windows.Forms.ToolStripItem>.</span></span>  
+2.  <span data-ttu-id="2485f-107">设置<xref:System.Windows.Forms.ToolStripItem.Size%2A>属性关联的所需的方式<xref:System.Windows.Forms.ToolStripItem>。</span><span class="sxs-lookup"><span data-stu-id="2485f-107">Set the <xref:System.Windows.Forms.ToolStripItem.Size%2A> property the way you want for the associated <xref:System.Windows.Forms.ToolStripItem>.</span></span>  
   
-### <a name="to-set-the-spacing-of-a-toolstripitem"></a><span data-ttu-id="3d2ac-108">若要设置 ToolStripItem 的间距</span><span class="sxs-lookup"><span data-stu-id="3d2ac-108">To set the spacing of a ToolStripItem</span></span>  
+### <a name="to-set-the-spacing-of-a-toolstripitem"></a><span data-ttu-id="2485f-108">若要设置 ToolStripItem 的间距</span><span class="sxs-lookup"><span data-stu-id="2485f-108">To set the spacing of a ToolStripItem</span></span>  
   
-1.  <span data-ttu-id="3d2ac-109">将所需的值，以像素为单位，插入到<xref:System.Windows.Forms.ToolStripItem.Margin%2A>关联控件的属性。</span><span class="sxs-lookup"><span data-stu-id="3d2ac-109">Insert the desired values, in pixels, into the <xref:System.Windows.Forms.ToolStripItem.Margin%2A> property of the associated control.</span></span>  
+1.  <span data-ttu-id="2485f-109">将所需的值，以像素为单位，插入到<xref:System.Windows.Forms.ToolStripItem.Margin%2A>关联控件的属性。</span><span class="sxs-lookup"><span data-stu-id="2485f-109">Insert the desired values, in pixels, into the <xref:System.Windows.Forms.ToolStripItem.Margin%2A> property of the associated control.</span></span>  
   
-     <span data-ttu-id="3d2ac-110">值<xref:System.Windows.Forms.ToolStripItem.Margin%2A>属性按此顺序指定项与相邻项之间的间距：左侧、 顶部、 右侧和底部。</span><span class="sxs-lookup"><span data-stu-id="3d2ac-110">The values of the <xref:System.Windows.Forms.ToolStripItem.Margin%2A> property specify the spacing between the item and adjacent items in this order: Left, Top, Right, and Bottom.</span></span>  
+     <span data-ttu-id="2485f-110">值<xref:System.Windows.Forms.ToolStripItem.Margin%2A>属性按此顺序指定项与相邻项之间的间距：左侧、 顶部、 右侧和底部。</span><span class="sxs-lookup"><span data-stu-id="2485f-110">The values of the <xref:System.Windows.Forms.ToolStripItem.Margin%2A> property specify the spacing between the item and adjacent items in this order: Left, Top, Right, and Bottom.</span></span>  
   
     ```vb  
     ToolStripTextBox1.Margin = New System.Windows.Forms.Padding _  
@@ -51,9 +51,9 @@ ms.locfileid: "54685058"
         (3, 0, 3, 0);  
     ```  
   
-### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a><span data-ttu-id="3d2ac-111">若要使 ToolStripItem ToolStrip 的右侧对齐</span><span class="sxs-lookup"><span data-stu-id="3d2ac-111">To align a ToolStripItem to the right side of the ToolStrip</span></span>  
+### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a><span data-ttu-id="2485f-111">若要使 ToolStripItem ToolStrip 的右侧对齐</span><span class="sxs-lookup"><span data-stu-id="2485f-111">To align a ToolStripItem to the right side of the ToolStrip</span></span>  
   
-1.  <span data-ttu-id="3d2ac-112">设置<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>属性设置为<xref:System.Windows.Forms.ToolStripItemAlignment.Right>为关联的控件。</span><span class="sxs-lookup"><span data-stu-id="3d2ac-112">Set the <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> property to <xref:System.Windows.Forms.ToolStripItemAlignment.Right> for the associated control.</span></span> <span data-ttu-id="3d2ac-113">默认情况下<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>设置为<xref:System.Windows.Forms.ToolStripItemAlignment.Left>，其中将左侧和右侧的控件对齐<xref:System.Windows.Forms.ToolStrip>。</span><span class="sxs-lookup"><span data-stu-id="3d2ac-113">By default, <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> is set to <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, which aligns controls to the left side of the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+1.  <span data-ttu-id="2485f-112">设置<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>属性设置为<xref:System.Windows.Forms.ToolStripItemAlignment.Right>为关联的控件。</span><span class="sxs-lookup"><span data-stu-id="2485f-112">Set the <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> property to <xref:System.Windows.Forms.ToolStripItemAlignment.Right> for the associated control.</span></span> <span data-ttu-id="2485f-113">默认情况下<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>设置为<xref:System.Windows.Forms.ToolStripItemAlignment.Left>，其中将左侧和右侧的控件对齐<xref:System.Windows.Forms.ToolStrip>。</span><span class="sxs-lookup"><span data-stu-id="2485f-113">By default, <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> is set to <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, which aligns controls to the left side of the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
     ```vb  
     ToolStripSplitButton1.Alignment = _  
@@ -65,9 +65,9 @@ ms.locfileid: "54685058"
         System.Windows.Forms.ToolStripItemAlignment.Right;  
     ```  
   
-### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a><span data-ttu-id="3d2ac-114">若要排列的各个工具条上的 ToolStrip 项</span><span class="sxs-lookup"><span data-stu-id="3d2ac-114">To arrange ToolStrip items on the ToolStrip</span></span>  
+### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a><span data-ttu-id="2485f-114">若要排列的各个工具条上的 ToolStrip 项</span><span class="sxs-lookup"><span data-stu-id="2485f-114">To arrange ToolStrip items on the ToolStrip</span></span>  
   
--   <span data-ttu-id="3d2ac-115">设置<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>属性的值<xref:System.Windows.Forms.ToolStripLayoutStyle>想。</span><span class="sxs-lookup"><span data-stu-id="3d2ac-115">Set the <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> property to the value of <xref:System.Windows.Forms.ToolStripLayoutStyle> that you want.</span></span>  
+-   <span data-ttu-id="2485f-115">设置<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>属性的值<xref:System.Windows.Forms.ToolStripLayoutStyle>想。</span><span class="sxs-lookup"><span data-stu-id="2485f-115">Set the <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> property to the value of <xref:System.Windows.Forms.ToolStripLayoutStyle> that you want.</span></span>  
   
     ```vb  
     ToolStripDropDown1.LayoutStyle = _  
@@ -79,7 +79,7 @@ ms.locfileid: "54685058"
         System.Windows.Forms.ToolStripLayoutStyle.Flow;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="3d2ac-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="3d2ac-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2485f-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="2485f-116">See also</span></span>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.Layout>
 - <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>
@@ -87,6 +87,6 @@ ms.locfileid: "54685058"
 - <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Placement%2A>
 - <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
-- [<span data-ttu-id="3d2ac-117">ToolStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="3d2ac-117">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="3d2ac-118">ToolStrip 控件体系结构</span><span class="sxs-lookup"><span data-stu-id="3d2ac-118">ToolStrip Control Architecture</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [<span data-ttu-id="3d2ac-119">ToolStrip 技术摘要</span><span class="sxs-lookup"><span data-stu-id="3d2ac-119">ToolStrip Technology Summary</span></span>](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [<span data-ttu-id="2485f-117">ToolStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="2485f-117">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="2485f-118">ToolStrip 控件体系结构</span><span class="sxs-lookup"><span data-stu-id="2485f-118">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="2485f-119">ToolStrip 技术摘要</span><span class="sxs-lookup"><span data-stu-id="2485f-119">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)

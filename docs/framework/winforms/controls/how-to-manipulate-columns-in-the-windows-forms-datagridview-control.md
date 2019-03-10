@@ -10,35 +10,35 @@ helpviewer_keywords:
 - columns [Windows Forms], manipulating
 - data grids [Windows Forms], manipulating columns
 ms.assetid: d8cfe6b3-bbab-4182-bec2-0517d9f1eaf6
-ms.openlocfilehash: a2c2ae94fb769b6b2455d309db9dbc2231138ea0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 95d41093178c56c999ecfe515a380927513e715d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496802"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722446"
 ---
-# <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="a8e89-102">如何：操作 Windows 窗体 DataGridView 控件中的列</span><span class="sxs-lookup"><span data-stu-id="a8e89-102">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>
+# <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="5ae94-102">如何：操作 Windows 窗体 DataGridView 控件中的列</span><span class="sxs-lookup"><span data-stu-id="5ae94-102">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>
 
-<span data-ttu-id="a8e89-103">以下代码示例介绍了使用 <xref:System.Windows.Forms.DataGridViewColumn> 类的属性处理 <xref:System.Windows.Forms.DataGridView> 列的各种方法。</span><span class="sxs-lookup"><span data-stu-id="a8e89-103">The following code example shows the various ways to manipulate <xref:System.Windows.Forms.DataGridView> columns using properties of the <xref:System.Windows.Forms.DataGridViewColumn> class.</span></span>
+<span data-ttu-id="5ae94-103">以下代码示例介绍了使用 <xref:System.Windows.Forms.DataGridViewColumn> 类的属性处理 <xref:System.Windows.Forms.DataGridView> 列的各种方法。</span><span class="sxs-lookup"><span data-stu-id="5ae94-103">The following code example shows the various ways to manipulate <xref:System.Windows.Forms.DataGridView> columns using properties of the <xref:System.Windows.Forms.DataGridViewColumn> class.</span></span>
 
-## <a name="example"></a><span data-ttu-id="a8e89-104">示例</span><span class="sxs-lookup"><span data-stu-id="a8e89-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5ae94-104">示例</span><span class="sxs-lookup"><span data-stu-id="5ae94-104">Example</span></span>
 
-[!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#100](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#100)]
-[!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#100)]
-[!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#100)]
+[!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#100](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#100)]
+[!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#100)]
+[!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#100)]
 
-## <a name="compiling-the-code"></a><span data-ttu-id="a8e89-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="a8e89-105">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="5ae94-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="5ae94-105">Compiling the Code</span></span>
 
-<span data-ttu-id="a8e89-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="a8e89-106">This example requires:</span></span>
+<span data-ttu-id="5ae94-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="5ae94-106">This example requires:</span></span>
 
-- <span data-ttu-id="a8e89-107">对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="a8e89-107">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>
+- <span data-ttu-id="5ae94-107">对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="5ae94-107">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>
 
-<span data-ttu-id="a8e89-108">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="a8e89-108">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="a8e89-109">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="a8e89-109">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>
+<span data-ttu-id="5ae94-108">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="5ae94-108">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="5ae94-109">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="5ae94-109">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a8e89-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="a8e89-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ae94-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="5ae94-110">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [<span data-ttu-id="a8e89-111">使用 Windows 窗体 DataGridView 控件中的单元格、行和列编程</span><span class="sxs-lookup"><span data-stu-id="a8e89-111">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [<span data-ttu-id="5ae94-111">使用 Windows 窗体 DataGridView 控件中的单元格、行和列编程</span><span class="sxs-lookup"><span data-stu-id="5ae94-111">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](programming-with-cells-rows-and-columns-in-the-datagrid.md)
