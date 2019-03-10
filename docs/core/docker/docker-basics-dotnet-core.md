@@ -4,12 +4,12 @@ description: 本教程介绍如何通过 Docker 创建基本 .NET Core 应用程
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: addaabb41e57e03a5cf4ec5b2fa3b8b4f3089b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169581"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372914"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>如何使 .NET Core 应用程序容器化
 
@@ -159,7 +159,7 @@ WORKDIR /app
 COPY *.csproj ./
 ```
 
-[RUN](https://docs.docker.com/engine/reference/builder/#run) 指令在当前映像之上的一个新层中执行任何命令，并提交结果。 最终提交的映像用于 Dockerfile 中的后续步骤。 本例运行 dotnet restore 来获取 C# 项目文件所需的依赖项。 
+[RUN](https://docs.docker.com/engine/reference/builder/#run) 指令在当前映像之上的一个新层中执行任何命令，并提交结果。 最终提交的映像用于 Dockerfile 中的后续步骤。 本例运行 dotnet restore 来获取 C# 项目文件所需的依赖项。
 
 ```Dockerfile
 RUN dotnet restore
@@ -263,7 +263,7 @@ Hello World!
 * [Docker for Azure 快速入门](https://docs.docker.com/docker-for-azure/#docker-community-edition-ce-for-azure)
 * [在 Docker for Azure 上部署应用](https://docs.docker.com/docker-for-azure/deploy/)
 
-> [!Note]
+> [!NOTE]
 > 如果你没有 Azure 订阅，请[立即注册](https://azure.microsoft.com/free/?b=16.48)获取一个免费的 30 天试用帐户和 200 美元的 Azure 信用额度，以便试用 Azure 服务的任意组合。
 
 ## <a name="docker-images-used-in-this-sample"></a>此示例中使用的 Docker 映像

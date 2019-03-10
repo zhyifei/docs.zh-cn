@@ -4,12 +4,12 @@ description: 了解有关 Windows 兼容性包以及如何使用它将现有 .NE
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 09c5533dbc46d16585b7f3cbfd2a3a70819ceb75
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c4fd888e0fbce86ab317f18fd77374af5d3ca244
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903744"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717890"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>使用 Windows 兼容性包将代码移植到 .NET Core
 
@@ -27,7 +27,7 @@ Windows 兼容性包通过 NuGet 包 [Microsoft.Windows.Compatibility](https://w
 
 * 代码页
 * CodeDom
-* 配置
+* Configuration
 * 目录服务
 * 绘图
 * ODBC
@@ -53,7 +53,7 @@ Windows 兼容性包通过 NuGet 包 [Microsoft.Windows.Compatibility](https://w
 
 3. 如果要停留在 Windows 上，则已准备完毕。
 
-4. 如果要在 Linux 或 macOS 上运行 .NET Core 应用程序或 .NET Standard 库，请使用 [API 分析器](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/)查找不会跨平台工作的 API 的使用情况。
+4. 如果要在 Linux 或 macOS 上运行 .NET Core 应用程序或 .NET Standard 库，请使用 [API 分析器](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/)查找不会跨平台工作的 API 的使用情况。
 
 5. 删除这些 API 的使用情况、将其替换为跨平台替代项，或使用平台检查对其实施保护，例如：
 

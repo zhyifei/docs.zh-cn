@@ -1,14 +1,13 @@
 ---
 title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
-author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: 792ec6e5570afd5ecfad483d2a0551df10c61a95
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f2b028624f2a09e43aa94d8044568a8aafd07df6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981525"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678990"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -320,7 +319,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 每个特性都有一个可控制其内容的属性，还有一个可以禁用其生成的属性，如下表所示：
 
-| 特性                                                      | Property               | 要禁用的属性                             |
+| 特性                                                      | 属性               | 要禁用的属性                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|
 | <xref:System.Reflection.AssemblyCompanyAttribute>              | `Company`              | `GenerateAssemblyCompanyAttribute`              |
 | <xref:System.Reflection.AssemblyConfigurationAttribute>        | `Configuration`        | `GenerateAssemblyConfigurationAttribute`        |

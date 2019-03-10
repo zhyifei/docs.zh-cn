@@ -3,12 +3,12 @@ title: Docker 简介
 description: 本文简要概述 .NET Core 应用程序上下文中的 Docker。
 ms.date: 11/06/2017
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 54bad8fcb34e46700fedf508bbc84ad846b05d76
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: b2640a1cea4d77158b7d9ed6ec63cf36d9e1f9cd
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656162"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676273"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 简介
 
@@ -178,7 +178,7 @@ Microsoft 对 .NET 存储库的打算是要有细化和集中存储库，表示�
 
 了解了 Docker 平台和不同的 Docker 映像后，下一步就是探索内容丰富的 Docker 生态系统。 以下链接展示了 Microsoft 工具对容器开发所做的补充。
 
-* [将 .NET 与 Docker 一起使用](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/)
+* [将 .NET 与 Docker 一起使用](https://devblogs.microsoft.com/dotnet/using-net-and-docker-together/)
 * [设计和开发基于微服务的多容器 .NET 应用程序](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
 * [Visual Studio Code Docker 扩展](https://code.visualstudio.com/docs/languages/dockerfile)
 * [了解如何使用 Azure Service Fabric](/azure/service-fabric/index)

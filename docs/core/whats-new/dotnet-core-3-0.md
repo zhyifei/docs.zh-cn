@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 47a5ae3e81b0320a094ecc79e6b08035de66e785
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443070"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679731"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0（预览版 2）的新增功能
 
@@ -24,16 +24,16 @@ ms.locfileid: "56443070"
 
 要详细了解每个版本的发布内容，请参阅以下文档：
 
-- [.NET Core 3.0 预览版 1 公告](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-- [.NET Core 3.0 预览版 2 公告](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
+- [.NET Core 3.0 预览版 1 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [.NET Core 3.0 预览版 2 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 
 .NET Core 3.0 支持 C#8，从 .NET Core 3.0 预览版 2 开始支持这些新功能。 有关 C# 8.0 功能的详细信息，请参阅以下博客文章：
 
-- [使用 C# 8.0 中的模式执行更多操作](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/)
-- [尝试使用 C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/12/05/take-c-8-0-for-a-spin/)
-- [生成 C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/)
+- [使用 C# 8.0 中的模式执行更多操作](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
+- [尝试使用 C# 8.0](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
+- [生成 C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
 
 
 ### <a name="ranges-and-indices"></a>范围和索引
@@ -108,7 +108,7 @@ static string Display(object o) => o switch
 
 在某些情况下，Switch 语句仍然是比 Switch 表达式更好的选择，并且模式可同时用于这两种语法形式。
 
-有关详细信息，请参阅[使用 C# 8.0 中的模式执行更多操作](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/)。
+有关详细信息，请参阅[使用 C# 8.0 中的模式执行更多操作](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)。
 
 ## <a name="ieee-floating-point-improvements"></a>IEEE 浮点改进
 
@@ -271,7 +271,7 @@ dotnet new winforms
 
 Visual Studio 2019 预览版 2 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“新建项目”模板。 设计器仍然不受支持。 可以在 Visual Studio 2019 中打开、启动和调试这些项目。
 
-Visual Studio 2017 15.9 添加了[支持 .NET Core 预览版](https://blogs.msdn.microsoft.com/dotnet/2018/11/13/net-core-tooling-update-for-visual-studio-2017-version-15-9/)的功能，但用户需要先启用该功能，而此操作不受支持。
+Visual Studio 2017 15.9 添加了[支持 .NET Core 预览版](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/)的功能，但用户需要先启用该功能，而此操作不受支持。
 
 新项目与现有的 .NET Core 项目相同，其中有一些附加内容。 下面是基本 .NET Core 控制台项目与基本 Windows 窗体以及 WPF 项目之间的比较。
 
@@ -730,9 +730,9 @@ privateExponent:
 
 ## <a name="tiered-compilation"></a>分层编译
 
-仅在 .NET Core 3.0 中默认启用[分层编译](https://blogs.msdn.microsoft.com/dotnet/2018/08/02/tiered-compilation-preview-in-net-core-2-1/)。 它是一项功能，使运行时能够更适应地使用实时 (JIT) 编译器，从而在启动时获得更好的性能，并最大限度地提高吞吐量。
+仅在 .NET Core 3.0 中默认启用[分层编译](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/)。 它是一项功能，使运行时能够更适应地使用实时 (JIT) 编译器，从而在启动时获得更好的性能，并最大限度地提高吞吐量。
 
-此功能已作为一项可选功能添加到 [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/)，然后在 [.NET Core 2.2 预览版 2](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/) 中默认启用。 随后，它在 .NET Core 2.2 版本中还原回可选功能。
+此功能已作为一项可选功能添加到 [.NET Core 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/)，然后在 [.NET Core 2.2 预览版 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/) 中默认启用。 随后，它在 .NET Core 2.2 版本中还原回可选功能。
 
 ## <a name="arm64-linux-support"></a>ARM64 Linux 支持
 
