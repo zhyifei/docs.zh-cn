@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f98f095f888a8ef3622fabbf4c4745af60e930e3
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: cbcc04625a14ebc23cacfb567951bf8f76f14985
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584052"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725098"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>如何：将数据绑定到 Windows 窗体 DataGridView 控件
 
-<xref:System.Windows.Forms.DataGridView>控件支持标准 Windows 窗体数据绑定模型，因此它可以绑定到各种数据源。 通常情况下，您将绑定到<xref:System.Windows.Forms.BindingSource>的管理与数据源的交互。 <xref:System.Windows.Forms.BindingSource>可以是任何 Windows 窗体数据源，这将使您能非常灵活地选择或修改数据的位置时。 有关数据源的详细信息<xref:System.Windows.Forms.DataGridView>控件支持，请参阅[DataGridView 控件概述](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)。  
+<xref:System.Windows.Forms.DataGridView>控件支持标准 Windows 窗体数据绑定模型，因此它可以绑定到各种数据源。 通常情况下，您将绑定到<xref:System.Windows.Forms.BindingSource>的管理与数据源的交互。 <xref:System.Windows.Forms.BindingSource>可以是任何 Windows 窗体数据源，这将使您能非常灵活地选择或修改数据的位置时。 有关数据源的详细信息<xref:System.Windows.Forms.DataGridView>控件支持，请参阅[DataGridView 控件概述](datagridview-control-overview-windows-forms.md)。  
 
 Visual Studio 可以绑定到 DataGridView 控件的数据的广泛支持。 有关详细信息，请参阅[如何：将数据绑定到使用设计器在 Windows 窗体 DataGridView 控件](bind-data-to-the-datagrid-using-the-designer.md)。  
 
@@ -44,8 +44,8 @@ DataGridView 控件连接到数据：
   
 填充`connectionString`变量中的示例使用 Northwind SQL Server 示例数据库连接的值。 Windows 身份验证，也称为集成的安全性，是更安全的方式连接到比将密码存储在连接字符串中的数据库。 有关连接安全性的详细信息，请参阅[保护连接信息](../../data/adonet/protecting-connection-information.md)。  
 
-[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
-[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
+[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
+[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.DataGridView>

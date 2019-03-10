@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: d4331d5f502165a73c7f322358b2d6ee88d92977
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fd3ad0da369702c2a5e27c0b8b9a39a71c372ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591575"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724565"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的列类型
 <xref:System.Windows.Forms.DataGridView>控件使用几种列类型来显示其信息，并使用户能够修改或添加信息。  
@@ -30,7 +30,7 @@ ms.locfileid: "54591575"
 |<xref:System.Windows.Forms.DataGridViewButtonColumn>|用于在单元中显示按钮。 在绑定时，不会自动生成。 通常用作未绑定的列。|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|用于在单元中显示的下拉列表。 在绑定时，不会自动生成。 通常手动进行数据绑定。|  
 |<xref:System.Windows.Forms.DataGridViewLinkColumn>|用于在单元中显示的链接。 在绑定时，不会自动生成。 通常手动进行数据绑定。|  
-|自定义列类型|您可以通过继承来创建您自己的列类<xref:System.Windows.Forms.DataGridViewColumn>类或任何其派生的类提供自定义外观、 行为或承载的控件。 有关详细信息，请参阅[如何：通过扩展行为和外观自定义单元格和 Windows 窗体 DataGridView 控件中的列](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|自定义列类型|您可以通过继承来创建您自己的列类<xref:System.Windows.Forms.DataGridViewColumn>类或任何其派生的类提供自定义外观、 行为或承载的控件。 有关详细信息，请参阅[如何：通过扩展行为和外观自定义单元格和 Windows 窗体 DataGridView 控件中的列](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
   
  以下各节中更详细地介绍了这些列类型。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54591575"
 ## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
  使用<xref:System.Windows.Forms.DataGridViewComboBoxColumn>，可以显示包含下拉列表框的单元格的列。 这可用于仅包含特定值，例如 Northwind 示例数据库中的产品表的类别列的字段中输入数据。  
   
- 您可以填充下拉列表用于在相同的方式将填充所有单元格<xref:System.Windows.Forms.ComboBox>下拉列表中，通过返回的集合手动<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>属性，或通过将其绑定到数据源通过<xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>， <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>，和<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>属性。 有关详细信息，请参阅[组合框控件](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)。  
+ 您可以填充下拉列表用于在相同的方式将填充所有单元格<xref:System.Windows.Forms.ComboBox>下拉列表中，通过返回的集合手动<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>属性，或通过将其绑定到数据源通过<xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>， <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>，和<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>属性。 有关详细信息，请参阅[组合框控件](combobox-control-windows-forms.md)。  
   
  您可以将实际的单元格的值绑定到使用的数据源<xref:System.Windows.Forms.DataGridView>通过设置控件<xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A>属性的<xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "54591575"
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
-- [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [如何：在 Windows 窗体 DataGridView 控件的单元格中显示图像](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [如何：使用的 Windows 窗体 DataGridView 控件中的图像列](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
-- [自定义 Windows 窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+- [DataGridView 控件](datagridview-control-windows-forms.md)
+- [如何：在 Windows 窗体 DataGridView 控件的单元格中显示图像](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [如何：使用的 Windows 窗体 DataGridView 控件中的图像列](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [自定义 Windows 窗体 DataGridView 控件](customizing-the-windows-forms-datagridview-control.md)

@@ -2,12 +2,12 @@
 title: 任务 1:创建新的 Windows Presentation Foundation 应用程序
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 39cd901c0129124bece8e8d3a573fd45209cfb00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 533b4a1030ab5f47eb96ca62dc2805eae7933b9b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679404"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711878"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>任务 1:创建新的 Windows Presentation Foundation 应用程序
 在此任务中，将使用 WPF 应用程序 Visual Studio 模板创建一个空的 Windows Presentation Foundation (WPF) 应用程序并将引用添加到相应[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]工作流程序集。  
@@ -40,8 +40,8 @@ ms.locfileid: "54679404"
   
 10. 单击 **“确定”**。  
   
-11. 请参阅[任务 2:承载工作流设计器](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)若要了解如何承载工作流设计器设计画布。  
+11. 请参阅[任务 2:承载工作流设计器](task-2-host-the-workflow-designer.md)若要了解如何承载工作流设计器设计画布。  
   
 ## <a name="see-also"></a>请参阅
-- [重新托管工作流设计器](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [任务 2:承载工作流设计器](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [重新托管工作流设计器](rehosting-the-workflow-designer.md)
+- [任务 2:承载工作流设计器](task-2-host-the-workflow-designer.md)

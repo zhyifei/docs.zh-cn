@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: e746cd1d0f9f7d9850d0263ee6ed0a82472fcb5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e463ac0fd77a31e4e11cb440f64ec0d4694af61f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504142"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722017"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>如何：确定格式化 Windows 窗体 RichTextBox 控件中的属性更改时
 Windows 窗体的一个常见用途<xref:System.Windows.Forms.RichTextBox>控件格式化文本的字体选项或段落样式之类的属性。 你的应用程序可能需要跟踪的文本格式设置用于显示一个工具栏，如下所示许多字处理应用程序中的任何更改。  
@@ -25,7 +25,7 @@ Windows 窗体的一个常见用途<xref:System.Windows.Forms.RichTextBox>控件
   
 1.  在中编写代码<xref:System.Windows.Forms.RichTextBox.SelectionChanged>事件处理程序以执行相应的操作取决于值的属性。 下面的示例更改工具栏按钮，具体取决于值的外观<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>属性。 当插入点移动控件中时，才会更新工具栏按钮。  
   
-     下面的示例假定窗体<xref:System.Windows.Forms.RichTextBox>控件和一个<xref:System.Windows.Forms.ToolBar>包含一个工具栏按钮的控件。 有关工具栏和工具栏按钮的详细信息，请参阅[如何：向 ToolBar 控件添加按钮](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)。  
+     下面的示例假定窗体<xref:System.Windows.Forms.RichTextBox>控件和一个<xref:System.Windows.Forms.ToolBar>包含一个工具栏按钮的控件。 有关工具栏和工具栏按钮的详细信息，请参阅[如何：向 ToolBar 控件添加按钮](how-to-add-buttons-to-a-toolbar-control.md)。  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -83,5 +83,5 @@ Windows 窗体的一个常见用途<xref:System.Windows.Forms.RichTextBox>控件
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox 控件](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox 控件](richtextbox-control-windows-forms.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

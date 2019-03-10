@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
-ms.openlocfilehash: b39c682ccb73a71da1752e6e9f3f79e5916d106c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81edab0d44ae0bb9dcabe77ad568f281e6f5fffb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503984"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722349"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.LinkLabel>让您可以将 Web 样式的链接添加到 Windows 窗体应用程序。 可以使用<xref:System.Windows.Forms.LinkLabel>包括可以使用的内容控件<xref:System.Windows.Forms.Label>控制; 还可以设置为文件、 文件夹或 Web 页的链接的文本的一部分。  
@@ -25,6 +25,6 @@ Windows 窗体<xref:System.Windows.Forms.LinkLabel>让您可以将 Web 样式的
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.LinkLabel>
-- [Label 控件概述](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)
-- [如何：链接到的对象或网页上使用 Windows 窗体 LinkLabel 控件](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [如何：更改 Windows 窗体 LinkLabel 控件的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Label 控件概述](label-control-overview-windows-forms.md)
+- [如何：链接到的对象或网页上使用 Windows 窗体 LinkLabel 控件](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [如何：更改 Windows 窗体 LinkLabel 控件的外观](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

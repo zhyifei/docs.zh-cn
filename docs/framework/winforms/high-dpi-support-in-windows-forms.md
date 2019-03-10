@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b5ad28fbfd668819b0bcab30c33892679b4bd8c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674914"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711781"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>在 Windows 窗体中的高 DPI 支持
 
@@ -49,7 +49,7 @@ ms.locfileid: "55674914"
 
 - 启用中的每监视器 DPI 感知*app.config*文件。
 
-  Windows 窗体引入了一个新[ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../../../docs/framework/configure-apps/file-schema/winforms/index.md)元素以支持新功能和自定义项添加从.NET Framework 4.7 开始。 若要充分利用支持高 DPI 的新功能，以下代码添加到应用程序配置文件。   
+  Windows 窗体引入了一个新[ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md)元素以支持新功能和自定义项添加从.NET Framework 4.7 开始。 若要充分利用支持高 DPI 的新功能，以下代码添加到应用程序配置文件。   
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,7 +84,7 @@ ms.locfileid: "55674914"
 </System.Windows.Forms.ApplicationConfigurationSection>    
 ```
 
-有关各个键及其值的列表，请参阅[Windows 窗体添加配置元素](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)。
+有关各个键及其值的列表，请参阅[Windows 窗体添加配置元素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)。
 
 ## <a name="new-dpi-change-events"></a>新 DPI 更改事件
 
@@ -132,5 +132,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>请参阅
 
-- [Windows 窗体添加配置元素](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
-- [调整 Windows 窗体的大小和比例](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)
+- [Windows 窗体添加配置元素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [调整 Windows 窗体的大小和比例](adjusting-the-size-and-scale-of-windows-forms.md)

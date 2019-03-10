@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: 49f544727ee82b1e36357fc4312bcd449ffc3c0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558743"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719372"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.ToolStrip>控制和及其关联的类将用户界面元素组合到工具栏、 状态栏和菜单提供一个通用框架。 <xref:System.Windows.Forms.ToolStrip> 控件提供丰富的设计时体验，包括就地激活和编辑、 自定义布局和漂浮，即工具栏共享水平或垂直空间的能力。  
@@ -77,7 +77,7 @@ Windows 窗体<xref:System.Windows.Forms.ToolStrip>控制和及其关联的类�
 |<xref:System.Windows.Forms.ToolStripControlHost>|承载其他控件没有专门<xref:System.Windows.Forms.ToolStrip>控件，但要为其<xref:System.Windows.Forms.ToolStrip>功能。|  
 |<xref:System.Windows.Forms.ToolStripItemPlacement>|指定是否<xref:System.Windows.Forms.ToolStripItem>是在主要的分布方式<xref:System.Windows.Forms.ToolStrip>，在溢出<xref:System.Windows.Forms.ToolStrip>，或都不。|  
   
- 有关详细信息，请参阅[ToolStrip 技术摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)并[ToolStrip 控件体系结构](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)。  
+ 有关详细信息，请参阅[ToolStrip 技术摘要](toolstrip-technology-summary.md)并[ToolStrip 控件体系结构](toolstrip-control-architecture.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.ToolStrip>

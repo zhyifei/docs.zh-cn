@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: c6345ab5e5d4f4e480bb2724e7a1d795de2bef5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 306c1f684f1f4c2deb057f7d81c93856ee6189e7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651846"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715387"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>如何：循环访问 Windows 窗体 TreeView 控件的所有节点
 有时还是需要检查在 Windows 窗体中的每个节点<xref:System.Windows.Forms.TreeView>才能执行某些计算基于节点值的控件。 使用循环访问每个树集合中每个节点的递归过程（C# 和 C++ 中为递归方法）可完成此操作。  
@@ -124,5 +124,5 @@ ms.locfileid: "54651846"
     ```  
   
 ## <a name="see-also"></a>请参阅
-- [TreeView 控件](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+- [TreeView 控件](treeview-control-windows-forms.md)
 - [递归过程](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

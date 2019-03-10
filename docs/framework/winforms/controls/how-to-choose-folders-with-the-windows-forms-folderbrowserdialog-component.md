@@ -12,12 +12,12 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 7055875f25aa0f39feb2d944f4b6684c6ae5d9a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea5fdc9708d8e896eb66fa42f64cac672baff08b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614688"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724551"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>如何：选择使用 Windows 窗体 FolderBrowserDialog 组件的文件夹
 通常，在创建的 Windows 应用程序内，需要提示用户选择文件夹，最常用于保存一组文件。 Windows 窗体<xref:System.Windows.Forms.FolderBrowserDialog>组件可轻松完成此任务。  
@@ -62,11 +62,11 @@ ms.locfileid: "54614688"
     ```  
   
     > [!IMPORTANT]
-    >  若要使用此类，您的程序集需要的特权等级授予通过<xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>属性，它是一部分的<xref:System.Security.Permissions.FileIOPermissionAccess>枚举。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../../../docs/framework/misc/code-access-security-basics.md)。  
+    >  若要使用此类，您的程序集需要的特权等级授予通过<xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>属性，它是一部分的<xref:System.Security.Permissions.FileIOPermissionAccess>枚举。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../misc/code-access-security-basics.md)。  
   
- 有关如何保存文件的信息，请参阅[如何：使用 SaveFileDialog 组件保存文件](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md)。  
+ 有关如何保存文件的信息，请参阅[如何：使用 SaveFileDialog 组件保存文件](how-to-save-files-using-the-savefiledialog-component.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [FolderBrowserDialog 组件概述（Windows 窗体）](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)
-- [FolderBrowserDialog 组件](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)
+- [FolderBrowserDialog 组件概述（Windows 窗体）](folderbrowserdialog-component-overview-windows-forms.md)
+- [FolderBrowserDialog 组件](folderbrowserdialog-component-windows-forms.md)

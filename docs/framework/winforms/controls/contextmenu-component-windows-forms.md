@@ -10,12 +10,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-ms.openlocfilehash: 9f24bfceaf4e2e21916624da6d970dd90a0fdbd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 240a85ed4c68a7f22bee8b884a416ff1dc68b66c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552809"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724519"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu 组件（Windows 窗体）
 > [!NOTE]
@@ -24,10 +24,10 @@ ms.locfileid: "54552809"
  Windows 窗体`ContextMenu`组件用于向用户提供与所选对象相关联的常用命令的轻松访问的快捷菜单。 快捷菜单中的项通常是从主应用程序中的其他位置出现的菜单项的子集。 快捷菜单均通常可通过单击鼠标右键。 在 Windows 窗体，这些文件与其他控件相关联。  
   
 ## <a name="in-this-section"></a>本节内容  
- [ContextMenu 组件概述](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
+ [ContextMenu 组件概述](contextmenu-component-overview-windows-forms.md)  
  引入了的一般概念`ContextMenu`组件，它允许用户创建与所选对象相关联的常用命令的菜单。  
   
- [如何：添加和删除菜单项使用 Windows 窗体 ContextMenu 组件](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [如何：添加和删除菜单项使用 Windows 窗体 ContextMenu 组件](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  介绍如何添加和删除 Windows 窗体中的快捷菜单项。  
   
 ## <a name="reference"></a>参考  
@@ -35,7 +35,7 @@ ms.locfileid: "54552809"
  提供有关 <xref:System.Windows.Forms.ContextMenu> 类及其成员的引用信息。  
   
 ## <a name="related-sections"></a>相关章节  
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)  
  提供 Windows 窗体控件的完整列表，附带其使用情况相关信息的链接。  
   
 ## <a name="see-also"></a>请参阅

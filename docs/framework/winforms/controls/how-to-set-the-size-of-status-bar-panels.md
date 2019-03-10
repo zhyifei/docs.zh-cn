@@ -10,18 +10,19 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: be1f216af61c1e7b77e84c584dc9d965a97c56b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b78463ca273f089f036166f5339977be435ccc9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539647"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711936"
 ---
 # <a name="how-to-set-the-size-of-status-bar-panels"></a>如何：设置状态栏面板的大小
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStripStatusLabel> 控件取代了 <xref:System.Windows.Forms.StatusBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.StatusBar> 控件以实现向后兼容并供将来使用。  
+>  
+  <xref:System.Windows.Forms.ToolStripStatusLabel> 控件取代了 <xref:System.Windows.Forms.StatusBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.StatusBar> 控件以实现向后兼容并供将来使用。  
   
- 每个实例<xref:System.Windows.Forms.StatusBarPanel>类中[StatusBar 控件](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)控件具有多个动态属性，以确定其宽度和在运行时重设大小行为。  
+ 每个实例<xref:System.Windows.Forms.StatusBarPanel>类中[StatusBar 控件](statusbar-control-windows-forms.md)控件具有多个动态属性，以确定其宽度和在运行时重设大小行为。  
   
 ### <a name="to-set-the-size-of-a-panel"></a>若要设置面板的大小  
   
@@ -68,6 +69,6 @@ ms.locfileid: "54539647"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [演练：在运行时的更新状态栏信息](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
-- [如何：确定已单击 Windows 窗体 StatusBar 控件中的面板](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [StatusBar 控件概述](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [演练：在运行时的更新状态栏信息](walkthrough-updating-status-bar-information-at-run-time.md)
+- [如何：确定已单击 Windows 窗体 StatusBar 控件中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar 控件概述](statusbar-control-overview-windows-forms.md)
