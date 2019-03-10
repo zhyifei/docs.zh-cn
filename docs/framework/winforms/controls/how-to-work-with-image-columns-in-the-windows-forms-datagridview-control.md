@@ -10,30 +10,30 @@ helpviewer_keywords:
 - image columns [Windows Forms], Windows Forms
 - DataGridView control [Windows Forms], image columns
 ms.assetid: 8a37aa75-3c6e-4893-91d0-7a5f34bfe287
-ms.openlocfilehash: 564fd55dc17511346e9e23bcda8586654c00e4e4
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 7bb0a74355f9ca81279a2c43f689ddf4d7540e90
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260998"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721835"
 ---
-# <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="e4a14-102">如何：使用的 Windows 窗体 DataGridView 控件中的图像列</span><span class="sxs-lookup"><span data-stu-id="e4a14-102">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="e4a14-103">下面的代码示例显示如何在交互式用户界面 (UI) 中使用 <xref:System.Windows.Forms.DataGridView> 图像列。</span><span class="sxs-lookup"><span data-stu-id="e4a14-103">The following code example shows how to use the <xref:System.Windows.Forms.DataGridView> image columns in an interactive user interface (UI).</span></span> <span data-ttu-id="e4a14-104">该示例还演示了如何使用 <xref:System.Windows.Forms.DataGridViewImageColumn> 调整图像大小和布局。</span><span class="sxs-lookup"><span data-stu-id="e4a14-104">The example also demonstrates image sizing and layout possibilities with the <xref:System.Windows.Forms.DataGridViewImageColumn>.</span></span>  
+# <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="d9947-102">如何：使用的 Windows 窗体 DataGridView 控件中的图像列</span><span class="sxs-lookup"><span data-stu-id="d9947-102">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="d9947-103">下面的代码示例显示如何在交互式用户界面 (UI) 中使用 <xref:System.Windows.Forms.DataGridView> 图像列。</span><span class="sxs-lookup"><span data-stu-id="d9947-103">The following code example shows how to use the <xref:System.Windows.Forms.DataGridView> image columns in an interactive user interface (UI).</span></span> <span data-ttu-id="d9947-104">该示例还演示了如何使用 <xref:System.Windows.Forms.DataGridViewImageColumn> 调整图像大小和布局。</span><span class="sxs-lookup"><span data-stu-id="d9947-104">The example also demonstrates image sizing and layout possibilities with the <xref:System.Windows.Forms.DataGridViewImageColumn>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e4a14-105">示例</span><span class="sxs-lookup"><span data-stu-id="e4a14-105">Example</span></span>  
- [!code-cpp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CPP/tictactoe.cpp#0)]
- [!code-csharp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CS/tictactoe.cs#0)]
- [!code-vb[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/VB/tictactoe.vb#0)]  
+## <a name="example"></a><span data-ttu-id="d9947-105">示例</span><span class="sxs-lookup"><span data-stu-id="d9947-105">Example</span></span>  
+ [!code-cpp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CPP/tictactoe.cpp#0)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/CS/tictactoe.cs#0)]
+ [!code-vb[System.Windows.Forms.DataGridView.ImageColumn_TicTacToe#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ImageColumn_TicTacToe/VB/tictactoe.vb#0)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="e4a14-106">编译代码</span><span class="sxs-lookup"><span data-stu-id="e4a14-106">Compiling the Code</span></span>  
- <span data-ttu-id="e4a14-107">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="e4a14-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="d9947-106">编译代码</span><span class="sxs-lookup"><span data-stu-id="d9947-106">Compiling the Code</span></span>  
+ <span data-ttu-id="d9947-107">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="d9947-107">This example requires:</span></span>  
   
--   <span data-ttu-id="e4a14-108">对 System 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="e4a14-108">References to the System and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="d9947-108">对 System 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="d9947-108">References to the System and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="e4a14-109">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="e4a14-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="e4a14-110">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="e4a14-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="d9947-109">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="d9947-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="d9947-110">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="d9947-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e4a14-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="e4a14-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9947-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="d9947-111">See also</span></span>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
-- [<span data-ttu-id="e4a14-112">使用 Windows 窗体 DataGridView 控件中的单元格、行和列编程</span><span class="sxs-lookup"><span data-stu-id="e4a14-112">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [<span data-ttu-id="e4a14-113">如何：在 Windows 窗体 DataGridView 控件的单元格中显示图像</span><span class="sxs-lookup"><span data-stu-id="e4a14-113">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="d9947-112">使用 Windows 窗体 DataGridView 控件中的单元格、行和列编程</span><span class="sxs-lookup"><span data-stu-id="d9947-112">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [<span data-ttu-id="d9947-113">如何：在 Windows 窗体 DataGridView 控件的单元格中显示图像</span><span class="sxs-lookup"><span data-stu-id="d9947-113">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)

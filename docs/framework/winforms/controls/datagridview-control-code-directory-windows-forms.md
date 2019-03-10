@@ -7,151 +7,151 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], examples
 - DataGridView control [Windows Forms], code directory
 ms.assetid: ea8bd66a-5ed6-491b-b9da-63873e275a0a
-ms.openlocfilehash: b737eeafca3ccbd1ef85338bfda92b56be953c3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 133ebec46d4920f36af6d759c40ff98981e812b6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639687"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721341"
 ---
-# <a name="datagridview-control-code-directory-windows-forms"></a><span data-ttu-id="f960e-102">DataGridView 控件代码目录（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="f960e-102">DataGridView Control Code Directory (Windows Forms)</span></span>
-<span data-ttu-id="f960e-103">本主题提供指向<xref:System.Windows.Forms.DataGridView>-有关的文档中提供的代码示例。</span><span class="sxs-lookup"><span data-stu-id="f960e-103">This topic provides links to <xref:System.Windows.Forms.DataGridView>-related code examples available in the documentation.</span></span>  
+# <a name="datagridview-control-code-directory-windows-forms"></a><span data-ttu-id="a14f5-102">DataGridView 控件代码目录（Windows 窗体）</span><span class="sxs-lookup"><span data-stu-id="a14f5-102">DataGridView Control Code Directory (Windows Forms)</span></span>
+<span data-ttu-id="a14f5-103">本主题提供指向<xref:System.Windows.Forms.DataGridView>-有关的文档中提供的代码示例。</span><span class="sxs-lookup"><span data-stu-id="a14f5-103">This topic provides links to <xref:System.Windows.Forms.DataGridView>-related code examples available in the documentation.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f960e-104">链接总是跳转到在其中找到代码示例的主题的顶部。</span><span class="sxs-lookup"><span data-stu-id="f960e-104">A link always jumps to the top of the topic in which the code example is found.</span></span>  
+>  <span data-ttu-id="a14f5-104">链接总是跳转到在其中找到代码示例的主题的顶部。</span><span class="sxs-lookup"><span data-stu-id="a14f5-104">A link always jumps to the top of the topic in which the code example is found.</span></span>  
   
- <span data-ttu-id="f960e-105">类库参考文档中提供了额外的代码示例。</span><span class="sxs-lookup"><span data-stu-id="f960e-105">Additional code examples are available in the class library reference documentation.</span></span> <span data-ttu-id="f960e-106">有关主体类和关联的接口的列表<xref:System.Windows.Forms.DataGridView>控件，请参阅中的表[DataGridView 控件技术摘要](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="f960e-106">For a list of the principal classes and interfaces associated with the <xref:System.Windows.Forms.DataGridView> control, see the table in [DataGridView Control Technology Summary](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md).</span></span>  
+ <span data-ttu-id="a14f5-105">类库参考文档中提供了额外的代码示例。</span><span class="sxs-lookup"><span data-stu-id="a14f5-105">Additional code examples are available in the class library reference documentation.</span></span> <span data-ttu-id="a14f5-106">有关主体类和关联的接口的列表<xref:System.Windows.Forms.DataGridView>控件，请参阅中的表[DataGridView 控件技术摘要](datagridview-control-technology-summary-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="a14f5-106">For a list of the principal classes and interfaces associated with the <xref:System.Windows.Forms.DataGridView> control, see the table in [DataGridView Control Technology Summary](datagridview-control-technology-summary-windows-forms.md).</span></span>  
   
-## <a name="codelist"></a><span data-ttu-id="f960e-107">CodeList</span><span class="sxs-lookup"><span data-stu-id="f960e-107">CodeList</span></span>  
+## <a name="codelist"></a><span data-ttu-id="a14f5-107">CodeList</span><span class="sxs-lookup"><span data-stu-id="a14f5-107">CodeList</span></span>  
   
-## <a name="unbound-data-examples"></a><span data-ttu-id="f960e-108">未绑定的数据示例</span><span class="sxs-lookup"><span data-stu-id="f960e-108">Unbound Data Examples</span></span>  
+## <a name="unbound-data-examples"></a><span data-ttu-id="a14f5-108">未绑定的数据示例</span><span class="sxs-lookup"><span data-stu-id="a14f5-108">Unbound Data Examples</span></span>  
   
--   [<span data-ttu-id="f960e-109">如何：向数据绑定 Windows 窗体 DataGridView 控件中添加未绑定的列</span><span class="sxs-lookup"><span data-stu-id="f960e-109">How to: Add an Unbound Column to a Data-Bound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
+-   [<span data-ttu-id="a14f5-109">如何：向数据绑定 Windows 窗体 DataGridView 控件中添加未绑定的列</span><span class="sxs-lookup"><span data-stu-id="a14f5-109">How to: Add an Unbound Column to a Data-Bound Windows Forms DataGridView Control</span></span>](unbound-column-to-a-data-bound-datagridview.md)  
   
--   [<span data-ttu-id="f960e-110">如何：创建未绑定的 Windows 窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="f960e-110">How to: Create an Unbound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-110">如何：创建未绑定的 Windows 窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="a14f5-110">How to: Create an Unbound Windows Forms DataGridView Control</span></span>](how-to-create-an-unbound-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-111">演练：创建未绑定的 Windows 窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="f960e-111">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-111">演练：创建未绑定的 Windows 窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="a14f5-111">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
   
-## <a name="data-binding-examples"></a><span data-ttu-id="f960e-112">数据绑定示例</span><span class="sxs-lookup"><span data-stu-id="f960e-112">Data Binding Examples</span></span>  
+## <a name="data-binding-examples"></a><span data-ttu-id="a14f5-112">数据绑定示例</span><span class="sxs-lookup"><span data-stu-id="a14f5-112">Data Binding Examples</span></span>  
   
--   [<span data-ttu-id="f960e-113">如何：将数据绑定到 Windows 窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="f960e-113">How to: Bind Data to the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-113">如何：将数据绑定到 Windows 窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="a14f5-113">How to: Bind Data to the Windows Forms DataGridView Control</span></span>](how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-114">如何：数据绑定 Windows 窗体 DataGridView 控件中自动生成列</span><span class="sxs-lookup"><span data-stu-id="f960e-114">How to: Autogenerate Columns in a Data-Bound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-114">如何：数据绑定 Windows 窗体 DataGridView 控件中自动生成列</span><span class="sxs-lookup"><span data-stu-id="a14f5-114">How to: Autogenerate Columns in a Data-Bound Windows Forms DataGridView Control</span></span>](autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-115">如何：从 Windows 窗体 DataGridView 控件中删除自动生成的列</span><span class="sxs-lookup"><span data-stu-id="f960e-115">How to: Remove Autogenerated Columns from a Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-115">如何：从 Windows 窗体 DataGridView 控件中删除自动生成的列</span><span class="sxs-lookup"><span data-stu-id="a14f5-115">How to: Remove Autogenerated Columns from a Windows Forms DataGridView Control</span></span>](remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-116">如何：将对象绑定到 Windows 窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="f960e-116">How to: Bind Objects to Windows Forms DataGridView Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
+-   [<span data-ttu-id="a14f5-116">如何：将对象绑定到 Windows 窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="a14f5-116">How to: Bind Objects to Windows Forms DataGridView Controls</span></span>](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
   
--   [<span data-ttu-id="f960e-117">如何：访问对象绑定到 Windows 窗体 DataGridView 行</span><span class="sxs-lookup"><span data-stu-id="f960e-117">How to: Access Objects Bound to Windows Forms DataGridView Rows</span></span>](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+-   [<span data-ttu-id="a14f5-117">如何：访问对象绑定到 Windows 窗体 DataGridView 行</span><span class="sxs-lookup"><span data-stu-id="a14f5-117">How to: Access Objects Bound to Windows Forms DataGridView Rows</span></span>](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
   
--   [<span data-ttu-id="f960e-118">如何：创建使用两个 Windows 窗体 DataGridView 控件的母版/详细信息窗体</span><span class="sxs-lookup"><span data-stu-id="f960e-118">How to: Create a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)  
+-   [<span data-ttu-id="a14f5-118">如何：创建使用两个 Windows 窗体 DataGridView 控件的母版/详细信息窗体</span><span class="sxs-lookup"><span data-stu-id="a14f5-118">How to: Create a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](create-a-master-detail-form-using-two-datagridviews.md)  
   
--   [<span data-ttu-id="f960e-119">演练：创建母版/详细信息窗体使用两个 Windows 窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="f960e-119">Walkthrough: Creating a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagridviews.md)  
+-   [<span data-ttu-id="a14f5-119">演练：创建母版/详细信息窗体使用两个 Windows 窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="a14f5-119">Walkthrough: Creating a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](creating-a-master-detail-form-using-two-datagridviews.md)  
   
-## <a name="data-formatting-examples"></a><span data-ttu-id="f960e-120">数据格式设置示例</span><span class="sxs-lookup"><span data-stu-id="f960e-120">Data Formatting Examples</span></span>  
+## <a name="data-formatting-examples"></a><span data-ttu-id="a14f5-120">数据格式设置示例</span><span class="sxs-lookup"><span data-stu-id="a14f5-120">Data Formatting Examples</span></span>  
   
--   [<span data-ttu-id="f960e-121">如何：Windows 中的数据格式窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="f960e-121">How to: Format Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-121">如何：Windows 中的数据格式窗体 DataGridView 控件</span><span class="sxs-lookup"><span data-stu-id="a14f5-121">How to: Format Data in the Windows Forms DataGridView Control</span></span>](how-to-format-data-in-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-122">如何：自定义 Windows 窗体 DataGridView 控件中的数据格式设置</span><span class="sxs-lookup"><span data-stu-id="f960e-122">How to: Customize Data Formatting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-122">如何：自定义 Windows 窗体 DataGridView 控件中的数据格式设置</span><span class="sxs-lookup"><span data-stu-id="a14f5-122">How to: Customize Data Formatting in the Windows Forms DataGridView Control</span></span>](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
   
-## <a name="data-validation-examples"></a><span data-ttu-id="f960e-123">数据验证示例</span><span class="sxs-lookup"><span data-stu-id="f960e-123">Data Validation Examples</span></span>  
+## <a name="data-validation-examples"></a><span data-ttu-id="a14f5-123">数据验证示例</span><span class="sxs-lookup"><span data-stu-id="a14f5-123">Data Validation Examples</span></span>  
   
--   [<span data-ttu-id="f960e-124">如何：验证 Windows 窗体 DataGridView 控件中的数据</span><span class="sxs-lookup"><span data-stu-id="f960e-124">How to: Validate Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-124">如何：验证 Windows 窗体 DataGridView 控件中的数据</span><span class="sxs-lookup"><span data-stu-id="a14f5-124">How to: Validate Data in the Windows Forms DataGridView Control</span></span>](how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-125">演练：验证 Windows 窗体 DataGridView 控件中的数据</span><span class="sxs-lookup"><span data-stu-id="f960e-125">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-125">演练：验证 Windows 窗体 DataGridView 控件中的数据</span><span class="sxs-lookup"><span data-stu-id="a14f5-125">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-126">如何：处理 Windows 窗体 DataGridView 控件中的数据输入时发生的错误</span><span class="sxs-lookup"><span data-stu-id="f960e-126">How to: Handle Errors That Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/handle-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+-   [<span data-ttu-id="a14f5-126">如何：处理 Windows 窗体 DataGridView 控件中的数据输入时发生的错误</span><span class="sxs-lookup"><span data-stu-id="a14f5-126">How to: Handle Errors That Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)  
   
--   [<span data-ttu-id="f960e-127">演练：Windows 窗体 DataGridView 控件中的数据输入时发生的错误处理</span><span class="sxs-lookup"><span data-stu-id="f960e-127">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+-   [<span data-ttu-id="a14f5-127">演练：Windows 窗体 DataGridView 控件中的数据输入时发生的错误处理</span><span class="sxs-lookup"><span data-stu-id="a14f5-127">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
   
-## <a name="appearance-customization-examples"></a><span data-ttu-id="f960e-128">外观自定义示例</span><span class="sxs-lookup"><span data-stu-id="f960e-128">Appearance Customization Examples</span></span>  
+## <a name="appearance-customization-examples"></a><span data-ttu-id="a14f5-128">外观自定义示例</span><span class="sxs-lookup"><span data-stu-id="a14f5-128">Appearance Customization Examples</span></span>  
   
--   [<span data-ttu-id="f960e-129">如何：更改边框和网格线在 Windows 窗体 DataGridView 控件中的样式</span><span class="sxs-lookup"><span data-stu-id="f960e-129">How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
+-   [<span data-ttu-id="a14f5-129">如何：更改边框和网格线在 Windows 窗体 DataGridView 控件中的样式</span><span class="sxs-lookup"><span data-stu-id="a14f5-129">How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control</span></span>](change-the-border-and-gridline-styles-in-the-datagrid.md)  
   
--   [<span data-ttu-id="f960e-130">如何：在 Windows 窗体 DataGridView 控件中设置字体和颜色样式</span><span class="sxs-lookup"><span data-stu-id="f960e-130">How to: Set Font and Color Styles in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-130">如何：在 Windows 窗体 DataGridView 控件中设置字体和颜色样式</span><span class="sxs-lookup"><span data-stu-id="a14f5-130">How to: Set Font and Color Styles in the Windows Forms DataGridView Control</span></span>](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-131">如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式</span><span class="sxs-lookup"><span data-stu-id="f960e-131">How to: Set Default Cell Styles for the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-131">如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式</span><span class="sxs-lookup"><span data-stu-id="a14f5-131">How to: Set Default Cell Styles for the Windows Forms DataGridView Control</span></span>](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-132">如何：使用行模板自定义 Windows 窗体 DataGridView 控件中的行</span><span class="sxs-lookup"><span data-stu-id="f960e-132">How to: Use the Row Template to Customize Rows in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
+-   [<span data-ttu-id="a14f5-132">如何：使用行模板自定义 Windows 窗体 DataGridView 控件中的行</span><span class="sxs-lookup"><span data-stu-id="a14f5-132">How to: Use the Row Template to Customize Rows in the Windows Forms DataGridView Control</span></span>](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
   
--   [<span data-ttu-id="f960e-133">如何：设置 Windows 窗体 DataGridView 控件的交替行样式</span><span class="sxs-lookup"><span data-stu-id="f960e-133">How to: Set Alternating Row Styles for the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-133">如何：设置 Windows 窗体 DataGridView 控件的交替行样式</span><span class="sxs-lookup"><span data-stu-id="a14f5-133">How to: Set Alternating Row Styles for the Windows Forms DataGridView Control</span></span>](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
   
-## <a name="behavior-customization-examples"></a><span data-ttu-id="f960e-134">行为自定义示例</span><span class="sxs-lookup"><span data-stu-id="f960e-134">Behavior Customization Examples</span></span>  
+## <a name="behavior-customization-examples"></a><span data-ttu-id="a14f5-134">行为自定义示例</span><span class="sxs-lookup"><span data-stu-id="a14f5-134">Behavior Customization Examples</span></span>  
   
--   [<span data-ttu-id="f960e-135">如何：Windows 窗体 DataGridView 控件中指定的编辑模式</span><span class="sxs-lookup"><span data-stu-id="f960e-135">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-135">如何：Windows 窗体 DataGridView 控件中指定的编辑模式</span><span class="sxs-lookup"><span data-stu-id="a14f5-135">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-136">如何：指定 Windows 窗体 DataGridView 控件中的新行的默认值</span><span class="sxs-lookup"><span data-stu-id="f960e-136">How to: Specify Default Values for New Rows in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
+-   [<span data-ttu-id="a14f5-136">如何：指定 Windows 窗体 DataGridView 控件中的新行的默认值</span><span class="sxs-lookup"><span data-stu-id="a14f5-136">How to: Specify Default Values for New Rows in the Windows Forms DataGridView Control</span></span>](specify-default-values-for-new-rows-in-the-datagrid.md)  
   
--   [<span data-ttu-id="f960e-137">如何：防止添加和 Windows 窗体 DataGridView 控件中的删除行</span><span class="sxs-lookup"><span data-stu-id="f960e-137">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)  
+-   [<span data-ttu-id="a14f5-137">如何：防止添加和 Windows 窗体 DataGridView 控件中的删除行</span><span class="sxs-lookup"><span data-stu-id="a14f5-137">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control</span></span>](prevent-row-addition-and-deletion-datagridview.md)  
   
--   [<span data-ttu-id="f960e-138">如何：执行自定义操作在基于 Windows 窗体 DataGridView 控件单元格中的更改</span><span class="sxs-lookup"><span data-stu-id="f960e-138">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+-   [<span data-ttu-id="a14f5-138">如何：执行自定义操作在基于 Windows 窗体 DataGridView 控件单元格中的更改</span><span class="sxs-lookup"><span data-stu-id="a14f5-138">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
   
--   [<span data-ttu-id="f960e-139">如何：使用户能够将多个单元格从 Windows 窗体 DataGridView 控件复制到剪贴板</span><span class="sxs-lookup"><span data-stu-id="f960e-139">How to: Enable Users to Copy Multiple Cells to the Clipboard from the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+-   [<span data-ttu-id="a14f5-139">如何：使用户能够将多个单元格从 Windows 窗体 DataGridView 控件复制到剪贴板</span><span class="sxs-lookup"><span data-stu-id="a14f5-139">How to: Enable Users to Copy Multiple Cells to the Clipboard from the Windows Forms DataGridView Control</span></span>](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
   
--   [<span data-ttu-id="f960e-140">如何：Windows 窗体 DataGridView 控件中的单个单元格添加工具提示</span><span class="sxs-lookup"><span data-stu-id="f960e-140">How to: Add ToolTips to Individual Cells in a Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-140">如何：Windows 窗体 DataGridView 控件中的单个单元格添加工具提示</span><span class="sxs-lookup"><span data-stu-id="a14f5-140">How to: Add ToolTips to Individual Cells in a Windows Forms DataGridView Control</span></span>](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-141">如何：在 Windows 窗体 DataGridView 控件的单元格中显示图像</span><span class="sxs-lookup"><span data-stu-id="f960e-141">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-141">如何：在 Windows 窗体 DataGridView 控件的单元格中显示图像</span><span class="sxs-lookup"><span data-stu-id="a14f5-141">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-142">如何：自定义 Windows 窗体 DataGridView 控件中的排序</span><span class="sxs-lookup"><span data-stu-id="f960e-142">How to: Customize Sorting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-142">如何：自定义 Windows 窗体 DataGridView 控件中的排序</span><span class="sxs-lookup"><span data-stu-id="a14f5-142">How to: Customize Sorting in the Windows Forms DataGridView Control</span></span>](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
   
-## <a name="column-manipulation-examples"></a><span data-ttu-id="f960e-143">列操作示例</span><span class="sxs-lookup"><span data-stu-id="f960e-143">Column Manipulation Examples</span></span>  
+## <a name="column-manipulation-examples"></a><span data-ttu-id="a14f5-143">列操作示例</span><span class="sxs-lookup"><span data-stu-id="a14f5-143">Column Manipulation Examples</span></span>  
   
--   [<span data-ttu-id="f960e-144">如何：冻结 Windows 窗体 DataGridView 控件中的列</span><span class="sxs-lookup"><span data-stu-id="f960e-144">How to: Freeze Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-144">如何：冻结 Windows 窗体 DataGridView 控件中的列</span><span class="sxs-lookup"><span data-stu-id="a14f5-144">How to: Freeze Columns in the Windows Forms DataGridView Control</span></span>](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-145">如何：启用 Windows 窗体 DataGridView 控件中的列重新排序</span><span class="sxs-lookup"><span data-stu-id="f960e-145">How to: Enable Column Reordering in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-145">如何：启用 Windows 窗体 DataGridView 控件中的列重新排序</span><span class="sxs-lookup"><span data-stu-id="a14f5-145">How to: Enable Column Reordering in the Windows Forms DataGridView Control</span></span>](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-146">如何：更改 Windows 窗体 DataGridView 控件中的列顺序</span><span class="sxs-lookup"><span data-stu-id="f960e-146">How to: Change the Order of Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-146">如何：更改 Windows 窗体 DataGridView 控件中的列顺序</span><span class="sxs-lookup"><span data-stu-id="a14f5-146">How to: Change the Order of Columns in the Windows Forms DataGridView Control</span></span>](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-147">如何：在 Windows 窗体 DataGridView 控件中隐藏列</span><span class="sxs-lookup"><span data-stu-id="f960e-147">How to: Hide Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-147">如何：在 Windows 窗体 DataGridView 控件中隐藏列</span><span class="sxs-lookup"><span data-stu-id="a14f5-147">How to: Hide Columns in the Windows Forms DataGridView Control</span></span>](how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-148">如何：隐藏 Windows 窗体 DataGridView 控件中的列标题</span><span class="sxs-lookup"><span data-stu-id="f960e-148">How to: Hide Column Headers in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-148">如何：隐藏 Windows 窗体 DataGridView 控件中的列标题</span><span class="sxs-lookup"><span data-stu-id="a14f5-148">How to: Hide Column Headers in the Windows Forms DataGridView Control</span></span>](how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-149">如何：使列成为只读，Windows 窗体 DataGridView 控件中</span><span class="sxs-lookup"><span data-stu-id="f960e-149">How to: Make Columns Read-Only in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-149">如何：使列成为只读，Windows 窗体 DataGridView 控件中</span><span class="sxs-lookup"><span data-stu-id="a14f5-149">How to: Make Columns Read-Only in the Windows Forms DataGridView Control</span></span>](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-150">如何：设置 Windows 窗体 DataGridView 控件中的列排序模式</span><span class="sxs-lookup"><span data-stu-id="f960e-150">How to: Set the Sort Modes for Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-150">如何：设置 Windows 窗体 DataGridView 控件中的列排序模式</span><span class="sxs-lookup"><span data-stu-id="a14f5-150">How to: Set the Sort Modes for Columns in the Windows Forms DataGridView Control</span></span>](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-151">如何：使用的 Windows 窗体 DataGridView 控件中的图像列</span><span class="sxs-lookup"><span data-stu-id="f960e-151">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-151">如何：使用的 Windows 窗体 DataGridView 控件中的图像列</span><span class="sxs-lookup"><span data-stu-id="a14f5-151">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-152">如何：操作 Windows 窗体 DataGridView 控件中的列</span><span class="sxs-lookup"><span data-stu-id="f960e-152">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-152">如何：操作 Windows 窗体 DataGridView 控件中的列</span><span class="sxs-lookup"><span data-stu-id="a14f5-152">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
   
-## <a name="row-and-column-sizing-examples"></a><span data-ttu-id="f960e-153">行和列大小调整示例</span><span class="sxs-lookup"><span data-stu-id="f960e-153">Row and Column Sizing Examples</span></span>  
+## <a name="row-and-column-sizing-examples"></a><span data-ttu-id="a14f5-153">行和列大小调整示例</span><span class="sxs-lookup"><span data-stu-id="a14f5-153">Row and Column Sizing Examples</span></span>  
   
--   [<span data-ttu-id="f960e-154">Windows 窗体 DataGridView 控件中的列填充模式</span><span class="sxs-lookup"><span data-stu-id="f960e-154">Column Fill Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-154">Windows 窗体 DataGridView 控件中的列填充模式</span><span class="sxs-lookup"><span data-stu-id="a14f5-154">Column Fill Mode in the Windows Forms DataGridView Control</span></span>](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-155">如何：设置 Windows 窗体 DataGridView 控件的大小调整模式</span><span class="sxs-lookup"><span data-stu-id="f960e-155">How to: Set the Sizing Modes of the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-155">如何：设置 Windows 窗体 DataGridView 控件的大小调整模式</span><span class="sxs-lookup"><span data-stu-id="a14f5-155">How to: Set the Sizing Modes of the Windows Forms DataGridView Control</span></span>](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-156">如何：以编程方式调整大小以适应 Windows 窗体 DataGridView 控件中内容的单元格</span><span class="sxs-lookup"><span data-stu-id="f960e-156">How to: Programmatically Resize Cells to Fit Content in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+-   [<span data-ttu-id="a14f5-156">如何：以编程方式调整大小以适应 Windows 窗体 DataGridView 控件中内容的单元格</span><span class="sxs-lookup"><span data-stu-id="a14f5-156">How to: Programmatically Resize Cells to Fit Content in the Windows Forms DataGridView Control</span></span>](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
   
--   [<span data-ttu-id="f960e-157">如何：在 Windows 窗体 DataGridView 控件中的内容更改时自动调整大小的单元格</span><span class="sxs-lookup"><span data-stu-id="f960e-157">How to: Automatically Resize Cells When Content Changes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+-   [<span data-ttu-id="a14f5-157">如何：在 Windows 窗体 DataGridView 控件中的内容更改时自动调整大小的单元格</span><span class="sxs-lookup"><span data-stu-id="a14f5-157">How to: Automatically Resize Cells When Content Changes in the Windows Forms DataGridView Control</span></span>](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
   
-## <a name="selection-examples"></a><span data-ttu-id="f960e-158">选择示例</span><span class="sxs-lookup"><span data-stu-id="f960e-158">Selection Examples</span></span>  
+## <a name="selection-examples"></a><span data-ttu-id="a14f5-158">选择示例</span><span class="sxs-lookup"><span data-stu-id="a14f5-158">Selection Examples</span></span>  
   
--   [<span data-ttu-id="f960e-159">如何：设置 Windows 窗体 DataGridView 控件的选择模式</span><span class="sxs-lookup"><span data-stu-id="f960e-159">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-159">如何：设置 Windows 窗体 DataGridView 控件的选择模式</span><span class="sxs-lookup"><span data-stu-id="a14f5-159">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-160">如何：Windows 窗体 DataGridView 控件中获取选定的单元格、 行和列</span><span class="sxs-lookup"><span data-stu-id="f960e-160">How to: Get the Selected Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/selected-cells-rows-and-columns-datagridview.md)  
+-   [<span data-ttu-id="a14f5-160">如何：Windows 窗体 DataGridView 控件中获取选定的单元格、 行和列</span><span class="sxs-lookup"><span data-stu-id="a14f5-160">How to: Get the Selected Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](selected-cells-rows-and-columns-datagridview.md)  
   
--   [<span data-ttu-id="f960e-161">如何：获取和设置 Windows 窗体 DataGridView 控件中的当前单元格</span><span class="sxs-lookup"><span data-stu-id="f960e-161">How to: Get and Set the Current Cell in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/get-and-set-the-current-cell-wf-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-161">如何：获取和设置 Windows 窗体 DataGridView 控件中的当前单元格</span><span class="sxs-lookup"><span data-stu-id="a14f5-161">How to: Get and Set the Current Cell in the Windows Forms DataGridView Control</span></span>](get-and-set-the-current-cell-wf-datagridview-control.md)  
   
-## <a name="advanced-customization-examples"></a><span data-ttu-id="f960e-162">高级自定义示例</span><span class="sxs-lookup"><span data-stu-id="f960e-162">Advanced Customization Examples</span></span>  
+## <a name="advanced-customization-examples"></a><span data-ttu-id="a14f5-162">高级自定义示例</span><span class="sxs-lookup"><span data-stu-id="a14f5-162">Advanced Customization Examples</span></span>  
   
--   [<span data-ttu-id="f960e-163">如何：自定义 Windows 窗体 DataGridView 控件中单元格的外观</span><span class="sxs-lookup"><span data-stu-id="f960e-163">How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [<span data-ttu-id="a14f5-163">如何：自定义 Windows 窗体 DataGridView 控件中单元格的外观</span><span class="sxs-lookup"><span data-stu-id="a14f5-163">How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control</span></span>](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [<span data-ttu-id="f960e-164">如何：自定义 Windows 窗体 DataGridView 控件中的行的外观</span><span class="sxs-lookup"><span data-stu-id="f960e-164">How to: Customize the Appearance of Rows in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [<span data-ttu-id="a14f5-164">如何：自定义 Windows 窗体 DataGridView 控件中的行的外观</span><span class="sxs-lookup"><span data-stu-id="a14f5-164">How to: Customize the Appearance of Rows in the Windows Forms DataGridView Control</span></span>](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
--   [<span data-ttu-id="f960e-165">如何：通过扩展行为和外观自定义单元格和 Windows 窗体 DataGridView 控件中的列</span><span class="sxs-lookup"><span data-stu-id="f960e-165">How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance</span></span>](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
+-   [<span data-ttu-id="a14f5-165">如何：通过扩展行为和外观自定义单元格和 Windows 窗体 DataGridView 控件中的列</span><span class="sxs-lookup"><span data-stu-id="a14f5-165">How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance</span></span>](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
   
--   [<span data-ttu-id="f960e-166">如何：禁用 Windows 窗体 DataGridView 控件中的按钮列中的按钮</span><span class="sxs-lookup"><span data-stu-id="f960e-166">How to: Disable Buttons in a Button Column in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/disable-buttons-in-a-button-column-in-the-datagrid.md)  
+-   [<span data-ttu-id="a14f5-166">如何：禁用 Windows 窗体 DataGridView 控件中的按钮列中的按钮</span><span class="sxs-lookup"><span data-stu-id="a14f5-166">How to: Disable Buttons in a Button Column in the Windows Forms DataGridView Control</span></span>](disable-buttons-in-a-button-column-in-the-datagrid.md)  
   
--   [<span data-ttu-id="f960e-167">如何：在 Windows 窗体 DataGridView 单元格中的宿主控件</span><span class="sxs-lookup"><span data-stu-id="f960e-167">How to: Host Controls in Windows Forms DataGridView Cells</span></span>](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)  
+-   [<span data-ttu-id="a14f5-167">如何：在 Windows 窗体 DataGridView 单元格中的宿主控件</span><span class="sxs-lookup"><span data-stu-id="a14f5-167">How to: Host Controls in Windows Forms DataGridView Cells</span></span>](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
   
-## <a name="advanced-data-examples"></a><span data-ttu-id="f960e-168">高级的数据示例</span><span class="sxs-lookup"><span data-stu-id="f960e-168">Advanced Data Examples</span></span>  
+## <a name="advanced-data-examples"></a><span data-ttu-id="a14f5-168">高级的数据示例</span><span class="sxs-lookup"><span data-stu-id="a14f5-168">Advanced Data Examples</span></span>  
   
--   [<span data-ttu-id="f960e-169">如何：在 Windows 窗体 DataGridView 控件中实现虚拟模式</span><span class="sxs-lookup"><span data-stu-id="f960e-169">How to: Implement Virtual Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-169">如何：在 Windows 窗体 DataGridView 控件中实现虚拟模式</span><span class="sxs-lookup"><span data-stu-id="a14f5-169">How to: Implement Virtual Mode in the Windows Forms DataGridView Control</span></span>](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-170">演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式</span><span class="sxs-lookup"><span data-stu-id="f960e-170">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
+-   [<span data-ttu-id="a14f5-170">演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式</span><span class="sxs-lookup"><span data-stu-id="a14f5-170">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-wf-datagridview-control.md)  
   
--   [<span data-ttu-id="f960e-171">在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式</span><span class="sxs-lookup"><span data-stu-id="f960e-171">Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
+-   [<span data-ttu-id="a14f5-171">在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式</span><span class="sxs-lookup"><span data-stu-id="a14f5-171">Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
   
-## <a name="see-also"></a><span data-ttu-id="f960e-172">请参阅</span><span class="sxs-lookup"><span data-stu-id="f960e-172">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a14f5-172">请参阅</span><span class="sxs-lookup"><span data-stu-id="a14f5-172">See also</span></span>
 - <xref:System.Windows.Forms.DataGridView>
-- [<span data-ttu-id="f960e-173">DataGridView 控件概述</span><span class="sxs-lookup"><span data-stu-id="f960e-173">DataGridView Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
+- [<span data-ttu-id="a14f5-173">DataGridView 控件概述</span><span class="sxs-lookup"><span data-stu-id="a14f5-173">DataGridView Control Overview</span></span>](datagridview-control-overview-windows-forms.md)
