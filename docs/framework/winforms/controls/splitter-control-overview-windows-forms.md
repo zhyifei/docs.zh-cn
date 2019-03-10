@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 583596ec44dd5318c199d6cfc33901dbd952b115
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e3e46c9d4cf118bb846e5d9efefeb0d57fea567
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522604"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703185"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Splitter 控件概述（Windows 窗体）
 > [!IMPORTANT]
@@ -24,5 +24,5 @@ ms.locfileid: "54522604"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.SplitContainer>
-- [如何：在 Windows 窗体上停靠控件](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
-- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [如何：在 Windows 窗体上停靠控件](how-to-dock-controls-on-windows-forms.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 1585f6e484923d16e1613b436588467b47daeecb
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 64624508a50eb6e28337baa1a3600298e2c83fd7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746239"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710740"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>演练：创建具有专业样式的 ToolStrip 控件
 可以为应用程序的<xref:System.Windows.Forms.ToolStrip>控制专业的外观和行为，通过编写自己的类派生自<xref:System.Windows.Forms.ToolStripProfessionalRenderer>类型。  
@@ -30,7 +30,7 @@ ms.locfileid: "56746239"
   
  完成后，必须具有专业外观的 Microsoft Office® XP 控件的可重用的自定义客户端控件。  
   
- 要将本主题中的代码作为单个列表进行复制，请参阅[如何：创建具有专业样式的 ToolStrip 控件](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)。  
+ 要将本主题中的代码作为单个列表进行复制，请参阅[如何：创建具有专业样式的 ToolStrip 控件](how-to-create-a-professionally-styled-toolstrip-control.md)。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -54,7 +54,7 @@ ms.locfileid: "56746239"
 3.  添加一个新<xref:System.Windows.Forms.UserControl>项**StackViewLibrary**项目。 新的源文件基名称指定为`StackView`。  
   
 ## <a name="designing-the-stackview-control"></a>设计 StackView 控件  
- `StackView`控件是一个复合控件具有一个子<xref:System.Windows.Forms.ToolStrip>控件。 关于复合控件的详细信息，请参阅[类型的自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)。  
+ `StackView`控件是一个复合控件具有一个子<xref:System.Windows.Forms.ToolStrip>控件。 关于复合控件的详细信息，请参阅[类型的自定义控件](varieties-of-custom-controls.md)。  
   
 #### <a name="to-design-the-stackview-control"></a>若要设计 StackView 控件  
   
@@ -108,8 +108,8 @@ ms.locfileid: "56746239"
   
 4.  在 `StackView_Load` 事件处理程序中，复制并粘贴以下代码。  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#3)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StackView#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#3)]  
+     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#3)]
+     [!code-vb[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#3)]  
   
 5.  在 Windows 窗体设计器中，选择`mailStackButton`控件。  
   
@@ -125,8 +125,8 @@ ms.locfileid: "56746239"
   
 9. 将以下代码插入`stackButton_Click`事件处理程序。  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#4)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StackView#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#4)]  
+     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#4)]
+     [!code-vb[System.Windows.Forms.ToolStrip.StackView#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#4)]  
   
 10. 在 Windows 窗体设计器中，选择`calendarStackButton`控件。  
   
@@ -141,13 +141,13 @@ ms.locfileid: "56746239"
   
 1.  在代码编辑器中，将以下代码插入`StackView`类定义。 此代码将初始化为位图<xref:System.Windows.Forms.ToolStripButton>图标。  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#2)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StackView#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#2)]  
+     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#2)]
+     [!code-vb[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#2)]  
   
 2.  添加对的调用`InitializeImages`中的方法`StackView`类构造函数。  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
+     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
+     [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
   
 ## <a name="implementing-a-custom-renderer"></a>实现自定义呈现器  
  你可以自定义的大多数元素`StackView`控制我实现派生自的类<xref:System.Windows.Forms.ToolStripRenderer>类。 在此过程中，您将实现<xref:System.Windows.Forms.ToolStripProfessionalRenderer>类的自定义手柄，并绘制渐变背景的<xref:System.Windows.Forms.ToolStripButton>控件。  
@@ -158,16 +158,16 @@ ms.locfileid: "56746239"
   
      这是用于定义`StackRenderer`类，该类会重写<xref:System.Windows.Forms.ToolStripRenderer.RenderGrip>， <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder>，和<xref:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground>方法生成的自定义外观。  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#10)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StackView#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#10)]  
+     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#10)]
+     [!code-vb[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#10)]  
   
 2.  在中`StackView`控件的构造函数创建的新实例`StackRenderer`类，将分配到此实例`stackStrip`控件的<xref:System.Windows.Forms.ToolStrip.Renderer%2A>属性。  
   
-     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
-     [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
+     [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
+     [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
   
 ## <a name="testing-the-stackview-control"></a>测试 StackView 控件  
- `StackView`控件派生自<xref:System.Windows.Forms.UserControl>类。 因此，可以测试与该控件**UserControl 测试容器**。 有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+ `StackView`控件派生自<xref:System.Windows.Forms.UserControl>类。 因此，可以测试与该控件**UserControl 测试容器**。 有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
   
 #### <a name="to-test-the-stackview-control"></a>若要测试 StackView 控件  
   
@@ -178,15 +178,15 @@ ms.locfileid: "56746239"
 ## <a name="next-steps"></a>后续步骤  
  在本演练中，已使用 Office XP 控件的专业的外观来创建可重用的自定义客户端控件。 可以使用<xref:System.Windows.Forms.ToolStrip>实现多种其他用途的控件的系列：  
   
--   创建与控件的快捷菜单<xref:System.Windows.Forms.ContextMenuStrip>。 有关详细信息，请参阅[ContextMenu 组件概述](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)。  
+-   创建与控件的快捷菜单<xref:System.Windows.Forms.ContextMenuStrip>。 有关详细信息，请参阅[ContextMenu 组件概述](contextmenu-component-overview-windows-forms.md)。  
   
--   创建一个自动填充的标准菜单的窗体。 有关详细信息，请参见[演练：向窗体提供标准菜单项](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md)。  
+-   创建一个自动填充的标准菜单的窗体。 有关详细信息，请参见[演练：向窗体提供标准菜单项](walkthrough-providing-standard-menu-items-to-a-form.md)。  
   
--   创建多文档界面 (MDI) 窗体通过停靠<xref:System.Windows.Forms.ToolStrip>控件。 有关详细信息，请参阅[如何：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
+-   创建多文档界面 (MDI) 窗体通过停靠<xref:System.Windows.Forms.ToolStrip>控件。 有关详细信息，请参阅[如何：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [ToolStrip 控件](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
-- [如何：向窗体提供标准菜单项](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)
+- [ToolStrip 控件](toolstrip-control-windows-forms.md)
+- [如何：向窗体提供标准菜单项](how-to-provide-standard-menu-items-to-a-form.md)

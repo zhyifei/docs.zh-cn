@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: a46f1fd14400995fef91c117502df24eae613fac
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: cfbaac8ad9a8576d076ed34059fb62e9e0a91ebc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442550"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714653"
 ---
 # <a name="application-settings-attributes"></a>应用程序设置特性
 应用程序设置体系结构提供可应用到应用程序设置包装类或其各个属性的多个属性。 这些属性将检查在运行时由应用程序设置基础结构通常专门设置提供程序，以便使其正常运行的自定义包装器所述的需求。  
@@ -40,5 +40,5 @@ ms.locfileid: "56442550"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
-- [应用程序设置体系结构](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [应用程序设置体系结构](application-settings-architecture.md)
 - [如何：创建应用程序设置](how-to-create-application-settings.md)

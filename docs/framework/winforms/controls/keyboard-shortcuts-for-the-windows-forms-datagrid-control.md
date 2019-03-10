@@ -5,23 +5,24 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: cf79fb5594410fc479b0e2dd6f1663715e09af86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04340cf2d2c8e318ea7348c978ef943563c24da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509527"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711767"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Windows 窗体 DataGrid 控件的键盘快捷键
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  
+  <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  下表列出了可用于在 Windows 窗体中导航的键盘快捷键<xref:System.Windows.Forms.DataGrid>控件：  
   
 |操作|快捷键|  
 |------------|--------------|  
 |完成一个单元格输入并向下移动到下一个单元格。<br /><br /> 如果焦点在子表链接，则导航到该表。|Enter|  
-|如果在单元格编辑模式下则取消单元格编辑。<br /><br /> 如果处于字幕选择模式，则取消编辑的行。|Esc|  
+|如果在单元格编辑模式下则取消单元格编辑。<br /><br /> 如果处于字幕选择模式，则取消编辑的行。|ESC|  
 |编辑单元格时，请删除在插入点之前的字符。|退格符|  
 |编辑单元格时，请删除后插入点的字符。|DELETE|  
 |移动到当前行中的第一个单元。|Home|  
@@ -51,5 +52,5 @@ ms.locfileid: "54509527"
 |输入<xref:System.DBNull.Value?displayProperty=nameWithType>在编辑模式下的单元格中的值。|Ctrl+0|  
   
 ## <a name="see-also"></a>请参阅
-- [DataGrid 控件概述](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
-- [DataGrid 控件](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [DataGrid 控件概述](datagrid-control-overview-windows-forms.md)
+- [DataGrid 控件](datagrid-control-windows-forms.md)

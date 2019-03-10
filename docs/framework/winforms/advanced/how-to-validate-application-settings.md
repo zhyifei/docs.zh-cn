@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496278"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705826"
 ---
 # <a name="how-to-validate-application-settings"></a>如何：验证应用程序设置
 本主题演示如何在保留应用程序设置前先验证它们。  
@@ -40,9 +40,9 @@ ms.locfileid: "54496278"
   
 -   如及其关联的操作之前引发的事件<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>并<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>，使用<xref:System.ComponentModel.CancelEventArgs>参数来取消该操作。  
   
- 有关事件处理的详细信息，请参阅[事件处理程序概述](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)。  
+ 有关事件处理的详细信息，请参阅[事件处理程序概述](../event-handlers-overview-windows-forms.md)。  
   
- 以下过程介绍如何测试使用的有效的出生日期<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>或<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>事件。 这些过程是在假定已创建应用程序设置的情况下编写的；在此示例中，我们将对名为 `DateOfBirth` 的设置执行边界检查。 有关创建设置的详细信息，请参阅[如何：创建应用程序设置](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。  
+ 以下过程介绍如何测试使用的有效的出生日期<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>或<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>事件。 这些过程是在假定已创建应用程序设置的情况下编写的；在此示例中，我们将对名为 `DateOfBirth` 的设置执行边界检查。 有关创建设置的详细信息，请参阅[如何：创建应用程序设置](how-to-create-application-settings.md)。  
   
 ### <a name="to-obtain-the-application-settings-object"></a>获取应用程序设置对象  
   
@@ -161,5 +161,5 @@ ms.locfileid: "54496278"
     ```  
   
 ## <a name="see-also"></a>请参阅
-- [在 Windows 窗体中创建事件处理程序](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [如何：创建应用程序设置](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+- [在 Windows 窗体中创建事件处理程序](../creating-event-handlers-in-windows-forms.md)
+- [如何：创建应用程序设置](how-to-create-application-settings.md)

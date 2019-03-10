@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-ms.openlocfilehash: d1a465fb7c1cd6d4064a077e592daefebf590714
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e82f406b4fdca93df7a811eea5506846d56fda28
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564820"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703044"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>如何：设置笔的宽度和对齐方式
 当你创建<xref:System.Drawing.Pen>，可以作为构造函数的参数之一提供钢笔的宽度。 你可以使用笔的宽度<xref:System.Drawing.Pen.Width%2A>属性的<xref:System.Drawing.Pen>类。  
@@ -28,12 +28,12 @@ ms.locfileid: "54564820"
   
 -   设置的值<xref:System.Drawing.Pen.Alignment%2A>属性设置为<xref:System.Drawing.Drawing2D.PenAlignment.Center>（默认值） 以指定使用绿色笔绘制的像素会位于理论的线条。 下图显示了生成的行。  
   
-     ![笔](../../../../docs/framework/winforms/advanced/media/pens1a.gif "pens1A")  
+     ![笔](./media/pens1a.gif "pens1A")  
   
      下面的代码示例绘制一个矩形两次： 一次用黑色钢笔的宽度为 1，一次绿色手写笔的宽度为 10。  
   
-     [!code-csharp[System.Drawing.UsingAPen#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#41)]
-     [!code-vb[System.Drawing.UsingAPen#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#41)]  
+     [!code-csharp[System.Drawing.UsingAPen#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#41)]
+     [!code-vb[System.Drawing.UsingAPen#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#41)]  
   
 ### <a name="to-change-the-alignment-of-a-pen"></a>若要更改笔的对齐方式  
   
@@ -41,22 +41,22 @@ ms.locfileid: "54564820"
   
      下图显示了所得矩形的大小。  
   
-     ![笔](../../../../docs/framework/winforms/advanced/media/pens2.gif "pens2")  
+     ![笔](./media/pens2.gif "pens2")  
   
-     [!code-csharp[System.Drawing.UsingAPen#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#42)]
-     [!code-vb[System.Drawing.UsingAPen#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#42)]  
+     [!code-csharp[System.Drawing.UsingAPen#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#42)]
+     [!code-vb[System.Drawing.UsingAPen#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#42)]  
   
 ### <a name="to-create-an-inset-pen"></a>若要创建嵌入钢笔  
   
 -   通过按如下所示修改前面的代码示例中的第三个语句更改绿色笔对齐方式：  
   
-     [!code-csharp[System.Drawing.UsingAPen#43](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
-     [!code-vb[System.Drawing.UsingAPen#43](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  
+     [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
+     [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  
   
      现在宽绿线中的像素显示矩形的内部，如下图中所示。  
   
-     ![笔](../../../../docs/framework/winforms/advanced/media/pens3.gif "pens3")  
+     ![笔](./media/pens3.gif "pens3")  
   
 ## <a name="see-also"></a>请参阅
-- [使用笔绘制直线和形状](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
-- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [使用笔绘制直线和形状](using-a-pen-to-draw-lines-and-shapes.md)
+- [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)

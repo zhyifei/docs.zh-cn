@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cb552752c1693ce8008eb57e0703882b7281830
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366695"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705982"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>如何：承载多个版本的工作流的并排方案
 `WorkflowIdentity` 为工作流应用程序开发人员提供了一种将名称和版本与工作流定义关联的方法，这种方法还可用于将此信息与持久化工作流实例相关联。 工作流应用程序开发人员可以使用这些标识信息，为一些情景（如并行执行一个工作流定义的多个版本）提供支持，并为其他功能（如动态更新）提供基础。 该教程中的此步骤演示了如何使用 `WorkflowIdentity` 来同时承载多个版本的工作流。
@@ -21,22 +21,22 @@ ms.locfileid: "57366695"
 ## <a name="in-this-topic"></a>在本主题中  
  在该教程的此步骤中，工作流中的 `WriteLine` 活动已得到修改以提供其他信息，并且添加了一个新的 `WriteLine` 活动。 将存储原始工作流程序集的副本，并更新主机应用程序以便其可同时在原始工作流和更新后的工作流中运行。  
   
--   [制作 NumberGuessWorkflowActivities 项目的副本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
+-   [制作 NumberGuessWorkflowActivities 项目的副本](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [更新工作流](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [更新工作流](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [若要更新的状态机工作流](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [若要更新的状态机工作流](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [若要更新流程图工作流](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [若要更新流程图工作流](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [若要更新的顺序工作流](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [若要更新的顺序工作流](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [若要更新 WorkflowVersionMap 以包括以前的工作流版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [若要更新 WorkflowVersionMap 以包括以前的工作流版本](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [若要生成并运行应用程序](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [若要生成并运行应用程序](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  在执行本主题中的步骤之前，请运行该应用程序，启动每个类型的多个工作流，并针对每个工作流进行一个或两个猜测。 此步骤和下一步中使用这些持久化工作流[如何：更新正在运行的工作流实例的定义](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。
+>  在执行本主题中的步骤之前，请运行该应用程序，启动每个类型的多个工作流，并针对每个工作流进行一个或两个猜测。 此步骤和下一步中使用这些持久化工作流[如何：更新正在运行的工作流实例的定义](how-to-update-the-definition-of-a-running-workflow-instance.md)。
 
 > [!NOTE]
 >  入门教程中的每个步骤都依赖于前面的步骤。 如果未完成前面的步骤可以下载已完成的版本的教程[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
@@ -60,7 +60,7 @@ ms.locfileid: "57366695"
     > [!NOTE]
     >  本主题中的步骤演示了一种对用于包含多个版本的工作流的程序集进行管理的方法。 也可以使用其他方法，例如，对程序集进行强命名，并在全局程序集缓冲中注册这些程序集。
 
-8.  创建一个名为的新文件夹**NumberGuessWorkflowActivities_du**所在的同一文件夹中**NumberGuessWorkflowHost**， **NumberGuessWorkflowActivities**，和新添加**PreviousVersions**文件夹，并将所有文件和子文件夹中的复制**NumberGuessWorkflowActivities**到新文件夹**NumberGuessWorkflowActivities_du**文件夹。 在使用活动的初始版本的项目的此备份副本[如何：更新正在运行的工作流实例的定义](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。
+8.  创建一个名为的新文件夹**NumberGuessWorkflowActivities_du**所在的同一文件夹中**NumberGuessWorkflowHost**， **NumberGuessWorkflowActivities**，和新添加**PreviousVersions**文件夹，并将所有文件和子文件夹中的复制**NumberGuessWorkflowActivities**到新文件夹**NumberGuessWorkflowActivities_du**文件夹。 在使用活动的初始版本的项目的此备份副本[如何：更新正在运行的工作流实例的定义](how-to-update-the-definition-of-a-running-workflow-instance.md)。
 
 9. 重新打开**WF45GettingStartedTutorial** Visual Studio 2012 中的解决方案。
 
@@ -581,4 +581,4 @@ ms.locfileid: "57366695"
 
 4.  切换回数字猜测应用程序，然后选择在进行更新前启动的一个工作流。 您可通过查看在状态窗口下面显示的版本信息来识别当前选择的工作流的版本。 输入一些猜测，并注意状态更新与前一个版本的 `WriteLine` 活动输出相符，并且不包括用户猜测。 这是因为，这些工作流使用的是不具有 `WriteLine` 更新的前一个工作流定义。
 
-     在下一步，[如何：更新运行工作流实例的定义](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)，运行`v1`工作流实例会更新，因此，它们包含的新功能的方式`v2`实例。
+     在下一步，[如何：更新运行工作流实例的定义](how-to-update-the-definition-of-a-running-workflow-instance.md)，运行`v1`工作流实例会更新，因此，它们包含的新功能的方式`v2`实例。

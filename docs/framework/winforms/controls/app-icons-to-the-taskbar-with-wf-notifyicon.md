@@ -13,12 +13,12 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 925134e4a0317322d7a4f4cfdc9ac8e3780cf9e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04f6b98a2206371a2838b3a6952feeafcd788309
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650676"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714250"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>如何：将应用程序图标添加到使用 Windows 窗体 NotifyIcon 组件任务栏
 Windows 窗体<xref:System.Windows.Forms.NotifyIcon>组件在任务栏的状态通知区域显示一个图标。 若要在状态区域中显示多个图标，必须有多个<xref:System.Windows.Forms.NotifyIcon>窗体上的组件。 若要设置控件显示的图标，使用<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 此外可以编写代码<xref:System.Windows.Forms.NotifyIcon.DoubleClick>事件处理程序，以便当用户双击该图标出现该问题。 例如，您能够为用户配置后台进程的图标表示显示一个对话框。  
@@ -28,7 +28,7 @@ Windows 窗体<xref:System.Windows.Forms.NotifyIcon>组件在任务栏的状态�
   
 ### <a name="to-set-the-icon"></a>若要设置图标  
   
-1.  将一个值赋给<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 值必须属于类型`System.Drawing.Icon`和可以从.ico 文件加载。 在代码中，或单击省略号按钮，可以指定图标文件 (![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.NotifyIcon.Icon%2A>中的属性**属性**窗口中，，然后选择中的文件**打开**出现的对话框。  
+1.  将一个值赋给<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 值必须属于类型`System.Drawing.Icon`和可以从.ico 文件加载。 在代码中，或单击省略号按钮，可以指定图标文件 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.NotifyIcon.Icon%2A>中的属性**属性**窗口中，，然后选择中的文件**打开**出现的对话框。  
   
 2.  将 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 属性设置为 `true`。  
   
@@ -74,6 +74,6 @@ Windows 窗体<xref:System.Windows.Forms.NotifyIcon>组件在任务栏的状态�
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [如何：使用 Windows 窗体 NotifyIcon 组件关联快捷菜单](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
-- [NotifyIcon 组件](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
-- [NotifyIcon 组件概述](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+- [如何：使用 Windows 窗体 NotifyIcon 组件关联快捷菜单](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [NotifyIcon 组件](notifyicon-component-windows-forms.md)
+- [NotifyIcon 组件概述](notifyicon-component-overview-windows-forms.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da30ae3f32ebbfabbdf35dd939c27b8d88e7e755
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed019dc4f1e6b99c9fa1d001c94af45802336ba6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696862"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715511"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET 本机应用中的运行时异常
 请务必在通用 Windows 平台应用程序的目标平台上测试它们的发布版本，因为调试和发布配置完全不同。 默认情况下，调试配置使用 .NET Core 运行时来编译应用程序，但发布配置使用 .NET 本机将应用程序编译为本机代码。  
@@ -60,5 +60,5 @@ Additional information: Value does not fall within the expected range.
  若要获取完整的堆栈，请改为运行调试版本。  
   
 ## <a name="see-also"></a>请参阅
-- [调试.NET 本机 Windows 通用应用](https://blogs.msdn.com/b/visualstudioalm/archive/2015/07/29/debugging-net-native-windows-universal-apps.aspx)
+- [调试.NET 本机 Windows 通用应用](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)

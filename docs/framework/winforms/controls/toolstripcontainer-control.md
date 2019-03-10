@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: 569fccfffe1d117d7ab404f72d0275e7391926da
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d0b8d812fd13be090f42bf4fb3ea84cedd1c07a7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746793"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716844"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer 控件
 <xref:System.Windows.Forms.ToolStrip> 控件通过使用 <xref:System.Windows.Forms.ToolStripContainer> 而具有内置漂浮功能（停靠时在工具区域中共享水平或垂直空间）。  
@@ -19,13 +19,13 @@ ms.locfileid: "56746793"
  本节中的主题介绍可用于将 <xref:System.Windows.Forms.ToolStripContainer> 功能构建到应用程序中的概念和技术。  
   
 ## <a name="in-this-section"></a>本节内容  
- [ToolStripContainer 控件概述](../../../../docs/framework/winforms/controls/toolstripcontainer-control-overview.md)  
+ [ToolStripContainer 控件概述](toolstripcontainer-control-overview.md)  
  提供介绍 Windows 窗体 <xref:System.Windows.Forms.ToolStripContainer> 控件的用途和主要概念的主题。  
   
- [如何：向窗体添加 ToolStripContainer](../../../../docs/framework/winforms/controls/how-to-add-a-toolstripcontainer-to-a-form.md)  
+ [如何：向窗体添加 ToolStripContainer](how-to-add-a-toolstripcontainer-to-a-form.md)  
  演示如何向应用程序添加 <xref:System.Windows.Forms.ToolStripContainer>，以及如何向 <xref:System.Windows.Forms.ToolStripContainer> 的特定面板添加控件。  
   
- [如何：向 ToolStripContentPanel 添加控件](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
+ [如何：向 ToolStripContentPanel 添加控件](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
  演示如何向 <xref:System.Windows.Forms.ToolStripContentPanel> 添加控件。  
   
 ## <a name="reference"></a>参考  
@@ -42,4 +42,4 @@ ms.locfileid: "56746793"
  提供关于 <xref:System.Windows.Forms.ToolStripPanel> 控件的参考文档。  
   
 ## <a name="see-also"></a>请参阅
-- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

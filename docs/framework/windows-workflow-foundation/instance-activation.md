@@ -2,12 +2,12 @@
 title: 实例激活
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 78f134ca2d78261a5f6ff9376bd9a98116315f0c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366040"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703391"
 ---
 # <a name="instance-activation"></a>实例激活
 SQL 工作流实例存储运行一个内部任务，该任务将定期唤醒并检测持久性数据库中是否有可运行或可激活的工作流实例。 如果找到可运行的工作流实例，SQL 工作流实例存储将通知能够激活该实例的工作流主机。 如果实例存储找到可激活的工作流实例，它将通知用于激活工作流主机的泛型主机，而泛型主机将运行此工作流实例。 本主题的以下各节详细说明了实例激活过程。  
@@ -40,4 +40,4 @@ SQL 工作流实例存储运行一个内部任务，该任务将定期唤醒并�
  为了实现 WAS 激活，泛型主机需要一组激活参数来派生激活新主机所在的终结点地址。 用于 WAS 激活的激活参数包括：站点名称、应用程序路径（相对于站点）和服务路径（相对于应用程序）。 SQL 工作流实例存储在执行 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand> 期间存储这些激活参数。  
   
 ## <a name="runnable-instances-detection-period"></a>可运行实例的检测周期  
- **可运行实例的检测周期**SQL 工作流实例存储的属性指定的时间段后将 SQL 工作流实例存储运行一个检测任务，以检测任何可运行或可激活的工作流上一检测周期后持久性数据库中的实例。 请参阅[可运行实例的检测周期](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md)有关此属性的详细信息。
+ **可运行实例的检测周期**SQL 工作流实例存储的属性指定的时间段后将 SQL 工作流实例存储运行一个检测任务，以检测任何可运行或可激活的工作流上一检测周期后持久性数据库中的实例。 请参阅[可运行实例的检测周期](runnable-instances-detection-period.md)有关此属性的详细信息。

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: 1f6d721edc4f889c2da8ece63f262c7fb55192bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95343ad2c7bc6a83bc4d935f33712ab910d658ff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707695"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705813"
 ---
 # <a name="how-to-crop-and-scale-images"></a>如何：裁剪和缩放图像
 <xref:System.Drawing.Graphics>类提供了若干<xref:System.Drawing.Graphics.DrawImage%2A>方法，其中一些具有可用于裁剪和缩放图像的源和目标矩形参数。  
@@ -27,14 +27,14 @@ ms.locfileid: "54707695"
   
  下图显示了原始 apple 和缩放、 裁剪 apple。  
   
- ![裁剪和缩放](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")  
+ ![裁剪和缩放](./media/cscropscale1.png "csCropScale1")  
   
- [!code-csharp[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.WorkingWithImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。 请务必替换`Apple.gif`与图像文件名称和在您的系统都有效的路径。  
   
 ## <a name="see-also"></a>请参阅
-- [图像、位图和图元文件](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [使用图像、位图、图标和图元文件](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [图像、位图和图元文件](images-bitmaps-and-metafiles.md)
+- [使用图像、位图、图标和图元文件](working-with-images-bitmaps-icons-and-metafiles.md)

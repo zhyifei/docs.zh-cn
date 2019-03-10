@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], changing
 - application settings [Windows Forms], between application sessions
 ms.assetid: 1a85911f-97b2-476c-930b-83379edd890c
-ms.openlocfilehash: 475e57e8bfdd5f3296c6af0fb20a472c729ea75c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1626cea581e5c180665d0ce805dea3e67f27a05
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540710"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714354"
 ---
 # <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a>如何：更改应用程序会话之间设置的值
 有时，你可能想要更改设置后编译和部署应用程序的应用程序会话之间的值。 例如，你可能想要更改连接字符串以指向正确的数据库的位置。 由于编译和部署应用程序后，设计时工具不可用，则必须更改文件中手动设置值。  
@@ -30,5 +30,5 @@ ms.locfileid: "54540710"
 3.  键入您的设置的新值并保存文件。  
   
 ## <a name="see-also"></a>请参阅
-- [使用应用程序设置和用户设置](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
-- [应用程序设置概述](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [使用应用程序设置和用户设置](using-application-settings-and-user-settings.md)
+- [应用程序设置概述](application-settings-overview.md)

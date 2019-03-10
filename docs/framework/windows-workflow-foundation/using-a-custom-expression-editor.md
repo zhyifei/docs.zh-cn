@@ -2,12 +2,12 @@
 title: 使用自定义表达式编辑器
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 3959fdb5b75ae6e48c19130cf6e825455d8f7103
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3bbad843c5e4d409627c255be7341d364a3d36d6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526907"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716525"
 ---
 # <a name="using-a-custom-expression-editor"></a>使用自定义表达式编辑器
 可以实现自定义表达式编辑器，以提供更丰富或更简单的表达式编辑体验。 在以下几种情况下，您可能需要使用自定义表达式编辑器：  
@@ -276,9 +276,10 @@ namespace WpfApplication1
 ```  
   
 ### <a name="notes"></a>说明  
- 如果使用的**ExpressionTextBox**控件在自定义活动设计器中，它不需要创建和销毁表达式编辑器使用<xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A>并<xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A>方法的<xref:System.Activities.Presentation.View.IExpressionEditorService>接口。 <xref:System.Activities.Presentation.View.ExpressionTextBox> 类可为您管理此过程。  
+ 如果使用的**ExpressionTextBox**控件在自定义活动设计器中，它不需要创建和销毁表达式编辑器使用<xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A>并<xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A>方法的<xref:System.Activities.Presentation.View.IExpressionEditorService>接口。 
+  <xref:System.Activities.Presentation.View.ExpressionTextBox> 类可为您管理此过程。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Activities.Presentation.View.IExpressionEditorService>
 - <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
-- [在自定义活动设计器中使用 ExpressionTextBox](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [在自定义活动设计器中使用 ExpressionTextBox](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

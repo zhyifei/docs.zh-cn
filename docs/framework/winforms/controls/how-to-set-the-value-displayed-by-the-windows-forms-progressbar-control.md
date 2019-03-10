@@ -8,16 +8,17 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: d1be2bb2c909b8074f1092d4ce138feff5c9607f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a889d6e5cd40833353c1b294031621b7b289ac4d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496031"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715888"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>如何：设置 Windows 窗体 ProgressBar 控件显示的值
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripProgressBar> 控件取代了 <xref:System.Windows.Forms.ProgressBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ProgressBar> 控件以实现向后兼容并供将来使用。  
+>  
+  <xref:System.Windows.Forms.ToolStripProgressBar> 控件取代了 <xref:System.Windows.Forms.ProgressBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ProgressBar> 控件以实现向后兼容并供将来使用。  
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供了几个不同的方式来显示内的给定的值<xref:System.Windows.Forms.ProgressBar>控件。 你选择哪种方法取决于手头的任务或要解决此问题。 下表显示可以选择的方法。  
   
@@ -227,5 +228,5 @@ ms.locfileid: "54496031"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>
-- [ProgressBar 控件概述](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)
-- [ProgressBar 控件](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)
+- [ProgressBar 控件概述](progressbar-control-overview-windows-forms.md)
+- [ProgressBar 控件](progressbar-control-windows-forms.md)

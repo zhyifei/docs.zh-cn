@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748029"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703590"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线的 Windows 窗体上排列控件
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 Windows 窗体设计器提供许多布局工具来实现此目的。 一个最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
@@ -92,7 +92,7 @@ ms.locfileid: "56748029"
 > [!NOTE]
 >  如果窗体的<xref:System.Windows.Forms.Control.Padding%2A>属性设置为 0,0,0,0、 Windows 窗体设计器将为窗体指定隐藏<xref:System.Windows.Forms.Control.Padding%2A>9,9,9,9 的值。 若要重写此行为，分配 0,0,0,0 以外的值。  
   
-1.  更改的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Margin%2A>展开属性<xref:System.Windows.Forms.Control.Margin%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设为 0。 有关详细信息，请参阅[演练：对 Windows 窗体控件使用 Padding、 Margins 和 AutoSize 属性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)。  
+1.  更改的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Margin%2A>展开属性<xref:System.Windows.Forms.Control.Margin%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设为 0。 有关详细信息，请参阅[演练：对 Windows 窗体控件使用 Padding、 Margins 和 AutoSize 属性](windows-forms-controls-padding-autosize.md)。  
   
 2.  移动<xref:System.Windows.Forms.Button>接近直到对齐线显示在窗体的右边框的控件。 窗体的值现在提供此距离<xref:System.Windows.Forms.Control.Padding%2A>属性。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "56748029"
   
 1.  从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖到你的窗体上。  
   
-2.  重设大小<xref:System.Windows.Forms.Button>抓住角大小调整控点和拖动某个控件。 有关详细信息，请参阅[如何：调整 Windows 窗体上的控件的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)。  
+2.  重设大小<xref:System.Windows.Forms.Button>抓住角大小调整控点和拖动某个控件。 有关详细信息，请参阅[如何：调整 Windows 窗体上的控件的大小](how-to-resize-controls-on-windows-forms.md)。  
   
 3.  拖动调整大小控点，直到一位<xref:System.Windows.Forms.Button>与其他控件对齐控件的边框。 请注意，显示对齐线。 另请注意，调整大小控点会对齐到对齐线指示的位置。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "56748029"
   
 #### <a name="to-align-a-label-to-a-controls-text"></a>若要对齐到控件的文本标签  
   
-1.  从 <xref:System.Windows.Forms.TextBox> “工具箱” **将** 控件拖到你的窗体上。 当 drop<xref:System.Windows.Forms.TextBox>拖到窗体控件，单击智能标记标志符号，选择**将文本设置为 textBox1**选项。 有关详细信息，请参阅[演练：在 Windows 上使用智能标记执行常见任务窗体控件](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)。  
+1.  从 <xref:System.Windows.Forms.TextBox> “工具箱” **将** 控件拖到你的窗体上。 当 drop<xref:System.Windows.Forms.TextBox>拖到窗体控件，单击智能标记标志符号，选择**将文本设置为 textBox1**选项。 有关详细信息，请参阅[演练：在 Windows 上使用智能标记执行常见任务窗体控件](performing-common-tasks-using-smart-tags-on-wf-controls.md)。  
   
 2.  从 <xref:System.Windows.Forms.Label> “工具箱” **将** 控件拖到你的窗体上。  
   
@@ -241,7 +241,7 @@ ms.locfileid: "56748029"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [演练：布局 Windows 窗体控件与 Padding、 Margins 和 AutoSize 属性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
-- [在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [演练：布局 Windows 窗体控件与 Padding、 Margins 和 AutoSize 属性](windows-forms-controls-padding-autosize.md)
+- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)

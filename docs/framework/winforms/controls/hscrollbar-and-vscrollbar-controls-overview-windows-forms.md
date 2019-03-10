@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-ms.openlocfilehash: 4747eb4524a5fd36c27a9c40f16ef291e57bed28
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: cba28acf7e8594cd8eef88436ddde86efacada36
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664024"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714094"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar 控件和 VScrollBar 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.ScrollBar>控制用于方便地在长列表项或大量的信息的任一水平或垂直滚动应用程序或控件。 滚动条是一种常见元素的 Windows 接口，因此<xref:System.Windows.Forms.ScrollBar>控件通常用于无法从元素派生的控件<xref:System.Windows.Forms.ScrollableControl>类。 同样，许多开发人员选择合并<xref:System.Windows.Forms.ScrollBar>控制创建其自己的用户控件时。  
@@ -38,4 +38,4 @@ Windows 窗体<xref:System.Windows.Forms.ScrollBar>控制用于方便地在长�
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>
-- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

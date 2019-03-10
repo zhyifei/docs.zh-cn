@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 68a3e72f23e881bc68441e8aee9674f1a822882a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53bb8d0e301f83c25ab292b1cb6324dd5f21f100
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658908"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702355"
 ---
 # <a name="how-to-set-the-input-mask"></a>如何：设置输入的掩码
 掩码的文本框控件是支持的声明性语法来接受或拒绝用户输入增强的文本框控件。 通过设置掩码属性，可以指定允许的用户输入，而无需在应用程序中编写任何自定义验证逻辑。 有关详细信息，请参阅备注部分的<xref:System.Windows.Forms.MaskedTextBox>类。  
@@ -64,4 +64,4 @@ ms.locfileid: "54658908"
      输入掩码**掩码**属性中的**属性**窗口。  
   
 ## <a name="see-also"></a>请参阅
-- [演练：使用 MaskedTextBox 控件](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+- [演练：使用 MaskedTextBox 控件](walkthrough-working-with-the-maskedtextbox-control.md)

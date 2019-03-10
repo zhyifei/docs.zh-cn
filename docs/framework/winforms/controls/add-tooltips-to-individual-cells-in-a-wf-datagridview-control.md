@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding tooltips
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-ms.openlocfilehash: baa6f79f2e0d454412992d9c951734a3437a96cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5198bec11142e31d60f9127ecebc4ffc8ee8b8ec
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517638"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717409"
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>如何：Windows 窗体 DataGridView 控件中的单个单元格添加工具提示
 默认情况下，使用工具提示显示的值<xref:System.Windows.Forms.DataGridView>太小而无法显示其完整内容的单元格。 您可以重写此行为，但是，若要设置的各个单元格工具提示文本值。 这是要显示给用户的单元的相关的其他信息，或向用户提供的单元格内容的其他说明。 例如，如果有行显示状态图标，你可能想要提供了使用工具提示的文本说明。  
@@ -26,9 +26,9 @@ ms.locfileid: "54517638"
   
 -   设置 <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType> 属性。  
   
-     [!code-cpp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/cpp/datagridviewcell.tooltiptext.cpp#1)]
-     [!code-csharp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/CS/datagridviewcell.tooltiptext.cs#1)]
-     [!code-vb[System.Windows.Forms.DataGridViewCell.ToolTipText#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/VB/datagridviewcell.tooltiptext.vb#1)]  
+     [!code-cpp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/cpp/datagridviewcell.tooltiptext.cpp#1)]
+     [!code-csharp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/CS/datagridviewcell.tooltiptext.cs#1)]
+     [!code-vb[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/VB/datagridviewcell.tooltiptext.vb#1)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
   
@@ -47,4 +47,4 @@ ms.locfileid: "54517638"
 - <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCell>
 - <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType>
-- [使用 Windows 窗体 DataGridView 控件中的单元格、行和列编程](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [使用 Windows 窗体 DataGridView 控件中的单元格、行和列编程](programming-with-cells-rows-and-columns-in-the-datagrid.md)

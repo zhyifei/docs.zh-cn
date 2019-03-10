@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 12554ee2225dbb186392b910ddfd7c2f69695e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50b5fd16780147ad7592035a901d993495dcb878
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660211"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708946"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>如何：Move ToolStripMenuItems
 在设计时，您可以将移动整个顶级菜单及其菜单项到其他位置<xref:System.Windows.Forms.MenuStrip>。 您还可以顶级菜单之间移动单个菜单项或更改菜单中的菜单项的位置。  
@@ -73,4 +73,4 @@ ms.locfileid: "54660211"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [MenuStrip 控件概述](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [MenuStrip 控件概述](menustrip-control-overview-windows-forms.md)

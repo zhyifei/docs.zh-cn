@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-ms.openlocfilehash: f2ab0cc789b026a139e1421b72e9215bf52c6147
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92b45f026470f312fe788ed30e4ff8d172735a98
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672014"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709479"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的虚拟模式
 虚拟模式下，你可以管理之间的交互<xref:System.Windows.Forms.DataGridView>控件和自定义数据缓存。 若要实现虚拟模式下，设置<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性设置为`true`并处理一个或多个本主题中所述的事件。 通常会处理至少`CellValueNeeded`事件，它使数据缓存中的值查找的控件。  
@@ -27,14 +27,14 @@ ms.locfileid: "54672014"
 ## <a name="replacing-bound-mode"></a>替换绑定的模式  
  如果绑定的模式不满足性能需求，你可以管理通过虚拟模式事件处理程序的自定义缓存中的所有数据。 例如，可以使用的虚拟模式实现在实时数据加载机制，以仅检索数量的数据从联网的数据库必须以获得最佳性能。 此方案中使用大量的数据通过慢速网络连接或具有有限的数量的 RAM 或存储空间的客户端计算机时特别有用。  
   
- 有关在实时方案中使用的虚拟模式的详细信息，请参阅[实时数据加载 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)。  
+ 有关在实时方案中使用的虚拟模式的详细信息，请参阅[实时数据加载 Windows 窗体 DataGridView 控件中实现虚拟模式](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)。  
   
 ## <a name="virtual-mode-events"></a>虚拟模式事件  
  如果你的数据是只读的`CellValueNeeded`事件可能是您将需要处理的唯一事件。 其他虚拟模式事件使您可以启用特定功能，例如用户编辑、 添加行和删除和行级事务。  
   
  一些标准<xref:System.Windows.Forms.DataGridView>事件 （如用户添加或删除行，或单元格时的值时发生的事件进行编辑、 分析、 验证，或格式） 均处于虚拟模式非常有用。 此外可以处理事件，可维护通常不存储在绑定的数据源，例如单元格工具提示文本、 单元格和行错误文本、 单元格和行的快捷菜单数据和行高度数据中的值。  
   
- 有关实现虚拟模式来管理具有行级别的提交作用域的读/写数据的详细信息，请参阅[演练：在 Windows 中实现虚拟模式窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。  
+ 有关实现虚拟模式来管理具有行级别的提交作用域的读/写数据的详细信息，请参阅[演练：在 Windows 中实现虚拟模式窗体 DataGridView 控件](implementing-virtual-mode-wf-datagridview-control.md)。  
   
  实现虚拟模式的单元格级提交作用域的示例，请参阅<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性参考主题。  
   
@@ -60,12 +60,12 @@ ms.locfileid: "54672014"
 |<xref:System.Windows.Forms.DataGridView.RowHeightInfoNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>|由该控件用于检索或存储的数据缓存中的行的高度信息。 调用<xref:System.Windows.Forms.DataGridView.UpdateRowHeightInfo%2A>方法时更改之外的缓存的行高度信息<xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>事件处理程序以确保在控件的显示中使用的当前值。|  
   
 ## <a name="best-practices-in-virtual-mode"></a>处于虚拟模式下的最佳实践  
- 为了有效地使用大量的数据，要实现虚拟模式下，如果您还需要确保与你也会有效地工作<xref:System.Windows.Forms.DataGridView>控件本身。 有关有效地使用的单元格样式、 自动调整大小、 选择以及行共享的详细信息，请参阅[缩放 Windows 窗体 DataGridView 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
+ 为了有效地使用大量的数据，要实现虚拟模式下，如果您还需要确保与你也会有效地工作<xref:System.Windows.Forms.DataGridView>控件本身。 有关有效地使用的单元格样式、 自动调整大小、 选择以及行共享的详细信息，请参阅[缩放 Windows 窗体 DataGridView 控件的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Windows 窗体 DataGridView 控件中的性能调整](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [有关缩放 Windows 窗体 DataGridView 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
-- [在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+- [Windows 窗体 DataGridView 控件中的性能调整](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [有关缩放 Windows 窗体 DataGridView 控件的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [演练：在 Windows 窗体 DataGridView 控件中实现虚拟模式](implementing-virtual-mode-wf-datagridview-control.md)
+- [在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

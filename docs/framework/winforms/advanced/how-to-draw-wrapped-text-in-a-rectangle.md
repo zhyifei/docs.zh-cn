@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: 4afe3eb7c3525dac856751331117e0980063faad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c4e76cda37527d0167b21c0d206749ba6dab4a9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602944"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708855"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>如何：在矩形中绘制换行文本
 可以通过使用在矩形中绘制换行的文本<xref:System.Drawing.Graphics.DrawString%2A>重载的方法<xref:System.Drawing.Graphics>采用类<xref:System.Drawing.Rectangle>或<xref:System.Drawing.RectangleF>参数。 你还将使用<xref:System.Drawing.Brush>和一个<xref:System.Drawing.Font>。  
@@ -23,21 +23,21 @@ ms.locfileid: "54602944"
   
  下图显示了当你使用的矩形中绘制文本的输出<xref:System.Drawing.Graphics.DrawString%2A>方法。  
   
- ![字体文本](../../../../docs/framework/winforms/advanced/media/csfontstext2.png "csfontstext2")  
+ ![字体文本](./media/csfontstext2.png "csfontstext2")  
   
 ### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>若要绘制换行中使用 GDI + 矩形文本  
   
 1.  使用<xref:System.Drawing.Graphics.DrawString%2A>重载方法，并传递所需的文本<xref:System.Drawing.Rectangle>或<xref:System.Drawing.RectangleF>，<xref:System.Drawing.Font>和<xref:System.Drawing.Brush>。  
   
-     [!code-csharp[System.Drawing.AlignDrawnText#50](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#50)]
-     [!code-vb[System.Drawing.AlignDrawnText#50](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#50)]  
+     [!code-csharp[System.Drawing.AlignDrawnText#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#50)]
+     [!code-vb[System.Drawing.AlignDrawnText#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#50)]  
   
 ### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>绘制换行文本中用 GDI 矩形  
   
 1.  使用<xref:System.Windows.Forms.TextFormatFlags>枚举值指定的文本应与包装<xref:System.Windows.Forms.TextRenderer.DrawText%2A>重载方法，并传递所需的文本<xref:System.Drawing.Rectangle>，<xref:System.Drawing.Font>和<xref:System.Drawing.Color>。  
   
-     [!code-csharp[System.Drawing.AlignDrawnText#60](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#60)]
-     [!code-vb[System.Drawing.AlignDrawnText#60](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#60)]  
+     [!code-csharp[System.Drawing.AlignDrawnText#60](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#60)]
+     [!code-vb[System.Drawing.AlignDrawnText#60](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#60)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例需要：  
@@ -45,7 +45,7 @@ ms.locfileid: "54602944"
 -   <xref:System.Windows.Forms.PaintEventArgs> `e`这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>请参阅
-- [如何：用 GDI 绘制文本](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)
-- [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
-- [如何：构造字体系列和字体](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)
-- [如何：在指定位置绘制文本](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)
+- [如何：用 GDI 绘制文本](how-to-draw-text-with-gdi.md)
+- [使用字体和文本](using-fonts-and-text.md)
+- [如何：构造字体系列和字体](how-to-construct-font-families-and-fonts.md)
+- [如何：在指定位置绘制文本](how-to-draw-text-at-a-specified-location.md)

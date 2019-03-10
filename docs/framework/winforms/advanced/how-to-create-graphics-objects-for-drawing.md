@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: a21e049cb91ec29bcd46eb04efd78487da9a6317
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497027"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709043"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>如何：创建用于绘制图形对象
 您可以绘制线条和形状之前，呈现文本，或显示和操作图像[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，你需要创建<xref:System.Drawing.Graphics>对象。 <xref:System.Drawing.Graphics>对象表示[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]绘图图面，并且是用于创建图形的映像的对象。  
@@ -165,13 +165,13 @@ ms.locfileid: "54497027"
   
     |若要呈现|查看|  
     |---------------|---------|  
-    |直线|[如何：Windows 窗体上绘制线条](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
-    |形状|[如何：绘制空心的形状](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
-    |Text|[如何：在 Windows 窗体上绘制文本](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
-    |图像|[如何：使用 GDI + 呈现图像](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+    |直线|[如何：Windows 窗体上绘制线条](how-to-draw-a-line-on-a-windows-form.md)|  
+    |形状|[如何：绘制空心的形状](how-to-draw-an-outlined-shape.md)|  
+    |Text|[如何：在 Windows 窗体上绘制文本](how-to-draw-text-on-a-windows-form.md)|  
+    |图像|[如何：使用 GDI + 呈现图像](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>请参阅
-- [图形编程入门](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
-- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [直线、曲线和形状](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [如何：使用 GDI + 呈现图像](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+- [图形编程入门](getting-started-with-graphics-programming.md)
+- [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
+- [直线、曲线和形状](lines-curves-and-shapes.md)
+- [如何：使用 GDI + 呈现图像](how-to-render-images-with-gdi.md)

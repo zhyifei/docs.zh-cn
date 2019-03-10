@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: fd5e0b5341a712f25f9d41670f9b3ede5414dda4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ed1fb6a9a7fc8e7ded6ae0e124ca7dcbf0f3c98
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497006"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716954"
 ---
 # <a name="how-to-create-thumbnail-images"></a>如何：创建缩略图图像
 缩略图是映像的小版本。 您可以通过调用创建缩略图<xref:System.Drawing.Image.GetThumbnailImage%2A>方法的<xref:System.Drawing.Image>对象。  
@@ -23,13 +23,13 @@ ms.locfileid: "54497006"
   
  下图显示的缩略图。  
   
- ![缩略图](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")  
+ ![缩略图](./media/thumbnail1.png "Thumbnail1")  
   
 > [!NOTE]
 >  在此示例中，回调方法，声明，但从未使用。 这支持所有版本的 GDI +。  
   
- [!code-csharp[System.Drawing.WorkingWithImages#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
- [!code-vb[System.Drawing.WorkingWithImages#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
+ [!code-vb[System.Drawing.WorkingWithImages#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。 若要运行该示例，请按照下列步骤：  
@@ -51,5 +51,5 @@ ms.locfileid: "54497006"
      100 的 100 缩略图显示在窗体。  
   
 ## <a name="see-also"></a>请参阅
-- [图像、位图和图元文件](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [使用图像、位图、图标和图元文件](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [图像、位图和图元文件](images-bitmaps-and-metafiles.md)
+- [使用图像、位图、图标和图元文件](working-with-images-bitmaps-icons-and-metafiles.md)

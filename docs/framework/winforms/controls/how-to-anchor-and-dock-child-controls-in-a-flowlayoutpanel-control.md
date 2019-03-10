@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 9087045aaace5463d375af6850f822abefd45fb7
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 62cc25b705b382e1f4ef32ae6889df785a6a9173
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220921"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709904"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>如何：锚定和停靠子控件在 FlowLayoutPanel 控件中
 
@@ -44,16 +44,16 @@ ms.locfileid: "56220921"
 ## <a name="example"></a>示例  
  下图显示了四个按钮，它们相对于 <xref:System.Windows.Forms.FlowLayoutPanel> 中的蓝色按钮锚定和停靠。 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 为 <xref:System.Windows.Forms.FlowDirection.LeftToRight>。  
   
- ![FlowLayoutPanel 锚定](../../../../docs/framework/winforms/controls/media/net-flpanchorexp.gif "NET_FLPanchorExp")  
+ ![FlowLayoutPanel 锚定](./media/net-flpanchorexp.gif "NET_FLPanchorExp")  
   
  下图显示了四个按钮，它们相对于 <xref:System.Windows.Forms.FlowLayoutPanel> 中的蓝色按钮锚定和停靠。 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 为 <xref:System.Windows.Forms.FlowDirection.TopDown>。  
   
- ![FlowLayoutPanel 锚定](../../../../docs/framework/winforms/controls/media/vs-flpanchor2.gif "VS_FLPanchor2")  
+ ![FlowLayoutPanel 锚定](./media/vs-flpanchor2.gif "VS_FLPanchor2")  
   
  以下代码示例演示了 <xref:System.Windows.Forms.FlowLayoutPanel> 控件中 <xref:System.Windows.Forms.Button> 控件的各种 <xref:System.Windows.Forms.Control.Anchor%2A> 属性的值。  
   
- [!code-csharp[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/CS/FlpAnchorExampleForm.cs#1)]
- [!code-vb[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/VB/FlpAnchorExampleForm.vb#1)]  
+ [!code-csharp[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/CS/FlpAnchorExampleForm.cs#1)]
+ [!code-vb[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/VB/FlpAnchorExampleForm.vb#1)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
@@ -64,4 +64,4 @@ ms.locfileid: "56220921"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.FlowLayoutPanel>
-- [FlowLayoutPanel 控件概述](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)
+- [FlowLayoutPanel 控件概述](flowlayoutpanel-control-overview.md)

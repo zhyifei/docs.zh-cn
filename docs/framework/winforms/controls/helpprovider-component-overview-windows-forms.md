@@ -10,15 +10,15 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: 5fc447e00ca46f251a895f0de82118a11310a8d9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f9cf0c165c6c64186eff53676c8b1b06f74361fc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972646"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708374"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider 组件概述（Windows 窗体）
-Windows 窗体[HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)组件用于将 HTML Help 1.x 帮助文件 （.chm 文件，使用 HTML Help Workshop 生成或.htm 文件） 与 Windows 应用程序相关联。 你可以提供多种方式帮助：  
+Windows 窗体[HelpProvider](helpprovider-component-windows-forms.md)组件用于将 HTML Help 1.x 帮助文件 （.chm 文件，使用 HTML Help Workshop 生成或.htm 文件） 与 Windows 应用程序相关联。 你可以提供多种方式帮助：  
   
 -   为 Windows 窗体上控件提供上下文相关帮助。  
   
@@ -37,4 +37,4 @@ Windows 窗体[HelpProvider](../../../../docs/framework/winforms/controls/helppr
 >  您可能会遇到问题时指定的路径中的帮助文件，使用相对路径<xref:System.Windows.Forms.Help.ShowHelp%2A>方法或<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>属性的<xref:System.Windows.Forms.HelpProvider>控件。 在这种情况下，请务必使用绝对文件路径来指定帮助文件。  
   
 ## <a name="see-also"></a>请参阅
-- [Windows 窗体应用程序中的帮助系统](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)
+- [Windows 窗体应用程序中的帮助系统](../advanced/help-systems-in-windows-forms-applications.md)

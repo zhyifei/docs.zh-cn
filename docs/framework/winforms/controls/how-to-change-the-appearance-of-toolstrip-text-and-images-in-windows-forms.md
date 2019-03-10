@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], text
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
-ms.openlocfilehash: 05e44da390f3fe668890d8c093729cb0ebfd1642
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd15e581e646f53ed56af654917c7543bf18617e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631069"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705397"
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>如何：更改 ToolStrip 文本和图像在 Windows 窗体中的外观
 您可以控制是否在显示的文本和图像<xref:System.Windows.Forms.ToolStripItem>和它们相对于彼此的对齐方式和<xref:System.Windows.Forms.ToolStrip>。  
@@ -77,6 +77,6 @@ ms.locfileid: "54631069"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.ToolStrip>
-- [ToolStrip 控件概述](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [ToolStrip 控件体系结构](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [ToolStrip 技术摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [ToolStrip 控件概述](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip 控件体系结构](toolstrip-control-architecture.md)
+- [ToolStrip 技术摘要](toolstrip-technology-summary.md)

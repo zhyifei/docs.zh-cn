@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: a2597348075f870723abb07d13ac7a687e47ab41
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 364cfe521a1e141bdfcfb3cfc47170714d010a87
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304396"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707919"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时分配在 Windows 窗体上的 WPF 内容
 本演练展示了如何选择要在窗体上显示的 Windows Presentation Foundation (WPF) 控件类型。 可选择项目中包含的任何 WPF 控件类型。
@@ -49,7 +49,7 @@ ms.locfileid: "56304396"
   
 #### <a name="to-create-wpf-control-types"></a>创建 WPF 控件类型  
   
-1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
 2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何：选择并在设计图面上移动元素](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。  
   
@@ -102,6 +102,6 @@ ms.locfileid: "56304396"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [使用 WPF 控件](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [迁移和互操作性](../../wpf/advanced/migration-and-interoperability.md)
+- [使用 WPF 控件](using-wpf-controls.md)
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

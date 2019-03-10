@@ -12,15 +12,15 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: 49b44c604a8532c6d2beb39b917f3e5ade339c49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 515ff2bd4ab0f4fa93eada61396bd45c587cded6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564024"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703564"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>如何：设置 Windows 窗体 TreeView 控件的图标
-Windows 窗体<xref:System.Windows.Forms.TreeView>控件可以显示每个节点旁的图标。 图标位于即时左侧的节点文本。 若要显示这些图标，则必须将关联的树视图<xref:System.Windows.Forms.ImageList>控件。 有关图像列表的详细信息，请参阅[ImageList 组件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)和[如何：添加或删除图像与 Windows 窗体 ImageList 组件](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
+Windows 窗体<xref:System.Windows.Forms.TreeView>控件可以显示每个节点旁的图标。 图标位于即时左侧的节点文本。 若要显示这些图标，则必须将关联的树视图<xref:System.Windows.Forms.ImageList>控件。 有关图像列表的详细信息，请参阅[ImageList 组件](imagelist-component-windows-forms.md)和[如何：添加或删除图像与 Windows 窗体 ImageList 组件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
   
 > [!NOTE]
 >  Microsoft.NET Framework 1.1 版中的 bug 可防止映像上出现<xref:System.Windows.Forms.TreeView>节点时应用程序调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>。 若要解决此 bug，请调用<xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType>在您`Main`方法后立即调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>。 在中已修复此 bug [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]。  
@@ -45,7 +45,7 @@ Windows 窗体<xref:System.Windows.Forms.TreeView>控件可以显示每个节点
   
 2.  将节点设置<xref:System.Windows.Forms.TreeNode.ImageIndex%2A>和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>属性。 <xref:System.Windows.Forms.TreeNode.ImageIndex%2A>属性确定节点的正常和展开状态，显示的图像和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>属性确定显示节点的所选状态的图像。  
   
-     在代码中，或在树节点编辑器中，可以设置这些属性。 若要打开树节点编辑器中，单击省略号按钮 ( ![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.TreeView.Nodes%2A>属性窗口上的属性。  
+     在代码中，或在树节点编辑器中，可以设置这些属性。 若要打开树节点编辑器中，单击省略号按钮 ( ![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.TreeView.Nodes%2A>属性窗口上的属性。  
   
     ```vb  
     ' (Assumes that ImageList1 contains at least two images and  
@@ -69,8 +69,8 @@ Windows 窗体<xref:System.Windows.Forms.TreeView>控件可以显示每个节点
     ```  
   
 ## <a name="see-also"></a>请参阅
-- [TreeView 控件概述](../../../../docs/framework/winforms/controls/treeview-control-overview-windows-forms.md)
-- [如何：添加和删除节点使用 Windows 窗体 TreeView 控件](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [如何：循环访问 Windows 窗体 TreeView 控件的所有节点](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [如何：确定被单击的 TreeView 节点](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [如何：将自定义信息添加到 TreeView 或 ListView 控件 （Windows 窗体）](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [TreeView 控件概述](treeview-control-overview-windows-forms.md)
+- [如何：添加和删除节点使用 Windows 窗体 TreeView 控件](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [如何：循环访问 Windows 窗体 TreeView 控件的所有节点](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [如何：确定被单击的 TreeView 节点](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [如何：将自定义信息添加到 TreeView 或 ListView 控件 （Windows 窗体）](add-custom-information-to-a-treeview-or-listview-control-wf.md)

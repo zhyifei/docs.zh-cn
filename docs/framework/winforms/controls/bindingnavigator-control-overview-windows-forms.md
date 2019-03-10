@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-ms.openlocfilehash: 06ad69b7ad40e85dfbb18a170e0a72095e711b83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 489c60aff7b431617477a381161e1c8f587947e5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533109"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703304"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>BindingNavigator 控件概述（Windows 窗体）
 你可以使用 <xref:System.Windows.Forms.BindingNavigator> 控件来创建标准化的方法，以便用户搜索和更改 Windows 窗体上的数据。 频繁对 <xref:System.Windows.Forms.BindingSource> 组件使用 <xref:System.Windows.Forms.BindingNavigator>，以便用户能够在窗体上数据记录之间移动并与记录进行交互。  
@@ -22,7 +22,7 @@ ms.locfileid: "54533109"
 ## <a name="how-the-bindingnavigator-works"></a>BindingNavigator 的工作原理  
  <xref:System.Windows.Forms.BindingNavigator> 控件由包含一系列 <xref:System.Windows.Forms.ToolStripItem> 对象的 <xref:System.Windows.Forms.ToolStrip> 组成，以执行大部分常见的与数据相关的操作：添加数据、删除数据，以及在数据中导航。 默认情况下，<xref:System.Windows.Forms.BindingNavigator> 控件包含这些标准按钮。 以下屏幕快照显示窗体上的 <xref:System.Windows.Forms.BindingNavigator> 控件。  
   
- ![BindingNavigator Control](../../../../docs/framework/winforms/controls/media/cpdatacontainerctrl.gif "cpDataContainerCtrl")  
+ ![BindingNavigator Control](./media/cpdatacontainerctrl.gif "cpDataContainerCtrl")  
   
  下表列出了该控件并介绍了其功能。  
   
@@ -39,9 +39,9 @@ ms.locfileid: "54533109"
   
  对于此集合中每个控件，都有相应的以编程方式提供相同功能的 <xref:System.Windows.Forms.BindingSource> 组件成员。 例如，<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> 按钮对应 <xref:System.Windows.Forms.BindingSource> 组件的 <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> 方法，<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> 按钮对应 <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> 方法，依次类推。  
   
- 如果默认按钮不适合你的应用程序，或者如果你需要其他按钮来支持其他类型的功能，则可以提供你自己的 <xref:System.Windows.Forms.ToolStrip> 按钮。 另请参阅[如何：添加负载，保存和取消按钮，为 Windows 窗体 BindingNavigator 控件](../../../../docs/framework/winforms/controls/load-save-and-cancel-bindingnavigator.md)。  
+ 如果默认按钮不适合你的应用程序，或者如果你需要其他按钮来支持其他类型的功能，则可以提供你自己的 <xref:System.Windows.Forms.ToolStrip> 按钮。 另请参阅[如何：添加负载，保存和取消按钮，为 Windows 窗体 BindingNavigator 控件](load-save-and-cancel-bindingnavigator.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingNavigator 控件](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [BindingNavigator 控件](bindingnavigator-control-windows-forms.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], removing
 - MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-ms.openlocfilehash: c650f8a26629d942aa4ccf0066aee6af4b51f8b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe18b83456c4d02c31581caee30c65d0835eecc1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632057"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703269"
 ---
 # <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>如何：从 MDI 下拉菜单 （Windows 窗体） 中删除 ToolStripMenuItem
 在某些应用程序中，多文档界面 (MDI) 子窗口的类型可以不同于 MDI 父窗口。 例如，MDI 父窗口可能为电子表格，而 MDI 子窗口可能为图表。 在这种情况下，由于激活了不同类型的 MDI 子窗口，你想用 MDI 子菜单上的内容更新 MDI 父菜单的内容。  
@@ -95,6 +95,6 @@ ms.locfileid: "54632057"
 -   对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
 ## <a name="see-also"></a>请参阅
-- [如何：创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [如何：创建 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [MenuStrip 控件概述](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [如何：创建 MDI 父窗体](../advanced/how-to-create-mdi-parent-forms.md)
+- [如何：创建 MDI 子窗体](../advanced/how-to-create-mdi-child-forms.md)
+- [MenuStrip 控件概述](menustrip-control-overview-windows-forms.md)

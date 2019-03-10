@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-ms.openlocfilehash: 4d0a3cb7a56b388ee9bd3f932f9fec604b39fa62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56585bf91a559844f15aede4519706674357a924
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521759"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708309"
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>默认键盘和鼠标处理 Windows 窗体 DataGridView 控件中
 
@@ -36,8 +36,8 @@ ms.locfileid: "54521759"
 |向上键|将焦点移到当前单元格的正上方的单元格。 如果焦点位于第一行中，没有任何影响。|  
 |Home|将焦点移到当前行中的第一个单元。|  
 |End|将焦点移到当前行中的最后一个单元。|  
-|PAGE DOWN|将控件向下滚动完全显示的行数。 将焦点移动到完全显示的最后一行，而无需更改的列。|  
-|PAGE UP|控件向上滚动完全显示的行数。 将焦点移到而无需更改列显示的第一行。|  
+|Page Down|将控件向下滚动完全显示的行数。 将焦点移动到完全显示的最后一行，而无需更改的列。|  
+|Page Up|控件向上滚动完全显示的行数。 将焦点移到而无需更改列显示的第一行。|  
 |Tab|如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>属性值是`false`，会将焦点移到下一个单元格的当前行。 如果焦点已在行的最后一个单元中，将焦点移到下一行中的第一个单元。 如果焦点在控件中的最后一个单元中，将焦点移到下一个控件的父容器的 tab 键顺序。<br /><br /> 如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>属性值是`true`，会将焦点移到下一个控件的父容器的 tab 键顺序。|  
 |Shift+Tab|如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>属性值是`false`，会将焦点移到上一个单元格的当前行中。 如果焦点已在行的第一个单元中，将焦点移到上一行中的最后一个单元。 如果焦点在控件中的第一个单元中，将焦点移到上一个控件的父容器的 tab 键顺序。<br /><br /> 如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>属性值是`true`，会将焦点移到上一个控件的父容器的 tab 键顺序。|  
 |Ctrl+Tab|如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>属性值是`false`，会将焦点移到下一个控件的父容器的 tab 键顺序。<br /><br /> 如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>属性值是`true`，会将焦点移到下一个单元格的当前行。 如果焦点已在行的最后一个单元中，将焦点移到下一行中的第一个单元。 如果焦点在控件中的最后一个单元中，将焦点移到下一个控件的父容器的 tab 键顺序。|  
@@ -52,7 +52,7 @@ ms.locfileid: "54521759"
 |ALT + 向上/向下键|如果当前单元格<xref:System.Windows.Forms.DataGridViewComboBoxCell>，使单元格进入编辑模式，并显示下拉列表。|  
 |空格键|如果当前单元格<xref:System.Windows.Forms.DataGridViewButtonCell>， <xref:System.Windows.Forms.DataGridViewLinkCell>，或<xref:System.Windows.Forms.DataGridViewCheckBoxCell>，将引发<xref:System.Windows.Forms.DataGridView.CellClick>和<xref:System.Windows.Forms.DataGridView.CellContentClick>事件。 如果当前单元格<xref:System.Windows.Forms.DataGridViewButtonCell>，还会按下按钮。 如果当前单元格<xref:System.Windows.Forms.DataGridViewCheckBoxCell>，也会更改的复选状态。|  
 |Enter|提交到当前单元格和行的任何更改并将焦点移到当前单元格的正下方的单元格。 如果焦点位于最后一行中，而无需移动焦点提交任何更改。|  
-|Esc|如果控件处于编辑模式下，取消编辑。 如果控件不处于编辑模式中，将恢复如果该控件绑定到支持编辑数据源已对当前行进行任何更改或已与行级提交作用域中实现虚拟模式。|  
+|ESC|如果控件处于编辑模式下，取消编辑。 如果控件不处于编辑模式中，将恢复如果该控件绑定到支持编辑数据源已对当前行进行任何更改或已与行级提交作用域中实现虚拟模式。|  
 |退格符|编辑单元格时，请删除在插入点之前的字符。|  
 |DELETE|编辑单元格时，请在插入点后删除的字符。|  
 |Ctrl+Enter|而无需将焦点移动到当前单元格提交任何更改。 此外提交对当前行，如果该控件绑定到数据源支持的编辑或虚拟模式的任何更改已实现使用行级提交作用域。|  
@@ -117,4 +117,4 @@ ms.locfileid: "54521759"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.DataGridView>
-- [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [DataGridView 控件](datagridview-control-windows-forms.md)

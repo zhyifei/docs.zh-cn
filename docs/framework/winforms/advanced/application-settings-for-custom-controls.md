@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526738"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714341"
 ---
 # <a name="application-settings-for-custom-controls"></a>自定义控件的应用程序设置
 必须完成某些任务，以使能够保持应用程序设置时的控件都承载在第三方应用程序中的自定义控件。  
@@ -26,7 +26,7 @@ ms.locfileid: "54526738"
   
 2.  创建控件并将其放置在窗体，如在窗体的后创建此自定义设置类<xref:System.Windows.Forms.Form.Load>事件处理程序。  
   
- 有关创建自定义设置类的说明，请参阅[如何：创建应用程序设置](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。  
+ 有关创建自定义设置类的说明，请参阅[如何：创建应用程序设置](how-to-create-application-settings.md)。  
   
 ## <a name="settings-keys-and-shared-settings"></a>设置密钥和共享的设置  
  某些控件可以在同一个窗体中多次使用。 大多数情况下，将需要这些控件，以持久保存其自己单独的设置。 与<xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>属性上的<xref:System.Configuration.IPersistComponentSettings>，可以提供以区分多个版本的窗体上控件的唯一字符串。  
@@ -48,4 +48,4 @@ ms.locfileid: "54526738"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [应用程序设置体系结构](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [应用程序设置体系结构](application-settings-architecture.md)

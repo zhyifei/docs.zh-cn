@@ -2,12 +2,12 @@
 title: 如何：创建自定义活动设计器
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 755aea092d5906d7313234d7ddd1c99d87a7e54d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466877"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716824"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>如何：创建自定义活动设计器
 
@@ -21,9 +21,9 @@ ms.locfileid: "57466877"
 
 本主题概述了两个过程。
 
-1. 第一个过程介绍如何使用 <xref:System.Activities.Presentation.WorkflowItemPresenter> 创建一个自定义活动设计器，用于提供接收其他活动的放置区。 此过程基于[自定义复合设计器 — 工作流项演示器](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md)示例。
+1. 第一个过程介绍如何使用 <xref:System.Activities.Presentation.WorkflowItemPresenter> 创建一个自定义活动设计器，用于提供接收其他活动的放置区。 此过程基于[自定义复合设计器 — 工作流项演示器](./samples/custom-composite-designers-workflow-item-presenter.md)示例。
 
-2. 第二个过程介绍如何使用 <xref:System.Activities.Presentation.WorkflowItemsPresenter> 创建一个自定义活动设计器，用于提供编辑包含的元素的集合所需的功能。 此过程基于[自定义复合设计器 — 工作流项演示器](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md)示例。
+2. 第二个过程介绍如何使用 <xref:System.Activities.Presentation.WorkflowItemsPresenter> 创建一个自定义活动设计器，用于提供编辑包含的元素的集合所需的功能。 此过程基于[自定义复合设计器 — 工作流项演示器](./samples/custom-composite-designers-workflow-items-presenter.md)示例。
 
 ## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>使用 WorkflowItemPresenter 创建带有放置区的自定义活动设计器
 
@@ -351,4 +351,4 @@ ms.locfileid: "57466877"
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - <xref:System.Activities.Presentation.WorkflowViewElement>
 - <xref:System.Activities.Presentation.Model.ModelItem>
-- [自定义工作流设计体验](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+- [自定义工作流设计体验](customizing-the-workflow-design-experience.md)

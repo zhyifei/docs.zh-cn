@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 4ae48a824f69c417daa38fb4b5f88fc5d980c47b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ded3118d0961f38c77d3db4fc879eb241a7520
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724377"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715433"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>如何：通过显示 Windows 窗体使用 ShowDialog 方法来支持 COM 互操作
 可通过在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 消息循环上显示 Windows 窗体来解决组件对象模型 (COM) 互操作性问题，可使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法来创建该消息循环。  
@@ -22,7 +22,7 @@ ms.locfileid: "54724377"
   
 -   使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法显示 Windows 窗体；  
   
--   在单独的线程上显示每个 Windows 窗体。 有关详细信息，请参阅[如何：通过在其自己的线程上显示每个 Windows 窗体来支持 COM 互操作](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)。  
+-   在单独的线程上显示每个 Windows 窗体。 有关详细信息，请参阅[如何：通过在其自己的线程上显示每个 Windows 窗体来支持 COM 互操作](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)。  
   
 ## <a name="procedure"></a>过程  
  使用 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法可能是在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 消息循环上显示窗体的最简单方法，因为在所有方法中，它只需最少的代码即可实现。  
@@ -38,6 +38,6 @@ ms.locfileid: "54724377"
 -   在 <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> 组件中，将所有对 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法的调用替换为对 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 方法的调用。  
   
 ## <a name="see-also"></a>请参阅
-- [向 COM 公开 .NET Framework 组件](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [如何：通过在其自己的线程上显示每个 Windows 窗体来支持 COM 互操作](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
-- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
+- [向 COM 公开 .NET Framework 组件](../../interop/exposing-dotnet-components-to-com.md)
+- [如何：通过在其自己的线程上显示每个 Windows 窗体来支持 COM 互操作](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)

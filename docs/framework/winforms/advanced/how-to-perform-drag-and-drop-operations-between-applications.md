@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: 89b1b89c01ba80393e0965858d7767d5c9029003
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e9556a69f3f5da4a47c5f5b1a6043a9a73dd8ff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718415"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713431"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>如何：执行应用程序之间的拖放操作
 执行应用程序间的拖放操作与在一个应用程序内启用此操作并无差别，只要涉及的两个应用程序均按照 <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> 和 <xref:System.Windows.Forms.DragEventArgs.Effect%2A> 属性之间建立的“协定”实施行为。  
@@ -24,7 +24,7 @@ ms.locfileid: "54718415"
   
 3.  配置 <xref:System.Windows.Forms.TextBox> 控件以接收放置的数据。  
   
-     有关详细信息，请参见[演练：在 Windows 窗体中执行拖放操作](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)。  
+     有关详细信息，请参见[演练：在 Windows 窗体中执行拖放操作](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)。  
   
 4.  运行基于 Windows 的应用程序，并在运行该应用程序时运行写字板。  
   
@@ -36,9 +36,9 @@ ms.locfileid: "54718415"
   
      注意，当你将鼠标移到 <xref:System.Windows.Forms.TextBox> 控件上（并因此引发 <xref:System.Windows.Forms.Control.DragEnter> 事件）时，光标会改变，可以将所选的文本放入 <xref:System.Windows.Forms.TextBox> 控件。  
   
-     此外，还可以配置 <xref:System.Windows.Forms.TextBox> 控件，以允许将文本字符串拖放到写字板中。 有关详细信息，请参见[演练：在 Windows 窗体中执行拖放操作](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)。  
+     此外，还可以配置 <xref:System.Windows.Forms.TextBox> 控件，以允许将文本字符串拖放到写字板中。 有关详细信息，请参见[演练：在 Windows 窗体中执行拖放操作](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [如何：将数据添加到剪贴板](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)
-- [如何：从剪贴板中检索数据](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
-- [拖放操作和剪贴板支持](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)
+- [如何：将数据添加到剪贴板](how-to-add-data-to-the-clipboard.md)
+- [如何：从剪贴板中检索数据](how-to-retrieve-data-from-the-clipboard.md)
+- [拖放操作和剪贴板支持](drag-and-drop-operations-and-clipboard-support.md)

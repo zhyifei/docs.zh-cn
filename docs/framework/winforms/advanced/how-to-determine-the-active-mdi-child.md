@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 581fbb839d06aebc6487bb7b4933f0c1e39af3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512549"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714316"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>如何：确定活动的 MDI 子窗体
 有时，想要运行的命令提供当前处于活动状态的子窗体具有焦点的控件上。 例如，假设你想要从子窗体的文本框中选定的文本复制到剪贴板。 将创建一个过程，将所选的文本复制到剪贴板使用<xref:System.Windows.Forms.Control.Click>复制菜单项在标准的编辑菜单上的事件。  
@@ -30,7 +30,7 @@ ms.locfileid: "54512549"
 1.  在方法中，将活动子窗体的活动控件的文本复制到剪贴板。  
   
     > [!NOTE]
-    >  此示例假定的 MDI 父窗体 (`Form1`) 具有一个或多个 MDI 子窗口包含<xref:System.Windows.Forms.RichTextBox>控件。 有关详细信息，请参阅[创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)。  
+    >  此示例假定的 MDI 父窗体 (`Form1`) 具有一个或多个 MDI 子窗口包含<xref:System.Windows.Forms.RichTextBox>控件。 有关详细信息，请参阅[创建 MDI 父窗体](how-to-create-mdi-parent-forms.md)。  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -84,8 +84,8 @@ ms.locfileid: "54512549"
     ```  
   
 ## <a name="see-also"></a>请参阅
-- [多文档界面 (MDI) 应用程序](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [如何：创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [如何：创建 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [如何：将数据发送到活动的 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
-- [如何：排列 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [多文档界面 (MDI) 应用程序](multiple-document-interface-mdi-applications.md)
+- [如何：创建 MDI 父窗体](how-to-create-mdi-parent-forms.md)
+- [如何：创建 MDI 子窗体](how-to-create-mdi-child-forms.md)
+- [如何：将数据发送到活动的 MDI 子窗体](how-to-send-data-to-the-active-mdi-child.md)
+- [如何：排列 MDI 子窗体](how-to-arrange-mdi-child-forms.md)

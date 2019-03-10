@@ -12,12 +12,12 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 - hiding menu items
 ms.assetid: 418a768f-808a-44cd-8cef-f4e161883621
-ms.openlocfilehash: 73e49c96c20f145490a2d494177e21bc957605b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a82df42240ae045f0d6f355f642acfb8082c87a5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727620"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715251"
 ---
 # <a name="how-to-hide-toolstripmenuitems"></a>如何：隐藏 Toolstripmenuitem
 隐藏菜单项是一种方法来控制你的应用程序的用户界面并限制用户命令。 通常情况下，想要在其上的菜单项都不可用时隐藏整个菜单。 这提供了用户很少会分心。 此外，您可能希望能够同时隐藏和禁用的菜单或菜单项，如仅隐藏不会阻止用户使用的快捷键访问菜单命令。  
@@ -41,5 +41,5 @@ ms.locfileid: "54727620"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
 - <xref:System.Windows.Forms.MenuStrip>
-- [MenuStrip 控件概述](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
-- [如何：禁用 Toolstripmenuitem](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)
+- [MenuStrip 控件概述](menustrip-control-overview-windows-forms.md)
+- [如何：禁用 Toolstripmenuitem](how-to-disable-toolstripmenuitems.md)

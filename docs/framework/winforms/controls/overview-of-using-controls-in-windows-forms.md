@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 8ab1fa9ccbffc7ca9621e32e00455a9b75a91126
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8ae5ec00ee488f0b7400bfa99483c4efc29e016
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533083"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703239"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>在“Windows 窗体”中使用控件的概述
 本主题描述 Windows 窗体应用程序的基本元素，并提供一个简单示例，使用控件以及处理 Windows 窗体应用程序中的事件。  
@@ -224,5 +224,5 @@ public class MyForm : Form {
 ```  
   
 ## <a name="see-also"></a>请参阅
-- [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Windows 窗体控件开发基础知识](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+- [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)
+- [Windows 窗体控件开发基础知识](windows-forms-control-development-basics.md)

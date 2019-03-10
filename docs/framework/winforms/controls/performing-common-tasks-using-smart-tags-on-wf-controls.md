@@ -6,12 +6,12 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: 93a477bcaed8ebdc2c7cb4daaa1dce1651cccd12
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 2805ebc66be5908c333e9a5db41076518ad77c1a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664310"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705852"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>演练：使用 Windows 窗体控件上的智能标记执行常规任务
 在 Windows 窗体应用程序构造窗体和控件，如有需要反复执行的许多任务。 以下是一些你将遇到的执行常用任务：  
@@ -53,7 +53,7 @@ ms.locfileid: "56664310"
   
 #### <a name="to-use-smart-tags"></a>若要使用智能标记  
   
-1.  拖动<xref:System.Windows.Forms.TabControl>从**工具箱**拖动到窗体。 请注意的智能标记标志符号 (![智能标记标志符号](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 旁边的显示<xref:System.Windows.Forms.TabControl>。  
+1.  拖动<xref:System.Windows.Forms.TabControl>从**工具箱**拖动到窗体。 请注意的智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 旁边的显示<xref:System.Windows.Forms.TabControl>。  
   
 2.  单击智能标记标志符号。 在标志符号旁边显示的快捷菜单，选择**添加选项卡**项。 观察到的新选项卡页添加到<xref:System.Windows.Forms.TabControl>。  
   

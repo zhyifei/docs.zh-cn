@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: b30bb28e816f27cc8661d478758a05e52fb45037
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 9e3e05a1327f2f1d5f4c064a7982b2d6e38940d9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442121"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702563"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows 窗体的 ClickOnce 部署
 下面的主题描述了 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，这是一种用于将 Windows 窗体应用程序轻松部署到客户端计算机的技术。  
@@ -63,7 +63,7 @@ ms.locfileid: "56442121"
  演示如何标记文件以使它在 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 数据目录中可用。  
   
 ## <a name="see-also"></a>请参阅
-- [应用程序设置概述](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [应用程序设置概述](./advanced/application-settings-overview.md)
 - [发布 ClickOnce 应用程序](/visualstudio/deployment/publishing-clickonce-applications)
 - [从命令行生成 ClickOnce 应用程序](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
 - [调试使用 System.Deployment.Application 的 ClickOnce 应用程序](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)
