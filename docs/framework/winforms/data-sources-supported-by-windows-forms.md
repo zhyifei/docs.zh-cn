@@ -15,18 +15,18 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664739"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711295"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows 窗体支持的数据源
 传统上，数据绑定已用于应用程序中充分利用数据库中存储数据。 使用 Windows 窗体数据绑定，您可以从数据库以及其他结构，如数组和集合中的数据访问数据，只要满足某些最低要求。  
   
 ## <a name="structures-to-bind-to"></a>将绑定到结构  
- 在 Windows 窗体中可以绑定到各种结构，从简单到复杂的列表，如 ADO.NET 数据表 （复杂绑定） 的对象 （简单绑定）。 对于简单绑定，Windows 窗体上的简单对象支持绑定到的公共属性。 Windows 窗体基于列表的绑定通常需要对象支持<xref:System.Collections.IList>接口或<xref:System.ComponentModel.IListSource>接口。 此外，如果要通过绑定与<xref:System.Windows.Forms.BindingSource>组件，可以绑定到支持的对象，<xref:System.Collections.IEnumerable>接口。 有关与数据绑定相关的接口的详细信息，请参阅[与数据绑定相关的接口](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)。  
+ 在 Windows 窗体中可以绑定到各种结构，从简单到复杂的列表，如 ADO.NET 数据表 （复杂绑定） 的对象 （简单绑定）。 对于简单绑定，Windows 窗体上的简单对象支持绑定到的公共属性。 Windows 窗体基于列表的绑定通常需要对象支持<xref:System.Collections.IList>接口或<xref:System.ComponentModel.IListSource>接口。 此外，如果要通过绑定与<xref:System.Windows.Forms.BindingSource>组件，可以绑定到支持的对象，<xref:System.Collections.IEnumerable>接口。 有关与数据绑定相关的接口的详细信息，请参阅[与数据绑定相关的接口](interfaces-related-to-data-binding.md)。  
   
  以下列表显示了可以在 Windows 窗体中绑定到结构。  
   
@@ -58,6 +58,6 @@ ms.locfileid: "56664739"
 -   <xref:System.Data.DataViewManager>。 一个<xref:System.Data.DataViewManager>是自定义的视图的整个<xref:System.Data.DataSet>，类似于<xref:System.Data.DataView>，但其中包括各种关系。 与<xref:System.Data.DataViewManager.DataViewSettings%2A>集合，您可以设置默认筛选器和排序选项的任何视图的<xref:System.Data.DataViewManager>具有给定的表。  
   
 ## <a name="see-also"></a>请参阅
-- [Windows 窗体数据绑定中的更改通知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [数据绑定和 Windows 窗体](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Windows 窗体数据绑定](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Windows 窗体数据绑定中的更改通知](change-notification-in-windows-forms-data-binding.md)
+- [数据绑定和 Windows 窗体](data-binding-and-windows-forms.md)
+- [Windows 窗体数据绑定](windows-forms-data-binding.md)

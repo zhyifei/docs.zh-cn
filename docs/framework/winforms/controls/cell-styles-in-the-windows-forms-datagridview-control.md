@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: 3cb46ec5b203451cb2f9fd1c87457ad52552359c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a22fc29d2cab21977c0411a440b847b426fb5915
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674674"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712265"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的单元格样式
 中的每个单元格<xref:System.Windows.Forms.DataGridView>控件可以有自己的样式，如文本格式、 背景色、 前景色和字体。 但是，通常情况下，多个单元格将共享特定的样式特征。  
@@ -162,6 +162,6 @@ ms.locfileid: "57674674"
 - <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>
-- [Windows 窗体 DataGridView 控件中的基本格式和样式设置](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Windows 窗体 DataGridView 控件中的数据格式设置](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的基本格式和样式设置](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的数据格式设置](data-formatting-in-the-windows-forms-datagridview-control.md)

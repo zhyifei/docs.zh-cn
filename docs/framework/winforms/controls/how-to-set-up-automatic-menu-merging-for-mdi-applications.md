@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
-ms.openlocfilehash: 3aeaf9ee4818b6689905c10d2bd46fc887609c35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 152db39e7c947d5a49eaed81b00d13c02aa8014c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549819"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719723"
 ---
 # <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>如何：设置自动菜单合并为 MDI 应用程序
 以下过程提供的基本步骤用于设置在多文档界面 (MDI) 应用程序中使用自动合并<xref:System.Windows.Forms.MenuStrip>。  
@@ -34,4 +34,4 @@ ms.locfileid: "54549819"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [MenuStrip 控件概述](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [MenuStrip 控件概述](menustrip-control-overview-windows-forms.md)

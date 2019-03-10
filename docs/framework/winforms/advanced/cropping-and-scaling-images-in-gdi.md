@@ -15,12 +15,12 @@ helpviewer_keywords:
 - rectangles [Windows Forms], destination
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-ms.openlocfilehash: 6c3ad0892ea0892b7c4c0e21e14bdb75fe22b447
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 311673c30283cdf3e0206d143daab8c01adc2bce
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554213"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718787"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>在 GDI+ 中裁切和缩放图像
 可以使用<xref:System.Drawing.Graphics.DrawImage%2A>方法的<xref:System.Drawing.Graphics>类可以绘制和位置矢量图像和光栅图像。 <xref:System.Drawing.Graphics.DrawImage%2A> 是重载的方法，因此有几种方法可以提供该文件使用的参数。  
@@ -28,24 +28,24 @@ ms.locfileid: "54554213"
 ## <a name="drawimage-variations"></a>DrawImage 变体  
  一个变体<xref:System.Drawing.Graphics.DrawImage%2A>方法接收<xref:System.Drawing.Bitmap>和一个<xref:System.Drawing.Rectangle>。 矩形指定的目标为绘制操作;也就是说，它指定在其中绘制图像的矩形。 如果目标矩形的大小不同于原始图像的大小，缩放图像以适合目标矩形。 下面的代码示例演示如何将同一图像绘制三次： 一次用于无需进行扩展，使用扩展，一次，一次用于压缩：  
   
- [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.ImagesBitmapsMetafiles#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#31)]  
   
  下图显示了三个图片。  
   
- ![Scaling](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art06.gif "AboutGdip03_Art06")  
+ ![Scaling](./media/aboutgdip03-art06.gif "AboutGdip03_Art06")  
   
  某些变体<xref:System.Drawing.Graphics.DrawImage%2A>方法有源矩形参数，以及目标矩形参数。 源矩形参数指定要绘制的原始图像的部分。 目标矩形指定要在其中绘制图像的该部分的矩形。 如果目标矩形的大小不同于源矩形的大小，该图片进行缩放以适合目标矩形。  
   
  下面的代码示例演示如何构造<xref:System.Drawing.Bitmap>Runner.jpg 文件中。 使用无需进行扩展在绘制整个图像 （0，0）。 然后两次绘制的图像的一小部分： 一次使用压缩，一次使用扩展。  
   
- [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#32)]
- [!code-vb[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#32)]  
+ [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#32)]
+ [!code-vb[System.Drawing.ImagesBitmapsMetafiles#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#32)]  
   
  下图显示了未缩放的图像和压缩和扩展的图像部分。  
   
- ![裁剪和缩放](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
+ ![裁剪和缩放](./media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
   
 ## <a name="see-also"></a>请参阅
-- [图像、位图和图元文件](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [使用图像、位图、图标和图元文件](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [图像、位图和图元文件](images-bitmaps-and-metafiles.md)
+- [使用图像、位图、图标和图元文件](working-with-images-bitmaps-icons-and-metafiles.md)

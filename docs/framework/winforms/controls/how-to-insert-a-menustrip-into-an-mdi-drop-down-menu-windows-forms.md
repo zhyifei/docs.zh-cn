@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], merging
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
-ms.openlocfilehash: b12199d049808fcf735002fee3715fe7be966030
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c06304e012867030936dfeffd129bb8301d31c8e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695694"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718735"
 ---
 # <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>如何：将 MenuStrip 插入 MDI 下拉菜单 （Windows 窗体）
 在某些应用程序中，多文档界面 (MDI) 子窗口的类型可以不同于 MDI 父窗口。 例如，MDI 父窗口可能为电子表格，而 MDI 子窗口可能为图表。 在这种情况下，由于激活了不同类型的 MDI 子窗口，你想用 MDI 子菜单上的内容更新 MDI 父菜单的内容。  
@@ -96,6 +96,6 @@ ms.locfileid: "54695694"
 -   对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
 ## <a name="see-also"></a>请参阅
-- [如何：创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [如何：创建 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [MenuStrip 控件概述](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [如何：创建 MDI 父窗体](../advanced/how-to-create-mdi-parent-forms.md)
+- [如何：创建 MDI 子窗体](../advanced/how-to-create-mdi-child-forms.md)
+- [MenuStrip 控件概述](menustrip-control-overview-windows-forms.md)

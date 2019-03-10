@@ -15,15 +15,15 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 0a251aabe7acdc8e59b31d9534e27f0afeab3633
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 9bd3f822e5a1f8572ebb7f5991abccde904150b8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664219"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717825"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>演练：在设计时调试自定义 Windows 窗体控件
-时创建自定义控件，您通常会发现它需要调试其设计时行为。 这是如果自定义设计器创作自定义控件尤其如此。 有关详细信息，请参阅[演练：创建 Windows 窗体控件都使用了 Visual Studio 设计时功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
+时创建自定义控件，您通常会发现它需要调试其设计时行为。 这是如果自定义设计器创作自定义控件尤其如此。 有关详细信息，请参阅[演练：创建 Windows 窗体控件都使用了 Visual Studio 设计时功能](creating-a-wf-control-design-time-features.md)。  
   
  您可以调试使用 Visual Studio 中，您自定义控件，就像就像调试任何其他.NET Framework 类。 不同之处是待调试正在运行自定义控件的代码的 Visual Studio 的单独实例  
   
@@ -134,7 +134,7 @@ ms.locfileid: "56664219"
   
 2.  在中**DebugControlLibrary**属性表中，选择**调试**选项卡。  
   
-     在中**启动操作**部分中，选择**启动外部程序**。 你将调试的单独实例的 Visual Studio 中，因此请单击省略号 (![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 按钮以浏览 Visual Studio IDE。 可执行文件的名称是**devenv.exe**，如果已安装到默认位置，其路径为 %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe。  
+     在中**启动操作**部分中，选择**启动外部程序**。 你将调试的单独实例的 Visual Studio 中，因此请单击省略号 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮以浏览 Visual Studio IDE。 可执行文件的名称是**devenv.exe**，如果已安装到默认位置，其路径为 %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe。  
   
 3.  单击“确定”关闭对话框。  
   
@@ -170,9 +170,9 @@ ms.locfileid: "56664219"
   
 -   有几个特性可应用于控件的属性，以处理与设计器的自定义控件的交互。 您可以找到这些属性在<xref:System.ComponentModel?displayProperty=nameWithType>命名空间。  
   
--   自定义控件，可以编写自定义设计器。 这样，您对使用由 Visual Studio 公开可扩展设计器基础结构的设计体验的完全控制。 有关详细信息，请参阅[演练：创建 Windows 窗体控件都使用了 Visual Studio 设计时功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
+-   自定义控件，可以编写自定义设计器。 这样，您对使用由 Visual Studio 公开可扩展设计器基础结构的设计体验的完全控制。 有关详细信息，请参阅[演练：创建 Windows 窗体控件都使用了 Visual Studio 设计时功能](creating-a-wf-control-design-time-features.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)
+- [演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](creating-a-wf-control-design-time-features.md)
 - [如何：访问设计时服务](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
 - [如何：在 Windows 窗体中访问设计时支持](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

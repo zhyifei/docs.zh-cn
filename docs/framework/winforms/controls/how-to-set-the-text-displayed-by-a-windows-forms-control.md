@@ -21,12 +21,12 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 30cf71aa2a87ff99ccb965844b620ef08a20b69c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ebb39e4e9337ede0dc8c7f5569ea27d8cfafd26
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636439"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716902"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>如何：设置显示的文本的 Windows 窗体控件
 Windows 窗体控件通常会显示一些与控件的主要功能相关的文本。 例如，<xref:System.Windows.Forms.Button> 控件通常会显示一个题注，用于指示单击按钮时将执行的操作。 对于所有控件而言，都可通过使用 <xref:System.Windows.Forms.Control.Text%2A> 属性来设置或返回文本。 可以使用 <xref:System.Windows.Forms.Control.Font%2A> 属性更改字体。 还可使用设计器来设置文本。  另请参阅[如何：创建 Windows 窗体控件使用设计器的访问键](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md)，[如何：设置显示的文本的 Windows 窗体控件使用设计器](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md)，[如何：设置所显示的图像的 Windows 窗体控件使用设计器](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)。  
@@ -73,5 +73,5 @@ Windows 窗体控件通常会显示一些与控件的主要功能相关的文本
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [如何：为 Windows 窗体控件创建访问密钥](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)
-- [如何：响应 Windows 窗体按钮单击](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [如何：为 Windows 窗体控件创建访问密钥](how-to-create-access-keys-for-windows-forms-controls.md)
+- [如何：响应 Windows 窗体按钮单击](how-to-respond-to-windows-forms-button-clicks.md)

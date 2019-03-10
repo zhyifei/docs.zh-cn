@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-ms.openlocfilehash: 919098fd5eb6578b91a7b44cf99ba3aef9076081
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc998fd88f3487aa20f6cef73aacb6c07f92c7ad
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610976"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710090"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser 控件概述
 <xref:System.Windows.Forms.WebBrowser>控件提供 WebBrowser ActiveX 控件托管的包装。 托管的包装，可以在 Windows 窗体客户端应用程序中显示网页。 可以使用<xref:System.Windows.Forms.WebBrowser>控件重复中你的应用程序或你的 Internet Explorer Web 浏览功能可以禁用默认 Internet 资源管理器功能并将该控件用作简单的 HTML 文档查看器。 此外可以使用该控件将基于 DHTML 的用户界面元素添加到你的窗体并隐藏这一事实中托管的<xref:System.Windows.Forms.WebBrowser>控件。 此方法可以无缝组合在单个应用程序中的 Windows 窗体控件的 Web 控件。  
@@ -52,9 +52,9 @@ ms.locfileid: "54610976"
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [如何：导航到使用 WebBrowser 控件的 URL](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [如何：使用 WebBrowser 控件打印](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
-- [如何：将 Web 浏览器功能添加到 Windows 窗体应用程序](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [如何：在 Windows 窗体应用程序中创建 HTML 文档查看器](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [如何：DHTML 代码和客户端应用程序代码之间实现双向通信](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)
-- [WebBrowser 安全](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+- [如何：导航到使用 WebBrowser 控件的 URL](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [如何：使用 WebBrowser 控件打印](how-to-print-with-a-webbrowser-control.md)
+- [如何：将 Web 浏览器功能添加到 Windows 窗体应用程序](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [如何：在 Windows 窗体应用程序中创建 HTML 文档查看器](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [如何：DHTML 代码和客户端应用程序代码之间实现双向通信](implement-two-way-com-between-dhtml-and-client.md)
+- [WebBrowser 安全](webbrowser-security.md)

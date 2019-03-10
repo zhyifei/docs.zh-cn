@@ -2,12 +2,12 @@
 title: 文档审批过程
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d1e37dcbc21239822937c57d9779a52357aac518
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582705"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717701"
 ---
 # <a name="document-approval-process"></a>文档审批过程
 此示例演示在一起的多个 Windows Workflow Foundation (WF) 和 Windows Communication Foundation (WCF) 功能的使用。 这些功能一起使用实现一个文档审批过程方案。 客户端应用程序既可提交等待审批的文档，也可批准文档。 有一个审批管理器应用程序，可用于促进客户端之间的通信和强制执行审批过程的规则。 审批过程是一个可执行多种类型的审批的工作流。 存在多个活动来获取个人审批过程、团体审批过程（一定百分比的审批者）和复合审批过程（由团体审批和个人审批按顺序组成）。
@@ -24,7 +24,7 @@ ms.locfileid: "48582705"
 ## <a name="sample-details"></a>示例详细信息  
  下图演示文档审批过程工作流。  
   
- ![文档审批过程工作流](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ ![文档审批过程工作流](./media/approvalprocess.jpg "ApprovalProcess")  
   
  从客户端的角度来看，审批过程的工作方式如下：  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601826"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719347"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>如何：使用继承选择器对话框继承窗体
 继承窗体或其他对象最简单的方法是使用“继承选择器”对话框。 通过该对话框，可以充分利用在其他解决方案中创建的代码或用户界面 (UI)。  
@@ -41,7 +41,7 @@ ms.locfileid: "54601826"
   
 6.  选择组件。  
   
-     在“解决方案资源管理器”中，将组件添加到项目。 如果组件具有 UI，则用标志符号 (![VisualBasicInheritanceSymbol screenshot](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) 标记属于继承窗体的控件，选中后，超类窗体上将出现一个指示该控件安全级别的边框。 下表中列出了与不同安全级别相对应的行为。  
+     在“解决方案资源管理器”中，将组件添加到项目。 如果组件具有 UI，则用标志符号 (![VisualBasicInheritanceSymbol screenshot](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) 标记属于继承窗体的控件，选中后，超类窗体上将出现一个指示该控件安全级别的边框。 下表中列出了与不同安全级别相对应的行为。  
   
     |控件的安全级别|可以通过设计器和代码编辑器与继承的窗体进行的交互|  
     |-------------------------------|--------------------------------------------------------------------------------|  
@@ -51,13 +51,13 @@ ms.locfileid: "54601826"
     |Internal（Visual Basic 中为 Friend）|窗体上显示不带有大小句柄的标准边框，属性在“属性”窗口中可见。 但是，该控件的所有方面都将考虑为只读。 无法对控件进行移动、调整大小或更改其属性。 如果控件是其他控件的容器（例如分组框），则无法添加新控件，也无法移除现有控件，即使那些控件是 public 控件。 此控件只能由包含它的程序集的其他成员进行访问。|  
     |Private|窗体上显示不带有大小句柄的标准边框，属性在“属性”窗口中可见。 但是，该控件的所有方面都将考虑为只读。 无法对控件进行移动、调整大小或更改其属性。 如果控件是其他控件的容器（例如分组框），则无法添加新控件，也无法移除现有控件，即使那些控件是 public 控件。 此控件只能由声明它的类进行访问。|  
   
-     若要了解如何更改基窗体的外观，请参阅[修改基窗体外观的效果](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)。  
+     若要了解如何更改基窗体的外观，请参阅[修改基窗体外观的效果](effects-of-modifying-base-form-appearance.md)。  
   
     > [!NOTE]
-    >  将继承的控件和组件与 Windows 窗体上的标准控件和组件组合到一起时，可能会与 Z 排序发生冲突。 可通过修改 z 顺序纠正冲突，方法是单击“格式”菜单，指向“排序”，然后单击“置于顶层”或“置于底层”。 控件的 z 顺序的详细信息，请参阅[如何：在 Windows 窗体上的对象分层](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)。  
+    >  将继承的控件和组件与 Windows 窗体上的标准控件和组件组合到一起时，可能会与 Z 排序发生冲突。 可通过修改 z 顺序纠正冲突，方法是单击“格式”菜单，指向“排序”，然后单击“置于顶层”或“置于底层”。 控件的 z 顺序的详细信息，请参阅[如何：在 Windows 窗体上的对象分层](../controls/how-to-layer-objects-on-windows-forms.md)。  
   
 ## <a name="see-also"></a>请参阅
 - [Inherits 语句](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [修改基窗体的外观的效果](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Windows 窗体可视化继承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [修改基窗体的外观的效果](effects-of-modifying-base-form-appearance.md)
+- [Windows 窗体可视化继承](windows-forms-visual-inheritance.md)

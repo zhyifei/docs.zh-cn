@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 77b4b959523c6d35dece2d759eeb71be04b53d93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 830fa45fc88c35b8aa5f047e065ae1efc161f581
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538617"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718936"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>如何：绘制自定义虚线
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了多个短划线样式中列出的<xref:System.Drawing.Drawing2D.DashStyle>枚举。 如果这些标准的短划线样式无法满足您的需要，可以创建自定义的短划线图案。  
@@ -24,13 +24,13 @@ ms.locfileid: "54538617"
   
  下图显示了生成的虚线。 请注意，最终的短划线必须是少于 25 个单位，以便在线条的终点 （405，5）。  
   
- ![笔](../../../../docs/framework/winforms/advanced/media/pens6.gif "pens6")  
+ ![笔](./media/pens6.gif "pens6")  
   
- [!code-csharp[System.Drawing.UsingAPen#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#51)]
- [!code-vb[System.Drawing.UsingAPen#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#51)]  
+ [!code-csharp[System.Drawing.UsingAPen#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#51)]
+ [!code-vb[System.Drawing.UsingAPen#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  创建 Windows 窗体和处理该窗体<xref:System.Windows.Forms.Control.Paint>事件。 前面将代码粘贴到<xref:System.Windows.Forms.Control.Paint>事件处理程序。  
   
 ## <a name="see-also"></a>请参阅
-- [使用笔绘制直线和形状](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [使用笔绘制直线和形状](using-a-pen-to-draw-lines-and-shapes.md)

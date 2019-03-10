@@ -14,16 +14,17 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 5f8c0c2865d219eecb88ddd176d99f80521c9ab3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5da74abb107bc93bff496a35ecfc7a1233e5a76d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664208"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702953"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>如何：将 Windows 窗体 DataGrid 控件绑定到数据源
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  
+  <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  Windows 窗体<xref:System.Windows.Forms.DataGrid>控件专门设计用于显示数据源中的信息。 将控件在运行时绑定通过调用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法。 尽管可以显示来自各种数据源的数据，最典型的源是数据集和数据视图。  
   
@@ -104,7 +105,7 @@ ms.locfileid: "54664208"
 3.  （可选）将适当的表样式和列样式添加到网格中。 如果没有表样式，您将看到表中，但其格式设置很少，且所有列均可见。  
   
 ## <a name="see-also"></a>请参阅
-- [DataGrid 控件概述](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
-- [如何：向 Windows 窗体 DataGrid 控件添加表和列](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [DataGrid 控件](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
-- [Windows 窗体数据绑定](../../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [DataGrid 控件概述](datagrid-control-overview-windows-forms.md)
+- [如何：向 Windows 窗体 DataGrid 控件添加表和列](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [DataGrid 控件](datagrid-control-windows-forms.md)
+- [Windows 窗体数据绑定](../windows-forms-data-binding.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 93bdcbc8b23813d3c8c80ca720c54928fca11aec
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 6afa68295c0119cd77b91185abcf2fb9cb407590
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665246"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719333"
 ---
 # <a name="using-keyboard-events"></a>使用键盘事件
 大多数 Windows 窗体程序通过处理键盘事件处理键盘输入。 本主题提供对键盘事件的概述，包括有关何时使用每个事件和向每个事件提供的数据的详细信息。  另请参阅[事件处理程序概述 （Windows 窗体）](event-handlers-overview-windows-forms.md)并[事件概述 （Windows 窗体）](events-overview-windows-forms.md)。  
@@ -28,7 +28,7 @@ ms.locfileid: "56665246"
   
 -   用户释放某个键时，<xref:System.Windows.Forms.Control.KeyUp> 事件发生一次。  
   
- 用户按某个键时，Windows 窗体会根据键盘消息指定的是字符键还是物理键来确定引发哪个事件。 有关字符键和物理密钥的详细信息，请参阅[键盘输入工作原理](../../../docs/framework/winforms/how-keyboard-input-works.md)。  
+ 用户按某个键时，Windows 窗体会根据键盘消息指定的是字符键还是物理键来确定引发哪个事件。 有关字符键和物理密钥的详细信息，请参阅[键盘输入工作原理](how-keyboard-input-works.md)。  
   
  下表介绍了这三种键盘事件：  
   
@@ -41,6 +41,6 @@ ms.locfileid: "56665246"
   <xref:System.Globalization.SortKey.KeyData%2A> 属性（它结合了键代码和修饰符）。</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>请参阅
-- [Windows 窗体应用程序中的键盘输入](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
-- [键盘输入工作原理](../../../docs/framework/winforms/how-keyboard-input-works.md)
-- [Windows 窗体应用程序中的鼠标输入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Windows 窗体应用程序中的键盘输入](keyboard-input-in-a-windows-forms-application.md)
+- [键盘输入工作原理](how-keyboard-input-works.md)
+- [Windows 窗体应用程序中的鼠标输入](mouse-input-in-a-windows-forms-application.md)

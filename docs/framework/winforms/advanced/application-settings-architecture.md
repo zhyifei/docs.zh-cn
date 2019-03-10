@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: 0e26684933ee2e35dfb0daa52588c2c87505f3f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687240"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710675"
 ---
 # <a name="application-settings-architecture"></a>应用程序设置体系结构
 本主题介绍应用程序设置体系结构的工作原理，并探讨了体系结构的高级功能，如分组设置和设置键。  
@@ -34,12 +34,12 @@ ms.locfileid: "54687240"
   
 -   在更改设置前或在保存设置前验证设置  
   
- 可以使用多个属性定义中所述设置<xref:System.Configuration>命名空间; 中介绍了这些[应用程序设置特性](../../../../docs/framework/winforms/advanced/application-settings-attributes.md)。 在定义一个设置时，必须将其应用与<xref:System.Configuration.ApplicationScopedSettingAttribute>或<xref:System.Configuration.UserScopedSettingAttribute>，它描述了该设置将应用到整个应用程序或只是当前用户。  
+ 可以使用多个属性定义中所述设置<xref:System.Configuration>命名空间; 中介绍了这些[应用程序设置特性](application-settings-attributes.md)。 在定义一个设置时，必须将其应用与<xref:System.Configuration.ApplicationScopedSettingAttribute>或<xref:System.Configuration.UserScopedSettingAttribute>，它描述了该设置将应用到整个应用程序或只是当前用户。  
   
  以下代码示例定义一个具有单个设置 `BackgroundColor` 的自定义设置类。  
   
- [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
- [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
+ [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
+ [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
 ## <a name="settings-persistence"></a>设置持久性  
  <xref:System.Configuration.ApplicationSettingsBase>类不本身持久保存或加载设置; 此作业由设置提供程序，派生的类<xref:System.Configuration.SettingsProvider>。 如果派生的类<xref:System.Configuration.ApplicationSettingsBase>未指定设置提供程序通过<xref:System.Configuration.SettingsProviderAttribute>，则默认的提供程序， <xref:System.Configuration.LocalFileSettingsProvider>，使用。  
@@ -88,7 +88,7 @@ ms.locfileid: "54687240"
 </configuration>  
 ```  
   
- 若要了解配置文件的应用程序设置部分内的元素定义，请参阅[应用程序设置架构](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)。  
+ 若要了解配置文件的应用程序设置部分内的元素定义，请参阅[应用程序设置架构](../../configure-apps/file-schema/application-settings-schema.md)。  
   
 ### <a name="settings-bindings"></a>设置绑定  
  应用程序设置使用 Windows 窗体数据绑定体系结构，提供设置对象和组件间设置更新的双向通信。 如果使用 Visual Studio 创建应用程序设置并将其分配给组件属性，则会自动生成这些绑定。  
@@ -106,7 +106,7 @@ ms.locfileid: "54687240"
   
 3.  基于设置的特性，确定设置应保存到的文件。  
   
- 如果您实现您自己设置的类，则可以使用<xref:System.Configuration.SettingsSerializeAsAttribute>来标记二进制或自定义序列化使用的设置<xref:System.Configuration.SettingsSerializeAs>枚举。 在代码中创建您自己设置的类的详细信息，请参阅[如何：创建应用程序设置](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。  
+ 如果您实现您自己设置的类，则可以使用<xref:System.Configuration.SettingsSerializeAsAttribute>来标记二进制或自定义序列化使用的设置<xref:System.Configuration.SettingsSerializeAs>枚举。 在代码中创建您自己设置的类的详细信息，请参阅[如何：创建应用程序设置](how-to-create-application-settings.md)。  
   
 ### <a name="settings-file-locations"></a>设置文件位置  
  `app`.exe.config 和 *user*.config 文件的位置因应用程序的安装方式而异。 对于基于 Windows 窗体的应用程序复制到本地计算机上`app`。 exe.config 将驻留在与应用程序的主可执行文件的基目录相同的目录中和*用户*.config 驻留在指定的位置<xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType>属性。 对于通过 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 安装的应用程序，这两个文件都驻留在 %InstallRoot%\Documents and Settings\\*username*\Local Settings 下的 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 数据目录中。  
@@ -127,8 +127,8 @@ ms.locfileid: "54687240"
   
  提供程序需要实现一个属性和一个方法，这些实现可能不太明显。 <xref:System.Configuration.SettingsProvider.ApplicationName%2A>属性是抽象的属性<xref:System.Configuration.SettingsProvider>; 应将它返回以下程序：  
   
- [!code-csharp[ApplicationSettings.Architecture#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
- [!code-vb[ApplicationSettings.Architecture#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
+ [!code-csharp[ApplicationSettings.Architecture#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
+ [!code-vb[ApplicationSettings.Architecture#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
   
  派生类还必须实现一个 `Initialize` 方法，该方法既不采用参数也不返回值。 此方法不由<xref:System.Configuration.SettingsProvider>。  
   
@@ -136,8 +136,8 @@ ms.locfileid: "54687240"
   
  实现并编译了提供程序后，需要指示设置类使用此提供程序，而不是使用默认的提供程序。 完成此通过<xref:System.Configuration.SettingsProviderAttribute>。 如果应用于整个设置类，该类定义; 每个设置为使用的提供程序如果应用于各项设置，应用程序设置体系结构为这些设置，使用该提供程序，并使用<xref:System.Configuration.LocalFileSettingsProvider>其余部分。 以下代码示例说明如何指示设置类使用自定义提供程序。  
   
- [!code-csharp[ApplicationSettings.Architecture#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
- [!code-vb[ApplicationSettings.Architecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
+ [!code-csharp[ApplicationSettings.Architecture#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
+ [!code-vb[ApplicationSettings.Architecture#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
   
  提供程序可能会同时从多个线程调用，但其始终会写入同一存储位置；因此，应用程序设置体系结构在任何时候都仅实例化提供程序类的单个实例。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "54687240"
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [应用程序设置概述](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+- [应用程序设置概述](application-settings-overview.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
 - [ClickOnce 和应用程序设置](/visualstudio/deployment/clickonce-and-application-settings)
-- [应用程序设置架构](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)
+- [应用程序设置架构](../../configure-apps/file-schema/application-settings-schema.md)

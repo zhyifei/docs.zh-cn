@@ -11,24 +11,24 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], resizing cells
 - grids [Windows Forms], resizing cells to fit content
 ms.assetid: 63d770dc-b3f5-462b-901a-3125b2753792
-ms.openlocfilehash: 80ed1b57e68317d03fd61f08d37e536bdfb581c9
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 09ac5e43653a3389737777258db3bb5e0ed4c0a1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261747"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722914"
 ---
 # <a name="how-to-programmatically-resize-cells-to-fit-content-in-the-windows-forms-datagridview-control"></a>如何：以编程方式调整大小以适应 Windows 窗体 DataGridView 控件中内容的单元格
-可使用 <xref:System.Windows.Forms.DataGridView> 控件方法调整行、列和标头大小，以便它们显示其完整值而无截断。 可在选择时使用这些方法调整 <xref:System.Windows.Forms.DataGridView> 元素的大小。 或者，可配置控件以在内容更改时自动调整这些元素的大小。 但是，在处理大型数据集或数据频繁更改时，这可能效率很低。 有关详细信息，请参阅[Windows 窗体 DataGridView 控件中调整大小选项](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)。  
+可使用 <xref:System.Windows.Forms.DataGridView> 控件方法调整行、列和标头大小，以便它们显示其完整值而无截断。 可在选择时使用这些方法调整 <xref:System.Windows.Forms.DataGridView> 元素的大小。 或者，可配置控件以在内容更改时自动调整这些元素的大小。 但是，在处理大型数据集或数据频繁更改时，这可能效率很低。 有关详细信息，请参阅[Windows 窗体 DataGridView 控件中调整大小选项](sizing-options-in-the-windows-forms-datagridview-control.md)。  
   
  通常，只有在从数据源加载新数据或用户已编辑值时，才以编程方式调整 <xref:System.Windows.Forms.DataGridView> 元素以适合它的内容。 此操作可用于优化性能，但当想要用户使用鼠标手动调整行和列的大小时，它也非常有用。  
   
  以下代码示例演示可用于以编程方式调整大小的选项。  
   
 ## <a name="example"></a>示例  
- [!code-cpp[System.Windows.Forms.DataGridView.ProgrammaticResizing#0](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ProgrammaticResizing/CPP/programmaticsizing.cpp#0)]
- [!code-csharp[System.Windows.Forms.DataGridView.ProgrammaticResizing#0](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ProgrammaticResizing/CS/programmaticsizing.cs#0)]
- [!code-vb[System.Windows.Forms.DataGridView.ProgrammaticResizing#0](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ProgrammaticResizing/VB/programmaticsizing.vb#0)]  
+ [!code-cpp[System.Windows.Forms.DataGridView.ProgrammaticResizing#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ProgrammaticResizing/CPP/programmaticsizing.cpp#0)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ProgrammaticResizing#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ProgrammaticResizing/CS/programmaticsizing.cs#0)]
+ [!code-vb[System.Windows.Forms.DataGridView.ProgrammaticResizing#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ProgrammaticResizing/VB/programmaticsizing.vb#0)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
@@ -51,6 +51,6 @@ ms.locfileid: "56261747"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [调整 Windows 窗体 DataGridView 控件中列和行的大小](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Windows 窗体 DataGridView 控件中的重设大小选项](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)
-- [如何：在 Windows 窗体 DataGridView 控件中的内容更改时自动调整大小的单元格](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)
+- [调整 Windows 窗体 DataGridView 控件中列和行的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的重设大小选项](sizing-options-in-the-windows-forms-datagridview-control.md)
+- [如何：在 Windows 窗体 DataGridView 控件中的内容更改时自动调整大小的单元格](automatically-resize-cells-when-content-changes-in-the-datagrid.md)

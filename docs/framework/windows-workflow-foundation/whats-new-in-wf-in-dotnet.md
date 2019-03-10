@@ -2,16 +2,16 @@
 title: .NET 4.5 中的 Windows Workflow Foundation 中的新增功能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b907a592bd644bc7a9c4aa19cef78a49bf729561
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212399"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718917"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 中的 Windows Workflow Foundation 中的新增功能
 
-中的 Windows Workflow Foundation (WF)[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引入了许多新功能，如新活动、 设计器功能和工作流开发模型。 重新承载的工作流设计器支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的许多（但不是全部）新工作流功能。 有关支持的新功能的详细信息，请参阅[重新承载工作流设计器中新 Workflow Foundation 4.5 功能的支持](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。 有关迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本的详细信息，请参阅[迁移指南](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。 本主题概述了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的新工作流功能。
+中的 Windows Workflow Foundation (WF)[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引入了许多新功能，如新活动、 设计器功能和工作流开发模型。 重新承载的工作流设计器支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的许多（但不是全部）新工作流功能。 有关支持的新功能的详细信息，请参阅[重新承载工作流设计器中新 Workflow Foundation 4.5 功能的支持](wf-features-in-the-rehosted-workflow-designer.md)。 有关迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本的详细信息，请参阅[迁移指南](migration-guidance.md)。 本主题概述了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的新工作流功能。
 
 > [!WARNING]
 > 中引入的新 Windows Workflow Foundation 功能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]对于面向以前版本的 framework 的项目不可用。 如果面向 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的项目重新面向以前版本的框架，则可能会发生多个问题。
@@ -25,13 +25,13 @@ ms.locfileid: "57212399"
 
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引入了几个基于新的 <xref:System.Activities.WorkflowIdentity> 类的工作流版本控制功能。 <xref:System.Activities.WorkflowIdentity> 为工作流应用程序提供了一种通过定义来映射持久化工作流实例的机制。
 
-- 使用 <xref:System.Activities.WorkflowApplication> 承载的开发人员可以使用 <xref:System.Activities.WorkflowIdentity> 来启用并行承载多个版本的工作流。 可以使用新的 <xref:System.Activities.WorkflowApplicationInstance> 类来加载持久化工作流实例，然后，主机可以使用 <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> 在实例化 <xref:System.Activities.WorkflowApplication> 时提供工作流定义的正确版本。 有关详细信息，请参阅[使用 WorkflowIdentity 和版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)和[如何：承载多个版本的工作流的并排方案](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
+- 使用 <xref:System.Activities.WorkflowApplication> 承载的开发人员可以使用 <xref:System.Activities.WorkflowIdentity> 来启用并行承载多个版本的工作流。 可以使用新的 <xref:System.Activities.WorkflowApplicationInstance> 类来加载持久化工作流实例，然后，主机可以使用 <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> 在实例化 <xref:System.Activities.WorkflowApplication> 时提供工作流定义的正确版本。 有关详细信息，请参阅[使用 WorkflowIdentity 和版本控制](using-workflowidentity-and-versioning.md)和[如何：承载多个版本的工作流的并排方案](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
 
-- <xref:System.ServiceModel.WorkflowServiceHost> 现在是多版本主机。 在部署工作流服务的新版本时，将使用新的服务创建新实例，但会使用以前的版本来完成现有实例。 有关详细信息，请参阅[WorkflowServiceHost 中的并行版本控制](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)。
+- <xref:System.ServiceModel.WorkflowServiceHost> 现在是多版本主机。 在部署工作流服务的新版本时，将使用新的服务创建新实例，但会使用以前的版本来完成现有实例。 有关详细信息，请参阅[WorkflowServiceHost 中的并行版本控制](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)。
 
-- 引入了动态更新，其提供了一种更新持久化工作流实例定义的机制。 有关详细信息，请参阅[动态更新](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)和[如何：更新正在运行的工作流实例的定义](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。
+- 引入了动态更新，其提供了一种更新持久化工作流实例定义的机制。 有关详细信息，请参阅[动态更新](dynamic-update.md)和[如何：更新正在运行的工作流实例的定义](how-to-update-the-definition-of-a-running-workflow-instance.md)。
 
-- SqlWorkflowInstanceStoreSchemaUpgrade.sql 数据库脚本旨在用于升级使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 数据库脚本创建的持久性数据库。 此脚本会更新 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 持久性数据库以支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的版本控制功能。 数据库中的持久化工作流实例将获得默认的版本控制值，然后就可以参与并行执行和动态更新。 有关详细信息，请参阅[升级.NET Framework 4 持久性数据库支持工作流版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。
+- SqlWorkflowInstanceStoreSchemaUpgrade.sql 数据库脚本旨在用于升级使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 数据库脚本创建的持久性数据库。 此脚本会更新 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 持久性数据库以支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的版本控制功能。 数据库中的持久化工作流实例将获得默认的版本控制值，然后就可以参与并行执行和动态更新。 有关详细信息，请参阅[升级.NET Framework 4 持久性数据库支持工作流版本控制](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。
 
 ## <a name="BKMK_NewActivities"></a> 活动
 
@@ -72,7 +72,7 @@ ms.locfileid: "57212399"
 
      如果无需对异常进行序列化，请确保在 <xref:System.Activities.Statements.NoPersistScope> 内使用异常。
 
-4. 活动作者应重写 <xref:System.Activities.Activity.CacheMetadata%2A> 以避免让工作流运行时针对该类型自动执行反射。 参数和子活动必须为非 null，并且 <xref:System.Activities.ActivityMetadata.Bind%2A> 必须被显式调用。 有关详细信息重写<xref:System.Activities.Activity.CacheMetadata%2A>，请参阅[使用 CacheMetadata 公开数据](../../../docs/framework/windows-workflow-foundation/exposing-data-with-cachemetadata.md)。 此外，实例的参数类型不是`internal`或**专用**必须显式创建于<xref:System.Activities.Activity.CacheMetadata%2A>以避免由反射创建。
+4. 活动作者应重写 <xref:System.Activities.Activity.CacheMetadata%2A> 以避免让工作流运行时针对该类型自动执行反射。 参数和子活动必须为非 null，并且 <xref:System.Activities.ActivityMetadata.Bind%2A> 必须被显式调用。 有关详细信息重写<xref:System.Activities.Activity.CacheMetadata%2A>，请参阅[使用 CacheMetadata 公开数据](exposing-data-with-cachemetadata.md)。 此外，实例的参数类型不是`internal`或**专用**必须显式创建于<xref:System.Activities.Activity.CacheMetadata%2A>以避免由反射创建。
 
 5. 这些类型不会使用 <xref:System.Runtime.Serialization.ISerializable> 或 <xref:System.SerializableAttribute> 来进行序列化；要进行序列化的类型必须支持 <xref:System.Runtime.Serialization.DataContractSerializer>。
 
@@ -118,7 +118,7 @@ ms.locfileid: "57212399"
 
 以下屏幕快照显示了变量和自变量设计器的上下文菜单。
 
-![变量和自变量设计器上下文菜单](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")
+![变量和自变量设计器上下文菜单](./media/designercontextmenu.png "DesignerContextMenu")
 
 ### <a name="BKMK_AutoSurround"></a> 自动环绕序列
 
@@ -126,11 +126,11 @@ ms.locfileid: "57212399"
 
 以下屏幕快照显示了 `WriteLine` 的 `Body` 中的 `NoPersistScope` 活动。
 
-![自动&#45;括起来的放置位置](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")
+![自动&#45;括起来的放置位置](./media/autosurround1.png "AutoSurround1")
 
 以下屏幕快照显示了在第一个 `Sequence` 下面丢弃第二个时在 `Body` 中自动创建的 `WriteLine` 活动。
 
-![自动创建的序列活动](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+![自动创建的序列活动](./media/autosurround2.png "AutoSurround2")
 
 ### <a name="BKMK_PanMode"></a> 平移模式
 
@@ -138,7 +138,7 @@ ms.locfileid: "57212399"
 
 下面的屏幕快照显示了位于工作流设计器右下角的平移按钮。
 
-![在工作流设计器中的平移按钮](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")
+![在工作流设计器中的平移按钮](./media/panbutton.png "PanButton")
 
 也可以使用鼠标中键或空格键来平移工作流设计器。
 
@@ -152,9 +152,9 @@ ms.locfileid: "57212399"
 
 为了更加方便地浏览分层工作流，工作流的组件显示在树样式的大纲视图中。 大纲视图将显示在**文档大纲**视图。 若要打开此视图中，从顶部菜单中，选择**视图**，**其他 Windows**，**文档大纲**，或按 Ctrl W、 u。 单击大纲视图中的节点将会定位到工作流设计器中的相应活动，并且该大纲视图将会更新以显示在设计器中选择的活动。
 
-以下屏幕截图中的已完成工作流[入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)显示大纲视图中的，顺序工作流。
+以下屏幕截图中的已完成工作流[入门教程](getting-started-tutorial.md)显示大纲视图中的，顺序工作流。
 
-![大纲视图中工作流设计器](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![大纲视图中工作流设计器](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
 
 ### <a name="BKMK_CSharpExpressions"></a> C# 表达式
 
@@ -162,7 +162,7 @@ ms.locfileid: "57212399"
 
 将在设计时对 C# 表达式进行验证。 C# 表达式中的错误将标有红色波浪形下划线。
 
-有关 C# 表达式的详细信息，请参阅[C# 表达式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)。
+有关 C# 表达式的详细信息，请参阅[C# 表达式](csharp-expressions.md)。
 
 ### <a name="BKMK_Visibility"></a> Shell 栏和标头的可见性的更多控制项
 
@@ -174,17 +174,17 @@ ms.locfileid: "57212399"
 
 下面的屏幕快照显示了从工具箱中拖动活动时变为可见的附属点。
 
-![显示自动连接点的流程图起始节点](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")
+![显示自动连接点的流程图起始节点](./media/autoconnect1.png "Autoconnect1")
 
 也可以将活动拖动到流程图节点和状态之间的连接上，以在两个其他节点之间自动插入该节点。 以下屏幕快照显示了突出显示的连接线，可在此连接线处从工具箱拖动并放置活动。
 
-![自动&#45;放置活动的句柄插入](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "自动插入")
+![自动&#45;放置活动的句柄插入](./media/autoinsert.png "自动插入")
 
 ### <a name="BKMK_Annotations"></a> 设计器批注
 
 为促进开发较大型的工作流，设计器现在支持添加批注以帮助跟踪设计过程。 可以向活动、状态、流程图节点、变量和参数添加批注。 以下屏幕快照显示了用于将批注添加到设计器的上下文菜单。
 
-![注释上下文菜单](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")
+![注释上下文菜单](./media/annotationdialog.png "annotationdialog")
 
 ### <a name="debugging-states"></a>调试状态
 
@@ -231,12 +231,12 @@ ms.locfileid: "57212399"
 
 4. 用于创建状态机工作流的活动，包括：<xref:System.Activities.Statements.StateMachine>、<xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition>
 
-以下屏幕截图显示完成的状态机工作流从[入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)步骤[如何：创建状态机工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)。
+以下屏幕截图显示完成的状态机工作流从[入门教程](getting-started-tutorial.md)步骤[如何：创建状态机工作流](how-to-create-a-state-machine-workflow.md)。
 
-![完整的状态机工作流](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![完整的状态机工作流](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
 
-有关创建状态机工作流的详细信息，请参阅[状态机工作流](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。
+有关创建状态机工作流的详细信息，请参阅[状态机工作流](state-machine-workflows.md)。
 
 ### <a name="BKMK_ContractFirst"></a> 协定优先工作流开发
 
-协定优先工作流开发工具，开发人员可设计为先，在代码中的协定，然后在 Visual Studio 中单击几下，自动生成的活动模板在工具箱中表示每个操作。 这些活动随后用于创建实现由该协定定义的操作的工作流。 工作流设计器将对该工作流服务进行验证，以确保实现这些操作并且工作流的签名与协定签名匹配。 开发人员还可以将工作流服务与所实现的协定的集合进行关联。 协定优先工作流服务开发的详细信息，请参阅[如何：创建使用现有服务协定的工作流服务](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。
+协定优先工作流开发工具，开发人员可设计为先，在代码中的协定，然后在 Visual Studio 中单击几下，自动生成的活动模板在工具箱中表示每个操作。 这些活动随后用于创建实现由该协定定义的操作的工作流。 工作流设计器将对该工作流服务进行验证，以确保实现这些操作并且工作流的签名与协定签名匹配。 开发人员还可以将工作流服务与所实现的协定的集合进行关联。 协定优先工作流服务开发的详细信息，请参阅[如何：创建使用现有服务协定的工作流服务](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。

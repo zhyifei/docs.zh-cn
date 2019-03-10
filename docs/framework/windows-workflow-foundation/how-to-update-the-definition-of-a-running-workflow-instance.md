@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-ms.openlocfilehash: abd25c21cf98bb0ec426ef772f8cd26baa4e8e47
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d3ff9d217d085e3afe5171cce9d80f8dbc32ff36
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467137"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722901"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>如何：更新正在运行的工作流实例的定义
 
-动态更新为工作流应用程序开发人员提供了一种机制，可用于更新持久化工作流实例的工作流定义。 所需的更改可以实施 Bug 修复、新的要求以适应意外变化。 本教程中的此步骤演示如何使用动态更新来修改持久化的实例`v1`猜数工作流以匹配中引入的新功能[如何：承载多个版本的工作流的并排方案](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
+动态更新为工作流应用程序开发人员提供了一种机制，可用于更新持久化工作流实例的工作流定义。 所需的更改可以实施 Bug 修复、新的要求以适应意外变化。 本教程中的此步骤演示如何使用动态更新来修改持久化的实例`v1`猜数工作流以匹配中引入的新功能[如何：承载多个版本的工作流的并排方案](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
 
 > [!NOTE]
 > 若要下载完整的版本或观看教程视频演练，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。
 
 ## <a name="in-this-topic"></a>在本主题中
 
-- [若要创建 CreateUpdateMaps 项目](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)
+- [若要创建 CreateUpdateMaps 项目](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)
 
-- [更新 StateMachineNumberGuessWorkflow](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)
+- [更新 StateMachineNumberGuessWorkflow](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)
 
-- [更新 FlowchartNumberGuessWorkflow](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)
+- [更新 FlowchartNumberGuessWorkflow](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)
 
-- [更新 SequentialNumberGuessWorkflow](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)
+- [更新 SequentialNumberGuessWorkflow](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)
 
-- [若要生成并运行 CreateUpdateMaps 应用程序](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)
+- [若要生成并运行 CreateUpdateMaps 应用程序](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)
 
-- [若要生成更新的工作流程序集](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)
+- [若要生成更新的工作流程序集](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)
 
-- [若要用新版本更新 WorkflowVersionMap](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)
+- [若要用新版本更新 WorkflowVersionMap](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)
 
-- [若要应用动态更新](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)
+- [若要应用动态更新](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)
 
-- [若要使用已更新的工作流中运行应用程序](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)
+- [若要使用已更新的工作流中运行应用程序](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)
 
-- [若要允许启动以前版本的工作流](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)
+- [若要允许启动以前版本的工作流](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)
 
 ### <a name="BKMK_CreateProject"></a> 若要创建 CreateUpdateMaps 项目
 
@@ -257,7 +257,7 @@ ms.locfileid: "57467137"
     StateMachine sm = wf.Implementation as StateMachine;
     ```
 
-3. 接下来，更新两个表达式`WriteLine`显示用户的猜测是否过高或过低，使其与中所做的更新的活动[如何：承载多个版本的工作流的并排方案](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
+3. 接下来，更新两个表达式`WriteLine`显示用户的猜测是否过高或过低，使其与中所做的更新的活动[如何：承载多个版本的工作流的并排方案](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
 
     ```vb
     'Update the Text of the two WriteLine activities that write the
@@ -652,13 +652,13 @@ ms.locfileid: "57467137"
 
 2. 选择**开放**，**项目/解决方案**从**文件**菜单。
 
-3. 导航到**NumberGuessWorkflowActivities_du**文件夹中创建[如何：承载多个版本的工作流-并行](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，选择**NumberGuessWorkflowActivities.csproj** (或**vbproj**)，然后单击**打开**。
+3. 导航到**NumberGuessWorkflowActivities_du**文件夹中创建[如何：承载多个版本的工作流-并行](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，选择**NumberGuessWorkflowActivities.csproj** (或**vbproj**)，然后单击**打开**。
 
 4. 在中**解决方案资源管理器**，右键单击**SequentialNumberGuessWorkflow.xaml** ，然后选择**从项目中排除**。 执行相同的操作**FlowchartNumberGuessWorkflow.xaml**并**StateMachineNumberGuessWorkflow.xaml**。 此步骤从项目中删除以前版本的工作流定义。
 
 5. 选择**添加现有项**从**项目**菜单。
 
-6. 导航到**NumberGuessWorkflowActivities_du**文件夹中创建[如何：承载多个版本的工作流的并排方案](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
+6. 导航到**NumberGuessWorkflowActivities_du**文件夹中创建[如何：承载多个版本的工作流的并排方案](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
 
 7. 选择**XAML 文件 (\*.xaml;\*。xoml)** 从**类型的文件**下拉列表。
 
@@ -675,7 +675,7 @@ ms.locfileid: "57467137"
 
 11. 打开 Windows 资源管理器并导航到**numberguessworkflowactivities_du\bin\debug**文件夹 (或**bin\Release**取决于项目设置)。
 
-12. 重命名**numberguessworkflowactivities.dll**到**NumberGuessWorkflowActivities_v15.dll**，并将其复制到**PreviousVersions** 中创建的文件夹[如何：承载多个版本的工作流的并排方案](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
+12. 重命名**numberguessworkflowactivities.dll**到**NumberGuessWorkflowActivities_v15.dll**，并将其复制到**PreviousVersions** 中创建的文件夹[如何：承载多个版本的工作流的并排方案](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
 
 ### <a name="BKMK_UpdateWorkflowVersionMap"></a> 若要用新版本更新 WorkflowVersionMap
 
@@ -1447,7 +1447,7 @@ ms.locfileid: "57467137"
 
 3. 单击**新游戏**启动新工作流，并记下的版本信息下面指示的工作流的状态窗口是`v2`工作流。
 
-4. 选择其中一个`v1`工作流的开始处启动[如何：承载多个版本的工作流的并排方案](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)主题。 请注意，在状态窗口下的版本信息指示工作流是版本**1.5.0.0**工作流。 可以看到，除了指出猜数过高或过低的信息以外，没有有关猜数的其他信息。
+4. 选择其中一个`v1`工作流的开始处启动[如何：承载多个版本的工作流的并排方案](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)主题。 请注意，在状态窗口下的版本信息指示工作流是版本**1.5.0.0**工作流。 可以看到，除了指出猜数过高或过低的信息以外，没有有关猜数的其他信息。
 
     **请输入介于 1 和 10 之间的数字**\
     **该值是过低。**

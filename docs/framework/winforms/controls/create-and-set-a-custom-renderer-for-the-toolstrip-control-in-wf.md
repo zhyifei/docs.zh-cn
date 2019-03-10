@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-ms.openlocfilehash: a70503dd4def19dd303a7362c9ca4d92f1419ff6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 379cb8862ce5dda5cfffc625cc72906cf6a2c305
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538500"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721003"
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>如何：创建并设置自定义呈现器在 Windows 窗体的 ToolStrip 控件
 <xref:System.Windows.Forms.ToolStrip> 控件向主题和样式易于支持。 可以通过设置实现完全自定义外观和行为 （外观和感受）<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>属性或<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>属性设置为自定义呈现器。  
@@ -85,6 +85,6 @@ ms.locfileid: "54538500"
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>
-- [ToolStrip 控件概述](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [ToolStrip 控件体系结构](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [ToolStrip 技术摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [ToolStrip 控件概述](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip 控件体系结构](toolstrip-control-architecture.md)
+- [ToolStrip 技术摘要](toolstrip-technology-summary.md)

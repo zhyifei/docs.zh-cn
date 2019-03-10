@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lines [Windows Forms], texture
 - drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
-ms.openlocfilehash: 65d830ca2d01c63288ef73b6b3a3a94f328fe32b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd7a2aa2f6d930b0de29d8b8cbd3feacdb7a81e3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676233"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718592"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>如何：绘制用纹理填充的行
 而不是绘制一条线使用纯色，可以绘制用纹理的行。 若要绘制的直线和曲线与纹理，创建<xref:System.Drawing.TextureBrush>对象，并将其传递<xref:System.Drawing.TextureBrush>对象传递给<xref:System.Drawing.Pen.%23ctor%2A>构造函数。 使用纹理画笔相关联的位图用于平铺平面 （不可见的方式），并且触笔的笔划时笔绘制直线或曲线，寻找特定的像素的平铺纹理。  
@@ -24,14 +24,14 @@ ms.locfileid: "54676233"
   
  下图显示了位图和带纹理的椭圆。  
   
- ![笔](../../../../docs/framework/winforms/advanced/media/pens7.png "pens7")  
+ ![笔](./media/pens7.png "pens7")  
   
- [!code-csharp[System.Drawing.UsingAPen#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#61)]
- [!code-vb[System.Drawing.UsingAPen#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#61)]  
+ [!code-csharp[System.Drawing.UsingAPen#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#61)]
+ [!code-vb[System.Drawing.UsingAPen#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  创建 Windows 窗体和处理该窗体<xref:System.Windows.Forms.Control.Paint>事件。 前面将代码粘贴到<xref:System.Windows.Forms.Control.Paint>事件处理程序。 替换为`Texture.jpg`你系统上有效的映像。  
   
 ## <a name="see-also"></a>请参阅
-- [使用笔绘制直线和形状](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
-- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [使用笔绘制直线和形状](using-a-pen-to-draw-lines-and-shapes.md)
+- [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)

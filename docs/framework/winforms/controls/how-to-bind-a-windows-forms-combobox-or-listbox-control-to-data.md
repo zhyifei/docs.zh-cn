@@ -15,19 +15,19 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 4220e3e7d750e0d0caf0adbcbd2e1d96131e7c88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8eb224cbb8ec7ab271edaed8bb25f9cc7fb8ddc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698366"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709921"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>如何：将 Windows 窗体 ComboBox 或 ListBox 控件绑定到数据
 可以将绑定<xref:System.Windows.Forms.ComboBox>和<xref:System.Windows.Forms.ListBox>到数据以执行任务，例如浏览数据库中的数据，输入新数据，或编辑现有数据。  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>若要将 ComboBox 或 ListBox 控件绑定  
   
-1.  设置`DataSource`到数据源对象的属性。 可能的数据源包括<xref:System.Windows.Forms.BindingSource>绑定到数据、 数据表、 数据视图、 数据集，数据视图，管理器、 一个数组或实现任何类<xref:System.Collections.IList>接口。 有关详细信息，请参阅[支持的 Windows 窗体数据源](../../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)。  
+1.  设置`DataSource`到数据源对象的属性。 可能的数据源包括<xref:System.Windows.Forms.BindingSource>绑定到数据、 数据表、 数据视图、 数据集，数据视图，管理器、 一个数组或实现任何类<xref:System.Collections.IList>接口。 有关详细信息，请参阅[支持的 Windows 窗体数据源](../data-sources-supported-by-windows-forms.md)。  
   
 2.  如果要绑定到一个表，设置`DisplayMember`属性设置为数据源中的列的名称。  
   
@@ -56,6 +56,6 @@ ms.locfileid: "54698366"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Windows 窗体数据绑定](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [数据绑定和 Windows 窗体](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [用于列出选项的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Windows 窗体数据绑定](../windows-forms-data-binding.md)
+- [数据绑定和 Windows 窗体](../data-binding-and-windows-forms.md)
+- [用于列出选项的 Windows 窗体控件](windows-forms-controls-used-to-list-options.md)

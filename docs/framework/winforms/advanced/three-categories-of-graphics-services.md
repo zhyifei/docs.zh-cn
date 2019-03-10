@@ -8,12 +8,12 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: 2c2ddc76faaf0c15cc56345c607678985b9c4656
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7aa4de8a0d646c441d0921fb2561ef5a9480f4e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576377"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711211"
 ---
 # <a name="three-categories-of-graphics-services"></a>图形服务的三个类别
 在 Windows 窗体中的图形产品/服务划分为以下三个大类：  
@@ -40,6 +40,6 @@ ms.locfileid: "54576377"
  此外，Windows 窗体提供用于绘制文本的选项[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]中的功能及其<xref:System.Windows.Forms.TextRenderer>类。  
   
 ## <a name="see-also"></a>请参阅
-- [图形概述](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)
-- [关于 GDI+ 托管代码](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)
-- [使用托管图形类](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+- [图形概述](graphics-overview-windows-forms.md)
+- [关于 GDI+ 托管代码](about-gdi-managed-code.md)
+- [使用托管图形类](using-managed-graphics-classes.md)

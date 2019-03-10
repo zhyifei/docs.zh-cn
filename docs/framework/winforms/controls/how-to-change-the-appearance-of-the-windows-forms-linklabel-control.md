@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 2e36bdc051ec83985bd508499640c9f97bdefc91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 451faf04e3a51e7dbcb992feb3f38025894be631
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632122"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717721"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>如何：更改 Windows 窗体 LinkLabel 控件的外观
 可以更改显示的文本<xref:System.Windows.Forms.LinkLabel>控件以满足不同用途。 例如，它是常见的做法，以向用户指示后，可以设置要显示在特定颜色带下划线的文本单击文本。 在用户单击文本后，颜色更改为另一种颜色。 若要控制此行为，可以设置五个不同的属性： <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>， <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>， <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>， <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>，和<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>属性。  
@@ -126,6 +126,6 @@ ms.locfileid: "54632122"
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
-- [LinkLabel 控件概述](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)
-- [如何：链接到的对象或网页上使用 Windows 窗体 LinkLabel 控件](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [LinkLabel 控件](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+- [LinkLabel 控件概述](linklabel-control-overview-windows-forms.md)
+- [如何：链接到的对象或网页上使用 Windows 窗体 LinkLabel 控件](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [LinkLabel 控件](linklabel-control-windows-forms.md)

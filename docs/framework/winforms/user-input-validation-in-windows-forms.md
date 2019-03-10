@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 87124438118f05d426d5a33c914634922e657c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498903"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711312"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows 窗体中的用户输入验证
 当用户输入到你的应用程序数据时，你可以验证数据有效，然后再在应用程序将使用它。 可能需要某些文本字段不为零长度、 字段将格式化为电话号码或其他类型的格式正确的数据，或字符串不包含任何不安全字符无法用于危及安全的数据库。 Windows 窗体提供了几种方法，以验证你的应用程序中的输入。  
@@ -22,14 +22,14 @@ ms.locfileid: "54498903"
   
  使用的掩码语言<xref:System.Windows.Forms.MaskedTextBox>非常灵活。 它允许您指定所需的字符、 可选的字符、 原义字符，如连字符和括号，货币字符和日期分隔符。 该控件也适用于良好时绑定到数据源。 <xref:System.Windows.Forms.Binding.Format>上的数据绑定事件可用于重新设置格式传入的数据以符合掩码和<xref:System.Windows.Forms.Binding.Parse>事件可用于重新格式化传出的数据以遵守与数据字段的规范。  
   
- 有关详细信息，请参阅[MaskedTextBox 控件](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)。  
+ 有关详细信息，请参阅[MaskedTextBox 控件](./controls/maskedtextbox-control-windows-forms.md)。  
   
 ## <a name="event-driven-validation"></a>事件驱动的验证  
  如果您想要完整的编程控制验证，或需要执行复杂的验证检查，则应使用大多数 Windows 窗体控件中内置的验证事件。 接受自由的用户输入的每个控件具有<xref:System.Windows.Forms.Control.Validating>每当该控件所需数据验证时将发生的事件。 在<xref:System.Windows.Forms.Control.Validating>事件处理方法，可以验证用户输入以下几种方式。 例如，如果您有必须包含邮政编码的文本框中，您可以按以下方式来执行验证：  
   
 -   如果邮政编码必须属于特定组的邮政编码，您可以对要验证用户输入的数据的输入执行字符串比较。 例如，如果邮政编码必须为 {10001、 10002，10003} 集中，然后可以使用字符串比较来验证数据。  
   
--   如果邮政编码必须为特定窗体中您可以使用正则表达式验证用户输入的数据。 例如，若要验证的表单`#####`或`#####-####`，可以使用正则表达式`^(\d{5})(-\d{4})?$`。 若要验证的表单`A#A #A#`，可以使用正则表达式`[A-Z]\d[A-Z] \d[A-Z]\d`。 有关正则表达式的详细信息，请参阅[.NET Framework 正则表达式](../../../docs/standard/base-types/regular-expressions.md)并[正则表达式示例](../../../docs/standard/base-types/regular-expression-examples.md)。  
+-   如果邮政编码必须为特定窗体中您可以使用正则表达式验证用户输入的数据。 例如，若要验证的表单`#####`或`#####-####`，可以使用正则表达式`^(\d{5})(-\d{4})?$`。 若要验证的表单`A#A #A#`，可以使用正则表达式`[A-Z]\d[A-Z] \d[A-Z]\d`。 有关正则表达式的详细信息，请参阅[.NET Framework 正则表达式](../../standard/base-types/regular-expressions.md)并[正则表达式示例](../../standard/base-types/regular-expression-examples.md)。  
   
 -   如果邮政编码必须是有效的美国邮政编码，则可以调用邮政编码 Web 服务，以便验证用户输入的数据。  
   
@@ -94,5 +94,5 @@ ms.locfileid: "54498903"
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
-- [MaskedTextBox 控件](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
-- [正则表达式示例](../../../docs/standard/base-types/regular-expression-examples.md)
+- [MaskedTextBox 控件](./controls/maskedtextbox-control-windows-forms.md)
+- [正则表达式示例](../../standard/base-types/regular-expression-examples.md)

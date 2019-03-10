@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: ef7836721df6c090a4d09c38c176641331c3e8a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362560"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714003"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>如何：对 Windows 窗体控件进行线程安全调用
 
-多线程处理可以提高性能的 Windows 窗体应用程序，但对 Windows 窗体控件的访问不是本质上是线程安全。 多线程处理可以公开你的代码非常严重且复杂的 bug。 操作控件的两个或多个线程可以迫使该控件处于不一致的状态，并会导致争用条件、 死锁，并冻结或挂起。 如果你实现多线程处理在应用中，请确保以线程安全的方式调用跨线程控件。 有关详细信息，请参阅[托管线程处理最佳做法](../../../../docs/standard/threading/managed-threading-best-practices.md)。 
+多线程处理可以提高性能的 Windows 窗体应用程序，但对 Windows 窗体控件的访问不是本质上是线程安全。 多线程处理可以公开你的代码非常严重且复杂的 bug。 操作控件的两个或多个线程可以迫使该控件处于不一致的状态，并会导致争用条件、 死锁，并冻结或挂起。 如果你实现多线程处理在应用中，请确保以线程安全的方式调用跨线程控件。 有关详细信息，请参阅[托管线程处理最佳做法](../../../standard/threading/managed-threading-best-practices.md)。 
 
 有两种方法来安全地从并未创建该控件的线程调用的 Windows 窗体控件。 可以使用<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法来调用在主线程，这又会调用该控件中创建一个委托。 或者，可以实现<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>，它使用一个事件驱动的模型将报告结果中的后台线程完成工作。 
 
@@ -75,8 +75,8 @@ Visual Studio 调试器检测到这些不安全的线程调用，通过引发<xr
 
 `SafeCallDelegate`允许设定<xref:System.Windows.Forms.TextBox>控件的<xref:System.Windows.Forms.TextBox.Text%2A>属性。 `WriteTextSafe`方法查询<xref:System.Windows.Forms.Control.InvokeRequired%2A>。 如果<xref:System.Windows.Forms.Control.InvokeRequired%2A>将返回`true`，`WriteTextSafe`传递`SafeCallDelegate`到<xref:System.Windows.Forms.Control.Invoke%2A>进行实际调用控件的方法。 如果<xref:System.Windows.Forms.Control.InvokeRequired%2A>将返回`false`，`WriteTextSafe`设置<xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType>直接。 `Button1_Click`事件处理程序将创建新线程并运行`WriteTextSafe`方法。 
 
- [!code-csharp[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
 ## <a name="example-use-a-backgroundworker-event-handler"></a>示例:使用 BackgroundWorker 事件处理程序
 
@@ -86,12 +86,12 @@ Visual Studio 调试器检测到这些不安全的线程调用，通过引发<xr
 
 该示例使用<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件处理程序设置<xref:System.Windows.Forms.TextBox>控件的<xref:System.Windows.Forms.TextBox.Text%2A>属性。 有关使用示例<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件，请参阅<xref:System.ComponentModel.BackgroundWorker>。 
 
- [!code-csharp[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [如何：在后台运行操作](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [如何：实现使用后台操作的窗体](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [开发自定义 Windows 窗体控件与.NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [如何：在后台运行操作](how-to-run-an-operation-in-the-background.md)
+- [如何：实现使用后台操作的窗体](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [开发自定义 Windows 窗体控件与.NET Framework](developing-custom-windows-forms-controls.md)

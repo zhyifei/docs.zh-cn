@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: 5e9e75876862a73be7ace08c09610923d007de4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540853"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717617"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>管理 Graphics 对象的状态
 <xref:System.Drawing.Graphics>类的核心是[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。 若要绘制任何内容，您可以获得<xref:System.Drawing.Graphics>对象，设置其属性，并调用其方法<xref:System.Drawing.Graphics.DrawLine%2A>， <xref:System.Drawing.Graphics.DrawImage%2A>， <xref:System.Drawing.Graphics.DrawString%2A>，等等)。  
@@ -67,7 +67,7 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>转换  
- 一个<xref:System.Drawing.Graphics>对象维护应用到所有项的绘制的两种转换 （世界和页）<xref:System.Drawing.Graphics>对象。 任何仿射转换可以存储在世界转换。 仿射转换包括缩放、 旋转、 反射、 倾斜和转换。 可以使用页转换，缩放和更改单元 （例如，像素为单位为英寸）。 有关详细信息，请参阅[坐标系和坐标转换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)。  
+ 一个<xref:System.Drawing.Graphics>对象维护应用到所有项的绘制的两种转换 （世界和页）<xref:System.Drawing.Graphics>对象。 任何仿射转换可以存储在世界转换。 仿射转换包括缩放、 旋转、 反射、 倾斜和转换。 可以使用页转换，缩放和更改单元 （例如，像素为单位为英寸）。 有关详细信息，请参阅[坐标系和坐标转换](coordinate-systems-and-transformations.md)。  
   
  下面的示例设置的世界和页转换<xref:System.Drawing.Graphics>对象。 世界转换设置为 30 度旋转。 设置页转换，以便坐标传递到第二个<xref:System.Drawing.Graphics.DrawEllipse%2A>将被视为毫米为单位，而不是像素为单位。 代码会两个相同调用<xref:System.Drawing.Graphics.DrawEllipse%2A>方法。 世界转换应用于第一个<xref:System.Drawing.Graphics.DrawEllipse%2A>调用时，并 （世界和页） 这两种转换应用于第二个<xref:System.Drawing.Graphics.DrawEllipse%2A>调用。  
   
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  下图显示了两个椭圆。 请注意，30 度旋转的坐标系统 （客户端区域的左上角） 来源，而不椭圆的中心。 另请注意钢笔的宽度为 1 的第二个椭圆意味着 1 像素的第一个椭圆和 1 毫米。  
   
- ![椭圆](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![椭圆](./media/csgraphicsascon1.png "csgraphicsascon1")  
   
 ### <a name="clipping-region"></a>剪辑区域  
  一个<xref:System.Drawing.Graphics>对象维护应用于由，绘制的所有项的剪辑区域<xref:System.Drawing.Graphics>对象。 可以通过调用设置的剪辑区域<xref:System.Drawing.Graphics.SetClip%2A>方法。  
@@ -148,8 +148,8 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
   
  下图显示了裁剪后的行。  
   
- ![有限的剪辑区域](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
+ ![有限的剪辑区域](./media/graphicsascon2.png "graphicsascon2")  
   
 ## <a name="see-also"></a>请参阅
-- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [使用嵌套的图形容器](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)
+- [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
+- [使用嵌套的图形容器](using-nested-graphics-containers.md)

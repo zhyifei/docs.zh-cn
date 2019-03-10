@@ -7,15 +7,15 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 56bc14f176f239a0272038494015cea4553e3e6f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 276def9db2ff610a22b42a88ad658727793b53de
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442524"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718904"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows 窗体中额外的安全注意事项
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 安全设置可能导致应用程序在部分信任环境中运行与在本地计算机上运行有所不同。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 限制对关键本地资源的访问，如文件系统、网络和非托管 API 等。 安全设置会影响对安全系统无法验证的 Microsoft Win32 API 或其他 API 进行调用的能力。 安全性还会影响应用程序的其他方面，包括文件和数据访问以及打印。 有关在部分信任环境中访问文件和数据的详细信息，请参阅 [Windows 窗体中更加安全的文件和数据访问](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)。 有关在部分信任环境中进行打印的详细信息，请参阅 [Windows 窗体中更加安全的打印](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)。  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 安全设置可能导致应用程序在部分信任环境中运行与在本地计算机上运行有所不同。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 限制对关键本地资源的访问，如文件系统、网络和非托管 API 等。 安全设置会影响对安全系统无法验证的 Microsoft Win32 API 或其他 API 进行调用的能力。 安全性还会影响应用程序的其他方面，包括文件和数据访问以及打印。 有关在部分信任环境中访问文件和数据的详细信息，请参阅 [Windows 窗体中更加安全的文件和数据访问](more-secure-file-and-data-access-in-windows-forms.md)。 有关在部分信任环境中进行打印的详细信息，请参阅 [Windows 窗体中更加安全的打印](more-secure-printing-in-windows-forms.md)。  
   
  以下各节讨论从在部分信任环境下运行的应用程序中，如何使用剪贴板，如何执行窗口操作以及如何调用 Win32 API。  
   
@@ -86,11 +86,11 @@ ms.locfileid: "56442524"
   
  如果你的应用程序无权调用非托管的代码，你的应用程序必须请求<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>权限，或者您必须考虑实现这些功能的其他方法; 在许多情况下，Windows 窗体提供了 Win32 API 的托管替代方法函数。 如果不存在任何备选方法并且应用程序必须访问非托管代码，则必须提升应用程序的权限。  
   
- 调用非托管代码的权限使应用程序几乎可以执行任何操作。 因此，应该只向来自于受信任源的应用程序授予调用非托管代码的权限。 另外，根据应用程序的不同，调用非托管代码的应用程序功能块可以是可选的，或者只在完全受信任的环境中启用。 有关危险权限的详细信息，请参阅[危险权限和策略管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)。 有关提升权限的详细信息，请参阅[常规安全策略管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))。  
+ 调用非托管代码的权限使应用程序几乎可以执行任何操作。 因此，应该只向来自于受信任源的应用程序授予调用非托管代码的权限。 另外，根据应用程序的不同，调用非托管代码的应用程序功能块可以是可选的，或者只在完全受信任的环境中启用。 有关危险权限的详细信息，请参阅[危险权限和策略管理](../misc/dangerous-permissions-and-policy-administration.md)。 有关提升权限的详细信息，请参阅[常规安全策略管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))。  
   
 ## <a name="see-also"></a>请参阅
-- [在 Windows 窗体中提高文件和数据访问的安全性](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)
-- [Windows 窗体中更加安全的打印](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
-- [Windows 窗体中的安全性概述](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
-- [Windows 窗体安全](../../../docs/framework/winforms/windows-forms-security.md)
+- [在 Windows 窗体中提高文件和数据访问的安全性](more-secure-file-and-data-access-in-windows-forms.md)
+- [Windows 窗体中更加安全的打印](more-secure-printing-in-windows-forms.md)
+- [Windows 窗体中的安全性概述](security-in-windows-forms-overview.md)
+- [Windows 窗体安全](windows-forms-security.md)
 - [保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)

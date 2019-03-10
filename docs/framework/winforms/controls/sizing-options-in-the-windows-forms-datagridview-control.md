@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: d3082da455df7497a4c54f963017910e54ac677a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536303"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717903"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的大小调整选项
 <xref:System.Windows.Forms.DataGridView> 行、 列和标头可以更改由于许多不同的匹配项的大小。 下表显示了这些情况的发生。  
@@ -61,7 +61,7 @@ ms.locfileid: "54536303"
 ## <a name="automatic-sizing"></a>自动调整大小  
  有两种类型中的自动调整大小的<xref:System.Windows.Forms.DataGridView>控件： 列填充模式和基于内容的自动调整大小。  
   
- 列填充模式中的控件来填充控件的显示区域的宽度将导致可见的列。 有关此模式的详细信息，请参阅[Windows 窗体 DataGridView 控件中的列填充模式](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)。  
+ 列填充模式中的控件来填充控件的显示区域的宽度将导致可见的列。 有关此模式的详细信息，请参阅[Windows 窗体 DataGridView 控件中的列填充模式](column-fill-mode-in-the-windows-forms-datagridview-control.md)。  
   
  此外可以配置行、 列和标头，以便自动调整其大小以适应其单元格内容。 在这种情况下，单元格内容更改时，会发生大小调整。  
   
@@ -154,6 +154,6 @@ ms.locfileid: "54536303"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [调整 Windows 窗体 DataGridView 控件中列和行的大小](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Windows 窗体 DataGridView 控件中的列填充模式](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [如何：设置 Windows 窗体 DataGridView 控件的大小调整模式](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [调整 Windows 窗体 DataGridView 控件中列和行的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Windows 窗体 DataGridView 控件中的列填充模式](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [如何：设置 Windows 窗体 DataGridView 控件的大小调整模式](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

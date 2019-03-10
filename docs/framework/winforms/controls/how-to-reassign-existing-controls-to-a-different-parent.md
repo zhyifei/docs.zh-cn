@@ -6,12 +6,12 @@ helpviewer_keywords:
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: fa1bd6c0274fdf702072e062e6eeab7078375491
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 650d10fd681a55dfb17425111ef9d81726551da9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600253"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720181"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>如何：重新分配给另一个父现有控件
 可以将你窗体中的控件分配到新容器控件。  
@@ -46,6 +46,6 @@ ms.locfileid: "54600253"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [演练：使用对齐线的 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
+- [演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [演练：使用对齐线的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

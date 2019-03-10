@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-ms.openlocfilehash: 91da6409eb3a02709332d8d1a5a2d7fe54d3f401
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdfb2d5a3ce45deb471aaa465c35b82e738a128b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543063"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717916"
 ---
 # <a name="windows-forms-controls-by-function"></a>根据功能列出的 Windows 窗体控件
 Windows 窗体还提供控件和组件执行的许多功能。 下表列出了 Windows 窗体控件和组件根据常规函数。 此外，多个控件存在的具有相同的功能时，与它所取代的控件中还要注意： 列出推荐的控件。 在随后的一个单独的表中，使用它们的建议替换项列出被取代的控件。  
   
 > [!NOTE]
->  下表未列出的每个控件或组件可在 Windows 窗体;有关更全面的列表，请参阅[Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+>  下表未列出的每个控件或组件可在 Windows 窗体;有关更全面的列表，请参阅[Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)  
   
 ## <a name="recommended-controls-and-components-by-function"></a>建议的控件和组件函数  
   
 |函数|控件|描述|  
 |--------------|-------------|-----------------|  
-|数据显示|<xref:System.Windows.Forms.DataGridView> 控件|<xref:System.Windows.Forms.DataGridView>控件提供可自定义的表，用于显示数据。 <xref:System.Windows.Forms.DataGridView>类允许自定义的单元格、 行、 列和边框。 **注意：**<xref:System.Windows.Forms.DataGridView>控件提供了许多的基本和高级功能，中缺少<xref:System.Windows.Forms.DataGrid>控件。 有关详细信息，请参阅[差异 Windows 窗体 DataGridView 控件与之间的 DataGrid 控件](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
+|数据显示|<xref:System.Windows.Forms.DataGridView> 控件|<xref:System.Windows.Forms.DataGridView>控件提供可自定义的表，用于显示数据。 <xref:System.Windows.Forms.DataGridView>类允许自定义的单元格、 行、 列和边框。 **注意：**<xref:System.Windows.Forms.DataGridView>控件提供了许多的基本和高级功能，中缺少<xref:System.Windows.Forms.DataGrid>控件。 有关详细信息，请参阅[差异 Windows 窗体 DataGridView 控件与之间的 DataGrid 控件](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |数据绑定和导航|<xref:System.Windows.Forms.BindingSource> 组件|当前项管理、 更改通知和其他服务，从而简化了将控件绑定到数据窗体上。|  
 ||<xref:System.Windows.Forms.BindingNavigator> 控件|提供一个工具栏类型接口用于导航和操作窗体上的数据。|  
 |文本编辑|<xref:System.Windows.Forms.TextBox> 控件|显示在设计时，可以在运行时，由用户编辑或以编程方式更改输入的文本。|  
@@ -85,5 +85,5 @@ Windows 窗体还提供控件和组件执行的许多功能。 下表列出了 W
 |窗体布局|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
 ## <a name="see-also"></a>请参阅
-- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
+- [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)

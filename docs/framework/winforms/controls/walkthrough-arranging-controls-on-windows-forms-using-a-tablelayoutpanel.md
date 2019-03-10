@@ -6,19 +6,19 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: f337164043014ed14d42e219f26ee2ec8be06662
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 8999dba110ee21b735c79ccc10c5af52dbfcdea9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305839"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712989"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件
 某些应用程序需要这样一个窗体，该窗体的布局可在窗体重新调整大小或在内容更改大小时对自身进行排列。 当你需要动态布局并且不希望在代码中显式处理 <xref:System.Windows.Forms.Control.Layout> 事件时，请考虑使用布局面板。  
   
  <xref:System.Windows.Forms.FlowLayoutPanel> 控件和 <xref:System.Windows.Forms.TableLayoutPanel> 控件提供可用于排列窗体上的控件的直观方式。 两种控件均提供一种自动的可配置能力来控制包含在控件内的子控件的相对位置，并且两种控件均在运行时提供动态布局功能，以便它们可以在父窗体的尺寸更改时重新调整子控件的大小和对其进行重新定位。 布局面板可以嵌套在布局面板内，从而实现复杂的用户界面。  
   
- <xref:System.Windows.Forms.FlowLayoutPanel> 以特定的流向排列其内容：水平或垂直。 可从一行到下一行，或从一列到下列进行内容换行。 还可以剪切内容，而不是进行换行。 有关详细信息，请参见[演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。  
+ <xref:System.Windows.Forms.FlowLayoutPanel> 以特定的流向排列其内容：水平或垂直。 可从一行到下一行，或从一列到下列进行内容换行。 还可以剪切内容，而不是进行换行。 有关详细信息，请参见[演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。  
   
  <xref:System.Windows.Forms.TableLayoutPanel>排列其内容在网格中，提供的功能类似的 html\<表 > 元素。 <xref:System.Windows.Forms.TableLayoutPanel>让您可以将控件放在网格布局，而无需精确指定每个控件的位置。 其单元格排列为行和列，并且这些行和列可具有不同的大小。 可在中的行和列合并单元格。 单元格可以包含一个窗体可以包含，并在作为容器的大多数其他方面的行为的任何内容。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "56305839"
   
 1.  选择<xref:System.Windows.Forms.TableLayoutPanel>控制**Windows 窗体设计器**。  
   
-2.  在中**属性**打开窗口<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>集合，通过单击省略号 (![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 按钮下一步**列**条目。  
+2.  在中**属性**打开窗口<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>集合，通过单击省略号 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮下一步**列**条目。  
   
 3.  选择第一列和更改的值及其<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>属性设置为<xref:System.Windows.Forms.SizeType.AutoSize>。 单击**确定**以接受更改。 请注意，第一列的宽度缩小以适合<xref:System.Windows.Forms.Button>控件。 另请注意，列的宽度不是可调整大小。  
   
@@ -181,13 +181,13 @@ ms.locfileid: "56305839"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [演练：使用对齐线的 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [演练：使用对齐线的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Microsoft Windows 用户体验，用户界面开发人员和设计人员的官方指南。Redmond，WA:Microsoft Press，1999年。(USBN:0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
 - [演练：创建数据输入可调整大小的 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
 - [演练：创建可本地化 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
-- [有关 TableLayoutPanel 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
-- [AutoSize 属性概述](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
-- [如何：在 Windows 窗体上停靠控件](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
-- [如何：在 Windows 窗体上定位控件](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)
-- [演练：布局 Windows 窗体控件与 Padding、 Margins 和 AutoSize 属性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+- [有关 TableLayoutPanel 控件的最佳做法](best-practices-for-the-tablelayoutpanel-control.md)
+- [AutoSize 属性概述](autosize-property-overview.md)
+- [如何：在 Windows 窗体上停靠控件](how-to-dock-controls-on-windows-forms.md)
+- [如何：在 Windows 窗体上定位控件](how-to-anchor-controls-on-windows-forms.md)
+- [演练：布局 Windows 窗体控件与 Padding、 Margins 和 AutoSize 属性](windows-forms-controls-padding-autosize.md)

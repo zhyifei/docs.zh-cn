@@ -10,12 +10,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], associating with controls
 - ContextMenuStrips [Windows Forms], relating
 ms.assetid: 6fc40a42-5d69-427f-aa30-0a146193226b
-ms.openlocfilehash: 979245291a03b07b7bad548193737c0577b5c107
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 4b61da8dc9f36e0a80807547e2049ef512c94747
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221116"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718328"
 ---
 # <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>如何：将 ContextMenuStrip 与控件相关联
 创建控件和快捷菜单后，使用以下过程在用户右键单击控件时显示给定的快捷菜单。 这些过程将 <xref:System.Windows.Forms.ContextMenuStrip> 与 Windows 窗体和 <xref:System.Windows.Forms.ToolStrip> 控件相关联。  
@@ -31,8 +31,8 @@ ms.locfileid: "56221116"
 ## <a name="example"></a>示例  
  下面的代码示例创建了 Windows 窗体和 <xref:System.Windows.Forms.ToolStrip>，并将不同的 <xref:System.Windows.Forms.ContextMenuStrip> 与其中每个控件关联。  
   
- [!code-csharp[System.Windows.Forms.ContextMenuStrip#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ContextMenuStrip/CS/form1.cs#1)]
- [!code-vb[System.Windows.Forms.ContextMenuStrip#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ContextMenuStrip/VB/form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.ContextMenuStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ContextMenuStrip/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ContextMenuStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ContextMenuStrip/VB/form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
@@ -45,5 +45,5 @@ ms.locfileid: "56221116"
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.Control.ContextMenuStrip%2A>
 - <xref:System.Windows.Forms.ToolStrip>
-- [如何：向 ContextMenuStrip 添加菜单项](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md)
-- [ContextMenuStrip 控件](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)
+- [如何：向 ContextMenuStrip 添加菜单项](how-to-add-menu-items-to-a-contextmenustrip.md)
+- [ContextMenuStrip 控件](contextmenustrip-control.md)

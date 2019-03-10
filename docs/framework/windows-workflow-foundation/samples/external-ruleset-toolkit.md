@@ -2,12 +2,12 @@
 title: 外部 RuleSet 工具包
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 7a331f139fd7d3127892e6a103b370ec50dc9c99
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 510b70f7ebeda784dce4731bb4a08896ac2e8361
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482361"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710038"
 ---
 # <a name="external-ruleset-toolkit"></a>外部 RuleSet 工具包
 
@@ -30,7 +30,7 @@ Visual Studio 提供了一个 RuleSet 编辑器，Windows Workflow Foundation (W
 
 图 1 中演示了各个组件间的交互。 后面几节将对每个组件进行描述。
 
-![外部 RuleSet 示例概念概述](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
+![外部 RuleSet 示例概念概述](./media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
 
 图 1：示例概述
 
@@ -47,7 +47,7 @@ Visual Studio 提供了一个 RuleSet 编辑器，Windows Workflow Foundation (W
 
 图 2 演示了 RuleSet 工具的屏幕快照。 从**规则存储**菜单中，可以从数据库加载可用的 Ruleset，并将修改过的 Ruleset 保存回存储区。 应用程序配置文件为 RuleSet 数据库提供了数据库连接字符串。 启动工具时，它会从已配置的数据库自动加载 RuleSet。
 
-![外部 RuleSet 工具包示例输出](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetbrowser.gif "RuleSetBrowser")
+![外部 RuleSet 工具包示例输出](./media/rulesetbrowser.gif "RuleSetBrowser")
 
 图 2：RuleSet 浏览器
 
@@ -55,13 +55,13 @@ RuleSet 工具将主版本号和次版本号应用到 RuleSet，使您可以同�
 
 当您单击**编辑规则**，启动 RuleSet 编辑器，如图 3 中所示。
 
-![外部 RuleSet 工具包示例输出](../../../../docs/framework/windows-workflow-foundation/samples/media/ruleseteditor.gif "RuleSetEditor")
+![外部 RuleSet 工具包示例输出](./media/ruleseteditor.gif "RuleSetEditor")
 
 图 3：RuleSet 编辑器
 
 这是重新承载的是 Windows Workflow Foundation Visual Studio 外接程序的一部分编辑器对话框。 它可提供相同的功能，包括 Intellisense 支持。 规则是根据与工具; 中 RuleSet 相关联的目标类型 （如工作流） 创作当您单击**浏览**主工具对话框中**工作流/类型选择器**对话框出现，如图 4 所示。
 
-![工作流&#47;键入所选内容](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
+![工作流&#47;键入所选内容](./media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
 
 图 4：工作流/类型选择器
 
@@ -71,7 +71,7 @@ RuleSet 工具将主版本号和次版本号应用到 RuleSet，使您可以同�
 
 当您单击**确定**中**工作流/类型选择器**对话框中，它会验证所选的类型与规则集，以确保目标类型具有规则所引用的所有成员。 错误将显示在**验证错误**对话框 （请参见图 5）。 您可以选择继续此更改忽略错误，或单击**取消**。 从**工具**主工具对话框中的菜单，单击**验证**来重新验证 RuleSet 版本依据目标活动。
 
-![外部 RuleSet 示例的验证错误](../../../../docs/framework/windows-workflow-foundation/samples/media/validationerrorsruleset.png "ValidationErrorsRuleSet")
+![外部 RuleSet 示例的验证错误](./media/validationerrorsruleset.png "ValidationErrorsRuleSet")
 
 图 5：验证错误
 
@@ -81,7 +81,7 @@ RuleSet 工具将主版本号和次版本号应用到 RuleSet，使您可以同�
 
 对于导入的每个 RuleSet，工具都会尝试基于 RuleSet 中使用的成员，从 .rules 文件（如果存在）位置下面的 bin\Debug 文件夹查找关联类型。 如果工具找到多个匹配的类型，它将尝试基于 .rules 文件名称和类型名称之间的匹配（例如，`Workflow1` 类型与 Workflow1.rules 相对应）选择一种类型。 如果存在多个匹配，系统会提示您选择类型。 如果此自动标识机制无法找到匹配的程序集或类型，则在导入后，你可以单击**浏览**上主工具对话框以导航到相关联的类型。
 
-![Ruleset 选择器](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetselector.gif "RuleSetSelector")
+![Ruleset 选择器](./media/rulesetselector.gif "RuleSetSelector")
 
 图 6：RuleSet 选择器
 

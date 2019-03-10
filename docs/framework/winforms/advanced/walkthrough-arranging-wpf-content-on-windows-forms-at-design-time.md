@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 543546de4f9b93deb5fa70c98608246e9c06e4f7
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 0738d1522c8ade8f026a3bf69fbff0bc2c2d6d85
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304552"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712456"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时排列 Windows 窗体上的 WPF 内容
 本演练演示如何使用 Windows 窗体布局功能（例如锚定和对齐线）排列 Windows Presentation Foundation (WPF) 控件。
@@ -54,7 +54,7 @@ ms.locfileid: "56304552"
   
 #### <a name="to-create-wpf-controls"></a>创建 WPF 控件  
   
-1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 添加到项目。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 添加到项目。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
 2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何：选择并在设计图面上移动元素](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "56304552"
      调整两个 <xref:System.Windows.Forms.Integration.ElementHost> 控件的大小以适应新的布局。  
   
 ## <a name="using-snaplines-to-align-wpf-controls"></a>使用对齐线对齐 WPF 控件  
- 使用对齐线能够轻松对齐窗体上的控件。 还可以使用对齐线对齐 WPF 控件。 有关详细信息，请参见[演练：在 Windows 上排列控件窗体使用对齐线](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
+ 使用对齐线能够轻松对齐窗体上的控件。 还可以使用对齐线对齐 WPF 控件。 有关详细信息，请参见[演练：在 Windows 上排列控件窗体使用对齐线](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
   
 #### <a name="to-use-snaplines-to-align-wpf-controls"></a>若要使用对齐线对齐 WPF 控件  
   
@@ -147,14 +147,14 @@ ms.locfileid: "56304552"
   
      所有三个 <xref:System.Windows.Forms.Integration.ElementHost> 控件将相应地调整大小。  
   
-     有关详细信息，请参阅[如何：锚定和停靠在 TableLayoutPanel 控件中的子控件](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)。  
+     有关详细信息，请参阅[如何：锚定和停靠在 TableLayoutPanel 控件中的子控件](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [如何：锚定和停靠在 TableLayoutPanel 控件中的子控件](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [如何：将控件与窗体边缘对齐在设计时](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [演练：使用对齐线的 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [使用 WPF 控件](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [如何：锚定和停靠在 TableLayoutPanel 控件中的子控件](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [如何：将控件与窗体边缘对齐在设计时](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [演练：使用对齐线的 Windows 窗体上排列控件](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [迁移和互操作性](../../wpf/advanced/migration-and-interoperability.md)
+- [使用 WPF 控件](using-wpf-controls.md)
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

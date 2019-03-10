@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 2e00b0b9b22bc8dcdd1c63494f1bc5854bc4f033
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b6ff14de7ff524b8af603ae5fa3969d5230b1a7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632005"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714120"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>如何：使用复合模式控制 Alpha 值混合处理
 可能您想要创建屏幕外位图，具有以下特征：  
@@ -34,28 +34,28 @@ ms.locfileid: "54632005"
   
  下图显示的代码示例的输出。 请注意，省略号混合和背景，但它们之间不相互进行混合。  
   
- ![源副本](../../../../docs/framework/winforms/advanced/media/sourcecopy.png "sourcecopy")  
+ ![源副本](./media/sourcecopy.png "sourcecopy")  
   
  此代码示例包含此语句：  
   
- [!code-csharp[System.Drawing.AlphaBlending#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#41)]
- [!code-vb[System.Drawing.AlphaBlending#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#41)]  
+ [!code-csharp[System.Drawing.AlphaBlending#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.AlphaBlending#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#41)]  
   
  如果你希望省略号以以及在后台使用混合，更改该语句所示：  
   
- [!code-csharp[System.Drawing.AlphaBlending#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#42)]
- [!code-vb[System.Drawing.AlphaBlending#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#42)]  
+ [!code-csharp[System.Drawing.AlphaBlending#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#42)]
+ [!code-vb[System.Drawing.AlphaBlending#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#42)]  
   
  下图显示修改后的代码的输出。  
   
- ![源通过](../../../../docs/framework/winforms/advanced/media/sourceover.png "sourceover")  
+ ![源通过](./media/sourceover.png "sourceover")  
   
- [!code-csharp[System.Drawing.AlphaBlending#43](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
- [!code-vb[System.Drawing.AlphaBlending#43](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
+ [!code-csharp[System.Drawing.AlphaBlending#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
+ [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，这是 <xref:System.Windows.Forms.PaintEventHandler> 的参数。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [alpha 值混合处理直线和填充](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+- [alpha 值混合处理直线和填充](alpha-blending-lines-and-fills.md)

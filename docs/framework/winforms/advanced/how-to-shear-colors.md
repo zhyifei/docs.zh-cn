@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: bde3271398c6bc6a37c975476b76acb85511c1a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eff468e5761038723e16eddf84bdcf8849ac30d1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589827"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720216"
 ---
 # <a name="how-to-shear-colors"></a>如何：切变颜色
 修剪每增加或减少到另一个颜色组件比例颜色组件。 例如，考虑红色组件加一半的蓝色组件值的转换。 在这种转换 （0.2，0.5，1） 的颜色将变为 （0.7，0.5，1）。 新的红色分量为 0.2 + (1/2)(1) = 0.7。  
@@ -23,7 +23,7 @@ ms.locfileid: "54589827"
   
  下图显示在右侧左侧上的原始映像和剪切后的图像。  
   
- ![切变颜色](../../../../docs/framework/winforms/advanced/media/colortrans6.png "colortrans6")  
+ ![切变颜色](./media/colortrans6.png "colortrans6")  
   
  下表列出了四个条形的颜色矢量之前和之后的倾斜转换。  
   
@@ -34,14 +34,14 @@ ms.locfileid: "54589827"
 |(1, 1, 0, 1)|(1, 1, 0, 1)|  
 |(0.4, 0.4, 0.4, 1)|(0.6, 0.4, 0.4, 1)|  
   
- [!code-csharp[System.Drawing.Misc3#9](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#9)]
- [!code-vb[System.Drawing.Misc3#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
+ [!code-csharp[System.Drawing.Misc3#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#9)]
+ [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。 替换为`ColorBars.bmp`用的映像名称和路径在您的系统上有效。  
+ 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。 替换为`ColorBars.bmp`用的映像名称和路径在您的系统上有效。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [对图像重新着色](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+- [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
+- [对图像重新着色](recoloring-images.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 3f789a0e00b1d235fe61b93190ae167250113846
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1430975a48fb0755c6b08d6d5c183d8f29434f55
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500215"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710441"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：添加和删除项从 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件
 项可以添加到 Windows 窗体组合框中，列表框中，或检查列表框中有许多种情况下，因为这些控件可以绑定到各种数据源。 但是，本主题演示了最简单方法，并且不需要数据绑定。 显示的项通常是字符串;但是，可以使用任何对象。 在控件中显示的文本是由该对象返回的值`ToString`方法。  
@@ -140,6 +140,6 @@ ms.locfileid: "54500215"
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [如何：排序的内容的 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [何时使用 Windows 窗体 ComboBox 而非 ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [用于列出选项的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [如何：排序的内容的 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [何时使用 Windows 窗体 ComboBox 而非 ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [用于列出选项的 Windows 窗体控件](windows-forms-controls-used-to-list-options.md)

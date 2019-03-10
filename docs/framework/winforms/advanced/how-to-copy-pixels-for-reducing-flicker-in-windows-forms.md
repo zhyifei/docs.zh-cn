@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: cdcb64588f91ece02f1e7f446d4020d68262c93d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d03a9b79dc2c0ec61bbafe2ff09b5aba7fffc57b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559445"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719242"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>如何：复制像素以减少在 Windows 窗体中的闪烁
 当对简单的图形进行动画处理时，用户有时可能会遇到闪烁或其他不需要的视觉效果。 若要限制此问题的一种方法是在图形上使用"bitblt"过程。 Bitblt 是"位块传输"的颜色数据从一个源矩形的像素为单位向目标矩形的像素为单位。  
@@ -66,5 +66,5 @@ private void Form1_Paint(System.Object sender,
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
-- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [使用笔绘制直线和形状](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
+- [使用笔绘制直线和形状](using-a-pen-to-draw-lines-and-shapes.md)

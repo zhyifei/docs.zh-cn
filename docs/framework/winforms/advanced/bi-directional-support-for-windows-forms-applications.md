@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecd167b46a3d600852b5b12a7f18d0013502523d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442966"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712270"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows 窗体应用程序的双向支持
 Visual Studio 可用于创建基于 Windows 的应用程序支持阿拉伯语和希伯来语等双向 （右到左） 语言。 这包括标准窗体、对话框、MDI 窗体以及可在这些窗体中使用的所有控件 — 即，<xref:System.Windows.Forms.Control> 命名空间中的所有对象。  
@@ -30,14 +30,14 @@ Visual Studio 可用于创建基于 Windows 的应用程序支持阿拉伯语和
   
 |控件/组件|RightToLeft 属性的效果|RightToLeftLayout 属性的效果|是否需要镜像？|  
 |------------------------|------------------------------------|------------------------------------------|-------------------------|  
-|<xref:System.Windows.Forms.Button>|设置 RTL 阅读顺序。 反转 <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>、<xref:System.Windows.Forms.ButtonBase.ImageAlign%2A> 和 <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|无效果|否|  
-|<xref:System.Windows.Forms.CheckBox>|复选框显示在文本右侧|无效果|否|  
+|<xref:System.Windows.Forms.Button>|设置 RTL 阅读顺序。 反转 <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>、<xref:System.Windows.Forms.ButtonBase.ImageAlign%2A> 和 <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|无效果|No|  
+|<xref:System.Windows.Forms.CheckBox>|复选框显示在文本右侧|无效果|No|  
 |<xref:System.Windows.Forms.CheckedListBox>|所有复选框均显示在文本右侧|无效果|否|  
 |<xref:System.Windows.Forms.ColorDialog>|无影响；取决于操作系统的语言|无效果|否|  
 |<xref:System.Windows.Forms.ComboBox>|组合框控件中的项呈右对齐|无效果|否|  
 |<xref:System.Windows.Forms.ContextMenu>|使用 RTL 阅读顺序呈右对齐显示|无效果|否|  
 |<xref:System.Windows.Forms.DataGrid>|使用 RTL 阅读顺序呈右对齐显示|无效果|否|  
-|<xref:System.Windows.Forms.DataGridView>|同时影响 RTL 阅读顺序和控件布局|无效果|否|  
+|<xref:System.Windows.Forms.DataGridView>|同时影响 RTL 阅读顺序和控件布局|无效果|No|  
 |<xref:System.Windows.Forms.DateTimePicker>|无影响；取决于操作系统的语言|镜像控件|是|  
 |<xref:System.Windows.Forms.DomainUpDown>|左对齐向上和向下按钮|无效果|否|  
 |<xref:System.Windows.Forms.ErrorProvider>|不支持|无效果|否|  
@@ -48,39 +48,39 @@ Visual Studio 可用于创建基于 Windows 的应用程序支持阿拉伯语和
 |<xref:System.Windows.Forms.ImageList>|不需要|无效果|否|  
 |<xref:System.Windows.Forms.Label>|右对齐显示。 反转 <xref:System.Windows.Forms.Label.TextAlign%2A> 和 <xref:System.Windows.Forms.Label.ImageAlign%2A>|无效果|否|  
 |<xref:System.Windows.Forms.LinkLabel>|右对齐显示。 反转 <xref:System.Windows.Forms.Label.TextAlign%2A> 和 <xref:System.Windows.Forms.Label.ImageAlign%2A>|无效果|否|  
-|<xref:System.Windows.Forms.ListBox>|项呈右对齐|无效果|否|  
+|<xref:System.Windows.Forms.ListBox>|项呈右对齐|无效果|No|  
 |<xref:System.Windows.Forms.ListView>|将阅读顺序设置为 RTL；元素保持左对齐|镜像控件|是|  
 |<xref:System.Windows.Forms.MainMenu>|在运行时（非设计时）按 RTL 阅读顺序呈右对齐显示|无效果|否|  
-|<xref:System.Windows.Forms.MaskedTextBox>|从右到左显示文本。|无效果|否|  
+|<xref:System.Windows.Forms.MaskedTextBox>|从右到左显示文本。|无效果|No|  
 |<xref:System.Windows.Forms.MonthCalendar>|无影响；取决于操作系统的语言|镜像控件|是|  
 |<xref:System.Windows.Forms.NotifyIcon>|不支持|不支持|否|  
-|<xref:System.Windows.Forms.NumericUpDown>|向上和向下按钮呈左对齐|无效果|否|  
+|<xref:System.Windows.Forms.NumericUpDown>|向上和向下按钮呈左对齐|无效果|No|  
 |<xref:System.Windows.Forms.OpenFileDialog>|从右到左在操作系统上，设置包含窗体<xref:System.Windows.Forms.Control.RightToLeft>属性设置为<xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType>本地化对话框 |无效果|否|  
-|<xref:System.Windows.Forms.PageSetupDialog>|无影响；取决于操作系统的语言|无效果|否|  
+|<xref:System.Windows.Forms.PageSetupDialog>|无影响；取决于操作系统的语言|无效果|No|  
 |<xref:System.Windows.Forms.Panel>|子控件可能继承此属性|在控件内使用 <xref:System.Windows.Forms.TableLayoutPanel> 以获取从右到左的支持|是|  
 |<xref:System.Windows.Forms.PictureBox>|不支持|无效果|否|  
 |<xref:System.Windows.Forms.PrintDialog>|无影响；取决于操作系统的语言|无效果|否|  
 |<xref:System.Drawing.Printing.PrintDocument>|垂直滚动条呈左对齐，水平滚动条从左侧开始|无效果|否|  
 |<xref:System.Windows.Forms.PrintPreviewDialog>|不支持|不支持|否|  
 |<xref:System.Windows.Forms.ProgressBar>|不受此属性影响|镜像控件|是|  
-|<xref:System.Windows.Forms.RadioButton>|单选按钮显示在文本右侧|无效果|否|  
+|<xref:System.Windows.Forms.RadioButton>|单选按钮显示在文本右侧|无效果|No|  
 |<xref:System.Windows.Forms.RichTextBox>|包含文本的控件元素按 RTL 阅读顺序从右到左显示|无效果|否|  
-|<xref:System.Windows.Forms.SaveFileDialog>|无影响；取决于操作系统的语言|无效果|否|  
+|<xref:System.Windows.Forms.SaveFileDialog>|无影响；取决于操作系统的语言|无效果|No|  
 |<xref:System.Windows.Forms.SplitContainer>|反转显示面板布局；垂直滚动条显示在左侧；水平滚动条从右侧开始|使用 <xref:System.Windows.Forms.TableLayoutPanel> 镜像子控件的顺序|否|  
-|<xref:System.Windows.Forms.Splitter>|不支持|无效果|否|  
+|<xref:System.Windows.Forms.Splitter>|不支持|无效果|No|  
 |<xref:System.Windows.Forms.StatusBar>|不支持；请改用 <xref:System.Windows.Forms.StatusStrip>|无效果；请改用 <xref:System.Windows.Forms.StatusStrip>|否|  
 |<xref:System.Windows.Forms.TabControl>|不受此属性影响|镜像控件|是|  
 |<xref:System.Windows.Forms.TextBox>|按 RTL 阅读顺序从右到左显示文本|无效果|否|  
 |<xref:System.Windows.Forms.Timer>|不需要|不需要|否|  
 |<xref:System.Windows.Forms.ToolBar>|不受此属性影响；请改用 <xref:System.Windows.Forms.ToolStrip>|无效果；请改用 <xref:System.Windows.Forms.ToolStrip>|是|  
 |<xref:System.Windows.Forms.ToolTip>|设置 RTL 阅读顺序|无效果|否|  
-|<xref:System.Windows.Forms.TrackBar>|滚动或跟踪从右侧开始；<xref:System.Windows.Forms.TrackBar.Orientation%2A> 呈垂直时，计时周期数从右侧出现|无效果|否|  
+|<xref:System.Windows.Forms.TrackBar>|滚动或跟踪从右侧开始；<xref:System.Windows.Forms.TrackBar.Orientation%2A> 呈垂直时，计时周期数从右侧出现|无效果|No|  
 |<xref:System.Windows.Forms.TreeView>|仅设置 RTL 阅读顺序|镜像控件|是|  
-|<xref:System.Windows.Forms.UserControl>|垂直滚动条显示在左侧；水平滚动条右侧带有缩略图|不能直接支持；请使用 <xref:System.Windows.Forms.TableLayoutPanel>|否|  
+|<xref:System.Windows.Forms.UserControl>|垂直滚动条显示在左侧；水平滚动条右侧带有缩略图|不能直接支持；请使用 <xref:System.Windows.Forms.TableLayoutPanel>|No|  
 |<xref:System.Windows.Forms.VScrollBar>|可滚动控件显示在左侧（而不是右侧）|无效果|No|  
   
 ## <a name="encoding"></a>编码  
- Windows 窗体支持 Unicode，因此在创建双向应用程序时可包括任何字符集。 但是，并非所有 Windows 窗体控件在所有平台上均支持 Unicode。 有关详细信息，请参阅[编码和 Windows 窗体全球化](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md)。  
+ Windows 窗体支持 Unicode，因此在创建双向应用程序时可包括任何字符集。 但是，并非所有 Windows 窗体控件在所有平台上均支持 Unicode。 有关详细信息，请参阅[编码和 Windows 窗体全球化](encoding-and-windows-forms-globalization.md)。  
   
 ## <a name="gdi"></a>GDI+  
  可使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 按从右到左的阅读顺序绘制文本。 用于绘制文本的 <xref:System.Drawing.Graphics.DrawString%2A> 方法支持 `StringFormat` 参数，可将此参数设置为 <xref:System.Drawing.StringFormatFlags> 枚举的 <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> 成员以反转文本的起点。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: c512a296f618ab32781dd8718a47c4b20fd7f54a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 931df04bbe6b8448030e26cd2cc2c904865ac0d3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745904"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717292"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的选择模式
 有时您希望应用程序来执行基于用户所做选择中操作<xref:System.Windows.Forms.DataGridView>控件。 具体取决于操作，你可能想要限制可使用所选内容的类型。 例如，假设你的应用程序可以打印当前所选记录的报表。 在这种情况下，可能想要配置<xref:System.Windows.Forms.DataGridView>控件，以便单击的任意位置的行始终选择整行，并且可以选择一次只有一个行。  
@@ -49,5 +49,5 @@ ms.locfileid: "54745904"
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
-- [将选择模式和剪贴板与 Windows 窗体 DataGridView 控件结合使用](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [如何：设置 Windows 窗体 DataGridView 控件的选择模式](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+- [将选择模式和剪贴板与 Windows 窗体 DataGridView 控件结合使用](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [如何：设置 Windows 窗体 DataGridView 控件的选择模式](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

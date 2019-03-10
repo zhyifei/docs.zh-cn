@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-ms.openlocfilehash: 5efda369b2059afd350fc947b706fb9f4c27ae14
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f188e14b304970840bfc35a592a445f68f9d7af7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664440"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713899"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>如何：更改 Windows 窗体的边框
 当确定 Windows 窗体的外观和行为时，有几种边框样式可供选择。 通过更改 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 属性，可控制窗体调整大小的行为。 此外，设置 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 会影响标题栏的显示方式以及其上出现的按钮布局。 有关详细信息，请参阅 <xref:System.Windows.Forms.FormBorderStyle>。  
@@ -46,4 +46,4 @@ ms.locfileid: "56664440"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>
-- [Windows 窗体入门](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [Windows 窗体入门](getting-started-with-windows-forms.md)

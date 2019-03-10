@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: e32dfc394f91ed44b702136d3177f6307f3991ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64a2c8d9a9f6b8a7271a659b80ca2a63c423b3bc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727581"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718514"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>如何：显示 Web 样式链接使用 Windows 窗体 RichTextBox 控件
 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以显示为彩色并有下划线的 Web 链接。 可以编写将打开浏览器窗口中显示时单击该链接时链接文本中指定的 Web 站点的代码。  
@@ -33,7 +33,7 @@ Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以显示为彩色
      在以下示例中，<xref:System.Windows.Forms.RichTextBox.LinkClicked>事件将打开 Internet 浏览器中指定的 URL 来的实例<xref:System.Windows.Forms.RichTextBox.Text%2A>属性的<xref:System.Windows.Forms.RichTextBox>控件。 此示例假定窗体具有<xref:System.Windows.Forms.RichTextBox>控件。  
   
     > [!IMPORTANT]
-    >  在调用<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>方法，将会遇到<xref:System.Security.SecurityException>如果因特权不足而部分信任上下文中运行代码的异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../../../docs/framework/misc/code-access-security-basics.md)。  
+    >  在调用<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>方法，将会遇到<xref:System.Security.SecurityException>如果因特权不足而部分信任上下文中运行代码的异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../misc/code-access-security-basics.md)。  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -120,5 +120,5 @@ Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以显示为彩色
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox 控件](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox 控件](richtextbox-control-windows-forms.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

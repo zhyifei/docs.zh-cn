@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: 02f93a85ecaa13f5f72cd0f31a1f5ffc24c59f68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491774"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712729"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows 窗体中的鼠标指针
 鼠标*指针*，这有时称为游标，是用户输入使用鼠标在屏幕指定的焦点位置的位图。 本主题概述了在 Windows 窗体中鼠标指针，并介绍了一些方法来修改和控制鼠标指针。  
@@ -32,5 +32,5 @@ ms.locfileid: "54491774"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.Cursor>
-- [Windows 窗体应用程序中的鼠标输入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Windows 窗体中的拖放功能](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+- [Windows 窗体应用程序中的鼠标输入](mouse-input-in-a-windows-forms-application.md)
+- [Windows 窗体中的拖放功能](drag-and-drop-functionality-in-windows-forms.md)

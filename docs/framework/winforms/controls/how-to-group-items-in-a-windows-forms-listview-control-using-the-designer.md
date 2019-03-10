@@ -6,19 +6,19 @@ helpviewer_keywords:
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 964f2130c650d486bf8a20af96b74122b1450e05
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 4c3e20ad7a09cc21e6c1d2a6d8fbbc47d11c903d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304422"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703551"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>如何：使用设计器的 Windows 窗体 ListView 控件中的项进行分组
 分组功能<xref:System.Windows.Forms.ListView>控件使您能够以分组方式显示项的相关的集。 由包含组标题的水平组标头在屏幕上分隔这些组。 可以使用<xref:System.Windows.Forms.ListView>组以使大型列表对项目分组按字母顺序，按日期，或任何其他逻辑分组的导航。 下图显示了一些分组的项。  
   
- ![ListView 组](../../../../docs/framework/winforms/controls/media/listviewgroups.gif "ListViewGroups")  
+ ![ListView 组](./media/listviewgroups.gif "ListViewGroups")  
   
- 下面的过程需要**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.ListView>控件。 有关设置此类项目的信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[如何：将控件添加到 Windows 窗体](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+ 下面的过程需要**Windows 应用程序**包含一个窗体，其中包含项目<xref:System.Windows.Forms.ListView>控件。 有关设置此类项目的信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[如何：将控件添加到 Windows 窗体](how-to-add-controls-to-windows-forms.md)。  
   
  若要启用分组，您必须首先创建一个或多个<xref:System.Windows.Forms.ListViewGroup>对象在设计器中或以编程方式。 一旦已定义的组，可以将项分配给它。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "56304422"
   
 ### <a name="to-add-or-remove-groups-in-the-designer"></a>若要添加或删除在设计器中的组  
   
-1.  在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.ListView.Groups%2A>属性。  
+1.  在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.ListView.Groups%2A>属性。  
   
      **ListViewGroup 集合编辑器**出现。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "56304422"
   
 ### <a name="to-assign-items-to-groups-in-the-designer"></a>若要将项分配给在设计器中的组  
   
-1.  在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.ListView.Items%2A>属性。  
+1.  在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.ListView.Items%2A>属性。  
   
      **列表视图项集合编辑器**出现。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "56304422"
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>
 - <xref:System.Windows.Forms.ListViewGroup>
-- [ListView 控件](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [ListView 控件概述](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
-- [如何：添加和删除使用 Windows 窗体 ListView 控件的项](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [ListView 控件](listview-control-windows-forms.md)
+- [ListView 控件概述](listview-control-overview-windows-forms.md)
+- [如何：添加和删除使用 Windows 窗体 ListView 控件的项](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-ms.openlocfilehash: 32fc09c7525b40daea8c8705c43100cea0c052bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fc4e12bb7532019a0571095263b5447e4b0d1ed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676453"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702511"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>如何：绘制单个 B&#233;zier 样条
 由四个点定义的贝塞尔样条： 一个起点，这两个控制点和终结点。  
@@ -23,15 +23,15 @@ ms.locfileid: "54676453"
   
  下图显示了生成的贝塞尔样条以及其开始点、 控点和终结点。 该插图还显示自由绘制曲线的凸包，这是通过使用直线连接四个点而形成的多边形。  
   
- ![Bezier Spline](../../../../docs/framework/winforms/advanced/media/bezierspline1.png "BezierSpline1")  
+ ![Bezier Spline](./media/bezierspline1.png "BezierSpline1")  
   
- [!code-csharp[System.Drawing.ConstructingDrawingCurves#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.ConstructingDrawingCurves#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.ConstructingDrawingCurves#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.ConstructingDrawingCurves#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Drawing.Graphics.DrawBezier%2A>
-- [GDI+ 中的贝塞尔自由绘制曲线](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)
-- [如何：绘制一系列贝塞尔自由绘制曲线](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)
+- [GDI+ 中的贝塞尔自由绘制曲线](bezier-splines-in-gdi.md)
+- [如何：绘制一系列贝塞尔自由绘制曲线](how-to-draw-a-sequence-of-bezier-splines.md)

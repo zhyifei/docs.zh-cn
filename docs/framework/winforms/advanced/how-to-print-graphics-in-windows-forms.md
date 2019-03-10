@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: db83d03d38acebfe42d383efdb2caa550bc2013a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb8c9f291103915c82fb31af5c6668fbd0648f66
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636100"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721299"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>如何：在 Windows 窗体中打印图形
 通常情况下，想要在基于 Windows 的应用程序中打印图形。 <xref:System.Drawing.Graphics>类提供了对象绘制到设备，如屏幕或打印机的方法。  
@@ -69,4 +69,4 @@ ms.locfileid: "54636100"
 ## <a name="see-also"></a>请参阅
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Windows 窗体打印支持](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Windows 窗体打印支持](windows-forms-print-support.md)

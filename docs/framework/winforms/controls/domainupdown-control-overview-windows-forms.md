@@ -7,12 +7,12 @@ helpviewer_keywords:
 - spin button control [Windows Forms], about spin button
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
-ms.openlocfilehash: 1849e1bab440d779eaebfc7d2cd12e817c31bf79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 851c02747a2414e34a5e9d35bdc7d1df916efce0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605414"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718891"
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>DomainUpDown 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.DomainUpDown>控件是一对用于列表中向上或向下移动按钮和实质上是组合的文本框。 该控件显示并从选项列表中设置一个文本字符串。 用户可以选择字符串，通过单击向上和向下按钮以浏览列表中，通过按向上和向下箭头键，或通过键入与匹配列表中的项的字符串。 此控件的可能用途之一是从名称按字母顺序排序列表中选择项。  
@@ -25,8 +25,8 @@ Windows 窗体<xref:System.Windows.Forms.DomainUpDown>控件是一对用于列�
 ## <a name="key-properties"></a>键属性  
  控件的主要属性包括<xref:System.Windows.Forms.DomainUpDown.Items%2A>， <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>，和<xref:System.Windows.Forms.DomainUpDown.Wrap%2A>。 <xref:System.Windows.Forms.DomainUpDown.Items%2A>属性包含的控件中显示其文本值的对象的列表。 如果<xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>设置为`false`，该控件自动完成用户类型，并为列表中的值匹配的文本。 如果<xref:System.Windows.Forms.DomainUpDown.Wrap%2A>设置为`true`，滚过最后一项将转到第一个项列表中，反之亦然。 控件的主要方法是<xref:System.Windows.Forms.DomainUpDown.UpButton%2A>和<xref:System.Windows.Forms.DomainUpDown.DownButton%2A>。  
   
- 此控件只显示文本字符串。 如果你想显示的数字值的控件，使用<xref:System.Windows.Forms.NumericUpDown>控件。 有关详细信息，请参阅[NumericUpDown 控件概述](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)。  
+ 此控件只显示文本字符串。 如果你想显示的数字值的控件，使用<xref:System.Windows.Forms.NumericUpDown>控件。 有关详细信息，请参阅[NumericUpDown 控件概述](numericupdown-control-overview-windows-forms.md)。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.DomainUpDown>
-- [DomainUpDown 控件](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)
+- [DomainUpDown 控件](domainupdown-control-windows-forms.md)

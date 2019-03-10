@@ -5,12 +5,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: ccc9fd615cda044c739793066901ebc512643970
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 9c8580f61bcb311ca6b2e1cc2a11b4d4a4dbe79c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664761"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719411"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows 窗体中的拖放功能
 Windows 窗体包含一组实现拖放行为的方法、事件和类。 本主题概述了 Windows 窗体对拖放功能的支持。  另请参阅[拖放操作和剪贴板支持](./advanced/drag-and-drop-operations-and-clipboard-support.md)。  
@@ -45,4 +45,4 @@ Windows 窗体包含一组实现拖放行为的方法、事件和类。 本主�
   <xref:System.Windows.Forms.QueryContinueDragEventArgs> 类提供鼠标按钮和键盘修改键的当前状态、指定是否按 ESC 键的值以及 <xref:System.Windows.Forms.DragAction> 值（可设置为指定是否应继续拖放操作）。  
   
 ## <a name="see-also"></a>请参阅
-- [Windows 窗体应用程序中的鼠标输入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Windows 窗体应用程序中的鼠标输入](mouse-input-in-a-windows-forms-application.md)

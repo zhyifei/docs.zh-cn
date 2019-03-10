@@ -2,21 +2,21 @@
 title: 任务 3:创建工具箱和属性网格窗格
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558418"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721212"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>任务 3:创建工具箱和属性网格窗格
 在本任务中，您将创建**工具箱**并**PropertyGrid**窗格并将其添加到重新承载[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]。  
   
- 有关参考中的任务应在完成这三个后 MainWindow.xaml.cs 文件中的代码[重新承载工作流设计器](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)系列主题提供本主题末尾处。  
+ 有关参考中的任务应在完成这三个后 MainWindow.xaml.cs 文件中的代码[重新承载工作流设计器](rehosting-the-workflow-designer.md)系列主题提供本主题末尾处。  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>创建工具箱并将其添加到网格中  
   
-1.  打开按照中所述的过程获得的 HostingApplication 项目[任务 2:承载工作流设计器](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)。  
+1.  打开按照中所述的过程获得的 HostingApplication 项目[任务 2:承载工作流设计器](task-2-host-the-workflow-designer.md)。  
   
 2.  在中**解决方案资源管理器**窗格中，右击 MainWindow.xaml 文件，并选择**查看代码**。  
   
@@ -213,6 +213,6 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>请参阅
-- [重新托管工作流设计器](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [任务 1:创建新的 Windows Presentation Foundation 应用程序](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [任务 2:承载工作流设计器](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [重新托管工作流设计器](rehosting-the-workflow-designer.md)
+- [任务 1:创建新的 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)
+- [任务 2:承载工作流设计器](task-2-host-the-workflow-designer.md)

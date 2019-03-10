@@ -10,15 +10,15 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: c72ed5e6db6149f2161e0586c783e041eb0b731b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 482825c1e17811b31c3520a0280d7d0434489bf5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713533"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713197"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>如何：使用 PageSetupDialog 组件确定页属性
-[PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) 组件针对文档向用户呈现布局、纸张大小和其他页面布局选项。  
+[PageSetupDialog](pagesetupdialog-component-windows-forms.md) 组件针对文档向用户呈现布局、纸张大小和其他页面布局选项。  
   
  需要指定 <xref:System.Drawing.Printing.PrintDocument> 类的实例 — 这是要打印的文档。 此外，用户必须在其计算机上安装打印机（本地或通过网络），因为 <xref:System.Windows.Forms.PageSetupDialog> 组件在一定程度上会通过此方面确定向用户呈现的页面格式设置选项。  
   
@@ -89,5 +89,5 @@ ms.locfileid: "54713533"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [如何：创建标准 Windows 窗体打印作业](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)
-- [PageSetupDialog 组件](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)
+- [如何：创建标准 Windows 窗体打印作业](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [PageSetupDialog 组件](pagesetupdialog-component-windows-forms.md)

@@ -2,12 +2,12 @@
 title: 为工作流配置跟踪
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c9d38533d11497bd4404e4f8795d8a1ce9b17df9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491251"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719398"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>为工作流配置跟踪
 
@@ -67,7 +67,7 @@ instance.Extensions.Add(trackingParticipant);
 此外，对于 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的工作流服务，您可以通过代码添加 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行为扩展。 若要添加自定义跟踪参与者，请创建一个新的行为扩展并将其添加到 <xref:System.ServiceModel.ServiceHost> 中，如以下代码示例中所示。
 
 > [!NOTE]
-> 如果你想要查看演示如何创建添加自定义跟踪参与者的自定义行为元素的示例代码，请参阅[跟踪](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)示例。
+> 如果你想要查看演示如何创建添加自定义跟踪参与者的自定义行为元素的示例代码，请参阅[跟踪](./samples/tracking.md)示例。
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -141,7 +141,7 @@ if (null != workflowServiceHost)
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>配置使用 WorkflowInvoker 的跟踪
 
-若要对使用 <xref:System.Activities.WorkflowInvoker> 执行的工作流配置跟踪，请添加跟踪提供程序作为 <xref:System.Activities.WorkflowInvoker> 实例的扩展。 下面的代码示例摘自[自定义跟踪](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)示例。
+若要对使用 <xref:System.Activities.WorkflowInvoker> 执行的工作流配置跟踪，请添加跟踪提供程序作为 <xref:System.Activities.WorkflowInvoker> 实例的扩展。 下面的代码示例摘自[自定义跟踪](./samples/custom-tracking.md)示例。
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -185,7 +185,7 @@ WF 4 提供跟踪参与者，可将跟踪记录写入 ETW（Windows 事件跟踪
 
 下面的图像显示了事件查看器中的跟踪事件。
 
-![跟踪记录的事件查看器显示](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")
+![跟踪记录的事件查看器显示](./media/trackingeventviewer.PNG "TrackingEventViewer")
 
 ### <a name="registering-an-application-specific-provider-id"></a>注册应用程序特定的提供程序 ID
 

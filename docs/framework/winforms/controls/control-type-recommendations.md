@@ -7,12 +7,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: b2193c862b0bfe0ffbdc55f5d7073409b03a040d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: b488997558d81c05307411d8b7fbf5b59100f9ea
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442940"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717695"
 ---
 # <a name="control-type-recommendations"></a>控件类型建议
 .NET Framework 使你能够开发和实现新控件。 除了已熟悉的用户控件，现在你会发现你能够编写自定义控件用于执行其自己的绘制，甚至能够通过继承扩展现有控件的功能。 决定创建哪种类型的控件可能令人困惑。 本节重点介绍可以从其继承的各类控件之间的区别，并提供要为你的项目选择的类型的相关注意事项。  
@@ -80,5 +80,5 @@ ms.locfileid: "56442940"
 -   [如何：创建利用设计时功能的 Windows 窗体控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>请参阅
-- [如何：开发的简单 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
-- [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [如何：开发的简单 Windows 窗体控件](how-to-develop-a-simple-windows-forms-control.md)
+- [各种自定义控件](varieties-of-custom-controls.md)

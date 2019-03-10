@@ -11,12 +11,12 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: 199e0e232e2d391c2e7e0d70757f1f414cce5498
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 6c87a4cb68baa15b5f670a23fb4e8ef7ce16cf6f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261448"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710051"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>如何：Windows 窗体 ListView 控件中显示插入标记
 
@@ -27,14 +27,14 @@ ms.locfileid: "56261448"
   
  下图显示一个插入标记：  
   
- ![ListView 插入标记](../../../../docs/framework/winforms/controls/media/listviewinsertion.gif "ListViewInsertion")  
+ ![ListView 插入标记](./media/listviewinsertion.gif "ListViewInsertion")  
   
  下面的代码示例显示如何使用此功能。  
   
 ## <a name="example"></a>示例  
- [!code-cpp[System.Windows.Forms.ListView.InsertionMark#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CPP/listviewinsertionmarkexample.cpp#1)]
- [!code-csharp[System.Windows.Forms.ListView.InsertionMark#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CS/listviewinsertionmarkexample.cs#1)]
- [!code-vb[System.Windows.Forms.ListView.InsertionMark#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/VB/listviewinsertionmarkexample.vb#1)]  
+ [!code-cpp[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CPP/listviewinsertionmarkexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CS/listviewinsertionmarkexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/VB/listviewinsertionmarkexample.vb#1)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
@@ -47,6 +47,6 @@ ms.locfileid: "56261448"
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListViewInsertionMark>
-- [ListView 控件](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [ListView 控件概述](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
-- [演练：在 Windows 窗体中执行拖放操作](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [ListView 控件](listview-control-windows-forms.md)
+- [ListView 控件概述](listview-control-overview-windows-forms.md)
+- [演练：在 Windows 窗体中执行拖放操作](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

@@ -2,12 +2,12 @@
 title: 跟踪参与者
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 3165e08a02954facb7e016606e2f94662c6edfe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 934c49aaa48ecb319d55fa997aaac4eec93b54c3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613507"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711962"
 ---
 # <a name="tracking-participants"></a>跟踪参与者
 跟踪参与者是扩展点，允许工作流开发人员访问 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 对象并对其进行处理。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包括一个标准跟踪参与者，可将跟踪记录作为 Windows 事件跟踪 (ETW) 事件写入。 如果这不能满足您的要求，您还可以编写自定义跟踪参与者。  
@@ -60,10 +60,10 @@ ms.locfileid: "54613507"
   
  下图显示了通过 ETW 跟踪参与者的跟踪数据流。 跟踪数据到达 ETW 会话后，可以采用多种方法进行访问。 访问这些事件最有用的方法之一是通过事件查看器，这是一个常用的 Windows 工具，用于查看来自应用程序和服务的日志和跟踪。  
   
- ![跟踪和 ETW 跟踪提供程序的流程](../../../docs/framework/windows-workflow-foundation/media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![跟踪和 ETW 跟踪提供程序的流程](./media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
   
 ## <a name="tracking-participant-event-data"></a>跟踪参与者事件数据  
- 跟踪参与者将跟踪的事件数据序列化为 ETW 会话，格式为每个跟踪记录一个事件。  标识事件所使用的 ID 在从 100 到 199 的范围内。 有关跟踪事件的定义记录发出的跟踪参与者，请参阅[跟踪事件参考](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md)主题。  
+ 跟踪参与者将跟踪的事件数据序列化为 ETW 会话，格式为每个跟踪记录一个事件。  标识事件所使用的 ID 在从 100 到 199 的范围内。 有关跟踪事件的定义记录发出的跟踪参与者，请参阅[跟踪事件参考](tracking-events-reference.md)主题。  
   
  ETW 事件的大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制，以二者中较小的值为限。 如果事件的大小超出其中任何一个 ETW 限制，则事件将被截断，其内容将以任意方式移除。 不可有选择性地移除变量、参数、批注和自定义数据。 发生截断时，所有这些内容都将被截断，无论导致事件大小超出 ETW 限制的是哪个值。  移除的数据用 `<item>..<item>` 代替。  
   

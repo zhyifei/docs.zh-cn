@@ -7,12 +7,12 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: d280d14b116a356e1d9da94ef61d00ccae734b94
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f564a4ce7fa2d9b8ea5446f2cf6bd016db054dd9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664115"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724383"
 ---
 # <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Windows 窗体 Timer 组件的 Interval 属性的限制
 Windows 窗体<xref:System.Windows.Forms.Timer>组件具有<xref:System.Windows.Forms.Timer.Interval%2A>属性，它指定一个计时器事件和下一步之间传递的毫秒数。 除非禁用该组件，计时器会继续接收<xref:System.Windows.Forms.Timer.Tick>事件的时间大致相同时间间隔。  
@@ -30,5 +30,5 @@ Windows 窗体<xref:System.Windows.Forms.Timer>组件具有<xref:System.Windows.
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.Timer>
-- [Timer 组件](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
-- [Timer 组件概述](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+- [Timer 组件](timer-component-windows-forms.md)
+- [Timer 组件概述](timer-component-overview-windows-forms.md)
