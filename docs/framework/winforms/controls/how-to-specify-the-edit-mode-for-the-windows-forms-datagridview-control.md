@@ -8,43 +8,43 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: fcb2014cc92a8a3e4afe7c3ed0365fd5947c70f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00c5bb85eb1b238371e58a631d90b69a41c49140
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628261"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725295"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a><span data-ttu-id="149d8-102">如何：Windows 窗体 DataGridView 控件中指定的编辑模式</span><span class="sxs-lookup"><span data-stu-id="149d8-102">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="149d8-103">默认情况下，用户可以编辑的当前内容<xref:System.Windows.Forms.DataGridView>通过在其中键入内容或按 F2 的文本框单元。</span><span class="sxs-lookup"><span data-stu-id="149d8-103">By default, users can edit the contents of the current <xref:System.Windows.Forms.DataGridView> text box cell by typing in it or pressing F2.</span></span> <span data-ttu-id="149d8-104">这使该单元格进入编辑模式为如果满足所有以下条件：</span><span class="sxs-lookup"><span data-stu-id="149d8-104">This puts the cell in edit mode if all of the following conditions are met:</span></span>  
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a><span data-ttu-id="a8b06-102">如何：Windows 窗体 DataGridView 控件中指定的编辑模式</span><span class="sxs-lookup"><span data-stu-id="a8b06-102">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="a8b06-103">默认情况下，用户可以编辑的当前内容<xref:System.Windows.Forms.DataGridView>通过在其中键入内容或按 F2 的文本框单元。</span><span class="sxs-lookup"><span data-stu-id="a8b06-103">By default, users can edit the contents of the current <xref:System.Windows.Forms.DataGridView> text box cell by typing in it or pressing F2.</span></span> <span data-ttu-id="a8b06-104">这使该单元格进入编辑模式为如果满足所有以下条件：</span><span class="sxs-lookup"><span data-stu-id="a8b06-104">This puts the cell in edit mode if all of the following conditions are met:</span></span>  
   
--   <span data-ttu-id="149d8-105">基础数据源支持编辑。</span><span class="sxs-lookup"><span data-stu-id="149d8-105">The underlying data source supports editing.</span></span>  
+-   <span data-ttu-id="a8b06-105">基础数据源支持编辑。</span><span class="sxs-lookup"><span data-stu-id="a8b06-105">The underlying data source supports editing.</span></span>  
   
--   <span data-ttu-id="149d8-106"><xref:System.Windows.Forms.DataGridView>启用控件。</span><span class="sxs-lookup"><span data-stu-id="149d8-106">The <xref:System.Windows.Forms.DataGridView> control is enabled.</span></span>  
+-   <span data-ttu-id="a8b06-106"><xref:System.Windows.Forms.DataGridView>启用控件。</span><span class="sxs-lookup"><span data-stu-id="a8b06-106">The <xref:System.Windows.Forms.DataGridView> control is enabled.</span></span>  
   
--   <span data-ttu-id="149d8-107"><xref:System.Windows.Forms.DataGridView.EditMode%2A>属性值不是<xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>。</span><span class="sxs-lookup"><span data-stu-id="149d8-107">The <xref:System.Windows.Forms.DataGridView.EditMode%2A> property value is not <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.</span></span>  
+-   <span data-ttu-id="a8b06-107"><xref:System.Windows.Forms.DataGridView.EditMode%2A>属性值不是<xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>。</span><span class="sxs-lookup"><span data-stu-id="a8b06-107">The <xref:System.Windows.Forms.DataGridView.EditMode%2A> property value is not <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.</span></span>  
   
--   <span data-ttu-id="149d8-108">`ReadOnly`单元格、 行、 列和控件的属性都设置为`false`。</span><span class="sxs-lookup"><span data-stu-id="149d8-108">The `ReadOnly` properties of the cell, row, column, and control are all set to `false`.</span></span>  
+-   <span data-ttu-id="a8b06-108">`ReadOnly`单元格、 行、 列和控件的属性都设置为`false`。</span><span class="sxs-lookup"><span data-stu-id="a8b06-108">The `ReadOnly` properties of the cell, row, column, and control are all set to `false`.</span></span>  
   
- <span data-ttu-id="149d8-109">在编辑模式下，用户可以更改单元格的值，然后按 enter 键以提交更改或 ESC 键恢复到其原始值的单元格。</span><span class="sxs-lookup"><span data-stu-id="149d8-109">In edit mode, the user can change the cell value and press ENTER to commit the change or ESC to revert the cell to its original value.</span></span>  
+ <span data-ttu-id="a8b06-109">在编辑模式下，用户可以更改单元格的值，然后按 enter 键以提交更改或 ESC 键恢复到其原始值的单元格。</span><span class="sxs-lookup"><span data-stu-id="a8b06-109">In edit mode, the user can change the cell value and press ENTER to commit the change or ESC to revert the cell to its original value.</span></span>  
   
- <span data-ttu-id="149d8-110">你可以配置<xref:System.Windows.Forms.DataGridView>控件，以便在单元格进入编辑模式，只要它成为当前的单元格。</span><span class="sxs-lookup"><span data-stu-id="149d8-110">You can configure a <xref:System.Windows.Forms.DataGridView> control so that a cell enters edit mode as soon as it becomes the current cell.</span></span> <span data-ttu-id="149d8-111">在这种情况下，不变的 ENTER 和 ESC 键的行为，但此单元格处于编辑模式后的值是已提交或还原。</span><span class="sxs-lookup"><span data-stu-id="149d8-111">The behavior of the ENTER and ESC keys is unchanged in this case, but the cell remains in edit mode after the value is committed or reverted.</span></span> <span data-ttu-id="149d8-112">此外可以配置该控件，以便仅在单元格或仅当用户按 F2 用户键入时，单元格进入编辑模式。</span><span class="sxs-lookup"><span data-stu-id="149d8-112">You can also configure the control so that cells enter edit mode only when users type in the cell or only when users press F2.</span></span> <span data-ttu-id="149d8-113">最后，可以防止单元格进入编辑模式，除非在调用<xref:System.Windows.Forms.DataGridView.BeginEdit%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="149d8-113">Finally, you can prevent cells from entering edit mode except when you call the <xref:System.Windows.Forms.DataGridView.BeginEdit%2A> method.</span></span>  
+ <span data-ttu-id="a8b06-110">你可以配置<xref:System.Windows.Forms.DataGridView>控件，以便在单元格进入编辑模式，只要它成为当前的单元格。</span><span class="sxs-lookup"><span data-stu-id="a8b06-110">You can configure a <xref:System.Windows.Forms.DataGridView> control so that a cell enters edit mode as soon as it becomes the current cell.</span></span> <span data-ttu-id="a8b06-111">在这种情况下，不变的 ENTER 和 ESC 键的行为，但此单元格处于编辑模式后的值是已提交或还原。</span><span class="sxs-lookup"><span data-stu-id="a8b06-111">The behavior of the ENTER and ESC keys is unchanged in this case, but the cell remains in edit mode after the value is committed or reverted.</span></span> <span data-ttu-id="a8b06-112">此外可以配置该控件，以便仅在单元格或仅当用户按 F2 用户键入时，单元格进入编辑模式。</span><span class="sxs-lookup"><span data-stu-id="a8b06-112">You can also configure the control so that cells enter edit mode only when users type in the cell or only when users press F2.</span></span> <span data-ttu-id="a8b06-113">最后，可以防止单元格进入编辑模式，除非在调用<xref:System.Windows.Forms.DataGridView.BeginEdit%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="a8b06-113">Finally, you can prevent cells from entering edit mode except when you call the <xref:System.Windows.Forms.DataGridView.BeginEdit%2A> method.</span></span>  
   
-### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a><span data-ttu-id="149d8-114">若要更改 DataGridView 控件的编辑模式</span><span class="sxs-lookup"><span data-stu-id="149d8-114">To change the edit mode of a DataGridView control</span></span>  
+### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a><span data-ttu-id="a8b06-114">若要更改 DataGridView 控件的编辑模式</span><span class="sxs-lookup"><span data-stu-id="a8b06-114">To change the edit mode of a DataGridView control</span></span>  
   
--   <span data-ttu-id="149d8-115">设置<xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>属性设置为相应<xref:System.Windows.Forms.DataGridViewEditMode>枚举。</span><span class="sxs-lookup"><span data-stu-id="149d8-115">Set the <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> property to the appropriate <xref:System.Windows.Forms.DataGridViewEditMode> enumeration.</span></span>  
+-   <span data-ttu-id="a8b06-115">设置<xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>属性设置为相应<xref:System.Windows.Forms.DataGridViewEditMode>枚举。</span><span class="sxs-lookup"><span data-stu-id="a8b06-115">Set the <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> property to the appropriate <xref:System.Windows.Forms.DataGridViewEditMode> enumeration.</span></span>  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
-     [!code-vb[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
+     [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="149d8-116">编译代码</span><span class="sxs-lookup"><span data-stu-id="149d8-116">Compiling the Code</span></span>  
- <span data-ttu-id="149d8-117">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="149d8-117">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="a8b06-116">编译代码</span><span class="sxs-lookup"><span data-stu-id="a8b06-116">Compiling the Code</span></span>  
+ <span data-ttu-id="a8b06-117">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="a8b06-117">This example requires:</span></span>  
   
--   <span data-ttu-id="149d8-118">名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。</span><span class="sxs-lookup"><span data-stu-id="149d8-118">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
+-   <span data-ttu-id="a8b06-118">名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。</span><span class="sxs-lookup"><span data-stu-id="a8b06-118">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
--   <span data-ttu-id="149d8-119">对 <xref:System> 和 <xref:System.Windows.Forms> 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="149d8-119">References to the <xref:System> and <xref:System.Windows.Forms> assemblies.</span></span>  
+-   <span data-ttu-id="a8b06-119">对 <xref:System> 和 <xref:System.Windows.Forms> 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="a8b06-119">References to the <xref:System> and <xref:System.Windows.Forms> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="149d8-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="149d8-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a8b06-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="a8b06-120">See also</span></span>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="149d8-121">Windows 窗体 DataGridView 控件中的数据输入</span><span class="sxs-lookup"><span data-stu-id="149d8-121">Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="a8b06-121">Windows 窗体 DataGridView 控件中的数据输入</span><span class="sxs-lookup"><span data-stu-id="a8b06-121">Data Entry in the Windows Forms DataGridView Control</span></span>](data-entry-in-the-windows-forms-datagridview-control.md)

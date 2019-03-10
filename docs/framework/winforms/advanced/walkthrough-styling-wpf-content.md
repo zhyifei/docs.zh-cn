@@ -6,78 +6,78 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: ef81d9272acdddfc7d547de6f44725481e55dc3e
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303720"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712391"
 ---
-# <a name="walkthrough-styling-wpf-content"></a><span data-ttu-id="98adf-102">演练：WPF 内容的样式</span><span class="sxs-lookup"><span data-stu-id="98adf-102">Walkthrough: Styling WPF Content</span></span>
-<span data-ttu-id="98adf-103">本演练显示了如何将样式应用到 Windows 窗体上承载的 Windows Presentation Foundation (WPF) 控件中。</span><span class="sxs-lookup"><span data-stu-id="98adf-103">This walkthrough show you how to apply styling to a Windows Presentation Foundation (WPF) control hosted on a Windows Form.</span></span>
+# <a name="walkthrough-styling-wpf-content"></a><span data-ttu-id="f1f9f-102">演练：WPF 内容的样式</span><span class="sxs-lookup"><span data-stu-id="f1f9f-102">Walkthrough: Styling WPF Content</span></span>
+<span data-ttu-id="f1f9f-103">本演练显示了如何将样式应用到 Windows 窗体上承载的 Windows Presentation Foundation (WPF) 控件中。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-103">This walkthrough show you how to apply styling to a Windows Presentation Foundation (WPF) control hosted on a Windows Form.</span></span>
 
- <span data-ttu-id="98adf-104">在本演练中，你将要执行以下任务：</span><span class="sxs-lookup"><span data-stu-id="98adf-104">In this walkthrough, you perform the following tasks:</span></span>
+ <span data-ttu-id="f1f9f-104">在本演练中，你将要执行以下任务：</span><span class="sxs-lookup"><span data-stu-id="f1f9f-104">In this walkthrough, you perform the following tasks:</span></span>
 
--   <span data-ttu-id="98adf-105">创建项目。</span><span class="sxs-lookup"><span data-stu-id="98adf-105">Create the project.</span></span>
+-   <span data-ttu-id="f1f9f-105">创建项目。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-105">Create the project.</span></span>
 
--   <span data-ttu-id="98adf-106">创建 WPF 控件类型。</span><span class="sxs-lookup"><span data-stu-id="98adf-106">Create the WPF control type.</span></span>
+-   <span data-ttu-id="f1f9f-106">创建 WPF 控件类型。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-106">Create the WPF control type.</span></span>
 
--   <span data-ttu-id="98adf-107">将样式应用到 WPF 控件。</span><span class="sxs-lookup"><span data-stu-id="98adf-107">Apply a style to the WPF control.</span></span>
+-   <span data-ttu-id="f1f9f-107">将样式应用到 WPF 控件。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-107">Apply a style to the WPF control.</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="98adf-108">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="98adf-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="98adf-109">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="98adf-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="98adf-110">有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="98adf-110">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="f1f9f-108">显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="f1f9f-109">若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="f1f9f-110">有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-110">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="98adf-111">系统必备</span><span class="sxs-lookup"><span data-stu-id="98adf-111">Prerequisites</span></span>  
- <span data-ttu-id="98adf-112">你需要以下组件来完成本演练：</span><span class="sxs-lookup"><span data-stu-id="98adf-112">You need the following components to complete this walkthrough:</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="f1f9f-111">系统必备</span><span class="sxs-lookup"><span data-stu-id="f1f9f-111">Prerequisites</span></span>  
+ <span data-ttu-id="f1f9f-112">你需要以下组件来完成本演练：</span><span class="sxs-lookup"><span data-stu-id="f1f9f-112">You need the following components to complete this walkthrough:</span></span>  
   
--   <span data-ttu-id="98adf-113">Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="98adf-113">Visual Studio 2012.</span></span>  
+-   <span data-ttu-id="f1f9f-113">Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="f1f9f-113">Visual Studio 2012.</span></span>  
   
-## <a name="creating-the-project"></a><span data-ttu-id="98adf-114">创建项目</span><span class="sxs-lookup"><span data-stu-id="98adf-114">Creating the Project</span></span>  
- <span data-ttu-id="98adf-115">第一步是创建 Windows 窗体项目。</span><span class="sxs-lookup"><span data-stu-id="98adf-115">The first step is to create the Windows Forms project.</span></span>  
+## <a name="creating-the-project"></a><span data-ttu-id="f1f9f-114">创建项目</span><span class="sxs-lookup"><span data-stu-id="f1f9f-114">Creating the Project</span></span>  
+ <span data-ttu-id="f1f9f-115">第一步是创建 Windows 窗体项目。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-115">The first step is to create the Windows Forms project.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="98adf-116">承载 WPF 内容时，仅支持 C# 和 Visual Basic 项目。</span><span class="sxs-lookup"><span data-stu-id="98adf-116">When hosting WPF content, only C# and Visual Basic projects are supported.</span></span>  
+>  <span data-ttu-id="f1f9f-116">承载 WPF 内容时，仅支持 C# 和 Visual Basic 项目。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-116">When hosting WPF content, only C# and Visual Basic projects are supported.</span></span>  
   
-#### <a name="to-create-the-project"></a><span data-ttu-id="98adf-117">要创建项目</span><span class="sxs-lookup"><span data-stu-id="98adf-117">To create the project</span></span>  
+#### <a name="to-create-the-project"></a><span data-ttu-id="f1f9f-117">要创建项目</span><span class="sxs-lookup"><span data-stu-id="f1f9f-117">To create the project</span></span>  
   
--   <span data-ttu-id="98adf-118">创建新的 Windows 窗体应用程序项目在 Visual Basic 或 Visual C# 名为`StylingWpfContent`。</span><span class="sxs-lookup"><span data-stu-id="98adf-118">Create a new Windows Forms Application project in Visual Basic or Visual C# named `StylingWpfContent`.</span></span>  
+-   <span data-ttu-id="f1f9f-118">创建新的 Windows 窗体应用程序项目在 Visual Basic 或 Visual C# 名为`StylingWpfContent`。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-118">Create a new Windows Forms Application project in Visual Basic or Visual C# named `StylingWpfContent`.</span></span>  
   
-## <a name="creating-the-wpf-control-types"></a><span data-ttu-id="98adf-119">创建 WPF 控件类型</span><span class="sxs-lookup"><span data-stu-id="98adf-119">Creating the WPF Control Types</span></span>  
- <span data-ttu-id="98adf-120">将 WPF 控件类型添加到项目后，就可在 <xref:System.Windows.Forms.Integration.ElementHost> 控件中托管它。</span><span class="sxs-lookup"><span data-stu-id="98adf-120">After you add a WPF control type to the project, you can host it in an <xref:System.Windows.Forms.Integration.ElementHost> control.</span></span>  
+## <a name="creating-the-wpf-control-types"></a><span data-ttu-id="f1f9f-119">创建 WPF 控件类型</span><span class="sxs-lookup"><span data-stu-id="f1f9f-119">Creating the WPF Control Types</span></span>  
+ <span data-ttu-id="f1f9f-120">将 WPF 控件类型添加到项目后，就可在 <xref:System.Windows.Forms.Integration.ElementHost> 控件中托管它。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-120">After you add a WPF control type to the project, you can host it in an <xref:System.Windows.Forms.Integration.ElementHost> control.</span></span>  
   
-#### <a name="to-create-wpf-control-types"></a><span data-ttu-id="98adf-121">创建 WPF 控件类型</span><span class="sxs-lookup"><span data-stu-id="98adf-121">To create WPF control types</span></span>  
+#### <a name="to-create-wpf-control-types"></a><span data-ttu-id="f1f9f-121">创建 WPF 控件类型</span><span class="sxs-lookup"><span data-stu-id="f1f9f-121">To create WPF control types</span></span>  
   
-1.  <span data-ttu-id="98adf-122">将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。</span><span class="sxs-lookup"><span data-stu-id="98adf-122">Add a new WPF <xref:System.Windows.Controls.UserControl> project to the solution.</span></span> <span data-ttu-id="98adf-123">使用控件类型的默认名称，`UserControl1.xaml`。</span><span class="sxs-lookup"><span data-stu-id="98adf-123">Use the default name for the control type, `UserControl1.xaml`.</span></span> <span data-ttu-id="98adf-124">有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。</span><span class="sxs-lookup"><span data-stu-id="98adf-124">For more information, see [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span></span>  
+1.  <span data-ttu-id="f1f9f-122">将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-122">Add a new WPF <xref:System.Windows.Controls.UserControl> project to the solution.</span></span> <span data-ttu-id="f1f9f-123">使用控件类型的默认名称，`UserControl1.xaml`。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-123">Use the default name for the control type, `UserControl1.xaml`.</span></span> <span data-ttu-id="f1f9f-124">有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-124">For more information, see [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span></span>  
   
-2.  <span data-ttu-id="98adf-125">在设计视图中，请确保已选中 `UserControl1`。</span><span class="sxs-lookup"><span data-stu-id="98adf-125">In Design view, make sure that `UserControl1` is selected.</span></span> <span data-ttu-id="98adf-126">有关详细信息，请参阅[如何：选择并在设计图面上移动元素](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="98adf-126">For more information, see [How to: Select and Move Elements on the Design Surface](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).</span></span>  
+2.  <span data-ttu-id="f1f9f-125">在设计视图中，请确保已选中 `UserControl1`。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-125">In Design view, make sure that `UserControl1` is selected.</span></span> <span data-ttu-id="f1f9f-126">有关详细信息，请参阅[如何：选择并在设计图面上移动元素](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-126">For more information, see [How to: Select and Move Elements on the Design Surface](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).</span></span>  
   
-3.  <span data-ttu-id="98adf-127">在中**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>并<xref:System.Windows.FrameworkElement.Height%2A>属性设置为`200`。</span><span class="sxs-lookup"><span data-stu-id="98adf-127">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties to `200`.</span></span>  
+3.  <span data-ttu-id="f1f9f-127">在中**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>并<xref:System.Windows.FrameworkElement.Height%2A>属性设置为`200`。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-127">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties to `200`.</span></span>  
   
-4.  <span data-ttu-id="98adf-128">添加<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制对<xref:System.Windows.Controls.UserControl>并将值设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性设置为**取消**。</span><span class="sxs-lookup"><span data-stu-id="98adf-128">Add a <xref:System.Windows.Controls.Button?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.ContentControl.Content%2A> property to **Cancel**.</span></span>  
+4.  <span data-ttu-id="f1f9f-128">添加<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制对<xref:System.Windows.Controls.UserControl>并将值设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性设置为**取消**。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-128">Add a <xref:System.Windows.Controls.Button?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.ContentControl.Content%2A> property to **Cancel**.</span></span>  
   
-5.  <span data-ttu-id="98adf-129">添加另一个<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制对<xref:System.Windows.Controls.UserControl>并将值设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性设置为**确定**。</span><span class="sxs-lookup"><span data-stu-id="98adf-129">Add a second <xref:System.Windows.Controls.Button?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.ContentControl.Content%2A> property to **OK**.</span></span>  
+5.  <span data-ttu-id="f1f9f-129">添加另一个<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制对<xref:System.Windows.Controls.UserControl>并将值设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性设置为**确定**。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-129">Add a second <xref:System.Windows.Controls.Button?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.ContentControl.Content%2A> property to **OK**.</span></span>  
   
-6.  <span data-ttu-id="98adf-130">生成项目。</span><span class="sxs-lookup"><span data-stu-id="98adf-130">Build the project.</span></span>  
+6.  <span data-ttu-id="f1f9f-130">生成项目。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-130">Build the project.</span></span>  
   
-## <a name="applying-a-style-to-a-wpf-control"></a><span data-ttu-id="98adf-131">将样式应用到 WPF 控件</span><span class="sxs-lookup"><span data-stu-id="98adf-131">Applying a Style to a WPF Control</span></span>  
- <span data-ttu-id="98adf-132">可对 WPF 控件应用不同样式以更改它的外观和行为。</span><span class="sxs-lookup"><span data-stu-id="98adf-132">You can apply different styling to a WPF control to change its appearance and behavior.</span></span>  
+## <a name="applying-a-style-to-a-wpf-control"></a><span data-ttu-id="f1f9f-131">将样式应用到 WPF 控件</span><span class="sxs-lookup"><span data-stu-id="f1f9f-131">Applying a Style to a WPF Control</span></span>  
+ <span data-ttu-id="f1f9f-132">可对 WPF 控件应用不同样式以更改它的外观和行为。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-132">You can apply different styling to a WPF control to change its appearance and behavior.</span></span>  
   
-#### <a name="to-apply-a-style-to-a-wpf-control"></a><span data-ttu-id="98adf-133">将样式应用到 WPF 控件</span><span class="sxs-lookup"><span data-stu-id="98adf-133">To apply a style to a WPF control</span></span>  
+#### <a name="to-apply-a-style-to-a-wpf-control"></a><span data-ttu-id="f1f9f-133">将样式应用到 WPF 控件</span><span class="sxs-lookup"><span data-stu-id="f1f9f-133">To apply a style to a WPF control</span></span>  
   
-1.  <span data-ttu-id="98adf-134">在 Windows 窗体设计器中打开 `Form1`。</span><span class="sxs-lookup"><span data-stu-id="98adf-134">Open `Form1` in the Windows Forms Designer.</span></span>  
+1.  <span data-ttu-id="f1f9f-134">在 Windows 窗体设计器中打开 `Form1`。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-134">Open `Form1` in the Windows Forms Designer.</span></span>  
   
-2.  <span data-ttu-id="98adf-135">在中**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`窗体上。</span><span class="sxs-lookup"><span data-stu-id="98adf-135">In the **Toolbox**, double-click `UserControl1` to create an instance of `UserControl1` on the form.</span></span>  
+2.  <span data-ttu-id="f1f9f-135">在中**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`窗体上。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-135">In the **Toolbox**, double-click `UserControl1` to create an instance of `UserControl1` on the form.</span></span>  
   
-     <span data-ttu-id="98adf-136">
-  `UserControl1\` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。</span><span class="sxs-lookup"><span data-stu-id="98adf-136">An instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.</span></span>  
+     <span data-ttu-id="f1f9f-136">
+  `UserControl1\` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-136">An instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.</span></span>  
   
-3.  <span data-ttu-id="98adf-137">中的智能标记面板`elementHost1`，单击**编辑所承载的内容**从下拉列表。</span><span class="sxs-lookup"><span data-stu-id="98adf-137">In the smart tag panel for `elementHost1`, click **Edit Hosted Content** from the drop-down list.</span></span>  
+3.  <span data-ttu-id="f1f9f-137">中的智能标记面板`elementHost1`，单击**编辑所承载的内容**从下拉列表。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-137">In the smart tag panel for `elementHost1`, click **Edit Hosted Content** from the drop-down list.</span></span>  
   
-     <span data-ttu-id="98adf-138">`UserControl1` 将在 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 中打开。</span><span class="sxs-lookup"><span data-stu-id="98adf-138">`UserControl1` opens in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
+     <span data-ttu-id="f1f9f-138">`UserControl1` 将在 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 中打开。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-138">`UserControl1` opens in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
   
-4.  <span data-ttu-id="98adf-139">在 XAML 视图中，将以下 XAML 插到 `<UserControl>` 开始标记后面。</span><span class="sxs-lookup"><span data-stu-id="98adf-139">In XAML view, insert the following XAML after the `<UserControl>` opening tag.</span></span>  
+4.  <span data-ttu-id="f1f9f-139">在 XAML 视图中，将以下 XAML 插到 `<UserControl>` 开始标记后面。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-139">In XAML view, insert the following XAML after the `<UserControl>` opening tag.</span></span>  
   
-     <span data-ttu-id="98adf-140">此 XAML 创建具有对比渐变边框的渐变。</span><span class="sxs-lookup"><span data-stu-id="98adf-140">This XAML creates a gradient with a contrasting gradient border.</span></span> <span data-ttu-id="98adf-141">单击此控件后，将更改渐变以生成按下按钮的外观。</span><span class="sxs-lookup"><span data-stu-id="98adf-141">When the control is clicked, the gradients are changed to generate a pressed button look.</span></span> <span data-ttu-id="98adf-142">有关详细信息，请参阅[样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。</span><span class="sxs-lookup"><span data-stu-id="98adf-142">For more information, see [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span></span>  
+     <span data-ttu-id="f1f9f-140">此 XAML 创建具有对比渐变边框的渐变。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-140">This XAML creates a gradient with a contrasting gradient border.</span></span> <span data-ttu-id="f1f9f-141">单击此控件后，将更改渐变以生成按下按钮的外观。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-141">When the control is clicked, the gradients are changed to generate a pressed button look.</span></span> <span data-ttu-id="f1f9f-142">有关详细信息，请参阅[样式设置和模板化](../../wpf/controls/styling-and-templating.md)。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-142">For more information, see [Styling and Templating](../../wpf/controls/styling-and-templating.md).</span></span>  
   
 ```xaml  
 <UserControl.Resources>  
@@ -127,34 +127,34 @@ ms.locfileid: "56303720"
 </UserControl.Resources>  
 ```  
   
-1.  <span data-ttu-id="98adf-143">通过插入“取消”按钮的 `<Button>` 标记中的以下 XAML，将上一步中定义的 `SimpleButton` 样式应用到“取消”按钮。</span><span class="sxs-lookup"><span data-stu-id="98adf-143">Apply the `SimpleButton` style defined in the previous step to the Cancel button by inserting the following XAML in the `<Button>` tag of the Cancel button.</span></span>  
+1.  <span data-ttu-id="f1f9f-143">通过插入“取消”按钮的 `<Button>` 标记中的以下 XAML，将上一步中定义的 `SimpleButton` 样式应用到“取消”按钮。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-143">Apply the `SimpleButton` style defined in the previous step to the Cancel button by inserting the following XAML in the `<Button>` tag of the Cancel button.</span></span>  
   
     ```  
     Style="{StaticResource SimpleButton}  
     ```  
   
-     <span data-ttu-id="98adf-144">按钮声明将类似于以下 XAML。</span><span class="sxs-lookup"><span data-stu-id="98adf-144">Your button declaration will resemble the following XAML.</span></span>  
+     <span data-ttu-id="f1f9f-144">按钮声明将类似于以下 XAML。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-144">Your button declaration will resemble the following XAML.</span></span>  
   
 ```xaml  
 <Button Height="23" Margin="41,52,98,0" Name="button1" VerticalAlignment="Top"  
                 Style="{StaticResource SimpleButton}">Cancel</Button>  
 ```  
   
-1.  <span data-ttu-id="98adf-145">生成项目。</span><span class="sxs-lookup"><span data-stu-id="98adf-145">Build the project.</span></span>  
+1.  <span data-ttu-id="f1f9f-145">生成项目。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-145">Build the project.</span></span>  
   
-2.  <span data-ttu-id="98adf-146">在 Windows 窗体设计器中打开 `Form1`。</span><span class="sxs-lookup"><span data-stu-id="98adf-146">Open `Form1` in the Windows Forms Designer.</span></span>  
+2.  <span data-ttu-id="f1f9f-146">在 Windows 窗体设计器中打开 `Form1`。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-146">Open `Form1` in the Windows Forms Designer.</span></span>  
   
-3.  <span data-ttu-id="98adf-147">将新样式应用到按钮控件中。</span><span class="sxs-lookup"><span data-stu-id="98adf-147">The new style is applied to the button control.</span></span>  
+3.  <span data-ttu-id="f1f9f-147">将新样式应用到按钮控件中。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-147">The new style is applied to the button control.</span></span>  
   
-4.  <span data-ttu-id="98adf-148">从**调试**菜单中，选择**开始调试**运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="98adf-148">From the **Debug** menu, select **Start Debugging** to run the application.</span></span>  
+4.  <span data-ttu-id="f1f9f-148">从**调试**菜单中，选择**开始调试**运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-148">From the **Debug** menu, select **Start Debugging** to run the application.</span></span>  
   
-5.  <span data-ttu-id="98adf-149">单击“确定”和“取消”按钮并查看差异。</span><span class="sxs-lookup"><span data-stu-id="98adf-149">Click the OK and Cancel buttons and view the differences.</span></span>  
+5.  <span data-ttu-id="f1f9f-149">单击“确定”和“取消”按钮并查看差异。</span><span class="sxs-lookup"><span data-stu-id="f1f9f-149">Click the OK and Cancel buttons and view the differences.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98adf-150">请参阅</span><span class="sxs-lookup"><span data-stu-id="98adf-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f1f9f-150">请参阅</span><span class="sxs-lookup"><span data-stu-id="f1f9f-150">See also</span></span>
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [<span data-ttu-id="98adf-151">迁移和互操作性</span><span class="sxs-lookup"><span data-stu-id="98adf-151">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [<span data-ttu-id="98adf-152">使用 WPF 控件</span><span class="sxs-lookup"><span data-stu-id="98adf-152">Using WPF Controls</span></span>](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
-- [<span data-ttu-id="98adf-153">在 Visual Studio 中设计 XAML</span><span class="sxs-lookup"><span data-stu-id="98adf-153">Design XAML in Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [<span data-ttu-id="98adf-154">XAML 概述 (WPF)</span><span class="sxs-lookup"><span data-stu-id="98adf-154">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [<span data-ttu-id="98adf-155">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="98adf-155">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [<span data-ttu-id="f1f9f-151">迁移和互操作性</span><span class="sxs-lookup"><span data-stu-id="f1f9f-151">Migration and Interoperability</span></span>](../../wpf/advanced/migration-and-interoperability.md)
+- [<span data-ttu-id="f1f9f-152">使用 WPF 控件</span><span class="sxs-lookup"><span data-stu-id="f1f9f-152">Using WPF Controls</span></span>](using-wpf-controls.md)
+- [<span data-ttu-id="f1f9f-153">在 Visual Studio 中设计 XAML</span><span class="sxs-lookup"><span data-stu-id="f1f9f-153">Design XAML in Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [<span data-ttu-id="f1f9f-154">XAML 概述 (WPF)</span><span class="sxs-lookup"><span data-stu-id="f1f9f-154">XAML Overview (WPF)</span></span>](../../wpf/advanced/xaml-overview-wpf.md)
+- [<span data-ttu-id="f1f9f-155">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="f1f9f-155">Styling and Templating</span></span>](../../wpf/controls/styling-and-templating.md)

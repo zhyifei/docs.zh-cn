@@ -13,27 +13,27 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 2907b6344cd4fcc7c7d84c110dbc638cdc86f23c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: adc54ace6ea7511f1f92945b9e0c8f44b5d8f4fe
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708319"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712716"
 ---
-# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a><span data-ttu-id="a19c3-102">如何：确定已单击 Windows 窗体 StatusBar 控件中的面板</span><span class="sxs-lookup"><span data-stu-id="a19c3-102">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>
+# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a><span data-ttu-id="8cc37-102">如何：确定已单击 Windows 窗体 StatusBar 控件中的面板</span><span class="sxs-lookup"><span data-stu-id="8cc37-102">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>
 > [!IMPORTANT]
->  <span data-ttu-id="a19c3-103"><xref:System.Windows.Forms.StatusStrip>并<xref:System.Windows.Forms.ToolStripStatusLabel>控件替换，并将功能添加到<xref:System.Windows.Forms.StatusBar>并<xref:System.Windows.Forms.StatusBarPanel>控制; 但是，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控件将保留用于向后兼容性并供将来使用，如果你选择。</span><span class="sxs-lookup"><span data-stu-id="a19c3-103">The <xref:System.Windows.Forms.StatusStrip> and <xref:System.Windows.Forms.ToolStripStatusLabel> controls replace and add functionality to the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls; however, the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls are retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="8cc37-103"><xref:System.Windows.Forms.StatusStrip>并<xref:System.Windows.Forms.ToolStripStatusLabel>控件替换，并将功能添加到<xref:System.Windows.Forms.StatusBar>并<xref:System.Windows.Forms.StatusBarPanel>控制; 但是，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控件将保留用于向后兼容性并供将来使用，如果你选择。</span><span class="sxs-lookup"><span data-stu-id="8cc37-103">The <xref:System.Windows.Forms.StatusStrip> and <xref:System.Windows.Forms.ToolStripStatusLabel> controls replace and add functionality to the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls; however, the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls are retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="a19c3-104">编程[StatusBar 控件](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)控件响应用户的单击操作，请使用中的 case 语句<xref:System.Windows.Forms.StatusBar.PanelClick>事件。</span><span class="sxs-lookup"><span data-stu-id="a19c3-104">To program the [StatusBar Control](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) control to respond to user clicks, use a case statement within the <xref:System.Windows.Forms.StatusBar.PanelClick> event.</span></span> <span data-ttu-id="a19c3-105">该事件包含的参数 （面板参数），其中包含对被单击的引用<xref:System.Windows.Forms.StatusBarPanel>。</span><span class="sxs-lookup"><span data-stu-id="a19c3-105">The event contains an argument (the panel argument), which contains a reference to the clicked <xref:System.Windows.Forms.StatusBarPanel>.</span></span> <span data-ttu-id="a19c3-106">使用此引用，可以确定被单击的面板中，索引并相应地进行编程。</span><span class="sxs-lookup"><span data-stu-id="a19c3-106">Using this reference, you can determine the index of the clicked panel, and program accordingly.</span></span>  
+ <span data-ttu-id="8cc37-104">编程[StatusBar 控件](statusbar-control-windows-forms.md)控件响应用户的单击操作，请使用中的 case 语句<xref:System.Windows.Forms.StatusBar.PanelClick>事件。</span><span class="sxs-lookup"><span data-stu-id="8cc37-104">To program the [StatusBar Control](statusbar-control-windows-forms.md) control to respond to user clicks, use a case statement within the <xref:System.Windows.Forms.StatusBar.PanelClick> event.</span></span> <span data-ttu-id="8cc37-105">该事件包含的参数 （面板参数），其中包含对被单击的引用<xref:System.Windows.Forms.StatusBarPanel>。</span><span class="sxs-lookup"><span data-stu-id="8cc37-105">The event contains an argument (the panel argument), which contains a reference to the clicked <xref:System.Windows.Forms.StatusBarPanel>.</span></span> <span data-ttu-id="8cc37-106">使用此引用，可以确定被单击的面板中，索引并相应地进行编程。</span><span class="sxs-lookup"><span data-stu-id="8cc37-106">Using this reference, you can determine the index of the clicked panel, and program accordingly.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a19c3-107">絋粄<xref:System.Windows.Forms.StatusBar>控件的<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>属性设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="a19c3-107">Ensure that the <xref:System.Windows.Forms.StatusBar> control's <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> property is set to `true`.</span></span>  
+>  <span data-ttu-id="8cc37-107">絋粄<xref:System.Windows.Forms.StatusBar>控件的<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>属性设置为`true`。</span><span class="sxs-lookup"><span data-stu-id="8cc37-107">Ensure that the <xref:System.Windows.Forms.StatusBar> control's <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> property is set to `true`.</span></span>  
   
-### <a name="to-determine-which-panel-was-clicked"></a><span data-ttu-id="a19c3-108">若要确定已单击的面板</span><span class="sxs-lookup"><span data-stu-id="a19c3-108">To determine which panel was clicked</span></span>  
+### <a name="to-determine-which-panel-was-clicked"></a><span data-ttu-id="8cc37-108">若要确定已单击的面板</span><span class="sxs-lookup"><span data-stu-id="8cc37-108">To determine which panel was clicked</span></span>  
   
-1.  <span data-ttu-id="a19c3-109">在中<xref:System.Windows.Forms.StatusBar.PanelClick>事件处理程序，使用`Select Case`（在 Visual Basic) 或`switch case`(VisualC#或[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 语句，以确定通过检查事件参数中被单击的面板的索引已单击的面板。</span><span class="sxs-lookup"><span data-stu-id="a19c3-109">In the <xref:System.Windows.Forms.StatusBar.PanelClick> event handler, use a `Select Case` (in Visual Basic) or `switch case` (Visual C# or [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) statement to determine which panel was clicked by examining the index of the clicked panel in the event arguments.</span></span>  
+1.  <span data-ttu-id="8cc37-109">在中<xref:System.Windows.Forms.StatusBar.PanelClick>事件处理程序，使用`Select Case`（在 Visual Basic) 或`switch case`(VisualC#或[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 语句，以确定通过检查事件参数中被单击的面板的索引已单击的面板。</span><span class="sxs-lookup"><span data-stu-id="8cc37-109">In the <xref:System.Windows.Forms.StatusBar.PanelClick> event handler, use a `Select Case` (in Visual Basic) or `switch case` (Visual C# or [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) statement to determine which panel was clicked by examining the index of the clicked panel in the event arguments.</span></span>  
   
-     <span data-ttu-id="a19c3-110">下面的代码示例的要求是否存在，在窗体上的<xref:System.Windows.Forms.StatusBar>控件， `StatusBar1`，并将两个<xref:System.Windows.Forms.StatusBarPanel>对象，`StatusBarPanel1`和`StatusBarPanel2`。</span><span class="sxs-lookup"><span data-stu-id="a19c3-110">The following code example requires the presence, on the form, of a <xref:System.Windows.Forms.StatusBar> control, `StatusBar1`, and two <xref:System.Windows.Forms.StatusBarPanel> objects, `StatusBarPanel1` and `StatusBarPanel2`.</span></span>  
+     <span data-ttu-id="8cc37-110">下面的代码示例的要求是否存在，在窗体上的<xref:System.Windows.Forms.StatusBar>控件， `StatusBar1`，并将两个<xref:System.Windows.Forms.StatusBarPanel>对象，`StatusBarPanel1`和`StatusBarPanel2`。</span><span class="sxs-lookup"><span data-stu-id="8cc37-110">The following code example requires the presence, on the form, of a <xref:System.Windows.Forms.StatusBar> control, `StatusBar1`, and two <xref:System.Windows.Forms.StatusBarPanel> objects, `StatusBarPanel1` and `StatusBarPanel2`.</span></span>  
   
     ```vb  
     Private Sub StatusBar1_PanelClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.StatusBarPanelClickEventArgs) Handles StatusBar1.PanelClick  
@@ -79,7 +79,7 @@ ms.locfileid: "54708319"
        }  
     ```  
   
-     <span data-ttu-id="a19c3-111">(Visual C#， [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数，以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="a19c3-111">(Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="8cc37-111">(Visual C#， [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数，以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="8cc37-111">(Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.statusBar1.PanelClick += new   
@@ -93,9 +93,9 @@ ms.locfileid: "54708319"
        (this, &Form1::statusBar1_PanelClick);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a19c3-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="a19c3-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8cc37-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="8cc37-112">See also</span></span>
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [<span data-ttu-id="a19c3-113">如何：设置状态栏面板的大小</span><span class="sxs-lookup"><span data-stu-id="a19c3-113">How to: Set the Size of Status-Bar Panels</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)
-- [<span data-ttu-id="a19c3-114">演练：在运行时的更新状态栏信息</span><span class="sxs-lookup"><span data-stu-id="a19c3-114">Walkthrough: Updating Status Bar Information at Run Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
-- [<span data-ttu-id="a19c3-115">StatusBar 控件概述</span><span class="sxs-lookup"><span data-stu-id="a19c3-115">StatusBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [<span data-ttu-id="8cc37-113">如何：设置状态栏面板的大小</span><span class="sxs-lookup"><span data-stu-id="8cc37-113">How to: Set the Size of Status-Bar Panels</span></span>](how-to-set-the-size-of-status-bar-panels.md)
+- [<span data-ttu-id="8cc37-114">演练：在运行时的更新状态栏信息</span><span class="sxs-lookup"><span data-stu-id="8cc37-114">Walkthrough: Updating Status Bar Information at Run Time</span></span>](walkthrough-updating-status-bar-information-at-run-time.md)
+- [<span data-ttu-id="8cc37-115">StatusBar 控件概述</span><span class="sxs-lookup"><span data-stu-id="8cc37-115">StatusBar Control Overview</span></span>](statusbar-control-overview-windows-forms.md)

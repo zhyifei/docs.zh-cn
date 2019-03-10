@@ -8,31 +8,31 @@ helpviewer_keywords:
 - tool area [Windows Forms]
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
-ms.openlocfilehash: 86940b97ed373dc90f82520104b9b85019873cd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9982d7b1edde083d546681b37966358d2aac23bd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745244"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718488"
 ---
-# <a name="toolstrippanel-control"></a><span data-ttu-id="31054-102">ToolStripPanel 控件</span><span class="sxs-lookup"><span data-stu-id="31054-102">ToolStripPanel Control</span></span>
-<span data-ttu-id="31054-103">`ToolStripPanel` 控件在工具区域内启用停靠时共享水平或垂直空间，并且当无需四个面板和 <xref:System.Windows.Forms.ToolStripContainer> 的中心面板时启用排列 <xref:System.Windows.Forms.ToolStrip> 控件。</span><span class="sxs-lookup"><span data-stu-id="31054-103">`ToolStripPanel` control enables the sharing of horizontal or vertical space within the tool area when docked and arranging of <xref:System.Windows.Forms.ToolStrip> controls when you do not need the four panels and central panel of a <xref:System.Windows.Forms.ToolStripContainer>.</span></span>  
+# <a name="toolstrippanel-control"></a><span data-ttu-id="9006e-102">ToolStripPanel 控件</span><span class="sxs-lookup"><span data-stu-id="9006e-102">ToolStripPanel Control</span></span>
+<span data-ttu-id="9006e-103">`ToolStripPanel` 控件在工具区域内启用停靠时共享水平或垂直空间，并且当无需四个面板和 <xref:System.Windows.Forms.ToolStripContainer> 的中心面板时启用排列 <xref:System.Windows.Forms.ToolStrip> 控件。</span><span class="sxs-lookup"><span data-stu-id="9006e-103">`ToolStripPanel` control enables the sharing of horizontal or vertical space within the tool area when docked and arranging of <xref:System.Windows.Forms.ToolStrip> controls when you do not need the four panels and central panel of a <xref:System.Windows.Forms.ToolStripContainer>.</span></span>  
   
- <span data-ttu-id="31054-104">本节中的主题介绍可用于将 `ToolStripPanel` 功能构建到应用程序中的概念和技术。</span><span class="sxs-lookup"><span data-stu-id="31054-104">The topics in this section describe the concepts and techniques that you can use to build `ToolStripPanel` features into your applications.</span></span>  
+ <span data-ttu-id="9006e-104">本节中的主题介绍可用于将 `ToolStripPanel` 功能构建到应用程序中的概念和技术。</span><span class="sxs-lookup"><span data-stu-id="9006e-104">The topics in this section describe the concepts and techniques that you can use to build `ToolStripPanel` features into your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="31054-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="31054-105">In This Section</span></span>  
- [<span data-ttu-id="31054-106">ToolStripPanel 控件概述</span><span class="sxs-lookup"><span data-stu-id="31054-106">ToolStripPanel Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrippanel-control-overview.md)  
- <span data-ttu-id="31054-107">提供介绍 Windows 窗体 <xref:System.Windows.Forms.ToolStripContainer> 控件的用途和主要概念的主题。</span><span class="sxs-lookup"><span data-stu-id="31054-107">Provides topics that describe the purpose and main concepts of the Windows Forms <xref:System.Windows.Forms.ToolStripContainer> control.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="9006e-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="9006e-105">In This Section</span></span>  
+ [<span data-ttu-id="9006e-106">ToolStripPanel 控件概述</span><span class="sxs-lookup"><span data-stu-id="9006e-106">ToolStripPanel Control Overview</span></span>](toolstrippanel-control-overview.md)  
+ <span data-ttu-id="9006e-107">提供介绍 Windows 窗体 <xref:System.Windows.Forms.ToolStripContainer> 控件的用途和主要概念的主题。</span><span class="sxs-lookup"><span data-stu-id="9006e-107">Provides topics that describe the purpose and main concepts of the Windows Forms <xref:System.Windows.Forms.ToolStripContainer> control.</span></span>  
   
- [<span data-ttu-id="31054-108">如何：Join ToolStripPanels</span><span class="sxs-lookup"><span data-stu-id="31054-108">How to: Join ToolStripPanels</span></span>](../../../../docs/framework/winforms/controls/how-to-join-toolstrippanels.md)  
- <span data-ttu-id="31054-109">演示将 <xref:System.Windows.Forms.ToolStrip> 控件添加到 `ToolStripPanel`。</span><span class="sxs-lookup"><span data-stu-id="31054-109">Demonstrates adding <xref:System.Windows.Forms.ToolStrip> controls to a `ToolStripPanel`.</span></span>  
+ [<span data-ttu-id="9006e-108">如何：Join ToolStripPanels</span><span class="sxs-lookup"><span data-stu-id="9006e-108">How to: Join ToolStripPanels</span></span>](how-to-join-toolstrippanels.md)  
+ <span data-ttu-id="9006e-109">演示将 <xref:System.Windows.Forms.ToolStrip> 控件添加到 `ToolStripPanel`。</span><span class="sxs-lookup"><span data-stu-id="9006e-109">Demonstrates adding <xref:System.Windows.Forms.ToolStrip> controls to a `ToolStripPanel`.</span></span>  
   
- [<span data-ttu-id="31054-110">如何：MDI 中使用 Toolstrippanel</span><span class="sxs-lookup"><span data-stu-id="31054-110">How to: Use ToolStripPanels for MDI</span></span>](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)  
- <span data-ttu-id="31054-111">演示多文档界面应用程序中 `ToolStripPanel` 控件提供的灵活性。</span><span class="sxs-lookup"><span data-stu-id="31054-111">Demonstrates the flexibility afforded by `ToolStripPanel` controls in a Multiple Document Interface application.</span></span>  
+ [<span data-ttu-id="9006e-110">如何：MDI 中使用 Toolstrippanel</span><span class="sxs-lookup"><span data-stu-id="9006e-110">How to: Use ToolStripPanels for MDI</span></span>](how-to-use-toolstrippanels-for-mdi.md)  
+ <span data-ttu-id="9006e-111">演示多文档界面应用程序中 `ToolStripPanel` 控件提供的灵活性。</span><span class="sxs-lookup"><span data-stu-id="9006e-111">Demonstrates the flexibility afforded by `ToolStripPanel` controls in a Multiple Document Interface application.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="31054-112">参考</span><span class="sxs-lookup"><span data-stu-id="31054-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9006e-112">参考</span><span class="sxs-lookup"><span data-stu-id="9006e-112">Reference</span></span>  
  <xref:System.Windows.Forms.ToolStripPanel>  
- <span data-ttu-id="31054-113">提供关于 <xref:System.Windows.Forms.ToolStripPanel> 控件的参考文档。</span><span class="sxs-lookup"><span data-stu-id="31054-113">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripPanel> control.</span></span>  
+ <span data-ttu-id="9006e-113">提供关于 <xref:System.Windows.Forms.ToolStripPanel> 控件的参考文档。</span><span class="sxs-lookup"><span data-stu-id="9006e-113">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripPanel> control.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="31054-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="31054-114">See also</span></span>
-- [<span data-ttu-id="31054-115">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="31054-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="9006e-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="9006e-114">See also</span></span>
+- [<span data-ttu-id="9006e-115">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="9006e-115">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
