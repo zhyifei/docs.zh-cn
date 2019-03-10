@@ -11,49 +11,49 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 525e2347-0804-49aa-b9a3-9b2cabbf1c35
-ms.openlocfilehash: ce6a8c4cd946677d49c04c85a61f4b47df71bbd9
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 2ad175f5f290fd709636e12caf0ebd0a34c0052f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260941"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714757"
 ---
-# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a><span data-ttu-id="39f0d-102">如何：在运行时设置 ToolStrip 呈现器</span><span class="sxs-lookup"><span data-stu-id="39f0d-102">How to: Set the ToolStrip Renderer at Run Time</span></span>
-<span data-ttu-id="39f0d-103">你可以通过创建一个自定义 `ProfessionalColorTable` 类来自定义 <xref:System.Windows.Forms.ToolStrip> 控件的外观。</span><span class="sxs-lookup"><span data-stu-id="39f0d-103">You can customize the appearance of your <xref:System.Windows.Forms.ToolStrip> control by creating a custom `ProfessionalColorTable` class.</span></span>  
+# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a><span data-ttu-id="a9cfe-102">如何：在运行时设置 ToolStrip 呈现器</span><span class="sxs-lookup"><span data-stu-id="a9cfe-102">How to: Set the ToolStrip Renderer at Run Time</span></span>
+<span data-ttu-id="a9cfe-103">你可以通过创建一个自定义 `ProfessionalColorTable` 类来自定义 <xref:System.Windows.Forms.ToolStrip> 控件的外观。</span><span class="sxs-lookup"><span data-stu-id="a9cfe-103">You can customize the appearance of your <xref:System.Windows.Forms.ToolStrip> control by creating a custom `ProfessionalColorTable` class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="39f0d-104">示例</span><span class="sxs-lookup"><span data-stu-id="39f0d-104">Example</span></span>  
- <span data-ttu-id="39f0d-105">下列代码示例演示了如何创建自定义 `ProfessionalColorTable` 类。</span><span class="sxs-lookup"><span data-stu-id="39f0d-105">The following code example demonstrates how to create a custom `ProfessionalColorTable` class.</span></span> <span data-ttu-id="39f0d-106">此类定义了 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.ToolStrip> 控件的渐变。</span><span class="sxs-lookup"><span data-stu-id="39f0d-106">This class defines gradients for a <xref:System.Windows.Forms.MenuStrip> and a <xref:System.Windows.Forms.ToolStrip> control.</span></span>  
+## <a name="example"></a><span data-ttu-id="a9cfe-104">示例</span><span class="sxs-lookup"><span data-stu-id="a9cfe-104">Example</span></span>  
+ <span data-ttu-id="a9cfe-105">下列代码示例演示了如何创建自定义 `ProfessionalColorTable` 类。</span><span class="sxs-lookup"><span data-stu-id="a9cfe-105">The following code example demonstrates how to create a custom `ProfessionalColorTable` class.</span></span> <span data-ttu-id="a9cfe-106">此类定义了 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.ToolStrip> 控件的渐变。</span><span class="sxs-lookup"><span data-stu-id="a9cfe-106">This class defines gradients for a <xref:System.Windows.Forms.MenuStrip> and a <xref:System.Windows.Forms.ToolStrip> control.</span></span>  
   
- <span data-ttu-id="39f0d-107">若要使用此代码示例，则编译并运行应用程序，然后单击“更改颜色”以应用在自定义 `ProfessionalColorTable` 类中定义的渐变。</span><span class="sxs-lookup"><span data-stu-id="39f0d-107">To use this code example, compile and run the application, and then click **Change Colors** to apply the gradients defined in the custom `ProfessionalColorTable` class.</span></span>  
+ <span data-ttu-id="a9cfe-107">若要使用此代码示例，则编译并运行应用程序，然后单击“更改颜色”以应用在自定义 `ProfessionalColorTable` 类中定义的渐变。</span><span class="sxs-lookup"><span data-stu-id="a9cfe-107">To use this code example, compile and run the application, and then click **Change Colors** to apply the gradients defined in the custom `ProfessionalColorTable` class.</span></span>  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
- [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
-[!code-csharp[System.Windows.Forms.ToolStrip.Misc#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#20)]
-[!code-vb[System.Windows.Forms.ToolStrip.Misc#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#20)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
+[!code-csharp[System.Windows.Forms.ToolStrip.Misc#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#20)]
+[!code-vb[System.Windows.Forms.ToolStrip.Misc#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#20)]  
   
-## <a name="defining-a-custom-professionalcolortable-class"></a><span data-ttu-id="39f0d-108">定义自定义 ProfessionalColorTable 类</span><span class="sxs-lookup"><span data-stu-id="39f0d-108">Defining a Custom ProfessionalColorTable class</span></span>  
- <span data-ttu-id="39f0d-109">在 `CustomProfessionalColors` 类中定义自定义渐变。</span><span class="sxs-lookup"><span data-stu-id="39f0d-109">The custom gradients are defined in the `CustomProfessionalColors` class.</span></span>  
+## <a name="defining-a-custom-professionalcolortable-class"></a><span data-ttu-id="a9cfe-108">定义自定义 ProfessionalColorTable 类</span><span class="sxs-lookup"><span data-stu-id="a9cfe-108">Defining a Custom ProfessionalColorTable class</span></span>  
+ <span data-ttu-id="a9cfe-109">在 `CustomProfessionalColors` 类中定义自定义渐变。</span><span class="sxs-lookup"><span data-stu-id="a9cfe-109">The custom gradients are defined in the `CustomProfessionalColors` class.</span></span>  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.Misc#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#30)]
- [!code-vb[System.Windows.Forms.ToolStrip.Misc#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#30)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#30)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#30)]  
   
-## <a name="assigning-a-custom-renderer"></a><span data-ttu-id="39f0d-110">分配自定义呈现器</span><span class="sxs-lookup"><span data-stu-id="39f0d-110">Assigning a Custom Renderer</span></span>  
- <span data-ttu-id="39f0d-111">使用 `CustomProfessionalColors` 类创建一个新 `ToolStripProfessionalRenderer`，并将其分配给 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> 属性。</span><span class="sxs-lookup"><span data-stu-id="39f0d-111">Create a new `ToolStripProfessionalRenderer` with a `CustomProfessionalColors` class, and assign it to the <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> property.</span></span>  
+## <a name="assigning-a-custom-renderer"></a><span data-ttu-id="a9cfe-110">分配自定义呈现器</span><span class="sxs-lookup"><span data-stu-id="a9cfe-110">Assigning a Custom Renderer</span></span>  
+ <span data-ttu-id="a9cfe-111">使用 `CustomProfessionalColors` 类创建一个新 `ToolStripProfessionalRenderer`，并将其分配给 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> 属性。</span><span class="sxs-lookup"><span data-stu-id="a9cfe-111">Create a new `ToolStripProfessionalRenderer` with a `CustomProfessionalColors` class, and assign it to the <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> property.</span></span>  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.Misc#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#22)]
- [!code-vb[System.Windows.Forms.ToolStrip.Misc#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#22)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#22)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#22)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="39f0d-112">编译代码</span><span class="sxs-lookup"><span data-stu-id="39f0d-112">Compiling the Code</span></span>  
- <span data-ttu-id="39f0d-113">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="39f0d-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="a9cfe-112">编译代码</span><span class="sxs-lookup"><span data-stu-id="a9cfe-112">Compiling the Code</span></span>  
+ <span data-ttu-id="a9cfe-113">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="a9cfe-113">This example requires:</span></span>  
   
--   <span data-ttu-id="39f0d-114">对 System.Design、System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="39f0d-114">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="a9cfe-114">对 System.Design、System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="a9cfe-114">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="39f0d-115">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="39f0d-115">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="39f0d-116">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="39f0d-116">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="a9cfe-115">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="a9cfe-115">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="a9cfe-116">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="a9cfe-116">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="39f0d-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="39f0d-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a9cfe-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="a9cfe-117">See also</span></span>
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.ProfessionalColorTable>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
-- [<span data-ttu-id="39f0d-118">ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="39f0d-118">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [<span data-ttu-id="a9cfe-118">ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="a9cfe-118">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
