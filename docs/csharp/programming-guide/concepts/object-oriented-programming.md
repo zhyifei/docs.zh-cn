@@ -2,12 +2,12 @@
 title: 面向对象的编程 (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8f7a810b3f3ec74723ca5e715b7428e1b60928f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7822b9afa4b568563222d6096ea1b1ecc5d5ee0a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702478"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377919"
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
 C# 提供对面向对象的编程（包括封装、继承和多形性）的完整支持。  
@@ -54,7 +54,7 @@ C# 提供对面向对象的编程（包括封装、继承和多形性）的完�
   
 -   [委托](#Delegates)  
   
-##  <a name="Classes"></a> 类和对象  
+## <a name="Classes"></a> 类和对象  
  “类”和“对象”这两个术语有时互换使用，但实际上，类描述对象的“类型”，而对象是类的可用“实例”。 因此，创建对象的操作称为“实例化”。 如果使用蓝图类比，类是蓝图，对象就是基于该蓝图的建筑。  
   
  定义类：  
@@ -81,10 +81,10 @@ struct SampleStruct
   
 -   [struct](../../../csharp/language-reference/keywords/struct.md)  
   
-###  <a name="Members"></a> 类成员  
+### <a name="Members"></a> 类成员  
  每个类都可以具有不同的“类成员”。类成员包括属性（用于描述类数据）、方法（用于定义类行为）和事件（用于在不同的类和对象之间提供通信）。  
   
-####  <a name="Properties"></a> 属性和字段  
+#### <a name="Properties"></a> 属性和字段  
  字段和属性表示对象包含的信息。 字段类似于变量，因为可以直接读取或设置它们。  
   
  定义字段：  
@@ -133,7 +133,7 @@ class SampleClass
   
 -   [set](../../../csharp/language-reference/keywords/set.md)  
   
-####  <a name="Methods"></a> 方法  
+#### <a name="Methods"></a> 方法  
  “方法”是对象可以执行的操作。  
   
  定义类的方法：  
@@ -165,7 +165,7 @@ public int sampleMethod(int sampleParam) {}
   
 -   [扩展方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
   
-####  <a name="Constructors"></a> 构造函数  
+#### <a name="Constructors"></a> 构造函数  
  构造函数一种类方法，它们在创建给定类型的对象时自动执行。 构造函数通常用于初始化新对象的数据成员。 构造函数只能在创建类时运行一次。 此外，构造函数中的代码始终在类中所有其他代码之前运行。 但是，你可以按照为任何其他方法创建重载的方式，创建多个构造函数重载。  
   
  定义类的构造函数：  
@@ -184,12 +184,12 @@ public class SampleClass
   
  [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)。  
   
-####  <a name="Finalizers"></a>终结器  
+#### <a name="Finalizers"></a>终结器  
  终结器用于析构类的实例。 在 .NET Framework 中，垃圾回收器自动管理应用程序中托管对象的内存分配和释放。 但是，你可能仍会需要终结器来清理应用程序创建的所有非托管资源。 一个类只能有一个终结器。  
   
  有关终结器和 .NET Framework 垃圾回收的详细信息，请参阅[垃圾回收](../../../standard/garbage-collection/index.md)。  
   
-####  <a name="Events"></a> 事件  
+#### <a name="Events"></a> 事件  
  类或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或引发）事件的类称为“发行者”，接收（或处理）事件的类称为“订户”。 有关事件以及如何引发和处理事件的详细信息，请参阅[事件](../../../standard/events/index.md)。  
   
 -   若要在类中声明事件，请使用 [event](../../../csharp/language-reference/keywords/event.md) 关键字。  
@@ -198,7 +198,7 @@ public class SampleClass
   
 -   若要订阅事件，请使用 `+=` 运算符；若要取消订阅事件，请使用 `-=` 运算符。  
   
-####  <a name="NestedClasses"></a> 嵌套类  
+#### <a name="NestedClasses"></a> 嵌套类  
  在另一个类中定义的类称为“嵌套”。 默认情况下，嵌套类是私有类。  
   
 ```csharp  
@@ -217,7 +217,7 @@ class Container
 Container.Nested nestedInstance = new Container.Nested()  
 ```  
   
-###  <a name="AccessModifiers"></a> 访问修饰符和访问级别  
+### <a name="AccessModifiers"></a> 访问修饰符和访问级别  
  所有类和类方法都可以使用“访问修饰符”指定自己为其他类提供的访问级别。  
   
  可用的访问修饰符有以下这些：  
@@ -233,7 +233,7 @@ Container.Nested nestedInstance = new Container.Nested()
   
  有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
-###  <a name="InstantiatingClasses"></a> 实例化类  
+### <a name="InstantiatingClasses"></a> 实例化类  
  若要创建对象，你需要实例化类，即创建类实例。  
   
 ```csharp  
@@ -263,7 +263,7 @@ SampleClass sampleObject = new SampleClass
   
 -   [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
   
-###  <a name="Static"></a> 静态类和成员  
+### <a name="Static"></a> 静态类和成员  
  类的静态成员是指由该类的所有实例共享的属性、过程或字段。  
   
  定义静态成员：  
@@ -285,7 +285,7 @@ Console.WriteLine(SampleClass.SampleString);
   
  有关详细信息，请参阅：[static](../../../csharp/language-reference/keywords/static.md)。  
   
-###  <a name="AnonymousTypes"></a> 匿名类型  
+### <a name="AnonymousTypes"></a> 匿名类型  
  匿名类型使你无需为数据类型编写类定义即可创建对象。 此时，编译器将为你生成类。 该类没有可使用的名称，且包含在声明对象时指定的属性。  
   
  创建匿名类型的实例：  
@@ -298,7 +298,7 @@ var sampleObject =
   
  有关详细信息，请参见:[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
   
-##  <a name="Inheritance"></a> 继承  
+## <a name="Inheritance"></a> 继承  
  通过继承，可以创建一个新类，它重用、扩展和修改另一个类中定义的行为。 其成员被继承的类称为“基类”，继承这些成员的类称为“派生类”。 但是，C# 中的所有类都隐式继承自 <xref:System.Object> 类，该类支持 .NET 类层次结构，并为所有类提供低级别服务。  
   
 > [!NOTE]
@@ -330,7 +330,7 @@ public abstract class B { }
   
 -   [abstract](../../../csharp/language-reference/keywords/abstract.md)  
   
-###  <a name="Overriding"></a> 重写成员  
+### <a name="Overriding"></a> 重写成员  
  默认情况下，派生类继承其基类的所有成员。 若希望更改继承成员的行为，则需要重写该成员。 即，可以在派生类中定义方法、属性或事件的新实现。  
   
  下列修饰符用于控制如何重写属性和方法：  
@@ -342,7 +342,7 @@ public abstract class B { }
 |[abstract](../../../csharp/language-reference/keywords/abstract.md)|要求在派生类中重写类成员。|  
 |[new 修饰符](../../../csharp/language-reference/keywords/new-modifier.md)|隐藏继承自基类的成员|  
   
-##  <a name="Interfaces"></a> 接口  
+## <a name="Interfaces"></a> 接口  
  和类一样，接口也定义了一系列属性、方法和事件。 但与类不同的是，接口并不提供实现。 它们由类来实现，并从类中被定义为单独的实体。 接口表示一种约定，实现接口的类必须严格按其定义来实现接口的每个方面。  
   
  定义接口：  
@@ -372,7 +372,7 @@ class SampleClass : ISampleInterface
   
  [interface](../../../csharp/language-reference/keywords/interface.md)  
   
-##  <a name="Generics"></a> 泛型  
+## <a name="Generics"></a> 泛型  
  .NET Framework 中的类、结构、接口和方法可以包括“类型参数”，类型参数定义它们可以存储或使用的对象的类型。 最常见的泛型示例是集合，从中可以指定要存储在集合中的对象的类型。  
   
  定义泛型类：  
@@ -397,7 +397,7 @@ sampleObject.Field = "Sample string";
   
 -   [泛型](../../../csharp/programming-guide/generics/index.md)  
   
-##  <a name="Delegates"></a> 委托  
+## <a name="Delegates"></a> 委托  
  “委托”是一种类型，它定义方法签名，可以提供对具有兼容签名的任何方法的引用。 你可以通过委托调用方法。 委托用于将方法作为参数传递给其他方法。  
   
 > [!NOTE]

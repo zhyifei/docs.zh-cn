@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: b3dbce5185415374b2c0f6de134e03b44fe48420
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066250"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676364"
 ---
 # <a name="design-a-microservice-domain-model"></a>设计微服务域模型
 
@@ -78,7 +78,7 @@ Martin Fowler 在他的博客文章 [AnemicDomainModel](https://martinfowler.com
 
 值对象在关系数据库和 ORM（如 EF）中很难管理，而在面向文档的数据库中，它们更易于实现和使用。
 
-EF Core 2.0 包含[实体](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)功能，这样可以更易于处理值对象，如我们稍后详细介绍的一样。
+EF Core 2.0 包含[实体](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)功能，这样可以更易于处理值对象，如我们稍后详细介绍的一样。
 
 #### <a name="additional-resources"></a>其他资源
 

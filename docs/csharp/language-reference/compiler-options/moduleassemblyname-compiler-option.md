@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: bc1bc1376271b3a01d9b720dd85f812ea55cf34c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665040"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361260"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname（C# 编译器选项）
 指定一个程序集，.netmodule 可以访问其非公共类型。  
@@ -39,7 +39,7 @@ ms.locfileid: "54665040"
   
  有关生成 .netmodule 的详细信息，请参阅 [-target: module（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)。  
   
- 有关友元程序集的详细信息，请参阅[友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)。  
+ 有关友元程序集的详细信息，请参阅[友元程序集](../../../standard/assembly/friend-assemblies.md)。  
   
  此选项不适用于开发环境内，仅当从命令行编译时可用。  
   

@@ -3,12 +3,12 @@ title: 教程：编写第一个分析器和代码修补程序
 description: 本教程提供了有关使用 .NET 编译器 SDK (Roslyn API) 生成分析器和代码修补程序的分步说明。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 727e1deb859cf0f719f47b71129407b683978681
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 665dac9d36933c35be19cc826b8b4dc614c38ed2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201893"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677160"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教程：编写第一个分析器和代码修补程序
 
@@ -199,7 +199,7 @@ Console.WriteLine(x);
 
 [!code-csharp[Find local declaration node](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 
-接下来，更改用于注册代码修补程序的最后一行。 修补程序将创建新的文档，该文档通过将 `const` 修饰符添加到现有声明生成：  
+接下来，更改用于注册代码修补程序的最后一行。 修补程序将创建新的文档，该文档通过将 `const` 修饰符添加到现有声明生成：
 
 [!code-csharp[Register the new code fix](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
 
@@ -275,7 +275,7 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 }
 ```
 
-可以通过定义不应导致诊断触发警告的任何代码片段来针对此测试创建新的数据行。 当没有为源代码片段触发任何诊断，此 `VerifyCSharpDiagnostic` 重载将通过。  
+可以通过定义不应导致诊断触发警告的任何代码片段来针对此测试创建新的数据行。 当没有为源代码片段触发任何诊断，此 `VerifyCSharpDiagnostic` 重载将通过。
 
 接下来，将 `TestMethod2` 替换为此测试，以确保引发诊断且代码修补程序应用于源代码片段：
 
@@ -426,7 +426,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-此外，无法正确处理引用类型。 允许用于引用类型的唯一常量值为 `null`， <xref:System.String?displayPropert=nameWIthType> 这种情况除外，后者允许字符串。 换而言之，`const string s = "abc"` 是合法的，但 `const object s = "abc"` 不是。 此代码片段验证以下条件：
+此外，无法正确处理引用类型。 允许用于引用类型的唯一常量值为 `null`， <xref:System.String?displayProperty=nameWIthType> 这种情况除外，后者允许字符串。 换而言之，`const string s = "abc"` 是合法的，但 `const object s = "abc"` 不是。 此代码片段验证以下条件：
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 
@@ -444,7 +444,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 幸运的是，所有上述 bug 可以使用你刚刚了解的相同技术解决。
 
-若要修复第一个 bug，请先打开“DiagnosticAnalyzer.cs”并找到 foreach 循环，将检查其中每个局部声明的初始值设定项以确保向其分配常量值。 在第一个 foreach 循环之前，立即调用 `context.SemanicModel.GetTypeInfo()` 来检索有关局部声明的声明类型的详细信息：
+若要修复第一个 bug，请先打开“DiagnosticAnalyzer.cs”并找到 foreach 循环，将检查其中每个局部声明的初始值设定项以确保向其分配常量值。 在第一个 foreach 循环之前，立即调用 `context.SemanticModel.GetTypeInfo()` 来检索有关局部声明的声明类型的详细信息：
 
 ```csharp
 var variableTypeName = localDeclaration.Declaration.Type;

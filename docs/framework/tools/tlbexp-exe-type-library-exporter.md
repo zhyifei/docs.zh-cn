@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76a4a3b91e88e1532e79eea256621ee149c320ea
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 805d35ddb74fca847d47298cf283913031af67c4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219472"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482829"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe（类型库导出程序）
 类型库导出程序生成一个类型库，该类型库描述公共语言运行时程序集中定义的类型。  
@@ -30,13 +30,13 @@ ms.locfileid: "56219472"
 tlbexp assemblyName [options]  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
   
-|参数|说明​​|  
+|参数|说明|  
 |--------------|-----------------|  
 |*assemblyName*|为其导出类型库的程序集。|  
   
-|选项|说明​​|  
+|选项|说明|  
 |------------|-----------------|  
 |/asmpath: directory|指定要在其中搜索程序集的位置。 如果使用此选项，则必须显式指定要在其中搜索所引用的程序集的位置（包括当前目录）。<br /><br /> 当使用 asmpath 选项时，类型库导出程序不会在全局程序集缓存 (GAC) 中查找程序集。|  
 |**/help**|显示该工具的命令语法和选项。|  

@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: b50b081dd3307f60f32bfa13c61f69e14d6341c8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362824"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362703"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
 
@@ -41,7 +41,7 @@ eShopOnContainers 引用应用程序处的订单微服务设计基于 CQRS 原�
 
 只有一个应用程序体系结构：你设计的系统或端到端应用程序的体系结构（如微服务体系结构）。 但该应用程序中的每个界定的上下文或微服务的设计反映有关其自身的折衷方案和体系结构模式级别的内部设计决策。 请勿尝试将相同的体系结构模式（如 CQRS 或 DDD）用于所有情况。
 
-####  <a name="additional-resources"></a>其他资源
+### <a name="additional-resources"></a>其他资源
 
 - **Martin Fowler。CQRS** \
   [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)

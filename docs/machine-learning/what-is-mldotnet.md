@@ -5,16 +5,19 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 08e5f31502555ed1a04a6a4afa70bc98e8fd015a
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57250957"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466942"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>什么是 ML.NET？应该如何理解机器学习基础知识？
 
 ML.NET 是一个免费的开源跨平台机器学习框架，可用于生成自定义机器学习解决方案并将其集成到 .NET 应用程序。 借助 ML.NET API，你可以使用自己已有的 .NET 技能将 AI 结合到应用中，而无需离开 .NET。
+
+> [!NOTE]
+> 本文档引用 ML.NET（目前为预览版）。 材料可能会有所变化。 有关详细信息，请参阅 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
 
 ## <a name="what-is-machine-learning"></a>什么是机器学习？
 

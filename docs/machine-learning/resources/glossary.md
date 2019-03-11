@@ -2,17 +2,20 @@
 title: 机器学习术语表 - ML.NET
 description: 一个重要的机器学习术语表，可在 ML.NET 中生成自定义模型时使用。
 ms.custom: seodec18
-ms.date: 12/20/2018
-ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.date: 03/05/2019
+ms.openlocfilehash: 52f4aa7300edbbdabcc37d7710654dab455d27b0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092431"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498895"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>机器学习重要术语词汇表
 
 以下列表是重要的机器学习术语编译，可在 ML.NET 中生成自定义模型时使用。
+
+> [!NOTE]
+> 本文档引用 ML.NET（目前为预览版）。 材料可能会有所变化。 有关详细信息，请参阅 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
 
 ## <a name="accuracy"></a>准确性
 

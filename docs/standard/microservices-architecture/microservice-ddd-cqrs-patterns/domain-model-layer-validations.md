@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d48c78e6ea63ea1a2f3dbfea6b9fec646493c751
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4ec170c5951147e4979152a0208b00a1369b16d7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148066"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679536"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>在域模型层中设计验证
 
@@ -42,7 +42,7 @@ public void SetAddress(Address address)
 public void SetAddress(string line1, string line2,
     string city, string state, int zip)
 {
-    _shipingAddress.line1 = line1 ?? throw new ...
+    _shippingAddress.line1 = line1 ?? throw new ...
     _shippingAddress.line2 = line2;
     _shippingAddress.city = city ?? throw new ...
     _shippingAddress.state = (IsValid(state) ? state : throw new …);
@@ -108,6 +108,6 @@ public void SetAddress(string line1, string line2,
 - **Jimmy Bogard。Validation in a DDD world** \（DDD 中的验证）
   [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
->[!div class="step-by-step"]
->[上一页](enumeration-classes-over-enum-types.md)
->[下一页](client-side-validation.md)
+> [!div class="step-by-step"]
+> [上一页](enumeration-classes-over-enum-types.md)
+> [下一页](client-side-validation.md)

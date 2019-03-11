@@ -1,16 +1,14 @@
 ---
 title: .NET 术语表
 description: 了解 .NET 文档中所用的选定术语的含义。
-author: tdykstra
-ms.author: tdykstra
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: b9654bf7f6cbc1019d00db986ba883cbab0abbb5
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857966"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674505"
 ---
 # <a name="net-glossary"></a>.NET 术语表
 

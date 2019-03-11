@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: c4d2d84a59aebedda2d1e6380caeef170051c0a3
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411369"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675779"
 ---
 # <a name="customizing-structure-marshalling"></a>自定义结构封送
 
@@ -65,7 +65,7 @@ struct WinBool
 };
 ```
 
-使用下面的 `UmanagedType.U1` 或 `UnmanagedType.I1` 值，可以告知运行时将 `b` 字段作为 1 字节本机 `bool` 类型进行封送。
+使用下面的 `UnmanagedType.U1` 或 `UnmanagedType.I1` 值，可以告知运行时将 `b` 字段作为 1 字节本机 `bool` 类型进行封送。
 
 ```csharp
 public struct CBool
@@ -342,7 +342,7 @@ struct Currency
 在 Windows 上，可以将类型为 `object` 的字段封送到本机代码。 可以将这些字段封送到以下三个类型之一：
 - [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
-- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)。 
+- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
 默认情况下，将类型为 `object` 的字段封送到用来包装对象的 `IUnknown*`。
 

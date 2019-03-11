@@ -2,12 +2,12 @@
 title: 如何：创建已签名的友元程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 54307313eb7955a40e290218aacf27be320e745b
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 13b99cd1118071e7c403828260003c80b9417792
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746657"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354487"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>如何：创建已签名的友元程序集 (C#)
 本示例演示如何将友元程序集和具有强名称的程序集一起使用。 这两种程序集必须都使用强名称。 尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。  
@@ -92,7 +92,7 @@ ms.locfileid: "56746657"
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET 中的程序集](../../../../standard/assembly/index.md)
-- [友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [友元程序集](../../../../standard/assembly/friend-assemblies.md)
 - [如何：创建未签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [Sn.exe（强名称工具）](../../../../framework/tools/sn-exe-strong-name-tool.md)

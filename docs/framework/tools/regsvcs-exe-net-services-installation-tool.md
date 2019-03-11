@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc349e13aba84de8c266442e9be8130e5f8604c2
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: b80df56c9f45f7dd195e1f7bbd03063fa30abb3a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219771"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466722"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe（.NET 服务安装工具）
 .NET 服务安装工具执行下列操作：  
@@ -39,13 +39,13 @@ ms.locfileid: "56219771"
 [/nologo] [/quiet]assemblyFile.dll   
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
   
-|参数|说明​​|  
+|参数|说明|  
 |--------------|-----------------|  
 |assemblyFile.dll|源程序集文件。 此程序集必须用强名称进行签名。 有关详细信息，请参阅[使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。|  
   
-|选项|说明​​|  
+|选项|说明|  
 |------------|-----------------|  
 |/appdir: path|指定应用程序的根目录。|  
 |/appname: applicationName|指定要查找或创建的 COM+ 应用程序的名称。|  
