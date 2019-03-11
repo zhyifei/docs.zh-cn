@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: c7a65bcc65710324a4457c17dd728b4771550c06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5afb4fe3ebef705cd0671312aacb6f9ad8219621
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694069"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711210"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>如何：在运行时 （Windows 窗体） 设置图片
 你可以以编程方式设置 Windows 窗体显示的图像<xref:System.Windows.Forms.PictureBox>控件。  
@@ -93,14 +93,14 @@ ms.locfileid: "54694069"
     ```  
   
     > [!NOTE]
-    >  有关原因的详细信息应使用<xref:System.Drawing.Image.Dispose%2A>方法以这种方式，请参阅[清理了非托管资源](../../../../docs/standard/garbage-collection/unmanaged.md)。  
+    >  有关原因的详细信息应使用<xref:System.Drawing.Image.Dispose%2A>方法以这种方式，请参阅[清理了非托管资源](../../../standard/garbage-collection/unmanaged.md)。  
   
      即使图形已加载到控件在设计时，此代码将清除该映像。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
-- [PictureBox 控件概述](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [如何：使用设计器加载图片](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [如何：在运行时修改的大小或位置的图片](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [PictureBox 控件](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [PictureBox 控件概述](picturebox-control-overview-windows-forms.md)
+- [如何：使用设计器加载图片](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [如何：在运行时修改的大小或位置的图片](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [PictureBox 控件](picturebox-control-windows-forms.md)
