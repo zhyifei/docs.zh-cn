@@ -197,6 +197,7 @@
 ### [为 .NET Core 组织项目](core/porting/project-structure.md)
 ### [用于帮助移植到 .NET Core 的工具](core/porting/tools.md)
 ### [使用 Windows 兼容性包](core/porting/windows-compat-pack.md)
+### [移植 Windows 窗体项目](core/porting/winforms.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [从源生成 .NET Core](core/build/index.md)
 ### [.NET Core 分发打包](core/build/distribution-packaging.md)
