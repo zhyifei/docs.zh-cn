@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ---
 
-# .NET Framework 中的新增功能<a name="introduction"></a>
+# <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
 本文总结了以下版本的 .NET Framework 中的主要新功能和改进：
 
@@ -681,7 +681,7 @@ End Class
 
 然后可以创建一个资源文件 DataAnnotation.Localization.fr.resx，它的键为错误消息字符串，值为本地化的错误消息。 该文件必须位于 `App.LocalResources` 文件夹中。 例如，下面列出了键以及它在本地化法语 (fr) 错误消息中的值：
 
-| name                                 | “值”                                     |
+| name                                 | 值                                     |
 | ------------------------------------ | ----------------------------------------- |
 | 分级必须介于 1 和 10 之间。 | La note doit être comprise entre 1 et 10. |
 
@@ -1571,8 +1571,6 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
      .NET Core 包（如不可变集合）、[SIMD API](https://go.microsoft.com/fwlink/?LinkID=518639) 以及网络 API（如在 <xref:System.Net.Http> 命名空间中找到的网络 API）现在都可在 [GitHub](https://github.com/) 上用作开放源代码程序包。 若要访问代码，请参阅 [GitHub 上的 CoreFx](https://github.com/dotnet/corefx)。 有关详细信息以及如何参与这些包，请参阅 [.NET Core 和开放源代码](../../../docs/framework/get-started/net-core-and-open-source.md)、[GitHub 上的 .NET 主页](https://github.com/dotnet/home)。
 
-[返回页首](#introduction)
-
 <a name="v452" />
 
 ## <a name="whats-new-in-the-net-framework-452"></a>.NET Framework 4.5.2 中的新增功能
@@ -1644,8 +1642,6 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
      该方法可能会由登记使用，该登记先前通过 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> 创建以响应 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 方法。 它要求 `System.Transactions` 将事务提升为 MSDTC 事务，并将可提升的登记“转换”为持久登记。 此方法成功完成后，`System.Transactions` 将不再引用 <xref:System.Transactions.IPromotableSinglePhaseNotification> 接口，将来的所有通知都将到达所提供的 <xref:System.Transactions.ISinglePhaseNotification> 接口。 相关登记必须作为持久登记，以支持事务日志记录和恢复。 请参阅 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> 了解详细信息。 此外，登记必须支持 <xref:System.Transactions.ISinglePhaseNotification>。  此方法*只能*在处理 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 调用时调用。 如果不是这种情况，则会引发 <xref:System.Transactions.TransactionException> 异常。
 
-[返回页首](#introduction)
-
 <a name="v451" />
 
 ## <a name="whats-new-in-the-net-framework-451"></a>.NET Framework 4.5.1 中的新增功能
@@ -1707,8 +1703,6 @@ Windows 窗体的改进包括：
 自 Visual Studio 2013 起，可以使用[托管配置文件引导式优化工具 (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) 来优化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用和桌面应用。
 
 有关 ASP.NET 4.5.1 中的新功能，请参阅[适用于 Visual Studio 2013 的 ASP.NET 和 Web 工具发行说明](/aspnet/visual-studio/overview/2013/release-notes).
-
-[返回页首](#introduction)
 
 <a name="v45" />
 
