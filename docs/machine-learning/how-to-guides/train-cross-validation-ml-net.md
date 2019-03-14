@@ -1,22 +1,27 @@
 ---
 title: 使用交叉验证来训练机器学习模型 - ML.NET
 description: 了解如何通过 ML.NET，使用交叉验证来训练机器学习模型，从而提高模型预测的准确性。
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8d74b69340895bcfe3cdc3d3a6121d7331a0a5e2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092275"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676533"
 ---
-# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="13cd7-103">使用交叉验证来训练机器学习模型 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="13cd7-103">Train a machine learning model using cross-validation - ML.NET</span></span>
+# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="b47fe-103">使用交叉验证来训练机器学习模型 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="b47fe-103">Train a machine learning model using cross-validation - ML.NET</span></span>
 
-<span data-ttu-id="13cd7-104">[交叉验证](https://en.wikipedia.org/wiki/Cross-validation_(statistics))是面向机器学习应用的有用技术。</span><span class="sxs-lookup"><span data-stu-id="13cd7-104">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="13cd7-105">它可帮助预估每次模型运行与上一次运行之间的模型质量变化，并且无需提取单独的测试集来进行评估。</span><span class="sxs-lookup"><span data-stu-id="13cd7-105">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
+> [!NOTE]
+> <span data-ttu-id="b47fe-104">本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。</span><span class="sxs-lookup"><span data-stu-id="b47fe-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="b47fe-105">有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。</span><span class="sxs-lookup"><span data-stu-id="b47fe-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="13cd7-106">ML.NET 自动正确应用特征化（只要全部预处理过程驻留在同一个学习管道中），然后使用“分层列”概念来确保关联示例不会分离。</span><span class="sxs-lookup"><span data-stu-id="13cd7-106">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
+<span data-ttu-id="b47fe-106">此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。</span><span class="sxs-lookup"><span data-stu-id="b47fe-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="b47fe-107">有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。</span><span class="sxs-lookup"><span data-stu-id="b47fe-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="13cd7-107">以下是使用随机 90/10 定型测试拆分和 5 倍交叉验证的鸢尾花数据集的定型示例：</span><span class="sxs-lookup"><span data-stu-id="13cd7-107">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
+<span data-ttu-id="b47fe-108">[交叉验证](https://en.wikipedia.org/wiki/Cross-validation_(statistics))是面向机器学习应用的有用技术。</span><span class="sxs-lookup"><span data-stu-id="b47fe-108">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="b47fe-109">它可帮助预估每次模型运行与上一次运行之间的模型质量变化，并且无需提取单独的测试集来进行评估。</span><span class="sxs-lookup"><span data-stu-id="b47fe-109">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
+
+<span data-ttu-id="b47fe-110">ML.NET 自动正确应用特征化（只要全部预处理过程驻留在同一个学习管道中），然后使用“分层列”概念来确保关联示例不会分离。</span><span class="sxs-lookup"><span data-stu-id="b47fe-110">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
+
+<span data-ttu-id="b47fe-111">以下是使用随机 90/10 定型测试拆分和 5 倍交叉验证的鸢尾花数据集的定型示例：</span><span class="sxs-lookup"><span data-stu-id="b47fe-111">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 

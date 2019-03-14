@@ -1,24 +1,29 @@
 ---
 title: 使用 ML.NET 定型回归模型以预测某个值
 description: 了解如何使用 ML.NET 定型机器学习回归模型以预测某个值
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e7ea07471e155804a7ad36481aa469beda7028ae
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092899"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673140"
 ---
-# <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a><span data-ttu-id="01a80-103">使用 ML.NET 定型回归模型以预测某个值</span><span class="sxs-lookup"><span data-stu-id="01a80-103">Train a regression model to predict a value using ML.NET</span></span>
+# <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a><span data-ttu-id="326df-103">使用 ML.NET 定型回归模型以预测某个值</span><span class="sxs-lookup"><span data-stu-id="326df-103">Train a regression model to predict a value using ML.NET</span></span>
 
-<span data-ttu-id="01a80-104">通常，在 ML.NET 中进行模型定型需要执行三个步骤：</span><span class="sxs-lookup"><span data-stu-id="01a80-104">Generally, there are three steps for model training in ML.NET:</span></span>
+> [!NOTE]
+> <span data-ttu-id="326df-104">本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。</span><span class="sxs-lookup"><span data-stu-id="326df-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="326df-105">有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。</span><span class="sxs-lookup"><span data-stu-id="326df-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-1. <span data-ttu-id="01a80-105">获取 `IDataView` 形式的定型数据</span><span class="sxs-lookup"><span data-stu-id="01a80-105">Get the training data in a form of an `IDataView`</span></span>
-2. <span data-ttu-id="01a80-106">将“学习管道”构建为一系列基本“运算符”（估算器）。</span><span class="sxs-lookup"><span data-stu-id="01a80-106">Build the 'learning pipeline' as a sequence of elementary 'operators' (estimators).</span></span>
-3. <span data-ttu-id="01a80-107">在管道上调用 `Fit` 以获得定型的模型。</span><span class="sxs-lookup"><span data-stu-id="01a80-107">Call `Fit` on the pipeline to obtain the trained model.</span></span>
+<span data-ttu-id="326df-106">此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。</span><span class="sxs-lookup"><span data-stu-id="326df-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="326df-107">有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。</span><span class="sxs-lookup"><span data-stu-id="326df-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="01a80-108">在此[示例文件](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv)中，预测标签（`target`）是最后一列（第 12 列），其余所有内容都是功能：</span><span class="sxs-lookup"><span data-stu-id="01a80-108">In this [Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv),the predicted label (`target`) is the last column (12th) and all the rest are features:</span></span>
+<span data-ttu-id="326df-108">通常，在 ML.NET 中进行模型定型需要执行三个步骤：</span><span class="sxs-lookup"><span data-stu-id="326df-108">Generally, there are three steps for model training in ML.NET:</span></span>
+
+1. <span data-ttu-id="326df-109">获取 `IDataView` 形式的定型数据</span><span class="sxs-lookup"><span data-stu-id="326df-109">Get the training data in a form of an `IDataView`</span></span>
+2. <span data-ttu-id="326df-110">将“学习管道”构建为一系列基本“运算符”（估算器）。</span><span class="sxs-lookup"><span data-stu-id="326df-110">Build the 'learning pipeline' as a sequence of elementary 'operators' (estimators).</span></span>
+3. <span data-ttu-id="326df-111">在管道上调用 `Fit` 以获得定型的模型。</span><span class="sxs-lookup"><span data-stu-id="326df-111">Call `Fit` on the pipeline to obtain the trained model.</span></span>
+
+<span data-ttu-id="326df-112">在此[示例文件](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv)中，预测标签（`target`）是最后一列（第 12 列），其余所有内容都是功能：</span><span class="sxs-lookup"><span data-stu-id="326df-112">In this [Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv),the predicted label (`target`) is the last column (12th) and all the rest are features:</span></span>
 
 ```console
 feature_0;feature_1;feature_2;feature_3;feature_4;feature_5;feature_6;feature_7;feature_8;feature_9;feature_10;target

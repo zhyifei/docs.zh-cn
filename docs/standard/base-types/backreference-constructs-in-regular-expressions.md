@@ -1,6 +1,6 @@
 ---
 title: .NET 正则表达式中的反向引用构造
-desription: Learn how to identify repeated text elements by using backreference constructs in a regular expression.
+description: 了解如何通过在正则表达式中使用向后引用构造来识别重复的文本元素。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,126 +15,130 @@ ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 0b3de774159e528ea782d8b450f9e596aeb0daca
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d478ae9e1db86718236da73917d772820707ea03
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144775"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678353"
 ---
-# <a name="backreference-constructs-in-regular-expressions"></a><span data-ttu-id="77f81-102">正则表达式中的反向引用构造</span><span class="sxs-lookup"><span data-stu-id="77f81-102">Backreference Constructs in Regular Expressions</span></span>
-<span data-ttu-id="77f81-103">反向引用提供了标识字符串中的重复字符或子字符串的方便途径。</span><span class="sxs-lookup"><span data-stu-id="77f81-103">Backreferences provide a convenient way to identify a repeated character or substring within a string.</span></span> <span data-ttu-id="77f81-104">例如，如果输入字符串包含某任意子字符串的多个匹配项，可以使用捕获组匹配第一个出现的子字符串，然后使用反向引用匹配后面出现的子字符串。</span><span class="sxs-lookup"><span data-stu-id="77f81-104">For example, if the input string contains multiple occurrences of an arbitrary substring, you can match the first occurrence with a capturing group, and then use a backreference to match subsequent occurrences of the substring.</span></span>  
-  
+# <a name="backreference-constructs-in-regular-expressions"></a><span data-ttu-id="b46af-103">正则表达式中的反向引用构造</span><span class="sxs-lookup"><span data-stu-id="b46af-103">Backreference Constructs in Regular Expressions</span></span>
+
+<span data-ttu-id="b46af-104">反向引用提供了标识字符串中的重复字符或子字符串的方便途径。</span><span class="sxs-lookup"><span data-stu-id="b46af-104">Backreferences provide a convenient way to identify a repeated character or substring within a string.</span></span> <span data-ttu-id="b46af-105">例如，如果输入字符串包含某任意子字符串的多个匹配项，可以使用捕获组匹配第一个出现的子字符串，然后使用反向引用匹配后面出现的子字符串。</span><span class="sxs-lookup"><span data-stu-id="b46af-105">For example, if the input string contains multiple occurrences of an arbitrary substring, you can match the first occurrence with a capturing group, and then use a backreference to match subsequent occurrences of the substring.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="77f81-105">单独语法用于引用替换字符串中命名的和带编号的捕获组。</span><span class="sxs-lookup"><span data-stu-id="77f81-105">A separate syntax is used to refer to named and numbered capturing groups in replacement strings.</span></span> <span data-ttu-id="77f81-106">有关更多信息，请参见 [Substitutions](substitutions-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="77f81-106">For more information, see [Substitutions](substitutions-in-regular-expressions.md).</span></span>  
-  
- <span data-ttu-id="77f81-107">.NET 定义引用编号和命名捕获组的单独语言元素。</span><span class="sxs-lookup"><span data-stu-id="77f81-107">.NET defines separate language elements to refer to numbered and named capturing groups.</span></span> <span data-ttu-id="77f81-108">若要详细了解捕获组，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="77f81-108">For more information about capturing groups, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span></span>  
-  
-## <a name="numbered-backreferences"></a><span data-ttu-id="77f81-109">带编号的反向引用</span><span class="sxs-lookup"><span data-stu-id="77f81-109">Numbered Backreferences</span></span>  
- <span data-ttu-id="77f81-110">带编号的反向引用使用以下语法：</span><span class="sxs-lookup"><span data-stu-id="77f81-110">A numbered backreference uses the following syntax:</span></span>  
-  
- <span data-ttu-id="77f81-111">`\` *数值*</span><span class="sxs-lookup"><span data-stu-id="77f81-111">`\` *number*</span></span>  
-  
- <span data-ttu-id="77f81-112">其中 *number* 是正则表达式中捕获组的序号位置。</span><span class="sxs-lookup"><span data-stu-id="77f81-112">where *number* is the ordinal position of the capturing group in the regular expression.</span></span> <span data-ttu-id="77f81-113">例如，`\4` 匹配第四个捕获组的内容。</span><span class="sxs-lookup"><span data-stu-id="77f81-113">For example, `\4` matches the contents of the fourth capturing group.</span></span> <span data-ttu-id="77f81-114">如果正则表达式模式中未定义 number，将会发生分析错误，并且正则表达式引擎会抛出 <xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="77f81-114">If *number* is not defined in the regular expression pattern, a parsing error occurs, and the regular expression engine throws an <xref:System.ArgumentException>.</span></span> <span data-ttu-id="77f81-115">例如，正则表达式 `\b(\w+)\s\1` 有效，因为 `(\w+)` 是表达式中的第一个也是唯一一个捕获组。</span><span class="sxs-lookup"><span data-stu-id="77f81-115">For example, the regular expression `\b(\w+)\s\1` is valid, because `(\w+)` is the first and only capturing group in the expression.</span></span> <span data-ttu-id="77f81-116">`\b(\w+)\s\2` 无效，该表达式会因为没有捕获组编号 `\2` 而引发自变量异常。</span><span class="sxs-lookup"><span data-stu-id="77f81-116">On the other hand, `\b(\w+)\s\2` is invalid and throws an argument exception, because there is no capturing group numbered `\2`.</span></span> <span data-ttu-id="77f81-117">此外，如果 number 标识特定序号位置中的捕获组，但该捕获组已被分配了一个不同于其序号位置的数字名称，则正则表达式分析器还会引发 <xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="77f81-117">In addition, if *number* identifies a capturing group in a particular ordinal position, but that capturing group has been assigned a numeric name different than its ordinal position, the regular expression parser also throws an <xref:System.ArgumentException>.</span></span> 
-  
- <span data-ttu-id="77f81-118">请注意八进制转义代码（如 `\16`）和使用相同表示法的 `\`number 反向引用之间的不明确问题。</span><span class="sxs-lookup"><span data-stu-id="77f81-118">Note the ambiguity between octal escape codes (such as `\16`) and `\`*number* backreferences that use the same notation.</span></span> <span data-ttu-id="77f81-119">这种多义性可通过如下方式解决：</span><span class="sxs-lookup"><span data-stu-id="77f81-119">This ambiguity is resolved as follows:</span></span>  
-  
--   <span data-ttu-id="77f81-120">表达式 `\1` 到 `\9` 始终解释为反向应用，而不是八进制代码。</span><span class="sxs-lookup"><span data-stu-id="77f81-120">The expressions `\1` through `\9` are always interpreted as backreferences, and not as octal codes.</span></span>  
-  
--   <span data-ttu-id="77f81-121">如果多位表达式的第一个数字是 8 或 9（如 `\80` 或 `\91`），该表达式将解释为文本。</span><span class="sxs-lookup"><span data-stu-id="77f81-121">If the first digit of a multidigit expression is 8 or 9 (such as `\80` or `\91`), the expression as interpreted as a literal.</span></span>  
-  
--   <span data-ttu-id="77f81-122">对于编号为 `\10` 或更大值的表达式，如果存在与该编号对应的反向引用，则将该表达式视为反向引用；否则，将这些表达式解释为八进制代码。</span><span class="sxs-lookup"><span data-stu-id="77f81-122">Expressions from `\10` and greater are considered backreferences if there is a backreference corresponding to that number; otherwise, they are interpreted as octal codes.</span></span>  
-  
--   <span data-ttu-id="77f81-123">如果正则表达式包含对未定义的组成员的反向引用，将会发生分析错误，并且正则表达式引擎会抛出 <xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="77f81-123">If a regular expression contains a backreference to an undefined group number, a parsing error occurs, and the regular expression engine throws an <xref:System.ArgumentException>.</span></span>  
-  
- <span data-ttu-id="77f81-124">如果存在不明确问题，可以使用 `\k<`name`>` 表示法，此表示法非常明确，不会与八进制字符代码混淆。</span><span class="sxs-lookup"><span data-stu-id="77f81-124">If the ambiguity is a problem, you can use the `\k<`*name*`>` notation, which is unambiguous and cannot be confused with octal character codes.</span></span> <span data-ttu-id="77f81-125">同样，诸如 `\xdd` 的十六进制代码也是明确的，不会与反向引用混淆。</span><span class="sxs-lookup"><span data-stu-id="77f81-125">Similarly, hexadecimal codes such as `\xdd` are unambiguous and cannot be confused with backreferences.</span></span>  
-  
- <span data-ttu-id="77f81-126">下面的示例查找字符串中双写的单词字符。</span><span class="sxs-lookup"><span data-stu-id="77f81-126">The following example finds doubled word characters in a string.</span></span> <span data-ttu-id="77f81-127">它定义一个由下列元素组成的正则表达式 `(\w)\1`。</span><span class="sxs-lookup"><span data-stu-id="77f81-127">It defines a regular expression, `(\w)\1`, which consists of the following elements.</span></span>  
-  
-|<span data-ttu-id="77f81-128">元素</span><span class="sxs-lookup"><span data-stu-id="77f81-128">Element</span></span>|<span data-ttu-id="77f81-129">说明</span><span class="sxs-lookup"><span data-stu-id="77f81-129">Description</span></span>|  
-|-------------|-----------------|  
-|`(\w)`|<span data-ttu-id="77f81-130">匹配单词字符，并将其分配给第一个捕获组。</span><span class="sxs-lookup"><span data-stu-id="77f81-130">Match a word character and assign it to the first capturing group.</span></span>|  
-|`\1`|<span data-ttu-id="77f81-131">匹配值与第一捕获组相同的下一个字符。</span><span class="sxs-lookup"><span data-stu-id="77f81-131">Match the next character that is the same as the value of the first capturing group.</span></span>|  
-  
- [!code-csharp[RegularExpressions.Language.Backreferences#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference1.cs#1)]
- [!code-vb[RegularExpressions.Language.Backreferences#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference1.vb#1)]  
-  
-## <a name="named-backreferences"></a><span data-ttu-id="77f81-132">命名的反向引用</span><span class="sxs-lookup"><span data-stu-id="77f81-132">Named Backreferences</span></span>  
- <span data-ttu-id="77f81-133">使用以下语法定义命名的反向引用：</span><span class="sxs-lookup"><span data-stu-id="77f81-133">A named backreference is defined by using the following syntax:</span></span>  
-  
- <span data-ttu-id="77f81-134">`\k<` *name* `>`</span><span class="sxs-lookup"><span data-stu-id="77f81-134">`\k<` *name* `>`</span></span>  
-  
- <span data-ttu-id="77f81-135">或：</span><span class="sxs-lookup"><span data-stu-id="77f81-135">or:</span></span>  
-  
- <span data-ttu-id="77f81-136">`\k'` *name* `'`</span><span class="sxs-lookup"><span data-stu-id="77f81-136">`\k'` *name* `'`</span></span>  
-  
- <span data-ttu-id="77f81-137">其中，*name* 是正则表达式模式中定义的捕获组的名称。</span><span class="sxs-lookup"><span data-stu-id="77f81-137">where *name* is the name of a capturing group defined in the regular expression pattern.</span></span> <span data-ttu-id="77f81-138">如果正则表达式模式中未定义 name，将会发生分析错误，并且正则表达式引擎会抛出 <xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="77f81-138">If *name* is not defined in the regular expression pattern, a parsing error occurs, and the regular expression engine throws an <xref:System.ArgumentException>.</span></span>  
-  
- <span data-ttu-id="77f81-139">下面的示例查找字符串中双写的单词字符。</span><span class="sxs-lookup"><span data-stu-id="77f81-139">The following example finds doubled word characters in a string.</span></span> <span data-ttu-id="77f81-140">它定义一个由下列元素组成的正则表达式 `(?<char>\w)\k<char>`。</span><span class="sxs-lookup"><span data-stu-id="77f81-140">It defines a regular expression, `(?<char>\w)\k<char>`, which consists of the following elements.</span></span>  
-  
-|<span data-ttu-id="77f81-141">元素</span><span class="sxs-lookup"><span data-stu-id="77f81-141">Element</span></span>|<span data-ttu-id="77f81-142">说明</span><span class="sxs-lookup"><span data-stu-id="77f81-142">Description</span></span>|  
-|-------------|-----------------|  
-|`(?<char>\w)`|<span data-ttu-id="77f81-143">匹配字词字符，并将结果分配到 `char` 捕获组。</span><span class="sxs-lookup"><span data-stu-id="77f81-143">Match a word character and assign it to a capturing group named `char`.</span></span>|  
-|`\k<char>`|<span data-ttu-id="77f81-144">匹配下一个与 `char` 捕获组的值相同的字符。</span><span class="sxs-lookup"><span data-stu-id="77f81-144">Match the next character that is the same as the value of the `char` capturing group.</span></span>|  
-  
- [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
- [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
+> <span data-ttu-id="b46af-106">单独语法用于引用替换字符串中命名的和带编号的捕获组。</span><span class="sxs-lookup"><span data-stu-id="b46af-106">A separate syntax is used to refer to named and numbered capturing groups in replacement strings.</span></span> <span data-ttu-id="b46af-107">有关更多信息，请参见 [替代](substitutions-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="b46af-107">For more information, see [Substitutions](substitutions-in-regular-expressions.md).</span></span>
 
-## <a name="named-numeric-backreferences"></a><span data-ttu-id="77f81-145">已命名数值的反向引用</span><span class="sxs-lookup"><span data-stu-id="77f81-145">Named numeric backreferences</span></span>
+<span data-ttu-id="b46af-108">.NET 定义引用编号和命名捕获组的单独语言元素。</span><span class="sxs-lookup"><span data-stu-id="b46af-108">.NET defines separate language elements to refer to numbered and named capturing groups.</span></span> <span data-ttu-id="b46af-109">若要详细了解捕获组，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="b46af-109">For more information about capturing groups, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span></span>
 
-<span data-ttu-id="77f81-146">在具有 `\k` 的已命名反向引用中，name 也可以是 number 的字符串表示形式。</span><span class="sxs-lookup"><span data-stu-id="77f81-146">In a named backreference with `\k`, *name* can also be the string representation of a number.</span></span> <span data-ttu-id="77f81-147">例如，下面的示例使用正则表达式 `(?<2>\w)\k<2>` 查找字符串中双写的单词字符。</span><span class="sxs-lookup"><span data-stu-id="77f81-147">For example, the following example uses the regular expression `(?<2>\w)\k<2>` to find doubled word characters in a string.</span></span> <span data-ttu-id="77f81-148">在此情况下，该示例定义了显式命名为“2”的捕获组，反向引用相应地命名为“2”。</span><span class="sxs-lookup"><span data-stu-id="77f81-148">In this case, the example defines a capturing group that is explicitly named "2", and the backreference is correspondingly named "2".</span></span> 
-  
- [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
- [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]  
+## <a name="numbered-backreferences"></a><span data-ttu-id="b46af-110">带编号的反向引用</span><span class="sxs-lookup"><span data-stu-id="b46af-110">Numbered Backreferences</span></span>
 
-<span data-ttu-id="77f81-149">如果 name 是 number 的字符串表示形式，且没有捕获组具有该名称，`\k<` name `>` 与反向引用 `\`number 相同，其中 number 是捕获的序号位置。</span><span class="sxs-lookup"><span data-stu-id="77f81-149">If *name* is the string representation of a number, and no capturing group has that name, `\k<`*name*`>` is the same as the backreference `\`*number*, where *number* is the ordinal position of the capture.</span></span> <span data-ttu-id="77f81-150">在以下示例中，有名为 `char` 的单个捕获组。</span><span class="sxs-lookup"><span data-stu-id="77f81-150">In the following example, there is a single capturing group named `char`.</span></span> <span data-ttu-id="77f81-151">反向引用构造将其称为 `\k<1>`。</span><span class="sxs-lookup"><span data-stu-id="77f81-151">The backreference construct refers to it as `\k<1>`.</span></span> <span data-ttu-id="77f81-152">正如示例中的输出所示，由于 `char` 是第一个捕获组，所以对 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 的调用成功。</span><span class="sxs-lookup"><span data-stu-id="77f81-152">As the output from the example shows, the call to the <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> succeeds because `char` is the first capturing group.</span></span>
+<span data-ttu-id="b46af-111">带编号的反向引用使用以下语法：</span><span class="sxs-lookup"><span data-stu-id="b46af-111">A numbered backreference uses the following syntax:</span></span>
+
+<span data-ttu-id="b46af-112">`\` *数值*</span><span class="sxs-lookup"><span data-stu-id="b46af-112">`\` *number*</span></span>
+
+<span data-ttu-id="b46af-113">其中 *number* 是正则表达式中捕获组的序号位置。</span><span class="sxs-lookup"><span data-stu-id="b46af-113">where *number* is the ordinal position of the capturing group in the regular expression.</span></span> <span data-ttu-id="b46af-114">例如，`\4` 匹配第四个捕获组的内容。</span><span class="sxs-lookup"><span data-stu-id="b46af-114">For example, `\4` matches the contents of the fourth capturing group.</span></span> <span data-ttu-id="b46af-115">如果正则表达式模式中未定义 number，将会发生分析错误，并且正则表达式引擎会抛出 <xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="b46af-115">If *number* is not defined in the regular expression pattern, a parsing error occurs, and the regular expression engine throws an <xref:System.ArgumentException>.</span></span> <span data-ttu-id="b46af-116">例如，正则表达式 `\b(\w+)\s\1` 有效，因为 `(\w+)` 是表达式中的第一个也是唯一一个捕获组。</span><span class="sxs-lookup"><span data-stu-id="b46af-116">For example, the regular expression `\b(\w+)\s\1` is valid, because `(\w+)` is the first and only capturing group in the expression.</span></span> <span data-ttu-id="b46af-117">`\b(\w+)\s\2` 无效，该表达式会因为没有捕获组编号 `\2` 而引发自变量异常。</span><span class="sxs-lookup"><span data-stu-id="b46af-117">On the other hand, `\b(\w+)\s\2` is invalid and throws an argument exception, because there is no capturing group numbered `\2`.</span></span> <span data-ttu-id="b46af-118">此外，如果 number 标识特定序号位置中的捕获组，但该捕获组已被分配了一个不同于其序号位置的数字名称，则正则表达式分析器还会引发 <xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="b46af-118">In addition, if *number* identifies a capturing group in a particular ordinal position, but that capturing group has been assigned a numeric name different than its ordinal position, the regular expression parser also throws an <xref:System.ArgumentException>.</span></span>
+
+<span data-ttu-id="b46af-119">请注意八进制转义代码（如 `\16`）和使用相同表示法的 `\`number 反向引用之间的不明确问题。</span><span class="sxs-lookup"><span data-stu-id="b46af-119">Note the ambiguity between octal escape codes (such as `\16`) and `\`*number* backreferences that use the same notation.</span></span> <span data-ttu-id="b46af-120">这种多义性可通过如下方式解决：</span><span class="sxs-lookup"><span data-stu-id="b46af-120">This ambiguity is resolved as follows:</span></span>
+
+- <span data-ttu-id="b46af-121">表达式 `\1` 到 `\9` 始终解释为反向应用，而不是八进制代码。</span><span class="sxs-lookup"><span data-stu-id="b46af-121">The expressions `\1` through `\9` are always interpreted as backreferences, and not as octal codes.</span></span>
+
+- <span data-ttu-id="b46af-122">如果多位表达式的第一个数字是 8 或 9（如 `\80` 或 `\91`），该表达式将解释为文本。</span><span class="sxs-lookup"><span data-stu-id="b46af-122">If the first digit of a multidigit expression is 8 or 9 (such as `\80` or `\91`), the expression as interpreted as a literal.</span></span>
+
+- <span data-ttu-id="b46af-123">对于编号为 `\10` 或更大值的表达式，如果存在与该编号对应的反向引用，则将该表达式视为反向引用；否则，将这些表达式解释为八进制代码。</span><span class="sxs-lookup"><span data-stu-id="b46af-123">Expressions from `\10` and greater are considered backreferences if there is a backreference corresponding to that number; otherwise, they are interpreted as octal codes.</span></span>
+
+- <span data-ttu-id="b46af-124">如果正则表达式包含对未定义的组成员的反向引用，将会发生分析错误，并且正则表达式引擎会抛出 <xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="b46af-124">If a regular expression contains a backreference to an undefined group number, a parsing error occurs, and the regular expression engine throws an <xref:System.ArgumentException>.</span></span>
+
+<span data-ttu-id="b46af-125">如果存在不明确问题，可以使用 `\k<`name`>` 表示法，此表示法非常明确，不会与八进制字符代码混淆。</span><span class="sxs-lookup"><span data-stu-id="b46af-125">If the ambiguity is a problem, you can use the `\k<`*name*`>` notation, which is unambiguous and cannot be confused with octal character codes.</span></span> <span data-ttu-id="b46af-126">同样，诸如 `\xdd` 的十六进制代码也是明确的，不会与反向引用混淆。</span><span class="sxs-lookup"><span data-stu-id="b46af-126">Similarly, hexadecimal codes such as `\xdd` are unambiguous and cannot be confused with backreferences.</span></span>
+
+<span data-ttu-id="b46af-127">下面的示例查找字符串中双写的单词字符。</span><span class="sxs-lookup"><span data-stu-id="b46af-127">The following example finds doubled word characters in a string.</span></span> <span data-ttu-id="b46af-128">它定义一个由下列元素组成的正则表达式 `(\w)\1`。</span><span class="sxs-lookup"><span data-stu-id="b46af-128">It defines a regular expression, `(\w)\1`, which consists of the following elements.</span></span>
+
+|<span data-ttu-id="b46af-129">元素</span><span class="sxs-lookup"><span data-stu-id="b46af-129">Element</span></span>|<span data-ttu-id="b46af-130">说明</span><span class="sxs-lookup"><span data-stu-id="b46af-130">Description</span></span>|
+|-------------|-----------------|
+|`(\w)`|<span data-ttu-id="b46af-131">匹配单词字符，并将其分配给第一个捕获组。</span><span class="sxs-lookup"><span data-stu-id="b46af-131">Match a word character and assign it to the first capturing group.</span></span>|
+|`\1`|<span data-ttu-id="b46af-132">匹配值与第一捕获组相同的下一个字符。</span><span class="sxs-lookup"><span data-stu-id="b46af-132">Match the next character that is the same as the value of the first capturing group.</span></span>|
+
+[!code-csharp[RegularExpressions.Language.Backreferences#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference1.cs#1)]
+[!code-vb[RegularExpressions.Language.Backreferences#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference1.vb#1)]
+
+## <a name="named-backreferences"></a><span data-ttu-id="b46af-133">命名的反向引用</span><span class="sxs-lookup"><span data-stu-id="b46af-133">Named Backreferences</span></span>
+
+<span data-ttu-id="b46af-134">使用以下语法定义命名的反向引用：</span><span class="sxs-lookup"><span data-stu-id="b46af-134">A named backreference is defined by using the following syntax:</span></span>
+
+<span data-ttu-id="b46af-135">`\k<` *name* `>`</span><span class="sxs-lookup"><span data-stu-id="b46af-135">`\k<` *name* `>`</span></span>
+
+<span data-ttu-id="b46af-136">或：</span><span class="sxs-lookup"><span data-stu-id="b46af-136">or:</span></span>
+
+<span data-ttu-id="b46af-137">`\k'` *name* `'`</span><span class="sxs-lookup"><span data-stu-id="b46af-137">`\k'` *name* `'`</span></span>
+
+<span data-ttu-id="b46af-138">其中，*name* 是正则表达式模式中定义的捕获组的名称。</span><span class="sxs-lookup"><span data-stu-id="b46af-138">where *name* is the name of a capturing group defined in the regular expression pattern.</span></span> <span data-ttu-id="b46af-139">如果正则表达式模式中未定义 name，将会发生分析错误，并且正则表达式引擎会抛出 <xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="b46af-139">If *name* is not defined in the regular expression pattern, a parsing error occurs, and the regular expression engine throws an <xref:System.ArgumentException>.</span></span>
+
+<span data-ttu-id="b46af-140">下面的示例查找字符串中双写的单词字符。</span><span class="sxs-lookup"><span data-stu-id="b46af-140">The following example finds doubled word characters in a string.</span></span> <span data-ttu-id="b46af-141">它定义一个由下列元素组成的正则表达式 `(?<char>\w)\k<char>`。</span><span class="sxs-lookup"><span data-stu-id="b46af-141">It defines a regular expression, `(?<char>\w)\k<char>`, which consists of the following elements.</span></span>
+
+|<span data-ttu-id="b46af-142">元素</span><span class="sxs-lookup"><span data-stu-id="b46af-142">Element</span></span>|<span data-ttu-id="b46af-143">说明</span><span class="sxs-lookup"><span data-stu-id="b46af-143">Description</span></span>|
+|-------------|-----------------|
+|`(?<char>\w)`|<span data-ttu-id="b46af-144">匹配字词字符，并将结果分配到 `char` 捕获组。</span><span class="sxs-lookup"><span data-stu-id="b46af-144">Match a word character and assign it to a capturing group named `char`.</span></span>|
+|`\k<char>`|<span data-ttu-id="b46af-145">匹配下一个与 `char` 捕获组的值相同的字符。</span><span class="sxs-lookup"><span data-stu-id="b46af-145">Match the next character that is the same as the value of the `char` capturing group.</span></span>|
+
+[!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
+[!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]
+
+## <a name="named-numeric-backreferences"></a><span data-ttu-id="b46af-146">已命名数值的反向引用</span><span class="sxs-lookup"><span data-stu-id="b46af-146">Named numeric backreferences</span></span>
+
+<span data-ttu-id="b46af-147">在具有 `\k` 的已命名反向引用中，name 也可以是 number 的字符串表示形式。</span><span class="sxs-lookup"><span data-stu-id="b46af-147">In a named backreference with `\k`, *name* can also be the string representation of a number.</span></span> <span data-ttu-id="b46af-148">例如，下面的示例使用正则表达式 `(?<2>\w)\k<2>` 查找字符串中双写的单词字符。</span><span class="sxs-lookup"><span data-stu-id="b46af-148">For example, the following example uses the regular expression `(?<2>\w)\k<2>` to find doubled word characters in a string.</span></span> <span data-ttu-id="b46af-149">在此情况下，该示例定义了显式命名为“2”的捕获组，反向引用相应地命名为“2”。</span><span class="sxs-lookup"><span data-stu-id="b46af-149">In this case, the example defines a capturing group that is explicitly named "2", and the backreference is correspondingly named "2".</span></span>
+
+[!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
+[!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]
+
+<span data-ttu-id="b46af-150">如果 name 是 number 的字符串表示形式，且没有捕获组具有该名称，`\k<` name `>` 与反向引用 `\`number 相同，其中 number 是捕获的序号位置。</span><span class="sxs-lookup"><span data-stu-id="b46af-150">If *name* is the string representation of a number, and no capturing group has that name, `\k<`*name*`>` is the same as the backreference `\`*number*, where *number* is the ordinal position of the capture.</span></span> <span data-ttu-id="b46af-151">在以下示例中，有名为 `char` 的单个捕获组。</span><span class="sxs-lookup"><span data-stu-id="b46af-151">In the following example, there is a single capturing group named `char`.</span></span> <span data-ttu-id="b46af-152">反向引用构造将其称为 `\k<1>`。</span><span class="sxs-lookup"><span data-stu-id="b46af-152">The backreference construct refers to it as `\k<1>`.</span></span> <span data-ttu-id="b46af-153">正如示例中的输出所示，由于 `char` 是第一个捕获组，所以对 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 的调用成功。</span><span class="sxs-lookup"><span data-stu-id="b46af-153">As the output from the example shows, the call to the <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> succeeds because `char` is the first capturing group.</span></span>
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
-[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]  
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
 
-<span data-ttu-id="77f81-153">但是，如果 name 是 number 的字符串表示形式，并且已向该位置中的捕获组明确分配了数字名称，正则表达式分析器无法通过其序号位置识别捕获组。</span><span class="sxs-lookup"><span data-stu-id="77f81-153">However, if *name* is the string representation of a number and the capturing group in that position has been explicitly assigned a numeric name, the regular expression parser cannot identify the capturing group by its ordinal position.</span></span> <span data-ttu-id="77f81-154">相反，它会引发 <xref:System.ArgumentException>。以下示例中的唯一捕获组名为“2”。</span><span class="sxs-lookup"><span data-stu-id="77f81-154">Instead, it throws an <xref:System.ArgumentException>.The only capturing group in the following example is named "2".</span></span> <span data-ttu-id="77f81-155">由于 `\k` 结构用于定义名为“1”的反向引用，因此正则表达式分析器无法识别第一个捕获组并引发异常。</span><span class="sxs-lookup"><span data-stu-id="77f81-155">Because the `\k` construct is used to define a backreference named "1", the regular expression parser is unable to identify the first capturing group and throws an exception.</span></span>
+<span data-ttu-id="b46af-154">但是，如果 name 是 number 的字符串表示形式，并且已向该位置中的捕获组明确分配了数字名称，正则表达式分析器无法通过其序号位置识别捕获组。</span><span class="sxs-lookup"><span data-stu-id="b46af-154">However, if *name* is the string representation of a number and the capturing group in that position has been explicitly assigned a numeric name, the regular expression parser cannot identify the capturing group by its ordinal position.</span></span> <span data-ttu-id="b46af-155">相反，它会引发 <xref:System.ArgumentException>。以下示例中的唯一捕获组名为“2”。</span><span class="sxs-lookup"><span data-stu-id="b46af-155">Instead, it throws an <xref:System.ArgumentException>.The only capturing group in the following example is named "2".</span></span> <span data-ttu-id="b46af-156">由于 `\k` 结构用于定义名为“1”的反向引用，因此正则表达式分析器无法识别第一个捕获组并引发异常。</span><span class="sxs-lookup"><span data-stu-id="b46af-156">Because the `\k` construct is used to define a backreference named "1", the regular expression parser is unable to identify the first capturing group and throws an exception.</span></span>
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
-[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]  
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]
 
-## <a name="what-backreferences-match"></a><span data-ttu-id="77f81-156">反向引用匹配什么内容</span><span class="sxs-lookup"><span data-stu-id="77f81-156">What Backreferences Match</span></span>  
- <span data-ttu-id="77f81-157">反向引用引用组的最新定义（从左向右匹配时，最靠近左侧的定义）。</span><span class="sxs-lookup"><span data-stu-id="77f81-157">A backreference refers to the most recent definition of a group (the definition most immediately to the left, when matching left to right).</span></span> <span data-ttu-id="77f81-158">当组建立多个捕获时，反向引用会引用最新的捕获。</span><span class="sxs-lookup"><span data-stu-id="77f81-158">When a group makes multiple captures, a backreference refers to the most recent capture.</span></span>  
-  
- <span data-ttu-id="77f81-159">下面的示例包含正则表达式模式 `(?<1>a)(?<1>\1b)*`，该模式重新定义 \1 命名组。</span><span class="sxs-lookup"><span data-stu-id="77f81-159">The following example includes a regular expression pattern, `(?<1>a)(?<1>\1b)*`, which redefines the \1 named group.</span></span> <span data-ttu-id="77f81-160">下表描述了正则表达式中的每个模式。</span><span class="sxs-lookup"><span data-stu-id="77f81-160">The following table describes each pattern in the regular expression.</span></span>  
-  
-|<span data-ttu-id="77f81-161">模式</span><span class="sxs-lookup"><span data-stu-id="77f81-161">Pattern</span></span>|<span data-ttu-id="77f81-162">说明</span><span class="sxs-lookup"><span data-stu-id="77f81-162">Description</span></span>|  
-|-------------|-----------------|  
-|`(?<1>a)`|<span data-ttu-id="77f81-163">匹配字符“a”，并将结果分配到 `1` 捕获组。</span><span class="sxs-lookup"><span data-stu-id="77f81-163">Match the character "a" and assign the result to the capturing group named `1`.</span></span>|  
-|`(?<1>\1b)*`|<span data-ttu-id="77f81-164">匹配 `1` 组的 0 更大发生次数以及“b”，并将结果分配到 `1` 捕获组。</span><span class="sxs-lookup"><span data-stu-id="77f81-164">Match zero or more occurrences of the group named `1` along with a "b", and assign the result to the capturing group named `1`.</span></span>|  
-  
- [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
- [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
-  
- <span data-ttu-id="77f81-165">在比较正则表达式与输入字符串（“aababb”）时，正则表达式引擎执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="77f81-165">In comparing the regular expression with the input string ("aababb"), the regular expression engine performs the following operations:</span></span>  
-  
-1.  <span data-ttu-id="77f81-166">从该字符串的开头开始，成功将“a”与表达式 `(?<1>a)` 匹配。</span><span class="sxs-lookup"><span data-stu-id="77f81-166">It starts at the beginning of the string, and successfully matches "a" with the expression `(?<1>a)`.</span></span> <span data-ttu-id="77f81-167">此时，`1` 组的值为“a”。</span><span class="sxs-lookup"><span data-stu-id="77f81-167">The value of the `1` group is now "a".</span></span>  
-  
-2.  <span data-ttu-id="77f81-168">继续匹配第二个字符，成功将字符串“ab”与表达式 `\1b` 或“ab”匹配。</span><span class="sxs-lookup"><span data-stu-id="77f81-168">It advances to the second character, and successfully matches the string "ab" with the expression `\1b`, or "ab".</span></span> <span data-ttu-id="77f81-169">然后，将结果“ab”分配到 `\1`。</span><span class="sxs-lookup"><span data-stu-id="77f81-169">It then assigns the result, "ab" to `\1`.</span></span>  
-  
-3.  <span data-ttu-id="77f81-170">继续匹配第四个字符。</span><span class="sxs-lookup"><span data-stu-id="77f81-170">It advances to the fourth character.</span></span> <span data-ttu-id="77f81-171">表达式 `(?<1>\1b)*` 要匹配零次或多次，因此会成功将字符串“abb”与表达式 `\1b` 匹配。</span><span class="sxs-lookup"><span data-stu-id="77f81-171">The expression `(?<1>\1b)*` is to be matched zero or more times, so it successfully matches the string "abb" with the expression `\1b`.</span></span> <span data-ttu-id="77f81-172">然后，将结果“abb”分配回到 `\1`。</span><span class="sxs-lookup"><span data-stu-id="77f81-172">It assigns the result, "abb", back to `\1`.</span></span>  
-  
- <span data-ttu-id="77f81-173">在本示例中，`*` 是循环限定符 -- 它将被重复计算，直到正则表达式引擎不能与它定义的模式匹配为止。</span><span class="sxs-lookup"><span data-stu-id="77f81-173">In this example, `*` is a looping quantifier -- it is evaluated repeatedly until the regular expression engine cannot match the pattern it defines.</span></span> <span data-ttu-id="77f81-174">循环限定符不会清除组定义。</span><span class="sxs-lookup"><span data-stu-id="77f81-174">Looping quantifiers do not clear group definitions.</span></span>  
-  
- <span data-ttu-id="77f81-175">如果某个组尚未捕获任何子字符串，则对该组的反向引用是不确定的，永远不会匹配。</span><span class="sxs-lookup"><span data-stu-id="77f81-175">If a group has not captured any substrings, a backreference to that group is undefined and never matches.</span></span> <span data-ttu-id="77f81-176">下面展示了正则表达式模式 `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` 的定义：</span><span class="sxs-lookup"><span data-stu-id="77f81-176">This is illustrated by the regular expression pattern `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, which is defined as follows:</span></span>  
-  
-|<span data-ttu-id="77f81-177">模式</span><span class="sxs-lookup"><span data-stu-id="77f81-177">Pattern</span></span>|<span data-ttu-id="77f81-178">说明</span><span class="sxs-lookup"><span data-stu-id="77f81-178">Description</span></span>|  
-|-------------|-----------------|  
-|`\b`|<span data-ttu-id="77f81-179">在单词边界处开始匹配。</span><span class="sxs-lookup"><span data-stu-id="77f81-179">Begin the match on a word boundary.</span></span>|  
-|`(\p{Lu}{2})`|<span data-ttu-id="77f81-180">匹配两个大写字母。</span><span class="sxs-lookup"><span data-stu-id="77f81-180">Match two uppercase letters.</span></span> <span data-ttu-id="77f81-181">这是第一个捕获组。</span><span class="sxs-lookup"><span data-stu-id="77f81-181">This is the first capturing group.</span></span>|  
-|`(\d{2})?`|<span data-ttu-id="77f81-182">匹配两个十进制数的零个或一个匹配项。</span><span class="sxs-lookup"><span data-stu-id="77f81-182">Match zero or one occurrence of two decimal digits.</span></span> <span data-ttu-id="77f81-183">这是第二个捕获组。</span><span class="sxs-lookup"><span data-stu-id="77f81-183">This is the second capturing group.</span></span>|  
-|`(\p{Lu}{2})`|<span data-ttu-id="77f81-184">匹配两个大写字母。</span><span class="sxs-lookup"><span data-stu-id="77f81-184">Match two uppercase letters.</span></span> <span data-ttu-id="77f81-185">这是第三个捕获组。</span><span class="sxs-lookup"><span data-stu-id="77f81-185">This is the third capturing group.</span></span>|  
-|`\b`|<span data-ttu-id="77f81-186">在单词边界处结束匹配。</span><span class="sxs-lookup"><span data-stu-id="77f81-186">End the match on a word boundary.</span></span>|  
-  
- <span data-ttu-id="77f81-187">输入字符串可以匹配此正则表达式，即使第二个捕获组定义的两个十进制数字都不存在。</span><span class="sxs-lookup"><span data-stu-id="77f81-187">An input string can match this regular expression even if the two decimal digits that are defined by the second capturing group are not present.</span></span> <span data-ttu-id="77f81-188">下面的示例显示了即使匹配成功，也仍会在两个成功的捕获组之间找到空捕获组。</span><span class="sxs-lookup"><span data-stu-id="77f81-188">The following example shows that even though the match is successful, an empty capturing group is found between two successful capturing groups.</span></span>  
-  
- [!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
- [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]  
-  
-## <a name="see-also"></a><span data-ttu-id="77f81-189">请参阅</span><span class="sxs-lookup"><span data-stu-id="77f81-189">See also</span></span>
+## <a name="what-backreferences-match"></a><span data-ttu-id="b46af-157">反向引用匹配什么内容</span><span class="sxs-lookup"><span data-stu-id="b46af-157">What Backreferences Match</span></span>
 
-- [<span data-ttu-id="77f81-190">正则表达式语言 - 快速参考</span><span class="sxs-lookup"><span data-stu-id="77f81-190">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+<span data-ttu-id="b46af-158">反向引用引用组的最新定义（从左向右匹配时，最靠近左侧的定义）。</span><span class="sxs-lookup"><span data-stu-id="b46af-158">A backreference refers to the most recent definition of a group (the definition most immediately to the left, when matching left to right).</span></span> <span data-ttu-id="b46af-159">当组建立多个捕获时，反向引用会引用最新的捕获。</span><span class="sxs-lookup"><span data-stu-id="b46af-159">When a group makes multiple captures, a backreference refers to the most recent capture.</span></span>
+
+<span data-ttu-id="b46af-160">下面的示例包含正则表达式模式 `(?<1>a)(?<1>\1b)*`，该模式重新定义 \1 命名组。</span><span class="sxs-lookup"><span data-stu-id="b46af-160">The following example includes a regular expression pattern, `(?<1>a)(?<1>\1b)*`, which redefines the \1 named group.</span></span> <span data-ttu-id="b46af-161">下表描述了正则表达式中的每个模式。</span><span class="sxs-lookup"><span data-stu-id="b46af-161">The following table describes each pattern in the regular expression.</span></span>
+
+|<span data-ttu-id="b46af-162">模式</span><span class="sxs-lookup"><span data-stu-id="b46af-162">Pattern</span></span>|<span data-ttu-id="b46af-163">说明</span><span class="sxs-lookup"><span data-stu-id="b46af-163">Description</span></span>|
+|-------------|-----------------|
+|`(?<1>a)`|<span data-ttu-id="b46af-164">匹配字符“a”，并将结果分配到 `1` 捕获组。</span><span class="sxs-lookup"><span data-stu-id="b46af-164">Match the character "a" and assign the result to the capturing group named `1`.</span></span>|
+|`(?<1>\1b)*`|<span data-ttu-id="b46af-165">匹配 `1` 组的 0 更大发生次数以及“b”，并将结果分配到 `1` 捕获组。</span><span class="sxs-lookup"><span data-stu-id="b46af-165">Match zero or more occurrences of the group named `1` along with a "b", and assign the result to the capturing group named `1`.</span></span>|
+
+[!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
+[!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]
+
+<span data-ttu-id="b46af-166">在比较正则表达式与输入字符串（“aababb”）时，正则表达式引擎执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="b46af-166">In comparing the regular expression with the input string ("aababb"), the regular expression engine performs the following operations:</span></span>
+
+1. <span data-ttu-id="b46af-167">从该字符串的开头开始，成功将“a”与表达式 `(?<1>a)` 匹配。</span><span class="sxs-lookup"><span data-stu-id="b46af-167">It starts at the beginning of the string, and successfully matches "a" with the expression `(?<1>a)`.</span></span> <span data-ttu-id="b46af-168">此时，`1` 组的值为“a”。</span><span class="sxs-lookup"><span data-stu-id="b46af-168">The value of the `1` group is now "a".</span></span>
+
+2. <span data-ttu-id="b46af-169">继续匹配第二个字符，成功将字符串“ab”与表达式 `\1b` 或“ab”匹配。</span><span class="sxs-lookup"><span data-stu-id="b46af-169">It advances to the second character, and successfully matches the string "ab" with the expression `\1b`, or "ab".</span></span> <span data-ttu-id="b46af-170">然后，将结果“ab”分配到 `\1`。</span><span class="sxs-lookup"><span data-stu-id="b46af-170">It then assigns the result, "ab" to `\1`.</span></span>
+
+3. <span data-ttu-id="b46af-171">继续匹配第四个字符。</span><span class="sxs-lookup"><span data-stu-id="b46af-171">It advances to the fourth character.</span></span> <span data-ttu-id="b46af-172">表达式 `(?<1>\1b)*` 要匹配零次或多次，因此会成功将字符串“abb”与表达式 `\1b` 匹配。</span><span class="sxs-lookup"><span data-stu-id="b46af-172">The expression `(?<1>\1b)*` is to be matched zero or more times, so it successfully matches the string "abb" with the expression `\1b`.</span></span> <span data-ttu-id="b46af-173">然后，将结果“abb”分配回到 `\1`。</span><span class="sxs-lookup"><span data-stu-id="b46af-173">It assigns the result, "abb", back to `\1`.</span></span>
+
+<span data-ttu-id="b46af-174">在本示例中，`*` 是循环限定符 -- 它将被重复计算，直到正则表达式引擎不能与它定义的模式匹配为止。</span><span class="sxs-lookup"><span data-stu-id="b46af-174">In this example, `*` is a looping quantifier -- it is evaluated repeatedly until the regular expression engine cannot match the pattern it defines.</span></span> <span data-ttu-id="b46af-175">循环限定符不会清除组定义。</span><span class="sxs-lookup"><span data-stu-id="b46af-175">Looping quantifiers do not clear group definitions.</span></span>
+
+<span data-ttu-id="b46af-176">如果某个组尚未捕获任何子字符串，则对该组的反向引用是不确定的，永远不会匹配。</span><span class="sxs-lookup"><span data-stu-id="b46af-176">If a group has not captured any substrings, a backreference to that group is undefined and never matches.</span></span> <span data-ttu-id="b46af-177">下面展示了正则表达式模式 `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` 的定义：</span><span class="sxs-lookup"><span data-stu-id="b46af-177">This is illustrated by the regular expression pattern `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, which is defined as follows:</span></span>
+
+|<span data-ttu-id="b46af-178">模式</span><span class="sxs-lookup"><span data-stu-id="b46af-178">Pattern</span></span>|<span data-ttu-id="b46af-179">说明</span><span class="sxs-lookup"><span data-stu-id="b46af-179">Description</span></span>|
+|-------------|-----------------|
+|`\b`|<span data-ttu-id="b46af-180">在单词边界处开始匹配。</span><span class="sxs-lookup"><span data-stu-id="b46af-180">Begin the match on a word boundary.</span></span>|
+|`(\p{Lu}{2})`|<span data-ttu-id="b46af-181">匹配两个大写字母。</span><span class="sxs-lookup"><span data-stu-id="b46af-181">Match two uppercase letters.</span></span> <span data-ttu-id="b46af-182">这是第一个捕获组。</span><span class="sxs-lookup"><span data-stu-id="b46af-182">This is the first capturing group.</span></span>|
+|`(\d{2})?`|<span data-ttu-id="b46af-183">匹配两个十进制数的零个或一个匹配项。</span><span class="sxs-lookup"><span data-stu-id="b46af-183">Match zero or one occurrence of two decimal digits.</span></span> <span data-ttu-id="b46af-184">这是第二个捕获组。</span><span class="sxs-lookup"><span data-stu-id="b46af-184">This is the second capturing group.</span></span>|
+|`(\p{Lu}{2})`|<span data-ttu-id="b46af-185">匹配两个大写字母。</span><span class="sxs-lookup"><span data-stu-id="b46af-185">Match two uppercase letters.</span></span> <span data-ttu-id="b46af-186">这是第三个捕获组。</span><span class="sxs-lookup"><span data-stu-id="b46af-186">This is the third capturing group.</span></span>|
+|`\b`|<span data-ttu-id="b46af-187">在单词边界处结束匹配。</span><span class="sxs-lookup"><span data-stu-id="b46af-187">End the match on a word boundary.</span></span>|
+
+<span data-ttu-id="b46af-188">输入字符串可以匹配此正则表达式，即使第二个捕获组定义的两个十进制数字都不存在。</span><span class="sxs-lookup"><span data-stu-id="b46af-188">An input string can match this regular expression even if the two decimal digits that are defined by the second capturing group are not present.</span></span> <span data-ttu-id="b46af-189">下面的示例显示了即使匹配成功，也仍会在两个成功的捕获组之间找到空捕获组。</span><span class="sxs-lookup"><span data-stu-id="b46af-189">The following example shows that even though the match is successful, an empty capturing group is found between two successful capturing groups.</span></span>
+
+[!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
+[!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]
+
+## <a name="see-also"></a><span data-ttu-id="b46af-190">请参阅</span><span class="sxs-lookup"><span data-stu-id="b46af-190">See also</span></span>
+
+- [<span data-ttu-id="b46af-191">正则表达式语言 - 快速参考</span><span class="sxs-lookup"><span data-stu-id="b46af-191">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
