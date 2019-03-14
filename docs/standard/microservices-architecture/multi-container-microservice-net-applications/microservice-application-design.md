@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 124bd402af7b721366af67b362747dfd71907f34
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 777262ddeecf1e171344b34e586032e56f398463
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981876"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674388"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>设计面向微服务的应用程序
 
@@ -63,7 +63,7 @@ ms.locfileid: "56981876"
 
 ### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers：使用容器部署的 .NET Core 和微服务的参考应用程序
 
-这样一来，你可专注于体系结构和技术，而无需考虑自己可能不知道的假设业务领域，我们已经选择了一个有名的业务领域，即简化的电子商务 (e-shop) 应用程序，其提供产品目录、处理客户订单、验证库存并执行其他业务功能。 此基于容器的应用程序源代码可通过 [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) GitHub 存储库获取。
+这样一来，你可专注于体系结构和技术，而无需考虑自己可能不知道的假设业务领域，我们已经选择了一个知名的业务领域，即简化的电子商务 (e-shop) 应用程序，它可以提供产品目录、处理客户订单、验证库存并执行其他业务功能。 此基于容器的应用程序源代码可通过 [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) GitHub 存储库获取。
 
 该应用程序包含多个子系统，包括多个应用商店 UI 前端（一个 Web 应用程序和本机移动应用），以及用于所有所需服务器端操作的后端微服务和容器（将多个 API 网关作为合并入口点）。 图 6-1 显示了参考应用程序的体系结构。
 
@@ -91,7 +91,7 @@ ms.locfileid: "56981876"
 
 ### <a name="additional-resources"></a>其他资源
 
-- **eShopOnContainers GitHub 存储库。参考应用程序的源代码**  
+- **eShopOnContainers GitHub 存储库。参考应用程序的源代码**\
     [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>基于微服务的解决方案的优点
@@ -150,7 +150,7 @@ ms.locfileid: "56981876"
 
 每个微服务采用不同技术的另一个原因是每个微服务的本质。 例如，如果针对 AI 和机器学习域，最好使用功能编程语言，如 F\# 或 R，而不是面向对象编程语言，如 C\#。
 
-底线是每个微服务可基于不同设计模式具有不同内部体系结构。 并非所有微服务都应使用高级 DDD 模式实现，因为这可能会对其过度工程。 类似地，具有不断变化业务逻辑的复杂微服务不应作为 CRUD 组件实现，否则会导致低质量代码。 
+底线是每个微服务可基于不同设计模式具有不同内部体系结构。 并非所有微服务都应使用高级 DDD 模式实现，因为这可能会对其过度工程。 类似地，具有不断变化业务逻辑的复杂微服务不应作为 CRUD 组件实现，否则会导致低质量代码。
 
 ## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>新体系：多个体系结构模式和 polyglot 微服务
 

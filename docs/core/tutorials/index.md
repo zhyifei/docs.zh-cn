@@ -24,7 +24,7 @@ ms.custom: seodec18
 ## <a name="building-applications-with-visual-studio-code"></a>使用 Visual Studio Code 生成应用程序
 
 - [C# 和 Visual Studio Code 入门](with-visual-studio-code.md)
-- [在 macOS 上实现 .NET Core 入门](using-on-macos.md)
+- [macOS 上的 .NET Core 入门](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 构建应用程序
 
@@ -33,7 +33,7 @@ ms.custom: seodec18
 
 ## <a name="building-applications-with-the-net-core-cli-tools"></a>使用 .NET Core CLI 工具生成应用程序
 
-- [使用 .NET Core CLI 工具在 Windows/Linux/macOS 上开始 .NET Core 入门](using-with-xplat-cli.md)
+- [使用 .NET Core CLI 工具在 Windows/Linux/macOS 上开始使用 .NET Core](using-with-xplat-cli.md)
 - [使用 .NET Core CLI 工具组织和测试项目](testing-with-cli.md)
 - [F# 入门](../../fsharp/get-started/get-started-command-line.md)
 

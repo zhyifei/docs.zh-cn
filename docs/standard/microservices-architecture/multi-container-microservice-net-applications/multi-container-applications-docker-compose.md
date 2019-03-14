@@ -4,14 +4,14 @@ description: 如何使用 docker-compose.yml 指定多容器应用程序的微�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 908837c470e97e66a6f6b06ef89e87fca80982f2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bde29f1c67e7c6636932f063f35bc500a27abcef
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973504"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712352"
 ---
-# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定义多容器应用程序 
+# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定义多容器应用程序
 
 本指南中，[docker-compose.yml](https://docs.docker.com/compose/compose-file/) 文件在[步骤 4.生成多容器 Docker 应用程序时，在 docker-compose.yml 中定义服务](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application)部分中介绍。 但还有其他方式可使用 docker-compose 文件，这值得进一步探索。
 
@@ -117,21 +117,21 @@ services:
 
 这种容器化服务具有以下基本配置：
 
--   它基于自定义 eshop/catalog.api 映像。 为简便起见，文件中没有 build: key 设置。 这意味着，必须事先生成（使用 docker build 命令）映像或从任何 Docker 注册表下载（使用 docker pull 命令）映像。
+- 它基于自定义 eshop/catalog.api 映像。 为简便起见，文件中没有 build: key 设置。 这意味着，必须事先生成（使用 docker build 命令）映像或从任何 Docker 注册表下载（使用 docker pull 命令）映像。
 
--   它定义了一个名为 ConnectionString 的环境变量，Entity Framework 使用连接字符串用来访问包含目录数据模型的 SQL Server 实例。 在这种情况下，同一 SQL Server 容器拥有多个数据库。 因此，开发 Docker 时所需计算机内存减少。 但是，开发人员也可以为每个微服务数据库部署一个 SQL Server 容器。
+- 它定义了一个名为 ConnectionString 的环境变量，Entity Framework 使用连接字符串用来访问包含目录数据模型的 SQL Server 实例。 在这种情况下，同一 SQL Server 容器拥有多个数据库。 因此，开发 Docker 时所需计算机内存减少。 但是，开发人员也可以为每个微服务数据库部署一个 SQL Server 容器。
 
--   SQL Server 的名称是 sql.data，与运行适用于 Linux 的 SQL Server 实例的容器的名称相同。 这很方便，因为使用此名称解析（Docker 主机内部）可解析网络地址，这样从其他容器访问容器时，无需了解受访容器的内部 IP。
+- SQL Server 的名称是 sql.data，与运行适用于 Linux 的 SQL Server 实例的容器的名称相同。 这很方便，因为使用此名称解析（Docker 主机内部）可解析网络地址，这样从其他容器访问容器时，无需了解受访容器的内部 IP。
 
 由于连接字符串由环境变量定义，因此可在不同的时间通过不同机制设置该变量。 例如，在最终主机中部署到生产时，可设置不同的连接字符串，或通过 Azure DevOps Services 中的 CI/CD 管道或喜爱的 DevOps 系统来完成。
 
--   它公开了端口 80，用于对 Docker 主机中的 catalog.api 服务进行内部访问。 目前的主机是 Linux VM，因为它以适用于 Linux 的 Docker 映像为基础，但开发人员可配置该容器，使其在 Windows 映像上运行。
+- 它公开了端口 80，用于对 Docker 主机中的 catalog.api 服务进行内部访问。 目前的主机是 Linux VM，因为它以适用于 Linux 的 Docker 映像为基础，但开发人员可配置该容器，使其在 Windows 映像上运行。
 
--   它将容器上公开的端口 80 转接到 Docker 主机 (Linux VM) 上的端口 5101。
+- 它将容器上公开的端口 80 转接到 Docker 主机 (Linux VM) 上的端口 5101。
 
--   它将 Web 服务链接到 sql.data 服务（在容器中运行的 Linux 数据库的 SQL Server 实例）。 指定此依赖项时，在 sql.data 容器启动后，catalog.api 容器才会启动；这一点很重要，因为 catalog.api 需要先启动并运行 SQL Server 数据库。 但是，在许多情况下，这种容器依赖项不足，因为 Docker 只能在容器级别进行检查。 有时服务（在此情况下为 SQL Server）可能还未准备就绪，因此建议在客户端微服务中实施具有指数回退的重试逻辑。 这样一来，如果依赖项容器在短时间内未准备就绪，应用程序仍然可以复原。
+- 它将 Web 服务链接到 sql.data 服务（在容器中运行的 Linux 数据库的 SQL Server 实例）。 指定此依赖项时，在 sql.data 容器启动后，catalog.api 容器才会启动；这一点很重要，因为 catalog.api 需要先启动并运行 SQL Server 数据库。 但是，在许多情况下，这种容器依赖项不足，因为 Docker 只能在容器级别进行检查。 有时服务（在此情况下为 SQL Server）可能还未准备就绪，因此建议在客户端微服务中实施具有指数回退的重试逻辑。 这样一来，如果依赖项容器在短时间内未准备就绪，应用程序仍然可以复原。
 
--   它被配置为允许访问外部服务器：extra\_hosts 设置允许访问 Docker 主机之外的外部服务器或计算机（即作为开发 Docker 主机的默认 Linux VM 以外的），例如开发计算机上的本地 SQL Server 实例。
+- 它被配置为允许访问外部服务器：extra\_hosts 设置允许访问 Docker 主机之外的外部服务器或计算机（即作为开发 Docker 主机的默认 Linux VM 以外的），例如开发计算机上的本地 SQL Server 实例。
 
 此外，还有其他更高级的 docker-compose.yml 设置，我们将在下面的部分介绍。
 
@@ -155,7 +155,7 @@ docker-compose.yml 文件是由 Docker 引擎解释的配置文件，但也可�
 
 使用 Docker Compose，可通过命令提示符或脚本中的几条命令非常轻松地创建和摧毁该独立环境，如以下命令：
 
-```
+```console
 docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
 ./run_unit_tests
 docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
@@ -207,7 +207,7 @@ services:
     image: eshop/basket.api:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Basket/Basket.API/Dockerfile    
+      dockerfile: src/Services/Basket/Basket.API/Dockerfile
     depends_on:
       - basket.data
       - identity.api
@@ -217,7 +217,7 @@ services:
     image: eshop/catalog.api:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Catalog/Catalog.API/Dockerfile    
+      dockerfile: src/Services/Catalog/Catalog.API/Dockerfile
     depends_on:
       - sql.data
       - rabbitmq
@@ -226,7 +226,7 @@ services:
     image: eshop/marketing.api:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Marketing/Marketing.API/Dockerfile    
+      dockerfile: src/Services/Marketing/Marketing.API/Dockerfile
     depends_on:
       - sql.data
       - nosql.data
@@ -237,7 +237,7 @@ services:
     image: eshop/webmvc:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Web/WebMVC/Dockerfile    
+      dockerfile: src/Web/WebMVC/Dockerfile
     depends_on:
       - catalog.api
       - ordering.api
@@ -253,7 +253,7 @@ services:
 
   basket.data:
     image: redis
-      
+
   rabbitmq:
     image: rabbitmq:3-management
 
@@ -263,13 +263,13 @@ services:
 
 例如，如果专注于 webmvc 服务定义，则可以看到无论目标环境如何，这些信息都相同。 会看到以下信息：
 
--   服务名称：webmvc。
+- 服务名称：webmvc。
 
--   容器的自定义映像：eshop/webmvc。
+- 容器的自定义映像：eshop/webmvc。
 
--   生成自定义 Docker 映像的命令，指示要使用的 Dockerfile。
+- 生成自定义 Docker 映像的命令，指示要使用的 Dockerfile。
 
--   其他服务依赖项，所以此容器在其他依赖项容器启动之前不会启动。
+- 其他服务依赖项，所以此容器在其他依赖项容器启动之前不会启动。
 
 开发人员可进行其他配置，但重要的一点是，在基本 docker-compose.yml 文件中，只需设置各环境的共同信息。 然后，在 docker-compose.override.yml 或用于生产或暂存的类似文件中，应配置特定于每个环境的配置。
 
@@ -279,19 +279,19 @@ services:
 #docker-compose.override.yml (Extended config for DEVELOPMENT env.)
 version: '3.4'
 
-services: 
-# Simplified number of services here: 
-      
+services:
+# Simplified number of services here:
+
   basket.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${ESHOP_AZURE_REDIS_BASKET_DB:-basket.data}
-      - identityUrl=http://identity.api              
+      - identityUrl=http://identity.api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
-      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}      
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
       - AzureServiceBusEnabled=False
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
       - OrchestratorType=${ORCHESTRATOR_TYPE}
@@ -305,10 +305,10 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
-      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}   
+      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
-      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}         
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
       - AzureStorageAccountName=${ESHOP_AZURE_STORAGE_CATALOG_NAME}
       - AzureStorageAccountKey=${ESHOP_AZURE_STORAGE_CATALOG_KEY}
       - UseCustomizationData=True
@@ -328,8 +328,8 @@ services:
       - MongoDatabase=MarketingDb
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
-      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}          
-      - identityUrl=http://identity.api              
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
+      - identityUrl=http://identity.api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - CampaignDetailFunctionUri=${ESHOP_AZUREFUNC_CAMPAIGN_DETAILS_URI}
       - PicBaseUrl=${ESHOP_AZURE_STORAGE_MARKETING_URL:-http://localhost:5110/api/v1/campaigns/[0]/pic/}
@@ -374,7 +374,7 @@ services:
       - "27017:27017"
   basket.data:
     ports:
-      - "6379:6379"      
+      - "6379:6379"
   rabbitmq:
     ports:
       - "15672:15672"
@@ -386,13 +386,13 @@ services:
 
 运行 `docker-compose up`（或从 Visual Studio 启动它时）时，该命令会自动读取替代内容，就像它已合并这两个文件。
 
-假设想为生产环境使用具有不同配置值、端口或连接字符串的另一个 Compose 文件。 可创建另一个重写文件，如具有不同设置和环境变量的名为 `docker-compose.prod.yml` 的文件。  该文件可能存储在不同 Git 存储库中，或由其他团队管理和保护。
+假设想为生产环境使用具有不同配置值、端口或连接字符串的另一个 Compose 文件。 可创建另一个重写文件，如具有不同设置和环境变量的名为 `docker-compose.prod.yml` 的文件。 该文件可能存储在不同 Git 存储库中，或由其他团队管理和保护。
 
 #### <a name="how-to-deploy-with-a-specific-override-file"></a>如何使用特定重写文件进行部署
 
 若要使用多个重写文件或具有不同名称的重写文件，可通过 docker-compose 命令使用 -f 选项并指定文件。 按照合并文件在命令行上的指定顺序进行撰写。 以下示例演示如何使用重写文件进行部署。
 
-```
+```console
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
@@ -422,17 +422,17 @@ Docker-compose 要求 .env 文件中的每行都是 \<variable\>=\<value\> 格�
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Docker Compose 概述** <br/>
+- **Docker Compose 概述** <br/>
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **多个 Compose 文件** <br/>
+- **多个 Compose 文件** <br/>
     [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>生成优化的 ASP.NET Core Docker 映像
 
 如果查看 Internet 上源代码的 Docker 和 .NET Core ，则会发现 Dockerfiles 会将源代码源复制到容器，展现生成 Docker 映像的简单性。 这些示例表明，使用简单配置，即可拥有 Docker 映像，同时应用程序还会带有环境。 以下示例显示在此情况下的简单 Dockerfile。
 
-```
+```Dockerfile
 FROM microsoft/dotnet
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
@@ -446,30 +446,30 @@ ENTRYPOINT ["dotnet", "run"]
 
 开发人员会在容器和微服务模型中不断启动容器。 使用容器时，通常不会重启睡眠容器，因为该容器为一次性容器。 业务流程协调程序（如 Kubernetes 和 Azure Service Fabric）只创建映像的新实例。 这意味着，需要在生成应用程序时，通过预编译应用程序进行优化，这样可加快实例化过程。 当容器启动时，它应已准备好运行。 不应在运行时使用 dotnet CLI 中的 `dotnet restore` 和 `dotnet build` 命令进行还原和编译，正如许多有关 .NET Core 和 Docker 的博客文章所述。
 
-.NET 团队一直致力于使 .NET Core 和 ASP.NET Core 成为容器优化的框架。 .NET Core 不仅是一个内存占用少的轻量级框架；该团队还致力于针对三种主要方案优化了 Docker 映像，并在版本 2.1 及更高版本中，在 <span class="underline">microsoft/dotnet</span> 的 Docker 中心注册表中发布了这些映像：
+.NET 团队一直致力于使 .NET Core 和 ASP.NET Core 成为容器优化的框架。 .NET Core 不仅是一个内存占用少的轻量级框架；该团队还致力于针对三种主要方案优化了 Docker 映像，并在版本 2.1 及更高版本中，在 *microsoft/dotnet* 的 Docker 中心注册表中发布了这些映像：
 
-1.  **开发**：实现快速迭代和调试更改为优先事项，大小次之。
+1. **开发**：实现快速迭代和调试更改为优先事项，大小次之。
 
-2.  **生成**：优先事项是编译应用程序，包括二进制文件和其他可优化二进制文件的依赖项。
+2. **生成**：优先事项是编译应用程序，包括二进制文件和其他可优化二进制文件的依赖项。
 
-3.  **生产**：其重点是实现快速部署和容器启动，所以这些映像仅限于二进制文件和运行应用程序所需的嵌入内容。
+3. **生产**：其重点是实现快速部署和容器启动，所以这些映像仅限于二进制文件和运行应用程序所需的内容。
 
 为实现此目的，.NET 团队在 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/)（位于 Docker 中心）中提供了三个基本变体：
 
-1.  **sdk**：用于开发和生成方案。
-2.  **runtime**：用于生产方案
-3.  **runtime-deps**：用于[自包含应用程序](../../../core/deploying/index.md#self-contained-deployments-scd)的生产方案。
+1. **sdk**：用于开发和生成方案。
+2. **runtime**：用于生产方案
+3. **runtime-deps**：用于[自包含应用程序](../../../core/deploying/index.md#self-contained-deployments-scd)的生产方案。
 
-Runtime 映像还提供了端口 80 的 aspnetcore\_urls 自动设置和程序集的 pre-ngend 缓存，以帮助加快启动速度。
+为了更快启动，运行时映像还会自动将 aspnetcore\_url 设置为端口 80，并使用 Ngen 创建程序集的本机映像缓存。
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Building Optimized Docker Images with ASP.NET Core**（使用 ASP.NET Core 生成优化的 Docker 映像） <br/>
+- **Building Optimized Docker Images with ASP.NET Core**（使用 ASP.NET Core 生成优化的 Docker 映像） <br/>
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
--   **为 .NET Core 应用程序生成 Docker 映像** <br/>
+- **为 .NET Core 应用程序生成 Docker 映像** <br/>
     [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
->[!div class="step-by-step"]
->[上一页](data-driven-crud-microservice.md)
->[下一页](database-server-container.md)
+> [!div class="step-by-step"]
+> [上一页](data-driven-crud-microservice.md)
+> [下一页](database-server-container.md)

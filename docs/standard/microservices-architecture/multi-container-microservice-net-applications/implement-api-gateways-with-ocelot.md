@@ -4,12 +4,12 @@ description: 了解如何通过 Ocelot 实现 API 网关以及如何在基于容
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: e6ffef646f860a07920c37d239ee7f2e379aac92
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143852"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679484"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>通过 Ocelot 实现 API 网关
 
@@ -28,17 +28,17 @@ ms.locfileid: "53143852"
 
 图 6-28。 使用 API 网关的 eShopOnContainers 体系结构
 
-该图显示了如何使用“用于 Windows 的 Docker”或“用于 Mac 的 Docker”将整个应用程序部署到单个 Docker 主机或开发电脑。 然而，虽然部署到业务流程协调程序中的方法与之非常相似，但图中的容器都可在业务流程协调程序中横向扩展。 
+该图显示了如何使用“用于 Windows 的 Docker”或“用于 Mac 的 Docker”将整个应用程序部署到单个 Docker 主机或开发电脑。 然而，虽然部署到业务流程协调程序中的方法与之非常相似，但图中的容器都可在业务流程协调程序中横向扩展。
 
 此外，应从业务流程协调程序卸载基础结构资产（如数据库、缓存和消息代理），并将其部署到基础结构的高可用系统，如 Azure SQL 数据库、Azure Cosmos DB、Azure Redis、Azure 服务总线或本地 HA 群集解决方案。
 
-此外，在关系图中还可以看到，在开发和部署微服务以及自己的相关 API 网关时，拥有多个 API 网关后，多个开发团队可进行自治（在本例中为“营销”功能和“购物”功能）。 
+此外，在关系图中还可以看到，在开发和部署微服务以及自己的相关 API 网关时，拥有多个 API 网关后，多个开发团队可进行自治（在本例中为“营销”功能和“购物”功能）。
 
 如果有单一 API 网关，这意味着多个开发团队可更新单个点，由此可将所有微服务与应用程序的某一个部分相结合。
 
 更进一步来说，在设计时，有时也可将精细 API 网关限于单个业务微服务，具体取决于所选体系结构。 使用由业务或域指示的 API 网关边界将有助于更好地设计。
 
-例如，由于精细 API 网关的概念类似于 UI 复合服务，因此 API 网关层中的精细粒度特别适用于基于微服务的高级复合 UI 应用程序。 
+例如，由于精细 API 网关的概念类似于 UI 复合服务，因此 API 网关层中的精细粒度特别适用于基于微服务的高级复合 UI 应用程序。
 
 上一节[创建基于微服务的复合 UI](../architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md) 中深入介绍许多详细信息。
 
@@ -89,13 +89,13 @@ HTTP 请求将最终运行访问微服务数据库的那种 C# 代码以及任�
 
 对于微服务 URL，当容器部署在本地开发电脑（本地 Docker 主机）中时，每个微服务的容器始终有一个内部端口（通常是端口 80），在其 dockerfile 中指定，如以下 dockerfile 中所示：
 
-```
+```Dockerfile
 FROM microsoft/aspnetcore:2.0.5 AS base
 WORKDIR /app
 EXPOSE 80
 ```
 
-代码中显示的端口 80 位于 Docker 主机内部，因此客户端应用无法访问。 
+代码中显示的端口 80 位于 Docker 主机内部，因此客户端应用无法访问。
 
 客户端应用只能访问使用 `docker-compose` 进行部署时发布的外部端口（如有）。
 
@@ -105,7 +105,7 @@ EXPOSE 80
 
 以下是“目录”微服务的 `docker-compose.override.yml` 文件示例：
 
-```
+```yml
 catalog.api:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
@@ -113,7 +113,7 @@ catalog.api:
     - ConnectionString=YOUR_VALUE
     - ... Other Environment Variables
   ports:
-    - "5101:80"   # Important: In a production environment you should remove the external port (5101) kept here for microservice debugging purposes. 
+    - "5101:80"   # Important: In a production environment you should remove the external port (5101) kept here for microservice debugging purposes.
                   # The API Gateway redirects and access through the internal port (80).
 ```
 
@@ -123,7 +123,7 @@ catalog.api:
 
 可通过以下方式运行本地 Docker 主机中的“目录”微服务：从 Visual Studio 运行完整的 eShopOnContainers 解决方案（它将运行 docker-compose 文件中的所有服务）；在 CMD 或放置 `docker-compose.yml` 和 docker-compose.override.yml 的文件夹中的 PowerShell 中运行以下 docker-compose 命令启动“目录”微服务。
 
-```
+```console
 docker-compose run --service-ports catalog.api
 ```
 
@@ -147,7 +147,7 @@ Ocelot 仅适用于 ASP.NET Core。 它面向 netstandard2.0，所以可在任�
 
 使用 Visual Studio 中的 [Ocelot NuGet 包](https://www.nuget.org/packages/Ocelot/)在 ASP.NET Core 项目中安装 Ocelot 及其依赖项。
 
-```
+```powershell
 Install-Package Ocelot
 ```
 
@@ -175,7 +175,7 @@ namespace OcelotApiGw
         {
             var builder = WebHost.CreateDefaultBuilder(args);
 
-            builder.ConfigureServices(s => s.AddSingleton(builder))                
+            builder.ConfigureServices(s => s.AddSingleton(builder))
                                                           .ConfigureAppConfiguration(
                               ic => ic.AddJsonFile(Path.Combine("configuration",
                                                                 "configuration.json")))
@@ -189,7 +189,7 @@ namespace OcelotApiGw
 
 对于 Ocelot，必须通过 `AddJsonFile()` 方法向生成器提供 `configuration.json` 文件。 通常可使用不同端口在 `configuration.json` 中指定所有 API 网关 Re-Route，即具有特定端口的外部终结点和相关内部终结点。
 
-```
+```json
 {
     "ReRoutes": [],
     "GlobalConfiguration": {}
@@ -200,7 +200,7 @@ namespace OcelotApiGw
 
 以下是 eShopOnContainers 中某个 API 网关的 [ReRoute 配置文件](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json)的简化示例。
 
-```
+```json
 {
   "ReRoutes": [
     {
@@ -231,7 +231,7 @@ namespace OcelotApiGw
         "AllowedScopes": []
       }
     }
-    
+
   ],
     "GlobalConfiguration": {
       "RequestIdKey": "OcRequestId",
@@ -244,7 +244,7 @@ Ocelot API 网关的主要功能是接收传入的 HTTP 请求并将其转发到
 
 例如，我们主要来看上方 configuration.json（即“购物篮”微服务的配置）中的某个 Re-Route。
 
-```
+```json
 {
       "DownstreamPathTemplate": "/api/{version}/{everything}",
       "DownstreamScheme": "http",
@@ -263,7 +263,7 @@ Ocelot API 网关的主要功能是接收传入的 HTTP 请求并将其转发到
 }
 ```
 
-DownstreamPathTemplate、Scheme 和 DownstreamHostAndPorts 构成要将此请求转发到的内部微服务 URL。 
+DownstreamPathTemplate、Scheme 和 DownstreamHostAndPorts 构成要将此请求转发到的内部微服务 URL。
 
 端口是服务使用的内部端口。 使用容器时，在其 dockerfile 中指定端口。
 
@@ -273,11 +273,11 @@ DownstreamHostAndPorts 是一个数组，包含要将请求转发到的任何下
 
 UpstreamPathTemplate 是一个 URL，Ocelot 将其用来识别用于客户端中给定请求的 DownstreamPathTemplate。 最后，使用了 UpstreamHttpMethod，因此 Ocelot 可区分对相同 URL 的不同的请求（GET、POST、PUT）。
 
-此时，即可拥有使用一个或[多个合并 configuration.json 文件](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files)的单个 Ocelot API 网关，也可将[配置存储在 Consul KV 存储中](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul)。 
+此时，即可拥有使用一个或[多个合并 configuration.json 文件](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files)的单个 Ocelot API 网关，也可将[配置存储在 Consul KV 存储中](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul)。
 
 但正如体系结构和设计部分中所介绍的那样，如果真的想拥有自主微服务，那么最好将单一 API 网关拆分成多个 API 网关和/或 BFF（用于前端的后端）。 为此，我们来看看如何通过 Docker 容器实现该方法。
 
-### <a name="using-a-single-docker-container-image-to-run-multiple-different-api-gateway--bff-container-types"></a>使用单个 Docker 容器映像运行多个不同类型的 API 网关/BFF 容器 
+### <a name="using-a-single-docker-container-image-to-run-multiple-different-api-gateway--bff-container-types"></a>使用单个 Docker 容器映像运行多个不同类型的 API 网关/BFF 容器
 
 在 eShopOnContainers 中，为 Ocelot API 网关使用单个 Docker 容器映像。但是在运行时，通过提供不同的 configuration.json 文件为每种类型的 API 网关/BFF 创建不同的服务/容器，并使用 docker 卷为每个服务访问不同的 PC 文件夹。
 
@@ -287,20 +287,19 @@ UpstreamPathTemplate 是一个 URL，Ocelot 将其用来识别用于客户端中
 
 在 eShopOnContainers 中，使用名为“OcelotApiGw”的项目和 docker-compose.yml 文件中指定的映像名称“eshop/ocelotapigw”创建“Generic Ocelot API Gateway Docker Image”。 然后在部署到 Docker 时，会有四个从同一 Docker 映像创建的 API 网关容器，如以下从 docker-compose.yml 文件中提取的内容所示。
 
-```
-
+```yml
   mobileshoppingapigw:
     image: eshop/ocelotapigw:${TAG:-latest}
     build:
       context: .
       dockerfile: src/ApiGateways/ApiGw-Base/Dockerfile
- 
+
   mobilemarketingapigw:
     image: eshop/ocelotapigw:${TAG:-latest}
     build:
       context: .
       dockerfile: src/ApiGateways/ApiGw-Base/Dockerfile
- 
+
   webshoppingapigw:
     image: eshop/ocelotapigw:${TAG:-latest}
     build:
@@ -316,31 +315,31 @@ UpstreamPathTemplate 是一个 URL，Ocelot 将其用来识别用于客户端中
 
 另外，如 docker-compose.override.yml 文件所示，这些 API 网关容器之间唯一的区别是 Ocelot 配置文件，该文件对每个服务容器的配置文件都不同，并且在运行时通过 Docker 卷指定。
 
-```
+```yml
 mobileshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api              
+    - IdentityUrl=http://identity.api
   ports:
-    - "5200:80"   
+    - "5200:80"
   volumes:
     - ./src/ApiGateways/Mobile.Bff.Shopping/apigw:/app/configuration
- 
+
 mobilemarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api              
+    - IdentityUrl=http://identity.api
   ports:
-    - "5201:80"   
+    - "5201:80"
   volumes:
     - ./src/ApiGateways/Mobile.Bff.Marketing/apigw:/app/configuration
 
 webshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api              
+    - IdentityUrl=http://identity.api
   ports:
-    - "5202:80"   
+    - "5202:80"
   volumes:
     - ./src/ApiGateways/Web.Bff.Shopping/apigw:/app/configuration
 
@@ -360,7 +359,7 @@ webmarketingapigw:
 
 图 6-34。 使用 Ocelot 定义每个 API 网关/BFF 所需的唯一文件是配置文件
 
-将 API 网关拆分成多个 API 网关后，专注于不同微服务子集的不同开发团队可使用独立 Ocelot 配置文件来管理自己的 API 网关。 同时重用相同的 Ocelot Docker 映像。 
+将 API 网关拆分成多个 API 网关后，专注于不同微服务子集的不同开发团队可使用独立 Ocelot 配置文件来管理自己的 API 网关。 同时重用相同的 Ocelot Docker 映像。
 
 现在，如果通过 API 网关运行 eShopOnContainers（在打开 eShopOnContainers-ServicesAndWebApps.sln 解决方案或运行“docker-compose up”时，默认包含在 VS 中），将执行以下示例路由。
 
@@ -392,7 +391,7 @@ webmarketingapigw:
 
 进一步放大视图，在下图的“购物”业务区中，可以看到在使用 API 网关中的聚合器服务时，客户端应用和微服务之间的干扰减少了。
 
- ![放大 eShopOnContainers 体系结构，显示聚合器服务，该服务“组装”某个响应“正在联接”，联接来自多个微服务的响应，以减少与最终客户端之间的干扰。](./media/image38.png)
+![放大 eShopOnContainers 体系结构，显示聚合器服务，该服务“组装”某个响应“正在联接”，联接来自多个微服务的响应，以减少与最终客户端之间的干扰。](./media/image38.png)
 
 图 6-38。 聚合器服务的放大影像
 
@@ -406,13 +405,13 @@ webmarketingapigw:
 
 由于 eShopOnContainers 使用的多个 API 网关具有基于 BFF 和业务范围的边界，因此“标识/身份验证”服务排除在 API 网关之外，如下图中黄色高亮部分所示。
 
- ![eShopOnContainers 体系结构关系图，显示 API 网关下的身份标识微服务。](./media/image39.png)
+![eShopOnContainers 体系结构关系图，显示 API 网关下的身份标识微服务。](./media/image39.png)
 
 图 6-39。 eShopOnContainers 中的“标识”服务的位置
 
 但是，Ocelot 还支持在 API 网关边界内设置“标识/身份验证”微服务，如另一图所示。
 
- ![通过 API 网关 (AG) 下的标识微服务进行身份验证：1）AG 从标识微服务请求身份验证令牌，2）标识微服务将令牌返回到 AG，3-4）AG 使用身份验证令牌向微服务发出请求。](./media/image40.png)
+![通过 API 网关 (AG) 下的标识微服务进行身份验证：1）AG 从标识微服务请求身份验证令牌，2）标识微服务将令牌返回到 AG，3-4）AG 使用身份验证令牌向微服务发出请求。](./media/image40.png)
 
 图 6-40。 Ocelot 中的身份验证
 
@@ -422,7 +421,7 @@ webmarketingapigw:
 
 使用身份验证在 API 网关级别保护服务的方法是在 configuration.json 的相关设置中设置 AuthenticationProviderKey。
 
-```
+```json
     {
       "DownstreamPathTemplate": "/api/{version}/{everything}",
       "DownstreamScheme": "http",
@@ -443,7 +442,7 @@ webmarketingapigw:
 
 Ocelot 运行时，会查看 ReRoutes AuthenticationOptions.AuthenticationProviderKey 并检查是否有使用给定密钥注册的验证提供程序。 如果没有，那么 Ocelot 将不会启动。 如果有，那么 ReRoute 将在执行时使用该提供程序。
 
-由于通过 `authenticationProviderKey = "IdentityApiKey"` 配置了 Ocelot WebHost，只要该服务的任何请求不具备身份验证令牌，就需要进行身份验证。 
+由于通过 `authenticationProviderKey = "IdentityApiKey"` 配置了 Ocelot WebHost，只要该服务的任何请求不具备身份验证令牌，就需要进行身份验证。
 
 ```csharp
 namespace OcelotApiGw
@@ -495,8 +494,8 @@ ValidAudience（如“basket”）通过 Startup 类的 ConfigureServices() 中�
 // prevent from mapping "sub" claim to nameidentifier.
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
-var identityUrl = Configuration.GetValue<string>("IdentityUrl"); 
-                
+var identityUrl = Configuration.GetValue<string>("IdentityUrl");
+
 services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -512,9 +511,9 @@ services.AddAuthentication(options =>
 
 如果尝试使用基于 API 网关的 Re-Route URL（例如 `http://localhost:5202/api/v1/b/basket/1`）访问任何安全的微服务（如“购物篮”微服务），除非提供有效令牌，否则会出现“401 未授权”。 另一方面，如果 Re-Route URL 未经身份验证，Ocelot 将调用与其关联的任何下游方案（内部微服务 URL）。
 
-Ocelot 的 ReRoute 层中的授权。  Ocelot 支持在进行身份验证后评估的基于声明的授权。 通过将以下行添加到 ReRoute 配置中，可以在路由级别设置授权。 
+Ocelot 的 ReRoute 层中的授权。  Ocelot 支持在进行身份验证后评估的基于声明的授权。 通过将以下行添加到 ReRoute 配置中，可以在路由级别设置授权。
 
-```
+```json
 "RouteClaimsRequirement": {
     "UserType": "employee"
 }
@@ -526,7 +525,7 @@ Ocelot 的 ReRoute 层中的授权。  Ocelot 支持在进行身份验证后评�
 
 使用 Kubernetes 时（如在 Azure Kubernetes 服务群集中），通常会根据 Nginx 通过 [Kubernetes 入口层](https://kubernetes.io/docs/concepts/services-networking/ingress/)统一所有 HTTP 请求。
 
-在 Kubernetes 中，如果不使用任何入口方法，那么服务和 Pod 的 IP 只能由群集网络路由。 
+在 Kubernetes 中，如果不使用任何入口方法，那么服务和 Pod 的 IP 只能由群集网络路由。
 
 但是，如果使用入口方法，则 Internet 和服务（包括 API 网关）间会有一个中间层，充当反向代理。
 
@@ -534,9 +533,9 @@ Ocelot 的 ReRoute 层中的授权。  Ocelot 支持在进行身份验证后评�
 
 在 eShopOnContainers 中，在本地进行开发并仅使用开发计算机作为 Docker 主机时，不会使用任何入口，只使用多个 API 网关。
 
-但是，当面向基于 Kubernetes 的“生产”环境时，eShopOnContainers 会在 API 网关前使用入口。 这样一来，客户端仍可调用相同基 URL，但请求会路由到多个 API 网关或 BFF。 
+但是，当面向基于 Kubernetes 的“生产”环境时，eShopOnContainers 会在 API 网关前使用入口。 这样一来，客户端仍可调用相同基 URL，但请求会路由到多个 API 网关或 BFF。
 
-请注意，API 网关只是呈现服务的前端或外观，Web 应用通常不在其呈现范围内。 此外，API 网关可能会隐藏某些内部微服务。 
+请注意，API 网关只是呈现服务的前端或外观，Web 应用通常不在其呈现范围内。 此外，API 网关可能会隐藏某些内部微服务。
 
 然而，入口只重定向 HTTP 请求，而不会试图隐藏任何微服务或 Web 应用。
 
@@ -579,6 +578,6 @@ Ocelot 的 ReRoute 层中的授权。  Ocelot 支持在进行身份验证后评�
 - 速率限制 \
   [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
->[!div class="step-by-step"]
->[上一页](background-tasks-with-ihostedservice.md)
->[下一页](../microservice-ddd-cqrs-patterns/index.md)
+> [!div class="step-by-step"]
+> [上一页](background-tasks-with-ihostedservice.md)
+> [下一页](../microservice-ddd-cqrs-patterns/index.md)

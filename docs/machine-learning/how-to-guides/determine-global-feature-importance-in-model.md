@@ -1,16 +1,21 @@
 ---
 title: 在 ML.NET 中使用排列功能的重要性来确定模型功能的重要性
 description: 在 ML.NET 中使用排列功能的重要性来理解模型功能的重要性
-ms.date: 02/01/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a61e5dbbd544aa7df56291db9207343cb6f03e6e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: b0457bc07168579403e5a00383864c5612e1d17f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738807"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675545"
 ---
 # <a name="determine-the-feature-importance-of-models-with-permutation-feature-importance-in-mlnet"></a>在 ML.NET 中使用排列功能的重要性来确定模型功能的重要性
+
+> [!NOTE]
+> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
+
+此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
 
 在创建机器学习模型时，仅仅进行预测通常是不够的。 机器学习开发人员、决策者以及受模型影响的人员通常需要了解机器学习模型如何做出决策，以及哪些特性有助于提高其性能。 `Permutation Feature Importance` (PFI) 是一项在 Microsoft 内部使用的模型可解释性工具，帮助机器学习开发人员更好地理解模型功能的重要性。
 

@@ -1,19 +1,21 @@
 ---
 title: ML.NET 中模型定型的基本概念
 description: 本文介绍与 ML.NET 中模型定型方案相关的基本概念。 并非所有观念均与更简单的方案“使用现有模型预测”相关。
-ms.date: 02/13/2019
+ms.date: 03/05/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: c47d5832527dca1416abfc55756dca48f1daf493
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 78554cfd1dfdb3dba82a325d47245aeb313bb6fe
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303655"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675558"
 ---
 # <a name="basic-concepts-for-model-training-in-mlnet"></a>ML.NET 中模型定型的基本概念
 
 本文介绍与 ML.NET 中模型定型方案相关的基本概念。 并非所有观念均与更简单的方案“使用现有模型预测”相关。
+
+本文和相关示例目前使用的是 ML.NET 版本 0.10。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
 
 ## <a name="model-training-concepts"></a>模型定型概念
 

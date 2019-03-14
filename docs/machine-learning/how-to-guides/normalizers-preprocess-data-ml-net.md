@@ -1,16 +1,21 @@
 ---
 title: 使用规范化程序来预处理要在数据处理过程中使用的定型数据 - ML.NET
 description: 了解如何使用规范化程序对定型数据进行预处理，这些数据将在 ML.NET 中用于机器学习模型生成、训练和评分
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 28d358cd381f71b4116e1dd25d847fc51835f09e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 2d18f7c19a51fd929ac6efb7f600cb1ac2733de8
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093042"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676598"
 ---
 # <a name="preprocess-training-data-with-normalizers-to-use-in-data-processing---mlnet"></a>使用规范化程序来预处理要在数据处理过程中使用的定型数据 - ML.NET
+
+> [!NOTE]
+> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
+
+此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
 
 ML.NET 公开大量[参数和非参数化算法](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/)。
 

@@ -94,7 +94,7 @@
 ### [.NET Core 2.1 的新增功能](core/whats-new/dotnet-core-2-1.md)
 ### [.NET Core 2.0 的新增功能](core/whats-new/dotnet-core-2-0.md)
 ## [教程](core/tutorials/index.md)
-### [在 macOS 上实现 .NET Core 入门](core/tutorials/using-on-macos.md)
+### [macOS 上的 .NET Core 入门](core/tutorials/using-on-macos.md)
 ### [借助 Visual Studio for Mac 在 macOS 上开始使用 .NET Core](core/tutorials/using-on-mac-vs.md)
 ### [使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [使用 CLI 工具实现 .NET Core 入门](core/tutorials/using-with-xplat-cli.md)
@@ -1209,6 +1209,7 @@
 ### 使用已定型的模型
 #### [使用 PredictionEngine 一次执行一个预测](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [操作已定型的模型](machine-learning/how-to-guides/consuming-model-ml-net.md)
+#### [提供模型 Azure Functions](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
 ### Infer.NET
 #### [使用 Infer.NET 进行概率编程](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## 参考

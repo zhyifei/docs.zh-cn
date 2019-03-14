@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221246"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677209"
 ---
 # <a name="interop-marshaling"></a>互操作封送处理
 <a name="top"></a> 互操作封送处理控制调用期间，通过方法自变量和返回值在托管内存和非托管内存之间传递数据的方式。 互操作封送处理是由公共语言运行时的封送处理服务执行的运行时活动。  
@@ -44,8 +44,7 @@ ms.locfileid: "56221246"
   
  平台调用和 COM 互操作都使用互操作封送处理在调用方和被调用方之间准确地移动方法参数，并且如果需要，也可以将数据从被调用方移回调用方。 正如下图所示，除涉及 [回调函数](callback-functions.md) 以外，平台调用方法调用从托管代码流向非托管代码，而绝不会以相反方向流动。 虽然平台调用的调用只能从托管代码流向非托管代码，但是数据仍然可以作为输入参数或输出参数在两个方向流动。 COM 互操作方法调用可以在任一方向流动。  
   
- ![平台调用](./media/interopmarshaling.png "interopmarshaling")  
-平台调用和 COM 互操作调用流  
+ ![平台调用](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "平台调用和 COM 互操作调用流")  
   
  在最低级别，这两种机制都使用同一种互操作封送处理服务；不过，某些数据类型则仅受 COM 互操作或平台调用支持。 有关详细信息，请参阅 [默认封送行为](default-marshaling-behavior.md)。  
   
@@ -67,8 +66,7 @@ ms.locfileid: "56221246"
   
  由于客户端和服务器位于同一单元中，因此互操作封送处理服务将自动处理所有数据封送。 下图显示了在同一个 COM 样式的单元内的托管和非托管堆之间进行的互操作封送处理服务。  
   
- ![互操作封送处理](./media/interopheap.gif "interopheap")  
-相同单元封送进程  
+ ![托管堆和未托管堆之间的互操作封送处理](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "相同单元封送处理过程")  
   
  如果计划导出托管服务器，请注意，COM 客户端确定服务器的单元。 在 MTA 中初始化的 COM 客户端所调用的托管服务器必须确保线程安全。  
   
@@ -84,8 +82,7 @@ ms.locfileid: "56221246"
   
  当托管客户端和非托管服务器位于同一单元中时，互操作封送处理服务处理所有数据封送。 但是，当客户端和服务器在不同的单元中初始化时，还需要 COM 封送处理。 下图显示跨单元调用的元素。  
   
- ![COM 封送处理](./media/singleprocessmultapt.gif "singleprocessmultapt")  
-.NET 客户端和 COM 对象之间的跨单元调用  
+ ![COM 封送处理](./media/interop-marshaling/single-process-across-multi-apartment.gif ".NET 客户端和 COM 对象之间的跨单元调用")  
   
  对于跨单元封送，可以执行下列操作：  
   
@@ -110,14 +107,12 @@ ms.locfileid: "56221246"
   
  下图显示互操作封送处理和 COM 封送处理如何跨进程和主机边界提供通信信道。  
   
- ![COM 封送处理](./media/interophost.gif "interophost")  
-跨进程封送  
+ ![COM 封送处理](./media/interop-marshaling/interop-and-com-marshaling.gif "跨进程封送处理")  
   
 ### <a name="preserving-identity"></a>保留标识  
  公共语言运行时保留托管引用和非托管引用的标识。 下图显示跨进程和主机边界的直接非托管引用（顶部行）和直接托管引用（底部行）的流。  
   
- ![COM 可调用包装器和运行时可调用包装器](./media/interopdirectref.gif "interopdirectref")  
-跨进程和主机边界传递引用  
+ ![COM 可调用包装器和运行时可调用包装器](./media/interop-marshaling/interop-direct-ref-across-process.gif "跨进程和主机边界传递引用")  
   
  在此图中：  
   
@@ -133,7 +128,7 @@ ms.locfileid: "56221246"
 ### <a name="managed-remoting"></a>托管远程处理  
  运行时还提供了托管远程处理，可用于跨进程和主机边界建立托管对象之间的通信信道。 托管远程处理可以适应通信组件之间的防火墙，如下图所示。  
   
- ![SOAP 或 TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
+ ![SOAP 或 TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "跨使用 SOAP 或 TcpChannel 类的防火墙的远程调用")  
 跨使用 SOAP 或 TcpChannel 类的防火墙的远程调用  
   
  某些非托管调用可以通过 SOAP 传递，如服务组件和 COM 之间的调用。  
@@ -143,7 +138,7 @@ ms.locfileid: "56221246"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|Title|说明​​|  
+|Title|说明|  
 |-----------|-----------------|  
 |[默认封送处理行为](default-marshaling-behavior.md)|描述互操作封送处理服务用于封送数据的规则。|  
 |[用平台调用封送数据](marshaling-data-with-platform-invoke.md)|描述如何声明方法形参以及如何将实参传递给由非托管库导出的函数。|  

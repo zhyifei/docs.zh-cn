@@ -1,16 +1,21 @@
 ---
 title: 使用交叉验证来训练机器学习模型 - ML.NET
 description: 了解如何通过 ML.NET，使用交叉验证来训练机器学习模型，从而提高模型预测的准确性。
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8d74b69340895bcfe3cdc3d3a6121d7331a0a5e2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092275"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676533"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>使用交叉验证来训练机器学习模型 - ML.NET
+
+> [!NOTE]
+> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
+
+此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
 
 [交叉验证](https://en.wikipedia.org/wiki/Cross-validation_(statistics))是面向机器学习应用的有用技术。 它可帮助预估每次模型运行与上一次运行之间的模型质量变化，并且无需提取单独的测试集来进行评估。
 

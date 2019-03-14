@@ -3,12 +3,12 @@ title: 使用 LINQ
 description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: b7faa75234dec62be63e96c0f15f97c6d2aa4c99
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170803"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679646"
 ---
 # <a name="working-with-linq"></a>使用 LINQ
 
@@ -16,13 +16,13 @@ ms.locfileid: "53170803"
 
 本教程将介绍 .NET Core 和 C# 语言的功能。 你将了解：
 
-*   如何使用 LINQ 生成序列。
-*   如何编写可轻松用于 LINQ 查询的方法。
-*   如何区分及早计算和惰性计算。
+- 如何使用 LINQ 生成序列。
+- 如何编写可轻松用于 LINQ 查询的方法。
+- 如何区分及早计算和惰性计算。
 
 你将通过生成应用程序来了解如何执行这些操作，应用程序体现了所有魔术师都具备的一项基本技能，即[完美洗牌](https://en.wikipedia.org/wiki/Faro_shuffle)。 简而言之，完美洗牌这项技能是指，将一副纸牌分成两半，然后两手各拿一半交错洗牌（一张隔一张），以便重新生成原来的一副纸牌。
 
-魔术师之所以要掌握这项技能是因为，每次洗牌后每张纸牌的位置已知，且顺序为重复模式。 
+魔术师之所以要掌握这项技能是因为，每次洗牌后每张纸牌的位置已知，且顺序为重复模式。
 
 考虑到你的目的，数据序列控制起来就会非常轻松。 生成的应用程序会构造一副纸牌，然后执行一系列洗牌操作，每次都会输出序列。 还可以将更新后的顺序与原始顺序进行比较。
 
@@ -36,7 +36,7 @@ ms.locfileid: "53170803"
 
 第一步是新建应用程序。 打开命令提示符，然后新建应用程序的目录。 将新建的目录设为当前目录。 在命令提示符处，键入命令 `dotnet new console`。 这将为基本的“Hello World”应用程序创建起始文件。
 
-如果之前从未用过 C#，请参阅[这篇教程](console-teleprompter.md)，其中介绍了 C# 程序的结构。 可以阅读相应的内容，然后回到此教程详细了解 LINQ。 
+如果之前从未用过 C#，请参阅[这篇教程](console-teleprompter.md)，其中介绍了 C# 程序的结构。 可以阅读相应的内容，然后回到此教程详细了解 LINQ。
 
 ## <a name="creating-the-data-set"></a>创建数据集
 
@@ -82,6 +82,7 @@ static IEnumerable<string> Ranks()
     yield return "ace";
 }
 ```
+
 将它们置于 `Main` 文件的 `Program.cs` 方法的下面。 这两种方法都利用 `yield return` 语法在运行时生成序列。 编译器会生成对象来实现 <xref:System.Collections.Generic.IEnumerable%601>，并在有请求时生成字符串序列。
 
 现在使用这些迭代器创建一副扑克牌。 将 LINQ 查询置于 `Main` 方法中。 具体如下所示：
@@ -98,16 +99,18 @@ static void Main(string[] args)
     foreach (var card in startingDeck)
     {
         Console.WriteLine(card);
-    } 
+    }
 }
 ```
 
 多个 `from` 子句生成 <xref:System.Linq.Enumerable.SelectMany%2A>，用于将第一个和第二个序列中的所有元素合并成一个序列。 考虑到我们的目的，顺序非常重要。 第一个源序列（花色）中的首个元素与第二个序列（等级）中的每个元素结合使用。 这就生成了第一个花色的所有十三张纸牌。 对第一个序列（花色）中的每个元素重复此过程。 最后生成按花色排序（后跟值）的一副纸牌。
 
 务必注意，无论是选择使用上文所用的查询语法编写 LINQ，还是使用方法语法，始终都可以从一种语法形式转至另一种。 可使用方法语法编写使用查询语法编写的上述查询，如下所示：
+
 ```csharp
 var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit = suit, Rank = rank }));
 ```
+
 编译器会将使用查询语法编写的 LINQ 语句转换为等效的方法调用语法。 因此无论选择哪种语法，两种查询版本生成的结果相同。 选择最适合你的情况的语法：例如，若所在的工作团队中的某些成员不擅长方法语法，则尽量首选使用查询语法。
 
 此时，运行已生成的示例。 将显示一副纸牌中的所有 52 张纸牌。 在调试器模式下运行此示例来观察 `Suits()` 和 `Ranks()` 方法的执行情况，你可能会觉得非常有用。 可以清楚地看到，每个序列中的所有字符串仅在需要时生成。
@@ -131,7 +134,7 @@ public static void Main(string[] args)
         Console.WriteLine(c);
     }
 
-    // 52 cards in a deck, so 52 / 2 = 26    
+    // 52 cards in a deck, so 52 / 2 = 26
     var top = startingDeck.Take(26);
     var bottom = startingDeck.Skip(26);
 }
@@ -141,7 +144,7 @@ public static void Main(string[] args)
 
 需要编写几种特殊的方法，我们称之为<xref:System.Collections.Generic.IEnumerable%601>扩展方法[，来添加一些功能，以便于与 LINQ 查询返回的 ](../../csharp/programming-guide/classes-and-structs/extension-methods.md) 交互。 简而言之，扩展方法是具有特殊用途的静态方法，借助它无需修改你想要为其添加功能的已有原始类型，即可向其添加功能。
 
-向程序添加新的静态类文件（名称为 `Extensions.cs`），以用于存放扩展方法，然后开始生成第一个扩展方法： 
+向程序添加新的静态类文件（名称为 `Extensions.cs`），以用于存放扩展方法，然后开始生成第一个扩展方法：
 
 ```csharp
 // Extensions.cs
@@ -191,7 +194,7 @@ public static void Main(string[] args)
     {
         Console.WriteLine(c);
     }
-        
+
     var top = startingDeck.Take(26);
     var bottom = startingDeck.Skip(26);
     var shuffle = top.InterleaveSequenceWith(bottom);
@@ -211,7 +214,7 @@ public static void Main(string[] args)
 
 [!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
-这反映了另一种 LINQ 惯用做法，即终端方法。 此类方法需要将序列（或在此示例中，为两个序列）用作输入，并返回一个标量值。 使用终端方法时，它们始终是 LINQ 查询方法链中最后的方法，因此其名称为“终端”。 
+这反映了另一种 LINQ 惯用做法，即终端方法。 此类方法需要将序列（或在此示例中，为两个序列）用作输入，并返回一个标量值。 使用终端方法时，它们始终是 LINQ 查询方法链中最后的方法，因此其名称为“终端”。
 
 使用此类方法来确定一副纸牌何时恢复原始顺序时，就可以了解实际效果。 循环执行洗牌代码，通过应用 `SequenceEquals()` 方法确定序列已恢复原始顺序时停止执行。 你会发现，此类方法始终是任何查询中的最后一个方法，因为返回的是一个值，而不是一个序列：
 
@@ -279,7 +282,7 @@ public static void Main(string[] args)
     {
         Console.WriteLine(c);
     }
-        
+
     Console.WriteLine();
     var times = 0;
     var shuffle = startingDeck;
@@ -315,30 +318,30 @@ public static void Main(string[] args)
 
 请注意，不是每次访问查询都会生成日志。 只有在创建原始查询时，才会生成日志。 程序的运行时间仍然很长，但现在知道原因了。 如果对在启用日志记录的情况下运行向内洗牌失去了耐心，请切换回向外洗牌。 但仍会看到惰性计算效果。 在一次运行中，共执行 2592 次查询，包括生成所有值和花色。
 
-可以提高此处的代码性能，以减少执行次数。 一个简单的修复方法是缓存构造扑克牌的原始 LINQ 查询的结果。 当前，每当 do-while 循环进行迭代时，你就要反复地执行查询，每次都要重新构造扑克牌并进行洗牌。 可以利用 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 和 <xref:System.Linq.Enumerable.ToList%2A> 来缓存扑克牌；将这两个方法追加到查询时，它们将执行你已告知它们要执行的同种操作，而现在它们会将结果存储在数组或列表中，具体取决于选择调用的方法。 将 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 追加到两个查询中，并再次运行程序：
+可以提高此处的代码性能，以减少执行次数。 一个简单的修复方法是缓存构造扑克牌的原始 LINQ 查询的结果。 目前，每当 do-while 循环进行迭代时，需要反复执行查询，每次都要重新构造扑克牌并进行洗牌。 可以利用 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 和 <xref:System.Linq.Enumerable.ToList%2A> 来缓存扑克牌；将这两个方法追加到查询时，它们将执行你已告知它们要执行的同种操作，而现在它们会将结果存储在数组或列表中，具体取决于选择调用的方法。 将 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 追加到两个查询中，并再次运行程序：
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 现在向外洗牌下降到 30 次查询。 再次运行向内洗牌程序，改善情况类似：现在它执行 162 次查询。
 
-请注意，此示例旨在突出显示延迟计算可能会导致性能下降的用例。 了解延迟计算会在何处影响代码性能至关重要，但了解并非所有查询应及早运行也同等重要。 未使用 <xref:System.Linq.Enumerable.ToArray%2A> 会导致性能损失，这是因为每次重新排列一副纸牌都要以先前的排列为依据。 使用惰性计算意味着一副纸牌的每个新配置都以原来的一副纸牌为依据，甚至在执行生成 `startingDeck` 的代码时，也不例外。 这会导致大量额外的工作。 
+请注意，此示例旨在突出显示延迟计算可能会导致性能下降的用例。 了解延迟计算会在何处影响代码性能至关重要，但了解并非所有查询应及早运行也同等重要。 未使用 <xref:System.Linq.Enumerable.ToArray%2A> 会导致性能损失，这是因为每次重新排列一副纸牌都要以先前的排列为依据。 使用惰性计算意味着一副纸牌的每个新配置都以原来的一副纸牌为依据，甚至在执行生成 `startingDeck` 的代码时，也不例外。 这会导致大量额外的工作。
 
 在实践中，一些算法使用及早计算的效果较好，另一些算法使用延迟计算的效果较好。 对于日常使用，如果数据源为单独进程（如数据库引擎），通常更好的选择是使用延迟计算。 对于数据库，使用延迟计算，更复杂的查询可以只对数据库进程执行一次往返，然后返回至剩余的代码。 无论选择使用延迟计算还是及早计算，LINQ 均可以灵活处理，因此请衡量自己的进程，然后选择可为你提供最佳性能的计算种类。
 
 ## <a name="conclusion"></a>结束语
 
 在此项目中介绍了下列内容：
-* 使用 LINQ 查询，来将数据聚合到有意义的序列中
-* 编写扩展方法，来将自己的自定义功能添加到 LINQ 查询
-* 查找 LINQ 查询可能会在其中遇到性能问题（如速度下降）的代码区域
-* 与 LINQ 查询相关的延迟计算和及早计算，以及它们对查询性能的影响
+- 使用 LINQ 查询，来将数据聚合到有意义的序列中
+- 编写扩展方法，来将自己的自定义功能添加到 LINQ 查询
+- 查找 LINQ 查询可能会在其中遇到性能问题（如速度下降）的代码区域
+- 与 LINQ 查询相关的延迟计算和及早计算，以及它们对查询性能的影响
 
 除 LINQ 外，还简单介绍了魔术师用于扑克牌魔术的一个技术。 魔术师之所以采用完美洗牌是因为，可以控制每张纸牌在一副纸牌中的移动。 现在你了解了，也不要告诉其他人以免破坏他们的兴致！
 
 有关 LINQ 的更多信息，请访问：
-* [语言集成查询 (LINQ)](../programming-guide/concepts/linq/index.md)
-    * [LINQ 简介](../programming-guide/concepts/linq/introduction-to-linq.md)
-    * [C# 中的 LINQ 入门](../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [语言集成查询 (LINQ)](../programming-guide/concepts/linq/index.md)
+    - [LINQ 简介](../programming-guide/concepts/linq/introduction-to-linq.md)
+    - [C# 中的 LINQ 入门](../programming-guide/concepts/linq/getting-started-with-linq.md)
         - [基本 LINQ 查询操作 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
         - [使用 LINQ 进行数据转换 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
         - [LINQ 中的查询语法和方法语法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)

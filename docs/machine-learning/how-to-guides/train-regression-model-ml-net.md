@@ -1,16 +1,21 @@
 ---
 title: 使用 ML.NET 定型回归模型以预测某个值
 description: 了解如何使用 ML.NET 定型机器学习回归模型以预测某个值
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e7ea07471e155804a7ad36481aa469beda7028ae
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092899"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673140"
 ---
 # <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a>使用 ML.NET 定型回归模型以预测某个值
+
+> [!NOTE]
+> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
+
+此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
 
 通常，在 ML.NET 中进行模型定型需要执行三个步骤：
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74d2f9df5f9a9d34baa6a487730d5a1614d2d142
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 7d64e254f5dd1f7d35150953c31854f45eb06b12
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219927"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496945"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe（代码访问安全策略工具）
 代码访问安全性 (CAS) 策略工具 (Caspol.exe) 使用户和管理员可修改计算机策略级别、用户策略级别和企业策略级别的安全策略。  
@@ -43,9 +43,9 @@ ms.locfileid: "56219927"
 caspol [options]  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
   
-|选项|说明​​|  
+|选项|说明|  
 |------------|-----------------|  
 |**-addfulltrust** *assembly_file*<br /><br /> or<br /><br /> **-af** *assembly_file*|将实现自定义安全对象（如自定义权限或自定义成员资格条件）的程序集添加到特定策略级别的完全信任程序集列表中。 *assembly_file* 参数指定要添加的程序集。 此文件必须用[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)签名。 可以通过[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 使用强名称对程序集进行签名。<br /><br /> 每当将包含自定义权限的权限集添加到策略时，必须将实现该自定义权限的程序集添加到该策略级别的完全信任列表中。 对于实现用于安全策略（如计算机策略）的自定义安全对象（如自定义代码组或成员资格条件）的程序集，应该总是将其添加到完全信任程序集列表中。 注意：如果实现自定义安全对象的程序集引用了其他程序集，则必须首先将被引用的程序集添加到完全信任程序集列表中。 使用 Visual Basic、C++ 和 JScript 创建的自定义安全对象分别引用 Microsoft.VisualBasic.dll、Microsoft.VisualC.dll 和 Microsoft.JScript.dll。 默认情况下，完全信任程序集列表中不包含这些程序集。 在添加自定义安全对象之前，必须将相应的程序集添加到完全信任列表中。 如果不这样做，将会破坏安全系统，导致所有程序集都无法加载。 在这种情况中，Caspol.exe **-all -reset** 选项不会修复安全系统。 若要修复安全系统，必须手动编辑安全文件，移除自定义安全对象。|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> or<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|将新的代码组添加到代码组层次结构中。 可以指定 *parent_label* 或 *parent_name*。 *parent_label* 参数指定代码组的标签（如 1.  或 1.1.），该代码组是要添加的代码组的父级。 *parent_name* 参数指定代码组的名称，该代码组是要添加的代码组的父级。 因为 *parent_label* 和 *parent_name* 可互换使用，所以 Caspol.exe 必须能够区分它们。 因此，*parent_name* 不能以数字开头。 此外，*parent_name* 只能包含 A-Z、0-9 和下划线字符。<br /><br /> *mship* 参数指定新代码组的成员资格条件。 有关详细信息，请参见参阅本节后面的 *mship* 参数表。<br /><br /> *pset_name* 参数是将与新代码组关联的权限集的名称。 还可以为新代码组设置一个或多个 *flags*。 有关详细信息，请参阅本节后面的 *flags* 参数表。|  
@@ -81,7 +81,7 @@ caspol [options]
   
  指定代码组的成员资格条件的 *mship* 参数可以与 **-addgroup** 选项和 **-chggroup** 选项一起使用。 每个 *mship* 参数都作为 .NET Framework 类实现。 若要指定 *mship*，请使用下列参数之一。  
   
-|参数|说明​​|  
+|参数|说明|  
 |--------------|-----------------|  
 |**-allcode**|指定所有代码。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>。|  
 |**-appdir**|指定应用程序目录。 如果指定 **–appdir** 作为成员资格条件，则代码的 URL 证据将与代码的应用程序目录证据进行比较。 如果两个证据值相同，则满足此成员资格条件。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>。|  
@@ -95,7 +95,7 @@ caspol [options]
   
  可与 **–addgroup** 和 **–chggroup** 选项一起使用的 *flags* 参数，可使用下列参数之一指定。  
   
-|参数|说明​​|  
+|参数|说明|  
 |--------------|-----------------|  
 |-description “description”|与 **–addgroup** 选项一起使用时，指定要添加的代码组的描述。 与 **–chggroup** 选项一起使用时，指定要编辑的代码组的描述。 *description* 参数必须用双引号引起来。|  
 |**-exclusive** {**on**&#124;**off**}|设置为 **on** 时，指示当某些代码符合代码组的成员资格条件时，只考虑与正在添加或修改的代码组关联的权限集。 当此选项设置为 **off** 时，Caspol.exe 考虑策略级别中所有匹配的代码组的权限集。|  

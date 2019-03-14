@@ -1,16 +1,21 @@
 ---
 title: 从多个文件加载数据用于机器学习处理 - ML.NET
 description: 通过 ML.NET，了解如何从多个文件加载数据用于机器学习模型生成、培训和评分
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f5108aaed80769f2bc7ed2f974f9a729abe8455e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: fbf5e4b5ab9a1a686edb933bdec818fc532bbf42
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092041"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679016"
 ---
 # <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a>从多个文件加载数据用于机器学习处理 - ML.NET
+
+> [!NOTE]
+> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
+
+此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
 
 使用 `TextLoader`，将一组文件指定到 `Read` 方法。 文件必须具有相同的架构（相同的列数量和类型）：
 

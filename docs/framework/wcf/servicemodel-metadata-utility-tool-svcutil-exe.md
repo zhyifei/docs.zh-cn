@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533203"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788422"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 元数据实用工具 (Svcutil.exe)
 
@@ -43,7 +43,7 @@ ServiceModel Metadata Utility Tool 可在 Windows SDK 安装位置，具体而�
 
 检索元数据时，该工具有五分钟超时。 此超时仅适用于通过网络检索元数据的操作。 它不适用于该元数据的任何处理操作。
 
-### <a name="multi-targetting"></a>多目标
+### <a name="multi-targeting"></a>多目标
 
 该工具不支持多目标。 如果你想要生成从.NET 4 项目*svcutil.exe*，使用*svcutil.exe*从.NET 4 SDK。 若要生成 .NET 3.5 项目，请使用 .NET 3.5 SDK 中的可执行文件。
 
@@ -71,7 +71,7 @@ Svcutil.exe 可以依据元数据文档为服务协定、客户端和数据类�
 
 可以使用*SvcUtil.exe*工具生成基于预定义的 WSDL 文档的服务和数据协定。 使用 /serviceContract 开关并指定可以从中下载或找到 WSDL 文档的 URL 或文件位置。 这将生成用于实现投诉服务在 WSDL 文档中定义的服务和数据约定。 有关详细信息，请参阅[如何：检索元数据并实现兼容服务](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)。
 
-对于使用 BasicHttpContextbinding 终结点，服务*Svcutil.exe*生成的 BasicHttpBinding`allowCookies`属性设置为`true`相反。 Cookie 用于服务器上的上下文。 如果在服务使用 Cookie 时，您要管理客户端上的上下文，则可以手动修改配置以使用上下文绑定。
+对于使用 BasicHttpContextBinding 终结点，服务*Svcutil.exe*生成的 BasicHttpBinding`allowCookies`属性设置为`true`相反。 Cookie 用于服务器上的上下文。 如果在服务使用 Cookie 时，你要管理客户端上的上下文，则可以手动修改配置以使用上下文绑定。
 
 > [!CAUTION]
 > Svcutil.exe 基于 WSDL 或从服务收到的策略文件生成客户端。 通过串联用户名，生成的用户主体名称 (UPN)"\@"和一个完全限定的域名 (FQDN)。 但是，对于在 Active Directory 上注册的用户，此格式无效，并且工具生成的 UPN 将导致 Kerberos 身份验证失败，错误消息为“登录没有成功”。 若要解决此问题，您应手动修复此工具生成的客户端文件。
@@ -160,7 +160,7 @@ Svcutil 会同时发出以下元数据请求以检索元数据。
 
 - 针对所提供地址的 DISCO 请求（使用 ASMX 中的 DiscoveryClientProtocol）。
 
-默认情况下，Svcutil.exe 使用 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 类中定义的绑定进行 MEX 请求。 若要配置用于 WS-Metadata Exchange 的绑定，您必须在使用 IMetadataExchange 协定的配置中定义一个客户端终结点。 可以在 Svcutil.exe 的配置文件中定义此终结点，也可以在使用 `/svcutilConfig` 选项指定的另一个配置文件中定义。
+默认情况下，Svcutil.exe 使用 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 类中定义的绑定进行 MEX 请求。 若要配置用于 WS-Metadata Exchange 的绑定，你必须在使用 IMetadataExchange 协定的配置中定义一个客户端终结点。 可以在 Svcutil.exe 的配置文件中定义此终结点，也可以在使用 `/svcutilConfig` 选项指定的另一个配置文件中定义。
 
 `svcutil.exe /t:metadata  <url>* | <epr>`
 

@@ -1,6 +1,7 @@
 ---
-title: 垃圾回收的基础
-ms.date: 03/30/2017
+title: 垃圾回收的基本知识
+description: 了解垃圾回收器的工作原理以及如何配置它以获得最佳性能。
+ms.date: 03/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066315"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712469"
 ---
-# <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基础
+# <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基本知识
 <a name="top"></a> 在公共语言运行时 (CLR) 中，垃圾回收器用作自动内存管理器。 它提供如下优点：  
   
 -   使你可以在开发应用程序时不必释放内存。  
@@ -30,28 +31,8 @@ ms.locfileid: "55066315"
   
 -   通过确保对象不能使用另一个对象的内容来提供内存安全。  
   
- 本主题介绍垃圾回收的核心概念。 它包含下列部分：  
-  
--   [内存基础知识](#fundamentals_of_memory)  
-  
--   [垃圾回收的条件](#conditions_for_a_garbage_collection)  
-  
--   [托管堆](#the_managed_heap)  
-  
--   [代数](#generations)  
-  
--   [垃圾回收过程中发生的情况](#what_happens_during_a_garbage_collection)  
-  
--   [操作非托管资源](#manipulating_unmanaged_resources)  
-  
--   [工作站和服务器垃圾回收](#workstation_and_server_garbage_collection)  
-  
--   [并行垃圾回收](#concurrent_garbage_collection)  
-  
--   [后台工作站垃圾回收](#background_garbage_collection)  
-  
--   [后台服务器垃圾回收](#background_server_garbage_collection)  
-  
+ 本主题介绍垃圾回收的核心概念。 
+ 
 <a name="fundamentals_of_memory"></a>   
 ## <a name="fundamentals-of-memory"></a>内存基础知识  
  下面的列表总结了重要的 CLR 内存概念。  
@@ -109,9 +90,9 @@ ms.locfileid: "55066315"
   
  垃圾回收的侵入性（频率和持续时间）是由分配的数量和托管堆上保留的内存数量决定的。  
   
- 此堆可视为两个堆的累计：大对象堆和小对象堆。  
+ 此堆可视为两个堆的累计：[大对象堆](large-object-heap.md)和小对象堆。  
   
- 大对象堆包含其大小为 85,000 个字节和更多字节的对象。 大对象堆上的对象通常是数组。 非常大的实例对象是很少见的。  
+ [大对象堆](large-object-heap.md)包含大小为 85,000 个字节和更多字节的大型对象。 大对象堆上的对象通常是数组。 非常大的实例对象是很少见的。  
   
  [返回页首](#top)  
   
