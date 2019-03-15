@@ -4,19 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID95
 ms.assetid: 02b8e145-7988-48ad-abad-ed7656b4933c
-ms.openlocfilehash: 8eeadcbae52991da6f8a0c5ea12d123df0036927
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43fe227ec0597c211a008e8620d5e5e2a8d87d84
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566809"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039594"
 ---
-# <a name="application-defined-or-object-defined-error"></a><span data-ttu-id="269f0-102">应用程序定义的错误或对象定义的错误</span><span class="sxs-lookup"><span data-stu-id="269f0-102">Application-defined or object-defined error</span></span>
-<span data-ttu-id="269f0-103">出现应用程序定义的错误或对象定义的错误。</span><span class="sxs-lookup"><span data-stu-id="269f0-103">An application-defined or user-defined error occurred.</span></span> <span data-ttu-id="269f0-104">检查错误。</span><span class="sxs-lookup"><span data-stu-id="269f0-104">Check the error.</span></span>  
+# <a name="application-defined-or-object-defined-error"></a><span data-ttu-id="0a42e-102">应用程序定义的错误或对象定义的错误</span><span class="sxs-lookup"><span data-stu-id="0a42e-102">Application-defined or object-defined error</span></span>
+<span data-ttu-id="0a42e-103">出现应用程序定义的错误或对象定义的错误。</span><span class="sxs-lookup"><span data-stu-id="0a42e-103">An application-defined or user-defined error occurred.</span></span> <span data-ttu-id="0a42e-104">检查错误。</span><span class="sxs-lookup"><span data-stu-id="0a42e-104">Check the error.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="269f0-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="269f0-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0a42e-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="0a42e-105">To correct this error</span></span>  
   
--   <span data-ttu-id="269f0-106">请查看错误以了解定义的位置以及解决方法。</span><span class="sxs-lookup"><span data-stu-id="269f0-106">Consult the error to see where it is defined and how to address it.</span></span>  
+-   <span data-ttu-id="0a42e-106">请查看错误以了解定义的位置以及解决方法。</span><span class="sxs-lookup"><span data-stu-id="0a42e-106">Consult the error to see where it is defined and how to address it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="269f0-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="269f0-107">See also</span></span>
-- [<span data-ttu-id="269f0-108">错误类型</span><span class="sxs-lookup"><span data-stu-id="269f0-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="0a42e-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="0a42e-107">See also</span></span>
+
+- [<span data-ttu-id="0a42e-108">错误类型</span><span class="sxs-lookup"><span data-stu-id="0a42e-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
