@@ -449,7 +449,7 @@
 ### [签名文件](fsharp/language-reference/signature-files.md)
 ### [度量单位](fsharp/language-reference/units-of-measure.md)
 ### [XML 文档](fsharp/language-reference/xml-documentation.md)
-### [延迟计算](fsharp/language-reference/lazy-computations.md)
+### [延迟表达式](fsharp/language-reference/lazy-expressions.md)
 ### [计算表达式](fsharp/language-reference/computation-expressions.md)
 ### [异步工作流](fsharp/language-reference/asynchronous-workflows.md)
 ### [查询表达式](fsharp/language-reference/query-expressions.md)
@@ -1210,6 +1210,7 @@
 #### [使用 PredictionEngine 一次执行一个预测](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [操作已定型的模型](machine-learning/how-to-guides/consuming-model-ml-net.md)
 #### [提供模型 Azure Functions](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
+#### [在 Web API 中提供模型](machine-learning/how-to-guides/serve-model-web-api-ml-net.md)
 ### Infer.NET
 #### [使用 Infer.NET 进行概率编程](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## 参考
