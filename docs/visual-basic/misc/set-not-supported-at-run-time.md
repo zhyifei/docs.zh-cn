@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID382
 ms.assetid: cb7285d3-778f-423d-a2be-88573be8ad48
-ms.openlocfilehash: c5ab1fe0dc6f588f710cb2879aad7896d13be800
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a229bdea576f5edeaad9cc5dd63d6223ffce7d9
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537772"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049357"
 ---
 # <a name="set-not-supported-at-run-time"></a>运行时不支持设置。
 你尝试设置或更改其值只能在设计时设置的属性。  
@@ -21,4 +21,5 @@ ms.locfileid: "54537772"
 2.  更改引用以便在运行时仅返回该属性的值。  
   
 ## <a name="see-also"></a>请参阅
+
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
