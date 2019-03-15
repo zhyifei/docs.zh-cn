@@ -33,9 +33,22 @@ ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
   
  [C# 语言规范](../../../_csharplang/spec/introduction.md)  
  C# 6.0 语言规范。 本文是针对 C# 6.0 语言的建议草案。 版本 5.0 已于 2017 年 12 月发布为 [Standard ECMA-334 第 5 版](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)文档。
-  
+
+已在 C# 6.0 之后的版本中实现的功能将表示在语言规范建议中。 这些文档描述了语言规范的增量，以便添加这些新功能。 
+
  [C# 7.0 语言建议](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
  C# 7.0 中实现了许多新功能。 这些功能包括：模式匹配、本地函数、out 变量声明、throw 表达式、二进制文本和数字分隔符。 此文件夹包含适用于每个功能的规范。
+  
+ [C# 7.1 语言建议](../../../_csharplang/proposals/csharp-7.1/async-main.md)  
+ C# 7.1 中有以下新增功能。 首先，可编写返回 `Task` 或 `Task<int>` 的 `Main` 方法。 由此可将 `async` 修饰符添加到 `Main`。 可推断类型的位置中没有类型时可使用 `default` 表达式。 同时，也可推断元组成员名称。 最后，可通过泛型使用模式匹配。
+
+ [C# 7.2 语言建议](../../../_csharplang/proposals/csharp-7.2/readonly-ref.md)  
+ C#7.2 添加了大量小功能。 可使用 `in` 关键字通过只读引用传递参数。 许多低级更改可支持 `Span` 及相关类型的编译时安全性。 在某些情况下，可使用已命名参数，其中后面的参数是位置参数。 借助 `private protected` 访问修饰符，可指定调用方仅限于在同一程序集中实现的派生类型。 `?:` 运算符可解析位对变量的引用。 还可使用前导数字分隔符格式化十六进制和二进制数字。   
+
+ [C# 7.3 语言建议](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
+ C# 7.3 是另一个包含多个小更新的重要发布。 可对泛型类型参数使用新约束。 通过其他更改，可更轻松地使用 `fixed` 字段，包括使用 [`stackalloc`](./keywords/stackalloc.md) 分配。 可以重新分配使用 `ref` 关键字声明的本地变量以引用新存储。 可将属性放置在自动实现的属性上，该属性针对编译器生成的支持字段。 表达式变量可用于初始化表达式中。 可以比较元组的相等性（或不等性）。 重载决策也有一些改进。
+  
+ [C# 8.0 语言建议](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)预览中提供 C# 8.0。 以下建议是这些功能规范的当前版本。 有些更加完善，但有些仍在进行中。 预览中提供的功能包括可以为 null 的空引用类型、递归模式匹配、异步流、范围和索引、基于模式的 using 和 using 声明以及 null 合并分配。
   
 ## <a name="related-sections"></a>相关章节  
 
