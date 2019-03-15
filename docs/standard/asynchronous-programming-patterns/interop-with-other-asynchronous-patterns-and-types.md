@@ -104,7 +104,7 @@ ms.locfileid: "54678338"
  [!code-csharp[Conceptual.AsyncInterop#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Semaphore1.cs#13)]
  [!code-vb[Conceptual.AsyncInterop#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Semaphore1.vb#13)]  
   
- 还可以构建不依赖等待句柄就完全可以处理任务的异步信号量。 若要执行此操作，可以使用 [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) 中所述的用于在 <xref:System.Threading.Tasks.Task>。  
+ 还可以构建不依赖等待句柄就完全可以处理任务的异步信号量。 若要执行此操作，可以使用 [使用基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) 中所述的用于在 <xref:System.Threading.Tasks.Task>。  
   
 <a name="TapToWH"></a>   
 ### <a name="from-tap-to-wait-handles"></a>从 TAP 到等待句柄  
@@ -117,4 +117,4 @@ ms.locfileid: "54678338"
 
 - [基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [实现基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
-- [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [使用基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)

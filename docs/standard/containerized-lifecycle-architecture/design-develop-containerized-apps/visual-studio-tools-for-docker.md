@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680355"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844244"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>在 Windows 上的 Visual Studio 2017 中使用 Docker 工具
 
@@ -20,7 +20,8 @@ ms.locfileid: "57680355"
 
 使用 Docker 的 Windows 的最新版本，它是比以往要开发 Docker 应用程序的以下参考中所述，安装程序非常简单，因为更容易。
 
-> [!信息] 若要了解有关安装 Windows 的 Docker 的详细信息，请转到 (<https://docs.docker.com/docker-for-windows/>)。
+> [!TIP]
+> 若要了解有关安装 Windows 的 Docker 的详细信息，请转到 (<https://docs.docker.com/docker-for-windows/>)。
 
 ## <a name="docker-support-in-visual-studio-2017"></a>Visual Studio 2017 中的 docker 支持
 
@@ -83,7 +84,8 @@ ms.locfileid: "57680355"
 > [!WARNING]
 > 如果 localhost SSL 证书不受信任，并选中复选框后，若要禁止显示提示，然后 HTTPS web 请求可能会在你的应用程序或服务中的运行时失败。 在这种情况下，取消选中**不会提示**复选框，会运行你的项目，并指示在提示符下的信任。
 
-> [!信息] 的服务实现和使用的 Visual Studio Tools for Docker 的详细信息，请阅读以下文章：
+> [!TIP]
+> 有关服务实现和使用的 Visual Studio Tools for Docker 的详细信息，请阅读以下文章：
 >
 >在本地 Docker 容器中调试应用程序： <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >

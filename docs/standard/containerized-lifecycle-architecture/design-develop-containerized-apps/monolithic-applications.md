@@ -4,12 +4,12 @@ description: 了解用于容器化整体式应用程序的核心概念。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676832"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843540"
 ---
 # <a name="monolithic-applications"></a>单一式应用程序
 
@@ -63,7 +63,7 @@ ms.locfileid: "57676832"
 
 尽管整体式应用可能得益于 Docker，但我们触摸上仅优势的提示。 使用管理各种实例和生命周期的每个容器实例的容器协调器部署来自管理容器的更大的好处。 将整体式应用程序分解为可以单独缩放、开发和部署的子系统是进入微服务领域的切入点。
 
-若要了解有关如何对"提升和转移"整体式应用程序使用容器和如何实现现代化您的应用程序，您可以阅读此附加的 Microsoft 指南，[更新现有.NET 应用程序使用 Azure 云和 Windows 容器](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/)，，您也可以下载以 pdf 格式从<https://aka.ms/LiftAndShiftWithContainersEbook>。
+若要了解有关如何对"提升和转移"整体式应用程序使用容器和如何实现现代化您的应用程序，您可以阅读此附加的 Microsoft 指南，[更新现有.NET 应用程序使用 Azure 云和 Windows 容器](../../modernize-with-azure-and-containers/index.md)，，您也可以下载以 pdf 格式从<https://aka.ms/LiftAndShiftWithContainersEbook>。
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>将单个 Docker 容器应用程序发布到 Azure 应用服务
 
