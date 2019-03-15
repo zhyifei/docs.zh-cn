@@ -2,68 +2,71 @@
 title: 在 SQL Server 中授予行级权限
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 092520f04ba828c9589a16b4ffd6574d04170249
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: acd4a8962e0c4cd3504b9912a4de66d2a461805a
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092990"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844764"
 ---
-# <a name="granting-row-level-permissions-in-sql-server"></a><span data-ttu-id="9e5b0-102">在 SQL Server 中授予行级权限</span><span class="sxs-lookup"><span data-stu-id="9e5b0-102">Granting Row-Level Permissions in SQL Server</span></span>
-<span data-ttu-id="9e5b0-103">在某些情况下，会要求更为细致地控制数据访问，而不仅仅是授予、撤消或拒绝提供的权限。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-103">In some scenarios, there is a requirement to control access to data at a more granular level than what simply granting, revoking, or denying permissions provides.</span></span> <span data-ttu-id="9e5b0-104">例如，医院数据库应用程序可能需要限制各个医生只访问与自己的患者相关的信息。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-104">For example, a hospital database application may require individual Doctors to be restricted to accessing information related to only their patients.</span></span> <span data-ttu-id="9e5b0-105">在很多环境（包括财务、法律、政府和军事应用程序）中都存在类似的要求。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-105">Similar requirements exist in many environments, including finance, law, government, and military applications.</span></span> <span data-ttu-id="9e5b0-106">为了满足这些情况，SQL Server 2016 提供了 [行级安全](/sql/relational-databases/security/row-level-security) 功能，可以用于简化并集中化安全策略中的行级访问逻辑。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-106">To help address these scenarios, SQL Server 2016 provides a [Row-Level Security](/sql/relational-databases/security/row-level-security) feature that simplifies and centralizes row-level access logic in a security policy.</span></span> <span data-ttu-id="9e5b0-107">对于 SQL Server 的早期版本，可以通过使用视图制定行级筛选来实现类似功能。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-107">For earlier versions of SQL Server, similar functionality can be achieved by using views to enact row-level filtering.</span></span>  
-  
-## <a name="implementing-row-level-filtering"></a><span data-ttu-id="9e5b0-108">实现行级筛选</span><span class="sxs-lookup"><span data-stu-id="9e5b0-108">Implementing Row-level Filtering</span></span>  
- <span data-ttu-id="9e5b0-109">行级筛选适用于在类似以上医院示例中的单个表格中存储信息的应用程序。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-109">Row-level filtering is used for applications storing information in a single table like in the hospital example above.</span></span> <span data-ttu-id="9e5b0-110">若要实现行级筛选，每行都有一个定义区别性参数（如用户名、标签或其他标识符）的列。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-110">To implement row-level filtering each row has a column that defines a differentiating parameter, such as a user name, label or other identifier.</span></span> <span data-ttu-id="9e5b0-111">在表格上创建安全策略或视图，利用该表格可以筛选用户可以访问的行。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-111">You create either a security policy or a view on the table, which filters the rows that the user can access.</span></span> <span data-ttu-id="9e5b0-112">然后创建参数化存储的过程，利用该过程可以控制用户可以执行的查询的类型。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-112">You then create parameterized stored procedures, which control the types of queries the user can execute.</span></span>  
-  
- <span data-ttu-id="9e5b0-113">以下示例介绍了基于用户名或登录名如何配置行级筛选：</span><span class="sxs-lookup"><span data-stu-id="9e5b0-113">The following example describes how to configure row-level filtering based on a user or login name:</span></span>  
-  
--   <span data-ttu-id="9e5b0-114">创建表格，同时添加要存储名称的列。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-114">Create the table, adding a column to store the name.</span></span>  
-  
--   <span data-ttu-id="9e5b0-115">启用行级筛选：</span><span class="sxs-lookup"><span data-stu-id="9e5b0-115">Enable row-level filtering:</span></span>  
-  
-    -   <span data-ttu-id="9e5b0-116">如果你使用的是 SQL Server 2016 或更高版本，或使用的是 [Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/)，则创建在表格中添加谓词的安全策略，该表格将返回的行限制为符合当前数据库用户（使用 CURRENT_USER() 内置函数）或当前登录名（使用 SUSER_SNAME() 内置函数）的行：</span><span class="sxs-lookup"><span data-stu-id="9e5b0-116">If you are using SQL Server 2016 or higher, or [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/), create a security policy that adds a predicate on the table restricting the rows returned to those that match either the current database user (using the CURRENT_USER() built-in function) or the current login name (using the SUSER_SNAME() built-in function):</span></span>  
-  
-        ```tsql  
-        CREATE SCHEMA Security  
-        GO  
-  
-        CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)  
-            RETURNS TABLE  
-            WITH SCHEMABINDING  
-        AS  
-            RETURN SELECT 1 AS accessResult  
-            WHERE @UserName = SUSER_SNAME()  
-        GO  
-  
-        CREATE SECURITY POLICY Security.userAccessPolicy  
-            ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,  
-            ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable  
-        GO  
-        ```  
-  
-    -   <span data-ttu-id="9e5b0-117">如果你使用的是 2016 之前的 SQL Server 版本，则可以使用视图实现类似功能：</span><span class="sxs-lookup"><span data-stu-id="9e5b0-117">If you are using a version of SQL Server prior to 2016, you can achieve similar functionality using a view:</span></span>  
-  
-        ```tsql  
-        CREATE VIEW vw_MyTable  
-        AS  
-            RETURN SELECT * FROM MyTable  
-            WHERE UserName = SUSER_SNAME()  
-        GO  
-        ```  
-  
--   <span data-ttu-id="9e5b0-118">创建用于选择、插入、更新和删除数据的存储过程。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-118">Create stored procedures to select, insert, update, and delete data.</span></span> <span data-ttu-id="9e5b0-119">如果由安全策略实施筛选，存储过程则应直接在基表上执行这些操作；否则，如果由视图实施筛选，存储过程则应将执行操作改为运行视图。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-119">If the filtering is enacted by a security policy, the stored procedures should perform these operations on the base table directly; otherwise, if the filtering is enacted by a view, the stored procedures should instead operate against the view.</span></span> <span data-ttu-id="9e5b0-120">安全策略或视图会自动筛选由用户查询返回或修改的行，存储过程会提供更坚固的安全边界，以防止具有直接查询访问的用户成功运行可以推断是否存在筛选的数据的查询。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-120">The security policy or view will automatically filter the rows returned or modified by user queries, and the stored procedure will provide a harder security boundary to prevent users with direct query access from successfully running queries that can infer the existence of filtered data.</span></span>  
-  
--   <span data-ttu-id="9e5b0-121">对于插入数据的存储过程，使用安全策略或视图中指定的相同函数捕获用户名称，并将该值插入 UserName 列。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-121">For stored procedures that insert data, capture the user name using the same function specified in the security policy or view, and insert that value into the UserName column.</span></span>  
-  
--   <span data-ttu-id="9e5b0-122">拒绝 `public` 角色在表格（和视图，如果适用）上的所有权限。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-122">Deny all permissions on the tables (and views, if applicable) to the `public` role.</span></span> <span data-ttu-id="9e5b0-123">用户将不能从其他数据库角色继承权限，因为筛选器谓词基于用户或登录名，而不基于角色。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-123">Users will not be able to inherit permissions from other database roles, because the filter predicate is based on user or login names, not on roles.</span></span>  
-  
--   <span data-ttu-id="9e5b0-124">为数据库角色授予对存储过程的 EXECUTE 权限。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-124">Grant EXECUTE on the stored procedures to database roles.</span></span> <span data-ttu-id="9e5b0-125">用户只能通过提供的存储过程访问数据。</span><span class="sxs-lookup"><span data-stu-id="9e5b0-125">Users can only access data through the stored procedures provided.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="9e5b0-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="9e5b0-126">See also</span></span>
-- [<span data-ttu-id="9e5b0-127">行级别安全性</span><span class="sxs-lookup"><span data-stu-id="9e5b0-127">Row-Level Security</span></span>](/sql/relational-databases/security/row-level-security)
-- [<span data-ttu-id="9e5b0-128">保证 ADO.NET 应用程序的安全</span><span class="sxs-lookup"><span data-stu-id="9e5b0-128">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [<span data-ttu-id="9e5b0-129">SQL Server 安全性概述</span><span class="sxs-lookup"><span data-stu-id="9e5b0-129">Overview of SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [<span data-ttu-id="9e5b0-130">SQL Server 中的应用程序安全性方案</span><span class="sxs-lookup"><span data-stu-id="9e5b0-130">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [<span data-ttu-id="9e5b0-131">在 SQL Server 中使用存储过程管理权限</span><span class="sxs-lookup"><span data-stu-id="9e5b0-131">Managing Permissions with Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [<span data-ttu-id="9e5b0-132">在 SQL Server 中编写安全的动态 SQL</span><span class="sxs-lookup"><span data-stu-id="9e5b0-132">Writing Secure Dynamic SQL in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [<span data-ttu-id="9e5b0-133">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="9e5b0-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+# <a name="granting-row-level-permissions-in-sql-server"></a><span data-ttu-id="1171f-102">在 SQL Server 中授予行级权限</span><span class="sxs-lookup"><span data-stu-id="1171f-102">Granting Row-Level Permissions in SQL Server</span></span>
+
+<span data-ttu-id="1171f-103">在某些情况下，会要求更为细致地控制数据访问，而不仅仅是授予、撤消或拒绝提供的权限。</span><span class="sxs-lookup"><span data-stu-id="1171f-103">In some scenarios, there is a requirement to control access to data at a more granular level than what simply granting, revoking, or denying permissions provides.</span></span> <span data-ttu-id="1171f-104">例如，医院数据库应用程序可能需要限制各个医生只访问与自己的患者相关的信息。</span><span class="sxs-lookup"><span data-stu-id="1171f-104">For example, a hospital database application may require individual Doctors to be restricted to accessing information related to only their patients.</span></span> <span data-ttu-id="1171f-105">在很多环境（包括财务、法律、政府和军事应用程序）中都存在类似的要求。</span><span class="sxs-lookup"><span data-stu-id="1171f-105">Similar requirements exist in many environments, including finance, law, government, and military applications.</span></span> <span data-ttu-id="1171f-106">为了满足这些情况，SQL Server 2016 提供了 [行级安全](/sql/relational-databases/security/row-level-security) 功能，可以用于简化并集中化安全策略中的行级访问逻辑。</span><span class="sxs-lookup"><span data-stu-id="1171f-106">To help address these scenarios, SQL Server 2016 provides a [Row-Level Security](/sql/relational-databases/security/row-level-security) feature that simplifies and centralizes row-level access logic in a security policy.</span></span> <span data-ttu-id="1171f-107">对于 SQL Server 的早期版本，可以通过使用视图制定行级筛选来实现类似功能。</span><span class="sxs-lookup"><span data-stu-id="1171f-107">For earlier versions of SQL Server, similar functionality can be achieved by using views to enact row-level filtering.</span></span>
+
+## <a name="implementing-row-level-filtering"></a><span data-ttu-id="1171f-108">实现行级筛选</span><span class="sxs-lookup"><span data-stu-id="1171f-108">Implementing Row-level Filtering</span></span>
+
+<span data-ttu-id="1171f-109">行级筛选适用于在类似以上医院示例中的单个表格中存储信息的应用程序。</span><span class="sxs-lookup"><span data-stu-id="1171f-109">Row-level filtering is used for applications storing information in a single table like in the hospital example above.</span></span> <span data-ttu-id="1171f-110">若要实现行级筛选，每行都有一个定义区别性参数（如用户名、标签或其他标识符）的列。</span><span class="sxs-lookup"><span data-stu-id="1171f-110">To implement row-level filtering each row has a column that defines a differentiating parameter, such as a user name, label or other identifier.</span></span> <span data-ttu-id="1171f-111">在表格上创建安全策略或视图，利用该表格可以筛选用户可以访问的行。</span><span class="sxs-lookup"><span data-stu-id="1171f-111">You create either a security policy or a view on the table, which filters the rows that the user can access.</span></span> <span data-ttu-id="1171f-112">然后创建参数化存储的过程，利用该过程可以控制用户可以执行的查询的类型。</span><span class="sxs-lookup"><span data-stu-id="1171f-112">You then create parameterized stored procedures, which control the types of queries the user can execute.</span></span>
+
+<span data-ttu-id="1171f-113">以下示例介绍了基于用户名或登录名如何配置行级筛选：</span><span class="sxs-lookup"><span data-stu-id="1171f-113">The following example describes how to configure row-level filtering based on a user or login name:</span></span>
+
+- <span data-ttu-id="1171f-114">创建表格，同时添加要存储名称的列。</span><span class="sxs-lookup"><span data-stu-id="1171f-114">Create the table, adding a column to store the name.</span></span>
+
+- <span data-ttu-id="1171f-115">启用行级筛选：</span><span class="sxs-lookup"><span data-stu-id="1171f-115">Enable row-level filtering:</span></span>
+
+    - <span data-ttu-id="1171f-116">如果你使用的是 SQL Server 2016 或更高版本，或使用的是 [Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/)，则创建在表格中添加谓词的安全策略，该表格将返回的行限制为符合当前数据库用户（使用 CURRENT_USER() 内置函数）或当前登录名（使用 SUSER_SNAME() 内置函数）的行：</span><span class="sxs-lookup"><span data-stu-id="1171f-116">If you are using SQL Server 2016 or higher, or [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/), create a security policy that adds a predicate on the table restricting the rows returned to those that match either the current database user (using the CURRENT_USER() built-in function) or the current login name (using the SUSER_SNAME() built-in function):</span></span>
+
+        ```sql
+        CREATE SCHEMA Security
+        GO
+
+        CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
+            RETURNS TABLE
+            WITH SCHEMABINDING
+        AS
+            RETURN SELECT 1 AS accessResult
+            WHERE @UserName = SUSER_SNAME()
+        GO
+
+        CREATE SECURITY POLICY Security.userAccessPolicy
+            ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
+            ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
+        GO
+        ```
+
+    - <span data-ttu-id="1171f-117">如果你使用的是 2016 之前的 SQL Server 版本，则可以使用视图实现类似功能：</span><span class="sxs-lookup"><span data-stu-id="1171f-117">If you are using a version of SQL Server prior to 2016, you can achieve similar functionality using a view:</span></span>
+
+        ```sql
+        CREATE VIEW vw_MyTable
+        AS
+            RETURN SELECT * FROM MyTable
+            WHERE UserName = SUSER_SNAME()
+        GO
+        ```
+
+- <span data-ttu-id="1171f-118">创建用于选择、插入、更新和删除数据的存储过程。</span><span class="sxs-lookup"><span data-stu-id="1171f-118">Create stored procedures to select, insert, update, and delete data.</span></span> <span data-ttu-id="1171f-119">如果由安全策略实施筛选，存储过程则应直接在基表上执行这些操作；否则，如果由视图实施筛选，存储过程则应将执行操作改为运行视图。</span><span class="sxs-lookup"><span data-stu-id="1171f-119">If the filtering is enacted by a security policy, the stored procedures should perform these operations on the base table directly; otherwise, if the filtering is enacted by a view, the stored procedures should instead operate against the view.</span></span> <span data-ttu-id="1171f-120">安全策略或视图会自动筛选由用户查询返回或修改的行，存储过程会提供更坚固的安全边界，以防止具有直接查询访问的用户成功运行可以推断是否存在筛选的数据的查询。</span><span class="sxs-lookup"><span data-stu-id="1171f-120">The security policy or view will automatically filter the rows returned or modified by user queries, and the stored procedure will provide a harder security boundary to prevent users with direct query access from successfully running queries that can infer the existence of filtered data.</span></span>
+
+- <span data-ttu-id="1171f-121">对于插入数据的存储过程，使用安全策略或视图中指定的相同函数捕获用户名称，并将该值插入 UserName 列。</span><span class="sxs-lookup"><span data-stu-id="1171f-121">For stored procedures that insert data, capture the user name using the same function specified in the security policy or view, and insert that value into the UserName column.</span></span>
+
+- <span data-ttu-id="1171f-122">拒绝 `public` 角色在表格（和视图，如果适用）上的所有权限。</span><span class="sxs-lookup"><span data-stu-id="1171f-122">Deny all permissions on the tables (and views, if applicable) to the `public` role.</span></span> <span data-ttu-id="1171f-123">用户将不能从其他数据库角色继承权限，因为筛选器谓词基于用户或登录名，而不基于角色。</span><span class="sxs-lookup"><span data-stu-id="1171f-123">Users will not be able to inherit permissions from other database roles, because the filter predicate is based on user or login names, not on roles.</span></span>
+
+- <span data-ttu-id="1171f-124">为数据库角色授予对存储过程的 EXECUTE 权限。</span><span class="sxs-lookup"><span data-stu-id="1171f-124">Grant EXECUTE on the stored procedures to database roles.</span></span> <span data-ttu-id="1171f-125">用户只能通过提供的存储过程访问数据。</span><span class="sxs-lookup"><span data-stu-id="1171f-125">Users can only access data through the stored procedures provided.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="1171f-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="1171f-126">See also</span></span>
+
+- [<span data-ttu-id="1171f-127">行级别安全性</span><span class="sxs-lookup"><span data-stu-id="1171f-127">Row-Level Security</span></span>](/sql/relational-databases/security/row-level-security)
+- [<span data-ttu-id="1171f-128">保证 ADO.NET 应用程序的安全</span><span class="sxs-lookup"><span data-stu-id="1171f-128">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [<span data-ttu-id="1171f-129">SQL Server 安全性概述</span><span class="sxs-lookup"><span data-stu-id="1171f-129">Overview of SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
+- [<span data-ttu-id="1171f-130">SQL Server 中的应用程序安全性方案</span><span class="sxs-lookup"><span data-stu-id="1171f-130">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [<span data-ttu-id="1171f-131">在 SQL Server 中使用存储过程管理权限</span><span class="sxs-lookup"><span data-stu-id="1171f-131">Managing Permissions with Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [<span data-ttu-id="1171f-132">在 SQL Server 中编写安全的动态 SQL</span><span class="sxs-lookup"><span data-stu-id="1171f-132">Writing Secure Dynamic SQL in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
+- [<span data-ttu-id="1171f-133">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="1171f-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
