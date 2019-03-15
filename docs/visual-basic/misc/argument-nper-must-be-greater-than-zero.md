@@ -1,17 +1,17 @@
 ---
-title: 自变量“NPer”必须大于零
+title: 参数“NPer”必须大于零
 ms.date: 07/20/2015
 f1_keywords:
 - vbrRate_NPerMustBeGTZero
 ms.assetid: d49242df-dbd1-4b26-bd8c-ed56d24fdfcd
-ms.openlocfilehash: 23e3f59236d30ee7293fa1784c5f0a0d1a087713
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f54a2da0eb0c1cc31a4aa536fdcb59026240a25
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497467"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58023929"
 ---
-# <a name="argument-nper-must-be-greater-than-zero"></a>自变量“NPer”必须大于零
+# <a name="argument-nper-must-be-greater-than-zero"></a>参数“NPer”必须大于零
 返回一个指定基于定期固定付款和固定利率的年金的期间数的 `NPer` 的 `Double` 函数要求一个大于零的参数。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
@@ -21,4 +21,5 @@ ms.locfileid: "54497467"
 -   检查之前对表达式中的变量进行的操作，尤其是那些从其他过程作为参数传递给该过程的操作。  
   
 ## <a name="see-also"></a>请参阅
+
 - [按值和按引用传递自变量](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
