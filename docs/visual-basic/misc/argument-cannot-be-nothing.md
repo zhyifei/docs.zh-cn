@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrGeneral_ArgumentNullException
 ms.assetid: 2abd995b-36a5-45f0-b3c1-6e0c3b31a875
-ms.openlocfilehash: 157329c74e9c300f8d4d60d96980f9cb77d0e550
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 38083848927ff0242ba6e0712c390a3516743967
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656123"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58041520"
 ---
 # <a name="argument-cannot-be-nothing"></a>参数不能为 Nothing
 向必须具有值的参数提供了 null 值。  
@@ -21,4 +21,5 @@ ms.locfileid: "54656123"
 -   检查值是否计算正确。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.NullReferenceException>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: e194dbef0f18657646161a3f5cc4812b3ab78f7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80127bae06a90dccd204b0f2a4baef10732ade76
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530088"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039467"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>自定义类型和库的 XAML 相关 CLR 特性
 本主题介绍由.NET Framework XAML 服务定义的公共语言运行时 (CLR) 属性。 它还介绍了在.NET Framework 中定义具有对程序集或类型的应用程序的 XAML 相关方案的其他 CLR 属性。 使用这些 CLR 特性属性的程序集、 类型或成员提供了与您的类型相关的 XAML 类型系统信息。 到直接处理 XAML 节点流或专用的 XAML 读取器和 XAML 编写器通过使用.NET Framework XAML 服务的任何 XAML 使用者提供信息。  
@@ -81,7 +81,7 @@ ms.locfileid: "54530088"
   
  **参数：** 一个<xref:System.Type>，它指定要为预期的最精确类型`ProvideValue`结果的特性化<xref:System.Windows.Markup.MarkupExtension>。  
   
- 有关详细信息，请参阅[Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
+ 有关详细信息，请参阅[Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
 ### <a name="namescopepropertyattribute"></a>NameScopePropertyAttribute  
  **参考文档：**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
@@ -103,7 +103,7 @@ ms.locfileid: "54530088"
   
  **参数：** 一个字符串，在特性化类型上指定的运行时名称属性的名称。  
   
- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 报告将映射到 XAML 特性化类型的属性[X:name 指令](../../../docs/framework/xaml-services/x-name-directive.md)。 属性的类型必须为<xref:System.String>并且必须是读/写。  
+ <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 报告将映射到 XAML 特性化类型的属性[X:name 指令](x-name-directive.md)。 属性的类型必须为<xref:System.String>并且必须是读/写。  
   
  定义继承到可分配给定义的类型的所有派生类型。 您可以通过应用覆盖特定派生类型上的定义<xref:System.Windows.Markup.RuntimeNamePropertyAttribute>特定派生类型。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "54530088"
   
  **参数：** 无。  
   
- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 应用于可能显示为空白有意义的内容内的子元素的特定类型 (内容由集合具有<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>)。 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 主要与保存路径，但现已推出的加载路径中的 XAML 类型系统通过检查<xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>。 有关详细信息，请参阅[空格处理在 XAML 中](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。  
+ <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 应用于可能显示为空白有意义的内容内的子元素的特定类型 (内容由集合具有<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>)。 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 主要与保存路径，但现已推出的加载路径中的 XAML 类型系统通过检查<xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>。 有关详细信息，请参阅[空格处理在 XAML 中](whitespace-processing-in-xaml.md)。  
   
 ### <a name="typeconverterattribute"></a>TypeConverterAttribute  
  **参考文档：**  <xref:System.ComponentModel.TypeConverterAttribute>  
@@ -127,7 +127,7 @@ ms.locfileid: "54530088"
   
  您将应用<xref:System.ComponentModel.TypeConverterAttribute>属性为所引用您的类型转换器实现的类型。 在类、 结构或接口，可以为 XAML 定义的类型转换器。 不需要提供类型转换为枚举，以本机方式启用转换。  
   
- 类型转换器应该能够从到预期的目标类型使用的属性或在标记中，初始化文本字符串转换。 有关详细信息，请参阅[TypeConverters 和 XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)。  
+ 类型转换器应该能够从到预期的目标类型使用的属性或在标记中，初始化文本字符串转换。 有关详细信息，请参阅[TypeConverters 和 XAML](../wpf/advanced/typeconverters-and-xaml.md)。  
   
  而不是将应用于所有类型的值，也可建立 XAML 的类型转换器行为上的特定属性。 在这种情况下，应用<xref:System.ComponentModel.TypeConverterAttribute>到属性定义 (外部定义，而不是特定`get`和`set`定义)。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "54530088"
   
  **参数：** 按名称引用的相关属性的字符串。  
   
- 指示该别名的一个类的 CLR 属性[X:uid 指令](../../../docs/framework/xaml-services/x-uid-directive.md)。  
+ 指示该别名的一个类的 CLR 属性[X:uid 指令](x-uid-directive.md)。  
   
 ### <a name="usableduringinitializationattribute"></a>UsableDuringInitializationAttribute  
  **参考文档：**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute>  
@@ -169,7 +169,7 @@ ms.locfileid: "54530088"
   
  **参数：** 无。  
   
- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 指示集合类型应为重要的空白区域处理由 XAML 处理器，这会影响构造的 XAML 节点流的值在集合中的节点。 有关详细信息，请参阅[空格处理在 XAML 中](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。  
+ <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 指示集合类型应为重要的空白区域处理由 XAML 处理器，这会影响构造的 XAML 节点流的值在集合中的节点。 有关详细信息，请参阅[空格处理在 XAML 中](whitespace-processing-in-xaml.md)。  
   
 ### <a name="xamldeferloadattribute"></a>XamlDeferLoadAttribute  
  **参考文档：**  <xref:System.Windows.Markup.XamlDeferLoadAttribute>  
@@ -270,4 +270,4 @@ ms.locfileid: "54530088"
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Attribute>
-- [定义与 .NET Framework XAML 服务一起使用的自定义类型](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+- [定义与 .NET Framework XAML 服务一起使用的自定义类型](defining-custom-types-for-use-with-net-framework-xaml-services.md)

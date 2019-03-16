@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: 8b951b33242fa7e17a02133adb8fed4ce638e51e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68468c3c10fd884cf5fb92160e3cde41dbf7d529
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498042"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58030260"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 内部 XAML 类型
 启用 XAML 生产中的 XML 数据岛的布局。 中的 XML 元素`x:XData`如同它们是使其执行操作默认 XAML 命名空间的一部分或任何其他 XAML 命名空间不应由 XAML 处理器处理。 `x:XData` 可以包含任意格式正确的 XML。  
@@ -45,11 +45,11 @@ ms.locfileid: "54498042"
 ## <a name="wpf-usage-notes"></a>WPF 用法说明  
  `x:XData`主要的子对象的形式使用对象<xref:System.Windows.Data.XmlDataProvider>，或子对象的形式或者<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>属性 （在 XAML，这通常都表示在属性元素语法中）。  
   
- 数据通常应重定义为新的默认 XML 命名空间 （设置为空字符串） 的数据岛中的基本 XML 命名空间。 这是最简单的简单数据岛因为<xref:System.Windows.Data.Binding.XPath%2A>用于引用和绑定到数据的表达式可以避免包含前缀。 更复杂的数据岛可能会使用特定前缀的根处的 XML 命名空间和定义的数据的多个前缀。 在这种情况下，所有<xref:System.Windows.Data.Binding.XPath%2A>表达式引用应包括相应的命名空间映射前缀。 有关详细信息，请参阅[数据绑定概述](../../../docs/framework/wpf/data/data-binding-overview.md)。  
+ 数据通常应重定义为新的默认 XML 命名空间 （设置为空字符串） 的数据岛中的基本 XML 命名空间。 这是最简单的简单数据岛因为<xref:System.Windows.Data.Binding.XPath%2A>用于引用和绑定到数据的表达式可以避免包含前缀。 更复杂的数据岛可能会使用特定前缀的根处的 XML 命名空间和定义的数据的多个前缀。 在这种情况下，所有<xref:System.Windows.Data.Binding.XPath%2A>表达式引用应包括相应的命名空间映射前缀。 有关详细信息，请参阅[数据绑定概述](../wpf/data/data-binding-overview.md)。  
   
  从技术上讲，`x:XData`可以用作类型的任何属性的内容<xref:System.Xml.Serialization.IXmlSerializable>。 但是，<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>是唯一突出的实现。  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Data.XmlDataProvider>
-- [数据绑定概述](../../../docs/framework/wpf/data/data-binding-overview.md)
-- [绑定标记扩展](../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+- [数据绑定概述](../wpf/data/data-binding-overview.md)
+- [绑定标记扩展](../wpf/advanced/binding-markup-extension.md)

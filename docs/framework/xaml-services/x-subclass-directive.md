@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: 67d699782cd2ce2b13e159d2b7218b4868a8794c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c348d8fa2bd66a9abbb64c9363bb4dae0933ba34
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670922"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58047996"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass 指令
 修改 XAML 标记编译行为时`x:Class`还提供了。 而不是创建的分部类的基于`x:Class`，提供`x:Class`中间类，作为创建，然后在提供的派生的类需基于`x:Class`。  
@@ -38,7 +38,7 @@ ms.locfileid: "54670922"
 |`subclassName`|必需。 指定子类的 CLR 名称。|  
   
 ## <a name="dependencies"></a>依赖项  
- [X:class 指令](../../../docs/framework/xaml-services/x-class-directive.md)还必须提供对同一对象，并且该对象必须是 XAML 生产的根元素。  
+ [X:class 指令](x-class-directive.md)还必须提供对同一对象，并且该对象必须是 XAML 生产的根元素。  
   
 ## <a name="remarks"></a>备注  
  `x:Subclass` 使用情况主要适用于不支持分部类声明的语言。  
@@ -57,5 +57,5 @@ ms.locfileid: "54670922"
  同时定义何时`x:Class`并`x:Subclass`，不需要提供的类的引用的任何实现`x:Class`。 只需为其提供通过名称`x:Class`属性，以便编译器具有中间文件 （编译器不会选择一个默认名称在这种情况下） 中创建的类的一些指导。 可让`x:Class`类实现; 但是，这不是同时使用这二者的典型情景`x:Class`和`x:Subclass`。  
   
 ## <a name="see-also"></a>请参阅
-- [x:Class 指令](../../../docs/framework/xaml-services/x-class-directive.md)
-- [XAML 及 WPF 的自定义类](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [x:Class 指令](x-class-directive.md)
+- [XAML 及 WPF 的自定义类](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
