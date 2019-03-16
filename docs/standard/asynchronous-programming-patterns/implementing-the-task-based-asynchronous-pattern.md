@@ -103,5 +103,6 @@ ms.locfileid: "54678208"
 
 ## <a name="see-also"></a>请参阅
 
+- [基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [使用基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
 - [与其他异步模式和类型互操作](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
