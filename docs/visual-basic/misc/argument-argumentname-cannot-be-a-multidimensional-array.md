@@ -4,20 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_RankEQOne1
 ms.assetid: 3b44521a-44e3-4cbe-9a99-1e0ac6ccf537
-ms.openlocfilehash: b48bb042a5bb959eea3f1bba7dc607e43ad8838c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2732a2db89b86bd18f2bd90bdf0d2609c7b66b94
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270779"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58041569"
 ---
-# <a name="argument-argumentname-cannot-be-a-multidimensional-array"></a><span data-ttu-id="cefdd-102">参数\<argumentname > 不能为多维数组</span><span class="sxs-lookup"><span data-stu-id="cefdd-102">Argument '\<argumentname>' cannot be a multidimensional array</span></span>
-<span data-ttu-id="cefdd-103">数组参数的秩大于 1，但它只能是一维数组。</span><span class="sxs-lookup"><span data-stu-id="cefdd-103">The rank of an array argument is greater than 1, but it can only be a one-dimensional array.</span></span>  
+# <a name="argument-argumentname-cannot-be-a-multidimensional-array"></a><span data-ttu-id="c4be4-102">参数\<argumentname > 不能为多维数组</span><span class="sxs-lookup"><span data-stu-id="c4be4-102">Argument '\<argumentname>' cannot be a multidimensional array</span></span>
+<span data-ttu-id="c4be4-103">数组参数的秩大于 1，但它只能是一维数组。</span><span class="sxs-lookup"><span data-stu-id="c4be4-103">The rank of an array argument is greater than 1, but it can only be a one-dimensional array.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="cefdd-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="cefdd-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c4be4-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="c4be4-104">To correct this error</span></span>  
   
--   <span data-ttu-id="cefdd-105">将参数秩更改为 1。</span><span class="sxs-lookup"><span data-stu-id="cefdd-105">Change the argument rank to 1.</span></span>  
+-   <span data-ttu-id="c4be4-105">将参数秩更改为 1。</span><span class="sxs-lookup"><span data-stu-id="c4be4-105">Change the argument rank to 1.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cefdd-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="cefdd-106">See also</span></span>
-- [<span data-ttu-id="cefdd-107">Visual Basic 中的数组</span><span class="sxs-lookup"><span data-stu-id="cefdd-107">Arrays in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/language-features/arrays/index.md)
-- [<span data-ttu-id="cefdd-108">在 Visual Basic 中的数组维数</span><span class="sxs-lookup"><span data-stu-id="cefdd-108">Array dimensions in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/language-features/arrays/array-dimensions.md)
+## <a name="see-also"></a><span data-ttu-id="c4be4-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="c4be4-106">See also</span></span>
+
+- [<span data-ttu-id="c4be4-107">Visual Basic 中的数组</span><span class="sxs-lookup"><span data-stu-id="c4be4-107">Arrays in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="c4be4-108">在 Visual Basic 中的数组维数</span><span class="sxs-lookup"><span data-stu-id="c4be4-108">Array dimensions in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/language-features/arrays/array-dimensions.md)
