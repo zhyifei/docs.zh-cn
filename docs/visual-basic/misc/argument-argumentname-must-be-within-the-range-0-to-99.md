@@ -4,21 +4,22 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_Range0to99_1
 ms.assetid: d9d9a15e-c5ee-4104-9504-b48a4a191415
-ms.openlocfilehash: 8ba9753e71fc6588d4abaea1f4bc7dd5d1731117
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 660c011e16e646a755d11a338ba47d13610a46e1
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267191"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58032108"
 ---
-# <a name="argument-argumentname-must-be-within-the-range-0-to-99"></a><span data-ttu-id="1e5da-102">参数\<argumentname > 必须在 0 到 99 的范围内</span><span class="sxs-lookup"><span data-stu-id="1e5da-102">Argument '\<argumentname>' must be within the range 0 to 99</span></span>
-<span data-ttu-id="1e5da-103">参数无效，因为它超出了 0 到 99 的范围。</span><span class="sxs-lookup"><span data-stu-id="1e5da-103">An argument is not valid because it falls outside of the range 0 to 99.</span></span>  
+# <a name="argument-argumentname-must-be-within-the-range-0-to-99"></a><span data-ttu-id="17730-102">参数\<argumentname > 必须在 0 到 99 的范围内</span><span class="sxs-lookup"><span data-stu-id="17730-102">Argument '\<argumentname>' must be within the range 0 to 99</span></span>
+<span data-ttu-id="17730-103">参数无效，因为它超出了 0 到 99 的范围。</span><span class="sxs-lookup"><span data-stu-id="17730-103">An argument is not valid because it falls outside of the range 0 to 99.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="1e5da-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="1e5da-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="17730-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="17730-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="1e5da-105">检查表达式中参数的拼写是否正确。</span><span class="sxs-lookup"><span data-stu-id="1e5da-105">Check the spelling of arguments in the expression.</span></span> <span data-ttu-id="1e5da-106">拼写错误的变量名可能会隐式创建一个初始化为零的数值变量。</span><span class="sxs-lookup"><span data-stu-id="1e5da-106">A misspelled variable name can implicitly create a numeric variable that is initialized to zero.</span></span>  
+1.  <span data-ttu-id="17730-105">检查表达式中参数的拼写是否正确。</span><span class="sxs-lookup"><span data-stu-id="17730-105">Check the spelling of arguments in the expression.</span></span> <span data-ttu-id="17730-106">拼写错误的变量名可能会隐式创建一个初始化为零的数值变量。</span><span class="sxs-lookup"><span data-stu-id="17730-106">A misspelled variable name can implicitly create a numeric variable that is initialized to zero.</span></span>  
   
-2.  <span data-ttu-id="1e5da-107">检查之前对表达式中的变量进行的操作，尤其是那些从其他过程作为参数传递给该过程的操作。</span><span class="sxs-lookup"><span data-stu-id="1e5da-107">Check previous operations on variables in the expression, especially those passed into the procedure as arguments from other procedures.</span></span>  
+2.  <span data-ttu-id="17730-107">检查之前对表达式中的变量进行的操作，尤其是那些从其他过程作为参数传递给该过程的操作。</span><span class="sxs-lookup"><span data-stu-id="17730-107">Check previous operations on variables in the expression, especially those passed into the procedure as arguments from other procedures.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e5da-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="1e5da-108">See also</span></span>
-- [<span data-ttu-id="1e5da-109">按值和按引用传递自变量</span><span class="sxs-lookup"><span data-stu-id="1e5da-109">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+## <a name="see-also"></a><span data-ttu-id="17730-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="17730-108">See also</span></span>
+
+- [<span data-ttu-id="17730-109">按值和按引用传递自变量</span><span class="sxs-lookup"><span data-stu-id="17730-109">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
