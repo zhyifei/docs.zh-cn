@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 74fcc158c0556b85ac5175584fa4948513c69053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641104"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58050600"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code 内部 XAML 类型
 允许放置 XAML 生产中的代码。 此类代码也可以通过编译 XAML 或由运行时中以备后用，例如解释 XAML 生产留下任何 XAML 处理器实现编译。  
@@ -40,7 +40,7 @@ ms.locfileid: "54641104"
   
 -   `x:Code`指令元素必须是 XAML 生产的根元素的直接子元素。  
   
--   [X:class 指令](../../../docs/framework/xaml-services/x-class-directive.md)必须提供父根元素上。  
+-   [X:class 指令](x-class-directive.md)必须提供父根元素上。  
   
 -   该代码放在`x:Code`将被视为由编译为已经对此 XAML 页创建的分部类的作用域内。 因此您定义的所有代码必须都是该分部类的成员或变量。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "54641104"
 -   必须完全限定所有的分部类的 CLR 命名空间之外的代码实体的引用。 如果所声明的成员是重写的分部类可重写成员，这必须指定与特定于语言的 override 关键字。 如果在中声明成员`x:Code`作用域与带 XAML 创建的分部类的成员冲突，这样，编译器会报告冲突，XAML 文件无法编译或加载。  
   
 ## <a name="see-also"></a>请参阅
-- [x:Class 指令](../../../docs/framework/xaml-services/x-class-directive.md)
-- [WPF 中的代码隐藏和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [x:Class 指令](x-class-directive.md)
+- [WPF 中的代码隐藏和 XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [XAML 概述 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

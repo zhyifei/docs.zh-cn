@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_ReadOnlyField2
 ms.assetid: fb51f54b-f12d-4aea-9a6e-6e070721c010
-ms.openlocfilehash: 77d02cbd58f45e7a2901fc50fe127d0554d219bb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b2f0a128d45190c121d1d836b45d62022dc6fd9
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359492"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58043722"
 ---
 # <a name="field-fieldname-of-type-typename-is-readonly"></a>字段\<fieldname > 类型的\<类型名称 > 是 ReadOnly
 试图向到声明为 `ReadOnly`的字段进行写入。  
@@ -23,4 +23,5 @@ ms.locfileid: "57359492"
 -   不要尝试向此字段进行写入。  
   
 ## <a name="see-also"></a>请参阅
+
 - [ReadOnly](../../visual-basic/language-reference/modifiers/readonly.md)
