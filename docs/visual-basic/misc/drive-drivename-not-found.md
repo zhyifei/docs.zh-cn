@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-ms.openlocfilehash: 95d9c0d23d9159758c1dbf9719ed64e6786fa427
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4f55ed9b5de2b96e19bbe78c1cc38baa7fff798f
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288816"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034405"
 ---
 # <a name="drive-drivename-not-found"></a>驱动器\<drivename > 找不到
 无法找到该驱动器。 已失去网络连接，或是尝试访问的驱动器处于脱机状态或不存在。  
@@ -25,5 +25,5 @@ ms.locfileid: "55288816"
 4.  重新连接网络，然后重试。  
   
 ## <a name="see-also"></a>请参阅
-- [错误类型](../../visual-basic/programming-guide/language-features/error-types.md)
 
+- [错误类型](../../visual-basic/programming-guide/language-features/error-types.md)

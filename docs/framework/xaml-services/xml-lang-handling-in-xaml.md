@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 508c1151b1b196a84b7c3a576e18d10c0a706fad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ec844c37ee2ef7979c82b308cdf167a46a3c072
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692387"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034425"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML 中 xml:lang 的处理
 `xml:lang` 属性是 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]定义的属性，用于在 XML 中声明元素的语言和区域性信息。 此属性的相同含义在 XAML 中持续存在；但有一些其他注意事项。  
@@ -44,4 +44,4 @@ ms.locfileid: "54692387"
  对于身为 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement>派生类的元素，可以使用等效 <xref:System.Windows.FrameworkElement.Language%2A> 依赖项属性取代 `xml:lang` 属性。 默认情况下，如果未通过属性或通过处理 <xref:System.Windows.FrameworkElement.Language%2A> 属性来另外设置 `xml:lang` 属性，则它使用“en-US”。  
   
 ## <a name="see-also"></a>请参阅
-- [WPF 全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [WPF 全球化](../wpf/advanced/globalization-for-wpf.md)
