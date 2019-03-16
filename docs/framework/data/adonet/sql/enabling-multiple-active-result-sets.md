@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 70e589fcff241a664ef470dfeb746412cde6b515
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbd70631a365c8687ad9b7ed89639e9041e4366e
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570195"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845661"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>启用多个活动结果集
 多个活动结果集 (MARS) 是一项用于 SQL Server 的功能，可用来对单个连接执行多个批处理。 如果对 SQL Server 启用了 MARS，使用的每个命令对象将向该连接添加一个会话。  
@@ -94,7 +94,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  消息:其他会话正在使用事务的上下文。  
   
- 源：.Net SqlClient 数据提供程序  
+ 源：.NET SqlClient 数据提供程序  
   
  要求：(null)  
   

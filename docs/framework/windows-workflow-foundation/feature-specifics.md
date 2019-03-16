@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 功能详细信息
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721848"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846540"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能详细信息
 
@@ -103,7 +103,7 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 - [标准终结点元素](https://go.microsoft.com/fwlink/?LinkId=204942)
 
-- [中的服务配置改进.Net Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [.NET Framework 4 中的服务配置改进](https://go.microsoft.com/fwlink/?LinkId=204943)
 
 - [.NET 4 中的常见用户错误：WF/WCF 服务配置名称键入错误](https://go.microsoft.com/fwlink/?LinkId=204944)
 
@@ -265,7 +265,7 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 ## <a name="wcf-routing-service"></a>WCF 路由服务
 
-路由服务被旨在作为泛型软件路由器，它使您能够控制 WCF 消息如何在你的客户端和服务之间流动。 路由服务允许你可以将分离客户端从你的服务，这将使您在配置方面的更多自由可以支持和灵活必须考虑如何承载服务时。 在.NET 3.5 中，客户端和服务紧密结合在一起;客户端必须了解的所有服务需要与它及其所在位置。 此外，.Net Framework 3.5 中的 WCF 具有以下限制：
+路由服务被旨在作为泛型软件路由器，它使您能够控制 WCF 消息如何在你的客户端和服务之间流动。 路由服务允许你可以将分离客户端从你的服务，这将使您在配置方面的更多自由可以支持和灵活必须考虑如何承载服务时。 在.NET 3.5 中，客户端和服务紧密结合在一起;客户端必须了解的所有服务需要与它及其所在位置。 此外，.NET Framework 3.5 中的 WCF 具有以下限制：
 
 - 错误处理较为复杂，因为必须将此逻辑硬编码到客户端中。
 
@@ -273,7 +273,7 @@ WCF 配置架构很复杂，为用户提供了许多难以查找功能。 在[!I
 
 - 服务很少能适当地分解：让客户端与一个能实现所有操作的服务进行通信而不必在多个服务之间选择，这样的做法更简单一些。
 
-.Net 4 中的路由服务旨在更轻松地处理这些问题。 新的路由服务具有以下功能：
+.NET 4 中的路由服务旨在轻松地解决这些问题。 新的路由服务具有以下功能：
 
 1. 基于内容的路由（<xref:System.ServiceModel.Dispatcher.MessageFilter> 对象会检查消息以确定其发送位置。）
 
@@ -329,7 +329,7 @@ WCF Discovery 是一种框架技术，可用于将合并到应用程序基础结
 
 ## <a name="tracking"></a>跟踪
 
-工作流跟踪提供了深入了解工作流实例的执行。 从工作流实例级别和工作流中的活动执行工作流发出的跟踪事件。 需要将工作流跟踪参与者添加到工作流主机中以订阅跟踪记录。 使用跟踪配置文件筛选跟踪记录。 .NET Framework 提供了 ETW（Windows 事件跟踪）跟踪参与者，并在 machine.config 文件中安装了基本配置文件。
+工作流跟踪提供了深入了解工作流实例的执行。 从工作流实例级别和工作流中的活动执行工作流发出的跟踪事件。 需要将工作流跟踪参与者添加到工作流主机中以订阅跟踪记录。 使用跟踪配置文件筛选跟踪记录。 .NET Framework 提供了 ETW (Windows 的事件跟踪) 跟踪参与者，和基本配置文件安装在 machine.config 文件中。
 
 ### <a name="getting-started"></a>入门
 

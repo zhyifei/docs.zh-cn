@@ -4,12 +4,12 @@ description: 了解在 ML.NET 中受支持的特征工程组件。
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415346"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355399"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>机器学习数据转换 - ML.NET
 
@@ -25,7 +25,7 @@ ms.locfileid: "54415346"
 | <xref:Microsoft.ML.Transforms.GroupTransform> | 根据相邻的组 ID，将标量列的值汇集到矢量中。 |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | 将矢量列取消组合为一系列行；组转换的逆向。 |
 
-## <a name="conversions"></a>转换 
+## <a name="conversions"></a>转换
 
 | Transform | 定义 |
 | --- | --- |
@@ -36,7 +36,6 @@ ms.locfileid: "54415346"
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | 将键转换为矢量列。 |
 | <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | 如果可以转换类型，则更改基础列类型。 |
 | <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | 将输入值（单词、数字等）转换为字典中的索引。 |
-
 
 ## <a name="deep-learning"></a>深度学习
 
@@ -49,17 +48,17 @@ ms.locfileid: "54415346"
 
 | Transform | 定义 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | 通过将单个令牌（比较不区分大小写）与非索引字进行比较，删除指定的非索引字列表。| 
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | 通过将单个令牌（比较不区分大小写）与非索引字进行比较，删除指定的非索引字列表。|
 | <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | 获取一个或多个 ImageType 列，并将其转换为同一图像的灰度表示形式。|
 | <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | 获取一个或多个 ReadOnlyMemory 列，并将其作为 ImageType 加载。 |
 | <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | 获取一个或多个 ImageType 列，并将其转换为矢量表示形式。|
 | <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | 采用一个或多个 ImageType 列，并将其大小调整为提供的高度和宽度。|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | 实现 LightLDA，这是潜在狄利克雷分布的最先进的实现。|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | 从指定的模型文件加载特定转换。 允许从序列化链中挑选转换，或将预定型的转换应用于不同（但仍然符合）的数据视图。 |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | 在给定的键矢量中生成一组 ngrams 计数（长度为 1-n 的连续值的序列）。 它通过生成 ngram 字典并使用字典中的 ID 作为包中的索引来实现。 | 
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | 将标记化文本（ReadOnlyMemory 的矢量）或键矢量的集合转换为数字特征矢量。 特征矢量是 ngrams 的计数（长度为 1-n 的连续令牌、单词或键的序列）。 | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | 使用哈希代码将标记化文本（ReadOnlyMemory 的矢量）集合转换为数字特征矢量。 | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | 在给定的文本中生成一组 ngrams 计数（长度为 1-n 的连续单词的序列）。 | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | 在给定的键矢量中生成一组 ngrams 计数（长度为 1-n 的连续值的序列）。 它通过生成 ngram 字典并使用字典中的 ID 作为包中的索引来实现。 |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | 将标记化文本（ReadOnlyMemory 的矢量）或键矢量的集合转换为数字特征矢量。 特征矢量是 ngrams 的计数（长度为 1-n 的连续令牌、单词或键的序列）。 |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | 使用哈希代码将标记化文本（ReadOnlyMemory 的矢量）集合转换为数字特征矢量。 |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | 在给定的文本中生成一组 ngrams 计数（长度为 1-n 的连续单词的序列）。 |
 | <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | 通过基于数据生成类别字典并使用字典中的 ID 作为数组中的索引，将分类值转换为指标数组 |
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | 计算特征矢量到低秩子空间的投影。 |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | 使用预先训练的情绪模型对输入字符串进行评分。 |
@@ -73,7 +72,7 @@ ms.locfileid: "54415346"
 
 | Transform | 定义 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | 这是与 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> 一起使用的扩展方法，以便使用预定型的 [AlexNet](https://en.wikipedia.org/wiki/AlexNet) 模型。 包含此扩展的 NuGet 还保证包含二进制模型文件。 | 
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | 这是与 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> 一起使用的扩展方法，以便使用预定型的 [AlexNet](https://en.wikipedia.org/wiki/AlexNet) 模型。 包含此扩展的 NuGet 还保证包含二进制模型文件。 |
 | <xref:Microsoft.ML.Transforms.ResNet18Extension> | 这是与 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> 一起使用的扩展方法，以使用预定型的 ResNet18 模型。 包含此扩展的 NuGet 还保证包含二进制模型文件。 |
 | <xref:Microsoft.ML.Transforms.ResNet50Extension> | 这是与 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> 一起使用的扩展方法，以使用预定型的 ResNet50 模型。 包含此扩展的 NuGet 还保证包含二进制模型文件。 |
 | <xref:Microsoft.ML.Transforms.ResNet101Extension> | 这是与 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> 一起使用的扩展方法，以使用预定型的 ResNet101 模型。 包含此扩展的 NuGet 还保证包含二进制模型文件。 |

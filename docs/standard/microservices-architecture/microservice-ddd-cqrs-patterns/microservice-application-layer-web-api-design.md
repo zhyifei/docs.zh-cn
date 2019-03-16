@@ -1,15 +1,15 @@
 ---
 title: 设计微服务应用层和 Web API
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 应用层设计的 SOLID 原则概述。
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计应用层的 SOLID 原则概述。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: f31c712143a448e12350db1ed242da7561a7a286
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fa292cb97db612506eb7a6f83bb24f37425d690a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147484"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678652"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>设计微服务应用层和 Web API
 
@@ -37,7 +37,7 @@ SOLID 不仅仅是关于如何设计应用程序或微服务内部层以及如�
 
 #### <a name="additional-resources"></a>其他资源
 
-- **SOLID: Fundamental OOP Principles** \（SOLID：基本 OOP 原则）
+- **SOLID：基本 OOP 原则** \
   [*https://deviq.com/solid/*](https://deviq.com/solid/%20)
 
 - **Inversion of Control Containers and the Dependency Injection pattern** \（反向控制容器和依赖关系注入模式）
@@ -46,6 +46,6 @@ SOLID 不仅仅是关于如何设计应用程序或微服务内部层以及如�
 - **Steve Smith.New is Glue** \（新增即粘附）
   [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
 
->[!div class="step-by-step"]
->[上一页](nosql-database-persistence-infrastructure.md)
->[下一页](microservice-application-layer-implementation-web-api.md)
+> [!div class="step-by-step"]
+> [上一页](nosql-database-persistence-infrastructure.md)
+> [下一页](microservice-application-layer-implementation-web-api.md)

@@ -215,5 +215,5 @@ tokenSource.Cancel()
 ## <a name="further-resources"></a>其他资源：
 
 *   [MSDN 上的异步工作流](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [异步序列F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-*   [F#HTTP 数据实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)
+*   [异步序列 F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+*   [F# HTTP 数据实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)

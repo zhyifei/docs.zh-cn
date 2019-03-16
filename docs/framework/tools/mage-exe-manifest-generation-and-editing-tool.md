@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 86aec7bbdc7b57b43e9b547aabd36f808d84d05e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9ea293a3c96f193285f45f8d70ac038e785f548a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146191"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477657"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe（清单生成和编辑工具）
 
@@ -28,7 +28,7 @@ Mage.exe 和 MageUI.exe 的两个版本包含在 Visual Studio 中。 若要查�
 Mage [commands] [commandOptions]
 ```
 
-### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
 下表显示了 Mage.exe 所支持的命令。 有关这些命令所支持的选项的详细信息，请参阅[新建和更新命令选项](#new-and-update-command-options)以及[签名命令选项](#sign-command-options)。
 
@@ -53,13 +53,13 @@ Mage [commands] [commandOptions]
 |**-cf, -CertFile** `filePath`||所有文件类型。|指定用于签署清单或许可证文件的 X509 数字证书的位置。 如果该证书需要个人信息交换 (PFX) 文件的密码，此选项可以与“-Password”选项结合使用。 自 .NET Framework 4.7 开始，如果文件不包含私钥，则需要结合使用 -CryptoProvider 和 -KeyContainer 选项。<br/><br/>自 .NET Framework 4.6.2 起，Mage.exe 使用 CNG 和 CAPI 证书对清单进行签名。|
 |**-ch, -CertHash** `hashSignature`||所有文件类型。|存储在客户端计算机的个人证书存储中的数字证书的哈希。 此哈希对应于在 Windows 证书控制台中查看的数字证书的指纹字符串。<br /><br /> `hashSignature` 可以大写或小写，可以作为单个字符串提供，或者与指纹的每个八进制数一起提供（指纹的每个八进制数用空格分隔，并且整个指纹用引号引起来）。|
 |**-csp, -CryptoProvider** `provider-name`||所有文件类型。|指定包含私钥容器的加密服务提供程序 (CSP) 的名称。 此选项需要 -KeyContainer 选项。<br/><br/>自 .NET Framework 4.7 起，可以使用此选项。|
-|**-fd, -FromDirectory** `directoryPath`||应用程序清单。|使用 `directoryPath`（包括所有子目录）中的所有程序集和文件的说明填充应用程序清单，其中 `directoryPath` 是包含要部署的应用程序的目录。 对于该目录中的每个文件，Mage.exe 将确定该文件是程序集还是静态文件。 如果该文件是程序集，它将向应用程序添加 `<dependency>` 标记和 `installFrom` 特性以及程序集的名称、基本代码和版本。 如果该文件是静态文件，它将添加 `<file>` 标记。 另外，Mage.exe 将通过一组简单的试探法检测应用程序的主要可执行文件，并在清单中将其标记为 ClickOnce 应用程序的入口点。<br /><br /> Mage.exe 永远不会将某个文件自动标记为“数据”文件。 此项操作必须手动完成。 有关详细信息，请参阅 [How to: Include a Data File in a ClickOnce Application](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)。<br /><br /> Mage.exe 还可以根据每个文件的大小为其生成哈希。 ClickOnce 使用这些哈希确保自创建清单以来无人篡改部署文件。 如果部署中的任何文件发生更改，可以将 Mage.exe 与“-Update”命令和“-FromDirectory”选项一起运行，Mage.exe 将更新所有引用文件的哈希和程序集版本。<br /><br /> **-FromDirectory** 将包括 `directoryPath`内所有子目录中的全部文件。<br /><br /> 如果将“-FromDirectory”与“-Update”命令结合使用，Mage.exe 会从应用程序清单中移除该目录中不再存在的所有文件。|
+|**-fd, -FromDirectory** `directoryPath`||应用程序清单。|使用 `directoryPath`（包括所有子目录）中的所有程序集和文件的说明填充应用程序清单，其中 `directoryPath` 是包含要部署的应用程序的目录。 对于该目录中的每个文件，Mage.exe 将确定该文件是程序集还是静态文件。 如果该文件是程序集，它将向应用程序添加 `<dependency>` 标记和 `installFrom` 特性以及程序集的名称、基本代码和版本。 如果该文件是静态文件，它将添加 `<file>` 标记。 另外，Mage.exe 将通过一组简单的试探法检测应用程序的主要可执行文件，并在清单中将其标记为 ClickOnce 应用程序的入口点。<br /><br /> Mage.exe 永远不会将某个文件自动标记为“数据”文件。 此项操作必须手动完成。 有关详细信息，请参阅[如何：将数据文件添加到 ClickOnce 应用程序中](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)。<br /><br /> Mage.exe 还可以根据每个文件的大小为其生成哈希。 ClickOnce 使用这些哈希确保自创建清单以来无人篡改部署文件。 如果部署中的任何文件发生更改，可以将 Mage.exe 与“-Update”命令和“-FromDirectory”选项一起运行，Mage.exe 将更新所有引用文件的哈希和程序集版本。<br /><br /> **-FromDirectory** 将包括 `directoryPath`内所有子目录中的全部文件。<br /><br /> 如果将“-FromDirectory”与“-Update”命令结合使用，Mage.exe 会从应用程序清单中移除该目录中不再存在的所有文件。|
 |**-if, -IconFile**  `filePath`||应用程序清单。|指定 .ICO 图标文件的完整路径。 此图标显示在“开始”菜单中你的应用程序名称的旁边以及其对应的“添加或删除程序”项中。 如果未提供图标，则使用默认图标。|
 |**-ip, -IncludeProviderURL**  `url`|true|部署清单。|指示部署清单是否包含由 **-ProviderURL**设置的更新位置值。|
 |**-i, -Install** `willInstall`|true|部署清单。|指示 ClickOnce 应用程序是否应该安装到本地计算机上，或者该应用程序是否应通过 Web 运行。 安装某个应用程序后，该应用程序将会显示在 Windows 的 **“开始”** 菜单中。 有效值为“true”或“t”以及“false”或“f”。<br /><br /> 如果指定 **-MinVersion** 选项，并且用户安装的版本低于 **-MinVersion** ，则无论向 **-Install**传递何值，该选项都会强制安装应用程序。<br /><br /> 此选项不能与 **-BrowserHosted** 选项一起使用。 尝试为同一清单同时指定这两个选项将会导致错误。|
 |**-kc, -KeyContainer** `name`||所有文件类型。|指定包含私钥名称的密钥容器。 此选项需要 CyproProvider 选项。<br/><br/>自 .NET Framework 4.7 起，可以使用此选项。|
 |**-mv，-MinVersion**  `[version]`|由 **-Version** 标志指定的在 ClickOnce 部署清单中列出的版本。|部署清单。|用户可以运行的此应用程序的最低版本。 此标志使得你的应用程序的命名版本成为必需的更新。 如果发布的产品版本存在对重大更改或严重的安全漏洞的更新，则可以使用此标志指定必须安装此更新，而且用户不能继续运行早期版本。<br /><br /> `version` 与 **-Version** 标志的自变量的语义相同。|
-|**-n, -Name** `nameString`|部署|所有文件类型。|用于标识应用程序的名称。 ClickOnce 将使用此名称在“开始”菜单（如果应用程序配置为自行安装）和“权限提升”对话框中标识应用程序。 注意：如果要更新现有的清单，并且未使用此选项指定发布服务器的名称，则 Mage.exe 将使用计算机上定义的组织名称更新清单。 要使用不同的名称，请确保使用此选项，并指定所需的发布服务器名称。|
+|**-n, -Name** `nameString`|部署|所有文件类型。|用于标识应用程序的名称。 ClickOnce 将使用此名称在“开始”菜单（如果应用程序配置为自行安装）和“权限提升”对话框中标识应用程序。 **注意：** 如果要更新现有的清单，并且未使用此选项指定发布服务器的名称，则 Mage.exe 将使用计算机上定义的组织名称更新清单。 要使用不同的名称，请确保使用此选项，并指定所需的发布服务器名称。|
 |**-pwd, -Password** `passwd`||所有文件类型。|使用数字证书对清单进行签名时所用的密码。 必须与 **-CertFile** 选项结合使用。|
 |**-p, Processor** `processorValue`|Msil|应用程序清单。<br /><br /> 部署清单。|可用于运行此分发的微处理器体系结构。 如果你准备的一个或多个安装的程序集已针对特定微处理器进行了预编译，则此值是必需的。 有效值包括 `msil`、 `x86`、 `ia64`和 `amd64`。 `msil` 是 Microsoft 中间语言，这表示所有程序集都与平台无关，并且首次运行应用程序时，公共语言运行时 (CLR) 将会对所有程序集进行实时编译。|
 |**-pu,** **-ProviderURL** `url`||部署清单。|指定 ClickOnce 要检查是否存在应用程序更新的 URL。|

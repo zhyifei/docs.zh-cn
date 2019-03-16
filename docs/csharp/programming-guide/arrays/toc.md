@@ -5,5 +5,4 @@
 ## [交错数组](jagged-arrays.md)
 ## [对数组使用 foreach](using-foreach-with-arrays.md)
 ## [将数组作为参数传递](passing-arrays-as-arguments.md)
-## [使用 ref 和 out 传递数组](passing-arrays-using-ref-and-out.md)
 ## [隐式类型化数组](implicitly-typed-arrays.md)

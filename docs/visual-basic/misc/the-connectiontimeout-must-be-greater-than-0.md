@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNetwork_BadConnectionTimeout
 ms.assetid: 15ac09a7-47f0-44f3-9e84-5bd10bd07450
-ms.openlocfilehash: 444253fc89a77835937e1a6b67b87fb6ba26279c
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 26510832d196aa6418112e3a00d73c7a1d3aef92
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738716"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58038765"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>ConnectionTimeout 必须大于 0
 与上传和下载的文件时[My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network)，则必须指定`connectionTimeout`大于`0`。  
@@ -19,6 +19,7 @@ ms.locfileid: "55738716"
 -   提供一个大于 `connectionTimeout` 的 `0`。  
   
 ## <a name="see-also"></a>请参阅
+
 - [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)
 - [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)
 - [如何：上传文件](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)

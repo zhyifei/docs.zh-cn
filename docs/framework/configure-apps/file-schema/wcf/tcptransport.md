@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 20591186448fa1c3b4a91ed303bd2a5c6e452491
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 683c28d626f32971e7e1fa5f50343b3e7ea125be
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272014"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845955"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 定义通道用于传输自定义绑定消息的 TCP 传输。  
@@ -49,7 +49,7 @@ ms.locfileid: "55272014"
   
 |特性|描述|  
 |---------------|-----------------|  
-|channelInitializationTimeout|获取或设置对要接受的通道进行初始化的时间限制。  通道在断开连接前可处于初始化状态的最长时间（秒）。 此配额包括 TCP 连接可用于使用 .Net Message Framing 协议对自身进行身份验证的时间。 客户端需要发送一些初始数据，然后服务器才有足够的信息来执行身份验证。 默认值为 30 秒。|  
+|channelInitializationTimeout|获取或设置对要接受的通道进行初始化的时间限制。  通道在断开连接前可处于初始化状态的最长时间（秒）。 此配额包括 TCP 连接可能需要进行身份验证使用.NET Message Framing 协议本身的时间。 客户端需要发送一些初始数据，然后服务器才有足够的信息来执行身份验证。 默认值为 30 秒。|  
 |connectionBufferSize|获取或设置用于从客户端或服务传输网络上的序列化消息块的缓冲区大小。|  
 |hostNameComparisonMode|获取或设置一个值，该值指示在对 URI 进行匹配时，是否使用主机名来访问服务。|  
 |listenBacklog|可为 Web 服务挂起的最大排队连接请求数。 `connectionLeaseTimeout` 属性限制客户端在引发连接异常之前将等待连接的持续时间。 这是一个套接字级别属性，控制可能为 Web 服务挂起的最大排队连接请求数。 ListenBacklog 太低时，WCF 将停止接受请求并因此删除新连接，直到服务器确认一些现有队列连接。 默认值为 16 * 处理器数。|  

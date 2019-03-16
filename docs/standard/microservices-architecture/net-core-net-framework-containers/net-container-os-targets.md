@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: bef268a180584c47486a16960ca13fd63201fbe2
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 9e1d07e48d88376efb5fbdbdadc999c8dcd5082d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479862"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374903"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>使用 .NET 容器时定位的操作系统
 
@@ -21,7 +21,7 @@ ms.locfileid: "55479862"
 
 图 3-1 显示基于所使用的 .NET framework，可使用的操作系统版本。
 
-![部署旧的 .NET Framework 应用程序时，必须针对与旧应用程序和 IIS 兼容且具有更大映像的 Windows Server Core。 部署 .NET Core 应用程序时，可以针对已经过云优化、使用 Kestrel、更小且启动速度更快的 Windows Nano Server。 还可以面向 Linux，支持 Debian、Alpine 和其他操作系统。 也使用 Kestrel、更小且启动速度更快。](./media/image1.png)
+![部署旧的 .NET Framework 应用程序时，必须以与旧应用程序和 IIS 兼容且具有更大映像的 Windows Server Core 为目标。 部署 .NET Core 应用程序时，可以针对已经过云优化、使用 Kestrel、更小且启动速度更快的 Windows Nano Server。 还可以面向 Linux，支持 Debian、Alpine 和其他操作系统。 也使用 Kestrel、更小且启动速度更快。](./media/image1.png)
 
 **图 3-1。** 根据 .NET framework 确定要面向的操作系统
 
@@ -57,6 +57,6 @@ ms.locfileid: "55479862"
 </tbody>
 </table>
 
->[!div class="step-by-step"]
->[上一页](container-framework-choice-factors.md)
->[下一页](official-net-docker-images.md)
+> [!div class="step-by-step"]
+> [上一页](container-framework-choice-factors.md)
+> [下一页](official-net-docker-images.md)

@@ -2,12 +2,12 @@
 title: 异步编程
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 30eb07f9f6f3a9e1d1d6a346ca0dca272c262bb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366122"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846124"
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
@@ -40,9 +40,9 @@ ms.locfileid: "57366122"
 
 - [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [使用.Net 4.5 (第 1 部分) 中 SqlDataReader 的新异步方法](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [使用.NET 4.5 (第 1 部分) 中 SqlDataReader 的新异步方法](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [使用.Net 4.5 (第 2 部分) 中 SqlDataReader 的新异步方法](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [使用.NET 4.5 (第 2 部分) 中 SqlDataReader 的新异步方法](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
 
 当用户接口无响应或服务器无法扩展时，很可能需要使代码异步程度更高。 以前，编写异步代码涉及安装回调（也称为延续）来表示异步操作完成后发生的逻辑。 这将增加异步代码结构的复杂性（与同步代码相比）。
 

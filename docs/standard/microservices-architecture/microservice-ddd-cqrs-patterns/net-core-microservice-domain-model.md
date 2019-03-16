@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 884a558827e0e016e27315cee1ea9ed3e0d03dc4
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065903"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363015"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 实现微服务域模型 
 
@@ -171,11 +171,11 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 - **Vaughn Vernon。Modeling Aggregates with DDD and Entity Framework**（使用 DDD 和 Entity Framework 对聚合建模）。 请注意，*不*是 Entity Framework Core。 \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman.域驱动设计的编码：面向数据聚焦型开发人员的提示** \
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
+- **Julie Lerman.数据点 - 域驱动设计的编码：面向数据聚焦型开发人员的提示** \
+  <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
 - **Udi Dahan.How to create fully encapsulated Domain Models** \（如何创建完全封装的域模型）
-  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 >[!div class="step-by-step"]
 >[上一页](microservice-domain-model.md)

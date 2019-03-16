@@ -4,28 +4,28 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8ddc966710f6a9a949983726fd93505fbc88391f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971775"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675025"
 ---
 # <a name="subscribing-to-events"></a>订阅事件
 
 使用事件总线的第一步是为微服务订阅它们想要接收的事件。 该操作应在接收者微服务中完成。
 
-下面的简单代码展示了每个接收者微服务在启动时（即，在 `Startup` 类中）必须实现哪些内容，才能订阅所需的事件。 在此示例中，`basket.api` 微服务需要订阅 `ProductPriceChangedIntegrationEvent` 和 `OrderStartedIntegrationEvent` 消息。 
+下面的简单代码展示了每个接收者微服务在启动时（即，在 `Startup` 类中）必须实现哪些内容，才能订阅所需的事件。 在此示例中，`basket.api` 微服务需要订阅 `ProductPriceChangedIntegrationEvent` 和 `OrderStartedIntegrationEvent` 消息。
 
 例如，通过订阅 `ProductPriceChangedIntegrationEvent` 事件，购物车微服务可了解产品价格的任何变化，并在用户购物车中有该产品时向该用户发出价格变动警告。
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
 
-eventBus.Subscribe<ProductPriceChangedIntegrationEvent, 
+eventBus.Subscribe<ProductPriceChangedIntegrationEvent,
                    ProductPriceChangedIntegrationEventHandler>();
 
-eventBus.Subscribe<OrderStartedIntegrationEvent, 
+eventBus.Subscribe<OrderStartedIntegrationEvent,
                    OrderStartedIntegrationEventHandler>();
 
 ```
@@ -87,9 +87,9 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 }
 ```
 
-在此示例中，源微服务是一个简单的 CRUD 微服务，因此，该代码直接放置在 Web API 控制器中。 
- 
-在更高级的微服务中，比如使用 CQRS 方法时，可以在 `CommandHandler` 类的 `Handle()` 方法中实现。 
+在此示例中，源微服务是一个简单的 CRUD 微服务，因此，该代码直接放置在 Web API 控制器中。
+
+在更高级的微服务中，比如使用 CQRS 方法时，可以在 `CommandHandler` 类的 `Handle()` 方法中实现。
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>设计发布到事件总线时的原子性和复原能力
 
@@ -103,11 +103,11 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 正如前面在体系结构部分中提到的那样，可以通过以下几种方法来处理此问题：
 
--   使用完整[事件溯源模式](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)。
+- 使用完整[事件溯源模式](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)。
 
--   使用[事务日志挖掘](https://www.scoop.it/t/sql-server-transaction-log-mining)。
+- 使用[事务日志挖掘](https://www.scoop.it/t/sql-server-transaction-log-mining)。
 
--   使用[发件箱模式](http://gistlabs.com/2014/05/the-outbox/)。 这是用于存储集成事件（扩展本地事务）的事务表。
+- 使用[发件箱模式](http://gistlabs.com/2014/05/the-outbox/)。 这是用于存储集成事件（扩展本地事务）的事务表。
 
 在本案例中，使用完整事件溯源 (ES) 模式即使算不上*最好*的办法，也是最好的办法之一。 但是，在许多应用程序案例中，你可能无法实现完整的 ES 系统。 ES 意味着仅在事务数据库中存储域事件，而不存储当前状态数据。 仅存储域事件可以带来很大的好处，例如可以获得系统的历史记录，并且能够确定系统在过去任意时间点的状态。 但是，实现完整的 ES 系统需要重新构建大部分系统，并引入许多其他复杂性和要求。 例如，你希望使用专用于事件溯源的数据库（例如 [Event Store](https://eventstore.org/)）或面向文档的数据库（例如 Azure Cosmos DB、MongoDB、Cassandra、CouchDB 或 RavenDB）。 对于此问题，ES 是一种很好的解决方案，但不是最简单的解决方案，除非你已经熟悉事件溯源。
 
@@ -125,19 +125,19 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 此进程的分步操作如下：：
 
-1.  应用程序开始处理一项本地数据库事务。
+1. 应用程序开始处理一项本地数据库事务。
 
-2.  然后更新域实体的状态，并向集成事件表中插入一个事件。
+2. 然后更新域实体的状态，并向集成事件表中插入一个事件。
 
-3.  最后，它将提交事务，如此即可获得所需的原子性，然后
+3. 最后，它将提交事务，如此即可获得所需的原子性，然后
 
-4.  以某种方式发布事件（下一步）。
+4. 以某种方式发布事件（下一步）。
 
 在实施事件发布步骤时，你有以下选择：
 
--   在提交事务后立即发布集成事件，并使用另一个本地事务将表中的事件标记为已发布。 然后，将该表用作一个项目，以便在远程微服务出现问题时跟踪集成事件，并根据存储的集成事件执行补偿操作。
+- 在提交事务后立即发布集成事件，并使用另一个本地事务将表中的事件标记为已发布。 然后，将该表用作一个项目，以便在远程微服务出现问题时跟踪集成事件，并根据存储的集成事件执行补偿操作。
 
--   将该表用作一种队列。 单独的应用程序线程或进程查询集成事件表，将事件发布到事件总线，然后使用本地事务将事件标记为已发布。
+- 将该表用作一种队列。 单独的应用程序线程或进程查询集成事件表，将事件发布到事件总线，然后使用本地事务将事件标记为已发布。
 
 图 6-22 展示了第一种方法的体系结构。
 
@@ -166,55 +166,55 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 ```csharp
 // Update Product from the Catalog microservice
 //
-public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate) 
+public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate)
 {
-  var catalogItem = 
-       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id == 
-                                                               productToUpdate.Id); 
+  var catalogItem =
+       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id ==
+                                                               productToUpdate.Id);
   if (catalogItem == null) return NotFound();
 
-  bool raiseProductPriceChangedEvent = false; 
-  IntegrationEvent priceChangedEvent = null; 
+  bool raiseProductPriceChangedEvent = false;
+  IntegrationEvent priceChangedEvent = null;
 
-  if (catalogItem.Price != productToUpdate.Price) 
-          raiseProductPriceChangedEvent = true; 
+  if (catalogItem.Price != productToUpdate.Price)
+          raiseProductPriceChangedEvent = true;
 
   if (raiseProductPriceChangedEvent) // Create event if price has changed
   {
-      var oldPrice = catalogItem.Price; 
+      var oldPrice = catalogItem.Price;
       priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
-                                                                  productToUpdate.Price, 
-                                                                  oldPrice); 
+                                                                  productToUpdate.Price,
+                                                                  oldPrice);
   }
   // Update current product
-  catalogItem = productToUpdate; 
+  catalogItem = productToUpdate;
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if (!raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent)
   {
       await _catalogContext.SaveChangesAsync();
   }
   else  // Publish to event bus only if product price changed
   {
-        // Achieving atomicity between original DB and the IntegrationEventLog 
+        // Achieving atomicity between original DB and the IntegrationEventLog
         // with a local transaction
         using (var transaction = _catalogContext.Database.BeginTransaction())
         {
-           _catalogContext.CatalogItems.Update(catalogItem); 
+           _catalogContext.CatalogItems.Update(catalogItem);
            await _catalogContext.SaveChangesAsync();
 
            // Save to EventLog only if product price changed
-           if(raiseProductPriceChangedEvent) 
-               await _integrationEventLogService.SaveEventAsync(priceChangedEvent); 
+           if(raiseProductPriceChangedEvent)
+               await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
 
            transaction.Commit();
-        }   
+        }
 
-      // Publish the intergation event through the event bus
-      _eventBus.Publish(priceChangedEvent); 
+      // Publish the integration event through the event bus
+      _eventBus.Publish(priceChangedEvent);
 
       integrationEventLogService.MarkEventAsPublishedAsync(
-                                                priceChangedEvent); 
+                                                priceChangedEvent);
   }
 
   return Ok();
@@ -281,7 +281,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 事件处理程序需要验证该产品是否存在于任何购物车实例中。 它还会更新每个相关购物车订单项的商品价格。 最后，它会创建一个警报，以向用户显示价格变化，如图 6-24 所示。
 
-![显示用户购物车中的价格更改通知的浏览器视图。](./media/image25.png)
+![显示用户购物车中的进程更改通知的浏览器视图。](./media/image25.png)
 
 图 6-24。 根据集成事件传达的信息显示购物车中商品的价格变化
 
@@ -303,7 +303,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他资源
 
--   **遵循消息幂等性** <br/>
+- **遵循消息幂等性** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>删除重复的集成事件消息
@@ -324,69 +324,69 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他资源
 
--   **使用 NServiceBus 的分支 eShopOnContainers（特定软件）** <br/>
+- **使用 NServiceBus 的分支 eShopOnContainers（特定软件）** <br/>
     [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
--   **Event Driven Messaging**（事件驱动的消息传递） <br/>
+- **Event Driven Messaging**（事件驱动的消息传递） <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard。重构复原能力：评估耦合度** <br/>
+- **Jimmy Bogard。重构复原能力：评估耦合度** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Publish-Subscribe channel**（发布-订阅通道） <br/>
+- **Publish-Subscribe channel**（发布-订阅通道） <br/>
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **绑定上下文之间的通信** <br/>
+- **绑定上下文之间的通信** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
--   **Eventual Consistency**（最终一致性） <br/>
+- **Eventual Consistency**（最终一致性） <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown。Strategies for Integrating Bounded Contexts**（集成绑定上下文的策略） <br/>
+- **Philip Brown。Strategies for Integrating Bounded Contexts**（集成绑定上下文的策略） <br/>
     [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson.Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2**（使用聚合、事件源和 CQRS 开发事务型微服务 - 第 2 部分） <br/>
+- **Chris Richardson.Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2**（使用聚合、事件源和 CQRS 开发事务型微服务 - 第 2 部分） <br/>
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson.事件溯源模式** <br/>
+- **Chris Richardson.事件溯源模式** <br/>
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **事件溯源简介** <br/>
+- **事件溯源简介** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
--   **Event Store 数据库**。 官方网站。 <br/>
+- **Event Store 数据库**。 官方网站。 <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen。Event-Driven Data Management for Microservices**（微服务的事件驱动数据管理） <br/>
+- **Patrick Nommensen。Event-Driven Data Management for Microservices**（微服务的事件驱动数据管理） <br/>
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **The CAP Theorem**（CAP 定理） <br/>
+- **The CAP Theorem**（CAP 定理） <br/>
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **What is CAP Theorem?**（什么是 CAP 定理？） <br/>
+- **What is CAP Theorem?**（什么是 CAP 定理？） <br/>
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Data Consistency Primer**（数据一致性入门指南） <br/>
+- **Data Consistency Primer**（数据一致性入门指南） <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
--   **Rick Saling。CAP 定理：为什么云和 Internet“一切都不同”** <br/>
+- **Rick Saling。CAP 定理：为什么云和 Internet“一切都不同”** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer。CAP 十二年之后：“规则”更改的方式** <br/>
+- **Eric Brewer。CAP 十二年之后：“规则”更改的方式** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Azure 服务总线。中转消息传送：重复检测**  <br/>
+- **Azure 服务总线。中转消息传送：重复检测**  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide**（可靠性指南）（RabbitMQ 文档）* <br/>
+- **Reliability Guide**（可靠性指南）（RabbitMQ 文档）* <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
 
--   **Azure 服务总线。中转消息传送：重复检测** <br/>
+- **Azure 服务总线。中转消息传送：重复检测** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide**（可靠性指南）（RabbitMQ 文档） <br/>
+- **Reliability Guide**（可靠性指南）（RabbitMQ 文档） <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
->[!div class="step-by-step"]
->[上一页](rabbitmq-event-bus-development-test-environment.md)
->[下一页](test-aspnet-core-services-web-apps.md)
+> [!div class="step-by-step"]
+> [上一页](rabbitmq-event-bus-development-test-environment.md)
+> [下一页](test-aspnet-core-services-web-apps.md)

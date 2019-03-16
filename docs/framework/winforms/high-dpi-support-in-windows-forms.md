@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711781"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843604"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>在 Windows 窗体中的高 DPI 支持
 
-从.NET Framework 4.7 开始，Windows 窗体包括增强功能的常见高 DPI 和动态 DPI 方案。 这些问题包括： 
+从.NET Framework 4.7 开始，Windows 窗体包括增强功能的常见高 DPI 和动态 DPI 方案。 这些问题包括：
 
-- 改进的缩放和多个 Windows 窗体的布局控件，如<xref:System.Windows.Forms.MonthCalendar>控件和<xref:System.Windows.Forms.CheckedListBox>控件。 
+- 改进的缩放和多个 Windows 窗体的布局控件，如<xref:System.Windows.Forms.MonthCalendar>控件和<xref:System.Windows.Forms.CheckedListBox>控件。
 
 - 单次传递缩放。  在.NET Framework 4.6 和更早版本中，通过多个通过，这导致一些控件，以扩展超过需要执行缩放。
 
@@ -30,7 +30,7 @@ ms.locfileid: "57711781"
 
 ## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>高 DPI 支持在 Windows 窗体应用中配置
 
-支持高 DPI 识别的新 Windows 窗体功能是仅在面向.NET Framework 4.7 和从 Windows 10 创意者更新的 Windows 操作系统上运行的应用程序中可用。 
+支持高 DPI 识别的新 Windows 窗体功能是仅在面向.NET Framework 4.7 和从 Windows 10 创意者更新的 Windows 操作系统上运行的应用程序中可用。
 
 此外，若要在 Windows 窗体应用程序中配置高 DPI 支持，必须执行以下操作：
 
@@ -49,27 +49,27 @@ ms.locfileid: "57711781"
 
 - 启用中的每监视器 DPI 感知*app.config*文件。
 
-  Windows 窗体引入了一个新[ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md)元素以支持新功能和自定义项添加从.NET Framework 4.7 开始。 若要充分利用支持高 DPI 的新功能，以下代码添加到应用程序配置文件。   
+  Windows 窗体引入了一个新[ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md)元素以支持新功能和自定义项添加从.NET Framework 4.7 开始。 若要充分利用支持高 DPI 的新功能，以下代码添加到应用程序配置文件。
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
     <add key="DpiAwareness" value="PerMonitorV2" />
-  </System.Windows.Forms.ApplicationConfigurationSection>      
+  </System.Windows.Forms.ApplicationConfigurationSection>
   ```
-   
+
   > [!IMPORTANT]
   > 在以前版本的.NET Framework，您可以使用清单添加高 DPI 支持。 不再建议使用此方法，因为它会替代 app.config 文件中定义的设置。
-   
+
 - 调用静态<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。
-   
+
   这应该是应用程序的入口点中的第一个方法调用。 例如：
-   
+
   ```csharp
   static void Main()
   {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Form2());   
+      Application.Run(new Form2());
   }
   ```
 
@@ -80,8 +80,8 @@ ms.locfileid: "57711781"
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
   <add key="DpiAwareness" value="PerMonitorV2" />
-  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" /> 
-</System.Windows.Forms.ApplicationConfigurationSection>    
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
+</System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
 有关各个键及其值的列表，请参阅[Windows 窗体添加配置元素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)。

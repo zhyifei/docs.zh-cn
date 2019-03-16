@@ -1,16 +1,21 @@
 ---
 title: 在 ML.NET 管道处理期间检查中间数据值
 description: 了解如何在 ML.NET 机器学习管道处理期间检查实际的中间数据值
-ms.date: 01/30/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b3a554bf7cd88219a66f91a18b9d983bb91c0f0e
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3d20f153be7b502fb5a542a942245546412efde2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675005"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678639"
 ---
 # <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a>在 ML.NET 管道处理期间检查中间数据值
+
+> [!NOTE]
+> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
+
+此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
 
 在实验过程中，可能需要观察和验证给定时间点的数据处理结果。 由于 ML.NET 操作具有延迟性，生成的对象都是“预示”的数据，这并非易事。
 

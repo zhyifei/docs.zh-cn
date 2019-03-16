@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c265b583b74ac9d7df128e3343bbc368e3cf9c4e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220806"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675155"
 ---
 # <a name="deploying-an-interop-application"></a>部署互操作应用程序
 互操作应用程序通常包括 .NET 客户端程序集，表示不同 COM 类型库的一个或多个互操作程序集，以及一个或多个已注册的 COM 组件。 Visual Studio 和 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供用于将类型库导入并转换为互操作程序集的工具，如[将类型库作为程序集导入](importing-a-type-library-as-an-assembly.md)中所述。 可以通过以下两种方式部署互操作应用程序：  
@@ -38,8 +38,7 @@ ms.locfileid: "56220806"
 ### <a name="private-assemblies"></a>私有程序集  
  要安装私用程序集，必须在同一目录结构中安装应用程序可执行文件和包含导入的 COM 类型的互操作程序集。 下图显示由 Client1.exe 和 Client2.exe 私用的未签名互操作程序集，二者位于不同的应用程序目录中。 此示例中名为 LOANLib.dll 的互操作程序集安装了两次。  
   
- ![目录结构和 Windows 注册表](media/comdeployprivate.gif "comdeployprivate")  
-私有部署的目录结构和注册表项  
+ ![目录结构和 Windows 注册表](./media/deploying-an-interop-application/com-private-deployment.gif "私有部署的目录结构和注册表项")  
   
  与应用程序关联的所有 COM 组件都必须安装在 Windows 注册表中。 如果图中的 Client1.exe 和 Client2.exe 安装在不同计算机上，则必须在这两台计算机上注册 COM 组件。  
   

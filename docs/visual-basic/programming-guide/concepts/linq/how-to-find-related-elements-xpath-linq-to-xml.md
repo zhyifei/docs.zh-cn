@@ -2,12 +2,12 @@
 title: 如何：查找相关的元素 (XPATH-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: ced58274773b9a5c16331805f9a5513a5231c5ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be7dc6d28c6f176108e33a5c783863fdfc5aed81
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655408"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845942"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>如何：查找相关的元素 (XPATH-LINQ to XML) (Visual Basic)
 本主题演示如何在由其他元素的值所引用的属性上获取元素选择。  
@@ -19,7 +19,7 @@ ms.locfileid: "54655408"
 ## <a name="example"></a>示例  
  本示例查找第 12 个 `Order` 元素，然后查找该订单的客户。  
   
- 注意，在 .Net 中，对列表的索引是从零开始的。 在 XPath 谓词中，对节点集合的索引是从 1 开始的。 本示例反映了这种差别。  
+ 请注意，索引在.NET 中列表是从零开始的。 在 XPath 谓词中，对节点集合的索引是从 1 开始的。 本示例反映了这种差别。  
   
  本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   

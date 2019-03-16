@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: 672660f73e9e6faf25985a651290e979f9deb9f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa341b7df32823c653df25ddb0dabcb4658b72b5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492502"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042627"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>定义与 .NET Framework XAML 服务一起使用的自定义类型
 当您定义了业务对象的自定义类型或不在特定框架上具有依赖项的类型时，有的 XAML 可以按照某些最佳实践。 如果您遵循这些实践，.NET Framework XAML 服务及其 XAML 读取器和 XAML 编写器可以发现你的类型的 XAML 特征，并为其适当 XAML 节点流使用的 XAML 类型系统中的表示形式。 本主题介绍类型定义、 成员定义和 CLR 类型或成员的特性化最佳的实践。  
@@ -23,7 +23,7 @@ ms.locfileid: "54492502"
   
  如果为对象元素，可以实例化一个对象，所创建的对象可以填充属性元素将该对象作为其基础类型的任何属性的形式。  
   
- 如果启用了值转换器，仍可以为不符合这些条件的类型提供对象值。 有关详细信息，请参阅[Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)。  
+ 如果启用了值转换器，仍可以为不符合这些条件的类型提供对象值。 有关详细信息，请参阅[Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)。  
   
 ### <a name="structures"></a>结构  
  结构永远是能够在 XAML 中，通过 CLR 定义构造的。 这是因为 CLR 编译器隐式创建一个结构的默认构造函数。 此构造函数初始化为其默认值的所有属性值。  
@@ -34,12 +34,12 @@ ms.locfileid: "54492502"
  接口可以用作基础类型的成员。 XAML 类型系统检查可分配的列表，并且期望作为值提供的对象可以分配给的接口。 不存在的接口必须存在方式作为 XAML 类型，只要相关的可分配类型支持 XAML 构造要求概念。  
   
 ### <a name="factory-methods"></a>工厂方法  
- 工厂方法是 XAML 2009 功能。 他们修改 XAML 原则对象必须具有默认构造函数。 本主题中未记录的工厂方法。 请参阅[X:factorymethod 指令](../../../docs/framework/xaml-services/x-factorymethod-directive.md)。  
+ 工厂方法是 XAML 2009 功能。 他们修改 XAML 原则对象必须具有默认构造函数。 本主题中未记录的工厂方法。 请参阅[X:factorymethod 指令](x-factorymethod-directive.md)。  
   
 ## <a name="enumerations"></a>枚举  
  枚举具有 XAML 的本机类型转换行为。 在 XAML 中指定的枚举常量名解析对基础的枚举类型，并返回到 XAML 对象编写器的枚举值。  
   
- XAML 与枚举支持标志样式使用<xref:System.FlagsAttribute>应用。 有关详细信息，请参阅[XAML 语法详述](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。 ([XAML 语法详述](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)专为 WPF 受众，但该主题中的信息的大多数都是适用于不是特定于特定实现框架的 XAML。)  
+ XAML 与枚举支持标志样式使用<xref:System.FlagsAttribute>应用。 有关详细信息，请参阅[XAML 语法详述](../wpf/advanced/xaml-syntax-in-detail.md)。 ([XAML 语法详述](../wpf/advanced/xaml-syntax-in-detail.md)专为 WPF 受众，但该主题中的信息的大多数都是适用于不是特定于特定实现框架的 XAML。)  
   
 ## <a name="member-definitions"></a>成员定义  
  类型可以定义 XAML 用法的成员。 它是可以定义是 XAML 可用，即使该特定类型不是 XAML 可用的成员的类型。 这是因为 CLR 继承。 只要某种类型的继承成员支持 XAML 用法作为一个类型，并且该成员的基础类型支持 XAML 用法或具有本机的 XAML 语法，该成员是 XAML 可用。  
@@ -47,23 +47,23 @@ ms.locfileid: "54492502"
 ### <a name="properties"></a>Properties  
  如果定义为公共 CLR 属性使用典型的 CLR 属性`get`和`set`访问器模式和相应语言的建立关键词，XAML 类型系统可以提供具有适当的信息的成员作为属性进行报告<xref:System.Xaml.XamlMember>属性，如<xref:System.Xaml.XamlMember.IsReadPublic%2A>和<xref:System.Xaml.XamlMember.IsWritePublic%2A>。  
   
- 特定的属性可以通过应用启用文本语法<xref:System.ComponentModel.TypeConverterAttribute>。 有关详细信息，请参阅[Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)。  
+ 特定的属性可以通过应用启用文本语法<xref:System.ComponentModel.TypeConverterAttribute>。 有关详细信息，请参阅[Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)。  
   
  在没有文本语法或本机的 XAML 转换，并且没有进一步中间环节，例如标记扩展用法，属性的类型 (<xref:System.Xaml.XamlMember.TargetType%2A>中 XAML 类型系统) 必须能够返回到 XAML 对象编写器实例，方法是将 target 作为 CLR 类型的类型。  
   
- 如果使用 XAML 2009 [X:reference 标记扩展](../../../docs/framework/xaml-services/x-reference-markup-extension.md)可用于提供值，如果不满足前述注意事项; 但是，这是多个类型定义问题之外的使用情况问题。  
+ 如果使用 XAML 2009 [X:reference 标记扩展](x-reference-markup-extension.md)可用于提供值，如果不满足前述注意事项; 但是，这是多个类型定义问题之外的使用情况问题。  
   
 ### <a name="events"></a>事件  
  如果为公共 CLR 事件定义事件，XAML 类型系统可以将事件报告为成员，同时<xref:System.Xaml.XamlMember.IsEvent%2A>作为`true`。 连接事件处理程序不是.NET Framework XAML 服务功能; 的作用域内此功能由特定框架和实现。  
   
 ### <a name="methods"></a>方法  
- 方法的内联代码不是默认 XAML 功能。 在大多数情况下不直接引用方法成员从 XAML，并在 XAML 中的方法的角色是仅为特定 XAML 模式提供支持。 [X:factorymethod 指令](../../../docs/framework/xaml-services/x-factorymethod-directive.md)是一个例外。  
+ 方法的内联代码不是默认 XAML 功能。 在大多数情况下不直接引用方法成员从 XAML，并在 XAML 中的方法的角色是仅为特定 XAML 模式提供支持。 [X:factorymethod 指令](x-factorymethod-directive.md)是一个例外。  
   
 ### <a name="fields"></a>字段  
- CLR 设计原则不鼓励使用非静态字段。 对于静态字段，您可以访问静态字段值只能通过[X:static 标记扩展](../../../docs/framework/xaml-services/x-static-markup-extension.md); 在这种情况下不执行任何特殊 CLR 定义公开的字段中[x： 静态](../../../docs/framework/xaml-services/x-static-markup-extension.md)用法。  
+ CLR 设计原则不鼓励使用非静态字段。 对于静态字段，您可以访问静态字段值只能通过[X:static 标记扩展](x-static-markup-extension.md); 在这种情况下不执行任何特殊 CLR 定义公开的字段中[x： 静态](x-static-markup-extension.md)用法。  
   
 ## <a name="attachable-members"></a>可附加成员  
- 可附加成员上定义的类型的取值函数方法模式通过向 XAML 公开。 定义类型本身不需要为 XAML 可用作对象。 实际上，一种常见模式是声明其角色是一个服务类来拥有可附加成员和实现相关的行为，但是不提供用户界面表示形式如任何其他函数。 为以下部分中，将占位符*PropertyName*表示可附加成员的名称。 该名称中必须是有效[XamlName 语法](../../../docs/framework/xaml-services/xamlname-grammar.md)。  
+ 可附加成员上定义的类型的取值函数方法模式通过向 XAML 公开。 定义类型本身不需要为 XAML 可用作对象。 实际上，一种常见模式是声明其角色是一个服务类来拥有可附加成员和实现相关的行为，但是不提供用户界面表示形式如任何其他函数。 为以下部分中，将占位符*PropertyName*表示可附加成员的名称。 该名称中必须是有效[XamlName 语法](xamlname-grammar.md)。  
   
  请务必谨慎的这些模式和类型的其他方法之间的名称冲突。 如果存在匹配的模式之一的成员，它可以被解释为可附加成员用法路径由 XAML 处理器即使这不是您的意图。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "54492502"
 ## <a name="xaml-related-clr-attributes"></a>与 XAML 相关 CLR 特性  
  属性类型、 成员和程序集正确设置到报表到.NET Framework XAML 服务 XAML 类型系统信息的顺序至关重要。 如果你想用于直接基于.NET Framework XAML 服务 XAML 读取器和 XAML 编写器的 XAML 系统类型，或如果你定义或使用基于这些 XAML 读取器和 XAML 编写器的 XAML 利用框架，这是相关。  
   
- 适用于自定义类型的 XAML 支持的每个与 XAML 相关的属性的列表，请参阅[XAML-Related CLR 特性自定义类型和库的](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)。  
+ 适用于自定义类型的 XAML 支持的每个与 XAML 相关的属性的列表，请参阅[XAML-Related CLR 特性自定义类型和库的](xaml-related-clr-attributes-for-custom-types-and-libraries.md)。  
   
 ## <a name="usage"></a>用法  
  使用自定义类型需要标记作者必须映射包含自定义类型的程序集和 CLR 命名空间的前缀。 本主题中不记录此过程。  
@@ -115,5 +115,5 @@ ms.locfileid: "54492502"
  在 WPF XAML 术语中，*内部类型*是由同一程序集，它还包括引用的 XAML 定义的类型。 这种类型可以映射 XAML 命名空间的有意省略了该程序集 = 一部分的映射，例如， `xmlns:local="clr-namespace:WPFApplication1"`。  如果 BAML 将引用的内部类型和类型具有`internal`访问级别，这将生成`GeneratedInternalTypeHelper`程序集的类。 如果你想要避免`GeneratedInternalTypeHelper`，则必须使用`public`访问级别，或必须分解为单独的程序集相关的类，并将该程序集依赖。  
   
 ## <a name="see-also"></a>请参阅
-- [自定义类型和库的 XAML 相关 CLR 特性](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)
-- [XAML 服务](../../../docs/framework/xaml-services/index.md)
+- [自定义类型和库的 XAML 相关 CLR 特性](xaml-related-clr-attributes-for-custom-types-and-libraries.md)
+- [XAML 服务](index.md)

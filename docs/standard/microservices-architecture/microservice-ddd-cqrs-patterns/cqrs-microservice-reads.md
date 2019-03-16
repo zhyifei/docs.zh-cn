@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: a77a92d12e3b60ebb67bab557a4e5ec1dd2f882f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 104c7564b7dd29209b48d99b1dea7524c07d7e69
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126441"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360415"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服务中实现读取/查询
 
@@ -89,19 +89,19 @@ public class OrderQueries : IOrderQueries
 
 重点在于，通过使用动态类型，返回的数据集合将动态组装为 ViewModel。
 
-优点：无论何时更新查询的 SQL 语句，此方法都可降低修改静态 ViewModel 类的需要，这使得此设计方法在编码时非常灵活，并在未来更改时能快速改善。
+**优点：** 无论何时更新查询的 SQL 语句，此方法都可降低修改静态 ViewModel 类的需求，这使得此设计方法在编码时非常灵活，并在未来更改时能快速改善。
 
-缺点：长远来看，动态类型可能会对清晰度以及服务与客户端应用的兼容性造成不利影响。 此外，如果使用动态类型，中间件软件（如 Swashbuckle）无法为返回类型提供相同级别的文档。
+**缺点：** 长远来看，动态类型可能会对清晰度以及服务与客户端应用的兼容性造成不利影响。 此外，如果使用动态类型，中间件软件（如 Swashbuckle）无法为返回类型提供相同级别的文档。
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>ViewModel 作为预定义的 DTO 类
 
-优点：具有静态预定义的 ViewModel 类（如基于显式 DTO 类的“协定”）毫无疑问有利于公共 API 和长期微服务，即使它们只用于同一应用程序。
+**优点：** 具有静态预定义的 ViewModel 类（如基于显式 DTO 类的“协定”）毫无疑问有利于公共 API 和长期微服务，即使它们只用于同一应用程序。
 
 如果想要为 Swagger 指定响应类型，需要使用显式 DTO 类作为返回类型。 因此，预定义的 DTO 类允许从 Swagger 提供更丰富的信息。 它可在使用 API 时改善 API 文档和兼容性。
 
-缺点：如前所述，更新代码时，更新 DTO 类需要花费更多步骤。
+**缺点：** 如前所述，更新代码时，更新 DTO 类需要执行更多步骤。
 
-经验之谈：在 eShopOnContainers 的订单微服务内实现的查询中，开始使用动态 ViewModel 开发，是因为它在早期开发阶段的直观性和灵活性。 但是，一旦开发稳定后，我们将选择重构 API，并将静态或预定义的 DTO 用于 ViewModel，因为这样能使微服务的使用者更加清晰地了解用作“协定”的显式 DTO 类型。
+*经验之谈：* 在 eShopOnContainers 的订单微服务内实现的查询中，开始使用动态 ViewModel 进行开发，这是因为它在早期开发阶段具有直观性和灵活性。 但是，一旦开发稳定后，我们将选择重构 API，并将静态或预定义的 DTO 用于 ViewModel，因为这样能使微服务的使用者更加清晰地了解用作“协定”的显式 DTO 类型。
 
 在以下示例中，可以看到查询如何使用显式 ViewModel DTO 类返回数据：OrderSummary 类。
 
@@ -188,13 +188,13 @@ public class OrderSummary
 ## <a name="additional-resources"></a>其他资源
 
 - **Dapper** \
-  [*https://github.com/StackExchange/dapper-dot-net*](https://github.com/StackExchange/dapper-dot-net)
+ <https://github.com/StackExchange/dapper-dot-net>
 
 - **Julie Lerman.数据点 - Dapper、Entity Framework 和混合应用（MSDN Mag. 文章）** \
-  [*https://msdn.microsoft.com/magazine/mt703432.aspx*](https://msdn.microsoft.com/magazine/mt703432.aspx)
+  <https://msdn.microsoft.com/magazine/mt703432.aspx>
 
 - **使用 Swagger 的 ASP.NET Core Web API 帮助页** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio)
+  <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
 >[上一页](eshoponcontainers-cqrs-ddd-microservice.md)

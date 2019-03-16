@@ -3,12 +3,12 @@ title: 开始使用 Azure Blob 存储使用F#
 description: 使用 Azure Blob 存储在云中存储非结构化的数据。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981902"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846423"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>开始使用 Azure Blob 存储中使用 F\#
 
@@ -102,14 +102,14 @@ Azure Blob 存储支持块 blob 和页 blob。 在大多数情况下，块 blob 
 
 例如，考虑名为的容器的块 blob 的下面一`photos`:
 
-*photo1.jpg*
-*2015/architecture/description.txt*
-*2015/architecture/photo3.jpg*
-*2015/architecture/photo4.jpg*
-*2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg*
-*2016/architecture/description.txt*
-*2016/photo7.jpg*
+*photo1.jpg*\
+*2015/architecture/description.txt*\
+*2015/architecture/photo3.jpg*\
+*2015/architecture/photo4.jpg*\
+*2016/architecture/photo5.jpg*\
+*2016/architecture/photo6.jpg*\
+*2016/architecture/description.txt*\
+*2016/photo7.jpg*\
 
 当您调用`ListBlobs`上 （如上面的示例中） 的容器，将返回一个层次结构列表。 如果它同时包含`CloudBlobDirectory`和`CloudBlockBlob`对象，分别表示目录和 blob 容器中的，则生成的输出显示类似于下面：
 

@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 058e7ee1dc834ff23a9a4aa191f7eaeb1016375c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49a65dd44159e9800f7cf50a1edaa3d9e9b82e47
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679772"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677261"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2 的新增功能
 
@@ -28,9 +28,9 @@ ms.locfileid: "54679772"
 
 **在运行时服务中处理事件**
 
-你可能经常希望监视应用程序的运行时服务（如 GC、JIT 和 ThreadPool）的使用情况，以了解它们如何影响应用程序。 在 Windows 系统上，这通常通过监视当前进程的 ETW 事件来完成。 虽然这仍然可以很好地工作，但是如果你在低特权环境中或者在 Linux 或 macOS 上运行，那么并不总是能够使用 ETW。  
+你可能经常希望监视应用程序的运行时服务（如 GC、JIT 和 ThreadPool）的使用情况，以了解它们如何影响应用程序。 在 Windows 系统上，这通常通过监视当前进程的 ETW 事件来完成。 虽然这仍然可以很好地工作，但是如果你在低特权环境中或者在 Linux 或 macOS 上运行，那么并不总是能够使用 ETW。 
 
-从 .NET Core 2.2 开始，现在可以使用 <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithtype> 类来使用 CoreCLR 事件。 这些事件描述了诸如 GC、JIT、ThreadPool 和 interop 等运行时服务的行为。 这些事件与 CoreCLR ETW 提供程序的部分事件相同。  这允许应用程序使用这些事件或使用传输机制将它们发送到遥测聚合服务。 可以在以下代码示例中看到如何订阅事件：
+从 .NET Core 2.2 开始，现在可以使用 <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> 类来使用 CoreCLR 事件。 这些事件描述了诸如 GC、JIT、ThreadPool 和 interop 等运行时服务的行为。 这些事件与作为 CoreCLR ETW 提供程序的一部分公开的事件相同。  这允许应用程序使用这些事件或使用传输机制将它们发送到遥测聚合服务。 可以在以下代码示例中看到如何订阅事件：
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -82,7 +82,7 @@ internal sealed class SimpleEventListener : EventListener
 
 - 第二层，将为那些频繁执行的方法生成优化代码。 为了增强性能，第二层编译并行执行。
 
-有关分层编译可能带来的性能改进的信息，请参阅[宣布发布 .NET Core 2.2 预览版 2](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/)。 
+有关分层编译可能带来的性能改进的信息，请参阅[宣布发布 .NET Core 2.2 预览版 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/)。
 
 在 .NET Core 2.2 预览版 2 中，默认情况下已启用分层编译。 但是，我们仍然没有准备好在默认情况下启用分层编译。 因此在 .NET Core 2.2 中，分层编译仍是一项可选功能。 有关选择加入分层编译的信息，请参阅 [.NET Core 2.1 中的新增功能](dotnet-core-2-1.md)中的 [Jit 编译器改进](dotnet-core-2-1.md#jit-compiler-improvements)。
 

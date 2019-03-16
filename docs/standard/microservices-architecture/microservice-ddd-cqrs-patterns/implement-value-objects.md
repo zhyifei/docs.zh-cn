@@ -4,12 +4,12 @@ description: 适用于容器化的 .NET 应用程序的 .NET 微服务体系结�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 2a8e0ad97f2ad6b4645fb493b5148667a2830ec8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28f5a5148b39b60d69fecc8bf1273445ebad4953
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145262"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675012"
 ---
 # <a name="implement-value-objects"></a>实现值对象
 
@@ -92,8 +92,8 @@ public abstract class ValueObject
         return GetAtomicValues()
          .Select(x => x != null ? x.GetHashCode() : 0)
          .Aggregate((x, y) => x ^ y);
-    }        
-    // Other utilility methods
+    }
+    // Other utility methods
 }
 ```
 
@@ -133,9 +133,9 @@ public class Address : ValueObject
 
 可以看到此 Address 的值对象实现没有标识，因此在 Address 类中甚至在 ValueObject 类中都没有 ID 字段。
 
-在 EF Core 2.0 之前，实体框架使用的类中是不能没有 ID 字段的，EF Core 2.0 在实现不具有 ID 的更好值对象方面发挥了很大的作用。 下一节内容将对此进行详细介绍。 
+在 EF Core 2.0 之前，实体框架使用的类中是不能没有 ID 字段的，EF Core 2.0 在实现不具有 ID 的更好值对象方面发挥了很大的作用。 下一节内容将对此进行详细介绍。
 
-也许有人会争辩说，由于值对象是不可变的，所以应该是只读的（即“只获取”属性），这是事实没错。 但是，值对象通常会被实施序列化和反序列化操作，以遍历消息队列，并且由于是只读的，这阻止了反序列化器分配值，从而只将其保留为私有集，且其只读程度让此机制成为可能。
+也许有人会争辩说，由于值对象是不可变的，所以应该是只读的（即“只获取”属性），这是事实没错。 但是，值对象通常会被执行序列化和反序列化操作以遍历消息队列，并且由于是只读的，这阻止了反序列化器分配值，从而只将其保留为私有集，且其只读程度让此机制成为可能。
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>如何通过 EF Core 2.0 在数据库中持久保存值对象
 
@@ -150,9 +150,9 @@ public class Address : ValueObject
 ```csharp
 // Old approach with EF Core 1.1
 // Fluent API within the OrderingContext:DbContext in the Infrastructure project
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration) 
+void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA); 
+    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
 
     addressConfiguration.Property<int>("Id")  // Id is a shadow property
         .IsRequired();
@@ -192,7 +192,7 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
-// 
+//
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
     modelBuilder.ApplyConfiguration(new ClientRequestEntityTypeConfiguration());
@@ -206,8 +206,8 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 在下面的代码中，针对 Order 实体定义了持久性基础结构：
 
 ```csharp
-// Part of the OrderEntityTypeConfiguration.cs class 
-// 
+// Part of the OrderEntityTypeConfiguration.cs class
+//
 public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 {
     orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
@@ -220,7 +220,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     orderConfiguration.OwnsOne(o => o.Address);
 
     orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-    
+
     //...Additional validations, constraints and code...
     //...
 }
@@ -312,7 +312,7 @@ public class Address
 - **Martin Fowler。ValueObject 模式** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道。） （书；包括值对象的讨论）\
+- **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道） （书；包括值对象的讨论）\
   [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 - **Vaughn Vernon。实现域驱动设计。** （书；包括值对象的讨论）\
@@ -330,6 +330,6 @@ public class Address
 - **地址类。** eShopOnContainers 中的示例值对象类。 \
   [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
->[!div class="step-by-step"]
->[上一页](seedwork-domain-model-base-classes-interfaces.md)
->[下一页](enumeration-classes-over-enum-types.md)
+> [!div class="step-by-step"]
+> [上一页](seedwork-domain-model-base-classes-interfaces.md)
+> [下一页](enumeration-classes-over-enum-types.md)

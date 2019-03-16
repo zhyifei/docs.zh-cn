@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066423"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677159"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系统上的大型对象堆
 
@@ -47,12 +47,12 @@ ms.locfileid: "55066423"
 
 图 1 说明了一种情况，在第一次第 0 代 GC 后 GC 形成了第 1 代，其中 `Obj1` 和 `Obj3` 被清除；在第一次第 1 代 GC 后形成了第 2 代，其中 `Obj2` 和 `Obj5` 被清除。 请注意此图和下图仅用于说明，它们只包含能更好展示堆上的情况的极少几个对象。 实际上，GC 中通常包含更多的对象。
 
-![图 1：第 0 代 GC 和第 1 代 GC](media/loh/loh-figure-1.jpg)  
+![图 1：第 0 代 GC 和第 1 代 GC](media/loh/loh-figure-1.jpg)\
 图 1：第 0 代和第 1 代 GC。
 
 图 2 显示了第 2 代 GC 发现 `Obj1` 和 `Obj2` 被清除后，GC 在内存中形成了相邻的可用空间，由 `Obj1` 和 `Obj2` 占用，然后用于满足 `Obj4` 的分配要求。 从最后一个对象 `Obj3` 到此段末尾的空间仍可用于满足分配请求。
 
-![图 2：第 2 代 GC 后](media/loh/loh-figure-2.jpg)  
+![图 2：第 2 代 GC 后](media/loh/loh-figure-2.jpg)\
 图 2：第 2 代 GC 后
 
 如果没有足够的可用空间来容纳大型对象分配请求，GC 首先尝试从操作系统获取更多段。 如果失败了，它将触发第 2 代 GC，试图释放部分空间。
@@ -61,7 +61,7 @@ ms.locfileid: "55066423"
 
 由于 LOH 仅在第 2 代 GC 期间进行回收，所以 LOH 段仅在此类 GC 期间可用。 图 3 说明了一种情况，在此情况下，垃圾回收器将某段（段 2）释放回操作系统并且退回剩余段上更多的空间。 如果需要使用该段末尾的已退回空间来满足大型对象分配请求，它会再次提交该内存。 （有关提交/退回的解释说明，请参阅 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 的文档）。
 
-![图 3：第 2 代 GC 后的 LOH](media/loh/loh-figure-3.jpg)  
+![图 3：第 2 代 GC 后的 LOH](media/loh/loh-figure-3.jpg)\
 图 3：第 2 代 GC 后的 LOH
 
 ## <a name="when-is-a-large-object-collected"></a>何时收集大型对象？
@@ -156,7 +156,7 @@ ms.locfileid: "55066423"
 
 查看性能计数器的常用方法是使用性能监视器 (perfmon.exe)。 使用“添加计数器”可为关注的进程添加感兴趣的计数器。 可将性能计数器数据保存在日志文件中，如图 4 所示。
 
-![图 4：添加性能计数器。](media/loh/perfcounter.png)  
+![图 4：添加性能计数器。](media/loh/perfcounter.png)\
 图 4：第 2 代 GC 后的 LOH
 
 也可以编程方式查询性能计数器。 大部分人在例行测试过程中都采用此方式进行收集。 如果发现计数器显示的值不正常，则可以使用其他方法获得更多详细信息以帮助调查。
@@ -184,8 +184,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 结果类似于以下类容：
 
-![图 5：使用 PerfView 检查 ETW 事件](media/loh/perfview.png)  
-图 5：使用 PerfView 显示的 ETW 事件
+![图 5：使用 PerfView 检查 ETW 事件](media/loh/perfview.png) 图 5：使用 PerfView 显示的 ETW 事件
 
 如下所示，所有 GC 都是第 2 代 GC，并且都由 AllocLarge 触发，这表示分配大型对象会触发此 GC。 我们知道这些分配是临时的，因为“LOH 未清理率 %”列显示为 1%。
 
@@ -197,7 +196,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 收集 AllocationTick 事件，大约每 10 万次分配就会触发该事件。 换句话说，每次分配大型对象都会触发事件。 然后可查看某个 GC 堆分配视图，该视图显示分配大型对象的调用堆栈：
 
-![图 6：GC 堆分配视图](media/loh/perfview2.png)  
+![图 6：GC 堆分配视图](media/loh/perfview2.png)\
 图 6：GC 堆分配视图
 
 如图所示，这是从 `Main` 方法分配大型对象的简单测试。

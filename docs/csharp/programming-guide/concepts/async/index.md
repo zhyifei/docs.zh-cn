@@ -1,4 +1,4 @@
----
+﻿---
 title: '使用 Async 和 Await 的异步编程 (C#)'
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
@@ -116,7 +116,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
   
 5.  `DoIndependentWork` 是完成其工作并返回其调用方的同步方法。  
   
-6.  `AccessTheWebAsync` 已用完工作，可以不受 `getStringTask` 的结果影响。 接下来，`AccessTheWebAsync` 需要计算并返回该下载字符串的长度，但该方法仅在具有字符串时才能计算该值。  
+6.  `AccessTheWebAsync` 已运行完毕，可以不受 `getStringTask` 的结果影响。 接下来，`AccessTheWebAsync` 需要计算并返回已下载的字符串的长度，但该方法只有在获得字符串的情况下才能计算该值。  
   
      因此，`AccessTheWebAsync` 使用一个 await 运算符来挂起其进度，并把控制权交给调用 `AccessTheWebAsync` 的方法。 `AccessTheWebAsync` 将 `Task<int>` 返回给调用方。 该任务表示对产生下载字符串长度的整数结果的一个承诺。  
   

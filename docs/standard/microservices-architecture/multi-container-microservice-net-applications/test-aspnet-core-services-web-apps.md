@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 8461cd77661c96e59342fa5721c93f16ce515533
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5af1fa6163858ed80fe92118e85d149081aa6f53
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976182"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677742"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>测试 ASP.NET Core 服务和 Web 应用
 
@@ -17,13 +17,13 @@ ms.locfileid: "56976182"
 
 需要根据有效或无效输入测试控制器的运行状况，并根据其执行的业务操作的结果测试控制器的响应情况。 但是，应对微服务进行这些类型的测试：
 
--   单元测试。 这可确保应用程序的各个组件按预期工作。 断言测试组件 API。
+- 单元测试。 这可确保应用程序的各个组件按预期工作。 断言测试组件 API。
 
--   集成测试。 这可确保对于数据库等外部项目，组件交互按预期工作。 断言可以测试组件 API、UI 或数据库 I/O、登录等操作的副作用。
+- 集成测试。 这可确保对于数据库等外部项目，组件交互按预期工作。 断言可以测试组件 API、UI 或数据库 I/O、登录等操作的副作用。
 
--   每个微服务的的功能测试。 这可确保从用户角度，应用程序按预期运行。
+- 每个微服务的的功能测试。 这可确保从用户角度，应用程序按预期运行。
 
--   服务测试。 这可确保测试端到端服务用例，包括同时测试多个服务。 对于此类型的测试，需要首先准备环境。 在这种情况下，这意味着启动服务（例如，通过使用 docker-compose up）。
+- 服务测试。 这可确保测试端到端服务用例，包括同时测试多个服务。 对于此类型的测试，需要首先准备环境。 在这种情况下，这意味着启动服务（例如，通过使用 docker-compose up）。
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>实现 ASP.NET Core Web API 的单元测试
 
@@ -42,18 +42,18 @@ public async Task Get_order_detail_success()
     //Arrange
     var fakeOrderId = "12";
     var fakeOrder = GetFakeOrder();
- 
+
     //...
 
     //Act
     var orderController = new OrderController(
-        _orderServiceMock.Object, 
-        _basketServiceMock.Object, 
+        _orderServiceMock.Object,
+        _basketServiceMock.Object,
         _identityParserMock.Object);
 
     orderController.ControllerContext.HttpContext = _contextMock.Object;
     var actionResult = await orderController.Detail(fakeOrderId);
- 
+
     //Assert
     var viewResult = Assert.IsType<ViewResult>(actionResult);
     Assert.IsAssignableFrom<Order>(viewResult.ViewData.Model);
@@ -103,28 +103,28 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Steve Smith.测试控制器** (ASP.NET Core) <br/>
+- **Steve Smith.测试控制器** (ASP.NET Core) <br/>
     [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith.集成测试** (ASP.NET Core) <br/>
+- **Steve Smith.集成测试** (ASP.NET Core) <br/>
     [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
--   **使用 dotnet 测试在 .NET Core 中进行单元测试** <br/>
+- **使用 dotnet 测试在 .NET Core 中进行单元测试** <br/>
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](~/docs/core/testing/unit-testing-with-dotnet-test.md)
 
--   **xUnit.net**。 官方网站。 <br/>
+- **xUnit.net**。 官方网站。 <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   单元测试基本信息。 <br/>
+- 单元测试基本信息。 <br/>
     [*https://docs.microsoft.com/visualstudio/test/unit-test-basics*](/visualstudio/test/unit-test-basics)
 
--   **Moq**。 GitHub 存储库。 <br/>
+- **Moq**。 GitHub 存储库。 <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
--   **NUnit**。 官方网站。 <br/>
+- **NUnit**。 官方网站。 <br/>
     [*https://www.nunit.org/*](https://www.nunit.org/)
 
-### <a name="implementing-service-tests-on-a-multi-container-application"></a>在多容器应用程序上实现服务测试 
+### <a name="implementing-service-tests-on-a-multi-container-application"></a>在多容器应用程序上实现服务测试
 
 如前所述，在测试多容器应用程序时，所有微服务需要在 Docker 主机或容器群集内运行。 包含有关一系列微服务的多个操作的端到端服务测试要求通过运行 docker-compose up（如果使用业务流程协调程序，则运行同等机制），在 Docker 主机中部署和启动整个应用程序。 整个应用程序及其所有服务运行后，可以执行端到端集成和功能测试。
 
@@ -136,15 +136,15 @@ compose 应用程序运行后，如果运行 Visual Studio，可利用断点和�
 
 参考应用程序 (eShopOnContainers) 测试最近进行了重构，现在有四种类别：
 
-1.  单元测试，只是普通的旧式常规单元测试，包含在 {MicroserviceName}.UnitTests 项目中
+1. 单元测试，只是普通的旧式常规单元测试，包含在 {MicroserviceName}.UnitTests 项目中
 
-2.  微服务功能/集成测试，具有涉及每个微服务的基础结构但相互独立的测试用例，包含在 {MicroserviceName}.FunctionalTests 项目中。
+2. 微服务功能/集成测试，具有涉及每个微服务的基础结构但相互独立的测试用例，包含在 {MicroserviceName}.FunctionalTests 项目中。
 
-3.  应用程序功能/集成测试，侧重于微服务集成，具有执行多个微服务的测试用例。 这些测试位于项目 Application.FunctionalTests 中。
+3. 应用程序功能/集成测试，侧重于微服务集成，具有执行多个微服务的测试用例。 这些测试位于项目 Application.FunctionalTests 中。
 
-4.  负载测试，侧重于每个微服务的响应时间。 这些测试位于项目 LoadTest 中，需要 Visual Studio 2017 Enterprise Edition。
+4. 负载测试，侧重于每个微服务的响应时间。 这些测试位于项目 LoadTest 中，需要 Visual Studio 2017 Enterprise Edition。
 
-每个微服务的单元和集成测试包含在每个微服务的测试文件夹中，应用程序负责测试包含在解决方案文件夹中的测试文件夹下，如图 6-25 所示。
+每个微服务的单元和集成测试包含在每个微服务的测试文件夹中，应用程序负载测试包含在解决方案文件夹中的测试文件夹下，如图 6-25 所示。
 
 ![eShopOnContainers 中的测试结构：每个服务都具有包含单元和功能测试的“测试”文件夹。 解决方案“测试”文件夹下是应用程序范围功能测试和负载测试。](./media/image42.png)
 
@@ -180,7 +180,7 @@ services:
   rabbitmq:
     ports:
       - "15672:15672"
-      - "5672:5672" 
+      - "5672:5672"
   sql.data:
     environment:
       - SA_PASSWORD=Pass@word
@@ -198,16 +198,16 @@ services:
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 
-正如你所见，这些 docker-compose 文件仅启动 Redis、RabitMQ、SQL Server 和 MongoDB 微服务。
+正如你所见，这些 docker-compose 文件仅启动 Redis、RabbitMQ、SQL Server 和 MongoDB 微服务。
 
-### <a name="additionl-resources"></a>其他资源
+### <a name="additional-resources"></a>其他资源
 
--   GitHub 上的 eShopOnContainers 存储库中的测试自述文件 <br/>
+- GitHub 上的 eShopOnContainers 存储库中的测试自述文件 <br/>
     [*https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test*](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
 
--   GitHub 上的 eShopOnContainers 存储库中的负载测试自述文件 <br/>
+- GitHub 上的 eShopOnContainers 存储库中的负载测试自述文件 <br/>
     [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
 
->[!div class="step-by-step"]
->[上一页](subscribe-events.md)
->[下一页](background-tasks-with-ihostedservice.md)
+> [!div class="step-by-step"]
+> [上一页](subscribe-events.md)
+> [下一页](background-tasks-with-ihostedservice.md)

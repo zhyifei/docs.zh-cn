@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务基础结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b451d896186ffb650e495c10786106c37ab16131
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967966"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676013"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>在微服务（集成事件）之间实现基于事件的通信
 
@@ -76,25 +76,25 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 在[观察者模式](https://en.wikipedia.org/wiki/Observer_pattern)中，主对象（称为可观察对象）将相关信息（事件）告知其他感兴趣的对象（称为观察者）。
 
-### <a name="publishsubscribe-pubsub-pattern"></a>发布-订阅（发布/订阅）模式 
+### <a name="publishsubscribe-pubsub-pattern"></a>发布-订阅（发布/订阅）模式
 
 [发布/订阅模式](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10))的用途与观察者模式相同：某些事件发生时，需要告知其他服务。 但观察者模式与发布/订阅模式之间存在重要区别。 在观察者模式中，直接从可观察对象广播到观察者，因此它们“知道”彼此。 但在发布/订阅模式中，存在称为中转站、消息中转站或事件总线的第三个组件，发布服务器和订阅服务器都知道第三个组件。 因此，使用发布/订阅模式时，发布服务器和订阅服务器通过所述的事件总线或消息中转站精确分离。
 
-### <a name="the-middleman-or-event-bus"></a>中转站或事件总线 
+### <a name="the-middleman-or-event-bus"></a>中转站或事件总线
 
 如何实现发布服务器和订阅服务器之间的匿名？ 一个简单方法是让中转站处理所有通信。 事件总线是一个这样的中转站。
 
 事件总线通常由两部分组成：
 
--   抽象或接口。
+- 抽象或接口。
 
--   一个或多个实现。
+- 一个或多个实现。
 
 在图 6-19 中，从应用程序角度看，会发现事件总线实际上是一个发布/订阅通道。 实现此异步通信的方式可能会有差异。 它可以具有多个实现，以便你进行交换，具体取决于环境要求（例如，生产和开发环境）。
 
 在图 6-20 中，可看到事件总线的抽象，包含基于 RabbitMQ、Azure 服务总线或其他事件/消息中转站等基础结构消息技术的多个实现。
 
-![最好通过接口定义事件总线，以便它可以使用多种方法进行实现（如 RabbitMQ Azure 服务总线或其他方法）。](./media/image21.png)
+![最好通过接口定义事件总线，以便它可以使用多种技术（如 RabbitMQ Azure 服务总线或其他技术）实现。](./media/image21.png)
 
 **图 6- 20。** 事件总线的多个实现
 
@@ -129,6 +129,6 @@ public interface IEventBus
 
 `Subscribe` 方法（你可能有多个实现，具体取决于参数）由要接收事件的微服务使用。 此方法具有两个参数。 第一个是要订阅的集成事件 (`IntegrationEvent`)。 第二个参数是名为 `IIntegrationEventHandler<T>` 的集成事件处理程序（或回调方法），用于在接收者微服务获得集成事件消息时执行。
 
->[!div class="step-by-step"]
->[上一页](database-server-container.md)
->[下一页](rabbitmq-event-bus-development-test-environment.md)
+> [!div class="step-by-step"]
+> [上一页](database-server-container.md)
+> [下一页](rabbitmq-event-bus-development-test-environment.md)

@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 812b89ff163c9d39a658f817495ac12616c28f6f
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b543ab2e200e8169a251db8ddfb1493c5583ed69
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836248"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360246"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 单元测试最佳做法
 
@@ -47,7 +47,7 @@ ms.locfileid: "56836248"
 - 独立。 单元测试是独立的，可以单独运行，并且不依赖文件系统或数据库等任何外部因素。
 - 可重复。 运行单元测试的结果应该保持一致，也就是说，如果在运行期间不更改任何内容，总是返回相同的结果。
 - 自检查。 测试应该能够在没有任何人工交互的情况下，自动检测测试是否通过。
-- 及时。 与要测试的代码相比，单元测试不应花费不成比例的时间来编写。 如果发现测试代码与编写代码相比需要花费大量的时间，请考虑一种更易测试的设计。
+- 及时。 与要测试的代码相比，编写单元测试不应花费过多不必要的时间。 如果发现测试代码与编写代码相比需要花费大量的时间，请考虑一种更易测试的设计。
 
 ## <a name="lets-speak-the-same-language"></a>让我们使用相同的术语
 遗憾的是，当谈到测试时，术语“mock”的滥用情况很严重。 以下定义了编写单元测试时最常见的 fake 类型：

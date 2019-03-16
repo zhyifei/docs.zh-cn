@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 5d338834724c3c5733f2a8a3de1b236e270d28d2
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 84ff3390912f808e6b5733049d9f0b3889576776
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480083"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677430"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>创建简单的数据驱动 CRUD 微服务
 
@@ -33,7 +33,7 @@ ms.locfileid: "55480083"
 
 请注意，在 Docker 容器中运行 SQL Server 这样的数据库服务器十分适用于开发环境，因为可以设置和运行全部所需的依赖关系，而无需在云中或本地预配数据库。 这在运行集成测试时十分方便。 但是对于生产环境，则不建议在容器中运行数据库服务器，因为这种方法通常无法实现高可用性。 对于 Azure 中的生产环境，建议使用 Azure SQL 数据库或任何其他可提供高可用性和高扩展性的数据库技术。 例如，对于 NoSQL 方法，可选择 CosmosDB。
 
-最后，通过编辑 Dockerfile 和 docker-compose.yml 元数据文件，可配置此容器的映像的创建方式—它使用哪种基映像，以及设计内部和外部名称及 TCP 端口等设置。 
+最后，通过编辑 Dockerfile 和 docker-compose.yml 元数据文件，可配置此容器的映像的创建方式—它使用哪种基映像，以及设计内部和外部名称及 TCP 端口等设置。
 
 ## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>使用 ASP.NET Core 实现简单 CRUD 微服务
 
@@ -100,9 +100,9 @@ public class CatalogContext : DbContext
 }
 ```
 
-可具有更多 `DbContext` 实现。 例如，在示例 Catalog.API 微服务中，还有一个名为 `CatalogContextSeed` 的 `DbContext`，它会在首次尝试访问数据库时自动填充示例数据。 此方法对于演示数据以及自动化测试方案很有用。 
+可具有更多 `DbContext` 实现。 例如，在示例 Catalog.API 微服务中，还有一个名为 `CatalogContextSeed` 的 `DbContext`，它会在首次尝试访问数据库时自动填充示例数据。 此方法对于演示数据以及自动化测试方案很有用。
 
-在 `DbContext` 中，使用 `OnModelCreating` 方法来自定义对象/数据库实体映射和其他[EF 扩展点](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)。
+在 `DbContext` 中，使用 `OnModelCreating` 方法来自定义对象/数据库实体映射和其他[EF 扩展点](https://devblogs.microsoft.com/dotnet/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)。
 
 ##### <a name="querying-data-from-web-api-controllers"></a>从 Web API 控制器查询数据
 
@@ -116,7 +116,7 @@ public class CatalogController : ControllerBase
     private readonly CatalogSettings _settings;
     private readonly ICatalogIntegrationEventService _catalogIntegrationEventService;
 
-    public CatalogController(CatalogContext context, 
+    public CatalogController(CatalogContext context,
                              IOptionsSnapshot<CatalogSettings> settings,
                              ICatalogIntegrationEventService catalogIntegrationEventService)
     {
@@ -131,7 +131,7 @@ public class CatalogController : ControllerBase
     [HttpGet]
     [Route("[action]")]
     [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10, 
+    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
                                            [FromQuery]int pageIndex = 0)
 
     {
@@ -150,7 +150,7 @@ public class CatalogController : ControllerBase
             pageIndex, pageSize, totalItems, itemsOnPage);
 
         return Ok(model);
-    } 
+    }
     //...
 }
 ```
@@ -253,19 +253,19 @@ catalog.api:
     - "5101:80"
 ```
 
-相较于项目或微服务级别的配置文件，解决方法级别的 docker-compose.yml 文件不仅更灵活，而且如果使用从部署工具（如 Azure DevOps Services Docker 部署任务）设置的值替换在 docker-compose 文件中声明的环境变量，使用该文件会更安全。 
+相较于项目或微服务级别的配置文件，解决方法级别的 docker-compose.yml 文件不仅更灵活，而且如果使用从部署工具（如 Azure DevOps Services Docker 部署任务）设置的值替换在 docker-compose 文件中声明的环境变量，使用该文件会更安全。
 
 最后，可使用配置 \["ConnectionString"\] 从代码中获取该值，如前面的代码示例中的 ConfigureServices 方法中所示。
 
 但对于生产环境，可能需要寻找其他方法来存储连接字符串等机密。 使用 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) 是管理应用程序机密的绝佳方式。
 
-Azure Key Vault 有助于存储和保护云应用程序和服务使用的加密密钥和机密。 机密是指需严格控制的任何内容（如 API 密钥、连接字符串和密码等），而使用记录、设置过期日期和管理访问<span class="underline">等</span>均涵盖于严控范围内。
+Azure Key Vault 有助于存储和保护云应用程序和服务使用的加密密钥和机密。 机密是指需严格控制的任何内容（如 API 密钥、连接字符串和密码等），而使用记录、设置过期日期和管理访问*等*均涵盖于严控范围内。
 
 Azure Key Vault 允许对应用程序机密的使用情况进行非常详尽地控制，无需让任何人知晓这些内容。 甚至可轮换机密以增强安全性，且不会对开发或操作造成中断。
 
 必须在组织的 Active Directory 中注册应用程序，如此才可使用 Key Vault。
 
-有关更多详细信息，请查看 <span class="underline">Key Vault 概念文档</span>。
+有关更多详细信息，请查看 *Key Vault 概念文档*。
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>在 ASP.NET Web API 中实现版本控制
 
@@ -305,7 +305,7 @@ public class CatalogController : ControllerBase
 - **Roy Fielding。版本控制、超媒体和 REST** \
   [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
-## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>从 ASP.NET Core Web API 生成 Swagger 描述元数据 
+## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>从 ASP.NET Core Web API 生成 Swagger 描述元数据
 
 [Swagger](https://swagger.io/) 是一个常用开源框架，由包含大量工具的大型“生态系统”提供支持，可帮助设计、生成、存档和使用 RESTful API。 它正逐渐变为 API 描述性元数据域的标准。 应在所有类型的微服务中，无论是数据驱动的微服务还是多个高级域驱动微服务，包含 Swagger 描述性元数据（如下一部分中所述）。
 
@@ -333,9 +333,9 @@ Swagger 的核心是 Swagger 规范，它是 JSON 或 YAML 文件中的 API 描�
 
 Microsoft Flow、PowerApps 和 Azure 逻辑应用通过使用 Swagger 的元数据来了解如何使用和连接 API。
 
-基于 <span class="underline">swagger-ui</span>，可通过多种方式以功能 API 帮助页面的形式自动生成针对 ASP.NET Core REST API 应用程序的 Swagger 元数据。
+基于 *swagger-ui*，可通过多种方式以功能 API 帮助页面的形式自动生成针对 ASP.NET Core REST API 应用程序的 Swagger 元数据。
 
-或许，最常用的方式是当前 [eShopOnCntainers](https://github.com/dotnet-architecture/eShopOnContainers) 中使用的 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)，我们将在本指南中对此进行详细介绍，但除此以外，也可选择使用 [NSwag](https://github.com/RSuter/NSwag)，它可以生成 Typescript 和 C\# API 客户端，也可基于 Swagger 或 OpenAPI 规范生成 C\# 控制器，甚至可使用 [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio) 扫描包含这些控制器的 .dll 来生成控制器。
+或许，最常用的方式是当前 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 中使用的 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)，我们将在本指南中对此进行详细介绍，但除此以外，也可选择使用 [NSwag](https://github.com/RSuter/NSwag)，它可以生成 Typescript 和 C\# API 客户端，也可基于 Swagger 或 OpenAPI 规范生成 C\# 控制器，甚至可使用 [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio) 扫描包含这些控制器的 .dll 来生成控制器。
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>如何使用 Swashbuckle NuGet 包自动生成 API Swagger 元数据
 
@@ -402,17 +402,17 @@ public class Startup
 
 ```url
   http://<your-root-url>/swagger/v1/swagger.json
-  
+
   http://<your-root-url>/swagger/
 ```
 
-之前已展示 Swashbuckle 为类似于 http://\<your-root-url\>/swagger/ 的 URL 生成的 UI。 图 6-9 中还展示了如何测试 API 方法。
+之前已展示由 Swashbuckle 为类似于 `http://<your-root-url>/swagger` 的 URL 生成的 UI。 图 6-9 中还展示了如何测试 API 方法。
 
 ![Swagger UI API 详细信息显示了一个响应示例，可用于执行真正的 API，这对于开发人员发现非常有用。](./media/image10.png)
 
 图 6-9。 Swashbuckle UI 测试目录/项目 API 方法
 
-图 6-10 显示了当使用 [Postman](https://www.getpostman.com/) 请求 \<your-root-url\>/swagger/v1/swagger.json 时，从 eShopOnContainers 微服务（工具使用此微服务）中生成的 Swagger JSON 元数据。
+图 6-10 显示了当使用 [Postman](https://www.getpostman.com/) 请求 `http://<your-root-url>/swagger/v1/swagger.json` 时，从 eShopOnContainers 微服务（工具在下方使用此微服务）中生成的 Swagger JSON 元数据。
 
 ![显示 Swagger JSON 元数据的示例 Postman UI](./media/image11.png)
 
@@ -431,6 +431,6 @@ public class Startup
 - **NSwag 和 ASP.NET Core 入门** \
   [*https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio)
 
->[!div class="step-by-step"]
->[上一页](microservice-application-design.md)
->[下一页](multi-container-applications-docker-compose.md)
+> [!div class="step-by-step"]
+> [上一页](microservice-application-design.md)
+> [下一页](multi-container-applications-docker-compose.md)

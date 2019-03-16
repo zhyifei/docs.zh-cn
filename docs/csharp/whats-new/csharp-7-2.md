@@ -2,17 +2,17 @@
 title: C# 7.2 中的新增功能
 description: C# 7.2 中的新增功能概述。
 ms.date: 08/16/2017
-ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9525d52e5eab4b8213b8a1920531dc4b4d7ac0a3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148170"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673218"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 中的新增功能
 
 C# 7.2 又是一个单点版本，它增添了大量有用的功能。
-此版本的一项主要功能是避免不必要的复制或分配，进而更有效地处理值类型。 
+此版本的一项主要功能是避免不必要的复制或分配，进而更有效地处理值类型。
 
 其余功能很微小，但值得拥有。
 
@@ -48,7 +48,7 @@ C# 7.2 使用[语言版本选择](../language-reference/configure-language-versi
 
 ## <a name="leading-underscores-in-numeric-literals"></a>数值文字中的前导下划线
 
-C# 7.0 中实现了对数字分隔符的支持，但这不允许文字值的第一个字符是 `_`。 十六进制文本和二进制文件现可以 `_` 开头。 
+C# 7.0 中实现了对数字分隔符的支持，但这不允许文字值的第一个字符是 `_`。 十六进制文本和二进制文件现可以 `_` 开头。
 
 例如:
 

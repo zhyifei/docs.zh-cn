@@ -4,6 +4,7 @@ description: 了解如何执行特定任务，以帮助自定义创建 AI 解决
 ms.custom: seodec18
 ms.date: 03/01/2019
 ---
+
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET 机器学习操作指南 - ML.NET
 
 在 ML.NET 指南中的操作指南部分快速了解常见问题的答案。 在某些情况下，可能会在多个部分列出相关文章以便查找。
@@ -44,7 +45,7 @@ ms.date: 03/01/2019
 
 * [使用 ML.NET 应用特征工程学来进行文本数据模型定型。](train-model-textual-ml-net.md)
 
-## <a name="run"></a>运行 
+## <a name="run"></a>运行
 
 * [在 ML.NET 管道处理期间检查中间数据值。](inspect-intermediate-data-ml-net.md)
 
@@ -52,7 +53,6 @@ ms.date: 03/01/2019
 
 * [使用 PredictionFunction 一次执行一个预测。](single-predict-model-ml-net.md)
 
-## <a name="probabalistic-infernet"></a>概率逻辑 (Infer.NET)
+## <a name="probabilistic-infernet"></a>概率 (Infer.NET)
 
 * [使用 Infer.NET 和概率性编程创建游戏匹配列表。](matchup-app-infer-net.md)
-
