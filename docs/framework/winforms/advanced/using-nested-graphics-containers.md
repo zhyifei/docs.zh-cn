@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 639b53ada8639ed686d04b4aa2e5295ca08240b0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a66edd0297b723b81c31675c9b0e6b6def9ed10a
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714172"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125858"
 ---
 # <a name="using-nested-graphics-containers"></a>使用嵌套的 Graphics 容器
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了可用于临时替换或增加中状态的一部分的容器<xref:System.Drawing.Graphics>对象。 通过调用创建一个容器<xref:System.Drawing.Graphics.BeginContainer%2A>方法的<xref:System.Drawing.Graphics>对象。 您可以调用<xref:System.Drawing.Graphics.BeginContainer%2A>重复以形成嵌套的容器。 每次调用<xref:System.Drawing.Graphics.BeginContainer%2A>必须通过调用配对<xref:System.Drawing.Graphics.EndContainer%2A>。  
@@ -25,9 +25,9 @@ ms.locfileid: "57714172"
  [!code-csharp[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#61)]  
   
- 在前面的代码中，从在容器内绘制的矩形转换首先按容器 （轮换） 的世界转换，然后按的世界转换<xref:System.Drawing.Graphics>对象 （转换）。 从容器外部绘制的矩形转换只能由的世界转换<xref:System.Drawing.Graphics>对象 （转换）。 下图显示了两个矩形。  
+ 在前面的代码中，从在容器内绘制的矩形转换首先按容器 （轮换） 的世界转换，然后按的世界转换<xref:System.Drawing.Graphics>对象 （转换）。 从容器外部绘制的矩形转换只能由的世界转换<xref:System.Drawing.Graphics>对象 （转换）。 下图显示了两个矩形： 
   
- ![嵌套容器](./media/csnestedcontainers1.png "csnestedcontainers1")  
+ ![显示嵌套的容器的图例。](./media/using-nested-graphics-containers/nested-containers-illustration.png)  
   
 ## <a name="clipping-in-nested-containers"></a>在嵌套的容器中的剪辑  
  下面的示例演示如何嵌套的容器处理剪辑区域。 该代码会创建<xref:System.Drawing.Graphics>对象，并在其中的容器<xref:System.Drawing.Graphics>对象。 剪辑区域<xref:System.Drawing.Graphics>对象是一个矩形，该容器的剪辑区域是一个椭圆。 代码会调用两个<xref:System.Drawing.Graphics.DrawLine%2A>方法。 首次调用<xref:System.Drawing.Graphics.DrawLine%2A>是内部的容器，然后第二次调用<xref:System.Drawing.Graphics.DrawLine%2A>超出容器 (在调用<xref:System.Drawing.Graphics.EndContainer%2A>)。 第一行将被剪裁由两个剪辑区域的交集。 第二行剪辑矩形的剪辑区域只能由<xref:System.Drawing.Graphics>对象。  
@@ -35,9 +35,9 @@ ms.locfileid: "57714172"
  [!code-csharp[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#62)]
  [!code-vb[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#62)]  
   
- 下图显示了两个剪辑的行。  
+ 下图显示了两个剪辑的行：
   
- ![嵌套容器](./media/nestedcontainers2.png "nestedcontainers2")  
+ ![显示与裁剪后的行的嵌套的容器的图例。](./media/using-nested-graphics-containers/nested-container-clipped-lines.png)  
   
  如上面的示例所示，转换和剪辑区域是在嵌套的容器中累计。 如果设置容器的世界转换和<xref:System.Drawing.Graphics>对象，这两种转换将应用于从容器内部绘制的项。 容器的转换将应用第一、 和的转换<xref:System.Drawing.Graphics>对象将第二个应用。 如果设置容器的剪辑区域和<xref:System.Drawing.Graphics>对象，从容器内部绘制的项将剪辑由两个剪辑区域的交集。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "57714172"
   
  下图显示了三个字符串。 绘制从内部容器和字符串<xref:System.Drawing.Graphics>对象进行平滑处理的抗锯齿功能。 从外部容器绘制的字符串不因为由抗锯齿平滑<xref:System.Drawing.Graphics.TextRenderingHint%2A>属性设置为<xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>。  
   
- ![嵌套容器](./media/nestedcontainers3.png "nestedcontainers3")  
+ ![显示从嵌套容器绘制的字符串的图例。](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Drawing.Graphics>

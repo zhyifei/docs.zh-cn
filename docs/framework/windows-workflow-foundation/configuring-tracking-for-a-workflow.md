@@ -2,12 +2,12 @@
 title: 为工作流配置跟踪
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719398"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126196"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>为工作流配置跟踪
 
@@ -183,9 +183,9 @@ WF 4 提供跟踪参与者，可将跟踪记录写入 ETW（Windows 事件跟踪
 
 6. 右键单击**Analytic**节点，然后选择**刷新。** 跟踪记录应会显示在中心窗格中。
 
-下面的图像显示了事件查看器中的跟踪事件。
+下图显示了事件查看器中的跟踪事件：
 
-![跟踪记录的事件查看器显示](./media/trackingeventviewer.PNG "TrackingEventViewer")
+![跟踪记录的事件查看器显示的屏幕截图。](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>注册应用程序特定的提供程序 ID
 

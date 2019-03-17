@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0a10a3f5fd07c7e3ceb7e08802f2c821b7d9a7f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369742"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125598"
 ---
 # <a name="structured-navigation-overview"></a>结构化导航概述
 可以通过承载的内容[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、 一个<xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>组成可以标识包的页面[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]和导航到超链接的。 页面的结构以及导航页面的方式（通过超链接来定义）称为导航拓扑。 此类拓扑适合各种应用程序类型，尤其适合在文档之间导航的应用程序类型。 对于此类应用程序，用户可以从一个页面导航到另一个页面，并且其中任一页面都无需了解另一页面的任何信息。  
@@ -37,9 +37,9 @@ ms.locfileid: "57369742"
   
 -   当调用页返回到被调用页时，被调用页会从导航历史记录中删除，以便将被调用页的一个实例与另一个实例隔离开。  
   
- 下图阐释了这些行为。  
+ 下图说明了这些行为：  
   
- ![调用页与被调用页之间的流](./media/structurednavigationoverviewfigure1.png "StructuredNavigationOverviewFigure1")  
+ ![屏幕截图显示了调用页和被调用的页之间的流。](./media/structured-navigation-overview/flow-between-calling-page-called-page.png)  
   
  您可以通过使用实现这些行为<xref:System.Windows.Navigation.PageFunction%601>作为被调用页。  
   

@@ -98,7 +98,7 @@ Dim urlContents As String = Await client.GetStringAsync()
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a>异步方法的运行机制  
  异步编程中最需弄清的是控制流是如何从方法移动到方法的。 下图可引导你完成该过程。  
   
- ![跟踪异步程序](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
+ ![图，显示跟踪异步程序。](./media/index/navigation-trace-async-program.png)  
   
  关系图中的数值对应于以下步骤。  
   
@@ -114,7 +114,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
 5.  `DoIndependentWork` 是完成其工作并返回其调用方的同步方法。  
   
-6.  `AccessTheWebAsync` 已用完工作，可以不受 `getStringTask` 的结果影响。 接下来，`AccessTheWebAsync` 需要计算并返回该下载字符串的长度，但该方法仅在具有字符串时才能计算该值。  
+6.  `AccessTheWebAsync` 已运行完毕，可以不受 `getStringTask` 的结果影响。 接下来，`AccessTheWebAsync` 需要计算并返回已下载的字符串的长度，但该方法只有在获得字符串的情况下才能计算该值。  
   
      因此，`AccessTheWebAsync` 使用一个 await 运算符来挂起其进度，并把控制权交给调用 `AccessTheWebAsync` 的方法。 `AccessTheWebAsync` 将 `Task<int>`（Visual Basic 中的 `Task(Of Integer)`）返回给调用方。 该任务表示对产生下载字符串长度的整数结果的一个承诺。  
   

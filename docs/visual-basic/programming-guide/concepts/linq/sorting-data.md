@@ -2,19 +2,19 @@
 title: 对数据进行排序 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: e36ccc72689e756105f51c988d4cafd06d4d8da5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5875b15dbdec69aca653b8f6cca4dd07fc9af343
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520121"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126248"
 ---
 # <a name="sorting-data-visual-basic"></a>对数据进行排序 (Visual Basic)
 排序操作基于一个或多个属性对序列的元素进行排序。 第一个排序条件对元素执行主要排序。 通过指定第二个排序条件，您可以对每个主要排序组内的元素进行排序。  
   
  下图演示对一个字符序列执行按字母排序操作的结果。  
   
- ![LINQ 排序操作](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ ![显示按字母排序操作的图形。](./media/sorting-data/alphabetical-sort-operation.png)  
   
  下节列出了对数据进行排序的标准查询运算符方法。  
   

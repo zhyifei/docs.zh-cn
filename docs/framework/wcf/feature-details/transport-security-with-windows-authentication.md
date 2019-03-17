@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: bd4e12a861207e5318e8f3f34b38204f6724e7b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96fce3cb56cf328e0fbb589113e3ac24519de557
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652587"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125442"
 ---
 # <a name="transport-security-with-windows-authentication"></a>通过 Windows 身份验证确保的传输安全
 以下方案演示了 Windows Communication Foundation (WCF) 客户端和服务由 Windows 安全保护。 有关编程的详细信息，请参阅[如何：使用 Windows 凭据保护服务](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
   
  Intranet Web 服务显示了人力资源信息。 客户端是 Windows 窗体应用程序。 该应用程序部署在具有 Kerberos 控制器保护的域中。  
   
- ![传输安全使用 Windows 身份验证](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
+ ![使用 Windows 身份验证的传输安全性](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
 |特征|描述|  
 |--------------------|-----------------|  

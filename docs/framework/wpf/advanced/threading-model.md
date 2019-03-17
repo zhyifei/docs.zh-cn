@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: e2a4b1157ec1f114b9e33f220e09fc791cfb9fc3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353031"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125676"
 ---
 # <a name="threading-model"></a>线程处理模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 旨在帮助开发人员处理复杂的线程处理问题。 因此，大部分[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]开发人员无需编写一个接口，使用多个线程。 由于多线程程序既复杂又难以调试，因此当存在单线程解决方案时，应避免使用多线程程序。  
@@ -63,7 +63,7 @@ ms.locfileid: "57353031"
   
  请看下面的示例：  
   
- ![质数屏幕快照](./media/threadingprimenumberscreenshot.PNG "ThreadingPrimeNumberScreenShot")  
+ ![显示线程的质数的屏幕截图。](./media/threading-model/threading-prime-numbers.png)  
   
  这个简单的应用程序从 3 开始向上计数以搜索质数。 当用户单击**启动**按钮，开始执行搜索。 当程序查找到一个质数时，它将根据其发现内容更新用户界面。 用户可随时停止搜索。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "57353031"
   
  划分计算和事件处理之间的处理时间的最佳方式是管理计算从<xref:System.Windows.Threading.Dispatcher>。 通过使用<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>方法中，我们可以计划质数检查中的同一队列[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]来自事件。 在我们的示例中，一次仅计划一个质数检查。 完成质数检查后，立即计划下一个检查。 此检查才会继续后才挂起[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]已处理事件。  
   
- ![调度程序队列图](./media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
+ ![屏幕截图显示了调度程序队列。](./media/threading-model/threading-dispatcher-queue.png)  
   
  [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] 通过此机制完成拼写检查。 使用的空闲时间在后台执行了拼写检查[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程。 我们来看一看代码。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "57353031"
   
  在本例中，我们模拟了一个检索天气预报的远程过程调用。 我们使用单独的工作线程来执行此调用，并且计划中的更新方法在调用<xref:System.Windows.Threading.Dispatcher>的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程完成时。  
   
- ![天气 UI 屏幕快照](./media/threadingweatheruiscreenshot.PNG "ThreadingWeatherUIScreenShot")  
+ ![显示天气 UI 的屏幕截图。](./media/threading-model/threading-weather-ui.png)  
   
  [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweathercodebehind)]
  [!code-vb[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweathercodebehind)]  
@@ -190,7 +190,7 @@ ms.locfileid: "57353031"
 ### <a name="nested-pumping"></a>嵌套泵  
  有时不可行完全锁定[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]线程。 让我们考虑<xref:System.Windows.MessageBox.Show%2A>方法的<xref:System.Windows.MessageBox>类。 <xref:System.Windows.MessageBox.Show%2A> 不会返回，直到用户单击确定按钮。 但是，它却会创建一个窗口，该窗口为了获得交互性而必须具有消息循环。 在等待用户单击“确定”时，原始应用程序窗口将不会响应用户的输入。 但是，它将继续处理绘制消息。 当被覆盖和被显示时，原始窗口将重绘其本身。  
   
- ![具有“确定”按钮的消息框](./media/threadingnestedpumping.png "ThreadingNestedPumping")  
+ ![显示一个消息框具有确定按钮的屏幕截图](./media/threading-model/threading-message-loop.png)  
   
  一些线程必须负责消息框窗口。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以为消息框窗口创建新线程，但此线程无法在原始窗口中绘制禁用的元素（请回忆之前所讨论的互相排斥）。 相反，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用嵌套的消息处理系统。 <xref:System.Windows.Threading.Dispatcher>类包含一个名为的特殊方法<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>，用于存储应用程序的当前执行点然后开始新的消息循环。 当嵌套的消息循环完成后时，原始后恢复执行<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>调用。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "57353031"
   
  大多数接口不构建记住的线程安全，因为开发人员在假设的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]永远不会由多个线程访问。 在此情况下，单个线程可能会使在意外情况的环境更改可导致这些错误影响的<xref:System.Windows.Threading.DispatcherObject>应该互相排斥机制来解决。 请看下面的伪代码：  
   
- ![线程处理重入示意图](./media/threadingreentrancy.png "ThreadingReentrancy")  
+ ![线程处理重新进入该节目的关系图。](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
   
  大多数情况下，这是正确的事情，但有时候，在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]其中此类异常的重入确实会造成问题。 这样，在某些关键时刻[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]调用<xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>，这将更改为使用该线程的锁定指令[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]无重入锁，而非常规[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]锁。  
   

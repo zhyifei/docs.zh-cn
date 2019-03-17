@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-ms.openlocfilehash: 6fc4e12bb7532019a0571095263b5447e4b0d1ed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0731595dc25b1afb4b3dbcc7eedbfb92ef32d267
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702511"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126274"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>如何：绘制单个 B&#233;zier 样条
 由四个点定义的贝塞尔样条： 一个起点，这两个控制点和终结点。  
@@ -23,7 +23,7 @@ ms.locfileid: "57702511"
   
  下图显示了生成的贝塞尔样条以及其开始点、 控点和终结点。 该插图还显示自由绘制曲线的凸包，这是通过使用直线连接四个点而形成的多边形。  
   
- ![Bezier Spline](./media/bezierspline1.png "BezierSpline1")  
+ ![贝塞尔样条图。](./media/how-to-draw-a-single-bezier-spline/bezier-spline-illustration.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#31)]  

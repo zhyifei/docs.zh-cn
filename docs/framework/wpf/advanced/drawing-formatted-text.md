@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 538cc23a3ee7696a28de43e5724dc450328205ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 705e91923f6ab38f7dce83e511027102112539f3
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372173"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125429"
 ---
 # <a name="drawing-formatted-text"></a>绘制格式化文本
 本主题提供的功能的概述<xref:System.Windows.Media.FormattedText>对象。 此对象为在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中绘制文本提供低级别控制。  
@@ -24,8 +24,7 @@ ms.locfileid: "57372173"
 ## <a name="technology-overview"></a>技术概述  
  <xref:System.Windows.Media.FormattedText>对象可绘制多行文本，在其中的文本中的每个字符可以单独设置格式。 下例演示应用了多种格式的文本。  
   
- ![使用 FormattedText 对象显示的文本](./media/formattedtext01.jpg "FormattedText01")  
-使用 FormattedText 方法显示的文本  
+ ![使用 FormattedText 对象显示的文本](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
 >  对于从 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API 迁移的开发人员，[Win32 迁移](#win32_migration)一节中的表列出了 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 标志和 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的近似等效项。  
@@ -42,8 +41,7 @@ ms.locfileid: "57372173"
   
  使用<xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>属性可以将约束为特定宽度的文本。 文本将自动换行，避免超过指定宽度。 使用<xref:System.Windows.Media.FormattedText.MaxTextHeight%2A>属性可以将约束为特定高度的文本。 超过指定高度的文本将显示一个省略号“…”。  
   
- ![使用 FormattedText 对象显示的文本](./media/formattedtext02.png "FormattedText02")  
-显示自动换行和省略号的文本  
+ ![使用换行和省略号显示的文本。](./media/drawing-formatted-text/formatted-text-wordwrap-ellipsis.png)    
   
  可向一个或多个字符应用多种格式样式。 例如，您可以调用<xref:System.Windows.Media.FormattedText.SetFontSize%2A>和<xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A>方法来更改格式设置的文本中的前五个字符。  
   
@@ -62,19 +60,15 @@ ms.locfileid: "57372173"
 ### <a name="converting-formatted-text-to-a-geometry"></a>将格式化文本转换为几何图形  
  可以将转换到带格式的文本<xref:System.Windows.Media.Geometry>对象，它允许您创建其他类型的悦目文本。 例如，可以创建<xref:System.Windows.Media.Geometry>基于对象的轮廓上的文本字符串。  
   
- ![使用线性渐变画笔的文本轮廓](./media/outlinedtext02.jpg "OutlinedText02")  
-使用线性渐变画笔的文本轮廓  
+ ![使用线性渐变画笔的文本轮廓](./media/typography-in-wpf/text-outline-linear-gradient.jpg)    
   
  以下示例说明了几种通过修改已转换文本的笔划、填充和突出显示来创建悦目的视觉效果的方法。  
   
- ![对填充和笔画使用不同颜色的文本](./media/outlinedtext03.jpg "OutlinedText03")  
-将笔划和填充设置为不同颜色的示例  
+ ![对填充和笔画使用不同颜色的文本](./media/typography-in-wpf/fill-stroke-text-effect.jpg)  
   
- ![笔划应用了图像画笔的文本](./media/outlinedtext04.jpg "OutlinedText04")  
-笔划应用了图像画笔的示例  
+ ![笔画应用了图像画笔的文本](./media/typography-in-wpf/image-brush-application.jpg)
   
- ![笔划应用了图像画笔的文本](./media/outlinedtext05.jpg "OutlinedText05")  
-笔划和突出显示应用了图像画笔的示例  
+ ![应用绘制笔画，并突出显示了图像画笔的文本](./media/typography-in-wpf/image-brush-text-application.jpg)
   
  当文本转换为<xref:System.Windows.Media.Geometry>对象，它不再是一系列字符，不能修改文本字符串中的字符。 但是，可修改已转换文本的笔划和填充属性，以此来影响该文本的外观。 笔划是指已转换文本的轮廓；填充是指已转换文本的轮廓的内部区域。 有关详细信息，请参阅[创建轮廓文本](how-to-create-outlined-text.md)。  
   
@@ -82,15 +76,14 @@ ms.locfileid: "57372173"
   
  下面的示例演示已转换为的格式化的文本<xref:System.Windows.Media.PathGeometry>对象。 经过动画处理的椭圆会沿着所呈现文本的笔划路径显示。  
   
- ![沿着文本路径几何图形](./media/textpathgeometry01.gif "TextPathGeometry01")  
+ ![沿着文本路径几何图形运动的球](./media/drawing-formatted-text/sphere-following-geometry-path.gif)  
 沿着文本路径几何图形运动的球  
   
  有关详细信息，请参阅[如何：为文本创建 PathGeometry 动画](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))。  
   
  您可以创建其他有趣的用法将格式化文本转换到后<xref:System.Windows.Media.PathGeometry>对象。 例如，可剪辑视频，以便在格式化文本中显示。  
   
- ![在文本路径几何图形中的视频显示](./media/videotextdemo01.png "VideoTextDemo01")  
-文本路径几何图形中的视频显示  
+ ![文本路径几何图形中的视频显示](./media/drawing-formatted-text/video-displaying-text-path-geometry.png)
   
 <a name="win32_migration"></a>   
 ## <a name="win32-migration"></a>Win32 迁移  
