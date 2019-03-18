@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: fd86293c539bf58ac93894e0b879dddb984825e1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: be0b6a0bbe927f248be434afd15dde6a66791fe6
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378937"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "58126118"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>如何：向文本应用变换
 应用变换可以改变应用程序中文本的显示。 下面的示例使用不同类型的呈现变换来影响中文本的显示<xref:System.Windows.Controls.TextBlock>控件。  
@@ -28,8 +28,7 @@ ms.locfileid: "57378937"
 ## <a name="example"></a>示例  
  下面的示例演示了在 x-y 二维平面中文本围绕一个特定点进行旋转。  
   
- ![使用 RotateTransform 旋转的文本](./media/transformedtext01.jpg "TransformedText01")  
-文本旋转 90 度的示例  
+ ![使用 RotateTransform 旋转的文本](./media/how-to-apply-transforms-to-text/text-rotated-ninety-degrees.jpg)  
   
  下面的代码示例使用<xref:System.Windows.Media.RotateTransform>来旋转文本。 <xref:System.Windows.Media.RotateTransform.Angle%2A>值为 90，则元素会顺时针旋转 90 度。  
   
@@ -37,8 +36,7 @@ ms.locfileid: "57378937"
   
  下面的示例演示沿 X 轴放大 150% 得到第二行文本，沿 Y 轴放大 150% 得到第三行文本。  
   
- ![使用 ScaleTransform 缩放的文本](./media/transformedtext02.jpg "TransformedText02")  
-缩放文本的示例  
+ ![使用 ScaleTransform 缩放的文本](./media/how-to-apply-transforms-to-text/scaled-text-scaletransform.jpg) 
   
  下面的代码示例使用<xref:System.Windows.Media.ScaleTransform>对文本从其原始大小进行缩放。  
   
@@ -49,17 +47,15 @@ ms.locfileid: "57378937"
   
  以下示例演示沿 X 轴倾斜的文本。  
   
- ![使用 SkewTransform 倾斜的文本](./media/transformedtext03.jpg "TransformedText03")  
-扭曲文本的示例  
-  
+ ![使用 SkewTransform 扭曲的文本](./media/how-to-apply-transforms-to-text/skewed-transformed-text.jpg)
+   
  下面的代码示例使用<xref:System.Windows.Media.SkewTransform>来扭曲文本。 扭曲（也称为倾斜）是一种以非均匀方式拉伸坐标空间的变换。 在本示例中，两个文本字符串沿 x 坐标扭曲了 -30° 和 30°。  
   
  [!code-xaml[TextTransformSample#TextTransformSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample3)]  
   
  下面的示例演示沿 x 轴和 y 轴平移或移动的文本。  
   
- ![使用 TranslateTransform 偏移的文本](./media/transformedtext04.jpg "TransformedText04")  
-平移文本的示例  
+ ![使用 TranslateTransform 偏移的文本](./media/how-to-apply-transforms-to-text/transformed-text-x-y-axis.jpg)
   
  下面的代码示例使用<xref:System.Windows.Media.TranslateTransform>来偏移文本。 在本示例中，主要文本下方略微偏移的文本副本营造出了阴影效果。  
   
