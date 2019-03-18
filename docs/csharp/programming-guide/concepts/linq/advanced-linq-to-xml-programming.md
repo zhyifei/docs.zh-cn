@@ -3,11 +3,11 @@ title: 高级 LINQ to XML 编程 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
 ms.openlocfilehash: f921bf6e560f6b8286340ec80ab12e60cf248720
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738623"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58133280"
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>高级 LINQ to XML 编程 (C#)
 本节为高级开发人员提供一些只适用于某些 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 方案的信息。  
