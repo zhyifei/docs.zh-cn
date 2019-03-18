@@ -8,12 +8,12 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: e94928f17a31cdadae11f69c37a4f148452b5d2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d528039245e2720f78e8817e1752d88ca94e6e0
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699735"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58047880"
 ---
 # <a name="xarray-markup-extension"></a>x:Array 标记扩展
 有关在 XAML 中通过标记扩展的对象的数组，提供了常规支持。 这对应于`x:ArrayExtension`[MS-XAML] 中的 XAML 类型。  
@@ -46,9 +46,9 @@ ms.locfileid: "54699735"
   
  `x:Array` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 `x:Array` 部分是该规则的例外，因为而不是提供替代属性值处理`x:Array`另类处理其内部文本内容。 此行为使现有的内容模型以进行分组到一个数组和更高版本在代码隐藏中引用的访问已命名的数组; 可能不支持的类型您可以调用<xref:System.Array>方法来获取个人数组项。  
   
- 在 XAML 中的所有标记扩展都使用大括号 ({,} `)`在其特性语法，该命令是依据 XAML 处理器认定标记扩展必须处理的属性值的约定。 有关通常的标记扩展的详细信息，请参阅[Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)。  
+ 在 XAML 中的所有标记扩展都使用大括号 ({,} `)`在其特性语法，该命令是依据 XAML 处理器认定标记扩展必须处理的属性值的约定。 有关通常的标记扩展的详细信息，请参阅[Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)。  
   
- 在 XAML 2009 年，`x:Array`定义为一种语言基元而不是标记扩展。 有关详细信息，请参阅[常见 XAML 语言基元的内置类型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)。  
+ 在 XAML 2009 年，`x:Array`定义为一种语言基元而不是标记扩展。 有关详细信息，请参阅[常见 XAML 语言基元的内置类型](built-in-types-for-common-xaml-language-primitives.md)。  
   
 ## <a name="wpf-usage-notes"></a>WPF 用法说明  
  通常情况下，填充的对象元素`x:Array`不是元素中存在的[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]XAML 命名空间，并且需要对非默认 XAML 命名空间的前缀映射。  
@@ -67,8 +67,8 @@ ms.locfileid: "54699735"
   
  `</x:Array>`  
   
- 对于用作数组元素的自定义类型，类还必须支持在 XAML 中作为对象元素实例化的要求。 有关详细信息，请参阅[XAML 及 WPF 的自定义类](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)。  
+ 对于用作数组元素的自定义类型，类还必须支持在 XAML 中作为对象元素实例化的要求。 有关详细信息，请参阅[XAML 及 WPF 的自定义类](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [标记扩展和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [从 WPF 迁移到 System.Xaml 的类型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [标记扩展和 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [从 WPF 迁移到 System.Xaml 的类型](types-migrated-from-wpf-to-system-xaml.md)

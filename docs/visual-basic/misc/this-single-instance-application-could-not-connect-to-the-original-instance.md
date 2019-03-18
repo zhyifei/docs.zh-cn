@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 80c1ec0bf1aa4b6dbf885294c680b3bfe8897eac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 241ad5b9986e78f88ab5ca39bc73f7372162ba76
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565704"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037499"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>此单实例应用程序未能连接到原始实例
 此单实例应用程序未能连接到原始实例。 一些可能导致此问题的原因包括：  
@@ -33,5 +33,5 @@ ms.locfileid: "54565704"
 5.  记录发生错误的环境，并与 Microsoft 产品支持服务联系。  
   
 ## <a name="see-also"></a>请参阅
-- [调试器基础知识](/visualstudio/debugger/debugger-basics)
 
+- [调试器基础知识](/visualstudio/debugger/debugger-basics)

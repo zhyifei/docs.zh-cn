@@ -2,12 +2,12 @@
 title: 默认 XAML 架构上下文和 WPF XAML 架构上下文
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 2bf7d7b3b5a871d358088fe652653fa0e6be5620
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a916d202ab256789a73c713bee49e502ea49ffd3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492190"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58018519"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>默认 XAML 架构上下文和 WPF XAML 架构上下文
 XAML 架构上下文是有资格使用特定的 XAML 词汇 XAML 生产与编写的行为，包括如何类型映射解析时，如何将加载程序集、 如何某些读取器和编写器的对象交互的方式的概念实体设置被解释。 本主题介绍.NET Framework XAML 服务和基于 CLR 类型系统的关联的默认 XAML 架构上下文的功能。 本主题还介绍用于 WPF 的 XAML 架构上下文。  
@@ -89,4 +89,4 @@ XAML 架构上下文是有资格使用特定的 XAML 词汇 XAML 生产与编写
     -   使用短名称和公钥标记调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
   
 ## <a name="see-also"></a>请参阅
-- [了解 XAML 节点流结构和概念](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+- [了解 XAML 节点流结构和概念](understanding-xaml-node-stream-structures-and-concepts.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: f3417ed53131a695623ea6c365314ab2c5eedd37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04d1a8b1c6f05537f12c3df79fda007332621264
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629289"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049456"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>可供类型转换器和标记扩展使用的服务上下文
 支持类型转换器和标记扩展用法的类型的作者通常必须拥有用法在标记或周围对象图结构中的所在位置的相关上下文信息。 为了能正确实例化所提供的对象或者对对象图中的现有对象进行对象引用，可能需要此信息。 使用.NET Framework XAML 服务时，可能需要的上下文将作为一系列服务接口公开。 类型转换器或标记扩展支持代码可使用从 <xref:System.Xaml.XamlObjectWriter> 或相关类型传递且可用的服务提供程序上下文来查询服务。 可通过一个这样的服务来直接获取 XAML 架构上下文。 本主题介绍如何从值转换器实现访问服务上下文，并且列出了通常可用的服务及其角色。  
@@ -129,7 +129,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **服务 API:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
- 对于任何推迟加载操作，XAML 架构上下文都是必需的，因为同一架构上下文必须作用于推迟的区域才能集成推迟的内容。 有关 XAML 架构上下文的角色的详细信息，请参阅 [XAML Services](../../../docs/framework/xaml-services/index.md)。  
+ 对于任何推迟加载操作，XAML 架构上下文都是必需的，因为同一架构上下文必须作用于推迟的区域才能集成推迟的内容。 有关 XAML 架构上下文的角色的详细信息，请参阅 [XAML Services](index.md)。  
   
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
  **参考文档**： <xref:System.Xaml.IRootObjectProvider>  
@@ -189,5 +189,5 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [XAML 的标记扩展概述](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
-- [XAML 的类型转换器概述](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+- [XAML 的标记扩展概述](markup-extensions-for-xaml-overview.md)
+- [XAML 的类型转换器概述](type-converters-for-xaml-overview.md)
