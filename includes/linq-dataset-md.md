@@ -1,1 +1,9 @@
-<span data-ttu-id="5c4f0-101">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="5c4f0-101">LINQ to DataSet</span></span>
+---
+ms.openlocfilehash: 5df0f04938c6553b0ec8b4f2463c54fe00b9dfc0
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/13/2019
+ms.locfileid: "25593724"
+---
+<span data-ttu-id="e3de8-101">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="e3de8-101">LINQ to DataSet</span></span>

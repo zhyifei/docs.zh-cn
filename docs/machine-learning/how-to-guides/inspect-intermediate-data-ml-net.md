@@ -3,27 +3,29 @@ title: 在 ML.NET 管道处理期间检查中间数据值
 description: 了解如何在 ML.NET 机器学习管道处理期间检查实际的中间数据值
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 3d20f153be7b502fb5a542a942245546412efde2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 362cb9351c3cb77b6aa67d59154854e882869ad9
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678639"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843411"
 ---
-# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a><span data-ttu-id="07b52-103">在 ML.NET 管道处理期间检查中间数据值</span><span class="sxs-lookup"><span data-stu-id="07b52-103">Inspect intermediate data values during ML.NET pipeline processing</span></span>
+# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a><span data-ttu-id="3b0ed-103">在 ML.NET 管道处理期间检查中间数据值</span><span class="sxs-lookup"><span data-stu-id="3b0ed-103">Inspect intermediate data values during ML.NET pipeline processing</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="07b52-104">本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。</span><span class="sxs-lookup"><span data-stu-id="07b52-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="07b52-105">有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。</span><span class="sxs-lookup"><span data-stu-id="07b52-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
+> <span data-ttu-id="3b0ed-104">本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。</span><span class="sxs-lookup"><span data-stu-id="3b0ed-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="3b0ed-105">有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。</span><span class="sxs-lookup"><span data-stu-id="3b0ed-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="07b52-106">此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。</span><span class="sxs-lookup"><span data-stu-id="07b52-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="07b52-107">有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。</span><span class="sxs-lookup"><span data-stu-id="07b52-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
+<span data-ttu-id="3b0ed-106">此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。</span><span class="sxs-lookup"><span data-stu-id="3b0ed-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="3b0ed-107">有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。</span><span class="sxs-lookup"><span data-stu-id="3b0ed-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="07b52-108">在实验过程中，可能需要观察和验证给定时间点的数据处理结果。</span><span class="sxs-lookup"><span data-stu-id="07b52-108">During the experiment, you may want to observe and validate the data processing results at a given point.</span></span> <span data-ttu-id="07b52-109">由于 ML.NET 操作具有延迟性，生成的对象都是“预示”的数据，这并非易事。</span><span class="sxs-lookup"><span data-stu-id="07b52-109">This isn't easy since ML.NET operations are lazy, constructing objects that are 'promises' of data.</span></span>
+<span data-ttu-id="3b0ed-108">在实验过程中，可能需要观察和验证给定时间点的数据处理结果。</span><span class="sxs-lookup"><span data-stu-id="3b0ed-108">During the experiment, you may want to observe and validate the data processing results at a given point.</span></span> <span data-ttu-id="3b0ed-109">由于 ML.NET 操作具有延迟性，生成的对象都是“预示”的数据，这并非易事。</span><span class="sxs-lookup"><span data-stu-id="3b0ed-109">This isn't easy since ML.NET operations are lazy, constructing objects that are 'promises' of data.</span></span>
 
-<span data-ttu-id="07b52-110">可使用 `GetColumn<T>` 扩展方法检查中间数据。</span><span class="sxs-lookup"><span data-stu-id="07b52-110">The `GetColumn<T>` extension method lets you inspect the intermediate data.</span></span> <span data-ttu-id="07b52-111">它以 `IEnumerable` 的形式返回数据列的内容。</span><span class="sxs-lookup"><span data-stu-id="07b52-111">It returns the contents of one data column as an `IEnumerable`.</span></span>
+<span data-ttu-id="3b0ed-110">可使用 `GetColumn<T>` 扩展方法检查中间数据。</span><span class="sxs-lookup"><span data-stu-id="3b0ed-110">The `GetColumn<T>` extension method lets you inspect the intermediate data.</span></span> <span data-ttu-id="3b0ed-111">它以 `IEnumerable` 的形式返回数据列的内容。</span><span class="sxs-lookup"><span data-stu-id="3b0ed-111">It returns the contents of one data column as an `IEnumerable`.</span></span>
 
-<span data-ttu-id="07b52-112">以下示例演示如何使用 `GetColumn<T>` 扩展方法：</span><span class="sxs-lookup"><span data-stu-id="07b52-112">The following example shows how to use the `GetColumn<T>` extension method:</span></span>
+<span data-ttu-id="3b0ed-112">以下示例演示如何使用 `GetColumn<T>` 扩展方法：</span><span class="sxs-lookup"><span data-stu-id="3b0ed-112">The following example shows how to use the `GetColumn<T>` extension method:</span></span>
 
-<span data-ttu-id="07b52-113">[示例文件](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt)：</span><span class="sxs-lookup"><span data-stu-id="07b52-113">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="3b0ed-113">[示例文件](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt)：</span><span class="sxs-lookup"><span data-stu-id="3b0ed-113">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span></span>
+
+<!-- markdownlint-disable MD010 -->
 ```
 Label   Workclass   education   marital-status
 0   Private 11th    Never-married
@@ -32,8 +34,9 @@ Label   Workclass   education   marital-status
 1   Private Some-college    Married-civ-spouse
 
 ```
+<!-- markdownlint-enable MD010 -->
 
-<span data-ttu-id="07b52-114">类定义如下：</span><span class="sxs-lookup"><span data-stu-id="07b52-114">Our class is defined as follows:</span></span>
+<span data-ttu-id="3b0ed-114">类定义如下：</span><span class="sxs-lookup"><span data-stu-id="3b0ed-114">Our class is defined as follows:</span></span>
 
 ```csharp
 public class InspectedRow
@@ -50,7 +53,7 @@ public class InspectedRow
 ```
 
 ```csharp
-// Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
+// Create a new context for ML.NET operations. It can be used for exception tracking and logging,
 // as a catalog of available operations and as the source of randomness.
 var mlContext = new MLContext();
 
