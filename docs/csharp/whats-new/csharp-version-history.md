@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981928"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126144"
 ---
 # <a name="the-history-of-c"></a>C\# 发展历史
 
@@ -84,7 +84,7 @@ C# 3.0 版和 Visual Studio 2008 一起发布于 2007 年下半年，但完整�
 - [自动实现的属性](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [匿名类型](../programming-guide/classes-and-structs/anonymous-types.md)
 - [查询表达式](../linq/query-expression-basics.md)
-- [Lambda 表达式](../lambda-expressions.md)
+- [Lambda 表达式](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [表达式树](../expression-trees.md)
 - [扩展方法](../programming-guide/classes-and-structs/extension-methods.md)
 - [隐式类型本地变量](../language-reference/keywords/var.md)

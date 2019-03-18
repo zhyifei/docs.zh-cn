@@ -2,12 +2,12 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 2。
 ms.date: 02/12/2019
-ms.openlocfilehash: 3a19cc7ffae706769cf1b1a19fdaff7c7cdc07fc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 23197a051109d6c6c22c8855e3772cf4f824264c
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674440"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843933"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -51,6 +51,7 @@ public enum Rainbow
     Red,
     Orange,
     Yellow,
+    Green,
     Blue,
     Indigo,
     Violet
@@ -66,6 +67,7 @@ public static RGBColor FromRainbow(Rainbow colorBand) =>
         Rainbow.Red    => new RGBColor(0xFF, 0x00, 0x00),
         Rainbow.Orange => new RGBColor(0xFF, 0x7F, 0x00),
         Rainbow.Yellow => new RGBColor(0xFF, 0xFF, 0x00),
+        Rainbow.Green  => new RGBColor(0x00, 0xFF, 0x00),
         Rainbow.Blue   => new RGBColor(0x00, 0x00, 0xFF),
         Rainbow.Indigo => new RGBColor(0x4B, 0x00, 0x82),
         Rainbow.Violet => new RGBColor(0x94, 0x00, 0xD3),
@@ -83,7 +85,7 @@ public static RGBColor FromRainbow(Rainbow colorBand) =>
 将其与使用经典 `switch` 语句的等效代码进行对比：
 
 ```csharp
-public static RGBColor fromRainbowClassic(Rainbow colorBand)
+public static RGBColor FromRainbowClassic(Rainbow colorBand)
 {
     switch (colorBand)
     {
@@ -93,6 +95,8 @@ public static RGBColor fromRainbowClassic(Rainbow colorBand)
             return new RGBColor(0xFF, 0x7F, 0x00);
         case Rainbow.Yellow:
             return new RGBColor(0xFF, 0xFF, 0x00);
+        case Rainbow.Green:
+            return new RGBColor(0x00, 0xFF, 0x00);
         case Rainbow.Blue:
             return new RGBColor(0x00, 0x00, 0xFF);
         case Rainbow.Indigo:

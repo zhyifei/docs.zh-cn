@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86928c734583cfc8cae0be53458a0d5c1769f292
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287815"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58018742"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 类库中过时的内容
 .NET Framework 随时间推移而变化。 每个新版本都添加了提供新功能的新类型和类型成员。 现有类型和成员也会随着时间推移而变化。 例如，某些类型变得不太重要，因为它们支持的技术由新技术所替代，而某些方法由更方便或功能更全面的方法所取代。  
@@ -68,9 +68,9 @@ ms.locfileid: "55287815"
 |1.0|v1.0.3705|  
   
 ## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>.NET Framework 4.5 和更高版本的过时列表  
- [过时类型](../../../docs/framework/whats-new/obsolete-types.md)  
+ [过时类型](obsolete-types.md)  
   
- [过时成员](../../../docs/framework/whats-new/obsolete-members.md)  
+ [过时成员](obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>以前版本的过时列表  
  [.NET Framework 4 中的过时类型](https://go.microsoft.com/fwlink/?LinkId=224224)  
@@ -82,4 +82,4 @@ ms.locfileid: "55287815"
  [.NET Framework 2.0 过时列表](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>请参阅
-- [\<supportedRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<supportedRuntime> 元素](../configure-apps/file-schema/startup/supportedruntime-element.md)

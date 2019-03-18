@@ -3,12 +3,12 @@ title: C# 表达式 - C# 语言介绍
 description: 表达式、操作数和运算符是 C# 语言的构建基块
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 682f98d51bf4eb3c1641297972afb86956e06d3e
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 7a7f65eb7ba3da3f9630bbcb92d8578d60d2095d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212087"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846592"
 ---
 # <a name="expressions"></a>表达式
 
@@ -18,8 +18,8 @@ ms.locfileid: "57212087"
 
 如果操作数两边的两个运算符的优先级相同，那么运算符的*结合性*决定了运算的执行顺序：
 
-*   除了赋值运算符之外，所有二元运算符均为*左结合*运算符，即从左向右执行运算。 例如，`x + y + z` 将计算为 `(x + y) + z`。
-*   赋值运算符和条件运算符 (`?:`) 为*右结合*运算符，即从右向左执行运算。 例如，`x = y = z` 将计算为 `x = (y = z)`。
+* 除了赋值运算符之外，所有二元运算符均为*左结合*运算符，即从左向右执行运算。 例如，`x + y + z` 将计算为 `(x + y) + z`。
+* 赋值运算符和条件运算符 (`?:`) 为*右结合*运算符，即从右向左执行运算。 例如，`x = y = z` 将计算为 `x = (y = z)`。
 
 可以使用括号控制优先级和结合性。 例如，`x + y * z` 先计算 `y` 乘 `z`，并将结果与 `x` 相加，而 `(x + y) * z` 则先计算 `x` 加 `y`，然后将结果与 `z` 相乘。
 

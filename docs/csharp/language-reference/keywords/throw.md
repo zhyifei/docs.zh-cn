@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e29c0cc85f0ec6ccd3f428d64121f53b91ae9a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6911ff96ca847f554e9b615aba6ab83a212efee
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713845"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125988"
 ---
 # <a name="throw-c-reference"></a>throw（C# 参考）
 
@@ -60,7 +60,7 @@ throw [e]
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]  
 
-- expression-bodied [lambda](../../lambda-expressions.md) 或方法。 下例说明了 expression-bodied 方法，由于不支持对 <xref:System.DateTime> 值的转换，该方法引发 <xref:System.InvalidCastException>。
+- expression-bodied [lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 或方法。 下例说明了 expression-bodied 方法，由于不支持对 <xref:System.DateTime> 值的转换，该方法引发 <xref:System.InvalidCastException>。
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]  
 

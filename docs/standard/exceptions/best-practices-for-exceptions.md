@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 220e43ed6aadbcc443f4cf06310fe12e970abcf2
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: e069e9556b02221a91dafdd9f224940aed8476b8
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030420"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845929"
 ---
 # <a name="best-practices-for-exceptions"></a>异常的最佳做法
 
@@ -32,13 +32,13 @@ ms.locfileid: "54030420"
 
 [!code-cpp[Conceptual.Exception.Handling#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
 [!code-csharp[Conceptual.Exception.Handling#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
-[!code-vb[Conceptual.Exception.Handling#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]  
+[!code-vb[Conceptual.Exception.Handling#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]
 
 如果关闭前未检查连接状态，则可能捕获 `InvalidOperationException` 异常。
 
 [!code-cpp[Conceptual.Exception.Handling#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
 [!code-csharp[Conceptual.Exception.Handling#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
-[!code-vb[Conceptual.Exception.Handling#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]  
+[!code-vb[Conceptual.Exception.Handling#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]
 
 选择的方法取决于希望时间发生的频率。
 
@@ -52,7 +52,7 @@ ms.locfileid: "54030420"
 
 [!code-cpp[Conceptual.Exception.Handling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
-[!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]  
+[!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
 避免异常的另一方法是，对极为常见的错误案例返回 `null`，而不是引发异常。 极其常见的错误案例可被视为常规控制流。 通过在这些情况下返回 `null`，可最大程度地减小对应用性能的影响。
 
@@ -74,23 +74,23 @@ ms.locfileid: "54030420"
 
 [!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
-[!code-vb[Conceptual.Exception.Handling#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]  
+[!code-vb[Conceptual.Exception.Handling#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]
 
 ## <a name="include-three-constructors-in-custom-exception-classes"></a>在自定义异常类中包括三种构造函数
 
 创建自己的异常类别时至少使用三种公共构造函数：默认构造函数、采用字符串消息的构造函数和采用字符串消息和内部异常的构造函数。
 
 * <xref:System.Exception.%23ctor>（使用默认值）。
-  
-* <xref:System.Exception.%23ctor%28System.String%29>，它接受字符串消息。  
-  
-* <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>，它接受字符串消息和内部异常。  
-  
+
+* <xref:System.Exception.%23ctor%28System.String%29>，它接受字符串消息。
+
+* <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>，它接受字符串消息和内部异常。
+
 有关示例，请参见 [如何：创建用户定义的异常](how-to-create-user-defined-exceptions.md)。
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>确保代码远程执行时异常数据可用
 
-创建用户定义的异常时，请确保异常的元数据对远程执行的代码可用。 
+创建用户定义的异常时，请确保异常的元数据对远程执行的代码可用。
 
 例如，在支持应用域的 .NET 实现中，异常可能会跨应用域抛出。 假设应用域 A 创建应用域 B，后者执行引发异常的代码。 应用域 A 若想正确捕获和处理异常，它必须能够找到包含应用域 B 所引发的异常的程序集。如果应用域 B 在其应用程序基下（但未在应用域 A 的应用程序基下）引发了一个包含在程序集内的异常，那么应用域 A 将无法找到异常，且公共语言运行时将引发 <xref:System.IO.FileNotFoundException> 异常。 为避免此情况，可以两种方式部署包含异常信息的程序集：
 
@@ -106,7 +106,7 @@ ms.locfileid: "54030420"
 
 ## <a name="include-a-localized-string-message-in-every-exception"></a>在每个异常中都包含一个本地化字符串消息
 
-用户看到的错误消息派生自引发的异常的 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，而不是派生自异常类的名称。 通常将值赋给 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，方法是将消息字符串传递到[异常构造函数](xref:System.Exception.%23ctor%2A)的 `message` 参数。 
+用户看到的错误消息派生自引发的异常的 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，而不是派生自异常类的名称。 通常将值赋给 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，方法是将消息字符串传递到[异常构造函数](xref:System.Exception.%23ctor%2A)的 `message` 参数。
 
 对于本地化应用程序，应为应用程序可能引发的每个异常提供本地化消息字符串。 资源文件用于提供本地化错误消息。 若要了解如何本地化应用程序和检索本地化字符串，请参阅[桌面应用中的资源](../../framework/resources/index.md)和 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>。
 
@@ -124,8 +124,8 @@ ms.locfileid: "54030420"
 
 [!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
-[!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]  
-  
+[!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]
+
 在某些情况下，更适合使用异常的构造函数生成异常。 例如，<xref:System.ArgumentException> 等全局异常类。
 
 ## <a name="restore-state-when-methods-dont-complete-due-to-exceptions"></a>因发生异常而未完成方法时还原状态
@@ -136,7 +136,7 @@ ms.locfileid: "54030420"
 public void TransferFunds(Account from, Account to, decimal amount)
 {
     from.Withdrawal(amount);
-    // If the deposit fails, the withdrawal shouldn't remain in effect. 
+    // If the deposit fails, the withdrawal shouldn't remain in effect.
     to.Deposit(amount);
 }
 ```

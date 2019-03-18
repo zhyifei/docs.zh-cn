@@ -3,12 +3,12 @@ title: C# 类和对象 - C# 语言介绍
 description: 刚开始接触 C#？ 请阅读这篇概述类、对象和继承的文章
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 51661a0728e9a68c0c646f493b648120897f95fd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147542"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846137"
 ---
 # <a name="classes-and-objects"></a>类和对象
 
@@ -123,7 +123,7 @@ ms.locfileid: "53147542"
 
 参数用于将值或变量引用传递给方法。 方法参数从调用方法时指定的*自变量*中获取其实际值。 有四类参数：值参数、引用参数、输出参数和参数数组。
 
-值参数用于传递输入自变量。 值参数对应于局部变量，从为其传递的自变量中获取初始值。 修改值参数不会影响为其传递的自变量。 
+值参数用于传递输入自变量。 值参数对应于局部变量，从为其传递的自变量中获取初始值。 修改值参数不会影响为其传递的自变量。
 
 可以指定默认值，从而省略相应的自变量，这样值参数就是可选的。
 
@@ -293,6 +293,6 @@ set 访问器对应于包含一个名为 value 的参数但不含返回类型的
 
 处理对象析构的更好方法是使用 `using` 语句。
 
->[!div class="step-by-step"]
->[上一页](statements.md)
->[下一页](structs.md)
+> [!div class="step-by-step"]
+> [上一页](statements.md)
+> [下一页](structs.md)

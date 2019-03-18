@@ -4,12 +4,12 @@ description: 了解如何通过 Ocelot 实现 API 网关以及如何在基于容
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679484"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846098"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>通过 Ocelot 实现 API 网关
 
@@ -176,10 +176,10 @@ namespace OcelotApiGw
             var builder = WebHost.CreateDefaultBuilder(args);
 
             builder.ConfigureServices(s => s.AddSingleton(builder))
-                                                          .ConfigureAppConfiguration(
-                              ic => ic.AddJsonFile(Path.Combine("configuration",
-                                                                "configuration.json")))
-                                                                .UseStartup<Startup>();
+                    .ConfigureAppConfiguration(
+                          ic => ic.AddJsonFile(Path.Combine("configuration",
+                                                            "configuration.json")))
+                    .UseStartup<Startup>();
             var host = builder.Build();
             return host;
         }
@@ -541,19 +541,19 @@ Ocelot 的 ReRoute 层中的授权。  Ocelot 支持在进行身份验证后评�
 
 在 Web 应用程序前的 Kubernetes 中加入入口 Nginx 层和几个 Ocelot API 网关/BFF 是理想的体系结构，如下图所示。
 
- ![Kubernetes 入口充当流向应用的所有流量的反向代理，包括通常在 Api 网关范围之外的 Web 应用程序。](./media/image41.png)
+![Kubernetes 入口充当流向应用的所有流量的反向代理，包括通常在 Api 网关范围之外的 Web 应用程序。](./media/image41.png)
 
 图 6-41。 部署到 Kubernetes 时 eShopOnContainers 中的入口层
 
 将 eShopOnContainers 部署到 Kubernetes 时，它只通过入口公开一些服务或终结点，基本上是以下列出的 URL 上的后缀：
 
--   `/` 用于客户端 SPA Web 应用程序
--   `/webmvc` 用于客户端 MVC Web 应用程序
--   `/webstatus` 用于显示 status/healthchecks 的客户端 Web 应用
--   `/webshoppingapigw` 用于 Web BFF 和购物业务流程
--   `/webmarketingapigw` 用于 Web BFF 和营销业务流程
--   `/mobileshoppingapigw` 用于移动 BFF 和购物业务流程
--   `/mobilemarketingapigw` 用于移动 BFF 和营销业务流程
+- `/` 用于客户端 SPA Web 应用程序
+- `/webmvc` 用于客户端 MVC Web 应用程序
+- `/webstatus` 用于显示 status/healthchecks 的客户端 Web 应用
+- `/webshoppingapigw` 用于 Web BFF 和购物业务流程
+- `/webmarketingapigw` 用于 Web BFF 和营销业务流程
+- `/mobileshoppingapigw` 用于移动 BFF 和购物业务流程
+- `/mobilemarketingapigw` 用于移动 BFF 和营销业务流程
 
 部署到 Kubernetes 时，每个 Ocelot API 网关为运行 API 网关的每个 pod 使用不同的“configuration.json”文件。 这些“configuration.json”文件是通过装载（最初使用 deploy.ps1 脚本）卷提供的，该卷是基于名为“ocelot”的 Kubernetes 配置映射创建的。 每个容器将其相关配置文件装载到名为 `/app/configuration` 的容器文件夹中。
 
