@@ -1,4 +1,4 @@
-﻿---
+---
 title: '使用 Async 和 Await 的异步编程 (C#)'
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
@@ -98,9 +98,9 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
  若要详细了解旧版 .NET Framework 中的异步性，请参阅 [TPL 和传统 .NET Framework 异步编程](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md)。  
   
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> 异步方法的运行机制  
- 异步编程中最需弄清的是控制流是如何从方法移动到方法的。 下图可引导你完成该过程。  
+ 异步编程中最需弄清的是控制流是如何从方法移动到方法的。 下图可引导你完成此过程：  
   
- ![跟踪异步程序](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
+ ![展示了如何跟踪异步程序的图。](./media/index/navigation-trace-async-program.png)  
   
  关系图中的数值对应于以下步骤。  
   

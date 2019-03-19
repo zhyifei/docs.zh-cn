@@ -43,7 +43,11 @@ ms.date: 10/25/2018
 
 ## <a name="explore-new-features-in-c"></a>探索 C\# 中的新增功能
 
-在此[交互式探索](exploration/csharp-6.yml)中尝试 [C# 6](../whats-new/csharp-6.md) 中的新增功能。
+* [以交互方式尝试 C# 6 中的新功能](exploration/csharp-6.yml)：在浏览器中以交互方式探索 [C# 6](../whats-new/csharp-6.md) 中新增的功能。
+* [字符串内插](string-interpolation.md)：介绍了如何借助 C# 使用字符串内插创建格式化字符串。
+* [可为空引用类型](nullable-reference-types.md)：演示如何使用可为空引用类型来表示空引用的意图。
+* [将项目更新为使用可以为 null 的引用类型](upgrade-to-nullable-references.md)：展示了将现有项目升级为使用可以为 null 的引用类型的技术。
+* [使用模式匹配扩展数据功能](pattern-matching.md)：展示了如何使用模式匹配来扩展核心功能外的类型。
 
 ## <a name="general-tutorials"></a>常规教程
 
@@ -53,6 +57,4 @@ ms.date: 10/25/2018
 * [REST 客户端](console-webapiclient.md)：介绍了 Web 通信、JSON 序列化和面向对象的 C# 语言功能。
 * [C# 和 .NET 中的继承](inheritance.md)：介绍了 C# 中的继承，包括使用继承来定义基类、抽象基类和派生类。
 * [使用 LINQ](working-with-linq.md)：介绍了许多 LINQ 功能和支持 LINQ 的语言元素。
-* [字符串内插](string-interpolation.md)：介绍了如何借助 C# 使用字符串内插创建格式化字符串。
 * [使用特性](attributes.md)：介绍了如何借助 C# 创建和使用特性。
-* [可为空引用类型](nullable-reference-types.md)：演示如何使用可为空引用类型来表示空引用的意图。
