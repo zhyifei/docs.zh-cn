@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202348"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125910"
 ---
 # <a name="inheritance-c-programming-guide"></a>继承（C# 编程指南）
 
@@ -30,8 +30,7 @@ ms.locfileid: "57202348"
   
  下图显示一个类 `WorkItem`，它表示某个业务流程中的工作项。 像所有类一样，它派生自 <xref:System.Object?displayProperty=nameWithType> 且继承其所有方法。 `WorkItem` 添加了自己的五个成员。 其中包括一个构造函数，因为无法继承构造函数。 类 `ChangeRequest` 继承自 `WorkItem`，表示特定类型的工作项。 `ChangeRequest` 将另外两个成员添加到它从 `WorkItem` 和 <xref:System.Object> 继承的成员中。 它必须添加自己的构造函数，并且还添加了 `originalItemID`。 属性 `originalItemID` 使 `ChangeRequest` 实例可以与向其应用更改请求的原始 `WorkItem` 相关联。  
   
- ![类继承](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
-类继承  
+ ![展示类继承的图](./media/inheritance/class-inheritance-diagram.png)  
   
  下面的示例演示如何在 C# 中表示前面图中所示的类关系。 该示例还演示了 `WorkItem` 替代虚方法 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 的方式，以及 `ChangeRequest` 类继承该方法的 `WorkItem` 的实现方式。  
   

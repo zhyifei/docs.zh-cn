@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: a2b0668b1d55afc331484339d579752646ffa88b
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: bceb6283e202dfa699115edd6e0a1a040095783d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442407"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58028699"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>按类别列出的 C# 编译器选项
 
@@ -102,10 +102,10 @@ ms.locfileid: "56442407"
 |[-nologo](nologo-compiler-option.md)|禁止显示编译器横幅信息。|
 |[-recurse](recurse-compiler-option.md)|搜索要编译的源文件的子目录。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|指定可执行文件可以使用的子系统的最低版本。|
-|[不安全](unsafe-compiler-option.md)|启用使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 关键字的代码编译。|
+|[unsafe](unsafe-compiler-option.md)|启用使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 关键字的代码编译。|
 |[-utf8output](utf8output-compiler-option.md)|显示使用 UTF-8 编码的编译器输出。|
 |-parallel[+&#124;-]|指定是否使用并发生成 (+)。|
-|-checksumalgorithm:\<alg>|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA1（默认值）或 SHA256。|
+|-checksumalgorithm:\<alg>|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA1（默认值）或 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。|
 
 ## <a name="obsolete-options"></a>已过时的选项
 

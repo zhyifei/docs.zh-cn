@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-ms.openlocfilehash: 3fa82a6faee345be77fc8ea3f5aa3342adecb0f5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f218414bf60a86b95461d747fb6c557f03bcfcb3
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244838"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846111"
 ---
 # <a name="typeof-c-reference"></a>typeof（C# 参考）
 
@@ -34,7 +34,13 @@ System.Type type = i.GetType();
 
 不能重载 `typeof` 运算符。
 
-`typeof` 运算符也可用于开放式泛型类型。 具有多个类型参数的类型必须在规范中具有适当数量的逗号。 以下示例显示如何确定方法的返回类型是否为泛型 <xref:System.Collections.Generic.IEnumerable%601>。 如果返回类型不是 <xref:System.Collections.Generic.IEnumerable%601> 泛型类型，则 <xref:System.Type.GetInterface%2A?displayProperty=nameWithType> 将返回 `null`。
+`typeof` 运算符也可用于开放式泛型类型。 具有多个类型参数的类型必须在规范中具有适当数量的逗号。 例如，<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWIthType> 有两个类型参数，因此，请使用一个逗号：
+
+```csharp
+Type t = typeof(System.Collection.Generic.Dictionary<,>);
+```
+
+以下示例显示如何确定方法的返回类型是否为泛型 <xref:System.Collections.Generic.IEnumerable%601>。 如果返回类型不是 <xref:System.Collections.Generic.IEnumerable%601> 泛型类型，则 <xref:System.Type.GetInterface%2A?displayProperty=nameWithType> 将返回 `null`。
 
 [!code-csharp[typeof_3.cs](~/samples/snippets/csharp/keywords/typeof/typeof_3.cs)]
 

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: c02526c41e7aabb1d443765d047cdae052b48985
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0c9d8c33715b4baf11bfac05cd4881d1475f8844
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964236"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846993"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>传递值类型参数（C# 编程指南）
-一个[值类型](../../../csharp/language-reference/keywords/value-types.md)变量包含它直接与[引用类型](../../../csharp/language-reference/keywords/reference-types.md)变量相对的数据，其中包含对其数据的引用。 按值将值-类型变量传递给方法，意味着将变量副本传递给该方法。 在方法内发生的对该实参进行的任何更改不会影响存储在形参变量中的原始数据。 如果想用调用的方法来更改参数的值，必须使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 关键字，通过引用进行传递。 还可以使用 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) 关键字来按引用传递值参数，以避免复制并同时保证不更改值。 为简单起见，下面的示例使用 `ref`。  
+一个[值类型](../../../csharp/language-reference/keywords/value-types.md)变量包含它直接与[引用类型](../../../csharp/language-reference/keywords/reference-types.md)变量相对的数据，其中包含对其数据的引用。 按值将值-类型变量传递给方法，意味着将变量副本传递给该方法。 在方法内发生的对该实参进行的任何更改不会影响存储在形参变量中的原始数据。 若要使用已调用的方法来更改参数值，必须使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 关键字通过引用传递它。 还可以使用 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) 关键字来按引用传递值参数，以避免复制并同时保证不更改值。 为简单起见，下面的示例使用 `ref`。  
   
 ## <a name="passing-value-types-by-value"></a>按值传递值类型  
  下面的示例演示按值传递值-类型参数。 变量 `n` 按值传递给方法 `SquareIt`。 在方法内发生的任何更改不会影响该变量的原始值。  

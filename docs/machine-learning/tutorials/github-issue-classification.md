@@ -1,15 +1,15 @@
 ---
 title: 在 GitHub 问题多类分类方案中使用 ML.NET
 description: 了解如何在多类分类方案中使用 ML.NET 对 GitHub 问题进行分类，将其分配到给定区域。
-ms.date: 02/20/2019
+ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4f6a95fbd470c688c977b406d1813d6a453e8a79
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1031ac8a592c968e22745de4be966392733597dd
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471468"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846306"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>教程：在多类分类场景中使用 ML.NET 对 GitHub 问题进行分类
 
@@ -29,7 +29,7 @@ ms.locfileid: "57471468"
 > [!NOTE]
 > 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
 
-此教程和相关示例目前使用的是 ML.NET 版本 0.10。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
+此教程和相关示例目前使用的是 ML.NET 版本 0.11。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
 
 ## <a name="github-issue-sample-overview"></a>GitHub 问题示例概述
 
@@ -197,7 +197,7 @@ ms.locfileid: "57471468"
 
 由于先前创建的 `GitHubIssue` 数据模型类型与数据集架构相匹配，因此可以将初始化、映射和数据集加载合并到一行代码中。
 
-该行的第一部分 (`CreateTextLoader<GitHubIssue>(hasHeader: true)`) 通过从 `GitHubIssue` 数据模型类型推断数据集架构并使用数据集标头，来创建 <xref:Microsoft.ML.Data.TextLoader>。
+使用 [LoadFromTextFile 方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)的 `MLContext.Data.LoadFromTextFile` 包装器加载数据。 它返回 <xref:Microsoft.Data.DataView.IDataView>，此接口通过 `GitHubIssue` 数据模型类型推断数据集架构，并使用数据集标头。 
 
 之前在创建 `GitHubIssue` 类时定义了数据模式。 对于架构：
 
@@ -206,12 +206,9 @@ ms.locfileid: "57471468"
 * 第三列 `Title`（GitHub 问题标题）是用于预测 `Area` 的第一个[特征](../resources/glossary.md##feature)
 * 第四列 `Description` 是用于预测 `Area` 的第二个特征
 
-该行的第二部分 (`.Read(_trainDataPath)`) 使用 <xref:Microsoft.ML.Data.TextLoader.Read%2A> 方法将 `_trainDataPath` 的定型文本文件加载到 `IDataView` (`_trainingDataView`) 全局变量中。  
-
 要初始化并加载 `_trainingDataView` 全局变量以将其用于管道，请在 `mlContext` 初始化后添加以下代码：
 
 [!code-csharp[LoadTrainData](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTrainData)]
-
 
 将以下代码作为下一行代码添加到 `Main` 方法中：
 
@@ -225,7 +222,7 @@ ms.locfileid: "57471468"
 使用下面的代码紧随 `Main` 方法后创建 `ProcessData` 方法：
 
 ```csharp
-public static EstimatorChain<ITransformer> ProcessData()
+public static IEstimator<ITransformer> ProcessData()
 {
 
 }
@@ -254,7 +251,7 @@ ML.NET 的转换管道撰写一组自定义 `transforms` 集，要在定型或�
 
 [!code-csharp[Concatenate](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
 
- 接下来，附加一个 <xref:Microsoft.ML.Data.EstimatorChain`1.AppendCacheCheckpoint%2A> 来缓存数据视图，以便在使用缓存多次循环访问数据时获得更好的性能，如下面的代码所示：
+ 接下来，附加一个 <xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A> 来缓存数据视图，以便在使用缓存多次循环访问数据时获得更好的性能，如下面的代码所示：
 
 [!code-csharp[AppendCache](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AppendCache)]
 
@@ -284,7 +281,7 @@ ML.NET 的转换管道撰写一组自定义 `transforms` 集，要在定型或�
 使用下面的代码紧随 `Main` 方法后创建 `BuildAndTrainModel` 方法：
 
 ```csharp
-public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(IDataView trainingDataView, EstimatorChain<ITransformer> pipeline)
+public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingDataView, IEstimator<ITransformer> pipeline)
 {
 
 }

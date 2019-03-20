@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: 81c719698e1dc3462e13c149c0f6a26657052f5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51cffe40321aad2c91fb9a09821531545a415aec
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740539"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845916"
 ---
 # <a name="line-c-reference"></a>#line（C# 参考）
 借助 `#line`，可修改编译器的行号及（可选）用于错误和警告的文件名输出。
 
-以下示例演示如何报告与行号相关联的两个警告。 `#line 200` 指令将下一行号强制设为 200（尽管默认值为 #6），直到下一个 #line 指令前，文件名都将报告为“特殊”。 #line 默认指令将行号返回至其默认行号，默认行号对由上个指令重新编号的行进行计数。  
+以下示例演示如何报告与行号相关联的两个警告。 `#line 200` 指令将下一行的行号强制设为 200（尽管默认值为 #6）；在执行下一个 `#line` 指令前，文件名都会报告为“特殊”。 `#line default` 指令将行号恢复至默认行号，这会对上一指令重新编号的行进行计数。  
   
 ```csharp
 class MainClass  

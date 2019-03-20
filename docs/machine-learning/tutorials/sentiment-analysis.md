@@ -4,12 +4,12 @@ description: 了解如何在二元分类方案中使用 ML.NET，以了解如何
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d7e46b489506f4adad843ba5315afde4c7689b4e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b0d02babd126a62ef9a87b251f525a08376069aa
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723317"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845786"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教程：在情绪分析二元分类方案中使用 ML.NET
 
@@ -180,7 +180,7 @@ public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlConte
 ```
 ## <a name="load-the-data"></a>加载数据
 
-由于先前创建的 `SentimentData` 数据模型类型与数据集架构相匹配，因此可以使用 <xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29> 的 `MLContext.Data.ReadFromTextFile` 包装器将初始化、映射和数据集加载合并到一行代码中。 它将返回 <xref:Microsoft.Data.DataView.IDataView>。 
+由于先前创建的 `SentimentData` 数据模型类型与数据集架构匹配，因此可使用 [LoadFromTextFile 方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)的 `MLContext.Data.LoadFromTextFile` 包装器，将初始化、映射和数据集加载合并到一行代码中。 它将返回 <xref:Microsoft.Data.DataView.IDataView>。 
 
  作为 `Transforms` 的输入和输出，`DataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
 
@@ -215,7 +215,7 @@ public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlConte
 * 根据测试数据预测情绪。
 * 返回模型。
 
-使用下面的代码紧随 `Main` 方法后创建 `Train` 方法：
+使用下面的代码紧随 `Main` 方法后创建 `BuildAndTrainModel` 方法：
 
 ```csharp
 public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView splitTrainSet)

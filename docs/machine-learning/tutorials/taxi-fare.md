@@ -3,15 +3,15 @@ title: 在 ML.NET 中使用回归学习器预测费用
 description: 在 ML.NET 中使用回归学习器预测费用。
 author: aditidugar
 ms.author: johalex
-ms.date: 03/05/2019
+ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 543411f58f2d7c5c4e8658bd90cf52c7a3291ec3
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7830849efaff2aa36f9bd436851a22f948908bb6
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678382"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846321"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>教程：在 ML.NET 中使用回归学习器预测费用
 
@@ -20,7 +20,7 @@ ms.locfileid: "57678382"
 > [!NOTE]
 > 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请参阅 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
 
-此教程和相关示例目前使用的是 ML.NET 版本 0.10。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
+此教程和相关示例目前使用的是 ML.NET 版本 0.11。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
 
 在本教程中，你将了解：
 > [!div class="checklist"]
@@ -92,7 +92,7 @@ ms.locfileid: "57678382"
 
 [!code-csharp[DefineTaxiTrip](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
-`TaxiTrip` 是输入数据类且具有针对每个数据集列的定义。 使用 <xref:Microsoft.ML.Data.ColumnAttribute> 属性在数据集中指定源列的索引。
+`TaxiTrip` 是输入数据类且具有针对每个数据集列的定义。 使用 <xref:Microsoft.ML.Data.LoadColumnAttribute> 属性在数据集中指定源列的索引。
 
 `TaxiTripFarePrediction` 类表示预测的结果。 它应用了单个浮动 `FareAmount` 字段，附带 `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> 属性。 对于回归任务，“分数”列包含预测的标签值。
 
@@ -105,12 +105,11 @@ ms.locfileid: "57678382"
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
-需要创建三个字段，以保存具有数据集的文件的路径以及用于保存模型的文件的路径，以及一个 `TextLoader` 全局变量：
+需要创建三个字段，用于保留有数据集的文件的路径，以及用于保存模型的文件的路径：
 
 * `_trainDataPath` 包含具有用于定型模型的数据集的文件的路径。
 * `_testDataPath` 包含具有用于评估模型的数据集的文件的路径。
 * `_modelPath` 包含用于存储定型模型的文件的路径。
-* `_textLoader` 是用于加载和转换数据集的 <xref:Microsoft.ML.Data.TextLoader>。
 
 将以下代码添加到 `Main` 方法正上方，以指定这些路径和 `_textLoader` 变量：
 
@@ -123,14 +122,6 @@ ms.locfileid: "57678382"
 创建一个名为 `mlContext` 的变量并将其初始化为 `MLContext` 的新实例。  用下面 `Main` 方法中的代码替换 `Console.WriteLine("Hello World!")` 行：
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
-
-下一步，为设置数据加载，请初始化 `_textLoader` 全局变量以便重用它。 创建 `TextLoader` 时，请传入需要的上下文和启用自定义的 <xref:Microsoft.ML.Data.TextLoader.Arguments> 类。 通过将包含所有列名及其类型的 <xref:Microsoft.ML.Data.TextLoader.Column> 对象数组传递给 `TextLoader` 来指定数据模式。 我们以前在创建 `TaxiTrip` 类时定义了数据模式。
-
-`TextLoader` 类返回完全初始化的 <xref:Microsoft.ML.Data.TextLoader>  
-
-若要初始化 `_textLoader` 全局变量以将其重复用于所需的数据集，请在 `mlContext` 初始化后添加以下代码：
-
-[!code-csharp[initTextLoader](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#4 "Initialize the TextLoader")]
 
 在 `Main` 方法中添加以下代码作为调用 `Train` 方法的下一行代码：
 
@@ -157,11 +148,13 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>加载和转换数据
 
-我们将使用带有 `dataPath` 参数的 `_textLoader` 全局变量加载数据。 它将返回 <xref:Microsoft.Data.DataView.IDataView>。 作为转换的输入和输出，`IDataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
+使用 [LoadFromTextFile 方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)的 `MLContext.Data.LoadFromTextFile` 包装器加载数据。 它将返回 <xref:Microsoft.Data.DataView.IDataView>。 
 
-在 ML.NET 中，数据类似于 SQL 视图。 它是异源数据，会延迟计算并进行架构化。 该对象是管道的第一部分，并加载数据。 在本教程中，它会加载一个包含出租车行程信息的数据集，这些信息有助于预测费用。 这用于创建模型并对其进行定型。
+作为 `Transforms` 的输入和输出，`DataView` 是基本的数据管道类型，与 `LINQ` 中的 `IEnumerable` 类似。
 
- 将以下代码添加为 `Train` 方法的首行：
+在 ML.NET 中，数据类似于 SQL 视图。 它是异源数据，会延迟计算并进行架构化。 该对象是管道的第一部分，并加载数据。 对于本教程，它会加载具有注释和相应正面或负面情绪的数据集。 这用于创建模型并对其进行定型。
+
+将以下代码添加为 `Train` 方法的首行：
 
 [!code-csharp[LoadTrainData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#6 "loading training dataset")]
 
@@ -171,11 +164,11 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 [!code-csharp[CopyColumnsEstimator](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#7 "Use the CopyColumnsEstimator")]
 
-定型模型的算法需要数值特征，所以必须将分类数据（`VendorId`、`RateCode` 和 `PaymentType`）值转换为数字。 为此，请使用 `OneHotEncodingEstimator` 转换类，它将不同的数字键值分配到每列的不同值，并添加以下代码：
+定型模型的算法需要数字特性，所以必须将分类数据（`VendorId`、`RateCode` 和 `PaymentType`）值转换为数字（`VendorIdEncoded`、`RateCodeEncoded` 和 `PaymentTypeEncoded`）。 为此，请使用 Microsoft.ML.Transforms.OneHotEncodingTransformer> 转换类（它将不同的数字键值分配到每列的不同值），并添加以下代码：
 
 [!code-csharp[OneHotEncodingEstimator](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
-数据准备最后一步使用 `ColumnConcatenatingEstimator` 转换类将所有功能列合并到“功能”列。 默认情况下，学习算法仅处理“特征”列的特征。 添加以下代码：
+数据准备最后一步使用 `mlContext.Transforms.Concatenate` 转换类将所有功能列合并到“功能”列。 默认情况下，学习算法仅处理“特征”列的特征。 添加以下代码：
 
 [!code-csharp[ColumnConcatenatingEstimator](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
 
@@ -183,7 +176,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 在将数据添加到管道，并将其转换为正确的输入格式之后，可以选择学习算法（学习器）。 学习器定型模型。 为此问题选择了“回归任务”，所以使用 `FastTreeRegressionTrainer` 学习器（ML.NET 提供的一种回归学习器）。
 
-`FastTreeRegressionTrainer` 学习器利用梯度提升。 梯度提升是针对回归问题的一项机器学习技术。 它将以步进方式生成每个回归树。 它使用预定义的损失函数测量每个步骤中的错误，并在下一步中对其进行校正。 其结果是一种预测模型，实际上是一组较弱的预测模型。 有关梯度提升的详细信息，请参阅[提升的决策树回归](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression)。
+`FastTreeRegressionTrainer` 定型算法使用梯度提升。 梯度提升是针对回归问题的一项机器学习技术。 它将以步进方式生成每个回归树。 它使用预定义的损失函数测量每个步骤中的错误，并在下一步中对其进行校正。 其结果是一种预测模型，实际上是一组较弱的预测模型。 有关梯度提升的详细信息，请参阅[提升的决策树回归](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression)。
 
 将下面的代码添加到 `Train` 方法以将 `FastTreeRegressionTrainer` 添加到在上一步中添加的数据处理代码：
 
@@ -251,11 +244,11 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#14 "Call the Evaluate method")]
 
-我们将使用前面初始化的带有 `_testDataPath` 全局字段的 `_textLoader` 全局变量来加载测试数据集。 可以将此数据集作为质量检查来评估模型。 将以下代码添加到 `Evaluate` 方法中：
+使用 `MLContext.Data.LoadFromTextFile` 包装器加载测试数据集。 可以将此数据集作为质量检查来评估模型。 将以下代码添加到 `Evaluate` 方法中：
 
 [!code-csharp[LoadTestDataset](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Load the test dataset")]
 
-接下来，我们将使用机器学习 `model` 参数（转换器）来输入特性，并返回预测。 将以下代码作为下一行添加到 `Evaluate` 方法中：
+接下来，使用机器学习 `model` 参数（转换器）来输入特性，并返回预测。 将以下代码作为下一行添加到 `Evaluate` 方法中：
 
 [!code-csharp[PredictWithTransformer](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 

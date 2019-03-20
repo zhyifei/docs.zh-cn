@@ -1,17 +1,17 @@
 ---
-title: 借助 Visual Studio for Mac 在 macOS 上开始使用.NET Core
+title: 通过 Visual Studio for Mac 开始在 macOS 上使用 .NET Core
 description: 本主题将指导你使用 Visual Studio for Mac 和 .NET Core 来构建简单的控制台应用程序。
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 471bdfdaa10b2d66c19177ae36b8bd18ce19e468
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ed6c25f424e1b87c1a18a3654f756500af9f78de
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169568"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788617"
 ---
-# <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>借助 Visual Studio for Mac 在 macOS 上开始使用.NET Core
+# <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>通过 Visual Studio for Mac 开始在 macOS 上使用 .NET Core
 
 Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面的集成开发环境 (IDE)。 本主题将指导你使用 Visual Studio for Mac 和 .NET Core 来构建简单的控制台应用程序。
 
@@ -24,7 +24,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 请参阅 [Mac 上 .NET Core 的先决条件](../../core/macos-prerequisites.md)主题。
 
-## <a name="getting-started"></a>入门
+## <a name="get-started"></a>入门
 
 如果已安装先决条件和 Visual Studio for Mac，请跳过此部分，并继续[创建项目](#creating-a-project)。 请按照以下步骤安装先决条件和 Visual Studio for Mac：
 

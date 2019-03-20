@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: d225a4bf9da35a59a409a783347ec407b49bf16a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677725"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58037696"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>按字母顺序列出的 C# 编译器选项
 
@@ -29,7 +29,7 @@ ms.locfileid: "57677725"
 |[-baseaddress](baseaddress-compiler-option.md)|指定要生成的库的基址。|
 |[-bugreport](bugreport-compiler-option.md)|创建“Bug 报告”文件。 如果与 -errorreport:prompt 或 -errorreport:send 一起使用，则发送任何崩溃信息时都将随附此文件。|
 |[/checked](checked-compiler-option.md)|使编译器生成溢出检查。|
-|-checksumalgorithm:\<alg>|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA1（默认值）或 SHA256。|
+|-checksumalgorithm:\<alg>|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA1（默认值）或 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。 |
 |[-codepage](codepage-compiler-option.md)|指定在打开源文件时使用的代码页。|
 |[-debug](debug-compiler-option.md)|发出调试信息。|
 |[-define](define-compiler-option.md)|定义条件编译符号。|
@@ -77,7 +77,7 @@ ms.locfileid: "57677725"
 |-ruleset:\<file>|指定可禁用特定诊断的规则集文件。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|指定可执行文件可以使用的子系统的最低版本。|
 |[-target](target-compiler-option.md)|使用下列四个选项之一指定输出文件的格式：[-target:appcontainerexe](target-appcontainerexe-compiler-option.md)、[-target:exe](target-exe-compiler-option.md)、[-target:library](target-library-compiler-option.md)、[-target:module](target-module-compiler-option.md)、[-target:winexe](target-winexe-compiler-option.md)、[-target:winmdobj](target-winmdobj-compiler-option.md)。|
-|[不安全](unsafe-compiler-option.md)|允许[不安全](../../../csharp/language-reference/keywords/unsafe.md)代码。|
+|[unsafe](unsafe-compiler-option.md)|允许[不安全](../../../csharp/language-reference/keywords/unsafe.md)代码。|
 |[-utf8output](utf8output-compiler-option.md)|以 UTF-8 编码格式输出编译器消息。|
 |-version|显示编译器的版本号并退出。|
 |[/warn](warn-compiler-option.md)|设置警告等级 (0-4)。|

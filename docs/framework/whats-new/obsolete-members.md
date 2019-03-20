@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5920935637393f8cfd11aed85a600dc28d49011
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635970"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58038186"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中的过时成员
-本文中的表列出了 .NET Framework 4.5 和更高版本中由程序集组织的已过时的类型成员。 使用以下链接可查看每个程序集中过时的成员和建议的备选项的列表。 本主题不会列出已过时类型的成员。 有关过时类型的列表，请参阅 [过时类型](../../../docs/framework/whats-new/obsolete-types.md)。  
+本文中的表列出了 .NET Framework 4.5 和更高版本中由程序集组织的已过时的类型成员。 使用以下链接可查看每个程序集中过时的成员和建议的备选项的列表。 本主题不会列出已过时类型的成员。 有关过时类型的列表，请参阅 [过时类型](obsolete-types.md)。  
   
 -   [系统程序集中的过时成员](#SystemMembers)  
   
@@ -799,5 +799,5 @@ ms.locfileid: "54635970"
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` 注册表项仅适用于 Win9x，此版本的.NET Framework 不支持。 改用 `PerformanceData` 注册表项。 此属性将从 Framework 的未来版本中移除。|  
   
 ## <a name="see-also"></a>请参阅
-- [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)
-- [过时类型](../../../docs/framework/whats-new/obsolete-types.md)
+- [类库中过时的内容](whats-obsolete.md)
+- [过时类型](obsolete-types.md)

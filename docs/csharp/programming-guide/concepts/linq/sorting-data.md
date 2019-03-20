@@ -2,19 +2,19 @@
 title: 对数据排序 (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: dfa0a4a030cab8ec33c90d8edaef0d6070755034
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bceb599d9e8eb3c51c07526b9ad22d3d4206efdd
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721898"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125715"
 ---
 # <a name="sorting-data-c"></a>对数据排序 (C#)
 排序操作基于一个或多个属性对序列的元素进行排序。 第一个排序条件对元素执行主要排序。 通过指定第二个排序条件，您可以对每个主要排序组内的元素进行排序。  
   
- 下图演示对一个字符序列执行按字母排序操作的结果。  
+ 下图展示了对一系列字符执行按字母顺序排序操作的结果。 
   
- ![LINQ 排序操作](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ ![展示按字母顺序排序操作的图。](./media/sorting-data/alphabetical-sort-operation.png)  
   
  下节列出了对数据进行排序的标准查询运算符方法。  
   

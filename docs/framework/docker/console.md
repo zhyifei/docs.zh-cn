@@ -4,12 +4,12 @@ description: 了解如何利用现有 .NET Framework 控制台应用程序并在
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 379e0814d7d254935ef23a483d5e0f9163babcd1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145275"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126079"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中运行控制台应用程序
 
@@ -50,7 +50,7 @@ Docker 映像的一个重要特性是映像由基本映像组合而成。 每个
 
 需要安装 Docker for Windows 1.12 Beta 26 版或更高版本才能支持 Windows 容器。 默认情况下，Docker 支持将基于 Linux 的容器切换到 Windows 容器，通过右键单击系统托盘中的 Docker 图标，然后选择“切换到 Windows 容器”。 Docker 将运行该过程进行更改，且可能需要重启。
 
-![Windows 容器](./media/console/SwitchContainer.png)
+![Windows 容器菜单选项的屏幕截图。](./media/console/windows-container-option.png)
 
 ## <a name="building-the-application"></a>生成应用程序
 通常，通过安装程序、FTP 或文件共享部署分配控制台应用程序。 部署到容器时，需要编译资产并将其暂存到创建 Docker 映像时可以使用的位置。

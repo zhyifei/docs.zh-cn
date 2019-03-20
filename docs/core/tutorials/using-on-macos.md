@@ -1,17 +1,17 @@
 ---
-title: 在 macOS 上入门 .NET Core
+title: 开始在 macOS 上使用 .NET Core
 description: 本文档提供使用 Visual Studio Code 创建 .NET Core 解决方案的步骤和工作流概述。
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: ad403ed96435f162899e600a317d00bab00638f2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170264"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788448"
 ---
-# <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上入门 .NET Core
+# <a name="get-started-with-net-core-on-macos"></a>开始在 macOS 上使用 .NET Core
 
 本文档提供为 macOS 创建 .NET Core 解决方案的步骤和工作流概述。 了解到如何通过 [NuGet](https://www.nuget.org/) 创建项目、单元测试、使用调试工具和合并第三方库。
 
@@ -26,7 +26,7 @@ ms.locfileid: "53170264"
 
 打开 Visual Studio Code，并按 <kbd>F1</kbd> 打开 Visual Studio Code 面板，从而安装 Visual Studio Code C# 扩展。 键入 ext install ，查看扩展列表。 选择 C# 扩展。 重启 Visual Studio Code 以激活扩展。 有关详细信息，请参阅 [Visual Basic Code C# 扩展文档](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
-## <a name="getting-started"></a>入门
+## <a name="get-started"></a>入门
 
 在本教程中，将创建三个项目：库项目、对该库项目的测试和使用该库的控制台应用程序。 若要[查看或下载本主题的源代码](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)，请访问 GitHub 上的 dotnet/samples 存储库。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
