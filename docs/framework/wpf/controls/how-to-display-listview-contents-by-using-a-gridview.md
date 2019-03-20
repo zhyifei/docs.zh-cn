@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ListView controls [WPF], displaying contents with GridView
 - GridView [WPF], displaying ListView contents
 ms.assetid: 5bc1e767-ab46-4f14-bd41-3d5d39e1d000
-ms.openlocfilehash: 9a4bcc8b613637521ee91a11b0bdac8f77f90a03
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1066869c80bf5bd87d656bcb4994c188ee0e8efc
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354396"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185605"
 ---
 # <a name="how-to-display-listview-contents-by-using-a-gridview"></a>如何：使用 GridView 显示 ListView 内容
 此示例演示如何定义<xref:System.Windows.Controls.GridView>视图模式<xref:System.Windows.Controls.ListView>控件。  
@@ -22,7 +22,7 @@ ms.locfileid: "57354396"
   
  下图显示了此示例中的显示方式。  
   
- ![具有 GridView 输出的 ListView](./media/listviewgridview.JPG "ListViewGridView")  
+ ![显示具有 GridView 输出的 ListView 的屏幕截图。](./media/gridview-overview/listview-gridview-output.jpg)  
   
 ## <a name="see-also"></a>请参阅
 - <xref:System.Windows.Controls.ListView>

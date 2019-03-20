@@ -2,12 +2,12 @@
 title: 关联端
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: 8c156ca1c05e22e540578adfb2be06cf477b29e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1b43dea98b65427065387aedd2305f9c7b370bd
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744942"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185579"
 ---
 # <a name="association-end"></a>关联端
 *关联端*标识[实体类型](../../../../docs/framework/data/adonet/entity-type.md)的另一端[关联](../../../../docs/framework/data/adonet/association-type.md)和关联的结束类型实例可以存在的实体数。 关联端定义为关联的一部分；关联必须正好有两个关联端。 [导航属性](../../../../docs/framework/data/adonet/navigation-property.md)允许导航到另一个关联端。  
@@ -19,14 +19,15 @@ ms.locfileid: "54744942"
     > [!NOTE]
     >  对于某个给定的关联，为每个关联端指定的实体类型可以是相同的。 这将创建一个自关联。  
   
--   [关联端重数](../../../../docs/framework/data/adonet/association-end-multiplicity.md)，该值指示关联的一端可以存在的实体类型实例数。 关联端重数的值可以为“一 (1)”、“零或一 (0..1)”或“多 (*)”。  
+-   [关联端重数](../../../../docs/framework/data/adonet/association-end-multiplicity.md)，该值指示关联的一端可以存在的实体类型实例数。 关联端重数可以具有值为一 (1) 零或一 (0..1) 或许多 (\*)。  
   
 -   关联端的名称。 （可选）  
   
 -   有关在关联端上执行的操作的信息，例如级联删除。 （可选）  
   
 ## <a name="example"></a>示例  
- 下图显示了一个具有两个关联的概念模型：`PublishedBy` 和 `WrittenBy`。 `PublishedBy` 关联的关联端是 `Book` 和 `Publisher` 实体类型。 `Publisher` 端的重数为“一 (1)”，`Book` 端的重数为“多 (*)”，表明一个出版商可以出版很多书，而一本书只能由一个出版商出版。  
+ 下图显示了一个具有两个关联的概念模型：`PublishedBy` 和 `WrittenBy`。 
+  `PublishedBy` 关联的关联端是 `Book` 和 `Publisher` 实体类型。 多重性`Publisher`最终为一 (1) 和重数`Book`最终为多个 (\*)，指示，出版商可以出版很多书而一本书只能由一个出版商出版。  
   
  ![示例模型](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
   

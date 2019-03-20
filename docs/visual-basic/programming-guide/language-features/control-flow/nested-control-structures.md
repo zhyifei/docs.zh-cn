@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: fec1b4dbca0a4c6979e52fc74ceeb3e8c7ac6cad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b10363e2273a22ac7ee3d9a943a1bec4616d232
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520459"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185722"
 ---
 # <a name="nested-control-structures-visual-basic"></a>嵌套的控件结构 (Visual Basic)
 您可以控制将语句放在其他控制语句，例如`If...Then...Else`块内`For...Next`循环。 控制语句放在另一个控制语句称为*嵌套*。  
@@ -25,7 +25,7 @@ ms.locfileid: "54520459"
   
  在下面的示例中，该过程`sumRows`一起将矩阵的每个行的正元素。  
   
-```  
+```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
     Dim i, j As Integer  
     For i = 0 To UBound(a, 1)  
@@ -49,7 +49,7 @@ End Sub
 ## <a name="nesting-different-kinds-of-control-structures"></a>嵌套不同类型的控制结构  
  您可以嵌套一种类型的另一个类型内的控制结构。 下面的示例使用`With`在此块内`For Each`循环，并嵌套`If`块内`With`块。  
   
-```  
+```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
     With ctl  
         .BackColor = System.Drawing.Color.Yellow  

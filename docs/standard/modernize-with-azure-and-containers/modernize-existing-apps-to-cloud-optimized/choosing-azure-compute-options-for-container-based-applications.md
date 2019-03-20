@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |选�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
-ms.openlocfilehash: 20d8899d404ec72e3b1b9c2471524133a6428c44
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125491"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186099"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>选择基于容器的应用程序的 Azure 计算平台
 
@@ -17,12 +17,12 @@ ms.locfileid: "53125491"
 
 作为*默认情况下*建议，下面是本指南中建议主要的准则：
 
-  - **单个整体式应用程序：** 选择 Azure 应用服务
-  - **N 层应用程序：** 如果你有一个或几个后端服务，请选择业务流程协调程序，如 Azure Kubernetes 服务 (AKS)、 Service Fabric (SF) 或应用服务
-  - **Linux 微服务：** 选择 AKS/Kubernetes
-  - **Windows 微服务：** 选择 Service Fabric
-  - **无服务器函数 （&) 事件处理程序：** 选择 Azure 函数
-  - **大规模批处理：** 选择 Azure Batch
+- **单个整体式应用程序：** 选择 Azure 应用服务
+- **N 层应用程序：** 如果你有一个或几个后端服务，请选择业务流程协调程序，如 Azure Kubernetes 服务 (AKS)、 Service Fabric (SF) 或应用服务
+- **Linux 微服务：** 选择 AKS/Kubernetes
+- **Windows 微服务：** 选择 Service Fabric
+- **无服务器函数 （&) 事件处理程序：** 选择 Azure 函数
+- **大规模批处理：** 选择 Azure Batch
 
 但是，此建议应使用盐，片段执行如产品的选择将取决于特定应用程序的需求和特征。 即使最初它们可能看起来类似的类型，并非所有应用程序都是相同的。
 
@@ -36,6 +36,6 @@ ms.locfileid: "53125491"
 
 但是，在 OS 成熟度这些差异将在将来淡多个平台具有可比较 OS 成熟度和决策将布局基于您的应用程序可能需要或基于每个平台的生态系统的特定功能的首选项将详细介绍原因。
 
->[!div class="step-by-step"]
->[上一页](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
->[下一页](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [!div class="step-by-step"]
+> [上一页](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [下一页](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

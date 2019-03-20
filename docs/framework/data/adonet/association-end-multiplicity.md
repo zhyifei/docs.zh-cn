@@ -2,12 +2,12 @@
 title: 关联端重数
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
-ms.openlocfilehash: 6d1b31c5b5ead701fbe808b91d7191fb84dc86c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 151b15a6df021a25f6c3ecea00af147c6b7196ff
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502632"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185670"
 ---
 # <a name="association-end-multiplicity"></a>关联端重数
 *关联端重*定义的数字[实体类型](../../../../docs/framework/data/adonet/entity-type.md)一端可以存在的实例[关联](../../../../docs/framework/data/adonet/association-type.md)。  
@@ -18,12 +18,13 @@ ms.locfileid: "54502632"
   
 -   零或一 (0..1):指示在关联端存在零个或一个实体类型实例。  
   
--   很多 （*）：指示在关联端存在零行、 一行或多个实体类型实例。  
+-   很多 (\*):指示在关联端存在零行、 一行或多个实体类型实例。  
   
- 关联的特征通常由关联端重数表示。 例如，如果某个关联的两端的重数分别为“一 (1)”和“多 (*)”，则该关联称为一对多关联。 在下面的示例中，`PublishedBy` 关联是一个一对多关联（一个出版商可以出版很多书，而一本书只能由一个出版商出版）。 `WrittenBy` 关联是一个多对多关联（一本书可以有多位作者，而一位作者可以著有多本书）。  
+ 关联的特征通常由关联端重数表示。 例如，如果关联端有一 （1） 和许多的重数 (\*)，该关联称为一个对多关联。 在下面的示例中，`PublishedBy` 关联是一个一对多关联（一个出版商可以出版很多书，而一本书只能由一个出版商出版）。 `WrittenBy` 关联是一个多对多关联（一本书可以有多位作者，而一位作者可以著有多本书）。  
   
 ## <a name="example"></a>示例  
- 下图显示了一个具有两个关联的概念模型：`PublishedBy` 和 `WrittenBy`。 `PublishedBy` 关联的关联端是 `Book` 和 `Publisher` 实体类型。 `Publisher` 端的重数为“一 (1)”，`Book` 端的重数为“多 (*)”。  
+ 下图显示了一个具有两个关联的概念模型：`PublishedBy` 和 `WrittenBy`。 
+  `PublishedBy` 关联的关联端是 `Book` 和 `Publisher` 实体类型。 多重性`Publisher`最终为一 (1) 和重数`Book`最终为多个 (\*)。  
   
  ![示例模型](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
   

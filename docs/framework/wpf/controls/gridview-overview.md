@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360194"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185436"
 ---
 # <a name="gridview-overview"></a>GridView 概述
 <xref:System.Windows.Controls.GridView> 视图模式是一种视图模式的<xref:System.Windows.Controls.ListView>控件。 <xref:System.Windows.Controls.GridView>类和及其支持类使您和您的用户能够查看通常使用按钮作为交互式列标题的表中的项集合。 本主题介绍<xref:System.Windows.Controls.GridView>类，并概述了其用途。  
@@ -26,10 +26,8 @@ ms.locfileid: "57360194"
 >  按钮控件<xref:System.Windows.Controls.GridView>用于列标题派生自<xref:System.Windows.Controls.Primitives.ButtonBase>。  
   
  如下图所示<xref:System.Windows.Controls.GridView>查看的<xref:System.Windows.Controls.ListView>内容。  
-  
- **ListView 内容的 GridView 视图**  
-  
- ![带样式的 ListView](./media/styledlistview.PNG "StyledListView")  
+    
+ ![显示 ListView 内容的 GridView 视图的屏幕截图。](./media/gridview-overview/styled-listview-content.png)  
   
  <xref:System.Windows.Controls.GridView> 列由<xref:System.Windows.Controls.GridViewColumn>对象，可以对其内容自动调整大小。 （可选） 可以显式设置<xref:System.Windows.Controls.GridViewColumn>为一个特定宽度。 可通过拖动列标题之间的手柄重设列的大小。 您可以还可以动态地添加、 删除、 替换和对列重新排序，因为此功能内置到<xref:System.Windows.Controls.GridView>。 但是，<xref:System.Windows.Controls.GridView>不能直接更新它显示的数据。  
   
@@ -37,11 +35,9 @@ ms.locfileid: "57360194"
   
  [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- 下图显示了上一示例创建的表格。  
-  
- **显示 ItemsSource 中的数据的 GridView**  
-  
- ![具有 GridView 输出的 ListView](./media/listviewgridview.JPG "ListViewGridView")  
+ 下图显示了上一示例创建的表格。 GridView 控件显示 ItemsSource 对象中的数据：
+    
+ ![显示具有 GridView 输出的 ListView 的屏幕截图。](./media/gridview-overview/listview-gridview-output.jpg)  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>GridView 布局和样式  
