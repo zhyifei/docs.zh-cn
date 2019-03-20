@@ -26,13 +26,13 @@ ms.locfileid: "57707711"
   
 ## <a name="in-this-section"></a>本节内容  
  [演练：创作复合控件使用 Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- 演示如何在 VisualBasic 中创建简单的复合控件。  
+ 演示如何在 Visual Basic 中创建简单的复合控件。  
   
  [演练：创作复合控件通过视觉对象C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  演示如何在 C# 中创建简单的复合控件。  
   
  [演练：从使用 Visual Basic 的 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- 演示如何在 VisualBasic 中使用继承创建简单的 Windows 窗体控件。  
+ 演示如何在 Visual Basic 中使用继承创建简单的 Windows 窗体控件。  
   
  [演练：从视觉对象的 Windows 窗体控件继承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
  演示如何在 C# 中使用继承创建简单的 Windows 窗体控件。  
