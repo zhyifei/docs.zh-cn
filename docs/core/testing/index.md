@@ -5,18 +5,13 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: f3054ca74efbd09449f43e0654734bfe10e3a7c0
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058329"
 ---
+
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 中的单元测试
 
 通过 .NET Core，可以轻松创建单元测试。 本文介绍了单元测试及其与其他类型的测试的不同之处。 页面底部附近的链接资源介绍了如何向解决方案添加测试项目。 设置测试项目后，可使用命令行或 Visual Studio 运行单元测试。
 
-.NET core 2.0 及更高版本支持 [.NET Standard 2.0](../../standard/net-standard.md)，我们将使用它的库来演示单元测试。
+.NET Core 2.0 及更高版本支持 [.NET Standard 2.0](../../standard/net-standard.md)，我们将使用它的库来演示单元测试。
 
 可以使用适用于 C#、F# 和 Visual Basic 的内置 .NET Core 2.0 及更高版本单元测试项目模板作为个人项目的起始点。
 
