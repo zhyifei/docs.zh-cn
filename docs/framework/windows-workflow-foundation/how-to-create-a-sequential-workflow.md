@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 2213d766435aaafbf37b8646a66ea3007bfcb734
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719632"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262568"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>如何：创建顺序工作流
 工作流可基于内置活动以及自定义活动来构造。 本主题将指导逐步创建如使用这两个内置的活动的工作流<xref:System.Activities.Statements.Sequence>活动，并从以前的自定义活动[如何：创建活动](how-to-create-an-activity.md)主题。 该工作流模拟猜数游戏。  
@@ -21,7 +21,7 @@ ms.locfileid: "57719632"
 > [!NOTE]
 >  若要下载完整版教程，请参阅 [Windows Workflow Foundation (WF45) — 入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
-### <a name="to-create-the-workflow"></a>创建工作流  
+## <a name="to-create-the-workflow"></a>创建工作流  
   
 1.  右键单击**NumberGuessWorkflowActivities**中**解决方案资源管理器**，然后选择**添加**，**新项**。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "57719632"
   
 4.  拖动**序列**活动从**控制流**一部分**工具箱**放到**在此处放置活动**上的标签工作流设计图面。  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>创建工作流变量和自变量  
+## <a name="to-create-the-workflow-variables-and-arguments"></a>创建工作流变量和自变量  
   
 1.  双击**SequentialNumberGuessWorkflow.xaml**中**解决方案资源管理器**如果未显示在设计器中，显示工作流。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "57719632"
   
 13. 单击**变量**左下角的活动设计器，以关闭**变量**窗格。  
   
-### <a name="to-add-the-workflow-activities"></a>添加工作流活动  
+## <a name="to-add-the-workflow-activities"></a>添加工作流活动  
   
 1.  拖动**分配**活动从**基元**一部分**工具箱**放到**序列**活动。 类型`Target`成**到**框中，以下表达式**输入 C# 表达式**或**输入 VB 表达式**框。  
   
@@ -138,13 +138,13 @@ ms.locfileid: "57719632"
   
 13. 单击**WriteLine**中的活动**然后**部分以选中它，并键入以下表达式**文本**属性值框。  
   
-    ```vb  
+    ```text
     "Your guess is too low."  
     ```  
   
 14. 单击**WriteLine**中的活动**Else**部分以选中它，并键入以下表达式**文本**属性值框。  
   
-    ```vb  
+    ```text
     "Your guess is too high."  
     ```  
   
@@ -152,7 +152,7 @@ ms.locfileid: "57719632"
   
      ![完成顺序工作流](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
   
-### <a name="to-build-the-workflow"></a>生成工作流  
+## <a name="to-build-the-workflow"></a>生成工作流  
   
 1.  按 Ctrl+Shift+B 生成解决方案。  
   

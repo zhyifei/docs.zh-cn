@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bef18468ef02e37b857316cd9fa2bf4cf5f9e9b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 44a84b03c85cc1332c07ffbaf53187b7f01d0236
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369327"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262471"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 函数
 如果格式转换是基于时间的，则将一个或两个原始性能数据值转换为指定格式。 
@@ -77,7 +77,7 @@ int FormatFromRawValue (
 
 此函数返回以下值：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | 函数调用是成功的。 |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | 必需的参数已丢失或不正确。 | 
@@ -85,7 +85,7 @@ int FormatFromRawValue (
 
 ## <a name="remarks"></a>备注
 
-此函数包装对的调用[FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29)函数。
+此函数包装对的调用[FormatFromRawValue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85))函数。
 
 ## <a name="requirements"></a>要求
 
