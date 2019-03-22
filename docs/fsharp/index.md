@@ -10,19 +10,19 @@ F#指南提供了许多资源来了解F#语言。
 
 ## <a name="learning-f"></a>学习 F\#
 
-[什么是F#](what-is-fsharp.md)使用简短代码的示例描述F#语言是什么和它的编程概念。如果您不熟悉F#，推荐阅读。
+[什么是F#](what-is-fsharp.md) 使用简短代码的示例描述F#语言是什么和它的编程概念。如果您不熟悉F#，推荐阅读。
 
-[介绍F#](tour.md)提供大量的代码示例的主要语言功能的概述。 如果您想要在实践中了解F#的核心功能，建议阅读。
+[介绍F#](tour.md) 提供大量的代码示例的主要语言功能的概述。 如果您想要在实践中了解F#的核心功能，建议阅读。
 
-[开始使用F#在 Visual Studio](get-started/get-started-visual-studio.md)如果您使用 Windows 并需要完整的 Visual Studio IDE （集成开发环境） 体验。
+[开始使用F#在 Visual Studio](get-started/get-started-visual-studio.md) 如果您使用 Windows 并需要完整的 Visual Studio IDE （集成开发环境） 体验。
 
-[开始使用F#在 Visual Studio for Mac](get-started/get-started-with-visual-studio-for-mac.md)如果您使用 macOS，并想要使用 Visual Studio IDE。
+[开始使用F#在 Visual Studio for Mac](get-started/get-started-with-visual-studio-for-mac.md) 如果您使用 macOS，并想要使用 Visual Studio IDE。
 
-[开始使用F#在 Visual Studio Code](get-started/get-started-vscode.md)如果您需要轻量、跨平台和功能包式的 IDE 体验。
+[开始使用F#在 Visual Studio Code](get-started/get-started-vscode.md) 如果您需要轻量、跨平台和功能包式的 IDE 体验。
 
-[开始使用F#使用.NET Core CLI](get-started/get-started-command-line.md)如果您想要使用命令行工具。
+[开始使用F#使用.NET Core CLI](get-started/get-started-command-line.md) 如果您想要使用命令行工具。
 
-[开始使用F#和 Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/)F#移动端编程。
+[开始使用F#和 Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) F# 移动端编程。
 
 [F# 适用于 Azure Notebooks](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb)一个用于学习Azure Notebooks (免费、托管的 Jupyter Notebook)中的 F# 的教程。
 
