@@ -10,21 +10,21 @@ F#指南提供了许多资源来了解F#语言。
 
 ## <a name="learning-f"></a>学习 F\#
 
-[什么是F#](what-is-fsharp.md)描述F#语言是和它在编程概念，如的简短代码示例。 如果你不熟悉这则建议使用F#。
+[什么是F#](what-is-fsharp.md)使用简短代码的示例描述F#语言是什么和它的编程概念。如果您不熟悉F#，推荐阅读。
 
-[介绍F#](tour.md)提供大量的代码示例的主要语言功能的概述。 如果您是想要查看其核心建议这样做F#中操作的功能。
+[介绍F#](tour.md)提供大量的代码示例的主要语言功能的概述。 如果您想要在实践中了解F#的核心功能，建议阅读。
 
-[开始使用F#在 Visual Studio](get-started/get-started-visual-studio.md)如果您要在 Windows 上，需要完整的 Visual Studio IDE （集成开发环境） 体验。
+[开始使用F#在 Visual Studio](get-started/get-started-visual-studio.md)如果您使用 Windows 并需要完整的 Visual Studio IDE （集成开发环境） 体验。
 
-[开始使用F#在 Visual Studio for Mac](get-started/get-started-with-visual-studio-for-mac.md)如果您是在 macOS 上，并想要使用 Visual Studio IDE。
+[开始使用F#在 Visual Studio for Mac](get-started/get-started-with-visual-studio-for-mac.md)如果您使用 macOS，并想要使用 Visual Studio IDE。
 
-[开始使用F#在 Visual Studio Code](get-started/get-started-vscode.md)如果你想的轻量跨平台和功能包式的 IDE 体验。
+[开始使用F#在 Visual Studio Code](get-started/get-started-vscode.md)如果您需要轻量、跨平台和功能包式的 IDE 体验。
 
-[开始使用F#使用.NET Core CLI](get-started/get-started-command-line.md)如果想要使用命令行工具。
+[开始使用F#使用.NET Core CLI](get-started/get-started-command-line.md)如果您想要使用命令行工具。
 
-[开始使用F#和 Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/)与移动编程F#。
+[开始使用F#和 Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/)F#移动端编程。
 
-[F#适用于 Azure 笔记本](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb)是用于学习教程F#中可用的托管的 Jupyter Notebook。
+[F# 适用于 Azure Notebooks](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb)一个用于学习Azure Notebooks (免费、托管的 Jupyter Notebook)中的 F# 的教程。
 
 ## <a name="references"></a>参考资料
 
@@ -38,9 +38,9 @@ F#指南提供了许多资源来了解F#语言。
 
 [F#编程 Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming)是学习有关 wikibook F#。 它也是一种产品的F#社区。 目标受众是人员的新F#，很少的对象与面向的编程背景。
 
-## <a name="learn-f-through-videos"></a>了解F#通过视频
+## <a name="learn-f-through-videos"></a>通过视频了解F#
 
-[F#YouTube 上教程](https://www.youtube.com/watch?v=c7eNDJN758U)是很棒的介绍到F#使用 Visual Studio，其中许多很好的例子显示在过去的 1.5 小时。 目标受众是 Visual Studio 开发人员的新F#。
+[YouTube F# 教程](https://www.youtube.com/watch?v=c7eNDJN758U)是一个很棒的F#介绍（使用 Visual Studio），在 1.5 小时中展示了许多很好的例子。 目标受众是刚开始使用 Visual Studio 进行F#开发的开发人员。
 
 [介绍如何使用编程F#](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)是一种很好的视频系列作为主编辑器使用 Visual Studio Code。 视频系列从零开始和结束的构建基于文本的 RPG 视频游戏。 目标受众是开发人员更喜欢 Visual Studio Code （或的轻型 IDE） 和不熟悉F#。
 
