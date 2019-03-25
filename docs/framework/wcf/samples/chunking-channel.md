@@ -2,12 +2,12 @@
 title: 通道分块
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: db14ceb956202bee06ff5e6b37b21fb837c6f1d9
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 4adbd558aff9e1689b1e14521c43f1cad281dbc6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066410"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411494"
 ---
 # <a name="chunking-channel"></a>通道分块
 发送使用 Windows Communication Foundation (WCF) 的大型消息时，它是内存的通常需要限制用于缓冲这些消息量。 一种可能的解决方案是流处理消息正文（假定数据主要集中在正文中）。 不过，有些协议要求对整个消息进行缓冲。 可靠消息和消息安全就是两个这样的示例。 另一个可能的解决方案是将大消息分割成称为消息块的小消息，一次发送一个消息块，并在接收端重建大消息。 应用程序本身就能实现这种分块和取消分块，或者使用自定义通道来实现。 块区通道示例演示如何使用自定义协议或分层通道为任意大的消息进行分块和取消分块。  
@@ -199,13 +199,14 @@ as the ChunkingStart message.
 ```  
   
 ## <a name="chunking-channel-architecture"></a>块区通道体系结构  
- 块区通道是一个在高级别遵循典型通道体系结构的 `IDuplexSessionChannel`。 有一个 `ChunkingBindingElement`，可用于生成 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 在请求时，`ChunkingChannelFactory` 可创建 `ChunkingChannel` 的实例。 当接受新的内部通道时，`ChunkingChannelListener` 可创建 `ChunkingChannel` 的实例。 `ChunkingChannel` 本身负责发送和接收消息。  
+ 块区通道是一个在高级别遵循典型通道体系结构的 `IDuplexSessionChannel`。 有一个 `ChunkingBindingElement`，可用于生成 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 在请求时，`ChunkingChannelFactory` 可创建 `ChunkingChannel` 的实例。 当接受新的内部通道时，`ChunkingChannelListener` 可创建 `ChunkingChannel` 的实例。 
+  `ChunkingChannel` 本身负责发送和接收消息。  
   
- 在下一个较低级别，`ChunkingChannel` 依赖于若干组件来实现块区协议。 在发送端，通道使用一个名为 `XmlDictionaryWriter` 的自定义 `ChunkingWriter`，它完成实际的分块。 `ChunkingWriter` 直接使用内部通道发送消息块。 使用自定义 `XmlDictionaryWriter` 可以在编写原始消息的大型正文的同时发送消息块。 这意味着不对整个原始消息进行缓冲。  
+ 在下一个较低级别，`ChunkingChannel` 依赖于若干组件来实现块区协议。 在发送端，通道使用一个名为 <xref:System.Xml.XmlDictionaryWriter> 的自定义 `ChunkingWriter`，它完成实际的分块。 `ChunkingWriter` 直接使用内部通道发送消息块。 使用自定义 `XmlDictionaryWriter` 可以在编写原始消息的大型正文的同时发送消息块。 这意味着不对整个原始消息进行缓冲。  
   
  ![块区通道](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
   
- 在接收端，`ChunkingChannel` 从内部通道拉取消息并将其传递到名为 `XmlDictionaryReader` 的自定义 `ChunkingReader`，后者将从传入的消息块重组原始消息。 `ChunkingChannel` 将此 `ChunkingReader` 包装到一个名为 `Message` 的自定义 `ChunkingMessage` 实现中并将此消息返回到上一层。 通过 `ChunkingReader` 和 `ChunkingMessage` 的这一组合，可以在上一层读取原始消息正文时取消消息的分块，而不必缓冲整个原始消息正文。 `ChunkingReader` 有一个队列可用来将传入的消息块缓冲为缓冲的消息块，缓冲的消息块最多可以达到可配置的最大缓冲消息块数量。 当达到此最大限度时，读取器将等待上一层将消息从队列中排出（即仅从原始消息正文中读取）或等待直到达到最大接收超时值。  
+ 在接收端，`ChunkingChannel` 从内部通道提取消息并将其传递到名为 <xref:System.Xml.XmlDictionaryReader> 的自定义 `ChunkingReader`，后者将从传入的消息块重组原始消息。 `ChunkingChannel` 将此 `ChunkingReader` 包装到一个名为 `Message` 的自定义 `ChunkingMessage` 实现中并将此消息返回到上一层。 通过 `ChunkingReader` 和 `ChunkingMessage` 的这一组合，可以在上一层读取原始消息正文时取消消息的分块，而不必缓冲整个原始消息正文。 `ChunkingReader` 有一个队列可用来将传入的消息块缓冲为缓冲的消息块，缓冲的消息块最多可以达到可配置的最大缓冲消息块数量。 当达到此最大限度时，读取器将等待上一层将消息从队列中排出（即仅从原始消息正文中读取）或等待直到达到最大接收超时值。  
   
  ![块区通道](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
   
@@ -231,12 +232,14 @@ interface ITestService
 }  
 ```  
   
- `ChunkingBindingElement` 将在此编程模型中编译一个操作 URI 的列表，用于标识要分块的消息。 每个传出消息的操作都将与此列表进行对比以确定该消息是应该进行分块还是直接发送。  
+ 
+  `ChunkingBindingElement` 将在此编程模型中编译一个操作 URI 的列表，用于标识要分块的消息。 每个传出消息的操作都将与此列表进行对比以确定该消息是应该进行分块还是直接发送。  
   
 ## <a name="implementing-the-send-operation"></a>实现 Send 操作  
  在高级别上，Send 操作首先检查传出消息是否必须分块，如果不是，则使用内部通道直接发送消息。  
   
- 如果消息必须分块，则 Send 操作将创建一个新的 `ChunkingWriter` 并对传出消息调用 `WriteBodyContents`，同时向该消息传递此 `ChunkingWriter`。 `ChunkingWriter` 然后进行消息分块（包括将原始消息头复制到开始消息块消息中）并使用内部通道发送消息块。  
+ 如果消息必须分块，则 Send 操作将创建一个新的 `ChunkingWriter` 并对传出消息调用 `WriteBodyContents`，同时向该消息传递此 `ChunkingWriter`。 
+  `ChunkingWriter` 然后进行消息分块（包括将原始消息头复制到开始消息块消息中）并使用内部通道发送消息块。  
   
  值得注意的一些详细信息：  
   
@@ -248,7 +251,7 @@ interface ITestService
   
 -   传递给 Send 的超时值用作整个发送操作（包括发送所有消息块）的超时值。  
   
--   为避免对整个原始消息正文进行缓存，选择了自定义 `XmlDictionaryWriter` 设计。 如果要使用 `XmlDictionaryReader` 对正文获取 `message.GetReaderAtBodyContents`，则将缓冲整个正文。 否则，将使用传递给 `XmlDictionaryWriter` 的自定义 `message.WriteBodyContents`。 由于消息会在该编写器上调用 WriteBase64，因此编写器会将消息块包装成消息并使用内部通道发送消息。 在发送信息块之前，WriteBase64 处于阻止状态。  
+-   为避免对整个原始消息正文进行缓存，选择了自定义 <xref:System.Xml.XmlDictionaryWriter> 设计。 如果要使用 <xref:System.Xml.XmlDictionaryReader> 对正文获取 `message.GetReaderAtBodyContents`，则将缓冲整个正文。 相反，我们有一个自定义<xref:System.Xml.XmlDictionaryWriter>传递给`message.WriteBodyContents`。 由于消息会在该编写器上调用 WriteBase64，因此编写器会将消息块包装成消息并使用内部通道发送消息。 在发送信息块之前，WriteBase64 处于阻止状态。  
   
 ## <a name="implementing-the-receive-operation"></a>实现 Receive 操作  
  在高级别上，Receive 操作首先检查传入消息是否不为 `null` 以及其操作是否为 `ChunkingAction`。 如果传入消息不符合这两个条件，则会从 Receive 按原样返回该消息。 否则，Receive 将创建一个新的 `ChunkingReader` 和一个包装在其周围的新的 `ChunkingMessage`（通过调用 `GetNewChunkingMessage`）。 在返回该新 `ChunkingMessage` 之前，Receive 将使用线程池的线程来执行 `ReceiveChunkLoop`，它会循环调用 `innerChannel.Receive` 并将消息块发送到 `ChunkingReader`，直到收到结束消息块消息或达到接收超时值。  
@@ -263,7 +266,7 @@ interface ITestService
   
 -   传递给 Receive 的超时值用作整个接收操作（包括接收所有消息块）的超时值。  
   
--   如果使用消息的层在使用消息正文时的速率低于传入消息块消息的速率，则 `ChunkingReader` 会缓冲这些传入的消息块，直至达到由 `ChunkingBindingElement.MaxBufferedChunks` 指定的限制。 一旦达到该制，将不再从下一层提取消息块，直到用完缓冲消息块或达到接收超时值。  
+-   如果使用消息的层在使用消息正文时的速率低于传入消息块消息的速率，则 `ChunkingReader` 会缓冲这些传入的消息块，直至达到由 `ChunkingBindingElement.MaxBufferedChunks` 指定的限制。 一旦达到该制，将不再从下一层拉取消息块，直到用完缓冲消息块或达到接收超时值。  
   
 ## <a name="communicationobject-overrides"></a>CommunicationObject 重写  
   
@@ -271,7 +274,7 @@ interface ITestService
  `OnOpen` 调用 `innerChannel.Open` 以打开内部通道。  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` 首先将 `stopReceive` 设置为 `true` 以通知挂起的 `ReceiveChunkLoop` 停止。 然后等待 `receiveStopped` <xref:System.Threading.ManualResetEvent>，它是在 `ReceiveChunkLoop` 停止时设置的。 如果 `ReceiveChunkLoop` 在指定的超时之内停止，则 `OnClose` 将使用剩余超时调用 `innerChannel.Close`。  
+ `OnClose` 首先将 `stopReceive` 设置为 `true` 以通知挂起的 `ReceiveChunkLoop` 停止。 然后等待`receiveStopped` <xref:System.Threading.ManualResetEvent>，时会设置`ReceiveChunkLoop`停止。 如果 `ReceiveChunkLoop` 在指定的超时之内停止，则 `OnClose` 将使用剩余超时调用 `innerChannel.Close`。  
   
 ### <a name="onabort"></a>OnAbort  
  `OnAbort` 调用 `innerChannel.Abort` 以中止内部通道。 如果有挂起的 `ReceiveChunkLoop`，则它会从挂起的 `innerChannel.Receive` 调用获取一个异常。  
@@ -280,14 +283,17 @@ interface ITestService
  当通道出错时，`ChunkingChannel` 不需要特殊行为，因此不重写 `OnFaulted`。  
   
 ## <a name="implementing-channel-factory"></a>实现通道工厂  
- `ChunkingChannelFactory` 负责创建 `ChunkingDuplexSessionChannel` 的实例和负责级联状态向内部通道工厂的转换。  
+ 
+  `ChunkingChannelFactory` 负责创建 `ChunkingDuplexSessionChannel` 的实例和负责级联状态向内部通道工厂的转换。  
   
  `OnCreateChannel` 使用内部通道工厂来创建 `IDuplexSessionChannel` 内部通道。 然后创建新的 `ChunkingDuplexSessionChannel`，同时为其传递此内部通道以及要分块的消息操作的列表和在接收时要缓冲的消息块的最大数量。 要分块的消息操作的列表和在接收时要缓冲的消息块的最大数量是在构造函数中传递给 `ChunkingChannelFactory` 的两个参数。 有关 `ChunkingBindingElement` 的一节说明了这些值的来源。  
   
- `OnOpen`、`OnClose`、`OnAbort` 及其异步等效方法调用内部通道工厂上的相应状态转换方法。  
+ 
+  `OnOpen`、`OnClose`、`OnAbort` 及其异步等效方法调用内部通道工厂上的相应状态转换方法。  
   
 ## <a name="implementing-channel-listener"></a>实现通道侦听器  
- `ChunkingChannelListener` 是围绕内部通道侦听器的包装程序。 除了将调用委托给该内部通道侦听器以外，其主要功能是在从内部通道侦听器接收的通道周围包装新的 `ChunkingDuplexSessionChannels`。 此操作在 `OnAcceptChannel` 和 `OnEndAcceptChannel` 中完成。 将会向新创建的 `ChunkingDuplexSessionChannel` 传递该内部通道以及前述的其他参数。  
+ 
+  `ChunkingChannelListener` 是围绕内部通道侦听器的包装程序。 除了将调用委托给该内部通道侦听器以外，其主要功能是在从内部通道侦听器接收的通道周围包装新的 `ChunkingDuplexSessionChannels`。 此操作在 `OnAcceptChannel` 和 `OnEndAcceptChannel` 中完成。 将会向新创建的 `ChunkingDuplexSessionChannel` 传递该内部通道以及前述的其他参数。  
   
 ## <a name="implementing-binding-element-and-binding"></a>实现绑定元素和绑定  
  `ChunkingBindingElement` 负责创建 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 `ChunkingBindingElement`检查是否在 T `CanBuildChannelFactory` \<T > 和`CanBuildChannelListener` \<T > 的类型`IDuplexSessionChannel`（块区通道支持的唯一通道） 以及绑定中的其他绑定元素支持此通道类型。  
@@ -301,7 +307,8 @@ interface ITestService
  `TcpChunkingBinding` 也实现 `IBindingRuntimePreferences` 并从 `ReceiveSynchronously` 方法返回 true，指示只实现同步的 Receive 调用。  
   
 ### <a name="determining-which-messages-to-chunk"></a>确定对哪些消息分块  
- 块区通道只对通过 `ChunkingBehavior` 属性标识的消息进行分块。 `ChunkingBehavior` 类实现 `IOperationBehavior` 并通过调用 `AddBindingParameter` 方法来实现。 在此方法中，`ChunkingBehavior` 将检查其 `AppliesTo` 属性（`InMessage` 和/或 `OutMessage`）的值以确定应该对哪些消息进行分块。 然后获取这些消息中每个消息的操作（从 `OperationDescription` 上的消息集合中获取），并将其添加到包含在 `ChunkingBindingParameter` 的实例内的字符串集合中。 然后将此 `ChunkingBindingParameter` 添加到所提供的 `BindingParameterCollection` 中。  
+ 块区通道只对通过 `ChunkingBehavior` 属性标识的消息进行分块。 
+  `ChunkingBehavior` 类实现 `IOperationBehavior` 并通过调用 `AddBindingParameter` 方法来实现。 在此方法中，`ChunkingBehavior` 将检查其 `AppliesTo` 属性（`InMessage` 和/或 `OutMessage`）的值以确定应该对哪些消息进行分块。 然后获取这些消息中每个消息的操作（从 `OperationDescription` 上的消息集合中获取），并将其添加到包含在 `ChunkingBindingParameter` 的实例内的字符串集合中。 然后将此 `ChunkingBindingParameter` 添加到所提供的 `BindingParameterCollection` 中。  
   
  当绑定元素生成通道工厂或通道侦听器时，会在 `BindingParameterCollection` 内将此 `BindingContext` 传递给绑定中的每个绑定元素。 `ChunkingBindingElement`的实现`BuildChannelFactory<T>`并`BuildChannelListener<T>`拉取这`ChunkingBindingParameter`共`BindingContext’`s `BindingParameterCollection`。 然后将包含在 `ChunkingBindingParameter` 内的操作集合传递给 `ChunkingChannelFactory` 或 `ChunkingChannelListener`，后者又将它传递给 `ChunkingDuplexSessionChannel`。  
   
@@ -352,7 +359,7 @@ Press enter when service is available
  < Received chunk 10 of message 5b226ad5-c088-4988-b737-6a565e0563dd  
 ```  
   
- 服务器:  
+ 服务器：  
   
 ```  
 Service started, press enter to exit  

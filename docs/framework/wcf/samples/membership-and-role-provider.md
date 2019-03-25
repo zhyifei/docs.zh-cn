@@ -126,8 +126,7 @@ ms.locfileid: "56332892"
     >  如果运行的是 SQL Server Express Edition，则服务器名称为 .\SQLEXPRESS。 配置 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序服务数据库时应使用该服务器，Web.config 连接字符串中也应使用该服务器。  
   
     > [!NOTE]
-    >  
-  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作进程帐户应对本步骤中创建的数据库具有权限。 使用 sqlcmd 实用工具或 SQL Server Management Studio 来完成该工作。  
+    >  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作进程帐户应对本步骤中创建的数据库具有权限。 使用 sqlcmd 实用工具或 SQL Server Management Studio 来完成该工作。  
   
 3.  若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。  
   

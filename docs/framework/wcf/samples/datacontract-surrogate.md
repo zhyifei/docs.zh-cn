@@ -2,12 +2,12 @@
 title: DataContract 代理项
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 5729943f455d4669f047eb2d86fb7292824c0f2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 341b56727c910d552a5238d95976884162f1c524
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645413"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409830"
 ---
 # <a name="datacontract-surrogate"></a>DataContract 代理项
 本示例演示如何使用数据协定代理类自定义诸如序列化、反序列化、架构导出和架构导入之类的过程。 此示例演示如何在客户端和服务器方案中，序列化和 Windows Communication Foundation (WCF) 客户端和服务之间传输数据是使用代理项。  
@@ -30,7 +30,8 @@ public interface IPersonnelDataService
 }  
 ```  
   
- `AddEmployee` 操作允许用户添加有关新雇员的数据，`GetEmployee` 操作支持按姓名搜索雇员。  
+ 
+  `AddEmployee` 操作允许用户添加有关新雇员的数据，`GetEmployee` 操作支持按姓名搜索雇员。  
   
  这些操作使用下面的数据类型：  
   
@@ -64,9 +65,9 @@ public class Person
 }  
 ```  
   
- 可以将 `DataContract` 属性应用于 `Person` 类，但不是始终都可以这样做。 例如，`Person` 类可能是在您无法控制的独立程序集中定义的。  
+ 可以将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于 `Person` 类，但不是始终都可以这样做。 例如，`Person` 类可能是在您无法控制的独立程序集中定义的。  
   
- 在此限制下，序列化 `Person` 类的一种方式是用标记为 `DataContractAttribute` 的另一个类替换此类并将必要数据复制到新类中。 目标是使 `Person` 类显示为 <xref:System.Runtime.Serialization.DataContractSerializer> 的 DataContract。 请注意，这是序列化非数据协定类的一种方式。  
+ 在此限制下，序列化 `Person` 类的一种方式是用标记为 <xref:System.Runtime.Serialization.DataContractAttribute> 的另一个类替换此类并将必要数据复制到新类中。 目标是使 `Person` 类显示为 <xref:System.Runtime.Serialization.DataContractSerializer> 的 DataContract。 请注意，这是序列化非数据协定类的一种方式。  
   
  本示例通过逻辑方式用名为 `Person` 的另一个类替换 `PersonSurrogated` 类。  
   
@@ -118,7 +119,8 @@ public object GetObjectToSerialize(object obj, Type targetType)
 }  
 ```  
   
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> 方法为反序列化提供反向映射，如下面的示例代码所示。  
+ 
+  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> 方法为反序列化提供反向映射，如下面的示例代码所示。  
   
 ```  
 public object GetDeserializedObject(object obj,   
@@ -188,7 +190,8 @@ public void GetKnownCustomDataTypes(
   
  本例中该属性并不是必要的，它在此示例中仅用于演示目的。 用户也可以使用代码或使用配置，手动添加类似的 `IContractBehavior`、`IEndpointBehavior` 或 `IOperationBehavior` 来启用代理项。  
   
- `IContractBehavior` 实现通过检查操作是否已注册 `DataContractSerializerOperationBehavior` 来查找使用 DataContract 的操作。 如果已注册，则对该行为设置 `DataContractSurrogate` 属性。 下面的示例代码演示如何完成以上过程。 在此操作行为上设置代理项可以为序列化和反序列化启用该代理项。  
+ 
+  `IContractBehavior` 实现通过检查操作是否已注册 `DataContractSerializerOperationBehavior` 来查找使用 DataContract 的操作。 如果已注册，则对该行为设置 `DataContractSurrogate` 属性。 下面的示例代码演示如何完成以上过程。 在此操作行为上设置代理项可以为序列化和反序列化启用该代理项。  
   
 ```  
 public void ApplyClientBehavior(ContractDescription description, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy)  

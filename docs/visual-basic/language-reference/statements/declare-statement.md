@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 4a2e1704e72e608f5b5fd9c6dace42c144f92bb4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5f9ac99078d64387acee9160118928ad8de1764c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973166"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411533"
 ---
 # <a name="declare-statement"></a>Declare Statement
 声明对外部文件中实现的过程的引用。  
@@ -127,7 +127,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 -   **机制。** Visual Basic 使用.NET Framework*平台调用*(PInvoke) 机制来解析和访问外部过程。 `Declare`语句和<xref:System.Runtime.InteropServices.DllImportAttribute>这两个类使用此机制自动，并且不需要任何知识的 PInvoke。 有关详细信息，请参见[演练：调用 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
   
 > [!IMPORTANT]
->  如果外部过程外部公共语言运行时 (CLR) 运行，则*非托管代码*。 当调用此类过程，例如 Win32 API 函数或 COM 方法，可能会使你的应用程序的安全风险。 有关详细信息，请参阅[用于非托管代码安全编码准则](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)。  
+>  如果外部过程外部公共语言运行时 (CLR) 运行，则*非托管代码*。 当调用此类过程，例如 Windows API 函数或 COM 方法，可能会使你的应用程序的安全风险。 有关详细信息，请参阅[用于非托管代码安全编码准则](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例声明的外部引用`Function`返回当前用户名称的过程。 然后，它调用外部过程`GetUserNameA`作为的一部分`getUser`过程。  

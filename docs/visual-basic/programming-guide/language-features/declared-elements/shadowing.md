@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 6ac973493b67fa15ca935f61bbb8e5c07bda1e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580858"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411000"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic 中的隐藏
 当两个编程元素共享相同的名称时，可以隐藏其中一个，或*卷影*，另一个。 在这种情况下，隐藏的元素不是可用于引用;相反，当你的代码使用的元素名称时，Visual Basic 编译器将其解析为隐藏的元素。  
@@ -41,8 +41,7 @@ ms.locfileid: "54580858"
   
  下图显示了两个变量，这两名为`temp`。 本地变量`temp`隐藏了成员变量`temp`从各自的过程中进行访问时`p`。 但是，`MyClass`关键字绕开隐藏并访问成员变量。  
   
- ![通过范围进行隐藏示意图](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowscope.gif "ShadowScope")  
-通过范围进行隐藏  
+ ![图形，该图形显示了通过范围进行隐藏。](./media/shadowing/shadow-scope-diagram.gif)
   
  通过范围进行隐藏的示例，请参阅[如何：隐藏与您的变量同名的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)。  
   
@@ -51,8 +50,7 @@ ms.locfileid: "54580858"
   
  下图显示了一个基类`b`和派生的类`d`，它继承自`b`。 该基类定义一个名为过程`proc`，然后用相同名称的另一个过程的派生的类隐藏它。 第一个`Call`语句访问隐藏`proc`派生类中。 但是，`MyBase`关键字绕开隐藏和访问基类中隐藏的过程。  
   
- ![通过继承进行隐藏示意图](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowinherit.gif "ShadowInherit")  
-通过继承进行隐藏  
+ ![通过继承进行隐藏示意图](./media/shadowing/shadowing-inherit-diagram.gif)  
   
  通过继承隐藏的示例，请参阅[如何：隐藏与您的变量同名的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)和[如何：隐藏继承的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)。  
   

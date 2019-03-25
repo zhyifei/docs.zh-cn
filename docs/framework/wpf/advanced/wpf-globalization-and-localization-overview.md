@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 55a60a74c246e0eefb854bed3d22cfb97eff15b1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492659"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412027"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和本地化概述
 
@@ -144,9 +144,9 @@ ms.locfileid: "57492659"
   
  请注意，该示例使用的共享大小调整功能<xref:System.Windows.Controls.Grid>。 最后三列通过将自身放置在同一个充分利用这<xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>。 正如属性名称所示，此属性允许不同的列采用相同大小。 因此如果"浏览..."获取已本地化为较长的字符串"Durchsuchen..."，所有按钮都增加而不是让小型的"确定"按钮和一个极大的"Durchsuchen..."按钮的宽度。  
   
- **Xml:lang**
+ **xml:lang**
   
- `Xml:lang="en-US"`  
+ `xml:lang="en-US"`  
   
  请注意[xml: lang 处理在 XAML 中](../../xaml-services/xml-lang-handling-in-xaml.md)放置在根元素处[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 此属性描述给定元素及其子元素的区域性。 此值由多个功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，应在本地化过程相应地更改。 此值会更改在断字以及对字词进行拼写检查时所使用的字典。 它还会影响数字的显示以及字体回退系统选择所用字体的方式。 最后，该属性会影响数值的显示方式，形成在复杂脚本中编写文本的方式。 默认值为“en-US”。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "57492659"
   
  使用你喜欢的支持 Unicode 的 CSV 编辑器来编辑此文件。 筛选掉本地化类别为“None”的所有项。 应看到下面的项：  
   
-|资源键|本地化类别|“值”|  
+|资源键|本地化类别|值|  
 |-|-|-| 
 |Button_1:System.Windows.Controls.Button.$Content|Button|确定|  
 |Button_2:System.Windows.Controls.Button.$Content|Button|取消|  
@@ -190,7 +190,7 @@ ms.locfileid: "57492659"
   
  将该应用程序本地化为德语版本需要进行下面的翻译：  
   
-|资源键|本地化类别|值|  
+|资源键|本地化类别|“值”|  
 |-|-|-| 
 |Button_1:System.Windows.Controls.Button.$Content|Button|确定|  
 |Button_2:System.Windows.Controls.Button.$Content|Button|Abbrechen|  
