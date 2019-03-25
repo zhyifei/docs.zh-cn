@@ -55,8 +55,7 @@ ms.locfileid: "56979302"
   
  [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]  
   
- 
-  `ReadOnly` 修饰符可用于下面的上下文中：  
+ `ReadOnly` 修饰符可用于下面的上下文中：  
   
  [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

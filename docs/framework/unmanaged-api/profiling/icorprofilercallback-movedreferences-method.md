@@ -52,8 +52,7 @@ HRESULT MovedReferences(
  `cObjectIDRangeLength`  
  [in] 整数数组，其中每个整数均为内存中的连续对象块的大小。  
   
- 
-  `oldObjectIDRangeStart` 和 `newObjectIDRangeStart` 数组中引用的每个块均有指定的大小。  
+ `oldObjectIDRangeStart` 和 `newObjectIDRangeStart` 数组中引用的每个块均有指定的大小。  
   
 ## <a name="remarks"></a>备注  
   
