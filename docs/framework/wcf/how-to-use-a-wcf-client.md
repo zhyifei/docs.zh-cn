@@ -1,34 +1,38 @@
 ---
-title: 如何：使用 Windows Communication Foundation 客户端
-ms.date: 09/14/2018
+title: 教程：使用 Windows Communication Foundation 客户端
+ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
 dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 780a51e3e0f61f292c997202614e43a85dd90820
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 4d883277f795ea84c59aee91ffcb9b9802b0933b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57250918"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411715"
 ---
-# <a name="how-to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="c7e68-102">如何：使用 Windows Communication Foundation 客户端</span><span class="sxs-lookup"><span data-stu-id="c7e68-102">How to: Use a Windows Communication Foundation Client</span></span>
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a><span data-ttu-id="31cac-102">教程：使用 Windows Communication Foundation 客户端</span><span class="sxs-lookup"><span data-stu-id="31cac-102">Tutorial: Use a Windows Communication Foundation client</span></span>
 
-<span data-ttu-id="c7e68-103">这是创建基本 Windows Communication Foundation (WCF) 应用程序所需的六项任务的最后一个。</span><span class="sxs-lookup"><span data-stu-id="c7e68-103">This is the last of six tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="c7e68-104">有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。</span><span class="sxs-lookup"><span data-stu-id="c7e68-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>
+<span data-ttu-id="31cac-103">本教程介绍了五个任务创建一个基本的 Windows Communication Foundation (WCF) 应用程序所需的最后一个。</span><span class="sxs-lookup"><span data-stu-id="31cac-103">This tutorial describes the last of five tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="31cac-104">有关教程的概述，请参阅[教程：开始使用 Windows Communication Foundation 应用程序](getting-started-tutorial.md)。</span><span class="sxs-lookup"><span data-stu-id="31cac-104">For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).</span></span>
 
-<span data-ttu-id="c7e68-105">一旦创建并配置 Windows Communication Foundation (WCF) 代理，可以创建一个客户端实例和可以编译客户端应用程序，并将其用于与 WCF 服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="c7e68-105">Once a Windows Communication Foundation (WCF) proxy has been created and configured, a client instance can be created and the client application can be compiled and used to communicate with the WCF service.</span></span> <span data-ttu-id="c7e68-106">本主题介绍用于实例化和使用 WCF 客户端的过程。</span><span class="sxs-lookup"><span data-stu-id="c7e68-106">This topic describes procedures for instantiating and using a WCF client.</span></span> <span data-ttu-id="c7e68-107">此过程执行三项操作：</span><span class="sxs-lookup"><span data-stu-id="c7e68-107">This procedure does three things:</span></span>
+<span data-ttu-id="31cac-105">已创建并配置 Windows Communication Foundation (WCF) 代理后，创建客户端实例，并编译客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="31cac-105">After you've created and configured a Windows Communication Foundation (WCF) proxy, you create a client instance and compile the client application.</span></span> <span data-ttu-id="31cac-106">然后将它与 WCF 服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="31cac-106">You then use it to communicate with the WCF service.</span></span> 
 
-1.  <span data-ttu-id="c7e68-108">实例化 WCF 客户端。</span><span class="sxs-lookup"><span data-stu-id="c7e68-108">Instantiates a WCF client.</span></span>
+<span data-ttu-id="31cac-107">在本教程中，你将了解：</span><span class="sxs-lookup"><span data-stu-id="31cac-107">In this tutorial, you learn how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="31cac-108">添加代码以使用 WCF 客户端。</span><span class="sxs-lookup"><span data-stu-id="31cac-108">Add code to use the WCF client.</span></span>
+> - <span data-ttu-id="31cac-109">测试 WCF 客户端。</span><span class="sxs-lookup"><span data-stu-id="31cac-109">Test the WCF client.</span></span>
 
-2.  <span data-ttu-id="c7e68-109">从生成的代理调用服务操作。</span><span class="sxs-lookup"><span data-stu-id="c7e68-109">Calls the service operations from the generated proxy.</span></span>
+## <a name="add-code-to-use-the-wcf-client"></a><span data-ttu-id="31cac-110">添加代码以使用 WCF 客户端</span><span class="sxs-lookup"><span data-stu-id="31cac-110">Add code to use the WCF client</span></span>
 
-3.  <span data-ttu-id="c7e68-110">在完成操作调用后关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="c7e68-110">Closes the client once the operation call is completed.</span></span>
+<span data-ttu-id="31cac-111">客户端代码执行以下步骤操作：</span><span class="sxs-lookup"><span data-stu-id="31cac-111">The client code does the following steps:</span></span>
+- <span data-ttu-id="31cac-112">实例化 WCF 客户端。</span><span class="sxs-lookup"><span data-stu-id="31cac-112">Instantiates the WCF client.</span></span>
+- <span data-ttu-id="31cac-113">从生成的代理调用服务操作。</span><span class="sxs-lookup"><span data-stu-id="31cac-113">Calls the service operations from the generated proxy.</span></span>
+- <span data-ttu-id="31cac-114">完成操作调用后关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="31cac-114">Closes the client after the operation call is completed.</span></span>
 
-## <a name="use-a-windows-communication-foundation-client"></a><span data-ttu-id="c7e68-111">使用 Windows Communication Foundation 客户端</span><span class="sxs-lookup"><span data-stu-id="c7e68-111">Use a Windows Communication Foundation client</span></span>
-
-<span data-ttu-id="c7e68-112">打开 GettingStartedClient 项目中的 Program.cs 或 program.vb 文件，然后将现有代码替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="c7e68-112">Open the Program.cs or Program.vb file from the GettingStartedClient project and replace the existing code with the following code:</span></span>
+<span data-ttu-id="31cac-115">打开**Program.cs**或**Module1.vb**从文件**GettingStartedClient**项目，其代码替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="31cac-115">Open the **Program.cs** or **Module1.vb** file from the **GettingStartedClient** project and replace its code with the following code:</span></span>
 
 ```csharp
 using System;
@@ -71,7 +75,9 @@ namespace GettingStartedClient
             result = client.Divide(value1, value2);
             Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
 
-            //Step 3: Closing the client gracefully closes the connection and cleans up resources.
+            // Step 3: Close the client to gracefully close the connection and clean up resources.
+            Console.WriteLine("\nPress <Enter> to terminate the client.");
+            Console.ReadLine();
             client.Close();
         }
     }
@@ -83,89 +89,108 @@ Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.ServiceModel
-Imports GettingStartedClientVB2.ServiceReference1
+Imports GettingStartedClient.ServiceReference1
 
 Module Module1
 
     Sub Main()
-        ' Step 1: Create an instance of the WCF proxy
+        ' Step 1: Create an instance of the WCF proxy.
         Dim Client As New CalculatorClient()
 
-        'Step 2: Call the service operations.
-        'Call the Add service operation.
+        ' Step 2: Call the service operations.
+        ' Call the Add service operation.
         Dim value1 As Double = 100D
         Dim value2 As Double = 15.99D
         Dim result As Double = Client.Add(value1, value2)
         Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Subtract service operation.
+        ' Call the Subtract service operation.
         value1 = 145D
         value2 = 76.54D
         result = Client.Subtract(value1, value2)
         Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Multiply service operation.
+        ' Call the Multiply service operation.
         value1 = 9D
         value2 = 81.25D
         result = Client.Multiply(value1, value2)
         Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Divide service operation.
+        ' Call the Divide service operation.
         value1 = 22D
         value2 = 7D
         result = Client.Divide(value1, value2)
         Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result)
 
-        ' Step 3: Closing the client gracefully closes the connection and cleans up resources.
-        Client.Close()
-
+        ' Step 3: Close the client to gracefully close the connection and clean up resources.
         Console.WriteLine()
-        Console.WriteLine("Press <ENTER> to terminate client.")
+        Console.WriteLine("Press <Enter> to terminate the client.")
         Console.ReadLine()
+        Client.Close()
 
     End Sub
 
 End Module
 ```
 
-<span data-ttu-id="c7e68-113">请注意`using`或`Imports`导入语句`GettingStartedClient.ServiceReference1`。</span><span class="sxs-lookup"><span data-stu-id="c7e68-113">Notice the `using` or `Imports` statement that imports the `GettingStartedClient.ServiceReference1`.</span></span> <span data-ttu-id="c7e68-114">这将生成的代码导入**添加服务引用**Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="c7e68-114">This imports the code generated by **Add Service Reference** in Visual Studio.</span></span> <span data-ttu-id="c7e68-115">该代码实例化 WCF 代理然后调用由计算器服务公开的服务操作的每个，关闭代理，并终止。</span><span class="sxs-lookup"><span data-stu-id="c7e68-115">The code instantiates the WCF proxy and then calls each of the service operations exposed by the calculator service, closes the proxy, and terminates.</span></span>
+<span data-ttu-id="31cac-116">请注意`using`(视觉对象C#) 或`Imports`（对于 Visual Basic) 语句导入`GettingStartedClient.ServiceReference1`。</span><span class="sxs-lookup"><span data-stu-id="31cac-116">Notice the `using` (for Visual C#) or `Imports` (for Visual Basic) statement that imports `GettingStartedClient.ServiceReference1`.</span></span> <span data-ttu-id="31cac-117">此语句将导入 Visual Studio 使用生成的代码**添加服务引用**函数。</span><span class="sxs-lookup"><span data-stu-id="31cac-117">This statement imports the code that Visual Studio generated with the **Add Service Reference** function.</span></span> <span data-ttu-id="31cac-118">该代码实例化 WCF 代理，并调用每个计算器服务公开的服务操作。</span><span class="sxs-lookup"><span data-stu-id="31cac-118">The code instantiates the WCF proxy and calls each of the service operations that the calculator service exposes.</span></span> <span data-ttu-id="31cac-119">然后，关闭代理并结束程序。</span><span class="sxs-lookup"><span data-stu-id="31cac-119">It then closes the proxy and ends the program.</span></span>
 
-<span data-ttu-id="c7e68-116">现在，您已经完成了教程。</span><span class="sxs-lookup"><span data-stu-id="c7e68-116">You have now completed the tutorial.</span></span> <span data-ttu-id="c7e68-117">您定义了服务协定、实现了服务协定、生成了 WCF 代理、配置了 WCF 客户端应用程序，然后使用代理调用了服务操作。</span><span class="sxs-lookup"><span data-stu-id="c7e68-117">You defined a service contract, implemented the service contract, generated a WCF proxy, configured a WCF client application, and then used the proxy to call service operations.</span></span> <span data-ttu-id="c7e68-118">若要测试应用程序，首先运行 GettingStartedHost 以启动服务，然后运行 GettingStartedClient。</span><span class="sxs-lookup"><span data-stu-id="c7e68-118">To test out the application, first run GettingStartedHost to start the service and then run GettingStartedClient.</span></span>
+## <a name="test-the-wcf-client"></a><span data-ttu-id="31cac-120">测试 WCF 客户端</span><span class="sxs-lookup"><span data-stu-id="31cac-120">Test the WCF client</span></span>
 
-<span data-ttu-id="c7e68-119">GettingStartedHost 的输出应类似于：</span><span class="sxs-lookup"><span data-stu-id="c7e68-119">The output from GettingStartedHost should look like this:</span></span>
+### <a name="test-the-application-from-visual-studio"></a><span data-ttu-id="31cac-121">测试从 Visual Studio 应用程序</span><span class="sxs-lookup"><span data-stu-id="31cac-121">Test the application from Visual Studio</span></span>
 
-```text
-The service is ready.
-Press <ENTER> to terminate service.
+1. <span data-ttu-id="31cac-122">保存并生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="31cac-122">Save and build the solution.</span></span>
 
-Received Add(100,15.99)
-Return: 115.99
-Received Subtract(145,76.54)
-Return: 68.46
-Received Multiply(9,81.25)
-Return: 731.25
-Received Divide(22,7)
-Return: 3.14285714285714
-```
+2. <span data-ttu-id="31cac-123">选择**GettingStartedLib**文件夹，，然后选择**设为启动项目**从快捷菜单。</span><span class="sxs-lookup"><span data-stu-id="31cac-123">Select the **GettingStartedLib** folder, and then select **Set as Startup Project** from the shortcut menu.</span></span>
 
-<span data-ttu-id="c7e68-120">GettingStartedClient 的输出应类似于：</span><span class="sxs-lookup"><span data-stu-id="c7e68-120">The output from GettingStartedClient should look like this:</span></span>
+3. <span data-ttu-id="31cac-124">从**启动项目**，选择**GettingStartedLib**从下拉列表中，然后选择**运行**或按**F5**。</span><span class="sxs-lookup"><span data-stu-id="31cac-124">From **Startup Projects**, select **GettingStartedLib** from the drop-down list, then select **Run** or press **F5**.</span></span>
 
-```text
-Add(100,15.99) = 115.99
-Subtract(145,76.54) = 68.46
-Multiply(9,81.25) = 731.25
-Divide(22,7) = 3.14285714285714
+### <a name="test-the-application-from-a-command-prompt"></a><span data-ttu-id="31cac-125">测试应用程序从命令提示符</span><span class="sxs-lookup"><span data-stu-id="31cac-125">Test the application from a command prompt</span></span>
 
-Press <ENTER> to terminate client.
-```
+1. <span data-ttu-id="31cac-126">打开命令提示符以管理员身份，，然后导航到你的 Visual Studio 解决方案目录。</span><span class="sxs-lookup"><span data-stu-id="31cac-126">Open a command prompt as an administrator, and then navigate to your Visual Studio solution directory.</span></span> 
 
-## <a name="see-also"></a><span data-ttu-id="c7e68-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="c7e68-121">See also</span></span>
+2. <span data-ttu-id="31cac-127">若要启动服务：输入*GettingStartedHost\bin\Debug\GettingStartedHost.exe*。</span><span class="sxs-lookup"><span data-stu-id="31cac-127">To start the service: Enter *GettingStartedHost\bin\Debug\GettingStartedHost.exe*.</span></span>
 
-- [<span data-ttu-id="c7e68-122">生成客户端</span><span class="sxs-lookup"><span data-stu-id="c7e68-122">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)
-- [<span data-ttu-id="c7e68-123">如何：创建客户端</span><span class="sxs-lookup"><span data-stu-id="c7e68-123">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [<span data-ttu-id="c7e68-124">入门教程</span><span class="sxs-lookup"><span data-stu-id="c7e68-124">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)
-- [<span data-ttu-id="c7e68-125">基本 WCF 编程</span><span class="sxs-lookup"><span data-stu-id="c7e68-125">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [<span data-ttu-id="c7e68-126">如何：创建双工协定</span><span class="sxs-lookup"><span data-stu-id="c7e68-126">How to: Create a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [<span data-ttu-id="c7e68-127">如何：使用双工协定访问服务</span><span class="sxs-lookup"><span data-stu-id="c7e68-127">How to: Access Services with a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [<span data-ttu-id="c7e68-128">入门</span><span class="sxs-lookup"><span data-stu-id="c7e68-128">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [<span data-ttu-id="c7e68-129">自承载</span><span class="sxs-lookup"><span data-stu-id="c7e68-129">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
+3. <span data-ttu-id="31cac-128">若要启动客户端：打开另一个命令提示符，导航到 Visual Studio 解决方案目录，然后输入*GettingStartedClient\bin\Debug\GettingStartedClient.exe*。</span><span class="sxs-lookup"><span data-stu-id="31cac-128">To start the client: Open another command prompt, navigate to your Visual Studio solution directory, then enter *GettingStartedClient\bin\Debug\GettingStartedClient.exe*.</span></span>
+
+   <span data-ttu-id="31cac-129">*GettingStartedHost.exe*生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="31cac-129">*GettingStartedHost.exe* produces the following output:</span></span>
+
+   ```text
+   The service is ready.
+   Press <Enter> to terminate the service.
+
+   Received Add(100,15.99)
+   Return: 115.99
+   Received Subtract(145,76.54)
+   Return: 68.46
+   Received Multiply(9,81.25)
+   Return: 731.25
+   Received Divide(22,7)
+   Return: 3.14285714285714
+   ```
+
+   <span data-ttu-id="31cac-130">*GettingStartedClient.exe*生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="31cac-130">*GettingStartedClient.exe* produces the following output:</span></span>
+
+   ```text
+   Add(100,15.99) = 115.99
+   Subtract(145,76.54) = 68.46
+   Multiply(9,81.25) = 731.25
+   Divide(22,7) = 3.14285714285714
+
+   Press <Enter> to terminate the client.
+   ```
+
+## <a name="next-steps"></a><span data-ttu-id="31cac-131">后续步骤</span><span class="sxs-lookup"><span data-stu-id="31cac-131">Next steps</span></span>
+
+<span data-ttu-id="31cac-132">现在已在 WCF 入门教程中完成所有任务。</span><span class="sxs-lookup"><span data-stu-id="31cac-132">You've now completed all the tasks in the WCF get started tutorial.</span></span> <span data-ttu-id="31cac-133">在本教程中，你将了解：</span><span class="sxs-lookup"><span data-stu-id="31cac-133">In this tutorial, you learned how to:</span></span>
+
+<span data-ttu-id="31cac-134">在本教程中，你将了解：</span><span class="sxs-lookup"><span data-stu-id="31cac-134">In this tutorial, you learn how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="31cac-135">添加代码以使用 WCF 客户端。</span><span class="sxs-lookup"><span data-stu-id="31cac-135">Add code to use the WCF client.</span></span>
+> - <span data-ttu-id="31cac-136">测试 WCF 客户端。</span><span class="sxs-lookup"><span data-stu-id="31cac-136">Test the WCF client.</span></span>
+
+<span data-ttu-id="31cac-137">如果您有问题或错误中的任何步骤，按照要解决这些问题的故障排除文章中的步骤。</span><span class="sxs-lookup"><span data-stu-id="31cac-137">If you have problems or errors in any of the steps, follow the steps in the troubleshooting article to fix them.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="31cac-138">排查 Get 开始使用 WCF 教程</span><span class="sxs-lookup"><span data-stu-id="31cac-138">Troubleshoot the Get started with WCF tutorials</span></span>](troubleshooting-the-getting-started-tutorial.md)
+

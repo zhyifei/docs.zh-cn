@@ -10,26 +10,25 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: ba034dfceb4a42e1f88d15379b482e47a0700b8d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a7dc0d2cc32d387f87221748ab94ac82c2dfc8b0
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371935"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410506"
 ---
-# <a name="expander"></a><span data-ttu-id="8bad6-102">Expander</span><span class="sxs-lookup"><span data-stu-id="8bad6-102">Expander</span></span>
-<span data-ttu-id="8bad6-103"><xref:System.Windows.Controls.Expander>允许用户查看标头和展开该标头以查看更多详细信息，或若要折叠到一个标头部分。</span><span class="sxs-lookup"><span data-stu-id="8bad6-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
+# <a name="expander"></a><span data-ttu-id="cb4e0-102">Expander</span><span class="sxs-lookup"><span data-stu-id="cb4e0-102">Expander</span></span>
+<span data-ttu-id="cb4e0-103"><xref:System.Windows.Controls.Expander>允许用户查看标头和展开该标头以查看更多详细信息，或若要折叠到一个标头部分。</span><span class="sxs-lookup"><span data-stu-id="cb4e0-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
   
- <span data-ttu-id="8bad6-104">下图提供了此控件在其扩展的位置的一个示例。</span><span class="sxs-lookup"><span data-stu-id="8bad6-104">The following illustration provides an example of this control in its expanded position.</span></span>  
+ <span data-ttu-id="cb4e0-104">下图提供了此控件在其扩展的位置的一个示例。</span><span class="sxs-lookup"><span data-stu-id="cb4e0-104">The following illustration provides an example of this control in its expanded position.</span></span>  
   
- <span data-ttu-id="8bad6-105">![Expander 示例](./media/expanderexample.JPG "ExpanderExample")</span><span class="sxs-lookup"><span data-stu-id="8bad6-105">![Expander example](./media/expanderexample.JPG "ExpanderExample")</span></span>  
-<span data-ttu-id="8bad6-106">Expander 控件</span><span class="sxs-lookup"><span data-stu-id="8bad6-106">Expander control</span></span>  
+ ![Expander 示例](./media/expander/expander-control-example.jpg)
   
-## <a name="in-this-section"></a><span data-ttu-id="8bad6-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="8bad6-107">In This Section</span></span>  
- [<span data-ttu-id="8bad6-108">扩展器概述</span><span class="sxs-lookup"><span data-stu-id="8bad6-108">Expander Overview</span></span>](expander-overview.md)  
- [<span data-ttu-id="8bad6-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="8bad6-109">How-to Topics</span></span>](expander-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cb4e0-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="cb4e0-106">In This Section</span></span>  
+ [<span data-ttu-id="cb4e0-107">扩展器概述</span><span class="sxs-lookup"><span data-stu-id="cb4e0-107">Expander Overview</span></span>](expander-overview.md)  
+ [<span data-ttu-id="cb4e0-108">帮助主题</span><span class="sxs-lookup"><span data-stu-id="cb4e0-108">How-to Topics</span></span>](expander-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="8bad6-110">参考</span><span class="sxs-lookup"><span data-stu-id="8bad6-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cb4e0-109">参考</span><span class="sxs-lookup"><span data-stu-id="cb4e0-109">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="8bad6-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="8bad6-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="cb4e0-110">相关章节</span><span class="sxs-lookup"><span data-stu-id="cb4e0-110">Related Sections</span></span>
