@@ -39,8 +39,7 @@ ms.locfileid: "56980459"
   
  若要创建一个类的构造函数过程，请设置的名称`Sub`过程`New`关键字。 有关详细信息，请参阅[对象生存期：如何创建和销毁对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
   
- 
-  `New` 关键字可用于以下上下文中：  
+ `New` 关键字可用于以下上下文中：  
   
  [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

@@ -43,11 +43,9 @@ result = TypeOf objectexpression IsNot typename
  必需。 任何数据类型名。  
   
 ## <a name="remarks"></a>备注  
- 
-  `TypeOf` 运算符确定 `objectexpression` 的运行时类型是否与 `typename` 兼容。 兼容性取决于 `typename` 的类型类别。 下表显示如何确定兼容性。  
+ `TypeOf` 运算符确定 `objectexpression` 的运行时类型是否与 `typename` 兼容。 兼容性取决于 `typename` 的类型类别。 下表显示如何确定兼容性。  
   
-|
-  `typename` 的类型类别|兼容性条件|  
+|`typename` 的类型类别|兼容性条件|  
 |---------------------------------|-----------------------------|  
 |类|`objectexpression` 属于类型 `typename` 或继承自 `typename`|  
 |结构|`objectexpression` 属于类型 `typename`|  

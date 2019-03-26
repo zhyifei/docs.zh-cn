@@ -72,8 +72,7 @@ ms.locfileid: "57370496"
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 定义基本和高级 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。 对于不需要各种打印自定义或对 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 完整功能集的访问权限的应用程序，可以提供基本打印支持。 基本打印支持通过一个打印对话框控件公开，该控件要求最低的配置，并采用熟悉的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 可以通过此简化的打印模型来使用众多 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能。  
   
 #### <a name="printdialog"></a>PrintDialog  
- 
-  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 控件为 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、配置和 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 作业提交提供单一入口点。 若要了解如何实例化和使用该控件，请参阅[调用打印对话框](how-to-invoke-a-print-dialog.md)。  
+ <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 控件为 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、配置和 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 作业提交提供单一入口点。 若要了解如何实例化和使用该控件，请参阅[调用打印对话框](how-to-invoke-a-print-dialog.md)。  
   
 ### <a name="advanced-xps-printing"></a>高级 XPS 打印  
  若要访问完整的 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能集、必须使用高级打印 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]。 下面更详细地介绍了几个相关的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]。 有关完整列表[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]打印路径[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，请参阅<xref:System.Windows.Xps>和<xref:System.Printing>命名空间的引用。  
@@ -103,8 +102,7 @@ ms.locfileid: "57370496"
  [!code-csharp[XpsPrint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
  [!code-vb[XpsPrint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
- 
-  <xref:System.Printing.PrintQueue.AddJob%2A> 方法还提供打印方法。 请参阅[以编程方式打印 XPS 文件](how-to-programmatically-print-xps-files.md)。 了解详细信息。  
+ <xref:System.Printing.PrintQueue.AddJob%2A> 方法还提供打印方法。 请参阅[以编程方式打印 XPS 文件](how-to-programmatically-print-xps-files.md)。 了解详细信息。  
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>GDI 打印路径  

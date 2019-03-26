@@ -14,16 +14,14 @@ ms.lasthandoff: 02/28/2019
 ms.locfileid: "56965980"
 ---
 # <a name="string-basics-in-visual-basic"></a>字符串基础 (Visual Basic)
-
-  `String` 数据类型表示一系列字符（每个字符都进而表示 `Char` 数据类型的一个实例）。 本主题介绍在 Visual Basic 中的字符串的基本概念。  
+`String` 数据类型表示一系列字符（每个字符都进而表示 `Char` 数据类型的一个实例）。 本主题介绍在 Visual Basic 中的字符串的基本概念。  
   
 ## <a name="string-variables"></a>字符串变量  
  可以向字符串的实例分配表示一系列字符的文本值。 例如：  
   
  [!code-vb[VbVbalrStrings#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#63)]  
   
- 
-  `String` 变量还可以接受计算结果为字符串的任何表达式。 示例如下所示：  
+ `String` 变量还可以接受计算结果为字符串的任何表达式。 示例如下所示：  
   
  [!code-vb[VbVbalrStrings#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#64)]  
   

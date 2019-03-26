@@ -32,8 +32,7 @@ ms.locfileid: "56969279"
  一个迭代器，可以是匿名函数。 有关更多信息，请参见 [迭代器](../../programming-guide/concepts/iterators.md)。  
   
 ## <a name="usage"></a>用法  
- 
-  `Iterator` 修饰符可用于下面的上下文中：  
+ `Iterator` 修饰符可用于下面的上下文中：  
   
 -   [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
   
