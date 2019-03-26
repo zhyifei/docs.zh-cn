@@ -545,9 +545,7 @@ string GetCallerCreditCardNumber()
 
 -   创建服务器证书：
 
-     
-  `Setup.bat` 批处理文件中的以下行创建将要使用的服务器证书。 
-  `%SERVER_NAME%`变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 此批处理文件中的默认值为 localhost。 如果更改 `%SERVER_NAME%` 变量，则必须浏览 Client.cs 和 Service.cs 文件并用 Setup.bat 脚本中使用的服务器名来替换 localhost 的所有实例。
+     `Setup.bat` 批处理文件中的以下行创建将要使用的服务器证书。 `%SERVER_NAME%`变量指定服务器名称。 更改此变量可以指定您自己的服务器名称。 此批处理文件中的默认值为 localhost。 如果更改 `%SERVER_NAME%` 变量，则必须浏览 Client.cs 和 Service.cs 文件并用 Setup.bat 脚本中使用的服务器名来替换 localhost 的所有实例。
 
      证书存储在 `LocalMachine` 存储位置下的 My（个人）存储区中。 对于 IIS 承载的服务，证书存储在 LocalMachine 存储区中。 对于自承载服务，应该通过用 CurrentUser 替换字符串 LocalMachine 来修改批处理文件，以便将客户端证书存储在 CurrentUser 存储位置。
 
