@@ -17,15 +17,15 @@ F# 中有两个主要概念：函数和类型。  本文主要介绍该语言中
 
 ## <a name="executing-the-code-online"></a>在线执行代码
 
-如果你没有在计算机上安装F#，你可以使用联机[Fable REPL](https://fable.io/repl/)执行所有的示例。 Fable 是一种用于直接在浏览器中执行F#的方言。 若要在 REPL 中查看以下示例，请查看Fable REPL左侧菜单栏中的 **示例 > 了解 > 概览F#** 。
+如果未在计算机上安装 F#，可以使用 [Fable REPL](https://fable.io/repl/) 联机执行所有示例。Fable 是一种用于直接在浏览器中执行 F# 的方言。若要在 REPL 中查看以下示例，请查看 Fable REPL 左侧菜单栏中的“示例”>“了解”>“F# 概览”**** 。
 
 ## <a name="functions-and-modules"></a>函数和模块
 
-任何 F# 程序的最基本的片段都是由***函数***组织成的***模块***。  [函数](language-reference/functions/index.md)对输入执行工作产生输出，并被组织在[模块](language-reference/modules.md)中，这是你在 F # 中分组事物的主要方式。  使用[`let`绑定](language-reference/functions/let-bindings.md)定义它们，它为函数提供一个名称并定义其参数。
+任何 F# 程序的最基本的片段都是由***函数***组织成的***模块***。 [函数](language-reference/functions/index.md)会处理输入并产生输出，并被组织到[模块](language-reference/modules.md)中，模块是在 F # 中对事物进行归组的主要方式。它们是使用[`let`绑定](language-reference/functions/let-bindings.md)定义对的，后者为函数提供一个名称并定义其参数。
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let` 绑定也同样用于将值绑定到名称，类似于其他语言中的变量。  默认情况下`let` 绑定是***不可变***的，这意味着，一旦值或函数绑定到一个名称，它不能在原位更改。  这与在其他语言中的变量——***可变***，意味着它们的值可以在任何位置任何时间被更改——相反。  如果你需要一个可变的绑定，可以使用`let mutable ...`语法。
+`let` 绑定也是将值绑定到名称的方式，类似于其他语言中的变量。默认情况下`let` 绑定是***不可变***的，这意味着，一旦值或函数绑定到一个名称，它不能在原位更改。这与在其他语言中的变量相反，这些变量是***可变的***，意味着它们的值可以在任何位置任何时间被更改。如果需要一个可变的绑定，可以使用 `let mutable ...` 语法。
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 
