@@ -95,8 +95,7 @@ ms.locfileid: "58410636"
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
- 
-  `WS2007HttpBinding` 会添加与 `WSHttpBinding` 类似的系统提供的绑定，但使用 ReliableSession、Security 和 TransactionFlow 协议的结构化信息标准促进组织 (OASIS) 标准版本。 使用此绑定时，无需对对象模型或默认设置进行任何更改。  
+ `WS2007HttpBinding` 会添加与 `WSHttpBinding` 类似的系统提供的绑定，但使用 ReliableSession、Security 和 TransactionFlow 协议的结构化信息标准促进组织 (OASIS) 标准版本。 使用此绑定时，无需对对象模型或默认设置进行任何更改。  
   
 ## <a name="example"></a>示例  
   

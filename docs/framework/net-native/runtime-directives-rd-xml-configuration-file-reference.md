@@ -337,8 +337,7 @@ ms.locfileid: "58410454"
 
 - 如果方法为泛型，则实例化该方法所采用的类型将标有 `Browse` 策略。
 
-- 
-  `MethodInfo.Invoke` 可调用方法，并且可通过 <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType> 进行委托创建。
+- `MethodInfo.Invoke` 可调用方法，并且可通过 <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType> 进行委托创建。
 
 将 `Dynamic` 策略应用于字段涉及下列策略更改：
 
@@ -360,15 +359,13 @@ ms.locfileid: "58410454"
 
 将 `Activation` 策略应用于方法涉及下列策略更改：
 
-- 
-  <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> 和 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 方法可调用构造函数。 对于方法而言，`Activation` 策略仅会影响构造函数。
+- <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> 和 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 方法可调用构造函数。 对于方法而言，`Activation` 策略仅会影响构造函数。
 
 将 `Activation` 策略应用于字段未产生任何效果。
 
 #### <a name="the-effect-of-serialize-policy"></a>“序列化”策略的效果
 
-
-  `Serialize` 策略可启用基于反射的常用序列化程序。 但由于 Microsoft 不清楚非 Microsoft 序列化程序的确切反射访问模式，该策略可能无法完全生效。
+`Serialize` 策略可启用基于反射的常用序列化程序。 但由于 Microsoft 不清楚非 Microsoft 序列化程序的确切反射访问模式，该策略可能无法完全生效。
 
 将 `Serialize` 策略应用于类型涉及下列策略更改：
 
@@ -408,8 +405,7 @@ ms.locfileid: "58410454"
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer、 DataContractSerializer 和 DataContractJsonSerializer 策略的影响
 
-
-  `Serialize` 策略适用于基于反射的序列化程序，而 <xref:System.Xml.Serialization.XmlSerializer>、<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 策略则用于启用一组 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链已知的序列化程序。 这些序列化程序并非通过反射实施，但却按照与确定可反射类型的设置类似的方式来确定可在运行时实现序列化的类型的设置。
+`Serialize` 策略适用于基于反射的序列化程序，而 <xref:System.Xml.Serialization.XmlSerializer>、<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 策略则用于启用一组 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链已知的序列化程序。 这些序列化程序并非通过反射实施，但却按照与确定可反射类型的设置类似的方式来确定可在运行时实现序列化的类型的设置。
 
 将这些策略之一应用于类型，该类型便可借助匹配的序列化程序实现序列化。 同样，任何序列化引擎可静态确定为需要序列化的类型也可实现序列化。
 
