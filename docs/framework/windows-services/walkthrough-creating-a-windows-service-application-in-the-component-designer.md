@@ -1,6 +1,6 @@
 ---
-title: 在 Visual Studio 中创建 Windows 服务应用程序
-ms.date: 09/10/2018
+title: 教程：创建 Windows 服务应用
+ms.date: 03/14/2019
 dev_langs:
 - csharp
 - vb
@@ -9,68 +9,80 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 786b9e28607cced0a15793415ff5fd470b559374
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665025"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262488"
 ---
-# <a name="walkthrough-create-a-windows-service-app"></a><span data-ttu-id="e5865-102">演练：创建 Windows 服务应用</span><span class="sxs-lookup"><span data-stu-id="e5865-102">Walkthrough: Create a Windows service app</span></span>
+# <a name="tutorial-create-a-windows-service-app"></a><span data-ttu-id="a6c85-102">教程：创建 Windows 服务应用</span><span class="sxs-lookup"><span data-stu-id="a6c85-102">Tutorial: Create a Windows service app</span></span>
 
-<span data-ttu-id="e5865-103">本文演示了如何在 Visual Studio 中创建可向事件日志中写入消息的简单 Windows 服务应用程序。</span><span class="sxs-lookup"><span data-stu-id="e5865-103">This article demonstrates how to create a simple Windows service app in Visual Studio that writes messages to an event log.</span></span>
+<span data-ttu-id="a6c85-103">本文演示了如何在 Visual Studio 中创建可向事件日志中写入消息的 Windows 服务应用程序。</span><span class="sxs-lookup"><span data-stu-id="a6c85-103">This article demonstrates how to create a Windows service app in Visual Studio that writes messages to an event log.</span></span>
 
-## <a name="create-a-service"></a><span data-ttu-id="e5865-104">创建服务</span><span class="sxs-lookup"><span data-stu-id="e5865-104">Create a service</span></span>
+## <a name="create-a-service"></a><span data-ttu-id="a6c85-104">创建服务</span><span class="sxs-lookup"><span data-stu-id="a6c85-104">Create a service</span></span>
 
-<span data-ttu-id="e5865-105">首先，创建项目并设置服务正常运行所必需的值。</span><span class="sxs-lookup"><span data-stu-id="e5865-105">To begin, create the project and set values that are required for the service to function correctly.</span></span>
+<span data-ttu-id="a6c85-105">首先，创建项目并设置服务正常运行所必需的值。</span><span class="sxs-lookup"><span data-stu-id="a6c85-105">To begin, create the project and set the values that are required for the service to function correctly.</span></span>
 
-1. <span data-ttu-id="e5865-106">在 Visual Studio 中，在菜单栏上选择“文件” > “新建” > “项目”（或按 **Ctrl**+**Shift**+**N**）以打开“新建项目”对话框。</span><span class="sxs-lookup"><span data-stu-id="e5865-106">In Visual Studio, on the menu bar, choose **File** > **New** > **Project** (or press **Ctrl**+**Shift**+**N**) to open the **New Project** dialog.</span></span>
+1. <span data-ttu-id="a6c85-106">从 Visual Studio“文件”菜单中，选择“新建” > “项目”（或按 Ctrl+Shift+N），打开“新建项目”窗口。</span><span class="sxs-lookup"><span data-stu-id="a6c85-106">From the Visual Studio **File** menu, select **New** > **Project** (or press **Ctrl**+**Shift**+**N**) to open the **New Project** window.</span></span>
 
-2. <span data-ttu-id="e5865-107">导航到并选择“Windows 服务”项目模板。</span><span class="sxs-lookup"><span data-stu-id="e5865-107">Navigate to and select the **Windows Service** project template.</span></span> <span data-ttu-id="e5865-108">展开“已安装”> [Visual C# 或 Visual Basic] >“Windows 桌面”，或在右上角的搜索框中键入“Windows 服务”。</span><span class="sxs-lookup"><span data-stu-id="e5865-108">Expand **Installed** > [**Visual C#** or **Visual Basic**] > **Windows Desktop**, or type **Windows Service** in the search box on the upper right.</span></span>
+2. <span data-ttu-id="a6c85-107">导航到并选择“Windows 服务 (.NET Framework)”项目模板。</span><span class="sxs-lookup"><span data-stu-id="a6c85-107">Navigate to and select the **Windows Service (.NET Framework)** project template.</span></span> <span data-ttu-id="a6c85-108">若要找到它，请展开“已安装”和 **“Visual C#”** 或 **“Visual Basic”**，然后选择“Windows 桌面”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-108">To find it, expand **Installed** and **Visual C#** or **Visual Basic**, then select **Windows Desktop**.</span></span> <span data-ttu-id="a6c85-109">或者，在右上方的搜索框中输入 Windows 服务，然后按 Enter。</span><span class="sxs-lookup"><span data-stu-id="a6c85-109">Or, enter *Windows Service* in the search box on the upper right and press **Enter**.</span></span>
 
    ![Visual Studio“新建项目”对话框中的“Windows 服务”模板](media/new-project-dialog.png)
 
    > [!NOTE]
-   > <span data-ttu-id="e5865-110">如果未看到“Windows 服务”模板，则可能需要安装“.NET 桌面开发”工作负荷。</span><span class="sxs-lookup"><span data-stu-id="e5865-110">If you don't see the **Windows Service** template, you may need to install the **.NET desktop development** workload.</span></span> <span data-ttu-id="e5865-111">在“新建项目”对话框中，单击左下角指示“打开 Visual Studio 安装程序”的链接。</span><span class="sxs-lookup"><span data-stu-id="e5865-111">In the **New Project** dialog, click the link that says **Open Visual Studio Installer** on the lower left.</span></span> <span data-ttu-id="e5865-112">在“Visual Studio 安装程序”中，选择“.NET 桌面开发”工作负荷，然后选择“修改”。</span><span class="sxs-lookup"><span data-stu-id="e5865-112">In **Visual Studio Installer**, select the **.NET desktop development** workload and then choose **Modify**.</span></span>
+   > <span data-ttu-id="a6c85-111">如果未看到“Windows 服务”模板，建议安装“.NET 桌面开发”工作负载：</span><span class="sxs-lookup"><span data-stu-id="a6c85-111">If you don't see the **Windows Service** template, you may need to install the **.NET desktop development** workload:</span></span>
+   >  
+   > <span data-ttu-id="a6c85-112">在“新建项目”对话框中，选择左下方的“打开 Visual Studio 安装程序”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-112">In the **New Project** dialog, select **Open Visual Studio Installer** on the lower left.</span></span> <span data-ttu-id="a6c85-113">选择“.NET 桌面开发”工作负载，然后选择“修改”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-113">Select the **.NET desktop development** workload, and then select **Modify**.</span></span>
 
-3. <span data-ttu-id="e5865-113">将项目命名为 **MyNewService**，然后选择“确定”。</span><span class="sxs-lookup"><span data-stu-id="e5865-113">Name the project **MyNewService**, and then choose **OK**.</span></span>
+3. <span data-ttu-id="a6c85-114">对于“名称”，请输入 MyNewService，然后选择“确定”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-114">For **Name**, enter *MyNewService*, and then select **OK**.</span></span>
 
-   <span data-ttu-id="e5865-114">项目模板包括从 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 继承的名为 `Service1` 的组件类。</span><span class="sxs-lookup"><span data-stu-id="e5865-114">The project template includes a component class named `Service1` that inherits from <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>.</span></span> <span data-ttu-id="e5865-115">它包括许多基本服务代码，例如用于启动服务的代码。</span><span class="sxs-lookup"><span data-stu-id="e5865-115">It includes much of the basic service code, such as the code to start the service.</span></span>
+   <span data-ttu-id="a6c85-115">将出现“设计”选项卡（“Service1.cs [Design]”或“Service1.vb [Design]”）。</span><span class="sxs-lookup"><span data-stu-id="a6c85-115">The **Design** tab appears (**Service1.cs [Design]** or **Service1.vb [Design]**).</span></span>
+   
+   <span data-ttu-id="a6c85-116">项目模板包括从 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 继承的名为 `Service1` 的组件类。</span><span class="sxs-lookup"><span data-stu-id="a6c85-116">The project template includes a component class named `Service1` that inherits from <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>.</span></span> <span data-ttu-id="a6c85-117">它包括许多基本服务代码，例如用于启动服务的代码。</span><span class="sxs-lookup"><span data-stu-id="a6c85-117">It includes much of the basic service code, such as the code to start the service.</span></span>
 
-## <a name="rename-the-service"></a><span data-ttu-id="e5865-116">对服务进行重命名</span><span class="sxs-lookup"><span data-stu-id="e5865-116">Rename the service</span></span>
+## <a name="rename-the-service"></a><span data-ttu-id="a6c85-118">对服务进行重命名</span><span class="sxs-lookup"><span data-stu-id="a6c85-118">Rename the service</span></span>
 
-<span data-ttu-id="e5865-117">将服务从 **Service1** 重命名为 **MyNewService**。</span><span class="sxs-lookup"><span data-stu-id="e5865-117">Rename the service from **Service1** to **MyNewService**.</span></span>
+<span data-ttu-id="a6c85-119">将服务从 **Service1** 重命名为 **MyNewService**。</span><span class="sxs-lookup"><span data-stu-id="a6c85-119">Rename the service from **Service1** to **MyNewService**.</span></span>
 
-1. <span data-ttu-id="e5865-118">在 Service1.cs（或 Service1.vb）的“设计”视图中，单击要切换到代码视图的链接。</span><span class="sxs-lookup"><span data-stu-id="e5865-118">In the **Design** view for Service1.cs (or Service1.vb), click the link to **switch to code view**.</span></span> <span data-ttu-id="e5865-119">右键单击 **Service1**，然后从上下文菜单中选择“重命名”。</span><span class="sxs-lookup"><span data-stu-id="e5865-119">Right-click on **Service1** and select **Rename** from the context menu.</span></span> <span data-ttu-id="e5865-120">输入 **MyNewService**，然后按 **Enter** 或单击“应用”。</span><span class="sxs-lookup"><span data-stu-id="e5865-120">Enter **MyNewService** and then press **Enter** or click **Apply**.</span></span>
+1. <span data-ttu-id="a6c85-120">在“解决方案资源管理器”中，选择“Service1.cs”或“Service1.vb”，然后从快捷菜单中选择“重命名”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-120">In **Solution Explorer**, select **Service1.cs**, or **Service1.vb**, and choose **Rename** from the shortcut menu.</span></span> <span data-ttu-id="a6c85-121">将文件重命名为“MyNewService.cs”或“MyNewService.vb”，然后按 Enter</span><span class="sxs-lookup"><span data-stu-id="a6c85-121">Rename the file to **MyNewService.cs**, or **MyNewService.vb**, and then press **Enter**</span></span>
 
-2. <span data-ttu-id="e5865-121">在 **Service1.cs [Design]** 或 **Service1.vb [Design]** 的“属性”窗口中，将 **ServiceName** 值更改为 **MyNewService**。</span><span class="sxs-lookup"><span data-stu-id="e5865-121">In the **Properties** window for **Service1.cs [Design]** or **Service1.vb [Design]**, change the **ServiceName** value to **MyNewService**.</span></span>
+    <span data-ttu-id="a6c85-122">随即将出现一个弹出窗口，询问是否要重命名对代码元素 Service1 的所有引用。</span><span class="sxs-lookup"><span data-stu-id="a6c85-122">A pop-up window appears asking whether you would like to rename all references to the code element *Service1*.</span></span>
 
-3. <span data-ttu-id="e5865-122">在“解决方案资源管理器”中，将 **Service1.cs** 重命名为 **MyNewService.cs**，或将 **Service1.vb** 重命名为 **MyNewService.vb**。</span><span class="sxs-lookup"><span data-stu-id="e5865-122">In **Solution Explorer**, rename **Service1.cs** to **MyNewService.cs**, or rename **Service1.vb** to **MyNewService.vb**.</span></span>
+2. <span data-ttu-id="a6c85-123">在弹出窗口中，选择“是”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-123">In the pop-up window, select **Yes**.</span></span>
 
-## <a name="add-features-to-the-service"></a><span data-ttu-id="e5865-123">向服务添加功能</span><span class="sxs-lookup"><span data-stu-id="e5865-123">Add features to the service</span></span>
+    <span data-ttu-id="a6c85-124">![重命名提示](media/windows-service-rename.png "Windows 服务重命名提示")</span><span class="sxs-lookup"><span data-stu-id="a6c85-124">![Rename prompt](media/windows-service-rename.png "Windows service rename prompt")</span></span>
 
-<span data-ttu-id="e5865-124">在本节中，你会添加自定义事件日志到 Windows 服务。</span><span class="sxs-lookup"><span data-stu-id="e5865-124">In this section, you add a custom event log to the Windows service.</span></span> <span data-ttu-id="e5865-125">事件日志与 Windows 服务没有任何形式的关联。</span><span class="sxs-lookup"><span data-stu-id="e5865-125">Event logs are not associated in any way with Windows services.</span></span> <span data-ttu-id="e5865-126">此处，<xref:System.Diagnostics.EventLog> 组件用作可以添加到 Windows 服务的组件类型的示例。</span><span class="sxs-lookup"><span data-stu-id="e5865-126">The <xref:System.Diagnostics.EventLog> component is used here as an example of the type of component you can add to a Windows service.</span></span>
+2. <span data-ttu-id="a6c85-125">在“设计”选项卡中，从快捷菜单中选择“属性”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-125">In the **Design** tab, select **Properties** from the shortcut menu.</span></span> <span data-ttu-id="a6c85-126">在“属性”窗口中，将“ServiceName”值更改为 MyNewService。</span><span class="sxs-lookup"><span data-stu-id="a6c85-126">From the **Properties** window, change the **ServiceName** value to *MyNewService*.</span></span>
 
-### <a name="add-custom-event-log-functionality"></a><span data-ttu-id="e5865-127">添加自定义事件日志功能</span><span class="sxs-lookup"><span data-stu-id="e5865-127">Add custom event log functionality</span></span>
+    <span data-ttu-id="a6c85-127">![服务属性](media/windows-service-properties.png "Windows 服务属性")</span><span class="sxs-lookup"><span data-stu-id="a6c85-127">![Service properties](media/windows-service-properties.png "Windows service properties")</span></span>
 
-1. <span data-ttu-id="e5865-128">在 **“解决方案资源管理器”** 中，打开 **MyNewService.cs** 或 **MyNewService.vb**的上下文菜单，然后选择 **“查看设计器”**。</span><span class="sxs-lookup"><span data-stu-id="e5865-128">In **Solution Explorer**, open the context menu for **MyNewService.cs** or **MyNewService.vb**, and then choose **View Designer**.</span></span>
+3. <span data-ttu-id="a6c85-128">从“文件”菜单中选择“全部保存”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-128">Select **Save All** from the **File** menu.</span></span>
 
-2. <span data-ttu-id="e5865-129">从 **工具箱** 的 **“组件”** 部分，将 <xref:System.Diagnostics.EventLog> 组件拖动到设计器中。</span><span class="sxs-lookup"><span data-stu-id="e5865-129">From the **Components** section of the **Toolbox**, drag an <xref:System.Diagnostics.EventLog> component to the designer.</span></span>
 
-3. <span data-ttu-id="e5865-130">在 **“解决方案资源管理器”** 中，打开 **MyNewService.cs** 或 **MyNewService.vb**的上下文菜单，然后选择 **“查看代码”**。</span><span class="sxs-lookup"><span data-stu-id="e5865-130">In **Solution Explorer**, open the context menu for **MyNewService.cs** or **MyNewService.vb**, and then choose **View Code**.</span></span>
+## <a name="add-features-to-the-service"></a><span data-ttu-id="a6c85-129">向服务添加功能</span><span class="sxs-lookup"><span data-stu-id="a6c85-129">Add features to the service</span></span>
 
-4. <span data-ttu-id="e5865-131">编辑构造函数以定义自定义事件日志：</span><span class="sxs-lookup"><span data-stu-id="e5865-131">Edit the constructor to define a custom event log:</span></span>
+<span data-ttu-id="a6c85-130">在本节中，你会添加自定义事件日志到 Windows 服务。</span><span class="sxs-lookup"><span data-stu-id="a6c85-130">In this section, you add a custom event log to the Windows service.</span></span> <span data-ttu-id="a6c85-131"><xref:System.Diagnostics.EventLog> 组件是可以添加到 Windows 服务的组件类型的示例。</span><span class="sxs-lookup"><span data-stu-id="a6c85-131">The <xref:System.Diagnostics.EventLog> component is an example of the type of component you can add to a Windows service.</span></span>
+
+### <a name="add-custom-event-log-functionality"></a><span data-ttu-id="a6c85-132">添加自定义事件日志功能</span><span class="sxs-lookup"><span data-stu-id="a6c85-132">Add custom event log functionality</span></span>
+
+1. <span data-ttu-id="a6c85-133">在“解决方案资源管理器”中，从“MyNewService.cs”或“MyNewService.vb”的快捷菜单中，选择“查看设计器”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-133">In **Solution Explorer**, from the shortcut menu for **MyNewService.cs**, or **MyNewService.vb**, choose **View Designer**.</span></span>
+
+2. <span data-ttu-id="a6c85-134">在“工具箱”中，展开“组件”，然后将“EventLog”组件拖到“Service1.cs [Design]”或“Service1.vb [Design]”标签。</span><span class="sxs-lookup"><span data-stu-id="a6c85-134">In **Toolbox**, expand **Components**, and then drag the **EventLog** component to the **Service1.cs [Design]**, or **Service1.vb [Design]** tab.</span></span>
+
+3. <span data-ttu-id="a6c85-135">在“解决方案资源管理器”中，从“MyNewService.cs”或“MyNewService.vb”的快捷菜单中，选择“查看代码”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-135">In **Solution Explorer**, from the shortcut menu for **MyNewService.cs**, or **MyNewService.vb**, choose **View Code**.</span></span>
+
+4. <span data-ttu-id="a6c85-136">定义自定义事件日志。</span><span class="sxs-lookup"><span data-stu-id="a6c85-136">Define a custom event log.</span></span> <span data-ttu-id="a6c85-137">对于 C#，编辑现有的 `MyNewService()` 构造函数；对于 Visual Basic，添加 `New()` 构造函数：</span><span class="sxs-lookup"><span data-stu-id="a6c85-137">For C#, edit the existing `MyNewService()` constructor; for Visual Basic, add the `New()` constructor:</span></span>
 
    ```csharp
    public MyNewService()
    {
         InitializeComponent();
 
-        eventLog1 = new System.Diagnostics.EventLog();
-        if (!System.Diagnostics.EventLog.SourceExists("MySource"))
+        eventLog1 = new EventLog();
+        if (!EventLog.SourceExists("MySource"))
         {
-            System.Diagnostics.EventLog.CreateEventSource(
-                "MySource", "MyNewLog");
+            EventLog.CreateEventSource("MySource", "MyNewLog");
         }
         eventLog1.Source = "MySource";
         eventLog1.Log = "MyNewLog";
@@ -79,64 +91,99 @@ ms.locfileid: "56665025"
 
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
-### <a name="define-what-occurs-when-the-service-starts"></a><span data-ttu-id="e5865-132">定义服务启动时发生的情况</span><span class="sxs-lookup"><span data-stu-id="e5865-132">Define what occurs when the service starts</span></span>
+5. <span data-ttu-id="a6c85-138">将 `using` 语句添加到“MyNewService.cs”（如果它尚不存在）或者，对于 <xref:System.Diagnostics?displayProperty=nameWithType> 命名空间，将 `Imports` 语句添加到“MyNewService.vb”：</span><span class="sxs-lookup"><span data-stu-id="a6c85-138">Add a `using` statement to **MyNewService.cs** (if it doesn't already exist), or an `Imports` statement **MyNewService.vb**, for the <xref:System.Diagnostics?displayProperty=nameWithType> namespace:</span></span>
 
-<span data-ttu-id="e5865-133">在代码编辑器中，找到你创建项目时自动改写的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="e5865-133">In the code editor, locate the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method that was automatically overridden when you created the project.</span></span> <span data-ttu-id="e5865-134">添加一行代码，以在服务启动时向事件日志写入一个条目：</span><span class="sxs-lookup"><span data-stu-id="e5865-134">Add a line of code that writes an entry to the event log when the service starts:</span></span>
+    ```csharp
+    using System.Diagnostics;
+    ```
+
+    ```vb
+    Imports System.Diagnostics
+    ```
+
+6. <span data-ttu-id="a6c85-139">从“文件”菜单中选择“全部保存”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-139">Select **Save All** from the **File** menu.</span></span>
+
+### <a name="define-what-occurs-when-the-service-starts"></a><span data-ttu-id="a6c85-140">定义服务启动时发生的情况</span><span class="sxs-lookup"><span data-stu-id="a6c85-140">Define what occurs when the service starts</span></span>
+
+<span data-ttu-id="a6c85-141">在“MyNewService.cs”或“MyNewService.vb”的代码编辑器中，找到 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法；创建项目时，Visual Studio 会自动创建一个空方法定义。</span><span class="sxs-lookup"><span data-stu-id="a6c85-141">In the code editor for **MyNewService.cs** or **MyNewService.vb**, locate the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method; Visual Studio automatically created an empty method definition when you created the project.</span></span> <span data-ttu-id="a6c85-142">添加代码，以在服务启动时向事件日志写入一个条目：</span><span class="sxs-lookup"><span data-stu-id="a6c85-142">Add code that writes an entry to the event log when the service starts:</span></span>
 
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-<span data-ttu-id="e5865-135">服务应用程序设计为长时间运行的，所以它通常轮询或监视系统中的情况。</span><span class="sxs-lookup"><span data-stu-id="e5865-135">A service application is designed to be long-running, so it usually polls or monitors something in the system.</span></span> <span data-ttu-id="e5865-136">监视是在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中设置的。</span><span class="sxs-lookup"><span data-stu-id="e5865-136">The monitoring is set up in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method.</span></span> <span data-ttu-id="e5865-137">但是， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 实际上不进行监视。</span><span class="sxs-lookup"><span data-stu-id="e5865-137">However, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> doesn’t actually do the monitoring.</span></span> <span data-ttu-id="e5865-138">服务的操作开始之后， <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法必须返回到操作系统。</span><span class="sxs-lookup"><span data-stu-id="e5865-138">The <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method must return to the operating system after the service's operation has begun.</span></span> <span data-ttu-id="e5865-139">它不能始终循环或阻止。</span><span class="sxs-lookup"><span data-stu-id="e5865-139">It must not loop forever or block.</span></span> <span data-ttu-id="e5865-140">若要设置简单的轮询机制，你可以使用 <xref:System.Timers.Timer?displayProperty=nameWithType> 组件，如下所示：在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中，在组件上设置参数，然后将 <xref:System.Timers.Timer.Enabled%2A> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="e5865-140">To set up a simple polling mechanism, you can use the <xref:System.Timers.Timer?displayProperty=nameWithType> component as follows: In the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, set parameters on the component, and then set the <xref:System.Timers.Timer.Enabled%2A> property to `true`.</span></span> <span data-ttu-id="e5865-141">计时器定期在你的代码中引发事件，此时你的服务可以进行监视。</span><span class="sxs-lookup"><span data-stu-id="e5865-141">The timer raises events in your code periodically, at which time your service could do its monitoring.</span></span> <span data-ttu-id="e5865-142">你可以使用以下代码来执行该操作：</span><span class="sxs-lookup"><span data-stu-id="e5865-142">You can use the following code to do this:</span></span>
+#### <a name="polling"></a><span data-ttu-id="a6c85-143">轮询</span><span class="sxs-lookup"><span data-stu-id="a6c85-143">Polling</span></span>
 
-```csharp
-// Set up a timer that triggers every minute.
-System.Timers.Timer timer = new System.Timers.Timer();
-timer.Interval = 60000; // 60 seconds
-timer.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimer);
-timer.Start();
-```
+<span data-ttu-id="a6c85-144">由于服务应用程序设计为长时间运行，因此它通常会轮询或监视你在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中设置的系统。</span><span class="sxs-lookup"><span data-stu-id="a6c85-144">Because a service application is designed to be long-running, it usually polls or monitors the system, which you set up in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method.</span></span> <span data-ttu-id="a6c85-145">在服务操作开始后，`OnStart` 方法必须返回操作系统，以便不阻止系统。</span><span class="sxs-lookup"><span data-stu-id="a6c85-145">The `OnStart` method must return to the operating system after the service's operation has begun so that the system isn't blocked.</span></span> 
 
-```vb
-' Set up a timer that triggers every minute.
-Dim timer As System.Timers.Timer = New System.Timers.Timer()
-timer.Interval = 60000 ' 60 seconds
-AddHandler timer.Elapsed, AddressOf Me.OnTimer
-timer.Start()
-```
+<span data-ttu-id="a6c85-146">若要设置简单的轮询机制，请使用 <xref:System.Timers.Timer?displayProperty=nameWithType> 组件。</span><span class="sxs-lookup"><span data-stu-id="a6c85-146">To set up a simple polling mechanism, use the <xref:System.Timers.Timer?displayProperty=nameWithType> component.</span></span> <span data-ttu-id="a6c85-147">计时器定期引发 <xref:System.Timers.Timer.Elapsed> 事件，此时你的服务可以进行监视。</span><span class="sxs-lookup"><span data-stu-id="a6c85-147">The timer raises an <xref:System.Timers.Timer.Elapsed> event at regular intervals, at which time your service can do its monitoring.</span></span> <span data-ttu-id="a6c85-148">可按如下方式使用 <xref:System.Timers.Timer> 组件：</span><span class="sxs-lookup"><span data-stu-id="a6c85-148">You use the <xref:System.Timers.Timer> component as follows:</span></span>
 
-<span data-ttu-id="e5865-143">向类添加一个成员变量。</span><span class="sxs-lookup"><span data-stu-id="e5865-143">Add a member variable to the class.</span></span> <span data-ttu-id="e5865-144">它包含下一个要写入事件日志的事件的标识符。</span><span class="sxs-lookup"><span data-stu-id="e5865-144">It contains the identifier of the next event to write into the event log.</span></span>
+- <span data-ttu-id="a6c85-149">在 `MyNewService.OnStart` 方法中设置 <xref:System.Timers.Timer> 组件的属性。</span><span class="sxs-lookup"><span data-stu-id="a6c85-149">Set the properties of the <xref:System.Timers.Timer> component in the `MyNewService.OnStart` method.</span></span>
+- <span data-ttu-id="a6c85-150">通过调用 <xref:System.Timers.Timer.Start%2A> 方法启动计时器。</span><span class="sxs-lookup"><span data-stu-id="a6c85-150">Start the timer by calling the <xref:System.Timers.Timer.Start%2A> method.</span></span>
 
-```csharp
-private int eventId = 1;
-```
+##### <a name="set-up-the-polling-mechanism"></a><span data-ttu-id="a6c85-151">设置轮询机制。</span><span class="sxs-lookup"><span data-stu-id="a6c85-151">Set up the polling mechanism.</span></span>
 
-```vb
-Private eventId As Integer = 1
-```
+1. <span data-ttu-id="a6c85-152">在 `MyNewService.OnStart` 事件中添加以下代码以设置轮询机制：</span><span class="sxs-lookup"><span data-stu-id="a6c85-152">Add the following code in the `MyNewService.OnStart` event to set up the polling mechanism:</span></span>
 
-<span data-ttu-id="e5865-145">添加新方法来处理计时器事件：</span><span class="sxs-lookup"><span data-stu-id="e5865-145">Add a new method to handle the timer event:</span></span>
+   ```csharp
+   // Set up a timer that triggers every minute.
+   Timer timer = new Timer();
+   timer.Interval = 60000; // 60 seconds
+   timer.Elapsed += new ElapsedEventHandler(this.OnTimer);
+   timer.Start();
+   ```
 
-```csharp
-public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)
-{
-    // TODO: Insert monitoring activities here.
-    eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId++);
-}
-```
+   ```vb
+   ' Set up a timer that triggers every minute.
+   Dim timer As Timer = New Timer()
+   timer.Interval = 60000 ' 60 seconds
+   AddHandler timer.Elapsed, AddressOf Me.OnTimer
+   timer.Start()
+   ```
 
-```vb
-Private Sub OnTimer(sender As Object, e As Timers.ElapsedEventArgs)
-    ' TODO: Insert monitoring activities here.
-    eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId)
-    eventId = eventId + 1
-End Sub
-```
+2. <span data-ttu-id="a6c85-153">将 `using` 语句添加到“MyNewService.cs”，或者，对于 <xref:System.Timers?displayProperty=nameWithType> 命名空间，将 `Imports` 语句添加到“MyNewService.vb”：</span><span class="sxs-lookup"><span data-stu-id="a6c85-153">Add a `using` statement to **MyNewService.cs**, or an `Imports` statement to **MyNewService.vb**, for the <xref:System.Timers?displayProperty=nameWithType> namespace:</span></span>
 
-<span data-ttu-id="e5865-146">你可能需要使用后台辅助线程来执行任务，而不是在主线程上运行所有工作。</span><span class="sxs-lookup"><span data-stu-id="e5865-146">You might want to perform tasks by using background worker threads instead of running all your work on the main thread.</span></span> <span data-ttu-id="e5865-147">有关更多信息，请参见<xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="e5865-147">For more information, see <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.</span></span>
 
-### <a name="define-what-occurs-when-the-service-is-stopped"></a><span data-ttu-id="e5865-148">定义服务停止时发生的情况</span><span class="sxs-lookup"><span data-stu-id="e5865-148">Define what occurs when the service is stopped</span></span>
+   ```csharp
+   using System.Timers;
+   ```
 
-<span data-ttu-id="e5865-149">向 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法添加一行代码，以在服务停止时向事件日志添加一个条目：</span><span class="sxs-lookup"><span data-stu-id="e5865-149">Add a line of code to the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method that adds an entry to the event log when the service is stopped:</span></span>
+   ```vb
+   Imports System.Timers
+   ```
+
+
+3. <span data-ttu-id="a6c85-154">在 `MyNewService` 类中，添加 `OnTimer` 方法来处理 <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> 事件：</span><span class="sxs-lookup"><span data-stu-id="a6c85-154">In the `MyNewService` class, add the `OnTimer` method to handle the <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> event:</span></span>
+
+   ```csharp
+   public void OnTimer(object sender, ElapsedEventArgs args)
+   {
+       // TODO: Insert monitoring activities here.
+       eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId++);
+   }
+   ```
+
+   ```vb
+   Private Sub OnTimer(sender As Object, e As Timers.ElapsedEventArgs)
+      ' TODO: Insert monitoring activities here.
+      eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId)
+      eventId = eventId + 1
+   End Sub
+   ```
+
+4. <span data-ttu-id="a6c85-155">在 `MyNewService` 类中，添加成员变量。</span><span class="sxs-lookup"><span data-stu-id="a6c85-155">In the `MyNewService` class, add a member variable.</span></span> <span data-ttu-id="a6c85-156">它包含下一个要写入事件日志的事件的标识符：</span><span class="sxs-lookup"><span data-stu-id="a6c85-156">It contains the identifier of the next event to write into the event log:</span></span>
+
+   ```csharp
+   private int eventId = 1;
+   ```
+
+   ```vb
+   Private eventId As Integer = 1
+   ```
+
+<span data-ttu-id="a6c85-157">可以使用后台工作线程来运行任务，而不是在主线程上运行所有工作。</span><span class="sxs-lookup"><span data-stu-id="a6c85-157">Instead of running all your work on the main thread, you can run tasks by using background worker threads.</span></span> <span data-ttu-id="a6c85-158">有关更多信息，请参见<xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="a6c85-158">For more information, see <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.</span></span>
+
+### <a name="define-what-occurs-when-the-service-is-stopped"></a><span data-ttu-id="a6c85-159">定义服务停止时发生的情况</span><span class="sxs-lookup"><span data-stu-id="a6c85-159">Define what occurs when the service is stopped</span></span>
+
+<span data-ttu-id="a6c85-160">向 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法插入代码行，以在服务停止时向事件日志添加一个条目：</span><span class="sxs-lookup"><span data-stu-id="a6c85-160">Insert a line of code in the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method that adds an entry to the event log when the service is stopped:</span></span>
 
 ```csharp
 eventLog1.WriteEntry("In OnStop.");
@@ -144,22 +191,26 @@ eventLog1.WriteEntry("In OnStop.");
 
 [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]
 
-### <a name="define-other-actions-for-the-service"></a><span data-ttu-id="e5865-150">定义服务的其他操作</span><span class="sxs-lookup"><span data-stu-id="e5865-150">Define other actions for the service</span></span>
+### <a name="define-other-actions-for-the-service"></a><span data-ttu-id="a6c85-161">定义服务的其他操作</span><span class="sxs-lookup"><span data-stu-id="a6c85-161">Define other actions for the service</span></span>
 
-<span data-ttu-id="e5865-151">可以重写 <xref:System.ServiceProcess.ServiceBase.OnPause%2A>、<xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 方法来定义对组件的其他处理。</span><span class="sxs-lookup"><span data-stu-id="e5865-151">You can override the <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, and <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> methods to define additional processing for your component.</span></span> <span data-ttu-id="e5865-152">下列代码显示你可如何改写 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 方法：</span><span class="sxs-lookup"><span data-stu-id="e5865-152">The following code shows how you can override the <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> method:</span></span>
+<span data-ttu-id="a6c85-162">可以重写 <xref:System.ServiceProcess.ServiceBase.OnPause%2A>、<xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 方法来定义对组件的其他处理。</span><span class="sxs-lookup"><span data-stu-id="a6c85-162">You can override the <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, and <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> methods to define additional processing for your component.</span></span> 
+
+<span data-ttu-id="a6c85-163">以下代码显示了如何替代 `MyNewService` 类中的 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 方法：</span><span class="sxs-lookup"><span data-stu-id="a6c85-163">The following code shows how you to override the <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> method in the `MyNewService` class:</span></span>
 
 [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
 [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]
 
-<span data-ttu-id="e5865-153"><xref:System.Configuration.Install.Installer> 类安装 Windows 服务后，需要发生一些自定义操作。</span><span class="sxs-lookup"><span data-stu-id="e5865-153">Some custom actions have to occur when a Windows service is installed by the <xref:System.Configuration.Install.Installer> class.</span></span> <span data-ttu-id="e5865-154">Visual Studio 可以专门为 Windows 服务创建这些安装程序并将它们添加到项目中。</span><span class="sxs-lookup"><span data-stu-id="e5865-154">Visual Studio can create these installers specifically for a Windows service and add them to your project.</span></span>
 
-## <a name="set-service-status"></a><span data-ttu-id="e5865-155">设置服务状态</span><span class="sxs-lookup"><span data-stu-id="e5865-155">Set service status</span></span>
+## <a name="set-service-status"></a><span data-ttu-id="a6c85-164">设置服务状态</span><span class="sxs-lookup"><span data-stu-id="a6c85-164">Set service status</span></span>
 
-<span data-ttu-id="e5865-156">服务向服务控制管理器报告其状态，以便用户可以判断服务是否运行正常。</span><span class="sxs-lookup"><span data-stu-id="e5865-156">Services report their status to the Service Control Manager, so that users can tell whether a service is functioning correctly.</span></span> <span data-ttu-id="e5865-157">默认情况下，从 <xref:System.ServiceProcess.ServiceBase> 继承的服务会报告有限的状态设置，包括已停止、已暂停和正在运行。</span><span class="sxs-lookup"><span data-stu-id="e5865-157">By default, services that inherit from <xref:System.ServiceProcess.ServiceBase> report a limited set of status settings, including Stopped, Paused, and Running.</span></span> <span data-ttu-id="e5865-158">如果服务启动所需的时间很短，则可能对报告“启动挂起”状态有帮助。</span><span class="sxs-lookup"><span data-stu-id="e5865-158">If a service takes a little while to start up, it might be helpful to report a Start Pending status.</span></span> <span data-ttu-id="e5865-159">也可通过添加调入 Windows [SetServiceStatus 函数](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)的代码来实现“启动挂起”和“停止挂起”状态设置。</span><span class="sxs-lookup"><span data-stu-id="e5865-159">You can also implement the Start Pending and Stop Pending status settings by adding code that calls into the Windows [SetServiceStatus function](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus).</span></span>
+<span data-ttu-id="a6c85-165">服务向[服务控制管理器](/windows/desktop/Services/service-control-manager)报告其状态，以便用户可以判断服务是否运行正常。</span><span class="sxs-lookup"><span data-stu-id="a6c85-165">Services report their status to the [Service Control Manager](/windows/desktop/Services/service-control-manager) so that a user can tell whether a service is functioning correctly.</span></span> <span data-ttu-id="a6c85-166">默认情况下，从 <xref:System.ServiceProcess.ServiceBase> 继承的服务会报告一组有限的状态设置，包括 SERVICE_STOPPED、SERVICE_PAUSED 和 SERVICE_RUNNING。</span><span class="sxs-lookup"><span data-stu-id="a6c85-166">By default, a service that inherits from <xref:System.ServiceProcess.ServiceBase> reports a limited set of status settings, which include SERVICE_STOPPED, SERVICE_PAUSED, and SERVICE_RUNNING.</span></span> <span data-ttu-id="a6c85-167">如果服务需要一段时间才能启动，则报告 SERVICE_START_PENDING 状态非常有用。</span><span class="sxs-lookup"><span data-stu-id="a6c85-167">If a service takes a while to start up, it's useful to report a SERVICE_START_PENDING status.</span></span> 
 
-<span data-ttu-id="e5865-160">实现服务挂起状态：</span><span class="sxs-lookup"><span data-stu-id="e5865-160">To implement service pending status:</span></span>
+<span data-ttu-id="a6c85-168">可以通过添加调用 Windows [ SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 函数的代码来实现 SERVICE_START_PENDING 和 SERVICE_STOP_PENDING 状态设置。</span><span class="sxs-lookup"><span data-stu-id="a6c85-168">You can implement the SERVICE_START_PENDING and SERVICE_STOP_PENDING status settings by adding code that calls the Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) function.</span></span>
 
-1. <span data-ttu-id="e5865-161">将 `using` 语句或 `Imports` 声明添加到 MyNewService.cs 或 MyNewService.vb 文件中的 <xref:System.Runtime.InteropServices?displayProperty=nameWithType> 命名空间：</span><span class="sxs-lookup"><span data-stu-id="e5865-161">Add a `using` statement or `Imports` declaration for the <xref:System.Runtime.InteropServices?displayProperty=nameWithType> namespace in the MyNewService.cs or MyNewService.vb file:</span></span>
+
+### <a name="implement-service-pending-status"></a><span data-ttu-id="a6c85-169">实现服务挂起状态</span><span class="sxs-lookup"><span data-stu-id="a6c85-169">Implement service pending status</span></span>
+
+1. <span data-ttu-id="a6c85-170">将 `using` 语句添加到“MyNewService.cs”，或者，对于 <xref:System.Runtime.InteropServices?displayProperty=nameWithType> 命名空间，将 `Imports` 语句添加到“MyNewService.vb”：</span><span class="sxs-lookup"><span data-stu-id="a6c85-170">Add a `using` statement to **MyNewService.cs**, or an `Imports` statement to **MyNewService.vb**, for the <xref:System.Runtime.InteropServices?displayProperty=nameWithType> namespace:</span></span>
 
     ```csharp
     using System.Runtime.InteropServices;
@@ -169,7 +220,7 @@ eventLog1.WriteEntry("In OnStop.");
     Imports System.Runtime.InteropServices
     ```
 
-2. <span data-ttu-id="e5865-162">添加以下代码到 MyNewService.cs 以声明 `ServiceState` 值和添加你将在平台调用中使用的状态结构：</span><span class="sxs-lookup"><span data-stu-id="e5865-162">Add the following code to MyNewService.cs to declare the `ServiceState` values and to add a structure for the status, which you'll use in a platform invoke call:</span></span>
+2. <span data-ttu-id="a6c85-171">将以下代码添加到 MyNewService.cs 或 MyNewService.vb，声明 `ServiceState` 值和添加你将在平台调用中使用的状态结构：</span><span class="sxs-lookup"><span data-stu-id="a6c85-171">Add the following code to **MyNewService.cs**, or **MyNewService.vb**, to declare the `ServiceState` values and to add a structure for the status, which you'll use in a platform invoke call:</span></span>
 
     ```csharp
     public enum ServiceState
@@ -219,7 +270,7 @@ eventLog1.WriteEntry("In OnStop.");
     End Structure
     ```
 
-3. <span data-ttu-id="e5865-163">现在，在 `MyNewService` 类中，使用[平台调用](../interop/consuming-unmanaged-dll-functions.md)声明 [SetServiceStatus 函数](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)：</span><span class="sxs-lookup"><span data-stu-id="e5865-163">Now, in the `MyNewService` class, declare the [SetServiceStatus function](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) by using [platform invoke](../interop/consuming-unmanaged-dll-functions.md):</span></span>
+3. <span data-ttu-id="a6c85-172">在 `MyNewService` 类中，使用[平台调用](../interop/consuming-unmanaged-dll-functions.md)声明 [SetServiceStatus 函数](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)：</span><span class="sxs-lookup"><span data-stu-id="a6c85-172">In the `MyNewService` class, declare the [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) function by using [platform invoke](../interop/consuming-unmanaged-dll-functions.md):</span></span>
 
     ```csharp
     [DllImport("advapi32.dll", SetLastError = true)]
@@ -230,7 +281,7 @@ eventLog1.WriteEntry("In OnStop.");
     Declare Auto Function SetServiceStatus Lib "advapi32.dll" (ByVal handle As IntPtr, ByRef serviceStatus As ServiceStatus) As Boolean
     ```
 
-4. <span data-ttu-id="e5865-164">若要实现“启动挂起”状态，请添加下列代码到 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法的开头：</span><span class="sxs-lookup"><span data-stu-id="e5865-164">To implement the Start Pending status, add the following code to the beginning of the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method:</span></span>
+4. <span data-ttu-id="a6c85-173">若要实现“SERVICE_START_PENDING”状态，请将以下代码添加到 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法的开头：</span><span class="sxs-lookup"><span data-stu-id="a6c85-173">To implement the SERVICE_START_PENDING status, add the following code to the beginning of the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method:</span></span>
 
     ```csharp
     // Update the service state to Start Pending.
@@ -248,7 +299,7 @@ eventLog1.WriteEntry("In OnStop.");
     SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
-5. <span data-ttu-id="e5865-165">在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法的末尾添加代码以将状态设置为“正在运行”。</span><span class="sxs-lookup"><span data-stu-id="e5865-165">Add code to set the status to Running at the end of the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method.</span></span>
+5. <span data-ttu-id="a6c85-174">将代码添加到 `OnStart` 方法的末尾，可将状态设置为 SERVICE_RUNNING：</span><span class="sxs-lookup"><span data-stu-id="a6c85-174">Add code to the end of the `OnStart` method to set the status to SERVICE_RUNNING:</span></span>
 
     ```csharp
     // Update the service state to Running.
@@ -262,52 +313,88 @@ eventLog1.WriteEntry("In OnStop.");
     SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
-6. <span data-ttu-id="e5865-166">（可选）针对 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法重复此过程。</span><span class="sxs-lookup"><span data-stu-id="e5865-166">(Optional) Repeat this procedure for the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method.</span></span>
+6. <span data-ttu-id="a6c85-175">（可选）如果 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 是长时间运行的方法，请在 `OnStop` 方法中重复此过程。</span><span class="sxs-lookup"><span data-stu-id="a6c85-175">(Optional) If <xref:System.ServiceProcess.ServiceBase.OnStop%2A> is a long-running method, repeat this procedure in the `OnStop` method.</span></span> <span data-ttu-id="a6c85-176">实现 SERVICE_STOP_PENDING 状态并在 `OnStop` 方法退出之前返回 SERVICE_STOPPED 状态。</span><span class="sxs-lookup"><span data-stu-id="a6c85-176">Implement the SERVICE_STOP_PENDING status and return the SERVICE_STOPPED status before the `OnStop` method exits.</span></span>
+
+   <span data-ttu-id="a6c85-177">例如:</span><span class="sxs-lookup"><span data-stu-id="a6c85-177">For example:</span></span>
+
+    ```csharp
+    // Update the service state to Stop Pending.
+    ServiceStatus serviceStatus = new ServiceStatus();
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOP_PENDING;
+    serviceStatus.dwWaitHint = 100000;
+    SetServiceStatus(this.ServiceHandle, ref serviceStatus);
+
+    // Update the service state to Stopped.
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED;
+    SetServiceStatus(this.ServiceHandle, ref serviceStatus);
+    ```
+
+    ```vb
+    ' Update the service state to Stop Pending.
+    Dim serviceStatus As ServiceStatus = New ServiceStatus()
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOP_PENDING
+    serviceStatus.dwWaitHint = 100000
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)
+
+    ' Update the service state to Stopped.
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)    
+    ```
 
 > [!NOTE]
-> <span data-ttu-id="e5865-167">[服务控制管理器](/windows/desktop/Services/service-control-manager)使用 [SERVICE_STATUS 结构](/windows/desktop/api/winsvc/ns-winsvc-_service_status)的 `dwWaitHint` 和 `dwCheckpoint` 成员来确定等待 Windows 服务启动或关闭所需的时间。</span><span class="sxs-lookup"><span data-stu-id="e5865-167">The [Service Control Manager](/windows/desktop/Services/service-control-manager) uses the `dwWaitHint` and `dwCheckpoint` members of the [SERVICE_STATUS structure](/windows/desktop/api/winsvc/ns-winsvc-_service_status) to determine how much time to wait for a Windows service to start or shut down.</span></span> <span data-ttu-id="e5865-168">如果你的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法运行时间较长，服务可以使用递增的 `dwCheckPoint` 值再次调用 [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 来请求更多时间。</span><span class="sxs-lookup"><span data-stu-id="e5865-168">If your <xref:System.ServiceProcess.ServiceBase.OnStart%2A> and <xref:System.ServiceProcess.ServiceBase.OnStop%2A> methods run long, your service can request more time by calling [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) again with an incremented `dwCheckPoint` value.</span></span>
+> <span data-ttu-id="a6c85-178">服务控制管理器使用 [SERVICE_STATUS 结构](/windows/desktop/api/winsvc/ns-winsvc-_service_status)的 `dwWaitHint` 和 `dwCheckpoint` 成员来确定等待 Windows 服务启动或关闭所需的时间。</span><span class="sxs-lookup"><span data-stu-id="a6c85-178">The Service Control Manager uses the `dwWaitHint` and `dwCheckpoint` members of the [SERVICE_STATUS structure](/windows/desktop/api/winsvc/ns-winsvc-_service_status) to determine how much time to wait for a Windows service to start or shut down.</span></span> <span data-ttu-id="a6c85-179">如果 `OnStart` 和 `OnStop` 方法运行时间较长，服务可以使用递增的 `dwCheckPoint` 值再次调用 `SetServiceStatus` 来请求更多时间。</span><span class="sxs-lookup"><span data-stu-id="a6c85-179">If your `OnStart` and `OnStop` methods run long, your service can request more time by calling `SetServiceStatus` again with an incremented `dwCheckPoint` value.</span></span>
 
-## <a name="add-installers-to-the-service"></a><span data-ttu-id="e5865-169">向服务添加安装程序</span><span class="sxs-lookup"><span data-stu-id="e5865-169">Add installers to the service</span></span>
+## <a name="add-installers-to-the-service"></a><span data-ttu-id="a6c85-180">向服务添加安装程序</span><span class="sxs-lookup"><span data-stu-id="a6c85-180">Add installers to the service</span></span>
 
-<span data-ttu-id="e5865-170">你需要先安装 Windows 服务然后才能运行，这会将其注册到服务控制管理器。</span><span class="sxs-lookup"><span data-stu-id="e5865-170">Before you can run a Windows service, you need to install it, which registers it with the Service Control Manager.</span></span> <span data-ttu-id="e5865-171">你可以将安装程序添加到处理注册详细信息的项目。</span><span class="sxs-lookup"><span data-stu-id="e5865-171">You can add installers to your project that handle the registration details.</span></span>
+<span data-ttu-id="a6c85-181">需要先安装 Windows 服务然后才能运行，这会将其注册到服务控制管理器。</span><span class="sxs-lookup"><span data-stu-id="a6c85-181">Before you run a Windows service, you need to install it, which registers it with the Service Control Manager.</span></span> <span data-ttu-id="a6c85-182">将安装程序添加到项目以处理注册详细信息。</span><span class="sxs-lookup"><span data-stu-id="a6c85-182">Add installers to your project to handle the registration details.</span></span>
 
-1. <span data-ttu-id="e5865-172">在 **“解决方案资源管理器”** 中，打开 **MyNewService.cs** 或 **MyNewService.vb**的上下文菜单，然后选择 **“查看设计器”**。</span><span class="sxs-lookup"><span data-stu-id="e5865-172">In **Solution Explorer**, open the context menu for **MyNewService.cs** or **MyNewService.vb**, and then choose **View Designer**.</span></span>
+1. <span data-ttu-id="a6c85-183">在“解决方案资源管理器”中，从“MyNewService.cs”或“MyNewService.vb”的快捷菜单中，选择“查看设计器”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-183">In **Solution Explorer**, from the shortcut menu for **MyNewService.cs**, or **MyNewService.vb**, choose **View Designer**.</span></span>
 
-2. <span data-ttu-id="e5865-173">单击设计器的背景以选择服务本身，而不是它的任何内容。</span><span class="sxs-lookup"><span data-stu-id="e5865-173">Click the background of the designer to select the service itself, instead of any of its contents.</span></span>
+2. <span data-ttu-id="a6c85-184">在“设计”视图中，选择背景区域，然后从快捷菜单中选择“添加安装程序”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-184">In the **Design** view, select the background area, then choose **Add Installer** from the shortcut menu.</span></span>
 
-3. <span data-ttu-id="e5865-174">打开设计器窗口的上下文菜单（如果使用指针设备，在窗口中右键单击），然后选择 **“添加安装程序”**。</span><span class="sxs-lookup"><span data-stu-id="e5865-174">Open the context menu for the designer window (if you’re using a pointing device, right-click inside the window), and then choose **Add Installer**.</span></span>
+     <span data-ttu-id="a6c85-185">默认情况下，Visual Studio 会向项目中添加一个名为 `ProjectInstaller` 的组件类，其中包含两个安装程序。</span><span class="sxs-lookup"><span data-stu-id="a6c85-185">By default, Visual Studio adds a component class named `ProjectInstaller`, which contains two installers, to your project.</span></span> <span data-ttu-id="a6c85-186">这些安装程序是为你的服务以及服务的相关过程准备的。</span><span class="sxs-lookup"><span data-stu-id="a6c85-186">These installers are for your service and for the service's associated process.</span></span>
 
-   <span data-ttu-id="e5865-175">默认情况下，向你的项目添加一个包含两个安装程序的组件类。</span><span class="sxs-lookup"><span data-stu-id="e5865-175">By default, a component class that contains two installers is added to your project.</span></span> <span data-ttu-id="e5865-176">将该组件命名为 **ProjectInstaller**，它包含的安装程序分别是服务的安装程序和服务关联进程的安装程序。</span><span class="sxs-lookup"><span data-stu-id="e5865-176">The component is named **ProjectInstaller**, and the installers it contains are the installer for your service and the installer for the service's associated process.</span></span>
+4. <span data-ttu-id="a6c85-187">在“ProjectInstaller”的“设计”视图中，为 Visual C# 项目选择“serviceInstaller1”，或为 Visual Basic 项目选择“ServiceInstaller1”，然后选择快捷菜单中的“属性”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-187">In the **Design** view for **ProjectInstaller**, select **serviceInstaller1** for a Visual C# project, or **ServiceInstaller1** for a Visual Basic project, then choose **Properties** from the shortcut menu.</span></span>
 
-4. <span data-ttu-id="e5865-177">在 **ProjectInstaller** 的 **“设计”** 视图中，选择 **serviceInstaller1** （对于 Visual C# 项目）或 **ServiceInstaller1** （对于 Visual Basic 项目）。</span><span class="sxs-lookup"><span data-stu-id="e5865-177">In **Design** view for **ProjectInstaller**, choose **serviceInstaller1** for a Visual C# project, or **ServiceInstaller1** for a Visual Basic project.</span></span>
+5. <span data-ttu-id="a6c85-188">在“属性”窗口中，验证 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 属性是否已设置为“MyNewService”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-188">In the **Properties** window, verify the <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> property is set to **MyNewService**.</span></span>
 
-5. <span data-ttu-id="e5865-178">在“属性”  窗口中，确保 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 属性已设置为 **MyNewService**。</span><span class="sxs-lookup"><span data-stu-id="e5865-178">In the **Properties** window, make sure the <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> property is set to **MyNewService**.</span></span>
+6. <span data-ttu-id="a6c85-189">将文本添加到 <xref:System.ServiceProcess.ServiceInstaller.Description%2A> 属性，例如“一个示例服务”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-189">Add text to the <xref:System.ServiceProcess.ServiceInstaller.Description%2A> property, such as *A sample service*.</span></span> 
 
-6. <span data-ttu-id="e5865-179">将 **“描述”** 属性设置为一些文本，比如“示例服务”。</span><span class="sxs-lookup"><span data-stu-id="e5865-179">Set the **Description** property to some text, such as "A sample service".</span></span> <span data-ttu-id="e5865-180">该文本会显示在“服务”窗口中，帮助用户标识服务并理解其用处。</span><span class="sxs-lookup"><span data-stu-id="e5865-180">This text appears in the Services window and helps the user identify the service and understand what it’s used for.</span></span>
+     <span data-ttu-id="a6c85-190">此文本显示在“服务”窗口的“说明”列中，并向用户说明了该服务。</span><span class="sxs-lookup"><span data-stu-id="a6c85-190">This text appears in the **Description** column of the **Services** window and describes the service to the user.</span></span>
 
-7. <span data-ttu-id="e5865-181">在 <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> “名称” **列中将** 属性设置为你想要显示在“服务”窗口中的文本。</span><span class="sxs-lookup"><span data-stu-id="e5865-181">Set the <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> property to the text that you want to appear in the Services window in the **Name** column.</span></span> <span data-ttu-id="e5865-182">例如，你可以输入“MyNewService 显示名称”。</span><span class="sxs-lookup"><span data-stu-id="e5865-182">For example, you can enter "MyNewService Display Name".</span></span> <span data-ttu-id="e5865-183">该名称可以不同于 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 属性，它是系统使用的名称（例如，当你使用 `net start` 命令启动服务时）。</span><span class="sxs-lookup"><span data-stu-id="e5865-183">This name can be different from the <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> property, which is the name used by the system (for example, when you use the `net start` command to start your service).</span></span>
+    <span data-ttu-id="a6c85-191">![“服务”窗口中的服务说明。](media/windows-service-description.png "服务说明")</span><span class="sxs-lookup"><span data-stu-id="a6c85-191">![Service description in the Services window.](media/windows-service-description.png "Service description")</span></span>
 
-8. <span data-ttu-id="e5865-184">将 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 属性设置为 <xref:System.ServiceProcess.ServiceStartMode.Automatic>。</span><span class="sxs-lookup"><span data-stu-id="e5865-184">Set the <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> property to <xref:System.ServiceProcess.ServiceStartMode.Automatic>.</span></span>
+7. <span data-ttu-id="a6c85-192">将文本添加到 <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="a6c85-192">Add text to the <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> property.</span></span> <span data-ttu-id="a6c85-193">例如，“MyNewService 显示名称”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-193">For example, *MyNewService Display Name*.</span></span> 
 
-     <span data-ttu-id="e5865-185">![Windows 服务的安装程序属性](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")</span><span class="sxs-lookup"><span data-stu-id="e5865-185">![Installer Properties for a Windows service](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")</span></span>
+     <span data-ttu-id="a6c85-194">此文本显示在“服务”窗口的“显示名称”列中。</span><span class="sxs-lookup"><span data-stu-id="a6c85-194">This text appears in the **Display Name** column of the **Services** window.</span></span> <span data-ttu-id="a6c85-195">此名称可以不同于 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 属性，它是系统使用的名称（例如，用于启动服务的 `net start` 命令的名称）。</span><span class="sxs-lookup"><span data-stu-id="a6c85-195">This name can be different from the <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> property, which is the name the system uses (for example, the name you use for the `net start` command to start your service).</span></span>
 
-9. <span data-ttu-id="e5865-186">在设计器中，选择 **serviceProcessInstaller1** （对于 Visual C# 项目）或 **ServiceProcessInstaller1** （对于 Visual Basic 项目）。</span><span class="sxs-lookup"><span data-stu-id="e5865-186">In the designer, choose **serviceProcessInstaller1** for a Visual C# project, or **ServiceProcessInstaller1** for a Visual Basic project.</span></span> <span data-ttu-id="e5865-187">将 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 属性设置为 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>。</span><span class="sxs-lookup"><span data-stu-id="e5865-187">Set the <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> property to <xref:System.ServiceProcess.ServiceAccount.LocalSystem>.</span></span> <span data-ttu-id="e5865-188">这会导致安装该服务并使用本地系统帐户运行服务。</span><span class="sxs-lookup"><span data-stu-id="e5865-188">This causes the service to be installed and to run using the local system account.</span></span>
+8. <span data-ttu-id="a6c85-196">从下拉列表中将 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 属性设置为 <xref:System.ServiceProcess.ServiceStartMode.Automatic>。</span><span class="sxs-lookup"><span data-stu-id="a6c85-196">Set the <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> property to <xref:System.ServiceProcess.ServiceStartMode.Automatic> from the drop-down list.</span></span>
+
+9. <span data-ttu-id="a6c85-197">完成后，“属性”窗口应如下图所示：</span><span class="sxs-lookup"><span data-stu-id="a6c85-197">When you're finished, the **Properties** windows should look like the following figure:</span></span>
+
+     <span data-ttu-id="a6c85-198">![Windows 服务的安装程序属性](media/windows-service-installer-properties.png "Windows 服务安装程序属性")</span><span class="sxs-lookup"><span data-stu-id="a6c85-198">![Installer Properties for a Windows service](media/windows-service-installer-properties.png "Windows service installer properties")</span></span>
+
+9. <span data-ttu-id="a6c85-199">在“ProjectInstaller”的“设计”视图中，为 Visual C# 项目选择“serviceProcessInstaller1”，或为 Visual Basic 项目选择“serviceProcessInstaller1”，然后选择快捷菜单中的“属性”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-199">In the **Design** view for **ProjectInstaller**, choose **serviceProcessInstaller1** for a Visual C# project, or **ServiceProcessInstaller1** for a Visual Basic project, then choose **Properties** from the shortcut menu.</span></span> <span data-ttu-id="a6c85-200">从下拉列表中将 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 属性设置为 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>。</span><span class="sxs-lookup"><span data-stu-id="a6c85-200">Set the <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> property to <xref:System.ServiceProcess.ServiceAccount.LocalSystem> from the drop-down list.</span></span> 
+
+     <span data-ttu-id="a6c85-201">此设置将安装服务并使用本地系统帐户运行它。</span><span class="sxs-lookup"><span data-stu-id="a6c85-201">This setting installs the service and runs it by using the local system account.</span></span>
 
     > [!IMPORTANT]
-    > <span data-ttu-id="e5865-189"><xref:System.ServiceProcess.ServiceAccount.LocalSystem> 帐户具有广泛的权限，包括能够写入事件日志。</span><span class="sxs-lookup"><span data-stu-id="e5865-189">The <xref:System.ServiceProcess.ServiceAccount.LocalSystem> account has broad permissions, including the ability to write to the event log.</span></span> <span data-ttu-id="e5865-190">使用此帐户时要特别小心，因为它会增加你受到恶意软件攻击的风险。</span><span class="sxs-lookup"><span data-stu-id="e5865-190">Use this account with caution, because it might increase your risk of attacks from malicious software.</span></span> <span data-ttu-id="e5865-191">对于其他任务，请考虑使用 <xref:System.ServiceProcess.ServiceAccount.LocalService> 帐户，该帐户用作本地计算机上的非特权用户，并向任意远程服务器提供匿名凭据。</span><span class="sxs-lookup"><span data-stu-id="e5865-191">For other tasks, consider using the <xref:System.ServiceProcess.ServiceAccount.LocalService> account, which acts as a non-privileged user on the local computer and presents anonymous credentials to any remote server.</span></span> <span data-ttu-id="e5865-192">如果你尝试使用 <xref:System.ServiceProcess.ServiceAccount.LocalService> 账户，此例子将失败，因为它需要写入事件日志的权限。</span><span class="sxs-lookup"><span data-stu-id="e5865-192">This example fails if you try to use the <xref:System.ServiceProcess.ServiceAccount.LocalService> account, because it needs permission to write to the event log.</span></span>
+    > <span data-ttu-id="a6c85-202"><xref:System.ServiceProcess.ServiceAccount.LocalSystem> 帐户具有广泛的权限，包括能够写入事件日志。</span><span class="sxs-lookup"><span data-stu-id="a6c85-202">The <xref:System.ServiceProcess.ServiceAccount.LocalSystem> account has broad permissions, including the ability to write to the event log.</span></span> <span data-ttu-id="a6c85-203">使用此帐户时要特别小心，因为它会增加你受到恶意软件攻击的风险。</span><span class="sxs-lookup"><span data-stu-id="a6c85-203">Use this account with caution, because it might increase your risk of attacks from malicious software.</span></span> <span data-ttu-id="a6c85-204">对于其他任务，请考虑使用 <xref:System.ServiceProcess.ServiceAccount.LocalService> 帐户，该帐户用作本地计算机上的非特权用户，并向任意远程服务器提供匿名凭据。</span><span class="sxs-lookup"><span data-stu-id="a6c85-204">For other tasks, consider using the <xref:System.ServiceProcess.ServiceAccount.LocalService> account, which acts as a non-privileged user on the local computer and presents anonymous credentials to any remote server.</span></span> <span data-ttu-id="a6c85-205">如果你尝试使用 <xref:System.ServiceProcess.ServiceAccount.LocalService> 账户，此例子将失败，因为它需要写入事件日志的权限。</span><span class="sxs-lookup"><span data-stu-id="a6c85-205">This example fails if you try to use the <xref:System.ServiceProcess.ServiceAccount.LocalService> account, because it needs permission to write to the event log.</span></span>
 
-<span data-ttu-id="e5865-193">有关安装程序的详细信息，请参阅[如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。</span><span class="sxs-lookup"><span data-stu-id="e5865-193">For more information about installers, see [How to: Add Installers to Your service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span></span>
+<span data-ttu-id="a6c85-206">有关安装程序的详细信息，请参阅[如何：将安装程序添加到服务应用程序](how-to-add-installers-to-your-service-application.md)。</span><span class="sxs-lookup"><span data-stu-id="a6c85-206">For more information about installers, see [How to: Add installers to your service application](how-to-add-installers-to-your-service-application.md).</span></span>
 
-## <a name="optional-set-startup-parameters"></a><span data-ttu-id="e5865-194">（可选）设置启动参数</span><span class="sxs-lookup"><span data-stu-id="e5865-194">(Optional) Set startup parameters</span></span>
-
-<span data-ttu-id="e5865-195">Windows 服务像任何其他可执行文件一样，可以接受命令行参数或启动参数。</span><span class="sxs-lookup"><span data-stu-id="e5865-195">A Windows service, like any other executable, can accept command-line arguments, or startup parameters.</span></span> <span data-ttu-id="e5865-196">添加代码到进程启动参数后，用户可以使用 Windows 控制面板中的“服务”窗口，用他们自己的自定义启动参数启动你的服务。</span><span class="sxs-lookup"><span data-stu-id="e5865-196">When you add code to process startup parameters, users can start your service with their own custom startup parameters by using the Services window in the Windows Control Panel.</span></span> <span data-ttu-id="e5865-197">但是，这些启动参数不会保留到下一次服务启动。</span><span class="sxs-lookup"><span data-stu-id="e5865-197">However, these startup parameters are not persisted the next time the service starts.</span></span> <span data-ttu-id="e5865-198">若要永久性设置启动参数，你可以按此步骤所示，在注册表中对它们进行设置。</span><span class="sxs-lookup"><span data-stu-id="e5865-198">To set startup parameters permanently, you can set them in the registry, as shown in this procedure.</span></span>
+## <a name="optional-set-startup-parameters"></a><span data-ttu-id="a6c85-207">（可选）设置启动参数</span><span class="sxs-lookup"><span data-stu-id="a6c85-207">(Optional) Set startup parameters</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e5865-199">在你决定添加启动参数前，考虑这是否是向你的服务传递信息的最好办法。</span><span class="sxs-lookup"><span data-stu-id="e5865-199">Before you decide to add startup parameters, consider whether that is the best way to pass information to your service.</span></span> <span data-ttu-id="e5865-200">虽然启动参数易于使用和分析，而且用户可以轻松地改写它们，但是如果没有相关的文档说明，用户可能较难发现和使用它们。</span><span class="sxs-lookup"><span data-stu-id="e5865-200">Although startup parameters are easy to use and to parse, and users can easily override them, they might be harder for users to discover and use without documentation.</span></span> <span data-ttu-id="e5865-201">通常情况下，如果你的服务需要不止几个启动参数，你应该考虑改为使用注册表或配置文件。</span><span class="sxs-lookup"><span data-stu-id="e5865-201">Generally, if your service requires more than just a few startup parameters, you should consider using the registry or a configuration file instead.</span></span> <span data-ttu-id="e5865-202">每个 Windows 服务都在 **HKLM\System\CurrentControlSet\services** 下有注册表项。</span><span class="sxs-lookup"><span data-stu-id="e5865-202">Every Windows service has an entry in the registry under **HKLM\System\CurrentControlSet\services**.</span></span> <span data-ttu-id="e5865-203">在服务的项下，你可以使用 **“参数”** 子项存储你的服务能访问的信息。</span><span class="sxs-lookup"><span data-stu-id="e5865-203">Under the service's key, you can use the **Parameters** subkey to store information that your service can access.</span></span> <span data-ttu-id="e5865-204">你可以使用 Windows 服务的应用程序配置文件，与使用其他类型的程序一样。</span><span class="sxs-lookup"><span data-stu-id="e5865-204">You can use application configuration files for a Windows service the same way you do for other types of programs.</span></span> <span data-ttu-id="e5865-205">有关示例代码，请参阅 <xref:System.Configuration.ConfigurationManager.AppSettings%2A>。</span><span class="sxs-lookup"><span data-stu-id="e5865-205">For example code, see <xref:System.Configuration.ConfigurationManager.AppSettings%2A>.</span></span>
+> <span data-ttu-id="a6c85-208">在决定添加启动参数前，请考虑这是否是向你的服务传递信息的最好办法。</span><span class="sxs-lookup"><span data-stu-id="a6c85-208">Before you decide to add startup parameters, consider whether it's the best way to pass information to your service.</span></span> <span data-ttu-id="a6c85-209">虽然它们易于使用和分析，而且用户可以轻松地替代它们，但是如果没有相关的文档说明，用户可能较难发现和使用它们。</span><span class="sxs-lookup"><span data-stu-id="a6c85-209">Although they're easy to use and parse, and a user can easily override them, they might be harder for a user to discover and use without documentation.</span></span> <span data-ttu-id="a6c85-210">通常情况下，如果服务需要不止几个启动参数，则应改用注册表或配置文件。</span><span class="sxs-lookup"><span data-stu-id="a6c85-210">Generally, if your service requires more than just a few startup parameters, you should use the registry or a configuration file instead.</span></span> 
 
-<span data-ttu-id="e5865-206">添加启动参数：</span><span class="sxs-lookup"><span data-stu-id="e5865-206">To add startup parameters:</span></span>
+<span data-ttu-id="a6c85-211">Windows 服务可以接受命令行参数或启动参数。</span><span class="sxs-lookup"><span data-stu-id="a6c85-211">A Windows service can accept command-line arguments, or startup parameters.</span></span> <span data-ttu-id="a6c85-212">将代码添加到进程启动参数后，用户可以在服务属性窗口中使用自己的自定义启动参数启动服务。</span><span class="sxs-lookup"><span data-stu-id="a6c85-212">When you add code to process startup parameters, a user can start your service with their own custom startup parameters in the service properties window.</span></span> <span data-ttu-id="a6c85-213">但是，这些启动参数不会保留到下一次服务启动。</span><span class="sxs-lookup"><span data-stu-id="a6c85-213">However, these startup parameters aren't persisted the next time the service starts.</span></span> <span data-ttu-id="a6c85-214">若要永久设置启动参数，请在注册表中设置它们。</span><span class="sxs-lookup"><span data-stu-id="a6c85-214">To set startup parameters permanently, set them in the registry.</span></span>
 
-1. <span data-ttu-id="e5865-207">在 Program.cs 或 MyNewService.Designer.vb 的 `Main` 方法中，添加要传递到服务构造函数的输入参数：</span><span class="sxs-lookup"><span data-stu-id="e5865-207">In the `Main` method in Program.cs or in MyNewService.Designer.vb, add an input parameter to pass to the service constructor:</span></span>
+<span data-ttu-id="a6c85-215">每个 Windows 服务在“HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services”子项下都有一个注册表项。</span><span class="sxs-lookup"><span data-stu-id="a6c85-215">Each Windows service has a registry entry under the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services** subkey.</span></span> <span data-ttu-id="a6c85-216">在每个服务的子项下，使用“参数”子项存储服务可以访问的信息。</span><span class="sxs-lookup"><span data-stu-id="a6c85-216">Under each service's subkey, use the **Parameters** subkey to store information that your service can access.</span></span> <span data-ttu-id="a6c85-217">你可以使用 Windows 服务的应用程序配置文件，与使用其他类型的程序一样。</span><span class="sxs-lookup"><span data-stu-id="a6c85-217">You can use application configuration files for a Windows service the same way you do for other types of programs.</span></span> <span data-ttu-id="a6c85-218">有关示例代码，请参阅 <xref:System.Configuration.ConfigurationManager.AppSettings?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="a6c85-218">For sample code, see <xref:System.Configuration.ConfigurationManager.AppSettings?displayProperty=nameWithType>.</span></span>
+
+### <a name="to-add-startup-parameters"></a><span data-ttu-id="a6c85-219">添加启动参数</span><span class="sxs-lookup"><span data-stu-id="a6c85-219">To add startup parameters</span></span>
+
+1. <span data-ttu-id="a6c85-220">选择“Program.cs”或“MyNewService.Designer.vb”，然后从快捷菜单中选择“查看代码”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-220">Select **Program.cs**, or **MyNewService.Designer.vb**, then choose **View Code** from the shortcut menu.</span></span> <span data-ttu-id="a6c85-221">在 `Main` 方法中，更改代码以添加输入参数并将其传递给服务构造函数：</span><span class="sxs-lookup"><span data-stu-id="a6c85-221">In the `Main` method, change the code to add an input parameter and pass it to the service constructor:</span></span>
 
    ```csharp
    static void Main(string[] args)
@@ -323,44 +410,48 @@ eventLog1.WriteEntry("In OnStop.");
 
    ```vb
    Shared Sub Main(ByVal cmdArgs() As String)
-       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewServiceVB(cmdArgs)}
+       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewService(cmdArgs)}
        System.ServiceProcess.ServiceBase.Run(ServicesToRun)
    End Sub
    ```
 
-2. <span data-ttu-id="e5865-208">按如下所示更改 `MyNewService` 构造函数：</span><span class="sxs-lookup"><span data-stu-id="e5865-208">Change the `MyNewService` constructor as follows:</span></span>
+2. <span data-ttu-id="a6c85-222">在“MyNewService.cs”或“MyNewService.vb”中，更改 `MyNewService` 构造函数以处理输入参数，如下所示：</span><span class="sxs-lookup"><span data-stu-id="a6c85-222">In **MyNewService.cs**, or **MyNewService.vb**, change the `MyNewService` constructor to process the input parameter as follows:</span></span>
 
    ```csharp
+   using System.Diagnostics;
+
    public MyNewService(string[] args)
    {
        InitializeComponent();
 
-        string eventSourceName = "MySource";
-        string logName = "MyNewLog";
+       string eventSourceName = "MySource";
+       string logName = "MyNewLog";
 
-        if (args.Length > 0)
-        {
-            eventSourceName = args[0];
-        }
+       if (args.Length > 0)
+       {
+          eventSourceName = args[0];
+       }
 
-        if (args.Length > 1)
-        {
-            logName = args[1];
-        }
+       if (args.Length > 1)
+       {
+           logName = args[1];
+       }
 
-        eventLog1 = new System.Diagnostics.EventLog();
+       eventLog1 = new EventLog();
 
-        if (!System.Diagnostics.EventLog.SourceExists(eventSourceName))
-        {
-            System.Diagnostics.EventLog.CreateEventSource(eventSourceName, logName);
-        }
+       if (!EventLog.SourceExists(eventSourceName))
+       {
+           EventLog.CreateEventSource(eventSourceName, logName);
+       }
 
-        eventLog1.Source = eventSourceName;
-        eventLog1.Log = logName;
+       eventLog1.Source = eventSourceName;
+       eventLog1.Log = logName;
    }
    ```
 
    ```vb
+   Imports System.Diagnostics
+
    Public Sub New(ByVal cmdArgs() As String)
        InitializeComponent()
        Dim eventSourceName As String = "MySource"
@@ -371,18 +462,18 @@ eventLog1.WriteEntry("In OnStop.");
        If (cmdArgs.Count() > 1) Then
            logName = cmdArgs(1)
        End If
-       eventLog1 = New System.Diagnostics.EventLog()
-       If (Not System.Diagnostics.EventLog.SourceExists(eventSourceName)) Then
-           System.Diagnostics.EventLog.CreateEventSource(eventSourceName, logName)
+       eventLog1 = New EventLog()
+       If (Not EventLog.SourceExists(eventSourceName)) Then
+           EventLog.CreateEventSource(eventSourceName, logName)
        End If
        eventLog1.Source = eventSourceName
        eventLog1.Log = logName
    End Sub
    ```
 
-   <span data-ttu-id="e5865-209">此代码根据提供的启动参数设置事件源和日志名称，或者如果没有提供参数就使用默认值。</span><span class="sxs-lookup"><span data-stu-id="e5865-209">This code sets the event source and log name according to the supplied startup parameters, or uses default values if no arguments are supplied.</span></span>
+   <span data-ttu-id="a6c85-223">此代码根据用户提供的启动参数设置事件源和日志名称。</span><span class="sxs-lookup"><span data-stu-id="a6c85-223">This code sets the event source and log name according to the startup parameters that the user supplies.</span></span> <span data-ttu-id="a6c85-224">如果未提供参数，则使用默认值。</span><span class="sxs-lookup"><span data-stu-id="a6c85-224">If no arguments are supplied, it uses default values.</span></span>
 
-3. <span data-ttu-id="e5865-210">若要指定命令行参数，请将下列代码添加到 ProjectInstaller.cs 或 ProjectInstaller.vb 的 `ProjectInstaller` 类中：</span><span class="sxs-lookup"><span data-stu-id="e5865-210">To specify the command-line arguments, add the following code to the `ProjectInstaller` class in ProjectInstaller.cs or ProjectInstaller.vb:</span></span>
+3. <span data-ttu-id="a6c85-225">若要指定命令行参数，请将以下代码添加到“ProjectInstaller.cs”或“ProjectInstaller.vb”中的 `ProjectInstaller` 类：</span><span class="sxs-lookup"><span data-stu-id="a6c85-225">To specify the command-line arguments, add the following code to the `ProjectInstaller` class in **ProjectInstaller.cs**, or **ProjectInstaller.vb**:</span></span>
 
    ```csharp
    protected override void OnBeforeInstall(IDictionary savedState)
@@ -401,90 +492,100 @@ eventLog1.WriteEntry("In OnStop.");
    End Sub
    ```
 
-   <span data-ttu-id="e5865-211">此代码会通过添加默认参数值修改 **ImagePath** 注册表项，该注册表项通常包含 Windows 服务可执行文件的完整路径。</span><span class="sxs-lookup"><span data-stu-id="e5865-211">This code modifies the **ImagePath** registry key, which typically contains the full path to the executable for the Windows service, by adding the default parameter values.</span></span> <span data-ttu-id="e5865-212">要正常启动服务需要使用引号将路径括起来（包围括住每个参数）。</span><span class="sxs-lookup"><span data-stu-id="e5865-212">The quotation marks around the path (and around each individual parameter) are required for the service to start up correctly.</span></span> <span data-ttu-id="e5865-213">若要更改该 Windows 服务的启动参数，用户可以更改 **ImagePath** 注册表项中给定的参数，然而更好的方式是以编程方式对其进行更改，并以友好的方式（例如，在管理或配置实用工具中）向用户公开功能。</span><span class="sxs-lookup"><span data-stu-id="e5865-213">To change the startup parameters for this Windows service, users can change the parameters given in the **ImagePath** registry key, although the better way is to change it programmatically and expose the functionality to users in a friendly way (for example, in a management or configuration utility).</span></span>
+   <span data-ttu-id="a6c85-226">通常，此值包含 Windows 服务的可执行文件的完整路径。</span><span class="sxs-lookup"><span data-stu-id="a6c85-226">Typically, this value contains the full path to the executable for the Windows service.</span></span> <span data-ttu-id="a6c85-227">要使服务正确启动，用户必须为路径和每个参数提供引号。</span><span class="sxs-lookup"><span data-stu-id="a6c85-227">For the service to start up correctly, the user must supply quotation marks for the path and each individual parameter.</span></span> <span data-ttu-id="a6c85-228">用户可以更改“ImagePath”注册表项中的参数，以更改 Windows 服务的启动参数。</span><span class="sxs-lookup"><span data-stu-id="a6c85-228">A user can change the parameters in the **ImagePath** registry entry to change the startup parameters for the Windows service.</span></span> <span data-ttu-id="a6c85-229">但是，更好的方法是以编程方式更改值，并以用户友好的方式公开功能，例如使用管理或配置实用程序。</span><span class="sxs-lookup"><span data-stu-id="a6c85-229">However, a better way is to change the value programmatically and expose the functionality in a user-friendly way, such as by using a management or configuration utility.</span></span>
 
-## <a name="build-the-service"></a><span data-ttu-id="e5865-214">生成服务</span><span class="sxs-lookup"><span data-stu-id="e5865-214">Build the service</span></span>
 
-1. <span data-ttu-id="e5865-215">在 **“解决方案资源管理器”** 中，打开项目的上下文菜单，然后选择 **“属性”**。</span><span class="sxs-lookup"><span data-stu-id="e5865-215">In **Solution Explorer**, open the context menu for your project, and then choose **Properties**.</span></span>
+## <a name="build-the-service"></a><span data-ttu-id="a6c85-230">生成服务</span><span class="sxs-lookup"><span data-stu-id="a6c85-230">Build the service</span></span>
 
-   <span data-ttu-id="e5865-216">项目的属性页面会显示出来。</span><span class="sxs-lookup"><span data-stu-id="e5865-216">The property pages for your project appear.</span></span>
+1. <span data-ttu-id="a6c85-231">在“解决方案资源管理器”中，从“MyNewService”项目的快捷菜单中选择“属性”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-231">In **Solution Explorer**, choose **Properties** from the shortcut menu for the **MyNewService** project.</span></span>
 
-2. <span data-ttu-id="e5865-217">在“应用程序”选项卡上，在“启动对象”列表中，选择 **MyNewService.Program**。</span><span class="sxs-lookup"><span data-stu-id="e5865-217">On the **Application** tab, in the **Startup object** list, choose **MyNewService.Program**.</span></span>
+   <span data-ttu-id="a6c85-232">项目的属性页面会显示出来。</span><span class="sxs-lookup"><span data-stu-id="a6c85-232">The property pages for your project appear.</span></span>
 
-3. <span data-ttu-id="e5865-218">在“解决方案资源管理器”中，打开项目的上下文菜单，然后选择“生成”以生成项目（或按 **Ctrl**+**Shift**+**B**）。</span><span class="sxs-lookup"><span data-stu-id="e5865-218">In **Solution Explorer**, open the context menu for your project, and then choose **Build** to build the project (or press **Ctrl**+**Shift**+**B**).</span></span>
+2. <span data-ttu-id="a6c85-233">在“应用程序”选项卡上，在“启动对象”列表中，为 Visual Basic 项目选择 **“MyNewService.Program”** 或 **“Sub Main”**。</span><span class="sxs-lookup"><span data-stu-id="a6c85-233">On the **Application** tab, in the **Startup object** list, choose **MyNewService.Program**, or **Sub Main** for Visual Basic projects.</span></span>
 
-## <a name="install-the-service"></a><span data-ttu-id="e5865-219">安装服务</span><span class="sxs-lookup"><span data-stu-id="e5865-219">Install the service</span></span>
+3. <span data-ttu-id="a6c85-234">要在“解决方案资源管理器”中生成项目，请从项目的快捷菜单中选择“生成”（或按 Ctrl+Shift+B）。</span><span class="sxs-lookup"><span data-stu-id="a6c85-234">To build the project, in **Solution Explorer**, choose **Build** from the shortcut menu for your project (or press **Ctrl**+**Shift**+**B**).</span></span>
 
-<span data-ttu-id="e5865-220">由于已经生成了 Windows 服务，你现在可以安装它。</span><span class="sxs-lookup"><span data-stu-id="e5865-220">Now that you've built the Windows service, you can install it.</span></span> <span data-ttu-id="e5865-221">若要安装 Windows 服务，你必须在要安装此服务的计算机上拥有管理员凭据。</span><span class="sxs-lookup"><span data-stu-id="e5865-221">To install a Windows service, you must have administrator credentials on the computer on which you're installing it.</span></span>
+## <a name="install-the-service"></a><span data-ttu-id="a6c85-235">安装服务</span><span class="sxs-lookup"><span data-stu-id="a6c85-235">Install the service</span></span>
 
-1. <span data-ttu-id="e5865-222">使用管理凭据打开“Visual Studio 开发人员命令提示”。</span><span class="sxs-lookup"><span data-stu-id="e5865-222">Open **Developer Command Prompt for Visual Studio** with administrative credentials.</span></span> <span data-ttu-id="e5865-223">如果使用鼠标，在 Windows“开始”菜单中右键单击“VS 2017 开发人员命令提示”，然后选择“更多” > “以管理员身份运行”。</span><span class="sxs-lookup"><span data-stu-id="e5865-223">If you’re using a mouse, right-click on **Developer Command Prompt for VS 2017** in the Windows Start menu, and then choose **More** > **Run as Administrator**.</span></span>
+<span data-ttu-id="a6c85-236">由于已经生成了 Windows 服务，你现在可以安装它。</span><span class="sxs-lookup"><span data-stu-id="a6c85-236">Now that you've built the Windows service, you can install it.</span></span> <span data-ttu-id="a6c85-237">要安装 Windows 服务，必须在安装它的计算机上拥有管理员凭据。</span><span class="sxs-lookup"><span data-stu-id="a6c85-237">To install a Windows service, you must have administrator credentials on the computer where it's installed.</span></span>
 
-2. <span data-ttu-id="e5865-224">在“开发人员命令提示”窗口中，导航到包含项目输出的文件夹（默认情况下，它是项目的 *\bin\Debug* 子目录）。</span><span class="sxs-lookup"><span data-stu-id="e5865-224">In the **Developer Command Prompt** window, navigate to the folder that contains your project's output (by default, it's the *\bin\Debug* subdirectory of your project).</span></span>
+1. <span data-ttu-id="a6c85-238">使用管理凭据打开[“Visual Studio 开发人员命令提示”](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs)。</span><span class="sxs-lookup"><span data-stu-id="a6c85-238">Open [Developer Command Prompt for Visual Studio](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) with administrative credentials.</span></span> <span data-ttu-id="a6c85-239">从 Windows“开始”菜单中，在 Visual Studio 文件夹中选择“VS 2017 的开发人员命令提示”，然后从快捷菜单中选择“更多” > “以管理员身份运行”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-239">From the Windows **Start** menu, select **Developer Command Prompt for VS 2017** in the Visual Studio folder, then select **More** > **Run as Administrator** from the shortcut menu.</span></span>
 
-3. <span data-ttu-id="e5865-225">输入以下命令：</span><span class="sxs-lookup"><span data-stu-id="e5865-225">Enter the following command:</span></span>
+2. <span data-ttu-id="a6c85-240">在“Visual Studio 的开发人员命令提示”窗口中，导航到包含项目输出的文件夹（默认情况下，它是项目的 \bin\Debug 子目录）。</span><span class="sxs-lookup"><span data-stu-id="a6c85-240">In the **Developer Command Prompt for Visual Studio** window, navigate to the folder that contains your project's output (by default, the *\bin\Debug* subdirectory of your project).</span></span>
+
+3. <span data-ttu-id="a6c85-241">输入以下命令：</span><span class="sxs-lookup"><span data-stu-id="a6c85-241">Enter the following command:</span></span>
 
     ```shell
-    installutil.exe MyNewService.exe
+    installutil MyNewService.exe
     ```
 
-    <span data-ttu-id="e5865-226">如果服务成功安装，**installutil.exe** 将报告成功。</span><span class="sxs-lookup"><span data-stu-id="e5865-226">If the service installs successfully, **installutil.exe** reports success.</span></span> <span data-ttu-id="e5865-227">如果系统找不到 **InstallUtil.exe**，请确保它存在于你的计算机上。</span><span class="sxs-lookup"><span data-stu-id="e5865-227">If the system could not find **InstallUtil.exe**, make sure that it exists on your computer.</span></span> <span data-ttu-id="e5865-228">此工具随 .NET Framework 安装在 *%windir%\Microsoft.NET\Framework[64]\\[framework version]* 文件夹下。</span><span class="sxs-lookup"><span data-stu-id="e5865-228">This tool is installed with the .NET Framework to the folder *%windir%\Microsoft.NET\Framework[64]\\[framework version]*.</span></span> <span data-ttu-id="e5865-229">例如，32 位版本的默认路径是 *%windir%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*。</span><span class="sxs-lookup"><span data-stu-id="e5865-229">For example, the default path for the 32-bit version is *%windir%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*.</span></span>
+    <span data-ttu-id="a6c85-242">如果服务成功安装，该命令将报告成功。</span><span class="sxs-lookup"><span data-stu-id="a6c85-242">If the service installs successfully, the command reports success.</span></span> 
 
-    <span data-ttu-id="e5865-230">如果 **installutil.exe** 进程报告失败，请查看安装日志以找出原因。</span><span class="sxs-lookup"><span data-stu-id="e5865-230">If the **installutil.exe** process reports failure, check the install log to find out why.</span></span> <span data-ttu-id="e5865-231">默认情况下，该日志与服务可执行文件位于同一文件夹中。</span><span class="sxs-lookup"><span data-stu-id="e5865-231">By default the log is in the same folder as the service executable.</span></span> <span data-ttu-id="e5865-232">如果 `ProjectInstaller` 类上不存在 <xref:System.ComponentModel.RunInstallerAttribute> 类、该属性未设置为 **true**，或者 `ProjectInstaller` 类不标记为 **public**，则安装可能失败。</span><span class="sxs-lookup"><span data-stu-id="e5865-232">The installation can fail if  the <xref:System.ComponentModel.RunInstallerAttribute> Class is not present on the `ProjectInstaller` class, if the attribute is not set to **true**, or if the `ProjectInstaller` class is not marked **public**.</span></span>
+    <span data-ttu-id="a6c85-243">如果系统找不到 installutil.exe，请确保你的计算机上存在该安装程序。</span><span class="sxs-lookup"><span data-stu-id="a6c85-243">If the system can't find *installutil.exe*, make sure that it exists on your computer.</span></span> <span data-ttu-id="a6c85-244">此工具随 .NET Framework 安装在 %windir%\Microsoft.NET\Framework[64]\\&lt;framework version&gt; 文件夹下。</span><span class="sxs-lookup"><span data-stu-id="a6c85-244">This tool is installed with the .NET Framework to the folder *%windir%\Microsoft.NET\Framework[64]\\&lt;framework version&gt;*.</span></span> <span data-ttu-id="a6c85-245">例如，64 位版本的默认路径是 %windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe。</span><span class="sxs-lookup"><span data-stu-id="a6c85-245">For example, the default path for the 64-bit version is *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.</span></span>
 
-<span data-ttu-id="e5865-233">有关详细信息，请参阅[如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。</span><span class="sxs-lookup"><span data-stu-id="e5865-233">For more information, see [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span></span>
+    <span data-ttu-id="a6c85-246">如果“installutil.exe”进程失败，请查看安装日志以找出原因。</span><span class="sxs-lookup"><span data-stu-id="a6c85-246">If the **installutil.exe** process fails, check the install log to find out why.</span></span> <span data-ttu-id="a6c85-247">默认情况下，该日志与服务可执行文件位于同一文件夹中。</span><span class="sxs-lookup"><span data-stu-id="a6c85-247">By default, the log is in the same folder as the service executable.</span></span> <span data-ttu-id="a6c85-248">在以下情况下安装可能会失败：</span><span class="sxs-lookup"><span data-stu-id="a6c85-248">The installation can fail if:</span></span> 
+    - <span data-ttu-id="a6c85-249">`ProjectInstaller` 类中不存在 <xref:System.ComponentModel.RunInstallerAttribute> 类。</span><span class="sxs-lookup"><span data-stu-id="a6c85-249">The <xref:System.ComponentModel.RunInstallerAttribute> class isn't present on the `ProjectInstaller` class.</span></span>
+    -  <span data-ttu-id="a6c85-250">该属性未设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="a6c85-250">The attribute isn't set to `true`.</span></span> 
+    - <span data-ttu-id="a6c85-251">`ProjectInstaller` 类未定义为 `public`。</span><span class="sxs-lookup"><span data-stu-id="a6c85-251">The `ProjectInstaller` class isn't defined as `public`.</span></span>
 
-## <a name="start-and-run-the-service"></a><span data-ttu-id="e5865-234">启动并运行服务</span><span class="sxs-lookup"><span data-stu-id="e5865-234">Start and run the service</span></span>
+<span data-ttu-id="a6c85-252">有关详细信息，请参阅[如何：安装和卸载服务](how-to-install-and-uninstall-services.md)。</span><span class="sxs-lookup"><span data-stu-id="a6c85-252">For more information, see [How to: Install and uninstall services](how-to-install-and-uninstall-services.md).</span></span>
 
-1. <span data-ttu-id="e5865-235">在 Windows 中，打开“服务”桌面应用程序。</span><span class="sxs-lookup"><span data-stu-id="e5865-235">In Windows, open the **Services** desktop app.</span></span> <span data-ttu-id="e5865-236">按 **Windows**+**R** 以打开“运行”框，然后输入 **services.msc** 并按 **Enter** 或单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="e5865-236">Press **Windows**+**R** to open the **Run** box, and then enter **services.msc** and press **Enter** or click **OK**.</span></span>
+## <a name="start-and-run-the-service"></a><span data-ttu-id="a6c85-253">启动并运行服务</span><span class="sxs-lookup"><span data-stu-id="a6c85-253">Start and run the service</span></span>
 
-     <span data-ttu-id="e5865-237">你会看到“服务”中列出的服务按其设置的显示名称的字母顺序显示。</span><span class="sxs-lookup"><span data-stu-id="e5865-237">You should see your service listed in **Services**, displayed alphabetically by the display name that you set for it.</span></span>
+1. <span data-ttu-id="a6c85-254">在 Windows 中，打开“服务”桌面应用程序。</span><span class="sxs-lookup"><span data-stu-id="a6c85-254">In Windows, open the **Services** desktop app.</span></span> <span data-ttu-id="a6c85-255">按“Windows 徽标键+R”以打开“运行”框，然后输入 services.msc 并按 Enter 或单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-255">Press **Windows**+**R** to open the **Run** box, enter *services.msc*, and then press **Enter** or select **OK**.</span></span>
 
-     ![服务窗口中的 MyNewService](../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG)
+     <span data-ttu-id="a6c85-256">你会看到“服务”中列出的服务按其设置的显示名称的字母顺序显示。</span><span class="sxs-lookup"><span data-stu-id="a6c85-256">You should see your service listed in **Services**, displayed alphabetically by the display name that you set for it.</span></span>
 
-2. <span data-ttu-id="e5865-239">在“服务”中，打开服务快捷菜单，然后选择“启动”。</span><span class="sxs-lookup"><span data-stu-id="e5865-239">In **Services**, open the shortcut menu for your service, and then choose **Start**.</span></span>
+     ![服务窗口中的 MyNewService](media/windowsservices-serviceswindow.PNG)
 
-3. <span data-ttu-id="e5865-240">要停止服务，打开服务快捷菜单，然后选择“停止”。</span><span class="sxs-lookup"><span data-stu-id="e5865-240">To stop the service, open the shortcut menu for the service, and then choose **Stop**.</span></span>
+2. <span data-ttu-id="a6c85-258">若要启动该服务，请从服务的快捷菜单中选择“启动”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-258">To start the service, choose **Start** from the service's shortcut menu.</span></span>
 
-4. <span data-ttu-id="e5865-241">（可选）你可以在命令行中使用 `net start ServiceName` 和 `net stop ServiceName` 命令来启动和停止服务。</span><span class="sxs-lookup"><span data-stu-id="e5865-241">(Optional) From the command line, you can use the commands `net start ServiceName` and `net stop ServiceName` to start and stop your service.</span></span>
+3. <span data-ttu-id="a6c85-259">若要停止该服务，请从服务的快捷菜单中选择“停止”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-259">To stop the service, choose **Stop** from the service's shortcut menu.</span></span>
 
-### <a name="verify-the-event-log-output-of-your-service"></a><span data-ttu-id="e5865-242">验证服务的事件日志输出</span><span class="sxs-lookup"><span data-stu-id="e5865-242">Verify the event log output of your service</span></span>
+4. <span data-ttu-id="a6c85-260">（可选）可在命令行使用“net start&lt;服务名称&gt;”和“net stop&lt;服务名称&gt;”来启动和停止服务。</span><span class="sxs-lookup"><span data-stu-id="a6c85-260">(Optional) From the command line, use the commands **net start &lt;service name&gt;** and **net stop &lt;service name&gt;** to start and stop your service.</span></span>
 
-1. <span data-ttu-id="e5865-243">通过开始在 Windows 任务栏上的搜索框中键入“事件查看器”并从搜索结果中选择“事件查看器”来打开“事件查看器”。</span><span class="sxs-lookup"><span data-stu-id="e5865-243">Open **Event Viewer** by starting to type **Event Viewer** in the search box on the Windows task bar, and then selecting **Event Viewer** from the search results.</span></span>
+### <a name="verify-the-event-log-output-of-your-service"></a><span data-ttu-id="a6c85-261">验证服务的事件日志输出</span><span class="sxs-lookup"><span data-stu-id="a6c85-261">Verify the event log output of your service</span></span>
+
+1. <span data-ttu-id="a6c85-262">在 Windows 中，打开“事件查看器”桌面应用。</span><span class="sxs-lookup"><span data-stu-id="a6c85-262">In Windows, open the **Event Viewer** desktop app.</span></span> <span data-ttu-id="a6c85-263">在 Windows 搜索栏中输入事件查看器，然后从搜索结果中选择“事件查看器”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-263">Enter *Event Viewer* in the Windows search bar, and then select **Event Viewer** from the search results.</span></span>
 
    > [!TIP]
-   > <span data-ttu-id="e5865-244">在 Visual Studio 中，若要访问事件日志，可以打开“服务器资源管理器”（键盘：Ctrl+Alt+S），然后展开本地计算机的“事件日志”节点。</span><span class="sxs-lookup"><span data-stu-id="e5865-244">In Visual Studio, you can access event logs by opening **Server Explorer** (Keyboard: **Ctrl**+**Alt**+**S**) and expanding the **Event Logs** node for the local computer.</span></span>
+   > <span data-ttu-id="a6c85-264">在 Visual Studio 中，可通过从“查看”菜单（或按 Ctrl+Alt+S）打开“服务器资源管理器”并展开本地计算机的“事件日志”节点来访问事件日志。</span><span class="sxs-lookup"><span data-stu-id="a6c85-264">In Visual Studio, you can access event logs by opening **Server Explorer** from the **View** menu (or press **Ctrl**+**Alt**+**S**) and expanding the **Event Logs** node for the local computer.</span></span>
 
-2. <span data-ttu-id="e5865-245">在“事件查看器”中，展开“应用程序和服务日志”。</span><span class="sxs-lookup"><span data-stu-id="e5865-245">In **Event Viewer**, expand **Applications and Services Logs**.</span></span>
+2. <span data-ttu-id="a6c85-265">在“事件查看器”中，展开“应用程序和服务日志”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-265">In **Event Viewer**, expand **Applications and Services Logs**.</span></span>
 
-3. <span data-ttu-id="e5865-246">找到 **MyNewLog**（或 **MyLogFile1**，如果你使用了可选步骤来添加命令行参数）列表并将它展开。</span><span class="sxs-lookup"><span data-stu-id="e5865-246">Locate the listing for **MyNewLog** (or **MyLogFile1**, if you followed the optional procedure to add command-line arguments) and expand it.</span></span> <span data-ttu-id="e5865-247">你会看到你的服务所执行的两个操作（启动和停止）的条目。</span><span class="sxs-lookup"><span data-stu-id="e5865-247">You should see entries for the two actions (start and stop) that your service performed.</span></span>
+3. <span data-ttu-id="a6c85-266">找到“MyNewLog”（如果按照过程来添加命令行参数，则找到“MyLogFile1”）列表并将其展开。</span><span class="sxs-lookup"><span data-stu-id="a6c85-266">Locate the listing for **MyNewLog** (or **MyLogFile1** if you followed the procedure to add command-line arguments) and expand it.</span></span> <span data-ttu-id="a6c85-267">你会看到你的服务所执行的两个操作（启动和停止）的条目。</span><span class="sxs-lookup"><span data-stu-id="a6c85-267">You should see the entries for the two actions (start and stop) that your service performed.</span></span>
 
-     ![使用事件查看器查看事件日志条目](../../../docs/framework/windows-services/media/windows-service-event-viewer.png)
+     ![使用事件查看器查看事件日志条目](media/windows-service-event-viewer.png)
 
-## <a name="uninstall-the-service"></a><span data-ttu-id="e5865-249">卸载服务</span><span class="sxs-lookup"><span data-stu-id="e5865-249">Uninstall the service</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="a6c85-269">清理资源</span><span class="sxs-lookup"><span data-stu-id="a6c85-269">Clean up resources</span></span>
 
-1. <span data-ttu-id="e5865-250">使用管理凭据打开“Visual Studio 开发人员命令提示”。</span><span class="sxs-lookup"><span data-stu-id="e5865-250">Open **Developer Command Prompt for Visual Studio** with administrative credentials.</span></span>
+<span data-ttu-id="a6c85-270">如果不再需要 Windows 服务应用，则可以将其删除。</span><span class="sxs-lookup"><span data-stu-id="a6c85-270">If you no longer need the Windows service app, you can remove it.</span></span> 
 
-2. <span data-ttu-id="e5865-251">在命令提示窗口中，导航到包含项目输出的文件夹。</span><span class="sxs-lookup"><span data-stu-id="e5865-251">In the command prompt window, navigate to the folder that contains your project's output.</span></span>
+1. <span data-ttu-id="a6c85-271">使用管理凭据打开“Visual Studio 开发人员命令提示”。</span><span class="sxs-lookup"><span data-stu-id="a6c85-271">Open **Developer Command Prompt for Visual Studio** with administrative credentials.</span></span>
 
-3. <span data-ttu-id="e5865-252">输入以下命令：</span><span class="sxs-lookup"><span data-stu-id="e5865-252">Enter the following command:</span></span>
+2. <span data-ttu-id="a6c85-272">在“Visual Studio 的开发人员命令提示”窗口中，导航到包含项目输出的文件夹。</span><span class="sxs-lookup"><span data-stu-id="a6c85-272">In the **Developer Command Prompt for Visual Studio** window, navigate to the folder that contains your project's output.</span></span>
+
+3. <span data-ttu-id="a6c85-273">输入以下命令：</span><span class="sxs-lookup"><span data-stu-id="a6c85-273">Enter the following command:</span></span>
 
     ```shell
     installutil.exe /u MyNewService.exe
     ```
 
-   <span data-ttu-id="e5865-253">如果服务成功卸载，**installutil.exe** 将报告已成功移除服务。</span><span class="sxs-lookup"><span data-stu-id="e5865-253">If the service uninstalls successfully, **installutil.exe** reports that your service was successfully removed.</span></span> <span data-ttu-id="e5865-254">有关详细信息，请参阅[如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。</span><span class="sxs-lookup"><span data-stu-id="e5865-254">For more information, see [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span></span>
+   <span data-ttu-id="a6c85-274">如果服务成功卸载，该命令将报告已成功删除服务。</span><span class="sxs-lookup"><span data-stu-id="a6c85-274">If the service uninstalls successfully, the command reports that your service was successfully removed.</span></span> <span data-ttu-id="a6c85-275">有关详细信息，请参阅[如何：安装和卸载服务](how-to-install-and-uninstall-services.md)。</span><span class="sxs-lookup"><span data-stu-id="a6c85-275">For more information, see [How to: Install and uninstall services](how-to-install-and-uninstall-services.md).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="e5865-255">后续步骤</span><span class="sxs-lookup"><span data-stu-id="e5865-255">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="a6c85-276">后续步骤</span><span class="sxs-lookup"><span data-stu-id="a6c85-276">Next steps</span></span>
 
-<span data-ttu-id="e5865-256">创建服务后，你可能希望创建一个独立安装程序，以供其他人安装你的 Windows 服务。</span><span class="sxs-lookup"><span data-stu-id="e5865-256">Now that you've created the service, you might want to create a standalone setup program that others can use to install your Windows service.</span></span> <span data-ttu-id="e5865-257">ClickOnce 不支持 Windows 服务，但你可以使用 [WiX 工具集](http://wixtoolset.org/)为 Windows 服务创建安装程序。</span><span class="sxs-lookup"><span data-stu-id="e5865-257">ClickOnce doesn't support Windows services, but you can use the [WiX Toolset](http://wixtoolset.org/) to create an installer for a Windows service.</span></span> <span data-ttu-id="e5865-258">有关其他提示，请参阅[创建安装程序包](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)。</span><span class="sxs-lookup"><span data-stu-id="e5865-258">For other ideas, see [Create an installer package](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).</span></span>
+<span data-ttu-id="a6c85-277">创建服务后，现在可以：</span><span class="sxs-lookup"><span data-stu-id="a6c85-277">Now that you've created the service, you can:</span></span>
 
-<span data-ttu-id="e5865-259">你可能会探索 <xref:System.ServiceProcess.ServiceController> 组件的用法，以便将命令发送到已安装的服务。</span><span class="sxs-lookup"><span data-stu-id="e5865-259">You might explore the use of a <xref:System.ServiceProcess.ServiceController> component, which enables you to send commands to the service you've installed.</span></span>
+- <span data-ttu-id="a6c85-278">为其他人创建一个独立的安装程序，用于安装 Windows 服务。</span><span class="sxs-lookup"><span data-stu-id="a6c85-278">Create a standalone setup program for others to use to install your Windows service.</span></span> <span data-ttu-id="a6c85-279">使用 [WiX 工具集](http://wixtoolset.org/)为 Windows 服务创建安装程序。</span><span class="sxs-lookup"><span data-stu-id="a6c85-279">Use the [WiX Toolset](http://wixtoolset.org/) to create an installer for a Windows service.</span></span> <span data-ttu-id="a6c85-280">有关其他提示，请参阅[创建安装程序包](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)。</span><span class="sxs-lookup"><span data-stu-id="a6c85-280">For other ideas, see [Create an installer package](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).</span></span>
 
-<span data-ttu-id="e5865-260">可以在安装应用程序时使用安装程序创建事件日志，而不是在运行应用程序时创建事件日志。</span><span class="sxs-lookup"><span data-stu-id="e5865-260">You can use an installer to create an event log when the application is installed instead of creating the event log when the application runs.</span></span> <span data-ttu-id="e5865-261">此外，在卸载应用程序时，事件日志将被安装程序删除。</span><span class="sxs-lookup"><span data-stu-id="e5865-261">Additionally, the event log will be deleted by the installer when the application is uninstalled.</span></span> <span data-ttu-id="e5865-262">有关详细信息，请参阅 <xref:System.Diagnostics.EventLogInstaller> 引用页。</span><span class="sxs-lookup"><span data-stu-id="e5865-262">For more information, see the <xref:System.Diagnostics.EventLogInstaller> reference page.</span></span>
+- <span data-ttu-id="a6c85-281">探索 <xref:System.ServiceProcess.ServiceController> 组件，以便将命令发送到已安装的服务。</span><span class="sxs-lookup"><span data-stu-id="a6c85-281">Explore the <xref:System.ServiceProcess.ServiceController> component, which enables you to send commands to the service you've installed.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e5865-263">请参阅</span><span class="sxs-lookup"><span data-stu-id="e5865-263">See also</span></span>
+- <span data-ttu-id="a6c85-282">不是在应用程序运行时创建事件日志，而是在安装应用程序时使用安装程序创建事件日志。</span><span class="sxs-lookup"><span data-stu-id="a6c85-282">Instead of creating the event log when the application runs, use an installer to create an event log when you install the application.</span></span> <span data-ttu-id="a6c85-283">卸载应用程序时，安装程序将删除事件日志。</span><span class="sxs-lookup"><span data-stu-id="a6c85-283">The event log is deleted by the installer when you uninstall the application.</span></span> <span data-ttu-id="a6c85-284">有关更多信息，请参见<xref:System.Diagnostics.EventLogInstaller>。</span><span class="sxs-lookup"><span data-stu-id="a6c85-284">For more information, see <xref:System.Diagnostics.EventLogInstaller>.</span></span>
 
-- [<span data-ttu-id="e5865-264">Windows 服务应用程序</span><span class="sxs-lookup"><span data-stu-id="e5865-264">Windows service applications</span></span>](../../../docs/framework/windows-services/index.md)
-- [<span data-ttu-id="e5865-265">Windows 服务应用程序简介</span><span class="sxs-lookup"><span data-stu-id="e5865-265">Introduction to Windows service applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [<span data-ttu-id="e5865-266">如何：调试 Windows 服务应用程序</span><span class="sxs-lookup"><span data-stu-id="e5865-266">How to: Debug Windows service applications</span></span>](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [<span data-ttu-id="e5865-267">服务 (Windows)</span><span class="sxs-lookup"><span data-stu-id="e5865-267">Services (Windows)</span></span>](/windows/desktop/Services/services)
+## <a name="see-also"></a><span data-ttu-id="a6c85-285">请参阅</span><span class="sxs-lookup"><span data-stu-id="a6c85-285">See also</span></span>
+
+- [<span data-ttu-id="a6c85-286">Windows 服务应用程序</span><span class="sxs-lookup"><span data-stu-id="a6c85-286">Windows service applications</span></span>](index.md)
+- [<span data-ttu-id="a6c85-287">Windows 服务应用程序简介</span><span class="sxs-lookup"><span data-stu-id="a6c85-287">Introduction to Windows service applications</span></span>](introduction-to-windows-service-applications.md)
+- [<span data-ttu-id="a6c85-288">如何：调试 Windows 服务应用程序</span><span class="sxs-lookup"><span data-stu-id="a6c85-288">How to: Debug Windows service applications</span></span>](how-to-debug-windows-service-applications.md)
+- [<span data-ttu-id="a6c85-289">服务 (Windows)</span><span class="sxs-lookup"><span data-stu-id="a6c85-289">Services (Windows)</span></span>](/windows/desktop/Services/services)
