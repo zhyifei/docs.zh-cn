@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708527"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634162"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 一个*维度*是在其中您可以更改数组的元素的规范的方向。 一个数组，其中保存总销量，月份中的每一天有一个维度 （每月天数）。 保存总销量由部门的月份中的每一天的数组具有两个维度 （部门编号和每月天数）。 名为的维数的数组具有其*排名*。  
@@ -27,14 +27,11 @@ ms.locfileid: "54708527"
   
  下图显示具有不同秩的数组的概念结构。 在图例中的每个元素显示对其进行访问的索引值。 例如，可以通过指定索引访问的二维数组的第二个行的第一个元素`(1, 0)`。  
   
- ![一个图形关系图&#45;维数组](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
-一维数组  
+ ![图，显示一个一维数组。](./media/array-dimensions/one-dimensional-array.gif)  
   
- ![两个图形关系图&#45;维数组](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
-二维数组  
+ ![图，显示一个二维数组。](./media/array-dimensions/two-dimensional-array.gif)  
   
- ![三个图形关系图&#45;维数组](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
-三维数组  
+ ![图，显示三维数组。](./media/array-dimensions/three-dimensional-array.gif)  
   
 ### <a name="one-dimension"></a>一个维度  
  多个数组具有只有一个维度，例如每个年龄的用户数。 若要指定的元素的唯一要求是该元素为其保留计数的年龄。 因此，此类数组使用只有一个索引。 下面的示例声明一个变量来保存*的一维数组*于阶段 0 到 120 计数的年龄。  
