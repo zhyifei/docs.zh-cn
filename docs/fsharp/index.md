@@ -50,7 +50,7 @@ F#指南提供了许多资源来了解F#语言。
 
 [F#代码段网站](http://www.fssnip.net)包含代码段显示了如何在中执行几乎任何一大型组F#，涉及范围从初学者到很高级的代码段。
 
-[F#软件基础](https://fsharp.org/guides/slack/)是一个很好的用于初学者和专家等的站点，非常活跃，具有一些世界上最佳F#可用于聊天的程序员。 我们强烈建议您加入。
+[F#软件基金会 Slack](https://fsharp.org/guides/slack/)是一个很好的用于初学者和专家等的站点，非常活跃，具有一些世界上最佳F#可用于聊天的程序员。 我们强烈建议您加入。
 
 ## <a name="the-f-software-foundation"></a>F# 软件基金会
 
