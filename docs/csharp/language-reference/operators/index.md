@@ -131,9 +131,9 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 
 这些运算符的优先级比下一章节高，比上一章节低。
 
-[x == y](equality-comparison-operator.md)：相等。 默认情况下，对于 `string` 以外的引用类型，此运算符返回引用相等（标识测试）。 但是，类型可以重载 `==`，因此，如果你想测试标识，最好对 `object` 使用 `ReferenceEquals` 方法。
+[x == y](equality-operators.md#equality-operator-)：相等。 默认情况下，对于 `string` 以外的引用类型，此运算符返回引用相等（标识测试）。 但是，类型可以重载 `==`，因此，如果你想测试标识，最好对 `object` 使用 `ReferenceEquals` 方法。
 
-[x != y](not-equal-operator.md)：不相等。 请参阅有关 `==` 的注释。 如果某个类型重载 `==`，则它必须重载 `!=`。
+[x != y](equality-operators.md#inequality-operator-)：不相等。 请参阅有关 `==` 的注释。 如果某个类型重载 `==`，则它必须重载 `!=`。
 
 ## <a name="logical-and-operator"></a>逻辑 AND 运算符
 
