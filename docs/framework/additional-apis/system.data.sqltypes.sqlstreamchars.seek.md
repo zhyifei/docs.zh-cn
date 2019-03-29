@@ -3,8 +3,7 @@ title: SqlStreamChars.Seek （Int64，SeekOrigin） 方法 (System.Data.SqlTypes
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -13,45 +12,45 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: d52a1cd4dd70c29fc1af3fcf50c4f9b0c90125df
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 6f802428a73f229e948099788ec21f07efbfab76
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827378"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634513"
 ---
-# <a name="sqlstreamcharsseekint64-seekorigin-method"></a><span data-ttu-id="17820-102">SqlStreamChars.Seek （Int64，SeekOrigin） 方法</span><span class="sxs-lookup"><span data-stu-id="17820-102">SqlStreamChars.Seek(Int64, SeekOrigin) Method</span></span>
+# <a name="sqlstreamcharsseekint64-seekorigin-method"></a><span data-ttu-id="3e967-102">SqlStreamChars.Seek （Int64，SeekOrigin） 方法</span><span class="sxs-lookup"><span data-stu-id="3e967-102">SqlStreamChars.Seek(Int64, SeekOrigin) Method</span></span>
 
-<span data-ttu-id="17820-103">当在派生类中重写时，设置当前流中的位置。</span><span class="sxs-lookup"><span data-stu-id="17820-103">When overridden in a derived class, sets the position within the current stream.</span></span> <span data-ttu-id="17820-104">包含此方法的程序集具有与 SQLAccess.dll 友元关系。</span><span class="sxs-lookup"><span data-stu-id="17820-104">The assembly that contains this method has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="17820-105">它被用于 SQL server 上。</span><span class="sxs-lookup"><span data-stu-id="17820-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="17820-106">对于其他数据库，使用提供该数据库的宿主机制。</span><span class="sxs-lookup"><span data-stu-id="17820-106">For other databases, use the hosting mechanism provided by that database.</span></span>
+<span data-ttu-id="3e967-103">当在派生类中重写时，设置当前流中的位置。</span><span class="sxs-lookup"><span data-stu-id="3e967-103">When overridden in a derived class, sets the position within the current stream.</span></span> <span data-ttu-id="3e967-104">包含此方法的程序集具有与 SQLAccess.dll 友元关系。</span><span class="sxs-lookup"><span data-stu-id="3e967-104">The assembly that contains this method has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="3e967-105">它被用于 SQL server 上。</span><span class="sxs-lookup"><span data-stu-id="3e967-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="3e967-106">对于其他数据库，使用提供该数据库的宿主机制。</span><span class="sxs-lookup"><span data-stu-id="3e967-106">For other databases, use the hosting mechanism provided by that database.</span></span>
 
 ```csharp
 public abstract long Seek (long offset, System.IO.SeekOrigin origin);
 ```
 
-## <a name="parameters"></a><span data-ttu-id="17820-107">参数</span><span class="sxs-lookup"><span data-stu-id="17820-107">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="3e967-107">参数</span><span class="sxs-lookup"><span data-stu-id="3e967-107">Parameters</span></span>
 
 `offset`\
-<span data-ttu-id="17820-108">字节偏移量相对于`origin`。</span><span class="sxs-lookup"><span data-stu-id="17820-108">A byte offset relative to `origin`.</span></span>
+<span data-ttu-id="3e967-108">字节偏移量相对于`origin`。</span><span class="sxs-lookup"><span data-stu-id="3e967-108">A byte offset relative to `origin`.</span></span>
 
 `origin`\
-<span data-ttu-id="17820-109">一个枚举值，该值指示要从中获取新位置的参考点。</span><span class="sxs-lookup"><span data-stu-id="17820-109">One of the enumeration values that indicates the reference point from which to obtain the new position.</span></span>
+<span data-ttu-id="3e967-109">一个枚举值，该值指示要从中获取新位置的参考点。</span><span class="sxs-lookup"><span data-stu-id="3e967-109">One of the enumeration values that indicates the reference point from which to obtain the new position.</span></span>
 
-## <a name="returns"></a><span data-ttu-id="17820-110">返回</span><span class="sxs-lookup"><span data-stu-id="17820-110">Returns</span></span>
+## <a name="returns"></a><span data-ttu-id="3e967-110">返回</span><span class="sxs-lookup"><span data-stu-id="3e967-110">Returns</span></span>
 
 <xref:System.Int32>\
-<span data-ttu-id="17820-111">当前流中的新位置。</span><span class="sxs-lookup"><span data-stu-id="17820-111">The new position within the current stream.</span></span>
+<span data-ttu-id="3e967-111">当前流中的新位置。</span><span class="sxs-lookup"><span data-stu-id="3e967-111">The new position within the current stream.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="17820-112">备注</span><span class="sxs-lookup"><span data-stu-id="17820-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="3e967-112">备注</span><span class="sxs-lookup"><span data-stu-id="3e967-112">Remarks</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="17820-113">`SqlStreamChars.Seek`方法是私有的不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="17820-113">The `SqlStreamChars.Seek` method is private and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="3e967-113">`SqlStreamChars.Seek`方法是私有的不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="3e967-113">The `SqlStreamChars.Seek` method is private and is not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="17820-114">Microsoft 不支持在生产应用程序在任何情况下使用此字段。</span><span class="sxs-lookup"><span data-stu-id="17820-114">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="3e967-114">Microsoft 不支持在生产应用程序在任何情况下使用此字段。</span><span class="sxs-lookup"><span data-stu-id="3e967-114">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="17820-115">要求</span><span class="sxs-lookup"><span data-stu-id="17820-115">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="3e967-115">要求</span><span class="sxs-lookup"><span data-stu-id="3e967-115">Requirements</span></span>
 
-<span data-ttu-id="17820-116">**Namespace**：<xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="17820-116">**Namespace:** <xref:System.Data.SqlTypes></span></span>
+<span data-ttu-id="3e967-116">**Namespace**：<xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="3e967-116">**Namespace:** <xref:System.Data.SqlTypes></span></span>
 
-<span data-ttu-id="17820-117">**程序集：** System.Data （在 System.Data.dll 中)</span><span class="sxs-lookup"><span data-stu-id="17820-117">**Assembly:** System.Data (in System.Data.dll)</span></span>
+<span data-ttu-id="3e967-117">**程序集：** System.Data （在 System.Data.dll 中)</span><span class="sxs-lookup"><span data-stu-id="3e967-117">**Assembly:** System.Data (in System.Data.dll)</span></span>
 
-<span data-ttu-id="17820-118">**.NET framework 版本：** 自 2.0 之后可用。</span><span class="sxs-lookup"><span data-stu-id="17820-118">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="3e967-118">**.NET framework 版本：** 自 2.0 之后可用。</span><span class="sxs-lookup"><span data-stu-id="3e967-118">**.NET Framework versions:** Available since 2.0.</span></span>
