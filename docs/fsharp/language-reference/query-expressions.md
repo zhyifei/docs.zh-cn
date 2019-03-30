@@ -2,12 +2,12 @@
 title: 查询表达式
 description: 了解有关进行中的 LINQ 查询表达式支持F#编程语言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 8fd3e2d4cfbbe890fe3b04b2676eb1d5bbc087a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1a6450bdcec4240fac58f6c27af2298dfd7f45a2
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463223"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654817"
 ---
 # <a name="query-expressions"></a>查询表达式
 
@@ -60,7 +60,7 @@ query1
 
 此表假定以下窗体中的数据库：
 
-![示例数据库关系图](../media/StudentCourseDB.png)
+![图，显示一个示例数据库。](./media/query-expressions/student-course-database.png)
 
 下面的表中的代码还假定以下数据库连接代码。 项目应添加对 System.Data、 System.Data.Linq 和 FSharp.Data.TypeProviders 程序集的引用。 本主题末尾包含创建此数据库的代码。
 

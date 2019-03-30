@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b62e4b752074bb8d1a660e51ab230a87ff21db4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972532"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654232"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>过程参数和自变量 (Visual Basic)
 在大多数情况下，一个过程需要一些信息已在其中调用它的情况。 执行重复或共享任务的过程为每个调用使用不同的信息。 此信息包括变量、 常量和表达式在调用时传递给该过程。  
@@ -36,8 +36,7 @@ ms.locfileid: "56972532"
   
  下图显示了代码调用该过程`safeSquareRoot`从两个不同的位置。 第一次调用将变量的值传递`x`(4.0) 给参数`number`，和中的返回值`root`(2.0) 赋给变量`y`。 第二次调用将传递到的文本值 9.0 `number`，并将返回值 (3.0) 赋给变量`z`。  
   
- ![自变量传递给参数的示意图](./media/parametersargue.gif "ParametersArgue")  
-将参数传递给参数  
+ ![显示了将自变量传递给参数的关系图](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
  有关详细信息，请参阅[差异之间形参和实参](./differences-between-parameters-and-arguments.md)。  
   
