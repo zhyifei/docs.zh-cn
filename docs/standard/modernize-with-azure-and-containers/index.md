@@ -7,7 +7,7 @@ ms.date: 04/28/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>更新现有.NET 应用程序使用 Azure 云和 Windows 容器 （第二版）
 
-![封面图像](./media/cover.png)
+![实现现代化.NET 应用程序指南的封面图像。](./media/index/web-application-guide-cover-image.png)
 
 发布者  
 Microsoft Press 和 Microsoft DevDiv  
