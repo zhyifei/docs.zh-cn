@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b7c7704c4f417ef16d3a79fa6d955265e42cf14
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262441"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504426"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定已安装的 .NET Framework 版本
 
@@ -44,14 +44,14 @@ ms.locfileid: "58262441"
      - [使用注册表编辑器查找 .NET Framework 版本](#net_b)  
      - [使用代码查询注册表以获取 .NET Framework 版本](#net_d)  
      - [使用 PowerShell 查询注册表以获取 .NET Framework 版本](#ps_a)
- - 查找较旧的 .NET Framework 版本 (1&#8211;4)：
+- 查找较旧的 .NET Framework 版本 (1&#8211;4)：
      - [使用注册表编辑器查找 .NET Framework 版本](#net_a)
      - [使用代码查询注册表以获取 .NET Framework 版本](#net_c)   
 
 若要获取计算机上安装的 CLR 版本列表，请使用工具或代码：  
   
- - [使用 Clrver 工具](#clr_a)  
- - [使用代码查询 Environment 类](#clr_b)  
+- [使用 Clrver 工具](#clr_a)  
+- [使用代码查询 Environment 类](#clr_b)  
 
 有关检测安装的每个 .NET Framework 版本的更新的信息，请参阅[如何：确定已安装的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。 
   
@@ -133,7 +133,7 @@ ms.locfileid: "58262441"
 
 ```PowerShell
 # PowerShell 4
-(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -gt 394802
+(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
 ```
 
 若要检查不同的所需最低 .NET Framework 版本，请使用 [.NET Framework 版本表](#version_table)中的“Release”值替换这些示例中的 394802。

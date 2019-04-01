@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 9b7ef12591e0a231b633f461547ec0eeaec1a530
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: e78772df1cf7e5f8999305a1b726a7085f94601b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58308083"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410064"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>教程：使用 ML.NET 创建影片推荐系统
 
@@ -106,7 +106,7 @@ ML.NET 过程的第一步是准备并加载用于训练和测试数据的模型�
 | 功能      | Label         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 | `timestamp`     |               |
 
 由你来决定使用哪个 `Features` 来预测 `Label`。 你还可以使用[特征排列重要性](../how-to-guides/determine-global-feature-importance-in-model.md)等方法来帮助选择最佳 `Features`。
@@ -116,7 +116,7 @@ ML.NET 过程的第一步是准备并加载用于训练和测试数据的模型�
 | 功能      | Label         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 
 接下来，必须为输入类定义数据结构。
 

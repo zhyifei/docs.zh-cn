@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 502a7aafd434650d09cefa2781d3749e5a435564
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: be59760091767b7229d80693cd69434581a8b140
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186125"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634409"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>教程：借助 ML.NET 使用聚类分析学习器对鸢尾花分类
 
@@ -136,7 +136,7 @@ ms.locfileid: "58186125"
 对于本教程，聚类分析任务的学习管道包含两个以下步骤：
 
 - 将加载的列连接到“Features”列，由聚类分析训练程序使用；
-- 借助 <xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer> 训练程序使用 k - 平均值 + + 聚类分析算法来定型模型。
+- 借助 <xref:Microsoft.ML.Trainers.KMeansPlusPlusTrainer> 训练程序使用 k - 平均值 + + 聚类分析算法来定型模型。
 
 将以下代码添加到 `Main` 方法中：
 
