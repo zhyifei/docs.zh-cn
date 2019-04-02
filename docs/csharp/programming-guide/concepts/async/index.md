@@ -1,337 +1,141 @@
 ---
-title: '使用 Async 和 Await 的异步编程 (C#)'
-ms.date: 05/22/2017
-ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
+title: 'C# 中的异步编程'
+description: '对使用 async、await、Task 和 Task<T> 的异步编程的 C# 语言支持的概述'
+ms.date: 03/18/2019
 ---
-# <a name="asynchronous-programming-with-async-and-await-c"></a><span data-ttu-id="50e26-102">使用 Async 和 Await 的异步编程 (C#)</span><span class="sxs-lookup"><span data-stu-id="50e26-102">Asynchronous programming with async and await (C#)</span></span>
-<span data-ttu-id="50e26-103">通过使用异步编程，你可以避免性能瓶颈并增强应用程序的总体响应能力。</span><span class="sxs-lookup"><span data-stu-id="50e26-103">You can avoid performance bottlenecks and enhance the overall responsiveness of your application by using asynchronous programming.</span></span> <span data-ttu-id="50e26-104">但是，编写异步应用程序的传统技术可能比较复杂，使它们难以编写、调试和维护。</span><span class="sxs-lookup"><span data-stu-id="50e26-104">However, traditional techniques for writing asynchronous applications can be complicated, making them difficult to write, debug, and maintain.</span></span>  
-  
-<span data-ttu-id="50e26-105">[C# 5](../../../whats-new/csharp-version-history.md#c-version-50) 引入了一种简便方法，即异步编程。此方法利用了 .NET Framework 4.5 及更高版本、.NET Core 和 Windows 运行时中的异步支持。</span><span class="sxs-lookup"><span data-stu-id="50e26-105">[C# 5](../../../whats-new/csharp-version-history.md#c-version-50) introduced a simplified approach, async programming, that leverages asynchronous support in the .NET Framework 4.5 and higher, .NET Core, and the Windows Runtime.</span></span> <span data-ttu-id="50e26-106">编译器可执行开发人员曾进行的高难度工作，且应用程序保留了一个类似于同步代码的逻辑结构。</span><span class="sxs-lookup"><span data-stu-id="50e26-106">The compiler does the difficult work that the developer used to do, and your application retains a logical structure that resembles synchronous code.</span></span> <span data-ttu-id="50e26-107">因此，你只需做一小部分工作就可以获得异步编程的所有好处。</span><span class="sxs-lookup"><span data-stu-id="50e26-107">As a result, you get all the advantages of asynchronous programming with a fraction of the effort.</span></span>  
-  
-<span data-ttu-id="50e26-108">本主题概述了何时以及如何使用异步编程，并包括指向包含详细信息和示例的支持主题的链接。</span><span class="sxs-lookup"><span data-stu-id="50e26-108">This topic provides an overview of when and how to use async programming and includes links to support topics that contain details and examples.</span></span>  
-  
-## <a name="BKMK_WhentoUseAsynchrony"></a> <span data-ttu-id="50e26-109">异步编程提升响应能力</span><span class="sxs-lookup"><span data-stu-id="50e26-109">Async improves responsiveness</span></span>  
- <span data-ttu-id="50e26-110">异步对可能会被屏蔽的活动（如 Web 访问）至关重要。</span><span class="sxs-lookup"><span data-stu-id="50e26-110">Asynchrony is essential for activities that are potentially blocking, such as web access.</span></span> <span data-ttu-id="50e26-111">对 Web 资源的访问有时很慢或会延迟。</span><span class="sxs-lookup"><span data-stu-id="50e26-111">Access to a web resource sometimes is slow or delayed.</span></span> <span data-ttu-id="50e26-112">如果此类活动在同步过程中被屏蔽，整个应用必须等待。</span><span class="sxs-lookup"><span data-stu-id="50e26-112">If such an activity is blocked in a synchronous process, the entire application must wait.</span></span> <span data-ttu-id="50e26-113">在异步过程中，应用程序可继续执行不依赖 Web 资源的其他工作，直至潜在阻止任务完成。</span><span class="sxs-lookup"><span data-stu-id="50e26-113">In an asynchronous process, the application can continue with other work that doesn't depend on the web resource until the potentially blocking task finishes.</span></span>  
-  
- <span data-ttu-id="50e26-114">下表显示了异步编程提高响应能力的典型区域。</span><span class="sxs-lookup"><span data-stu-id="50e26-114">The following table shows typical areas where asynchronous programming improves responsiveness.</span></span> <span data-ttu-id="50e26-115">列出的 .NET 和 Windows 运行时 API 包含支持异步编程的方法。</span><span class="sxs-lookup"><span data-stu-id="50e26-115">The listed APIs from .NET and the Windows Runtime contain methods that support async programming.</span></span>  
-  
-| <span data-ttu-id="50e26-116">应用程序区域</span><span class="sxs-lookup"><span data-stu-id="50e26-116">Application area</span></span>    | <span data-ttu-id="50e26-117">包含异步方法的 .NET 类型</span><span class="sxs-lookup"><span data-stu-id="50e26-117">.NET types with async methods</span></span>     | <span data-ttu-id="50e26-118">包含异步方法的 Windows 运行时类型</span><span class="sxs-lookup"><span data-stu-id="50e26-118">Windows Runtime types with async methods</span></span>  |
-|---------------------|-----------------------------------|-------------------------------------------|
-|<span data-ttu-id="50e26-119">Web 访问 </span><span class="sxs-lookup"><span data-stu-id="50e26-119">Web access</span></span>|<xref:System.Net.Http.HttpClient>|<xref:Windows.Web.Syndication.SyndicationClient>|
-|<span data-ttu-id="50e26-120">使用文件</span><span class="sxs-lookup"><span data-stu-id="50e26-120">Working with files</span></span>|<span data-ttu-id="50e26-121"><xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader></span><span class="sxs-lookup"><span data-stu-id="50e26-121"><xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader></span></span>|<xref:Windows.Storage.StorageFile>|  
-|<span data-ttu-id="50e26-122">使用图像</span><span class="sxs-lookup"><span data-stu-id="50e26-122">Working with images</span></span>||<span data-ttu-id="50e26-123"><xref:Windows.Media.Capture.MediaCapture>, <xref:Windows.Graphics.Imaging.BitmapEncoder>, <xref:Windows.Graphics.Imaging.BitmapDecoder></span><span class="sxs-lookup"><span data-stu-id="50e26-123"><xref:Windows.Media.Capture.MediaCapture>, <xref:Windows.Graphics.Imaging.BitmapEncoder>, <xref:Windows.Graphics.Imaging.BitmapDecoder></span></span>|  
-|<span data-ttu-id="50e26-124">WCF 编程</span><span class="sxs-lookup"><span data-stu-id="50e26-124">WCF programming</span></span>|[<span data-ttu-id="50e26-125">同步和异步操作</span><span class="sxs-lookup"><span data-stu-id="50e26-125">Synchronous and Asynchronous Operations</span></span>](../../../../framework/wcf/synchronous-and-asynchronous-operations.md)||  
-  
-<span data-ttu-id="50e26-126">由于所有与用户界面相关的活动通常共享一个线程，因此，异步对访问 UI 线程的应用程序来说尤为重要。</span><span class="sxs-lookup"><span data-stu-id="50e26-126">Asynchrony proves especially valuable for applications that access the UI thread because all UI-related activity usually shares one thread.</span></span> <span data-ttu-id="50e26-127">如果任何进程在同步应用程序中受阻，则所有进程都将受阻。</span><span class="sxs-lookup"><span data-stu-id="50e26-127">If any process is blocked in a synchronous application, all are blocked.</span></span> <span data-ttu-id="50e26-128">你的应用程序停止响应，因此，你可能在其等待过程中认为它已经失败。</span><span class="sxs-lookup"><span data-stu-id="50e26-128">Your application stops responding, and you might conclude that it has failed when instead it's just waiting.</span></span>  
-  
- <span data-ttu-id="50e26-129">使用异步方法时，应用程序将继续响应 UI。</span><span class="sxs-lookup"><span data-stu-id="50e26-129">When you use asynchronous methods, the application continues to respond to the UI.</span></span> <span data-ttu-id="50e26-130">例如，你可以调整窗口的大小或最小化窗口；如果你不希望等待应用程序结束，则可以将其关闭。</span><span class="sxs-lookup"><span data-stu-id="50e26-130">You can resize or minimize a window, for example, or you can close the application if you don't want to wait for it to finish.</span></span>  
-  
- <span data-ttu-id="50e26-131">当设计异步操作时，该基于异步的方法将自动传输的等效对象添加到可从中选择的选项列表中。</span><span class="sxs-lookup"><span data-stu-id="50e26-131">The async-based approach adds the equivalent of an automatic transmission to the list of options that you can choose from when designing asynchronous operations.</span></span> <span data-ttu-id="50e26-132">开发人员只需要投入较少的工作量即可使你获取传统异步编程的所有优点。</span><span class="sxs-lookup"><span data-stu-id="50e26-132">That is, you get all the benefits of traditional asynchronous programming but with much less effort from the developer.</span></span>  
-  
-## <a name="BKMK_HowtoWriteanAsyncMethod"></a> <span data-ttu-id="50e26-133">异步方法更容易编写</span><span class="sxs-lookup"><span data-stu-id="50e26-133">Async methods are easier to write</span></span>  
- <span data-ttu-id="50e26-134">C# 中的 [Async](../../../../csharp/language-reference/keywords/async.md) 和 [Await](../../../../csharp/language-reference/keywords/await.md) 关键字是异步编程的核心。</span><span class="sxs-lookup"><span data-stu-id="50e26-134">The [async](../../../../csharp/language-reference/keywords/async.md) and [await](../../../../csharp/language-reference/keywords/await.md) keywords in C# are the heart of async programming.</span></span> <span data-ttu-id="50e26-135">通过这两个关键字，可以使用 .NET Framework、.NET Core 或 Windows 运行时中的资源，轻松创建异步方法（几乎与创建同步方法一样轻松）。</span><span class="sxs-lookup"><span data-stu-id="50e26-135">By using those two keywords, you can use resources in the .NET Framework, .NET Core, or the Windows Runtime to create an asynchronous method almost as easily as you create a synchronous method.</span></span> <span data-ttu-id="50e26-136">使用 `async` 关键字定义的异步方法简称为“异步方法”。</span><span class="sxs-lookup"><span data-stu-id="50e26-136">Asynchronous methods that you define by using the `async` keyword are referred to as *async methods*.</span></span>  
-  
- <span data-ttu-id="50e26-137">下面的示例演示了一种异步方法。</span><span class="sxs-lookup"><span data-stu-id="50e26-137">The following example shows an async method.</span></span> <span data-ttu-id="50e26-138">你应对代码中的几乎所有内容都非常熟悉。</span><span class="sxs-lookup"><span data-stu-id="50e26-138">Almost everything in the code should look completely familiar to you.</span></span> <span data-ttu-id="50e26-139">注释调出你添加的用来创建异步的功能。</span><span class="sxs-lookup"><span data-stu-id="50e26-139">The comments call out the features that you add to create the asynchrony.</span></span>  
-  
- <span data-ttu-id="50e26-140">本主题的末尾提供完整的 Windows Presentation Foundation (WPF) 示例文件，可以从[异步示例：“使用 Async 和 Await 的异步编程”示例](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c)下载此示例。</span><span class="sxs-lookup"><span data-stu-id="50e26-140">You can find a complete Windows Presentation Foundation (WPF) example file at the end of this topic, and you can download the sample from [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c).</span></span>  
-  
-```csharp  
-// Three things to note in the signature:  
-//  - The method has an async modifier.   
-//  - The return type is Task or Task<T>. (See "Return Types" section.)  
-//    Here, it is Task<int> because the return statement returns an integer.  
-//  - The method name ends in "Async."  
-async Task<int> AccessTheWebAsync()  
-{   
-    // You need to add a reference to System.Net.Http to declare client.  
-    using (HttpClient client = new HttpClient())  
-    {  
-        // GetStringAsync returns a Task<string>. That means that when you await the  
-        // task you'll get a string (urlContents).  
-        Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");  
-  
-        // You can do work here that doesn't rely on the string from GetStringAsync.  
-        DoIndependentWork();  
-  
-        // The await operator suspends AccessTheWebAsync.  
-        //  - AccessTheWebAsync can't continue until getStringTask is complete.  
-        //  - Meanwhile, control returns to the caller of AccessTheWebAsync.  
-        //  - Control resumes here when getStringTask is complete.   
-        //  - The await operator then retrieves the string result from getStringTask.  
-        string urlContents = await getStringTask;  
-  
-        // The return statement specifies an integer result.  
-        // Any methods that are awaiting AccessTheWebAsync retrieve the length value.  
-        return urlContents.Length;  
-    }  
-}  
-```  
-  
- <span data-ttu-id="50e26-141">如果 `AccessTheWebAsync` 在调用 `GetStringAsync` 和等待其完成期间不能进行任何工作，则你可以通过在下面的单个语句中调用和等待来简化代码。</span><span class="sxs-lookup"><span data-stu-id="50e26-141">If `AccessTheWebAsync` doesn't have any work that it can do between calling `GetStringAsync` and awaiting its completion, you can simplify your code by calling and awaiting in the following single statement.</span></span>  
-  
-```csharp  
-string urlContents = await client.GetStringAsync("https://docs.microsoft.com");  
-```  
- 
-<span data-ttu-id="50e26-142">以下特征总结了使上一个示例成为异步方法的原因。</span><span class="sxs-lookup"><span data-stu-id="50e26-142">The following characteristics summarize what makes the previous example an async method.</span></span>  
-  
--   <span data-ttu-id="50e26-143">方法签名包含 `async` 修饰符。</span><span class="sxs-lookup"><span data-stu-id="50e26-143">The method signature includes an `async` modifier.</span></span>  
-  
--   <span data-ttu-id="50e26-144">按照约定，异步方法的名称以“Async”后缀结尾。</span><span class="sxs-lookup"><span data-stu-id="50e26-144">The name of an async method, by convention, ends with an "Async" suffix.</span></span>  
-  
--   <span data-ttu-id="50e26-145">返回类型为下列类型之一：</span><span class="sxs-lookup"><span data-stu-id="50e26-145">The return type is one of the following types:</span></span>  
-  
-    -   <span data-ttu-id="50e26-146">如果你的方法有操作数为 `TResult` 类型的返回语句，则为 <xref:System.Threading.Tasks.Task%601>。</span><span class="sxs-lookup"><span data-stu-id="50e26-146"><xref:System.Threading.Tasks.Task%601> if your method has a return statement in which the operand has type `TResult`.</span></span>  
-  
-    -   <span data-ttu-id="50e26-147">如果你的方法没有返回语句或具有没有操作数的返回语句，则为 <xref:System.Threading.Tasks.Task>。</span><span class="sxs-lookup"><span data-stu-id="50e26-147"><xref:System.Threading.Tasks.Task> if your method has no return statement or has a return statement with no operand.</span></span>  
-  
-    -   <span data-ttu-id="50e26-148">`void`：如果要编写异步事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="50e26-148">`void` if you're writing an async event handler.</span></span>  
+# <a name="the-task-asynchronous-programming-model-in-c"></a><span data-ttu-id="7e2f9-103">C# 中基于任务的异步编程模型</span><span class="sxs-lookup"><span data-stu-id="7e2f9-103">The Task asynchronous programming model in C#</span></span> #
 
-    -   <span data-ttu-id="50e26-149">包含 `GetAwaiter` 方法的其他任何类型（自 C# 7.0 起）。</span><span class="sxs-lookup"><span data-stu-id="50e26-149">Any other type that has a `GetAwaiter` method (starting with C# 7.0).</span></span>
-  
-     <span data-ttu-id="50e26-150">有关详细信息，请参阅[返回类型和参数](#BKMK_ReturnTypesandParameters)部分。</span><span class="sxs-lookup"><span data-stu-id="50e26-150">For more information, see the [Return Types and Parameters](#BKMK_ReturnTypesandParameters) section.</span></span>  
-  
--   <span data-ttu-id="50e26-151">方法通常包含至少一个 await 表达式，该表达式标记一个点，在该点上，直到等待的异步操作完成方法才能继续。</span><span class="sxs-lookup"><span data-stu-id="50e26-151">The method usually includes at least one await expression, which marks a point where the method can't continue until the awaited asynchronous operation is complete.</span></span> <span data-ttu-id="50e26-152">同时，将方法挂起，并且控件返回到方法的调用方。</span><span class="sxs-lookup"><span data-stu-id="50e26-152">In the meantime, the method is suspended, and control returns to the method's caller.</span></span> <span data-ttu-id="50e26-153">本主题的下一节将解释悬挂点发生的情况。</span><span class="sxs-lookup"><span data-stu-id="50e26-153">The next section of this topic illustrates what happens at the suspension point.</span></span>  
-  
- <span data-ttu-id="50e26-154">在异步方法中，可使用提供的关键字和类型来指示需要完成的操作，且编译器会完成其余操作，其中包括持续跟踪控件以挂起方法返回等待点时发生的情况。</span><span class="sxs-lookup"><span data-stu-id="50e26-154">In async methods, you use the provided keywords and types to indicate what you want to do, and the compiler does the rest, including keeping track of what must happen when control returns to an await point in a suspended method.</span></span> <span data-ttu-id="50e26-155">一些常规流程（例如，循环和异常处理）在传统异步代码中处理起来可能很困难。</span><span class="sxs-lookup"><span data-stu-id="50e26-155">Some routine processes, such as loops and exception handling, can be difficult to handle in traditional asynchronous code.</span></span> <span data-ttu-id="50e26-156">在异步方法中，元素的编写频率与同步解决方案相同且此问题得到解决。</span><span class="sxs-lookup"><span data-stu-id="50e26-156">In an async method, you write these elements much as you would in a synchronous solution, and the problem is solved.</span></span>  
-  
- <span data-ttu-id="50e26-157">若要详细了解旧版 .NET Framework 中的异步性，请参阅 [TPL 和传统 .NET Framework 异步编程](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md)。</span><span class="sxs-lookup"><span data-stu-id="50e26-157">For more information about asynchrony in previous versions of the .NET Framework, see [TPL and Traditional .NET Framework Asynchronous Programming](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md).</span></span>  
-  
-## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> <span data-ttu-id="50e26-158">异步方法的运行机制</span><span class="sxs-lookup"><span data-stu-id="50e26-158">What happens in an async method</span></span>  
- <span data-ttu-id="50e26-159">异步编程中最需弄清的是控制流是如何从方法移动到方法的。</span><span class="sxs-lookup"><span data-stu-id="50e26-159">The most important thing to understand in asynchronous programming is how the control flow moves from method to method.</span></span> <span data-ttu-id="50e26-160">下图可引导你完成此过程：</span><span class="sxs-lookup"><span data-stu-id="50e26-160">The following diagram leads you through the process:</span></span>  
-  
- ![展示了如何跟踪异步程序的图。](./media/index/navigation-trace-async-program.png)  
-  
- <span data-ttu-id="50e26-162">关系图中的数值对应于以下步骤。</span><span class="sxs-lookup"><span data-stu-id="50e26-162">The numbers in the diagram correspond to the following steps.</span></span>  
-  
-1.  <span data-ttu-id="50e26-163">事件处理程序调用并等待 `AccessTheWebAsync` 异步方法。</span><span class="sxs-lookup"><span data-stu-id="50e26-163">An event handler calls and awaits the  `AccessTheWebAsync` async method.</span></span>  
-  
-2.  <span data-ttu-id="50e26-164">`AccessTheWebAsync` 可创建 <xref:System.Net.Http.HttpClient> 实例并调用 <xref:System.Net.Http.HttpClient.GetStringAsync%2A> 异步方法以下载网站内容作为字符串。</span><span class="sxs-lookup"><span data-stu-id="50e26-164">`AccessTheWebAsync` creates an <xref:System.Net.Http.HttpClient> instance and calls the <xref:System.Net.Http.HttpClient.GetStringAsync%2A> asynchronous method to download the contents of a website as a string.</span></span>  
-  
-3.  <span data-ttu-id="50e26-165">`GetStringAsync` 中发生了某种情况，该情况挂起了它的进程。</span><span class="sxs-lookup"><span data-stu-id="50e26-165">Something happens in `GetStringAsync` that suspends its progress.</span></span> <span data-ttu-id="50e26-166">可能必须等待网站下载或一些其他阻止活动。</span><span class="sxs-lookup"><span data-stu-id="50e26-166">Perhaps it must wait for a website to download or some other blocking activity.</span></span> <span data-ttu-id="50e26-167">为避免阻止资源，`GetStringAsync` 会将控制权出让给其调用方 `AccessTheWebAsync`。</span><span class="sxs-lookup"><span data-stu-id="50e26-167">To avoid blocking resources, `GetStringAsync` yields control to its caller, `AccessTheWebAsync`.</span></span>  
-  
-     <span data-ttu-id="50e26-168">`GetStringAsync` 返回 <xref:System.Threading.Tasks.Task%601>，其中 `TResult` 为字符串，并且 `AccessTheWebAsync` 将任务分配给 `getStringTask` 变量。</span><span class="sxs-lookup"><span data-stu-id="50e26-168">`GetStringAsync` returns a <xref:System.Threading.Tasks.Task%601> where `TResult` is a string, and `AccessTheWebAsync` assigns the task to the `getStringTask` variable.</span></span> <span data-ttu-id="50e26-169">该任务表示调用 `GetStringAsync` 的正在进行的进程，其中承诺当工作完成时产生实际字符串值。</span><span class="sxs-lookup"><span data-stu-id="50e26-169">The task represents the ongoing process for the call to `GetStringAsync`, with a commitment to produce an actual string value when the work is complete.</span></span>  
-  
-4.  <span data-ttu-id="50e26-170">由于尚未等待 `getStringTask`，因此，`AccessTheWebAsync` 可以继续执行不依赖于 `GetStringAsync` 得出的最终结果的其他工作。</span><span class="sxs-lookup"><span data-stu-id="50e26-170">Because `getStringTask` hasn't been awaited yet, `AccessTheWebAsync` can continue with other work that doesn't depend on the final result from `GetStringAsync`.</span></span> <span data-ttu-id="50e26-171">该任务由对同步方法 `DoIndependentWork` 的调用表示。</span><span class="sxs-lookup"><span data-stu-id="50e26-171">That work is represented by a call to the synchronous method `DoIndependentWork`.</span></span>  
-  
-5.  <span data-ttu-id="50e26-172">`DoIndependentWork` 是完成其工作并返回其调用方的同步方法。</span><span class="sxs-lookup"><span data-stu-id="50e26-172">`DoIndependentWork` is a synchronous method that does its work and returns to its caller.</span></span>  
-  
-6.  <span data-ttu-id="50e26-173">`AccessTheWebAsync` 已运行完毕，可以不受 `getStringTask` 的结果影响。</span><span class="sxs-lookup"><span data-stu-id="50e26-173">`AccessTheWebAsync` has run out of work that it can do without a result from `getStringTask`.</span></span> <span data-ttu-id="50e26-174">接下来，`AccessTheWebAsync` 需要计算并返回已下载的字符串的长度，但该方法只有在获得字符串的情况下才能计算该值。</span><span class="sxs-lookup"><span data-stu-id="50e26-174">`AccessTheWebAsync` next wants to calculate and return the length of the downloaded string, but the method can't calculate that value until the method has the string.</span></span>  
-  
-     <span data-ttu-id="50e26-175">因此，`AccessTheWebAsync` 使用一个 await 运算符来挂起其进度，并把控制权交给调用 `AccessTheWebAsync` 的方法。</span><span class="sxs-lookup"><span data-stu-id="50e26-175">Therefore, `AccessTheWebAsync` uses an await operator to suspend its progress and to yield control to the method that called `AccessTheWebAsync`.</span></span> <span data-ttu-id="50e26-176">`AccessTheWebAsync` 将 `Task<int>` 返回给调用方。</span><span class="sxs-lookup"><span data-stu-id="50e26-176">`AccessTheWebAsync` returns a `Task<int>` to the caller.</span></span> <span data-ttu-id="50e26-177">该任务表示对产生下载字符串长度的整数结果的一个承诺。</span><span class="sxs-lookup"><span data-stu-id="50e26-177">The task represents a promise to produce an integer result that's the length of the downloaded string.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="50e26-178">如果 `GetStringAsync`（因此 `getStringTask`）在 `AccessTheWebAsync` 等待前完成，则控制会保留在 `AccessTheWebAsync` 中。</span><span class="sxs-lookup"><span data-stu-id="50e26-178">If `GetStringAsync` (and therefore `getStringTask`) is complete before `AccessTheWebAsync` awaits it, control remains in `AccessTheWebAsync`.</span></span> <span data-ttu-id="50e26-179">如果异步调用过程 (`getStringTask`) 已完成，并且 `AccessTheWebSync` 不必等待最终结果，则挂起然后返回到 `AccessTheWebAsync` 将造成成本浪费。</span><span class="sxs-lookup"><span data-stu-id="50e26-179">The expense of suspending and then returning to `AccessTheWebAsync` would be wasted if the called asynchronous process (`getStringTask`) has already completed and `AccessTheWebSync` doesn't have to wait for the final result.</span></span>  
-  
-     <span data-ttu-id="50e26-180">在调用方内部（此示例中的事件处理程序），处理模式将继续。</span><span class="sxs-lookup"><span data-stu-id="50e26-180">Inside the caller (the event handler in this example), the processing pattern continues.</span></span> <span data-ttu-id="50e26-181">在等待结果前，调用方可以开展不依赖于 `AccessTheWebAsync` 结果的其他工作，否则就需等待片刻。</span><span class="sxs-lookup"><span data-stu-id="50e26-181">The caller might do other work that doesn't depend on the result from `AccessTheWebAsync` before awaiting that result, or the caller might await immediately.</span></span>   <span data-ttu-id="50e26-182">事件处理程序等待 `AccessTheWebAsync`，而 `AccessTheWebAsync` 等待 `GetStringAsync`。</span><span class="sxs-lookup"><span data-stu-id="50e26-182">The event handler is waiting for `AccessTheWebAsync`, and `AccessTheWebAsync` is waiting for `GetStringAsync`.</span></span>  
-  
-7.  <span data-ttu-id="50e26-183">`GetStringAsync` 完成并生成一个字符串结果。</span><span class="sxs-lookup"><span data-stu-id="50e26-183">`GetStringAsync` completes and produces a string result.</span></span> <span data-ttu-id="50e26-184">字符串结果不是通过按你预期的方式调用 `GetStringAsync` 所返回的。</span><span class="sxs-lookup"><span data-stu-id="50e26-184">The string result isn't returned by the call to `GetStringAsync` in the way that you might expect.</span></span> <span data-ttu-id="50e26-185">（记住，该方法已返回步骤 3 中的一个任务）。相反，字符串结果存储在表示 `getStringTask` 方法完成的任务中。</span><span class="sxs-lookup"><span data-stu-id="50e26-185">(Remember that the method already returned a task in step 3.) Instead, the string result is stored in the task that represents the completion of the method, `getStringTask`.</span></span> <span data-ttu-id="50e26-186">await 运算符从 `getStringTask` 中检索结果。</span><span class="sxs-lookup"><span data-stu-id="50e26-186">The await operator retrieves the result from `getStringTask`.</span></span> <span data-ttu-id="50e26-187">赋值语句将检索到的结果赋给 `urlContents`。</span><span class="sxs-lookup"><span data-stu-id="50e26-187">The assignment statement assigns the retrieved result to `urlContents`.</span></span>  
-  
-8.  <span data-ttu-id="50e26-188">当 `AccessTheWebAsync` 具有字符串结果时，该方法可以计算字符串长度。</span><span class="sxs-lookup"><span data-stu-id="50e26-188">When `AccessTheWebAsync` has the string result, the method can calculate the length of the string.</span></span> <span data-ttu-id="50e26-189">然后，`AccessTheWebAsync` 工作也将完成，并且等待事件处理程序可继续使用。</span><span class="sxs-lookup"><span data-stu-id="50e26-189">Then the work of `AccessTheWebAsync` is also complete, and the waiting event handler can resume.</span></span> <span data-ttu-id="50e26-190">在此主题结尾处的完整示例中，可确认事件处理程序检索并打印长度结果的值。</span><span class="sxs-lookup"><span data-stu-id="50e26-190">In the full example at the end of the topic, you can confirm that the event handler retrieves and prints the value of the length result.</span></span>    
-<span data-ttu-id="50e26-191">如果你不熟悉异步编程，请花 1 分钟时间考虑同步行为和异步行为之间的差异。</span><span class="sxs-lookup"><span data-stu-id="50e26-191">If you are new to asynchronous programming, take a minute to consider the difference between synchronous and asynchronous behavior.</span></span> <span data-ttu-id="50e26-192">当其工作完成时（第 5 步）会返回一个同步方法，但当其工作挂起时（第 3 步和第 6 步），异步方法会返回一个任务值。</span><span class="sxs-lookup"><span data-stu-id="50e26-192">A synchronous method returns when its work is complete (step 5), but an async method returns a task value when its work is suspended (steps 3 and 6).</span></span> <span data-ttu-id="50e26-193">在异步方法最终完成其工作时，任务会标记为已完成，而结果（如果有）将存储在任务中。</span><span class="sxs-lookup"><span data-stu-id="50e26-193">When the async method eventually completes its work, the task is marked as completed and the result, if any, is stored in the task.</span></span>  
-  
-<span data-ttu-id="50e26-194">若要详细了解控制流，请参阅[异步程序中的控制流 (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)。</span><span class="sxs-lookup"><span data-stu-id="50e26-194">For more information about control flow, see [Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).</span></span>  
-  
-## <a name="BKMK_APIAsyncMethods"></a> <span data-ttu-id="50e26-195">API 异步方法</span><span class="sxs-lookup"><span data-stu-id="50e26-195">API async methods</span></span>  
- <span data-ttu-id="50e26-196">你可能想知道从何处可以找到 `GetStringAsync` 等支持异步编程的方法。</span><span class="sxs-lookup"><span data-stu-id="50e26-196">You might be wondering where to find methods such as `GetStringAsync` that support async programming.</span></span> <span data-ttu-id="50e26-197">.NET Framework 4.5 或更高版本以及 .NET Core 包含许多可与 `async` 和 `await` 结合使用的成员。</span><span class="sxs-lookup"><span data-stu-id="50e26-197">The  .NET Framework 4.5 or higher and .NET Core contain many members that work with `async` and `await`.</span></span> <span data-ttu-id="50e26-198">可以通过追加到成员名称的“Async”后缀和 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的返回类型，识别这些成员。</span><span class="sxs-lookup"><span data-stu-id="50e26-198">You can recognize them by the "Async" suffix that’s appended to the member name, and by their return type of <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="50e26-199">例如，`System.IO.Stream` 类包含 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A> 等方法，以及同步方法 <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A> 和 <xref:System.IO.Stream.Write%2A>。</span><span class="sxs-lookup"><span data-stu-id="50e26-199">For example, the `System.IO.Stream` class contains methods such as <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A>, and <xref:System.IO.Stream.WriteAsync%2A> alongside the synchronous methods <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A>, and <xref:System.IO.Stream.Write%2A>.</span></span>  
-  
- <span data-ttu-id="50e26-200">Windows 运行时也包含许多可以在 Windows 应用中与 `async` 和 `await` 结合使用的方法。</span><span class="sxs-lookup"><span data-stu-id="50e26-200">The Windows Runtime also contains many methods that you can use with `async` and `await` in Windows apps.</span></span> <span data-ttu-id="50e26-201">有关详细信息，请参阅[线程处理和异步编程](/windows/uwp/threading-async/)进行 UWP 开发；如果使用的是旧版 Windows 运行时，还请参阅[异步编程（Windows 应用商店应用）](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10))和[快速入门：在 C# 或 Visual Basic 中调用异步 API](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10))。</span><span class="sxs-lookup"><span data-stu-id="50e26-201">For more information, see [Threading and async programming](/windows/uwp/threading-async/) for UWP development, and [Asynchronous programming (Windows Store apps)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)) and [Quickstart: Calling asynchronous APIs in C# or Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10)) if you use earlier versions of the Windows Runtime.</span></span>  
-  
-## <a name="BKMK_Threads"></a><span data-ttu-id="50e26-202">线程</span><span class="sxs-lookup"><span data-stu-id="50e26-202">Threads</span></span>  
-<span data-ttu-id="50e26-203">异步方法旨在成为非阻止操作。</span><span class="sxs-lookup"><span data-stu-id="50e26-203">Async methods are intended to be non-blocking operations.</span></span> <span data-ttu-id="50e26-204">异步方法中的 `await` 表达式在等待的任务正在运行时不会阻止当前线程。</span><span class="sxs-lookup"><span data-stu-id="50e26-204">An `await` expression in an async method doesn’t block the current thread while the awaited task is running.</span></span> <span data-ttu-id="50e26-205">相反，表达式在继续时注册方法的其余部分并将控件返回到异步方法的调用方。</span><span class="sxs-lookup"><span data-stu-id="50e26-205">Instead, the expression signs up the rest of the method as a continuation and returns control to the caller of the async method.</span></span>  
-  
-<span data-ttu-id="50e26-206">`async` 和 `await` 关键字不会创建其他线程。</span><span class="sxs-lookup"><span data-stu-id="50e26-206">The `async` and `await` keywords don't cause additional threads to be created.</span></span> <span data-ttu-id="50e26-207">因为异步方法不会在其自身线程上运行，因此它不需要多线程。</span><span class="sxs-lookup"><span data-stu-id="50e26-207">Async methods don't require multithreading because an async method doesn't run on its own thread.</span></span> <span data-ttu-id="50e26-208">只有当方法处于活动状态时，该方法将在当前同步上下文中运行并使用线程上的时间。</span><span class="sxs-lookup"><span data-stu-id="50e26-208">The method runs on the current synchronization context and uses time on the thread only when the method is active.</span></span> <span data-ttu-id="50e26-209">可以使用 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 将占用大量 CPU 的工作移到后台线程，但是后台线程不会帮助正在等待结果的进程变为可用状态。</span><span class="sxs-lookup"><span data-stu-id="50e26-209">You can use <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> to move CPU-bound work to a background thread, but a background thread doesn't help with a process that's just waiting for results to become available.</span></span>  
-  
-<span data-ttu-id="50e26-210">对于异步编程而言，该基于异步的方法优于几乎每个用例中的现有方法。</span><span class="sxs-lookup"><span data-stu-id="50e26-210">The async-based approach to asynchronous programming is preferable to existing approaches in almost every case.</span></span> <span data-ttu-id="50e26-211">具体而言，此方法比 <xref:System.ComponentModel.BackgroundWorker> 类更适用于 I/O 绑定操作，因为此代码更简单且无需防止争用条件。</span><span class="sxs-lookup"><span data-stu-id="50e26-211">In particular, this approach is better than the <xref:System.ComponentModel.BackgroundWorker> class for I/O-bound operations because the code is simpler and you don't have to guard against race conditions.</span></span> <span data-ttu-id="50e26-212">结合 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法使用时，异步编程比 <xref:System.ComponentModel.BackgroundWorker> 更适用于 CPU 绑定操作，因为异步编程将运行代码的协调细节与 `Task.Run` 传输至线程池的工作区分开来。</span><span class="sxs-lookup"><span data-stu-id="50e26-212">In combination with the <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> method, async programming is better than <xref:System.ComponentModel.BackgroundWorker> for CPU-bound operations because async programming separates the coordination details of running your code from the work that `Task.Run` transfers to the threadpool.</span></span>  
-  
-## <a name="BKMK_AsyncandAwait"></a><span data-ttu-id="50e26-213">async 和 await</span><span class="sxs-lookup"><span data-stu-id="50e26-213">async and await</span></span>  
- <span data-ttu-id="50e26-214">如果使用 [async](../../../../csharp/language-reference/keywords/async.md) 修饰符将某种方法指定为异步方法，即启用以下两种功能。</span><span class="sxs-lookup"><span data-stu-id="50e26-214">If you specify that a method is an async method by using the [async](../../../../csharp/language-reference/keywords/async.md) modifier, you enable the following two capabilities.</span></span>  
-  
--   <span data-ttu-id="50e26-215">标记的异步方法可以使用 [await](../../../../csharp/language-reference/keywords/await.md) 来指定暂停点。</span><span class="sxs-lookup"><span data-stu-id="50e26-215">The marked async method can use [await](../../../../csharp/language-reference/keywords/await.md) to designate suspension points.</span></span> <span data-ttu-id="50e26-216">`await` 运算符通知编译器异步方法：在等待的异步过程完成后才能继续通过该点。</span><span class="sxs-lookup"><span data-stu-id="50e26-216">The `await` operator tells the compiler that the async method can't continue past that point until the awaited asynchronous process is complete.</span></span> <span data-ttu-id="50e26-217">同时，控制返回至异步方法的调用方。</span><span class="sxs-lookup"><span data-stu-id="50e26-217">In the meantime, control returns to the caller of the async method.</span></span>  
-  
-     <span data-ttu-id="50e26-218">异步方法在 `await` 表达式执行时暂停并不构成方法退出，只会导致 `finally` 代码块不运行。</span><span class="sxs-lookup"><span data-stu-id="50e26-218">The suspension of an async method at an `await` expression doesn't constitute an exit from the method, and `finally` blocks don’t run.</span></span>  
-  
--   <span data-ttu-id="50e26-219">标记的异步方法本身可以通过调用它的方法等待。</span><span class="sxs-lookup"><span data-stu-id="50e26-219">The marked async method can itself be awaited by methods that call it.</span></span>  
-  
-<span data-ttu-id="50e26-220">异步方法通常包含 `await` 运算符的一个或多个实例，但缺少 `await` 表达式也不会导致生成编译器错误。</span><span class="sxs-lookup"><span data-stu-id="50e26-220">An async method typically contains one or more occurrences of an `await` operator, but the absence of `await` expressions doesn’t cause a compiler error.</span></span> <span data-ttu-id="50e26-221">如果异步方法未使用 `await` 运算符标记暂停点，那么异步方法会作为同步方法执行，即使有 `async` 修饰符，也不例外。</span><span class="sxs-lookup"><span data-stu-id="50e26-221">If an async method doesn’t use an `await` operator to mark a suspension point, the method executes as a synchronous method does, despite the `async` modifier.</span></span> <span data-ttu-id="50e26-222">编译器将为此类方法发布一个警告。</span><span class="sxs-lookup"><span data-stu-id="50e26-222">The compiler issues a warning for such methods.</span></span>  
-  
- <span data-ttu-id="50e26-223">`async` 和 `await` 都是上下文关键字。</span><span class="sxs-lookup"><span data-stu-id="50e26-223">`async` and `await` are contextual keywords.</span></span> <span data-ttu-id="50e26-224">有关更多信息和示例，请参见以下主题：</span><span class="sxs-lookup"><span data-stu-id="50e26-224">For more information and examples, see the following topics:</span></span>  
-  
--   [<span data-ttu-id="50e26-225">async</span><span class="sxs-lookup"><span data-stu-id="50e26-225">async</span></span>](../../../../csharp/language-reference/keywords/async.md)  
-  
--   [<span data-ttu-id="50e26-226">await</span><span class="sxs-lookup"><span data-stu-id="50e26-226">await</span></span>](../../../../csharp/language-reference/keywords/await.md)  
-  
-## <a name="BKMK_ReturnTypesandParameters"></a> <span data-ttu-id="50e26-227">返回类型和参数</span><span class="sxs-lookup"><span data-stu-id="50e26-227">Return types and parameters</span></span>  
-<span data-ttu-id="50e26-228">异步方法通常返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。</span><span class="sxs-lookup"><span data-stu-id="50e26-228">An async method typically returns a <xref:System.Threading.Tasks.Task> or a <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="50e26-229">在异步方法中，`await` 运算符应用于通过调用另一个异步方法返回的任务。</span><span class="sxs-lookup"><span data-stu-id="50e26-229">Inside an async method, an `await` operator is applied to a task that's returned from a call to another async method.</span></span>  
-  
-<span data-ttu-id="50e26-230">如果方法包含指定 `TResult` 类型操作数的 [return](../../../../csharp/language-reference/keywords/return.md) 语句，将 <xref:System.Threading.Tasks.Task%601> 指定为返回类型。</span><span class="sxs-lookup"><span data-stu-id="50e26-230">You specify <xref:System.Threading.Tasks.Task%601> as the return type if the method contains a [return](../../../../csharp/language-reference/keywords/return.md) statement that specifies an operand of type `TResult`.</span></span> 
-  
-<span data-ttu-id="50e26-231">如果方法不含任何 return 语句或包含不返回操作数的 return 语句，将 <xref:System.Threading.Tasks.Task> 用作返回类型。</span><span class="sxs-lookup"><span data-stu-id="50e26-231">You use <xref:System.Threading.Tasks.Task>  as the return type if the method has no return statement or has a return statement that doesn't return an operand.</span></span>  
+<span data-ttu-id="7e2f9-104">基于任务的异步编程模型 (TAP) 提供了异步代码的抽象化。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-104">The Task asynchronous programming model (TAP) provides an abstraction over asynchronous code.</span></span> <span data-ttu-id="7e2f9-105">你只需像往常一样将代码编写为一连串语句即可。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-105">You write code as a sequence of statements, just like always.</span></span> <span data-ttu-id="7e2f9-106">就如每条语句在下一句开始之前完成一样，你可以流畅地阅读代码。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-106">You can read that code as though each statement completes before the next begins.</span></span> <span data-ttu-id="7e2f9-107">编译器将执行若干转换，因为其中一些语句可能会开始运行并返回表示正在运行中的 <xref:System.Threading.Tasks.Task>。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-107">The compiler performs a number of transformations because some of those statements may start work and return a <xref:System.Threading.Tasks.Task> that represents the ongoing work.</span></span>
 
-<span data-ttu-id="50e26-232">自 C# 7.0 起，还可以指定任何其他返回类型，前提是类型包含 `GetAwaiter` 方法。</span><span class="sxs-lookup"><span data-stu-id="50e26-232">Starting with C# 7.0, you can also specify any other return type, provided that the type includes a `GetAwaiter` method.</span></span> <span data-ttu-id="50e26-233">例如，<xref:System.Threading.Tasks.ValueTask%601> 就是这种类型。</span><span class="sxs-lookup"><span data-stu-id="50e26-233"><xref:System.Threading.Tasks.ValueTask%601> is an example of such a type.</span></span> <span data-ttu-id="50e26-234">可用于 [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet 包。</span><span class="sxs-lookup"><span data-stu-id="50e26-234">It is available in the [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet package.</span></span>
-  
- <span data-ttu-id="50e26-235">下面的示例演示如何声明并调用可返回 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task> 的方法。</span><span class="sxs-lookup"><span data-stu-id="50e26-235">The following example shows how you declare and call a method that returns a <xref:System.Threading.Tasks.Task%601> or a <xref:System.Threading.Tasks.Task>.</span></span>  
-  
-```csharp  
-// Signature specifies Task<TResult>  
-async Task<int> GetTaskOfTResultAsync()  
-{  
-    int hours = 0;  
-    await Task.Delay(0);  
-    // Return statement specifies an integer result.  
-    return hours;  
-}  
-  
-// Calls to GetTaskOfTResultAsync  
-Task<int> returnedTaskTResult = GetTaskOfTResultAsync();  
-int intResult = await returnedTaskTResult;  
-// or, in a single statement  
-int intResult = await GetTaskOfTResultAsync();  
-  
-// Signature specifies Task  
-async Task GetTaskAsync()  
-{  
-    await Task.Delay(0);  
-    // The method has no return statement.    
-}  
-  
-// Calls to GetTaskAsync  
-Task returnedTask = GetTaskAsync();  
-await returnedTask;  
-// or, in a single statement  
-await GetTaskAsync();  
-```  
-  
-<span data-ttu-id="50e26-236">每个返回的任务表示正在进行的工作。</span><span class="sxs-lookup"><span data-stu-id="50e26-236">Each returned task represents ongoing work.</span></span> <span data-ttu-id="50e26-237">任务可封装有关异步进程状态的信息，如果未成功，则最后会封装来自进程的最终结果或进程引发的异常。</span><span class="sxs-lookup"><span data-stu-id="50e26-237">A task encapsulates information about the state of the asynchronous process and, eventually, either the final result from the process or the exception that the process raises if it doesn't succeed.</span></span>  
-  
-<span data-ttu-id="50e26-238">异步方法也可以具有 `void` 返回类型。</span><span class="sxs-lookup"><span data-stu-id="50e26-238">An async method can also have a `void` return type.</span></span> <span data-ttu-id="50e26-239">该返回类型主要用于定义需要 `void` 返回类型的事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="50e26-239">This return type is used primarily to define event handlers, where a `void` return type is required.</span></span> <span data-ttu-id="50e26-240">异步事件处理程序通常用作异步程序的起始点。</span><span class="sxs-lookup"><span data-stu-id="50e26-240">Async event handlers often serve as the starting point for async programs.</span></span>  
-  
-<span data-ttu-id="50e26-241">无法等待具有 `void` 返回类型的异步方法，并且无效返回方法的调用方捕获不到异步方法抛出的任何异常。</span><span class="sxs-lookup"><span data-stu-id="50e26-241">An async method that has a `void` return type can’t be awaited, and the caller of a void-returning method can't catch any exceptions that the method throws.</span></span>  
-  
-<span data-ttu-id="50e26-242">异步方法无法声明 [in](../../../../csharp/language-reference/keywords/in-parameter-modifier.md)、[ref](../../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数，但可以调用包含此类参数的方法。</span><span class="sxs-lookup"><span data-stu-id="50e26-242">An async method can't declare [in](../../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../../csharp/language-reference/keywords/ref.md) or [out](../../../../csharp/language-reference/keywords/out-parameter-modifier.md) parameters, but the method can call methods that have such parameters.</span></span> <span data-ttu-id="50e26-243">同样，异步方法无法通过引用返回值，但可以调用包含 ref 返回值的方法。</span><span class="sxs-lookup"><span data-stu-id="50e26-243">Similarly, an async method can't return a value by reference, although it can call methods with ref return values.</span></span> 
-  
-<span data-ttu-id="50e26-244">有关详细信息和示例，请参阅[异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。</span><span class="sxs-lookup"><span data-stu-id="50e26-244">For more information and examples, see [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).</span></span> <span data-ttu-id="50e26-245">若要详细了解如何在异步方法中捕获异常，请参阅 [try-catch](../../../../csharp/language-reference/keywords/try-catch.md)。</span><span class="sxs-lookup"><span data-stu-id="50e26-245">For more information about how to catch exceptions in async methods, see [try-catch](../../../../csharp/language-reference/keywords/try-catch.md).</span></span> 
-  
-<span data-ttu-id="50e26-246">Windows 运行时编程中的异步 API 具有下列返回类型之一（类似于任务）：</span><span class="sxs-lookup"><span data-stu-id="50e26-246">Asynchronous APIs in Windows Runtime programming have one of the following return types, which are similar to tasks:</span></span>  
-  
--   <span data-ttu-id="50e26-247"><xref:Windows.Foundation.IAsyncOperation%601>（对应于 <xref:System.Threading.Tasks.Task%601>）</span><span class="sxs-lookup"><span data-stu-id="50e26-247"><xref:Windows.Foundation.IAsyncOperation%601>, which corresponds to <xref:System.Threading.Tasks.Task%601></span></span>  
-  
--   <span data-ttu-id="50e26-248"><xref:Windows.Foundation.IAsyncAction>（对应于 <xref:System.Threading.Tasks.Task>）</span><span class="sxs-lookup"><span data-stu-id="50e26-248"><xref:Windows.Foundation.IAsyncAction>, which corresponds to <xref:System.Threading.Tasks.Task></span></span>  
-  
--   <xref:Windows.Foundation.IAsyncActionWithProgress%601>  
-  
--   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
-   
-  
-## <a name="BKMK_NamingConvention"></a> <span data-ttu-id="50e26-249">命名约定</span><span class="sxs-lookup"><span data-stu-id="50e26-249">Naming convention</span></span>  
-<span data-ttu-id="50e26-250">按照约定，返回常规可等待类型的方法（例如 `Task`、`Task<T>`、`ValueTask` 和 `ValueTask<T>`）应具有以“Async”结束的名称。</span><span class="sxs-lookup"><span data-stu-id="50e26-250">By convention, methods that return commonly awaitable types (e.g. `Task`, `Task<T>`, `ValueTask`, `ValueTask<T>`) should have names that end with "Async".</span></span> <span data-ttu-id="50e26-251">启动异步操作但不返回可等待类型的方法不得具有以“Async”结尾的名称，但其开头可以为“Begin”、“Start”或其他表明此方法不返回或引发操作结果的动词。</span><span class="sxs-lookup"><span data-stu-id="50e26-251">Methods that start an asynchronous operation but do not return an awaitable type should not have names that end with "Async", but may start with "Begin", "Start" or some other verb to suggest this method does not return or throw the result of the operation.</span></span>
-  
- <span data-ttu-id="50e26-252">如果某一约定中的事件、基类或接口协定建议其他名称，则可以忽略此约定。</span><span class="sxs-lookup"><span data-stu-id="50e26-252">You can ignore the convention where an event, base class, or interface contract suggests a different name.</span></span> <span data-ttu-id="50e26-253">例如，你不应重命名常用事件处理程序，例如 `Button1_Click`。</span><span class="sxs-lookup"><span data-stu-id="50e26-253">For example, you shouldn’t rename common event handlers, such as `Button1_Click`.</span></span>  
-  
-## <a name="BKMK_RelatedTopics"></a> <span data-ttu-id="50e26-254">相关主题和示例 (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="50e26-254">Related topics and samples (Visual Studio)</span></span>  
-  
-|<span data-ttu-id="50e26-255">标题</span><span class="sxs-lookup"><span data-stu-id="50e26-255">Title</span></span>|<span data-ttu-id="50e26-256">说明</span><span class="sxs-lookup"><span data-stu-id="50e26-256">Description</span></span>|<span data-ttu-id="50e26-257">示例</span><span class="sxs-lookup"><span data-stu-id="50e26-257">Sample</span></span>|  
-|-----------|-----------------|------------|  
-|[<span data-ttu-id="50e26-258">演练：使用 Async 和 Await 访问 Web (C#)</span><span class="sxs-lookup"><span data-stu-id="50e26-258">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|<span data-ttu-id="50e26-259">演示如何将一个同步 WPF 解决方案转换成一个异步 WPF 解决方案。</span><span class="sxs-lookup"><span data-stu-id="50e26-259">Shows how to convert a synchronous WPF solution to an asynchronous WPF solution.</span></span> <span data-ttu-id="50e26-260">应用程序下载一系列网站。</span><span class="sxs-lookup"><span data-stu-id="50e26-260">The application downloads a series of websites.</span></span>|[<span data-ttu-id="50e26-261">异步示例：“访问 Web”演练</span><span class="sxs-lookup"><span data-stu-id="50e26-261">Async Sample: Accessing the Web Walkthrough</span></span>](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|  
-|[<span data-ttu-id="50e26-262">如何：使用 Task.WhenAll 扩展异步演练 (C#)</span><span class="sxs-lookup"><span data-stu-id="50e26-262">How to: Extend the async Walkthrough by Using Task.WhenAll (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|<span data-ttu-id="50e26-263">将 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 添加到上一个演练。</span><span class="sxs-lookup"><span data-stu-id="50e26-263">Adds <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> to the previous walkthrough.</span></span> <span data-ttu-id="50e26-264">使用 `WhenAll` 同时启动所有下载。</span><span class="sxs-lookup"><span data-stu-id="50e26-264">The use of `WhenAll` starts all the downloads at the same time.</span></span>||  
-|[<span data-ttu-id="50e26-265">如何：使用 Async 和 Await 并行发出多个 Web 请求 (C#)</span><span class="sxs-lookup"><span data-stu-id="50e26-265">How to: Make Multiple Web Requests in Parallel by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|<span data-ttu-id="50e26-266">演示如何同时开始几个任务。</span><span class="sxs-lookup"><span data-stu-id="50e26-266">Demonstrates how to start several tasks at the same time.</span></span>|[<span data-ttu-id="50e26-267">异步示例：并行发出多个 Web 请求</span><span class="sxs-lookup"><span data-stu-id="50e26-267">Async Sample: Make Multiple Web Requests in Parallel</span></span>](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|  
-|[<span data-ttu-id="50e26-268">异步返回类型 (C#)</span><span class="sxs-lookup"><span data-stu-id="50e26-268">Async Return Types (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/async-return-types.md)|<span data-ttu-id="50e26-269">描述异步方法可返回的类型，并解释每种类型适用于的情况。</span><span class="sxs-lookup"><span data-stu-id="50e26-269">Illustrates the types that async methods can return and explains when each type is appropriate.</span></span>||  
-|[<span data-ttu-id="50e26-270">异步程序中的控制流 (C#)</span><span class="sxs-lookup"><span data-stu-id="50e26-270">Control Flow in Async Programs (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)|<span data-ttu-id="50e26-271">通过异步程序中的一系列 await 表达式来详细跟踪控制流。</span><span class="sxs-lookup"><span data-stu-id="50e26-271">Traces in detail the flow of control through a succession of await expressions in an asynchronous program.</span></span>|[<span data-ttu-id="50e26-272">异步示例：异步程序中的控制流</span><span class="sxs-lookup"><span data-stu-id="50e26-272">Async Sample: Control Flow in Async Programs</span></span>](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|  
-|[<span data-ttu-id="50e26-273">微调异步应用程序 (C#)</span><span class="sxs-lookup"><span data-stu-id="50e26-273">Fine-Tuning Your Async Application (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)|<span data-ttu-id="50e26-274">演示如何将以下功能添加到异步解决方案：</span><span class="sxs-lookup"><span data-stu-id="50e26-274">Shows how to add the following functionality to your async solution:</span></span><br /><br /> <span data-ttu-id="50e26-275">-   [取消一个异步任务或一组任务(C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)</span><span class="sxs-lookup"><span data-stu-id="50e26-275">-   [Cancel an Async Task or a List of Tasks (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)</span></span><br /><span data-ttu-id="50e26-276">-   [在一段时间后取消异步任务 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)</span><span class="sxs-lookup"><span data-stu-id="50e26-276">-   [Cancel Async Tasks after a Period of Time (C#)](../../../../csharp/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)</span></span><br /><span data-ttu-id="50e26-277">-   [在完成一个异步任务后取消剩余任务 (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)</span><span class="sxs-lookup"><span data-stu-id="50e26-277">-   [Cancel Remaining Async Tasks after One Is Complete (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)</span></span><br /><span data-ttu-id="50e26-278">-   [启动多个异步任务并在其完成时进行处理 (C#)](../../../../csharp/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)</span><span class="sxs-lookup"><span data-stu-id="50e26-278">-   [Start Multiple Async Tasks and Process Them As They Complete (C#)](../../../../csharp/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)</span></span>|[<span data-ttu-id="50e26-279">异步示例：微调应用程序</span><span class="sxs-lookup"><span data-stu-id="50e26-279">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|  
-|[<span data-ttu-id="50e26-280">在异步应用程序中处理重入 (C#)</span><span class="sxs-lookup"><span data-stu-id="50e26-280">Handling Reentrancy in Async Apps (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|<span data-ttu-id="50e26-281">演示如何处理有效的异步操作在运行时重启的情况。</span><span class="sxs-lookup"><span data-stu-id="50e26-281">Shows how to handle cases in which an active asynchronous operation is restarted while it’s running.</span></span>||  
-|<span data-ttu-id="50e26-282">[WhenAny：综合运用 .NET Framework 和 Windows 运行时](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="50e26-282">[WhenAny: Bridging between the .NET Framework and the Windows Runtime](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))</span></span>|<span data-ttu-id="50e26-283">展示了如何桥接 .NET Framework 与 [!INCLUDE[wrt](~/includes/wrt-md.md)]中 IAsyncOperations 的任务类型，以便可以将 <xref:System.Threading.Tasks.Task.WhenAny%2A> 与 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法结合使用。</span><span class="sxs-lookup"><span data-stu-id="50e26-283">Shows how to bridge between Task types in the .NET Framework and IAsyncOperations in the [!INCLUDE[wrt](~/includes/wrt-md.md)] so that you can use <xref:System.Threading.Tasks.Task.WhenAny%2A> with a [!INCLUDE[wrt](~/includes/wrt-md.md)] method.</span></span>|[<span data-ttu-id="50e26-284">异步示例：综合运用 .NET 和 Windows 运行时（AsTask 和 WhenAny）</span><span class="sxs-lookup"><span data-stu-id="50e26-284">Async Sample: Bridging between .NET and Windows Runtime (AsTask and WhenAny)</span></span>](https://code.msdn.microsoft.com/Async-Sample-Bridging-d6a2f739)|  
-|<span data-ttu-id="50e26-285">异步取消：综合运用 .NET Framework 和 Windows 运行时</span><span class="sxs-lookup"><span data-stu-id="50e26-285">Async Cancellation: Bridging between the .NET Framework and the Windows Runtime</span></span>|<span data-ttu-id="50e26-286">展示了如何桥接 .NET Framework 与 [!INCLUDE[wrt](~/includes/wrt-md.md)]中 IAsyncOperations 的任务类型，以便可以将 <xref:System.Threading.CancellationTokenSource> 与 [!INCLUDE[wrt](~/includes/wrt-md.md)] 方法结合使用。</span><span class="sxs-lookup"><span data-stu-id="50e26-286">Shows how to bridge between Task types in the .NET Framework and IAsyncOperations in the [!INCLUDE[wrt](~/includes/wrt-md.md)] so that you can use <xref:System.Threading.CancellationTokenSource> with a [!INCLUDE[wrt](~/includes/wrt-md.md)] method.</span></span>|[<span data-ttu-id="50e26-287">异步示例：综合运用 .NET 和 Windows 运行时（AsTask 和 Cancellation）</span><span class="sxs-lookup"><span data-stu-id="50e26-287">Async Sample: Bridging between .NET and Windows Runtime (AsTask & Cancellation)</span></span>](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
-|[<span data-ttu-id="50e26-288">使用 Async 进行文件访问 (C#)</span><span class="sxs-lookup"><span data-stu-id="50e26-288">Using Async for File Access (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/using-async-for-file-access.md)|<span data-ttu-id="50e26-289">列出并演示使用 async 和 await 访问文件的好处。</span><span class="sxs-lookup"><span data-stu-id="50e26-289">Lists and demonstrates the benefits of using async and await to access files.</span></span>||  
-|[<span data-ttu-id="50e26-290">基于任务的异步模式 (TAP)</span><span class="sxs-lookup"><span data-stu-id="50e26-290">Task-based Asynchronous Pattern (TAP)</span></span>](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|<span data-ttu-id="50e26-291">描述 .NET Framework 中异步的新模式。</span><span class="sxs-lookup"><span data-stu-id="50e26-291">Describes a new pattern for asynchrony in the .NET Framework.</span></span> <span data-ttu-id="50e26-292">该模式基于 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 类型。</span><span class="sxs-lookup"><span data-stu-id="50e26-292">The pattern is based on the <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> types.</span></span>||  
-|[<span data-ttu-id="50e26-293">Channel 9 上的异步相关视频</span><span class="sxs-lookup"><span data-stu-id="50e26-293">Async Videos on Channel 9</span></span>](https://channel9.msdn.com/search?term=async%20&type=All#pubDate=year&ch9Search&lang-en=en)|<span data-ttu-id="50e26-294">提供指向有关异步编程的各种视频的链接。</span><span class="sxs-lookup"><span data-stu-id="50e26-294">Provides links to a variety of videos about async programming.</span></span>||  
-  
-## <a name="BKMK_CompleteExample"></a> <span data-ttu-id="50e26-295">完整示例</span><span class="sxs-lookup"><span data-stu-id="50e26-295">Complete example</span></span>  
- <span data-ttu-id="50e26-296">下面的代码来自于本主题介绍的 Windows Presentation Foundation (WPF) 应用程序的 MainWindow.xaml.cs 文件。</span><span class="sxs-lookup"><span data-stu-id="50e26-296">The following code is the MainWindow.xaml.cs file from the Windows Presentation Foundation (WPF) application that this topic discusses.</span></span> <span data-ttu-id="50e26-297">可以从[异步示例：“使用 Async 和 Await 的异步编程”示例](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c)下载此示例。</span><span class="sxs-lookup"><span data-stu-id="50e26-297">You can download the sample from [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c).</span></span>  
-  
-```csharp  
-using System;  
-using System.Collections.Generic;  
-using System.Linq;  
-using System.Text;  
-using System.Threading.Tasks;  
-using System.Windows;  
-using System.Windows.Controls;  
-using System.Windows.Data;  
-using System.Windows.Documents;  
-using System.Windows.Input;  
-using System.Windows.Media;  
-using System.Windows.Media.Imaging;  
-using System.Windows.Navigation;  
-using System.Windows.Shapes;  
-  
-// Add a using directive and a reference for System.Net.Http;  
-using System.Net.Http;  
-  
-namespace AsyncFirstExample  
-{  
-    public partial class MainWindow : Window  
-    {  
-        // Mark the event handler with async so you can use await in it.  
-        private async void StartButton_Click(object sender, RoutedEventArgs e)  
-        {  
-            // Call and await separately.  
-            //Task<int> getLengthTask = AccessTheWebAsync();  
-            //// You can do independent work here.  
-            //int contentLength = await getLengthTask;  
-  
-            int contentLength = await AccessTheWebAsync();  
-  
-            resultsTextBox.Text +=
-                $"\r\nLength of the downloaded string: {contentLength}.\r\n";
-        }  
-  
-        // Three things to note in the signature:  
-        //  - The method has an async modifier.   
-        //  - The return type is Task or Task<T>. (See "Return Types" section.)  
-        //    Here, it is Task<int> because the return statement returns an integer.  
-        //  - The method name ends in "Async."  
-        async Task<int> AccessTheWebAsync()  
-        {   
-            // You need to add a reference to System.Net.Http to declare client.  
-            using (HttpClient client = new HttpClient())  
-            {  
-                    // GetStringAsync returns a Task<string>. That means that when you await the  
-                    // task you'll get a string (urlContents).  
-                    Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");  
-  
-                    // You can do work here that doesn't rely on the string from GetStringAsync.  
-                    DoIndependentWork();  
-  
-                    // The await operator suspends AccessTheWebAsync.  
-                    //  - AccessTheWebAsync can't continue until getStringTask is complete.  
-                    //  - Meanwhile, control returns to the caller of AccessTheWebAsync.  
-                    //  - Control resumes here when getStringTask is complete.   
-                    //  - The await operator then retrieves the string result from getStringTask.  
-                    string urlContents = await getStringTask;  
-  
-                    // The return statement specifies an integer result.  
-                    // Any methods that are awaiting AccessTheWebAsync retrieve the length value.  
-                    return urlContents.Length;  
-            }  
-        }  
-  
-        void DoIndependentWork()  
-        {  
-            resultsTextBox.Text += "Working . . . . . . .\r\n";  
-        }  
-    }  
-}  
-  
-// Sample Output:  
-  
-// Working . . . . . . .  
-  
-// Length of the downloaded string: 25035.  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="50e26-298">请参阅</span><span class="sxs-lookup"><span data-stu-id="50e26-298">See also</span></span>
+<span data-ttu-id="7e2f9-108">这就是此语法的目标：支持读起来像一连串语句的代码，但会根据外部资源分配和任务完成时间以更复杂的顺序执行。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-108">That's the goal of this syntax: enable code that reads like a sequence of statements, but executes in a much more complicated order based on external resource allocation and when tasks complete.</span></span> <span data-ttu-id="7e2f9-109">这与人们为包含异步任务的流程给予指令的方式类似。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-109">It's analogous to how people give instructions for processes that include asynchronous tasks.</span></span> <span data-ttu-id="7e2f9-110">整篇文章将使用做早餐的指令示例来阐述 `async` 和 `await` 关键字如何使推断包含一系列异步指令的代码更为轻松。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-110">Throughout this article, you'll use an example of instructions for making a breakfast to see how the `async` and `await` keywords make it easier to reason about code that includes a series of asynchronous instructions.</span></span> <span data-ttu-id="7e2f9-111">你可能会写出与以下列表类似的指令来解释如何做早餐：</span><span class="sxs-lookup"><span data-stu-id="7e2f9-111">You'd write the instructions something like the following list to explain how to make a breakfast:</span></span>
 
-- [<span data-ttu-id="50e26-299">async</span><span class="sxs-lookup"><span data-stu-id="50e26-299">async</span></span>](../../../../csharp/language-reference/keywords/async.md)
-- [<span data-ttu-id="50e26-300">await</span><span class="sxs-lookup"><span data-stu-id="50e26-300">await</span></span>](../../../../csharp/language-reference/keywords/await.md)
-- [<span data-ttu-id="50e26-301">异步编程</span><span class="sxs-lookup"><span data-stu-id="50e26-301">Asynchronous programming</span></span>](../../../../csharp/async.md)
-- [<span data-ttu-id="50e26-302">异步概述</span><span class="sxs-lookup"><span data-stu-id="50e26-302">Async overview</span></span>](../../../../standard/async.md)
+1. <span data-ttu-id="7e2f9-112">倒一杯咖啡。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-112">Pour a cup of coffee.</span></span>
+1. <span data-ttu-id="7e2f9-113">加热平底锅，然后煎两个鸡蛋。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-113">Heat up a pan, then fry two eggs.</span></span>
+1. <span data-ttu-id="7e2f9-114">煎三片培根。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-114">Fry three slices of bacon.</span></span>
+1. <span data-ttu-id="7e2f9-115">烤两片面包。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-115">Toast two pieces of bread.</span></span>
+1. <span data-ttu-id="7e2f9-116">在烤面包上加黄油和果酱。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-116">Add butter and jam to the toast.</span></span>
+1. <span data-ttu-id="7e2f9-117">倒一杯橙汁。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-117">Pour a glass of orange juice.</span></span>
+
+<span data-ttu-id="7e2f9-118">如果你有烹饪的经验，你将以异步方式来执行这些指令。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-118">If you have experience cooking, you'd execute those instructions **asynchronously**.</span></span> <span data-ttu-id="7e2f9-119">你可能会加热平底锅以准备煎蛋，然后从煎培根开始。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-119">you'd start warming the pan for eggs, then start the bacon.</span></span> <span data-ttu-id="7e2f9-120">然后将面包放进烤面包机，再煎鸡蛋。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-120">You'd put the bread in the toaster, then start the eggs.</span></span> <span data-ttu-id="7e2f9-121">在此过程的每个步骤中，你都可以首先开始一项任务，然后将注意力转移到准备要进行的其他任务上。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-121">At each step of the process, you'd start a task, then turn your attention to tasks that are ready for your attention.</span></span>
+
+<span data-ttu-id="7e2f9-122">做早餐是非并行异步工作的一个好示例。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-122">Cooking breakfast is a good example of asynchronous work that isn't parallel.</span></span> <span data-ttu-id="7e2f9-123">单人（或单线程）即可处理所有这些任务。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-123">One person (or thread) can handle all these tasks.</span></span> <span data-ttu-id="7e2f9-124">继续讲解早餐的类比，一个人可以以异步方式做早餐，即在第一个任务完成之前开始进行下一个任务。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-124">Continuing the breakfast analogy, one person can make breakfast asynchronously by starting the next task before the first completes.</span></span> <span data-ttu-id="7e2f9-125">不管是否有人在看着，做早餐的过程都在进行。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-125">The cooking progresses whether or not someone is watching it.</span></span> <span data-ttu-id="7e2f9-126">在开始加热平底锅准备煎蛋的同时就可以开始煎了培根。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-126">As soon as you start warming the pan for the eggs, you can begin frying the bacon.</span></span> <span data-ttu-id="7e2f9-127">在开始煎培根后，你可以将面包放进烤面包机。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-127">Once the bacon starts, you can put the bread into the toaster.</span></span>
+
+<span data-ttu-id="7e2f9-128">对于并行算法而言，你则需要多名厨师（或线程）。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-128">For a parallel algorithm, you'd need multiple cooks (or threads).</span></span> <span data-ttu-id="7e2f9-129">一名厨师煎鸡蛋，一名厨师煎培根，依次类推。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-129">One would make the eggs, one the bacon, and so on.</span></span> <span data-ttu-id="7e2f9-130">每名厨师将仅专注于一项任务。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-130">Each one would be focused on just that one task.</span></span> <span data-ttu-id="7e2f9-131">每名厨师（或线程）都在同步等待需要翻动培根或面包弹出时都将受到阻。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-131">Each cook (or thread) would be blocked synchronously waiting for bacon to be ready to flip, or the toast to pop.</span></span> 
+
+<span data-ttu-id="7e2f9-132">现在，考虑一下编写为 C# 语句的相同指令：</span><span class="sxs-lookup"><span data-stu-id="7e2f9-132">Now, consider those same instructions written as C# statements:</span></span>
+
+[!code-csharp[SynchronousBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-starter/Program.cs#Main)]
+
+<span data-ttu-id="7e2f9-133">计算机不会按人类的方式来解释这些指令。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-133">Computers don't interpret those instructions the same way people do.</span></span> <span data-ttu-id="7e2f9-134">计算机将阻塞每条语句，直到工作完成，然后再继续运行下一条语句。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-134">The computer will block on each statement until the work is complete before moving on to the next statement.</span></span> <span data-ttu-id="7e2f9-135">这将创造出令人不满意的早餐。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-135">That creates an unsatisfying breakfast.</span></span> <span data-ttu-id="7e2f9-136">后续任务直到早前任务完成后才会启动。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-136">The later tasks wouldn't be started until the earlier tasks had completed.</span></span> <span data-ttu-id="7e2f9-137">这样做早餐花费的时间要长得多，有些食物在上桌之前就已经凉了。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-137">It would take much longer to create the breakfast, and some items would have gotten cold before being served.</span></span> 
+
+<span data-ttu-id="7e2f9-138">如果你希望计算机异步执行上述指令，则必须编写异步代码。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-138">If you want the computer to execute the above instructions asynchronously, you must write asynchronous code.</span></span>
+
+<span data-ttu-id="7e2f9-139">这些问题对即将编写的程序而言至关重要。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-139">These concerns are important for the programs you write today.</span></span> <span data-ttu-id="7e2f9-140">编写客户端程序时，你希望 UI 能够响应用户输入。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-140">When you write client programs, you want the UI to be responsive to user input.</span></span> <span data-ttu-id="7e2f9-141">从 Web 下载数据时，你的应用程序不应让手机出现卡顿。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-141">Your application shouldn't make a phone appear frozen while it's downloading data from the web.</span></span> <span data-ttu-id="7e2f9-142">编写服务器程序时，你不希望线程受到阻塞。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-142">When you write server programs, you don't want threads blocked.</span></span> <span data-ttu-id="7e2f9-143">这些线程可以用于处理其他请求。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-143">Those threads could be serving other requests.</span></span> <span data-ttu-id="7e2f9-144">存在异步替代项的情况下使用同步代码会增加你进行扩展的成本。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-144">Using synchronous code when asynchronous alternatives exist hurts your ability to scale out less expensively.</span></span> <span data-ttu-id="7e2f9-145">你需要为这些受阻线程付费。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-145">You pay for those blocked threads.</span></span>
+
+<span data-ttu-id="7e2f9-146">成功的现代应用程序需要异步代码。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-146">Successful modern applications require asynchronous code.</span></span> <span data-ttu-id="7e2f9-147">在没有语言支持的情况下，编写异步代码需要回调、完成事件，或其他掩盖代码原始意图的方法。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-147">Without language support, writing asynchronous code required callbacks, completion events, or other means that obscured the original intent of the code.</span></span> <span data-ttu-id="7e2f9-148">同步代码的优点在于易于理解。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-148">The advantage of the synchronous code is that it's easy to understand.</span></span> <span data-ttu-id="7e2f9-149">分布操作使其易于查看和理解。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-149">The step-by-step actions make it easy to scan and understand.</span></span> <span data-ttu-id="7e2f9-150">传统的异步模型迫使你侧重于代码的异步性质，而不是代码的基本操作。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-150">Traditional asynchronous models forced you to focus on the asynchronous nature of the code, not on the fundamental actions of the code.</span></span>
+
+## <a name="dont-block-await-instead"></a><span data-ttu-id="7e2f9-151">不要阻塞，而要 await</span><span class="sxs-lookup"><span data-stu-id="7e2f9-151">Don't block, await instead</span></span>
+
+<span data-ttu-id="7e2f9-152">上述代码演示了不正确的实践：构造同步代码来执行异步操作。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-152">The preceding code demonstrates a bad practice: constructing synchronous code to perform asynchronous operations.</span></span> <span data-ttu-id="7e2f9-153">顾名思义，此代码将阻止执行这段代码的线程执行任何其他操作。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-153">As written, this code blocks the thread executing it from doing any other work.</span></span> <span data-ttu-id="7e2f9-154">在任何任务进行过程中，此代码也不会被中断。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-154">It won't be interrupted while any of the tasks are in progress.</span></span> <span data-ttu-id="7e2f9-155">就如同你将面包放进烤面包机后盯着此烤面包机一样。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-155">It would be as though you stared at the toaster after putting the bread in.</span></span> <span data-ttu-id="7e2f9-156">你会无视任何跟你说话的人，直到面包弹出。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-156">You'd ignore anyone talking to you until the toast popped.</span></span> 
+
+<span data-ttu-id="7e2f9-157">我们首先更新此代码，使线程在任务运行时不会阻塞。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-157">Let's start by updating this code so that the thread doesn't block while tasks are running.</span></span> <span data-ttu-id="7e2f9-158">`await` 关键字提供了一种非阻塞方式来启动任务，然后在此任务完成时继续执行。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-158">The `await` keyword provides a non-blocking way to start a task, then continue execution when that task completes.</span></span> <span data-ttu-id="7e2f9-159">“做早餐”代码的简单异步版本类似于以下片段：</span><span class="sxs-lookup"><span data-stu-id="7e2f9-159">A simple asynchronous version of the make a breakfast code would look like the following snippet:</span></span>
+
+[!code-csharp[SimpleAsyncBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V2/Program.cs#Main)]
+
+<span data-ttu-id="7e2f9-160">在煎鸡蛋或培根时，此代码不会阻塞。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-160">This code doesn't block while the eggs or the bacon are cooking.</span></span> <span data-ttu-id="7e2f9-161">不过，此代码也不会启动任何其他任务。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-161">This code won't start any other tasks though.</span></span> <span data-ttu-id="7e2f9-162">你还是会将面包放进烤面包机里，然后盯着烤面包机直到面包弹出。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-162">You'd still put the toast in the toaster and stare at it until it pops.</span></span> <span data-ttu-id="7e2f9-163">但至少，你会回应任何想引起你注意的人。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-163">But at least, you'd respond to anyone that wanted your attention.</span></span> <span data-ttu-id="7e2f9-164">在接受了多份订单的一家餐馆里，厨师可能会在做第一份早餐的同时开始制作另一份早餐。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-164">In a restaurant where multiple orders are placed, the cook could start another breakfast while the first is cooking.</span></span>
+
+<span data-ttu-id="7e2f9-165">现在，在等待任何尚未完成的已启动任务时，处理早餐的线程将不会被阻塞。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-165">Now, the thread working on the breakfast isn't blocked while awaiting any started task that hasn't yet finished.</span></span> <span data-ttu-id="7e2f9-166">对于某些应用程序而言，此更改是必需的。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-166">For some applications, this change is all that's needed.</span></span> <span data-ttu-id="7e2f9-167">仅凭借此更改，GUI 应用程序仍然会响应用户。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-167">A GUI application still responds to the user with just this change.</span></span> <span data-ttu-id="7e2f9-168">然而，对于此方案而言，你需要更多的内容。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-168">However, for this scenario, you want more.</span></span> <span data-ttu-id="7e2f9-169">你不希望每个组件任务都按顺序执行。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-169">You don't want each of the component tasks to be executed sequentially.</span></span> <span data-ttu-id="7e2f9-170">最好首先启动每个组件任务，然后再等待之前任务的完成。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-170">It's better to start each of the component tasks before awaiting the previous task's completion.</span></span>
+
+## <a name="start-tasks-concurrently"></a><span data-ttu-id="7e2f9-171">同时启动任务</span><span class="sxs-lookup"><span data-stu-id="7e2f9-171">Start tasks concurrently</span></span>
+
+<span data-ttu-id="7e2f9-172">在许多方案中，你希望立即启动若干独立的任务。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-172">In many scenarios, you want to start several independent tasks immediately.</span></span> <span data-ttu-id="7e2f9-173">然后，在每个任务完成时，你可以继续进行已准备的其他工作。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-173">Then, as each task finishes, you can continue other work that's ready.</span></span> <span data-ttu-id="7e2f9-174">在早餐类比中，这就是更快完成做早餐的方法。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-174">In the breakfast analogy, that's how you get breakfast done more quickly.</span></span> <span data-ttu-id="7e2f9-175">你也几乎将在同一时间完成所有工作。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-175">You also get everything done close to the same time.</span></span> <span data-ttu-id="7e2f9-176">你将吃到一顿热气腾腾的早餐。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-176">You'll get a hot breakfast.</span></span>
+
+<span data-ttu-id="7e2f9-177"><xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和相关类型是可以用于推断正在进行中的任务的类。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-177">The <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> and related types are classes you can use to reason about tasks that are in progress.</span></span> <span data-ttu-id="7e2f9-178">这使你能够编写更类似于实际做早餐方式的代码。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-178">That enables you to write code that more closely resembles the way you'd actually create breakfast.</span></span> <span data-ttu-id="7e2f9-179">你可以同时开始煎鸡蛋、培根和烤面包。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-179">You'd start cooking the eggs, bacon, and toast at the same time.</span></span> <span data-ttu-id="7e2f9-180">由于每个任务都需要操作，所以你会将注意力转移到那个任务上，进行下一个操作，然后等待其他需要你注意的事情。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-180">As each requires action, you'd turn your attention to that task, take care of the next action, then await for something else that requires your attention.</span></span>
+
+<span data-ttu-id="7e2f9-181">启动一项任务并等待表示运行的 <xref:System.Threading.Tasks.Task> 对象。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-181">You start a task and hold on to the <xref:System.Threading.Tasks.Task> object that represents the work.</span></span> <span data-ttu-id="7e2f9-182">你将首先 `await` 每项任务，然后再处理它的结果。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-182">You'll `await` each task before working with its result.</span></span>
+
+<span data-ttu-id="7e2f9-183">让我们对早餐代码进行这些更改。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-183">Let's make these changes to the breakfast code.</span></span> <span data-ttu-id="7e2f9-184">第一步是存储任务以便在这些任务启动时进行操作，而不是等待：</span><span class="sxs-lookup"><span data-stu-id="7e2f9-184">The first step is to store the tasks for operations when they start, rather than awaiting them:</span></span>
+
+```csharp
+Coffee cup = PourCoffee();
+Console.WriteLine("coffee is ready");
+Task<Egg> eggTask = FryEggs(2);
+Egg eggs = await eggTask;
+Console.WriteLine("eggs are ready");
+Task<Bacon> baconTask = FryBacon(3);
+Bacon bacon = await baconTask;
+Console.WriteLine("bacon is ready");
+Task<Toast> toastTask = ToastBread(2);
+Toast toast = await toastTask;
+ApplyButter(toast);
+ApplyJam(toast);
+Console.WriteLine("toast is ready");
+Juice oj = PourOJ();
+Console.WriteLine("oj is ready");
+
+Console.WriteLine("Breakfast is ready!");
+```
+
+<span data-ttu-id="7e2f9-185">接下来，可以在提供早餐之前将用于处理培根和鸡蛋的 `await` 语句移动到此方法的末尾：</span><span class="sxs-lookup"><span data-stu-id="7e2f9-185">Next, you can move the `await` statements for the bacon and eggs to the end of the method, before serving breakfast:</span></span>
+
+```csharp
+Coffee cup = PourCoffee();
+Console.WriteLine("coffee is ready");
+Task<Egg> eggTask = FryEggs(2);
+Task<Bacon> baconTask = FryBacon(3);
+Task<Toast> toastTask = ToastBread(2);
+Toast toast = await toastTask;
+ApplyButter(toast);
+ApplyJam(toast);
+Console.WriteLine("toast is ready");
+Juice oj = PourOJ();
+Console.WriteLine("oj is ready");
+
+Egg eggs = await eggTask;
+Console.WriteLine("eggs are ready");
+Bacon bacon = await baconTask;
+Console.WriteLine("bacon is ready");
+
+Console.WriteLine("Breakfast is ready!");
+```
+
+<span data-ttu-id="7e2f9-186">上述代码效果更好。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-186">The preceding code works better.</span></span> <span data-ttu-id="7e2f9-187">你可以一次启动所有的异步任务。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-187">You start all the asynchronous tasks at once.</span></span> <span data-ttu-id="7e2f9-188">你仅在需要结果时才会等待每项任务。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-188">You await each task only when you need the results.</span></span> <span data-ttu-id="7e2f9-189">上述代码可能类似于 Web 应用程序中请求各种微服务，然后将结果合并到单个页面中的代码。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-189">The preceding code may be similar to code in a web application that makes requests of different microservices, then combines the results into a single page.</span></span> <span data-ttu-id="7e2f9-190">你将立即发出所有请求，然后 `await` 所有这些任务并组成 Web 页面。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-190">You'll make all the requests immediately, then `await` all those tasks and compose the web page.</span></span>
+
+## <a name="composition-with-tasks"></a><span data-ttu-id="7e2f9-191">与任务组合</span><span class="sxs-lookup"><span data-stu-id="7e2f9-191">Composition with tasks</span></span>
+
+ <span data-ttu-id="7e2f9-192">除了吐司外，你准备好了做早餐的所有材料。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-192">You have everything ready for breakfast at the same time except the toast.</span></span> <span data-ttu-id="7e2f9-193">吐司制作由异步操作（烤面包）和同步操作（添加黄油和果酱）组成。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-193">Making the toast is the composition of an asynchronous operation (toasting the bread), and synchronous operations (adding the butter and the jam).</span></span> <span data-ttu-id="7e2f9-194">更新此代码说明了一个重要的概念：</span><span class="sxs-lookup"><span data-stu-id="7e2f9-194">Updating this code illustrates an important concept:</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="7e2f9-195">异步操作后跟同步操作的这种组合是一个异步操作。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-195">The composition of an asynchronous operation followed by synchronous work is an asynchronous operation.</span></span> <span data-ttu-id="7e2f9-196">换言之，如果操作的任何部分是异步的，整个操作就是异步的。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-196">Stated another way, if any portion of an operation is asynchronous, the entire operation is asynchronous.</span></span>
+
+<span data-ttu-id="7e2f9-197">上述代码展示了可以使用 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 对象来保存运行中的任务。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-197">The preceding code showed you that you can use <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601> objects to hold running tasks.</span></span> <span data-ttu-id="7e2f9-198">你首先需要 `await` 每项任务，然后再使用它的结果。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-198">You `await` each task before using its result.</span></span> <span data-ttu-id="7e2f9-199">下一步是创建表示其他工作组合的方式。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-199">The next step is to create methods that represent the combination of other work.</span></span> <span data-ttu-id="7e2f9-200">在提供早餐之前，你希望等待表示先烤面包再添加黄油和果酱的任务完成。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-200">Before serving breakfast, you want to await the task that represents toasting the bread before adding butter and jam.</span></span> <span data-ttu-id="7e2f9-201">你可以使用以下代码表示此工作：</span><span class="sxs-lookup"><span data-stu-id="7e2f9-201">You can represent that work with the following code:</span></span>
+
+[!code-csharp[ComposeToastTask](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V3/Program.cs#ComposeToastTask)]
+
+<span data-ttu-id="7e2f9-202">上述方式的签名中具有 `async` 修饰符。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-202">The preceding method has the `async` modifier in its signature.</span></span> <span data-ttu-id="7e2f9-203">它会向编译器发出信号，说明此方法包含 `await` 语句；也包含异步操作。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-203">That signals to the compiler that this method contains an `await` statement; it contains asynchronous operations.</span></span> <span data-ttu-id="7e2f9-204">此方法表示先烤面包，然后再添加黄油和果酱的任务。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-204">This method represents the task that toasts the bread, then adds butter and jam.</span></span> <span data-ttu-id="7e2f9-205">此方法返回表示这三个操作的组合的 <xref:System.Threading.Tasks.Task%601>。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-205">This method returns a <xref:System.Threading.Tasks.Task%601> that represents the composition of those three operations.</span></span> <span data-ttu-id="7e2f9-206">主要代码块现在变成了：</span><span class="sxs-lookup"><span data-stu-id="7e2f9-206">The main block of code now becomes:</span></span>
+
+[!code-csharp[StartConcurrentTasks](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V3/Program.cs#Main)]
+
+<span data-ttu-id="7e2f9-207">上述更改说明了使用异步代码的一项重要技术。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-207">The previous change illustrated an important technique for working with asynchronous code.</span></span> <span data-ttu-id="7e2f9-208">你可以通过将操作分离到一个返回任务的新方法中来组合任务。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-208">You compose tasks by separating the operations into a new method that returns a task.</span></span> <span data-ttu-id="7e2f9-209">可以选择等待此任务的时间。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-209">You can choose when to await that task.</span></span> <span data-ttu-id="7e2f9-210">可以同时启动其他任务。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-210">You can start other tasks concurrently.</span></span>
+
+## <a name="await-tasks-efficiently"></a><span data-ttu-id="7e2f9-211">高效地等待任务</span><span class="sxs-lookup"><span data-stu-id="7e2f9-211">Await tasks efficiently</span></span>
+
+<span data-ttu-id="7e2f9-212">可以通过使用 `Task` 类的方法改进上述代码末尾的一系列 `await` 语句。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-212">The series of `await` statements at the end of the preceding code can be improved by using methods of the `Task` class.</span></span> <span data-ttu-id="7e2f9-213">其中一个 API 是 <xref:System.Threading.Tasks.Task.WhenAll%2A>，它将返回一个其参数列表中的所有任务都已完成时才完成的 <xref:System.Threading.Tasks.Task>，如以下代码中所示：</span><span class="sxs-lookup"><span data-stu-id="7e2f9-213">One of those APIs is <xref:System.Threading.Tasks.Task.WhenAll%2A>, which returns a <xref:System.Threading.Tasks.Task> that completes when all the tasks in its argument list have completed, as shown in the following code:</span></span>
+
+```csharp
+await Task.WhenAll(eggTask, baconTask, toastTask);
+Console.WriteLine("eggs are ready");
+Console.WriteLine("bacon is ready");
+Console.WriteLine("toast is ready");
+Console.WriteLine("Breakfast is ready!");
+```
+
+<span data-ttu-id="7e2f9-214">另一种选择是使用 <xref:System.Threading.Tasks.Task.WhenAny%2A>，它将返回一个当其参数完成时才完成的 `Task<Task>`。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-214">Another option is to use <xref:System.Threading.Tasks.Task.WhenAny%2A>, which returns a `Task<Task>` that completes when any of its arguments completes.</span></span> <span data-ttu-id="7e2f9-215">你可以等待返回的任务，了解它已经完成了。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-215">You can await the returned task, knowing that it has already finished.</span></span> <span data-ttu-id="7e2f9-216">以下代码展示了可以如何使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 等待第一个任务完成，然后再处理其结果。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-216">The following code shows how you could use <xref:System.Threading.Tasks.Task.WhenAny%2A> to await the first task to finish and then process its result.</span></span> <span data-ttu-id="7e2f9-217">处理已完成任务的结果之后，可以从传递给 `WhenAny` 的任务列表中删除此已完成的任务。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-217">After processing the result from the completed task, you remove that completed task from the list of tasks passed to `WhenAny`.</span></span>
+
+[!code-csharp[AwaitAnyTask](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-final/Program.cs#AwaitAnyTask)]
+
+<span data-ttu-id="7e2f9-218">进行所有这些更改之后，`Main` 的最终版本类似于以下代码：</span><span class="sxs-lookup"><span data-stu-id="7e2f9-218">After all those changes, the final version of `Main` looks like the following code:</span></span>
+
+[!code-csharp[Final](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-final/Program.cs#Main)]
+
+<span data-ttu-id="7e2f9-219">此最终代码是异步的。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-219">This final code is asynchronous.</span></span> <span data-ttu-id="7e2f9-220">它更为准确地反映了一个人做早餐的流程。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-220">It more accurately reflects how a person would cook a breakfast.</span></span> <span data-ttu-id="7e2f9-221">将上述代码与本文中的第一个代码示例进行比较。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-221">Compare the preceding code with the first code sample in this article.</span></span> <span data-ttu-id="7e2f9-222">阅读代码时，核心操作仍然很明确。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-222">The core actions are still clear from reading the code.</span></span> <span data-ttu-id="7e2f9-223">你可以按照阅读本文开始时早餐制作说明的相同方式阅读此代码。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-223">You can read this code the same way you'd read those instructions for making a breakfast at the beginning of this article.</span></span> <span data-ttu-id="7e2f9-224">`async` 和 `await` 的语言功能支持每个人做出转变以遵循这些书面指示：尽可能启动任务，不要在等待任务完成时造成阻塞。</span><span class="sxs-lookup"><span data-stu-id="7e2f9-224">The language features for `async` and `await` provide the translation every person makes to follow those written instructions: start tasks as you can and don't block waiting for tasks to complete.</span></span>
