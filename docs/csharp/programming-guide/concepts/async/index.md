@@ -1,9 +1,15 @@
 ---
-title: 'C# 中的异步编程'
-description: '对使用 async、await、Task 和 Task<T> 的异步编程的 C# 语言支持的概述'
+title: C# 中的异步编程
+description: 对使用 async、await、Task 和 Task<T> 的异步编程的 C# 语言支持的概述
 ms.date: 03/18/2019
+ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504361"
 ---
-# <a name="the-task-asynchronous-programming-model-in-c"></a>C# 中基于任务的异步编程模型 #
+# <a name="the-task-asynchronous-programming-model-in-c"></a>C\# 中基于任务的异步编程模型
 
 基于任务的异步编程模型 (TAP) 提供了异步代码的抽象化。 你只需像往常一样将代码编写为一连串语句即可。 就如每条语句在下一句开始之前完成一样，你可以流畅地阅读代码。 编译器将执行若干转换，因为其中一些语句可能会开始运行并返回表示正在运行中的 <xref:System.Threading.Tasks.Task>。
 
