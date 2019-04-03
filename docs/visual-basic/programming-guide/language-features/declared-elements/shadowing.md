@@ -18,17 +18,17 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411000"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839387"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic 中的隐藏
 当两个编程元素共享相同的名称时，可以隐藏其中一个，或*卷影*，另一个。 在这种情况下，隐藏的元素不是可用于引用;相反，当你的代码使用的元素名称时，Visual Basic 编译器将其解析为隐藏的元素。  
   
-## <a name="purpose"></a>目标  
+## <a name="purpose"></a>用途  
  隐藏的主要目的是保护类成员的定义。 基本类可能需要进行更改，创建具有作为一个已定义的相同名称的元素。 如果发生这种情况，`Shadows`通过您的类将解析为成员的修饰符强制引用你定义，而不是新基类元素。  
   
 ## <a name="types-of-shadowing"></a>隐藏类型  
@@ -138,6 +138,7 @@ End Class
  在前面的示例中，变量`basObj`声明为类的基类。 分配`dervCls`到它的对象构成的扩大转换，因此有效。 但是，基本类不能访问该变量的隐藏版本`z`在派生类中，因此编译器解析`basObj.z`到原始的基类值。  
   
 ## <a name="see-also"></a>请参阅
+
 - [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [扩大转换和收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

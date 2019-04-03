@@ -2,12 +2,12 @@
 title: 成员资格和角色提供程序
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 3fd3d199a529c96299350aba7f43b0393e1178f5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: eb2c8a5bbe10d91a29ed040e89163279434c8f8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332892"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839751"
 ---
 # <a name="membership-and-role-provider"></a>成员资格和角色提供程序
 此“成员资格和角色提供程序”示例演示服务如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格和角色提供程序来对客户端进行身份验证和授权。  
@@ -198,4 +198,3 @@ ms.locfileid: "56332892"
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
-## <a name="see-also"></a>请参阅
