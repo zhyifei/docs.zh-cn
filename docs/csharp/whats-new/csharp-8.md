@@ -2,12 +2,12 @@
 title: C# 8.0 中的新增功能 - C# 指南
 description: 简要介绍 C# 8.0 中提供的新功能。 本文使用最新的预览版 2。
 ms.date: 02/12/2019
-ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262587"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545554"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 中的新增功能
 
@@ -164,18 +164,33 @@ public class Point
 }
 ```
 
-下面的方法使用位置模式来提取 `x` 和 `y` 的值。 然后，它使用 `when` 子句来确定该点的象限：
+此外，请考虑以下表示象限的各种位置的枚举：
 
 ```csharp
-static string Quadrant(Point p) => p switch
+public enum Quadrant
 {
-    (0, 0) => "origin",
-    (var x, var y) when x > 0 && y > 0 => "Quadrant 1",
-    (var x, var y) when x < 0 && y > 0 => "Quadrant 2",
-    (var x, var y) when x < 0 && y < 0 => "Quadrant 3",
-    (var x, var y) when x > 0 && y < 0 => "Quadrant 4",
-    (var x, var y) => "on a border",
-    _ => "unknown"
+    Unknown,
+    Origin,
+    One,
+    Two,
+    Three,
+    Four,
+    OnBorder
+}
+```
+
+下面的方法使用位置模式来提取 `x` 和 `y` 的值。 然后，它使用 `when` 子句来确定该点的 `Quadrant`：
+
+```csharp
+static Quadrant GetQuadrant(Point point) => point switch
+{
+    (0, 0) => Quadrant.Origin,
+    var (x, y) when x > 0 && y > 0 => Quadrant.One,
+    var (x, y) when x < 0 && y > 0 => Quadrant.Two,
+    var (x, y) when x < 0 && y < 0 => Quadrant.Three,
+    var (x, y) when x > 0 && y < 0 => Quadrant.Four,
+    var (_, _) => Quadrant.OnBorder,
+    _ => Quadrant.Unknown
 };
 ```
 
@@ -229,7 +244,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 
 ## <a name="static-local-functions"></a>静态本地函数
 
-现在可以向本地函数添加 `static` 修饰符，以确保本地函数不会从封闭范围捕获（引用）任何变量。 这样做会生成 `CS8421`，“静态本地函数不能包含对 <variable> 的引用。” 
+现在可以向本地函数添加 `static` 修饰符，以确保本地函数不会从封闭范围捕获（引用）任何变量。 这样做会生成 `CS8421`，“静态本地函数不能包含对 \<variable> 的引用”。 
 
 考虑下列代码。 本地函数 `LocalFunction` 访问在封闭范围（方法 `M`）中声明的变量 `y`。 因此，不能用 `static` 修饰符来声明 `LocalFunction`：
 

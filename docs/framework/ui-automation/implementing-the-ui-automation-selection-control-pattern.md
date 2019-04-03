@@ -34,7 +34,7 @@ ms.locfileid: "57673309"
  ![突出显示黄色的颜色选取器。](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 颜色样本字符串映射的示例  
   
--   菜单不支持 <xref:System.Windows.Automation.SelectionPattern>。 如果你正在处理包含图形和文本的菜单项（例如， **中的“视图”****菜单中的“预览窗格”**[!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]项）并需要传达状态，则应实现 <xref:System.Windows.Automation.Provider.IToggleProvider>。  
+-   菜单不支持 <xref:System.Windows.Automation.SelectionPattern>。 如果你正在处理包含图形和文本的菜单项（例如， **中的“视图”** **菜单中的“预览窗格”** [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]项）并需要传达状态，则应实现 <xref:System.Windows.Automation.Provider.IToggleProvider>。  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
 ## <a name="required-members-for-iselectionprovider"></a>ISelectionProvider 必需的成员  
