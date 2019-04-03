@@ -11,83 +11,84 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: fe08c855e4dd0adca68d48c3b32cb399033a9d46
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974921"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815565"
 ---
-# <a name="operator-procedures-visual-basic"></a><span data-ttu-id="9fcc6-102">运算符过程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9fcc6-102">Operator Procedures (Visual Basic)</span></span>
-<span data-ttu-id="9fcc6-103">运算符过程是一系列定义标准运算符的行为的 Visual Basic 语句 (如`*`， `<>`，或`And`) 上的类或结构定义。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-103">An operator procedure is a series of Visual Basic statements that define the behavior of a standard operator (such as `*`, `<>`, or `And`) on a class or structure you have defined.</span></span> <span data-ttu-id="9fcc6-104">这也称为*运算符重载*。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-104">This is also called *operator overloading*.</span></span>  
+# <a name="operator-procedures-visual-basic"></a><span data-ttu-id="f9c19-102">运算符过程 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9c19-102">Operator Procedures (Visual Basic)</span></span>
+<span data-ttu-id="f9c19-103">运算符过程是一系列定义标准运算符的行为的 Visual Basic 语句 (如`*`， `<>`，或`And`) 上的类或结构定义。</span><span class="sxs-lookup"><span data-stu-id="f9c19-103">An operator procedure is a series of Visual Basic statements that define the behavior of a standard operator (such as `*`, `<>`, or `And`) on a class or structure you have defined.</span></span> <span data-ttu-id="f9c19-104">这也称为*运算符重载*。</span><span class="sxs-lookup"><span data-stu-id="f9c19-104">This is also called *operator overloading*.</span></span>  
   
-## <a name="when-to-define-operator-procedures"></a><span data-ttu-id="9fcc6-105">何时定义运算符过程</span><span class="sxs-lookup"><span data-stu-id="9fcc6-105">When to Define Operator Procedures</span></span>  
- <span data-ttu-id="9fcc6-106">当已定义的类或结构时，可声明为类或结构的类型的变量。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-106">When you have defined a class or structure, you can declare variables to be of the type of that class or structure.</span></span> <span data-ttu-id="9fcc6-107">有时此类变量需要参与一个操作作为表达式的一部分。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-107">Sometimes such a variable needs to participate in an operation as part of an expression.</span></span> <span data-ttu-id="9fcc6-108">若要执行此操作，它必须是运算符的操作数。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-108">To do this, it must be an operand of an operator.</span></span>  
+## <a name="when-to-define-operator-procedures"></a><span data-ttu-id="f9c19-105">何时定义运算符过程</span><span class="sxs-lookup"><span data-stu-id="f9c19-105">When to Define Operator Procedures</span></span>  
+ <span data-ttu-id="f9c19-106">当已定义的类或结构时，可声明为类或结构的类型的变量。</span><span class="sxs-lookup"><span data-stu-id="f9c19-106">When you have defined a class or structure, you can declare variables to be of the type of that class or structure.</span></span> <span data-ttu-id="f9c19-107">有时此类变量需要参与一个操作作为表达式的一部分。</span><span class="sxs-lookup"><span data-stu-id="f9c19-107">Sometimes such a variable needs to participate in an operation as part of an expression.</span></span> <span data-ttu-id="f9c19-108">若要执行此操作，它必须是运算符的操作数。</span><span class="sxs-lookup"><span data-stu-id="f9c19-108">To do this, it must be an operand of an operator.</span></span>  
   
- <span data-ttu-id="9fcc6-109">Visual Basic 仅在其基本数据类型上定义运算符。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-109">Visual Basic defines operators only on its fundamental data types.</span></span> <span data-ttu-id="9fcc6-110">您可以定义一个运算符的行为或两个操作数均为类或结构的类型。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-110">You can define the behavior of an operator when one or both of the operands are of the type of your class or structure.</span></span>  
+ <span data-ttu-id="f9c19-109">Visual Basic 仅在其基本数据类型上定义运算符。</span><span class="sxs-lookup"><span data-stu-id="f9c19-109">Visual Basic defines operators only on its fundamental data types.</span></span> <span data-ttu-id="f9c19-110">您可以定义一个运算符的行为或两个操作数均为类或结构的类型。</span><span class="sxs-lookup"><span data-stu-id="f9c19-110">You can define the behavior of an operator when one or both of the operands are of the type of your class or structure.</span></span>  
   
- <span data-ttu-id="9fcc6-111">有关详细信息，请参阅[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-111">For more information, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).</span></span>  
+ <span data-ttu-id="f9c19-111">有关详细信息，请参阅[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="f9c19-111">For more information, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).</span></span>  
   
-## <a name="types-of-operator-procedure"></a><span data-ttu-id="9fcc6-112">类型的运算符过程</span><span class="sxs-lookup"><span data-stu-id="9fcc6-112">Types of Operator Procedure</span></span>  
- <span data-ttu-id="9fcc6-113">运算符过程可以是以下类型之一：</span><span class="sxs-lookup"><span data-stu-id="9fcc6-113">An operator procedure can be one of the following types:</span></span>  
+## <a name="types-of-operator-procedure"></a><span data-ttu-id="f9c19-112">类型的运算符过程</span><span class="sxs-lookup"><span data-stu-id="f9c19-112">Types of Operator Procedure</span></span>  
+ <span data-ttu-id="f9c19-113">运算符过程可以是以下类型之一：</span><span class="sxs-lookup"><span data-stu-id="f9c19-113">An operator procedure can be one of the following types:</span></span>  
   
--   <span data-ttu-id="9fcc6-114">其中的参数是类或结构的类型的一元运算符的定义。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-114">A definition of a unary operator where the argument is of the type of your class or structure.</span></span>  
+-   <span data-ttu-id="f9c19-114">其中的参数是类或结构的类型的一元运算符的定义。</span><span class="sxs-lookup"><span data-stu-id="f9c19-114">A definition of a unary operator where the argument is of the type of your class or structure.</span></span>  
   
--   <span data-ttu-id="9fcc6-115">其中至少一个参数是类或结构的类型的二进制运算符的定义。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-115">A definition of a binary operator where at least one of the arguments is of the type of your class or structure.</span></span>  
+-   <span data-ttu-id="f9c19-115">其中至少一个参数是类或结构的类型的二进制运算符的定义。</span><span class="sxs-lookup"><span data-stu-id="f9c19-115">A definition of a binary operator where at least one of the arguments is of the type of your class or structure.</span></span>  
   
--   <span data-ttu-id="9fcc6-116">其中的参数是类或结构的类型的转换运算符的定义。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-116">A definition of a conversion operator where the argument is of the type of your class or structure.</span></span>  
+-   <span data-ttu-id="f9c19-116">其中的参数是类或结构的类型的转换运算符的定义。</span><span class="sxs-lookup"><span data-stu-id="f9c19-116">A definition of a conversion operator where the argument is of the type of your class or structure.</span></span>  
   
--   <span data-ttu-id="9fcc6-117">转换运算符返回的类或结构类型的定义。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-117">A definition of a conversion operator that returns the type of your class or structure.</span></span>  
+-   <span data-ttu-id="f9c19-117">转换运算符返回的类或结构类型的定义。</span><span class="sxs-lookup"><span data-stu-id="f9c19-117">A definition of a conversion operator that returns the type of your class or structure.</span></span>  
   
- <span data-ttu-id="9fcc6-118">转换运算符始终是一元，并始终使用`CType`用作您定义的运算符。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-118">Conversion operators are always unary, and you always use `CType` as the operator you are defining.</span></span>  
+ <span data-ttu-id="f9c19-118">转换运算符始终是一元，并始终使用`CType`用作您定义的运算符。</span><span class="sxs-lookup"><span data-stu-id="f9c19-118">Conversion operators are always unary, and you always use `CType` as the operator you are defining.</span></span>  
   
-## <a name="declaration-syntax"></a><span data-ttu-id="9fcc6-119">声明语法</span><span class="sxs-lookup"><span data-stu-id="9fcc6-119">Declaration Syntax</span></span>  
- <span data-ttu-id="9fcc6-120">声明运算符过程的语法如下所示：</span><span class="sxs-lookup"><span data-stu-id="9fcc6-120">The syntax for declaring an operator procedure is as follows:</span></span>  
+## <a name="declaration-syntax"></a><span data-ttu-id="f9c19-119">声明语法</span><span class="sxs-lookup"><span data-stu-id="f9c19-119">Declaration Syntax</span></span>  
+ <span data-ttu-id="f9c19-120">声明运算符过程的语法如下所示：</span><span class="sxs-lookup"><span data-stu-id="f9c19-120">The syntax for declaring an operator procedure is as follows:</span></span>  
   
- <span data-ttu-id="9fcc6-121">`Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol*  `(` *operand1*  `[,`  *operand2* `]) As`  *datatype*</span><span class="sxs-lookup"><span data-stu-id="9fcc6-121">`Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol*  `(` *operand1*  `[,`  *operand2* `]) As`  *datatype*</span></span>  
+ <span data-ttu-id="f9c19-121">`Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol*  `(` *operand1*  `[,`  *operand2* `]) As`  *datatype*</span><span class="sxs-lookup"><span data-stu-id="f9c19-121">`Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol*  `(` *operand1*  `[,`  *operand2* `]) As`  *datatype*</span></span>  
   
  `' Statements of the operator procedure.`  
   
  `End Operator`  
   
- <span data-ttu-id="9fcc6-122">您使用`Widening`或`Narrowing`关键字仅在类型转换运算符。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-122">You use the `Widening` or `Narrowing` keyword only on a type conversion operator.</span></span> <span data-ttu-id="9fcc6-123">运算符符号始终是[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)的类型转换运算符。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-123">The operator symbol is always [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) for a type conversion operator.</span></span>  
+ <span data-ttu-id="f9c19-122">您使用`Widening`或`Narrowing`关键字仅在类型转换运算符。</span><span class="sxs-lookup"><span data-stu-id="f9c19-122">You use the `Widening` or `Narrowing` keyword only on a type conversion operator.</span></span> <span data-ttu-id="f9c19-123">运算符符号始终是[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)的类型转换运算符。</span><span class="sxs-lookup"><span data-stu-id="f9c19-123">The operator symbol is always [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) for a type conversion operator.</span></span>  
   
- <span data-ttu-id="9fcc6-124">声明两个操作数定义二元运算符，并声明一个要定义一元运算符，包括类型转换运算符的操作数。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-124">You declare two operands to define a binary operator, and you declare one operand to define a unary operator, including a type conversion operator.</span></span> <span data-ttu-id="9fcc6-125">必须声明所有操作数`ByVal`。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-125">All operands must be declared `ByVal`.</span></span>  
+ <span data-ttu-id="f9c19-124">声明两个操作数定义二元运算符，并声明一个要定义一元运算符，包括类型转换运算符的操作数。</span><span class="sxs-lookup"><span data-stu-id="f9c19-124">You declare two operands to define a binary operator, and you declare one operand to define a unary operator, including a type conversion operator.</span></span> <span data-ttu-id="f9c19-125">必须声明所有操作数`ByVal`。</span><span class="sxs-lookup"><span data-stu-id="f9c19-125">All operands must be declared `ByVal`.</span></span>  
   
- <span data-ttu-id="9fcc6-126">相同的方式声明的参数声明每个操作数[Sub 过程](./sub-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-126">You declare each operand the same way you declare parameters for [Sub Procedures](./sub-procedures.md).</span></span>  
+ <span data-ttu-id="f9c19-126">相同的方式声明的参数声明每个操作数[Sub 过程](./sub-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="f9c19-126">You declare each operand the same way you declare parameters for [Sub Procedures](./sub-procedures.md).</span></span>  
   
-### <a name="data-type"></a><span data-ttu-id="9fcc6-127">数据类型</span><span class="sxs-lookup"><span data-stu-id="9fcc6-127">Data Type</span></span>  
- <span data-ttu-id="9fcc6-128">要在类或已定义的结构上定义运算符，因为至少一个操作数必须是类或结构的数据类型。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-128">Because you are defining an operator on a class or structure you have defined, at least one of the operands must be of the data type of that class or structure.</span></span> <span data-ttu-id="9fcc6-129">有关类型转换运算符，操作数或返回类型必须是类或结构的数据类型。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-129">For a type conversion operator, either the operand or the return type must be of the data type of the class or structure.</span></span>  
+### <a name="data-type"></a><span data-ttu-id="f9c19-127">数据类型</span><span class="sxs-lookup"><span data-stu-id="f9c19-127">Data Type</span></span>  
+ <span data-ttu-id="f9c19-128">要在类或已定义的结构上定义运算符，因为至少一个操作数必须是类或结构的数据类型。</span><span class="sxs-lookup"><span data-stu-id="f9c19-128">Because you are defining an operator on a class or structure you have defined, at least one of the operands must be of the data type of that class or structure.</span></span> <span data-ttu-id="f9c19-129">有关类型转换运算符，操作数或返回类型必须是类或结构的数据类型。</span><span class="sxs-lookup"><span data-stu-id="f9c19-129">For a type conversion operator, either the operand or the return type must be of the data type of the class or structure.</span></span>  
   
- <span data-ttu-id="9fcc6-130">有关更多详细信息，请参阅[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-130">For more details, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).</span></span>  
+ <span data-ttu-id="f9c19-130">有关更多详细信息，请参阅[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="f9c19-130">For more details, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).</span></span>  
   
-## <a name="calling-syntax"></a><span data-ttu-id="9fcc6-131">调用语法</span><span class="sxs-lookup"><span data-stu-id="9fcc6-131">Calling Syntax</span></span>  
- <span data-ttu-id="9fcc6-132">通过在表达式中使用的运算符符号的隐式调用运算符过程。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-132">You invoke an operator procedure implicitly by using the operator symbol in an expression.</span></span> <span data-ttu-id="9fcc6-133">提供操作数的相同方式为预定义的运算符。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-133">You supply the operands the same way you do for predefined operators.</span></span>  
+## <a name="calling-syntax"></a><span data-ttu-id="f9c19-131">调用语法</span><span class="sxs-lookup"><span data-stu-id="f9c19-131">Calling Syntax</span></span>  
+ <span data-ttu-id="f9c19-132">通过在表达式中使用的运算符符号的隐式调用运算符过程。</span><span class="sxs-lookup"><span data-stu-id="f9c19-132">You invoke an operator procedure implicitly by using the operator symbol in an expression.</span></span> <span data-ttu-id="f9c19-133">提供操作数的相同方式为预定义的运算符。</span><span class="sxs-lookup"><span data-stu-id="f9c19-133">You supply the operands the same way you do for predefined operators.</span></span>  
   
- <span data-ttu-id="9fcc6-134">隐式调用运算符过程的语法如下所示：</span><span class="sxs-lookup"><span data-stu-id="9fcc6-134">The syntax for an implicit call to an operator procedure is as follows:</span></span>  
+ <span data-ttu-id="f9c19-134">隐式调用运算符过程的语法如下所示：</span><span class="sxs-lookup"><span data-stu-id="f9c19-134">The syntax for an implicit call to an operator procedure is as follows:</span></span>  
   
- <span data-ttu-id="9fcc6-135">`Dim testStruct As`  *structurename*</span><span class="sxs-lookup"><span data-stu-id="9fcc6-135">`Dim testStruct As`  *structurename*</span></span>  
+ <span data-ttu-id="f9c19-135">`Dim testStruct As`  *structurename*</span><span class="sxs-lookup"><span data-stu-id="f9c19-135">`Dim testStruct As`  *structurename*</span></span>  
   
- <span data-ttu-id="9fcc6-136">`Dim testNewStruct As`  *structurename*  `= testStruct`  *operatorsymbol*  `10`</span><span class="sxs-lookup"><span data-stu-id="9fcc6-136">`Dim testNewStruct As`  *structurename*  `= testStruct`  *operatorsymbol*  `10`</span></span>  
+ <span data-ttu-id="f9c19-136">`Dim testNewStruct As`  *structurename*  `= testStruct`  *operatorsymbol*  `10`</span><span class="sxs-lookup"><span data-stu-id="f9c19-136">`Dim testNewStruct As`  *structurename*  `= testStruct`  *operatorsymbol*  `10`</span></span>  
   
-### <a name="illustration-of-declaration-and-call"></a><span data-ttu-id="9fcc6-137">声明和调用的插图</span><span class="sxs-lookup"><span data-stu-id="9fcc6-137">Illustration of Declaration and Call</span></span>  
- <span data-ttu-id="9fcc6-138">以下结构将 128 位带符号的整数值存储为构成的高序位，低位部分。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-138">The following structure stores a signed 128-bit integer value as the constituent high-order and low-order parts.</span></span> <span data-ttu-id="9fcc6-139">它定义`+`运算符将两个`veryLong`值，并生成生成`veryLong`值。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-139">It defines the `+` operator to add two `veryLong` values and generate a resulting `veryLong` value.</span></span>  
+### <a name="illustration-of-declaration-and-call"></a><span data-ttu-id="f9c19-137">声明和调用的插图</span><span class="sxs-lookup"><span data-stu-id="f9c19-137">Illustration of Declaration and Call</span></span>  
+ <span data-ttu-id="f9c19-138">以下结构将 128 位带符号的整数值存储为构成的高序位，低位部分。</span><span class="sxs-lookup"><span data-stu-id="f9c19-138">The following structure stores a signed 128-bit integer value as the constituent high-order and low-order parts.</span></span> <span data-ttu-id="f9c19-139">它定义`+`运算符将两个`veryLong`值，并生成生成`veryLong`值。</span><span class="sxs-lookup"><span data-stu-id="f9c19-139">It defines the `+` operator to add two `veryLong` values and generate a resulting `veryLong` value.</span></span>  
   
  [!code-vb[VbVbcnProcedures#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#23)]  
   
- <span data-ttu-id="9fcc6-140">下面的示例演示对典型调用`+`上定义的运算符`veryLong`。</span><span class="sxs-lookup"><span data-stu-id="9fcc6-140">The following example shows a typical call to the `+` operator defined on `veryLong`.</span></span>  
+ <span data-ttu-id="f9c19-140">下面的示例演示对典型调用`+`上定义的运算符`veryLong`。</span><span class="sxs-lookup"><span data-stu-id="f9c19-140">The following example shows a typical call to the `+` operator defined on `veryLong`.</span></span>  
   
  [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
   
   
-## <a name="see-also"></a><span data-ttu-id="9fcc6-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="9fcc6-141">See also</span></span>
-- [<span data-ttu-id="9fcc6-142">过程</span><span class="sxs-lookup"><span data-stu-id="9fcc6-142">Procedures</span></span>](./index.md)
-- [<span data-ttu-id="9fcc6-143">Sub 过程</span><span class="sxs-lookup"><span data-stu-id="9fcc6-143">Sub Procedures</span></span>](./sub-procedures.md)
-- [<span data-ttu-id="9fcc6-144">Function 过程</span><span class="sxs-lookup"><span data-stu-id="9fcc6-144">Function Procedures</span></span>](./function-procedures.md)
-- [<span data-ttu-id="9fcc6-145">属性过程</span><span class="sxs-lookup"><span data-stu-id="9fcc6-145">Property Procedures</span></span>](./property-procedures.md)
-- [<span data-ttu-id="9fcc6-146">过程参数和自变量</span><span class="sxs-lookup"><span data-stu-id="9fcc6-146">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
-- [<span data-ttu-id="9fcc6-147">Operator Statement</span><span class="sxs-lookup"><span data-stu-id="9fcc6-147">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [<span data-ttu-id="9fcc6-148">如何：定义运算符</span><span class="sxs-lookup"><span data-stu-id="9fcc6-148">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)
-- [<span data-ttu-id="9fcc6-149">如何：定义转换运算符</span><span class="sxs-lookup"><span data-stu-id="9fcc6-149">How to: Define a Conversion Operator</span></span>](./how-to-define-a-conversion-operator.md)
-- [<span data-ttu-id="9fcc6-150">如何：调用运算符过程</span><span class="sxs-lookup"><span data-stu-id="9fcc6-150">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)
-- [<span data-ttu-id="9fcc6-151">如何：使用定义运算符的类</span><span class="sxs-lookup"><span data-stu-id="9fcc6-151">How to: Use a Class that Defines Operators</span></span>](./how-to-use-a-class-that-defines-operators.md)
+## <a name="see-also"></a><span data-ttu-id="f9c19-141">请参阅</span><span class="sxs-lookup"><span data-stu-id="f9c19-141">See also</span></span>
+
+- [<span data-ttu-id="f9c19-142">过程</span><span class="sxs-lookup"><span data-stu-id="f9c19-142">Procedures</span></span>](./index.md)
+- [<span data-ttu-id="f9c19-143">Sub 过程</span><span class="sxs-lookup"><span data-stu-id="f9c19-143">Sub Procedures</span></span>](./sub-procedures.md)
+- [<span data-ttu-id="f9c19-144">Function 过程</span><span class="sxs-lookup"><span data-stu-id="f9c19-144">Function Procedures</span></span>](./function-procedures.md)
+- [<span data-ttu-id="f9c19-145">属性过程</span><span class="sxs-lookup"><span data-stu-id="f9c19-145">Property Procedures</span></span>](./property-procedures.md)
+- [<span data-ttu-id="f9c19-146">过程参数和自变量</span><span class="sxs-lookup"><span data-stu-id="f9c19-146">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
+- [<span data-ttu-id="f9c19-147">Operator Statement</span><span class="sxs-lookup"><span data-stu-id="f9c19-147">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [<span data-ttu-id="f9c19-148">如何：定义运算符</span><span class="sxs-lookup"><span data-stu-id="f9c19-148">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)
+- [<span data-ttu-id="f9c19-149">如何：定义转换运算符</span><span class="sxs-lookup"><span data-stu-id="f9c19-149">How to: Define a Conversion Operator</span></span>](./how-to-define-a-conversion-operator.md)
+- [<span data-ttu-id="f9c19-150">如何：调用运算符过程</span><span class="sxs-lookup"><span data-stu-id="f9c19-150">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)
+- [<span data-ttu-id="f9c19-151">如何：使用定义运算符的类</span><span class="sxs-lookup"><span data-stu-id="f9c19-151">How to: Use a Class that Defines Operators</span></span>](./how-to-use-a-class-that-defines-operators.md)

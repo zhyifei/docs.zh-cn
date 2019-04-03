@@ -2,18 +2,18 @@
 title: 如何：查询字符串 (LINQ) (Visual Basic 中) 中的字符
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 3a4f3bbca313747e0b16170719b9028e5dc9174f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f460f635c581eef5655c5707e3dd356e7986d74
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559744"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819484"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a><span data-ttu-id="155af-102">如何：查询字符串 (LINQ) (Visual Basic 中) 中的字符</span><span class="sxs-lookup"><span data-stu-id="155af-102">How to: Query for Characters in a String (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="155af-103">因为 <xref:System.String> 类可实现泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口，因此任何字符串都可以字符序列的形式进行查询。</span><span class="sxs-lookup"><span data-stu-id="155af-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="155af-104">但是，这不是 LINQ 的一般用法。</span><span class="sxs-lookup"><span data-stu-id="155af-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="155af-105">对于复杂的模式匹配操作，请使用 <xref:System.Text.RegularExpressions.Regex> 类。</span><span class="sxs-lookup"><span data-stu-id="155af-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  
+# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a><span data-ttu-id="3deaa-102">如何：查询字符串 (LINQ) (Visual Basic 中) 中的字符</span><span class="sxs-lookup"><span data-stu-id="3deaa-102">How to: Query for Characters in a String (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="3deaa-103">因为 <xref:System.String> 类可实现泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口，因此任何字符串都可以字符序列的形式进行查询。</span><span class="sxs-lookup"><span data-stu-id="3deaa-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="3deaa-104">但是，这不是 LINQ 的一般用法。</span><span class="sxs-lookup"><span data-stu-id="3deaa-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="3deaa-105">对于复杂的模式匹配操作，请使用 <xref:System.Text.RegularExpressions.Regex> 类。</span><span class="sxs-lookup"><span data-stu-id="3deaa-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="155af-106">示例</span><span class="sxs-lookup"><span data-stu-id="155af-106">Example</span></span>  
- <span data-ttu-id="155af-107">以下示例查询一个字符串以确定它所包含的数字数量。</span><span class="sxs-lookup"><span data-stu-id="155af-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="155af-108">请注意，在第一次执行此查询后将“重用”此查询。</span><span class="sxs-lookup"><span data-stu-id="155af-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="155af-109">这是可能的，因为查询本身并不存储任何实际的结果。</span><span class="sxs-lookup"><span data-stu-id="155af-109">This is possible because the query itself does not store any actual results.</span></span>  
+## <a name="example"></a><span data-ttu-id="3deaa-106">示例</span><span class="sxs-lookup"><span data-stu-id="3deaa-106">Example</span></span>  
+ <span data-ttu-id="3deaa-107">以下示例查询一个字符串以确定它所包含的数字数量。</span><span class="sxs-lookup"><span data-stu-id="3deaa-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="3deaa-108">请注意，在第一次执行此查询后将“重用”此查询。</span><span class="sxs-lookup"><span data-stu-id="3deaa-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="3deaa-109">这是可能的，因为查询本身并不存储任何实际的结果。</span><span class="sxs-lookup"><span data-stu-id="3deaa-109">This is possible because the query itself does not store any actual results.</span></span>  
   
 ```vb  
 Class QueryAString  
@@ -54,9 +54,10 @@ End Class
 ' ABCDE99F  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="155af-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="155af-110">Compiling the Code</span></span>  
- <span data-ttu-id="155af-111">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。</span><span class="sxs-lookup"><span data-stu-id="155af-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="3deaa-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="3deaa-110">Compiling the Code</span></span>  
+ <span data-ttu-id="3deaa-111">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。</span><span class="sxs-lookup"><span data-stu-id="3deaa-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="155af-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="155af-112">See also</span></span>
-- [<span data-ttu-id="155af-113">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="155af-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="155af-114">如何：合并 LINQ 查询与正则表达式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="155af-114">How to: Combine LINQ Queries with Regular Expressions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="3deaa-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="3deaa-112">See also</span></span>
+
+- [<span data-ttu-id="3deaa-113">LINQ 和字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3deaa-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="3deaa-114">如何：合并 LINQ 查询与正则表达式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3deaa-114">How to: Combine LINQ Queries with Regular Expressions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)

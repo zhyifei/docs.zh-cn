@@ -6,28 +6,28 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: 62c0280e3773d2e3ff15bc164d9e0e6cacb7bd4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4ff7c8e616c9126eae11a23e001c219dcbc0907
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544583"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819198"
 ---
-# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a><span data-ttu-id="bd532-102">如何：确定两个对象是否相关 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bd532-102">How to: Determine Whether Two Objects Are Related (Visual Basic)</span></span>
-<span data-ttu-id="bd532-103">您可以比较两个对象以确定此关系，如果有，在创建的类之间。</span><span class="sxs-lookup"><span data-stu-id="bd532-103">You can compare two objects to determine the relationship, if any, between the classes from which they are created.</span></span> <span data-ttu-id="bd532-104"><xref:System.Type.IsInstanceOfType%2A>方法<xref:System.Type?displayProperty=nameWithType>类返回`True`或如果指定的类继承自当前类中，如果当前类型是指定类所支持的接口。</span><span class="sxs-lookup"><span data-stu-id="bd532-104">The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.</span></span>  
+# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a><span data-ttu-id="26cec-102">如何：确定两个对象是否相关 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="26cec-102">How to: Determine Whether Two Objects Are Related (Visual Basic)</span></span>
+<span data-ttu-id="26cec-103">您可以比较两个对象以确定此关系，如果有，在创建的类之间。</span><span class="sxs-lookup"><span data-stu-id="26cec-103">You can compare two objects to determine the relationship, if any, between the classes from which they are created.</span></span> <span data-ttu-id="26cec-104"><xref:System.Type.IsInstanceOfType%2A>方法<xref:System.Type?displayProperty=nameWithType>类返回`True`或如果指定的类继承自当前类中，如果当前类型是指定类所支持的接口。</span><span class="sxs-lookup"><span data-stu-id="26cec-104">The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.</span></span>  
   
-### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a><span data-ttu-id="bd532-105">若要确定是否一个对象继承自另一个对象的类或接口</span><span class="sxs-lookup"><span data-stu-id="bd532-105">To determine if one object inherits from another object's class or interface</span></span>  
+### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a><span data-ttu-id="26cec-105">若要确定是否一个对象继承自另一个对象的类或接口</span><span class="sxs-lookup"><span data-stu-id="26cec-105">To determine if one object inherits from another object's class or interface</span></span>  
   
-1.  <span data-ttu-id="bd532-106">您认为在对象上可能具有的基类型，则调用<xref:System.Object.GetType%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="bd532-106">On the object you think might be of the base type, invoke the <xref:System.Object.GetType%2A> method.</span></span>  
+1.  <span data-ttu-id="26cec-106">您认为在对象上可能具有的基类型，则调用<xref:System.Object.GetType%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="26cec-106">On the object you think might be of the base type, invoke the <xref:System.Object.GetType%2A> method.</span></span>  
   
-2.  <span data-ttu-id="bd532-107">上<xref:System.Type?displayProperty=nameWithType>返回的对象<xref:System.Object.GetType%2A>，调用<xref:System.Type.IsInstanceOfType%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="bd532-107">On the <xref:System.Type?displayProperty=nameWithType> object returned by <xref:System.Object.GetType%2A>, invoke the <xref:System.Type.IsInstanceOfType%2A> method.</span></span>  
+2.  <span data-ttu-id="26cec-107">上<xref:System.Type?displayProperty=nameWithType>返回的对象<xref:System.Object.GetType%2A>，调用<xref:System.Type.IsInstanceOfType%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="26cec-107">On the <xref:System.Type?displayProperty=nameWithType> object returned by <xref:System.Object.GetType%2A>, invoke the <xref:System.Type.IsInstanceOfType%2A> method.</span></span>  
   
-3.  <span data-ttu-id="bd532-108">中的参数列表<xref:System.Type.IsInstanceOfType%2A>，指定你认为对象可能是派生类型。</span><span class="sxs-lookup"><span data-stu-id="bd532-108">In the argument list for <xref:System.Type.IsInstanceOfType%2A>, specify the object you think might be of the derived type.</span></span>  
+3.  <span data-ttu-id="26cec-108">中的参数列表<xref:System.Type.IsInstanceOfType%2A>，指定你认为对象可能是派生类型。</span><span class="sxs-lookup"><span data-stu-id="26cec-108">In the argument list for <xref:System.Type.IsInstanceOfType%2A>, specify the object you think might be of the derived type.</span></span>  
   
-     <span data-ttu-id="bd532-109"><xref:System.Type.IsInstanceOfType%2A> 返回`True`如果从其自变量类型继承<xref:System.Type?displayProperty=nameWithType>对象类型。</span><span class="sxs-lookup"><span data-stu-id="bd532-109"><xref:System.Type.IsInstanceOfType%2A> returns `True` if its argument type inherits from the <xref:System.Type?displayProperty=nameWithType> object type.</span></span>  
+     <span data-ttu-id="26cec-109"><xref:System.Type.IsInstanceOfType%2A> 返回`True`如果从其自变量类型继承<xref:System.Type?displayProperty=nameWithType>对象类型。</span><span class="sxs-lookup"><span data-stu-id="26cec-109"><xref:System.Type.IsInstanceOfType%2A> returns `True` if its argument type inherits from the <xref:System.Type?displayProperty=nameWithType> object type.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bd532-110">示例</span><span class="sxs-lookup"><span data-stu-id="bd532-110">Example</span></span>  
- <span data-ttu-id="bd532-111">下面的示例确定一个对象是否表示派生自另一个对象的类的类。</span><span class="sxs-lookup"><span data-stu-id="bd532-111">The following example determines whether one object represents a class derived from another object's class.</span></span>  
+## <a name="example"></a><span data-ttu-id="26cec-110">示例</span><span class="sxs-lookup"><span data-stu-id="26cec-110">Example</span></span>  
+ <span data-ttu-id="26cec-111">下面的示例确定一个对象是否表示派生自另一个对象的类的类。</span><span class="sxs-lookup"><span data-stu-id="26cec-111">The following example determines whether one object represents a class derived from another object's class.</span></span>  
   
 ```  
 Public Class baseClass  
@@ -45,13 +45,14 @@ Public Class testTheseClasses
 End Class  
 ```  
   
- <span data-ttu-id="bd532-112">请注意对的调用中的两个对象变量的意外的位置<xref:System.Type.IsInstanceOfType%2A>。</span><span class="sxs-lookup"><span data-stu-id="bd532-112">Note the unexpected placement of the two object variables in the call to <xref:System.Type.IsInstanceOfType%2A>.</span></span> <span data-ttu-id="bd532-113">假定的基类型用于生成<xref:System.Type?displayProperty=nameWithType>类，并假定的派生的类型作为参数传递<xref:System.Type.IsInstanceOfType%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="bd532-113">The supposed base type is used to generate the <xref:System.Type?displayProperty=nameWithType> class, and the supposed derived type is passed as an argument to the <xref:System.Type.IsInstanceOfType%2A> method.</span></span>  
+ <span data-ttu-id="26cec-112">请注意对的调用中的两个对象变量的意外的位置<xref:System.Type.IsInstanceOfType%2A>。</span><span class="sxs-lookup"><span data-stu-id="26cec-112">Note the unexpected placement of the two object variables in the call to <xref:System.Type.IsInstanceOfType%2A>.</span></span> <span data-ttu-id="26cec-113">假定的基类型用于生成<xref:System.Type?displayProperty=nameWithType>类，并假定的派生的类型作为参数传递<xref:System.Type.IsInstanceOfType%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="26cec-113">The supposed base type is used to generate the <xref:System.Type?displayProperty=nameWithType> class, and the supposed derived type is passed as an argument to the <xref:System.Type.IsInstanceOfType%2A> method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd532-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="bd532-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="26cec-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="26cec-114">See also</span></span>
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [<span data-ttu-id="bd532-115">Object 数据类型</span><span class="sxs-lookup"><span data-stu-id="bd532-115">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [<span data-ttu-id="bd532-116">对象变量</span><span class="sxs-lookup"><span data-stu-id="bd532-116">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="bd532-117">对象变量值</span><span class="sxs-lookup"><span data-stu-id="bd532-117">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [<span data-ttu-id="bd532-118">如何：确定两个对象是否相同</span><span class="sxs-lookup"><span data-stu-id="bd532-118">How to: Determine Whether Two Objects Are Identical</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [<span data-ttu-id="26cec-115">Object 数据类型</span><span class="sxs-lookup"><span data-stu-id="26cec-115">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [<span data-ttu-id="26cec-116">对象变量</span><span class="sxs-lookup"><span data-stu-id="26cec-116">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="26cec-117">对象变量值</span><span class="sxs-lookup"><span data-stu-id="26cec-117">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [<span data-ttu-id="26cec-118">如何：确定两个对象是否相同</span><span class="sxs-lookup"><span data-stu-id="26cec-118">How to: Determine Whether Two Objects Are Identical</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

@@ -7,29 +7,30 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - validation [Visual Basic], strings
 ms.assetid: 9a1acf9b-7e2c-40cb-bba4-656ee2bc2ed0
-ms.openlocfilehash: 5b878371a5cfae46edab6134e9468db2596ed78b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab7b41e03e561a619349176c6bf7e021e1399730
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640948"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819211"
 ---
-# <a name="validating-strings-in-visual-basic"></a><span data-ttu-id="564b0-102">验证字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="564b0-102">Validating Strings in Visual Basic</span></span>
-<span data-ttu-id="564b0-103">本部分讨论如何验证在 Visual Basic 中的字符串。</span><span class="sxs-lookup"><span data-stu-id="564b0-103">This section discusses how to validate strings in Visual Basic.</span></span>  
+# <a name="validating-strings-in-visual-basic"></a><span data-ttu-id="3fa81-102">验证字符串 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3fa81-102">Validating Strings in Visual Basic</span></span>
+<span data-ttu-id="3fa81-103">本部分讨论如何验证在 Visual Basic 中的字符串。</span><span class="sxs-lookup"><span data-stu-id="3fa81-103">This section discusses how to validate strings in Visual Basic.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="564b0-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="564b0-104">In This Section</span></span>  
- [<span data-ttu-id="564b0-105">如何：验证文件的名称和在 Visual Basic 中的路径</span><span class="sxs-lookup"><span data-stu-id="564b0-105">How to: Validate File Names and Paths in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
- <span data-ttu-id="564b0-106">如何确定字符串是否表示文件名称或路径。</span><span class="sxs-lookup"><span data-stu-id="564b0-106">How to determine whether a string represents a file name or path.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="3fa81-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="3fa81-104">In This Section</span></span>  
+ [<span data-ttu-id="3fa81-105">如何：验证文件的名称和在 Visual Basic 中的路径</span><span class="sxs-lookup"><span data-stu-id="3fa81-105">How to: Validate File Names and Paths in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
+ <span data-ttu-id="3fa81-106">如何确定字符串是否表示文件名称或路径。</span><span class="sxs-lookup"><span data-stu-id="3fa81-106">How to determine whether a string represents a file name or path.</span></span>  
   
- [<span data-ttu-id="564b0-107">如何：验证表示日期或时间的字符串</span><span class="sxs-lookup"><span data-stu-id="564b0-107">How to: Validate Strings That Represent Dates or Times</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-strings-that-represent-dates-or-times.md)  
- <span data-ttu-id="564b0-108">如何确定字符串是否表示有效的日期。</span><span class="sxs-lookup"><span data-stu-id="564b0-108">How to determine whether a string represents a valid date.</span></span>  
+ [<span data-ttu-id="3fa81-107">如何：验证表示日期或时间的字符串</span><span class="sxs-lookup"><span data-stu-id="3fa81-107">How to: Validate Strings That Represent Dates or Times</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-strings-that-represent-dates-or-times.md)  
+ <span data-ttu-id="3fa81-108">如何确定字符串是否表示有效的日期。</span><span class="sxs-lookup"><span data-stu-id="3fa81-108">How to determine whether a string represents a valid date.</span></span>  
   
- [<span data-ttu-id="564b0-109">使用 MaskedTextBox 控件在 Visual Basic 中使用正则表达式</span><span class="sxs-lookup"><span data-stu-id="564b0-109">Using Regular Expressions with the MaskedTextBox Control in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
- <span data-ttu-id="564b0-110">演示如何转换简单的正则表达式以使用<xref:System.Windows.Forms.MaskedTextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="564b0-110">Demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.</span></span>  
+ [<span data-ttu-id="3fa81-109">使用 MaskedTextBox 控件在 Visual Basic 中使用正则表达式</span><span class="sxs-lookup"><span data-stu-id="3fa81-109">Using Regular Expressions with the MaskedTextBox Control in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
+ <span data-ttu-id="3fa81-110">演示如何转换简单的正则表达式以使用<xref:System.Windows.Forms.MaskedTextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="3fa81-110">Demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.</span></span>  
   
- [<span data-ttu-id="564b0-111">演练：验证密码复杂</span><span class="sxs-lookup"><span data-stu-id="564b0-111">Walkthrough: Validating That Passwords Are Complex</span></span>](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
- <span data-ttu-id="564b0-112">如何确定字符串是否具有强密码的特征。</span><span class="sxs-lookup"><span data-stu-id="564b0-112">How to determine whether a string has the characteristics of a strong password.</span></span>  
+ [<span data-ttu-id="3fa81-111">演练：验证密码复杂</span><span class="sxs-lookup"><span data-stu-id="3fa81-111">Walkthrough: Validating That Passwords Are Complex</span></span>](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
+ <span data-ttu-id="3fa81-112">如何确定字符串是否具有强密码的特征。</span><span class="sxs-lookup"><span data-stu-id="3fa81-112">How to determine whether a string has the characteristics of a strong password.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="564b0-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="564b0-113">See also</span></span>
-- [<span data-ttu-id="564b0-114">字符串</span><span class="sxs-lookup"><span data-stu-id="564b0-114">Strings</span></span>](../../../../visual-basic/programming-guide/language-features/strings/index.md)
-- [<span data-ttu-id="564b0-115">MaskedTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="564b0-115">MaskedTextBox Control</span></span>](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="3fa81-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="3fa81-113">See also</span></span>
+
+- [<span data-ttu-id="3fa81-114">字符串</span><span class="sxs-lookup"><span data-stu-id="3fa81-114">Strings</span></span>](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [<span data-ttu-id="3fa81-115">MaskedTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="3fa81-115">MaskedTextBox Control</span></span>](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

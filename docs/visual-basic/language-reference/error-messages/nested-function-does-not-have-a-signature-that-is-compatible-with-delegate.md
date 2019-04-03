@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-ms.openlocfilehash: ea6f230715520cb35809d57db76b300da326ec9a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 04eae6d2c6d64e8a0f46ae3c2801a7eb6d893dca
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283460"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822253"
 ---
-# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a><span data-ttu-id="1e9ff-102">嵌套的函数没有与委托兼容的签名\<委托名 >'</span><span class="sxs-lookup"><span data-stu-id="1e9ff-102">Nested function does not have a signature that is compatible with delegate '\<delegatename>'</span></span>
-<span data-ttu-id="1e9ff-103">Lambda 表达式已分配到具有兼容签名的委托。</span><span class="sxs-lookup"><span data-stu-id="1e9ff-103">A lambda expression has been assigned to a delegate that has an incompatible signature.</span></span> <span data-ttu-id="1e9ff-104">例如，在下面的代码中，委托`Del`具有两个整数参数。</span><span class="sxs-lookup"><span data-stu-id="1e9ff-104">For example, in the following code, delegate `Del` has two integer parameters.</span></span>  
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a><span data-ttu-id="bafb8-102">嵌套的函数没有与委托兼容的签名\<委托名 >'</span><span class="sxs-lookup"><span data-stu-id="bafb8-102">Nested function does not have a signature that is compatible with delegate '\<delegatename>'</span></span>
+<span data-ttu-id="bafb8-103">Lambda 表达式已分配到具有兼容签名的委托。</span><span class="sxs-lookup"><span data-stu-id="bafb8-103">A lambda expression has been assigned to a delegate that has an incompatible signature.</span></span> <span data-ttu-id="bafb8-104">例如，在下面的代码中，委托`Del`具有两个整数参数。</span><span class="sxs-lookup"><span data-stu-id="bafb8-104">For example, in the following code, delegate `Del` has two integer parameters.</span></span>  
   
 ```vb  
 Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer  
 ```  
   
- <span data-ttu-id="1e9ff-105">如果具有一个自变量的 lambda 表达式声明为类型会引发错误`Del`:</span><span class="sxs-lookup"><span data-stu-id="1e9ff-105">The error is raised if a lambda expression with one argument is declared as type `Del`:</span></span>  
+ <span data-ttu-id="bafb8-105">如果具有一个自变量的 lambda 表达式声明为类型会引发错误`Del`:</span><span class="sxs-lookup"><span data-stu-id="bafb8-105">The error is raised if a lambda expression with one argument is declared as type `Del`:</span></span>  
   
 ```vb  
 ' Neither of these is valid.   
@@ -29,12 +29,13 @@ Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
 ' Dim lambda2 As Del = Function(n) n + 1  
 ```  
   
- <span data-ttu-id="1e9ff-106">**错误 ID:** BC36532</span><span class="sxs-lookup"><span data-stu-id="1e9ff-106">**Error ID:** BC36532</span></span>  
+ <span data-ttu-id="bafb8-106">**错误 ID:** BC36532</span><span class="sxs-lookup"><span data-stu-id="bafb8-106">**Error ID:** BC36532</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="1e9ff-107">更正此错误</span><span class="sxs-lookup"><span data-stu-id="1e9ff-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="bafb8-107">更正此错误</span><span class="sxs-lookup"><span data-stu-id="bafb8-107">To correct this error</span></span>  
   
--   <span data-ttu-id="1e9ff-108">调整委托定义或分配的 lambda 表达式，以便签名是兼容。</span><span class="sxs-lookup"><span data-stu-id="1e9ff-108">Adjust either the delegate definition or the assigned lambda expression so that the signatures are compatible.</span></span>  
+-   <span data-ttu-id="bafb8-108">调整委托定义或分配的 lambda 表达式，以便签名是兼容。</span><span class="sxs-lookup"><span data-stu-id="bafb8-108">Adjust either the delegate definition or the assigned lambda expression so that the signatures are compatible.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e9ff-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="1e9ff-109">See also</span></span>
-- [<span data-ttu-id="1e9ff-110">宽松委托转换</span><span class="sxs-lookup"><span data-stu-id="1e9ff-110">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [<span data-ttu-id="1e9ff-111">Lambda 表达式</span><span class="sxs-lookup"><span data-stu-id="1e9ff-111">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="bafb8-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="bafb8-109">See also</span></span>
+
+- [<span data-ttu-id="bafb8-110">宽松委托转换</span><span class="sxs-lookup"><span data-stu-id="bafb8-110">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [<span data-ttu-id="bafb8-111">Lambda 表达式</span><span class="sxs-lookup"><span data-stu-id="bafb8-111">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

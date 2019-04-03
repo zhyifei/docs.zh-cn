@@ -2,18 +2,18 @@
 title: 如何：查找单个子代使用 Descendants 方法 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: 24bad2bc6ac121cd2be16933161a38a6a6fcb1e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a2574422f95ed4d2b82c33ee999b233d95ea398
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552445"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826452"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a><span data-ttu-id="3b54c-102">如何：查找单个子代使用 Descendants 方法 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3b54c-102">How to: Find a Single Descendant Using the Descendants Method (Visual Basic)</span></span>
-<span data-ttu-id="3b54c-103">可以使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴方法快速编写代码来查找名称唯一的单个元素。</span><span class="sxs-lookup"><span data-stu-id="3b54c-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="3b54c-104">如果想要查找具有特定名称的特定后代，则此技术特别有用。</span><span class="sxs-lookup"><span data-stu-id="3b54c-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="3b54c-105">虽然可以编写代码以导航到需要的元素，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴编写代码通常更快更容易。</span><span class="sxs-lookup"><span data-stu-id="3b54c-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a><span data-ttu-id="25a05-102">如何：查找单个子代使用 Descendants 方法 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25a05-102">How to: Find a Single Descendant Using the Descendants Method (Visual Basic)</span></span>
+<span data-ttu-id="25a05-103">可以使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴方法快速编写代码来查找名称唯一的单个元素。</span><span class="sxs-lookup"><span data-stu-id="25a05-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="25a05-104">如果想要查找具有特定名称的特定后代，则此技术特别有用。</span><span class="sxs-lookup"><span data-stu-id="25a05-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="25a05-105">虽然可以编写代码以导航到需要的元素，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴编写代码通常更快更容易。</span><span class="sxs-lookup"><span data-stu-id="25a05-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3b54c-106">示例</span><span class="sxs-lookup"><span data-stu-id="3b54c-106">Example</span></span>  
- <span data-ttu-id="3b54c-107">本示例使用 <xref:System.Linq.Enumerable.First%2A> 标准查询运算符。</span><span class="sxs-lookup"><span data-stu-id="3b54c-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
+## <a name="example"></a><span data-ttu-id="25a05-106">示例</span><span class="sxs-lookup"><span data-stu-id="25a05-106">Example</span></span>  
+ <span data-ttu-id="25a05-107">本示例使用 <xref:System.Linq.Enumerable.First%2A> 标准查询运算符。</span><span class="sxs-lookup"><span data-stu-id="25a05-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -37,14 +37,14 @@ Dim grandChild3 As String = _
 Console.WriteLine(grandChild3)  
 ```  
   
- <span data-ttu-id="3b54c-108">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="3b54c-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="25a05-108">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="25a05-108">This code produces the following output:</span></span>  
   
 ```  
 GC3 Value  
 ```  
   
-## <a name="example"></a><span data-ttu-id="3b54c-109">示例</span><span class="sxs-lookup"><span data-stu-id="3b54c-109">Example</span></span>  
- <span data-ttu-id="3b54c-110">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="3b54c-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="3b54c-111">有关详细信息，请参阅[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="3b54c-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="25a05-109">示例</span><span class="sxs-lookup"><span data-stu-id="25a05-109">Example</span></span>  
+ <span data-ttu-id="25a05-110">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="25a05-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="25a05-111">有关详细信息，请参阅[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="25a05-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -74,11 +74,12 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="3b54c-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="3b54c-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="25a05-112">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="25a05-112">This code produces the following output:</span></span>  
   
 ```  
 GC3 Value  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3b54c-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="3b54c-113">See also</span></span>
-- [<span data-ttu-id="3b54c-114">基本查询 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3b54c-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="25a05-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="25a05-113">See also</span></span>
+
+- [<span data-ttu-id="25a05-114">基本查询 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25a05-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

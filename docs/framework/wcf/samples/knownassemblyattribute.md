@@ -2,18 +2,18 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: cbbb06089508538353465a35e24aa68573da7ea4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02aa10f585cd4ad61e6a07d48a0c7e66e4c7523
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613504"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832051"
 ---
-# <a name="knownassemblyattribute"></a><span data-ttu-id="37284-102">KnownAssemblyAttribute</span><span class="sxs-lookup"><span data-stu-id="37284-102">KnownAssemblyAttribute</span></span>
-<span data-ttu-id="37284-103">此示例演示如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 类来自定义序列化和反序列化过程。</span><span class="sxs-lookup"><span data-stu-id="37284-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="37284-104">此示例演示如何在序列化和反序列化过程中动态添加已知类型。</span><span class="sxs-lookup"><span data-stu-id="37284-104">This sample shows how to dynamically add known types during serialization and deserialization.</span></span>  
+# <a name="knownassemblyattribute"></a><span data-ttu-id="00973-102">KnownAssemblyAttribute</span><span class="sxs-lookup"><span data-stu-id="00973-102">KnownAssemblyAttribute</span></span>
+<span data-ttu-id="00973-103">此示例演示如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 类来自定义序列化和反序列化过程。</span><span class="sxs-lookup"><span data-stu-id="00973-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="00973-104">此示例演示如何在序列化和反序列化过程中动态添加已知类型。</span><span class="sxs-lookup"><span data-stu-id="00973-104">This sample shows how to dynamically add known types during serialization and deserialization.</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="37284-105">示例详细信息</span><span class="sxs-lookup"><span data-stu-id="37284-105">Sample Details</span></span>  
- <span data-ttu-id="37284-106">此示例由四个项目组成。</span><span class="sxs-lookup"><span data-stu-id="37284-106">This sample is composed of four projects.</span></span> <span data-ttu-id="37284-107">其中一个项目对应于定义以下服务协定并由 IIS 承载的服务。</span><span class="sxs-lookup"><span data-stu-id="37284-107">One of them corresponds to the service, to be hosted by IIS, which defines the following service contract.</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="00973-105">示例详细信息</span><span class="sxs-lookup"><span data-stu-id="00973-105">Sample Details</span></span>  
+ <span data-ttu-id="00973-106">此示例由四个项目组成。</span><span class="sxs-lookup"><span data-stu-id="00973-106">This sample is composed of four projects.</span></span> <span data-ttu-id="00973-107">其中一个项目对应于定义以下服务协定并由 IIS 承载的服务。</span><span class="sxs-lookup"><span data-stu-id="00973-107">One of them corresponds to the service, to be hosted by IIS, which defines the following service contract.</span></span>  
   
 ```csharp
 // Definition of a service contract.  
@@ -38,7 +38,7 @@ public interface IDataContractCalculator
 }  
 ```  
   
- <span data-ttu-id="37284-108">实现服务协定，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="37284-108">The service contract is implemented as shown in the following example.</span></span>  
+ <span data-ttu-id="00973-108">实现服务协定，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="00973-108">The service contract is implemented as shown in the following example.</span></span>  
   
 ```csharp
 // Service class that implements the service contract.  
@@ -84,7 +84,7 @@ public interface IDataContractCalculator
 }  
 ```  
   
- <span data-ttu-id="37284-109">另一个项目对应于客户端，该客户端与服务器通信并调用其公开的方法。</span><span class="sxs-lookup"><span data-stu-id="37284-109">Another project corresponds to the client, which communicates with the server and invokes the methods that it exposes.</span></span> <span data-ttu-id="37284-110">客户端的定义显示在下面的示例中。</span><span class="sxs-lookup"><span data-stu-id="37284-110">The definition of the client is shown in the following example.</span></span>  
+ <span data-ttu-id="00973-109">另一个项目对应于客户端，该客户端与服务器通信并调用其公开的方法。</span><span class="sxs-lookup"><span data-stu-id="00973-109">Another project corresponds to the client, which communicates with the server and invokes the methods that it exposes.</span></span> <span data-ttu-id="00973-110">客户端的定义显示在下面的示例中。</span><span class="sxs-lookup"><span data-stu-id="00973-110">The definition of the client is shown in the following example.</span></span>  
   
 ```csharp  
  // Client implementation code.  
@@ -187,11 +187,11 @@ public interface IDataContractCalculator
 }  
 ```  
   
- <span data-ttu-id="37284-111">服务协定的定义使用 `KnownAssembly` 特性进行标记。</span><span class="sxs-lookup"><span data-stu-id="37284-111">The definition of the service contract is marked with the `KnownAssembly` attribute.</span></span> <span data-ttu-id="37284-112">此特性包含一个类型库的名称，服务和客户端会在运行时了解所有这些类型。</span><span class="sxs-lookup"><span data-stu-id="37284-112">This attribute contains the name of a library of types, which all become known at runtime by both the service and the client.</span></span>  
+ <span data-ttu-id="00973-111">服务协定的定义使用 `KnownAssembly` 特性进行标记。</span><span class="sxs-lookup"><span data-stu-id="00973-111">The definition of the service contract is marked with the `KnownAssembly` attribute.</span></span> <span data-ttu-id="00973-112">此特性包含一个类型库的名称，服务和客户端会在运行时了解所有这些类型。</span><span class="sxs-lookup"><span data-stu-id="00973-112">This attribute contains the name of a library of types, which all become known at runtime by both the service and the client.</span></span>  
   
- <span data-ttu-id="37284-113">`KnownAssembly` 特性实现 `IContractBehavior` 以定义 `DataContractSerializer`，并为每个操作行为都定义一个 `DataContractResolver`。</span><span class="sxs-lookup"><span data-stu-id="37284-113">The `KnownAssembly` attribute implements `IContractBehavior` in order to define a `DataContractSerializer` with a `DataContractResolver` defined for each of the operation behaviors.</span></span> <span data-ttu-id="37284-114">`DataContractResolver` 在创建时反映程序集，并使用序列化和反序列化不同类型时要使用的类型和名称之间的映射创建字典。</span><span class="sxs-lookup"><span data-stu-id="37284-114">The `DataContractResolver` reflects over the assembly when it is created, and creates the dictionary with the mapping between types and names to be used when serializing and deserializing the different types.</span></span> <span data-ttu-id="37284-115">这样，`ResolveType` 和 `ResolveName` 必须在字典中查找所需的数据。</span><span class="sxs-lookup"><span data-stu-id="37284-115">In that way, the `ResolveType` and `ResolveName` types must look up the data required in the dictionary.</span></span>  
+ <span data-ttu-id="00973-113">`KnownAssembly` 特性实现 `IContractBehavior` 以定义 `DataContractSerializer`，并为每个操作行为都定义一个 `DataContractResolver`。</span><span class="sxs-lookup"><span data-stu-id="00973-113">The `KnownAssembly` attribute implements `IContractBehavior` in order to define a `DataContractSerializer` with a `DataContractResolver` defined for each of the operation behaviors.</span></span> <span data-ttu-id="00973-114">`DataContractResolver` 在创建时反映程序集，并使用序列化和反序列化不同类型时要使用的类型和名称之间的映射创建字典。</span><span class="sxs-lookup"><span data-stu-id="00973-114">The `DataContractResolver` reflects over the assembly when it is created, and creates the dictionary with the mapping between types and names to be used when serializing and deserializing the different types.</span></span> <span data-ttu-id="00973-115">这样，`ResolveType` 和 `ResolveName` 必须在字典中查找所需的数据。</span><span class="sxs-lookup"><span data-stu-id="00973-115">In that way, the `ResolveType` and `ResolveName` types must look up the data required in the dictionary.</span></span>  
   
- <span data-ttu-id="37284-116">为此示例定义的 `DataContractResolver` 显示在下面的示例中。</span><span class="sxs-lookup"><span data-stu-id="37284-116">The `DataContractResolver` defined for this sample is shown in the following example.</span></span>  
+ <span data-ttu-id="00973-116">为此示例定义的 `DataContractResolver` 显示在下面的示例中。</span><span class="sxs-lookup"><span data-stu-id="00973-116">The `DataContractResolver` defined for this sample is shown in the following example.</span></span>  
   
 ```csharp
 public class MyDataContractResolver : DataContractResolver  
@@ -275,7 +275,7 @@ public class MyDataContractResolver : DataContractResolver
    }  
 ```  
   
- <span data-ttu-id="37284-117">此示例中使用的类型库显示在下面的示例中。</span><span class="sxs-lookup"><span data-stu-id="37284-117">The library of types used in this sample is shown in the following example.</span></span>  
+ <span data-ttu-id="00973-117">此示例中使用的类型库显示在下面的示例中。</span><span class="sxs-lookup"><span data-stu-id="00973-117">The library of types used in this sample is shown in the following example.</span></span>  
   
 ```csharp 
  [DataContract]  
@@ -320,9 +320,9 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- <span data-ttu-id="37284-118">请注意，`ComplexNumber` 不需要静态了解 `ComplexNumberWithMagnitude` 类型，因为会在运行时了解该类型。</span><span class="sxs-lookup"><span data-stu-id="37284-118">Note that `ComplexNumber` does not need to statically know the `ComplexNumberWithMagnitude` type, because it becomes known at runtime.</span></span>  
+ <span data-ttu-id="00973-118">请注意，`ComplexNumber` 不需要静态了解 `ComplexNumberWithMagnitude` 类型，因为会在运行时了解该类型。</span><span class="sxs-lookup"><span data-stu-id="00973-118">Note that `ComplexNumber` does not need to statically know the `ComplexNumberWithMagnitude` type, because it becomes known at runtime.</span></span>  
   
- <span data-ttu-id="37284-119">当生成和执行示例时，客户端获得的预期输出如下：</span><span class="sxs-lookup"><span data-stu-id="37284-119">When the sample is built and executed, this is the expected output obtained in the client:</span></span>  
+ <span data-ttu-id="00973-119">当生成和执行示例时，客户端获得的预期输出如下：</span><span class="sxs-lookup"><span data-stu-id="00973-119">When the sample is built and executed, this is the expected output obtained in the client:</span></span>  
   
 ```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -344,31 +344,30 @@ Lists combined:
 4 + 4i  
 ```  
   
-#### <a name="to-set-up-run-and-build-the-sample"></a><span data-ttu-id="37284-120">设置、运行和生成示例</span><span class="sxs-lookup"><span data-stu-id="37284-120">To set up, run, and build the sample</span></span>  
+#### <a name="to-set-up-run-and-build-the-sample"></a><span data-ttu-id="00973-120">设置、运行和生成示例</span><span class="sxs-lookup"><span data-stu-id="00973-120">To set up, run, and build the sample</span></span>  
   
-1.  <span data-ttu-id="37284-121">右键单击该解决方案**KnownAssemblyAttribute** ，然后选择**属性**。</span><span class="sxs-lookup"><span data-stu-id="37284-121">Right-click the solution **KnownAssemblyAttribute** and select **Properties**.</span></span>  
+1.  <span data-ttu-id="00973-121">右键单击该解决方案**KnownAssemblyAttribute** ，然后选择**属性**。</span><span class="sxs-lookup"><span data-stu-id="00973-121">Right-click the solution **KnownAssemblyAttribute** and select **Properties**.</span></span>  
   
-2.  <span data-ttu-id="37284-122">在中**常见属性**，选择**启动项目**，然后单击**多个启动项目**。</span><span class="sxs-lookup"><span data-stu-id="37284-122">In **Common Properties**, select **Startup Project**, and then click **Multiple startup projects**.</span></span>  
+2.  <span data-ttu-id="00973-122">在中**常见属性**，选择**启动项目**，然后单击**多个启动项目**。</span><span class="sxs-lookup"><span data-stu-id="00973-122">In **Common Properties**, select **Startup Project**, and then click **Multiple startup projects**.</span></span>  
   
-3.  <span data-ttu-id="37284-123">添加**启动**操作**服务**并**客户端**项目。</span><span class="sxs-lookup"><span data-stu-id="37284-123">Add the **Start** action to the **Service** and **Client** projects.</span></span>  
+3.  <span data-ttu-id="00973-123">添加**启动**操作**服务**并**客户端**项目。</span><span class="sxs-lookup"><span data-stu-id="00973-123">Add the **Start** action to the **Service** and **Client** projects.</span></span>  
   
-4.  <span data-ttu-id="37284-124">单击**确定**，然后按**F5**运行示例。</span><span class="sxs-lookup"><span data-stu-id="37284-124">Click **OK**, and press **F5** to run the sample.</span></span>  
+4.  <span data-ttu-id="00973-124">单击**确定**，然后按**F5**运行示例。</span><span class="sxs-lookup"><span data-stu-id="00973-124">Click **OK**, and press **F5** to run the sample.</span></span>  
   
-5.  <span data-ttu-id="37284-125">如果应用程序未正确运行，请按照以下步骤确保已正确设置了您的环境：</span><span class="sxs-lookup"><span data-stu-id="37284-125">If the application does not run properly, follow these steps to make sure your environment has been properly set up:</span></span>  
+5.  <span data-ttu-id="00973-125">如果应用程序未正确运行，请按照以下步骤确保已正确设置了您的环境：</span><span class="sxs-lookup"><span data-stu-id="00973-125">If the application does not run properly, follow these steps to make sure your environment has been properly set up:</span></span>  
   
-6.  <span data-ttu-id="37284-126">请确保您具有执行[一次性安装过程 Windows Communication Foundation 示例的](https://go.microsoft.com/fwlink/?LinkId=150774)。</span><span class="sxs-lookup"><span data-stu-id="37284-126">Ensure that you have performed the [One-Time Set Up Procedure for the Windows Communication Foundation Samples](https://go.microsoft.com/fwlink/?LinkId=150774).</span></span>  
+6.  <span data-ttu-id="00973-126">请确保您具有执行[一次性安装过程 Windows Communication Foundation 示例的](https://go.microsoft.com/fwlink/?LinkId=150774)。</span><span class="sxs-lookup"><span data-stu-id="00973-126">Ensure that you have performed the [One-Time Set Up Procedure for the Windows Communication Foundation Samples](https://go.microsoft.com/fwlink/?LinkId=150774).</span></span>  
   
-7.  <span data-ttu-id="37284-127">若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](https://go.microsoft.com/fwlink/?LinkId=150775)。</span><span class="sxs-lookup"><span data-stu-id="37284-127">To build the solution, follow the instructions in [Building the Windows Communication Foundation Sample](https://go.microsoft.com/fwlink/?LinkId=150775).</span></span>  
+7.  <span data-ttu-id="00973-127">若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](https://go.microsoft.com/fwlink/?LinkId=150775)。</span><span class="sxs-lookup"><span data-stu-id="00973-127">To build the solution, follow the instructions in [Building the Windows Communication Foundation Sample](https://go.microsoft.com/fwlink/?LinkId=150775).</span></span>  
   
-8.  <span data-ttu-id="37284-128">若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](https://go.microsoft.com/fwlink/?LinkId=150776)。</span><span class="sxs-lookup"><span data-stu-id="37284-128">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](https://go.microsoft.com/fwlink/?LinkId=150776).</span></span>  
+8.  <span data-ttu-id="00973-128">若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](https://go.microsoft.com/fwlink/?LinkId=150776)。</span><span class="sxs-lookup"><span data-stu-id="00973-128">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](https://go.microsoft.com/fwlink/?LinkId=150776).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="37284-129">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="37284-129">The samples may already be installed on your machine.</span></span> <span data-ttu-id="37284-130">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="37284-130">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="00973-129">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="00973-129">The samples may already be installed on your machine.</span></span> <span data-ttu-id="00973-130">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="00973-130">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="37284-131">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="37284-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="37284-132">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="37284-132">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="00973-131">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="00973-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="00973-132">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="00973-132">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
   
-## <a name="see-also"></a><span data-ttu-id="37284-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="37284-133">See also</span></span>

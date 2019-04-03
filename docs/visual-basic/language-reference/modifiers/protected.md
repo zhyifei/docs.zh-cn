@@ -10,69 +10,70 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 40dda40f68e535380a82a241e3ccd383b0c9809f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88e13fcd03c6a10cf1450cec90f9ca60aedc3eb1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536287"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819159"
 ---
-# <a name="protected-visual-basic"></a><span data-ttu-id="1685e-102">Protected (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1685e-102">Protected (Visual Basic)</span></span>
-<span data-ttu-id="1685e-103">指定一个或多个声明编程元素的成员访问修饰符只能从来访问其自己的类中或从派生类。</span><span class="sxs-lookup"><span data-stu-id="1685e-103">A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.</span></span>  
+# <a name="protected-visual-basic"></a><span data-ttu-id="07c89-102">Protected (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07c89-102">Protected (Visual Basic)</span></span>
+<span data-ttu-id="07c89-103">指定一个或多个声明编程元素的成员访问修饰符只能从来访问其自己的类中或从派生类。</span><span class="sxs-lookup"><span data-stu-id="07c89-103">A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1685e-104">备注</span><span class="sxs-lookup"><span data-stu-id="1685e-104">Remarks</span></span>  
- <span data-ttu-id="1685e-105">有时，在类中声明的编程元素包含敏感数据或受限制的代码，并且你想要限制对元素的访问。</span><span class="sxs-lookup"><span data-stu-id="1685e-105">Sometimes a programming element declared in a class contains sensitive data or restricted code, and you want to limit access to the element.</span></span> <span data-ttu-id="1685e-106">但是，如果类是可继承，并预计的派生类层次结构，它可能需要这些派生的类来访问数据或代码。</span><span class="sxs-lookup"><span data-stu-id="1685e-106">However, if the class is inheritable and you expect a hierarchy of derived classes, it might be necessary for these derived classes to access the data or code.</span></span> <span data-ttu-id="1685e-107">在这种情况下，想要从基本类和所有派生类可访问的元素。</span><span class="sxs-lookup"><span data-stu-id="1685e-107">In such a case, you want the element to be accessible both from the base class and from all derived classes.</span></span> <span data-ttu-id="1685e-108">若要限制到这种方式中的元素的访问，可将其与声明`Protected`。</span><span class="sxs-lookup"><span data-stu-id="1685e-108">To limit access to an element in this manner, you can declare it with `Protected`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="07c89-104">备注</span><span class="sxs-lookup"><span data-stu-id="07c89-104">Remarks</span></span>  
+ <span data-ttu-id="07c89-105">有时，在类中声明的编程元素包含敏感数据或受限制的代码，并且你想要限制对元素的访问。</span><span class="sxs-lookup"><span data-stu-id="07c89-105">Sometimes a programming element declared in a class contains sensitive data or restricted code, and you want to limit access to the element.</span></span> <span data-ttu-id="07c89-106">但是，如果类是可继承，并预计的派生类层次结构，它可能需要这些派生的类来访问数据或代码。</span><span class="sxs-lookup"><span data-stu-id="07c89-106">However, if the class is inheritable and you expect a hierarchy of derived classes, it might be necessary for these derived classes to access the data or code.</span></span> <span data-ttu-id="07c89-107">在这种情况下，想要从基本类和所有派生类可访问的元素。</span><span class="sxs-lookup"><span data-stu-id="07c89-107">In such a case, you want the element to be accessible both from the base class and from all derived classes.</span></span> <span data-ttu-id="07c89-108">若要限制到这种方式中的元素的访问，可将其与声明`Protected`。</span><span class="sxs-lookup"><span data-stu-id="07c89-108">To limit access to an element in this manner, you can declare it with `Protected`.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="1685e-109">`Protected`访问修饰符可以结合这两个其他修饰符：</span><span class="sxs-lookup"><span data-stu-id="1685e-109">The `Protected` access modifier can be combined with two other modifiers:</span></span>
-> - <span data-ttu-id="1685e-110">[Protected Friend](protected-friend.md)修饰符使类成员在该类中，从派生类中，和在其中定义类的相同程序集内访问。</span><span class="sxs-lookup"><span data-stu-id="1685e-110">The [Protected Friend](protected-friend.md) modifier makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined.</span></span> 
-> - <span data-ttu-id="1685e-111">[Private Protected](private-protected.md)修饰符使类成员可访问由派生类型，但只能在其包含程序集内。</span><span class="sxs-lookup"><span data-stu-id="1685e-111">The [Private Protected](private-protected.md) modifier makes a class member accessible by derived types, but only within its containing assembly.</span></span>
+> <span data-ttu-id="07c89-109">`Protected`访问修饰符可以结合这两个其他修饰符：</span><span class="sxs-lookup"><span data-stu-id="07c89-109">The `Protected` access modifier can be combined with two other modifiers:</span></span>
+> - <span data-ttu-id="07c89-110">[Protected Friend](protected-friend.md)修饰符使类成员在该类中，从派生类中，和在其中定义类的相同程序集内访问。</span><span class="sxs-lookup"><span data-stu-id="07c89-110">The [Protected Friend](protected-friend.md) modifier makes a class member accessible from within that class, from derived classes, and from the same assembly in which the class is defined.</span></span> 
+> - <span data-ttu-id="07c89-111">[Private Protected](private-protected.md)修饰符使类成员可访问由派生类型，但只能在其包含程序集内。</span><span class="sxs-lookup"><span data-stu-id="07c89-111">The [Private Protected](private-protected.md) modifier makes a class member accessible by derived types, but only within its containing assembly.</span></span>
   
-## <a name="rules"></a><span data-ttu-id="1685e-112">规则</span><span class="sxs-lookup"><span data-stu-id="1685e-112">Rules</span></span>  
+## <a name="rules"></a><span data-ttu-id="07c89-112">规则</span><span class="sxs-lookup"><span data-stu-id="07c89-112">Rules</span></span>  
   
--   <span data-ttu-id="1685e-113">**声明上下文。**</span><span class="sxs-lookup"><span data-stu-id="1685e-113">**Declaration Context.**</span></span> <span data-ttu-id="1685e-114">可以使用`Protected`仅在类级别。</span><span class="sxs-lookup"><span data-stu-id="1685e-114">You can use `Protected` only at the class level.</span></span> <span data-ttu-id="1685e-115">这意味着声明上下文`Protected`元素必须是类，且不能为源文件、 命名空间、 接口、 模块、 结构或过程。</span><span class="sxs-lookup"><span data-stu-id="1685e-115">This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.</span></span>  
+-   <span data-ttu-id="07c89-113">**声明上下文。**</span><span class="sxs-lookup"><span data-stu-id="07c89-113">**Declaration Context.**</span></span> <span data-ttu-id="07c89-114">可以使用`Protected`仅在类级别。</span><span class="sxs-lookup"><span data-stu-id="07c89-114">You can use `Protected` only at the class level.</span></span> <span data-ttu-id="07c89-115">这意味着声明上下文`Protected`元素必须是类，且不能为源文件、 命名空间、 接口、 模块、 结构或过程。</span><span class="sxs-lookup"><span data-stu-id="07c89-115">This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.</span></span>  
 
-## <a name="behavior"></a><span data-ttu-id="1685e-116">行为</span><span class="sxs-lookup"><span data-stu-id="1685e-116">Behavior</span></span>  
+## <a name="behavior"></a><span data-ttu-id="07c89-116">行为</span><span class="sxs-lookup"><span data-stu-id="07c89-116">Behavior</span></span>  
   
--   <span data-ttu-id="1685e-117">**访问级别。**</span><span class="sxs-lookup"><span data-stu-id="1685e-117">**Access Level.**</span></span> <span data-ttu-id="1685e-118">在类中的所有代码可以都访问它的元素。</span><span class="sxs-lookup"><span data-stu-id="1685e-118">All code in a class can access its elements.</span></span> <span data-ttu-id="1685e-119">从基类派生的任何类中的代码可以访问所有`Protected`元素的基类。</span><span class="sxs-lookup"><span data-stu-id="1685e-119">Code in any class that derives from a base class can access all the `Protected` elements of the base class.</span></span> <span data-ttu-id="1685e-120">这是派生的针对每一代，则返回 true。</span><span class="sxs-lookup"><span data-stu-id="1685e-120">This is true for all generations of derivation.</span></span> <span data-ttu-id="1685e-121">这意味着，一个类可以访问`Protected`元素的基类的基类，依次类推。</span><span class="sxs-lookup"><span data-stu-id="1685e-121">This means that a class can access `Protected` elements of the base class of the base class, and so on.</span></span>  
+-   <span data-ttu-id="07c89-117">**访问级别。**</span><span class="sxs-lookup"><span data-stu-id="07c89-117">**Access Level.**</span></span> <span data-ttu-id="07c89-118">在类中的所有代码可以都访问它的元素。</span><span class="sxs-lookup"><span data-stu-id="07c89-118">All code in a class can access its elements.</span></span> <span data-ttu-id="07c89-119">从基类派生的任何类中的代码可以访问所有`Protected`元素的基类。</span><span class="sxs-lookup"><span data-stu-id="07c89-119">Code in any class that derives from a base class can access all the `Protected` elements of the base class.</span></span> <span data-ttu-id="07c89-120">这是派生的针对每一代，则返回 true。</span><span class="sxs-lookup"><span data-stu-id="07c89-120">This is true for all generations of derivation.</span></span> <span data-ttu-id="07c89-121">这意味着，一个类可以访问`Protected`元素的基类的基类，依次类推。</span><span class="sxs-lookup"><span data-stu-id="07c89-121">This means that a class can access `Protected` elements of the base class of the base class, and so on.</span></span>  
   
-     <span data-ttu-id="1685e-122">受保护的访问不是超集或友元访问权限的子集。</span><span class="sxs-lookup"><span data-stu-id="1685e-122">Protected access is not a superset or subset of friend access.</span></span>  
+     <span data-ttu-id="07c89-122">受保护的访问不是超集或友元访问权限的子集。</span><span class="sxs-lookup"><span data-stu-id="07c89-122">Protected access is not a superset or subset of friend access.</span></span>  
   
--   <span data-ttu-id="1685e-123">**访问修饰符。**</span><span class="sxs-lookup"><span data-stu-id="1685e-123">**Access Modifiers.**</span></span> <span data-ttu-id="1685e-124">指定的访问级别的关键字称为*访问修饰符*。</span><span class="sxs-lookup"><span data-stu-id="1685e-124">The keywords that specify access level are called *access modifiers*.</span></span> <span data-ttu-id="1685e-125">访问修饰符的比较，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="1685e-125">For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
+-   <span data-ttu-id="07c89-123">**访问修饰符。**</span><span class="sxs-lookup"><span data-stu-id="07c89-123">**Access Modifiers.**</span></span> <span data-ttu-id="07c89-124">指定的访问级别的关键字称为*访问修饰符*。</span><span class="sxs-lookup"><span data-stu-id="07c89-124">The keywords that specify access level are called *access modifiers*.</span></span> <span data-ttu-id="07c89-125">访问修饰符的比较，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。</span><span class="sxs-lookup"><span data-stu-id="07c89-125">For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
- <span data-ttu-id="1685e-126">`Protected` 修饰符可用于下面的上下文中：</span><span class="sxs-lookup"><span data-stu-id="1685e-126">The `Protected` modifier can be used in these contexts:</span></span>  
+ <span data-ttu-id="07c89-126">`Protected` 修饰符可用于下面的上下文中：</span><span class="sxs-lookup"><span data-stu-id="07c89-126">The `Protected` modifier can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="1685e-127">Class 语句</span><span class="sxs-lookup"><span data-stu-id="1685e-127">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="07c89-127">Class 语句</span><span class="sxs-lookup"><span data-stu-id="07c89-127">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [<span data-ttu-id="1685e-128">Const 语句</span><span class="sxs-lookup"><span data-stu-id="1685e-128">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [<span data-ttu-id="07c89-128">Const 语句</span><span class="sxs-lookup"><span data-stu-id="07c89-128">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [<span data-ttu-id="1685e-129">Declare 语句</span><span class="sxs-lookup"><span data-stu-id="1685e-129">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [<span data-ttu-id="07c89-129">Declare 语句</span><span class="sxs-lookup"><span data-stu-id="07c89-129">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [<span data-ttu-id="1685e-130">Delegate 语句</span><span class="sxs-lookup"><span data-stu-id="1685e-130">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="07c89-130">Delegate 语句</span><span class="sxs-lookup"><span data-stu-id="07c89-130">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [<span data-ttu-id="1685e-131">Dim 语句</span><span class="sxs-lookup"><span data-stu-id="1685e-131">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="07c89-131">Dim 语句</span><span class="sxs-lookup"><span data-stu-id="07c89-131">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [<span data-ttu-id="1685e-132">Enum 语句</span><span class="sxs-lookup"><span data-stu-id="1685e-132">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="07c89-132">Enum 语句</span><span class="sxs-lookup"><span data-stu-id="07c89-132">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
   
- [<span data-ttu-id="1685e-133">Event 语句</span><span class="sxs-lookup"><span data-stu-id="1685e-133">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [<span data-ttu-id="07c89-133">Event 语句</span><span class="sxs-lookup"><span data-stu-id="07c89-133">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [<span data-ttu-id="1685e-134">Function 语句</span><span class="sxs-lookup"><span data-stu-id="1685e-134">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="07c89-134">Function 语句</span><span class="sxs-lookup"><span data-stu-id="07c89-134">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [<span data-ttu-id="1685e-135">Interface 语句</span><span class="sxs-lookup"><span data-stu-id="1685e-135">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="07c89-135">Interface 语句</span><span class="sxs-lookup"><span data-stu-id="07c89-135">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [<span data-ttu-id="1685e-136">Property 语句</span><span class="sxs-lookup"><span data-stu-id="1685e-136">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="07c89-136">Property 语句</span><span class="sxs-lookup"><span data-stu-id="07c89-136">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [<span data-ttu-id="1685e-137">Structure 语句</span><span class="sxs-lookup"><span data-stu-id="1685e-137">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="07c89-137">Structure 语句</span><span class="sxs-lookup"><span data-stu-id="07c89-137">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [<span data-ttu-id="1685e-138">Sub 语句</span><span class="sxs-lookup"><span data-stu-id="1685e-138">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="07c89-138">Sub 语句</span><span class="sxs-lookup"><span data-stu-id="07c89-138">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="1685e-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="1685e-139">See also</span></span>
-- [<span data-ttu-id="1685e-140">Public</span><span class="sxs-lookup"><span data-stu-id="1685e-140">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)
-- [<span data-ttu-id="1685e-141">Friend</span><span class="sxs-lookup"><span data-stu-id="1685e-141">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)
-- [<span data-ttu-id="1685e-142">Private</span><span class="sxs-lookup"><span data-stu-id="1685e-142">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)
-- [<span data-ttu-id="1685e-143">Private Protected</span><span class="sxs-lookup"><span data-stu-id="1685e-143">Private Protected</span></span>](private-protected.md)
-- [<span data-ttu-id="1685e-144">Protected Friend</span><span class="sxs-lookup"><span data-stu-id="1685e-144">Protected Friend</span></span>](protected-friend.md)
-- [<span data-ttu-id="1685e-145">在 Visual Basic 中的访问级别</span><span class="sxs-lookup"><span data-stu-id="1685e-145">Access levels in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [<span data-ttu-id="1685e-146">过程</span><span class="sxs-lookup"><span data-stu-id="1685e-146">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [<span data-ttu-id="1685e-147">结构</span><span class="sxs-lookup"><span data-stu-id="1685e-147">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [<span data-ttu-id="1685e-148">对象和类</span><span class="sxs-lookup"><span data-stu-id="1685e-148">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a><span data-ttu-id="07c89-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="07c89-139">See also</span></span>
+
+- [<span data-ttu-id="07c89-140">Public</span><span class="sxs-lookup"><span data-stu-id="07c89-140">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)
+- [<span data-ttu-id="07c89-141">Friend</span><span class="sxs-lookup"><span data-stu-id="07c89-141">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)
+- [<span data-ttu-id="07c89-142">Private</span><span class="sxs-lookup"><span data-stu-id="07c89-142">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)
+- [<span data-ttu-id="07c89-143">Private Protected</span><span class="sxs-lookup"><span data-stu-id="07c89-143">Private Protected</span></span>](private-protected.md)
+- [<span data-ttu-id="07c89-144">Protected Friend</span><span class="sxs-lookup"><span data-stu-id="07c89-144">Protected Friend</span></span>](protected-friend.md)
+- [<span data-ttu-id="07c89-145">在 Visual Basic 中的访问级别</span><span class="sxs-lookup"><span data-stu-id="07c89-145">Access levels in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [<span data-ttu-id="07c89-146">过程</span><span class="sxs-lookup"><span data-stu-id="07c89-146">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [<span data-ttu-id="07c89-147">结构</span><span class="sxs-lookup"><span data-stu-id="07c89-147">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [<span data-ttu-id="07c89-148">对象和类</span><span class="sxs-lookup"><span data-stu-id="07c89-148">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

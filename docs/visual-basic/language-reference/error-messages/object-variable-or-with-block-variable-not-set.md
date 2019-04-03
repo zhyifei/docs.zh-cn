@@ -4,39 +4,39 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: bde0150e1e20fb96d079e21b593f1ac6e27e6af7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b24bec6dd7c4b5af10349cf523d9a7e93b385fe
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611366"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831652"
 ---
-# <a name="object-variable-or-with-block-variable-not-set"></a><span data-ttu-id="6ffc9-102">未设置对象变量或 With 块变量</span><span class="sxs-lookup"><span data-stu-id="6ffc9-102">Object variable or With block variable not set</span></span>
-<span data-ttu-id="6ffc9-103">正在引用无效的对象变量。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-103">An invalid object variable is being referenced.</span></span>   <span data-ttu-id="6ffc9-104">出现此错误的原因可能有多种：</span><span class="sxs-lookup"><span data-stu-id="6ffc9-104">This error can occur for several reasons:</span></span>  
+# <a name="object-variable-or-with-block-variable-not-set"></a><span data-ttu-id="8118c-102">未设置对象变量或 With 块变量</span><span class="sxs-lookup"><span data-stu-id="8118c-102">Object variable or With block variable not set</span></span>
+<span data-ttu-id="8118c-103">正在引用无效的对象变量。</span><span class="sxs-lookup"><span data-stu-id="8118c-103">An invalid object variable is being referenced.</span></span>   <span data-ttu-id="8118c-104">出现此错误的原因可能有多种：</span><span class="sxs-lookup"><span data-stu-id="8118c-104">This error can occur for several reasons:</span></span>  
   
--   <span data-ttu-id="6ffc9-105">如果不指定类型声明了变量。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-105">A variable was declared without specifying a type.</span></span> <span data-ttu-id="6ffc9-106">如果无需指定类型声明的变量，则默认为类型`Object`。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-106">If a variable is declared without specifying a type, it defaults to type `Object`.</span></span>  
+-   <span data-ttu-id="8118c-105">如果不指定类型声明了变量。</span><span class="sxs-lookup"><span data-stu-id="8118c-105">A variable was declared without specifying a type.</span></span> <span data-ttu-id="8118c-106">如果无需指定类型声明的变量，则默认为类型`Object`。</span><span class="sxs-lookup"><span data-stu-id="8118c-106">If a variable is declared without specifying a type, it defaults to type `Object`.</span></span>  
   
-     <span data-ttu-id="6ffc9-107">例如，与声明的变量`Dim x`都属于类型`Object;`与声明的变量`Dim x As String`都属于类型`String`。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-107">For example, a variable declared with `Dim x` would be of type `Object;` a variable declared with `Dim x As String` would be of type `String`.</span></span>  
+     <span data-ttu-id="8118c-107">例如，与声明的变量`Dim x`都属于类型`Object;`与声明的变量`Dim x As String`都属于类型`String`。</span><span class="sxs-lookup"><span data-stu-id="8118c-107">For example, a variable declared with `Dim x` would be of type `Object;` a variable declared with `Dim x As String` would be of type `String`.</span></span>  
   
     > [!TIP]
-    >  <span data-ttu-id="6ffc9-108">`Option Strict`语句不允许隐式键入会导致`Object`类型。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-108">The `Option Strict` statement disallows implicit typing that results in an `Object` type.</span></span> <span data-ttu-id="6ffc9-109">如果省略该类型，将发生编译时错误。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-109">If you omit the type, a compile-time error will occur.</span></span> <span data-ttu-id="6ffc9-110">请参阅[Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-110">See [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span>  
+    >  <span data-ttu-id="8118c-108">`Option Strict`语句不允许隐式键入会导致`Object`类型。</span><span class="sxs-lookup"><span data-stu-id="8118c-108">The `Option Strict` statement disallows implicit typing that results in an `Object` type.</span></span> <span data-ttu-id="8118c-109">如果省略该类型，将发生编译时错误。</span><span class="sxs-lookup"><span data-stu-id="8118c-109">If you omit the type, a compile-time error will occur.</span></span> <span data-ttu-id="8118c-110">请参阅[Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="8118c-110">See [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span>  
   
--   <span data-ttu-id="6ffc9-111">您尝试引用已被设置为的对象 `Nothing`</span><span class="sxs-lookup"><span data-stu-id="6ffc9-111">You are attempting to reference an object that has been set to `Nothing`</span></span>  
+-   <span data-ttu-id="8118c-111">您尝试引用已被设置为的对象 `Nothing`</span><span class="sxs-lookup"><span data-stu-id="8118c-111">You are attempting to reference an object that has been set to `Nothing`</span></span>  
   
-     <span data-ttu-id="6ffc9-112">.</span><span class="sxs-lookup"><span data-stu-id="6ffc9-112">.</span></span>  
+     <span data-ttu-id="8118c-112">.</span><span class="sxs-lookup"><span data-stu-id="8118c-112">.</span></span>  
   
--   <span data-ttu-id="6ffc9-113">您尝试访问未正确声明数组变量中的元素。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-113">You are attempting to access an element of an array variable that wasn't properly declared.</span></span>  
+-   <span data-ttu-id="8118c-113">您尝试访问未正确声明数组变量中的元素。</span><span class="sxs-lookup"><span data-stu-id="8118c-113">You are attempting to access an element of an array variable that wasn't properly declared.</span></span>  
   
-     <span data-ttu-id="6ffc9-114">例如，数组声明为`products() As String`如果您尝试引用数组的元素，则会触发错误`products(3) = "Widget"`。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-114">For example, an array declared as `products() As String` will trigger the error if you try to reference an element of the array `products(3) = "Widget"`.</span></span> <span data-ttu-id="6ffc9-115">数组不包含任何元素，并被视为一个对象。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-115">The array has no elements and is treated as an object.</span></span>  
+     <span data-ttu-id="8118c-114">例如，数组声明为`products() As String`如果您尝试引用数组的元素，则会触发错误`products(3) = "Widget"`。</span><span class="sxs-lookup"><span data-stu-id="8118c-114">For example, an array declared as `products() As String` will trigger the error if you try to reference an element of the array `products(3) = "Widget"`.</span></span> <span data-ttu-id="8118c-115">数组不包含任何元素，并被视为一个对象。</span><span class="sxs-lookup"><span data-stu-id="8118c-115">The array has no elements and is treated as an object.</span></span>  
   
--   <span data-ttu-id="6ffc9-116">您尝试访问代码内`With...End With`阻止在初始化块之前。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-116">You are attempting to access code within a `With...End With` block before the block has been initialized.</span></span>   <span data-ttu-id="6ffc9-117">一个`With...End With`块必须通过执行初始化`With`语句入口点。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-117">A `With...End With` block must be initialized by executing the `With` statement entry point.</span></span>  
+-   <span data-ttu-id="8118c-116">您尝试访问代码内`With...End With`阻止在初始化块之前。</span><span class="sxs-lookup"><span data-stu-id="8118c-116">You are attempting to access code within a `With...End With` block before the block has been initialized.</span></span>   <span data-ttu-id="8118c-117">一个`With...End With`块必须通过执行初始化`With`语句入口点。</span><span class="sxs-lookup"><span data-stu-id="8118c-117">A `With...End With` block must be initialized by executing the `With` statement entry point.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6ffc9-118">在早期版本的 Visual Basic 或 VBA 此错误也通过分配给一个变量的值，而无需使用触发`Set`关键字 (`x = "name"`而不是`Set x = "name"`)。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-118">In earlier versions of Visual Basic or VBA this error was also triggered by assigning a value to a variable without using the `Set` keyword (`x = "name"` instead of `Set x = "name"`).</span></span> <span data-ttu-id="6ffc9-119">`Set`关键字不再是有效 Visual Basic.Net 中。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-119">The `Set` keyword is no longer valid in Visual Basic .Net.</span></span>  
+>  <span data-ttu-id="8118c-118">在早期版本的 Visual Basic 或 VBA 此错误也通过分配给一个变量的值，而无需使用触发`Set`关键字 (`x = "name"`而不是`Set x = "name"`)。</span><span class="sxs-lookup"><span data-stu-id="8118c-118">In earlier versions of Visual Basic or VBA this error was also triggered by assigning a value to a variable without using the `Set` keyword (`x = "name"` instead of `Set x = "name"`).</span></span> <span data-ttu-id="8118c-119">`Set`关键字不再是有效 Visual Basic.Net 中。</span><span class="sxs-lookup"><span data-stu-id="8118c-119">The `Set` keyword is no longer valid in Visual Basic .Net.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="6ffc9-120">更正此错误</span><span class="sxs-lookup"><span data-stu-id="6ffc9-120">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="8118c-120">更正此错误</span><span class="sxs-lookup"><span data-stu-id="8118c-120">To correct this error</span></span>  
   
-1.  <span data-ttu-id="6ffc9-121">设置`Option Strict`到`On`通过将以下代码添加到该文件的开头：</span><span class="sxs-lookup"><span data-stu-id="6ffc9-121">Set `Option Strict` to `On` by adding the following code to the beginning of the file:</span></span>  
+1.  <span data-ttu-id="8118c-121">设置`Option Strict`到`On`通过将以下代码添加到该文件的开头：</span><span class="sxs-lookup"><span data-stu-id="8118c-121">Set `Option Strict` to `On` by adding the following code to the beginning of the file:</span></span>  
   
 ```vb  
 Option Strict On  
@@ -44,15 +44,16 @@ Option Strict On
 
      When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
   
-2.  <span data-ttu-id="6ffc9-122">如果不想要启用`Option Strict`，搜索你的代码没有类型指定了任何变量 (`Dim x`而不是`Dim x As String`) 并将预期的类型添加到声明。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-122">If you don't want to enable `Option Strict`, search your code for any variables that were specified without a type (`Dim x` instead of `Dim x As String`) and add the intended type to the declaration.</span></span>  
+2.  <span data-ttu-id="8118c-122">如果不想要启用`Option Strict`，搜索你的代码没有类型指定了任何变量 (`Dim x`而不是`Dim x As String`) 并将预期的类型添加到声明。</span><span class="sxs-lookup"><span data-stu-id="8118c-122">If you don't want to enable `Option Strict`, search your code for any variables that were specified without a type (`Dim x` instead of `Dim x As String`) and add the intended type to the declaration.</span></span>  
   
-3.  <span data-ttu-id="6ffc9-123">请确保不指已被设置为的对象变量`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-123">Make sure you aren't referring to  an object variable that has been set to `Nothing`.</span></span>  <span data-ttu-id="6ffc9-124">关键字在代码中搜索`Nothing`，并修改你的代码，以便该对象未设置为`Nothing`直到您在引用它。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-124">Search your code for the keyword `Nothing`, and revise your code so that the object isn't set to `Nothing` until after you have referenced it.</span></span>  
+3.  <span data-ttu-id="8118c-123">请确保不指已被设置为的对象变量`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="8118c-123">Make sure you aren't referring to  an object variable that has been set to `Nothing`.</span></span>  <span data-ttu-id="8118c-124">关键字在代码中搜索`Nothing`，并修改你的代码，以便该对象未设置为`Nothing`直到您在引用它。</span><span class="sxs-lookup"><span data-stu-id="8118c-124">Search your code for the keyword `Nothing`, and revise your code so that the object isn't set to `Nothing` until after you have referenced it.</span></span>  
   
-4.  <span data-ttu-id="6ffc9-125">请确保访问它们之前创建的任何数组变量。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-125">Make sure that any array  variables are dimensioned before you access them.</span></span> <span data-ttu-id="6ffc9-126">首次创建数组时，既可以分配一个维度 (`Dim x(5) As String`而不是`Dim x() As String`)，或使用`ReDim`关键字可以在首次访问之前设置数组的维数。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-126">You can either assign a dimension when you first create the array (`Dim x(5) As String` instead of `Dim x() As String`), or use the `ReDim` keyword to set the dimensions of the array before you first access it.</span></span>  
+4.  <span data-ttu-id="8118c-125">请确保访问它们之前创建的任何数组变量。</span><span class="sxs-lookup"><span data-stu-id="8118c-125">Make sure that any array  variables are dimensioned before you access them.</span></span> <span data-ttu-id="8118c-126">首次创建数组时，既可以分配一个维度 (`Dim x(5) As String`而不是`Dim x() As String`)，或使用`ReDim`关键字可以在首次访问之前设置数组的维数。</span><span class="sxs-lookup"><span data-stu-id="8118c-126">You can either assign a dimension when you first create the array (`Dim x(5) As String` instead of `Dim x() As String`), or use the `ReDim` keyword to set the dimensions of the array before you first access it.</span></span>  
   
-5.  <span data-ttu-id="6ffc9-127">请确保你`With`块初始化通过执行`With`语句入口点。</span><span class="sxs-lookup"><span data-stu-id="6ffc9-127">Make sure your `With` block is initialized by executing the `With` statement entry point.</span></span>  
+5.  <span data-ttu-id="8118c-127">请确保你`With`块初始化通过执行`With`语句入口点。</span><span class="sxs-lookup"><span data-stu-id="8118c-127">Make sure your `With` block is initialized by executing the `With` statement entry point.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6ffc9-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="6ffc9-128">See also</span></span>
-- [<span data-ttu-id="6ffc9-129">对象变量声明</span><span class="sxs-lookup"><span data-stu-id="6ffc9-129">Object Variable Declaration</span></span>](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [<span data-ttu-id="6ffc9-130">ReDim 语句</span><span class="sxs-lookup"><span data-stu-id="6ffc9-130">ReDim Statement</span></span>](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [<span data-ttu-id="6ffc9-131">With...End With 语句</span><span class="sxs-lookup"><span data-stu-id="6ffc9-131">With...End With Statement</span></span>](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a><span data-ttu-id="8118c-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="8118c-128">See also</span></span>
+
+- [<span data-ttu-id="8118c-129">对象变量声明</span><span class="sxs-lookup"><span data-stu-id="8118c-129">Object Variable Declaration</span></span>](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [<span data-ttu-id="8118c-130">ReDim 语句</span><span class="sxs-lookup"><span data-stu-id="8118c-130">ReDim Statement</span></span>](../../../visual-basic/language-reference/statements/redim-statement.md)
+- [<span data-ttu-id="8118c-131">With...End With 语句</span><span class="sxs-lookup"><span data-stu-id="8118c-131">With...End With Statement</span></span>](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

@@ -2,17 +2,17 @@
 title: 示例 XML 文件：客户和订单 Namespace1 中
 ms.date: 07/20/2015
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
-ms.openlocfilehash: 8ca28be2a65fc249953ebca308fe8133d3bce0c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca12478ab81d114759c07b5d44749aee5a620bbb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558600"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829507"
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="f2d50-102">示例 XML 文件：命名空间中的客户和订单</span><span class="sxs-lookup"><span data-stu-id="f2d50-102">Sample XML File: Customers and Orders in a Namespace</span></span>
-<span data-ttu-id="f2d50-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="f2d50-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f2d50-104">此文件包含客户和订单。</span><span class="sxs-lookup"><span data-stu-id="f2d50-104">This file contains customers and orders.</span></span> <span data-ttu-id="f2d50-105">该 XML 在某个命名空间中。</span><span class="sxs-lookup"><span data-stu-id="f2d50-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="7480b-102">示例 XML 文件：命名空间中的客户和订单</span><span class="sxs-lookup"><span data-stu-id="7480b-102">Sample XML File: Customers and Orders in a Namespace</span></span>
+<span data-ttu-id="7480b-103">下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。</span><span class="sxs-lookup"><span data-stu-id="7480b-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="7480b-104">此文件包含客户和订单。</span><span class="sxs-lookup"><span data-stu-id="7480b-104">This file contains customers and orders.</span></span> <span data-ttu-id="7480b-105">该 XML 在某个命名空间中。</span><span class="sxs-lookup"><span data-stu-id="7480b-105">The XML is in a namespace.</span></span>  
   
-## <a name="customersordersinnamespacexml"></a><span data-ttu-id="f2d50-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="f2d50-106">CustomersOrdersInNamespace.xml</span></span>  
+## <a name="customersordersinnamespacexml"></a><span data-ttu-id="7480b-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="7480b-106">CustomersOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -430,5 +430,6 @@ ms.locfileid: "54558600"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f2d50-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="f2d50-107">See also</span></span>
-- [<span data-ttu-id="f2d50-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f2d50-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="7480b-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="7480b-107">See also</span></span>
+
+- [<span data-ttu-id="7480b-108">示例 XML 文档 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="7480b-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

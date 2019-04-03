@@ -7,31 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 2c74ed916e43bee6857df819c19ab03bef80b3c4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3cfdf8150c8ccd9e1b4f047cd1ce8ee4ad6bbc1a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285189"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813400"
 ---
-# <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a><span data-ttu-id="41221-102">需要对程序集的引用\<assemblyidentity > 包含类型\<类型名称 >，但由于项目之间存在多义性。 找不到合适的引用\<projectname1 > 和\<项目名称 2> ></span><span class="sxs-lookup"><span data-stu-id="41221-102">Reference required to assembly '\<assemblyidentity>' containing type '\<typename>', but a suitable reference could not be found due to ambiguity between projects '\<projectname1>' and '\<projectname2>'</span></span>
-<span data-ttu-id="41221-103">表达式使用在项目外部定义的类型，如类、结构、接口、枚举或委托。</span><span class="sxs-lookup"><span data-stu-id="41221-103">An expression uses a type, such as a class, structure, interface, enumeration, or delegate, that is defined outside your project.</span></span> <span data-ttu-id="41221-104">但是，你具有对定义该类型的多个程序集的项目引用。</span><span class="sxs-lookup"><span data-stu-id="41221-104">However, you have project references to more than one assembly defining that type.</span></span>  
+# <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a><span data-ttu-id="563d1-102">需要对程序集的引用\<assemblyidentity > 包含类型\<类型名称 >，但由于项目之间存在多义性。 找不到合适的引用\<projectname1 > 和\<项目名称 2> ></span><span class="sxs-lookup"><span data-stu-id="563d1-102">Reference required to assembly '\<assemblyidentity>' containing type '\<typename>', but a suitable reference could not be found due to ambiguity between projects '\<projectname1>' and '\<projectname2>'</span></span>
+<span data-ttu-id="563d1-103">表达式使用在项目外部定义的类型，如类、结构、接口、枚举或委托。</span><span class="sxs-lookup"><span data-stu-id="563d1-103">An expression uses a type, such as a class, structure, interface, enumeration, or delegate, that is defined outside your project.</span></span> <span data-ttu-id="563d1-104">但是，你具有对定义该类型的多个程序集的项目引用。</span><span class="sxs-lookup"><span data-stu-id="563d1-104">However, you have project references to more than one assembly defining that type.</span></span>  
   
- <span data-ttu-id="41221-105">引用的项目会生成名称相同的程序集。</span><span class="sxs-lookup"><span data-stu-id="41221-105">The cited projects produce assemblies with the same name.</span></span> <span data-ttu-id="41221-106">因此，编译器无法确定对要访问的类型使用哪一个程序集。</span><span class="sxs-lookup"><span data-stu-id="41221-106">Therefore, the compiler cannot determine which assembly to use for the type you are accessing.</span></span>  
+ <span data-ttu-id="563d1-105">引用的项目会生成名称相同的程序集。</span><span class="sxs-lookup"><span data-stu-id="563d1-105">The cited projects produce assemblies with the same name.</span></span> <span data-ttu-id="563d1-106">因此，编译器无法确定对要访问的类型使用哪一个程序集。</span><span class="sxs-lookup"><span data-stu-id="563d1-106">Therefore, the compiler cannot determine which assembly to use for the type you are accessing.</span></span>  
   
- <span data-ttu-id="41221-107">若要访问另一个程序集中定义的类型，Visual Basic 编译器必须具有对该程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="41221-107">To access a type defined in another assembly, the Visual Basic compiler must have a reference to that assembly.</span></span> <span data-ttu-id="41221-108">此引用必须单一、明确，不会导致项目之间循环引用。</span><span class="sxs-lookup"><span data-stu-id="41221-108">This must be a single, unambiguous reference that does not cause circular references among projects.</span></span>  
+ <span data-ttu-id="563d1-107">若要访问另一个程序集中定义的类型，Visual Basic 编译器必须具有对该程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="563d1-107">To access a type defined in another assembly, the Visual Basic compiler must have a reference to that assembly.</span></span> <span data-ttu-id="563d1-108">此引用必须单一、明确，不会导致项目之间循环引用。</span><span class="sxs-lookup"><span data-stu-id="563d1-108">This must be a single, unambiguous reference that does not cause circular references among projects.</span></span>  
   
- <span data-ttu-id="41221-109">**错误 ID:** BC30969</span><span class="sxs-lookup"><span data-stu-id="41221-109">**Error ID:** BC30969</span></span>  
+ <span data-ttu-id="563d1-109">**错误 ID:** BC30969</span><span class="sxs-lookup"><span data-stu-id="563d1-109">**Error ID:** BC30969</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="41221-110">更正此错误</span><span class="sxs-lookup"><span data-stu-id="41221-110">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="563d1-110">更正此错误</span><span class="sxs-lookup"><span data-stu-id="563d1-110">To correct this error</span></span>  
   
-1.  <span data-ttu-id="41221-111">确定产生最佳程序集引用的项目。</span><span class="sxs-lookup"><span data-stu-id="41221-111">Determine which project produces the best assembly for your project to reference.</span></span> <span data-ttu-id="41221-112">为便于确定，你可以使用文件访问轻松程度和更新频率等条件。</span><span class="sxs-lookup"><span data-stu-id="41221-112">For this decision, you might use criteria such as ease of file access and frequency of updates.</span></span>  
+1.  <span data-ttu-id="563d1-111">确定产生最佳程序集引用的项目。</span><span class="sxs-lookup"><span data-stu-id="563d1-111">Determine which project produces the best assembly for your project to reference.</span></span> <span data-ttu-id="563d1-112">为便于确定，你可以使用文件访问轻松程度和更新频率等条件。</span><span class="sxs-lookup"><span data-stu-id="563d1-112">For this decision, you might use criteria such as ease of file access and frequency of updates.</span></span>  
   
-2.  <span data-ttu-id="41221-113">在项目属性中，添加对包含某程序集的文件的引用，该程序集定义正在使用的类型。</span><span class="sxs-lookup"><span data-stu-id="41221-113">In your project properties, add a reference to the file that contains the assembly that defines the type you are using.</span></span>  
+2.  <span data-ttu-id="563d1-113">在项目属性中，添加对包含某程序集的文件的引用，该程序集定义正在使用的类型。</span><span class="sxs-lookup"><span data-stu-id="563d1-113">In your project properties, add a reference to the file that contains the assembly that defines the type you are using.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="41221-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="41221-114">See also</span></span>
-- [<span data-ttu-id="41221-115">管理项目中的引用</span><span class="sxs-lookup"><span data-stu-id="41221-115">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)
-- [<span data-ttu-id="41221-116">对已声明元素的引用</span><span class="sxs-lookup"><span data-stu-id="41221-116">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a><span data-ttu-id="563d1-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="563d1-114">See also</span></span>
 
-- [<span data-ttu-id="41221-117">管理项目和解决方案属性</span><span class="sxs-lookup"><span data-stu-id="41221-117">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
-- [<span data-ttu-id="41221-118">有关无效的引用的疑难解答</span><span class="sxs-lookup"><span data-stu-id="41221-118">Troubleshooting Broken References</span></span>](/visualstudio/ide/troubleshooting-broken-references)
+- [<span data-ttu-id="563d1-115">管理项目中的引用</span><span class="sxs-lookup"><span data-stu-id="563d1-115">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)
+- [<span data-ttu-id="563d1-116">对已声明元素的引用</span><span class="sxs-lookup"><span data-stu-id="563d1-116">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+
+- [<span data-ttu-id="563d1-117">管理项目和解决方案属性</span><span class="sxs-lookup"><span data-stu-id="563d1-117">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="563d1-118">有关无效的引用的疑难解答</span><span class="sxs-lookup"><span data-stu-id="563d1-118">Troubleshooting Broken References</span></span>](/visualstudio/ide/troubleshooting-broken-references)
