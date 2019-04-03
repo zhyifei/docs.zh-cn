@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 4b62e4b752074bb8d1a660e51ab230a87ff21db4
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654232"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825451"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>过程参数和自变量 (Visual Basic)
 在大多数情况下，一个过程需要一些信息已在其中调用它的情况。 执行重复或共享任务的过程为每个调用使用不同的信息。 此信息包括变量、 常量和表达式在调用时传递给该过程。  
@@ -59,6 +59,7 @@ ms.locfileid: "58654232"
  一个*泛型过程*还定义了一个或多个*类型参数*除了其正常参数。 泛型过程，调用代码，以便它可以调整每个调用的要求的数据类型，它调用过程时，每次传递不同的数据类型。 请参阅 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [过程](./index.md)
 - [Sub 过程](./sub-procedures.md)
 - [Function 过程](./function-procedures.md)

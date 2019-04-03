@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464094"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819757"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic 应用程序模型概述
 Visual Basic 提供定义完善的模型，用于控制 Windows 窗体应用程序的行为： Visual Basic 应用程序模型。 此模型包括用于处理应用程序的启动和关闭，以及用于捕获未经处理的异常事件的事件。 它还提供用于开发单实例应用程序的支持。 应用程序模型是可扩展的因此需要更多控制的开发人员可以自定义其可重写方法。  
@@ -55,6 +55,7 @@ Visual Basic 提供定义完善的模型，用于控制 Windows 窗体应用程�
  默认情况下，Visual Basic 应用程序模型是适用于 Windows 窗体项目。 如果应用程序配置为使用不同的启动对象，或使用自定义启动应用程序代码`Sub Main`，则该对象或类可能需要提供的实现<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>类，以使用应用程序模型。 有关更改启动对象的信息，请参阅[应用程序页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>

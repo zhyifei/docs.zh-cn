@@ -2,12 +2,12 @@
 title: 自定义消息编码器：自定义文本编码器
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: c5b45ed10475bdfd88998db0ead9afff1f0a0f2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54cba7eb5ff743d4fddc37a824e05a376880d6d9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725501"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832315"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>自定义消息编码器：自定义文本编码器
 此示例演示如何实现自定义文本消息编码器使用 Windows Communication Foundation (WCF)。  
@@ -237,4 +237,3 @@ Microsoft.ServiceModel.Samples.CustomTextMessageEncodingBindingSection,
 </extensions>  
 ```  
   
-## <a name="see-also"></a>请参阅

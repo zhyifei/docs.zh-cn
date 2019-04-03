@@ -2,12 +2,12 @@
 title: 限定符运算 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-ms.openlocfilehash: c358c3181ecbefeedcbe22e6f3c877d2924c66b3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e871a77caf0b7cfe361f11462085180c17bf2057
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409505"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816039"
 ---
 # <a name="quantifier-operations-visual-basic"></a>限定符运算 (Visual Basic)
 限定符运算返回一个 <xref:System.Boolean> 值，该值指示序列中是否有一些元素满足条件或是否所有元素都满足条件。  
@@ -38,6 +38,7 @@ ms.locfileid: "58409505"
  [!code-vb[CsLINQAnyAll#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#2)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Linq>
 - [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)

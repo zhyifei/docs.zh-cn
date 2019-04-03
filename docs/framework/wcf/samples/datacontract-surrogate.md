@@ -2,12 +2,12 @@
 title: DataContract 代理项
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 341b56727c910d552a5238d95976884162f1c524
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 33d5db0251d22ff2fac05c475903eca7dcb3e0fb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409830"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828051"
 ---
 # <a name="datacontract-surrogate"></a>DataContract 代理项
 本示例演示如何使用数据协定代理类自定义诸如序列化、反序列化、架构导出和架构导入之类的过程。 此示例演示如何在客户端和服务器方案中，序列化和 Windows Communication Foundation (WCF) 客户端和服务之间传输数据是使用代理项。  
@@ -30,8 +30,7 @@ public interface IPersonnelDataService
 }  
 ```  
   
- 
-  `AddEmployee` 操作允许用户添加有关新雇员的数据，`GetEmployee` 操作支持按姓名搜索雇员。  
+ `AddEmployee` 操作允许用户添加有关新雇员的数据，`GetEmployee` 操作支持按姓名搜索雇员。  
   
  这些操作使用下面的数据类型：  
   
@@ -119,8 +118,7 @@ public object GetObjectToSerialize(object obj, Type targetType)
 }  
 ```  
   
- 
-  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> 方法为反序列化提供反向映射，如下面的示例代码所示。  
+ <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> 方法为反序列化提供反向映射，如下面的示例代码所示。  
   
 ```  
 public object GetDeserializedObject(object obj,   
@@ -190,8 +188,7 @@ public void GetKnownCustomDataTypes(
   
  本例中该属性并不是必要的，它在此示例中仅用于演示目的。 用户也可以使用代码或使用配置，手动添加类似的 `IContractBehavior`、`IEndpointBehavior` 或 `IOperationBehavior` 来启用代理项。  
   
- 
-  `IContractBehavior` 实现通过检查操作是否已注册 `DataContractSerializerOperationBehavior` 来查找使用 DataContract 的操作。 如果已注册，则对该行为设置 `DataContractSurrogate` 属性。 下面的示例代码演示如何完成以上过程。 在此操作行为上设置代理项可以为序列化和反序列化启用该代理项。  
+ `IContractBehavior` 实现通过检查操作是否已注册 `DataContractSerializerOperationBehavior` 来查找使用 DataContract 的操作。 如果已注册，则对该行为设置 `DataContractSurrogate` 属性。 下面的示例代码演示如何完成以上过程。 在此操作行为上设置代理项可以为序列化和反序列化启用该代理项。  
   
 ```  
 public void ApplyClientBehavior(ContractDescription description, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy)  
@@ -272,4 +269,3 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
   
-## <a name="see-also"></a>请参阅

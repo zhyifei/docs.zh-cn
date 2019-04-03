@@ -2,12 +2,12 @@
 title: 聚合操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 5d8e5c589b19527062f7752b2f795c8396683bbd
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 72268e27fdf6d573279e98438fd884a076e0c8a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675635"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817235"
 ---
 # <a name="aggregation-operations-visual-basic"></a>聚合操作 (Visual Basic)
 聚合运算从值的集合中计算出单个值。 例如，从一个月累计的每日温度值计算出日平均温度值就是一个聚合运算。  
@@ -63,6 +63,7 @@ ms.locfileid: "58675635"
  [!code-vb[CsLINQAggregating#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#6)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Linq>
 - [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)

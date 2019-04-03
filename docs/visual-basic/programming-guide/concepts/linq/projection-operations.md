@@ -2,12 +2,12 @@
 title: 投影运算 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: f7f1ba7b595d5ea63468aaa2d4fdda62cb9d0693
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e2af45f9cbbed9eb88095a30e2b77a7730740898
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408946"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820979"
 ---
 # <a name="projection-operations-visual-basic"></a>投影运算 (Visual Basic)
 投影是指将对象转换为一种新形式的操作，该形式通常只包含那些将随后使用的属性。 通过使用投影，您可以构造从每个对象生成的新类型。 可以投影属性，并对该属性执行数学函数。 还可以在不更改原始对象的情况下投影该对象。  
@@ -171,6 +171,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Linq>
 - [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)

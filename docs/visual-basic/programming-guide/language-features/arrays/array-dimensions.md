@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 0b4e7c9e253f94e1e28700c8669d28799ab69d91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634162"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836930"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 一个*维度*是在其中您可以更改数组的元素的规范的方向。 一个数组，其中保存总销量，月份中的每一天有一个维度 （每月天数）。 保存总销量由部门的月份中的每一天的数组具有两个维度 （部门编号和每月天数）。 名为的维数的数组具有其*排名*。  
@@ -87,5 +87,6 @@ Dim salesAmounts(4, 11, 30) As Double
 >  您可以创建一个数组，而无需使用`Dim`语句或`New`子句。 例如，可以调用<xref:System.Array.CreateInstance%2A>方法或另一个组件可以通过你的代码以这种方式创建的数组。 此类数组可以有 0 以外的下限。 始终可以通过使用测试维度的下限<xref:System.Array.GetLowerBound%2A>方法或`LBound`函数。  
   
 ## <a name="see-also"></a>请参阅
+
 - [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [数组疑难解答](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
