@@ -1,6 +1,6 @@
 ---
 title: 如何：使用 WebRequest 类发送数据
-ms.date: 03/30/2017
+ms.date: 03/25/2019
 dev_langs:
 - csharp
 - vb
@@ -8,32 +8,33 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: dac372ce4f9da99b91b6f8d140d69ce9f1238f30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 591a1129625a4ff08c9aa37ce651bbc0320ff25d
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562890"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634266"
 ---
-# <a name="how-to-send-data-using-the-webrequest-class"></a><span data-ttu-id="93bbc-102">如何：使用 WebRequest 类发送数据</span><span class="sxs-lookup"><span data-stu-id="93bbc-102">How to: Send Data Using the WebRequest Class</span></span>
-<span data-ttu-id="93bbc-103">以下过程描述将数据发送到服务器的步骤。</span><span class="sxs-lookup"><span data-stu-id="93bbc-103">The following procedure describes the steps used to send data to a server.</span></span> <span data-ttu-id="93bbc-104">此过程通常用于将数据发布到 Web 页。</span><span class="sxs-lookup"><span data-stu-id="93bbc-104">This procedure is commonly used to post data to a Web page.</span></span>  
+# <a name="how-to-send-data-by-using-the-webrequest-class"></a><span data-ttu-id="e7bbf-102">如何：使用 WebRequest 类发送数据</span><span class="sxs-lookup"><span data-stu-id="e7bbf-102">How to: Send data by using the WebRequest class</span></span>
+<span data-ttu-id="e7bbf-103">以下过程描述将数据发送到服务器的步骤。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-103">The following procedure describes the steps to send data to a server.</span></span> <span data-ttu-id="e7bbf-104">此过程通常用于将数据发布到 Web 页。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-104">This procedure is commonly used to post data to a Web page.</span></span> 
   
-### <a name="to-send-data-to-a-host-server"></a><span data-ttu-id="93bbc-105">将数据发送到主机服务器</span><span class="sxs-lookup"><span data-stu-id="93bbc-105">To send data to a host server</span></span>  
+## <a name="to-send-data-to-a-host-server"></a><span data-ttu-id="e7bbf-105">将数据发送到主机服务器</span><span class="sxs-lookup"><span data-stu-id="e7bbf-105">To send data to a host server</span></span>  
   
-1.  <span data-ttu-id="93bbc-106">通过使用接受数据的资源的 URI（如脚本或 ASP.NET 页）来调用 <xref:System.Net.WebRequest.Create%2A> 以创建 <xref:System.Net.WebRequest> 实例。</span><span class="sxs-lookup"><span data-stu-id="93bbc-106">Create a <xref:System.Net.WebRequest> instance by calling <xref:System.Net.WebRequest.Create%2A> with the URI of the resource that accepts data, for example, a script or ASP.NET page.</span></span>  
+1.  <span data-ttu-id="e7bbf-106">通过使用接受数据的资源（例如脚本或 ASP.NET 页面）的 URI 调用 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 来创建 <xref:System.Net.WebRequest> 实例。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-106">Create a <xref:System.Net.WebRequest> instance by calling <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> with the URI of a resource, such as a script or ASP.NET page, that accepts data.</span></span> <span data-ttu-id="e7bbf-107">例如:</span><span class="sxs-lookup"><span data-stu-id="e7bbf-107">For example:</span></span> 
   
     ```csharp  
-    WebRequest request = WebRequest.Create("http://www.contoso.com/");  
+    WebRequest request = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx");  
     ```  
   
     ```vb  
-    Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/")  
+    Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx")  
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="93bbc-107">.NET Framework 为以“http:”、“https:”、“ftp:”和“file:”开头的 URI 提供派生自 WebRequest 和 WebResponse 的特定于协议的类。</span><span class="sxs-lookup"><span data-stu-id="93bbc-107">The .NET Framework provides protocol-specific classes derived from **WebRequest** and **WebResponse** for URIs that begin with "http:", "https:'', "ftp:", and "file:".</span></span> <span data-ttu-id="93bbc-108">若要访问使用其他协议的资源，则必须实现派生自 WebRequest 和 WebResponse 的特定于协议的类。</span><span class="sxs-lookup"><span data-stu-id="93bbc-108">To access resources using other protocols, you must implement protocol-specific classes that derive from **WebRequest** and **WebResponse**.</span></span> <span data-ttu-id="93bbc-109">有关详细信息，请参阅[对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md)。</span><span class="sxs-lookup"><span data-stu-id="93bbc-109">For more information, see [Programming Pluggable Protocols](../../../docs/framework/network-programming/programming-pluggable-protocols.md) .</span></span>  
+    > <span data-ttu-id="e7bbf-108">.NET Framework 为以“http:”、“https:”、“ftp:”和“file:”开头的 URI 提供派生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类的特定于协议的类。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-108">The .NET Framework provides protocol-specific classes derived from the <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes for URIs that begin with *http:*, *https:*, *ftp:*, and *file:*.</span></span>
+    <span data-ttu-id="e7bbf-109">如果需要设置或读取特定于协议的属性，必须将 <xref:System.Net.WebRequest> 或 <xref:System.Net.WebResponse> 转换为特定于协议的对象类型。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-109">If you need to set or read protocol-specific properties, you must cast your <xref:System.Net.WebRequest> or <xref:System.Net.WebResponse> object to a protocol-specific object type.</span></span> <span data-ttu-id="e7bbf-110">有关详细信息，请参阅[对可插入协议进行编程](programming-pluggable-protocols.md)。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-110">For more information, see [Programming pluggable protocols](programming-pluggable-protocols.md).</span></span> 
   
-2.  <span data-ttu-id="93bbc-110">设置 WebRequest 中任何所需的属性值。</span><span class="sxs-lookup"><span data-stu-id="93bbc-110">Set any property values that you need in the **WebRequest**.</span></span> <span data-ttu-id="93bbc-111">例如，若要启用身份验证，将 Credentials 属性设置为 <xref:System.Net.NetworkCredential> 类的实例。</span><span class="sxs-lookup"><span data-stu-id="93bbc-111">For example, to enable authentication, set the **Credentials** property to an instance of the <xref:System.Net.NetworkCredential> class.</span></span>  
+2.  <span data-ttu-id="e7bbf-111">设置 `WebRequest` 对象中任何所需的属性值。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-111">Set any property values that you need in your `WebRequest` object.</span></span> <span data-ttu-id="e7bbf-112">例如，若要启用身份验证，则将 <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> 属性设置为 <xref:System.Net.NetworkCredential> 类的实例：</span><span class="sxs-lookup"><span data-stu-id="e7bbf-112">For example, to enable authentication, set the <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> property to an instance of the <xref:System.Net.NetworkCredential> class:</span></span>
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -43,17 +44,7 @@ ms.locfileid: "54562890"
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-     <span data-ttu-id="93bbc-112">在大多数情况下，WebRequest 实例自身就足以发送数据。</span><span class="sxs-lookup"><span data-stu-id="93bbc-112">In most cases, the **WebRequest** instance itself is sufficient to send data.</span></span> <span data-ttu-id="93bbc-113">但是，如果需要设置特定于协议的属性，必须将 WebRequest 转换为特定于协议的类型。</span><span class="sxs-lookup"><span data-stu-id="93bbc-113">However, if you need to set protocol-specific properties, you must cast the **WebRequest** to the protocol-specific type.</span></span> <span data-ttu-id="93bbc-114">例如，要访问 <xref:System.Net.HttpWebRequest> 特定于 HTTP 的属性，请将 WebRequest 转换为 HttpWebRequest 引用。</span><span class="sxs-lookup"><span data-stu-id="93bbc-114">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebRequest>, cast the **WebRequest** to an **HttpWebRequest** reference.</span></span> <span data-ttu-id="93bbc-115">以下代码示例演示如何设置特定于 HTTP 的 <xref:System.Net.HttpWebRequest.UserAgent%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="93bbc-115">The following code example shows how to set the HTTP-specific <xref:System.Net.HttpWebRequest.UserAgent%2A> property.</span></span>  
-  
-    ```csharp  
-    ((HttpWebRequest)request).UserAgent = ".NET Framework Example Client";  
-    ```  
-  
-    ```vb  
-    Ctype(request,HttpWebRequest).UserAgent = ".NET Framework Example Client"  
-    ```  
-  
-3.  <span data-ttu-id="93bbc-116">指定允许使用请求发送数据的协议方法，如 HTTP POST 方法。</span><span class="sxs-lookup"><span data-stu-id="93bbc-116">Specify a protocol method that permits data to be sent with a request, such as the HTTP **POST** method.</span></span>  
+3.  <span data-ttu-id="e7bbf-113">指定允许使用请求发送数据的协议方法，如 HTTP `POST` 方法：</span><span class="sxs-lookup"><span data-stu-id="e7bbf-113">Specify a protocol method that permits data to be sent with a request, such as the HTTP `POST` method:</span></span>  
   
     ```csharp  
     request.Method = "POST";  
@@ -63,7 +54,7 @@ ms.locfileid: "54562890"
     request.Method = "POST"  
     ```  
   
-4.  <span data-ttu-id="93bbc-117">设置 ContentLength 属性。</span><span class="sxs-lookup"><span data-stu-id="93bbc-117">Set the **ContentLength** property.</span></span>  
+4.  <span data-ttu-id="e7bbf-114">将 <xref:System.Web.HttpRequest.ContentLength> 属性设置为请求中包含的字节数。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-114">Set the <xref:System.Web.HttpRequest.ContentLength> property to the number of bytes you're including with your request.</span></span> <span data-ttu-id="e7bbf-115">例如:</span><span class="sxs-lookup"><span data-stu-id="e7bbf-115">For example:</span></span> 
   
     ```csharp  
     request.ContentLength = byteArray.Length;  
@@ -73,7 +64,7 @@ ms.locfileid: "54562890"
     request.ContentLength = byteArray.Length  
     ```  
   
-5.  <span data-ttu-id="93bbc-118">将 ContentType 属性设置为适当的值。</span><span class="sxs-lookup"><span data-stu-id="93bbc-118">Set the **ContentType** property to an appropriate value.</span></span>  
+5.  <span data-ttu-id="e7bbf-116">将 <xref:System.Web.HttpRequest.ContentType> 属性设置为适当的值。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-116">Set the <xref:System.Web.HttpRequest.ContentType> property to an appropriate value.</span></span> <span data-ttu-id="e7bbf-117">例如:</span><span class="sxs-lookup"><span data-stu-id="e7bbf-117">For example:</span></span>
   
     ```csharp  
     request.ContentType = "application/x-www-form-urlencoded";  
@@ -83,37 +74,37 @@ ms.locfileid: "54562890"
     request.ContentType = "application/x-www-form-urlencoded"  
     ```  
   
-6.  <span data-ttu-id="93bbc-119">通过调用 <xref:System.Net.WebRequest.GetRequestStream%2A> 方法获取包含请求数据的流。</span><span class="sxs-lookup"><span data-stu-id="93bbc-119">Get the stream that holds request data by calling the <xref:System.Net.WebRequest.GetRequestStream%2A> method.</span></span>  
+6.  <span data-ttu-id="e7bbf-118">通过调用 <xref:System.Net.WebRequest.GetRequestStream%2A> 方法获取包含请求数据的流。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-118">Get the stream that holds request data by calling the <xref:System.Net.WebRequest.GetRequestStream%2A> method.</span></span> <span data-ttu-id="e7bbf-119">例如:</span><span class="sxs-lookup"><span data-stu-id="e7bbf-119">For example:</span></span>
   
     ```csharp  
-    Stream dataStream = request.GetRequestStream ();  
+    Stream dataStream = request.GetRequestStream();  
     ```  
   
     ```vb  
-    Stream dataStream = request.GetRequestStream ()  
+    Stream dataStream = request.GetRequestStream()  
     ```  
   
-7.  <span data-ttu-id="93bbc-120">将数据写入到通过此方法返回的 <xref:System.IO.Stream> 对象。</span><span class="sxs-lookup"><span data-stu-id="93bbc-120">Write the data to the <xref:System.IO.Stream> object returned by this method.</span></span>  
+7.  <span data-ttu-id="e7bbf-120">将数据写入到 `GetRequestStream` 方法返回的 <xref:System.IO.Stream> 对象中。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-120">Write the data to the <xref:System.IO.Stream> object returned by the `GetRequestStream` method.</span></span> <span data-ttu-id="e7bbf-121">例如:</span><span class="sxs-lookup"><span data-stu-id="e7bbf-121">For example:</span></span>
   
     ```csharp  
-    dataStream.Write (byteArray, 0, byteArray.Length);  
+    dataStream.Write(byteArray, 0, byteArray.Length);  
     ```  
   
     ```vb  
-    dataStream.Write (byteArray, 0, byteArray.Length)  
+    dataStream.Write(byteArray, 0, byteArray.Length)  
     ```  
   
-8.  <span data-ttu-id="93bbc-121">通过调用 Stream.Close 方法关闭请求流。</span><span class="sxs-lookup"><span data-stu-id="93bbc-121">Close the request stream by calling the **Stream.Close** method.</span></span>  
+8.  <span data-ttu-id="e7bbf-122">通过调用 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 方法关闭请求流。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-122">Close the request stream by calling the <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="e7bbf-123">例如:</span><span class="sxs-lookup"><span data-stu-id="e7bbf-123">For example:</span></span>
   
     ```csharp  
-    dataStream.Close ();  
+    dataStream.Close();  
     ```  
   
     ```vb  
-    dataStream.Close ()  
+    dataStream.Close()  
     ```  
   
-9. <span data-ttu-id="93bbc-122">通过调用 <xref:System.Net.WebRequest.GetResponse%2A> 向服务器发送请求。</span><span class="sxs-lookup"><span data-stu-id="93bbc-122">Send the request to the server by calling <xref:System.Net.WebRequest.GetResponse%2A>.</span></span> <span data-ttu-id="93bbc-123">此方法返回包含服务器响应的对象。</span><span class="sxs-lookup"><span data-stu-id="93bbc-123">This method returns an object containing the server's response.</span></span> <span data-ttu-id="93bbc-124">返回的 <xref:System.Net.WebResponse> 对象的类型由请求的 URI 的方案决定。</span><span class="sxs-lookup"><span data-stu-id="93bbc-124">The returned <xref:System.Net.WebResponse> object's type is determined by the scheme of the request's URI.</span></span>  
+9. <span data-ttu-id="e7bbf-124">通过调用 <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> 向服务器发送请求。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-124">Send the request to the server by calling <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="e7bbf-125">此方法返回包含服务器响应的对象。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-125">This method returns an object containing the server's response.</span></span> <span data-ttu-id="e7bbf-126">返回的 `WebResponse` 对象的类型由请求的 URI 的方案决定。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-126">The returned `WebResponse` object's type is determined by the scheme of the request's URI.</span></span> <span data-ttu-id="e7bbf-127">例如:</span><span class="sxs-lookup"><span data-stu-id="e7bbf-127">For example:</span></span>
   
     ```csharp  
     WebResponse response = request.GetResponse();  
@@ -123,30 +114,29 @@ ms.locfileid: "54562890"
     Dim response As WebResponse = request.GetResponse()  
     ```  
   
-    > [!NOTE]
-    >  <span data-ttu-id="93bbc-125">使用完 <xref:System.Net.WebResponse> 对象后，必须通过调用 <xref:System.Net.WebResponse.Close%2A> 方法将其关闭。</span><span class="sxs-lookup"><span data-stu-id="93bbc-125">After you are finished with a <xref:System.Net.WebResponse> object, you must close it by calling the <xref:System.Net.WebResponse.Close%2A> method.</span></span> <span data-ttu-id="93bbc-126">或者，如果已从响应对象获取响应流，可以通过调用 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 方法关闭流。</span><span class="sxs-lookup"><span data-stu-id="93bbc-126">Alternatively, if you have gotten the response stream from the response object, you can close the stream by calling the <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="93bbc-127">如果不关闭响应或流，应用程序会耗尽与服务器的连接，并无法处理其他请求。</span><span class="sxs-lookup"><span data-stu-id="93bbc-127">If you do not close the response or the stream, your application can run out of connections to the server and become unable to process additional requests.</span></span>  
-  
-10. <span data-ttu-id="93bbc-128">可以访问 WebResponse 的属性或将 WebResponse 转换为特定于协议的实例来读取特定于协议的属性。</span><span class="sxs-lookup"><span data-stu-id="93bbc-128">You can access the properties of the **WebResponse** or cast the **WebResponse** to a protocol-specific instance to read protocol-specific properties.</span></span> <span data-ttu-id="93bbc-129">例如，要访问 <xref:System.Net.HttpWebResponse> 特定于 HTTP 的属性，请将 WebResponse 转换为 HttpWebResponse 引用。</span><span class="sxs-lookup"><span data-stu-id="93bbc-129">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebResponse>, cast the **WebResponse** to an **HttpWebResponse** reference.</span></span>  
+10. <span data-ttu-id="e7bbf-128">可以访问 `WebResponse` 对象的属性或将其强制转换为特定于协议的实例，以读取特定于协议的属性。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-128">You can access the properties of your `WebResponse` object or cast it to a protocol-specific instance to read protocol-specific properties.</span></span> 
+
+    <span data-ttu-id="e7bbf-129">例如，要访问 <xref:System.Net.HttpWebResponse> 特定于 HTTP 的属性，请将 `WebResponse` 对象强制转换为 <xref:System.Net.HttpWebResponse> 引用。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-129">For example, to access the HTTP-specific properties of <xref:System.Net.HttpWebResponse>, cast your `WebResponse` object to an <xref:System.Net.HttpWebResponse> reference.</span></span> <span data-ttu-id="e7bbf-130">以下代码示例演示如何显示与响应一起发送的特定于 HTTP 的 <xref:System.Net.HttpWebResponse.StatusDescription%2A?displayProperty=nameWithType> 属性：</span><span class="sxs-lookup"><span data-stu-id="e7bbf-130">The following code example shows how to display the HTTP-specific <xref:System.Net.HttpWebResponse.StatusDescription%2A?displayProperty=nameWithType> property sent with a response:</span></span>
   
     ```csharp  
-    Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
+    Console.WriteLine(((HttpWebResponse)response).StatusDescription);    
     ```  
   
     ```vb  
     Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)  
     ```  
   
-11. <span data-ttu-id="93bbc-130">若要获取包含由服务器发送的响应数据的流，调用 WebResponse 的 <xref:System.Net.WebResponse.GetResponseStream%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="93bbc-130">To get the stream containing response data sent by the server, call the <xref:System.Net.WebResponse.GetResponseStream%2A> method of the **WebResponse**.</span></span>  
+11. <span data-ttu-id="e7bbf-131">若要获取包含由服务器发送的响应数据的流，请调用 `WebResponse` 的 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-131">To get the stream containing response data sent by the server, call the <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> method of your `WebResponse` object.</span></span> <span data-ttu-id="e7bbf-132">例如:</span><span class="sxs-lookup"><span data-stu-id="e7bbf-132">For example:</span></span>
   
     ```csharp  
-    Stream data = response.GetResponseStream;  
+    Stream dataStream = response.GetResponseStream();  
     ```  
   
     ```vb  
-    Dim data As Stream = response.GetResponseStream  
+    Dim dataStream As Stream = response.GetResponseStream()  
     ```  
   
-12. <span data-ttu-id="93bbc-131">从响应中读取数据之后，必须使用 Stream.Close 方法关闭响应流或使用 WebResponse.Close 方法关闭响应。</span><span class="sxs-lookup"><span data-stu-id="93bbc-131">After reading the data from the response, you must either close the response stream using the **Stream.Close** method or close the response using the **WebResponse.Close** method.</span></span> <span data-ttu-id="93bbc-132">没必要在响应流和 WebResponse 上调用 Close 方法，但此操作是无害的。</span><span class="sxs-lookup"><span data-stu-id="93bbc-132">It is not necessary to call the **Close** method on both the response stream and the **WebResponse**, but doing so is not harmful.</span></span>  
+12. <span data-ttu-id="e7bbf-133">从响应对象读取数据后，可以使用 <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> 方法关闭它，也可以使用 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 方法关闭响应流。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-133">After you've read the data from the response object, either close it with the <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> method or close the response stream with the <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="e7bbf-134">如果不关闭响应或流，则应用程序可能会耗尽服务器连接，并且无法处理其他请求。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-134">If you don't close either the response or the stream, your application can run out of server connections and become unable to process additional requests.</span></span> <span data-ttu-id="e7bbf-135">因为 `WebResponse.Close` 方法在其关闭响应时调用 `Stream.Close`，所以不必在响应和流对象上调用 `Close`，尽管这样做没有坏处。</span><span class="sxs-lookup"><span data-stu-id="e7bbf-135">Because the `WebResponse.Close` method calls `Stream.Close` when it closes the response, it's not necessary to call `Close` on both the response and stream objects, although doing so isn't harmful.</span></span> <span data-ttu-id="e7bbf-136">例如:</span><span class="sxs-lookup"><span data-stu-id="e7bbf-136">For example:</span></span>
   
     ```csharp  
     response.Close();  
@@ -156,8 +146,10 @@ ms.locfileid: "54562890"
     response.Close()  
     ```  
   
-## <a name="example"></a><span data-ttu-id="93bbc-133">示例</span><span class="sxs-lookup"><span data-stu-id="93bbc-133">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e7bbf-137">示例</span><span class="sxs-lookup"><span data-stu-id="e7bbf-137">Example</span></span>  
   
+<span data-ttu-id="e7bbf-138">以下代码示例演示如何将数据发送到 Web 服务器并读取其响应中的数据：</span><span class="sxs-lookup"><span data-stu-id="e7bbf-138">The following code example shows how to send data to a web server and read the data in its response:</span></span>  
+
 ```csharp  
 using System;  
 using System.IO;  
@@ -168,41 +160,47 @@ namespace Examples.System.Net
 {  
     public class WebRequestPostExample  
     {  
-        public static void Main ()  
+        public static void Main()  
         {  
-            // Create a request using a URL that can receive a post.   
-            WebRequest request = WebRequest.Create ("http://www.contoso.com/PostAccepter.aspx ");  
+            // Create a request by using a URL that can receive a post.   
+            WebRequest request = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx ");  
             // Set the Method property of the request to POST.  
             request.Method = "POST";  
+
             // Create POST data and convert it to a byte array.  
             string postData = "This is a test that posts this string to a Web server.";  
-            byte[] byteArray = Encoding.UTF8.GetBytes (postData);  
-            // Set the ContentType property of the WebRequest.  
+            byte[] byteArray = Encoding.UTF8.GetBytes(postData);  
+
+            // Set the ContentType property of the request.  
             request.ContentType = "application/x-www-form-urlencoded";  
-            // Set the ContentLength property of the WebRequest.  
+            // Set the ContentLength property of the request.  
             request.ContentLength = byteArray.Length;  
+
             // Get the request stream.  
-            Stream dataStream = request.GetRequestStream ();  
+            Stream dataStream = request.GetRequestStream();  
             // Write the data to the request stream.  
-            dataStream.Write (byteArray, 0, byteArray.Length);  
-            // Close the Stream object.  
-            dataStream.Close ();  
+            dataStream.Write(byteArray, 0, byteArray.Length);  
+            // Close the stream.  
+            dataStream.Close();  
+
             // Get the response.  
-            WebResponse response = request.GetResponse ();  
+            WebResponse response = request.GetResponse();  
             // Display the status.  
-            Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
+            Console.WriteLine(((HttpWebResponse)response).StatusDescription);  
+
             // Get the stream containing content returned by the server.  
-            dataStream = response.GetResponseStream ();  
-            // Open the stream using a StreamReader for easy access.  
-            StreamReader reader = new StreamReader (dataStream);  
+            dataStream = response.GetResponseStream();  
+            // Open the stream by using a StreamReader for easy access.  
+            StreamReader reader = new StreamReader(dataStream);  
+
             // Read the content.  
-            string responseFromServer = reader.ReadToEnd ();  
+            string responseFromServer = reader.ReadToEnd();  
             // Display the content.  
-            Console.WriteLine (responseFromServer);  
-            // Clean up the streams.  
-            reader.Close ();  
-            dataStream.Close ();  
-            response.Close ();  
+            Console.WriteLine(responseFromServer);  
+
+            // Clean up the response.  
+            reader.Close();  
+            response.Close();  
         }  
     }  
 }  
@@ -213,51 +211,63 @@ Imports System
 Imports System.IO  
 Imports System.Net  
 Imports System.Text  
+
 Namespace Examples.System.Net  
+
     Public Class WebRequestPostExample  
   
         Public Shared Sub Main()  
-            ' Create a request using a URL that can receive a post.   
+
+            ' Create a request by using a URL that can receive a post.   
             Dim request As WebRequest = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx ")  
             ' Set the Method property of the request to POST.  
             request.Method = "POST"  
+
             ' Create POST data and convert it to a byte array.  
             Dim postData As String = "This is a test that posts this string to a Web server."  
             Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)  
+
             ' Set the ContentType property of the WebRequest.  
             request.ContentType = "application/x-www-form-urlencoded"  
             ' Set the ContentLength property of the WebRequest.  
             request.ContentLength = byteArray.Length  
+
             ' Get the request stream.  
             Dim dataStream As Stream = request.GetRequestStream()  
             ' Write the data to the request stream.  
             dataStream.Write(byteArray, 0, byteArray.Length)  
-            ' Close the Stream object.  
+            ' Close the stream.  
             dataStream.Close()  
+
             ' Get the response.  
             Dim response As WebResponse = request.GetResponse()  
             ' Display the status.  
             Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)  
+
             ' Get the stream containing content returned by the server.  
             dataStream = response.GetResponseStream()  
-            ' Open the stream using a StreamReader for easy access.  
+            ' Open the stream by using a StreamReader for easy access.  
             Dim reader As New StreamReader(dataStream)  
+
             ' Read the content.  
             Dim responseFromServer As String = reader.ReadToEnd()  
             ' Display the content.  
             Console.WriteLine(responseFromServer)  
-            ' Clean up the streams.  
+
+            ' Clean up the response.  
             reader.Close()  
-            dataStream.Close()  
             response.Close()  
+
         End Sub  
+
     End Class  
+
 End Namespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="93bbc-134">请参阅</span><span class="sxs-lookup"><span data-stu-id="93bbc-134">See also</span></span>
-- [<span data-ttu-id="93bbc-135">创建 Internet 请求</span><span class="sxs-lookup"><span data-stu-id="93bbc-135">Creating Internet Requests</span></span>](../../../docs/framework/network-programming/creating-internet-requests.md)
-- [<span data-ttu-id="93bbc-136">在网络上使用流</span><span class="sxs-lookup"><span data-stu-id="93bbc-136">Using Streams on the Network</span></span>](../../../docs/framework/network-programming/using-streams-on-the-network.md)
-- [<span data-ttu-id="93bbc-137">通过代理访问 Internet</span><span class="sxs-lookup"><span data-stu-id="93bbc-137">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [<span data-ttu-id="93bbc-138">请求数据</span><span class="sxs-lookup"><span data-stu-id="93bbc-138">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)
-- [<span data-ttu-id="93bbc-139">如何：使用 WebRequest 类请求数据</span><span class="sxs-lookup"><span data-stu-id="93bbc-139">How to: Request Data Using the WebRequest Class</span></span>](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+## <a name="see-also"></a><span data-ttu-id="e7bbf-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="e7bbf-139">See also</span></span>
+- [<span data-ttu-id="e7bbf-140">创建 Internet 请求</span><span class="sxs-lookup"><span data-stu-id="e7bbf-140">Creating internet requests</span></span>](creating-internet-requests.md)
+- [<span data-ttu-id="e7bbf-141">在网络上使用流</span><span class="sxs-lookup"><span data-stu-id="e7bbf-141">Using streams on the network</span></span>](using-streams-on-the-network.md)
+- [<span data-ttu-id="e7bbf-142">通过代理访问 Internet</span><span class="sxs-lookup"><span data-stu-id="e7bbf-142">Accessing the internet through a proxy</span></span>](accessing-the-internet-through-a-proxy.md)
+- [<span data-ttu-id="e7bbf-143">请求数据</span><span class="sxs-lookup"><span data-stu-id="e7bbf-143">Requesting data</span></span>](requesting-data.md)
+- [<span data-ttu-id="e7bbf-144">如何：使用 WebRequest 类请求数据</span><span class="sxs-lookup"><span data-stu-id="e7bbf-144">How to: Request data by using the WebRequest class</span></span>](how-to-request-data-using-the-webrequest-class.md)

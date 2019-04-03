@@ -2,20 +2,20 @@
 title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
 ms.date: 09/22/2017
-ms.openlocfilehash: c6127d20e71328733eb1fe8a21a7fa7a9735d5a2
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: e196be28f622873359153f32c5dd9b0b5a514c0f
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "57845477"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654648"
 ---
-# <a name="additions-to-the-csproj-format-for-net-core"></a><span data-ttu-id="a6a95-103">.NET Core 的 csproj 格式的新增内容</span><span class="sxs-lookup"><span data-stu-id="a6a95-103">Additions to the csproj format for .NET Core</span></span>
+# <a name="additions-to-the-csproj-format-for-net-core"></a><span data-ttu-id="d541b-103">.NET Core 的 csproj 格式的新增内容</span><span class="sxs-lookup"><span data-stu-id="d541b-103">Additions to the csproj format for .NET Core</span></span>
 
-<span data-ttu-id="a6a95-104">本文档概述了作为从 *project.json* 移动到 *csproj* 和 [MSBuild](https://github.com/Microsoft/MSBuild) 的一部分，添加到项目文件的更改。</span><span class="sxs-lookup"><span data-stu-id="a6a95-104">This document outlines the changes that were added to the project files as part of the move from *project.json* to *csproj* and [MSBuild](https://github.com/Microsoft/MSBuild).</span></span> <span data-ttu-id="a6a95-105">有关常规项目文件的语法和引用的详细信息，请参阅 [MSBuild 项目文件](/visualstudio/msbuild/msbuild-project-file-schema-reference)文档。</span><span class="sxs-lookup"><span data-stu-id="a6a95-105">For more information about general project file syntax and reference, see [the MSBuild project file](/visualstudio/msbuild/msbuild-project-file-schema-reference) documentation.</span></span>
+<span data-ttu-id="d541b-104">本文档概述了作为从 *project.json* 移动到 *csproj* 和 [MSBuild](https://github.com/Microsoft/MSBuild) 的一部分，添加到项目文件的更改。</span><span class="sxs-lookup"><span data-stu-id="d541b-104">This document outlines the changes that were added to the project files as part of the move from *project.json* to *csproj* and [MSBuild](https://github.com/Microsoft/MSBuild).</span></span> <span data-ttu-id="d541b-105">有关常规项目文件的语法和引用的详细信息，请参阅 [MSBuild 项目文件](/visualstudio/msbuild/msbuild-project-file-schema-reference)文档。</span><span class="sxs-lookup"><span data-stu-id="d541b-105">For more information about general project file syntax and reference, see [the MSBuild project file](/visualstudio/msbuild/msbuild-project-file-schema-reference) documentation.</span></span>
 
-## <a name="implicit-package-references"></a><span data-ttu-id="a6a95-106">隐式包引用</span><span class="sxs-lookup"><span data-stu-id="a6a95-106">Implicit package references</span></span>
+## <a name="implicit-package-references"></a><span data-ttu-id="d541b-106">隐式包引用</span><span class="sxs-lookup"><span data-stu-id="d541b-106">Implicit package references</span></span>
 
-<span data-ttu-id="a6a95-107">基于项目文件的 `<TargetFramework>` 或 `<TargetFrameworks>` 属性中指定的目标框架对元包进行隐式引用。</span><span class="sxs-lookup"><span data-stu-id="a6a95-107">Metapackages are implicitly referenced based on the target framework(s) specified in the `<TargetFramework>` or `<TargetFrameworks>` property of your project file.</span></span> <span data-ttu-id="a6a95-108">如果指定了 `<TargetFramework>`，则忽略 `<TargetFrameworks>`，而与顺序无关。</span><span class="sxs-lookup"><span data-stu-id="a6a95-108">`<TargetFrameworks>` is ignored if `<TargetFramework>` is specified, independent of order.</span></span>
+<span data-ttu-id="d541b-107">基于项目文件的 `<TargetFramework>` 或 `<TargetFrameworks>` 属性中指定的目标框架对元包进行隐式引用。</span><span class="sxs-lookup"><span data-stu-id="d541b-107">Metapackages are implicitly referenced based on the target framework(s) specified in the `<TargetFramework>` or `<TargetFrameworks>` property of your project file.</span></span> <span data-ttu-id="d541b-108">如果指定了 `<TargetFramework>`，则忽略 `<TargetFrameworks>`，而与顺序无关。</span><span class="sxs-lookup"><span data-stu-id="d541b-108">`<TargetFrameworks>` is ignored if `<TargetFramework>` is specified, independent of order.</span></span>
 
 ```xml
  <PropertyGroup>
@@ -29,37 +29,37 @@ ms.locfileid: "57845477"
  </PropertyGroup>
  ```
 
-### <a name="recommendations"></a><span data-ttu-id="a6a95-109">建议</span><span class="sxs-lookup"><span data-stu-id="a6a95-109">Recommendations</span></span>
+### <a name="recommendations"></a><span data-ttu-id="d541b-109">建议</span><span class="sxs-lookup"><span data-stu-id="d541b-109">Recommendations</span></span>
 
-<span data-ttu-id="a6a95-110">由于隐式引用了 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包，以下是建议的最佳做法：</span><span class="sxs-lookup"><span data-stu-id="a6a95-110">Since `Microsoft.NETCore.App` or `NetStandard.Library` metapackages are implicitly referenced, the following are our recommended best practices:</span></span>
+<span data-ttu-id="d541b-110">由于隐式引用了 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包，以下是建议的最佳做法：</span><span class="sxs-lookup"><span data-stu-id="d541b-110">Since `Microsoft.NETCore.App` or `NetStandard.Library` metapackages are implicitly referenced, the following are our recommended best practices:</span></span>
 
-* <span data-ttu-id="a6a95-111">面向 .NET Core 或 .NET Standard 时，绝不通过项目文件中的 `<PackageReference>` 项，对 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包进行显式引用。</span><span class="sxs-lookup"><span data-stu-id="a6a95-111">When targeting .NET Core or .NET Standard, never have an explicit reference to the `Microsoft.NETCore.App` or `NetStandard.Library` metapackages via a `<PackageReference>` item in your project file.</span></span>
-* <span data-ttu-id="a6a95-112">面向 .NET Core 时，如果需要特定版本的运行时，应使用项目中的 `<RuntimeFrameworkVersion>` 属性（例如，`1.0.4`），而不是引用元包。</span><span class="sxs-lookup"><span data-stu-id="a6a95-112">If you need a specific version of the runtime when targeting .NET Core, you should use the `<RuntimeFrameworkVersion>` property in your project (for example, `1.0.4`) instead of referencing the metapackage.</span></span>
-    * <span data-ttu-id="a6a95-113">例如，如果使用[独立部署](../deploying/index.md#self-contained-deployments-scd)且需要 1.0.0 LTS 运行时的特定修补程序版本，可能会发生这种情况。</span><span class="sxs-lookup"><span data-stu-id="a6a95-113">This might happen if you are using [self-contained deployments](../deploying/index.md#self-contained-deployments-scd) and you need a specific patch version of 1.0.0 LTS runtime, for example.</span></span>
-* <span data-ttu-id="a6a95-114">面向 .NET Standard 时，如果需要特定版本的 `NetStandard.Library` 元包，可以使用 `<NetStandardImplicitPackageVersion>` 属性并设置所需版本。</span><span class="sxs-lookup"><span data-stu-id="a6a95-114">If you need a specific version of the `NetStandard.Library` metapackage when targeting .NET Standard, you can use the `<NetStandardImplicitPackageVersion>` property and set the version you need.</span></span>
-* <span data-ttu-id="a6a95-115">请勿在 .NET Framework 项目中显式添加或更新对 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包的引用。</span><span class="sxs-lookup"><span data-stu-id="a6a95-115">Don't explicitly add or update references to either the `Microsoft.NETCore.App` or `NetStandard.Library` metapackage in .NET Framework projects.</span></span> <span data-ttu-id="a6a95-116">使用基于 .NET Standard 的 NuGet 包时，如果需要任意版本的 `NetStandard.Library`，NuGet 可自动安装该版本。</span><span class="sxs-lookup"><span data-stu-id="a6a95-116">If any version of `NetStandard.Library` is needed when using a .NET Standard-based NuGet package, NuGet automatically installs that version.</span></span>
+* <span data-ttu-id="d541b-111">面向 .NET Core 或 .NET Standard 时，绝不通过项目文件中的 `<PackageReference>` 项，对 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包进行显式引用。</span><span class="sxs-lookup"><span data-stu-id="d541b-111">When targeting .NET Core or .NET Standard, never have an explicit reference to the `Microsoft.NETCore.App` or `NetStandard.Library` metapackages via a `<PackageReference>` item in your project file.</span></span>
+* <span data-ttu-id="d541b-112">面向 .NET Core 时，如果需要特定版本的运行时，应使用项目中的 `<RuntimeFrameworkVersion>` 属性（例如，`1.0.4`），而不是引用元包。</span><span class="sxs-lookup"><span data-stu-id="d541b-112">If you need a specific version of the runtime when targeting .NET Core, you should use the `<RuntimeFrameworkVersion>` property in your project (for example, `1.0.4`) instead of referencing the metapackage.</span></span>
+    * <span data-ttu-id="d541b-113">例如，如果使用[独立部署](../deploying/index.md#self-contained-deployments-scd)且需要 1.0.0 LTS 运行时的特定修补程序版本，可能会发生这种情况。</span><span class="sxs-lookup"><span data-stu-id="d541b-113">This might happen if you are using [self-contained deployments](../deploying/index.md#self-contained-deployments-scd) and you need a specific patch version of 1.0.0 LTS runtime, for example.</span></span>
+* <span data-ttu-id="d541b-114">面向 .NET Standard 时，如果需要特定版本的 `NetStandard.Library` 元包，可以使用 `<NetStandardImplicitPackageVersion>` 属性并设置所需版本。</span><span class="sxs-lookup"><span data-stu-id="d541b-114">If you need a specific version of the `NetStandard.Library` metapackage when targeting .NET Standard, you can use the `<NetStandardImplicitPackageVersion>` property and set the version you need.</span></span>
+* <span data-ttu-id="d541b-115">请勿在 .NET Framework 项目中显式添加或更新对 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包的引用。</span><span class="sxs-lookup"><span data-stu-id="d541b-115">Don't explicitly add or update references to either the `Microsoft.NETCore.App` or `NetStandard.Library` metapackage in .NET Framework projects.</span></span> <span data-ttu-id="d541b-116">使用基于 .NET Standard 的 NuGet 包时，如果需要任意版本的 `NetStandard.Library`，NuGet 可自动安装该版本。</span><span class="sxs-lookup"><span data-stu-id="d541b-116">If any version of `NetStandard.Library` is needed when using a .NET Standard-based NuGet package, NuGet automatically installs that version.</span></span>
 
-## <a name="default-compilation-includes-in-net-core-projects"></a><span data-ttu-id="a6a95-117">.NET Core 项目中默认包含的编译项</span><span class="sxs-lookup"><span data-stu-id="a6a95-117">Default compilation includes in .NET Core projects</span></span>
-<span data-ttu-id="a6a95-118">已通过移动到最新 SDK 版本中的 *csproj* 格式，将默认的编译项和嵌入资源的包含项和排除项移至 SDK 属性文件。</span><span class="sxs-lookup"><span data-stu-id="a6a95-118">With the move to the *csproj* format in the latest SDK versions, we've moved the default includes and excludes for compile items and embedded resources to the SDK properties files.</span></span> <span data-ttu-id="a6a95-119">这意味着不需要再在项目文件中指定这些项。</span><span class="sxs-lookup"><span data-stu-id="a6a95-119">This means that you no longer need to specify these items in your project file.</span></span>
+## <a name="default-compilation-includes-in-net-core-projects"></a><span data-ttu-id="d541b-117">.NET Core 项目中默认包含的编译项</span><span class="sxs-lookup"><span data-stu-id="d541b-117">Default compilation includes in .NET Core projects</span></span>
+<span data-ttu-id="d541b-118">已通过移动到最新 SDK 版本中的 *csproj* 格式，将默认的编译项和嵌入资源的包含项和排除项移至 SDK 属性文件。</span><span class="sxs-lookup"><span data-stu-id="d541b-118">With the move to the *csproj* format in the latest SDK versions, we've moved the default includes and excludes for compile items and embedded resources to the SDK properties files.</span></span> <span data-ttu-id="d541b-119">这意味着不需要再在项目文件中指定这些项。</span><span class="sxs-lookup"><span data-stu-id="d541b-119">This means that you no longer need to specify these items in your project file.</span></span>
 
-<span data-ttu-id="a6a95-120">执行此操作的主要目的是减少项目文件中的混杂。</span><span class="sxs-lookup"><span data-stu-id="a6a95-120">The main reason for doing this is to reduce the clutter in your project file.</span></span> <span data-ttu-id="a6a95-121">SDK 中的默认设置应涵盖最常见的用例，由此便无需在创建的每个项目中重复这些设置。</span><span class="sxs-lookup"><span data-stu-id="a6a95-121">The defaults that are present in the SDK should cover most common use cases, so there is no need to repeat them in every project that you create.</span></span> <span data-ttu-id="a6a95-122">这可使项目文件更小，更易于理解和进行手动编辑（如果需要）。</span><span class="sxs-lookup"><span data-stu-id="a6a95-122">This leads to smaller project files that are much easier to understand as well as edit by hand, if needed.</span></span>
+<span data-ttu-id="d541b-120">执行此操作的主要目的是减少项目文件中的混杂。</span><span class="sxs-lookup"><span data-stu-id="d541b-120">The main reason for doing this is to reduce the clutter in your project file.</span></span> <span data-ttu-id="d541b-121">SDK 中的默认设置应涵盖最常见的用例，由此便无需在创建的每个项目中重复这些设置。</span><span class="sxs-lookup"><span data-stu-id="d541b-121">The defaults that are present in the SDK should cover most common use cases, so there is no need to repeat them in every project that you create.</span></span> <span data-ttu-id="d541b-122">这可使项目文件更小，更易于理解和进行手动编辑（如果需要）。</span><span class="sxs-lookup"><span data-stu-id="d541b-122">This leads to smaller project files that are much easier to understand as well as edit by hand, if needed.</span></span>
 
-<span data-ttu-id="a6a95-123">下表显示同时在 SDK 中包含和排除的元素和 [globs](https://en.wikipedia.org/wiki/Glob_(programming))：</span><span class="sxs-lookup"><span data-stu-id="a6a95-123">The following table shows which element and which [globs](https://en.wikipedia.org/wiki/Glob_(programming)) are both included and excluded in the SDK:</span></span>
+<span data-ttu-id="d541b-123">下表显示同时在 SDK 中包含和排除的元素和 [globs](https://en.wikipedia.org/wiki/Glob_(programming))：</span><span class="sxs-lookup"><span data-stu-id="d541b-123">The following table shows which element and which [globs](https://en.wikipedia.org/wiki/Glob_(programming)) are both included and excluded in the SDK:</span></span>
 
-| <span data-ttu-id="a6a95-124">元素</span><span class="sxs-lookup"><span data-stu-id="a6a95-124">Element</span></span>           | <span data-ttu-id="a6a95-125">包含 glob</span><span class="sxs-lookup"><span data-stu-id="a6a95-125">Include glob</span></span>                              | <span data-ttu-id="a6a95-126">排除 glob</span><span class="sxs-lookup"><span data-stu-id="a6a95-126">Exclude glob</span></span>                                                  | <span data-ttu-id="a6a95-127">删除 glob</span><span class="sxs-lookup"><span data-stu-id="a6a95-127">Remove glob</span></span>              |
+| <span data-ttu-id="d541b-124">元素</span><span class="sxs-lookup"><span data-stu-id="d541b-124">Element</span></span>           | <span data-ttu-id="d541b-125">包含 glob</span><span class="sxs-lookup"><span data-stu-id="d541b-125">Include glob</span></span>                              | <span data-ttu-id="d541b-126">排除 glob</span><span class="sxs-lookup"><span data-stu-id="d541b-126">Exclude glob</span></span>                                                  | <span data-ttu-id="d541b-127">删除 glob</span><span class="sxs-lookup"><span data-stu-id="d541b-127">Remove glob</span></span>              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| <span data-ttu-id="a6a95-128">Compile</span><span class="sxs-lookup"><span data-stu-id="a6a95-128">Compile</span></span>           | <span data-ttu-id="a6a95-129">\*\*/\*.cs（或其他语言扩展名）</span><span class="sxs-lookup"><span data-stu-id="a6a95-129">\*\*/\*.cs (or other language extensions)</span></span> | <span data-ttu-id="a6a95-130">\*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc</span><span class="sxs-lookup"><span data-stu-id="a6a95-130">\*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc</span></span>  | <span data-ttu-id="a6a95-131">不可用</span><span class="sxs-lookup"><span data-stu-id="a6a95-131">N/A</span></span>                      |
-| <span data-ttu-id="a6a95-132">EmbeddedResource</span><span class="sxs-lookup"><span data-stu-id="a6a95-132">EmbeddedResource</span></span>  | <span data-ttu-id="a6a95-133">\*\*/\*.resx</span><span class="sxs-lookup"><span data-stu-id="a6a95-133">\*\*/\*.resx</span></span>                              | <span data-ttu-id="a6a95-134">\*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc</span><span class="sxs-lookup"><span data-stu-id="a6a95-134">\*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc</span></span>     | <span data-ttu-id="a6a95-135">不可用</span><span class="sxs-lookup"><span data-stu-id="a6a95-135">N/A</span></span>                      |
-| <span data-ttu-id="a6a95-136">None</span><span class="sxs-lookup"><span data-stu-id="a6a95-136">None</span></span>              | \*\*/\*                                   | <span data-ttu-id="a6a95-137">\*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc</span><span class="sxs-lookup"><span data-stu-id="a6a95-137">\*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc</span></span>     | <span data-ttu-id="a6a95-138">\*\*/\*.cs; \*\*/\*.resx</span><span class="sxs-lookup"><span data-stu-id="a6a95-138">\*\*/\*.cs; \*\*/\*.resx</span></span>   |
+| <span data-ttu-id="d541b-128">Compile</span><span class="sxs-lookup"><span data-stu-id="d541b-128">Compile</span></span>           | <span data-ttu-id="d541b-129">\*\*/\*.cs（或其他语言扩展名）</span><span class="sxs-lookup"><span data-stu-id="d541b-129">\*\*/\*.cs (or other language extensions)</span></span> | <span data-ttu-id="d541b-130">\*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc</span><span class="sxs-lookup"><span data-stu-id="d541b-130">\*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc</span></span>  | <span data-ttu-id="d541b-131">不可用</span><span class="sxs-lookup"><span data-stu-id="d541b-131">N/A</span></span>                      |
+| <span data-ttu-id="d541b-132">EmbeddedResource</span><span class="sxs-lookup"><span data-stu-id="d541b-132">EmbeddedResource</span></span>  | <span data-ttu-id="d541b-133">\*\*/\*.resx</span><span class="sxs-lookup"><span data-stu-id="d541b-133">\*\*/\*.resx</span></span>                              | <span data-ttu-id="d541b-134">\*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc</span><span class="sxs-lookup"><span data-stu-id="d541b-134">\*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc</span></span>     | <span data-ttu-id="d541b-135">不可用</span><span class="sxs-lookup"><span data-stu-id="d541b-135">N/A</span></span>                      |
+| <span data-ttu-id="d541b-136">None</span><span class="sxs-lookup"><span data-stu-id="d541b-136">None</span></span>              | \*\*/\*                                   | <span data-ttu-id="d541b-137">\*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc</span><span class="sxs-lookup"><span data-stu-id="d541b-137">\*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc</span></span>     | <span data-ttu-id="d541b-138">\*\*/\*.cs; \*\*/\*.resx</span><span class="sxs-lookup"><span data-stu-id="d541b-138">\*\*/\*.cs; \*\*/\*.resx</span></span>   |
 
 > [!NOTE]
-> <span data-ttu-id="a6a95-139">排除 glob 始终排除 `./bin` 和 `./obj` 文件夹，它们分别由 MSBuild 属性 `$(BaseOutputPath)` 和 `$(BaseIntermediateOutputPath)` 表示。</span><span class="sxs-lookup"><span data-stu-id="a6a95-139">**Exclude glob** always excludes the `./bin` and `./obj` folders, which are represented by the `$(BaseOutputPath)` and `$(BaseIntermediateOutputPath)` MSBuild properties, respectively.</span></span> <span data-ttu-id="a6a95-140">总体上来说，所有排除都由 `$(DefaultItemExcludes)` 表示。</span><span class="sxs-lookup"><span data-stu-id="a6a95-140">As a whole, all excludes are represented by `$(DefaultItemExcludes)`.</span></span>
+> <span data-ttu-id="d541b-139">排除 glob 始终排除 `./bin` 和 `./obj` 文件夹，它们分别由 MSBuild 属性 `$(BaseOutputPath)` 和 `$(BaseIntermediateOutputPath)` 表示。</span><span class="sxs-lookup"><span data-stu-id="d541b-139">**Exclude glob** always excludes the `./bin` and `./obj` folders, which are represented by the `$(BaseOutputPath)` and `$(BaseIntermediateOutputPath)` MSBuild properties, respectively.</span></span> <span data-ttu-id="d541b-140">总体上来说，所有排除都由 `$(DefaultItemExcludes)` 表示。</span><span class="sxs-lookup"><span data-stu-id="d541b-140">As a whole, all excludes are represented by `$(DefaultItemExcludes)`.</span></span>
 
-<span data-ttu-id="a6a95-141">如果项目中有 glob，却又尝试使用最新的 SDK 生成它，则将收到以下错误：</span><span class="sxs-lookup"><span data-stu-id="a6a95-141">If you have globs in your project and you try to build it using the newest SDK, you'll get the following error:</span></span>
+<span data-ttu-id="d541b-141">如果项目中有 glob，却又尝试使用最新的 SDK 生成它，则将收到以下错误：</span><span class="sxs-lookup"><span data-stu-id="d541b-141">If you have globs in your project and you try to build it using the newest SDK, you'll get the following error:</span></span>
 
-> <span data-ttu-id="a6a95-142">包含重复的编译项。</span><span class="sxs-lookup"><span data-stu-id="a6a95-142">Duplicate Compile items were included.</span></span> <span data-ttu-id="a6a95-143">默认情况下，.NET SDK 包括项目目录中的编译项。</span><span class="sxs-lookup"><span data-stu-id="a6a95-143">The .NET SDK includes Compile items from your project directory by default.</span></span> <span data-ttu-id="a6a95-144">可从项目文件中删除这些项，或如果想要在项目文件中显式包括它们，则将“EnableDefaultCompileItems”属性设为“false”。</span><span class="sxs-lookup"><span data-stu-id="a6a95-144">You can either remove these items from your project file, or set the 'EnableDefaultCompileItems' property to 'false' if you want to explicitly include them in your project file.</span></span>
+> <span data-ttu-id="d541b-142">包含重复的编译项。</span><span class="sxs-lookup"><span data-stu-id="d541b-142">Duplicate Compile items were included.</span></span> <span data-ttu-id="d541b-143">默认情况下，.NET SDK 包括项目目录中的编译项。</span><span class="sxs-lookup"><span data-stu-id="d541b-143">The .NET SDK includes Compile items from your project directory by default.</span></span> <span data-ttu-id="d541b-144">可从项目文件中删除这些项，或如果想要在项目文件中显式包括它们，则将“EnableDefaultCompileItems”属性设为“false”。</span><span class="sxs-lookup"><span data-stu-id="d541b-144">You can either remove these items from your project file, or set the 'EnableDefaultCompileItems' property to 'false' if you want to explicitly include them in your project file.</span></span>
 
-<span data-ttu-id="a6a95-145">要解决此错误，可以删除与前表中所列项匹配的显式 `Compile` 项，也可以将 `<EnableDefaultCompileItems>` 属性设置为 `false`，如下所示：</span><span class="sxs-lookup"><span data-stu-id="a6a95-145">In order to get around this error, you can either remove the explicit `Compile` items that match the ones listed on the previous table, or you can set the `<EnableDefaultCompileItems>` property to `false`, like this:</span></span>
+<span data-ttu-id="d541b-145">要解决此错误，可以删除与前表中所列项匹配的显式 `Compile` 项，也可以将 `<EnableDefaultCompileItems>` 属性设置为 `false`，如下所示：</span><span class="sxs-lookup"><span data-stu-id="d541b-145">In order to get around this error, you can either remove the explicit `Compile` items that match the ones listed on the previous table, or you can set the `<EnableDefaultCompileItems>` property to `false`, like this:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -67,13 +67,19 @@ ms.locfileid: "57845477"
 </PropertyGroup>
 ```
 
-<span data-ttu-id="a6a95-146">将此属性设置为 `false` 将禁用隐式包含，并还原到以前 SDK 的行为，在这种情况下，必须在项目中指定默认 glob。</span><span class="sxs-lookup"><span data-stu-id="a6a95-146">Setting this property to `false` will disable implicit inclusion, reverting to the behavior of previous SDKs where you had to specify the default globs in your project.</span></span>
+<span data-ttu-id="d541b-146">将此属性设置为 `false` 将禁用隐式包含，并还原到以前 SDK 的行为，在这种情况下，必须在项目中指定默认 glob。</span><span class="sxs-lookup"><span data-stu-id="d541b-146">Setting this property to `false` will disable implicit inclusion, reverting to the behavior of previous SDKs where you had to specify the default globs in your project.</span></span>
 
-<span data-ttu-id="a6a95-147">此更改不会修改其他包含项的主要机制。</span><span class="sxs-lookup"><span data-stu-id="a6a95-147">This change does not modify the main mechanics of other includes.</span></span> <span data-ttu-id="a6a95-148">但是，如果要指定（例如，指定某些文件通过应用发布），仍可以使用 *csproj* 中相应的已知机制来实现（例如，`<Content>` 元素）。</span><span class="sxs-lookup"><span data-stu-id="a6a95-148">However, if you wish to specify, for example, some files to get published with your app, you can still use the known mechanisms in *csproj* for that (for example, the `<Content>` element).</span></span>
+<span data-ttu-id="d541b-147">此更改不会修改其他包含项的主要机制。</span><span class="sxs-lookup"><span data-stu-id="d541b-147">This change does not modify the main mechanics of other includes.</span></span> <span data-ttu-id="d541b-148">但是，如果要指定（例如，指定某些文件通过应用发布），仍可以使用 *csproj* 中相应的已知机制来实现（例如，`<Content>` 元素）。</span><span class="sxs-lookup"><span data-stu-id="d541b-148">However, if you wish to specify, for example, some files to get published with your app, you can still use the known mechanisms in *csproj* for that (for example, the `<Content>` element).</span></span>
 
-<span data-ttu-id="a6a95-149">`<EnableDefaultCompileItems>` 仅禁用 `Compile` glob，但不会影响其他 glob（如隐式 `None` glob），这也适用于 \*.cs 项。</span><span class="sxs-lookup"><span data-stu-id="a6a95-149">`<EnableDefaultCompileItems>` only disables `Compile` globs but doesn't affect other globs, like the implicit `None` glob, which also applies to \*.cs items.</span></span> <span data-ttu-id="a6a95-150">因此，解决方案资源管理器继续显示在项目中作为 `None` 项的 \*.cs 项。</span><span class="sxs-lookup"><span data-stu-id="a6a95-150">Because of that, **Solution Explorer** will continue show \*.cs items as part of the project, included as `None` items.</span></span> <span data-ttu-id="a6a95-151">可按照类似的方式使用 `<EnableDefaultNoneItems>` 禁用隐式 `None` glob。</span><span class="sxs-lookup"><span data-stu-id="a6a95-151">In a similar way, you can use `<EnableDefaultNoneItems>` to disable the implicit `None` glob.</span></span>
+<span data-ttu-id="d541b-149">`<EnableDefaultCompileItems>` 仅禁用 `Compile` glob，但不会影响其他 glob（如隐式 `None` glob），这也适用于 \*.cs 项。</span><span class="sxs-lookup"><span data-stu-id="d541b-149">`<EnableDefaultCompileItems>` only disables `Compile` globs but doesn't affect other globs, like the implicit `None` glob, which also applies to \*.cs items.</span></span> <span data-ttu-id="d541b-150">因此，解决方案资源管理器继续显示在项目中作为 `None` 项的 \*.cs 项。</span><span class="sxs-lookup"><span data-stu-id="d541b-150">Because of that, **Solution Explorer** will continue show \*.cs items as part of the project, included as `None` items.</span></span> <span data-ttu-id="d541b-151">以类似的方式，可以将 `<EnableDefaultNoneItems>` 设置为 false 以禁用隐式 `None` glob，如下所示：</span><span class="sxs-lookup"><span data-stu-id="d541b-151">In a similar way, you can set `<EnableDefaultNoneItems>` to false to disable the implicit `None` glob, like this:</span></span>
 
-<span data-ttu-id="a6a95-152">要禁用所有隐式 glob，可将 `<EnableDefaultItems>` 属性设置为 `false`，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="a6a95-152">To disable **all implicit globs**, you can set the `<EnableDefaultItems>` property to `false` as in the following example:</span></span>
+```xml
+<PropertyGroup>
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+</PropertyGroup>
+```
+
+<span data-ttu-id="d541b-152">要禁用所有隐式 glob，可将 `<EnableDefaultItems>` 属性设置为 `false`，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="d541b-152">To disable **all implicit globs**, you can set the `<EnableDefaultItems>` property to `false` as in the following example:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -81,99 +87,99 @@ ms.locfileid: "57845477"
 </PropertyGroup>
 ```
 
-## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a><span data-ttu-id="a6a95-153">如何像 MSBuild 一样查看整个项目</span><span class="sxs-lookup"><span data-stu-id="a6a95-153">How to see the whole project as MSBuild sees it</span></span>
+## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a><span data-ttu-id="d541b-153">如何像 MSBuild 一样查看整个项目</span><span class="sxs-lookup"><span data-stu-id="d541b-153">How to see the whole project as MSBuild sees it</span></span>
 
-<span data-ttu-id="a6a95-154">虽然这些 csproj 更改极大地简化了项目文件，但建议查看完全展开的项目，就像 MSBuild 查看添加了 SDK 及其目标的项目一样。</span><span class="sxs-lookup"><span data-stu-id="a6a95-154">While those csproj changes greatly simplify project files, you might want to see the fully expanded project as MSBuild sees it once the SDK and its targets are included.</span></span> <span data-ttu-id="a6a95-155">使用 [`dotnet msbuild`](dotnet-msbuild.md) 命令的 [`/pp` 开关](/visualstudio/msbuild/msbuild-command-line-reference#preprocess)预处理项目，显示导入的文件、文件源及其在生成中的参与情况，而无需实际生成项目：</span><span class="sxs-lookup"><span data-stu-id="a6a95-155">Preprocess the project with [the `/pp` switch](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) of the [`dotnet msbuild`](dotnet-msbuild.md) command, which shows which files are imported, their sources, and their contributions to the build without actually building the project:</span></span>
+<span data-ttu-id="d541b-154">虽然这些 csproj 更改极大地简化了项目文件，但建议查看完全展开的项目，就像 MSBuild 查看添加了 SDK 及其目标的项目一样。</span><span class="sxs-lookup"><span data-stu-id="d541b-154">While those csproj changes greatly simplify project files, you might want to see the fully expanded project as MSBuild sees it once the SDK and its targets are included.</span></span> <span data-ttu-id="d541b-155">使用 [`dotnet msbuild`](dotnet-msbuild.md) 命令的 [`/pp` 开关](/visualstudio/msbuild/msbuild-command-line-reference#preprocess)预处理项目，显示导入的文件、文件源及其在生成中的参与情况，而无需实际生成项目：</span><span class="sxs-lookup"><span data-stu-id="d541b-155">Preprocess the project with [the `/pp` switch](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) of the [`dotnet msbuild`](dotnet-msbuild.md) command, which shows which files are imported, their sources, and their contributions to the build without actually building the project:</span></span>
 
 `dotnet msbuild -pp:fullproject.xml`
 
-<span data-ttu-id="a6a95-156">如果项目有多个目标框架，命令结果应仅侧重于框架之一，具体方法为将相应框架指定为 MSBuild 属性：</span><span class="sxs-lookup"><span data-stu-id="a6a95-156">If the project has multiple target frameworks, the results of the command should be focused on only one of them by specifying it as an MSBuild property:</span></span>
+<span data-ttu-id="d541b-156">如果项目有多个目标框架，命令结果应仅侧重于框架之一，具体方法为将相应框架指定为 MSBuild 属性：</span><span class="sxs-lookup"><span data-stu-id="d541b-156">If the project has multiple target frameworks, the results of the command should be focused on only one of them by specifying it as an MSBuild property:</span></span>
 
 `dotnet msbuild -p:TargetFramework=netcoreapp2.0 -pp:fullproject.xml`
 
-## <a name="additions"></a><span data-ttu-id="a6a95-157">新增内容</span><span class="sxs-lookup"><span data-stu-id="a6a95-157">Additions</span></span>
+## <a name="additions"></a><span data-ttu-id="d541b-157">新增内容</span><span class="sxs-lookup"><span data-stu-id="d541b-157">Additions</span></span>
 
-### <a name="sdk-attribute"></a><span data-ttu-id="a6a95-158">Sdk 特性</span><span class="sxs-lookup"><span data-stu-id="a6a95-158">Sdk attribute</span></span>
-<span data-ttu-id="a6a95-159">.csproj 文件的根 `<Project>` 元素具有名为 `Sdk` 的新特性。</span><span class="sxs-lookup"><span data-stu-id="a6a95-159">The root `<Project>` element of the *.csproj* file has a new attribute called `Sdk`.</span></span> <span data-ttu-id="a6a95-160">`Sdk` 指定项目将使用的 SDK。</span><span class="sxs-lookup"><span data-stu-id="a6a95-160">`Sdk` specifies which SDK will be used by the project.</span></span> <span data-ttu-id="a6a95-161">如[分层文档](cli-msbuild-architecture.md)中所述，SDK 是一组可生成 .NET Core 代码的 MSBuild [任务](/visualstudio/msbuild/msbuild-tasks)和[目标](/visualstudio/msbuild/msbuild-targets)。</span><span class="sxs-lookup"><span data-stu-id="a6a95-161">The SDK, as the [layering document](cli-msbuild-architecture.md) describes, is a set of MSBuild [tasks](/visualstudio/msbuild/msbuild-tasks) and [targets](/visualstudio/msbuild/msbuild-targets) that can build .NET Core code.</span></span> <span data-ttu-id="a6a95-162">.NET Core 工具随附了三个主要 SDK：</span><span class="sxs-lookup"><span data-stu-id="a6a95-162">We ship three main SDKs with the .NET Core tools:</span></span>
+### <a name="sdk-attribute"></a><span data-ttu-id="d541b-158">Sdk 特性</span><span class="sxs-lookup"><span data-stu-id="d541b-158">Sdk attribute</span></span>
+<span data-ttu-id="d541b-159">.csproj 文件的根 `<Project>` 元素具有名为 `Sdk` 的新特性。</span><span class="sxs-lookup"><span data-stu-id="d541b-159">The root `<Project>` element of the *.csproj* file has a new attribute called `Sdk`.</span></span> <span data-ttu-id="d541b-160">`Sdk` 指定项目将使用的 SDK。</span><span class="sxs-lookup"><span data-stu-id="d541b-160">`Sdk` specifies which SDK will be used by the project.</span></span> <span data-ttu-id="d541b-161">如[分层文档](cli-msbuild-architecture.md)中所述，SDK 是一组可生成 .NET Core 代码的 MSBuild [任务](/visualstudio/msbuild/msbuild-tasks)和[目标](/visualstudio/msbuild/msbuild-targets)。</span><span class="sxs-lookup"><span data-stu-id="d541b-161">The SDK, as the [layering document](cli-msbuild-architecture.md) describes, is a set of MSBuild [tasks](/visualstudio/msbuild/msbuild-tasks) and [targets](/visualstudio/msbuild/msbuild-targets) that can build .NET Core code.</span></span> <span data-ttu-id="d541b-162">.NET Core 工具随附了三个主要 SDK：</span><span class="sxs-lookup"><span data-stu-id="d541b-162">We ship three main SDKs with the .NET Core tools:</span></span>
 
-1. <span data-ttu-id="a6a95-163">ID 为 `Microsoft.NET.Sdk` 的 .NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="a6a95-163">The .NET Core SDK with the ID of `Microsoft.NET.Sdk`</span></span>
-2. <span data-ttu-id="a6a95-164">ID 为 `Microsoft.NET.Sdk.Web` 的 .NET Core Web SDK</span><span class="sxs-lookup"><span data-stu-id="a6a95-164">The .NET Core web SDK with the ID of `Microsoft.NET.Sdk.Web`</span></span>
-3. <span data-ttu-id="a6a95-165">ID 为 `Microsoft.NET.Sdk.Razor` 的 .NET Core Razor 类库 SDK</span><span class="sxs-lookup"><span data-stu-id="a6a95-165">The .NET Core Razor Class Library SDK with the ID of `Microsoft.NET.Sdk.Razor`</span></span>
+1. <span data-ttu-id="d541b-163">ID 为 `Microsoft.NET.Sdk` 的 .NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="d541b-163">The .NET Core SDK with the ID of `Microsoft.NET.Sdk`</span></span>
+2. <span data-ttu-id="d541b-164">ID 为 `Microsoft.NET.Sdk.Web` 的 .NET Core Web SDK</span><span class="sxs-lookup"><span data-stu-id="d541b-164">The .NET Core web SDK with the ID of `Microsoft.NET.Sdk.Web`</span></span>
+3. <span data-ttu-id="d541b-165">ID 为 `Microsoft.NET.Sdk.Razor` 的 .NET Core Razor 类库 SDK</span><span class="sxs-lookup"><span data-stu-id="d541b-165">The .NET Core Razor Class Library SDK with the ID of `Microsoft.NET.Sdk.Razor`</span></span>
 
-<span data-ttu-id="a6a95-166">需要在 `<Project>` 元素上将 `Sdk` 属性设置为这两个 ID 之一，以使用 .NET Core 工具和生成代码。</span><span class="sxs-lookup"><span data-stu-id="a6a95-166">You need to have the `Sdk` attribute set to one of those IDs on the `<Project>` element in order to use the .NET Core tools and build your code.</span></span>
+<span data-ttu-id="d541b-166">需要在 `<Project>` 元素上将 `Sdk` 属性设置为这两个 ID 之一，以使用 .NET Core 工具和生成代码。</span><span class="sxs-lookup"><span data-stu-id="d541b-166">You need to have the `Sdk` attribute set to one of those IDs on the `<Project>` element in order to use the .NET Core tools and build your code.</span></span>
 
-### <a name="packagereference"></a><span data-ttu-id="a6a95-167">PackageReference</span><span class="sxs-lookup"><span data-stu-id="a6a95-167">PackageReference</span></span>
+### <a name="packagereference"></a><span data-ttu-id="d541b-167">PackageReference</span><span class="sxs-lookup"><span data-stu-id="d541b-167">PackageReference</span></span>
 
-<span data-ttu-id="a6a95-168">`<PackageReference>` 项元素指定[项目中的 NuGet 依赖项](/nuget/consume-packages/package-references-in-project-files)。</span><span class="sxs-lookup"><span data-stu-id="a6a95-168">A `<PackageReference>` item element specifies a [NuGet dependency in the project](/nuget/consume-packages/package-references-in-project-files).</span></span> <span data-ttu-id="a6a95-169">`Include` 属性指定包 ID。</span><span class="sxs-lookup"><span data-stu-id="a6a95-169">The `Include` attribute specifies the package ID.</span></span>
+<span data-ttu-id="d541b-168">`<PackageReference>` 项元素指定[项目中的 NuGet 依赖项](/nuget/consume-packages/package-references-in-project-files)。</span><span class="sxs-lookup"><span data-stu-id="d541b-168">A `<PackageReference>` item element specifies a [NuGet dependency in the project](/nuget/consume-packages/package-references-in-project-files).</span></span> <span data-ttu-id="d541b-169">`Include` 属性指定包 ID。</span><span class="sxs-lookup"><span data-stu-id="d541b-169">The `Include` attribute specifies the package ID.</span></span>
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
-#### <a name="version"></a><span data-ttu-id="a6a95-170">Version</span><span class="sxs-lookup"><span data-stu-id="a6a95-170">Version</span></span>
+#### <a name="version"></a><span data-ttu-id="d541b-170">Version</span><span class="sxs-lookup"><span data-stu-id="d541b-170">Version</span></span>
 
-<span data-ttu-id="a6a95-171">所需的 `Version` 属性指定要还原的包的版本。</span><span class="sxs-lookup"><span data-stu-id="a6a95-171">The required `Version` attribute specifies the version of the package to restore.</span></span> <span data-ttu-id="a6a95-172">此属性遵循 [NuGet 版本控制](/nuget/reference/package-versioning#version-ranges-and-wildcards)方案规则。</span><span class="sxs-lookup"><span data-stu-id="a6a95-172">The attribute respects the rules of the [NuGet versioning](/nuget/reference/package-versioning#version-ranges-and-wildcards) scheme.</span></span> <span data-ttu-id="a6a95-173">默认行为是精确的版本匹配。</span><span class="sxs-lookup"><span data-stu-id="a6a95-173">The default behavior is an exact version match.</span></span> <span data-ttu-id="a6a95-174">例如，指定 `Version="1.2.3"` 等效于包的 1.2.3 版本的 NuGet 表示法 `[1.2.3]`。</span><span class="sxs-lookup"><span data-stu-id="a6a95-174">For example, specifying `Version="1.2.3"` is equivalent to NuGet notation `[1.2.3]` for the exact 1.2.3 version of the package.</span></span>
+<span data-ttu-id="d541b-171">所需的 `Version` 属性指定要还原的包的版本。</span><span class="sxs-lookup"><span data-stu-id="d541b-171">The required `Version` attribute specifies the version of the package to restore.</span></span> <span data-ttu-id="d541b-172">此属性遵循 [NuGet 版本控制](/nuget/reference/package-versioning#version-ranges-and-wildcards)方案规则。</span><span class="sxs-lookup"><span data-stu-id="d541b-172">The attribute respects the rules of the [NuGet versioning](/nuget/reference/package-versioning#version-ranges-and-wildcards) scheme.</span></span> <span data-ttu-id="d541b-173">默认行为是精确的版本匹配。</span><span class="sxs-lookup"><span data-stu-id="d541b-173">The default behavior is an exact version match.</span></span> <span data-ttu-id="d541b-174">例如，指定 `Version="1.2.3"` 等效于包的 1.2.3 版本的 NuGet 表示法 `[1.2.3]`。</span><span class="sxs-lookup"><span data-stu-id="d541b-174">For example, specifying `Version="1.2.3"` is equivalent to NuGet notation `[1.2.3]` for the exact 1.2.3 version of the package.</span></span>
 
-#### <a name="includeassets-excludeassets-and-privateassets"></a><span data-ttu-id="a6a95-175">IncludeAssets、ExcludeAssets 和 PrivateAssets</span><span class="sxs-lookup"><span data-stu-id="a6a95-175">IncludeAssets, ExcludeAssets and PrivateAssets</span></span>
+#### <a name="includeassets-excludeassets-and-privateassets"></a><span data-ttu-id="d541b-175">IncludeAssets、ExcludeAssets 和 PrivateAssets</span><span class="sxs-lookup"><span data-stu-id="d541b-175">IncludeAssets, ExcludeAssets and PrivateAssets</span></span>
 
-<span data-ttu-id="a6a95-176">`IncludeAssets` 属性指定应使用 `<PackageReference>` 指定的包中的哪些资产。</span><span class="sxs-lookup"><span data-stu-id="a6a95-176">`IncludeAssets` attribute specifies which assets belonging to the package specified by `<PackageReference>` should be consumed.</span></span> <span data-ttu-id="a6a95-177">默认情况下，包含所有包资产。</span><span class="sxs-lookup"><span data-stu-id="a6a95-177">By default, all package assets are included.</span></span>
+<span data-ttu-id="d541b-176">`IncludeAssets` 属性指定应使用 `<PackageReference>` 指定的包中的哪些资产。</span><span class="sxs-lookup"><span data-stu-id="d541b-176">`IncludeAssets` attribute specifies which assets belonging to the package specified by `<PackageReference>` should be consumed.</span></span> <span data-ttu-id="d541b-177">默认情况下，包含所有包资产。</span><span class="sxs-lookup"><span data-stu-id="d541b-177">By default, all package assets are included.</span></span>
 
-<span data-ttu-id="a6a95-178">`ExcludeAssets` 属性指定不应使用 `<PackageReference>` 指定的包中的哪些资产。</span><span class="sxs-lookup"><span data-stu-id="a6a95-178">`ExcludeAssets` attribute specifies which assets belonging to the package specified by `<PackageReference>` should not be consumed.</span></span>
+<span data-ttu-id="d541b-178">`ExcludeAssets` 属性指定不应使用 `<PackageReference>` 指定的包中的哪些资产。</span><span class="sxs-lookup"><span data-stu-id="d541b-178">`ExcludeAssets` attribute specifies which assets belonging to the package specified by `<PackageReference>` should not be consumed.</span></span>
 
-<span data-ttu-id="a6a95-179">`PrivateAssets` 属性指定应使用 `<PackageReference>` 指定的包中的哪些资产，但不得将这些资产传递到下一个项目。</span><span class="sxs-lookup"><span data-stu-id="a6a95-179">`PrivateAssets` attribute specifies which assets belonging to the package specified by `<PackageReference>` should be consumed but not flow to the next project.</span></span> <span data-ttu-id="a6a95-180">不存在此属性时，`Analyzers`、`Build` 和 `ContentFiles` 资产默认为私有。</span><span class="sxs-lookup"><span data-stu-id="a6a95-180">The `Analyzers`, `Build` and `ContentFiles` assets are private by default when this attribute is not present.</span></span>
+<span data-ttu-id="d541b-179">`PrivateAssets` 属性指定应使用 `<PackageReference>` 指定的包中的哪些资产，但不得将这些资产传递到下一个项目。</span><span class="sxs-lookup"><span data-stu-id="d541b-179">`PrivateAssets` attribute specifies which assets belonging to the package specified by `<PackageReference>` should be consumed but not flow to the next project.</span></span> <span data-ttu-id="d541b-180">不存在此属性时，`Analyzers`、`Build` 和 `ContentFiles` 资产默认为私有。</span><span class="sxs-lookup"><span data-stu-id="d541b-180">The `Analyzers`, `Build` and `ContentFiles` assets are private by default when this attribute is not present.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a6a95-181">`PrivateAssets` 等效于 *project.json*/*xproj* `SuppressParent` 元素。</span><span class="sxs-lookup"><span data-stu-id="a6a95-181">`PrivateAssets` is equivalent to the *project.json*/*xproj* `SuppressParent` element.</span></span>
+> <span data-ttu-id="d541b-181">`PrivateAssets` 等效于 *project.json*/*xproj* `SuppressParent` 元素。</span><span class="sxs-lookup"><span data-stu-id="d541b-181">`PrivateAssets` is equivalent to the *project.json*/*xproj* `SuppressParent` element.</span></span>
 
-<span data-ttu-id="a6a95-182">这些属性可以包含以下一个或多个项，如果列出多个项，则用分号 `;` 字符进行分隔：</span><span class="sxs-lookup"><span data-stu-id="a6a95-182">These attributes can contain one or more of the following items, separated by the semicolon `;` character if more than one is listed:</span></span>
+<span data-ttu-id="d541b-182">这些属性可以包含以下一个或多个项，如果列出多个项，则用分号 `;` 字符进行分隔：</span><span class="sxs-lookup"><span data-stu-id="d541b-182">These attributes can contain one or more of the following items, separated by the semicolon `;` character if more than one is listed:</span></span>
 
-* <span data-ttu-id="a6a95-183">`Compile` - 可对 lib 文件夹内容进行编译。</span><span class="sxs-lookup"><span data-stu-id="a6a95-183">`Compile` – the contents of the lib folder are available to compile against.</span></span>
-* <span data-ttu-id="a6a95-184">`Runtime` - 分发运行时文件夹内容。</span><span class="sxs-lookup"><span data-stu-id="a6a95-184">`Runtime` – the contents of the runtime folder are distributed.</span></span>
-* <span data-ttu-id="a6a95-185">`ContentFiles` - 使用 *contentfiles* 文件夹的内容。</span><span class="sxs-lookup"><span data-stu-id="a6a95-185">`ContentFiles` – the contents of the *contentfiles* folder are used.</span></span>
-* <span data-ttu-id="a6a95-186">`Build` - 使用生成文件夹中的属性/目标。</span><span class="sxs-lookup"><span data-stu-id="a6a95-186">`Build` – the props/targets in the build folder are used.</span></span>
-* <span data-ttu-id="a6a95-187">`Native` - 将本机资产内容复制到运行时输出文件夹。</span><span class="sxs-lookup"><span data-stu-id="a6a95-187">`Native` – the contents from native assets are copied to the output folder for runtime.</span></span>
-* <span data-ttu-id="a6a95-188">`Analyzers` - 使用分析器。</span><span class="sxs-lookup"><span data-stu-id="a6a95-188">`Analyzers` – the analyzers are used.</span></span>
+* <span data-ttu-id="d541b-183">`Compile` - 可对 lib 文件夹内容进行编译。</span><span class="sxs-lookup"><span data-stu-id="d541b-183">`Compile` – the contents of the lib folder are available to compile against.</span></span>
+* <span data-ttu-id="d541b-184">`Runtime` - 分发运行时文件夹内容。</span><span class="sxs-lookup"><span data-stu-id="d541b-184">`Runtime` – the contents of the runtime folder are distributed.</span></span>
+* <span data-ttu-id="d541b-185">`ContentFiles` - 使用 *contentfiles* 文件夹的内容。</span><span class="sxs-lookup"><span data-stu-id="d541b-185">`ContentFiles` – the contents of the *contentfiles* folder are used.</span></span>
+* <span data-ttu-id="d541b-186">`Build` - 使用生成文件夹中的属性/目标。</span><span class="sxs-lookup"><span data-stu-id="d541b-186">`Build` – the props/targets in the build folder are used.</span></span>
+* <span data-ttu-id="d541b-187">`Native` - 将本机资产内容复制到运行时输出文件夹。</span><span class="sxs-lookup"><span data-stu-id="d541b-187">`Native` – the contents from native assets are copied to the output folder for runtime.</span></span>
+* <span data-ttu-id="d541b-188">`Analyzers` - 使用分析器。</span><span class="sxs-lookup"><span data-stu-id="d541b-188">`Analyzers` – the analyzers are used.</span></span>
 
-<span data-ttu-id="a6a95-189">此属性也可以包含：</span><span class="sxs-lookup"><span data-stu-id="a6a95-189">Alternatively, the attribute can contain:</span></span>
+<span data-ttu-id="d541b-189">此属性也可以包含：</span><span class="sxs-lookup"><span data-stu-id="d541b-189">Alternatively, the attribute can contain:</span></span>
 
-* <span data-ttu-id="a6a95-190">`None` - 不使用任何资产。</span><span class="sxs-lookup"><span data-stu-id="a6a95-190">`None` – none of the assets are used.</span></span>
-* <span data-ttu-id="a6a95-191">`All` - 使用所有资产。</span><span class="sxs-lookup"><span data-stu-id="a6a95-191">`All` – all assets are used.</span></span>
+* <span data-ttu-id="d541b-190">`None` - 不使用任何资产。</span><span class="sxs-lookup"><span data-stu-id="d541b-190">`None` – none of the assets are used.</span></span>
+* <span data-ttu-id="d541b-191">`All` - 使用所有资产。</span><span class="sxs-lookup"><span data-stu-id="d541b-191">`All` – all assets are used.</span></span>
 
-### <a name="dotnetclitoolreference"></a><span data-ttu-id="a6a95-192">DotNetCliToolReference</span><span class="sxs-lookup"><span data-stu-id="a6a95-192">DotNetCliToolReference</span></span>
-<span data-ttu-id="a6a95-193">`<DotNetCliToolReference>` 项元素指定用户想要在项目的上下文中还原的 CLI 工具。</span><span class="sxs-lookup"><span data-stu-id="a6a95-193">A `<DotNetCliToolReference>` item element specifies the CLI tool that the user wants to restore in the context of the project.</span></span> <span data-ttu-id="a6a95-194">在 *project.json* 中，它可以替换 `tools` 节点。</span><span class="sxs-lookup"><span data-stu-id="a6a95-194">It's a replacement for the `tools` node in *project.json*.</span></span>
+### <a name="dotnetclitoolreference"></a><span data-ttu-id="d541b-192">DotNetCliToolReference</span><span class="sxs-lookup"><span data-stu-id="d541b-192">DotNetCliToolReference</span></span>
+<span data-ttu-id="d541b-193">`<DotNetCliToolReference>` 项元素指定用户想要在项目的上下文中还原的 CLI 工具。</span><span class="sxs-lookup"><span data-stu-id="d541b-193">A `<DotNetCliToolReference>` item element specifies the CLI tool that the user wants to restore in the context of the project.</span></span> <span data-ttu-id="d541b-194">在 *project.json* 中，它可以替换 `tools` 节点。</span><span class="sxs-lookup"><span data-stu-id="d541b-194">It's a replacement for the `tools` node in *project.json*.</span></span>
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-#### <a name="version"></a><span data-ttu-id="a6a95-195">Version</span><span class="sxs-lookup"><span data-stu-id="a6a95-195">Version</span></span>
+#### <a name="version"></a><span data-ttu-id="d541b-195">Version</span><span class="sxs-lookup"><span data-stu-id="d541b-195">Version</span></span>
 
-<span data-ttu-id="a6a95-196">`Version` 指定要还原的包的版本。</span><span class="sxs-lookup"><span data-stu-id="a6a95-196">`Version` specifies the version of the package to restore.</span></span> <span data-ttu-id="a6a95-197">此属性遵循 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)方案规则。</span><span class="sxs-lookup"><span data-stu-id="a6a95-197">The attribute respects the rules of the [NuGet versioning](/nuget/create-packages/dependency-versions#version-ranges) scheme.</span></span> <span data-ttu-id="a6a95-198">默认行为是精确的版本匹配。</span><span class="sxs-lookup"><span data-stu-id="a6a95-198">The default behavior is an exact version match.</span></span> <span data-ttu-id="a6a95-199">例如，指定 `Version="1.2.3"` 等效于包的 1.2.3 版本的 NuGet 表示法 `[1.2.3]`。</span><span class="sxs-lookup"><span data-stu-id="a6a95-199">For example, specifying `Version="1.2.3"` is equivalent to NuGet notation `[1.2.3]` for the exact 1.2.3 version of the package.</span></span>
+<span data-ttu-id="d541b-196">`Version` 指定要还原的包的版本。</span><span class="sxs-lookup"><span data-stu-id="d541b-196">`Version` specifies the version of the package to restore.</span></span> <span data-ttu-id="d541b-197">此属性遵循 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)方案规则。</span><span class="sxs-lookup"><span data-stu-id="d541b-197">The attribute respects the rules of the [NuGet versioning](/nuget/create-packages/dependency-versions#version-ranges) scheme.</span></span> <span data-ttu-id="d541b-198">默认行为是精确的版本匹配。</span><span class="sxs-lookup"><span data-stu-id="d541b-198">The default behavior is an exact version match.</span></span> <span data-ttu-id="d541b-199">例如，指定 `Version="1.2.3"` 等效于包的 1.2.3 版本的 NuGet 表示法 `[1.2.3]`。</span><span class="sxs-lookup"><span data-stu-id="d541b-199">For example, specifying `Version="1.2.3"` is equivalent to NuGet notation `[1.2.3]` for the exact 1.2.3 version of the package.</span></span>
 
-### <a name="runtimeidentifiers"></a><span data-ttu-id="a6a95-200">RuntimeIdentifiers</span><span class="sxs-lookup"><span data-stu-id="a6a95-200">RuntimeIdentifiers</span></span>
+### <a name="runtimeidentifiers"></a><span data-ttu-id="d541b-200">RuntimeIdentifiers</span><span class="sxs-lookup"><span data-stu-id="d541b-200">RuntimeIdentifiers</span></span>
 
-<span data-ttu-id="a6a95-201">`<RuntimeIdentifiers>` 属性元素可用于指定项目的[运行时标识符 (RID)](../rid-catalog.md) 的列表（以分号分隔）。</span><span class="sxs-lookup"><span data-stu-id="a6a95-201">The `<RuntimeIdentifiers>` property element lets you specify a semicolon-delimited list of [Runtime Identifiers (RIDs)](../rid-catalog.md) for the project.</span></span>
-<span data-ttu-id="a6a95-202">RID 允许发布独立部署。</span><span class="sxs-lookup"><span data-stu-id="a6a95-202">RIDs enable publishing self-contained deployments.</span></span>
+<span data-ttu-id="d541b-201">`<RuntimeIdentifiers>` 属性元素可用于指定项目的[运行时标识符 (RID)](../rid-catalog.md) 的列表（以分号分隔）。</span><span class="sxs-lookup"><span data-stu-id="d541b-201">The `<RuntimeIdentifiers>` property element lets you specify a semicolon-delimited list of [Runtime Identifiers (RIDs)](../rid-catalog.md) for the project.</span></span>
+<span data-ttu-id="d541b-202">RID 允许发布独立部署。</span><span class="sxs-lookup"><span data-stu-id="d541b-202">RIDs enable publishing self-contained deployments.</span></span>
 
 ```xml
 <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 ```
 
-### <a name="runtimeidentifier"></a><span data-ttu-id="a6a95-203">RuntimeIdentifier</span><span class="sxs-lookup"><span data-stu-id="a6a95-203">RuntimeIdentifier</span></span>
+### <a name="runtimeidentifier"></a><span data-ttu-id="d541b-203">RuntimeIdentifier</span><span class="sxs-lookup"><span data-stu-id="d541b-203">RuntimeIdentifier</span></span>
 
-<span data-ttu-id="a6a95-204">`<RuntimeIdentifier>` 属性元素可用于指定项目的唯一[运行时标识符 (RID)](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="a6a95-204">The `<RuntimeIdentifier>` property element allows you to specify only one [Runtime Identifier (RID)](../rid-catalog.md) for the project.</span></span> <span data-ttu-id="a6a95-205">RID 支持发布独立部署。</span><span class="sxs-lookup"><span data-stu-id="a6a95-205">The RID enables publishing a self-contained deployment.</span></span>
+<span data-ttu-id="d541b-204">`<RuntimeIdentifier>` 属性元素可用于指定项目的唯一[运行时标识符 (RID)](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="d541b-204">The `<RuntimeIdentifier>` property element allows you to specify only one [Runtime Identifier (RID)](../rid-catalog.md) for the project.</span></span> <span data-ttu-id="d541b-205">RID 支持发布独立部署。</span><span class="sxs-lookup"><span data-stu-id="d541b-205">The RID enables publishing a self-contained deployment.</span></span>
 
 ```xml
 <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
 ```
 
-<span data-ttu-id="a6a95-206">如果需要为多个运行时发布，请使用 `<RuntimeIdentifiers>`（复数）。</span><span class="sxs-lookup"><span data-stu-id="a6a95-206">Use `<RuntimeIdentifiers>` (plural) instead if you need to publish for multiple runtimes.</span></span> <span data-ttu-id="a6a95-207">如果只需要单个运行时，`<RuntimeIdentifier>` 可以进行较快的生成。</span><span class="sxs-lookup"><span data-stu-id="a6a95-207">`<RuntimeIdentifier>` can provide faster builds when only a single runtime is required.</span></span>
+<span data-ttu-id="d541b-206">如果需要为多个运行时发布，请使用 `<RuntimeIdentifiers>`（复数）。</span><span class="sxs-lookup"><span data-stu-id="d541b-206">Use `<RuntimeIdentifiers>` (plural) instead if you need to publish for multiple runtimes.</span></span> <span data-ttu-id="d541b-207">如果只需要单个运行时，`<RuntimeIdentifier>` 可以进行较快的生成。</span><span class="sxs-lookup"><span data-stu-id="d541b-207">`<RuntimeIdentifier>` can provide faster builds when only a single runtime is required.</span></span>
 
-### <a name="packagetargetfallback"></a><span data-ttu-id="a6a95-208">PackageTargetFallback</span><span class="sxs-lookup"><span data-stu-id="a6a95-208">PackageTargetFallback</span></span>
+### <a name="packagetargetfallback"></a><span data-ttu-id="d541b-208">PackageTargetFallback</span><span class="sxs-lookup"><span data-stu-id="d541b-208">PackageTargetFallback</span></span>
 
-<span data-ttu-id="a6a95-209">`<PackageTargetFallback>` 属性元素可用于指定要在还原包时使用的一组兼容目标。</span><span class="sxs-lookup"><span data-stu-id="a6a95-209">The `<PackageTargetFallback>` property element allows you to specify a set of compatible targets to be used when restoring packages.</span></span> <span data-ttu-id="a6a95-210">旨在允许使用 dotnet [TxM（目标 x 名字对象）](/nuget/schema/target-frameworks) 的包处理未声明 dotnet TxM 的包。</span><span class="sxs-lookup"><span data-stu-id="a6a95-210">It's designed to allow packages that use the dotnet [TxM (Target x Moniker)](/nuget/schema/target-frameworks) to operate with packages that don't declare a dotnet TxM.</span></span> <span data-ttu-id="a6a95-211">如果项目使用 dotnet TxM，那么所依赖的所有包也必须有 dotnet TxM，除非将 `<PackageTargetFallback>` 添加到项目中，以允许非 dotnet 平台与 dotnet 兼容。</span><span class="sxs-lookup"><span data-stu-id="a6a95-211">If your project uses the dotnet TxM, then all the packages it depends on must also have a dotnet TxM, unless you add the `<PackageTargetFallback>` to your project in order to allow non-dotnet platforms to be compatible with dotnet.</span></span>
+<span data-ttu-id="d541b-209">`<PackageTargetFallback>` 属性元素可用于指定要在还原包时使用的一组兼容目标。</span><span class="sxs-lookup"><span data-stu-id="d541b-209">The `<PackageTargetFallback>` property element allows you to specify a set of compatible targets to be used when restoring packages.</span></span> <span data-ttu-id="d541b-210">旨在允许使用 dotnet [TxM（目标 x 名字对象）](/nuget/schema/target-frameworks) 的包处理未声明 dotnet TxM 的包。</span><span class="sxs-lookup"><span data-stu-id="d541b-210">It's designed to allow packages that use the dotnet [TxM (Target x Moniker)](/nuget/schema/target-frameworks) to operate with packages that don't declare a dotnet TxM.</span></span> <span data-ttu-id="d541b-211">如果项目使用 dotnet TxM，那么所依赖的所有包也必须有 dotnet TxM，除非将 `<PackageTargetFallback>` 添加到项目中，以允许非 dotnet 平台与 dotnet 兼容。</span><span class="sxs-lookup"><span data-stu-id="d541b-211">If your project uses the dotnet TxM, then all the packages it depends on must also have a dotnet TxM, unless you add the `<PackageTargetFallback>` to your project in order to allow non-dotnet platforms to be compatible with dotnet.</span></span>
 
-<span data-ttu-id="a6a95-212">以下示例展示了项目中所有目标的回退：</span><span class="sxs-lookup"><span data-stu-id="a6a95-212">The following example provides the fallbacks for all targets in your project:</span></span>
+<span data-ttu-id="d541b-212">以下示例展示了项目中所有目标的回退：</span><span class="sxs-lookup"><span data-stu-id="d541b-212">The following example provides the fallbacks for all targets in your project:</span></span>
 
 ```xml
 <PackageTargetFallback>
@@ -181,7 +187,7 @@ ms.locfileid: "57845477"
 </PackageTargetFallback >
 ```
 
-<span data-ttu-id="a6a95-213">以下示例仅指定了 `netcoreapp2.1` 目标的回退：</span><span class="sxs-lookup"><span data-stu-id="a6a95-213">The following example specifies the fallbacks only for the `netcoreapp2.1` target:</span></span>
+<span data-ttu-id="d541b-213">以下示例仅指定了 `netcoreapp2.1` 目标的回退：</span><span class="sxs-lookup"><span data-stu-id="d541b-213">The following example specifies the fallbacks only for the `netcoreapp2.1` target:</span></span>
 
 ```xml
 <PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp2.1'">
@@ -189,53 +195,53 @@ ms.locfileid: "57845477"
 </PackageTargetFallback >
 ```
 
-## <a name="nuget-metadata-properties"></a><span data-ttu-id="a6a95-214">NugetMetadataProperties</span><span class="sxs-lookup"><span data-stu-id="a6a95-214">NuGet metadata properties</span></span>
+## <a name="nuget-metadata-properties"></a><span data-ttu-id="d541b-214">NugetMetadataProperties</span><span class="sxs-lookup"><span data-stu-id="d541b-214">NuGet metadata properties</span></span>
 
-<span data-ttu-id="a6a95-215">迁移到 MSBuild 后，我们已将在打包 NuGet 包时使用的输入元数据从 project.json 移到 .csproj 文件中。</span><span class="sxs-lookup"><span data-stu-id="a6a95-215">With the move to MSBuild, we have moved the input metadata that is used when packing a NuGet package from *project.json* to *.csproj* files.</span></span> <span data-ttu-id="a6a95-216">输入为 MSBuild 属性，因此它们必须转到 `<PropertyGroup>` 组中。</span><span class="sxs-lookup"><span data-stu-id="a6a95-216">The inputs are MSBuild properties so they have to go within a `<PropertyGroup>` group.</span></span> <span data-ttu-id="a6a95-217">下面列出了在使用 `dotnet pack` 命令或属于 SDK 的 `Pack` MSBuild 目标时，用作打包进程的输入的属性。</span><span class="sxs-lookup"><span data-stu-id="a6a95-217">The following is the list of properties that are used as inputs to the packing process when using the `dotnet pack` command or the `Pack` MSBuild target that is part of the SDK.</span></span>
+<span data-ttu-id="d541b-215">迁移到 MSBuild 后，我们已将在打包 NuGet 包时使用的输入元数据从 project.json 移到 .csproj 文件中。</span><span class="sxs-lookup"><span data-stu-id="d541b-215">With the move to MSBuild, we have moved the input metadata that is used when packing a NuGet package from *project.json* to *.csproj* files.</span></span> <span data-ttu-id="d541b-216">输入为 MSBuild 属性，因此它们必须转到 `<PropertyGroup>` 组中。</span><span class="sxs-lookup"><span data-stu-id="d541b-216">The inputs are MSBuild properties so they have to go within a `<PropertyGroup>` group.</span></span> <span data-ttu-id="d541b-217">下面列出了在使用 `dotnet pack` 命令或属于 SDK 的 `Pack` MSBuild 目标时，用作打包进程的输入的属性。</span><span class="sxs-lookup"><span data-stu-id="d541b-217">The following is the list of properties that are used as inputs to the packing process when using the `dotnet pack` command or the `Pack` MSBuild target that is part of the SDK.</span></span>
 
-### <a name="ispackable"></a><span data-ttu-id="a6a95-218">IsPackable</span><span class="sxs-lookup"><span data-stu-id="a6a95-218">IsPackable</span></span>
+### <a name="ispackable"></a><span data-ttu-id="d541b-218">IsPackable</span><span class="sxs-lookup"><span data-stu-id="d541b-218">IsPackable</span></span>
 
-<span data-ttu-id="a6a95-219">一个指定能否打包项目的布尔值。</span><span class="sxs-lookup"><span data-stu-id="a6a95-219">A Boolean value that specifies whether the project can be packed.</span></span> <span data-ttu-id="a6a95-220">默认值为 `true`。</span><span class="sxs-lookup"><span data-stu-id="a6a95-220">The default value is `true`.</span></span>
+<span data-ttu-id="d541b-219">一个指定能否打包项目的布尔值。</span><span class="sxs-lookup"><span data-stu-id="d541b-219">A Boolean value that specifies whether the project can be packed.</span></span> <span data-ttu-id="d541b-220">默认值为 `true`。</span><span class="sxs-lookup"><span data-stu-id="d541b-220">The default value is `true`.</span></span>
 
-### <a name="packageversion"></a><span data-ttu-id="a6a95-221">PackageVersion</span><span class="sxs-lookup"><span data-stu-id="a6a95-221">PackageVersion</span></span>
+### <a name="packageversion"></a><span data-ttu-id="d541b-221">PackageVersion</span><span class="sxs-lookup"><span data-stu-id="d541b-221">PackageVersion</span></span>
 
-<span data-ttu-id="a6a95-222">指定生成的包所具有的版本。</span><span class="sxs-lookup"><span data-stu-id="a6a95-222">Specifies the version that the resulting package will have.</span></span> <span data-ttu-id="a6a95-223">接受所有形式的 NuGet 版本字符串。</span><span class="sxs-lookup"><span data-stu-id="a6a95-223">Accepts all forms of NuGet version string.</span></span> <span data-ttu-id="a6a95-224">默认为值 `$(Version)`，即项目中 `Version` 属性的值。</span><span class="sxs-lookup"><span data-stu-id="a6a95-224">Default is the value of `$(Version)`, that is, of the property `Version` in the project.</span></span>
+<span data-ttu-id="d541b-222">指定生成的包所具有的版本。</span><span class="sxs-lookup"><span data-stu-id="d541b-222">Specifies the version that the resulting package will have.</span></span> <span data-ttu-id="d541b-223">接受所有形式的 NuGet 版本字符串。</span><span class="sxs-lookup"><span data-stu-id="d541b-223">Accepts all forms of NuGet version string.</span></span> <span data-ttu-id="d541b-224">默认为值 `$(Version)`，即项目中 `Version` 属性的值。</span><span class="sxs-lookup"><span data-stu-id="d541b-224">Default is the value of `$(Version)`, that is, of the property `Version` in the project.</span></span>
 
-### <a name="packageid"></a><span data-ttu-id="a6a95-225">PackageId</span><span class="sxs-lookup"><span data-stu-id="a6a95-225">PackageId</span></span>
+### <a name="packageid"></a><span data-ttu-id="d541b-225">PackageId</span><span class="sxs-lookup"><span data-stu-id="d541b-225">PackageId</span></span>
 
-<span data-ttu-id="a6a95-226">指定生成的包的名称。</span><span class="sxs-lookup"><span data-stu-id="a6a95-226">Specifies the name for the resulting package.</span></span> <span data-ttu-id="a6a95-227">如果未指定，`pack` 操作将默认使用 `AssemblyName` 或目录名称作为包的名称。</span><span class="sxs-lookup"><span data-stu-id="a6a95-227">If not specified, the `pack` operation will default to using the `AssemblyName` or directory name as the name of the package.</span></span>
+<span data-ttu-id="d541b-226">指定生成的包的名称。</span><span class="sxs-lookup"><span data-stu-id="d541b-226">Specifies the name for the resulting package.</span></span> <span data-ttu-id="d541b-227">如果未指定，`pack` 操作将默认使用 `AssemblyName` 或目录名称作为包的名称。</span><span class="sxs-lookup"><span data-stu-id="d541b-227">If not specified, the `pack` operation will default to using the `AssemblyName` or directory name as the name of the package.</span></span>
 
-### <a name="title"></a><span data-ttu-id="a6a95-228">Title</span><span class="sxs-lookup"><span data-stu-id="a6a95-228">Title</span></span>
+### <a name="title"></a><span data-ttu-id="d541b-228">Title</span><span class="sxs-lookup"><span data-stu-id="d541b-228">Title</span></span>
 
-<span data-ttu-id="a6a95-229">明了易用的包标题，通常用在 UI 显示中，如 nuget.org 上和 Visual Studio 中包管理器上的那样。</span><span class="sxs-lookup"><span data-stu-id="a6a95-229">A human-friendly title of the package, typically used in UI displays as on nuget.org and the Package Manager in Visual Studio.</span></span> <span data-ttu-id="a6a95-230">如果未指定，则改为使用包 ID。</span><span class="sxs-lookup"><span data-stu-id="a6a95-230">If not specified, the package ID is used instead.</span></span>
+<span data-ttu-id="d541b-229">明了易用的包标题，通常用在 UI 显示中，如 nuget.org 上和 Visual Studio 中包管理器上的那样。</span><span class="sxs-lookup"><span data-stu-id="d541b-229">A human-friendly title of the package, typically used in UI displays as on nuget.org and the Package Manager in Visual Studio.</span></span> <span data-ttu-id="d541b-230">如果未指定，则改为使用包 ID。</span><span class="sxs-lookup"><span data-stu-id="d541b-230">If not specified, the package ID is used instead.</span></span>
 
-### <a name="authors"></a><span data-ttu-id="a6a95-231">Authors</span><span class="sxs-lookup"><span data-stu-id="a6a95-231">Authors</span></span>
+### <a name="authors"></a><span data-ttu-id="d541b-231">Authors</span><span class="sxs-lookup"><span data-stu-id="d541b-231">Authors</span></span>
 
-<span data-ttu-id="a6a95-232">其中名称以分号分隔的包作者列表，其中名称与 nuget.org 上的配置文件名称匹配。这些信息显示在 nuget.org 上的 NuGet 库中，并用于交叉引用同一作者的包。</span><span class="sxs-lookup"><span data-stu-id="a6a95-232">A semicolon-separated list of packages authors, matching the profile names on nuget.org. These are displayed in the NuGet Gallery on nuget.org and are used to cross-reference packages by the same authors.</span></span>
+<span data-ttu-id="d541b-232">其中名称以分号分隔的包作者列表，其中名称与 nuget.org 上的配置文件名称匹配。这些信息显示在 nuget.org 上的 NuGet 库中，并用于交叉引用同一作者的包。</span><span class="sxs-lookup"><span data-stu-id="d541b-232">A semicolon-separated list of packages authors, matching the profile names on nuget.org. These are displayed in the NuGet Gallery on nuget.org and are used to cross-reference packages by the same authors.</span></span>
 
-### <a name="packagedescription"></a><span data-ttu-id="a6a95-233">PackageDescription</span><span class="sxs-lookup"><span data-stu-id="a6a95-233">PackageDescription</span></span>
+### <a name="packagedescription"></a><span data-ttu-id="d541b-233">PackageDescription</span><span class="sxs-lookup"><span data-stu-id="d541b-233">PackageDescription</span></span>
 
-<span data-ttu-id="a6a95-234">用于 UI 显示的包的详细说明。</span><span class="sxs-lookup"><span data-stu-id="a6a95-234">A long description of the package for UI display.</span></span>
+<span data-ttu-id="d541b-234">用于 UI 显示的包的详细说明。</span><span class="sxs-lookup"><span data-stu-id="d541b-234">A long description of the package for UI display.</span></span>
 
-### <a name="description"></a><span data-ttu-id="a6a95-235">Description</span><span class="sxs-lookup"><span data-stu-id="a6a95-235">Description</span></span>
+### <a name="description"></a><span data-ttu-id="d541b-235">Description</span><span class="sxs-lookup"><span data-stu-id="d541b-235">Description</span></span>
 
-<span data-ttu-id="a6a95-236">程序集的详细说明。</span><span class="sxs-lookup"><span data-stu-id="a6a95-236">A long description for the assembly.</span></span> <span data-ttu-id="a6a95-237">如果未指定 `PackageDescription`，则此属性还可用作程序包的说明。</span><span class="sxs-lookup"><span data-stu-id="a6a95-237">If `PackageDescription` is not specified then this property is also used as the description of the package.</span></span>
+<span data-ttu-id="d541b-236">程序集的详细说明。</span><span class="sxs-lookup"><span data-stu-id="d541b-236">A long description for the assembly.</span></span> <span data-ttu-id="d541b-237">如果未指定 `PackageDescription`，则此属性还可用作程序包的说明。</span><span class="sxs-lookup"><span data-stu-id="d541b-237">If `PackageDescription` is not specified then this property is also used as the description of the package.</span></span>
 
-### <a name="copyright"></a><span data-ttu-id="a6a95-238">Copyright</span><span class="sxs-lookup"><span data-stu-id="a6a95-238">Copyright</span></span>
+### <a name="copyright"></a><span data-ttu-id="d541b-238">Copyright</span><span class="sxs-lookup"><span data-stu-id="d541b-238">Copyright</span></span>
 
-<span data-ttu-id="a6a95-239">包的版权详细信息。</span><span class="sxs-lookup"><span data-stu-id="a6a95-239">Copyright details for the package.</span></span>
+<span data-ttu-id="d541b-239">包的版权详细信息。</span><span class="sxs-lookup"><span data-stu-id="d541b-239">Copyright details for the package.</span></span>
 
-### <a name="packagerequirelicenseacceptance"></a><span data-ttu-id="a6a95-240">PackageRequireLicenseAcceptance</span><span class="sxs-lookup"><span data-stu-id="a6a95-240">PackageRequireLicenseAcceptance</span></span>
+### <a name="packagerequirelicenseacceptance"></a><span data-ttu-id="d541b-240">PackageRequireLicenseAcceptance</span><span class="sxs-lookup"><span data-stu-id="d541b-240">PackageRequireLicenseAcceptance</span></span>
 
-<span data-ttu-id="a6a95-241">一个布尔值，指定客户端是否必须提示使用者接受包许可证后才可安装包。</span><span class="sxs-lookup"><span data-stu-id="a6a95-241">A Boolean value that specifies whether the client must prompt the consumer to accept the package license before installing the package.</span></span> <span data-ttu-id="a6a95-242">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="a6a95-242">The default is `false`.</span></span>
+<span data-ttu-id="d541b-241">一个布尔值，指定客户端是否必须提示使用者接受包许可证后才可安装包。</span><span class="sxs-lookup"><span data-stu-id="d541b-241">A Boolean value that specifies whether the client must prompt the consumer to accept the package license before installing the package.</span></span> <span data-ttu-id="d541b-242">默认值为 `false`。</span><span class="sxs-lookup"><span data-stu-id="d541b-242">The default is `false`.</span></span>
 
-### <a name="packagelicenseexpression"></a><span data-ttu-id="a6a95-243">PackageLicenseExpression</span><span class="sxs-lookup"><span data-stu-id="a6a95-243">PackageLicenseExpression</span></span>
+### <a name="packagelicenseexpression"></a><span data-ttu-id="d541b-243">PackageLicenseExpression</span><span class="sxs-lookup"><span data-stu-id="d541b-243">PackageLicenseExpression</span></span>
 
-<span data-ttu-id="a6a95-244">[SPDX 许可证标识符](https://spdx.org/licenses/)或表达式。</span><span class="sxs-lookup"><span data-stu-id="a6a95-244">An [SPDX license identifier](https://spdx.org/licenses/) or expression.</span></span> <span data-ttu-id="a6a95-245">例如 `Apache-2.0`。</span><span class="sxs-lookup"><span data-stu-id="a6a95-245">For example, `Apache-2.0`.</span></span>
+<span data-ttu-id="d541b-244">[SPDX 许可证标识符](https://spdx.org/licenses/)或表达式。</span><span class="sxs-lookup"><span data-stu-id="d541b-244">An [SPDX license identifier](https://spdx.org/licenses/) or expression.</span></span> <span data-ttu-id="d541b-245">例如 `Apache-2.0`。</span><span class="sxs-lookup"><span data-stu-id="d541b-245">For example, `Apache-2.0`.</span></span>
 
-<span data-ttu-id="a6a95-246">下面是 [SPDX 许可证标识符](https://spdx.org/licenses/)的完整列表。</span><span class="sxs-lookup"><span data-stu-id="a6a95-246">Here is the complete list of [SPDX license identifiers](https://spdx.org/licenses/).</span></span> <span data-ttu-id="a6a95-247">NuGet.org 在使用许可证类型表达式时只接受 OSI 或 FSF 批准的许可证。</span><span class="sxs-lookup"><span data-stu-id="a6a95-247">NuGet.org accepts only OSI or FSF approved licenses when using license type expression.</span></span>
+<span data-ttu-id="d541b-246">下面是 [SPDX 许可证标识符](https://spdx.org/licenses/)的完整列表。</span><span class="sxs-lookup"><span data-stu-id="d541b-246">Here is the complete list of [SPDX license identifiers](https://spdx.org/licenses/).</span></span> <span data-ttu-id="d541b-247">NuGet.org 在使用许可证类型表达式时只接受 OSI 或 FSF 批准的许可证。</span><span class="sxs-lookup"><span data-stu-id="d541b-247">NuGet.org accepts only OSI or FSF approved licenses when using license type expression.</span></span>
 
-<span data-ttu-id="a6a95-248">许可证表达式的准确语法如下面的 [ABNF](https://tools.ietf.org/html/rfc5234) 所述。</span><span class="sxs-lookup"><span data-stu-id="a6a95-248">The exact syntax of the license expressions is described below in [ABNF](https://tools.ietf.org/html/rfc5234).</span></span>
+<span data-ttu-id="d541b-248">许可证表达式的准确语法如下面的 [ABNF](https://tools.ietf.org/html/rfc5234) 所述。</span><span class="sxs-lookup"><span data-stu-id="d541b-248">The exact syntax of the license expressions is described below in [ABNF](https://tools.ietf.org/html/rfc5234).</span></span>
 
 ```cli
 license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
@@ -254,15 +260,15 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 ```
 
 > [!NOTE]
-> <span data-ttu-id="a6a95-249">一次只能指定 `PackageLicenseExpression`、`PackageLicenseFile` 和 `PackageLicenseUrl` 中的一个。</span><span class="sxs-lookup"><span data-stu-id="a6a95-249">Only one of `PackageLicenseExpression`, `PackageLicenseFile` and `PackageLicenseUrl` can be specified at a time.</span></span>
+> <span data-ttu-id="d541b-249">一次只能指定 `PackageLicenseExpression`、`PackageLicenseFile` 和 `PackageLicenseUrl` 中的一个。</span><span class="sxs-lookup"><span data-stu-id="d541b-249">Only one of `PackageLicenseExpression`, `PackageLicenseFile` and `PackageLicenseUrl` can be specified at a time.</span></span>
 
-### <a name="packagelicensefile"></a><span data-ttu-id="a6a95-250">PackageLicenseFile</span><span class="sxs-lookup"><span data-stu-id="a6a95-250">PackageLicenseFile</span></span>
+### <a name="packagelicensefile"></a><span data-ttu-id="d541b-250">PackageLicenseFile</span><span class="sxs-lookup"><span data-stu-id="d541b-250">PackageLicenseFile</span></span>
 
-<span data-ttu-id="a6a95-251">如果使用的许可证没有分配 SPDX 标识符，或者它是自定义许可证，则它是包中许可证文件的路径（否则，优先选择 `PackageLicenseExpression`）</span><span class="sxs-lookup"><span data-stu-id="a6a95-251">Path to a license file within the package if you are using a license that hasn’t been assigned an SPDX identifier, or it is a custom license (Otherwise `PackageLicenseExpression` is prefered)</span></span>
+<span data-ttu-id="d541b-251">如果使用的许可证没有分配 SPDX 标识符，或者它是自定义许可证，则它是包中许可证文件的路径（否则，优先选择 `PackageLicenseExpression`）</span><span class="sxs-lookup"><span data-stu-id="d541b-251">Path to a license file within the package if you are using a license that hasn’t been assigned an SPDX identifier, or it is a custom license (Otherwise `PackageLicenseExpression` is prefered)</span></span>
 
-<span data-ttu-id="a6a95-252">替换 `PackageLicenseUrl`，不能与 `PackageLicenseExpression` 结合使用，并且需要 Visual Studio 15.9.4、.NET SDK 2.1.502 或 2.2.101 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="a6a95-252">Replaces `PackageLicenseUrl`, can't be combined with `PackageLicenseExpression` and requires Visual Studio 15.9.4, .NET SDK 2.1.502 or 2.2.101, or newer.</span></span>
+<span data-ttu-id="d541b-252">替换 `PackageLicenseUrl`，不能与 `PackageLicenseExpression` 结合使用，并且需要 Visual Studio 15.9.4、.NET SDK 2.1.502 或 2.2.101 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="d541b-252">Replaces `PackageLicenseUrl`, can't be combined with `PackageLicenseExpression` and requires Visual Studio 15.9.4, .NET SDK 2.1.502 or 2.2.101, or newer.</span></span>
 
-<span data-ttu-id="a6a95-253">将需要通过显式地将许可证文件添加到项目中来确保许可证文件已打包，示例用法如下：</span><span class="sxs-lookup"><span data-stu-id="a6a95-253">You will need to ensure the license file is packed by adding it explicitly to the project, example usage:</span></span>
+<span data-ttu-id="d541b-253">将需要通过显式地将许可证文件添加到项目中来确保许可证文件已打包，示例用法如下：</span><span class="sxs-lookup"><span data-stu-id="d541b-253">You will need to ensure the license file is packed by adding it explicitly to the project, example usage:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -273,95 +279,95 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 </ItemGroup>
 ```
 
-### <a name="packagelicenseurl"></a><span data-ttu-id="a6a95-254">PackageLicenseUrl</span><span class="sxs-lookup"><span data-stu-id="a6a95-254">PackageLicenseUrl</span></span>
+### <a name="packagelicenseurl"></a><span data-ttu-id="d541b-254">PackageLicenseUrl</span><span class="sxs-lookup"><span data-stu-id="d541b-254">PackageLicenseUrl</span></span>
 
-<span data-ttu-id="a6a95-255">适用于包的许可证的 URL。</span><span class="sxs-lookup"><span data-stu-id="a6a95-255">An URL to the license that is applicable to the package.</span></span> <span data-ttu-id="a6a95-256">（自 Visual Studio 15.9.4、.NET SDK 2.1.502 和 2.2.101 起已弃用）</span><span class="sxs-lookup"><span data-stu-id="a6a95-256">(_deprecated since Visual Studio 15.9.4, .NET SDK 2.1.502 and 2.2.101_)</span></span>
+<span data-ttu-id="d541b-255">适用于包的许可证的 URL。</span><span class="sxs-lookup"><span data-stu-id="d541b-255">An URL to the license that is applicable to the package.</span></span> <span data-ttu-id="d541b-256">（自 Visual Studio 15.9.4、.NET SDK 2.1.502 和 2.2.101 起已弃用）</span><span class="sxs-lookup"><span data-stu-id="d541b-256">(_deprecated since Visual Studio 15.9.4, .NET SDK 2.1.502 and 2.2.101_)</span></span>
 
 
-### <a name="packageiconurl"></a><span data-ttu-id="a6a95-257">PackageIconUrl</span><span class="sxs-lookup"><span data-stu-id="a6a95-257">PackageIconUrl</span></span>
+### <a name="packageiconurl"></a><span data-ttu-id="d541b-257">PackageIconUrl</span><span class="sxs-lookup"><span data-stu-id="d541b-257">PackageIconUrl</span></span>
 
-<span data-ttu-id="a6a95-258">64x64 透明背景图像的 URL，用作 UI 显示中包的图标。</span><span class="sxs-lookup"><span data-stu-id="a6a95-258">A URL for a 64x64 image with transparent background to use as the icon for the package in UI display.</span></span>
+<span data-ttu-id="d541b-258">64x64 透明背景图像的 URL，用作 UI 显示中包的图标。</span><span class="sxs-lookup"><span data-stu-id="d541b-258">A URL for a 64x64 image with transparent background to use as the icon for the package in UI display.</span></span>
 
-### <a name="packagereleasenotes"></a><span data-ttu-id="a6a95-259">PackageReleaseNotes</span><span class="sxs-lookup"><span data-stu-id="a6a95-259">PackageReleaseNotes</span></span>
+### <a name="packagereleasenotes"></a><span data-ttu-id="d541b-259">PackageReleaseNotes</span><span class="sxs-lookup"><span data-stu-id="d541b-259">PackageReleaseNotes</span></span>
 
-<span data-ttu-id="a6a95-260">包的发行说明。</span><span class="sxs-lookup"><span data-stu-id="a6a95-260">Release notes for the package.</span></span>
+<span data-ttu-id="d541b-260">包的发行说明。</span><span class="sxs-lookup"><span data-stu-id="d541b-260">Release notes for the package.</span></span>
 
-### <a name="packagetags"></a><span data-ttu-id="a6a95-261">PackageTags</span><span class="sxs-lookup"><span data-stu-id="a6a95-261">PackageTags</span></span>
+### <a name="packagetags"></a><span data-ttu-id="d541b-261">PackageTags</span><span class="sxs-lookup"><span data-stu-id="d541b-261">PackageTags</span></span>
 
-<span data-ttu-id="a6a95-262">标记的分号分隔列表，这些标记用于指定包。</span><span class="sxs-lookup"><span data-stu-id="a6a95-262">A semicolon-delimited list of tags that designates the package.</span></span>
+<span data-ttu-id="d541b-262">标记的分号分隔列表，这些标记用于指定包。</span><span class="sxs-lookup"><span data-stu-id="d541b-262">A semicolon-delimited list of tags that designates the package.</span></span>
 
-### <a name="packageoutputpath"></a><span data-ttu-id="a6a95-263">PackageOutputPath</span><span class="sxs-lookup"><span data-stu-id="a6a95-263">PackageOutputPath</span></span>
+### <a name="packageoutputpath"></a><span data-ttu-id="d541b-263">PackageOutputPath</span><span class="sxs-lookup"><span data-stu-id="d541b-263">PackageOutputPath</span></span>
 
-<span data-ttu-id="a6a95-264">确定用于已打包的包的输出路径。</span><span class="sxs-lookup"><span data-stu-id="a6a95-264">Determines the output path in which the packed package will be dropped.</span></span> <span data-ttu-id="a6a95-265">默认值为 `$(OutputPath)`。</span><span class="sxs-lookup"><span data-stu-id="a6a95-265">Default is `$(OutputPath)`.</span></span>
+<span data-ttu-id="d541b-264">确定用于已打包的包的输出路径。</span><span class="sxs-lookup"><span data-stu-id="d541b-264">Determines the output path in which the packed package will be dropped.</span></span> <span data-ttu-id="d541b-265">默认值为 `$(OutputPath)`。</span><span class="sxs-lookup"><span data-stu-id="d541b-265">Default is `$(OutputPath)`.</span></span>
 
-### <a name="includesymbols"></a><span data-ttu-id="a6a95-266">IncludeSymbols</span><span class="sxs-lookup"><span data-stu-id="a6a95-266">IncludeSymbols</span></span>
+### <a name="includesymbols"></a><span data-ttu-id="d541b-266">IncludeSymbols</span><span class="sxs-lookup"><span data-stu-id="d541b-266">IncludeSymbols</span></span>
 
-<span data-ttu-id="a6a95-267">此布尔值指示在打包项目时，包是否应创建一个附加的符号包。</span><span class="sxs-lookup"><span data-stu-id="a6a95-267">This Boolean value indicates whether the package should create an additional symbols package when the project is packed.</span></span> <span data-ttu-id="a6a95-268">此包将具有 *.symbols.nupkg* 扩展名，并将 PDB 文件连同 DLL 和其他输出文件一并复制。</span><span class="sxs-lookup"><span data-stu-id="a6a95-268">This package will have a *.symbols.nupkg* extension and will copy the PDB files along with the DLL and other output files.</span></span>
+<span data-ttu-id="d541b-267">此布尔值指示在打包项目时，包是否应创建一个附加的符号包。</span><span class="sxs-lookup"><span data-stu-id="d541b-267">This Boolean value indicates whether the package should create an additional symbols package when the project is packed.</span></span> <span data-ttu-id="d541b-268">此包将具有 *.symbols.nupkg* 扩展名，并将 PDB 文件连同 DLL 和其他输出文件一并复制。</span><span class="sxs-lookup"><span data-stu-id="d541b-268">This package will have a *.symbols.nupkg* extension and will copy the PDB files along with the DLL and other output files.</span></span>
 
-### <a name="includesource"></a><span data-ttu-id="a6a95-269">IncludeSource</span><span class="sxs-lookup"><span data-stu-id="a6a95-269">IncludeSource</span></span>
+### <a name="includesource"></a><span data-ttu-id="d541b-269">IncludeSource</span><span class="sxs-lookup"><span data-stu-id="d541b-269">IncludeSource</span></span>
 
-<span data-ttu-id="a6a95-270">此布尔值指示包进程是否应创建源包。</span><span class="sxs-lookup"><span data-stu-id="a6a95-270">This Boolean value indicates whether the pack process should create a source package.</span></span> <span data-ttu-id="a6a95-271">源包中包含库的源代码以及 PDB 文件。</span><span class="sxs-lookup"><span data-stu-id="a6a95-271">The source package contains the library's source code as well as PDB files.</span></span> <span data-ttu-id="a6a95-272">源文件置于生成的包文件中的 `src/ProjectName` 目录下。</span><span class="sxs-lookup"><span data-stu-id="a6a95-272">Source files are put under the `src/ProjectName` directory in the resulting package file.</span></span>
+<span data-ttu-id="d541b-270">此布尔值指示包进程是否应创建源包。</span><span class="sxs-lookup"><span data-stu-id="d541b-270">This Boolean value indicates whether the pack process should create a source package.</span></span> <span data-ttu-id="d541b-271">源包中包含库的源代码以及 PDB 文件。</span><span class="sxs-lookup"><span data-stu-id="d541b-271">The source package contains the library's source code as well as PDB files.</span></span> <span data-ttu-id="d541b-272">源文件置于生成的包文件中的 `src/ProjectName` 目录下。</span><span class="sxs-lookup"><span data-stu-id="d541b-272">Source files are put under the `src/ProjectName` directory in the resulting package file.</span></span>
 
-### <a name="istool"></a><span data-ttu-id="a6a95-273">IsTool</span><span class="sxs-lookup"><span data-stu-id="a6a95-273">IsTool</span></span>
+### <a name="istool"></a><span data-ttu-id="d541b-273">IsTool</span><span class="sxs-lookup"><span data-stu-id="d541b-273">IsTool</span></span>
 
-<span data-ttu-id="a6a95-274">指定是否将所有输出文件复制到 *tools* 文件夹，而不是 *lib* 文件夹。</span><span class="sxs-lookup"><span data-stu-id="a6a95-274">Specifies whether all output files are copied to the *tools* folder instead of the *lib* folder.</span></span> <span data-ttu-id="a6a95-275">请注意，这不同于 `DotNetCliTool`，后者通过在 *.csproj* 文件中设置 `PackageType` 进行指定。</span><span class="sxs-lookup"><span data-stu-id="a6a95-275">Note that this is different from a `DotNetCliTool` which is specified by setting the `PackageType` in the *.csproj* file.</span></span>
+<span data-ttu-id="d541b-274">指定是否将所有输出文件复制到 *tools* 文件夹，而不是 *lib* 文件夹。</span><span class="sxs-lookup"><span data-stu-id="d541b-274">Specifies whether all output files are copied to the *tools* folder instead of the *lib* folder.</span></span> <span data-ttu-id="d541b-275">请注意，这不同于 `DotNetCliTool`，后者通过在 *.csproj* 文件中设置 `PackageType` 进行指定。</span><span class="sxs-lookup"><span data-stu-id="d541b-275">Note that this is different from a `DotNetCliTool` which is specified by setting the `PackageType` in the *.csproj* file.</span></span>
 
-### <a name="repositoryurl"></a><span data-ttu-id="a6a95-276">RepositoryUrl</span><span class="sxs-lookup"><span data-stu-id="a6a95-276">RepositoryUrl</span></span>
+### <a name="repositoryurl"></a><span data-ttu-id="d541b-276">RepositoryUrl</span><span class="sxs-lookup"><span data-stu-id="d541b-276">RepositoryUrl</span></span>
 
-<span data-ttu-id="a6a95-277">指定存储库的 URL，该存储库是包的源代码所驻留和/或生成的位置。</span><span class="sxs-lookup"><span data-stu-id="a6a95-277">Specifies the URL for the repository where the source code for the package resides and/or from which it's being built.</span></span>
+<span data-ttu-id="d541b-277">指定存储库的 URL，该存储库是包的源代码所驻留和/或生成的位置。</span><span class="sxs-lookup"><span data-stu-id="d541b-277">Specifies the URL for the repository where the source code for the package resides and/or from which it's being built.</span></span>
 
-### <a name="repositorytype"></a><span data-ttu-id="a6a95-278">RepositoryType</span><span class="sxs-lookup"><span data-stu-id="a6a95-278">RepositoryType</span></span>
+### <a name="repositorytype"></a><span data-ttu-id="d541b-278">RepositoryType</span><span class="sxs-lookup"><span data-stu-id="d541b-278">RepositoryType</span></span>
 
-<span data-ttu-id="a6a95-279">指定存储库的类型。</span><span class="sxs-lookup"><span data-stu-id="a6a95-279">Specifies the type of the repository.</span></span> <span data-ttu-id="a6a95-280">默认值为“git”。</span><span class="sxs-lookup"><span data-stu-id="a6a95-280">Default is "git".</span></span>
+<span data-ttu-id="d541b-279">指定存储库的类型。</span><span class="sxs-lookup"><span data-stu-id="d541b-279">Specifies the type of the repository.</span></span> <span data-ttu-id="d541b-280">默认值为“git”。</span><span class="sxs-lookup"><span data-stu-id="d541b-280">Default is "git".</span></span>
 
-### <a name="nopackageanalysis"></a><span data-ttu-id="a6a95-281">NoPackageAnalysis</span><span class="sxs-lookup"><span data-stu-id="a6a95-281">NoPackageAnalysis</span></span>
+### <a name="nopackageanalysis"></a><span data-ttu-id="d541b-281">NoPackageAnalysis</span><span class="sxs-lookup"><span data-stu-id="d541b-281">NoPackageAnalysis</span></span>
 
-<span data-ttu-id="a6a95-282">指定 pack 不应在生成包后运行包分析。</span><span class="sxs-lookup"><span data-stu-id="a6a95-282">Specifies that pack should not run package analysis after building the package.</span></span>
+<span data-ttu-id="d541b-282">指定 pack 不应在生成包后运行包分析。</span><span class="sxs-lookup"><span data-stu-id="d541b-282">Specifies that pack should not run package analysis after building the package.</span></span>
 
-### <a name="minclientversion"></a><span data-ttu-id="a6a95-283">MinClientVersion</span><span class="sxs-lookup"><span data-stu-id="a6a95-283">MinClientVersion</span></span>
+### <a name="minclientversion"></a><span data-ttu-id="d541b-283">MinClientVersion</span><span class="sxs-lookup"><span data-stu-id="d541b-283">MinClientVersion</span></span>
 
-<span data-ttu-id="a6a95-284">指定可安装此包的最低 NuGet 客户端版本，并由 nuget.exe 和 Visual Studio 程序包管理器强制实施。</span><span class="sxs-lookup"><span data-stu-id="a6a95-284">Specifies the minimum version of the NuGet client that can install this package, enforced by nuget.exe and the Visual Studio Package Manager.</span></span>
+<span data-ttu-id="d541b-284">指定可安装此包的最低 NuGet 客户端版本，并由 nuget.exe 和 Visual Studio 程序包管理器强制实施。</span><span class="sxs-lookup"><span data-stu-id="d541b-284">Specifies the minimum version of the NuGet client that can install this package, enforced by nuget.exe and the Visual Studio Package Manager.</span></span>
 
-### <a name="includebuildoutput"></a><span data-ttu-id="a6a95-285">IncludeBuildOutput</span><span class="sxs-lookup"><span data-stu-id="a6a95-285">IncludeBuildOutput</span></span>
+### <a name="includebuildoutput"></a><span data-ttu-id="d541b-285">IncludeBuildOutput</span><span class="sxs-lookup"><span data-stu-id="d541b-285">IncludeBuildOutput</span></span>
 
-<span data-ttu-id="a6a95-286">此布尔值指定是否应将生成输出程序集打包到 *.nupkg* 文件中。</span><span class="sxs-lookup"><span data-stu-id="a6a95-286">This Boolean values specifies whether the build output assemblies should be packed into the *.nupkg* file or not.</span></span>
+<span data-ttu-id="d541b-286">此布尔值指定是否应将生成输出程序集打包到 *.nupkg* 文件中。</span><span class="sxs-lookup"><span data-stu-id="d541b-286">This Boolean values specifies whether the build output assemblies should be packed into the *.nupkg* file or not.</span></span>
 
-### <a name="includecontentinpack"></a><span data-ttu-id="a6a95-287">IncludeContentInPack</span><span class="sxs-lookup"><span data-stu-id="a6a95-287">IncludeContentInPack</span></span>
+### <a name="includecontentinpack"></a><span data-ttu-id="d541b-287">IncludeContentInPack</span><span class="sxs-lookup"><span data-stu-id="d541b-287">IncludeContentInPack</span></span>
 
-<span data-ttu-id="a6a95-288">此布尔值指定是否将含有 `Content` 类型的任何项自动包含在生成的包中。</span><span class="sxs-lookup"><span data-stu-id="a6a95-288">This Boolean value specifies whether any items that have a type of `Content` will be included in the resulting package automatically.</span></span> <span data-ttu-id="a6a95-289">默认值为 `true`。</span><span class="sxs-lookup"><span data-stu-id="a6a95-289">The default is `true`.</span></span>
+<span data-ttu-id="d541b-288">此布尔值指定是否将含有 `Content` 类型的任何项自动包含在生成的包中。</span><span class="sxs-lookup"><span data-stu-id="d541b-288">This Boolean value specifies whether any items that have a type of `Content` will be included in the resulting package automatically.</span></span> <span data-ttu-id="d541b-289">默认值为 `true`。</span><span class="sxs-lookup"><span data-stu-id="d541b-289">The default is `true`.</span></span>
 
-### <a name="buildoutputtargetfolder"></a><span data-ttu-id="a6a95-290">BuildOutputTargetFolder</span><span class="sxs-lookup"><span data-stu-id="a6a95-290">BuildOutputTargetFolder</span></span>
+### <a name="buildoutputtargetfolder"></a><span data-ttu-id="d541b-290">BuildOutputTargetFolder</span><span class="sxs-lookup"><span data-stu-id="d541b-290">BuildOutputTargetFolder</span></span>
 
-<span data-ttu-id="a6a95-291">指定放置输出程序集的文件夹。</span><span class="sxs-lookup"><span data-stu-id="a6a95-291">Specifies the folder where to place the output assemblies.</span></span> <span data-ttu-id="a6a95-292">输出程序集（和其他输出文件）会复制到各自的框架文件夹中。</span><span class="sxs-lookup"><span data-stu-id="a6a95-292">The output assemblies (and other output files) are copied into their respective framework folders.</span></span>
+<span data-ttu-id="d541b-291">指定放置输出程序集的文件夹。</span><span class="sxs-lookup"><span data-stu-id="d541b-291">Specifies the folder where to place the output assemblies.</span></span> <span data-ttu-id="d541b-292">输出程序集（和其他输出文件）会复制到各自的框架文件夹中。</span><span class="sxs-lookup"><span data-stu-id="d541b-292">The output assemblies (and other output files) are copied into their respective framework folders.</span></span>
 
-### <a name="contenttargetfolders"></a><span data-ttu-id="a6a95-293">ContentTargetFolders</span><span class="sxs-lookup"><span data-stu-id="a6a95-293">ContentTargetFolders</span></span>
+### <a name="contenttargetfolders"></a><span data-ttu-id="d541b-293">ContentTargetFolders</span><span class="sxs-lookup"><span data-stu-id="d541b-293">ContentTargetFolders</span></span>
 
-<span data-ttu-id="a6a95-294">此属性指定放置所有内容文件的默认位置（如果未为其指定 `PackagePath`）。</span><span class="sxs-lookup"><span data-stu-id="a6a95-294">This property specifies the default location of where all the content files should go if `PackagePath` is not specified for them.</span></span> <span data-ttu-id="a6a95-295">默认值为“content;contentFiles”。</span><span class="sxs-lookup"><span data-stu-id="a6a95-295">The default value is "content;contentFiles".</span></span>
+<span data-ttu-id="d541b-294">此属性指定放置所有内容文件的默认位置（如果未为其指定 `PackagePath`）。</span><span class="sxs-lookup"><span data-stu-id="d541b-294">This property specifies the default location of where all the content files should go if `PackagePath` is not specified for them.</span></span> <span data-ttu-id="d541b-295">默认值为“content;contentFiles”。</span><span class="sxs-lookup"><span data-stu-id="d541b-295">The default value is "content;contentFiles".</span></span>
 
-### <a name="nuspecfile"></a><span data-ttu-id="a6a95-296">NuspecFile</span><span class="sxs-lookup"><span data-stu-id="a6a95-296">NuspecFile</span></span>
+### <a name="nuspecfile"></a><span data-ttu-id="d541b-296">NuspecFile</span><span class="sxs-lookup"><span data-stu-id="d541b-296">NuspecFile</span></span>
 
-<span data-ttu-id="a6a95-297">用于打包的 *.nuspec* 文件的相对或绝对路径。</span><span class="sxs-lookup"><span data-stu-id="a6a95-297">Relative or absolute path to the *.nuspec* file being used for packing.</span></span>
+<span data-ttu-id="d541b-297">用于打包的 *.nuspec* 文件的相对或绝对路径。</span><span class="sxs-lookup"><span data-stu-id="d541b-297">Relative or absolute path to the *.nuspec* file being used for packing.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a6a95-298">如果指定了 *.nuspec* 文件，则**以独占方式**将其用于打包信息，并且不使用项目中的任何信息。</span><span class="sxs-lookup"><span data-stu-id="a6a95-298">If the *.nuspec* file is specified, it's used **exclusively** for packaging information and any information in the projects is not used.</span></span>
+> <span data-ttu-id="d541b-298">如果指定了 *.nuspec* 文件，则**以独占方式**将其用于打包信息，并且不使用项目中的任何信息。</span><span class="sxs-lookup"><span data-stu-id="d541b-298">If the *.nuspec* file is specified, it's used **exclusively** for packaging information and any information in the projects is not used.</span></span>
 
-### <a name="nuspecbasepath"></a><span data-ttu-id="a6a95-299">NuspecBasePath</span><span class="sxs-lookup"><span data-stu-id="a6a95-299">NuspecBasePath</span></span>
+### <a name="nuspecbasepath"></a><span data-ttu-id="d541b-299">NuspecBasePath</span><span class="sxs-lookup"><span data-stu-id="d541b-299">NuspecBasePath</span></span>
 
-<span data-ttu-id="a6a95-300">*.nuspec* 文件的基路径。</span><span class="sxs-lookup"><span data-stu-id="a6a95-300">Base path for the *.nuspec* file.</span></span>
+<span data-ttu-id="d541b-300">*.nuspec* 文件的基路径。</span><span class="sxs-lookup"><span data-stu-id="d541b-300">Base path for the *.nuspec* file.</span></span>
 
-### <a name="nuspecproperties"></a><span data-ttu-id="a6a95-301">NuspecProperties</span><span class="sxs-lookup"><span data-stu-id="a6a95-301">NuspecProperties</span></span>
+### <a name="nuspecproperties"></a><span data-ttu-id="d541b-301">NuspecProperties</span><span class="sxs-lookup"><span data-stu-id="d541b-301">NuspecProperties</span></span>
 
-<span data-ttu-id="a6a95-302">键=值对的分号分隔列表。</span><span class="sxs-lookup"><span data-stu-id="a6a95-302">Semicolon separated list of key=value pairs.</span></span>
+<span data-ttu-id="d541b-302">键=值对的分号分隔列表。</span><span class="sxs-lookup"><span data-stu-id="d541b-302">Semicolon separated list of key=value pairs.</span></span>
 
-## <a name="assemblyinfo-properties"></a><span data-ttu-id="a6a95-303">AssemblyInfoProperties</span><span class="sxs-lookup"><span data-stu-id="a6a95-303">AssemblyInfo properties</span></span>
+## <a name="assemblyinfo-properties"></a><span data-ttu-id="d541b-303">AssemblyInfoProperties</span><span class="sxs-lookup"><span data-stu-id="d541b-303">AssemblyInfo properties</span></span>
 
-<span data-ttu-id="a6a95-304">现在，*AssemblyInfo* 文件中通常存在的[程序集特性](../../framework/app-domains/set-assembly-attributes.md)将自动从属性生成。</span><span class="sxs-lookup"><span data-stu-id="a6a95-304">[Assembly attributes](../../framework/app-domains/set-assembly-attributes.md) that were typically present in an *AssemblyInfo* file are now automatically generated from properties.</span></span>
+<span data-ttu-id="d541b-304">现在，*AssemblyInfo* 文件中通常存在的[程序集特性](../../framework/app-domains/set-assembly-attributes.md)将自动从属性生成。</span><span class="sxs-lookup"><span data-stu-id="d541b-304">[Assembly attributes](../../framework/app-domains/set-assembly-attributes.md) that were typically present in an *AssemblyInfo* file are now automatically generated from properties.</span></span>
 
-### <a name="properties-per-attribute"></a><span data-ttu-id="a6a95-305">PropertiesPerAttribute</span><span class="sxs-lookup"><span data-stu-id="a6a95-305">Properties per attribute</span></span>
+### <a name="properties-per-attribute"></a><span data-ttu-id="d541b-305">PropertiesPerAttribute</span><span class="sxs-lookup"><span data-stu-id="d541b-305">Properties per attribute</span></span>
 
-<span data-ttu-id="a6a95-306">每个特性都有一个可控制其内容的属性，还有一个可以禁用其生成的属性，如下表所示：</span><span class="sxs-lookup"><span data-stu-id="a6a95-306">Each attribute has a property that control its content and another to disable its generation as shown in the following table:</span></span>
+<span data-ttu-id="d541b-306">每个特性都有一个可控制其内容的属性，还有一个可以禁用其生成的属性，如下表所示：</span><span class="sxs-lookup"><span data-stu-id="d541b-306">Each attribute has a property that control its content and another to disable its generation as shown in the following table:</span></span>
 
-| <span data-ttu-id="a6a95-307">特性</span><span class="sxs-lookup"><span data-stu-id="a6a95-307">Attribute</span></span>                                                      | <span data-ttu-id="a6a95-308">Property</span><span class="sxs-lookup"><span data-stu-id="a6a95-308">Property</span></span>               | <span data-ttu-id="a6a95-309">要禁用的属性</span><span class="sxs-lookup"><span data-stu-id="a6a95-309">Property to disable</span></span>                             |
+| <span data-ttu-id="d541b-307">特性</span><span class="sxs-lookup"><span data-stu-id="d541b-307">Attribute</span></span>                                                      | <span data-ttu-id="d541b-308">Property</span><span class="sxs-lookup"><span data-stu-id="d541b-308">Property</span></span>               | <span data-ttu-id="d541b-309">要禁用的属性</span><span class="sxs-lookup"><span data-stu-id="d541b-309">Property to disable</span></span>                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|
 | <xref:System.Reflection.AssemblyCompanyAttribute>              | `Company`              | `GenerateAssemblyCompanyAttribute`              |
 | <xref:System.Reflection.AssemblyConfigurationAttribute>        | `Configuration`        | `GenerateAssemblyConfigurationAttribute`        |
@@ -374,18 +380,18 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 | <xref:System.Reflection.AssemblyVersionAttribute>              | `AssemblyVersion`      | `GenerateAssemblyVersionAttribute`              |
 | <xref:System.Resources.NeutralResourcesLanguageAttribute>      | `NeutralLanguage`      | `GenerateNeutralResourcesLanguageAttribute`     |
 
-<span data-ttu-id="a6a95-310">注意：</span><span class="sxs-lookup"><span data-stu-id="a6a95-310">Notes:</span></span>
+<span data-ttu-id="d541b-310">注意：</span><span class="sxs-lookup"><span data-stu-id="d541b-310">Notes:</span></span>
 
-* <span data-ttu-id="a6a95-311">`AssemblyVersion` 和 `FileVersion` 默认采用 `$(Version)` 的值而不带后缀。</span><span class="sxs-lookup"><span data-stu-id="a6a95-311">`AssemblyVersion` and `FileVersion` default is to take the value of `$(Version)` without suffix.</span></span> <span data-ttu-id="a6a95-312">例如，如果 `$(Version)` 为 `1.2.3-beta.4`，则值将为 `1.2.3`。</span><span class="sxs-lookup"><span data-stu-id="a6a95-312">For example, if `$(Version)` is `1.2.3-beta.4`, then the value would be `1.2.3`.</span></span>
-* <span data-ttu-id="a6a95-313">`InformationalVersion` 默认是 `$(Version)` 的值。</span><span class="sxs-lookup"><span data-stu-id="a6a95-313">`InformationalVersion` defaults to the value of `$(Version)`.</span></span>
-* <span data-ttu-id="a6a95-314">如果存在此属性，则 `InformationalVersion` 附加 `$(SourceRevisionId)`。</span><span class="sxs-lookup"><span data-stu-id="a6a95-314">`InformationalVersion` has `$(SourceRevisionId)` appended if the property is present.</span></span> <span data-ttu-id="a6a95-315">可以使用 `IncludeSourceRevisionInInformationalVersion` 来禁用它。</span><span class="sxs-lookup"><span data-stu-id="a6a95-315">It can be disabled using `IncludeSourceRevisionInInformationalVersion`.</span></span>
-* <span data-ttu-id="a6a95-316">`Copyright` 和 `Description` 属性也可用于 NuGet 元数据。</span><span class="sxs-lookup"><span data-stu-id="a6a95-316">`Copyright` and `Description` properties are also used for NuGet metadata.</span></span>
-* <span data-ttu-id="a6a95-317">`Configuration` 与所有生成过程共享，并通过 `dotnet` 命令的 `--configuration` 参数进行设置。</span><span class="sxs-lookup"><span data-stu-id="a6a95-317">`Configuration` is shared with all the build process and set via the `--configuration` parameter of `dotnet` commands.</span></span>
+* <span data-ttu-id="d541b-311">`AssemblyVersion` 和 `FileVersion` 默认采用 `$(Version)` 的值而不带后缀。</span><span class="sxs-lookup"><span data-stu-id="d541b-311">`AssemblyVersion` and `FileVersion` default is to take the value of `$(Version)` without suffix.</span></span> <span data-ttu-id="d541b-312">例如，如果 `$(Version)` 为 `1.2.3-beta.4`，则值将为 `1.2.3`。</span><span class="sxs-lookup"><span data-stu-id="d541b-312">For example, if `$(Version)` is `1.2.3-beta.4`, then the value would be `1.2.3`.</span></span>
+* <span data-ttu-id="d541b-313">`InformationalVersion` 默认是 `$(Version)` 的值。</span><span class="sxs-lookup"><span data-stu-id="d541b-313">`InformationalVersion` defaults to the value of `$(Version)`.</span></span>
+* <span data-ttu-id="d541b-314">如果存在此属性，则 `InformationalVersion` 附加 `$(SourceRevisionId)`。</span><span class="sxs-lookup"><span data-stu-id="d541b-314">`InformationalVersion` has `$(SourceRevisionId)` appended if the property is present.</span></span> <span data-ttu-id="d541b-315">可以使用 `IncludeSourceRevisionInInformationalVersion` 来禁用它。</span><span class="sxs-lookup"><span data-stu-id="d541b-315">It can be disabled using `IncludeSourceRevisionInInformationalVersion`.</span></span>
+* <span data-ttu-id="d541b-316">`Copyright` 和 `Description` 属性也可用于 NuGet 元数据。</span><span class="sxs-lookup"><span data-stu-id="d541b-316">`Copyright` and `Description` properties are also used for NuGet metadata.</span></span>
+* <span data-ttu-id="d541b-317">`Configuration` 与所有生成过程共享，并通过 `dotnet` 命令的 `--configuration` 参数进行设置。</span><span class="sxs-lookup"><span data-stu-id="d541b-317">`Configuration` is shared with all the build process and set via the `--configuration` parameter of `dotnet` commands.</span></span>
 
-### <a name="generateassemblyinfo"></a><span data-ttu-id="a6a95-318">GenerateAssemblyInfo</span><span class="sxs-lookup"><span data-stu-id="a6a95-318">GenerateAssemblyInfo</span></span>
+### <a name="generateassemblyinfo"></a><span data-ttu-id="d541b-318">GenerateAssemblyInfo</span><span class="sxs-lookup"><span data-stu-id="d541b-318">GenerateAssemblyInfo</span></span>
 
-<span data-ttu-id="a6a95-319">一个布尔值，用于启用或禁用所有 AssemblyInfo 生成。</span><span class="sxs-lookup"><span data-stu-id="a6a95-319">A Boolean that enable or disable all the AssemblyInfo generation.</span></span> <span data-ttu-id="a6a95-320">默认值为 `true`。</span><span class="sxs-lookup"><span data-stu-id="a6a95-320">The default value is `true`.</span></span>
+<span data-ttu-id="d541b-319">一个布尔值，用于启用或禁用所有 AssemblyInfo 生成。</span><span class="sxs-lookup"><span data-stu-id="d541b-319">A Boolean that enable or disable all the AssemblyInfo generation.</span></span> <span data-ttu-id="d541b-320">默认值为 `true`。</span><span class="sxs-lookup"><span data-stu-id="d541b-320">The default value is `true`.</span></span>
 
-### <a name="generatedassemblyinfofile"></a><span data-ttu-id="a6a95-321">GeneratedAssemblyInfoFile</span><span class="sxs-lookup"><span data-stu-id="a6a95-321">GeneratedAssemblyInfoFile</span></span>
+### <a name="generatedassemblyinfofile"></a><span data-ttu-id="d541b-321">GeneratedAssemblyInfoFile</span><span class="sxs-lookup"><span data-stu-id="d541b-321">GeneratedAssemblyInfoFile</span></span>
 
-<span data-ttu-id="a6a95-322">生成的程序集信息文件的路径。</span><span class="sxs-lookup"><span data-stu-id="a6a95-322">The path of the generated assembly info file.</span></span> <span data-ttu-id="a6a95-323">默认为 `$(IntermediateOutputPath)` (obj) 目录中的某个文件。</span><span class="sxs-lookup"><span data-stu-id="a6a95-323">Default to a file in the `$(IntermediateOutputPath)` (obj) directory.</span></span>
+<span data-ttu-id="d541b-322">生成的程序集信息文件的路径。</span><span class="sxs-lookup"><span data-stu-id="d541b-322">The path of the generated assembly info file.</span></span> <span data-ttu-id="d541b-323">默认为 `$(IntermediateOutputPath)` (obj) 目录中的某个文件。</span><span class="sxs-lookup"><span data-stu-id="d541b-323">Default to a file in the `$(IntermediateOutputPath)` (obj) directory.</span></span>
