@@ -2,26 +2,26 @@
 title: MTOM 编码
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-ms.openlocfilehash: 9fe278f9a85286f8067ef3a67bfbeb3cb83f984e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa24a8f8553ceb035e5fc9c0c6094b1279711674
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608780"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839829"
 ---
-# <a name="mtom-encoding"></a><span data-ttu-id="5f3bf-102">MTOM 编码</span><span class="sxs-lookup"><span data-stu-id="5f3bf-102">MTOM Encoding</span></span>
-<span data-ttu-id="5f3bf-103">此示例演示如何将消息传输优化机制 (MTOM) 消息编码与 WSHttpBinding 一起使用。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-103">This sample demonstrates the use of the Message Transmission Optimization Mechanism (MTOM) message encoding with a WSHttpBinding.</span></span> <span data-ttu-id="5f3bf-104">MTOM 是一种机制，用来以原始字节形式传输包含 SOAP 消息的较大二进制附件，从而使所传输的消息较小。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-104">MTOM is a mechanism for transmitting large binary attachments with SOAP messages as raw bytes, allowing for smaller messages.</span></span>  
+# <a name="mtom-encoding"></a><span data-ttu-id="29ff6-102">MTOM 编码</span><span class="sxs-lookup"><span data-stu-id="29ff6-102">MTOM Encoding</span></span>
+<span data-ttu-id="29ff6-103">此示例演示如何将消息传输优化机制 (MTOM) 消息编码与 WSHttpBinding 一起使用。</span><span class="sxs-lookup"><span data-stu-id="29ff6-103">This sample demonstrates the use of the Message Transmission Optimization Mechanism (MTOM) message encoding with a WSHttpBinding.</span></span> <span data-ttu-id="29ff6-104">MTOM 是一种机制，用来以原始字节形式传输包含 SOAP 消息的较大二进制附件，从而使所传输的消息较小。</span><span class="sxs-lookup"><span data-stu-id="29ff6-104">MTOM is a mechanism for transmitting large binary attachments with SOAP messages as raw bytes, allowing for smaller messages.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="5f3bf-105">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="5f3bf-106">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="5f3bf-106">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="29ff6-105">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="29ff6-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="29ff6-106">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="29ff6-106">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="5f3bf-107">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5f3bf-108">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="5f3bf-108">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="29ff6-107">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="29ff6-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="29ff6-108">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="29ff6-108">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MTOM`  
   
- <span data-ttu-id="5f3bf-109">默认情况下，WSHttpBinding 以正常文本 XML 形式发送和接收消息。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-109">By default, the WSHttpBinding sends and received messages as normal text XML.</span></span> <span data-ttu-id="5f3bf-110">若要允许发送和接收 MTOM 消息，请在绑定的配置中设置 `messageEncoding` 属性 (Attribute)（如下面的示例代码中所示），或者使用 `MessageEncoding` 属性 (Property) 直接在绑定中进行设置。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-110">To enable sending and receiving MTOM messages, set the `messageEncoding` attribute on the binding's configuration (as in the following example code), or directly on the binding using the `MessageEncoding` property.</span></span> <span data-ttu-id="5f3bf-111">服务或客户端现在可以发送和接收 MTOM 消息了。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-111">The service or client can now send and receive MTOM messages.</span></span>  
+ <span data-ttu-id="29ff6-109">默认情况下，WSHttpBinding 以正常文本 XML 形式发送和接收消息。</span><span class="sxs-lookup"><span data-stu-id="29ff6-109">By default, the WSHttpBinding sends and received messages as normal text XML.</span></span> <span data-ttu-id="29ff6-110">若要允许发送和接收 MTOM 消息，请在绑定的配置中设置 `messageEncoding` 属性 (Attribute)（如下面的示例代码中所示），或者使用 `MessageEncoding` 属性 (Property) 直接在绑定中进行设置。</span><span class="sxs-lookup"><span data-stu-id="29ff6-110">To enable sending and receiving MTOM messages, set the `messageEncoding` attribute on the binding's configuration (as in the following example code), or directly on the binding using the `MessageEncoding` property.</span></span> <span data-ttu-id="29ff6-111">服务或客户端现在可以发送和接收 MTOM 消息了。</span><span class="sxs-lookup"><span data-stu-id="29ff6-111">The service or client can now send and receive MTOM messages.</span></span>  
   
 ```xml  
 <wsHttpBinding>  
@@ -29,7 +29,7 @@ ms.locfileid: "54608780"
 </wsHttpBinding>  
 ```  
   
- <span data-ttu-id="5f3bf-112">MTOM 编码器可以优化字节和流的数组。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-112">The MTOM encoder can optimize arrays of bytes and streams.</span></span> <span data-ttu-id="5f3bf-113">在下面的示例中，操作使用 `Stream` 参数，因此可以进行优化。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-113">In this sample, the operation uses a `Stream` parameter and can therefore be optimized.</span></span>  
+ <span data-ttu-id="29ff6-112">MTOM 编码器可以优化字节和流的数组。</span><span class="sxs-lookup"><span data-stu-id="29ff6-112">The MTOM encoder can optimize arrays of bytes and streams.</span></span> <span data-ttu-id="29ff6-113">在下面的示例中，操作使用 `Stream` 参数，因此可以进行优化。</span><span class="sxs-lookup"><span data-stu-id="29ff6-113">In this sample, the operation uses a `Stream` parameter and can therefore be optimized.</span></span>  
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -40,7 +40,7 @@ ms.locfileid: "54608780"
   }  
 ```
   
- <span data-ttu-id="5f3bf-114">为该示例选择的协定会将二进制数据传输到服务，并将上载的字节数作为返回值接收。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-114">The contract chosen for this sample transmits binary data to the service and receives the number of bytes uploaded as the return value.</span></span> <span data-ttu-id="5f3bf-115">在安装服务之后运行客户端时，服务会显示数字 1000，这表示收到了全部 1000 个字节。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-115">When the service is installed and the client is run, it prints out the number 1000, which indicates that all 1000 bytes were received.</span></span> <span data-ttu-id="5f3bf-116">剩下的输出列出了在各种负载情况下经过优化和未经优化的消息大小。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-116">The remainder of the output lists optimized and non-optimized message sizes for various payloads.</span></span>  
+ <span data-ttu-id="29ff6-114">为该示例选择的协定会将二进制数据传输到服务，并将上载的字节数作为返回值接收。</span><span class="sxs-lookup"><span data-stu-id="29ff6-114">The contract chosen for this sample transmits binary data to the service and receives the number of bytes uploaded as the return value.</span></span> <span data-ttu-id="29ff6-115">在安装服务之后运行客户端时，服务会显示数字 1000，这表示收到了全部 1000 个字节。</span><span class="sxs-lookup"><span data-stu-id="29ff6-115">When the service is installed and the client is run, it prints out the number 1000, which indicates that all 1000 bytes were received.</span></span> <span data-ttu-id="29ff6-116">剩下的输出列出了在各种负载情况下经过优化和未经优化的消息大小。</span><span class="sxs-lookup"><span data-stu-id="29ff6-116">The remainder of the output lists optimized and non-optimized message sizes for various payloads.</span></span>  
   
 ```  
 Output:  
@@ -64,20 +64,19 @@ MTOM encoding with a 1000000 byte payload: 1001080
 Press <ENTER> to terminate client.  
 ```  
   
- <span data-ttu-id="5f3bf-117">使用 MTOM 的目的在于优化对较大的二进制负载的传输。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-117">The purpose for using MTOM is to optimize the transmission of large binary payloads.</span></span> <span data-ttu-id="5f3bf-118">对于较小的二进制负载来说，使用 MTOM 发送 SOAP 消息会产生显著的开销，但是，当这些负载增大到几千个字节时，该开销会变得微不足道。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-118">Sending a SOAP message using MTOM has a noticeable overhead for small binary payloads, but becomes a great savings when they grow over a few thousand bytes.</span></span> <span data-ttu-id="5f3bf-119">原因在于，正常文本 XML 使用 Base64 对二进制数据进行编码，这要求每三个字节对应四个字符，从而使得数据的大小增加三分之一。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-119">The reason for this is that normal text XML encodes binary data using Base64, which requires four characters for every three bytes, and increases the size of the data by one third.</span></span> <span data-ttu-id="5f3bf-120">MTOM 能够以原始字节形式传输二进制数据，这会缩短编码/解码时间并生成较小的消息。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-120">MTOM is able to transmit binary data as raw bytes, saving the encoding/decoding time and resulting is smaller messages.</span></span> <span data-ttu-id="5f3bf-121">与当今的业务文档和数字照片相比，几千个字节的阈值是非常小的。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-121">The threshold of a few thousand bytes is small when compared to today's business documents and digital photographs.</span></span>  
+ <span data-ttu-id="29ff6-117">使用 MTOM 的目的在于优化对较大的二进制负载的传输。</span><span class="sxs-lookup"><span data-stu-id="29ff6-117">The purpose for using MTOM is to optimize the transmission of large binary payloads.</span></span> <span data-ttu-id="29ff6-118">对于较小的二进制负载来说，使用 MTOM 发送 SOAP 消息会产生显著的开销，但是，当这些负载增大到几千个字节时，该开销会变得微不足道。</span><span class="sxs-lookup"><span data-stu-id="29ff6-118">Sending a SOAP message using MTOM has a noticeable overhead for small binary payloads, but becomes a great savings when they grow over a few thousand bytes.</span></span> <span data-ttu-id="29ff6-119">原因在于，正常文本 XML 使用 Base64 对二进制数据进行编码，这要求每三个字节对应四个字符，从而使得数据的大小增加三分之一。</span><span class="sxs-lookup"><span data-stu-id="29ff6-119">The reason for this is that normal text XML encodes binary data using Base64, which requires four characters for every three bytes, and increases the size of the data by one third.</span></span> <span data-ttu-id="29ff6-120">MTOM 能够以原始字节形式传输二进制数据，这会缩短编码/解码时间并生成较小的消息。</span><span class="sxs-lookup"><span data-stu-id="29ff6-120">MTOM is able to transmit binary data as raw bytes, saving the encoding/decoding time and resulting is smaller messages.</span></span> <span data-ttu-id="29ff6-121">与当今的业务文档和数字照片相比，几千个字节的阈值是非常小的。</span><span class="sxs-lookup"><span data-stu-id="29ff6-121">The threshold of a few thousand bytes is small when compared to today's business documents and digital photographs.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="5f3bf-122">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="5f3bf-122">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="29ff6-122">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="29ff6-122">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="5f3bf-123">使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-123">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
+1.  <span data-ttu-id="29ff6-123">使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。</span><span class="sxs-lookup"><span data-stu-id="29ff6-123">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  <span data-ttu-id="5f3bf-124">请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-124">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+2.  <span data-ttu-id="29ff6-124">请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="29ff6-124">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-3.  <span data-ttu-id="5f3bf-125">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-125">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+3.  <span data-ttu-id="29ff6-125">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="29ff6-125">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  <span data-ttu-id="5f3bf-126">若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="5f3bf-126">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+4.  <span data-ttu-id="29ff6-126">若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="29ff6-126">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f3bf-127">请参阅</span><span class="sxs-lookup"><span data-stu-id="5f3bf-127">See also</span></span>

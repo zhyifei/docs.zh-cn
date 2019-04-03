@@ -5,51 +5,52 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 8334691ff5ac09c19287dbc2ec2503dbd5149f7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3558976002e273aee239e518f0387033cb82873
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572482"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836137"
 ---
-# <a name="-deterministic"></a><span data-ttu-id="72811-102">-deterministic</span><span class="sxs-lookup"><span data-stu-id="72811-102">-deterministic</span></span>
+# <a name="-deterministic"></a><span data-ttu-id="6c301-102">-deterministic</span><span class="sxs-lookup"><span data-stu-id="6c301-102">-deterministic</span></span>
 
-<span data-ttu-id="72811-103">如果输入相同，则会导致编译器生成的程序集其逐字节输出在整个编译期间中相同。</span><span class="sxs-lookup"><span data-stu-id="72811-103">Causes the compiler to produce an assembly whose byte-for-byte output is identical across compilations for identical inputs.</span></span> 
+<span data-ttu-id="6c301-103">如果输入相同，则会导致编译器生成的程序集其逐字节输出在整个编译期间中相同。</span><span class="sxs-lookup"><span data-stu-id="6c301-103">Causes the compiler to produce an assembly whose byte-for-byte output is identical across compilations for identical inputs.</span></span> 
 
-## <a name="syntax"></a><span data-ttu-id="72811-104">语法</span><span class="sxs-lookup"><span data-stu-id="72811-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="6c301-104">语法</span><span class="sxs-lookup"><span data-stu-id="6c301-104">Syntax</span></span>
 
 ```
 -deterministic
 ```
 
-## <a name="remarks"></a><span data-ttu-id="72811-105">备注</span><span class="sxs-lookup"><span data-stu-id="72811-105">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="6c301-105">备注</span><span class="sxs-lookup"><span data-stu-id="6c301-105">Remarks</span></span>
 
-<span data-ttu-id="72811-106">默认情况下，一组给定输入的编译器输出是唯一的，因为编译器会添加时间戳和随意数字生成的 GUID。</span><span class="sxs-lookup"><span data-stu-id="72811-106">By default, compiler output from a given set of inputs is unique, since the compiler adds a timestamp and a GUID that is generated from random numbers.</span></span> <span data-ttu-id="72811-107">使用 `-deterministic` 选项生成确定性的程序集，只要输入保持不变，该程序集的二进制内容在整个编译中都是相同的。</span><span class="sxs-lookup"><span data-stu-id="72811-107">You use the `-deterministic` option to produce a *deterministic assembly*, one whose binary content is identical across compilations as long as the input remains the same.</span></span>
+<span data-ttu-id="6c301-106">默认情况下，一组给定输入的编译器输出是唯一的，因为编译器会添加时间戳和随意数字生成的 GUID。</span><span class="sxs-lookup"><span data-stu-id="6c301-106">By default, compiler output from a given set of inputs is unique, since the compiler adds a timestamp and a GUID that is generated from random numbers.</span></span> <span data-ttu-id="6c301-107">使用 `-deterministic` 选项生成确定性的程序集，只要输入保持不变，该程序集的二进制内容在整个编译中都是相同的。</span><span class="sxs-lookup"><span data-stu-id="6c301-107">You use the `-deterministic` option to produce a *deterministic assembly*, one whose binary content is identical across compilations as long as the input remains the same.</span></span>
 
-<span data-ttu-id="72811-108">出于确定性目的，编译器会考虑以下输入：</span><span class="sxs-lookup"><span data-stu-id="72811-108">The compiler considers the following inputs for the purpose of determinism:</span></span>
+<span data-ttu-id="6c301-108">出于确定性目的，编译器会考虑以下输入：</span><span class="sxs-lookup"><span data-stu-id="6c301-108">The compiler considers the following inputs for the purpose of determinism:</span></span>
 
-- <span data-ttu-id="72811-109">命令行参数序列。</span><span class="sxs-lookup"><span data-stu-id="72811-109">The sequence of command-line parameters.</span></span>
-- <span data-ttu-id="72811-110">编译器 .rsp 响应文件的内容。</span><span class="sxs-lookup"><span data-stu-id="72811-110">The contents of the compiler's .rsp response file.</span></span>
-- <span data-ttu-id="72811-111">所用编译器的精确版本及其引用的程序集。</span><span class="sxs-lookup"><span data-stu-id="72811-111">The precise version of the compiler used, and its referenced assemblies.</span></span>
-- <span data-ttu-id="72811-112">当前目录路径。</span><span class="sxs-lookup"><span data-stu-id="72811-112">The current directory path.</span></span>
-- <span data-ttu-id="72811-113">直接或间接地显式传递到编译器的所有文件的二进制内容，包括：</span><span class="sxs-lookup"><span data-stu-id="72811-113">The binary contents of all files explicitly passed to the compiler either directly or indirectly, including:</span></span> 
-    - <span data-ttu-id="72811-114">源文件</span><span class="sxs-lookup"><span data-stu-id="72811-114">Source files</span></span>
-    - <span data-ttu-id="72811-115">引用的程序集</span><span class="sxs-lookup"><span data-stu-id="72811-115">Referenced assemblies</span></span>
-    - <span data-ttu-id="72811-116">引用的模块</span><span class="sxs-lookup"><span data-stu-id="72811-116">Referenced modules</span></span>
-    - <span data-ttu-id="72811-117">资源</span><span class="sxs-lookup"><span data-stu-id="72811-117">Resources</span></span>
-    - <span data-ttu-id="72811-118">强名称密钥文件</span><span class="sxs-lookup"><span data-stu-id="72811-118">The strong name key file</span></span>
-    - <span data-ttu-id="72811-119">@ 响应文件</span><span class="sxs-lookup"><span data-stu-id="72811-119">@ response files</span></span>
-    - <span data-ttu-id="72811-120">分析器</span><span class="sxs-lookup"><span data-stu-id="72811-120">Analyzers</span></span>
-    - <span data-ttu-id="72811-121">规则集</span><span class="sxs-lookup"><span data-stu-id="72811-121">Rulesets</span></span>
-    - <span data-ttu-id="72811-122">分析器可能使用的其他文件</span><span class="sxs-lookup"><span data-stu-id="72811-122">Additional files that may be used by analyzers</span></span>
-- <span data-ttu-id="72811-123">当前区域性（针对生成诊断和异常消息的语言）。</span><span class="sxs-lookup"><span data-stu-id="72811-123">The current culture (for the language in which diagnostics and exception messages are produced).</span></span>
-- <span data-ttu-id="72811-124">在未指定编码情况下使用的默认编码（或当前代码页）。</span><span class="sxs-lookup"><span data-stu-id="72811-124">The default encoding (or the current code page) if the encoding is not specified.</span></span>
-- <span data-ttu-id="72811-125">编译器搜索路径（例如，由`/lib` 或 `/recurse` 指定）上文件是否存在及其内容。</span><span class="sxs-lookup"><span data-stu-id="72811-125">The existence, non-existence, and contents of files on the compiler's search paths (specified, for example, by `/lib` or `/recurse`).</span></span>
-- <span data-ttu-id="72811-126">运行编译器的 CLR 平台。</span><span class="sxs-lookup"><span data-stu-id="72811-126">The CLR platform on which the compiler is run.</span></span>
-- <span data-ttu-id="72811-127">`%LIBPATH%` 的值，该值会影响分析器的依赖项加载。</span><span class="sxs-lookup"><span data-stu-id="72811-127">The value of `%LIBPATH%`, which can affect analyzer dependency loading.</span></span>
+- <span data-ttu-id="6c301-109">命令行参数序列。</span><span class="sxs-lookup"><span data-stu-id="6c301-109">The sequence of command-line parameters.</span></span>
+- <span data-ttu-id="6c301-110">编译器 .rsp 响应文件的内容。</span><span class="sxs-lookup"><span data-stu-id="6c301-110">The contents of the compiler's .rsp response file.</span></span>
+- <span data-ttu-id="6c301-111">所用编译器的精确版本及其引用的程序集。</span><span class="sxs-lookup"><span data-stu-id="6c301-111">The precise version of the compiler used, and its referenced assemblies.</span></span>
+- <span data-ttu-id="6c301-112">当前目录路径。</span><span class="sxs-lookup"><span data-stu-id="6c301-112">The current directory path.</span></span>
+- <span data-ttu-id="6c301-113">直接或间接地显式传递到编译器的所有文件的二进制内容，包括：</span><span class="sxs-lookup"><span data-stu-id="6c301-113">The binary contents of all files explicitly passed to the compiler either directly or indirectly, including:</span></span> 
+    - <span data-ttu-id="6c301-114">源文件</span><span class="sxs-lookup"><span data-stu-id="6c301-114">Source files</span></span>
+    - <span data-ttu-id="6c301-115">引用的程序集</span><span class="sxs-lookup"><span data-stu-id="6c301-115">Referenced assemblies</span></span>
+    - <span data-ttu-id="6c301-116">引用的模块</span><span class="sxs-lookup"><span data-stu-id="6c301-116">Referenced modules</span></span>
+    - <span data-ttu-id="6c301-117">资源</span><span class="sxs-lookup"><span data-stu-id="6c301-117">Resources</span></span>
+    - <span data-ttu-id="6c301-118">强名称密钥文件</span><span class="sxs-lookup"><span data-stu-id="6c301-118">The strong name key file</span></span>
+    - <span data-ttu-id="6c301-119">@ 响应文件</span><span class="sxs-lookup"><span data-stu-id="6c301-119">@ response files</span></span>
+    - <span data-ttu-id="6c301-120">分析器</span><span class="sxs-lookup"><span data-stu-id="6c301-120">Analyzers</span></span>
+    - <span data-ttu-id="6c301-121">规则集</span><span class="sxs-lookup"><span data-stu-id="6c301-121">Rulesets</span></span>
+    - <span data-ttu-id="6c301-122">分析器可能使用的其他文件</span><span class="sxs-lookup"><span data-stu-id="6c301-122">Additional files that may be used by analyzers</span></span>
+- <span data-ttu-id="6c301-123">当前区域性（针对生成诊断和异常消息的语言）。</span><span class="sxs-lookup"><span data-stu-id="6c301-123">The current culture (for the language in which diagnostics and exception messages are produced).</span></span>
+- <span data-ttu-id="6c301-124">在未指定编码情况下使用的默认编码（或当前代码页）。</span><span class="sxs-lookup"><span data-stu-id="6c301-124">The default encoding (or the current code page) if the encoding is not specified.</span></span>
+- <span data-ttu-id="6c301-125">编译器搜索路径（例如，由`/lib` 或 `/recurse` 指定）上文件是否存在及其内容。</span><span class="sxs-lookup"><span data-stu-id="6c301-125">The existence, non-existence, and contents of files on the compiler's search paths (specified, for example, by `/lib` or `/recurse`).</span></span>
+- <span data-ttu-id="6c301-126">运行编译器的 CLR 平台。</span><span class="sxs-lookup"><span data-stu-id="6c301-126">The CLR platform on which the compiler is run.</span></span>
+- <span data-ttu-id="6c301-127">`%LIBPATH%` 的值，该值会影响分析器的依赖项加载。</span><span class="sxs-lookup"><span data-stu-id="6c301-127">The value of `%LIBPATH%`, which can affect analyzer dependency loading.</span></span>
 
-<span data-ttu-id="72811-128">当源公开可用时，可使用确定性编译来确定是否从可信源编译二进制内容。</span><span class="sxs-lookup"><span data-stu-id="72811-128">When sources are publicly available, deterministic compilation can be used for establishing whether a binary is compiled from a trusted source.</span></span> <span data-ttu-id="72811-129">它还可有效用于连续生成系统，确定是否需要执行依赖于二进制内容更改的生成步骤。</span><span class="sxs-lookup"><span data-stu-id="72811-129">It can also be useful in a continuous build system for determining whether build steps that are dependent on changes to a binary need to be executed.</span></span> 
+<span data-ttu-id="6c301-128">当源公开可用时，可使用确定性编译来确定是否从可信源编译二进制内容。</span><span class="sxs-lookup"><span data-stu-id="6c301-128">When sources are publicly available, deterministic compilation can be used for establishing whether a binary is compiled from a trusted source.</span></span> <span data-ttu-id="6c301-129">它还可有效用于连续生成系统，确定是否需要执行依赖于二进制内容更改的生成步骤。</span><span class="sxs-lookup"><span data-stu-id="6c301-129">It can also be useful in a continuous build system for determining whether build steps that are dependent on changes to a binary need to be executed.</span></span> 
 
-## <a name="see-also"></a><span data-ttu-id="72811-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="72811-130">See also</span></span>
-- [<span data-ttu-id="72811-131">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="72811-131">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="72811-132">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="72811-132">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="6c301-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="6c301-130">See also</span></span>
+
+- [<span data-ttu-id="6c301-131">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="6c301-131">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="6c301-132">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="6c301-132">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
