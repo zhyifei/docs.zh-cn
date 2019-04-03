@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ffe08dc8aeef9498d2e9f4c973c5ccbc31fec0b9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5d8fd6adf33c992341324e07bcd2ad12986bbdf2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973296"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821005"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 语句
 触发器在类、 窗体或文档中的模块级声明的事件。  
@@ -76,6 +76,7 @@ RaiseEvent eventname[( argumentlist )]
 >  `My.Application.DoEvents`窗体一样方法不会完全相同的方式处理事件。 若要使表单能够直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[托管线程处理](../../../standard/threading/index.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
 - [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)
 - [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)

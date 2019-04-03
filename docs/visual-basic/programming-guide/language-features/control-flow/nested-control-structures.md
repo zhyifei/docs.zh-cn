@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 13e2c5c8d818a09ec5e77ec47fe8a2c83b675d82
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409791"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835188"
 ---
 # <a name="nested-control-structures-visual-basic"></a>嵌套的控件结构 (Visual Basic)
 您可以控制将语句放在其他控制语句，例如`If...Then...Else`块内`For...Next`循环。 控制语句放在另一个控制语句称为*嵌套*。  
@@ -72,6 +72,7 @@ Next ctl
  Visual Basic 编译器检测到这种重叠的控制结构，并发出信号的编译时错误。  
   
 ## <a name="see-also"></a>请参阅
+
 - [控制流](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [决策结构](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [循环结构](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

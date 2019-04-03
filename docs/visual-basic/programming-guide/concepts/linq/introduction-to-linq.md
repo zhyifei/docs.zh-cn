@@ -2,12 +2,12 @@
 title: (Visual Basic 中) 的 LINQ 简介
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: dd457ec59659743bc7cd153fb6b9cef8d99a4a0a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 2900cade8bc4166cccb62baf4381cb926cdff5f8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410181"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822265"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>(Visual Basic 中) 的 LINQ 简介
 语言集成查询 (LINQ) 是 .NET Framework 3.5 版中引入的一项创新功能，它在对象领域和数据领域之间架起了一座桥梁。  
@@ -34,4 +34,5 @@ ms.locfileid: "58410181"
 -   .NET 集合、文件、字符串等：[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>请参阅
+
 - [语言集成查询 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 4dc5497f2e9bacac3062fde6e7dc48270697f1df
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465212"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822331"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>查询操作中的类型关系 (Visual Basic)
 中使用的变量[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查询操作为强类型，必须相互兼容。 数据源中、 查询本身，以及在查询执行过程中，使用强类型化。 下图标识术语用于描述[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询。 有关查询的部分的详细信息，请参阅[基本查询操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
@@ -117,6 +117,7 @@ Next
 3.  中的迭代变量的类型`For Each`循环是在步骤 2 中创建的匿名类型。 该类型具有没有可用的名称，因为必须隐式确定循环迭代变量的类型。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Visual Basic 中的 LINQ 入门](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
