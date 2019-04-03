@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
 ms.openlocfilehash: e4c78a12d6ba66ea88573e6ef2e5b4cc04c1121a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829182"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890779"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log 对象
 提供属性和方法来将事件和异常信息写入应用程序的日志侦听器。  
@@ -23,9 +23,9 @@ ms.locfileid: "58829182"
 >  还可以使用.NET Framework 中的类来记录应用程序中的信息。 有关详细信息，请参阅 [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md)。  
   
 ## <a name="requirements"></a>要求  
- **Namespace**：<xref:Microsoft.VisualBasic.Logging>  
+ **命名空间:** <xref:Microsoft.VisualBasic.Logging>  
   
- **类：** <xref:Microsoft.VisualBasic.Logging.Log>  
+ **类:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
  **程序集：** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
