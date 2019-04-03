@@ -7,24 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30024
 ms.assetid: 758e7a8f-429b-42c1-9a78-778e5b480e04
-ms.openlocfilehash: 8002fc347561fd5087aea474b45ef427ee8f8ec9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 994cafc44a37d16d0f70caec560f530c6a836ec0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508079"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841558"
 ---
-# <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a><span data-ttu-id="243ac-102">语句在方法/多行 lambda 内无效</span><span class="sxs-lookup"><span data-stu-id="243ac-102">Statement is not valid inside a method/multiline lambda</span></span>
-<span data-ttu-id="243ac-103">语句内无效`Sub`， `Function`，属性`Get`，或属性`Set`过程。</span><span class="sxs-lookup"><span data-stu-id="243ac-103">The statement is not valid within a `Sub`, `Function`, property `Get`, or property `Set` procedure.</span></span> <span data-ttu-id="243ac-104">某些语句可以放置在模块或类级别。</span><span class="sxs-lookup"><span data-stu-id="243ac-104">Some statements can be placed at the module or class level.</span></span> <span data-ttu-id="243ac-105">其他人，例如`Option Strict`，必须为命名空间级别并且位于所有其他声明之前。</span><span class="sxs-lookup"><span data-stu-id="243ac-105">Others, such as `Option Strict`, must be at namespace level and precede all other declarations.</span></span>  
+# <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a><span data-ttu-id="abaff-102">语句在方法/多行 lambda 内无效</span><span class="sxs-lookup"><span data-stu-id="abaff-102">Statement is not valid inside a method/multiline lambda</span></span>
+<span data-ttu-id="abaff-103">语句内无效`Sub`， `Function`，属性`Get`，或属性`Set`过程。</span><span class="sxs-lookup"><span data-stu-id="abaff-103">The statement is not valid within a `Sub`, `Function`, property `Get`, or property `Set` procedure.</span></span> <span data-ttu-id="abaff-104">某些语句可以放置在模块或类级别。</span><span class="sxs-lookup"><span data-stu-id="abaff-104">Some statements can be placed at the module or class level.</span></span> <span data-ttu-id="abaff-105">其他人，例如`Option Strict`，必须为命名空间级别并且位于所有其他声明之前。</span><span class="sxs-lookup"><span data-stu-id="abaff-105">Others, such as `Option Strict`, must be at namespace level and precede all other declarations.</span></span>  
   
- <span data-ttu-id="243ac-106">**错误 ID:** BC30024</span><span class="sxs-lookup"><span data-stu-id="243ac-106">**Error ID:** BC30024</span></span>  
+ <span data-ttu-id="abaff-106">**错误 ID:** BC30024</span><span class="sxs-lookup"><span data-stu-id="abaff-106">**Error ID:** BC30024</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="243ac-107">更正此错误</span><span class="sxs-lookup"><span data-stu-id="243ac-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="abaff-107">更正此错误</span><span class="sxs-lookup"><span data-stu-id="abaff-107">To correct this error</span></span>  
   
--   <span data-ttu-id="243ac-108">从过程中删除该语句。</span><span class="sxs-lookup"><span data-stu-id="243ac-108">Remove the statement from the procedure.</span></span>  
+-   <span data-ttu-id="abaff-108">从过程中删除该语句。</span><span class="sxs-lookup"><span data-stu-id="abaff-108">Remove the statement from the procedure.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="243ac-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="243ac-109">See also</span></span>
-- [<span data-ttu-id="243ac-110">Sub 语句</span><span class="sxs-lookup"><span data-stu-id="243ac-110">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="243ac-111">Function 语句</span><span class="sxs-lookup"><span data-stu-id="243ac-111">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="243ac-112">Get 语句</span><span class="sxs-lookup"><span data-stu-id="243ac-112">Get Statement</span></span>](../../../visual-basic/language-reference/statements/get-statement.md)
-- [<span data-ttu-id="243ac-113">Set 语句</span><span class="sxs-lookup"><span data-stu-id="243ac-113">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)
+## <a name="see-also"></a><span data-ttu-id="abaff-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="abaff-109">See also</span></span>
+
+- [<span data-ttu-id="abaff-110">Sub 语句</span><span class="sxs-lookup"><span data-stu-id="abaff-110">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="abaff-111">Function 语句</span><span class="sxs-lookup"><span data-stu-id="abaff-111">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="abaff-112">Get 语句</span><span class="sxs-lookup"><span data-stu-id="abaff-112">Get Statement</span></span>](../../../visual-basic/language-reference/statements/get-statement.md)
+- [<span data-ttu-id="abaff-113">Set 语句</span><span class="sxs-lookup"><span data-stu-id="abaff-113">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)

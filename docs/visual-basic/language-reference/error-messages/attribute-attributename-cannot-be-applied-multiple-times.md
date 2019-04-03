@@ -7,29 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: 62e84d174e4e218472eda9b7c08ed677e0140438
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fe72e7a14723bcfa429ce80b15dbc22b256774aa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278702"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843586"
 ---
-# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a><span data-ttu-id="3c60b-102">属性 '\<attributename > 不能应用多次</span><span class="sxs-lookup"><span data-stu-id="3c60b-102">Attribute '\<attributename>' cannot be applied multiple times</span></span>
-<span data-ttu-id="3c60b-103">该特性仅应用一次。</span><span class="sxs-lookup"><span data-stu-id="3c60b-103">The attribute can only be applied once.</span></span> <span data-ttu-id="3c60b-104">`AttributeUsage`属性确定是否可以多次应用属性。</span><span class="sxs-lookup"><span data-stu-id="3c60b-104">The `AttributeUsage` attribute determines whether an attribute can be applied more than once.</span></span>  
+# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a><span data-ttu-id="3bb3b-102">属性 '\<attributename > 不能应用多次</span><span class="sxs-lookup"><span data-stu-id="3bb3b-102">Attribute '\<attributename>' cannot be applied multiple times</span></span>
+<span data-ttu-id="3bb3b-103">该特性仅应用一次。</span><span class="sxs-lookup"><span data-stu-id="3bb3b-103">The attribute can only be applied once.</span></span> <span data-ttu-id="3bb3b-104">`AttributeUsage`属性确定是否可以多次应用属性。</span><span class="sxs-lookup"><span data-stu-id="3bb3b-104">The `AttributeUsage` attribute determines whether an attribute can be applied more than once.</span></span>  
   
- <span data-ttu-id="3c60b-105">**错误 ID:** BC30663</span><span class="sxs-lookup"><span data-stu-id="3c60b-105">**Error ID:** BC30663</span></span>  
+ <span data-ttu-id="3bb3b-105">**错误 ID:** BC30663</span><span class="sxs-lookup"><span data-stu-id="3bb3b-105">**Error ID:** BC30663</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="3c60b-106">更正此错误</span><span class="sxs-lookup"><span data-stu-id="3c60b-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3bb3b-106">更正此错误</span><span class="sxs-lookup"><span data-stu-id="3bb3b-106">To correct this error</span></span>  
   
-1.  <span data-ttu-id="3c60b-107">请确保该属性只应用一次。</span><span class="sxs-lookup"><span data-stu-id="3c60b-107">Make sure the attribute is only applied once.</span></span>  
+1.  <span data-ttu-id="3bb3b-107">请确保该属性只应用一次。</span><span class="sxs-lookup"><span data-stu-id="3bb3b-107">Make sure the attribute is only applied once.</span></span>  
   
-2.  <span data-ttu-id="3c60b-108">如果使用的您开发的自定义特性，请考虑更改其`AttributeUsage`属性以允许多个特性用法，与下面的示例一样。</span><span class="sxs-lookup"><span data-stu-id="3c60b-108">If you are using custom attributes you developed, consider changing their `AttributeUsage` attribute to allow multiple attribute usage, as with the following example.</span></span>  
+2.  <span data-ttu-id="3bb3b-108">如果使用的您开发的自定义特性，请考虑更改其`AttributeUsage`属性以允许多个特性用法，与下面的示例一样。</span><span class="sxs-lookup"><span data-stu-id="3bb3b-108">If you are using custom attributes you developed, consider changing their `AttributeUsage` attribute to allow multiple attribute usage, as with the following example.</span></span>  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3c60b-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="3c60b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3bb3b-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="3bb3b-109">See also</span></span>
+
 - <xref:System.AttributeUsageAttribute>
-- [<span data-ttu-id="3c60b-110">创建自定义特性</span><span class="sxs-lookup"><span data-stu-id="3c60b-110">Creating Custom Attributes</span></span>](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [<span data-ttu-id="3c60b-111">AttributeUsage</span><span class="sxs-lookup"><span data-stu-id="3c60b-111">AttributeUsage</span></span>](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [<span data-ttu-id="3bb3b-110">创建自定义特性</span><span class="sxs-lookup"><span data-stu-id="3bb3b-110">Creating Custom Attributes</span></span>](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [<span data-ttu-id="3bb3b-111">AttributeUsage</span><span class="sxs-lookup"><span data-stu-id="3bb3b-111">AttributeUsage</span></span>](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
