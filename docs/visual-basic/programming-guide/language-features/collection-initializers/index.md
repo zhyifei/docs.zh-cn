@@ -2,12 +2,17 @@
 title: 集合初始值设定项 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-  - vb.CollectionInitializer
+- vb.CollectionInitializer
 helpviewer_keywords:
-  - 'collection initializers [Visual Basic]'
+- collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
+ms.openlocfilehash: 538efc11e477a4e90b7bca286da4ed56105d7ecb
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675455"
 ---
-
 # <a name="collection-initializers-visual-basic"></a><span data-ttu-id="fad60-102">集合初始值设定项 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fad60-102">Collection Initializers (Visual Basic)</span></span>
 
 <span data-ttu-id="fad60-103">集合初始值设定项提供了用于创建集合并在其中填充一组初始值的缩短语法。</span><span class="sxs-lookup"><span data-stu-id="fad60-103">*Collection initializers* provide a shortened syntax that enables you to create a collection and populate it with an initial set of values.</span></span> <span data-ttu-id="fad60-104">若要通过一组已知值（例如，菜单选项或类别列表、一组初始数字值、字符串（如日期或月份名称）或地理位置（如用于验证的州或省/自治区/直辖市列表）静态列表）创建集合，将会发现集合初始值设定项非常有用。</span><span class="sxs-lookup"><span data-stu-id="fad60-104">Collection initializers are useful when you are creating a collection from a set of known values, for example, a list of menu options or categories, an initial set of numeric values, a static list of strings such as day or month names, or geographic locations such as a list of states that is used for validation.</span></span>

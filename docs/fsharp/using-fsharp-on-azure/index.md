@@ -1,10 +1,15 @@
 ---
-title: '在 Azure 上使用 F#'
-description: '使用 Azure 服务的指南F#'
+title: 在 Azure 上使用 F#
+description: 使用 Azure 服务的指南F#
 author: sylvanc
 ms.date: 09/22/2016
+ms.openlocfilehash: 8243c021b8bc3ea9b067b278a5d9c6e3619232b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371031"
 ---
-
 # <a name="using-f-on-azure"></a><span data-ttu-id="63c7d-103">在 Azure 上使用 F#</span><span class="sxs-lookup"><span data-stu-id="63c7d-103">Using F# on Azure</span></span>
 
 <span data-ttu-id="63c7d-104">F# 是一种出色的云编程语言，常用于编写 Web 应用程序、云服务、云托管微服务，也可用于可缩放数据处理。</span><span class="sxs-lookup"><span data-stu-id="63c7d-104">F# is a superb language for cloud programming and is frequently used to write web applications, cloud services, cloud-hosted microservices, and for scalable data processing.</span></span>

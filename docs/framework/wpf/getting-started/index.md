@@ -2,10 +2,16 @@
 title: 入门 (WPF)
 ms.date: 01/26/2018
 helpviewer_keywords:
-  - 'getting started [WPF]'
-  - 'introduction [WPF]'
-  - 'WPF [WPF], getting started'
+- getting started [WPF]
+- introduction [WPF]
+- WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
+ms.openlocfilehash: 0717536912802461e6d03e240b22d3e05d535f86
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371124"
 ---
 # <a name="getting-started-wpf"></a><span data-ttu-id="fad4b-102">入门 (WPF)</span><span class="sxs-lookup"><span data-stu-id="fad4b-102">Getting Started (WPF)</span></span>
 <span data-ttu-id="fad4b-103">Windows Presentation Foundation (WPF) 是一个可创建桌面客户端应用程序的 UI 框架。</span><span class="sxs-lookup"><span data-stu-id="fad4b-103">Windows Presentation Foundation (WPF) is a UI framework that creates desktop client applications.</span></span> <span data-ttu-id="fad4b-104">WPF 开发平台支持广泛的应用程序开发功能，包括应用程序模型、资源、控件、图形、布局、数据绑定、文档和安全性。</span><span class="sxs-lookup"><span data-stu-id="fad4b-104">The WPF development platform supports a broad set of application development features, including an application model, resources, controls, graphics, layout, data binding, documents, and security.</span></span> <span data-ttu-id="fad4b-105">它是 .NET Framework 的子集，因此，如果你曾经使用 ASP.NET 或 Windows 窗体通过 .NET Framework 构建应用程序，应该会熟悉此编程体验。</span><span class="sxs-lookup"><span data-stu-id="fad4b-105">It is a subset of the .NET Framework, so if you have previously built applications with the .NET Framework using ASP.NET or Windows Forms, the programming experience should be familiar.</span></span> <span data-ttu-id="fad4b-106">WPF 使用可扩展应用程序标记语言 (XAML) 为应用程序编程提供声明性模型。</span><span class="sxs-lookup"><span data-stu-id="fad4b-106">WPF uses the Extensible Application Markup Language (XAML) to provide a declarative model for application programming.</span></span> <span data-ttu-id="fad4b-107">本节包含 WPF 简介及入门帮助等主题。</span><span class="sxs-lookup"><span data-stu-id="fad4b-107">This section has topics that introduce and help you get started with WPF.</span></span>  

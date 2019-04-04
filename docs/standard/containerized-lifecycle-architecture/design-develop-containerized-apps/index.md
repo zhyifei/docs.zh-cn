@@ -4,8 +4,13 @@ description: 让我们开始了解 Docker 应用程序生命周期中的开发/�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 2ecec1412ea1c3b6ff32e6250c7cb97c531a84fd
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664999"
 ---
-
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a><span data-ttu-id="277f1-103">使用 Docker 和 Microsoft Azure 设计和开发容器化应用</span><span class="sxs-lookup"><span data-stu-id="277f1-103">Designing and developing containerized apps using Docker and Microsoft Azure</span></span>
 
 <span data-ttu-id="277f1-104">*设想：设计和开发中考虑到使用 Docker 的可缩放解决方案。*</span><span class="sxs-lookup"><span data-stu-id="277f1-104">*Vision: Design and develop scalable solutions with Docker in mind.*</span></span>

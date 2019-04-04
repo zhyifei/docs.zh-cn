@@ -1,6 +1,12 @@
 ---
-title: '特性 (C#)'
+title: 特性 (C#)
 ms.date: 04/26/2018
+ms.openlocfilehash: 42a7035a9dae146ad7a303da41c83891e5e19ef8
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442017"
 ---
 # <a name="attributes-c"></a><span data-ttu-id="59efb-102">特性 (C#)</span><span class="sxs-lookup"><span data-stu-id="59efb-102">Attributes (C#)</span></span>
 

@@ -1,9 +1,14 @@
 ---
-title: '操作指南（C# 指南）'
+title: 操作指南（C# 指南）
 description: 快速提示及重点短代码示例集合
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202335"
 ---
-
 # <a name="how-to-c"></a><span data-ttu-id="43079-103">操作指南 (C#)</span><span class="sxs-lookup"><span data-stu-id="43079-103">How to (C#)</span></span>
 
 <span data-ttu-id="43079-104">在 C# 指南中的操作指南部分快速了解常见问题的答案。</span><span class="sxs-lookup"><span data-stu-id="43079-104">In the How to section of the C# Guide you can find quick answers to common questions.</span></span> <span data-ttu-id="43079-105">在某些情况下，可能会在多个部分列出相关文章。</span><span class="sxs-lookup"><span data-stu-id="43079-105">In some cases, articles may be listed in multiple sections.</span></span> <span data-ttu-id="43079-106">我们希望用户可从多个搜索路径找到操作指南。</span><span class="sxs-lookup"><span data-stu-id="43079-106">We wanted to make them easy to find for multiple search paths.</span></span> 

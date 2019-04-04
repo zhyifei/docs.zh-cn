@@ -5,6 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: 1edd267ed388f630cc332caa278d5c47a40d77d5
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835117"
 ---
 # <a name="xml-documents-and-data"></a><span data-ttu-id="cc34e-102">XML 文档和数据</span><span class="sxs-lookup"><span data-stu-id="cc34e-102">XML Documents and Data</span></span>
 <span data-ttu-id="cc34e-103">.NET Framework 提供了一组全面而集成的类，可用来方便地生成可以识别 XML 的应用程序。</span><span class="sxs-lookup"><span data-stu-id="cc34e-103">The .NET Framework provides a comprehensive and integrated set of classes that enable you to build XML-aware apps easily.</span></span> <span data-ttu-id="cc34e-104">通过以下命名空间中的类，可以分析和编写 XML，编辑内存中的 XML 数据，进行数据验证以及 XSLT 转换。</span><span class="sxs-lookup"><span data-stu-id="cc34e-104">The classes in the following namespaces support parsing and writing XML, editing XML data in memory, data validation, and XSLT transformation.</span></span>  

@@ -2,10 +2,16 @@
 title: Windows 窗体
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Windows Forms
-  - user interface
-  - 'user interface [Windows Forms], forms'
+- Windows Forms
+- user interface
+- user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
+ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723109"
 ---
 # <a name="windows-forms"></a><span data-ttu-id="83b42-102">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="83b42-102">Windows Forms</span></span>
 <span data-ttu-id="83b42-103">因为窗体是应用程序的基本单位，有必要思考一下它们的功能和设计。</span><span class="sxs-lookup"><span data-stu-id="83b42-103">As forms are the base unit of your application, it is essential that you give some thought to their function and design.</span></span> <span data-ttu-id="83b42-104">窗体最终成为白板，作为开发成员，你要用控件进行增强以创建用户界面，并借助代码操纵数据。</span><span class="sxs-lookup"><span data-stu-id="83b42-104">A form is ultimately a blank slate that you, as a developer, enhance with controls to create a user interface and with code to manipulate data.</span></span> <span data-ttu-id="83b42-105">为此，Visual Studio 为您提供的集成的开发环境 (IDE) 来帮助编写代码，以及丰富的控件集使用编写[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="83b42-105">To that end, Visual Studio provides you with an integrated development environment (IDE) to aid in writing code, as well as a rich control set written with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="83b42-106">通过使用代码补充这些控件的功能，你可轻松并快速开发所需要的解决方案。</span><span class="sxs-lookup"><span data-stu-id="83b42-106">By complementing the functionality of these controls with your code, you can easily and quickly develop the solutions you need.</span></span>  

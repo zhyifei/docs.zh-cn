@@ -1,10 +1,15 @@
 ---
-title: 'C# 介绍 - C# 指南'
-description: '刚开始接触 C#？ 了解 C# 语言的基础知识。'
+title: C# 介绍 - C# 指南
+description: 刚开始接触 C#？ 了解 C# 语言的基础知识。
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
+ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843424"
 ---
-
 # <a name="a-tour-of-the-c-language"></a><span data-ttu-id="525a2-104">C# 语言介绍</span><span class="sxs-lookup"><span data-stu-id="525a2-104">A Tour of the C# Language</span></span>
 
 <span data-ttu-id="525a2-105">C#（读作“See Sharp”）是一种简单易用的新式编程语言，不仅面向对象，还类型安全。</span><span class="sxs-lookup"><span data-stu-id="525a2-105">C# (pronounced "See Sharp") is a simple, modern, object-oriented, and type-safe programming language.</span></span> <span data-ttu-id="525a2-106">C# 源于 C 语言系列，C、C++、Java 和 JavaScript 程序员很快就可以上手使用。</span><span class="sxs-lookup"><span data-stu-id="525a2-106">C# has its roots in the C family of languages and will be immediately familiar to C, C++, Java, and JavaScript programmers.</span></span>

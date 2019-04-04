@@ -2,11 +2,17 @@
 title: 接口 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic code, interfaces'
-  - 'interfaces [Visual Basic], Visual Basic'
-  - interfaces
-  - 'interfaces [Visual Basic]'
+- Visual Basic code, interfaces
+- interfaces [Visual Basic], Visual Basic
+- interfaces
+- interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
+ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972374"
 ---
 # <a name="interfaces-visual-basic"></a><span data-ttu-id="0759b-102">接口 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0759b-102">Interfaces (Visual Basic)</span></span>
 <span data-ttu-id="0759b-103">接口定义了类可以实现的属性、方法和事件。</span><span class="sxs-lookup"><span data-stu-id="0759b-103">*Interfaces* define the properties, methods, and events that classes can implement.</span></span> <span data-ttu-id="0759b-104">接口允许将功能定义为一些紧密相关的属性、方法和事件的小组；这样就减少了兼容性问题，因为可以在不损害现有代码的情况下开发接口的增强型实现。</span><span class="sxs-lookup"><span data-stu-id="0759b-104">Interfaces allow you to define features as small groups of closely related properties, methods, and events; this reduces compatibility problems because you can develop enhanced implementations for your interfaces without jeopardizing existing code.</span></span> <span data-ttu-id="0759b-105">在任何时候都可以通过开发附加接口和实现来添加新的功能。</span><span class="sxs-lookup"><span data-stu-id="0759b-105">You can add new features at any time by developing additional interfaces and implementations.</span></span>  

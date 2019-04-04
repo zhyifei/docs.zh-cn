@@ -4,8 +4,13 @@ description: 使用 Microsoft 工具的 Microsoft 平台和工具 DevOps 工作�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663920"
 ---
-
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a><span data-ttu-id="b1812-103">使用 Microsoft 工具的 Docker 应用程序 DevOps 工作流</span><span class="sxs-lookup"><span data-stu-id="b1812-103">Docker application DevOps workflow with Microsoft tools</span></span>
 
 <span data-ttu-id="b1812-104">*Microsoft Visual Studio、 Azure DevOps 服务、 Team Foundation Server 和 Application Insights 为开发和为你的团队提供的工具来管理项目和快速生成、 测试和部署的 IT 运营提供综合的生态系统容器化应用程序。*</span><span class="sxs-lookup"><span data-stu-id="b1812-104">*Microsoft Visual Studio, Azure DevOps Services, Team Foundation Server, and Application Insights provide a comprehensive ecosystem for development and IT operations that give your team the tools to manage projects and rapidly build, test, and deploy containerized applications.*</span></span>

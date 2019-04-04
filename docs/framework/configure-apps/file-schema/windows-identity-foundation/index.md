@@ -3,6 +3,12 @@ title: Windows Identity Foundation 配置架构
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
+ms.openlocfilehash: 9c8009b4d95e5aa2c3d9bb8a8958040127a9e628
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441185"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a><span data-ttu-id="9e8d1-102">Windows Identity Foundation 配置架构</span><span class="sxs-lookup"><span data-stu-id="9e8d1-102">Windows Identity Foundation Configuration Schema</span></span>
 <span data-ttu-id="9e8d1-103">本节中的主题介绍了 Windows Identity Foundation (WIF) 配置架构。</span><span class="sxs-lookup"><span data-stu-id="9e8d1-103">The topics in this section provide information about the Windows Identity Foundation (WIF) configuration schema.</span></span> <span data-ttu-id="9e8d1-104">此外可以配置为通过由框架公开的类使用 WIF 的应用程序。</span><span class="sxs-lookup"><span data-stu-id="9e8d1-104">You can also configure an application to use WIF through classes exposed by the framework.</span></span> <span data-ttu-id="9e8d1-105">在处理架构中相关元素的几节中提到了这些类。</span><span class="sxs-lookup"><span data-stu-id="9e8d1-105">These classes are noted in the sections that treat relevant elements in the schema.</span></span> <span data-ttu-id="9e8d1-106">以下显示由 WIF 配置架构公开的基本 XML 标记结构。</span><span class="sxs-lookup"><span data-stu-id="9e8d1-106">The following shows the basic XML tag structure exposed by the WIF configuration schema.</span></span> <span data-ttu-id="9e8d1-107">系统会省略属性。</span><span class="sxs-lookup"><span data-stu-id="9e8d1-107">Attributes are omitted.</span></span> <span data-ttu-id="9e8d1-108">突出显示的注释描述架构的主要组件。</span><span class="sxs-lookup"><span data-stu-id="9e8d1-108">Highlighted comments indicate major components of the schema.</span></span>  

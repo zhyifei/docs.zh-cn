@@ -3,8 +3,13 @@ title: .NET 机器学习操作指南 - ML.NET
 description: 了解如何执行特定任务，以帮助自定义创建 AI 解决方案并将机器学习集成到 .NET 应用程序。
 ms.custom: seodec18
 ms.date: 03/01/2019
+ms.openlocfilehash: 9e5bd146d636b46dcf3835c670207b647e7743c6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673045"
 ---
-
 # <a name="net-machine-learning-how-to-guides---mlnet"></a><span data-ttu-id="3264f-103">.NET 机器学习操作指南 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="3264f-103">.NET Machine learning how-to guides - ML.NET</span></span>
 
 <span data-ttu-id="3264f-104">在 ML.NET 指南中的操作指南部分快速了解常见问题的答案。</span><span class="sxs-lookup"><span data-stu-id="3264f-104">In the How to section of the ML.NET Guide, you can find quick answers to common questions.</span></span> <span data-ttu-id="3264f-105">在某些情况下，可能会在多个部分列出相关文章以便查找。</span><span class="sxs-lookup"><span data-stu-id="3264f-105">In some cases, articles may be listed in multiple sections to make them easy to find.</span></span>
