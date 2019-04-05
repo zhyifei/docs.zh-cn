@@ -8,31 +8,31 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367565"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054983"
 ---
-# <a name="tooltip"></a><span data-ttu-id="cb77f-102">ToolTip</span><span class="sxs-lookup"><span data-stu-id="cb77f-102">ToolTip</span></span>
-<span data-ttu-id="cb77f-103">工具提示，则用户将鼠标指针悬停在元素，通过上时，将显示一个小型弹出窗口<xref:System.Windows.Controls.Button>。</span><span class="sxs-lookup"><span data-stu-id="cb77f-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
+# <a name="tooltip"></a><span data-ttu-id="64231-102">ToolTip</span><span class="sxs-lookup"><span data-stu-id="64231-102">ToolTip</span></span>
+<span data-ttu-id="64231-103">工具提示，则用户将鼠标指针悬停在元素，通过上时，将显示一个小型弹出窗口<xref:System.Windows.Controls.Button>。</span><span class="sxs-lookup"><span data-stu-id="64231-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
   
- <span data-ttu-id="cb77f-104">下图显示了鼠标指针指向**关闭**<xref:System.Windows.Controls.Button>，后者随后会显示其标识<xref:System.Windows.Controls.ToolTip>。</span><span class="sxs-lookup"><span data-stu-id="cb77f-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
+ <span data-ttu-id="64231-104">下图显示了鼠标指针指向**关闭**<xref:System.Windows.Controls.Button>，后者随后会显示其标识<xref:System.Windows.Controls.ToolTip>。</span><span class="sxs-lookup"><span data-stu-id="64231-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
   
- <span data-ttu-id="cb77f-105">显示其显示工具提示关闭按钮</span><span class="sxs-lookup"><span data-stu-id="cb77f-105">Close button with its tooltip displayed</span></span>  
+ <span data-ttu-id="64231-105">显示其显示工具提示关闭按钮</span><span class="sxs-lookup"><span data-stu-id="64231-105">Close button with its tooltip displayed</span></span>  
   
- <span data-ttu-id="cb77f-106">![工具提示的屏幕截图](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="cb77f-106">![ToolTip screen shot](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
+ <span data-ttu-id="64231-106">![工具提示的屏幕截图](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="64231-106">![ToolTip screenshot](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cb77f-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="cb77f-107">In This Section</span></span>  
- [<span data-ttu-id="cb77f-108">ToolTip 概述</span><span class="sxs-lookup"><span data-stu-id="cb77f-108">ToolTip Overview</span></span>](tooltip-overview.md)  
-  [<span data-ttu-id="cb77f-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="cb77f-109">How-to Topics</span></span>](tooltip-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="64231-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="64231-107">In This Section</span></span>  
+ [<span data-ttu-id="64231-108">ToolTip 概述</span><span class="sxs-lookup"><span data-stu-id="64231-108">ToolTip Overview</span></span>](tooltip-overview.md)  
+  [<span data-ttu-id="64231-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="64231-109">How-to Topics</span></span>](tooltip-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="cb77f-110">参考</span><span class="sxs-lookup"><span data-stu-id="cb77f-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="64231-110">参考</span><span class="sxs-lookup"><span data-stu-id="64231-110">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   <xref:System.Windows.Controls.ToolTipService>  
   <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="cb77f-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="cb77f-111">Related Sections</span></span>  
- [<span data-ttu-id="cb77f-112">Popup 概述</span><span class="sxs-lookup"><span data-stu-id="cb77f-112">Popup Overview</span></span>](popup-overview.md)  
-  [<span data-ttu-id="cb77f-113">帮助主题</span><span class="sxs-lookup"><span data-stu-id="cb77f-113">How-to Topics</span></span>](popup-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="64231-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="64231-111">Related Sections</span></span>  
+ [<span data-ttu-id="64231-112">Popup 概述</span><span class="sxs-lookup"><span data-stu-id="64231-112">Popup Overview</span></span>](popup-overview.md)  
+  [<span data-ttu-id="64231-113">帮助主题</span><span class="sxs-lookup"><span data-stu-id="64231-113">How-to Topics</span></span>](popup-how-to-topics.md)
