@@ -7,28 +7,29 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361156"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102344"
 ---
-# <a name="graphics"></a><span data-ttu-id="d41ab-102">图形</span><span class="sxs-lookup"><span data-stu-id="d41ab-102">Graphics</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="d41ab-103">产品/服务集成的多媒体、 矢量图形、 动画和内容复合，便于开发人员能够生成有趣的用户界面和内容的支持。</span><span class="sxs-lookup"><span data-stu-id="d41ab-103">offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
+# <a name="graphics"></a><span data-ttu-id="6511b-102">图形</span><span class="sxs-lookup"><span data-stu-id="6511b-102">Graphics</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="6511b-103">产品/服务集成的多媒体、 矢量图形、 动画和内容复合，便于开发人员能够生成有趣的用户界面和内容的支持。</span><span class="sxs-lookup"><span data-stu-id="6511b-103">offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d41ab-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="d41ab-104">In This Section</span></span>  
- [<span data-ttu-id="d41ab-105">位图效果</span><span class="sxs-lookup"><span data-stu-id="d41ab-105">Bitmap Effects</span></span>](bitmap-effects.md)  
- [<span data-ttu-id="d41ab-106">画笔</span><span class="sxs-lookup"><span data-stu-id="d41ab-106">Brushes</span></span>](brushes.md)  
- [<span data-ttu-id="d41ab-107">绘图</span><span class="sxs-lookup"><span data-stu-id="d41ab-107">Drawings</span></span>](drawings.md)  
- [<span data-ttu-id="d41ab-108">几何图形</span><span class="sxs-lookup"><span data-stu-id="d41ab-108">Geometries</span></span>](geometries.md)  
- [<span data-ttu-id="d41ab-109">图像</span><span class="sxs-lookup"><span data-stu-id="d41ab-109">Images</span></span>](images.md)  
- [<span data-ttu-id="d41ab-110">形状</span><span class="sxs-lookup"><span data-stu-id="d41ab-110">Shapes</span></span>](shapes.md)  
- [<span data-ttu-id="d41ab-111">转换</span><span class="sxs-lookup"><span data-stu-id="d41ab-111">Transformations</span></span>](transformations.md)  
- [<span data-ttu-id="d41ab-112">图形呈现注册表设置</span><span class="sxs-lookup"><span data-stu-id="d41ab-112">Graphics Rendering Registry Settings</span></span>](graphics-rendering-registry-settings.md)  
- [<span data-ttu-id="d41ab-113">帮助主题</span><span class="sxs-lookup"><span data-stu-id="d41ab-113">How-to Topics</span></span>](graphics-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6511b-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="6511b-104">In This Section</span></span>  
+ [<span data-ttu-id="6511b-105">位图效果</span><span class="sxs-lookup"><span data-stu-id="6511b-105">Bitmap Effects</span></span>](bitmap-effects.md)  
+ [<span data-ttu-id="6511b-106">画笔</span><span class="sxs-lookup"><span data-stu-id="6511b-106">Brushes</span></span>](brushes.md)  
+ [<span data-ttu-id="6511b-107">绘图</span><span class="sxs-lookup"><span data-stu-id="6511b-107">Drawings</span></span>](drawings.md)  
+ [<span data-ttu-id="6511b-108">几何图形</span><span class="sxs-lookup"><span data-stu-id="6511b-108">Geometries</span></span>](geometries.md)  
+ [<span data-ttu-id="6511b-109">图像</span><span class="sxs-lookup"><span data-stu-id="6511b-109">Images</span></span>](images.md)  
+ [<span data-ttu-id="6511b-110">形状</span><span class="sxs-lookup"><span data-stu-id="6511b-110">Shapes</span></span>](shapes.md)  
+ [<span data-ttu-id="6511b-111">转换</span><span class="sxs-lookup"><span data-stu-id="6511b-111">Transformations</span></span>](transformations.md)  
+ [<span data-ttu-id="6511b-112">图形呈现注册表设置</span><span class="sxs-lookup"><span data-stu-id="6511b-112">Graphics Rendering Registry Settings</span></span>](graphics-rendering-registry-settings.md)  
+ [<span data-ttu-id="6511b-113">帮助主题</span><span class="sxs-lookup"><span data-stu-id="6511b-113">How-to Topics</span></span>](graphics-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="d41ab-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="d41ab-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6511b-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="6511b-114">See also</span></span>
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
@@ -36,6 +37,6 @@ ms.locfileid: "57361156"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [<span data-ttu-id="d41ab-115">2D 图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="d41ab-115">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="d41ab-116">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="d41ab-116">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="d41ab-117">WPF 图形呈现概述</span><span class="sxs-lookup"><span data-stu-id="d41ab-117">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="6511b-115">二维图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="6511b-115">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="6511b-116">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="6511b-116">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="6511b-117">WPF 图形呈现疑难解答</span><span class="sxs-lookup"><span data-stu-id="6511b-117">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

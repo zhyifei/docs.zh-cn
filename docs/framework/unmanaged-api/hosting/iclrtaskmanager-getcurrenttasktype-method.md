@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f75538ff7f6c3266f44495b4170007a4802fee1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2963e2a31fd62470e3ed6933edb38119d286071b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487442"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59071969"
 ---
-# <a name="iclrtaskmanagergetcurrenttasktype-method"></a><span data-ttu-id="7e554-102">ICLRTaskManager::GetCurrentTaskType 方法</span><span class="sxs-lookup"><span data-stu-id="7e554-102">ICLRTaskManager::GetCurrentTaskType Method</span></span>
-<span data-ttu-id="7e554-103">获取当前正在执行的任务的类型。</span><span class="sxs-lookup"><span data-stu-id="7e554-103">Gets the type of the task that is currently executing.</span></span>  
+# <a name="iclrtaskmanagergetcurrenttasktype-method"></a><span data-ttu-id="b12ac-102">ICLRTaskManager::GetCurrentTaskType 方法</span><span class="sxs-lookup"><span data-stu-id="b12ac-102">ICLRTaskManager::GetCurrentTaskType Method</span></span>
+<span data-ttu-id="b12ac-103">获取当前正在执行的任务的类型。</span><span class="sxs-lookup"><span data-stu-id="b12ac-103">Gets the type of the task that is currently executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e554-104">语法</span><span class="sxs-lookup"><span data-stu-id="7e554-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b12ac-104">语法</span><span class="sxs-lookup"><span data-stu-id="b12ac-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentTaskType(  
@@ -35,18 +35,19 @@ HRESULT GetCurrentTaskType(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7e554-105">参数</span><span class="sxs-lookup"><span data-stu-id="7e554-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b12ac-105">参数</span><span class="sxs-lookup"><span data-stu-id="b12ac-105">Parameters</span></span>  
  `pTaskType`  
- <span data-ttu-id="7e554-106">[out]指向的值的指针[ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md)枚举，指示当前正在执行的任务的类型。</span><span class="sxs-lookup"><span data-stu-id="7e554-106">[out] A pointer to a value of the [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) enumeration that indicates the type of task that is currently executing.</span></span>  
+ <span data-ttu-id="b12ac-106">[out]指向的值的指针[ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md)枚举，指示当前正在执行的任务的类型。</span><span class="sxs-lookup"><span data-stu-id="b12ac-106">[out] A pointer to a value of the [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) enumeration that indicates the type of task that is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7e554-107">要求</span><span class="sxs-lookup"><span data-stu-id="7e554-107">Requirements</span></span>  
- <span data-ttu-id="7e554-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7e554-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b12ac-107">要求</span><span class="sxs-lookup"><span data-stu-id="b12ac-107">Requirements</span></span>  
+ <span data-ttu-id="b12ac-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b12ac-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7e554-109">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7e554-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b12ac-109">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b12ac-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="7e554-110">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="7e554-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b12ac-110">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="b12ac-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7e554-111">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e554-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="b12ac-111">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="b12ac-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="7e554-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="7e554-112">See also</span></span>
-- [<span data-ttu-id="7e554-113">ICLRTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="7e554-113">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b12ac-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="b12ac-112">See also</span></span>
+
+- [<span data-ttu-id="b12ac-113">ICLRTaskManager 接口</span><span class="sxs-lookup"><span data-stu-id="b12ac-113">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
