@@ -10,83 +10,83 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: ef5c9acab6fd8fa852b619eeeee150eb33b69507
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654609"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890431"
 ---
-# <a name="marshaling-different-types-of-arrays"></a><span data-ttu-id="ac87b-102">封送处理不同类型的数组</span><span class="sxs-lookup"><span data-stu-id="ac87b-102">Marshaling Different Types of Arrays</span></span>
-<span data-ttu-id="ac87b-103">数组是包含有一个或多个相同类型的元素的托管代码中的引用类型。</span><span class="sxs-lookup"><span data-stu-id="ac87b-103">An array is a reference type in managed code that contains one or more elements of the same type.</span></span> <span data-ttu-id="ac87b-104">尽管数组是引用类型，但它们却作为 In 参数传递到非托管函数。</span><span class="sxs-lookup"><span data-stu-id="ac87b-104">Although arrays are reference types, they are passed as In parameters to unmanaged functions.</span></span> <span data-ttu-id="ac87b-105">此行为与托管数组传递到托管对象的方式不一致，数组作为 In/Out 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="ac87b-105">This behavior is inconsistent with way managed arrays are passed to managed objects, which is as In/Out parameters.</span></span> <span data-ttu-id="ac87b-106">有关其他详细信息，请参阅 [复制和锁定](copying-and-pinning.md)。</span><span class="sxs-lookup"><span data-stu-id="ac87b-106">For additional details, see [Copying and Pinning](copying-and-pinning.md).</span></span>  
+# <a name="marshaling-different-types-of-arrays"></a><span data-ttu-id="971cc-102">封送处理不同类型的数组</span><span class="sxs-lookup"><span data-stu-id="971cc-102">Marshaling Different Types of Arrays</span></span>
+<span data-ttu-id="971cc-103">数组是包含有一个或多个相同类型的元素的托管代码中的引用类型。</span><span class="sxs-lookup"><span data-stu-id="971cc-103">An array is a reference type in managed code that contains one or more elements of the same type.</span></span> <span data-ttu-id="971cc-104">尽管数组是引用类型，但它们却作为 In 参数传递到非托管函数。</span><span class="sxs-lookup"><span data-stu-id="971cc-104">Although arrays are reference types, they are passed as In parameters to unmanaged functions.</span></span> <span data-ttu-id="971cc-105">此行为与托管数组传递到托管对象的方式不一致，数组作为 In/Out 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="971cc-105">This behavior is inconsistent with way managed arrays are passed to managed objects, which is as In/Out parameters.</span></span> <span data-ttu-id="971cc-106">有关其他详细信息，请参阅 [复制和锁定](copying-and-pinning.md)。</span><span class="sxs-lookup"><span data-stu-id="971cc-106">For additional details, see [Copying and Pinning](copying-and-pinning.md).</span></span>  
   
- <span data-ttu-id="ac87b-107">下表列出了数组的封送处理选项，并描述了它们的用法。</span><span class="sxs-lookup"><span data-stu-id="ac87b-107">The following table lists marshaling options for arrays and describes their usage.</span></span>  
+ <span data-ttu-id="971cc-107">下表列出了数组的封送处理选项，并描述了它们的用法。</span><span class="sxs-lookup"><span data-stu-id="971cc-107">The following table lists marshaling options for arrays and describes their usage.</span></span>  
   
-|<span data-ttu-id="ac87b-108">数组</span><span class="sxs-lookup"><span data-stu-id="ac87b-108">Array</span></span>|<span data-ttu-id="ac87b-109">说明</span><span class="sxs-lookup"><span data-stu-id="ac87b-109">Description</span></span>|  
+|<span data-ttu-id="971cc-108">数组</span><span class="sxs-lookup"><span data-stu-id="971cc-108">Array</span></span>|<span data-ttu-id="971cc-109">说明</span><span class="sxs-lookup"><span data-stu-id="971cc-109">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="ac87b-110">通过值传递的整数。</span><span class="sxs-lookup"><span data-stu-id="ac87b-110">Of integers by value.</span></span>|<span data-ttu-id="ac87b-111">将整数的数组作为 In 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="ac87b-111">Passes an array of integers as an In parameter.</span></span>|  
-|<span data-ttu-id="ac87b-112">通过引用传递的整数。</span><span class="sxs-lookup"><span data-stu-id="ac87b-112">Of integers by reference.</span></span>|<span data-ttu-id="ac87b-113">将整数的数组作为 In/Out 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="ac87b-113">Passes an array of integers as an In/Out parameter.</span></span>|  
-|<span data-ttu-id="ac87b-114">通过值传递的整数（二维）。</span><span class="sxs-lookup"><span data-stu-id="ac87b-114">Of integers by value (two-dimensional).</span></span>|<span data-ttu-id="ac87b-115">将整数的矩阵作为 In 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="ac87b-115">Passes a matrix of integers as an In parameter.</span></span>|  
-|<span data-ttu-id="ac87b-116">通过值传递的字符串。</span><span class="sxs-lookup"><span data-stu-id="ac87b-116">Of strings by value.</span></span>|<span data-ttu-id="ac87b-117">将字符串的数组作为 In 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="ac87b-117">Passes an array of strings as an In parameter.</span></span>|  
-|<span data-ttu-id="ac87b-118">传递具有整数的结构。</span><span class="sxs-lookup"><span data-stu-id="ac87b-118">Of structures with integers.</span></span>|<span data-ttu-id="ac87b-119">将包含整数的结构数组作为 In 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="ac87b-119">Passes an array of structures that contain integers as an In parameter.</span></span>|  
-|<span data-ttu-id="ac87b-120">传递具有字符串的结构。</span><span class="sxs-lookup"><span data-stu-id="ac87b-120">Of structures with strings.</span></span>|<span data-ttu-id="ac87b-121">将仅包含字符串的结构数组作为 In/Out 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="ac87b-121">Passes an array of structures that contain only strings as an In/Out parameter.</span></span> <span data-ttu-id="ac87b-122">可以更改数组的成员。</span><span class="sxs-lookup"><span data-stu-id="ac87b-122">Members of the array can be changed.</span></span>|  
+|<span data-ttu-id="971cc-110">通过值传递的整数。</span><span class="sxs-lookup"><span data-stu-id="971cc-110">Of integers by value.</span></span>|<span data-ttu-id="971cc-111">将整数的数组作为 In 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="971cc-111">Passes an array of integers as an In parameter.</span></span>|  
+|<span data-ttu-id="971cc-112">通过引用传递的整数。</span><span class="sxs-lookup"><span data-stu-id="971cc-112">Of integers by reference.</span></span>|<span data-ttu-id="971cc-113">将整数的数组作为 In/Out 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="971cc-113">Passes an array of integers as an In/Out parameter.</span></span>|  
+|<span data-ttu-id="971cc-114">通过值传递的整数（二维）。</span><span class="sxs-lookup"><span data-stu-id="971cc-114">Of integers by value (two-dimensional).</span></span>|<span data-ttu-id="971cc-115">将整数的矩阵作为 In 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="971cc-115">Passes a matrix of integers as an In parameter.</span></span>|  
+|<span data-ttu-id="971cc-116">通过值传递的字符串。</span><span class="sxs-lookup"><span data-stu-id="971cc-116">Of strings by value.</span></span>|<span data-ttu-id="971cc-117">将字符串的数组作为 In 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="971cc-117">Passes an array of strings as an In parameter.</span></span>|  
+|<span data-ttu-id="971cc-118">传递具有整数的结构。</span><span class="sxs-lookup"><span data-stu-id="971cc-118">Of structures with integers.</span></span>|<span data-ttu-id="971cc-119">将包含整数的结构数组作为 In 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="971cc-119">Passes an array of structures that contain integers as an In parameter.</span></span>|  
+|<span data-ttu-id="971cc-120">传递具有字符串的结构。</span><span class="sxs-lookup"><span data-stu-id="971cc-120">Of structures with strings.</span></span>|<span data-ttu-id="971cc-121">将仅包含字符串的结构数组作为 In/Out 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="971cc-121">Passes an array of structures that contain only strings as an In/Out parameter.</span></span> <span data-ttu-id="971cc-122">可以更改数组的成员。</span><span class="sxs-lookup"><span data-stu-id="971cc-122">Members of the array can be changed.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="ac87b-123">示例</span><span class="sxs-lookup"><span data-stu-id="ac87b-123">Example</span></span>  
- <span data-ttu-id="ac87b-124">本示例演示如何传递以下类型的数组：</span><span class="sxs-lookup"><span data-stu-id="ac87b-124">This sample demonstrates how to pass the following types of arrays:</span></span>  
+## <a name="example"></a><span data-ttu-id="971cc-123">示例</span><span class="sxs-lookup"><span data-stu-id="971cc-123">Example</span></span>  
+ <span data-ttu-id="971cc-124">本示例演示如何传递以下类型的数组：</span><span class="sxs-lookup"><span data-stu-id="971cc-124">This sample demonstrates how to pass the following types of arrays:</span></span>  
   
--   <span data-ttu-id="ac87b-125">通过值传递的整数数组。</span><span class="sxs-lookup"><span data-stu-id="ac87b-125">Array of integers by value.</span></span>  
+-   <span data-ttu-id="971cc-125">通过值传递的整数数组。</span><span class="sxs-lookup"><span data-stu-id="971cc-125">Array of integers by value.</span></span>  
   
--   <span data-ttu-id="ac87b-126">通过引用传递的整数数组（可以调整大小）。</span><span class="sxs-lookup"><span data-stu-id="ac87b-126">Array of integers by reference, which can be resized.</span></span>  
+-   <span data-ttu-id="971cc-126">通过引用传递的整数数组（可以调整大小）。</span><span class="sxs-lookup"><span data-stu-id="971cc-126">Array of integers by reference, which can be resized.</span></span>  
   
--   <span data-ttu-id="ac87b-127">通过值传递的整数多维数组（矩阵）。</span><span class="sxs-lookup"><span data-stu-id="ac87b-127">Multidimensional array (matrix) of integers by value.</span></span>  
+-   <span data-ttu-id="971cc-127">通过值传递的整数多维数组（矩阵）。</span><span class="sxs-lookup"><span data-stu-id="971cc-127">Multidimensional array (matrix) of integers by value.</span></span>  
   
--   <span data-ttu-id="ac87b-128">通过值传递的字符串数组。</span><span class="sxs-lookup"><span data-stu-id="ac87b-128">Array of strings by value.</span></span>  
+-   <span data-ttu-id="971cc-128">通过值传递的字符串数组。</span><span class="sxs-lookup"><span data-stu-id="971cc-128">Array of strings by value.</span></span>  
   
--   <span data-ttu-id="ac87b-129">传递具有整数的结构数组。</span><span class="sxs-lookup"><span data-stu-id="ac87b-129">Array of structures with integers.</span></span>  
+-   <span data-ttu-id="971cc-129">传递具有整数的结构数组。</span><span class="sxs-lookup"><span data-stu-id="971cc-129">Array of structures with integers.</span></span>  
   
--   <span data-ttu-id="ac87b-130">传递具有字符串的结构数组。</span><span class="sxs-lookup"><span data-stu-id="ac87b-130">Array of structures with strings.</span></span>  
+-   <span data-ttu-id="971cc-130">传递具有字符串的结构数组。</span><span class="sxs-lookup"><span data-stu-id="971cc-130">Array of structures with strings.</span></span>  
   
- <span data-ttu-id="ac87b-131">除非数组由引用显式地进行封送处理，否则将以默认行为将数组封送为 In 参数。</span><span class="sxs-lookup"><span data-stu-id="ac87b-131">Unless an array is explicitly marshaled by reference, the default behavior marshals the array as an In parameter.</span></span> <span data-ttu-id="ac87b-132">通过显示应用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 属性，可以更改此行为。</span><span class="sxs-lookup"><span data-stu-id="ac87b-132">You can change this behavior by applying the <xref:System.Runtime.InteropServices.InAttribute> and <xref:System.Runtime.InteropServices.OutAttribute> attributes explicitly.</span></span>  
+ <span data-ttu-id="971cc-131">除非数组由引用显式地进行封送处理，否则将以默认行为将数组封送为 In 参数。</span><span class="sxs-lookup"><span data-stu-id="971cc-131">Unless an array is explicitly marshaled by reference, the default behavior marshals the array as an In parameter.</span></span> <span data-ttu-id="971cc-132">通过显示应用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 属性，可以更改此行为。</span><span class="sxs-lookup"><span data-stu-id="971cc-132">You can change this behavior by applying the <xref:System.Runtime.InteropServices.InAttribute> and <xref:System.Runtime.InteropServices.OutAttribute> attributes explicitly.</span></span>  
   
- <span data-ttu-id="ac87b-133">数组示例使用以下非托管函数，这些函数与其原始函数声明一起显示：</span><span class="sxs-lookup"><span data-stu-id="ac87b-133">The Arrays sample uses the following unmanaged functions, shown with their original function declaration:</span></span>  
+ <span data-ttu-id="971cc-133">数组示例使用以下非托管函数，这些函数与其原始函数声明一起显示：</span><span class="sxs-lookup"><span data-stu-id="971cc-133">The Arrays sample uses the following unmanaged functions, shown with their original function declaration:</span></span>  
   
--   <span data-ttu-id="ac87b-134">从 PinvokeLib.dll 导出的**TestArrayOfInts** 。</span><span class="sxs-lookup"><span data-stu-id="ac87b-134">**TestArrayOfInts** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="971cc-134">从 PinvokeLib.dll 导出的**TestArrayOfInts** 。</span><span class="sxs-lookup"><span data-stu-id="971cc-134">**TestArrayOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   <span data-ttu-id="ac87b-135">从 PinvokeLib.dll 导出的**TestRefArrayOfInts** 。</span><span class="sxs-lookup"><span data-stu-id="ac87b-135">**TestRefArrayOfInts** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="971cc-135">从 PinvokeLib.dll 导出的**TestRefArrayOfInts** 。</span><span class="sxs-lookup"><span data-stu-id="971cc-135">**TestRefArrayOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   <span data-ttu-id="ac87b-136">从 PinvokeLib.dll 导出的**TestMatrixOfInts** 。</span><span class="sxs-lookup"><span data-stu-id="ac87b-136">**TestMatrixOfInts** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="971cc-136">从 PinvokeLib.dll 导出的**TestMatrixOfInts** 。</span><span class="sxs-lookup"><span data-stu-id="971cc-136">**TestMatrixOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   <span data-ttu-id="ac87b-137">从 PinvokeLib.dll 导出的**TestArrayOfStrings** 。</span><span class="sxs-lookup"><span data-stu-id="ac87b-137">**TestArrayOfStrings** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="971cc-137">从 PinvokeLib.dll 导出的**TestArrayOfStrings** 。</span><span class="sxs-lookup"><span data-stu-id="971cc-137">**TestArrayOfStrings** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   <span data-ttu-id="ac87b-138">从 PinvokeLib.dll 导出的**TestArrayOfStructs** 。</span><span class="sxs-lookup"><span data-stu-id="ac87b-138">**TestArrayOfStructs** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="971cc-138">从 PinvokeLib.dll 导出的**TestArrayOfStructs** 。</span><span class="sxs-lookup"><span data-stu-id="971cc-138">**TestArrayOfStructs** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   <span data-ttu-id="ac87b-139">从 PinvokeLib.dll 导出的**TestArrayOfStructs2** 。</span><span class="sxs-lookup"><span data-stu-id="ac87b-139">**TestArrayOfStructs2** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="971cc-139">从 PinvokeLib.dll 导出的**TestArrayOfStructs2** 。</span><span class="sxs-lookup"><span data-stu-id="971cc-139">**TestArrayOfStructs2** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- <span data-ttu-id="ac87b-140">[PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) 是一个自定义的非托管库，它包含之前列出的函数、两个结构变量（ **MYPOINT** 和 **MYPERSON**）的实现。</span><span class="sxs-lookup"><span data-stu-id="ac87b-140">[PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) is a custom unmanaged library that contains implementations for the previously listed functions and two structure variables, **MYPOINT** and **MYPERSON**.</span></span> <span data-ttu-id="ac87b-141">此结构包含以下元素：</span><span class="sxs-lookup"><span data-stu-id="ac87b-141">The structures contain the following elements:</span></span>  
+ <span data-ttu-id="971cc-140">[PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是一个自定义的非托管库，它包含之前列出的函数、两个结构变量（ **MYPOINT** 和 **MYPERSON**）的实现。</span><span class="sxs-lookup"><span data-stu-id="971cc-140">[PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) is a custom unmanaged library that contains implementations for the previously listed functions and two structure variables, **MYPOINT** and **MYPERSON**.</span></span> <span data-ttu-id="971cc-141">此结构包含以下元素：</span><span class="sxs-lookup"><span data-stu-id="971cc-141">The structures contain the following elements:</span></span>  
   
 ```  
 typedef struct _MYPOINT  
@@ -102,18 +102,18 @@ typedef struct _MYPERSON
 } MYPERSON;  
 ```  
   
- <span data-ttu-id="ac87b-142">在此示例中， `MyPoint` 和 `MyPerson` 结构包含嵌入类型。</span><span class="sxs-lookup"><span data-stu-id="ac87b-142">In this sample, the `MyPoint` and `MyPerson` structures contain embedded types.</span></span> <span data-ttu-id="ac87b-143">设置 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 特性，以确保成员在内存中按照它们出现的顺序进行排列。</span><span class="sxs-lookup"><span data-stu-id="ac87b-143">The <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute is set to ensure that the members are arranged in memory sequentially, in the order in which they appear.</span></span>  
+ <span data-ttu-id="971cc-142">在此示例中， `MyPoint` 和 `MyPerson` 结构包含嵌入类型。</span><span class="sxs-lookup"><span data-stu-id="971cc-142">In this sample, the `MyPoint` and `MyPerson` structures contain embedded types.</span></span> <span data-ttu-id="971cc-143">设置 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 特性，以确保成员在内存中按照它们出现的顺序进行排列。</span><span class="sxs-lookup"><span data-stu-id="971cc-143">The <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute is set to ensure that the members are arranged in memory sequentially, in the order in which they appear.</span></span>  
   
- <span data-ttu-id="ac87b-144">`LibWrap` 类包含一组 `App` 类调用的方法。</span><span class="sxs-lookup"><span data-stu-id="ac87b-144">The `LibWrap` class contains a set of methods called by the `App` class.</span></span> <span data-ttu-id="ac87b-145">有关传递数组的特定详细信息，请参阅以下示例中的注释。</span><span class="sxs-lookup"><span data-stu-id="ac87b-145">For specific details about passing arrays, see the comments in the following sample.</span></span> <span data-ttu-id="ac87b-146">默认情况下，一个引用类型的数组将作为 In 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="ac87b-146">An array, which is a reference type, is passed as an In parameter by default.</span></span> <span data-ttu-id="ac87b-147">为使调用方接收结果， **InAttribute** 和 **OutAttribute** 必须显式应用于包含该数组的参数。</span><span class="sxs-lookup"><span data-stu-id="ac87b-147">For the caller to receive the results, **InAttribute** and **OutAttribute** must be applied explicitly to the argument containing the array.</span></span>  
+ <span data-ttu-id="971cc-144">`LibWrap` 类包含一组 `App` 类调用的方法。</span><span class="sxs-lookup"><span data-stu-id="971cc-144">The `LibWrap` class contains a set of methods called by the `App` class.</span></span> <span data-ttu-id="971cc-145">有关传递数组的特定详细信息，请参阅以下示例中的注释。</span><span class="sxs-lookup"><span data-stu-id="971cc-145">For specific details about passing arrays, see the comments in the following sample.</span></span> <span data-ttu-id="971cc-146">默认情况下，一个引用类型的数组将作为 In 参数进行传递。</span><span class="sxs-lookup"><span data-stu-id="971cc-146">An array, which is a reference type, is passed as an In parameter by default.</span></span> <span data-ttu-id="971cc-147">为使调用方接收结果， **InAttribute** 和 **OutAttribute** 必须显式应用于包含该数组的参数。</span><span class="sxs-lookup"><span data-stu-id="971cc-147">For the caller to receive the results, **InAttribute** and **OutAttribute** must be applied explicitly to the argument containing the array.</span></span>  
   
-### <a name="declaring-prototypes"></a><span data-ttu-id="ac87b-148">声明原型</span><span class="sxs-lookup"><span data-stu-id="ac87b-148">Declaring Prototypes</span></span>  
+### <a name="declaring-prototypes"></a><span data-ttu-id="971cc-148">声明原型</span><span class="sxs-lookup"><span data-stu-id="971cc-148">Declaring Prototypes</span></span>  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
  [!code-vb[Conceptual.Interop.Marshaling#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#31)]  
   
-### <a name="calling-functions"></a><span data-ttu-id="ac87b-149">调用函数</span><span class="sxs-lookup"><span data-stu-id="ac87b-149">Calling Functions</span></span>  
+### <a name="calling-functions"></a><span data-ttu-id="971cc-149">调用函数</span><span class="sxs-lookup"><span data-stu-id="971cc-149">Calling Functions</span></span>  
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## <a name="see-also"></a><span data-ttu-id="ac87b-150">请参阅</span><span class="sxs-lookup"><span data-stu-id="ac87b-150">See also</span></span>
-- [<span data-ttu-id="ac87b-151">平台调用数据类型</span><span class="sxs-lookup"><span data-stu-id="ac87b-151">Platform invoke data types</span></span>](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
-- [<span data-ttu-id="ac87b-152">在托管代码中创建原型</span><span class="sxs-lookup"><span data-stu-id="ac87b-152">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
+## <a name="see-also"></a><span data-ttu-id="971cc-150">请参阅</span><span class="sxs-lookup"><span data-stu-id="971cc-150">See also</span></span>
+- [<span data-ttu-id="971cc-151">平台调用数据类型</span><span class="sxs-lookup"><span data-stu-id="971cc-151">Platform invoke data types</span></span>](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
+- [<span data-ttu-id="971cc-152">在托管代码中创建原型</span><span class="sxs-lookup"><span data-stu-id="971cc-152">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
