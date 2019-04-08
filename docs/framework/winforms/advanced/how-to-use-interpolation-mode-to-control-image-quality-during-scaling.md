@@ -1,5 +1,5 @@
 ---
-title: 如何：在缩放过程时使用插值模式控制图像质量
+title: 如何：在缩放期间使用内插模式控制图像质量
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 93430f521904d9d38ba98f4055480583fd650114
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 75f5077c2d969f026a28834144c219f289843dd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410363"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080977"
 ---
-# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a><span data-ttu-id="b78a2-102">如何：在缩放过程时使用插值模式控制图像质量</span><span class="sxs-lookup"><span data-stu-id="b78a2-102">How to: Use Interpolation Mode to Control Image Quality During Scaling</span></span>
-<span data-ttu-id="b78a2-103">内插模式<xref:System.Drawing.Graphics>对象的影响方式[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]缩放 （拉伸和收缩） 映像。</span><span class="sxs-lookup"><span data-stu-id="b78a2-103">The interpolation mode of a <xref:System.Drawing.Graphics> object influences the way [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] scales (stretches and shrinks) images.</span></span> <span data-ttu-id="b78a2-104"><xref:System.Drawing.Drawing2D.InterpolationMode>枚举定义多个内插模式，其中一些以下列表所示：</span><span class="sxs-lookup"><span data-stu-id="b78a2-104">The <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration defines several interpolation modes, some of which are shown in the following list:</span></span>  
+# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a><span data-ttu-id="8ba99-102">如何：在缩放期间使用内插模式控制图像质量</span><span class="sxs-lookup"><span data-stu-id="8ba99-102">How to: Use Interpolation Mode to Control Image Quality During Scaling</span></span>
+<span data-ttu-id="8ba99-103">内插模式<xref:System.Drawing.Graphics>对象的影响方式[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]缩放 （拉伸和收缩） 映像。</span><span class="sxs-lookup"><span data-stu-id="8ba99-103">The interpolation mode of a <xref:System.Drawing.Graphics> object influences the way [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] scales (stretches and shrinks) images.</span></span> <span data-ttu-id="8ba99-104"><xref:System.Drawing.Drawing2D.InterpolationMode>枚举定义多个内插模式，其中一些以下列表所示：</span><span class="sxs-lookup"><span data-stu-id="8ba99-104">The <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration defines several interpolation modes, some of which are shown in the following list:</span></span>  
   
 -   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   
@@ -29,23 +29,24 @@ ms.locfileid: "58410363"
   
 -   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
   
- <span data-ttu-id="b78a2-105">拉伸图像，原始图像中的每个像素必须映射到一个组中可查看大图像的像素。</span><span class="sxs-lookup"><span data-stu-id="b78a2-105">To stretch an image, each pixel in the original image must be mapped to a group of pixels in the larger image.</span></span> <span data-ttu-id="b78a2-106">若要缩小图像，组中的原始图像的像素必须映射到较小的图像中单个像素。</span><span class="sxs-lookup"><span data-stu-id="b78a2-106">To shrink an image, groups of pixels in the original image must be mapped to single pixels in the smaller image.</span></span> <span data-ttu-id="b78a2-107">执行这些映射的算法的有效性确定缩放的图像的质量。</span><span class="sxs-lookup"><span data-stu-id="b78a2-107">The effectiveness of the algorithms that perform these mappings determines the quality of a scaled image.</span></span> <span data-ttu-id="b78a2-108">生成高质量缩放的图像的算法往往需要进行更多的处理时间。</span><span class="sxs-lookup"><span data-stu-id="b78a2-108">Algorithms that produce higher-quality scaled images tend to require more processing time.</span></span> <span data-ttu-id="b78a2-109">在上述列表中，<xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>是最低质量模式和<xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>是最高质量的模式。</span><span class="sxs-lookup"><span data-stu-id="b78a2-109">In the preceding list, <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> is the lowest-quality mode and <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> is the highest-quality mode.</span></span>  
+ <span data-ttu-id="8ba99-105">拉伸图像，原始图像中的每个像素必须映射到一个组中可查看大图像的像素。</span><span class="sxs-lookup"><span data-stu-id="8ba99-105">To stretch an image, each pixel in the original image must be mapped to a group of pixels in the larger image.</span></span> <span data-ttu-id="8ba99-106">若要缩小图像，组中的原始图像的像素必须映射到较小的图像中单个像素。</span><span class="sxs-lookup"><span data-stu-id="8ba99-106">To shrink an image, groups of pixels in the original image must be mapped to single pixels in the smaller image.</span></span> <span data-ttu-id="8ba99-107">执行这些映射的算法的有效性确定缩放的图像的质量。</span><span class="sxs-lookup"><span data-stu-id="8ba99-107">The effectiveness of the algorithms that perform these mappings determines the quality of a scaled image.</span></span> <span data-ttu-id="8ba99-108">生成高质量缩放的图像的算法往往需要进行更多的处理时间。</span><span class="sxs-lookup"><span data-stu-id="8ba99-108">Algorithms that produce higher-quality scaled images tend to require more processing time.</span></span> <span data-ttu-id="8ba99-109">在上述列表中，<xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>是最低质量模式和<xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>是最高质量的模式。</span><span class="sxs-lookup"><span data-stu-id="8ba99-109">In the preceding list, <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> is the lowest-quality mode and <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> is the highest-quality mode.</span></span>  
   
- <span data-ttu-id="b78a2-110">若要设置的内插模式，将分配的成员<xref:System.Drawing.Drawing2D.InterpolationMode>枚举<xref:System.Drawing.Graphics.InterpolationMode%2A>属性的<xref:System.Drawing.Graphics>对象。</span><span class="sxs-lookup"><span data-stu-id="b78a2-110">To set the interpolation mode, assign one of the members of the <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration to the <xref:System.Drawing.Graphics.InterpolationMode%2A> property of a <xref:System.Drawing.Graphics> object.</span></span>  
+ <span data-ttu-id="8ba99-110">若要设置的内插模式，将分配的成员<xref:System.Drawing.Drawing2D.InterpolationMode>枚举<xref:System.Drawing.Graphics.InterpolationMode%2A>属性的<xref:System.Drawing.Graphics>对象。</span><span class="sxs-lookup"><span data-stu-id="8ba99-110">To set the interpolation mode, assign one of the members of the <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration to the <xref:System.Drawing.Graphics.InterpolationMode%2A> property of a <xref:System.Drawing.Graphics> object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b78a2-111">示例</span><span class="sxs-lookup"><span data-stu-id="b78a2-111">Example</span></span>  
- <span data-ttu-id="b78a2-112">下面的示例绘制一个图像，然后对具有三种不同内插模式的图像进行收缩。</span><span class="sxs-lookup"><span data-stu-id="b78a2-112">The following example draws an image and then shrinks the image with three different interpolation modes.</span></span>  
+## <a name="example"></a><span data-ttu-id="8ba99-111">示例</span><span class="sxs-lookup"><span data-stu-id="8ba99-111">Example</span></span>  
+ <span data-ttu-id="8ba99-112">下面的示例绘制一个图像，然后对具有三种不同内插模式的图像进行收缩。</span><span class="sxs-lookup"><span data-stu-id="8ba99-112">The following example draws an image and then shrinks the image with three different interpolation modes.</span></span>  
   
- <span data-ttu-id="b78a2-113">下图显示了原始图像和三个较小的图像。</span><span class="sxs-lookup"><span data-stu-id="b78a2-113">The following illustration shows the original image and the three smaller images.</span></span>  
+ <span data-ttu-id="8ba99-113">下图显示了原始图像和三个较小的图像。</span><span class="sxs-lookup"><span data-stu-id="8ba99-113">The following illustration shows the original image and the three smaller images.</span></span>  
   
  ![显示具有各种内插设置的图像的屏幕截图。](./media/how-to-use-interpolation-mode-to-control-image-quality-during-scaling/varied-interpolation-settings.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#81](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#81)]
  [!code-vb[System.Drawing.WorkingWithImages#81](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#81)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="b78a2-115">编译代码</span><span class="sxs-lookup"><span data-stu-id="b78a2-115">Compiling the Code</span></span>  
- <span data-ttu-id="b78a2-116">前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="b78a2-116">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="8ba99-115">编译代码</span><span class="sxs-lookup"><span data-stu-id="8ba99-115">Compiling the Code</span></span>  
+ <span data-ttu-id="8ba99-116">前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="8ba99-116">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b78a2-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="b78a2-117">See also</span></span>
-- [<span data-ttu-id="b78a2-118">图像、位图和图元文件</span><span class="sxs-lookup"><span data-stu-id="b78a2-118">Images, Bitmaps, and Metafiles</span></span>](images-bitmaps-and-metafiles.md)
-- [<span data-ttu-id="b78a2-119">使用图像、位图、图标和图元文件</span><span class="sxs-lookup"><span data-stu-id="b78a2-119">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="8ba99-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="8ba99-117">See also</span></span>
+
+- [<span data-ttu-id="8ba99-118">图像、位图和图元文件</span><span class="sxs-lookup"><span data-stu-id="8ba99-118">Images, Bitmaps, and Metafiles</span></span>](images-bitmaps-and-metafiles.md)
+- [<span data-ttu-id="8ba99-119">使用图像、位图、图标和图元文件</span><span class="sxs-lookup"><span data-stu-id="8ba99-119">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](working-with-images-bitmaps-icons-and-metafiles.md)

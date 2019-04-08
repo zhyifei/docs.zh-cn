@@ -1,5 +1,5 @@
 ---
-title: 如何：转换绑定的数据
+title: 如何：转换已绑定的数据
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,35 +9,36 @@ helpviewer_keywords:
 - data binding [WPF], converting bound data
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-ms.openlocfilehash: c98f8e4e5c837e6fbbe836a9eb2f228d2d689542
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 40699bec1c6cd775f7f8495b7a49eda15fb2ed83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093795"
 ---
-# <a name="how-to-convert-bound-data"></a><span data-ttu-id="d04e8-102">如何：转换绑定的数据</span><span class="sxs-lookup"><span data-stu-id="d04e8-102">How to: Convert Bound Data</span></span>
-<span data-ttu-id="d04e8-103">此示例演示如何将应用到绑定中使用的数据转换。</span><span class="sxs-lookup"><span data-stu-id="d04e8-103">This example shows how to apply conversion to data that is used in bindings.</span></span>  
+# <a name="how-to-convert-bound-data"></a><span data-ttu-id="3d433-102">如何：转换已绑定的数据</span><span class="sxs-lookup"><span data-stu-id="3d433-102">How to: Convert Bound Data</span></span>
+<span data-ttu-id="3d433-103">此示例演示如何将应用到绑定中使用的数据转换。</span><span class="sxs-lookup"><span data-stu-id="3d433-103">This example shows how to apply conversion to data that is used in bindings.</span></span>  
   
- <span data-ttu-id="d04e8-104">若要在绑定期间转换数据，必须创建一个类以实现 <xref:System.Windows.Data.IValueConverter> 接口，其中包括 <xref:System.Windows.Data.IValueConverter.Convert%2A> 和 <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="d04e8-104">To convert data during binding, you must create a class that implements the <xref:System.Windows.Data.IValueConverter> interface, which includes the <xref:System.Windows.Data.IValueConverter.Convert%2A> and <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> methods.</span></span>  
+ <span data-ttu-id="3d433-104">若要在绑定期间转换数据，必须创建一个类以实现 <xref:System.Windows.Data.IValueConverter> 接口，其中包括 <xref:System.Windows.Data.IValueConverter.Convert%2A> 和 <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="3d433-104">To convert data during binding, you must create a class that implements the <xref:System.Windows.Data.IValueConverter> interface, which includes the <xref:System.Windows.Data.IValueConverter.Convert%2A> and <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> methods.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d04e8-105">示例</span><span class="sxs-lookup"><span data-stu-id="d04e8-105">Example</span></span>  
- <span data-ttu-id="d04e8-106">下面的示例演示了一个日期转换器的实现，该转换器将转换传入的日期值，使其仅显示年、月、日。</span><span class="sxs-lookup"><span data-stu-id="d04e8-106">The following example shows the implementation of a date converter that converts the date value passed in so that it only shows the year, the month, and the day.</span></span> <span data-ttu-id="d04e8-107">实现 <xref:System.Windows.Data.IValueConverter> 接口时，使用 <xref:System.Windows.Data.ValueConversionAttribute> 属性修饰该实现以向开发工具表明转换中涉及的数据类型，这是一个非常好的做法，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="d04e8-107">When implementing the <xref:System.Windows.Data.IValueConverter> interface, it is a good practice to decorate the implementation with a <xref:System.Windows.Data.ValueConversionAttribute> attribute to indicate to development tools the data types involved in the conversion, as in the following example:</span></span>  
+## <a name="example"></a><span data-ttu-id="3d433-105">示例</span><span class="sxs-lookup"><span data-stu-id="3d433-105">Example</span></span>  
+ <span data-ttu-id="3d433-106">下面的示例演示了一个日期转换器的实现，该转换器将转换传入的日期值，使其仅显示年、月、日。</span><span class="sxs-lookup"><span data-stu-id="3d433-106">The following example shows the implementation of a date converter that converts the date value passed in so that it only shows the year, the month, and the day.</span></span> <span data-ttu-id="3d433-107">实现 <xref:System.Windows.Data.IValueConverter> 接口时，使用 <xref:System.Windows.Data.ValueConversionAttribute> 属性修饰该实现以向开发工具表明转换中涉及的数据类型，这是一个非常好的做法，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="3d433-107">When implementing the <xref:System.Windows.Data.IValueConverter> interface, it is a good practice to decorate the implementation with a <xref:System.Windows.Data.ValueConversionAttribute> attribute to indicate to development tools the data types involved in the conversion, as in the following example:</span></span>  
   
  [!code-csharp[DataBindingLab#18](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DateConverter.cs#18)]
  [!code-vb[DataBindingLab#18](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/DateConverter.vb#18)]  
   
- <span data-ttu-id="d04e8-108">创建一个转换器后，可以将其添加为中的资源在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件。</span><span class="sxs-lookup"><span data-stu-id="d04e8-108">Once you have created a converter, you can add it as a resource in your [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file.</span></span> <span data-ttu-id="d04e8-109">在以下示例中， *src*映射到在其中命名空间*DateConverter*定义。</span><span class="sxs-lookup"><span data-stu-id="d04e8-109">In the following example, *src* maps to the namespace in which *DateConverter* is defined.</span></span>  
+ <span data-ttu-id="3d433-108">创建一个转换器后，可以将其添加为中的资源在[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件。</span><span class="sxs-lookup"><span data-stu-id="3d433-108">Once you have created a converter, you can add it as a resource in your [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file.</span></span> <span data-ttu-id="3d433-109">在以下示例中， *src*映射到在其中命名空间*DateConverter*定义。</span><span class="sxs-lookup"><span data-stu-id="3d433-109">In the following example, *src* maps to the namespace in which *DateConverter* is defined.</span></span>  
   
  [!code-xaml[DataBindingLab#15](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#15)]  
   
- <span data-ttu-id="d04e8-110">最后，您可以使用以下语法在绑定中使用转换器。</span><span class="sxs-lookup"><span data-stu-id="d04e8-110">Finally, you can use the converter in your binding using the following syntax.</span></span> <span data-ttu-id="d04e8-111">在下面的示例中，文本的内容<xref:System.Windows.Controls.TextBlock>绑定到*StartDate*，这是外部数据源属性。</span><span class="sxs-lookup"><span data-stu-id="d04e8-111">In the following example, the text content of the <xref:System.Windows.Controls.TextBlock> is bound to *StartDate*, which is a property of an external data source.</span></span>  
+ <span data-ttu-id="3d433-110">最后，您可以使用以下语法在绑定中使用转换器。</span><span class="sxs-lookup"><span data-stu-id="3d433-110">Finally, you can use the converter in your binding using the following syntax.</span></span> <span data-ttu-id="3d433-111">在下面的示例中，文本的内容<xref:System.Windows.Controls.TextBlock>绑定到*StartDate*，这是外部数据源属性。</span><span class="sxs-lookup"><span data-stu-id="3d433-111">In the following example, the text content of the <xref:System.Windows.Controls.TextBlock> is bound to *StartDate*, which is a property of an external data source.</span></span>  
   
  [!code-xaml[DataBindingLab#17](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#17)]  
   
- <span data-ttu-id="d04e8-112">上面的示例引用的样式资源在一个未在此主题中列出的资源部分中定义。</span><span class="sxs-lookup"><span data-stu-id="d04e8-112">The style resources referenced in the above example are defined in a resource section not shown in this topic.</span></span>  
+ <span data-ttu-id="3d433-112">上面的示例引用的样式资源在一个未在此主题中列出的资源部分中定义。</span><span class="sxs-lookup"><span data-stu-id="3d433-112">The style resources referenced in the above example are defined in a resource section not shown in this topic.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d04e8-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="d04e8-113">See also</span></span>
-- [<span data-ttu-id="d04e8-114">实现绑定验证</span><span class="sxs-lookup"><span data-stu-id="d04e8-114">Implement Binding Validation</span></span>](how-to-implement-binding-validation.md)
-- [<span data-ttu-id="d04e8-115">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="d04e8-115">Data Binding Overview</span></span>](data-binding-overview.md)
-- [<span data-ttu-id="d04e8-116">帮助主题</span><span class="sxs-lookup"><span data-stu-id="d04e8-116">How-to Topics</span></span>](data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="3d433-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="3d433-113">See also</span></span>
+
+- [<span data-ttu-id="3d433-114">实现绑定验证</span><span class="sxs-lookup"><span data-stu-id="3d433-114">Implement Binding Validation</span></span>](how-to-implement-binding-validation.md)
+- [<span data-ttu-id="3d433-115">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="3d433-115">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="3d433-116">帮助主题</span><span class="sxs-lookup"><span data-stu-id="3d433-116">How-to Topics</span></span>](data-binding-how-to-topics.md)

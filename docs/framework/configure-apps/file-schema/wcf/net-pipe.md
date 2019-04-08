@@ -2,20 +2,20 @@
 title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 90d081c1287362669286aaa1185ed3b0bbe09b07
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 885cfad7be42f7c48b4c061f3293d667eb5d4ad8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412105"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103386"
 ---
-# <a name="netpipe"></a><span data-ttu-id="2185f-102">\<net.pipe></span><span class="sxs-lookup"><span data-stu-id="2185f-102">\<net.pipe></span></span>
-<span data-ttu-id="2185f-103">指定命名管道激活服务的配置设置，命名管道激活服务将管理命名管道连接的生存期，并处理通过命名管道到达的激活请求。</span><span class="sxs-lookup"><span data-stu-id="2185f-103">Specifies configuration settings for the Named Pipe Activation Service, which manages the lifetime of the named pipe connection, and handles activation requests that arrive over named pipes.</span></span>  
+# <a name="netpipe"></a><span data-ttu-id="7c3ee-102">\<net.pipe></span><span class="sxs-lookup"><span data-stu-id="7c3ee-102">\<net.pipe></span></span>
+<span data-ttu-id="7c3ee-103">指定命名管道激活服务的配置设置，命名管道激活服务将管理命名管道连接的生存期，并处理通过命名管道到达的激活请求。</span><span class="sxs-lookup"><span data-stu-id="7c3ee-103">Specifies configuration settings for the Named Pipe Activation Service, which manages the lifetime of the named pipe connection, and handles activation requests that arrive over named pipes.</span></span>  
   
- <span data-ttu-id="2185f-104">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="2185f-104">\<system.serviceModel.activation></span></span>  
-<span data-ttu-id="2185f-105">\<net.pipe></span><span class="sxs-lookup"><span data-stu-id="2185f-105">\<net.pipe></span></span>  
+ <span data-ttu-id="7c3ee-104">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="7c3ee-104">\<system.serviceModel.activation></span></span>  
+<span data-ttu-id="7c3ee-105">\<net.pipe></span><span class="sxs-lookup"><span data-stu-id="7c3ee-105">\<net.pipe></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2185f-106">语法</span><span class="sxs-lookup"><span data-stu-id="2185f-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c3ee-106">语法</span><span class="sxs-lookup"><span data-stu-id="7c3ee-106">Syntax</span></span>  
   
 ```xml  
 <configuration>
@@ -40,32 +40,32 @@ ms.locfileid: "58412105"
 </configuration>
 ```  
   
-## <a name="type"></a><span data-ttu-id="2185f-107">类型</span><span class="sxs-lookup"><span data-stu-id="2185f-107">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="7c3ee-107">类型</span><span class="sxs-lookup"><span data-stu-id="7c3ee-107">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2185f-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="2185f-108">Attributes and Elements</span></span>  
- <span data-ttu-id="2185f-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="2185f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7c3ee-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="7c3ee-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="7c3ee-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="7c3ee-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2185f-110">特性</span><span class="sxs-lookup"><span data-stu-id="2185f-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7c3ee-110">特性</span><span class="sxs-lookup"><span data-stu-id="7c3ee-110">Attributes</span></span>  
   
-|<span data-ttu-id="2185f-111">特性</span><span class="sxs-lookup"><span data-stu-id="2185f-111">Attribute</span></span>|<span data-ttu-id="2185f-112">描述</span><span class="sxs-lookup"><span data-stu-id="2185f-112">Description</span></span>|  
+|<span data-ttu-id="7c3ee-111">特性</span><span class="sxs-lookup"><span data-stu-id="7c3ee-111">Attribute</span></span>|<span data-ttu-id="7c3ee-112">描述</span><span class="sxs-lookup"><span data-stu-id="7c3ee-112">Description</span></span>|  
 |---------------|-----------------|  
-|`maxPendingAccepts`|<span data-ttu-id="2185f-113">一个整数，指定共享服务侦听终结点上的最大未完成并发接受线程数。</span><span class="sxs-lookup"><span data-stu-id="2185f-113">An integer that specifies the maximum outstanding concurrent accepting threads on the listening endpoint for the sharing service.</span></span> <span data-ttu-id="2185f-114">默认值为 2。</span><span class="sxs-lookup"><span data-stu-id="2185f-114">The default is 2.</span></span>|  
-|`maxPendingConnections`|<span data-ttu-id="2185f-115">一个整数，指定可等待调度的最大连接数。</span><span class="sxs-lookup"><span data-stu-id="2185f-115">An integer that specifies the maximum number of connections that can wait for dispatch.</span></span> <span data-ttu-id="2185f-116">默认值为 100。</span><span class="sxs-lookup"><span data-stu-id="2185f-116">The default is 100.</span></span>|  
-|`receiveTimeout`|<span data-ttu-id="2185f-117">
-  <xref:System.TimeSpan>，它将为读取组帧数据并执行来自基础连接的连接调度指定超时值。</span><span class="sxs-lookup"><span data-stu-id="2185f-117">A <xref:System.TimeSpan> that specifies the timeout for reading the framing data and performing connection dispatching from the underlining connections.</span></span> <span data-ttu-id="2185f-118">默认值为“00:00:10”</span><span class="sxs-lookup"><span data-stu-id="2185f-118">The default is "00:00:10"</span></span>|  
+|`maxPendingAccepts`|<span data-ttu-id="7c3ee-113">一个整数，指定共享服务侦听终结点上的最大未完成并发接受线程数。</span><span class="sxs-lookup"><span data-stu-id="7c3ee-113">An integer that specifies the maximum outstanding concurrent accepting threads on the listening endpoint for the sharing service.</span></span> <span data-ttu-id="7c3ee-114">默认值为 2。</span><span class="sxs-lookup"><span data-stu-id="7c3ee-114">The default is 2.</span></span>|  
+|`maxPendingConnections`|<span data-ttu-id="7c3ee-115">一个整数，指定可等待调度的最大连接数。</span><span class="sxs-lookup"><span data-stu-id="7c3ee-115">An integer that specifies the maximum number of connections that can wait for dispatch.</span></span> <span data-ttu-id="7c3ee-116">默认值为 100。</span><span class="sxs-lookup"><span data-stu-id="7c3ee-116">The default is 100.</span></span>|  
+|`receiveTimeout`|<span data-ttu-id="7c3ee-117"><xref:System.TimeSpan>，它将为读取组帧数据并执行来自基础连接的连接调度指定超时值。</span><span class="sxs-lookup"><span data-stu-id="7c3ee-117">A <xref:System.TimeSpan> that specifies the timeout for reading the framing data and performing connection dispatching from the underlining connections.</span></span> <span data-ttu-id="7c3ee-118">默认值为“00:00:10”</span><span class="sxs-lookup"><span data-stu-id="7c3ee-118">The default is "00:00:10"</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="2185f-119">子元素</span><span class="sxs-lookup"><span data-stu-id="2185f-119">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7c3ee-119">子元素</span><span class="sxs-lookup"><span data-stu-id="7c3ee-119">Child Elements</span></span>  
   
-|<span data-ttu-id="2185f-120">元素</span><span class="sxs-lookup"><span data-stu-id="2185f-120">Element</span></span>|<span data-ttu-id="2185f-121">描述</span><span class="sxs-lookup"><span data-stu-id="2185f-121">Description</span></span>|  
+|<span data-ttu-id="7c3ee-120">元素</span><span class="sxs-lookup"><span data-stu-id="7c3ee-120">Element</span></span>|<span data-ttu-id="7c3ee-121">描述</span><span class="sxs-lookup"><span data-stu-id="7c3ee-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2185f-122">\<allowAccounts></span><span class="sxs-lookup"><span data-stu-id="2185f-122">\<allowAccounts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|<span data-ttu-id="2185f-123">包含的配置元素的集合`securityIdentifier`属性指定的进程的承载 WCF 服务并被授予对共享服务的连接访问权限的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="2185f-123">A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host WCF services, and are granted connection access to the sharing service.</span></span>|  
+|[<span data-ttu-id="7c3ee-122">\<allowAccounts></span><span class="sxs-lookup"><span data-stu-id="7c3ee-122">\<allowAccounts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|<span data-ttu-id="7c3ee-123">包含的配置元素的集合`securityIdentifier`属性指定的进程的承载 WCF 服务并被授予对共享服务的连接访问权限的用户帐户。</span><span class="sxs-lookup"><span data-stu-id="7c3ee-123">A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host WCF services, and are granted connection access to the sharing service.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="2185f-124">父元素</span><span class="sxs-lookup"><span data-stu-id="2185f-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7c3ee-124">父元素</span><span class="sxs-lookup"><span data-stu-id="7c3ee-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="2185f-125">元素</span><span class="sxs-lookup"><span data-stu-id="2185f-125">Element</span></span>|<span data-ttu-id="2185f-126">描述</span><span class="sxs-lookup"><span data-stu-id="2185f-126">Description</span></span>|  
+|<span data-ttu-id="7c3ee-125">元素</span><span class="sxs-lookup"><span data-stu-id="7c3ee-125">Element</span></span>|<span data-ttu-id="7c3ee-126">描述</span><span class="sxs-lookup"><span data-stu-id="7c3ee-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2185f-127">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="2185f-127">\<system.serviceModel.activation></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|<span data-ttu-id="2185f-128">包含侦听器进程 SMSvcHost.exe 的配置设置。</span><span class="sxs-lookup"><span data-stu-id="2185f-128">Contains configuration settings for the listener process SMSvcHost.exe.</span></span>|  
+|[<span data-ttu-id="7c3ee-127">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="7c3ee-127">\<system.serviceModel.activation></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|<span data-ttu-id="7c3ee-128">包含侦听器进程 SMSvcHost.exe 的配置设置。</span><span class="sxs-lookup"><span data-stu-id="7c3ee-128">Contains configuration settings for the listener process SMSvcHost.exe.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="2185f-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="2185f-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7c3ee-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="7c3ee-129">See also</span></span>
+
 - <xref:System.ServiceModel.Activation.Configuration.NetPipeSection>

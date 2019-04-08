@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ba1133d44218406948ab0fd6e0b82ae404d0931
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5dafaef05305a8f4ab4a196690d98486be96d51e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576832"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082134"
 ---
-# <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a><span data-ttu-id="4d65c-102">ICorDebugEditAndContinueSnapshot::CopyMetaData 方法</span><span class="sxs-lookup"><span data-stu-id="4d65c-102">ICorDebugEditAndContinueSnapshot::CopyMetaData Method</span></span>
-<span data-ttu-id="4d65c-103">`CopyMetaData` 已过时。</span><span class="sxs-lookup"><span data-stu-id="4d65c-103">`CopyMetaData` is obsolete.</span></span> <span data-ttu-id="4d65c-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="4d65c-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a><span data-ttu-id="af0a2-102">ICorDebugEditAndContinueSnapshot::CopyMetaData 方法</span><span class="sxs-lookup"><span data-stu-id="af0a2-102">ICorDebugEditAndContinueSnapshot::CopyMetaData Method</span></span>
+`CopyMetaData` <span data-ttu-id="af0a2-103">已过时。</span><span class="sxs-lookup"><span data-stu-id="af0a2-103">is obsolete.</span></span> <span data-ttu-id="af0a2-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="af0a2-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d65c-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="4d65c-105">See also</span></span>
-- [<span data-ttu-id="4d65c-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="4d65c-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="af0a2-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="af0a2-105">See also</span></span>
+
+- [<span data-ttu-id="af0a2-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="af0a2-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

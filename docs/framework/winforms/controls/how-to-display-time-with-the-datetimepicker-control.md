@@ -9,40 +9,41 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - DateTimePicker control [Windows Forms], displaying time
 ms.assetid: 0c1c8b40-1b50-4301-a90c-39516775ccb1
-ms.openlocfilehash: a88b93dfe5296873fa3503fbeb020118f2606859
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5163ca3eb04732152960c86c9a7428d87c6280f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083032"
 ---
-# <a name="how-to-display-time-with-the-datetimepicker-control"></a><span data-ttu-id="6620f-102">如何：使用 DateTimePicker 控件显示时间</span><span class="sxs-lookup"><span data-stu-id="6620f-102">How to: Display Time with the DateTimePicker Control</span></span>
-<span data-ttu-id="6620f-103">如果希望应用程序能够使用户选择日期和时间，并以指定的格式显示该日期和时间，请使用 <xref:System.Windows.Forms.DateTimePicker> 控件。</span><span class="sxs-lookup"><span data-stu-id="6620f-103">If you want your application to enable users to select a date and time, and to display that date and time in the specified format, use the <xref:System.Windows.Forms.DateTimePicker> control.</span></span> <span data-ttu-id="6620f-104">以下的过程说明如何使用 <xref:System.Windows.Forms.DateTimePicker> 控件来显示时间。</span><span class="sxs-lookup"><span data-stu-id="6620f-104">The following procedure shows how to use the <xref:System.Windows.Forms.DateTimePicker> control to display the time.</span></span>  
+# <a name="how-to-display-time-with-the-datetimepicker-control"></a><span data-ttu-id="5e174-102">如何：使用 DateTimePicker 控件显示时间</span><span class="sxs-lookup"><span data-stu-id="5e174-102">How to: Display Time with the DateTimePicker Control</span></span>
+<span data-ttu-id="5e174-103">如果希望应用程序能够使用户选择日期和时间，并以指定的格式显示该日期和时间，请使用 <xref:System.Windows.Forms.DateTimePicker> 控件。</span><span class="sxs-lookup"><span data-stu-id="5e174-103">If you want your application to enable users to select a date and time, and to display that date and time in the specified format, use the <xref:System.Windows.Forms.DateTimePicker> control.</span></span> <span data-ttu-id="5e174-104">以下的过程说明如何使用 <xref:System.Windows.Forms.DateTimePicker> 控件来显示时间。</span><span class="sxs-lookup"><span data-stu-id="5e174-104">The following procedure shows how to use the <xref:System.Windows.Forms.DateTimePicker> control to display the time.</span></span>  
   
-### <a name="to-display-the-time-with-the-datetimepicker-control"></a><span data-ttu-id="6620f-105">使用 DateTimePicker 控件来显示时间</span><span class="sxs-lookup"><span data-stu-id="6620f-105">To display the time with the DateTimePicker control</span></span>  
+### <a name="to-display-the-time-with-the-datetimepicker-control"></a><span data-ttu-id="5e174-105">使用 DateTimePicker 控件来显示时间</span><span class="sxs-lookup"><span data-stu-id="5e174-105">To display the time with the DateTimePicker control</span></span>  
   
-1.  <span data-ttu-id="6620f-106">将 <xref:System.Windows.Forms.DateTimePicker.Format%2A> 属性设置为 <xref:System.Windows.Forms.DateTimePickerFormat.Time></span><span class="sxs-lookup"><span data-stu-id="6620f-106">Set the <xref:System.Windows.Forms.DateTimePicker.Format%2A> property to <xref:System.Windows.Forms.DateTimePickerFormat.Time></span></span>  
+1.  <span data-ttu-id="5e174-106">设置<xref:System.Windows.Forms.DateTimePicker.Format%2A>属性</span><span class="sxs-lookup"><span data-stu-id="5e174-106">Set the <xref:System.Windows.Forms.DateTimePicker.Format%2A> property to</span></span> <xref:System.Windows.Forms.DateTimePickerFormat.Time>  
   
      [!code-csharp[System.Windows.Forms.DateTimePickerTimeOnly#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.DateTimePickerTimeOnly#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/VB/Form1.vb#2)]  
   
-2.  <span data-ttu-id="6620f-107">将 <xref:System.Windows.Forms.DateTimePicker> 的 <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="6620f-107">Set the <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> property for the <xref:System.Windows.Forms.DateTimePicker> to `true`.</span></span>  
+2.  <span data-ttu-id="5e174-107">将 <xref:System.Windows.Forms.DateTimePicker> 的 <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="5e174-107">Set the <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> property for the <xref:System.Windows.Forms.DateTimePicker> to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DateTimePickerTimeOnly#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.DateTimePickerTimeOnly#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/VB/Form1.vb#3)]  
   
-## <a name="example"></a><span data-ttu-id="6620f-108">示例</span><span class="sxs-lookup"><span data-stu-id="6620f-108">Example</span></span>  
- <span data-ttu-id="6620f-109">以下代码示例演示如何创建 <xref:System.Windows.Forms.DateTimePicker>，使用户可以仅选择时间。</span><span class="sxs-lookup"><span data-stu-id="6620f-109">The following code sample shows how to create a <xref:System.Windows.Forms.DateTimePicker> that enables users to choose a time only.</span></span>  
+## <a name="example"></a><span data-ttu-id="5e174-108">示例</span><span class="sxs-lookup"><span data-stu-id="5e174-108">Example</span></span>  
+ <span data-ttu-id="5e174-109">以下代码示例演示如何创建 <xref:System.Windows.Forms.DateTimePicker>，使用户可以仅选择时间。</span><span class="sxs-lookup"><span data-stu-id="5e174-109">The following code sample shows how to create a <xref:System.Windows.Forms.DateTimePicker> that enables users to choose a time only.</span></span>  
   
  [!code-csharp[System.Windows.Forms.DateTimePickerTimeOnly#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.DateTimePickerTimeOnly#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="6620f-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="6620f-110">Compiling the Code</span></span>  
- <span data-ttu-id="6620f-111">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="6620f-111">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="5e174-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="5e174-110">Compiling the Code</span></span>  
+ <span data-ttu-id="5e174-111">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="5e174-111">This example requires:</span></span>  
   
--   <span data-ttu-id="6620f-112">对 System、System.Data、System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="6620f-112">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="5e174-112">对 System、System.Data、System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="5e174-112">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="6620f-113">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="6620f-113">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="6620f-114">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="6620f-114">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="5e174-113">Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="5e174-113">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="5e174-114">也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。</span><span class="sxs-lookup"><span data-stu-id="5e174-114">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6620f-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="6620f-115">See also</span></span>
-- [<span data-ttu-id="6620f-116">DateTimePicker 控件</span><span class="sxs-lookup"><span data-stu-id="6620f-116">DateTimePicker Control</span></span>](datetimepicker-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="5e174-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="5e174-115">See also</span></span>
+
+- [<span data-ttu-id="5e174-116">DateTimePicker 控件</span><span class="sxs-lookup"><span data-stu-id="5e174-116">DateTimePicker Control</span></span>](datetimepicker-control-windows-forms.md)
