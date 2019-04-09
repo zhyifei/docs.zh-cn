@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57604d80d40130ca147c026852b7bcd23f8f90bc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c61931f5f6a4bbbf66446d68b0d1b2d1df958a66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137912"
 ---
-# <a name="imetadataimportgetmethodprops-method"></a><span data-ttu-id="a0b58-102">IMetaDataImport::GetMethodProps 方法</span><span class="sxs-lookup"><span data-stu-id="a0b58-102">IMetaDataImport::GetMethodProps Method</span></span>
-<span data-ttu-id="a0b58-103">获取与指定的 MethodDef 标记引用的方法关联的元数据。</span><span class="sxs-lookup"><span data-stu-id="a0b58-103">Gets the metadata associated with the method referenced by the specified MethodDef token.</span></span>  
+# <a name="imetadataimportgetmethodprops-method"></a><span data-ttu-id="506a3-102">IMetaDataImport::GetMethodProps 方法</span><span class="sxs-lookup"><span data-stu-id="506a3-102">IMetaDataImport::GetMethodProps Method</span></span>
+<span data-ttu-id="506a3-103">获取与指定的 MethodDef 标记引用的方法关联的元数据。</span><span class="sxs-lookup"><span data-stu-id="506a3-103">Gets the metadata associated with the method referenced by the specified MethodDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0b58-104">语法</span><span class="sxs-lookup"><span data-stu-id="a0b58-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="506a3-104">语法</span><span class="sxs-lookup"><span data-stu-id="506a3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodProps (  
@@ -44,46 +44,47 @@ HRESULT GetMethodProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a0b58-105">参数</span><span class="sxs-lookup"><span data-stu-id="a0b58-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="506a3-105">参数</span><span class="sxs-lookup"><span data-stu-id="506a3-105">Parameters</span></span>  
  `mb`  
- <span data-ttu-id="a0b58-106">[in]表示要返回的元数据的方法的 MethodDef 标记。</span><span class="sxs-lookup"><span data-stu-id="a0b58-106">[in] The MethodDef token that represents the method to return metadata for.</span></span>  
+ <span data-ttu-id="506a3-106">[in]表示要返回的元数据的方法的 MethodDef 标记。</span><span class="sxs-lookup"><span data-stu-id="506a3-106">[in] The MethodDef token that represents the method to return metadata for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="a0b58-107">[out]指向表示实现方法的类型的 TypeDef 标记的指针。</span><span class="sxs-lookup"><span data-stu-id="a0b58-107">[out] A Pointer to a TypeDef token that represents the type that implements the method.</span></span>  
+ <span data-ttu-id="506a3-107">[out]指向表示实现方法的类型的 TypeDef 标记的指针。</span><span class="sxs-lookup"><span data-stu-id="506a3-107">[out] A Pointer to a TypeDef token that represents the type that implements the method.</span></span>  
   
  `szMethod`  
- <span data-ttu-id="a0b58-108">[out]指向方法的名称的缓冲区的指针。</span><span class="sxs-lookup"><span data-stu-id="a0b58-108">[out] A Pointer to a buffer that has the method's name.</span></span>  
+ <span data-ttu-id="506a3-108">[out]指向方法的名称的缓冲区的指针。</span><span class="sxs-lookup"><span data-stu-id="506a3-108">[out] A Pointer to a buffer that has the method's name.</span></span>  
   
  `cchMethod`  
- <span data-ttu-id="a0b58-109">[in]请求的大小`szMethod`。</span><span class="sxs-lookup"><span data-stu-id="a0b58-109">[in] The requested size of `szMethod`.</span></span>  
+ <span data-ttu-id="506a3-109">[in]请求的大小`szMethod`。</span><span class="sxs-lookup"><span data-stu-id="506a3-109">[in] The requested size of `szMethod`.</span></span>  
   
  `pchMethod`  
- <span data-ttu-id="a0b58-110">[out]一个指向宽字符为单位的大小`szMethod`，或发生截断时，实际方法名称中的宽字符数。</span><span class="sxs-lookup"><span data-stu-id="a0b58-110">[out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.</span></span>  
+ <span data-ttu-id="506a3-110">[out]一个指向宽字符为单位的大小`szMethod`，或发生截断时，实际方法名称中的宽字符数。</span><span class="sxs-lookup"><span data-stu-id="506a3-110">[out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.</span></span>  
   
  `pdwAttr`  
- <span data-ttu-id="a0b58-111">[out]一个指向与方法关联的任何标志。</span><span class="sxs-lookup"><span data-stu-id="a0b58-111">[out] A pointer to any flags associated with the method.</span></span>  
+ <span data-ttu-id="506a3-111">[out]一个指向与方法关联的任何标志。</span><span class="sxs-lookup"><span data-stu-id="506a3-111">[out] A pointer to any flags associated with the method.</span></span>  
   
  `ppvSigBlob`  
- <span data-ttu-id="a0b58-112">[out]指向方法的二进制元数据签名的指针。</span><span class="sxs-lookup"><span data-stu-id="a0b58-112">[out] A pointer to the binary metadata signature of the method.</span></span>  
+ <span data-ttu-id="506a3-112">[out]指向方法的二进制元数据签名的指针。</span><span class="sxs-lookup"><span data-stu-id="506a3-112">[out] A pointer to the binary metadata signature of the method.</span></span>  
   
  `pcbSigBlob`  
- <span data-ttu-id="a0b58-113">[out]指向以字节为单位的大小的`ppvSigBlob`。</span><span class="sxs-lookup"><span data-stu-id="a0b58-113">[out] A Pointer to the size in bytes of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="506a3-113">[out]指向以字节为单位的大小的`ppvSigBlob`。</span><span class="sxs-lookup"><span data-stu-id="506a3-113">[out] A Pointer to the size in bytes of `ppvSigBlob`.</span></span>  
   
  `pulCodeRVA`  
- <span data-ttu-id="a0b58-114">[out]指向方法的相对虚拟地址的指针。</span><span class="sxs-lookup"><span data-stu-id="a0b58-114">[out] A pointer to the relative virtual address of the method.</span></span>  
+ <span data-ttu-id="506a3-114">[out]指向方法的相对虚拟地址的指针。</span><span class="sxs-lookup"><span data-stu-id="506a3-114">[out] A pointer to the relative virtual address of the method.</span></span>  
   
  `pdwImplFlags`  
- <span data-ttu-id="a0b58-115">[out]指向方法的任何实现标志的指针。</span><span class="sxs-lookup"><span data-stu-id="a0b58-115">[out] A pointer to any implementation flags for the method.</span></span>  
+ <span data-ttu-id="506a3-115">[out]指向方法的任何实现标志的指针。</span><span class="sxs-lookup"><span data-stu-id="506a3-115">[out] A pointer to any implementation flags for the method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0b58-116">要求</span><span class="sxs-lookup"><span data-stu-id="a0b58-116">Requirements</span></span>  
- <span data-ttu-id="a0b58-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a0b58-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="506a3-116">要求</span><span class="sxs-lookup"><span data-stu-id="506a3-116">Requirements</span></span>  
+ <span data-ttu-id="506a3-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="506a3-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a0b58-118">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a0b58-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="506a3-118">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="506a3-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a0b58-119">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="a0b58-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="506a3-119">**库：** 包含为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="506a3-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a0b58-120">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a0b58-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="506a3-120">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="506a3-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a0b58-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="a0b58-121">See also</span></span>
-- [<span data-ttu-id="a0b58-122">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="a0b58-122">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="a0b58-123">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="a0b58-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="506a3-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="506a3-121">See also</span></span>
+
+- [<span data-ttu-id="506a3-122">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="506a3-122">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="506a3-123">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="506a3-123">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

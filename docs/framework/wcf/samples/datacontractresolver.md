@@ -2,18 +2,18 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: ad5436a60b5cd82b44931713d863eaeed791e264
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a42bf12e6ee8275814898a0158348f56bfb2688e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112861"
 ---
-# <a name="datacontractresolver"></a><span data-ttu-id="34256-102">DataContractResolver</span><span class="sxs-lookup"><span data-stu-id="34256-102">DataContractResolver</span></span>
-<span data-ttu-id="34256-103">此示例演示如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 类来自定义序列化和反序列化过程。</span><span class="sxs-lookup"><span data-stu-id="34256-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="34256-104">此示例演示在序列化和反序列化过程中，如何使用 DataContractResolver 在 CLR 类型与 xsi:type 表示形式之间进行映射。</span><span class="sxs-lookup"><span data-stu-id="34256-104">This sample shows how to use a DataContractResolver to map CLR types to and from an xsi:type representation during serialization and deserialization.</span></span>
+# <a name="datacontractresolver"></a><span data-ttu-id="53539-102">DataContractResolver</span><span class="sxs-lookup"><span data-stu-id="53539-102">DataContractResolver</span></span>
+<span data-ttu-id="53539-103">此示例演示如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 类来自定义序列化和反序列化过程。</span><span class="sxs-lookup"><span data-stu-id="53539-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="53539-104">此示例演示在序列化和反序列化过程中，如何使用 DataContractResolver 在 CLR 类型与 xsi:type 表示形式之间进行映射。</span><span class="sxs-lookup"><span data-stu-id="53539-104">This sample shows how to use a DataContractResolver to map CLR types to and from an xsi:type representation during serialization and deserialization.</span></span>
 
-## <a name="sample-details"></a><span data-ttu-id="34256-105">示例详细信息</span><span class="sxs-lookup"><span data-stu-id="34256-105">Sample Details</span></span>
- <span data-ttu-id="34256-106">此示例定义以下 CLR 类型。</span><span class="sxs-lookup"><span data-stu-id="34256-106">The sample defines the following CLR types.</span></span>
+## <a name="sample-details"></a><span data-ttu-id="53539-105">示例详细信息</span><span class="sxs-lookup"><span data-stu-id="53539-105">Sample Details</span></span>
+ <span data-ttu-id="53539-106">此示例定义以下 CLR 类型。</span><span class="sxs-lookup"><span data-stu-id="53539-106">The sample defines the following CLR types.</span></span>
 
 ```csharp
 using System;
@@ -47,13 +47,13 @@ namespace Types
 }
 ```
 
- <span data-ttu-id="34256-107">此示例加载程序集，提取每个类型，然后对这些类型进行序列化和反序列化。</span><span class="sxs-lookup"><span data-stu-id="34256-107">The sample loads the assembly, extracts each of these types, and then serializes and deserializes them.</span></span> <span data-ttu-id="34256-108"><xref:System.Runtime.Serialization.DataContractResolver> 会通过将 <xref:System.Runtime.Serialization.DataContractResolver> 派生类的实例传递给 <xref:System.Runtime.Serialization.DataContractSerializer> 构造函数，插入到序列化过程中，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="34256-108">The <xref:System.Runtime.Serialization.DataContractResolver> is plugged into the serialization process by passing an instance of the <xref:System.Runtime.Serialization.DataContractResolver>-derived class to the <xref:System.Runtime.Serialization.DataContractSerializer> constructor, as shown in the following example.</span></span>
+ <span data-ttu-id="53539-107">此示例加载程序集，提取每个类型，然后对这些类型进行序列化和反序列化。</span><span class="sxs-lookup"><span data-stu-id="53539-107">The sample loads the assembly, extracts each of these types, and then serializes and deserializes them.</span></span> <span data-ttu-id="53539-108"><xref:System.Runtime.Serialization.DataContractResolver> 会通过将 <xref:System.Runtime.Serialization.DataContractResolver> 派生类的实例传递给 <xref:System.Runtime.Serialization.DataContractSerializer> 构造函数，插入到序列化过程中，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="53539-108">The <xref:System.Runtime.Serialization.DataContractResolver> is plugged into the serialization process by passing an instance of the <xref:System.Runtime.Serialization.DataContractResolver>-derived class to the <xref:System.Runtime.Serialization.DataContractSerializer> constructor, as shown in the following example.</span></span>
 
 ```csharp
 this.serializer = new DataContractSerializer(typeof(Object), null, int.MaxValue, false, true, null, new MyDataContractResolver(assembly));
 ```
 
- <span data-ttu-id="34256-109">此示例随后序列化 CLR 类型，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="34256-109">The sample then serializes the CLR types as shown in the following code example.</span></span>
+ <span data-ttu-id="53539-109">此示例随后序列化 CLR 类型，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="53539-109">The sample then serializes the CLR types as shown in the following code example.</span></span>
 
 ```csharp
 Assembly assembly = Assembly.Load(new AssemblyName("Types"));
@@ -82,7 +82,7 @@ public void serialize(Type type)
 }
 ```
 
- <span data-ttu-id="34256-110">此示例随后反序列化 xsi:type，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="34256-110">The sample then deserializes the xsi:types as shown in the following code example.</span></span>
+ <span data-ttu-id="53539-110">此示例随后反序列化 xsi:type，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="53539-110">The sample then deserializes the xsi:types as shown in the following code example.</span></span>
 
 ```csharp
 public void deserialize(Type type)
@@ -97,9 +97,9 @@ public void deserialize(Type type)
 }
 ```
 
- <span data-ttu-id="34256-111">由于会将自定义 <xref:System.Runtime.Serialization.DataContractResolver> 传入到 <xref:System.Runtime.Serialization.DataContractSerializer> 构造函数中，因此在序列化过程中会调用 <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A>，以将 CLR 类型映射到等效的 `xsi:type`。</span><span class="sxs-lookup"><span data-stu-id="34256-111">Since the custom <xref:System.Runtime.Serialization.DataContractResolver> is passed in to the <xref:System.Runtime.Serialization.DataContractSerializer> constructor, the <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> is called during serialization to map a CLR type to an equivalent `xsi:type`.</span></span> <span data-ttu-id="34256-112">同样，会在反序列化过程中调用 <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>，以将 `xsi:type` 映射到等效的 CLR 类型。</span><span class="sxs-lookup"><span data-stu-id="34256-112">Similarly the <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> is called during deserialization to map the `xsi:type` to an equivalent CLR type.</span></span> <span data-ttu-id="34256-113">在此示例中定义了 <xref:System.Runtime.Serialization.DataContractResolver>，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="34256-113">In this sample, the <xref:System.Runtime.Serialization.DataContractResolver> is defined as shown in the following example.</span></span>
+ <span data-ttu-id="53539-111">由于会将自定义 <xref:System.Runtime.Serialization.DataContractResolver> 传入到 <xref:System.Runtime.Serialization.DataContractSerializer> 构造函数中，因此在序列化过程中会调用 <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A>，以将 CLR 类型映射到等效的 `xsi:type`。</span><span class="sxs-lookup"><span data-stu-id="53539-111">Since the custom <xref:System.Runtime.Serialization.DataContractResolver> is passed in to the <xref:System.Runtime.Serialization.DataContractSerializer> constructor, the <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> is called during serialization to map a CLR type to an equivalent `xsi:type`.</span></span> <span data-ttu-id="53539-112">同样，会在反序列化过程中调用 <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>，以将 `xsi:type` 映射到等效的 CLR 类型。</span><span class="sxs-lookup"><span data-stu-id="53539-112">Similarly the <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> is called during deserialization to map the `xsi:type` to an equivalent CLR type.</span></span> <span data-ttu-id="53539-113">在此示例中定义了 <xref:System.Runtime.Serialization.DataContractResolver>，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="53539-113">In this sample, the <xref:System.Runtime.Serialization.DataContractResolver> is defined as shown in the following example.</span></span>
 
- <span data-ttu-id="34256-114">下面的代码示例是一个派生自 <xref:System.Runtime.Serialization.DataContractResolver> 的类。</span><span class="sxs-lookup"><span data-stu-id="34256-114">The following code example is a class deriving from <xref:System.Runtime.Serialization.DataContractResolver>.</span></span>
+ <span data-ttu-id="53539-114">下面的代码示例是一个派生自 <xref:System.Runtime.Serialization.DataContractResolver> 的类。</span><span class="sxs-lookup"><span data-stu-id="53539-114">The following code example is a class deriving from <xref:System.Runtime.Serialization.DataContractResolver>.</span></span>
 
 ```csharp
 class MyDataContractResolver : DataContractResolver
@@ -148,22 +148,23 @@ class MyDataContractResolver : DataContractResolver
 }
 ```
 
- <span data-ttu-id="34256-115">作为此示例的一部分，Types 项目将生成具有此示例中所使用的全部类型的程序集。</span><span class="sxs-lookup"><span data-stu-id="34256-115">As part of the sample, the Types project generates the assembly with all the types that are used in this sample.</span></span> <span data-ttu-id="34256-116">使用此项目可添加、移除或修改将要序列化的所有类型。</span><span class="sxs-lookup"><span data-stu-id="34256-116">Use this project to add, remove or modify the types that will be serialized.</span></span>
+ <span data-ttu-id="53539-115">作为此示例的一部分，Types 项目将生成具有此示例中所使用的全部类型的程序集。</span><span class="sxs-lookup"><span data-stu-id="53539-115">As part of the sample, the Types project generates the assembly with all the types that are used in this sample.</span></span> <span data-ttu-id="53539-116">使用此项目可添加、移除或修改将要序列化的所有类型。</span><span class="sxs-lookup"><span data-stu-id="53539-116">Use this project to add, remove or modify the types that will be serialized.</span></span>
 
-#### <a name="to-use-this-sample"></a><span data-ttu-id="34256-117">使用此示例</span><span class="sxs-lookup"><span data-stu-id="34256-117">To use this sample</span></span>
+#### <a name="to-use-this-sample"></a><span data-ttu-id="53539-117">使用此示例</span><span class="sxs-lookup"><span data-stu-id="53539-117">To use this sample</span></span>
 
-1.  <span data-ttu-id="34256-118">使用 Visual Studio 2012 打开 DCRSample.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="34256-118">Using Visual Studio 2012, open the DCRSample.sln solution file.</span></span>
+1.  <span data-ttu-id="53539-118">使用 Visual Studio 2012 打开 DCRSample.sln 解决方案文件。</span><span class="sxs-lookup"><span data-stu-id="53539-118">Using Visual Studio 2012, open the DCRSample.sln solution file.</span></span>
 
-2.  <span data-ttu-id="34256-119">若要运行解决方案，请按 F5。</span><span class="sxs-lookup"><span data-stu-id="34256-119">To run the solution, press F5</span></span>
+2.  <span data-ttu-id="53539-119">若要运行解决方案，请按 F5。</span><span class="sxs-lookup"><span data-stu-id="53539-119">To run the solution, press F5</span></span>
 
 > [!IMPORTANT]
->  <span data-ttu-id="34256-120">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="34256-120">The samples may already be installed on your machine.</span></span> <span data-ttu-id="34256-121">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="34256-121">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="53539-120">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="53539-120">The samples may already be installed on your machine.</span></span> <span data-ttu-id="53539-121">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="53539-121">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="34256-122">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="34256-122">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="34256-123">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="34256-123">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="53539-122">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="53539-122">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="53539-123">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="53539-123">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   
-## <a name="see-also"></a><span data-ttu-id="34256-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="34256-124">See also</span></span>
-- [<span data-ttu-id="34256-125">使用数据协定解析程序</span><span class="sxs-lookup"><span data-stu-id="34256-125">Using a Data Contract Resolver</span></span>](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)
+## <a name="see-also"></a><span data-ttu-id="53539-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="53539-124">See also</span></span>
+
+- [<span data-ttu-id="53539-125">使用数据协定解析程序</span><span class="sxs-lookup"><span data-stu-id="53539-125">Using a Data Contract Resolver</span></span>](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)

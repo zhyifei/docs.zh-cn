@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f0ed1aa0d095b13a90ed5b036719e71ccc8e272
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5f62fa23d30a93f863cb2be0fa060bd2eba8dca1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141723"
 ---
-# <a name="icordebugmdagetname-method"></a><span data-ttu-id="6a2f1-102">ICorDebugMDA::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="6a2f1-102">ICorDebugMDA::GetName Method</span></span>
-<span data-ttu-id="6a2f1-103">获取包含由表示托管调试助手 (MDA) 的名称的字符串[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="6a2f1-103">Gets a string containing the name of the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
+# <a name="icordebugmdagetname-method"></a><span data-ttu-id="0c1ad-102">ICorDebugMDA::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="0c1ad-102">ICorDebugMDA::GetName Method</span></span>
+<span data-ttu-id="0c1ad-103">获取包含由表示托管调试助手 (MDA) 的名称的字符串[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="0c1ad-103">Gets a string containing the name of the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a2f1-104">语法</span><span class="sxs-lookup"><span data-stu-id="6a2f1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0c1ad-104">语法</span><span class="sxs-lookup"><span data-stu-id="0c1ad-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName (  
@@ -38,28 +38,29 @@ HRESULT GetName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6a2f1-105">参数</span><span class="sxs-lookup"><span data-stu-id="6a2f1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0c1ad-105">参数</span><span class="sxs-lookup"><span data-stu-id="0c1ad-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="6a2f1-106">[in] `szName` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="6a2f1-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="0c1ad-106">[in] `szName` 数组的大小。</span><span class="sxs-lookup"><span data-stu-id="0c1ad-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="6a2f1-107">[out]指向名称的长度的指针。</span><span class="sxs-lookup"><span data-stu-id="6a2f1-107">[out] A pointer to the length of the name.</span></span>  
+ <span data-ttu-id="0c1ad-107">[out]指向名称的长度的指针。</span><span class="sxs-lookup"><span data-stu-id="0c1ad-107">[out] A pointer to the length of the name.</span></span>  
   
  `szName`  
- <span data-ttu-id="6a2f1-108">[out]要在其中存储名称数组。</span><span class="sxs-lookup"><span data-stu-id="6a2f1-108">[out] An array in which to store the name.</span></span>  
+ <span data-ttu-id="0c1ad-108">[out]要在其中存储名称数组。</span><span class="sxs-lookup"><span data-stu-id="0c1ad-108">[out] An array in which to store the name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6a2f1-109">备注</span><span class="sxs-lookup"><span data-stu-id="6a2f1-109">Remarks</span></span>  
- <span data-ttu-id="6a2f1-110">MDA 名称是唯一的值。</span><span class="sxs-lookup"><span data-stu-id="6a2f1-110">MDA names are unique values.</span></span> <span data-ttu-id="6a2f1-111">`GetName`方法是获取 XML 流并从基于架构的流中提取名称的方便性能替代方法。</span><span class="sxs-lookup"><span data-stu-id="6a2f1-111">The `GetName` method is a convenient performance alternative to getting the XML stream and extracting the name from the stream based on the schema.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0c1ad-109">备注</span><span class="sxs-lookup"><span data-stu-id="0c1ad-109">Remarks</span></span>  
+ <span data-ttu-id="0c1ad-110">MDA 名称是唯一的值。</span><span class="sxs-lookup"><span data-stu-id="0c1ad-110">MDA names are unique values.</span></span> <span data-ttu-id="0c1ad-111">`GetName`方法是获取 XML 流并从基于架构的流中提取名称的方便性能替代方法。</span><span class="sxs-lookup"><span data-stu-id="0c1ad-111">The `GetName` method is a convenient performance alternative to getting the XML stream and extracting the name from the stream based on the schema.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a2f1-112">要求</span><span class="sxs-lookup"><span data-stu-id="6a2f1-112">Requirements</span></span>  
- <span data-ttu-id="6a2f1-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6a2f1-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c1ad-112">要求</span><span class="sxs-lookup"><span data-stu-id="0c1ad-112">Requirements</span></span>  
+ <span data-ttu-id="0c1ad-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0c1ad-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a2f1-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6a2f1-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0c1ad-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0c1ad-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6a2f1-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6a2f1-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0c1ad-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0c1ad-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6a2f1-116">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a2f1-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="0c1ad-116">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="0c1ad-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="6a2f1-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="6a2f1-117">See also</span></span>
-- [<span data-ttu-id="6a2f1-118">ICorDebugMDA 接口</span><span class="sxs-lookup"><span data-stu-id="6a2f1-118">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [<span data-ttu-id="6a2f1-119">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="6a2f1-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a><span data-ttu-id="0c1ad-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="0c1ad-117">See also</span></span>
+
+- [<span data-ttu-id="0c1ad-118">ICorDebugMDA 接口</span><span class="sxs-lookup"><span data-stu-id="0c1ad-118">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="0c1ad-119">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="0c1ad-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
