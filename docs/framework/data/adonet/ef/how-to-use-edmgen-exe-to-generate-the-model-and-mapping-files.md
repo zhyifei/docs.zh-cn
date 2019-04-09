@@ -2,38 +2,38 @@
 title: 如何：使用 EdmGen.exe 生成模型和映射文件
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 49890eb8bdb9f956cc36b3adde2f11db1e1e07bc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 72f4f84fc8651f3117eae637eb75300801e5000f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125326"
 ---
-# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a><span data-ttu-id="2e672-102">如何：使用 EdmGen.exe 生成模型和映射文件</span><span class="sxs-lookup"><span data-stu-id="2e672-102">How to: Use EdmGen.exe to Generate the Model and Mapping Files</span></span>
-<span data-ttu-id="2e672-103">本主题描述如何使用 EDM 生成器 (EdmGen.exe) 工具生成以下文件（基于 School 数据库）：</span><span class="sxs-lookup"><span data-stu-id="2e672-103">This topic shows how to use the EDM Generator (EdmGen.exe) tool to generate the following files based on the School database:</span></span>  
+# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a><span data-ttu-id="142e8-102">如何：使用 EdmGen.exe 生成模型和映射文件</span><span class="sxs-lookup"><span data-stu-id="142e8-102">How to: Use EdmGen.exe to Generate the Model and Mapping Files</span></span>
+<span data-ttu-id="142e8-103">本主题描述如何使用 EDM 生成器 (EdmGen.exe) 工具生成以下文件（基于 School 数据库）：</span><span class="sxs-lookup"><span data-stu-id="142e8-103">This topic shows how to use the EDM Generator (EdmGen.exe) tool to generate the following files based on the School database:</span></span>  
   
--   <span data-ttu-id="2e672-104">概念模型（.csdl 文件）。</span><span class="sxs-lookup"><span data-stu-id="2e672-104">A conceptual model (a .csdl file).</span></span>  
+-   <span data-ttu-id="142e8-104">概念模型（.csdl 文件）。</span><span class="sxs-lookup"><span data-stu-id="142e8-104">A conceptual model (a .csdl file).</span></span>  
   
--   <span data-ttu-id="2e672-105">存储模型（.ssdl 文件）。</span><span class="sxs-lookup"><span data-stu-id="2e672-105">A storage model (a .ssdl file).</span></span>  
+-   <span data-ttu-id="142e8-105">存储模型（.ssdl 文件）。</span><span class="sxs-lookup"><span data-stu-id="142e8-105">A storage model (a .ssdl file).</span></span>  
   
--   <span data-ttu-id="2e672-106">概念模型与存储模型之间的映射（.msl 文件）。</span><span class="sxs-lookup"><span data-stu-id="2e672-106">Mapping between the conceptual and storage models (a .msl file).</span></span>  
+-   <span data-ttu-id="142e8-106">概念模型与存储模型之间的映射（.msl 文件）。</span><span class="sxs-lookup"><span data-stu-id="142e8-106">Mapping between the conceptual and storage models (a .msl file).</span></span>  
   
--   <span data-ttu-id="2e672-107">使用 Visual Basic 或 C# 的对象层代码。</span><span class="sxs-lookup"><span data-stu-id="2e672-107">Object-layer code in Visual Basic or C#.</span></span>  
+-   <span data-ttu-id="142e8-107">使用 Visual Basic 或 C# 的对象层代码。</span><span class="sxs-lookup"><span data-stu-id="142e8-107">Object-layer code in Visual Basic or C#.</span></span>  
   
--   <span data-ttu-id="2e672-108">视图文件。</span><span class="sxs-lookup"><span data-stu-id="2e672-108">View files.</span></span>  
+-   <span data-ttu-id="142e8-108">视图文件。</span><span class="sxs-lookup"><span data-stu-id="142e8-108">View files.</span></span>  
   
- <span data-ttu-id="2e672-109">EdmGen.exe 工具使用 /mode:FullGeneration 生成上面列出的文件。</span><span class="sxs-lookup"><span data-stu-id="2e672-109">The EdmGen.exe tool uses /mode:FullGeneration to generate the files listed above.</span></span> <span data-ttu-id="2e672-110">有关 EdmGen.exe 命令的详细信息，请参阅[EDM 生成器 (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="2e672-110">For more information about EdmGen.exe commands, see [EDM Generator (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).</span></span>  
+ <span data-ttu-id="142e8-109">EdmGen.exe 工具使用 /mode:FullGeneration 生成上面列出的文件。</span><span class="sxs-lookup"><span data-stu-id="142e8-109">The EdmGen.exe tool uses /mode:FullGeneration to generate the files listed above.</span></span> <span data-ttu-id="142e8-110">有关 EdmGen.exe 命令的详细信息，请参阅[EDM 生成器 (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="142e8-110">For more information about EdmGen.exe commands, see [EDM Generator (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).</span></span>  
   
- <span data-ttu-id="2e672-111">如果您使用 EdmGen.exe 生成模型和映射文件，仍需要配置 Visual Studio 项目以使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="2e672-111">If you use EdmGen.exe to generate the model and mapping files, you still need to configure your Visual Studio project to use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="2e672-112">有关详细信息，请参阅[如何：手动配置实体框架项目](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="2e672-112">For more information, see [How to: Manually Configure an Entity Framework Project](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).</span></span>  
+ <span data-ttu-id="142e8-111">如果您使用 EdmGen.exe 生成模型和映射文件，仍需要配置 Visual Studio 项目以使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="142e8-111">If you use EdmGen.exe to generate the model and mapping files, you still need to configure your Visual Studio project to use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="142e8-112">有关详细信息，请参阅[如何：手动配置实体框架项目](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="142e8-112">For more information, see [How to: Manually Configure an Entity Framework Project](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2e672-113">由 EdmGen.exe 生成的概念模型包含数据库中所有对象。</span><span class="sxs-lookup"><span data-stu-id="2e672-113">A conceptual model generated by EdmGen.exe includes all the objects in the database.</span></span> <span data-ttu-id="2e672-114">如果希望生成仅包含特定对象的概念模型，请使用实体数据模型向导。</span><span class="sxs-lookup"><span data-stu-id="2e672-114">If you want to generate a conceptual model that includes only specific objects, use the Entity Data Model Wizard.</span></span> <span data-ttu-id="2e672-115">有关详细信息，请参阅[如何：使用实体数据模型向导](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="2e672-115">For more information, see [How to: Use the Entity Data Model Wizard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).</span></span>  
+>  <span data-ttu-id="142e8-113">由 EdmGen.exe 生成的概念模型包含数据库中所有对象。</span><span class="sxs-lookup"><span data-stu-id="142e8-113">A conceptual model generated by EdmGen.exe includes all the objects in the database.</span></span> <span data-ttu-id="142e8-114">如果希望生成仅包含特定对象的概念模型，请使用实体数据模型向导。</span><span class="sxs-lookup"><span data-stu-id="142e8-114">If you want to generate a conceptual model that includes only specific objects, use the Entity Data Model Wizard.</span></span> <span data-ttu-id="142e8-115">有关详细信息，请参阅[如何：使用实体数据模型向导](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="142e8-115">For more information, see [How to: Use the Entity Data Model Wizard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).</span></span>  
   
-### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a><span data-ttu-id="2e672-116">使用 EdmGen.exe 为 Visual Basic 项目生成 School 模型</span><span class="sxs-lookup"><span data-stu-id="2e672-116">To generate the School model for a Visual Basic project using EdmGen.exe</span></span>  
+### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a><span data-ttu-id="142e8-116">使用 EdmGen.exe 为 Visual Basic 项目生成 School 模型</span><span class="sxs-lookup"><span data-stu-id="142e8-116">To generate the School model for a Visual Basic project using EdmGen.exe</span></span>  
   
-1.  <span data-ttu-id="2e672-117">创建 School 数据库。</span><span class="sxs-lookup"><span data-stu-id="2e672-117">Create the School database.</span></span> <span data-ttu-id="2e672-118">有关详细信息，请参阅[创建 School 示例数据库](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="2e672-118">For more information, see [Creating the School Sample Database](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
+1.  <span data-ttu-id="142e8-117">创建 School 数据库。</span><span class="sxs-lookup"><span data-stu-id="142e8-117">Create the School database.</span></span> <span data-ttu-id="142e8-118">有关详细信息，请参阅[创建 School 示例数据库](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="142e8-118">For more information, see [Creating the School Sample Database](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
   
-2.  <span data-ttu-id="2e672-119">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="2e672-119">At the command prompt, execute the following command without line breaks:</span></span>  
+2.  <span data-ttu-id="142e8-119">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="142e8-119">At the command prompt, execute the following command without line breaks:</span></span>  
   
     ```  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration   
@@ -41,11 +41,11 @@ ms.locfileid: "55826949"
     /project:School /entitycontainer:SchoolEntities /namespace:SchoolModel /language:VB  
     ```  
   
-### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a><span data-ttu-id="2e672-120">使用 EdmGen.exe 为 C# 项目生成 School 模型</span><span class="sxs-lookup"><span data-stu-id="2e672-120">To generate the School model for a C# project using EdmGen.exe</span></span>  
+### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a><span data-ttu-id="142e8-120">使用 EdmGen.exe 为 C# 项目生成 School 模型</span><span class="sxs-lookup"><span data-stu-id="142e8-120">To generate the School model for a C# project using EdmGen.exe</span></span>  
   
-1.  <span data-ttu-id="2e672-121">创建 School 数据库。</span><span class="sxs-lookup"><span data-stu-id="2e672-121">Create the School database.</span></span> <span data-ttu-id="2e672-122">有关详细信息，请参阅[创建 School 示例数据库](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="2e672-122">For more information, see [Creating the School Sample Database](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
+1.  <span data-ttu-id="142e8-121">创建 School 数据库。</span><span class="sxs-lookup"><span data-stu-id="142e8-121">Create the School database.</span></span> <span data-ttu-id="142e8-122">有关详细信息，请参阅[创建 School 示例数据库](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="142e8-122">For more information, see [Creating the School Sample Database](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
   
-2.  <span data-ttu-id="2e672-123">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="2e672-123">At the command prompt, execute the following command without line breaks:</span></span>  
+2.  <span data-ttu-id="142e8-123">在命令提示符下执行以下命令（无换行符）：</span><span class="sxs-lookup"><span data-stu-id="142e8-123">At the command prompt, execute the following command without line breaks:</span></span>  
   
     ```  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration   
@@ -53,9 +53,10 @@ ms.locfileid: "55826949"
     /project:School /entitycontainer:SchoolEntities /namespace:SchoolModel /language:CSharp  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="2e672-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="2e672-124">See also</span></span>
-- [<span data-ttu-id="2e672-125">建模和映射</span><span class="sxs-lookup"><span data-stu-id="2e672-125">Modeling and Mapping</span></span>](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
-- <span data-ttu-id="2e672-126">[如何：手动配置实体框架项目](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="2e672-126">[How to: Manually Configure an Entity Framework Project](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span></span>
-- <span data-ttu-id="2e672-127">[如何：预生成视图以提高查询性能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="2e672-127">[How to: Pre-Generate Views to Improve Query Performance](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span></span>
-- <span data-ttu-id="2e672-128">[ADO.NET 实体数据模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="2e672-128">[ADO.NET Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span></span>
-- [<span data-ttu-id="2e672-129">如何：使用 EdmGen.exe 验证模型和映射文件</span><span class="sxs-lookup"><span data-stu-id="2e672-129">How to: Use EdmGen.exe to Validate Model and Mapping Files</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+## <a name="see-also"></a><span data-ttu-id="142e8-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="142e8-124">See also</span></span>
+
+- [<span data-ttu-id="142e8-125">建模和映射</span><span class="sxs-lookup"><span data-stu-id="142e8-125">Modeling and Mapping</span></span>](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
+- [<span data-ttu-id="142e8-126">如何：手动配置实体框架项目</span><span class="sxs-lookup"><span data-stu-id="142e8-126">How to: Manually Configure an Entity Framework Project</span></span>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
+- [<span data-ttu-id="142e8-127">如何：预生成视图以改善查询性能</span><span class="sxs-lookup"><span data-stu-id="142e8-127">How to: Pre-Generate Views to Improve Query Performance</span></span>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
+- [<span data-ttu-id="142e8-128">ADO.NET 实体数据模型工具</span><span class="sxs-lookup"><span data-stu-id="142e8-128">ADO.NET Entity Data Model Tools</span></span>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [<span data-ttu-id="142e8-129">如何：使用 EdmGen.exe 验证模型和映射文件</span><span class="sxs-lookup"><span data-stu-id="142e8-129">How to: Use EdmGen.exe to Validate Model and Mapping Files</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
