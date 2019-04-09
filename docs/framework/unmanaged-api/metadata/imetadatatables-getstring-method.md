@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c71efb9156c503ac88ba558ad7a9f757b608bf40
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8fed98521c0609ebd8b5f65885d69c77814e9e85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466149"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119335"
 ---
-# <a name="imetadatatablesgetstring-method"></a><span data-ttu-id="9140a-102">IMetaDataTables::GetString 方法</span><span class="sxs-lookup"><span data-stu-id="9140a-102">IMetaDataTables::GetString Method</span></span>
-<span data-ttu-id="9140a-103">获取当前引用作用域中从表的列的指定索引处的字符串。</span><span class="sxs-lookup"><span data-stu-id="9140a-103">Gets the string at the specified index from the table column in the current reference scope.</span></span>  
+# <a name="imetadatatablesgetstring-method"></a><span data-ttu-id="dd7ae-102">IMetaDataTables::GetString 方法</span><span class="sxs-lookup"><span data-stu-id="dd7ae-102">IMetaDataTables::GetString Method</span></span>
+<span data-ttu-id="dd7ae-103">获取当前引用作用域中从表的列的指定索引处的字符串。</span><span class="sxs-lookup"><span data-stu-id="dd7ae-103">Gets the string at the specified index from the table column in the current reference scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9140a-104">语法</span><span class="sxs-lookup"><span data-stu-id="9140a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dd7ae-104">语法</span><span class="sxs-lookup"><span data-stu-id="dd7ae-104">Syntax</span></span>  
   
 ```  
 HRESULT GetString (   
@@ -36,22 +36,23 @@ HRESULT GetString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9140a-105">参数</span><span class="sxs-lookup"><span data-stu-id="9140a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dd7ae-105">参数</span><span class="sxs-lookup"><span data-stu-id="dd7ae-105">Parameters</span></span>  
  `ixString`  
- <span data-ttu-id="9140a-106">[in]若要开始搜索下一个值处的索引。</span><span class="sxs-lookup"><span data-stu-id="9140a-106">[in] The index at which to start to search for the next value.</span></span>  
+ <span data-ttu-id="dd7ae-106">[in]若要开始搜索下一个值处的索引。</span><span class="sxs-lookup"><span data-stu-id="dd7ae-106">[in] The index at which to start to search for the next value.</span></span>  
   
  `ppString`  
- <span data-ttu-id="9140a-107">[out]指向返回的字符串值的指针指向的指针。</span><span class="sxs-lookup"><span data-stu-id="9140a-107">[out] A pointer to a pointer to the returned string value.</span></span>  
+ <span data-ttu-id="dd7ae-107">[out]指向返回的字符串值的指针指向的指针。</span><span class="sxs-lookup"><span data-stu-id="dd7ae-107">[out] A pointer to a pointer to the returned string value.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9140a-108">要求</span><span class="sxs-lookup"><span data-stu-id="9140a-108">Requirements</span></span>  
- <span data-ttu-id="9140a-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9140a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dd7ae-108">要求</span><span class="sxs-lookup"><span data-stu-id="dd7ae-108">Requirements</span></span>  
+ <span data-ttu-id="dd7ae-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dd7ae-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9140a-110">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9140a-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="dd7ae-110">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="dd7ae-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9140a-111">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="9140a-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="dd7ae-111">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="dd7ae-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9140a-112">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9140a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="dd7ae-112">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="dd7ae-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="9140a-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="9140a-113">See also</span></span>
-- [<span data-ttu-id="9140a-114">IMetaDataTables 接口</span><span class="sxs-lookup"><span data-stu-id="9140a-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="9140a-115">IMetaDataTables2 接口</span><span class="sxs-lookup"><span data-stu-id="9140a-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="dd7ae-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="dd7ae-113">See also</span></span>
+
+- [<span data-ttu-id="dd7ae-114">IMetaDataTables 接口</span><span class="sxs-lookup"><span data-stu-id="dd7ae-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="dd7ae-115">IMetaDataTables2 接口</span><span class="sxs-lookup"><span data-stu-id="dd7ae-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
