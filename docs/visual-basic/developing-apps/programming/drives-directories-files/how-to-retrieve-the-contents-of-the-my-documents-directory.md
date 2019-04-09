@@ -4,22 +4,23 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My Documents directory
 ms.assetid: 26560d01-7dda-4457-8e95-21db23d71aea
-ms.openlocfilehash: 6d4e0bc7d300b2553d5286600cc65b7c494359b9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fe98d3e92726dc6c4ed576ef989d968852c846d6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964171"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821824"
 ---
-# <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a><span data-ttu-id="a55db-102">如何：在 Visual Basic 中检索“我的文档”目录中的内容</span><span class="sxs-lookup"><span data-stu-id="a55db-102">How to: Retrieve the Contents of the My Documents Directory in Visual Basic</span></span>
-<span data-ttu-id="a55db-103">可以使用 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> 对象读取许多“所有用户”目录，例如“我的文档”或“桌面”。</span><span class="sxs-lookup"><span data-stu-id="a55db-103">The <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> object can be used to read from many of the **All Users** directories, such as **My Documents** or **Desktop**.</span></span>  
+# <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a><span data-ttu-id="d7472-102">如何：在 Visual Basic 中检索“我的文档”目录中的内容</span><span class="sxs-lookup"><span data-stu-id="d7472-102">How to: Retrieve the Contents of the My Documents Directory in Visual Basic</span></span>
+<span data-ttu-id="d7472-103">可以使用 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> 对象读取许多“所有用户”目录，例如“我的文档”或“桌面”。</span><span class="sxs-lookup"><span data-stu-id="d7472-103">The <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> object can be used to read from many of the **All Users** directories, such as **My Documents** or **Desktop**.</span></span>  
   
-### <a name="to-read-from-the-my-documents-folder"></a><span data-ttu-id="a55db-104">读取“我的文档”文件夹</span><span class="sxs-lookup"><span data-stu-id="a55db-104">To read from the My Documents folder</span></span>  
+### <a name="to-read-from-the-my-documents-folder"></a><span data-ttu-id="d7472-104">读取“我的文档”文件夹</span><span class="sxs-lookup"><span data-stu-id="d7472-104">To read from the My Documents folder</span></span>  
   
--   <span data-ttu-id="a55db-105">可以使用 `ReadAllText`方法从特定目录中的每个文件中读取文本。</span><span class="sxs-lookup"><span data-stu-id="a55db-105">Use the `ReadAllText` method to read the text from each file in a specific directory.</span></span> <span data-ttu-id="a55db-106">以下代码指定一个目录和文件，然后使用 `ReadAllText` 将它们读入名为 `patients` 的字符串。</span><span class="sxs-lookup"><span data-stu-id="a55db-106">The following code specifies a directory and file and then uses `ReadAllText` to read them into the string named `patients`.</span></span>  
+-   <span data-ttu-id="d7472-105">可以使用 `ReadAllText`方法从特定目录中的每个文件中读取文本。</span><span class="sxs-lookup"><span data-stu-id="d7472-105">Use the `ReadAllText` method to read the text from each file in a specific directory.</span></span> <span data-ttu-id="d7472-106">以下代码指定一个目录和文件，然后使用 `ReadAllText` 将它们读入名为 `patients` 的字符串。</span><span class="sxs-lookup"><span data-stu-id="d7472-106">The following code specifies a directory and file and then uses `ReadAllText` to read them into the string named `patients`.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a><span data-ttu-id="a55db-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="a55db-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7472-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="d7472-107">See also</span></span>
+
 - <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>
