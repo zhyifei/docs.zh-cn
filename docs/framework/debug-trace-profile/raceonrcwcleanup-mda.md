@@ -11,32 +11,32 @@ helpviewer_keywords:
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2fe4a5a2886fdbbd36ee491ea66dbce353fb034
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 628790bb8229dc519589c122235f07a38ba57c1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100231"
 ---
-# <a name="raceonrcwcleanup-mda"></a><span data-ttu-id="7bace-102">raceOnRCWCleanup MDA</span><span class="sxs-lookup"><span data-stu-id="7bace-102">raceOnRCWCleanup MDA</span></span>
-<span data-ttu-id="7bace-103">当使用命令（如 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> 方法）发出一个调用来发布[运行时可调用包装](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 时，如果公共语言运行时 (CLR) 检测到该包装正在使用中，则激活 `raceOnRCWCleanup` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="7bace-103">The `raceOnRCWCleanup` managed debugging assistant (MDA) is activated when the common language runtime (CLR) detects that a [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) is in use when a call to release it is made using a command such as the <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> method.</span></span>  
+# <a name="raceonrcwcleanup-mda"></a><span data-ttu-id="5b58b-102">raceOnRCWCleanup MDA</span><span class="sxs-lookup"><span data-stu-id="5b58b-102">raceOnRCWCleanup MDA</span></span>
+<span data-ttu-id="5b58b-103">当使用命令（如 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> 方法）发出一个调用来发布[运行时可调用包装](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 时，如果公共语言运行时 (CLR) 检测到该包装正在使用中，则激活 `raceOnRCWCleanup` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="5b58b-103">The `raceOnRCWCleanup` managed debugging assistant (MDA) is activated when the common language runtime (CLR) detects that a [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) is in use when a call to release it is made using a command such as the <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> method.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="7bace-104">症状</span><span class="sxs-lookup"><span data-stu-id="7bace-104">Symptoms</span></span>  
- <span data-ttu-id="7bace-105">使用 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 或类似方法释放 RCW 期间或之后发生访问冲突或内存损坏。</span><span class="sxs-lookup"><span data-stu-id="7bace-105">Access violations or memory corruption during or after freeing an RCW using <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> or a similar method.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="5b58b-104">症状</span><span class="sxs-lookup"><span data-stu-id="5b58b-104">Symptoms</span></span>  
+ <span data-ttu-id="5b58b-105">使用 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 或类似方法释放 RCW 期间或之后发生访问冲突或内存损坏。</span><span class="sxs-lookup"><span data-stu-id="5b58b-105">Access violations or memory corruption during or after freeing an RCW using <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> or a similar method.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="7bace-106">原因</span><span class="sxs-lookup"><span data-stu-id="7bace-106">Cause</span></span>  
- <span data-ttu-id="7bace-107">正在另一个线程中或释放线程堆栈中使用 RCW。</span><span class="sxs-lookup"><span data-stu-id="7bace-107">The RCW is in use on another thread or on the freeing thread stack.</span></span>  <span data-ttu-id="7bace-108">无法释放使用中的 RCW。</span><span class="sxs-lookup"><span data-stu-id="7bace-108">An RCW that is in use cannot be released.</span></span>  
+## <a name="cause"></a><span data-ttu-id="5b58b-106">原因</span><span class="sxs-lookup"><span data-stu-id="5b58b-106">Cause</span></span>  
+ <span data-ttu-id="5b58b-107">正在另一个线程中或释放线程堆栈中使用 RCW。</span><span class="sxs-lookup"><span data-stu-id="5b58b-107">The RCW is in use on another thread or on the freeing thread stack.</span></span>  <span data-ttu-id="5b58b-108">无法释放使用中的 RCW。</span><span class="sxs-lookup"><span data-stu-id="5b58b-108">An RCW that is in use cannot be released.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="7bace-109">解决方法</span><span class="sxs-lookup"><span data-stu-id="7bace-109">Resolution</span></span>  
- <span data-ttu-id="7bace-110">不要释放在当前或在其他线程中可能使用的 RCW。</span><span class="sxs-lookup"><span data-stu-id="7bace-110">Do not free an RCW that could be in use either in the current or in other threads.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="5b58b-109">解决方法</span><span class="sxs-lookup"><span data-stu-id="5b58b-109">Resolution</span></span>  
+ <span data-ttu-id="5b58b-110">不要释放在当前或在其他线程中可能使用的 RCW。</span><span class="sxs-lookup"><span data-stu-id="5b58b-110">Do not free an RCW that could be in use either in the current or in other threads.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="7bace-111">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="7bace-111">Effect on the Runtime</span></span>  
- <span data-ttu-id="7bace-112">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="7bace-112">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="5b58b-111">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="5b58b-111">Effect on the Runtime</span></span>  
+ <span data-ttu-id="5b58b-112">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="5b58b-112">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="7bace-113">输出</span><span class="sxs-lookup"><span data-stu-id="7bace-113">Output</span></span>  
- <span data-ttu-id="7bace-114">描述错误的消息。</span><span class="sxs-lookup"><span data-stu-id="7bace-114">A message describing the error.</span></span>  
+## <a name="output"></a><span data-ttu-id="5b58b-113">Output</span><span class="sxs-lookup"><span data-stu-id="5b58b-113">Output</span></span>  
+ <span data-ttu-id="5b58b-114">描述错误的消息。</span><span class="sxs-lookup"><span data-stu-id="5b58b-114">A message describing the error.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="7bace-115">配置</span><span class="sxs-lookup"><span data-stu-id="7bace-115">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="5b58b-115">配置</span><span class="sxs-lookup"><span data-stu-id="5b58b-115">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -46,7 +46,8 @@ ms.locfileid: "54717241"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7bace-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="7bace-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5b58b-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="5b58b-116">See also</span></span>
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="7bace-117">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="7bace-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="7bace-118">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="7bace-118">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="5b58b-117">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="5b58b-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="5b58b-118">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="5b58b-118">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

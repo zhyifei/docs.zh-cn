@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5e86461973d24e9bd61df9ce27da5a614a49aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7be1bd2934fbb2e09a39c3042fa9ae314e89d629
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083759"
 ---
-# <a name="iceegenallocatemethodbuffer-method"></a><span data-ttu-id="4e29f-102">ICeeGen::AllocateMethodBuffer 方法</span><span class="sxs-lookup"><span data-stu-id="4e29f-102">ICeeGen::AllocateMethodBuffer Method</span></span>
-<span data-ttu-id="4e29f-103">创建一个方法，为指定的大小的缓冲区并获取该方法的相对虚拟地址。</span><span class="sxs-lookup"><span data-stu-id="4e29f-103">Creates a buffer of the specified size for a method, and gets the relative virtual address of the method.</span></span>  
+# <a name="iceegenallocatemethodbuffer-method"></a><span data-ttu-id="bef52-102">ICeeGen::AllocateMethodBuffer 方法</span><span class="sxs-lookup"><span data-stu-id="bef52-102">ICeeGen::AllocateMethodBuffer Method</span></span>
+<span data-ttu-id="bef52-103">创建一个方法，为指定的大小的缓冲区并获取该方法的相对虚拟地址。</span><span class="sxs-lookup"><span data-stu-id="bef52-103">Creates a buffer of the specified size for a method, and gets the relative virtual address of the method.</span></span>  
   
- <span data-ttu-id="4e29f-104">此方法已过时，不应使用。</span><span class="sxs-lookup"><span data-stu-id="4e29f-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="bef52-104">此方法已过时，不应使用。</span><span class="sxs-lookup"><span data-stu-id="bef52-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4e29f-105">语法</span><span class="sxs-lookup"><span data-stu-id="4e29f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bef52-105">语法</span><span class="sxs-lookup"><span data-stu-id="bef52-105">Syntax</span></span>  
   
 ```  
 HRESULT AllocateMethodBuffer (   
@@ -39,24 +39,25 @@ HRESULT AllocateMethodBuffer (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4e29f-106">参数</span><span class="sxs-lookup"><span data-stu-id="4e29f-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bef52-106">参数</span><span class="sxs-lookup"><span data-stu-id="bef52-106">Parameters</span></span>  
  `cchBuffer`  
- <span data-ttu-id="4e29f-107">[in]要创建的缓冲区的长度。</span><span class="sxs-lookup"><span data-stu-id="4e29f-107">[in] The length of the buffer to create.</span></span>  
+ <span data-ttu-id="bef52-107">[in]要创建的缓冲区的长度。</span><span class="sxs-lookup"><span data-stu-id="bef52-107">[in] The length of the buffer to create.</span></span>  
   
  `lpBuffer`  
- <span data-ttu-id="4e29f-108">[out]返回的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="4e29f-108">[out] The returned buffer.</span></span>  
+ <span data-ttu-id="bef52-108">[out]返回的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="bef52-108">[out] The returned buffer.</span></span>  
   
  `RVA`  
- <span data-ttu-id="4e29f-109">[out]相对虚拟地址的方法。</span><span class="sxs-lookup"><span data-stu-id="4e29f-109">[out] The relative virtual address of the method.</span></span>  
+ <span data-ttu-id="bef52-109">[out]相对虚拟地址的方法。</span><span class="sxs-lookup"><span data-stu-id="bef52-109">[out] The relative virtual address of the method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4e29f-110">要求</span><span class="sxs-lookup"><span data-stu-id="4e29f-110">Requirements</span></span>  
- <span data-ttu-id="4e29f-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4e29f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bef52-110">要求</span><span class="sxs-lookup"><span data-stu-id="bef52-110">Requirements</span></span>  
+ <span data-ttu-id="bef52-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bef52-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4e29f-112">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4e29f-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bef52-112">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bef52-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="4e29f-113">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="4e29f-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="bef52-113">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="bef52-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4e29f-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4e29f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="bef52-114">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="bef52-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="4e29f-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="4e29f-115">See also</span></span>
-- [<span data-ttu-id="4e29f-116">ICeeGen 接口</span><span class="sxs-lookup"><span data-stu-id="4e29f-116">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bef52-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="bef52-115">See also</span></span>
+
+- [<span data-ttu-id="bef52-116">ICeeGen 接口</span><span class="sxs-lookup"><span data-stu-id="bef52-116">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

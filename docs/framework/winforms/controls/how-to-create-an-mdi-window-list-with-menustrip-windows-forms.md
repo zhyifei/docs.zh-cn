@@ -8,35 +8,35 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: e58f35304f70c82973ebbc9928bae5a7477e9c53
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bfe84ccb30b13b8232172749454bf8f3625269ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139199"
 ---
-# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a><span data-ttu-id="83dde-102">如何：使用 （Windows 窗体） MenuStrip 创建 MDI 窗口列表</span><span class="sxs-lookup"><span data-stu-id="83dde-102">How to: Create an MDI Window List with MenuStrip (Windows Forms)</span></span>
-<span data-ttu-id="83dde-103">使用多文档界面 (MDI) 创建的应用程序可以打开多个文档在同一时间和复制并粘贴到另一个文档内容。</span><span class="sxs-lookup"><span data-stu-id="83dde-103">Use the multiple-document interface (MDI) to create applications that can open several documents at the same time and copy and paste content from one document to the other.</span></span>  
+# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a><span data-ttu-id="51802-102">如何：使用 （Windows 窗体） MenuStrip 创建 MDI 窗口列表</span><span class="sxs-lookup"><span data-stu-id="51802-102">How to: Create an MDI Window List with MenuStrip (Windows Forms)</span></span>
+<span data-ttu-id="51802-103">使用多文档界面 (MDI) 创建的应用程序可以打开多个文档在同一时间和复制并粘贴到另一个文档内容。</span><span class="sxs-lookup"><span data-stu-id="51802-103">Use the multiple-document interface (MDI) to create applications that can open several documents at the same time and copy and paste content from one document to the other.</span></span>  
   
- <span data-ttu-id="83dde-104">此过程演示如何创建父级的窗口菜单上的所有活动子窗体的列表。</span><span class="sxs-lookup"><span data-stu-id="83dde-104">This procedure shows you how to create a list of all the active child forms on the parent's Window menu.</span></span>  
+ <span data-ttu-id="51802-104">此过程演示如何创建父级的窗口菜单上的所有活动子窗体的列表。</span><span class="sxs-lookup"><span data-stu-id="51802-104">This procedure shows you how to create a list of all the active child forms on the parent's Window menu.</span></span>  
   
-### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a><span data-ttu-id="83dde-105">若要在 MenuStrip 创建 MDI 窗口列表</span><span class="sxs-lookup"><span data-stu-id="83dde-105">To create an MDI Window list on a MenuStrip</span></span>  
+### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a><span data-ttu-id="51802-105">若要在 MenuStrip 创建 MDI 窗口列表</span><span class="sxs-lookup"><span data-stu-id="51802-105">To create an MDI Window list on a MenuStrip</span></span>  
   
-1.  <span data-ttu-id="83dde-106">创建一个窗体并将其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="83dde-106">Create a form and set its <xref:System.Windows.Forms.Form.IsMdiContainer%2A> property to `true`.</span></span>  
+1.  <span data-ttu-id="51802-106">创建一个窗体并将其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="51802-106">Create a form and set its <xref:System.Windows.Forms.Form.IsMdiContainer%2A> property to `true`.</span></span>  
   
-2.  <span data-ttu-id="83dde-107">在窗体上添加一个 <xref:System.Windows.Forms.MenuStrip> 控件。</span><span class="sxs-lookup"><span data-stu-id="83dde-107">Add a <xref:System.Windows.Forms.MenuStrip> to the form.</span></span>  
+2.  <span data-ttu-id="51802-107">在窗体上添加一个 <xref:System.Windows.Forms.MenuStrip> 控件。</span><span class="sxs-lookup"><span data-stu-id="51802-107">Add a <xref:System.Windows.Forms.MenuStrip> to the form.</span></span>  
   
-3.  <span data-ttu-id="83dde-108">添加到两个顶级菜单项<xref:System.Windows.Forms.MenuStrip>并设置其<xref:System.Windows.Forms.Control.Text%2A>属性设置为`&File`和`&Window`。</span><span class="sxs-lookup"><span data-stu-id="83dde-108">Add two top-level menu items to the <xref:System.Windows.Forms.MenuStrip> and set their <xref:System.Windows.Forms.Control.Text%2A> properties to `&File` and `&Window`.</span></span>  
+3.  <span data-ttu-id="51802-108">添加到两个顶级菜单项<xref:System.Windows.Forms.MenuStrip>并设置其<xref:System.Windows.Forms.Control.Text%2A>属性设置为`&File`和`&Window`。</span><span class="sxs-lookup"><span data-stu-id="51802-108">Add two top-level menu items to the <xref:System.Windows.Forms.MenuStrip> and set their <xref:System.Windows.Forms.Control.Text%2A> properties to `&File` and `&Window`.</span></span>  
   
-4.  <span data-ttu-id="83dde-109">将子菜单项添加到 `&File` 菜单项，并将其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为 `&Open`。</span><span class="sxs-lookup"><span data-stu-id="83dde-109">Add a submenu item to the `&File` menu item and set its <xref:System.Windows.Forms.ToolStripItem.Text%2A> property to `&Open`.</span></span>  
+4.  <span data-ttu-id="51802-109">将子菜单项添加到 `&File` 菜单项，并将其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为 `&Open`。</span><span class="sxs-lookup"><span data-stu-id="51802-109">Add a submenu item to the `&File` menu item and set its <xref:System.Windows.Forms.ToolStripItem.Text%2A> property to `&Open`.</span></span>  
   
-5.  <span data-ttu-id="83dde-110">设置<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>的属性<xref:System.Windows.Forms.MenuStrip>到`&Window` <xref:System.Windows.Forms.ToolStripMenuItem>。</span><span class="sxs-lookup"><span data-stu-id="83dde-110">Set the <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> property of the <xref:System.Windows.Forms.MenuStrip> to the `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
+5.  <span data-ttu-id="51802-110">设置<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>的属性<xref:System.Windows.Forms.MenuStrip>到`&Window`<xref:System.Windows.Forms.ToolStripMenuItem>。</span><span class="sxs-lookup"><span data-stu-id="51802-110">Set the <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> property of the <xref:System.Windows.Forms.MenuStrip> to the `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
   
-6.  <span data-ttu-id="83dde-111">向项目添加窗体并将所需的控件添加到它，例如另一个<xref:System.Windows.Forms.MenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="83dde-111">Add a form to the project and add the control you want to it, such as another <xref:System.Windows.Forms.MenuStrip>.</span></span>  
+6.  <span data-ttu-id="51802-111">向项目添加窗体并将所需的控件添加到它，例如另一个<xref:System.Windows.Forms.MenuStrip>。</span><span class="sxs-lookup"><span data-stu-id="51802-111">Add a form to the project and add the control you want to it, such as another <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
-7.  <span data-ttu-id="83dde-112">为 `&New`<xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Click> 事件创建一个事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="83dde-112">Create an event handler for the <xref:System.Windows.Forms.Control.Click> event of the `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
+7.  <span data-ttu-id="51802-112">创建事件处理程序<xref:System.Windows.Forms.Control.Click>事件的`&New`<xref:System.Windows.Forms.ToolStripMenuItem>。</span><span class="sxs-lookup"><span data-stu-id="51802-112">Create an event handler for the <xref:System.Windows.Forms.Control.Click> event of the `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
   
-8.  <span data-ttu-id="83dde-113">事件处理程序中插入类似于以下内容，以创建和显示的新实例的代码`Form2`作为的 MDI 子级`Form1`。</span><span class="sxs-lookup"><span data-stu-id="83dde-113">Within the event handler, insert code similar to the following to create and display new instances of `Form2` as MDI children of `Form1`.</span></span>  
+8.  <span data-ttu-id="51802-113">事件处理程序中插入类似于以下内容，以创建和显示的新实例的代码`Form2`作为的 MDI 子级`Form1`。</span><span class="sxs-lookup"><span data-stu-id="51802-113">Within the event handler, insert code similar to the following to create and display new instances of `Form2` as MDI children of `Form1`.</span></span>  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As _  
@@ -61,7 +61,7 @@ ms.locfileid: "57716122"
     }  
     ```  
   
-9. <span data-ttu-id="83dde-114">将放置在以下代码`&New`<xref:System.Windows.Forms.ToolStripMenuItem>注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="83dde-114">Place code like the following in the `&New`<xref:System.Windows.Forms.ToolStripMenuItem> to register the event handler.</span></span>  
+9. <span data-ttu-id="51802-114">将放置在以下代码`&New`<xref:System.Windows.Forms.ToolStripMenuItem>注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="51802-114">Place code like the following in the `&New`<xref:System.Windows.Forms.ToolStripMenuItem> to register the event handler.</span></span>  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  
@@ -72,16 +72,17 @@ ms.locfileid: "57716122"
     this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);  
     ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="83dde-115">编译代码</span><span class="sxs-lookup"><span data-stu-id="83dde-115">Compiling the Code</span></span>  
- <span data-ttu-id="83dde-116">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="83dde-116">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="51802-115">编译代码</span><span class="sxs-lookup"><span data-stu-id="51802-115">Compiling the Code</span></span>  
+ <span data-ttu-id="51802-116">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="51802-116">This example requires:</span></span>  
   
--   <span data-ttu-id="83dde-117">名为 `Form1` 和 `Form2` 的两个 <xref:System.Windows.Forms.Form> 控件。</span><span class="sxs-lookup"><span data-stu-id="83dde-117">Two <xref:System.Windows.Forms.Form> controls named `Form1` and `Form2`.</span></span>  
+-   <span data-ttu-id="51802-117">名为 `Form1` 和 `Form2` 的两个 <xref:System.Windows.Forms.Form> 控件。</span><span class="sxs-lookup"><span data-stu-id="51802-117">Two <xref:System.Windows.Forms.Form> controls named `Form1` and `Form2`.</span></span>  
   
--   <span data-ttu-id="83dde-118">`Form1` 上名为 `menuStrip1` 的 <xref:System.Windows.Forms.MenuStrip> 控件和 `Form2` 上名为 `menuStrip2` 的 <xref:System.Windows.Forms.MenuStrip> 控件。</span><span class="sxs-lookup"><span data-stu-id="83dde-118">A <xref:System.Windows.Forms.MenuStrip> control on `Form1` named `menuStrip1`, and a <xref:System.Windows.Forms.MenuStrip> control on `Form2` named `menuStrip2`.</span></span>  
+-   <span data-ttu-id="51802-118">`Form1` 上名为 `menuStrip1` 的 <xref:System.Windows.Forms.MenuStrip> 控件和 `Form2` 上名为 `menuStrip2` 的 <xref:System.Windows.Forms.MenuStrip> 控件。</span><span class="sxs-lookup"><span data-stu-id="51802-118">A <xref:System.Windows.Forms.MenuStrip> control on `Form1` named `menuStrip1`, and a <xref:System.Windows.Forms.MenuStrip> control on `Form2` named `menuStrip2`.</span></span>  
   
--   <span data-ttu-id="83dde-119">对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="83dde-119">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="51802-119">对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="51802-119">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83dde-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="83dde-120">See also</span></span>
-- [<span data-ttu-id="83dde-121">如何：创建 MDI 父窗体</span><span class="sxs-lookup"><span data-stu-id="83dde-121">How to: Create MDI Parent Forms</span></span>](../advanced/how-to-create-mdi-parent-forms.md)
-- [<span data-ttu-id="83dde-122">如何：创建 MDI 子窗体</span><span class="sxs-lookup"><span data-stu-id="83dde-122">How to: Create MDI Child Forms</span></span>](../advanced/how-to-create-mdi-child-forms.md)
-- [<span data-ttu-id="83dde-123">MenuStrip 控件</span><span class="sxs-lookup"><span data-stu-id="83dde-123">MenuStrip Control</span></span>](menustrip-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="51802-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="51802-120">See also</span></span>
+
+- [<span data-ttu-id="51802-121">如何：创建 MDI 父窗体</span><span class="sxs-lookup"><span data-stu-id="51802-121">How to: Create MDI Parent Forms</span></span>](../advanced/how-to-create-mdi-parent-forms.md)
+- [<span data-ttu-id="51802-122">如何：创建 MDI 子窗体</span><span class="sxs-lookup"><span data-stu-id="51802-122">How to: Create MDI Child Forms</span></span>](../advanced/how-to-create-mdi-child-forms.md)
+- [<span data-ttu-id="51802-123">MenuStrip 控件</span><span class="sxs-lookup"><span data-stu-id="51802-123">MenuStrip Control</span></span>](menustrip-control-windows-forms.md)

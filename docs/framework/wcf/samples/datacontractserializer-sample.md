@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: 13cbcae4beda058daf9b2c50b1e4ded47f080082
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 30b104143a6305eb4f4a3c2b8d7760198d7c7525
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104671"
 ---
-# <a name="datacontractserializer-sample"></a><span data-ttu-id="25b4e-102">DataContractSerializer 示例</span><span class="sxs-lookup"><span data-stu-id="25b4e-102">DataContractSerializer Sample</span></span>
-<span data-ttu-id="25b4e-103">DataContractSerializer 示例演示为数据协定类执行常规序列化和反序列化服务的 <xref:System.Runtime.Serialization.DataContractSerializer>。</span><span class="sxs-lookup"><span data-stu-id="25b4e-103">The DataContractSerializer sample demonstrates the <xref:System.Runtime.Serialization.DataContractSerializer>, which performs general serialization and deserialization services for the data contract classes.</span></span> <span data-ttu-id="25b4e-104">此示例将创建`Record`对象，将其序列化到内存流，并返回到另一个内存流反序列化`Record`对象，以演示使用<xref:System.Runtime.Serialization.DataContractSerializer>。</span><span class="sxs-lookup"><span data-stu-id="25b4e-104">The sample creates a `Record` object, serializes it to a memory stream and deserializes the memory stream back to another `Record` object to demonstrate the use of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="25b4e-105">然后示例使用二进制编写器序列化 `Record` 对象以演示编写器如何影响序列化。</span><span class="sxs-lookup"><span data-stu-id="25b4e-105">The sample then serializes the `Record` object using a binary writer to demonstrate how the writer affects serialization.</span></span>  
+# <a name="datacontractserializer-sample"></a><span data-ttu-id="196c8-102">DataContractSerializer 示例</span><span class="sxs-lookup"><span data-stu-id="196c8-102">DataContractSerializer Sample</span></span>
+<span data-ttu-id="196c8-103">DataContractSerializer 示例演示为数据协定类执行常规序列化和反序列化服务的 <xref:System.Runtime.Serialization.DataContractSerializer>。</span><span class="sxs-lookup"><span data-stu-id="196c8-103">The DataContractSerializer sample demonstrates the <xref:System.Runtime.Serialization.DataContractSerializer>, which performs general serialization and deserialization services for the data contract classes.</span></span> <span data-ttu-id="196c8-104">此示例将创建`Record`对象，将其序列化到内存流，并返回到另一个内存流反序列化`Record`对象，以演示使用<xref:System.Runtime.Serialization.DataContractSerializer>。</span><span class="sxs-lookup"><span data-stu-id="196c8-104">The sample creates a `Record` object, serializes it to a memory stream and deserializes the memory stream back to another `Record` object to demonstrate the use of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="196c8-105">然后示例使用二进制编写器序列化 `Record` 对象以演示编写器如何影响序列化。</span><span class="sxs-lookup"><span data-stu-id="196c8-105">The sample then serializes the `Record` object using a binary writer to demonstrate how the writer affects serialization.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="25b4e-106">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="25b4e-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="196c8-106">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="196c8-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="25b4e-107">在下面的示例代码中显示 `Record` 的数据协定：</span><span class="sxs-lookup"><span data-stu-id="25b4e-107">The data contract for `Record` is shown in the following sample code.</span></span>  
+ <span data-ttu-id="196c8-107">在下面的示例代码中显示 `Record` 的数据协定：</span><span class="sxs-lookup"><span data-stu-id="196c8-107">The data contract for `Record` is shown in the following sample code.</span></span>  
   
 ```csharp  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -71,14 +71,14 @@ internal class Record
 }  
 ```  
   
- <span data-ttu-id="25b4e-108">该示例代码创建一个名为 `Record` 的 `record1` 对象，然后显示该对象。</span><span class="sxs-lookup"><span data-stu-id="25b4e-108">The sample code creates a `Record` object named `record1` then displays the object.</span></span>  
+ <span data-ttu-id="196c8-108">该示例代码创建一个名为 `Record` 的 `record1` 对象，然后显示该对象。</span><span class="sxs-lookup"><span data-stu-id="196c8-108">The sample code creates a `Record` object named `record1` then displays the object.</span></span>  
   
 ```csharp
 Record record1 = new Record(1, 2, "+", 3);  
 Console.WriteLine("Original record: {0}", record1.ToString());  
 ```  
   
- <span data-ttu-id="25b4e-109">然后示例使用 <xref:System.Runtime.Serialization.DataContractSerializer> 将 `record1` 序列化为内存流。</span><span class="sxs-lookup"><span data-stu-id="25b4e-109">The sample then uses the <xref:System.Runtime.Serialization.DataContractSerializer> to serialize `record1` into a memory stream.</span></span>  
+ <span data-ttu-id="196c8-109">然后示例使用 <xref:System.Runtime.Serialization.DataContractSerializer> 将 `record1` 序列化为内存流。</span><span class="sxs-lookup"><span data-stu-id="196c8-109">The sample then uses the <xref:System.Runtime.Serialization.DataContractSerializer> to serialize `record1` into a memory stream.</span></span>  
   
 ```csharp  
 MemoryStream stream1 = new MemoryStream();  
@@ -88,7 +88,7 @@ DataContractSerializer serializer = new DataContractSerializer(typeof(Record));
 serializer.WriteObject(stream1, record1);  
 ```  
   
- <span data-ttu-id="25b4e-110">接下来，示例使用 <xref:System.Runtime.Serialization.DataContractSerializer> 将内存流反序列化回一个新的 `Record` 对象并显示它。</span><span class="sxs-lookup"><span data-stu-id="25b4e-110">Next, the sample uses the <xref:System.Runtime.Serialization.DataContractSerializer> to deserialize the memory stream back into a new `Record` object and displays it.</span></span>  
+ <span data-ttu-id="196c8-110">接下来，示例使用 <xref:System.Runtime.Serialization.DataContractSerializer> 将内存流反序列化回一个新的 `Record` 对象并显示它。</span><span class="sxs-lookup"><span data-stu-id="196c8-110">Next, the sample uses the <xref:System.Runtime.Serialization.DataContractSerializer> to deserialize the memory stream back into a new `Record` object and displays it.</span></span>  
   
 ```csharp  
 stream1.Position = 0;  
@@ -99,7 +99,7 @@ Record record2 = (Record)serializer.ReadObject(stream1);
 Console.WriteLine("Deserialized record: {0}", record2.ToString());  
 ```  
   
- <span data-ttu-id="25b4e-111">在默认情况下，`DataContractSerializer` 使用 XML 的文本表示形式将对象编码为流。</span><span class="sxs-lookup"><span data-stu-id="25b4e-111">By default, the `DataContractSerializer` encodes objects into a stream using a textual representation of XML.</span></span> <span data-ttu-id="25b4e-112">但是，您可以通过传入不同的编写器来影响 XML 的编码。</span><span class="sxs-lookup"><span data-stu-id="25b4e-112">However, you can influence the encoding of the XML by passing in a different writer.</span></span> <span data-ttu-id="25b4e-113">本示例通过调用 <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A> 创建一个二进制编写器。</span><span class="sxs-lookup"><span data-stu-id="25b4e-113">The sample creates a binary writer by calling <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>.</span></span> <span data-ttu-id="25b4e-114">然后示例在调用 <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A> 时将编写器和记录对象传递到序列化程序。</span><span class="sxs-lookup"><span data-stu-id="25b4e-114">It then passes the writer and the record object to the serializer when it calls <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>.</span></span> <span data-ttu-id="25b4e-115">最后，示例刷新编写器并报告流的长度。</span><span class="sxs-lookup"><span data-stu-id="25b4e-115">Finally, the sample flushes the writer and reports on the length of the streams.</span></span>  
+ <span data-ttu-id="196c8-111">在默认情况下，`DataContractSerializer` 使用 XML 的文本表示形式将对象编码为流。</span><span class="sxs-lookup"><span data-stu-id="196c8-111">By default, the `DataContractSerializer` encodes objects into a stream using a textual representation of XML.</span></span> <span data-ttu-id="196c8-112">但是，您可以通过传入不同的编写器来影响 XML 的编码。</span><span class="sxs-lookup"><span data-stu-id="196c8-112">However, you can influence the encoding of the XML by passing in a different writer.</span></span> <span data-ttu-id="196c8-113">本示例通过调用 <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A> 创建一个二进制编写器。</span><span class="sxs-lookup"><span data-stu-id="196c8-113">The sample creates a binary writer by calling <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>.</span></span> <span data-ttu-id="196c8-114">然后示例在调用 <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A> 时将编写器和记录对象传递到序列化程序。</span><span class="sxs-lookup"><span data-stu-id="196c8-114">It then passes the writer and the record object to the serializer when it calls <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>.</span></span> <span data-ttu-id="196c8-115">最后，示例刷新编写器并报告流的长度。</span><span class="sxs-lookup"><span data-stu-id="196c8-115">Finally, the sample flushes the writer and reports on the length of the streams.</span></span>  
   
 ```csharp  
 MemoryStream stream2 = new MemoryStream();  
@@ -113,7 +113,7 @@ Console.WriteLine("Text Stream is {0} bytes long", stream1.Length);
 Console.WriteLine("Binary Stream is {0} bytes long", stream2.Length);  
 ```  
   
- <span data-ttu-id="25b4e-116">在运行该示例时，会显示原始记录和反序列化记录，接着是文本编码和二进制编码的长度之间的比较。</span><span class="sxs-lookup"><span data-stu-id="25b4e-116">When you run the sample, the original record and the deserialized record are displayed, followed by the comparison between the length of the text encoding and the binary encoding.</span></span> <span data-ttu-id="25b4e-117">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="25b4e-117">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="196c8-116">在运行该示例时，会显示原始记录和反序列化记录，接着是文本编码和二进制编码的长度之间的比较。</span><span class="sxs-lookup"><span data-stu-id="196c8-116">When you run the sample, the original record and the deserialized record are displayed, followed by the comparison between the length of the text encoding and the binary encoding.</span></span> <span data-ttu-id="196c8-117">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="196c8-117">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```console  
 Original record: Record: 1 + 2 = 3  
@@ -124,20 +124,19 @@ Binary Stream is 156 bytes long
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="25b4e-118">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="25b4e-118">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="196c8-118">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="196c8-118">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="25b4e-119">请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="25b4e-119">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="196c8-119">请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="196c8-119">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="25b4e-120">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="25b4e-120">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="196c8-120">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="196c8-120">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="25b4e-121">若要启动该示例，请通过在命令提示符处键入 client\bin\client.exe 启动客户端。</span><span class="sxs-lookup"><span data-stu-id="25b4e-121">To run the sample, start the client from the command prompt by typing client\bin\client.exe.</span></span>  
+3.  <span data-ttu-id="196c8-121">若要启动该示例，请通过在命令提示符处键入 client\bin\client.exe 启动客户端。</span><span class="sxs-lookup"><span data-stu-id="196c8-121">To run the sample, start the client from the command prompt by typing client\bin\client.exe.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="25b4e-122">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="25b4e-122">The samples may already be installed on your machine.</span></span> <span data-ttu-id="25b4e-123">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="25b4e-123">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="196c8-122">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="196c8-122">The samples may already be installed on your machine.</span></span> <span data-ttu-id="196c8-123">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="196c8-123">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="25b4e-124">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="25b4e-124">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="25b4e-125">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="25b4e-125">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="196c8-124">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="196c8-124">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="196c8-125">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="196c8-125">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  
-  

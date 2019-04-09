@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 9c293757b642f0a945097c4ea4299d97cadddbcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a69b3ae83d7f701428b3183f2b80e0d44a06537
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103618"
 ---
-# <a name="how-to-display-generated-sql"></a><span data-ttu-id="a58af-102">如何：显示生成的 SQL</span><span class="sxs-lookup"><span data-stu-id="a58af-102">How to: Display Generated SQL</span></span>
-<span data-ttu-id="a58af-103">你可以通过使用 <xref:System.Data.Linq.DataContext.Log%2A> 属性查看为查询生成的 SQL 代码和更改处理方式。</span><span class="sxs-lookup"><span data-stu-id="a58af-103">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="a58af-104">此方法对了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 功能和调试特定的问题可能很有用。</span><span class="sxs-lookup"><span data-stu-id="a58af-104">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
+# <a name="how-to-display-generated-sql"></a><span data-ttu-id="5a1ce-102">如何：显示生成的 SQL</span><span class="sxs-lookup"><span data-stu-id="5a1ce-102">How to: Display Generated SQL</span></span>
+<span data-ttu-id="5a1ce-103">您可以通过使用 <xref:System.Data.Linq.DataContext.Log%2A> 属性查看为查询生成的 SQL 代码和更改处理方式。</span><span class="sxs-lookup"><span data-stu-id="5a1ce-103">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="5a1ce-104">此方法对了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 功能和调试特定的问题可能很有用。</span><span class="sxs-lookup"><span data-stu-id="5a1ce-104">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a58af-105">示例</span><span class="sxs-lookup"><span data-stu-id="a58af-105">Example</span></span>  
- <span data-ttu-id="a58af-106">下面的示例使用 <xref:System.Data.Linq.DataContext.Log%2A> 属性在 SQL 代码执行前在控制台窗口中显示此代码。</span><span class="sxs-lookup"><span data-stu-id="a58af-106">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="a58af-107">您可以将此属性与查询、插入、更新和删除命令一起使用。</span><span class="sxs-lookup"><span data-stu-id="a58af-107">You can use this property with query, insert, update, and delete commands.</span></span>  
+## <a name="example"></a><span data-ttu-id="5a1ce-105">示例</span><span class="sxs-lookup"><span data-stu-id="5a1ce-105">Example</span></span>  
+ <span data-ttu-id="5a1ce-106">下面的示例使用 <xref:System.Data.Linq.DataContext.Log%2A> 属性在 SQL 代码执行前在控制台窗口中显示此代码。</span><span class="sxs-lookup"><span data-stu-id="5a1ce-106">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="5a1ce-107">您可以将此属性与查询、插入、更新和删除命令一起使用。</span><span class="sxs-lookup"><span data-stu-id="5a1ce-107">You can use this property with query, insert, update, and delete commands.</span></span>  
   
- <span data-ttu-id="a58af-108">在控制台窗口中显示的行是 Visual Basic 中执行时看到的内容或C#下面的代码。</span><span class="sxs-lookup"><span data-stu-id="a58af-108">The lines from the console window are what you see when you execute the Visual Basic or C# code that follows.</span></span>  
+ <span data-ttu-id="5a1ce-108">在控制台窗口中显示的行是 Visual Basic 中执行时看到的内容或C#下面的代码。</span><span class="sxs-lookup"><span data-stu-id="5a1ce-108">The lines from the console window are what you see when you execute the Visual Basic or C# code that follows.</span></span>  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -42,5 +42,6 @@ SEVES
  [!code-csharp[DLinqDebuggingSupport#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#1)]
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="a58af-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="a58af-109">See also</span></span>
-- [<span data-ttu-id="a58af-110">调试支持</span><span class="sxs-lookup"><span data-stu-id="a58af-110">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a><span data-ttu-id="5a1ce-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="5a1ce-109">See also</span></span>
+
+- [<span data-ttu-id="5a1ce-110">调试支持</span><span class="sxs-lookup"><span data-stu-id="5a1ce-110">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
