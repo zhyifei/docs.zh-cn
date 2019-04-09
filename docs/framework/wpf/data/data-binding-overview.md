@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081263"
 ---
 # <a name="data-binding-overview"></a>数据绑定概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定提供了简单而一致的方式，应用程序能够显示和与数据交互。 元素能够以 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 形式绑定到来自各种数据源的数据。 <xref:System.Windows.Controls.ContentControl>如 s<xref:System.Windows.Controls.Button>并<xref:System.Windows.Controls.ItemsControl>如 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>具有内置功能，使灵活的样式设置单个数据项的集合。 可基于数据生成排序、筛选和分组视图。  
@@ -23,8 +23,7 @@ ms.locfileid: "59055347"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的数据绑定功能与传统模型相比具有几个优点，包括本质上支持数据绑定的大量属性、灵活的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 数据 UI 表示形式以及业务逻辑与 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的完全分离。  
   
  本主题首先讨论基本概念[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的使用情况数据绑定，然后<xref:System.Windows.Data.Binding>类和数据绑定的其他功能。  
-  
-  
+
 <a name="what_is_data_binding"></a>   
 ## <a name="what-is-data-binding"></a>什么是数据绑定？  
  数据绑定是在应用程序 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 和业务逻辑之间建立连接的过程。 如果绑定具有正确的设置，并且数据提供适当的通知，则在数据更改其值时，绑定到该数据的元素会自动反映更改。 数据绑定还意味着，如果元素中数据的外部表示形式发生更改，则基础数据可以自动进行更新以反映更改。 例如，如果用户编辑中的值<xref:System.Windows.Controls.TextBox>元素，则基础数据值自动更新以反映所做的更改。  
@@ -232,8 +231,7 @@ ms.locfileid: "59055347"
 <a name="collection_views"></a>   
 ### <a name="collection-views"></a>集合视图  
  一次你<xref:System.Windows.Controls.ItemsControl>绑定到数据集合，您可能需要排序、 筛选或分组数据。 若要执行此操作，应使用集合视图，这是实现的类<xref:System.ComponentModel.ICollectionView>接口。  
-  
-  
+
 #### <a name="what-are-collection-views"></a>什么是集合视图？  
  集合视图这一层基于绑定源集合，它允许基于排序、筛选和分组查询来导航并显示源集合，而无需更改基础源集合本身。 集合视图还维护一个指向集合中当前项的指针。 如果源集合实现<xref:System.Collections.Specialized.INotifyCollectionChanged>接口，所做的更改引起<xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged>事件传播到视图。  
   
@@ -430,6 +428,7 @@ ms.locfileid: "59055347"
  可以设置附加的属性<xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType>上与绑定相关的对象，以接收特定绑定状态信息。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [WPF 版本 4.5 的新增功能](../getting-started/whats-new.md)
 - [绑定到 LINQ 查询结果](how-to-bind-to-the-results-of-a-linq-query.md)

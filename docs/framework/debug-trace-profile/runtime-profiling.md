@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17530537e6d74b247aaf8708efed28ef169f9d57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 036744362c414fe51c919b59c693d447c92a87c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141383"
 ---
 # <a name="runtime-profiling"></a>运行时分析
 分析是用于在任何开发或部署方案中收集性能数据的方法。 本节面向想要收集有关应用程序性能的信息的开发人员和系统管理员。  
@@ -67,4 +67,5 @@ ms.locfileid: "54491241"
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|为 `NextValue` 指定用于计算 `PerformanceCounter`的方法。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)

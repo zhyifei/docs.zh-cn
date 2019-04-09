@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
 ms.openlocfilehash: 5fc0105cffb5606f9382aca7b55d6544d04f9fe7
 ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/02/2019
 ms.locfileid: "58838152"
@@ -21,7 +21,7 @@ ms.locfileid: "58838152"
  若要公开的 COM 对象的最简单方法是使用 COM 类模板。 使用 COM 类模板创建一个新类，然后配置你的项目以生成为 COM 对象的类和互操作性层，并将其注册到操作系统。  
   
 > [!NOTE]
->  尽管您可以公开为 COM 对象以供使用的非托管代码在 Visual Basic 中创建的类，但它不是真正的 COM 对象并不能使用 Visual basic。 有关详细信息，请参阅[.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
+>  尽管您可以公开为 COM 对象以供使用的非托管代码在 Visual Basic 中创建的类，但它不是真正的 COM 对象并不能使用 Visual Basic。 有关详细信息，请参阅[.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: 875ed49e3a7dbe7205abb47ee1f2012d82826416
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f6b6fa0c111783dcdad0387aed7d40fb54fa7b26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078364"
 ---
 # <a name="how-to-display-pop-up-help"></a>如何：显示弹出帮助
 若要在 Windows 窗体上显示帮助的一种方法是通过**帮助**按钮，位于标题栏，可通过访问右侧<xref:System.Windows.Forms.Form.HelpButton%2A>属性。 此类型的“帮助”显示非常适用于对话框。 使用 <xref:System.Windows.Forms.Form.ShowDialog%2A> 方法适度显示的对话框在获取外部帮助系统时会遇到问题，因为必须先关闭模型对话框后才能切换到另一个窗口。 此外，使用**帮助**按钮，则需要无**最小化**按钮或**最大化**按钮的标题栏中所示。 这是一个标准对话框约定，而窗体通常具有**最小化**并**最大化**按钮。  
@@ -43,6 +43,7 @@ ms.locfileid: "57711468"
 6.  按**帮助**按钮的标题栏上，单击设置帮助字符串的控件。  
   
 ## <a name="see-also"></a>请参阅
+
 - [使用工具提示的控件帮助](control-help-using-tooltips.md)
 - [在 Windows 窗体中集成用户帮助](integrating-user-help-in-windows-forms.md)
 - [Windows 窗体](../index.md)

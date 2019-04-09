@@ -1,5 +1,5 @@
 ---
-title: 如何：创建、 初始化和配置跟踪开关
+title: 如何：创建、初始化和配置跟踪开关
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079131"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：创建、 初始化和配置跟踪开关
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：创建、初始化和配置跟踪开关
 跟踪开关用于启用、禁用和筛选跟踪输出。  
   
 <a name="create"></a>   
@@ -77,7 +77,7 @@ ms.locfileid: "54739610"
   
     -   **Visual Basic：** 在中**添加新项**对话框框中，选择**应用程序配置文件**。  
   
-         创建并打开应用程序配置文件。 这是一个根元素为 `<configuration>.` 的 XML 文档  
+         创建并打开应用程序配置文件。 这是一个其根元素为 XML 文档 `<configuration>.`  
   
     -   **Visual C#:** 在中**添加新项**对话框框中，选择**XML 文件**。 将此文件命名为 app.config。XML 编辑器中，在 XML 声明后，添加以下 XML：  
   
@@ -126,7 +126,8 @@ ms.locfileid: "54739610"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [跟踪和调试设置架构](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

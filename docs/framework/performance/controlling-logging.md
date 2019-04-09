@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f8e189dce2e5141f7a0743b37ed892540f3bb46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d3846e9e00158efbd4828053411b604dafc56e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091325"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 日志记录
 可以使用 Windows 事件跟踪 (ETW) 来记录公共语言运行时 (CLR) 事件。 可以使用以下工具来创建和查看跟踪：  
@@ -55,7 +55,7 @@ Provider                                 GUID
   
     -   `0x1CCBD` 指定将引发的事件的类别。  
   
-    -   `0x5` 设置记录的级别（在本例中为详细级别 (5)）。  
+    -   `0x5` 设置日志记录 （在本例中为 verbose (5)） 的级别。  
   
     -   `-ets` 参数指示 Logman 将命令发送给事件跟踪会话。  
   
@@ -109,5 +109,6 @@ Provider                                 GUID
      此命令可使 XPerf 将事件转储为可以查看的逗号分隔值 (CSV) 文件。 由于各个事件具有不同的字段，因此该 CSV 文件中的数据之前有多个标题行。 每行的第一个字段为事件类型，它指示应使用哪一个标题来确定字段的其余部分。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows 性能工具包](/windows-hardware/test/wpt/)
 - [公共语言运行时中的 ETW 事件](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

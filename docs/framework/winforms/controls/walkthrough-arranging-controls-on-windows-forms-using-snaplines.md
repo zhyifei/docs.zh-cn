@@ -1,5 +1,5 @@
 ---
-title: 演练：使用对齐线的 Windows 窗体上排列控件
+title: 演练：使用对齐线在 Windows 窗体上排列控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4d352ee5c431ba43bbe338a9caf7bd0716e91834
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703590"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139784"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线的 Windows 窗体上排列控件
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线在 Windows 窗体上排列控件
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 Windows 窗体设计器提供许多布局工具来实现此目的。 一个最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
   
  对齐线显示精确位置与其他控件的控件对齐。 它们还显示控件，指定的 Windows 用户界面指南之间的边距的建议的距离。 有关详细信息，请参阅[用户界面设计和开发](https://go.microsoft.com/FWLink/?LinkId=83878)。  
@@ -240,8 +240,9 @@ ms.locfileid: "57703590"
  有关 Windows 用户界面设计的信息，请参阅此书*Microsoft Windows 用户体验、 用户界面开发人员和设计人员的官方指南*Redmond，WA:Microsoft Press，1999年。 (USBN:0-7356-0566-1).  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [演练：布局 Windows 窗体控件与 Padding、 Margins 和 AutoSize 属性](windows-forms-controls-padding-autosize.md)
-- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
+- [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局](windows-forms-controls-padding-autosize.md)
+- [排列 Windows 窗体上的控件](arranging-controls-on-windows-forms.md)

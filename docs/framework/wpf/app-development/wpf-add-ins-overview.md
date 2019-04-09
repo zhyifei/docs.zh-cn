@@ -12,18 +12,16 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091611"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 外接程序概述
 <a name="Introduction"></a> .NET Framework 包括开发人员可用于创建支持外接程序扩展性的应用程序的外接程序模型。 借助此外接程序模型，可以创建与应用程序功能集成并进行扩展的外接程序。 在某些情况下，应用程序还需要显示外接程序提供的用户界面。本主题介绍 WPF 增加.NET Framework 外接程序模型若要启用这些方案，它、 其优点和局限性的体系结构的内容。  
-  
 
-  
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>系统必备  
  熟悉.NET Framework 外接程序模型是必需的。 有关详细信息，请参阅[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。  
@@ -167,7 +165,7 @@ ms.locfileid: "57365836"
  下面几个小节将详细介绍这些任务。  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>配置用于 ClickOnce 部署的管道和外接程序  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 将下载到 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 部署缓存中的安全文件夹并从该文件夹运行。 为了使 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 能够承载外接程序，还必须将管道和外接程序程序集下载到该安全文件夹。 为此，需要将应用程序清单配置为包含要下载的管道和外接程序程序集。 这在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中最容易实现，但为使 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 检测到管道程序集，管道和外接程序程序集需要位于宿主 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目的根文件夹中。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 下载到和从安全文件夹中运行[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]部署缓存。 为了使 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 能够承载外接程序，还必须将管道和外接程序程序集下载到该安全文件夹。 为此，需要将应用程序清单配置为包含要下载的管道和外接程序程序集。 这在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中最容易实现，但为使 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 检测到管道程序集，管道和外接程序程序集需要位于宿主 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目的根文件夹中。  
   
  因此，第一步是通过设置每个管道程序集和外接程序程序集项目的生成输出，向 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目的根文件夹生成管道和外接程序程序集。 下表显示管道程序集项目和外接程序程序集项目的生成输出路径，这些路径位于与宿主 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目相同的解决方案和根文件夹中。  
   
@@ -283,9 +281,10 @@ ms.locfileid: "57365836"
  默认情况下，当使用多个应用程序域时，每个应用程序所需的各种.NET Framework 程序集是所有加载到该应用程序的域。 因此，创建新应用程序域和在应用程序域中启动应用程序所需的时间可能会影响性能。 但是，.NET Framework 提供了一种方法，从而减少启动时间即指示应用程序在应用程序域之间共享程序集，如果他们已加载。 执行此操作通过使用<xref:System.LoaderOptimizationAttribute>属性，必须应用于入口点方法 (`Main`)。 这种情况下，只能使用代码来实现应用程序定义（请参阅[应用程序管理概述](application-management-overview.md)）。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.LoaderOptimizationAttribute>
 - [外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [应用程序域](../../app-domains/application-domains.md)
-- [.NET framework 远程处理概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [.NET Framework 远程处理概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [使对象可远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [帮助主题](how-to-topics.md)

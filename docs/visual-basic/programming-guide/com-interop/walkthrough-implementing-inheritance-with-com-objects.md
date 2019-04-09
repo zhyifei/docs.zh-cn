@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 ms.openlocfilehash: ee7258a78ad0a434bfad08eebd596a8b889e2304
 ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/02/2019
 ms.locfileid: "58826166"
@@ -69,7 +69,7 @@ ms.locfileid: "58826166"
 10. 创建并注册的 COM 对象，通过单击**使 ComObject1.dll**上**文件**菜单。  
   
     > [!NOTE]
-    >  尽管您可以公开为 COM 对象的 Visual basic 创建的类，但它不是真正的 COM 对象并不能在本演练中使用。 有关详细信息，请参阅[.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
+    >  尽管您可以公开为 COM 对象的 Visual Basic 创建的类，但它不是真正的 COM 对象并不能在本演练中使用。 有关详细信息，请参阅[.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
 ## <a name="interop-assemblies"></a>互操作程序集  
  在下面的过程中，您将创建一个互操作程序集，它作为非托管的代码 （如 COM 对象） 和 Visual Studio 使用的托管的代码之间的桥梁。 Visual Basic 创建的互操作程序集处理的详细信息，如使用 COM 对象的大部分*互操作封送处理*，打包参数和返回值为等效的数据的进程类型，因为它们将移动到和从 COM 对象。 在 Visual Basic 应用程序中的引用所指向的互操作程序集，不是实际的 COM 对象。  
