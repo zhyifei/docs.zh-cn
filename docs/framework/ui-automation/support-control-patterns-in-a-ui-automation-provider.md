@@ -8,37 +8,38 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-ms.openlocfilehash: b3fda706f4f2a4aa44b3627a6e6339ef0e3acb03
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: dd8bc880126cd6fa82f7f3a775edf47f0725b6d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123924"
 ---
-# <a name="support-control-patterns-in-a-ui-automation-provider"></a><span data-ttu-id="52c6c-102">在 UI 自动化提供程序中支持控件模式</span><span class="sxs-lookup"><span data-stu-id="52c6c-102">Support Control Patterns in a UI Automation Provider</span></span>
+# <a name="support-control-patterns-in-a-ui-automation-provider"></a><span data-ttu-id="1f1b9-102">在 UI 自动化提供程序中支持控件模式</span><span class="sxs-lookup"><span data-stu-id="1f1b9-102">Support Control Patterns in a UI Automation Provider</span></span>
 > [!NOTE]
->  <span data-ttu-id="52c6c-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="52c6c-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="52c6c-104">有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="52c6c-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="1f1b9-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="1f1b9-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="1f1b9-104">有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="1f1b9-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="52c6c-105">本主题演示如何在 UI 自动化提供程序上实现一个或多个控件模式，以便客户端应用程序可以操作控件并从中获取数据。</span><span class="sxs-lookup"><span data-stu-id="52c6c-105">This topic shows how to implement one or more control patterns on a UI Automation provider so that client applications can manipulate controls and get data from them.</span></span>  
+ <span data-ttu-id="1f1b9-105">本主题演示如何在 UI 自动化提供程序上实现一个或多个控件模式，以便客户端应用程序可以操作控件并从中获取数据。</span><span class="sxs-lookup"><span data-stu-id="1f1b9-105">This topic shows how to implement one or more control patterns on a UI Automation provider so that client applications can manipulate controls and get data from them.</span></span>  
   
-### <a name="support-control-patterns"></a><span data-ttu-id="52c6c-106">支持控件模式</span><span class="sxs-lookup"><span data-stu-id="52c6c-106">Support Control Patterns</span></span>  
+### <a name="support-control-patterns"></a><span data-ttu-id="1f1b9-106">支持控件模式</span><span class="sxs-lookup"><span data-stu-id="1f1b9-106">Support Control Patterns</span></span>  
   
-1.  <span data-ttu-id="52c6c-107">为元素应支持的控件模式实现相应的接口，例如为 为 <xref:System.Windows.Automation.Provider.IInvokeProvider> 实现 <xref:System.Windows.Automation.InvokePattern>。</span><span class="sxs-lookup"><span data-stu-id="52c6c-107">Implement the appropriate interfaces for the control patterns that the element should support, such as <xref:System.Windows.Automation.Provider.IInvokeProvider> for <xref:System.Windows.Automation.InvokePattern>.</span></span>  
+1.  <span data-ttu-id="1f1b9-107">为元素应支持的控件模式实现相应的接口，例如为 为 <xref:System.Windows.Automation.Provider.IInvokeProvider> 实现 <xref:System.Windows.Automation.InvokePattern>。</span><span class="sxs-lookup"><span data-stu-id="1f1b9-107">Implement the appropriate interfaces for the control patterns that the element should support, such as <xref:System.Windows.Automation.Provider.IInvokeProvider> for <xref:System.Windows.Automation.InvokePattern>.</span></span>  
   
-2.  <span data-ttu-id="52c6c-108">返回包含 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>实现中每个控件接口的实现的对象</span><span class="sxs-lookup"><span data-stu-id="52c6c-108">Return the object containing your implementation of each control interface in your implementation of <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType></span></span>  
+2.  <span data-ttu-id="1f1b9-108">返回包含的每个控件接口的实现中实现的对象</span><span class="sxs-lookup"><span data-stu-id="1f1b9-108">Return the object containing your implementation of each control interface in your implementation of</span></span> <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
   
-## <a name="example"></a><span data-ttu-id="52c6c-109">示例</span><span class="sxs-lookup"><span data-stu-id="52c6c-109">Example</span></span>  
- <span data-ttu-id="52c6c-110">下面的示例演示了对单项选择自定义列表框实现 <xref:System.Windows.Automation.Provider.ISelectionProvider> 。</span><span class="sxs-lookup"><span data-stu-id="52c6c-110">The following example shows an implementation of <xref:System.Windows.Automation.Provider.ISelectionProvider> for a single-selection custom list box.</span></span> <span data-ttu-id="52c6c-111">它返回三个属性并获取当前所选的项。</span><span class="sxs-lookup"><span data-stu-id="52c6c-111">It returns three properties and gets the currently selected item.</span></span>  
+## <a name="example"></a><span data-ttu-id="1f1b9-109">示例</span><span class="sxs-lookup"><span data-stu-id="1f1b9-109">Example</span></span>  
+ <span data-ttu-id="1f1b9-110">下面的示例演示了对单项选择自定义列表框实现 <xref:System.Windows.Automation.Provider.ISelectionProvider> 。</span><span class="sxs-lookup"><span data-stu-id="1f1b9-110">The following example shows an implementation of <xref:System.Windows.Automation.Provider.ISelectionProvider> for a single-selection custom list box.</span></span> <span data-ttu-id="1f1b9-111">它返回三个属性并获取当前所选的项。</span><span class="sxs-lookup"><span data-stu-id="1f1b9-111">It returns three properties and gets the currently selected item.</span></span>  
   
  [!code-csharp[UIAFragmentProvider_snip#119](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListPattern.cs#119)]
  [!code-vb[UIAFragmentProvider_snip#119](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListPattern.vb#119)]  
   
-## <a name="example"></a><span data-ttu-id="52c6c-112">示例</span><span class="sxs-lookup"><span data-stu-id="52c6c-112">Example</span></span>  
- <span data-ttu-id="52c6c-113">下面的示例演示了返回实现 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> 的类的 <xref:System.Windows.Automation.Provider.ISelectionProvider>的实现。</span><span class="sxs-lookup"><span data-stu-id="52c6c-113">The following example shows an implementation of <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> that returns the class implementing <xref:System.Windows.Automation.Provider.ISelectionProvider>.</span></span> <span data-ttu-id="52c6c-114">大多数列表框控件还支持其他模式，但在此示例中为空引用 (`Nothing`在 Microsoft Visual Basic.NET) 返回的所有其他模式标识符。</span><span class="sxs-lookup"><span data-stu-id="52c6c-114">Most list box controls would support other patterns as well, but in this example a null reference (`Nothing` in Microsoft Visual Basic .NET) is returned for all other pattern identifiers.</span></span>  
+## <a name="example"></a><span data-ttu-id="1f1b9-112">示例</span><span class="sxs-lookup"><span data-stu-id="1f1b9-112">Example</span></span>  
+ <span data-ttu-id="1f1b9-113">下面的示例演示了返回实现 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> 的类的 <xref:System.Windows.Automation.Provider.ISelectionProvider>的实现。</span><span class="sxs-lookup"><span data-stu-id="1f1b9-113">The following example shows an implementation of <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> that returns the class implementing <xref:System.Windows.Automation.Provider.ISelectionProvider>.</span></span> <span data-ttu-id="1f1b9-114">大多数列表框控件还支持其他模式，但在此示例中为空引用 (`Nothing`在 Microsoft Visual Basic.NET) 返回的所有其他模式标识符。</span><span class="sxs-lookup"><span data-stu-id="1f1b9-114">Most list box controls would support other patterns as well, but in this example a null reference (`Nothing` in Microsoft Visual Basic .NET) is returned for all other pattern identifiers.</span></span>  
   
  [!code-csharp[UIAFragmentProvider_snip#120](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#120)]
  [!code-vb[UIAFragmentProvider_snip#120](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#120)]  
   
-## <a name="see-also"></a><span data-ttu-id="52c6c-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="52c6c-115">See also</span></span>
-- [<span data-ttu-id="52c6c-116">UI 自动化提供程序概述</span><span class="sxs-lookup"><span data-stu-id="52c6c-116">UI Automation Providers Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [<span data-ttu-id="52c6c-117">服务器端 UI 自动化提供程序实现</span><span class="sxs-lookup"><span data-stu-id="52c6c-117">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+## <a name="see-also"></a><span data-ttu-id="1f1b9-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="1f1b9-115">See also</span></span>
+
+- [<span data-ttu-id="1f1b9-116">UI 自动化提供程序概述</span><span class="sxs-lookup"><span data-stu-id="1f1b9-116">UI Automation Providers Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [<span data-ttu-id="1f1b9-117">服务器端 UI 自动化提供程序的实现</span><span class="sxs-lookup"><span data-stu-id="1f1b9-117">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
