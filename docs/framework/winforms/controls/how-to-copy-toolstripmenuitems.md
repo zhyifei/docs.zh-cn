@@ -1,19 +1,19 @@
 ---
-title: 如何：复制 Toolstripmenuitem
+title: 如何：复制 ToolStripMenuItem
 ms.date: 03/30/2017
 helpviewer_keywords:
 - menu items [Windows Forms], copying and pasting
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: 18077f542b1b49f8e81e68fc1e7a5d3e1e417a21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 94dc1271468661801d07b341214b03bc31bb3099
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116345"
 ---
-# <a name="how-to-copy-toolstripmenuitems"></a>如何：复制 Toolstripmenuitem
+# <a name="how-to-copy-toolstripmenuitems"></a>如何：复制 ToolStripMenuItem
 在设计时，你可以将整个顶级菜单及其子菜单项复制到 <xref:System.Windows.Forms.MenuStrip>上的其他位置。 还可以复制顶级菜单之间的单个菜单项或在菜单中更改菜单项的位置。  
   
 ### <a name="to-copy-a-top-level-menu-and-its-submenu-items-to-another-top-level-location"></a>若要将顶级菜单及其子菜单项复制到另一个顶级位置  
@@ -43,6 +43,7 @@ ms.locfileid: "57713873"
      复制的子菜单项将插入到所选子菜单项之前。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [MenuStrip 控件概述](menustrip-control-overview-windows-forms.md)

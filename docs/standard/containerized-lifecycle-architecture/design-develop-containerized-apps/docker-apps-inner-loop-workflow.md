@@ -4,12 +4,12 @@ description: 了解开发 Docker 应用程序的"内部循环"工作流。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676663"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920904"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 应用的内部循环开发工作流
 
@@ -105,7 +105,7 @@ Microsoft 提供了 Visual Studio Code 中，这是一个轻量级代码编辑�
 
 图 4-24。 添加使用 docker 文件**添加 Docker 文件复制到工作区命令**
 
-当添加 DockerFile 时，指定要使用的基础 Docker 映像 (如使用`FROM microsoft/aspnetcore`)。 你通常将生成自定义映像从在任何官方存储库获取的基本映像之上[Docker Hub 注册表](https://hub.docker.com/)(如[适用于.NET Core 映像](https://hub.docker.com/r/microsoft/dotnet/)或一个[适用于 Node.js](https://hub.docker.com/_/node/)).
+当添加 DockerFile 时，指定要使用的基础 Docker 映像 (如使用`FROM mcr.microsoft.com/dotnet/core/aspnet`)。 你通常将生成自定义映像从在任何官方存储库获取的基本映像之上[Docker Hub 注册表](https://hub.docker.com/)(如[适用于.NET Core 映像](https://hub.docker.com/_/microsoft-dotnet-core/)或一个[适用于 Node.js](https://hub.docker.com/_/node/)).
 
 ***使用现有的官方 Docker 映像***
 
@@ -115,7 +115,7 @@ Microsoft 提供了 Visual Studio Code 中，这是一个轻量级代码编辑�
 
 ```Dockerfile
 # Base Docker image to use  
-FROM microsoft/dotnet:2.1-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-在这种情况下，映像基于根据行的官方 ASP.NET Core Docker 映像 （多体系结构适用于 Linux 和 Windows），版本 2.1 `FROM microsoft/dotnet:2.1-aspnetcore-runtime`。 (有关此主题的详细信息，请参阅[ASP.NET Core Docker 映像](https://hub.docker.com/r/microsoft/aspnetcore/)页并[.NET Core Docker 映像](https://hub.docker.com/r/microsoft/dotnet/)页)。
+在这种情况下，映像基于根据行的官方 ASP.NET Core Docker 映像 （多体系结构适用于 Linux 和 Windows），版本 2.1 `FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`。 (有关此主题的详细信息，请参阅[ASP.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)页并[.NET Core Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core/)页)。
 
 在 DockerFile，还可以指示 Docker 侦听在运行时 （如端口 80） 将使用的 TCP 端口。
 
@@ -143,9 +143,9 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 **使用多体系结构映像存储库**
 
-存储库中的单一映像名称可以包含平台变量，如 Linux 映像和 Windows 映像。 此功能允许 Microsoft （基础映像创建者） 等供应商创建涵盖多个平台 （Linux 和 Windows） 的单个存储库。 例如， [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) Docker 中心注册表中的可用存储库使用的同一映像名称提供适用于 Linux 和 Windows Nano Server 的支持。
+存储库中的单一映像名称可以包含平台变量，如 Linux 映像和 Windows 映像。 此功能允许 Microsoft （基础映像创建者） 等供应商创建涵盖多个平台 （Linux 和 Windows） 的单个存储库。 例如， [dotnet/核心/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) Docker 中心注册表中的可用存储库使用的同一映像名称提供适用于 Linux 和 Windows Nano Server 的支持。
 
-拉取[microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/)映像从 Windows 主机拉取 Windows 变体，而从 Linux 主机拉取同一映像名称拉取 Linux 变体。
+拉取[dotnet/核心/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)映像从 Windows 主机拉取 Windows 变体，而从 Linux 主机拉取同一映像名称拉取 Linux 变体。
 
 ***从头开始创建您的基础映像***
 
@@ -216,7 +216,7 @@ Redis 服务使用[最新的公共 redis 映像](https://hub.docker.com/_/redis/
 
 如果您的应用程序具有单个容器，只需通过将其部署到 Docker 主机 （VM 或物理服务器） 运行。 但是，如果您的应用程序由多个服务组成，则需要*compose 它*、 过。 让我们查看不同的选项。
 
-***选项 a:运行单个容器或服务***
+***选项 A：运行单个容器或服务***
 
 可以通过使用 docker 运行命令，如下所示运行 Docker 映像：
 
@@ -226,7 +226,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 为此特定部署中，我们将重定向请求发送到端口 80 到内部端口 5000。 现在该应用程序侦听的外部端口 80 主机级别。
 
-***选项 b:编写和运行多容器应用程序***
+***选项 B：编写和运行多容器应用程序***
 
 在大多数企业方案中，将多个服务组成的 Docker 应用程序。 对于这些情况下，可以运行`docker-compose up`命令 (图 4-27)，将使用可能在之前创建的 docker-compose.yml 文件。 运行此命令将部署及其相关容器的所有组合应用程序。
 

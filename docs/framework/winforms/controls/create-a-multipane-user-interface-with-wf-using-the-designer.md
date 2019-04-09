@@ -1,19 +1,19 @@
 ---
-title: 如何：用 Windows 窗体使用设计器创建多窗格用户界面
+title: 如何：通过使用设计器使用 Windows 窗体创建多窗格用户界面
 ms.date: 03/30/2017
 helpviewer_keywords:
 - user interface [Windows Forms], multipane
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 1ad446fde4ccfc9ad9c48e619321deed044f1014
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2b72d972d679a47213c0d5ed4270d2c623d713ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082927"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>如何：用 Windows 窗体使用设计器创建多窗格用户界面
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>如何：通过使用设计器使用 Windows 窗体创建多窗格用户界面
 在下面的过程中，将创建类似于在 Microsoft Outlook 中使用与多窗格用户界面**文件夹**列表中，**消息**窗格中，和一个**预览**窗格。 这种排列方式被实现主要通过处理该窗体控件停靠。  
   
  停靠控件时，您可以确定控件固定的父容器的边缘。 因此，如果您设置<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.Right>，将在该控件的右边缘停靠到其父控件的右边缘。 此外，该控件的停靠的边缘调整大小以匹配的它的容器控件。 详细了解如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性的工作原理，请参阅[如何：在 Windows 窗体上停靠控件](how-to-dock-controls-on-windows-forms.md)。  
@@ -47,5 +47,6 @@ ms.locfileid: "57713769"
      此时应用程序开发中了精心设计复杂的用户界面。 下一步是继续进行编程的应用程序本身，可能是通过连接<xref:System.Windows.Forms.TreeView>控件和<xref:System.Windows.Forms.ListView>到某种类型的数据源的控件。 有关连接到数据控件的详细信息，请参阅[数据绑定和 Windows 窗体](../data-binding-and-windows-forms.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 控件](splitcontainer-control-windows-forms.md)

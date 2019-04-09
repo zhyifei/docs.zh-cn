@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a9ac7fcc3ea4da699111ac288a5786e9f9f8b572
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410156"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194807"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 浏览器应用程序概述
 <a name="introduction"></a>
@@ -187,5 +187,6 @@ ms.locfileid: "58410156"
  此外，改进了的 ClickOnce 下载序列并发最多 10%改进开始时间。 ClickOnce 下载并验证之后清单、 启动应用程序下载和进度栏将开始更新。  
   
 ## <a name="see-also"></a>请参阅
+
 - [将 Visual Studio 配置为通过调试 XAML 浏览器应用程序来调用 Web 服务](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [部署 WPF 应用程序](deploying-a-wpf-application-wpf.md)

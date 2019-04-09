@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 217da219dc49c588a7f6bc8d32048553f179d67f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127448"
 ---
 # <a name="data-transfer-architectural-overview"></a>数据传输体系结构概述
 Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它可以接收消息，处理消息，根据用户代码调度消息以便进一步操作，或者从用户代码给定的数据构造消息并将消息发送到目标。 本主题旨在向高级开发人员说明用于处理消息和所包含数据的体系结构。 有关如何发送和接收数据的面向任务的更简单介绍，请参阅 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
@@ -81,8 +81,8 @@ Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它�
 |------------------|--------------------------|--------------------------------------------------|-------------------------------------------------------|  
 |传出，从非流处理编程模型创建|写入消息所需的数据（例如，序列化消息所需的对象和 <xref:System.Runtime.Serialization.DataContractSerializer> 实例）*|用于基于存储的数据写出消息的自定义逻辑（例如，在使用的序列化程序 `WriteObject` 上调用 `DataContractSerializer` ）*|调用 `OnWriteBodyContents`，缓冲结果，通过缓冲区返回 XML 读取器|  
 |传出，从流处理编程模型创建|具有要写入数据的 `Stream` *|使用 <xref:System.Xml.IStreamProvider> 机制从存储的流中写出数据*|调用 `OnWriteBodyContents`，缓冲结果，通过缓冲区返回 XML 读取器|  
-|从流通道堆栈传入|一个 `Stream` 对象，表示通过网络传入的、具有 <xref:System.Xml.XmlReader> 的数据|使用 `XmlReader` 从存储的 `WriteNode`中写出内容|返回存储的 `XmlReader`|  
-|从非流处理通道堆栈传入|一个缓冲区，其中包含具有 `XmlReader` 的正文数据|使用 `XmlReader` 从存储的 `WriteNode`中写出内容|返回存储的 lang|  
+|从流通道堆栈传入|一个 `Stream` 对象，表示通过网络传入的、具有 <xref:System.Xml.XmlReader> 的数据|从存储中写出内容`XmlReader`使用 `WriteNode`|返回存储 `XmlReader`|  
+|从非流处理通道堆栈传入|一个缓冲区，其中包含具有 `XmlReader` 的正文数据|从存储写出内容`XmlReader`使用 `WriteNode`|返回存储的 lang|  
   
  \* 这些项不直接在实现`Message`子类，但在子类中<xref:System.ServiceModel.Channels.BodyWriter>类。 有关 <xref:System.ServiceModel.Channels.BodyWriter>的详细信息，请参阅 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
   
@@ -135,7 +135,7 @@ Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它�
   
  如前所述，这些操作可能有所不同，例如：通过各种协议发送或接收网络数据包、在数据库中读取或写入消息、在“消息队列”队列中对消息进行排队或取消排队，等等。 所有这些操作都有一个共同点： 它们需要 WCF 之间进行转换`Message`实例和可以发送，接收，读取、 写入的字节数的组、 排队或取消排队。 将 `Message` 转换为字节组的过程称为“编码” ，从字节组创建 `Message` 的逆过程称为“解码” 。  
   
- 大多数传输通道都使用称为“消息编码器”  的组件来完成编码和解码工作。 消息编码器是 <xref:System.ServiceModel.Channels.MessageEncoder> 类的子类。 `MessageEncoder` 包括各种 `ReadMessage` 和 `WriteMessage` 方法重载，可在 `Message` 和字节组之间转换。  
+ 大多数传输通道都使用称为“消息编码器”  的组件来完成编码和解码工作。 消息编码器是 <xref:System.ServiceModel.Channels.MessageEncoder> 类的子类。 `MessageEncoder` 包括各种`ReadMessage`并`WriteMessage`方法重载之间进行转换`Message`和字节组。  
   
  在发送端，缓冲传输通道将从上面通道中接收的 `Message` 对象传递到 `WriteMessage`。 该通道返回字节数组，然后使用此数组执行其操作（如将这些字节包装为有效的 TCP 数据包并将这些数据包发送到正确目标）。 流传输通道首先创建一个 `Stream` （例如通过传出 TCP 连接），然后传递需要的 `Stream` 和 `Message` 以便发送相应的 `WriteMessage` 重载，从而写出消息。  
   
@@ -268,9 +268,10 @@ Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它�
   
  WCF 支持用于序列化和反序列化参数和消息部分的"现成"的两个序列化技术：<xref:System.Runtime.Serialization.DataContractSerializer>和`XmlSerializer`。 另外，您也可以编写自定义序列化程序。 但是，WCF 的其他部分 (如泛型`GetBody`方法或 SOAP 错误序列化) 可能会限制为仅使用<xref:System.Runtime.Serialization.XmlObjectSerializer>子类 (<xref:System.Runtime.Serialization.DataContractSerializer>并<xref:System.Runtime.Serialization.NetDataContractSerializer>，但不是<xref:System.Xml.Serialization.XmlSerializer>)，甚至已经硬编码为仅使用<xref:System.Runtime.Serialization.DataContractSerializer>。  
   
- `XmlSerializer` 是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务中使用的序列化引擎。 `DataContractSerializer` 是理解新数据协定编程模型的新序列化引擎。 `DataContractSerializer` 默认选择，可以通过使用 `XmlSerializer` 特性对每个操作选择使用 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 。  
+ `XmlSerializer` 是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务中使用的序列化引擎。 `DataContractSerializer` 是理解新数据协定编程模型的新序列化引擎。 `DataContractSerializer` 是默认选项，以及要使用所选`XmlSerializer`可以对每个操作的基础使用<xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A>属性。  
   
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 和 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 是分别负责为 `DataContractSerializer` 和 `XmlSerializer`插入消息格式化程序的操作行为。 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行为实际上可操作从 <xref:System.Runtime.Serialization.XmlObjectSerializer>派生的任何序列化程序，包括 <xref:System.Runtime.Serialization.NetDataContractSerializer> （在“使用独立序列化”中进行详细说明）。 此行为调用 `CreateSerializer` 虚拟方法重载之一以获取序列化程序。 若要插入其他序列化程序，请创建一个新的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 子类并重写两个 `CreateSerializer` 重载。  
+ <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 并<xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>负责操作行为中的消息格式化程序插入`DataContractSerializer`和`XmlSerializer`分别。 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行为实际上可操作从 <xref:System.Runtime.Serialization.XmlObjectSerializer>派生的任何序列化程序，包括 <xref:System.Runtime.Serialization.NetDataContractSerializer> （在“使用独立序列化”中进行详细说明）。 此行为调用 `CreateSerializer` 虚拟方法重载之一以获取序列化程序。 若要插入其他序列化程序，请创建一个新的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 子类并重写两个 `CreateSerializer` 重载。  
   
 ## <a name="see-also"></a>请参阅
+
 - [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

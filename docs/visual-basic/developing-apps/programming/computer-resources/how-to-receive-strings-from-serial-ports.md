@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], retrieving from serial ports
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
-ms.openlocfilehash: 9c5fc0e9ddd42543d2f1e0b92c818b22909d50d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1a7aa88cfb90f347caed24bec0b5123dafb4c533
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971658"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822838"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>如何：在 Visual Basic 中从串行端口接收字符串
 本主题介绍在 Visual Basic 中如何使用 `My.Computer.Ports` 从计算机的串行端口接收字符串。  
@@ -64,6 +64,7 @@ ms.locfileid: "56971658"
  此示例使用 `Try...Catch...Finally` 块确保应用程序关闭端口以及捕获任何超时异常。 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
 - [如何：使用连接到串行端口的调制解调器拨号](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)

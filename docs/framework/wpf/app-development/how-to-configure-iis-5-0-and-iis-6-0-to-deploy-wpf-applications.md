@@ -1,5 +1,5 @@
 ---
-title: 如何：配置 IIS 5.0 和 IIS 6.0 以部署 WPF 应用程序
+title: 如何：将 IIS 5.0 和 IIS 6.0 配置为部署 WPF 应用程序
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -13,19 +13,18 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: a257da5c229c925fbc653c015ffc8d4b5d744651
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6fa00c4ced8c05d056703560e5740689c6dcfe39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096285"
 ---
-# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>如何：配置 IIS 5.0 和 IIS 6.0 以部署 WPF 应用程序
+# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>如何：将 IIS 5.0 和 IIS 6.0 配置为部署 WPF 应用程序
 
 可以从大多数 Web 服务器部署 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序，前提是这些服务器配置了相应的 [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 类型。 默认情况下，[!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] 配置有这些 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 类型，但 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 和 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] 未配置。
 
 本主题介绍如何配置 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 和 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] 以部署 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。
-
 
 > [!NOTE]
 > 你可以检查*UserAgent*注册表，以确定系统是否已安装.NET Framework 中的字符串。 有关详细信息和检查的脚本*UserAgent*字符串以确定是否在系统上安装.NET Framework，请参阅[检测是否安装.NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)。

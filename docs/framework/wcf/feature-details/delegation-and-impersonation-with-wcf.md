@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 86f7f485c289d1641605ab538f8500418b77cfd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663305"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122234"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF 的委派和模拟
 模拟 是一种常用技术，服务可使用该技术限制客户端对服务域资源的访问。 服务域资源可以是计算机资源，如本地文件（模拟），也可以是其他计算机上的资源，如文件共享（委托）。 有关示例应用程序，请参见 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 有关如何使用模拟的示例，请参阅[如何：模拟客户端在服务上的](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
@@ -37,9 +37,9 @@ ms.locfileid: "54663305"
 ### <a name="cached-token-impersonation"></a>缓存的令牌模拟  
  您可以对以下各项执行缓存的令牌模拟：  
   
--   使用 Windows 客户端凭据的<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>和 <xref:System.ServiceModel.NetTcpBinding> 。  
+-   <xref:System.ServiceModel.WSHttpBinding><xref:System.ServiceModel.WSDualHttpBinding>，和<xref:System.ServiceModel.NetTcpBinding>与 Windows 客户端凭据。  
   
--   <xref:System.ServiceModel.BasicHttpBinding> 设置为 <xref:System.ServiceModel.BasicHttpSecurityMode> 凭据的 <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> ，或任何其他标准绑定，其中客户端提供用户名凭据（服务可以将该凭据映射到有效的 Windows 帐户）。  
+-   <xref:System.ServiceModel.BasicHttpBinding> 与<xref:System.ServiceModel.BasicHttpSecurityMode>设置为<xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential>凭据或任何其他标准的绑定，其中客户端提供服务可以映射到有效的 Windows 帐户的用户名凭据。  
   
 -   使用 Windows 凭据并且 <xref:System.ServiceModel.Channels.CustomBinding> 设置为 `requireCancellation` 的任何 `true`。 （此属性在以下类中可用：<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>、<xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> 和 <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>。）如果在绑定上使用安全对话，则安全对话还必须将 `requireCancellation` 属性设置为 `true`。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "54663305"
 ### <a name="s4u-based-impersonation"></a>基于 S4U 的模拟  
  您可以对以下各项执行基于 S4U 的模拟：  
   
--   使用证书客户端凭据（服务可以将该凭据映射到有效的 Windows 帐户）的<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>和 <xref:System.ServiceModel.NetTcpBinding> 。  
+-   <xref:System.ServiceModel.WSHttpBinding><xref:System.ServiceModel.WSDualHttpBinding>，和<xref:System.ServiceModel.NetTcpBinding>与该服务可以将映射到有效的 Windows 帐户的证书客户端凭据。  
   
 -   使用 Windows 凭据并且 <xref:System.ServiceModel.Channels.CustomBinding> 属性设置为 `requireCancellation` 的任何 `false`。  
   
@@ -206,6 +206,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 -   [Kerberos Protocol Transition and Constrained Delegation（Kerberos 协议传输和受约束的委托）](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>
 - <xref:System.ServiceModel.ImpersonationOption>
@@ -219,7 +220,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.ChannelFactory%601>
 - <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
-- [将模拟用于传输安全性](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+- [将模拟用于传输安全](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [模拟客户端](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
-- [如何：模拟服务上的客户端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [如何：在服务上模拟客户端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

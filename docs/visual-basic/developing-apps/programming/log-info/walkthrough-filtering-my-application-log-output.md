@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 9f1f0efd6190ac0ced0f83db747e3c4eb81c4975
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f38217a5385b9d736eaa744a73024f210eb8f553
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978314"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829366"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>演练：筛选 My.Application.Log 输出 (Visual Basic)
 本演练演示如何更改对 `My.Application.Log` 对象的默认日志筛选，以控制哪些信息可从 `Log` 对象传递到侦听器以及哪些信息可由侦听器编写。 生成应用程序后仍可以更改日志记录行为，因为配置信息存储在应用程序的配置文件中。  
@@ -248,6 +248,7 @@ ms.locfileid: "56978314"
  有关在部署后更改日志设置的详细信息，请参阅[使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [演练：确定 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
 - [演练：更改 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
 - [演练：创建自定义日志侦听器](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)

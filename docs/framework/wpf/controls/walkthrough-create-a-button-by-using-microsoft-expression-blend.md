@@ -6,12 +6,12 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: cd143b55190ce398cc33e57a832ae85aabc36c41
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f969e13ba50c2aadd170bdb28716213056d62cad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352693"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100114"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>演练：使用 Microsoft Expression Blend 创建按钮
 本演练将引导你完成创建过程[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用 Microsoft Expression Blend 的自定义的按钮。  
@@ -248,6 +248,7 @@ ms.locfileid: "57352693"
 -   杂项： 创建渐变添加 BitmapEffects，使用转换，并设置对象的基本属性。  
   
 ## <a name="see-also"></a>请参阅
+
 - [使用 XAML 创建按钮](walkthrough-create-a-button-by-using-xaml.md)
 - [样式设置和模板化](styling-and-templating.md)
 - [动画概述](../graphics-multimedia/animation-overview.md)

@@ -2,12 +2,12 @@
 title: 安装“消息队列 (MSMQ)”
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 2aae92ba6e373af2d8bc9cff0b4c9d317ba10136
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2edd293d8616c2e3c140f909728d87437d20b34c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588020"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101492"
 ---
 # <a name="installing-message-queuing-msmq"></a>安装“消息队列 (MSMQ)”
 以下过程介绍如何安装“消息队列 4.0”和“消息队列 3.0”。  
@@ -63,4 +63,5 @@ ms.locfileid: "54588020"
 6.  如果系统提示您重新启动计算机时，请单击**确定**以完成安装。  
   
 ## <a name="see-also"></a>请参阅
+
 - [设置说明](../../../../docs/framework/wcf/samples/set-up-instructions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 64624508a50eb6e28337baa1a3600298e2c83fd7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710740"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115786"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>演练：创建具有专业样式的 ToolStrip 控件
 可以为应用程序的<xref:System.Windows.Forms.ToolStrip>控制专业的外观和行为，通过编写自己的类派生自<xref:System.Windows.Forms.ToolStripProfessionalRenderer>类型。  
@@ -62,9 +62,9 @@ ms.locfileid: "57710740"
   
 2.  在中**属性**窗口中，设置<xref:System.Windows.Forms.ToolStrip>根据下表控件的属性。  
   
-    |属性|值|  
+    |属性|“值”|  
     |--------------|-----------|  
-    |name|`stackStrip`|  
+    |名称|`stackStrip`|  
     |CanOverflow|`false`|  
     |停靠|<xref:System.Windows.Forms.DockStyle.Bottom>|  
     |字体|`Tahoma, 10pt, style=Bold`|  
@@ -77,9 +77,9 @@ ms.locfileid: "57710740"
   
 4.  在中**属性**窗口中，设置<xref:System.Windows.Forms.ToolStripButton>根据下表控件的属性。  
   
-    |属性|值|  
+    |属性|“值”|  
     |--------------|-----------|  
-    |name|`mailStackButton`|  
+    |名称|`mailStackButton`|  
     |CheckOnClick|true|  
     |CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
@@ -185,6 +185,7 @@ ms.locfileid: "57710740"
 -   创建多文档界面 (MDI) 窗体通过停靠<xref:System.Windows.Forms.ToolStrip>控件。 有关详细信息，请参阅[如何：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081484"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 入门
 无论是在编写适用于 Windows 10 的新 Windows 应用，还是在迁移现有的 Windows 应用商店应用，都可以按照同一套过程操作。 若要创建一个 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用，请按照下列步骤操作：  
@@ -106,17 +106,18 @@ ms.locfileid: "56220947"
   
  要了解处理在检测应用的过程中发生的异常和其他问题的特定实例，请参阅：  
   
--   [示例：绑定数据时处理异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [示例:处理绑定数据时出现的异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [示例：故障诊断动态编程](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [示例:动态编程疑难解答](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
--   [.NET Native 应用中的运行时异常](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
+-   [.NET 本机应用中的运行时异常](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>请参阅
-- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET native 安装和配置](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+
+- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [.NET Native 安装和配置](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [.NET Native 和编译](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [依赖反射的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
-- [Serialization and Metadata（序列化和元数据）](../../../docs/framework/net-native/serialization-and-metadata.md)
+- [利用反射的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
+- [序列化和元数据](../../../docs/framework/net-native/serialization-and-metadata.md)
 - [将 Windows 应用商店应用迁移到 .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
