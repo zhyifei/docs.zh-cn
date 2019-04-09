@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 026aab33207544e21a21f6c2374925d1d7923e55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0ef1e6511bf8e452a336ba6ea02359fe41e07cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180734"
 ---
-# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="2bff9-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode 方法</span><span class="sxs-lookup"><span data-stu-id="2bff9-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
-<span data-ttu-id="2bff9-103">`GetErrorCode` 已过时。</span><span class="sxs-lookup"><span data-stu-id="2bff9-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="2bff9-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="2bff9-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="da060-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode 方法</span><span class="sxs-lookup"><span data-stu-id="da060-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
+`GetErrorCode` <span data-ttu-id="da060-103">已过时。</span><span class="sxs-lookup"><span data-stu-id="da060-103">is obsolete.</span></span> <span data-ttu-id="da060-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="da060-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2bff9-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="2bff9-105">See also</span></span>
-- [<span data-ttu-id="2bff9-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="2bff9-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="da060-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="da060-105">See also</span></span>
+
+- [<span data-ttu-id="da060-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="da060-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
