@@ -16,39 +16,40 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f56ce2da5cc1b79fded3788ddb9631d2c8a2fa7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca8e87157a7adf45f35608aeba1067f2d66c8972
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081601"
 ---
-# <a name="initialize-function"></a><span data-ttu-id="ac968-103">初始化函数</span><span class="sxs-lookup"><span data-stu-id="ac968-103">Initialize function</span></span>
-<span data-ttu-id="ac968-104">执行 WMI 初始化。</span><span class="sxs-lookup"><span data-stu-id="ac968-104">Performs WMI initialization.</span></span>  
+# <a name="initialize-function"></a><span data-ttu-id="7c029-103">初始化函数</span><span class="sxs-lookup"><span data-stu-id="7c029-103">Initialize function</span></span>
+<span data-ttu-id="7c029-104">执行 WMI 初始化。</span><span class="sxs-lookup"><span data-stu-id="7c029-104">Performs WMI initialization.</span></span>  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="ac968-105">语法</span><span class="sxs-lookup"><span data-stu-id="ac968-105">Syntax</span></span> 
+## <a name="syntax"></a><span data-ttu-id="7c029-105">语法</span><span class="sxs-lookup"><span data-stu-id="7c029-105">Syntax</span></span> 
 ```  
 HRESULT Initialize(
    [in] boolean bAllowIManagementObjectQI
 ); 
 ```  
-## <a name="parameters"></a><span data-ttu-id="ac968-106">参数</span><span class="sxs-lookup"><span data-stu-id="ac968-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="7c029-106">参数</span><span class="sxs-lookup"><span data-stu-id="7c029-106">Parameters</span></span>
 
 `bAllowIManagementObjectQI`   
-<span data-ttu-id="ac968-107">[in]`true`以指示允许对 WMI 对象的 QueryInterface 调用;`false`否则为。</span><span class="sxs-lookup"><span data-stu-id="ac968-107">[in] `true` to indicate that calls to QueryInterface on WMI objects are allowed; `false` otherwise.</span></span>
+<span data-ttu-id="7c029-107">[in]`true`以指示允许对 WMI 对象的 QueryInterface 调用;`false`否则为。</span><span class="sxs-lookup"><span data-stu-id="7c029-107">[in] `true` to indicate that calls to QueryInterface on WMI objects are allowed; `false` otherwise.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="ac968-108">返回值</span><span class="sxs-lookup"><span data-stu-id="ac968-108">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="7c029-108">返回值</span><span class="sxs-lookup"><span data-stu-id="7c029-108">Return value</span></span>
 
-<span data-ttu-id="ac968-109">该函数始终返回`S_OK`(0)。</span><span class="sxs-lookup"><span data-stu-id="ac968-109">The function always returns `S_OK` (0).</span></span>
+<span data-ttu-id="7c029-109">该函数始终返回`S_OK`(0)。</span><span class="sxs-lookup"><span data-stu-id="7c029-109">The function always returns `S_OK` (0).</span></span>
   
-## <a name="requirements"></a><span data-ttu-id="ac968-110">要求</span><span class="sxs-lookup"><span data-stu-id="ac968-110">Requirements</span></span>  
- <span data-ttu-id="ac968-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ac968-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c029-110">要求</span><span class="sxs-lookup"><span data-stu-id="7c029-110">Requirements</span></span>  
+ <span data-ttu-id="7c029-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7c029-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac968-112">**标头：** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="ac968-112">**Header:** WMINet_Utils.def</span></span>  
+ <span data-ttu-id="7c029-112">**标头：** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="7c029-112">**Header:** WMINet_Utils.def</span></span>  
   
- <span data-ttu-id="ac968-113">**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ac968-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ **<span data-ttu-id="7c029-113">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="7c029-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ac968-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="ac968-114">See also</span></span>
-- [<span data-ttu-id="ac968-115">WMI 和性能计数器 （非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="ac968-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="7c029-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="7c029-114">See also</span></span>
+
+- [<span data-ttu-id="7c029-115">WMI 和性能计数器（非托管 API 参考）</span><span class="sxs-lookup"><span data-stu-id="7c029-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
