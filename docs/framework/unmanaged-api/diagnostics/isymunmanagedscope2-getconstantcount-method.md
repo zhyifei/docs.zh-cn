@@ -17,32 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1dfc9ead6256ae700d5e619da4fae5745bdd759
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2a063d25e180be466421c14ca65a5b4cea881fc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127318"
 ---
-# <a name="isymunmanagedscope2getconstantcount-method"></a><span data-ttu-id="dae3e-102">ISymUnmanagedScope2::GetConstantCount 方法</span><span class="sxs-lookup"><span data-stu-id="dae3e-102">ISymUnmanagedScope2::GetConstantCount Method</span></span>
-<span data-ttu-id="dae3e-103">获取此范围内定义的常量的计数。</span><span class="sxs-lookup"><span data-stu-id="dae3e-103">Gets a count of the constants defined within this scope.</span></span>  
+# <a name="isymunmanagedscope2getconstantcount-method"></a><span data-ttu-id="68c0f-102">ISymUnmanagedScope2::GetConstantCount 方法</span><span class="sxs-lookup"><span data-stu-id="68c0f-102">ISymUnmanagedScope2::GetConstantCount Method</span></span>
+<span data-ttu-id="68c0f-103">获取此范围内定义的常量的计数。</span><span class="sxs-lookup"><span data-stu-id="68c0f-103">Gets a count of the constants defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dae3e-104">语法</span><span class="sxs-lookup"><span data-stu-id="dae3e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68c0f-104">语法</span><span class="sxs-lookup"><span data-stu-id="68c0f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetConstantCount(  
     [out, retval] ULONG32 *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dae3e-105">参数</span><span class="sxs-lookup"><span data-stu-id="dae3e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="68c0f-105">参数</span><span class="sxs-lookup"><span data-stu-id="68c0f-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="dae3e-106">[out]一个指向`ULONG32`用于接收大小，以字符为单位，以包含常量的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="dae3e-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
+ <span data-ttu-id="68c0f-106">[out]一个指向`ULONG32`用于接收大小，以字符为单位，以包含常量的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="68c0f-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="dae3e-107">返回值</span><span class="sxs-lookup"><span data-stu-id="dae3e-107">Return Value</span></span>  
- <span data-ttu-id="dae3e-108">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="dae3e-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="68c0f-107">返回值</span><span class="sxs-lookup"><span data-stu-id="68c0f-107">Return Value</span></span>  
+ <span data-ttu-id="68c0f-108">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="68c0f-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dae3e-109">要求</span><span class="sxs-lookup"><span data-stu-id="dae3e-109">Requirements</span></span>  
- <span data-ttu-id="dae3e-110">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="dae3e-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="68c0f-109">要求</span><span class="sxs-lookup"><span data-stu-id="68c0f-109">Requirements</span></span>  
+ <span data-ttu-id="68c0f-110">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="68c0f-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dae3e-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="dae3e-111">See also</span></span>
-- [<span data-ttu-id="dae3e-112">ISymUnmanagedScope2 接口</span><span class="sxs-lookup"><span data-stu-id="dae3e-112">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="68c0f-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="68c0f-111">See also</span></span>
+
+- [<span data-ttu-id="68c0f-112">ISymUnmanagedScope2 接口</span><span class="sxs-lookup"><span data-stu-id="68c0f-112">ISymUnmanagedScope2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
