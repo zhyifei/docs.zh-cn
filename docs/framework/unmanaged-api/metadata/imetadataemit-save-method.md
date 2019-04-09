@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90ddc540115a60154953ac6e8cb931103a650752
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 49e45085b0fbca10e490f11ce588f68aa8237b46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492408"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139069"
 ---
-# <a name="imetadataemitsave-method"></a><span data-ttu-id="8867e-102">IMetaDataEmit::Save 方法</span><span class="sxs-lookup"><span data-stu-id="8867e-102">IMetaDataEmit::Save Method</span></span>
-<span data-ttu-id="8867e-103">将所有元数据保存到指定地址处的文件在当前范围内。</span><span class="sxs-lookup"><span data-stu-id="8867e-103">Saves all metadata in the current scope to the file at the specified address.</span></span>  
+# <a name="imetadataemitsave-method"></a><span data-ttu-id="64542-102">IMetaDataEmit::Save 方法</span><span class="sxs-lookup"><span data-stu-id="64542-102">IMetaDataEmit::Save Method</span></span>
+<span data-ttu-id="64542-103">将所有元数据保存到指定地址处的文件在当前范围内。</span><span class="sxs-lookup"><span data-stu-id="64542-103">Saves all metadata in the current scope to the file at the specified address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8867e-104">语法</span><span class="sxs-lookup"><span data-stu-id="8867e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="64542-104">语法</span><span class="sxs-lookup"><span data-stu-id="64542-104">Syntax</span></span>  
   
 ```  
 HRESULT Save (   
@@ -36,22 +36,23 @@ HRESULT Save (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8867e-105">参数</span><span class="sxs-lookup"><span data-stu-id="8867e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="64542-105">参数</span><span class="sxs-lookup"><span data-stu-id="64542-105">Parameters</span></span>  
  `wzFile`  
- <span data-ttu-id="8867e-106">[in]若要将保存到文件的名称。</span><span class="sxs-lookup"><span data-stu-id="8867e-106">[in] The name of the file to save to.</span></span> <span data-ttu-id="8867e-107">如果此值为 null，内存中副本将保存到上次使用的位置。</span><span class="sxs-lookup"><span data-stu-id="8867e-107">If this value is null, the in-memory copy will be saved to the last location that was used.</span></span>  
+ <span data-ttu-id="64542-106">[in]若要将保存到文件的名称。</span><span class="sxs-lookup"><span data-stu-id="64542-106">[in] The name of the file to save to.</span></span> <span data-ttu-id="64542-107">如果此值为 null，内存中副本将保存到上次使用的位置。</span><span class="sxs-lookup"><span data-stu-id="64542-107">If this value is null, the in-memory copy will be saved to the last location that was used.</span></span>  
   
  `dwSaveFlags`  
- <span data-ttu-id="8867e-108">[in] 保留。</span><span class="sxs-lookup"><span data-stu-id="8867e-108">[in] Reserved.</span></span> <span data-ttu-id="8867e-109">必须为零。</span><span class="sxs-lookup"><span data-stu-id="8867e-109">Must be zero.</span></span>  
+ <span data-ttu-id="64542-108">[in] 保留。</span><span class="sxs-lookup"><span data-stu-id="64542-108">[in] Reserved.</span></span> <span data-ttu-id="64542-109">必须为零。</span><span class="sxs-lookup"><span data-stu-id="64542-109">Must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8867e-110">要求</span><span class="sxs-lookup"><span data-stu-id="8867e-110">Requirements</span></span>  
- <span data-ttu-id="8867e-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8867e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="64542-110">要求</span><span class="sxs-lookup"><span data-stu-id="64542-110">Requirements</span></span>  
+ <span data-ttu-id="64542-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="64542-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8867e-112">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8867e-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="64542-112">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="64542-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8867e-113">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="8867e-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="64542-113">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="64542-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8867e-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8867e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="64542-114">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="64542-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="8867e-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="8867e-115">See also</span></span>
-- [<span data-ttu-id="8867e-116">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="8867e-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="8867e-117">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="8867e-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="64542-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="64542-115">See also</span></span>
+
+- [<span data-ttu-id="64542-116">IMetaDataEmit 接口</span><span class="sxs-lookup"><span data-stu-id="64542-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="64542-117">IMetaDataEmit2 接口</span><span class="sxs-lookup"><span data-stu-id="64542-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
