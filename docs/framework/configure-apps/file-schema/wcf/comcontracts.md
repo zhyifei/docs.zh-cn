@@ -2,20 +2,20 @@
 title: <comContracts>
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: 3e3e4bf18b204db5a4068cc3f6cbb1337d5f611d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 47a7d862cf85254f88373d582169ff421be2b5b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254309"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115825"
 ---
-# <a name="comcontracts"></a><span data-ttu-id="6d4f6-101">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="6d4f6-101">\<comContracts></span></span>
-<span data-ttu-id="6d4f6-102">`comContracts` 配置节所包含的元素允许指定 COM+ 集成服务协定的各个属性。</span><span class="sxs-lookup"><span data-stu-id="6d4f6-102">The `comContracts` configuration section contains elements that allow you to specify various properties of a COM+ integration service contract.</span></span>  
+# <a name="comcontracts"></a><span data-ttu-id="13df8-101">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="13df8-101">\<comContracts></span></span>
+<span data-ttu-id="13df8-102">`comContracts` 配置节所包含的元素允许指定 COM+ 集成服务协定的各个属性。</span><span class="sxs-lookup"><span data-stu-id="13df8-102">The `comContracts` configuration section contains elements that allow you to specify various properties of a COM+ integration service contract.</span></span>  
   
-## <a name="specifying-namespace-and-contract"></a><span data-ttu-id="6d4f6-103">指定命名空间和协定</span><span class="sxs-lookup"><span data-stu-id="6d4f6-103">Specifying Namespace and Contract</span></span>  
- <span data-ttu-id="6d4f6-104">COM + 集成服务协定是当前只限于`http://tempuri.org`命名空间，而从提供支持的 COM 接口派生的协定名称。</span><span class="sxs-lookup"><span data-stu-id="6d4f6-104">COM+ integration service contracts are currently restricted to the `http://tempuri.org` namespace, and contract name is derived from the supporting COM interface.</span></span> <span data-ttu-id="6d4f6-105">但是，可以使用配置文件中的 `comContracts` 节来指定替代服务协定。</span><span class="sxs-lookup"><span data-stu-id="6d4f6-105">You can, however, specify alternatives by using the `comContracts` section in the configuration file.</span></span>  
+## <a name="specifying-namespace-and-contract"></a><span data-ttu-id="13df8-103">指定命名空间和协定</span><span class="sxs-lookup"><span data-stu-id="13df8-103">Specifying Namespace and Contract</span></span>  
+ <span data-ttu-id="13df8-104">COM + 集成服务协定是当前只限于`http://tempuri.org`命名空间，而从提供支持的 COM 接口派生的协定名称。</span><span class="sxs-lookup"><span data-stu-id="13df8-104">COM+ integration service contracts are currently restricted to the `http://tempuri.org` namespace, and contract name is derived from the supporting COM interface.</span></span> <span data-ttu-id="13df8-105">但是，可以使用配置文件中的 `comContracts` 节来指定替代服务协定。</span><span class="sxs-lookup"><span data-stu-id="13df8-105">You can, however, specify alternatives by using the `comContracts` section in the configuration file.</span></span>  
   
- <span data-ttu-id="6d4f6-106">例如，可以使用以下配置来指定服务协定的命名空间和协定名称，也可以指定某个选项以在会话绑定上强制使用。</span><span class="sxs-lookup"><span data-stu-id="6d4f6-106">For example, you can use the following configuration to specify the namespace and contract name of the service contract, as well as an option to enforce usage on sessionful bindings.</span></span>  
+ <span data-ttu-id="13df8-106">例如，可以使用以下配置来指定服务协定的命名空间和协定名称，也可以指定某个选项以在会话绑定上强制使用。</span><span class="sxs-lookup"><span data-stu-id="13df8-106">For example, you can use the following configuration to specify the namespace and contract name of the service contract, as well as an option to enforce usage on sessionful bindings.</span></span>  
   
 ```xml  
 <comContracts>
@@ -27,18 +27,19 @@ ms.locfileid: "55254309"
 </comContracts>
 ```  
   
- <span data-ttu-id="6d4f6-107">在初始化服务时，指定的命名空间和协定名称将应用到生成的服务说明。</span><span class="sxs-lookup"><span data-stu-id="6d4f6-107">When the service is initialized, the specified namespaces and contract names are applied to the generated service descriptions.</span></span>  
+ <span data-ttu-id="13df8-107">在初始化服务时，指定的命名空间和协定名称将应用到生成的服务说明。</span><span class="sxs-lookup"><span data-stu-id="13df8-107">When the service is initialized, the specified namespaces and contract names are applied to the generated service descriptions.</span></span>  
   
- <span data-ttu-id="6d4f6-108">当此节为空时，服务初始化将应用取自提供支持的 COM 接口 ID 的默认命名空间和协定名称。</span><span class="sxs-lookup"><span data-stu-id="6d4f6-108">When this section is empty, the service initialization applies a default namespace and contract name taken from the supporting COM interface ID.</span></span>  
+ <span data-ttu-id="13df8-108">当此节为空时，服务初始化将应用取自提供支持的 COM 接口 ID 的默认命名空间和协定名称。</span><span class="sxs-lookup"><span data-stu-id="13df8-108">When this section is empty, the service initialization applies a default namespace and contract name taken from the supporting COM interface ID.</span></span>  
   
- <span data-ttu-id="6d4f6-109">此外，还可以使用[ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)元素来指定 COM + 组件上的接口作为 Web 服务公开时公开的 COM + 方法。</span><span class="sxs-lookup"><span data-stu-id="6d4f6-109">In addition, you can use the [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) element to specify COM+ methods that are exposed when the interface on a COM+ component is exposed as a Web service.</span></span> <span data-ttu-id="6d4f6-110">此外可以使用[ \<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)指定持久类型在集成中使用。</span><span class="sxs-lookup"><span data-stu-id="6d4f6-110">You can also use the [\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md) to specify persistable types used in integration.</span></span> <span data-ttu-id="6d4f6-111">最后，可以使用[ \<userDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)元素以包含用户定义类型 (UDT) 包括在服务协定中。</span><span class="sxs-lookup"><span data-stu-id="6d4f6-111">Finally, you can use the [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md) element to include User Defined Types (UDT) that are to be included in the service contract.</span></span>  
+ <span data-ttu-id="13df8-109">此外，还可以使用[ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)元素来指定 COM + 组件上的接口作为 Web 服务公开时公开的 COM + 方法。</span><span class="sxs-lookup"><span data-stu-id="13df8-109">In addition, you can use the [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) element to specify COM+ methods that are exposed when the interface on a COM+ component is exposed as a Web service.</span></span> <span data-ttu-id="13df8-110">此外可以使用[ \<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)指定持久类型在集成中使用。</span><span class="sxs-lookup"><span data-stu-id="13df8-110">You can also use the [\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md) to specify persistable types used in integration.</span></span> <span data-ttu-id="13df8-111">最后，可以使用[ \<userDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)元素以包含用户定义类型 (UDT) 包括在服务协定中。</span><span class="sxs-lookup"><span data-stu-id="13df8-111">Finally, you can use the [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md) element to include User Defined Types (UDT) that are to be included in the service contract.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d4f6-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="6d4f6-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13df8-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="13df8-112">See also</span></span>
+
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
-- [<span data-ttu-id="6d4f6-113">\<exposedMethod></span><span class="sxs-lookup"><span data-stu-id="6d4f6-113">\<exposedMethod></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)
-- [<span data-ttu-id="6d4f6-114">\<persistableTypes></span><span class="sxs-lookup"><span data-stu-id="6d4f6-114">\<persistableTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)
-- [<span data-ttu-id="6d4f6-115">\<userDefinedType></span><span class="sxs-lookup"><span data-stu-id="6d4f6-115">\<userDefinedType></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)
-- [<span data-ttu-id="6d4f6-116">\<comContract></span><span class="sxs-lookup"><span data-stu-id="6d4f6-116">\<comContract></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)
-- [<span data-ttu-id="6d4f6-117">与 COM+ 应用程序集成</span><span class="sxs-lookup"><span data-stu-id="6d4f6-117">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [<span data-ttu-id="6d4f6-118">如何：配置 COM + 服务设置</span><span class="sxs-lookup"><span data-stu-id="6d4f6-118">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [<span data-ttu-id="13df8-113">\<exposedMethod></span><span class="sxs-lookup"><span data-stu-id="13df8-113">\<exposedMethod></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)
+- [<span data-ttu-id="13df8-114">\<persistableTypes></span><span class="sxs-lookup"><span data-stu-id="13df8-114">\<persistableTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)
+- [<span data-ttu-id="13df8-115">\<userDefinedType></span><span class="sxs-lookup"><span data-stu-id="13df8-115">\<userDefinedType></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)
+- [<span data-ttu-id="13df8-116">\<comContract></span><span class="sxs-lookup"><span data-stu-id="13df8-116">\<comContract></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)
+- [<span data-ttu-id="13df8-117">与 COM+ 应用程序集成</span><span class="sxs-lookup"><span data-stu-id="13df8-117">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [<span data-ttu-id="13df8-118">如何：配置 COM+ 服务设置</span><span class="sxs-lookup"><span data-stu-id="13df8-118">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
