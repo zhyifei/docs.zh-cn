@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7666918cbff7a395a93a274629fe574ff20e170c
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545684"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308648"
 ---
 # <a name="c-operators"></a>C# 运算符
 
@@ -75,7 +75,7 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 
 [-x](subtraction-operator.md)：数值取反。
 
-[\!x](logical-negation-operator.md)：逻辑取反。
+[\!x](boolean-logical-operators.md#logical-negation-operator-)：逻辑取反。
 
 [~x](bitwise-complement-operator.md)：按位求补。
 
@@ -163,13 +163,13 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 
 此运算符的优先级比下一章节高，比上一章节低。
 
-[x && y](conditional-and-operator.md)：逻辑 AND。 如果第一个操作数计算结果为 false，则 C# 不对第二个操作数求值。
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-)：逻辑 AND。 如果第一个操作数计算结果为 false，则 C# 不对第二个操作数求值。
 
 ## <a name="conditional-or-operator"></a>条件 OR 运算符
 
 此运算符的优先级比下一章节高，比上一章节低。
 
-[x &#124;&#124; y](conditional-or-operator.md)：逻辑 OR。 如果第一个操作数计算结果为 true，则 C# 不对第二个操作数求值。
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-)：逻辑 OR。 如果第一个操作数计算结果为 true，则 C# 不对第二个操作数求值。
 
 ## <a name="null-coalescing-operator"></a>Null 合并运算符
 

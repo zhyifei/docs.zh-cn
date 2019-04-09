@@ -2,12 +2,12 @@
 title: C# 教程
 description: 查看这些 C# 教程，了解生成 C# 程序的方式以及 C# 语言功能。
 ms.date: 10/25/2018
-ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920482"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214437"
 ---
 # <a name="c-tutorials"></a>C# 教程
 
@@ -61,5 +61,3 @@ ms.locfileid: "58920482"
 * [使用 LINQ](working-with-linq.md)：介绍了许多 LINQ 功能和支持 LINQ 的语言元素。
 * [使用特性](attributes.md)：介绍了如何借助 C# 创建和使用特性。
 * [字符串内插](exploration/interpolated-strings.yml)教程将介绍如何将值插入到字符串中。 你将学习如何创建带有嵌入式 C# 表达式的内插字符串，以及如何控制结果字符串中表达式结果的文本外观。 本教程也可[下载到计算机本地进行学习](exploration/interpolated-strings-local.md)。
-
-
