@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02fd9fd3a580946cda09f0c129f02cd1218a0c9a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c5b65cdeb36b8abf17c74d41a7fc7dfb34fa5731
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095797"
 ---
-# <a name="isymunmanagednamespacegetvariables-method"></a><span data-ttu-id="1eb47-102">ISymUnmanagedNamespace::GetVariables 方法</span><span class="sxs-lookup"><span data-stu-id="1eb47-102">ISymUnmanagedNamespace::GetVariables Method</span></span>
-<span data-ttu-id="1eb47-103">返回在此命名空间中的全局范围内定义的所有变量。</span><span class="sxs-lookup"><span data-stu-id="1eb47-103">Returns all variables defined at global scope within this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetvariables-method"></a><span data-ttu-id="cd79f-102">ISymUnmanagedNamespace::GetVariables 方法</span><span class="sxs-lookup"><span data-stu-id="cd79f-102">ISymUnmanagedNamespace::GetVariables Method</span></span>
+<span data-ttu-id="cd79f-103">返回在此命名空间中的全局范围内定义的所有变量。</span><span class="sxs-lookup"><span data-stu-id="cd79f-103">Returns all variables defined at global scope within this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1eb47-104">语法</span><span class="sxs-lookup"><span data-stu-id="1eb47-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cd79f-104">语法</span><span class="sxs-lookup"><span data-stu-id="cd79f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVariables(  
@@ -37,21 +37,22 @@ HRESULT GetVariables(
         ISymUnmanagedVariable *pVars[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1eb47-105">参数</span><span class="sxs-lookup"><span data-stu-id="1eb47-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cd79f-105">参数</span><span class="sxs-lookup"><span data-stu-id="cd79f-105">Parameters</span></span>  
  `cVars`  
- <span data-ttu-id="1eb47-106">[in]一个`ULONG32`指示的大小`pVars`数组。</span><span class="sxs-lookup"><span data-stu-id="1eb47-106">[in] A `ULONG32` that indicates the size of the `pVars` array.</span></span>  
+ <span data-ttu-id="cd79f-106">[in]一个`ULONG32`指示的大小`pVars`数组。</span><span class="sxs-lookup"><span data-stu-id="cd79f-106">[in] A `ULONG32` that indicates the size of the `pVars` array.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="1eb47-107">[out]一个指向`ULONG32`接收包含命名空间所需的缓冲区的大小。</span><span class="sxs-lookup"><span data-stu-id="1eb47-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="cd79f-107">[out]一个指向`ULONG32`接收包含命名空间所需的缓冲区的大小。</span><span class="sxs-lookup"><span data-stu-id="cd79f-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
   
  `pVars`  
- <span data-ttu-id="1eb47-108">[out]指向包含的命名空间的缓冲区的指针。</span><span class="sxs-lookup"><span data-stu-id="1eb47-108">[out] A pointer to a buffer that contains the namespaces.</span></span>  
+ <span data-ttu-id="cd79f-108">[out]指向包含的命名空间的缓冲区的指针。</span><span class="sxs-lookup"><span data-stu-id="cd79f-108">[out] A pointer to a buffer that contains the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1eb47-109">返回值</span><span class="sxs-lookup"><span data-stu-id="1eb47-109">Return Value</span></span>  
- <span data-ttu-id="1eb47-110">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="1eb47-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cd79f-109">返回值</span><span class="sxs-lookup"><span data-stu-id="cd79f-109">Return Value</span></span>  
+ <span data-ttu-id="cd79f-110">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="cd79f-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1eb47-111">要求</span><span class="sxs-lookup"><span data-stu-id="1eb47-111">Requirements</span></span>  
- <span data-ttu-id="1eb47-112">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1eb47-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cd79f-111">要求</span><span class="sxs-lookup"><span data-stu-id="cd79f-111">Requirements</span></span>  
+ <span data-ttu-id="cd79f-112">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="cd79f-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1eb47-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="1eb47-113">See also</span></span>
-- [<span data-ttu-id="1eb47-114">ISymUnmanagedNamespace 接口</span><span class="sxs-lookup"><span data-stu-id="1eb47-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a><span data-ttu-id="cd79f-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="cd79f-113">See also</span></span>
+
+- [<span data-ttu-id="cd79f-114">ISymUnmanagedNamespace 接口</span><span class="sxs-lookup"><span data-stu-id="cd79f-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
