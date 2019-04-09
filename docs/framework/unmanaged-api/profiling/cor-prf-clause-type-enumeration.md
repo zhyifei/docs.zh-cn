@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db3b0f59884b2ec20ea3a2bd9779dbffd0fc8e1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 861f4c18f4c5151dc7215d300775928b88f018aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090623"
 ---
-# <a name="corprfclausetype-enumeration"></a><span data-ttu-id="1b699-102">COR_PRF_CLAUSE_TYPE 枚举</span><span class="sxs-lookup"><span data-stu-id="1b699-102">COR_PRF_CLAUSE_TYPE Enumeration</span></span>
-<span data-ttu-id="1b699-103">指示代码刚进入或离开的异常子句的类型。</span><span class="sxs-lookup"><span data-stu-id="1b699-103">Indicates the type of exception clause that the code has just entered or left.</span></span>  
+# <a name="corprfclausetype-enumeration"></a><span data-ttu-id="49119-102">COR_PRF_CLAUSE_TYPE 枚举</span><span class="sxs-lookup"><span data-stu-id="49119-102">COR_PRF_CLAUSE_TYPE Enumeration</span></span>
+<span data-ttu-id="49119-103">指示代码刚进入或离开的异常子句的类型。</span><span class="sxs-lookup"><span data-stu-id="49119-103">Indicates the type of exception clause that the code has just entered or left.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b699-104">语法</span><span class="sxs-lookup"><span data-stu-id="1b699-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="49119-104">语法</span><span class="sxs-lookup"><span data-stu-id="49119-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -37,23 +37,24 @@ typedef enum {
 } COR_PRF_CLAUSE_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="1b699-105">成员</span><span class="sxs-lookup"><span data-stu-id="1b699-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="49119-105">成员</span><span class="sxs-lookup"><span data-stu-id="49119-105">Members</span></span>  
   
-|<span data-ttu-id="1b699-106">成员</span><span class="sxs-lookup"><span data-stu-id="1b699-106">Member</span></span>|<span data-ttu-id="1b699-107">描述</span><span class="sxs-lookup"><span data-stu-id="1b699-107">Description</span></span>|  
+|<span data-ttu-id="49119-106">成员</span><span class="sxs-lookup"><span data-stu-id="49119-106">Member</span></span>|<span data-ttu-id="49119-107">描述</span><span class="sxs-lookup"><span data-stu-id="49119-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|<span data-ttu-id="1b699-108">在异常子句无效。</span><span class="sxs-lookup"><span data-stu-id="1b699-108">The exception clause is not valid.</span></span>|  
-|`COR_PRF_CLAUSE_FILTER`|<span data-ttu-id="1b699-109">在异常子句是筛选器表达式。</span><span class="sxs-lookup"><span data-stu-id="1b699-109">The exception clause is a filter expression.</span></span>|  
-|`COR_PRF_CLAUSE_CATCH`|<span data-ttu-id="1b699-110">在异常子句是`catch`语句。</span><span class="sxs-lookup"><span data-stu-id="1b699-110">The exception clause is a `catch` statement.</span></span>|  
-|`COR_PRF_CLAUSE_FINALLY`|<span data-ttu-id="1b699-111">在异常子句是`finally`语句。</span><span class="sxs-lookup"><span data-stu-id="1b699-111">The exception clause is a `finally` statement.</span></span>|  
+|`COR_PRF_CLAUSE_NONE`|<span data-ttu-id="49119-108">在异常子句无效。</span><span class="sxs-lookup"><span data-stu-id="49119-108">The exception clause is not valid.</span></span>|  
+|`COR_PRF_CLAUSE_FILTER`|<span data-ttu-id="49119-109">在异常子句是筛选器表达式。</span><span class="sxs-lookup"><span data-stu-id="49119-109">The exception clause is a filter expression.</span></span>|  
+|`COR_PRF_CLAUSE_CATCH`|<span data-ttu-id="49119-110">在异常子句是`catch`语句。</span><span class="sxs-lookup"><span data-stu-id="49119-110">The exception clause is a `catch` statement.</span></span>|  
+|`COR_PRF_CLAUSE_FINALLY`|<span data-ttu-id="49119-111">在异常子句是`finally`语句。</span><span class="sxs-lookup"><span data-stu-id="49119-111">The exception clause is a `finally` statement.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1b699-112">要求</span><span class="sxs-lookup"><span data-stu-id="1b699-112">Requirements</span></span>  
- <span data-ttu-id="1b699-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1b699-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="49119-112">要求</span><span class="sxs-lookup"><span data-stu-id="49119-112">Requirements</span></span>  
+ <span data-ttu-id="49119-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="49119-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1b699-114">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1b699-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="49119-114">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="49119-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="1b699-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1b699-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="49119-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="49119-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1b699-116">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b699-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="49119-116">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="49119-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="1b699-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="1b699-117">See also</span></span>
-- [<span data-ttu-id="1b699-118">分析枚举</span><span class="sxs-lookup"><span data-stu-id="1b699-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="49119-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="49119-117">See also</span></span>
+
+- [<span data-ttu-id="49119-118">分析枚举</span><span class="sxs-lookup"><span data-stu-id="49119-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

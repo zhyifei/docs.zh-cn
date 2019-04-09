@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00078d1d405eb2abc0d34f7b455fa045ac17c261
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e778a5a7baed52941a7f4b990b34d31f8ca84c24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485830"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092638"
 ---
-# <a name="isymunmanagedreadergetglobalvariables-method"></a><span data-ttu-id="d2694-102">ISymUnmanagedReader::GetGlobalVariables 方法</span><span class="sxs-lookup"><span data-stu-id="d2694-102">ISymUnmanagedReader::GetGlobalVariables Method</span></span>
-<span data-ttu-id="d2694-103">返回所有全局变量。</span><span class="sxs-lookup"><span data-stu-id="d2694-103">Returns all global variables.</span></span>  
+# <a name="isymunmanagedreadergetglobalvariables-method"></a><span data-ttu-id="aad44-102">ISymUnmanagedReader::GetGlobalVariables 方法</span><span class="sxs-lookup"><span data-stu-id="aad44-102">ISymUnmanagedReader::GetGlobalVariables Method</span></span>
+<span data-ttu-id="aad44-103">返回所有全局变量。</span><span class="sxs-lookup"><span data-stu-id="aad44-103">Returns all global variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2694-104">语法</span><span class="sxs-lookup"><span data-stu-id="d2694-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aad44-104">语法</span><span class="sxs-lookup"><span data-stu-id="aad44-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGlobalVariables(  
@@ -37,21 +37,22 @@ HRESULT GetGlobalVariables(
         length_is(*pcVars)] ISymUnmanagedVariable *pVars[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d2694-105">参数</span><span class="sxs-lookup"><span data-stu-id="d2694-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="aad44-105">参数</span><span class="sxs-lookup"><span data-stu-id="aad44-105">Parameters</span></span>  
  `cVars`  
- <span data-ttu-id="d2694-106">[in]指向缓冲区的长度`pcVars`。</span><span class="sxs-lookup"><span data-stu-id="d2694-106">[in] The length of the buffer pointed to by `pcVars`.</span></span>  
+ <span data-ttu-id="aad44-106">[in]指向缓冲区的长度`pcVars`。</span><span class="sxs-lookup"><span data-stu-id="aad44-106">[in] The length of the buffer pointed to by `pcVars`.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="d2694-107">[out]一个指向`ULONG32`接收包含变量所需的缓冲区的大小。</span><span class="sxs-lookup"><span data-stu-id="d2694-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.</span></span>  
+ <span data-ttu-id="aad44-107">[out]一个指向`ULONG32`接收包含变量所需的缓冲区的大小。</span><span class="sxs-lookup"><span data-stu-id="aad44-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.</span></span>  
   
  `pVars`  
- <span data-ttu-id="d2694-108">[out]包含变量的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="d2694-108">[out] A buffer that contains the variables.</span></span>  
+ <span data-ttu-id="aad44-108">[out]包含变量的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="aad44-108">[out] A buffer that contains the variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d2694-109">返回值</span><span class="sxs-lookup"><span data-stu-id="d2694-109">Return Value</span></span>  
- <span data-ttu-id="d2694-110">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="d2694-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="aad44-109">返回值</span><span class="sxs-lookup"><span data-stu-id="aad44-109">Return Value</span></span>  
+ <span data-ttu-id="aad44-110">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="aad44-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d2694-111">要求</span><span class="sxs-lookup"><span data-stu-id="d2694-111">Requirements</span></span>  
- <span data-ttu-id="d2694-112">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d2694-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aad44-111">要求</span><span class="sxs-lookup"><span data-stu-id="aad44-111">Requirements</span></span>  
+ <span data-ttu-id="aad44-112">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="aad44-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2694-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="d2694-113">See also</span></span>
-- [<span data-ttu-id="d2694-114">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="d2694-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="aad44-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="aad44-113">See also</span></span>
+
+- [<span data-ttu-id="aad44-114">ISymUnmanagedReader 接口</span><span class="sxs-lookup"><span data-stu-id="aad44-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
