@@ -1,5 +1,5 @@
 ---
-title: 如何：为 ListView 创建自定义视图模式
+title: 如何：创建 ListView 的自定义视图模式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,44 +7,45 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: 609781e9ac2db9c9beef049886617e541199e5dd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de11250a2e7529fba3b262e42b6714262738fa90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092885"
 ---
-# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a><span data-ttu-id="bc585-102">如何：为 ListView 创建自定义视图模式</span><span class="sxs-lookup"><span data-stu-id="bc585-102">How to: Create a Custom View Mode for a ListView</span></span>
-<span data-ttu-id="bc585-103">此示例演示如何创建自定义<xref:System.Windows.Controls.ListView.View%2A>模式<xref:System.Windows.Controls.ListView>控件。</span><span class="sxs-lookup"><span data-stu-id="bc585-103">This example shows how to create a custom <xref:System.Windows.Controls.ListView.View%2A> mode for a <xref:System.Windows.Controls.ListView> control.</span></span>  
+# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a><span data-ttu-id="773ef-102">如何：创建 ListView 的自定义视图模式</span><span class="sxs-lookup"><span data-stu-id="773ef-102">How to: Create a Custom View Mode for a ListView</span></span>
+<span data-ttu-id="773ef-103">此示例演示如何创建自定义<xref:System.Windows.Controls.ListView.View%2A>模式<xref:System.Windows.Controls.ListView>控件。</span><span class="sxs-lookup"><span data-stu-id="773ef-103">This example shows how to create a custom <xref:System.Windows.Controls.ListView.View%2A> mode for a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bc585-104">示例</span><span class="sxs-lookup"><span data-stu-id="bc585-104">Example</span></span>  
- <span data-ttu-id="bc585-105">必须使用<xref:System.Windows.Controls.ViewBase>类创建的自定义视图时<xref:System.Windows.Controls.ListView>控件。</span><span class="sxs-lookup"><span data-stu-id="bc585-105">You must use the <xref:System.Windows.Controls.ViewBase> class when you create a custom view for the <xref:System.Windows.Controls.ListView> control.</span></span> <span data-ttu-id="bc585-106">下面的示例演示调用的视图模式`PlainView`，它派生自<xref:System.Windows.Controls.ViewBase>类。</span><span class="sxs-lookup"><span data-stu-id="bc585-106">The following example shows a view mode that is called `PlainView`, which is derived from the <xref:System.Windows.Controls.ViewBase> class.</span></span>  
+## <a name="example"></a><span data-ttu-id="773ef-104">示例</span><span class="sxs-lookup"><span data-stu-id="773ef-104">Example</span></span>  
+ <span data-ttu-id="773ef-105">必须使用<xref:System.Windows.Controls.ViewBase>类创建的自定义视图时<xref:System.Windows.Controls.ListView>控件。</span><span class="sxs-lookup"><span data-stu-id="773ef-105">You must use the <xref:System.Windows.Controls.ViewBase> class when you create a custom view for the <xref:System.Windows.Controls.ListView> control.</span></span> <span data-ttu-id="773ef-106">下面的示例演示调用的视图模式`PlainView`，它派生自<xref:System.Windows.Controls.ViewBase>类。</span><span class="sxs-lookup"><span data-stu-id="773ef-106">The following example shows a view mode that is called `PlainView`, which is derived from the <xref:System.Windows.Controls.ViewBase> class.</span></span>  
   
  [!code-csharp[ListViewCustomView#PlainView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/PlainView.cs#plainview)]
  [!code-vb[ListViewCustomView#PlainView](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/plainview.vb#plainview)]  
   
- <span data-ttu-id="bc585-107">若要将样式应用到自定义视图，请使用<xref:System.Windows.Style>类。</span><span class="sxs-lookup"><span data-stu-id="bc585-107">To apply a style to the custom view, use the <xref:System.Windows.Style> class.</span></span> <span data-ttu-id="bc585-108">下面的示例定义<xref:System.Windows.Style>为`PlainView`视图模式。</span><span class="sxs-lookup"><span data-stu-id="bc585-108">The following example defines a <xref:System.Windows.Style> for the `PlainView` view mode.</span></span> <span data-ttu-id="bc585-109">在上一示例中，此样式设置的值作为<xref:System.Windows.Controls.ViewBase.DefaultStyleKey%2A>属性，可为定义`PlainView`。</span><span class="sxs-lookup"><span data-stu-id="bc585-109">In the previous example, this style is set as the value of the <xref:System.Windows.Controls.ViewBase.DefaultStyleKey%2A> property that is defined for `PlainView`.</span></span>  
+ <span data-ttu-id="773ef-107">若要将样式应用到自定义视图，请使用<xref:System.Windows.Style>类。</span><span class="sxs-lookup"><span data-stu-id="773ef-107">To apply a style to the custom view, use the <xref:System.Windows.Style> class.</span></span> <span data-ttu-id="773ef-108">下面的示例定义<xref:System.Windows.Style>为`PlainView`视图模式。</span><span class="sxs-lookup"><span data-stu-id="773ef-108">The following example defines a <xref:System.Windows.Style> for the `PlainView` view mode.</span></span> <span data-ttu-id="773ef-109">在上一示例中，此样式设置的值作为<xref:System.Windows.Controls.ViewBase.DefaultStyleKey%2A>属性，可为定义`PlainView`。</span><span class="sxs-lookup"><span data-stu-id="773ef-109">In the previous example, this style is set as the value of the <xref:System.Windows.Controls.ViewBase.DefaultStyleKey%2A> property that is defined for `PlainView`.</span></span>  
   
  [!code-xaml[ListViewCustomView#PlainViewStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Themes/Generic.xaml#plainviewstyle)]  
   
- <span data-ttu-id="bc585-110">若要在自定义视图模式中定义的数据布局，定义<xref:System.Windows.DataTemplate>对象。</span><span class="sxs-lookup"><span data-stu-id="bc585-110">To define the layout of data in a custom view mode, define a <xref:System.Windows.DataTemplate> object.</span></span> <span data-ttu-id="bc585-111">下面的示例定义<xref:System.Windows.DataTemplate>可用来显示数据中的`PlainView`视图模式。</span><span class="sxs-lookup"><span data-stu-id="bc585-111">The following example defines a <xref:System.Windows.DataTemplate> that can be used to display data in the `PlainView` view mode.</span></span>  
+ <span data-ttu-id="773ef-110">若要在自定义视图模式中定义的数据布局，定义<xref:System.Windows.DataTemplate>对象。</span><span class="sxs-lookup"><span data-stu-id="773ef-110">To define the layout of data in a custom view mode, define a <xref:System.Windows.DataTemplate> object.</span></span> <span data-ttu-id="773ef-111">下面的示例定义<xref:System.Windows.DataTemplate>可用来显示数据中的`PlainView`视图模式。</span><span class="sxs-lookup"><span data-stu-id="773ef-111">The following example defines a <xref:System.Windows.DataTemplate> that can be used to display data in the `PlainView` view mode.</span></span>  
   
  [!code-xaml[ListViewCustomView#PlainViewDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewdatatemplate)]  
   
- <span data-ttu-id="bc585-112">下面的示例演示如何定义<xref:System.Windows.ResourceKey>有关`PlainView`使用的视图模式<xref:System.Windows.DataTemplate>上一示例中定义。</span><span class="sxs-lookup"><span data-stu-id="bc585-112">The following example shows how to define a <xref:System.Windows.ResourceKey> for the `PlainView` view mode that uses the <xref:System.Windows.DataTemplate> that is defined in the previous example.</span></span>  
+ <span data-ttu-id="773ef-112">下面的示例演示如何定义<xref:System.Windows.ResourceKey>有关`PlainView`使用的视图模式<xref:System.Windows.DataTemplate>上一示例中定义。</span><span class="sxs-lookup"><span data-stu-id="773ef-112">The following example shows how to define a <xref:System.Windows.ResourceKey> for the `PlainView` view mode that uses the <xref:System.Windows.DataTemplate> that is defined in the previous example.</span></span>  
   
  [!code-xaml[ListViewCustomView#PlainViewtileView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewtileview)]  
   
- <span data-ttu-id="bc585-113">一个<xref:System.Windows.Controls.ListView>控件可以使用自定义视图，如果您设置<xref:System.Windows.Controls.ListView.View%2A>属性设置为资源键。</span><span class="sxs-lookup"><span data-stu-id="bc585-113">A <xref:System.Windows.Controls.ListView> control can use a custom view if you set the <xref:System.Windows.Controls.ListView.View%2A> property to the resource key.</span></span> <span data-ttu-id="bc585-114">下面的示例演示如何指定`PlainView`的视图模式<xref:System.Windows.Controls.ListView>。</span><span class="sxs-lookup"><span data-stu-id="bc585-114">The following example shows how to specify `PlainView` as the view mode for a <xref:System.Windows.Controls.ListView>.</span></span>  
+ <span data-ttu-id="773ef-113">一个<xref:System.Windows.Controls.ListView>控件可以使用自定义视图，如果您设置<xref:System.Windows.Controls.ListView.View%2A>属性设置为资源键。</span><span class="sxs-lookup"><span data-stu-id="773ef-113">A <xref:System.Windows.Controls.ListView> control can use a custom view if you set the <xref:System.Windows.Controls.ListView.View%2A> property to the resource key.</span></span> <span data-ttu-id="773ef-114">下面的示例演示如何指定`PlainView`的视图模式<xref:System.Windows.Controls.ListView>。</span><span class="sxs-lookup"><span data-stu-id="773ef-114">The following example shows how to specify `PlainView` as the view mode for a <xref:System.Windows.Controls.ListView>.</span></span>  
   
  [!code-csharp[ListViewCustomView#ListViewtileViewmode](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml.cs#listviewtileviewmode)]
  [!code-vb[ListViewCustomView#ListViewtileViewmode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/window1.xaml.vb#listviewtileviewmode)]  
   
- <span data-ttu-id="bc585-115">有关完整示例，请参阅[具有多个视图的 ListView (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp)或[ListView 与多个 Views(Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic)。</span><span class="sxs-lookup"><span data-stu-id="bc585-115">For the complete sample, see [ListView with Multiple Views(C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp) or [ListView with Multiple Views(Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic).</span></span>  
+ <span data-ttu-id="773ef-115">有关完整示例，请参阅[具有多个视图的 ListView (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp)或[ListView 与多个 Views(Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic)。</span><span class="sxs-lookup"><span data-stu-id="773ef-115">For the complete sample, see [ListView with Multiple Views(C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp) or [ListView with Multiple Views(Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc585-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="bc585-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="773ef-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="773ef-116">See also</span></span>
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [<span data-ttu-id="bc585-117">帮助主题</span><span class="sxs-lookup"><span data-stu-id="bc585-117">How-to Topics</span></span>](listview-how-to-topics.md)
-- [<span data-ttu-id="bc585-118">ListView 概述</span><span class="sxs-lookup"><span data-stu-id="bc585-118">ListView Overview</span></span>](listview-overview.md)
-- [<span data-ttu-id="bc585-119">GridView 概述</span><span class="sxs-lookup"><span data-stu-id="bc585-119">GridView Overview</span></span>](gridview-overview.md)
+- [<span data-ttu-id="773ef-117">帮助主题</span><span class="sxs-lookup"><span data-stu-id="773ef-117">How-to Topics</span></span>](listview-how-to-topics.md)
+- [<span data-ttu-id="773ef-118">ListView 概述</span><span class="sxs-lookup"><span data-stu-id="773ef-118">ListView Overview</span></span>](listview-overview.md)
+- [<span data-ttu-id="773ef-119">GridView 概述</span><span class="sxs-lookup"><span data-stu-id="773ef-119">GridView Overview</span></span>](gridview-overview.md)
