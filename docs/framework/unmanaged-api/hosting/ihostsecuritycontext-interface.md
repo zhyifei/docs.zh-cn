@@ -16,35 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29499301260313ab796eee2be06a168f2ae48e4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d71b7e1265110a70329377ce8ab7430e1943c49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124017"
 ---
-# <a name="ihostsecuritycontext-interface"></a><span data-ttu-id="60237-102">IHostSecurityContext 接口</span><span class="sxs-lookup"><span data-stu-id="60237-102">IHostSecurityContext Interface</span></span>
-<span data-ttu-id="60237-103">允许公共语言运行时 (CLR) 来维护由宿主实现的安全上下文信息。</span><span class="sxs-lookup"><span data-stu-id="60237-103">Allows the common language runtime (CLR) to maintain security context information implemented by the host.</span></span>  
+# <a name="ihostsecuritycontext-interface"></a><span data-ttu-id="7a19b-102">IHostSecurityContext 接口</span><span class="sxs-lookup"><span data-stu-id="7a19b-102">IHostSecurityContext Interface</span></span>
+<span data-ttu-id="7a19b-103">允许公共语言运行时 (CLR) 来维护由宿主实现的安全上下文信息。</span><span class="sxs-lookup"><span data-stu-id="7a19b-103">Allows the common language runtime (CLR) to maintain security context information implemented by the host.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="60237-104">方法</span><span class="sxs-lookup"><span data-stu-id="60237-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7a19b-104">方法</span><span class="sxs-lookup"><span data-stu-id="7a19b-104">Methods</span></span>  
   
-|<span data-ttu-id="60237-105">方法</span><span class="sxs-lookup"><span data-stu-id="60237-105">Method</span></span>|<span data-ttu-id="60237-106">描述</span><span class="sxs-lookup"><span data-stu-id="60237-106">Description</span></span>|  
+|<span data-ttu-id="7a19b-105">方法</span><span class="sxs-lookup"><span data-stu-id="7a19b-105">Method</span></span>|<span data-ttu-id="7a19b-106">描述</span><span class="sxs-lookup"><span data-stu-id="7a19b-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="60237-107">Capture 方法</span><span class="sxs-lookup"><span data-stu-id="60237-107">Capture Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-capture-method.md)|<span data-ttu-id="60237-108">获取的克隆`IHostSecurityContext`实例返回通过调用[ihostsecuritymanager:: Getsecuritycontext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)。</span><span class="sxs-lookup"><span data-stu-id="60237-108">Gets a clone of the `IHostSecurityContext` instance returned from a call to [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span></span>|  
+|[<span data-ttu-id="7a19b-107">Capture 方法</span><span class="sxs-lookup"><span data-stu-id="7a19b-107">Capture Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-capture-method.md)|<span data-ttu-id="7a19b-108">获取的克隆`IHostSecurityContext`实例返回通过调用[ihostsecuritymanager:: Getsecuritycontext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)。</span><span class="sxs-lookup"><span data-stu-id="7a19b-108">Gets a clone of the `IHostSecurityContext` instance returned from a call to [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="60237-109">备注</span><span class="sxs-lookup"><span data-stu-id="60237-109">Remarks</span></span>  
- <span data-ttu-id="60237-110">主机可以通过 CLR 和用户代码控制对线程令牌的所有代码访问权限。</span><span class="sxs-lookup"><span data-stu-id="60237-110">A host can control all code access to thread tokens by both the CLR and user code.</span></span> <span data-ttu-id="60237-111">它还可确保完整的安全跨异步操作或具有受限制的代码访问权限的代码点传递上下文信息。</span><span class="sxs-lookup"><span data-stu-id="60237-111">It can also ensure that complete security context information is passed across asynchronous operations or code points with restricted code access.</span></span> <span data-ttu-id="60237-112">`IHostSecurityContext` 封装此安全上下文信息，这是不透明的运行时。</span><span class="sxs-lookup"><span data-stu-id="60237-112">`IHostSecurityContext` encapsulates this security context information, which is opaque to the runtime.</span></span> <span data-ttu-id="60237-113">在运行时捕获此信息使用`Capture`，并将其移动多个线程池工作项调度、 终结器执行和模块和类构造函数。</span><span class="sxs-lookup"><span data-stu-id="60237-113">The runtime captures this information using `Capture`, and moves it across thread pool worker item dispatch, finalizer execution, and module and class constructors.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7a19b-109">备注</span><span class="sxs-lookup"><span data-stu-id="7a19b-109">Remarks</span></span>  
+ <span data-ttu-id="7a19b-110">主机可以通过 CLR 和用户代码控制对线程令牌的所有代码访问权限。</span><span class="sxs-lookup"><span data-stu-id="7a19b-110">A host can control all code access to thread tokens by both the CLR and user code.</span></span> <span data-ttu-id="7a19b-111">它还可确保完整的安全跨异步操作或具有受限制的代码访问权限的代码点传递上下文信息。</span><span class="sxs-lookup"><span data-stu-id="7a19b-111">It can also ensure that complete security context information is passed across asynchronous operations or code points with restricted code access.</span></span> `IHostSecurityContext` <span data-ttu-id="7a19b-112">封装此安全上下文信息，这是不透明的运行时。</span><span class="sxs-lookup"><span data-stu-id="7a19b-112">encapsulates this security context information, which is opaque to the runtime.</span></span> <span data-ttu-id="7a19b-113">在运行时捕获此信息使用`Capture`，并将其移动多个线程池工作项调度、 终结器执行和模块和类构造函数。</span><span class="sxs-lookup"><span data-stu-id="7a19b-113">The runtime captures this information using `Capture`, and moves it across thread pool worker item dispatch, finalizer execution, and module and class constructors.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="60237-114">要求</span><span class="sxs-lookup"><span data-stu-id="60237-114">Requirements</span></span>  
- <span data-ttu-id="60237-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="60237-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7a19b-114">要求</span><span class="sxs-lookup"><span data-stu-id="7a19b-114">Requirements</span></span>  
+ <span data-ttu-id="7a19b-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7a19b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="60237-116">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="60237-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="7a19b-116">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7a19b-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="60237-117">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="60237-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7a19b-117">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="7a19b-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="60237-118">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="60237-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="7a19b-118">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="7a19b-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="60237-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="60237-119">See also</span></span>
-- [<span data-ttu-id="60237-120">ICLRHostProtectionManager 接口</span><span class="sxs-lookup"><span data-stu-id="60237-120">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
-- [<span data-ttu-id="60237-121">IHostSecurityManager 接口</span><span class="sxs-lookup"><span data-stu-id="60237-121">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
-- [<span data-ttu-id="60237-122">承载接口</span><span class="sxs-lookup"><span data-stu-id="60237-122">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="7a19b-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="7a19b-119">See also</span></span>
+
+- [<span data-ttu-id="7a19b-120">ICLRHostProtectionManager 接口</span><span class="sxs-lookup"><span data-stu-id="7a19b-120">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
+- [<span data-ttu-id="7a19b-121">IHostSecurityManager 接口</span><span class="sxs-lookup"><span data-stu-id="7a19b-121">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+- [<span data-ttu-id="7a19b-122">承载接口</span><span class="sxs-lookup"><span data-stu-id="7a19b-122">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
