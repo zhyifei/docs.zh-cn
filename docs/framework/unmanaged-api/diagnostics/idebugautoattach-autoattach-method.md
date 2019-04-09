@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16ccc56579a1ebe45ada61a9565cc8ade335333d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5064e66708044d82e3a097c8235b5b28a3412200
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077129"
 ---
-# <a name="idebugautoattachautoattach-method"></a><span data-ttu-id="51e99-102">IDebugAutoAttach::AutoAttach 方法</span><span class="sxs-lookup"><span data-stu-id="51e99-102">IDebugAutoAttach::AutoAttach Method</span></span>
-<span data-ttu-id="51e99-103">执行服务器调用调试器自动附加。</span><span class="sxs-lookup"><span data-stu-id="51e99-103">Performs server-invoked debugger auto attach.</span></span>  
+# <a name="idebugautoattachautoattach-method"></a><span data-ttu-id="c374d-102">IDebugAutoAttach::AutoAttach 方法</span><span class="sxs-lookup"><span data-stu-id="c374d-102">IDebugAutoAttach::AutoAttach Method</span></span>
+<span data-ttu-id="c374d-103">执行服务器调用调试器自动附加。</span><span class="sxs-lookup"><span data-stu-id="c374d-103">Performs server-invoked debugger auto attach.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51e99-104">语法</span><span class="sxs-lookup"><span data-stu-id="51e99-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c374d-104">语法</span><span class="sxs-lookup"><span data-stu-id="c374d-104">Syntax</span></span>  
   
 ```  
 HRESULT AutoAttach  
@@ -40,27 +40,28 @@ HRESULT AutoAttach
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="51e99-105">参数</span><span class="sxs-lookup"><span data-stu-id="51e99-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c374d-105">参数</span><span class="sxs-lookup"><span data-stu-id="c374d-105">Parameters</span></span>  
  `guidPort`  
- <span data-ttu-id="51e99-106">[in]始终设置为`GUID_NULL`。</span><span class="sxs-lookup"><span data-stu-id="51e99-106">[in] Always set to `GUID_NULL`.</span></span>  
+ <span data-ttu-id="c374d-106">[in]始终设置为`GUID_NULL`。</span><span class="sxs-lookup"><span data-stu-id="c374d-106">[in] Always set to `GUID_NULL`.</span></span>  
   
  `dwPid`  
- <span data-ttu-id="51e99-107">[in]进程 ID，通常情况下检索与`GetCurrentProcessId`函数。</span><span class="sxs-lookup"><span data-stu-id="51e99-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span></span>  
+ <span data-ttu-id="c374d-107">[in]进程 ID，通常情况下检索与`GetCurrentProcessId`函数。</span><span class="sxs-lookup"><span data-stu-id="c374d-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span></span>  
   
  `dwProgramType`  
- <span data-ttu-id="51e99-108">[in]程序类型： `AUTOATTACH_PROGRAM_WIN32`， `AUTOATTACH_PROGRAM_COMPLUS`，或`AUTOATTACH_PROGRAM_UNKNOWN`。</span><span class="sxs-lookup"><span data-stu-id="51e99-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span></span>  
+ <span data-ttu-id="c374d-108">[in]程序类型： `AUTOATTACH_PROGRAM_WIN32`， `AUTOATTACH_PROGRAM_COMPLUS`，或`AUTOATTACH_PROGRAM_UNKNOWN`。</span><span class="sxs-lookup"><span data-stu-id="c374d-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span></span>  
   
  `dwProgramId`  
- <span data-ttu-id="51e99-109">[in]程序 id。</span><span class="sxs-lookup"><span data-stu-id="51e99-109">[in] Program ID.</span></span>  
+ <span data-ttu-id="c374d-109">[in]程序 id。</span><span class="sxs-lookup"><span data-stu-id="c374d-109">[in] Program ID.</span></span>  
   
  `pszSessionId`  
- <span data-ttu-id="51e99-110">[in]Debug 谓词由传递的字符串。</span><span class="sxs-lookup"><span data-stu-id="51e99-110">[in] String passed by the debug verb.</span></span>  
+ <span data-ttu-id="c374d-110">[in]Debug 谓词由传递的字符串。</span><span class="sxs-lookup"><span data-stu-id="c374d-110">[in] String passed by the debug verb.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="51e99-111">返回值</span><span class="sxs-lookup"><span data-stu-id="51e99-111">Return Value</span></span>  
- <span data-ttu-id="51e99-112">如果该方法成功，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="51e99-112">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c374d-111">返回值</span><span class="sxs-lookup"><span data-stu-id="c374d-111">Return Value</span></span>  
+ <span data-ttu-id="c374d-112">如果该方法成功，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="c374d-112">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="51e99-113">要求</span><span class="sxs-lookup"><span data-stu-id="51e99-113">Requirements</span></span>  
- <span data-ttu-id="51e99-114">**标头：** DbgAutoAttach.h</span><span class="sxs-lookup"><span data-stu-id="51e99-114">**Header:** DbgAutoAttach.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c374d-113">要求</span><span class="sxs-lookup"><span data-stu-id="c374d-113">Requirements</span></span>  
+ <span data-ttu-id="c374d-114">**标头：** DbgAutoAttach.h</span><span class="sxs-lookup"><span data-stu-id="c374d-114">**Header:** DbgAutoAttach.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="51e99-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="51e99-115">See also</span></span>
-- [<span data-ttu-id="51e99-116">IDebugAutoAttach 接口</span><span class="sxs-lookup"><span data-stu-id="51e99-116">IDebugAutoAttach Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c374d-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="c374d-115">See also</span></span>
+
+- [<span data-ttu-id="c374d-116">IDebugAutoAttach 接口</span><span class="sxs-lookup"><span data-stu-id="c374d-116">IDebugAutoAttach Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
