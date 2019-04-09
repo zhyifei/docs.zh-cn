@@ -16,30 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc3f9e8c581bc95bea8cfeb549177966eae22a43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db933716cc0602ecda5da8a72726408ae4910179
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584488"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129800"
 ---
-# <a name="iapartmentcallback-interface"></a><span data-ttu-id="1a9b1-102">IApartmentCallback 接口</span><span class="sxs-lookup"><span data-stu-id="1a9b1-102">IApartmentCallback Interface</span></span>
-<span data-ttu-id="1a9b1-103">提供用于在单元内使回调方法。</span><span class="sxs-lookup"><span data-stu-id="1a9b1-103">Provides methods for making callbacks within an apartment.</span></span> <span data-ttu-id="1a9b1-104">*单元*是个对象共享相同的线程访问要求进程内的逻辑容器。</span><span class="sxs-lookup"><span data-stu-id="1a9b1-104">An *apartment* is a logical container within a process for objects that share the same thread access requirements.</span></span>  
+# <a name="iapartmentcallback-interface"></a><span data-ttu-id="402e1-102">IApartmentCallback 接口</span><span class="sxs-lookup"><span data-stu-id="402e1-102">IApartmentCallback Interface</span></span>
+<span data-ttu-id="402e1-103">提供用于在单元内使回调方法。</span><span class="sxs-lookup"><span data-stu-id="402e1-103">Provides methods for making callbacks within an apartment.</span></span> <span data-ttu-id="402e1-104">*单元*是个对象共享相同的线程访问要求进程内的逻辑容器。</span><span class="sxs-lookup"><span data-stu-id="402e1-104">An *apartment* is a logical container within a process for objects that share the same thread access requirements.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="1a9b1-105">方法</span><span class="sxs-lookup"><span data-stu-id="1a9b1-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="402e1-105">方法</span><span class="sxs-lookup"><span data-stu-id="402e1-105">Methods</span></span>  
   
-|<span data-ttu-id="1a9b1-106">方法</span><span class="sxs-lookup"><span data-stu-id="1a9b1-106">Method</span></span>|<span data-ttu-id="1a9b1-107">描述</span><span class="sxs-lookup"><span data-stu-id="1a9b1-107">Description</span></span>|  
+|<span data-ttu-id="402e1-106">方法</span><span class="sxs-lookup"><span data-stu-id="402e1-106">Method</span></span>|<span data-ttu-id="402e1-107">描述</span><span class="sxs-lookup"><span data-stu-id="402e1-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="1a9b1-108">DoCallback 方法</span><span class="sxs-lookup"><span data-stu-id="1a9b1-108">DoCallback Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|<span data-ttu-id="1a9b1-109">执行单元内的指定的函数。</span><span class="sxs-lookup"><span data-stu-id="1a9b1-109">Executes the specified function within an apartment.</span></span>|  
+|[<span data-ttu-id="402e1-108">DoCallback 方法</span><span class="sxs-lookup"><span data-stu-id="402e1-108">DoCallback Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|<span data-ttu-id="402e1-109">执行单元内的指定的函数。</span><span class="sxs-lookup"><span data-stu-id="402e1-109">Executes the specified function within an apartment.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1a9b1-110">要求</span><span class="sxs-lookup"><span data-stu-id="1a9b1-110">Requirements</span></span>  
- <span data-ttu-id="1a9b1-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1a9b1-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="402e1-110">要求</span><span class="sxs-lookup"><span data-stu-id="402e1-110">Requirements</span></span>  
+ <span data-ttu-id="402e1-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="402e1-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1a9b1-112">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1a9b1-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="402e1-112">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="402e1-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1a9b1-113">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="1a9b1-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="402e1-113">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="402e1-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1a9b1-114">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1a9b1-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="402e1-114">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="402e1-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="1a9b1-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="1a9b1-115">See also</span></span>
-- [<span data-ttu-id="1a9b1-116">承载接口</span><span class="sxs-lookup"><span data-stu-id="1a9b1-116">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="402e1-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="402e1-115">See also</span></span>
+
+- [<span data-ttu-id="402e1-116">承载接口</span><span class="sxs-lookup"><span data-stu-id="402e1-116">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
