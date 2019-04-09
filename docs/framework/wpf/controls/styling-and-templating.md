@@ -15,12 +15,12 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132285"
 ---
 # <a name="styling-and-templating"></a>样式设置和模板化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 样式和模板化是指一套功能 （样式、 模板、 触发器和情节提要），以允许开发人员和设计人员可以创建极具视觉表现力的效果，以创建一致的外观对其产品。 尽管开发者和/或设计者可以逐个应用程序地广泛自定义外观，但为了实现应用程序内部和之间的外观维护和共享，需要一个强大的样式设置和模板化模型。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了该模型。  
@@ -197,6 +197,7 @@ ms.locfileid: "59055321"
  如果要为自定义控件创建主题，请参阅[控件创作概述](control-authoring-overview.md)的外部控件库部分。  
   
 ## <a name="see-also"></a>请参阅
+
 - [WPF 中的 Pack URI](../app-development/pack-uris-in-wpf.md)
 - [如何：查找由 ControlTemplate 生成的元素](how-to-find-controltemplate-generated-elements.md)
 - [查找由 DataTemplate 生成的元素](../data/how-to-find-datatemplate-generated-elements.md)
