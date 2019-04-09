@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097546"
 ---
 # <a name="data-templating-overview"></a>数据模板化概述
 WPF 数据模板化模型为定义数据的表示提供了很大的灵活性。 WPF 控件具有支持自定义数据表示的内置功能。 本主题首先演示如何定义<xref:System.Windows.DataTemplate>，然后介绍其他数据模板化功能，例如选择了模板基于自定义逻辑和显示分层数据的支持。  
@@ -194,6 +194,7 @@ WPF 数据模板化模型为定义数据的表示提供了很大的灵活性。 
  ![HierarchicalDataTemplate 示例屏幕截图](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>请参阅
+
 - [数据绑定](../advanced/optimizing-performance-data-binding.md)
 - [查找由 DataTemplate 生成的元素](how-to-find-datatemplate-generated-elements.md)
 - [样式设置和模板化](../controls/styling-and-templating.md)
