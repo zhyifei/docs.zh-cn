@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f76b727511ad604c407fb2998a5ecea26f91c49
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 33ad221f2a05357484d0877b6306d78e3864eff6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481356"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120167"
 ---
-# <a name="icordebuggcreferenceenumnext-method"></a><span data-ttu-id="f2202-102">ICorDebugGCReferenceEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="f2202-102">ICorDebugGCReferenceEnum::Next Method</span></span>
-<span data-ttu-id="f2202-103">获取指定的数目的[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)包含将进行垃圾回收的对象的信息的实例。</span><span class="sxs-lookup"><span data-stu-id="f2202-103">Gets the specified number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances that contain information about objects that will be garbage-collected.</span></span>  
+# <a name="icordebuggcreferenceenumnext-method"></a><span data-ttu-id="826e8-102">ICorDebugGCReferenceEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="826e8-102">ICorDebugGCReferenceEnum::Next Method</span></span>
+<span data-ttu-id="826e8-103">获取指定的数目的[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)包含将进行垃圾回收的对象的信息的实例。</span><span class="sxs-lookup"><span data-stu-id="826e8-103">Gets the specified number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances that contain information about objects that will be garbage-collected.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f2202-104">语法</span><span class="sxs-lookup"><span data-stu-id="f2202-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="826e8-104">语法</span><span class="sxs-lookup"><span data-stu-id="826e8-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -36,27 +36,28 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f2202-105">参数</span><span class="sxs-lookup"><span data-stu-id="f2202-105">Parameters</span></span>  
- <span data-ttu-id="f2202-106">celt</span><span class="sxs-lookup"><span data-stu-id="f2202-106">celt</span></span>  
- <span data-ttu-id="f2202-107">[in]要检索的根的数目。</span><span class="sxs-lookup"><span data-stu-id="f2202-107">[in] The number of roots to be retrieved.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="826e8-105">参数</span><span class="sxs-lookup"><span data-stu-id="826e8-105">Parameters</span></span>  
+ <span data-ttu-id="826e8-106">celt</span><span class="sxs-lookup"><span data-stu-id="826e8-106">celt</span></span>  
+ <span data-ttu-id="826e8-107">[in]要检索的根的数目。</span><span class="sxs-lookup"><span data-stu-id="826e8-107">[in] The number of roots to be retrieved.</span></span>  
   
- <span data-ttu-id="f2202-108">根</span><span class="sxs-lookup"><span data-stu-id="f2202-108">roots</span></span>  
- <span data-ttu-id="f2202-109">[out]一个指针，其中每个指向数组[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)表示的对象进行垃圾回收根的对象。</span><span class="sxs-lookup"><span data-stu-id="f2202-109">[out] An array of pointers, each of which points to a [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) object that represents the root of an object to be garbage-collected.</span></span>  
+ <span data-ttu-id="826e8-108">根</span><span class="sxs-lookup"><span data-stu-id="826e8-108">roots</span></span>  
+ <span data-ttu-id="826e8-109">[out]一个指针，其中每个指向数组[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)表示的对象进行垃圾回收根的对象。</span><span class="sxs-lookup"><span data-stu-id="826e8-109">[out] An array of pointers, each of which points to a [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) object that represents the root of an object to be garbage-collected.</span></span>  
   
- <span data-ttu-id="f2202-110">pceltFetched</span><span class="sxs-lookup"><span data-stu-id="f2202-110">pceltFetched</span></span>  
- <span data-ttu-id="f2202-111">[out]指向数[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)对象中实际返回`roots`。</span><span class="sxs-lookup"><span data-stu-id="f2202-111">[out] A pointer to the number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects actually returned in `roots`.</span></span> <span data-ttu-id="f2202-112">如果 `celt` 为 1，此值可能为 `null`。</span><span class="sxs-lookup"><span data-stu-id="f2202-112">This value may be `null` if `celt` is 1.</span></span>  
+ <span data-ttu-id="826e8-110">pceltFetched</span><span class="sxs-lookup"><span data-stu-id="826e8-110">pceltFetched</span></span>  
+ <span data-ttu-id="826e8-111">[out]指向数[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)对象中实际返回`roots`。</span><span class="sxs-lookup"><span data-stu-id="826e8-111">[out] A pointer to the number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects actually returned in `roots`.</span></span> <span data-ttu-id="826e8-112">如果 `celt` 为 1，此值可能为 `null`。</span><span class="sxs-lookup"><span data-stu-id="826e8-112">This value may be `null` if `celt` is 1.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f2202-113">备注</span><span class="sxs-lookup"><span data-stu-id="f2202-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="826e8-113">备注</span><span class="sxs-lookup"><span data-stu-id="826e8-113">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f2202-114">要求</span><span class="sxs-lookup"><span data-stu-id="f2202-114">Requirements</span></span>  
- <span data-ttu-id="f2202-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f2202-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="826e8-114">要求</span><span class="sxs-lookup"><span data-stu-id="826e8-114">Requirements</span></span>  
+ <span data-ttu-id="826e8-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="826e8-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f2202-116">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f2202-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="826e8-116">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="826e8-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f2202-117">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f2202-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="826e8-117">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="826e8-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f2202-118">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f2202-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="826e8-118">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="826e8-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f2202-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="f2202-119">See also</span></span>
-- [<span data-ttu-id="f2202-120">ICorDebugGCReferenceEnum 接口</span><span class="sxs-lookup"><span data-stu-id="f2202-120">ICorDebugGCReferenceEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)
-- [<span data-ttu-id="f2202-121">调试接口</span><span class="sxs-lookup"><span data-stu-id="f2202-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="826e8-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="826e8-119">See also</span></span>
+
+- [<span data-ttu-id="826e8-120">ICorDebugGCReferenceEnum 接口</span><span class="sxs-lookup"><span data-stu-id="826e8-120">ICorDebugGCReferenceEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)
+- [<span data-ttu-id="826e8-121">调试接口</span><span class="sxs-lookup"><span data-stu-id="826e8-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
