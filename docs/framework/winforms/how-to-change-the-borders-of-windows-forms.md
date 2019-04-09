@@ -8,23 +8,23 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-ms.openlocfilehash: f188e14b304970840bfc35a592a445f68f9d7af7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d2e5dd761b2422f6d7e92e7bb97dbdf425b8fedf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080106"
 ---
-# <a name="how-to-change-the-borders-of-windows-forms"></a><span data-ttu-id="cb795-102">如何：更改 Windows 窗体的边框</span><span class="sxs-lookup"><span data-stu-id="cb795-102">How to: Change the Borders of Windows Forms</span></span>
-<span data-ttu-id="cb795-103">当确定 Windows 窗体的外观和行为时，有几种边框样式可供选择。</span><span class="sxs-lookup"><span data-stu-id="cb795-103">You have several border styles to choose from when you are determining the appearance and behavior of your Windows Forms.</span></span> <span data-ttu-id="cb795-104">通过更改 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 属性，可控制窗体调整大小的行为。</span><span class="sxs-lookup"><span data-stu-id="cb795-104">By changing the <xref:System.Windows.Forms.Form.FormBorderStyle%2A> property, you can control the resizing behavior of the form.</span></span> <span data-ttu-id="cb795-105">此外，设置 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 会影响标题栏的显示方式以及其上出现的按钮布局。</span><span class="sxs-lookup"><span data-stu-id="cb795-105">In addition, setting the <xref:System.Windows.Forms.Form.FormBorderStyle%2A> affects how the caption bar is displayed as well as what buttons might appear on it.</span></span> <span data-ttu-id="cb795-106">有关详细信息，请参阅 <xref:System.Windows.Forms.FormBorderStyle>。</span><span class="sxs-lookup"><span data-stu-id="cb795-106">For more information, see <xref:System.Windows.Forms.FormBorderStyle>.</span></span>  
+# <a name="how-to-change-the-borders-of-windows-forms"></a><span data-ttu-id="fb95f-102">如何：更改 Windows 窗体的边框</span><span class="sxs-lookup"><span data-stu-id="fb95f-102">How to: Change the Borders of Windows Forms</span></span>
+<span data-ttu-id="fb95f-103">当确定 Windows 窗体的外观和行为时，有几种边框样式可供选择。</span><span class="sxs-lookup"><span data-stu-id="fb95f-103">You have several border styles to choose from when you are determining the appearance and behavior of your Windows Forms.</span></span> <span data-ttu-id="fb95f-104">通过更改 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 属性，可控制窗体调整大小的行为。</span><span class="sxs-lookup"><span data-stu-id="fb95f-104">By changing the <xref:System.Windows.Forms.Form.FormBorderStyle%2A> property, you can control the resizing behavior of the form.</span></span> <span data-ttu-id="fb95f-105">此外，设置 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 会影响标题栏的显示方式以及其上出现的按钮布局。</span><span class="sxs-lookup"><span data-stu-id="fb95f-105">In addition, setting the <xref:System.Windows.Forms.Form.FormBorderStyle%2A> affects how the caption bar is displayed as well as what buttons might appear on it.</span></span> <span data-ttu-id="fb95f-106">有关详细信息，请参阅 <xref:System.Windows.Forms.FormBorderStyle>。</span><span class="sxs-lookup"><span data-stu-id="fb95f-106">For more information, see <xref:System.Windows.Forms.FormBorderStyle>.</span></span>  
   
- <span data-ttu-id="cb795-107">Visual Studio 中对此任务提供广泛支持。</span><span class="sxs-lookup"><span data-stu-id="cb795-107">There is extensive support for this task in Visual Studio.</span></span>  
+ <span data-ttu-id="fb95f-107">Visual Studio 中对此任务提供广泛支持。</span><span class="sxs-lookup"><span data-stu-id="fb95f-107">There is extensive support for this task in Visual Studio.</span></span>  
   
- <span data-ttu-id="cb795-108">另请参阅[如何：更改使用设计器的 Windows 窗体的边框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/yettzh3e(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="cb795-108">See also [How to: Change the Borders of Windows Forms Using the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/yettzh3e(v=vs.100)).</span></span>  
+ <span data-ttu-id="fb95f-108">另请参阅[如何：更改使用设计器的 Windows 窗体的边框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/yettzh3e(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="fb95f-108">See also [How to: Change the Borders of Windows Forms Using the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/yettzh3e(v=vs.100)).</span></span>  
   
-### <a name="to-set-the-border-style-of-windows-forms-programmatically"></a><span data-ttu-id="cb795-109">以编程方式设置 Windows 窗体的边框样式</span><span class="sxs-lookup"><span data-stu-id="cb795-109">To set the border style of Windows Forms programmatically</span></span>  
+### <a name="to-set-the-border-style-of-windows-forms-programmatically"></a><span data-ttu-id="fb95f-109">以编程方式设置 Windows 窗体的边框样式</span><span class="sxs-lookup"><span data-stu-id="fb95f-109">To set the border style of Windows Forms programmatically</span></span>  
   
--   <span data-ttu-id="cb795-110">将 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 属性设置为所需的样式。</span><span class="sxs-lookup"><span data-stu-id="cb795-110">Set the <xref:System.Windows.Forms.Form.FormBorderStyle%2A> property to the style you want.</span></span> <span data-ttu-id="cb795-111">下面的代码示例设置窗体的边框样式`DlgBx1`到<xref:System.Windows.Forms.FormBorderStyle.FixedDialog>。</span><span class="sxs-lookup"><span data-stu-id="cb795-111">The following code example sets the border style of form `DlgBx1` to <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>.</span></span>  
+-   <span data-ttu-id="fb95f-110">将 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 属性设置为所需的样式。</span><span class="sxs-lookup"><span data-stu-id="fb95f-110">Set the <xref:System.Windows.Forms.Form.FormBorderStyle%2A> property to the style you want.</span></span> <span data-ttu-id="fb95f-111">下面的代码示例设置窗体的边框样式`DlgBx1`到<xref:System.Windows.Forms.FormBorderStyle.FixedDialog>。</span><span class="sxs-lookup"><span data-stu-id="fb95f-111">The following code example sets the border style of form `DlgBx1` to <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>.</span></span>  
   
     ```vb  
     DlgBx1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog  
@@ -39,11 +39,12 @@ ms.locfileid: "57713899"
        System::Windows::Forms::FormBorderStyle::FixedDialog;  
     ```  
   
-     <span data-ttu-id="cb795-112">另请参阅[如何：在设计时创建对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/55cz5x2c(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="cb795-112">Also see [How to: Create Dialog Boxes at Design Time](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/55cz5x2c(v=vs.100)).</span></span>  
+     <span data-ttu-id="fb95f-112">另请参阅[如何：在设计时创建对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/55cz5x2c(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="fb95f-112">Also see [How to: Create Dialog Boxes at Design Time](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/55cz5x2c(v=vs.100)).</span></span>  
   
-     <span data-ttu-id="cb795-113">此外，如果已选择提供可选的窗体的边框样式**最小化**并**最大化**按钮，可以指定是否希望一个或两个这些按钮正常工作。</span><span class="sxs-lookup"><span data-stu-id="cb795-113">Additionally, if you have chosen a border style for the form that provides optional **Minimize** and **Maximize** buttons, you can specify whether you want either or both of these buttons to be functional.</span></span> <span data-ttu-id="cb795-114">当想要密切控制用户体验时，这些按钮会非常有用。</span><span class="sxs-lookup"><span data-stu-id="cb795-114">These buttons are useful when you want to closely control the user experience.</span></span> <span data-ttu-id="cb795-115">**最小化**并**最大化**按钮默认启用，而且其功能操作通过**属性**窗口。</span><span class="sxs-lookup"><span data-stu-id="cb795-115">The **Minimize** and **Maximize** buttons are enabled by default, and their functionality is manipulated through the **Properties** window.</span></span>  
+     <span data-ttu-id="fb95f-113">此外，如果已选择提供可选的窗体的边框样式**最小化**并**最大化**按钮，可以指定是否希望一个或两个这些按钮正常工作。</span><span class="sxs-lookup"><span data-stu-id="fb95f-113">Additionally, if you have chosen a border style for the form that provides optional **Minimize** and **Maximize** buttons, you can specify whether you want either or both of these buttons to be functional.</span></span> <span data-ttu-id="fb95f-114">当想要密切控制用户体验时，这些按钮会非常有用。</span><span class="sxs-lookup"><span data-stu-id="fb95f-114">These buttons are useful when you want to closely control the user experience.</span></span> <span data-ttu-id="fb95f-115">**最小化**并**最大化**按钮默认启用，而且其功能操作通过**属性**窗口。</span><span class="sxs-lookup"><span data-stu-id="fb95f-115">The **Minimize** and **Maximize** buttons are enabled by default, and their functionality is manipulated through the **Properties** window.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb795-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="cb795-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb95f-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="fb95f-116">See also</span></span>
+
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>
-- [<span data-ttu-id="cb795-117">Windows 窗体入门</span><span class="sxs-lookup"><span data-stu-id="cb795-117">Getting Started with Windows Forms</span></span>](getting-started-with-windows-forms.md)
+- [<span data-ttu-id="fb95f-117">Windows 窗体入门</span><span class="sxs-lookup"><span data-stu-id="fb95f-117">Getting Started with Windows Forms</span></span>](getting-started-with-windows-forms.md)

@@ -16,36 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43f63e09c654c7aab9f1da0db7587a92bee4fb79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e67e4685320f56a4a6a8be2e3eb2e6c8065ce59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632031"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080379"
 ---
-# <a name="icordebugvariablehomeenum-interface"></a><span data-ttu-id="765eb-102">ICorDebugVariableHomeEnum 接口</span><span class="sxs-lookup"><span data-stu-id="765eb-102">ICorDebugVariableHomeEnum Interface</span></span>
-<span data-ttu-id="765eb-103">提供对本地变量和函数的参数个数的枚举器。</span><span class="sxs-lookup"><span data-stu-id="765eb-103">Provides an enumerator to the local variables and arguments in a function.</span></span>  
+# <a name="icordebugvariablehomeenum-interface"></a><span data-ttu-id="5b687-102">ICorDebugVariableHomeEnum 接口</span><span class="sxs-lookup"><span data-stu-id="5b687-102">ICorDebugVariableHomeEnum Interface</span></span>
+<span data-ttu-id="5b687-103">提供对本地变量和函数的参数个数的枚举器。</span><span class="sxs-lookup"><span data-stu-id="5b687-103">Provides an enumerator to the local variables and arguments in a function.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="765eb-104">方法</span><span class="sxs-lookup"><span data-stu-id="765eb-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="5b687-104">方法</span><span class="sxs-lookup"><span data-stu-id="5b687-104">Methods</span></span>  
   
-|<span data-ttu-id="765eb-105">方法</span><span class="sxs-lookup"><span data-stu-id="765eb-105">Method</span></span>|<span data-ttu-id="765eb-106">描述</span><span class="sxs-lookup"><span data-stu-id="765eb-106">Description</span></span>|  
+|<span data-ttu-id="5b687-105">方法</span><span class="sxs-lookup"><span data-stu-id="5b687-105">Method</span></span>|<span data-ttu-id="5b687-106">描述</span><span class="sxs-lookup"><span data-stu-id="5b687-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="765eb-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="765eb-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)|<span data-ttu-id="765eb-108">获取指定的数目的[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)包含本地变量和函数中的参数信息的实例。</span><span class="sxs-lookup"><span data-stu-id="765eb-108">Gets the specified number of [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances that contain information about the local variables and arguments in a function.</span></span>|  
+|[<span data-ttu-id="5b687-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="5b687-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)|<span data-ttu-id="5b687-108">获取指定的数目的[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)包含本地变量和函数中的参数信息的实例。</span><span class="sxs-lookup"><span data-stu-id="5b687-108">Gets the specified number of [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances that contain information about the local variables and arguments in a function.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="765eb-109">备注</span><span class="sxs-lookup"><span data-stu-id="765eb-109">Remarks</span></span>  
- <span data-ttu-id="765eb-110">`ICorDebugVariableHomeEnum`接口实现 ICorDebugEnum 接口。</span><span class="sxs-lookup"><span data-stu-id="765eb-110">The `ICorDebugVariableHomeEnum` interface implements the ICorDebugEnum interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5b687-109">备注</span><span class="sxs-lookup"><span data-stu-id="5b687-109">Remarks</span></span>  
+ <span data-ttu-id="5b687-110">`ICorDebugVariableHomeEnum`接口实现 ICorDebugEnum 接口。</span><span class="sxs-lookup"><span data-stu-id="5b687-110">The `ICorDebugVariableHomeEnum` interface implements the ICorDebugEnum interface.</span></span>  
   
- <span data-ttu-id="765eb-111">`ICorDebugVariableHomeEnum`实例中填入[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)实例通过调用[ICorDebugCode4::EnumerateVariableHomes](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="765eb-111">An `ICorDebugVariableHomeEnum` instance is populated with [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances by calling the [ICorDebugCode4::EnumerateVariableHomes](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md) method.</span></span> <span data-ttu-id="765eb-112">每个[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)集合中的实例表示的本地变量或函数中的参数。</span><span class="sxs-lookup"><span data-stu-id="765eb-112">Each [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instance in the collection represents a local variable or argument in a function.</span></span> <span data-ttu-id="765eb-113">[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)集合中的对象可以通过调用枚举[ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="765eb-113">The  [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) objects in the collection can be enumerated by calling the [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) method.</span></span>  
+ <span data-ttu-id="5b687-111">`ICorDebugVariableHomeEnum`实例中填入[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)实例通过调用[ICorDebugCode4::EnumerateVariableHomes](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="5b687-111">An `ICorDebugVariableHomeEnum` instance is populated with [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances by calling the [ICorDebugCode4::EnumerateVariableHomes](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md) method.</span></span> <span data-ttu-id="5b687-112">每个[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)集合中的实例表示的本地变量或函数中的参数。</span><span class="sxs-lookup"><span data-stu-id="5b687-112">Each [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instance in the collection represents a local variable or argument in a function.</span></span> <span data-ttu-id="5b687-113">[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)集合中的对象可以通过调用枚举[ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="5b687-113">The  [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) objects in the collection can be enumerated by calling the [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="765eb-114">要求</span><span class="sxs-lookup"><span data-stu-id="765eb-114">Requirements</span></span>  
- <span data-ttu-id="765eb-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="765eb-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5b687-114">要求</span><span class="sxs-lookup"><span data-stu-id="5b687-114">Requirements</span></span>  
+ <span data-ttu-id="5b687-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5b687-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="765eb-116">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="765eb-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5b687-116">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5b687-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="765eb-117">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="765eb-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5b687-117">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5b687-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="765eb-118">**.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="765eb-118">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ **<span data-ttu-id="5b687-118">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="5b687-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="765eb-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="765eb-119">See also</span></span>
-- [<span data-ttu-id="765eb-120">ICorDebugVariableHome 接口</span><span class="sxs-lookup"><span data-stu-id="765eb-120">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
-- [<span data-ttu-id="765eb-121">调试接口</span><span class="sxs-lookup"><span data-stu-id="765eb-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="5b687-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="5b687-119">See also</span></span>
+
+- [<span data-ttu-id="5b687-120">ICorDebugVariableHome 接口</span><span class="sxs-lookup"><span data-stu-id="5b687-120">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [<span data-ttu-id="5b687-121">调试接口</span><span class="sxs-lookup"><span data-stu-id="5b687-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

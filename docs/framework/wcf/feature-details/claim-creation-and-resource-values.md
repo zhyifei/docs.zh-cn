@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], creation and resource values
 ms.assetid: 30431f76-cbe7-4bad-bad7-8e43e23a82d4
-ms.openlocfilehash: ca1bb8ccbc77e2b026a65a9cef56118e8b86dbb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd9a8b7faf3cd7a648ff6b2a50ac68f21561497c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093689"
 ---
-# <a name="claim-creation-and-resource-values"></a><span data-ttu-id="144f7-102">声明创建和资源值</span><span class="sxs-lookup"><span data-stu-id="144f7-102">Claim Creation and Resource Values</span></span>
-<span data-ttu-id="144f7-103"><xref:System.IdentityModel.Claims.Claim> 类提供了多种创建内置声明类型的实例的方法。</span><span class="sxs-lookup"><span data-stu-id="144f7-103">The <xref:System.IdentityModel.Claims.Claim> class provides several methods for creating instances of built-in claims types.</span></span> <span data-ttu-id="144f7-104">在这些方法中，以下方法不对提供的资源执行语义或格式检查：</span><span class="sxs-lookup"><span data-stu-id="144f7-104">Of these methods, the following perform no semantic or format checking on the supplied resource:</span></span>  
+# <a name="claim-creation-and-resource-values"></a><span data-ttu-id="61982-102">声明创建和资源值</span><span class="sxs-lookup"><span data-stu-id="61982-102">Claim Creation and Resource Values</span></span>
+<span data-ttu-id="61982-103"><xref:System.IdentityModel.Claims.Claim> 类提供了多种创建内置声明类型的实例的方法。</span><span class="sxs-lookup"><span data-stu-id="61982-103">The <xref:System.IdentityModel.Claims.Claim> class provides several methods for creating instances of built-in claims types.</span></span> <span data-ttu-id="61982-104">在这些方法中，以下方法不对提供的资源执行语义或格式检查：</span><span class="sxs-lookup"><span data-stu-id="61982-104">Of these methods, the following perform no semantic or format checking on the supplied resource:</span></span>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateDnsClaim%2A>  
   
--   <span data-ttu-id="144f7-105"><xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A>（不检查字节数组的长度或内容）</span><span class="sxs-lookup"><span data-stu-id="144f7-105"><xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (does not check the length or content of the byte array)</span></span>  
+-   <xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> <span data-ttu-id="61982-105">（不会检查长度或字节数组的内容）</span><span class="sxs-lookup"><span data-stu-id="61982-105">(does not check the length or content of the byte array)</span></span>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateNameClaim%2A>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateSpnClaim%2A>  
   
--   <span data-ttu-id="144f7-106"><xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A>（不检查字节数组的长度或内容）</span><span class="sxs-lookup"><span data-stu-id="144f7-106"><xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (does not check the length or content of the byte array)</span></span>  
+-   <xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> <span data-ttu-id="61982-106">（不会检查长度或字节数组的内容）</span><span class="sxs-lookup"><span data-stu-id="61982-106">(does not check the length or content of the byte array)</span></span>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateUpnClaim%2A>  
   
- <span data-ttu-id="144f7-107">调用上述方法时应该小心，确保传入的资源值使用正确的格式和/或包含正确的信息类型。</span><span class="sxs-lookup"><span data-stu-id="144f7-107">Care should be taken when calling the above methods to ensure that the resource values passed in are of the correct format or contain the correct kind of information (or both).</span></span>  
+ <span data-ttu-id="61982-107">调用上述方法时应该小心，确保传入的资源值使用正确的格式和/或包含正确的信息类型。</span><span class="sxs-lookup"><span data-stu-id="61982-107">Care should be taken when calling the above methods to ensure that the resource values passed in are of the correct format or contain the correct kind of information (or both).</span></span>  
   
- <span data-ttu-id="144f7-108">以下方法采用特定类型：</span><span class="sxs-lookup"><span data-stu-id="144f7-108">The following methods take specific types:</span></span>  
+ <span data-ttu-id="61982-108">以下方法采用特定类型：</span><span class="sxs-lookup"><span data-stu-id="61982-108">The following methods take specific types:</span></span>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateDenyOnlyWindowsSidClaim%2A>  
   
@@ -42,7 +42,8 @@ ms.locfileid: "54704064"
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateX500DistinguishedNameClaim%2A>  
   
-## <a name="see-also"></a><span data-ttu-id="144f7-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="144f7-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61982-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="61982-109">See also</span></span>
+
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.ClaimSet>
-- [<span data-ttu-id="144f7-110">使用标识模型管理声明和授权</span><span class="sxs-lookup"><span data-stu-id="144f7-110">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [<span data-ttu-id="61982-110">使用标识模型管理声明和授权</span><span class="sxs-lookup"><span data-stu-id="61982-110">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
