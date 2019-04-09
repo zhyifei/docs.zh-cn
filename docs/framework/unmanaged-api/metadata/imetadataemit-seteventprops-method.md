@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1159e91004152b6c1393b87f25ff7964456adffc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: abfa8a3f58d3e9f7c80762c1faf2bc51514d71b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113810"
 ---
-# <a name="imetadataemitseteventprops-method"></a><span data-ttu-id="56172-102">IMetaDataEmit::SetEventProps 方法</span><span class="sxs-lookup"><span data-stu-id="56172-102">IMetaDataEmit::SetEventProps Method</span></span>
-<span data-ttu-id="56172-103">设置或更新的定义通过以前调用的事件指定的功能[imetadataemit:: Defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)。</span><span class="sxs-lookup"><span data-stu-id="56172-103">Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span></span>  
+# <a name="imetadataemitseteventprops-method"></a><span data-ttu-id="7ace1-102">IMetaDataEmit::SetEventProps 方法</span><span class="sxs-lookup"><span data-stu-id="7ace1-102">IMetaDataEmit::SetEventProps Method</span></span>
+<span data-ttu-id="7ace1-103">设置或更新的定义通过以前调用的事件指定的功能[imetadataemit:: Defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)。</span><span class="sxs-lookup"><span data-stu-id="7ace1-103">Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56172-104">语法</span><span class="sxs-lookup"><span data-stu-id="56172-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7ace1-104">语法</span><span class="sxs-lookup"><span data-stu-id="7ace1-104">Syntax</span></span>  
   
 ```  
 HRESULT SetEventProps (  
@@ -41,37 +41,38 @@ HRESULT SetEventProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="56172-105">参数</span><span class="sxs-lookup"><span data-stu-id="56172-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7ace1-105">参数</span><span class="sxs-lookup"><span data-stu-id="7ace1-105">Parameters</span></span>  
  `ev`  
- <span data-ttu-id="56172-106">[in]事件标记中。</span><span class="sxs-lookup"><span data-stu-id="56172-106">[in] The event token.</span></span>  
+ <span data-ttu-id="7ace1-106">[in]事件标记中。</span><span class="sxs-lookup"><span data-stu-id="7ace1-106">[in] The event token.</span></span>  
   
  `dwEventFlags`  
- <span data-ttu-id="56172-107">[in]事件的标志。</span><span class="sxs-lookup"><span data-stu-id="56172-107">[in] Event flags.</span></span> <span data-ttu-id="56172-108">这是一个位掩码的`CorEventAttr`值。</span><span class="sxs-lookup"><span data-stu-id="56172-108">This is a bitmask of `CorEventAttr` values.</span></span>  
+ <span data-ttu-id="7ace1-107">[in]事件的标志。</span><span class="sxs-lookup"><span data-stu-id="7ace1-107">[in] Event flags.</span></span> <span data-ttu-id="7ace1-108">这是一个位掩码的`CorEventAttr`值。</span><span class="sxs-lookup"><span data-stu-id="7ace1-108">This is a bitmask of `CorEventAttr` values.</span></span>  
   
  `tkEventType`  
- <span data-ttu-id="56172-109">[in]事件类标记。</span><span class="sxs-lookup"><span data-stu-id="56172-109">[in] The token for the event class.</span></span> <span data-ttu-id="56172-110">这可以是`mdTypeDef`或`mdTypeRef`令牌。</span><span class="sxs-lookup"><span data-stu-id="56172-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
+ <span data-ttu-id="7ace1-109">[in]事件类标记。</span><span class="sxs-lookup"><span data-stu-id="7ace1-109">[in] The token for the event class.</span></span> <span data-ttu-id="7ace1-110">这可以是`mdTypeDef`或`mdTypeRef`令牌。</span><span class="sxs-lookup"><span data-stu-id="7ace1-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
   
  `mdAddOn`  
- <span data-ttu-id="56172-111">[in]用来订阅事件或为 null 的方法。</span><span class="sxs-lookup"><span data-stu-id="56172-111">[in] The method used to subscribe to the event, or null.</span></span>  
+ <span data-ttu-id="7ace1-111">[in]用来订阅事件或为 null 的方法。</span><span class="sxs-lookup"><span data-stu-id="7ace1-111">[in] The method used to subscribe to the event, or null.</span></span>  
   
  `mdRemoveOn`  
- <span data-ttu-id="56172-112">[in]用于取消订阅事件，则为 null 的方法。</span><span class="sxs-lookup"><span data-stu-id="56172-112">[in] The method used to unsubscribe to the event, or null.</span></span>  
+ <span data-ttu-id="7ace1-112">[in]用于取消订阅事件，则为 null 的方法。</span><span class="sxs-lookup"><span data-stu-id="7ace1-112">[in] The method used to unsubscribe to the event, or null.</span></span>  
   
  `mdFire`  
- <span data-ttu-id="56172-113">[in]（由派生类） 用于引发事件的方法。</span><span class="sxs-lookup"><span data-stu-id="56172-113">[in] The method used (by a derived class) to raise the event.</span></span>  
+ <span data-ttu-id="7ace1-113">[in]（由派生类） 用于引发事件的方法。</span><span class="sxs-lookup"><span data-stu-id="7ace1-113">[in] The method used (by a derived class) to raise the event.</span></span>  
   
  `rmdOtherMethods[]`  
- <span data-ttu-id="56172-114">[in]有关其他方法与事件关联的标记的数组。</span><span class="sxs-lookup"><span data-stu-id="56172-114">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="56172-115">数组的最后一个元素必须是`mdMethodDefNil`。</span><span class="sxs-lookup"><span data-stu-id="56172-115">The last element of the array must be `mdMethodDefNil`.</span></span>  
+ <span data-ttu-id="7ace1-114">[in]有关其他方法与事件关联的标记的数组。</span><span class="sxs-lookup"><span data-stu-id="7ace1-114">[in] An array of tokens for other methods associated with the event.</span></span> <span data-ttu-id="7ace1-115">数组的最后一个元素必须是`mdMethodDefNil`。</span><span class="sxs-lookup"><span data-stu-id="7ace1-115">The last element of the array must be `mdMethodDefNil`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56172-116">要求</span><span class="sxs-lookup"><span data-stu-id="56172-116">Requirements</span></span>  
- <span data-ttu-id="56172-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="56172-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7ace1-116">要求</span><span class="sxs-lookup"><span data-stu-id="7ace1-116">Requirements</span></span>  
+ <span data-ttu-id="7ace1-117">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7ace1-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="56172-118">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="56172-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7ace1-118">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7ace1-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="56172-119">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="56172-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7ace1-119">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="7ace1-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="56172-120">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56172-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="7ace1-120">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="7ace1-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="56172-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="56172-121">See also</span></span>
-- [<span data-ttu-id="56172-122">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="56172-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="56172-123">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="56172-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7ace1-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="7ace1-121">See also</span></span>
+
+- [<span data-ttu-id="7ace1-122">IMetaDataEmit 接口</span><span class="sxs-lookup"><span data-stu-id="7ace1-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="7ace1-123">IMetaDataEmit2 接口</span><span class="sxs-lookup"><span data-stu-id="7ace1-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
