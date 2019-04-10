@@ -2,12 +2,12 @@
 title: WSDL 和策略
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151900"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 和策略
 本主题介绍 Windows Communication Foundation (WCF) WSDL 1.1、 Ws-policy 和 Ws-policyattachment 实现详细信息，以及其他 Ws-policy 断言和 WSDL 1.1 扩展引入的 WCF。  
@@ -69,10 +69,11 @@ ms.locfileid: "54741426"
 |cdp:CompositeDuplex|终结点|终结点将两个独立且逆向的传输连接分别用于传入消息和传出消息。|  
 |mssp:RsaToken|嵌套|RSA 密钥令牌断言。 通常由作为认可签名中密钥信息的一部分直接序列化的 RSA 密钥来满足此要求。|  
 |mssp:SslContextToken|嵌套|要求使用通过利用 WS-Trust 的 TLS 握手获取的 SecurityContextToken。 嵌套断言包括：sp:RequireDerivedKeys、mssp:MustNotSendCancel、mssp:RequireClientCertificate。|  
-|mssp:MustNotSendCancel|嵌套|指定一个要求，即不要将使用 Cancel 绑定 [WS-Trust、WS-SC] 的请求安全令牌 (RST) 请求消息 [WS-Trust] 发送给给定 SecurityContextToken 的颁发机构。 如果此断言存在，则不得将此类请求消息发送给颁发机构。 如果此断言不存在，则可以将此类请求消息发送给颁发机构。|  
+|mssp:MustNotSendCancel|嵌套|指定一个需求，即不要将使用 Cancel 绑定 [WS-Trust、WS-SC] 的请求安全令牌 (RST) 请求消息 [WS-Trust] 发送给给定 SecurityContextToken 的颁发机构。 如果此断言存在，则不得将此类请求消息发送给颁发机构。 如果此断言不存在，则可以将此类请求消息发送给颁发机构。|  
 |mssp:RequireClientCertificate|嵌套|这一可选元素指定需要作为 TLSNEGO 协议的一部分提供的客户端证书。 如果此断言存在，则必须提供客户端证书。 如果此断言不存在，则不得提供客户端证书。 此断言不得在 mssp:SslContextToken 外部使用。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [自定义 WSDL 发布](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
 - [如何：导出自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
 - [如何：导入自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

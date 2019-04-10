@@ -8,12 +8,12 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 3d67da6330cdceaf975c62b474c1580b853a2676
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160103"
 ---
 # <a name="how-to-arrange-mdi-child-forms"></a>如何：排列 MDI 子窗体
 通常，应用程序会有用于操作（例如“平铺”、“级联”和“排列”）的菜单命令，这些命令会控制打开的 MDI 子窗体布局。 你可以使用 <xref:System.Windows.Forms.Form.LayoutMdi%2A> 方法和一个 <xref:System.Windows.Forms.MdiLayout> 枚举值来重排 MDI 父窗体中的子窗体。  
@@ -48,6 +48,7 @@ ms.locfileid: "57711892"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [多文档界面 (MDI) 应用程序](multiple-document-interface-mdi-applications.md)
 - [如何：创建 MDI 父窗体](how-to-create-mdi-parent-forms.md)
 - [如何：创建 MDI 子窗体](how-to-create-mdi-child-forms.md)

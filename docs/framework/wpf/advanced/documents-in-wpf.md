@@ -10,20 +10,19 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 20d90f96647989be35bf2c9cdf6243e8e868cd1e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169606"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文档
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供丰富的文档功能，可创建旨在比前几代 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 更易于访问和读取的高保真内容文档。 除增强功能和质量外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还对文档显示、打包和安全性能提供集成服务。 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文档类型和文档打包。  
-  
-  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供各种用于创建旨在成为更轻松地访问和读取比前几代的高保真内容文档功能[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]。 除增强功能和质量外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还对文档显示、打包和安全性能提供集成服务。 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文档类型和文档打包。  
+
 <a name="types_of_documents"></a>   
 ## <a name="types-of-documents"></a>文档类型  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 基于文档用途将文档分成两大类别；这些文档类别分别称为“固定文档”和“流文档”。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将文档划分为两大类根据其预期用途;这些文档类别分别称为"固定的文档"和"流文档"。  
   
  固定文档适用于需要精确的 [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] 表示形式的应用程序，这与使用的显示器或打印机硬件无关。 固定文档的典型用途包括桌面发布、字处理和窗体布局，在这些情况下，遵循原始页面设计非常关键。 作为其布局的一部分，固定文档独立于所使用的显示或打印设备来对内容元素进行精确地定位安放。 例如，一个固定文档页面在 96 dpi 显示器上显示的效果与在 600 dpi 激光打印机或 4800 dpi 照相排字机上输出的效果是完全一样的。 虽然文档质量会根据每台设备的功能达到最优化，但是页面布局在所有情况下都保持不变。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "57361364"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>用户界面中的文本  
- 除可将文本添加到文档外，文本显然还可以用于应用程序 UI（如窗体）中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括多个用于在屏幕中绘制文本的控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。 一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的例如中的简短句子时，应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文本支持时，可以使用。 有关详细信息，请参阅 [TextBlock 概述](../controls/textblock-overview.md)。  
+ 除可将文本添加到文档外，文本显然还可以用于应用程序 UI（如窗体）中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括用于在屏幕上绘制文本的多个控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。 一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的例如中的简短句子时，应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文本支持时，可以使用。 有关详细信息，请参阅 [TextBlock 概述](../controls/textblock-overview.md)。  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>文档打包  
@@ -62,7 +61,7 @@ ms.locfileid: "57361364"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包体系结构用作大量关键技术的基础：  
   
--   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档符合 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]。  
+-   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档符合[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]。  
   
 -   Microsoft Office“12”开放式 XML 格式文档 (.docx)。  
   
@@ -124,7 +123,7 @@ ms.locfileid: "57361364"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS 文档  
- [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文档是一个包，其中包含一个或多个固定文档以及呈现操作所需的所有资源和信息。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 还是 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的本机后台打印文件格式。  <xref:System.Windows.Xps.Packaging.XpsDocument>存储在标准 ZIP 数据集中，并且可以包括 XML 和二进制组件，如图像和字体文件的组合。 [PackageRelationships](#PackageRelationships) 用于定义内容和完全呈现文档所需的资源之间的依赖关系。  <xref:System.Windows.Xps.Packaging.XpsDocument>设计提供单一的、 高保真文档解决方案，可支持多个用途：  
+ [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文档是包含一个或多个固定文档以及所有资源和呈现所需的信息的包。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 也是本机[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]打印后台打印文件格式。  <xref:System.Windows.Xps.Packaging.XpsDocument>存储在标准 ZIP 数据集中，并且可以包括 XML 和二进制组件，如图像和字体文件的组合。 [PackageRelationships](#PackageRelationships) 用于定义内容和完全呈现文档所需的资源之间的依赖关系。  <xref:System.Windows.Xps.Packaging.XpsDocument>设计提供单一的、 高保真文档解决方案，可支持多个用途：  
   
 -   将固定文档内容和资源读取、写入和存储为单个可移植且易于分发的文件。  
   
@@ -135,6 +134,7 @@ ms.locfileid: "57361364"
 -   将文档直接路由到与 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 兼容的打印机。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
@@ -142,7 +142,7 @@ ms.locfileid: "57361364"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [文本](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [流文档概述](flow-document-overview.md)
 - [打印概述](printing-overview.md)
 - [文档序列化和存储](document-serialization-and-storage.md)

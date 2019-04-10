@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35dcabcf65af1634533edfba1e300a8746bc97ec
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 031ec811315f4a9d9f1f73d34e32236d2cf27729
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221363"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169073"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native 本机反射 API 参考
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 包括三个新的异常类型：[System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)， [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)，和[System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). 请注意有关所有三种异常类型的以下内容：  
@@ -32,8 +32,8 @@ ms.locfileid: "56221363"
   
 |类|描述|  
 |-----------|-----------------|  
-|[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)|当反射用于检索不存在的元数据时会引起此异常。|  
-|[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)|当一个类型或类型成员的元数据可用但其实现已遭到删除时会引发此异常。|  
+|[丢失元数据异常](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)|当反射用于检索不存在的元数据时会引起此异常。|  
+|[丢失运行时项目异常](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)|当一个类型或类型成员的元数据可用但其实现已遭到删除时会引发此异常。|  
   
  要查看有关此命名空间中其他类型的文档，请参阅 .NET Framework 文档集中的 <xref:System.Reflection> 引用页面。  
   
@@ -42,11 +42,12 @@ ms.locfileid: "56221363"
   
 |类|描述|  
 |-----------|-----------------|  
-|[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)|当手动封送方法被调用但一个类型的元数据无法通过动态分析找到或无法在运行时指令文件中找到时，会引发该异常。|  
+|[丢失互操作数据异常](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)|当手动封送方法被调用但一个类型的元数据无法通过动态分析找到或无法在运行时指令文件中找到时，会引发该异常。|  
   
  要查看有关此命名空间中其他类型的文档，请参阅 .NET Framework 文档集中的 <xref:System.Runtime.CompilerServices> 引用页面。  
   
 ## <a name="see-also"></a>请参阅
+
 - [MissingInteropDataException 类](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
 - [MissingMetadataException 类](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
 - [MissingRuntimeArtifactException 类](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)

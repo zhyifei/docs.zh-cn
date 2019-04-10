@@ -1,5 +1,5 @@
 ---
-title: connectionManagement -> <remove> 元素（网络设置）
+title: <remove> ConnectionManagement （网络设置） 的元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/remove
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 62f7793c8f25f4803e881e2f183c99c62000ca23
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d9c584fb2faa971e7ce1ca287a94c8c6129820fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270480"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158855"
 ---
 # <a name="remove-element-for-connectionmanagement-network-settings"></a>\<删除 > connectionManagement （网络设置） 的元素
 从连接管理列表中删除 IP 地址或 DNS 名称。  
@@ -38,7 +38,7 @@ ms.locfileid: "55270480"
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**说明**|  
+|**特性**|**描述**|  
 |-------------------|---------------------|  
 |`address`|IP 地址或 DNS 名称。|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "55270480"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定到网络主机的最大连接数。|  
   
@@ -75,6 +75,7 @@ ms.locfileid: "55270480"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

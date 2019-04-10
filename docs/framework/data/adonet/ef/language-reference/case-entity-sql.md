@@ -2,12 +2,12 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 9f41c99ab40a74a2c17e8dac207cc7887c77ba91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 65d038564683e0a97939cabc7081be3341f4542d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638917"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162797"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 求出一组 `Boolean` 表达式的值以确定结果。  
@@ -29,13 +29,13 @@ END
  一个占位符，表明可以使用多个 WHEN `Boolean_expression` THEN `result_expression` 子句。  
   
  THEN `result_expression`  
- 作为在 `Boolean_expression` 的计算结果为 `true`时返回的表达式。 `result expression` 是任何有效的表达式。  
+ 作为在 `Boolean_expression` 的计算结果为 `true`时返回的表达式。 `result expression` 为任何有效表达式。  
   
  ELSE `else_result_expression`  
- 比较运算的结果都不为 `true`时返回的表达式。 如果忽略此参数且比较运算计算的结果不为 `true`，CASE 将返回空值。 `else_result_expression` 是任何有效的表达式。 `else_result_expression` 及任何 `result_expression` 的数据类型必须相同或必须是隐式转换的数据类型。  
+ 比较运算的结果都不为 `true`时返回的表达式。 如果忽略此参数且比较运算计算的结果不为 `true`，CASE 将返回空值。 `else_result_expression` 为任何有效表达式。 `else_result_expression` 及任何 `result_expression` 的数据类型必须相同或必须是隐式转换的数据类型。  
   
  WHEN `Boolean_expression`  
- 使用 CASE 搜索格式时所计算的 `Boolean` 表达式。 `Boolean_expression` 是任何有效的 `Boolean` 表达式。  
+ 使用 CASE 搜索格式时所计算的 `Boolean` 表达式。 `Boolean_expression` 任何有效`Boolean`表达式。  
   
 ## <a name="return-value"></a>返回值  
  从 `result_expression` 和可选 `else_result_expression`的类型集中返回优先级最高的类型。  
@@ -57,6 +57,7 @@ END
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
+- [选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
 - [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

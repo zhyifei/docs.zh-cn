@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151497"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
 Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communication Foundation (WCF) 3.0 版，它的应用程序时你的应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向您的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 WCF 不发送任何信息向 Microsoft 从你的应用程序除非你或最终用户选择将其发送给我们。  
@@ -374,7 +374,7 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
 ### <a name="other-features-for-it-professionals"></a>IT 专业人员的其他作用  
  WCF 具有公开通过 WMI （随 Windows） 的 WCF 基础结构配置信息的 WMI 提供程序。 默认情况下，WMI 接口可供管理员使用。  
   
- WCF 配置使用.NET Framework 配置机制。 配置文件存储在计算机上。 应用程序开发人员和管理员为应用程序的每个要求创建配置文件和 ACL。 配置文件可以包含终结点地址和指向证书存储区中的证书的链接。 证书可用于提供应用程序数据，以配置应用程序所使用的功能的各种属性。  
+ WCF 配置使用.NET Framework 配置机制。 配置文件存储在计算机上。 应用程序开发人员和管理员为应用程序的每个需求创建配置文件和 ACL。 配置文件可以包含终结点地址和指向证书存储区中的证书的链接。 证书可用于提供应用程序数据，以配置应用程序所使用的功能的各种属性。  
   
  WCF 还通过调用使用.NET Framework 进程转储功能<xref:System.Environment.FailFast%2A>方法。  
   
@@ -402,5 +402,6 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
  Web 服务描述语言 (WSDL) 包含端口的定义。 每个端口都具有一个终结点地址和一个表示应用程序所使用的服务的绑定。 可以使用配置禁用公开 WSDL。 计算机上不会保留任何信息。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows Communication Foundation](index.md)
 - [安全性](../../../docs/framework/wcf/feature-details/security.md)

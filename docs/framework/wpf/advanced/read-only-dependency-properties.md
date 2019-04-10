@@ -5,18 +5,16 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162418"
 ---
 # <a name="read-only-dependency-properties"></a>只读依赖项属性
 本主题介绍只读依赖属性，包括现有只读依赖属性、创建自定义只读依赖属性的方案和技术。  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
  本主题假定你了解实现依赖属性的基本方案，以及如何将元数据应用于自定义依赖属性。 有关上下文，请参阅[自定义依赖属性](custom-dependency-properties.md)和[依赖属性元数据](dependency-property-metadata.md)。  
@@ -44,6 +42,7 @@ ms.locfileid: "57378998"
  因为<xref:System.Windows.DependencyPropertyKey>是专用容器，并不会传播由属性系统在代码之外，更好的安全设置比读写依赖属性具有只读依赖属性。 对于读写依赖属性，标识字段是显式或隐式公用的，因此该属性可广泛设置。 有关更多详细信息，请参阅[依赖属性的安全性](dependency-property-security.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [依赖项属性概述](dependency-properties-overview.md)
-- [自定义依赖属性](custom-dependency-properties.md)
+- [自定义依赖项属性](custom-dependency-properties.md)
 - [样式设置和模板化](../controls/styling-and-templating.md)

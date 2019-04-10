@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74654cf18d87fed8ad5ce9a4cd4249d56fdb4343
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99bc65b0181a7c0ab7877273b3747ece91544f99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152498"
 ---
 # <a name="putmethod-function"></a>PutMethod 函数
 创建方法。
@@ -60,13 +60,12 @@ HRESULT PutMethod (
 
 `pSignatureOut`  
 [in] 指向一份[__Parameters 系统类](/windows/desktop/WmiSdk/--parameters)，其中包含`out`方法的参数。 如果忽略此参数设置为`null`。
- 
 
 ## <a name="return-value"></a>返回值
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数是无效的。 |
 | `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | `[in, out]`方法参数中指定*pInSignature*并*pOutSignature*对象具有不同的限定符。
@@ -99,7 +98,8 @@ HRESULT PutMethod (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

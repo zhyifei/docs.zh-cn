@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 6e5ede5141d2edb24a688bf700c22870c8886906
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157665"
 ---
 # <a name="securing-services"></a>保证服务的安全
 Windows Communication Foundation (WCF) 服务的安全性包括两个主要要求： 传输安全和授权。 (第三个要求中所述的安全事件的审核[审核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)简言之，传输安全包括身份验证（验证服务和客户端的标识）、保密性（消息加密）和完整性（进行数字签名以检测是否存在篡改）。 授权是控制对资源的访问，例如仅允许特权用户读取文件。 使用 WCF 的功能，很容易地实现两个主要要求。  
@@ -99,6 +99,7 @@ Windows Communication Foundation (WCF) 服务的安全性包括两个主要要�
  `ProtectionLevel` 属性出现在多个特性类（如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 类）中。 保护级别是一个值，它指定了支持服务的消息（或消息部分）是进行签名、签名并加密，还是未经签名或加密即发送。 有关属性的详细信息，请参阅[了解保护级别](../../../docs/framework/wcf/understanding-protection-level.md)，和有关编程示例，请参阅[如何：设置 ProtectionLevel 属性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)。 有关设计的服务协定的更多信息`ProtectionLevel`在上下文中，请参阅[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ServiceContractAttribute>
@@ -110,9 +111,9 @@ Windows Communication Foundation (WCF) 服务的安全性包括两个主要要�
 - [安全性](../../../docs/framework/wcf/feature-details/security.md)
 - [安全性概述](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [如何：设置 ProtectionLevel 属性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [如何：使用 Windows 凭据保护服务](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [如何：将安全模式设置](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [如何：使用 Windows 凭据保护服务的安全](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [如何：设置安全模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [如何：指定客户端凭据类型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
 - [如何：使用 PrincipalPermissionAttribute 类限制访问](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [如何：模拟服务上的客户端](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
-- [如何：检查安全上下文](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+- [如何：在服务上模拟客户端](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [如何：检查安全性上下文](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

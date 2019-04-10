@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162876"
 ---
 # <a name="configuring-tracing"></a>配置跟踪
 本主题描述您可以如何启用跟踪，配置要发出跟踪的跟踪源并设置跟踪级别，设置活动跟踪和传播以支持端对端的跟踪关联，以及设置要访问跟踪的跟踪侦听器。  
@@ -181,7 +181,8 @@ ms.locfileid: "54584907"
  不能将 `propagateActivity` 属性与用户定义的跟踪源一起使用。 对于用户代码活动 ID 传播，请确保未设置 ServiceModel `ActivityTracing`，而同时仍将 ServiceModel `propagateActivity` 属性设置为 `true`。  
   
 ## <a name="see-also"></a>请参阅
+
 - [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [如何：创建和初始化跟踪侦听器](https://go.microsoft.com/fwlink/?LinkId=94648)
-- [创建自定义 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)
+- [Creating a Custom TraceListener（创建自定义 TraceListener）](https://go.microsoft.com/fwlink/?LinkId=96239)

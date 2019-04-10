@@ -1,5 +1,5 @@
 ---
-title: 如何：定义的工具栏按钮的图标
+title: 如何：定义工具栏按钮的图标
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,17 +13,16 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: fb4a492b081cd9f9e3ccc1d47a4120c705058dd0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0d4a17528ca3eb81f93419491766e370be551b1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712742"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153122"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>如何：定义的工具栏按钮的图标
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>如何：定义工具栏按钮的图标
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
+>  <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
   
  <xref:System.Windows.Forms.ToolBar> 按钮是可以由用户显示其中方便识别的图标。 这通过添加到图像[ImageList 组件](imagelist-component-windows-forms.md)组件并将相关联<xref:System.Windows.Forms.ImageList>组件与<xref:System.Windows.Forms.ToolBar>控件。  
   
@@ -117,6 +116,7 @@ ms.locfileid: "57712742"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.ToolBar>
 - [如何：触发工具栏按钮的菜单事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar 控件](toolbar-control-windows-forms.md)

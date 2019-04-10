@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: eca3b597f556115adb34adc6507151e0bd03a53c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4f11f82b628ac020cbda70d65adf7813291c60a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677716"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168033"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>实现 UI 自动化 Window 控件模式
 > [!NOTE]
@@ -41,18 +41,18 @@ ms.locfileid: "57677716"
   
 |必需的成员|成员类型|说明|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|无|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|无|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|事件|无|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|事件|无|  
-|<xref:System.Windows.Automation.WindowInteractionState>|事件|不保证为 <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|属性|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|属性|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|属性|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|属性|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|属性|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|属性|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|None|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event|None|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event|None|  
+|<xref:System.Windows.Automation.WindowInteractionState>|Event|不保证可 <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceptions  
@@ -64,6 +64,7 @@ ms.locfileid: "57677716"
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -当参数不是有效数字。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

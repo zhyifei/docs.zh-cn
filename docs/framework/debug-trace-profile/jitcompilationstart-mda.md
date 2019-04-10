@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd4d1be3ec3c64c7c6669a2c85ba6bf68db6da68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62064286fecc4736f39ad790f0fd7f0e6d84b149
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162340"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 激活 `jitCompilationStart` 托管调试助手 (MDA) 以报告实时 (MDA) 编译器何时开始编译函数。  
@@ -31,7 +31,7 @@ ms.locfileid: "54536758"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 在方法进行 JIT 编译前记录消息，因此启用此 MDA 会对性能产生重大影响。 请注意，如果方法是内联的，此 MDA 不会生成单独的消息。  
   
-## <a name="output"></a>输出  
+## <a name="output"></a>Output  
  下面的代码示例显示了示例输出。 在此情况下，输出显示在程序集测试中，类“ns2.CO”上的方法“m”是 JIT 编译。  
   
 ```  
@@ -158,6 +158,7 @@ namespace ns2
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)

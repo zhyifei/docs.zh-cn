@@ -5,15 +5,15 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
-ms.openlocfilehash: 42d695a521e1d320c8287dba141afd2aade710b9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e4146cf1897a2d83128a97fc3900aa7a10d59109
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159687"
 ---
 # <a name="statusstrip-control"></a>StatusStrip 控件
-Windows 窗体 `StatusStrip` 控件在窗体中用作区域，通常显示在窗口底部，应用程序可在此显示各种状态信息。 `StatusStrip` 控件上通常具有 `ToolStripStatusLabel` 控件（用于显示文本或图标以指示状态）或 <xref:System.Windows.Forms.ToolStripProgressBar>（用于以图形方式显示进程的完成状态）。  
+Windows 窗体 `StatusStrip` 控件在窗体中用作区域，通常显示在窗口底部，应用程序可在此显示各种状态信息。 `StatusStrip` 控件通常具有`ToolStripStatusLabel`对其显示文本或图标，指示状态的控件或<xref:System.Windows.Forms.ToolStripProgressBar>的以图形方式显示进程的完成状态。  
   
 ## <a name="in-this-section"></a>本节内容  
  [StatusStrip 控件概述](statusstrip-control-overview.md)  
@@ -32,4 +32,5 @@ Windows 窗体 `StatusStrip` 控件在窗体中用作区域，通常显示在窗
  提供类及其成员的相关引用信息。  
   
 ## <a name="see-also"></a>请参阅
+
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

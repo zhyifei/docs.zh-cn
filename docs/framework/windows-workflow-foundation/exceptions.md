@@ -2,16 +2,15 @@
 title: Exceptions
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: 94a0a2430ffe7db47152517c742aed1c18a39e64
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145985"
 ---
 # <a name="exceptions"></a>Exceptions
-工作流可以使用 <xref:System.Activities.Statements.TryCatch> 活动处理工作流执行期间引发的异常。 可以对这些异常进行处理，或者使用 <xref:System.Activities.Statements.Rethrow> 活动重新引发异常。 
-  <xref:System.Activities.Statements.TryCatch.Finally%2A> 节中的活动在 <xref:System.Activities.Statements.TryCatch.Try%2A> 节或 <xref:System.Activities.Statements.TryCatch.Catches%2A> 节完成时执行。 通过托管工作流<xref:System.Activities.WorkflowApplication>还可以使用实例<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>事件处理程序以处理未处理的异常<xref:System.Activities.Statements.TryCatch>活动。  
+工作流可以使用 <xref:System.Activities.Statements.TryCatch> 活动处理工作流执行期间引发的异常。 可以对这些异常进行处理，或者使用 <xref:System.Activities.Statements.Rethrow> 活动重新引发异常。 <xref:System.Activities.Statements.TryCatch.Finally%2A> 节中的活动在 <xref:System.Activities.Statements.TryCatch.Try%2A> 节或 <xref:System.Activities.Statements.TryCatch.Catches%2A> 节完成时执行。 通过托管工作流<xref:System.Activities.WorkflowApplication>还可以使用实例<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>事件处理程序以处理未处理的异常<xref:System.Activities.Statements.TryCatch>活动。  
   
 ## <a name="causes-of-exceptions"></a>异常的原因  
  在工作流中，异常可能通过下列方式生成：  
@@ -52,6 +51,7 @@ ms.locfileid: "57717266"
  异常处理与补偿的不同之处在于：异常处理是在活动的执行期间发生的， 而补偿在活动成功完成后发生。 通过异常处理，可以在活动引发异常之后进行清理，而补偿提供了一种机制，可用于撤消以前完成的活动中所成功完成的工作。 有关详细信息，请参阅[补偿](compensation.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Activities.Statements.TryCatch>
 - <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>
 - <xref:System.Activities.Statements.CompensableActivity>

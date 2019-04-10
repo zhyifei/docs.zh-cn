@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531962"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166122"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
 以下各节列出了在使用 Windows Communication Foundation (WCF) 创建安全应用程序时应考虑的最佳做法。 有关安全性的详细信息，请参阅[安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)、[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)和[元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
@@ -57,6 +57,7 @@ ms.locfileid: "54531962"
  创建自定义绑定时，必须将 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 设置为 `true`。 否则如果将 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 设置为 `false`，并且客户端使用基于非对称密钥的令牌（例如 X509 证书），则不会对消息进行签名。  
   
 ## <a name="see-also"></a>请参阅
+
 - [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
-- [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [数据的安全考虑事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
+- [元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

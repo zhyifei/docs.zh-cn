@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e3d1173ac6fb14a380cdbc99882fd9baee6552a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 74863af1096f8600b8095e593c1f3c820c512e9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966024"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166798"
 ---
 # <a name="icordebugtype-interface"></a>ICorDebugType 接口
 表示的类型，基本或复杂 （是，用户定义的）。 如果该类型是泛型类型，则 `ICorDebugType` 表示未实例化的泛型类型。  
@@ -53,7 +53,8 @@ ms.locfileid: "56966024"
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - progress controls [Windows Forms]
 - ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
-ms.openlocfilehash: 57a8c61c71fa17e1d3df309007823eab76d9efb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380dabe2468ae3c7d9d7303498823d847a8d119e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162106"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar 控件概述
 <xref:System.Windows.Forms.ToolStripProgressBar>将漂浮和呈现功能的所有合并<xref:System.Windows.Forms.ToolStrip>具有其典型进程跟踪功能的控件。 一个<xref:System.Windows.Forms.ToolStripProgressBar>最通常由承载<xref:System.Windows.Forms.StatusStrip>，和少情况下由<xref:System.Windows.Forms.ToolStrip>。  
@@ -22,7 +22,7 @@ ms.locfileid: "54528623"
   
 ### <a name="important-toolstripprogressbar-members"></a>重要 ToolStripProgressBar 成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|获取或设置一个值，表示每个之间的延迟<xref:System.Windows.Forms.ProgressBarStyle.Marquee>显示更新，以毫秒为单位。|  
 |<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|获取或设置定义此范围的上限<xref:System.Windows.Forms.ToolStripProgressBar>。|  
@@ -32,4 +32,5 @@ ms.locfileid: "54528623"
 |<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|数量增加进度栏的当前位置<xref:System.Windows.Forms.ToolStripProgressBar.Step%2A>属性。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.ToolStripProgressBar>

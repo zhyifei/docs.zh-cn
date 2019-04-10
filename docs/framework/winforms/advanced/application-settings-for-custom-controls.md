@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714341"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169736"
 ---
 # <a name="application-settings-for-custom-controls"></a>自定义控件的应用程序设置
 必须完成某些任务，以使能够保持应用程序设置时的控件都承载在第三方应用程序中的自定义控件。  
@@ -46,6 +46,7 @@ ms.locfileid: "57714341"
  未提供的值的控件的任何实例<xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A>将共享相同的设置。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
 - [应用程序设置体系结构](application-settings-architecture.md)

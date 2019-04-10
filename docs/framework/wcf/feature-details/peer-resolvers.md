@@ -2,12 +2,12 @@
 title: 对等解析程序
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: f7d7b055312fe82bd628f8b07304dc9bb188fffb
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: de19e08c1c001076c56e26020584d17079f1a45f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333373"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151614"
 ---
 # <a name="peer-resolvers"></a>对等解析程序
 为了连接到网格，对等节点需要获得其他节点的 IP 地址。 IP 地址可通过联系解析程序服务来获取，该服务获取网格 ID，然后返回与向该特定网格 ID 注册的节点对应的地址列表。 解析程序保持已注册地址的列表，此列表是它通过让网格中的每个节点向该服务注册而创建的。  
@@ -35,9 +35,10 @@ ms.locfileid: "56333373"
  有关如何实现自定义冲突解决程序的演示，请参阅[对等通道自定义对等解析程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))。  
   
 ## <a name="in-this-section"></a>本节内容  
- [Custompeerresolverservice:客户端注册](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [CustomPeerResolverService 内部：客户端注册](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>请参阅
+
 - [对等通道概念](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
 - [对等通道安全性](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
 - [生成对等通道应用程序](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

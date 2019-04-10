@@ -7,21 +7,19 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 449ec3ff30bb4650c32d3f6b9743b5d1a31ad0de
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 911c2064e34ed8d0a341ffd9a52f852eab677e0a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679510"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161494"
 ---
 # <a name="popup-placement-behavior"></a>Popup 放置行为
 一个<xref:System.Windows.Controls.Primitives.Popup>控件浮动在应用程序上的单独窗口中显示内容。 您可以指定的位置<xref:System.Windows.Controls.Primitives.Popup>相对于控件、 鼠标或通过使用屏幕<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>， <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>， <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，并<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>属性。  这些属性协同工作，可以灵活地指定位置的<xref:System.Windows.Controls.Primitives.Popup>。  
   
 > [!NOTE]
 >  <xref:System.Windows.Controls.ToolTip>和<xref:System.Windows.Controls.ContextMenu>类也定义这五个属性和行为与此类似。  
-  
 
-  
 <a name="Positioning"></a>   
 ## <a name="positioning-the-popup"></a>定位 Popup  
  位置<xref:System.Windows.Controls.Primitives.Popup>可以是相对于<xref:System.Windows.UIElement>或整个屏幕。  下面的示例创建四个<xref:System.Windows.Controls.Primitives.Popup>相对于控件<xref:System.Windows.UIElement>— 在这种情况下，映像中。 所有<xref:System.Windows.Controls.Primitives.Popup>控件具有<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>属性设置为`image1`，但每个<xref:System.Windows.Controls.Primitives.Popup>具有不同的放置属性的值。  
@@ -58,8 +56,7 @@ ms.locfileid: "57679510"
  下面的插图阐释<xref:System.Windows.Controls.Primitives.Popup>相对于定位<xref:System.Windows.Controls.Canvas>。  
   
  ![没有 placementtarget 的 popup 控件](./media/popup-placement-behavior/popup-placement-no-placement-target.png "没有 placementtarget 的 Popup。")  
-  
-  
+
  下面的示例创建<xref:System.Windows.Controls.Primitives.Popup>的子级<xref:System.Windows.Controls.Canvas>，但这次<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>设置为`ellipse1`，因此下面出现弹出窗口<xref:System.Windows.Shapes.Ellipse>。  
   
  [!code-xaml[PopupPositionSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#2)]  
@@ -81,8 +78,7 @@ ms.locfileid: "57679510"
  下图显示前面示例的结果。  
   
  ![具有和没有 PlacementRectangle 的 popup](./media/popup-placement-behavior/popup-placement-placement-rectangle.png "具有和没有 PlacementRectangle 的 Popup。")  
-  
-  
+
 ### <a name="target-origin-and-popup-alignment-point"></a>目标原点和目标对齐点  
  *目标原点*和 *Popup 对齐点*分别是目标区域和 Popup 上用于定位定位的参照点。 可以使用<xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>和<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>偏移 popup 从目标区域的属性。  <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>和<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>相对于目标原点和 popup 对齐点。 值<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性确定目标原点和 popup 对齐点的位置。  
   
@@ -174,8 +170,7 @@ ms.locfileid: "57679510"
  下图演示当屏幕下边缘隐藏全部或部分<xref:System.Windows.Controls.Primitives.Popup>，而 popup 对齐点是的左下角<xref:System.Windows.Controls.Primitives.Popup>。  
   
  ![由于底部屏幕边缘而产生的新对齐点](./media/popup-placement-behavior/popup-placement-relative-point-screen-edge.png "Popup 到达屏幕下的边缘，并更改 popup 对齐点。")  
- 
-  
+
  下图演示当<xref:System.Windows.Controls.Primitives.Popup>处于隐藏状态的屏幕右边缘，popup 对齐点是在右上角的<xref:System.Windows.Controls.Primitives.Popup>。  
   
  ![由于屏幕边缘而产生的新 popup 对齐点](./media/popup-placement-behavior/popup-placement-relative-point-right-screen-edge.png "Popup 到达屏幕右边缘，并更改 popup 对齐点。")    
@@ -196,8 +191,7 @@ ms.locfileid: "57679510"
  下图演示当<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>是<xref:System.Windows.Controls.Primitives.PlacementMode.Right>和<xref:System.Windows.Controls.Primitives.Popup>到达屏幕右边缘时，目标原点是目标区域的左上角，popup 对齐点是在右上角的<xref:System.Windows.Controls.Primitives.Popup>.  
   
  ![由于右侧屏幕边缘而产生的新对齐点](./media/popup-placement-behavior/popup-placement-right-screen-edge.png "Placement 为 Right，并且 popup 到达屏幕右边缘。")  
-  
-  
+
  下图演示当<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>是<xref:System.Windows.Controls.Primitives.PlacementMode.Top>和<xref:System.Windows.Controls.Primitives.Popup>到达顶部屏幕边缘时，目标原点是目标区域的左下角，popup 对齐点是在左上角的<xref:System.Windows.Controls.Primitives.Popup>.  
   
  ![由于顶部屏幕边缘而产生的新对齐点](./media/popup-placement-behavior/popup-placement-top-screen-edge.png "Placement 为 Top，并且 popup 到达屏幕边缘。")  
@@ -210,4 +204,5 @@ ms.locfileid: "57679510"
  可以通过设置目标原点和 popup 对齐点来自定义<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性设置为<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>。 然后，定义<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>委托中，返回一组可能的位置点和主轴 （按优先顺序） <xref:System.Windows.Controls.Primitives.Popup>。 显示的最大部分的点<xref:System.Windows.Controls.Primitives.Popup>处于选中状态。  位置<xref:System.Windows.Controls.Primitives.Popup>如果自动调整<xref:System.Windows.Controls.Primitives.Popup>屏幕的边缘隐藏。 有关示例，请参阅[指定自定义 Popup 位置](how-to-specify-a-custom-popup-position.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Popup 放置示例](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)

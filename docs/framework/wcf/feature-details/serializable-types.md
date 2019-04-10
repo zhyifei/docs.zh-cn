@@ -2,12 +2,12 @@
 title: 可序列化类型
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: 0fe29d2eb2b50d2515d71745bc062255dbfb60ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160844"
 ---
 # <a name="serializable-types"></a>可序列化类型
 默认情况下，<xref:System.Runtime.Serialization.DataContractSerializer> 序列化所有公共可见类型。 类型的所有公共读/写属性和字段均被序列化。  
@@ -27,7 +27,7 @@ ms.locfileid: "54608045"
   
 -   只读字段、没有 `get` 或 `set` 方法的属性以及具有内部或私有 `set` 或 `get` 方法的属性不会进行序列化。 此类属性会被忽略，但不会引发异常（get-only 集合的情况除外）。  
   
--   会忽略 <xref:System.Xml.Serialization.XmlSerializer> 属性（如 `XmlElement`、`XmlAttribute`、`XmlIgnore`、`XmlInclude` 等）。  
+-   <xref:System.Xml.Serialization.XmlSerializer> 属性 (如`XmlElement`， `XmlAttribute`， `XmlIgnore`， `XmlInclude`，等等) 将被忽略。  
   
 -   如果未将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于某个给定类型，则序列化程序会忽略该类型中应用了 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性的所有成员。  
   
@@ -39,6 +39,7 @@ ms.locfileid: "54608045"
  未标记类型（没有 <xref:System.Runtime.Serialization.DataContractAttribute> 属性的类型）可以从具有此属性的类型继承；但是反过来则不允许：具有该属性的类型不能从未标记类型继承。 实行此规则主要是为了确保与使用旧版本 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 编写的代码向后兼容。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 86ad062f7b7ee3dd2927f8b5b103adfd719a963d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bd6543e1e22b7a2cb0b870fe2fdb34011f0d2a4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162777"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>如何：从服务终结点导出元数据
 本主题介绍如何从服务终结点导出元数据。  
@@ -56,6 +56,7 @@ ms.locfileid: "54529983"
  编译 Program.cs 时引用 System.ServiceModel.dll。  
   
 ## <a name="see-also"></a>请参阅
+
 - [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [终结点：地址、 绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [终结点：地址、绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

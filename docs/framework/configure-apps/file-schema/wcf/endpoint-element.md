@@ -2,12 +2,12 @@
 title: <endpoint> 元素
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: 94b6cc6225171d90164e6d6880e1095513f16ece
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 667086cda010daf51cb92116d636b9b526b4b34b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163405"
 ---
 # <a name="endpoint-element"></a>\<终结点 > 元素
 指定用于公开服务的服务终结点的绑定、协定和地址属性。  
@@ -41,7 +41,7 @@ ms.locfileid: "57354723"
   
 |特性|描述|  
 |---------------|-----------------|  
-|address|一个包含终结点地址的字符串。 可以将地址指定为绝对地址或相对地址。 如果提供的是相对地址，则需要主机提供适合于绑定中所使用的传输方案的基址。 如果未配置地址，则假定基址为该终结点的地址。<br /><br /> 默认值为一个空字符串。|  
+|地址|一个包含终结点地址的字符串。 可以将地址指定为绝对地址或相对地址。 如果提供的是相对地址，则需要主机提供适合于绑定中所使用的传输方案的基址。 如果未配置地址，则假定基址为该终结点的地址。<br /><br /> 默认值为一个空字符串。|  
 |behaviorConfiguration|一个字符串，其中包含要在终结点中使用的行为的名称。|  
 |绑定|必需的字符串属性，此属性指定要使用的绑定类型。 该类型必须具有一个已注册的配置节，才能加以引用。 该类型是按节名而不是绑定的类型名注册的。|  
 |bindingConfiguration|一个字符串，指定实例化终结点时所使用的绑定的绑定名称。 定义终结点时，绑定名称必须在作用域内。 默认值为一个空字符串。<br /><br /> 此属性与 `binding` 结合使用，以引用配置文件中的特定绑定配置。 如果尝试使用自定义绑定，请设置此属性。 否则，可能引发异常。|  
@@ -85,8 +85,9 @@ ms.locfileid: "57354723"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.Description.ServiceEndpoint>
-- [终结点：地址、 绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [如何：在配置中创建的服务终结点](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [终结点：地址、绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [如何：在配置中创建服务终结点](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

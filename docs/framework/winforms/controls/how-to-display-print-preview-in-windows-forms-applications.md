@@ -1,5 +1,5 @@
 ---
-title: 如何：显示打印预览在 Windows 窗体应用程序
+title: 如何：在 Windows 窗体应用程序中显示打印预览
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 13510086edb13ff54f5551296c1b64c51873f649
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 22247c941eff575f0f3e5683e46376054ba13bb5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715355"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154357"
 ---
-# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>如何：显示打印预览在 Windows 窗体应用程序
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>如何：在 Windows 窗体应用程序中显示打印预览
 可以使用<xref:System.Windows.Forms.PrintPreviewDialog>以使用户能够显示文档时，通常前要打印的控制。  
   
  若要执行此操作，需要指定的实例<xref:System.Drawing.Printing.PrintDocument>类; 这是要打印的文档。 有关使用打印预览的详细信息<xref:System.Drawing.Printing.PrintDocument>组件，请参阅[如何：使用打印预览的 Windows 窗体中打印](../advanced/how-to-print-in-windows-forms-using-print-preview.md)。  
@@ -82,6 +82,7 @@ ms.locfileid: "57715355"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [PrintDocument 组件](printdocument-component-windows-forms.md)
 - [PrintPreviewDialog 控件](printpreviewdialog-control-windows-forms.md)
 - [Windows 窗体打印支持](../advanced/windows-forms-print-support.md)

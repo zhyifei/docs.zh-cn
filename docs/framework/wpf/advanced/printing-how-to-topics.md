@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: b17ebd3d9128bff40274d905606f1265afd0207d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170178"
 ---
 # <a name="printing-how-to-topics"></a>打印帮助主题
 在本部分中的主题演示如何使用打印和打印系统管理功能附带[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以及新[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]打印路径。  
@@ -25,10 +25,10 @@ ms.locfileid: "57367825"
  [诊断有问题的打印作业](how-to-diagnose-problematic-print-job.md)  
  使用打印队列和打印作业的属性来诊断不打印打印作业的说明。  
   
- [确定此时能否打印打印作业](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
+ [确定此时是否可以打印一项打印作业](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
  可以打印作业使用的打印队列和打印作业的属性以编程方式确定的时间的说明。  
   
- [枚举一部分打印队列](how-to-enumerate-a-subset-of-print-queues.md)  
+ [枚举打印队列的子集](how-to-enumerate-a-subset-of-print-queues.md)  
  生成具有某些特征的打印机列表的说明。  
   
  [在不使用反射的情况下获取打印系统对象属性](how-to-get-print-system-object-properties-without-reflection.md)  
@@ -44,6 +44,7 @@ ms.locfileid: "57367825"
  有关签入的打印票证有效，并且，它不会不请求打印机不支持的任何内容的说明。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Printing>
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.Interop>

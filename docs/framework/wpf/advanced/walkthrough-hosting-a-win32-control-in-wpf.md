@@ -1,5 +1,5 @@
 ---
-title: 演练：中承载 Win32 控件在 WPF 中
+title: 演练：在 WPF 中承载 Win32 控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,18 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160688"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>演练：中承载 Win32 控件在 WPF 中
+# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>演练：在 WPF 中承载 Win32 控件
 Windows Presentation Foundation (WPF) 提供了用于创建应用程序的丰富环境。 但是，当您在 Win32 代码中有大量投入时，可能会重复使用至少某些更有效的在 WPF 应用程序中的代码而不是完全重写。 WPF 提供了一个简单的机制，用于承载 Win32 窗口中，在 WPF 页上。  
   
  本主题将指导你通过应用程序[中承载 Win32 ListBox 控件在 WPF 示例中](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)，主机 Win32 列表框控件。 此常规步骤可扩展到承载任何 Win32 窗口中。  
-  
-  
+
 <a name="requirements"></a>   
 ## <a name="requirements"></a>要求  
  本主题假定你基本熟悉 WPF 和 Windows API 编程。 WPF 编程的基本简介，请参阅[Getting Started](../getting-started/index.md)。 有关 Windows API 编程的介绍，请参阅的众多书籍的任何看法，特别是*Programming Windows* Charles Petzold 的。  
@@ -154,6 +153,7 @@ Windows Presentation Foundation (WPF) 提供了用于创建应用程序的丰富
  最后，设置`handled`到`true`以指示消息已得到处理。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Interop.HwndHost>
 - [WPF 和 Win32 互操作](wpf-and-win32-interoperation.md)
 - [演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

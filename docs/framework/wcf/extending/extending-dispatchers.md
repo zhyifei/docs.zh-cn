@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: c34a923d70c9079a3736732d6815df0329dfd557
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162719"
 ---
 # <a name="extending-dispatchers"></a>扩展调度程序
-调度程序负责从基础通道拉取传入的消息，将它们翻译成应用程序代码形式的方法调用，并将结果发送回调用方。 调度程序扩展允许您修改此过程。  您可以实现消息或参数检查器，用来检查或修改消息或参数的内容。  您也可以更改将消息路由到操作的方式或提供其他功能。  
+调度程序负责从基础通道提取出传入的消息，将它们翻译成应用程序代码形式的方法调用，并将结果发送回调用方。 调度程序扩展允许您修改此过程。  您可以实现消息或参数检查器，用来检查或修改消息或参数的内容。  您也可以更改将消息路由到操作的方式或提供其他功能。  
   
  本主题介绍如何使用<xref:System.ServiceModel.Dispatcher.DispatchRuntime>和<xref:System.ServiceModel.Dispatcher.DispatchOperation>类在 Windows Communication Foundation (WCF) 服务应用程序来修改调度程序的默认执行行为或以截获或修改消息、 参数或返回之前或之后发送或从通道层检索它们的值。 有关等效客户端运行时消息处理的详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)。 若要了解该角色的<xref:System.ServiceModel.IExtensibleObject%601>类型在各种运行时自定义对象之间访问共享的状态中播放，请参阅[可扩展对象](../../../../docs/framework/wcf/extending/extensible-objects.md)。  
   
@@ -84,17 +84,17 @@ ms.locfileid: "54715890"
   
 4.  与安全相关的组件可使用以下属性：  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 可指示写入审核事件的位置。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 指示写入审核事件的位置。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> 可控制服务是否尝试使用传入消息所提供的凭据进行模拟。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> 控制服务是否尝试使用传入消息所提供的凭据进行模拟。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> 可控制是否将成功消息身份验证事件写入由 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 指定的事件日志。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> 控制是否将成功的消息身份验证事件写入指定的事件日志<xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> 可控制如何设置 <xref:System.Threading.Thread.CurrentPrincipal%2A> 属性。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> 控件如何<xref:System.Threading.Thread.CurrentPrincipal%2A>属性设置。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> 可指定如何执行授权事件的审核。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> 指定如何执行授权事件的审核。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> 可指定是否要取消显示记录过程中出现的非关键异常。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> 指定是否取消显示记录过程中出现的非关键异常。  
   
  通常，服务行为（可实现 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 的对象）、协定行为（可实现 <xref:System.ServiceModel.Description.IServiceBehavior> 的对象）或终结点行为（可实现 <xref:System.ServiceModel.Description.IContractBehavior> 的对象）会将自定义扩展对象分配给 <xref:System.ServiceModel.Description.IEndpointBehavior> 属性或将其插入集合。 然后，以编程方式或通过实现自定义 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 对象来将安装行为对象添加到相应的行为集合中，这样便能使用应用程序配置文件插入该行为。  
   
@@ -128,8 +128,9 @@ ms.locfileid: "54715890"
 -   使用 <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> 属性可以插入自定义参数检查器，您可以使用该检查器来检查或修改参数以及返回值。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
 - [如何：检查和修改服务上的消息](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
 - [如何：检查或修改参数](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [如何：在企业中的锁定终结点](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [如何：在企业中锁定终结点](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

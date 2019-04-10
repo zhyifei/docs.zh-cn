@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500481"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160935"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>如何：使用独立的 X.509 证书进行签名和加密
 本主题演示如何配置 Windows Communication Foundation (WCF) 以进行消息签名和加密客户端和服务上的使用不同的证书。  
@@ -23,13 +23,13 @@ ms.locfileid: "54500481"
   
  下图演示所用的主类、它们从其继承的类（由向上箭头指示）以及某些方法和属性的返回类型。  
   
--   `MyClientCredentials` 是 <xref:System.ServiceModel.Description.ClientCredentials> 的自定义实现。  
+-   `MyClientCredentials` 是的自定义实现<xref:System.ServiceModel.Description.ClientCredentials>。  
   
     -   图中显示的其属性都返回 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 的实例。  
   
     -   其方法 <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> 返回 `MyClientCredentialsSecurityTokenManager` 的实例。  
   
--   `MyClientCredentialsSecurityTokenManager` 是 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 的自定义实现。  
+-   `MyClientCredentialsSecurityTokenManager` 是的自定义实现<xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>。  
   
     -   其方法 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> 返回 <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider> 的实例。  
   
@@ -90,6 +90,7 @@ ms.locfileid: "54500481"
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>

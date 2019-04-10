@@ -1,5 +1,5 @@
 ---
-title: 如何：创建空心文字
+title: 如何：创建空心文本
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 5de1068401dac61c5de5b86604da9417e18a94ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 237bdc097cd2a3fbfff6dd79bce401c2d091e211
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162223"
 ---
-# <a name="how-to-create-outlined-text"></a>如何：创建空心文字
+# <a name="how-to-create-outlined-text"></a>如何：创建空心文本
 在大多数情况下，当要将装饰添加到中的文本字符串时您[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序中，使用的根据一系列离散的字符或字形的文本。 例如，您可以创建线性渐变画笔，并将其应用于<xref:System.Windows.Controls.Control.Foreground%2A>属性的<xref:System.Windows.Controls.TextBox>对象。 当显示或编辑文本框中时，线性渐变画笔是自动应用于当前集的文本字符串中的字符。  
   
  ![使用线性渐变画笔显示的文本](./media/how-to-create-outlined-text/text-linear-gradient.jpg)    
@@ -55,4 +55,5 @@ ms.locfileid: "58125936"
   示例自定义用户控件对象的源，请参阅[OutlineTextControl.cs 为C#](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs)并[OutlineTextControl.vb 适用于 Visual Basic](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb)。 
   
 ## <a name="see-also"></a>请参阅
+
 - [绘制格式化文本](drawing-formatted-text.md)

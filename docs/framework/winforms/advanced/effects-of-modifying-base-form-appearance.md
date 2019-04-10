@@ -8,12 +8,12 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: a253fef2bc7220d13c0ca373a38a5bf2f5842415
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6c87b3d29a1c55b2a7517da78a1951d94676dd68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164484"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>修改基窗体的外观的效果
 在应用程序开发过程中，可能经常需要更改基窗体的外观，该项目（或其他项目）中的其他窗体继承自此基窗体。  
@@ -26,6 +26,7 @@ ms.locfileid: "57715550"
  在运行时对基窗体所做修改不影响已实例化的继承窗体。  
   
 ## <a name="see-also"></a>请参阅
+
 - [base](~/docs/csharp/language-reference/keywords/base.md)
 - [如何：继承 Windows 窗体](how-to-inherit-windows-forms.md)
 - [Windows 窗体可视化继承](windows-forms-visual-inheritance.md)

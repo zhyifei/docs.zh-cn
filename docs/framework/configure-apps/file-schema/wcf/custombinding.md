@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 0754991fe8a427dbaaa2b7fbafe4387e6bc6df2a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ed5f25a9297edc5f921305edc009edf5076672b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159739"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
@@ -193,7 +193,7 @@ ms.locfileid: "57366668"
 |[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|对自定义绑定指定双向消息处理。 它与本身不允许进行双工通信的传输（例如，HTTP）一起使用。 与此相反，TCP 本身允许进行双工通信，并且不要求服务在将消息发送回客户端时使用此绑定元素。<br /><br /> 客户端必须公开一个地址，以便服务进行联系和建立连接。 此客户端地址由 `ClientBaseAddress` 属性提供。<br /><br /> 此元素的类型为 <xref:System.ServiceModel.Configuration.CompositeDuplexElement>。|
 |[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|指定对等名称解析协议 (PNRP) 对等名称解析程序。 此元素的类型为 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>。|
 |[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|指定 WS-ReliableMessaging 的设置。 如果将该元素添加到自定义绑定，则生成的通道可支持一次性传递保证。 此元素的类型为 <xref:System.ServiceModel.Configuration.ReliableSessionElement>。|
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自定义绑定的安全选项。 此元素的类型为 <xref:System.ServiceModel.Configuration.SecurityElement>。|
+|[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自定义绑定的安全选项。 此元素的类型为 <xref:System.ServiceModel.Configuration.SecurityElement>。|
 |[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|指定 SSL 流绑定的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>。|
 |[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|指定绑定支持事务流以及 `transactionProtocol` 属性将要使用的协议。 此元素的类型为 <xref:System.ServiceModel.Configuration.TransactionFlowElement>。|
 |[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|指定自定义绑定的流安全选项。 此元素的类型为 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>。|
@@ -222,7 +222,7 @@ ms.locfileid: "57366668"
 
 5. 编码器（可选）
 
-当系统提供的某个绑定不符合服务要求时，应使用自定义绑定。 例如，自定义绑定可用于实现在服务终结点使用新的传输或新的编码器。
+当系统提供的某个绑定不符合服务需求时，应使用自定义绑定。 例如，自定义绑定可用于实现在服务终结点使用新的传输或新的编码器。
 
 自定义绑定是使用以特定顺序“堆叠”的绑定元素集合中的某个 <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> 构造的，顺序如下：
 
@@ -280,18 +280,17 @@ ms.locfileid: "57366668"
 
 |层|选项|必需|
 |-----------|-------------|--------------|
-|事务流|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|No|
-|可靠性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|No|
-|安全性|对称、非对称、传输级|No|
-|形状更改|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|No|
-|传输升级|SSL 流、Windows 流、对等解析程序|No|
+|事务流|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|否|
+|可靠性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|否|
+|安全性|对称、非对称、传输级|否|
+|形状更改|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|否|
+|传输升级|SSL 流、Windows 流、对等解析程序|否|
 |编码|文本、二进制、MTOM、自定义|是|
 |传输|TCP、命名管道、HTTP、HTTPS、MSMQ 风格、自定义|是|
 
 此外，可以定义自己的绑定元素，并将它们插在前面定义的任何层之间。
 
 有关如何使用的自定义绑定修改系统提供的绑定的讨论，请参阅[如何：自定义系统提供的绑定](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。
-
 
 ## <a name="see-also"></a>请参阅
 

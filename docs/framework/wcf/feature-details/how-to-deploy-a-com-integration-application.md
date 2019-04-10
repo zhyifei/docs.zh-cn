@@ -1,15 +1,15 @@
 ---
-title: 如何：将 COM + 集成应用程序部署
+title: 如何：部署 COM+ 集成应用程序
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: 0dcaa7d12c7e35170dee155612f824ed22ab8b2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 281fe0fb93fffb84f85f19b42e8d90e86dc300c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672794"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146726"
 ---
-# <a name="how-to-deploy-a-com-integration-application"></a>如何：将 COM + 集成应用程序部署
+# <a name="how-to-deploy-a-com-integration-application"></a>如何：部署 COM+ 集成应用程序
 编写了 COM+ 集成应用程序后，您可能要将它部署在另一台计算机上。 本主题说明如何将 COM+ 集成应用程序从一台计算机移动到另一台计算机。  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>移动 COM+ 承载的集成应用程序  
@@ -39,6 +39,7 @@ ms.locfileid: "54672794"
 5.  将计算机 A 上虚拟根目录中的 .svc 文件 (componentName.svc) 和 Web.config 文件复制到计算机 B 上新创建的虚拟根目录。  
   
 ## <a name="see-also"></a>请参阅
+
 - [与 COM+ 应用程序集成的概述](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
-- [如何：配置 COM + 服务设置](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
-- [如何：使用 COM + 服务模型配置工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [如何：配置 COM+ 服务设置](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [如何：使用 COM+ 服务模型配置工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

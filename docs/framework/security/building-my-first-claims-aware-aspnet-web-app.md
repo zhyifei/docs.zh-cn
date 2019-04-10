@@ -3,12 +3,12 @@ title: 生成我的第一个声明感知 ASP.NET Web 应用程序
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 2fd5b36ffe26632240955307eb522cecdf4f1e73
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: b6be3d84a292e5f14e1cdc70a181e8fd2c065a68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151367"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>生成我的第一个声明感知 ASP.NET Web 应用程序
 ## <a name="applies-to"></a>适用于  
@@ -41,11 +41,12 @@ ms.locfileid: "58838126"
   
  若要使用 WIF 生成您的第一个声明感知 ASP.NET 应用程序，请按照下列主题之一中的说明进行操作：  
   
--   [如何：生成声明感知 ASP.NET MVC Web 应用程序使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [如何：使用 WIF 生成声明感知 ASP.NET MVC Web 应用程序](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [如何：生成声明感知 ASP.NET Web 窗体应用程序使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [如何：生成声明感知 ASP.NET 应用程序使用基于窗体的身份验证](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [如何：使用基于表单的身份验证生成声明感知 ASP.NET 应用程序](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>请参阅
+
 - [WIF 入门](../../../docs/framework/security/getting-started-with-wif.md)

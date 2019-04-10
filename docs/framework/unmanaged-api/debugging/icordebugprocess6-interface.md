@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 34a10ac2-882c-4797-8369-f120e8e640c7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c084042aa79170d46d179928956bd39a0731ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 518c6ec99e4062bf8432809d3472baa395017da3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147259"
 ---
 # <a name="icordebugprocess6-interface"></a>“ICor调试进程6”接口
 合理扩展 ICorDebugProcess 接口以启用解码托管的调试事件的本机异常调试事件和虚拟模块拆分中编码等功能。  
@@ -37,8 +37,9 @@ ms.locfileid: "54714914"
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

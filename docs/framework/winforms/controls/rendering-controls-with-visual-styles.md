@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: caef9590e57503171ab295f6e99b62d860bc0a81
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146765"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>使用视觉样式呈现控件
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 使用操作系统中受支持的视觉样式为呈现控件和其他 Windows 用户界面 (UI) 元素提供支持。 本主题讨论 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中对使用操作系统当前视觉样式的呈现控件和其他 UI 元素提供的多种级别的支持。  
@@ -56,7 +56,7 @@ ms.locfileid: "57708049"
   
  <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空间的主要类为 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 和 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>。 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 是一个基础类，用于标识视觉样式支持的任何控件或用户界面元素。 除了 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 本身， <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空间包含许多 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 嵌套类，这些类具有为视觉样式支持的控件、控件部件或其他 UI 元素的状态返回 `static` 的 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 属性。  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 提供一些方法，这些方法可以绘制和获取由操作系统当前视觉样式定义的每个 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 的信息。 可以检索的元素信息包括其默认大小、背景类型和颜色定义。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 包装来自 Windows Platform SDK 的 Windows Shell 部分的视觉样式 (UxTheme) API 的功能。 有关详细信息，请参阅[启用视觉样式](/windows/desktop/controls/cookbook-overview)。  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 提供的绘制和获取有关每个信息的方法<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>操作系统当前视觉样式定义。 可以检索的元素信息包括其默认大小、背景类型和颜色定义。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 包装视觉样式 (UxTheme) API 从 Windows Platform SDK 的 Windows Shell 部分的功能。 有关详细信息，请参阅[启用视觉样式](/windows/desktop/controls/cookbook-overview)。  
   
  有关使用详细信息<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>并<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>，请参阅[如何：呈现的视觉样式元素](how-to-render-a-visual-style-element.md)。  
   
@@ -79,4 +79,5 @@ ms.locfileid: "57708049"
 >  如果想要在用户启用或切换视觉样式时使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 来呈现控件或 UI 元素，请确保在处理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件而非 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> 事件时这样做。 处理 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 时如果使用 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>类，则会引发异常。  
   
 ## <a name="see-also"></a>请参阅
+
 - [自定义控件的绘制和呈现](custom-control-painting-and-rendering.md)

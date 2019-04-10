@@ -29,18 +29,16 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: ecea2575503ad8fe4ff8a190a417bae75a7b31f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149300"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义的术语，用于描述的 XAML 语法的元素。 这些条款通常使用，本文档中，同时用于 WPF 文档的其余部分专门以及其他使用 XAML 或通过 XAML 语言支持在 System.Xaml 级别启用的基本 XAML 概念的框架。 本主题进一步在本主题中引入的基本术语[XAML 概述 (WPF)](xaml-overview-wpf.md)。  
-  
 
-  
 <a name="the_xaml_language_specification"></a>   
 ## <a name="the-xaml-language-specification"></a>XAML 语言规范  
  在此处定义的 XAML 语法术语还定义或引用中 XAML 语言规范。 XAML 是一种基于 XML 语言并遵循或 XML 结构规则进行了扩展。 一些术语从共享或基于描述 XML 语言或 XML 文档对象模型时，通常使用的术语。  
@@ -316,9 +314,10 @@ ms.locfileid: "57367955"
  但是，正如*typeName*。*memberName*属性，用于窗体*b t y p*。*memberName*是在标记中，良好的样式，应避免它。  
   
 ## <a name="see-also"></a>请参阅
+
 - [XAML 概述 (WPF)](xaml-overview-wpf.md)
-- [XAML Namespace （x:）语言功能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML 命名空间 (x:)语言功能](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML 扩展](wpf-xaml-extensions.md)
 - [依赖项属性概述](dependency-properties-overview.md)
-- [TypeConverter 和 XAML](typeconverters-and-xaml.md)
+- [TypeConverters 和 XAML](typeconverters-and-xaml.md)
 - [XAML 及 WPF 的自定义类](xaml-and-custom-classes-for-wpf.md)

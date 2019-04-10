@@ -2,12 +2,12 @@
 title: 使用 Windows Store 应用商店客户端应用访问 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 484fad33614ca2b9507ed88aadfc1a41bb216c28
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 6617a8cd207b68505396db7fdb4c9d08fd759d06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167643"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows Store 应用商店客户端应用访问 WCF 服务
 Windows 8 引入了一种新应用程序，称为 Windows 应用商店应用程序。 这些应用程序是围绕触摸屏界面设计的。 通过 .NET Framework 4.5，Windows 商店应用程序可以调用 WCF 服务。  
@@ -120,7 +120,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 在 Windows 应用商店应用程序中支持以下客户端凭据类型：
   
-1.  无  
+1.  None  
   
 2.  Basic  
   
@@ -175,9 +175,10 @@ void async SomeMethod()
  请注意进行异步调用的方法上 async 关键字的使用以及调用该异步方法时 await 关键字的使用。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows 应用商店应用日志中的 WCF](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
 - [WCF Windows 应用商店客户端与安全性](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
-- [Windows 应用商店应用和跨计算机调用](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
-- [调用基于 Windows 应用商店应用程序在 Azure 中部署的 WCF 服务](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Windows 应用商店应用与跨计算机调用](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [从 Windows 应用商店应用调用 Azure 中部署的 WCF 服务](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
 - [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [绑定](../../../../docs/framework/wcf/bindings.md)

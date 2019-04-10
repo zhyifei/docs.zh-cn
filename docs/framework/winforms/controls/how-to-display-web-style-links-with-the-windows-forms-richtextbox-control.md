@@ -1,5 +1,5 @@
 ---
-title: 如何：显示 Web 样式链接使用 Windows 窗体 RichTextBox 控件
+title: 如何：使用 Windows 窗体 RichTextBox 控件显示 Web 样式的链接
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 64a2c8d9a9f6b8a7271a659b80ca2a63c423b3bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1902557e5dbdcee3c1facc18b6f5c3037c266a8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718514"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148234"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>如何：显示 Web 样式链接使用 Windows 窗体 RichTextBox 控件
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>如何：使用 Windows 窗体 RichTextBox 控件显示 Web 样式的链接
 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以显示为彩色并有下划线的 Web 链接。 可以编写将打开浏览器窗口中显示时单击该链接时链接文本中指定的 Web 站点的代码。  
   
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>若要链接到网页上使用 RichTextBox 控件  
@@ -117,6 +117,7 @@ Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以显示为彩色
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>

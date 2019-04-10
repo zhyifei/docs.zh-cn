@@ -1,15 +1,15 @@
 ---
-title: 如何：创建返回任意数据使用 WCF Web HTTP 编程模型的服务
+title: 如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576390"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157478"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>如何：创建返回任意数据使用 WCF Web HTTP 编程模型的服务
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
 有时，开发人员必须完全控制从服务操作返回数据的方式。 当服务操作必须由 WCF 不支持的格式返回数据时，这是这种情况。 本主题讨论如何使用 WCF WEB HTTP 编程模型来创建此类服务。 此服务具有一个返回流的操作。  
   
 ### <a name="to-implement-the-service-contract"></a>实现服务协定  
@@ -51,7 +51,7 @@ ms.locfileid: "54576390"
        }  
     ```  
   
-     请注意代码的倒数第二行：`WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     请注意，第二个到最后一行代码： `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
      这会设置内容类型标头`"image/jpeg"`。 虽然此示例演示如何返回 .jpg 文件，但可以对其进行修改，以任意格式返回所需的任意类型的数据。 该操作必须检索或生成数据，然后将它写入流。  
   
@@ -176,4 +176,5 @@ namespace RawImageService
 -   编译示例代码时，请引用 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
 ## <a name="see-also"></a>请参阅
+
 - [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

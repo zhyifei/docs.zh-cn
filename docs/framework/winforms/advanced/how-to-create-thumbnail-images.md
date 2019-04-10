@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 3ed1fb6a9a7fc8e7ded6ae0e124ca7dcbf0f3c98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144009"
 ---
 # <a name="how-to-create-thumbnail-images"></a>如何：创建缩略图图像
 缩略图是映像的小版本。 您可以通过调用创建缩略图<xref:System.Drawing.Image.GetThumbnailImage%2A>方法的<xref:System.Drawing.Image>对象。  
@@ -32,7 +32,7 @@ ms.locfileid: "57716954"
  [!code-vb[System.Drawing.WorkingWithImages#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。 若要运行该示例，请按照下列步骤：  
+ 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。 若要运行该示例，请按照下列步骤：  
   
 1.  创建新的 Windows 窗体应用程序。  
   
@@ -51,5 +51,6 @@ ms.locfileid: "57716954"
      100 的 100 缩略图显示在窗体。  
   
 ## <a name="see-also"></a>请参阅
+
 - [图像、位图和图元文件](images-bitmaps-and-metafiles.md)
 - [使用图像、位图、图标和图元文件](working-with-images-bitmaps-icons-and-metafiles.md)

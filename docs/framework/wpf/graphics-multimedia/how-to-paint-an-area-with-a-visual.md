@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visuals [WPF], painting with
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
-ms.openlocfilehash: 7b63b4be5e1f916648677150ffb558445ffa72c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b5376085dc36549cd2d3d72835ec291454124267
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363067"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153447"
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>如何：使用视觉对象绘制区域
 此示例演示如何使用<xref:System.Windows.Media.VisualBrush>类，以使用绘制区域<xref:System.Windows.Media.Visual>。  
@@ -32,4 +32,5 @@ ms.locfileid: "57363067"
  此代码示例是为提供一个更大示例的一部分<xref:System.Windows.Media.VisualBrush>类。 有关完整示例，请参阅[VisualBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160049)。  
   
 ## <a name="see-also"></a>请参阅
-- [使用图像、绘图和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
+
+- [使用图像、图形和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)

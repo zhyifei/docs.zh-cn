@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 0ba4ca2589a61a9331308a816da6ddb5276adbc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cb06aa6bfa960a493090b67c8baa4d7b3b46756a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149079"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>演练：在后台运行操作
 如果某项操作需要很长时间才能完成，而你不希望造成用户界面的延迟，则可以使用 <xref:System.ComponentModel.BackgroundWorker> 类在另一个线程上运行此操作。  
@@ -32,7 +32,7 @@ ms.locfileid: "57703655"
   
 1.  使用窗体中 Windows 窗体设计器处于活动状态中，将两个<xref:System.Windows.Forms.Button>控件从**工具箱**窗体，且然后将设置为`Name`和<xref:System.Windows.Forms.Control.Text%2A>根据下表的按钮的属性。  
   
-    |Button|name|Text|  
+    |Button|名称|Text|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Start**|  
     |`button2`|`cancelBtn`|**取消**|  
@@ -101,6 +101,7 @@ ms.locfileid: "57703655"
 -   实现支持异步模式的组件的类。 有关详细信息，请参阅[实现基于事件的异步模式](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
 - [如何：实现使用后台操作的窗体](how-to-implement-a-form-that-uses-a-background-operation.md)

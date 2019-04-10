@@ -1,18 +1,18 @@
 ---
-title: 如何：将行插入到数据库
+title: 如何：将行插入数据库中
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: 7c685d6e077c255c31d7aeec0594db9df721a21f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cc9f276cc278d4a9c376d72f1ab38d89ea6dd5b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169593"
 ---
-# <a name="how-to-insert-rows-into-the-database"></a>如何：将行插入到数据库
+# <a name="how-to-insert-rows-into-the-database"></a>如何：将行插入数据库中
 将行插入数据库通过将对象添加到关联[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Table%601>集合，然后将更改提交到数据库。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将转换成相应的 SQL 所做的更改`INSERT`命令。  
   
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "54507260"
   
 1.  创建一个包含要提交的列数据的新对象。  
   
-2.  将这个新对象添加到与数据库中的目标表关联的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` 集合。  
+2.  向其中添加新对象[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]`Table`与数据库中的目标表关联的集合。  
   
 3.  将更改提交到数据库。  
   
@@ -37,6 +37,7 @@ ms.locfileid: "54507260"
  [!code-vb[System.Data.Linq.Table#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.table/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)
 - [如何：分配存储过程以便执行更新、插入和删除操作（O/R 设计器）](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

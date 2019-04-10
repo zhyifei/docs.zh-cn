@@ -1,5 +1,5 @@
 ---
-title: 如何：使用跟踪和调试进行条件编译
+title: 如何：使用跟踪和调试执行有条件编译
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1738d73cf99c8b5a8131bd5e018a799c3a7780c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158640"
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>如何：使用跟踪和调试进行条件编译
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>如何：使用跟踪和调试执行有条件编译
 在开发过程中调试应用程序时，跟踪和调试输出都会出现在 Visual Studio 的“输出”窗口中。 但是，若要在已部署的应用程序中包含跟踪功能，则必须在 TRACE 编译器指令处于启动状态下编译已检测应用程序。 这样就可以将跟踪代码编译成应用程序的发布版本。 如果未启用 TRACE 指令，将在编译过程中忽略所有跟踪代码，并且不会将其包含在将部署的可执行代码中。  
   
  跟踪方法和调试方法都具有关联的条件属性。 例如，如果跟踪的条件属性为 true，则所有跟踪语句都将包含在一个程序集（经过编译的 .exe 文件或 .dll）中；如果 Trace 条件属性为 false，则不会包括跟踪语句。  
@@ -75,14 +75,14 @@ ms.locfileid: "54523553"
   
     |语言|语句|结果|  
     |--------------|---------------|------------|  
-    |**Visual Basic**|#CONST TRACE = true|启用跟踪|  
-    ||#CONST TRACE = false|禁用跟踪|  
-    ||#CONST DEBUG = true|启用调试|  
-    ||#CONST DEBUG = false|禁用调试|  
-    |**C#**|#define TRACE|启用跟踪|  
-    ||#undef TRACE|禁用跟踪|  
-    ||#define DEBUG|启用调试|  
-    ||#undef DEBUG|禁用调试|  
+    |**Visual Basic**|**#CONST TRACE = true**|启用跟踪|  
+    ||**#CONST TRACE = false**|禁用跟踪|  
+    ||**#CONST DEBUG = true**|启用调试|  
+    ||**#CONST DEBUG = false**|禁用调试|  
+    |**C#**|**#define TRACE**|启用跟踪|  
+    ||**#undef TRACE**|禁用跟踪|  
+    ||**#define DEBUG**|启用调试|  
+    ||**#undef DEBUG**|禁用调试|  
   
 ### <a name="to-disable-tracing-or-debugging"></a>禁用跟踪或调试  
   
@@ -96,10 +96,11 @@ ms.locfileid: "54523553"
 >  准备进行编译时，可从“生成”菜单中选择“生成”，也可使用命令行方法但不键入 d:，以定义条件编译符号。  
   
 ## <a name="see-also"></a>请参阅
+
 - [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [如何：创建、 初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [如何：创建、初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [如何：为 Visual Studio 命令行设置环境变量](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：设置 Visual Studio 命令行的环境变量](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [如何：调用命令行编译器](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

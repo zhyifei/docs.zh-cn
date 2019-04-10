@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 184be04c963116906c1dc2c0a5803814402ea8e0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147103"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用配置文件配置应用
 .NET Framework 通过配置文件为开发人员和管理员提供了对应用程序运行方式的控制权和灵活性。 配置文件是可以按需要更改的 XML 文件。 管理员能够控制应用程序可以访问哪些受保护的资源，应用程序将使用哪些版本的程序集，以及远程应用程序和对象位于何处。 开发人员可以将设置置于配置文件中，从而没有必要在每次设置更改时重新编译应用程序。 本节说明可以对什么进行配置以及为什么对应用程序进行配置会有用。  
@@ -101,7 +101,7 @@ ms.locfileid: "55826429"
 -   用户策略配置文件：%USERPROFILE%\Application data\Microsoft\CLR security config\vxx.xx\Security.config  
   
 ## <a name="in-this-section"></a>本节内容  
- [如何：通过使用 devpath 查找程序集查找程序集](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [如何：使用 DEVPATH 查找程序集](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  描述如何指示运行时在搜索程序集时使用 DEVPATH 环境变量。  
   
  [重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
@@ -113,17 +113,18 @@ ms.locfileid: "55826429"
  [配置加密类](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  描述如何将算法名称映射到加密类，以及如何将对象标识符映射到加密算法。  
   
- [如何：创建发布服务器策略](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [如何：创建发行者策略](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
  描述应当在何时以及如何添加发行者策略文件，以指定程序集重定向和基本代码设置。  
   
  [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)  
  描述架构的层次结构：启动、运行时、网络和其他配置设置类型。  
   
 ## <a name="see-also"></a>请参阅
+
 - [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)
 - [指定程序集的位置](../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
 - [ASP.NET 网站管理](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [安全策略管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe（代码访问安全策略工具）](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
-- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）
+- [公共语言运行时中的程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

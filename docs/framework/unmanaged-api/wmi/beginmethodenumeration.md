@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b682904a8e7f2eafa8833d784febe7b3b2a1e5f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d6de2a5ff4d2743c7aca2e46b3af848138c15fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611080"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158776"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 函数
 开始为对象提供的方法的枚举。  
@@ -49,7 +49,7 @@ HRESULT BeginMethodEnumeration (
 `lEnumFlags`  
 [in]零 (0) 的所有方法，或指定范围的枚举的标志。 在中定义的以下标志*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-返回的常量  |值  |描述  |
+返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 限制对自身的类中定义的方法的枚举。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 限制对从基类继承的属性的枚举。 |
@@ -74,7 +74,8 @@ HRESULT BeginMethodEnumeration (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166395"
 ---
 # <a name="how-to-create-application-settings"></a>如何：创建应用程序设置
 使用托管代码时，你可以创建新的应用程序设置并将其绑定窗体或窗体控件的属性上，以便在运行时自动加载和保存这些设置。  
@@ -47,6 +47,7 @@ ms.locfileid: "57721237"
  默认的设置提供程序 <xref:System.Configuration.LocalFileSettingsProvider> 会将配置文件的信息视为纯文本处理。 这将限制由当前用户由的操作系统提供的文件访问安全性的安全。 因此，必须谨慎处理配置文件中存储的信息。 例如，应用程序设置一种常见的用法就是，存储指向应用程序数据存储的连接字符串。 但是，出于安全考虑，此类字符串不应包括密码。 有关连接字符串的详细信息，请参阅 <xref:System.Configuration.SpecialSetting>。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [应用程序设置概述](application-settings-overview.md)

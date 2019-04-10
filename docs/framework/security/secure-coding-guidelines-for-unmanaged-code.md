@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9071f8b5c4569ace53b13f7b9b7282bf8e87c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143762"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>托管代码的安全编码指南
 有些库代码需要调入非托管代码（如本机代码 API（如 Win32））。 因为这意味着超出托管代码的安全外围，所以需要适当小心。 如果你的代码在安全性方面是非特定的，你的代码和调用它的任何代码都必须具有非托管代码权限（指定了<xref:System.Security.Permissions.SecurityPermission> 标志的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> ）。  
@@ -49,7 +49,8 @@ ms.locfileid: "54711968"
 |-------------|-----------------------------|  
 |**安全**|对于任何代码（即使是恶意代码）进行调用都是完全无害的。 可像其他托管代码一样使用。 例如，获取一天时间的函数通常是安全的。|  
 |**本机**|在安全性方面是非特定的；即需要非托管代码的权限才可进行调用的非托管代码。 检查了安全性，此操作可阻止未经授权的调用方。|  
-|**不安全**|取消了安全性的、具有潜在危险的非托管代码入口点。 使用此类非托管代码时，开发人员应加倍小心，要确保其他保护措施到位以避免出现安全漏洞。 开发人员必须负责，因为此关键字覆盖安全系统。|  
+|**unsafe**|取消了安全性的、具有潜在危险的非托管代码入口点。 使用此类非托管代码时，开发人员应加倍小心，要确保其他保护措施到位以避免出现安全漏洞。 开发人员必须负责，因为此关键字覆盖安全系统。|  
   
 ## <a name="see-also"></a>请参阅
-- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)
+
+- [代码安全维护指南](../../../docs/standard/security/secure-coding-guidelines.md)

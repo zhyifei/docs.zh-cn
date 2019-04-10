@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: c6d00271f412829cb8e030c2b9a338f73327977b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ccbb979ae7cf67dd54eb80e1d30e74078960b43d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724169"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169099"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>演练：简单对象模型和查询 (Visual Basic)
 本演练提供了复杂性最小的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将创建一个可为示例 Northwind 数据库中的 Customers 表建模的实体类。 然后您将创建一个简单查询，用于列出位于伦敦的客户。  
@@ -85,13 +85,13 @@ ms.locfileid: "54724169"
      [!code-vb[DLinqWalk1VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#2)]  
   
 ## <a name="designating-properties-on-the-class-to-represent-database-columns"></a>指定类中的属性表示数据库列  
- 在此步骤中，您要完成几项任务。  
+ 在此步骤中，你要完成几项任务。  
   
 -   您要使用 <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性 (Attribute) 指定实体类中的 `CustomerID` 和 `City` 属性 (Property) 表示数据库表中的列。  
   
 -   您要指定 `CustomerID` 属性表示数据库中的主键列。  
   
--   您要指定 `_CustomerID` 和 `_City` 字段用作私有存储字段。 然后，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 就可以直接存储和检索值，而不用使用可能包含业务逻辑的公共访问器。  
+-   您要指定 `_CustomerID` 和 `_City` 字段用作私有存储字段。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以然后存储和检索值直接，而不是使用可能包含业务逻辑的公共访问器。  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>表示两个数据库列的特性  
   
@@ -100,7 +100,7 @@ ms.locfileid: "54724169"
      [!code-vb[DLinqWalk1VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#3)]  
   
 ## <a name="specifying-the-connection-to-the-northwind-database"></a>指定到 Northwind 数据库的连接  
- 在此步骤中，要使用 <xref:System.Data.Linq.DataContext> 对象在您基于代码的数据结构和数据库本身之间建立连接。 <xref:System.Data.Linq.DataContext> 是您从数据库中检索对象和提交更改的主要通道。  
+ 在此步骤中，要使用 <xref:System.Data.Linq.DataContext> 对象在你基于代码的数据结构和数据库本身之间建立连接。 <xref:System.Data.Linq.DataContext> 是您从数据库中检索对象和提交更改的主要通道。  
   
  您还需声明 `Table(Of Customer)`，用作您针对数据库中 Customers 表的查询的逻辑、类型化表。 您将在后续步骤中创建和执行这些查询。  
   
@@ -153,4 +153,5 @@ ms.locfileid: "54724169"
  如果您希望进行“跨关系进行查询”演练，请务必保存您刚完成的演练的解决方案，这是一项必备条件。  
   
 ## <a name="see-also"></a>请参阅
+
 - [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

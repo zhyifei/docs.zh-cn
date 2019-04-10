@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-ms.openlocfilehash: 6cd09295f9dac26011652d6b0a33318841b04072
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648357"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162667"
 ---
 # <a name="xaml-security-considerations"></a>XAML 安全注意事项
 本主题介绍在应用程序中安全性的最佳做法，当您使用 XAML 和.NET Framework XAML 服务 API。  
@@ -42,4 +42,5 @@ ms.locfileid: "54648357"
  XAML 支持其自己的类型系统，这在许多方面与 CLR 如何实现基本的 CLR 类型系统对等。 但是，您将基于其类型信息的类型的信任决定的类型意识的某些方面，您应延迟到 CLR 后备类型中的类型信息。 这是因为某些 XAML 类型系统的特定报告功能均保持打开状态作为虚拟方法，因此，不完全受控制的原始的.NET Framework XAML 服务实现。 这些扩展点存在，因为 XAML 类型系统是可扩展的使之与 XAML 本身的可扩展性和与使用默认 CLR 支持实现和默认 XAML 架构上下文及其可能的替代类型映射策略。 详细信息，请参阅特定说明多个的属性上<xref:System.Xaml.XamlType>和<xref:System.Xaml.XamlMember>。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Xaml.Permissions.XamlAccessLevel>

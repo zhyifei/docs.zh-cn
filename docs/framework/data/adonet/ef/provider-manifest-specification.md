@@ -2,12 +2,12 @@
 title: 提供程序清单规范
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 409653fa415e62ff0591e09ad4771c5951689b24
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169905"
 ---
 # <a name="provider-manifest-specification"></a>提供程序清单规范
 本节讨论数据存储提供程序如何可以支持数据存储中的类型和功能。  
@@ -250,34 +250,35 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |特性名|数据类型|必需|默认值|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名称|String|是|无|提供程序特定的数据类型名称|  
-|PrimitiveTypeKind|PrimitiveTypeKind|是|无|EDM 类型名称|  
+|名称|String|是|n/a|提供程序特定的数据类型名称|  
+|PrimitiveTypeKind|PrimitiveTypeKind|是|n/a|EDM 类型名称|  
   
 ###### <a name="function-node"></a>Function 节点  
  每个 Function 定义一个可通过提供程序使用的函数。  
   
 |特性名|数据类型|必需|默认值|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名称|String|是|无|函数的标识符/名称|  
-|ReturnType|String|No|Void|函数的 EDM 返回类型|  
-|聚合|Boolean|No|False|如果函数为聚合函数，则为 True。|  
-|BuiltIn|Boolean|No|True|如果函数内置于数据存储中，则返回 True|  
+|名称|String|是|n/a|函数的标识符/名称|  
+|ReturnType|String|否|Void|函数的 EDM 返回类型|  
+|聚合|Boolean|否|False|如果函数为聚合函数，则为 True。|  
+|BuiltIn|Boolean|否|True|如果函数内置于数据存储中，则返回 True|  
 |StoreFunctionName|String|否|\<名称 >|数据存储中的函数名称。  考虑了函数名称的重定向级别。|  
-|NiladicFunction|Boolean|No|False|如果函数不需要任何参数且在调用时不使用任何参数，则返回 True。|  
-|ParameterType<br /><br /> 语义|ParameterSemantics|No|AllowImplicit<br /><br /> 转换|有关查询管道应如何处理参数类型替换的选项：<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
+|NiladicFunction|Boolean|否|False|如果函数不需要任何参数且在调用时不使用任何参数，则返回 True。|  
+|ParameterType<br /><br /> 语义|ParameterSemantics|否|AllowImplicit<br /><br /> 转换|有关查询管道应如何处理参数类型替换的选项：<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
   
- **参数节点**  
+ **Parameters 节点**  
   
  每个函数都具有包含一个或多个 Parameter 节点的集合。  
   
 |特性名|数据类型|必需|默认值|描述|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名称|String|是|无|参数的标识符/名称。|  
-|类型|String|是|无|参数的 EDM 类型。|  
-|模式|参数<br /><br /> 方向|是|无|参数的方向：<br /><br /> -在<br />-out<br />-inout|  
+|名称|String|是|n/a|参数的标识符/名称。|  
+|类型|String|是|n/a|参数的 EDM 类型。|  
+|模式|参数<br /><br /> 方向|是|n/a|参数的方向：<br /><br /> -在<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace 属性  
  每个数据存储提供程序必须为清单中定义的信息定义一个命名空间或一组命名空间。 此命名空间可在 Entity SQL 查询中用来解析函数和类型的名称。 例如：SqlServer。 此命名空间必须与规范命名空间 EDM 不同，EDM 是由实体服务为 Entity SQL 查询要支持的标准函数定义的。  
   
 ## <a name="see-also"></a>请参阅
+
 - [编写实体框架数据提供程序](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

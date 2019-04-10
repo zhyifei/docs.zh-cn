@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9d3f8966f6333487631a0e155c7be49075a6992
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be2dfd6bb521dee14afd3728bdd9c446cb779e85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149222"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 函数
 终止通过调用开始枚举[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函数。  
@@ -49,7 +49,7 @@ HRESULT QualifierSet_EndEnumeration (
 
 此函数返回的以下值中定义*WbemCli.h*标头文件，也可以将其定义为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |“值”  |Description  |
 |---------|---------|---------|
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
@@ -65,7 +65,8 @@ HRESULT QualifierSet_EndEnumeration (
   
 **标头：** WMINet_Utils.idl  
   
-**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+**.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

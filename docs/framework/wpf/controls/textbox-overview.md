@@ -5,18 +5,16 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-ms.openlocfilehash: 5ddd6600493cd127f8024f23594c628476cac19e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162641"
 ---
 # <a name="textbox-overview"></a>TextBox 概述
 <xref:System.Windows.Controls.TextBox>类，可显示或编辑无格式的文本。 一个常见用途<xref:System.Windows.Controls.TextBox>编辑窗体中的无格式的文本。 例如，一个表单要求输入用户的姓名、 电话号码等使用<xref:System.Windows.Controls.TextBox>文本输入控件。 本主题介绍<xref:System.Windows.Controls.TextBox>类，并提供有关如何在两者中使用它的示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和C#。  
-  
- 
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>使用 TextBox 还是 RichTextBox？  
  这两<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.RichTextBox>使用户可以输入文本，但两个控件用于不同的方案。 一个<xref:System.Windows.Controls.TextBox>需系统资源较少则<xref:System.Windows.Controls.RichTextBox>因此它非常适用于需要编辑纯文本 （即，在窗体中的使用情况）。 一个<xref:System.Windows.Controls.RichTextBox>是更好的选择时需要在用户编辑带格式的文本、 图像、 表或其他受支持的内容。 例如，编辑文档、 文章或博客需要格式、 图像，最好采用以下等<xref:System.Windows.Controls.RichTextBox>。 下表总结了的主要功能<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.TextBox>。  
@@ -68,5 +66,6 @@ ms.locfileid: "57361065"
  通常<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>用于每当检测到事件中的文本<xref:System.Windows.Controls.TextBox>或<xref:System.Windows.Controls.RichTextBox>发生更改，而不是<xref:System.Windows.UIElement.KeyDown>正如您所料。 有关示例，请参阅[检测 TextBox 中的文本何时更改](how-to-detect-when-text-in-a-textbox-has-changed.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [帮助主题](textbox-how-to-topics.md)
 - [RichTextBox 概述](richtextbox-overview.md)

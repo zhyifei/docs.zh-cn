@@ -2,12 +2,12 @@
 title: <add> 的 <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 7267b8719987ecd25bcca78a7897a0d4172a42ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1324803d7c0f127cfee9eadebff2672955780eda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165407"
 ---
 # <a name="add-of-entries"></a>\<添加 > 的\<条目 >
 表示将筛选器映射到以前定义的客户端终结点的路由项。 与此筛选器匹配的消息将发送到此目标。  
@@ -58,8 +58,9 @@ ms.locfileid: "55264565"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|一个包含路由映射项的配置节。|  
+|[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|一个包含路由映射项的配置节。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>

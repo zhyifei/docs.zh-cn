@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: 7bc5f3fc1c87b8acbbfeb0bad0c7766c0a2ef1dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5044d39d1dc5d2fa7d2ce691cdda7075fa0e32a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151198"
 ---
 # <a name="schema-restrictions"></a>架构限制
 第二个可选参数**GetSchema**方法将返回用于限制架构信息的量的限制，并将它传递到**GetSchema**方法作为一个字符串数组. 在数组中的位置确定可以传递的值，这等效于限制数。  
@@ -133,7 +133,7 @@ class Program
 ## <a name="sql-server-schema-restrictions"></a>SQL Server 架构限制  
  下表列出了 SQL Server 架构集合的限制。  
   
-### <a name="users"></a>Users  
+### <a name="users"></a>用户  
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -143,7 +143,7 @@ class Program
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|name|@Name|name|1|  
+|名称|@Name|名称|1|  
   
 ### <a name="tables"></a>表  
   
@@ -154,7 +154,7 @@ class Program
 |表|@Name|TABLE_NAME|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>列  
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -172,7 +172,7 @@ class Program
 |表|@Table|TABLE_NAME|3|  
 |列|@Column|COLUMN_NAME|4|  
   
-### <a name="views"></a>视图  
+### <a name="views"></a>Views  
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -195,7 +195,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Owner|@Owner|SPECIFIC_SCHEMA|2|  
-|name|@Name|SPECIFIC_NAME|3|  
+|名称|@Name|SPECIFIC_NAME|3|  
 |参数|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>过程  
@@ -204,7 +204,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Owner|@Owner|SPECIFIC_SCHEMA|2|  
-|name|@Name|SPECIFIC_NAME|3|  
+|名称|@Name|SPECIFIC_NAME|3|  
 |类型|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
@@ -239,7 +239,7 @@ class Program
 |Catalog|@Catalog|CONSTRAINT_CATALOG|1|  
 |Owner|@Owner|CONSTRAINT_SCHEMA|2|  
 |表|@Table|TABLE_NAME|3|  
-|name|@Name|CONSTRAINT_NAME|4|  
+|名称|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008       
  下表列出了 SQL Server 2008 架构集合的限制。 这些限制从 .NET Framework 版本 3.5 SP1 和 SQL Server 2008 开始生效。 .NET Framework 和 SQL Server 的早期版本不支持这些限制。  
@@ -262,4 +262,5 @@ class Program
 |列|@Column|COLUMN_NAME|4|  
   
 ## <a name="see-also"></a>请参阅
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: b0db690bfd1a0cabf3060067ea23cf01acf3251d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171153"
 ---
 # <a name="routed-events-overview"></a>路由事件概述
 本主题描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主题定义路由事件术语、描述路由事件如何通过元素树来路由、概述如何处理路由事件，并介绍如何创建你自己的自定义路由事件。
@@ -195,7 +195,7 @@ ms.locfileid: "57379206"
 ## <a name="wpf-input-events"></a>WPF 输入事件  
  路由事件在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 平台中的常见应用之一是用于事件输入。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，按照约定，隧道路由事件的名称以单词“Preview”开头。 输入事件通常成对出现，一个是浮升事件，另一个是隧道事件。 例如，<xref:System.Windows.ContentElement.KeyDown>事件和<xref:System.Windows.ContentElement.PreviewKeyDown>事件具有相同的签名，前者是浮升输入的事件，后者是隧道输入事件。 偶尔，输入事件只有浮升版本，或者有可能只有直接路由版本。 在文档中，路由事件主题交叉引用具有备用路由策略的类似路由事件（如果存在这类路由事件），托管的引用页面中的相关部分阐明每个路由事件的路由策略。  
   
- 实现成对出现的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 输入事件，使来自输入的单个用户操作（如按鼠标按钮）按顺序引发该对中的两个路由事件。 首先引发隧道事件并沿路由传播。 然后引发浮升事件并沿路由传播。 两个事件按字面意思共享相同的事件数据实例，因为<xref:System.Windows.UIElement.RaiseEvent%2A>引发浮升事件在实现类中的方法调用侦听隧道事件中的事件数据，并在新引发的事件中重用它。 具有隧道事件处理程序的侦听器首先获得将路由事件标记为“已处理”的机会（首先是类处理程序，然后是实例处理程序）。 如果隧道路由中的某个元素将路由事件标记为“已处理”，则会针对浮升事件发送已处理的事件数据，而且将不调用等效的浮升输入事件的附加典型处理程序。 已处理的浮升事件看起来好像尚未引发。 此处理行为对于控件合成非常有用，因为在此情况下你可能希望所有基于命中测试的输入事件或者所有基于焦点的输入事件都由最终的控件（而不是它的复合部件）报告。 作为可支持控件类的代码的一部分，最后一个控件元素靠近合成中的根，因此将有机会首先对隧道事件进行类处理，或者有机会将该路由事件“替换”为更针对控件的事件。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 成对出现的输入的事件的实现，以便输入，如鼠标按下按钮，从单个用户操作将引发对这两个路由的事件序列中。 首先引发隧道事件并沿路由传播。 然后引发浮升事件并沿路由传播。 两个事件按字面意思共享相同的事件数据实例，因为<xref:System.Windows.UIElement.RaiseEvent%2A>引发浮升事件在实现类中的方法调用侦听隧道事件中的事件数据，并在新引发的事件中重用它。 具有隧道事件处理程序的侦听器首先获得将路由事件标记为“已处理”的机会（首先是类处理程序，然后是实例处理程序）。 如果隧道路由中的某个元素将路由事件标记为“已处理”，则会针对浮升事件发送已处理的事件数据，而且将不调用等效的浮升输入事件的附加典型处理程序。 已处理的浮升事件看起来好像尚未引发。 此处理行为对于控件合成非常有用，因为在此情况下你可能希望所有基于命中测试的输入事件或者所有基于焦点的输入事件都由最终的控件（而不是它的复合部件）报告。 作为可支持控件类的代码的一部分，最后一个控件元素靠近合成中的根，因此将有机会首先对隧道事件进行类处理，或者有机会将该路由事件“替换”为更针对控件的事件。  
   
  为了说明输入事件处理的工作方式，请思考下面的输入事件示例。 在下面的树插图中，`leaf element #2` 是先后发生的 `PreviewMouseDown` 事件和 `MouseDown` 事件的源。  
   
@@ -204,17 +204,17 @@ ms.locfileid: "57379206"
   
  事件的处理顺序如下所述：  
   
-1.  针对根元素处理 `PreviewMouseDown`（隧道）。  
+1.  `PreviewMouseDown` （隧道） 根元素上。  
   
-2.  针对中间元素 #1 处理 `PreviewMouseDown`（隧道）。  
+2.  `PreviewMouseDown` （隧道） 针对中间元素 #1。  
   
-3.  针对源元素 #2 处理 `PreviewMouseDown`（隧道）。  
+3.  `PreviewMouseDown` （隧道） 针对源元素 #2。  
   
-4.  针对源元素 #2 处理 `MouseDown`（浮升）。  
+4.  `MouseDown` （冒泡） 针对源元素 #2。  
   
-5.  针对中间元素 #1 处理 `MouseDown`（浮升）。  
+5.  `MouseDown` （冒泡） 针对中间元素 #1。  
   
-6.  针对根元素处理 `MouseDown`（浮升）。  
+6.  `MouseDown` （冒泡） 根元素上。  
   
  路由事件处理程序委托提供对以下两个对象的引用：引发该事件的对象以及在其中调用处理程序的对象。 在其中调用处理程序的对象是由 `sender` 参数报告的对象。 首先引发该事件的对象报告的<xref:System.Windows.RoutedEventArgs.Source%2A>事件数据中的属性。 路由的事件仍可以引发并由同一个对象，在这种情况下处理`sender`和<xref:System.Windows.RoutedEventArgs.Source%2A>是相同的 （这是与步骤 3 和 4 中的事件处理示例列表的情况）。  
   
@@ -245,12 +245,13 @@ ms.locfileid: "57379206"
  本主题主要从以下角度讨论路由事件：描述基本概念；就如何以及何时响应各种基元素和控件中已经存在的路由事件提供指南。 但是，你可以在自定义类上创建自己的路由事件以及所有必要的支持（如专用的事件数据类和委托）。 路由的事件的所有者可以是任何类，但必须由引发并由处理路由的事件<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>这样才可供派生类。 有关自定义事件的详细信息，请参阅[创建自定义路由事件](how-to-create-a-custom-routed-event.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>
 - [将路由事件标记为“已处理”和“类处理”](marking-routed-events-as-handled-and-class-handling.md)
 - [输入概述](input-overview.md)
 - [命令概述](commanding-overview.md)
-- [自定义依赖属性](custom-dependency-properties.md)
+- [自定义依赖项属性](custom-dependency-properties.md)
 - [WPF 中的树](trees-in-wpf.md)
 - [弱事件模式](weak-event-patterns.md)

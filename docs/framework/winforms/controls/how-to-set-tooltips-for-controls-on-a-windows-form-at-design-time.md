@@ -1,5 +1,5 @@
 ---
-title: 如何：在设计时为 Windows 窗体上控件设置工具提示
+title: 如何：在设计时为 Windows 窗体上的控件设置 ToolTip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 541e50a8ee9c5338acc7c5e347549fd03a0f6323
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710714"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157594"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>如何：在设计时为 Windows 窗体上控件设置工具提示
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>如何：在设计时为 Windows 窗体上的控件设置 ToolTip
 可以设置<xref:System.Windows.Forms.ToolTip>字符串在代码中或在 Windows 窗体设计器中。 有关详细信息<xref:System.Windows.Forms.ToolTip>组件，请参阅[ToolTip 组件概述](tooltip-component-overview-windows-forms.md)。  
   
 > [!NOTE]
@@ -77,6 +77,7 @@ ms.locfileid: "57710714"
 2.  在中**属性**窗口中，删除中的文本**ToolTip1 上的工具提示**。  
 
 ## <a name="see-also"></a>请参阅
+
 - [ToolTip 组件概述](tooltip-component-overview-windows-forms.md)
 - [如何：更改 Windows 窗体 ToolTip 组件的延迟](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [ToolTip 组件](tooltip-component-windows-forms.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167162"
 ---
 # <a name="timing-events-overview"></a>计时事件概述
 本主题介绍如何使用上可用的五个计时事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>对象。  
@@ -54,9 +54,9 @@ ms.locfileid: "57379570"
 ## <a name="public-events"></a>公共事件  
  <xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>类都提供五种计时事件。 下表列出了这些事件及其触发条件。  
   
-|事件|触发交互式操作|其他触发器|  
+|Event|触发交互式操作|其他触发器|  
 |-----------|--------------------------------------|--------------------|  
-|**Completed**|跳过以填充|时钟完成。|  
+|**已完成**|跳过以填充|时钟完成。|  
 |**CurrentGlobalSpeedInvalidated**|暂停、恢复、查找、设置速度比、跳过以填充、停止|时钟反转、加速、启动或停止。|  
 |**CurrentStateInvalidated**|开始、跳过以填充、停止|时钟开始、停止或填充。|  
 |**CurrentTimeInvalidated**|开始、查找、跳过以填充、停止|时钟前进。|  
@@ -77,6 +77,7 @@ ms.locfileid: "57379570"
  当你注册<xref:System.Windows.Media.Animation.Timeline.Completed>时间线上的事件，例如，您实际上在告诉系统注册为<xref:System.Windows.Media.Animation.Clock.Completed>事件的时间线创建每个时钟。 在代码中，您必须注册此事件之前<xref:System.Windows.Media.Animation.Clock>创建为此时间线; 否则，不会收到通知。 发生这种情况中自动[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 在之前的事件，分析器自动注册<xref:System.Windows.Media.Animation.Clock>创建。  
   
 ## <a name="see-also"></a>请参阅
+
 - [动画和计时系统概述](animation-and-timing-system-overview.md)
 - [动画概述](animation-overview.md)
 - [计时行为概述](timing-behaviors-overview.md)

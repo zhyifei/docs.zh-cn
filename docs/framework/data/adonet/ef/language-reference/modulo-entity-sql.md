@@ -2,12 +2,12 @@
 title: （取模）（实体 SQL）
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
-ms.openlocfilehash: 543c35c56955fb0a9909fced23357444bc78197a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b08689b6f5b17950738c557e02f995fa85aeb35e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160480"
 ---
 # <a name="modulo-entity-sql"></a>（取模）（实体 SQL）
 返回两个表达式相除后的余数。  
@@ -38,4 +38,5 @@ dividend % divisor
  [!code-csharp[DP EntityServices Concepts 2#MODULO](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#modulo)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

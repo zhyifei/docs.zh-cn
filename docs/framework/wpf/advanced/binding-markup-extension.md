@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 960bc953345e3f6ed632b7a136b626978c8a9bce
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170308"
 ---
 # <a name="binding-markup-extension"></a>绑定标记扩展
 延迟输入属性值，将数据绑定值，创建一个中间表达式对象，并解释适用于的元素，并在运行时与其绑定的数据上下文。  
@@ -56,7 +56,7 @@ ms.locfileid: "57379180"
   
 -   <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>： 一个字符串，标识可能的绑定组。 这是一个相对高级的绑定的概念;请参阅参考页面的<xref:System.Windows.Data.BindingBase.BindingGroupName%2A>。  
   
--   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
+-   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>:布尔值，可以是`true`或`false`。 默认值为 `false`。  
   
 -   <xref:System.Windows.Data.Binding.Converter%2A>： 可设置为`bindProp` = `value`在表达式中，但若要执行此操作的字符串值，需要对象引用，如[StaticResource 标记扩展](staticresource-markup-extension.md)。 在这种情况下，值是自定义转换器类的实例。  
   
@@ -68,15 +68,15 @@ ms.locfileid: "57379180"
   
 -   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>： 可设置为`bindProp` = `value`字符串表达式，但这是依赖于所传递的值的类型。 如果传递引用类型，需要对象引用，如嵌套[StaticResource 标记扩展](staticresource-markup-extension.md)。  
   
--   <xref:System.Windows.Data.Binding.IsAsync%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
+-   <xref:System.Windows.Data.Binding.IsAsync%2A>:布尔值，可以是`true`或`false`。 默认值为 `false`。  
   
 -   <xref:System.Windows.Data.Binding.Mode%2A>:*值*是中的常量名<xref:System.Windows.Data.BindingMode>枚举。 例如 `{Binding Mode=OneWay}`。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
+-   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>:布尔值，可以是`true`或`false`。 默认值为 `false`。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
+-   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>:布尔值，可以是`true`或`false`。 默认值为 `false`。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。  
+-   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>:布尔值，可以是`true`或`false`。 默认值为 `false`。  
   
 -   <xref:System.Windows.Data.Binding.Path%2A>： 为数据对象或常规对象模型中描述的路径的字符串。 格式为遍历不能进行详细介绍本主题中的对象模型提供多个不同的约定。 请参阅[PropertyPath XAML 语法](propertypath-xaml-syntax.md)。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "57379180"
   
 -   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>:*值*是中的常量名<xref:System.Windows.Data.UpdateSourceTrigger>枚举。 例如 `{Binding UpdateSourceTrigger=LostFocus}`。 特定控件可能具有不同的默认值为此绑定属性。 请参阅 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>。  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。 请参阅“备注”。  
+-   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>:布尔值，可以是`true`或`false`。 默认值为 `false`。 请参阅“备注”。  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>：布尔值，可以是`true`或`false`。 默认值为 `false`。 请参阅“备注”。  
+-   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>:布尔值，可以是`true`或`false`。 默认值为 `false`。 请参阅“备注”。  
   
 -   <xref:System.Windows.Data.Binding.XPath%2A>： 描述到 XML 数据源的 XMLDOM 的路径的字符串。 请参阅[绑定到 XML 数据使用 XMLDataProvider 和 XPath 查询](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
   
@@ -123,6 +123,7 @@ ms.locfileid: "57379180"
  `Binding` 是中的异常标记扩展<xref:System.Windows.Data.Binding>实现 WPF 的 XAML 实现的扩展功能的类还实现多种其他方法和与 XAML 无关的属性。 其他成员旨在使<xref:System.Windows.Data.Binding>可以解决许多数据绑定方案，除了作为 XAML 标记扩展的更多情形且自包含类。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Data.Binding>
 - [数据绑定概述](../data/data-binding-overview.md)
 - [XAML 概述 (WPF)](xaml-overview-wpf.md)

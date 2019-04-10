@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: fa341b7df32823c653df25ddb0dabcb4658b72b5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042627"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164432"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>定义与 .NET Framework XAML 服务一起使用的自定义类型
 当您定义了业务对象的自定义类型或不在特定框架上具有依赖项的类型时，有的 XAML 可以按照某些最佳实践。 如果您遵循这些实践，.NET Framework XAML 服务及其 XAML 读取器和 XAML 编写器可以发现你的类型的 XAML 特征，并为其适当 XAML 节点流使用的 XAML 类型系统中的表示形式。 本主题介绍类型定义、 成员定义和 CLR 类型或成员的特性化最佳的实践。  
@@ -44,7 +44,7 @@ ms.locfileid: "58042627"
 ## <a name="member-definitions"></a>成员定义  
  类型可以定义 XAML 用法的成员。 它是可以定义是 XAML 可用，即使该特定类型不是 XAML 可用的成员的类型。 这是因为 CLR 继承。 只要某种类型的继承成员支持 XAML 用法作为一个类型，并且该成员的基础类型支持 XAML 用法或具有本机的 XAML 语法，该成员是 XAML 可用。  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>属性  
  如果定义为公共 CLR 属性使用典型的 CLR 属性`get`和`set`访问器模式和相应语言的建立关键词，XAML 类型系统可以提供具有适当的信息的成员作为属性进行报告<xref:System.Xaml.XamlMember>属性，如<xref:System.Xaml.XamlMember.IsReadPublic%2A>和<xref:System.Xaml.XamlMember.IsWritePublic%2A>。  
   
  特定的属性可以通过应用启用文本语法<xref:System.ComponentModel.TypeConverterAttribute>。 有关详细信息，请参阅[Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)。  
@@ -70,7 +70,7 @@ ms.locfileid: "58042627"
 #### <a name="the-getpropertyname-accessor"></a>GetPropertyName 访问器  
  `Get` PropertyName 访问器的签名必须是：  
   
- `public static object Get` PropertyName `(object` `target` `)`  
+ `public static object Get` *PropertyName* `(object`  `target` `)`  
   
 -   `target` 对象在实现中可以指定为更具体的类型。 可以使用此范围限定在可附加成员; 的使用情况你预期的作用域之外的使用情况将引发无效强制转换异常，然后显示 XAML 分析错误的。 参数名称`target`不是必需的但名为`target`大多数实现约定。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "58042627"
 #### <a name="the-setpropertyname-accessor"></a>SetPropertyName 访问器  
  为集签名*PropertyName*访问器必须是：  
   
- `public static void Set` PropertyName `(object`  `target` `, object`  `value` `)`  
+ `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
 -   `target`上一节中所述，可以在实现中，使用相同的逻辑和后果更具体的类型为指定对象。  
   
@@ -115,5 +115,6 @@ ms.locfileid: "58042627"
  在 WPF XAML 术语中，*内部类型*是由同一程序集，它还包括引用的 XAML 定义的类型。 这种类型可以映射 XAML 命名空间的有意省略了该程序集 = 一部分的映射，例如， `xmlns:local="clr-namespace:WPFApplication1"`。  如果 BAML 将引用的内部类型和类型具有`internal`访问级别，这将生成`GeneratedInternalTypeHelper`程序集的类。 如果你想要避免`GeneratedInternalTypeHelper`，则必须使用`public`访问级别，或必须分解为单独的程序集相关的类，并将该程序集依赖。  
   
 ## <a name="see-also"></a>请参阅
+
 - [自定义类型和库的 XAML 相关 CLR 特性](xaml-related-clr-attributes-for-custom-types-and-libraries.md)
 - [XAML 服务](index.md)

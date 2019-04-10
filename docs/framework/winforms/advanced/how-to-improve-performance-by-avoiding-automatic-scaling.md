@@ -1,5 +1,5 @@
 ---
-title: 如何：通过避免自动缩放改善性能
+title: 如何：通过避免自动缩放来改善性能
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 49ec491308cc6a9fd81e74bff213029389137b88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163587"
 ---
-# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>如何：通过避免自动缩放改善性能
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>如何：通过避免自动缩放来改善性能
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 在绘制时，这会降低性能，可能会自动缩放图像。 或者，可以控制图像缩放通过将传递到目标矩形的尺寸<xref:System.Drawing.Graphics.DrawImage%2A>方法。  
   
  例如，以下调用到<xref:System.Drawing.Graphics.DrawImage%2A>方法指定的左上角 （50，30），但未指定目标矩形。  
@@ -41,5 +41,6 @@ ms.locfileid: "58653790"
  前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。 将映像名称和在您的系统都有效的路径替换为 Texture.jpg。  
   
 ## <a name="see-also"></a>请参阅
+
 - [图像、位图和图元文件](images-bitmaps-and-metafiles.md)
 - [使用图像、位图、图标和图元文件](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: 4abb6368946f9dac5fdefd6ca44f3adeed55f78f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: eb16f633f78e9d345d20c93847e2c22173267960
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410809"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161429"
 ---
 # <a name="table-overview"></a>表概述
 <xref:System.Windows.Documents.Table> 为支持流文档内容的基于网格的表示形式的块级别元素。 此元素极具灵活性，因此很有用，但也因此显得更加复杂，从而不容易理解和正确使用。  
@@ -27,15 +27,15 @@ ms.locfileid: "58410809"
   
 -   [基本表结构](#basic_table_structure)  
   
--   [表包含](#table_containment)  
+-   [表包容](#table_containment)  
   
 -   [行分组](#row_groupings)  
   
 -   [背景呈现优先级](#rendering_precedence)  
   
--   [跨行或列 ](#spanning_rows_or_columns)  
+-   [跨行或列](#spanning_rows_or_columns)  
   
--   [使用代码生成表 ](#building_a_table_with_code)  
+-   [使用代码生成表](#building_a_table_with_code)  
   
 -   [相关主题] 
   
@@ -176,6 +176,7 @@ ms.locfileid: "58410809"
  [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [流文档概述](flow-document-overview.md)
 - [使用 XAML 定义表](how-to-define-a-table-with-xaml.md)
 - [WPF 中的文档](documents-in-wpf.md)

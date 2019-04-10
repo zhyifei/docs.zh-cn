@@ -2,12 +2,12 @@
 title: SQL Server 数据类型和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 14a3c8b2f520efce96667b2028405ca36ed17a28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 90589f54728ad5e887b96f37f96ff31928c680ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168410"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 数据类型和 ADO.NET
 SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在的数据丢失。 为了保持数据的完整性，适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 提供了用于处理 SQL Server 数据的类型化访问器方法。 可以使用 <xref:System.Data.SqlDbType> 类中的枚举来指定 <xref:System.Data.SqlClient.SqlParameter> 数据类型。  
@@ -20,13 +20,13 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
   
  **SQL Server 联机丛书**  
   
-1.  [数据类型 （数据库引擎）](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1.  [数据类型（数据库引擎）](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>本节内容  
  [SqlTypes 和数据集](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
  说明对 `SqlTypes` 中 `DataSet` 的类型支持。  
   
- [处理 NULL 值](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
+ [处理 Null 值](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
  演示如何使用空值和三值逻辑。  
   
  [比较 GUID 和 uniqueidentifier 值](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
@@ -55,8 +55,9 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
  说明 `DbType` 枚举及其所有成员。  
   
 ## <a name="see-also"></a>请参阅
+
 - [SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [表值参数](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)
 - [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

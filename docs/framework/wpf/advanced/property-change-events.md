@@ -13,15 +13,15 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6f625f76e230b7d6bf0488bfa75c227de31a5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351989"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166200"
 ---
 # <a name="property-change-events"></a>属性更改事件
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定义几个为响应属性值的更改而引发的事件。 该属性通常是依赖项属性。 事件本身有时是路由事件，有时是标准 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 事件。 事件的定义因具体情况而异，因为有些属性更改更适于通过元素树路由，而其他属性更改则通常只与属性发生更改的对象有关。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定义在响应中的属性值更改所引发的几个事件。 该属性通常是依赖项属性。 事件本身有时是路由事件，有时是标准 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 事件。 事件的定义因具体情况而异，因为有些属性更改更适于通过元素树路由，而其他属性更改则通常只与属性发生更改的对象有关。  
   
 ## <a name="identifying-a-property-change-event"></a>标识属性更改事件  
  并非所有报告属性更改的事件都通过签名模式或命名模式显式地标识为属性更改事件。 通常，[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 文档中的事件描述会指出事件是否直接与属性值更改相关，以及是否提供属性与事件之间的交叉引用。  
@@ -62,5 +62,6 @@ ms.locfileid: "57351989"
  若要深入了解属性触发器，请参阅[样式设置和模板化](../controls/styling-and-templating.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [路由事件概述](routed-events-overview.md)
 - [依赖项属性概述](dependency-properties-overview.md)

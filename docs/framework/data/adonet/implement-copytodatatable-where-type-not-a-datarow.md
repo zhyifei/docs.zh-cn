@@ -1,16 +1,16 @@
 ---
-title: 如何：实现 CopyToDataTable<T>泛型类型 T 不是 DataRow
+title: 如何：在泛型 T 不是 DataRow 的位置实现 CopyToDataTable<T>
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
-ms.openlocfilehash: 1f79bd421d4c504556074468f8ab7e032d3eca43
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4ec609ac38b3fa91a4b11b93e24b465f48696a9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159221"
 ---
 # <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>如何：实现 CopyToDataTable\<T > 的泛型类型 T 不是 DataRow
 <xref:System.Data.DataTable> 对象通常用于数据绑定。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法接收查询结果并将数据复制到 <xref:System.Data.DataTable> 中，后者随后会使用该数据进行数据绑定。 但是，只在 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 源上执行 <xref:System.Collections.Generic.IEnumerable%601> 方法，其中泛型参数 `T` 的类型为 <xref:System.Data.DataRow>。 虽然这十分有用，但是它并不允许从标量类型的序列、投影匿名类型的查询或执行表联接的查询创建表。  
@@ -74,5 +74,6 @@ public class ObjectShredder<T>
 ```
   
 ## <a name="see-also"></a>请参阅
+
 - [从查询创建数据表](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)
 - [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

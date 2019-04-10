@@ -1,5 +1,5 @@
 ---
-title: 如何：请确保子表中的选定的行保持在正确的位置
+title: 如何：确保子表中的选定行保持在正确的位置
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 930d0dc28a4ab0e34a6229a4b74617084918a275
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149105"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>如何：请确保子表中的选定的行保持在正确的位置
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>如何：确保子表中的选定行保持在正确的位置
 通常当在 Windows 窗体中使用数据绑定时，将显示称为父/子视图或母版/详细视图中的数据。 这是指一个数据绑定方案，其中来自同一源的数据将显示在两个控件中。 更改一个控件中的选定内容会导致在第二个控件中显示的数据变动。 例如，第一个控件可能会包含一个客户列表，而第二个控件则可能包含与第一个控件中选定客户相关的订单列表。  
   
  开始使用.NET Framework 2.0 版本，当在父/子视图中显示数据时，可能需要采取额外步骤来确保子表中当前所选的行不会重置为表的第一行。 为了执行此操作，必须缓存子表位置并在父表发生更改后将其重置。 父表某一行中的字段第一次更改时通常会发生子表重置。  
@@ -84,6 +84,7 @@ ms.locfileid: "57713457"
  有关如何为 Visual Basic 或 Visual C# 构建此示例从命令行的信息，请参阅[从命令行生成](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
 ## <a name="see-also"></a>请参阅
-- [如何：确保多个控件绑定到相同的数据源保持同步](multiple-controls-bound-to-data-source-synchronized.md)
+
+- [如何：确保绑定到同一数据源的多个控件保持同步](multiple-controls-bound-to-data-source-synchronized.md)
 - [BindingSource 组件](./controls/bindingsource-component.md)
 - [数据绑定和 Windows 窗体](data-binding-and-windows-forms.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 920f6d6206a8f33a912d8a7d1b46a3047ed874bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fb5747ec3c6b640821e4875d86273467eeb922df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154591"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>如何：在 Windows 窗体中导航数据
 在 Windows 应用程序中，浏览数据源中的记录的最简单方法是将绑定<xref:System.Windows.Forms.BindingSource>到数据源，然后将控件绑定到组件<xref:System.Windows.Forms.BindingSource>。 您然后可以使用内置的导航方法上<xref:System.Windows.Forms.BindingSource>此类<xref:System.Windows.Forms.BindingSource.MoveNext%2A>， <xref:System.Windows.Forms.BindingSource.MoveLast%2A>，<xref:System.Windows.Forms.BindingSource.MovePrevious%2A>和<xref:System.Windows.Forms.BindingSource.MoveFirst%2A>。 使用这些方法将调整<xref:System.Windows.Forms.BindingSource.Position%2A>并<xref:System.Windows.Forms.BindingSource.Current%2A>的属性<xref:System.Windows.Forms.BindingSource>适当。 此外可以查找某个项，并将其设置为当前项，通过设置<xref:System.Windows.Forms.BindingSource.Position%2A>属性。  
@@ -51,6 +51,7 @@ ms.locfileid: "57725326"
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows 窗体支持的数据源](data-sources-supported-by-windows-forms.md)
 - [Windows 窗体数据绑定中的更改通知](change-notification-in-windows-forms-data-binding.md)
 - [数据绑定和 Windows 窗体](data-binding-and-windows-forms.md)

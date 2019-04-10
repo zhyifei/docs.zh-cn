@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46e468f10c1c07425f7ecb3589bd114d12180554
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8022428c7f803f96e2fa150588edf95542bf19b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502587"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169853"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>ICLRAppDomainResourceMonitor::GetCurrentCpuTime 方法
 获取在当前的应用程序域中执行，原因是已创建的应用程序域时使用的所有线程的总处理器时间。  
@@ -59,10 +59,11 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [ICLRAppDomainResourceMonitor 接口](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
 - [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [应用程序域资源监视](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
-- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [应用程序域资源监控](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [宿主](../../../../docs/framework/unmanaged-api/hosting/index.md)

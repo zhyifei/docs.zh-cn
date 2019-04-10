@@ -3,12 +3,12 @@ title: <arguments>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 0f327196-f468-4be3-b6c4-68ba981a1bd6
-ms.openlocfilehash: 3e9fc4f286e7aba6406ce61910da9e614e13ffca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2b0d982997ab590ce7f0fc4c482b1ddfa6bc758f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152797"
 ---
 # <a name="arguments"></a>\<自变量 >
 表示与某一活动状态查询关联的参数的集合。  
@@ -50,7 +50,7 @@ ms.locfileid: "57368085"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<argument>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/argument.md)|与活动状态查询相关联的参数。|  
+|[\<自变量 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/argument.md)|与活动状态查询相关联的参数。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -76,6 +76,7 @@ ms.locfileid: "57368085"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ArgumentElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
 - [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

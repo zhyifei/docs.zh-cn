@@ -2,12 +2,12 @@
 title: SQL Server 中的 XML 数据
 ms.date: 03/30/2017
 ms.assetid: 9849d319-f518-4e3d-a7cd-f8fdcaaa1d4d
-ms.openlocfilehash: 71933640f2b333aa4be40416db346b5accf2ae73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75e5f24b0532a1d0da2cfcd4bdc39658db3cee35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158712"
 ---
 # <a name="xml-data-in-sql-server"></a>SQL Server 中的 XML 数据
 SQL Server 在 .NET Framework 内公开 SQLXML 的功能。 开发人员可以编写应用程序，用于从 SQL Server 实例访问 XML 数据，将数据引入 .NET Framework 环境，处理数据，并将更新发送回 SQL Server。 在 SQL Server 中，可以通过多种方式使用 XML 数据，包括数据存储，以及作为检索数据的参数值。 **SqlXml** .NET Framework 中的类提供的客户端支持使用 SQL Server 中的 XML 列中存储的数据。 有关更多信息，请参见 SQL Server 联机图书中的“SQLXML 托管类”。  
@@ -20,5 +20,6 @@ SQL Server 在 .NET Framework 内公开 SQLXML 的功能。 开发人员可以�
  演示如何将 XML 数据作为参数传递给命令。  
   
 ## <a name="see-also"></a>请参阅
+
 - [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

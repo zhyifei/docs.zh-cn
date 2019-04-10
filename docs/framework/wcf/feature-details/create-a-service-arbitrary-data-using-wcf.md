@@ -1,15 +1,15 @@
 ---
-title: 如何：创建接受任意数据服务使用 WCF REST 编程模型
+title: 如何：使用 WCF REST 编程模型创建接受任意数据的服务
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c03450c66cf8de14d6c638550a510a91593c45b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666993"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144074"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>如何：创建接受任意数据服务使用 WCF REST 编程模型
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>如何：使用 WCF REST 编程模型创建接受任意数据的服务
 有时，开发人员必须完全控制从服务操作返回数据的方式。 当服务操作必须返回数据的格式不支持 byWCF 时，这是这种情况。 本主题讨论如何使用 WCF REST 编程模型来创建接收任意数据的服务。  
   
 ### <a name="to-implement-the-service-contract"></a>实现服务协定  
@@ -194,6 +194,7 @@ namespace ReceiveRawData
 -   编译该代码时，请引用 System.ServiceModel.dll 和 System.ServiceModel.Web.dll  
   
 ## <a name="see-also"></a>请参阅
+
 - [UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
 - [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
