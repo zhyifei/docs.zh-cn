@@ -9,26 +9,26 @@ helpviewer_keywords:
 - key frames [WPF], animating camera position
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
-ms.openlocfilehash: 3be3fc8d82d9c3061891bd67605548c49230ef87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 44464cc314d649516998338e36c1b523101ac4e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143229"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346075"
 ---
-# <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a><span data-ttu-id="22eb5-102">如何：使用关键帧对照相机位置和方向进行动画处理</span><span class="sxs-lookup"><span data-stu-id="22eb5-102">How to: Animate Camera Position and Direction Using Key Frames</span></span>
-<span data-ttu-id="22eb5-103">在以下示例中，<xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames>使用的位置进行动画处理<xref:System.Windows.Media.Media3D.PerspectiveCamera>三维场景中。</span><span class="sxs-lookup"><span data-stu-id="22eb5-103">In the following example, <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> is used to animate the position of a <xref:System.Windows.Media.Media3D.PerspectiveCamera> in a 3D scene.</span></span> <span data-ttu-id="22eb5-104">此外，<xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames>用于对三维场景中指照相机的方向进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="22eb5-104">In addition, <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> is used to animate the direction the camera is pointing in the 3D scene.</span></span> <span data-ttu-id="22eb5-105">这两个这些动画使用几个关键帧来创建一系列的动画效果：</span><span class="sxs-lookup"><span data-stu-id="22eb5-105">Both of these animations use several key frames which create a series of animation effects:</span></span>  
+# <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a><span data-ttu-id="e0353-102">如何：使用关键帧对照相机位置和方向进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e0353-102">How to: Animate Camera Position and Direction Using Key Frames</span></span>
+<span data-ttu-id="e0353-103">在以下示例中，<xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames>使用的位置进行动画处理<xref:System.Windows.Media.Media3D.PerspectiveCamera>三维场景中。</span><span class="sxs-lookup"><span data-stu-id="e0353-103">In the following example, <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> is used to animate the position of a <xref:System.Windows.Media.Media3D.PerspectiveCamera> in a 3D scene.</span></span> <span data-ttu-id="e0353-104">此外，<xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames>用于对三维场景中指照相机的方向进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="e0353-104">In addition, <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> is used to animate the direction the camera is pointing in the 3D scene.</span></span> <span data-ttu-id="e0353-105">这两个这些动画使用几个关键帧来创建一系列的动画效果：</span><span class="sxs-lookup"><span data-stu-id="e0353-105">Both of these animations use several key frames which create a series of animation effects:</span></span>  
   
-1.  <xref:System.Windows.Media.Animation.LinearPoint3DKeyFrame> <span data-ttu-id="22eb5-106">和<xref:System.Windows.Media.Animation.LinearVector3DKeyFrame>用于创建值之间的平滑的线性插值。</span><span class="sxs-lookup"><span data-stu-id="22eb5-106">and <xref:System.Windows.Media.Animation.LinearVector3DKeyFrame> are used to create a smooth, linear interpolation between values.</span></span>  
+1. <xref:System.Windows.Media.Animation.LinearPoint3DKeyFrame> <span data-ttu-id="e0353-106">和<xref:System.Windows.Media.Animation.LinearVector3DKeyFrame>用于创建值之间的平滑的线性插值。</span><span class="sxs-lookup"><span data-stu-id="e0353-106">and <xref:System.Windows.Media.Animation.LinearVector3DKeyFrame> are used to create a smooth, linear interpolation between values.</span></span>  
   
-2.  <xref:System.Windows.Media.Animation.DiscretePoint3DKeyFrame> <span data-ttu-id="22eb5-107">和<xref:System.Windows.Media.Animation.DiscreteVector3DKeyFrame>用于之间创建突然"跳跃"的值 （没有内插法）。</span><span class="sxs-lookup"><span data-stu-id="22eb5-107">and <xref:System.Windows.Media.Animation.DiscreteVector3DKeyFrame> are used to create sudden "jumps" between values (no interpolation).</span></span>  
+2. <xref:System.Windows.Media.Animation.DiscretePoint3DKeyFrame> <span data-ttu-id="e0353-107">和<xref:System.Windows.Media.Animation.DiscreteVector3DKeyFrame>用于之间创建突然"跳跃"的值 （没有内插法）。</span><span class="sxs-lookup"><span data-stu-id="e0353-107">and <xref:System.Windows.Media.Animation.DiscreteVector3DKeyFrame> are used to create sudden "jumps" between values (no interpolation).</span></span>  
   
-3.  <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame> <span data-ttu-id="22eb5-108">并<xref:System.Windows.Media.Animation.SplineVector3DKeyFrame>用来创建具体取决于值之间的变量转换<xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="22eb5-108">and <xref:System.Windows.Media.Animation.SplineVector3DKeyFrame> are used to create a variable transition between values depending on the <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A> property.</span></span> <span data-ttu-id="22eb5-109">以下示例中，在动画启动较慢，但是即将结束的时间段，以指数方式加速。</span><span class="sxs-lookup"><span data-stu-id="22eb5-109">In the example below, the animation starts off slow but toward the end of the time segment, speeds up exponentially.</span></span>  
+3. <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame> <span data-ttu-id="e0353-108">并<xref:System.Windows.Media.Animation.SplineVector3DKeyFrame>用来创建具体取决于值之间的变量转换<xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="e0353-108">and <xref:System.Windows.Media.Animation.SplineVector3DKeyFrame> are used to create a variable transition between values depending on the <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A> property.</span></span> <span data-ttu-id="e0353-109">以下示例中，在动画启动较慢，但是即将结束的时间段，以指数方式加速。</span><span class="sxs-lookup"><span data-stu-id="e0353-109">In the example below, the animation starts off slow but toward the end of the time segment, speeds up exponentially.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="22eb5-110">示例</span><span class="sxs-lookup"><span data-stu-id="22eb5-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e0353-110">示例</span><span class="sxs-lookup"><span data-stu-id="e0353-110">Example</span></span>  
  [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationUsingKeyFramesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationUsingKeyFramesExample.xaml#pointvector3danimationusingkeyframesexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="22eb5-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="22eb5-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0353-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="e0353-111">See also</span></span>
 
-- [<span data-ttu-id="22eb5-112">在三维场景中对照相机位置和方向进行动画处理</span><span class="sxs-lookup"><span data-stu-id="22eb5-112">Animate Camera Position and Direction in a 3D Scene</span></span>](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
-- [<span data-ttu-id="22eb5-113">三维图形概述</span><span class="sxs-lookup"><span data-stu-id="22eb5-113">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
+- [<span data-ttu-id="e0353-112">在三维场景中对照相机位置和方向进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e0353-112">Animate Camera Position and Direction in a 3D Scene</span></span>](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
+- [<span data-ttu-id="e0353-113">三维图形概述</span><span class="sxs-lookup"><span data-stu-id="e0353-113">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
