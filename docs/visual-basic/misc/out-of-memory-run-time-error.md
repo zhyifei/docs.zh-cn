@@ -4,28 +4,28 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID7
 ms.assetid: 96cc12e1-d40a-425f-b365-1ac39e5ddcb0
-ms.openlocfilehash: 0fb6d22a71e9b2f859fec64fd0f11af37817b4e6
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: cbd9ae0945b89df8c5eb04fa6c1fe2bed22aef2d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58028918"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319321"
 ---
-# <a name="out-of-memory-visual-basic-run-time-error"></a><span data-ttu-id="8039e-102">内存不足（Visual Basic 运行时错误）</span><span class="sxs-lookup"><span data-stu-id="8039e-102">Out of memory (Visual Basic Run-Time Error)</span></span>
-<span data-ttu-id="8039e-103">所需内存多于可用内存。</span><span class="sxs-lookup"><span data-stu-id="8039e-103">More memory was required than is available.</span></span>  
+# <a name="out-of-memory-visual-basic-run-time-error"></a><span data-ttu-id="f4fe5-102">内存不足（Visual Basic 运行时错误）</span><span class="sxs-lookup"><span data-stu-id="f4fe5-102">Out of memory (Visual Basic Run-Time Error)</span></span>
+<span data-ttu-id="f4fe5-103">所需内存多于可用内存。</span><span class="sxs-lookup"><span data-stu-id="f4fe5-103">More memory was required than is available.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="8039e-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="8039e-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f4fe5-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="f4fe5-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="8039e-105">关闭已打开的不必要的应用程序、文档或源文件。</span><span class="sxs-lookup"><span data-stu-id="8039e-105">Close unnecessary applications, documents, or source files that are open.</span></span>  
+1. <span data-ttu-id="f4fe5-105">关闭已打开的不必要的应用程序、文档或源文件。</span><span class="sxs-lookup"><span data-stu-id="f4fe5-105">Close unnecessary applications, documents, or source files that are open.</span></span>  
   
-2.  <span data-ttu-id="8039e-106">将大型模块或过程分解为较小模块或过程。</span><span class="sxs-lookup"><span data-stu-id="8039e-106">Break large modules or procedures into smaller ones.</span></span>  
+2. <span data-ttu-id="f4fe5-106">将大型模块或过程分解为较小模块或过程。</span><span class="sxs-lookup"><span data-stu-id="f4fe5-106">Break large modules or procedures into smaller ones.</span></span>  
   
-3.  <span data-ttu-id="8039e-107">消除常驻内存程序。</span><span class="sxs-lookup"><span data-stu-id="8039e-107">Eliminate terminate-and-stay-resident programs.</span></span>  
+3. <span data-ttu-id="f4fe5-107">消除常驻内存程序。</span><span class="sxs-lookup"><span data-stu-id="f4fe5-107">Eliminate terminate-and-stay-resident programs.</span></span>  
   
-4.  <span data-ttu-id="8039e-108">消除不必要的设备驱动程序。</span><span class="sxs-lookup"><span data-stu-id="8039e-108">Eliminate unnecessary device drivers.</span></span>  
+4. <span data-ttu-id="f4fe5-108">消除不必要的设备驱动程序。</span><span class="sxs-lookup"><span data-stu-id="f4fe5-108">Eliminate unnecessary device drivers.</span></span>  
   
-5.  <span data-ttu-id="8039e-109">减少公共变量数。</span><span class="sxs-lookup"><span data-stu-id="8039e-109">Reduce the number of public variables.</span></span>  
+5. <span data-ttu-id="f4fe5-109">减少公共变量数。</span><span class="sxs-lookup"><span data-stu-id="f4fe5-109">Reduce the number of public variables.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8039e-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="8039e-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4fe5-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="f4fe5-110">See also</span></span>
 
-- [<span data-ttu-id="8039e-111">错误类型</span><span class="sxs-lookup"><span data-stu-id="8039e-111">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="f4fe5-111">错误类型</span><span class="sxs-lookup"><span data-stu-id="f4fe5-111">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

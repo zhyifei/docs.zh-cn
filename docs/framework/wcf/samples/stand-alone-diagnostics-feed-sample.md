@@ -2,17 +2,17 @@
 title: 独立诊断源示例
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 841bcd38516251fe1de306cbf52371d027b8cb36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2737621a98f6a7e89ef3aee01fd1ad7a2a60f9b5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316552"
 ---
-# <a name="stand-alone-diagnostics-feed-sample"></a><span data-ttu-id="bbb0e-102">独立诊断源示例</span><span class="sxs-lookup"><span data-stu-id="bbb0e-102">Stand-Alone Diagnostics Feed Sample</span></span>
-<span data-ttu-id="bbb0e-103">此示例演示如何创建 RSS/Atom 联合使用 Windows Communication Foundation (WCF) 源。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-103">This sample demonstrates how to create an RSS/Atom feed for syndication with Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="bbb0e-104">它是一个基本的"Hello World"程序显示的对象模型的基础知识以及如何将其设置 Windows Communication Foundation (WCF) 服务。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-104">It is a basic "Hello World" program that shows the basics of the object model and how to set it up on a Windows Communication Foundation (WCF) service.</span></span>  
+# <a name="stand-alone-diagnostics-feed-sample"></a><span data-ttu-id="14e53-102">独立诊断源示例</span><span class="sxs-lookup"><span data-stu-id="14e53-102">Stand-Alone Diagnostics Feed Sample</span></span>
+<span data-ttu-id="14e53-103">此示例演示如何创建 RSS/Atom 联合使用 Windows Communication Foundation (WCF) 源。</span><span class="sxs-lookup"><span data-stu-id="14e53-103">This sample demonstrates how to create an RSS/Atom feed for syndication with Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="14e53-104">它是一个基本的"Hello World"程序显示的对象模型的基础知识以及如何将其设置 Windows Communication Foundation (WCF) 服务。</span><span class="sxs-lookup"><span data-stu-id="14e53-104">It is a basic "Hello World" program that shows the basics of the object model and how to set it up on a Windows Communication Foundation (WCF) service.</span></span>  
   
- <span data-ttu-id="bbb0e-105">作为特殊的数据类型返回的服务操作的 WCF 模型联合源<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-105">WCF models syndication feeds as service operations that return a special data type, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>.</span></span> <span data-ttu-id="bbb0e-106"><xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的实例可以将源序列化为 RSS 2.0 和 Atom 1.0 格式。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-106">Instances of <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> can serialize a feed into both the RSS 2.0 and Atom 1.0 formats.</span></span> <span data-ttu-id="bbb0e-107">下面的示例代码演示所使用的协定。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-107">The following sample code shows the contract used.</span></span>  
+ <span data-ttu-id="14e53-105">作为特殊的数据类型返回的服务操作的 WCF 模型联合源<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>。</span><span class="sxs-lookup"><span data-stu-id="14e53-105">WCF models syndication feeds as service operations that return a special data type, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>.</span></span> <span data-ttu-id="14e53-106"><xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的实例可以将源序列化为 RSS 2.0 和 Atom 1.0 格式。</span><span class="sxs-lookup"><span data-stu-id="14e53-106">Instances of <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> can serialize a feed into both the RSS 2.0 and Atom 1.0 formats.</span></span> <span data-ttu-id="14e53-107">下面的示例代码演示所使用的协定。</span><span class="sxs-lookup"><span data-stu-id="14e53-107">The following sample code shows the contract used.</span></span>  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -32,9 +32,9 @@ ms.locfileid: "59102136"
     }  
 ```  
   
- <span data-ttu-id="bbb0e-108">`GetProcesses`操作进行批注<xref:System.ServiceModel.Web.WebGetAttribute>属性，可用于控制 WCF 发送 HTTP GET 的方式请求服务操作，并指定发送的消息的格式。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-108">The `GetProcesses` operation is annotated with the <xref:System.ServiceModel.Web.WebGetAttribute> attribute that enables you to control how WCF dispatches HTTP GET requests to service operations and specify the format of the messages sent.</span></span>  
+ <span data-ttu-id="14e53-108">`GetProcesses`操作进行批注<xref:System.ServiceModel.Web.WebGetAttribute>属性，可用于控制 WCF 发送 HTTP GET 的方式请求服务操作，并指定发送的消息的格式。</span><span class="sxs-lookup"><span data-stu-id="14e53-108">The `GetProcesses` operation is annotated with the <xref:System.ServiceModel.Web.WebGetAttribute> attribute that enables you to control how WCF dispatches HTTP GET requests to service operations and specify the format of the messages sent.</span></span>  
   
- <span data-ttu-id="bbb0e-109">任何 WCF 服务，如联合源可以是自承载于任何托管应用程序。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-109">Like any WCF service, syndication feeds can be self hosted in any managed application.</span></span> <span data-ttu-id="bbb0e-110">联合服务需要使用特定绑定 (<xref:System.ServiceModel.WebHttpBinding>) 和特定终结点行为 (<xref:System.ServiceModel.Description.WebHttpBehavior>) 才能正常运行。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-110">Syndication services require a specific binding (the <xref:System.ServiceModel.WebHttpBinding>) and a specific endpoint behavior (the <xref:System.ServiceModel.Description.WebHttpBehavior>) to function correctly.</span></span> <span data-ttu-id="bbb0e-111">新的 <xref:System.ServiceModel.Web.WebServiceHost> 类提供了一个方便的 API，用于在不使用特定配置的情况下创建此类终结点。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-111">The new <xref:System.ServiceModel.Web.WebServiceHost> class provides a convenient API for creating such endpoints without specific configuration.</span></span>  
+ <span data-ttu-id="14e53-109">任何 WCF 服务，如联合源可以是自承载于任何托管应用程序。</span><span class="sxs-lookup"><span data-stu-id="14e53-109">Like any WCF service, syndication feeds can be self hosted in any managed application.</span></span> <span data-ttu-id="14e53-110">联合服务需要使用特定绑定 (<xref:System.ServiceModel.WebHttpBinding>) 和特定终结点行为 (<xref:System.ServiceModel.Description.WebHttpBehavior>) 才能正常运行。</span><span class="sxs-lookup"><span data-stu-id="14e53-110">Syndication services require a specific binding (the <xref:System.ServiceModel.WebHttpBinding>) and a specific endpoint behavior (the <xref:System.ServiceModel.Description.WebHttpBehavior>) to function correctly.</span></span> <span data-ttu-id="14e53-111">新的 <xref:System.ServiceModel.Web.WebServiceHost> 类提供了一个方便的 API，用于在不使用特定配置的情况下创建此类终结点。</span><span class="sxs-lookup"><span data-stu-id="14e53-111">The new <xref:System.ServiceModel.Web.WebServiceHost> class provides a convenient API for creating such endpoints without specific configuration.</span></span>  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
@@ -43,15 +43,15 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
             //using the proper binding (the WebHttpBinding) and endpoint behavior (the WebHttpBehavior)  
 ```  
   
- <span data-ttu-id="bbb0e-112">或者，可在 IIS 承载的 .svc 文件中使用 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 来提供等效的功能（此技术未在此示例代码中演示）。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-112">Alternatively, you can use <xref:System.ServiceModel.Activation.WebServiceHostFactory> from within an IIS-hosted .svc file to provide equivalent functionality (this technique is not demonstrated in this sample code).</span></span>  
+ <span data-ttu-id="14e53-112">或者，可在 IIS 承载的 .svc 文件中使用 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 来提供等效的功能（此技术未在此示例代码中演示）。</span><span class="sxs-lookup"><span data-stu-id="14e53-112">Alternatively, you can use <xref:System.ServiceModel.Activation.WebServiceHostFactory> from within an IIS-hosted .svc file to provide equivalent functionality (this technique is not demonstrated in this sample code).</span></span>  
   
 ```  
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- <span data-ttu-id="bbb0e-113">由于此服务使用标准 HTTP GET 接收请求，因此可以使用任何识别 RSS 或 ATOM 的客户端来访问此服务。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-113">Because this service receives requests using the standard HTTP GET, you can use any RSS or ATOM-aware client to access the service.</span></span> <span data-ttu-id="bbb0e-114">例如，通过导航到查看此服务的输出`http://localhost:8000/diagnostics/feed/?format=atom`或`http://localhost:8000/diagnostics/feed/?format=rss`识别 RSS 的浏览器中。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-114">For example, you can view the output of this service by navigating to `http://localhost:8000/diagnostics/feed/?format=atom` or `http://localhost:8000/diagnostics/feed/?format=rss` in an RSS-aware browser.</span></span>
+ <span data-ttu-id="14e53-113">由于此服务使用标准 HTTP GET 接收请求，因此可以使用任何识别 RSS 或 ATOM 的客户端来访问此服务。</span><span class="sxs-lookup"><span data-stu-id="14e53-113">Because this service receives requests using the standard HTTP GET, you can use any RSS or ATOM-aware client to access the service.</span></span> <span data-ttu-id="14e53-114">例如，通过导航到查看此服务的输出`http://localhost:8000/diagnostics/feed/?format=atom`或`http://localhost:8000/diagnostics/feed/?format=rss`识别 RSS 的浏览器中。</span><span class="sxs-lookup"><span data-stu-id="14e53-114">For example, you can view the output of this service by navigating to `http://localhost:8000/diagnostics/feed/?format=atom` or `http://localhost:8000/diagnostics/feed/?format=rss` in an RSS-aware browser.</span></span>
   
- <span data-ttu-id="bbb0e-115">此外可以使用[如何 WCF 联合对象模型映射到 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)读取联合的数据并处理它使用命令性代码。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-115">You can also use the [How the WCF Syndication Object Model Maps to Atom and RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) to read syndicated data and process it using imperative code.</span></span>  
+ <span data-ttu-id="14e53-115">此外可以使用[如何 WCF 联合对象模型映射到 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)读取联合的数据并处理它使用命令性代码。</span><span class="sxs-lookup"><span data-stu-id="14e53-115">You can also use the [How the WCF Syndication Object Model Maps to Atom and RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) to read syndicated data and process it using imperative code.</span></span>  
   
 ```  
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",  
@@ -74,26 +74,26 @@ foreach (SyndicationItem i in feed.Items)
 }  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="bbb0e-116">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="bbb0e-116">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="14e53-116">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="14e53-116">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="bbb0e-117">确保您具有正确的地址注册的权限为 HTTP 和 HTTPS 的计算机上，安装中的说明中所述[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-117">Ensure that you have the right address registration permission for HTTP and HTTPS on the computer as explained in the set up instructions in [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="14e53-117">确保您具有正确的地址注册的权限为 HTTP 和 HTTPS 的计算机上，安装中的说明中所述[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="14e53-117">Ensure that you have the right address registration permission for HTTP and HTTPS on the computer as explained in the set up instructions in [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="bbb0e-118">生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-118">Build the solution.</span></span>  
+2. <span data-ttu-id="14e53-118">生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="14e53-118">Build the solution.</span></span>  
   
-3.  <span data-ttu-id="bbb0e-119">运行控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-119">Run the console application.</span></span>  
+3. <span data-ttu-id="14e53-119">运行控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="14e53-119">Run the console application.</span></span>  
   
-4.  <span data-ttu-id="bbb0e-120">运行控制台应用程序时，导航到`http://localhost:8000/diagnostics/feed/?format=atom`或`http://localhost:8000/diagnostics/feed/?format=rss`使用识别 RSS 的浏览器。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-120">While the console application is running, navigate to `http://localhost:8000/diagnostics/feed/?format=atom` or `http://localhost:8000/diagnostics/feed/?format=rss` using an RSS-aware browser.</span></span>  
+4. <span data-ttu-id="14e53-120">运行控制台应用程序时，导航到`http://localhost:8000/diagnostics/feed/?format=atom`或`http://localhost:8000/diagnostics/feed/?format=rss`使用识别 RSS 的浏览器。</span><span class="sxs-lookup"><span data-stu-id="14e53-120">While the console application is running, navigate to `http://localhost:8000/diagnostics/feed/?format=atom` or `http://localhost:8000/diagnostics/feed/?format=rss` using an RSS-aware browser.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="bbb0e-121">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-121">The samples may already be installed on your computer.</span></span> <span data-ttu-id="bbb0e-122">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="bbb0e-122">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="14e53-121">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="14e53-121">The samples may already be installed on your computer.</span></span> <span data-ttu-id="14e53-122">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="14e53-122">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="bbb0e-123">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="bbb0e-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="bbb0e-124">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="bbb0e-124">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="14e53-123">如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。</span><span class="sxs-lookup"><span data-stu-id="14e53-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="14e53-124">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="14e53-124">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   
-## <a name="see-also"></a><span data-ttu-id="bbb0e-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="bbb0e-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="14e53-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="14e53-125">See also</span></span>
 
-- [<span data-ttu-id="bbb0e-126">WCF Web HTTP 编程模型</span><span class="sxs-lookup"><span data-stu-id="bbb0e-126">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [<span data-ttu-id="bbb0e-127">WCF 联合</span><span class="sxs-lookup"><span data-stu-id="bbb0e-127">WCF Syndication</span></span>](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+- [<span data-ttu-id="14e53-126">WCF Web HTTP 编程模型</span><span class="sxs-lookup"><span data-stu-id="14e53-126">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [<span data-ttu-id="14e53-127">WCF 联合</span><span class="sxs-lookup"><span data-stu-id="14e53-127">WCF Syndication</span></span>](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
