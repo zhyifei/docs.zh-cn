@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: ddc9e3ec1a07e52e366ff5c17d4dd2ce3a3192a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b8fa13bf5db7f3c3df97febe4bb6f9ee4c184a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231287"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>更新数据服务（WCF 数据服务）
 当你使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送，库将转换到客户端数据服务类的实例在源中的条目。 通过使用 <xref:System.Data.Services.Client.DataServiceContext> 所属的 <xref:System.Data.Services.Client.DataServiceQuery%601> 跟踪这些数据服务类。 客户端通过使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法跟踪您报告的实体更改。 客户端利用这些方法可跟踪已添加和删除的实体以及您对属性值或对实体实例之间关系的更改。 调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时，将以基于 REST 的操作的形式将这些跟踪的更改发送回数据服务。  
@@ -73,7 +73,7 @@ ms.locfileid: "54569162"
 |------------|-----------------|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|在两个相关实体对象之间创建新的链接。 调用此方法相当于同时调用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 和  <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> 以创建新对象并定义与现有对象的关系。|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|在两个相关实体对象之间创建新的链接。|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|更新两个相关实体对象之间的现有链接。 <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> 也可用于删除具有零或一对一基数 (`0..1:1`) 和一对一 (`1:1`) 基数的链接。 为此，可将相关对象设置为 `null`。|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|更新两个相关实体对象之间的现有链接。 <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> 此外可用于删除链接的零-或---一对一基数 (`0..1:1`) 和一对一 (`1:1`)。 为此，可将相关对象设置为 `null`。|  
 |<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|将上下文跟踪的链接标记为在调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时删除。 如果通过先删除指向现有对象的链接、再添加指向新的相关对象的链接的方式删除相关对象或更改关系，请使用此方法。|  
 |<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|通知两个实体对象之间的现有链接的上下文。 该上下文假设此关系已在数据服务中存在，且不尝试在您调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时创建链接。 如果要将对象附加到上下文且还需要附加两者之间的链接，请使用此方法。 如果要定义新关系，则应使用 <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>。|  
 |<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|停止跟踪上下文中的指定链接。 该方法用于删除一对多 (`*:*`) 关系。 对于基数为一的关系链接，则必须使用  <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>。|  
@@ -94,7 +94,8 @@ ms.locfileid: "54569162"
  在 <xref:System.Data.Services.Client.DataServiceContext> 实例中对更改进行跟踪，但不会将更改立即发送到服务器。 在完成对指定活动的所需更改后，调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 以将所有更改提交给数据服务。 有关详细信息，请参阅[管理数据服务上下文](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。 还可以使用 <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> 方法异步保存更改。 有关详细信息，请参阅[异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+- [WCF 数据服务客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
 - [批处理操作](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)

@@ -2,12 +2,12 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 8b14dc1908ef3a06549154f70efb2d4e5cb10076
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 22ef3c3c6d23d6c68c27d6b5d1ed35b7c9910d48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230793"
 ---
 # <a name="parameter"></a>\<parameter>
 指定当声明类型是泛型类型时的泛型参数。  
@@ -38,7 +38,7 @@ ms.locfileid: "55289417"
   
 ## <a name="index-attribute"></a>index 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |“0”|泛型类型中的第一个参数。 例如，一个 <xref:System.Collections.Generic.List%601> 仅有一个参数。 如果此参数用作声明类型，则将 index 特性设置为“0”。|  
 |"1"|泛型类型中的第二个参数。 例如，一个 <xref:System.Collections.Generic.Dictionary%602> 有两个参数。 如果通过第二个参数返回已知类型，则将 index 特性设置为“1”。|  
@@ -60,6 +60,7 @@ ms.locfileid: "55289417"
  此配置元素不能同时具有两个属性。 如果设置两个属性，则发生 <xref:System.Configuration.ConfigurationErrorsException>。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)

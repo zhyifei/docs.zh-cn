@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231118"
 ---
 # <a name="layout"></a>布局
 本主题介绍 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 布局系统。 了解布局计算发生的方式和时间对于在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中创建用户界面非常重要。  
@@ -33,7 +33,7 @@ ms.locfileid: "58464562"
   
 -   [子像素渲染和布局舍入](#LayoutSystem_LayoutRounding)  
   
--   [后续步骤](#LayoutSystem_whatsnext)  
+-   [下一步](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>元素边界框  
@@ -149,8 +149,9 @@ ms.locfileid: "58464562"
  了解元素的测量和排列方式是了解布局的第一步。 有关可用的详细信息<xref:System.Windows.Controls.Panel>元素，请参阅[面板概述](../controls/panels-overview.md)。 若要更好地了解可能影响布局的各种定位属性，请参阅[对齐、边距和填充概述](alignment-margins-and-padding-overview.md)。 有关自定义的示例<xref:System.Windows.Controls.Panel>元素，请参阅[自定义径向面板示例](https://go.microsoft.com/fwlink/?LinkID=159982)。 当准备好将其全部放在轻型应用程序，请参阅[演练：我第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
 - [面板概述](../controls/panels-overview.md)
-- [对齐、边距和填充概述](alignment-margins-and-padding-overview.md)
+- [Alignment、Margin 和 Padding 概述](alignment-margins-and-padding-overview.md)
 - [布局和示例](optimizing-performance-layout-and-design.md)
