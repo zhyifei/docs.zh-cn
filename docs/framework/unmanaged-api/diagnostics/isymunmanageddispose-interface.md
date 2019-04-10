@@ -16,24 +16,25 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90f5924bc03a9896442fd61a4c618d18ed999faf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e81cea13fb8d25701ccbe163f112904baf47a9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638868"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143157"
 ---
-# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="89c21-102">ISymUnmanagedDispose 接口</span><span class="sxs-lookup"><span data-stu-id="89c21-102">ISymUnmanagedDispose Interface</span></span>
-<span data-ttu-id="89c21-103">释放非托管资源。</span><span class="sxs-lookup"><span data-stu-id="89c21-103">Disposes of unmanaged resources.</span></span>  
+# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="29904-102">ISymUnmanagedDispose 接口</span><span class="sxs-lookup"><span data-stu-id="29904-102">ISymUnmanagedDispose Interface</span></span>
+<span data-ttu-id="29904-103">释放非托管资源。</span><span class="sxs-lookup"><span data-stu-id="29904-103">Disposes of unmanaged resources.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="89c21-104">方法</span><span class="sxs-lookup"><span data-stu-id="89c21-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="29904-104">方法</span><span class="sxs-lookup"><span data-stu-id="29904-104">Methods</span></span>  
   
-|<span data-ttu-id="89c21-105">方法</span><span class="sxs-lookup"><span data-stu-id="89c21-105">Method</span></span>|<span data-ttu-id="89c21-106">描述</span><span class="sxs-lookup"><span data-stu-id="89c21-106">Description</span></span>|  
+|<span data-ttu-id="29904-105">方法</span><span class="sxs-lookup"><span data-stu-id="29904-105">Method</span></span>|<span data-ttu-id="29904-106">描述</span><span class="sxs-lookup"><span data-stu-id="29904-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="89c21-107">Destroy 方法</span><span class="sxs-lookup"><span data-stu-id="89c21-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="89c21-108">导致要释放内部的所有引用和任何后续方法调用上返回失败的基础对象。</span><span class="sxs-lookup"><span data-stu-id="89c21-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
+|[<span data-ttu-id="29904-107">Destroy 方法</span><span class="sxs-lookup"><span data-stu-id="29904-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="29904-108">导致要释放内部的所有引用和任何后续方法调用上返回失败的基础对象。</span><span class="sxs-lookup"><span data-stu-id="29904-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="89c21-109">要求</span><span class="sxs-lookup"><span data-stu-id="89c21-109">Requirements</span></span>  
- <span data-ttu-id="89c21-110">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="89c21-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="29904-109">要求</span><span class="sxs-lookup"><span data-stu-id="29904-109">Requirements</span></span>  
+ <span data-ttu-id="29904-110">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="29904-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89c21-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="89c21-111">See also</span></span>
-- [<span data-ttu-id="89c21-112">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="89c21-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="29904-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="29904-111">See also</span></span>
+
+- [<span data-ttu-id="29904-112">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="29904-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

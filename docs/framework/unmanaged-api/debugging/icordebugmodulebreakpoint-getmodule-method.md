@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31d4c0488adb38360d096c5827d078b0fbecc635
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 51403c52d7f8a216e83b817f157979f4af1c433a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162863"
 ---
-# <a name="icordebugmodulebreakpointgetmodule-method"></a><span data-ttu-id="571c0-102">ICorDebugModuleBreakpoint::GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="571c0-102">ICorDebugModuleBreakpoint::GetModule Method</span></span>
-<span data-ttu-id="571c0-103">"Icor 调试模块"的引用在其中设置此断点的模块中获取的接口指针。</span><span class="sxs-lookup"><span data-stu-id="571c0-103">Gets an interface pointer to an "ICorDebugModule" that references the module in which this breakpoint is set.</span></span>  
+# <a name="icordebugmodulebreakpointgetmodule-method"></a><span data-ttu-id="e682c-102">ICorDebugModuleBreakpoint::GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="e682c-102">ICorDebugModuleBreakpoint::GetModule Method</span></span>
+<span data-ttu-id="e682c-103">"Icor 调试模块"的引用在其中设置此断点的模块中获取的接口指针。</span><span class="sxs-lookup"><span data-stu-id="e682c-103">Gets an interface pointer to an "ICorDebugModule" that references the module in which this breakpoint is set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="571c0-104">语法</span><span class="sxs-lookup"><span data-stu-id="571c0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e682c-104">语法</span><span class="sxs-lookup"><span data-stu-id="e682c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModule (  
@@ -35,18 +35,17 @@ HRESULT GetModule (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="571c0-105">参数</span><span class="sxs-lookup"><span data-stu-id="571c0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e682c-105">参数</span><span class="sxs-lookup"><span data-stu-id="e682c-105">Parameters</span></span>  
  `ppModule`  
- <span data-ttu-id="571c0-106">[out]指向的地址的指针`ICorDebugModule`引用在其中设置断点的模块的接口。</span><span class="sxs-lookup"><span data-stu-id="571c0-106">[out] A pointer to the address of an `ICorDebugModule` interface that references the module in which the breakpoint is set.</span></span>  
+ <span data-ttu-id="e682c-106">[out]指向的地址的指针`ICorDebugModule`引用在其中设置断点的模块的接口。</span><span class="sxs-lookup"><span data-stu-id="e682c-106">[out] A pointer to the address of an `ICorDebugModule` interface that references the module in which the breakpoint is set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="571c0-107">要求</span><span class="sxs-lookup"><span data-stu-id="571c0-107">Requirements</span></span>  
- <span data-ttu-id="571c0-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="571c0-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e682c-107">要求</span><span class="sxs-lookup"><span data-stu-id="e682c-107">Requirements</span></span>  
+ <span data-ttu-id="e682c-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e682c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="571c0-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="571c0-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e682c-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e682c-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="571c0-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="571c0-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e682c-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e682c-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="571c0-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="571c0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="e682c-111">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="e682c-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="571c0-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="571c0-112">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="e682c-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="e682c-112">See also</span></span>

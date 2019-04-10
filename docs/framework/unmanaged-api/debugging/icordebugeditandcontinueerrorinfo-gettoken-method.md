@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79c159f218a3d842e532bffdac79066ffe5df820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab2a1c0c3f280f115a408adc81a46196eb5a804c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152576"
 ---
-# <a name="icordebugeditandcontinueerrorinfogettoken-method"></a><span data-ttu-id="f3e41-102">ICorDebugEditAndContinueErrorInfo::GetToken 方法</span><span class="sxs-lookup"><span data-stu-id="f3e41-102">ICorDebugEditAndContinueErrorInfo::GetToken Method</span></span>
-<span data-ttu-id="f3e41-103">`GetToken` 已过时。</span><span class="sxs-lookup"><span data-stu-id="f3e41-103">`GetToken` is obsolete.</span></span> <span data-ttu-id="f3e41-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="f3e41-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogettoken-method"></a><span data-ttu-id="0866f-102">ICorDebugEditAndContinueErrorInfo::GetToken 方法</span><span class="sxs-lookup"><span data-stu-id="0866f-102">ICorDebugEditAndContinueErrorInfo::GetToken Method</span></span>
+`GetToken` <span data-ttu-id="0866f-103">已过时。</span><span class="sxs-lookup"><span data-stu-id="0866f-103">is obsolete.</span></span> <span data-ttu-id="0866f-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="0866f-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3e41-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="f3e41-105">See also</span></span>
-- [<span data-ttu-id="f3e41-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="f3e41-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="0866f-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="0866f-105">See also</span></span>
+
+- [<span data-ttu-id="0866f-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="0866f-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

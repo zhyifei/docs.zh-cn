@@ -16,35 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b71c177c7c0cb029fb7cfa734f54c87abf20b348
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7864bb81c3b457bf8ec07cd194d24b29a42bd441
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156060"
 ---
-# <a name="iclriocompletionmanager-interface"></a><span data-ttu-id="0c1f4-102">ICLRIoCompletionManager 接口</span><span class="sxs-lookup"><span data-stu-id="0c1f4-102">ICLRIoCompletionManager Interface</span></span>
-<span data-ttu-id="0c1f4-103">实现回调方法，允许宿主以通知公共语言运行时 (CLR) 的状态的指定 I/O 请求。</span><span class="sxs-lookup"><span data-stu-id="0c1f4-103">Implements a callback method that allows the host to notify the common language runtime (CLR) of the status of specified I/O requests.</span></span>  
+# <a name="iclriocompletionmanager-interface"></a><span data-ttu-id="ed370-102">ICLRIoCompletionManager 接口</span><span class="sxs-lookup"><span data-stu-id="ed370-102">ICLRIoCompletionManager Interface</span></span>
+<span data-ttu-id="ed370-103">实现回调方法，允许宿主以通知公共语言运行时 (CLR) 的状态的指定 I/O 请求。</span><span class="sxs-lookup"><span data-stu-id="ed370-103">Implements a callback method that allows the host to notify the common language runtime (CLR) of the status of specified I/O requests.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0c1f4-104">方法</span><span class="sxs-lookup"><span data-stu-id="0c1f4-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ed370-104">方法</span><span class="sxs-lookup"><span data-stu-id="ed370-104">Methods</span></span>  
   
-|<span data-ttu-id="0c1f4-105">方法</span><span class="sxs-lookup"><span data-stu-id="0c1f4-105">Method</span></span>|<span data-ttu-id="0c1f4-106">描述</span><span class="sxs-lookup"><span data-stu-id="0c1f4-106">Description</span></span>|  
+|<span data-ttu-id="ed370-105">方法</span><span class="sxs-lookup"><span data-stu-id="ed370-105">Method</span></span>|<span data-ttu-id="ed370-106">描述</span><span class="sxs-lookup"><span data-stu-id="ed370-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0c1f4-107">OnComplete 方法</span><span class="sxs-lookup"><span data-stu-id="0c1f4-107">OnComplete Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)|<span data-ttu-id="0c1f4-108">通知的状态可能由调用的 I/O 请求的 CLR [ihostiocompletionmanager:: Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="0c1f4-108">Notifies the CLR of the status of an I/O request that was made by using a call to the [IHostIoCompletionManager::Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) method.</span></span>|  
+|[<span data-ttu-id="ed370-107">OnComplete 方法</span><span class="sxs-lookup"><span data-stu-id="ed370-107">OnComplete Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)|<span data-ttu-id="ed370-108">通知的状态可能由调用的 I/O 请求的 CLR [ihostiocompletionmanager:: Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="ed370-108">Notifies the CLR of the status of an I/O request that was made by using a call to the [IHostIoCompletionManager::Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) method.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0c1f4-109">备注</span><span class="sxs-lookup"><span data-stu-id="0c1f4-109">Remarks</span></span>  
- <span data-ttu-id="0c1f4-110">主机通过使用来实现的 I/O 完成抽象[IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="0c1f4-110">The host implements the I/O completion abstraction by using the [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md) interface.</span></span> <span data-ttu-id="0c1f4-111">CLR 发出 I/O 请求通过此接口，并在主机通知此类请求的结果的运行时通过使用`ICLRIoCompletionManager`接口。</span><span class="sxs-lookup"><span data-stu-id="0c1f4-111">The CLR makes I/O requests through this interface, and the host notifies the runtime of the outcome of such requests by using the `ICLRIoCompletionManager` interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ed370-109">备注</span><span class="sxs-lookup"><span data-stu-id="ed370-109">Remarks</span></span>  
+ <span data-ttu-id="ed370-110">主机通过使用来实现的 I/O 完成抽象[IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="ed370-110">The host implements the I/O completion abstraction by using the [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md) interface.</span></span> <span data-ttu-id="ed370-111">CLR 发出 I/O 请求通过此接口，并在主机通知此类请求的结果的运行时通过使用`ICLRIoCompletionManager`接口。</span><span class="sxs-lookup"><span data-stu-id="ed370-111">The CLR makes I/O requests through this interface, and the host notifies the runtime of the outcome of such requests by using the `ICLRIoCompletionManager` interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0c1f4-112">要求</span><span class="sxs-lookup"><span data-stu-id="0c1f4-112">Requirements</span></span>  
- <span data-ttu-id="0c1f4-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0c1f4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed370-112">要求</span><span class="sxs-lookup"><span data-stu-id="ed370-112">Requirements</span></span>  
+ <span data-ttu-id="ed370-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ed370-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0c1f4-114">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0c1f4-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ed370-114">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ed370-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0c1f4-115">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="0c1f4-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ed370-115">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="ed370-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0c1f4-116">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c1f4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="ed370-116">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="ed370-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="0c1f4-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="0c1f4-117">See also</span></span>
-- [<span data-ttu-id="0c1f4-118">IHostIoCompletionManager 接口</span><span class="sxs-lookup"><span data-stu-id="0c1f4-118">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
-- [<span data-ttu-id="0c1f4-119">IHostThreadPoolManager 接口</span><span class="sxs-lookup"><span data-stu-id="0c1f4-119">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
-- [<span data-ttu-id="0c1f4-120">承载接口</span><span class="sxs-lookup"><span data-stu-id="0c1f4-120">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="ed370-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="ed370-117">See also</span></span>
+
+- [<span data-ttu-id="ed370-118">IHostIoCompletionManager 接口</span><span class="sxs-lookup"><span data-stu-id="ed370-118">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+- [<span data-ttu-id="ed370-119">IHostThreadPoolManager 接口</span><span class="sxs-lookup"><span data-stu-id="ed370-119">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [<span data-ttu-id="ed370-120">承载接口</span><span class="sxs-lookup"><span data-stu-id="ed370-120">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

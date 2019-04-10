@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a6d0036a1f4c499505743fd15a115f870e9cb50
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2c824874d340aa3d381b3340408021ef1ed7eec6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166694"
 ---
-# <a name="iassemblynameclone-method"></a><span data-ttu-id="3c895-102">IAssemblyName::Clone 方法</span><span class="sxs-lookup"><span data-stu-id="3c895-102">IAssemblyName::Clone Method</span></span>
-<span data-ttu-id="3c895-103">创建的浅表副本[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="3c895-103">Creates a shallow copy of this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynameclone-method"></a><span data-ttu-id="7ea48-102">IAssemblyName::Clone 方法</span><span class="sxs-lookup"><span data-stu-id="7ea48-102">IAssemblyName::Clone Method</span></span>
+<span data-ttu-id="7ea48-103">创建的浅表副本[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="7ea48-103">Creates a shallow copy of this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c895-104">语法</span><span class="sxs-lookup"><span data-stu-id="3c895-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7ea48-104">语法</span><span class="sxs-lookup"><span data-stu-id="7ea48-104">Syntax</span></span>  
   
 ```  
 HRESULT Clone (  
@@ -35,16 +35,17 @@ HRESULT Clone (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3c895-105">参数</span><span class="sxs-lookup"><span data-stu-id="3c895-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7ea48-105">参数</span><span class="sxs-lookup"><span data-stu-id="7ea48-105">Parameters</span></span>  
  `pName`  
- <span data-ttu-id="3c895-106">[out]此返回的副本`IAssemblyName`对象。</span><span class="sxs-lookup"><span data-stu-id="3c895-106">[out] The returned copy of this `IAssemblyName` object.</span></span>  
+ <span data-ttu-id="7ea48-106">[out]此返回的副本`IAssemblyName`对象。</span><span class="sxs-lookup"><span data-stu-id="7ea48-106">[out] The returned copy of this `IAssemblyName` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3c895-107">要求</span><span class="sxs-lookup"><span data-stu-id="3c895-107">Requirements</span></span>  
- <span data-ttu-id="3c895-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3c895-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7ea48-107">要求</span><span class="sxs-lookup"><span data-stu-id="7ea48-107">Requirements</span></span>  
+ <span data-ttu-id="7ea48-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7ea48-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3c895-109">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="3c895-109">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="7ea48-109">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="7ea48-109">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="3c895-110">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c895-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="7ea48-110">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="7ea48-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="3c895-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="3c895-111">See also</span></span>
-- [<span data-ttu-id="3c895-112">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="3c895-112">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7ea48-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="7ea48-111">See also</span></span>
+
+- [<span data-ttu-id="7ea48-112">IAssemblyName 接口</span><span class="sxs-lookup"><span data-stu-id="7ea48-112">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

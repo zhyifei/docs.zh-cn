@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e04bef30d4a9edf9898b27e15a79b2b70e3a7f31
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dcb869bed71be05e0450580b50dfa9f2a0fca525
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169788"
 ---
-# <a name="icordebuggetprocess-method"></a><span data-ttu-id="3abe4-102">ICorDebug::GetProcess 方法</span><span class="sxs-lookup"><span data-stu-id="3abe4-102">ICorDebug::GetProcess Method</span></span>
-<span data-ttu-id="3abe4-103">获取一个指向到"ICorDebugProcess"实例的指定进程。</span><span class="sxs-lookup"><span data-stu-id="3abe4-103">Gets a pointer to the "ICorDebugProcess" instance for the specified process.</span></span>  
+# <a name="icordebuggetprocess-method"></a><span data-ttu-id="5b70c-102">ICorDebug::GetProcess 方法</span><span class="sxs-lookup"><span data-stu-id="5b70c-102">ICorDebug::GetProcess Method</span></span>
+<span data-ttu-id="5b70c-103">获取一个指向到"ICorDebugProcess"实例的指定进程。</span><span class="sxs-lookup"><span data-stu-id="5b70c-103">Gets a pointer to the "ICorDebugProcess" instance for the specified process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3abe4-104">语法</span><span class="sxs-lookup"><span data-stu-id="3abe4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5b70c-104">语法</span><span class="sxs-lookup"><span data-stu-id="5b70c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetProcess (  
@@ -36,21 +36,22 @@ HRESULT GetProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3abe4-105">参数</span><span class="sxs-lookup"><span data-stu-id="3abe4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5b70c-105">参数</span><span class="sxs-lookup"><span data-stu-id="5b70c-105">Parameters</span></span>  
  `dwProcessId`  
- <span data-ttu-id="3abe4-106">[in]进程的 ID。</span><span class="sxs-lookup"><span data-stu-id="3abe4-106">[in] The ID of the process.</span></span>  
+ <span data-ttu-id="5b70c-106">[in]进程的 ID。</span><span class="sxs-lookup"><span data-stu-id="5b70c-106">[in] The ID of the process.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="3abe4-107">[out]指向的地址的指针`ICorDebugProcess`指定进程的实例。</span><span class="sxs-lookup"><span data-stu-id="3abe4-107">[out] A pointer to the address of a `ICorDebugProcess` instance for the specified process.</span></span>  
+ <span data-ttu-id="5b70c-107">[out]指向的地址的指针`ICorDebugProcess`指定进程的实例。</span><span class="sxs-lookup"><span data-stu-id="5b70c-107">[out] A pointer to the address of a `ICorDebugProcess` instance for the specified process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3abe4-108">要求</span><span class="sxs-lookup"><span data-stu-id="3abe4-108">Requirements</span></span>  
- <span data-ttu-id="3abe4-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3abe4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5b70c-108">要求</span><span class="sxs-lookup"><span data-stu-id="5b70c-108">Requirements</span></span>  
+ <span data-ttu-id="5b70c-109">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5b70c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3abe4-110">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3abe4-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5b70c-110">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5b70c-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3abe4-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3abe4-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5b70c-111">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5b70c-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3abe4-112">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3abe4-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="5b70c-112">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="5b70c-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="3abe4-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="3abe4-113">See also</span></span>
-- [<span data-ttu-id="3abe4-114">ICorDebug 接口</span><span class="sxs-lookup"><span data-stu-id="3abe4-114">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5b70c-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="5b70c-113">See also</span></span>
+
+- [<span data-ttu-id="5b70c-114">ICorDebug 接口</span><span class="sxs-lookup"><span data-stu-id="5b70c-114">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

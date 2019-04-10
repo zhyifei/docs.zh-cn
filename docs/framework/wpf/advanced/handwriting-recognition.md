@@ -8,30 +8,31 @@ helpviewer_keywords:
 - handwriting recognition [WPF]
 - recognition of handwriting [WPF]
 ms.assetid: f4e8576d-e731-4bac-9818-22e2ae636636
-ms.openlocfilehash: 08cd9e0a167d1bef9bbe6437b22985082c80e5f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 417af272514ac9ce68c8faa72339f2befc2dd7c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170191"
 ---
-# <a name="handwriting-recognition"></a><span data-ttu-id="79fba-102">手写识别</span><span class="sxs-lookup"><span data-stu-id="79fba-102">Handwriting Recognition</span></span>
-<span data-ttu-id="79fba-103">本节介绍了识别基础知识，因为这与 WPF 平台中数字墨迹有关。</span><span class="sxs-lookup"><span data-stu-id="79fba-103">This section discusses the fundamentals of recognition as it pertains to digital ink in the WPF platform.</span></span>  
+# <a name="handwriting-recognition"></a><span data-ttu-id="650ad-102">手写识别</span><span class="sxs-lookup"><span data-stu-id="650ad-102">Handwriting Recognition</span></span>
+<span data-ttu-id="650ad-103">本节介绍了识别基础知识，因为这与 WPF 平台中数字墨迹有关。</span><span class="sxs-lookup"><span data-stu-id="650ad-103">This section discusses the fundamentals of recognition as it pertains to digital ink in the WPF platform.</span></span>  
   
-## <a name="recognition-solutions"></a><span data-ttu-id="79fba-104">识别解决方案</span><span class="sxs-lookup"><span data-stu-id="79fba-104">Recognition Solutions</span></span>  
- <span data-ttu-id="79fba-105">以下示例演示如何使用 [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90)) 类识别墨迹。</span><span class="sxs-lookup"><span data-stu-id="79fba-105">The following example shows how to recognize ink using the [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90)) class.</span></span>  
+## <a name="recognition-solutions"></a><span data-ttu-id="650ad-104">识别解决方案</span><span class="sxs-lookup"><span data-stu-id="650ad-104">Recognition Solutions</span></span>  
+ <span data-ttu-id="650ad-105">以下示例演示如何使用 [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90)) 类识别墨迹。</span><span class="sxs-lookup"><span data-stu-id="650ad-105">The following example shows how to recognize ink using the [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90)) class.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="79fba-106">此示例要求在系统上安装手写识别器。</span><span class="sxs-lookup"><span data-stu-id="79fba-106">This sample requires that handwriting recognizers be installed on the system.</span></span>  
+>  <span data-ttu-id="650ad-106">此示例要求在系统上安装手写识别器。</span><span class="sxs-lookup"><span data-stu-id="650ad-106">This sample requires that handwriting recognizers be installed on the system.</span></span>  
   
- <span data-ttu-id="79fba-107">在 Visual Studio 中创建一个名为 **InkRecognition** 的新 WPF 应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="79fba-107">Create a new WPF application project in Visual Studio called **InkRecognition**.</span></span> <span data-ttu-id="79fba-108">用下列 XAML 代码替换 Window1.xaml 文件的内容。</span><span class="sxs-lookup"><span data-stu-id="79fba-108">Replace the contents of the Window1.xaml file with the following XAML code.</span></span> <span data-ttu-id="79fba-109">此代码呈现应用程序的用户界面。</span><span class="sxs-lookup"><span data-stu-id="79fba-109">This code renders the application's user interface.</span></span>  
+ <span data-ttu-id="650ad-107">在 Visual Studio 中创建一个名为 **InkRecognition** 的新 WPF 应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="650ad-107">Create a new WPF application project in Visual Studio called **InkRecognition**.</span></span> <span data-ttu-id="650ad-108">用下列 XAML 代码替换 Window1.xaml 文件的内容。</span><span class="sxs-lookup"><span data-stu-id="650ad-108">Replace the contents of the Window1.xaml file with the following XAML code.</span></span> <span data-ttu-id="650ad-109">此代码呈现应用程序的用户界面。</span><span class="sxs-lookup"><span data-stu-id="650ad-109">This code renders the application's user interface.</span></span>  
   
  [!code-xaml[InkRecognition#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkRecognition/CSharp/Window1.xaml#1)]  
   
- <span data-ttu-id="79fba-110">添加对 Microsoft 墨迹程序集和 Microsoft.Ink.dll 的引用，可在 \Program Files\Common Files\Microsoft Shared\Ink 中找到这些内容。</span><span class="sxs-lookup"><span data-stu-id="79fba-110">Add a reference to the Microsoft Ink assembly, Microsoft.Ink.dll, which can be found in \Program Files\Common Files\Microsoft Shared\Ink.</span></span> <span data-ttu-id="79fba-111">用下列代码替换代码隐藏文件的内容。</span><span class="sxs-lookup"><span data-stu-id="79fba-111">Replace the contents of the code behind file with the following code.</span></span>  
+ <span data-ttu-id="650ad-110">添加对 Microsoft 墨迹程序集和 Microsoft.Ink.dll 的引用，可在 \Program Files\Common Files\Microsoft Shared\Ink 中找到这些内容。</span><span class="sxs-lookup"><span data-stu-id="650ad-110">Add a reference to the Microsoft Ink assembly, Microsoft.Ink.dll, which can be found in \Program Files\Common Files\Microsoft Shared\Ink.</span></span> <span data-ttu-id="650ad-111">用下列代码替换代码隐藏文件的内容。</span><span class="sxs-lookup"><span data-stu-id="650ad-111">Replace the contents of the code behind file with the following code.</span></span>  
   
  [!code-csharp[InkRecognition#2](~/samples/snippets/csharp/VS_Snippets_Wpf/InkRecognition/CSharp/Window1.xaml.cs#2)]
  [!code-vb[InkRecognition#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkRecognition/VisualBasic/Window1.xaml.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="79fba-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="79fba-112">See also</span></span>
-- <span data-ttu-id="79fba-113">[Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="79fba-113">[Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))</span></span>
+## <a name="see-also"></a><span data-ttu-id="650ad-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="650ad-112">See also</span></span>
+
+- [<span data-ttu-id="650ad-113">Microsoft.Ink.InkCollector</span><span class="sxs-lookup"><span data-stu-id="650ad-113">Microsoft.Ink.InkCollector</span></span>](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))

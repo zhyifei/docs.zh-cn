@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 288c00ff95bbbe970ab14659b5c720edfcb84320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4a61f188bc6419b52f168c8bbbf43ad91fa19e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159596"
 ---
-# <a name="icorthreadpoolcorchangetimer-method"></a><span data-ttu-id="5a47d-102">ICorThreadpool::CorChangeTimer 方法</span><span class="sxs-lookup"><span data-stu-id="5a47d-102">ICorThreadpool::CorChangeTimer Method</span></span>
-<span data-ttu-id="5a47d-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="5a47d-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorthreadpoolcorchangetimer-method"></a><span data-ttu-id="2cc0c-102">ICorThreadpool::CorChangeTimer 方法</span><span class="sxs-lookup"><span data-stu-id="2cc0c-102">ICorThreadpool::CorChangeTimer Method</span></span>
+<span data-ttu-id="2cc0c-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="2cc0c-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5a47d-104">语法</span><span class="sxs-lookup"><span data-stu-id="5a47d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2cc0c-104">语法</span><span class="sxs-lookup"><span data-stu-id="2cc0c-104">Syntax</span></span>  
   
 ```  
 HRESULT CorChangeTimer (  
@@ -38,14 +38,15 @@ HRESULT CorChangeTimer (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="5a47d-105">要求</span><span class="sxs-lookup"><span data-stu-id="5a47d-105">Requirements</span></span>  
- <span data-ttu-id="5a47d-106">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5a47d-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2cc0c-105">要求</span><span class="sxs-lookup"><span data-stu-id="2cc0c-105">Requirements</span></span>  
+ <span data-ttu-id="2cc0c-106">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2cc0c-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5a47d-107">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5a47d-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2cc0c-107">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2cc0c-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5a47d-108">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="5a47d-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2cc0c-108">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="2cc0c-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5a47d-109">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a47d-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="2cc0c-109">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="2cc0c-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="5a47d-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="5a47d-110">See also</span></span>
-- [<span data-ttu-id="5a47d-111">ICorThreadpool 接口</span><span class="sxs-lookup"><span data-stu-id="5a47d-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2cc0c-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="2cc0c-110">See also</span></span>
+
+- [<span data-ttu-id="2cc0c-111">ICorThreadpool 接口</span><span class="sxs-lookup"><span data-stu-id="2cc0c-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)

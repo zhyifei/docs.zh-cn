@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3b263efa95936190ed771e811a84886b11be75b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: 571a676496683ba3251f13c41600bb017e1ced5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156099"
 ---
-# <a name="lockclrversion-function"></a><span data-ttu-id="0bfdd-102">LockClrVersion 函数</span><span class="sxs-lookup"><span data-stu-id="0bfdd-102">LockClrVersion Function</span></span>
-<span data-ttu-id="0bfdd-103">允许宿主确定在进行显式初始化 CLR 之前将在进程中使用的公共语言运行时 (CLR) 的版本。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-103">Allows the host to determine which version of the common language runtime (CLR) will be used within the process before explicitly initializing the CLR.</span></span>  
+# <a name="lockclrversion-function"></a><span data-ttu-id="86e40-102">LockClrVersion 函数</span><span class="sxs-lookup"><span data-stu-id="86e40-102">LockClrVersion Function</span></span>
+<span data-ttu-id="86e40-103">允许宿主确定在进行显式初始化 CLR 之前将在进程中使用的公共语言运行时 (CLR) 的版本。</span><span class="sxs-lookup"><span data-stu-id="86e40-103">Allows the host to determine which version of the common language runtime (CLR) will be used within the process before explicitly initializing the CLR.</span></span>  
   
- <span data-ttu-id="0bfdd-104">此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="86e40-104">此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="86e40-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0bfdd-105">语法</span><span class="sxs-lookup"><span data-stu-id="0bfdd-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="86e40-105">语法</span><span class="sxs-lookup"><span data-stu-id="86e40-105">Syntax</span></span>  
   
 ```  
 HRESULT LockClrVersion (  
@@ -39,59 +39,60 @@ HRESULT LockClrVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0bfdd-106">参数</span><span class="sxs-lookup"><span data-stu-id="0bfdd-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="86e40-106">参数</span><span class="sxs-lookup"><span data-stu-id="86e40-106">Parameters</span></span>  
  `hostCallback`  
- <span data-ttu-id="0bfdd-107">[in]要由 CLR 初始化时调用的函数。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-107">[in] The function to be called by the CLR upon initialization.</span></span>  
+ <span data-ttu-id="86e40-107">[in]要由 CLR 初始化时调用的函数。</span><span class="sxs-lookup"><span data-stu-id="86e40-107">[in] The function to be called by the CLR upon initialization.</span></span>  
   
  `pBeginHostSetup`  
- <span data-ttu-id="0bfdd-108">[in]正在启动的初始化由主机以通知 CLR 调用的函数。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-108">[in] The function to be called by the host to inform the CLR that initialization is starting.</span></span>  
+ <span data-ttu-id="86e40-108">[in]正在启动的初始化由主机以通知 CLR 调用的函数。</span><span class="sxs-lookup"><span data-stu-id="86e40-108">[in] The function to be called by the host to inform the CLR that initialization is starting.</span></span>  
   
  `pEndHostSetup`  
- <span data-ttu-id="0bfdd-109">[in]函数将调用的主机，告知 CLR 初始化已完成。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-109">[in] The function to be called by the host to inform the CLR that initialization is complete.</span></span>  
+ <span data-ttu-id="86e40-109">[in]函数将调用的主机，告知 CLR 初始化已完成。</span><span class="sxs-lookup"><span data-stu-id="86e40-109">[in] The function to be called by the host to inform the CLR that initialization is complete.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0bfdd-110">返回值</span><span class="sxs-lookup"><span data-stu-id="0bfdd-110">Return Value</span></span>  
- <span data-ttu-id="0bfdd-111">此方法返回标准 COM 错误代码，定义在 WinError.h，除了以下值。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-111">This method returns standard COM error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="86e40-110">返回值</span><span class="sxs-lookup"><span data-stu-id="86e40-110">Return Value</span></span>  
+ <span data-ttu-id="86e40-111">此方法返回标准 COM 错误代码，定义在 WinError.h，除了以下值。</span><span class="sxs-lookup"><span data-stu-id="86e40-111">This method returns standard COM error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="0bfdd-112">返回代码</span><span class="sxs-lookup"><span data-stu-id="0bfdd-112">Return code</span></span>|<span data-ttu-id="0bfdd-113">描述</span><span class="sxs-lookup"><span data-stu-id="0bfdd-113">Description</span></span>|  
+|<span data-ttu-id="86e40-112">返回代码</span><span class="sxs-lookup"><span data-stu-id="86e40-112">Return code</span></span>|<span data-ttu-id="86e40-113">描述</span><span class="sxs-lookup"><span data-stu-id="86e40-113">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="0bfdd-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="0bfdd-114">S_OK</span></span>|<span data-ttu-id="0bfdd-115">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-115">The method completed successfully.</span></span>|  
-|<span data-ttu-id="0bfdd-116">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="0bfdd-116">E_INVALIDARG</span></span>|<span data-ttu-id="0bfdd-117">一个或多个参数为 null。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-117">One or more of the arguments is null.</span></span>|  
+|<span data-ttu-id="86e40-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="86e40-114">S_OK</span></span>|<span data-ttu-id="86e40-115">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="86e40-115">The method completed successfully.</span></span>|  
+|<span data-ttu-id="86e40-116">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="86e40-116">E_INVALIDARG</span></span>|<span data-ttu-id="86e40-117">一个或多个参数为 null。</span><span class="sxs-lookup"><span data-stu-id="86e40-117">One or more of the arguments is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0bfdd-118">备注</span><span class="sxs-lookup"><span data-stu-id="0bfdd-118">Remarks</span></span>  
- <span data-ttu-id="0bfdd-119">在宿主调用`LockClrVersion`之前初始化 CLR。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-119">The host calls `LockClrVersion` before initializing the CLR.</span></span> <span data-ttu-id="0bfdd-120">`LockClrVersion` 采用三个参数，所有这些都是类型的回调[FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-120">`LockClrVersion` takes three parameters, all of which are callbacks of type [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md).</span></span> <span data-ttu-id="0bfdd-121">此类型定义，如下所示。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-121">This type is defined as follows.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="86e40-118">备注</span><span class="sxs-lookup"><span data-stu-id="86e40-118">Remarks</span></span>  
+ <span data-ttu-id="86e40-119">在宿主调用`LockClrVersion`之前初始化 CLR。</span><span class="sxs-lookup"><span data-stu-id="86e40-119">The host calls `LockClrVersion` before initializing the CLR.</span></span> `LockClrVersion` <span data-ttu-id="86e40-120">采用三个参数，所有这些都是类型的回调[FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)。</span><span class="sxs-lookup"><span data-stu-id="86e40-120">takes three parameters, all of which are callbacks of type [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md).</span></span> <span data-ttu-id="86e40-121">此类型定义，如下所示。</span><span class="sxs-lookup"><span data-stu-id="86e40-121">This type is defined as follows.</span></span>  
   
 ```  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   
- <span data-ttu-id="0bfdd-122">在运行时初始化时将执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="0bfdd-122">The following steps occur upon initialization of the runtime:</span></span>  
+ <span data-ttu-id="86e40-122">在运行时初始化时将执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="86e40-122">The following steps occur upon initialization of the runtime:</span></span>  
   
-1.  <span data-ttu-id="0bfdd-123">在宿主调用[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或某个其他运行时初始化函数。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-123">The host calls [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) or one of the other runtime initialization functions.</span></span> <span data-ttu-id="0bfdd-124">或者，主机无法初始化运行时使用激活 COM 对象。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-124">Alternatively, the host could initialize the runtime using COM object activation.</span></span>  
+1.  <span data-ttu-id="86e40-123">在宿主调用[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或某个其他运行时初始化函数。</span><span class="sxs-lookup"><span data-stu-id="86e40-123">The host calls [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) or one of the other runtime initialization functions.</span></span> <span data-ttu-id="86e40-124">或者，主机无法初始化运行时使用激活 COM 对象。</span><span class="sxs-lookup"><span data-stu-id="86e40-124">Alternatively, the host could initialize the runtime using COM object activation.</span></span>  
   
-2.  <span data-ttu-id="0bfdd-125">运行时调用由指定的函数`hostCallback`参数。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-125">The runtime calls the function specified by the `hostCallback` parameter.</span></span>  
+2.  <span data-ttu-id="86e40-125">运行时调用由指定的函数`hostCallback`参数。</span><span class="sxs-lookup"><span data-stu-id="86e40-125">The runtime calls the function specified by the `hostCallback` parameter.</span></span>  
   
-3.  <span data-ttu-id="0bfdd-126">由指定的函数`hostCallback`然后进行以下调用顺序：</span><span class="sxs-lookup"><span data-stu-id="0bfdd-126">The function specified by `hostCallback` then makes the following sequence of calls:</span></span>  
+3.  <span data-ttu-id="86e40-126">由指定的函数`hostCallback`然后进行以下调用顺序：</span><span class="sxs-lookup"><span data-stu-id="86e40-126">The function specified by `hostCallback` then makes the following sequence of calls:</span></span>  
   
-    -   <span data-ttu-id="0bfdd-127">由指定的函数`pBeginHostSetup`参数。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-127">The function specified by the `pBeginHostSetup` parameter.</span></span>  
+    -   <span data-ttu-id="86e40-127">由指定的函数`pBeginHostSetup`参数。</span><span class="sxs-lookup"><span data-stu-id="86e40-127">The function specified by the `pBeginHostSetup` parameter.</span></span>  
   
-    -   <span data-ttu-id="0bfdd-128">`CorBindToRuntimeEx` （或另一个运行时初始化函数）。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-128">`CorBindToRuntimeEx` (or another runtime initialization function).</span></span>  
+    -   `CorBindToRuntimeEx` <span data-ttu-id="86e40-128">（或另一个运行时初始化函数）。</span><span class="sxs-lookup"><span data-stu-id="86e40-128">(or another runtime initialization function).</span></span>  
   
-    -   <span data-ttu-id="0bfdd-129">[Iclrruntimehost:: Sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-129">[ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).</span></span>  
+    -   <span data-ttu-id="86e40-129">[Iclrruntimehost:: Sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)。</span><span class="sxs-lookup"><span data-stu-id="86e40-129">[ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).</span></span>  
   
-    -   <span data-ttu-id="0bfdd-130">[Iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-130">[ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).</span></span>  
+    -   <span data-ttu-id="86e40-130">[Iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)。</span><span class="sxs-lookup"><span data-stu-id="86e40-130">[ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).</span></span>  
   
-    -   <span data-ttu-id="0bfdd-131">由指定的函数`pEndHostSetup`参数。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-131">The function specified by the `pEndHostSetup` parameter.</span></span>  
+    -   <span data-ttu-id="86e40-131">由指定的函数`pEndHostSetup`参数。</span><span class="sxs-lookup"><span data-stu-id="86e40-131">The function specified by the `pEndHostSetup` parameter.</span></span>  
   
- <span data-ttu-id="0bfdd-132">从所有调用`pBeginHostSetup`到`pEndHostSetup`必须出现在单个线程或纤程，具有相同的逻辑堆栈上。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-132">All the calls from `pBeginHostSetup` to `pEndHostSetup` must occur on a single thread or fiber, with the same logical stack.</span></span> <span data-ttu-id="0bfdd-133">此线程可以不同于在其线程`hostCallback`调用。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-133">This thread can be different from the thread upon which `hostCallback` is called.</span></span>  
+ <span data-ttu-id="86e40-132">从所有调用`pBeginHostSetup`到`pEndHostSetup`必须出现在单个线程或纤程，具有相同的逻辑堆栈上。</span><span class="sxs-lookup"><span data-stu-id="86e40-132">All the calls from `pBeginHostSetup` to `pEndHostSetup` must occur on a single thread or fiber, with the same logical stack.</span></span> <span data-ttu-id="86e40-133">此线程可以不同于在其线程`hostCallback`调用。</span><span class="sxs-lookup"><span data-stu-id="86e40-133">This thread can be different from the thread upon which `hostCallback` is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0bfdd-134">要求</span><span class="sxs-lookup"><span data-stu-id="0bfdd-134">Requirements</span></span>  
- <span data-ttu-id="0bfdd-135">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0bfdd-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="86e40-134">要求</span><span class="sxs-lookup"><span data-stu-id="86e40-134">Requirements</span></span>  
+ <span data-ttu-id="86e40-135">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="86e40-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0bfdd-136">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0bfdd-136">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="86e40-136">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="86e40-136">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0bfdd-137">**库：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0bfdd-137">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="86e40-137">**库：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="86e40-137">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0bfdd-138">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0bfdd-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="86e40-138">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="86e40-138">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="0bfdd-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="0bfdd-139">See also</span></span>
-- [<span data-ttu-id="0bfdd-140">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="0bfdd-140">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="86e40-139">请参阅</span><span class="sxs-lookup"><span data-stu-id="86e40-139">See also</span></span>
+
+- [<span data-ttu-id="86e40-140">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="86e40-140">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

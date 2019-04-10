@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9b4e9149fa50a951f2a56c83412e42fe86b9563
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3571e2698b980b12b89a5b689efb868a34a3ef71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501196"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167656"
 ---
-# <a name="clrcreateinstance-function"></a><span data-ttu-id="a3bf4-102">CLRCreateInstance 函数</span><span class="sxs-lookup"><span data-stu-id="a3bf4-102">CLRCreateInstance Function</span></span>
-<span data-ttu-id="a3bf4-103">提供了三个接口之一：[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)， [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)，或[ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="a3bf4-103">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
+# <a name="clrcreateinstance-function"></a><span data-ttu-id="d0566-102">CLRCreateInstance 函数</span><span class="sxs-lookup"><span data-stu-id="d0566-102">CLRCreateInstance Function</span></span>
+<span data-ttu-id="d0566-103">提供了三个接口之一：[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)， [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)，或[ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="d0566-103">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3bf4-104">语法</span><span class="sxs-lookup"><span data-stu-id="a3bf4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0566-104">语法</span><span class="sxs-lookup"><span data-stu-id="d0566-104">Syntax</span></span>  
   
 ```  
 HRESULT CLRCreateInstance(  
@@ -37,34 +37,34 @@ HRESULT CLRCreateInstance(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a3bf4-105">参数</span><span class="sxs-lookup"><span data-stu-id="a3bf4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d0566-105">参数</span><span class="sxs-lookup"><span data-stu-id="d0566-105">Parameters</span></span>  
  `clsid`  
- <span data-ttu-id="a3bf4-106">[in]以下三个类标识符之一：CLSID_CLRMetaHost、 CLSID_CLRMetaHostPolicy 或 CLSID_CLRDebugging。</span><span class="sxs-lookup"><span data-stu-id="a3bf4-106">[in] One of three class identifiers: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, or CLSID_CLRDebugging.</span></span>  
+ <span data-ttu-id="d0566-106">[in]以下三个类标识符之一：CLSID_CLRMetaHost、 CLSID_CLRMetaHostPolicy 或 CLSID_CLRDebugging。</span><span class="sxs-lookup"><span data-stu-id="d0566-106">[in] One of three class identifiers: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, or CLSID_CLRDebugging.</span></span>  
   
  `riid`  
- <span data-ttu-id="a3bf4-107">[in]以下三个接口标识符 (Iid) 之一：IID_ICLRMetaHost、 IID_ICLRMetaHostPolicy 或 IID_ICLRDebugging。</span><span class="sxs-lookup"><span data-stu-id="a3bf4-107">[in] One of three interface identifiers (IIDs): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, or IID_ICLRDebugging.</span></span>  
+ <span data-ttu-id="d0566-107">[in]以下三个接口标识符 (Iid) 之一：IID_ICLRMetaHost、 IID_ICLRMetaHostPolicy 或 IID_ICLRDebugging。</span><span class="sxs-lookup"><span data-stu-id="d0566-107">[in] One of three interface identifiers (IIDs): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, or IID_ICLRDebugging.</span></span>  
   
  `ppInterface`  
- <span data-ttu-id="a3bf4-108">[out]三个接口之一：[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)， [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)，或[ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="a3bf4-108">[out] One of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
+ <span data-ttu-id="d0566-108">[out]三个接口之一：[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)， [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)，或[ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="d0566-108">[out] One of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a3bf4-109">返回值</span><span class="sxs-lookup"><span data-stu-id="a3bf4-109">Return Value</span></span>  
- <span data-ttu-id="a3bf4-110">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="a3bf4-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d0566-109">返回值</span><span class="sxs-lookup"><span data-stu-id="d0566-109">Return Value</span></span>  
+ <span data-ttu-id="d0566-110">此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。</span><span class="sxs-lookup"><span data-stu-id="d0566-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="a3bf4-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a3bf4-111">HRESULT</span></span>|<span data-ttu-id="a3bf4-112">描述</span><span class="sxs-lookup"><span data-stu-id="a3bf4-112">Description</span></span>|  
+|<span data-ttu-id="d0566-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d0566-111">HRESULT</span></span>|<span data-ttu-id="d0566-112">描述</span><span class="sxs-lookup"><span data-stu-id="d0566-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a3bf4-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="a3bf4-113">S_OK</span></span>|<span data-ttu-id="a3bf4-114">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="a3bf4-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="a3bf4-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="a3bf4-115">E_POINTER</span></span>|<span data-ttu-id="a3bf4-116">`ppInterface` 为 null。</span><span class="sxs-lookup"><span data-stu-id="a3bf4-116">`ppInterface` is null.</span></span>|  
+|<span data-ttu-id="d0566-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="d0566-113">S_OK</span></span>|<span data-ttu-id="d0566-114">该方法已成功完成。</span><span class="sxs-lookup"><span data-stu-id="d0566-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="d0566-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="d0566-115">E_POINTER</span></span>|`ppInterface` <span data-ttu-id="d0566-116">为 null。</span><span class="sxs-lookup"><span data-stu-id="d0566-116">is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a3bf4-117">备注</span><span class="sxs-lookup"><span data-stu-id="a3bf4-117">Remarks</span></span>  
- <span data-ttu-id="a3bf4-118">下表显示了受支持的组合`clsid`和`riid`。</span><span class="sxs-lookup"><span data-stu-id="a3bf4-118">The following table shows the supported combinations for `clsid` and `riid`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d0566-117">备注</span><span class="sxs-lookup"><span data-stu-id="d0566-117">Remarks</span></span>  
+ <span data-ttu-id="d0566-118">下表显示了受支持的组合`clsid`和`riid`。</span><span class="sxs-lookup"><span data-stu-id="d0566-118">The following table shows the supported combinations for `clsid` and `riid`.</span></span>  
   
 |`clsid`|`riid`|  
 |--------------|------------|  
-|<span data-ttu-id="a3bf4-119">CLSID_CLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="a3bf4-119">CLSID_CLRMetaHost</span></span>|<span data-ttu-id="a3bf4-120">IID_ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="a3bf4-120">IID_ICLRMetaHost</span></span>|  
-|<span data-ttu-id="a3bf4-121">CLSID_CLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="a3bf4-121">CLSID_CLRMetaHostPolicy</span></span>|<span data-ttu-id="a3bf4-122">IID_ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="a3bf4-122">IID_ICLRMetaHostPolicy</span></span>|  
-|<span data-ttu-id="a3bf4-123">CLSID_CLRDebugging</span><span class="sxs-lookup"><span data-stu-id="a3bf4-123">CLSID_CLRDebugging</span></span>|<span data-ttu-id="a3bf4-124">IID_ICLRDebugging</span><span class="sxs-lookup"><span data-stu-id="a3bf4-124">IID_ICLRDebugging</span></span>|  
+|<span data-ttu-id="d0566-119">CLSID_CLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="d0566-119">CLSID_CLRMetaHost</span></span>|<span data-ttu-id="d0566-120">IID_ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="d0566-120">IID_ICLRMetaHost</span></span>|  
+|<span data-ttu-id="d0566-121">CLSID_CLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="d0566-121">CLSID_CLRMetaHostPolicy</span></span>|<span data-ttu-id="d0566-122">IID_ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="d0566-122">IID_ICLRMetaHostPolicy</span></span>|  
+|<span data-ttu-id="d0566-123">CLSID_CLRDebugging</span><span class="sxs-lookup"><span data-stu-id="d0566-123">CLSID_CLRDebugging</span></span>|<span data-ttu-id="d0566-124">IID_ICLRDebugging</span><span class="sxs-lookup"><span data-stu-id="d0566-124">IID_ICLRDebugging</span></span>|  
   
- <span data-ttu-id="a3bf4-125">下面的代码演示如何使用`CLRCreateInstance`若要获取所有三个接口：</span><span class="sxs-lookup"><span data-stu-id="a3bf4-125">The following code shows how to use `CLRCreateInstance` to get all three interfaces:</span></span>  
+ <span data-ttu-id="d0566-125">下面的代码演示如何使用`CLRCreateInstance`若要获取所有三个接口：</span><span class="sxs-lookup"><span data-stu-id="d0566-125">The following code shows how to use `CLRCreateInstance` to get all three interfaces:</span></span>  
   
 ```  
 #include <metahost.h>  
@@ -82,14 +82,15 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
                     (LPVOID*)&pCLRDebugging);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="a3bf4-126">要求</span><span class="sxs-lookup"><span data-stu-id="a3bf4-126">Requirements</span></span>  
- <span data-ttu-id="a3bf4-127">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a3bf4-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0566-126">要求</span><span class="sxs-lookup"><span data-stu-id="d0566-126">Requirements</span></span>  
+ <span data-ttu-id="d0566-127">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d0566-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a3bf4-128">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a3bf4-128">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="d0566-128">**标头：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="d0566-128">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="a3bf4-129">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="a3bf4-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d0566-129">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="d0566-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a3bf4-130">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a3bf4-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="d0566-130">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="d0566-130">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a3bf4-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="a3bf4-131">See also</span></span>
-- [<span data-ttu-id="a3bf4-132">承载</span><span class="sxs-lookup"><span data-stu-id="a3bf4-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="d0566-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="d0566-131">See also</span></span>
+
+- [<span data-ttu-id="d0566-132">宿主</span><span class="sxs-lookup"><span data-stu-id="d0566-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

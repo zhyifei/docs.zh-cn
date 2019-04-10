@@ -1,5 +1,5 @@
 ---
-title: 如何：改善呈现性能，通过缓存元素
+title: 如何：通过缓存元素来改善呈现性能
 ms.date: 03/30/2017
 helpviewer_keywords:
 - rendering performance [WPF], caching an element
@@ -8,23 +8,24 @@ helpviewer_keywords:
 - performance [WPF], caching an element
 - UIElement [WPF], caching
 ms.assetid: 4739c1fc-60ba-4c46-aba6-f6c1a2688f19
-ms.openlocfilehash: b5e39541fdf031b19e9e74483c0de94295e788d7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 118e8b0cca52c44788c9d5b291d710f765e7af2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375209"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153369"
 ---
-# <a name="how-to-improve-rendering-performance-by-caching-an-element"></a><span data-ttu-id="74e21-102">如何：改善呈现性能，通过缓存元素</span><span class="sxs-lookup"><span data-stu-id="74e21-102">How to: Improve Rendering Performance by Caching an Element</span></span>
-<span data-ttu-id="74e21-103">使用<xref:System.Windows.Media.BitmapCache>类来改善呈现性能的一种复杂<xref:System.Windows.UIElement>。</span><span class="sxs-lookup"><span data-stu-id="74e21-103">Use the <xref:System.Windows.Media.BitmapCache> class to improve rendering performance of a complex <xref:System.Windows.UIElement>.</span></span> <span data-ttu-id="74e21-104">若要缓存的元素，创建的新实例<xref:System.Windows.Media.BitmapCache>类，并将其分配给元素的<xref:System.Windows.UIElement.CacheMode%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="74e21-104">To cache an element, create a new instance of the <xref:System.Windows.Media.BitmapCache> class and assign it to the element's <xref:System.Windows.UIElement.CacheMode%2A> property.</span></span> <span data-ttu-id="74e21-105">可以重用<xref:System.Windows.Media.BitmapCache>有效地在<xref:System.Windows.Media.BitmapCacheBrush>。</span><span class="sxs-lookup"><span data-stu-id="74e21-105">You can reuse a <xref:System.Windows.Media.BitmapCache> efficiently in a <xref:System.Windows.Media.BitmapCacheBrush>.</span></span>  
+# <a name="how-to-improve-rendering-performance-by-caching-an-element"></a><span data-ttu-id="93fd7-102">如何：通过缓存元素来改善呈现性能</span><span class="sxs-lookup"><span data-stu-id="93fd7-102">How to: Improve Rendering Performance by Caching an Element</span></span>
+<span data-ttu-id="93fd7-103">使用<xref:System.Windows.Media.BitmapCache>类来改善呈现性能的一种复杂<xref:System.Windows.UIElement>。</span><span class="sxs-lookup"><span data-stu-id="93fd7-103">Use the <xref:System.Windows.Media.BitmapCache> class to improve rendering performance of a complex <xref:System.Windows.UIElement>.</span></span> <span data-ttu-id="93fd7-104">若要缓存的元素，创建的新实例<xref:System.Windows.Media.BitmapCache>类，并将其分配给元素的<xref:System.Windows.UIElement.CacheMode%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="93fd7-104">To cache an element, create a new instance of the <xref:System.Windows.Media.BitmapCache> class and assign it to the element's <xref:System.Windows.UIElement.CacheMode%2A> property.</span></span> <span data-ttu-id="93fd7-105">可以重用<xref:System.Windows.Media.BitmapCache>有效地在<xref:System.Windows.Media.BitmapCacheBrush>。</span><span class="sxs-lookup"><span data-stu-id="93fd7-105">You can reuse a <xref:System.Windows.Media.BitmapCache> efficiently in a <xref:System.Windows.Media.BitmapCacheBrush>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="74e21-106">示例</span><span class="sxs-lookup"><span data-stu-id="74e21-106">Example</span></span>  
- <span data-ttu-id="74e21-107">下面的代码示例演示如何创建复杂元素并将其缓存为位图，这将提高性能时元素进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="74e21-107">The following code example shows how to create a complex element and cache it as a bitmap, which improves performance when the element is animated.</span></span> <span data-ttu-id="74e21-108">该元素是包含带有多个顶点几何形状的画布。</span><span class="sxs-lookup"><span data-stu-id="74e21-108">The element is a canvas that holds shape geometries with many vertices.</span></span> <span data-ttu-id="74e21-109">一个<xref:System.Windows.Media.BitmapCache>，默认值的值分配给<xref:System.Windows.UIElement.CacheMode%2A>的画布，并且动画将显示平滑的缓存的位图缩放。</span><span class="sxs-lookup"><span data-stu-id="74e21-109">A <xref:System.Windows.Media.BitmapCache> with default values is assigned to the <xref:System.Windows.UIElement.CacheMode%2A> of the canvas, and an animation shows the smooth scaling of the cached bitmap.</span></span>  
+## <a name="example"></a><span data-ttu-id="93fd7-106">示例</span><span class="sxs-lookup"><span data-stu-id="93fd7-106">Example</span></span>  
+ <span data-ttu-id="93fd7-107">下面的代码示例演示如何创建复杂元素并将其缓存为位图，这将提高性能时元素进行动画处理。</span><span class="sxs-lookup"><span data-stu-id="93fd7-107">The following code example shows how to create a complex element and cache it as a bitmap, which improves performance when the element is animated.</span></span> <span data-ttu-id="93fd7-108">该元素是包含带有多个顶点几何形状的画布。</span><span class="sxs-lookup"><span data-stu-id="93fd7-108">The element is a canvas that holds shape geometries with many vertices.</span></span> <span data-ttu-id="93fd7-109">一个<xref:System.Windows.Media.BitmapCache>，默认值的值分配给<xref:System.Windows.UIElement.CacheMode%2A>的画布，并且动画将显示平滑的缓存的位图缩放。</span><span class="sxs-lookup"><span data-stu-id="93fd7-109">A <xref:System.Windows.Media.BitmapCache> with default values is assigned to the <xref:System.Windows.UIElement.CacheMode%2A> of the canvas, and an animation shows the smooth scaling of the cached bitmap.</span></span>  
   
  [!code-xaml[System.Windows.Media.BitmapCache#_BitmapCacheXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcache/cs/window1.xaml#_bitmapcachexaml)]  
   
-## <a name="see-also"></a><span data-ttu-id="74e21-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="74e21-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="93fd7-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="93fd7-110">See also</span></span>
+
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [<span data-ttu-id="74e21-111">如何：缓存的元素用作画笔</span><span class="sxs-lookup"><span data-stu-id="74e21-111">How to: Use a Cached Element as a Brush</span></span>](how-to-use-a-cached-element-as-a-brush.md)
+- [<span data-ttu-id="93fd7-111">如何：使用缓存的元素作为画笔</span><span class="sxs-lookup"><span data-stu-id="93fd7-111">How to: Use a Cached Element as a Brush</span></span>](how-to-use-a-cached-element-as-a-brush.md)

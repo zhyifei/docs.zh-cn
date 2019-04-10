@@ -2,19 +2,19 @@
 title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: 5aa5d75e12852fe6a0e4e9a2eb4ae57d25d1022c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c34eba2614a354f1753d8da077f8653f2c260a97
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165875"
 ---
-# <a name="systemruntimeserialization"></a><span data-ttu-id="00443-102">\<system.runtime.serialization></span><span class="sxs-lookup"><span data-stu-id="00443-102">\<system.runtime.serialization></span></span>
-<span data-ttu-id="00443-103">表示 <xref:System.Runtime.Serialization> 命名空间节的根元素，并包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的设置选项的元素。</span><span class="sxs-lookup"><span data-stu-id="00443-103">Represents the root element for the <xref:System.Runtime.Serialization> namespace section and contains elements for setting options of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+# <a name="systemruntimeserialization"></a><span data-ttu-id="a6d91-102">\<system.runtime.serialization></span><span class="sxs-lookup"><span data-stu-id="a6d91-102">\<system.runtime.serialization></span></span>
+<span data-ttu-id="a6d91-103">表示 <xref:System.Runtime.Serialization> 命名空间节的根元素，并包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的设置选项的元素。</span><span class="sxs-lookup"><span data-stu-id="a6d91-103">Represents the root element for the <xref:System.Runtime.Serialization> namespace section and contains elements for setting options of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
- <span data-ttu-id="00443-104">system.runtime.serialization</span><span class="sxs-lookup"><span data-stu-id="00443-104">system.runtime.serialization</span></span>  
+ <span data-ttu-id="a6d91-104">system.runtime.serialization</span><span class="sxs-lookup"><span data-stu-id="a6d91-104">system.runtime.serialization</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="00443-105">语法</span><span class="sxs-lookup"><span data-stu-id="00443-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6d91-105">语法</span><span class="sxs-lookup"><span data-stu-id="a6d91-105">Syntax</span></span>  
   
 ```xml  
 <configuration>
@@ -33,25 +33,26 @@ ms.locfileid: "55272672"
 </configuration>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="00443-106">特性和元素</span><span class="sxs-lookup"><span data-stu-id="00443-106">Attributes and Elements</span></span>  
- <span data-ttu-id="00443-107">以下几节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="00443-107">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a6d91-106">特性和元素</span><span class="sxs-lookup"><span data-stu-id="a6d91-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="a6d91-107">以下几节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="a6d91-107">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="00443-108">特性</span><span class="sxs-lookup"><span data-stu-id="00443-108">Attributes</span></span>  
- <span data-ttu-id="00443-109">无。</span><span class="sxs-lookup"><span data-stu-id="00443-109">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a6d91-108">特性</span><span class="sxs-lookup"><span data-stu-id="a6d91-108">Attributes</span></span>  
+ <span data-ttu-id="a6d91-109">无。</span><span class="sxs-lookup"><span data-stu-id="a6d91-109">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="00443-110">子元素</span><span class="sxs-lookup"><span data-stu-id="00443-110">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a6d91-110">子元素</span><span class="sxs-lookup"><span data-stu-id="a6d91-110">Child Elements</span></span>  
   
-|<span data-ttu-id="00443-111">元素</span><span class="sxs-lookup"><span data-stu-id="00443-111">Element</span></span>|<span data-ttu-id="00443-112">描述</span><span class="sxs-lookup"><span data-stu-id="00443-112">Description</span></span>|  
+|<span data-ttu-id="a6d91-111">元素</span><span class="sxs-lookup"><span data-stu-id="a6d91-111">Element</span></span>|<span data-ttu-id="a6d91-112">描述</span><span class="sxs-lookup"><span data-stu-id="a6d91-112">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="00443-113">\<dataContractSerializer></span><span class="sxs-lookup"><span data-stu-id="00443-113">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|<span data-ttu-id="00443-114">使得可以在反序列化时添加要使用的已知类型。</span><span class="sxs-lookup"><span data-stu-id="00443-114">Enables addition of known types to be used when deserialization.</span></span>|  
+|[<span data-ttu-id="a6d91-113">\<dataContractSerializer></span><span class="sxs-lookup"><span data-stu-id="a6d91-113">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|<span data-ttu-id="a6d91-114">使得可以在反序列化时添加要使用的已知类型。</span><span class="sxs-lookup"><span data-stu-id="a6d91-114">Enables addition of known types to be used when deserialization.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="00443-115">父元素</span><span class="sxs-lookup"><span data-stu-id="00443-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a6d91-115">父元素</span><span class="sxs-lookup"><span data-stu-id="a6d91-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="00443-116">元素</span><span class="sxs-lookup"><span data-stu-id="00443-116">Element</span></span>|<span data-ttu-id="00443-117">描述</span><span class="sxs-lookup"><span data-stu-id="00443-117">Description</span></span>|  
+|<span data-ttu-id="a6d91-116">元素</span><span class="sxs-lookup"><span data-stu-id="a6d91-116">Element</span></span>|<span data-ttu-id="a6d91-117">描述</span><span class="sxs-lookup"><span data-stu-id="a6d91-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="00443-118">\<configuration> 元素</span><span class="sxs-lookup"><span data-stu-id="00443-118">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="00443-119">配置的顶级元素。</span><span class="sxs-lookup"><span data-stu-id="00443-119">The top level element for configuration.</span></span>|  
+|[<span data-ttu-id="a6d91-118">\<配置 > 元素</span><span class="sxs-lookup"><span data-stu-id="a6d91-118">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="a6d91-119">配置的顶级元素。</span><span class="sxs-lookup"><span data-stu-id="a6d91-119">The top level element for configuration.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="00443-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="00443-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6d91-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="a6d91-120">See also</span></span>
+
 - <xref:System.Runtime.Serialization>
-- [<span data-ttu-id="00443-121">使用数据协定</span><span class="sxs-lookup"><span data-stu-id="00443-121">Using Data Contracts</span></span>](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [<span data-ttu-id="00443-122">数据协定已知类型</span><span class="sxs-lookup"><span data-stu-id="00443-122">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [<span data-ttu-id="a6d91-121">使用数据协定</span><span class="sxs-lookup"><span data-stu-id="a6d91-121">Using Data Contracts</span></span>](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [<span data-ttu-id="a6d91-122">数据协定已知类型</span><span class="sxs-lookup"><span data-stu-id="a6d91-122">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3fa71b15a5e4852bc87ad2088edb343704df6ca9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af9ca932a4c4a12a2c89571f40162a4ecbd5c33d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144490"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="e5fe0-102">CorArgType 枚举</span><span class="sxs-lookup"><span data-stu-id="e5fe0-102">CorArgType Enumeration</span></span>
-<span data-ttu-id="e5fe0-103">包含一些值，用于描述运行时句柄的本机类型。</span><span class="sxs-lookup"><span data-stu-id="e5fe0-103">Contains values that describe the native type of a runtime handle.</span></span>  
+# <a name="corargtype-enumeration"></a><span data-ttu-id="5730e-102">CorArgType 枚举</span><span class="sxs-lookup"><span data-stu-id="5730e-102">CorArgType Enumeration</span></span>
+<span data-ttu-id="5730e-103">包含一些值，用于描述运行时句柄的本机类型。</span><span class="sxs-lookup"><span data-stu-id="5730e-103">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5fe0-104">语法</span><span class="sxs-lookup"><span data-stu-id="e5fe0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5730e-104">语法</span><span class="sxs-lookup"><span data-stu-id="5730e-104">Syntax</span></span>  
   
 ```  
 typedef enum CorArgType {  
@@ -46,12 +46,13 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="e5fe0-105">要求</span><span class="sxs-lookup"><span data-stu-id="e5fe0-105">Requirements</span></span>  
- <span data-ttu-id="e5fe0-106">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e5fe0-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5730e-105">要求</span><span class="sxs-lookup"><span data-stu-id="5730e-105">Requirements</span></span>  
+ <span data-ttu-id="5730e-106">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5730e-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e5fe0-107">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="e5fe0-107">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="5730e-107">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="5730e-107">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="e5fe0-108">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5fe0-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="5730e-108">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="5730e-108">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e5fe0-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="e5fe0-109">See also</span></span>
-- [<span data-ttu-id="e5fe0-110">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="e5fe0-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="5730e-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="5730e-109">See also</span></span>
+
+- [<span data-ttu-id="5730e-110">元数据枚举</span><span class="sxs-lookup"><span data-stu-id="5730e-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
