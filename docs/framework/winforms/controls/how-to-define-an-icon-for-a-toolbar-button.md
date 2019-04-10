@@ -13,30 +13,30 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 0d4a17528ca3eb81f93419491766e370be551b1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2c1c3d8529662c1e1f1a3d28e3853d31f5d940ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153122"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336496"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a><span data-ttu-id="cc835-102">如何：定义工具栏按钮的图标</span><span class="sxs-lookup"><span data-stu-id="cc835-102">How to: Define an Icon for a ToolBar Button</span></span>
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a><span data-ttu-id="f5428-102">如何：定义工具栏按钮的图标</span><span class="sxs-lookup"><span data-stu-id="f5428-102">How to: Define an Icon for a ToolBar Button</span></span>
 > [!NOTE]
->  <span data-ttu-id="cc835-103"><xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。</span><span class="sxs-lookup"><span data-stu-id="cc835-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="f5428-103"><xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。</span><span class="sxs-lookup"><span data-stu-id="f5428-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <xref:System.Windows.Forms.ToolBar> <span data-ttu-id="cc835-104">按钮是可以由用户显示其中方便识别的图标。</span><span class="sxs-lookup"><span data-stu-id="cc835-104">buttons are able to display icons within them for easy identification by users.</span></span> <span data-ttu-id="cc835-105">这通过添加到图像[ImageList 组件](imagelist-component-windows-forms.md)组件并将相关联<xref:System.Windows.Forms.ImageList>组件与<xref:System.Windows.Forms.ToolBar>控件。</span><span class="sxs-lookup"><span data-stu-id="cc835-105">This is achieved through adding images to the [ImageList Component](imagelist-component-windows-forms.md) component and then associating the <xref:System.Windows.Forms.ImageList> component with the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
+ <xref:System.Windows.Forms.ToolBar> <span data-ttu-id="f5428-104">按钮是可以由用户显示其中方便识别的图标。</span><span class="sxs-lookup"><span data-stu-id="f5428-104">buttons are able to display icons within them for easy identification by users.</span></span> <span data-ttu-id="f5428-105">这通过添加到图像[ImageList 组件](imagelist-component-windows-forms.md)组件并将相关联<xref:System.Windows.Forms.ImageList>组件与<xref:System.Windows.Forms.ToolBar>控件。</span><span class="sxs-lookup"><span data-stu-id="f5428-105">This is achieved through adding images to the [ImageList Component](imagelist-component-windows-forms.md) component and then associating the <xref:System.Windows.Forms.ImageList> component with the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
-### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a><span data-ttu-id="cc835-106">若要以编程方式设置工具栏按钮的图标</span><span class="sxs-lookup"><span data-stu-id="cc835-106">To set an icon for a toolbar button programmatically</span></span>  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a><span data-ttu-id="f5428-106">若要以编程方式设置工具栏按钮的图标</span><span class="sxs-lookup"><span data-stu-id="f5428-106">To set an icon for a toolbar button programmatically</span></span>  
   
-1.  <span data-ttu-id="cc835-107">在过程中，实例化<xref:System.Windows.Forms.ImageList>组件和一个<xref:System.Windows.Forms.ToolBar>控件。</span><span class="sxs-lookup"><span data-stu-id="cc835-107">In a procedure, instantiate an <xref:System.Windows.Forms.ImageList> component and a <xref:System.Windows.Forms.ToolBar> control.</span></span>  
+1. <span data-ttu-id="f5428-107">在过程中，实例化<xref:System.Windows.Forms.ImageList>组件和一个<xref:System.Windows.Forms.ToolBar>控件。</span><span class="sxs-lookup"><span data-stu-id="f5428-107">In a procedure, instantiate an <xref:System.Windows.Forms.ImageList> component and a <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
-2.  <span data-ttu-id="cc835-108">在相同的过程中，将分配到图像<xref:System.Windows.Forms.ImageList>组件。</span><span class="sxs-lookup"><span data-stu-id="cc835-108">In the same procedure, assign an image to the <xref:System.Windows.Forms.ImageList> component.</span></span>  
+2. <span data-ttu-id="f5428-108">在相同的过程中，将分配到图像<xref:System.Windows.Forms.ImageList>组件。</span><span class="sxs-lookup"><span data-stu-id="f5428-108">In the same procedure, assign an image to the <xref:System.Windows.Forms.ImageList> component.</span></span>  
   
-3.  <span data-ttu-id="cc835-109">在相同的过程中，将分配<xref:System.Windows.Forms.ImageList>控制对<xref:System.Windows.Forms.ToolBar>控件并将分配<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>各个工具栏按钮的属性。</span><span class="sxs-lookup"><span data-stu-id="cc835-109">In the same procedure, assign the <xref:System.Windows.Forms.ImageList> control to the <xref:System.Windows.Forms.ToolBar> control and assign the <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> property of the individual toolbar buttons.</span></span>  
+3. <span data-ttu-id="f5428-109">在相同的过程中，将分配<xref:System.Windows.Forms.ImageList>控制对<xref:System.Windows.Forms.ToolBar>控件并将分配<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>各个工具栏按钮的属性。</span><span class="sxs-lookup"><span data-stu-id="f5428-109">In the same procedure, assign the <xref:System.Windows.Forms.ImageList> control to the <xref:System.Windows.Forms.ToolBar> control and assign the <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> property of the individual toolbar buttons.</span></span>  
   
-     <span data-ttu-id="cc835-110">在下面的代码示例中，将路径设置的映像的位置是**我的文档**文件夹。</span><span class="sxs-lookup"><span data-stu-id="cc835-110">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="cc835-111">此操作后，因为您可以假定大多数运行 Windows 操作系统的计算机都包含此目录。</span><span class="sxs-lookup"><span data-stu-id="cc835-111">This is done, because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="cc835-112">这还使得具有最低系统访问级别的用户能够安全运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="cc835-112">This also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="cc835-113">下面的示例假定窗体具有<xref:System.Windows.Forms.PictureBox>已添加的控件。</span><span class="sxs-lookup"><span data-stu-id="cc835-113">The example below assumes a form with a <xref:System.Windows.Forms.PictureBox> control already added.</span></span>  
+     <span data-ttu-id="f5428-110">在下面的代码示例中，将路径设置的映像的位置是**我的文档**文件夹。</span><span class="sxs-lookup"><span data-stu-id="f5428-110">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="f5428-111">此操作后，因为您可以假定大多数运行 Windows 操作系统的计算机都包含此目录。</span><span class="sxs-lookup"><span data-stu-id="f5428-111">This is done, because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="f5428-112">这还使得具有最低系统访问级别的用户能够安全运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="f5428-112">This also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="f5428-113">下面的示例假定窗体具有<xref:System.Windows.Forms.PictureBox>已添加的控件。</span><span class="sxs-lookup"><span data-stu-id="f5428-113">The example below assumes a form with a <xref:System.Windows.Forms.PictureBox> control already added.</span></span>  
   
-     <span data-ttu-id="cc835-114">按照上述步骤中，您应编写类似于下面显示的代码。</span><span class="sxs-lookup"><span data-stu-id="cc835-114">Following the steps above, you should have written code similar to that displayed below.</span></span>  
+     <span data-ttu-id="f5428-114">按照上述步骤中，您应编写类似于下面显示的代码。</span><span class="sxs-lookup"><span data-stu-id="f5428-114">Following the steps above, you should have written code similar to that displayed below.</span></span>  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -115,9 +115,9 @@ ms.locfileid: "59153122"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="cc835-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="cc835-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f5428-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="f5428-115">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolBar>
-- [<span data-ttu-id="cc835-116">如何：触发工具栏按钮的菜单事件</span><span class="sxs-lookup"><span data-stu-id="cc835-116">How to: Trigger Menu Events for Toolbar Buttons</span></span>](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [<span data-ttu-id="cc835-117">ToolBar 控件</span><span class="sxs-lookup"><span data-stu-id="cc835-117">ToolBar Control</span></span>](toolbar-control-windows-forms.md)
-- [<span data-ttu-id="cc835-118">ImageList 组件</span><span class="sxs-lookup"><span data-stu-id="cc835-118">ImageList Component</span></span>](imagelist-component-windows-forms.md)
+- [<span data-ttu-id="f5428-116">如何：触发工具栏按钮的菜单事件</span><span class="sxs-lookup"><span data-stu-id="f5428-116">How to: Trigger Menu Events for Toolbar Buttons</span></span>](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [<span data-ttu-id="f5428-117">ToolBar 控件</span><span class="sxs-lookup"><span data-stu-id="f5428-117">ToolBar Control</span></span>](toolbar-control-windows-forms.md)
+- [<span data-ttu-id="f5428-118">ImageList 组件</span><span class="sxs-lookup"><span data-stu-id="f5428-118">ImageList Component</span></span>](imagelist-component-windows-forms.md)
