@@ -1,15 +1,15 @@
 ---
-title: 如何：发布使用配置文件服务的元数据
+title: 如何：使用配置文件发布服务的元数据
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 81bf7db9ec25ae112127712dcd0443d3e045bc10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2aa85aa9682f1f5f4b6c13465034000bb01f0e62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075198"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>如何：发布使用配置文件服务的元数据
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>如何：使用配置文件发布服务的元数据
 这是个演示 Windows Communication Foundation (WCF) 服务的发布元数据的两个帮助主题之一。 有两种方式可以指定服务应如何发布元数据：使用配置文件和使用代码。 本主题演示如何使用配置文件发布服务的元数据。  
   
 > [!CAUTION]
@@ -92,22 +92,14 @@ namespace Metadata.Samples
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>使用应用程序配置文件发布 WCF 服务的元数据  
   
-1.  在 App.config 文件内，在结束 `</services>` 元素之后创建 `<behaviors>` 元素。  
-  
-  
-  
+1.  在 App.config 文件内，在结束 `</services>`&lt;behaviors&gt; 元素之后创建`<behaviors>` 元素。  
+
 2.  在 `<behaviors>` 元素内，添加一个 `<serviceBehaviors>` 元素。  
-  
-  
-  
+
 3.  向 `<behavior>``<serviceBehaviors>` 元素中添加一个 `name` 元素，并为 元素的 `<behavior>` 属性指定一个值。  
-  
-  
-  
-4.  向 `<serviceMetadata>` 元素中添加一个 `<behavior>` 元素。 将 `httpGetEnabled` 属性设置为 `true`，并将 `policyVersion` 属性设置为 Policy15。 `httpGetEnabled` 可让服务响应 HTTP GET 请求发出的元数据请求。 `policyVersion` 通知服务在生成元数据时应符合 WS-Policy 1.5。  
-  
-  
-  
+
+4.  向 `<serviceMetadata>` 元素中添加一个 `<behavior>` 元素。 将 `httpGetEnabled` 属性设置为 `true`，并将 `policyVersion` 属性设置为 Policy15。 `httpGetEnabled` 允许服务发出的 HTTP GET 请求的元数据请求做出响应。 `policyVersion` 指示服务来生成元数据时符合 Ws-policy 1.5。  
+
 5.  将 `behaviorConfiguration` 特性添加到 `<service>` 元素，并指定在步骤 1 中添加的 `name` 元素的 `<behavior>` 特性，如下面的代码示例所示。  
   
     ```xml  
@@ -148,13 +140,13 @@ namespace Metadata.Samples
   
 7.  对于上一步中添加的元数据终结点，将 `binding` 特性设置为下列值之一：  
   
-    -   `mexHttpBinding`（对于 HTTP 发布）。  
+    -   `mexHttpBinding` 对于 HTTP 发布。  
   
-    -   `mexHttpsBinding`（对于 HTTPS 发布）。  
+    -   `mexHttpsBinding` 对于 HTTPS 发布。  
   
-    -   `mexNamedPipeBinding`（对于命名管道发布）。  
+    -   `mexNamedPipeBinding` 对于命名管道发布。  
   
-    -   `mexTcpBinding`（对于 TCP 发布）。  
+    -   `mexTcpBinding` 对于 TCP 发布。  
   
 8.  对于上一步中添加的元数据终结点，将地址设置为等于：  
   
@@ -262,9 +254,10 @@ namespace Metadata.Samples
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [如何：承载于托管应用程序的 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [如何：在托管应用程序中承载 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [自承载](../../../../docs/framework/wcf/samples/self-host.md)
 - [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [如何：发布使用代码为服务的元数据](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [如何：使用代码发布服务的元数据](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
