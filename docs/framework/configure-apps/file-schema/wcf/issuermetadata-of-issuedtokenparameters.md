@@ -2,12 +2,12 @@
 title: <issuerMetadata> 的 <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
-ms.openlocfilehash: 2697d24a731dbf8de3d68bcce7fd52c55ff6dc68
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e46e56c6285af24941a550b2c4f7dec3b441db69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214797"
 ---
 # <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuerMetadata> of \<issuedTokenParameters>
 \<system.serviceModel>  
@@ -31,7 +31,7 @@ ms.locfileid: "55276973"
   
 |特性|描述|  
 |---------------|-----------------|  
-|address|必需。 一个指定终结点地址的字符串。 该地址必须为绝对 URI。 默认值为一个空字符串。|  
+|地址|必需。 一个指定终结点地址的字符串。 该地址必须为绝对 URI。 默认值为一个空字符串。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -47,6 +47,7 @@ ms.locfileid: "55276973"
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|指定在联合安全方案中颁发的安全令牌的参数。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -58,5 +59,5 @@ ms.locfileid: "55276973"
 - [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

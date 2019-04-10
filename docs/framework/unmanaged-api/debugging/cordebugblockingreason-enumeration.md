@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c867945f8a75cade5c7405b2908e2819f5d261d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54652727b4684d71068a19eb5eeb2e862f413f25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215074"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason 枚举
 指定线程可能在给定对象上受到阻塞的原因。  
@@ -55,8 +55,9 @@ Typedef enum CorDebugBlockingReason
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

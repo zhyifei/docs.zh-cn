@@ -1,20 +1,20 @@
 ---
-title: 如何：执行应用程序之间的拖放操作
+title: 如何：在应用程序之间执行拖放操作
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: 1e9556a69f3f5da4a47c5f5b1a6043a9a73dd8ff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f7fecf2f90c56e5ac10ea5929f1c23b25bf181bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221751"
 ---
-# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>如何：执行应用程序之间的拖放操作
+# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>如何：在应用程序之间执行拖放操作
 执行应用程序间的拖放操作与在一个应用程序内启用此操作并无差别，只要涉及的两个应用程序均按照 <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> 和 <xref:System.Windows.Forms.DragEventArgs.Effect%2A> 属性之间建立的“协定”实施行为。  
   
- 在下面的过程中，你将使用你创建的基于 Windows 的应用程序和 Windows 操作系统附带的“写字板”字处理器，以在应用程序之间执行拖放操作。 写字板具有一组特定的用于被拖放文本的允许的效果；你要为其编写代码的基于 Windows 的应用程序将使用这些效果来成功地完成拖放操作。  
+ 在下面的过程中，你将使用你创建的基于 Windows 的应用程序和 Windows 操作系统附带的“写字板”字处理器，以在应用程序之间执行拖放操作。 写字板具有一组特定的用于被放置文本的允许的效果；你要为其编写代码的基于 Windows 的应用程序将使用这些效果来成功地完成拖放操作。  
   
 ### <a name="to-perform-a-drag-and-drop-procedure-between-applications"></a>在应用程序之间执行拖放操作  
   
@@ -39,6 +39,7 @@ ms.locfileid: "57713431"
      此外，还可以配置 <xref:System.Windows.Forms.TextBox> 控件，以允许将文本字符串拖放到写字板中。 有关详细信息，请参见[演练：在 Windows 窗体中执行拖放操作](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [如何：将数据添加到剪贴板](how-to-add-data-to-the-clipboard.md)
-- [如何：从剪贴板中检索数据](how-to-retrieve-data-from-the-clipboard.md)
+- [如何：从剪贴板检索数据](how-to-retrieve-data-from-the-clipboard.md)
 - [拖放操作和剪贴板支持](drag-and-drop-operations-and-clipboard-support.md)

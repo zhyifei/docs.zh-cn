@@ -2,18 +2,18 @@
 title: OLE DB、ODBC 和 Oracle 连接池
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: bc07d4d33f2a568ef0fb4dd9806832222a13ca6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c17863facd962583e0da03e810c9a8150cda0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208886"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC 和 Oracle 连接池
 池连接可以显著提高应用程序的性能和可缩放性。 本节介绍用于 OLE DB、ODBC 和 Oracle 的 .NET Framework 数据提供程序的连接池。  
   
 ## <a name="connection-pooling-for-oledb"></a>OleDb 连接池  
- OLE DB .NET Framework 数据提供程序使用 OLE DB 会话池自动管理连接池。 连接字符串参数可用于启用或禁用包括池在内的 OLE DB 服务。 例如，以下连接字符串禁用 OLE DB 会话池和自动事务登记。  
+ OLE DB .NET Framework 数据提供程序使用 OLE DB 会话池自动管理连接池。 连接字符串自变量可用于启用或禁用包括池在内的 OLE DB 服务。 例如，以下连接字符串禁用 OLE DB 会话池和自动事务登记。  
   
 ```  
 Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=SSPI;  
@@ -37,7 +37,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  连接池一旦创建，直到活动进程终止时才会被毁坏。 维护不活动的池或空池占用的系统资源非常少。  
   
 ### <a name="connection-addition"></a>连接的添加  
- 连接池是为每个唯一的连接字符串创建的。 当创建一个池后，将创建多个连接对象并将其添加到该池中，以满足最小池大小的要求。 连接将根据需要添加到池中，直至达到最大池大小。  
+ 连接池是为每个唯一的连接字符串创建的。 当创建一个池后，将创建多个连接对象并将其添加到该池中，以满足最小池大小的需求。 连接将根据需要添加到池中，直至达到最大池大小。  
   
  在请求 <xref:System.Data.OracleClient.OracleConnection> 对象时，如果存在可用的连接，则将从池中获取该对象。 要成为可用连接，该连接当前必须未被使用，具有匹配的事务上下文或者不与任何事务上下文相关联，并且具有与服务器的有效链接。  
   
@@ -53,7 +53,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ### <a name="transaction-support"></a>事务支持  
  连接是根据事务上下文来从池中取出并进行分配的。 请求线程和所分配的连接的上下文必须匹配。 因此，每个连接池实际上划分成连接相关联，并到没有事务上下文*N*各自包含与特定事务上下文的连接。  
   
- 当连接关闭时，它将被释放回池中，并根据其事务上下文放入相应的子部分。 因此，即使分布式事务仍然挂起，仍可以关闭该连接而不会生成错误。 这样，您就可以在随后提交或中止分布式事务。  
+ 当连接关闭时，它将被释放回池中，并根据其事务上下文放入相应的子部分。 因此，即使分布式事务仍然挂起，仍可以关闭该连接而不会生成错误。 这样，你就可以在随后提交或中止分布式事务。  
   
 ### <a name="controlling-connection-pooling-with-connection-string-keywords"></a>使用连接字符串关键字控制连接池  
  <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> 对象的 <xref:System.Data.OracleClient.OracleConnection> 属性支持连接字符串键/值对，可以用于调整连接池逻辑的行为。  
@@ -69,6 +69,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Pooling`|'true'|当为 `true` 时，将从相应的池中取出连接，或者在必要时创建连接并将其添加到相应的池中。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [连接池](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [性能计数器](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

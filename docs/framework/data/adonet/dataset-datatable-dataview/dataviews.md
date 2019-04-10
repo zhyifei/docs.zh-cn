@@ -2,15 +2,15 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: bcf370e30c50bf5d992279c7abe02bfc6262ea40
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215906"
 ---
 # <a name="dataviews"></a>DataView
-你可以利用 <xref:System.Data.DataView> 创建存储在 <xref:System.Data.DataTable>（一种通常在数据绑定应用程序中使用的功能）中的数据的不同视图。 使用**DataView**，您可以公开具有不同的排序顺序的表中的数据，并且可以按行状态或基于筛选器表达式来筛选数据。  
+您可以利用 <xref:System.Data.DataView> 创建存储在 <xref:System.Data.DataTable>（一种通常在数据绑定应用程序中使用的功能）中的数据的不同视图。 使用**DataView**，您可以公开具有不同的排序顺序的表中的数据，并且可以按行状态或基于筛选器表达式来筛选数据。  
   
  一个**DataView**提供了在基础数据的动态视图**DataTable**： 内容、 排序和成员资格会实时反映更改它们。 此行为不同于**选择**方法**DataTable**，它将返回<xref:System.Data.DataRow>基于特定筛选器和/或排序顺序从表的数组： 此内容可反映对更改基础表，但其成员资格和顺序却保持不变。 动态功能**DataView**使其适用于数据绑定应用程序。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "55825870"
  [修改 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
  描述如何修改基础中的数据**DataTable**通过**DataView**，包括启用或禁用更新。  
   
- [处理 DataView 事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
+ [处理数据视图事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
  介绍如何使用**ListChanged**事件以接收通知时的内容或顺序**DataView**正在更新。  
   
  [管理 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
@@ -53,11 +53,12 @@ ms.locfileid: "55825870"
  [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  介绍**数据集**对象以及如何使用它来管理应用程序数据。  
   
- [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  介绍**DataTable**对象以及如何使用它来管理应用程序数据本身或作为的一部分**数据集**。  
   
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  描述 ADO.NET 结构和组件，并说明如何使用 ADO.NET 来访问现有的数据源和管理应用程序数据。  
   
 ## <a name="see-also"></a>请参阅
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

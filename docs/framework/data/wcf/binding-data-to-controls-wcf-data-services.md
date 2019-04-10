@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 1207a25a6718fddf9d18206a4cc09089806edecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6b0d9c9b5d2b473aebc00063bd0a343b8708c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226659"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>将数据绑定到控件（WCF 数据服务）
 使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可以将 `ComboBox` 和 `ListView` 等控件绑定到 <xref:System.Data.Services.Client.DataServiceCollection%601> 类的实例。 从 <xref:System.Collections.ObjectModel.ObservableCollection%601> 类继承的这一集合包含[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 源中的数据。 此类表示一个动态数据集合，在添加项或移除项时，此集合将提供通知。 当你使用的实例<xref:System.Data.Services.Client.DataServiceCollection%601>进行数据绑定[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库处理这些事件来确保跟踪的对象<xref:System.Data.Services.Client.DataServiceContext>与绑定 UI 元素中的数据保持同步。  
@@ -47,7 +47,7 @@ ms.locfileid: "54538526"
   
  有关详细信息，请参阅[如何：将数据绑定到 Windows Presentation Foundation 元素](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)。  
   
- 如果某实体参与一对多或多对多关系，该关系的导航属性返回相关对象的集合。 当你使用**添加服务引用**导航属性对话框或 DataSvcUtil.exe 工具生成客户端数据服务类，返回的实例<xref:System.Data.Services.Client.DataServiceCollection%601>。 这使您可以将相关对象绑定到控件，并支持常见的 WPF 绑定方案，例如相关实体的主/从绑定模式。 在上面的 XAML 示例中，XAML 代码将主 <xref:System.Data.Services.Client.DataServiceCollection%601> 绑定到根数据元素。 然后订单 <xref:System.Windows.Controls.DataGrid> 绑定到从所选的 Customers 对象返回的订单 <xref:System.Data.Services.Client.DataServiceCollection%601>，后者又绑定到 <xref:System.Windows.Window> 的根数据元素。  
+ 如果某实体参与一对多或多对多关系，该关系的导航属性返回相关对象的集合。 当你使用**添加服务引用**导航属性对话框或 DataSvcUtil.exe 工具生成客户端数据服务类，返回的实例<xref:System.Data.Services.Client.DataServiceCollection%601>。 这使你可以将相关对象绑定到控件，并支持常见的 WPF 绑定方案，例如相关实体的主/从绑定模式。 在上面的 XAML 示例中，XAML 代码将主 <xref:System.Data.Services.Client.DataServiceCollection%601> 绑定到根数据元素。 然后订单 <xref:System.Windows.Controls.DataGrid> 绑定到从所选的 Customers 对象返回的订单 <xref:System.Data.Services.Client.DataServiceCollection%601>，后者又绑定到 <xref:System.Windows.Window> 的根数据元素。  
   
 ## <a name="binding-data-to-windows-forms-controls"></a>将数据绑定到 Windows 窗体控件  
  若要将对象绑定到 Windows 窗体控件，请将该控件的 `DataSource` 属性设置为包含查询结果的 <xref:System.Data.Services.Client.DataServiceCollection%601> 类的实例。  
@@ -81,12 +81,12 @@ ms.locfileid: "54538526"
   
  创建 <xref:System.Data.Services.Client.DataServiceCollection%601> 的新实例时，可以选择指定以下参数，定义对处理绑定对象更改后引发事件的方法的委托：  
   
--   `entityChanged` - 绑定对象的属性更改后调用的方法。 此 <xref:System.Func%602> 委托接受一个 <xref:System.Data.Services.Client.EntityChangedParams> 对象并返回一个布尔值，该值指示对 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 调用 <xref:System.Data.Services.Client.DataServiceContext> 这一默认行为是否仍应发生。  
+-   `entityChanged` -绑定对象的属性发生更改时调用的方法。 此 <xref:System.Func%602> 委托接受一个 <xref:System.Data.Services.Client.EntityChangedParams> 对象并返回一个布尔值，该值指示对 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 调用 <xref:System.Data.Services.Client.DataServiceContext> 这一默认行为是否仍应发生。  
   
--   `entityCollectionChanged` - 从绑定集合添加或移除对象时调用的方法。 此 <xref:System.Func%602> 委托接受一个 <xref:System.Data.Services.Client.EntityCollectionChangedParams> 对象并返回一个布尔值，该值指示默认行为（即对 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 调用 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> 操作的 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 或 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 操作的 <xref:System.Data.Services.Client.DataServiceContext>）是否仍应发生。  
+-   `entityCollectionChanged` -添加或从绑定集合中移除对象时调用的方法。 此 <xref:System.Func%602> 委托接受一个 <xref:System.Data.Services.Client.EntityCollectionChangedParams> 对象并返回一个布尔值，该值指示默认行为（即对 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 调用 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> 操作的 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 或 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 操作的 <xref:System.Data.Services.Client.DataServiceContext>）是否仍应发生。  
   
 > [!NOTE]
->  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 不执行在这些委托中实现的自定义行为的验证。  
+>  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 不执行验证在这些委托中实现的自定义行为。  
   
  在下面的示例中，自定义 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 操作以调用 <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 方法来移除属于删除的 `Orders_Details` 实体的 `Orders` 实体。 执行此自定义操作的原因是，删除父实体时不会自动删除依赖实体。  
   
@@ -101,18 +101,19 @@ ms.locfileid: "54538526"
 ## <a name="data-binding-with-custom-client-data-classes"></a>使用自定义客户端数据类的数据绑定  
  若要能够将对象加载到 <xref:System.Data.Services.Client.DataServiceCollection%601>，对象本身必须实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口。 数据服务使用时生成的客户端类**添加服务引用**对话框中或[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)工具实现此接口。 如果提供你自己的客户端数据类，必须将其他类型的集合用于数据绑定。 如果对象更改，必须在数据绑定控件中处理事件以调用 <xref:System.Data.Services.Client.DataServiceContext> 类的以下方法：  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> - 新对象添加到集合时。  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> -当新对象添加到集合。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> - 从集合中移除对象时。  
+-   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> -当从集合中移除对象。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> - 在集合中的对象上更改属性时。  
+-   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 的一个属性集合中的对象上的更改时。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> - 对象添加到相关对象的集合时。  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> -当一个对象添加到相关对象的集合。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> - 对象添加到相关对象的集合时。  
+-   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> -当一个对象添加到相关对象的集合。  
   
  有关详细信息，请参阅[更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [如何：手动生成客户端数据服务类](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
 - [如何：添加数据服务引用](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

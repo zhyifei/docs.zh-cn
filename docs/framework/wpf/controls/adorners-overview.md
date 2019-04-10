@@ -7,18 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
-ms.translationtype: MT
+ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227686"
 ---
 # <a name="adorners-overview"></a>装饰器概述
 装饰器是一种特殊的<xref:System.Windows.FrameworkElement>，可用来向用户提供可视提示。 装饰器有很多用途，可用来向元素添加功能句柄，或者提供有关某个控件的状态信息。  
-  
-  
-  
+
 <a name="about_Adorners"></a>   
 ## <a name="about-adorners"></a>关于装饰器  
  <xref:System.Windows.Documents.Adorner>是一个自定义<xref:System.Windows.FrameworkElement>绑定到<xref:System.Windows.UIElement>。 在中呈现装饰器<xref:System.Windows.Documents.AdornerLayer>，这是一个始终是基础装饰的元素或装饰元素的集合上的呈现图面。 呈现装饰器是独立于呈现的<xref:System.Windows.UIElement>装饰器绑定到的。 装饰器通常使用位于装饰元素左上部的标准 2D 坐标原点，相对于其绑定到的元素进行定位。  
@@ -102,8 +100,9 @@ ms.locfileid: "58634526"
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Media.AdornerHitTestResult>
-- [WPF 中的形状和基本绘图概述](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [使用图像、绘图和视觉对象进行绘制](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [WPF 中的形状和基本图形概述](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [使用图像、图形和视觉对象进行绘制](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
 - [Drawing 对象概述](../graphics-multimedia/drawing-objects-overview.md)
 - [帮助主题](adorners-how-to-topics.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: b5f92ca2956f32382b12c9a1dec4e5d41ea4ee2a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225321"
 ---
 # <a name="nameentry-element"></a>\<nameEntry > 元素
 将类名称映射到友好算法名称，允许一个类具有多个友好名称。  
@@ -76,7 +76,8 @@ ms.locfileid: "55285916"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [密码设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [加密服务](../../../../../docs/standard/security/cryptographic-services.md)
 - [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

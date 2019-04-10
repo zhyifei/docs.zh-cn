@@ -8,25 +8,26 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230650"
 ---
 # <a name="graphics-how-to-topics"></a>图形帮助主题
 以下主题演示如何使用的图形功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  
   
 ## <a name="in-this-section"></a>本节内容  
- [为矩形设置动画效果](how-to-animate-a-rectangle.md)  
- [使用 PointAnimation 为对象位置设置动画效果](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [对矩形进行动画处理](how-to-animate-a-rectangle.md)  
+ [使用 PointAnimation 针对对象位置进行动画处理](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [转换点和矢量](how-to-transform-points-and-vectors.md)  
- [将玻璃框扩展到 WPF 应用程序中](extend-glass-frame-into-a-wpf-application.md)  
- [如何：改善呈现性能，通过缓存元素](how-to-improve-rendering-performance-by-caching-an-element.md)  
- [如何：缓存的元素用作画笔](how-to-use-a-cached-element-as-a-brush.md)  
+ [将玻璃框扩展到 WPF 应用程序](extend-glass-frame-into-a-wpf-application.md)  
+ [如何：通过缓存元素来改善呈现性能](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [如何：使用缓存的元素作为画笔](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
@@ -35,4 +36,4 @@ ms.locfileid: "57358779"
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
 - [图形和多媒体](index.md)
-- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)
+- [WPF 图形呈现疑难解答](wpf-graphics-rendering-overview.md)

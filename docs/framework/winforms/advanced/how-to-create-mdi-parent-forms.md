@@ -5,12 +5,12 @@ helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 5da7f1a53412cf30a5898fec096aaa01e3aa65d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 120a7d45e01b0460f0c5e50896f58d026c4c3b9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216309"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>如何：创建 MDI 父窗体
 > [!IMPORTANT]
@@ -36,6 +36,7 @@ ms.locfileid: "57722979"
 4.  按 **F5** 运行该应用程序。 有关创建 MDI 子窗口的 MDI 父窗体内运行的信息，请参阅[如何：创建 MDI 子窗体](how-to-create-mdi-child-forms.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [多文档界面 (MDI) 应用程序](multiple-document-interface-mdi-applications.md)
 - [如何：创建 MDI 子窗体](how-to-create-mdi-child-forms.md)
 - [如何：确定活动的 MDI 子窗体](how-to-determine-the-active-mdi-child.md)

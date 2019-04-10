@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IEnumRAWINPUTDEVICE interface [WPF]
 ms.assetid: 88c8b389-a48b-46b9-b895-8ed7b1e26fea
-ms.openlocfilehash: e7bc6f2c96413f3898a17b541733eeecd6a260f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 04caca0c580d26fde7fc9a3e3a11b7a8fed26d65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225516"
 ---
 # <a name="ienumrawinputdevice"></a>IEnumRAWINPUTDEVICE
 此接口枚举原始输入设备，并仅供 PresentationHost.exe 使用。  
@@ -27,4 +27,5 @@ ms.locfileid: "57375059"
 |[IEnumRAWINPUTDEVIC:Clone](ienumrawinputdevic-clone.md)|创建一个与当权枚举器相同状态的原始输入设备枚举器，以循环访问相同的列表。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [关于原始输入](/windows/desktop/inputdev/about-raw-input)

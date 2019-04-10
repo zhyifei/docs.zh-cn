@@ -2,15 +2,15 @@
 title: <bindingElementExtensions>
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: 9a2a3af093949c1d724fdea13655bbb80fe71048
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 775f93f319c136a29a32ffaa1dfabc12ee081b29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227504"
 ---
 # <a name="bindingelementextensions"></a>\<bindingElementExtensions>
-本节为使用计算机或应用程序配置文件中的自定义绑定元素提供支持。 通过使用 `add` 关键字，然后将元素的 `type` 属性设置为绑定元素扩展，并将 `name` 属性设置为自定义绑定元素，您可以向此集合添加自定义绑定元素。  
+本节为使用计算机或应用程序配置文件中的自定义绑定元素提供支持。 通过使用 `add` 关键字，然后将元素的 `type` 属性设置为绑定元素扩展，并将 `name` 属性设置为自定义绑定元素，你可以向此集合添加自定义绑定元素。  
   
  用户可以使用绑定扩展来创建用户定义的绑定元素，并将其作为自定义绑定的一部分来使用。 从编程角度来看，绑定扩展是一个实现抽象类 <xref:System.ServiceModel.Channels.BindingElement> 的类型。 在配置文件中，`bindingElementExtensions` 节用于定义扩展元素。  
   
@@ -44,5 +44,6 @@ ms.locfileid: "55270455"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>
 - [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 45a904eb9e38b13fc3502264f4659bfd25465630
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 8080451d64f74629451c6ca66fb27d93c9f29ed8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410415"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209496"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>使用绑定配置服务和客户端
 绑定是指定连接到终结点所需的通信详细信息的对象。 更具体地说，绑定包含用于创建客户端或服务运行时的配置信息，创建方法是定义用于各个终结点或客户端通道的传输、连网格式（消息编码）和协议的具体内容。 若要创建的正常运行的 Windows Communication Foundation (WCF) 服务，在服务中的每个终结点需要的绑定。 本主题解释什么是绑定、如何定义绑定以及如何为终结点指定特定的绑定。  
@@ -29,13 +29,13 @@ ms.locfileid: "58410415"
 ## <a name="system-provided-bindings"></a>系统提供的绑定  
  WCF 包含一组旨在满足大多数应用程序的要求和方案的系统提供绑定。 下面的类表示系统提供的绑定的一些示例：  
   
--   <xref:System.ServiceModel.BasicHttpBinding>：符合 WS 的 HTTP 协议绑定，适用于连接到 Web 服务的基本配置文件 1.1 规范 (例如，ASP.NET Web 服务 [ASMX]-基于服务)。  
+-   <xref:System.ServiceModel.BasicHttpBinding>:符合 WS 的 HTTP 协议绑定，适用于连接到 Web 服务的基本配置文件 1.1 规范 (例如，ASP.NET Web 服务 [ASMX]-基于服务)。  
   
--   <xref:System.ServiceModel.WSHttpBinding>：HTTP 协议绑定，适用于连接到终结点符合 Web 服务规范协议。  
+-   <xref:System.ServiceModel.WSHttpBinding>:HTTP 协议绑定，适用于连接到终结点符合 Web 服务规范协议。  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>：使用.NET 二进制编码和组帧技术一起使用命名管道传输 Windows 连接到同一台计算机上其他 WCF 终结点。  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>:使用.NET 二进制编码和组帧技术一起使用命名管道传输 Windows 连接到同一台计算机上其他 WCF 终结点。  
   
--   <xref:System.ServiceModel.NetMsmqBinding>：使用.NET 二进制编码和组帧技术与消息队列 (也称为 MSMQ) 一起使用来创建与其他 WCF 终结点的排队的消息连接。  
+-   <xref:System.ServiceModel.NetMsmqBinding>:使用.NET 二进制编码和组帧技术与消息队列 (也称为 MSMQ) 一起使用来创建与其他 WCF 终结点的排队的消息连接。  
   
  有关说明，使用系统提供的绑定的完整列表，请参阅[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。  
   
@@ -57,6 +57,7 @@ ms.locfileid: "58410415"
 -   [教程：创建 Windows Communication Foundation 客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)提供了使用配置创建客户端的一个示例。  
   
 ## <a name="see-also"></a>请参阅
+
 - [终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [如何：在配置中指定服务绑定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
 - [如何：在代码中指定服务绑定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

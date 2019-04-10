@@ -1,5 +1,5 @@
 ---
-title: 如何：在不使用反射的情况下获得打印系统对象属性
+title: 如何：在不使用反射的情况下获取打印系统对象属性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-ms.openlocfilehash: b03be30422a93980ecdbcdbd428600fd41abd824
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: b9ca7444b2c49f4563ff0d7baef8b2d250a7f331
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215269"
 ---
-# <a name="how-to-get-print-system-object-properties-without-reflection"></a>如何：在不使用反射的情况下获得打印系统对象属性
+# <a name="how-to-get-print-system-object-properties-without-reflection"></a>如何：在不使用反射的情况下获取打印系统对象属性
 使用反射对某个对象中列举的属性 （以及这些属性的类型） 可能会降低应用程序性能。 <xref:System.Printing.IndexedProperties>命名空间提供了一种方式获取此信息与使用反射。  
   
 ## <a name="example"></a>示例  
@@ -34,6 +34,7 @@ ms.locfileid: "57367578"
  [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Printing.IndexedProperties.PrintProperty>
 - <xref:System.Printing.PrintSystemObject>
 - <xref:System.Printing.IndexedProperties>

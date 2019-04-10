@@ -2,12 +2,12 @@
 title: ServiceCredentials
 ms.date: 03/30/2017
 ms.assetid: 9c780793-4785-46f7-add9-ac1ebeadb614
-ms.openlocfilehash: 18100ac36b5116c2373171ff795fc23b75bbd6f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9563bd3bfe067ad83bfa03e7c6375a9db933f14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230923"
 ---
 # <a name="servicecredentials"></a>ServiceCredentials
 ServiceCredentials  
@@ -30,7 +30,7 @@ class ServiceCredentials : Behavior
 ## <a name="methods"></a>方法  
  ServiceCredentials 类不定义任何方法。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
  ServiceCredentials 类具有下列属性：  
   
 ### <a name="clientcertificate"></a>ClientCertificate  
@@ -89,4 +89,5 @@ class ServiceCredentials : Behavior
 |命名空间|已在 root\ServiceModel 中定义|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Description.ServiceCredentials>

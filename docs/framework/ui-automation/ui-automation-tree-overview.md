@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: 19e416271e0c6e717a46821569983a250ef0ae0b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a88822d6aed5af04ecf7deffe6936cfc4ebe296e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225945"
 ---
 # <a name="ui-automation-tree-overview"></a>UI 自动化树概述
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "57675571"
   
  UI 自动化提供程序通过定义元素的属性（包括 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty> 和 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty> 属性）来支持筛选。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供三个默认视图。 这些视图由所执行筛选的类型定义；任何视图的范围都是由应用程序定义的。 另外，应用程序可以向属性应用其他筛选器，例如，在控件视图中仅包含已启用的控件。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供了三个默认视图。 这些视图由所执行筛选的类型定义；任何视图的范围都是由应用程序定义的。 另外，应用程序可以向属性应用其他筛选器，例如，在控件视图中仅包含已启用的控件。  
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>原始视图  
@@ -55,5 +55,6 @@ ms.locfileid: "57675571"
  内容视图是通过以下方法获取的：搜索 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 属性设置为 `true` 的元素，或者使用 <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> 在树中导航。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Automation.AutomationElement>
 - [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)

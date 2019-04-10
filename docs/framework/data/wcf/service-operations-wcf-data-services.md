@@ -8,15 +8,15 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 38e9553d77612635f0403a8dc34c368379116e8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b63c6d8f3a5a949299a925a321ca8f01c67b1d8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497113"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211967"
 ---
 # <a name="service-operations-wcf-data-services"></a>服务操作（WCF 数据服务）
-使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以在数据服务中定义服务操作，以便在服务器上公开方法。 与其他数据服务资源一样，服务操作也是通过 URI 进行寻址。 使用服务操作可以在数据服务中公开业务逻辑；例如，实现验证逻辑，应用基于角色的安全性或公开专用查询功能。 服务操作是添加到派生自 <xref:System.Data.Services.DataService%601> 的数据服务类的方法。 与所有其他数据服务资源一样，也可以向服务操作方法提供参数。 例如，下面的服务操作 URI (基于[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)数据服务) 将值传递`London`到`city`参数：  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以定义数据服务以公开在服务器上的方法上的服务操作。 与其他数据服务资源一样，服务操作也是通过 URI 进行寻址。 使用服务操作可以在数据服务中公开业务逻辑；例如，实现验证逻辑，应用基于角色的安全性或公开专用查询功能。 服务操作是添加到派生自 <xref:System.Data.Services.DataService%601> 的数据服务类的方法。 与所有其他数据服务资源一样，也可以向服务操作方法提供参数。 例如，下面的服务操作 URI (基于[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)数据服务) 将值传递`London`到`city`参数：  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -42,7 +42,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   方法必须返回下列值之一：  
   
-    -   `void`（在 Visual Basic 中为 `Nothing`）  
+    -   `void` (`Nothing`在 Visual Basic 中)  
   
     -   <xref:System.Collections.Generic.IEnumerable%601>  
   
@@ -60,7 +60,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
     -   `[WebGet]` 使您能够通过使用 GET 请求调用方法。  
   
-    -   `[WebInvoke(Method = "POST")]` 使您能够通过使用 POST 请求调用方法。 其他 <xref:System.ServiceModel.Web.WebInvokeAttribute> 方法不受支持。  
+    -   `[WebInvoke(Method = "POST")]` 可以通过使用 POST 请求调用的方法。 其他 <xref:System.ServiceModel.Web.WebInvokeAttribute> 方法不受支持。  
   
 -   可以用 <xref:System.Data.Services.SingleResultAttribute> 为服务操作添加批注，指定方法的返回值是一个实体而不是一个实体集。 这一区别确定了生成的响应结果串行化以及用 URI 表示其他导航属性遍历的方式。 例如，当使用 AtomPub 序列化时，单个资源类型实例将表示为一个 entry 元素，而单个实例集将表示为一个 feed 元素。  
   
@@ -77,7 +77,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
   
 |有效的返回类型|URI 规则|  
 |------------------------|---------------|  
-|`void`（在 Visual Basic 中为 `Nothing`）<br /><br /> - 或 -<br /><br /> 实体类型<br /><br /> - 或 -<br /><br /> 基元类型|URI 必须是作为服务操作名称的单个路径段。 不允许使用查询选项。|  
+|`void` (`Nothing`在 Visual Basic 中)<br /><br /> 或<br /><br /> 实体类型<br /><br /> 或<br /><br /> 基元类型|URI 必须是作为服务操作名称的单个路径段。 不允许使用查询选项。|  
 |<xref:System.Collections.Generic.IEnumerable%601>|URI 必须是作为服务操作名称的单个路径段。 由于结果类型不是 <xref:System.Linq.IQueryable%601> 类型，因此不允许使用查询选项。|  
 |<xref:System.Linq.IQueryable%601>|除了作为服务操作名称的路径之外，还允许使用查询路径段。 也允许使用查询选项。|  
   
@@ -105,4 +105,5 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [侦听器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

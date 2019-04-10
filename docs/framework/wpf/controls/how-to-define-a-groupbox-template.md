@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF], creating templates
 ms.assetid: 85a4d1a7-4753-4f4a-b26d-14fa10c1ddb5
-ms.openlocfilehash: 6b4ad4a588aab93f5445cda962af890bfcd41c14
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dd53af87ec2d12b2ed0dcf2b23374d76e8f631a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377659"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225711"
 ---
 # <a name="how-to-define-a-groupbox-template"></a>如何：定义 GroupBox 模板
 此示例演示如何创建模板<xref:System.Windows.Controls.GroupBox>控件。  
@@ -21,5 +21,6 @@ ms.locfileid: "57377659"
  [!code-xaml[GroupBoxSnippet#GroupBoxTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#groupboxtemplate)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Controls.GroupBox>
 - [如何：创建分组框](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms748321(v=vs.90))

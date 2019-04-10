@@ -1,5 +1,5 @@
 ---
-title: 如何：禁用安全会话在 WSFederationHttpBinding 上
+title: 如何：在 WSFederationHttpBinding 上禁用安全会话
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-ms.openlocfilehash: 8c03bb9601ecbaaf8694d1df26ba43e34434ac47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 809626d0d6d69d22f09b0f10210cfda7a033ac3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720023"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211798"
 ---
-# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>如何：禁用安全会话在 WSFederationHttpBinding 上
+# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>如何：在 WSFederationHttpBinding 上禁用安全会话
 某些服务可能需要联合凭据，但不支持安全会话。 在这种情况下，必须禁用安全会话功能。 与 <xref:System.ServiceModel.WSHttpBinding> 不同，<xref:System.ServiceModel.WSFederationHttpBinding> 类不支持在与服务通信时禁用安全会话。 相反，你必须创建一个自定义绑定，以便用引导来替换安全会话设置。  
   
  本主题演示如何修改 <xref:System.ServiceModel.WSFederationHttpBinding> 中包含的绑定元素以创建自定义绑定。 结果与 <xref:System.ServiceModel.WSFederationHttpBinding> 基本相同，只是它不使用安全会话。  
@@ -43,4 +43,5 @@ ms.locfileid: "54720023"
 -   若要编译代码示例，请创建一个引用 System.ServiceModel.dll 程序集的项目。  
   
 ## <a name="see-also"></a>请参阅
+
 - [绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

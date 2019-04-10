@@ -2,12 +2,12 @@
 title: TransportAuthenticationSuccess
 ms.date: 03/30/2017
 ms.assetid: 7a7c3013-3d05-4d32-857b-759e98d91259
-ms.openlocfilehash: 65bc06d88fe79dbd7f84d2c02bbd5ead961b6fd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c815bf206489770162cd9169496a778fa48fe2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208262"
 ---
 # <a name="transportauthenticationsuccess"></a>TransportAuthenticationSuccess
 ID:173  
@@ -20,5 +20,6 @@ ID:173
  此事件指示 Transport 身份验证成功。 此事件将列出服务、客户端标识和活动 ID。  
   
 ## <a name="see-also"></a>请参阅
+
 - [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

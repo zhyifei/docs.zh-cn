@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: bc209d184ac330b112d17c34f0bf1c479a8b5f7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516156"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228870"
 ---
 # <a name="denial-of-service"></a>拒绝服务
 当系统处于过载状态而无法处理消息或者处理速度极慢时，会出现拒绝服务的情况。  
@@ -28,13 +28,13 @@ ms.locfileid: "54516156"
   
  缓解：使用以下属性的<xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>类：  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>：控制在 `SecurityContextToken` 或 `SPNego` 协商之后服务器所缓存的有时限的 `SSL` 的最大数目。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>： 控制最大数量的有时限`SecurityContextToken`之后服务器所缓存的 s`SPNego`或`SSL`协商。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>：控制在 `SecurityContextTokens` 或 `SPNego` 协商之后服务器所颁发的 `SSL` 的生存期。 在此时间期限内，服务器将缓存 `SecurityContextToken`。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>： 控制的生存期`SecurityContextTokens`，之后服务器所颁发`SPNego`或`SSL`协商。 在此时间期限内，服务器将缓存 `SecurityContextToken`。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>：控制在服务器上建立但尚未针为其处理任何应用程序消息的安全对话的最大数目。 此配额可防止客户端在服务上建立安全对话从而致使服务维护每个客户端的状态，但是从不使用这些状态。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>： 控制在服务器上，但为其处理任何应用程序消息建立的安全对话的最大数目。 此配额可防止客户端在服务上建立安全对话从而致使服务维护每个客户端的状态，但是从不使用这些状态。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>：控制服务使安全对话保持活动状态（而不接收来自对话客户端的应用程序消息）的最长时间。 此配额可防止客户端在服务上建立安全对话从而致使服务维护每个客户端的状态，但是从不使用这些状态。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>： 控制服务使安全对话保持活动状态而不会从该会话的客户端收到的应用程序消息的最大时间。 此配额可防止客户端在服务上建立安全对话从而致使服务维护每个客户端的状态，但是从不使用这些状态。  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding 或双向自定义绑定要求客户端身份验证  
  默认情况下，<xref:System.ServiceModel.WSDualHttpBinding> 会启用安全性。 但是，如果通过将 <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 属性设置为 <xref:System.ServiceModel.MessageCredentialType.None> 而禁用客户端身份验证，则恶意用户可能会致使针对第三个服务进行拒绝服务攻击。 发生此问题的原因在于，恶意客户端可能会指示服务向第三个服务发送消息流。  
@@ -67,7 +67,7 @@ ms.locfileid: "54516156"
  在极少数情况下，如果 X.509 证书包含多个备选主题名称，并且您使用备选主题名称进行授权，则授权可能会失败。  
   
 ## <a name="protect-configuration-files-with-acls"></a>使用 ACL 保护配置文件  
- 您可以在代码和配置文件中为 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 所颁发的令牌指定必需的和可选的声明。 这会导致在发送到安全令牌服务的 `RequestSecurityToken` 消息中发出相应的元素。 攻击者可能会通过修改代码或配置来移除必需的或可选的声明，从而可能会让安全令牌服务颁发不允许访问目标服务的令牌。  
+ 你可以在代码和配置文件中为 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 所颁发的令牌指定必需的和可选的声明。 这会导致在发送到安全令牌服务的 `RequestSecurityToken` 消息中发出相应的元素。 攻击者可能会通过修改代码或配置来移除必需的或可选的声明，从而可能会让安全令牌服务颁发不允许访问目标服务的令牌。  
   
  若要缓解此问题：需要修改配置文件的计算机访问。 使用文件访问控制列表 (ACL) 来保护配置文件。 WCF 要求代码是在应用程序目录或全局程序集缓存中，只允许从配置加载此类代码。 使用目录 ACL 可以保护目录。  
   
@@ -80,10 +80,11 @@ ms.locfileid: "54516156"
  若要缓解此问题，请通过设置 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 属性来设置活动会话的最大数目限制以及会话的最长生存期限制。  
   
 ## <a name="see-also"></a>请参阅
+
 - [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [信息泄漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [信息泄露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [重播攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

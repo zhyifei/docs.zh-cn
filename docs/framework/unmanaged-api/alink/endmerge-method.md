@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d4b102485db0199f748f6c5b6c4ab40d21429e9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 020cc56126249b27a52387e6efa3aa10c83d9126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226841"
 ---
 # <a name="endmerge-method"></a>EndMerge 方法
 指示到发出范围合并所有自定义属性。  
@@ -46,6 +46,7 @@ HRESULT EndMerge(
  需要 alink.h  
   
 ## <a name="see-also"></a>请参阅
+
 - [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

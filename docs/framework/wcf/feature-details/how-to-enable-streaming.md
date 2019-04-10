@@ -1,18 +1,18 @@
 ---
-title: 如何：启用流式传输
+title: 如何：启用流处理
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 2521b6ac237a76cac64cebca91bbaa792bba2c67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5bc4bce984c4159949f840f395005ec9fe746e85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227309"
 ---
-# <a name="how-to-enable-streaming"></a>如何：启用流式传输
+# <a name="how-to-enable-streaming"></a>如何：启用流处理
 Windows Communication Foundation (WCF) 可以发送使用缓冲还是流传输的消息。 在默认的缓冲传输模式中，只有在一条消息全部传递完之后，接收方才能读取该消息。 在流传输模式中，不必等到消息全部传递完，接收方便可以开始处理该消息。 当传递的信息很长且可以依次处理时，流模式非常有用。 当消息过长以致于无法全部缓冲时，流模式也非常有用。  
   
  若要启用流处理，请适当地定义 `OperationContract` 并在传输级别上启用流处理。  
@@ -30,17 +30,17 @@ Windows Communication Foundation (WCF) 可以发送使用缓冲还是流传输�
      [!code-csharp[c_HowTo_EnableStreaming#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#1)]
      [!code-vb[c_HowTo_EnableStreaming#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#1)]  
   
-     `GetStream` 操作接收一些缓冲输入数据作为经过缓冲的 `string`，并返回经过流处理的 `Stream`。 相反，`UploadStream` 接收一个经过流处理的 `Stream`，并返回一个经过缓冲的 `bool`。 `EchoStream` 是输入消息和输出消息都经过流处理的操作的示例，它接收和返回 `Stream`。 最后，`GetReversedStream` 将不接收输入，并返回一个 `Stream`（已经过流处理）。  
+     `GetStream` 操作接收一些缓冲输入数据作为经过缓冲的 `string`，并返回经过流处理的 `Stream`。 相反，`UploadStream` 接收一个经过流处理的 `Stream`，并返回一个经过缓冲的 `bool`。 `EchoStream` 采用并返回`Stream`和是操作的示例的输入和输出消息都流式的。 最后，`GetReversedStream` 将不接收输入，并返回一个 `Stream`（已经过流处理）。  
   
 2.  必须在绑定上启用流处理。 设置 `TransferMode` 属性，可以采用下面的值之一：  
   
     1.  `Buffered`,  
   
-    2.  `Streamed`，此值在两个方向上启用流通信。  
+    2.  `Streamed`其中启用流通信在两个方向。  
   
-    3.  `StreamedRequest`，此值仅启用请求流处理。  
+    3.  `StreamedRequest`此启用流处理仅限请求。  
   
-    4.  `StreamedResponse`，此值仅启用响应流处理。  
+    4.  `StreamedResponse`此启用流处理仅响应。  
   
      `BasicHttpBinding` 公开绑定上的 `TransferMode` 属性，与 `NetTcpBinding` 和 `NetNamedPipeBinding` 一样。 还可以在传输绑定元素上设置 `TransferMode` 属性，并且在自定义绑定中使用。  
   
@@ -69,11 +69,12 @@ Windows Communication Foundation (WCF) 可以发送使用缓冲还是流传输�
   
 1.  若要在发送或接收数据流的每个块区时对其进行特殊处理，可从 <xref:System.IO.Stream> 派生一个自定义流类。 与自定义流的示例一样，下面的代码包含 `GetReversedStream` 方法和 `ReverseStream` 类。  
   
-     `GetReversedStream` 创建并返回 `ReverseStream` 的新实例。 当系统从 `ReverseStream` 对象中读取时，发生实际处理。 `ReverseStream.Read` 方法从基础文件中读取字节块区，反转字节，然后返回反转的字节。 此方法不会反转整个文件内容；一次只能反转一个字节块区。 本示例演示在从流中读取内容或将内容写入到流中时如何执行流处理。  
+     `GetReversedStream` 创建并返回的新实例`ReverseStream`。 当系统从 `ReverseStream` 对象中读取时，发生实际处理。 `ReverseStream.Read` 方法从基础文件中读取字节块区，反转字节，然后返回反转的字节。 此方法不会反转整个文件内容；一次只能反转一个字节块区。 本示例演示在从流中读取内容或将内容写入到流中时如何执行流处理。  
   
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>请参阅
-- [大数据和流式处理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+
+- [大型数据和流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
 - [流](../../../../docs/framework/wcf/samples/stream.md)

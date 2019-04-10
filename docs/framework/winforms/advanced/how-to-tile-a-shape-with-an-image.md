@@ -1,5 +1,5 @@
 ---
-title: 如何：使用图像形状中平铺
+title: 如何：在形状中平铺图像
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: d873ba717fa94852692ce395ef7da30c512aba59
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221533"
 ---
-# <a name="how-to-tile-a-shape-with-an-image"></a>如何：使用图像形状中平铺
+# <a name="how-to-tile-a-shape-with-an-image"></a>如何：在形状中平铺图像
 就像可以彼此以涵盖地板放置磁贴，可以将矩形图像彼此放置于填充 （磁贴） 形状。 若要磁贴形状的内部，使用纹理画笔。 当构造<xref:System.Drawing.TextureBrush>对象，将传递给构造函数的自变量之一为<xref:System.Drawing.Image>对象。 纹理画笔用于绘制形状的内部，当填充形状与此图像的重复副本。  
   
  自动换行模式属性的<xref:System.Drawing.TextureBrush>对象将决定如何图像的方向为矩形网格中重复。 您可以进行所有网格中的磁贴具有相同的方向，或者可以进行到下一个网格位置从翻转的图像。 翻转可以水平、 垂直，或两者。 下面的示例演示使用不同类型的翻转平铺。  
@@ -61,4 +61,5 @@ ms.locfileid: "57719684"
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [使用画笔填充形状](using-a-brush-to-fill-shapes.md)

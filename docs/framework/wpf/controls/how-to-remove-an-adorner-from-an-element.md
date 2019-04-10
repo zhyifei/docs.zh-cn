@@ -1,5 +1,5 @@
 ---
-title: 如何：从元素移除装饰器
+title: 如何：从元素中删除装饰器
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], removing
 ms.assetid: 97cf4d9f-0596-429e-8526-32a30aa4ae99
-ms.openlocfilehash: 0c74fe9ed1e7190ce4ff26a7dbae1413f950ba7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 256dd6fa0117f88aec2ef6b60c6dcd4c33b57855
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212396"
 ---
-# <a name="how-to-remove-an-adorner-from-an-element"></a>如何：从元素移除装饰器
+# <a name="how-to-remove-an-adorner-from-an-element"></a>如何：从元素中删除装饰器
 此示例演示如何以编程方式删除特定的装饰器从指定<xref:System.Windows.UIElement>。  
   
 ## <a name="example"></a>示例  
@@ -30,4 +30,5 @@ ms.locfileid: "57374071"
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerShort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornershort)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [装饰器概述](adorners-overview.md)

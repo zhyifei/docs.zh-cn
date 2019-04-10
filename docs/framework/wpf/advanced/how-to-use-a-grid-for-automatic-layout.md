@@ -5,12 +5,12 @@ helpviewer_keywords:
 - grids [WPF], automatic layout
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
-ms.openlocfilehash: 5fa023002ac66a65e3c179434841c975287d170c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 590ad7292fea572b20ccaa09ce2886724e004a6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357477"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227111"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>如何：使用网格进行自动布局
 本示例介绍如何通过自动布局方法使用网格来创建可本地化的应用程序。  
@@ -30,5 +30,6 @@ ms.locfileid: "57357477"
 Grid  
   
 ## <a name="see-also"></a>请参阅
+
 - [使用自动布局概述](use-automatic-layout-overview.md)
 - [使用自动布局创建按钮](how-to-use-automatic-layout-to-create-a-button.md)

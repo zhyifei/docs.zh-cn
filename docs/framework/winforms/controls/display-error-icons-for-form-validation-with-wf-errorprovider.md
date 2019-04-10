@@ -1,5 +1,5 @@
 ---
-title: 如何：对于表格验证使用 Windows 窗体 ErrorProvider 组件显示错误图标
+title: 如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: f676454849c37da8c0a5f944be05c3f6c95887b4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 39dd77fee36b172f6c38746bfe970094ec9edb4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223545"
 ---
-# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>如何：对于表格验证使用 Windows 窗体 ErrorProvider 组件显示错误图标
+# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标
 可以使用 Windows 窗体<xref:System.Windows.Forms.ErrorProvider>组件，用户输入无效数据时显示错误图标。 您必须具有至少两个选项卡上，它们之间并由此调用验证代码以窗体控件。  
   
 ### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>若要在控件的值无效时显示错误图标  
@@ -93,6 +93,7 @@ ms.locfileid: "57707633"
 4.  运行该项目。 在第一个控件，然后第二个选项卡中键入无效 （在此示例中，非数字） 的数据。 当显示错误图标时，指向它使用鼠标指针以查看错误文本。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [ErrorProvider 组件概述](errorprovider-component-overview-windows-forms.md)
-- [如何：在一个数据集中使用 Windows 窗体 ErrorProvider 组件查看错误](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [如何：使用 Windows 窗体 ErrorProvider 组件查看数据集中的错误](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

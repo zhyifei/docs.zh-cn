@@ -2,12 +2,12 @@
 title: <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 96db336c-4f7a-4193-81a5-910b8ffd804f
-ms.openlocfilehash: 54ac4f0aa31a4311976449d545880d825c06337d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d9f8fdf272962916cd08aede484e9bbde55b96a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227075"
 ---
 # <a name="servicecredentials"></a>\<serviceCredentials>
 指定要用于对服务进行身份验证的凭据以及与客户端凭据验证相关的设置。  
@@ -67,6 +67,7 @@ ms.locfileid: "55256467"
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

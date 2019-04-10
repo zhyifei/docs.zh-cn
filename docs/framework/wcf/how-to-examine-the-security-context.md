@@ -1,5 +1,5 @@
 ---
-title: 如何：检查安全上下文
+title: 如何：检查安全性上下文
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: bcc23097a6778bb537421ba494dd94414b37f4e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 063d9e334575170c632eb49aef527b14a6d164b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207105"
 ---
-# <a name="how-to-examine-the-security-context"></a>如何：检查安全上下文
+# <a name="how-to-examine-the-security-context"></a>如何：检查安全性上下文
 在编程时 Windows Communication Foundation (WCF) 服务，服务安全上下文，可确定客户端凭据和声明用来与服务进行身份验证的详细信息。 这是使用 <xref:System.ServiceModel.ServiceSecurityContext> 类的属性进行的。  
   
  例如，使用 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 或 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 属性可检索当前客户端的标识。 若要确定客户端是否匿名，请使用 <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> 属性。  
@@ -55,5 +55,6 @@ ms.locfileid: "54646261"
 -   <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>请参阅
-- [保护服务](../../../docs/framework/wcf/securing-services.md)
+
+- [保证服务的安全](../../../docs/framework/wcf/securing-services.md)
 - [服务标识和身份验证](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

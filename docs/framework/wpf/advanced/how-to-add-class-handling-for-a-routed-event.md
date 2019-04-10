@@ -9,12 +9,12 @@ helpviewer_keywords:
 - task_core_add_class_handling_routed_properties [WPF]
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-ms.openlocfilehash: 8c973871336c3389161ce25ae52d2dfaef9c53a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224261"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>如何：为路由事件添加类处理
 通过类处理程序或路由中的任何给定节点上的实例处理程序可以处理路由的事件。 类处理程序首先，调用，并可以由类实现来禁止显示来自实例处理的事件或引入其他事件上所拥有的基类的事件的特定行为。 此示例说明了实现类处理程序的两个密切相关的方法。  
@@ -33,6 +33,7 @@ ms.locfileid: "57361767"
  [!code-vb[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.EventManager>
 - [将路由事件标记为“已处理”和“类处理”](marking-routed-events-as-handled-and-class-handling.md)
 - [处理路由事件](how-to-handle-a-routed-event.md)

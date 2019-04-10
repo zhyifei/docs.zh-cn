@@ -2,12 +2,12 @@
 title: 工作流跟踪
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: f8b454437631b4711360ddf0c1196cafca13b5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 92497768e7e8d720cdcc7c8f2c7c04b4dfcc47b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627169"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224931"
 ---
 # <a name="workflow-tracing"></a>工作流跟踪
 工作流跟踪提供了一种使用 .NET Framework 跟踪侦听器捕获诊断信息的方法。 如果检测到应用程序存在问题，可以启用跟踪，然后在解决问题之后再次禁用跟踪。 可以通过两种方法为工作流启用调试跟踪。 您可以使用事件跟踪查看器配置调试跟踪，也可以使用 <xref:System.Diagnostics> 向文件发送跟踪事件。  
@@ -23,7 +23,7 @@ ms.locfileid: "54627169"
   
 4.  默认跟踪分析缓冲区大小仅为 4 KB；建议将此大小增大到 32 KB。 为此，请执行下列步骤。  
   
-    1.  在当前框架目录（例如，C:\Windows\Microsoft.NET\Framework\v4.0.21203）中执行以下命令：`wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  在当前框架目录 (例如，C:\Windows\Microsoft.NET\Framework\v4.0.21203) 中执行以下命令： `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
     2.  更改\<bufferSize > 为 32 Windows.ApplicationServer.Applications.man 文件中的值。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "54627169"
                   </channel>  
         ```  
   
-    3.  在当前框架目录（例如，C:\Windows\Microsoft.NET\Framework\v4.0.21203）中执行以下命令：`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  在当前框架目录 (例如，C:\Windows\Microsoft.NET\Framework\v4.0.21203) 中执行以下命令： `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
 >  如果使用.NET Framework 4 Client Profile，必须先从.NET Framework 4 目录运行以下命令来注册 ETW 清单： `ServiceModelReg.exe –i –c:etw`  
@@ -70,5 +70,6 @@ ms.locfileid: "54627169"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows Server App Fabric 监视](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [使用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)

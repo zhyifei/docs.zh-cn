@@ -9,12 +9,12 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: 7cdd0ebeb03d078a952dd9ffe4d2ed7590417054
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: adcfff0196bd0430ec1ae563fbd5489062de11f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359479"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217180"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>如何：枚举打印队列的子集
 负责管理公司范围内的打印机的信息技术 (IT) 专业人员所面临的常见情况是生成具有某些特征的打印机的列表。 提供此功能<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法<xref:System.Printing.PrintServer>对象和<xref:System.Printing.EnumeratedPrintQueueTypes>枚举。  
@@ -35,6 +35,7 @@ ms.locfileid: "57359479"
  您可以扩展此示例通过让`foreach`循环通过每个打印队列的步骤执行进一步筛选。 例如，您可以筛选掉不支持通过循环调用双面打印的打印机每个打印队列的<xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>方法和测试返回的值进行双面打印是否存在。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.LocalPrintServer>

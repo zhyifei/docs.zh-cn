@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-ms.openlocfilehash: a4ce6b0ce2bbf37499bcbe917067ec2539044be8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713277"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227103"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox 控件（Windows 窗体）
 Windows 窗体`ComboBox`控件用于显示下拉组合框中的数据。 默认情况下，`ComboBox`控件将显示在两个部分： 上半部分是允许用户键入列表项的文本框。 第二部分是显示的用户可以从中选择一个项列表的列表框。  
@@ -24,11 +24,11 @@ Windows 窗体`ComboBox`控件用于显示下拉组合框中的数据。 默认�
  [ComboBox 控件概述](combobox-control-overview-windows-forms.md)  
  说明此控件的本质及其主要功能和属性。  
   
- [如何：在组合框控件中创建大小可变的文本](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ [如何：在 ComboBox 控件中创建大小可变的文本](how-to-create-variable-sized-text-in-a-combobox-control.md)  
  演示自定义绘图中的文本`ComboBox`控件。  
   
 ## <a name="reference"></a>参考  
- <xref:System.Windows.Forms.ComboBox> 类  
+ <xref:System.Windows.Forms.ComboBox> class  
  对此类进行描述，并提供指向其所有成员的链接。  
   
 ## <a name="related-sections"></a>相关章节  
@@ -36,4 +36,5 @@ Windows 窗体`ComboBox`控件用于显示下拉组合框中的数据。 默认�
  提供了一系列你可以使用列表框、 组合框和选中的列表框执行的操作。  
   
 ## <a name="see-also"></a>请参阅
+
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

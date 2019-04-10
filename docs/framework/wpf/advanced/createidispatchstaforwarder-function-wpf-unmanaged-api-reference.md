@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 57a02dfa-f091-4ace-9c06-1f4ab52b3527
-ms.openlocfilehash: 1a19b7699c7a9e2b663149ea31bccb67189e68c4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a89b29cd459060c93d5ca77bb2154e1a10b02d03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487819"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213620"
 ---
 # <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>CreateIDispatchSTAForwarder 函数 （WPF 非托管 API 参考）
 此 API 支持 Windows Presentation Foundation (WPF) 基础结构，不应在代码中直接使用。  
@@ -50,4 +50,5 @@ HRESULT CreateIDispatchSTAForwarder(
  **.NET framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [WPF 非托管 API 参考](wpf-unmanaged-api-reference.md)

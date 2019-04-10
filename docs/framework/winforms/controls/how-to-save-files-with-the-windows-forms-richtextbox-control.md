@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: c9a5d471a58c646c786cf441ee7d7ec235788f10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a646d9b04bbe824d093b106f5cfcb0f1703c6e21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213527"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>如何：使用 Windows 窗体 RichTextBox 控件保存文件
 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以写入其显示在几种格式之一的信息：  
@@ -88,6 +88,7 @@ Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以写入其显示
     >  此示例在文件尚未存在时创建新文件。 如果应用程序需要创建一个文件，该应用程序将需要的文件夹创建访问权限。 可使用访问控制列表设置权限。 如果该文件已存在，该应用程序需要只写访问权限，较弱的特权。 在可能的情况下，会在部署期间，创建文件并仅授予对单个文件，读取访问权限而不是创建一个文件夹的访问更安全。 此外，较安全的做法是将数据写入用户文件夹，而不是根文件夹或“Program Files”文件夹。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 控件](richtextbox-control-windows-forms.md)

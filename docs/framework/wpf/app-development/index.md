@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 979a5324fe9cb6c3469660e061d5df7f312ef2c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211057"
 ---
 # <a name="application-development"></a>应用程序开发
 <a name="introduction"></a> Windows Presentation Foundation (WPF) 是一个演示框架，可用于开发以下类型的应用程序：  
   
 -   独立应用程序（传统风格的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 应用程序，这些应用程序作为要安装到客户端计算机并从客户端计算机运行的可执行程序集来生成）。  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]（由导航页组成的应用程序，这些应用程序作为可执行程序集生成并由 Web 浏览器（如 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Mozilla Firefox）承载）。  
+-   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (应用程序作为可执行程序集生成和如托管的 Web 浏览器的导航页面的组成[!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)]或 Mozilla Firefox)。  
   
 -   自定义控件库（包含可重用控件的非可执行程序集）。  
   
@@ -27,9 +27,7 @@ ms.locfileid: "57365121"
 >  强烈建议不要在 Windows 服务中使用 WPF 类型。 如果尝试在 Windows 服务中使用这些功能，这些功能可能无法按预期工作。  
   
  为了生成这样一组应用程序，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 要实现众多服务。 本主题对这些服务以及在何处可以找到更多相关信息进行了概述。  
-  
 
-  
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>应用程序管理  
  可执行的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序通常需要实现一组核心功能，其中包括：  
@@ -74,7 +72,7 @@ ms.locfileid: "57365121"
   
  有关详细信息，请参阅 [WPF 窗口概述](wpf-windows-overview.md)。  
   
- <xref:System.Windows.Window> 支持用于创建被称为对话框的特殊窗口类型的功能。 可以创建两种类型的对话框，即模式和无模式对话框。  
+ <xref:System.Windows.Window> 支持创建名为对话框的窗口的一种特殊类型的能力。 可以创建两种类型的对话框，即模式和无模式对话框。  
   
  为方便起见，以及可重用性和跨应用程序一致的用户体验的优势[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供了三种常见的 Windows 对话框： <xref:Microsoft.Win32.OpenFileDialog>， <xref:Microsoft.Win32.SaveFileDialog>，和<xref:System.Windows.Controls.PrintDialog>。  
   
@@ -84,7 +82,7 @@ ms.locfileid: "57365121"
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>导航  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持使用页面 (<xref:System.Windows.Controls.Page>) 和超链接 (<xref:System.Windows.Documents.Hyperlink>) 进行Web 式导航。 导航可以通过多种方式来实现，其中包括：  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持使用页面的 Web 式导航 (<xref:System.Windows.Controls.Page>) 和超链接 (<xref:System.Windows.Documents.Hyperlink>)。 导航可以通过多种方式来实现，其中包括：  
   
 -   在 Web 浏览器中承载的独立页面。  
   
@@ -96,7 +94,7 @@ ms.locfileid: "57365121"
   
  为了便于导航，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 实现了：  
   
--   <xref:System.Windows.Navigation.NavigationService>，供 <xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow> 和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 用于处理导航请求以支持应用程序内导航的共享导航引擎。  
+-   <xref:System.Windows.Navigation.NavigationService>用于处理导航请求使用的共享的导航引擎<xref:System.Windows.Controls.Frame>， <xref:System.Windows.Navigation.NavigationWindow>，和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]以支持应用程序内导航。  
   
 -   用于启动导航的导航方法。  
   
@@ -106,11 +104,11 @@ ms.locfileid: "57365121"
   
  有关信息，请参阅[导航概述](navigation-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 还支持一种被称为结构化导航的特殊导航类型。 结构化导航可用于调用一个或多个页面，这些页面能以结构化的可预测方式返回与调用函数一致的数据。 此功能将取决于 <xref:System.Windows.Navigation.PageFunction%601> 类；有关该类的进一步描述，请参阅[结构化导航概述](structured-navigation-overview.md)。 <xref:System.Windows.Navigation.PageFunction%601> 还可用于简化[导航拓扑概述](navigation-topologies-overview.md)中所述的复杂导航拓扑的创建。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 此外支持一种特殊类型的名为结构化导航的导航。 结构化导航可用于调用一个或多个页面，这些页面能以结构化的可预测方式返回与调用函数一致的数据。 此功能将取决于 <xref:System.Windows.Navigation.PageFunction%601> 类；有关该类的进一步描述，请参阅[结构化导航概述](structured-navigation-overview.md)。 <xref:System.Windows.Navigation.PageFunction%601> 此外可用于简化的复杂导航拓扑中所述创建[导航拓扑概述](navigation-topologies-overview.md)。  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>宿主  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以在 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Firefox 中承载。 每个承载模型都有各自的一些注意事项和约束，这些内容在[承载](hosting-wpf-applications.md)中均有涵盖。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以托管在[!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)]或 Firefox。 每个承载模型都有各自的一些注意事项和约束，这些内容在[承载](hosting-wpf-applications.md)中均有涵盖。  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>生成和部署  
@@ -121,12 +119,12 @@ ms.locfileid: "57365121"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[应用程序管理概述](application-management-overview.md)|简要介绍 <xref:System.Windows.Application> 类，包括管理应用程序生存期、窗口、应用程序资源和导航。|  
 |[WPF 中的窗口](windows-in-wpf-applications.md)|详细介绍如何在应用程序中管理窗口，包括如何使用 <xref:System.Windows.Window> 类和对话框。|  
 |[导航概述](navigation-overview.md)|概述如何管理应用程序的各个页面间的导航。|  
-|[承载](hosting-wpf-applications.md)|概述 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。|  
+|[宿主](hosting-wpf-applications.md)|概述 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。|  
 |[生成和部署](building-and-deploying-wpf-applications.md)|描述如何生成和部署 WPF 应用程序。|  
 |[Visual Studio 中的 WPF 简介](../getting-started/introduction-to-wpf-in-vs.md)|介绍 WPF 的主要功能。|  
 |[演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|一项演练，用于演示如何使用页面导航、布局、控件、图像、样式和绑定来创建 WPF 应用程序。|

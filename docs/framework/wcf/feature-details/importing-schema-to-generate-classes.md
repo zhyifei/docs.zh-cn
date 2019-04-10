@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: e12b4967a84797432ec30cdc88863f8530ea9afd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228583"
 ---
 # <a name="importing-schema-to-generate-classes"></a>导入架构以生成类
 若要从使用 Windows Communication Foundation (WCF) 可用架构生成类，使用<xref:System.Runtime.Serialization.XsdDataContractImporter>类。 本主题描述该过程和变体。  
@@ -27,7 +27,7 @@ ms.locfileid: "54620521"
   
 ### <a name="to-import-a-schema"></a>导入架构  
   
-1. 创建 <xref:System.Runtime.Serialization.XsdDataContractImporter> 的一个实例。  
+1. 创建 <xref:System.Runtime.Serialization.XsdDataContractImporter>的一个实例。  
   
 2. 可选。 在构造函数中传递一个 `CodeCompileUnit`。 将在架构导入期间生成的类型添加到此 `CodeCompileUnit` 实例中，而不是以空白 `CodeCompileUnit` 开始。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54620521"
   
  通常情况下，公共类型是从架构生成的，具有私有字段和匹配的公共数据成员属性。 若要生成内部类型，则将 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 属性设置为 `true`。  
   
- 下面的示例演示在将 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 属性设置为 `true.` 时转换为内部类的架构。  
+ 下面的示例演示转换为内部的架构类时<xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A>属性设置为 `true.`  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
@@ -180,12 +180,13 @@ ms.locfileid: "54620521"
 -   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 属性。 一个可用此属性指定的 <xref:System.Runtime.Serialization.IDataContractSurrogate> 实现。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 自定义导入过程。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
 - <xref:System.Runtime.Serialization.ImportOptions>
-- [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
 - [数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
 - [架构导入和导出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
 - [从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
-- [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

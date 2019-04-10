@@ -2,12 +2,12 @@
 title: 会话、实例化和并发
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 5ccd6fe5e07b2a1bc36b89d1fe14f7990dc7231d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229064"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>会话、实例化和并发
  “会话”是在两个终结点之间发送的所有消息的一种相互关系。  “实例化”是指对用户定义的服务对象以及与其相关的 <xref:System.ServiceModel.InstanceContext> 对象的生存期的控制。  “并发”一词是指对 <xref:System.ServiceModel.InstanceContext> 中同时执行的线程数量的控制。  
@@ -29,11 +29,11 @@ ms.locfileid: "54661812"
   
  如果你熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>类中[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]它提供应用程序和功能，您可能注意到该类型的会话和 WCF 会话之间的以下差异：  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话总是由服务器启动。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话始终都是服务器启动的。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话原本是无序的。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话是隐式无序的。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话提供了一种跨请求的常规数据存储机制。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 会话在请求之间提供一种常规数据存储机制。  
   
  客户端应用程序和服务应用程序以不同方式与会话交互。 客户端应用程序启动会话，然后接收并处理在该会话内发送的消息。 服务应用程序可以将会话用作扩展点，以添加其他行为。 通过直接使用 <xref:System.ServiceModel.InstanceContext> 或实现一个自定义实例上下文提供程序，可以做到这一点。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "54661812"
   
  可以使用下列实例化模式：  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>：一个新<xref:System.ServiceModel.InstanceContext>（以及相应的服务对象） 创建的每个客户端请求。  
+-   <xref:System.ServiceModel.InstanceContextMode.PerCall>:一个新<xref:System.ServiceModel.InstanceContext>（以及相应的服务对象） 创建的每个客户端请求。  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>：一个新<xref:System.ServiceModel.InstanceContext>（以及相应的服务对象） 是为每个新的客户端会话创建和维护 （这需要支持会话的绑定） 该会话的生存期内。  
+-   <xref:System.ServiceModel.InstanceContextMode.PerSession>:一个新<xref:System.ServiceModel.InstanceContext>（以及相应的服务对象） 是为每个新的客户端会话创建和维护 （这需要支持会话的绑定） 该会话的生存期内。  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>：单个<xref:System.ServiceModel.InstanceContext>（以及相应的服务对象） 的应用程序生存期内处理所有客户端请求。  
+-   <xref:System.ServiceModel.InstanceContextMode.Single>:单个<xref:System.ServiceModel.InstanceContext>（以及相应的服务对象） 的应用程序生存期内处理所有客户端请求。  
   
  下面的代码示例演示 <xref:System.ServiceModel.InstanceContextMode> 的默认值（在服务类上显式设置了 <xref:System.ServiceModel.InstanceContextMode.PerSession> ）。  
   
@@ -75,11 +75,11 @@ public class CalculatorService : ICalculatorInstance
   
  有以下三种可用的并发模式：  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Single>：每个实例上下文可拥有最多一次处理中的实例上下文的消息的其中一个线程。 其他希望使用同一个实例上下文的线程必须一直阻塞，直到原始线程退出该实例上下文为止。  
+-   <xref:System.ServiceModel.ConcurrencyMode.Single>:每个实例上下文可拥有最多一次处理中的实例上下文的消息的其中一个线程。 其他希望使用同一个实例上下文的线程必须一直阻塞，直到原始线程退出该实例上下文为止。  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Multiple>：每个服务实例可以有多个线程同时处理消息。 若要使用此并发模式，服务实现必须是线程安全的。  
+-   <xref:System.ServiceModel.ConcurrencyMode.Multiple>:每个服务实例可以有多个线程同时处理消息。 若要使用此并发模式，服务实现必须是线程安全的。  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>：每个服务实例一次处理一个消息，但接受可重入操作的调用。 通过 WCF 客户端对象调用时，该服务仅接受这些调用。  
+-   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>:每个服务实例一次处理一个消息，但接受可重入操作的调用。 通过 WCF 客户端对象调用时，该服务仅接受这些调用。  
   
 > [!NOTE]
 >  理解和开发能够安全地使用多个线程的代码可能比较困难。 在使用 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 或 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 值之前，应确保已针对这些模式对服务进行了适当设计。 有关详细信息，请参阅 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>。  
@@ -108,6 +108,7 @@ public class CalculatorService : ICalculatorConcurrency
 |Single|-会话通道的行为：一个会话和一个<xref:System.ServiceModel.InstanceContext>所有调用。<br />-无会话通道的行为：将引发异常。|-会话通道的行为：会话和<xref:System.ServiceModel.InstanceContext>创建或用户指定的单一实例。<br />-无会话通道的行为：<xref:System.ServiceModel.InstanceContext>创建或用户指定的单一实例。|-会话通道的行为：将引发异常。<br />-无会话通道的行为：<xref:System.ServiceModel.InstanceContext>每个创建的单一实例或用户指定的单一实例。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [使用会话](../../../../docs/framework/wcf/using-sessions.md)
 - [如何：创建要求会话的服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
 - [如何：控制服务实例化](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

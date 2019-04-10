@@ -2,12 +2,12 @@
 title: 服务跟踪查看器工具 (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680381"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213384"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服务跟踪查看器工具 (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助你分析生成的 WCF 的诊断跟踪。 服务跟踪查看器使您能够轻松地合并、 查看和筛选日志中的跟踪消息，以便可以诊断、 修复和验证 WCF 服务问题。  
@@ -456,6 +456,7 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
  如果打开使用阿拉伯语操作系统创建的跟踪日志，您可能会注意到时间筛选器不起作用。 例如，2005 年对应于阿拉伯日历中的 1427 年。 但是，服务跟踪查看器工具筛选器所支持的时间范围不支持早于 1752 年的日期。 这表示您不能在筛选器中选择正确的日期。 若要解决此问题，可以创建自定义筛选器 (**视图/自定义筛选器**) 使用 XPath 表达式包含特定的时间范围。  
   
 ## <a name="see-also"></a>请参阅
-- [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+
+- [使用服务跟踪查看器查看相关跟踪和进行故障诊断](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [配置跟踪](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [端到端跟踪](./diagnostics/tracing/end-to-end-tracing.md)

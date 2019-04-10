@@ -8,12 +8,12 @@ helpviewer_keywords:
 - BMP images [Windows Forms], converting to PNG
 - image formats [Windows Forms], converting between
 ms.assetid: 9d4a692d-73ac-4ce3-9e05-9ec321e8fbd6
-ms.openlocfilehash: f8636bea120aee86c795b4196415145a484e5772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3072c07781a8e8e57b64b48e5b4c304c2a0a0efb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724994"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217011"
 ---
 # <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>如何：将 BMP 图像转换为 PNG 图像
 通常，需要转换图像文件格式。 可以通过调用 <xref:System.Drawing.Image> 类的 <xref:System.Drawing.Image.Save%2A> 方法，并将 <xref:System.Drawing.Imaging.ImageFormat> 指定为所需的图像文件格式来轻松完成转换。  
@@ -32,6 +32,7 @@ ms.locfileid: "57724994"
 -   对 `System.Drawing.Imaging` 命名空间的引用。  
   
 ## <a name="see-also"></a>请参阅
+
 - [如何：列出已安装的编码器](how-to-list-installed-encoders.md)
 - [在托管 GDI+ 中使用图像编码器和解码器](using-image-encoders-and-decoders-in-managed-gdi.md)
 - [位图类型](types-of-bitmaps.md)

@@ -2,12 +2,12 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 298bf27b171772bb039b11b5e5de70e7d45b061d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226867"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings>
 用来指定 Web Socket 设置的配置元素。  
@@ -51,14 +51,14 @@ ms.locfileid: "55258433"
   
 ## <a name="transportusage-attribute"></a>transportUsage 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |WhenDuplex|如果为双工协定，则使用 Web Socket 协议。|  
 |Always|始终使用 Web Socket 协议，而不管协定类型。|  
 |Never|永远不使用 Web Socket 协议。|  
   
 ### <a name="child-elements"></a>子元素  
- 无  
+ None  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -85,6 +85,7 @@ ms.locfileid: "55258433"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>

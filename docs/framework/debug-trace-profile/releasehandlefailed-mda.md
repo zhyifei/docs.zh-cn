@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69dea1adb2d751b44f6c8bc529353ff78cad60ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217869"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 当 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 派生的类的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法返回 `false` 时，激活 `releaseHandleFailed` 托管调试助手 (MDA) 通知开发人员。  
@@ -26,9 +26,9 @@ ms.locfileid: "54673037"
  资源或内存泄漏。  如果 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 派生的类的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法失败，则由类所封装的资源可能尚未释放或清理。  
   
 ## <a name="cause"></a>原因  
- 如果用户创建派生自 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 的类，则他们必须提供 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法的实现；因此，这些情况是特定于单个资源的。 但是，要求如下所示：  
+ 如果用户创建派生自 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 的类，则他们必须提供 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法的实现；因此，这些情况是特定于单个资源的。 但是，需求如下所示：  
   
--   <xref:System.Runtime.InteropServices.SafeHandle> 和 <xref:System.Runtime.InteropServices.CriticalHandle> 类型表示重要进程资源的包装。 随着时间的推移，内存泄漏会使该过程不可用。  
+-   <xref:System.Runtime.InteropServices.SafeHandle> 和<xref:System.Runtime.InteropServices.CriticalHandle>类型表示重要进程资源的包装。 随着时间的推移，内存泄漏会使该过程不可用。  
   
 -   <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法必须成功执行其功能。 一旦进程获取此类资源，<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 就是唯一将其释放的方法。 因此，失败意味着资源泄漏。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54673037"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 对 CLR 无任何影响。  
   
-## <a name="output"></a>输出  
+## <a name="output"></a>Output  
  一条消息，该消息表明 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 未能正确释放该句柄。 例如：  
   
 ```  
@@ -91,6 +91,7 @@ bool ReleaseHandle()
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)

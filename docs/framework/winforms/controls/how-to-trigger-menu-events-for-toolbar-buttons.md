@@ -11,17 +11,16 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: b6d0404f22c7db72b096ef130d9a9f4815db4059
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5256185104f7d22514eac2db93856d7c58f51fb6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707542"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228342"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>如何：触发工具栏按钮的菜单事件
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
+>  <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
   
  如果您的 Windows 窗体功能<xref:System.Windows.Forms.ToolBar>控件使用工具栏按钮时，你将想要知道哪个按钮用户单击。  
   
@@ -136,7 +135,8 @@ ms.locfileid: "57707542"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.ToolBar>
 - [如何：向 ToolBar 控件添加按钮](how-to-add-buttons-to-a-toolbar-control.md)
-- [如何：定义的工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
+- [如何：定义工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
 - [ToolBar 控件](toolbar-control-windows-forms.md)

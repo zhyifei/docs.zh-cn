@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4956a763c9a5b2fc1ad74463fdfdeef2b5dc379e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b3fb71686c3d708de7a2cc71f65a32c22e52f26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620040"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229422"
 ---
 # <a name="ehostapplicationpolicy-enumeration"></a>EHostApplicationPolicy 枚举
 指示如何修改[IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)接口对象。 此枚举已弃用。  
@@ -41,7 +41,8 @@ typedef enum _HostApplicationPolicy {
   
  **库：** MSCorEE.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

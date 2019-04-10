@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: d1209580070c628b8756d01e940a956060223d16
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9312f386198459d0d2dac110827cc6c0029eb247
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222739"
 ---
 # <a name="ui-automation-providers-overview"></a>UI 自动化提供程序概述
 > [!NOTE]
@@ -41,10 +41,10 @@ ms.locfileid: "57680138"
  本部分简要介绍实现 UI 自动化提供程序所需了解的一些关键概念。  
   
 ### <a name="elements"></a>元素  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素是 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 的片段，对 UI 自动化客户端可见。 示例包括应用程序窗口、窗格、按钮、工具提示、列表框和列表项。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素是片段[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]向 UI 自动化客户端可见。 示例包括应用程序窗口、窗格、按钮、工具提示、列表框和列表项。  
   
 ### <a name="navigation"></a>导航  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素作为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树公开给客户端。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 通过从在元素之间进行导航来构造该树。 提供程序为每个元素启用导航，每个导航可能指向一个父级、同级和子级元素。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素公开给客户端作为[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]树。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 通过导航从一个元素到另一个构造该树。 提供程序为每个元素启用导航，每个导航可能指向一个父级、同级和子级元素。  
   
  有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树客户端视图的详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "57680138"
 ### <a name="frameworks"></a>框架  
  框架是一个组件，用于管理屏幕某一区域中的子控件、命中测试和呈现方式。 例如， [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 窗口（通常称为 HWND）可作为框架使用，该框架包含多个 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素，例如菜单栏、状态栏和按钮。  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 容器控件（例如列表框和树视图）均视为框架，因为它们包含用于呈现子项和对其执行命中测试的代码。 与此相反， [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 列表框不是一个框架，因为包含 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 窗口处理呈现和命中测试。  
+ [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 容器控件如列表框和树视图可视为要进行命中测试的框架，因为它们包含用于呈现子项和执行其自己的代码。 与此相反， [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 列表框不是一个框架，因为包含 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 窗口处理呈现和命中测试。  
   
  应用程序中的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可由不同框架构成。 例如，HWND 应用程序窗口可能包含 [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] ，后者又包含 HWND 中的组合框等组件。  
   
@@ -77,4 +77,5 @@ ms.locfileid: "57680138"
  片段的宿主对于提供 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 服务中而言非常重要。 它允许导航到片段根，并提供一些默认属性，使自定义提供程序无需实现这些属性。  
   
 ## <a name="see-also"></a>请参阅
-- [服务器端 UI 自动化提供程序实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+
+- [服务器端 UI 自动化提供程序的实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：响应 Windows 窗体 CheckBox 控件单击
+title: 如何：响应 Windows 窗体 CheckBox 的单击
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: fff08bebf4e0eeea7dff8146ed8805e9d71247da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724496"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211980"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>如何：响应 Windows 窗体 CheckBox 控件单击
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>如何：响应 Windows 窗体 CheckBox 的单击
 每当用户单击 Windows 窗体<xref:System.Windows.Forms.CheckBox>控件，<xref:System.Windows.Forms.Control.Click>事件发生。 您可以在应用程序中执行某些操作根据复选框的状态。  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>若要响应的复选框单击  
@@ -136,6 +136,7 @@ ms.locfileid: "57724496"
     >  当<xref:System.Windows.Forms.CheckBox.ThreeState%2A>属性设置为`true`，则<xref:System.Windows.Forms.CheckBox.Checked%2A>属性将返回`true`同时<xref:System.Windows.Forms.CheckState.Checked>和<xref:System.Windows.Forms.CheckState.Indeterminate>。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox 控件概述](checkbox-control-overview-windows-forms.md)
 - [如何：使用 Windows 窗体 CheckBox 控件设置选项](how-to-set-options-with-windows-forms-checkbox-controls.md)

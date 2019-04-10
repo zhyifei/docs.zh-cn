@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1cdcfcaf29cc2b0ec6da1108e0ecd91710db36c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bf7b54ab7a2318e8194bf39dbe41b864633ddb43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212903"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly 方法
 创建程序集。 所有其他文件关闭除程序集文件后，请调用此方法。 生成未绑定的模块时，请勿调用此方法。  
@@ -46,6 +46,7 @@ HRESULT EmitAssembly(
  需要 alink.h  
   
 ## <a name="see-also"></a>请参阅
+
 - [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

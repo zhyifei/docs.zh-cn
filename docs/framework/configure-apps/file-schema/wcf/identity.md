@@ -2,12 +2,12 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 5b5248f4cb8bdcd15b553fa14351013e78d422d9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 0f5eace346fd0ed2c0532fb602585c4593d97291
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220352"
 ---
 # <a name="identity"></a>\<identity>
 标识元素允许客户端开发人员在设计时指定服务的期望标识。 在客户端和服务之间的握手过程中，Windows Communication Foundation (WCF) 基础结构将确保预期的服务匹配此元素的值的标识，因此可以进行身份验证。 有关详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "55675395"
   
 |元素|描述|  
 |-------------|-----------------|  
-|certificate|指定 X.509 证书的设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.CertificateElement>。 它包含一个 `encodedValue` 属性，该属性是一个字符串，用于指定此证书编码的值。|  
+|证书|指定 X.509 证书的设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.CertificateElement>。 它包含一个 `encodedValue` 属性，该属性是一个字符串，用于指定此证书编码的值。|  
 |certificateReference|指定 X.509 证书验证的设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.CertificateReferenceElement>。|  
 |dns|指定用于对服务进行身份验证的 X.509 证书的 DNS。 此元素包含一个字符串属性 `value`，并包含实际的标识。|  
 |rsa|指定用于向客户端验证服务身份的 X.509 证书的 RSA 字段的值。 此元素包含一个字符串属性 `value`，并包含实际的标识。|  
@@ -63,8 +63,9 @@ ms.locfileid: "55675395"
 |[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|指定本地安全令牌服务 (STS)。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [终结点：地址、 绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [终结点：地址、绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

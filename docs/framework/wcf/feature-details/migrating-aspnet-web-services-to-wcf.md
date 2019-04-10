@@ -2,12 +2,12 @@
 title: 将 ASP.NET Web 服务迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: 6fb96dc431008936658bb941f16373037e712f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211083"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>将 ASP.NET Web 服务迁移到 WCF
 ASP.NET 提供 .NET Framework 类库和工具以用于生成 Web 服务，并提供用于在 Internet Information Services (IIS) 内承载服务的功能。 Windows Communication Foundation (WCF) 提供了.NET Framework 类库、 工具和承载功能，使软件实体，可以使用任何协议，包括 Web 服务所使用的协议进行通信。  ASP.NET Web 服务迁移到 WCF 允许应用程序以充分利用新功能和改进功能，是唯一的 WCF。  
@@ -36,8 +36,9 @@ ASP.NET 提供 .NET Framework 类库和工具以用于生成 Web 服务，并提
  本部分介绍了这些选项在详细信息、 比较 ASP.NET Web 服务与 WCF 和说明了如何将 ASP.NET Web 服务代码迁移到 WCF。  
   
 ## <a name="see-also"></a>请参阅
-- [预期采用 Windows Communication Foundation:使未来迁移轻而易举](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
-- [预期采用 Windows Communication Foundation:便于以后集成](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+
+- [Windows Communication Foundation 使用展望：轻松实现未来的迁移](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+- [Windows Communication Foundation 使用展望：轻松实现未来的集成](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
 - [采用 Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)
 - [基于目标和使用的标准比较 ASP.NET Web 服务与 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
 - [从开发的角度比较 ASP.NET Web 服务与 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

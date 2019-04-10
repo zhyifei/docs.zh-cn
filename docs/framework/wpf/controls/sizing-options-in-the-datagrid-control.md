@@ -6,12 +6,12 @@ helpviewer_keywords:
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-ms.openlocfilehash: 38cd29720a885f10d093bdb4617c503c16402e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d100fb17b1ee3e652985a637d333d9f65e20d36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219195"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>DataGrid 控件中的调整大小选项
 各种选项来控制如何<xref:System.Windows.Controls.DataGrid>调整自身大小。 <xref:System.Windows.Controls.DataGrid>，以及各个行和列中的<xref:System.Windows.Controls.DataGrid>，可以设置为其内容自动调整大小，也可以设置为特定值。 默认情况下，<xref:System.Windows.Controls.DataGrid>将放大或缩小以适合其内容的大小。  
@@ -56,7 +56,7 @@ ms.locfileid: "54672183"
   
  下表显示了由提供的值<xref:System.Windows.Controls.DataGridLengthUnitType>结构。  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.Auto>|默认自动调整大小模式大小<xref:System.Windows.Controls.DataGrid>列基于单元格和列标题的内容。|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToCells>|基于单元格的自动调整大小模式大小<xref:System.Windows.Controls.DataGrid>列基于的列，不包括列标题中的单元格的内容。|  
@@ -86,6 +86,7 @@ ms.locfileid: "54672183"
  用户可以调整大小<xref:System.Windows.Controls.DataGrid>行和列通过拖动行或列标题分隔符。 <xref:System.Windows.Controls.DataGrid>还支持自动调整大小的行和列通过双击行或列标题分隔符。 若要防止用户调整特定列的大小，设置<xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType>属性设置为`false`为各个列。 若要阻止用户调整所有列，设置<xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType>属性设置为`false`。 若要阻止用户调整所有行，将设置<xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType>属性设置为`false`。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGridColumn>
 - <xref:System.Windows.Controls.DataGridLength>

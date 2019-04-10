@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 116792c6a669f31b0c69dcc0b25134af7e72f9f2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f2df98728eec28ffca05b2e246575fc5c882a078
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229636"
 ---
 # <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a>ISymUnmanagedDocument::GetCheckSumAlgorithmId 方法
 获取校验和算法标识符，或如果没有校验和，则返回全部为零的 GUID。  
@@ -42,4 +42,5 @@ HRESULT GetCheckSumAlgorithmId(
  如果该方法成功，则为 S_OK。  
   
 ## <a name="see-also"></a>请参阅
+
 - [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

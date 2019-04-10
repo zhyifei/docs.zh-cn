@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
-ms.openlocfilehash: f55036d4fdf4576faab50be7b42cf7a4077e6a3b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c300df2c63f4fa852c8cce318a5461f3be5f226
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227556"
 ---
 # <a name="image-how-to-topics"></a>图像帮助主题
 在本部分中的主题介绍如何使用<xref:System.Windows.Controls.Image>元素。  
@@ -31,5 +31,6 @@ ms.locfileid: "57376268"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>请参阅
+
 - [图像处理概述](../graphics-multimedia/imaging-overview.md)
 - [帮助主题](../graphics-multimedia/imaging-how-to-topics.md)

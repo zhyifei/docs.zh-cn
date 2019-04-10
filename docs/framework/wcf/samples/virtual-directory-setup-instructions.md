@@ -2,12 +2,12 @@
 title: 虚拟目录设置说明
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 0f32fd6d65db529ba1015dedd98f99efd7f408c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225581"
 ---
 # <a name="virtual-directory-setup-instructions"></a>虚拟目录设置说明
 Windows Communication Foundation (WCF) 示例旨在共享公共虚拟目录，名为 servicemodelsamples 的将映射到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 文件夹。  
@@ -59,9 +59,9 @@ Windows Communication Foundation (WCF) 示例旨在共享公共虚拟目录，�
   
 7.  默认情况下，已选中以下复选框：  
   
-    -   **Read**  
+    -   **读取**  
   
-    -   **运行脚本 （如 ASP)**  
+    -   **运行脚本(如 ASP)**  
   
 8.  单击**下一步**，然后单击**完成**以完成向导。  
   
@@ -84,11 +84,11 @@ Windows Communication Foundation (WCF) 示例旨在共享公共虚拟目录，�
   
 2.  默认情况下，已选中以下复选框：  
   
-    -   **Read**  
+    -   **读取**  
   
     -   **日志访问**  
   
-    -   **编制此资源的索引**  
+    -   **索引此资源**  
   
 3.  选择**目录浏览**复选框。 这样，您将能够使用 Internet Explorer 访问目录的目录，这在调试服务时将很有帮助。  
   
@@ -191,4 +191,5 @@ Windows Communication Foundation (WCF) 示例旨在共享公共虚拟目录，�
     3.  在中**组**列中，检查的值**ASPNET**是"用户。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Internet 信息服务承载说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

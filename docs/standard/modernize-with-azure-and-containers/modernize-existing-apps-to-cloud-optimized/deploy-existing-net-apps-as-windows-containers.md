@@ -1,17 +1,17 @@
 ---
-title: 将现有.NET 应用部署为 Windows 容器
+title: 将现有 .NET 应用部署为 Windows 容器
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |将现有.NET 应用部署为 Windows 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 646acc6fd14c1ff85593dbf6074f0d03d86f04bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143742"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216660"
 ---
-# <a name="deploy-existing-net-apps-as-windows-containers"></a>将现有.NET 应用部署为 Windows 容器
+# <a name="deploy-existing-net-apps-as-windows-containers"></a>将现有 .NET 应用部署为 Windows 容器
 
 基于 Windows 容器的部署都适用于云优化的应用程序和云本机应用程序。
 
@@ -55,7 +55,7 @@ ms.locfileid: "53143742"
 
 ![](./media/image6.png)
 
-> **图 4-6。** Docker 在混合云的所有层部署容器
+> **图 4-6。** Docker 在混合云的所有层上部署容器
 
 某个人可以使用熟悉的虚拟机，容器可能看起来非常类似。 容器运行的操作系统、 具有文件系统，并且可以通过网络，就像物理或虚拟计算机系统访问。 但是，技术和容器背后的概念是迥然不同的虚拟机。 从开发人员的角度来看，容器必须被更当作单个进程。 事实上，容器都有一个进程的单一入口点。
 
@@ -134,7 +134,6 @@ Linux 容器，如 Windows Server 容器通过 Docker 引擎管理。 与 Linux 
 -   **信息图：Microsoft 和容器**
 
     [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
-
 
 ## <a name="the-container-ecosystem-in-azure"></a>Azure 中的容器生态系统
 

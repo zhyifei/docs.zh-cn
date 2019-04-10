@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: d99528dcfbf2229b57e81f9dedc5bc0aa50c5b75
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211421"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox 帮助主题
 本部分提供示例来演示如何完成常见任务使用<xref:System.Windows.Controls.TextBox>控件。  
@@ -21,7 +21,7 @@ ms.locfileid: "57375204"
  [创建多行 TextBox 控件](how-to-create-a-multiline-textbox-control.md)  
  [检测 TextBox 中的文本何时更改](how-to-detect-when-text-in-a-textbox-has-changed.md)  
  [在 TextBox 控件中启用制表符](how-to-enable-tab-characters-in-a-textbox-control.md)  
- [从 TextBox 获取一系列文本行](how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [从 TextBox 获取文本行集合](how-to-get-a-collection-of-lines-from-a-textbox.md)  
  [将 TextBox 控件设为只读](how-to-make-a-textbox-control-read-only.md)  
  [将光标置于 TextBox 控件中文本的开头或结尾](position-the-cursor-at-the-beginning-or-end-of-text.md)  
  [检索选定文本内容](how-to-retrieve-a-text-selection.md)  
@@ -42,5 +42,6 @@ ms.locfileid: "57375204"
  <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="see-also"></a>请参阅
+
 - [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [TextBox 样式和模板](textbox-styles-and-templates.md)

@@ -3,12 +3,12 @@ title: 在 Azure 上使用 F#
 description: 使用 Azure 服务的指南F#
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: 8243c021b8bc3ea9b067b278a5d9c6e3619232b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 92b453b680a5f8c55f35458e9020f15444e90035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371031"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211733"
 ---
 # <a name="using-f-on-azure"></a>在 Azure 上使用 F#
 
@@ -25,7 +25,6 @@ Azure 支持各种不同的虚拟机 (VM) 配置，请参阅 [Linux 和 Azure �
 
 若要在虚拟机上安装 F# 用来执行、编译和/或编写脚本，请参阅[在 Linux 上使用 F#](https://fsharp.org/use/linux) 和[在 Windows 上使用 F#](https://fsharp.org/use/windows)。
 
-
 ## <a name="using-azure-functions-with-f"></a>使用 Azure Functions F\#
 
 [Azure Functions](https://azure.microsoft.com/services/functions/) 是一个在云中轻松运行小代码段或“函数”的解决方案。 可针对手头的问题编写所需代码，无需担心用来运行该代码的完整应用程序或基础结构。 函数连接到 Azure 存储和其他云托管资源中的事件。 数据通过函数参数流入 F# 函数。 可以使用所选择的开发语言，信任 Azure 按需进行扩展。
@@ -34,18 +33,18 @@ Azure Functions 支持 F# 作为第一类语言，它执行 F# 代码时高效�
 
 结合使用 Azure Functions 和 F# 的其他资源：
 
-* [Scale Up Azure Functions in F# Using Suave](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)（使用 Suave 以 F# 扩展 Azure Functions）
-* [How to create Azure function in F#](https://mnie.github.io/2016-09-08-AzureFunctions/)（如何以 F# 创建 Azure Functions）
+* [纵向扩展中的 Azure 函数F#使用 Suave](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
+* [如何创建 Azure 函数中F#](https://mnie.github.io/2016-09-08-AzureFunctions/)
 * [使用 Azure Functions 和 Azure 类型提供程序](https://compositional-it.com/blog/2017/08-30-using-the-azure-type-provider-with-azure-functions/index.html)
 
 ## <a name="using-azure-storage-with-f"></a>使用 Azure 存储与 F\#
 
 Azure 存储是一种基层存储服务，用于依赖于持久性、可用性和可缩放性来满足其客户需求的现代应用程序。 F#程序可以直接与 Azure 存储服务，使用以下文章中所述的技术进行交互。
 
-* [通过 F# 实现 Azure Blob 入门](blob-storage.md)
-* [通过 F# 实现 Azure 文件存储入门](file-storage.md)
-* [通过 F# 实现 Azure 队列存储入门](queue-storage.md)
-* [通过 F# 实现 Azure 表格存储入门](table-storage.md)
+* [开始使用 Azure Blob 存储使用F#](blob-storage.md)
+* [开始使用 Azure 文件存储使用F#](file-storage.md)
+* [使用 Azure 队列存储入门F#](queue-storage.md)
+* [开始使用 Azure 表存储使用F#](table-storage.md)
 
 Azure 存储还可以通过声明性配置（而非显式 API 调用）与 Azure Functions 结合使用。 请参阅 [Azure Functions triggers and bindings for Azure Storage](/azure/azure-functions/functions-bindings-storage)（用于 Azure 存储的 Azure Functions 触发器和绑定），其中包括 F# 示例。
 
@@ -53,15 +52,15 @@ Azure 存储还可以通过声明性配置（而非显式 API 调用）与 Azure
 
 [Azure 应用服务](https://azure.microsoft.com/services/app-service/)是一个用于构建功能强大的 Web 和移动应用的云平台，这些应用可连接到任何位置（云中或本地）的数据。
 
-* [F# Azure Web API 示例](https://github.com/fsprojects/azure-webapi-example)
-* [Hosting F# in a web application on Azure](https://github.com/isaacabraham/fsharp-demonstrator)（在 Azure 上的 Web 应用程序中托管 F#）
+* [F#Azure Web API 示例](https://github.com/fsprojects/azure-webapi-example)
+* [承载F#在 Azure 上的 web 应用程序](https://github.com/isaacabraham/fsharp-demonstrator)
 
 ## <a name="using-apache-spark-with-f-with-azure-hdinsight"></a>通过 Azure HDInsight 结合使用 Apache Spark 与 F#
 
 [Apache Spark for Azure HDInsight](https://azure.microsoft.com/services/hdinsight/apache-spark/) 是一个开放源代码处理框架，用于运行大型数据分析应用程序。 Azure 使 Apache Spark 的部署简单且经济实惠。 通过 [Mobius](https://github.com/Microsoft/Mobius)（适用于 Spark 的 .NET API）使用 F# 开发 Spark 应用程序。
 
-* [Implementing Spark Apps in F# using Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)（使用 Mobius 以 F# 形式实现 Spark 应用）
-* [使用 Mobius 的示例 F# Spark 应用](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
+* [实现中的 Spark 应用程序F#使用 Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
+* [示例F#使用 Mobius 的 Spark 应用](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
 ## <a name="using-azure-cosmos-db-with-f"></a>使用 Azure Cosmos DB 与 F\#
 
@@ -90,7 +89,6 @@ Azure Cosmos DB 可与F#通过两种方式：
 1. 通过创建向通知中心发送结果的 F# Azure Functions。 请参阅 [Azure Functions 通知中心输出触发器](/azure/azure-functions/functions-bindings-notification-hubs)，或
 2. 通过使用[适用于 Azure 的 .NET SDK](https://blogs.msdn.microsoft.com/azuremobile/2014/04/08/push-notifications-using-notification-hub-and-net-backend/)。 请注意，这些示例使用的是 C#。
 
-
 ## <a name="implementing-webhooks-on-azure-with-f"></a>通过 F 在 Azure 上实现 Webhook\#
 
 [Webhook](https://en.wikipedia.org/wiki/Webhook) 是通过 Web 请求触发的回调。 Webhook 由 GitHub 等站点使用，用以向事件发送信号。
@@ -101,7 +99,7 @@ Webhook 可采用 F# 实现，并通过 [Azure Function in F# with a Webhook Bin
 
 [Webjob](/azure/app-service-web/web-sites-create-web-jobs) 是可采用以下三种方式在应用服务 Web 应用中运行的程序：按需、连续或按计划。
 
-[示例 F# Webjob](https://github.com/jrr/webjob-project-examples)
+[示例F#web 作业](https://github.com/jrr/webjob-project-examples)
 
 ## <a name="implementing-timers-on-azure-with-f"></a>通过 F 在 Azure 上实现计时器\#
 
@@ -119,4 +117,4 @@ Webhook 可采用 F# 实现，并通过 [Azure Function in F# with a Webhook Bin
 
 ## <a name="other-resources"></a>其他资源
 
-* [有关所有 Azure 服务的完整文档](/azure/)
+* [所有 Azure 服务的完整文档](/azure/)

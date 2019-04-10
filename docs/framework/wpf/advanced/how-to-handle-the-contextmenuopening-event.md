@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 077a28f345b886fd9ec183b5828c0535ce688cb4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a6ac0158c4fb9d766fd56ee50d0b1b6cc91e5de3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219624"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>如何：处理 ContextMenuOpening 事件
 <xref:System.Windows.FrameworkElement.ContextMenuOpening>应用程序可以调整现有的上下文菜单之前来显示或禁止显示本应通过设置中显示的菜单中，可以处理事件<xref:System.Windows.RoutedEventArgs.Handled%2A>属性设置为`true`事件数据中。 设置的典型原因<xref:System.Windows.RoutedEventArgs.Handled%2A>到`true`在事件数据将替换为菜单完全新<xref:System.Windows.Controls.ContextMenu>对象，这有时需要取消该操作并启动新打开的。 如果您编写的处理程序<xref:System.Windows.FrameworkElement.ContextMenuOpening>事件，您应注意的计时问题之间<xref:System.Windows.Controls.ContextMenu>控件和服务，它负责打开和一般情况下定位控件的上下文菜单。 本主题演示了其中一些各种上下文菜单打开方案的代码技术，并说明了计时问题派上用场的事例。  
@@ -56,6 +56,7 @@ ms.locfileid: "57364835"
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceReopen](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacereopen)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>
 - [基元素概述](base-elements-overview.md)

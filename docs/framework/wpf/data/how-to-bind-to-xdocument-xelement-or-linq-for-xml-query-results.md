@@ -1,5 +1,5 @@
 ---
-title: 如何：绑定到 XDocument、XElement 或 LINQ for XML 查询结果
+title: 如何：绑定到 XDocument、XElement 或 LINQ to XML 查询结果
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], binding to XDocument
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
-ms.openlocfilehash: 6c220bf7b06e6eaf4cf661c07a0a8c6c37ec333d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: afecb87dcfce1a8c48f1b2108edeae3cfd2aa16f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209653"
 ---
-# <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>如何：绑定到 XDocument、XElement 或 LINQ for XML 查询结果
+# <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>如何：绑定到 XDocument、XElement 或 LINQ to XML 查询结果
 此示例演示如何使用 <xref:System.Xml.Linq.XDocument> 将 XML 数据绑定到 <xref:System.Windows.Controls.ItemsControl>。  
   
 ## <a name="example"></a>示例  
@@ -40,6 +40,7 @@ ms.locfileid: "57358257"
  [!code-vb[XLinqExample#BindToResults](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#bindtoresults)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [绑定源概述](binding-sources-overview.md)
 - [使用 LINQ to XML 进行 WPF 数据绑定概述](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
 - [使用 LINQ to XML 的 WPF 数据绑定示例](/visualstudio/designers/wpf-data-binding-using-linq-to-xml-example)

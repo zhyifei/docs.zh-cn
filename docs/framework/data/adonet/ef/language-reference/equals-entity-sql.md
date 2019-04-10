@@ -2,12 +2,12 @@
 title: =（等于）(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
-ms.openlocfilehash: 2791bc0940bad92208c5bdce3659534f237bd6e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ad9eda5a3544ea157d06c57876b1b0454a25dba1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215672"
 ---
 # <a name="-equals-entity-sql"></a>=（等于）(Entity SQL)
 比较两个表达式是否相等。  
@@ -25,7 +25,7 @@ expression == expression
  任何有效表达式。 两个表达式都必须具有可隐式转换的数据类型。  
   
 ## <a name="result-types"></a>结果类型  
- 如果左侧表达式等于右侧表达式，则为`true` ；否则为 `false`。  
+ `true` 如果左侧的表达式等于右侧表达式;否则为`false`。  
   
 ## <a name="remarks"></a>备注  
  == 运算符等效于 =。  
@@ -40,4 +40,5 @@ expression == expression
  [!code-csharp[DP EntityServices Concepts 2#EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#equals)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

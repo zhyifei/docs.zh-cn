@@ -1,5 +1,5 @@
 ---
-title: 如何：MDI 中使用 Toolstrippanel
+title: 如何：将 ToolStripPanel 用于 MDI
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], using for MDI
 - toolbars [Windows Forms], using for MDI
 ms.assetid: d6b884fc-0846-465f-83c3-5dc0fe93b00f
-ms.openlocfilehash: a543b9e292f29e54b45327ae77a81676c992f103
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 42d4ed23f477f545c4ff2be53c36d8ea86d3b4f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722056"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219871"
 ---
-# <a name="how-to-use-toolstrippanels-for-mdi"></a>如何：MDI 中使用 Toolstrippanel
+# <a name="how-to-use-toolstrippanels-for-mdi"></a>如何：将 ToolStripPanel 用于 MDI
 <xref:System.Windows.Forms.ToolStripPanel> 通过使用 <xref:System.Windows.Forms.ToolStripPanel.Join%2A> 方法为多文档界面 (MDI) 应用程序提供了灵活性。  
   
 ## <a name="example"></a>示例  
@@ -33,5 +33,6 @@ ms.locfileid: "57722056"
  Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.ToolStripPanel>
-- [如何：Join ToolStripPanels](how-to-join-toolstrippanels.md)
+- [如何：联接 ToolStripPanel](how-to-join-toolstrippanels.md)

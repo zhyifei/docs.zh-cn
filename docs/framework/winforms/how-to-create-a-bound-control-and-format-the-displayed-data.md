@@ -1,19 +1,19 @@
 ---
-title: 如何：创建绑定的控件并格式化显示的数据
+title: 如何：创建绑定控件并设置显示数据的格式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8b1256c1389c6a55f405f0be0d137a8ad170dbec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0f56fc5fa345cbe4584b61ae2622dfb0dfb35be8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225529"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>如何：创建绑定的控件并格式化显示的数据
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>如何：创建绑定控件并设置显示数据的格式
 可以设置使用数据绑定控件中显示的数据格式与 Windows 窗体数据绑定**格式设置和高级绑定**对话框。  
   
 > [!NOTE]
@@ -55,6 +55,7 @@ ms.locfileid: "57710493"
 8.  单击**确定**以关闭**格式设置和高级绑定**对话框并返回到属性窗口。  
   
 ## <a name="see-also"></a>请参阅
-- [如何：创建 Windows 窗体上的简单绑定控件](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+
+- [如何：在 Windows 窗体上创建简单绑定控件](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Windows 窗体中的用户输入验证](user-input-validation-in-windows-forms.md)
 - [Windows 窗体数据绑定](windows-forms-data-binding.md)

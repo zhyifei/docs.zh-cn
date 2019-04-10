@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 640940cea30b489683972debdd14b592d565ef4b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 49476a4417e5431842f8e2ba0371c53c5c9f03e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207820"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken 函数
 
@@ -42,7 +42,8 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
  [out] 指向 WCHAR * 的指针，用于接收十六进制编码的公钥标记。  
   
 ## <a name="return-value"></a>返回值  
- 如果此函数成功，则返回 `S_OK`。 否则，返回错误代码。  
+ `S_OK` 如果函数成功。 否则，返回错误代码。  
   
 ## <a name="see-also"></a>请参阅
+
 - [验证码](../../../../docs/framework/unmanaged-api/authenticode/index.md)

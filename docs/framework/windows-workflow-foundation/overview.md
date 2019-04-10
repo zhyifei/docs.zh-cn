@@ -2,12 +2,12 @@
 title: Windows 工作流概述
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: 049d955b191e14ac79702df3fe218e23a555e6d3
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 57c394805d4aa07f8a137af259619bb1e65c43de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217596"
 ---
 # <a name="windows-workflow-overview"></a>Windows 工作流概述
 工作流是一组的名为的基本单元*活动*作为描述实际过程的模型存储的。 工作流提供了一种方法，用于描述多项短期运行或长期运行的工作之间的执行顺序和依赖关系。 此工作从头到尾地贯穿模型，并且活动可以人工执行或由系统功能执行。  
@@ -33,7 +33,7 @@ ms.locfileid: "58464679"
   
  ![图，显示工作流组件如何交互。](./media/overview/workflow-component-interatction.gif)  
   
- 在上图中，<xref:System.Activities.WorkflowInvoker.Invoke%2A> 类的 <xref:System.Activities.WorkflowInvoker> 方法用于调用多个工作流实例。 <xref:System.Activities.WorkflowInvoker> 用于不需要由宿主管理的轻型工作流；需要由宿主管理的工作流（如 <xref:System.Activities.Bookmark> 恢复）必须改用 <xref:System.Activities.WorkflowApplication.Run%2A> 来执行。 无需等待一个工作流实例完成即可调用下一个工作流实例；运行时引擎支持同时运行多个工作流实例。  调用的工作流如下：  
+ 在上图中，<xref:System.Activities.WorkflowInvoker.Invoke%2A> 类的 <xref:System.Activities.WorkflowInvoker> 方法用于调用多个工作流实例。 <xref:System.Activities.WorkflowInvoker> 用于不需要由主机; 管理的轻型工作流需要由宿主管理的工作流 (如<xref:System.Activities.Bookmark>恢复) 必须使用执行<xref:System.Activities.WorkflowApplication.Run%2A>相反。 无需等待一个工作流实例完成即可调用下一个工作流实例；运行时引擎支持同时运行多个工作流实例。  调用的工作流如下：  
   
 -   一个包含 <xref:System.Activities.Statements.Sequence> 子活动的 <xref:System.Activities.Statements.WriteLine> 活动。 父活动的 <xref:System.Activities.Variable> 绑定到子活动的 <xref:System.Activities.InArgument>。 在变量、 参数以及绑定的详细信息，请参阅[变量和自变量](variables-and-arguments.md)。  
   
@@ -42,4 +42,5 @@ ms.locfileid: "58464679"
 -   一个派生自 <xref:System.Activities.CodeActivity> 抽象类的自定义活动。 <xref:System.Activities.CodeActivity> 可以使用作为 <xref:System.Activities.CodeActivityContext> 方法的参数提供的 <xref:System.Activities.CodeActivity.Execute%2A> 访问运行时功能（如跟踪和属性）。 有关这些运行时功能的详细信息，请参阅[工作流跟踪](workflow-tracking-and-tracing.md)并[工作流执行属性](workflow-execution-properties.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [BizTalk Server 2006 还是 WF？为你的项目选择正确的工作流工具](https://go.microsoft.com/fwlink/?LinkId=154901)
+
+- [BizTalk Server 2006 还是 WF？ 为你的项目选择正确的工作流工具](https://go.microsoft.com/fwlink/?LinkId=154901)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 32efbd44579622fddba95d162261633a1af6d277
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206403"
 ---
 # <a name="drawings"></a>绘图
 <xref:System.Windows.Media.Drawing> 对象用于高效地绘制形状、 图像或文本。 当使用进行绘制时，可以使用 drawing<xref:System.Windows.Media.DrawingBrush>或编程与<xref:System.Windows.Media.Visual>对象。  
@@ -28,8 +28,9 @@ ms.locfileid: "57364575"
   [帮助主题](drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Media.Drawing>
-- [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)
-- [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)
+- [二维图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [WPF 图形呈现疑难解答](wpf-graphics-rendering-overview.md)
+- [WPF 中的形状和基本图形概述](shapes-and-basic-drawing-in-wpf-overview.md)
 - [图形和多媒体](index.md)

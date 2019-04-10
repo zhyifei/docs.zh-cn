@@ -2,12 +2,12 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 3216b578ffed23091a27c4449abfe1aa6a2a97c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209107"
 ---
 # <a name="hosting"></a>宿主
 本节中的主题介绍服务承载。 通过 Internet 信息服务 (IIS)、 Windows 进程激活服务 (WAS)、 Windows Server AppFabric、 Windows 服务或托管的应用程序可以承载服务，此选项通常称为*自我托管*。  
@@ -15,10 +15,10 @@ ms.locfileid: "54502997"
  值得注意的是，从不受信任的主机运行服务或任何扩展会危害安全。  
   
 ## <a name="in-this-section"></a>本节内容  
- [在 Internet Information Services 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [在 Internet 信息服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  介绍如何在 Windows Communication Foundation (WCF) 服务托管在 Internet 信息服务或[Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)。  
   
- [在 Windows Process Activation Service 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
+ [在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
  介绍如何通过 Windows 进程激活服务承载 WCF 服务。  
   
  [在 Windows 服务应用程序中承载](../../../../docs/framework/wcf/feature-details/hosting-in-a-windows-service-application.md)  
@@ -34,5 +34,6 @@ ms.locfileid: "54502997"
  描述如何使用同一 URI 方案在一个网站上为一个服务指定多个基址。  
   
 ## <a name="see-also"></a>请参阅
-- [托管服务](../../../../docs/framework/wcf/hosting-services.md)
+
+- [承载服务](../../../../docs/framework/wcf/hosting-services.md)
 - [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

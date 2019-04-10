@@ -1,5 +1,5 @@
 ---
-title: 如何：对 Visual 中的几何图形进行命中测试
+title: 如何：对视觉对象中的几何图形进行命中测试
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: e51dd73a65666ffee5958325079e8f06f13ac61b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227335"
 ---
-# <a name="how-to-hit-test-geometry-in-a-visual"></a>如何：对 Visual 中的几何图形进行命中测试
+# <a name="how-to-hit-test-geometry-in-a-visual"></a>如何：对视觉对象中的几何图形进行命中测试
 此示例演示如何以组成一个或多针对视觉对象执行命中的测试<xref:System.Windows.Media.Geometry>对象。  
   
 ## <a name="example"></a>示例  
@@ -36,5 +36,6 @@ ms.locfileid: "57363795"
 >  此示例并未考虑可能应用到几何图形中的任何变形或剪裁。 此外，此示例不会使用已设置样式的控件，因为这种控件没有与它直接关联的绘图。  
   
 ## <a name="see-also"></a>请参阅
+
 - [可视化层中的命中测试](hit-testing-in-the-visual-layer.md)
-- [将几何图形用作参数的命中测试](how-to-hit-test-using-geometry-as-a-parameter.md)
+- [对用作参数的几何图形进行命中测试](how-to-hit-test-using-geometry-as-a-parameter.md)

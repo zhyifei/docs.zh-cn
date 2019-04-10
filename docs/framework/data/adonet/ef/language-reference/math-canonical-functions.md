@@ -2,12 +2,12 @@
 title: 数学规范函数
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: 3e8122806e31fc72b3d390e5e8671fada7f3a47d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f575785bb198251ef50ba3563e736946253c9526
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228765"
 ---
 # <a name="math-canonical-functions"></a>数学规范函数
 
@@ -17,7 +17,7 @@ ms.locfileid: "54492698"
 
 返回 `value` 的绝对值。
 
-**参数**
+**自变量**
 
 `Int16`， `Int32`， `Int64`， `Byte`， `Single`， `Double`，和`Decimal`。
 
@@ -33,7 +33,7 @@ ms.locfileid: "54492698"
 
 返回不小于 `value` 的最小整数。
 
-**参数**
+**自变量**
 
 一个`Single`， `Double`，和`Decimal`。
 
@@ -50,7 +50,7 @@ ms.locfileid: "54492698"
 
 返回不大于 `value` 的最大整数。
 
-**参数**
+**自变量**
 
 一个`Single`， `Double`，和`Decimal`。
 
@@ -67,7 +67,7 @@ ms.locfileid: "54492698"
 
 返回对指定的 `value` 求指定的 `exponent` 幂次所得的结果。
 
-**参数**
+**自变量**
 
 |  |  |
 |--|--|
@@ -86,7 +86,7 @@ ms.locfileid: "54492698"
 
 返回 `value` 的整数部分，舍入到最近的整数。
 
-**参数**
+**自变量**
 
 一个`Single`， `Double`，和`Decimal`。
 
@@ -102,7 +102,7 @@ ms.locfileid: "54492698"
 
 返回 `value`，舍入到最近的指定 `digits`。
 
-**参数**
+**自变量**
 
 |  |  |
 |--|--|
@@ -121,7 +121,7 @@ ms.locfileid: "54492698"
 
 返回 `value`，截断至最近的指定 `digits`。
 
-**参数**
+**自变量**
 
 |  |  |
 |--|--|
@@ -141,4 +141,5 @@ ms.locfileid: "54492698"
  Microsoft SQL 客户端托管提供程序中提供了等效功能。 有关详细信息，请参阅[用于实体框架函数的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

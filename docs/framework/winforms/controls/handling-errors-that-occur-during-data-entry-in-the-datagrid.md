@@ -1,5 +1,5 @@
 ---
-title: 演练：Windows 窗体 DataGridView 控件中的数据输入时发生的错误处理
+title: 演练：处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
-ms.openlocfilehash: a8eb4584060924684eacc99d46b88408451f1c82
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: dfd0753895a937ccef9a8bc14b2f692219eb7f06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230468"
 ---
-# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>演练：Windows 窗体 DataGridView 控件中的数据输入时发生的错误处理
+# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>演练：处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误
 处理来自基础数据存储区的错误是数据输入应用程序的必需的功能。 Windows 窗体<xref:System.Windows.Forms.DataGridView>控件来实现轻松这公开<xref:System.Windows.Forms.DataGridView.DataError>事件，该数据存储区检测到违反了约束或违反的业务规则时引发事件。  
   
  在本演练中，您将检索中的行`Customers`Northwind 示例数据库中表，然后将它们显示在<xref:System.Windows.Forms.DataGridView>控件。 当重复`CustomerID`新行或编辑现有行中检测到值<xref:System.Windows.Forms.DataGridView.DataError>事件会发生，这将通过显示处理<xref:System.Windows.Forms.MessageBox>描述异常。  
@@ -89,9 +89,10 @@ ms.locfileid: "57708231"
 -   自定义单元格的外观。 有关详细信息，请参阅[如何：自定义 Windows 窗体 DataGridView 控件中单元格的外观](customize-the-appearance-of-cells-in-the-datagrid.md)和[如何：设置 Windows 窗体 DataGridView 控件的默认单元格样式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Windows 窗体 DataGridView 控件中的数据输入](data-entry-in-the-windows-forms-datagridview-control.md)
-- [如何：处理 Windows 窗体 DataGridView 控件中的数据输入时发生的错误](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [如何：处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [演练：验证 Windows 窗体 DataGridView 控件中的数据](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
 - [保护连接信息](../../data/adonet/protecting-connection-information.md)

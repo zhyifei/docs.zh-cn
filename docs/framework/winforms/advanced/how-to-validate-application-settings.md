@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212084"
 ---
 # <a name="how-to-validate-application-settings"></a>如何：验证应用程序设置
 本主题演示如何在保留应用程序设置前先验证它们。  
@@ -23,7 +23,7 @@ ms.locfileid: "57705826"
   
  所用事件取决于需要何时验证设置，如下表所述。  
   
-|事件|发生时间和用法|  
+|Event|发生时间和用法|  
 |-----------|------------------------|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|初始加载设置属性组后发生。<br /><br /> 在应用程序中使用属性组前，使用此事件验证整个属性组的初始值。|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|在更改单个设置属性的值之前发生。<br /><br /> 更改单个属性之前，使用此事件验证该属性。 它可以向用户提供有关其操作和选择的即时反馈。|  
@@ -161,5 +161,6 @@ ms.locfileid: "57705826"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [在 Windows 窗体中创建事件处理程序](../creating-event-handlers-in-windows-forms.md)
 - [如何：创建应用程序设置](how-to-create-application-settings.md)

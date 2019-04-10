@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: 110b8ffe2fb3e00d7a6787e32d066f62126ebf9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a1b2627c8e9899a122f27dc652f8c91230fed0b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225126"
 ---
 # <a name="how-to-specify-client-credential-values"></a>如何：指定客户端凭据值
 使用 Windows Communication Foundation (WCF)，该服务可以指定客户端向服务进行身份验证。 例如，服务可以规定客户端使用证书进行身份验证。  
@@ -92,6 +92,7 @@ ms.locfileid: "54617182"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
@@ -103,7 +104,7 @@ ms.locfileid: "54617182"
 - [使用证书](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
-- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<安全 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
 - [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
 - [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
 - [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

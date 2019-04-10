@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
-ms.openlocfilehash: 1384103f6ca35bab02280e6019d717a5d2f333cc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0a85232b753eed891cded4b0fb1154269b30dc9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224040"
 ---
 # <a name="dataview-performance"></a>DataView 性能
 本主题讨论使用 <xref:System.Data.DataView.Find%2A> 类的 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法并在 Web 应用程序中缓存 <xref:System.Data.DataView> 时所具有的性能优势。  
@@ -31,7 +31,7 @@ ms.locfileid: "54684718"
  [!code-vb[DP DataView Samples#LDVFromQueryFindRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromqueryfindrows)]  
   
 ## <a name="aspnet"></a>ASP.NET  
- ASP.NET 具有一种缓存机制，允许您在内存中存储需要创建大量服务器资源的对象。 缓存这些类型的资源可以显著提高应用程序的性能。 缓存由 <xref:System.Web.Caching.Cache> 类实现，缓存实例专用于每个应用程序。 由于创建新的 <xref:System.Data.DataView> 对象需要大量资源，因此您可能希望在 Web 应用程序中使用此缓存功能，使得每次刷新网页时，不必重新生成 <xref:System.Data.DataView>。  
+ ASP.NET 具有一种缓存机制，允许您在内存中存储需要创建大量服务器资源的对象。 缓存这些类型的资源可以显著提高应用程序的性能。 缓存由 <xref:System.Web.Caching.Cache> 类实现，缓存实例专用于每个应用程序。 由于创建新的 <xref:System.Data.DataView> 对象需要大量资源，因此你可能希望在 Web 应用程序中使用此缓存功能，使得每次刷新网页时，不必重新生成 <xref:System.Data.DataView>。  
   
  在下面的示例中，对 <xref:System.Data.DataView> 进行缓存以便在刷新该页时不必对数据重新排序。  
   
@@ -87,4 +87,5 @@ GridView1.DataBind();
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [数据绑定和 LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)

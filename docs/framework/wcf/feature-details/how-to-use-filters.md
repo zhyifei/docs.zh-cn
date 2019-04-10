@@ -2,23 +2,23 @@
 title: 如何：使用筛选器
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 1d521162f2878a00d4d8ff7515ca2aabf32db97e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6f145a9bc2842eaa5dad1a1c0ec6d77eb2b37552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216192"
 ---
 # <a name="how-to-use-filters"></a>如何：使用筛选器
 本主题概述创建使用多个筛选器的路由配置所需执行的基本步骤。 在本示例中，消息将路由到两个计算器服务实现，即 regularCalc 和 roundingCalc。 这两个实现都支持相同的运算；但其中一个服务在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用服务的舍入版本；如果未表示任何服务首选项，则消息将在这两个服务间执行负载平衡。 这两个服务公开的运算包括：  
   
 -   添加  
   
--   Subtract  
+-   减  
   
 -   相乘  
   
--   Divide  
+-   除  
   
  鉴于这两个服务实现相同的运算，您无法使用 Action 筛选器，这是因为在消息中指定的操作将并非唯一。 您必须执行其他工作来确保将消息路由到适当的终结点。  
   
@@ -326,4 +326,5 @@ ms.locfileid: "54530984"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [路由服务](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 767508e51660a161a7a6ff0b168a46178d66be99
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 59420cfd29c3228aece9fc5ae02b950db6099ea0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218467"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange 方法
 返回到给定缓冲区中指定的嵌入的源范围。 缓冲区必须足够大以保存源。  
@@ -67,4 +67,5 @@ HRESULT GetSourceRange(
  如果该方法成功，则为 S_OK。  
   
 ## <a name="see-also"></a>请参阅
+
 - [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

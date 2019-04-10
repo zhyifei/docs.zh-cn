@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f66ba8307a33a0a0b80cd71dd027852f67c03f72
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257040"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210264"
 ---
 # <a name="probing-element"></a>\<探测 > 元素
 指定公共语言运行时在加载程序集时要搜索的应用程序基子目录。  
@@ -66,6 +66,7 @@ ms.locfileid: "55257040"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [指定程序集的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ed615ea641293f8ea3fdf962e3f84d602934df60
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 050ed0bbd4da38bede5a56ff95d0243f5f3cf1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220079"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder 方法
 将嵌套类型的类型转发器添加到给定的程序集的 type 表。  
@@ -69,6 +69,7 @@ HRESULT ExportNestedTypeForwarder(
  需要 alink.h  
   
 ## <a name="see-also"></a>请参阅
+
 - [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
