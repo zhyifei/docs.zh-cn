@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139602"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303487"
 ---
 # <a name="flow-document-overview"></a>流文档概述
 流文档旨在优化查看和可读性。 流文档根据运行时变量（例如，窗口大小、设备分辨率和可选的用户首选项）来动态调整和重新排列内容，而不是设置为一个预定义的布局。 此外，流文档还提供一些高级文档功能，例如分页和分栏。 本主题概述了流文档及其创建方式。  
@@ -89,9 +89,9 @@ ms.locfileid: "59139602"
   
  根据流内容的用途，可分为两个重要类别：  
   
-1.  **Block 派生类**:也称为"Block 内容元素"或简称为"块元素"。 继承元素<xref:System.Windows.Documents.Block>可以在一个公共父级下的元素进行分组或将公用特性应用于组。  
+1. **Block 派生类**:也称为"Block 内容元素"或简称为"块元素"。 继承元素<xref:System.Windows.Documents.Block>可以在一个公共父级下的元素进行分组或将公用特性应用于组。  
   
-2.  **Inline 派生类**:也称为"Inline 内容元素"或简称为"内联元素"。 继承元素<xref:System.Windows.Documents.Inline>或者包含在是块元素或另一个 Inline 元素。 Inline 元素通常用作在屏幕上呈现的内容的直接容器。 例如， <xref:System.Windows.Documents.Paragraph> （Block 元素） 可以包含<xref:System.Windows.Documents.Run>（Inline 元素），但<xref:System.Windows.Documents.Run>实际包含屏幕呈现的文本。  
+2. **Inline 派生类**:也称为"Inline 内容元素"或简称为"内联元素"。 继承元素<xref:System.Windows.Documents.Inline>或者包含在是块元素或另一个 Inline 元素。 Inline 元素通常用作在屏幕上呈现的内容的直接容器。 例如， <xref:System.Windows.Documents.Paragraph> （Block 元素） 可以包含<xref:System.Windows.Documents.Run>（Inline 元素），但<xref:System.Windows.Documents.Run>实际包含屏幕呈现的文本。  
   
  下面简要介绍了这两个类别中的每个类。  
   

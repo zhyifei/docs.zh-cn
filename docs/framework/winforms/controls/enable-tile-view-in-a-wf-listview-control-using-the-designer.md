@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 7f7e3f0fadeccafc867c49d76f6f6cf11300fddc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f8c8a1b2e3d2adfa7daadd609051ffc304150efe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102474"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300588"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>如何：使用设计器在 Windows 窗体 ListView 控件中启用平铺视图
 磁贴视图功能<xref:System.Windows.Forms.ListView>控件使您可以提供一种视觉平衡图形和文本信息之间。 磁贴视图中，为项目显示的文本信息与为详细信息视图定义的列信息相同。 磁贴视图功能结合的分组或插入标记中的功能<xref:System.Windows.Forms.ListView>控件。  
@@ -31,9 +31,9 @@ ms.locfileid: "59102474"
   
 ### <a name="to-set-tile-view-in-the-designer"></a>若要在设计器中设置平铺视图  
   
-1.  选择<xref:System.Windows.Forms.ListView>窗体上的控件。  
+1. 选择<xref:System.Windows.Forms.ListView>窗体上的控件。  
   
-2.  在中**属性**窗口中，选择<xref:System.Windows.Forms.ListView.View%2A>属性，然后选择**磁贴**。  
+2. 在中**属性**窗口中，选择<xref:System.Windows.Forms.ListView.View%2A>属性，然后选择**磁贴**。  
   
 ## <a name="see-also"></a>请参阅
 

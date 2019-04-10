@@ -3,12 +3,12 @@ title: 如何：启用 WIF 跟踪
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605148"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310260"
 ---
 # <a name="how-to-enable-wif-tracing"></a>如何：启用 WIF 跟踪
 ## <a name="applies-to"></a>适用于  
@@ -55,19 +55,19 @@ ms.locfileid: "54605148"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>创建一个简单 ASP.NET 应用程序  
   
-1.  启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。  
+1. 启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。  
   
-2.  在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。  
+2. 在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。  
   
-3.  在“名称”中，输入 `TestApp`，然后按“确定”。  
+3. 在“名称”中，输入 `TestApp`，然后按“确定”。  
   
-4.  在“解决方案资源管理器”下，右键单击“TestApp”项目，然后选择“标识和访问”。  
+4. 在“解决方案资源管理器”下，右键单击“TestApp”项目，然后选择“标识和访问”。  
   
-5.  “标识和访问”窗口随即出现。 在“提供程序”下，选择“使用本地开发 STS 测试应用程序”，然后单击“应用”。  
+5. “标识和访问”窗口随即出现。 在“提供程序”下，选择“使用本地开发 STS 测试应用程序”，然后单击“应用”。  
   
-6.  创建一个新文件夹中名为**日志**中的根**c:** 驱动器中，如所示：**C:\logs**  
+6. 创建一个新文件夹中名为**日志**中的根**c:** 驱动器中，如所示：**C:\logs**  
   
-7.  将以下 \<system.diagnostics > 元素添加到 Web.config 配置文件中，紧跟在 \</configSections > 元素之后，如下所示：  
+7. 将以下 \<system.diagnostics > 元素添加到 Web.config 配置文件中，紧跟在 \</configSections > 元素之后，如下所示：  
   
     ```xml  
     <configuration>  
@@ -96,8 +96,8 @@ ms.locfileid: "54605148"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-successful-tracing"></a>测试是否成功跟踪已启用 WIF 的 ASP.NET 应用程序  
   
-1.  按 F5 键运行解决方案。 应显示默认 ASP.NET 主页，且你会通过用户名 Terry （这是由开发 STS 返回的默认用户名）进行自动身份验证。  
+1. 按 F5 键运行解决方案。 应显示默认 ASP.NET 主页，且你会通过用户名 Terry （这是由开发 STS 返回的默认用户名）进行自动身份验证。  
   
-2.  关闭浏览器窗口，然后导航到 C:\logs 文件夹。 使用文本编辑器打开 C:\logs\WIF.xml 文件。  
+2. 关闭浏览器窗口，然后导航到 C:\logs 文件夹。 使用文本编辑器打开 C:\logs\WIF.xml 文件。  
   
-3.  检查 WIF.xml 文件并验证该文件是否包含以 \<E2ETraceEvent> 开头的项。 这些跟踪将包含 \<TraceRecord > 元素，其中包含对跟踪活动的描述，如验证 SecurityToken。
+3. 检查 WIF.xml 文件并验证该文件是否包含以 \<E2ETraceEvent> 开头的项。 这些跟踪将包含 \<TraceRecord > 元素，其中包含对跟踪活动的描述，如验证 SecurityToken。

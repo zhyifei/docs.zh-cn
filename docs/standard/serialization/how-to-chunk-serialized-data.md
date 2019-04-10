@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serialization, examples
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
-ms.openlocfilehash: 4b83e841db1afc898c5c3c99ed4186fd264ed2ef
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 65e332d229da8fe51ad9c3e9850603471b1dfb12
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994515"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307231"
 ---
 # <a name="how-to-chunk-serialized-data"></a>如何：对序列化数据进行分块
 
@@ -26,23 +26,23 @@ ms.locfileid: "45994515"
 
 在 Web 服务消息中发送大型数据集时，会出现下面两个问题：  
   
-1.  因序列化引擎执行缓冲而使工作集（内存）很大。  
+1. 因序列化引擎执行缓冲而使工作集（内存）很大。  
   
-2.  因使用 Base64 编码后产生 33% 的膨胀而过度占用带宽。  
+2. 因使用 Base64 编码后产生 33% 的膨胀而过度占用带宽。  
   
  若要解决这两个问题，可以通过实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口，来控制序列化和反序列化。 具体来讲，就是实现 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 和 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 方法，对数据进行分块。  
   
 ### <a name="to-implement-server-side-chunking"></a>实现服务器端数据分块  
   
-1.  在服务器计算机上，必须采用 Web 方法禁用 ASP.NET 缓冲，并返回实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型。  
+1. 在服务器计算机上，必须采用 Web 方法禁用 ASP.NET 缓冲，并返回实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型。  
   
-2.  实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型可以采用 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 方法对数据进行分块。  
+2. 实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型可以采用 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 方法对数据进行分块。  
   
 ### <a name="to-implement-client-side-processing"></a>实现客户端处理  
   
-1.  通过更改客户端代理上的 Web 方法，可以返回实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型。 可以使用 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> 自动执行这项操作，但此处不加以说明。  
+1. 通过更改客户端代理上的 Web 方法，可以返回实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型。 可以使用 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> 自动执行这项操作，但此处不加以说明。  
   
-2.  通过实现 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 方法，可以读取分块数据流，并将字节写入磁盘。 此实现还会引发可供图形控件（如进度栏）使用的进度事件。  
+2. 通过实现 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 方法，可以读取分块数据流，并将字节写入磁盘。 此实现还会引发可供图形控件（如进度栏）使用的进度事件。  
   
 ## <a name="example"></a>示例  
 下面的代码示例演示客户端上用于禁用 ASP.NET 缓冲的 Web 方法。 它还演示了如何在客户端实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口，该实现可以采用 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 方法对数据进行分块。  

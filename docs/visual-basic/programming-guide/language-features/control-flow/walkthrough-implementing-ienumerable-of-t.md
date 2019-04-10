@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 5fc96e1ae3624adc197b5b13029498b9aa90c95e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b13fd85ae01fd0b6f3c963d87a372add930be99d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819497"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302577"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>演练：在 Visual Basic 中实现 IEnumerable(Of T)
 <xref:System.Collections.Generic.IEnumerable%601>接口由类实现，可以一次返回一系列值的一项。 返回的数据一次的一项是不需要完整的数据集加载到内存中才能使用它的优点。 只需使用足够的内存将数据从加载单个项。 类实现`IEnumerable(T)`接口可与`For Each`循环或 LINQ 查询。  
@@ -29,13 +29,13 @@ ms.locfileid: "58819497"
   
 **创建可枚举类项目**
 
-1.  在 Visual Basic 中上**文件**菜单，依次指向**新建**，然后单击**项目**。
+1. 在 Visual Basic 中上**文件**菜单，依次指向**新建**，然后单击**项目**。
 
-1.  在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“类库”。 在“名称”框中，键入 `StreamReaderEnumerable`，然后单击“确定”。 显示新的项目。
+1. 在“新建项目”对话框的“项目类型”窗格中，确保选中“Windows”。 在“模板”窗格中，选择“类库”。 在“名称”框中，键入 `StreamReaderEnumerable`，然后单击“确定”。 显示新的项目。
 
-1.  在中**解决方案资源管理器**，右键单击 Class1.vb 文件，然后单击**重命名**。 将文件重命名为 `StreamReaderEnumerable.vb`，然后按 Enter。 重命名文件也会将类重命名为 `StreamReaderEnumerable`。 此类将实现 `IEnumerable(Of String)` 接口。
+1. 在中**解决方案资源管理器**，右键单击 Class1.vb 文件，然后单击**重命名**。 将文件重命名为 `StreamReaderEnumerable.vb`，然后按 Enter。 重命名文件也会将类重命名为 `StreamReaderEnumerable`。 此类将实现 `IEnumerable(Of String)` 接口。
 
-1.  右键单击 StreamReaderEnumerable 项目，指向**外**，然后单击**新项**。 选择**类**模板。 在中**名称**框中，键入`StreamReaderEnumerator.vb`然后单击**确定**。
+1. 右键单击 StreamReaderEnumerable 项目，指向**外**，然后单击**新项**。 选择**类**模板。 在中**名称**框中，键入`StreamReaderEnumerator.vb`然后单击**确定**。
 
  此项目中的第一个类是可枚举类，将实现`IEnumerable(Of String)`接口。 此泛型接口实现<xref:System.Collections.IEnumerable>接口，并保证此类的使用者可以访问值类型化为`String`。  
   

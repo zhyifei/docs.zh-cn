@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 4e6b85e1d1ca667f4ec189a7b2549667db24f10d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074646"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304553"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定
 在已向窗体添加控件并为你的应用程序确定的用户界面后，可以将控件绑定到数据源，以便在运行时，用户可以更改和保存到应用程序相关的数据。  
@@ -27,9 +27,9 @@ ms.locfileid: "59074646"
   
 ### <a name="to-bind-a-control-at-design-time"></a>若要将控件绑定在设计时  
   
-1.  拖动<xref:System.Windows.Forms.TextBox>到窗体控件。  
+1. 拖动<xref:System.Windows.Forms.TextBox>到窗体控件。  
   
-2.  在中**属性**窗口：  
+2. 在中**属性**窗口：  
   
     1.  展开 **(DataBindings)** 节点。  
   
@@ -39,17 +39,17 @@ ms.locfileid: "59074646"
   
          如果以前已为项目或窗体配置数据源，它将出现。  
   
-3.  单击“添加项目数据源”以连接到数据并创建一个数据源。  
+3. 单击“添加项目数据源”以连接到数据并创建一个数据源。  
   
-4.  在“数据源配置向导”欢迎页上，单击“下一步”。  
+4. 在“数据源配置向导”欢迎页上，单击“下一步”。  
   
-5.  上**选择数据源类型**页上，选择**数据库**。  
+5. 上**选择数据源类型**页上，选择**数据库**。  
   
-6.  上**选择数据连接**页上，从可用连接列表中选择一个数据连接。 如果所需的数据连接不可用，请选择**新的连接**若要创建新的数据连接。  
+6. 上**选择数据连接**页上，从可用连接列表中选择一个数据连接。 如果所需的数据连接不可用，请选择**新的连接**若要创建新的数据连接。  
   
-7.  选择**是，将连接保存**应用程序配置文件中保存连接字符串。  
+7. 选择**是，将连接保存**应用程序配置文件中保存连接字符串。  
   
-8.  选择要放置到应用程序中的数据库对象。 在这种情况下，选择你想的表中的一个字段<xref:System.Windows.Forms.TextBox>显示。  
+8. 选择要放置到应用程序中的数据库对象。 在这种情况下，选择你想的表中的一个字段<xref:System.Windows.Forms.TextBox>显示。  
   
 9. 如果愿意，可以替换默认的数据集名称。  
   

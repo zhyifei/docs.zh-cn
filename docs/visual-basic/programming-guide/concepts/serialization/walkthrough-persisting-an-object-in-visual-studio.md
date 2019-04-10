@@ -2,12 +2,12 @@
 title: 保持 Visual Studio (Visual Basic 中) 中对象
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 312545827702c2d01c50f2a92ace5a3b61494a33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841571"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303344"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>演练：保持 Visual Studio (Visual Basic 中) 中对象
 虽然可在设计时将对象的属性设置为默认值，但销毁对象时，运行时输入的任何值都将丢失。 可使用序列化在实例之间保持对象的数据，以便可存储值并在下次实例化对象时检索这些值。  
@@ -31,11 +31,11 @@ ms.locfileid: "58841571"
   
 ### <a name="to-create-the-loan-class"></a>创建 Loan 类  
   
-1.  新建“类库”项目，并将其命名为“LoanClass”。 有关详细信息，请参阅[创建解决方案和项目](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)。  
+1. 新建“类库”项目，并将其命名为“LoanClass”。 有关详细信息，请参阅[创建解决方案和项目](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)。  
   
-2.  在“解决方案资源管理器”中，打开 Class1 文件的快捷菜单，选择“重命名”。 将文件重命名为 `Loan`，然后按 Enter。 重命名文件也会将类重命名为 `Loan`。  
+2. 在“解决方案资源管理器”中，打开 Class1 文件的快捷菜单，选择“重命名”。 将文件重命名为 `Loan`，然后按 Enter。 重命名文件也会将类重命名为 `Loan`。  
   
-3.  将以下公共成员添加到该类中：  
+3. 将以下公共成员添加到该类中：  
   
     ```vb  
     Public Class Loan  
@@ -77,21 +77,21 @@ ms.locfileid: "58841571"
   
 ### <a name="to-create-a-test-application"></a>创建测试应用程序  
   
-1.  若要将 Windows 窗体应用程序项目添加到解决方案，请在“文件”菜单上依次选择“添加”、“新建项目”。  
+1. 若要将 Windows 窗体应用程序项目添加到解决方案，请在“文件”菜单上依次选择“添加”、“新建项目”。  
   
-2.  在“添加新项目”对话框中，选择“Windows 窗体应用程序”，然后输入 `LoanApp` 作为项目名称，然后单击“确定”关闭对话框。  
+2. 在“添加新项目”对话框中，选择“Windows 窗体应用程序”，然后输入 `LoanApp` 作为项目名称，然后单击“确定”关闭对话框。  
   
-3.  在“解决方案资源管理器”中，选择 LoanApp 项目。  
+3. 在“解决方案资源管理器”中，选择 LoanApp 项目。  
   
-4.  在“项目”菜单上，选择“设为启动项目”。  
+4. 在“项目”菜单上，选择“设为启动项目”。  
   
-5.  在“项目”菜单上，选择“添加引用” 。  
+5. 在“项目”菜单上，选择“添加引用” 。  
   
-6.  在“添加引用”对话框中，选择“项目”选项卡，然后选择 LoanClass 项目。  
+6. 在“添加引用”对话框中，选择“项目”选项卡，然后选择 LoanClass 项目。  
   
-7.  单击“确定”关闭对话框。  
+7. 单击“确定”关闭对话框。  
   
-8.  在设计器中，向窗体添加四个 <xref:System.Windows.Forms.TextBox> 控件。  
+8. 在设计器中，向窗体添加四个 <xref:System.Windows.Forms.TextBox> 控件。  
   
 9. 在代码编辑器中，添加以下代码：  
   
@@ -163,13 +163,13 @@ ms.locfileid: "58841571"
   
 ### <a name="to-deserialize-an-object"></a>反序列化对象  
   
-1.  向序列化数据的文件名的类中添加一个常量。  
+1. 向序列化数据的文件名的类中添加一个常量。  
   
     ```vb  
     Const FileName As String = "..\..\SavedLoan.bin"  
     ```  
   
-2.  修改 `Form1_Load` 事件过程中的代码，如下所示：  
+2. 修改 `Form1_Load` 事件过程中的代码，如下所示：  
   
     ```vb  
     Private WithEvents TestLoan As New LoanClass.Loan(10000.0, 0.075, 36, "Neil Black")  

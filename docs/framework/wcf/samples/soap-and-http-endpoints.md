@@ -2,12 +2,12 @@
 title: SOAP 和 HTTP 终结点
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: be050eecebb050ec41c3d548ea993d9e035e471c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523186"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307439"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP 和 HTTP 终结点
 此示例演示如何实现基于 RPC 的服务并将其公开 SOAP 格式和"Plain Old XML"(POX) 格式使用 WCF Web 编程模型中。 请参阅[基本 HTTP 服务](../../../../docs/framework/wcf/samples/basic-http-service.md)示例服务的 HTTP 绑定有关的详细信息。 本示例重点介绍有关使用不同绑定通过 SOAP 和 HTTP 公开相同服务的详细信息。  
@@ -28,7 +28,7 @@ ms.locfileid: "43523186"
   
 -   ~/service.svc/soap 终结点，使客户端可以使用 SOAP over HTTP 绑定访问服务。  
   
- HTTP 终结点通过 <`webHttp`> 标准终结点进行配置，该标准终结点的 `helpEnabled` 设置为 `true`。 因此，服务在 ~/service.svc/http/help 上公开基于 XHTML 的页面，基于 HTTP 的客户端可以使用该页面访问服务。  
+ HTTP 终结点配置与 <`webHttp`> 标准终结点具有`helpEnabled`设置为`true`。 因此，服务在 ~/service.svc/http/help 上公开基于 XHTML 的页面，基于 HTTP 的客户端可以使用该页面访问服务。  
   
  客户端项目演示如何访问服务使用 SOAP 代理 (通过生成**添加服务引用**) 和访问服务使用<xref:System.Net.WebClient>。  
   
@@ -36,21 +36,21 @@ ms.locfileid: "43523186"
   
 #### <a name="to-run-the-sample"></a>运行示例  
   
-1.  打开 SOAP 和 HTTP 终结点示例的解决方案。  
+1. 打开 SOAP 和 HTTP 终结点示例的解决方案。  
   
-2.  按 Ctrl+Shift+B 生成解决方案。  
+2. 按 Ctrl+Shift+B 生成解决方案。  
   
-3.  如果尚未打开，请按 CTRL + W，S 打开**解决方案资源管理器**窗口。  
+3. 如果尚未打开，请按 CTRL + W，S 打开**解决方案资源管理器**窗口。  
   
-4.  从**解决方案资源管理器**窗口中，右键单击**服务**项目，然后将光标放**调试**上下文菜单选项，以便**新启动实例**出现上下文菜单。 单击**启动新实例**。 这将启动承载服务的 ASP.NET 开发服务器。  
+4. 从**解决方案资源管理器**窗口中，右键单击**服务**项目，然后将光标放**调试**上下文菜单选项，以便**新启动实例**出现上下文菜单。 单击**启动新实例**。 这将启动承载服务的 ASP.NET 开发服务器。  
   
-5.  从解决方案资源管理器窗口中，右键单击客户端项目，然后将光标放**调试**上下文菜单选项，以便**启动新实例**出现上下文菜单。 单击**启动新实例**。  
+5. 从解决方案资源管理器窗口中，右键单击客户端项目，然后将光标放**调试**上下文菜单选项，以便**启动新实例**出现上下文菜单。 单击**启动新实例**。  
   
-6.  出现客户端控制台窗口，该窗口提供了正在运行的服务的 URI，以及该服务的 HTML 帮助页的 URI。 可随时通过在浏览器中键入 HTML 帮助页的 URI 来查看该帮助页。  
+6. 出现客户端控制台窗口，该窗口提供了正在运行的服务的 URI，以及该服务的 HTML 帮助页的 URI。 可随时通过在浏览器中键入 HTML 帮助页的 URI 来查看该帮助页。  
   
-7.  在示例运行时，客户端将写入当前活动的状态。  
+7. 在示例运行时，客户端将写入当前活动的状态。  
   
-8.  按任意键可终止客户端控制台应用程序。  
+8. 按任意键可终止客户端控制台应用程序。  
   
 9. 按 Shift+F5 可停止调试服务。  
   

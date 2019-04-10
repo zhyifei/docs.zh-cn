@@ -2,12 +2,12 @@
 title: WCF 服务发布
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 04912d94568cf144e874513395e6a6f31375fb7c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441432"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299717"
 ---
 # <a name="wcf-service-publishing"></a>WCF 服务发布
 
@@ -35,13 +35,13 @@ WCF 服务发布支持发布的 WCF 服务库模板，以及其相应的项模�
 
 若要部署服务实现，请执行以下步骤：
 
-1.  使用提升的权限打开 Visual Studio (右键单击该可执行文件，然后选择**以管理员身份运行**以将其打开)。  如果使用 IIS 7.0 或更高版本，确保你已安装的"IIS 元数据库和 iis 6 配置兼容性"部分，在控制面板中使用"打开或关闭，请打开 Windows 功能"。
+1. 使用提升的权限打开 Visual Studio (右键单击该可执行文件，然后选择**以管理员身份运行**以将其打开)。  如果使用 IIS 7.0 或更高版本，确保你已安装的"IIS 元数据库和 iis 6 配置兼容性"部分，在控制面板中使用"打开或关闭，请打开 Windows 功能"。
 
-2.  打开服务项目中，选择**构建** > **发布\<项目名称 >** 从主菜单中，右键单击该项目中的或**解决方案资源管理器**并单击**发布**。
+2. 打开服务项目中，选择**构建** > **发布\<项目名称 >** 从主菜单中，右键单击该项目中的或**解决方案资源管理器**并单击**发布**。
 
-3.  **发布**窗口会显示。 单击 **...**. 按钮指定服务应部署到的目标位置。 你可以选择将应用部署到本地 IIS、 文件系统或 FTP 站点。 如果部署到本地 IIS 应用程序，可以选择你的网站，并通过单击创建 web 应用程序在其下**创建新的 Web 应用程序**在右上角的图标。
+3. **发布**窗口会显示。 单击 **...**. 按钮指定服务应部署到的目标位置。 你可以选择将应用部署到本地 IIS、 文件系统或 FTP 站点。 如果部署到本地 IIS 应用程序，可以选择你的网站，并通过单击创建 web 应用程序在其下**创建新的 Web 应用程序**在右上角的图标。
 
-4.  单击后**发布**主窗口中，在 Visual Studio 部署到指定的目标位置的应用程序，并将 Web.config、.svc 和程序集文件复制到目标目录。 . .Svc 的名称将为"ProjectName.ServiceName.svc"。 已成功发布服务后，您可以中找到一个热 Visual Studio 输出窗口中，看起来类似于"连接到`http://localhost/WebApplicationFolderName...`"。 可在按住 Ctrl 键的同时单击该链接来打开 Visual Studio 中的浏览器页面，以便查看服务目录结构。
+4. 单击后**发布**主窗口中，在 Visual Studio 部署到指定的目标位置的应用程序，并将 Web.config、.svc 和程序集文件复制到目标目录。 . .Svc 的名称将为"ProjectName.ServiceName.svc"。 已成功发布服务后，您可以中找到一个热 Visual Studio 输出窗口中，看起来类似于"连接到`http://localhost/WebApplicationFolderName...`"。 可在按住 Ctrl 键的同时单击该链接来打开 Visual Studio 中的浏览器页面，以便查看服务目录结构。
 
      如果您无法浏览到网站，这可能是因为 IIS 中未启用目录浏览器。 请按照中的"可尝试的操作"部分，若要启用它的提示。 或者，你可以直接键入`http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc`若要查看你的服务页面。
 

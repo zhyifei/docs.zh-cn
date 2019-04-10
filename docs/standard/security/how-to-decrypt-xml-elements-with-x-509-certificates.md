@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e58a463c38dc41e669cf554961124b893fb7406
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72e5f1e72d3ce7ec954d61216bbac2e0e1b5a428
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682133"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301199"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>如何：使用 X.509 证书解密 XML 元素
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类对 XML 文档内的元素进行加密和解密。  XML 加密是交换或存储加密的 XML 数据的一种标准方式，使用后就无需担心数据被轻易读取。  有关 XML 加密标准的详细信息，请参阅万维网联合会 (W3C) 规范 XML 加密位于 <https://www.w3.org/TR/xmldsig-core/>。  
   
- 此示例使用中所述的方法进行加密的 XML 元素进行解密：[如何：使用 X.509 证书加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)。  它找到一个 <`EncryptedData`> 元素，解密该元素，然后将其替换为原始纯文本 XML 元素。  
+ 此示例使用中所述的方法进行加密的 XML 元素进行解密：[如何：使用 X.509 证书加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)。  找到 <`EncryptedData`> 元素中，对元素进行解密，然后替换原始的纯文本 XML 元素的元素。  
   
- 此过程中的代码示例将使用当前用户帐户的本地证书存储中的 X.509 证书来解密 XML 元素。  该示例使用 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法自动检索 X.509 证书，然后对 <`EncryptedData`> 元素的 <`EncryptedKey`> 元素中存储的会话密钥进行解密。  然后，<xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法将自动使用会话密钥对 XML 元素进行解密。  
+ 此过程中的代码示例将使用当前用户帐户的本地证书存储中的 X.509 证书来解密 XML 元素。  该示例使用<xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>方法来自动检索 X.509 证书和解密的会话密钥存储在 <`EncryptedKey`> 元素的 <`EncryptedData`> 元素。  然后，<xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法将自动使用会话密钥对 XML 元素进行解密。  
   
  此示例适用于以下情况：多个应用程序需要共享加密数据，或应用程序需要保存它各次运行之间的加密数据。  
   
 ### <a name="to-decrypt-an-xml-element-with-an-x509-certificate"></a>用 X.509 证书解密 XML 元素  
   
-1.  通过从磁盘加载 XML 文件来创建 <xref:System.Xml.XmlDocument> 对象。  <xref:System.Xml.XmlDocument> 对象包含要解密的 XML 元素。  
+1. 通过从磁盘加载 XML 文件来创建 <xref:System.Xml.XmlDocument> 对象。  <xref:System.Xml.XmlDocument> 对象包含要解密的 XML 元素。  
   
      [!code-csharp[HowToDecryptXMLElementX509#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#2)]
      [!code-vb[HowToDecryptXMLElementX509#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#2)]  
   
-2.  通过将 <xref:System.Xml.XmlDocument> 对象传递给构造函数，创建一个新的 <xref:System.Security.Cryptography.Xml.EncryptedXml> 对象。  
+2. 通过将 <xref:System.Xml.XmlDocument> 对象传递给构造函数，创建一个新的 <xref:System.Security.Cryptography.Xml.EncryptedXml> 对象。  
   
      [!code-csharp[HowToDecryptXMLElementX509#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#3)]
      [!code-vb[HowToDecryptXMLElementX509#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#3)]  
   
-3.  使用 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法解密 XML 文档。  
+3. 使用 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法解密 XML 文档。  
   
      [!code-csharp[HowToDecryptXMLElementX509#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#4)]
      [!code-vb[HowToDecryptXMLElementX509#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#4)]  
   
-4.  保存 <xref:System.Xml.XmlDocument> 对象。  
+4. 保存 <xref:System.Xml.XmlDocument> 对象。  
   
      [!code-csharp[HowToDecryptXMLElementX509#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#5)]
      [!code-vb[HowToDecryptXMLElementX509#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#5)]  

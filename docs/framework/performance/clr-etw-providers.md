@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188599"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302616"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 提供程序
 公共语言运行时 (CLR) 具有两个提供程序：运行时提供程序和断开提供程序。  
@@ -58,7 +58,7 @@ ms.locfileid: "59188599"
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>使用运行时提供程序和断开提供程序执行 ETW 数据收集  
  下面的示例演示如何以一种允许托管进程的符号解析并将影响减至最小的方式来使用 CLR 断开提供程序，而不考虑进程是在所分析的窗口内部还是外部开始或结束的。  
   
-1.  使用 CLR 运行时提供程序启用 ETW 日志记录：  
+1. 使用 CLR 运行时提供程序启用 ETW 日志记录：  
   
     ```  
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
@@ -66,7 +66,7 @@ ms.locfileid: "59188599"
   
      日志将保存到 clr1.etl 文件中。  
   
-2.  要在进程继续执行的过程中停止分析，请启动断开提供程序以捕获 `DCEnd` 事件：  
+2. 要在进程继续执行的过程中停止分析，请启动断开提供程序以捕获 `DCEnd` 事件：  
   
     ```  
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
@@ -74,14 +74,14 @@ ms.locfileid: "59188599"
   
      这将使 `DCEnd` 事件的收集开始断开会话。 可能需要等待 30 至 60 秒钟，才能收集完所有事件。 日志将保存到 clr1.et2 文件中。  
   
-3.  关闭所有 ETW 分析：  
+3. 关闭所有 ETW 分析：  
   
     ```  
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
-4.  合并分析以便创建一个日志文件：  
+4. 合并分析以便创建一个日志文件：  
   
     ```  
     xperf -merge clr1.etl clr2.etl merged.etl  

@@ -2,12 +2,12 @@
 title: 启动多个异步任务并在它们完成 (Visual Basic 中) 时进行处理
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 8af97658465aa8f82fe3cd01013282c767eb4ba8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a9a41c354993e0d362c344d523d6c4c4b6f61f10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816923"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309649"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>启动多个异步任务并在它们完成 (Visual Basic 中) 时进行处理
 通过使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，可以同时启动多个任务，并在它们完成时逐个对它们进行处理，而不是按照它们的启动顺序进行处理。  
@@ -20,19 +20,19 @@ ms.locfileid: "58816923"
 ## <a name="downloading-the-example"></a>下载示例  
  若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）。  
   
-1.  解压缩下载的文件，然后启动 Visual Studio。  
+1. 解压缩下载的文件，然后启动 Visual Studio。  
   
-2.  在菜单栏上，依次选择 **“文件”**、 **“打开”** 和 **“项目/解决方案”**。  
+2. 在菜单栏上，依次选择 **“文件”**、 **“打开”** 和 **“项目/解决方案”**。  
   
-3.  在“打开项目”对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningVB 的解决方案 (.sln) 文件。  
+3. 在“打开项目”对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningVB 的解决方案 (.sln) 文件。  
   
-4.  在“解决方案资源管理器”中，打开“ProcessTasksAsTheyFinish”项目的快捷菜单，选择“设为启动项目”。  
+4. 在“解决方案资源管理器”中，打开“ProcessTasksAsTheyFinish”项目的快捷菜单，选择“设为启动项目”。  
   
-5.  选择 F5 键运行该项目。  
+5. 选择 F5 键运行该项目。  
   
      选择 Ctrl+F5 键运行该项目，而不进行调试。  
   
-6.  多次运行此项目以验证并不总是以相同顺序显示已下载的长度。  
+6. 多次运行此项目以验证并不总是以相同顺序显示已下载的长度。  
   
  如果不想下载项目，可在本主题末尾处查看 MainWindow.xaml.vb 文件。  
   

@@ -2,12 +2,12 @@
 title: 扩展对错误处理和错误报告的控制
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 520a939c5527fa341a6c3a609297c69ec05dd7ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4a12ab62a9ec25d207a88b041bcdf498eaff7228
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094107"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303201"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>扩展对错误处理和错误报告的控制
 此示例演示如何对错误处理和 Windows Communication Foundation (WCF) 服务使用中的错误报告进行扩展控制<xref:System.ServiceModel.Dispatcher.IErrorHandler>接口。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)与一些额外的代码添加到服务来处理错误。 客户端强制实施若干个错误条件。 服务将截获这些错误并将其记录到某个文件中。  
@@ -141,13 +141,13 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  确保您已经为 error.txt 文件创建了 c:\logs 目录， 或者修改 `CalculatorErrorHandler.HandleError` 中使用的文件名。  
+3. 确保您已经为 error.txt 文件创建了 c:\logs 目录， 或者修改 `CalculatorErrorHandler.HandleError` 中使用的文件名。  
   
-4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

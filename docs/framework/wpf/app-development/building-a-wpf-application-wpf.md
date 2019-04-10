@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184478"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300952"
 ---
 # <a name="building-a-wpf-application-wpf"></a>生成 WPF 应用程序 (WPF)
 Windows Presentation Foundation (WPF) 应用程序可以生成为[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]可执行文件 (.exe)、 库 (.dll) 或这两种类型的程序集的组合。 本主题将介绍如何生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序，并对生成过程中的各个关键步骤进行说明。  
@@ -57,11 +57,11 @@ Windows Presentation Foundation (WPF) 应用程序可以生成为[!INCLUDE[dnprd
   
  这个步骤会针对属于 `Page` 生成项的每一个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件完成以下活动：  
   
-1.  由标记编译器对 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件进行分析。  
+1. 由标记编译器对 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件进行分析。  
   
-2.  创建编译型 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 并将其复制到 obj\Release 文件夹。  
+2. 创建编译型 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 并将其复制到 obj\Release 文件夹。  
   
-3.  创建 CodeDOM 型新分部类并将其复制到 obj\Release 文件夹。  
+3. 创建 CodeDOM 型新分部类并将其复制到 obj\Release 文件夹。  
   
  另外，还会针对每一个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件生成特定于语言的代码文件。 例如，对于 Visual Basic 项目中的 Page1.xaml 页面，Page1.g.vb 生成;对于 C# 项目中的 Page1.xaml 页面，会生成 Page1.g.cs。 文件名中的“.g”表明文件包含的是生成的代码，这些代码针对标记文件的顶级元素（如 `Page` 或 `Window`）进行了分部类声明。 使用声明该类`partial`C# 中的修饰符 (`Extends`在 Visual Basic 中) 以指示该类在其他位置的另一个声明，通常在代码隐藏文件 page1.xaml.cs。  
   

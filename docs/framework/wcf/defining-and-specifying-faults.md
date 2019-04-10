@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079326"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299319"
 ---
 # <a name="defining-and-specifying-faults"></a>定义和指定错误
 SOAP 错误可将错误情况信息从服务传达到客户端，在双工情况下，还可以以互操作方式从客户端传达到服务。 此主题讨论何时并且如何自定义错误内容并指定可以返回错误的操作。 有关服务或双工客户端如何发送这些错误，以及客户端或服务应用程序如何处理这些错误的详细信息，请参阅[Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 Windows Communication Foundation (WCF) 应用程序中的错误处理的概述，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
@@ -21,11 +21,11 @@ SOAP 错误可将错误情况信息从服务传达到客户端，在双工情况
 ## <a name="overview"></a>概述  
  声明的 SOAP 错误是指其中的某个操作具有 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 的错误，该属性指定自定义 SOAP 错误类型。 未声明的 SOAP 错误是指那些未在相应操作的协定中指定的错误。 本主题帮助您识别这些错误情况并为您的服务创建一个错误协定，当收到自定义 SOAP 错误时，客户端可以用它正确地处理这些错误情况。 基本任务依次为：  
   
-1.  定义服务的客户端应该知道的错误情况。  
+1. 定义服务的客户端应该知道的错误情况。  
   
-2.  为这些错误情况定义 SOAP 错误的自定义内容。  
+2. 为这些错误情况定义 SOAP 错误的自定义内容。  
   
-3.  标记您的操作，以便以 WSDL 向客户端公开这些操作引发的特定 SOAP 错误。  
+3. 标记您的操作，以便以 WSDL 向客户端公开这些操作引发的特定 SOAP 错误。  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>定义客户端应该知道的错误情况  
  SOAP 错误是公开描述的、传达特定操作的错误信息的消息。 由于它们是同其他操作消息一起以 WSDL 描述的，因此客户端应该知道它们且希望在调用某个操作时处理这样的错误。 但是，由于 WCF 服务用托管代码中，决定哪些错误条件在托管代码中的要转换为错误和返回到客户端提供了单独的正式错误的错误情况和你的服务中的 bug 的机会您与客户端的会话。  

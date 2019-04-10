@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: baf4e6cb3b2a40b1b792ae12e78cb9f878a738ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b1eb24aaa9ed3bfede41fc5a9a80fcbdc9f749a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124301"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302178"
 ---
 # <a name="overriding-the-onpaint-method"></a>重写 OnPaint 方法
 重写中定义任何事件的基本步骤[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]相同，并且在以下列表总结了。  
   
 #### <a name="to-override-an-inherited-event"></a>若要重写继承的事件  
   
-1.  重写受保护`On` *EventName*方法。  
+1. 重写受保护`On` *EventName*方法。  
   
-2.  调用`On` *EventName*方法重写从基类`On` *EventName*方法，因此已注册的委托接收事件。  
+2. 调用`On` *EventName*方法重写从基类`On` *EventName*方法，因此已注册的委托接收事件。  
   
  <xref:System.Windows.Forms.Control.Paint>在此处详细论述事件，因为每个 Windows 窗体控件必须重写<xref:System.Windows.Forms.Control.Paint>它所继承的事件<xref:System.Windows.Forms.Control>。 基<xref:System.Windows.Forms.Control>类不知道如何派生的控件需要绘制时，它不提供任何绘制逻辑中的<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 <xref:System.Windows.Forms.Control.OnPaint%2A>方法<xref:System.Windows.Forms.Control>只需将调度<xref:System.Windows.Forms.Control.Paint>到已注册的事件接收器的事件。  
   

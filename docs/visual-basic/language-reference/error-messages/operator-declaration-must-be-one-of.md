@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: dac8613d79e3262e4d1fd6ad1599fd01182e329b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4283547109ec312cc4fe07a054bbb8db3bff660f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819367"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299184"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>运算符声明必须是其中一个: +、-，*，\,/、 ^， &amp;，Like、 Mod、 和，Or、 Xor、 Not、 \< \<，>>...
 您可以声明只是进行重载的运算符。 下表列出了可以声明的运算符。  
@@ -29,9 +29,9 @@ ms.locfileid: "58819367"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  从一组可重载运算符中选择一个运算符。  
+1. 从一组可重载运算符中选择一个运算符。  
   
-2.  如果你需要重载无法直接重载的运算符这一功能，请创建用于获取适当参数并返回适当值的 `Function` 过程。  
+2. 如果你需要重载无法直接重载的运算符这一功能，请创建用于获取适当参数并返回适当值的 `Function` 过程。  
   
 ## <a name="see-also"></a>请参阅
 

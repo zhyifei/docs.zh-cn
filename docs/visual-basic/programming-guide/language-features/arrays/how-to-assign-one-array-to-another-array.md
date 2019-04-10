@@ -6,21 +6,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835279"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303084"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>如何：将一个数组赋给另一个数组 (Visual Basic)
 由于数组是对象，您可以在赋值语句和其他对象类型一样使用它们。 一个数组变量保留一个指向数据构成的数组元素和等级和长度的信息，并分配只复制此指针。  
   
 ### <a name="to-assign-one-array-to-another-array"></a>若要将一个数组赋给另一个数组  
   
-1.  请确保两个数组具有相同的秩 （维数） 和兼容的元素数据类型。  
+1. 请确保两个数组具有相同的秩 （维数） 和兼容的元素数据类型。  
   
-2.  使用标准的赋值语句将源数组赋给目标数组。 不遵循括号数组名。  
+2. 使用标准的赋值语句将源数组赋给目标数组。 不遵循括号数组名。  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  

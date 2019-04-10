@@ -2,21 +2,21 @@
 title: WCF 错误处理
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235356"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306282"
 ---
 # <a name="wcf-error-handling"></a>WCF 错误处理
 WCF 应用程序遇到的错误属于下列三组中的一组：  
   
-1.  通信错误  
+1. 通信错误  
   
-2.  代理/通道错误  
+2. 代理/通道错误  
   
-3.  应用程序错误  
+3. 应用程序错误  
   
  网络不可用、客户端使用错误地址或服务主机未侦听传入消息时，会发生通信错误。 这种类型的错误将作为 <xref:System.ServiceModel.CommunicationException> 或 <xref:System.ServiceModel.CommunicationException> 派生的类返回到客户端。  
   
@@ -47,4 +47,4 @@ WCF 应用程序遇到的错误属于下列三组中的一组：
   
 2. <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived>
   
- 有关详细信息，请参阅<xref:System.ServiceModel.ServiceHost>。
+ 有关详细信息，请参见 <xref:System.ServiceModel.ServiceHost>

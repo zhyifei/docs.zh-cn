@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086801"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305945"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>如何：使用 DataGrid 控件实现验证
 <xref:System.Windows.Controls.DataGrid>控件，可以在单元格和行级别执行验证。 与单元格级别验证时用户更新的值验证绑定的数据对象的各个属性。 使用行级验证时用户将更改提交到行验证整个数据对象。 此外可以为验证错误，提供自定义可视反馈，或使用默认的可视反馈的<xref:System.Windows.Controls.DataGrid>控件提供。  
@@ -42,14 +42,14 @@ ms.locfileid: "59086801"
   
 ### <a name="to-validate-multiple-values-in-a-single-row"></a>若要验证单个行中的多个值  
   
-1.  实现<xref:System.Windows.Controls.ValidationRule>检查多个属性的绑定的数据对象的子类。 在你<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法实现转换`value`参数值到<xref:System.Windows.Data.BindingGroup>实例。 然后可以访问通过此数据对象<xref:System.Windows.Data.BindingGroup.Items%2A>属性。  
+1. 实现<xref:System.Windows.Controls.ValidationRule>检查多个属性的绑定的数据对象的子类。 在你<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法实现转换`value`参数值到<xref:System.Windows.Data.BindingGroup>实例。 然后可以访问通过此数据对象<xref:System.Windows.Data.BindingGroup.Items%2A>属性。  
   
      下面的示例展示了此过程来验证是否`StartDate`属性值`Course`对象是早于其`EndDate`属性值。  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2.  添加验证规则与<xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType>集合。 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>属性提供直接访问权限<xref:System.Windows.Data.BindingGroup.ValidationRules%2A>属性的<xref:System.Windows.Data.BindingGroup>分组控件使用的所有绑定的实例。  
+2. 添加验证规则与<xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType>集合。 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>属性提供直接访问权限<xref:System.Windows.Data.BindingGroup.ValidationRules%2A>属性的<xref:System.Windows.Data.BindingGroup>分组控件使用的所有绑定的实例。  
   
      下面的示例设置<xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>在 XAML 中的属性。 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>属性设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>，以便仅在绑定的数据对象更新后进行的验证。  
   

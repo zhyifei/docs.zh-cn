@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: f5bc3b795eb20551abda2104c2f399c8da10a962
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d6250871b8e22b73b49a94ee7ae7835f53a7c7cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136013"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306425"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 指定查询所返回的元素。  
@@ -94,9 +94,9 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 SELECT 运算符指定查询要返回的元素。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1.  按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. 按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
   
-2.  将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
+2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   

@@ -2,12 +2,12 @@
 title: X.509 证书验证程序
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: c1572e874b2575bb777accb15ac5e6182c598253
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 88364aabf5df3a4f41d83613c0c4328b2d5979a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838204"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302551"
 ---
 # <a name="x509-certificate-validator"></a>X.509 证书验证程序
 此示例演示如何实现自定义 X.509 证书验证程序。 当内置的 X.509 证书验证模式都不能满足应用程序的要求时，实现自定义证书验证程序很有用。 此示例演示了具有自定义验证程序的服务，该验证程序接受自行颁发的证书。 客户端使用此类证书对服务进行身份验证。
@@ -302,40 +302,40 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例
 
-1.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+1. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
 
-2.  若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。
+2. 若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
 
-1.  从 Visual Studio 2012 命令提示符下使用管理员特权打开内示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。
+1. 从 Visual Studio 2012 命令提示符下使用管理员特权打开内示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。
 
     > [!IMPORTANT]
     >  Setup.bat 批处理文件旨在为从 Visual Studio 2012 命令提示运行。 在 Visual Studio 2012 命令提示符点设置为包含 Setup.bat 脚本所需的可执行文件的目录路径环境变量。  
   
-2.  启动 service\bin 中的 Service.exe。  
+2. 启动 service\bin 中的 Service.exe。  
   
-3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
+3. 启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
-1.  在服务计算机上创建目录。  
+1. 在服务计算机上创建目录。  
   
-2.  从 \service\bin 中将服务程序文件复制到服务计算机上的虚拟目录中。 另外，将 Setup.bat、Cleanup.bat、GetComputerName.vbs 和 ImportClientCert.bat 文件复制到服务计算机上。  
+2. 从 \service\bin 中将服务程序文件复制到服务计算机上的虚拟目录中。 另外，将 Setup.bat、Cleanup.bat、GetComputerName.vbs 和 ImportClientCert.bat 文件复制到服务计算机上。  
   
-3.  在客户端计算机上为这些客户端二进制文件创建一个目录。  
+3. 在客户端计算机上为这些客户端二进制文件创建一个目录。  
   
-4.  将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
+4. 将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
   
-5.  在服务器上运行`setup.bat service`使用管理员特权打开在 Visual Studio 的开发人员命令提示。 运行`setup.bat`与`service`参数创建一个服务证书的完全限定域名的则导出到名为 Service.cer 的文件的服务证书。  
+5. 在服务器上运行`setup.bat service`使用管理员特权打开在 Visual Studio 的开发人员命令提示。 运行`setup.bat`与`service`参数创建一个服务证书的完全限定域名的则导出到名为 Service.cer 的文件的服务证书。  
   
-6.  编辑 Service.exe.config 以反映新的证书名称 (在`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 与计算机的名称的完全限定域名相同。 此外更改中的计算机名称\<服务 > /\<baseAddresses > 元素从本地主机到服务计算机的完全限定名称。  
+6. 编辑 Service.exe.config 以反映新的证书名称 (在`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 与计算机的名称的完全限定域名相同。 此外更改中的计算机名称\<服务 > /\<baseAddresses > 元素从本地主机到服务计算机的完全限定名称。  
   
-7.  将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
+7. 将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
-8.  在客户端上运行`setup.bat client`使用管理员特权打开在 Visual Studio 的开发人员命令提示。 如果使用 `setup.bat` 自变量运行 `client`，则会创建一个名为 client.com 的客户端证书，并将此客户端证书导出到名为 Client.cer 的文件中。  
+8. 在客户端上运行`setup.bat client`使用管理员特权打开在 Visual Studio 的开发人员命令提示。 如果使用 `setup.bat` 自变量运行 `client`，则会创建一个名为 client.com 的客户端证书，并将此客户端证书导出到名为 Client.cer 的文件中。  
   
 9. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。 通过用服务器的完全限定域名替换 localhost 来执行此操作。  
   
@@ -351,7 +351,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
-1.  运行完示例后运行示例文件夹中的 Cleanup.bat。 这将从证书存储区中移除服务器和客户端证书。  
+1. 运行完示例后运行示例文件夹中的 Cleanup.bat。 这将从证书存储区中移除服务器和客户端证书。  
   
 > [!NOTE]
 >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。

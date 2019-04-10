@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840921"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308557"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>演练：处理事件 (Visual Basic)
 这是演示如何使用事件的两个主题的第二个。 第一个主题，[演练：声明和引发事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，演示如何声明和引发事件。 本部分使用窗体和该演练中的类来显示如何处理时其发生的事件。  
@@ -23,7 +23,7 @@ ms.locfileid: "58840921"
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>若要处理的 PercentDone 事件的小组件类  
   
-1.  将以下代码中的放置`Form1`:  
+1. 将以下代码中的放置`Form1`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
@@ -38,20 +38,20 @@ ms.locfileid: "58840921"
   
 #### <a name="to-handle-an-event"></a>若要处理的事件  
   
-1.  选择`mWidget`左侧的下拉列表中从**代码编辑器**。  
+1. 选择`mWidget`左侧的下拉列表中从**代码编辑器**。  
   
-2.  选择`PercentDone`右侧下拉列表中的事件。 **代码编辑器**将打开`mWidget_PercentDone`事件过程。  
+2. 选择`PercentDone`右侧下拉列表中的事件。 **代码编辑器**将打开`mWidget_PercentDone`事件过程。  
   
     > [!NOTE]
     >  **代码编辑器**很有用，但不是必需，用于插入新的事件处理程序。 在本演练中，它是更直接，只是事件处理程序将直接复制到你的代码。  
   
-3.  将以下代码添加到 `mWidget_PercentDone` 事件处理程序中：  
+3. 将以下代码添加到 `mWidget_PercentDone` 事件处理程序中：  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      每当`PercentDone`引发事件、 事件过程会显示在完成百分比`Label`控件。 `DoEvents`方法允许标签重新绘制，并且还提供了用户单击的机会**取消**按钮。  
   
-4.  添加以下代码为`Button2_Click`事件处理程序：  
+4. 添加以下代码为`Button2_Click`事件处理程序：  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
@@ -64,11 +64,11 @@ ms.locfileid: "58840921"
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>若要创建一个对象，并将分配给它的引用  
   
-1.  选择 **（Form1 事件）** 从左侧的下拉列表中**代码编辑器**。  
+1. 选择 **（Form1 事件）** 从左侧的下拉列表中**代码编辑器**。  
   
-2.  选择`Load`右侧下拉列表中的事件。 **代码编辑器**将打开`Form1_Load`事件过程。  
+2. 选择`Load`右侧下拉列表中的事件。 **代码编辑器**将打开`Form1_Load`事件过程。  
   
-3.  添加以下代码`Form1_Load`创建事件过程`Widget`:  
+3. 添加以下代码`Form1_Load`创建事件过程`Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
@@ -88,11 +88,11 @@ ms.locfileid: "58840921"
   
 #### <a name="to-run-the-program"></a>运行程序  
   
-1.  按 F5，在运行模式下将该项目。  
+1. 按 F5，在运行模式下将该项目。  
   
-2.  单击**启动任务**按钮。 每次`PercentDone`引发事件时，使用的任务的完成百分比更新标签。  
+2. 单击**启动任务**按钮。 每次`PercentDone`引发事件时，使用的任务的完成百分比更新标签。  
   
-3.  单击**取消**按钮以停止任务。 请注意的外观**取消**按钮并不立即单击时更改。 `Click`事件不会发生直到`My.Application.DoEvents`语句可用于事件处理。  
+3. 单击**取消**按钮以停止任务。 请注意的外观**取消**按钮并不立即单击时更改。 `Click`事件不会发生直到`My.Application.DoEvents`语句可用于事件处理。  
   
     > [!NOTE]
     >  `My.Application.DoEvents`窗体一样方法不会完全相同的方式处理事件。 例如，在本演练中，您必须单击**取消**按钮两次。 若要使表单能够直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[托管线程处理](../../../../standard/threading/index.md)。

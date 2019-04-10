@@ -12,23 +12,23 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: f2017ccfd6d8320d6afc7b5e8a2ce8349c4fbd17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110607"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300978"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>如何：使用 Windows 窗体 TextBox 控件创建密码文本框
 密码框是在用户键入一个字符串时显示占位符的 Windows 窗体文本框。  
   
 ### <a name="to-create-a-password-text-box"></a>若要创建密码文本框  
   
-1.  设置<xref:System.Windows.Forms.TextBox.PasswordChar%2A>属性的<xref:System.Windows.Forms.TextBox>控件的特定字符。  
+1. 设置<xref:System.Windows.Forms.TextBox.PasswordChar%2A>属性的<xref:System.Windows.Forms.TextBox>控件的特定字符。  
   
      <xref:System.Windows.Forms.TextBox.PasswordChar%2A>属性指定显示在文本框中的字符。 例如，如果你想在密码框中显示星号，指定 * 为<xref:System.Windows.Forms.TextBox.PasswordChar%2A>属性窗口中的属性。 然后，用户在文本框中键入的字符，无论被显示一个星号。  
   
-2.  （可选）设置<xref:System.Windows.Forms.TextBoxBase.MaxLength%2A>属性。 属性用于确定可以在文本框中键入多少个字符。 如果超出最大长度，系统会发出提示音并在文本框中不接受任何更多的字符。 请注意，你可能想要执行此密码的最大长度为可能的黑客试图猜测密码的使用。  
+2. （可选）设置<xref:System.Windows.Forms.TextBoxBase.MaxLength%2A>属性。 属性用于确定可以在文本框中键入多少个字符。 如果超出最大长度，系统会发出提示音并在文本框中不接受任何更多的字符。 请注意，你可能想要执行此密码的最大长度为可能的黑客试图猜测密码的使用。  
   
      下面的代码示例演示如何初始化将接受多达 14 个字符的字符串并显示星号来替代字符串的文本框。 `InitializeMyControl`过程将不会自动执行; 它必须在调用。  
   

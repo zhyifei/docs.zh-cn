@@ -2,19 +2,19 @@
 title: 如何：使用组 (LINQ) (Visual Basic 中) 将一个文件拆分成多个文件
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: aa96fb4042d9469fb6ffc5b0dc14a01e492f39a2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 578b4921ac8ae3ea0fe8c871996e1a5dce3fbf39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828545"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306296"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>如何：使用组 (LINQ) (Visual Basic 中) 将一个文件拆分成多个文件
 此示例演示一种进行以下操作的方法：合并两个文件的内容，然后创建一组以新方式整理数据的新文件。  
   
 ### <a name="to-create-the-data-files"></a>创建数据文件  
   
-1.  将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：  
+1. 将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "58828545"
     Garcia, Debra  
     ```  
   
-2.  将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹：请注意，这两个文件拥有一些共同的名称。  
+2. 将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹：请注意，这两个文件拥有一些共同的名称。  
   
     ```  
     Liu, Jinghao  

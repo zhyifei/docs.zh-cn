@@ -2,12 +2,12 @@
 title: MULTISET (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
-ms.openlocfilehash: d4293b8e027f7f0f7eabac7ad9c8a9852ddd3a80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 44e411b8ae2f43bf3a729ac091ffd1eb4c462c63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178472"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303032"
 ---
 # <a name="multiset-entity-sql"></a>MULTISET (Entity SQL)
 根据值列表创建多集的实例。 MULTISET 构造函数中的所有值都必须具有兼容类型 `T`。 不允许使用空的多集构造函数。  
@@ -44,9 +44,9 @@ or
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 MULTISET 运算符根据值列表创建多集的实例。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1.  按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. 按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
   
-2.  将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
+2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#MULTISET](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#multiset)]  
   

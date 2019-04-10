@@ -2,12 +2,12 @@
 title: 通道分块
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: fafaef5f9e255adc9d8ff50748c7c82a7888c4cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073814"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302694"
 ---
 # <a name="chunking-channel"></a>通道分块
 发送使用 Windows Communication Foundation (WCF) 的大型消息时，它是内存的通常需要限制用于缓冲这些消息量。 一种可能的解决方案是流处理消息正文（假定数据主要集中在正文中）。 不过，有些协议要求对整个消息进行缓冲。 可靠消息和消息安全就是两个这样的示例。 另一个可能的解决方案是将大消息分割成称为消息块的小消息，一次发送一个消息块，并在接收端重建大消息。 应用程序本身就能实现这种分块和取消分块，或者使用自定义通道来实现。 块区通道示例演示如何使用自定义协议或分层通道为任意大的消息进行分块和取消分块。  
@@ -203,11 +203,11 @@ as the ChunkingStart message.
   
  在下一个较低级别，`ChunkingChannel` 依赖于若干组件来实现块区协议。 在发送端，通道使用一个名为 <xref:System.Xml.XmlDictionaryWriter> 的自定义 `ChunkingWriter`，它完成实际的分块。 `ChunkingWriter` 使用内部通道直接发送消息块。 使用自定义 `XmlDictionaryWriter` 可以在编写原始消息的大型正文的同时发送消息块。 这意味着不对整个原始消息进行缓冲。  
   
- ![块区通道](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
+ ![图示显示块区通道发送体系结构。](./media/chunking-channel/chunking-channel-send.gif)  
   
  在接收端，`ChunkingChannel` 从内部通道提取消息并将其传递到名为 <xref:System.Xml.XmlDictionaryReader> 的自定义 `ChunkingReader`，后者将从传入的消息块重组原始消息。 `ChunkingChannel` 包装这`ChunkingReader`在自定义`Message`实现调用`ChunkingMessage`并将此消息返回到上面的层。 通过 `ChunkingReader` 和 `ChunkingMessage` 的这一组合，可以在上一层读取原始消息正文时取消消息的分块，而不必缓冲整个原始消息正文。 `ChunkingReader` 有一个队列，缓冲的最大可配置数量的缓冲消息块传入的消息块。 当达到此最大限度时，读取器将等待上一层将消息从队列中排出（即仅从原始消息正文中读取）或等待直到达到最大接收超时值。  
   
- ![块区通道](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
+ ![图示显示块区通道接收体系结构。](./media/chunking-channel/chunking-channel-receive.gif)  
   
 ## <a name="chunking-programming-model"></a>块区编程模型  
  服务开发人员可以通过在协定中对操作应用 `ChunkingBehavior` 属性来指定哪些消息需要分块。 该属性公开一个 `AppliesTo` 属性，允许开发人员指定是否对输入消息和/或输出消息应用分块。 下面的示例演示 `ChunkingBehavior` 属性的用法：  
@@ -309,19 +309,19 @@ interface ITestService
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
+1. 使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+3. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-5.  先运行 Service.exe，然后运行 Client.exe 并观察两个控制台窗口的输出。  
+5. 先运行 Service.exe，然后运行 Client.exe 并观察两个控制台窗口的输出。  
   
  运行此示例时，应生成下面的输出。  
   

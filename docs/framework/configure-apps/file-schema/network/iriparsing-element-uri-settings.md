@@ -2,12 +2,12 @@
 title: <iriParsing> 元素 （Uri 设置）
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: 710d82b70eb16e88404d4d8bbf38d2d030693103
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7033f4dcda7d2fe73310ae0d36d9b05c090d13d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092495"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299665"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing > 元素 （Uri 设置）
 指定是否对 <xref:System.Uri> 应用国际资源标识符 (IRI) 分析以及是否应该应用 IRI 分析规则。  
@@ -50,13 +50,13 @@ ms.locfileid: "59092495"
   
  若要启用 IRI 支持，以下两项更改是必需的：  
   
-1.  将以下行添加到.NET Framework 2.0 目录下的 machine.config 文件  
+1. 将以下行添加到.NET Framework 2.0 目录下的 machine.config 文件  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  指定是否应该应用 IRI 分析规则。 这可以在 machine.config 或应用配置文件中完成。  
+2. 指定是否应该应用 IRI 分析规则。 这可以在 machine.config 或应用配置文件中完成。  
   
  启用 IRI 分析 (iriParsing 启用 = `true`) 将执行规范化和字符检查根据最新 IRI 规则在 RFC 3987。 默认值是`false`，将执行规范化和字符检查根据 RFC 2396 和 RFC 3986 （适用于 IPv6 文本）。  
   
