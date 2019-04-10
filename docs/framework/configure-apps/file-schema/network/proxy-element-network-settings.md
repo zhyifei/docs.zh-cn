@@ -1,5 +1,5 @@
 ---
-title: <proxy> 元素（网络设置）
+title: <proxy> 元素 （网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: a6c6d85d8ec1b79f6b3ddf53af0a4b289289dd6a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8df9bbf2615776c2e023f03401785da95b2226eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204817"
 ---
-# <a name="proxy-element-network-settings"></a><span data-ttu-id="c4259-102">\<代理 > 元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="c4259-102">\<proxy> Element (Network Settings)</span></span>
-<span data-ttu-id="c4259-103">定义代理服务器。</span><span class="sxs-lookup"><span data-stu-id="c4259-103">Defines a proxy server.</span></span>  
+# <a name="proxy-element-network-settings"></a><span data-ttu-id="a3188-102">\<代理 > 元素 （网络设置）</span><span class="sxs-lookup"><span data-stu-id="a3188-102">\<proxy> Element (Network Settings)</span></span>
+<span data-ttu-id="a3188-103">定义代理服务器。</span><span class="sxs-lookup"><span data-stu-id="a3188-103">Defines a proxy server.</span></span>  
   
- <span data-ttu-id="c4259-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c4259-104">\<configuration></span></span>  
-<span data-ttu-id="c4259-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="c4259-105">\<system.net></span></span>  
-<span data-ttu-id="c4259-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="c4259-106">\<defaultProxy></span></span>  
-<span data-ttu-id="c4259-107">\<proxy></span><span class="sxs-lookup"><span data-stu-id="c4259-107">\<proxy></span></span>  
+ <span data-ttu-id="a3188-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="a3188-104">\<configuration></span></span>  
+<span data-ttu-id="a3188-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="a3188-105">\<system.net></span></span>  
+<span data-ttu-id="a3188-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="a3188-106">\<defaultProxy></span></span>  
+<span data-ttu-id="a3188-107">\<proxy></span><span class="sxs-lookup"><span data-stu-id="a3188-107">\<proxy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c4259-108">语法</span><span class="sxs-lookup"><span data-stu-id="c4259-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a3188-108">语法</span><span class="sxs-lookup"><span data-stu-id="a3188-108">Syntax</span></span>  
   
 ```xml  
 <proxy
@@ -35,46 +35,46 @@ ms.locfileid: "55256858"
 />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c4259-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="c4259-109">Attributes and Elements</span></span>  
- <span data-ttu-id="c4259-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="c4259-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a3188-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="a3188-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="a3188-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="a3188-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c4259-111">特性</span><span class="sxs-lookup"><span data-stu-id="c4259-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a3188-111">特性</span><span class="sxs-lookup"><span data-stu-id="a3188-111">Attributes</span></span>  
   
-|<span data-ttu-id="c4259-112">**特性**</span><span class="sxs-lookup"><span data-stu-id="c4259-112">**Attribute**</span></span>|<span data-ttu-id="c4259-113">**说明**</span><span class="sxs-lookup"><span data-stu-id="c4259-113">**Description**</span></span>|  
+|**<span data-ttu-id="a3188-112">特性</span><span class="sxs-lookup"><span data-stu-id="a3188-112">Attribute</span></span>**|**<span data-ttu-id="a3188-113">描述</span><span class="sxs-lookup"><span data-stu-id="a3188-113">Description</span></span>**|  
 |-------------------|---------------------|  
-|`autoDetect`|<span data-ttu-id="c4259-114">指定是否自动检测代理。</span><span class="sxs-lookup"><span data-stu-id="c4259-114">Specifies whether the proxy is automatically detected.</span></span> <span data-ttu-id="c4259-115">默认值为 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="c4259-115">The default value is `unspecified`.</span></span>|  
-|`bypassonlocal`|<span data-ttu-id="c4259-116">指定对于本地资源是否跳过代理。</span><span class="sxs-lookup"><span data-stu-id="c4259-116">Specifies whether the proxy is bypassed for local resources.</span></span> <span data-ttu-id="c4259-117">本地资源包括本地服务器 (`http://localhost`， `http://loopback`，或`http://127.0.0.1`) 和不带句点的 URI (`http://webserver`)。</span><span class="sxs-lookup"><span data-stu-id="c4259-117">Local resources include the local server (`http://localhost`, `http://loopback`, or `http://127.0.0.1`) and a URI without a period (`http://webserver`).</span></span> <span data-ttu-id="c4259-118">默认值为 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="c4259-118">The default value is `unspecified`.</span></span>|  
-|`proxyaddress`|<span data-ttu-id="c4259-119">指定代理要使用的 URI。</span><span class="sxs-lookup"><span data-stu-id="c4259-119">Specifies the proxy URI to use.</span></span>|  
-|`scriptLocation`|<span data-ttu-id="c4259-120">指定的配置脚本的位置。</span><span class="sxs-lookup"><span data-stu-id="c4259-120">Specifies the location of the configuration script.</span></span> <span data-ttu-id="c4259-121">不要使用`bypassonlocal`具有此特性的属性。</span><span class="sxs-lookup"><span data-stu-id="c4259-121">Do not use the `bypassonlocal` attribute with this attribute.</span></span> |  
-|`usesystemdefault`|<span data-ttu-id="c4259-122">指定是否使用 Internet Explorer 代理设置。</span><span class="sxs-lookup"><span data-stu-id="c4259-122">Specifies whether to use Internet Explorer proxy settings.</span></span> <span data-ttu-id="c4259-123">如果设置为`true`，后续属性将替代 Internet Explorer 代理设置。</span><span class="sxs-lookup"><span data-stu-id="c4259-123">If set to `true`, subsequent attributes will override Internet Explorer proxy settings.</span></span> <span data-ttu-id="c4259-124">默认值为 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="c4259-124">The default value is `unspecified`.</span></span>|  
+|`autoDetect`|<span data-ttu-id="a3188-114">指定是否自动检测代理。</span><span class="sxs-lookup"><span data-stu-id="a3188-114">Specifies whether the proxy is automatically detected.</span></span> <span data-ttu-id="a3188-115">默认值为 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="a3188-115">The default value is `unspecified`.</span></span>|  
+|`bypassonlocal`|<span data-ttu-id="a3188-116">指定对于本地资源是否跳过代理。</span><span class="sxs-lookup"><span data-stu-id="a3188-116">Specifies whether the proxy is bypassed for local resources.</span></span> <span data-ttu-id="a3188-117">本地资源包括本地服务器 (`http://localhost`， `http://loopback`，或`http://127.0.0.1`) 和不带句点的 URI (`http://webserver`)。</span><span class="sxs-lookup"><span data-stu-id="a3188-117">Local resources include the local server (`http://localhost`, `http://loopback`, or `http://127.0.0.1`) and a URI without a period (`http://webserver`).</span></span> <span data-ttu-id="a3188-118">默认值为 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="a3188-118">The default value is `unspecified`.</span></span>|  
+|`proxyaddress`|<span data-ttu-id="a3188-119">指定代理要使用的 URI。</span><span class="sxs-lookup"><span data-stu-id="a3188-119">Specifies the proxy URI to use.</span></span>|  
+|`scriptLocation`|<span data-ttu-id="a3188-120">指定的配置脚本的位置。</span><span class="sxs-lookup"><span data-stu-id="a3188-120">Specifies the location of the configuration script.</span></span> <span data-ttu-id="a3188-121">不要使用`bypassonlocal`具有此特性的属性。</span><span class="sxs-lookup"><span data-stu-id="a3188-121">Do not use the `bypassonlocal` attribute with this attribute.</span></span> |  
+|`usesystemdefault`|<span data-ttu-id="a3188-122">指定是否使用 Internet Explorer 代理设置。</span><span class="sxs-lookup"><span data-stu-id="a3188-122">Specifies whether to use Internet Explorer proxy settings.</span></span> <span data-ttu-id="a3188-123">如果设置为`true`，后续属性将替代 Internet Explorer 代理设置。</span><span class="sxs-lookup"><span data-stu-id="a3188-123">If set to `true`, subsequent attributes will override Internet Explorer proxy settings.</span></span> <span data-ttu-id="a3188-124">默认值为 `unspecified`。</span><span class="sxs-lookup"><span data-stu-id="a3188-124">The default value is `unspecified`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c4259-125">子元素</span><span class="sxs-lookup"><span data-stu-id="c4259-125">Child Elements</span></span>  
- <span data-ttu-id="c4259-126">无。</span><span class="sxs-lookup"><span data-stu-id="c4259-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a3188-125">子元素</span><span class="sxs-lookup"><span data-stu-id="a3188-125">Child Elements</span></span>  
+ <span data-ttu-id="a3188-126">无。</span><span class="sxs-lookup"><span data-stu-id="a3188-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="c4259-127">父元素</span><span class="sxs-lookup"><span data-stu-id="c4259-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a3188-127">父元素</span><span class="sxs-lookup"><span data-stu-id="a3188-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="c4259-128">**元素**</span><span class="sxs-lookup"><span data-stu-id="c4259-128">**Element**</span></span>|<span data-ttu-id="c4259-129">**说明**</span><span class="sxs-lookup"><span data-stu-id="c4259-129">**Description**</span></span>|  
+|**<span data-ttu-id="a3188-128">元素</span><span class="sxs-lookup"><span data-stu-id="a3188-128">Element</span></span>**|**<span data-ttu-id="a3188-129">描述</span><span class="sxs-lookup"><span data-stu-id="a3188-129">Description</span></span>**|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="c4259-130">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="c4259-130">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="c4259-131">配置超文本传输协议 (HTTP) 代理服务器。</span><span class="sxs-lookup"><span data-stu-id="c4259-131">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
+|[<span data-ttu-id="a3188-130">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="a3188-130">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="a3188-131">配置超文本传输协议 (HTTP) 代理服务器。</span><span class="sxs-lookup"><span data-stu-id="a3188-131">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
   
-## <a name="text-value"></a><span data-ttu-id="c4259-132">文本值</span><span class="sxs-lookup"><span data-stu-id="c4259-132">Text Value</span></span>  
+## <a name="text-value"></a><span data-ttu-id="a3188-132">文本值</span><span class="sxs-lookup"><span data-stu-id="a3188-132">Text Value</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c4259-133">备注</span><span class="sxs-lookup"><span data-stu-id="c4259-133">Remarks</span></span>  
- <span data-ttu-id="c4259-134">`proxy`元素定义为应用程序代理服务器。</span><span class="sxs-lookup"><span data-stu-id="c4259-134">The `proxy` element defines a proxy server for an application.</span></span> <span data-ttu-id="c4259-135">如果从配置文件缺少此元素，然后.NET Framework 将使用的代理设置在 Internet Explorer 中。</span><span class="sxs-lookup"><span data-stu-id="c4259-135">If this element is missing from the configuration file, then the .NET Framework will use the proxy settings in Internet Explorer.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a3188-133">备注</span><span class="sxs-lookup"><span data-stu-id="a3188-133">Remarks</span></span>  
+ <span data-ttu-id="a3188-134">`proxy`元素定义为应用程序代理服务器。</span><span class="sxs-lookup"><span data-stu-id="a3188-134">The `proxy` element defines a proxy server for an application.</span></span> <span data-ttu-id="a3188-135">如果从配置文件缺少此元素，然后.NET Framework 将使用的代理设置在 Internet Explorer 中。</span><span class="sxs-lookup"><span data-stu-id="a3188-135">If this element is missing from the configuration file, then the .NET Framework will use the proxy settings in Internet Explorer.</span></span>  
   
- <span data-ttu-id="c4259-136">值为`proxyaddress`属性应为格式正确的统一资源标识符 (URI)。</span><span class="sxs-lookup"><span data-stu-id="c4259-136">The value for the `proxyaddress` attribute should be a well-formed Uniform Resource Indicator (URI).</span></span>  
+ <span data-ttu-id="a3188-136">值为`proxyaddress`属性应为格式正确的统一资源标识符 (URI)。</span><span class="sxs-lookup"><span data-stu-id="a3188-136">The value for the `proxyaddress` attribute should be a well-formed Uniform Resource Indicator (URI).</span></span>  
   
- <span data-ttu-id="c4259-137">`scriptLocation`特性引用了自动检测代理配置脚本。</span><span class="sxs-lookup"><span data-stu-id="c4259-137">The `scriptLocation` attribute refers to the automatic detection of proxy configuration scripts.</span></span> <span data-ttu-id="c4259-138"><xref:System.Net.WebProxy>类将尝试查找配置脚本 (通常命名 Wpad.dat) 时**使用自动配置脚本**Internet 资源管理器中选择选项。</span><span class="sxs-lookup"><span data-stu-id="c4259-138">The <xref:System.Net.WebProxy> class will attempt to locate a configuration script (usually named Wpad.dat) when the **Use automatic configuration script** option is selected in Internet Explorer.</span></span> <span data-ttu-id="c4259-139">如果`bypassonlocal`设置为任何值，`scriptLocation`将被忽略。</span><span class="sxs-lookup"><span data-stu-id="c4259-139">If `bypassonlocal` is set to any value, `scriptLocation` is ignored.</span></span>
+ <span data-ttu-id="a3188-137">`scriptLocation`特性引用了自动检测代理配置脚本。</span><span class="sxs-lookup"><span data-stu-id="a3188-137">The `scriptLocation` attribute refers to the automatic detection of proxy configuration scripts.</span></span> <span data-ttu-id="a3188-138"><xref:System.Net.WebProxy>类将尝试查找配置脚本 (通常命名 Wpad.dat) 时**使用自动配置脚本**Internet 资源管理器中选择选项。</span><span class="sxs-lookup"><span data-stu-id="a3188-138">The <xref:System.Net.WebProxy> class will attempt to locate a configuration script (usually named Wpad.dat) when the **Use automatic configuration script** option is selected in Internet Explorer.</span></span> <span data-ttu-id="a3188-139">如果`bypassonlocal`设置为任何值，`scriptLocation`将被忽略。</span><span class="sxs-lookup"><span data-stu-id="a3188-139">If `bypassonlocal` is set to any value, `scriptLocation` is ignored.</span></span>
   
- <span data-ttu-id="c4259-140">使用`usesystemdefault`要迁移到版本 2.0 的.NET Framework 版本 1.1 应用程序的属性。</span><span class="sxs-lookup"><span data-stu-id="c4259-140">Use the `usesystemdefault` attribute for .NET Framework version 1.1 applications that are migrating to version 2.0.</span></span>  
+ <span data-ttu-id="a3188-140">使用`usesystemdefault`要迁移到版本 2.0 的.NET Framework 版本 1.1 应用程序的属性。</span><span class="sxs-lookup"><span data-stu-id="a3188-140">Use the `usesystemdefault` attribute for .NET Framework version 1.1 applications that are migrating to version 2.0.</span></span>  
   
- <span data-ttu-id="c4259-141">如果引发异常`proxyaddress`属性指定了无效的默认代理。</span><span class="sxs-lookup"><span data-stu-id="c4259-141">An exception is thrown if the `proxyaddress` attribute specifies an invalid default proxy.</span></span> <span data-ttu-id="c4259-142">异常的 <xref:System.Exception.InnerException%2A> 属性应具有错误根本原因的详细信息。</span><span class="sxs-lookup"><span data-stu-id="c4259-142">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
+ <span data-ttu-id="a3188-141">如果引发异常`proxyaddress`属性指定了无效的默认代理。</span><span class="sxs-lookup"><span data-stu-id="a3188-141">An exception is thrown if the `proxyaddress` attribute specifies an invalid default proxy.</span></span> <span data-ttu-id="a3188-142">异常的 <xref:System.Exception.InnerException%2A> 属性应具有错误根本原因的详细信息。</span><span class="sxs-lookup"><span data-stu-id="a3188-142">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="c4259-143">配置文件</span><span class="sxs-lookup"><span data-stu-id="c4259-143">Configuration Files</span></span>  
- <span data-ttu-id="c4259-144">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="c4259-144">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="a3188-143">配置文件</span><span class="sxs-lookup"><span data-stu-id="a3188-143">Configuration Files</span></span>  
+ <span data-ttu-id="a3188-144">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="a3188-144">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c4259-145">示例</span><span class="sxs-lookup"><span data-stu-id="c4259-145">Example</span></span>  
- <span data-ttu-id="c4259-146">以下示例使用从 Internet 资源管理器代理的默认值，指定代理地址，并跳过本地访问的代理。</span><span class="sxs-lookup"><span data-stu-id="c4259-146">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access.</span></span>  
+## <a name="example"></a><span data-ttu-id="a3188-145">示例</span><span class="sxs-lookup"><span data-stu-id="a3188-145">Example</span></span>  
+ <span data-ttu-id="a3188-146">以下示例使用从 Internet 资源管理器代理的默认值，指定代理地址，并跳过本地访问的代理。</span><span class="sxs-lookup"><span data-stu-id="a3188-146">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access.</span></span>  
   
 ```xml  
 <configuration>  
@@ -90,6 +90,7 @@ ms.locfileid: "55256858"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c4259-147">请参阅</span><span class="sxs-lookup"><span data-stu-id="c4259-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a3188-147">请参阅</span><span class="sxs-lookup"><span data-stu-id="a3188-147">See also</span></span>
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [<span data-ttu-id="c4259-148">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="c4259-148">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="a3188-148">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="a3188-148">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

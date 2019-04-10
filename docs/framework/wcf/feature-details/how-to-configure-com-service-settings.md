@@ -1,24 +1,24 @@
 ---
-title: 如何：配置 COM + 服务设置
+title: 如何：配置 COM+ 服务设置
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 8deb7be51cdf3273a57d6777b103123636a2d2f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd5625fd3f2c0cc2e1e2a261b091a029cd4226ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195834"
 ---
-# <a name="how-to-configure-com-service-settings"></a><span data-ttu-id="dfbb6-102">如何：配置 COM + 服务设置</span><span class="sxs-lookup"><span data-stu-id="dfbb6-102">How to: Configure COM+ Service Settings</span></span>
-<span data-ttu-id="dfbb6-103">使用 COM+ 服务配置工具添加或移除应用程序接口时，应用程序配置文件中的 Web 服务配置将更新。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-103">When an application interface is added or removed by using the COM+ Service Configuration tool, the Web service configuration is updated within the application's configuration file.</span></span> <span data-ttu-id="dfbb6-104">在 COM + 承载模式中，Application.config 文件被放置在应用程序根目录中 (应用程序 %PROGRAMFILES%\ComPlus\\{appid} 是默认值)。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-104">In the COM+ hosted mode, the Application.config file is placed in the Application Root Directory (%PROGRAMFILES%\ComPlus Applications\\{appid} is the default).</span></span> <span data-ttu-id="dfbb6-105">无论在哪种 Web 宿主模式中，Web.config 文件均放置在指定的 vroot 目录中。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-105">In either of the Web-hosted modes, the Web.config file is placed in the specified vroot directory.</span></span>  
+# <a name="how-to-configure-com-service-settings"></a><span data-ttu-id="096a0-102">如何：配置 COM+ 服务设置</span><span class="sxs-lookup"><span data-stu-id="096a0-102">How to: Configure COM+ Service Settings</span></span>
+<span data-ttu-id="096a0-103">使用 COM+ 服务配置工具添加或移除应用程序接口时，应用程序配置文件中的 Web 服务配置将更新。</span><span class="sxs-lookup"><span data-stu-id="096a0-103">When an application interface is added or removed by using the COM+ Service Configuration tool, the Web service configuration is updated within the application's configuration file.</span></span> <span data-ttu-id="096a0-104">在 COM + 承载模式中，Application.config 文件被放置在应用程序根目录中 (应用程序 %PROGRAMFILES%\ComPlus\\{appid} 是默认值)。</span><span class="sxs-lookup"><span data-stu-id="096a0-104">In the COM+ hosted mode, the Application.config file is placed in the Application Root Directory (%PROGRAMFILES%\ComPlus Applications\\{appid} is the default).</span></span> <span data-ttu-id="096a0-105">无论在哪种 Web 宿主模式中，Web.config 文件均放置在指定的 vroot 目录中。</span><span class="sxs-lookup"><span data-stu-id="096a0-105">In either of the Web-hosted modes, the Web.config file is placed in the specified vroot directory.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="dfbb6-106">应使用消息签名来防止客户端和服务器之间的消息被篡改。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-106">Message signing should be used to protect against tampering of messages between a client and a server.</span></span> <span data-ttu-id="dfbb6-107">另外，还应该使用消息或传输层加密来防止客户端和服务器之间的消息发生信息泄漏。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-107">Also, message or transport layer encryption should be used to protect against information disclosure from messages between a client and a server.</span></span> <span data-ttu-id="dfbb6-108">与 Windows Communication Foundation (WCF) 服务一样，应使用限制来限制数量的并发调用、 连接、 实例和挂起的操作。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-108">As with Windows Communication Foundation (WCF) services, you should use throttling to limit the number of concurrent calls, connections, instances, and pending operations.</span></span> <span data-ttu-id="dfbb6-109">这有助于防止过度消耗资源。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-109">This helps prevent over-consumption of resources.</span></span> <span data-ttu-id="dfbb6-110">您可以通过设置服务配置文件来指定遏制行为。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-110">Throttling behavior is specified through service configuration file settings.</span></span>  
+>  <span data-ttu-id="096a0-106">应使用消息签名来防止客户端和服务器之间的消息被篡改。</span><span class="sxs-lookup"><span data-stu-id="096a0-106">Message signing should be used to protect against tampering of messages between a client and a server.</span></span> <span data-ttu-id="096a0-107">另外，还应该使用消息或传输层加密来防止客户端和服务器之间的消息发生信息泄漏。</span><span class="sxs-lookup"><span data-stu-id="096a0-107">Also, message or transport layer encryption should be used to protect against information disclosure from messages between a client and a server.</span></span> <span data-ttu-id="096a0-108">与 Windows Communication Foundation (WCF) 服务一样，应使用限制来限制数量的并发调用、 连接、 实例和挂起的操作。</span><span class="sxs-lookup"><span data-stu-id="096a0-108">As with Windows Communication Foundation (WCF) services, you should use throttling to limit the number of concurrent calls, connections, instances, and pending operations.</span></span> <span data-ttu-id="096a0-109">这有助于防止过度消耗资源。</span><span class="sxs-lookup"><span data-stu-id="096a0-109">This helps prevent over-consumption of resources.</span></span> <span data-ttu-id="096a0-110">您可以通过设置服务配置文件来指定遏制行为。</span><span class="sxs-lookup"><span data-stu-id="096a0-110">Throttling behavior is specified through service configuration file settings.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dfbb6-111">示例</span><span class="sxs-lookup"><span data-stu-id="dfbb6-111">Example</span></span>  
- <span data-ttu-id="dfbb6-112">假设有一个实现以下接口的组件：</span><span class="sxs-lookup"><span data-stu-id="dfbb6-112">Consider a component that implements the following interface:</span></span>  
+## <a name="example"></a><span data-ttu-id="096a0-111">示例</span><span class="sxs-lookup"><span data-stu-id="096a0-111">Example</span></span>  
+ <span data-ttu-id="096a0-112">假设有一个实现以下接口的组件：</span><span class="sxs-lookup"><span data-stu-id="096a0-112">Consider a component that implements the following interface:</span></span>  
   
 ```  
 [Guid("C551FBA9-E3AA-4272-8C2A-84BD8D290AC7")]  
@@ -29,7 +29,7 @@ public interface IFinances
 }  
 ```  
   
- <span data-ttu-id="dfbb6-113">如果该组件作为 Web 服务公开，则公开的且客户端应遵循的相应服务协定如下：</span><span class="sxs-lookup"><span data-stu-id="dfbb6-113">If the component is exposed as a Web service, the corresponding service contract that is exposed, and that clients would need to conform to, is as follows:</span></span>  
+ <span data-ttu-id="096a0-113">如果该组件作为 Web 服务公开，则公开的且客户端应遵循的相应服务协定如下：</span><span class="sxs-lookup"><span data-stu-id="096a0-113">If the component is exposed as a Web service, the corresponding service contract that is exposed, and that clients would need to conform to, is as follows:</span></span>  
   
 ```  
 [ServiceContract(Session = true,  
@@ -45,21 +45,21 @@ public interface IFinancesContract : IDisposable
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="dfbb6-114">IID 是该协定的初始命名空间的一部分。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-114">IID forms part of the initial namespace for the contract.</span></span>  
+>  <span data-ttu-id="096a0-114">IID 是该协定的初始命名空间的一部分。</span><span class="sxs-lookup"><span data-stu-id="096a0-114">IID forms part of the initial namespace for the contract.</span></span>  
   
- <span data-ttu-id="dfbb6-115">使用此服务的客户端应用程序需要遵循此协定，并使用一个与应用程序配置中指定的绑定相兼容的绑定。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-115">Client applications that use this service would need to conform to this contract, along with using a binding that is compatible with the one specified in the application configuration.</span></span>  
+ <span data-ttu-id="096a0-115">使用此服务的客户端应用程序需要遵循此协定，并使用一个与应用程序配置中指定的绑定相兼容的绑定。</span><span class="sxs-lookup"><span data-stu-id="096a0-115">Client applications that use this service would need to conform to this contract, along with using a binding that is compatible with the one specified in the application configuration.</span></span>  
   
- <span data-ttu-id="dfbb6-116">下面的代码示例演示了默认的配置文件。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-116">The following code example shows a default configuration file.</span></span> <span data-ttu-id="dfbb6-117">作为 Windows Communication Foundation (WCF) Web 服务，这符合标准的服务模型配置架构，并可以编辑其他 WCF 服务配置文件的方式相同。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-117">Being a Windows Communication Foundation (WCF) Web service, this conforms to the standard service model configuration schema and can be edited in the same way as other WCF services configuration files.</span></span>  
+ <span data-ttu-id="096a0-116">下面的代码示例演示了默认的配置文件。</span><span class="sxs-lookup"><span data-stu-id="096a0-116">The following code example shows a default configuration file.</span></span> <span data-ttu-id="096a0-117">作为 Windows Communication Foundation (WCF) Web 服务，这符合标准的服务模型配置架构，并可以编辑其他 WCF 服务配置文件的方式相同。</span><span class="sxs-lookup"><span data-stu-id="096a0-117">Being a Windows Communication Foundation (WCF) Web service, this conforms to the standard service model configuration schema and can be edited in the same way as other WCF services configuration files.</span></span>  
   
- <span data-ttu-id="dfbb6-118">典型的修改包括：</span><span class="sxs-lookup"><span data-stu-id="dfbb6-118">Typical modifications would include:</span></span>  
+ <span data-ttu-id="096a0-118">典型的修改包括：</span><span class="sxs-lookup"><span data-stu-id="096a0-118">Typical modifications would include:</span></span>  
   
-- <span data-ttu-id="dfbb6-119">将终结点地址从默认的 ApplicationName/ComponentName/InterfaceName 形式更改为更可用的形式。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-119">Changing the endpoint address from the default ApplicationName/ComponentName/InterfaceName form to a more usable form.</span></span>  
+- <span data-ttu-id="096a0-119">将终结点地址从默认的 ApplicationName/ComponentName/InterfaceName 形式更改为更可用的形式。</span><span class="sxs-lookup"><span data-stu-id="096a0-119">Changing the endpoint address from the default ApplicationName/ComponentName/InterfaceName form to a more usable form.</span></span>  
   
-- <span data-ttu-id="dfbb6-120">修改的默认值中的服务命名空间`http://tempuri.org/InterfaceID`到更具相关性的窗体的窗体。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-120">Modifying the namespace of the service from the default `http://tempuri.org/InterfaceID` form to a more relevant form.</span></span>  
+- <span data-ttu-id="096a0-120">修改的默认值中的服务命名空间`http://tempuri.org/InterfaceID`到更具相关性的窗体的窗体。</span><span class="sxs-lookup"><span data-stu-id="096a0-120">Modifying the namespace of the service from the default `http://tempuri.org/InterfaceID` form to a more relevant form.</span></span>  
   
-- <span data-ttu-id="dfbb6-121">将终结点更改为使用其他传输绑定。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-121">Changing the endpoint to use a different transport binding.</span></span>  
+- <span data-ttu-id="096a0-121">将终结点更改为使用其他传输绑定。</span><span class="sxs-lookup"><span data-stu-id="096a0-121">Changing the endpoint to use a different transport binding.</span></span>  
   
-     <span data-ttu-id="dfbb6-122">在 COM+ 宿主模式中，默认使用命名管道传输，但也可以改用无线传输（如 TCP）。</span><span class="sxs-lookup"><span data-stu-id="dfbb6-122">In the COM+-hosted case, the named pipes transport is used by default, but an off-machine transport like TCP can be used instead.</span></span>  
+     <span data-ttu-id="096a0-122">在 COM+ 宿主模式中，默认使用命名管道传输，但也可以改用无线传输（如 TCP）。</span><span class="sxs-lookup"><span data-stu-id="096a0-122">In the COM+-hosted case, the named pipes transport is used by default, but an off-machine transport like TCP can be used instead.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -96,5 +96,6 @@ public interface IFinancesContract : IDisposable
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dfbb6-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="dfbb6-123">See also</span></span>
-- [<span data-ttu-id="dfbb6-124">与 COM+ 应用程序集成</span><span class="sxs-lookup"><span data-stu-id="dfbb6-124">Integrating with COM+ Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+## <a name="see-also"></a><span data-ttu-id="096a0-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="096a0-123">See also</span></span>
+
+- [<span data-ttu-id="096a0-124">与 COM+ 应用程序集成</span><span class="sxs-lookup"><span data-stu-id="096a0-124">Integrating with COM+ Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

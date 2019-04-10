@@ -16,15 +16,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d50aa8a5cc98ff966cdd42061cbead22611becfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f19b6107d6da19f9799655fa86fc58b95df330d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197810"
 ---
-# <a name="icordebugeditandcontinueerrorinfo-interface"></a><span data-ttu-id="7db30-102">ICorDebugEditAndContinueErrorInfo 接口</span><span class="sxs-lookup"><span data-stu-id="7db30-102">ICorDebugEditAndContinueErrorInfo Interface</span></span>
-<span data-ttu-id="7db30-103">`ICorDebugEditAndContinueErrorInfo` 已过时。</span><span class="sxs-lookup"><span data-stu-id="7db30-103">`ICorDebugEditAndContinueErrorInfo` is obsolete.</span></span> <span data-ttu-id="7db30-104">不要使用此接口。</span><span class="sxs-lookup"><span data-stu-id="7db30-104">Do not use this interface.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfo-interface"></a><span data-ttu-id="c6961-102">ICorDebugEditAndContinueErrorInfo 接口</span><span class="sxs-lookup"><span data-stu-id="c6961-102">ICorDebugEditAndContinueErrorInfo Interface</span></span>
+`ICorDebugEditAndContinueErrorInfo` <span data-ttu-id="c6961-103">已过时。</span><span class="sxs-lookup"><span data-stu-id="c6961-103">is obsolete.</span></span> <span data-ttu-id="c6961-104">不要使用此接口。</span><span class="sxs-lookup"><span data-stu-id="c6961-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7db30-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="7db30-105">See also</span></span>
-- [<span data-ttu-id="7db30-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="7db30-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="c6961-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="c6961-105">See also</span></span>
+
+- [<span data-ttu-id="c6961-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="c6961-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

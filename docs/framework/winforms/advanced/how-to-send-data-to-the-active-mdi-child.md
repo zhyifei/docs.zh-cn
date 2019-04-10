@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203322"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="ef01e-102">如何：将数据发送到活动的 MDI 子窗体</span><span class="sxs-lookup"><span data-stu-id="ef01e-102">How to: Send Data to the Active MDI Child</span></span>
-<span data-ttu-id="ef01e-103">通常情况下中的上下文[多文档界面 (MDI) 应用程序](multiple-document-interface-mdi-applications.md)，需要将数据发送到活动子窗口，例如当用户将数据从剪贴板粘贴到 MDI 应用程序。</span><span class="sxs-lookup"><span data-stu-id="ef01e-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="1eee9-102">如何：将数据发送到活动的 MDI 子窗体</span><span class="sxs-lookup"><span data-stu-id="1eee9-102">How to: Send Data to the Active MDI Child</span></span>
+<span data-ttu-id="1eee9-103">通常情况下中的上下文[多文档界面 (MDI) 应用程序](multiple-document-interface-mdi-applications.md)，需要将数据发送到活动子窗口，例如当用户将数据从剪贴板粘贴到 MDI 应用程序。</span><span class="sxs-lookup"><span data-stu-id="1eee9-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ef01e-104">有关验证的子窗口是否具有焦点并将其内容发送到剪贴板的信息，请参阅[确定活动的 MDI 子](how-to-determine-the-active-mdi-child.md)。</span><span class="sxs-lookup"><span data-stu-id="ef01e-104">For information about verifying which child window has focus and sending its contents to the Clipboard, see [Determining the Active MDI Child](how-to-determine-the-active-mdi-child.md).</span></span>  
+>  <span data-ttu-id="1eee9-104">有关验证的子窗口是否具有焦点并将其内容发送到剪贴板的信息，请参阅[确定活动的 MDI 子](how-to-determine-the-active-mdi-child.md)。</span><span class="sxs-lookup"><span data-stu-id="1eee9-104">For information about verifying which child window has focus and sending its contents to the Clipboard, see [Determining the Active MDI Child](how-to-determine-the-active-mdi-child.md).</span></span>  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a><span data-ttu-id="ef01e-105">若要从剪贴板将数据发送到活动的 MDI 子窗口</span><span class="sxs-lookup"><span data-stu-id="ef01e-105">To send data to the active MDI child window from the Clipboard</span></span>  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a><span data-ttu-id="1eee9-105">若要从剪贴板将数据发送到活动的 MDI 子窗口</span><span class="sxs-lookup"><span data-stu-id="1eee9-105">To send data to the active MDI child window from the Clipboard</span></span>  
   
-1.  <span data-ttu-id="ef01e-106">在方法中，将剪贴板上的文本复制到活动子窗体的活动控件。</span><span class="sxs-lookup"><span data-stu-id="ef01e-106">Within a method, copy the text on the Clipboard to the active control of the active child form.</span></span>  
+1.  <span data-ttu-id="1eee9-106">在方法中，将剪贴板上的文本复制到活动子窗体的活动控件。</span><span class="sxs-lookup"><span data-stu-id="1eee9-106">Within a method, copy the text on the Clipboard to the active control of the active child form.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="ef01e-107">此示例假定的 MDI 父窗体 (`Form1`) 具有一个或多个 MDI 子窗口包含<xref:System.Windows.Forms.RichTextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="ef01e-107">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="ef01e-108">有关详细信息，请参阅[创建 MDI 父窗体](how-to-create-mdi-parent-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="ef01e-108">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
+    >  <span data-ttu-id="1eee9-107">此示例假定的 MDI 父窗体 (`Form1`) 具有一个或多个 MDI 子窗口包含<xref:System.Windows.Forms.RichTextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="1eee9-107">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="1eee9-108">有关详细信息，请参阅[创建 MDI 父窗体](how-to-create-mdi-parent-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="1eee9-108">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -91,9 +91,10 @@ ms.locfileid: "57707395"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ef01e-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="ef01e-109">See also</span></span>
-- [<span data-ttu-id="ef01e-110">多文档界面 (MDI) 应用程序</span><span class="sxs-lookup"><span data-stu-id="ef01e-110">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
-- [<span data-ttu-id="ef01e-111">如何：创建 MDI 父窗体</span><span class="sxs-lookup"><span data-stu-id="ef01e-111">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
-- [<span data-ttu-id="ef01e-112">如何：创建 MDI 子窗体</span><span class="sxs-lookup"><span data-stu-id="ef01e-112">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
-- [<span data-ttu-id="ef01e-113">如何：确定活动的 MDI 子窗体</span><span class="sxs-lookup"><span data-stu-id="ef01e-113">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
-- [<span data-ttu-id="ef01e-114">如何：排列 MDI 子窗体</span><span class="sxs-lookup"><span data-stu-id="ef01e-114">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a><span data-ttu-id="1eee9-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="1eee9-109">See also</span></span>
+
+- [<span data-ttu-id="1eee9-110">多文档界面 (MDI) 应用程序</span><span class="sxs-lookup"><span data-stu-id="1eee9-110">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
+- [<span data-ttu-id="1eee9-111">如何：创建 MDI 父窗体</span><span class="sxs-lookup"><span data-stu-id="1eee9-111">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
+- [<span data-ttu-id="1eee9-112">如何：创建 MDI 子窗体</span><span class="sxs-lookup"><span data-stu-id="1eee9-112">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
+- [<span data-ttu-id="1eee9-113">如何：确定活动的 MDI 子窗体</span><span class="sxs-lookup"><span data-stu-id="1eee9-113">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
+- [<span data-ttu-id="1eee9-114">如何：排列 MDI 子窗体</span><span class="sxs-lookup"><span data-stu-id="1eee9-114">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)

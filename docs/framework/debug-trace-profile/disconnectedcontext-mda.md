@@ -11,32 +11,32 @@ helpviewer_keywords:
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f125d322a5a3e2841d6b1ba1f2f8d5fe9745870
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb42c04df6e02ff43421b7af6bf2d51b53aa3e69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181969"
 ---
-# <a name="disconnectedcontext-mda"></a><span data-ttu-id="390d9-102">disconnectedContext MDA</span><span class="sxs-lookup"><span data-stu-id="390d9-102">disconnectedContext MDA</span></span>
-<span data-ttu-id="390d9-103">如果 CLR 在处理关于 COM 对象的请求时尝试转换到断开连接的单元或上下文，将激活 `disconnectedContext` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="390d9-103">The `disconnectedContext` managed debugging assistant (MDA) is activated when the CLR attempts to transition into a disconnected apartment or context while servicing a request concerning a COM object.</span></span>  
+# <a name="disconnectedcontext-mda"></a><span data-ttu-id="875f4-102">disconnectedContext MDA</span><span class="sxs-lookup"><span data-stu-id="875f4-102">disconnectedContext MDA</span></span>
+<span data-ttu-id="875f4-103">如果 CLR 在处理关于 COM 对象的请求时尝试转换到断开连接的单元或上下文，将激活 `disconnectedContext` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="875f4-103">The `disconnectedContext` managed debugging assistant (MDA) is activated when the CLR attempts to transition into a disconnected apartment or context while servicing a request concerning a COM object.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="390d9-104">症状</span><span class="sxs-lookup"><span data-stu-id="390d9-104">Symptoms</span></span>  
- <span data-ttu-id="390d9-105">将对[运行时可调通包装器](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 的调用发送到当前单元或上下文中的基础 COM 组件，而不是发送到调用所在的 COM 组件。</span><span class="sxs-lookup"><span data-stu-id="390d9-105">Calls made on a [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) are delivered to the underlying COM component in the current apartment or context instead of the one in which they exist.</span></span> <span data-ttu-id="390d9-106">如果该 COM 组件不是多线程的（例如，在单线程单元 (STA) 组件的情况中），则将导致损坏或数据丢失。</span><span class="sxs-lookup"><span data-stu-id="390d9-106">This can cause corruption and or data loss if the COM component is not multithreaded, as in the case of single-threaded apartment (STA) components.</span></span> <span data-ttu-id="390d9-107">或者，如果 RCW 本身是一个代理，则该调用可能会引发 HRESULT 为 RPC_E_WRONG_THREAD 的 <xref:System.Runtime.InteropServices.COMException>。</span><span class="sxs-lookup"><span data-stu-id="390d9-107">Alternatively, if the RCW is itself a proxy, the call might result in the throwing of a <xref:System.Runtime.InteropServices.COMException> with an HRESULT of RPC_E_WRONG_THREAD.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="875f4-104">症状</span><span class="sxs-lookup"><span data-stu-id="875f4-104">Symptoms</span></span>  
+ <span data-ttu-id="875f4-105">将对[运行时可调通包装器](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 的调用发送到当前单元或上下文中的基础 COM 组件，而不是发送到调用所在的 COM 组件。</span><span class="sxs-lookup"><span data-stu-id="875f4-105">Calls made on a [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) are delivered to the underlying COM component in the current apartment or context instead of the one in which they exist.</span></span> <span data-ttu-id="875f4-106">如果该 COM 组件不是多线程的（例如，在单线程单元 (STA) 组件的情况中），则将导致损坏或数据丢失。</span><span class="sxs-lookup"><span data-stu-id="875f4-106">This can cause corruption and or data loss if the COM component is not multithreaded, as in the case of single-threaded apartment (STA) components.</span></span> <span data-ttu-id="875f4-107">或者，如果 RCW 本身是一个代理，则该调用可能会引发 HRESULT 为 RPC_E_WRONG_THREAD 的 <xref:System.Runtime.InteropServices.COMException>。</span><span class="sxs-lookup"><span data-stu-id="875f4-107">Alternatively, if the RCW is itself a proxy, the call might result in the throwing of a <xref:System.Runtime.InteropServices.COMException> with an HRESULT of RPC_E_WRONG_THREAD.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="390d9-108">原因</span><span class="sxs-lookup"><span data-stu-id="390d9-108">Cause</span></span>  
- <span data-ttu-id="390d9-109">当 CLR 尝试转换为 OLE 单元或上下文时，OLE 单元或上下文已关闭。</span><span class="sxs-lookup"><span data-stu-id="390d9-109">The OLE apartment or context has been shut down when the CLR attempts to transition into it.</span></span> <span data-ttu-id="390d9-110">最常见的原因是：在 STA 单元拥有的所有 COM 组件完全释放之前，STA 单元已经关闭。在用户代码对 RCW 进行显式调用时或在 CLR 自行操作 COM 组件时（例如，在对关联的 RCW 进行了垃圾回收后，CLR 释放 COM 组件），可能会发生这种情况。</span><span class="sxs-lookup"><span data-stu-id="390d9-110">This is most commonly caused by STA apartments being shut down before all the COM components owned by the apartment were completely released This can occur as a result of an explicit call from user code on an RCW or while the CLR itself is manipulating the COM component, for example when the CLR is releasing the COM component when the associated RCW has been garbage collected.</span></span>  
+## <a name="cause"></a><span data-ttu-id="875f4-108">原因</span><span class="sxs-lookup"><span data-stu-id="875f4-108">Cause</span></span>  
+ <span data-ttu-id="875f4-109">当 CLR 尝试转换为 OLE 单元或上下文时，OLE 单元或上下文已关闭。</span><span class="sxs-lookup"><span data-stu-id="875f4-109">The OLE apartment or context has been shut down when the CLR attempts to transition into it.</span></span> <span data-ttu-id="875f4-110">最常见的原因是：在 STA 单元拥有的所有 COM 组件完全释放之前，STA 单元已经关闭。在用户代码对 RCW 进行显式调用时或在 CLR 自行操作 COM 组件时（例如，在对关联的 RCW 进行了垃圾回收后，CLR 释放 COM 组件），可能会发生这种情况。</span><span class="sxs-lookup"><span data-stu-id="875f4-110">This is most commonly caused by STA apartments being shut down before all the COM components owned by the apartment were completely released This can occur as a result of an explicit call from user code on an RCW or while the CLR itself is manipulating the COM component, for example when the CLR is releasing the COM component when the associated RCW has been garbage collected.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="390d9-111">解决方法</span><span class="sxs-lookup"><span data-stu-id="390d9-111">Resolution</span></span>  
- <span data-ttu-id="390d9-112">若要避免发生此问题，请确保在应用程序处理完单元中存在的所有对象之前，拥有 STA 的线程不会终止。</span><span class="sxs-lookup"><span data-stu-id="390d9-112">To avoid this problem, ensure the thread that owns the STA does not terminate before the application has finished with all the objects that live in the apartment.</span></span> <span data-ttu-id="390d9-113">这也同样适用于上下文；请确保在应用程序处理完上下文中存在的所有 COM 组件之前，上下文不会关闭。</span><span class="sxs-lookup"><span data-stu-id="390d9-113">The same applies to contexts; ensure contexts are not shut down before the application is completely finished with any COM components that live inside the context.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="875f4-111">解决方法</span><span class="sxs-lookup"><span data-stu-id="875f4-111">Resolution</span></span>  
+ <span data-ttu-id="875f4-112">若要避免发生此问题，请确保在应用程序处理完单元中存在的所有对象之前，拥有 STA 的线程不会终止。</span><span class="sxs-lookup"><span data-stu-id="875f4-112">To avoid this problem, ensure the thread that owns the STA does not terminate before the application has finished with all the objects that live in the apartment.</span></span> <span data-ttu-id="875f4-113">这也同样适用于上下文；请确保在应用程序处理完上下文中存在的所有 COM 组件之前，上下文不会关闭。</span><span class="sxs-lookup"><span data-stu-id="875f4-113">The same applies to contexts; ensure contexts are not shut down before the application is completely finished with any COM components that live inside the context.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="390d9-114">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="390d9-114">Effect on the Runtime</span></span>  
- <span data-ttu-id="390d9-115">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="390d9-115">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="390d9-116">它只报告有关断开连接的上下文的数据。</span><span class="sxs-lookup"><span data-stu-id="390d9-116">It only reports data about the disconnected context.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="875f4-114">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="875f4-114">Effect on the Runtime</span></span>  
+ <span data-ttu-id="875f4-115">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="875f4-115">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="875f4-116">它只报告有关断开连接的上下文的数据。</span><span class="sxs-lookup"><span data-stu-id="875f4-116">It only reports data about the disconnected context.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="390d9-117">输出</span><span class="sxs-lookup"><span data-stu-id="390d9-117">Output</span></span>  
- <span data-ttu-id="390d9-118">报告断开连接的单元或上下文的上下文 Cookie。</span><span class="sxs-lookup"><span data-stu-id="390d9-118">Reports the context cookie of the disconnected apartment or context.</span></span>  
+## <a name="output"></a><span data-ttu-id="875f4-117">Output</span><span class="sxs-lookup"><span data-stu-id="875f4-117">Output</span></span>  
+ <span data-ttu-id="875f4-118">报告断开连接的单元或上下文的上下文 Cookie。</span><span class="sxs-lookup"><span data-stu-id="875f4-118">Reports the context cookie of the disconnected apartment or context.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="390d9-119">配置</span><span class="sxs-lookup"><span data-stu-id="390d9-119">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="875f4-119">配置</span><span class="sxs-lookup"><span data-stu-id="875f4-119">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -46,7 +46,8 @@ ms.locfileid: "54569698"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="390d9-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="390d9-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="875f4-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="875f4-120">See also</span></span>
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="390d9-121">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="390d9-121">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="390d9-122">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="390d9-122">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="875f4-121">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="875f4-121">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="875f4-122">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="875f4-122">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

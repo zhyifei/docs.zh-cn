@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 020774778b21cf0f6029a666e0022fe83845c4ed
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b3eb8bf59ee2a91c62a6ff74b1903d92607a9ffe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472442"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197852"
 ---
-# <a name="icordebugmanagedcallbackunloadclass-method"></a><span data-ttu-id="1edad-102">ICorDebugManagedCallback::UnloadClass 方法</span><span class="sxs-lookup"><span data-stu-id="1edad-102">ICorDebugManagedCallback::UnloadClass Method</span></span>
-<span data-ttu-id="1edad-103">通知调试器卸载某个类。</span><span class="sxs-lookup"><span data-stu-id="1edad-103">Notifies the debugger that a class is being unloaded.</span></span>  
+# <a name="icordebugmanagedcallbackunloadclass-method"></a><span data-ttu-id="b3b7b-102">ICorDebugManagedCallback::UnloadClass 方法</span><span class="sxs-lookup"><span data-stu-id="b3b7b-102">ICorDebugManagedCallback::UnloadClass Method</span></span>
+<span data-ttu-id="b3b7b-103">通知调试器卸载某个类。</span><span class="sxs-lookup"><span data-stu-id="b3b7b-103">Notifies the debugger that a class is being unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1edad-104">语法</span><span class="sxs-lookup"><span data-stu-id="1edad-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b3b7b-104">语法</span><span class="sxs-lookup"><span data-stu-id="b3b7b-104">Syntax</span></span>  
   
 ```  
 HRESULT UnloadClass (  
@@ -36,25 +36,26 @@ HRESULT UnloadClass (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1edad-105">参数</span><span class="sxs-lookup"><span data-stu-id="1edad-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b3b7b-105">参数</span><span class="sxs-lookup"><span data-stu-id="b3b7b-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="1edad-106">[in]指向一个 ICorDebugAppDomain 对象，表示包含类的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="1edad-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the class.</span></span>  
+ <span data-ttu-id="b3b7b-106">[in]指向一个 ICorDebugAppDomain 对象，表示包含类的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="b3b7b-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the class.</span></span>  
   
  `c`  
- <span data-ttu-id="1edad-107">[in]指向一个 ICorDebugClass 对象，表示类的指针。</span><span class="sxs-lookup"><span data-stu-id="1edad-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
+ <span data-ttu-id="b3b7b-107">[in]指向一个 ICorDebugClass 对象，表示类的指针。</span><span class="sxs-lookup"><span data-stu-id="b3b7b-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1edad-108">备注</span><span class="sxs-lookup"><span data-stu-id="1edad-108">Remarks</span></span>  
- <span data-ttu-id="1edad-109">不应进行此调用后引用类。</span><span class="sxs-lookup"><span data-stu-id="1edad-109">The class should not be referenced after this call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b3b7b-108">备注</span><span class="sxs-lookup"><span data-stu-id="b3b7b-108">Remarks</span></span>  
+ <span data-ttu-id="b3b7b-109">不应进行此调用后引用类。</span><span class="sxs-lookup"><span data-stu-id="b3b7b-109">The class should not be referenced after this call.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1edad-110">要求</span><span class="sxs-lookup"><span data-stu-id="1edad-110">Requirements</span></span>  
- <span data-ttu-id="1edad-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1edad-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b3b7b-110">要求</span><span class="sxs-lookup"><span data-stu-id="b3b7b-110">Requirements</span></span>  
+ <span data-ttu-id="b3b7b-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b3b7b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1edad-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1edad-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b3b7b-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b3b7b-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1edad-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1edad-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b3b7b-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b3b7b-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1edad-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1edad-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="b3b7b-114">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="b3b7b-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="1edad-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="1edad-115">See also</span></span>
-- [<span data-ttu-id="1edad-116">LoadClass 方法</span><span class="sxs-lookup"><span data-stu-id="1edad-116">LoadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)
-- [<span data-ttu-id="1edad-117">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="1edad-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b3b7b-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="b3b7b-115">See also</span></span>
+
+- [<span data-ttu-id="b3b7b-116">LoadClass 方法</span><span class="sxs-lookup"><span data-stu-id="b3b7b-116">LoadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)
+- [<span data-ttu-id="b3b7b-117">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="b3b7b-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

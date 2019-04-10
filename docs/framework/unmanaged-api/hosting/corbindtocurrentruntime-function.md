@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 490d78cbc8724e12dff8ac24c81e499268e4ed6c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d0acb322fa3348f0bb2d819529a370110580343c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178056"
 ---
-# <a name="corbindtocurrentruntime-function"></a><span data-ttu-id="34bb7-102">CorBindToCurrentRuntime 函数</span><span class="sxs-lookup"><span data-stu-id="34bb7-102">CorBindToCurrentRuntime Function</span></span>
-<span data-ttu-id="34bb7-103">通过使用版本信息的 XML 文件中存储公共语言运行时 (CLR) 加载到进程中。</span><span class="sxs-lookup"><span data-stu-id="34bb7-103">Loads the common language runtime (CLR) into a process by using version information stored in an XML file.</span></span> <span data-ttu-id="34bb7-104">XML 文件的格式只被现代性的标准应用程序配置文件。</span><span class="sxs-lookup"><span data-stu-id="34bb7-104">The format of the XML file is modeled after the standard application configuration file.</span></span> <span data-ttu-id="34bb7-105">有关配置文件的详细信息，请参阅[配置文件架构](../../../../docs/framework/configure-apps/file-schema/index.md)。</span><span class="sxs-lookup"><span data-stu-id="34bb7-105">For more information about configuration files, see [Configuration File Schema](../../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
+# <a name="corbindtocurrentruntime-function"></a><span data-ttu-id="a8970-102">CorBindToCurrentRuntime 函数</span><span class="sxs-lookup"><span data-stu-id="a8970-102">CorBindToCurrentRuntime Function</span></span>
+<span data-ttu-id="a8970-103">通过使用版本信息的 XML 文件中存储公共语言运行时 (CLR) 加载到进程中。</span><span class="sxs-lookup"><span data-stu-id="a8970-103">Loads the common language runtime (CLR) into a process by using version information stored in an XML file.</span></span> <span data-ttu-id="a8970-104">XML 文件的格式只被现代性的标准应用程序配置文件。</span><span class="sxs-lookup"><span data-stu-id="a8970-104">The format of the XML file is modeled after the standard application configuration file.</span></span> <span data-ttu-id="a8970-105">有关配置文件的详细信息，请参阅[配置文件架构](../../../../docs/framework/configure-apps/file-schema/index.md)。</span><span class="sxs-lookup"><span data-stu-id="a8970-105">For more information about configuration files, see [Configuration File Schema](../../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
   
- <span data-ttu-id="34bb7-106">此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="34bb7-106">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="34bb7-107">请参阅[公共语言运行时加载到进程中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="34bb7-107">See [Loading the Common Language Runtime into a Process](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100)).</span></span>  
+ <span data-ttu-id="a8970-106">此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="a8970-106">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="a8970-107">请参阅[公共语言运行时加载到进程中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="a8970-107">See [Loading the Common Language Runtime into a Process](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100)).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="34bb7-108">语法</span><span class="sxs-lookup"><span data-stu-id="34bb7-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a8970-108">语法</span><span class="sxs-lookup"><span data-stu-id="a8970-108">Syntax</span></span>  
   
 ```  
 HRESULT CorBindToCurrentRuntime (  
@@ -40,36 +40,37 @@ HRESULT CorBindToCurrentRuntime (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="34bb7-109">参数</span><span class="sxs-lookup"><span data-stu-id="34bb7-109">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a8970-109">参数</span><span class="sxs-lookup"><span data-stu-id="a8970-109">Parameters</span></span>  
  `pwszFileName`  
- <span data-ttu-id="34bb7-110">[in]指定要加载的 CLR 版本应用程序配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="34bb7-110">[in] The name of an application configuration file that specifies the version of the CLR to load.</span></span> <span data-ttu-id="34bb7-111">如果不完全限定的文件名，则假定要进行的调用的可执行文件所在的同一目录中。</span><span class="sxs-lookup"><span data-stu-id="34bb7-111">If the file name is not fully qualified, it is assumed to be in the same directory as the executable making the call.</span></span>  
+ <span data-ttu-id="a8970-110">[in]指定要加载的 CLR 版本应用程序配置文件的名称。</span><span class="sxs-lookup"><span data-stu-id="a8970-110">[in] The name of an application configuration file that specifies the version of the CLR to load.</span></span> <span data-ttu-id="a8970-111">如果不完全限定的文件名，则假定要进行的调用的可执行文件所在的同一目录中。</span><span class="sxs-lookup"><span data-stu-id="a8970-111">If the file name is not fully qualified, it is assumed to be in the same directory as the executable making the call.</span></span>  
   
- <span data-ttu-id="34bb7-112">中的版本属性描述要加载的运行时版本[ \<requiredRuntime >](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)配置文件元素。</span><span class="sxs-lookup"><span data-stu-id="34bb7-112">The version of the runtime to be loaded is described by the version attribute in the [\<requiredRuntime>](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) element of the configuration file.</span></span>  
+ <span data-ttu-id="a8970-112">中的版本属性描述要加载的运行时版本[ \<requiredRuntime >](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)配置文件元素。</span><span class="sxs-lookup"><span data-stu-id="a8970-112">The version of the runtime to be loaded is described by the version attribute in the [\<requiredRuntime>](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) element of the configuration file.</span></span>  
   
- <span data-ttu-id="34bb7-113">如果没有指定版本，或如果`<requiredRuntime>`找不到元素，加载的 CLR 的计算机上安装的最新版本。</span><span class="sxs-lookup"><span data-stu-id="34bb7-113">If no version is specified, or if the `<requiredRuntime>` element cannot be found, the latest version of the CLR that is installed on the machine is loaded.</span></span>  
+ <span data-ttu-id="a8970-113">如果没有指定版本，或如果`<requiredRuntime>`找不到元素，加载的 CLR 的计算机上安装的最新版本。</span><span class="sxs-lookup"><span data-stu-id="a8970-113">If no version is specified, or if the `<requiredRuntime>` element cannot be found, the latest version of the CLR that is installed on the machine is loaded.</span></span>  
   
  `rclsid`  
- <span data-ttu-id="34bb7-114">[in]`CLSID`的实现的组件类[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="34bb7-114">[in] The `CLSID` of the coclass that implements either the [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) or the [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interface.</span></span> <span data-ttu-id="34bb7-115">支持的值为 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。</span><span class="sxs-lookup"><span data-stu-id="34bb7-115">Supported values are CLSID_CorRuntimeHost or CLSID_CLRRuntimeHost.</span></span>  
+ <span data-ttu-id="a8970-114">[in]`CLSID`的实现的组件类[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="a8970-114">[in] The `CLSID` of the coclass that implements either the [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) or the [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interface.</span></span> <span data-ttu-id="a8970-115">支持的值为 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。</span><span class="sxs-lookup"><span data-stu-id="a8970-115">Supported values are CLSID_CorRuntimeHost or CLSID_CLRRuntimeHost.</span></span>  
   
  `riid`  
- <span data-ttu-id="34bb7-116">[in]`IID`您请求的接口。</span><span class="sxs-lookup"><span data-stu-id="34bb7-116">[in] The `IID` of the interface you are requesting.</span></span> <span data-ttu-id="34bb7-117">支持的值为 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。</span><span class="sxs-lookup"><span data-stu-id="34bb7-117">Supported values are IID_ICorRuntimeHost or IID_ICLRRuntimeHost.</span></span>  
+ <span data-ttu-id="a8970-116">[in]`IID`您请求的接口。</span><span class="sxs-lookup"><span data-stu-id="a8970-116">[in] The `IID` of the interface you are requesting.</span></span> <span data-ttu-id="a8970-117">支持的值为 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。</span><span class="sxs-lookup"><span data-stu-id="a8970-117">Supported values are IID_ICorRuntimeHost or IID_ICLRRuntimeHost.</span></span>  
   
  `ppv`  
- <span data-ttu-id="34bb7-118">[out]返回的接口指针。</span><span class="sxs-lookup"><span data-stu-id="34bb7-118">[out] The returned interface pointer.</span></span>  
+ <span data-ttu-id="a8970-118">[out]返回的接口指针。</span><span class="sxs-lookup"><span data-stu-id="a8970-118">[out] The returned interface pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="34bb7-119">要求</span><span class="sxs-lookup"><span data-stu-id="34bb7-119">Requirements</span></span>  
- <span data-ttu-id="34bb7-120">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="34bb7-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a8970-119">要求</span><span class="sxs-lookup"><span data-stu-id="a8970-119">Requirements</span></span>  
+ <span data-ttu-id="a8970-120">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a8970-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="34bb7-121">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="34bb7-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a8970-121">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a8970-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="34bb7-122">**库：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="34bb7-122">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="a8970-122">**库：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a8970-122">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="34bb7-123">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34bb7-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="a8970-123">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="a8970-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="34bb7-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="34bb7-124">See also</span></span>
-- [<span data-ttu-id="34bb7-125">CorBindToRuntime 函数</span><span class="sxs-lookup"><span data-stu-id="34bb7-125">CorBindToRuntime Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
-- [<span data-ttu-id="34bb7-126">CorBindToRuntimeByCfg 函数</span><span class="sxs-lookup"><span data-stu-id="34bb7-126">CorBindToRuntimeByCfg Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
-- [<span data-ttu-id="34bb7-127">CorBindToRuntimeEx 函数</span><span class="sxs-lookup"><span data-stu-id="34bb7-127">CorBindToRuntimeEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
-- [<span data-ttu-id="34bb7-128">CorBindToRuntimeHost 函数</span><span class="sxs-lookup"><span data-stu-id="34bb7-128">CorBindToRuntimeHost Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)
-- [<span data-ttu-id="34bb7-129">ICorRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="34bb7-129">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
-- [<span data-ttu-id="34bb7-130">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="34bb7-130">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="a8970-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="a8970-124">See also</span></span>
+
+- [<span data-ttu-id="a8970-125">CorBindToRuntime 函数</span><span class="sxs-lookup"><span data-stu-id="a8970-125">CorBindToRuntime Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
+- [<span data-ttu-id="a8970-126">CorBindToRuntimeByCfg 函数</span><span class="sxs-lookup"><span data-stu-id="a8970-126">CorBindToRuntimeByCfg Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
+- [<span data-ttu-id="a8970-127">CorBindToRuntimeEx 函数</span><span class="sxs-lookup"><span data-stu-id="a8970-127">CorBindToRuntimeEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
+- [<span data-ttu-id="a8970-128">CorBindToRuntimeHost 函数</span><span class="sxs-lookup"><span data-stu-id="a8970-128">CorBindToRuntimeHost Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)
+- [<span data-ttu-id="a8970-129">ICorRuntimeHost 接口</span><span class="sxs-lookup"><span data-stu-id="a8970-129">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="a8970-130">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="a8970-130">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

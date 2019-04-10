@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c4e22c2e80af37177294d86c2e5775a5c296fe7
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 7b3712b4cb66facc105a03d7bfad235f09339056
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211853"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193000"
 ---
-# <a name="couninitializeee-function"></a><span data-ttu-id="f6baf-102">CoUninitializeEE 函数</span><span class="sxs-lookup"><span data-stu-id="f6baf-102">CoUninitializeEE Function</span></span>
-<span data-ttu-id="f6baf-103">`CoUninitializeEE` 已过时，不提供任何功能。</span><span class="sxs-lookup"><span data-stu-id="f6baf-103">`CoUninitializeEE` is obsolete and provides no functionality.</span></span>  
+# <a name="couninitializeee-function"></a><span data-ttu-id="96702-102">CoUninitializeEE 函数</span><span class="sxs-lookup"><span data-stu-id="96702-102">CoUninitializeEE Function</span></span>
+`CoUninitializeEE` <span data-ttu-id="96702-103">已过时，不提供任何功能。</span><span class="sxs-lookup"><span data-stu-id="96702-103">is obsolete and provides no functionality.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f6baf-104">语法</span><span class="sxs-lookup"><span data-stu-id="f6baf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="96702-104">语法</span><span class="sxs-lookup"><span data-stu-id="96702-104">Syntax</span></span>  
   
 ```  
 void CoUninitializeEE (  
@@ -35,9 +35,10 @@ void CoUninitializeEE (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="f6baf-105">备注</span><span class="sxs-lookup"><span data-stu-id="f6baf-105">Remarks</span></span>  
- <span data-ttu-id="f6baf-106">公共语言运行时执行引擎不能从进程中卸载。</span><span class="sxs-lookup"><span data-stu-id="f6baf-106">The common language runtime execution engine cannot be unloaded from a process.</span></span> <span data-ttu-id="f6baf-107">若要关闭的情况下执行引擎调用[CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)。</span><span class="sxs-lookup"><span data-stu-id="f6baf-107">To shut down the execution engine call [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="96702-105">备注</span><span class="sxs-lookup"><span data-stu-id="96702-105">Remarks</span></span>  
+ <span data-ttu-id="96702-106">公共语言运行时执行引擎不能从进程中卸载。</span><span class="sxs-lookup"><span data-stu-id="96702-106">The common language runtime execution engine cannot be unloaded from a process.</span></span> <span data-ttu-id="96702-107">若要关闭的情况下执行引擎调用[CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)。</span><span class="sxs-lookup"><span data-stu-id="96702-107">To shut down the execution engine call [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f6baf-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="f6baf-108">See also</span></span>
-- [<span data-ttu-id="f6baf-109">CoInitializeEE 函数</span><span class="sxs-lookup"><span data-stu-id="f6baf-109">CoInitializeEE Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)
-- [<span data-ttu-id="f6baf-110">元数据全局静态函数</span><span class="sxs-lookup"><span data-stu-id="f6baf-110">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="96702-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="96702-108">See also</span></span>
+
+- [<span data-ttu-id="96702-109">CoInitializeEE 函数</span><span class="sxs-lookup"><span data-stu-id="96702-109">CoInitializeEE Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)
+- [<span data-ttu-id="96702-110">元数据全局静态函数</span><span class="sxs-lookup"><span data-stu-id="96702-110">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

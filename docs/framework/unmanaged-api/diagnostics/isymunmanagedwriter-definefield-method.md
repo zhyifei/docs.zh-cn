@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a385e42ae3a494f6d2196e21b552c6b5679dda9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5fd9798b3681d66e71d5703f4d16564b153da07b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176171"
 ---
-# <a name="isymunmanagedwriterdefinefield-method"></a><span data-ttu-id="0e4bb-102">ISymUnmanagedWriter::DefineField 方法</span><span class="sxs-lookup"><span data-stu-id="0e4bb-102">ISymUnmanagedWriter::DefineField Method</span></span>
-<span data-ttu-id="0e4bb-103">定义一个不在方法内的变量。</span><span class="sxs-lookup"><span data-stu-id="0e4bb-103">Defines a single variable that is not within a method.</span></span> <span data-ttu-id="0e4bb-104">此方法是使用类中的某些字段、 位域等。</span><span class="sxs-lookup"><span data-stu-id="0e4bb-104">This method is used for certain fields in classes, bit fields, and so on.</span></span>  
+# <a name="isymunmanagedwriterdefinefield-method"></a><span data-ttu-id="c7298-102">ISymUnmanagedWriter::DefineField 方法</span><span class="sxs-lookup"><span data-stu-id="c7298-102">ISymUnmanagedWriter::DefineField Method</span></span>
+<span data-ttu-id="c7298-103">定义一个不在方法内的变量。</span><span class="sxs-lookup"><span data-stu-id="c7298-103">Defines a single variable that is not within a method.</span></span> <span data-ttu-id="c7298-104">此方法是使用类中的某些字段、 位域等。</span><span class="sxs-lookup"><span data-stu-id="c7298-104">This method is used for certain fields in classes, bit fields, and so on.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e4bb-105">语法</span><span class="sxs-lookup"><span data-stu-id="0e4bb-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c7298-105">语法</span><span class="sxs-lookup"><span data-stu-id="c7298-105">Syntax</span></span>  
   
 ```  
 HRESULT DefineField(  
@@ -42,39 +42,40 @@ HRESULT DefineField(
     [in] ULONG32      addr3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0e4bb-106">参数</span><span class="sxs-lookup"><span data-stu-id="0e4bb-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c7298-106">参数</span><span class="sxs-lookup"><span data-stu-id="c7298-106">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="0e4bb-107">[in]元数据类型或方法令牌。</span><span class="sxs-lookup"><span data-stu-id="0e4bb-107">[in] The metadata type or method token.</span></span>  
+ <span data-ttu-id="c7298-107">[in]元数据类型或方法令牌。</span><span class="sxs-lookup"><span data-stu-id="c7298-107">[in] The metadata type or method token.</span></span>  
   
  `name`  
- <span data-ttu-id="0e4bb-108">[in]字段名称。</span><span class="sxs-lookup"><span data-stu-id="0e4bb-108">[in] The field name.</span></span>  
+ <span data-ttu-id="c7298-108">[in]字段名称。</span><span class="sxs-lookup"><span data-stu-id="c7298-108">[in] The field name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="0e4bb-109">[in]字段特性。</span><span class="sxs-lookup"><span data-stu-id="0e4bb-109">[in] The field attributes.</span></span>  
+ <span data-ttu-id="c7298-109">[in]字段特性。</span><span class="sxs-lookup"><span data-stu-id="c7298-109">[in] The field attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="0e4bb-110">[in]一个`ULONG32`，它是大小，以字符为单位，包含字段签名所需的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="0e4bb-110">[in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.</span></span>  
+ <span data-ttu-id="c7298-110">[in]一个`ULONG32`，它是大小，以字符为单位，包含字段签名所需的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="c7298-110">[in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.</span></span>  
   
  `signature`  
- <span data-ttu-id="0e4bb-111">[in]字段签名的数组。</span><span class="sxs-lookup"><span data-stu-id="0e4bb-111">[in] The array of field signatures.</span></span>  
+ <span data-ttu-id="c7298-111">[in]字段签名的数组。</span><span class="sxs-lookup"><span data-stu-id="c7298-111">[in] The array of field signatures.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="0e4bb-112">[in]地址类型。</span><span class="sxs-lookup"><span data-stu-id="0e4bb-112">[in] The address type.</span></span>  
+ <span data-ttu-id="c7298-112">[in]地址类型。</span><span class="sxs-lookup"><span data-stu-id="c7298-112">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="0e4bb-113">[in]字段规格的第一个地址。</span><span class="sxs-lookup"><span data-stu-id="0e4bb-113">[in] The first address for the field specification.</span></span>  
+ <span data-ttu-id="c7298-113">[in]字段规格的第一个地址。</span><span class="sxs-lookup"><span data-stu-id="c7298-113">[in] The first address for the field specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="0e4bb-114">[in]字段规格的第二个地址。</span><span class="sxs-lookup"><span data-stu-id="0e4bb-114">[in] The second address for the field specification.</span></span>  
+ <span data-ttu-id="c7298-114">[in]字段规格的第二个地址。</span><span class="sxs-lookup"><span data-stu-id="c7298-114">[in] The second address for the field specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="0e4bb-115">[in]字段规格的第三个地址。</span><span class="sxs-lookup"><span data-stu-id="0e4bb-115">[in] The third address for the field specification.</span></span>  
+ <span data-ttu-id="c7298-115">[in]字段规格的第三个地址。</span><span class="sxs-lookup"><span data-stu-id="c7298-115">[in] The third address for the field specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0e4bb-116">返回值</span><span class="sxs-lookup"><span data-stu-id="0e4bb-116">Return Value</span></span>  
- <span data-ttu-id="0e4bb-117">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="0e4bb-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c7298-116">返回值</span><span class="sxs-lookup"><span data-stu-id="c7298-116">Return Value</span></span>  
+ <span data-ttu-id="c7298-117">如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。</span><span class="sxs-lookup"><span data-stu-id="c7298-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0e4bb-118">要求</span><span class="sxs-lookup"><span data-stu-id="0e4bb-118">Requirements</span></span>  
- <span data-ttu-id="0e4bb-119">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0e4bb-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c7298-118">要求</span><span class="sxs-lookup"><span data-stu-id="c7298-118">Requirements</span></span>  
+ <span data-ttu-id="c7298-119">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c7298-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e4bb-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="0e4bb-120">See also</span></span>
-- [<span data-ttu-id="0e4bb-121">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="0e4bb-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c7298-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="c7298-120">See also</span></span>
+
+- [<span data-ttu-id="c7298-121">ISymUnmanagedWriter 接口</span><span class="sxs-lookup"><span data-stu-id="c7298-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -9,27 +9,28 @@ helpviewer_keywords:
 - images [WPF]
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
-ms.openlocfilehash: b59cd1c1ec2ee058811996c92e4b215c8872ff0b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194976"
 ---
-# <a name="images"></a><span data-ttu-id="939dc-102">图像</span><span class="sxs-lookup"><span data-stu-id="939dc-102">Images</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="939dc-103">提供对多种图像格式、高保真图像呈现以及编解码器扩展性的内置支持。</span><span class="sxs-lookup"><span data-stu-id="939dc-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
+# <a name="images"></a><span data-ttu-id="445b6-102">图像</span><span class="sxs-lookup"><span data-stu-id="445b6-102">Images</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="445b6-103">为多个图像格式、 高保真图像呈现以及编解码器扩展性提供内置支持。</span><span class="sxs-lookup"><span data-stu-id="445b6-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="939dc-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="939dc-104">In This Section</span></span>  
- [<span data-ttu-id="939dc-105">图像处理概述</span><span class="sxs-lookup"><span data-stu-id="939dc-105">Imaging Overview</span></span>](imaging-overview.md)  
- [<span data-ttu-id="939dc-106">帮助主题</span><span class="sxs-lookup"><span data-stu-id="939dc-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="445b6-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="445b6-104">In This Section</span></span>  
+ [<span data-ttu-id="445b6-105">图像处理概述</span><span class="sxs-lookup"><span data-stu-id="445b6-105">Imaging Overview</span></span>](imaging-overview.md)  
+ [<span data-ttu-id="445b6-106">帮助主题</span><span class="sxs-lookup"><span data-stu-id="445b6-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="939dc-107">参考</span><span class="sxs-lookup"><span data-stu-id="939dc-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="445b6-107">参考</span><span class="sxs-lookup"><span data-stu-id="445b6-107">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="939dc-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="939dc-108">See also</span></span>
-- [<span data-ttu-id="939dc-109">2D 图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="939dc-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="939dc-110">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="939dc-110">Graphics and Multimedia</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="445b6-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="445b6-108">See also</span></span>
+
+- [<span data-ttu-id="445b6-109">二维图形和图像处理</span><span class="sxs-lookup"><span data-stu-id="445b6-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="445b6-110">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="445b6-110">Graphics and Multimedia</span></span>](index.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4db5b6c6d54729363cd734840926f97d89aa4bfa
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6998be3daf0ab6a6290a3400b96c32227df3e022
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489288"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175080"
 ---
-# <a name="icordebugobjectenumnext-method"></a><span data-ttu-id="8eb10-102">ICorDebugObjectEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="8eb10-102">ICorDebugObjectEnum::Next Method</span></span>
-<span data-ttu-id="8eb10-103">从当前位置开始枚举中获取指定数目的对象的相对虚拟地址 (Rva)。</span><span class="sxs-lookup"><span data-stu-id="8eb10-103">Gets the relative virtual addresses (RVAs) of the specified number of objects from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugobjectenumnext-method"></a><span data-ttu-id="1ea24-102">ICorDebugObjectEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="1ea24-102">ICorDebugObjectEnum::Next Method</span></span>
+<span data-ttu-id="1ea24-103">从当前位置开始枚举中获取指定数目的对象的相对虚拟地址 (Rva)。</span><span class="sxs-lookup"><span data-stu-id="1ea24-103">Gets the relative virtual addresses (RVAs) of the specified number of objects from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8eb10-104">语法</span><span class="sxs-lookup"><span data-stu-id="8eb10-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1ea24-104">语法</span><span class="sxs-lookup"><span data-stu-id="1ea24-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,24 +38,23 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8eb10-105">参数</span><span class="sxs-lookup"><span data-stu-id="8eb10-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1ea24-105">参数</span><span class="sxs-lookup"><span data-stu-id="1ea24-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="8eb10-106">[in] 要检索的对象数。</span><span class="sxs-lookup"><span data-stu-id="8eb10-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="1ea24-106">[in] 要检索的对象数。</span><span class="sxs-lookup"><span data-stu-id="1ea24-106">[in] The number of objects to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="8eb10-107">[out]一个指针数组，其中每个指向 CORDB_ADDRESS 对象。</span><span class="sxs-lookup"><span data-stu-id="8eb10-107">[out] An array of pointers, each of which points to a CORDB_ADDRESS object.</span></span>  
+ <span data-ttu-id="1ea24-107">[out]一个指针数组，其中每个指向 CORDB_ADDRESS 对象。</span><span class="sxs-lookup"><span data-stu-id="1ea24-107">[out] An array of pointers, each of which points to a CORDB_ADDRESS object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="8eb10-108">[out]指向实际返回的对象数。</span><span class="sxs-lookup"><span data-stu-id="8eb10-108">[out] Pointer to the number of objects actually returned.</span></span> <span data-ttu-id="8eb10-109">此值可能为 null 如果`celt`是其中一个。</span><span class="sxs-lookup"><span data-stu-id="8eb10-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="1ea24-108">[out]指向实际返回的对象数。</span><span class="sxs-lookup"><span data-stu-id="1ea24-108">[out] Pointer to the number of objects actually returned.</span></span> <span data-ttu-id="1ea24-109">此值可能为 null 如果`celt`是其中一个。</span><span class="sxs-lookup"><span data-stu-id="1ea24-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8eb10-110">要求</span><span class="sxs-lookup"><span data-stu-id="8eb10-110">Requirements</span></span>  
- <span data-ttu-id="8eb10-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8eb10-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1ea24-110">要求</span><span class="sxs-lookup"><span data-stu-id="1ea24-110">Requirements</span></span>  
+ <span data-ttu-id="1ea24-111">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1ea24-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8eb10-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8eb10-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1ea24-112">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1ea24-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8eb10-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8eb10-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1ea24-113">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1ea24-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8eb10-114">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8eb10-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="1ea24-114">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="1ea24-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="8eb10-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="8eb10-115">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="1ea24-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="1ea24-115">See also</span></span>

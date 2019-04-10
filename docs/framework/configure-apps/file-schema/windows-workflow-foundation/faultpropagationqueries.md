@@ -3,25 +3,25 @@ title: <faultPropagationQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 00ff90ae-ebe0-4c85-a93f-61557288d0a3
-ms.openlocfilehash: 0424c01397a95803b9e8502d90a55d1bd4c3b5e6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 402b938913575adfa9125b981dc2913680f07b73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204037"
 ---
-# <a name="faultpropagationqueries"></a><span data-ttu-id="5862e-101">\<faultPropagationQueries></span><span class="sxs-lookup"><span data-stu-id="5862e-101">\<faultPropagationQueries></span></span>
-<span data-ttu-id="5862e-102">表示一个查询集合，这些查询用于跟踪在某个活动中发生的错误的处理。</span><span class="sxs-lookup"><span data-stu-id="5862e-102">Represents a collection of queries that are used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="5862e-103">每次 FaultHandler 处理错误时，都会发生此事件。</span><span class="sxs-lookup"><span data-stu-id="5862e-103">This event occurs each time a FaultHandler processes a fault.</span></span> <span data-ttu-id="5862e-104">应使用此类查询来跟踪对在活动中出现的错误进行的处理。</span><span class="sxs-lookup"><span data-stu-id="5862e-104">You should use such query to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="5862e-105">跟踪参与者需要用此查询来订阅错误传播记录。</span><span class="sxs-lookup"><span data-stu-id="5862e-105">The query is necessary for a  tracking participant to subscribe to fault propagation records.</span></span>  
+# <a name="faultpropagationqueries"></a><span data-ttu-id="be00c-101">\<faultPropagationQueries></span><span class="sxs-lookup"><span data-stu-id="be00c-101">\<faultPropagationQueries></span></span>
+<span data-ttu-id="be00c-102">表示一个查询集合，这些查询用于跟踪在某个活动中发生的错误的处理。</span><span class="sxs-lookup"><span data-stu-id="be00c-102">Represents a collection of queries that are used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="be00c-103">每次 FaultHandler 处理错误时，都会发生此事件。</span><span class="sxs-lookup"><span data-stu-id="be00c-103">This event occurs each time a FaultHandler processes a fault.</span></span> <span data-ttu-id="be00c-104">应使用此类查询来跟踪对在活动中出现的错误进行的处理。</span><span class="sxs-lookup"><span data-stu-id="be00c-104">You should use such query to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="be00c-105">跟踪参与者需要用此查询来订阅错误传播记录。</span><span class="sxs-lookup"><span data-stu-id="be00c-105">The query is necessary for a  tracking participant to subscribe to fault propagation records.</span></span>  
   
- <span data-ttu-id="5862e-106">有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。</span><span class="sxs-lookup"><span data-stu-id="5862e-106">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
+ <span data-ttu-id="be00c-106">有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。</span><span class="sxs-lookup"><span data-stu-id="be00c-106">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-<span data-ttu-id="5862e-107">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="5862e-107">\<system.serviceModel></span></span>  
-<span data-ttu-id="5862e-108">\<tracking></span><span class="sxs-lookup"><span data-stu-id="5862e-108">\<tracking></span></span>  
-<span data-ttu-id="5862e-109">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="5862e-109">\<trackingProfile></span></span>  
-<span data-ttu-id="5862e-110">\<workflow></span><span class="sxs-lookup"><span data-stu-id="5862e-110">\<workflow></span></span>  
-<span data-ttu-id="5862e-111">\<faultPropagationQueries></span><span class="sxs-lookup"><span data-stu-id="5862e-111">\<faultPropagationQueries></span></span>  
+<span data-ttu-id="be00c-107">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="be00c-107">\<system.serviceModel></span></span>  
+<span data-ttu-id="be00c-108">\<tracking></span><span class="sxs-lookup"><span data-stu-id="be00c-108">\<tracking></span></span>  
+<span data-ttu-id="be00c-109">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="be00c-109">\<trackingProfile></span></span>  
+<span data-ttu-id="be00c-110">\<workflow></span><span class="sxs-lookup"><span data-stu-id="be00c-110">\<workflow></span></span>  
+<span data-ttu-id="be00c-111">\<faultPropagationQueries></span><span class="sxs-lookup"><span data-stu-id="be00c-111">\<faultPropagationQueries></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5862e-112">语法</span><span class="sxs-lookup"><span data-stu-id="5862e-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be00c-112">语法</span><span class="sxs-lookup"><span data-stu-id="be00c-112">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -36,26 +36,27 @@ ms.locfileid: "55269388"
 </tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="5862e-113">特性和元素</span><span class="sxs-lookup"><span data-stu-id="5862e-113">Attributes and Elements</span></span>  
- <span data-ttu-id="5862e-114">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="5862e-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="be00c-113">特性和元素</span><span class="sxs-lookup"><span data-stu-id="be00c-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="be00c-114">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="be00c-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="5862e-115">特性</span><span class="sxs-lookup"><span data-stu-id="5862e-115">Attributes</span></span>  
- <span data-ttu-id="5862e-116">无。</span><span class="sxs-lookup"><span data-stu-id="5862e-116">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="be00c-115">特性</span><span class="sxs-lookup"><span data-stu-id="be00c-115">Attributes</span></span>  
+ <span data-ttu-id="be00c-116">无。</span><span class="sxs-lookup"><span data-stu-id="be00c-116">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="5862e-117">子元素</span><span class="sxs-lookup"><span data-stu-id="5862e-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="be00c-117">子元素</span><span class="sxs-lookup"><span data-stu-id="be00c-117">Child Elements</span></span>  
   
-|<span data-ttu-id="5862e-118">元素</span><span class="sxs-lookup"><span data-stu-id="5862e-118">Element</span></span>|<span data-ttu-id="5862e-119">描述</span><span class="sxs-lookup"><span data-stu-id="5862e-119">Description</span></span>|  
+|<span data-ttu-id="be00c-118">元素</span><span class="sxs-lookup"><span data-stu-id="be00c-118">Element</span></span>|<span data-ttu-id="be00c-119">描述</span><span class="sxs-lookup"><span data-stu-id="be00c-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="5862e-120">\<faultPropagationQuery></span><span class="sxs-lookup"><span data-stu-id="5862e-120">\<faultPropagationQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|<span data-ttu-id="5862e-121">一个查询，用于跟踪在活动中发生的错误的处理。</span><span class="sxs-lookup"><span data-stu-id="5862e-121">A query that is used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="5862e-122">每次 FaultHandler 处理错误时，都会发生此事件。</span><span class="sxs-lookup"><span data-stu-id="5862e-122">This event occurs each time a FaultHandler processes a fault.</span></span>|  
+|[<span data-ttu-id="be00c-120">\<faultPropagationQuery></span><span class="sxs-lookup"><span data-stu-id="be00c-120">\<faultPropagationQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|<span data-ttu-id="be00c-121">一个查询，用于跟踪在活动中发生的错误的处理。</span><span class="sxs-lookup"><span data-stu-id="be00c-121">A query that is used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="be00c-122">每次 FaultHandler 处理错误时，都会发生此事件。</span><span class="sxs-lookup"><span data-stu-id="be00c-122">This event occurs each time a FaultHandler processes a fault.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="5862e-123">父元素</span><span class="sxs-lookup"><span data-stu-id="5862e-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="be00c-123">父元素</span><span class="sxs-lookup"><span data-stu-id="be00c-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="5862e-124">元素</span><span class="sxs-lookup"><span data-stu-id="5862e-124">Element</span></span>|<span data-ttu-id="5862e-125">描述</span><span class="sxs-lookup"><span data-stu-id="5862e-125">Description</span></span>|  
+|<span data-ttu-id="be00c-124">元素</span><span class="sxs-lookup"><span data-stu-id="be00c-124">Element</span></span>|<span data-ttu-id="be00c-125">描述</span><span class="sxs-lookup"><span data-stu-id="be00c-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="5862e-126">\<workflow></span><span class="sxs-lookup"><span data-stu-id="5862e-126">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="5862e-127">一个配置元素，包含由标识为特定工作流的所有查询**activityDefinitionId**属性。</span><span class="sxs-lookup"><span data-stu-id="5862e-127">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
+|[<span data-ttu-id="be00c-126">\<workflow></span><span class="sxs-lookup"><span data-stu-id="be00c-126">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="be00c-127">一个配置元素，包含由标识为特定工作流的所有查询**activityDefinitionId**属性。</span><span class="sxs-lookup"><span data-stu-id="be00c-127">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="5862e-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="5862e-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be00c-128">请参阅</span><span class="sxs-lookup"><span data-stu-id="be00c-128">See also</span></span>
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>
-- [<span data-ttu-id="5862e-129">工作流跟踪</span><span class="sxs-lookup"><span data-stu-id="5862e-129">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="5862e-130">跟踪配置文件</span><span class="sxs-lookup"><span data-stu-id="5862e-130">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="be00c-129">工作流跟踪</span><span class="sxs-lookup"><span data-stu-id="be00c-129">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="be00c-130">跟踪配置文件</span><span class="sxs-lookup"><span data-stu-id="be00c-130">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

@@ -1,53 +1,53 @@
 ---
-title: 如何：承载在 WAS 中的 WCF 服务
+title: 如何：在 WAS 中承载 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9094cf04ed1bc9fabe8d9df11b876007f322679a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9c60248342c9cfa0e1b70d86df47a478dd34a60f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651170"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195444"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a><span data-ttu-id="01239-102">如何：承载在 WAS 中的 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="01239-102">How to: Host a WCF Service in WAS</span></span>
-<span data-ttu-id="01239-103">本主题概述了创建 Windows 进程激活服务 (也称为 WAS) 所需的基本步骤的托管 Windows Communication Foundation (WCF) 服务。</span><span class="sxs-lookup"><span data-stu-id="01239-103">This topic outlines the basic steps required to create a Windows Process Activation Services (also known as WAS) hosted Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="01239-104">WAS 是新的进程激活服务，是对使用非 HTTP 传输协议的 Internet Information Services (IIS) 功能的泛化。</span><span class="sxs-lookup"><span data-stu-id="01239-104">WAS is the new process activation service that is a generalization of Internet Information Services (IIS) features that work with non-HTTP transport protocols.</span></span> <span data-ttu-id="01239-105">WCF 使用侦听器适配器接口传递激活请求通过非 HTTP 协议支持的 WCF，如 TCP、 命名管道和消息队列接收的请求。</span><span class="sxs-lookup"><span data-stu-id="01239-105">WCF uses the listener adapter interface to communicate activation requests that are received over the non-HTTP protocols supported by WCF, such as TCP, named pipes, and Message Queuing.</span></span>  
+# <a name="how-to-host-a-wcf-service-in-was"></a><span data-ttu-id="dd6b6-102">如何：在 WAS 中承载 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="dd6b6-102">How to: Host a WCF Service in WAS</span></span>
+<span data-ttu-id="dd6b6-103">本主题概述了创建 Windows 进程激活服务 (也称为 WAS) 所需的基本步骤的托管 Windows Communication Foundation (WCF) 服务。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-103">This topic outlines the basic steps required to create a Windows Process Activation Services (also known as WAS) hosted Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="dd6b6-104">WAS 是新的进程激活服务，是对使用非 HTTP 传输协议的 Internet Information Services (IIS) 功能的泛化。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-104">WAS is the new process activation service that is a generalization of Internet Information Services (IIS) features that work with non-HTTP transport protocols.</span></span> <span data-ttu-id="dd6b6-105">WCF 使用侦听器适配器接口传递激活请求通过非 HTTP 协议支持的 WCF，如 TCP、 命名管道和消息队列接收的请求。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-105">WCF uses the listener adapter interface to communicate activation requests that are received over the non-HTTP protocols supported by WCF, such as TCP, named pipes, and Message Queuing.</span></span>  
   
- <span data-ttu-id="01239-106">此主机选项要求正确安装和配置 WAS 激活组件，但不要求编写任何主机代码作为应用程序的一部分。</span><span class="sxs-lookup"><span data-stu-id="01239-106">This hosting option requires that WAS activation components are properly installed and configured, but it does not require any hosting code to be written as part of the application.</span></span> <span data-ttu-id="01239-107">有关安装和配置 WAS 的详细信息，请参阅[如何：安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。</span><span class="sxs-lookup"><span data-stu-id="01239-107">For more information about installing and configuring WAS, see [How to: Install and Configure WCF Activation Components](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).</span></span>  
+ <span data-ttu-id="dd6b6-106">此主机选项要求正确安装和配置 WAS 激活组件，但不要求编写任何主机代码作为应用程序的一部分。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-106">This hosting option requires that WAS activation components are properly installed and configured, but it does not require any hosting code to be written as part of the application.</span></span> <span data-ttu-id="dd6b6-107">有关安装和配置 WAS 的详细信息，请参阅[如何：安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-107">For more information about installing and configuring WAS, see [How to: Install and Configure WCF Activation Components](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="01239-108">如果将 Web 服务器的请求处理管道设置为经典模式，则将不支持 WAS 激活。</span><span class="sxs-lookup"><span data-stu-id="01239-108">WAS activation is not supported if the web server’s request processing pipeline is set to Classic mode.</span></span> <span data-ttu-id="01239-109">如果要使用 WAS 激活，则必须将 Web 服务器的请求处理管道设置为集成模式。</span><span class="sxs-lookup"><span data-stu-id="01239-109">The web server’s request processing pipeline must be set to Integrated mode if WAS activation is to be used.</span></span>  
+>  <span data-ttu-id="dd6b6-108">如果将 Web 服务器的请求处理管道设置为经典模式，则将不支持 WAS 激活。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-108">WAS activation is not supported if the web server’s request processing pipeline is set to Classic mode.</span></span> <span data-ttu-id="dd6b6-109">如果要使用 WAS 激活，则必须将 Web 服务器的请求处理管道设置为集成模式。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-109">The web server’s request processing pipeline must be set to Integrated mode if WAS activation is to be used.</span></span>  
   
- <span data-ttu-id="01239-110">当在 WAS 中承载 WCF 服务时，按常规方式使用标准绑定。</span><span class="sxs-lookup"><span data-stu-id="01239-110">When a WCF service is hosted in WAS, the standard bindings are used in the usual way.</span></span> <span data-ttu-id="01239-111">但是，在使用 <xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 配置 WAS 承载的服务时，必须满足一个约束条件。</span><span class="sxs-lookup"><span data-stu-id="01239-111">However, when using the <xref:System.ServiceModel.NetTcpBinding> and the <xref:System.ServiceModel.NetNamedPipeBinding> to configure a WAS-hosted service, a constraint must be satisfied.</span></span> <span data-ttu-id="01239-112">当不同的终结点使用相同的传输时，绑定设置必须在以下的七个属性上相匹配：</span><span class="sxs-lookup"><span data-stu-id="01239-112">When different endpoints use the same transport, the binding settings have to match on the following seven properties:</span></span>  
+ <span data-ttu-id="dd6b6-110">当在 WAS 中承载 WCF 服务时，按常规方式使用标准绑定。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-110">When a WCF service is hosted in WAS, the standard bindings are used in the usual way.</span></span> <span data-ttu-id="dd6b6-111">但是，在使用 <xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding> 配置 WAS 承载的服务时，必须满足一个约束条件。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-111">However, when using the <xref:System.ServiceModel.NetTcpBinding> and the <xref:System.ServiceModel.NetNamedPipeBinding> to configure a WAS-hosted service, a constraint must be satisfied.</span></span> <span data-ttu-id="dd6b6-112">当不同的终结点使用相同的传输时，绑定设置必须在以下的七个属性上相匹配：</span><span class="sxs-lookup"><span data-stu-id="dd6b6-112">When different endpoints use the same transport, the binding settings have to match on the following seven properties:</span></span>  
   
--   <span data-ttu-id="01239-113">ConnectionBufferSize</span><span class="sxs-lookup"><span data-stu-id="01239-113">ConnectionBufferSize</span></span>  
+-   <span data-ttu-id="dd6b6-113">ConnectionBufferSize</span><span class="sxs-lookup"><span data-stu-id="dd6b6-113">ConnectionBufferSize</span></span>  
   
--   <span data-ttu-id="01239-114">ChannelInitializationTimeout</span><span class="sxs-lookup"><span data-stu-id="01239-114">ChannelInitializationTimeout</span></span>  
+-   <span data-ttu-id="dd6b6-114">ChannelInitializationTimeout</span><span class="sxs-lookup"><span data-stu-id="dd6b6-114">ChannelInitializationTimeout</span></span>  
   
--   <span data-ttu-id="01239-115">MaxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="01239-115">MaxPendingConnections</span></span>  
+-   <span data-ttu-id="dd6b6-115">MaxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="dd6b6-115">MaxPendingConnections</span></span>  
   
--   <span data-ttu-id="01239-116">MaxOutputDelay</span><span class="sxs-lookup"><span data-stu-id="01239-116">MaxOutputDelay</span></span>  
+-   <span data-ttu-id="dd6b6-116">MaxOutputDelay</span><span class="sxs-lookup"><span data-stu-id="dd6b6-116">MaxOutputDelay</span></span>  
   
--   <span data-ttu-id="01239-117">MaxPendingAccepts</span><span class="sxs-lookup"><span data-stu-id="01239-117">MaxPendingAccepts</span></span>  
+-   <span data-ttu-id="dd6b6-117">MaxPendingAccepts</span><span class="sxs-lookup"><span data-stu-id="dd6b6-117">MaxPendingAccepts</span></span>  
   
--   <span data-ttu-id="01239-118">ConnectionPoolSettings.IdleTimeout</span><span class="sxs-lookup"><span data-stu-id="01239-118">ConnectionPoolSettings.IdleTimeout</span></span>  
+-   <span data-ttu-id="dd6b6-118">ConnectionPoolSettings.IdleTimeout</span><span class="sxs-lookup"><span data-stu-id="dd6b6-118">ConnectionPoolSettings.IdleTimeout</span></span>  
   
--   <span data-ttu-id="01239-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span><span class="sxs-lookup"><span data-stu-id="01239-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span></span>  
+-   <span data-ttu-id="dd6b6-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span><span class="sxs-lookup"><span data-stu-id="dd6b6-119">ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint</span></span>  
   
- <span data-ttu-id="01239-120">否则，最先初始化的终结点总是确定这些属性的值，并且以后添加的终结点若与这些设置不匹配，则将引发 <xref:System.ServiceModel.ServiceActivationException>。</span><span class="sxs-lookup"><span data-stu-id="01239-120">Otherwise, the endpoint that is initialized first always determines the values of these properties, and endpoints added later throw a <xref:System.ServiceModel.ServiceActivationException> if they do not match those settings.</span></span>  
+ <span data-ttu-id="dd6b6-120">否则，最先初始化的终结点总是确定这些属性的值，并且以后添加的终结点若与这些设置不匹配，则将引发 <xref:System.ServiceModel.ServiceActivationException>。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-120">Otherwise, the endpoint that is initialized first always determines the values of these properties, and endpoints added later throw a <xref:System.ServiceModel.ServiceActivationException> if they do not match those settings.</span></span>  
   
- <span data-ttu-id="01239-121">此示例中的源副本，请参阅[TCP 激活](../../../../docs/framework/wcf/samples/tcp-activation.md)。</span><span class="sxs-lookup"><span data-stu-id="01239-121">For the source copy of this example, see [TCP Activation](../../../../docs/framework/wcf/samples/tcp-activation.md).</span></span>  
+ <span data-ttu-id="dd6b6-121">此示例中的源副本，请参阅[TCP 激活](../../../../docs/framework/wcf/samples/tcp-activation.md)。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-121">For the source copy of this example, see [TCP Activation](../../../../docs/framework/wcf/samples/tcp-activation.md).</span></span>  
   
-### <a name="to-create-a-basic-service-hosted-by-was"></a><span data-ttu-id="01239-122">创建 WAS 承载的基本服务</span><span class="sxs-lookup"><span data-stu-id="01239-122">To create a basic service hosted by WAS</span></span>  
+### <a name="to-create-a-basic-service-hosted-by-was"></a><span data-ttu-id="dd6b6-122">创建 WAS 承载的基本服务</span><span class="sxs-lookup"><span data-stu-id="dd6b6-122">To create a basic service hosted by WAS</span></span>  
   
-1.  <span data-ttu-id="01239-123">为该类型的服务定义服务协定。</span><span class="sxs-lookup"><span data-stu-id="01239-123">Define a service contract for the type of service.</span></span>  
+1.  <span data-ttu-id="dd6b6-123">为该类型的服务定义服务协定。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-123">Define a service contract for the type of service.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1121)]  
   
-2.  <span data-ttu-id="01239-124">在服务类中实现该服务协定。</span><span class="sxs-lookup"><span data-stu-id="01239-124">Implement the service contract in a service class.</span></span> <span data-ttu-id="01239-125">请注意，在服务的实现内部，未指定地址或绑定信息。</span><span class="sxs-lookup"><span data-stu-id="01239-125">Note that address or binding information is not specified inside the implementation of the service.</span></span> <span data-ttu-id="01239-126">而且，不必编写代码也可从配置文件中检索该信息。</span><span class="sxs-lookup"><span data-stu-id="01239-126">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
+2.  <span data-ttu-id="dd6b6-124">在服务类中实现该服务协定。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-124">Implement the service contract in a service class.</span></span> <span data-ttu-id="dd6b6-125">请注意，在服务的实现内部，未指定地址或绑定信息。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-125">Note that address or binding information is not specified inside the implementation of the service.</span></span> <span data-ttu-id="dd6b6-126">而且，不必编写代码也可从配置文件中检索该信息。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-126">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3.  <span data-ttu-id="01239-127">创建 Web.config 文件，以定义要由 `CalculatorService` 终结点使用的 <xref:System.ServiceModel.NetTcpBinding> 绑定。</span><span class="sxs-lookup"><span data-stu-id="01239-127">Create a Web.config file to define the <xref:System.ServiceModel.NetTcpBinding> binding to be used by the `CalculatorService` endpoints.</span></span>  
+3.  <span data-ttu-id="dd6b6-127">创建 Web.config 文件，以定义要由 <xref:System.ServiceModel.NetTcpBinding> 终结点使用的 `CalculatorService` 绑定。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-127">Create a Web.config file to define the <xref:System.ServiceModel.NetTcpBinding> binding to be used by the `CalculatorService` endpoints.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -64,40 +64,41 @@ ms.locfileid: "54651170"
     </configuration>  
     ```  
   
-4.  <span data-ttu-id="01239-128">创建包含以下代码的 Service.svc 文件。</span><span class="sxs-lookup"><span data-stu-id="01239-128">Create a Service.svc file that contains the following code.</span></span>  
+4.  <span data-ttu-id="dd6b6-128">创建包含以下代码的 Service.svc 文件。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-128">Create a Service.svc file that contains the following code.</span></span>  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-5.  <span data-ttu-id="01239-129">将 Service.svc 文件放到 IIS 虚拟目录中。</span><span class="sxs-lookup"><span data-stu-id="01239-129">Place the Service.svc file in your IIS virtual directory.</span></span>  
+5.  <span data-ttu-id="dd6b6-129">将 Service.svc 文件放到 IIS 虚拟目录中。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-129">Place the Service.svc file in your IIS virtual directory.</span></span>  
   
-### <a name="to-create-a-client-to-use-the-service"></a><span data-ttu-id="01239-130">创建要使用服务的客户端</span><span class="sxs-lookup"><span data-stu-id="01239-130">To create a client to use the service</span></span>  
+### <a name="to-create-a-client-to-use-the-service"></a><span data-ttu-id="dd6b6-130">创建要使用服务的客户端</span><span class="sxs-lookup"><span data-stu-id="dd6b6-130">To create a client to use the service</span></span>  
   
-1.  <span data-ttu-id="01239-131">使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从命令行以从服务元数据生成代码。</span><span class="sxs-lookup"><span data-stu-id="01239-131">Use [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from the command line to generate code from service metadata.</span></span>  
+1.  <span data-ttu-id="dd6b6-131">使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从命令行以从服务元数据生成代码。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-131">Use [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from the command line to generate code from service metadata.</span></span>  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   
-2.  <span data-ttu-id="01239-132">生成的客户端包含 `ICalculator` 接口，该接口定义了客户端实现必须满足的服务协定。</span><span class="sxs-lookup"><span data-stu-id="01239-132">The client that is generated contains the `ICalculator` interface that defines the service contract that the client implementation must satisfy.</span></span>  
+2.  <span data-ttu-id="dd6b6-132">生成的客户端包含 `ICalculator` 接口，该接口定义了客户端实现必须满足的服务协定。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-132">The client that is generated contains the `ICalculator` interface that defines the service contract that the client implementation must satisfy.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1221)]  
   
-3.  <span data-ttu-id="01239-133">生成的客户端应用程序还包含 `ClientCalculator` 的实现。</span><span class="sxs-lookup"><span data-stu-id="01239-133">The generated client application also contains the implementation of the `ClientCalculator`.</span></span> <span data-ttu-id="01239-134">请注意，在服务的实现内部，未指定地址和绑定信息。</span><span class="sxs-lookup"><span data-stu-id="01239-134">Note that the address and binding information is not specified anywhere inside the implementation of the service.</span></span> <span data-ttu-id="01239-135">而且，不必编写代码也可从配置文件中检索该信息。</span><span class="sxs-lookup"><span data-stu-id="01239-135">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
+3.  <span data-ttu-id="dd6b6-133">生成的客户端应用程序还包含 `ClientCalculator` 的实现。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-133">The generated client application also contains the implementation of the `ClientCalculator`.</span></span> <span data-ttu-id="dd6b6-134">请注意，在服务的实现内部，未指定地址和绑定信息。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-134">Note that the address and binding information is not specified anywhere inside the implementation of the service.</span></span> <span data-ttu-id="dd6b6-135">而且，不必编写代码也可从配置文件中检索该信息。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-135">Also, code does not have to be written to retrieve that information from the configuration file.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4.  <span data-ttu-id="01239-136">使用 <xref:System.ServiceModel.NetTcpBinding> 的客户端配置也通过 Svcutil.exe 生成。</span><span class="sxs-lookup"><span data-stu-id="01239-136">The configuration for the client that uses the <xref:System.ServiceModel.NetTcpBinding> is also generated by Svcutil.exe.</span></span> <span data-ttu-id="01239-137">在使用 Visual Studio 时，应在 App.config 文件中命名此文件。</span><span class="sxs-lookup"><span data-stu-id="01239-137">This file should be named in the App.config file when using Visual Studio.</span></span>  
+4.  <span data-ttu-id="dd6b6-136">使用 <xref:System.ServiceModel.NetTcpBinding> 的客户端配置也通过 Svcutil.exe 生成。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-136">The configuration for the client that uses the <xref:System.ServiceModel.NetTcpBinding> is also generated by Svcutil.exe.</span></span> <span data-ttu-id="dd6b6-137">在使用 Visual Studio 时，应在 App.config 文件中命名此文件。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-137">This file should be named in the App.config file when using Visual Studio.</span></span>  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   
-5.  <span data-ttu-id="01239-138">在应用程序中创建 `ClientCalculator` 的实例，然后调用服务操作。</span><span class="sxs-lookup"><span data-stu-id="01239-138">Create an instance of the `ClientCalculator` in an application and then call the service operations.</span></span>  
+5.  <span data-ttu-id="dd6b6-138">在应用程序中创建 `ClientCalculator` 的实例，然后调用服务操作。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-138">Create an instance of the `ClientCalculator` in an application and then call the service operations.</span></span>  
   
      [!code-csharp[C_HowTo_HostInWAS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1223)]  
   
-6.  <span data-ttu-id="01239-139">编译并运行客户端。</span><span class="sxs-lookup"><span data-stu-id="01239-139">Compile and run the client.</span></span>  
+6.  <span data-ttu-id="dd6b6-139">编译并运行客户端。</span><span class="sxs-lookup"><span data-stu-id="dd6b6-139">Compile and run the client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01239-140">请参阅</span><span class="sxs-lookup"><span data-stu-id="01239-140">See also</span></span>
-- [<span data-ttu-id="01239-141">TCP 激活</span><span class="sxs-lookup"><span data-stu-id="01239-141">TCP Activation</span></span>](../../../../docs/framework/wcf/samples/tcp-activation.md)
-- [<span data-ttu-id="01239-142">Windows Server App Fabric 承载功能</span><span class="sxs-lookup"><span data-stu-id="01239-142">Windows Server App Fabric Hosting Features</span></span>](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="dd6b6-140">请参阅</span><span class="sxs-lookup"><span data-stu-id="dd6b6-140">See also</span></span>
+
+- [<span data-ttu-id="dd6b6-141">TCP 激活</span><span class="sxs-lookup"><span data-stu-id="dd6b6-141">TCP Activation</span></span>](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [<span data-ttu-id="dd6b6-142">Windows Server App Fabric 承载功能</span><span class="sxs-lookup"><span data-stu-id="dd6b6-142">Windows Server App Fabric Hosting Features</span></span>](https://go.microsoft.com/fwlink/?LinkId=201276)
