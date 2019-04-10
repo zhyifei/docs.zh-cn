@@ -1,18 +1,18 @@
 ---
 title: C# 介绍 - C# 指南
 description: 刚开始接触 C#？ 了解 C# 语言的基础知识。
-ms.date: 08/10/2016
-ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.date: 04/05/2019
+ms.custom: seoapril2019
+ms.openlocfilehash: d1373b65d6cb821871c68574662360c1431d79cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843424"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152056"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 语言介绍
 
-C#（读作“See Sharp”）是一种简单易用的新式编程语言，不仅面向对象，还类型安全。 C# 源于 C 语言系列，C、C++、Java 和 JavaScript 程序员很快就可以上手使用。
+C#（读作“See Sharp”）是一种简单易用的新式编程语言，不仅面向对象，还类型安全。 C# 源于 C 语言系列，C、C++、Java 和 JavaScript 程序员很快就可以上手使用。 本教程概述了该语言的主要组件。 如果想要通过交互式示例探索语言，请尝试我们的 [C# 简介](../tutorials/intro-to-csharp/index.md)教程。
 
 C# 是一种面向对象的语言。不仅如此，C# 还进一步支持***面向组件的***编程。 当代软件设计越来越依赖采用自描述的独立功能包形式的软件组件。 此类组件的关键特征包括：为编程模型提供属性、方法和事件；包含提供组件声明性信息的特性；包含自己的文档。 C# 提供了语言构造来直接支持这些概念，让 C# 成为一种非常自然的语言，可用于创建和使用软件组件。
 
@@ -42,7 +42,6 @@ Hello, World
 
 > [!IMPORTANT]
 > 编译 `csc` 命令实现的是完整框架，可能并不所有平台都适用。
-
 
 “Hello, World”程序始于引用 `System` 命名空间的 `using` 指令。 命名空间提供了一种用于组织 C# 程序和库的分层方法。 命名空间包含类型和其他命名空间。例如，`System` 命名空间包含许多类型（如程序中引用的 `Console` 类）和其他许多命名空间（如 `IO` 和 `Collections`）。 借助引用给定命名空间的 `using` 指令，可以非限定的方式使用作为相应命名空间成员的类型。 由于使用 `using` 指令，因此程序可以使用 `Console.WriteLine` 作为 `System.Console.WriteLine` 的简写。
 
@@ -76,4 +75,4 @@ Hello, World
      * 使用***特性***，程序可以指定关于类型、成员和其他实体的附加声明性信息。
 
 > [!div class="step-by-step"]
-> [下一页](program-structure.md)
+> [下一步](program-structure.md)

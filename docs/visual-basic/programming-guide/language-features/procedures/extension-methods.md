@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822071"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296233"
 ---
 # <a name="extension-methods-visual-basic"></a>扩展方法 (Visual Basic)
 扩展方法使开发人员能够将自定义功能添加到已定义而无需创建新的派生的类型的数据类型。 扩展方法使其可以编写可以像调用现有类型的实例方法那样调用的方法。  
@@ -160,17 +160,17 @@ End Module
 ## <a name="extension-method-precedence"></a>扩展方法优先级  
  作用域中并且可以访问两个具有相同签名的扩展方法时，将调用具有较高的优先级。 扩展方法的优先级基于用于将方法引入作用域的机制。 以下列表显示了优先级层次结构中的，从最高到最低。  
   
-1.  在当前模块内定义的扩展方法。  
+1. 在当前模块内定义的扩展方法。  
   
-2.  扩展方法内定义数据类型在当前命名空间或其任何一个其父项，其中子命名空间具有更高的优先级比父命名空间。  
+2. 扩展方法内定义数据类型在当前命名空间或其任何一个其父项，其中子命名空间具有更高的优先级比父命名空间。  
   
-3.  当前文件中的任何类型导入内定义的扩展方法。  
+3. 当前文件中的任何类型导入内定义的扩展方法。  
   
-4.  当前文件中任何命名空间导入内定义的扩展方法。  
+4. 当前文件中任何命名空间导入内定义的扩展方法。  
   
-5.  任何项目级类型导入内定义的扩展方法。  
+5. 任何项目级类型导入内定义的扩展方法。  
   
-6.  任何项目级命名空间导入内定义的扩展方法。  
+6. 任何项目级命名空间导入内定义的扩展方法。  
   
  如果优先级不能解决多义性问题，可以使用完全限定的名称来指定要调用的方法。 如果`Print`前面的示例中的方法定义一个名为模块中`StringExtensions`，完全限定的名是`StringExtensions.Print(example)`而不是`example.Print()`。  
   
@@ -180,8 +180,8 @@ End Module
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [扩展方法](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
 - [Module 语句](../../../../visual-basic/language-reference/statements/module-statement.md)
-- [过程参数和自变量](./procedure-parameters-and-arguments.md)
+- [过程形参和实参](./procedure-parameters-and-arguments.md)
 - [可选参数](./optional-parameters.md)
 - [参数数组](./parameter-arrays.md)
-- [属性概述](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [特性概述](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Visual Basic 中的范围](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

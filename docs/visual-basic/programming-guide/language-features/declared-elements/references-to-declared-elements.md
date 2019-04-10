@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821447"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296701"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>对已声明元素的引用 (Visual Basic)
 当你的代码引用已声明的元素时，Visual Basic 编译器匹配中该名称的相应声明您引用的名称。 如果多个元素具有相同名称声明，则可以控制哪些元素是由引用*合格*其名称。  
@@ -50,7 +50,7 @@ End Module
   
 #### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>若要通过限定其名称来访问已声明的元素  
   
-1.  确定在其中定义元素的位置。 这可能包括一个命名空间或甚至命名空间的层次结构。 在最低级别命名空间，该元素必须包含在模块、 类或结构。  
+1. 确定在其中定义元素的位置。 这可能包括一个命名空间或甚至命名空间的层次结构。 在最低级别命名空间，该元素必须包含在模块、 类或结构。  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2.  确定基于目标元素的位置的限定路径。 具有最高级别的命名空间中，转到最低级别的命名空间，开头和结尾模块、 类或结构，它包含目标元素。 在路径中的每个元素必须包含它后面的元素。  
+2. 确定基于目标元素的位置的限定路径。 具有最高级别的命名空间中，转到最低级别的命名空间，开头和结尾模块、 类或结构，它包含目标元素。 在路径中的每个元素必须包含它后面的元素。  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3.  准备目标元素的限定字符串。 放置一个句点 (`.`) 的路径中每个元素之后。 你的应用程序必须具有对每个元素的访问限定字符串中。  
+3. 准备目标元素的限定字符串。 放置一个句点 (`.`) 的路径中每个元素之后。 你的应用程序必须具有对每个元素的访问限定字符串中。  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  编写表达式或赋值语句以正常方式引用目标元素。  
+4. 编写表达式或赋值语句以正常方式引用目标元素。  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  在之前使用限定字符串的目标元素名称。 该名称应立即采用段 (`.`) 后面模块、 类或结构，它包含的元素。  
+5. 在之前使用限定字符串的目标元素名称。 该名称应立即采用段 (`.`) 后面模块、 类或结构，它包含的元素。  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,7 +93,7 @@ End Module
     End Module  
     ```  
   
-6.  编译器使用限定字符串来查找可与目标元素引用匹配的清晰、 明确声明。  
+6. 编译器使用限定字符串来查找可与目标元素引用匹配的清晰、 明确声明。  
   
  您可能还需要限定名称引用，如果你的应用程序有权访问多个具有相同名称的编程元素。 例如，<xref:System.Windows.Forms>并<xref:System.Web.UI.WebControls>这两个命名空间包含具有`Label`类 (<xref:System.Windows.Forms.Label?displayProperty=nameWithType>和<xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>)。 如果你的应用程序使用这两个，或如果定义了自己`Label`类，则必须区分不同`Label`对象。 在变量声明中包括命名空间或导入别名。 下面的示例使用导入别名。  
   
@@ -195,7 +195,7 @@ Dim xDoc As xD.XmlDocument
   
 ## <a name="see-also"></a>请参阅
 
-- [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
 - [变量](../../../../visual-basic/programming-guide/language-features/variables/index.md)

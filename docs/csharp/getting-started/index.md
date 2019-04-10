@@ -6,17 +6,18 @@ helpviewer_keywords:
 - getting started, Visual C#
 author: rpetrusha
 ms.author: ronpet
-ms.date: 08/23/2017
-ms.openlocfilehash: 9894d96c74741477b871d6073d78ea95413b8299
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.date: 04/05/2019
+ms.custom: seoapril2019
+ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675661"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130958"
 ---
 # <a name="get-started-with-c"></a>C\# 入门
 
-此部分包含简短的教程，可帮助你快速生成 C# .NET Core 应用程序。 可阅读 Visual Studio 2017 和 Visual Studio Code 的入门主题。 既可以生成简单的 Hello World 应用程序，也可以生成简单的类库以供其他应用程序使用（如果安装了 Visual Studio 2017 的话）。
+此部分包含简短的教程，可帮助你快速生成 C# .NET Core 应用程序。 可阅读 Visual Studio 2017 和 Visual Studio Code 的入门主题。 这些文章假定你具有一些编程体验。 如果不熟悉编程，请尝试我们的交互式教程 [C# 简介](../tutorials/intro-to-csharp/index.md)。
 
 具体包含以下主题：
 

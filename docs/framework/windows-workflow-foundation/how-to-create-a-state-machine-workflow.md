@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 564e9e424b8b82e8837a0a58cb8c11389920c297
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139628"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294803"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>如何：创建状态机工作流
 工作流可基于内置活动以及自定义活动来构造。 本主题将指导逐步创建如使用这两个内置的活动的工作流<xref:System.Activities.Statements.StateMachine>活动，并从以前的自定义活动[如何：创建活动](how-to-create-an-activity.md)主题。 该工作流模拟猜数游戏。  
@@ -23,31 +23,31 @@ ms.locfileid: "59139628"
   
 ### <a name="to-create-the-workflow"></a>创建工作流  
   
-1.  右键单击**NumberGuessWorkflowActivities**中**解决方案资源管理器**，然后选择**添加**，**新项**。  
+1. 右键单击**NumberGuessWorkflowActivities**中**解决方案资源管理器**，然后选择**添加**，**新项**。  
   
-2.  在中**已安装**，**常见项**节点中，选择**工作流**。 选择**活动**从**工作流**列表。  
+2. 在中**已安装**，**常见项**节点中，选择**工作流**。 选择**活动**从**工作流**列表。  
   
-3.  类型`StateMachineNumberGuessWorkflow`成**名称**框，然后单击**添加**。  
+3. 类型`StateMachineNumberGuessWorkflow`成**名称**框，然后单击**添加**。  
   
-4.  拖动**StateMachine**活动从**状态机**一部分**工具箱**放到**在此处放置活动**上的标签工作流设计图面。  
+4. 拖动**StateMachine**活动从**状态机**一部分**工具箱**放到**在此处放置活动**上的标签工作流设计图面。  
   
 ### <a name="to-create-the-workflow-variables-and-arguments"></a>创建工作流变量和自变量  
   
-1.  双击**StateMachineNumberGuessWorkflow.xaml**中**解决方案资源管理器**如果未显示在设计器中，显示工作流。  
+1. 双击**StateMachineNumberGuessWorkflow.xaml**中**解决方案资源管理器**如果未显示在设计器中，显示工作流。  
   
-2.  单击**自变量**左下角的工作流设计器，以显示**自变量**窗格。  
+2. 单击**自变量**左下角的工作流设计器，以显示**自变量**窗格。  
   
-3.  单击**创建参数**。  
+3. 单击**创建参数**。  
   
-4.  类型`MaxNumber`成**名称**框中，选择**中**从**方向**下拉列表中，选择**Int32**从**自变量类型**下拉列表，然后按 ENTER 保存该自变量。  
+4. 类型`MaxNumber`成**名称**框中，选择**中**从**方向**下拉列表中，选择**Int32**从**自变量类型**下拉列表，然后按 ENTER 保存该自变量。  
   
-5.  单击**创建参数**。  
+5. 单击**创建参数**。  
   
-6.  类型`Turns`成**名称**低于新添加的框`MaxNumber`参数中，选择**Out**从**方向**下拉列表中选择**Int32**从**自变量类型**下拉列表，然后按 ENTER。  
+6. 类型`Turns`成**名称**低于新添加的框`MaxNumber`参数中，选择**Out**从**方向**下拉列表中选择**Int32**从**自变量类型**下拉列表，然后按 ENTER。  
   
-7.  单击**自变量**左下角的活动设计器，以关闭**自变量**窗格。  
+7. 单击**自变量**左下角的活动设计器，以关闭**自变量**窗格。  
   
-8.  单击**变量**左下角的工作流设计器，以显示**变量**窗格。  
+8. 单击**变量**左下角的工作流设计器，以显示**变量**窗格。  
   
 9. 单击**创建的变量**。  
   
@@ -64,14 +64,14 @@ ms.locfileid: "59139628"
   
 ### <a name="to-add-the-workflow-activities"></a>添加工作流活动  
   
-1.  单击**State1**以将其选中。 在中**属性窗口**，更改**DisplayName**到`Initialize Target`。  
+1. 单击**State1**以将其选中。 在中**属性窗口**，更改**DisplayName**到`Initialize Target`。  
   
     > [!TIP]
     >  如果**属性窗口**未显示，选择**属性窗口**从**视图**菜单。  
   
-2.  双击刚刚重命名**Initialize Target**状态处于工作流设计器，以将其展开。  
+2. 双击刚刚重命名**Initialize Target**状态处于工作流设计器，以将其展开。  
   
-3.  拖动**分配**活动从**基元**一部分**工具箱**放到**条目**状态的部分。 类型`Target`成**到**框中，以下表达式**输入 C# 表达式**或**输入 VB 表达式**框。  
+3. 拖动**分配**活动从**基元**一部分**工具箱**放到**条目**状态的部分。 类型`Target`成**到**框中，以下表达式**输入 C# 表达式**或**输入 VB 表达式**框。  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -84,15 +84,15 @@ ms.locfileid: "59139628"
     > [!TIP]
     >  如果**工具箱**不显示窗口中，选择**工具箱**从**视图**菜单。  
   
-4.  返回到整体状态机工作流设计器中的视图，通过单击**StateMachine**痕迹导航中显示在工作流设计器的顶部。  
+4. 返回到整体状态机工作流设计器中的视图，通过单击**StateMachine**痕迹导航中显示在工作流设计器的顶部。  
   
-5.  拖动**状态**活动从**状态机**一部分**工具箱**拖到工作流设计器并将它悬停**Initialize Target**状态。 请注意周围会出现四个三角形**Initialize Target**新状态位于其上方时的状态。 下面是立即的三角形上新的状态放**Initialize Target**状态。 这将放置到工作流的新状态，并创建从过渡**Initialize Target**状态到新状态。  
+5. 拖动**状态**活动从**状态机**一部分**工具箱**拖到工作流设计器并将它悬停**Initialize Target**状态。 请注意周围会出现四个三角形**Initialize Target**新状态位于其上方时的状态。 下面是立即的三角形上新的状态放**Initialize Target**状态。 这将放置到工作流的新状态，并创建从过渡**Initialize Target**状态到新状态。  
   
-6.  单击**State1**以选择它，更改**DisplayName**到`Enter Guess`，然后双击以将其展开工作流设计器中的状态。  
+6. 单击**State1**以选择它，更改**DisplayName**到`Enter Guess`，然后双击以将其展开工作流设计器中的状态。  
   
-7.  拖动**WriteLine**活动从**基元**一部分**工具箱**放到**条目**状态的部分。  
+7. 拖动**WriteLine**活动从**基元**一部分**工具箱**放到**条目**状态的部分。  
   
-8.  将以下表达式键入**文本**属性框**WriteLine**。  
+8. 将以下表达式键入**文本**属性框**WriteLine**。  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -183,7 +183,7 @@ ms.locfileid: "59139628"
   
 ### <a name="to-build-the-workflow"></a>生成工作流  
   
-1.  按 Ctrl+Shift+B 生成解决方案。  
+1. 按 Ctrl+Shift+B 生成解决方案。  
   
      有关如何运行工作流，说明，请参阅下一主题[如何：运行工作流](how-to-run-a-workflow.md)。 如果你已完成[如何：运行工作流](how-to-run-a-workflow.md)使用不同样式的工作流步骤并希望使用此步骤中的状态机工作流运行它，请直接跳转到[生成并运行应用程序](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)一部分[如何：运行工作流](how-to-run-a-workflow.md)。  
   

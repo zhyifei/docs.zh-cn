@@ -2,12 +2,12 @@
 title: SchemaImporterExtension 技术示例
 ms.date: 03/30/2017
 ms.assetid: 3f5eb78f-0ef6-433a-b095-3a63b1ce0bc9
-ms.openlocfilehash: 04e2b3f9fb1ea6f9bbb3c1e1886911cbacda7a62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5027897bcf62e52dae5aab6090c01518a92636dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633893"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298495"
 ---
 # <a name="schemaimporterextension-technology-sample"></a>SchemaImporterExtension 技术示例
 [下载示例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
@@ -16,25 +16,25 @@ ms.locfileid: "54633893"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>使用命令提示生成示例  
   
-1.  打开命令提示窗口，然后定位到该示例的语言特定子目录之一。  
+1. 打开命令提示窗口，然后定位到该示例的语言特定子目录之一。  
   
-2.  在命令行中键入“msbuild.exe OrderSchemaImporterExtension.sln”。  
+2. 在命令行中键入“msbuild.exe OrderSchemaImporterExtension.sln”。  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>使用 Visual Studio 生成示例  
   
-1.  打开[!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，定位到该示例的特定语言的子目录。  
+1. 打开[!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，定位到该示例的特定语言的子目录。  
   
-2.  双击 OrderSchemaImporterExtension.sln 的图标，在 Visual Studio 中打开该文件。  
+2. 双击 OrderSchemaImporterExtension.sln 的图标，在 Visual Studio 中打开该文件。  
   
-3.  在 **“生成”** 菜单上，单击 **“生成解决方案”**。  
+3. 在 **“生成”** 菜单上，单击 **“生成解决方案”**。  
   
  应用程序将在默认的 \bin 或 \bin\Debug 目录中生成。  
   
 ### <a name="to-run-the-sample"></a>运行示例  
   
-1.  使用命令提示定位到包含新的可执行文件的目录。  
+1. 使用命令提示定位到包含新的可执行文件的目录。  
   
-2.  在命令行中键入“[exe name]”。  
+2. 在命令行中键入“[exe name]”。  
   
 ## <a name="remarks"></a>备注  
  有关二进制创建和注册步骤示例的更多信息，请参见源代码中的注释以及 build.proj 文件。  

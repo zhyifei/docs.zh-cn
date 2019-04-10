@@ -2,18 +2,18 @@
 title: XAML 中的 WPF 和 WF 集成
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-ms.openlocfilehash: ce6fc259b4e8743abd71e979825545183eef136a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 188702cfc13d7e353238e108066cc3d5f1c8bda9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840859"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298638"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>XAML 中的 WPF 和 WF 集成
 此示例演示如何创建一个 XAML 文档中使用 Windows Presentation Foundation (WPF) 和 Windows Workflow Foundation (WF) 功能的应用程序。 若要实现此目的，此示例，请使用 Windows Workflow Foundation (WF) 和 XAML 扩展性。
 
 ## <a name="sample-details"></a>示例详细信息
- ShowWindow.xaml 文件反序列化为一个具有两个字符串变量的 <xref:System.Activities.Statements.Sequence> 活动，这两个变量由序列的 `ShowWindow` 和 `WriteLine` 活动操作。 <xref:System.Activities.Statements.WriteLine> 活动将它分配给 <xref:System.Activities.Statements.WriteLine.Text%2A> 属性中的表达式输出到控制台窗口。 作为其执行逻辑的一部分，`ShowWindow` 活动显示一个 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 窗口。 窗口的 <xref:System.Activities.ActivityContext.DataContext%2A> 包含在序列中声明的变量。 在 `ShowWindow` 活动中声明的窗口控件使用数据来操作这些变量。 最后，窗口将包含一个按钮控件。 按钮的 `Click` 事件由名为 <xref:System.Activities.ActivityDelegate> 的 `MarkupExtension` 处理，它包含 `CloseWindow` 活动。  `MarkUpExtension` 将调用包含的这个活动，用于提供由 `x:Name` 和包含窗口的 <xref:System.Activities.ActivityContext.DataContext%2A> 所标识的任意对象（作为上下文）。 因此，可以使用一个引用窗口名称的表达式来绑定 `CloseWindow.InArgument<Window>`。
+ ShowWindow.xaml 文件反序列化为一个具有两个字符串变量的 <xref:System.Activities.Statements.Sequence> 活动，这两个变量由序列的 `ShowWindow` 和 `WriteLine` 活动操作。 <xref:System.Activities.Statements.WriteLine> 活动将它分配给 <xref:System.Activities.Statements.WriteLine.Text%2A> 属性中的表达式输出到控制台窗口。 作为其执行逻辑的一部分，`ShowWindow` 活动显示一个 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 窗口。 窗口的 <xref:System.Activities.ActivityContext.DataContext%2A> 包含在序列中声明的变量。 在 `ShowWindow` 活动中声明的窗口控件使用数据来操作这些变量。 最后，窗口将包含一个按钮控件。 按钮的 `Click` 事件由名为 <xref:System.Activities.ActivityDelegate> 的 `MarkupExtension` 处理，它包含 `CloseWindow` 活动。  `MarkUpExtension` 调用包含的活动，可提供与上下文中，通过标识的任意对象`x:Name`，并将<xref:System.Activities.ActivityContext.DataContext%2A>所在的窗口。 因此，可以使用一个引用窗口名称的表达式来绑定 `CloseWindow.InArgument<Window>`。
 
  `ShowWindow` 活动从 <xref:System.Activities.AsyncCodeActivity%601> 类派生以显示一个 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 窗口，并在该窗口关闭时完成。 `Window` 属性的类型为 `Func<Window>`，该类型允许在每次执行活动时按需创建窗口。 `Window` 属性使用一个 <xref:System.Xaml.XamlDeferringLoader> 来启用此延迟计算模型。 `FuncFactoryDeferringLoader` 允许在序列化期间捕获一个 `XamlReader`，然后在活动执行期间读取它。
 
@@ -26,15 +26,15 @@ ms.locfileid: "48840859"
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1.  使用 Visual Studio 2010 打开 WPFWFIntegration.sln 解决方案文件。
+1. 使用 Visual Studio 2010 打开 WPFWFIntegration.sln 解决方案文件。
 
-2.  要生成解决方案，按 Ctrl+Shift+B。
+2. 要生成解决方案，按 Ctrl+Shift+B。
 
-3.  若要运行解决方案，请按 F5。
+3. 若要运行解决方案，请按 F5。
 
-4.  在对话框中键入您的名字和姓氏。
+4. 在对话框中键入您的名字和姓氏。
 
-5.  关闭对话框，控制台将回显您的姓名。
+5. 关闭对话框，控制台将回显您的姓名。
 
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 97340f8583ef0900645f6db5c453475e85549c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620184"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297247"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>使用 WCF 客户端访问服务
 
@@ -20,11 +20,11 @@ ms.locfileid: "54620184"
 
  创建 WCF 客户端的基本步骤包括：
 
-1.  编译服务代码。
+1. 编译服务代码。
 
-2.  生成 WCF 客户端代理。
+2. 生成 WCF 客户端代理。
 
-3.  实例化 WCF 客户端代理。
+3. 实例化 WCF 客户端代理。
 
 有关详细信息，请参阅使用服务模型 Metadata Utility Tool (SvcUtil.exe) 可以手动生成 WCF 客户端代理[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 此外可以在 Visual Studio 内生成 WCF 客户端代理使用**添加服务引用**功能。 若要使用上述两种方法中的一种生成 WCF 客户端代理，必须运行该服务。 如果服务是自承载服务，则必须运行主机。 如果服务是在 IIS/WAS 中承载的，则无需执行任何其他操作。
 
@@ -178,11 +178,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 由 WCF 客户端引发的许多异常是由服务上异常引起的。 以下是这种情况的一些示例：
 
--   <xref:System.Net.Sockets.SocketException>：现有连接被远程主机强行关闭。
+-   <xref:System.Net.Sockets.SocketException>:现有连接被远程主机强行关闭。
 
--   <xref:System.ServiceModel.CommunicationException>：基础连接意外关闭。
+-   <xref:System.ServiceModel.CommunicationException>:基础连接意外关闭。
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>：套接字连接已中止。 这可能是由于处理消息时出错或远程主机超过接收超时或者潜在的网络资源问题导致的。
+-   <xref:System.ServiceModel.CommunicationObjectAbortedException>:套接字连接已中止。 这可能是由于处理消息时出错或远程主机超过接收超时或者潜在的网络资源问题导致的。
 
 当发生这些类型的异常时，解决问题的最佳方式是在服务端启用跟踪并确定服务端发生了何种异常。 有关跟踪的详细信息，请参阅[跟踪](../../../docs/framework/wcf/diagnostics/tracing/index.md)并[解决您的应用程序中使用跟踪](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。
 
@@ -191,9 +191,9 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 - [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [如何：使用双工协定访问服务](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [如何：以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [如何：访问服务使用单向和请求-答复协定](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [如何：使用单向和请求-答复协定访问服务](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
 - [如何：访问 WSE 3.0 服务](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [了解生成的客户端代码](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [如何：改善启动时间的 WCF 客户端应用程序的使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [指定客户端运行时行为](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [配置客户端行为](../../../docs/framework/wcf/configuring-client-behaviors.md)

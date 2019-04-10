@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5607d6b1583063663bcac46aeec563408348621
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: a190e238992313e498e28217587029041f386040
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219031"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226516"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>.NET Framework 中的动态编程
 本节文档提供有关在 .NET Framework 中动态编程的信息。  
   
 ## <a name="in-this-section"></a>本节内容  
- [反射](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ [映像](../../../docs/framework/reflection-and-codedom/reflection.md)  
  介绍如何使用反射在运行时处理对象。  
   
  [发出动态方法和程序集](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
@@ -32,4 +32,3 @@ ms.locfileid: "56219031"
   
 ## <a name="related-sections"></a>相关章节  
  [开发指南](../../../docs/framework/development-guide.md)  
-  

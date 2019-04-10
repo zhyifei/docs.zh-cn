@@ -2,16 +2,16 @@
 title: 语言集成查询 (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 108dc60285e51ab4cd703e668127a4ffd5fc1c74
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186623"
 ---
 # <a name="language-integrated-query-linq"></a>语言集成查询 (LINQ)
 
-语言集成查询 (LINQ) 是一系列直接将查询功能集成到 C# 语言的技术统称。 数据查询历来都表示为简单的字符串，没有编译时类型检查或 IntelliSense 支持。 此外，对于每种数据源，还需要学习不同的查询语言：SQL 数据库、XML 文档、各种 Web 服务等。 借助 LINQ，查询成为了最高级的语言构造，就像类、方法和事件一样。
+语言集成查询 (LINQ) 是一系列直接将查询功能集成到 C# 语言的技术统称。 数据查询历来都表示为简单的字符串，没有编译时类型检查或 IntelliSense 支持。 此外，需要针对每种类型的数据源了解不同的查询语言：SQL 数据库、XML 文档、各种 Web 服务等。 借助 LINQ，查询成为了最高级的语言构造，就像类、方法和事件一样。
 
 对于编写查询的开发者来说，LINQ 最明显的“语言集成”部分就是查询表达式。 查询表达式采用声明性*查询语法*编写而成。 使用查询语法，可以用最少的代码对数据源执行筛选、排序和分组操作。 可使用相同的基本查询表达式模式来查询和转换 SQL 数据库、ADO .NET 数据集、XML 文档和流以及 .NET 集合中的数据。
 
@@ -44,11 +44,8 @@ ms.locfileid: "49347807"
   
 -   ADO.NET 实体框架：[LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
--   .NET 集合、文件、字符串等：[LINQ to Objects](linq-to-objects.md)
+-   .NET 集合、文件、字符串等：[LINQ to objects](linq-to-objects.md)
 
 若要更深入地全面了解 LINQ，请参阅 [C# 中的 LINQ](../../../linq/linq-in-csharp.md)。
 
 若要开始在 C# 中使用 LINQ，请参阅教程[使用 LINQ](../../../tutorials/working-with-linq.md)。
-
-
-

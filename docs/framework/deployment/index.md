@@ -2,15 +2,21 @@
 title: 部署 .NET Framework 和应用程序
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], packaging'
-  - 'deploying applications [.NET Framework]'
-  - 'deploying applications [.NET Framework], features'
-  - 'deploying applications [.NET Framework], distribution'
-  - '.NET Framework, deploying'
-  - .NET Framework application deployment
+- deploying applications [.NET Framework], packaging
+- deploying applications [.NET Framework]
+- deploying applications [.NET Framework], features
+- deploying applications [.NET Framework], distribution
+- .NET Framework, deploying
+- .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: 0ff426f051b37830b0161cd0e0e4368a5750c664
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124762"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和应用程序
 本文有助于你开始部署应用程序的 .NET Framework。 大部分信息都是供开发人员、OEM 和企业管理人员使用的。 想在其自己的计算机上安装 .NET Framework 的用户应阅读[安装 .NET Framework](~/docs/framework/install/index.md)。  
@@ -34,7 +40,7 @@ ms.author: mairaw
   
         -   [显示 UI](../../../docs/framework/deployment/deployment-guide-for-developers.md#chaining_default)  
   
-    -   [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)  
+    -   [在 .NET Framework 4.5 安装期间减少系统重启次数](../../../docs/framework/deployment/reducing-system-restarts.md)  
   
     -   [安装和卸载 .NET Framework 受阻疑难解答](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
   
@@ -56,7 +62,7 @@ ms.author: mairaw
   
     -   [管理员指南](../../../docs/framework/deployment/guide-for-administrators.md)  
   
- **服务**  
+ **维护**  
   
 -   有关一般信息，请参阅 [.NET Framework 博客](https://go.microsoft.com/fwlink/p/?LinkId=254977)  
   
@@ -151,7 +157,7 @@ ms.author: mairaw
 |-----------|-----------------|  
 |[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|描述公共语言运行时如何确定将用于满足绑定请求的程序集类型。|  
 |[适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException><xref:System.MissingMethodException> 和其他错误。|  
-|[在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)|描述在任何可能的情况下可以阻止重启的 Restart Manager，并说明安装 .NET Framework 的应用程序如何利用它。|  
+|[在 .NET Framework 4.5 安装期间减少系统重新启动](../../../docs/framework/deployment/reducing-system-restarts.md)|描述在任何可能的情况下可以阻止重启的 Restart Manager，并说明安装 .NET Framework 的应用程序如何利用它。|  
 |[面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)|说明系统管理员如何通过系统中心配置管理器 (SCCM) 跨网络部署 .NET Framework 及其系统依赖项。|  
 |[面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)|说明开发人员如何在其计算机的应用程序中安装 .NET Framework。|  
 |[部署应用程序、服务和组件](/visualstudio/deployment/deploying-applications-services-and-components)|讨论 Visual Studio 中的部署选项，包括使用 ClickOnce 和 Windows Installer 技术发布应用程序的说明。| 
@@ -161,4 +167,5 @@ ms.author: mairaw
 |[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|描述如何在没有提示的情况下启动和跟踪 .NET Framework 安装进度，同时显示你自己的安装进度视图。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [开发指南](../../../docs/framework/development-guide.md)

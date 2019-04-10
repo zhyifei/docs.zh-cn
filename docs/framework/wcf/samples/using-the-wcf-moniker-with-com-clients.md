@@ -2,12 +2,12 @@
 title: 对 COM 客户端使用 WCF 标记
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 3cb610f85c929c371299bc505646cdf924ecdaea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098125"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294842"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>对 COM 客户端使用 WCF 标记
 此示例演示如何使用 Windows Communication Foundation (WCF) 服务名字对象将 Web 服务集成到基于 COM 的开发环境，如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 本示例由 Windows 脚本宿主客户端 (.vbs)、客户端支持库 (.dll) 和 Internet 信息服务 (IIS) 承载的服务库 (.dll) 组成。 该服务是一个计算器服务，COM 客户端将对服务调用数学运算（加、减、乘和除）。 客户端活动显示在消息框窗口中。  
@@ -184,46 +184,46 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例  
   
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  从开发人员命令提示符处针对 Visual Studio，打开特定于语言的文件夹下的 \client\bin 文件夹。  
+3. 从开发人员命令提示符处针对 Visual Studio，打开特定于语言的文件夹下的 \client\bin 文件夹。  
   
     > [!NOTE]
     >  如果使用的是 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]、Windows 7 或 Windows Server 2008 R2，请确保使用管理员特权运行命令提示。  
   
-4.  键入`tlbexp.exe client.dll /out:CalcProxy.tlb`将 dll 导出到 tlb 文件。 预期会出现“Type library exporter warning”（类型库导出程序警告），但由于不需要泛型类型，因此这不是问题。  
+4. 键入`tlbexp.exe client.dll /out:CalcProxy.tlb`将 dll 导出到 tlb 文件。 预期会出现“Type library exporter warning”（类型库导出程序警告），但由于不需要泛型类型，因此这不是问题。  
   
-5.  键入`regasm.exe /tlb:CalcProxy.tlb client.dll`以向 COM 注册类型 预期会出现“Type library exporter warning”（类型库导出程序警告），但由于不需要泛型类型，因此这不是问题。  
+5. 键入`regasm.exe /tlb:CalcProxy.tlb client.dll`以向 COM 注册类型 预期会出现“Type library exporter warning”（类型库导出程序警告），但由于不需要泛型类型，因此这不是问题。  
   
-6.  键入`gacutil.exe /i client.dll`到全局程序集缓存添加程序集。  
+6. 键入`gacutil.exe /i client.dll`到全局程序集缓存添加程序集。  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例  
   
-1.  是否可以访问该服务通过键入以下地址中使用浏览器的测试： `http://localhost/servicemodelsamples/service.svc`。 在响应中应显示确认页。  
+1. 是否可以访问该服务通过键入以下地址中使用浏览器的测试： `http://localhost/servicemodelsamples/service.svc`。 在响应中应显示确认页。  
   
-2.  运行 \client（在语言特定文件夹内）中的 ComCalcClient.vbs。 客户端活动将显示在消息框窗口中。  
+2. 运行 \client（在语言特定文件夹内）中的 ComCalcClient.vbs。 客户端活动将显示在消息框窗口中。  
   
-3.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+3. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
-1.  在服务计算机上创建一个名为 ServiceModelSamples 的虚拟目录。 可以使用示例中附带的 Setupvroot.bat 脚本来创建磁盘目录和虚拟目录。  
+1. 在服务计算机上创建一个名为 ServiceModelSamples 的虚拟目录。 可以使用示例中附带的 Setupvroot.bat 脚本来创建磁盘目录和虚拟目录。  
   
-2.  从 %SystemDrive%\Inetpub\wwwroot\servicemodelsamples 中将服务程序文件复制到服务计算机上的 ServiceModelSamples 虚拟目录中。 确保在 \bin 目录中包括这些文件。  
+2. 从 %SystemDrive%\Inetpub\wwwroot\servicemodelsamples 中将服务程序文件复制到服务计算机上的 ServiceModelSamples 虚拟目录中。 确保在 \bin 目录中包括这些文件。  
   
-3.  将 \client 文件夹（在语言特定文件夹内）中的客户端脚本文件复制到客户端计算机上。  
+3. 将 \client 文件夹（在语言特定文件夹内）中的客户端脚本文件复制到客户端计算机上。  
   
-4.  在该脚本文件中，更改终结点定义的地址值以与服务的新地址相匹配。 在地址中将任何对“localhost”的引用替换为一个完全限定的域名。  
+4. 在该脚本文件中，更改终结点定义的地址值以与服务的新地址相匹配。 在地址中将任何对“localhost”的引用替换为一个完全限定的域名。  
   
-5.  将 WSDL 文件复制到客户端计算机。 在 WSDL 文件 serviceWsdl.xml 中，将地址中任何对“localhost”的引用替换为一个完全限定的域名。  
+5. 将 WSDL 文件复制到客户端计算机。 在 WSDL 文件 serviceWsdl.xml 中，将地址中任何对“localhost”的引用替换为一个完全限定的域名。  
   
-6.  将 \client\bin\ 文件夹（在语言特定文件夹内）中的 Client.dll 库复制到客户端计算机上的一个目录中。  
+6. 将 \client\bin\ 文件夹（在语言特定文件夹内）中的 Client.dll 库复制到客户端计算机上的一个目录中。  
   
-7.  在命令提示符下，定位到客户端计算机上的目标目录。 如果使用 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，请确保以管理员身份运行命令提示。  
+7. 在命令提示符下，定位到客户端计算机上的目标目录。 如果使用 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，请确保以管理员身份运行命令提示。  
   
-8.  键入`tlbexp.exe client.dll /out:CalcProxy.tlb`将 dll 导出到 tlb 文件。 预期会出现“Type library exporter warning”（类型库导出程序警告），但由于不需要泛型类型，因此这不是问题。  
+8. 键入`tlbexp.exe client.dll /out:CalcProxy.tlb`将 dll 导出到 tlb 文件。 预期会出现“Type library exporter warning”（类型库导出程序警告），但由于不需要泛型类型，因此这不是问题。  
   
 9. 键入`regasm.exe /tlb:CalcProxy.tlb client.dll`以向 COM 注册类型 请确保该路径已设置为包含的文件夹`regasm.exe`运行该命令之前。  
   

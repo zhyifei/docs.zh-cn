@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: e07fd6598d6b2d1bbd52e5e6735264821b8986bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b284a8f085ab7e93651c829ac16e47fb63a8b51
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180240"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297772"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>通过 XML Web 服务使用数据集
 <xref:System.Data.DataSet> 是用断开式设计来构建的，其部分目的是为了便于通过 Internet 来传输数据。 **数据集**是"可序列化"，它可以被指定为输入还是输出而无需任何其他编码的 XML Web services 所需流式传输的内容**数据集**从 XML Web 服务到客户端并返回。 **数据集**隐式转换为使用 DiffGram 格式的 XML 流、 通过网络发送和从 XML 流作为然后重新构造**数据集**在接收端。 它为你使用 XML Web services 传输和返回关系数据提供了非常简单而灵活的方法。 有关 DiffGram 格式的详细信息，请参阅[Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
@@ -22,7 +22,7 @@ ms.locfileid: "59180240"
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>创建返回和使用 DataSet 的 XML Web services  
   
-1.  创建 XML Web services。  
+1. 创建 XML Web services。  
   
      在示例中，XML Web 服务创建返回数据，在此情况下从客户列表**Northwind**数据库，并接收**数据集**与更新数据，该 XML Web 服务解析回原始数据源。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "59180240"
   
      在典型方案中， **UpdateCustomers**会编写方法来捕获开放式并发冲突。 为了简单起见，以上示例没有包含此方法。 有关开放式并发的详细信息，请参阅[乐观并发](../../../../../docs/framework/data/adonet/optimistic-concurrency.md)。  
   
-2.  创建 XML Web services 代理。  
+2. 创建 XML Web services 代理。  
   
      XML Web services 的客户端将需要通过 SOAP 代理来使用公开的方法。 可以使用 Visual Studio 生成此代理。 通过从 Visual Studio 中设置对现有 Web 服务的 Web 引用，此步骤中所述的所有行为均将透明地发生。 如果要自己创建代理类，请继续阅读本讨论。 但是，在大多数情况下，使用 Visual Studio 足以为客户端应用程序创建代理类。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "59180240"
     csc -t:library -out:sample.dll sample.cs -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
-3.  创建 XML Web services 客户端。  
+3. 创建 XML Web services 客户端。  
   
      如果你想要使用 Visual Studio 为你生成 Web 服务代理类，只需创建客户端项目中，并且，在解决方案资源管理器窗口中，右键单击项目，单击**添加 Web 引用**，并选择从 Web 服务（这可能需要提供的 Web 服务终结点地址，如果 Web 服务不可用当前解决方案中或在当前计算机上。） 的可用 Web 服务的列表如果自己创建 XML Web services 代理（按照前面的步骤所述），可以将其导入客户端代码并使用 XML Web services 方法。 下面的示例代码导入代理库，调用**GetCustomers**若要获取的客户，列表中添加新客户，然后返回**数据集**的更新的**UpdateCustomers**.  
   

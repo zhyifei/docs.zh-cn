@@ -1,5 +1,5 @@
 ---
-title: 创建程序集清单时出错：<error message>
+title: 创建程序集清单时出错： <error message>
 ms.date: 07/20/2015
 f1_keywords:
 - bc30140
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: f9d7867157b65d746809d9b2f50797285d7fcd9c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0f67b772bab3104c00510954d01b200aadfa9e8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296285"
 ---
 # <a name="error-creating-assembly-manifest-error-message"></a>创建程序集清单时出错：\<错误消息 >
 Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集。 该链接器已报告在创建程序集的预发出阶段中出错。  
@@ -23,13 +23,13 @@ Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  检查引用的错误信息并参考主题[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)。 有关错误 AL1019 的进一步解释和建议  
+1. 检查引用的错误信息并参考主题[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)。 有关错误 AL1019 的进一步解释和建议  
   
-2.  如果仍然出现错误，则收集有关该情况的信息并通知 Microsoft 产品支持服务。  
+2. 如果仍然出现错误，则收集有关该情况的信息并通知 Microsoft 产品支持服务。  
   
 ## <a name="see-also"></a>请参阅
 
 - [如何：使用强名称为程序集签名](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [“项目设计器”->“签名”页](/visualstudio/ide/reference/signing-page-project-designer)
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [与我们交流](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

@@ -2,12 +2,12 @@
 title: 默认 XAML 架构上下文和 WPF XAML 架构上下文
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 1312541321e74668e6527c6c54e712342fbb3a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124691"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295596"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>默认 XAML 架构上下文和 WPF XAML 架构上下文
 XAML 架构上下文是有资格使用特定的 XAML 词汇 XAML 生产与编写的行为，包括如何类型映射解析时，如何将加载程序集、 如何某些读取器和编写器的对象交互的方式的概念实体设置被解释。 本主题介绍.NET Framework XAML 服务和基于 CLR 类型系统的关联的默认 XAML 架构上下文的功能。 本主题还介绍用于 WPF 的 XAML 架构上下文。  
@@ -46,9 +46,9 @@ XAML 架构上下文是有资格使用特定的 XAML 词汇 XAML 生产与编写
   
 #### <a name="xaml-reader-input-loose-xaml"></a>XAML 读取器输入 (松散 XAML)  
   
-1.  循环访问 XAML 架构上下文<xref:System.AppDomain>最近从最开始加载应用程序，查找匹配名称的所有方面的已加载的程序集。 如果找到匹配项，则该程序集用于解析。  
+1. 循环访问 XAML 架构上下文<xref:System.AppDomain>最近从最开始加载应用程序，查找匹配名称的所有方面的已加载的程序集。 如果找到匹配项，则该程序集用于解析。  
   
-2.  否则，以下方法之一将基于 CLR <xref:System.Reflection.Assembly> API 用于加载程序集：  
+2. 否则，以下方法之一将基于 CLR <xref:System.Reflection.Assembly> API 用于加载程序集：  
   
     -   如果名称限定的映射中，调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名称。  
   
@@ -61,9 +61,9 @@ XAML 架构上下文是有资格使用特定的 XAML 词汇 XAML 生产与编写
   
  请注意，程序集引用通过`XamlBuildTask`始终是完全限定。  
   
-1.  调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名称。  
+1. 调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名称。  
   
-2.  如果在上一步失败，请使用短名称 （和公钥标记如果存在） 来调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
+2. 如果在上一步失败，请使用短名称 （和公钥标记如果存在） 来调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
   
 #### <a name="baml-presentationbuildtask"></a>BAML （presentationbuildtask 生成）  
  有两个方面与程序集加载为 BAML： 加载包含作为组件，BAML 的初始程序集和加载引用 BAML 生产的任何类型的类型的后备程序集。  
@@ -71,16 +71,16 @@ XAML 架构上下文是有资格使用特定的 XAML 词汇 XAML 生产与编写
 ##### <a name="assembly-load-for-initial-markup"></a>初始标记的程序集加载：  
  对要加载中的标记的程序集的引用始终是非限定。  
   
-1.  WPF XAML 架构上下文循环<xref:System.AppDomain>WPF 应用程序，查找匹配名称的所有方面的已加载的最近从最开始加载程序集。 如果找到匹配项，则该程序集用于解析。  
+1. WPF XAML 架构上下文循环<xref:System.AppDomain>WPF 应用程序，查找匹配名称的所有方面的已加载的最近从最开始加载程序集。 如果找到匹配项，则该程序集用于解析。  
   
-2.  如果在上一步失败，请使用短名称 （和公钥标记如果存在） 来调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
+2. 如果在上一步失败，请使用短名称 （和公钥标记如果存在） 来调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
   
 ##### <a name="assembly-references-by-baml-types"></a>BAML 类型的程序集引用：  
  程序集引用在 BAML 生产环境中使用的类型始终是完全限定，作为生成任务的输出。  
   
-1.  WPF XAML 架构上下文循环<xref:System.AppDomain>WPF 应用程序，查找匹配名称的所有方面的已加载的最近从最开始加载程序集。 如果找到匹配项，则该程序集用于解析。  
+1. WPF XAML 架构上下文循环<xref:System.AppDomain>WPF 应用程序，查找匹配名称的所有方面的已加载的最近从最开始加载程序集。 如果找到匹配项，则该程序集用于解析。  
   
-2.  否则，以下方法之一用于加载程序集：  
+2. 否则，以下方法之一用于加载程序集：  
   
     -   调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名称。  
   

@@ -2,12 +2,12 @@
 title: 如何：在配置中指定客户端绑定
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 81e9b4b5949d3a89749911a30ad199c4f0da300f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 633bb0feeb0f9354bd6ff8ee6637f123d3e3cbf4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091559"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295128"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>如何：在配置中指定客户端绑定
 在此示例中，创建了一个使用计算器服务的客户端控制台应用程序，并在配置中以声明方式为该客户端指定了绑定。 该客户端访问实现了 `CalculatorService` 接口的 `ICalculator`，并且服务和客户端都使用 <xref:System.ServiceModel.BasicHttpBinding> 类。  
@@ -24,31 +24,31 @@ ms.locfileid: "59091559"
   
 ### <a name="specifying-a-client-binding-in-configuration"></a>在配置中指定客户端绑定  
   
-1.  在命令行中，使用 Svcutil.exe 根据服务元数据生成代码。  
+1. 在命令行中，使用 Svcutil.exe 根据服务元数据生成代码。  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   
-2.  生成的客户端包含 `ICalculator` 接口，该接口定义了客户端实现必须满足的服务协定。  
+2. 生成的客户端包含 `ICalculator` 接口，该接口定义了客户端实现必须满足的服务协定。  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#1)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#1)]  
   
-3.  生成的客户端还包含 `ClientCalculator` 的实现。  
+3. 生成的客户端还包含 `ClientCalculator` 的实现。  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#2)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#2)]  
   
-4.  Svcutil.exe 还为使用 <xref:System.ServiceModel.BasicHttpBinding> 类的客户端生成配置。 使用 Visual Studio 时，命名此文件 App.config。请注意，在服务的实现内部，未指定地址和绑定信息。 而且，不必编写代码也可从配置文件中检索该信息。  
+4. Svcutil.exe 还为使用 <xref:System.ServiceModel.BasicHttpBinding> 类的客户端生成配置。 使用 Visual Studio 时，命名此文件 App.config。请注意，在服务的实现内部，未指定地址和绑定信息。 而且，不必编写代码也可从配置文件中检索该信息。  
   
      [!code-xml[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]   
             
-5.  在应用程序中创建 `ClientCalculator` 的实例，然后调用服务操作。  
+5. 在应用程序中创建 `ClientCalculator` 的实例，然后调用服务操作。  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/client.cs#3)]  
   
-6.  编译并运行客户端。  
+6. 编译并运行客户端。  
   
 ## <a name="see-also"></a>请参阅
 

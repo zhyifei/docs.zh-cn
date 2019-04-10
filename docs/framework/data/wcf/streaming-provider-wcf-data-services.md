@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087893"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298872"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>流提供程序（WCF 数据服务）
 数据服务可公开二进制大型对象数据。 此二进制数据可以表示视频和音频流、图像、文档文件或其他类型的二进制媒体。 当数据模型中的某个实体包括一个或多个二进制属性时，数据服务会在响应源的入口内以 base-64 编码形式返回此二进制数据。 加载和序列化大型二进制数据，以这种方式会影响性能，因为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定义用于检索独立于其所属的实体的二进制数据的机制。 这一点是通过将实体和二进制数据分隔到一个或多个数据流来实现的。  
@@ -28,15 +28,15 @@ ms.locfileid: "59087893"
   
  将数据服务配置为支持二进制数据流需要以下步骤：  
   
-1.  将数据模型中的一个或多个实体特性化为媒体链接入口。 这些实体不应包括要进行流处理的二进制数据。 始终在实体中以 base-64 编码的二进制形式返回实体的所有二进制属性。  
+1. 将数据模型中的一个或多个实体特性化为媒体链接入口。 这些实体不应包括要进行流处理的二进制数据。 始终在实体中以 base-64 编码的二进制形式返回实体的所有二进制属性。  
   
-2.  实现 T:System.Data.Services.Providers.IDataServiceStreamProvider 接口。  
+2. 实现 T:System.Data.Services.Providers.IDataServiceStreamProvider 接口。  
   
-3.  定义一个实现 <xref:System.IServiceProvider> 接口的数据服务。 数据服务使用 <xref:System.IServiceProvider.GetService%2A> 实现访问流数据提供程序实现。 此方法返回适当的流提供程序实现。  
+3. 定义一个实现 <xref:System.IServiceProvider> 接口的数据服务。 数据服务使用 <xref:System.IServiceProvider.GetService%2A> 实现访问流数据提供程序实现。 此方法返回适当的流提供程序实现。  
   
-4.  在 Web 应用程序配置中启用大型消息流。  
+4. 在 Web 应用程序配置中启用大型消息流。  
   
-5.  启用对服务器上或数据源中的二进制资源的访问。  
+5. 启用对服务器上或数据源中的二进制资源的访问。  
   
  本主题中的示例基于示例流照片服务，该文章中深入讨论服务[数据服务流提供程序系列：实现流提供程序 （第 1 部分）](https://go.microsoft.com/fwlink/?LinkID=198989)。 此示例服务的源代码位于[流照片数据服务示例页](https://go.microsoft.com/fwlink/?LinkID=198988)MSDN 代码库。  
   
