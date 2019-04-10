@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161507"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320066"
 ---
 # <a name="structured-navigation-overview"></a>结构化导航概述
 可以通过承载的内容[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、 一个<xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>组成可以标识包的页面[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]和导航到超链接的。 页面的结构以及导航页面的方式（通过超链接来定义）称为导航拓扑。 此类拓扑适合各种应用程序类型，尤其适合在文档之间导航的应用程序类型。 对于此类应用程序，用户可以从一个页面导航到另一个页面，并且其中任一页面都无需了解另一页面的任何信息。  
@@ -134,9 +134,9 @@ ms.locfileid: "59161507"
 ### <a name="returning-task-result-and-task-data-from-a-task-to-a-calling-page"></a>将任务的任务结果和任务数据返回到调用页  
  在用户使用完被调用页后（在本示例中通过按“确定”或“取消”按钮来表示），被调用页需要返回。 因为调用页已使用被调用页来从用户那里收集数据，所以调用页需要两种类型的信息：  
   
-1.  用户是否取消了被调用页（在此示例中通过按“确定”或“取消”按钮）。 这使得调用页可以确定是否处理调用页从用户那里收集的数据。  
+1. 用户是否取消了被调用页（在此示例中通过按“确定”或“取消”按钮）。 这使得调用页可以确定是否处理调用页从用户那里收集的数据。  
   
-2.  用户提供的数据。  
+2. 用户提供的数据。  
   
  若要返回的信息，<xref:System.Windows.Navigation.PageFunction%601>实现<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>方法。 下面的代码演示如何调用它。  
   

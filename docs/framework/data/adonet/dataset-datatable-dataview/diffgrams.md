@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313510"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <xref:System.Data.DataSet> 使用 DiffGram 格式来加载和保持其内容，并将其内容序列化，以便通过网络连接来进行传输。 当<xref:System.Data.DataSet>编写为 DiffGram，若要精确地重新创建内容，但不架构的所有必要信息 DiffGram 填充它<xref:System.Data.DataSet>，包括从这两个列的值**原始**并**当前**行版本、 行错误信息以及行顺序。  
@@ -20,26 +20,26 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
   
 ### <a name="to-generate-a-diffgram"></a>生成 Diffgram  
   
-1.  生成根表（即没有任何父级的表）的列表。  
+1. 生成根表（即没有任何父级的表）的列表。  
   
-2.  对于列表中每个表及其子代，在 Diffgram 的第一部分中写出所有行的当前版本。  
+2. 对于列表中每个表及其子代，在 Diffgram 的第一部分中写出所有行的当前版本。  
   
-3.  对于每个表中<xref:System.Data.DataSet>，写出的所有行的原始版本，如果有，请在**\<之前 >** 在 diffgram 的部分。  
+3. 对于每个表中<xref:System.Data.DataSet>，写出的所有行的原始版本，如果有，请在**\<之前 >** 在 diffgram 的部分。  
   
-4.  对于有错误，行写入错误内容中**\<错误 >** 在 diffgram 的部分。  
+4. 对于有错误，行写入错误内容中**\<错误 >** 在 diffgram 的部分。  
   
  将按照从 XML 文件的开头到结尾的顺序处理 Diffgram。  
   
 ### <a name="to-process-a-diffgram"></a>处理 Diffgram  
   
-1.  处理包含行当前版本的 Diffgram 的第一部分。  
+1. 处理包含行当前版本的 Diffgram 的第一部分。  
   
-2.  处理第二个或**\<之前 >** 节，其中包含原始行版本的修改和删除的行。  
+2. 处理第二个或**\<之前 >** 节，其中包含原始行版本的修改和删除的行。  
   
     > [!NOTE]
     >  如果某行标记为已删除，则删除操作还可删除该行的子代，具体取决于当前 `Cascade` 的 <xref:System.Data.DataSet> 属性。  
   
-3.  进程**\<错误 >** 部分。 为本部分中各项的指定行和列设置错误信息。  
+3. 进程**\<错误 >** 部分。 为本部分中各项的指定行和列设置错误信息。  
   
 > [!NOTE]
 >  如果将 <xref:System.Data.XmlWriteMode> 设置为 Diffgram，则目标 <xref:System.Data.DataSet> 和原始 <xref:System.Data.DataSet> 的内容可能会不同。  

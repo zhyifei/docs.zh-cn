@@ -2,12 +2,12 @@
 title: 双向通信
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: a74d40fc8c8d4bfb547bd6b21609b59a42891dfa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6ce0d15bca15fff52ea6c4ab210dd08664e19824
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148936"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298833"
 ---
 # <a name="two-way-communication"></a>双向通信
 本示例演示如何通过 MSMQ 执行事务处理双向排队通信。 本示例使用 `netMsmqBinding` 绑定。 在本例中，服务是一个自承载的控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -218,11 +218,11 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
     > [!NOTE]
     >  如果使用 Svcutil.exe 为该示例重新生成配置，请确保在客户端配置中修改终结点名称以与客户端代码匹配。  
@@ -231,7 +231,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>在加入到工作组或在没有 Active Directory 集成的计算机上运行示例  
   
-1.  如果计算机不是域成员或尚未安装 Active Directory 集成，请将身份验证模式和保护级别设置为 `None` 以关闭传输安全性，如下面的示例配置所示：  
+1. 如果计算机不是域成员或尚未安装 Active Directory 集成，请将身份验证模式和保护级别设置为 `None` 以关闭传输安全性，如下面的示例配置所示：  
   
     ```xml  
     <configuration>  
@@ -266,7 +266,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     </configuration>  
     ```  
   
-2.  关闭客户端配置的安全性将生成下面的内容：  
+2. 关闭客户端配置的安全性将生成下面的内容：  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -310,14 +310,14 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     </configuration>  
     ```  
   
-3.  本示例中的服务在 `OrderProcessorService` 中创建一个绑定。 实例化该绑定后添加一行代码以将安全模式设置为 `None`。  
+3. 本示例中的服务在 `OrderProcessorService` 中创建一个绑定。 实例化该绑定后添加一行代码以将安全模式设置为 `None`。  
   
     ```csharp
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
     msmqCallbackBinding.Security.Mode = NetMsmqSecurityMode.None;  
     ```  
   
-4.  确保在运行示例前更改服务器和客户端上的配置。  
+4. 确保在运行示例前更改服务器和客户端上的配置。  
   
     > [!NOTE]
     >  将 `security mode` 设置为`None` 等效于将 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 或 `Message` 安全设置为 `None`。  

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: 289a91481c832a36b4b77d56ba6b18921ef02d5b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9336be2aebb10e5c0bd0bf4648cae34a3b5fe7c3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227999"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300394"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>如何：设置 Windows 窗体面板的背景
 Windows 窗体<xref:System.Windows.Forms.Panel>控件可以显示背景色和背景图像。 <xref:System.Windows.Forms.Control.BackColor%2A>属性设置为包含的控件，如标签和单选按钮的背景色。 如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>未设置属性，<xref:System.Windows.Forms.Control.BackColor%2A>选择将填充整个面板。 如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>属性设置，则图像将显示在包含控件的后面。  
   
 ### <a name="to-set-the-background-programmatically"></a>若要以编程方式设置的背景  
   
-1.  设置的面板<xref:System.Windows.Forms.Control.BackColor%2A>属性的值类型<xref:System.Drawing.Color?displayProperty=nameWithType>。  
+1. 设置的面板<xref:System.Windows.Forms.Control.BackColor%2A>属性的值类型<xref:System.Drawing.Color?displayProperty=nameWithType>。  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,7 +37,7 @@ Windows 窗体<xref:System.Windows.Forms.Panel>控件可以显示背景色和背
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2.  设置的面板<xref:System.Windows.Forms.Control.BackgroundImage%2A>属性使用<xref:System.Drawing.Image.FromFile%2A>方法的<xref:System.Drawing.Image?displayProperty=nameWithType>类。  
+2. 设置的面板<xref:System.Windows.Forms.Control.BackgroundImage%2A>属性使用<xref:System.Drawing.Image.FromFile%2A>方法的<xref:System.Drawing.Image?displayProperty=nameWithType>类。  
   
     ```vb  
     ' You should replace the bolded image   

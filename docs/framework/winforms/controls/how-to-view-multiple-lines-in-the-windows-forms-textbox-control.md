@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: f7a0e3a14d14f0629bd9995dbecd3f0b98bea1d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190907"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324183"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>如何：在 Windows 窗体 TextBox 控件中查看多个行
 默认情况下，Windows 窗体<xref:System.Windows.Forms.TextBox>控件显示单行文本并不会显示滚动条。 文本的长度超过可用空间，仅部分文本可见。 可以通过设置更改此默认行为<xref:System.Windows.Forms.TextBox.Multiline%2A>， <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>，和<xref:System.Windows.Forms.TextBox.ScrollBars%2A>为适当的值的属性。  
@@ -29,9 +29,9 @@ ms.locfileid: "59190907"
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>若要查看 TextBox 控件中的多个行  
   
-1.  将 <xref:System.Windows.Forms.TextBox.Multiline%2A> 属性设置为 `true`。 如果<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>是`true`（默认值），然后在控件中的文本将显示为一个或多个段落; 否则它将显示为列表中，某些行可能会剪裁在控件的边缘。  
+1. 将 <xref:System.Windows.Forms.TextBox.Multiline%2A> 属性设置为 `true`。 如果<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>是`true`（默认值），然后在控件中的文本将显示为一个或多个段落; 否则它将显示为列表中，某些行可能会剪裁在控件的边缘。  
   
-2.  将 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 属性设置为适当的值。  
+2. 将 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 属性设置为适当的值。  
   
     |“值”|描述|  
     |-----------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "59190907"
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|如果你想要显示的行，其中一些可能会比的宽度更长列表，请使用此值<xref:System.Windows.Forms.TextBox>控件。|  
     |<xref:System.Windows.Forms.ScrollBars.Both>|如果该列表可能会超过控件的高度，则使用此值。|  
   
-3.  将 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 属性设置为适当的值。  
+3. 将 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 属性设置为适当的值。  
   
     |“值”|描述|  
     |-----------|-----------------|  

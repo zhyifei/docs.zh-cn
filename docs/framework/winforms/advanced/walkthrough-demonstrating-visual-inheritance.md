@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 932df915ab55d8141e64836961dd636d3d5da241
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307589"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>演练：演示可视化继承
 通过 Visual 继承，可以查看基本表单上的控件和添加新控件。 在本演练中，你将创建基窗体，并将其编译到类库。 将此类库导入另一个项目，并创建一个从基窗体继承的新窗体。 在本演练中，你将学会如何执行以下任务：  
@@ -56,25 +56,25 @@ ms.locfileid: "59174598"
   
 #### <a name="to-create-a-class-library-project-containing-a-base-form"></a>创建包含基窗体的类库项目  
   
-1.  从**文件**菜单中，选择**新建**，然后**项目**以打开**新项目**对话框。  
+1. 从**文件**菜单中，选择**新建**，然后**项目**以打开**新项目**对话框。  
   
-2.  创建 Windows 窗体应用程序名为`BaseFormLibrary`。  
+2. 创建 Windows 窗体应用程序名为`BaseFormLibrary`。  
   
-3.  若要创建一个类库，而不是标准的 Windows 窗体应用程序，在**解决方案资源管理器**，右键单击**BaseFormLibrary**项目节点，然后选择**属性**.  
+3. 若要创建一个类库，而不是标准的 Windows 窗体应用程序，在**解决方案资源管理器**，右键单击**BaseFormLibrary**项目节点，然后选择**属性**.  
   
-4.  在项目属性中，更改**输出类型**从**Windows 应用程序**到**类库**。  
+4. 在项目属性中，更改**输出类型**从**Windows 应用程序**到**类库**。  
   
-5.  从**文件**菜单中，选择**全部保存**将项目和文件保存到默认位置。  
+5. 从**文件**菜单中，选择**全部保存**将项目和文件保存到默认位置。  
   
  接下来的两步是将按钮添加至基窗体。 为了演示 visual 继承，请通过设置按钮的 `Modifiers` 属性为它们指定不同的访问级别。  
   
 #### <a name="to-add-a-button-that-inheritors-of-the-base-form-can-modify"></a>添加基窗体的继承者可修改的按钮  
   
-1.  在设计器中打开“Form1”。  
+1. 在设计器中打开“Form1”。  
   
-2.  上**所有 Windows 窗体**选项卡**工具箱**，双击**按钮**到窗体添加一个按钮。 使用鼠标来定位按钮和调整其大小。  
+2. 上**所有 Windows 窗体**选项卡**工具箱**，双击**按钮**到窗体添加一个按钮。 使用鼠标来定位按钮和调整其大小。  
   
-3.  在“属性”窗口中，设置按钮的下列属性：  
+3. 在“属性”窗口中，设置按钮的下列属性：  
   
     -   设置**文本**属性设置为**Say Hello**。  
   
@@ -82,9 +82,9 @@ ms.locfileid: "59174598"
   
     -   设置**修饰符**属性设置为**受保护**。 这使得继承的窗体**Form1**若要修改的属性**btnProtected**。  
   
-4.  双击**Say Hello**按钮添加事件处理程序**单击**事件。  
+4. 双击**Say Hello**按钮添加事件处理程序**单击**事件。  
   
-5.  将以下代码行添加到事件处理程序：  
+5. 将以下代码行添加到事件处理程序：  
   
     ```vb  
     MessageBox.Show("Hello, World!")  
@@ -96,9 +96,9 @@ ms.locfileid: "59174598"
   
 #### <a name="to-add-a-button-that-cannot-be-modified-by-inheritors-of-the-base-form"></a>添加基窗体的继承者不能修改的按钮  
   
-1.  切换到设计视图，通过单击**Form1.vb [设计]、 Form1.cs [设计] 或 Form1.jsl [Design]** 选项卡上方代码编辑器中，或通过按 F7。  
+1. 切换到设计视图，通过单击**Form1.vb [设计]、 Form1.cs [设计] 或 Form1.jsl [Design]** 选项卡上方代码编辑器中，或通过按 F7。  
   
-2.  按如下方式添加第二个按钮并设置其属性：  
+2. 按如下方式添加第二个按钮并设置其属性：  
   
     -   设置**文本**属性设置为**Say Goodbye**。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "59174598"
   
     -   设置**修饰符**属性设置为**专用**。 这使得继承的窗体**Form1**若要修改的属性**btnPrivate**。  
   
-3.  双击**Say Goodbye**按钮添加事件处理程序**单击**事件。 将以下代码行放入事件过程：  
+3. 双击**Say Goodbye**按钮添加事件处理程序**单击**事件。 将以下代码行放入事件过程：  
   
     ```vb  
     MessageBox.Show("Goodbye!")  
@@ -116,37 +116,37 @@ ms.locfileid: "59174598"
     MessageBox.Show("Goodbye!");  
     ```  
   
-4.  从**构建**菜单中，选择**构建 BaseForm 库**生成类库。  
+4. 从**构建**菜单中，选择**构建 BaseForm 库**生成类库。  
   
      构建库后，可创建从刚创建的窗体继承的新项目。  
   
 #### <a name="to-create-a-project-containing-a-form-that-inherits-from-the-base-form"></a>创建包含继承自基窗体的窗体的项目  
   
-1.  从**文件**菜单中，选择**添加**，然后**新项目**以打开**添加新项目**对话框。  
+1. 从**文件**菜单中，选择**添加**，然后**新项目**以打开**添加新项目**对话框。  
   
-2.  创建 Windows 窗体应用程序名为`InheritanceTest`。  
+2. 创建 Windows 窗体应用程序名为`InheritanceTest`。  
   
 #### <a name="to-add-an-inherited-form"></a>添加继承的窗体  
   
-1.  在中**解决方案资源管理器**，右键单击**InheritanceTest**项目，选择**添加**，然后选择**新项**。  
+1. 在中**解决方案资源管理器**，右键单击**InheritanceTest**项目，选择**添加**，然后选择**新项**。  
   
-2.  在中**添加新项**对话框中，选择**Windows 窗体**类别 （如果有一个类别列表），然后选择**继承的窗体**模板。  
+2. 在中**添加新项**对话框中，选择**Windows 窗体**类别 （如果有一个类别列表），然后选择**继承的窗体**模板。  
   
-3.  保留默认名称的`Form2`，然后单击**添加**。  
+3. 保留默认名称的`Form2`，然后单击**添加**。  
   
-4.  在中**继承选择器**对话框中，选择**Form1**从**BaseFormLibrary**项目与窗体继承，并单击**确定**.  
+4. 在中**继承选择器**对话框中，选择**Form1**从**BaseFormLibrary**项目与窗体继承，并单击**确定**.  
   
      这将创建中的窗体**InheritanceTest**派生的窗体中的项目**BaseFormLibrary**。  
   
-5.  继承的窗体 (**Form2**) 在设计器中双击它，如果已打开。  
+5. 继承的窗体 (**Form2**) 在设计器中双击它，如果已打开。  
   
      继承的按钮在设计器中，有一个符号 （![Visual Basic 继承符号的屏幕截图。](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) 在其上角，指示它们继承。  
   
-6.  选择**Say Hello**按钮，然后观察调整大小图柄。 由于此按钮受保护，继承者可以对其进行移动、调整大小、更改标题和进行其他修改。  
+6. 选择**Say Hello**按钮，然后观察调整大小图柄。 由于此按钮受保护，继承者可以对其进行移动、调整大小、更改标题和进行其他修改。  
   
-7.  选择专用网络**Say Goodbye**按钮，然后请注意，它不具有调整大小图柄。 此外，在**属性**窗口中，此按钮的属性呈灰显，指示不能修改它们。  
+7. 选择专用网络**Say Goodbye**按钮，然后请注意，它不具有调整大小图柄。 此外，在**属性**窗口中，此按钮的属性呈灰显，指示不能修改它们。  
   
-8.  如果使用的 Visual C#:  
+8. 如果使用的 Visual C#:  
   
     1.  在中**解决方案资源管理器**，右键单击**Form1**中**InheritanceTest**项目，然后选择**删除**。 在显示的消息框，单击**确定**以确认删除。  
   

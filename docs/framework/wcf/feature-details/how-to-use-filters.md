@@ -2,12 +2,12 @@
 title: 如何：使用筛选器
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 6f145a9bc2842eaa5dad1a1c0ec6d77eb2b37552
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5d3ed4a1d64edee274e60f5bf156b4294902df8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216192"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295518"
 ---
 # <a name="how-to-use-filters"></a>如何：使用筛选器
 本主题概述创建使用多个筛选器的路由配置所需执行的基本步骤。 在本示例中，消息将路由到两个计算器服务实现，即 regularCalc 和 roundingCalc。 这两个实现都支持相同的运算；但其中一个服务在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用服务的舍入版本；如果未表示任何服务首选项，则消息将在这两个服务间执行负载平衡。 这两个服务公开的运算包括：  
@@ -24,7 +24,7 @@ ms.locfileid: "59216192"
   
 ### <a name="determine-unique-data"></a>确定唯一数据  
   
-1.  由于两个服务实现处理相同的运算，并且除了返回的数据之外基本相同，因此从客户端应用程序发送的消息中包含的基本数据不具备足够的独特性，无法确定如何路由请求。 但是，如果客户端应用程序向消息添加了唯一的标头值，则您可以使用此值确定应如何路由消息。  
+1. 由于两个服务实现处理相同的运算，并且除了返回的数据之外基本相同，因此从客户端应用程序发送的消息中包含的基本数据不具备足够的独特性，无法确定如何路由请求。 但是，如果客户端应用程序向消息添加了唯一的标头值，则您可以使用此值确定应如何路由消息。  
   
      在本示例中，如果客户端应用程序需要由舍入计算器处理消息，它将使用下面的代码添加自定义标头：  
   
@@ -35,11 +35,11 @@ ms.locfileid: "59216192"
   
      现在，您可以使用 XPath 筛选器检查消息中是否含有此标头，并将包含该标头的消息路由到 roundCalc 服务。  
   
-2.  此外，路由服务还公开两个虚拟服务终结点，可将这两个终结点与 EndpointName、EndpointAddress 或 PrefixEndpointAddress 筛选器配合使用，以基于客户端应用程序提交请求的目标终结点将传入消息唯一路由到特定计算器实现。  
+2. 此外，路由服务还公开两个虚拟服务终结点，可将这两个终结点与 EndpointName、EndpointAddress 或 PrefixEndpointAddress 筛选器配合使用，以基于客户端应用程序提交请求的目标终结点将传入消息唯一路由到特定计算器实现。  
   
 ### <a name="define-endpoints"></a>定义终结点  
   
-1.  定义路由服务使用的终结点时，首先应确定客户端和服务使用的通道的形状。 在此方案中，两个目标服务都使用请求-答复模式，因此使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter>。 下面的示例定义路由服务公开的服务终结点。  
+1. 定义路由服务使用的终结点时，首先应确定客户端和服务使用的通道的形状。 在此方案中，两个目标服务都使用请求-答复模式，因此使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter>。 下面的示例定义路由服务公开的服务终结点。  
   
     ```xml  
     <services>  
@@ -73,7 +73,7 @@ ms.locfileid: "59216192"
   
      通过此配置，路由服务公开三个单独的终结点。 客户端应用程序根据运行时选项将消息发送到其中一个地址。 到达某个"虚拟"服务终结点 （"舍入/calculator"或"regular/calculator"） 上的消息将转发到相应的计算器实现。 如果客户端应用程序未将请求发送到特定终结点，则将消息发送到常规终结点。 不论选择哪个终结点，客户端应用程序还可以选择包括自定义标头，以指示应将消息转发到舍入计算器实现。  
   
-2.  下面的示例定义路由服务将消息路由到的客户端（目标）终结点。  
+2. 下面的示例定义路由服务将消息路由到的客户端（目标）终结点。  
   
     ```xml  
     <client>  
@@ -93,7 +93,7 @@ ms.locfileid: "59216192"
   
 ### <a name="define-filters"></a>定义筛选器  
   
-1.  若要将基于客户端应用程序将添加到消息的"RoundingCalculator"自定义标头的消息路由，定义使用 XPath 查询来检查存在此标头的筛选器。 由于此标头使用定义的自定义的命名空间，还添加命名空间定义项的自定义命名空间前缀"custom"，可在 XPath 查询。 下面的示例定义所需的路由节、命名空间表和 XPath 筛选器。  
+1. 若要将基于客户端应用程序将添加到消息的"RoundingCalculator"自定义标头的消息路由，定义使用 XPath 查询来检查存在此标头的筛选器。 由于此标头使用定义的自定义的命名空间，还添加命名空间定义项的自定义命名空间前缀"custom"，可在 XPath 查询。 下面的示例定义所需的路由节、命名空间表和 XPath 筛选器。  
   
     ```xml  
     <routing>  
@@ -115,7 +115,7 @@ ms.locfileid: "59216192"
     > [!NOTE]
     > S12 命名空间前缀在命名空间表中，默认情况下定义和表示的命名空间`http://www.w3.org/2003/05/soap-envelope`。
   
-2.  您还必须定义用于查找在两个虚拟终结点上接收到的消息的筛选器。 第一个虚拟终结点是"regular/calculator"终结点。 客户端可以将请求发送到此终结点，以指示应将消息路由到 regularCalc 服务。 下面的配置定义一个筛选器，该筛选器使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 确定消息是否通过具有 filterData 中指定的名称的终结点到达。  
+2. 您还必须定义用于查找在两个虚拟终结点上接收到的消息的筛选器。 第一个虚拟终结点是"regular/calculator"终结点。 客户端可以将请求发送到此终结点，以指示应将消息路由到 regularCalc 服务。 下面的配置定义一个筛选器，该筛选器使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 确定消息是否通过具有 filterData 中指定的名称的终结点到达。  
   
     ```xml  
     <!--define an endpoint name filter looking for messages that show up on the virtual regular calculator endpoint-->  
@@ -124,7 +124,7 @@ ms.locfileid: "59216192"
   
      如果名为"calculatorEndpoint"的服务终结点收到一条消息时，此筛选器计算结果为`true`。  
   
-3.  接着，定义一个筛选器，该筛选器查找发送到 roundingEndpoint 地址的消息。 客户端可以将请求发送到此终结点，以指示应将消息路由到 roundingCalc 服务。 下面的配置定义使用的筛选器<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>以确定是否消息到达"舍入/calculator"终结点。  
+3. 接着，定义一个筛选器，该筛选器查找发送到 roundingEndpoint 地址的消息。 客户端可以将请求发送到此终结点，以指示应将消息路由到 roundingCalc 服务。 下面的配置定义使用的筛选器<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>以确定是否消息到达"舍入/calculator"终结点。  
   
     ```xml  
     <!--define a filter looking for messages that show up with the address prefix.  The corresponds to the rounding calc virtual endpoint-->  
@@ -142,7 +142,7 @@ ms.locfileid: "59216192"
     > -   `www.contoso.com`  
     > -   ContosoWeb01  
   
-4.  最后一个筛选器必须支持路由到达常规终结点但没有自定义标头的消息。 对于此种情况，消息应在 regularCalc 和 roundingCalc 服务之间交替。 若要支持这些消息的"轮循机制"路由，使用一个允许一个筛选器实例要与匹配的处理每条消息的自定义筛选器。  下面定义了 RoundRobinMessageFilter 的两个实例，这两个实例组合在一起以指示它们应彼此交替。  
+4. 最后一个筛选器必须支持路由到达常规终结点但没有自定义标头的消息。 对于此种情况，消息应在 regularCalc 和 roundingCalc 服务之间交替。 若要支持这些消息的"轮循机制"路由，使用一个允许一个筛选器实例要与匹配的处理每条消息的自定义筛选器。  下面定义了 RoundRobinMessageFilter 的两个实例，这两个实例组合在一起以指示它们应彼此交替。  
   
     ```xml  
     <!-- Set up the custom message filters.  In this example,   
@@ -160,7 +160,7 @@ ms.locfileid: "59216192"
   
 ### <a name="define-filter-tables"></a>定义筛选器表  
   
-1.  若要将筛选器与特定客户端终结点关联，必须将筛选器放置到筛选器表中。 此示例方案还采用筛选器优先级设置，该可选设置用于指示筛选器的处理顺序。 如果未指定筛选器优先级，则将同时计算所有筛选器。  
+1. 若要将筛选器与特定客户端终结点关联，必须将筛选器放置到筛选器表中。 此示例方案还采用筛选器优先级设置，该可选设置用于指示筛选器的处理顺序。 如果未指定筛选器优先级，则将同时计算所有筛选器。  
   
     > [!NOTE]
     >  虽然指定筛选器优先级可以控制筛选器的处理顺序，但可能会对路由服务的性能产生负面影响。 如有可能，请构造筛选器逻辑，以免使用筛选器优先级。  
@@ -186,7 +186,7 @@ ms.locfileid: "59216192"
   
      如果指定了筛选器优先级，将首先计算优先级最高的筛选器。 如果处于特定优先级级别的一个或多个筛选器匹配，将不会计算较低优先级级别的筛选器。 对于此方案，指定的最高优先级是 2，这是此级别的唯一筛选器条目。  
   
-2.  定义了筛选器条目，以通过检查终结点名称或地址前缀来检查是否在特定终结点上收到了消息。 下面的条目将这两个筛选器条目添加到筛选器表，并将这两个条目与消息将路由到的目标终结点相关联。 这些筛选器的优先级设置为 1，指示近当前面的 XPath 筛选器与消息不匹配时才应运行这些筛选器。  
+2. 定义了筛选器条目，以通过检查终结点名称或地址前缀来检查是否在特定终结点上收到了消息。 下面的条目将这两个筛选器条目添加到筛选器表，并将这两个条目与消息将路由到的目标终结点相关联。 这些筛选器的优先级设置为 1，指示近当前面的 XPath 筛选器与消息不匹配时才应运行这些筛选器。  
   
     ```xml  
     <!--if the header wasn't there, send the message based on which virtual endpoint it arrived at-->  
@@ -197,7 +197,7 @@ ms.locfileid: "59216192"
   
      由于这些筛选器的筛选器优先级为 1，因此，仅当优先级级别为 2 的筛选器与消息不匹配时，才会计算这些筛选器。 此外，由于这两个筛选器具有相同的优先级级别，因此将同时计算它们。 由于两个筛选器是互斥的，因此其中只能有一个筛选器与消息相匹配。  
   
-3.  如果消息与前面的所有筛选器均不匹配，则将通过泛型服务终结点接收该消息，并且该消息未包含指示其路由到的目标位置的标头信息。 这些消息将由自定义筛选器处理，该筛选器在两个计算器服务之间对这些消息实现负载平衡。 下面的示例演示如何将筛选器条目添加到筛选器表；每个筛选器均与两个目标终结点之一相关联。  
+3. 如果消息与前面的所有筛选器均不匹配，则将通过泛型服务终结点接收该消息，并且该消息未包含指示其路由到的目标位置的标头信息。 这些消息将由自定义筛选器处理，该筛选器在两个计算器服务之间对这些消息实现负载平衡。 下面的示例演示如何将筛选器条目添加到筛选器表；每个筛选器均与两个目标终结点之一相关联。  
   
     ```xml  
     <!--if none of the other filters have matched,   
@@ -212,7 +212,7 @@ ms.locfileid: "59216192"
   
      如前所述，对于接收到的每条消息，在这些筛选器定义使用的自定义筛选器中，只有其中一个筛选器的计算结果为 `true`。 由于仅使用此筛选器定义了两个筛选器，并且两个筛选器具有指定的相同组设置，因此其结果是：路由服务在将消息发送到 regularCalcEndpoint 和 RoundingCalcEndpoint 之间交替。  
   
-4.  若要根据筛选器计算消息，筛选器表必须首先与将用来接收消息的服务终结点相关联。  下面的示例演示如何使用路由行为将路由表与服务终结点相关联：  
+4. 若要根据筛选器计算消息，筛选器表必须首先与将用来接收消息的服务终结点相关联。  下面的示例演示如何使用路由行为将路由表与服务终结点相关联：  
   
     ```xml  
     <behaviors>  

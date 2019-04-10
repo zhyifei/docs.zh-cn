@@ -10,21 +10,21 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223623"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324196"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>如何：创建用于绘制的 Graphics 对象
 您可以绘制线条和形状之前，呈现文本，或显示和操作图像[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，你需要创建<xref:System.Drawing.Graphics>对象。 <xref:System.Drawing.Graphics>对象表示[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]绘图图面，并且是用于创建图形的映像的对象。  
   
  使用图形中有两个步骤：  
   
-1.  创建<xref:System.Drawing.Graphics>对象。  
+1. 创建<xref:System.Drawing.Graphics>对象。  
   
-2.  使用<xref:System.Drawing.Graphics>对象来绘制线条和形状、 呈现文本，或显示和操作图像。  
+2. 使用<xref:System.Drawing.Graphics>对象来绘制线条和形状、 呈现文本，或显示和操作图像。  
   
 ## <a name="creating-a-graphics-object"></a>创建图形对象  
  可以在不同的方式创建图形对象。  
@@ -48,11 +48,11 @@ ms.locfileid: "59223623"
   
 #### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>若要获取从中绘制事件 PaintEventArgs 图形对象的引用  
   
-1.  声明<xref:System.Drawing.Graphics>对象。  
+1. 声明<xref:System.Drawing.Graphics>对象。  
   
-2.  分配变量来指代<xref:System.Drawing.Graphics>对象作为的一部分传递<xref:System.Windows.Forms.PaintEventArgs>。  
+2. 分配变量来指代<xref:System.Drawing.Graphics>对象作为的一部分传递<xref:System.Windows.Forms.PaintEventArgs>。  
   
-3.  插入代码以绘制窗体或控件。  
+3. 插入代码以绘制窗体或控件。  
   
      下面的示例演示如何引用<xref:System.Drawing.Graphics>对象从<xref:System.Windows.Forms.PaintEventArgs>中<xref:System.Windows.Forms.Control.Paint>事件：  
   

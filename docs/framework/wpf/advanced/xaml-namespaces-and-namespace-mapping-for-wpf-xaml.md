@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176912"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301030"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML 的 XAML 命名空间和命名空间映射
 本主题进一步解释通常在 WPF XAML 文件的根标记中出现的两个 XAML 命名空间映射的存在性和用途。 此外，还介绍如何生成相似映射以使用代码中和/或单独程序集内定义的元素。  
@@ -119,15 +119,15 @@ End Namespace
 ## <a name="wpf-and-assembly-loading"></a>WPF 和程序集加载  
  WPF 的 XAML 架构上下文与 WPF 应用程序模型，后者又使用的 CLR 定义概念<xref:System.AppDomain>。 以下序列描述 XAML 架构上下文如何解释如何加载程序集或查找类型在运行的时或设计时，根据 WPF 使用的<xref:System.AppDomain>和其他因素。  
   
-1.  循环访问<xref:System.AppDomain>，寻找匹配名称的所有方面的已加载程序集，从最近加载的程序集。  
+1. 循环访问<xref:System.AppDomain>，寻找匹配名称的所有方面的已加载程序集，从最近加载的程序集。  
   
-2.  如果名称限定，调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名称。  
+2. 如果名称限定，调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名称。  
   
-3.  如果限定名称的短名称和公钥标记匹配从中加载标记的程序集，则返回此程序集。  
+3. 如果限定名称的短名称和公钥标记匹配从中加载标记的程序集，则返回此程序集。  
   
-4.  使用短名称和公钥标记调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
+4. 使用短名称和公钥标记调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
   
-5.  如果非限定名称，调用<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>。  
+5. 如果非限定名称，调用<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>。  
   
  宽松型 XAML 不使用步骤 3；不存在从中加载标记的程序集。  
   

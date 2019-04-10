@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: c840912f755e1d6bf76720ad0178057c50e4cfd9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 27258110a8852c00990d73cd9ca8685c3ead315d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186139"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300562"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF 安全策略 - 安全工程
 可信计算是 Microsoft 为确保生成安全代码而首创的一项技术。 可信计算技术的一个关键元素是 [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 是与标准工程过程一同用于简化提交安全代码的工程实践。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 包含十个阶段，将规范化、可度量性和附加结构的最佳实践结合在一起，包括：  
@@ -47,11 +47,11 @@ ms.locfileid: "59186139"
   
  我们以一个杂货店为例，说明威胁模型在高级别上所涉及的以下关键步骤：  
   
-1.  **确定资产**。 杂货店的资产可能包括员工、保险箱、收银机和库存。  
+1. **确定资产**。 杂货店的资产可能包括员工、保险箱、收银机和库存。  
   
-2.  **枚举入口点**。 杂货店的入口点可能包括前门和后门、窗户、装货区和空调设备。  
+2. **枚举入口点**。 杂货店的入口点可能包括前门和后门、窗户、装货区和空调设备。  
   
-3.  **使用入口点调查针对资产的攻击**。 可能进行的攻击包括通过空调入口点来对杂货店的保险箱资产进行攻击；有人可能会将空调设备拆掉，将保险箱通过空调处拉出杂货店。  
+3. **使用入口点调查针对资产的攻击**。 可能进行的攻击包括通过空调入口点来对杂货店的保险箱资产进行攻击；有人可能会将空调设备拆掉，将保险箱通过空调处拉出杂货店。  
   
  威胁建模应用于整个 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]，包含以下各项：  
   

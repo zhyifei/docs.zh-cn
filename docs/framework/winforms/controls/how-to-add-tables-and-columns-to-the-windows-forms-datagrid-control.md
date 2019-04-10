@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: 55a8d28d04dd05d4dba7ab2b1edbcfbcce97cecb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc364f3609f8041378b0b03b8e1bc8f312fade18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222037"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319906"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>如何：向 Windows 窗体 DataGrid 控件添加表和列
 > [!NOTE]
@@ -25,12 +25,12 @@ ms.locfileid: "59222037"
   
 ### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>若要以编程方式将表和列添加到数据网格  
   
-1.  若要在表中显示数据，您必须首先绑定<xref:System.Windows.Forms.DataGrid>控件向数据集。 有关详细信息，请参阅[如何：将 Windows 窗体 DataGrid 控件绑定到数据源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
+1. 若要在表中显示数据，您必须首先绑定<xref:System.Windows.Forms.DataGrid>控件向数据集。 有关详细信息，请参阅[如何：将 Windows 窗体 DataGrid 控件绑定到数据源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
   
     > [!CAUTION]
     >  以编程方式指定列样式，将始终创建**DataGridColumnStyle**对象，并将其添加到**GridColumnStylesCollection**对象然后再添加**DataGridTableStyle**对象添加到**GridTableStylesCollection**对象。 当添加一个空**DataGridTableStyle**对象添加到收藏**DataGridColumnStyle**为你自动生成的对象。 如果你尝试添加新因此，将引发异常**DataGridColumnStyle**对象具有重复**MappingName**值到**GridColumnStylesCollection**对象。  
   
-2.  声明新的表样式，并将其映射名称设置。  
+2. 声明新的表样式，并将其映射名称设置。  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -47,7 +47,7 @@ ms.locfileid: "59222037"
     ts1->MappingName = S"Customers";  
     ```  
   
-3.  声明新的列样式并设置其映射名称和其他属性。  
+3. 声明新的列样式并设置其映射名称和其他属性。  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -67,7 +67,7 @@ ms.locfileid: "59222037"
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  调用**外**方法**GridColumnStylesCollection**对象将列添加到表样式  
+4. 调用**外**方法**GridColumnStylesCollection**对象将列添加到表样式  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "59222037"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  调用**外**方法**GridTableStylesCollection**要添加到数据网格的表样式对象。  
+5. 调用**外**方法**GridTableStylesCollection**要添加到数据网格的表样式对象。  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  

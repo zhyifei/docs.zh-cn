@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 27608a7fbce5e9aa815b43e1d7202fa11e52ee1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175599"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315850"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>如何：更改 Windows 窗体 DataGrid 控件中在运行时显示的数据
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59175599"
   
 ### <a name="to-change-data-programmatically"></a>若要以编程方式更改数据  
   
-1.  指定所需的表，从<xref:System.Data.DataSet>对象以及所需的行和字段从表并将该单元格设置为新值。  
+1. 指定所需的表，从<xref:System.Data.DataSet>对象以及所需的行和字段从表并将该单元格设置为新值。  
   
     > [!NOTE]
     >  若要指定的第一个表<xref:System.Data.DataSet>或表，则第一行使用 0。  
@@ -68,7 +68,7 @@ ms.locfileid: "59175599"
   
 ### <a name="to-change-the-datasource-programmatically"></a>若要以编程方式更改数据源  
   
-1.  设置<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法为数据源和您要将绑定到表的名称。  
+1. 设置<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法为数据源和您要将绑定到表的名称。  
   
      下面的示例演示如何更改日期源使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]连接到 Pubs 数据库中作者表的数据控件 (adoPubsAuthors)。  
   

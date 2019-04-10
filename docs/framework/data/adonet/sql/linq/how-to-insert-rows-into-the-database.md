@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cc9f276cc278d4a9c376d72f1ab38d89ea6dd5b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cb2319d51e0518114a04eea2fc7ab6b5a836b7ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169593"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328590"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>如何：将行插入数据库中
 将行插入数据库通过将对象添加到关联[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Table%601>集合，然后将更改提交到数据库。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将转换成相应的 SQL 所做的更改`INSERT`命令。  
@@ -24,11 +24,11 @@ ms.locfileid: "59169593"
   
 ### <a name="to-insert-a-row-into-the-database"></a>向数据库中插入行  
   
-1.  创建一个包含要提交的列数据的新对象。  
+1. 创建一个包含要提交的列数据的新对象。  
   
-2.  向其中添加新对象[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]`Table`与数据库中的目标表关联的集合。  
+2. 向其中添加新对象[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]`Table`与数据库中的目标表关联的集合。  
   
-3.  将更改提交到数据库。  
+3. 将更改提交到数据库。  
   
 ## <a name="example"></a>示例  
  下面的代码示例创建一个类型为 `Order` 的新对象，并用相应的值填充此对象。 然后，它将这个新对象添加到 `Order` 集合中。 最后，它将所做的更改提交到数据库中，使之成为 `Orders` 表中的一个新行。  

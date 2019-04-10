@@ -2,12 +2,12 @@
 title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 07a7f28e08ed43672e94151cd9de88301069e1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142384"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304462"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 Oracle .NET Framework 数据提供程序包括 <xref:System.Data.OracleClient.OracleBFile> 类，该类用于使用 Oracle <xref:System.Data.OracleClient.OracleType.BFile> 数据类型。  
@@ -26,9 +26,9 @@ Oracle .NET Framework 数据提供程序包括 <xref:System.Data.OracleClient.Or
   
  每个非 NULL **OracleBFile**对象是与定义的基础物理文件位置的两个实体相关联：  
   
-1.  一个 Oracle DIRECTORY 对象，它是文件系统中一个目录的数据库别名，以及  
+1. 一个 Oracle DIRECTORY 对象，它是文件系统中一个目录的数据库别名，以及  
   
-2.  基础物理文件的文件名，它位于与 DIRECTORY 对象关联的目录中。  
+2. 基础物理文件的文件名，它位于与 DIRECTORY 对象关联的目录中。  
   
 ## <a name="example"></a>示例  
  下面的 C# 示例演示如何创建**BFILE**在 Oracle 表中，然后检索它的形式**OracleBFile**对象。 该示例演示了如何使用<xref:System.Data.OracleClient.OracleDataReader>对象和**OracleBFile** **Seek**并**读取**方法。 请注意，若要使用此示例，您必须首先创建一个名为"c:\\\bfiles"和 Oracle 服务器上名为"MyFile.jpg"的文件。  

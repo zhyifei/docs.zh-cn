@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227686"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320465"
 ---
 # <a name="adorners-overview"></a>装饰器概述
 装饰器是一种特殊的<xref:System.Windows.FrameworkElement>，可用来向用户提供可视提示。 装饰器有很多用途，可用来向元素添加功能句柄，或者提供有关某个控件的状态信息。  
@@ -74,9 +74,9 @@ ms.locfileid: "59227686"
 ## <a name="adorning-a-single-uielement"></a>装饰单个 UIElement  
  若要将装饰器绑定到特定<xref:System.Windows.UIElement>，请执行以下步骤：  
   
-1.  调用静态方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>若要获取<xref:System.Windows.Documents.AdornerLayer>对象<xref:System.Windows.UIElement>为要装饰。 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 从指定的可视化树向上<xref:System.Windows.UIElement>，并返回它找到的第一个装饰器层。 （如果未发现装饰器层，该方法将返回 null。）  
+1. 调用静态方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>若要获取<xref:System.Windows.Documents.AdornerLayer>对象<xref:System.Windows.UIElement>为要装饰。 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 从指定的可视化树向上<xref:System.Windows.UIElement>，并返回它找到的第一个装饰器层。 （如果未发现装饰器层，该方法将返回 null。）  
   
-2.  调用<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法以将装饰器绑定到目标<xref:System.Windows.UIElement>。  
+2. 调用<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法以将装饰器绑定到目标<xref:System.Windows.UIElement>。  
   
  下面的示例将 SimpleCircleAdorner （如上所示） 到绑定<xref:System.Windows.Controls.TextBox>名为*myTextBox*。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "59227686"
 ## <a name="adorning-the-children-of-a-panel"></a>装饰面板的子级  
  若要将装饰器绑定到的子级<xref:System.Windows.Controls.Panel>，请执行以下步骤：  
   
-1.  调用`static`方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>其子级是为要装饰的元素查找装饰器层。  
+1. 调用`static`方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>其子级是为要装饰的元素查找装饰器层。  
   
-2.  枚举的子级的父元素并调用<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法将装饰器绑定到每个子元素。  
+2. 枚举的子级的父元素并调用<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法将装饰器绑定到每个子元素。  
   
  下面的示例将 SimpleCircleAdorner （如上所示） 的子级绑定<xref:System.Windows.Controls.StackPanel>名为*myStackPanel*。  
   

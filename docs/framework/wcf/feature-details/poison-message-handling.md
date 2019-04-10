@@ -2,12 +2,12 @@
 title: 病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146518"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305021"
 ---
 # <a name="poison-message-handling"></a>病毒消息处理
 一个*有害消息*是一条消息，已超出向应用程序的交付尝试最大数目。 当基于队列的应用程序由于错误而无法处理消息时，可能会引起这种情况。 为符合可靠性要求，排队的应用程序是在事务中接收消息的。 中止已接收某个排队消息的事务时，该消息仍会保留在队列中，这样当开始一个新事务时，将对该消息重试操作。 如果导致事务中止的问题未得到更正，则直到超出最大传递尝试次数并导致产生病毒消息时，接收应用程序才会中断接收和中止同一消息的循环。  
@@ -66,17 +66,17 @@ ms.locfileid: "59146518"
   
  应用程序可能要求对病毒消息能进行某种自动处理，也就是将病毒消息移动至病毒消息队列，以便服务可以访问队列中的其他消息。 唯一需要使用错误处理程序机制来侦听病毒消息异常情况的情形是 <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> 设置被设置为 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 时。 Message Queuing 3.0 的病毒消息示例阐释了这一行为。 下面说明了处理病毒消息应执行的步骤，包括最佳方案：  
   
-1.  确保您的病毒消息设置可以反映您的应用程序需求。 在进行设置时，确保您对 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 之间消息队列功能的差异有所了解。  
+1. 确保您的病毒消息设置可以反映您的应用程序需求。 在进行设置时，确保您对 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 之间消息队列功能的差异有所了解。  
   
-2.  如果需要，请实现 `IErrorHandler` 以处理病毒消息错误。 由于将 `ReceiveErrorHandling` 设置为 `Fault` 需要一个手动机制以便将病毒消息移出队列或更正外部相关问题，因此当 `IErrorHandler` 设置为 `ReceiveErrorHandling` 时，该机制的典型用法就是实现 `Fault`，如下面的代码中所示。  
+2. 如果需要，请实现 `IErrorHandler` 以处理病毒消息错误。 由于将 `ReceiveErrorHandling` 设置为 `Fault` 需要一个手动机制以便将病毒消息移出队列或更正外部相关问题，因此当 `IErrorHandler` 设置为 `ReceiveErrorHandling` 时，该机制的典型用法就是实现 `Fault`，如下面的代码中所示。  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
-3.  创建服务行为可以使用的 `PoisonBehaviorAttribute`。 该行为会在调度程序上安装 `IErrorHandler`。 请参见下面的代码示例。  
+3. 创建服务行为可以使用的 `PoisonBehaviorAttribute`。 该行为会在调度程序上安装 `IErrorHandler`。 请参见下面的代码示例。  
   
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
-4.  确保你的服务已使用病毒行为属性批注过。  
+4. 确保你的服务已使用病毒行为属性批注过。  
 
  另外，如果 `ReceiveErrorHandling` 设置为 `Fault`，则 `ServiceHost` 会在遇到病毒消息时出现错误。 您可以挂钩出错的事件，并关闭服务，采取更正措施，然后重新启动。 例如，可以记下传播到 `LookupId` 的 <xref:System.ServiceModel.MsmqPoisonMessageException> 中的 `IErrorHandler`，当服务主机出错时，您可以使用 `System.Messaging` API 从队列接收消息，同时使用 `LookupId` 从队列中移除该消息，并将该消息存储在外部存储区或其他队列中。 然后，您可以重新启动 `ServiceHost` 以继续正常处理。 [MSMQ 4.0 中的病毒消息处理](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)演示此行为。  
   

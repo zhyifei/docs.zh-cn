@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194521"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314875"
 ---
 # <a name="accessing-services-using-a-client"></a>使用客户端访问服务
 客户端应用程序必须创建、 配置和使用 WCF 客户端或通道对象与服务进行通信。 [WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)主题提供了对象和步骤中创建基本的客户端和通道对象并使用它们所涉及的概述。  
@@ -83,11 +83,11 @@ ms.locfileid: "59194521"
   
  如果使用显式方法，应用程序必须按顺序执行下面的操作：  
   
-1.  调用 <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType>（或异步版本）。  
+1. 调用 <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType>（或异步版本）。  
   
-2.  当初始值设定项已返回时，针对 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 对象或从 <xref:System.ServiceModel.IClientChannel> 属性返回的 <xref:System.ServiceModel.IClientChannel> 对象来调用 <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> 方法。  
+2. 当初始值设定项已返回时，针对 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 对象或从 <xref:System.ServiceModel.IClientChannel> 属性返回的 <xref:System.ServiceModel.IClientChannel> 对象来调用 <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> 方法。  
   
-3.  调用操作。  
+3. 调用操作。  
   
  建议通过采用显式方法，由可投入实际生产运行的应用程序来控制用户界面过程。  
   

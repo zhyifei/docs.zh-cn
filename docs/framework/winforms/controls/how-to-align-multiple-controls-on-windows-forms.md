@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: d07da72e238ef21237ca60e4d9b47240507948e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209536"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307738"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>如何：在 Windows 窗体上对齐多个控件
 若要标准化用户界面 (UI) 的基于 Windows 的应用程序的布局，可以定位通过单个命令的控件组。  
@@ -22,11 +22,11 @@ ms.locfileid: "59209536"
   
 ### <a name="to-align-multiple-controls-on-a-form"></a>若要将多个控件在窗体上对齐  
   
-1.  打开包含你想要在中定位的控件的窗体**Windows 窗体设计器**。  
+1. 打开包含你想要在中定位的控件的窗体**Windows 窗体设计器**。  
   
-2.  选择你想要对齐，以便您选择的第一个控件是其他应对齐到的主控件的控件。  
+2. 选择你想要对齐，以便您选择的第一个控件是其他应对齐到的主控件的控件。  
   
-3.  上**格式**菜单，依次指向**对齐**，然后单击其中一个可用的七个选项。  
+3. 上**格式**菜单，依次指向**对齐**，然后单击其中一个可用的七个选项。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -2,19 +2,19 @@
 title: 如何：配置 WCF 服务以与 WSE 3.0 客户端进行互操作
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 24c44f415eff8518bcd73696c5cd9302371ad0c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177289"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303890"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>如何：配置 WCF 服务以与 WSE 3.0 客户端进行互操作
 Windows Communication Foundation (WCF) 服务是 Microsoft.NET (WSE) 客户端与 Web Services Enhancements 3.0 网络级别兼容的 WCF 服务配置为使用 2004 年 8 月版的 Ws-addressing 规范时。  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>使 WCF 服务与 WSE 3.0 客户端进行互操作  
   
-1.  定义自定义绑定的 WCF 服务。  
+1. 定义自定义绑定的 WCF 服务。  
   
      若要指定将 WS-Addressing 规范的 2004 年 8 月版用于消息编码，必须创建自定义绑定。  
   
@@ -44,7 +44,7 @@ Windows Communication Foundation (WCF) 服务是 Microsoft.NET (WSE) 客户端�
         > [!NOTE]
         >  在使用 SOAP 1.2 时，请将 `messageVersion` 属性设置为 <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>。  
   
-2.  指定该服务使用自定义绑定。  
+2. 指定该服务使用自定义绑定。  
   
     1.  设置`binding`的属性[\<终结点 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)元素`customBinding`。  
   

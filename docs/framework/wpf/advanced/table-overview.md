@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: eb16f633f78e9d345d20c93847e2c22173267960
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161429"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317657"
 ---
 # <a name="table-overview"></a>表概述
 <xref:System.Windows.Documents.Table> 为支持流文档内容的基于网格的表示形式的块级别元素。 此元素极具灵活性，因此很有用，但也因此显得更加复杂，从而不容易理解和正确使用。  
@@ -108,15 +108,15 @@ ms.locfileid: "59161429"
 ### <a name="background-rendering-precedence"></a>背景呈现优先级  
  表元素以下列顺序呈现（按 Z 顺序从最低到最高排列）。 此顺序不能更改。 例如，对于这些元素，没有可用于替换此已有顺序的“Z 顺序”属性。  
   
-1.  <xref:System.Windows.Documents.Table>  
+1. <xref:System.Windows.Documents.Table>  
   
-2.  <xref:System.Windows.Documents.TableColumn>  
+2. <xref:System.Windows.Documents.TableColumn>  
   
-3.  <xref:System.Windows.Documents.TableRowGroup>  
+3. <xref:System.Windows.Documents.TableRowGroup>  
   
-4.  <xref:System.Windows.Documents.TableRow>  
+4. <xref:System.Windows.Documents.TableRow>  
   
-5.  <xref:System.Windows.Documents.TableCell>  
+5. <xref:System.Windows.Documents.TableCell>  
   
  请参考以下示例，该示例对表内每个元素的背景色进行定义。  
   

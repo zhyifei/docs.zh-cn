@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: f42bfe9b407e8f81c0eaf5a654d246f7b83567c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e87017f3698bc88a123d8a0ba0df5dbe2b7bbfd9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208548"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314862"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>如何：使用设计器更改 Windows 窗体 DataGridView 列的类型
 有时会想要更改的列的已添加到 Windows 窗体类型<xref:System.Windows.Forms.DataGridView>控件。 例如，你可能想要修改某些时将控件绑定到数据源自动生成的列的类型。 所显示的表具有包含相关表中的行的外键的列时，这很有用。 在这种情况下，你可能想要替换文本中显示的列的组合框中显示列的相关表中更有意义的值与这些外键。  
@@ -24,11 +24,11 @@ ms.locfileid: "59208548"
   
 ### <a name="to-change-the-type-of-a-column-using-the-designer"></a>若要更改使用设计器的列的类型  
   
-1.  单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 上的右上角<xref:System.Windows.Forms.DataGridView>控件，然后选择**编辑列**。  
+1. 单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 上的右上角<xref:System.Windows.Forms.DataGridView>控件，然后选择**编辑列**。  
   
-2.  选择一列从**选定列**列表。  
+2. 选择一列从**选定列**列表。  
   
-3.  在中**列属性**网格中，设置`ColumnType`属性设置为新的列类型。  
+3. 在中**列属性**网格中，设置`ColumnType`属性设置为新的列类型。  
   
     > [!NOTE]
     >  `ColumnType`属性是一个仅限设计时间属性，指示表示列类型的类。 它不是实际的属性列类中定义。  

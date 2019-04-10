@@ -3,12 +3,12 @@ title: 生成我的第一个声明感知 ASP.NET Web 应用程序
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: b6be3d84a292e5f14e1cdc70a181e8fd2c065a68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5a24a2117a031bfe49d0c27dbcefae6db00e6045
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151367"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314547"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>生成我的第一个声明感知 ASP.NET Web 应用程序
 ## <a name="applies-to"></a>适用于  
@@ -21,13 +21,13 @@ ms.locfileid: "59151367"
   
  ![WIF 基本 Web 应用程序组件的图示。](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
-1.  声明感知应用程序使用 WIF 来标识未经身份验证的请求并将这些请求重定向到 STS。  
+1. 声明感知应用程序使用 WIF 来标识未经身份验证的请求并将这些请求重定向到 STS。  
   
-2.  最终用户向 STS 提供凭据，在成功完成身份验证后，STS 将向用户颁发令牌。  
+2. 最终用户向 STS 提供凭据，在成功完成身份验证后，STS 将向用户颁发令牌。  
   
-3.  使用请求中的 STS 颁发的令牌将用户从 STS 重定向到声明感知应用程序。  
+3. 使用请求中的 STS 颁发的令牌将用户从 STS 重定向到声明感知应用程序。  
   
-4.  声明感知应用程序将配置为信任此 STS 及其颁发的令牌。 声明感知应用程序使用 WIF 验证此令牌并对其进行分析。 开发人员使用适当的 WIF API 和类型（例如 ClaimsPrincpal）来满足应用程序的需要，如对其实现授权。  
+4. 声明感知应用程序将配置为信任此 STS 及其颁发的令牌。 声明感知应用程序使用 WIF 验证此令牌并对其进行分析。 开发人员使用适当的 WIF API 和类型（例如 ClaimsPrincpal）来满足应用程序的需要，如对其实现授权。  
   
  从 .NET 4.5 开始，WIF 便已成为 .NET Framework 包的一部分。 通过使 WIF 类直接在框架中可用，可以在 .NET 中更深度地集成基于声明的标识，从而更轻松地使用声明。 如果使用 WIF 4.5，则无需安装任何带外组件即可开始开发声明感知 Web 应用程序。 WIF 类现在分布在各种程序集中，主要为 System.Security.Claims、System.IdentityModel 和 System.IdentityModel.Services。  
   

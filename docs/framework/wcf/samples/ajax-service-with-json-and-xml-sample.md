@@ -2,12 +2,12 @@
 title: 具有 JSON 和 XML 的 AJAX 服务示例
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: e5f2838575b212f6b95fd01b469d771017ef534c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a93e7bdf8cda88a1e86b59e5c3d37f049bdfcf28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207471"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304787"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>具有 JSON 和 XML 的 AJAX 服务示例
 此示例演示如何使用 Windows Communication Foundation (WCF) 创建异步 JavaScript 和 XML (AJAX) 服务返回 JavaScript 对象表示法 (JSON) 或 XML 数据。 可以从 Web 浏览器客户端使用 JavaScript 代码来访问 AJAX 服务。 此示例是基于[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例。  
@@ -105,11 +105,11 @@ xmlHttp.onreadystatechange=function(){
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  如中所述生成解决方案 XmlAjaxService.sln[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 如中所述生成解决方案 XmlAjaxService.sln[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  导航到`http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm`（不要打开 XmlAjaxClientPage.htm 在浏览器中从项目目录中）。  
+3. 导航到`http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm`（不要打开 XmlAjaxClientPage.htm 在浏览器中从项目目录中）。  
   
 ## <a name="see-also"></a>请参阅
 

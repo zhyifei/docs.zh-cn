@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148949"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297702"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和异步操作
 本主题讨论实现和调用异步服务操作。  
@@ -49,11 +49,11 @@ ms.locfileid: "59148949"
 ### <a name="implementing-an-asynchronous-service-operation"></a>实现异步服务操作  
  可以通过使用下列三种方法之一实现异步操作：  
   
-1.  基于任务的异步模式  
+1. 基于任务的异步模式  
   
-2.  基于事件的异步模式  
+2. 基于事件的异步模式  
   
-3.  IAsyncResult 异步模式  
+3. IAsyncResult 异步模式  
   
 #### <a name="task-based-asynchronous-pattern"></a>基于任务的异步模式  
  基于任务的异步模式是实现异步操作的首选方法，因为它最简单且最直接。 若要使用此方法，只需实现服务操作并指定 Task\<T> 的返回类型，其中，T 是逻辑运算返回的类型。 例如：  

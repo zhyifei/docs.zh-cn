@@ -13,12 +13,12 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 18a78b7ecb5268463607508869e77fa163cbd06f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 52c18b959361079aac6b95dc5d4584bf464a306a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146440"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304514"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>如何：使用 Windows 窗体 NotifyIcon 组件向任务栏添加应用程序图标
 Windows 窗体<xref:System.Windows.Forms.NotifyIcon>组件在任务栏的状态通知区域显示一个图标。 若要在状态区域中显示多个图标，必须有多个<xref:System.Windows.Forms.NotifyIcon>窗体上的组件。 若要设置控件显示的图标，使用<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 此外可以编写代码<xref:System.Windows.Forms.NotifyIcon.DoubleClick>事件处理程序，以便当用户双击该图标出现该问题。 例如，您能够为用户配置后台进程的图标表示显示一个对话框。  
@@ -28,11 +28,11 @@ Windows 窗体<xref:System.Windows.Forms.NotifyIcon>组件在任务栏的状态�
   
 ### <a name="to-set-the-icon"></a>若要设置图标  
   
-1.  将一个值赋给<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 值必须属于类型`System.Drawing.Icon`和可以从.ico 文件加载。 在代码中，或单击省略号按钮，可以指定图标文件 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.NotifyIcon.Icon%2A>中的属性**属性**窗口中，，然后选择中的文件**打开**出现的对话框。  
+1. 将一个值赋给<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 值必须属于类型`System.Drawing.Icon`和可以从.ico 文件加载。 在代码中，或单击省略号按钮，可以指定图标文件 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.NotifyIcon.Icon%2A>中的属性**属性**窗口中，，然后选择中的文件**打开**出现的对话框。  
   
-2.  将 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 属性设置为 `true`。  
+2. 将 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 属性设置为 `true`。  
   
-3.  设置<xref:System.Windows.Forms.NotifyIcon.Text%2A>属性设置为一个合适的工具提示字符串。  
+3. 设置<xref:System.Windows.Forms.NotifyIcon.Text%2A>属性设置为一个合适的工具提示字符串。  
   
      在下面的代码示例中，将路径设置图标的位置是**我的文档**文件夹。 使用此位置是因为您可以假定大多数运行 Windows 操作系统的计算机将包含该文件夹。 选择此位置，用户还可以具有最少的系统访问级别来安全地运行应用程序。 下面的示例要求具有的窗体<xref:System.Windows.Forms.NotifyIcon>已添加的控件。 它还需要一个名为的图标文件`Icon.ico`。  
   

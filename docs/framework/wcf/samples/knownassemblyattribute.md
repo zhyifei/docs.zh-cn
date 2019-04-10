@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 7b5484ee7b8d98ce3ac449fb9d23029f27c8932a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d6ed22790f5abc01b44accc05e09e75d105df429
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196861"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325769"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 此示例演示如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 类来自定义序列化和反序列化过程。 此示例演示如何在序列化和反序列化过程中动态添加已知类型。  
@@ -346,21 +346,21 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>设置、运行和生成示例  
   
-1.  右键单击该解决方案**KnownAssemblyAttribute** ，然后选择**属性**。  
+1. 右键单击该解决方案**KnownAssemblyAttribute** ，然后选择**属性**。  
   
-2.  在中**常见属性**，选择**启动项目**，然后单击**多个启动项目**。  
+2. 在中**常见属性**，选择**启动项目**，然后单击**多个启动项目**。  
   
-3.  添加**启动**操作**服务**并**客户端**项目。  
+3. 添加**启动**操作**服务**并**客户端**项目。  
   
-4.  单击**确定**，然后按**F5**运行示例。  
+4. 单击**确定**，然后按**F5**运行示例。  
   
-5.  如果应用程序未正确运行，请按照以下步骤确保已正确设置了您的环境：  
+5. 如果应用程序未正确运行，请按照以下步骤确保已正确设置了您的环境：  
   
-6.  请确保您具有执行[一次性安装过程 Windows Communication Foundation 示例的](https://go.microsoft.com/fwlink/?LinkId=150774)。  
+6. 请确保您具有执行[一次性安装过程 Windows Communication Foundation 示例的](https://go.microsoft.com/fwlink/?LinkId=150774)。  
   
-7.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](https://go.microsoft.com/fwlink/?LinkId=150775)。  
+7. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](https://go.microsoft.com/fwlink/?LinkId=150775)。  
   
-8.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](https://go.microsoft.com/fwlink/?LinkId=150776)。  
+8. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](https://go.microsoft.com/fwlink/?LinkId=150776)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

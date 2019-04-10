@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 949b63f435289d486f445bad01d0bc6cc33e6f08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197186"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306048"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>如何：将 Windows 窗体 ComboBox 控件或 ListBox 控件绑定到数据
 可以将绑定<xref:System.Windows.Forms.ComboBox>和<xref:System.Windows.Forms.ListBox>到数据以执行任务，例如浏览数据库中的数据，输入新数据，或编辑现有数据。  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>若要将 ComboBox 或 ListBox 控件绑定  
   
-1.  设置`DataSource`到数据源对象的属性。 可能的数据源包括<xref:System.Windows.Forms.BindingSource>绑定到数据、 数据表、 数据视图、 数据集，数据视图，管理器、 一个数组或实现任何类<xref:System.Collections.IList>接口。 有关详细信息，请参阅[支持的 Windows 窗体数据源](../data-sources-supported-by-windows-forms.md)。  
+1. 设置`DataSource`到数据源对象的属性。 可能的数据源包括<xref:System.Windows.Forms.BindingSource>绑定到数据、 数据表、 数据视图、 数据集，数据视图，管理器、 一个数组或实现任何类<xref:System.Collections.IList>接口。 有关详细信息，请参阅[支持的 Windows 窗体数据源](../data-sources-supported-by-windows-forms.md)。  
   
-2.  如果要绑定到一个表，设置`DisplayMember`属性设置为数据源中的列的名称。  
+2. 如果要绑定到一个表，设置`DisplayMember`属性设置为数据源中的列的名称。  
   
      \- 或 -  
   

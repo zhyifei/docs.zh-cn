@@ -2,12 +2,12 @@
 title: 变量和自变量跟踪
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: ef2d6111d5c123ac6c684df09f03398340a5522c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7062e44a18cfd4b07cc63f4b490c08fbbfeeb8a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231024"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300887"
 ---
 # <a name="variable-and-argument-tracking"></a>变量和自变量跟踪
 当跟踪工作流的执行时，提取数据往往很有用。 这在访问跟踪记录后续执行时可提供其他上下文。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，你可以使用跟踪在工作流的任意活动范围内提取所有可见变量或自变量。 跟踪配置文件简化了对数据的提取。  
@@ -40,11 +40,11 @@ ms.locfileid: "59231024"
 ## <a name="protecting-information-stored-within-variables-and-arguments"></a>保护存储在变量和参数中的信息  
  默认情况下，跟踪变量或自变量对 WF 运行时可见。 工作流开发人员可以采取以下步骤，阻止访问这些变量或参数：  
   
-1.  对变量的值进行加密。  
+1. 对变量的值进行加密。  
   
-2.  控制跟踪配置文件的创作，以阻止提取变量或参数。  
+2. 控制跟踪配置文件的创作，以阻止提取变量或参数。  
   
-3.  对于自定义跟踪参与者，请确保 WF 代码不会泄露存储在变量或参数中的敏感信息。  
+3. 对于自定义跟踪参与者，请确保 WF 代码不会泄露存储在变量或参数中的敏感信息。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: 990fc996cfb5ecf4d9fde255ad026e3f46a24718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: beb8881dbd2aedaefe66510c2942ce6c082b9729
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185778"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329968"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a>如何：使控件与窗体边缘对齐
 通过设置 <xref:System.Windows.Forms.Control.Dock%2A> 属性，可以使控件与窗体的边缘对齐。 此属性指定控件在窗体中的驻留位置。 可以将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为下列值：  
@@ -33,7 +33,7 @@ ms.locfileid: "59185778"
   
 ### <a name="to-set-the-dock-property-for-your-control-at-run-time"></a>在运行时设置控件的 Dock 属性  
   
-1.  在代码中将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为适当的值。  
+1. 在代码中将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为适当的值。  
   
     ```vb  
     ' To set the Dock property internally.  

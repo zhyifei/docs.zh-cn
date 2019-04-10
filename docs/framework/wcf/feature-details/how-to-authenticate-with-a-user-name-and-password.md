@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 11a146e387171d6af95a7710fe96d6f35f6c611f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174130"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321026"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>如何：使用用户名和密码进行身份验证
 
@@ -21,7 +21,7 @@ ms.locfileid: "59174130"
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>若要配置使用 Windows 域用户名和密码进行身份验证的 WCF 服务
   
-1.  创建 <xref:System.ServiceModel.WSHttpBinding> 的实例，将绑定的安全模式设置为 <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>，将绑定的 `ClientCredentialType` 设置为 <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>，并使用配置的绑定将服务终结点添加到服务主机，如下面的代码中所示：  
+1. 创建 <xref:System.ServiceModel.WSHttpBinding> 的实例，将绑定的安全模式设置为 <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>，将绑定的 `ClientCredentialType` 设置为 <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>，并使用配置的绑定将服务终结点添加到服务主机，如下面的代码中所示：  
   
     ```  
     // ...  
@@ -32,7 +32,7 @@ ms.locfileid: "59174130"
     // ...  
     ```  
   
-2.  指定用于对通过网络发送的用户名和密码信息进行加密的服务器证书。 此代码应紧跟在上面的代码之后。 下面的示例使用的 setup.bat 文件创建的证书[用户名消息安全](../../../../docs/framework/wcf/samples/message-security-user-name.md)示例：  
+2. 指定用于对通过网络发送的用户名和密码信息进行加密的服务器证书。 此代码应紧跟在上面的代码之后。 下面的示例使用的 setup.bat 文件创建的证书[用户名消息安全](../../../../docs/framework/wcf/samples/message-security-user-name.md)示例：  
   
     ```  
     // ...  
@@ -44,7 +44,7 @@ ms.locfileid: "59174130"
   
 ## <a name="to-call-the-service-passing-username-and-password"></a>调用服务传递用户名和密码  
   
-1.  客户端应用程序必须提示用户输入其用户名和密码。 下面的代码要求用户输入用户名和密码。  
+1. 客户端应用程序必须提示用户输入其用户名和密码。 下面的代码要求用户输入用户名和密码。  
   
     > [!WARNING]
     >  此代码不应在生产中使用，因为密码在输入时将显示出来。  
@@ -61,7 +61,7 @@ ms.locfileid: "59174130"
             }  
     ```  
   
-2.  创建客户端代理的一个实例，用于指定客户端的证书，如下面的代码所示：  
+2. 创建客户端代理的一个实例，用于指定客户端的证书，如下面的代码所示：  
   
     ```  
     string username;  

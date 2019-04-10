@@ -15,12 +15,12 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: c07afa1e408c2950ea45f206f43125fc9329ad14
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167864"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302460"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 **Windows 窗体设计器**为你提供许多布局工具实现此目的。 三个最重要的是<xref:System.Windows.Forms.Control.Margin%2A>， <xref:System.Windows.Forms.Control.Padding%2A>，和<xref:System.Windows.Forms.Control.AutoSize%2A>是存在于所有 Windows 窗体控件上的属性。  
@@ -60,53 +60,53 @@ ms.locfileid: "59167864"
   
 #### <a name="to-create-the-project"></a>要创建项目  
   
-1.  创建**Windows 应用程序**名为项目`LayoutExample`。 有关详细信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)。  
+1. 创建**Windows 应用程序**名为项目`LayoutExample`。 有关详细信息，请参阅[如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)。  
   
-2.  选择中的窗体**Windows 窗体设计器**。  
+2. 选择中的窗体**Windows 窗体设计器**。  
   
 ## <a name="setting-margins-for-your-controls"></a>边距设置为您的控件  
  可以使用在控件之间设置的默认距离<xref:System.Windows.Forms.Control.Margin%2A>属性。 时将控件移到另一个控件得足够近，你将看到显示了两个控件的边距的对齐线。 要移动的控件还将对齐到定义的边距的距离。  
   
 #### <a name="to-arrange-controls-on-your-form-using-the-margin-property"></a>若要在你使用的 Margin 属性的窗体上排列控件  
   
-1.  将两个<xref:System.Windows.Forms.Button>控件从**工具箱**拖动到窗体。  
+1. 将两个<xref:System.Windows.Forms.Button>控件从**工具箱**拖动到窗体。  
   
-2.  选择其中一个<xref:System.Windows.Forms.Button>控制并将其移近另一个，直到它们几乎触摸。  
+2. 选择其中一个<xref:System.Windows.Forms.Button>控制并将其移近另一个，直到它们几乎触摸。  
   
      观察它们之间出现对齐线。 此距离是两个控件的总和<xref:System.Windows.Forms.Control.Margin%2A>值。 控件要移动此距离处对齐。 有关详细信息，请参阅[演练：在 Windows 上排列控件窗体使用对齐线](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
   
-3.  更改<xref:System.Windows.Forms.Control.Margin%2A>之一的展开的控件的属性<xref:System.Windows.Forms.Control.Margin%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设置为 20。  
+3. 更改<xref:System.Windows.Forms.Control.Margin%2A>之一的展开的控件的属性<xref:System.Windows.Forms.Control.Margin%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设置为 20。  
   
-4.  选择其中一个<xref:System.Windows.Forms.Button>控制并将其移近另。  
+4. 选择其中一个<xref:System.Windows.Forms.Button>控制并将其移近另。  
   
      对齐线定义的边距值之和的长度，并该控件从其他控件对齐更远的距离。  
   
-5.  更改<xref:System.Windows.Forms.Control.Margin%2A>展开所选控件的属性<xref:System.Windows.Forms.Control.Margin%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.Top%2A>属性设置为 5。  
+5. 更改<xref:System.Windows.Forms.Control.Margin%2A>展开所选控件的属性<xref:System.Windows.Forms.Control.Margin%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.Top%2A>属性设置为 5。  
   
-6.  移动其他控件的下方所选的控件，并观察对齐线是较短。 左侧的另一个控件移动所选的控件，并观察对齐线将保留在步骤 4 中观察到的值。  
+6. 移动其他控件的下方所选的控件，并观察对齐线是较短。 左侧的另一个控件移动所选的控件，并观察对齐线将保留在步骤 4 中观察到的值。  
   
-7.  您可以将每个的方面<xref:System.Windows.Forms.Control.Margin%2A>属性， <xref:System.Windows.Forms.Padding.Left%2A>， <xref:System.Windows.Forms.Padding.Top%2A>， <xref:System.Windows.Forms.Padding.Right%2A>， <xref:System.Windows.Forms.Padding.Bottom%2A>、 到不同的值，也可以将其设置为相同的值与所有<xref:System.Windows.Forms.Padding.All%2A>属性。  
+7. 您可以将每个的方面<xref:System.Windows.Forms.Control.Margin%2A>属性， <xref:System.Windows.Forms.Padding.Left%2A>， <xref:System.Windows.Forms.Padding.Top%2A>， <xref:System.Windows.Forms.Padding.Right%2A>， <xref:System.Windows.Forms.Padding.Bottom%2A>、 到不同的值，也可以将其设置为相同的值与所有<xref:System.Windows.Forms.Padding.All%2A>属性。  
   
 ## <a name="setting-padding-for-your-controls"></a>设置控件的填充  
  若要实现应用程序所需的精确布局，您的控件通常将包含子控件。 当你想要指定子控件的边框的邻近到父控件的边框时，使用父控件的<xref:System.Windows.Forms.Control.Padding%2A>属性结合使用的子控件的<xref:System.Windows.Forms.Control.Margin%2A>属性。 <xref:System.Windows.Forms.Control.Padding%2A>属性还用来控制控件的内容的临近程度 (例如，<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Text%2A>属性) 为其边界。  
   
 #### <a name="to-arrange-controls-on-your-form-using-padding"></a>若要在使用填充窗体上排列控件  
   
-1.  从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖到你的窗体上。  
+1. 从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖到你的窗体上。  
   
-2.  将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性值更改为 `true`。  
+2. 将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性值更改为 `true`。  
   
-3.  更改<xref:System.Windows.Forms.Control.Padding%2A>展开属性<xref:System.Windows.Forms.Control.Padding%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设置为 5。  
+3. 更改<xref:System.Windows.Forms.Control.Padding%2A>展开属性<xref:System.Windows.Forms.Control.Padding%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设置为 5。  
   
      控件扩展以提供新的填充的空间。  
   
-4.  从 <xref:System.Windows.Forms.GroupBox> “工具箱” **将** 控件拖到你的窗体上。 拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到<xref:System.Windows.Forms.GroupBox>控件。 位置<xref:System.Windows.Forms.Button>控件使其与的右下角对齐<xref:System.Windows.Forms.GroupBox>控件。  
+4. 从 <xref:System.Windows.Forms.GroupBox> “工具箱” **将** 控件拖到你的窗体上。 拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到<xref:System.Windows.Forms.GroupBox>控件。 位置<xref:System.Windows.Forms.Button>控件使其与的右下角对齐<xref:System.Windows.Forms.GroupBox>控件。  
   
      观察显示为线对齐<xref:System.Windows.Forms.Button>控件接近下边框和右边框的<xref:System.Windows.Forms.GroupBox>控件。 这些对齐线对应于<xref:System.Windows.Forms.Control.Margin%2A>属性的<xref:System.Windows.Forms.Button>。  
   
-5.  更改<xref:System.Windows.Forms.GroupBox>控件的<xref:System.Windows.Forms.Control.Padding%2A>展开属性<xref:System.Windows.Forms.Control.Padding%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设置为 20。  
+5. 更改<xref:System.Windows.Forms.GroupBox>控件的<xref:System.Windows.Forms.Control.Padding%2A>展开属性<xref:System.Windows.Forms.Control.Padding%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设置为 20。  
   
-6.  选择<xref:System.Windows.Forms.Button>内控制<xref:System.Windows.Forms.GroupBox>控件并将它移向的中心<xref:System.Windows.Forms.GroupBox>。  
+6. 选择<xref:System.Windows.Forms.Button>内控制<xref:System.Windows.Forms.GroupBox>控件并将它移向的中心<xref:System.Windows.Forms.GroupBox>。  
   
      对齐线显示在更大的距离与的边框<xref:System.Windows.Forms.GroupBox>控件。 此距离是总和<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Margin%2A>属性和<xref:System.Windows.Forms.GroupBox>控件的<xref:System.Windows.Forms.Control.Padding%2A>属性。  
   
@@ -117,29 +117,29 @@ ms.locfileid: "59167864"
   
 #### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a>若要在使用 AutoSize 属性在窗体上排列控件  
   
-1.  从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖到你的窗体上。  
+1. 从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖到你的窗体上。  
   
-2.  将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性值更改为 `true`。  
+2. 将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性值更改为 `true`。  
   
-3.  更改<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Text%2A>属性设置为"**其 Text 属性的长字符串，该按钮才**。"  
+3. 更改<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Text%2A>属性设置为"**其 Text 属性的长字符串，该按钮才**。"  
   
      当您提交更改时<xref:System.Windows.Forms.Button>控件自行调整大小以适应新的文本。  
   
-4.  将另一个<xref:System.Windows.Forms.Button>控件从**工具箱**拖动到窗体。  
+4. 将另一个<xref:System.Windows.Forms.Button>控件从**工具箱**拖动到窗体。  
   
-5.  更改<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Text%2A>属性设置为"**其 Text 属性的长字符串，该按钮才。**"  
+5. 更改<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Text%2A>属性设置为"**其 Text 属性的长字符串，该按钮才。**"  
   
      当您提交更改时<xref:System.Windows.Forms.Button>控件不会调整自身大小，并由该控件的右边缘剪裁文本。  
   
-6.  更改<xref:System.Windows.Forms.Control.Padding%2A>展开属性<xref:System.Windows.Forms.Control.Padding%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设置为 5。  
+6. 更改<xref:System.Windows.Forms.Control.Padding%2A>展开属性<xref:System.Windows.Forms.Control.Padding%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设置为 5。  
   
      在控件的内部文本被截断所有四个边。  
   
-7.  更改<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.AutoSize%2A>属性设置为`true`。  
+7. 更改<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.AutoSize%2A>属性设置为`true`。  
   
      <xref:System.Windows.Forms.Button>控件自行调整大小以容纳整个字符串。 此外，将填充添加鼠标按钮，从而导致<xref:System.Windows.Forms.Button>要展开所有四个方向中的控件。  
   
-8.  从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖到你的窗体上。 将其定位在窗体右下角附近。  
+8. 从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖到你的窗体上。 将其定位在窗体右下角附近。  
   
 9. 将 <xref:System.Windows.Forms.Button> 控件的 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性值更改为 `true`。  
   
@@ -154,24 +154,24 @@ ms.locfileid: "59167864"
   
 #### <a name="to-use-the-autosizemode-property"></a>若要使用 AutoSizeMode 属性  
   
-1.  从 <xref:System.Windows.Forms.Panel> “工具箱” **将** 控件拖到你的窗体上。  
+1. 从 <xref:System.Windows.Forms.Panel> “工具箱” **将** 控件拖到你的窗体上。  
   
-2.  设置的值<xref:System.Windows.Forms.Panel>控件的<xref:System.Windows.Forms.Control.AutoSize%2A>属性设置为`true`。  
+2. 设置的值<xref:System.Windows.Forms.Panel>控件的<xref:System.Windows.Forms.Control.AutoSize%2A>属性设置为`true`。  
   
-3.  拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到<xref:System.Windows.Forms.Panel>控件。  
+3. 拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到<xref:System.Windows.Forms.Panel>控件。  
   
-4.  位置<xref:System.Windows.Forms.Button>控件的右下角附近<xref:System.Windows.Forms.Panel>控件。  
+4. 位置<xref:System.Windows.Forms.Button>控件的右下角附近<xref:System.Windows.Forms.Panel>控件。  
   
-5.  选择<xref:System.Windows.Forms.Panel>控件并抓住右下角调整大小控点。 重设大小<xref:System.Windows.Forms.Panel>控件，使其更大和变小。  
+5. 选择<xref:System.Windows.Forms.Panel>控件并抓住右下角调整大小控点。 重设大小<xref:System.Windows.Forms.Panel>控件，使其更大和变小。  
   
     > [!NOTE]
     >  你可以自由地调整大小<xref:System.Windows.Forms.Panel>控件，但您不能将其大小小于的位置<xref:System.Windows.Forms.Button>控件的右下角。 默认值指定了此行为`AutoSizeMode`属性，它是<xref:System.Windows.Forms.AutoSizeMode.GrowOnly>。  
   
-6.  设置的值<xref:System.Windows.Forms.Panel>控件的`AutoSizeMode`属性设置为<xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>。  
+6. 设置的值<xref:System.Windows.Forms.Panel>控件的`AutoSizeMode`属性设置为<xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>。  
   
      <xref:System.Windows.Forms.Panel>控件自行调整大小以环绕<xref:System.Windows.Forms.Button>控件。 不能调整大小<xref:System.Windows.Forms.Panel>控件。  
   
-7.  拖动<xref:System.Windows.Forms.Button>控件的左上角向<xref:System.Windows.Forms.Panel>控件。  
+7. 拖动<xref:System.Windows.Forms.Button>控件的左上角向<xref:System.Windows.Forms.Panel>控件。  
   
      <xref:System.Windows.Forms.Panel>控件的大小调整为<xref:System.Windows.Forms.Button>控件的新位置。  
   

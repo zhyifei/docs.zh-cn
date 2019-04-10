@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 80340bcf25ec3299629af34f7fafe53877ad571c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213293"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331671"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>如何：从数据库中删除行
 可以通过删除相应删除数据库中的行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对象从其与表相关的集合。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会将更改为相应的 SQL 转换`DELETE`命令。  
@@ -32,11 +32,11 @@ ms.locfileid: "59213293"
   
 ### <a name="to-delete-a-row-in-the-database"></a>删除数据库中的行  
   
-1.  查询数据库中要删除的行。  
+1. 查询数据库中要删除的行。  
   
-2.  调用 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 方法。  
+2. 调用 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 方法。  
   
-3.  将更改提交到数据库。  
+3. 将更改提交到数据库。  
   
 ## <a name="example"></a>示例  
  这第一个代码示例查询数据库中 11000 号订单的详细信息，将这些订单详细信息标记为删除，然后将这些更改提交到数据库。  

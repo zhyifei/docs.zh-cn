@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: aca110339c94afd5442aed5a2481964b456154f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e8f77a4fd1047598d51c2e0932d9c1309a305a86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295505"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>如何：从剪贴板检索数据
 <xref:System.Windows.Forms.Clipboard>类提供了可用于与 Windows 操作系统剪贴板功能进行交互的方法。 许多应用程序的数据用作临时存储库使用剪贴板。 例如，文字处理器剪切和粘贴操作期间使用剪贴板。 剪贴板功能也很有用信息传输到另一个应用程序。  
@@ -31,14 +31,14 @@ ms.locfileid: "59201606"
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>若要从单个的常见格式在剪贴板中检索数据  
   
-1.  使用<xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>， <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>， <xref:System.Windows.Forms.Clipboard.GetImage%2A>，或<xref:System.Windows.Forms.Clipboard.GetText%2A>方法。 （可选） 使用的相应`Contains`*格式*首先确定数据是否采用特定格式的方法。 这些方法是仅适用于[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]。  
+1. 使用<xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>， <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>， <xref:System.Windows.Forms.Clipboard.GetImage%2A>，或<xref:System.Windows.Forms.Clipboard.GetText%2A>方法。 （可选） 使用的相应`Contains`*格式*首先确定数据是否采用特定格式的方法。 这些方法是仅适用于[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]。  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>若要从自定义格式在剪贴板中检索数据  
   
-1.  使用<xref:System.Windows.Forms.Clipboard.GetData%2A>具有自定义格式名称的方法。 此方法是仅适用于[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]。  
+1. 使用<xref:System.Windows.Forms.Clipboard.GetData%2A>具有自定义格式名称的方法。 此方法是仅适用于[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]。  
   
      此外可以使用具有预定义的格式名称<xref:System.Windows.Forms.Clipboard.SetData%2A>方法。 有关详细信息，请参阅 <xref:System.Windows.Forms.DataFormats>。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "59201606"
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>若要从多个格式在剪贴板中检索数据  
   
-1.  使用 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 方法。 您必须使用此方法从版本在剪贴板中检索数据早于[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]。  
+1. 使用 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 方法。 您必须使用此方法从版本在剪贴板中检索数据早于[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]。  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

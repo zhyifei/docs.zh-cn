@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 2b3e25187d2865a8e754c553f8057c3c8e3cff37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151224"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304826"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>如何：调用模型定义的函数作为对象方法
 本主题介绍如何将模型定义函数作为 <xref:System.Data.Objects.ObjectContext> 对象的方法调用或作为自定义类的静态方法调用。 一个*模型定义函数*是概念模型中定义的函数。 本主题中的过程介绍如何直接调用这些函数，而不是从 LINQ to Entities 查询中调用它们。 有关调用模型定义的函数在 LINQ to Entities 查询的信息，请参阅[如何：在查询中调用模型定义的函数](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)。  
@@ -21,19 +21,19 @@ ms.locfileid: "59151224"
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>将模型定义函数作为 ObjectContext 对象的方法调用  
   
-1.  添加一个源文件，以扩展派生自 <xref:System.Data.Objects.ObjectContext> 类（该类由实体框架工具自动生成）的分部类。 在单独的源文件中定义 CLR 存根可防止在重新生成文件时丢失所做的更改。  
+1. 添加一个源文件，以扩展派生自 <xref:System.Data.Objects.ObjectContext> 类（该类由实体框架工具自动生成）的分部类。 在单独的源文件中定义 CLR 存根可防止在重新生成文件时丢失所做的更改。  
   
-2.  将一个公共语言运行时 (CLR) 方法添加到 <xref:System.Data.Objects.ObjectContext> 类，该方法可执行以下操作：  
+2. 将一个公共语言运行时 (CLR) 方法添加到 <xref:System.Data.Objects.ObjectContext> 类，该方法可执行以下操作：  
   
     -   映射到在概念模型中定义的函数。 若要映射方法，必须将 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 应用于此方法。 请注意，此特性的 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 和 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 参数分别是概念模型的命名空间名称和概念模型中的函数名称。 LINQ 的函数名称解析区分大小写。  
   
     -   返回由 <xref:System.Linq.IQueryProvider.Execute%2A> 属性返回的 <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> 方法的结果。  
   
-3.  将此方法作为 <xref:System.Data.Objects.ObjectContext> 类的实例的一个成员调用。  
+3. 将此方法作为 <xref:System.Data.Objects.ObjectContext> 类的实例的一个成员调用。  
   
 ### <a name="to-call-a-model-defined-function-as-static-method-on-a-custom-class"></a>将模型定义函数作为自定义类的静态方法调用  
   
-1.  向应用程序添加一个类，该类带有一个静态方法，可执行以下操作：  
+1. 向应用程序添加一个类，该类带有一个静态方法，可执行以下操作：  
   
     -   映射到在概念模型中定义的函数。 若要映射方法，必须将 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 应用于此方法。 请注意，此特性的 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 和 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 参数分别是概念模型的命名空间名称和概念模型中的函数名称。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "59151224"
   
     -   返回由 <xref:System.Linq.IQueryProvider.Execute%2A> 属性返回的 <xref:System.Linq.IQueryable.Provider%2A> 方法的结果。  
   
-2.  将此方法作为自定义类的一个静态成员调用  
+2. 将此方法作为自定义类的一个静态成员调用  
   
 ## <a name="example"></a>示例  
  **将模型定义函数作为 ObjectContext 对象的一个方法调用**  

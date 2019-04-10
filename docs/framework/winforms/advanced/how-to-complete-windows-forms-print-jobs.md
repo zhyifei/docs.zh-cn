@@ -9,12 +9,12 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: f8d0f1f067efbae6e2b667328e75996179b91737
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159817"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293750"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>如何：完成 Windows 窗体打印作业
 通常情况下，文字处理器和其他应用程序涉及打印将提供给打印作业已完成的用户显示一条消息的选项。 可以在 Windows 窗体中提供此功能，通过处理<xref:System.Drawing.Printing.PrintDocument.EndPrint>事件的<xref:System.Drawing.Printing.PrintDocument>组件。  
@@ -23,7 +23,7 @@ ms.locfileid: "59159817"
   
 ### <a name="to-complete-a-print-job"></a>若要完成打印作业  
   
-1.  设置<xref:System.Drawing.Printing.PrintDocument.DocumentName%2A>属性的<xref:System.Drawing.Printing.PrintDocument>组件。  
+1. 设置<xref:System.Drawing.Printing.PrintDocument.DocumentName%2A>属性的<xref:System.Drawing.Printing.PrintDocument>组件。  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -37,7 +37,7 @@ ms.locfileid: "59159817"
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2.  编写代码以处理 <xref:System.Drawing.Printing.PrintDocument.EndPrint> 事件。  
+2. 编写代码以处理 <xref:System.Drawing.Printing.PrintDocument.EndPrint> 事件。  
   
      在下面的代码示例中，将显示一个消息框，并指示文档已完成打印。  
   

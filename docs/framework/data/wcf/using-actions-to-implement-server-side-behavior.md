@@ -2,12 +2,12 @@
 title: 使用操作来实现服务器端行为
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144113"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294933"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用操作来实现服务器端行为
 
@@ -40,11 +40,11 @@ OData 操作提供了用于实现这样一种行为方法，即该行为将作�
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
  此接口提供执行 WCF 数据服务动作的方法。 当实现 IDataServiceInvokable 时，您应负责三件事：  
   
-1.  捕获并可能封送处理参数  
+1. 捕获并可能封送处理参数  
   
-2.  将参数调度到在调用 Invoke() 时实际实现动作的代码  
+2. 将参数调度到在调用 Invoke() 时实际实现动作的代码  
   
-3.  存储来自 Invoke() 的任何结果，以便可以使用 GetResult() 检索这些结果  
+3. 存储来自 Invoke() 的任何结果，以便可以使用 GetResult() 检索这些结果  
   
  参数可作为标记进行传递。 这是因为可以编写与表示资源的标记结合使用的数据服务提供程序，如果是这种情况，则您可能需要将这些标记转换（封送处理）为实际资源，然后才能调度到实际动作。 在封送处理此参数之后，此参数必须处于可编辑状态，以便将在调用动作时对资源所做的任何更改保存并写入到磁盘中。  
   

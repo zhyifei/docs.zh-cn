@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 686d1797666c36f47d1ab0244754bbf2daf97eaf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188566"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314823"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>演练：仅使用存储过程 (Visual Basic)
 本演练提供了通过仅使用存储过程来访问数据的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 基本端对端方案。 数据库管理员经常使用此方法来限制数据存储的访问方式。  
@@ -62,15 +62,15 @@ ms.locfileid: "59188566"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
-1.  在 Visual Studio**文件**菜单上，单击**新项目**。  
+1. 在 Visual Studio**文件**菜单上，单击**新项目**。  
   
-2.  在 **“新建项目”** 对话框中的 **“项目类型”** 窗格中，展开 **“Visual Basic”**，然后单击 **“Windows”**。  
+2. 在 **“新建项目”** 对话框中的 **“项目类型”** 窗格中，展开 **“Visual Basic”**，然后单击 **“Windows”**。  
   
-3.  在 **“模板”** 窗格中，单击 **“Windows 窗体应用程序”**。  
+3. 在 **“模板”** 窗格中，单击 **“Windows 窗体应用程序”**。  
   
-4.  在中**名称**框中，键入**SprocOnlyApp**。  
+4. 在中**名称**框中，键入**SprocOnlyApp**。  
   
-5.  单击 **“确定”**。  
+5. 单击 **“确定”**。  
   
      Windows 窗体设计器即会打开。  
   
@@ -79,11 +79,11 @@ ms.locfileid: "59188566"
   
 #### <a name="to-add-systemdatalinqdll"></a>添加 System.Data.Linq.dll  
   
-1.  在中**解决方案资源管理器**，单击**显示所有文件**。  
+1. 在中**解决方案资源管理器**，单击**显示所有文件**。  
   
-2.  在中**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
+2. 在中**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
   
-3.  在中**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，然后单击**确定**。  
+3. 在中**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，然后单击**确定**。  
   
      此程序集即被添加到项目中。  
   
@@ -92,9 +92,9 @@ ms.locfileid: "59188566"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>将 northwind 代码文件添加到项目  
   
-1.  上**项目**菜单上，单击**添加现有项**。  
+1. 上**项目**菜单上，单击**添加现有项**。  
   
-2.  在中**添加现有项**对话框中，移动到 c:\linqtest3\northwind.vb，然后依次**添加**。  
+2. 在中**添加现有项**对话框中，移动到 c:\linqtest3\northwind.vb，然后依次**添加**。  
   
      northwind.vb 文件即被添加到项目中。  
   
@@ -103,11 +103,11 @@ ms.locfileid: "59188566"
   
 #### <a name="to-create-the-database-connection"></a>创建数据库连接  
   
-1.  在中**解决方案资源管理器**，右键单击**Form1.vb**，然后单击**查看代码**。  
+1. 在中**解决方案资源管理器**，右键单击**Form1.vb**，然后单击**查看代码**。  
   
      `Class Form1` 将显示在代码编辑器。  
   
-2.  在 `Form1` 代码块中键入如下代码：  
+2. 在 `Form1` 代码块中键入如下代码：  
   
      [!code-vb[DLinqWalk4VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#1)]  
   
@@ -116,42 +116,42 @@ ms.locfileid: "59188566"
   
 #### <a name="to-set-up-the-user-interface"></a>设置用户界面  
   
-1.  返回 Windows 窗体设计器 (**Form1.vb[Design]**)。  
+1. 返回 Windows 窗体设计器 (**Form1.vb[Design]**)。  
   
-2.  在 **“视图”** 菜单上单击 **“工具箱”**。  
+2. 在 **“视图”** 菜单上单击 **“工具箱”**。  
   
      工具箱即会打开。  
   
     > [!NOTE]
     >  单击**自动隐藏**图钉，以使工具箱保持打开状态，而执行的其余步骤在本部分中。  
   
-3.  将两个按钮、 两个文本框和两个标签拖从工具箱中拖动**Form1**。  
+3. 将两个按钮、 两个文本框和两个标签拖从工具箱中拖动**Form1**。  
   
      按照附图排列这些控件。 展开**Form1** ，以便控件更便于显示。  
   
-4.  右键单击**Label1**，然后单击**属性**。  
+4. 右键单击**Label1**，然后单击**属性**。  
   
-5.  更改**文本**属性从**Label1**到**Enter OrderID:**。  
+5. 更改**文本**属性从**Label1**到**Enter OrderID:**。  
   
-6.  在相同的方式对**Label2**，更改**文本**属性从**Label2**到**Enter CustomerID:**。  
+6. 在相同的方式对**Label2**，更改**文本**属性从**Label2**到**Enter CustomerID:**。  
   
-7.  同样，在更改**文本**属性**Button1**到**订单详细信息**。  
+7. 同样，在更改**文本**属性**Button1**到**订单详细信息**。  
   
-8.  更改**文本**属性**Button2**到**订单历史记录**。  
+8. 更改**文本**属性**Button2**到**订单历史记录**。  
   
      将这些按钮控件加宽，以使所有文本均可见。  
   
 #### <a name="to-handle-button-clicks"></a>处理按钮单击  
   
-1.  双击**订单详细信息**上**Form1**创建`Button1`事件处理程序并打开代码编辑器。  
+1. 双击**订单详细信息**上**Form1**创建`Button1`事件处理程序并打开代码编辑器。  
   
-2.  将如下代码键入到 `Button1` 处理程序中：  
+2. 将如下代码键入到 `Button1` 处理程序中：  
   
      [!code-vb[DLinqWalk4VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#2)]  
   
-3.  现在双击**Button2**若要创建的 Form1 上`Button2`事件处理程序并打开代码编辑器。  
+3. 现在双击**Button2**若要创建的 Form1 上`Button2`事件处理程序并打开代码编辑器。  
   
-4.  将如下代码键入到 `Button2` 处理程序中：  
+4. 将如下代码键入到 `Button2` 处理程序中：  
   
      [!code-vb[DLinqWalk4VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#3)]  
   
@@ -160,33 +160,33 @@ ms.locfileid: "59188566"
   
 #### <a name="to-test-the-application"></a>测试应用程序  
   
-1.  按 F5 开始调试。  
+1. 按 F5 开始调试。  
   
      此时将显示 Form1。  
   
-2.  在中**Enter OrderID**框中，键入**10249** ，然后单击**Order Details**。  
+2. 在中**Enter OrderID**框中，键入**10249** ，然后单击**Order Details**。  
   
      随即会显示一个消息框，其中列出了 10249 号订单中所包括的产品。  
   
      单击**确定**以关闭消息框。  
   
-3.  在中**输入 CustomerID**框中，键入`ALFKI`，然后单击**订单历史记录**。  
+3. 在中**输入 CustomerID**框中，键入`ALFKI`，然后单击**订单历史记录**。  
   
      随即会显示一个消息框，其中列出了 ALFKI 客户的订单历史记录。  
   
      单击**确定**以关闭消息框。  
   
-4.  在中**Enter OrderID**框中，键入`123`，然后单击**订单详细信息**。  
+4. 在中**Enter OrderID**框中，键入`123`，然后单击**订单详细信息**。  
   
      随即会显示一个消息框，其中显示“无结果”。  
   
      单击**确定**以关闭消息框。  
   
-5.  上**调试**菜单上，单击**停止调试**。  
+5. 上**调试**菜单上，单击**停止调试**。  
   
      调试会话即会关闭。  
   
-6.  如果您已试验完毕，则可以单击**关闭项目**上**文件**菜单中，并在提示时保存你的项目。  
+6. 如果您已试验完毕，则可以单击**关闭项目**上**文件**菜单中，并在提示时保存你的项目。  
   
 ## <a name="next-steps"></a>后续步骤  
  您可以通过做一些更改来增强此项目的功能。 例如，您可以在列表框中列出可用的存储过程，供用户选择要执行哪些过程。 您还可以将报告的输出以流的方式传输到文本文件。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216402"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319672"
 ---
 # <a name="designing-and-implementing-services"></a>设计和实现服务
 本部分演示如何定义和实现 WCF 约定。 服务协定指定终结点与外界通信的内容。 更具体地说，它是有关一组特定消息的声明，这些消息被组织成基本消息交换模式 (MEP)，如请求/答复、单向和双工。 如果说服务协定是一组在逻辑上相关的消息交换，那么服务操作就是单个消息交换。 例如，`Hello` 操作显然必须接受一条消息（以便调用方能够发出问候），并可能返回也可能不返回一条消息（具体取决于操作的礼节性）。  
@@ -38,13 +38,13 @@ ms.locfileid: "59216402"
   
  例如，采购订单协定可能具有一个 `CreateOrder` 操作，该操作接受订单信息类型输入并返回成功或失败信息，包括一个订单标识符。 它还可能具有一个 `GetOrderStatus` 操作，该操作接受一个订单标识符并返回订单状态信息。 此类服务协定需要指定：  
   
-1.  采购订单协定由 `CreateOrder` 和 `GetOrderStatus` 操作组成。  
+1. 采购订单协定由 `CreateOrder` 和 `GetOrderStatus` 操作组成。  
   
-2.  这些操作指定了输入消息和输出消息。  
+2. 这些操作指定了输入消息和输出消息。  
   
-3.  这些消息可以携带的数据。  
+3. 这些消息可以携带的数据。  
   
-4.  有关成功处理消息所必需的通信基础结构的分类声明。 例如，这些详细信息包括建立成功通信是否需要安全以及需要哪些形式的安全。  
+4. 有关成功处理消息所必需的通信基础结构的分类声明。 例如，这些详细信息包括建立成功通信是否需要安全以及需要哪些形式的安全。  
   
  若要表达这种对其他应用程序在许多平台 （包括非 Microsoft 平台） 上的信息，XML 服务协定公开表示标准 XML 格式，如[Web 服务描述语言](https://go.microsoft.com/fwlink/?LinkId=94952)(WSDL) 和[XML 架构](https://go.microsoft.com/fwlink/?LinkId=94953)(XSD) 等。 许多平台的开发人员都可以使用此公共协定信息创建可与该服务通信的应用程序，既因为开发人员理解规范的语言，又因为这些语言通过描述服务支持的公共形式、格式和协议，支持互操作。 有关 WCF 如何处理此类信息的详细信息，请参阅[元数据](../../../docs/framework/wcf/feature-details/metadata.md)。  
   

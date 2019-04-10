@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], creating
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-ms.openlocfilehash: 1b5d69bda08b94ae00ce022d0d323ad4561ff6b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5e9bdb6d6628b1c696b7944dc0ea1f4c974c8172
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174793"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311404"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>如何：从 UserControl 类继承
 若要通过自定义代码将一个或多个 Windows 窗体控件的功能进行组合，可以创建一个用户控件。 用户控件将快速控件开发、标准 Windows 窗体控件功能以及自定义属性和方法的多功能组合在一起。 开始创建用户控件时，系统将为你提供一个可见的设计器，可以将标准 Windows 窗体控件放置在该设计器中。 这些控件保留其所有继承的功能以及标准控件的外观和行为。 但是，一旦将这些控件内置到用户控件中，便不能再通过代码来使用。 用户控件执行其自身的绘图工作，同时也处理与控件相关联的所有基本功能。  
@@ -22,17 +22,17 @@ ms.locfileid: "59174793"
   
 ### <a name="to-create-a-user-control"></a>创建用户控件  
   
-1.  新建 **Windows 控件库**项目。  
+1. 新建 **Windows 控件库**项目。  
   
      新创建的项目中将包含一个空白用户控件。  
   
-2.  将控件从“工具箱”的“Windows 窗体”选项卡中拖到设计器上。  
+2. 将控件从“工具箱”的“Windows 窗体”选项卡中拖到设计器上。  
   
-3.  应对这些控件进行定位并设计成你希望它们显示在最终用户控件中的样子。 如果要允许开发人员访问构成控件，则必须将这些控件声明为公共的，或有选择地公开构成控件的属性。 有关详细信息，请参阅[如何：公开构成控件的属性](how-to-expose-properties-of-constituent-controls.md)。  
+3. 应对这些控件进行定位并设计成你希望它们显示在最终用户控件中的样子。 如果要允许开发人员访问构成控件，则必须将这些控件声明为公共的，或有选择地公开构成控件的属性。 有关详细信息，请参阅[如何：公开构成控件的属性](how-to-expose-properties-of-constituent-controls.md)。  
   
-4.  实现控件将纳入的任何自定义方法或属性。  
+4. 实现控件将纳入的任何自定义方法或属性。  
   
-5.  按 F5 生成项目并在“UserControl 测试容器”中运行该控件。 有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+5. 按 F5 生成项目并在“UserControl 测试容器”中运行该控件。 有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
   
 ## <a name="see-also"></a>请参阅
 

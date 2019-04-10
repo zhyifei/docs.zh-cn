@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 31308f8c2b031ec0efd77b41bc395d85e7e5307a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 35554c8d5e1dd33ab942cecb80075ec2fb1e131c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192850"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326250"
 ---
 # <a name="interceptors-wcf-data-services"></a>拦截器（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使应用程序能够截获请求消息，以便可以向操作添加自定义逻辑。 可以使用此自定义逻辑来验证传入消息中的数据。 还可以使用它进一步限制查询请求的范围，以便基于每个请求插入自定义授权策略。  
@@ -27,9 +27,9 @@ ms.locfileid: "59192850"
   
  在处理非查询操作时调用的变更侦听器必须返回 `void`（在 Visual Basic 中为 `Nothing`）。 变更侦听器方法必须接受以下两个参数：  
   
-1.  一个与实体集的实体类型相兼容的类型的参数。 数据服务调用变更侦听器时，此参数的值将反映请求发送的实体信息。  
+1. 一个与实体集的实体类型相兼容的类型的参数。 数据服务调用变更侦听器时，此参数的值将反映请求发送的实体信息。  
   
-2.  一个 <xref:System.Data.Services.UpdateOperations> 类型的参数。 数据服务调用变更侦听器时，此参数的值将反映请求试图执行的操作。  
+2. 一个 <xref:System.Data.Services.UpdateOperations> 类型的参数。 数据服务调用变更侦听器时，此参数的值将反映请求试图执行的操作。  
   
  下面是变更侦听器的定义示例。  
   

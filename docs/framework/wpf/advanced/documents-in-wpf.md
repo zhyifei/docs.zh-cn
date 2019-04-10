@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313952"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文档
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供各种用于创建旨在成为更轻松地访问和读取比前几代的高保真内容文档功能[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]。 除增强功能和质量外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还对文档显示、打包和安全性能提供集成服务。 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文档类型和文档打包。  
@@ -89,9 +89,9 @@ ms.locfileid: "59169606"
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  
  为了安全， <xref:System.IO.Packaging.PackageDigitalSignature> （"数字签名"） 可以与软件包中的部件相关联。 一个<xref:System.IO.Packaging.PackageDigitalSignature>融合了 [509] 提供两个功能：  
   
-1.  标识部件的发信方并对其进行身份验证。  
+1. 标识部件的发信方并对其进行身份验证。  
   
-2.  验证部件是否尚未被修改。  
+2. 验证部件是否尚未被修改。  
   
  数字签名不会阻止修改部件，但如果该部件已经以任何方式发生改变，则对该数字签名的验证检查将失败。 然后应用程序可采取适当的操作（例如，阻止打开部件，或通知用户该部件已修改，是不安全的）。  
   
@@ -107,9 +107,9 @@ ms.locfileid: "59169606"
   
  包关系提供一种可检测到的方式，用于添加其他信息并将该信息与各个部件或整个包关联。 包关系具有两种主要功能：  
   
-1.  定义一个部件与另一个部件之间的依赖关系。  
+1. 定义一个部件与另一个部件之间的依赖关系。  
   
-2.  定义添加注释或与部件相关的其他数据的信息关系。  
+2. 定义添加注释或与部件相关的其他数据的信息关系。  
   
  一个<xref:System.IO.Packaging.PackageRelationship>提供了一种快速可发现的方式来定义依赖项并添加与包或包作为一个整体的一部分关联的其他信息。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 76055358f9dede9749d1575a5f43d5593c1c9b51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7aa5208a4f378408a01a08a2f4c9dbf2edfa5243
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176366"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323598"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>如何：在混合应用程序中启用视觉对象样式
 本主题演示如何启用[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]上的视觉样式[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件中托管[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-基于应用程序。  
@@ -26,25 +26,25 @@ ms.locfileid: "59176366"
   
 #### <a name="to-enable-windows-forms-visual-styles"></a>启用 Windows 窗体视觉样式  
   
-1.  创建[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序项目中名为`HostingWfWithVisualStyles`。  
+1. 创建[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序项目中名为`HostingWfWithVisualStyles`。  
   
-2.  在解决方案资源管理器中，添加对下列程序集的引用。  
+2. 在解决方案资源管理器中，添加对下列程序集的引用。  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms  
   
-3.  在工具箱中，双击<xref:System.Windows.Controls.Grid>图标将<xref:System.Windows.Controls.Grid>设计图面上的元素。  
+3. 在工具箱中，双击<xref:System.Windows.Controls.Grid>图标将<xref:System.Windows.Controls.Grid>设计图面上的元素。  
   
-4.  在属性窗口中设置的值<xref:System.Windows.FrameworkElement.Height%2A>并<xref:System.Windows.FrameworkElement.Width%2A>属性设置为**自动**。  
+4. 在属性窗口中设置的值<xref:System.Windows.FrameworkElement.Height%2A>并<xref:System.Windows.FrameworkElement.Width%2A>属性设置为**自动**。  
   
-5.  在设计视图或 XAML 视图中，选择<xref:System.Windows.Window>。  
+5. 在设计视图或 XAML 视图中，选择<xref:System.Windows.Window>。  
   
-6.  在属性窗口中，单击**事件**选项卡。  
+6. 在属性窗口中，单击**事件**选项卡。  
   
-7.  双击<xref:System.Windows.FrameworkElement.Loaded>事件。
+7. 双击<xref:System.Windows.FrameworkElement.Loaded>事件。
   
-8.  在 MainWindow.xaml.vb 或 MainWindow.xaml.cs 中，插入以下代码以处理<xref:System.Windows.FrameworkElement.Loaded>事件。  
+8. 在 MainWindow.xaml.vb 或 MainWindow.xaml.cs 中，插入以下代码以处理<xref:System.Windows.FrameworkElement.Loaded>事件。  
   
      [!code-csharp[HostingWfWithVisualStyles#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfWithVisualStyles/CSharp/HostingWfWithVisualStyles/Window1.xaml.cs#11)]
      [!code-vb[HostingWfWithVisualStyles#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfWithVisualStyles/VisualBasic/HostingWfWithVisualStyles/Window1.xaml.vb#11)]  
@@ -58,11 +58,11 @@ ms.locfileid: "59176366"
   
 #### <a name="to-disable-windows-forms-visual-styles"></a>禁用 Windows 窗体视觉样式  
   
-1.  在代码编辑器中打开 MainWindow.xaml.vb 或 MainWindow.xaml.cs。  
+1. 在代码编辑器中打开 MainWindow.xaml.vb 或 MainWindow.xaml.cs。  
   
-2.  注释掉对的调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。  
+2. 注释掉对的调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。  
   
-3.  按 F5 生成并运行该应用程序。  
+3. 按 F5 生成并运行该应用程序。  
   
      [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件变为默认系统样式。  
   

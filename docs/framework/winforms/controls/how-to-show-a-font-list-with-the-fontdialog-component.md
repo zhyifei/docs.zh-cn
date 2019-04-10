@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: fba9caecc71c5cb77c811fc112616647c79689c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40679136ea62a437009b308a8b206cf251b46222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220183"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307306"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>如何：使用 FontDialog 组件显示字体列表
 [FontDialog](fontdialog-component-windows-forms.md)组件让用户可以选择一种字体，以及更改其显示方面，例如其权重和大小。  
@@ -27,11 +27,11 @@ ms.locfileid: "59220183"
   
 ### <a name="to-select-font-properties-using-the-fontdialog-component"></a>若要选择字体属性使用 FontDialog 组件  
   
-1.  显示对话框框中使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法。  
+1. 显示对话框框中使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法。  
   
-2.  使用<xref:System.Windows.Forms.DialogResult>属性来确定如何关闭对话框。  
+2. 使用<xref:System.Windows.Forms.DialogResult>属性来确定如何关闭对话框。  
   
-3.  使用<xref:System.Windows.Forms.FontDialog.Font%2A>属性来设置所需的字体。  
+3. 使用<xref:System.Windows.Forms.FontDialog.Font%2A>属性来设置所需的字体。  
   
      在以下示例中，<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件处理程序打开<xref:System.Windows.Forms.FontDialog>组件。 当一种字体是所选与用户单击**确定**，则<xref:System.Windows.Forms.FontDialog.Font%2A>属性的<xref:System.Windows.Forms.TextBox>窗体上的控件设置为所选字体。 该示例假定窗体具有<xref:System.Windows.Forms.Button>控件，<xref:System.Windows.Forms.TextBox>控件，和一个<xref:System.Windows.Forms.FontDialog>组件。  
   

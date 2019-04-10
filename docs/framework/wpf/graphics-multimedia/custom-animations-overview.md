@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190725"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313939"
 ---
 # <a name="custom-animations-overview"></a>自定义动画概述
 本主题介绍如何以及何时通过以下方法来扩展 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统：创建自定义关键帧、动画类或者使用每帧回叫来绕过它。  
@@ -99,9 +99,9 @@ ms.locfileid: "59190725"
   
  推荐的范例（由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画使用）是使用两个继承级别：  
   
-1.  创建一个抽象*\<类型 >* AnimationBase 类派生自<xref:System.Windows.Media.Animation.AnimationTimeline>。 此类应重写<xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>方法。 它还应引入新的抽象方法 GetCurrentValueCore，并重写<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>，以便它验证默认原始值和默认目标值参数的类型，然后调用 GetCurrentValueCore。  
+1. 创建一个抽象*\<类型 >* AnimationBase 类派生自<xref:System.Windows.Media.Animation.AnimationTimeline>。 此类应重写<xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>方法。 它还应引入新的抽象方法 GetCurrentValueCore，并重写<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>，以便它验证默认原始值和默认目标值参数的类型，然后调用 GetCurrentValueCore。  
   
-2.  创建另一个类继承的新*\<类型 >* AnimationBase 类并重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法中，你引入的 GetCurrentValueCore 方法和<xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>属性。  
+2. 创建另一个类继承的新*\<类型 >* AnimationBase 类并重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法中，你引入的 GetCurrentValueCore 方法和<xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>属性。  
   
  **替代方法**  
   

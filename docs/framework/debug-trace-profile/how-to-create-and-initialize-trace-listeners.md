@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85cf8f32a3dbf283e75052548f5963e8a7da0ed2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222713"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321050"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>如何：创建和初始化跟踪侦听器
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 类向接收和处理消息的对象（成为侦听器）中发送消息。 在启用跟踪或调试后将自动创建并初始化一个如上所述的侦听器 <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>。 如果要将 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.Debug> 输出定向到任何其他源，则必须创建并初始化其他跟踪侦听器。  
@@ -29,7 +29,7 @@ ms.locfileid: "59222713"
   
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>若要使用配置文件创建和初始化跟踪侦听器  
   
-1.  请声明应用程序配置文件中的跟踪侦听器。 如果创建的侦听器需要的任何其他对象，请同时对它们进行声明。 下面的示例演示如何创建名为 `myListener` 的侦听器，它将写入到文本文件 `TextWriterOutput.log` 中。  
+1. 请声明应用程序配置文件中的跟踪侦听器。 如果创建的侦听器需要的任何其他对象，请同时对它们进行声明。 下面的示例演示如何创建名为 `myListener` 的侦听器，它将写入到文本文件 `TextWriterOutput.log` 中。  
   
     ```xml  
     <configuration>  
@@ -44,7 +44,7 @@ ms.locfileid: "59222713"
     </configuration>  
     ```  
   
-2.  在代码中使用 <xref:System.Diagnostics.Trace> 类以将消息写入到跟踪侦听器中。  
+2. 在代码中使用 <xref:System.Diagnostics.Trace> 类以将消息写入到跟踪侦听器中。  
   
     ```vb  
     Trace.TraceInformation("Test message.")  

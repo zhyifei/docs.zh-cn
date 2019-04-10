@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 6757d6375cbe1662b8bd7beb8a7562be166bc414
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 75c7a0e50301ce80d51b9b2a10ed650a1600ec79
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181501"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300081"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>如何：使用 X.509 证书保证服务的安全
 保护使用 X.509 证书的服务是大多数绑定 Windows Communication Foundation (WCF) 中使用的基本技术。 本主题演练使用 X.509 证书配置自承载服务的步骤。  
@@ -19,39 +19,39 @@ ms.locfileid: "59181501"
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>使用代码用证书配置服务  
   
-1.  创建服务协定和实现的服务。 有关详细信息，请参阅[设计和实现服务](../../../../docs/framework/wcf/designing-and-implementing-services.md)。  
+1. 创建服务协定和实现的服务。 有关详细信息，请参阅[设计和实现服务](../../../../docs/framework/wcf/designing-and-implementing-services.md)。  
   
-2.  创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例，并将其安全模式设置为 <xref:System.ServiceModel.SecurityMode.Message>，如下面的代码所示。  
+2. 创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例，并将其安全模式设置为 <xref:System.ServiceModel.SecurityMode.Message>，如下面的代码所示。  
   
      [!code-csharp[C_SecureWithCertificate#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#1)]
      [!code-vb[C_SecureWithCertificate#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#1)]  
   
-3.  创建两个 <xref:System.Type> 变量，分别用于协定类型和实现的协定，如下面的代码所示。  
+3. 创建两个 <xref:System.Type> 变量，分别用于协定类型和实现的协定，如下面的代码所示。  
   
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4.  为服务的基址创建 <xref:System.Uri> 类的一个实例。 因为`WSHttpBinding`使用 HTTP 传输，统一资源标识符 (URI) 必须以与该架构，或打开该服务时，Windows Communication Foundation (WCF) 将引发异常。  
+4. 为服务的基址创建 <xref:System.Uri> 类的一个实例。 因为`WSHttpBinding`使用 HTTP 传输，统一资源标识符 (URI) 必须以与该架构，或打开该服务时，Windows Communication Foundation (WCF) 将引发异常。  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  
   
-5.  使用实现的协定类型变量和 URI 创建 <xref:System.ServiceModel.ServiceHost> 类的新实例。  
+5. 使用实现的协定类型变量和 URI 创建 <xref:System.ServiceModel.ServiceHost> 类的新实例。  
   
      [!code-csharp[C_SecureWithCertificate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#4)]
      [!code-vb[C_SecureWithCertificate#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#4)]  
   
-6.  使用 <xref:System.ServiceModel.Description.ServiceEndpoint> 方法向服务中添加一个 <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>。 将协定、绑定和终结点地址传递给构造函数，如下面的代码所示。  
+6. 使用 <xref:System.ServiceModel.Description.ServiceEndpoint> 方法向服务中添加一个 <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>。 将协定、绑定和终结点地址传递给构造函数，如下面的代码所示。  
   
      [!code-csharp[C_SecureWithCertificate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#5)]
      [!code-vb[C_SecureWithCertificate#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#5)]  
   
-7.  可选。 若要从服务中检索元数据，请创建一个新的 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 对象并将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 属性设置为 `true`。  
+7. 可选。 若要从服务中检索元数据，请创建一个新的 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 对象并将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 属性设置为 `true`。  
   
      [!code-csharp[C_SecureWithCertificate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#6)]
      [!code-vb[C_SecureWithCertificate#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#6)]  
   
-8.  使用 <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> 类的 <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> 方法将有效证书添加到服务中。 该方法可以使用多个方法之一查找证书。 本示例使用 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> 枚举。 该枚举指定提供的值是为其颁发证书的实体的名称。  
+8. 使用 <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> 类的 <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> 方法将有效证书添加到服务中。 该方法可以使用多个方法之一查找证书。 本示例使用 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> 枚举。 该枚举指定提供的值是为其颁发证书的实体的名称。  
   
      [!code-csharp[C_SecureWithCertificate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#7)]
      [!code-vb[C_SecureWithCertificate#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#7)]  

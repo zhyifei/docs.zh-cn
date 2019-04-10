@@ -11,23 +11,23 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: 39dd77fee36b172f6c38746bfe970094ec9edb4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223545"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316500"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标
 可以使用 Windows 窗体<xref:System.Windows.Forms.ErrorProvider>组件，用户输入无效数据时显示错误图标。 您必须具有至少两个选项卡上，它们之间并由此调用验证代码以窗体控件。  
   
 ### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>若要在控件的值无效时显示错误图标  
   
-1.  添加两个控件 — 例如，文本框中，向 Windows 窗体。  
+1. 添加两个控件 — 例如，文本框中，向 Windows 窗体。  
   
-2.  添加<xref:System.Windows.Forms.ErrorProvider>组件到窗体。  
+2. 添加<xref:System.Windows.Forms.ErrorProvider>组件到窗体。  
   
-3.  选择第一个控件，然后将代码添加到其<xref:System.Windows.Forms.Control.Validating>事件处理程序。 为了使此代码正常运行，该过程必须连接到该事件。 有关详细信息，请参阅[如何：在运行时为 Windows 窗体创建事件处理程序](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
+3. 选择第一个控件，然后将代码添加到其<xref:System.Windows.Forms.Control.Validating>事件处理程序。 为了使此代码正常运行，该过程必须连接到该事件。 有关详细信息，请参阅[如何：在运行时为 Windows 窗体创建事件处理程序](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
   
      下面的代码测试用户输入; 这些数据的有效性如果数据是无效的<xref:System.Windows.Forms.ErrorProvider.SetError%2A>调用方法。 第一个参数<xref:System.Windows.Forms.ErrorProvider.SetError%2A>方法指定用于控制为旁边显示图标。 第二个参数是要显示的错误文本。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "59223545"
        (this, &Form1::textBox1_Validating);  
     ```  
   
-4.  运行该项目。 在第一个控件，然后第二个选项卡中键入无效 （在此示例中，非数字） 的数据。 当显示错误图标时，指向它使用鼠标指针以查看错误文本。  
+4. 运行该项目。 在第一个控件，然后第二个选项卡中键入无效 （在此示例中，非数字） 的数据。 当显示错误图标时，指向它使用鼠标指针以查看错误文本。  
   
 ## <a name="see-also"></a>请参阅
 

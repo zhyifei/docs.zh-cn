@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191459"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332139"
 ---
 # <a name="handling-null-values"></a>处理 Null 值
 在列中的值未知或缺失时，在关系数据库中使用空值。 空既不是空字符串（对于 character 或 datetime 数据类型），也不是零值（对于 numeric 数据类型）。 ANSI SQL-92 规范规定，空必须对于所有数据类型均相同，以便以一致的方式处理所有空。 <xref:System.Data.SqlTypes> 命名空间通过实现 <xref:System.Data.SqlTypes.INullable> 接口，提供空语义。 <xref:System.Data.SqlTypes> 中的每种数据类型都有其自己的 `IsNull` 属性和可分配给该数据类型的实例的 `Null` 值。  
@@ -87,15 +87,15 @@ WHERE TerritoryID IN (1, 2, 3)
   
  此外，下面的规则适用于 `DataRow.["columnName"]` null 赋值的实例：  
   
-1.  默认值*默认*值是`DbNull.Value`所有除了强类型 null 列是相应强类型 null 值。  
+1. 默认值*默认*值是`DbNull.Value`所有除了强类型 null 列是相应强类型 null 值。  
   
-2.  在序列化为 XML 文件（如在“xsi:nil”中）期间，永远不写出空值。  
+2. 在序列化为 XML 文件（如在“xsi:nil”中）期间，永远不写出空值。  
   
-3.  在序列化为 XML 时始终写出所有非空值，包括默认值。 这与 XSD/XML 语义不同。在 XSD/XML 语义中，空值 (xsi:nil) 是显式的并且默认值是隐式的（如果在 XML 中不提供，则验证分析程序可以从关联的 XSD 架构获取它）。 对于 `DataTable`，反过来也成立：空值是隐式的，默认值是显式的。  
+3. 在序列化为 XML 时始终写出所有非空值，包括默认值。 这与 XSD/XML 语义不同。在 XSD/XML 语义中，空值 (xsi:nil) 是显式的并且默认值是隐式的（如果在 XML 中不提供，则验证分析程序可以从关联的 XSD 架构获取它）。 对于 `DataTable`，反过来也成立：空值是隐式的，默认值是显式的。  
   
-4.  对于从 XML 输入读取的行的所有缺少的列值，都赋予 NULL。 使用 <xref:System.Data.DataTable.NewRow%2A> 或类似方法创建的行被赋予 DataColumn 的默认值。  
+4. 对于从 XML 输入读取的行的所有缺少的列值，都赋予 NULL。 使用 <xref:System.Data.DataTable.NewRow%2A> 或类似方法创建的行被赋予 DataColumn 的默认值。  
   
-5.  对于 <xref:System.Data.DataRow.IsNull%2A> 和 `true`，`DbNull.Value` 方法均返回 `INullable.Null`。  
+5. 对于 <xref:System.Data.DataRow.IsNull%2A> 和 `true`，`DbNull.Value` 方法均返回 `INullable.Null`。  
   
 ## <a name="assigning-null-values"></a>赋予 Null 值  
  任何 <xref:System.Data.SqlTypes> 实例的默认值都是空。  

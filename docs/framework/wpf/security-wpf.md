@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313562"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a> 在开发 Windows Presentation Foundation (WPF) 独立应用程序和浏览器承载的应用程序时，必须考虑的安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 独立应用程序执行无限制的权限 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**的权限集)、 是否使用 Windows Installer (.msi)、 XCopy 部署或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 但是，完全信任的主机应用程序可以创建部分信任<xref:System.AppDomain>使用.NET Framework 外接程序模型。 有关详细信息，请参阅[WPF 外接程序概述](./app-development/wpf-add-ins-overview.md)。  
@@ -103,15 +103,15 @@ ms.locfileid: "59193663"
   
  可以在这种方式保护的功能的集合配置为按每个区域**Internet**， **Intranet**，**受信任的站点**，和**受限站点**区域。 以下步骤描述如何配置安全设置：  
   
-1.  打开“控制面板” 。  
+1. 打开“控制面板” 。  
   
-2.  单击**网络和 Internet** ，然后单击**Internet 选项**。  
+2. 单击**网络和 Internet** ，然后单击**Internet 选项**。  
   
      将显示“Internet 选项”对话框。  
   
-3.  上**安全**选项卡上，选择要配置的安全设置的区域。  
+3. 上**安全**选项卡上，选择要配置的安全设置的区域。  
   
-4.  单击**自定义级别**按钮。  
+4. 单击**自定义级别**按钮。  
   
      **安全设置**对话框随即出现，并且可以配置为所选区域的安全设置。  
   

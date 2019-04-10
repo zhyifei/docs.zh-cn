@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115695"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331710"
 ---
 # <a name="working-with-certificates"></a>使用证书
 对 Windows Communication Foundation (WCF) 安全性进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 WCF 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 WCF 和证书来完成常见任务。  
@@ -90,13 +90,13 @@ ms.locfileid: "59115695"
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>若要生成使用 New-selfsignedcertificate cmdlet 的信任链  
   
-1.  创建使用 New-selfsignedcertificate cmdlet 的临时根颁发机构 （自签名） 证书。 将私钥保存到磁盘上。  
+1. 创建使用 New-selfsignedcertificate cmdlet 的临时根颁发机构 （自签名） 证书。 将私钥保存到磁盘上。  
   
-2.  使用此新证书颁发另一个包含公钥的证书。  
+2. 使用此新证书颁发另一个包含公钥的证书。  
   
-3.  将根颁发机构证书导入到受信任的根证书颁发机构存储区中。  
+3. 将根颁发机构证书导入到受信任的根证书颁发机构存储区中。  
   
-4.  有关分步说明，请参阅[如何：创建开发期间使用临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。  
+4. 有关分步说明，请参阅[如何：创建开发期间使用临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。  
   
 ## <a name="which-certificate-to-use"></a>要使用哪个证书？  
  关于证书的常见问题是要使用哪个证书以及使用它的原因。 答案取决于是对客户端编程还是对服务编程。 下面的信息提供了一个一般准则，但未对这些问题提供详尽解答。  

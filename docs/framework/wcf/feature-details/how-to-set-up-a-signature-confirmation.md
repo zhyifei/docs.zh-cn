@@ -8,12 +8,12 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 78ad6a88d5c123272e1796f1a75e2bd226bfc8f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315811"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>如何：设置签名确认
 *签名确认*是消息发起程序以确保接收的回复已生成为发件人的原始消息的响应中的一种机制。 WS-Security 1.1 规范中对签名确认进行了定义。 如果终结点支持 WS-Security 1.0，则不能使用签名确认。  
@@ -22,29 +22,29 @@ ms.locfileid: "59176158"
   
 ### <a name="to-enable-signature-confirmation-in-code"></a>在代码中启用签名确认  
   
-1.  创建 <xref:System.ServiceModel.Channels.BindingElementCollection> 类的一个实例。  
+1. 创建 <xref:System.ServiceModel.Channels.BindingElementCollection> 类的一个实例。  
   
-2.  创建的实例<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>类。  
+2. 创建的实例<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>类。  
   
-3.  将 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> 设置为 `true`。  
+3. 将 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> 设置为 `true`。  
   
-4.  将安全元素添加到绑定集合中。  
+4. 将安全元素添加到绑定集合中。  
   
-5.  创建自定义绑定中的规定[如何：创建自定义绑定使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。  
+5. 创建自定义绑定中的规定[如何：创建自定义绑定使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。  
   
 ### <a name="to-enable-signature-confirmation-in-configuration"></a>在配置中启用签名确认  
   
-1.  将 `<customBinding>` 元素添加到配置文件的 `<bindings>` 节。  
+1. 将 `<customBinding>` 元素添加到配置文件的 `<bindings>` 节。  
   
-2.  添加一个 `<binding>` 元素，并将 name 属性设置为适当的值。  
+2. 添加一个 `<binding>` 元素，并将 name 属性设置为适当的值。  
   
-3.  添加一个适当的编码元素。 下面的示例添加了一个 `<TextMessageEncoding>` 元素。  
+3. 添加一个适当的编码元素。 下面的示例添加了一个 `<TextMessageEncoding>` 元素。  
   
-4.  添加一个 `<security>` 子元素并将 `requireSignatureConfirmation` 属性设置为 `true`。  
+4. 添加一个 `<security>` 子元素并将 `requireSignatureConfirmation` 属性设置为 `true`。  
   
-5.  可选。 若要启用签名确认在启动过程，请添加[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)子元素，并设置`equireSignatureConfirmation`归于`true`。  
+5. 可选。 若要启用签名确认在启动过程，请添加[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)子元素，并设置`equireSignatureConfirmation`归于`true`。  
   
-6.  添加一个适当的传输元素。 以下示例将添加[ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
+6. 添加一个适当的传输元素。 以下示例将添加[ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
   
     ```xml  
     <bindings>  

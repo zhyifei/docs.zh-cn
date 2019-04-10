@@ -4,12 +4,12 @@ description: 了解如何迁移并更新现有应用程序对 Azure 云以及与
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: ed291309d04e3e5bfed6c73cdf8a67b79431a363
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8484bf554df2de47121b99272355181e3842517d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156385"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324690"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>更新现有.NET 应用程序使用 Azure 云和 Windows 容器 （第二版）
 
@@ -121,7 +121,7 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 
 - **云基础结构就绪**（重新托管或基本提升和切换）：第一步，许多组织只想快速执行云迁移策略。 在这种情况下，是重新承载的应用程序。 大多数重新托管均可使用 [Azure Migrate](https://aka.ms/azuremigrate) 自动完成，该服务提供指南、见解和机制，帮助迁移到基于 Azure 的云工具（如 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) 和 [Azure 数据库迁移服务](https://azure.microsoft.com/campaigns/database-migration/)）。 也可以手动设置重新托管，以便在将旧版应用移动到云时了解关于这些资产的基础结构详细信息。 例如，您可以将应用程序移到 Vm 在 Azure 中进行少量修改甚至修改可能与仅配置做出细微更改。 这种情况下的网络类似于本地环境，尤其是在 Azure 中创建虚拟网络时。
 
-- **云计算得到优化**（托管服务和 Windows 容器）：此模型是有关进行几个重要部署优化，以获得部分显著好处从云，而无需更改应用程序的核心体系结构。 此处的基本步骤是对现有 .NET Framework 应用程序增加 [Windows 容器](https://docs.microsoft.com/virtualization/windowscontainers/about/) 支持。 此重要步骤 （容器化） 不需要触及代码，因此总体的提升和转变工作量较轻。 可以使用 [Image2Docker](https://github.com/docker/communitytools-image2docker-win) 或 Visual Studio 之类的工具，Visual Studio 带有适用于 [Docker](https://www.docker.com/) 的工具。 Visual Studio 自动为 ASP.NET 应用程序和 Windows 容器映像选择智能默认值。 这些工具提供快速内部循环，并提供将容器迁移到 Azure 的快速途径。 部署到多个环境中时，敏捷性得到提高。 然后，转到生产环境，你可以部署到 Windows 容器[用于容器的 Azure Web 应用](https://azure.microsoft.com/services/app-service/containers/)，[Azure 容器实例 (ACI) 和 Windows Server 2016 和容器，如果偏好使用 IaaS 方案的 Azure Vm。 对于稍微复杂多容器应用程序，到业务流程协调程序，如[Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)或[Azure Kubernetes 服务 (AKS/ACS)](https://azure.microsoft.com/services/container-service/)。 在此初次更新期间你还可以添加资产从云中，例如使用之类的工具监视[Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview);使用你的应用程序生命周期的 CI/CD 管道[Azure DevOps 服务](https://visualstudio.microsoft.com/team-services/); 和许多其他数据资源服务在 Azure 中可用。 例如，可以修改单片 Web 应用，该应用最初使用传统 [ASP.NET Web 窗体](https://www.asp.net/web-forms)或 [ASP.NET MVC](https://www.asp.net/mvc) 开发，但现在使用 Windows 容器部署。 使用 Windows 容器时，还需要将数据迁移到 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/)中的数据库，但不需要更改应用程序的核心体系结构。
+- **云计算得到优化**（托管服务和 Windows 容器）：此模型是有关进行几个重要部署优化，以获得部分显著好处从云，而无需更改应用程序的核心体系结构。 此处的基本步骤是对现有 .NET Framework 应用程序增加 [Windows 容器](https://docs.microsoft.com/virtualization/windowscontainers/about/) 支持。 此重要步骤 （容器化） 不需要触及代码，因此总体的提升和转变工作量较轻。 可以使用 [Image2Docker](https://github.com/docker/communitytools-image2docker-win) 或 Visual Studio 之类的工具，Visual Studio 带有适用于 [Docker](https://www.docker.com/) 的工具。 Visual Studio 自动为 ASP.NET 应用程序和 Windows 容器映像选择智能默认值。 这些工具提供快速内部循环，并提供将容器迁移到 Azure 的快速途径。 部署到多个环境中时，敏捷性得到提高。 然后，转到生产环境，你可以部署到 Windows 容器[用于容器的 Azure Web 应用](https://azure.microsoft.com/services/app-service/containers/)，[Azure 容器实例 (ACI) 和 Windows Server 2016 和容器，如果偏好使用 IaaS 方案的 Azure Vm。 对于稍微复杂多容器应用程序，到业务流程协调程序，如[Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)或[Azure Kubernetes 服务 (AKS/ACS)](https://azure.microsoft.com/services/container-service/)。 在此初次更新期间你还可以添加资产从云中，例如使用之类的工具监视[Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview);使用你的应用程序生命周期的 CI/CD 管道[Azure DevOps 服务](https://azure.microsoft.com/services/devops/); 和许多其他数据资源服务在 Azure 中可用。 例如，可以修改单片 Web 应用，该应用最初使用传统 [ASP.NET Web 窗体](https://www.asp.net/web-forms)或 [ASP.NET MVC](https://www.asp.net/mvc) 开发，但现在使用 Windows 容器部署。 使用 Windows 容器时，还需要将数据迁移到 [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/)中的数据库，但不需要更改应用程序的核心体系结构。
 
 - **云原生**:中引入，你应该看待构建[云原生](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)时你面向的大型复杂应用程序与多个独立的开发团队致力于不同的微服务，可以是应用程序开发和自主部署。 此外，由于每个微服务 granularized 和独立可伸缩性。 这些体系结构方法面临的非常重要的挑战和复杂性，但可以大大简化了云 PaaS 和业务流程协调程序喜欢[Azure Kubernetes 服务 (AKS/ACS)](https://azure.microsoft.com/services/container-service/) （托管 Kubernetes） [Azure 服务Fabric 中，并[Azure Functions](https://azure.microsoft.com/services/functions/)使用无服务器的方法。 所有这些方法 （如微服务和无服务器） 通常要求您针对云构建和编写新代码，经过调整以适应特定的 PaaS 平台的代码或符合特定的体系结构，例如微服务的代码。
 

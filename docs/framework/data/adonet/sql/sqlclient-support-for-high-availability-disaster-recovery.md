@@ -2,12 +2,12 @@
 title: SqlClient 对高可用性的支持，灾难恢复
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213787"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307585"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 对高可用性的支持，灾难恢复
 本主题介绍对高可用性、灾难恢复（AlwaysOn 可用性组）的 SqlClient支持（[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中的新功能）。  AlwaysOn 可用性组功能已添加到 SQL Server 2012。 有关 AlwaysOn 可用性组的详细信息，请参阅 SQL Server 联机丛书。  
@@ -27,9 +27,9 @@ ms.locfileid: "59213787"
   
  您可通过编程方式修改这些连接字符串关键字：  
   
-1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
+1. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
 >  设置`MultiSubnetFailover`到`true`不需要[!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]或更高版本。
@@ -59,9 +59,9 @@ ms.locfileid: "59213787"
   
  如果只读路由无效，在下列情况下连接到辅助副本位置将失败：  
   
-1.  如果未配置辅助副本位置以接受连接。  
+1. 如果未配置辅助副本位置以接受连接。  
   
-2.  如果应用程序使用 `ApplicationIntent=ReadWrite`（将在下文讨论），并且辅助副本位置配置为只读访问。  
+2. 如果应用程序使用 `ApplicationIntent=ReadWrite`（将在下文讨论），并且辅助副本位置配置为只读访问。  
   
  <xref:System.Data.SqlClient.SqlDependency> 只读的辅助副本上不支持。  
   
@@ -86,11 +86,11 @@ ms.locfileid: "59213787"
 ## <a name="read-only-routing"></a>只读路由  
  只读路由是一种可以确保数据库只读副本的可用性的功能。 要启用只读路由：  
   
-1.  您必须连接到 Always On 可用性组的可用性组侦听器。  
+1. 您必须连接到 Always On 可用性组的可用性组侦听器。  
   
-2.  `ApplicationIntent` 连接字符串关键字必须设置为 `ReadOnly`。  
+2. `ApplicationIntent` 连接字符串关键字必须设置为 `ReadOnly`。  
   
-3.  可用性组必须由数据库管理员配置以启用只读路由。  
+3. 可用性组必须由数据库管理员配置以启用只读路由。  
   
  使用只读路由的多个连接并非连接到相同的只读副本。 数据库同步的更改或服务器路由配置的更改可能导致客户端连接到不同的只读副本。 为确保所有只读请求连接到相同的只读副本，请不要将可用性组侦听器传递给 `Data Source` 连接字符串关键字。  请指定只读实例的名称。  
   

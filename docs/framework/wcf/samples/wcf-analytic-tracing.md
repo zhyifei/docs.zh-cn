@@ -2,12 +2,12 @@
 title: WCF 分析跟踪
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 3c9f878a22c928daa9c7dbc142efb3958b1657c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229168"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332308"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析跟踪
 此示例演示如何将您自己的跟踪事件添加到 Windows Communication Foundation (WCF) 将写入到 ETW 中的分析跟踪流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。 跟踪分析是为了便于查看服务，而不会导致较高性能损失。 此示例演示如何使用<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api 来与 WCF 服务集成的写入事件。  
@@ -43,31 +43,31 @@ ms.locfileid: "59229168"
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
-1.  使用 Visual Studio 2012 打开 WCFAnalyticTracingExtensibility.sln 解决方案文件。  
+1. 使用 Visual Studio 2012 打开 WCFAnalyticTracingExtensibility.sln 解决方案文件。  
   
-2.  要生成解决方案，按 Ctrl+Shift+B。  
+2. 要生成解决方案，按 Ctrl+Shift+B。  
   
-3.  若要运行解决方案，请按 Ctrl+F5。  
+3. 若要运行解决方案，请按 Ctrl+F5。  
   
      在 Web 浏览器中，单击**calculator.svc**。 服务的 WSDL 文档的 URI 应出现在浏览器中。 复制该 URI。  
   
-4.  运行 WCF 测试客户端 (WcfTestClient.exe)。  
+4. 运行 WCF 测试客户端 (WcfTestClient.exe)。  
   
      WCF 测试客户端 (WcfTestClient.exe) 位于`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`。 默认 Visual Studio 2012 安装目录是`C:\Program Files\Microsoft Visual Studio 10.0`。  
   
-5.  在 WCF 测试客户端，通过选择添加服务**文件**，然后**添加的服务**。  
+5. 在 WCF 测试客户端，通过选择添加服务**文件**，然后**添加的服务**。  
   
      在输入框中添加终结点地址。  
   
-6.  单击**确定**关闭对话框。  
+6. 单击**确定**关闭对话框。  
   
      ICalculator 服务下的左窗格中添加**我的服务项目**。  
   
-7.  打开事件查看器应用程序。  
+7. 打开事件查看器应用程序。  
   
      然后再调用该服务，启动事件查看器，并确保事件日志正在侦听从 WCF 服务发出的跟踪事件。  
   
-8.  从**启动**菜单中，选择**管理工具**，然后**事件查看器**。 启用**Analytic**并**调试**日志。  
+8. 从**启动**菜单中，选择**管理工具**，然后**事件查看器**。 启用**Analytic**并**调试**日志。  
   
 9. 在事件查看器中树视图中，导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，，然后**应用程序服务器-应用程序**。 右键单击**应用程序服务器-应用程序**，选择**视图**，然后**显示分析和调试日志**。  
   
@@ -97,13 +97,13 @@ ms.locfileid: "59229168"
   
 #### <a name="to-clean-up-optional"></a>清理（可选）  
   
-1.  打开**事件查看器**。  
+1. 打开**事件查看器**。  
   
-2.  导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，，然后**应用程序服务器-应用程序**。 右键单击**Analytic** ，然后选择**禁用日志**。  
+2. 导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，，然后**应用程序服务器-应用程序**。 右键单击**Analytic** ，然后选择**禁用日志**。  
   
-3.  导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**， **应用程序服务器-应用程序**，然后**分析**。 右键单击**Analytic** ，然后选择**清除日志**。  
+3. 导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**， **应用程序服务器-应用程序**，然后**分析**。 右键单击**Analytic** ，然后选择**清除日志**。  
   
-4.  单击**清除**清除这些事件。  
+4. 单击**清除**清除这些事件。  
   
 ## <a name="known-issue"></a>已知问题  
  没有中的已知的问题**事件查看器**，它可能无法解码 ETW 事件。 可能会看到错误消息，指出："事件 ID 的说明\<id > 找不到 Microsoft Windows 应用程序服务器-应用程序的源中。 本地计算机上未安装引发此事件的组件，或者安装已损坏。 你可以安装或修复本地计算机上的组件。" 如果遇到此错误，请选择**刷新**从**操作**菜单。 然后，该事件应能正确解码。  

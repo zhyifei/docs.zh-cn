@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302252"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 确定特定字符 `String` 是否与指定模式相匹配。  
@@ -68,9 +68,9 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>示例  
  下面两个 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 LIKE 和 ESCAPE 运算符确定特定字符串是否与指定模式匹配。 第一个查询搜索以字符 `Name` 开头的 `Down_`。 此查询使用了 ESCAPE 选项，因为下划线 (`_`) 为通配符。 如果不指定 ESCAPE 选项，则该查询将搜索所有以单词 `Name` 开头、后跟任意单个字符（下划线字符除外）的 `Down` 值。 这些查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1.  按照中的过程[如何：执行返回 PrimitiveType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
+1. 按照中的过程[如何：执行返回 PrimitiveType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
   
-2.  将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 方法：  
+2. 将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   

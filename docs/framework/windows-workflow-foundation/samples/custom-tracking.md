@@ -2,12 +2,12 @@
 title: 自定义跟踪
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: ca53d74f31059532118f3b5d96760a25ed72b3d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161840"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307602"
 ---
 # <a name="custom-tracking"></a>自定义跟踪
 此示例演示如何创建自定义跟踪参与者并将跟踪数据的内容写入控制台。 另外，此示例还演示如何发出使用用户定义的数据填充的 <xref:System.Activities.Tracking.CustomTrackingRecord> 对象。 基于控制台的跟踪参与者将使用代码中创建的跟踪配置文件对象来筛选由工作流发出的 <xref:System.Activities.Tracking.TrackingRecord> 对象。
@@ -133,11 +133,11 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1.  使用 Visual Studio 2010 打开 CustomTrackingSample.sln 解决方案文件。
+1. 使用 Visual Studio 2010 打开 CustomTrackingSample.sln 解决方案文件。
 
-2.  要生成解决方案，按 Ctrl+Shift+B。
+2. 要生成解决方案，按 Ctrl+Shift+B。
 
-3.  若要运行解决方案，请按 Ctrl+F5。
+3. 若要运行解决方案，请按 Ctrl+F5。
 
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

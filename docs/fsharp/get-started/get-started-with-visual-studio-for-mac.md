@@ -2,12 +2,12 @@
 title: 开始使用F#在 Visual Studio for Mac
 description: 了解如何使用F#使用 Visual Studio for mac。
 ms.date: 07/03/2018
-ms.openlocfilehash: e37600b2ca8f845ec1068a55ff1f9964d2527742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604147"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331855"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>开始使用F#在 Visual Studio for Mac
 
@@ -19,7 +19,7 @@ Visual Studio for Mac 中最基本的项目之一是控制台应用程序。  �
 
 1. 上**文件**菜单，依次指向**新的解决方案**。
 
-2.  在新建项目对话框中，有 2 个不同的模板的控制台应用程序。  在另一个-> 面向.NET Framework 的.NET。  其他模板位于.NET Core-> 应用程序以.NET Core 为目标。  对于本文，任一模板应适用。
+2. 在新建项目对话框中，有 2 个不同的模板的控制台应用程序。  在另一个-> 面向.NET Framework 的.NET。  其他模板位于.NET Core-> 应用程序以.NET Core 为目标。  对于本文，任一模板应适用。
 
 3. 在控制台应用程序下，更改C#到F#如果需要。  选择**下一步**按钮继续推进工作 ！  
 
@@ -116,7 +116,7 @@ val it : bool = true
 ## <a name="see-also"></a>请参阅
 
 - [Visual F#](../index.md)
-- [F# 教程](../tour.md)
+- [F# 概览](../tour.md)
 - [F#语言参考](../language-reference/index.md)
 - [类型推理](../language-reference/type-inference.md)
 - [符号和运算符参考](../language-reference/symbol-and-operator-reference/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231118"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330488"
 ---
 # <a name="layout"></a>布局
 本主题介绍 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 布局系统。 了解布局计算发生的方式和时间对于在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中创建用户界面非常重要。  
@@ -64,17 +64,17 @@ ms.locfileid: "59231118"
   
  每次子<xref:System.Windows.UIElement>改变其位置，它有可能触发一个新的布局系统传递。 因此，了解哪些事件会调用布局系统就很重要，因为不必要的调用可能导致应用程序性能变差。 下面描述调用布局系统时发生的过程。  
   
-1.  子<xref:System.Windows.UIElement>通过首先测量其核心属性来开始布局过程。  
+1. 子<xref:System.Windows.UIElement>通过首先测量其核心属性来开始布局过程。  
   
-2.  大小调整属性上定义<xref:System.Windows.FrameworkElement>计算，如<xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.Height%2A>，和<xref:System.Windows.FrameworkElement.Margin%2A>。  
+2. 大小调整属性上定义<xref:System.Windows.FrameworkElement>计算，如<xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.Height%2A>，和<xref:System.Windows.FrameworkElement.Margin%2A>。  
   
-3.  <xref:System.Windows.Controls.Panel>-应用特定的逻辑，如<xref:System.Windows.Controls.Dock>方向或堆叠<xref:System.Windows.Controls.StackPanel.Orientation%2A>。  
+3. <xref:System.Windows.Controls.Panel>-应用特定的逻辑，如<xref:System.Windows.Controls.Dock>方向或堆叠<xref:System.Windows.Controls.StackPanel.Orientation%2A>。  
   
-4.  测量所有子级后排列内容。  
+4. 测量所有子级后排列内容。  
   
-5.  <xref:System.Windows.Controls.Panel.Children%2A>在屏幕上绘制集合。  
+5. <xref:System.Windows.Controls.Panel.Children%2A>在屏幕上绘制集合。  
   
-6.  如果其他再次调用进程<xref:System.Windows.Controls.Panel.Children%2A>添加到集合中，<xref:System.Windows.FrameworkElement.LayoutTransform%2A>应用，或<xref:System.Windows.UIElement.UpdateLayout%2A>调用方法。  
+6. 如果其他再次调用进程<xref:System.Windows.Controls.Panel.Children%2A>添加到集合中，<xref:System.Windows.FrameworkElement.LayoutTransform%2A>应用，或<xref:System.Windows.UIElement.UpdateLayout%2A>调用方法。  
   
  以下各节更详细地定义了此过程及其调用方式。  
   

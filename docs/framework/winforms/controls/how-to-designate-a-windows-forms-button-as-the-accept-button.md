@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: 22cc9da6-b913-4e04-9554-dee443ac5c3a
-ms.openlocfilehash: 1e24e410681b03a92c8c48b187dde569eccdc1c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e608bb2cb4635ef1d29fd7a0aff3ac95fcd9af5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222141"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309818"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>如何：将 Windows 窗体按钮指定为“接受”按钮
 在任何 Windows 窗体中，可以将指定<xref:System.Windows.Forms.Button>控件成为接受按钮，也称为默认按钮。 每当用户按 ENTER 键，无论哪个窗体上的其他控件具有焦点单击默认按钮。  
@@ -26,7 +26,7 @@ ms.locfileid: "59222141"
   
 ### <a name="to-designate-the-accept-button"></a>若要指定接受按钮  
   
-1.  设置窗体的<xref:System.Windows.Forms.Form.AcceptButton%2A>属性设置为相应<xref:System.Windows.Forms.Button>控件。  
+1. 设置窗体的<xref:System.Windows.Forms.Form.AcceptButton%2A>属性设置为相应<xref:System.Windows.Forms.Button>控件。  
   
     ```vb  
     Private Sub SetDefault(ByVal myDefaultBtn As Button)  

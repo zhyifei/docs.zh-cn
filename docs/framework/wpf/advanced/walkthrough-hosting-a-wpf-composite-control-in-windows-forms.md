@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: dfff99969943a99d30f4e00b75fb5320bb3c9ad2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322831"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>演练：在 Windows 窗体中承载 WPF 复合控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用于创建应用程序的丰富环境。 但是，当您有大量投入时[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]代码，它可以更有效地扩展现有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序与[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不是从头开始重新编写。 常见情况是你想要嵌入其中一个或多个控件实现的与[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]在 Windows 窗体应用程序中。 有关自定义 WPF 控件的详细信息，请参阅[控件自定义](../controls/control-customization.md)。  
@@ -40,17 +40,17 @@ ms.locfileid: "59219598"
 ### <a name="creating-the-project"></a>创建项目  
  启动项目：  
   
-1.  启动[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，并打开**新建项目**对话框。  
+1. 启动[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，并打开**新建项目**对话框。  
   
-2.  在 Visual C# 和 Windows 类别中，选择**WPF 用户控件库**模板。  
+2. 在 Visual C# 和 Windows 类别中，选择**WPF 用户控件库**模板。  
   
-3.  将新项目命名为 `MyControls`。  
+3. 将新项目命名为 `MyControls`。  
   
-4.  对于位置，指定可以方便命名的顶层文件夹，如`WindowsFormsHostingWpfControl`。 随后，将主机应用程序放在此文件夹中。  
+4. 对于位置，指定可以方便命名的顶层文件夹，如`WindowsFormsHostingWpfControl`。 随后，将主机应用程序放在此文件夹中。  
   
-5.  单击“确定”，创建项目。 默认项目包含名为的单个控件`UserControl1`。  
+5. 单击“确定”，创建项目。 默认项目包含名为的单个控件`UserControl1`。  
   
-6.  在解决方案资源管理器，重命名`UserControl1`到`MyControl1`。  
+6. 在解决方案资源管理器，重命名`UserControl1`到`MyControl1`。  
   
  项目应具有对以下系统 DLL 的引用。 如果默认未包含其中任何 DLL，请将它们添加到项目中。  
   
@@ -105,11 +105,11 @@ ms.locfileid: "59219598"
 ### <a name="implementing-the-code-behind-file"></a>实现代码隐藏文件  
  代码隐藏文件 MyControl1.xaml.cs 实现三个基本任务：
   
-1.  处理用户单击其中一个按钮时发生的事件。  
+1. 处理用户单击其中一个按钮时发生的事件。  
   
-2.  检索从数据<xref:System.Windows.Controls.TextBox>元素，并将它们打包在一个自定义事件参数对象。  
+2. 检索从数据<xref:System.Windows.Controls.TextBox>元素，并将它们打包在一个自定义事件参数对象。  
   
-3.  引发自定义`OnButtonClick`事件，通知主机用户已完成，并将数据传递回主机。  
+3. 引发自定义`OnButtonClick`事件，通知主机用户已完成，并将数据传递回主机。  
   
  该控件还公开多个可用来更改外观的颜色和字体属性。 与不同<xref:System.Windows.Forms.Integration.WindowsFormsHost>类，该类用于承载 Windows 窗体控件<xref:System.Windows.Forms.Integration.ElementHost>类公开控件的<xref:System.Windows.Controls.Panel.Background%2A>只属性。 若要维护此代码示例和讨论的示例中之间的相似性[演练：承载 Windows 窗体复合控件在 WPF 中](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)，该控件直接公开其余属性。  
   
@@ -189,25 +189,25 @@ namespace MyControls
 ### <a name="creating-the-project"></a>创建项目  
  启动项目：  
   
-1.  启动[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，并打开**新建项目**对话框。  
+1. 启动[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，并打开**新建项目**对话框。  
   
-2.  在 Visual C# 和 Windows 类别中，选择**Windows 窗体应用程序**模板。  
+2. 在 Visual C# 和 Windows 类别中，选择**Windows 窗体应用程序**模板。  
   
-3.  将新项目命名为 `WFHost`。  
+3. 将新项目命名为 `WFHost`。  
   
-4.  对于位置，指定包含 MyControls 项目的同一顶层文件夹。  
+4. 对于位置，指定包含 MyControls 项目的同一顶层文件夹。  
   
-5.  单击“确定”，创建项目。  
+5. 单击“确定”，创建项目。  
   
  此外需要添加对包含的 DLL 的引用`MyControl1`和其他程序集。  
   
-1.  右键单击解决方案资源管理器中的项目名称并选择**添加引用**。  
+1. 右键单击解决方案资源管理器中的项目名称并选择**添加引用**。  
   
-2.  单击**浏览**选项卡，然后浏览到包含 MyControls.dll 的文件夹。 在本演练中，此文件夹位于 MyControls\bin\Debug。  
+2. 单击**浏览**选项卡，然后浏览到包含 MyControls.dll 的文件夹。 在本演练中，此文件夹位于 MyControls\bin\Debug。  
   
-3.  选择 MyControls.dll，然后依次**确定**。  
+3. 选择 MyControls.dll，然后依次**确定**。  
   
-4.  添加对下列程序集的引用。  
+4. 添加对下列程序集的引用。  
   
     -   PresentationCore  
   
@@ -222,13 +222,13 @@ namespace MyControls
 ### <a name="implementing-the-user-interface-for-the-application"></a>实现应用程序的用户界面  
  Windows 窗体应用程序的 UI 包含若干个与 WPF 复合控件进行交互的控件。  
   
-1.  在 Windows 窗体设计器中打开 Form1。  
+1. 在 Windows 窗体设计器中打开 Form1。  
   
-2.  放大窗体以适应控件。  
+2. 放大窗体以适应控件。  
   
-3.  在窗体的右上角，添加<xref:System.Windows.Forms.Panel?displayProperty=nameWithType>控件以容纳[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]复合控件。  
+3. 在窗体的右上角，添加<xref:System.Windows.Forms.Panel?displayProperty=nameWithType>控件以容纳[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]复合控件。  
   
-4.  以下代码添加到<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>到窗体控件。  
+4. 以下代码添加到<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>到窗体控件。  
   
     |名称|Text|  
     |----------|----------|  
@@ -240,7 +240,7 @@ namespace MyControls
     |groupBox6|字体粗细|  
     |groupBox7|来自控件的数据|  
   
-5.  添加以下<xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType>控件添加到<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控件。  
+5. 添加以下<xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType>控件添加到<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控件。  
   
     |GroupBox|名称|Text|  
     |--------------|----------|----------|  
@@ -261,7 +261,7 @@ namespace MyControls
     |groupBox6|radioWeightOriginal|原始|  
     |groupBox6|radioWeightBold|粗体|  
   
-6.  添加以下<xref:System.Windows.Forms.Label?displayProperty=nameWithType>到最后一个控制<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>。 这些控件显示返回的数据[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]复合控件。  
+6. 添加以下<xref:System.Windows.Forms.Label?displayProperty=nameWithType>到最后一个控制<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>。 这些控件显示返回的数据[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]复合控件。  
   
     |GroupBox|名称|文本|  
     |--------------|----------|----------|  
@@ -284,15 +284,15 @@ namespace MyControls
   
  `Form1_Load`方法在前面的代码演示了托管的一般过程[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件：  
   
-1.  创建一个新<xref:System.Windows.Forms.Integration.ElementHost>对象。  
+1. 创建一个新<xref:System.Windows.Forms.Integration.ElementHost>对象。  
   
-2.  设置控件的<xref:System.Windows.Forms.Control.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>。  
+2. 设置控件的<xref:System.Windows.Forms.Control.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>。  
   
-3.  添加<xref:System.Windows.Forms.Integration.ElementHost>控制对<xref:System.Windows.Forms.Panel>控件的<xref:System.Windows.Forms.Control.Controls%2A>集合。  
+3. 添加<xref:System.Windows.Forms.Integration.ElementHost>控制对<xref:System.Windows.Forms.Panel>控件的<xref:System.Windows.Forms.Control.Controls%2A>集合。  
   
-4.  创建的实例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件。  
+4. 创建的实例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件。  
   
-5.  通过将分配到控件中承载复合控件在窗体上的<xref:System.Windows.Forms.Integration.ElementHost>控件的<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>属性。  
+5. 通过将分配到控件中承载复合控件在窗体上的<xref:System.Windows.Forms.Integration.ElementHost>控件的<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>属性。  
   
  中的其余两行将`Form1_Load`方法附加到两个控件事件处理程序：  
   

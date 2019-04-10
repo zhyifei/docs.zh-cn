@@ -14,12 +14,12 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-ms.openlocfilehash: 9c4195cc6f26dd10f22bacb5bcba9ca2a078499c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 62e137df53d06f5aedb2701b5727c25e52f35614
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160623"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319061"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>演练：创建具有菜单合并功能和 ToolStrip 控件的 MDI 窗体
 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间支持多文档界面 (MDI) 应用程序，而 <xref:System.Windows.Forms.MenuStrip> 控件支持菜单合并。 MDI 窗体还可支持 <xref:System.Windows.Forms.ToolStrip> 控件。  
@@ -53,34 +53,34 @@ ms.locfileid: "59160623"
   
 #### <a name="to-create-the-project"></a>要创建项目  
   
-1.  创建一个名为 Windows 应用程序项目**mdi 窗体**(**文件** > **新建** > **项目** > **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**).  
+1. 创建一个名为 Windows 应用程序项目**mdi 窗体**(**文件** > **新建** > **项目** > **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**).  
   
-2.  在 Windows 窗体设计器中，选择窗体。  
+2. 在 Windows 窗体设计器中，选择窗体。  
   
-3.  在属性窗口中设置的值<xref:System.Windows.Forms.Form.IsMdiContainer%2A>到`true`。  
+3. 在属性窗口中设置的值<xref:System.Windows.Forms.Form.IsMdiContainer%2A>到`true`。  
   
 ## <a name="creating-the-main-menu"></a>创建主菜单  
  MDI 父窗体包含主菜单。 主菜单有一个名为菜单项**窗口**。 与**窗口**菜单项，可以创建子窗体。 从子窗体的菜单项合并到主菜单中。  
   
 #### <a name="to-create-the-main-menu"></a>若要创建主菜单  
   
-1.  从**工具箱**，拖动<xref:System.Windows.Forms.MenuStrip>拖到窗体控件。  
+1. 从**工具箱**，拖动<xref:System.Windows.Forms.MenuStrip>拖到窗体控件。  
   
-2.  添加<xref:System.Windows.Forms.ToolStripMenuItem>到<xref:System.Windows.Forms.MenuStrip>控制并将其命名**窗口**。  
+2. 添加<xref:System.Windows.Forms.ToolStripMenuItem>到<xref:System.Windows.Forms.MenuStrip>控制并将其命名**窗口**。  
   
-3.  选择 <xref:System.Windows.Forms.MenuStrip> 控件。  
+3. 选择 <xref:System.Windows.Forms.MenuStrip> 控件。  
   
-4.  在属性窗口中设置的值<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>属性设置为`ToolStripMenuItem1`。  
+4. 在属性窗口中设置的值<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>属性设置为`ToolStripMenuItem1`。  
   
-5.  添加到子项**窗口**菜单项，并将其命名**新建**。  
+5. 添加到子项**窗口**菜单项，并将其命名**新建**。  
   
-6.  在属性窗口中，单击**事件**。  
+6. 在属性窗口中，单击**事件**。  
   
-7.  双击<xref:System.Windows.Forms.ToolStripItem.Click>事件。  
+7. 双击<xref:System.Windows.Forms.ToolStripItem.Click>事件。  
   
      Windows 窗体设计器生成的事件处理程序<xref:System.Windows.Forms.ToolStripItem.Click>事件。  
   
-8.  以下代码插入到的事件处理程序。  
+8. 以下代码插入到的事件处理程序。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.MdiForm#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.MdiForm#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.MdiForm/VB/Form1.vb#2)]  
@@ -90,13 +90,13 @@ ms.locfileid: "59160623"
   
 #### <a name="to-add-the-toolstrippanel-control-to-the-toolbox"></a>ToolStripPanel 控件添加到工具箱  
   
-1.  打开**工具箱**，然后单击**所有 Windows 窗体**选项卡以显示可用的 Windows 窗体控件。  
+1. 打开**工具箱**，然后单击**所有 Windows 窗体**选项卡以显示可用的 Windows 窗体控件。  
   
-2.  若要打开快捷菜单中，右键单击并选择**选择项**。  
+2. 若要打开快捷菜单中，右键单击并选择**选择项**。  
   
-3.  在中**选择工具箱项**对话框中，向下滚动**名称**列，直到找到**ToolStripPanel**。  
+3. 在中**选择工具箱项**对话框中，向下滚动**名称**列，直到找到**ToolStripPanel**。  
   
-4.  选中的复选框**ToolStripPanel**，然后单击**确定**。  
+4. 选中的复选框**ToolStripPanel**，然后单击**确定**。  
   
      <xref:System.Windows.Forms.ToolStripPanel>控件会出现在**工具箱**。  
   
@@ -105,15 +105,15 @@ ms.locfileid: "59160623"
   
 #### <a name="to-define-a-child-form"></a>若要定义子窗体  
   
-1.  添加名为一个新窗体`ChildForm`到项目。  
+1. 添加名为一个新窗体`ChildForm`到项目。  
   
      有关详细信息，请参阅[如何：向项目添加 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y2xxdce3(v=vs.100))。  
   
-2.  从**工具箱**，拖动<xref:System.Windows.Forms.MenuStrip>到子窗体上的控件。  
+2. 从**工具箱**，拖动<xref:System.Windows.Forms.MenuStrip>到子窗体上的控件。  
   
-3.  单击<xref:System.Windows.Forms.MenuStrip>控件的智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，然后选择**编辑项**。  
+3. 单击<xref:System.Windows.Forms.MenuStrip>控件的智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，然后选择**编辑项**。  
   
-4.  在中**项集合编辑器**对话框框中，添加一个新<xref:System.Windows.Forms.ToolStripMenuItem>名为**ChildMenuItem**到子菜单。  
+4. 在中**项集合编辑器**对话框框中，添加一个新<xref:System.Windows.Forms.ToolStripMenuItem>名为**ChildMenuItem**到子菜单。  
   
      有关详细信息，请参阅[ToolStrip 项集合编辑器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))。  
   
@@ -121,17 +121,17 @@ ms.locfileid: "59160623"
   
 #### <a name="to-test-your-form"></a>若要测试你的窗体  
   
-1.  按 F5 编译并运行你的窗体。  
+1. 按 F5 编译并运行你的窗体。  
   
-2.  单击**窗口**菜单项以打开菜单，然后单击**新建**。  
+2. 单击**窗口**菜单项以打开菜单，然后单击**新建**。  
   
      窗体的 MDI 客户端区域中创建新的子窗体。 与主菜单合并子窗体的菜单。  
   
-3.  关闭子窗体。  
+3. 关闭子窗体。  
   
      从主菜单中删除子窗体的菜单。  
   
-4.  单击**新建**几次。  
+4. 单击**新建**几次。  
   
      子窗体自动列入**窗口**菜单项，因为<xref:System.Windows.Forms.MenuStrip>控件的<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>分配属性。  
   
@@ -140,25 +140,25 @@ ms.locfileid: "59160623"
   
 #### <a name="to-add-toolstrip-controls-to-the-mdi-parent-form"></a>若要添加到 MDI 父窗体的 ToolStrip 控件  
   
-1.  从**工具箱**，拖动<xref:System.Windows.Forms.ToolStripPanel>拖到窗体控件。  
+1. 从**工具箱**，拖动<xref:System.Windows.Forms.ToolStripPanel>拖到窗体控件。  
   
-2.  与<xref:System.Windows.Forms.ToolStripPanel>控件处于选中状态，双击<xref:System.Windows.Forms.ToolStrip>控制**工具箱**。  
+2. 与<xref:System.Windows.Forms.ToolStripPanel>控件处于选中状态，双击<xref:System.Windows.Forms.ToolStrip>控制**工具箱**。  
   
      一个<xref:System.Windows.Forms.ToolStrip>控件中创建<xref:System.Windows.Forms.ToolStripPanel>控件。  
   
-3.  选择 <xref:System.Windows.Forms.ToolStripPanel> 控件。  
+3. 选择 <xref:System.Windows.Forms.ToolStripPanel> 控件。  
   
-4.  在属性窗口更改控件的值<xref:System.Windows.Forms.Control.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.Left>。  
+4. 在属性窗口更改控件的值<xref:System.Windows.Forms.Control.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.Left>。  
   
      <xref:System.Windows.Forms.ToolStripPanel>控件停靠到窗体中，主菜单下的左侧。 在 MDI 工作区调整大小以适合<xref:System.Windows.Forms.ToolStripPanel>控件。  
   
-5.  重复步骤 1 至 4。  
+5. 重复步骤 1 至 4。  
   
      停靠新<xref:System.Windows.Forms.ToolStripPanel>到窗体顶部的控件。  
   
      <xref:System.Windows.Forms.ToolStripPanel>控件下方主菜单中，但第一个右侧停靠<xref:System.Windows.Forms.ToolStripPanel>控件。 本步骤说明了在正确定位的 z 顺序的重要性<xref:System.Windows.Forms.ToolStripPanel>控件。  
   
-6.  对两个重复步骤 1 到 4<xref:System.Windows.Forms.ToolStripPanel>控件。  
+6. 对两个重复步骤 1 到 4<xref:System.Windows.Forms.ToolStripPanel>控件。  
   
      停靠新<xref:System.Windows.Forms.ToolStripPanel>向右侧和底部的窗体控件。  
   
@@ -167,31 +167,31 @@ ms.locfileid: "59160623"
   
 #### <a name="to-arrange-toolstrippanel-controls-by-z-order"></a>若要排列按 Z 顺序的 ToolStripPanel 控件  
   
-1.  在中**视图**菜单上，单击**其他 Windows**，然后单击**文档大纲**。  
+1. 在中**视图**菜单上，单击**其他 Windows**，然后单击**文档大纲**。  
   
      排列方式在<xref:System.Windows.Forms.ToolStripPanel>控件从前面的过程是使用了非标准。 这是因为 z 顺序不正确。 使用文档大纲窗口更改控件的 z 顺序。  
   
-2.  在文档大纲窗口中，选择**ToolStripPanel4**。  
+2. 在文档大纲窗口中，选择**ToolStripPanel4**。  
   
-3.  单击向下箭头按钮重复，直到**ToolStripPanel4**位于列表的底部。  
+3. 单击向下箭头按钮重复，直到**ToolStripPanel4**位于列表的底部。  
   
      **ToolStripPanel4**控件停靠到窗体中，在其他控件下的底部。  
   
-4.  选择**ToolStripPanel2**。  
+4. 选择**ToolStripPanel2**。  
   
-5.  一次单击向下箭头按钮以在列表中第三个放置控件。  
+5. 一次单击向下箭头按钮以在列表中第三个放置控件。  
   
      **ToolStripPanel2**控件停靠到窗体，下面的主菜单和高于其他控件的顶部。  
   
-6.  选择中的各个控件**文档大纲**窗口并将它们移动到不同的 z 顺序中的位置。 请注意对停靠控件的位置的 z 顺序的影响。 使用 CTRL-Z 或**撤消**上**编辑**菜单上，若要撤消所做的更改。  
+6. 选择中的各个控件**文档大纲**窗口并将它们移动到不同的 z 顺序中的位置。 请注意对停靠控件的位置的 z 顺序的影响。 使用 CTRL-Z 或**撤消**上**编辑**菜单上，若要撤消所做的更改。  
   
 ## <a name="checkpoint"></a>检查点  
   
 #### <a name="to-test-your-form"></a>若要测试你的窗体  
   
-1.  按 F5 编译并运行你的窗体。  
+1. 按 F5 编译并运行你的窗体。  
   
-2.  单击的手柄<xref:System.Windows.Forms.ToolStrip>控件，窗体上将控件拖到不同的位置。  
+2. 单击的手柄<xref:System.Windows.Forms.ToolStrip>控件，窗体上将控件拖到不同的位置。  
   
      可以拖动<xref:System.Windows.Forms.ToolStrip>控件从一个<xref:System.Windows.Forms.ToolStripPanel>到另一个控件。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 80edd3718195fa3c47f7073136031cbddb13168b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176678"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332568"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>如何：将 Windows 窗体 DataGrid 控件绑定到数据源
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "59176678"
   
 ### <a name="to-data-bind-the-datagrid-control-programmatically"></a>若要进行数据绑定的 DataGrid 控件以编程方式  
   
-1.  编写代码以填充数据集。  
+1. 编写代码以填充数据集。  
   
      如果数据源的数据集或数据视图基于数据集表，将代码添加到窗体来填充数据集。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59176678"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2.  调用<xref:System.Windows.Forms.DataGrid>控件的<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法，将其传递的数据源和数据成员。 如果不需要显式传递的数据成员，则传递空字符串。  
+2. 调用<xref:System.Windows.Forms.DataGrid>控件的<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法，将其传递的数据源和数据成员。 如果不需要显式传递的数据成员，则传递空字符串。  
   
     > [!NOTE]
     >  如果第一次绑定网格，可以设置控件的<xref:System.Windows.Forms.DataGrid.DataSource%2A>和<xref:System.Windows.Forms.DataGrid.DataMember%2A>属性。 但是，在完成设置之后无法重置这些属性。 因此，建议始终使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法。  
@@ -101,7 +101,7 @@ ms.locfileid: "59176678"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3.  （可选）将适当的表样式和列样式添加到网格中。 如果没有表样式，您将看到表中，但其格式设置很少，且所有列均可见。  
+3. （可选）将适当的表样式和列样式添加到网格中。 如果没有表样式，您将看到表中，但其格式设置很少，且所有列均可见。  
   
 ## <a name="see-also"></a>请参阅
 

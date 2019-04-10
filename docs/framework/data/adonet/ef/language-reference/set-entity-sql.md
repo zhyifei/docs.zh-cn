@@ -2,12 +2,12 @@
 title: SET (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 28b4deac-c7e4-4f09-b428-4d352ef2dc94
-ms.openlocfilehash: dab124e139f3491c4a7a42eb90c4ffb3b3a92258
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4e2a387cf400a881dfd91c61b36ee3ce0f5a4431
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158556"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309428"
 ---
 # <a name="set-entity-sql"></a>SET (Entity SQL)
 SET 表达式用于通过生成一个新集合（其中移除了所有重复元素）将对象集合转换为一个集。  
@@ -34,9 +34,9 @@ SELECT VALUE DISTINCT c FROM c
 ## <a name="example"></a>示例  
  以下 Entity SQL 查询使用 SET 表达式将一个对象集合转换为一个集。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1.  按照中的过程[如何：执行返回 PrimitiveType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
+1. 按照中的过程[如何：执行返回 PrimitiveType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
   
-2.  将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 方法：  
+2. 将以下查询作为参数传递给 `ExecutePrimitiveTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#SET](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#set)]  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 8b2f195b2cb4c365693dc0f250a577a93cf25eee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181527"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303474"
 ---
 # <a name="large-udts"></a>大型 UDT
 通过用户定义类型 (UDT)，开发人员可通过在 SQL Server 数据库中存储公共语言运行时 (CLR) 对象来扩展服务器的标量类型系统。 UDT 可以包含多个元素并可具有多种行为，与传统别名数据类型不同，它们由单一 SQL Server 系统数据类型组成。  
@@ -24,7 +24,7 @@ ms.locfileid: "59181527"
   
  **SQL Server 联机丛书**  
   
-1.  [CLR 用户定义的类型](https://go.microsoft.com/fwlink/?LinkId=98366)  
+1. [CLR 用户定义的类型](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>使用 GetSchema 检索 UDT 架构  
  <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 的 <xref:System.Data.SqlClient.SqlConnection> 方法可返回 <xref:System.Data.DataTable> 中的数据库架构信息。 有关详细信息，请参阅[SQL Server 架构集合](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)。  

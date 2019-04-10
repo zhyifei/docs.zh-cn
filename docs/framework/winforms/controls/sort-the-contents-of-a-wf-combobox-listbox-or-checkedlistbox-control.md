@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: 4db1c133aabe39232a891183356e9c1b712f5cc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150600"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312574"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：对 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件的内容排序
 Windows 窗体控件不排序操作时它们是数据绑定。 若要显示已排序的数据，请使用支持排序的数据源，然后对其进行排序的数据源。 支持排序的数据源是数据的视图，数据查看管理器，并已排序数组。  
@@ -22,7 +22,7 @@ Windows 窗体控件不排序操作时它们是数据绑定。 若要显示已�
   
 ### <a name="to-sort-the-list"></a>若要对列表进行排序  
   
-1.  将 `Sorted` 属性设置为 `true`。  
+1. 将 `Sorted` 属性设置为 `true`。  
   
      此设置按排序顺序重新定位所有现有列表项。  
   

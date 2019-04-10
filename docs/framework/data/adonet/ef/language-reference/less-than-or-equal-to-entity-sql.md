@@ -2,12 +2,12 @@
 title: < = （小于或等于） (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 7c46da5c-fa09-4d90-adcc-c7e1b769d8e6
-ms.openlocfilehash: 9e5a61cb68895982344eadec083a697bdaff54e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7a65984da22d125bdbdd5cfadb5a2051fa3dafdc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193949"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304761"
 ---
 # <a name="-less-than-or-equal-to-entity-sql"></a>\<=（小于或等于）(Entity SQL)
 比较两个表达式以确定左侧表达式的值是否小于或等于右侧表达式的值。  
@@ -28,9 +28,9 @@ expression <= expression
 ## <a name="example"></a>示例  
  下面的 Entity SQL 查询使用 <= 比较运算符比较两个表达式，以确定左侧表达式的值是否小于或等于右侧表达式的值。 此查询基于 AdventureWorks 销售模型。 若要编译并运行此查询，请执行下列步骤：  
   
-1.  按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. 按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
   
-2.  将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
+2. 将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#LESS_OR_EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less_or_equals)]  
   

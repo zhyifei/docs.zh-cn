@@ -2,12 +2,12 @@
 title: 如何：将列表示为允许 Null 值
 ms.date: 03/30/2017
 ms.assetid: ebb71a37-1f4c-4fa7-b2d2-d903f13c4af1
-ms.openlocfilehash: e3bab3f307bcba77e0d311b96fa79d5a0d01e937
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ef8fa87963b91ef7140fbaefb657fc7904604b5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169632"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331151"
 ---
 # <a name="how-to-represent-columns-as-allowing-null-values"></a>如何：将列表示为允许 Null 值
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>属性上的<xref:System.Data.Linq.Mapping.ColumnAttribute>属性指定关联的数据库列可以保存 null 值。  
@@ -16,9 +16,9 @@ ms.locfileid: "59169632"
   
 ### <a name="to-designate-a-column-as-allowing-null-values"></a>将列指定为允许 null 值  
   
-1.  将 <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> 属性 (Property) 添加到 <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性 (Attribute)。  
+1. 将 <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> 属性 (Property) 添加到 <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性 (Attribute)。  
   
-2.  将 <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> 属性值设置为 `true`。  
+2. 将 <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> 属性值设置为 `true`。  
   
 ## <a name="see-also"></a>请参阅
 

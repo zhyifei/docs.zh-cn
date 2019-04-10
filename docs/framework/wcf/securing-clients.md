@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135771"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331801"
 ---
 # <a name="securing-clients"></a>保证客户端的安全
 在 Windows Communication Foundation (WCF)，由服务规定客户端的安全要求。 即，由服务指定要使用的安全模式以及客户端是否必须提供凭据。 因此，保证客户端安全的过程非常简单：使用从服务那里获得的元数据（如果已发布）来生成客户端。 元数据指定如何配置客户端。 如果服务要求客户端提供凭据，您必须获得能够满足要求的凭据。 本主题进一步详细讨论此过程。 有关创建安全服务的详细信息，请参阅[Securing Services](../../../docs/framework/wcf/securing-services.md)。  
@@ -33,9 +33,9 @@ ms.locfileid: "59135771"
 ## <a name="setting-a-client-credential"></a>设置客户端凭据  
  在客户端上设置客户端凭据的过程包含两个步骤：  
   
-1.  确定*客户端凭据类型*服务要求。 这是通过两种方法之一完成的。 首先，如果您拥有来自服务创建者的文档，则其中应指定了服务所要求的客户端凭据类型（如果有要求的话）。 其次，如果您仅拥有由 Svcutil.exe 工具生成的配置文件，则可以检查各个绑定，以确定要求何种凭据类型。  
+1. 确定*客户端凭据类型*服务要求。 这是通过两种方法之一完成的。 首先，如果您拥有来自服务创建者的文档，则其中应指定了服务所要求的客户端凭据类型（如果有要求的话）。 其次，如果您仅拥有由 Svcutil.exe 工具生成的配置文件，则可以检查各个绑定，以确定要求何种凭据类型。  
   
-2.  指定一个实际客户端凭据。 实际的客户端凭据称为*客户端凭据值*类型区分开来。 例如，如果客户端凭据类型指定了证书，您必须提供由该服务所信任的证书颁发机构颁发的 X.509 证书。  
+2. 指定一个实际客户端凭据。 实际的客户端凭据称为*客户端凭据值*类型区分开来。 例如，如果客户端凭据类型指定了证书，您必须提供由该服务所信任的证书颁发机构颁发的 X.509 证书。  
   
 ### <a name="determining-the-client-credential-type"></a>确定客户端凭据类型  
  如果有配置文件由 Svcutil.exe 工具生成，请检查[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)部分可以确定哪些客户端凭据类型是必需的。 该节包含指定安全需求的绑定元素。 具体而言，检查\<安全 > 的每个绑定元素。 该元素包含 `mode` 属性，该属性可设置为以下三个可能的值之一：`Message`、`Transport` 或 `TransportWithMessageCredential`。 该属性的值确定模式，而模式则确定哪个子元素有效。  

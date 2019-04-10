@@ -2,12 +2,12 @@
 title: 令牌身份验证器
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 027f6c55cb0390084f1a7926a5c79d8591090df6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 501f1801c1cb475a87c586f8bbc14146b9141047
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193396"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306243"
 ---
 # <a name="token-authenticator"></a>令牌身份验证器
 此示例演示如何实现一个自定义令牌身份验证器。 令牌身份验证器在 Windows Communication Foundation (WCF) 用于验证消息，使用的令牌验证它自身一致，并进行身份验证标识与令牌相关联。
@@ -121,7 +121,7 @@ static void Main()
 ## <a name="custom-token-authenticator"></a>自定义令牌身份验证器
  使用下列步骤来创建自定义令牌身份验证器：
 
-1.  编写自定义令牌身份验证器。
+1. 编写自定义令牌身份验证器。
 
      此示例实现一个自定义令牌身份验证器，用来验证用户名是否具有有效的电子邮件格式。 它派生 <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>。 此类中最重要的方法是 <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>。 在该方法中，身份验证器验证用户名的格式是否有效，以及主机名是否不来自恶意域。 如果用户名的格式有效，而且主机名不来自恶意域，则该示例会返回 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 实例的只读集合，这些实例随后将用来提供声明以表示存储在用户名令牌中的信息。
 
@@ -140,7 +140,7 @@ static void Main()
     }
     ```
 
-2.  提供由自定义令牌身份验证器返回的授权策略。
+2. 提供由自定义令牌身份验证器返回的授权策略。
 
      此示例提供名为 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 的 `UnconditionalPolicy` 的自己的实现，在该示例的构造函数中，此策略返回一组传入该示例的声明和标识。
 
@@ -210,7 +210,7 @@ static void Main()
     }
     ```
 
-3.  编写自定义安全令牌管理器。
+3. 编写自定义安全令牌管理器。
 
      使用 <xref:System.IdentityModel.Selectors.SecurityTokenManager>，可以为在 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法中传入该管理器的特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 对象创建 `CreateSecurityTokenAuthenticator`。 安全令牌管理器还用于创建令牌提供程序和令牌序列化程序，但是它们不包括在此示例中。 在此示例中，自定义安全令牌管理器继承自 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 类，并重写 `CreateSecurityTokenAuthenticator` 方法，这样，当所传递令牌的要求指示请求用户名身份验证器时，将返回自定义用户名令牌身份验证器。
 
@@ -240,7 +240,7 @@ static void Main()
     }
     ```
 
-4.  编写自定义服务凭据。
+4. 编写自定义服务凭据。
 
      使用服务凭据类，可以表示为服务配置的凭据，并创建一个用来获取令牌身份验证器、令牌提供程序和令牌序列化程序的安全令牌管理器。
 
@@ -266,7 +266,7 @@ static void Main()
     }
     ```
 
-5.  将服务配置为使用自定义服务凭据。
+5. 将服务配置为使用自定义服务凭据。
 
      为了让服务使用自定义服务凭据，我们在捕获已在默认服务凭据中预先配置的服务证书之后删除了默认的服务凭据类，将新的服务凭据实例配置为使用预先配置的服务证书，并将这个新服务凭据实例添加到服务行为中。
 
@@ -324,40 +324,40 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例
 
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+2. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
 
-1.  从 Visual Studio 2012 命令提示符下使用管理员特权打开内示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。
+1. 从 Visual Studio 2012 命令提示符下使用管理员特权打开内示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。
 
     > [!NOTE]
     >  Setup.bat 批处理文件旨在为从 Visual Studio 2012 命令提示运行。 在 Visual Studio 2012 命令提示符点设置为包含 Setup.bat 脚本所需的可执行文件的目录路径环境变量。  
   
-2.  启动 service\bin 中的 service.exe。  
+2. 启动 service\bin 中的 service.exe。  
   
-3.  启动 \client\bin 中的 client.exe。 客户端活动将显示在客户端控制台应用程序上。  
+3. 启动 \client\bin 中的 client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
-1.  在服务计算机上为服务二进制文件创建一个目录。  
+1. 在服务计算机上为服务二进制文件创建一个目录。  
   
-2.  将服务程序文件复制到服务计算机上的服务目录。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
+2. 将服务程序文件复制到服务计算机上的服务目录。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-3.  必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新服务的 App.config 文件才能反映这个新证书名称。 如果您将 `%SERVER_NAME%` 变量设置为将在其上运行服务的计算机的完全限定主机名，则可以使用 Setup.bat 来创建一个这样的证书。 请注意，setup.bat 文件必须在运行从开发人员命令提示符处使用管理员特权打开 Visual studio。  
+3. 必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新服务的 App.config 文件才能反映这个新证书名称。 如果您将 `%SERVER_NAME%` 变量设置为将在其上运行服务的计算机的完全限定主机名，则可以使用 Setup.bat 来创建一个这样的证书。 请注意，setup.bat 文件必须在运行从开发人员命令提示符处使用管理员特权打开 Visual studio。  
   
-4.  将服务器证书复制到客户端的 CurrentUser-TrustedPeople 存储中。 除非服务器证书是由客户端的受信任颁发者颁发的，否则没有必要这样做。  
+4. 将服务器证书复制到客户端的 CurrentUser-TrustedPeople 存储中。 除非服务器证书是由客户端的受信任颁发者颁发的，否则没有必要这样做。  
   
-5.  在服务计算机的 App.config 文件中，更改基址的值以指定一个完全限定的计算机名称，而不是 localhost。  
+5. 在服务计算机的 App.config 文件中，更改基址的值以指定一个完全限定的计算机名称，而不是 localhost。  
   
-6.  在服务计算机上，在命令提示符下运行 service.exe。  
+6. 在服务计算机上，在命令提示符下运行 service.exe。  
   
-7.  将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
+7. 将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
   
-8.  在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  
+8. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  
   
 9. 在客户端计算机上，在命令提示符下启动 Client.exe。  
   
@@ -365,4 +365,4 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
-1.  运行完示例后运行示例文件夹中的 Cleanup.bat。  
+1. 运行完示例后运行示例文件夹中的 Cleanup.bat。  

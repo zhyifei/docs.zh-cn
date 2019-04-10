@@ -2,12 +2,12 @@
 title: SQL Server 数据类型和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 90589f54728ad5e887b96f37f96ff31928c680ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9e81e54f223d35a3db9c943edf6f9f9b24110faa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168410"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326302"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 数据类型和 ADO.NET
 SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在的数据丢失。 为了保持数据的完整性，适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 提供了用于处理 SQL Server 数据的类型化访问器方法。 可以使用 <xref:System.Data.SqlDbType> 类中的枚举来指定 <xref:System.Data.SqlClient.SqlParameter> 数据类型。  
@@ -20,7 +20,7 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
   
  **SQL Server 联机丛书**  
   
-1.  [数据类型（数据库引擎）](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1. [数据类型（数据库引擎）](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>本节内容  
  [SqlTypes 和数据集](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  

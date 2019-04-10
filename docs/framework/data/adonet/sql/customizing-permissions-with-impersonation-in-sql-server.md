@@ -2,12 +2,12 @@
 title: 在 SQL Server 中使用模拟自定义权限
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 9c3e84e8a432a54cdcd2cbe4e01dada870cd1366
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202789"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326965"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>在 SQL Server 中使用模拟自定义权限
 许多应用程序都使用存储过程来访问数据，依靠所属权链接来限制对基表的访问。 您可以授予针对存储过程的 EXECUTE 权限，撤消或拒绝针对基表的权限。 如果存储过程和表具有相同的所有者，则 SQL Server 不检查调用方的权限。 但是，如果对象具有不同的所有者或使用动态 SQL，则所属权链接不起作用。  
@@ -34,15 +34,15 @@ EXECUTE AS USER = 'userName';
   
  在过程中使用 EXECUTE AS 子句包含三个步骤。  
   
-1.  在数据库中创建一个不映射到登录名的代理用户。 这不是必需的，但它有助于管理权限。  
+1. 在数据库中创建一个不映射到登录名的代理用户。 这不是必需的，但它有助于管理权限。  
   
 ```  
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
-1.  授予代理用户必要的权限。  
+1. 授予代理用户必要的权限。  
   
-2.  将 EXECUTE AS 子句添加到存储过程或用户定义函数中。  
+2. 将 EXECUTE AS 子句添加到存储过程或用户定义函数中。  
   
 ```  
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  

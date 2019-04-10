@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 1337dac083ad9d52a4cfd99bddee80baebf474de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202139"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295947"
 ---
 # <a name="animation-tips-and-tricks"></a>动画提示和技巧
 使用中的动画时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，有一些提示和技巧，可使动画更好地执行，并避免挫折。  
@@ -71,9 +71,9 @@ ms.locfileid: "59202139"
   
  如果单击第二个按钮时第一个<xref:System.Windows.Media.Animation.Storyboard>是播放，可能会出现以下行为：  
   
-1.  第一个情节提要结束，并将矩形送回其原始位置，因为该动画<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>的<xref:System.Windows.Media.Animation.FillBehavior.Stop>。  
+1. 第一个情节提要结束，并将矩形送回其原始位置，因为该动画<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>的<xref:System.Windows.Media.Animation.FillBehavior.Stop>。  
   
-2.  第二个情节提要生效，从当前位置（现在为 0）播放动画到 500。  
+2. 第二个情节提要生效，从当前位置（现在为 0）播放动画到 500。  
   
  **但这是不会发生什么情况。** 矩形没有跳回，而是继续向右移动。 这是因为第二个动画使用第一个动画的当前值作为其起始值，并从该值开始播放动画到 500。 当第二个动画替换第一个，因为<xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior>使用时，<xref:System.Windows.Media.Animation.FillBehavior>第一个动画并不重要。  
   

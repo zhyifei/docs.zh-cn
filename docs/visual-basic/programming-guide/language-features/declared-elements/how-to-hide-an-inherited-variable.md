@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842507"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331697"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>如何：隐藏继承的变量 (Visual Basic)
 在派生的类继承其基类的所有定义。 如果你想要定义为基的类的元素使用相同的名称的变量，则可以隐藏，或者*卷影*，当在派生类中定义您的变量时该基类元素。 如果执行此操作时，派生类中的代码访问您的变量，除非显式绕过隐藏机制。  
@@ -25,11 +25,11 @@ ms.locfileid: "58842507"
   
 ### <a name="to-hide-an-inherited-variable"></a>若要隐藏继承的变量  
   
-1.  请确保你想要隐藏的变量在类级别 （任何过程之外） 声明。 否则不需要将其隐藏。  
+1. 请确保你想要隐藏的变量在类级别 （任何过程之外） 声明。 否则不需要将其隐藏。  
   
-2.  在派生类中，编写[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)声明您的变量。 与继承的变量使用相同的名称。  
+2. 在派生类中，编写[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)声明您的变量。 与继承的变量使用相同的名称。  
   
-3.  包括[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)声明中的关键字。  
+3. 包括[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)声明中的关键字。  
   
      当在派生类中的代码引用的变量名称时，编译器将解析到您的变量引用。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "58842507"
   
 ## <a name="see-also"></a>请参阅
 
-- [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [在 Visual Basic 中隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Visual Basic 中的隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [隐藏和重写之间的差异](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [如何：隐藏与您的变量同名的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [如何：隐藏与变量同名的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [如何：访问被派生类隐藏的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [继承的基础知识](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [继承基础知识](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

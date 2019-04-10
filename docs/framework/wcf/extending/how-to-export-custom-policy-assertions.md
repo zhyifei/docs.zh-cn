@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 4e3835b0d699d58eb55e06ed3ade1328ec30b2ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213604"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306217"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>如何：导出自定义策略断言
 策略断言说明服务终结点的功能和要求。 服务应用程序可以在服务元数据中使用自定义策略断言，来将终结点、绑定或协定自定义信息传递到客户端应用程序。 Windows Communication Foundation (WCF) 可用于导出 WSDL 终结点、 操作或消息使用者，具体的功能和需求进行通信的时间取决于绑定中附加策略表达式中的断言。  
@@ -23,28 +23,28 @@ ms.locfileid: "59213604"
   
 ### <a name="to-export-custom-policy-assertions"></a>导出自定义策略断言  
   
-1.  在 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 上实现 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> 接口。 下面的代码示例演示了在绑定级别实现自定义策略断言。  
+1. 在 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 上实现 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> 接口。 下面的代码示例演示了在绑定级别实现自定义策略断言。  
   
      [!code-csharp[CustomPolicySample#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
      [!code-vb[CustomPolicySample#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
   
-2.  以编程方式或者使用应用程序配置文件将绑定元素插入到终结点绑定。 请参见下面的过程。  
+2. 以编程方式或者使用应用程序配置文件将绑定元素插入到终结点绑定。 请参见下面的过程。  
   
 ### <a name="to-insert-a-binding-element-using-an-application-configuration-file"></a>使用应用程序配置文件插入绑定元素  
   
-1.  为自定义策略断言绑定元素实现 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>。  
+1. 为自定义策略断言绑定元素实现 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>。  
   
-2.  将绑定元素扩展添加到配置文件使用[ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md)元素。  
+2. 将绑定元素扩展添加到配置文件使用[ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md)元素。  
   
-3.  使用 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 生成一个自定义绑定。  
+3. 使用 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 生成一个自定义绑定。  
   
 ### <a name="to-insert-a-binding-element-programmatically"></a>以编程方式插入绑定元素  
   
-1.  创建一个新的 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> 并将其添加到 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>。  
+1. 创建一个新的 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> 并将其添加到 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>。  
   
-2.  将步骤 1 中的自定义绑定添加 到一个新的终结点，并通过调用 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 方法将该新服务终结点添加到 <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>。  
+2. 将步骤 1 中的自定义绑定添加 到一个新的终结点，并通过调用 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 方法将该新服务终结点添加到 <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>。  
   
-3.  打开 <xref:System.ServiceModel.ServiceHost>。 下面的代码示例演示如何创建自定义绑定以及如何以编程方式插入绑定元素。  
+3. 打开 <xref:System.ServiceModel.ServiceHost>。 下面的代码示例演示如何创建自定义绑定以及如何以编程方式插入绑定元素。  
   
      [!code-csharp[s_imperative#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  

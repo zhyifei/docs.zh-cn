@@ -2,12 +2,12 @@
 title: 任务 2：承载工作流设计器
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218701"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299262"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>任务 2：承载工作流设计器
 本主题介绍用于托管的实例的过程[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]Windows Presentation Foundation (WPF) 应用程序中。  
@@ -16,19 +16,19 @@ ms.locfileid: "59218701"
   
 ### <a name="to-host-the-workflow-designer"></a>承载工作流设计器  
   
-1.  打开的 HostingApplication 项目中创建[任务 1:创建新的 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)。  
+1. 打开的 HostingApplication 项目中创建[任务 1:创建新的 Windows Presentation Foundation 应用程序](task-1-create-a-new-wpf-app.md)。  
   
-2.  调整窗口的大小，以便更轻松地使用 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]。 若要执行此操作，请选择**MainWindow**在设计器中，按 F4 以显示**属性**窗口中，然后在**布局**部分中，将**宽度**值为 600 和**高度**为值 350。  
+2. 调整窗口的大小，以便更轻松地使用 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]。 若要执行此操作，请选择**MainWindow**在设计器中，按 F4 以显示**属性**窗口中，然后在**布局**部分中，将**宽度**值为 600 和**高度**为值 350。  
   
-3.  通过选择设置网格名称**网格**设计器中的面板 (单击内部框中**MainWindow**) 和设置**名称**顶部的属性**属性**窗口为"grid1"。  
+3. 通过选择设置网格名称**网格**设计器中的面板 (单击内部框中**MainWindow**) 和设置**名称**顶部的属性**属性**窗口为"grid1"。  
   
-4.  在中**属性**窗口中，单击省略号 (**...**) 旁边`ColumnDefinitions`以打开**集合编辑器**对话框。  
+4. 在中**属性**窗口中，单击省略号 (**...**) 旁边`ColumnDefinitions`以打开**集合编辑器**对话框。  
   
-5.  在中**集合编辑器**对话框中，单击**添加**按钮三次以向布局中插入三个列。 第一列将包含**工具箱**，第二列将承载[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]，第三列用于属性检查器。  
+5. 在中**集合编辑器**对话框中，单击**添加**按钮三次以向布局中插入三个列。 第一列将包含**工具箱**，第二列将承载[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]，第三列用于属性检查器。  
   
-6.  设置`Width`属性中间栏中的值"4 *"。  
+6. 设置`Width`属性中间栏中的值"4 *"。  
   
-7.  单击“确定”  以保存更改。 以下 XAML 将添加到 MainWindow.xaml 文件中：  
+7. 单击“确定”  以保存更改。 以下 XAML 将添加到 MainWindow.xaml 文件中：  
   
     ```xml  
     <Grid Name="grid1">  
@@ -40,7 +40,7 @@ ms.locfileid: "59218701"
     </Grid>  
     ```  
   
-8.  在中**解决方案资源管理器**中，右击 MainWindow.xaml 并选择**查看代码**。 按照以下这些步骤修改代码：  
+8. 在中**解决方案资源管理器**中，右击 MainWindow.xaml 并选择**查看代码**。 按照以下这些步骤修改代码：  
   
     1.  添加下列命名空间：  
   

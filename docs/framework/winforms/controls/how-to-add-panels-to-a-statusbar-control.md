@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 9adcbeb29ca7d3d9bad1ad9cdb6279d826af1f6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227790"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319854"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>如何：向 StatusBar 控件添加面板
 > [!IMPORTANT]
@@ -25,7 +25,7 @@ ms.locfileid: "59227790"
   
 ### <a name="to-add-panels-to-a-status-bar"></a>若要添加到状态栏面板  
   
-1.  在过程中，通过将它们添加到创建状态栏面板<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。 指定属性设置为通过其索引的各个面板传递<xref:System.Windows.Forms.StatusBar.Panels%2A>属性。  
+1. 在过程中，通过将它们添加到创建状态栏面板<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。 指定属性设置为通过其索引的各个面板传递<xref:System.Windows.Forms.StatusBar.Panels%2A>属性。  
   
      在下面的代码示例中，将路径设置图标的位置是**我的文档**文件夹。 使用此位置是因为您可以假定大多数运行 Windows 操作系统的计算机将包含该文件夹。 选择此位置还允许具有最少的系统访问级别的用户安全地运行应用程序。 下面的示例要求具有的窗体<xref:System.Windows.Forms.StatusBar>已添加的控件。  
   

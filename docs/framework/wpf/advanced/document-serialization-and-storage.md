@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 519d3aa218fca734a9159503b4107bdbcfc31652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215945"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295895"
 ---
 # <a name="document-serialization-and-storage"></a>文档序列化和存储
 Microsoft.NET Framework 提供了功能强大的环境，用于创建和显示高质量的文档。  增强的功能，支持固定文档和流文档以及高级查看控件，结合功能强大的二维和三维图形功能需要.NET Framework 应用程序到新的质量和用户体验级别。  能够灵活地管理文档的内存中表示形式是.NET Framework 中，一项主要功能并能够高效保存和加载数据存储区中的文档是几乎每个应用程序的需求。  将文档从内部的内存中表示形式转换为外部数据存储的过程称为序列化。  反之，读取数据存储并重新创建原始内存中实例的过程则称为反序列化。  
@@ -65,11 +65,11 @@ Microsoft.NET Framework 提供了功能强大的环境，用于创建和显示�
 ### <a name="creating-a-plug-in-serializer"></a>创建插件序列化程序  
  插件序列化程序和链接序列化程序使用同一公开的公共方法和事件，并且可同样设计为以同步或异步方式运行。  创建插件序列化程序通常应执行下列三个基本步骤：  
   
-1.  首先以链接序列化程序的形式实现和调试序列化程序。  开始时通过创建直接编译和链接到测试应用程序的序列化程序，可以提供对断点以及其他有助于测试的调试服务的完全访问权限。  
+1. 首先以链接序列化程序的形式实现和调试序列化程序。  开始时通过创建直接编译和链接到测试应用程序的序列化程序，可以提供对断点以及其他有助于测试的调试服务的完全访问权限。  
   
-2.  完全测试序列化程序之后，<xref:System.Windows.Documents.Serialization.ISerializerFactory>接口添加以创建插件。  <xref:System.Windows.Documents.Serialization.ISerializerFactory>接口允许对所有.NET Framework 对象的完全访问，其中包括逻辑树中，<xref:System.Windows.UIElement>对象， <xref:System.Windows.Documents.IDocumentPaginatorSource>，和<xref:System.Windows.Media.Visual>元素。  此外<xref:System.Windows.Documents.Serialization.ISerializerFactory>提供相同的同步和异步方法和链接序列化程序使用的事件。  由于输出大型文档需要一定时间，因此推荐使用异步操作以维持响应用户交互，并在数据存储出现问题时提供“取消”选项。  
+2. 完全测试序列化程序之后，<xref:System.Windows.Documents.Serialization.ISerializerFactory>接口添加以创建插件。  <xref:System.Windows.Documents.Serialization.ISerializerFactory>接口允许对所有.NET Framework 对象的完全访问，其中包括逻辑树中，<xref:System.Windows.UIElement>对象， <xref:System.Windows.Documents.IDocumentPaginatorSource>，和<xref:System.Windows.Media.Visual>元素。  此外<xref:System.Windows.Documents.Serialization.ISerializerFactory>提供相同的同步和异步方法和链接序列化程序使用的事件。  由于输出大型文档需要一定时间，因此推荐使用异步操作以维持响应用户交互，并在数据存储出现问题时提供“取消”选项。  
   
-3.  创建插件序列化程序之后，实现安装脚本以分发和安装（以及卸载）插件（请参阅上面的“[安装插件序列化程序](#InstallingPluginSerializers)”）。  
+3. 创建插件序列化程序之后，实现安装脚本以分发和安装（以及卸载）插件（请参阅上面的“[安装插件序列化程序](#InstallingPluginSerializers)”）。  
   
 ## <a name="see-also"></a>请参阅
 

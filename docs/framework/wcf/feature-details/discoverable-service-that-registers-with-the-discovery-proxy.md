@@ -2,36 +2,36 @@
 title: 如何：实现向发现代理注册的可发现的服务
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177822"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302176"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>如何：实现向发现代理注册的可发现的服务
 本主题是讨论如何实现发现代理的四个主题中的第二个主题。 在上一主题中，[如何：实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，实现发现代理。 在本主题中，创建将发送公告消息的 WCF 服务 (`Hello`和`Bye`) 到发现代理，从而导致它来注册和注销本身向发现代理。
 
 ### <a name="to-define-the-service-contract"></a>定义服务协定
 
-1.  将一个新控制台应用程序项目添加到名为 `DiscoveryProxyExample` 的 `Service` 解决方案。
+1. 将一个新控制台应用程序项目添加到名为 `DiscoveryProxyExample` 的 `Service` 解决方案。
 
-2.  添加对下列程序集的引用：
+2. 添加对下列程序集的引用：
 
     1.  System.ServiceModel
 
     2.  System.ServiceModel.Discovery
 
-3.  将新类添加到名为 `CalculatorService` 的项目中。
+3. 将新类添加到名为 `CalculatorService` 的项目中。
 
-4.  添加下面的 using 语句。
+4. 添加下面的 using 语句。
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5.  在 CalculatorService.cs 中，定义服务协定。
+5. 在 CalculatorService.cs 中，定义服务协定。
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ ms.locfileid: "59177822"
     }
     ```
 
-6.  同样，在 CalculatorService.cs 中，实现服务协定。
+6. 同样，在 CalculatorService.cs 中，实现服务协定。
 
     ```csharp
     // Service class which implements the service contract.
@@ -91,9 +91,9 @@ ms.locfileid: "59177822"
 
 ### <a name="to-host-the-service"></a>承载服务
 
-1.  打开在创建项目时生成的 Program.cs 文件。
+1. 打开在创建项目时生成的 Program.cs 文件。
 
-2.  添加下面的 using 语句。
+2. 添加下面的 using 语句。
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ ms.locfileid: "59177822"
     using System.ServiceModel.Discovery;
     ```
 
-3.  在 `Main()` 方法中，添加下面的代码：
+3. 在 `Main()` 方法中，添加下面的代码：
 
     ```csharp
     // Define the base address of the service

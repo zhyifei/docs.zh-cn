@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
-ms.openlocfilehash: 61a234a679d9937cb38a753a3d73f2ecc9ec891a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 10554145de9725bb4cfc655ed88195dce28d739c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190361"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321609"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>演练：使用 XAML 在 WPF 中承载 Windows 窗体控件
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 许多控件提供了丰富的功能集。 但是，您可能有时想要使用[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]上的控件在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]页。 例如，可能有大量现有投入[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件，或者您可能需[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件，用于提供的独特功能。  
@@ -26,29 +26,29 @@ ms.locfileid: "59190361"
   
 #### <a name="to-host-the-maskedtextbox-control"></a>承载 MaskedTextBox 控件  
   
-1.  创建一个名为的 WPF 应用程序项目`HostingWfInWpfWithXaml`。  
+1. 创建一个名为的 WPF 应用程序项目`HostingWfInWpfWithXaml`。  
   
-2.  添加对下列程序集的引用。  
+2. 添加对下列程序集的引用。  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms  
   
-3.  打开 MainWindow.xaml 中的[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
+3. 打开 MainWindow.xaml 中的[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
   
-4.  在<xref:System.Windows.Window>元素中，添加以下命名空间映射。 `wf`命名空间映射建立对包含在 Windows 窗体控件的程序集的引用。  
+4. 在<xref:System.Windows.Window>元素中，添加以下命名空间映射。 `wf`命名空间映射建立对包含在 Windows 窗体控件的程序集的引用。  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  在<xref:System.Windows.Controls.Grid>添加以下 XAML 元素。  
+5. 在<xref:System.Windows.Controls.Grid>添加以下 XAML 元素。  
   
      <xref:System.Windows.Forms.MaskedTextBox>控件被创建为的子<xref:System.Windows.Forms.Integration.WindowsFormsHost>控件。  
   
      [!code-xaml[HostingWfInWpfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWpfWithXaml/CSharp/HostingWfInWpf/Window1.xaml#3)]  
   
-6.  按 F5 生成并运行该应用程序。  
+6. 按 F5 生成并运行该应用程序。  
   
 ## <a name="see-also"></a>请参阅
 

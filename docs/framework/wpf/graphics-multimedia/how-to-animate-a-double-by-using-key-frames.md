@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 33d567b1bb91060a5b0e1da67236a27815262474
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208770"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305580"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>如何：使用关键帧对双精度值进行动画处理
 此示例演示如何采用的属性的值进行动画处理<xref:System.Double>使用关键帧。  
@@ -22,11 +22,11 @@ ms.locfileid: "59208770"
 ## <a name="example"></a>示例  
  以下示例将在屏幕上移动矩形。 该示例使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>类进行动画处理<xref:System.Windows.Media.TranslateTransform.X%2A>的属性<xref:System.Windows.Media.TranslateTransform>应用于<xref:System.Windows.Shapes.Rectangle>。 此无限重复的动画通过以下方式使用三个关键帧：  
   
-1.  在前三秒中，使用的实例<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>类将矩形沿路径以稳定速率从其起始位置到 500 位置。 之类的线性关键帧<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>创建值之间平滑的线性转换。  
+1. 在前三秒中，使用的实例<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>类将矩形沿路径以稳定速率从其起始位置到 500 位置。 之类的线性关键帧<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>创建值之间平滑的线性转换。  
   
-2.  在第四秒结束时，使用的实例<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>类将矩形突然移动到下一个位置。 之类的离散关键帧<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>值之间创建突然跳跃。 在该示例中，矩形位于起始位置，然后突然出现在 500 位置。  
+2. 在第四秒结束时，使用的实例<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>类将矩形突然移动到下一个位置。 之类的离散关键帧<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>值之间创建突然跳跃。 在该示例中，矩形位于起始位置，然后突然出现在 500 位置。  
   
-3.  在最后两秒内，使用的实例<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>类，以将该矩形移回其起始位置。 之类的自由绘制曲线关键帧<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>创建的变量的值会根据之间转换<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>属性。 在本示例中，矩形开始时缓慢移动，然后以指数级加速，直到时间段结束。  
+3. 在最后两秒内，使用的实例<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>类，以将该矩形移回其起始位置。 之类的自由绘制曲线关键帧<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>创建的变量的值会根据之间转换<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>属性。 在本示例中，矩形开始时缓慢移动，然后以指数级加速，直到时间段结束。  
   
  [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]

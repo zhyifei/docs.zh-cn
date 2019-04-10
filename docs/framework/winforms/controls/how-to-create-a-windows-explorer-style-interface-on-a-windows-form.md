@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: e559702d5fd7f0f56c7b2b010713e3129504746a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192129"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327368"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>如何：在 Windows 窗体上创建 Windows 资源管理器样式的界面
 Windows 资源管理器是由于其比较熟悉的应用程序的一个常见用户界面选择。  
@@ -25,9 +25,9 @@ Windows 资源管理器是由于其比较熟悉的应用程序的一个常见用
   
 ### <a name="to-create-a-windows-explorer-style-windows-form"></a>若要创建 Windows 资源管理器样式 Windows 窗体  
   
-1.  创建新的 Windows 应用程序项目 (**文件** > **新建** > **项目** > **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**)。  
+1. 创建新的 Windows 应用程序项目 (**文件** > **新建** > **项目** > **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**)。  
   
-2.  从**工具箱**:  
+2. 从**工具箱**:  
   
     1.  拖动<xref:System.Windows.Forms.SplitContainer>控件拖到窗体上的。  
   
@@ -35,14 +35,14 @@ Windows 资源管理器是由于其比较熟悉的应用程序的一个常见用
   
     3.  拖动<xref:System.Windows.Forms.ListView>控制**SplitterPanel2** (的面板<xref:System.Windows.Forms.SplitContainer>控制标记**Panel2**)。  
   
-3.  通过按 CTRL 键并依次单击选择所有三个控件。 当选择<xref:System.Windows.Forms.SplitContainer>控件中，单击拆分条中，而不是面板。  
+3. 通过按 CTRL 键并依次单击选择所有三个控件。 当选择<xref:System.Windows.Forms.SplitContainer>控件中，单击拆分条中，而不是面板。  
   
     > [!NOTE]
     >  不要使用**全**命令**编辑**菜单。 如果这样做下, 一步中所需的属性不会出现在**属性**窗口。  
   
-4.  在“属性”  窗口中，将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。  
+4. 在“属性”  窗口中，将 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
-5.  按 F5 运行该应用程序。  
+5. 按 F5 运行该应用程序。  
   
      窗体显示类似于在 Windows 资源管理器的两部分组成用户界面。  
   

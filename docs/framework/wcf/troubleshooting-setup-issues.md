@@ -2,12 +2,12 @@
 title: 安装问题疑难解答
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 41e266ba5b54bfb37313f9588515f7ae9cc6f79d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69242ec745f2a5b945ae64eb558070dbf0d39c10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153070"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299613"
 ---
 # <a name="troubleshooting-setup-issues"></a>安装问题疑难解答
 本主题介绍如何对 Windows Communication Foundation (WCF) 设置问题进行故障排除。  
@@ -30,13 +30,13 @@ ms.locfileid: "59153070"
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>在安装 .NET Framework 3.0 软件包过程中 WMI Service Corruption 阻止 Windows Communication Foundation WMI 提供程序的安装  
  WMI Service Corruption 可能阻止 Windows Communication Foundation WMI 提供程序的安装。 在安装过程中，Windows Communication Foundation 安装程序无法使用 mofcomp.exe 组件注册 WCF .mof 文件。 下面列出了几个症状：  
   
-1.  .NET Framework 3.0 安装成功完成，但未注册 WCF WMI 提供程序。  
+1. .NET Framework 3.0 安装成功完成，但未注册 WCF WMI 提供程序。  
   
-2.  应用程序事件日志中显示一个错误事件，该事件指示在注册 WCF 的 WMI 提供程序或运行 mofcomp.exe 时出现问题。  
+2. 应用程序事件日志中显示一个错误事件，该事件指示在注册 WCF 的 WMI 提供程序或运行 mofcomp.exe 时出现问题。  
   
-3.  用户的 %temp% 目录中名为 dd_wcf_retCA* 的安装日志文件包含对注册 WCF WMI 提供程序失败的引用。  
+3. 用户的 %temp% 目录中名为 dd_wcf_retCA* 的安装日志文件包含对注册 WCF WMI 提供程序失败的引用。  
   
-4.  事件日志或安装跟踪日志文件中可能会列出以下异常之一：  
+4. 事件日志或安装跟踪日志文件中可能会列出以下异常之一：  
   
      ServiceModelReg [11:09:59:046]:System.ApplicationException:意外的结果 3 执行 E:\WINDOWS\system32\wbem\mofcomp.exe 使用"E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59153070"
   
  若要解决前面说明的问题，必须按照以下步骤操作。  
   
-1.  运行[WMI 诊断实用程序，版本 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)以修复 WMI 服务。 有关使用此工具的详细信息，请参阅[WMI 诊断实用程序](https://go.microsoft.com/fwlink/?LinkId=94686)主题。  
+1. 运行[WMI 诊断实用程序，版本 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)以修复 WMI 服务。 有关使用此工具的详细信息，请参阅[WMI 诊断实用程序](https://go.microsoft.com/fwlink/?LinkId=94686)主题。  
   
  使用修复安装.NET Framework 3.0**添加/删除程序**小程序位于**控制面板**，或卸载/重新安装.NET Framework 3.0。  
   

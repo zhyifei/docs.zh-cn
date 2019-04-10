@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: c43935cd53d1b58ce695164e957b4b5376d52536
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209809"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318424"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 层应用程序中的数据检索和 CUD 操作 (LINQ to SQL)
 在将实体对象（如 Customers 或 Orders）通过网络序列化到客户端时，这些实体会与其数据上下文分离。 数据上下文不再跟踪这些实体的更改或它们与其他对象的关联。 只要客户端只读取数据，这就不会成为问题。 要使客户端可以向数据库添加新行，也比较容易做到。 但是，如果应用程序要求客户端能够更新或删除数据，则必须在调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> 之前将实体附加到新的数据上下文。 此外，如果对原始值使用开放式并发检查，则还需要一种为数据库同时提供原始实体和修改后的实体的方式。 使用 `Attach` 方法可以在实体分离后将其放入新的数据上下文中。  
@@ -394,11 +394,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="state"></a>状态  
  在将一个实体对象附加到 <xref:System.Data.Linq.DataContext> 实例之后，会将该对象视为处于 `PossiblyModified` 状态。 可通过三种方式强制所附加的对象被视为 `Modified`。  
   
-1.  将对象作为未修改的对象进行附加，然后直接修改其字段。  
+1. 将对象作为未修改的对象进行附加，然后直接修改其字段。  
   
-2.  使用接受当前对象实例和原始对象实例作为参数的 <xref:System.Data.Linq.Table%601.Attach%2A> 重载附加对象。 这会向更改跟踪程序提供旧值和新值，以便跟踪程序自动了解哪些字段已更改。  
+2. 使用接受当前对象实例和原始对象实例作为参数的 <xref:System.Data.Linq.Table%601.Attach%2A> 重载附加对象。 这会向更改跟踪程序提供旧值和新值，以便跟踪程序自动了解哪些字段已更改。  
   
-3.  使用接受另一个布尔型参数（设置为 true）的 <xref:System.Data.Linq.Table%601.Attach%2A> 重载附加对象。 这将告诉更改跟踪程序将该对象视为已修改的对象，而无需提供任何原始值。 在此方式中，对象必须具有一个版本/时间戳字段。  
+3. 使用接受另一个布尔型参数（设置为 true）的 <xref:System.Data.Linq.Table%601.Attach%2A> 重载附加对象。 这将告诉更改跟踪程序将该对象视为已修改的对象，而无需提供任何原始值。 在此方式中，对象必须具有一个版本/时间戳字段。  
   
  有关详细信息，请参阅[对象状态和更改跟踪](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)。  
   

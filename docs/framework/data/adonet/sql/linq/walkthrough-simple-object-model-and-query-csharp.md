@@ -2,12 +2,12 @@
 title: 演练：简单对象模型和查询 (C#)
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155124"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309454"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>演练：简单对象模型和查询 (C#)
 本演练提供了复杂性最小的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将创建一个可为示例 Northwind 数据库中的 Customers 表建模的实体类。 然后您将创建一个简单查询，用于列出位于伦敦的客户。  
@@ -44,30 +44,30 @@ ms.locfileid: "59155124"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
-1.  在 Visual Studio**文件**菜单，依次指向**新建**，然后单击**项目**。  
+1. 在 Visual Studio**文件**菜单，依次指向**新建**，然后单击**项目**。  
   
-2.  在中**项目类型**窗格**新项目**对话框中，单击**Visual C#** 。  
+2. 在中**项目类型**窗格**新项目**对话框中，单击**Visual C#** 。  
   
-3.  在“模板”窗格中，单击“控制台应用程序”。  
+3. 在“模板”窗格中，单击“控制台应用程序”。  
   
-4.  在中**名称**框中，键入**LinqConsoleApp**。  
+4. 在中**名称**框中，键入**LinqConsoleApp**。  
   
-5.  在中**位置**框中，确认你想要用于存储项目文件。  
+5. 在中**位置**框中，确认你想要用于存储项目文件。  
   
-6.  单击 **“确定”**。  
+6. 单击 **“确定”**。  
   
 ## <a name="adding-linq-references-and-directives"></a>添加 LINQ 引用和指令  
  本演练用到默认情况下您的项目中可能未安装的程序集。 如果未将 System.Data.Linq 列出为你的项目中的引用 (展开**引用**中的节点**解决方案资源管理器**)，请按照以下步骤中的说明添加它。  
   
 #### <a name="to-add-systemdatalinq"></a>添加 System.Data.Linq  
   
-1.  在中**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
+1. 在中**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
   
-2.  在中**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，然后单击**确定**。  
+2. 在中**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，然后单击**确定**。  
   
      此程序集即被添加到项目中。  
   
-3.  在顶部添加以下指令**Program.cs**:  
+3. 在顶部添加以下指令**Program.cs**:  
   
      [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]  
   
@@ -124,11 +124,11 @@ ms.locfileid: "59155124"
   
 #### <a name="to-execute-the-query"></a>执行查询  
   
-1.  将下面的代码键入或粘贴到 `Main` 方法的末尾（在查询说明之后）。  
+1. 将下面的代码键入或粘贴到 `Main` 方法的末尾（在查询说明之后）。  
   
      [!code-csharp[DLinqWalk1ACS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#6)]  
   
-2.  按 F5 调试该应用程序。  
+2. 按 F5 调试该应用程序。  
   
     > [!NOTE]
     >  如果你的应用程序产生运行时错误，请参阅疑难解答一节[通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。  
@@ -147,7 +147,7 @@ ms.locfileid: "59155124"
   
      `ID=SEVES, City=London`  
   
-3.  在控制台窗口中按 Enter 以关闭应用程序。  
+3. 在控制台窗口中按 Enter 以关闭应用程序。  
   
 ## <a name="next-steps"></a>后续步骤  
  [演练：跨关系查询 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)主题将继续本演练结束的位置。 跨关系查询演练演示了如何[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可以跨表查询，类似于*联接*关系数据库中。  

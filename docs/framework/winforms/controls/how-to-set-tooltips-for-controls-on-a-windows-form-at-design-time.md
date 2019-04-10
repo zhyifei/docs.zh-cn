@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc8f8c620516a943d6d70187e19b72f5a2a99888
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157594"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301329"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>如何：在设计时为 Windows 窗体上的控件设置 ToolTip
 可以设置<xref:System.Windows.Forms.ToolTip>字符串在代码中或在 Windows 窗体设计器中。 有关详细信息<xref:System.Windows.Forms.ToolTip>组件，请参阅[ToolTip 组件概述](tooltip-component-overview-windows-forms.md)。  
@@ -24,9 +24,9 @@ ms.locfileid: "59157594"
   
 ### <a name="to-set-a-tooltip-programmatically"></a>若要以编程方式设置工具提示  
   
-1.  添加控件，将显示工具提示。  
+1. 添加控件，将显示工具提示。  
   
-2.  使用<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>方法的<xref:System.Windows.Forms.ToolTip>组件。  
+2. 使用<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>方法的<xref:System.Windows.Forms.ToolTip>组件。  
   
     ```vb  
     ' In this example, Button1 is the control to display the ToolTip.  
@@ -45,15 +45,15 @@ ms.locfileid: "59157594"
   
 ### <a name="to-set-a-tooltip-in-the-designer"></a>若要在设计器中设置工具提示  
   
-1.  将 <xref:System.Windows.Forms.ToolTip> 组件添加到窗体。  
+1. 将 <xref:System.Windows.Forms.ToolTip> 组件添加到窗体。  
   
-2.  选择将显示工具提示，或将其添加到窗体的控件。  
+2. 选择将显示工具提示，或将其添加到窗体的控件。  
   
-3.  在中**属性**窗口中，将**ToolTip1 上的工具提示**为相应的文本字符串的值。  
+3. 在中**属性**窗口中，将**ToolTip1 上的工具提示**为相应的文本字符串的值。  
 
 ### <a name="to-remove-a-tooltip-programmatically"></a>若要以编程方式删除工具提示  
   
-1.  使用<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>方法的<xref:System.Windows.Forms.ToolTip>组件。  
+1. 使用<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>方法的<xref:System.Windows.Forms.ToolTip>组件。  
   
     ```vb  
     ' In this example, Button1 is the control displaying the ToolTip.  
@@ -72,9 +72,9 @@ ms.locfileid: "59157594"
   
 ### <a name="to-remove-a-tooltip-in-the-designer"></a>若要在设计器中删除一个工具提示  
   
-1.  选择显示工具提示的控件。  
+1. 选择显示工具提示的控件。  
   
-2.  在中**属性**窗口中，删除中的文本**ToolTip1 上的工具提示**。  
+2. 在中**属性**窗口中，删除中的文本**ToolTip1 上的工具提示**。  
 
 ## <a name="see-also"></a>请参阅
 

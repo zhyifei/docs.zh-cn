@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: eb0c34f259220a0326238b27ab43efd3078b0bcc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207079"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295700"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 标记扩展
 引用中定义的任何静态的值的代码实体[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 合规的方式。 引用的静态属性可以用于提供在 XAML 中属性的值。  
@@ -55,13 +55,13 @@ ms.locfileid: "59207079"
 
 有两个从技术上讲可能其他 XAML 用法。 但是，这些用法并不常见，因为它们是不必要地详细：  
 
-1.  对象元素语法。
+1. 对象元素语法。
 
     ```xaml
     <x:Static Member="prefix:typeName.staticMemberName" ... />
     ```
 
-2.  特性具有显式成员属性的初始化字符串的语法。
+2. 特性具有显式成员属性的初始化字符串的语法。
 
     ```xaml
     <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />

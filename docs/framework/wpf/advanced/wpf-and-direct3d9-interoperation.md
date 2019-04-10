@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199318"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307725"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF 和 Direct3D9 互操作
 可以在 Windows Presentation Foundation (WPF) 应用程序中包含 Direct3D9 内容。 本主题介绍如何创建 Direct3D9 内容，以便它有效地与 WPF 互操作。  
@@ -112,13 +112,13 @@ ms.locfileid: "59199318"
   
  若要避免对性能产生影响，编写专门为多监视器情况的代码。 以下列表显示了一种方法来编写多监视器的代码。  
   
-1.  找到的一点<xref:System.Windows.Interop.D3DImage>中使用的屏幕空间`Visual.ProjectToScreen`方法。  
+1. 找到的一点<xref:System.Windows.Interop.D3DImage>中使用的屏幕空间`Visual.ProjectToScreen`方法。  
   
-2.  使用`MonitorFromPoint`GDI 方法查找的监视器的显示该点。  
+2. 使用`MonitorFromPoint`GDI 方法查找的监视器的显示该点。  
   
-3.  使用`IDirect3D9::GetAdapterMonitor`法查找哪个 Direct3D9 适配器监视器已打开。  
+3. 使用`IDirect3D9::GetAdapterMonitor`法查找哪个 Direct3D9 适配器监视器已打开。  
   
-4.  如果适配器不是与后台缓冲区的适配器相同，新的监视器上创建新的后台缓冲区，并将其分配给<xref:System.Windows.Interop.D3DImage>后台缓冲区。  
+4. 如果适配器不是与后台缓冲区的适配器相同，新的监视器上创建新的后台缓冲区，并将其分配给<xref:System.Windows.Interop.D3DImage>后台缓冲区。  
   
 > [!NOTE]
 >  如果<xref:System.Windows.Interop.D3DImage>跨多台监视器，性能将会很慢，除非在 WDDM 的情况下和`IDirect3D9Ex`同一适配器上。 没有方法在这种情况下提高性能。  

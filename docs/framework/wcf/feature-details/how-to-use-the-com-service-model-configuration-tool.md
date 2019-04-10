@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196887"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322584"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>如何：使用 COM+ 服务模型配置工具
 在选择了适当的宿主模式之后，就可使用 COM+ 服务模型配置命令行工具 (ComSvcConfig.exe) 来配置将作为 Web 服务公开的应用程序接口。  
@@ -19,11 +19,11 @@ ms.locfileid: "59196887"
   
  在 Windows 7 计算机上使用 ComSvcConfig.exe 配置 Web 服务以使用最新服务模型版本（当前版本为 v4.5）时，请执行以下步骤：  
   
-1.  设置注册表项`[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR`为 DWORD 值 0x00000001  
+1. 设置注册表项`[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR`为 DWORD 值 0x00000001  
   
-2.  运行 comsvcconfig.exe  
+2. 运行 comsvcconfig.exe  
   
-3.  将步骤 1 中的注册表项还原到其原始值，或者在不存在原始值时将该注册表项删除。  
+3. 将步骤 1 中的注册表项还原到其原始值，或者在不存在原始值时将该注册表项删除。  
   
 > [!IMPORTANT]
 >  还原此注册表项十分重要。 这是一个兼容性注册表项。 不还原此更改可能会造成在计算机上运行的其他 .NET 应用程序产生问题）  

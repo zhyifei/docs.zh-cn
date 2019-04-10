@@ -2,12 +2,12 @@
 title: WS 2007 联合 HTTP 绑定
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 07becd0fc5cbbd9a8b90de2d20654a63b62e3085
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 550a88552658864e3eedb70463e676ad6f9a2511
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153395"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324937"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 联合 HTTP 绑定
 此示例演示 <xref:System.ServiceModel.WS2007FederationHttpBinding> 的用法，它是一个标准绑定，可用来生成支持 1.3 版 WS-Trust 规范的联合方案。  
@@ -110,15 +110,15 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  使用管理员特权打开 Visual Studio 开发人员命令提示符并运行 Setup.bat 文件以创建所需的证书。  
+2. 使用管理员特权打开 Visual Studio 开发人员命令提示符并运行 Setup.bat 文件以创建所需的证书。  
   
  该批处理文件使用随 Windows SDK 分发的 Certmgr.exe 和 Makecert.exe。 但是，您必须在 Visual Studio 命令提示中运行 Setup.bat，脚本才能找到这些工具。  
   
-1.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+1. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-2.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 如果使用的[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，则必须运行 Service.exe、 Client.exe 和 SecurityTokenService.exe 使用提升的权限 (右键单击文件，然后单击**以管理员身份运行**)。  
+2. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 如果使用的[!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，则必须运行 Service.exe、 Client.exe 和 SecurityTokenService.exe 使用提升的权限 (右键单击文件，然后单击**以管理员身份运行**)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

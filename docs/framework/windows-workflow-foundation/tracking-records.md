@@ -2,12 +2,12 @@
 title: 跟踪记录
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: f8b79cad7161e780f336a9c5902e69d9826b23d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163912"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298352"
 ---
 # <a name="tracking-records"></a>跟踪记录
 检测工作流运行时的目的是为了发出跟踪记录，以便跟踪工作流实例的执行。  
@@ -50,15 +50,15 @@ ms.locfileid: "59163912"
   
  例如，可能存在一个简单的 <xref:System.Activities.Statements.Sequence> 活动，该活动包含 <xref:System.Activities.Statements.WriteLine> 操作且按以下顺序发出跟踪记录：  
   
-1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> 指示正在启动工作流。  
+1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> 指示正在启动工作流。  
   
-2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> 指示已安排活动。 在本例中，该活动为 <xref:System.Activities.Statements.Sequence> 活动。  
+2. <xref:System.Activities.Tracking.ActivityScheduledRecord> 指示已安排活动。 在本例中，该活动为 <xref:System.Activities.Statements.Sequence> 活动。  
   
-3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> 表示<xref:System.Activities.Statements.WriteLine>活动。  
+3. <xref:System.Activities.Tracking.ActivityScheduledRecord> 表示<xref:System.Activities.Statements.WriteLine>活动。  
   
-4.  存在两个 <xref:System.Activities.Tracking.ActivityStateRecord> 记录，表示正在完成两个活动。  
+4. 存在两个 <xref:System.Activities.Tracking.ActivityStateRecord> 记录，表示正在完成两个活动。  
   
-5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> 指示正在完成工作流。  
+5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> 指示正在完成工作流。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307699"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>演练：在 WPF 中承载 Win32 控件
 Windows Presentation Foundation (WPF) 提供了用于创建应用程序的丰富环境。 但是，当您在 Win32 代码中有大量投入时，可能会重复使用至少某些更有效的在 WPF 应用程序中的代码而不是完全重写。 WPF 提供了一个简单的机制，用于承载 Win32 窗口中，在 WPF 页上。  
@@ -35,25 +35,25 @@ Windows Presentation Foundation (WPF) 提供了用于创建应用程序的丰富
   
  基本的承载步骤如下：  
   
-1.  实现 WPF 页以承载窗口。 一种方法是创建<xref:System.Windows.Controls.Border>元素保留的页所承载的窗口的部分。  
+1. 实现 WPF 页以承载窗口。 一种方法是创建<xref:System.Windows.Controls.Border>元素保留的页所承载的窗口的部分。  
   
-2.  实现一个类以承载继承的控件<xref:System.Windows.Interop.HwndHost>。  
+2. 实现一个类以承载继承的控件<xref:System.Windows.Interop.HwndHost>。  
   
-3.  在此类中重写<xref:System.Windows.Interop.HwndHost>类成员<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>。  
+3. 在此类中重写<xref:System.Windows.Interop.HwndHost>类成员<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>。  
   
-4.  作为子窗口，其中包含 WPF 页中创建所承载的窗口。 尽管传统的 WPF 编程不需要显式地将它的使用、 在宿主页面是一个带有句柄 (HWND) 窗口。 接收页面 HWND 通过`hwndParent`参数的<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>方法。 应将所承载的窗口创建为此 HWND 的子窗口。  
+4. 作为子窗口，其中包含 WPF 页中创建所承载的窗口。 尽管传统的 WPF 编程不需要显式地将它的使用、 在宿主页面是一个带有句柄 (HWND) 窗口。 接收页面 HWND 通过`hwndParent`参数的<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>方法。 应将所承载的窗口创建为此 HWND 的子窗口。  
   
-5.  在创建宿主窗口之后，返回所承载的窗口的 HWND。 如果你想要承载一个或多个 Win32 控件，您通常为该 HWND 的子级创建宿主窗口并使该宿主窗口的控件子级。 将控件包装在宿主窗口提供有关 WPF 页从控件接收通知的处理跨 HWND 边界的一些特定的 Win32 问题通知的简单方法。  
+5. 在创建宿主窗口之后，返回所承载的窗口的 HWND。 如果你想要承载一个或多个 Win32 控件，您通常为该 HWND 的子级创建宿主窗口并使该宿主窗口的控件子级。 将控件包装在宿主窗口提供有关 WPF 页从控件接收通知的处理跨 HWND 边界的一些特定的 Win32 问题通知的简单方法。  
   
-6.  处理发送到宿主窗口的选定消息，例如，来自子控件的通知。 有两种方法可以实现此目的。  
+6. 处理发送到宿主窗口的选定消息，例如，来自子控件的通知。 有两种方法可以实现此目的。  
   
     -   如果想要在承载类中处理消息，重写<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法的<xref:System.Windows.Interop.HwndHost>类。  
   
     -   如果您愿意让 WPF 处理消息，请处理<xref:System.Windows.Interop.HwndHost>类<xref:System.Windows.Interop.HwndHost.MessageHook>代码隐藏中的事件。 对于所承载的窗口收到的每条消息，都将发生此事件。 如果选择此选项，仍必须重写<xref:System.Windows.Interop.HwndHost.WndProc%2A>，但只需要最小实现。  
   
-7.  重写<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>并<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法的<xref:System.Windows.Interop.HwndHost>。 必须重写这些方法才能履行<xref:System.Windows.Interop.HwndHost>协定，但你可能只需提供的最小实现。  
+7. 重写<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>并<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法的<xref:System.Windows.Interop.HwndHost>。 必须重写这些方法才能履行<xref:System.Windows.Interop.HwndHost>协定，但你可能只需提供的最小实现。  
   
-8.  在代码隐藏文件中，创建控件承载类的实例，并使其成为子的<xref:System.Windows.Controls.Border>旨在承载窗口的元素。  
+8. 在代码隐藏文件中，创建控件承载类的实例，并使其成为子的<xref:System.Windows.Controls.Border>旨在承载窗口的元素。  
   
 9. 通过将其发送与所承载的窗口进行通信[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]消息和处理来自其子窗口，如控件发送的通知消息。  
   

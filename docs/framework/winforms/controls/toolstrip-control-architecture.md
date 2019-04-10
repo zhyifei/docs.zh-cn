@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 1032b282801db485253da18536b448e8d3b65ae7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186662"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296207"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 控件体系结构
 <xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.ToolStripItem>类用于显示工具栏、 状态和菜单项提供一个灵活、 可扩展的系统。 这些类都包含在<xref:System.Windows.Forms>命名空间和它们全部通常具有"ToolStrip"前缀命名 (如<xref:System.Windows.Forms.ToolStripOverflow>) 或带有"带状"后缀 (例如<xref:System.Windows.Forms.MenuStrip>)。  
@@ -121,19 +121,19 @@ ms.locfileid: "59186662"
 #### <a name="toolstripcontainer-support-of-inheritance"></a>ToolStripContainer 支持的继承  
  <xref:System.Windows.Forms.ToolStripContainer>控件支持有限的继承的方案，类似于下面的示例：  
   
-1.  创建新的 Windows 窗体应用程序。  
+1. 创建新的 Windows 窗体应用程序。  
   
-2.  在窗体上添加一个 <xref:System.Windows.Forms.ToolStripContainer> 控件。  
+2. 在窗体上添加一个 <xref:System.Windows.Forms.ToolStripContainer> 控件。  
   
-3.  设置的访问修饰符<xref:System.Windows.Forms.ToolStripContainer>到`public`或`protected`。  
+3. 设置的访问修饰符<xref:System.Windows.Forms.ToolStripContainer>到`public`或`protected`。  
   
-4.  添加的任意组合<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，并<xref:System.Windows.Forms.ContextMenuStrip>控件添加到<xref:System.Windows.Forms.ToolStripPanel>的区域<xref:System.Windows.Forms.ToolStripContainer>。  
+4. 添加的任意组合<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，并<xref:System.Windows.Forms.ContextMenuStrip>控件添加到<xref:System.Windows.Forms.ToolStripPanel>的区域<xref:System.Windows.Forms.ToolStripContainer>。  
   
-5.  生成项目。  
+5. 生成项目。  
   
-6.  添加从第一个窗体继承一个窗体。  
+6. 添加从第一个窗体继承一个窗体。  
   
-7.  选择继承<xref:System.Windows.Forms.ToolStripContainer>窗体上。  
+7. 选择继承<xref:System.Windows.Forms.ToolStripContainer>窗体上。  
   
 #### <a name="inherited-behavior-of-child-controls"></a>子控件的继承的行为  
  完成前面的步骤后，将发生以下继承的行为：  

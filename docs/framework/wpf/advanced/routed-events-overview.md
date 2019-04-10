@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171153"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330438"
 ---
 # <a name="routed-events-overview"></a>路由事件概述
 本主题描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主题定义路由事件术语、描述路由事件如何通过元素树来路由、概述如何处理路由事件，并介绍如何创建你自己的自定义路由事件。
@@ -204,17 +204,17 @@ ms.locfileid: "59171153"
   
  事件的处理顺序如下所述：  
   
-1.  `PreviewMouseDown` （隧道） 根元素上。  
+1. `PreviewMouseDown` （隧道） 根元素上。  
   
-2.  `PreviewMouseDown` （隧道） 针对中间元素 #1。  
+2. `PreviewMouseDown` （隧道） 针对中间元素 #1。  
   
-3.  `PreviewMouseDown` （隧道） 针对源元素 #2。  
+3. `PreviewMouseDown` （隧道） 针对源元素 #2。  
   
-4.  `MouseDown` （冒泡） 针对源元素 #2。  
+4. `MouseDown` （冒泡） 针对源元素 #2。  
   
-5.  `MouseDown` （冒泡） 针对中间元素 #1。  
+5. `MouseDown` （冒泡） 针对中间元素 #1。  
   
-6.  `MouseDown` （冒泡） 根元素上。  
+6. `MouseDown` （冒泡） 根元素上。  
   
  路由事件处理程序委托提供对以下两个对象的引用：引发该事件的对象以及在其中调用处理程序的对象。 在其中调用处理程序的对象是由 `sender` 参数报告的对象。 首先引发该事件的对象报告的<xref:System.Windows.RoutedEventArgs.Source%2A>事件数据中的属性。 路由的事件仍可以引发并由同一个对象，在这种情况下处理`sender`和<xref:System.Windows.RoutedEventArgs.Source%2A>是相同的 （这是与步骤 3 和 4 中的事件处理示例列表的情况）。  
   

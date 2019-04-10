@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149300"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298885"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
 本主题定义的术语，用于描述的 XAML 语法的元素。 这些条款通常使用，本文档中，同时用于 WPF 文档的其余部分专门以及其他使用 XAML 或通过 XAML 语言支持在 System.Xaml 级别启用的基本 XAML 概念的框架。 本主题进一步在本主题中引入的基本术语[XAML 概述 (WPF)](xaml-overview-wpf.md)。  
@@ -99,11 +99,11 @@ ms.locfileid: "59149300"
   
  通过下列选项之一来填充属性值使用此处理顺序：  
   
-1.  如果 XAML 处理器遇到大括号或从派生的对象元素<xref:System.Windows.Markup.MarkupExtension>、 然后引用的标记扩展而不是处理为字符串，值首先计算和标记扩展返回的对象用作值。 在许多情况下通过标记扩展返回的对象将对现有对象或一个表达式，用于将计算推迟到运行时，不是一个新实例化的对象的引用。  
+1. 如果 XAML 处理器遇到大括号或从派生的对象元素<xref:System.Windows.Markup.MarkupExtension>、 然后引用的标记扩展而不是处理为字符串，值首先计算和标记扩展返回的对象用作值。 在许多情况下通过标记扩展返回的对象将对现有对象或一个表达式，用于将计算推迟到运行时，不是一个新实例化的对象的引用。  
   
-2.  如果属性声明与特性化<xref:System.ComponentModel.TypeConverter>，或该属性的值类型声明与特性化<xref:System.ComponentModel.TypeConverter>属性的字符串值提交到作为转换输入的类型转换器，则转换器将返回新的对象实例。  
+2. 如果属性声明与特性化<xref:System.ComponentModel.TypeConverter>，或该属性的值类型声明与特性化<xref:System.ComponentModel.TypeConverter>属性的字符串值提交到作为转换输入的类型转换器，则转换器将返回新的对象实例。  
   
-3.  如果没有任何<xref:System.ComponentModel.TypeConverter>，尝试直接转换为属性类型。 最后一个级别是在 XAML 语言基元类型或检查枚举 （分析器，然后访问匹配的值） 中的命名常量的名称之间的分析器本机值的直接转换。  
+3. 如果没有任何<xref:System.ComponentModel.TypeConverter>，尝试直接转换为属性类型。 最后一个级别是在 XAML 语言基元类型或检查枚举 （分析器，然后访问匹配的值） 中的命名常量的名称之间的分析器本机值的直接转换。  
   
 #### <a name="enumeration-attribute-values"></a>枚举属性值  
  XAML 中的枚举本质上处理的 XAML 分析程序，并应通过指定一个枚举的已命名常数的字符串名称来指定枚举的成员。  

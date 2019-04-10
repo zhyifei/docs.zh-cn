@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174624"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299301"
 ---
 # <a name="transport-quotas"></a>传输配额
 传输配额是一种策略机制，用于决定连接何时正在占用过多资源。 配额是一种硬性限制，它在超出配额值时立即禁止使用其他资源。 传输配额可防止恶意或无意的拒绝服务攻击。  
@@ -100,9 +100,9 @@ ms.locfileid: "59174624"
 |`ReceiveTimeout`|X|X|X|  
 |`SendTimeout`|X|X|X|  
   
-1.  `MaxBufferSize` 传输配额仅在 `BasicHttp` 绑定上可用。 `WSHttp` 绑定适用于不支持流式传输模式的情况。  
+1. `MaxBufferSize` 传输配额仅在 `BasicHttp` 绑定上可用。 `WSHttp` 绑定适用于不支持流式传输模式的情况。  
   
-2.  传输配额 `MaxPendingConnections` 和 `MaxOutboundConnectionsPerEndpoint` 被组合为单个传输配额，称为 `MaxConnections`。  
+2. 传输配额 `MaxPendingConnections` 和 `MaxOutboundConnectionsPerEndpoint` 被组合为单个传输配额，称为 `MaxConnections`。  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>通过配置控制传输配额  
  应用程序配置可以设置与直接访问绑定上的属性一样的传输配额。 在配置文件中，传输配额的名称总是以小写字母开头。 例如，绑定上的 `CloseTimeout` 属性对应于配置中的 `closeTimeout` 设置，而绑定上的 `MaxConnections` 属性对应于配置中的 `maxConnections` 设置。  

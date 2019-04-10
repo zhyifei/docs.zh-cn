@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 5e9194dc4dc8ef3246870dc1fd71fa53d3ad143f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227478"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325821"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF 版本 4.5 的新增功能
 <a name="introduction"></a> 本主题包含有关新的和增强功能的信息[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]版本 4.5。  
@@ -56,9 +56,9 @@ ms.locfileid: "59227478"
 <a name="VirtualizingPanel"></a>   
 ## <a name="new-features-for-the-virtualizingpanel"></a>VirtualizingPanel 的新增功能  
   
-1.  您可以指定是否<xref:System.Windows.Controls.VirtualizingPanel>，如<xref:System.Windows.Controls.VirtualizingStackPanel>，通过使用显示部分项<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>附加属性。 如果<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>设置为<xref:System.Windows.Controls.ScrollUnit.Item>，则<xref:System.Windows.Controls.VirtualizingPanel>将仅显示完全可见的项。 如果<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>设置为<xref:System.Windows.Controls.ScrollUnit.Pixel>，则<xref:System.Windows.Controls.VirtualizingPanel>可以显示部分可见的项。  
+1. 您可以指定是否<xref:System.Windows.Controls.VirtualizingPanel>，如<xref:System.Windows.Controls.VirtualizingStackPanel>，通过使用显示部分项<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>附加属性。 如果<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>设置为<xref:System.Windows.Controls.ScrollUnit.Item>，则<xref:System.Windows.Controls.VirtualizingPanel>将仅显示完全可见的项。 如果<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>设置为<xref:System.Windows.Controls.ScrollUnit.Pixel>，则<xref:System.Windows.Controls.VirtualizingPanel>可以显示部分可见的项。  
   
-2.  您可以指定缓存的大小，视区前后时<xref:System.Windows.Controls.VirtualizingPanel>通过使用虚拟化<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A>附加属性。  缓存是视区（其中的项未虚拟化）上方或下方的空间量。  使用缓存避免生成 UI 元素（因为系统会将它们滚动到视图中）可以提高性能。 在较低优先级填充缓存，以便应用程序在操作期间能够响应。 <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType>属性确定使用的度量单位<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>。  
+2. 您可以指定缓存的大小，视区前后时<xref:System.Windows.Controls.VirtualizingPanel>通过使用虚拟化<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A>附加属性。  缓存是视区（其中的项未虚拟化）上方或下方的空间量。  使用缓存避免生成 UI 元素（因为系统会将它们滚动到视图中）可以提高性能。 在较低优先级填充缓存，以便应用程序在操作期间能够响应。 <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType>属性确定使用的度量单位<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>。  
   
 <a name="static_properties"></a>   
 ## <a name="binding-to-static-properties"></a>绑定到静态属性  
@@ -86,11 +86,11 @@ ms.locfileid: "59227478"
 ## <a name="binding-to-types-that-implement-icustomtypeprovider"></a>绑定到实现 ICustomTypeProvider 的类型  
  WPF 支持数据绑定到实现的对象<xref:System.Reflection.ICustomTypeProvider>，也称为自定义类型。  在以下情况下，可以使用自定义类型。  
   
-1.  作为<xref:System.Windows.PropertyPath>在数据绑定。 例如，<xref:System.Windows.Data.Binding.Path%2A>属性的<xref:System.Windows.Data.Binding>可以引用自定义类型的属性。  
+1. 作为<xref:System.Windows.PropertyPath>在数据绑定。 例如，<xref:System.Windows.Data.Binding.Path%2A>属性的<xref:System.Windows.Data.Binding>可以引用自定义类型的属性。  
   
-2.  值作为<xref:System.Windows.DataTemplate.DataType%2A>属性。  
+2. 值作为<xref:System.Windows.DataTemplate.DataType%2A>属性。  
   
-3.  确定自动生成的列中的类型为<xref:System.Windows.Controls.DataGrid>。  
+3. 确定自动生成的列中的类型为<xref:System.Windows.Controls.DataGrid>。  
   
 <a name="binding_state"></a>   
 ## <a name="retrieving-data-binding-information-from-a-binding-expression"></a>从绑定表达式中检索数据绑定信息  

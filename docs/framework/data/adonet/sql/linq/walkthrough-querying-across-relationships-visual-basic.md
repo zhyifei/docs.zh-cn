@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213345"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314654"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>演练：跨关系查询 (Visual Basic)
 本演练演示如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*关联*来表示数据库中的外键关系。  
@@ -53,15 +53,15 @@ ms.locfileid: "59213345"
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>使用 Customer 对象访问 Order 对象  
   
-1.  通过将下面的代码键入或粘贴到 `Sub Main` 方法中修改此方法：  
+1. 通过将下面的代码键入或粘贴到 `Sub Main` 方法中修改此方法：  
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
-2.  按 F5 调试应用程序。  
+2. 按 F5 调试应用程序。  
   
      消息框中会显示两个名称，并且控制台窗口会显示生成的 SQL 代码。  
   
-3.  关闭此消息框以停止调试。  
+3. 关闭此消息框以停止调试。  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>创建数据库的强类型化视图  
  从数据库的强类型化视图着手要容易得多。 通过将 <xref:System.Data.Linq.DataContext> 对象强类型化，您无需调用 <xref:System.Data.Linq.DataContext.GetTable%2A>。 当您使用强类型化的 <xref:System.Data.Linq.DataContext> 对象时，您可以在所有查询中使用强类型化表。  
@@ -70,23 +70,23 @@ ms.locfileid: "59213345"
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>对 DataContext 对象进行强类型化  
   
-1.  将下面的代码添加到 `Customer` 类声明的上方。  
+1. 将下面的代码添加到 `Customer` 类声明的上方。  
   
      [!code-vb[DLinqWalk2VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#4)]  
   
-2.  将 `Sub Main` 修改为使用强类型化的 <xref:System.Data.Linq.DataContext>，如下所示：  
+2. 将 `Sub Main` 修改为使用强类型化的 <xref:System.Data.Linq.DataContext>，如下所示：  
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
-3.  按 F5 调试应用程序。  
+3. 按 F5 调试应用程序。  
   
      控制台窗口输出如下：  
   
      `ID=WHITC`  
   
-4.  在控制台窗口中按 Enter，以关闭应用程序。  
+4. 在控制台窗口中按 Enter，以关闭应用程序。  
   
-5.  上**文件**菜单上，单击**全部保存**如果你想要保存此应用程序。  
+5. 上**文件**菜单上，单击**全部保存**如果你想要保存此应用程序。  
   
 ## <a name="next-steps"></a>后续步骤  
  下一个演练 ([演练：操作数据 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) 演示如何操作数据。 该演练不要求您保存本系列中已经完成的两个演练的结果。  

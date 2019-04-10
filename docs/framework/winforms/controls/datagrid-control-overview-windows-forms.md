@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189308"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304724"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控件概述（Windows 窗体）
 > [!NOTE]
@@ -35,10 +35,9 @@ ms.locfileid: "59189308"
   
  如果 <xref:System.Windows.Forms.DataGrid> 绑定到多个相关表的数据，并在网格上启用了导航功能，则网格中的每行都将显示扩展器。 借助扩展器，用户可以从父表移到子表。 单击节点将显示子表，单击后退按钮将显示原始父表。 网格以这种方式显示表与表之间的层次结构关系。  
   
- 以下屏幕截图显示绑定到多个表的数据的 DataGrid。  
+ 以下屏幕截图显示绑定到多个表的数据的 DataGrid:  
   
- ![绑定到多个表的数据的 DataGrid](./media/vbcontrol1.gif "vbControl1")  
-绑定到多个表的数据的 DataGrid  
+ ![显示 DataGrid 的 WinForms 应用程序绑定到多个表的数据。](./media/datagrid-control-overview-windows-forms/datagrid-bound-multiple-tables.gif)  
   
  <xref:System.Windows.Forms.DataGrid> 可提供数据集、相关表之间导航以及丰富格式设置和编辑功能的用户界面。  
   
@@ -94,15 +93,16 @@ ms.locfileid: "59189308"
   
  当 <xref:System.Windows.Forms.DataGrid> 控件显示表并且 <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> 属性设置为 `true` 时，可通过单击列标题对数据重新排序。 用户还可以添加行和编辑单元格。  
   
- 通过使用父/子导航结构，向用户显示一组表之间的关系。 父表是最高级别的数据，子表是派生自父表中各个列表的数据表。 扩展器显示在包含子表的每个父行中。 单击扩展器将生成指向子表的类似 Web 链接的列表。 当用户选择某个链接时，将显示子表。 单击“显示/隐藏父行”图标（![显示/隐藏父行图标](./media/vbicon.gif "vbIcon")）会隐藏父表的相关信息，如果用户之前已经执行过隐藏操作，则会重新显示此信息。 用户可以单击后退按钮，返回到之前查看的表。  
+ 通过使用父/子导航结构，向用户显示一组表之间的关系。 父表是最高级别的数据，子表是派生自父表中各个列表的数据表。 扩展器显示在包含子表的每个父行中。 单击扩展器将生成指向子表的类似 Web 链接的列表。 当用户选择某个链接时，将显示子表。 单击显示/隐藏父行图标 （![显示/隐藏父行图标](./media/datagrid-control-overview-windows-forms/show-hide-parent-rows.gif)) 将隐藏父表有关的信息或将重新显示如果以前已经隐藏。 用户可以单击后退按钮，返回到之前查看的表。  
   
 ## <a name="columns-and-rows"></a>列和行  
  <xref:System.Windows.Forms.DataGrid> 由 <xref:System.Windows.Forms.DataGrid> 控件的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 属性中包含的 <xref:System.Windows.Forms.DataGridTableStyle> 对象集合组成。 表样式可能具有 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 属性中包含的 <xref:System.Windows.Forms.DataGridColumnStyle> 对象集合。 您可以编辑<xref:System.Windows.Forms.DataGrid.TableStyles%2A>并<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>属性使用通过访问的集合编辑器**属性**窗口。  
   
  任何与 <xref:System.Windows.Forms.DataGrid> 控件关的联 <xref:System.Windows.Forms.DataGridTableStyle> 都可通过 <xref:System.Windows.Forms.GridTableStylesCollection> 进行访问。 可利用 <xref:System.Windows.Forms.DataGridTableStyle> 集合编辑器在设计器中编辑 <xref:System.Windows.Forms.GridTableStylesCollection>，或以编程方式通过 <xref:System.Windows.Forms.DataGrid> 控件的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 属性进行编辑。  
-  
- ![DataGrid 控件中包含的对象](./media/vbcolumns1.gif "vbColumns1")  
-下图显示 DataGrid 控件中包含的对象。  
+
+ 下图显示 DataGrid 控件中包含的对象：
+
+ ![图，显示 DataGrid 控件中包含的对象。](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)  
   
  通过将表样式和列样式的 `MappingName` 属性设置为相应的 <xref:System.Data.DataTable.TableName%2A> 和 <xref:System.Data.DataColumn.ColumnName%2A> 属性，使它们与 <xref:System.Data.DataTable> 对象和 <xref:System.Data.DataColumn> 对象保持同步。 当将没有列样式的 <xref:System.Windows.Forms.DataGridTableStyle> 添加至绑定到有效数据源的 <xref:System.Windows.Forms.DataGrid> 控件，并且将该表样式的 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 属性设置为有效的 <xref:System.Data.DataTable.TableName%2A> 属性时，会针对该表样式创建 <xref:System.Windows.Forms.DataGridColumnStyle> 对象集合。 对于在 <xref:System.Data.DataTable> 的 <xref:System.Data.DataTable.Columns%2A> 集合中发现的每个 <xref:System.Data.DataColumn>，都会将相应的 <xref:System.Windows.Forms.DataGridColumnStyle> 添加至 <xref:System.Windows.Forms.GridColumnStylesCollection>。 <xref:System.Windows.Forms.GridColumnStylesCollection> 通过访问<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>属性的<xref:System.Windows.Forms.DataGridTableStyle>。 通过对 <xref:System.Windows.Forms.GridColumnStylesCollection> 使用 <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> 或 <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> 方法在网格中添加或删除列。 有关详细信息，请参阅[如何：添加表和列到 Windows 窗体 DataGrid 控件](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)和[如何：删除或隐藏列在 Windows 窗体 DataGrid 控件](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)。  
   

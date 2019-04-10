@@ -2,12 +2,12 @@
 title: 如何：使用 MetadataExchangeClient 检索元数据
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168611"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327875"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>如何：使用 MetadataExchangeClient 检索元数据
 使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 类可以下载使用 WS-MetadataExchange (MEX) 协议的元数据。 检索到的元数据文件作为 <xref:System.ServiceModel.Description.MetadataSet> 对象返回。 返回的 <xref:System.ServiceModel.Description.MetadataSet> 对象包含 <xref:System.ServiceModel.Description.MetadataSection> 对象的集合，其中每个对象包含一个特定的元数据方言和一个标识符。 你可以将返回的元数据写入文件；或者，如果返回的元数据包含 Web 服务描述语言 (WSDL) 文档，则可以使用 <xref:System.ServiceModel.Description.WsdlImporter> 导入元数据。  
@@ -21,11 +21,11 @@ ms.locfileid: "59168611"
   
 ### <a name="to-use-metadataexchangeclient-to-obtain-metadata"></a>使用 MetadataExchangeClient 获取元数据  
   
-1.  通过显式指定一个绑定、一个终结点配置名称或元数据的地址，创建一个新的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 对象。  
+1. 通过显式指定一个绑定、一个终结点配置名称或元数据的地址，创建一个新的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 对象。  
   
-2.  配置 <xref:System.ServiceModel.Description.MetadataExchangeClient> 以适合您的需要。 例如，您可以指定请求元数据时要使用的凭据、控制元数据引用的解析方式和设置 <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> 属性以控制元数据请求超时之前必须在多长时间内返回。  
+2. 配置 <xref:System.ServiceModel.Description.MetadataExchangeClient> 以适合您的需要。 例如，您可以指定请求元数据时要使用的凭据、控制元数据引用的解析方式和设置 <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> 属性以控制元数据请求超时之前必须在多长时间内返回。  
   
-3.  通过调用 <xref:System.ServiceModel.Description.MetadataSet> 方法之一获取包含检索的元数据的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 对象。 请注意，如果你在构造 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 时显式指定了地址，则只能使用不带自变量的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 重载。  
+3. 通过调用 <xref:System.ServiceModel.Description.MetadataSet> 方法之一获取包含检索的元数据的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 对象。 请注意，如果你在构造 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 时显式指定了地址，则只能使用不带自变量的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 重载。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示如何使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 下载和枚举元数据文件。  

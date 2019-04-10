@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139212"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301394"
 ---
 # <a name="drag-and-drop-overview"></a>拖放概述
 本主题概述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中的拖放支持。 拖放通常指一种数据传输方法：使用鼠标（或一些其他指针设备）选择一个或多个对象，将其拖至 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中的某些所需拖放目标之上并放置。  
@@ -181,11 +181,11 @@ ms.locfileid: "59139212"
   
  若要指定一个元素是拖放目标，请将其 <xref:System.Windows.UIElement.AllowDrop%2A> 属性设置为 `true`。 然后，元素中将引发拖放目标事件，以便处理这些事件。 在拖放操作期间，拖放目标上将依次发生以下事件：  
   
-1.  <xref:System.Windows.DragDrop.DragEnter>  
+1. <xref:System.Windows.DragDrop.DragEnter>  
   
-2.  <xref:System.Windows.DragDrop.DragOver>  
+2. <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave> 或 <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> 或 <xref:System.Windows.DragDrop.Drop>  
   
  将数据拖到拖放目标的边界中时发生 <xref:System.Windows.DragDrop.DragEnter> 事件。 通常，如果适用于你的应用程序，可处理此事件，以便提供拖放操作效果预览。 请勿设置 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 事件中的 <xref:System.Windows.DragDrop.DragEnter> 属性，因为在 <xref:System.Windows.DragDrop.DragOver> 事件中该属性将被覆盖。  
   

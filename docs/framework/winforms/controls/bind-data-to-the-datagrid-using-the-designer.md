@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 70bd2d25f848f1602fbd12a76f898f8fe902d696
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200228"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321843"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器将数据绑定到 Windows 窗体 DataGridView 控件
 可以使用设计器来连接<xref:System.Windows.Forms.DataGridView>不同种类的包括数据库、 业务对象或 Web 服务的数据源的控件。 当将控件绑定到数据源使用设计器中时，该控件自动绑定到<xref:System.Windows.Forms.BindingSource>表示数据源的组件。 此外，会在控件中自动生成列以匹配数据源提供的架构信息。  
@@ -27,19 +27,19 @@ ms.locfileid: "59200228"
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>将控件绑定到数据源  
   
-1.  单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 右上角的<xref:System.Windows.Forms.DataGridView>控件。  
+1. 单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 右上角的<xref:System.Windows.Forms.DataGridView>控件。  
   
-2.  单击“选择数据源”选项的下拉箭头。  
+2. 单击“选择数据源”选项的下拉箭头。  
   
-3.  如果项目尚没有数据源，请单击“添加项目数据源”，按照向导指示的步骤进行操作。  
+3. 如果项目尚没有数据源，请单击“添加项目数据源”，按照向导指示的步骤进行操作。  
   
      有关详细信息，请参阅[数据源配置向导](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120))。 新数据源将显示在“选择数据源”下拉窗口中。 如果新数据源只包含一个成员（例如单个数据库表），控件将自动绑定到该成员。 否则，请记住执行下一步。  
   
-4.  如果尚未展开，则展开“其他数据源”和“项目数据源”节点，然后选择绑定控件的数据源。  
+4. 如果尚未展开，则展开“其他数据源”和“项目数据源”节点，然后选择绑定控件的数据源。  
   
-5.  如果您的数据源包含多个成员，例如，如果你已创建<xref:System.Data.DataSet?displayProperty=nameWithType>，其中包含多个表，展开数据源，然后选择要绑定到特定成员。  
+5. 如果您的数据源包含多个成员，例如，如果你已创建<xref:System.Data.DataSet?displayProperty=nameWithType>，其中包含多个表，展开数据源，然后选择要绑定到特定成员。  
   
-6.  若要创建主/从关系，在**选择数据源**第二个下拉窗口<xref:System.Windows.Forms.DataGridView>控件中，展开<xref:System.Windows.Forms.BindingSource>父表中，创建的然后从列表中选择相关的子表所示。  
+6. 若要创建主/从关系，在**选择数据源**第二个下拉窗口<xref:System.Windows.Forms.DataGridView>控件中，展开<xref:System.Windows.Forms.BindingSource>父表中，创建的然后从列表中选择相关的子表所示。  
   
     > [!NOTE]
     >  如果项目已有数据源，还可以使用“数据源”窗口创建数据窗体。 有关详细信息，请参阅[数据源窗口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))。  

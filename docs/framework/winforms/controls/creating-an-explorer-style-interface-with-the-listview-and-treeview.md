@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 21a3f7f687f72fe6e73b5d2420675634ff834d2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332113"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>演练：使用设计器创建带有 ListView 和 TreeView 控件的资源管理器样式界面
 Visual Studio 的优势之一是时间的能够在较短中创建具有专业外观的 Windows 窗体应用程序。 一种常见方案使用创建用户界面 (UI)<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>类似于 Windows 操作系统的 Windows 资源管理器功能的控件。 Windows 资源管理器中显示用户的计算机上的文件和文件夹的层次结构。  
@@ -28,27 +28,27 @@ Visual Studio 的优势之一是时间的能够在较短中创建具有专业外
   
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>若要创建包含 ListView 和 TreeView 控件的窗体  
   
-1.  在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。  
+1. 在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。  
   
-2.  在中**新的项目**对话框框中，执行以下操作：  
+2. 在中**新的项目**对话框框中，执行以下操作：  
   
     1.  在类别中，选择**Visual Basic**或**Visual C#**。  
   
     2.  在模板列表中，选择**Windows 窗体应用程序**。  
   
-3.  单击 **“确定”**。 创建一个新的 Windows 窗体项目。  
+3. 单击 **“确定”**。 创建一个新的 Windows 窗体项目。  
   
-4.  添加<xref:System.Windows.Forms.SplitContainer>向窗体控件，并设置其<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.Fill>。  
+4. 添加<xref:System.Windows.Forms.SplitContainer>向窗体控件，并设置其<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.Fill>。  
   
-5.  添加<xref:System.Windows.Forms.ImageList>名为`imageList1`到窗体，使用属性窗口添加两个映像： 一个文件夹图像和文档图像，按该顺序。  
+5. 添加<xref:System.Windows.Forms.ImageList>名为`imageList1`到窗体，使用属性窗口添加两个映像： 一个文件夹图像和文档图像，按该顺序。  
   
-6.  添加<xref:System.Windows.Forms.TreeView>名为控件`treeview1`窗体，并将其置于的左侧<xref:System.Windows.Forms.SplitContainer>控件。 在属性窗口中`treeView1`执行以下操作：  
+6. 添加<xref:System.Windows.Forms.TreeView>名为控件`treeview1`窗体，并将其置于的左侧<xref:System.Windows.Forms.SplitContainer>控件。 在属性窗口中`treeView1`执行以下操作：  
   
     1.  将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
     2.  设置<xref:System.Windows.Forms.TreeView.ImageList%2A>属性 `imagelist1.`  
   
-7.  添加<xref:System.Windows.Forms.ListView>名为控件`listView1`窗体，并将其置于的右侧<xref:System.Windows.Forms.SplitContainer>控件。 在属性窗口中`listview1`执行以下操作：  
+7. 添加<xref:System.Windows.Forms.ListView>名为控件`listView1`窗体，并将其置于的右侧<xref:System.Windows.Forms.SplitContainer>控件。 在属性窗口中`listview1`执行以下操作：  
   
     1.  将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
@@ -58,7 +58,7 @@ Visual Studio 的优势之一是时间的能够在较短中创建具有专业外
   
     4.  设置<xref:System.Windows.Forms.ListView.SmallImageList%2A>属性 `imageList1.`  
   
-8.  实现代码来填充<xref:System.Windows.Forms.TreeView>节点和子节点。 添加到此代码`Form1`类。  
+8. 实现代码来填充<xref:System.Windows.Forms.TreeView>节点和子节点。 添加到此代码`Form1`类。  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  

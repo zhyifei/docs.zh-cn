@@ -11,19 +11,19 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-ms.openlocfilehash: 1849e3ae88b9805f74b2f792ad53b02aa87e6569
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4cbb5fbdb24790a7ddbce5c38060703c7ba7024a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209510"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326887"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>如何：添加和删除 Windows 窗体 TreeView 控件中的节点
 Windows 窗体<xref:System.Windows.Forms.TreeView>控件将存储中的顶级节点及其<xref:System.Windows.Forms.TreeView.Nodes%2A>集合。 每个<xref:System.Windows.Forms.TreeNode>还具有自己<xref:System.Windows.Forms.TreeNode.Nodes%2A>集合来存储它的子节点。 这两个集合属性属于类型<xref:System.Windows.Forms.TreeNodeCollection>，它提供标准集合成员，使您可以添加、 删除和重新排列节点层次结构的单个级别上的节点。  
   
 ### <a name="to-add-nodes-programmatically"></a>若要以编程方式添加节点  
   
-1.  使用<xref:System.Windows.Forms.TreeNodeCollection.Add%2A>树视图的方法<xref:System.Windows.Forms.TreeView.Nodes%2A>属性。  
+1. 使用<xref:System.Windows.Forms.TreeNodeCollection.Add%2A>树视图的方法<xref:System.Windows.Forms.TreeView.Nodes%2A>属性。  
   
     ```vb  
     ' Adds new node as a child node of the currently selected node.  
@@ -45,7 +45,7 @@ Windows 窗体<xref:System.Windows.Forms.TreeView>控件将存储中的顶级节
   
 ### <a name="to-remove-nodes-programmatically"></a>若要以编程方式删除节点  
   
-1.  使用<xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>树视图的方法<xref:System.Windows.Forms.TreeView.Nodes%2A>属性中删除单个节点，或<xref:System.Windows.Forms.TreeNodeCollection.Clear%2A>方法以清除所有节点。  
+1. 使用<xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>树视图的方法<xref:System.Windows.Forms.TreeView.Nodes%2A>属性中删除单个节点，或<xref:System.Windows.Forms.TreeNodeCollection.Clear%2A>方法以清除所有节点。  
   
     ```vb  
     ' Removes currently selected node, or root if nothing is selected.  

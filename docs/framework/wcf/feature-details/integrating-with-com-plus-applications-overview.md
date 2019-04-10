@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153239"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328720"
 ---
 # <a name="integrating-with-com-applications-overview"></a>与 COM+ 应用程序集成的概述
 Windows Communication Foundation (WCF) 提供了用于创建分布式应用程序的丰富环境。 如果你已在使用 COM + 中承载的基于组件的应用程序逻辑，可以使用 WCF 来扩展现有的逻辑，而不是无需将其重写。 最常见的情形是通过 Web 服务来公开现有 COM+ 或企业服务业务逻辑。  
@@ -36,13 +36,13 @@ Windows Communication Foundation (WCF) 提供了用于创建分布式应用程�
   
  在不修改 COM+ 组件的情况下将该组件的接口作为 Web 服务公开时，需要执行下列步骤：  
   
-1.  确定是否可将 COM+ 组件的接口作为 Web 服务公开。  
+1. 确定是否可将 COM+ 组件的接口作为 Web 服务公开。  
   
-2.  选择相应的宿主模式。  
+2. 选择相应的宿主模式。  
   
-3.  使用 COM+ 服务模块配置工具 (ComSvcConfig.exe) 为该接口添加 Web 服务。 有关如何使用 ComSvcConfig.exe 的详细信息，请参阅[如何：使用 COM + 服务模型配置工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
+3. 使用 COM+ 服务模块配置工具 (ComSvcConfig.exe) 为该接口添加 Web 服务。 有关如何使用 ComSvcConfig.exe 的详细信息，请参阅[如何：使用 COM + 服务模型配置工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
   
-4.  在应用程序配置文件中配置任何其他服务设置。 有关如何配置组件的详细信息，请参阅[如何：配置 COM + 服务设置](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)。  
+4. 在应用程序配置文件中配置任何其他服务设置。 有关如何配置组件的详细信息，请参阅[如何：配置 COM + 服务设置](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)。  
   
 ## <a name="supported-interfaces"></a>支持的接口  
  对可作为 Web 服务公开的接口的类型有一些限制。 不支持以下类型的接口：  

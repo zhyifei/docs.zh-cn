@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 292a70658e37839897b39d4d58fdf98903d2d963
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 42a9e0f67f00c1a706b72ab0eeb522e99d8a8dfe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196874"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300471"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>如何：设置 Windows 窗体 ProgressBar 控件显示的值
 > [!IMPORTANT]
@@ -31,9 +31,9 @@ ms.locfileid: "59196874"
   
 ### <a name="to-set-the-progressbar-value-directly"></a>若要直接设置 ProgressBar 值  
   
-1.  设置<xref:System.Windows.Forms.ProgressBar>控件的<xref:System.Windows.Forms.ProgressBar.Minimum%2A>和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。  
+1. 设置<xref:System.Windows.Forms.ProgressBar>控件的<xref:System.Windows.Forms.ProgressBar.Minimum%2A>和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。  
   
-2.  在代码中，设置控件的<xref:System.Windows.Forms.ProgressBar.Value%2A>属性设置为已建立的最小值和最大值之间的整数值。  
+2. 在代码中，设置控件的<xref:System.Windows.Forms.ProgressBar.Value%2A>属性设置为已建立的最小值和最大值之间的整数值。  
   
     > [!NOTE]
     >  如果您设置<xref:System.Windows.Forms.ProgressBar.Value%2A>属性来建立边界之外<xref:System.Windows.Forms.ProgressBar.Minimum%2A>并<xref:System.Windows.Forms.ProgressBar.Maximum%2A>属性，该控件将引发<xref:System.ArgumentException>异常。  
@@ -87,11 +87,11 @@ ms.locfileid: "59196874"
   
 ### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>若要按固定值增加进度栏  
   
-1.  设置<xref:System.Windows.Forms.ProgressBar>控件的<xref:System.Windows.Forms.ProgressBar.Minimum%2A>和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。  
+1. 设置<xref:System.Windows.Forms.ProgressBar>控件的<xref:System.Windows.Forms.ProgressBar.Minimum%2A>和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。  
   
-2.  设置控件的<xref:System.Windows.Forms.ProgressBar.Step%2A>属性设置为一个整数，表示数量增加进度栏显示值。  
+2. 设置控件的<xref:System.Windows.Forms.ProgressBar.Step%2A>属性设置为一个整数，表示数量增加进度栏显示值。  
   
-3.  调用<xref:System.Windows.Forms.ProgressBar.PerformStep%2A>方法，以更改所显示的设置的金额值<xref:System.Windows.Forms.ProgressBar.Step%2A>属性。  
+3. 调用<xref:System.Windows.Forms.ProgressBar.PerformStep%2A>方法，以更改所显示的设置的金额值<xref:System.Windows.Forms.ProgressBar.Step%2A>属性。  
   
      下面的代码示例演示了一个进度栏如何维护复制操作中的文件数。  
   
@@ -153,9 +153,9 @@ ms.locfileid: "59196874"
   
 ### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>若要通过动态值增加进度栏  
   
-1.  设置<xref:System.Windows.Forms.ProgressBar>控件的<xref:System.Windows.Forms.ProgressBar.Minimum%2A>和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。  
+1. 设置<xref:System.Windows.Forms.ProgressBar>控件的<xref:System.Windows.Forms.ProgressBar.Minimum%2A>和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。  
   
-2.  调用<xref:System.Windows.Forms.ProgressBar.Increment%2A>方法，以更改显示你指定一个整数的值。  
+2. 调用<xref:System.Windows.Forms.ProgressBar.Increment%2A>方法，以更改显示你指定一个整数的值。  
   
      下面的代码示例演示了一个进度栏可以计算复制操作期间已使用多少磁盘空间。  
   

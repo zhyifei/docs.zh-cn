@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219208"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298899"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>跟踪应用程序和在应用程序中插入检测点
 跟踪是指应用程序正在运行时监视其执行情况的方式。 可在开发 .NET Framework 应用程序时向其添加跟踪和调试检测，也可在开发应用程序时或在部署此应用程序之后使用此检测。 可使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 类将错误和应用程序执行的相关信息记录在日志、文本文件或其他设备中，以供将来分析。  
@@ -67,11 +67,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 ### <a name="phases-of-code-tracing"></a>代码跟踪的阶段  
  代码跟踪有 3 个阶段：  
   
-1.  检测 - 向应用程序添加跟踪代码。  
+1. 检测 - 向应用程序添加跟踪代码。  
   
-2.  跟踪 - 跟踪代码向指定目标写入相应信息。  
+2. 跟踪 - 跟踪代码向指定目标写入相应信息。  
   
-3.  分析 - 评估跟踪信息以确定和了解应用程序中的问题。  
+3. 分析 - 评估跟踪信息以确定和了解应用程序中的问题。  
   
  开发过程中，所有调试和跟踪输出方法都默认将信息写入 Visual Studio 的输出窗口。 在已部署的应用程序中，方法将跟踪信息写入所指定的目标。 有关指定跟踪或调试的输出目标的详细信息，请参阅[跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)。  
   
@@ -79,17 +79,17 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 ##### <a name="to-use-tracing-in-an-application"></a>若要在应用程序中使用跟踪  
   
-1.  请思考部署应用程序后想要现场接收哪种跟踪输出。  
+1. 请思考部署应用程序后想要现场接收哪种跟踪输出。  
   
-2.  创建一组开关。 有关详细信息，请参阅[如何：配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
+2. 创建一组开关。 有关详细信息，请参阅[如何：配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
   
-3.  向应用程序代码添加跟踪语句。  
+3. 向应用程序代码添加跟踪语句。  
   
-4.  确定要显示跟踪输出的位置并添加相应的侦听器。 有关详细信息，请参阅[创建和初始化跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)。  
+4. 确定要显示跟踪输出的位置并添加相应的侦听器。 有关详细信息，请参阅[创建和初始化跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)。  
   
-5.  测试和调试应用程序及其包含的跟踪代码。  
+5. 测试和调试应用程序及其包含的跟踪代码。  
   
-6.  使用下面一个过程将应用程序编译为可执行代码：  
+6. 使用下面一个过程将应用程序编译为可执行代码：  
   
     -   使用“构建”菜单以及“解决方案资源管理器”中“属性页”对话框的“调试”页。 在 Visual Studio 中编译时，请使用此选项。  
   
@@ -97,11 +97,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     -   对编译的命令行方法使用“跟踪”和“调试”编译器指令。 有关详细信息，请参阅[使用跟踪和调试进行条件编译](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。 从命令行进行编译时，请使用此选项。  
   
-7.  如果在运行时出现问题，请打开相应的跟踪开关。 有关详细信息，请参阅[配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
+7. 如果在运行时出现问题，请打开相应的跟踪开关。 有关详细信息，请参阅[配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
   
      跟踪代码向指定目标写入跟踪消息，如屏幕、文本文件或事件日志。 跟踪侦听器集合中附带的侦听器类型确定目标。  
   
-8.  分析跟踪消息以确定和了解应用程序中的问题。  
+8. 分析跟踪消息以确定和了解应用程序中的问题。  
   
 ## <a name="trace-instrumentation-and-distributed-applications"></a>跟踪检测和分布式应用程序  
  在创建分布式应用程序时，可能难以按要使用的方式测试应用程序。 开发团队几乎都不能测试操作系统或 Web 浏览器（包括所有本地化的语言选项）的所有潜在组合，也不能模拟将同时访问应用程序的大量用户。 在这些情况下，无法测试分布式应用程序将如何响应高容量、不同的设置和最终用户的唯一行为。 此外，分布式应用程序的很多部件都不具有可直接与之交互或可用于查看这些部件的行为的用户界面。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217063"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328668"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>如何：定义拆分窗口中的大小调整和定位行为
 面板的<xref:System.Windows.Forms.SplitContainer>控件有助于使自身也要调整其大小和由用户操作。 但是，将有的时间时要以编程方式控制拆分器 — 其中其定位和可以移动的程度。  
@@ -31,7 +31,7 @@ ms.locfileid: "59217063"
   
 ### <a name="to-define-splitcontainer-resize-behavior"></a>若要定义 SplitContainer 调整大小行为  
   
-1.  在过程中，设置<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>属性设置为所需的大小，以便实现拆分器的对齐行为。  
+1. 在过程中，设置<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>属性设置为所需的大小，以便实现拆分器的对齐行为。  
   
      在以下代码示例中，在窗体内<xref:System.Windows.Forms.Form.Load>事件，在拆分器<xref:System.Windows.Forms.SplitContainer>控件被设置为 10 个像素拖动时跳转。  
   

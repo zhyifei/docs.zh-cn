@@ -2,12 +2,12 @@
 title: 如何：表示主键
 ms.date: 03/30/2017
 ms.assetid: 63c65289-6539-42b2-8493-891c232018fa
-ms.openlocfilehash: 714211046afcafab4c2b67bf9318cfbede314476
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dcb8929c9cd9a7b88f19d760b70117a1092760f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173207"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295583"
 ---
 # <a name="how-to-represent-primary-keys"></a>如何：表示主键
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>属性上的<xref:System.Data.Linq.Mapping.ColumnAttribute>属性来指定属性或字段来表示数据库列的主键。  
@@ -19,9 +19,9 @@ ms.locfileid: "59173207"
   
 ### <a name="to-designate-a-property-or-field-as-a-primary-key"></a>将属性或字段指定为主键  
   
-1.  将 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> 属性 (Property) 添加到 <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性 (Attribute)。  
+1. 将 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> 属性 (Property) 添加到 <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性 (Attribute)。  
   
-2.  将其值指定为 `true`。  
+2. 将其值指定为 `true`。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -2,19 +2,19 @@
 title: 如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157478"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303916"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
 有时，开发人员必须完全控制从服务操作返回数据的方式。 当服务操作必须由 WCF 不支持的格式返回数据时，这是这种情况。 本主题讨论如何使用 WCF WEB HTTP 编程模型来创建此类服务。 此服务具有一个返回流的操作。  
   
 ### <a name="to-implement-the-service-contract"></a>实现服务协定  
   
-1.  定义服务协定。 该协定名为 `IImageServer`，具有一个名为 `GetImage` 的方法，该方法返回 <xref:System.IO.Stream>。  
+1. 定义服务协定。 该协定名为 `IImageServer`，具有一个名为 `GetImage` 的方法，该方法返回 <xref:System.IO.Stream>。  
   
     ```  
     [ServiceContract]  
@@ -27,7 +27,7 @@ ms.locfileid: "59157478"
   
      因为该方法将返回<xref:System.IO.Stream>、 WCF 假定该操作具有完全控制从服务操作返回的字节数和其应用任何格式设置为返回的数据。  
   
-2.  实现服务协定。 该协定只有一个操作：`GetImage`。 此方法生成一个位图，再以 .jpg 格式将其保存到 <xref:System.IO.MemoryStream>。 随后，操作将该流返回给调用方。  
+2. 实现服务协定。 该协定只有一个操作：`GetImage`。 此方法生成一个位图，再以 .jpg 格式将其保存到 <xref:System.IO.MemoryStream>。 随后，操作将该流返回给调用方。  
   
     ```  
     public class Service : IImageServer  
@@ -57,7 +57,7 @@ ms.locfileid: "59157478"
   
 ### <a name="to-host-the-service"></a>承载服务  
   
-1.  创建用于承载服务的控制台应用程序。  
+1. 创建用于承载服务的控制台应用程序。  
   
     ```  
     class Program  
@@ -68,31 +68,31 @@ ms.locfileid: "59157478"
     }  
     ```  
   
-2.  在 `Main` 方法中创建一个变量以保存服务的基址。  
+2. 在 `Main` 方法中创建一个变量以保存服务的基址。  
   
     ```  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  为服务创建一个 <xref:System.ServiceModel.ServiceHost> 实例，指定服务类和基址。  
+3. 为服务创建一个 <xref:System.ServiceModel.ServiceHost> 实例，指定服务类和基址。  
   
     ```  
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
-4.  使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior> 添加一个终结点。  
+4. 使用 <xref:System.ServiceModel.WebHttpBinding> 和 <xref:System.ServiceModel.Description.WebHttpBehavior> 添加一个终结点。  
   
     ```  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5.  打开服务主机。  
+5. 打开服务主机。  
   
     ```  
     host.Open()  
     ```  
   
-6.  等待用户按 Enter 终止服务。  
+6. 等待用户按 Enter 终止服务。  
   
     ```  
     Console.WriteLine("Service is running");  
@@ -103,9 +103,9 @@ ms.locfileid: "59157478"
   
 ### <a name="to-call-the-raw-service-using-internet-explorer"></a>使用 Internet Explorer 调用原始服务  
   
-1.  运行该服务，您应看到来自它的以下输出。 `Service is running Press ENTER to close the host`  
+1. 运行该服务，您应看到来自它的以下输出。 `Service is running Press ENTER to close the host`  
   
-2.  打开 Internet Explorer 并键入 `http://localhost:8000/Service/GetImage?width=50&height=40`，您应看到一个黄色矩形，有蓝色对角线穿过其中心。  
+2. 打开 Internet Explorer 并键入 `http://localhost:8000/Service/GetImage?width=50&height=40`，您应看到一个黄色矩形，有蓝色对角线穿过其中心。  
   
 ## <a name="example"></a>示例  
  下面列出了此主题的完整代码。  

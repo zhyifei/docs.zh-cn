@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: c450de0eb3eead3a2d3b21c3635caa71d92ce07f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212799"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325054"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 绑定概述
 绑定是用来指定所需连接到 Windows Communication Foundation (WCF) 服务的终结点的通信详细信息的对象。 WCF 服务中的每个终结点需要具体指定的绑定。 本主题概述了通信详细信息的绑定所定义的一个绑定，在 WCF 中，包含哪些绑定和如何为终结点指定一个绑定元素的类型。  
@@ -50,9 +50,9 @@ ms.locfileid: "59212799"
 ## <a name="using-bindings"></a>使用绑定  
  使用绑定需要执行两个基本步骤：  
   
-1.  选择或定义绑定。 最简单方法是选择 WCF 中包含的系统提供绑定之一并将其用于其默认设置。 您还可以选择一个系统提供的绑定，然后根据您的要求重新设置它的属性值。 或者，你可以创建一个自定义绑定或用户定义的绑定，以实现更高程度的控制和自定义。  
+1. 选择或定义绑定。 最简单方法是选择 WCF 中包含的系统提供绑定之一并将其用于其默认设置。 您还可以选择一个系统提供的绑定，然后根据您的要求重新设置它的属性值。 或者，你可以创建一个自定义绑定或用户定义的绑定，以实现更高程度的控制和自定义。  
   
-2.  创建一个使用所选择或定义的绑定的终结点。  
+2. 创建一个使用所选择或定义的绑定的终结点。  
   
 ## <a name="code-and-configuration"></a>代码和配置  
  可以通过两种方式来定义绑定：通过代码或通过配置。 这两种方法与你使用的是系统提供的绑定还是自定义绑定无关。 通常，使用代码可以使你在设计时对绑定的定义拥有完全的控制。 但是，使用配置，允许系统管理员或 WCF 服务或客户端能够更改绑定的参数，而无需重新编译服务应用程序的用户。 这种灵活性通常是可取的因为没有方法来预测在其部署 WCF 应用程序的特定计算机需求。 通过将绑定（和寻址）信息保持在代码外部，人们可以更改这些信息，而不必重新编译或重新部署应用程序。 请注意，代码中定义的绑定是在配置中指定的绑定之后创建的，这使得代码定义的绑定可以覆盖配置中定义的任何绑定。  

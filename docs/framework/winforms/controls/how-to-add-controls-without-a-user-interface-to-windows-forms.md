@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 90166821181e6562d0bef3ff85f7e7a95c479be0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330098"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>如何：向 Windows 窗体添加无用户界面的控件
 非可视控件 （或组件） 提供了与你的应用程序的功能。 不同于其他控件组件不向用户提供用户界面，因此不需要在 Windows 窗体设计器图面上显示。 当一个组件添加到窗体时，Windows 窗体设计器在其中显示所有组件的窗体的底部显示可调整大小的送纸器。 控件添加到组件栏后，你可以选择的组件，并设置其属性，就像任何其他控件在窗体上。  
@@ -29,9 +29,9 @@ ms.locfileid: "59223688"
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>若要将组件添加到 Windows 窗体  
   
-1.  打开窗体。 有关详细信息，请参阅[如何：在设计器中显示 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
+1. 打开窗体。 有关详细信息，请参阅[如何：在设计器中显示 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
   
-2.  在中**工具箱**，单击一个组件，并将其拖动到窗体。  
+2. 在中**工具箱**，单击一个组件，并将其拖动到窗体。  
   
      此组件将出现在组件栏中。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "59223688"
   
 #### <a name="to-add-a-component-to-a-windows-form-programmatically"></a>若要以编程方式向 Windows 窗体添加组件  
   
-1.  创建的实例<xref:System.Windows.Forms.Timer>代码中的类。  
+1. 创建的实例<xref:System.Windows.Forms.Timer>代码中的类。  
   
-2.  设置`Interval`属性，以确定计时器的滴答之间的时间。  
+2. 设置`Interval`属性，以确定计时器的滴答之间的时间。  
   
-3.  配置任何其他必要的属性，为您的组件。  
+3. 配置任何其他必要的属性，为您的组件。  
   
      下面的代码演示如何创建<xref:System.Windows.Forms.Timer>使用其`Interval`属性集。  
   

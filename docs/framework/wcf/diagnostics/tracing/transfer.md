@@ -2,12 +2,12 @@
 title: 传输
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145036"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311014"
 ---
 # <a name="transfer"></a>传输
 本主题介绍 Windows Communication Foundation (WCF) 活动跟踪模型中的传输。  
@@ -42,21 +42,21 @@ ms.locfileid: "59145036"
 ## <a name="activity-transfer-sequence"></a>活动传输序列  
  格式正确的活动传输序列包含下列步骤。  
   
-1.  开始一个新活动（包括选择新的 gAId）。  
+1. 开始一个新活动（包括选择新的 gAId）。  
   
-2.  发出从当前活动 ID 到该新 gAId 的传输跟踪  
+2. 发出从当前活动 ID 到该新 gAId 的传输跟踪  
   
-3.  在 TLS 中设置新 ID  
+3. 在 TLS 中设置新 ID  
   
-4.  发出开始跟踪以指示新活动的开始。  
+4. 发出开始跟踪以指示新活动的开始。  
   
-5.  返回到原始活动包括下列步骤：  
+5. 返回到原始活动包括下列步骤：  
   
-6.  发出到原始 gAId 的传输跟踪  
+6. 发出到原始 gAId 的传输跟踪  
   
-7.  发出停止跟踪以指示新活动的结束  
+7. 发出停止跟踪以指示新活动的结束  
   
-8.  将 TLS 设置为旧的 gAId。  
+8. 将 TLS 设置为旧的 gAId。  
   
  下面的代码示例演示如何执行此操作。 此示例假定，在传输到新活动时将进行阻止调用，该调用包括挂起/继续跟踪。  
   

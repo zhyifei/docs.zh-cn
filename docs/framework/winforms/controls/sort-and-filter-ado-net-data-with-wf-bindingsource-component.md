@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 1f8a5e9be40c8a2d00b05ea42097e397afd0e1b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8904eff39b7278b2a185cc5e2f738ece1e8e88e4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163249"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306503"
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows 窗体 BindingSource 组件对 ADO.NET 数据进行排序和筛选
 排序和筛选功能可以公开<xref:System.Windows.Forms.BindingSource>通过控制<xref:System.Windows.Forms.BindingSource.Sort%2A>和<xref:System.Windows.Forms.BindingSource.Filter%2A>属性。 您可以将简单排序的基础数据源，则应用<xref:System.ComponentModel.IBindingList>，并可以应用筛选和高级排序数据源时<xref:System.ComponentModel.IBindingListView>。 <xref:System.Windows.Forms.BindingSource.Sort%2A>属性需要标准[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]语法： 一个表示数据源中数据的列的名称的字符串后跟`ASC`或`DESC`以指示是按升序或降序顺序对列表进行排序。 您可以设置高级排序或通过使用逗号分隔符分隔每个列的多个列排序。 <xref:System.Windows.Forms.BindingSource.Filter%2A>属性采用的字符串表达式。  
@@ -37,9 +37,9 @@ ms.locfileid: "59163249"
   
 ### <a name="to-sort-data-with-the-bindingsource"></a>使用 BindingSource 的数据进行排序  
   
-1.  设置<xref:System.Windows.Forms.BindingSource.Sort%2A>属性设置为你想跟的列名称`ASC`或`DESC`以指示升序或降序排序。  
+1. 设置<xref:System.Windows.Forms.BindingSource.Sort%2A>属性设置为你想跟的列名称`ASC`或`DESC`以指示升序或降序排序。  
   
-2.  请用逗号分隔多个列。  
+2. 请用逗号分隔多个列。  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#12)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  

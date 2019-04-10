@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168982"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327849"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 元素的布局注意事项
 本主题介绍如何<xref:System.Windows.Forms.Integration.WindowsFormsHost>与元素交互[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局系统。  
@@ -84,13 +84,13 @@ ms.locfileid: "59168982"
 ### <a name="sizing-algorithm"></a>调整大小算法  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素使用以下过程来托管的控件的大小：  
   
-1.  <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素会替代<xref:System.Windows.FrameworkElement.MeasureOverride%2A>和<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法。  
+1. <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素会替代<xref:System.Windows.FrameworkElement.MeasureOverride%2A>和<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法。  
   
-2.  若要确定所承载控件的大小<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法调用托管的控件的<xref:System.Windows.Forms.Control.GetPreferredSize%2A>方法使用约束转换从传递给约束<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法。  
+2. 若要确定所承载控件的大小<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法调用托管的控件的<xref:System.Windows.Forms.Control.GetPreferredSize%2A>方法使用约束转换从传递给约束<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法。  
   
-3.  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法会尝试将所承载的控件设置为给定的大小约束。  
+3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法会尝试将所承载的控件设置为给定的大小约束。  
   
-4.  如果托管的控件的<xref:System.Windows.Forms.Control.Size%2A>属性进行匹配指定的约束时，所承载的控件的大小为该约束。  
+4. 如果托管的控件的<xref:System.Windows.Forms.Control.Size%2A>属性进行匹配指定的约束时，所承载的控件的大小为该约束。  
   
  如果<xref:System.Windows.Forms.Control.Size%2A>属性与指定的约束不匹配，所承载的控件不支持连续的大小调整。 例如，<xref:System.Windows.Forms.MonthCalendar>控件允许连续的大小。 此控件的允许的大小包含高度和宽度的整数 （表示的月数）。 中，这种情况下<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素的行为，如下所示：  
   

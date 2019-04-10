@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225958"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317197"
 ---
 # <a name="optimizing-performance-text"></a>优化性能：Text
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括对演示通过使用功能丰富的文本内容的支持[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]控件。 通常可以将文本呈现分为三层：  
   
-1.  使用<xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>直接对象。  
+1. 使用<xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>直接对象。  
   
-2.  使用<xref:System.Windows.Media.FormattedText>对象。  
+2. 使用<xref:System.Windows.Media.FormattedText>对象。  
   
-3.  使用高级别控件，如<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>对象。  
+3. 使用高级别控件，如<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>对象。  
   
  本主题提供文本呈现性能方面的建议。  
 

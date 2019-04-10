@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: a4fe68ca4c2d4a58ecf561d17111fdf6a68a9118
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dcaabf9ecd47bc88095e92aa8ed28ad5f13fd1dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171835"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314368"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>如何：将 Visual Studio 配置为通过调试 XAML 浏览器应用程序来调用 Web 服务
 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 在 Internet 区域权限集仅限于部分信任安全沙箱中运行。 此权限集将限制仅 Web 服务位于 Web 服务调用[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]应用程序的源站点。 当[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]调试从 Visual Studio 2005 中，不过，它不被视为具有相同的源站点的 Web 服务它的引用。 这会导致安全异常时引发[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]尝试调用 Web 服务。 但是，Visual Studio 2005[!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]项目可以配置为模拟有与它进行调试时将调用 Web 服务相同的源站点。 这允许[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]来安全地调用 Web 服务，而不会导致安全异常。
@@ -21,15 +21,15 @@ ms.locfileid: "59171835"
 ## <a name="configuring-visual-studio"></a>配置 Visual Studio
  若要配置 Visual Studio 2005 来调试[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]调用 Web 服务：
 
-1.  在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。
+1. 在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。
 
-2.  在中**项目设计器**，单击**调试**选项卡。
+2. 在中**项目设计器**，单击**调试**选项卡。
 
-3.  在中**启动操作**部分中，选择**启动外部程序**并输入以下命令：
+3. 在中**启动操作**部分中，选择**启动外部程序**并输入以下命令：
 
      `C:\WINDOWS\System32\PresentationHost.exe`
 
-4.  在中**启动选项**部分中，输入到以下**命令行参数**文本框中：
+4. 在中**启动选项**部分中，输入到以下**命令行参数**文本框中：
 
      `-debug`  *filename*
 
@@ -40,11 +40,11 @@ ms.locfileid: "59171835"
 > [!NOTE]
 >  这是使用 Visual Studio 2005 创建的解决方案的默认配置[!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]项目模板。
 
-1.  在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。
+1. 在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。
 
-2.  在中**项目设计器**，单击**调试**选项卡。
+2. 在中**项目设计器**，单击**调试**选项卡。
 
-3.  在中**启动选项**部分中，添加以下命令行参数**命令行参数**文本框中：
+3. 在中**启动选项**部分中，添加以下命令行参数**命令行参数**文本框中：
 
      `-debugSecurityZoneURL`  *URL*
 

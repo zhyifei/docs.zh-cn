@@ -2,19 +2,19 @@
 title: 如何：使用 WorkflowServiceHost 配置工作流未经处理的异常行为
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
-ms.openlocfilehash: 8f7fe203a4198aa98e8aee1be3a12e4d72a066f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cd3729019b5371b5313bba3814758c723c0d448a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175404"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318737"
 ---
 # <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>如何：使用 WorkflowServiceHost 配置工作流未经处理的异常行为
 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 行为可用于指定 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 承载的工作流中出现未经处理的异常时所采取的操作。 本主题演示如何在配置文件中配置此行为。  
   
 ### <a name="to-configure-workflowunhandledexceptionbehavior"></a>配置 WorkflowUnhandledExceptionBehavior  
   
-1.  添加 <`workflowUnhandledException`> 元素中的 <`behavior`> 元素中的 <`serviceBehaviors`> 元素中，使用`action`特性以指定要执行下面的示例中所示发生未处理的异常时的操作。  
+1. 添加 <`workflowUnhandledException`> 元素中的 <`behavior`> 元素中的 <`serviceBehaviors`> 元素中，使用`action`特性以指定要执行下面的示例中所示发生未处理的异常时的操作。  
   
     ```xml  
     <behaviors>  

@@ -10,25 +10,25 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 1902557e5dbdcee3c1facc18b6f5c3037c266a8e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: faaa48051c80b6dfd330f15f72a38297ff2d1b9f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148234"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301875"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>如何：使用 Windows 窗体 RichTextBox 控件显示 Web 样式的链接
 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以显示为彩色并有下划线的 Web 链接。 可以编写将打开浏览器窗口中显示时单击该链接时链接文本中指定的 Web 站点的代码。  
   
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>若要链接到网页上使用 RichTextBox 控件  
   
-1.  设置<xref:System.Windows.Forms.RichTextBox.Text%2A>属性设置为包含有效的 URL 的字符串 (例如，"http://www.microsoft.com/")。  
+1. 设置<xref:System.Windows.Forms.RichTextBox.Text%2A>属性设置为包含有效的 URL 的字符串 (例如，"http://www.microsoft.com/")。  
   
-2.  请确保<xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>属性设置为`true`（默认值）。  
+2. 请确保<xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>属性设置为`true`（默认值）。  
   
-3.  创建新的全局实例<xref:System.Diagnostics.Process>对象。  
+3. 创建新的全局实例<xref:System.Diagnostics.Process>对象。  
   
-4.  写入的事件处理程序<xref:System.Windows.Forms.RichTextBox.LinkClicked>发送所需的文本的浏览器的事件。  
+4. 写入的事件处理程序<xref:System.Windows.Forms.RichTextBox.LinkClicked>发送所需的文本的浏览器的事件。  
   
      在以下示例中，<xref:System.Windows.Forms.RichTextBox.LinkClicked>事件将打开 Internet 浏览器中指定的 URL 来的实例<xref:System.Windows.Forms.RichTextBox.Text%2A>属性的<xref:System.Windows.Forms.RichTextBox>控件。 此示例假定窗体具有<xref:System.Windows.Forms.RichTextBox>控件。  
   

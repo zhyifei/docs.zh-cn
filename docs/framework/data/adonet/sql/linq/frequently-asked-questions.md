@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223971"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323239"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 以下各节解答了您在实现 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 时可能遇到的一些常见问题。  
@@ -156,11 +156,11 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  答： 对于此高级方案，请执行以下步骤：  
   
-1.  在 .dbml 文件中，通过将 <xref:System.Data.Linq.ITable.IsReadOnly%2A> 标志更改为 `True` 来修改属性。  
+1. 在 .dbml 文件中，通过将 <xref:System.Data.Linq.ITable.IsReadOnly%2A> 标志更改为 `True` 来修改属性。  
   
-2.  添加一个分部类。 为只读成员创建一个带参数的构造函数。  
+2. 添加一个分部类。 为只读成员创建一个带参数的构造函数。  
   
-3.  检查默认的 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) 以确定该值对于您的应用程序是否正确。  
+3. 检查默认的 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) 以确定该值对于您的应用程序是否正确。  
   
     > [!CAUTION]
     >  如果使用的[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]在 Visual Studio 中，可能会覆盖所做的更改。  
