@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698384"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314448"
 ---
 # <a name="how-to-use-data-protection"></a>如何：使用数据保护
 .NET Framework 提供对数据保护 API (DPAPI) 的访问，这允许你使用来自当前用户帐户或计算机的信息对数据进行加密。  当使用 DPAPI 时，你会使显式生成和存储加密密钥的困难问题得到缓解。  
@@ -34,25 +34,25 @@ ms.locfileid: "54698384"
   
 ### <a name="to-encrypt-in-memory-data-using-data-protection"></a>若要使用数据保护对内存中数据进行加密  
   
-1.  调用静态 <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> 方法，同时传递要加密的字节数组、平均信息量和内存保护范围。  
+1. 调用静态 <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> 方法，同时传递要加密的字节数组、平均信息量和内存保护范围。  
   
 ### <a name="to-decrypt-in-memory-data-using-data-protection"></a>若要使用数据保护对内存中数据进行解密  
   
-1.  调用静态 <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> 方法，同时传递要解密的字节数组和内存保护范围。  
+1. 调用静态 <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> 方法，同时传递要解密的字节数组和内存保护范围。  
   
 ### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>若要使用数据保护将数据加密到文件或流  
   
-1.  创建随机平均信息量。  
+1. 创建随机平均信息量。  
   
-2.  调用静态 <xref:System.Security.Cryptography.ProtectedData.Protect%2A> 方法，同时传递要加密的字节数组、平均信息量和数据保护范围。  
+2. 调用静态 <xref:System.Security.Cryptography.ProtectedData.Protect%2A> 方法，同时传递要加密的字节数组、平均信息量和数据保护范围。  
   
-3.  将加密的数据写入文件或流。  
+3. 将加密的数据写入文件或流。  
   
 ### <a name="to-decrypt-data-from-a-file-or-stream-using-data-protection"></a>若要使用数据保护从文件或流解密数据  
   
-1.  从文件或流中读取加密的数据。  
+1. 从文件或流中读取加密的数据。  
   
-2.  调用静态 <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> 方法，同时传递要解密的字节数组和数据保护范围。  
+2. 调用静态 <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> 方法，同时传递要解密的字节数组和数据保护范围。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示加密和解密的两种形式。  首先，该代码示例对内存中的字节数组进行加密，然后将其解密。  接下来，该代码示例对字节数组的副本进行加密、将其保存到文件、从文件加载回数据，然后对数据进行解密。  此示例显示原始数据、加密的数据和已解密的数据。  

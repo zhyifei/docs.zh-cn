@@ -2,25 +2,25 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129683"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304572"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities 提供语言集成查询 (LINQ) 支持，它允许开发人员使用 Visual Basic 或 Visual C# 根据实体框架概念模型编写查询。 针对实体框架的查询由针对对象上下文执行的命令目录树查询表示。 LINQ to Entities 将语言集成查询 (LINQ) 查询转换为命令目录树查询，针对实体框架执行这些查询，并返回可同时由实体框架和 LINQ 使用的对象。 以下是创建和执行 LINQ to Entities 查询的过程：  
   
-1.  从 <xref:System.Data.Objects.ObjectQuery%601> 构造 <xref:System.Data.Objects.ObjectContext> 实例。  
+1. 从 <xref:System.Data.Objects.ObjectQuery%601> 构造 <xref:System.Data.Objects.ObjectContext> 实例。  
   
-2.  通过使用 <xref:System.Data.Objects.ObjectQuery%601> 实例在 C# 或 Visual Basic 中编写 LINQ to Entities 查询。  
+2. 通过使用 <xref:System.Data.Objects.ObjectQuery%601> 实例在 C# 或 Visual Basic 中编写 LINQ to Entities 查询。  
   
-3.  将 LINQ 标准查询运算符和表达式将转换为命令目录树。  
+3. 将 LINQ 标准查询运算符和表达式将转换为命令目录树。  
   
-4.  对数据源执行命令目录树表示形式的查询。 执行过程中在数据源上引发的任何异常都将直接向上传递到客户端。  
+4. 对数据源执行命令目录树表示形式的查询。 执行过程中在数据源上引发的任何异常都将直接向上传递到客户端。  
   
-5.  将查询结果返回到客户端。  
+5. 将查询结果返回到客户端。  
   
 ## <a name="constructing-an-objectquery-instance"></a>构造 ObjectQuery 实例  
  <xref:System.Data.Objects.ObjectQuery%601> 泛型类表示一个查询，此查询返回由零个或零个以上类型化实体组成的集合。 对象查询通常从现有对象上下文中构造（而不是手动构造），并且始终属于该对象上下文。 此上下文提供了编写和执行查询所需的连接和元数据信息。 <xref:System.Data.Objects.ObjectQuery%601> 泛型类实现 <xref:System.Linq.IQueryable%601> 泛型接口，借助于该接口的生成器方法，能够以增量方式生成 LINQ 查询。 也可以使用 C# `var` 关键字（在 Visual Basic 中为 `Dim`，启用局部类型推理）让编译器推断实体的类型。  

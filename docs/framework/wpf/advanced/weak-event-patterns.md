@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139251"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316162"
 ---
 # <a name="weak-event-patterns"></a>弱事件模式
 在应用程序，很可能附加到事件源的处理程序不会破坏与该处理程序附加到源的侦听器对象结合使用。 这种情况下可能会导致内存泄漏。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 引入了可用于解决此问题，请通过专用管理器类的特定事件并在该事件的侦听器上实现接口的设计模式。 这种设计模式被称为*弱事件模式*。  
@@ -50,11 +50,11 @@ ms.locfileid: "59139251"
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>使用现有的弱事件管理器类  
   
-1.  查找现有的弱事件管理器。  
+1. 查找现有的弱事件管理器。  
   
      弱事件管理器所包含的 WPF 的列表，请参阅中的继承层次结构<xref:System.Windows.WeakEventManager>类。  
   
-2.  使用新的弱事件管理器，而不是普通事件挂钩。  
+2. 使用新的弱事件管理器，而不是普通事件挂钩。  
   
      例如，如果你的代码使用以下模式来订阅事件：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "59139251"
   
 ### <a name="using-the-generic-weak-event-manager-class"></a>使用泛型弱事件管理器类  
   
-1.  使用泛型<xref:System.Windows.WeakEventManager%602>类而不是普通事件挂钩。  
+1. 使用泛型<xref:System.Windows.WeakEventManager%602>类而不是普通事件挂钩。  
   
      当你使用<xref:System.Windows.WeakEventManager%602>若要注册事件侦听器，您提供事件源和<xref:System.EventArgs>类型的类和调用的类型参数作为<xref:System.Windows.WeakEventManager%602.AddHandler%2A>如下面的代码中所示：  
   
@@ -92,19 +92,19 @@ ms.locfileid: "59139251"
   
 ### <a name="creating-a-custom-weak-event-manager-class"></a>创建自定义的弱事件管理器类  
   
-1.  将以下类模板复制到你的项目。  
+1. 将以下类模板复制到你的项目。  
   
      此类继承<xref:System.Windows.WeakEventManager>类。  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  替换为`SomeEventWeakEventManager`名称与你自己的名称。  
+2. 替换为`SomeEventWeakEventManager`名称与你自己的名称。  
   
-3.  替换为您的活动的相应名称的前面所述的三个名称。 (`SomeEvent`， `EventSource`，和`SomeEventEventArgs`)  
+3. 替换为您的活动的相应名称的前面所述的三个名称。 (`SomeEvent`， `EventSource`，和`SomeEventEventArgs`)  
   
-4.  设置为相同的可见性为它所管理的事件的弱事件管理器类的可见性 （公共 / 内部 / 专用）。  
+4. 设置为相同的可见性为它所管理的事件的弱事件管理器类的可见性 （公共 / 内部 / 专用）。  
   
-5.  使用新的弱事件管理器，而不是普通事件挂钩。  
+5. 使用新的弱事件管理器，而不是普通事件挂钩。  
   
      例如，如果你的代码使用以下模式来订阅事件：  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding search capabilities
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
-ms.openlocfilehash: c1c59c3d4bb5d0d35103371575ebdd49d3559bbe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d5d4dae55fc9f0613ab6535b2fe57e262d0ef141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108545"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314017"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>如何：向 ListView 控件添加搜索功能
 使用中的项的大型列表时通常<xref:System.Windows.Forms.ListView>控件，你想要向用户提供搜索功能。 <xref:System.Windows.Forms.ListView>控制两个不同的方式提供此功能： 文本匹配和搜索位置。  
@@ -25,11 +25,11 @@ ms.locfileid: "59108545"
   
 ### <a name="to-find-an-item-using-text"></a>若要使用文本查找项  
   
-1.  创建<xref:System.Windows.Forms.ListView>与<xref:System.Windows.Forms.ListView.View%2A>属性设置为<xref:System.Windows.Forms.View.Details>或<xref:System.Windows.Forms.View.List>，然后填充<xref:System.Windows.Forms.ListView>的项。  
+1. 创建<xref:System.Windows.Forms.ListView>与<xref:System.Windows.Forms.ListView.View%2A>属性设置为<xref:System.Windows.Forms.View.Details>或<xref:System.Windows.Forms.View.List>，然后填充<xref:System.Windows.Forms.ListView>的项。  
   
-2.  调用<xref:System.Windows.Forms.ListView.FindItemWithText%2A>方法，传入你想要查找的项的文本。  
+2. 调用<xref:System.Windows.Forms.ListView.FindItemWithText%2A>方法，传入你想要查找的项的文本。  
   
-3.  下面的代码示例演示如何创建基本<xref:System.Windows.Forms.ListView>、 填充项，并使用文本输入的用户列表中查找项。  
+3. 下面的代码示例演示如何创建基本<xref:System.Windows.Forms.ListView>、 填充项，并使用文本输入的用户列表中查找项。  
   
  [!code-cpp[System.Windows.Forms.ListViewFindItems#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/cpp/form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.ListViewFindItems#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/CS/form1.cs#1)]
@@ -37,11 +37,11 @@ ms.locfileid: "59108545"
   
 ### <a name="to-find-an-item-using-x--and-y-coordinates"></a>若要使用 x 和 y 坐标查找项  
   
-1.  创建<xref:System.Windows.Forms.ListView>与<xref:System.Windows.Forms.View>属性设置为<xref:System.Windows.Forms.View.SmallIcon>或<xref:System.Windows.Forms.View.LargeIcon>，然后填充<xref:System.Windows.Forms.ListView>的项。  
+1. 创建<xref:System.Windows.Forms.ListView>与<xref:System.Windows.Forms.View>属性设置为<xref:System.Windows.Forms.View.SmallIcon>或<xref:System.Windows.Forms.View.LargeIcon>，然后填充<xref:System.Windows.Forms.ListView>的项。  
   
-2.  调用<xref:System.Windows.Forms.ListView.FindNearestItem%2A>方法，传递所需 x 坐标和 y 坐标和想要搜索的方向。  
+2. 调用<xref:System.Windows.Forms.ListView.FindNearestItem%2A>方法，传递所需 x 坐标和 y 坐标和想要搜索的方向。  
   
-3.  下面的代码示例演示如何创建基本图标<xref:System.Windows.Forms.ListView>，其中填充项，并捕获<xref:System.Windows.Forms.Control.MouseDown>事件向上方向中查找最近的项。  
+3. 下面的代码示例演示如何创建基本图标<xref:System.Windows.Forms.ListView>，其中填充项，并捕获<xref:System.Windows.Forms.Control.MouseDown>事件向上方向中查找最近的项。  
   
  [!code-cpp[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/cpp/form1.cpp#2)]
  [!code-csharp[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/CS/form1.cs#2)]

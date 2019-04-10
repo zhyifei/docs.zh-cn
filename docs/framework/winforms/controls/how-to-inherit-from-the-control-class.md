@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: b173f322018921ef1c0fec6aa785ae6c9d9e6957
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141981"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314212"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>如何：从 Control 类继承
 如果你想要创建 Windows 窗体上使用的完全自定义控件，则应从继承<xref:System.Windows.Forms.Control>类。 同时继承自<xref:System.Windows.Forms.Control>类需要执行更多的规划和实施，它还提供了最大程度的选项。 从继承时<xref:System.Windows.Forms.Control>，继承使控件能够工作的最基本功能。 中的固有功能<xref:System.Windows.Forms.Control>类处理用户通过键盘和鼠标输入，定义的边界和控件的大小，提供 windows 句柄，并提供消息处理和安全性。 它没有纳入任何绘图功能（这里指的是控件的图形界面的实际呈现），也没有纳入任何特定的用户交互功能。 必须通过自定义代码提供所有的这些功能。  
@@ -23,25 +23,25 @@ ms.locfileid: "59141981"
   
 ### <a name="to-create-a-custom-control"></a>创建自定义控件  
   
-1.  创建一个新的 **Windows 应用程序**或 **Windows 控件库**项目。  
+1. 创建一个新的 **Windows 应用程序**或 **Windows 控件库**项目。  
   
-2.  从“项目”菜单中，选择“添加类”。  
+2. 从“项目”菜单中，选择“添加类”。  
   
-3.  在“添加新项”对话框中，单击“自定义控件”。  
+3. 在“添加新项”对话框中，单击“自定义控件”。  
   
      一个新的自定义控件将被添加到项目中。  
   
-4.  按 F7 打开自定义控件的“代码编辑器”。  
+4. 按 F7 打开自定义控件的“代码编辑器”。  
   
-5.  找到<xref:System.Windows.Forms.Control.OnPaint%2A>方法，将为空 （除外） 的调用<xref:System.Windows.Forms.Control.OnPaint%2A>基类的方法。  
+5. 找到<xref:System.Windows.Forms.Control.OnPaint%2A>方法，将为空 （除外） 的调用<xref:System.Windows.Forms.Control.OnPaint%2A>基类的方法。  
   
-6.  修改代码以纳入控件所需的任何自定义绘图。  
+6. 修改代码以纳入控件所需的任何自定义绘图。  
   
      有关编写代码来呈现控件的图形的信息，请参阅[自定义控件的绘制和呈现](custom-control-painting-and-rendering.md)。  
   
-7.  实现控件将纳入的任何自定义方法、属性或事件。  
+7. 实现控件将纳入的任何自定义方法、属性或事件。  
   
-8.  保存并测试控件。  
+8. 保存并测试控件。  
   
 ## <a name="see-also"></a>请参阅
 

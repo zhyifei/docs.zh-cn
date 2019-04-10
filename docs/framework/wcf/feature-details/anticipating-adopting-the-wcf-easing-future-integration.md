@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 使用展望：轻松实现未来的集成
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: 2f733f9cc33846913539fee4afdd95efa9224058
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c6e749c32947a4159d6bfd56c4d30a06f6ef0b7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124795"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316331"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Windows Communication Foundation 使用展望：轻松实现未来的集成
 如果现在使用 ASP.NET，并希望在将来使用 WCF，本主题将提供指南以确保新的 ASP.NET Web 服务，将也与 WCF 应用程序一起正常工作。  
@@ -34,9 +34,9 @@ public interface IEcho
 ## <a name="data-representation"></a>数据表示形式  
  只要为 XML 显式定义了命名空间，则在默认情况下，<xref:System.Xml.Serialization.XmlSerializer> 将类型序列化为的 XML 与 <xref:System.Runtime.Serialization.DataContractSerializer> 将类型序列化为的 XML 在语义上完全相同。 定义时与 ASP.NET Web 服务一起使用的数据类型并且预期采用 WCF 在将来，执行以下操作：  
   
-1.  使用 .NET Framework 类而不是 XML 架构来定义该类型。  
+1. 使用 .NET Framework 类而不是 XML 架构来定义该类型。  
   
-2.  仅将 <xref:System.SerializableAttribute> 和 <xref:System.Xml.Serialization.XmlRootAttribute> 添加到该类，使用后者显式定义类型的命名空间。 不要添加 <xref:System.Xml.Serialization> 命名空间中的其他属性来控制如何将 .NET Framework 类转换为 XML。  
+2. 仅将 <xref:System.SerializableAttribute> 和 <xref:System.Xml.Serialization.XmlRootAttribute> 添加到该类，使用后者显式定义类型的命名空间。 不要添加 <xref:System.Xml.Serialization> 命名空间中的其他属性来控制如何将 .NET Framework 类转换为 XML。  
   
  通过采用此方法，以后可将 .NET 类转换为附加了 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 的数据协定，而无需为了传输而对类序列化成的 XML 进行重大更改。 将能够作为数据协定由 WCF 应用程序进行处理的消息中使用 ASP.NET Web 服务的类型生成到不同的其他权益，在 WCF 应用程序中更好的性能。  
   

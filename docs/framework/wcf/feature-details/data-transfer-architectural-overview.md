@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127448"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315876"
 ---
 # <a name="data-transfer-architectural-overview"></a>数据传输体系结构概述
 Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它可以接收消息，处理消息，根据用户代码调度消息以便进一步操作，或者从用户代码给定的数据构造消息并将消息发送到目标。 本主题旨在向高级开发人员说明用于处理消息和所包含数据的体系结构。 有关如何发送和接收数据的面向任务的更简单介绍，请参阅 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
@@ -107,15 +107,15 @@ Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它�
   
  为此，必须在整个 `Message` 实例和 XML Infoset 之间定义一个映射。 事实上，存在这样的映射：WCF 使用 SOAP 标准定义此映射。 在将 `Message` 实例作为 XML Infoset 写出时，生成的 Infoset 是包含该消息的有效 SOAP 信封。 因此， `WriteMessage` 通常会执行以下步骤：  
   
-1.  写入 SOAP 信封元素开始标记。  
+1. 写入 SOAP 信封元素开始标记。  
   
-2.  写入 SOAP 标头元素开始标记，写出所有标头并关闭标头元素。  
+2. 写入 SOAP 标头元素开始标记，写出所有标头并关闭标头元素。  
   
-3.  写入 SOAP 正文元素开始标记。  
+3. 写入 SOAP 正文元素开始标记。  
   
-4.  调用 `WriteBodyContents` 或等效方法写出正文。  
+4. 调用 `WriteBodyContents` 或等效方法写出正文。  
   
-5.  关闭正文和信封元素。  
+5. 关闭正文和信封元素。  
   
  前面的步骤与 SOAP 标准密切相关。 实际上，由于存在多个版本的 SOAP，因此情况会更复杂，例如，不知道使用的 SOAP 版本将不可能正确写出 SOAP 信封元素。 而且，有时可能需要完全关闭这种特定于 SOAP 的复杂映射。  
   
@@ -170,11 +170,11 @@ Windows Communication Foundation (WCF) 将视为消息传送基础结构。 它�
   
  为此，应使用 <xref:System.Xml.IStreamProvider> 接口。 该接口具有一个可返回要写入的流的 <xref:System.Xml.IStreamProvider.GetStream> 方法。 写出 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 中经过流处理的消息正文的正确方式如下：  
   
-1.  写入流之前的所有必要信息（例如 XML 开始标记）。  
+1. 写入流之前的所有必要信息（例如 XML 开始标记）。  
   
-2.  对采用 `WriteValue` 、具有 <xref:System.Xml.XmlDictionaryWriter> 实现（该实现可返回要写入的流）的 <xref:System.Xml.IStreamProvider>调用 `IStreamProvider` 重载。  
+2. 对采用 `WriteValue` 、具有 <xref:System.Xml.XmlDictionaryWriter> 实现（该实现可返回要写入的流）的 <xref:System.Xml.IStreamProvider>调用 `IStreamProvider` 重载。  
   
-3.  写入流之后的任何信息（例如 XML 结束标记）。  
+3. 写入流之后的任何信息（例如 XML 结束标记）。  
   
  使用此方法时，XML 编写器可以选择何时调用 <xref:System.Xml.IStreamProvider.GetStream> 和写出经过流处理的数据。 例如，文本和二进制 XML 编写器将立即调用此方法并写出开始标记和结束标记之间的经过流处理的内容。 MTOM 编写器准备写入消息的相应部分时，它可以决定以后调用 <xref:System.Xml.IStreamProvider.GetStream> 。  
   

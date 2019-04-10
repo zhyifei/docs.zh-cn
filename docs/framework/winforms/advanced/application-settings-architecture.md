@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312561"
 ---
 # <a name="application-settings-architecture"></a>应用程序设置体系结构
 本主题介绍应用程序设置体系结构的工作原理，并探讨了体系结构的高级功能，如分组设置和设置键。  
@@ -100,11 +100,11 @@ ms.locfileid: "59099776"
 ### <a name="settings-serialization"></a>设置序列化  
  当<xref:System.Configuration.LocalFileSettingsProvider>必须将设置保存到磁盘，它将执行以下操作：  
   
-1.  使用反射来检查的所有属性上定义你<xref:System.Configuration.ApplicationSettingsBase>派生的类，找出应用了<xref:System.Configuration.ApplicationScopedSettingAttribute>或<xref:System.Configuration.UserScopedSettingAttribute>。  
+1. 使用反射来检查的所有属性上定义你<xref:System.Configuration.ApplicationSettingsBase>派生的类，找出应用了<xref:System.Configuration.ApplicationScopedSettingAttribute>或<xref:System.Configuration.UserScopedSettingAttribute>。  
   
-2.  将属性序列化到磁盘。 它首先尝试调用<xref:System.ComponentModel.TypeConverter.ConvertToString%2A>或<xref:System.ComponentModel.TypeConverter.ConvertFromString%2A>上类型的关联<xref:System.ComponentModel.TypeConverter>。 如果不成功，则改用 XML 序列化。  
+2. 将属性序列化到磁盘。 它首先尝试调用<xref:System.ComponentModel.TypeConverter.ConvertToString%2A>或<xref:System.ComponentModel.TypeConverter.ConvertFromString%2A>上类型的关联<xref:System.ComponentModel.TypeConverter>。 如果不成功，则改用 XML 序列化。  
   
-3.  基于设置的特性，确定设置应保存到的文件。  
+3. 基于设置的特性，确定设置应保存到的文件。  
   
  如果您实现您自己设置的类，则可以使用<xref:System.Configuration.SettingsSerializeAsAttribute>来标记二进制或自定义序列化使用的设置<xref:System.Configuration.SettingsSerializeAs>枚举。 在代码中创建您自己设置的类的详细信息，请参阅[如何：创建应用程序设置](how-to-create-application-settings.md)。  
   

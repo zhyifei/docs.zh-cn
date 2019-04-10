@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117742"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315681"
 ---
 # <a name="dependency-property-value-precedence"></a>依赖项属性值优先级
 <a name="introduction"></a> 本主题说明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的工作机制如何影响依赖属性的值，并介绍应用于属性有效值的属性系统的各方面所依据的优先级。  
@@ -39,25 +39,25 @@ ms.locfileid: "59117742"
 ## <a name="dependency-property-setting-precedence-list"></a>依赖属性设置优先级列表  
  下面是属性系统在分配依赖属性的运行时值时所使用的最终顺序。 最高优先级最先列出。 此列表对[依赖属性概述](dependency-properties-overview.md)中的某些一般化内容进行了扩充。  
   
-1.  **属性系统强制。** 有关强制的详细信息，请参阅本主题后面的[强制、动画和基值](#animations)。  
+1. **属性系统强制。** 有关强制的详细信息，请参阅本主题后面的[强制、动画和基值](#animations)。  
   
-2.  **活动动画或具有 Hold 行为的动画。** 为了获得任何实用效果，属性的动画必须优先于基（未动画）值，即使该值是在本地设置的也是如此。 有关详细信息，请参阅本主题后面的[强制、动画和基值](#animations)。  
+2. **活动动画或具有 Hold 行为的动画。** 为了获得任何实用效果，属性的动画必须优先于基（未动画）值，即使该值是在本地设置的也是如此。 有关详细信息，请参阅本主题后面的[强制、动画和基值](#animations)。  
   
-3.  **本地值。** 可能会通过"包装器"属性，这也相当于为属性或属性元素中设置的方便地设置本地值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，或通过调用<xref:System.Windows.DependencyObject.SetValue%2A>[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]使用特定实例的属性。 如果使用绑定或资源来设置本地值，则每个值都按照直接设置值的优先级顺序来应用。  
+3. **本地值。** 可能会通过"包装器"属性，这也相当于为属性或属性元素中设置的方便地设置本地值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，或通过调用<xref:System.Windows.DependencyObject.SetValue%2A>[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]使用特定实例的属性。 如果使用绑定或资源来设置本地值，则每个值都按照直接设置值的优先级顺序来应用。  
   
-4.  **TemplatedParent 模板属性。** 元素具有<xref:System.Windows.FrameworkElement.TemplatedParent%2A>如果将其创建为模板的一部分 (<xref:System.Windows.Controls.ControlTemplate>或<xref:System.Windows.DataTemplate>)。 有关何时应用此原则的详细信息，请参阅本主题后面的 [TemplatedParent](#templatedparent)。 在模板中，按以下优先级顺序应用：  
+4. **TemplatedParent 模板属性。** 元素具有<xref:System.Windows.FrameworkElement.TemplatedParent%2A>如果将其创建为模板的一部分 (<xref:System.Windows.Controls.ControlTemplate>或<xref:System.Windows.DataTemplate>)。 有关何时应用此原则的详细信息，请参阅本主题后面的 [TemplatedParent](#templatedparent)。 在模板中，按以下优先级顺序应用：  
   
     1.  从触发<xref:System.Windows.FrameworkElement.TemplatedParent%2A>模板。  
   
     2.  属性集 (通常通过[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]属性) 中<xref:System.Windows.FrameworkElement.TemplatedParent%2A>模板。  
   
-5.  **隐式样式。** 仅应用于 `Style` 属性。 `Style` 属性是由任何样式资源通过与其类型匹配的键来填充的。 该样式资源必须存在于页面或应用程序中；查找隐式样式资源不会进入到主题中。  
+5. **隐式样式。** 仅应用于 `Style` 属性。 `Style` 属性是由任何样式资源通过与其类型匹配的键来填充的。 该样式资源必须存在于页面或应用程序中；查找隐式样式资源不会进入到主题中。  
   
-6.  **样式触发器。** 来自页面或应用程序的样式中的触发器（这些样式可以是显式或隐式样式，但不是来自优先级较低的默认样式）。  
+6. **样式触发器。** 来自页面或应用程序的样式中的触发器（这些样式可以是显式或隐式样式，但不是来自优先级较低的默认样式）。  
   
-7.  **模板触发器。** 来自样式中的模板或者直接应用的模板的任何触发器。  
+7. **模板触发器。** 来自样式中的模板或者直接应用的模板的任何触发器。  
   
-8.  **样式资源库。** 从值<xref:System.Windows.Setter>来自页面或应用程序的样式中。  
+8. **样式资源库。** 从值<xref:System.Windows.Setter>来自页面或应用程序的样式中。  
   
 9. **默认 （主题） 样式。** 有关何时应用此样式以及主题样式如何与主题样式中的模板相关的详细信息，请参阅本主题后面的[默认（主题）样式](#themestyles)。 在默认样式中，按以下优先级顺序应用：  
   

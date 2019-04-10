@@ -2,12 +2,12 @@
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: 7cafd8c1ba96a4fa1014f3570413b4bb83f69766
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 479941593b1abefe637525703140b02917c6692b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474717"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316786"
 ---
 # <a name="bindings"></a>\<bindings>
 
@@ -29,15 +29,15 @@ ms.locfileid: "57474717"
   
  元素在堆栈中出现的顺序非常重要，因为在将操作应用于消息时会采用该顺序。 所需的堆栈元素顺序如下：  
   
-1.  事务（可选）  
+1. 事务（可选）  
   
-2.  可靠消息传送 （可选）  
+2. 可靠消息传送 （可选）  
   
-3.  安全（可选）  
+3. 安全（可选）  
   
-4.  编码器  
+4. 编码器  
   
-5.  传输  
+5. 传输  
   
  自定义绑定由其 `name` 特性来标识。 自定义绑定的详细信息，请参阅[自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   

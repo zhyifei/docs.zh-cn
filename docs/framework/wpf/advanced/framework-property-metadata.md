@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108701"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314693"
 ---
 # <a name="framework-property-metadata"></a>框架属性元数据
 对于 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 体系结构中被视为 WPF 框架级的对象元素的属性，将报告框架属性元数据选项。 通常，WPF 框架级指示要求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 演示 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 和可执行文件处理呈现、数据绑定和属性系统优化等功能。 这些系统对框架属性元数据进行查询，以便为特定的元素属性确定特定于功能的特征。  
@@ -48,9 +48,9 @@ ms.locfileid: "59108701"
   
  如果要创建<xref:System.Windows.FrameworkPropertyMetadata>实例时，有两种方法来填充该元数据与特定通信框架属性特征的属性的值：  
   
-1.  使用<xref:System.Windows.FrameworkPropertyMetadata>构造函数的签名，使`flags`参数。 此参数应填入所有所需的组合值的<xref:System.Windows.FrameworkPropertyMetadataOptions>枚举标志。  
+1. 使用<xref:System.Windows.FrameworkPropertyMetadata>构造函数的签名，使`flags`参数。 此参数应填入所有所需的组合值的<xref:System.Windows.FrameworkPropertyMetadataOptions>枚举标志。  
   
-2.  使用而无需签名之一`flags`参数，然后将每个报告布尔值属性上设置<xref:System.Windows.FrameworkPropertyMetadata>到`true`为每个所需的特征更改。 为此，必须在构造具有此依赖属性的任何元素之前对这些属性进行设置；布尔属性是可读写属性，以允许此项避免 `flags` 参数的行为，同时仍然可以填充元数据，但元数据必须在属性使用之前进行有效密封。 因此，尝试在请求元数据之后设置属性是无效操作。  
+2. 使用而无需签名之一`flags`参数，然后将每个报告布尔值属性上设置<xref:System.Windows.FrameworkPropertyMetadata>到`true`为每个所需的特征更改。 为此，必须在构造具有此依赖属性的任何元素之前对这些属性进行设置；布尔属性是可读写属性，以允许此项避免 `flags` 参数的行为，同时仍然可以填充元数据，但元数据必须在属性使用之前进行有效密封。 因此，尝试在请求元数据之后设置属性是无效操作。  
   
 <a name="Framework_Property_Metadata_Merge_Behavior"></a>   
 ## <a name="framework-property-metadata-merge-behavior"></a>框架属性元数据合并行为  

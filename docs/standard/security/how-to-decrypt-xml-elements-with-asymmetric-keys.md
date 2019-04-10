@@ -1,5 +1,5 @@
 ---
-title: 如何：使用非对称密钥解密 XML 元素
+title: 如何：用非对称密钥对 XML 元素进行解密
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,50 +14,50 @@ helpviewer_keywords:
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 647ac3898924810eb16cbeb8c67f00e6465c8d80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 303c7db984b682d24a8f0e00160eb2d0827a84e6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547757"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314420"
 ---
-# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>如何：使用非对称密钥解密 XML 元素
+# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>如何：用非对称密钥对 XML 元素进行解密
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类对 XML 文档内的元素进行加密和解密。  XML 加密是交换或存储加密的 XML 数据的一种标准方式，使用后就无需担心数据被轻易读取。  有关 XML 加密标准的详细信息，请参阅 World Wide Web 联合会 (W3C) 建议[XML 签名语法和处理](https://www.w3.org/TR/xmldsig-core/)。  
   
- 此过程中的示例使用中所述的方法进行加密的 XML 元素进行解密[如何：使用非对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)。  它找到一个 <`EncryptedData`> 元素，解密该元素，然后将其替换为原始纯文本 XML 元素。  
+ 此过程中的示例使用中所述的方法进行加密的 XML 元素进行解密[如何：使用非对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)。  找到 <`EncryptedData`> 元素中，对元素进行解密，然后替换原始的纯文本 XML 元素的元素。  
   
- 此示例使用两个密钥对 XML 元素进行解密。  它从密钥容器中检索以前生成的 RSA 私钥，然后使用 RSA 密钥解密存储在 <`EncryptedData`> 元素的 <`EncryptedKey`> 元素中的会话密钥。  然后此示例使用会话密钥对 XML 元素进行解密。  
+ 此示例使用两个密钥对 XML 元素进行解密。  它从密钥容器中检索以前生成的 RSA 私钥，然后使用 RSA 密钥来解密会话密钥存储设置在 <`EncryptedKey`> 元素的 <`EncryptedData`> 元素。  然后此示例使用会话密钥对 XML 元素进行解密。  
   
  此示例适用于以下情况：多个应用程序必须共享加密数据，或应用程序必须保存其每次运行之间的加密数据。  
   
 ### <a name="to-decrypt-an-xml-element-with-an-asymmetric-key"></a>用非对称密钥对 XML 元素进行解密  
   
-1.  创建 <xref:System.Security.Cryptography.CspParameters> 对象，并指定密钥容器的名称。  
+1. 创建 <xref:System.Security.Cryptography.CspParameters> 对象，并指定密钥容器的名称。  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#2)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#2)]  
   
-2.  使用 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 对象从容器中检索以前生成的非对称密钥。  当将 <xref:System.Security.Cryptography.CspParameters> 对象传递到 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 构造函数中时，将自动从密钥容器中检索到密钥。  
+2. 使用 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 对象从容器中检索以前生成的非对称密钥。  当将 <xref:System.Security.Cryptography.CspParameters> 对象传递到 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 构造函数中时，将自动从密钥容器中检索到密钥。  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#3)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#3)]  
   
-3.  创建新 <xref:System.Security.Cryptography.Xml.EncryptedXml> 对象以对文档进行解密。  
+3. 创建新 <xref:System.Security.Cryptography.Xml.EncryptedXml> 对象以对文档进行解密。  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#5)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#5)]  
   
-4.  添加一个密钥/名称映射，以便 RSA 密钥与应该进行解密的文档中的元素相关联。  必须使用与加密文档时所用密钥名称相同的名称。  请注意，此名称独立于用来标识在步骤 1 中指定的密钥容器中的密钥名称。  
+4. 添加一个密钥/名称映射，以便 RSA 密钥与应该进行解密的文档中的元素相关联。  必须使用与加密文档时所用密钥名称相同的名称。  请注意，此名称独立于用来标识在步骤 1 中指定的密钥容器中的密钥名称。  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#6)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#6)]  
   
-5.  调用 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法以解密 <`EncryptedData`> 元素。  此方法使用 RSA 密钥来解密会话密钥，并自动使用会话密钥来解密 XML 元素。  它还会自动将 <`EncryptedData`> 元素替换为原始的纯文本。  
+5. 调用<xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>方法以解密 <`EncryptedData`> 元素。  此方法使用 RSA 密钥来解密会话密钥，并自动使用会话密钥来解密 XML 元素。  它还会自动将替换 <`EncryptedData`> 具有原始的纯文本元素。  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#7)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#7)]  
   
-6.  保存 XML 文档。  
+6. 保存 XML 文档。  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#8)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#8)]  
@@ -84,4 +84,4 @@ ms.locfileid: "54547757"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Security.Cryptography.Xml>
-- [如何：使用非对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)
+- [如何：用非对称密钥对 XML 元素进行加密](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)

@@ -1,5 +1,5 @@
 ---
-title: 演练：缓存在 WPF 应用程序的应用程序数据
+title: 演练：在 WPF 应用程序中缓存应用程序数据
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 886a436f845aa4ba9662e75cbc9e534e915a4cfa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1d00c222dabf446c7c102307c3b904d3f1ff4bca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361169"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314383"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>演练：缓存在 WPF 应用程序的应用程序数据
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>演练：在 WPF 应用程序中缓存应用程序数据
 缓存可以将数据存储在内存中以便快速访问。 再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。
 
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供了使你能够使用缓存中的类[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]应用程序。 这些类都位于<xref:System.Runtime.Caching>命名空间。
@@ -56,24 +56,24 @@ ms.locfileid: "57361169"
 
 #### <a name="to-create-a-wpf-application"></a>创建 WPF 应用程序
 
-1.  启动 Visual Studio。
+1. 启动 Visual Studio。
 
-2.  在中**文件**菜单上，单击**新建**，然后单击**新项目**。
+2. 在中**文件**菜单上，单击**新建**，然后单击**新项目**。
 
      随即显示“新建项目”对话框。
 
-3.  下**已安装的模板**，选择你想要使用的编程语言 (**Visual Basic**或**Visual C#**)。
+3. 下**已安装的模板**，选择你想要使用的编程语言 (**Visual Basic**或**Visual C#**)。
 
-4.  在中**新的项目**对话框中，选择**WPF 应用程序**。
+4. 在中**新的项目**对话框中，选择**WPF 应用程序**。
 
     > [!NOTE]
     >  如果没有看到**WPF 应用程序**模板，请确保您的目标版本的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]支持 WPF。 在中**新的项目**对话框中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]从列表中。
 
-5.  在中**名称**文字框中，输入你的项目的名称。 例如，可以输入**WPFCaching**。
+5. 在中**名称**文字框中，输入你的项目的名称。 例如，可以输入**WPFCaching**。
 
-6.  选择“为解决方案创建目录”复选框。
+6. 选择“为解决方案创建目录”复选框。
 
-7.  单击 **“确定”**。
+7. 单击 **“确定”**。
 
      WPF 设计器中打开**设计**查看，并显示 MainWindow.xaml 文件。 Visual Studio 将创建**我的项目**文件夹、 Application.xaml 文件和 MainWindow.xaml 文件。
 
@@ -87,27 +87,27 @@ ms.locfileid: "57361169"
 
 #### <a name="to-change-the-target-net-framework-in-visual-basic"></a>若要更改的目标在 Visual Basic 中的.NET Framework
 
-1.  在中**解决方案资源管理器**，右键单击项目名称，然后单击**属性**。
+1. 在中**解决方案资源管理器**，右键单击项目名称，然后单击**属性**。
 
      显示应用程序的属性窗口。
 
-2.  单击“编译”选项卡。
+2. 单击“编译”选项卡。
 
-3.  在窗口的底部，单击**高级编译选项...**.
+3. 在窗口的底部，单击**高级编译选项...**.
 
      **高级编译器设置**显示对话框。
 
-4.  在中**目标框架 （所有配置）** 列表中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (不要选择[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)
+4. 在中**目标框架 （所有配置）** 列表中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (不要选择[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)
 
-5.  单击 **“确定”**。
+5. 单击 **“确定”**。
 
      随即显示“目标框架更改”对话框。
 
-6.  在中**目标 Framework 更改**对话框中，单击**是**。
+6. 在中**目标 Framework 更改**对话框中，单击**是**。
 
      项目已关闭，然后重新打开它。
 
-7.  通过执行以下步骤添加对缓存程序集的引用：
+7. 通过执行以下步骤添加对缓存程序集的引用：
 
     1.  在中**解决方案资源管理器**，右键单击项目的名称，然后单击**添加引用**。
 
@@ -115,15 +115,15 @@ ms.locfileid: "57361169"
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>若要更改 Visual C# 项目中的目标.NET Framework
 
-1.  在中**解决方案资源管理器**，右键单击项目名称，然后单击**属性**。
+1. 在中**解决方案资源管理器**，右键单击项目名称，然后单击**属性**。
 
      显示应用程序的属性窗口。
 
-2.  单击“应用程序”  选项卡。
+2. 单击“应用程序”  选项卡。
 
-3.  在中**目标框架**列表中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (不要选择 **.NET Framework 4 Client Profile**。)
+3. 在中**目标框架**列表中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (不要选择 **.NET Framework 4 Client Profile**。)
 
-4.  通过执行以下步骤添加对缓存程序集的引用：
+4. 通过执行以下步骤添加对缓存程序集的引用：
 
     1.  右键单击**引用**文件夹，然后单击**添加引用**。
 
@@ -134,11 +134,11 @@ ms.locfileid: "57361169"
 
 #### <a name="to-add-a-button-control"></a>若要添加一个按钮控件
 
-1.  在中**解决方案资源管理器**，双击 MainWindow.xaml 文件以将其打开。
+1. 在中**解决方案资源管理器**，双击 MainWindow.xaml 文件以将其打开。
 
-2.  从**工具箱**下**常用 WPF 控件**，将`Button`控制对`MainWindow`窗口。
+2. 从**工具箱**下**常用 WPF 控件**，将`Button`控制对`MainWindow`窗口。
 
-3.  在中**属性**窗口中，将`Content`的属性`Button`控制对**获取缓存**。
+3. 在中**属性**窗口中，将`Content`的属性`Button`控制对**获取缓存**。
 
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>正在初始化缓存和缓存条目
  接下来，将添加代码以执行以下任务：
@@ -153,9 +153,9 @@ ms.locfileid: "57361169"
 
 #### <a name="to-create-the-cache-object"></a>若要创建缓存对象
 
-1.  双击您只是为了在 MainWindow.xaml.cs 或 MainWindow.Xaml.vb 文件创建一个事件处理程序添加的按钮。
+1. 双击您只是为了在 MainWindow.xaml.cs 或 MainWindow.Xaml.vb 文件创建一个事件处理程序添加的按钮。
 
-2.  （在类声明中） 的文件的顶部添加以下`Imports`(Visual Basic) 或`using`(C#) 语句：
+2. （在类声明中） 的文件的顶部添加以下`Imports`(Visual Basic) 或`using`(C#) 语句：
 
     ```csharp
     using System.Runtime.Caching;
@@ -167,7 +167,7 @@ ms.locfileid: "57361169"
     Imports System.IO
     ```
 
-3.  事件处理程序中，添加以下代码以实例化的缓存对象：
+3. 事件处理程序中，添加以下代码以实例化的缓存对象：
 
     ```csharp
     ObjectCache cache = MemoryCache.Default;
@@ -179,7 +179,7 @@ ms.locfileid: "57361169"
 
      <xref:System.Runtime.Caching.ObjectCache>类是一个内置的类，提供内存中对象缓存。
 
-4.  添加以下代码以读取内容的名为某个缓存项`filecontents`:
+4. 添加以下代码以读取内容的名为某个缓存项`filecontents`:
 
     ```vb
     Dim fileContents As String = TryCast(cache("filecontents"), String)
@@ -189,7 +189,7 @@ ms.locfileid: "57361169"
     string fileContents = cache["filecontents"] as string;
     ```
 
-5.  添加以下代码以检查是否为命名的缓存项`filecontents`存在：
+5. 添加以下代码以检查是否为命名的缓存项`filecontents`存在：
 
     ```vb
     If fileContents Is Nothing Then
@@ -206,7 +206,7 @@ ms.locfileid: "57361169"
 
      如果指定的缓存条目不存在，必须读取该文本文件并将其作为某个缓存项添加到缓存。
 
-6.  在中`if/then`块中，添加以下代码以创建一个新<xref:System.Runtime.Caching.CacheItemPolicy>对象，它指定缓存项将在 10 秒后过期。
+6. 在中`if/then`块中，添加以下代码以创建一个新<xref:System.Runtime.Caching.CacheItemPolicy>对象，它指定缓存项将在 10 秒后过期。
 
     ```vb
     Dim policy As New CacheItemPolicy()
@@ -220,7 +220,7 @@ ms.locfileid: "57361169"
 
      如果未不提供任何逐出或过期的信息，默认值是<xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>，这意味着缓存项永远不会过期时间取决于只有一个绝对时间。 相反，缓存条目过期仅当内存压力时。 作为最佳做法，应始终显式提供绝对或可调到期。
 
-7.  内部`if/then`阻止和上一步中添加的代码，添加以下代码以创建你想要监视，并将文本文件的路径添加到集合的文件路径的集合：
+7. 内部`if/then`阻止和上一步中添加的代码，添加以下代码以创建你想要监视，并将文本文件的路径添加到集合的文件路径的集合：
 
     ```vb
     Dim filePaths As New List(Of String)()
@@ -235,7 +235,7 @@ ms.locfileid: "57361169"
     > [!NOTE]
     >  如果不是你想要使用的文本文件`c:\cache\cacheText.txt`，指定的文本文件是你想要使用的路径。
 
-8.  在上一步骤中，添加的代码后面添加以下代码以添加新<xref:System.Runtime.Caching.HostFileChangeMonitor>到更改的集合对象监视缓存项：
+8. 在上一步骤中，添加的代码后面添加以下代码以添加新<xref:System.Runtime.Caching.HostFileChangeMonitor>到更改的集合对象监视缓存项：
 
     ```vb
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))
@@ -288,31 +288,31 @@ ms.locfileid: "57361169"
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>若要测试的 WPF 应用程序中的缓存
 
-1.  按 Ctrl+F5 运行应用程序。
+1. 按 Ctrl+F5 运行应用程序。
 
      `MainWindow`显示窗口。
 
-2.  单击**中获取缓存**。
+2. 单击**中获取缓存**。
 
      在消息框中显示文本文件中缓存的内容。 请注意，该文件上的时间戳。
 
-3.  关闭消息框，然后单击**获取缓存**试。
+3. 关闭消息框，然后单击**获取缓存**试。
 
      时间戳保持不变。 这将指示显示缓存的内容。
 
-4.  等待 10 秒或更长，然后单击**获取缓存**试。
+4. 等待 10 秒或更长，然后单击**获取缓存**试。
 
      此时将显示新时间戳。 这表示该策略允许缓存项过期，并且将显示新缓存的内容。
 
-5.  在文本编辑器中，打开您创建的文本文件。 不进行任何更改。
+5. 在文本编辑器中，打开您创建的文本文件。 不进行任何更改。
 
-6.  关闭消息框，然后单击**获取缓存**试。
+6. 关闭消息框，然后单击**获取缓存**试。
 
      请再次注意时间戳。
 
-7.  对文本文件进行更改，然后保存该文件。
+7. 对文本文件进行更改，然后保存该文件。
 
-8.  关闭消息框，然后单击**获取缓存**试。
+8. 关闭消息框，然后单击**获取缓存**试。
 
      此消息框包含中的文本文件和新的时间戳的已更新的内容。 这指示主文件的更改监视器逐出缓存项后更改该文件，将立即即使绝对超时时间尚未过期。
 
@@ -330,4 +330,4 @@ ms.locfileid: "57361169"
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching>
-- [在 .NET Framework 应用程序中缓存](../../performance/caching-in-net-framework-applications.md)
+- [.NET Framework 应用程序中的缓存](../../performance/caching-in-net-framework-applications.md)

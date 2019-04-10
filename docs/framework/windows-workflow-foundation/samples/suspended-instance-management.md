@@ -2,12 +2,12 @@
 title: 挂起的实例管理
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: d977e058b2de2939d64c91aa9353f6559b3c7013
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ace4d2baef8f6b030790deaa5b1c20bb4b0cd30d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583864"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319555"
 ---
 # <a name="suspended-instance-management"></a>挂起的实例管理
 此示例演示如何管理已挂起的工作流实例。  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 的默认操作为 `AbandonAndSuspend`。 这意味着，在默认情况下，从 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的某个工作流实例抛出的未处理异常会导致从内存中释放（放弃）该实例，而该实例的持久版本将被标记为已挂起。 已挂起的工作流实例在取消挂起之前无法运行。
@@ -24,13 +24,13 @@ ms.locfileid: "48583864"
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1.  此示例要求启用以下 Windows 组件：
+1. 此示例要求启用以下 Windows 组件：
 
     1.  Microsoft Message Queues (MSMQ) Server
 
     2.  SQL Server Express
 
-2.  设置 SQL Server 数据库。
+2. 设置 SQL Server 数据库。
 
     1.  从 Visual Studio 2010 命令提示符下，从将执行以下 SuspendedInstanceManagement 示例目录运行"setup.cmd":
 
@@ -40,7 +40,7 @@ ms.locfileid: "48583864"
 
         3.  将 IIS APPPOOL\DefaultAppPool 和 NT AUTHORITY\Network Service 添加到设置持久性数据库时定义的 InstanceStoreUsers 角色。
 
-3.  设置服务队列。
+3. 设置服务队列。
 
     1.  在 Visual Studio 2010 中，右键单击**SampleWorkflowApp**项目，然后单击**设为启动项目**。
 
@@ -56,11 +56,11 @@ ms.locfileid: "48583864"
 
     7.  选择**安全**选项卡上，并允许**Everyone**有权**接收消息**，**扫视消息**，和**将消息发送**。
 
-4.  现在运行示例。
+4. 现在运行示例。
 
     1.  在 Visual Studio 2010 中，再次运行该 SampleWorkflowApp 项目而不进行调试通过按**Ctrl + F5**。 将在控制台窗口中输出两个终结点地址：一个用于应用程序终结点，另一个来自 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>。 随后会创建一个工作流实例，该实例的跟踪记录会出现在控制台窗口中。 该工作流实例会引发异常，从而导致该实例挂起或中止。
 
-    2.  随后可以使用命令行实用工具对这些实例中的任何一个进行进一步操作。 命令行自变量的语法如下：
+    2.  随后可以使用命令行实用工具对这些实例中的任何一个进行进一步操作。 命令行参数的语法如下：
 
          `SuspendedInstanceManagement -Command:[CommandName] -Server:[ServerName] -Database:[DatabaseName] -InstanceId:[InstanceId]`
 
@@ -68,13 +68,13 @@ ms.locfileid: "48583864"
 
 #### <a name="to-cleanup-optional"></a>清理（可选）
 
-1.  通过在 `vs2010` 命令提示符下运行 Compmgmt.msc 来打开计算机管理控制台。
+1. 通过在 `vs2010` 命令提示符下运行 Compmgmt.msc 来打开计算机管理控制台。
 
-2.  展开**服务和应用程序**，**消息队列**，**专用队列**。
+2. 展开**服务和应用程序**，**消息队列**，**专用队列**。
 
-3.  删除**ReceiveTx**队列。
+3. 删除**ReceiveTx**队列。
 
-4.  若要删除持久性数据库，请运行 cleanup.cmd。
+4. 若要删除持久性数据库，请运行 cleanup.cmd。
 
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

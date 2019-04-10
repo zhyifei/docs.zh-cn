@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112741"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314537"
 ---
 # <a name="how-to-inherit-windows-forms"></a>如何：继承 Windows 窗体
 通过从基窗体继承创建新的 Windows 窗体是事半功倍的便捷途径，而每次需要用它时，都无需完全重新创建窗体。  
@@ -25,9 +25,9 @@ ms.locfileid: "59112741"
   
 ### <a name="to-inherit-a-form-programmatically"></a>若要以编程方式继承窗体  
   
-1.  在类中，添加对命名空间的引用，该命名空间包含想要被继承的窗体。  
+1. 在类中，添加对命名空间的引用，该命名空间包含想要被继承的窗体。  
   
-2.  在类定义中，将引用添加到将被继承的窗体。 引用应包括包含窗体的命名空间，后跟一个句点，然后是基本窗体本身的名称。  
+2. 在类定义中，将引用添加到将被继承的窗体。 引用应包括包含窗体的命名空间，后跟一个句点，然后是基本窗体本身的名称。  
   
     ```vb  
     Public Class Form2  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 9cf5d1c2e08f18c08273d6c7b34446a3827743b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 887a157494c2992c1ae5868229c442f31fafb276
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079352"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312145"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>演练：设置 WPF 内容的样式
 本演练显示了如何将样式应用到 Windows 窗体上承载的 Windows Presentation Foundation (WPF) 控件中。
@@ -47,34 +47,34 @@ ms.locfileid: "59079352"
   
 #### <a name="to-create-wpf-control-types"></a>创建 WPF 控件类型  
   
-1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+1. 将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
-2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何：选择并在设计图面上移动元素](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。  
+2. 在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何：选择并在设计图面上移动元素](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。  
   
-3.  在中**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>并<xref:System.Windows.FrameworkElement.Height%2A>属性设置为`200`。  
+3. 在中**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>并<xref:System.Windows.FrameworkElement.Height%2A>属性设置为`200`。  
   
-4.  添加<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制对<xref:System.Windows.Controls.UserControl>并将值设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性设置为**取消**。  
+4. 添加<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制对<xref:System.Windows.Controls.UserControl>并将值设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性设置为**取消**。  
   
-5.  添加另一个<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制对<xref:System.Windows.Controls.UserControl>并将值设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性设置为**确定**。  
+5. 添加另一个<xref:System.Windows.Controls.Button?displayProperty=nameWithType>控制对<xref:System.Windows.Controls.UserControl>并将值设置<xref:System.Windows.Controls.ContentControl.Content%2A>属性设置为**确定**。  
   
-6.  生成项目。  
+6. 生成项目。  
   
 ## <a name="applying-a-style-to-a-wpf-control"></a>将样式应用到 WPF 控件  
  可对 WPF 控件应用不同样式以更改它的外观和行为。  
   
 #### <a name="to-apply-a-style-to-a-wpf-control"></a>将样式应用到 WPF 控件  
   
-1.  在 Windows 窗体设计器中打开 `Form1`。  
+1. 在 Windows 窗体设计器中打开 `Form1`。  
   
-2.  在中**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`窗体上。  
+2. 在中**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`窗体上。  
   
      `UserControl1` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
   
-3.  中的智能标记面板`elementHost1`，单击**编辑所承载的内容**从下拉列表。  
+3. 中的智能标记面板`elementHost1`，单击**编辑所承载的内容**从下拉列表。  
   
      `UserControl1` 在中打开[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
   
-4.  在 XAML 视图中，将以下 XAML 插到 `<UserControl>` 开始标记后面。  
+4. 在 XAML 视图中，将以下 XAML 插到 `<UserControl>` 开始标记后面。  
   
      此 XAML 创建具有对比渐变边框的渐变。 单击此控件后，将更改渐变以生成按下按钮的外观。 有关详细信息，请参阅[样式设置和模板化](../../wpf/controls/styling-and-templating.md)。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "59079352"
 </UserControl.Resources>  
 ```  
   
-1.  通过插入“取消”按钮的 `<Button>` 标记中的以下 XAML，将上一步中定义的 `SimpleButton` 样式应用到“取消”按钮。  
+1. 通过插入“取消”按钮的 `<Button>` 标记中的以下 XAML，将上一步中定义的 `SimpleButton` 样式应用到“取消”按钮。  
   
     ```  
     Style="{StaticResource SimpleButton}  
@@ -139,15 +139,15 @@ ms.locfileid: "59079352"
                 Style="{StaticResource SimpleButton}">Cancel</Button>  
 ```  
   
-1.  生成项目。  
+1. 生成项目。  
   
-2.  在 Windows 窗体设计器中打开 `Form1`。  
+2. 在 Windows 窗体设计器中打开 `Form1`。  
   
-3.  将新样式应用到按钮控件中。  
+3. 将新样式应用到按钮控件中。  
   
-4.  从**调试**菜单中，选择**开始调试**运行该应用程序。  
+4. 从**调试**菜单中，选择**开始调试**运行该应用程序。  
   
-5.  单击“确定”和“取消”按钮并查看差异。  
+5. 单击“确定”和“取消”按钮并查看差异。  
   
 ## <a name="see-also"></a>请参阅
 

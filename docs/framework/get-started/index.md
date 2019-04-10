@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad380b5e411a61db648495875a5b697df54e2849
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304682"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314966"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 入门
 
@@ -71,13 +71,13 @@ ms.locfileid: "56304682"
 
 2. 选择要用于开发应用的 .NET Framework 所支持的语言。 大量语言可供选择，包括来自 Microsoft 的 [Visual Basic](../../visual-basic/index.md)、[C#](../../csharp/index.md)、[F#](../../fsharp/index.md), 和 [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp)。 （一种用于开发 .NET Framework 应用的编程语言，它遵循[公共语言基础结构 (CLI) 规范](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)。）
 
-3. 选择并安装将用于创建应用并支持所选程序语言的开发环境。 适用于 .NET Framework 应用的 Microsoft 集成开发环境 (IDE) 是 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 它提供多种版本。
+3. 选择并安装将用于创建应用并支持所选程序语言的开发环境。 适用于 .NET Framework 应用的 Microsoft 集成开发环境 (IDE) 是 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 它提供多种版本。
 
 若要深入了解如何开发面向.NET Framework 的应用，请参阅[开发指南](../development-guide.md)。
 
 ## <a name="related-topics"></a>相关主题
 
-| Title | 说明​​ |
+| Title | 说明 |
 | ----- |------------ |
 | [概述](overview.md) | 为构建面向 .NET Framework 的应用的开发人员提供详细信息。 |
 | [安装指南](../install/index.md) | 提供有关安装 .NET Framework 的信息。 |  

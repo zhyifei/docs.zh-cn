@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081263"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315317"
 ---
 # <a name="data-binding-overview"></a>数据绑定概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定提供了简单而一致的方式，应用程序能够显示和与数据交互。 元素能够以 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 形式绑定到来自各种数据源的数据。 <xref:System.Windows.Controls.ContentControl>如 s<xref:System.Windows.Controls.Button>并<xref:System.Windows.Controls.ItemsControl>如 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>具有内置功能，使灵活的样式设置单个数据项的集合。 可基于数据生成排序、筛选和分组视图。  
@@ -404,17 +404,17 @@ ms.locfileid: "59081263"
   
  下面描述了*验证*过程。 注意，只要在验证过程中发生验证错误或其他类型的错误，该过程就会中断。  
   
-1.  绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.RawProposedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>到其中一个运行时遇到错误或直到全部规则都通过为止。  
+1. 绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.RawProposedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>到其中一个运行时遇到错误或直到全部规则都通过为止。  
   
-2.  绑定引擎随后会调用转换器（如果存在）。  
+2. 绑定引擎随后会调用转换器（如果存在）。  
   
-3.  如果转换器成功，绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>直到其中一个运行一个规则出错或者全部规则都通过。  
+3. 如果转换器成功，绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>直到其中一个运行一个规则出错或者全部规则都通过。  
   
-4.  绑定引擎设置源属性。  
+4. 绑定引擎设置源属性。  
   
-5.  绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>直到其中一个运行一个规则出错或者全部规则都通过。 如果<xref:System.Windows.Controls.DataErrorValidationRule>与绑定相关联并将其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为默认情况下， <xref:System.Windows.Controls.ValidationStep.UpdatedValue>，则<xref:System.Windows.Controls.DataErrorValidationRule>此时检查。 这也是点时具有的绑定<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>设置为`true`检查。  
+5. 绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>直到其中一个运行一个规则出错或者全部规则都通过。 如果<xref:System.Windows.Controls.DataErrorValidationRule>与绑定相关联并将其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为默认情况下， <xref:System.Windows.Controls.ValidationStep.UpdatedValue>，则<xref:System.Windows.Controls.DataErrorValidationRule>此时检查。 这也是点时具有的绑定<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>设置为`true`检查。  
   
-6.  绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.CommittedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.CommittedValue>直到其中一个运行一个规则出错或者全部规则都通过。  
+6. 绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.CommittedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.CommittedValue>直到其中一个运行一个规则出错或者全部规则都通过。  
   
  如果<xref:System.Windows.Controls.ValidationRule>没有通过在此过程的任意时间，绑定引擎创建<xref:System.Windows.Controls.ValidationError>对象，并将其添加到<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>的绑定元素集合。 之前绑定引擎在运行<xref:System.Windows.Controls.ValidationRule>对象在任何给定的步骤，它会删除任何<xref:System.Windows.Controls.ValidationError>已添加到<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>在该步骤附加属性的绑定元素。 例如，如果<xref:System.Windows.Controls.ValidationRule>其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>失败下, 一次验证过程时，绑定引擎会移除该<xref:System.Windows.Controls.ValidationError>立即之前调用任意<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>.  
   

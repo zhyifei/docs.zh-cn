@@ -5,31 +5,31 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 364329954591199c4b0d3123c662c4e124c242fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313575"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>如何：注册和配置服务名字对象
 必须在使用之前在 COM 应用程序中的 Windows Communication Foundation (WCF) 服务名字对象具有类型化协定中, 所需的特性化的类型向 COM 注册，并使用所需的绑定配置的 COM 应用程序和标记配置。  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>向 COM 注册所需的属性化类型  
   
-1.  使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具，用于从 WCF 服务中检索元数据协定。 这将生成 WCF 客户端程序集和客户端应用程序配置文件的源代码。  
+1. 使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具，用于从 WCF 服务中检索元数据协定。 这将生成 WCF 客户端程序集和客户端应用程序配置文件的源代码。  
   
-2.  确保将程序集中的类型标记为 `ComVisible`。 为此，请将下面的属性添加到 Visual Studio 项目的 AssemblyInfo.cs 文件中。  
+2. 确保将程序集中的类型标记为 `ComVisible`。 为此，请将下面的属性添加到 Visual Studio 项目的 AssemblyInfo.cs 文件中。  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3.  编译具有强名称程序集作为托管的 WCF 客户端。 这要求使用加密密钥对进行签名。 有关详细信息，请参阅[为程序集使用强名称签名](https://go.microsoft.com/fwlink/?LinkId=94874).NET 开发人员指南中。  
+3. 编译具有强名称程序集作为托管的 WCF 客户端。 这要求使用加密密钥对进行签名。 有关详细信息，请参阅[为程序集使用强名称签名](https://go.microsoft.com/fwlink/?LinkId=94874).NET 开发人员指南中。  
   
-4.  使用带有 `/tlb` 选项的程序集注册 (Regasm.exe) 工具向 COM 注册程序集中的类型。  
+4. 使用带有 `/tlb` 选项的程序集注册 (Regasm.exe) 工具向 COM 注册程序集中的类型。  
   
-5.  使用全局程序集缓存 (Gacutil.exe) 工具将该程序集添加到全局程序集缓存中。  
+5. 使用全局程序集缓存 (Gacutil.exe) 工具将该程序集添加到全局程序集缓存中。  
   
     > [!NOTE]
     >  对程序集进行签名并将其添加到全局程序集缓存中是可选步骤，不过，这两个步骤可以简化在运行时从正确位置加载程序集的过程。  

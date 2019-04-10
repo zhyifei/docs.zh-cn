@@ -2,12 +2,12 @@
 title: 可视工作流跟踪
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: c89a63ac80b4705fff5c7714e7f40646c5b5d26d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6e87b0ef5a0d6fa97c87c99a63fe0e23c389140c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703577"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296454"
 ---
 # <a name="visual-workflow-tracking"></a>可视工作流跟踪
 此示例演示如何使用 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 提供的调试功能编写可视工作流跟踪应用程序。
@@ -19,17 +19,17 @@ ms.locfileid: "57703577"
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1.  从 Visual Studio 2010 中的示例目录中打开 WorkflowSimulator.sln 文件。
+1. 从 Visual Studio 2010 中的示例目录中打开 WorkflowSimulator.sln 文件。
 
-2.  按 Ctrl+Shift+B 生成解决方案。
+2. 按 Ctrl+Shift+B 生成解决方案。
 
-3.  按 Ctrl+F5 运行示例。 这将在重新承载的工作流设计器窗口中显示 Workflow.xaml 文件。
+3. 按 Ctrl+F5 运行示例。 这将在重新承载的工作流设计器窗口中显示 Workflow.xaml 文件。
 
-4.  单击**文件**菜单，然后选择**运行工作流...**.
+4. 单击**文件**菜单，然后选择**运行工作流...**.
 
-5.  请注意，将突出显示当前正在执行的活动（如前所述），并将在应用程序窗口的右侧显示跟踪记录。
+5. 请注意，将突出显示当前正在执行的活动（如前所述），并将在应用程序窗口的右侧显示跟踪记录。
 
-6.  在完成工作流后，可以单击任一跟踪记录以检查该记录对应的活动。
+6. 在完成工作流后，可以单击任一跟踪记录以检查该记录对应的活动。
 
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

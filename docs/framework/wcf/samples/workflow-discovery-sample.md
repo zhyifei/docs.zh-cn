@@ -2,12 +2,12 @@
 title: 工作流发现示例
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-ms.openlocfilehash: 1076e7045ca546fed7e6902f69406bfc002c4c26
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9a0d3ad22b4663ee71b5b2aa8d0e3d64f20996d8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964418"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311648"
 ---
 # <a name="workflow-discovery-sample"></a>工作流发现示例
 此示例演示如何使工作流服务可发现，以及如何编写搜索特定服务的自定义代码活动。  
@@ -20,7 +20,7 @@ ms.locfileid: "45964418"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  此示例使用 HTTP 终结点，其必须具有正确的 URL Acl 才能运行 (请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)有关详细信息)。 在具有提升权限的命令提示符下执行下面的命令应添加相应的 ACL。 如果 shell 无法理解变量格式，请使用你的域和用户名替换以下自变量。  
+1. 此示例使用 HTTP 终结点，其必须具有正确的 URL Acl 才能运行 (请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)有关详细信息)。 在具有提升权限的命令提示符下执行下面的命令应添加相应的 ACL。 如果 shell 无法理解变量格式，请使用你的域和用户名替换以下自变量。  
   
      **netsh http add urlacl =http://+:8000/用户 = %域 %\\%username%**  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3cd679c5bb869a648eecf9702182129d9719d141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098918"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312821"
 ---
 # <a name="handling-datatable-events"></a>处理数据表事件
 <xref:System.Data.DataTable> 对象提供一系列可以由应用程序处理的事件。 下表描述了 `DataTable` 事件。  
@@ -47,21 +47,21 @@ ms.locfileid: "59098918"
 ## <a name="sequence-of-operations"></a>操作顺序  
  下面是添加、修改或删除 `DataRow` 时所执行操作的顺序：  
   
-1.  创建建议的记录并应用任何更改。  
+1. 创建建议的记录并应用任何更改。  
   
-2.  检查非表达式列的约束。  
+2. 检查非表达式列的约束。  
   
-3.  如适用，引发 `RowChanging` 或 `RowDeleting` 事件。  
+3. 如适用，引发 `RowChanging` 或 `RowDeleting` 事件。  
   
-4.  将建议的记录设置为当前记录。  
+4. 将建议的记录设置为当前记录。  
   
-5.  更新任何关联的索引。  
+5. 更新任何关联的索引。  
   
-6.  为关联的 `ListChanged` 对象引发 `DataView` 事件；为关联的 `PropertyChanged` 对象引发 `DataRowView` 事件。  
+6. 为关联的 `ListChanged` 对象引发 `DataView` 事件；为关联的 `PropertyChanged` 对象引发 `DataRowView` 事件。  
   
-7.  计算所有表达式列，但延迟检查对这些列的任何约束。  
+7. 计算所有表达式列，但延迟检查对这些列的任何约束。  
   
-8.  为关联的 `ListChanged` 对象引发 `DataView` 事件；为受表达式列计算影响的 `PropertyChanged` 对象引发 `DataRowView` 事件。  
+8. 为关联的 `ListChanged` 对象引发 `DataView` 事件；为受表达式列计算影响的 `PropertyChanged` 对象引发 `DataRowView` 事件。  
   
 9. 如适用，引发 `RowChanged` 或 `RowDeleted` 事件。  
   

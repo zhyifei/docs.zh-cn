@@ -2,12 +2,12 @@
 title: 异步返回类型 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838347"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313276"
 ---
 # <a name="async-return-types-visual-basic"></a>异步返回类型 (Visual Basic)
 异步方法具有三个可能的返回类型：<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>和 void。 在 Visual Basic 中，void 返回类型被写为 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 过程。 有关异步方法的详细信息，请参阅[使用 Async 和 Await (Visual Basic 中) 的异步编程](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- 通过使用 await 语句而不是 await 表达式来调用和等待 `Task_MethodAsync`，类似于异步 `Sub` 或返回返回 void 的方法的调用语句。 应用程序的`Await`运算符在这种情况下不生成值。  
+ `Task_MethodAsync` 调用和等待通过使用 await 语句而不 await 表达式，类似于同步的调用语句`Sub`或返回 void 的方法。 应用程序的`Await`运算符在这种情况下不生成值。  
   
  以下代码调用和等待方法 `Task_MethodAsync`。  
   
@@ -150,23 +150,23 @@ End Sub
   
  若要运行项目，请执行下列步骤：  
   
-1.  启动 Visual Studio。  
+1. 启动 Visual Studio。  
   
-2.  在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。  
+2. 在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。  
   
      **“新建项目”** 对话框随即打开。  
   
-3.  在中**已安装**，**模板**类别中，选择**Visual Basic**，然后选择**Windows**。 从项目类型列表中，选择“WPF 应用程序”。  
+3. 在中**已安装**，**模板**类别中，选择**Visual Basic**，然后选择**Windows**。 从项目类型列表中，选择“WPF 应用程序”。  
   
-4.  输入 `AsyncReturnTypes` 作为项目名称，然后选择“确定”按钮。  
+4. 输入 `AsyncReturnTypes` 作为项目名称，然后选择“确定”按钮。  
   
      新项目将出现在“解决方案资源管理器”中。  
   
-5.  在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。  
+5. 在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。  
   
      如果此选项卡不可见，则在“解决方案资源管理器”中，打开 MainWindow.xaml 的快捷菜单，然后选择“打开”。  
   
-6.  在 MainWindow.xaml 的“XAML”窗口中，将代码替换为下面的代码。  
+6. 在 MainWindow.xaml 的“XAML”窗口中，将代码替换为下面的代码。  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -183,9 +183,9 @@ End Sub
   
      MainWindow.xaml 的“设计”视图中将显示一个简单的窗口，其中包含一个文本框和一个按钮。  
   
-7.  在中**解决方案资源管理器**，打开 MainWindow.xaml.vb，快捷菜单，然后选择**查看代码**。  
+7. 在中**解决方案资源管理器**，打开 MainWindow.xaml.vb，快捷菜单，然后选择**查看代码**。  
   
-8.  将 MainWindow.xaml.vb 中的代码替换为以下代码。  
+8. 将 MainWindow.xaml.vb 中的代码替换为以下代码。  
   
     ```vb  
     Class MainWindow  
@@ -296,6 +296,6 @@ End Sub
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [异步程序中的控制流 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [异步程序 (Visual Basic 中) 中的控制流](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Await 运算符](../../../../visual-basic/language-reference/operators/await-operator.md)
