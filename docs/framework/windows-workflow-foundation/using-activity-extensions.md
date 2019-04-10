@@ -2,27 +2,27 @@
 title: 使用活动扩展
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: 420bd25a94f67169d299bbac64dae06e15c5b0b2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845499"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321284"
 ---
-# <a name="using-activity-extensions"></a><span data-ttu-id="93a5e-102">使用活动扩展</span><span class="sxs-lookup"><span data-stu-id="93a5e-102">Using Activity Extensions</span></span>
-<span data-ttu-id="93a5e-103">活动可与工作流应用程序扩展进行交互，这些扩展允许主机提供未在工作流中显式建模的其他功能。</span><span class="sxs-lookup"><span data-stu-id="93a5e-103">Activities can interact with workflow application extensions that allow the host to provide additional functionality that is not explicitly modeled in the workflow.</span></span>  <span data-ttu-id="93a5e-104">本主题描述如何创建和使用扩展以计算活动的执行次数。</span><span class="sxs-lookup"><span data-stu-id="93a5e-104">This topic describes how to create and use an extension to count the number of times the activity executes.</span></span>
+# <a name="using-activity-extensions"></a><span data-ttu-id="ddb68-102">使用活动扩展</span><span class="sxs-lookup"><span data-stu-id="ddb68-102">Using Activity Extensions</span></span>
+<span data-ttu-id="ddb68-103">活动可与工作流应用程序扩展进行交互，这些扩展允许主机提供未在工作流中显式建模的其他功能。</span><span class="sxs-lookup"><span data-stu-id="ddb68-103">Activities can interact with workflow application extensions that allow the host to provide additional functionality that is not explicitly modeled in the workflow.</span></span>  <span data-ttu-id="ddb68-104">本主题描述如何创建和使用扩展以计算活动的执行次数。</span><span class="sxs-lookup"><span data-stu-id="ddb68-104">This topic describes how to create and use an extension to count the number of times the activity executes.</span></span>
 
-### <a name="to-use-an-activity-extension-to-count-executions"></a><span data-ttu-id="93a5e-105">使用活动扩展来计算执行次数</span><span class="sxs-lookup"><span data-stu-id="93a5e-105">To use an activity extension to count executions</span></span>
+### <a name="to-use-an-activity-extension-to-count-executions"></a><span data-ttu-id="ddb68-105">使用活动扩展来计算执行次数</span><span class="sxs-lookup"><span data-stu-id="ddb68-105">To use an activity extension to count executions</span></span>
 
-1.  <span data-ttu-id="93a5e-106">打开 Visual Studio 2010。</span><span class="sxs-lookup"><span data-stu-id="93a5e-106">Open Visual Studio 2010.</span></span> <span data-ttu-id="93a5e-107">选择**新**，**项目**。</span><span class="sxs-lookup"><span data-stu-id="93a5e-107">Select **New**, **Project**.</span></span> <span data-ttu-id="93a5e-108">下**Visual C#** 节点中，选择**工作流**。</span><span class="sxs-lookup"><span data-stu-id="93a5e-108">Under the **Visual C#** node, select **Workflow**.</span></span>  <span data-ttu-id="93a5e-109">选择**工作流控制台应用程序**从模板列表。</span><span class="sxs-lookup"><span data-stu-id="93a5e-109">Select **Workflow Console Application** from the list of templates.</span></span> <span data-ttu-id="93a5e-110">将项目命名为 `Extensions`。</span><span class="sxs-lookup"><span data-stu-id="93a5e-110">Name the project `Extensions`.</span></span> <span data-ttu-id="93a5e-111">单击“确定”，创建项目。</span><span class="sxs-lookup"><span data-stu-id="93a5e-111">Click **OK** to create the project.</span></span>
+1. <span data-ttu-id="ddb68-106">打开 Visual Studio 2010。</span><span class="sxs-lookup"><span data-stu-id="ddb68-106">Open Visual Studio 2010.</span></span> <span data-ttu-id="ddb68-107">选择**新**，**项目**。</span><span class="sxs-lookup"><span data-stu-id="ddb68-107">Select **New**, **Project**.</span></span> <span data-ttu-id="ddb68-108">下**Visual C#** 节点中，选择**工作流**。</span><span class="sxs-lookup"><span data-stu-id="ddb68-108">Under the **Visual C#** node, select **Workflow**.</span></span>  <span data-ttu-id="ddb68-109">选择**工作流控制台应用程序**从模板列表。</span><span class="sxs-lookup"><span data-stu-id="ddb68-109">Select **Workflow Console Application** from the list of templates.</span></span> <span data-ttu-id="ddb68-110">将项目命名为 `Extensions`。</span><span class="sxs-lookup"><span data-stu-id="ddb68-110">Name the project `Extensions`.</span></span> <span data-ttu-id="ddb68-111">单击“确定”，创建项目。</span><span class="sxs-lookup"><span data-stu-id="ddb68-111">Click **OK** to create the project.</span></span>
 
-2.  <span data-ttu-id="93a5e-112">添加`using`的 Program.cs 文件中的语句**System.Collections.Generic**命名空间。</span><span class="sxs-lookup"><span data-stu-id="93a5e-112">Add a `using` statement in the Program.cs file for the **System.Collections.Generic** namespace.</span></span>
+2. <span data-ttu-id="ddb68-112">添加`using`的 Program.cs 文件中的语句**System.Collections.Generic**命名空间。</span><span class="sxs-lookup"><span data-stu-id="ddb68-112">Add a `using` statement in the Program.cs file for the **System.Collections.Generic** namespace.</span></span>
 
     ```
     using System.Collections.Generic;
     ```
 
-3.  <span data-ttu-id="93a5e-113">在 Program.cs 文件中，创建一个名为的新类**ExecutionCountExtension**。</span><span class="sxs-lookup"><span data-stu-id="93a5e-113">In the Program.cs file, create a new class named **ExecutionCountExtension**.</span></span> <span data-ttu-id="93a5e-114">下面的代码创建跟踪实例 Id 的工作流扩展时其**注册**调用方法。</span><span class="sxs-lookup"><span data-stu-id="93a5e-114">The following code creates a workflow extension that tracks instance IDs when its **Register** method is called.</span></span>
+3. <span data-ttu-id="ddb68-113">在 Program.cs 文件中，创建一个名为的新类**ExecutionCountExtension**。</span><span class="sxs-lookup"><span data-stu-id="ddb68-113">In the Program.cs file, create a new class named **ExecutionCountExtension**.</span></span> <span data-ttu-id="ddb68-114">下面的代码创建跟踪实例 Id 的工作流扩展时其**注册**调用方法。</span><span class="sxs-lookup"><span data-stu-id="ddb68-114">The following code creates a workflow extension that tracks instance IDs when its **Register** method is called.</span></span>
 
     ```
     // This extension collects a list of workflow Ids
@@ -56,7 +56,7 @@ ms.locfileid: "48845499"
     }
     ```
 
-4.  <span data-ttu-id="93a5e-115">创建使用的活动**ExecutionCountExtension**。</span><span class="sxs-lookup"><span data-stu-id="93a5e-115">Create an activity that consumes the **ExecutionCountExtension**.</span></span> <span data-ttu-id="93a5e-116">下面的代码定义一个活动，检索**ExecutionCountExtension**对象的运行时和调用其**注册**方法执行活动时。</span><span class="sxs-lookup"><span data-stu-id="93a5e-116">The following code defines an activity that retrieves the **ExecutionCountExtension** object from the runtime and calls its **Register** method when the activity executes.</span></span>
+4. <span data-ttu-id="ddb68-115">创建使用的活动**ExecutionCountExtension**。</span><span class="sxs-lookup"><span data-stu-id="ddb68-115">Create an activity that consumes the **ExecutionCountExtension**.</span></span> <span data-ttu-id="ddb68-116">下面的代码定义一个活动，检索**ExecutionCountExtension**对象的运行时和调用其**注册**方法执行活动时。</span><span class="sxs-lookup"><span data-stu-id="ddb68-116">The following code defines an activity that retrieves the **ExecutionCountExtension** object from the runtime and calls its **Register** method when the activity executes.</span></span>
 
     ```
     // Activity that consumes an extension provided by the host. If the extension is available
@@ -75,7 +75,7 @@ ms.locfileid: "48845499"
     }
     ```
 
-5.  <span data-ttu-id="93a5e-117">实现中的活动**Main** program.cs 文件的方法。</span><span class="sxs-lookup"><span data-stu-id="93a5e-117">Implement the activity in the **Main** method of the program.cs file.</span></span> <span data-ttu-id="93a5e-118">以下代码包含用于生成两个不同的工作流、将每个工作流执行多次以及显示扩展中包含的结果数据的方法。</span><span class="sxs-lookup"><span data-stu-id="93a5e-118">The following code contains methods to generate two different workflows, execute each workflow several times, and display the resulting data that is contained in the extension.</span></span>
+5. <span data-ttu-id="ddb68-117">实现中的活动**Main** program.cs 文件的方法。</span><span class="sxs-lookup"><span data-stu-id="ddb68-117">Implement the activity in the **Main** method of the program.cs file.</span></span> <span data-ttu-id="ddb68-118">以下代码包含用于生成两个不同的工作流、将每个工作流执行多次以及显示扩展中包含的结果数据的方法。</span><span class="sxs-lookup"><span data-stu-id="ddb68-118">The following code contains methods to generate two different workflows, execute each workflow several times, and display the resulting data that is contained in the extension.</span></span>
 
     ```
     class Program
