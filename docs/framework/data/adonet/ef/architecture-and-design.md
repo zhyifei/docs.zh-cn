@@ -2,12 +2,12 @@
 title: 体系结构和设计
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096132"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307569"
 ---
 # <a name="architecture-and-design"></a>体系结构和设计
 中的 SQL 生成模块[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)作为表示命令目录树的表达式树的访问者实现。 通过表达式树上的单个传递来执行生成。  
@@ -252,13 +252,13 @@ private bool IsParentAJoin{get}
   
  访问这些节点时应遵循以下模式：  
   
-1.  访问关系输入并获取结果 SqlSelectStatement。 对关系节点的输入可以是下列任一项：  
+1. 访问关系输入并获取结果 SqlSelectStatement。 对关系节点的输入可以是下列任一项：  
   
     -   关系节点，包括范围（例如 DbScanExpression）。 访问此类节点将返回 SqlSelectStatement。  
   
     -   集运算表达式（例如 UNION ALL）。 必须将结果用括号括起，并将其置于新 SqlSelectStatement 的 FROM 子句中。  
   
-2.  检查是否可以将当前节点添加到由输入生成的 SqlSelectStatement。 标题为“将表达式组合为 SQL 语句”这一节对此进行了描述。 如果不可以添加，则  
+2. 检查是否可以将当前节点添加到由输入生成的 SqlSelectStatement。 标题为“将表达式组合为 SQL 语句”这一节对此进行了描述。 如果不可以添加，则  
   
     -   弹出当前的 SqlSelectStatement 对象。  
   
@@ -266,13 +266,13 @@ private bool IsParentAJoin{get}
   
     -   将新对象置于堆栈的顶部。  
   
-3.  将输入表达式绑定从输入中重定向到正确的符号。 此信息保留在 SqlSelectStatement 对象中。  
+3. 将输入表达式绑定从输入中重定向到正确的符号。 此信息保留在 SqlSelectStatement 对象中。  
   
-4.  添加新的 SymbolTable 范围。  
+4. 添加新的 SymbolTable 范围。  
   
-5.  访问表达式的非输入部分（例如投影和谓词）。  
+5. 访问表达式的非输入部分（例如投影和谓词）。  
   
-6.  弹出已添加到全局堆栈的所有对象。  
+6. 弹出已添加到全局堆栈的所有对象。  
   
  DbSkipExpression 在 SQL 中没有直接等效项。 从逻辑上说，它将转换为：  
   
@@ -301,9 +301,9 @@ ORDER BY sk1, sk2, ...
   
  第二步，一次处理一个输入。 对于每个输入：  
   
-1.  访问输入。  
+1. 访问输入。  
   
-2.  通过调用 ProcessJoinInputResult对访问输入的结果进行后续处理，此操作负责在访问联接表达式的子级后保留符号表并完成子级生成的 SqlSelectStatement。 子级的结果可以是下列项之一：  
+2. 通过调用 ProcessJoinInputResult对访问输入的结果进行后续处理，此操作负责在访问联接表达式的子级后保留符号表并完成子级生成的 SqlSelectStatement。 子级的结果可以是下列项之一：  
   
     -   将向其添加父级的 SqlSelectStatement 之外的 SqlSelectStatement。 在此情况下，可能需要通过添加默认列来完成它。 如果输入是一个联接，则需要创建新的联接符号。 否则，将创建普通符号。  
   
