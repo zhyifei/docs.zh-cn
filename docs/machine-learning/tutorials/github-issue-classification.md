@@ -4,12 +4,12 @@ description: 了解如何在多类分类方案中使用 ML.NET 对 GitHub 问题
 ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1031ac8a592c968e22745de4be966392733597dd
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: fc21a37fe585ed4b9880ec86ee26815e0668108c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846306"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920982"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>教程：在多类分类场景中使用 ML.NET 对 GitHub 问题进行分类
 
@@ -54,11 +54,11 @@ ms.locfileid: "57846306"
 2. **准备数据**
    * **加载数据**
    * **提取功能（转换数据）**
-3. **生成并定型** 
+3. **生成和定型** 
    * **定型模型**
    * **评估模型**
 4. **部署模型**
-   * **使用模型来预测**
+   * **使用模型进行预测**
 
 ### <a name="understand-the-problem"></a>了解问题
 
@@ -140,7 +140,7 @@ ms.locfileid: "57846306"
 
 将以下附加的 `using` 语句添加到“Program.cs”文件顶部：
 
-[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddUsings)]
+[!code-csharp[AddUsings](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddUsings)]
 
 创建 3 个全局字段，来保存最近下载的文件路径以及 `MLContext`、`DataView`、`PredictionEngine` 和 `TextLoader` 的全局变量：
 
@@ -154,7 +154,7 @@ ms.locfileid: "57846306"
 
 将以下代码添加到 `Main` 方法正上方的行中以指定这些路径和其他变量：
 
-[!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DeclareGlobalVariables)]
+[!code-csharp[DeclareGlobalVariables](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DeclareGlobalVariables)]
 
 为输入数据和预测创建一些类。 向项目添加一个新类：
 
@@ -164,11 +164,11 @@ ms.locfileid: "57846306"
 
     “GitHubIssueData.cs”文件随即在代码编辑器中打开。 将下面的 `using` 语句添加到 GitHubIssueData.cs 的顶部：
 
-[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/GitHubIssueClassification/GitHubIssueData.cs#AddUsings)]
+[!code-csharp[AddUsings](~/samples/machine-learning/tutorials/GitHubIssueClassification/GitHubIssueData.cs#AddUsings)]
 
 删除现有类定义并向“GitHubIssueData.cs”文件添加以下代码，其中有两个类 `GitHubIssue` 和 `IssuePrediction`：
 
-[!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/GitHubIssueClassification/GitHubIssueData.cs#DeclareTypes)]
+[!code-csharp[DeclareGlobalVariables](~/samples/machine-learning/tutorials/GitHubIssueClassification/GitHubIssueData.cs#DeclareTypes)]
 
 `GitHubIssue` 是输入数据集类，具有以下 <xref:System.String> 字段：
 
@@ -185,7 +185,7 @@ ms.locfileid: "57846306"
 
 使用具有随机种子 (`seed: 0`) 的新实例 `MLContext` 初始化 `_mlContext` 全局变量，以获得跨多个定型的可重复/确定性结果。  用下面 `Main` 方法中的代码替换 `Console.WriteLine("Hello World!")` 行：
 
-[!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateMLContext)]
+[!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateMLContext)]
 
 ## <a name="load-the-data"></a>加载数据
 
@@ -203,16 +203,16 @@ ms.locfileid: "57846306"
 
 * 第一列 `ID`（GitHub 问题 ID）
 * 第二列 `Area`（定型预测）
-* 第三列 `Title`（GitHub 问题标题）是用于预测 `Area` 的第一个[特征](../resources/glossary.md##feature)
-* 第四列 `Description` 是用于预测 `Area` 的第二个特征
+* 第三列 `Title`（GitHub 问题标题）是用于预测以下值的第一个[特征](../resources/glossary.md##feature)： `Area`
+* 第四列 `Description` 是用于预测以下值的第二个特征： `Area`
 
 要初始化并加载 `_trainingDataView` 全局变量以将其用于管道，请在 `mlContext` 初始化后添加以下代码：
 
-[!code-csharp[LoadTrainData](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTrainData)]
+[!code-csharp[LoadTrainData](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTrainData)]
 
 将以下代码作为下一行代码添加到 `Main` 方法中：
 
-[!code-csharp[CallProcessData](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallProcessData)]
+[!code-csharp[CallProcessData](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallProcessData)]
 
 `ProcessData` 方法执行以下任务：
 
@@ -238,29 +238,29 @@ ML.NET 的转换管道撰写一组自定义 `transforms` 集，要在定型或�
 
 定型和评估模型时，默认情况下，将“标签”列中的值视为要预测的正确值。 由于要预测 `GitHubIssue` 的区域 GitHub 标签，所以将 `Area` 列复制到“标签”列。 为此，请使用 `MLContext.Transforms.Conversion.MapValueToKey`，它是 <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A> 转换类的包装器。  `MapValueToKey` 返回实际上是管道的 <xref:Microsoft.ML.Data.EstimatorChain%601>。 命名此 `pipeline`，因为你将把定型程序附加到 `EstimatorChain`。 添加下一个代码行：
 
-[!code-csharp[MapValueToKey](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#MapValueToKey)]
+[!code-csharp[MapValueToKey](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#MapValueToKey)]
 
  特征化将不同的数字键值分配给每列的不同值，供机器学习算法使用。 接下来，调用 `mlContext.Transforms.Text.FeaturizeText`，它将文本（`Title` 和 `Description`）列特征化为每个名为 `TitleFeaturized` 和 `DescriptionFeaturized` 的值的数字向量。 使用以下代码将两列的特征化附加到管道：
 
-[!code-csharp[FeaturizeText](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#FeaturizeText)]
+[!code-csharp[FeaturizeText](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#FeaturizeText)]
 
 >[!WARNING]
 > ML.NET 版本 0.10 已更改转换参数的顺序。 这在你构建之前不会错误输出。 使用用于转换的参数名称，如前面的代码片段中所示。
 
 数据准备最后一步使用 `Concatenate` 转换类将所有功能列合并到“功能”列。 默认情况下，学习算法仅处理“特征”列的特征。 使用以下代码将此转换附加到管道：
 
-[!code-csharp[Concatenate](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
+[!code-csharp[Concatenate](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
 
  接下来，附加一个 <xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A> 来缓存数据视图，以便在使用缓存多次循环访问数据时获得更好的性能，如下面的代码所示：
 
-[!code-csharp[AppendCache](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AppendCache)]
+[!code-csharp[AppendCache](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AppendCache)]
 
 > [!WARNING]
 > 对小/中型数据集使用 AppendCacheCheckpoint 可以降低训练时间。 在处理大型数据集时不使用它（删除 .AppendCacheCheckpoint()）。
 
 在 `ProcessData` 方法的末尾返回管道。
 
-[!code-csharp[ReturnPipeline](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#ReturnPipeline)]
+[!code-csharp[ReturnPipeline](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#ReturnPipeline)]
 
 此步骤处理预处理/特征化。 使用 ML.NET 中可用的其他组件可以在使用模型时生成更佳结果。
 
@@ -268,7 +268,7 @@ ML.NET 的转换管道撰写一组自定义 `transforms` 集，要在定型或�
 
 将以下调用添加到 `BuildAndTrainModel` 方法作为 `Main` 方法的下一行代码：
 
-[!code-csharp[CallBuildAndTrainModel](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallBuildAndTrainModel)]
+[!code-csharp[CallBuildAndTrainModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallBuildAndTrainModel)]
 
 `BuildAndTrainModel` 方法执行以下任务：
 
@@ -295,7 +295,7 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 
 要添加学习算法，请调用返回 <xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer> 对象的 `mlContext.MulticlassClassification.Trainers.StochasticDualCoordinateAscent` 包装器方法。  `SdcaMultiClassTrainer` 追加到 `pipeline` 并接受特征化的 `Title` 和 `Description` (`Features`) 以及 `Label` 输入参数，以便从历史数据中学习。 还需要将标签映射到值以返回其原始可读状态。 使用以下代码执行这两个操作：
 
-[!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTrainer)]
+[!code-csharp[AddTrainer](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTrainer)]
 
 ### <a name="train-the-model"></a>定型模型
 
@@ -303,33 +303,33 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 
 将以下代码添加到 `BuildAndTrainModel` 方法中：
 
-[!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#TrainModel)]
+[!code-csharp[TrainModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#TrainModel)]
 
 虽然 `model` 是对多行数据进行操作的 `transformer`，但常见的生产场景是需要对单个示例进行预测。 <xref:Microsoft.ML.PredictionEngine%602> 是从 `CreatePredictionEngine` 方法返回的包装器。 让我们添加以下代码来创建 `PredictionEngine`，作为 `BuildAndTrainModel` 方法中的下一行：
 
-[!code-csharp[CreatePredictionEngine1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine1)]
+[!code-csharp[CreatePredictionEngine1](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine1)]
 
 ### <a name="predict-with-the-trained-model"></a>使用训练的模型预测
 
 通过创建一个 `GitHubIssue` 实例，在 `Predict` 方法中添加一个 GitHub 问题来测试定型模型的预测：
 
-[!code-csharp[CreateTestIssue1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateTestIssue1)]
+[!code-csharp[CreateTestIssue1](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateTestIssue1)]
 
 可以使用它来预测问题数据的单个实例的 `Area` 标签。 要获得预测，请对数据使用 <xref:Microsoft.ML.PredictionEngine%602.Predict%2A>。 输入数据是一个字符串，且模型包含特征化。 管道在定型和预测期间同步。 不必专门为预测编写预处理/特征化代码，并且相同 API 负责批处理和一次性预测。
 
-[!code-csharp[Predict](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Predict)]
+[!code-csharp[Predict](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Predict)]
 
 ### <a name="using-the-model-prediction-results"></a>使用模型：预测结果
 
 显示 `GitHubIssue` 和相应的 `Area` 标签预测以便共享结果，并采取相应措施。  使用以下 <xref:System.Console.WriteLine?displayProperty=nameWithType> 代码创建结果显示：
 
-[!code-csharp[OutputPrediction](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#OutputPrediction)]
+[!code-csharp[OutputPrediction](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#OutputPrediction)]
 
 ### <a name="return-the-model-trained-to-use-for-evaluation"></a>返回定型模型以用于评估
 
 在 `BuildAndTrainModel` 方法末尾返回模型。
 
-[!code-csharp[ReturnModel](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#ReturnModel)]
+[!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#ReturnModel)]
 
 ## <a name="evaluate-the-model"></a>评估模型
 
@@ -351,17 +351,17 @@ public static void Evaluate()
 
 使用下面的代码，在 `BuildAndTrainModel` 方法调用的正下方，从 `Main` 方法中添加对新方法的调用：
 
-[!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallEvaluate)]
+[!code-csharp[CallEvaluate](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallEvaluate)]
 
 如同之前使用定型数据集执行的操作，可以将初始化、映射和测试数据集加载合并到一行代码中。 可以将此数据集作为质量检查来评估模型。 将以下代码添加到 `Evaluate` 方法中：
 
-[!code-csharp[LoadTestDataset](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTestDataset)]
+[!code-csharp[LoadTestDataset](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTestDataset)]
 
 `MulticlassClassificationContext.Evaluate` 是 <xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A> 方法的包装器，它使用指定数据集计算模型的质量指标。 它返回 <xref:Microsoft.ML.Data.MultiClassClassifierMetrics> 对象，其中包含由多类分类计算器计算出的总体指标。
 要显示指标来确定模型质量，需要先获取这些指标。
 请注意使用机器学习 `_trainedModel` 全局变量（转换器）的 `Transform` 方法来输入要素和返回预测。 将以下代码作为下一行添加到 `Evaluate` 方法中：
 
-[!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Evaluate)]
+[!code-csharp[Evaluate](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Evaluate)]
 
 针对多类分类评估以下指标：
 
@@ -377,13 +377,13 @@ public static void Evaluate()
 
 使用下面的代码显示指标、共享结果，然后处理它们：
 
-[!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayMetrics)]
+[!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayMetrics)]
 
 ### <a name="save-the-trained-and-evaluated-model"></a>保存经过训练和评估的模型
 
 此时，你具有可以集成到任何现有或新 .NET 应用程序的 <xref:Microsoft.ML.Data.TransformerChain%601> 类型模型。 要将已定型的模型保存为 .zip 文件，请添加以下代码作为 `BuildAndTrainModel` 中的下一行来调用 `SaveModelAsFile` 方法：
 
-[!code-csharp[CallSaveModel](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallSaveModel)]
+[!code-csharp[CallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallSaveModel)]
 
 ## <a name="save-the-model-as-a-zip-file"></a>将模型保存为 .zip 文件
 
@@ -402,7 +402,7 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 
 接下来，创建一个方法来保存模型，以便它可以在其他应用程序中重用和使用。 `ITransformer` 有一个在 `_modelPath` 全局字段中采用的 <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> 方法和一个 <xref:System.IO.Stream> 方法。 要将模型保存为 zip 文件，需在调用 `SaveTo` 方法之前立即创建 `FileStream`。 将以下代码作为下一行添加到 `SaveModelAsFile` 方法中：
 
-[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SaveModel)]
+[!code-csharp[SaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SaveModel)]
 
 还可以使用以下代码通过使用 `_modelPath` 编写控制台消息来显示文件的写入位置：
 
@@ -414,7 +414,7 @@ Console.WriteLine("The model is saved to {0}", _modelPath);
 
 使用下面的代码，在 `Evaluate` 方法调用的正下方，从 `Main` 方法中添加对新方法的调用：
 
-[!code-csharp[CallPredictIssue](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallPredictIssue)]
+[!code-csharp[CallPredictIssue](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallPredictIssue)]
 
 使用以下代码恰好在 `Evaluate` 方法的后面（恰在 `SaveModelAsFile` 方法之前）创建 `PredictIssue` 方法：
 
@@ -434,23 +434,23 @@ private static void PredictIssue()
 
 首先，使用以下代码加载先前保存的模型：
 
-[!code-csharp[LoadModel](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadModel)]
+[!code-csharp[LoadModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadModel)]
 
 通过创建一个 `GitHubIssue` 实例，在 `Predict` 方法中添加一个 GitHub 问题来测试定型模型的预测：
 
-[!code-csharp[AddTestIssue](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTestIssue)]
+[!code-csharp[AddTestIssue](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTestIssue)]
 
-[!code-csharp[CreatePredictionEngine](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine)]
+[!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine)]
   
 现在已有一个模型，可以使用它来预测 GitHub 问题数据的单个实例的区域 GitHub 标签。 要获得预测，请对数据使用 <xref:Microsoft.ML.PredictionEngine%602.Predict%2A>。 输入数据是一个字符串，且模型包含特征化。 管道在定型和预测期间同步。 不必专门为预测编写预处理/特征化代码，并且相同 API 负责批处理和一次性预测。 在用于预测的 `PredictIssue` 方法中添加以下代码：
 
-[!code-csharp[PredictIssue](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#PredictIssue)]
+[!code-csharp[PredictIssue](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#PredictIssue)]
 
 ### <a name="using-the-loaded-model-for-prediction"></a>使用加载后的模型进行预测
 
 显示 `Area` 以便对问题进行分类并对其进行相应操作。 使用以下 <xref:System.Console.WriteLine?displayProperty=nameWithType> 代码创建结果显示：
 
-[!code-csharp[DisplayResults](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayResults)]
+[!code-csharp[DisplayResults](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayResults)]
 
 ## <a name="results"></a>结果
 

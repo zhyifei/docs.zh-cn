@@ -2,15 +2,15 @@
 title: 如何：实现发现代理
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 12adc7215e929bb56aafe104546eb6e58af52ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608909"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321011"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>如何：实现发现代理
-本主题介绍如何实现发现代理。 有关 Windows Communication Foundation (WCF) 中的发现功能的详细信息，请参阅[WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。 可以通过创建一个扩展 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象类的类来实现发现代理。 此示例中定义并使用了多个其他支持类。 `OnResolveAsyncResult`、`OnFindAsyncResult` 和 `AsyncResult`。 这些类实现 <xref:System.IAsyncResult> 接口。 有关详细信息<xref:System.IAsyncResult>请参阅[System.IAsyncResult 接口](xref:System.IAsyncResult)。
+本主题介绍如何实现发现代理。 有关 Windows Communication Foundation (WCF) 中的发现功能的详细信息，请参阅[WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。 可以通过创建一个扩展 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象类的类来实现发现代理。 此示例中定义并使用了多个其他支持类。 `OnResolveAsyncResult``OnFindAsyncResult`，和`AsyncResult`。 这些类实现 <xref:System.IAsyncResult> 接口。 有关详细信息<xref:System.IAsyncResult>请参阅[System.IAsyncResult 接口](xref:System.IAsyncResult)。
 
  本主题分三个主要部分来讨论如何实现发现代理：
 
@@ -22,11 +22,11 @@ ms.locfileid: "54608909"
 
 ### <a name="to-create-a-new-console-application-project"></a>创建新的控制台应用程序项目
 
-1.  启动 Visual Studio 2012。
+1. 启动 Visual Studio 2012。
 
-2.  创建新的控制台应用程序项目。 将项目命名为 `DiscoveryProxy`，并将解决方案命名为 `DiscoveryProxyExample`。
+2. 创建新的控制台应用程序项目。 将项目命名为 `DiscoveryProxy`，并将解决方案命名为 `DiscoveryProxyExample`。
 
-3.  添加对项目的以下引用
+3. 添加对项目的以下引用
 
     1.  System.ServiceModel.dll
 
@@ -37,9 +37,9 @@ ms.locfileid: "54608909"
 
 ### <a name="to-implement-the-proxydiscoveryservice-class"></a>实现 ProxyDiscoveryService 类
 
-1.  向项目添加新代码文件并将其命名为 DiscoveryProxy.cs。
+1. 向项目添加新代码文件并将其命名为 DiscoveryProxy.cs。
 
-2.  将以下 `using` 语句添加到 DiscoveryProxy.cs。
+2. 将以下 `using` 语句添加到 DiscoveryProxy.cs。
 
     ```
     using System;
@@ -49,7 +49,7 @@ ms.locfileid: "54608909"
     using System.Xml;
     ```
 
-3.  从 `DiscoveryProxyService` 派生 <xref:System.ServiceModel.Discovery.DiscoveryProxy>。 将 `ServiceBehavior` 特性应用到下面的示例所示的类。
+3. 从 `DiscoveryProxyService` 派生 <xref:System.ServiceModel.Discovery.DiscoveryProxy>。 将 `ServiceBehavior` 特性应用到下面的示例所示的类。
 
     ```
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods
@@ -59,14 +59,14 @@ ms.locfileid: "54608909"
     }
     ```
 
-4.  在 `DiscoveryProxy` 类内，定义一个字典以保存注册的服务。
+4. 在 `DiscoveryProxy` 类内，定义一个字典以保存注册的服务。
 
     ```
     // Repository to store EndpointDiscoveryMetadata.
     Dictionary<EndpointAddress, EndpointDiscoveryMetadata> onlineServices;
     ```
 
-5.  定义一个初始化该字典的构造函数。
+5. 定义一个初始化该字典的构造函数。
 
     ```
     public DiscoveryProxyService()
@@ -77,7 +77,7 @@ ms.locfileid: "54608909"
 
 ### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a>定义用于更新发现代理缓存的方法
 
-1.  实现 `AddOnlineservice` 方法以向缓存中添加服务。 每次代理接收到公告消息时，都会调用此方法。
+1. 实现 `AddOnlineservice` 方法以向缓存中添加服务。 每次代理接收到公告消息时，都会调用此方法。
 
     ```
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -91,7 +91,7 @@ ms.locfileid: "54608909"
             }
     ```
 
-2.  实现 `RemoveOnlineService` 方法，该方法用于从缓存删除服务。
+2. 实现 `RemoveOnlineService` 方法，该方法用于从缓存删除服务。
 
     ```
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -108,7 +108,7 @@ ms.locfileid: "54608909"
             }
     ```
 
-3.  实现 `MatchFromOnlineService` 方法，这些方法尝试将一个服务与字典中的服务相匹配。
+3. 实现 `MatchFromOnlineService` 方法，这些方法尝试将一个服务与字典中的服务相匹配。
 
     ```
     void MatchFromOnlineService(FindRequestContext findRequestContext)
@@ -144,7 +144,7 @@ ms.locfileid: "54608909"
             }
     ```
 
-4.  实现 `PrintDiscoveryMetadata` 方法，该方法为用户提供发现代理所执行的操作的控制台文本输出。
+4. 实现 `PrintDiscoveryMetadata` 方法，该方法为用户提供发现代理所执行的操作的控制台文本输出。
 
     ```
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)
@@ -159,7 +159,7 @@ ms.locfileid: "54608909"
             }
     ```
 
-5.  将以下 AsyncResult 类添加到 DiscoveryProxyService。 这些类用于区分不同的异步操作结果。
+5. 将以下 AsyncResult 类添加到 DiscoveryProxyService。 这些类用于区分不同的异步操作结果。
 
     ```
     sealed class OnOnlineAnnouncementAsyncResult : AsyncResult
@@ -225,7 +225,7 @@ ms.locfileid: "54608909"
 
 ### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a>定义实现发现代理功能的方法
 
-1.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> 方法。 当发现代理接收到联机公告消息时，将调用此方法。
+1. 重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> 方法。 当发现代理接收到联机公告消息时，将调用此方法。
 
     ```
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy
@@ -236,7 +236,7 @@ ms.locfileid: "54608909"
             }
     ```
 
-2.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> 方法。 当发现代理完成处理公告消息时，将调用此方法。
+2. 重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> 方法。 当发现代理完成处理公告消息时，将调用此方法。
 
     ```
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)
@@ -245,7 +245,7 @@ ms.locfileid: "54608909"
             }
     ```
 
-3.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> 方法。 当发现代理接收到脱机公告消息时，将调用此方法。
+3. 重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> 方法。 当发现代理接收到脱机公告消息时，将调用此方法。
 
     ```
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy
@@ -256,7 +256,7 @@ ms.locfileid: "54608909"
             }
     ```
 
-4.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> 方法。 当发现代理完成处理脱机公告消息时，将调用此方法。
+4. 重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> 方法。 当发现代理完成处理脱机公告消息时，将调用此方法。
 
     ```
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)
@@ -265,7 +265,7 @@ ms.locfileid: "54608909"
             }
     ```
 
-5.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> 方法。 当发现代理接收到查找请求时，将调用此方法。
+5. 重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> 方法。 当发现代理接收到查找请求时，将调用此方法。
 
     ```
     // OnBeginFind method is called when a Probe request message is received by the Proxy
@@ -284,7 +284,7 @@ ms.locfileid: "54608909"
     }
     ```
 
-6.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> 方法。 当发现代理完成查找请求的处理时，将调用此方法。
+6. 重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> 方法。 当发现代理完成查找请求的处理时，将调用此方法。
 
     ```
     protected override void OnEndFind(IAsyncResult result)
@@ -293,7 +293,7 @@ ms.locfileid: "54608909"
             }
     ```
 
-7.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> 方法。 当发现代理接收到解决消息时，将调用此方法。
+7. 重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> 方法。 当发现代理接收到解决消息时，将调用此方法。
 
     ```
     // OnBeginFind method is called when a Resolve request message is received by the Proxy
@@ -310,7 +310,7 @@ ms.locfileid: "54608909"
     }
     ```
 
-8.  重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> 方法。 当发现代理完成处理解决消息时，将调用此方法。
+8. 重写 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> 方法。 当发现代理完成处理解决消息时，将调用此方法。
 
     ```
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)
@@ -323,18 +323,18 @@ ms.locfileid: "54608909"
 
 ### <a name="to-implement-the-asyncresult-class"></a>实现 AsyncResult 类
 
-1.  定义用于派生各种异步结果类的抽象基类 AsyncResult。
+1. 定义用于派生各种异步结果类的抽象基类 AsyncResult。
 
-2.  创建一个名为 AsyncResult.cs 的新代码文件。
+2. 创建一个名为 AsyncResult.cs 的新代码文件。
 
-3.  将以下 `using` 语句添加到 AsyncResult.cs。
+3. 将以下 `using` 语句添加到 AsyncResult.cs。
 
     ```
     using System;
     using System.Threading;
     ```
 
-4.  添加以下 AsyncResult 类。
+4. 添加以下 AsyncResult 类。
 
     ```
     abstract class AsyncResult : IAsyncResult
@@ -487,9 +487,9 @@ ms.locfileid: "54608909"
 
 ### <a name="to-host-the-discoveryproxy"></a>承载 DiscoveryProxy
 
-1.  打开 DiscoveryProxyExample 项目中的 Program.cs 文件。
+1. 打开 DiscoveryProxyExample 项目中的 Program.cs 文件。
 
-2.  添加下面的 `using` 语句。
+2. 添加下面的 `using` 语句。
 
     ```
     using System;
@@ -497,7 +497,7 @@ ms.locfileid: "54608909"
     using System.ServiceModel.Discovery;
     ```
 
-3.  在 `Main()` 方法中，添加下面的代码。 这将创建 `DiscoveryProxy` 类的一个实例。
+3. 在 `Main()` 方法中，添加下面的代码。 这将创建 `DiscoveryProxy` 类的一个实例。
 
     ```
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");
@@ -507,7 +507,7 @@ ms.locfileid: "54608909"
                 ServiceHost proxyServiceHost = new ServiceHost(new DiscoveryProxyService());
     ```
 
-4.  接下来，将以下代码添加到发现终结点和公告终结点。
+4. 接下来，将以下代码添加到发现终结点和公告终结点。
 
     ```
     try
@@ -979,7 +979,7 @@ namespace Microsoft.Samples.Discovery
 
 ## <a name="see-also"></a>请参阅
 
-- [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [如何：实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [如何：实现向发现代理注册的可发现的服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
 - [如何：实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
 - [如何：测试发现代理](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

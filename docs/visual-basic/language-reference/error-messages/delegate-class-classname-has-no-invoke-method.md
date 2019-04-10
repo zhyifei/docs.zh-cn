@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
-ms.openlocfilehash: 463b4f50e8c431bbbc113509e5fd9dd1756b5928
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3fe164d868ee7bde0e687e1d592f4d5a17565aea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822513"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321297"
 ---
 # <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>委托类的\<类名 > 有没有 Invoke 方法，所以此类型的表达式不能作为方法调用的目标
 调用`Invoke`通过委托失败，因为`Invoke`上委托类未实现。  
@@ -21,9 +21,9 @@ ms.locfileid: "58822513"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  确保委托类的实例已经用`Dim`语句和到委托实例获得了一个过程`AddressOf`运算符。  
+1. 确保委托类的实例已经用`Dim`语句和到委托实例获得了一个过程`AddressOf`运算符。  
   
-2.  找到实现委托类的代码并确保它实现了`Invoke`过程。  
+2. 找到实现委托类的代码并确保它实现了`Invoke`过程。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: d8eb22c4de9dc28f332b220dd4703b0c681904f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090014"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320010"
 ---
 # <a name="input-overview"></a>输入概述
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]子系统提供了一个强大[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]用于获取输入不同的设备，包括鼠标、 键盘、 触控和触笔。 本主题介绍了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的服务，并说明了输入系统的体系结构。
@@ -217,15 +217,15 @@ ms.locfileid: "59090014"
 
  下列内容描述了上图中的事件顺序。
 
-1.  <xref:System.Windows.UIElement.TouchEnter>事件发生一次当用户将手指放在元素。
+1. <xref:System.Windows.UIElement.TouchEnter>事件发生一次当用户将手指放在元素。
 
-2.  <xref:System.Windows.UIElement.TouchDown>事件发生一次。
+2. <xref:System.Windows.UIElement.TouchDown>事件发生一次。
 
-3.  <xref:System.Windows.UIElement.TouchMove>事件发生多次，用户在将移动手指在元素中的。
+3. <xref:System.Windows.UIElement.TouchMove>事件发生多次，用户在将移动手指在元素中的。
 
-4.  <xref:System.Windows.UIElement.TouchUp>事件发生一次当用户将手指从该元素。
+4. <xref:System.Windows.UIElement.TouchUp>事件发生一次当用户将手指从该元素。
 
-5.  <xref:System.Windows.UIElement.TouchLeave>事件发生一次。
+5. <xref:System.Windows.UIElement.TouchLeave>事件发生一次。
 
  当使用两根以上的手指时，每根手指都会发生事件。
 
@@ -269,17 +269,17 @@ ms.locfileid: "59090014"
 
  下列内容描述了上图中的事件顺序。
 
-1.  <xref:System.Windows.UIElement.ManipulationStarting>时用户将手指放在对象上发生的事件。 此外，此事件，可设置<xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>属性。 在随后的事件，操作位置将相对于<xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>。 在事件以外的其他<xref:System.Windows.UIElement.ManipulationStarting>，此属性是只读的因此<xref:System.Windows.UIElement.ManipulationStarting>事件是唯一一次，您可以设置此属性。
+1. <xref:System.Windows.UIElement.ManipulationStarting>时用户将手指放在对象上发生的事件。 此外，此事件，可设置<xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>属性。 在随后的事件，操作位置将相对于<xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>。 在事件以外的其他<xref:System.Windows.UIElement.ManipulationStarting>，此属性是只读的因此<xref:System.Windows.UIElement.ManipulationStarting>事件是唯一一次，您可以设置此属性。
 
-2.  <xref:System.Windows.UIElement.ManipulationStarted>接下来发生的事件。 此事件报告操作的原始位置。
+2. <xref:System.Windows.UIElement.ManipulationStarted>接下来发生的事件。 此事件报告操作的原始位置。
 
-3.  <xref:System.Windows.UIElement.ManipulationDelta>事件发生多次作为用户的手指移动触摸屏上。 <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A>属性的<xref:System.Windows.Input.ManipulationDeltaEventArgs>类报告操作被解释为移动、 扩展还是转换。 这是你执行操作对象的大部分工作的地方。
+3. <xref:System.Windows.UIElement.ManipulationDelta>事件发生多次作为用户的手指移动触摸屏上。 <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A>属性的<xref:System.Windows.Input.ManipulationDeltaEventArgs>类报告操作被解释为移动、 扩展还是转换。 这是你执行操作对象的大部分工作的地方。
 
-4.  <xref:System.Windows.UIElement.ManipulationInertiaStarting>事件发生时在用户的手指失去与对象的联系。 此事件使你可以指定操作在惯性期间的减速。 这样，选择时对象就可以模拟不同的物理空间或特性。 例如，假设应用程序有两个表示真实世界中的物品的对象，并且一个物品比另一个物品重。 你可以使较重的对象比较轻的对象减速更快。
+4. <xref:System.Windows.UIElement.ManipulationInertiaStarting>事件发生时在用户的手指失去与对象的联系。 此事件使你可以指定操作在惯性期间的减速。 这样，选择时对象就可以模拟不同的物理空间或特性。 例如，假设应用程序有两个表示真实世界中的物品的对象，并且一个物品比另一个物品重。 你可以使较重的对象比较轻的对象减速更快。
 
-5.  <xref:System.Windows.UIElement.ManipulationDelta>在出现惯性时，事件发生多次。 请注意，当用户的手指在触摸屏上移动并且 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 模拟惯性时，将发生此事件。 换而言之，<xref:System.Windows.UIElement.ManipulationDelta>发生之前和之后<xref:System.Windows.UIElement.ManipulationInertiaStarting>事件。 <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType>属性的报表是否<xref:System.Windows.UIElement.ManipulationDelta>延时，期间发生的事件，因此您可以检查该属性并执行不同的操作，具体取决于它的值。
+5. <xref:System.Windows.UIElement.ManipulationDelta>在出现惯性时，事件发生多次。 请注意，当用户的手指在触摸屏上移动并且 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 模拟惯性时，将发生此事件。 换而言之，<xref:System.Windows.UIElement.ManipulationDelta>发生之前和之后<xref:System.Windows.UIElement.ManipulationInertiaStarting>事件。 <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType>属性的报表是否<xref:System.Windows.UIElement.ManipulationDelta>延时，期间发生的事件，因此您可以检查该属性并执行不同的操作，具体取决于它的值。
 
-6.  <xref:System.Windows.UIElement.ManipulationCompleted>事件发生的操作和所有惯性结束时。 也就是说，毕竟<xref:System.Windows.UIElement.ManipulationDelta>发生事件，<xref:System.Windows.UIElement.ManipulationCompleted>发生事件发出信号的操作已完成。
+6. <xref:System.Windows.UIElement.ManipulationCompleted>事件发生的操作和所有惯性结束时。 也就是说，毕竟<xref:System.Windows.UIElement.ManipulationDelta>发生事件，<xref:System.Windows.UIElement.ManipulationCompleted>发生事件发出信号的操作已完成。
 
  <xref:System.Windows.UIElement>还定义了<xref:System.Windows.UIElement.ManipulationBoundaryFeedback>事件。 此事件发生时<xref:System.Windows.Input.ManipulationDeltaEventArgs.ReportBoundaryFeedback%2A>方法调用<xref:System.Windows.UIElement.ManipulationDelta>事件。 <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>事件，应用程序或组件对象到达边界时提供可视反馈。 例如，<xref:System.Windows.Window>类将处理<xref:System.Windows.UIElement.ManipulationBoundaryFeedback>要使窗口轻微移动时遇到其边缘事件。
 

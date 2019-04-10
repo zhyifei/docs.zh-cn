@@ -2,12 +2,12 @@
 title: PII 安全锁定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 38ca91ab969624ab2128e3cfad1d8151cb8d1f88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122052"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326640"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全锁定
 此示例演示如何控制通过 Windows Communication Foundation (WCF) 服务的多个安全相关的功能：  
@@ -41,11 +41,11 @@ ms.locfileid: "59122052"
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>对示例的 Web.config 中的 appSettings 节中的值进行加密  
   
-1.  打开命令提示符下使用-> 运行... 在键入`cmd`然后单击**确定**。  
+1. 打开命令提示符下使用-> 运行... 在键入`cmd`然后单击**确定**。  
   
-2.  通过发出下面的命令导航到当前的 .NET Framework 目录：`cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`。  
+2. 通过发出下面的命令导航到当前的 .NET Framework 目录：`cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`。  
   
-3.  通过发出下面的命令对 Web.config 文件夹中的 appSettings 配置设置进行加密：`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`。  
+3. 通过发出下面的命令对 Web.config 文件夹中的 appSettings 配置设置进行加密：`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`。  
   
  可以通过读取操作方式上 DPAPI ASP.NET 配置中的找到有关加密配置文件节的详细信息 ([Building Secure ASP.NET Applications:身份验证、 授权和安全通信](https://go.microsoft.com/fwlink/?LinkId=95137)) 和 ASP.NET 配置中的操作方法上 RSA ([How To:加密 ASP.NET 2.0 中的配置节，可使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138))。  
   
@@ -130,17 +130,17 @@ ms.locfileid: "59122052"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  编辑 Machine.config，将 `enableLoggingKnownPii` 属性设置为 `true`，需要时添加父节点。  
+2. 编辑 Machine.config，将 `enableLoggingKnownPii` 属性设置为 `true`，需要时添加父节点。  
   
-3.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 #### <a name="to-clean-up-the-sample"></a>清除示例  
   
-1.  编辑 Machine.config，将 `enableLoggingKnownPii` 属性设置为 `false`。  
+1. 编辑 Machine.config，将 `enableLoggingKnownPii` 属性设置为 `false`。  
   
 ## <a name="see-also"></a>请参阅
 

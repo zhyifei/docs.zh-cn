@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: c68327bb0fb747cdf38d61e944401db9f3af22a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6b0773b4c41b77fe43a5b7fba994778ae18c16c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130684"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325002"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>如何：通过扩展 Windows 窗体 DataGridView 控件中单元格和列的行为和外观对其进行自定义
 <xref:System.Windows.Forms.DataGridView> 控件提供使用属性、事件和伴生类自定义其外观和行为的多种方式。 有时，你可能对这些功能不提供的单元格有要求。 你可以创建自己的自定义 <xref:System.Windows.Forms.DataGridViewCell> 类以提供扩展功能。  
@@ -35,24 +35,24 @@ ms.locfileid: "59130684"
   
 ### <a name="to-customize-cells-and-columns-in-the-datagridview-control"></a>自定义 DataGridView 控件中的单元格和列  
   
-1.  从 <xref:System.Windows.Forms.DataGridViewTextBoxCell> 类型派生一个名为 `DataGridViewRolloverCell` 的新单元格类。  
+1. 从 <xref:System.Windows.Forms.DataGridViewTextBoxCell> 类型派生一个名为 `DataGridViewRolloverCell` 的新单元格类。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#201](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#201)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#201](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#201)]  
     [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#202](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#202)]
     [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#202](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#202)]  
   
-2.  重写 <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> 类中的 `DataGridViewRolloverCell` 方法。 在重写时，首先调用基类实现，基类实现处理托管文本框的功能。 然后使用控件的 <xref:System.Windows.Forms.Control.PointToClient%2A> 方法，将光标位置（在屏幕坐标中）转换为 <xref:System.Windows.Forms.DataGridView> 客户端区域的坐标。 如果鼠标坐标位于单元格的边界之内，则绘制内嵌矩形。  
+2. 重写 <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> 类中的 `DataGridViewRolloverCell` 方法。 在重写时，首先调用基类实现，基类实现处理托管文本框的功能。 然后使用控件的 <xref:System.Windows.Forms.Control.PointToClient%2A> 方法，将光标位置（在屏幕坐标中）转换为 <xref:System.Windows.Forms.DataGridView> 客户端区域的坐标。 如果鼠标坐标位于单元格的边界之内，则绘制内嵌矩形。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#210](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#210)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#210](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#210)]  
   
-3.  重写 `DataGridViewRolloverCell` 类中的 <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> 和 <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> 方法，以强制单元格在鼠标指针进入或离开它们时重新绘制自己。  
+3. 重写 `DataGridViewRolloverCell` 类中的 <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> 和 <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> 方法，以强制单元格在鼠标指针进入或离开它们时重新绘制自己。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#220](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#220)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#220](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#220)]  
   
-4.  从 <xref:System.Windows.Forms.DataGridViewColumn> 类型派生一个名为 `DataGridViewRolloverCellColumn` 的新类。 在构造函数中，向其 <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> 属性分配一个新的 `DataGridViewRolloverCell` 对象。  
+4. 从 <xref:System.Windows.Forms.DataGridViewColumn> 类型派生一个名为 `DataGridViewRolloverCellColumn` 的新类。 在构造函数中，向其 <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> 属性分配一个新的 `DataGridViewRolloverCell` 对象。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#300)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#300)]  

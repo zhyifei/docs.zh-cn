@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 2229599ab2fdc008c1668fb317f6cbe7dae95380
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 9cfb8ceb4fa1b95603ccc9aa006dd6ee3e8e8b3a
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479992"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920969"
 ---
 # <a name="docker-terminology"></a>Docker 术语
 
@@ -33,7 +33,7 @@ ms.locfileid: "55479992"
 
 **注册表**：提供存储库访问权限的服务。 大多数公共映像的默认注册表是 [Docker 中心](https://hub.docker.com/)（归作为组织的 Docker 所有）。 注册表通常包含来自多个团队的存储库。 公司通常使用私有注册表来存储和管理其创建的映像。 另一个示例是 Azure 容器注册表。
 
-**多体系结构映像**：就多体系结构而言，它是一种根据运行 Docker 的平台简化相应映像选择的功能，例如当 Dockerfile 从注册表请求基础映像 FROM microsoft/dotnet:2.2-sdk 时，实际上它会获得 2.2-sdk-nanoserver-1709、2.2-sdk-nanoserver-1803、2.2-sdk-nanoserver-1809 或 2.2-sdk-alpine，具体取决于操作系统和运行 Docker 的版本。
+**多体系结构映像**：就多体系结构而言，它是一种根据运行 Docker 的平台简化相应映像选择的功能，例如，当 Dockerfile 从注册表请求基础映像 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 时，实际上它会获得 2.2-sdk-nanoserver-1709、2.2-sdk-nanoserver-1803、2.2-sdk-nanoserver-1809 或 2.2-sdk-stretch，具体取决于运行 Docker 的操作系统版本。
 
 **Docker 中心**：上传并使用映像的公共注册表。 Docker 中心提供 Docker 映像托管、公共或私有注册表，生成触发器和 Web 挂钩，以及与 GitHub 和 Bitbucket 集成。
 

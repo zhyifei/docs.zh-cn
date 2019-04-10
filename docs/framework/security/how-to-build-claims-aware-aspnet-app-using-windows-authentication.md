@@ -3,12 +3,12 @@ title: 如何：使用 Windows 身份验证生成声明感知 ASP.NET 应用程�
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 2c7877c452c729b30029cad1a8e17600f3dc9661
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198523"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323663"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>如何：使用 Windows 身份验证生成声明感知 ASP.NET 应用程序
 ## <a name="applies-to"></a>适用于  
@@ -58,13 +58,13 @@ ms.locfileid: "47198523"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>创建一个简单 ASP.NET 应用程序  
   
-1.  启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。  
+1. 启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。  
   
-2.  在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。  
+2. 在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。  
   
-3.  在“名称”中，输入 `TestApp`，然后按“确定”。  
+3. 在“名称”中，输入 `TestApp`，然后按“确定”。  
   
-4.  创建 TestApp 项目后，在“解决方案资源管理器”中单击它。 项目的属性会在“解决方案资源管理器”下的“属性面板”窗格中显示。 将“Windows 身份验证”属性设置为“启用”。  
+4. 创建 TestApp 项目后，在“解决方案资源管理器”中单击它。 项目的属性会在“解决方案资源管理器”下的“属性面板”窗格中显示。 将“Windows 身份验证”属性设置为“启用”。  
   
     > [!WARNING]
     >  新的 ASP.NET 应用程序中默认禁用 Windows 身份验证，因此必须手动启用它。  
@@ -74,7 +74,7 @@ ms.locfileid: "47198523"
   
 #### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>为使用 Windows 身份验证的声明配置 ASP.NET 应用程序  
   
-1.  在 TestApp 项目的 Default.aspx 文件中，将现有标记替换为以下内容：  
+1. 在 TestApp 项目的 Default.aspx 文件中，将现有标记替换为以下内容：  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -96,7 +96,7 @@ ms.locfileid: "47198523"
   
      此步骤将 GridView 控件添加到“Default.aspx”页，该页将填充从 Windows 身份验证中检索的声明。  
   
-2.  保存 Default.aspx 文件，然后打开名为 Default.aspx.cs 的代码隐藏文件。 将现有代码替换为以下代码：  
+2. 保存 Default.aspx 文件，然后打开名为 Default.aspx.cs 的代码隐藏文件。 将现有代码替换为以下代码：  
   
     ```csharp  
     using System;  
@@ -119,13 +119,13 @@ ms.locfileid: "47198523"
   
      上方的代码将显示有关已经过身份验证的用户的声明。  
   
-3.  若要更改应用程序的身份验证类型，请修改项目的 Web.config 根文件的 \<system.web> 节中的 \<authentication> 块，使其只包括以下配置条目：  
+3. 若要更改应用程序的身份验证类型，请修改项目的 Web.config 根文件的 \<system.web> 节中的 \<authentication> 块，使其只包括以下配置条目：  
   
     ```xml  
     <authentication mode="Windows" />  
     ```  
   
-4.  最后，修改同一 Web.config 文件的 \<system.web> 节中的 \<authorization> 块以强制身份验证：  
+4. 最后，修改同一 Web.config 文件的 \<system.web> 节中的 \<authorization> 块以强制身份验证：  
   
     ```xml  
     <authorization>  
@@ -138,4 +138,4 @@ ms.locfileid: "47198523"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>为使用 Windows 身份验证的声明测试 ASP.NET Web 窗体应用程序  
   
-1.  按 F5 生成并运行该应用程序。 应当会显示 Default.aspx，且你的 Windows 帐户名（包括域名）应在页面的右上角显示为已经过身份验证的用户。 页面内容应包括一个表，其中填充有从你的 Windows 帐户检索的声明。
+1. 按 F5 生成并运行该应用程序。 应当会显示 Default.aspx，且你的 Windows 帐户名（包括域名）应在页面的右上角显示为已经过身份验证的用户。 页面内容应包括一个表，其中填充有从你的 Windows 帐户检索的声明。

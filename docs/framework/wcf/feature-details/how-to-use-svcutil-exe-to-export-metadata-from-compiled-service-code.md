@@ -2,12 +2,12 @@
 title: 如何：使用 Svcutil.exe 将元数据从已编译的服务代码中导出
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: cb1cb03a078eeb273c69cc3c49b3ef2173c0a49c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084903"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329383"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>如何：使用 Svcutil.exe 将元数据从已编译的服务代码中导出
 Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型的元数据，如下所示：  
@@ -23,9 +23,9 @@ Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型�
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>导出已编译服务协定的元数据  
   
-1.  将服务协定实现编译为一个或多个类库。  
+1. 将服务协定实现编译为一个或多个类库。  
   
-2.  在已编译程序集上运行 Svcutil.exe。  
+2. 在已编译程序集上运行 Svcutil.exe。  
   
     > [!NOTE]
     >  您可能需要使用 `/reference` 开关指定任意相关程序集的文件路径。  
@@ -36,9 +36,9 @@ Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型�
   
 ### <a name="to-export-metadata-for-a-compiled-service"></a>导出已编译服务的元数据  
   
-1.  将服务实现编译为可执行程序集。  
+1. 将服务实现编译为可执行程序集。  
   
-2.  为服务可执行程序集创建一个配置文件，并添加服务配置。  
+2. 为服务可执行程序集创建一个配置文件，并添加服务配置。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -53,7 +53,7 @@ Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型�
     </configuration>  
     ```  
   
-3.  在使用 `/serviceName` 开关指定服务的配置名称的已编译服务可执行程序集上运行 Svcutil.exe。  
+3. 在使用 `/serviceName` 开关指定服务的配置名称的已编译服务可执行程序集上运行 Svcutil.exe。  
   
     > [!NOTE]
     >  您可能需要使用 `/reference` 开关指定任意相关程序集的文件路径。  
@@ -64,9 +64,9 @@ Svcutil.exe 可以导出已编译程序集中的服务、协定和数据类型�
   
 ### <a name="to-export-metadata-for-compiled-data-contracts"></a>导出已编译数据协定的元数据  
   
-1.  将数据协定实现编译为一个或多个类库。  
+1. 将数据协定实现编译为一个或多个类库。  
   
-2.  在使用 `/dataContract` 开关指定应仅生成数据协定元数据的已编译程序集上运行 Svcutil.exe。  
+2. 在使用 `/dataContract` 开关指定应仅生成数据协定元数据的已编译程序集上运行 Svcutil.exe。  
   
     > [!NOTE]
     >  您可能需要使用 `/reference` 开关指定任意相关程序集的文件路径。  

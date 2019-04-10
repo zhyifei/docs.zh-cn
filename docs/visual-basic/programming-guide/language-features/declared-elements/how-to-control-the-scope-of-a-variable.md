@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818718"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324313"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>如何：控制变量 (Visual Basic 中) 的作用域
 通常情况下，变量位于*作用域*，或作为参考，整个声明它的区域可见。 在某些情况下，该变量的*访问级别*可能会影响其作用域。  
@@ -43,19 +43,19 @@ ms.locfileid: "58818718"
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>若要使变量在整个模块、 类或结构可见  
   
-1.  位置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。  
+1. 位置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。  
   
-2.  包括[私有](../../../../visual-basic/language-reference/modifiers/private.md)中的关键字`Dim`语句。  
+2. 包括[私有](../../../../visual-basic/language-reference/modifiers/private.md)中的关键字`Dim`语句。  
   
-3.  您可以参考中的变量中的模块、 类或结构的任意位置，但不能从其外部。  
+3. 您可以参考中的变量中的模块、 类或结构的任意位置，但不能从其外部。  
   
 #### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>若要使变量在整个命名空间内可见  
   
-1.  位置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。  
+1. 位置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。  
   
-2.  包括[友元](../../../../visual-basic/language-reference/modifiers/friend.md)或[公共](../../../../visual-basic/language-reference/modifiers/public.md)中的关键字`Dim`语句。  
+2. 包括[友元](../../../../visual-basic/language-reference/modifiers/friend.md)或[公共](../../../../visual-basic/language-reference/modifiers/public.md)中的关键字`Dim`语句。  
   
-3.  可以引用从任何位置的变量中包含模块、 类或结构的命名空间。  
+3. 可以引用从任何位置的变量中包含模块、 类或结构的命名空间。  
   
 ## <a name="example"></a>示例  
  以下示例声明在模块级别的变量，并限制其对模块中的代码的可见性。  
@@ -88,8 +88,8 @@ Public strMsg As String
   
 ## <a name="see-also"></a>请参阅
 
-- [在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [在 Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic 中的范围](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic 中的生存期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [在 Visual Basic 中的访问级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [变量](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

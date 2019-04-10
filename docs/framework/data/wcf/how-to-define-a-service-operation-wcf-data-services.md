@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: 75691a49624c179166d18225fac9fdc6c17a2308
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 88e9b20f3ecefbd39789dfbc942af3938a9a2117
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138094"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326393"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>如何：定义服务操作 （WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 公开在服务器作为服务操作定义的方法。 服务操作允许数据服务以提供通过在服务器上定义的方法的 URI 的访问权限。 若要定义服务操作，应用 [`WebGet]`或`[WebInvoke]`属性为该方法。 若要支持查询运算符，服务操作必须返回<xref:System.Linq.IQueryable%601>实例。 服务操作可以通过 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601> 属性访问基础数据源。 有关详细信息，请参阅[服务操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。  
@@ -22,14 +22,14 @@ ms.locfileid: "59138094"
   
 ### <a name="to-define-a-service-operation-in-the-northwind-data-service"></a>在 Northwind 数据服务中定义服务操作  
   
-1.  在 Northwind 数据服务项目中，打开 Northwind.svc 文件。  
+1. 在 Northwind 数据服务项目中，打开 Northwind.svc 文件。  
   
-2.  在 `Northwind` 类中，定义一个名为 `GetOrdersByCity` 的服务操作方法，如下所示：  
+2. 在 `Northwind` 类中，定义一个名为 `GetOrdersByCity` 的服务操作方法，如下所示：  
   
      [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
      [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
-3.  在 `InitializeService` 类的 `Northwind` 方法中，添加以下代码以支持对服务操作的访问：  
+3. 在 `InitializeService` 类的 `Northwind` 方法中，添加以下代码以支持对服务操作的访问：  
   
      [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationconfig)]
      [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationconfig)]  

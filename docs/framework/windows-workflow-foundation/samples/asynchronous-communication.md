@@ -2,12 +2,12 @@
 title: 异步通信
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: e85f7efb0de1326ceb5091c305b20f34809eab57
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a9da04e2c6d3c131603211f53c54fd25dde8d338
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593902"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323650"
 ---
 # <a name="asynchronous-communication"></a>异步通信
 此示例演示如何两个不同的 Windows Workflow Foundation (WF) 服务之间的通信默认情况下以异步方式完成。  
@@ -31,13 +31,13 @@ ms.locfileid: "45593902"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  右键单击**AsynchronousCommunication**解决方案并选择**属性**。  
+1. 右键单击**AsynchronousCommunication**解决方案并选择**属性**。  
   
-2.  在**常见属性**，选择**启动项目**，然后选择**多个启动项目**。  
+2. 在**常见属性**，选择**启动项目**，然后选择**多个启动项目**。  
   
-3.  移动**RentalApprovalService**列表中的第一个位置后, 接**CreditCheckService**后, 跟**客户端**。 设置**启动**上所有三个项目的操作。  
+3. 移动**RentalApprovalService**列表中的第一个位置后, 接**CreditCheckService**后, 跟**客户端**。 设置**启动**上所有三个项目的操作。  
   
-4.  单击**确定**，然后按 F5 以运行示例。  
+4. 单击**确定**，然后按 F5 以运行示例。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

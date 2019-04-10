@@ -2,12 +2,12 @@
 title: 取消一个异步任务或一组任务 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: deb469f2c083870fc96c9217fa862d189629df1f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 62321a5fc011f71ed6125fbaa315573d13667488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834980"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324755"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>取消一个异步任务或一组任务 (Visual Basic)
 如果不想等待异步应用程序完成，可以设置一个按钮用来取消它。 通过遵循本主题中的示例，可以为下载一个或一组网站内容的应用程序添加一个取消按钮。  
@@ -23,15 +23,15 @@ ms.locfileid: "58834980"
 ### <a name="downloading-the-example"></a>下载示例  
  若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）。  
   
-1.  解压缩下载的文件，然后启动 Visual Studio。  
+1. 解压缩下载的文件，然后启动 Visual Studio。  
   
-2.  在菜单栏上，依次选择 **“文件”**、 **“打开”** 和 **“项目/解决方案”**。  
+2. 在菜单栏上，依次选择 **“文件”**、 **“打开”** 和 **“项目/解决方案”**。  
   
-3.  在“打开项目”对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningVB 的解决方案 (.sln) 文件。  
+3. 在“打开项目”对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningVB 的解决方案 (.sln) 文件。  
   
-4.  在“解决方案资源管理器”中，打开 “CancelATask” 项目的快捷菜单，然后选择“设为启动项目”。  
+4. 在“解决方案资源管理器”中，打开 “CancelATask” 项目的快捷菜单，然后选择“设为启动项目”。  
   
-5.  选择 F5 键运行该项目。  
+5. 选择 F5 键运行该项目。  
   
      选择 Ctrl+F5 键运行该项目，而不进行调试。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "58834980"
   
  然后将下列更改添加到该项目的 MainWindow.xaml.vb 文件。  
   
-1.  声明一个 `CancellationTokenSource` 变量 `cts`，它作用于所有访问它的方法。  
+1. 声明一个 `CancellationTokenSource` 变量 `cts`，它作用于所有访问它的方法。  
   
     ```vb  
     Class MainWindow  
@@ -53,7 +53,7 @@ ms.locfileid: "58834980"
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  为“取消”按钮添加以下事件处理程序。 用户请求取消时，事件处理程序使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法通知 `cts`。  
+2. 为“取消”按钮添加以下事件处理程序。 用户请求取消时，事件处理程序使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法通知 `cts`。  
   
     ```vb  
     ' ***Add an event handler for the Cancel button.  
@@ -65,7 +65,7 @@ ms.locfileid: "58834980"
     End Sub  
     ```  
   
-3.  为“启动”按钮 `startButton_Click` 在事件处理程序中进行下列更改。  
+3. 为“启动”按钮 `startButton_Click` 在事件处理程序中进行下列更改。  
   
     -   实例化 `CancellationTokenSource`、`cts`。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "58834980"
         End Try  
         ```  
   
-4.  在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 类型中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 重载来下载网站内容。 将 `ct`（`AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 参数）作为第二个参数传递。 如果用户选择“取消”按钮，则令牌携带消息。  
+4. 在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 类型中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 重载来下载网站内容。 将 `ct`（`AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 参数）作为第二个参数传递。 如果用户选择“取消”按钮，则令牌携带消息。  
   
      下列代码显示 `AccessTheWebAsync` 中的更改。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "58834980"
     End Function  
     ```  
   
-5.  如果不取消该程序，它将生成以下输出。  
+5. 如果不取消该程序，它将生成以下输出。  
   
     ```  
     Ready to download.  
@@ -141,15 +141,15 @@ ms.locfileid: "58834980"
 ### <a name="downloading-the-example"></a>下载示例  
  若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）。  
   
-1.  解压缩下载的文件，然后启动 Visual Studio。  
+1. 解压缩下载的文件，然后启动 Visual Studio。  
   
-2.  在菜单栏上，依次选择 **“文件”**、 **“打开”** 和 **“项目/解决方案”**。  
+2. 在菜单栏上，依次选择 **“文件”**、 **“打开”** 和 **“项目/解决方案”**。  
   
-3.  在“打开项目”对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningVB 的解决方案 (.sln) 文件。  
+3. 在“打开项目”对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningVB 的解决方案 (.sln) 文件。  
   
-4.  在“解决方案资源管理器”中，打开 “CancelAListOfTasks” 项目的快捷菜单，然后选择“设为启动项目”。  
+4. 在“解决方案资源管理器”中，打开 “CancelAListOfTasks” 项目的快捷菜单，然后选择“设为启动项目”。  
   
-5.  选择 F5 键运行该项目。  
+5. 选择 F5 键运行该项目。  
   
      选择 Ctrl+F5 键运行该项目，而不进行调试。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "58834980"
 ### <a name="building-the-example"></a>生成示例  
  要自行扩展示例，请按“下载示例”部分的说明逐步操作，但要选择“CancelATask”作为“启动项目”。 向该项目添加下列更改。 星号标记了程序中的更改。  
   
-1.  添加一个方法，用于创建 Web 地址的列表。  
+1. 添加一个方法，用于创建 Web 地址的列表。  
   
     ```vb  
     ' ***Add a method that creates a list of web addresses.  
@@ -178,14 +178,14 @@ ms.locfileid: "58834980"
     End Function  
     ```  
   
-2.  在 `AccessTheWebAsync` 中调用方法。  
+2. 在 `AccessTheWebAsync` 中调用方法。  
   
     ```vb  
     ' ***Call SetUpURLList to make a list of web addresses.  
     Dim urlList As List(Of String) = SetUpURLList()  
     ```  
   
-3.  在 `AccessTheWebAsync` 中添加下列循环，用于处理列表中的每个 Web 地址。  
+3. 在 `AccessTheWebAsync` 中添加下列循环，用于处理列表中的每个 Web 地址。  
   
     ```vb  
     ' ***Add a loop to process the list of web addresses.  
@@ -203,7 +203,7 @@ ms.locfileid: "58834980"
     Next  
     ```  
   
-4.  由于 `AccessTheWebAsync` 显示了长度，因此该方法无需返回任何内容。 删除返回语句，并将方法的返回类型更改为 <xref:System.Threading.Tasks.Task>，而不是 <xref:System.Threading.Tasks.Task%601>。  
+4. 由于 `AccessTheWebAsync` 显示了长度，因此该方法无需返回任何内容。 删除返回语句，并将方法的返回类型更改为 <xref:System.Threading.Tasks.Task>，而不是 <xref:System.Threading.Tasks.Task%601>。  
   
     ```vb  
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task  
@@ -215,7 +215,7 @@ ms.locfileid: "58834980"
     Await AccessTheWebAsync(cts.Token)  
     ```  
   
-5.  如果不取消该程序，它将生成以下输出。  
+5. 如果不取消该程序，它将生成以下输出。  
   
     ```  
     Length of the downloaded string: 35939.  

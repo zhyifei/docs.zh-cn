@@ -2,12 +2,12 @@
 title: 数据库访问活动
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066085"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322597"
 ---
 # <a name="database-access-activities"></a>数据库访问活动
 数据库访问活动可用于在一个工作流内访问数据库。 这些活动可以访问数据库以检索或修改信息并使用[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)来访问数据库。  
@@ -71,9 +71,9 @@ Public class DbUpdate: AsyncCodeActivity
 
 |参数|描述|
 |-|-|
-|ProviderName|ADO.NET 提供程序固定名称。 如果设置此参数，则必须还要设置 `ConnectionString`。|
-|ConnectionString|用于连接到数据库的连接字符串。 如果设置此参数，则必须还要设置 `ProviderName`。|
-|ConfigName|存储连接信息的配置文件部分的名称。 设置此参数之后，将不再需要 `ProviderName` 和 `ConnectionString`。|
+|ProviderName|ADO.NET 提供程序固定名称。 如果设置此自变量，则必须还要设置 `ConnectionString`。|
+|ConnectionString|用于连接到数据库的连接字符串。 如果设置此自变量，则必须还要设置 `ProviderName`。|
+|ConfigName|存储连接信息的配置文件部分的名称。 设置此自变量之后，将不再需要 `ProviderName` 和 `ConnectionString`。|
 |CommandType|要执行的 <xref:System.Data.Common.DbCommand> 的类型。|
 |Sql|要执行的 SQL 命令。|
 |参数|SQL 查询的参数集合。|
@@ -124,13 +124,13 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 
 |参数|描述|
 |-|-|
-|ProviderName|ADO.NET 提供程序固定名称。 如果设置此参数，则必须还要设置 `ConnectionString`。|
-|ConnectionString|用于连接到数据库的连接字符串。 如果设置此参数，则必须还要设置 `ProviderName`。|
-|ConfigName|存储连接信息的配置文件部分的名称。 设置此参数之后，将不再需要 `ProviderName` 和 `ConnectionString`。|
+|ProviderName|ADO.NET 提供程序固定名称。 如果设置此自变量，则必须还要设置 `ConnectionString`。|
+|ConnectionString|用于连接到数据库的连接字符串。 如果设置此自变量，则必须还要设置 `ProviderName`。|
+|ConfigName|存储连接信息的配置文件部分的名称。 设置此自变量之后，将不再需要 `ProviderName` 和 `ConnectionString`。|
 |CommandType|要执行的 <xref:System.Data.Common.DbCommand> 的类型。|
 |Sql|要执行的 SQL 命令。|
 |参数|SQL 查询的参数集合。|
-|结果|执行查询后获得的标量。 此参数的类型为 `TResult`。|
+|结果|执行查询后获得的标量。 此自变量的类型为 `TResult`。|
 
 ## <a name="dbquery"></a>DbQuery
  执行可检索对象列表的查询。 执行查询后，将执行映射函数 (它可以是<xref:System.Func%601> < `DbDataReader`， `TResult`> 或者<xref:System.Activities.ActivityFunc%601> < `DbDataReader`， `TResult`>)。 此映射函数在 `DbDataReader` 中获取一个记录，并将其映射到要返回的对象。
@@ -183,9 +183,9 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 
 |参数|描述|
 |-|-|
-|ProviderName|ADO.NET 提供程序固定名称。 如果设置此参数，则必须还要设置 `ConnectionString`。|
-|ConnectionString|用于连接到数据库的连接字符串。 如果设置此参数，则必须还要设置 `ProviderName`。|
-|ConfigName|存储连接信息的配置文件部分的名称。 设置此参数之后，将不再需要 `ProviderName` 和 `ConnectionString`。|
+|ProviderName|ADO.NET 提供程序固定名称。 如果设置此自变量，则必须还要设置 `ConnectionString`。|
+|ConnectionString|用于连接到数据库的连接字符串。 如果设置此自变量，则必须还要设置 `ProviderName`。|
+|ConfigName|存储连接信息的配置文件部分的名称。 设置此自变量之后，将不再需要 `ProviderName` 和 `ConnectionString`。|
 |CommandType|要执行的 <xref:System.Data.Common.DbCommand> 的类型。|
 |Sql|要执行的 SQL 命令。|
 |参数|SQL 查询的参数集合。|
@@ -236,18 +236,18 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 |参数|描述|
 |-|-|
-|ProviderName|ADO.NET 提供程序固定名称。 如果设置此参数，则必须还要设置 `ConnectionString`。|
-|ConnectionString|用于连接到数据库的连接字符串。 如果设置此参数，则必须还要设置 `ProviderName`。|
-|ConfigName|存储连接信息的配置文件部分的名称。 设置此参数之后，将不再需要 `ProviderName` 和 `ConnectionString`。|
+|ProviderName|ADO.NET 提供程序固定名称。 如果设置此自变量，则必须还要设置 `ConnectionString`。|
+|ConnectionString|用于连接到数据库的连接字符串。 如果设置此自变量，则必须还要设置 `ProviderName`。|
+|ConfigName|存储连接信息的配置文件部分的名称。 设置此自变量之后，将不再需要 `ProviderName` 和 `ConnectionString`。|
 |CommandType|要执行的 <xref:System.Data.Common.DbCommand> 的类型。|
 |Sql|要执行的 SQL 命令。|
 |参数|SQL 查询的参数集合。|
-|结果|执行查询后获得的 <xref:System.Data.DataSet>。|
+|结果|<xref:System.Data.DataSet> 执行查询后获得的。|
 
 ## <a name="configuring-connection-information"></a>配置连接信息
  所有 DbActivities 共享相同的配置参数。 可以通过两种方式进行相关配置：
 
--   `ConnectionString + InvariantName`：设置 ADO.NET 提供程序固定名称和连接字符串。
+-   `ConnectionString + InvariantName`:设置 ADO.NET 提供程序固定名称和连接字符串。
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`：设置包含连接信息的配置节的名称。
+-   `ConfigName`:设置包含连接信息的配置节的名称。
 
     ```xml
     <connectionStrings>
@@ -299,26 +299,26 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 ##### <a name="to-run-setupcmd"></a>运行 Setup.cmd
 
-1.  打开命令提示。
+1. 打开命令提示。
 
-2.  转到 DbActivities 示例文件夹。
+2. 转到 DbActivities 示例文件夹。
 
-3.  键入"setup.cmd"，然后按 ENTER。
+3. 键入"setup.cmd"，然后按 ENTER。
 
     > [!NOTE]
     >  Setup.cmd 尝试将此示例安装在您本地计算机的 SqlExpress 实例中。 如果您需要在其他 SQL Server 实例中安装它，请将 Setup.cmd 改为使用新的实例名称。
 
 ##### <a name="to-uninstall-the-sample-database"></a>卸载示例数据库
 
-1.  在命令提示中运行示例文件夹中的 Cleanup.cmd。
+1. 在命令提示中运行示例文件夹中的 Cleanup.cmd。
 
 ##### <a name="to-run-the-sample"></a>运行示例
 
-1.  在 Visual Studio 2010 中打开解决方案
+1. 在 Visual Studio 2010 中打开解决方案
 
-2.  若要编译解决方案，请按 CTRL+SHIFT+B。
+2. 若要编译解决方案，请按 CTRL+SHIFT+B。
 
-3.  若要运行示例而不进行调试，按 Ctrl+F5。
+3. 若要运行示例而不进行调试，按 Ctrl+F5。
 
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

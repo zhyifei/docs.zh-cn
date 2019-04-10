@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: e78772df1cf7e5f8999305a1b726a7085f94601b
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 822ad0fc7a0a765fbf8664522a2e23f7aca4ea16
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410064"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921255"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>教程：使用 ML.NET 创建影片推荐系统
 
@@ -67,7 +67,7 @@ ms.locfileid: "58410064"
     
 4. 在 Program.cs 文件的顶部添加以下 `using` 语句：
     
-    [!code-csharp[UsingStatements](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UsingStatements "Add necessary usings")]
+    [!code-csharp[UsingStatements](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UsingStatements "Add necessary usings")]
 
 ### <a name="download-your-data"></a>下载数据
 
@@ -134,17 +134,17 @@ using Microsoft.ML.Data;
 
 通过删除现有的类定义并在 MovieRatingData.cs 中添加以下代码，创建一个名为 `MovieRating` 的类：
 
-[!code-csharp[MovieRatingClass](../../../samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
+[!code-csharp[MovieRatingClass](~/samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
 
 `MovieRating` 指定输入数据类。 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 属性指定应加载数据集中的哪些列（按列索引）。 `userId` 和 `movieId` 列是你的 `Features`（你将向模型提供预测 `Label` 的输入），而评分列是你将预测的 `Label` 模型的输出）。
 
 创建另一个类 `MovieRatingPrediction`，通过在 MovieRatingData.cs 中的 `MovieRating` 类之后添加以下代码来表示预测结果：
 
-[!code-csharp[PredictionClass](../../../samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#PredictionClass "Add the Movie Prediction Class")]
+[!code-csharp[PredictionClass](~/samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#PredictionClass "Add the Movie Prediction Class")]
 
 在 Program.cs 中，将 `Console.WriteLine("Hello World!")` 替换为 `Main()` 中的以下代码：
 
-[!code-csharp[MLContext](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#MLContext "Add MLContext")]
+[!code-csharp[MLContext](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#MLContext "Add MLContext")]
 
 执行所有 ML.NET 操作都是从 [MLContext 类](xref:Microsoft.ML.MLContext)开始，初始化 `mlContext` 可创建一个新的 ML.NET 环境，可在模型创建工作流对象之间共享该环境。 从概念上讲，它与实体框架中的 `DBContext` 类似。
 
@@ -162,7 +162,7 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 
 初始化数据路径变量、从 *.csv 文件加载数据以及将 `Train` 和 `Test` 数据作为 `IDataView` 对象返回，方法是在 `LoadData()` 中添加以下代码作为下一代码行：
 
-[!code-csharp[LoadData](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
+[!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
 
 ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.Data.DataView.IDataView)。 `IDataView` 是用于描述表格数据（数字和文本）的一种灵活且有效的方法。 可从文本文件或实时（例如，SQL 数据库或日志文件）将数据加载到 `IDataView` 对象。
 
@@ -170,7 +170,7 @@ ML.NET 中的数据表示为 [IDataView 类](xref:Microsoft.Data.DataView.IDataV
 
 在 `Main()` 方法中添加以下两个代码行，以调用 `LoadData()` 方法并返回 `Train` 和 `Test` 数据：
 
-[!code-csharp[LoadDataMain](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
+[!code-csharp[LoadDataMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
 
 
 ## <a name="build-and-train-your-model"></a>生成并训练模型
@@ -202,7 +202,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 通过将以下代码添加到 `BuildAndTrainModel()` 来定义数据转换：
    
-[!code-csharp[DataTransformations](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#DataTransformations "Define data transformations")]
+[!code-csharp[DataTransformations](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#DataTransformations "Define data transformations")]
 
 由于 `userId` 和 `movieId` 代表用户和影片标题，而不是实际值，因此使用 [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) 方法将每个 `userId` 和每个 `movieId` 转换为数字键类型 `Feature` 列（推荐算法接受的格式）并将它们添加为新的数据集列：
 
@@ -215,7 +215,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 选择机器学习算法并将其添加到数据转换定义中，方法是在 `BuildAndTrainModel()` 中添加以下代码作为下一代码行：
 
-[!code-csharp[AddAlgorithm](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#AddAlgorithm "Add the training algorithm with options")]
+[!code-csharp[AddAlgorithm](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#AddAlgorithm "Add the training algorithm with options")]
 
 [MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) 就是推荐训练算法。  当你掌握用户过去如何评价产品的数据时，通常建议使用[矩阵分解](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems))方法，本教程中的数据集就是这种情况。 当你有不同的数据时，还可使用其他推荐算法（请参阅下面的[其他推荐算法](#other-recommendation-algorithms)部分以了解更多信息）。 
 
@@ -232,13 +232,13 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 在 `BuildAndTrainModel()` 方法中添加以下代码作为下一代码行，使模型适应 `Train` 数据，并返回经过训练的模型：
 
-[!code-csharp[FitModel](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#FitModel "Call the Fit method and return back the trained model")]
+[!code-csharp[FitModel](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#FitModel "Call the Fit method and return back the trained model")]
 
 [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.Data.DataView.IDataView,Microsoft.Data.DataView.IDataView%29) 方法使用提供的训练数据集训练模型。 从技术上讲，该方法通过转换数据并应用训练来执行 `Estimator` 定义，然后返回经过训练的模型，即 `Transformer`。
 
 将以下内容添加为 `Main()` 方法中的下一代码行，以调用 `BuildAndTrainModel()` 方法并返回经过训练的模型：
 
-[!code-csharp[BuildTrainModelMain](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#BuildTrainModelMain "Add BuildAndTrainModel method in Main")]
+[!code-csharp[BuildTrainModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#BuildTrainModelMain "Add BuildAndTrainModel method in Main")]
 
 ## <a name="evaluate-your-model"></a>评估模型
 
@@ -253,23 +253,24 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 }
 ```
 
-将以下代码添加到 `EvaluateModel()`，转换 `Test` 数据：[!code-csharp[Transform](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
+将以下代码添加到 `EvaluateModel()` 以转换 `Test` 数据：
+[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
 
 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法对测试数据集的多个提供的输入行进行预测。
 
 通过在 `EvaluateModel()` 方法中添加以下代码作为下一代码行来评估模型：
 
-[!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Evaluate "Evaluate the model using predictions from the test data")]
+[!code-csharp[Evaluate](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Evaluate "Evaluate the model using predictions from the test data")]
 
 获得预测集后，[Evaluate()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) 方法会对模型进行评估，该模型会将预测值与测试数据集中的实际 `Labels` 进行比较，并返回有关模型执行情况的指标。
 
 在 `EvaluateModel()` 方法中添加以下代码作为下一代码行，将评估指标输出到控制台：
 
-[!code-csharp[PrintMetrics](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PrintMetrics "Print the evaluation metrics")]
+[!code-csharp[PrintMetrics](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PrintMetrics "Print the evaluation metrics")]
 
 在 `Main()` 方法中添加以下代码作为下一代码行，调用 `EvaluateModel()` 方法：
 
-[!code-csharp[EvaluateModelMain](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#EvaluateModelMain "Add EvaluateModel method in Main")]
+[!code-csharp[EvaluateModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#EvaluateModelMain "Add EvaluateModel method in Main")]
 
 到目前为止的输出应类似于以下文本：
 
@@ -322,13 +323,13 @@ public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer
 
 使用 `PredictionEngine` 通过将以下代码添加到 `UseModelForSinglePrediction()` 来预测评分：
 
-[!code-csharp[PredictionEngine](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PredictionEngine "Create Prediction Engine")]
+[!code-csharp[PredictionEngine](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PredictionEngine "Create Prediction Engine")]
 
 [PredictionEngine 类](xref:Microsoft.ML.PredictionEngine%602)是一个便利 API，可用于传递单个数据实例，然后对此单个数据实例执行预测。
 
 创建一个名为 `testInput` 的 `MovieRating` 实例，并通过在 `UseModelForSinglePrediction()` 方法中添加以下代码作为下一代码行，将其传递给预测引擎：
 
-[!code-csharp[MakeSinglePrediction](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#MakeSinglePrediction "Make a single prediction with the Prediction Engine")]
+[!code-csharp[MakeSinglePrediction](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#MakeSinglePrediction "Make a single prediction with the Prediction Engine")]
 
 [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 函数对单列数据进行预测。
 
@@ -336,11 +337,11 @@ public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer
 
 若要输出结果，请在 `UseModelForSinglePrediction()` 方法中添加以下代码作为下一代码行：
 
-[!code-csharp[PrintResults](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PrintResults "Print the recommendation prediction results")]
+[!code-csharp[PrintResults](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PrintResults "Print the recommendation prediction results")]
 
 在 `Main()` 方法中添加以下代码作为下一代码行，调用 `UseModelForSinglePrediction()` 方法：
 
-[!code-csharp[UseModelMain](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UseModelMain "Add UseModelForSinglePrediction method in Main")]
+[!code-csharp[UseModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UseModelMain "Add UseModelForSinglePrediction method in Main")]
 
 此方法的输出应类似于以下文本：
 
@@ -363,13 +364,13 @@ public static void SaveModel(MLContext mlContext, ITransformer model)
 
 通过在 `SaveModel()` 方法中添加以下代码来保存经过训练的模型：
 
-[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#SaveModel "Save the model to a zip file")]
+[!code-csharp[SaveModel](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#SaveModel "Save the model to a zip file")]
 
 此方法会将经过训练的模型保存到 .zip 文件（在“数据”文件夹中），然后可以在其他 .NET 应用程序中使用该文件进行预测。
 
 在 `Main()` 方法中添加以下代码作为下一代码行，调用 `SaveModel()` 方法：
 
-[!code-csharp[SaveModelMain](../../../samples/machine-learning/tutorials/MovieRecommendation/Program.cs#SaveModelMain "Create SaveModel method in Main")]
+[!code-csharp[SaveModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#SaveModelMain "Create SaveModel method in Main")]
 
 ### <a name="use-your-saved-model"></a>使用保存的模型
 保存经过训练的模型后，可以在不同环境中使用模型（请参阅[“操作指南”](../how-to-guides/consuming-model-ml-net.md)，了解如何在应用程序中操作经过训练的机器学习模型）。
@@ -453,8 +454,8 @@ var options = new MatrixFactorizationTrainer.Options
 
 | 算法       | 方案           | 示例  |
 | ------------- |:-------------:| -----:|
-| 一类矩阵分解 | 当只有 userId 和 movieId 时使用此选项。 这种推荐方式基于共同购买方案或经常一起购买的产品，这意味着它将根据自己的采购订单历史记录向客户推荐一组产品。 | [>试试吧](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
-| 场感知分解机 | 当拥有的特征不止 userId、productId 和评分（例如产品描述或产品价格）时，可使用此选项进行建议。 此方法也使用协作筛选法。 | [>试试吧](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
+| 一类矩阵分解 | 当只有 userId 和 movieId 时使用此选项。 这种推荐方式基于共同购买方案或经常一起购买的产品，这意味着它将根据自己的采购订单历史记录向客户推荐一组产品。 | [>试试看](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
+| 场感知分解机 | 当拥有的特征不止 userId、productId 和评分（例如产品描述或产品价格）时，可使用此选项进行建议。 此方法也使用协作筛选法。 | [>试试看](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
 
 ### <a name="new-user-scenario"></a>新用户方案
 协作筛选中的一个常见问题是“冷开始问题”，即有一个新用户，没有用于进行推理的任何旧数据。 该问题通常可通过要求新用户创建个人资料来解决，例如，对他们过去看过的影片评分。 虽然此方法会给用户带来一些负担，但它可为没有评分历史记录的新用户提供一些开始数据。

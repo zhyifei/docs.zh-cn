@@ -2,12 +2,12 @@
 title: 通过演练学习
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: fdcc2db1507d8ee2c6d1b07a79c531267fbb5714
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188996"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329305"
 ---
 # <a name="learning-by-walkthroughs"></a>通过演练学习
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档提供了一些演练。 本主题介绍一些一般性的演练问题（包括疑难解答），并提供指向用于了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的一些入门级演练的链接。  
@@ -53,13 +53,13 @@ ms.locfileid: "59188996"
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>验证或更改数据库登录名  
   
-1.  在 Windows 上**启动**菜单，依次指向**所有程序**， **Microsoft SQL Server 2005**，指向**配置工具**，然后单击**SQL Server 配置管理器**。  
+1. 在 Windows 上**启动**菜单，依次指向**所有程序**， **Microsoft SQL Server 2005**，指向**配置工具**，然后单击**SQL Server 配置管理器**。  
   
-2.  在左窗格中**SQL Server 配置管理器**，单击**SQL Server 2005 Services**。  
+2. 在左窗格中**SQL Server 配置管理器**，单击**SQL Server 2005 Services**。  
   
-3.  在右窗格中，右键单击**SQL Server (SQLEXPRESS)**，然后单击**属性**。  
+3. 在右窗格中，右键单击**SQL Server (SQLEXPRESS)**，然后单击**属性**。  
   
-4.  单击**Log On**选项卡并验证您尝试登录到服务器的方式。  
+4. 单击**Log On**选项卡并验证您尝试登录到服务器的方式。  
   
      在大多数情况下，**本地系统**工作原理。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "59188996"
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>启用 Named Pipes 协议  
   
-1.  在左窗格中**SQL Server 配置管理器**，展开**SQL Server 2005 网络配置**，然后单击**SQLEXPRESS 的协议**。  
+1. 在左窗格中**SQL Server 配置管理器**，展开**SQL Server 2005 网络配置**，然后单击**SQLEXPRESS 的协议**。  
   
-2.  在右窗格中，请确保**Named Pipes**协议处于启用状态。 如果不存在，请右击**Name Pipes** ，然后单击**启用**。  
+2. 在右窗格中，请确保**Named Pipes**协议处于启用状态。 如果不存在，请右击**Name Pipes** ，然后单击**启用**。  
   
      您将需要停止此服务，再重新启动它。 请按下一部分中的步骤操作。  
   
@@ -81,11 +81,11 @@ ms.locfileid: "59188996"
   
 ##### <a name="to-stop-and-restart-the-service"></a>停止并重新启动服务  
   
-1.  在左窗格中**SQL Server 配置管理器**，单击**SQL Server 2005 Services**。  
+1. 在左窗格中**SQL Server 配置管理器**，单击**SQL Server 2005 Services**。  
   
-2.  在右窗格中，右键单击**SQL Server (SQLEXPRESS)**，然后单击**停止**。  
+2. 在右窗格中，右键单击**SQL Server (SQLEXPRESS)**，然后单击**停止**。  
   
-3.  右键单击**SQL Server (SQLEXPRESS)**，然后单击**重新启动**。  
+3. 右键单击**SQL Server (SQLEXPRESS)**，然后单击**重新启动**。  
   
 ## <a name="see-also"></a>请参阅
 

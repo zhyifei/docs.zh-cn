@@ -12,12 +12,12 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: 12b8354890f0ba613b35615dc5cf3a5b3555e7ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1a857aade86d2366bb68ce14d716b3ce532ecb05
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328408"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>如何：设置 Windows 窗体 TreeView 控件的图标
 Windows 窗体<xref:System.Windows.Forms.TreeView>控件可以显示每个节点旁的图标。 图标位于即时左侧的节点文本。 若要显示这些图标，则必须将关联的树视图<xref:System.Windows.Forms.ImageList>控件。 有关图像列表的详细信息，请参阅[ImageList 组件](imagelist-component-windows-forms.md)和[如何：添加或删除图像与 Windows 窗体 ImageList 组件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
@@ -27,7 +27,7 @@ Windows 窗体<xref:System.Windows.Forms.TreeView>控件可以显示每个节点
   
 ### <a name="to-display-images-in-a-tree-view"></a>在树视图中显示图像  
   
-1.  设置<xref:System.Windows.Forms.TreeView>控件的<xref:System.Windows.Forms.TreeView.ImageList%2A>属性设置为现有<xref:System.Windows.Forms.ImageList>你想要使用的控件。  
+1. 设置<xref:System.Windows.Forms.TreeView>控件的<xref:System.Windows.Forms.TreeView.ImageList%2A>属性设置为现有<xref:System.Windows.Forms.ImageList>你想要使用的控件。  
   
      可以在属性窗口中，使用在设计器或在代码中设置这些属性。  
   
@@ -43,7 +43,7 @@ Windows 窗体<xref:System.Windows.Forms.TreeView>控件可以显示每个节点
     treeView1->ImageList = imageList1;  
     ```  
   
-2.  将节点设置<xref:System.Windows.Forms.TreeNode.ImageIndex%2A>和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>属性。 <xref:System.Windows.Forms.TreeNode.ImageIndex%2A>属性确定节点的正常和展开状态，显示的图像和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>属性确定显示节点的所选状态的图像。  
+2. 将节点设置<xref:System.Windows.Forms.TreeNode.ImageIndex%2A>和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>属性。 <xref:System.Windows.Forms.TreeNode.ImageIndex%2A>属性确定节点的正常和展开状态，显示的图像和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>属性确定显示节点的所选状态的图像。  
   
      在代码中，或在树节点编辑器中，可以设置这些属性。 若要打开树节点编辑器中，单击省略号按钮 ( ![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.TreeView.Nodes%2A>属性窗口上的属性。  
   

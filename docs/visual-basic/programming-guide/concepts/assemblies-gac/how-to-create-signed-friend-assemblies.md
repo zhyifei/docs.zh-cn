@@ -2,21 +2,21 @@
 title: 如何：创建签名的友元程序集 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 28cbd0c538441978464033df896d69f80a8396a6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836735"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324664"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>如何：创建签名的友元程序集 (Visual Basic)
 本示例演示如何将友元程序集和具有强名称的程序集一起使用。 这两种程序集必须都使用强名称。 尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>创建签名的程序集和友元程序集  
   
-1.  打开命令提示。  
+1. 打开命令提示。  
   
-2.  使用强名称工具，通过以下命令序列生成 keyfile 并显示其公钥。 有关详细信息，请参阅[Sn.exe （强名称工具）](../../../../framework/tools/sn-exe-strong-name-tool.md))。  
+2. 使用强名称工具，通过以下命令序列生成 keyfile 并显示其公钥。 有关详细信息，请参阅[Sn.exe （强名称工具）](../../../../framework/tools/sn-exe-strong-name-tool.md))。  
   
     1.  生成此示例的强名称密钥，并将其存储在 FriendAssemblies.snk 文件中：  
   
@@ -30,7 +30,7 @@ ms.locfileid: "58836735"
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  创建一个名为 Visual Basic 文件`friend_signed_A`，其中包含以下代码。 该代码使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性将 friend_signed_B 声明为友元程序集。  
+3. 创建一个名为 Visual Basic 文件`friend_signed_A`，其中包含以下代码。 该代码使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性将 friend_signed_B 声明为友元程序集。  
   
      强名称工具在每次运行时生成新的公钥。 因此，必须将以下代码中的公钥替换为刚生成的公钥，如以下示例所示。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "58836735"
     End Class  
     ```  
   
-4.  使用以下命令编译 friend_signed_A 并为其签名。  
+4. 使用以下命令编译 friend_signed_A 并为其签名。  
   
     ```console  
     Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
-5.  创建名为的 Visual Basic 文件`friend_signed_B`，并包含以下代码。 由于 friend_signed_A 将 friend_signed_B 指定为友元程序集，因此 friend_signed_B 中的代码可以访问 friend_signed_A 中的 `Friend` 类型和成员。 文件包含以下代码。  
+5. 创建名为的 Visual Basic 文件`friend_signed_B`，并包含以下代码。 由于 friend_signed_A 将 friend_signed_B 指定为友元程序集，因此 friend_signed_B 中的代码可以访问 friend_signed_A 中的 `Friend` 类型和成员。 文件包含以下代码。  
   
     ```vb  
     ' friend_signed_B.vb  
@@ -69,7 +69,7 @@ ms.locfileid: "58836735"
     End Module  
     ```  
   
-6.  使用以下命令编译 friend_signed_B 并为其签名。  
+6. 使用以下命令编译 friend_signed_B 并为其签名。  
   
     ```console  
     vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
@@ -77,7 +77,7 @@ ms.locfileid: "58836735"
   
      编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。 通过使用可以显式设置程序集`-out`编译器选项。 有关详细信息，请参阅[-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)。  
   
-7.  运行 friend_signed_B.exe 文件。  
+7. 运行 friend_signed_B.exe 文件。  
   
      该程序显示字符串"Class1.Test"。  
   

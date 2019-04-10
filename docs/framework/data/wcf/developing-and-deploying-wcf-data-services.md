@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 826adbde9129a51f67636d51bd7714335a840525
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: a3eaea7218b3226fde43aa76bbafe602fc198947
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093081"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329318"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>开发和部署 WCF 数据服务
 
@@ -22,15 +22,15 @@ ms.locfileid: "56093081"
 
 当使用 WCF 数据服务来创建数据服务，支持[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]，必须在开发过程中执行以下基本任务：
 
-1.  **定义数据模型**
+1. **定义数据模型**
 
      WCF 数据服务支持多种数据服务提供程序使您可以定义基于各种数据源，从关系数据库到后期绑定数据类型中的数据的数据模型。 有关详细信息，请参阅[数据服务提供商](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。
 
-2.  **创建数据服务**
+2. **创建数据服务**
 
      大多数基本数据服务公开一个从 <xref:System.Data.Services.DataService%601> 类继承的类和一个作为实体容器的命名空间限定名称的 `T` 类型。 有关详细信息，请参阅 [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)的信息。
 
-3.  **配置数据服务**
+3. **配置数据服务**
 
      默认情况下，WCF 数据服务禁用对由实体容器公开的资源的访问。 <xref:System.Data.Services.DataServiceConfiguration>接口，您可以配置对资源的访问和服务操作，指定受支持的版本的 OData，并定义其他服务范围的行为，例如批处理行为或最大可返回的实体数在单个响应源中。 有关详细信息，请参阅[数据服务配置](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)。
 
@@ -40,14 +40,14 @@ ms.locfileid: "56093081"
 
 形式的 WCF 数据服务的开发时[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序或[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]网站上使用 Visual Studio 2015，您可以在其上运行数据服务在开发过程中的 Web 服务器的选择。 以下 Web 服务器将与 Visual Studio 以使其更易于测试和调试你的本地计算机上的数据服务集成。
 
-1.  **本地 IIS 服务器**
+1. **本地 IIS 服务器**
 
      创建作为在 Internet Information Services (IIS) 上运行的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序或 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 网站的数据服务时，建议使用 IIS 在本地计算机上开发和测试数据服务。 在 IIS 上运行数据服务更便于在调试过程中跟踪 HTTP 请求。 这还允许预先确定 IIS 访问数据服务所需的文件、数据库和其他资源所必须具备的权限。 若要在 IIS 上运行您的数据服务，你必须确保 IIS 和 Windows Communication Foundation (WCF) 是否安装且配置正确，并在文件系统和数据库中授予 IIS 帐户的访问权限。 有关详细信息，请参阅[如何：开发在 IIS 上运行的 WCF 数据服务](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。
 
     > [!NOTE]
     > 必须使用管理员权限才能启用开发环境，以配置本地 IIS 服务器来运行 Visual Studio。
 
-2.  **Visual Studio 开发服务器**
+2. **Visual Studio 开发服务器**
 
      Visual Studio 包括一个内置的 Web 服务器，Visual Studio 开发服务器，这是默认的 Web 服务器为[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]项目。 该 Web 服务器设计为在开发过程中在本地计算机上运行 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 项目。 [WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)演示如何创建运行在 Visual Studio 开发服务器中的数据服务。
 
@@ -68,7 +68,7 @@ ms.locfileid: "56093081"
     > [!TIP]
     > 即使 Visual Studio 开发服务器可用于在开发过程中测试你的数据服务，应部署到运行 IIS 的 Web 服务器之后再次对其进行测试。
 
-3.  **Microsoft Azure 开发环境**
+3. **Microsoft Azure 开发环境**
 
      Windows Azure Tools for Visual Studio 包含一组集成的工具，用于开发 Visual Studio 中的 Windows Azure 服务。 使用这些工具，可以开发可部署到 Microsoft Azure 的数据服务，并且可以在部署之前在本地计算机上测试数据服务。 使用 Visual Studio 开发 Windows Azure 平台运行的数据服务时，请使用这些工具。 您可以下载 Windows Azure Tools 从 Visual Studio [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848)。 有关开发 Windows Azure 运行的数据服务的详细信息，请参阅博文[部署 OData 服务在 Windows Azure 中](https://go.microsoft.com/fwlink/?LinkId=201847)。
 
@@ -128,5 +128,5 @@ WCF 数据服务在选择承载数据服务的过程方面很灵活。 Visual St
 ## <a name="see-also"></a>请参阅
 
 - [承载数据服务](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
-- [确保 WCF Data Services 的安全](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
-- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [WCF 数据服务的安全](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
+- [定义 WCF 数据服务](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

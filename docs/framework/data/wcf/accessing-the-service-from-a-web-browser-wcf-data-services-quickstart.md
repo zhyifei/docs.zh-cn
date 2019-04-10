@@ -2,12 +2,12 @@
 title: 从 Web 浏览器访问服务（WCF 数据服务快速入门）
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: 15a74e47774c532e75eca8a60a1af3a3e4f03f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591638"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330319"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>从 Web 浏览器访问服务（WCF 数据服务快速入门）
 
@@ -18,16 +18,16 @@ ms.locfileid: "54591638"
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>使用 Internet Explorer 请求默认服务文档
 
-1.  在 Internet Explorer 中，从**工具**菜单中，选择**Internet 选项**，单击**内容**选项卡上，单击**设置**，并清除**打开源阅读视图**。
+1. 在 Internet Explorer 中，从**工具**菜单中，选择**Internet 选项**，单击**内容**选项卡上，单击**设置**，并清除**打开源阅读视图**。
 
      这可确保禁用源阅读。 如果未禁用此功能，则 Web 浏览器会将返回的 AtomPub 编码文档视为 XML 源，而不是显示原始 XML 数据。
 
     > [!NOTE]
     > 当浏览器无法将该源作为原始 XML 数据显示时，你应该仍能够以页面源代码的形式查看该源。
 
-2.  在 Visual Studio 中，按**F5**键启动调试应用程序。
+2. 在 Visual Studio 中，按**F5**键启动调试应用程序。
 
-3.  在本地计算机上打开 Web 浏览器。 在地址栏中，输入以下 URI：
+3. 在本地计算机上打开 Web 浏览器。 在地址栏中，输入以下 URI：
 
     ```
     http://localhost:12345/northwind.svc
@@ -37,7 +37,7 @@ ms.locfileid: "54591638"
 
 ## <a name="to-access-entity-set-resources-from-a-web-browser"></a>从 Web 浏览器访问实体集资源
 
-1.  在 Web 浏览器的地址栏中，输入以下 URI：
+1. 在 Web 浏览器的地址栏中，输入以下 URI：
 
     ```
     http://localhost:12345/northwind.svc/Customers
@@ -45,7 +45,7 @@ ms.locfileid: "54591638"
 
      这会返回 Northwind 示例数据库中所有客户的集。
 
-2.  在 Web 浏览器的地址栏中，输入以下 URI：
+2. 在 Web 浏览器的地址栏中，输入以下 URI：
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')
@@ -53,7 +53,7 @@ ms.locfileid: "54591638"
 
      这会返回特定客户 `ALFKI` 的实体实例。
 
-3.  在 Web 浏览器的地址栏中，输入以下 URI：
+3. 在 Web 浏览器的地址栏中，输入以下 URI：
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
@@ -61,7 +61,7 @@ ms.locfileid: "54591638"
 
      这会遍历客户与订单之间的关系，以返回特定客户 `ALFKI` 的所有订单的集。
 
-4.  在 Web 浏览器的地址栏中，输入以下 URI：
+4. 在 Web 浏览器的地址栏中，输入以下 URI：
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643

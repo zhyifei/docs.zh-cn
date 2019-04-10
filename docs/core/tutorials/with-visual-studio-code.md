@@ -4,12 +4,12 @@ description: 了解如何使用 Visual Studio Code 创建和调试首个 C# .NET
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8df26651a7b35e5b6c9bdcb54d09c97525e12426
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788331"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890548"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -91,14 +91,14 @@ ms.locfileid: "57788331"
 ## <a name="add-a-class"></a>添加类
 
 1. 若要添加一个新类，请右键单击 VSCode Explorer 并选择“新文件”。 此操作会将新文件添加到在 VSCode 中打开的文件夹中。
-2. 将文件命名为 `Class1.cs`。 必须在末尾使用 `.cs` 扩展名保存它，以便将其识别为 csharp 文件。
+2. 将文件命名为 `MyClass.cs`。 必须在末尾使用 `.cs` 扩展名保存它，以便将其识别为 csharp 文件。
 3. 添加下面的代码，以创建第一个类。 确保包括正确的命名空间，以便可以从 `Program.cs` 文件引用它。
 ``` csharp
 using System;
 
 namespace HelloWorld
 {
-    public class Class1
+    public class MyClass
     {
         public string ReturnMessage()
         {
@@ -119,7 +119,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Class1 c1 = new Class1();
+            MyClass c1 = new MyClass();
             Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
         }
     }

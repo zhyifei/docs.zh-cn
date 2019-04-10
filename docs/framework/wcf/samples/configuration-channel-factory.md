@@ -2,12 +2,12 @@
 title: 配置通道工厂
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: ec48743deddd52faed31b4a1a0af365909593414
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5bee4c7cc2c2e64c6e0d8d0ec2634f9500cd9d51
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187148"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328070"
 ---
 # <a name="configuration-channel-factory"></a>配置通道工厂
 此示例介绍 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 的用法。 <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>允许 WCF 客户端配置的集中管理。 这可能在应用程序域加载时间之后选择或更改配置的方案中也非常有用。
@@ -33,15 +33,15 @@ ICalculatorChannel client1 = factory1.CreateChannel();
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1.  使用管理员特权打开 Visual Studio 2012。
+1. 使用管理员特权打开 Visual Studio 2012。
 
-2.  右击击 ConfigurationChannelFactory 解决方案 （2 个项目），然后选择**属性**。
+2. 右击击 ConfigurationChannelFactory 解决方案 （2 个项目），然后选择**属性**。
 
-3.  在中**常见属性**，选择**启动项目**，然后单击**多个启动项目**。
+3. 在中**常见属性**，选择**启动项目**，然后单击**多个启动项目**。
 
-4.  移动**服务**与项目到列表的开头**操作 '开始'**，然后将移动**客户端**项目后**服务**项目中，还具有**操作 '开始'**，因此**客户端**项目后，执行**服务**项目。
+4. 移动**服务**与项目到列表的开头**操作 '开始'**，然后将移动**客户端**项目后**服务**项目中，还具有**操作 '开始'**，因此**客户端**项目后，执行**服务**项目。
 
-5.  单击**确定**，然后按 F5 （或 CTRL + F5） 运行示例。
+5. 单击**确定**，然后按 F5 （或 CTRL + F5） 运行示例。
 
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

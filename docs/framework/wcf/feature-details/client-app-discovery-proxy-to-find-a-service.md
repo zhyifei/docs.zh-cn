@@ -2,32 +2,32 @@
 title: 如何：实现使用发现代理查找服务的客户端应用程序
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 42dc2e8269e36161904f69880712924d4789333e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115968"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320988"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>如何：实现使用发现代理查找服务的客户端应用程序
 本主题是讨论如何实现发现代理的三个主题中的第三个。 在上一主题中，[如何：实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)，实现向发现代理注册自身的 WCF 服务。 本主题中创建使用发现代理查找 WCF 服务的 WCF 客户端。  
   
 ### <a name="implement-the-client"></a>实现客户端  
   
-1.  将一个新控制台应用程序项目添加到名为 `DiscoveryProxyExample` 的 `Client` 解决方案。  
+1. 将一个新控制台应用程序项目添加到名为 `DiscoveryProxyExample` 的 `Client` 解决方案。  
   
-2.  添加对下列程序集的引用：  
+2. 添加对下列程序集的引用：  
   
     1.  System.ServiceModel  
   
     2.  System.ServiceModel.Discovery  
   
-3.  将位于此主题底部的 GeneratedClient.cs 添加到该项目。  
+3. 将位于此主题底部的 GeneratedClient.cs 添加到该项目。  
   
     > [!NOTE]
     >  此文件通常是使用 Svcutil.exe 等工具生成的。 此主题中提供的该文件是为了将任务简化。  
   
-4.  打开 Program.cs 文件并添加以下方法。 此方法使用一个终结点地址，并使用该地址来初始化服务客户端（代理）。  
+4. 打开 Program.cs 文件并添加以下方法。 此方法使用一个终结点地址，并使用该地址来初始化服务客户端（代理）。  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -62,7 +62,7 @@ ms.locfileid: "59115968"
     }  
     ```  
   
-5.  将以下代码添加到 `Main` 方法中。  
+5. 将以下代码添加到 `Main` 方法中。  
   
     ```csharp  
     public static void Main()  

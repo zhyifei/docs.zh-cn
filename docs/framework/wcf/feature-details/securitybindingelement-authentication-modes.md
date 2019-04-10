@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: 9c8b2cb0417db6481ce0171d85b225ef3a784c1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2aed766e6b2da7ebaf7b5b863375ee95b99eb159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119751"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330332"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 身份验证模式
 Windows Communication Foundation (WCF) 提供了多个模式的客户端和服务互相进行身份验证。 你可以通过使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类上的静态方法或通过配置为这些身份验证模式创建安全绑定元素。 本主题简要说明 18 种身份验证模式。  
@@ -22,13 +22,13 @@ Windows Communication Foundation (WCF) 提供了多个模式的客户端和服�
   
 #### <a name="to-set-the-authentication-mode-in-configuration"></a>在配置中设置身份验证模式  
   
-1.  向[\<绑定 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素中，添加[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+1. 向[\<绑定 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素中，添加[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
-2.  作为子元素添加[\<绑定 >](../../../../docs/framework/misc/binding.md)元素`<customBinding>`元素。  
+2. 作为子元素添加[\<绑定 >](../../../../docs/framework/misc/binding.md)元素`<customBinding>`元素。  
   
-3.  向 `<security>` 元素中添加一个 `<binding>` 元素。  
+3. 向 `<security>` 元素中添加一个 `<binding>` 元素。  
   
-4.  将 `authenticationMode` 属性设置为下述值之一。 例如，下面的代码将模式设置为 `AnonymousForCertificate`。  
+4. 将 `authenticationMode` 属性设置为下述值之一。 例如，下面的代码将模式设置为 `AnonymousForCertificate`。  
   
     ```xml  
     <bindings>  
@@ -42,14 +42,14 @@ Windows Communication Foundation (WCF) 提供了多个模式的客户端和服�
   
 #### <a name="to-set-the-mode-programmatically"></a>以编程方式设置模式  
   
-1.  确定返回类型，可以是以下类型之一：<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>、<xref:System.ServiceModel.Channels.TransportSecurityBindingElement>、<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
+1. 确定返回类型，可以是以下类型之一：<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>、<xref:System.ServiceModel.Channels.TransportSecurityBindingElement>、<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
   
-2.  调用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类的适当静态方法。 例如，下面的代码调用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A> 方法。  
+2. 调用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类的适当静态方法。 例如，下面的代码调用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A> 方法。  
   
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  使用绑定元素创建自定义绑定。 有关详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+3. 使用绑定元素创建自定义绑定。 有关详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="mode-descriptions"></a>模式说明  
   

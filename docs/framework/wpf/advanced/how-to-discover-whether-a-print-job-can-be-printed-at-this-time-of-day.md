@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099851"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326861"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>如何：确定此时是否可以打印一项打印作业
 打印队列并不总是可用的一天 24 小时。 它们具有开始和结束时间属性可以设置以使其在一天中的某些时间不可用。 例如，此功能可用于保留专供特定部门的下午 5 点后的打印机。 该部门必须使用其他队列服务比其他部门的打印机。 将设置为其他部门队列以在下午 5 点后将不可用，而队列支持的部门可能被设置为始终可用。  
@@ -29,9 +29,9 @@ ms.locfileid: "59099851"
   
  有两个主要步骤为此类型的函数，如下所示。  
   
-1.  读取<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>并<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>的属性<xref:System.Printing.PrintQueue>以确定它们之间是否为当前时间。  
+1. 读取<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>并<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>的属性<xref:System.Printing.PrintQueue>以确定它们之间是否为当前时间。  
   
-2.  读取<xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A>并<xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A>的属性<xref:System.Printing.PrintSystemJobInfo>以确定它们之间是否为当前时间。  
+2. 读取<xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A>并<xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A>的属性<xref:System.Printing.PrintSystemJobInfo>以确定它们之间是否为当前时间。  
   
  但问题变复杂了这些属性不在于<xref:System.DateTime>对象。 而是<xref:System.Int32>表示一天的时间为午夜过后的分钟数的对象。 此外，这不是午夜当前所在的时区，但午夜 UTC （协调世界时）。  
   

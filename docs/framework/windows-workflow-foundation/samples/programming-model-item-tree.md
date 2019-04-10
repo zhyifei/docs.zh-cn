@@ -2,12 +2,12 @@
 title: 编程模型项树
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f3def07ecbc60362b2a8c1d38689dc686cd5bbd5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086463"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321128"
 ---
 # <a name="programming-model-item-tree"></a>编程模型项树
 此示例演示如何导航<xref:System.Activities.Presentation.Model.ModelItem>树使用的 Windows Presentation Foundation (WPF) 树视图中的声明性数据绑定。
@@ -29,15 +29,15 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1.  在 Visual Studio 2010 中打开 ProgrammingModelItemTree.sln 解决方案。
+1. 在 Visual Studio 2010 中打开 ProgrammingModelItemTree.sln 解决方案。
 
-2.  通过选择生成解决方案**生成解决方案**从**生成**菜单。
+2. 通过选择生成解决方案**生成解决方案**从**生成**菜单。
 
-3.  按 F5 运行该应用程序。 这将显示 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 格式。
+3. 按 F5 运行该应用程序。 这将显示 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 格式。
 
-4.  单击**加载 WF**按钮以加载<xref:System.Activities.Presentation.Model.ModelItem>并将其绑定到树视图。
+4. 单击**加载 WF**按钮以加载<xref:System.Activities.Presentation.Model.ModelItem>并将其绑定到树视图。
 
-5.  单击**更改模型项树**按钮执行前面的代码，将项添加到树并设置一个属性。
+5. 单击**更改模型项树**按钮执行前面的代码，将项添加到树并设置一个属性。
 
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

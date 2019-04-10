@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: fead6e28949726bef46fe2be46e976fb47c3e9a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b41ded25bd4eb704c6f0d67c8da1c0e6643cac5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125653"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323715"
 ---
 # <a name="custom-rendering-ink"></a>自定义呈现墨迹
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>笔划的属性，可指定笔划，其大小、 颜色和形状，如的外观，但可能有些时候你想要自定义外观更<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>允许。 建议通过使用喷笔、油画和多种其他效果呈现外观，从而自定义墨迹的外观。 Windows Presentation Foundation (WPF) 允许您为自定义通过实现自定义呈现墨迹<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>和<xref:System.Windows.Ink.Stroke>对象。  
@@ -37,11 +37,11 @@ ms.locfileid: "59125653"
   
  动态呈现墨迹时需要实现三个类。  
   
-1.  **DynamicRenderer**:实现从 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 派生的类。 此类是一个专用<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>的形式对其绘制呈现笔划。 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>上执行呈现一个单独的线程，因此墨迹书写表面显示为收集手写内容，即使应用程序用户界面 (UI) 线程被阻止。 有关线程模型的详细信息，请参阅[墨迹线程模型](the-ink-threading-model.md)。 若要自定义动态呈现笔划，请重写<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A>方法。  
+1. **DynamicRenderer**:实现从 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 派生的类。 此类是一个专用<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>的形式对其绘制呈现笔划。 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>上执行呈现一个单独的线程，因此墨迹书写表面显示为收集手写内容，即使应用程序用户界面 (UI) 线程被阻止。 有关线程模型的详细信息，请参阅[墨迹线程模型](the-ink-threading-model.md)。 若要自定义动态呈现笔划，请重写<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A>方法。  
   
-2.  **笔划**:实现从 <xref:System.Windows.Ink.Stroke> 派生的类。 此类负责的静态呈现<xref:System.Windows.Input.StylusPoint>数据转换为后<xref:System.Windows.Ink.Stroke>对象。 重写<xref:System.Windows.Ink.Stroke.DrawCore%2A>方法，以确保静态呈现笔划的是与动态呈现一致。  
+2. **笔划**:实现从 <xref:System.Windows.Ink.Stroke> 派生的类。 此类负责的静态呈现<xref:System.Windows.Input.StylusPoint>数据转换为后<xref:System.Windows.Ink.Stroke>对象。 重写<xref:System.Windows.Ink.Stroke.DrawCore%2A>方法，以确保静态呈现笔划的是与动态呈现一致。  
   
-3.  **在 InkCanvas:** 实现从 <xref:System.Windows.Controls.InkCanvas> 派生的类。 分配的自定义<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>到<xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>属性。 重写<xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A>方法并添加到自定义笔划<xref:System.Windows.Controls.InkCanvas.Strokes%2A>属性。 这样可以确保墨迹外观一致。  
+3. **在 InkCanvas:** 实现从 <xref:System.Windows.Controls.InkCanvas> 派生的类。 分配的自定义<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>到<xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>属性。 重写<xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A>方法并添加到自定义笔划<xref:System.Windows.Controls.InkCanvas.Strokes%2A>属性。 这样可以确保墨迹外观一致。  
   
 <a name="ImplementingADynamicRenderer"></a>   
 ## <a name="implementing-a-dynamic-renderer"></a>实现动态呈现器  

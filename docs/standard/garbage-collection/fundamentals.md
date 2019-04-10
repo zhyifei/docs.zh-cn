@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712469"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826595"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基本知识
 <a name="top"></a> 在公共语言运行时 (CLR) 中，垃圾回收器用作自动内存管理器。 它提供如下优点：  
@@ -261,21 +261,19 @@ ms.locfileid: "57712469"
   
  后台垃圾回收可以消除并发垃圾回收所带来的分配限制，因为在后台垃圾回收期间，可发生暂时垃圾回收。 这意味着，后台垃圾回收可以移除暂时代中的死对象，而且还可以在第 1 代垃圾回收期间根据需要展开堆。  
   
- 下图显示对工作站上的独立专用线程执行的后台垃圾回收。  
+下图显示对工作站上的独立专用线程执行的后台垃圾回收：
   
- ![后台工作站垃圾回收](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
-后台工作站垃圾回收  
-  
+ ![显示后台工作站垃圾回收的图。](./media/fundamentals/background-workstation-garbage-collection.png)
+   
  [返回页首](#top)  
   
 <a name="background_server_garbage_collection"></a>   
 ## <a name="background-server-garbage-collection"></a>后台服务器垃圾回收  
  从 .NET Framework 4.5 开始，后台服务器垃圾回收是服务器垃圾回收的默认模式。 若要选择此模式，请在运行时配置架构中将 [\<gcServer> 元素](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)的 `enabled` 属性设置为 `true`。 此模式与后台工作站垃圾回收（如上一章节所描述）具有类似功能，但有一些不同之处。 后台工作区域垃圾回收使用一个专用的后台垃圾回收线程，而后台服务器垃圾回收使用多个线程，通常一个专用的线程用于一台逻辑处理器。 不同于工作站后台垃圾回收线程，这些线程不会超时。  
   
- 下图显示对服务器上的独立专用线程执行的后台垃圾回收。  
+ 下图显示对服务器上的独立专用线程执行的后台垃圾回收：  
   
- ![后台服务器垃圾回收](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
-后台服务器垃圾回收  
+ ![显示后台服务器垃圾回收的图。](./media/fundamentals/background-server-garbage-collection.png)  
   
 ## <a name="see-also"></a>请参阅
 

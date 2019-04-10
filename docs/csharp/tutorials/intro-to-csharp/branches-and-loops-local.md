@@ -3,12 +3,12 @@ title: 分支和循环 - C# 教程简介
 description: 在本教程的“分支和循环”中，将编写 C# 代码以研究支持条件分支和循环重复执行语句的语言语法。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677781"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920943"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>通过分支和循环语句了解条件逻辑
 
@@ -249,7 +249,7 @@ for(int index = 0; index < 10; index++)
 
 已完成“分支和循环”教程。
 
-你可继续在自己的开发环境中学习[字符串内插](interpolated-strings-local.md)教程。
+可以在自己的开发环境中继续学习[数组和集合](arrays-and-collections.md)教程。
 
 若要详细了解这些概念，请参阅下列主题：
 

@@ -2,12 +2,12 @@
 title: 排队消息处理疑难解答
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: b2193755beddd6c0d0eef4f95ca311b8e2b75b3c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463106"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322038"
 ---
 # <a name="troubleshooting-queued-messaging"></a>排队消息处理疑难解答
 本部分包含常见的问题和故障排除帮助使用 Windows Communication Foundation (WCF) 中的队列。  
@@ -96,9 +96,9 @@ ms.locfileid: "58463106"
   
  **答：** 最常见原因是权限。  
   
-1.  确保 `NetMsmqActivator` 进程正在运行，并为 `NetMsmqActivator` 进程的标识提供对此队列的读取和查找权限。  
+1. 确保 `NetMsmqActivator` 进程正在运行，并为 `NetMsmqActivator` 进程的标识提供对此队列的读取和查找权限。  
   
-2.  如果 `NetMsmqActivator` 正在监视远程计算机上的队列，请确保 `NetMsmqActivator` 不使用受限制的令牌运行。 若要使用不受限制的令牌运行 `NetMsmqActivator`，请执行以下操作：  
+2. 如果 `NetMsmqActivator` 正在监视远程计算机上的队列，请确保 `NetMsmqActivator` 不使用受限制的令牌运行。 若要使用不受限制的令牌运行 `NetMsmqActivator`，请执行以下操作：  
   
     ```  
     sc sidtype NetMsmqActivator unrestricted  
@@ -157,19 +157,19 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **答：** 使用证书模式，不能使用本地计算机证书存储。 必须使用证书管理单元将证书从计算机证书存储区复制到当前用户存储区。 若要打开证书管理单元，请执行以下操作：  
   
-1.  单击**启动**，选择**运行**，类型`mmc`，然后单击**确定**。  
+1. 单击**启动**，选择**运行**，类型`mmc`，然后单击**确定**。  
   
-2.  在中**Microsoft 管理控制台**，打开**文件**菜单，然后选择**添加/删除管理单元中**。  
+2. 在中**Microsoft 管理控制台**，打开**文件**菜单，然后选择**添加/删除管理单元中**。  
   
-3.  在中**添加/删除管理单元**对话框中，单击**添加**按钮。  
+3. 在中**添加/删除管理单元**对话框中，单击**添加**按钮。  
   
-4.  在中**添加独立管理单元**对话框中，选择证书，单击**添加**。  
+4. 在中**添加独立管理单元**对话框中，选择证书，单击**添加**。  
   
-5.  在中**证书**管理单元对话框中，选择**我的用户帐户，** 然后单击**完成**。  
+5. 在中**证书**管理单元对话框中，选择**我的用户帐户，** 然后单击**完成**。  
   
-6.  接下来，添加第二个证书管理单元中使用前面的步骤，但这次选择**计算机帐户**然后单击**下一步**。  
+6. 接下来，添加第二个证书管理单元中使用前面的步骤，但这次选择**计算机帐户**然后单击**下一步**。  
   
-7.  选择**本地计算机**然后单击**完成**。 现在，可以将证书从计算机证书存储区拖放到当前用户存储区。  
+7. 选择**本地计算机**然后单击**完成**。 现在，可以将证书从计算机证书存储区拖放到当前用户存储区。  
   
  **问：** 当我的服务读取从一个队列，另一台计算机在工作组模式下时，我收到"拒绝访问"异常。  
   

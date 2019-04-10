@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 0f48c90232c00f53007e7d2f8f08e2107406ecad
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840999"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320686"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>演练：声明和引发事件 (Visual Basic)
 本演练演示如何声明和引发事件的类名为`Widget`。 完成步骤后，你可能想要读取的配套主题，[演练：处理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)，其中说明了如何使用从事件`Widget`对象提供的应用程序中的状态信息。  
@@ -28,19 +28,19 @@ ms.locfileid: "58840999"
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>若要生成本主题的代码示例  
   
-1.  打开一个新的 Visual Basic Windows 应用程序项目，并创建名为的`Form1`。  
+1. 打开一个新的 Visual Basic Windows 应用程序项目，并创建名为的`Form1`。  
   
-2.  添加两个按钮和标签与`Form1`。  
+2. 添加两个按钮和标签与`Form1`。  
   
-3.  按下表所示命名对象。  
+3. 按下表所示命名对象。  
   
     |对象|属性|设置|  
     |------------|--------------|-------------|  
     |`Button1`|`Text`|启动任务|  
     |`Button2`|`Text`|取消|  
-    |`Label`|`(Name)`， `Text`|lblPercentDone, 0|  
+    |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
   
-4.  上**项目**菜单中，选择**添加类**若要添加一个名为类`Widget.vb`到项目。  
+4. 上**项目**菜单中，选择**添加类**若要添加一个名为类`Widget.vb`到项目。  
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>若要声明的小组件类的事件  
   
@@ -57,11 +57,11 @@ ms.locfileid: "58840999"
   
 #### <a name="to-raise-the-percentdone-event"></a>若要引发 PercentDone 事件  
   
-1.  以简化对访问`Timer`使用此类的属性添加`Imports`的类模块中，声明部分顶部的语句上方`Class Widget`语句。  
+1. 以简化对访问`Timer`使用此类的属性添加`Imports`的类模块中，声明部分顶部的语句上方`Class Widget`语句。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2.  将下面的代码添加到 `Widget` 类中:  
+2. 将下面的代码添加到 `Widget` 类中:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   

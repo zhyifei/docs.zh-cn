@@ -2,12 +2,12 @@
 title: 扩展保护策略
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 59a377a94978741f3f116bab819dff77d8b0fee4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785448"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328746"
 ---
 # <a name="extended-protection-policy"></a>扩展保护策略
 扩展保护是一种针对中间人 (MITM) 攻击提供保护的安全计划。 MITM 攻击是一种安全威胁，MITM 在该攻击中获取客户端凭据并将其转发给服务器。  
@@ -26,25 +26,25 @@ ms.locfileid: "43785448"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  安装 Internet 信息服务从**控制面板**，**添加/删除程序**， **Windows 功能**。  
+1. 安装 Internet 信息服务从**控制面板**，**添加/删除程序**， **Windows 功能**。  
   
-2.  安装**Windows 身份验证**中**Windows 功能**， **Internet 信息服务**，**万维网服务**， **安全**，并**Windows 身份验证**。  
+2. 安装**Windows 身份验证**中**Windows 功能**， **Internet 信息服务**，**万维网服务**， **安全**，并**Windows 身份验证**。  
   
-3.  安装**Windows Communication Foundation HTTP 激活**中**Windows 功能**， **Microsoft.NET Framework 3.5.1**，和**Windows 通信Foundation HTTP 激活**。  
+3. 安装**Windows Communication Foundation HTTP 激活**中**Windows 功能**， **Microsoft.NET Framework 3.5.1**，和**Windows 通信Foundation HTTP 激活**。  
   
-4.  本示例要求客户端与服务器建立一个安全通道，因此它要求存在服务器证书，此证书可从 Internet 信息服务 (IIS) 管理器进行安装。  
+4. 本示例要求客户端与服务器建立一个安全通道，因此它要求存在服务器证书，此证书可从 Internet 信息服务 (IIS) 管理器进行安装。  
   
     1.  打开 IIS 管理器。 打开**服务器证书**，后者在中显示**功能查看**选项卡上选择根节点 （计算机名称） 时。  
   
     2.  为了测试此示例，可以创建一个自签名证书。 如果不希望 Internet Explorer 提示证书不安全，可将证书安装到受信任的证书根颁发机构存储区中。  
   
-5.  打开**操作**默认网站上的窗格。 单击**编辑站点**，**绑定**。 如果 HTTPS 尚不存在，请将其作为类型添加，使用端口号 443。 分配在上一步中创建的 SSL 证书。  
+5. 打开**操作**默认网站上的窗格。 单击**编辑站点**，**绑定**。 如果 HTTPS 尚不存在，请将其作为类型添加，使用端口号 443。 分配在上一步中创建的 SSL 证书。  
   
-6.  生成服务。 这会在 IIS 中创建一个虚拟目录，并根据需要为要进行 Web 承载的服务复制 .dll、.svc 和 .config 文件。  
+6. 生成服务。 这会在 IIS 中创建一个虚拟目录，并根据需要为要进行 Web 承载的服务复制 .dll、.svc 和 .config 文件。  
   
-7.  打开 IIS 管理器。 右键单击虚拟目录 (**ExtendedProtection**)，其中上一步中创建。 选择**转换为应用程序**。  
+7. 打开 IIS 管理器。 右键单击虚拟目录 (**ExtendedProtection**)，其中上一步中创建。 选择**转换为应用程序**。  
   
-8.  打开**身份验证**模块在 IIS 管理器用于此虚拟目录和启用**Windows 身份验证**。  
+8. 打开**身份验证**模块在 IIS 管理器用于此虚拟目录和启用**Windows 身份验证**。  
   
 9. 打开**高级设置**下**Windows 身份验证**为此虚拟目录并将其设置为**所需**。  
   

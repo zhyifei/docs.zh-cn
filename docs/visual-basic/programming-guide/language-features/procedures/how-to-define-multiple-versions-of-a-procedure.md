@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: c31c9ad05af04aec5dc41790aea530c62611f500
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fc7a8e18394b904f0c22a80f71dee091d4f786ab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841160"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324027"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>如何：定义多个版本的过程 (Visual Basic)
 你可以通过多个版本中定义的过程*重载*它为每个版本使用相同名称但不同的参数列表。 重载的目的是定义一个过程的几个密切相关的版本而无需将它们按名称区分开。  
@@ -22,13 +22,13 @@ ms.locfileid: "58841160"
   
 ### <a name="to-define-multiple-versions-of-a-procedure"></a>若要定义一个过程的多个版本  
   
-1.  编写`Sub`或`Function`你想要定义的过程的每个版本的声明语句。 在每个声明中使用相同的过程名称。  
+1. 编写`Sub`或`Function`你想要定义的过程的每个版本的声明语句。 在每个声明中使用相同的过程名称。  
   
-2.  前加上`Sub`或`Function`具有每个声明中的关键字[重载](../../../../visual-basic/language-reference/modifiers/overloads.md)关键字。 可以选择性地省略`Overloads`在声明中，但如果您将其包含在任何声明，您必须将其包括在每个声明。  
+2. 前加上`Sub`或`Function`具有每个声明中的关键字[重载](../../../../visual-basic/language-reference/modifiers/overloads.md)关键字。 可以选择性地省略`Overloads`在声明中，但如果您将其包含在任何声明，您必须将其包括在每个声明。  
   
-3.  以下每个声明语句中，编写过程代码以处理其中调用代码提供该版本的参数列表匹配的实参的特定情况。 无需测试提供的参数调用的代码具有控制权。 Visual Basic 将控制传递给您的过程的匹配版本。  
+3. 以下每个声明语句中，编写过程代码以处理其中调用代码提供该版本的参数列表匹配的实参的特定情况。 无需测试提供的参数调用的代码具有控制权。 Visual Basic 将控制传递给您的过程的匹配版本。  
   
-4.  终止与过程的每个版本`End Sub`或`End Function`语句作为相应。  
+4. 终止与过程的每个版本`End Sub`或`End Function`语句作为相应。  
   
 ## <a name="example"></a>示例  
  下面的示例定义`Sub`过程发送针对客户的帐户余额的事务。 它使用`Overloads`关键字来定义两个版本的过程中，一个接受由名称和其他客户的帐号。  
@@ -45,9 +45,9 @@ ms.locfileid: "58841160"
 ## <a name="see-also"></a>请参阅
 
 - [过程](./index.md)
-- [过程参数和自变量](./procedure-parameters-and-arguments.md)
+- [过程形参和实参](./procedure-parameters-and-arguments.md)
 - [过程疑难解答](./troubleshooting-procedures.md)
 - [如何：重载带有可选参数的过程](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [如何：重载的参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [如何：重载参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [重载过程注意事项](./considerations-in-overloading-procedures.md)
 - [重载决策](./overload-resolution.md)

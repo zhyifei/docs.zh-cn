@@ -2,12 +2,12 @@
 title: 基本示例
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 22d5428da57b2fc8f9b97d4553b86ac2a918f0e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1ceee6dd11b59ab9b43797ca8b1fd80c232fc8ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083007"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327966"
 ---
 # <a name="basic-sample"></a>基本示例
 此示例演示如何使服务可发现以及如何搜索和调用可发现服务。 此示例由两个项目组成：服务项目和客户端项目。
@@ -82,15 +82,15 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
-1.  此示例使用 HTTP 终结点，若要运行此示例，必须添加正确的 URL ACL。 有关详细信息，请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)。 使用提升的特权执行下面的命令应添加相应的 ACL。 如果该命令无效，则可能需要使用你的域和用户名替换以下自变量。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 此示例使用 HTTP 终结点，若要运行此示例，必须添加正确的 URL ACL。 有关详细信息，请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)。 使用提升的特权执行下面的命令应添加相应的 ACL。 如果该命令无效，则可能需要使用你的域和用户名替换以下自变量。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  使用 Visual Studio 2012，打开 Basic.sln 并生成该示例。  
+2. 使用 Visual Studio 2012，打开 Basic.sln 并生成该示例。  
   
-3.  运行 service.exe 应用程序。  
+3. 运行 service.exe 应用程序。  
   
-4.  服务启动后，运行 client.exe。  
+4. 服务启动后，运行 client.exe。  
   
-5.  观察客户端是否能够在不知道服务地址的情况下找到服务。  
+5. 观察客户端是否能够在不知道服务地址的情况下找到服务。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

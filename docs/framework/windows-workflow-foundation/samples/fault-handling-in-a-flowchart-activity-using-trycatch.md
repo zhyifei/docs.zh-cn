@@ -2,12 +2,12 @@
 title: 使用 TryCatch 在 Flowchart 活动中进行错误处理
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: e515248594088f9888c3488d83d8079ce5d13089
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81bfeb911658a6f363a9f0f95ecc7db68a02dbe2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119803"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331255"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>使用 TryCatch 在 Flowchart 活动中进行错误处理
 此示例演示如何在复杂控制流活动中使用 <xref:System.Activities.Statements.TryCatch> 活动。
@@ -31,11 +31,11 @@ ms.locfileid: "59119803"
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1.  使用 Visual Studio 2010 打开 FlowchartWithFaultHandling.sln 解决方案文件。
+1. 使用 Visual Studio 2010 打开 FlowchartWithFaultHandling.sln 解决方案文件。
 
-2.  要生成解决方案，按 Ctrl+Shift+B。
+2. 要生成解决方案，按 Ctrl+Shift+B。
 
-3.  若要运行解决方案，请按 F5。
+3. 若要运行解决方案，请按 F5。
 
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

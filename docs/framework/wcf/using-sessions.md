@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095862"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320920"
 ---
 # <a name="using-sessions"></a>使用会话
 在 Windows Communication Foundation (WCF) 应用程序中*会话*将一组消息关联起来形成对话。 WCF 会话是中提供的会话对象不同[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]应用程序，支持不同的行为，并且以不同的方式进行控制。 本主题介绍在 WCF 中的会话启用的功能的应用程序以及如何使用它们。  
@@ -53,9 +53,9 @@ ms.locfileid: "59095862"
   
  在 WCF 服务接受客户端会话后，默认情况下启用以下功能：  
   
-1.  WCF 客户端对象之间的所有调用都由同一个服务实例都处理。  
+1. WCF 客户端对象之间的所有调用都由同一个服务实例都处理。  
   
-2.  不同的基于会话的绑定还会提供其他功能。  
+2. 不同的基于会话的绑定还会提供其他功能。  
   
 ## <a name="system-provided-session-types"></a>系统提供的会话类型  
  基于会话的绑定支持服务实例与特定会话的默认关联。 但是，除了启用前面介绍的基于会话的实例化控制之外，不同的基于会话的绑定还支持不同的功能。  

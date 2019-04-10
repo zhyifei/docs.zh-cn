@@ -2,12 +2,12 @@
 title: 自定义安全元数据终结点
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: f025f76289705899e45db6f693f3678df3ed6b7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c835cfecab38a76f285767f918dfc082915ffcfc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104489"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325964"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自定义安全元数据终结点
 此示例演示如何实现具有安全元数据终结点使用的非元数据交换绑定，其中一个服务以及如何配置[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或客户端以获取从类元数据终结点元数据。 有两个系统提供的绑定可供公开元数据终结点：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 用于以非安全的方式，通过 HTTP 公开元数据终结点。 mexHttpsBinding 用于以安全的方式，通过 HTTP 公开元数据终结点。 本示例演示如何使用 <xref:System.ServiceModel.WSHttpBinding> 公开安全元数据终结点。 要更改绑定的安全设置但不想使用 HTTPS 时需要这样做。 如果使用 mexHttpsBinding，则元数据终结点是安全的，但无法修改绑定设置。  
@@ -132,37 +132,37 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例  
   
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>在同一计算机上运行示例  
   
-1.  运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。 请注意，Setup.bat 使用 FindPrivateKey.exe 工具，通过运行中的 setupcerttool.bat 可安装[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。 请注意，Setup.bat 使用 FindPrivateKey.exe 工具，通过运行中的 setupcerttool.bat 可安装[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  运行 \MetadataResolverClient\bin 或 \SvcutilClient\bin 中的客户端应用程序。 客户端活动将显示在客户端控制台应用程序上。  
+2. 运行 \MetadataResolverClient\bin 或 \SvcutilClient\bin 中的客户端应用程序。 客户端活动将显示在客户端控制台应用程序上。  
   
-3.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+3. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
-4.  在运行完该示例后运行 Cleanup.bat 移除证书。 其他安全示例使用相同的证书。  
+4. 在运行完该示例后运行 Cleanup.bat 移除证书。 其他安全示例使用相同的证书。  
   
 #### <a name="to-run-the-sample-across-machines"></a>跨计算机运行示例  
   
-1.  在服务器上运行 `setup.bat service`。 运行`setup.bat`与`service`参数与计算机的完全限定域名创建一个服务证书，并将服务证书导出到名为 Service.cer 的文件。  
+1. 在服务器上运行 `setup.bat service`。 运行`setup.bat`与`service`参数与计算机的完全限定域名创建一个服务证书，并将服务证书导出到名为 Service.cer 的文件。  
   
-2.  在服务器上，编辑 Web.config 以反映新证书名称。 也就是说，更改`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)元素在计算机的完全限定域名。  
+2. 在服务器上，编辑 Web.config 以反映新证书名称。 也就是说，更改`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)元素在计算机的完全限定域名。  
   
-3.  将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
+3. 将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
-4.  在客户端上，运行 `setup.bat client`。 运行`setup.bat`与`client`参数创建一个名为 Client.com 的客户端证书，并将客户端证书导出到名为 Client.cer 的文件。  
+4. 在客户端上，运行 `setup.bat client`。 运行`setup.bat`与`client`参数创建一个名为 Client.com 的客户端证书，并将客户端证书导出到名为 Client.cer 的文件。  
   
-5.  在客户端计算机上的 `MetadataResolverClient` 的 App.config 文件中，更改 Mex 终结点的地址值以与服务的新地址相匹配。 通过使用服务器的完全限定域名替换 localhost 来执行此操作。 还要将 metadataResolverClient.cs 文件中出现的“localhost”更改为新的服务证书名称（服务器的完全限定域名）。 对 SvcutilClient 项目的 App.config 执行相同的操作。  
+5. 在客户端计算机上的 `MetadataResolverClient` 的 App.config 文件中，更改 Mex 终结点的地址值以与服务的新地址相匹配。 通过使用服务器的完全限定域名替换 localhost 来执行此操作。 还要将 metadataResolverClient.cs 文件中出现的“localhost”更改为新的服务证书名称（服务器的完全限定域名）。 对 SvcutilClient 项目的 App.config 执行相同的操作。  
   
-6.  将客户端目录中的 Client.cer 文件复制到服务器上的服务目录中。  
+6. 将客户端目录中的 Client.cer 文件复制到服务器上的服务目录中。  
   
-7.  在客户端上，运行 `ImportServiceCert.bat`。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
+7. 在客户端上，运行 `ImportServiceCert.bat`。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
   
-8.  在服务器上，运行 `ImportClientCert.bat`，这会将 Client.cer 文件中的客户端证书导入 LocalMachine - TrustedPeople 存储区。  
+8. 在服务器上，运行 `ImportClientCert.bat`，这会将 Client.cer 文件中的客户端证书导入 LocalMachine - TrustedPeople 存储区。  
   
 9. 在服务计算机上，在 Visual Studio 中生成服务项目，在 Web 浏览器中选择帮助页可验证该项目是否在运行。  
   

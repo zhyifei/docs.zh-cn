@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 223c2a639fdb7a05506eca333a44ca31c0dae75f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c25c012798adcf90c652beb91a7550406e5f8ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136651"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321427"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>如何：使用设计器对 Windows 窗体 ListView 控件中的项进行分组
 分组功能<xref:System.Windows.Forms.ListView>控件使您能够以分组方式显示项的相关的集。 由包含组标题的水平组标头在屏幕上分隔这些组。 可以使用<xref:System.Windows.Forms.ListView>组以使大型列表对项目分组按字母顺序，按日期，或任何其他逻辑分组的导航。 下图显示了一些分组的项。  
@@ -29,21 +29,21 @@ ms.locfileid: "59136651"
   
 ### <a name="to-add-or-remove-groups-in-the-designer"></a>若要添加或删除在设计器中的组  
   
-1.  在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.ListView.Groups%2A>属性。  
+1. 在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.ListView.Groups%2A>属性。  
   
      **ListViewGroup 集合编辑器**出现。  
   
-2.  若要添加组，请单击**添加**按钮。 然后可以设置属性的新组，如<xref:System.Windows.Forms.ListViewGroup.Header%2A>和<xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A>属性。 若要删除某个组，选择它，然后单击**删除**按钮。  
+2. 若要添加组，请单击**添加**按钮。 然后可以设置属性的新组，如<xref:System.Windows.Forms.ListViewGroup.Header%2A>和<xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A>属性。 若要删除某个组，选择它，然后单击**删除**按钮。  
   
 ### <a name="to-assign-items-to-groups-in-the-designer"></a>若要将项分配给在设计器中的组  
   
-1.  在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.ListView.Items%2A>属性。  
+1. 在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.ListView.Items%2A>属性。  
   
      **列表视图项集合编辑器**出现。  
   
-2.  若要添加新项，请单击**添加**按钮。 然后可以设置属性的新项，如<xref:System.Windows.Forms.ListViewItem.Text%2A>和<xref:System.Windows.Forms.ListViewItem.ImageIndex%2A>属性。  
+2. 若要添加新项，请单击**添加**按钮。 然后可以设置属性的新项，如<xref:System.Windows.Forms.ListViewItem.Text%2A>和<xref:System.Windows.Forms.ListViewItem.ImageIndex%2A>属性。  
   
-3.  选择<xref:System.Windows.Forms.ListViewItem.Group%2A>属性并从下拉列表中选择一个组。  
+3. 选择<xref:System.Windows.Forms.ListViewItem.Group%2A>属性并从下拉列表中选择一个组。  
   
 ## <a name="see-also"></a>请参阅
 

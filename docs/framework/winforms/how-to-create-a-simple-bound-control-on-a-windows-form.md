@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 85b19c43441650789eed6b92a771d2f2433c6a10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094058"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322168"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>如何：在 Windows 窗体上创建简单绑定控件
 与*简单绑定*，可以在控件中显示单个数据元素，如从数据集表中列的值。 可以将控件属性简单绑定到数据值。  
@@ -20,25 +20,25 @@ ms.locfileid: "59094058"
   
 ### <a name="to-simple-bind-a-control"></a>简单绑定控件  
   
-1.  连接到数据源。 有关详细信息，请参阅[连接到数据源](../data/adonet/connecting-to-a-data-source.md)。  
+1. 连接到数据源。 有关详细信息，请参阅[连接到数据源](../data/adonet/connecting-to-a-data-source.md)。  
   
-2.  在表单中，选择控件并显示**属性**窗口。  
+2. 在表单中，选择控件并显示**属性**窗口。  
   
-3.  展开 **(DataBindings)** 属性。  
+3. 展开 **(DataBindings)** 属性。  
   
      最常绑定的属性将显示下面 **(DataBindings)** 属性。 例如，在大多数控件而言**文本**最经常绑定属性。  
   
-4.  如果该属性要绑定不经常绑定的属性之一，请单击**省略号**按钮 (![VisualStudioEllipsesButton 屏幕快照](./media/vbellipsesbutton.png "vbEllipsesButton")) 中 **（高级）** 框，以显示**格式设置和高级绑定**为该控件的属性的完整列表对话框。  
+4. 如果该属性要绑定不经常绑定的属性之一，请单击**省略号**按钮 (![VisualStudioEllipsesButton 屏幕快照](./media/vbellipsesbutton.png "vbEllipsesButton")) 中 **（高级）** 框，以显示**格式设置和高级绑定**为该控件的属性的完整列表对话框。  
   
-5.  选择你想要绑定，并单击下的下拉箭头的属性**绑定**。  
+5. 选择你想要绑定，并单击下的下拉箭头的属性**绑定**。  
   
      此时将显示可用数据源的列表。  
   
-6.  展开要绑定到的数据源，直到找到所需的单个数据元素。 例如，如果你正在绑定到数据集表中的列值，请展开该数据集的名称，然后展开表名以显示列名。  
+6. 展开要绑定到的数据源，直到找到所需的单个数据元素。 例如，如果你正在绑定到数据集表中的列值，请展开该数据集的名称，然后展开表名以显示列名。  
   
-7.  单击要绑定到的元素的名称。  
+7. 单击要绑定到的元素的名称。  
   
-8.  如果您正在处理**格式设置和高级绑定**对话框中，单击**确定**回到**属性**窗口。  
+8. 如果您正在处理**格式设置和高级绑定**对话框中，单击**确定**回到**属性**窗口。  
   
 9. 如果你想要将绑定控件的其他属性，请重复步骤 3 至 7。  
   
