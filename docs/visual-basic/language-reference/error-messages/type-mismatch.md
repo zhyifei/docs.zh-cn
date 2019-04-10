@@ -4,24 +4,24 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID13
 ms.assetid: f72e9e21-f475-43f2-9464-29c8ad27b6c2
-ms.openlocfilehash: 9d2a4225e68149ec58f44da37f9fb3878e9d66bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2823cd566b4fc05aa6a27002dbf548a520de7970
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843170"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306698"
 ---
-# <a name="type-mismatch-visual-basic"></a><span data-ttu-id="59cf8-102">类型不匹配 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="59cf8-102">Type mismatch (Visual Basic)</span></span>
-<span data-ttu-id="59cf8-103">你试图将值转换为另一种类型不是有效的方式。</span><span class="sxs-lookup"><span data-stu-id="59cf8-103">You attempted to convert a value to another type in a way that is not valid.</span></span>  
+# <a name="type-mismatch-visual-basic"></a><span data-ttu-id="6ea3c-102">类型不匹配 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6ea3c-102">Type mismatch (Visual Basic)</span></span>
+<span data-ttu-id="6ea3c-103">你试图将值转换为另一种类型不是有效的方式。</span><span class="sxs-lookup"><span data-stu-id="6ea3c-103">You attempted to convert a value to another type in a way that is not valid.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="59cf8-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="59cf8-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6ea3c-104">更正此错误</span><span class="sxs-lookup"><span data-stu-id="6ea3c-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="59cf8-105">检查以确保它是有效的分配。</span><span class="sxs-lookup"><span data-stu-id="59cf8-105">Check the assignment to make sure it is valid.</span></span>  
+1. <span data-ttu-id="6ea3c-105">检查以确保它是有效的分配。</span><span class="sxs-lookup"><span data-stu-id="6ea3c-105">Check the assignment to make sure it is valid.</span></span>  
   
-2.  <span data-ttu-id="59cf8-106">确保未将对象传递给过程所需的单个属性或值。</span><span class="sxs-lookup"><span data-stu-id="59cf8-106">Make sure you did not pass an object to a procedure that expects a single property or value.</span></span>  
+2. <span data-ttu-id="6ea3c-106">确保未将对象传递给过程所需的单个属性或值。</span><span class="sxs-lookup"><span data-stu-id="6ea3c-106">Make sure you did not pass an object to a procedure that expects a single property or value.</span></span>  
   
-3.  <span data-ttu-id="59cf8-107">请确保你未使用的模块或项目名称应为表达式。</span><span class="sxs-lookup"><span data-stu-id="59cf8-107">Make sure you did not use a module or project name where an expression was expected.</span></span>  
+3. <span data-ttu-id="6ea3c-107">请确保你未使用的模块或项目名称应为表达式。</span><span class="sxs-lookup"><span data-stu-id="6ea3c-107">Make sure you did not use a module or project name where an expression was expected.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59cf8-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="59cf8-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ea3c-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="6ea3c-108">See also</span></span>
 
-- [<span data-ttu-id="59cf8-109">错误类型</span><span class="sxs-lookup"><span data-stu-id="59cf8-109">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="6ea3c-109">错误类型</span><span class="sxs-lookup"><span data-stu-id="6ea3c-109">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
