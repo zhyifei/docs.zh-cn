@@ -16,42 +16,42 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 74092fdcd72c09670db53dc79d43d9d52f0dcf4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172181"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311040"
 ---
-# <a name="how-to-custom-draw-a-toolstrip-control"></a><span data-ttu-id="cb573-102">如何：自定义绘制 ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="cb573-102">How to: Custom Draw a ToolStrip Control</span></span>
-<span data-ttu-id="cb573-103"><xref:System.Windows.Forms.ToolStrip> 控件具有以下关联的呈现（绘制）类：</span><span class="sxs-lookup"><span data-stu-id="cb573-103">The <xref:System.Windows.Forms.ToolStrip> controls have the following associated rendering (painting) classes:</span></span>  
+# <a name="how-to-custom-draw-a-toolstrip-control"></a><span data-ttu-id="5dea2-102">如何：自定义绘制 ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="5dea2-102">How to: Custom Draw a ToolStrip Control</span></span>
+<span data-ttu-id="5dea2-103"><xref:System.Windows.Forms.ToolStrip> 控件具有以下关联的呈现（绘制）类：</span><span class="sxs-lookup"><span data-stu-id="5dea2-103">The <xref:System.Windows.Forms.ToolStrip> controls have the following associated rendering (painting) classes:</span></span>  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> <span data-ttu-id="cb573-104">提供的外观和样式的操作系统。</span><span class="sxs-lookup"><span data-stu-id="cb573-104">provides the appearance and style of your operating system.</span></span>  
+-   <xref:System.Windows.Forms.ToolStripSystemRenderer> <span data-ttu-id="5dea2-104">提供的外观和样式的操作系统。</span><span class="sxs-lookup"><span data-stu-id="5dea2-104">provides the appearance and style of your operating system.</span></span>  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> <span data-ttu-id="cb573-105">提供的外观和 Microsoft Office 样式。</span><span class="sxs-lookup"><span data-stu-id="cb573-105">provides the appearance and style of Microsoft Office.</span></span>  
+-   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> <span data-ttu-id="5dea2-105">提供的外观和 Microsoft Office 样式。</span><span class="sxs-lookup"><span data-stu-id="5dea2-105">provides the appearance and style of Microsoft Office.</span></span>  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> <span data-ttu-id="cb573-106">是其他两个呈现类的抽象基类。</span><span class="sxs-lookup"><span data-stu-id="cb573-106">is the abstract base class for the other two rendering classes.</span></span>  
+-   <xref:System.Windows.Forms.ToolStripRenderer> <span data-ttu-id="5dea2-106">是其他两个呈现类的抽象基类。</span><span class="sxs-lookup"><span data-stu-id="5dea2-106">is the abstract base class for the other two rendering classes.</span></span>  
   
- <span data-ttu-id="cb573-107">若要对 <xref:System.Windows.Forms.ToolStrip> 进行自定义绘制（也称为所有者描述），可以重写其中一个呈现器类，并更改呈现逻辑的一个方面。</span><span class="sxs-lookup"><span data-stu-id="cb573-107">To custom draw (also known as owner draw) a <xref:System.Windows.Forms.ToolStrip>, you can override one of the renderer classes and change an aspect of the rendering logic.</span></span>  
+ <span data-ttu-id="5dea2-107">若要对 <xref:System.Windows.Forms.ToolStrip> 进行自定义绘制（也称为所有者描述），可以重写其中一个呈现器类，并更改呈现逻辑的一个方面。</span><span class="sxs-lookup"><span data-stu-id="5dea2-107">To custom draw (also known as owner draw) a <xref:System.Windows.Forms.ToolStrip>, you can override one of the renderer classes and change an aspect of the rendering logic.</span></span>  
   
- <span data-ttu-id="cb573-108">下面的过程描述自定义绘制的各个方面。</span><span class="sxs-lookup"><span data-stu-id="cb573-108">The following procedures describe various aspects of custom drawing.</span></span>  
+ <span data-ttu-id="5dea2-108">下面的过程描述自定义绘制的各个方面。</span><span class="sxs-lookup"><span data-stu-id="5dea2-108">The following procedures describe various aspects of custom drawing.</span></span>  
   
-### <a name="to-switch-between-the-provided-renderers"></a><span data-ttu-id="cb573-109">在提供的呈现器之间切换</span><span class="sxs-lookup"><span data-stu-id="cb573-109">To switch between the provided renderers</span></span>  
+### <a name="to-switch-between-the-provided-renderers"></a><span data-ttu-id="5dea2-109">在提供的呈现器之间切换</span><span class="sxs-lookup"><span data-stu-id="5dea2-109">To switch between the provided renderers</span></span>  
   
--   <span data-ttu-id="cb573-110">将 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 属性设置为所需的 <xref:System.Windows.Forms.ToolStripRenderMode> 值。</span><span class="sxs-lookup"><span data-stu-id="cb573-110">Set the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> property to the <xref:System.Windows.Forms.ToolStripRenderMode> value you want.</span></span>  
+-   <span data-ttu-id="5dea2-110">将 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 属性设置为所需的 <xref:System.Windows.Forms.ToolStripRenderMode> 值。</span><span class="sxs-lookup"><span data-stu-id="5dea2-110">Set the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> property to the <xref:System.Windows.Forms.ToolStripRenderMode> value you want.</span></span>  
   
-     <span data-ttu-id="cb573-111">使用 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>，静态 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 为应用程序确定呈现器。</span><span class="sxs-lookup"><span data-stu-id="cb573-111">With <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>, the static <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> determines the renderer for your application.</span></span> <span data-ttu-id="cb573-112"><xref:System.Windows.Forms.ToolStripRenderMode> 的其他值为 <xref:System.Windows.Forms.ToolStripRenderMode.Custom>、<xref:System.Windows.Forms.ToolStripRenderMode.Professional> 和 <xref:System.Windows.Forms.ToolStripRenderMode.System>。</span><span class="sxs-lookup"><span data-stu-id="cb573-112">The other values of <xref:System.Windows.Forms.ToolStripRenderMode> are <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, and <xref:System.Windows.Forms.ToolStripRenderMode.System>.</span></span>  
+     <span data-ttu-id="5dea2-111">使用 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>，静态 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 为应用程序确定呈现器。</span><span class="sxs-lookup"><span data-stu-id="5dea2-111">With <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>, the static <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> determines the renderer for your application.</span></span> <span data-ttu-id="5dea2-112"><xref:System.Windows.Forms.ToolStripRenderMode> 的其他值为 <xref:System.Windows.Forms.ToolStripRenderMode.Custom>、<xref:System.Windows.Forms.ToolStripRenderMode.Professional> 和 <xref:System.Windows.Forms.ToolStripRenderMode.System>。</span><span class="sxs-lookup"><span data-stu-id="5dea2-112">The other values of <xref:System.Windows.Forms.ToolStripRenderMode> are <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, and <xref:System.Windows.Forms.ToolStripRenderMode.System>.</span></span>  
   
-### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a><span data-ttu-id="cb573-113">将 Microsoft Office 样式边框更改为直线</span><span class="sxs-lookup"><span data-stu-id="cb573-113">To change the Microsoft Office–style borders to straight</span></span>  
+### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a><span data-ttu-id="5dea2-113">将 Microsoft Office 样式边框更改为直线</span><span class="sxs-lookup"><span data-stu-id="5dea2-113">To change the Microsoft Office–style borders to straight</span></span>  
   
--   <span data-ttu-id="cb573-114">重写 <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>，但不调用基类。</span><span class="sxs-lookup"><span data-stu-id="cb573-114">Override <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, but do not call the base class.</span></span>  
+-   <span data-ttu-id="5dea2-114">重写 <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>，但不调用基类。</span><span class="sxs-lookup"><span data-stu-id="5dea2-114">Override <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, but do not call the base class.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cb573-115">此方法没有针对 <xref:System.Windows.Forms.ToolStripRenderer>、<xref:System.Windows.Forms.ToolStripSystemRenderer> 和 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 的版本。</span><span class="sxs-lookup"><span data-stu-id="cb573-115">There is a version of this method for <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer>, and <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.</span></span>  
+>  <span data-ttu-id="5dea2-115">此方法没有针对 <xref:System.Windows.Forms.ToolStripRenderer>、<xref:System.Windows.Forms.ToolStripSystemRenderer> 和 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 的版本。</span><span class="sxs-lookup"><span data-stu-id="5dea2-115">There is a version of this method for <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer>, and <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.</span></span>  
   
-### <a name="to-change-the-professionalcolortable"></a><span data-ttu-id="cb573-116">更改 ProfessionalColorTable</span><span class="sxs-lookup"><span data-stu-id="cb573-116">To change the ProfessionalColorTable</span></span>  
+### <a name="to-change-the-professionalcolortable"></a><span data-ttu-id="5dea2-116">更改 ProfessionalColorTable</span><span class="sxs-lookup"><span data-stu-id="5dea2-116">To change the ProfessionalColorTable</span></span>  
   
--   <span data-ttu-id="cb573-117">重写 <xref:System.Windows.Forms.ProfessionalColorTable> 并更改所需的颜色。</span><span class="sxs-lookup"><span data-stu-id="cb573-117">Override <xref:System.Windows.Forms.ProfessionalColorTable> and change the colors you want.</span></span>  
+-   <span data-ttu-id="5dea2-117">重写 <xref:System.Windows.Forms.ProfessionalColorTable> 并更改所需的颜色。</span><span class="sxs-lookup"><span data-stu-id="5dea2-117">Override <xref:System.Windows.Forms.ProfessionalColorTable> and change the colors you want.</span></span>  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
@@ -105,21 +105,21 @@ ms.locfileid: "59172181"
     End Class  
     ```  
   
-### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a><span data-ttu-id="cb573-118">更改应用程序中所有 ToolStrip 控件的呈现</span><span class="sxs-lookup"><span data-stu-id="cb573-118">To change the rendering for all ToolStrip controls in your application</span></span>  
+### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a><span data-ttu-id="5dea2-118">更改应用程序中所有 ToolStrip 控件的呈现</span><span class="sxs-lookup"><span data-stu-id="5dea2-118">To change the rendering for all ToolStrip controls in your application</span></span>  
   
-1.  <span data-ttu-id="cb573-119">使用 <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> 属性从提供的呈现器中选择一个。</span><span class="sxs-lookup"><span data-stu-id="cb573-119">Use the <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> property to choose one of the provided renderers.</span></span>  
+1. <span data-ttu-id="5dea2-119">使用 <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> 属性从提供的呈现器中选择一个。</span><span class="sxs-lookup"><span data-stu-id="5dea2-119">Use the <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> property to choose one of the provided renderers.</span></span>  
   
-2.  <span data-ttu-id="cb573-120">使用 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> 分配自定义呈现器。</span><span class="sxs-lookup"><span data-stu-id="cb573-120">Use <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> to assign a custom renderer.</span></span>  
+2. <span data-ttu-id="5dea2-120">使用 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> 分配自定义呈现器。</span><span class="sxs-lookup"><span data-stu-id="5dea2-120">Use <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> to assign a custom renderer.</span></span>  
   
-3.  <span data-ttu-id="cb573-121">确保 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> 已设置为默认值 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>。</span><span class="sxs-lookup"><span data-stu-id="cb573-121">Ensure that <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> is set to the default value of <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.</span></span>  
+3. <span data-ttu-id="5dea2-121">确保 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> 已设置为默认值 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>。</span><span class="sxs-lookup"><span data-stu-id="5dea2-121">Ensure that <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> is set to the default value of <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.</span></span>  
   
-### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a><span data-ttu-id="cb573-122">关闭整个应用程序的 Microsoft Office 颜色</span><span class="sxs-lookup"><span data-stu-id="cb573-122">To turn off the Microsoft Office colors for the entire application</span></span>  
+### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a><span data-ttu-id="5dea2-122">关闭整个应用程序的 Microsoft Office 颜色</span><span class="sxs-lookup"><span data-stu-id="5dea2-122">To turn off the Microsoft Office colors for the entire application</span></span>  
   
--   <span data-ttu-id="cb573-123">将 <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> 设置为 `false`。</span><span class="sxs-lookup"><span data-stu-id="cb573-123">Set <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> to `false`.</span></span>  
+-   <span data-ttu-id="5dea2-123">将 <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> 设置为 `false`。</span><span class="sxs-lookup"><span data-stu-id="5dea2-123">Set <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> to `false`.</span></span>  
   
-### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a><span data-ttu-id="cb573-124">关闭一个 ToolStrip 控件的 Microsoft Office 颜色</span><span class="sxs-lookup"><span data-stu-id="cb573-124">To turn off the Microsoft Office colors for one ToolStrip control</span></span>  
+### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a><span data-ttu-id="5dea2-124">关闭一个 ToolStrip 控件的 Microsoft Office 颜色</span><span class="sxs-lookup"><span data-stu-id="5dea2-124">To turn off the Microsoft Office colors for one ToolStrip control</span></span>  
   
--   <span data-ttu-id="cb573-125">使用类似于以下代码示例的代码。</span><span class="sxs-lookup"><span data-stu-id="cb573-125">Use code similar to the following code example.</span></span>  
+-   <span data-ttu-id="5dea2-125">使用类似于以下代码示例的代码。</span><span class="sxs-lookup"><span data-stu-id="5dea2-125">Use code similar to the following code example.</span></span>  
   
     ```vb  
     Dim colorTable As ProfessionalColorTable()  
@@ -133,11 +133,11 @@ ms.locfileid: "59172181"
     toolStrip.Renderer = new ToolStripProfessionalRenderer(colorTable);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="cb573-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="cb573-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5dea2-126">请参阅</span><span class="sxs-lookup"><span data-stu-id="5dea2-126">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
-- [<span data-ttu-id="cb573-127">具有内置所有者描述支持的控件</span><span class="sxs-lookup"><span data-stu-id="cb573-127">Controls with Built-In Owner-Drawing Support</span></span>](controls-with-built-in-owner-drawing-support.md)
-- [<span data-ttu-id="cb573-128">如何：在 Windows 窗体中为 ToolStrip 控件创建和设置自定义呈现器</span><span class="sxs-lookup"><span data-stu-id="cb573-128">How to: Create and Set a Custom Renderer for the ToolStrip Control in Windows Forms</span></span>](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
-- [<span data-ttu-id="cb573-129">ToolStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="cb573-129">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="5dea2-127">具有内置所有者描述支持的控件</span><span class="sxs-lookup"><span data-stu-id="5dea2-127">Controls with Built-In Owner-Drawing Support</span></span>](controls-with-built-in-owner-drawing-support.md)
+- [<span data-ttu-id="5dea2-128">如何：在 Windows 窗体中为 ToolStrip 控件创建和设置自定义呈现器</span><span class="sxs-lookup"><span data-stu-id="5dea2-128">How to: Create and Set a Custom Renderer for the ToolStrip Control in Windows Forms</span></span>](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [<span data-ttu-id="5dea2-129">ToolStrip 控件概述</span><span class="sxs-lookup"><span data-stu-id="5dea2-129">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
