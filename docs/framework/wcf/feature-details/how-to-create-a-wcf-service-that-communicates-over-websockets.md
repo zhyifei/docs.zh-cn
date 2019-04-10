@@ -2,19 +2,19 @@
 title: 如何：创建通过 WebSocket 进行通信的 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 28a200b3e531f524e246c3d2fa1961573ec4e014
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223181"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346361"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>如何：创建通过 WebSocket 进行通信的 WCF 服务
 WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑定通过 WebSocket 进行通信。  当 <xref:System.ServiceModel.NetHttpBinding> 确定服务协定定义回调协定时，将使用 WebSocket。 本主题描述如何实现使用 <xref:System.ServiceModel.NetHttpBinding> 通过 WebSocket 进行通信的 WCF 服务和客户端。  
   
 ### <a name="define-the-service"></a>定义服务  
   
-1.  定义回调协定  
+1. 定义回调协定  
   
     ```csharp  
     [ServiceContract]  
@@ -27,7 +27,7 @@ WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑
   
      本协定将由客户端应用程序实现，以允许服务将消息发送回客户端。  
   
-2.  定义服务协定并指定 `IStockQuoteCallback` 接口作为回调协定。  
+2. 定义服务协定并指定 `IStockQuoteCallback` 接口作为回调协定。  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,7 +38,7 @@ WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑
         }  
     ```  
   
-3.  实现服务协定。  
+3. 实现服务协定。  
   
     ```  
     public class StockQuoteService : IStockQuoteService  
@@ -61,7 +61,7 @@ WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑
   
      服务操作 `StartSendingQuotes` 将实现为异步调用。 我们使用 `OperationContext` 检索回调通道；如果通道是打开的，则对回调通道进行异步调用。  
   
-4.  配置服务  
+4. 配置服务  
   
     ```xml  
     <configuration>  
@@ -94,7 +94,7 @@ WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑
   
 ### <a name="define-the-client"></a>定义客户端  
   
-1.  实现回调协定。  
+1. 实现回调协定。  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  

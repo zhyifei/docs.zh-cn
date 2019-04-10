@@ -2,12 +2,12 @@
 title: 用户名密码验证程序
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: d15a3753bbea023cd992ed50549ef2c7b0dad74f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162745"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345009"
 ---
 # <a name="user-name-password-validator"></a>用户名密码验证程序
 此示例演示如何实现自定义 UserNamePassword 验证程序。 这在以下情况中非常有用：所有内置 UserNamePassword 验证模式均不符合应用程序的需求；例如，当用户名/密码对存储在某个外部存储区（如数据库）中时。 此示例显示了一个具有自定义验证程序（可检查两个特定用户名/密码对）的服务。 客户端使用此种用户名/密码对来对服务进行身份验证。
@@ -278,40 +278,40 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例
 
-1.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+1. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
 
-2.  若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。
+2. 若要用单一计算机配置或跨计算机配置来运行示例，请按照下列说明进行操作。
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>在同一计算机上运行示例
 
-1.  从 Visual Studio 2012 命令提示符内示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。
+1. 从 Visual Studio 2012 命令提示符内示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。
 
     > [!NOTE]
     >  Setup.bat 批处理文件旨在为从 Visual Studio 2012 命令提示运行。 在 Visual Studio 2012 命令提示符点设置为包含 Setup.bat 脚本所需的可执行文件的目录路径环境变量。  
   
-2.  启动 service\bin 中的 Service.exe。  
+2. 启动 service\bin 中的 Service.exe。  
   
-3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
+3. 启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-machines"></a>跨计算机运行示例  
   
-1.  在服务计算机上为服务二进制文件创建一个目录。  
+1. 在服务计算机上为服务二进制文件创建一个目录。  
   
-2.  将服务程序文件复制到服务计算机上的服务目录。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
+2. 将服务程序文件复制到服务计算机上的服务目录。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-3.  需要有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新服务器的配置文件以反映此新证书名称。  
+3. 需要有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新服务器的配置文件以反映此新证书名称。  
   
-4.  将服务器证书复制到客户端的 CurrentUser-TrustedPeople 存储中。 只有当服务器证书不是由受信任的颁发者颁发的情况下才需要执行此操作。  
+4. 将服务器证书复制到客户端的 CurrentUser-TrustedPeople 存储中。 只有当服务器证书不是由受信任的颁发者颁发的情况下才需要执行此操作。  
   
-5.  在服务计算机的 App.config 文件中，更改基址的值以指定一个完全限定的计算机名称，而不是 localhost。  
+5. 在服务计算机的 App.config 文件中，更改基址的值以指定一个完全限定的计算机名称，而不是 localhost。  
   
-6.  在服务计算机上，从命令提示符窗口中启动 Service.exe。  
+6. 在服务计算机上，从命令提示符窗口中启动 Service.exe。  
   
-7.  将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
+7. 将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
   
-8.  在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  
+8. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  
   
 9. 在客户端计算机上，从命令提示符窗口中启动 Client.exe。  
   
@@ -319,4 +319,4 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
-1.  运行完示例后运行示例文件夹中的 Cleanup.bat。 这将从证书存储区中移除服务器证书。  
+1. 运行完示例后运行示例文件夹中的 Cleanup.bat。 这将从证书存储区中移除服务器证书。  

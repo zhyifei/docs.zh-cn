@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: d736d80a05469dafecbdaf196701c14528ee7d26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230013"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344918"
 ---
 # <a name="xaml-resources"></a>XAML 资源
 资源是可以在应用程序中的不同位置重复使用的对象。 资源的示例包括画笔和样式。 本概述介绍如何使用中的资源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 此外可以创建并使用代码，或者通过互换使用代码访问资源和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 有关详细信息，请参阅[资源和代码](resources-and-code.md)。  
@@ -69,11 +69,11 @@ ms.locfileid: "59230013"
   
 #### <a name="static-resource-lookup-behavior"></a>静态资源查找行为  
   
-1.  查找进程在用于设置属性的元素所定义的资源字典中查找请求的键。  
+1. 查找进程在用于设置属性的元素所定义的资源字典中查找请求的键。  
   
-2.  查找进程随后会向上遍历逻辑树，以查找父元素及其资源字典。 直至到达根元素，遍历操作才会停止。  
+2. 查找进程随后会向上遍历逻辑树，以查找父元素及其资源字典。 直至到达根元素，遍历操作才会停止。  
   
-3.  接下来，将检查应用程序资源。 应用程序的资源是由定义的资源字典中的这些资源<xref:System.Windows.Application>对象在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
+3. 接下来，将检查应用程序资源。 应用程序的资源是由定义的资源字典中的这些资源<xref:System.Windows.Application>对象在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
   
  从资源字典中进行的静态资源引用必须引用已在资源引用前进行过词法定义的资源。 静态资源引用无法解析前向引用。 因此，如果使用静态资源引用，则必须对资源字典的结构进行设计，以便在每个相应资源字典的开头或临近位置定义要按资源使用的资源。  
   
@@ -101,19 +101,19 @@ ms.locfileid: "59230013"
 #### <a name="dynamic-resource-lookup-behavior"></a>动态资源查找行为  
  动态资源引用的资源查找行为与在代码中的查找行为，如果您调用<xref:System.Windows.FrameworkElement.FindResource%2A>或<xref:System.Windows.FrameworkElement.SetResourceReference%2A>。  
   
-1.  查找进程在用于设置属性的元素所定义的资源字典中查找请求的键。  
+1. 查找进程在用于设置属性的元素所定义的资源字典中查找请求的键。  
   
     -   如果该元素定义<xref:System.Windows.FrameworkElement.Style%2A>属性，<xref:System.Windows.Style.Resources%2A>中的字典<xref:System.Windows.Style>检查。  
   
     -   如果该元素定义<xref:System.Windows.Controls.Control.Template%2A>属性，<xref:System.Windows.FrameworkTemplate.Resources%2A>中的字典<xref:System.Windows.FrameworkTemplate>检查。  
   
-2.  查找进程随后会向上遍历逻辑树，以查找父元素及其资源字典。 直至到达根元素，遍历操作才会停止。  
+2. 查找进程随后会向上遍历逻辑树，以查找父元素及其资源字典。 直至到达根元素，遍历操作才会停止。  
   
-3.  接下来，将检查应用程序资源。 应用程序的资源是由定义的资源字典中的这些资源<xref:System.Windows.Application>对象在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
+3. 接下来，将检查应用程序资源。 应用程序的资源是由定义的资源字典中的这些资源<xref:System.Windows.Application>对象在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
   
-4.  在主题资源字典中查找当前处于活动状态的主题。 如果主题在运行时发生更改，则会重新计算值。  
+4. 在主题资源字典中查找当前处于活动状态的主题。 如果主题在运行时发生更改，则会重新计算值。  
   
-5.  检查系统资源。  
+5. 检查系统资源。  
   
  异常行为（如果有）各不相同：  
   

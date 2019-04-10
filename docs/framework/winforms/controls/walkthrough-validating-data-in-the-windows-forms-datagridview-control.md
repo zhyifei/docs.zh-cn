@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127343"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346049"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>演练：验证 Windows 窗体 DataGridView 控件中的数据
 向用户显示数据条目的功能，经常需要验证你的窗体中输入的数据。 <xref:System.Windows.Forms.DataGridView>类提供了方便地在数据提交到数据存储区之前执行验证。 可以通过处理在验证数据<xref:System.Windows.Forms.DataGridView.CellValidating>事件，引发的<xref:System.Windows.Forms.DataGridView>当前单元格发生更改时。  
@@ -35,7 +35,7 @@ ms.locfileid: "59127343"
   
 #### <a name="to-validate-data-entered-in-a-datagridview"></a>若要验证在 DataGridView 中输入数据  
   
-1.  创建派生的类<xref:System.Windows.Forms.Form>并且包含<xref:System.Windows.Forms.DataGridView>控件和一个<xref:System.Windows.Forms.BindingSource>组件。  
+1. 创建派生的类<xref:System.Windows.Forms.Form>并且包含<xref:System.Windows.Forms.DataGridView>控件和一个<xref:System.Windows.Forms.BindingSource>组件。  
   
      下面的代码示例提供了基本的初始化，并包括`Main`方法。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59127343"
     [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#02)]  
   
-2.  用于处理连接到数据库的详细信息窗体的类定义中实现的方法。  
+2. 用于处理连接到数据库的详细信息窗体的类定义中实现的方法。  
   
      此代码示例使用`GetData`方法，它返回已填充<xref:System.Data.DataTable>对象。 请确保您设置`connectionString`变量为适合于您的数据库的值。  
   
@@ -54,12 +54,12 @@ ms.locfileid: "59127343"
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#30)]  
   
-3.  实现窗体的一个处理程序<xref:System.Windows.Forms.Form.Load>初始化的事件<xref:System.Windows.Forms.DataGridView>和<xref:System.Windows.Forms.BindingSource>和数据绑定设置。  
+3. 实现窗体的一个处理程序<xref:System.Windows.Forms.Form.Load>初始化的事件<xref:System.Windows.Forms.DataGridView>和<xref:System.Windows.Forms.BindingSource>和数据绑定设置。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#10)]  
   
-4.  实现的处理程序<xref:System.Windows.Forms.DataGridView>控件的<xref:System.Windows.Forms.DataGridView.CellValidating>和<xref:System.Windows.Forms.DataGridView.CellEndEdit>事件。  
+4. 实现的处理程序<xref:System.Windows.Forms.DataGridView>控件的<xref:System.Windows.Forms.DataGridView.CellValidating>和<xref:System.Windows.Forms.DataGridView.CellEndEdit>事件。  
   
      <xref:System.Windows.Forms.DataGridView.CellValidating>事件处理程序，确定是否在单元格的值`CompanyName`列为空。 如果单元格的值未通过验证，则设置<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>的属性<xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs?displayProperty=nameWithType>类到`true`。 这将导致<xref:System.Windows.Forms.DataGridView>控制，以阻止光标离开该单元格。 设置<xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A>到说明性字符串的行上的属性。 这将显示错误图标，包含错误文本的工具提示。 在中<xref:System.Windows.Forms.DataGridView.CellEndEdit>事件处理程序设置<xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A>属性为空字符串的行。 <xref:System.Windows.Forms.DataGridView.CellEndEdit>仅当该单元格退出编辑模式下，如果它未通过验证，无法执行发生的事件。  
   

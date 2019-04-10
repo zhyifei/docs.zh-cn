@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: a4bbed1f115ef5cfb6b7b63156f2d84b071cf224
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127109"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344165"
 ---
 # <a name="date-and-time-data"></a>日期和时间数据
 SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 新的数据类型包括单独的日期和时间类型以及具有更大范围、更高精度和更强时区感知能力的扩展数据类型。 从 .NET Framework 3.5 Service Pack (SP) 1 开始，适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 完全支持 SQL Server 2008 数据库引擎的所有新功能。 您必须安装 .NET Framework 3.5 SP1（或更高版本）才能将这些新功能与 SqlClient 一起使用。  
@@ -21,7 +21,7 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
   
  **SQL Server 联机丛书**  
   
-1.  [Using Date and Time Data（使用日期和时间数据）](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1. [Using Date and Time Data（使用日期和时间数据）](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 中引入的日期/时间数据类型  
  下表描述了新的日期和时间数据类型。  

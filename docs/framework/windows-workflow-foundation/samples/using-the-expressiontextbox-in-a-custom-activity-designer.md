@@ -2,12 +2,12 @@
 title: 在自定义设计器中使用 ExpressionTextBox
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: 7c1ba262046a665b8d63157fe3cdb4b1a41c37bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229376"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344970"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>在自定义设计器中使用 ExpressionTextBox
 此示例演示如何在自定义活动设计器中使用 <xref:System.Activities.Presentation.View.ExpressionTextBox>。 自定义活动 `MultiAssign` 将两个字符串值分配给两个字符串变量。 某些 <xref:System.Activities.Presentation.View.ExpressionTextBox> 控件绑定到 <xref:System.Activities.InArgument>，而某些控件绑定到 <xref:System.Activities.OutArgument>。
@@ -23,19 +23,19 @@ ms.locfileid: "59229376"
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1.  使用 Visual Studio 2010 打开 ExpressionTextBoxSample.sln 文件。
+1. 使用 Visual Studio 2010 打开 ExpressionTextBoxSample.sln 文件。
 
-2.  要生成解决方案，按 Ctrl+Shift+B。
+2. 要生成解决方案，按 Ctrl+Shift+B。
 
 #### <a name="to-run-this-sample"></a>运行此示例
 
-1.  向解决方案添加新工作流控制台应用程序。
+1. 向解决方案添加新工作流控制台应用程序。
 
-2.  添加对的引用**expressiontextboxsample**从新的工作流控制台应用程序项目的项目。
+2. 添加对的引用**expressiontextboxsample**从新的工作流控制台应用程序项目的项目。
 
-3.  生成解决方案。
+3. 生成解决方案。
 
-4.  拖动**MultiAssign**活动从工具箱拖放到工作流。
+4. 拖动**MultiAssign**活动从工具箱拖放到工作流。
 
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

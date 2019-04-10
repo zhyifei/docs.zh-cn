@@ -2,12 +2,12 @@
 title: 受信任的外观服务
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 4b02928224f1cb96a25dc71941273625e7d9e5e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346153"
 ---
 # <a name="trusted-facade-service"></a>受信任的外观服务
 此方案示例演示如何流动到另一个使用 Windows Communication Foundation (WCF) 调用方的标识信息从一个服务的安全基础结构。  
@@ -260,27 +260,27 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>在同一计算机上运行示例  
   
-1.  确保路径包含 Makecert.exe 所在的文件夹。  
+1. 确保路径包含 Makecert.exe 所在的文件夹。  
   
-2.  运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。  
+2. 运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。  
   
-3.  在单独的控制台窗口中启动 \BackendService\bin 目录中的 BackendService.exe  
+3. 在单独的控制台窗口中启动 \BackendService\bin 目录中的 BackendService.exe  
   
-4.  在单独的控制台窗口中启动 \FacadeService\bin 目录中的 FacadeService.exe  
+4. 在单独的控制台窗口中启动 \FacadeService\bin 目录中的 FacadeService.exe  
   
-5.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
+5. 启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-6.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+6. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
-1.  运行完示例后运行示例文件夹中的 Cleanup.bat。  
+1. 运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

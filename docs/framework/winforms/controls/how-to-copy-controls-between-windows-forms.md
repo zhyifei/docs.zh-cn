@@ -5,19 +5,19 @@ helpviewer_keywords:
 - Windows Forms controls, copying
 - controls [Windows Forms], copying
 ms.assetid: 106c1eb2-1fba-4f69-b2ec-9ea3fa182f1e
-ms.openlocfilehash: 7aa858e7c7215c589d9e39412ef20ec81a1a4239
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8a60dd4c5fc80af46b1552e99abbba37a8a390af
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075778"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345607"
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>如何：在 Windows 窗体之间复制控件
 控件可能会复制到同一个窗体上、 在项目中，另一个窗体或其他解决方案中使用剪贴板上。  
   
 ### <a name="to-copy-a-control"></a>若要复制控件  
   
-1.  选择控件，并从**编辑**菜单中，选择**副本**。  
+1. 选择控件，并从**编辑**菜单中，选择**副本**。  
   
  此控件现在可以粘贴到任何接受该类型的控件的窗体。 此外，该控件具有已添加到剪贴板。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122234"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345516"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF 的委派和模拟
 模拟 是一种常用技术，服务可使用该技术限制客户端对服务域资源的访问。 服务域资源可以是计算机资源，如本地文件（模拟），也可以是其他计算机上的资源，如文件共享（委托）。 有关示例应用程序，请参见 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 有关如何使用模拟的示例，请参阅[如何：模拟客户端在服务上的](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
@@ -191,13 +191,13 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>如何将应用程序配置为使用受约束的委托  
  在使用受约束的委托之前，必须将发送方、接收方和域控制器配置为使用受约束的委托。 下面的过程列出启用受约束的委托的步骤。 有关委托和受约束委托之间的区别的详细信息，请参阅 [Windows Server 2003 Kerberos Extensions](https://go.microsoft.com/fwlink/?LinkId=100194) （Windows Server 2003 Kerberos 扩展）中讨论受约束委托的部分。  
   
-1.  在域控制器上，为用于运行客户端应用程序的帐户清除 **“敏感帐户，不能被委派”** 复选框。  
+1. 在域控制器上，为用于运行客户端应用程序的帐户清除 **“敏感帐户，不能被委派”** 复选框。  
   
-2.  在域控制器上，为用于运行客户端应用程序的帐户选中 **“帐户可以委派其他帐户”** 复选框。  
+2. 在域控制器上，为用于运行客户端应用程序的帐户选中 **“帐户可以委派其他帐户”** 复选框。  
   
-3.  在域控制器上，通过单击 **“信任计算机作为委派”** 选项，对中间层计算机进行配置，以便信任该计算机进行委托。  
+3. 在域控制器上，通过单击 **“信任计算机作为委派”** 选项，对中间层计算机进行配置，以便信任该计算机进行委托。  
   
-4.  在域控制器上，通过单击 **“仅信任此计算机来委派指定的服务”** 选项，将中间层计算机配置为使用受约束的委托。  
+4. 在域控制器上，通过单击 **“仅信任此计算机来委派指定的服务”** 选项，将中间层计算机配置为使用受约束的委托。  
   
  有关配置受约束委托的更多详细说明，请参见 MSDN 上的以下主题：  
   

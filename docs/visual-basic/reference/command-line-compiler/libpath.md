@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: b8e28b821f6536ddb5c7612e8706e024dd79a0bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833294"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344203"
 ---
 # <a name="-libpath"></a>-libpath
 指定引用的程序集的位置。  
@@ -33,13 +33,13 @@ ms.locfileid: "58833294"
   
  编译器按以下顺序搜索未完全限定的程序集引用：  
   
-1.  当前工作目录。 该目录为从其调用编译器的目录。  
+1. 当前工作目录。 该目录为从其调用编译器的目录。  
   
-2.  公共语言运行时系统目录。  
+2. 公共语言运行时系统目录。  
   
-3.  由指定的目录`/libpath`。  
+3. 由指定的目录`/libpath`。  
   
-4.  由 LIB 环境变量指定的目录。  
+4. 由 LIB 环境变量指定的目录。  
   
  `-libpath`选项是累加的; 指定一次追加到以前的值。  
   

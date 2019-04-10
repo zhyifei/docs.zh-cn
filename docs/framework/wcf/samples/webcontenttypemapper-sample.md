@@ -2,12 +2,12 @@
 title: WebContentTypeMapper 示例
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 7858b07c3da8684326b931b54f825c87a6e35717
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 381fc4a3084b1a2620384a04de85b9085e02ae16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131503"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344671"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 示例
 此示例演示如何将新内容类型映射到 Windows Communication Foundation (WCF) 消息正文格式。  
@@ -54,11 +54,11 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  如中所述生成解决方案 WebContentTypeMapperSample.sln[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 如中所述生成解决方案 WebContentTypeMapperSample.sln[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  导航到`http://localhost/ServiceModelSamples/JCTMClientPage.htm`（不要打开 JCTMClientPage.htm 在浏览器中从项目目录中）。  
+3. 导航到`http://localhost/ServiceModelSamples/JCTMClientPage.htm`（不要打开 JCTMClientPage.htm 在浏览器中从项目目录中）。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

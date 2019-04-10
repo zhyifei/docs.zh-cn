@@ -5,46 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: bd6543e1e22b7a2cb0b870fe2fdb34011f0d2a4f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bf2eb3d295f9cbf6a7e13a612d5846ceaa75ab4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162777"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345503"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>如何：从服务终结点导出元数据
 本主题介绍如何从服务终结点导出元数据。  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>从服务终结点导出元数据  
   
-1.  创建一个新的 Visual Studio 控制台应用程序项目。 在生成的 Program.cs 文件的 main() 方法中添加下列步骤所示的代码。  
+1. 创建一个新的 Visual Studio 控制台应用程序项目。 在生成的 Program.cs 文件的 main() 方法中添加下列步骤所示的代码。  
   
-2.  创建 <xref:System.ServiceModel.Description.WsdlExporter>。  
+2. 创建 <xref:System.ServiceModel.Description.WsdlExporter>。  
   
      [!code-csharp[S_UEWsdlExporter#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#1)]
      [!code-vb[S_UEWsdlExporter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#1)]  
   
-3.  将 <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> 属性设置为 <xref:System.ServiceModel.Description.PolicyVersion> 枚举值之一。 此示例将该值设置为与 WS-Policy 1.5 对应的 <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A>。  
+3. 将 <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> 属性设置为 <xref:System.ServiceModel.Description.PolicyVersion> 枚举值之一。 此示例将该值设置为与 WS-Policy 1.5 对应的 <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A>。  
   
      [!code-csharp[S_UEWsdlExporter#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#2)]
      [!code-vb[S_UEWsdlExporter#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#2)]  
   
-4.  创建 <xref:System.ServiceModel.Description.ServiceEndpoint> 对象的数组。  
+4. 创建 <xref:System.ServiceModel.Description.ServiceEndpoint> 对象的数组。  
   
      [!code-csharp[S_UEWsdlExporter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#3)]
      [!code-vb[S_UEWsdlExporter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#3)]  
   
-5.  为每个服务终结点导出元数据。  
+5. 为每个服务终结点导出元数据。  
   
      [!code-csharp[S_UEWsdlExporter#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#4)]
      [!code-vb[S_UEWsdlExporter#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#4)]  
   
-6.  检查以确保在导出过程中不会发生任何错误，并检索元数据。  
+6. 检查以确保在导出过程中不会发生任何错误，并检索元数据。  
   
      [!code-csharp[S_UEWsdlExporter#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#5)]
      [!code-vb[S_UEWsdlExporter#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#5)]  
   
-7.  现在可以使用元数据，例如通过调用 <xref:System.ServiceModel.Description.MetadataSet.WriteTo%28System.Xml.XmlWriter%29> 方法将它写入文件。  
+7. 现在可以使用元数据，例如通过调用 <xref:System.ServiceModel.Description.MetadataSet.WriteTo%28System.Xml.XmlWriter%29> 方法将它写入文件。  
   
 ## <a name="example"></a>示例  
  下面列出了此示例的完整代码。  

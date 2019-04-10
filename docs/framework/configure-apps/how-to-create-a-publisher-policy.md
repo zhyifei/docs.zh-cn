@@ -7,23 +7,23 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227387"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344658"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：创建发行者策略
 程序集的供应商可以声明应用程序应通过包括发布服务器策略文件与升级后的程序集使用的程序集的较新版本。 发布服务器策略文件指定程序集重定向和基本代码设置，并为应用程序配置文件使用相同的格式。 发布服务器策略文件编译到程序集中，放置在全局程序集缓存中。  
   
  创建发布者策略时涉及的是三个步骤：  
   
-1.  创建发布服务器策略文件。  
+1. 创建发布服务器策略文件。  
   
-2.  创建发行者策略程序集。  
+2. 创建发行者策略程序集。  
   
-3.  将发行者策略程序集添加到全局程序集缓存中。  
+3. 将发行者策略程序集添加到全局程序集缓存中。  
   
  发布服务器策略的架构所述[重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)。 下面的示例显示了发布服务器策略文件，将重定向的一个版本`myAssembly`到另一个。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59227387"
   
 #### <a name="to-create-a-publisher-policy-assembly"></a>若要创建发行者策略程序集  
   
-1.  在命令提示符下键入以下命令：  
+1. 在命令提示符下键入以下命令：  
   
      **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
@@ -87,7 +87,7 @@ ms.locfileid: "59227387"
   
 #### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>若要将发行者策略程序集添加到全局程序集缓存  
   
-1.  在命令提示符下键入以下命令：  
+1. 在命令提示符下键入以下命令：  
   
      **gacutil /i**  *publisherPolicyAssemblyFile*  
   

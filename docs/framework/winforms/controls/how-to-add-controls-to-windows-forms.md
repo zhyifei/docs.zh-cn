@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 72b5931a79284a93a4e0fdf3cb2cc3b03157f5f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 04597283a8ff2e21a0f227268671d3605eac6356
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106478"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343579"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>如何：向 Windows 窗体添加控件
 大多数窗体旨在通过将控件添加到窗体的面，用于定义用户界面 (UI) 中。 一个*控制*是用于显示信息或接受用户输入的窗体上的组件。 有关控件的详细信息，请参阅[Windows 窗体控件](index.md)。  
@@ -24,11 +24,11 @@ ms.locfileid: "59106478"
   
 ### <a name="to-draw-a-control-on-a-form"></a>若要绘制的控件在窗体上  
   
-1.  打开窗体。 有关详细信息，请参阅[如何：在设计器中显示 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
+1. 打开窗体。 有关详细信息，请参阅[如何：在设计器中显示 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
   
-2.  在中**工具箱**，单击你想要添加到窗体的控件。  
+2. 在中**工具箱**，单击你想要添加到窗体的控件。  
   
-3.  在表单上，单击希望要定位，控件的左上角的位置和拖动到希望要定位的控件的右下角。  
+3. 在表单上，单击希望要定位，控件的左上角的位置和拖动到希望要定位的控件的右下角。  
   
      该控件添加到具有指定的位置和大小的窗体。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "59106478"
   
 ### <a name="to-drag-a-control-to-a-form"></a>若要将控件拖动到窗体  
   
-1.  打开窗体。 有关详细信息，请参阅[如何：在设计器中显示 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
+1. 打开窗体。 有关详细信息，请参阅[如何：在设计器中显示 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
   
-2.  在中**工具箱**，单击所需的控件并将其拖动到窗体。  
+2. 在中**工具箱**，单击所需的控件并将其拖动到窗体。  
   
      该控件添加到窗体，请在其默认大小的指定位置。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59106478"
   
 ### <a name="to-add-a-control-to-a-form-programmatically"></a>若要以编程方式向窗体添加控件  
   
-1.  处理按钮的方法中`Click`事件在窗体的类，类似于以下内容，以添加到您的控制变量的引用插入代码中设置控件的`Location`，并添加控件。  
+1. 处理按钮的方法中`Click`事件在窗体的类，类似于以下内容，以添加到您的控制变量的引用插入代码中设置控件的`Location`，并添加控件。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 1416b07818ecaeb75e8389c053344b8a367ea69d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c9ddc1a1060b7d70ee7a6c9050971709a433961a
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190634"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427196"
 ---
 # <a name="graphics-and-multimedia"></a>图形和多媒体
 <a name="introduction"></a>
@@ -55,7 +55,7 @@ ms.locfileid: "59190634"
 ### <a name="2-d-shapes"></a>二维形状  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供一个常用、 矢量绘制的库[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]形状，如矩形和椭圆下, 图显示了。  
   
- ![椭圆和矩形](./media/wpfintrofigure4.PNG "WPFIntroFigure4")  
+ ![关系图显示椭圆和矩形。](./media/index/two-deminsional-shapes-ellipses-rectangles.png)  
   
  这些内部 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 形状不仅仅是形状：它们是可编程的元素，用于实现常见控件的许多预期功能，包括键盘和鼠标输入。 下面的示例演示如何处理<xref:System.Windows.UIElement.MouseUp>通过单击引发事件<xref:System.Windows.Shapes.Ellipse>元素。  
   
@@ -89,21 +89,21 @@ End Class
   
  下图显示前面的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记和代码隐藏的输出。  
   
- ![包含文本“你已单击省略号!”的窗口](./media/wpfintrofigure12.png "WPFIntroFigure12")  
+ ![消息框，提示"单击省略号 ！"](./media/index/messagebox-text-output.png)  
   
  有关详细信息，请参阅 [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)。 有关介绍性示例，请参阅[形状元素示例](https://go.microsoft.com/fwlink/?LinkID=160037)。  
   
 ### <a name="2-d-geometries"></a>二维几何图形  
  当 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 形状不足时，可以使用对几何和路径的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持来创建自己的形状。 下图显示如何使用几何创建形状作为图形画笔和剪裁其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元素。  
   
- ![Path 的各种用法](./media/wpfintrofigure5.PNG "WPFIntroFigure5")  
+ ![显示如何使用几何创建形状的屏幕截图。](./media/index/use-geometries-create-shapes.png)  
   
  有关详细信息，请参阅 [Geometry 概述](geometry-overview.md)。 有关介绍性示例，请参阅 [Geometry 示例](https://go.microsoft.com/fwlink/?LinkID=159989)。  
   
 ### <a name="2-d-effects"></a>二维效果  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供的库[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]类可用于创建各种效果。 借助 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 呈现功能，可以绘制具有渐变、位图、绘图和视频的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，并且可以使用旋转、缩放和倾斜来操作它们。 下图演提供了可使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 画笔实现的许多效果的示例。  
   
- ![不同画笔的图示](./media/wpfintrofigure6.PNG "WPFIntroFigure6")  
+ ![图中显示不同的 WPF 画笔和绘制元素。](./media/index/brushes-paint-elements.png)  
   
  有关详细信息，请参阅 [WPF 画笔概述](wpf-brushes-overview.md)。 有关详细信息，请参阅[画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)。  
   
@@ -111,7 +111,8 @@ End Class
 ## <a name="3-d-rendering"></a>三维呈现  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供了一套[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]呈现功能与集成的功能[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]中的图形支持[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]为了使您可以创建更精彩的布局， [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，和数据可视化。 另一方面，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持将 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 图像呈现到 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 形状的表面，下图演示了此功能。  
   
- ![Visual3D 示例屏幕截图](./media/wpfintrofigure13.png "WPFIntroFigure13")  
+
+ ![显示具有不同的纹理的三维形状的示例的屏幕截图。](./media/index/visual-three-dimensional-shape.png)  
   
  有关详细信息，请参阅 [三维图形概述](3-d-graphics-overview.md)。 有关介绍性示例，请参阅 [3-D 实体示例](https://go.microsoft.com/fwlink/?LinkID=159964)。  
   
@@ -119,7 +120,7 @@ End Class
 ## <a name="animation"></a>动画  
  使用动画，可以让控件和元素变大、抖动、旋转和淡出，并创建有趣的转换等。 由于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支持对大多数属性进行动画处理，因此，不仅可以对大多数 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 对象进行动画处理，还可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 对创建的自定义对象进行动画处理。  
   
- ![具有动画多维数据集的图像](./media/wpfintrofigure7.png "WPFIntroFigure7")  
+ ![经过动画处理的多维数据集的屏幕截图。](./media/index/animate-custom-objects.png)  
   
  有关详细信息，请参阅 [动画概述](animation-overview.md)。 有关介绍性示例，请参阅[动画示例库](https://go.microsoft.com/fwlink/?LinkID=159969)。  
   

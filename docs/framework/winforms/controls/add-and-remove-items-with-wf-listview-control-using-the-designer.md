@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], populating
 - ListView control [Windows Forms], adding list items
 ms.assetid: 217611ee-fd11-4d39-9a54-a37c3e781be1
-ms.openlocfilehash: 37e793104eb29c21e67b975a7caa372cc817e57f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6e08a7013242b0dbb433e288c4f8d788cb4e143b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143879"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343839"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>如何：通过使用设计器使用 Windows 窗体 ListView 控件添加和移除项
 将项添加到 Windows 窗体的过程<xref:System.Windows.Forms.ListView>控件主要包括指定项并为其分配属性。 可在任何时间完成添加或删除列表项。  
@@ -22,15 +22,15 @@ ms.locfileid: "59143879"
   
 ### <a name="to-add-or-remove-items-using-the-designer"></a>若要添加或删除项目使用设计器  
   
-1.  选择 <xref:System.Windows.Forms.ListView> 控件。  
+1. 选择 <xref:System.Windows.Forms.ListView> 控件。  
   
-2.  在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.ListView.Items%2A>属性。  
+2. 在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.ListView.Items%2A>属性。  
   
      **列表视图项集合编辑器**出现。  
   
-3.  若要添加某个项，请单击**添加**按钮。 然后可以设置属性的新项，如<xref:System.Windows.Forms.ListView.Text%2A>和<xref:System.Windows.Forms.ListViewItem.ImageIndex%2A>属性。  
+3. 若要添加某个项，请单击**添加**按钮。 然后可以设置属性的新项，如<xref:System.Windows.Forms.ListView.Text%2A>和<xref:System.Windows.Forms.ListViewItem.ImageIndex%2A>属性。  
   
-4.  若要删除某个项，请选择它，然后单击**删除**按钮。  
+4. 若要删除某个项，请选择它，然后单击**删除**按钮。  
   
 ## <a name="see-also"></a>请参阅
 

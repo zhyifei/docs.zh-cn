@@ -2,19 +2,19 @@
 title: 如何：在 CSV 文本文件 (LINQ) (Visual Basic 中) 中计算列值
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 1249b5555c9ef7074410682ad9b26e5b003aea9c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b226d981dd0cd61789e88ab06e602dd619f3f6c9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344216"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>如何：在 CSV 文本文件 (LINQ) (Visual Basic 中) 中计算列值
 此示例演示如何对 .csv 文件的列执行 Sum、Average、Min 和 Max 等聚合计算。 此处所示的示例原则可以应用于其他类型的结构化文本。  
   
 ### <a name="to-create-the-source-file"></a>创建源文件  
   
-1.  将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹。 假定第一列表示学生 ID，后面几列表示四次考试的分数。  
+1. 将以下行复制到名为 scores.csv 的文件，并将文件保存到项目文件夹。 假定第一列表示学生 ID，后面几列表示四次考试的分数。  
   
     ```  
     111, 97, 92, 81, 60  

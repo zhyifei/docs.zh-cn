@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 707b365a0f64055497e6b8814633acf7f4d7097c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200054"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344242"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>使用行为配置和扩展运行时
 行为，可以修改默认行为并添加自定义扩展插件的检查和验证服务配置或修改 Windows Communication Foundation (WCF) 客户端和服务应用程序中的运行时行为。 本主题说明行为接口、如何实现这些接口以及如何以编程方式将它们添加到服务说明（在服务应用程序中）或终结点（在客户端应用程序中）或配置文件中。 有关使用系统提供的行为的详细信息，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)并[指定客户端运行时行为](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  
   
-## <a name="behaviors"></a>行为  
+## <a name="behaviors"></a>Behaviors  
  行为类型将添加到服务或服务终结点说明对象 (服务或客户端上分别) 这些对象用于通过 Windows Communication Foundation (WCF) 创建的 WCF 服务或 WCF 客户端执行的运行时之前。 在运行时构造过程中调用这些行为时，这些行为可以访问运行时属性和方法以修改由协定、绑定和地址构造的运行时。  
   
 ### <a name="behavior-methods"></a>行为方法  
- 所有行为都具有一个 `AddBindingParameters` 方法、一个 `ApplyDispatchBehavior` 方法、一个 `Validate` 方法和一个 `ApplyClientBehavior` 方法，但有一个例外：因为 <xref:System.ServiceModel.Description.IServiceBehavior> 无法在客户端中执行，因此该行为不实现 `ApplyClientBehavior`。  
+ 所有行为都具有`AddBindingParameters`方法，`ApplyDispatchBehavior`方法，`Validate`方法，和一个`ApplyClientBehavior`方法有一个例外：因为<xref:System.ServiceModel.Description.IServiceBehavior>不能执行在客户端，它不实现`ApplyClientBehavior`。  
   
 -   使用 `AddBindingParameters` 方法可修改自定义对象或将自定义对象添加到集合，在构造运行时时，自定义绑定可以访问该集合以使这些对象。 例如，可能会指定影响通道生成方式的保护要求，但通道开发人员可能并不知道这些保护要求。  
   
@@ -54,16 +54,16 @@ ms.locfileid: "50200054"
 #### <a name="service-behaviors"></a>服务行为  
  服务行为实现 <xref:System.ServiceModel.Description.IServiceBehavior>，它是赖以修改整个服务运行时的主要机制。 向服务中添加服务行为有三种方式。  
   
-1.  在服务类上使用属性。  在构造 <xref:System.ServiceModel.ServiceHost> 时，<xref:System.ServiceModel.ServiceHost> 实现使用反射来发现服务类型上的属性集。 如果这些属性中的任何属性是 <xref:System.ServiceModel.Description.IServiceBehavior> 的实现，则会将其添加到 <xref:System.ServiceModel.Description.ServiceDescription> 上的行为集合中。 这允许这些行为参与服务运行时的构造。  
+1. 在服务类上使用属性。  在构造 <xref:System.ServiceModel.ServiceHost> 时，<xref:System.ServiceModel.ServiceHost> 实现使用反射来发现服务类型上的属性集。 如果这些属性中的任何属性是 <xref:System.ServiceModel.Description.IServiceBehavior> 的实现，则会将其添加到 <xref:System.ServiceModel.Description.ServiceDescription> 上的行为集合中。 这允许这些行为参与服务运行时的构造。  
   
-2.  以编程方式将行为添加到 <xref:System.ServiceModel.Description.ServiceDescription> 上的行为集合中。 这可以通过以下几行代码实现：  
+2. 以编程方式将行为添加到 <xref:System.ServiceModel.Description.ServiceDescription> 上的行为集合中。 这可以通过以下几行代码实现：  
   
     ```csharp
     ServiceHost host = new ServiceHost(/* Parameters */);  
     host.Description.Behaviors.Add(/* Service Behavior */);  
     ```  
   
-3.  实现用于扩展配置的自定义 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>。 这将允许在应用程序配置文件中使用服务行为。  
+3. 实现用于扩展配置的自定义 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>。 这将允许在应用程序配置文件中使用服务行为。  
   
  WCF 中的服务行为的示例包括<xref:System.ServiceModel.ServiceBehaviorAttribute>属性， <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>，和<xref:System.ServiceModel.Description.ServiceMetadataBehavior>行为。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "50200054"
   
  向服务中添加终结点行为有两种方式。  
   
-1.  将行为添加到 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 属性。  
+1. 将行为添加到 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 属性。  
   
-2.  实现用于扩展配置的自定义 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>。  
+2. 实现用于扩展配置的自定义 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>。  
   
  有关更多信息和示例，请参见参考主题。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "50200054"
  服务和终结点以及协定行为可以设计成使用代码或属性进行指定；只有服务和终结点行为才可以使用应用程序或 Web 配置文件进行配置。 使用属性来公开行为可以让开发人员在编辑时指定行为，而该行为在运行时是无法添加、删除或修改的。 这种方式通常适合于服务的正确操作始终需要的那些行为（例如 <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 属性的事务相关参数）。 使用配置来公开行为可以让开发人员将这些行为的指定和配置留给部署服务的那些人去完成。 这种方式适合于作为可选组件或其他特定于部署的配置的行为，比如是否为服务或服务的特定授权配置公开元数据。  
   
 > [!NOTE]
->  也可以使用支持配置的行为，并通过将这些行为插入到 machine.config 配置文件并锁定这些项来强制执行公司的应用程序策略。 有关说明和示例，请参阅[如何： 在企业中 Lock Down Endpoints](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
+>  也可以使用支持配置的行为，并通过将这些行为插入到 machine.config 配置文件并锁定这些项来强制执行公司的应用程序策略。 有关说明和示例，请参阅[如何：在企业中的锁定终结点](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
   
  若要使用配置来公开行为，开发人员必须创建 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 的派生类，然后向配置注册该扩展。  
   
@@ -188,23 +188,23 @@ protected override object CreateBehavior()
   
  <xref:System.ServiceModel.ServiceHost> 按以下顺序应用行为：  
   
-1.  服务  
+1. 服务  
   
-2.  协定  
+2. 协定  
   
-3.  终结点  
+3. 终结点  
   
-4.  操作  
+4. 操作  
   
  在任何行为集合内，不保证任何顺序。  
   
  <xref:System.ServiceModel.ChannelFactory%601> 按以下顺序应用行为：  
   
-1.  协定  
+1. 协定  
   
-2.  终结点  
+2. 终结点  
   
-3.  操作  
+3. 操作  
   
  在任何行为集合内，同样不保证任何顺序。  
   
