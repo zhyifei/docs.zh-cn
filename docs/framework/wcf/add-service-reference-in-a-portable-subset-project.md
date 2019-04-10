@@ -2,47 +2,48 @@
 title: 在可移植子集项目中添加服务引用
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: dd07ab5623a66f7ad4b666955027adcaea232db4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: e1d65df46c0ed6d9d271727ad04a661c5e34a1ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145426"
 ---
-# <a name="add-service-reference-in-a-portable-subset-project"></a><span data-ttu-id="5c887-102">在可移植子集项目中添加服务引用</span><span class="sxs-lookup"><span data-stu-id="5c887-102">Add Service Reference in a Portable Subset Project</span></span>
-<span data-ttu-id="5c887-103">可移植子集项目启用.NET 程序集程序员可以维护单个源树和生成系统，同时仍可支持多个.NET 实现 （桌面、 Silverlight、 Windows Phone 和 XBOX）。</span><span class="sxs-lookup"><span data-stu-id="5c887-103">Portable subset projects enable .NET assembly programmers to maintain a single source tree and build system while still supporting multiple .NET implementations (desktop, Silverlight, Windows Phone, and XBOX).</span></span> <span data-ttu-id="5c887-104">可移植子集项目只引用.NET 可移植库，后者是可以使用任何.NET 实现的.NET framework 程序集。</span><span class="sxs-lookup"><span data-stu-id="5c887-104">Portable subset projects only reference .NET portable libraries which are a .NET framework assembly that can be used on any .NET implementation.</span></span>  
+# <a name="add-service-reference-in-a-portable-subset-project"></a><span data-ttu-id="b3b61-102">在可移植子集项目中添加服务引用</span><span class="sxs-lookup"><span data-stu-id="b3b61-102">Add Service Reference in a Portable Subset Project</span></span>
+<span data-ttu-id="b3b61-103">可移植子集项目启用.NET 程序集程序员可以维护单个源树和生成系统，同时仍可支持多个.NET 实现 （桌面、 Silverlight、 Windows Phone 和 XBOX）。</span><span class="sxs-lookup"><span data-stu-id="b3b61-103">Portable subset projects enable .NET assembly programmers to maintain a single source tree and build system while still supporting multiple .NET implementations (desktop, Silverlight, Windows Phone, and XBOX).</span></span> <span data-ttu-id="b3b61-104">可移植子集项目只引用.NET 可移植库，后者是可以使用任何.NET 实现的.NET framework 程序集。</span><span class="sxs-lookup"><span data-stu-id="b3b61-104">Portable subset projects only reference .NET portable libraries which are a .NET framework assembly that can be used on any .NET implementation.</span></span>  
   
-## <a name="add-service-reference-details"></a><span data-ttu-id="5c887-105">添加服务引用详细信息</span><span class="sxs-lookup"><span data-stu-id="5c887-105">Add Service Reference Details</span></span>  
- <span data-ttu-id="5c887-106">在可移植子集项目中添加服务引用时，将强制执行以下限制： </span><span class="sxs-lookup"><span data-stu-id="5c887-106">When adding a service reference in a portable subset project the following restrictions are enforced:</span></span>  
+## <a name="add-service-reference-details"></a><span data-ttu-id="b3b61-105">添加服务引用详细信息</span><span class="sxs-lookup"><span data-stu-id="b3b61-105">Add Service Reference Details</span></span>  
+ <span data-ttu-id="b3b61-106">在可移植子集项目中添加服务引用时，将强制执行以下限制： </span><span class="sxs-lookup"><span data-stu-id="b3b61-106">When adding a service reference in a portable subset project the following restrictions are enforced:</span></span>  
   
-1.  <span data-ttu-id="5c887-107">对于 <xref:System.Xml.Serialization.XmlSerializer>，仅允许文本编码。</span><span class="sxs-lookup"><span data-stu-id="5c887-107">For <xref:System.Xml.Serialization.XmlSerializer>, only literal encodings are allowed.</span></span> <span data-ttu-id="5c887-108">SOAP 编码在导入过程中生成错误。</span><span class="sxs-lookup"><span data-stu-id="5c887-108">SOAP encodings generate an error during import.</span></span>  
+1.  <span data-ttu-id="b3b61-107">对于 <xref:System.Xml.Serialization.XmlSerializer>，仅允许文本编码。</span><span class="sxs-lookup"><span data-stu-id="b3b61-107">For <xref:System.Xml.Serialization.XmlSerializer>, only literal encodings are allowed.</span></span> <span data-ttu-id="b3b61-108">SOAP 编码在导入过程中生成错误。</span><span class="sxs-lookup"><span data-stu-id="b3b61-108">SOAP encodings generate an error during import.</span></span>  
   
-2.  <span data-ttu-id="5c887-109">针对使用 <xref:System.Runtime.Serialization.DataContractSerializer> 方案的服务，提供了数据协定代理项以确保重用的类型仅来自可移植子集。</span><span class="sxs-lookup"><span data-stu-id="5c887-109">For services that use <xref:System.Runtime.Serialization.DataContractSerializer> scenarios, a data contract surrogate is provided to ensure that reused types come only from the portable subset.</span></span>  
+2.  <span data-ttu-id="b3b61-109">针对使用 <xref:System.Runtime.Serialization.DataContractSerializer> 方案的服务，提供了数据协定代理项以确保重用的类型仅来自可移植子集。</span><span class="sxs-lookup"><span data-stu-id="b3b61-109">For services that use <xref:System.Runtime.Serialization.DataContractSerializer> scenarios, a data contract surrogate is provided to ensure that reused types come only from the portable subset.</span></span>  
   
-3.  <span data-ttu-id="5c887-110">将忽略依赖可移植库中不支持的绑定的终结点（除没有事务流、可靠会话或 MTOM 编码的 <xref:System.ServiceModel.BasicHttpBinding>、<xref:System.ServiceModel.WSHttpBinding> 的绑定以及等效的自定义绑定之外的所有绑定）。</span><span class="sxs-lookup"><span data-stu-id="5c887-110">Endpoints which rely on bindings not supported in portable libraries (all bindings except <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> without transaction flow, reliable sessions, or MTOM encoding, and equivalent custom bindings) are ignored.</span></span>  
+3.  <span data-ttu-id="b3b61-110">将忽略依赖可移植库中不支持的绑定的终结点（除没有事务流、可靠会话或 MTOM 编码的 <xref:System.ServiceModel.BasicHttpBinding>、<xref:System.ServiceModel.WSHttpBinding> 的绑定以及等效的自定义绑定之外的所有绑定）。</span><span class="sxs-lookup"><span data-stu-id="b3b61-110">Endpoints which rely on bindings not supported in portable libraries (all bindings except <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> without transaction flow, reliable sessions, or MTOM encoding, and equivalent custom bindings) are ignored.</span></span>  
   
-4.  <span data-ttu-id="5c887-111">在导入之前的所有操作中，将从所有消息描述删除消息标头。</span><span class="sxs-lookup"><span data-stu-id="5c887-111">Message headers are deleted from all message descriptions in all operations before import.</span></span>  
+4.  <span data-ttu-id="b3b61-111">在导入之前的所有操作中，将从所有消息描述删除消息标头。</span><span class="sxs-lookup"><span data-stu-id="b3b61-111">Message headers are deleted from all message descriptions in all operations before import.</span></span>  
   
-5.  <span data-ttu-id="5c887-112">将从生成的客户端代理代码删除不可移植的特性 <xref:System.ComponentModel.DesignerCategoryAttribute>、<xref:System.SerializableAttribute> 和 <xref:System.ServiceModel.TransactionFlowAttribute>。</span><span class="sxs-lookup"><span data-stu-id="5c887-112">Non-portable attributes <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute>, and <xref:System.ServiceModel.TransactionFlowAttribute> are removed from generated client proxy code.</span></span>  
+5.  <span data-ttu-id="b3b61-112">将从生成的客户端代理代码删除不可移植的特性 <xref:System.ComponentModel.DesignerCategoryAttribute>、<xref:System.SerializableAttribute> 和 <xref:System.ServiceModel.TransactionFlowAttribute>。</span><span class="sxs-lookup"><span data-stu-id="b3b61-112">Non-portable attributes <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute>, and <xref:System.ServiceModel.TransactionFlowAttribute> are removed from generated client proxy code.</span></span>  
   
-6.  <span data-ttu-id="5c887-113">将从 <xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.OperationContractAttribute> 和 <xref:System.ServiceModel.FaultContractAttribute> 删除不可移植的属性 ProtectionLevel、SessionMode、IsInitiating、IsTerminating。</span><span class="sxs-lookup"><span data-stu-id="5c887-113">Non-portable properties ProtectionLevel, SessionMode, IsInitiating, IsTerminating are removed from <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, and <xref:System.ServiceModel.FaultContractAttribute>.</span></span>  
+6.  <span data-ttu-id="b3b61-113">将从 <xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.OperationContractAttribute> 和 <xref:System.ServiceModel.FaultContractAttribute> 删除不可移植的属性 ProtectionLevel、SessionMode、IsInitiating、IsTerminating。</span><span class="sxs-lookup"><span data-stu-id="b3b61-113">Non-portable properties ProtectionLevel, SessionMode, IsInitiating, IsTerminating are removed from <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, and <xref:System.ServiceModel.FaultContractAttribute>.</span></span>  
   
-7.  <span data-ttu-id="5c887-114">所有服务操作都是作为客户端代理上的异步操作生成的。</span><span class="sxs-lookup"><span data-stu-id="5c887-114">All service operations are generated as asynchronous operations on the client proxy.</span></span>  
+7.  <span data-ttu-id="b3b61-114">所有服务操作都是作为客户端代理上的异步操作生成的。</span><span class="sxs-lookup"><span data-stu-id="b3b61-114">All service operations are generated as asynchronous operations on the client proxy.</span></span>  
   
-8.  <span data-ttu-id="5c887-115">将删除所生成的使用不可移植类型的客户端构造函数。</span><span class="sxs-lookup"><span data-stu-id="5c887-115">Generated client constructors which use non-portable types are removed.</span></span>  
+8.  <span data-ttu-id="b3b61-115">将删除所生成的使用不可移植类型的客户端构造函数。</span><span class="sxs-lookup"><span data-stu-id="b3b61-115">Generated client constructors which use non-portable types are removed.</span></span>  
   
-9. <span data-ttu-id="5c887-116">在生成的客户端上公开一个 <xref:System.Net.CookieContainer> 实例。</span><span class="sxs-lookup"><span data-stu-id="5c887-116">A <xref:System.Net.CookieContainer> instance is exposed on the generated client.</span></span>  
+9. <span data-ttu-id="b3b61-116">在生成的客户端上公开一个 <xref:System.Net.CookieContainer> 实例。</span><span class="sxs-lookup"><span data-stu-id="b3b61-116">A <xref:System.Net.CookieContainer> instance is exposed on the generated client.</span></span>  
   
-10. <span data-ttu-id="5c887-117">在文件顶部插入注释以标识代码生成器的程序集和版本：`// This code was auto-generated by Microsoft.VisualStudio.Portable.AddServiceReference, version 1.0.0.0`</span><span class="sxs-lookup"><span data-stu-id="5c887-117">A comment is inserted at the top of the file identifying the assembly and version of the code generator:`// This code was auto-generated by Microsoft.VisualStudio.Portable.AddServiceReference, version 1.0.0.0`</span></span>  
+10. <span data-ttu-id="b3b61-117">在标识的程序集和代码生成器的版本的文件的顶部插入注释：</span><span class="sxs-lookup"><span data-stu-id="b3b61-117">A comment is inserted at the top of the file identifying the assembly and version of the code generator:</span></span>`// This code was auto-generated by Microsoft.VisualStudio.Portable.AddServiceReference, version 1.0.0.0`  
   
-11. <span data-ttu-id="5c887-118">不支持 <xref:System.Runtime.Serialization.ISerializable> 接口。</span><span class="sxs-lookup"><span data-stu-id="5c887-118">The <xref:System.Runtime.Serialization.ISerializable> interface is not supported.</span></span>  
+11. <span data-ttu-id="b3b61-118">不支持 <xref:System.Runtime.Serialization.ISerializable> 接口。</span><span class="sxs-lookup"><span data-stu-id="b3b61-118">The <xref:System.Runtime.Serialization.ISerializable> interface is not supported.</span></span>  
   
-12. <span data-ttu-id="5c887-119">不支持 Net.Tcp 和 PollingDuplex 绑定</span><span class="sxs-lookup"><span data-stu-id="5c887-119">Net.Tcp and PollingDuplex bindings are not supported</span></span>  
+12. <span data-ttu-id="b3b61-119">不支持 Net.Tcp 和 PollingDuplex 绑定</span><span class="sxs-lookup"><span data-stu-id="b3b61-119">Net.Tcp and PollingDuplex bindings are not supported</span></span>  
   
-13. <span data-ttu-id="5c887-120">始终将 <xref:System.Runtime.Serialization.DataContractSerializer> 用于错误。</span><span class="sxs-lookup"><span data-stu-id="5c887-120">The <xref:System.Runtime.Serialization.DataContractSerializer> will always be used for faults.</span></span>  
+13. <span data-ttu-id="b3b61-120">始终将 <xref:System.Runtime.Serialization.DataContractSerializer> 用于错误。</span><span class="sxs-lookup"><span data-stu-id="b3b61-120">The <xref:System.Runtime.Serialization.DataContractSerializer> will always be used for faults.</span></span>  
   
-14. <span data-ttu-id="5c887-121">可移植子集项目中不支持 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A>。</span><span class="sxs-lookup"><span data-stu-id="5c887-121"><xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> is not supported in portable subset projects.</span></span>  
+14. <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> <span data-ttu-id="b3b61-121">不支持可移植子集项目中。</span><span class="sxs-lookup"><span data-stu-id="b3b61-121">is not supported in portable subset projects.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5c887-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="5c887-122">See also</span></span>
-- [<span data-ttu-id="5c887-123">使用 WCF 客户端访问服务</span><span class="sxs-lookup"><span data-stu-id="5c887-123">Accessing Services Using a WCF Client</span></span>](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [<span data-ttu-id="5c887-124">可移植类库</span><span class="sxs-lookup"><span data-stu-id="5c887-124">Portable Class Library</span></span>](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+## <a name="see-also"></a><span data-ttu-id="b3b61-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="b3b61-122">See also</span></span>
+
+- [<span data-ttu-id="b3b61-123">使用 WCF 客户端访问服务</span><span class="sxs-lookup"><span data-stu-id="b3b61-123">Accessing Services Using a WCF Client</span></span>](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [<span data-ttu-id="b3b61-124">可移植类库</span><span class="sxs-lookup"><span data-stu-id="b3b61-124">Portable Class Library</span></span>](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

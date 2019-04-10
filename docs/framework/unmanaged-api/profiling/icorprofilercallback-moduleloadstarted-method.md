@@ -17,38 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7bc4b1a58bba592cfff408f034fb19c0c27616c3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3503aa1eb86246365e31f52313893ad8713f5748
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153681"
 ---
-# <a name="icorprofilercallbackmoduleloadstarted-method"></a><span data-ttu-id="55ea7-102">ICorProfilerCallback::ModuleLoadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="55ea7-102">ICorProfilerCallback::ModuleLoadStarted Method</span></span>
-<span data-ttu-id="55ea7-103">通知探查器正在加载的模块。</span><span class="sxs-lookup"><span data-stu-id="55ea7-103">Notifies the profiler that a module is being loaded.</span></span>  
+# <a name="icorprofilercallbackmoduleloadstarted-method"></a><span data-ttu-id="377dc-102">ICorProfilerCallback::ModuleLoadStarted 方法</span><span class="sxs-lookup"><span data-stu-id="377dc-102">ICorProfilerCallback::ModuleLoadStarted Method</span></span>
+<span data-ttu-id="377dc-103">通知探查器正在加载的模块。</span><span class="sxs-lookup"><span data-stu-id="377dc-103">Notifies the profiler that a module is being loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55ea7-104">语法</span><span class="sxs-lookup"><span data-stu-id="55ea7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="377dc-104">语法</span><span class="sxs-lookup"><span data-stu-id="377dc-104">Syntax</span></span>  
   
 ```  
 HRESULT ModuleLoadStarted(  
     [in] ModuleID moduleId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="55ea7-105">参数</span><span class="sxs-lookup"><span data-stu-id="55ea7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="377dc-105">参数</span><span class="sxs-lookup"><span data-stu-id="377dc-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="55ea7-106">[in]正在加载的模块的 ID。</span><span class="sxs-lookup"><span data-stu-id="55ea7-106">[in] The ID of the module that is being loaded.</span></span>  
+ <span data-ttu-id="377dc-106">[in]正在加载的模块的 ID。</span><span class="sxs-lookup"><span data-stu-id="377dc-106">[in] The ID of the module that is being loaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="55ea7-107">备注</span><span class="sxs-lookup"><span data-stu-id="55ea7-107">Remarks</span></span>  
- <span data-ttu-id="55ea7-108">值`moduleId`不是有效的信息请求之前[icorprofilercallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)调用方法。</span><span class="sxs-lookup"><span data-stu-id="55ea7-108">The value of `moduleId` is not valid for an information request until the [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="377dc-107">备注</span><span class="sxs-lookup"><span data-stu-id="377dc-107">Remarks</span></span>  
+ <span data-ttu-id="377dc-108">值`moduleId`不是有效的信息请求之前[icorprofilercallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)调用方法。</span><span class="sxs-lookup"><span data-stu-id="377dc-108">The value of `moduleId` is not valid for an information request until the [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) method is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55ea7-109">要求</span><span class="sxs-lookup"><span data-stu-id="55ea7-109">Requirements</span></span>  
- <span data-ttu-id="55ea7-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="55ea7-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="377dc-109">要求</span><span class="sxs-lookup"><span data-stu-id="377dc-109">Requirements</span></span>  
+ <span data-ttu-id="377dc-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="377dc-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="55ea7-111">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="55ea7-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="377dc-111">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="377dc-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="55ea7-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="55ea7-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="377dc-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="377dc-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="55ea7-113">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55ea7-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="377dc-113">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="377dc-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="55ea7-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="55ea7-114">See also</span></span>
-- [<span data-ttu-id="55ea7-115">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="55ea7-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="377dc-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="377dc-114">See also</span></span>
+
+- [<span data-ttu-id="377dc-115">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="377dc-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

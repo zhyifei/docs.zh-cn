@@ -8,27 +8,28 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: 0328b5da837fa11a6c2b7dba9ae761a1e88729bb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142683"
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="86e17-102">可视化层编程帮助主题</span><span class="sxs-lookup"><span data-stu-id="86e17-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="86e17-103">在本部分中的主题演示如何使用可视化层进行命中测试和低级别的组合。</span><span class="sxs-lookup"><span data-stu-id="86e17-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="f00c6-102">可视化层编程帮助主题</span><span class="sxs-lookup"><span data-stu-id="f00c6-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="f00c6-103">在本部分中的主题演示如何使用可视化层进行命中测试和低级别的组合。</span><span class="sxs-lookup"><span data-stu-id="f00c6-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="86e17-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="86e17-104">In This Section</span></span>  
- [<span data-ttu-id="86e17-105">获取视觉对象偏移</span><span class="sxs-lookup"><span data-stu-id="86e17-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="86e17-106">枚举视觉对象的绘图内容</span><span class="sxs-lookup"><span data-stu-id="86e17-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="86e17-107">对视觉对象中的几何图形进行命中测试</span><span class="sxs-lookup"><span data-stu-id="86e17-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="86e17-108">将几何图形用作参数的命中测试</span><span class="sxs-lookup"><span data-stu-id="86e17-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="86e17-109">使用 Win32 宿主容器进行命中测试</span><span class="sxs-lookup"><span data-stu-id="86e17-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="86e17-110">使用 CompositionTarget 按每帧间隔呈现</span><span class="sxs-lookup"><span data-stu-id="86e17-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f00c6-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="f00c6-104">In This Section</span></span>  
+ [<span data-ttu-id="f00c6-105">获取视觉对象的偏移量</span><span class="sxs-lookup"><span data-stu-id="f00c6-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="f00c6-106">枚举视觉对象的绘图内容</span><span class="sxs-lookup"><span data-stu-id="f00c6-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="f00c6-107">对视觉对象中的几何图形进行命中测试</span><span class="sxs-lookup"><span data-stu-id="f00c6-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="f00c6-108">对用作参数的几何图形进行命中测试</span><span class="sxs-lookup"><span data-stu-id="f00c6-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="f00c6-109">使用 Win32 宿主容器进行命中测试</span><span class="sxs-lookup"><span data-stu-id="f00c6-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="f00c6-110">使用 CompositionTarget 按每帧间隔呈现</span><span class="sxs-lookup"><span data-stu-id="f00c6-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="86e17-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="86e17-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f00c6-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="f00c6-111">See also</span></span>
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="86e17-112">WPF 图形呈现概述</span><span class="sxs-lookup"><span data-stu-id="86e17-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="86e17-113">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="86e17-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="f00c6-112">WPF 图形呈现疑难解答</span><span class="sxs-lookup"><span data-stu-id="f00c6-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="f00c6-113">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="f00c6-113">Graphics and Multimedia</span></span>](index.md)
