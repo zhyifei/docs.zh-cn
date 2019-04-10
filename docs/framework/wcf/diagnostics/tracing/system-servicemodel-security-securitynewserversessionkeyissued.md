@@ -2,20 +2,21 @@
 title: System.ServiceModel.Security.SecurityNewServerSessionKeyIssued
 ms.date: 03/30/2017
 ms.assetid: 2fccc492-61ea-45a8-8f1b-be65dedc5e46
-ms.openlocfilehash: 4fd8db59ddf3a7645d97d81769f0c5550ea36431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24d285fdd1984759d40cbe13a16abc9a54feff26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229805"
 ---
-# <a name="systemservicemodelsecuritysecuritynewserversessionkeyissued"></a><span data-ttu-id="97264-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="97264-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>
-<span data-ttu-id="97264-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="97264-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>  
+# <a name="systemservicemodelsecuritysecuritynewserversessionkeyissued"></a><span data-ttu-id="06af1-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="06af1-102">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>
+<span data-ttu-id="06af1-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span><span class="sxs-lookup"><span data-stu-id="06af1-103">System.ServiceModel.Security.SecurityNewServerSessionKeyIssued</span></span>  
   
-## <a name="description"></a><span data-ttu-id="97264-104">描述</span><span class="sxs-lookup"><span data-stu-id="97264-104">Description</span></span>  
- <span data-ttu-id="97264-105">服务器已颁发新的安全会话密钥。</span><span class="sxs-lookup"><span data-stu-id="97264-105">A new security session key was issued by the server.</span></span>  
+## <a name="description"></a><span data-ttu-id="06af1-104">描述</span><span class="sxs-lookup"><span data-stu-id="06af1-104">Description</span></span>  
+ <span data-ttu-id="06af1-105">服务器已颁发新的安全会话密钥。</span><span class="sxs-lookup"><span data-stu-id="06af1-105">A new security session key was issued by the server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97264-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="97264-106">See also</span></span>
-- [<span data-ttu-id="97264-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="97264-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="97264-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="97264-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="97264-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="97264-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="06af1-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="06af1-106">See also</span></span>
+
+- [<span data-ttu-id="06af1-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="06af1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="06af1-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="06af1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="06af1-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="06af1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

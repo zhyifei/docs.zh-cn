@@ -2,43 +2,44 @@
 title: IN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-ms.openlocfilehash: a8c028bf0fc2890b932c62aa9efe94cab153503d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f4fa8cbc07513321e59b93503b59af172c0a6f05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211317"
 ---
-# <a name="in-entity-sql"></a><span data-ttu-id="a1826-102">IN (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="a1826-102">IN (Entity SQL)</span></span>
-<span data-ttu-id="a1826-103">确定某个值是否与某个集合中的任何值匹配。</span><span class="sxs-lookup"><span data-stu-id="a1826-103">Determines whether a value matches any value in a collection.</span></span>  
+# <a name="in-entity-sql"></a><span data-ttu-id="7daee-102">IN (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="7daee-102">IN (Entity SQL)</span></span>
+<span data-ttu-id="7daee-103">确定某个值是否与某个集合中的任何值匹配。</span><span class="sxs-lookup"><span data-stu-id="7daee-103">Determines whether a value matches any value in a collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a1826-104">语法</span><span class="sxs-lookup"><span data-stu-id="a1826-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7daee-104">语法</span><span class="sxs-lookup"><span data-stu-id="7daee-104">Syntax</span></span>  
   
 ```  
 value [ NOT ] IN expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="a1826-105">自变量</span><span class="sxs-lookup"><span data-stu-id="a1826-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="7daee-105">自变量</span><span class="sxs-lookup"><span data-stu-id="7daee-105">Arguments</span></span>  
  `value`  
- <span data-ttu-id="a1826-106">返回匹配值的任何有效表达式。</span><span class="sxs-lookup"><span data-stu-id="a1826-106">Any valid expression that returns the value to match.</span></span>  
+ <span data-ttu-id="7daee-106">返回匹配值的任何有效表达式。</span><span class="sxs-lookup"><span data-stu-id="7daee-106">Any valid expression that returns the value to match.</span></span>  
   
- <span data-ttu-id="a1826-107">[ NOT ]</span><span class="sxs-lookup"><span data-stu-id="a1826-107">[ NOT ]</span></span>  
- <span data-ttu-id="a1826-108">指定对 IN 的 `Boolean` 结果取反。</span><span class="sxs-lookup"><span data-stu-id="a1826-108">Specifies that the `Boolean` result of IN be negated.</span></span>  
+ <span data-ttu-id="7daee-107">[ NOT ]</span><span class="sxs-lookup"><span data-stu-id="7daee-107">[ NOT ]</span></span>  
+ <span data-ttu-id="7daee-108">指定对 IN 的 `Boolean` 结果取反。</span><span class="sxs-lookup"><span data-stu-id="7daee-108">Specifies that the `Boolean` result of IN be negated.</span></span>  
   
  `expression`  
- <span data-ttu-id="a1826-109">返回集合以测试是否具有匹配的任何有效表达式。</span><span class="sxs-lookup"><span data-stu-id="a1826-109">Any valid expression that returns the collection to test for a match.</span></span> <span data-ttu-id="a1826-110">所有表达式都必须与 `value`一样属于同一类型或属于公共基类型或派生类型。</span><span class="sxs-lookup"><span data-stu-id="a1826-110">All expressions must be of the same type or of a common base or derived type as `value`.</span></span>  
+ <span data-ttu-id="7daee-109">返回集合以测试是否具有匹配的任何有效表达式。</span><span class="sxs-lookup"><span data-stu-id="7daee-109">Any valid expression that returns the collection to test for a match.</span></span> <span data-ttu-id="7daee-110">所有表达式都必须与 `value`一样属于同一类型或属于公共基类型或派生类型。</span><span class="sxs-lookup"><span data-stu-id="7daee-110">All expressions must be of the same type or of a common base or derived type as `value`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a1826-111">返回值</span><span class="sxs-lookup"><span data-stu-id="a1826-111">Return Value</span></span>  
- <span data-ttu-id="a1826-112">如果在集合中找到此值，则为 `true`；如果值为空或集合为空，则为空；否则为 `false`。</span><span class="sxs-lookup"><span data-stu-id="a1826-112">`true` if the value is found in the collection; null if the value is null or the collection is null; otherwise, `false`.</span></span> <span data-ttu-id="a1826-113">使用 NOT IN 可对 IN 的结果取反。</span><span class="sxs-lookup"><span data-stu-id="a1826-113">Using NOT IN negates the results of IN.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7daee-111">返回值</span><span class="sxs-lookup"><span data-stu-id="7daee-111">Return Value</span></span>  
+ `true` <span data-ttu-id="7daee-112">如果集合; 中找到的值如果值为 null，则为 null 或集合为 null;否则为`false`。</span><span class="sxs-lookup"><span data-stu-id="7daee-112">if the value is found in the collection; null if the value is null or the collection is null; otherwise, `false`.</span></span> <span data-ttu-id="7daee-113">使用 NOT IN 可对 IN 的结果取反。</span><span class="sxs-lookup"><span data-stu-id="7daee-113">Using NOT IN negates the results of IN.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a1826-114">示例</span><span class="sxs-lookup"><span data-stu-id="a1826-114">Example</span></span>  
- <span data-ttu-id="a1826-115">以下 Entity SQL 查询使用 IN 运算符以确定某个值是否与集合中的任何值匹配。</span><span class="sxs-lookup"><span data-stu-id="a1826-115">The following Entity SQL query uses the IN operator to determine whether a value matches any value in a collection.</span></span> <span data-ttu-id="a1826-116">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="a1826-116">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="a1826-117">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="a1826-117">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="7daee-114">示例</span><span class="sxs-lookup"><span data-stu-id="7daee-114">Example</span></span>  
+ <span data-ttu-id="7daee-115">以下 Entity SQL 查询使用 IN 运算符以确定某个值是否与集合中的任何值匹配。</span><span class="sxs-lookup"><span data-stu-id="7daee-115">The following Entity SQL query uses the IN operator to determine whether a value matches any value in a collection.</span></span> <span data-ttu-id="7daee-116">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="7daee-116">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="7daee-117">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="7daee-117">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="a1826-118">按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。</span><span class="sxs-lookup"><span data-stu-id="a1826-118">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="7daee-118">按照中的过程[如何：执行返回 StructuralType 结果的查询](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。</span><span class="sxs-lookup"><span data-stu-id="7daee-118">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="a1826-119">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="a1826-119">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="7daee-119">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="7daee-119">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#IN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#in)]  
   
-## <a name="see-also"></a><span data-ttu-id="a1826-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="a1826-120">See also</span></span>
-- [<span data-ttu-id="a1826-121">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="a1826-121">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="7daee-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="7daee-120">See also</span></span>
+
+- [<span data-ttu-id="7daee-121">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="7daee-121">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

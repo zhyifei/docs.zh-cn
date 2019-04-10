@@ -7,37 +7,38 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 5ee0f8a6cd40e6293062b62b8bc81bd4c54903c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b4f5de92f19223a6692236fb3496a1dbbddef5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226425"
 ---
-# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="0d330-102">关键帧动画帮助主题</span><span class="sxs-lookup"><span data-stu-id="0d330-102">Key-Frame Animation How-to Topics</span></span>
-<span data-ttu-id="0d330-103">在本部分中的主题演示如何使用关键帧动画进行动画处理超过两个属性值和控制内插。</span><span class="sxs-lookup"><span data-stu-id="0d330-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
+# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="e0468-102">关键帧动画帮助主题</span><span class="sxs-lookup"><span data-stu-id="e0468-102">Key-Frame Animation How-to Topics</span></span>
+<span data-ttu-id="e0468-103">在本部分中的主题演示如何使用关键帧动画进行动画处理超过两个属性值和控制内插。</span><span class="sxs-lookup"><span data-stu-id="e0468-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0d330-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="0d330-104">In This Section</span></span>  
- [<span data-ttu-id="0d330-105">使用关键帧为对象设置动画效果</span><span class="sxs-lookup"><span data-stu-id="0d330-105">Animate an Object by Using Key Frames</span></span>](how-to-animate-an-object-by-using-key-frames.md)  
- [<span data-ttu-id="0d330-106">使用关键帧为布尔值设置动画效果</span><span class="sxs-lookup"><span data-stu-id="0d330-106">Animate a Boolean by Using Key Frames</span></span>](how-to-animate-a-boolean-by-using-key-frames.md)  
- [<span data-ttu-id="0d330-107">使用关键帧为双精度值设置动画效果</span><span class="sxs-lookup"><span data-stu-id="0d330-107">Animate a Double by Using Key Frames</span></span>](how-to-animate-a-double-by-using-key-frames.md)  
- [<span data-ttu-id="0d330-108">使用关键帧为矩阵设置动画效果</span><span class="sxs-lookup"><span data-stu-id="0d330-108">Animate a Matrix by Using Key Frames</span></span>](how-to-animate-a-matrix-by-using-key-frames.md)  
- [<span data-ttu-id="0d330-109">使用关键帧为点设置动画效果</span><span class="sxs-lookup"><span data-stu-id="0d330-109">Animate a Point by Using Key Frames</span></span>](how-to-animate-a-point-by-using-key-frames.md)  
- [<span data-ttu-id="0d330-110">使用关键帧为矩形几何形状设置动画效果</span><span class="sxs-lookup"><span data-stu-id="0d330-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [<span data-ttu-id="0d330-111">使用关键帧为字符串设置动画效果</span><span class="sxs-lookup"><span data-stu-id="0d330-111">Animate a String by Using Key Frames</span></span>](how-to-animate-a-string-by-using-key-frames.md)  
- [<span data-ttu-id="0d330-112">使用关键帧为颜色设置动画效果</span><span class="sxs-lookup"><span data-stu-id="0d330-112">Animate Color by Using Key Frames</span></span>](how-to-animate-color-by-using-key-frames.md)  
- [<span data-ttu-id="0d330-113">使用关键帧为大小变化设置动画效果</span><span class="sxs-lookup"><span data-stu-id="0d330-113">Animate Size Changes by Using Key Frames</span></span>](how-to-animate-size-changes-by-using-key-frames.md)  
- [<span data-ttu-id="0d330-114">使用关键帧为边框粗细设置动画效果</span><span class="sxs-lookup"><span data-stu-id="0d330-114">Animate the Thickness of a Border by Using Key Frames</span></span>](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [<span data-ttu-id="0d330-115">控制关键帧动画计时</span><span class="sxs-lookup"><span data-stu-id="0d330-115">Control Key-Frame Animation Timing</span></span>](how-to-control-key-frame-animation-timing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e0468-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="e0468-104">In This Section</span></span>  
+ [<span data-ttu-id="e0468-105">使用关键帧对对象进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e0468-105">Animate an Object by Using Key Frames</span></span>](how-to-animate-an-object-by-using-key-frames.md)  
+ [<span data-ttu-id="e0468-106">使用关键帧对布尔值进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e0468-106">Animate a Boolean by Using Key Frames</span></span>](how-to-animate-a-boolean-by-using-key-frames.md)  
+ [<span data-ttu-id="e0468-107">使用关键帧对双精度值进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e0468-107">Animate a Double by Using Key Frames</span></span>](how-to-animate-a-double-by-using-key-frames.md)  
+ [<span data-ttu-id="e0468-108">使用关键帧对矩阵进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e0468-108">Animate a Matrix by Using Key Frames</span></span>](how-to-animate-a-matrix-by-using-key-frames.md)  
+ [<span data-ttu-id="e0468-109">使用关键帧对点进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e0468-109">Animate a Point by Using Key Frames</span></span>](how-to-animate-a-point-by-using-key-frames.md)  
+ [<span data-ttu-id="e0468-110">使用关键帧对矩形几何形状进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e0468-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [<span data-ttu-id="e0468-111">使用关键帧对字符串进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e0468-111">Animate a String by Using Key Frames</span></span>](how-to-animate-a-string-by-using-key-frames.md)  
+ [<span data-ttu-id="e0468-112">使用关键帧对颜色进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e0468-112">Animate Color by Using Key Frames</span></span>](how-to-animate-color-by-using-key-frames.md)  
+ [<span data-ttu-id="e0468-113">使用关键帧对大小变化进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e0468-113">Animate Size Changes by Using Key Frames</span></span>](how-to-animate-size-changes-by-using-key-frames.md)  
+ [<span data-ttu-id="e0468-114">使用关键帧对边框的粗细进行动画处理</span><span class="sxs-lookup"><span data-stu-id="e0468-114">Animate the Thickness of a Border by Using Key Frames</span></span>](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [<span data-ttu-id="e0468-115">控制关键帧动画的计时</span><span class="sxs-lookup"><span data-stu-id="e0468-115">Control Key-Frame Animation Timing</span></span>](how-to-control-key-frame-animation-timing.md)  
   
-## <a name="reference"></a><span data-ttu-id="0d330-116">参考</span><span class="sxs-lookup"><span data-stu-id="0d330-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e0468-116">参考</span><span class="sxs-lookup"><span data-stu-id="e0468-116">Reference</span></span>  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a><span data-ttu-id="0d330-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="0d330-117">See also</span></span>
-- [<span data-ttu-id="0d330-118">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="0d330-118">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="0d330-119">动画概述</span><span class="sxs-lookup"><span data-stu-id="0d330-119">Animation Overview</span></span>](animation-overview.md)
-- [<span data-ttu-id="0d330-120">关键帧动画概述</span><span class="sxs-lookup"><span data-stu-id="0d330-120">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="e0468-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="e0468-117">See also</span></span>
+
+- [<span data-ttu-id="e0468-118">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="e0468-118">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="e0468-119">动画概述</span><span class="sxs-lookup"><span data-stu-id="e0468-119">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="e0468-120">关键帧动画概述</span><span class="sxs-lookup"><span data-stu-id="e0468-120">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)

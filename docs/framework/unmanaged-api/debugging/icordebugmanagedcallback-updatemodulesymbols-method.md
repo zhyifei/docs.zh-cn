@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70f4d61eac381ede94fd9f7369c84d9d1d210c55
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 581ea4f974bfec3961a32cd7c9985a5e45d2bddd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209978"
 ---
-# <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a><span data-ttu-id="f461b-102">ICorDebugManagedCallback::UpdateModuleSymbols 方法</span><span class="sxs-lookup"><span data-stu-id="f461b-102">ICorDebugManagedCallback::UpdateModuleSymbols Method</span></span>
-<span data-ttu-id="f461b-103">通知调试器已更改了公共语言运行时模块的符号。</span><span class="sxs-lookup"><span data-stu-id="f461b-103">Notifies the debugger that the symbols for a common language runtime module have changed.</span></span>  
+# <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a><span data-ttu-id="ffabc-102">ICorDebugManagedCallback::UpdateModuleSymbols 方法</span><span class="sxs-lookup"><span data-stu-id="ffabc-102">ICorDebugManagedCallback::UpdateModuleSymbols Method</span></span>
+<span data-ttu-id="ffabc-103">通知调试器已更改了公共语言运行时模块的符号。</span><span class="sxs-lookup"><span data-stu-id="ffabc-103">Notifies the debugger that the symbols for a common language runtime module have changed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f461b-104">语法</span><span class="sxs-lookup"><span data-stu-id="f461b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ffabc-104">语法</span><span class="sxs-lookup"><span data-stu-id="ffabc-104">Syntax</span></span>  
   
 ```  
 HRESULT UpdateModuleSymbols (  
@@ -37,31 +37,32 @@ HRESULT UpdateModuleSymbols (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f461b-105">参数</span><span class="sxs-lookup"><span data-stu-id="f461b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ffabc-105">参数</span><span class="sxs-lookup"><span data-stu-id="ffabc-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="f461b-106">[in]指向一个 ICorDebugAppDomain 对象，表示包含的模块的符号已发生更改的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="f461b-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the module in which the symbols have changed.</span></span>  
+ <span data-ttu-id="ffabc-106">[in]指向一个 ICorDebugAppDomain 对象，表示包含的模块的符号已发生更改的应用程序域的指针。</span><span class="sxs-lookup"><span data-stu-id="ffabc-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the module in which the symbols have changed.</span></span>  
   
  `pModule`  
- <span data-ttu-id="f461b-107">[in]指向表示的模块的符号已发生更改的 icor 调试模块对象的指针。</span><span class="sxs-lookup"><span data-stu-id="f461b-107">[in] A pointer to an ICorDebugModule object that represents the module in which the symbols have changed.</span></span>  
+ <span data-ttu-id="ffabc-107">[in]指向表示的模块的符号已发生更改的 icor 调试模块对象的指针。</span><span class="sxs-lookup"><span data-stu-id="ffabc-107">[in] A pointer to an ICorDebugModule object that represents the module in which the symbols have changed.</span></span>  
   
  `pSymbolStream`  
- <span data-ttu-id="f461b-108">[in]一个指向 Win32 COM`IStream`对象，其中包含已修改的符号。</span><span class="sxs-lookup"><span data-stu-id="f461b-108">[in] A pointer to a Win32 COM `IStream` object that contains the modified symbols.</span></span>  
+ <span data-ttu-id="ffabc-108">[in]一个指向 Win32 COM`IStream`对象，其中包含已修改的符号。</span><span class="sxs-lookup"><span data-stu-id="ffabc-108">[in] A pointer to a Win32 COM `IStream` object that contains the modified symbols.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f461b-109">备注</span><span class="sxs-lookup"><span data-stu-id="f461b-109">Remarks</span></span>  
- <span data-ttu-id="f461b-110">此方法提供了通过调用更新模块的符号的调试器的视图的机会[isymunmanagedreader:: Updatesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)或[isymunmanagedreader:: Replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)。</span><span class="sxs-lookup"><span data-stu-id="f461b-110">This method provides an opportunity to update the debugger's view of a module's symbols by calling [ISymUnmanagedReader::UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) or [ISymUnmanagedReader::ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ffabc-109">备注</span><span class="sxs-lookup"><span data-stu-id="ffabc-109">Remarks</span></span>  
+ <span data-ttu-id="ffabc-110">此方法提供了通过调用更新模块的符号的调试器的视图的机会[isymunmanagedreader:: Updatesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)或[isymunmanagedreader:: Replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)。</span><span class="sxs-lookup"><span data-stu-id="ffabc-110">This method provides an opportunity to update the debugger's view of a module's symbols by calling [ISymUnmanagedReader::UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) or [ISymUnmanagedReader::ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md).</span></span>  
   
- <span data-ttu-id="f461b-111">此回调可多次出现相同的模块。</span><span class="sxs-lookup"><span data-stu-id="f461b-111">This callback can occur multiple times for the same module.</span></span>  
+ <span data-ttu-id="ffabc-111">此回调可多次出现相同的模块。</span><span class="sxs-lookup"><span data-stu-id="ffabc-111">This callback can occur multiple times for the same module.</span></span>  
   
- <span data-ttu-id="f461b-112">调试程序应尝试绑定未绑定的源级别断点。</span><span class="sxs-lookup"><span data-stu-id="f461b-112">A debugger should try to bind unbound source-level breakpoints.</span></span>  
+ <span data-ttu-id="ffabc-112">调试程序应尝试绑定未绑定的源级别断点。</span><span class="sxs-lookup"><span data-stu-id="ffabc-112">A debugger should try to bind unbound source-level breakpoints.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f461b-113">要求</span><span class="sxs-lookup"><span data-stu-id="f461b-113">Requirements</span></span>  
- <span data-ttu-id="f461b-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f461b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ffabc-113">要求</span><span class="sxs-lookup"><span data-stu-id="ffabc-113">Requirements</span></span>  
+ <span data-ttu-id="ffabc-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ffabc-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f461b-115">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f461b-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ffabc-115">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ffabc-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f461b-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f461b-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ffabc-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ffabc-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f461b-117">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f461b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="ffabc-117">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="ffabc-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f461b-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="f461b-118">See also</span></span>
-- [<span data-ttu-id="f461b-119">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="f461b-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ffabc-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="ffabc-118">See also</span></span>
+
+- [<span data-ttu-id="ffabc-119">ICorDebugManagedCallback 接口</span><span class="sxs-lookup"><span data-stu-id="ffabc-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

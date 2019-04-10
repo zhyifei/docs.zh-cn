@@ -10,18 +10,18 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 640940cea30b489683972debdd14b592d565ef4b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 49476a4417e5431842f8e2ba0371c53c5c9f03e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207820"
 ---
-# <a name="axlrsakeyvaluetopublickeytoken-function"></a><span data-ttu-id="15bc0-102">\_AxlRSAKeyValueToPublicKeyToken 函数</span><span class="sxs-lookup"><span data-stu-id="15bc0-102">\_AxlRSAKeyValueToPublicKeyToken function</span></span>
+# <a name="axlrsakeyvaluetopublickeytoken-function"></a><span data-ttu-id="6f099-102">\_AxlRSAKeyValueToPublicKeyToken 函数</span><span class="sxs-lookup"><span data-stu-id="6f099-102">\_AxlRSAKeyValueToPublicKeyToken function</span></span>
 
-<span data-ttu-id="15bc0-103">将模数和指数转换为强名称公钥标记。</span><span class="sxs-lookup"><span data-stu-id="15bc0-103">Converts a Modulus and Exponent to a strong name public key token.</span></span>  
+<span data-ttu-id="6f099-103">将模数和指数转换为强名称公钥标记。</span><span class="sxs-lookup"><span data-stu-id="6f099-103">Converts a Modulus and Exponent to a strong name public key token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15bc0-104">语法</span><span class="sxs-lookup"><span data-stu-id="15bc0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f099-104">语法</span><span class="sxs-lookup"><span data-stu-id="6f099-104">Syntax</span></span>  
   
 ```  
 HRESULT _AxlRSAKeyValueToPublicKeyToken (  
@@ -31,18 +31,19 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="15bc0-105">参数</span><span class="sxs-lookup"><span data-stu-id="15bc0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6f099-105">参数</span><span class="sxs-lookup"><span data-stu-id="6f099-105">Parameters</span></span>  
  `pModulusBlob`  
- <span data-ttu-id="15bc0-106">[in]Base64 编码的模数 blob (从\<取模 > 元素)。</span><span class="sxs-lookup"><span data-stu-id="15bc0-106">[in] The base64-encoded Modulus blob (from the \<Modulus> element).</span></span>  <span data-ttu-id="15bc0-107">请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。</span><span class="sxs-lookup"><span data-stu-id="15bc0-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="6f099-106">[in]Base64 编码的模数 blob (从\<取模 > 元素)。</span><span class="sxs-lookup"><span data-stu-id="6f099-106">[in] The base64-encoded Modulus blob (from the \<Modulus> element).</span></span>  <span data-ttu-id="6f099-107">请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。</span><span class="sxs-lookup"><span data-stu-id="6f099-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `pExponentBlob`  
- <span data-ttu-id="15bc0-108">[in]Base64 编码的指数 blob (从\<指数 > 元素)。</span><span class="sxs-lookup"><span data-stu-id="15bc0-108">[in] The base64-encoded Exponent blob (from the \<Exponent> element).</span></span> <span data-ttu-id="15bc0-109">请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。</span><span class="sxs-lookup"><span data-stu-id="15bc0-109">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="6f099-108">[in]Base64 编码的指数 blob (从\<指数 > 元素)。</span><span class="sxs-lookup"><span data-stu-id="6f099-108">[in] The base64-encoded Exponent blob (from the \<Exponent> element).</span></span> <span data-ttu-id="6f099-109">请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。</span><span class="sxs-lookup"><span data-stu-id="6f099-109">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `ppwszPublicKeyToken`  
- <span data-ttu-id="15bc0-110">[out] 指向 WCHAR \* 的指针，用于接收十六进制编码的公钥标记。</span><span class="sxs-lookup"><span data-stu-id="15bc0-110">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
+ <span data-ttu-id="6f099-110">[out] 指向 WCHAR \* 的指针，用于接收十六进制编码的公钥标记。</span><span class="sxs-lookup"><span data-stu-id="6f099-110">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="15bc0-111">返回值</span><span class="sxs-lookup"><span data-stu-id="15bc0-111">Return Value</span></span>  
- <span data-ttu-id="15bc0-112">如果此函数成功，则返回 `S_OK`。</span><span class="sxs-lookup"><span data-stu-id="15bc0-112">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="15bc0-113">否则，返回错误代码。</span><span class="sxs-lookup"><span data-stu-id="15bc0-113">Otherwise, returns an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6f099-111">返回值</span><span class="sxs-lookup"><span data-stu-id="6f099-111">Return Value</span></span>  
+ `S_OK` <span data-ttu-id="6f099-112">如果函数成功。</span><span class="sxs-lookup"><span data-stu-id="6f099-112">if the function succeeds.</span></span> <span data-ttu-id="6f099-113">否则，返回错误代码。</span><span class="sxs-lookup"><span data-stu-id="6f099-113">Otherwise, returns an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15bc0-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="15bc0-114">See also</span></span>
-- [<span data-ttu-id="15bc0-115">验证码</span><span class="sxs-lookup"><span data-stu-id="15bc0-115">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a><span data-ttu-id="6f099-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="6f099-114">See also</span></span>
+
+- [<span data-ttu-id="6f099-115">验证码</span><span class="sxs-lookup"><span data-stu-id="6f099-115">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)

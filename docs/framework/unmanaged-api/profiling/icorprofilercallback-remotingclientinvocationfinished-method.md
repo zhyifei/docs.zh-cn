@@ -17,47 +17,48 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dddaaea2421de9c63d5d45f7add85b5da3019aee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2722497db5622dee4adcfd9381837477b89a8f63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206572"
 ---
-# <a name="icorprofilercallbackremotingclientinvocationfinished-method"></a><span data-ttu-id="1dc32-102">ICorProfilerCallback::RemotingClientInvocationFinished 方法</span><span class="sxs-lookup"><span data-stu-id="1dc32-102">ICorProfilerCallback::RemotingClientInvocationFinished Method</span></span>
-<span data-ttu-id="1dc32-103">通知探查器的远程处理调用已在客户端上完成运行。</span><span class="sxs-lookup"><span data-stu-id="1dc32-103">Notifies the profiler that a remoting call has run to completion on the client.</span></span>  
+# <a name="icorprofilercallbackremotingclientinvocationfinished-method"></a><span data-ttu-id="27323-102">ICorProfilerCallback::RemotingClientInvocationFinished 方法</span><span class="sxs-lookup"><span data-stu-id="27323-102">ICorProfilerCallback::RemotingClientInvocationFinished Method</span></span>
+<span data-ttu-id="27323-103">通知探查器的远程处理调用已在客户端上完成运行。</span><span class="sxs-lookup"><span data-stu-id="27323-103">Notifies the profiler that a remoting call has run to completion on the client.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1dc32-104">语法</span><span class="sxs-lookup"><span data-stu-id="1dc32-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="27323-104">语法</span><span class="sxs-lookup"><span data-stu-id="27323-104">Syntax</span></span>  
   
 ```  
 HRESULT RemotingClientInvocationFinished();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="1dc32-105">备注</span><span class="sxs-lookup"><span data-stu-id="1dc32-105">Remarks</span></span>  
- <span data-ttu-id="1dc32-106">如果远程处理调用是同步的它具有还运行到完成在服务器上。</span><span class="sxs-lookup"><span data-stu-id="1dc32-106">If the remoting call was synchronous, it has also run to completion on the server.</span></span> <span data-ttu-id="1dc32-107">如果远程处理调用是异步的回复可能仍应处理在调用时。</span><span class="sxs-lookup"><span data-stu-id="1dc32-107">If the remoting call was asynchronous, a reply might still be expected when the call is handled.</span></span> <span data-ttu-id="1dc32-108">如果预期回复，将出现此问题与调用[icorprofilercallback:: Remotingclientreceivingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)额外调用和`RemotingClientInvocationFinished`以指示所需的辅助处理的异步调用。</span><span class="sxs-lookup"><span data-stu-id="1dc32-108">If a reply is expected, it will occur as a call to [ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) and an additional call to `RemotingClientInvocationFinished` to indicate the required secondary processing of an asynchronous call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="27323-105">备注</span><span class="sxs-lookup"><span data-stu-id="27323-105">Remarks</span></span>  
+ <span data-ttu-id="27323-106">如果远程处理调用是同步的它具有还运行到完成在服务器上。</span><span class="sxs-lookup"><span data-stu-id="27323-106">If the remoting call was synchronous, it has also run to completion on the server.</span></span> <span data-ttu-id="27323-107">如果远程处理调用是异步的回复可能仍应处理在调用时。</span><span class="sxs-lookup"><span data-stu-id="27323-107">If the remoting call was asynchronous, a reply might still be expected when the call is handled.</span></span> <span data-ttu-id="27323-108">如果预期回复，将出现此问题与调用[icorprofilercallback:: Remotingclientreceivingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)额外调用和`RemotingClientInvocationFinished`以指示所需的辅助处理的异步调用。</span><span class="sxs-lookup"><span data-stu-id="27323-108">If a reply is expected, it will occur as a call to [ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) and an additional call to `RemotingClientInvocationFinished` to indicate the required secondary processing of an asynchronous call.</span></span>  
   
- <span data-ttu-id="1dc32-109">以下对回调的每个将发生在同一线程上：</span><span class="sxs-lookup"><span data-stu-id="1dc32-109">Each of the following pairs of callbacks will occur on the same thread:</span></span>  
+ <span data-ttu-id="27323-109">以下对回调的每个将发生在同一线程上：</span><span class="sxs-lookup"><span data-stu-id="27323-109">Each of the following pairs of callbacks will occur on the same thread:</span></span>  
   
--   <span data-ttu-id="1dc32-110">`RemotingClientInvocationStarted` 和[icorprofilercallback:: Remotingclientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)</span><span class="sxs-lookup"><span data-stu-id="1dc32-110">`RemotingClientInvocationStarted` and [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)</span></span>  
+-   `RemotingClientInvocationStarted` <span data-ttu-id="27323-110">and [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)</span><span class="sxs-lookup"><span data-stu-id="27323-110">and [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)</span></span>  
   
--   <span data-ttu-id="1dc32-111">[Icorprofilercallback:: Remotingclientreceivingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)和[icorprofilercallback:: Remotingclientinvocationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)</span><span class="sxs-lookup"><span data-stu-id="1dc32-111">[ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) and [ICorProfilerCallback::RemotingClientInvocationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)</span></span>  
+-   <span data-ttu-id="27323-111">[Icorprofilercallback:: Remotingclientreceivingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)和[icorprofilercallback:: Remotingclientinvocationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)</span><span class="sxs-lookup"><span data-stu-id="27323-111">[ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) and [ICorProfilerCallback::RemotingClientInvocationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)</span></span>  
   
--   <span data-ttu-id="1dc32-112">[Icorprofilercallback:: Remotingserverinvocationreturned](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md)和[icorprofilercallback:: Remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)</span><span class="sxs-lookup"><span data-stu-id="1dc32-112">[ICorProfilerCallback::RemotingServerInvocationReturned](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md) and [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)</span></span>  
+-   <span data-ttu-id="27323-112">[Icorprofilercallback:: Remotingserverinvocationreturned](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md)和[icorprofilercallback:: Remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)</span><span class="sxs-lookup"><span data-stu-id="27323-112">[ICorProfilerCallback::RemotingServerInvocationReturned](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md) and [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)</span></span>  
   
- <span data-ttu-id="1dc32-113">您应注意以下问题与远程处理回调：</span><span class="sxs-lookup"><span data-stu-id="1dc32-113">You should be aware of the following issues with the remoting callbacks:</span></span>  
+ <span data-ttu-id="27323-113">您应注意以下问题与远程处理回调：</span><span class="sxs-lookup"><span data-stu-id="27323-113">You should be aware of the following issues with the remoting callbacks:</span></span>  
   
--   <span data-ttu-id="1dc32-114">通过探查器 API，不会反映远程处理函数的执行，因此不会正确接收函数，是从客户端调用，并在服务器上执行的通知。</span><span class="sxs-lookup"><span data-stu-id="1dc32-114">Execution of a remoting function is not reflected by the profiler API, so notifications for functions that are called from the client and executed on the server are not properly received.</span></span> <span data-ttu-id="1dc32-115">实际调用发生通过代理对象;对于探查器，它显示某些函数是 JIT 编译，但永远不会使用。</span><span class="sxs-lookup"><span data-stu-id="1dc32-115">The actual invocation happens via a proxy object; to the profiler, it appears that certain functions are JIT-compiled but never used.</span></span>  
+-   <span data-ttu-id="27323-114">通过探查器 API，不会反映远程处理函数的执行，因此不会正确接收函数，是从客户端调用，并在服务器上执行的通知。</span><span class="sxs-lookup"><span data-stu-id="27323-114">Execution of a remoting function is not reflected by the profiler API, so notifications for functions that are called from the client and executed on the server are not properly received.</span></span> <span data-ttu-id="27323-115">实际调用发生通过代理对象;对于探查器，它显示某些函数是 JIT 编译，但永远不会使用。</span><span class="sxs-lookup"><span data-stu-id="27323-115">The actual invocation happens via a proxy object; to the profiler, it appears that certain functions are JIT-compiled but never used.</span></span>  
   
--   <span data-ttu-id="1dc32-116">探查器不会接收异步远程处理事件的准确通知。</span><span class="sxs-lookup"><span data-stu-id="1dc32-116">The profiler does not receive accurate notifications for asynchronous remoting events.</span></span>  
+-   <span data-ttu-id="27323-116">探查器不会接收异步远程处理事件的准确通知。</span><span class="sxs-lookup"><span data-stu-id="27323-116">The profiler does not receive accurate notifications for asynchronous remoting events.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1dc32-117">要求</span><span class="sxs-lookup"><span data-stu-id="1dc32-117">Requirements</span></span>  
- <span data-ttu-id="1dc32-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1dc32-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="27323-117">要求</span><span class="sxs-lookup"><span data-stu-id="27323-117">Requirements</span></span>  
+ <span data-ttu-id="27323-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="27323-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1dc32-119">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1dc32-119">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="27323-119">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="27323-119">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="1dc32-120">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1dc32-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="27323-120">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="27323-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1dc32-121">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1dc32-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="27323-121">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="27323-121">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="1dc32-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="1dc32-122">See also</span></span>
-- [<span data-ttu-id="1dc32-123">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="1dc32-123">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="27323-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="27323-122">See also</span></span>
+
+- [<span data-ttu-id="27323-123">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="27323-123">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b7125ad38bcec773fa2afa8eca09c1d56d90591
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 742be1467d2f1e6eb7d8567ddf85f8e65ea4b8d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229454"
 ---
-# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="ceb96-102">INotifyConnection2::UnregisterNotifySource 方法</span><span class="sxs-lookup"><span data-stu-id="ceb96-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
-<span data-ttu-id="ceb96-103">从连接中移除指定的通知源对象。</span><span class="sxs-lookup"><span data-stu-id="ceb96-103">Removes a specified notification source object from the connection.</span></span>  
+# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="83f52-102">INotifyConnection2::UnregisterNotifySource 方法</span><span class="sxs-lookup"><span data-stu-id="83f52-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
+<span data-ttu-id="83f52-103">从连接中移除指定的通知源对象。</span><span class="sxs-lookup"><span data-stu-id="83f52-103">Removes a specified notification source object from the connection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ceb96-104">语法</span><span class="sxs-lookup"><span data-stu-id="ceb96-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="83f52-104">语法</span><span class="sxs-lookup"><span data-stu-id="83f52-104">Syntax</span></span>  
   
 ```  
 HRESULT UnregisterNotifySource  
@@ -36,18 +36,19 @@ HRESULT UnregisterNotifySource
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ceb96-105">参数</span><span class="sxs-lookup"><span data-stu-id="ceb96-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="83f52-105">参数</span><span class="sxs-lookup"><span data-stu-id="83f52-105">Parameters</span></span>  
  `in_pNotifySource`  
- <span data-ttu-id="ceb96-106">[in]要注销的通知对象。</span><span class="sxs-lookup"><span data-stu-id="ceb96-106">[in] Notification object to be unregistered.</span></span>  
+ <span data-ttu-id="83f52-106">[in]要注销的通知对象。</span><span class="sxs-lookup"><span data-stu-id="83f52-106">[in] Notification object to be unregistered.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ceb96-107">返回值</span><span class="sxs-lookup"><span data-stu-id="ceb96-107">Return Value</span></span>  
- <span data-ttu-id="ceb96-108">如果该方法成功，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="ceb96-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="83f52-107">返回值</span><span class="sxs-lookup"><span data-stu-id="83f52-107">Return Value</span></span>  
+ <span data-ttu-id="83f52-108">如果该方法成功，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="83f52-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ceb96-109">要求</span><span class="sxs-lookup"><span data-stu-id="ceb96-109">Requirements</span></span>  
- <span data-ttu-id="ceb96-110">**标头：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="ceb96-110">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="83f52-109">要求</span><span class="sxs-lookup"><span data-stu-id="83f52-109">Requirements</span></span>  
+ <span data-ttu-id="83f52-110">**标头：** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="83f52-110">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ceb96-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="ceb96-111">See also</span></span>
-- [<span data-ttu-id="ceb96-112">INotifyConnection2 接口</span><span class="sxs-lookup"><span data-stu-id="ceb96-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="ceb96-113">INotifySource2 接口</span><span class="sxs-lookup"><span data-stu-id="ceb96-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="ceb96-114">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="ceb96-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="ceb96-115">RegisterNotifySource 方法</span><span class="sxs-lookup"><span data-stu-id="ceb96-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)
+## <a name="see-also"></a><span data-ttu-id="83f52-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="83f52-111">See also</span></span>
+
+- [<span data-ttu-id="83f52-112">INotifyConnection2 接口</span><span class="sxs-lookup"><span data-stu-id="83f52-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="83f52-113">INotifySource2 接口</span><span class="sxs-lookup"><span data-stu-id="83f52-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="83f52-114">INotifySink2 接口</span><span class="sxs-lookup"><span data-stu-id="83f52-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="83f52-115">RegisterNotifySource 方法</span><span class="sxs-lookup"><span data-stu-id="83f52-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)

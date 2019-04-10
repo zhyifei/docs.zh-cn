@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4956a763c9a5b2fc1ad74463fdfdeef2b5dc379e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b3fb71686c3d708de7a2cc71f65a32c22e52f26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620040"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229422"
 ---
-# <a name="ehostapplicationpolicy-enumeration"></a><span data-ttu-id="0b4e0-102">EHostApplicationPolicy 枚举</span><span class="sxs-lookup"><span data-stu-id="0b4e0-102">EHostApplicationPolicy Enumeration</span></span>
-<span data-ttu-id="0b4e0-103">指示如何修改[IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)接口对象。</span><span class="sxs-lookup"><span data-stu-id="0b4e0-103">Indicates how to modify an [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) interface object.</span></span> <span data-ttu-id="0b4e0-104">此枚举已弃用。</span><span class="sxs-lookup"><span data-stu-id="0b4e0-104">This enumeration has been deprecated.</span></span>  
+# <a name="ehostapplicationpolicy-enumeration"></a><span data-ttu-id="a4160-102">EHostApplicationPolicy 枚举</span><span class="sxs-lookup"><span data-stu-id="a4160-102">EHostApplicationPolicy Enumeration</span></span>
+<span data-ttu-id="a4160-103">指示如何修改[IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)接口对象。</span><span class="sxs-lookup"><span data-stu-id="a4160-103">Indicates how to modify an [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) interface object.</span></span> <span data-ttu-id="a4160-104">此枚举已弃用。</span><span class="sxs-lookup"><span data-stu-id="a4160-104">This enumeration has been deprecated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0b4e0-105">语法</span><span class="sxs-lookup"><span data-stu-id="0b4e0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4160-105">语法</span><span class="sxs-lookup"><span data-stu-id="a4160-105">Syntax</span></span>  
   
 ```  
 typedef enum _HostApplicationPolicy {  
@@ -34,14 +34,15 @@ typedef enum _HostApplicationPolicy {
 } EHostApplicationPolicy;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="0b4e0-106">要求</span><span class="sxs-lookup"><span data-stu-id="0b4e0-106">Requirements</span></span>  
- <span data-ttu-id="0b4e0-107">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0b4e0-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4160-106">要求</span><span class="sxs-lookup"><span data-stu-id="a4160-106">Requirements</span></span>  
+ <span data-ttu-id="a4160-107">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a4160-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0b4e0-108">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0b4e0-108">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a4160-108">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a4160-108">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0b4e0-109">**库：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0b4e0-109">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="a4160-109">**库：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a4160-109">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0b4e0-110">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b4e0-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="a4160-110">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="a4160-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="0b4e0-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="0b4e0-111">See also</span></span>
-- [<span data-ttu-id="0b4e0-112">承载枚举</span><span class="sxs-lookup"><span data-stu-id="0b4e0-112">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="a4160-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="a4160-111">See also</span></span>
+
+- [<span data-ttu-id="a4160-112">承载枚举</span><span class="sxs-lookup"><span data-stu-id="a4160-112">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

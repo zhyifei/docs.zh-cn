@@ -2,20 +2,21 @@
 title: System.ServiceModel.Channels.PeerNeighborNotFound
 ms.date: 03/30/2017
 ms.assetid: 0aeb51a1-b82f-4008-920c-8604c5cbf600
-ms.openlocfilehash: 58dfa566b7a4eb81ffa65f3c39636d88764773de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2ced64640eda203b09f5f33c731b38cda6bbb15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227220"
 ---
-# <a name="systemservicemodelchannelspeerneighbornotfound"></a><span data-ttu-id="00d79-102">System.ServiceModel.Channels.PeerNeighborNotFound</span><span class="sxs-lookup"><span data-stu-id="00d79-102">System.ServiceModel.Channels.PeerNeighborNotFound</span></span>
-<span data-ttu-id="00d79-103">无法执行对邻居的操作，原因是无法在邻居列表中找到该邻居。</span><span class="sxs-lookup"><span data-stu-id="00d79-103">An operation on a neighbor could not be performed because that neighbor could not be found in the neighbor list.</span></span>  
+# <a name="systemservicemodelchannelspeerneighbornotfound"></a><span data-ttu-id="e804a-102">System.ServiceModel.Channels.PeerNeighborNotFound</span><span class="sxs-lookup"><span data-stu-id="e804a-102">System.ServiceModel.Channels.PeerNeighborNotFound</span></span>
+<span data-ttu-id="e804a-103">无法执行对邻居的操作，原因是无法在邻居列表中找到该邻居。</span><span class="sxs-lookup"><span data-stu-id="e804a-103">An operation on a neighbor could not be performed because that neighbor could not be found in the neighbor list.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="00d79-104">描述</span><span class="sxs-lookup"><span data-stu-id="00d79-104">Description</span></span>  
- <span data-ttu-id="00d79-105">当正在连接或关闭某个邻居时会发生此错误。</span><span class="sxs-lookup"><span data-stu-id="00d79-105">This error occurs when connecting to or closing a neighbor.</span></span>  
+## <a name="description"></a><span data-ttu-id="e804a-104">描述</span><span class="sxs-lookup"><span data-stu-id="e804a-104">Description</span></span>  
+ <span data-ttu-id="e804a-105">当正在连接或关闭某个邻居时会发生此错误。</span><span class="sxs-lookup"><span data-stu-id="e804a-105">This error occurs when connecting to or closing a neighbor.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="00d79-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="00d79-106">See also</span></span>
-- [<span data-ttu-id="00d79-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="00d79-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="00d79-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="00d79-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="00d79-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="00d79-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="e804a-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="e804a-106">See also</span></span>
+
+- [<span data-ttu-id="e804a-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="e804a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="e804a-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="e804a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="e804a-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="e804a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

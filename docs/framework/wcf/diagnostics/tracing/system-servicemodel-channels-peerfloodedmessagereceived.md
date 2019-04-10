@@ -2,20 +2,21 @@
 title: System.ServiceModel.Channels.PeerFloodedMessageReceived
 ms.date: 03/30/2017
 ms.assetid: 778e4e15-2855-4a94-a703-8fa31acc935a
-ms.openlocfilehash: 39103fb871c1a0921242fef73e709cc5687db6c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2470f0900c990b2812233ff0cc0647f3666caba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217167"
 ---
-# <a name="systemservicemodelchannelspeerfloodedmessagereceived"></a><span data-ttu-id="51523-102">System.ServiceModel.Channels.PeerFloodedMessageReceived</span><span class="sxs-lookup"><span data-stu-id="51523-102">System.ServiceModel.Channels.PeerFloodedMessageReceived</span></span>
-<span data-ttu-id="51523-103">PeerNode 收到溢满消息。</span><span class="sxs-lookup"><span data-stu-id="51523-103">A PeerNode received a flooded message.</span></span>  
+# <a name="systemservicemodelchannelspeerfloodedmessagereceived"></a><span data-ttu-id="8ad4d-102">System.ServiceModel.Channels.PeerFloodedMessageReceived</span><span class="sxs-lookup"><span data-stu-id="8ad4d-102">System.ServiceModel.Channels.PeerFloodedMessageReceived</span></span>
+<span data-ttu-id="8ad4d-103">PeerNode 收到溢满消息。</span><span class="sxs-lookup"><span data-stu-id="8ad4d-103">A PeerNode received a flooded message.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="51523-104">描述</span><span class="sxs-lookup"><span data-stu-id="51523-104">Description</span></span>  
- <span data-ttu-id="51523-105">在处理传入溢满消息期间出现此跟踪。</span><span class="sxs-lookup"><span data-stu-id="51523-105">This trace occurs during the processing of an incoming flood message.</span></span>  
+## <a name="description"></a><span data-ttu-id="8ad4d-104">描述</span><span class="sxs-lookup"><span data-stu-id="8ad4d-104">Description</span></span>  
+ <span data-ttu-id="8ad4d-105">在处理传入溢满消息期间出现此跟踪。</span><span class="sxs-lookup"><span data-stu-id="8ad4d-105">This trace occurs during the processing of an incoming flood message.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="51523-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="51523-106">See also</span></span>
-- [<span data-ttu-id="51523-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="51523-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="51523-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="51523-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="51523-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="51523-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="8ad4d-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="8ad4d-106">See also</span></span>
+
+- [<span data-ttu-id="8ad4d-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="8ad4d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="8ad4d-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="8ad4d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="8ad4d-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="8ad4d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

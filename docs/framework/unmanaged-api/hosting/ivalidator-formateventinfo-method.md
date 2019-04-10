@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 084b80e90ea3950245606c56de7ed3e18fd27662
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ecbecec86d81357000679ab50e12f06d91c9f50d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217076"
 ---
-# <a name="ivalidatorformateventinfo-method"></a><span data-ttu-id="ff9cd-102">IValidator::FormatEventInfo 方法</span><span class="sxs-lookup"><span data-stu-id="ff9cd-102">IValidator::FormatEventInfo Method</span></span>
-<span data-ttu-id="ff9cd-103">获取对应于指定的验证错误的错误消息。</span><span class="sxs-lookup"><span data-stu-id="ff9cd-103">Gets the error message corresponding to the specified validation error.</span></span>  
+# <a name="ivalidatorformateventinfo-method"></a><span data-ttu-id="ea4a9-102">IValidator::FormatEventInfo 方法</span><span class="sxs-lookup"><span data-stu-id="ea4a9-102">IValidator::FormatEventInfo Method</span></span>
+<span data-ttu-id="ea4a9-103">获取对应于指定的验证错误的错误消息。</span><span class="sxs-lookup"><span data-stu-id="ea4a9-103">Gets the error message corresponding to the specified validation error.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff9cd-104">语法</span><span class="sxs-lookup"><span data-stu-id="ff9cd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ea4a9-104">语法</span><span class="sxs-lookup"><span data-stu-id="ea4a9-104">Syntax</span></span>  
   
 ```  
 HRESULT FormatEventInfo(  
@@ -39,30 +39,27 @@ HRESULT FormatEventInfo(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ff9cd-105">参数</span><span class="sxs-lookup"><span data-stu-id="ff9cd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ea4a9-105">参数</span><span class="sxs-lookup"><span data-stu-id="ea4a9-105">Parameters</span></span>  
  `hVECode`  
- <span data-ttu-id="ff9cd-106">[in]HRESULT 值传递给验证错误处理程序。</span><span class="sxs-lookup"><span data-stu-id="ff9cd-106">[in] The HRESULT value that was passed to the validation error handler.</span></span>  
+ <span data-ttu-id="ea4a9-106">[in]HRESULT 值传递给验证错误处理程序。</span><span class="sxs-lookup"><span data-stu-id="ea4a9-106">[in] The HRESULT value that was passed to the validation error handler.</span></span>  
   
  `Context`  
- <span data-ttu-id="ff9cd-107">[in]一个`VEContext`实例，其中包含有关验证错误的上下文信息。</span><span class="sxs-lookup"><span data-stu-id="ff9cd-107">[in] A `VEContext` instance that contains context information about the validation error.</span></span>  
+ <span data-ttu-id="ea4a9-107">[in]一个`VEContext`实例，其中包含有关验证错误的上下文信息。</span><span class="sxs-lookup"><span data-stu-id="ea4a9-107">[in] A `VEContext` instance that contains context information about the validation error.</span></span>  
   
  `msg`  
- <span data-ttu-id="ff9cd-108">[in、 out]一个字符串，包含返回的错误消息。</span><span class="sxs-lookup"><span data-stu-id="ff9cd-108">[in, out] A string that contains the returned error message.</span></span>  
+ <span data-ttu-id="ea4a9-108">[in、 out]一个字符串，包含返回的错误消息。</span><span class="sxs-lookup"><span data-stu-id="ea4a9-108">[in, out] A string that contains the returned error message.</span></span>  
   
  `ulMaxLength`  
- <span data-ttu-id="ff9cd-109">[in]错误消息的最大长度。</span><span class="sxs-lookup"><span data-stu-id="ff9cd-109">[in] The maximum length of the error message.</span></span>  
+ <span data-ttu-id="ea4a9-109">[in]错误消息的最大长度。</span><span class="sxs-lookup"><span data-stu-id="ea4a9-109">[in] The maximum length of the error message.</span></span>  
   
  `psa`  
- <span data-ttu-id="ff9cd-110">[in]安全数组，其中包含描述错误的其他参数。</span><span class="sxs-lookup"><span data-stu-id="ff9cd-110">[in] A safe array that contains additional parameters describing the error.</span></span>  
+ <span data-ttu-id="ea4a9-110">[in]安全数组，其中包含描述错误的其他参数。</span><span class="sxs-lookup"><span data-stu-id="ea4a9-110">[in] A safe array that contains additional parameters describing the error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ff9cd-111">要求</span><span class="sxs-lookup"><span data-stu-id="ff9cd-111">Requirements</span></span>  
- <span data-ttu-id="ff9cd-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ff9cd-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ea4a9-111">要求</span><span class="sxs-lookup"><span data-stu-id="ea4a9-111">Requirements</span></span>  
+ <span data-ttu-id="ea4a9-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ea4a9-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ff9cd-113">**标头：** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="ff9cd-113">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="ea4a9-113">**标头：** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="ea4a9-113">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="ff9cd-114">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="ff9cd-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ea4a9-114">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="ea4a9-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ff9cd-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff9cd-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="ff9cd-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="ff9cd-116">See also</span></span>
-
+ **<span data-ttu-id="ea4a9-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="ea4a9-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

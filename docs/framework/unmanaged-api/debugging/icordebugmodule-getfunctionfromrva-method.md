@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed9536280f64ae1400faff8d0029e5ccd51c90ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edd9407f05e30eb420e83fb042c2412e99b0a022
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222583"
 ---
-# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="abd27-102">ICorDebugModule::GetFunctionFromRVA 方法</span><span class="sxs-lookup"><span data-stu-id="abd27-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
-<span data-ttu-id="abd27-103">当前版本的.NET Framework 中，此方法尚未实现。</span><span class="sxs-lookup"><span data-stu-id="abd27-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="7a90d-102">ICorDebugModule::GetFunctionFromRVA 方法</span><span class="sxs-lookup"><span data-stu-id="7a90d-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
+<span data-ttu-id="7a90d-103">当前版本的.NET Framework 中，此方法尚未实现。</span><span class="sxs-lookup"><span data-stu-id="7a90d-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="abd27-104">语法</span><span class="sxs-lookup"><span data-stu-id="abd27-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7a90d-104">语法</span><span class="sxs-lookup"><span data-stu-id="7a90d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionFromRVA(  
@@ -36,9 +36,7 @@ HRESULT GetFunctionFromRVA(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="abd27-105">要求</span><span class="sxs-lookup"><span data-stu-id="abd27-105">Requirements</span></span>  
- <span data-ttu-id="abd27-106">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="abd27-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7a90d-105">要求</span><span class="sxs-lookup"><span data-stu-id="7a90d-105">Requirements</span></span>  
+ <span data-ttu-id="7a90d-106">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7a90d-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abd27-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="abd27-107">See also</span></span>
-
-
+## <a name="see-also"></a><span data-ttu-id="7a90d-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="7a90d-107">See also</span></span>

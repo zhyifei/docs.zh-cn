@@ -16,34 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3167d288a57575af85a9cb50f5c0cd82c8e9cc9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c98ece9d60571034f3298f15897b10c4d8fb06f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212145"
 ---
-# <a name="iclrmemorynotificationcallback-interface"></a><span data-ttu-id="288f2-102">ICLRMemoryNotificationCallback 接口</span><span class="sxs-lookup"><span data-stu-id="288f2-102">ICLRMemoryNotificationCallback Interface</span></span>
-<span data-ttu-id="288f2-103">允许使用类似于 Win32 方法报告内存压力情况主机`CreateMemoryResourceNotification`函数。</span><span class="sxs-lookup"><span data-stu-id="288f2-103">Allows the host to report memory pressure conditions using an approach similar to that of the Win32 `CreateMemoryResourceNotification` function.</span></span>  
+# <a name="iclrmemorynotificationcallback-interface"></a><span data-ttu-id="c10fb-102">ICLRMemoryNotificationCallback 接口</span><span class="sxs-lookup"><span data-stu-id="c10fb-102">ICLRMemoryNotificationCallback Interface</span></span>
+<span data-ttu-id="c10fb-103">允许使用类似于 Win32 方法报告内存压力情况主机`CreateMemoryResourceNotification`函数。</span><span class="sxs-lookup"><span data-stu-id="c10fb-103">Allows the host to report memory pressure conditions using an approach similar to that of the Win32 `CreateMemoryResourceNotification` function.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="288f2-104">方法</span><span class="sxs-lookup"><span data-stu-id="288f2-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c10fb-104">方法</span><span class="sxs-lookup"><span data-stu-id="c10fb-104">Methods</span></span>  
   
-|<span data-ttu-id="288f2-105">方法</span><span class="sxs-lookup"><span data-stu-id="288f2-105">Method</span></span>|<span data-ttu-id="288f2-106">描述</span><span class="sxs-lookup"><span data-stu-id="288f2-106">Description</span></span>|  
+|<span data-ttu-id="c10fb-105">方法</span><span class="sxs-lookup"><span data-stu-id="c10fb-105">Method</span></span>|<span data-ttu-id="c10fb-106">描述</span><span class="sxs-lookup"><span data-stu-id="c10fb-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="288f2-107">OnMemoryNotification 方法</span><span class="sxs-lookup"><span data-stu-id="288f2-107">OnMemoryNotification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)|<span data-ttu-id="288f2-108">通知公共语言运行时 (CLR) 的计算机上的内存负载。</span><span class="sxs-lookup"><span data-stu-id="288f2-108">Notifies the common language runtime (CLR) of the memory load on the computer.</span></span>|  
+|[<span data-ttu-id="c10fb-107">OnMemoryNotification 方法</span><span class="sxs-lookup"><span data-stu-id="c10fb-107">OnMemoryNotification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)|<span data-ttu-id="c10fb-108">通知公共语言运行时 (CLR) 的计算机上的内存负载。</span><span class="sxs-lookup"><span data-stu-id="c10fb-108">Notifies the common language runtime (CLR) of the memory load on the computer.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="288f2-109">备注</span><span class="sxs-lookup"><span data-stu-id="288f2-109">Remarks</span></span>  
- <span data-ttu-id="288f2-110">主机使用`ICLRMemoryNotificationCallback`接口请求 CLR 释放内存资源。</span><span class="sxs-lookup"><span data-stu-id="288f2-110">The host uses the `ICLRMemoryNotificationCallback` interface to request that the CLR free memory resources.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c10fb-109">备注</span><span class="sxs-lookup"><span data-stu-id="c10fb-109">Remarks</span></span>  
+ <span data-ttu-id="c10fb-110">主机使用`ICLRMemoryNotificationCallback`接口请求 CLR 释放内存资源。</span><span class="sxs-lookup"><span data-stu-id="c10fb-110">The host uses the `ICLRMemoryNotificationCallback` interface to request that the CLR free memory resources.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="288f2-111">要求</span><span class="sxs-lookup"><span data-stu-id="288f2-111">Requirements</span></span>  
- <span data-ttu-id="288f2-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="288f2-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c10fb-111">要求</span><span class="sxs-lookup"><span data-stu-id="c10fb-111">Requirements</span></span>  
+ <span data-ttu-id="c10fb-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c10fb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="288f2-113">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="288f2-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="c10fb-113">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c10fb-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="288f2-114">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="288f2-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c10fb-114">**库：** 包含为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="c10fb-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="288f2-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="288f2-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="c10fb-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="c10fb-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="288f2-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="288f2-116">See also</span></span>
-- [<span data-ttu-id="288f2-117">IHostMemoryManager 接口</span><span class="sxs-lookup"><span data-stu-id="288f2-117">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [<span data-ttu-id="288f2-118">承载接口</span><span class="sxs-lookup"><span data-stu-id="288f2-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="c10fb-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="c10fb-116">See also</span></span>
+
+- [<span data-ttu-id="c10fb-117">IHostMemoryManager 接口</span><span class="sxs-lookup"><span data-stu-id="c10fb-117">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="c10fb-118">承载接口</span><span class="sxs-lookup"><span data-stu-id="c10fb-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
