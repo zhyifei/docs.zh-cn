@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f4baa58159760af12afca5b84cb6b1b66e46093
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 47968d7550c3d16d201680caab705c0d7c85c784
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200137"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize 方法
 返回参数的累积大小 x86 操作系统上的堆栈上。  
@@ -44,7 +44,7 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 |-------------|-----------------|  
 |S_OK|成功地返回堆栈大小。|  
 |S_FALSE|`GetStackParameterSize` 调用在非 x86 平台上。|  
-|E_FAIL|`The size of the parameters could not be returned`。|  
+|E_FAIL|`The size of the parameters could not be returned`.|  
 |E_INVALIDARG|`pSize` 是`null`。|  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -59,9 +59,10 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [ICorDebugNativeFrame2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
 - [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

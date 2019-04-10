@@ -11,12 +11,12 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 281cc0bd2e577dedaffb7f7eaf04fe46e6ee0b59
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190793"
 ---
 # <a name="sharedlisteners-element"></a>\<sharedListeners > 元素
 包含任何源或跟踪元素可以引用的侦听器。  这些侦听器不会收到默认情况下，任何跟踪并不能在运行时检索这些侦听器。 标识为共享的侦听器可以按名称添加到源或跟踪侦听器。  
@@ -89,6 +89,7 @@ ms.locfileid: "58348812"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Diagnostics.TraceListener>
 - [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

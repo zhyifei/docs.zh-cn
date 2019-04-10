@@ -2,12 +2,12 @@
 title: ServiceDescription 和 WSDL 引用
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182879"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription 和 WSDL 引用
 本主题介绍与 Windows Communication Foundation (WCF) 如何映射 Web 服务描述语言 (WSDL) 文档<xref:System.ServiceModel.Description.ServiceDescription>实例。  
@@ -50,7 +50,7 @@ ms.locfileid: "54544323"
 |----------------|------------------|  
 |`Name`|在终结点的默认名称中使用，该名称是以下划线分隔追加的协定名称的绑定名称。|  
 |`Namespace`|`targetNamespace` 定义的 `wsdl:binding`。<br /><br /> 导入时，如果将策略附加到 WSDL 端口，则导入的绑定命名空间将映射到 `targetNamespace` 定义的 `wsdl:port`。|  
-|`BindingElementCollection`，由 `CreateBindingElements`() 方法返回 |`wsdl:binding` 定义的各种域特定的扩展，通常是策略断言。|  
+|`BindingElementCollection`返回的`CreateBindingElements`（） 方法|`wsdl:binding` 定义的各种域特定的扩展，通常是策略断言。|  
 |`MessageVersion`|终结点的 `EnvelopeVersion` 和 `AddressingVersion`。<br /><br /> 如果指定 `MessageVersion.None`，则 WSDL 绑定不包含 SOAP 绑定，并且 WSDL 端口不包含 WS-Addressing 内容。 该设置通常用于 Plain Old XML (POX) 终结点。|  
   
 #### <a name="bindingelements"></a>BindingElements  
@@ -109,11 +109,11 @@ ms.locfileid: "54544323"
 |属性|WSDL 映射|  
 |----------------|------------------|  
 |`Action`|消息的 SOAP 或 WS-Addressing 操作。<br /><br /> 请注意，使用操作字符串“*”的操作不用 WSDL 表示。|  
-|`Direction`|`MessageDirection.Input` 映射到 `wsdl:input`。<br /><br /> `MessageDirection.Output` 映射到 `wsdl:output`。|  
+|`Direction`|`MessageDirection.Input` 映射到`wsdl:input`。<br /><br /> `MessageDirection.Output` 映射到`wsdl:output`。|  
 |`ProtectionLevel`|附加到此消息的 `wsdl:message` 定义的安全策略中的保护断言。|  
 |`Body`|消息的消息正文。|  
 |`Headers`|消息的标头。|  
-|`ContractDescription.Name`， `OperationContract.Name`|在导出时，用于派生`wsdl:message`/@name值。|  
+|`ContractDescription.Name`, `OperationContract.Name`|在导出时，用于派生`wsdl:message`/@name值。|  
   
 #### <a name="message-body"></a>消息正文  
  一个`MessageBodyDescription`实例映射到`wsdl:message` / `wsdl:part`的消息的正文定义。 消息正文可以包装也可以裸露。  
@@ -128,7 +128,7 @@ ms.locfileid: "54544323"
 #### <a name="message-parts"></a>消息部分  
  一个`MessagePartDescription`实例映射到`wsdl:message` / `wsdl:part`和 XML 架构类型或消息部分所指向的元素。  
   
-|Properties|WSDL 映射|  
+|属性|WSDL 映射|  
 |----------------|------------------|  
 |`Name`|`wsd:message` / `wsdl:part` /@name消息部分和消息部分所指向的元素的名称值。|  
 |`Namespace`|消息部分所指向的元素的命名空间。|  
@@ -152,4 +152,5 @@ ms.locfileid: "54544323"
 |`Name, ContractDescription.Name, OperationDescription.Name,`|用于派生`wsdl:message`/@name错误消息的值。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Description>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
-ms.translationtype: MT
+ms.openlocfilehash: 3decf955748b156b8eff4b5286a70e67d8ac14ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195145"
 ---
 # <a name="configuring-http-and-https"></a>配置 HTTP 和 HTTPS
 WCF 服务和客户端可以通过 HTTP 和 HTTPS 通信。 通过使用 Internet Information Services (IIS) 或命令行工具可以配置 HTTP/HTTPS 设置。 当某个 WCF 服务承载于 IIS 之下时，可以在 IIS 中配置 HTTP 或 HTTPS 设置（使用 inetmgr.exe 工具）。 如果 WCF 服务是自承载的，则可使用命令行工具配置 HTTP 或 HTTPS 设置。  
@@ -23,7 +23,7 @@ WCF 服务和客户端可以通过 HTTP 和 HTTPS 通信。 通过使用 Interne
  运行时[!INCLUDE[wv](../../../../includes/wv-md.md)]或 Windows 7 中，您使用 Netsh.exe 工具配置这些设置。  
   
 ## <a name="configuring-namespace-reservations"></a>配置命名空间预留  
- 命名空间保留将 HTTP URL 命名空间的一部分的权限分配给特定的用户组。 预留提供给这些用户创建用于侦听命名空间的相应部分的服务的权限。 预留是 URL 前缀，这意味着预留涵盖预留路径的所有子路径。 命名空间预留允许以两种方式使用通配符。 HTTP Server API 文档描述[涉及通配符的命名空间声明之间的解析顺序](https://go.microsoft.com/fwlink/?LinkId=94841)。  
+ 命名空间预留将 HTTP URL 命名空间的一部分的权限分配给特定的用户组。 预留提供给这些用户创建用于侦听命名空间的相应部分的服务的权限。 预留是 URL 前缀，这意味着预留涵盖预留路径的所有子路径。 命名空间预留允许以两种方式使用通配符。 HTTP Server API 文档描述[涉及通配符的命名空间声明之间的解析顺序](https://go.microsoft.com/fwlink/?LinkId=94841)。  
   
  运行的应用程序可以创建一个类似请求来添加命名空间注册。 注册和预留会竞争命名空间的某些部分。 保留可能优先于给定的解析顺序根据注册[涉及通配符的命名空间声明之间的解析顺序](https://go.microsoft.com/fwlink/?LinkId=94841)。 在此情况下，预留会阻止运行的应用程序接收请求。  
   
@@ -83,7 +83,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 ```  
   
 ## <a name="other-configuration-settings"></a>其他配置设置  
- 使用 <xref:System.ServiceModel.WSDualHttpBinding> 时，客户端连接使用与命名空间保留和 Windows 防火墙兼容的默认设置。 如果选择自定义双向连接的客户端基址，则还必须配置这些客户端上的 HTTP 设置以与新地址相匹配。  
+ 使用 <xref:System.ServiceModel.WSDualHttpBinding> 时，客户端连接使用与命名空间预留和 Windows 防火墙兼容的默认设置。 如果选择自定义双向连接的客户端基址，则还必须配置这些客户端上的 HTTP 设置以与新地址相匹配。  
   
  HTTP 服务器 API 具有一些不可通过 HttpCfg 使用的高级配置设置。 这些设置保留在注册表中并应用于在使用 HTTP 服务器 API 的系统上运行的所有应用程序。 有关这些设置的信息，请参阅[用于 IIS 的 Http.sys 注册表设置](https://go.microsoft.com/fwlink/?LinkId=94843)。 大多数用户应该不需要更改这些设置。  
   
@@ -91,5 +91,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  IIS 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上不支持端口共享。 如果 IIS 正在运行并且 WCF 服务尝试与同一个端口使用的命名空间，WCF 服务将无法启动。 IIS 和 WCF 均默认设置使用端口 80。 请更改其中一个服务的端口分配或使用 IP 侦听列表将分配到 IIS 未使用的网络适配器的 WCF 服务。 IIS 6.0 和更高版本已经过重新设计，可以使用 HTTP 服务器 API。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.WSDualHttpBinding>
 - [如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

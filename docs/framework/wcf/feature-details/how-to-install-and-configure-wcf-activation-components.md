@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bcd725963986d8a70584409e1ef15c42f04f0033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199214"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>如何：安装和配置 WCF 激活组件
 本主题介绍在设置 Windows 进程激活服务 (也称为 WAS) 所需的步骤[!INCLUDE[wv](../../../../includes/wv-md.md)]来承载 Windows Communication Foundation (WCF) 服务未通过 HTTP 进行通信的网络协议。 下面的部分略述此配置的步骤：  
@@ -101,6 +101,7 @@ ms.locfileid: "54726892"
     >  此命令是单行文本。  
   
 ## <a name="see-also"></a>请参阅
+
 - [TCP 激活](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [MSMQ 激活](../../../../docs/framework/wcf/samples/msmq-activation.md)
 - [NamedPipe 激活](../../../../docs/framework/wcf/samples/namedpipe-activation.md)

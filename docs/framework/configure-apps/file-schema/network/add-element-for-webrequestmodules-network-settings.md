@@ -1,5 +1,5 @@
 ---
-title: webRequestModules -> <add> 元素（网络设置）
+title: <add> WebRequestModules （网络设置） 的
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: ff564571f3f606ac526c5b9efdb904d237348ffe
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4c1116c088c12ad3859714c8d75704d0156c12f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188229"
 ---
 # <a name="add-element-for-webrequestmodules-network-settings"></a>\<添加 > webRequestModules （网络设置） 的
 将自定义的 Web 请求模块添加到应用程序。  
@@ -39,7 +39,7 @@ ms.locfileid: "55287126"
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**说明**|  
+|**特性**|**描述**|  
 |-------------------|---------------------|  
 |`prefix`|此 Web 请求模块处理的请求 URI 前缀。|  
 |`type`|完全限定的类型名 (由<xref:System.Type.FullName%2A>属性) 和程序集名称 (由<xref:System.Reflection.Assembly.FullName%2A>属性)、 分隔一个逗号，实现该 Web 请求模块。|  
@@ -49,7 +49,7 @@ ms.locfileid: "55287126"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定模块用于从网络主机请求信息。|  
   
@@ -82,5 +82,6 @@ ms.locfileid: "55287126"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Net.WebRequest>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

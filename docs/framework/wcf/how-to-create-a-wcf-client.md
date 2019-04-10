@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 0f7f622221e6612ecdb0ea04084d81e923218a5c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174364"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>教程：创建 Windows Communication Foundation 客户端
 
@@ -30,7 +30,6 @@ ms.locfileid: "58634058"
 > [!div class="checklist"]
 > - 创建和配置 WCF 客户端的控制台应用程序项目。
 > - 添加到 WCF 服务生成代理类和配置文件的服务引用。
-
 
 ## <a name="create-a-windows-communication-foundation-client"></a>创建 Windows Communication Foundation 客户端
 
@@ -67,7 +66,6 @@ ms.locfileid: "58634058"
    3. 选择**CalculatorService**以将其展开并显示由该服务实现的服务协定。 保留默认值**Namespace** ，然后选择**确定**。
 
       Visual Studio 会添加新项下的**连接的服务**中的文件夹**GettingStartedClient**项目。 
-
 
 ### <a name="servicemodel-metadata-utility-tool"></a>ServiceModel 元数据实用工具工具
 
@@ -129,5 +127,3 @@ svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localh
 
 > [!div class="nextstepaction"]
 > [教程：使用 WCF 客户端](how-to-use-a-wcf-client.md)
-
-

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: 06666e069f20bc06f303c4e829d1c69c185a8a84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82f840ab7dd26a4888ebf024d696f2c70701eb18
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173285"
 ---
 # <a name="the-load-method"></a>加载方法
 可以使用 <xref:System.Data.DataTable.Load%2A> 方法为 <xref:System.Data.DataTable> 加载数据源中行。 这是重载的方法，在最简单的形式接受一个参数， **DataReader**。 在此窗体，它只需加载**DataTable**行。 或者，您可以指定**LoadOption**参数来控制如何将数据添加到**DataTable**。  
@@ -21,7 +21,7 @@ ms.locfileid: "54602476"
 |LoadOption 值|描述|  
 |----------------------|-----------------|  
 |**OverwriteRow**|如果传入行具有相同**PrimaryKey**值作为行中已**DataTable**，则**原始**并**当前**每个值列将替换为传入行中的值和**RowState**属性设置为**Unchanged**。<br /><br /> 中不存在的数据源中的行**DataTable**与添加**RowState**的值**Unchanged**。<br /><br /> 此选项的作用是刷新的内容**DataTable** ，使其匹配数据源的内容。|  
-|**PreserveCurrentValues （默认值）**|如果传入行具有相同**PrimaryKey**值作为行中已**DataTable**，则**原始**值设置为的内容的传入行，以及**当前**值未发生更改。<br /><br /> 如果**RowState**是**Added**或**Modified**，将其设置为**Modified**。<br /><br /> 如果**RowState**已**Deleted**，它将保持**Deleted**。<br /><br /> 中不存在的数据源中的行**DataTable**添加，并且**RowState**设置为**Unchanged**。|  
+|**PreserveCurrentValues（默认值）**|如果传入行具有相同**PrimaryKey**值作为行中已**DataTable**，则**原始**值设置为的内容的传入行，以及**当前**值未发生更改。<br /><br /> 如果**RowState**是**Added**或**Modified**，将其设置为**Modified**。<br /><br /> 如果**RowState**已**Deleted**，它将保持**Deleted**。<br /><br /> 中不存在的数据源中的行**DataTable**添加，并且**RowState**设置为**Unchanged**。|  
 |**UpdateCurrentValues**|如果传入行具有相同**PrimaryKey**值作为行中已**DataTable**，则**当前**值复制到**原始**值，并**当前**值然后将设置为传入行的内容。<br /><br /> 如果**RowState**中**DataTable**已**Added**，则**RowState**保持**Added**。 行标记为**Modified**或**Deleted**，则**RowState**是**Modified**。<br /><br /> 中不存在的数据源中的行**DataTable**添加，并且**RowState**设置为**Added**。|  
   
  下面的示例使用**负载**方法来显示中的员工的生日列表**Northwind**数据库。  
@@ -69,5 +69,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [操作数据表中的数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

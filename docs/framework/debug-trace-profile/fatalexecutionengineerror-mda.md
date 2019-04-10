@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e5c12cc6d09e2f1c5b0c58ac4ad3462dca3463c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87094532a52d8f6309998486375ef4eb33b07f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189386"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
 在公共语言运行时 (CLR) 中检测到灾难性错误时，会激活 `fatalExecutionEngineError` 托管调试助手 (MDA)。 进程会终止。  
@@ -60,7 +60,7 @@ ms.locfileid: "54700970"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  此 MDA 对运行时无任何影响。  
   
-## <a name="output"></a>输出  
+## <a name="output"></a>Output  
  造成灾难性错误的 CLR 函数的地址，发生错误的线程的 ID，以及错误代码。  
   
 ## <a name="configuration"></a>配置  
@@ -74,6 +74,7 @@ ms.locfileid: "54700970"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution.Cer>
 - [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

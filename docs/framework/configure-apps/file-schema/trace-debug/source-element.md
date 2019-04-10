@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: a528e0f77efea6df7379a0f01495bc09d2ed0b24
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186545"
 ---
 # <a name="source-element"></a>\<源 > 元素
 指定用于启动跟踪消息的跟踪源。  
@@ -83,5 +83,6 @@ ms.locfileid: "55254478"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [跟踪开关](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

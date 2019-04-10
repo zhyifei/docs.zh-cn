@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 38fd9b89e2719be8ce4d33b1b50f68171d587369
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ad9536b1f27ba3945bf76d0474de4825033a1e8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410090"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197901"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>教程：托管并运行基本的 Windows Communication Foundation 服务
 
@@ -30,7 +30,6 @@ ms.locfileid: "58410090"
 > - 添加代码以承载 WCF 服务。
 > - 更新配置文件。
 > - 启动 WCF 服务并验证其是否正在运行。
-
 
 ## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a>创建和配置托管服务的一个控制台应用程序项目
 
@@ -176,7 +175,6 @@ ms.locfileid: "58410090"
     
     有关此代码的工作方式的信息，请参阅[服务托管计划步骤](#service-hosting-program-steps)。
 
-
 2. 更新项目属性：
 
    1. 在中**解决方案资源管理器**窗口中，选择**GettingStartedHost**文件夹，，然后选择**属性**从快捷菜单。
@@ -189,7 +187,6 @@ ms.locfileid: "58410090"
 
    3. 从**文件**菜单中，选择**全部保存**。
 
-
 ## <a name="verify-the-service-is-working"></a>验证服务正常工作
 
 1. 构建解决方案，然后运行**GettingStartedHost**控制台应用程序从 Visual Studio 内部。 
@@ -200,7 +197,6 @@ ms.locfileid: "58410090"
    
    > [!NOTE]
    > 此类服务需要适当的权限来为要侦听的计算机上注册 HTTP 地址。 管理员帐户具有此权限，但对于非管理员帐户来说，必须授予对 HTTP 命名空间的权限。 有关如何配置命名空间预留的详细信息，请参阅[配置 HTTP 和 HTTPS](feature-details/configuring-http-and-https.md)。 
-
 
 ## <a name="service-hosting-program-steps"></a>服务宿主程序步骤
 
@@ -223,7 +219,6 @@ ms.locfileid: "58410090"
 > 当添加 WCF 服务库时，Visual Studio 承载它为您如果调试通过启动服务主机。 若要避免冲突，您可防止 Visual Studio 承载 WCF 服务库。 
 > 1. 选择**GettingStartedLib**项目中**解决方案资源管理器**，然后选择**属性**从快捷菜单。
 > 2. 选择**WCF 选项**并取消选中**启动 WCF 服务主机在调试同一解决方案中的另一个项目时**。
-
 
 ## <a name="next-steps"></a>后续步骤
 

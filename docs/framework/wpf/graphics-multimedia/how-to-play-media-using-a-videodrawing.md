@@ -5,12 +5,12 @@ helpviewer_keywords:
 - playback of media [WPF]
 - classes [WPF], MediaPlayer
 ms.assetid: 165d47ed-22ce-4ded-aa6a-aa9b7467de87
-ms.openlocfilehash: 2397662c79af208f2528f6eedcd5995cfac9526c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 186c9ae8167dafd09f029418c1d23f81f7a9e906
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363093"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203608"
 ---
 # <a name="how-to-play-media-using-a-videodrawing"></a>如何：使用 VideoDrawing 播放媒体
 若要播放音频或视频文件，请使用<xref:System.Windows.Media.VideoDrawing>和一个<xref:System.Windows.Media.MediaPlayer>。 加载并播放媒体有两种方法。 第一种是使用<xref:System.Windows.Media.MediaPlayer>和一个<xref:System.Windows.Media.VideoDrawing>通过本身，第二个方法是创建您自己<xref:System.Windows.Media.MediaTimeline>要用于<xref:System.Windows.Media.MediaPlayer>和<xref:System.Windows.Media.VideoDrawing>。  
@@ -33,5 +33,6 @@ ms.locfileid: "57363093"
  请注意，当您使用<xref:System.Windows.Media.MediaTimeline>，使用交互式<xref:System.Windows.Media.Animation.ClockController>从返回<xref:System.Windows.Media.Animation.Clock.Controller%2A>属性<xref:System.Windows.Media.MediaClock>而不是交互式的方法控制媒体播放<xref:System.Windows.Media.MediaPlayer>。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Media.VideoDrawing>
 - [Drawing 对象概述](drawing-objects-overview.md)

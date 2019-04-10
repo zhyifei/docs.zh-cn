@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 1229257cc8c15ea67bd4fdf3ff6ffa959a6bfe02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2d254d0c87bb9e0a2ce10b8cba0233680b24f4be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181553"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>如何：创建基本 Atom 源
 Windows Communication Foundation (WCF) 可以创建公开联合源的服务。 本主题讨论如何创建公开 Atom 联合源的联合服务。  
@@ -97,5 +97,6 @@ Windows Communication Foundation (WCF) 可以创建公开联合源的服务。 �
  编译前面的代码时，请引用 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

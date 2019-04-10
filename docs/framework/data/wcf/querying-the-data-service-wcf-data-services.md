@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: da015fcd20745ef67831b7133242d66392f923e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3283ec1661138a636914d6b1ca5e7adb5d5d52d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175976"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>查询数据服务（WCF 数据服务）
 利用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库，可以使用熟悉的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 编程模式针对数据服务执行查询，包括使用语言集成查询 (LINQ)。 客户端库将在客户端上定义为 <xref:System.Data.Services.Client.DataServiceQuery%601> 类实例的查询转换为 HTTP GET 请求消息。 该库接收响应消息，并将其转换为客户端数据服务类的实例。 <xref:System.Data.Services.Client.DataServiceContext> 所属的 <xref:System.Data.Services.Client.DataServiceQuery%601> 跟踪这些类。  
@@ -63,7 +63,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  有关详细信息，请参阅[LINQ 注意事项](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)。  
   
 ## <a name="adding-query-options"></a>添加查询选项  
- 数据服务查询支持 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]提供的所有查询选项。 调用 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法可向 <xref:System.Data.Services.Client.DataServiceQuery%601> 实例追加查询选项。 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 返回一个新的 <xref:System.Data.Services.Client.DataServiceQuery%601> 实例，该实例等效于原始查询，但带有新的查询选项集。 下面的查询在执行时会返回按 `Orders` 值进行筛选并按 `Freight` 降序排序的 `OrderID`：  
+ 数据服务查询支持 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]提供的所有查询选项。 调用 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法可向 <xref:System.Data.Services.Client.DataServiceQuery%601> 实例追加查询选项。 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 返回一个新<xref:System.Data.Services.Client.DataServiceQuery%601>等效于原始查询的实例但使用新的查询选项集。 下面的查询在执行时会返回按 `Orders` 值进行筛选并按 `Freight` 降序排序的 `OrderID`：  
   
  [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionsspecific)]  
  [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionsspecific)]  
@@ -99,17 +99,17 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  <xref:System.Data.Services.Client.QueryOperationResponse%601> 还包括下列成员，它们可用来访问有关查询结果的其他信息：  
   
--   <xref:System.Data.Services.Client.OperationResponse.Error%2A> - 获取由操作引发的错误（如果发生了这样的错误）。  
+-   <xref:System.Data.Services.Client.OperationResponse.Error%2A> -如果发生了获取操作引发的错误。  
   
--   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> - 包含与查询响应关联的 HTTP 响应标头的集合。  
+-   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> -包含与查询响应关联的 HTTP 响应标头的集合。  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> - 获取生成了 <xref:System.Data.Services.Client.DataServiceQuery%601> 的原始 <xref:System.Data.Services.Client.QueryOperationResponse%601>。  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> -获取原始<xref:System.Data.Services.Client.DataServiceQuery%601>生成<xref:System.Data.Services.Client.QueryOperationResponse%601>。  
   
--   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> - 获取查询响应的 HTTP 响应代码。  
+-   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> -获取查询响应的 HTTP 响应代码。  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> - 获取在对 <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> 调用 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法时，实体集中的实体总数。  
+-   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> -获取实体中的实体的总数设置何时<xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A>上调用了方法<xref:System.Data.Services.Client.DataServiceQuery%601>。  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> - 返回一个 <xref:System.Data.Services.Client.DataServiceQueryContinuation> 对象，该对象包含下一页结果的 URI。  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> -返回<xref:System.Data.Services.Client.DataServiceQueryContinuation>对象，其中包含结果的下一页的 URI。  
   
  默认情况下，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]仅返回由查询 URI 显式选择的数据。 这样即提供了在需要时从数据服务显式加载其他数据的选项。 每次从数据服务显式加载数据时都会向数据服务发送一个请求。 可以显式加载的数据包括相关实体、分页响应数据以及二进制数据流。  
   
@@ -132,15 +132,16 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  [如何：执行数据服务查询](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
   
- [如何：向数据服务查询添加查询选项](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
+ [如何：将查询选项添加到数据服务查询](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
   
  [如何：确定由查询返回的实体数](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
   
- [如何：指定数据服务的客户端凭据请求](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
+ [如何：为数据服务请求指定客户端凭据](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
   
  [如何：设置客户端请求中的标头](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
   
- [如何：项目查询结果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
+ [如何：投影查询结果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
   
 ## <a name="see-also"></a>请参阅
-- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+- [WCF 数据服务客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, data
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-ms.openlocfilehash: 3dc9119cdf4473e3923fd24d3f444eed9cae0220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eba12a38ee852dcdc08f27bc9e3cb02332fd7071
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676128"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199526"
 ---
 # <a name="data-contract-serializer"></a>数据协定序列化程序
 Windows Communication Foundation (WCF) 基础结构使用<xref:System.Runtime.Serialization.DataContractSerializer>用作默认序列化程序类。 本节中的主题提供将该类用作独立序列化程序的更多详细信息。  
@@ -38,5 +38,6 @@ Windows Communication Foundation (WCF) 基础结构使用<xref:System.Runtime.Se
  [数据传输和序列化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
   
 ## <a name="see-also"></a>请参阅
-- [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+
+- [数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
 - [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

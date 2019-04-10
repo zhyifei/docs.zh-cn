@@ -2,12 +2,12 @@
 title: <security> 的 <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: 552b28c4e4368ec4a01502a1df65cb46aa17c05d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ffe791d495a4e06c9649dd0c37d0fd010e2c64bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258053"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182034"
 ---
 # <a name="security-of-custombinding"></a>\<安全 > 的\<customBinding >
 指定自定义绑定的安全选项。  
@@ -57,17 +57,17 @@ ms.locfileid: "55258053"
 |requireDerivedKeys|一个布尔值，指定是否可以从原始校验密钥中派生密钥。 默认值为 `true`。|  
 |requireSecurityContextCancellation|可选。 一个布尔值，指定当不再需要安全上下文时是否应将其取消和终止。 默认值为 `true`。|  
 |requireSignatureConfirmation|可选。 一个布尔值，指定是否启用 WS-Security 签名确认。 当设置为 `true` 时，消息签名由响应方进行确认。  为相互证书配置自定义绑定时或将自定义绑定配置为使用所颁发的令牌（WSS 1.1 绑定）时，此特性默认为 `true`。 否则，默认为 `false`。<br /><br /> 签名确认用于确认服务正在完全知晓请求的情况下做出响应。|  
-|securityHeaderLayout|可选。 指定安全头中元素的排序。 有效值为<br /><br /> -   `Strict`：项按照“先声明后使用”的一般原则添加到安全性标头中。<br />-   `Lax`：项添加到安全头中任何符合 WSS 的顺序：SOAP 消息安全。<br />-   `LaxWithTimestampFirst`：项添加到安全头中任何符合 WSS 的顺序：SOAP 消息安全的安全标头中的第一个元素必须是 wsse: timestamp 元素。<br />-   `LaxWithTimestampLast`：项添加到安全头中任何符合 WSS 的顺序：SOAP 消息安全的安全标头中的最后一个元素必须是 wsse: timestamp 元素。<br /><br /> 默认值为 `Strict`。<br /><br /> 此元素的类型为 <xref:System.ServiceModel.Channels.SecurityHeaderLayout>。|  
+|securityHeaderLayout|可选。 指定安全头中元素的排序。 有效值为<br /><br /> -   `Strict`：项按照“先声明后使用”的一般原则添加到安全性标头中。<br />-   `Lax`：各项以任何符合 WSS:SOAP 消息安全性的顺序添加到安全标头中。<br />-   `LaxWithTimestampFirst`：各项以任何符合 WSS:SOAP 消息安全性的顺序添加到安全标头中，但安全性标头的第一个元素必须是 wsse:Timestamp 元素。<br />-   `LaxWithTimestampLast`：各项以任何符合 WSS:SOAP 消息安全性的顺序添加到安全标头中，但安全性标头的最后一个元素必须是 wsse:Timestamp 元素。<br /><br /> 默认值为 `Strict`。<br /><br /> 此元素的类型为 <xref:System.ServiceModel.Channels.SecurityHeaderLayout>。|  
   
 ## <a name="authenticationmode-attribute"></a>authenticationMode 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |String|`AnonymousForCertificate`<br /><br /> `AnonymousForSslNegotiated`<br /><br /> `CertificateOverTransport`<br /><br /> `IssuedToken`<br /><br /> `IssuedTokenForCertificate`<br /><br /> `IssuedTokenForSslNegotiated`<br /><br /> `IssuedTokenOverTransport`<br /><br /> `Kerberos`<br /><br /> `KerberosOverTransport`<br /><br /> `MutualCertificate`<br /><br /> `MutualCertificateDuplex`<br /><br /> `MutualSslNegotiated`<br /><br /> `SecureConversation`<br /><br /> `SspiNegotiated`<br /><br /> `UserNameForCertificate`<br /><br /> `UserNameForSslNegotiated`<br /><br /> `UserNameOverTransport`<br /><br /> `SspiNegotiatedOverTransport`|  
   
 ## <a name="defaultalgorithm-attribute"></a>defaultAlgorithm 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |Basic128|使用 Aes128 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。|  
 |Basic192|使用 Aes192 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。|  
@@ -167,6 +167,7 @@ ms.locfileid: "55258053"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.SecurityElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -174,5 +175,5 @@ ms.locfileid: "55258053"
 - [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

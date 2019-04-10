@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a731a54771f3ac589031e856539ba0c21ca22778
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 9fa6b9aa2b2c427c86da5204a446cc60eadd1bb7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201008"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > 元素
 指定 Windows 标识不流经异步点，而不考虑当前线程上执行上下文的流设置。  
@@ -42,7 +42,7 @@ ms.locfileid: "55270483"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`false`|<xref:System.Security.Principal.WindowsIdentity> 流经异步点，具体取决于<xref:System.Threading.ExecutionContext>流当前线程的设置。 这是默认设置。|  
 |`true`|<xref:System.Security.Principal.WindowsIdentity> 不流经异步点，而不考虑<xref:System.Threading.ExecutionContext>流当前线程上的设置。|  
@@ -116,6 +116,7 @@ ms.locfileid: "55270483"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<alwaysFlowImpersonationPolicy > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

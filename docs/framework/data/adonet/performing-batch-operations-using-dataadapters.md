@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: ccf730eb85024687285200db8f978291986dcc18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178121"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>使用 DataAdapter 执行批处理操作
 通过 ADO.NET 中的批处理支持，<xref:System.Data.Common.DataAdapter> 可以将 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 中的 INSERT、UPDATE 和 DELETE 操作分组发向服务器，而不是每次发送一项操作。 因为减少了与服务器的往返次数，通常可以大大提高性能。 SQL Server .NET 数据提供程序 (<xref:System.Data.SqlClient>) 和 Oracle .NET 数据提供程序 (<xref:System.Data.OracleClient>) 支持批量更新。  
@@ -134,7 +134,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ### <a name="accessing-updated-rows"></a>访问更新的行  
  禁用批处理时，可以使用 <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> 类的 <xref:System.Data.Common.RowUpdatedEventArgs> 属性访问要进行更新的行。  
   
- 启用批处理时，会为多行生成单个 `RowUpdated` 事件。 因此，每一行的 `Row` 属性值为空。 但仍会为每一行生成 `RowUpdating` 事件。 使用 <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 类的 <xref:System.Data.Common.RowUpdatedEventArgs> 方法可以通过将对行的引用复制到一个数组来访问已处理的行。 如果没有要进行处理的行，`CopyToRows` 将引发一个 <xref:System.ArgumentNullException>。 在调用 <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> 方法之前，使用 <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 属性可返回已处理行的数目。  
+ 启用批处理时，会为多行生成单个 `RowUpdated` 事件。 因此，每一行的 `Row` 属性值为空。 `RowUpdating` 事件仍会为每个行生成。 使用 <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 类的 <xref:System.Data.Common.RowUpdatedEventArgs> 方法可以通过将对行的引用复制到一个数组来访问已处理的行。 如果没有要进行处理的行，`CopyToRows` 将引发一个 <xref:System.ArgumentNullException>。 在调用 <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> 方法之前，使用 <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 属性可返回已处理行的数目。  
   
 ### <a name="handling-data-errors"></a>处理数据错误  
  执行批处理与执行每个单独的语句具有相同的效果。 各语句按照其添加到批处理中的顺序执行。 在批处理模式下处理错误的方式与禁用批处理模式时相同。 每一行均单独处理。 只有在数据库中经过成功处理的行才能在 <xref:System.Data.DataRow> 内的相应 <xref:System.Data.DataTable> 中更新。  
@@ -142,7 +142,8 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
  数据提供程序和后端数据库服务器确定支持哪些 SQL 构造以执行批处理。 如果为执行提交了不支持的语句，则可能引发异常。  
   
 ## <a name="see-also"></a>请参阅
-- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+
+- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

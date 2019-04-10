@@ -1,5 +1,5 @@
 ---
-title: 如何：访问托管的 HTML 文档对象模型
+title: 如何：访问托管 HTML 文档对象模型
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: f2e2593b161a0dc072f0ecaa872bfa9ab83ac24c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 591d1f4d0b1ebe63b06a30cd01e18addc580d393
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205012"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>如何：访问托管的 HTML 文档对象模型
+# <a name="how-to-access-the-managed-html-document-object-model"></a>如何：访问托管 HTML 文档对象模型
 可以从两种类型的应用程序访问托管 HTML 文档对象模型 (DOM)：  
   
 -   承载了托管 <xref:System.Windows.Forms.WebBrowser> 控件的 Windows 窗体应用程序 (.exe)。 这两种技术互相补充，<xref:System.Windows.Forms.WebBrowser> 控件向用户显示页面，HTML DOM 表示文档的逻辑结构。  
@@ -46,4 +46,5 @@ ms.locfileid: "57715940"
 1.  你的应用程序或 <xref:System.Windows.Forms.UserControl> 将需要完全信任，才能访问托管 HTML DOM。 如果使用 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 部署 Windows 窗体应用程序，则可使用“权限提升”或“受信任的应用程序部署”来请求完全信任；有关详细信息，请参阅[保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [使用托管 HTML 文档对象模型](using-the-managed-html-document-object-model.md)

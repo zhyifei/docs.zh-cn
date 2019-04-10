@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: 6ec61a295f50fa64c484902ed811a627a22ee1c7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 234b3059f9109c23b8ecae4da37e15f7f094fbd1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203231"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities 查询中的表达式
 表达式是求值结果可以为单个值、对象、方法或命名空间的一段代码。 表达式可以包含文本值、方法调用、运算符及其操作数，或者简单名称。 简单名称可以是变量名、类型成员名、方法参数名、命名空间名或类型名。 表达式可以使用运算符（运算符又可使用其他表达式作为参数）或方法调用（方法调用的参数又可以是其他方法调用）。 因此，表达式可以非常简单，也可以极其复杂。  
@@ -30,11 +30,12 @@ ms.locfileid: "55828041"
   
  [比较表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-expressions.md)  
   
- [NULL 比较](../../../../../../docs/framework/data/adonet/ef/language-reference/null-comparisons.md)  
+ [Null 比较](../../../../../../docs/framework/data/adonet/ef/language-reference/null-comparisons.md)  
   
  [初始化表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
   
  [关系、 导航属性和外键](/ef/ef6/fundamentals/relationships)  
   
 ## <a name="see-also"></a>请参阅
+
 - [ADO.NET 实体框架](../../../../../../docs/framework/data/adonet/ef/index.md)

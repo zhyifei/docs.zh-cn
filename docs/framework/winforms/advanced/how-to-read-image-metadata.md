@@ -8,12 +8,12 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: eba21519e6ea6cf4a2a412750fd305d7af620c1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173610"
 ---
 # <a name="how-to-read-image-metadata"></a>如何：读取图像元数据
 某些图像文件包含元数据可以读取来确定映像的功能。 例如，数字照片中可能包含您可以读取以确定品牌和型号的照相机用于捕获映像的元数据。 使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，可以读取现有的元数据，并还可以将新的元数据写入图像文件。  
@@ -29,7 +29,7 @@ ms.locfileid: "57720783"
 |-----------------------|-----------------|  
 |0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|图像标题<br /><br /> 设备制造商<br /><br /> 设备模型<br /><br /> ExifDTOriginal<br /><br /> Exif 暴露时间<br /><br /> 亮度表<br /><br /> 色度表|  
   
-## <a name="value"></a>值  
+## <a name="value"></a>“值”  
  值的数组。 值的格式由<xref:System.Drawing.Imaging.PropertyItem.Type%2A>属性。  
   
 ## <a name="len"></a>Len  
@@ -40,7 +40,7 @@ ms.locfileid: "57720783"
   
 |数字值|描述|  
 |-------------------|-----------------|  
-|1|一个 `Byte`|  
+|1|包含当前请求的 URL 的 `Byte`|  
 |2|一个数组`Byte`对象编码为 ASCII|  
 |3|16 位整数|  
 |4|一个 32 位整数|  
@@ -121,8 +121,9 @@ ms.locfileid: "57720783"
  [!code-vb[System.Drawing.WorkingWithImages#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。 处理窗体的<xref:System.Windows.Forms.Control.Paint>事件并将此代码粘贴到 paint 事件处理程序。 必须替换`FakePhoto.jpg`用的映像名称和路径上您的系统和导入有效`System.Drawing.Imaging`命名空间。  
+ 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。 处理窗体的<xref:System.Windows.Forms.Control.Paint>事件并将此代码粘贴到 paint 事件处理程序。 必须替换`FakePhoto.jpg`用的映像名称和路径上您的系统和导入有效`System.Drawing.Imaging`命名空间。  
   
 ## <a name="see-also"></a>请参阅
+
 - [图像、位图和图元文件](images-bitmaps-and-metafiles.md)
 - [使用图像、位图、图标和图元文件](working-with-images-bitmaps-icons-and-metafiles.md)

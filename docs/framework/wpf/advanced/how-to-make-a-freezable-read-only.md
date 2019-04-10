@@ -1,5 +1,5 @@
 ---
-title: 如何：使 Freezable 成为只读
+title: 如何：将 Freezable 设为只读
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
-ms.openlocfilehash: 874724584b44c17ff6c01331295cfa1a60978d54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191429"
 ---
-# <a name="how-to-make-a-freezable-read-only"></a>如何：使 Freezable 成为只读
+# <a name="how-to-make-a-freezable-read-only"></a>如何：将 Freezable 设为只读
 此示例演示如何使<xref:System.Windows.Freezable>只读通过调用其<xref:System.Windows.Freezable.Freeze%2A>方法。  
   
  不能冻结<xref:System.Windows.Freezable>对象是否满足以下条件之一`true`有关对象：  
@@ -36,6 +36,7 @@ ms.locfileid: "57360342"
  有关详细信息<xref:System.Windows.Freezable>对象，请参阅[Freezable 对象概述](freezable-objects-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CanFreeze%2A>
 - <xref:System.Windows.Freezable.Freeze%2A>

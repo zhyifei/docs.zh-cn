@@ -1,17 +1,17 @@
 ---
-title: 如何：使用 Windows Communication Foundation 服务标记，而无需注册
+title: 如何：使用未注册的 Windows Communication Foundation 服务名字对象
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: 3ce388da75711ab1378ce59575c067cf828089e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4798663d0b39301ec496df45a4a7a5bf9c88e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203972"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>如何：使用 Windows Communication Foundation 服务标记，而无需注册
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>如何：使用未注册的 Windows Communication Foundation 服务名字对象
 若要连接到并与 Windows Communication Foundation (WCF) 服务进行通信，WCF 客户端应用程序必须具有服务地址、 绑定配置和服务协定的详细信息。  
   
  WCF 服务标记通常获取所需的协定通过预先注册所需的属性类型，但情况下这并不可行。 不进行注册时，标记可以通过使用 `wsdl` 参数、通过元数据交换或通过使用 `mexAddress` 参数来获取 Web 服务定义语言 (WSDL) 文档形式的协定定义。  
@@ -58,4 +58,5 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
 >  如果标记格式不正确或者服务不可用，则对 `GetObject` 的调用将返回一个错误，指示“语法无效”。 如果您收到此错误，请确保所使用的标记正确无误且服务可用。  
   
 ## <a name="see-also"></a>请参阅
-- [如何：注册并配置服务名字对象](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+
+- [如何：注册和配置服务名字对象](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

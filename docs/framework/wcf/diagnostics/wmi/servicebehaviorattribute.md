@@ -2,12 +2,12 @@
 title: ServiceBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-ms.openlocfilehash: 420686ebda7f23a5d883deece251b034147fafa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6221e93f10b87a368bd594932a8c36ae14df8f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206871"
 ---
 # <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
@@ -38,7 +38,7 @@ class ServiceBehaviorAttribute : Behavior
 ## <a name="methods"></a>方法  
  ServiceBehaviorAttribute 类未定义任何方法。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
  ServiceBehaviorAttribute 类具有以下属性：  
   
 ### <a name="automaticsessionshutdown"></a>AutomaticSessionShutdown  
@@ -89,7 +89,7 @@ class ServiceBehaviorAttribute : Behavior
   
  序列化对象中允许的最大项数。  
   
-### <a name="name"></a>name  
+### <a name="name"></a>名称  
  数据类型：String  
   
  访问类型：只读  
@@ -152,4 +152,5 @@ class ServiceBehaviorAttribute : Behavior
 |命名空间|已在 root\ServiceModel 中定义|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.ServiceBehaviorAttribute>

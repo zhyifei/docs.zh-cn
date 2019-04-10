@@ -1,5 +1,5 @@
 ---
-title: <proxy> 元素（网络设置）
+title: <proxy> 元素 （网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: a6c6d85d8ec1b79f6b3ddf53af0a4b289289dd6a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8df9bbf2615776c2e023f03401785da95b2226eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204817"
 ---
 # <a name="proxy-element-network-settings"></a>\<代理 > 元素 （网络设置）
 定义代理服务器。  
@@ -40,7 +40,7 @@ ms.locfileid: "55256858"
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**说明**|  
+|**特性**|**描述**|  
 |-------------------|---------------------|  
 |`autoDetect`|指定是否自动检测代理。 默认值为 `unspecified`。|  
 |`bypassonlocal`|指定对于本地资源是否跳过代理。 本地资源包括本地服务器 (`http://localhost`， `http://loopback`，或`http://127.0.0.1`) 和不带句点的 URI (`http://webserver`)。 默认值为 `unspecified`。|  
@@ -53,7 +53,7 @@ ms.locfileid: "55256858"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
   
@@ -91,5 +91,6 @@ ms.locfileid: "55256858"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 284b7f814f8a9355220f0da59e8fce7d79345609
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d059a5d4df402b309f628bf3e9393114c4cdeec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191388"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>公共语言运行时中的 ETW 事件
 公共语言运行时 (CLR) 通过大量的调试和分析事件，提供有用的 Windows 事件跟踪 (ETW) 诊断信息。 CLR ETW 事件利用 Windows ETW 跟踪系统来扩充公共语言运行时所提供的现有分析和调试支持。  
@@ -36,4 +36,5 @@ ms.locfileid: "54620235"
  提供有关 CLR ETW 事件及其关键字、级别和事件数据的详细信息。  
   
 ## <a name="see-also"></a>请参阅
-- [.NET Framework 中的 ETW 事件](../../../docs/framework/performance/etw-events.md)
+
+- [ETW Events in the .NET Framework](../../../docs/framework/performance/etw-events.md)

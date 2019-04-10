@@ -1,18 +1,18 @@
 ---
-title: 如何：使用 X.509 证书保护服务
+title: 如何：使用 X.509 证书保证服务的安全
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: d96897b9b11419bba8a6ef9d3c9579a62e19ee20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6757d6375cbe1662b8bd7beb8a7562be166bc414
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181501"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>如何：使用 X.509 证书保护服务
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>如何：使用 X.509 证书保证服务的安全
 保护使用 X.509 证书的服务是大多数绑定 Windows Communication Foundation (WCF) 中使用的基本技术。 本主题演练使用 X.509 证书配置自承载服务的步骤。  
   
  先决条件是具有可用于对服务器进行身份验证的有效证书。 证书必须由受信任的证书颁发机构颁发给服务器。 如果证书无效，则尝试使用该服务的任何客户端都不会信任该服务，因此不会建立连接。 有关使用证书的详细信息，请参阅[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
@@ -83,4 +83,5 @@ ms.locfileid: "54686486"
 -   <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>请参阅
+
 - [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

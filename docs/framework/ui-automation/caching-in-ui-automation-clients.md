@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 003928d718579948a9baf188d02a7847edb676e1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175820"
 ---
 # <a name="caching-in-ui-automation-clients"></a>在 UI 自动化客户端中缓存
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "57676858"
   
  如果请求的属性不在缓存中，则会引发异常。  
   
- <xref:System.Windows.Automation.AutomationElement.Cached%2A>像 <xref:System.Windows.Automation.AutomationElement.Current%2A>，都以结构成员的方式公开各项属性。 但是，无需检索此结构；你可以直接访问各项属性。 例如，可以从 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> 中获取 `element.Cached.Name`属性，其中 `element` 为 <xref:System.Windows.Automation.AutomationElement>。  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>如<xref:System.Windows.Automation.AutomationElement.Current%2A>，作为一种结构的成员公开各项属性。 但是，无需检索此结构；你可以直接访问各项属性。 例如，可以从 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> 中获取 `element.Cached.Name`属性，其中 `element` 为 <xref:System.Windows.Automation.AutomationElement>。  
   
 <a name="Retrieving_Cached_Control_Patterns"></a>   
 ## <a name="retrieving-cached-control-patterns"></a>检索缓存的控件模式  
@@ -102,6 +102,7 @@ ms.locfileid: "57676858"
  更新缓存不会更改任何现有 <xref:System.Windows.Automation.AutomationElement> 引用的属性。  
   
 ## <a name="see-also"></a>请参阅
+
 - [客户端的 UI 自动化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
 - [在 UI 自动化中使用缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
 - [FetchTimer 示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

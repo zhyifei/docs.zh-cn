@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-ms.openlocfilehash: 86721592f632d6d77dbfa6bc4eac3c2872628b0d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368133"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197147"
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid>控件可以显示和编辑来自许多不同数据源，例如从 SQL 数据库、 LINQ 查询或任何其他可绑定数据源。 有关详细信息，请参阅[绑定源概述](../data/binding-sources-overview.md)。  
@@ -47,19 +47,20 @@ ms.locfileid: "57368133"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|描述|  
 |-----------|-----------------|  
-|[演练：DataGrid 控件中显示的 SQL Server 数据库中的数据](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|介绍如何设置新的 WPF 项目，添加实体框架元素、 设置源，并显示中的数据<xref:System.Windows.Controls.DataGrid>。|  
-|[如何：将行详细信息添加到 DataGrid 控件](how-to-add-row-details-to-a-datagrid-control.md)|介绍如何创建用于行详细信息<xref:System.Windows.Controls.DataGrid>。|  
+|[演练：在 DataGrid 控件中显示 SQL Server 数据库中的数据](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|介绍如何设置新的 WPF 项目，添加实体框架元素、 设置源，并显示中的数据<xref:System.Windows.Controls.DataGrid>。|  
+|[如何：向 DataGrid 控件中添加行详细信息](how-to-add-row-details-to-a-datagrid-control.md)|介绍如何创建用于行详细信息<xref:System.Windows.Controls.DataGrid>。|  
 |[如何：使用 DataGrid 控件实现验证](how-to-implement-validation-with-the-datagrid-control.md)|描述如何验证中的值<xref:System.Windows.Controls.DataGrid>单元格和行，以及显示验证反馈。|  
 |[DataGrid 控件中的默认键盘和鼠标行为](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|介绍如何与之交互<xref:System.Windows.Controls.DataGrid>控件中的使用键盘和鼠标。|  
-|[如何：分组、 排序和筛选数据的 DataGrid 控件](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|描述如何查看中的数据<xref:System.Windows.Controls.DataGrid>分组、 排序和筛选的数据通过不同的方式。|  
-|[DataGrid 控件中的重设大小选项](sizing-options-in-the-datagrid-control.md)|描述如何控制中的绝对和自动大小调整<xref:System.Windows.Controls.DataGrid>。|  
+|[如何：在 DataGrid 控件中对数据进行分组、排序和筛选](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|描述如何查看中的数据<xref:System.Windows.Controls.DataGrid>分组、 排序和筛选的数据通过不同的方式。|  
+|[DataGrid 控件中的调整大小选项](sizing-options-in-the-datagrid-control.md)|描述如何控制中的绝对和自动大小调整<xref:System.Windows.Controls.DataGrid>。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Controls.DataGrid>
 - [样式设置和模板化](styling-and-templating.md)
 - [数据绑定概述](../data/data-binding-overview.md)
 - [数据模板化概述](../data/data-templating-overview.md)
-- [控件](index.md)
+- [Controls](index.md)
 - [WPF 内容模型](wpf-content-model.md)

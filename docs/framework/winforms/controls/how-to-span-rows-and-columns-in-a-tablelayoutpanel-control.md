@@ -1,5 +1,5 @@
 ---
-title: 如何：TableLayoutPanel 控件中 s p a n 行和列
+title: 如何：在 TableLayoutPanel 控件中跨行和跨列
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor.TLP.SpanRowsColumns
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: e4fc00c3966d44ba36a0c59b37ae2fa1cd431014
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2b2a46bf53dd6ec9bc93a74cca37dffaaaf79751
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703031"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193130"
 ---
-# <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>如何：TableLayoutPanel 控件中 s p a n 行和列
+# <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>如何：在 TableLayoutPanel 控件中跨行和跨列
 中的控件<xref:System.Windows.Forms.TableLayoutPanel>控件可以跨越相邻的行和列。  
   
 > [!NOTE]
@@ -36,4 +36,5 @@ ms.locfileid: "57703031"
 5.  设置<xref:System.Windows.Forms.Button>控件的**ColumnSpan**属性设置为**1**。 请注意，<xref:System.Windows.Forms.Button>控件将移动到第一列并跨越的第一个和第二个行。  
   
 ## <a name="see-also"></a>请参阅
+
 - [TableLayoutPanel 控件](tablelayoutpanel-control-windows-forms.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4709d1b8126436d4400c788891960100915cd1bc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d6575acfb1f75cbc8e3d59ddca5fea0953274cf2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206455"
 ---
 # <a name="icordebugreferencevalue-interface"></a>ICorDebugReferenceValue 接口
 提供管理是对对象的引用的值的方法。 （也就是说，此接口提供的指针进行管理的方法。）此接口实现"ICorDebugValue"。  
@@ -51,9 +51,8 @@ ms.locfileid: "56971429"
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
-
 
 - [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

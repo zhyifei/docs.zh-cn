@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: 882b210a19f1ec5515bd7f37ccc55343f84767bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52c448f21be056e6166334785943356039baf3ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175287"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView 控件方案（Windows 窗体）
 使用<xref:System.Windows.Forms.DataGridView>控件，可以显示来自各种数据源的表格格式数据。 有关简单用法，您可以手动填充<xref:System.Windows.Forms.DataGridView>和操作直接通过控件的数据。 通常情况下，但是，您将外部数据源中存储数据并将控件绑定到它通过<xref:System.Windows.Forms.BindingSource>组件。  
@@ -87,5 +87,6 @@ ms.locfileid: "57721298"
 -   您可以实现承载控件而不是通过内置的列类型提供您自己单元格和列的类。 有关详细信息，请参阅[如何：Windows 窗体 DataGridView 单元格中承载控件](how-to-host-controls-in-windows-forms-datagridview-cells.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView 控件概述](datagridview-control-overview-windows-forms.md)

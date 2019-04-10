@@ -11,12 +11,12 @@ helpviewer_keywords:
 - retrieving ink [WPF]
 - Ink Serialized Format (ISF)
 ms.assetid: a3f6d16b-d682-4680-9965-907332b4d2b8
-ms.openlocfilehash: aec89286cfac9b0a315dc2d00135543511b2d1ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4089aa7942105c14eb628c75edb7f53ffacfaeb0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182333"
 ---
 # <a name="storing-ink"></a>存储墨迹
 <xref:System.Windows.Ink.StrokeCollection.Save%2A>方法来存储墨迹作为墨迹序列化格式 (ISF) 提供支持。 构造函数<xref:System.Windows.Ink.StrokeCollection>类用于读取墨迹数据提供支持。  
@@ -35,5 +35,6 @@ ms.locfileid: "57353954"
  [!code-vb[DigitalInkTopics#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#13)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Controls.InkCanvas>
 - [Windows Presentation Foundation](../index.md)

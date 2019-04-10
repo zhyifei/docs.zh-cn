@@ -1,15 +1,15 @@
 ---
-title: 如何：配置 WCF 服务进行互操作与 WSE 3.0 客户端
+title: 如何：配置 WCF 服务以与 WSE 3.0 客户端进行互操作
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: d42e2d4c0bf4c708f2dbb27d14d1adddc3fead41
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 24c44f415eff8518bcd73696c5cd9302371ad0c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635788"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177289"
 ---
-# <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>如何：配置 WCF 服务进行互操作与 WSE 3.0 客户端
+# <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>如何：配置 WCF 服务以与 WSE 3.0 客户端进行互操作
 Windows Communication Foundation (WCF) 服务是 Microsoft.NET (WSE) 客户端与 Web Services Enhancements 3.0 网络级别兼容的 WCF 服务配置为使用 2004 年 8 月版的 Ws-addressing 规范时。  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>使 WCF 服务与 WSE 3.0 客户端进行互操作  
@@ -91,4 +91,5 @@ Windows Communication Foundation (WCF) 服务是 Microsoft.NET (WSE) 客户端�
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [如何：自定义系统提供的绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)

@@ -2,12 +2,12 @@
 title: 对象状态和更改跟踪
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 89e9f44a6cd3579a5ef9cc2078609ca26e0d2ae5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683305"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191150"
 ---
 # <a name="object-states-and-change-tracking"></a>对象状态和更改跟踪
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象始终处于某种*状态*。 例如，当 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 创建一个新对象时，该对象就处于 `Unchanged` 状态。 您自己创建的新对象对于 <xref:System.Data.Linq.DataContext> 而言是未知的，因而处于 `Untracked` 状态。 在成功执行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 后，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 已知的所有对象均处于 `Unchanged` 状态。 （唯一的例外是已从数据库中成功删除的那些对象，它们处于 `Deleted` 状态，并且在该 <xref:System.Data.Linq.DataContext> 实例中无法使用。）  
@@ -34,9 +34,9 @@ ms.locfileid: "54683305"
 >  添加到 `Table` 的对象不在标识缓存中。 标识缓存仅反映从数据库中检索到的内容。 调用 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> 后，直到 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 成功完成，所添加的实体才会出现在对数据库的查询中。  
   
 ## <a name="deleting-objects"></a>删除对象  
- 通过对相应的 `o` 调用 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o)，可以将被跟踪的对象 <xref:System.Data.Linq.Table%601> 标记为删除。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将从 <xref:System.Data.Linq.EntitySet%601> 中移除对象视为更新操作，并且将对应的外键值设置为 null。 不会将操作的目标 (`o`) 从其所在表中删除。 例如，当通过将外键 `cust.Orders.DeleteOnSubmit(ord)` 设置为 null 切断 `cust` 与 `ord` 之间的关系时，`ord.CustomerID` 指示更新操作。 它不会导致删除与 `ord` 对应的行。  
+ 通过对相应的 `o` 调用 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o)，可以将被跟踪的对象 <xref:System.Data.Linq.Table%601> 标记为删除。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 移除对象视为<xref:System.Data.Linq.EntitySet%601>作为更新操作，并且相应外键的值设置为 null。 不会将操作的目标 (`o`) 从其所在表中删除。 例如，当通过将外键 `cust.Orders.DeleteOnSubmit(ord)` 设置为 null 切断 `cust` 与 `ord` 之间的关系时，`ord.CustomerID` 指示更新操作。 它不会导致删除与 `ord` 对应的行。  
   
- 将对象从其所在表中删除 ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]) 时，<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 执行以下处理：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 执行以下处理删除对象 (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) 从其表：  
   
 -   调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 时，会对该对象执行 `DELETE` 操作。  
   
@@ -63,5 +63,6 @@ ms.locfileid: "54683305"
  如果您既更新所需的引用，又更新对应的外键，则必须确保它们一致。 如果在您调用 <xref:System.InvalidOperationException> 时这两者不同步，则会引发 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 异常。 尽管外键值的更改足以影响基础行的更新，但您应更改相应的引用以维护对象图的连接性和关系的双向一致性。  
   
 ## <a name="see-also"></a>请参阅
+
 - [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [插入、更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

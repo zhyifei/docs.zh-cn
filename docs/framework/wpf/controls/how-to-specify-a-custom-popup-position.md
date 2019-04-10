@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
-ms.openlocfilehash: 2ffba3d1a0fee236f803dd5877d541084192418b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dc516f0eb1cfcbac6662497eb4019041eefec2a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200579"
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>如何：指定自定义 Popup 位置
 此示例演示如何指定的自定义位置<xref:System.Windows.Controls.Primitives.Popup>控制何时<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性设置为<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>。  
@@ -33,6 +33,7 @@ ms.locfileid: "57358478"
  有关完整示例，请参阅[Popup 放置示例](https://go.microsoft.com/fwlink/?LinkID=160032)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Controls.Primitives.Popup>
 - [Popup 概述](popup-overview.md)
 - [帮助主题](popup-how-to-topics.md)

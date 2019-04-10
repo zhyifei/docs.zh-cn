@@ -2,17 +2,16 @@
 title: F# 类型
 description: 了解有关在中使用的类型F#以及F#类型命名和描述。
 ms.date: 05/16/2016
-ms.openlocfilehash: bdbb89dc751970ac31fe102df009f0bff6388e52
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33565575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193585"
 ---
 # <a name="f-types"></a>F# 类型
 
 本主题介绍中使用的类型F#以及F#类型命名和描述。
-
 
 ## <a name="summary-of-f-types"></a>摘要的F#类型
 某些类型被视为*基元类型*，如布尔类型`bool`和各种大小，其中包括的字节数和字符类型的整型和浮点类型。 中介绍了这些类型[基元类型](primitive-types.md)。
@@ -27,39 +26,35 @@ ms.locfileid: "33565575"
 
 F#提供记住函数式编程设计的有用的集合类型。 使用这些集合类型，可帮助您编写更功能在样式中的代码。 有关详细信息，请参阅[F#集合类型](fsharp-collection-types.md)。
 
-
 ## <a name="syntax-for-types"></a>类型的语法
 在F#代码中，您通常必须编写出的类型的名称。 每个类型都有一个语法形式，并使用这些语法形式中的类型注释、 抽象方法声明、 委托声明、 签名和其他构造。 每当您声明中解释器的新程序构造，解释器将打印其类型的构造和语法的名称。 此语法可能只是用户定义类型的标识符或内置标识符等的`int`或`string`，但对于更复杂类型，语法更复杂。
 
 下表显示了有关类型语法的各个方面F#类型。
 
-
-
 |类型|类型语法|示例|
 |----|-----------|--------|
 |基元类型|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
 |聚合类型 （类、 结构、 联合、 记录、 枚举和等等）|*type-name*|`System.DateTime`<br /><br />`Color`|
-|类型缩写|*类型缩写名称*|`bigint`|
-|完全限定的类型|*namespaces.type 名称*<br /><br />或<br /><br />*modules.type 名称*<br /><br />或<br /><br />*namespaces.modules.type 名称*|`System.IO.StreamWriter`|
-|array|*类型名称*[] 或<br /><br />*类型名称*数组|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
-|二维数组|*类型名称*[、]|`int[,]`<br /><br />`float[,]`|
-|三维数组|*类型名称*[、]|`float[,,]`|
-|tuple|*类型 name1* &#42; *类型 name2* ...|例如，`(1,'b',3)`具有类型 `int * char * int`|
-|Generic Type — 泛型类型|*类型参数* *泛型类型名称*<br /><br />或<br /><br />*泛型类型名称*&lt;*类型参数列表*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|构造类型 （具有提供的特定类型实参的泛型类型）|*类型实参* *泛型类型名称*<br /><br />或<br /><br />*泛型类型名称*&lt;*类型实参列表*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|只有一个参数的函数类型|*参数 type1*  - &gt; *返回类型*|该函数采用`int`，并返回`string`具有类型 `int -> string`|
-|具有多个参数的函数类型|*参数 type1*  - &gt; *参数 type2*  - &gt; ...-&gt; *返回类型*|该函数采用`int`和一个`float`，并返回`string`具有类型 `int -> float -> string`|
-|高阶函数作为参数|(*函数类型*)|`List.map` 具有类型 `('a -> 'b) -> 'a list -> 'b list`|
-|委托|委托的*函数类型*|`delegate of unit -> int`|
-|可变类型|#*类型名称*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
+|类型缩写|*type-abbreviation-name*|`bigint`|
+|完全限定的类型|*namespaces.type-name*<br /><br />或<br /><br />*modules.type-name*<br /><br />或<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
+|array|*type-name*[] or<br /><br />*type-name* array|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
+|二维数组|*type-name*[,]|`int[,]`<br /><br />`float[,]`|
+|三维数组|*type-name*[,,]|`float[,,]`|
+|tuple|*type-name1* &#42; *type-name2* ...|例如，`(1,'b',3)`具有类型 `int * char * int`|
+|Generic Type — 泛型类型|*类型参数* *泛型类型名称*<br /><br />或<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
+|构造类型 （具有提供的特定类型实参的泛型类型）|*类型实参* *泛型类型名称*<br /><br />或<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|只有一个参数的函数类型|*parameter-type1* -&gt; *return-type*|该函数采用`int`，并返回`string`具有类型 `int -> string`|
+|具有多个参数的函数类型|*parameter-type1* -&gt; *parameter-type2* -&gt; ... -&gt; *return-type*|该函数采用`int`和一个`float`，并返回`string`具有类型 `int -> float -> string`|
+|高阶函数作为参数|(*function-type*)|`List.map` 具有类型 `('a -> 'b) -> 'a list -> 'b list`|
+|委托|delegate of *function-type*|`delegate of unit -> int`|
+|可变类型|#*type-name*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>相关主题
-
 
 |主题|描述|
 |-----|-----------|
 |[基元类型](primitive-types.md)|介绍内置简单类型，例如整型、 布尔值类型和字符类型。|
-|[Unit 类型](unit-type.md)|介绍`unit`类型中，键入，以包含一个值，将由 （）; 等效于`void`中C#并`Nothing`Visual Basic 中。|
+|[unit 类型](unit-type.md)|介绍`unit`类型中，键入，以包含一个值，将由 （）; 等效于`void`中C#并`Nothing`Visual Basic 中。|
 |[元组](tuples.md)|介绍了元组类型、 包含分组中对、 三元组、 四重等任何类型的关联值的类型。|
 |[选项](options.md)|介绍选项类型，该类型可能具有的值或为空。|
 |[列表](lists.md)|介绍列表，它是元素的有序的、 不可变系列所有相同的类型。|

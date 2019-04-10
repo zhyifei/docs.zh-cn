@@ -2,12 +2,12 @@
 title: ADO.NET 数据集
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: f9821f07aae8a761a3890e93347f9cf727f8bdd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190933"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 数据集
 <xref:System.Data.DataSet> 对象对于支持 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的断开连接的分布式数据方案起到至关重要的作用。 **数据集**是提供与数据源无关的一致关系编程模型的数据的驻留内存表示形式。 它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 **数据集**表示完整的数据，包括相关的表、 约束和表之间的关系集。 如下图所示**数据集**对象模型。  
@@ -41,12 +41,13 @@ DataSet 对象模型
  **数据集**， **DataTable**，并**DataColumn**都具有**ExtendedProperties**属性。 **ExtendedProperties**是**PropertyCollection**其中放置自定义的信息，如用于生成结果集的 SELECT 语句或在数据生成的时间。 **ExtendedProperties**集合的架构信息一起持久化**数据集**。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]为数据集中存储的已断开连接的数据提供语言集成查询功能。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 使用标准[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]语法，并使用 Visual Studio IDE 时提供编译时语法检查、 静态类型化和 IntelliSense 支持。  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 断开连接的数据存储在数据集中提供语言集成查询功能。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 使用标准[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]语法，并使用 Visual Studio IDE 时提供编译时语法检查、 静态类型化和 IntelliSense 支持。  
   
  有关详细信息，请参阅 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [数据集、数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

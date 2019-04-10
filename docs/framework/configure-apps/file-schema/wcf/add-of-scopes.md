@@ -2,12 +2,12 @@
 title: <add> 的 <scopes>
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: 2681d5e757a1c1efc33fb3ef8804e94f8b391757
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c29e47f688118e34fbdb4deb396c930d478f0582
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187079"
 ---
 # <a name="add-of-scopes"></a>\<add> of \<scopes>
 添加可用于在查询时筛选服务终结点的自定义范围 URI。  
@@ -55,4 +55,5 @@ ms.locfileid: "55288673"
 |[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|包含一个配置元素集合，这些元素指定可用于在查询时筛选服务终结点的自定义范围 URI。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

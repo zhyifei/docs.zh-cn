@@ -1,15 +1,15 @@
 ---
-title: 如何：在企业中的锁定终结点
+title: 如何：在企业中锁定终结点
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 5392db25c0e3ae0051a892831dd013063389d863
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181337"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>如何：在企业中的锁定终结点
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>如何：在企业中锁定终结点
 大企业往往要求开发的应用程序符合企业安全策略。 以下主题讨论如何开发和安装客户端的终结点验证程序，它可以用来验证安装在计算机上的所有 Windows Communication Foundation (WCF) 客户端应用程序。  
   
  在这种情况下，验证程序是客户端验证程序，因为此终结点行为添加到客户端[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config 文件中的部分。 WCF 加载公共终结点行为仅针对客户端应用程序，并加载常见服务行为仅用于服务应用程序。 若要为服务应用程序安装此相同验证程序，验证程序必须为服务行为。 有关详细信息，请参阅[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)部分。  
@@ -64,5 +64,6 @@ ms.locfileid: "54663059"
  您可能还需要对配置文件元素进行加密。 有关更多信息，请参见“另请参见”部分。  
   
 ## <a name="see-also"></a>请参阅
-- [使用 DPAPI 加密配置文件元素](https://go.microsoft.com/fwlink/?LinkId=94954)
-- [使用 RSA 加密配置文件元素](https://go.microsoft.com/fwlink/?LinkId=94955)
+
+- [使用 DPAPI 对配置文件元素进行加密](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [使用 RSA 对配置文件元素进行加密](https://go.microsoft.com/fwlink/?LinkId=94955)

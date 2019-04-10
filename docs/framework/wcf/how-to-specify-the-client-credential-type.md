@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: 9fe999c4ee27d4a78bfad185fa3bcc065d74708a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1138f0fe955782c71076d5c15c236d1d4ebbec01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185050"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>如何：指定客户端凭据类型
 设置安全模式（传输或消息）后，您可以设置客户端凭据类型。 此属性指定客户端必须向服务提供以进行身份验证的凭据类型。 有关设置安全模式 （设置客户端凭据类型前的必需步骤） 的详细信息，请参阅[如何：将安全模式设置](../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
@@ -58,5 +58,6 @@ ms.locfileid: "54643372"
     ```  
   
 ## <a name="see-also"></a>请参阅
-- [保护服务](../../../docs/framework/wcf/securing-services.md)
-- [如何：将安全模式设置](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+
+- [保证服务的安全](../../../docs/framework/wcf/securing-services.md)
+- [如何：设置安全模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

@@ -1,21 +1,21 @@
 ---
-title: 如何：使用 COM + 服务模型配置工具
+title: 如何：使用 COM+ 服务模型配置工具
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196887"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>如何：使用 COM + 服务模型配置工具
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>如何：使用 COM+ 服务模型配置工具
 在选择了适当的宿主模式之后，就可使用 COM+ 服务模型配置命令行工具 (ComSvcConfig.exe) 来配置将作为 Web 服务公开的应用程序接口。  
   
 > [!NOTE]
->  您必须具有计算机上的管理员身份，才能执行下列各项任务。  
+>  你必须具有计算机上的管理员身份，才能执行下列各项任务。  
   
  在 Windows 7 计算机上使用 ComSvcConfig.exe 配置 Web 服务以使用最新服务模型版本（当前版本为 v4.5）时，请执行以下步骤：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "54736242"
   
      此命令将 `IFinances` 组件（它属于 OnlineStore COM+ 应用程序）的 `ItemOrders.IFinancial` 接口添加到将作为 Web 服务公开的接口集。 此服务使用 COM+ 宿主模式，因此要求显式激活应用程序。  
   
-     虽然可以将通配符星号 (*) 字符用于组件和接口，但应避免使用它，因为你可能希望仅将选定的功能作为 Web 服务公开。 如果对此组件的将来版本运行命令，则使用通配符可能意外地公开在确定配置语法时尚不存在的接口。  
+     虽然可以将通配符星号 (*) 字符用于组件和接口，但应避免使用它，因为您可能希望仅将选定的功能作为 Web 服务公开。 如果对此组件的将来版本运行命令，则使用通配符可能意外地公开在确定配置语法时尚不存在的接口。  
   
      /verbose 选项指示该工具除显示所有错误以外，还要显示警告。  
   
@@ -110,4 +110,5 @@ ms.locfileid: "54736242"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [与 COM+ 应用程序集成的概述](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

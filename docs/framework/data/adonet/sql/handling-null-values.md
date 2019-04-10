@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191459"
 ---
 # <a name="handling-null-values"></a>处理 Null 值
 在列中的值未知或缺失时，在关系数据库中使用空值。 空既不是空字符串（对于 character 或 datetime 数据类型），也不是零值（对于 numeric 数据类型）。 ANSI SQL-92 规范规定，空必须对于所有数据类型均相同，以便以一致的方式处理所有空。 <xref:System.Data.SqlTypes> 命名空间通过实现 <xref:System.Data.SqlTypes.INullable> 接口，提供空语义。 <xref:System.Data.SqlTypes> 中的每种数据类型都有其自己的 `IsNull` 属性和可分配给该数据类型的实例的 `Null` 值。  
@@ -35,7 +35,7 @@ ms.locfileid: "54554681"
  ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>理解 ANSI_NULLS 选项  
- <xref:System.Data.SqlTypes> 提供与在 SQL Server 中设置 ANSI_NULLS 选项时相同的语义。 所有算术运算符 (+、-，*、 /、 %)，按位运算符 (~，&、 &#124;)，和大多数函数都返回 null，如果任何操作数或参数为 null，但该属性除外`IsNull`。  
+ <xref:System.Data.SqlTypes> SQL Server 中设置 ANSI_NULLS 选项时，提供了相同的语义。 所有算术运算符 (+、-，*、 /、 %)，按位运算符 (~，&、 &#124;)，和大多数函数都返回 null，如果任何操作数或参数为 null，但该属性除外`IsNull`。  
   
  ANSI SQL-92 标准不支持*columnName* = NULL 在 WHERE 子句中。 在 SQL Server 中，ANSI_NULLS 选项既控制数据库中的默认可空性，也控制对空值的比较计算。 如果启用 ANSI_NULLS（这是默认设置），则在测试空值时在表达式中必须使用 IS NULL 运算符。 例如，在 ANSI_NULLS 为 on 时，以下比较始终生成 unknown：  
   
@@ -83,7 +83,7 @@ WHERE TerritoryID IN (1, 2, 3)
 >  `Nullable<T>` 中当前不支持 <xref:System.Nullable> 或 `DataSet` 结构。  
   
 ### <a name="multiple-column-row-assignment"></a>多列（行）赋值  
- `DataTable.Add`、`DataTable.LoadDataRow` 或其他接受 <xref:System.Data.DataRow.ItemArray%2A>（映射到行）的 API 会将“null”映射到 DataColumn 的默认值。 如果数组中的对象包含 `DbNull.Value` 或其强类型对应项，则上述规则同样适用。  
+ `DataTable.Add``DataTable.LoadDataRow`，或接受其他 Api <xref:System.Data.DataRow.ItemArray%2A> ，获取映射到行，则将映射到 DataColumn 的默认值 ' null'。 如果数组中的对象包含 `DbNull.Value` 或其强类型对应项，则上述规则同样适用。  
   
  此外，下面的规则适用于 `DataRow.["columnName"]` null 赋值的实例：  
   
@@ -142,5 +142,6 @@ String.Equals instance method:
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

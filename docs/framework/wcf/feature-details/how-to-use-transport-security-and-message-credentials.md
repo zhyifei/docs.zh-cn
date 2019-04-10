@@ -1,5 +1,5 @@
 ---
-title: 如何：使用传输安全性和消息凭据
+title: 如何：使用传输安全和消息凭据
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ea57012f9c09394824b7dbf919930c22fc17bd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186805"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>如何：使用传输安全性和消息凭据
+# <a name="how-to-use-transport-security-and-message-credentials"></a>如何：使用传输安全和消息凭据
 保护具有传输和消息凭据的服务使用的传输和消息安全模式的最佳 Windows Communication Foundation (WCF) 中。 总之，传输层安全提供了完整性和机密性，而消息层安全则提供了严格的传输安全机制所不可能提供的多种凭据。 本主题演示使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 绑定通过消息凭据实现传输的基本步骤。 有关设置安全模式的详细信息，请参阅[如何：将安全模式设置](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
   
  在将安全模式设置为 `TransportWithMessageCredential` 时，传输会确定实际提供传输级安全的机制。 对于 HTTP，该机制为基于 HTTP 的安全套接字层 (SSL)（SSL over HTPP，或 HTTPS）；对于 TCP，该机制为 SSL over TCP 或 Windows。  
@@ -161,6 +161,7 @@ ms.locfileid: "54731863"
     ```  
   
 ## <a name="see-also"></a>请参阅
-- [如何：将安全模式设置](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [保护服务](../../../../docs/framework/wcf/securing-services.md)
+
+- [如何：设置安全模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [保证服务的安全](../../../../docs/framework/wcf/securing-services.md)
 - [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

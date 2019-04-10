@@ -1,17 +1,17 @@
 ---
-title: 示例:绑定数据时处理异常
+title: 示例:处理绑定数据时出现的异常
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9610eb6088a59e4f577ea6dfe679130b44988645
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199890"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>示例:绑定数据时处理异常
+# <a name="example-handling-exceptions-when-binding-data"></a>示例:处理绑定数据时出现的异常
 > [!NOTE]
 >  该主题是指 .NET Native 开发者预览版这款预发布软件。 可从 [Microsoft Connect 网站](https://go.microsoft.com/fwlink/?LinkId=394611)（需要注册）下载该预览版。  
   
@@ -60,5 +60,6 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
  然而，有几种方法可以指定 `ViewModel` 到 XAML 页面，从而让工具链在汇编时间可以将属性绑定与正确的类型关联起来并保存元数据，而不必使用运行时指令。  例如，可以应用<xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType>属性上的属性。 这会使得 XAML 编译器生成所需的查找信息并避免在 Default.rd.xml 文件中要求一个运行时指令。  
   
 ## <a name="see-also"></a>请参阅
+
 - [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [示例：故障诊断动态编程](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [示例:故障诊断动态编程](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

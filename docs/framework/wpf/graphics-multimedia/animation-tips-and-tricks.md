@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: e8b2a6b5386ec33ad8aa5281d808bb7089149764
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 1337dac083ad9d52a4cfd99bddee80baebf474de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202139"
 ---
 # <a name="animation-tips-and-tricks"></a>动画提示和技巧
 使用中的动画时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，有一些提示和技巧，可使动画更好地执行，并避免挫折。  
@@ -75,7 +75,7 @@ ms.locfileid: "57362430"
   
 2.  第二个情节提要生效，从当前位置（现在为 0）播放动画到 500。  
   
- **但情况并非如此。** 矩形没有跳回，而是继续向右移动。 这是因为第二个动画使用第一个动画的当前值作为其起始值，并从该值开始播放动画到 500。 当第二个动画替换第一个，因为<xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior>使用，则<xref:System.Windows.Media.Animation.FillBehavior>第一个动画并不重要。  
+ **但这是不会发生什么情况。** 矩形没有跳回，而是继续向右移动。 这是因为第二个动画使用第一个动画的当前值作为其起始值，并从该值开始播放动画到 500。 当第二个动画替换第一个，因为<xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior>使用时，<xref:System.Windows.Media.Animation.FillBehavior>第一个动画并不重要。  
   
 #### <a name="fillbehavior-and-the-completed-event"></a>FillBehavior 和 Completed 事件  
  下一步的示例演示了另一个方案，其中<xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>似乎不起作用。 同样，该示例使用演示图板进行动画处理<xref:System.Windows.Media.TranslateTransform.X%2A>属性的<xref:System.Windows.Media.TranslateTransform>从 0 到 350。 但是，这一次该示例会注册<xref:System.Windows.Media.Animation.Timeline.Completed>事件。  
@@ -116,7 +116,7 @@ ms.locfileid: "57362430"
  有关属性进行动画处理的不同方式的详细信息，请参阅[属性动画技术概述](property-animation-techniques-overview.md)。  
   
 ### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>使用组合 HandoffBehavior 会消耗系统资源  
- 当应用<xref:System.Windows.Media.Animation.Storyboard>， <xref:System.Windows.Media.Animation.AnimationTimeline>，或<xref:System.Windows.Media.Animation.AnimationClock>属性使用<xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>，则所有<xref:System.Windows.Media.Animation.Clock>之前与该属性相关联的对象继续消耗系统资源时，计时系统将不会自动删除这些时钟。  
+ 当应用<xref:System.Windows.Media.Animation.Storyboard>， <xref:System.Windows.Media.Animation.AnimationTimeline>，或<xref:System.Windows.Media.Animation.AnimationClock>属性使用<xref:System.Windows.Media.Animation.HandoffBehavior.Compose><xref:System.Windows.Media.Animation.HandoffBehavior>，则所有<xref:System.Windows.Media.Animation.Clock>之前与该属性相关联的对象继续消耗系统资源时，计时系统将不会删除这些时钟是自动的。  
   
  若要避免出现性能问题时应用大量时钟使用<xref:System.Windows.Media.Animation.HandoffBehavior.Compose>，它们完成后，您应该从属性的基值删除组合时钟。 删除时钟有多种方法。  
   
@@ -129,4 +129,5 @@ ms.locfileid: "57362430"
  有关时钟对象的详细信息，请参阅[动画和计时系统概述](animation-and-timing-system-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [动画概述](animation-overview.md)

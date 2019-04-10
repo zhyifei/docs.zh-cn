@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 573da0b608b3f74b9cf789a27a10183f3320f908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197992"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <xref:System.Data.DataSet> 使用 DiffGram 格式来加载和保持其内容，并将其内容序列化，以便通过网络连接来进行传输。 当<xref:System.Data.DataSet>编写为 DiffGram，若要精确地重新创建内容，但不架构的所有必要信息 DiffGram 填充它<xref:System.Data.DataSet>，包括从这两个列的值**原始**并**当前**行版本、 行错误信息以及行顺序。  
@@ -85,9 +85,9 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
 |----------------|-----------------|  
 |**id**|用于中的元素配对 **\<diffgr： 之前 >** 并 **\<diffgr:errors >** 块中的元素**\<*****DataInstance*** **>** 块。 使用值**diffgr: id**批注位于窗体 *[TableName] [RowIdentifier]*。 例如：`<Customers diffgr:id="Customers1">`。|  
 |**parentId**|标识中的哪个元素**\<** ***DataInstance*** **>** 块是当前元素的父元素。 使用值**diffgr: parentid**批注位于窗体 *[TableName] [RowIdentifier]*。 例如：`<Orders diffgr:parentId="Customers1">`。|  
-|**hasChanges**|中的行标识**\<** ***DataInstance*** **>** 阻止为已修改。 **HasChanges**批注可以具有以下两个值之一：<br /><br /> **inserted**<br /> 标识**Added**行。<br /><br /> **修改**<br /> 标识**Modified**包含行**原始**中的行版本 **\<diffgr： 之前 >** 块。 请注意， **Deleted**行将包含**原始**中的行版本 **\<diffgr： 之前 >** 块，但将存在中没有带批注的元素**\<**  ***DataInstance*** **>** 块。|  
+|**hasChanges**|中的行标识**\<** ***DataInstance*** **>** 阻止为已修改。 **HasChanges**批注可以具有以下两个值之一：<br /><br /> **inserted**<br /> 标识**Added**行。<br /><br /> **modified**<br /> 标识**Modified**包含行**原始**中的行版本 **\<diffgr： 之前 >** 块。 请注意， **Deleted**行将包含**原始**中的行版本 **\<diffgr： 之前 >** 块，但将存在中没有带批注的元素**\<**  ***DataInstance*** **>** 块。|  
 |**hasErrors**|中的行标识**\<** ***DataInstance*** **>** 块**RowError**。 错误元素放置在 **\<diffgr:errors >** 块。|  
-|**错误**|包含的文本**RowError**中的特定元素的 **\<diffgr:errors >** 块。|  
+|**Error**|包含的文本**RowError**中的特定元素的 **\<diffgr:errors >** 块。|  
   
  当以 DiffGram 格式读写 <xref:System.Data.DataSet> 的内容时，还包含附加的批注。 下表描述了命名空间中定义这些其他批注**urn： 架构-microsoft-com:xml-msdata**。  
   
@@ -132,8 +132,9 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [以 XML 数据的形式编写数据集内容](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [写入数据集内容作为 XML 数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
 - [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

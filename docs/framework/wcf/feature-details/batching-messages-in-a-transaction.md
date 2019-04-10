@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: a09cbbe8b77523184a3e75b8fd4301ca956d5cd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b0b189db8f51e0cccb6ee0516fc4cc53556ccf51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174117"
 ---
 # <a name="batching-messages-in-a-transaction"></a>在事务中对消息进行批处理
 排队的应用程序使用事务来确保消息的正确性以及传递的可靠性。 但是，事务是一种成本较高的操作，可能会大幅度降低消息吞吐量。 提高消息吞吐量的一个方法是让一个应用程序在单个事务内读取和处理多个消息。 这需要在性能和恢复之间进行权衡；随着批处理中消息数量的增加，事务回滚时所需完成的恢复工作的工作量也会增加。 需要注意的是，在事务中对消息进行批处理与会话是不同的。 一个*会话*是相关的消息由单个应用程序处理和作为一个单元提交的分组。 当必须将一组相关消息一起进行处理的时候，通常使用会话。 这方面的一个例子是在线购物网站。 *批处理*用于处理多个，不相关的消息的方式增加消息吞吐量。 有关会话的详细信息，请参阅[会话中的分组排队消息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)。 批处理中的消息也是由单个应用程序处理，并且作为一个单元提交，但批处理中的消息之间可能没有任何关系。 在事务中对消息进行批处理是一种优化方法，它不会改变应用程序的运行方式。  
@@ -20,11 +20,11 @@ ms.locfileid: "54700543"
 ## <a name="committing-a-transaction"></a>提交事务  
  根据以下因素提交批处理事务：  
   
--   `MaxBatchSize`。 <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 行为的一个属性。 此属性确定放入批处理中的消息的最大数量。 一旦达到此数量，批处理便会被提交。 该值并不是一个严格的限制，在接收到这一数量的消息之前也可以提交批处理。  
+-   `MaxBatchSize`. <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 行为的一个属性。 此属性确定放入批处理中的消息的最大数量。 一旦达到此数量，批处理便会被提交。 该值并不是一个严格的限制，在接收到这一数量的消息之前也可以提交批处理。  
   
--   `Transaction Timeout`。 当事务的超时时间已经过去 80% 之后，系统会提交批处理，并且创建一个新的批处理。 这表示如果为事务完成所分配的时间只剩下 20% 或更少，系统便会提交批处理。  
+-   `Transaction Timeout`. 当事务的超时时间已经过去 80% 之后，系统会提交批处理，并且创建一个新的批处理。 这表示如果为事务完成所分配的时间只剩下 20% 或更少，系统便会提交批处理。  
   
--   `TransactionScopeRequired`。 当处理一批消息，如果 WCF 发现一个带有`TransactionScopeRequired`  =  `false`，它提交该批处理并重新打开新的批处理的第一个消息的接收`TransactionScopeRequired`  =  `true`和`TransactionAutoComplete` = `true`.  
+-   `TransactionScopeRequired`. 当处理一批消息，如果 WCF 发现一个带有`TransactionScopeRequired`  =  `false`，它提交该批处理并重新打开新的批处理的第一个消息的接收`TransactionScopeRequired`  =  `true`和`TransactionAutoComplete` = `true`.  
   
 -   如果队列中不再有其他消息，则即使尚未达到 `MaxBatchSize` 或事务的超时时间尚未过去 80%，系统也会提交当前的批处理。  
   
@@ -83,5 +83,6 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

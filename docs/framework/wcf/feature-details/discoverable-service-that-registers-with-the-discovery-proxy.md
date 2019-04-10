@@ -1,15 +1,15 @@
 ---
-title: 如何：实现向发现代理注册的可发现服务
+title: 如何：实现向发现代理注册的可发现的服务
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: c708942265ae39ee6e4f198118741068a37512ba
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
-ms.translationtype: MT
+ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262408"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177822"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>如何：实现向发现代理注册的可发现服务
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>如何：实现向发现代理注册的可发现的服务
 本主题是讨论如何实现发现代理的四个主题中的第二个主题。 在上一主题中，[如何：实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，实现发现代理。 在本主题中，创建将发送公告消息的 WCF 服务 (`Hello`和`Bye`) 到发现代理，从而导致它来注册和注销本身向发现代理。
 
 ### <a name="to-define-the-service-contract"></a>定义服务协定
@@ -290,6 +290,7 @@ namespace Microsoft.Samples.Discovery
 ```
 
 ## <a name="see-also"></a>请参阅
-- [WCF 发现](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+
+- [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
 - [如何：实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
 - [如何：实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

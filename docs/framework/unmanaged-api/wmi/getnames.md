@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583556"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202646"
 ---
 # <a name="getnames-function"></a>GetNames 函数
 检索对象属性的子集或所有名称。 
@@ -80,17 +80,16 @@ HRESULT GetNames (
 
 中的标志值`lFlags`是位域
 
-
 可以作为传递的标志`lEnumFlags`自变量是在中定义的位域*WbemCli.h*标头文件，也可以在定义它们为常量在代码中。  可以结合任何其他组中的任何标志每个组中的一个标志。 但是，在同一组中的标志是互斥的。 
 
-| 组 1 标志 |“值”  |描述  |
+| 组 1 标志 |“值”  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAG_ALWAYS` | 0 | 返回所有属性名称。 `strQualifierName` 和`pQualifierVal`未使用。 |
 | `WBEM_FLAG_ONLY_IF_TRUE` | 1 | 返回具有指定的名称的限定符的唯一属性`strQualifierName`参数。 如果使用此标志，则必须指定`strQualifierName`。 |
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  返回不具有指定的名称的限定符的唯一属性`strQualifierName`参数。 如果使用此标志，则必须指定`strQualifierName`。 |
 |`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | 返回具有指定的名称的限定符的属性`wszQualifierName`参数和也有值与指定的相同`pQualifierVal`结构。 如果使用此标志，则必须指定这两`wszQualifierName`和一个`pQualifierValue`。 |
 
-| 组 2 标志 |值  |描述  |
+| 组 2 标志 |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | 返回定义的键的属性的名称。 |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | 返回唯一属性名称的对象引用。 |
@@ -109,7 +108,8 @@ HRESULT GetNames (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
-- [WMI 和性能计数器 （非托管 API 参考）](index.md)
+
+- [WMI 和性能计数器（非托管 API 参考）](index.md)

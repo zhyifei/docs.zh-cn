@@ -2,12 +2,12 @@
 title: <routing> 的 <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: 3f23cbb45aa72b1aae18c845e68b426a4214d499
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7a9be18395ef8878900d754b5aa5afdeee0cff8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202503"
 ---
 # <a name="routing-of-servicebehavior"></a>\<路由 > 的\<serviceBehavior >
 提供对路由服务的运行时访问以允许对路由配置进行动态修改。  
@@ -56,4 +56,3 @@ ms.locfileid: "57354215"
  将此配置元素添加到服务的行为配置中后，此配置元素将对该服务启用路由。 您可以在此元素中指定服务要使用的实际路由表。  
   
  通过使用此配置节，您可以在部署模式发生更改时动态更改路由设置。 在运行时，您可以使用新的路由设置注册自己的路由扩展，路由服务将开始对新消息和会话使用更新后的配置信息，而使正在实施的消息/会话使用启动时的任何现有规则。  这样，您可以在运行时对路由服务进行会话安全的无回收重新配置。  
-  

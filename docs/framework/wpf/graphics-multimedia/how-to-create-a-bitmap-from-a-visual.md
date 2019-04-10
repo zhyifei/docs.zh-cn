@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bitmaps [WPF], rendering from visuals
 - visuals [WPF], rendering to bitmaps
 ms.assetid: 103fc7f5-7306-4026-9d61-2005e79959f3
-ms.openlocfilehash: 429aacc99d8ead5a18e9be7602b19a74773b419a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a622d99f7c477f8654526ed399f1eb37288682fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189868"
 ---
 # <a name="how-to-create-a-bitmap-from-a-visual"></a>如何：从 Visual 创建位图
 此示例演示如何创建从位图<xref:System.Windows.Media.Visual>。 一个<xref:System.Windows.Media.DrawingVisual>呈现与<xref:System.Windows.Media.FormattedText>。 <xref:System.Windows.Media.Visual>将呈现到<xref:System.Windows.Media.Imaging.RenderTargetBitmap>创建给定文本的位图。  
@@ -23,6 +23,7 @@ ms.locfileid: "57362859"
  [!code-vb[ImagingSnippetGallery_procedural_snip#CreateRTBImage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/RenderTargetBitmapExample.vb#creatertbimage)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Media.DrawingContext>
 - [图像处理概述](imaging-overview.md)
 - [Drawing 对象概述](drawing-objects-overview.md)

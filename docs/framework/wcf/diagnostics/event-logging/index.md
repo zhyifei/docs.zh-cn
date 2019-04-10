@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: d8bc1f06308fba41f622307ff65d8fc3f9720a5a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653653"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175274"
 ---
 # <a name="event-logging-in-wcf"></a>WCF 中的事件日志记录
 Windows Communication Foundation (WCF) 跟踪 Windows 事件日志中的内部事件。  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) 跟踪 Windows 事件日志中的内部�
   
 -   共享的侦听器：WCF TCP 端口共享服务记录的事件时未能启动。  
   
--   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]：记录事件时该服务无法启动。  
+-   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]:记录事件时该服务无法启动。  
   
 -   严重和错误事件，如启动故障或崩溃  
   
@@ -48,5 +48,6 @@ Windows Communication Foundation (WCF) 跟踪 Windows 事件日志中的内部�
  当你单击"详细信息"事件查看器在事件查看器中查看事件，可能会通过 Internet 发送信息。 有关更多信息，请参见事件查看器帮助。  
   
 ## <a name="see-also"></a>请参阅
+
 - [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

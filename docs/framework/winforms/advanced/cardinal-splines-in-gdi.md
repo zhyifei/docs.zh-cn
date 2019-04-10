@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, cardinal splines
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-ms.openlocfilehash: 6cc57698c8e43aefff0e0a63b0384417483d3b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705280"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200410"
 ---
 # <a name="cardinal-splines-in-gdi"></a>GDI+ 中的基数样条
 基数样条是一系列单个系统联合起来以形成更大的曲线的曲线。 由一系列点和张力参数指定样条。 基数样条平滑地通过在数组; 每个点有没有尖角中的和任何突然更改曲线的拟合度。 下图显示了一系列点和经过集中每个点的基数样条。  
@@ -36,5 +36,6 @@ ms.locfileid: "57705280"
  [!code-vb[LinesCurvesAndShapes#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>请参阅
-- [直线、曲线和形状](lines-curves-and-shapes.md)
+
+- [直线、曲线和图形](lines-curves-and-shapes.md)
 - [构造并绘制曲线](constructing-and-drawing-curves.md)

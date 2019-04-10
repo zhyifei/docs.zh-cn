@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 760a6feb8400e60b7e14bf244d66c9026031e5dc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ab7df9b77b1820f291c1b1873b4dfb39e326bc34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193156"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine 方法
 返回一个序列点，最近的一行，可能也可能不是序列点本文档中提供一条线。  
@@ -46,4 +46,5 @@ HRESULT FindClosestLine(
  如果方法成功，则为 S_OK否则为错误代码。  
   
 ## <a name="see-also"></a>请参阅
+
 - [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 2e3e46c9d4cf118bb846e5d9efefeb0d57fea567
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0477f68aaf67d4b29c491052999ff7784e736669
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703185"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176405"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Splitter 控件概述（Windows 窗体）
 > [!IMPORTANT]
@@ -23,6 +23,7 @@ ms.locfileid: "57703185"
  当用户将鼠标指针指向未停靠的控件可调整大小的拆分器控件的边缘时，指针将更改其外观，以指示该控件可以调整大小。 拆分器控件后，用户可以调整大小的停靠的控件的紧前面。 因此，若要允许用户调整停靠的控件的大小在运行时，停靠控件要调整大小的容器的边缘，然后将拆分器控件停靠到该容器在同一端。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [如何：在 Windows 窗体上停靠控件](how-to-dock-controls-on-windows-forms.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

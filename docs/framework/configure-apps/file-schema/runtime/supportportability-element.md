@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1e1c3236ed2d79592bca46e925c9f67e5ac9c51
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183934"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > 元素
 通过禁用将程序集视为等效于应用程序可移植性用途的默认行为来指定应用程序可以在两种不同的 .NET Framework 实现中引用同一程序集。  
@@ -40,7 +40,7 @@ ms.locfileid: "55675330"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |true|启用对指定的.NET Framework 程序集实现之间的可移植性的支持。 这是默认设置。|  
 |False|禁用对指定的.NET Framework 程序集实现之间的可移植性的支持。 这使应用程序具有对指定的程序集的多个实现的引用。|  
@@ -79,5 +79,6 @@ ms.locfileid: "55675330"
 ```  
   
 ## <a name="see-also"></a>请参阅
-- [/appconfig （C# 编译器选项）](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [.NET framework 程序集统一概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+
+- [/appconfig（C# 编译器选项）](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [.NET Framework 程序集统一概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

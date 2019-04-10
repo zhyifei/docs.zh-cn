@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679378"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173665"
 ---
 # <a name="securing-exception-handling"></a>保护异常处理
-在 Visual c + + 和 Visual Basic 中，筛选器表达式进一步在堆栈中向上之前运行**最后**语句。 **捕获**与关联的块之后运行该筛选器**最后**语句。 有关详细信息，请参阅[使用用户筛选异常](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)。 本部分中检查此顺序的安全隐患。 请考虑下面的伪代码示例说明了哪些筛选器语句中的顺序，并**最后**运行的语句。  
+视觉对象中C++和 Visual Basic 中之前, 运行的筛选器表达式进一步在堆栈中向上**最后**语句。 **捕获**与关联的块之后运行该筛选器**最后**语句。 有关详细信息，请参阅[使用用户筛选异常](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)。 本部分中检查此顺序的安全隐患。 请考虑下面的伪代码示例说明了哪些筛选器语句中的顺序，并**最后**运行的语句。  
   
 ```cpp  
 void Main()   
@@ -161,4 +161,5 @@ YourObject.YourMethod()
 ```  
   
 ## <a name="see-also"></a>请参阅
-- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)
+
+- [代码安全维护指南](../../../docs/standard/security/secure-coding-guidelines.md)

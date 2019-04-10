@@ -1,16 +1,16 @@
 ---
-title: <applicationPool> 元素（Web 设置）
+title: <applicationPool> 元素 （Web 设置）
 ms.date: 03/30/2017
 helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: a9c81d98a5e531eaa547614c4d236b6c84526398
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184725"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > 元素 （Web 设置）
 指定 ASP.NET 用于 ASP.NET 应用程序在中集成模式下运行时管理的进程范围行为的配置设置[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本。  
@@ -95,4 +95,5 @@ ms.locfileid: "55758269"
 |可以为空||  
   
 ## <a name="see-also"></a>请参阅
-- [\<system.web> 元素（Web 设置）](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
+
+- [\<system.web > 元素 （Web 设置）](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

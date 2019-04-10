@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-ms.openlocfilehash: eee7499373809538355227633ab9a1a66aedb9ed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b3f10fe472e449d39385facdbc716cba9b3f7382
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183776"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>支持辅助功能准则的 Windows 窗体控件上的属性
 标准 Windows 窗体的工具箱上的控件支持许多辅助功能准则，包括公开键盘焦点和屏幕元素。  
@@ -31,4 +31,5 @@ ms.locfileid: "57716395"
 |BackgroundImage|将此属性为空，以使文本更具可读性。|  
   
 ## <a name="see-also"></a>请参阅
-- [演练：创建可访问的基于 Windows 的应用程序](walkthrough-creating-an-accessible-windows-based-application.md)
+
+- [演练：创建基于 Windows 的可访问应用程序](walkthrough-creating-an-accessible-windows-based-application.md)

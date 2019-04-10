@@ -1,5 +1,5 @@
 ---
-title: 如何：绑定到集合并基于选择显示信息
+title: 如何：绑定到集合并根据选择的内容显示信息
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 5ceda723ad982fc788e8d0b81e6cf92975790682
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 61ced27ed80adf8ac5d543584f71794b9ee59676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188742"
 ---
-# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>如何：绑定到集合并基于选择显示信息
+# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>如何：绑定到集合并根据选择的内容显示信息
 在简单的母版-详细信息方案中，具有数据绑定<xref:System.Windows.Controls.ItemsControl>如<xref:System.Windows.Controls.ListBox>。 基于用户所选内容上，显示有关选定项的详细信息。 此示例演示如何实现此方案。  
   
 ## <a name="example"></a>示例  
@@ -46,6 +46,7 @@ ms.locfileid: "57360389"
  [!code-vb[CollectionBinding#ToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [将主-详细模式与分层数据结合使用](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
 - [将主-详细模式与分层 XML 数据结合使用](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [数据绑定概述](data-binding-overview.md)

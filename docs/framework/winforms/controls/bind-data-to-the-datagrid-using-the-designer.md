@@ -1,19 +1,19 @@
 ---
-title: 如何：将数据绑定到使用设计器在 Windows 窗体 DataGridView 控件
+title: 如何：使用设计器将数据绑定到 Windows 窗体 DataGridView 控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, binding to a data source
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 8c90366111957f27a6bd86035013eba00426f46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 70bd2d25f848f1602fbd12a76f898f8fe902d696
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718501"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200228"
 ---
-# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>如何：将数据绑定到使用设计器在 Windows 窗体 DataGridView 控件
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器将数据绑定到 Windows 窗体 DataGridView 控件
 可以使用设计器来连接<xref:System.Windows.Forms.DataGridView>不同种类的包括数据库、 业务对象或 Web 服务的数据源的控件。 当将控件绑定到数据源使用设计器中时，该控件自动绑定到<xref:System.Windows.Forms.BindingSource>表示数据源的组件。 此外，会在控件中自动生成列以匹配数据源提供的架构信息。  
   
  生成列后，可根据需要对其进行修改。 例如，可删除或隐藏不不想显示的列、重新排列各列或修改列的类型。 有关修改列的详细信息，请参阅“另请参阅”部分中列出的主题。  
@@ -45,18 +45,19 @@ ms.locfileid: "57718501"
     >  如果项目已有数据源，还可以使用“数据源”窗口创建数据窗体。 有关详细信息，请参阅[数据源窗口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - [如何：连接到数据库中的数据](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
-- [如何：添加和使用设计器在 Windows 窗体 DataGridView 控件中删除列](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [如何：更改使用设计器在 Windows 窗体 DataGridView 控件中的列顺序](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
-- [如何：更改 Windows 窗体 DataGridView 列使用设计器的类型](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
-- [如何：冻结使用设计器在 Windows 窗体 DataGridView 控件中的列](freeze-columns-in-the-datagrid-using-the-designer.md)
-- [如何：在使用设计器在 Windows 窗体 DataGridView 控件中隐藏列](hide-columns-in-the-datagrid-using-the-designer.md)
-- [如何：使列成为只读使用设计器在 Windows 窗体 DataGridView 控件中](make-columns-read-only-in-the-datagrid-using-the-designer.md)
+- [如何：使用设计器添加和移除 Windows 窗体 DataGridView 控件中的列](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [如何：使用设计器更改 Windows 窗体 DataGridView 控件中列的顺序](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
+- [如何：使用设计器更改 Windows 窗体 DataGridView 列的类型](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
+- [如何：使用设计器冻结 Windows 窗体 DataGridView 控件中的列](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [如何：使用设计器隐藏 Windows 窗体 DataGridView 控件中的列](hide-columns-in-the-datagrid-using-the-designer.md)
+- [如何：使用设计器将 Windows 窗体 DataGridView 控件中的列设为只读](make-columns-read-only-in-the-datagrid-using-the-designer.md)
 - [如何：创建 Windows 窗体应用程序项目](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
 - [如何：向 Windows 窗体添加控件](how-to-add-controls-to-windows-forms.md)
-- [数据源窗口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
+- [“数据源”窗口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
 - [如何：在 Windows 窗体应用程序中显示相关的数据](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

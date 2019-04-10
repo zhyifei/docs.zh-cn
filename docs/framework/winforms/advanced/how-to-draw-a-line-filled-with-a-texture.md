@@ -1,5 +1,5 @@
 ---
-title: 如何：绘制用纹理填充的行
+title: 如何：绘制填充有纹理的线条
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - lines [Windows Forms], texture
 - drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
-ms.openlocfilehash: 82fc553e2a2fc9d1e8161c0f0dfef9190668e48c
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: c0f90c298f48aeb96893bb09241faddc08d8a49d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186897"
 ---
-# <a name="how-to-draw-a-line-filled-with-a-texture"></a>如何：绘制用纹理填充的行
+# <a name="how-to-draw-a-line-filled-with-a-texture"></a>如何：绘制填充有纹理的线条
 而不是绘制一条线使用纯色，可以绘制用纹理的行。 若要绘制的直线和曲线与纹理，创建<xref:System.Drawing.TextureBrush>对象，并将其传递<xref:System.Drawing.TextureBrush>对象传递给<xref:System.Drawing.Pen.%23ctor%2A>构造函数。 使用纹理画笔相关联的位图用于平铺平面 （不可见的方式），并且触笔的笔划时笔绘制直线或曲线，寻找特定的像素的平铺纹理。  
   
 ## <a name="example"></a>示例  
@@ -33,5 +33,6 @@ ms.locfileid: "58653751"
  创建 Windows 窗体和处理该窗体<xref:System.Windows.Forms.Control.Paint>事件。 前面将代码粘贴到<xref:System.Windows.Forms.Control.Paint>事件处理程序。 替换为`Texture.jpg`你系统上有效的映像。  
   
 ## <a name="see-also"></a>请参阅
-- [使用笔绘制直线和形状](using-a-pen-to-draw-lines-and-shapes.md)
+
+- [使用钢笔绘制线条和形状](using-a-pen-to-draw-lines-and-shapes.md)
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)

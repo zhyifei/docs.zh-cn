@@ -8,18 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-ms.openlocfilehash: 4d3677021e38c10d38c0e5ed5e5de1824397db50
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1818718d3ca9e8f56da99d6e504b41b217bfd980
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357360"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203543"
 ---
 # <a name="contextmenu-overview"></a>ContextMenu 概述
 <xref:System.Windows.Controls.ContextMenu>类表示使用特定于上下文的公开功能的元素<xref:System.Windows.Controls.Menu>。 通常情况下，用户公开<xref:System.Windows.Controls.ContextMenu>在[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]通过右键单击鼠标按钮。 本主题介绍<xref:System.Windows.Controls.ContextMenu>元素，并提供有关如何使用中的示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和代码。  
-  
-  
-  
+
 <a name="contextmenu_control"></a>   
 ## <a name="contextmenu-control"></a>ContextMenu 控件  
  一个<xref:System.Windows.Controls.ContextMenu>附加到特定控件。 <xref:System.Windows.Controls.ContextMenu>元素使您能够为用户提供的项的指定命令或关联的选项与特定控件，例如，列表<xref:System.Windows.Controls.Button>。 用户通过右键单击控件来显示菜单。 通常情况下，单击<xref:System.Windows.Controls.MenuItem>打开子菜单或导致应用程序执行某个命令。  
@@ -63,6 +61,7 @@ ms.locfileid: "57357360"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.Menu>

@@ -2,12 +2,12 @@
 title: <transport> 的 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 4d84d99660e4804a5eff2e343ba01c2983520b8f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 44e334c3313f93a23ca7df15ba377c5568a92397
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188794"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<transport> of \<netHttpBinding>
 为 HTTP 传输定义控制身份验证参数的属性。  
@@ -54,9 +54,9 @@ ms.locfileid: "57379726"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|无|在传输过程中不能保证消息的安全。|  
+|None|在传输过程中不能保证消息的安全。|  
 |Basic|指定基本身份验证。|  
 |摘要|指定摘要式身份验证。|  
 |Ntlm|指定 NTLM 身份验证（如果可能且 Windows 身份验证失败）。|  
@@ -64,9 +64,9 @@ ms.locfileid: "57379726"
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|无|的在传输过程中不是安全消息数。|  
+|None|的在传输过程中不是安全消息数。|  
 |Basic|指定基本身份验证定义的 RFC 2617 – HTTP 身份验证：基本和摘要式身份验证。|  
 |摘要|指定摘要式身份验证定义的 RFC 2617 – HTTP 身份验证：基本和摘要式身份验证。|  
 |Ntlm|指定 NTLM 身份验证（如果可能且 Windows 身份验证失败）。|  
@@ -74,13 +74,13 @@ ms.locfileid: "57379726"
 |证书|使用证书执行客户端身份验证。 此选项只在父 `Mode` 元素的 `security` 属性设置为“Transport”时才起作用，如果该属性设置为“TransportCredentialOnly”，则此选项将不起作用。|  
   
 ### <a name="child-elements"></a>子元素  
- 无  
+ None  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|定义的安全功能[ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md)。|  
+|[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|定义的安全功能[ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md)。|  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何对基本绑定使用 SSL 传输安全。 默认情况下，基本绑定支持 HTTP 通信。  
@@ -118,6 +118,7 @@ ms.locfileid: "57379726"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
 - <xref:System.ServiceModel.HttpTransportSecurity>

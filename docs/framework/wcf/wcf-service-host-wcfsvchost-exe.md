@@ -2,12 +2,12 @@
 title: WCF 服务主机 (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505635"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193013"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服务主机 (WcfSvcHost.exe)
 Windows Communication Foundation (WCF) 服务主机 (WcfSvcHost.exe) 允许您以启动 Visual Studio 调试器 (F5) 以自动承载和测试已实现的服务。 然后，您可以测试使用 WCF 测试客户端 (WcfTestClient.exe) 或自己的客户端，以查找并解决任何潜在错误的服务。  
@@ -34,7 +34,7 @@ Windows Communication Foundation (WCF) 服务主机 (WcfSvcHost.exe) 允许您�
 |参数|含义|  
 |---------------|-------------|  
 |`/client`|一个可选参数，用于指定要在承载服务后运行的可执行文件的路径。 这将启动 WCF 测试客户端承载后。|  
-|`/clientArg`|将字符串指定为传递给自定义客户端应用程序的自变量。|  
+|`/clientArg`|将字符串指定为传递给自定义客户端应用程序的参数。|  
 |`/?`|显示帮助文本。|  
   
 #### <a name="using-wcf-test-client"></a>使用 WCF 测试客户端  
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) 服务主机 (WcfSvcHost.exe) 允许您�
   
  当您按 F5 再次启动该服务时，WCF 服务主机将启动调试器时自动启动自定义客户端。  
   
- 也可以按照以下示例中的指示使用 `/clientArg:` 参数将字符串指定为传递给自定义客户端应用程序的自变量。  
+ 也可以按照以下示例中的指示使用 `/clientArg:` 形参将字符串指定为传递给自定义客户端应用程序的实参。  
   
  `/client:"path/CustomClient.exe" /clientArg:"arguments that are passed to Client"`  
   
@@ -111,4 +111,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  有关 netsh.exe 的更多信息，请参阅"[如何使用 Netsh.exe 工具和命令行开关](https://go.microsoft.com/fwlink/?LinkId=97877)"。  
   
 ## <a name="see-also"></a>请参阅
+
 - [WCF 测试客户端 (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

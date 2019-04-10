@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 80659117ab96a6bdb9a9536d3eba47d13a2c395f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70294aff4c40bd5ae14b61e6a847155a10d675a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183035"
 ---
 # <a name="imaging-how-to-topics"></a>图像处理帮助主题
 在本部分中的主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]来显示或改变位图图像。  
@@ -21,8 +21,8 @@ ms.locfileid: "57359531"
  [在 XAML 中使用 BitmapImage](how-to-use-a-bitmapimage.md)  
  [将图像作为缩略图加载](how-to-load-an-image-as-a-thumbnail.md)  
  [向位图图像应用转换](how-to-apply-a-transform-to-a-bitmapimage.md)  
- [通过视觉对象创建位图](how-to-create-a-bitmap-from-a-visual.md)  
- [将视觉对象编码为图像文件](how-to-encode-a-visual-to-an-image-file.md)  
+ [从 Visual 创建位图](how-to-create-a-bitmap-from-a-visual.md)  
+ [将 Visual 编码为图像文件](how-to-encode-a-visual-to-an-image-file.md)  
  [新建 BitmapSource](how-to-create-a-new-bitmapsource.md)  
  [将多个 BitmapSource 对象链在一起](how-to-chain-bitmapsource-objects-together.md)  
  [将 BitmapSource 转换成另一种 PixelFormat](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
@@ -33,7 +33,7 @@ ms.locfileid: "57359531"
  [编码和解码 WDP 图像](how-to-encode-and-decode-a-wdp-image.md)  
  [编码和解码 GIF 图像](how-to-encode-and-decode-a-gif-image.md)  
  [编码和解码 TIFF 图像](how-to-encode-and-decode-a-tiff-image.md)  
- [在位图中写入元数据](how-to-write-metadata-to-a-bitmap.md)  
+ [向位图写入元数据](how-to-write-metadata-to-a-bitmap.md)  
  [从位图读取元数据](how-to-read-metadata-from-a-bitmap.md)  
   
 ## <a name="reference"></a>参考  
@@ -44,4 +44,5 @@ ms.locfileid: "57359531"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>请参阅
+
 - [图像处理概述](imaging-overview.md)

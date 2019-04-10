@@ -1,23 +1,22 @@
 ---
-title: 如何：向使用设计器在 Windows 窗体 DataGrid 控件添加表和列
+title: 如何：使用设计器向 Windows 窗体 DataGrid 控件添加表和列
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], adding to DataGrid control
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 741da635ec187d8605a9f67aa010ff49a83ba86b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 18849e61ea9af503d49e6be1894e7ebd53cce9fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201528"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>如何：向使用设计器在 Windows 窗体 DataGrid 控件添加表和列
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>如何：使用设计器向 Windows 窗体 DataGrid 控件添加表和列
 
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。 有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  可以在 Windows 窗体中显示数据<xref:System.Windows.Forms.DataGrid>控件中的表和列创建<xref:System.Windows.Forms.DataGridTableStyle>对象并将它们添加到<xref:System.Windows.Forms.GridTableStylesCollection>对象，通过访问<xref:System.Windows.Forms.DataGrid>控件的<xref:System.Windows.Forms.DataGrid.TableStyles%2A>属性。 每个表样式显示任何数据的表中指定的内容<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>属性的<xref:System.Windows.Forms.DataGridTableStyle>。 默认情况下，未指定列样式的表样式将显示该数据表中的所有列。 你可以限制在表中的哪些列显示通过添加<xref:System.Windows.Forms.DataGridColumnStyle>对象添加到<xref:System.Windows.Forms.GridColumnStylesCollection>，这通过访问<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>每个属性<xref:System.Windows.Forms.DataGridTableStyle>。  
   
@@ -59,5 +58,6 @@ ms.locfileid: "57725345"
 5.  在中**属性**框中的集合编辑器中，选择<xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A>你想要显示的列的值。  
   
 ## <a name="see-also"></a>请参阅
+
 - [DataGrid 控件](datagrid-control-windows-forms.md)
-- [如何：删除或隐藏 Windows 窗体 DataGrid 控件中的列](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

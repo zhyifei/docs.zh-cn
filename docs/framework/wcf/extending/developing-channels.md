@@ -2,12 +2,12 @@
 title: 开发通道
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-ms.openlocfilehash: 74a54972ffa7d00d702a2339665d18acdcbf93ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1922f5158d72bc5bc443e92c6eabb28510dec0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519133"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175196"
 ---
 # <a name="developing-channels"></a>开发通道
 若要开发使用 Windows Communication Foundation (WCF) 可以使用的协议或传输通道应用程序层需要几个步骤。 本主题介绍这些步骤并为您指出特定主题以了解更多信息。 若要了解通道模型和本主题中提到的各种类型，请参阅[通道模型概述](../../../../docs/framework/wcf/extending/channel-model-overview.md)。 有关完整的传输通道示例，请参阅[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)。  
@@ -34,4 +34,5 @@ ms.locfileid: "54519133"
 4.  添加一个绑定部分和绑定配置元素，以便将该绑定公开到配置系统。 有关详细信息，请参阅[配置和元数据支持](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)

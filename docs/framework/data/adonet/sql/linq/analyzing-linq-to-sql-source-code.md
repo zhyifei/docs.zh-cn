@@ -2,12 +2,12 @@
 title: 分析 LINQ to SQL 源代码
 ms.date: 03/30/2017
 ms.assetid: cba3eef8-e108-4478-b588-ad59580e133e
-ms.openlocfilehash: 4b1d2d2c54ae99a65f60c96b6330e3f94db6beb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1110e64d16a6c2790939cc695ecd67e37ec109e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203283"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>分析 LINQ to SQL 源代码
 通过按以下步骤操作，你可以用 Northwind 示例数据库生成 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 源代码。 您可以将对象模型的元素与数据库的元素作一个比较，以便更好地了解不同项的映射方式。  
@@ -24,5 +24,6 @@ ms.locfileid: "54696849"
     -   `sqlmetal /code:northwind.cs /language:csharp "c:\northwnd.mdf" /sprocs /functions /pluralize`  
   
 ## <a name="see-also"></a>请参阅
-- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+
+- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

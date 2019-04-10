@@ -7,12 +7,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 62fd82a2-9565-4f65-925b-9d1e66dc4e7d
-ms.openlocfilehash: 2fc06bef2434e87b7fbd3ec79e7671c4e32b7b3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d5c4a22f186ddc5811c4a4d5e79776decea9e50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173623"
 ---
 # <a name="autosize-property-overview"></a>AutoSize 属性概述
 <xref:System.Windows.Forms.Control.AutoSize%2A>属性使控件能够更改其大小，如有必要，以获得指定的值<xref:System.Windows.Forms.Control.PreferredSize%2A>属性。 通过设置调整为特定控件的大小调整行为`AutoSizeMode`属性。  
@@ -67,6 +67,7 @@ ms.locfileid: "54649825"
 >  若要最大化生产效率，Windows 窗体设计器 shadows<xref:System.Windows.Forms.Control.AutoSize%2A>属性<xref:System.Windows.Forms.Form>类。 在设计时，窗体行为就如同<xref:System.Windows.Forms.Control.AutoSize%2A>属性设置为`false`，无论其实际的设置。 在运行时，进行任何特殊的便利设施，和<xref:System.Windows.Forms.Control.AutoSize%2A>应用属性所指定的属性设置。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.PreferredSize%2A>
 - <xref:System.Windows.Forms.Control.GetPreferredSize%2A>

@@ -1,5 +1,5 @@
 ---
-title: 如何：向 Toolstripmenuitem 添加增强功能
+title: 如何：向 ToolStripMenuItem 添加增强功能
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 68a926eba184d12d58e537d8db0a5baefb0fbe95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 458347df7e17aabc1e9e21d66ad1b5a96200fe28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198551"
 ---
-# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>如何：向 Toolstripmenuitem 添加增强功能
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>如何：向 ToolStripMenuItem 添加增强功能
 你可以增强的可用性<xref:System.Windows.Forms.MenuStrip>和<xref:System.Windows.Forms.ContextMenuStrip>中通过以下方式控件：  
   
 -   添加复选标记来指定是否打开或关闭，打开某项功能，如是否沿字处理应用程序的边距显示标尺，或以指示列表中的文件的文件上未显示，例如**窗口**菜单。  
@@ -114,6 +114,7 @@ ms.locfileid: "57719320"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [MenuStrip 控件概述](menustrip-control-overview-windows-forms.md)

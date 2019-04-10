@@ -2,12 +2,12 @@
 title: SQL Server 中的授权和权限
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 5d1ea7a9ad451db67e7a51c3485f98e03fd40690
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185856"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server 中的授权和权限
 在创建数据库对象时，必须显式授予权限以使用户可以访问它们。 每个可保护对象都具有可使用权限语句授予主体的权限。  
@@ -18,7 +18,7 @@ ms.locfileid: "54510008"
  向数据库用户授予权限时，应始终遵循最低特权原则。 向用户或角色授予完成给定任务所必需的最低权限。  
   
 > [!IMPORTANT]
->  使用 LUA 方法开发和测试应用程序会给开发过程增加一定的难度。 以系统管理员或数据库所有者身份登录时，创建对象和编写代码要比使用 LUA 帐户登录更容易。 不过，在最低特权用户试图运行需要提升权限才能正常工作的应用程序时，使用高特权帐户开发的应用程序会使功能减少所带来的影响变得模糊。 授予用户过多的权限以重新获得失去的功能会使您的应用程序容易受到攻击。 在使用 LUA 帐户登录时设计、开发和测试应用程序会强制使用规范的方法进行安全规划，以消除异常和以授予提升特权作为快速解决问题的倾向做法。 即使您的应用程序旨在使用 Windows 身份验证来进行部署，您也可以使用 SQL Server 登录名进行测试。  
+>  使用 LUA 方法开发和测试应用程序会给开发过程增加一定的难度。 以系统管理员或数据库所有者身份登录时，创建对象和编写代码要比使用 LUA 帐户登录更容易。 不过，在最低特权用户试图运行需要提升权限才能正常工作的应用程序时，使用高特权帐户开发的应用程序会使功能减少所带来的影响变得混淆。 授予用户过多的权限以重新获得失去的功能会使您的应用程序容易受到攻击。 在使用 LUA 帐户登录时设计、开发和测试应用程序会强制使用规范的方法进行安全规划，以消除异常和以授予提升特权作为快速解决问题的倾向做法。 即使你的应用程序旨在使用 Windows 身份验证来进行部署，你也可以使用 SQL Server 登录名进行测试。  
   
 ## <a name="role-based-permissions"></a>基于角色的权限  
  向角色而不是用户授予权限可简化安全管理。 分配给角色的权限集由该角色的所有成员继承。 在角色中添加或移除用户要比为单个用户重新创建单独的权限集更为简便。 角色可以嵌套；但是，嵌套的级别太多会降低性能。 您也可以将用户添加到固定数据库角色来简化权限的分配。  
@@ -59,9 +59,10 @@ ms.locfileid: "54510008"
 |[权限](/sql/relational-databases/security/permissions-database-engine)|包含说明权限层次结构、目录视图以及固定服务器角色权限和数据库角色权限的主题。|
   
 ## <a name="see-also"></a>请参阅
+
 - [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [SQL Server 中的身份验证](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [SQL Server 中的服务器和数据库角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
 - [SQL Server 中的所有权和用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

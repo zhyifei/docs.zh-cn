@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ee62c903da2f2568884b9be30b22bdcdc2d2c4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b1ea34c187de99d23b05b5e1a30c53bc54a6c0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197394"
 ---
 # <a name="icordebugregistersetsetthreadcontext-method"></a>ICorDebugRegisterSet::SetThreadContext 方法
 `SetThreadContext` 在.NET Framework 2.0 版中未实现。 请勿调用此方法。  
@@ -50,5 +50,6 @@ HRESULT SetThreadContext (
  **.NET framework 版本：** 1.1, 1.0  
   
 ## <a name="see-also"></a>请参阅
+
 - [ICorDebugRegisterSet 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
 - [ICorDebugRegisterSet2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718020"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204739"
 ---
 # <a name="how-keyboard-input-works"></a>键盘输入工作原理
 Windows 窗体通过引发键盘事件来处理键盘输入，以响应 Windows 消息。 大多数 Windows 窗体应用程序都通过处理键盘事件来以独占方式处理键盘输入。 但是，必须了解键盘消息的工作方式，才能实现更高级的键盘输入方案（如在按键到达控件之前截获它们）。 本主题描述 Windows 窗体能够识别的按键数据的类型，并概述键盘消息的传送方式。 有关键盘事件的信息，请参阅[使用键盘事件](using-keyboard-events.md)。  
@@ -63,12 +63,13 @@ Windows 窗体通过引发键盘事件来处理键盘输入，以响应 Windows 
 |任务|方法|  
 |----------|------------|  
 |截获导航键并引发<xref:System.Windows.Forms.Control.KeyDown>事件。 例如，希望在文本框中处理 Tab 键和回车键。|重写 <xref:System.Windows.Forms.Control.IsInputKey%2A>。 **注意：** 或者，可以处理<xref:System.Windows.Forms.Control.PreviewKeyDown>事件并设置<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A>的<xref:System.Windows.Forms.PreviewKeyDownEventArgs>到`true`的或多个所需的键。|  
-|在控件上执行特殊的输入或导航处理。 例如，你可能希望在列表控件中使用箭头键更改选定项。|重写 <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|在控件上执行特殊的输入或导航处理。 例如，你可能希望在列表控件中使用箭头键更改选定项。|替代 <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |截获导航键并引发<xref:System.Windows.Forms.Control.KeyPress>事件。 例如，你希望在数字调整框控件中，多次按箭头键来加快项的调整进度。|重写 <xref:System.Windows.Forms.Control.IsInputChar%2A>。|  
-|执行特殊的输入或导航处理期间<xref:System.Windows.Forms.Control.KeyPress>事件。 例如，在列表控件中，按住“r”键将跳到以字母 r 开头的项并在这些项间切换。|重写 <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|执行特殊的输入或导航处理期间<xref:System.Windows.Forms.Control.KeyPress>事件。 例如，在列表控件中，按住“r”键将跳到以字母 r 开头的项并在这些项间切换。|替代 <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |执行自定义的助记键处理；例如，你希望处理所有者描述的、包含在工具栏中的按钮上的助记键。|重写 <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.WndProc%2A>
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>

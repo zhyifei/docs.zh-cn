@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SoundPlayer class [Windows Forms], about SoundPlayer class
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
-ms.openlocfilehash: 041e7d0170bc98797278e209fd86cff0f82db9fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ff23cbfa78b803d4526e7a7c389fd5d458a967c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195002"
 ---
 # <a name="soundplayer-class-overview"></a>SoundPlayer 类概述
 <xref:System.Media.SoundPlayer> 类使你能够轻松地将声音纳入应用程序。  
@@ -22,7 +22,7 @@ ms.locfileid: "54690679"
   
 ## <a name="commonly-used-properties-methods-and-events"></a>常用的属性、方法和事件  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |<xref:System.Media.SoundPlayer.SoundLocation%2A> 属性|声音的文件路径或 Web 地址。 可接受的值可以是 UNC 或 HTTP。|  
 |<xref:System.Media.SoundPlayer.LoadTimeout%2A> 属性|程序引发异常前等待加载声音的毫秒数。 默认值为 10 秒。|  
@@ -32,8 +32,9 @@ ms.locfileid: "54690679"
 |<xref:System.Media.SoundPlayer.Play%2A> 方法|在指定的声音<xref:System.Media.SoundPlayer.SoundLocation%2A>或<xref:System.Media.SoundPlayer.Stream%2A>新线程中的属性。|  
 |<xref:System.Media.SoundPlayer.PlaySync%2A> 方法|在指定的声音<xref:System.Media.SoundPlayer.SoundLocation%2A>或<xref:System.Media.SoundPlayer.Stream%2A>当前线程中的属性。|  
 |<xref:System.Media.SoundPlayer.Stop%2A> 方法|停止当前播放的任何声音。|  
-|<xref:System.Media.SoundPlayer.LoadCompleted> 事件|尝试加载声音后引发。|  
+|<xref:System.Media.SoundPlayer.LoadCompleted> Event — 事件|尝试加载声音后引发。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>

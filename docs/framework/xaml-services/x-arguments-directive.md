@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-ms.openlocfilehash: 351974786b9f4748499279d29202e2051d9268fd
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: a87542513ffeeec7efc526d4218f921d1b7579a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184842"
 ---
 # <a name="xarguments-directive"></a>x:Arguments 指令
 打包构造参数为 XAML 中的对象元素声明非默认构造函数或工厂方法对象声明。  
@@ -107,5 +107,6 @@ public Food TryLookupFood(string name)
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [定义与 .NET Framework XAML 服务一起使用的自定义类型](defining-custom-types-for-use-with-net-framework-xaml-services.md)
 - [XAML 概述 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
