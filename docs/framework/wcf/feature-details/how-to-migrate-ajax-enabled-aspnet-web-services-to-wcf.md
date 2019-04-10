@@ -2,12 +2,12 @@
 title: 如何：将支持 AJAX 的 ASP.NET Web 服务迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: dfbb32a751623fb1e3753cfd8bbbaf5910d571b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142995"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337417"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>如何：将支持 AJAX 的 ASP.NET Web 服务迁移到 WCF
 本主题概述将基本的 ASP.NET AJAX 服务迁移到等效的启用了 AJAX 的 Windows Communication Foundation (WCF) 服务的过程。 它演示如何创建 ASP.NET AJAX 服务的功能上等效 WCF 版本。 然后可以使用并排显示，这两项服务或 WCF 服务可以用于替换 ASP.NET AJAX 服务。
@@ -26,21 +26,21 @@ ms.locfileid: "59142995"
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>创建并测试 ASP.NET Web 服务应用程序
 
-1.  打开 Visual Studio 2012。
+1. 打开 Visual Studio 2012。
 
-2.  从**文件**菜单中，选择**新建**，然后**项目**，然后**Web**，然后选择**ASP.NET Web 服务应用程序**.
+2. 从**文件**菜单中，选择**新建**，然后**项目**，然后**Web**，然后选择**ASP.NET Web 服务应用程序**.
 
-3.  将项目命名`ASPHello`然后单击**确定**。
+3. 将项目命名`ASPHello`然后单击**确定**。
 
-4.  在 Service1.asmx.cs 文件中，取消对包含 `System.Web.Script.Services.ScriptService]` 的行的注释，以便为此服务启用 AJAX。
+4. 在 Service1.asmx.cs 文件中，取消对包含 `System.Web.Script.Services.ScriptService]` 的行的注释，以便为此服务启用 AJAX。
 
-5.  从**构建**菜单中，选择**生成解决方案**。
+5. 从**构建**菜单中，选择**生成解决方案**。
 
-6.  在“调试”菜单中，选择“启动但不调试”。
+6. 在“调试”菜单中，选择“启动但不调试”。
 
-7.  在生成的网页上，选择 `HelloWorld` 操作。
+7. 在生成的网页上，选择 `HelloWorld` 操作。
 
-8.  单击**Invoke**按钮`HelloWorld`测试页。 您应收到以下 XML 响应。
+8. 单击**Invoke**按钮`HelloWorld`测试页。 您应收到以下 XML 响应。
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -53,13 +53,13 @@ ms.locfileid: "59142995"
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>创建等效的 WCF AJAX 服务应用程序
 
-1.  右键单击**ASPHello**项目，然后选择**添加**，然后**新项**，然后**启用 AJAX 的 WCF 服务**。
+1. 右键单击**ASPHello**项目，然后选择**添加**，然后**新项**，然后**启用 AJAX 的 WCF 服务**。
 
-2.  将服务命名`WCFHello`然后单击**添加**。
+2. 将服务命名`WCFHello`然后单击**添加**。
 
-3.  打开 WCFHello.svc.cs 文件。
+3. 打开 WCFHello.svc.cs 文件。
 
-4.  在 Service1.asmx.cs 中，将复制的以下实现`HelloWorld`操作。
+4. 在 Service1.asmx.cs 中，将复制的以下实现`HelloWorld`操作。
 
     ```
     public string HelloWorld()
@@ -68,7 +68,7 @@ ms.locfileid: "59142995"
     }
     ```
 
-5.  粘贴到的复制实现`HelloWorld`到 WCFHello.svc.cs 文件替换下面的代码的操作。
+5. 粘贴到的复制实现`HelloWorld`到 WCFHello.svc.cs 文件替换下面的代码的操作。
 
     ```
     public void DoWork()
@@ -78,7 +78,7 @@ ms.locfileid: "59142995"
     }
     ```
 
-6.  指定`Namespace`特性<xref:System.ServiceModel.ServiceContractAttribute>作为`WCFHello`。
+6. 指定`Namespace`特性<xref:System.ServiceModel.ServiceContractAttribute>作为`WCFHello`。
 
     ```
     [ServiceContract(Namespace="WCFHello")]
@@ -87,7 +87,7 @@ ms.locfileid: "59142995"
     { … }
     ```
 
-7.  添加<xref:System.ServiceModel.Web.WebInvokeAttribute>到`HelloWorld`操作并设置<xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>属性以返回<xref:System.ServiceModel.Web.WebMessageFormat.Xml>。 请注意，如果未设置此属性，则默认返回类型为 <xref:System.ServiceModel.Web.WebMessageFormat.Json>。
+7. 添加<xref:System.ServiceModel.Web.WebInvokeAttribute>到`HelloWorld`操作并设置<xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>属性以返回<xref:System.ServiceModel.Web.WebMessageFormat.Xml>。 请注意，如果未设置此属性，则默认返回类型为 <xref:System.ServiceModel.Web.WebMessageFormat.Json>。
 
     ```
     [OperationContract]
@@ -98,7 +98,7 @@ ms.locfileid: "59142995"
     }
     ```
 
-8.  从**构建**菜单中，选择**生成解决方案**。
+8. 从**构建**菜单中，选择**生成解决方案**。
 
 9. 打开 WCFHello.svc 文件并从**调试**菜单中，选择**启动但不调试**。
 

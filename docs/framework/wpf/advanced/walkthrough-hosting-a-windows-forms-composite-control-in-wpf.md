@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: f9e0477b2c186ea9b23886f460caf965a5db0244
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 90d0e2f3c6ebab070809a4813c87da3539fd14f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174351"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337846"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>演练：在 WPF 中托管 Windows 窗体复合控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用于创建应用程序的丰富环境。 但是，当您有大量投入时[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]代码，它可以更有效地重复使用至少某些中的代码在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序而不是从头开始重新编写。 最常见的方案是具有现有 Windows 窗体控件。 在某些情况下，你甚至可能无法使用这些控件的源代码。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一个简单的过程中的此类控件承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 例如，可以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]对于大多数应用编程，同时承载专用<xref:System.Windows.Forms.DataGridView>控件。  
@@ -44,17 +44,17 @@ ms.locfileid: "59174351"
 ### <a name="creating-the-project"></a>创建项目  
  启动项目：  
   
-1.  启动[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，并打开**新建项目**对话框。  
+1. 启动[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，并打开**新建项目**对话框。  
   
-2.  在窗口类别，选择**Windows 窗体控件库**模板。  
+2. 在窗口类别，选择**Windows 窗体控件库**模板。  
   
-3.  将新项目命名为 `MyControls`。  
+3. 将新项目命名为 `MyControls`。  
   
-4.  对于位置，指定可以方便命名的顶层文件夹，如`WpfHostingWindowsFormsControl`。 随后，将主机应用程序放在此文件夹中。  
+4. 对于位置，指定可以方便命名的顶层文件夹，如`WpfHostingWindowsFormsControl`。 随后，将主机应用程序放在此文件夹中。  
   
-5.  单击“确定”，创建项目。 默认项目包含名为的单个控件`UserControl1`。  
+5. 单击“确定”，创建项目。 默认项目包含名为的单个控件`UserControl1`。  
   
-6.  在解决方案资源管理器，重命名`UserControl1`到`MyControl1`。  
+6. 在解决方案资源管理器，重命名`UserControl1`到`MyControl1`。  
   
  项目应具有对以下系统 DLL 的引用。 如果默认不包含其中任何 DLL，则将它们添加到项目中。  
   
@@ -112,19 +112,19 @@ ms.locfileid: "59174351"
 ### <a name="giving-the-assembly-a-strong-name-and-building-the-assembly"></a>赋予程序集强名称并生成程序集
  此程序集引用的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序，它必须具有强名称。 若要创建强名称，使用 Sn.exe 创建密钥文件并将其添加到你的项目。
 
-1.  打开一个 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 命令提示符。 若要执行此操作，请单击**启动**菜单，并选择**所有 Programs/Microsoft Visual Studio 2010/Visual Studio Tools/Visual Studio 命令提示符**。 这将启动包含自定义环境变量的控制台窗口。
+1. 打开一个 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 命令提示符。 若要执行此操作，请单击**启动**菜单，并选择**所有 Programs/Microsoft Visual Studio 2010/Visual Studio Tools/Visual Studio 命令提示符**。 这将启动包含自定义环境变量的控制台窗口。
 
-2.  在命令提示符下，使用`cd`命令可以转到你的项目文件夹。
+2. 在命令提示符下，使用`cd`命令可以转到你的项目文件夹。
 
-3.  通过运行以下命令生成名为 MyControls.snk 的密钥文件。
+3. 通过运行以下命令生成名为 MyControls.snk 的密钥文件。
 
     ```
     Sn.exe -k MyControls.snk
     ```
 
-4.  要在项目中包含的密钥文件，右键单击解决方案资源管理器中的项目名称，然后单击**属性**。 在项目设计器中，单击**签名**选项卡上，选择**程序集签名**复选框，然后浏览到你的密钥文件。
+4. 要在项目中包含的密钥文件，右键单击解决方案资源管理器中的项目名称，然后单击**属性**。 在项目设计器中，单击**签名**选项卡上，选择**程序集签名**复选框，然后浏览到你的密钥文件。
 
-5.  生成解决方案。 生成将产生一个名为 MyControls.dll 的 DLL。
+5. 生成解决方案。 生成将产生一个名为 MyControls.dll 的 DLL。
 
 ## <a name="implementing-the-wpf-host-application"></a>实现 WPF 主机应用程序
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]宿主应用程序使用<xref:System.Windows.Forms.Integration.WindowsFormsHost>控件来承载`MyControl1`。 该应用程序处理`OnButtonClick`事件以接收来自控件的数据。 它还具有一组选项按钮，您可以更改某些控件的属性从[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 下图显示已完成的应用程序。
@@ -136,25 +136,25 @@ ms.locfileid: "59174351"
 ### <a name="creating-the-project"></a>创建项目
  启动项目：
 
-1.  打开[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，然后选择**新建项目**。
+1. 打开[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，然后选择**新建项目**。
 
-2.  在窗口类别，选择**WPF 应用程序**模板。
+2. 在窗口类别，选择**WPF 应用程序**模板。
 
-3.  将新项目命名为 `WpfHost`。
+3. 将新项目命名为 `WpfHost`。
 
-4.  对于位置，指定包含 MyControls 项目的同一顶层文件夹。
+4. 对于位置，指定包含 MyControls 项目的同一顶层文件夹。
 
-5.  单击“确定”，创建项目。
+5. 单击“确定”，创建项目。
 
  此外需要添加对包含的 DLL 的引用`MyControl1`和其他程序集。
 
-1.  右键单击解决方案资源管理器中的项目名称并选择**添加引用**。
+1. 右键单击解决方案资源管理器中的项目名称并选择**添加引用**。
 
-2.  单击**浏览**选项卡，然后浏览到包含 MyControls.dll 的文件夹。 在本演练中，此文件夹位于 MyControls\bin\Debug。
+2. 单击**浏览**选项卡，然后浏览到包含 MyControls.dll 的文件夹。 在本演练中，此文件夹位于 MyControls\bin\Debug。
 
-3.  选择 MyControls.dll，然后依次**确定**。
+3. 选择 MyControls.dll，然后依次**确定**。
 
-4.  添加对 WindowsFormsIntegration 程序集，它名为 WindowsFormsIntegration.dll 的引用。
+4. 添加对 WindowsFormsIntegration 程序集，它名为 WindowsFormsIntegration.dll 的引用。
 
 ### <a name="implementing-the-basic-layout"></a>实现基本布局
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]的主机在 MainWindow.xaml 中实现应用程序。 此文件包含[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]定义布局，并托管在 Windows 窗体控件的标记。 该应用程序分为三个区域：

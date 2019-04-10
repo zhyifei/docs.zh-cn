@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: a81aa6ac0716b94625c0ce7868730d55d062e3e4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814635"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343007"
 ---
 # <a name="comments-in-code-visual-basic"></a>代码中的注释 (Visual Basic)
 阅读代码示例时，经常会遇到注释符号 (`'`)。 此符号通知 Visual Basic 编译器忽略它，后面的文本或*注释*。 注释是为了方便阅读而为代码添加的简短的解释性说明。  
@@ -54,7 +54,7 @@ ms.locfileid: "58814635"
   
 -   注释不能与行继续符同行。  
   
- 您可以添加或删除的代码块的注释符通过选择一个或多个行代码，然后选择**注释**(![VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton")) 和**取消注释**(![VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) 上的按钮**编辑**工具栏。  
+ 您可以添加或删除的代码块的注释符通过选择一个或多个行代码，然后选择**注释**(![Visual Studio 中的 Visual Basic 注释按钮](./media/comments-in-code/visual-basic-comment-button.gif)) 和**取消注释** (![Visual Studio 中的 Visual Basic 取消注释按钮](./media/comments-in-code/visual-basic-uncomment-button.gif)) 上的按钮**编辑**工具栏。  
   
 > [!NOTE]
 >  也可以用在文本前加关键字 `REM` 的方式给代码添加注释。 但是，`'`符号并**注释**/**取消注释**按钮是易于使用和需要较少的空间和内存。  

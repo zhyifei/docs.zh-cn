@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 2e0837e4a3058db7f1086d6a8ed53136ec86c7ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 89d9517a92155f569a15c5272bcecc1c8f427f1c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153486"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339666"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体控件显示的图像
 多个 Windows 窗体控件可以显示图像。 图像可以是一个说明用途的控件，如上按钮表示的磁盘图标的图标**保存**命令。 或者，该图标可以是以提供所需的外观的控件的背景图像。  
@@ -24,13 +24,13 @@ ms.locfileid: "59153486"
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>若要设置控件所显示的图像  
   
-1.  在中**属性**窗口中，选择**映像**或**BackgroundImage**属性的控件，然后单击省略号按钮 （  
+1. 在中**属性**窗口中，选择**映像**或**BackgroundImage**属性的控件，然后单击省略号按钮 （  
   
      ![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")  
   
      ) 以显示**选择资源**对话框。  
   
-2.  选择你想要显示的图像。  
+2. 选择你想要显示的图像。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -1,15 +1,15 @@
 ---
-title: 如何：可靠会话内交换消息
+title: 如何：在可靠会话内交换消息
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260681"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342981"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>如何：可靠会话内交换消息
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>如何：在可靠会话内交换消息
 
 本主题概述了使用系统提供的绑定之一来启用可靠会话所需的步骤。这些绑定支持可靠会话，但默认情况下不支持。 启用可靠会话使用代码以强制方式或配置文件中以声明方式。 此过程使用客户端和服务配置文件来启用可靠会话并规定消息到达其中发送顺序相同。
 
@@ -37,7 +37,7 @@ ms.locfileid: "56260681"
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1.  位置*Service.svc* Internet 信息服务 (IIS) 虚拟目录中的文件。
+1. 位置*Service.svc* Internet 信息服务 (IIS) 虚拟目录中的文件。
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>使用 WSHttpBinding 使用可靠会话配置客户端
 

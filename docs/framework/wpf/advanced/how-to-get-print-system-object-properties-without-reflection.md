@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-ms.openlocfilehash: b9ca7444b2c49f4563ff0d7baef8b2d250a7f331
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bb906dafd98e75708764b5f0f009900719f6a475
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215269"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335194"
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>如何：在不使用反射的情况下获取打印系统对象属性
 使用反射对某个对象中列举的属性 （以及这些属性的类型） 可能会降低应用程序性能。 <xref:System.Printing.IndexedProperties>命名空间提供了一种方式获取此信息与使用反射。  
@@ -20,15 +20,15 @@ ms.locfileid: "59215269"
 ## <a name="example"></a>示例  
  执行此操作的步骤如下所示。  
   
-1.  创建类型的实例。 在以下示例中，类型是<xref:System.Printing.PrintQueue>附带 Microsoft.NET Framework，但几乎完全相同的代码的类型应适用于从派生类型<xref:System.Printing.PrintSystemObject>。  
+1. 创建类型的实例。 在以下示例中，类型是<xref:System.Printing.PrintQueue>附带 Microsoft.NET Framework，但几乎完全相同的代码的类型应适用于从派生类型<xref:System.Printing.PrintSystemObject>。  
   
-2.  创建<xref:System.Printing.IndexedProperties.PrintPropertyDictionary>从该类型的<xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>。 <xref:System.Collections.DictionaryEntry.Value%2A>此字典中的每个条目的属性是一个派生自的类型的一个对象<xref:System.Printing.IndexedProperties.PrintProperty>。  
+2. 创建<xref:System.Printing.IndexedProperties.PrintPropertyDictionary>从该类型的<xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>。 <xref:System.Collections.DictionaryEntry.Value%2A>此字典中的每个条目的属性是一个派生自的类型的一个对象<xref:System.Printing.IndexedProperties.PrintProperty>。  
   
-3.  枚举将字典中的成员。 为每个，执行以下操作。  
+3. 枚举将字典中的成员。 为每个，执行以下操作。  
   
-4.  向上转换为每个条目的值<xref:System.Printing.IndexedProperties.PrintProperty>并使用它来创建<xref:System.Printing.IndexedProperties.PrintProperty>对象。  
+4. 向上转换为每个条目的值<xref:System.Printing.IndexedProperties.PrintProperty>并使用它来创建<xref:System.Printing.IndexedProperties.PrintProperty>对象。  
   
-5.  获取类型的<xref:System.Printing.IndexedProperties.PrintProperty.Value%2A>的每个<xref:System.Printing.IndexedProperties.PrintProperty>对象。  
+5. 获取类型的<xref:System.Printing.IndexedProperties.PrintProperty.Value%2A>的每个<xref:System.Printing.IndexedProperties.PrintProperty>对象。  
   
  [!code-csharp[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/csharp/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/CSharp/Program.cs#showpropertytypeswithoutreflection)]
  [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  

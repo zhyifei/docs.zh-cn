@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333900"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>如何：将参数传递给过程 (Visual Basic)
 在调用过程时，过程名后面加上括号中的参数列表。 你提供该过程定义，对应于每个所需的参数的自变量，则可以选择提供参数`Optional`参数。 如果不提供`Optional`中调用的参数，必须包含一个逗号来标记其原位置自变量列表中的，如果你提供的任何后续自变量。  
@@ -27,15 +27,15 @@ ms.locfileid: "56974388"
   
 ### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>若要将一个或多个自变量传递给过程  
   
-1.  在调用语句中，过程名后面加上括号。  
+1. 在调用语句中，过程名后面加上括号。  
   
-2.  在圆括号内放置的参数列表。 包括每个所需的参数的参数定义了该过程，以及用逗号分隔参数。  
+2. 在圆括号内放置的参数列表。 包括每个所需的参数的参数定义了该过程，以及用逗号分隔参数。  
   
-3.  请确保每个自变量是有效的表达式的计算结果为一个数据类型可转换为该过程的类型定义的相应参数。  
+3. 请确保每个自变量是有效的表达式的计算结果为一个数据类型可转换为该过程的类型定义的相应参数。  
   
-4.  如果参数指[可选](../../../../visual-basic/language-reference/modifiers/optional.md)，可以将其包含在参数列表或省略此参数。 如果省略此参数，该过程将使用为该参数定义的默认值。  
+4. 如果参数指[可选](../../../../visual-basic/language-reference/modifiers/optional.md)，可以将其包含在参数列表或省略此参数。 如果省略此参数，该过程将使用为该参数定义的默认值。  
   
-5.  如果省略参数`Optional`参数和另一个参数之后没有它的参数列表中，可以将省略自变量的位置标记的参数列表中一个多余的逗号。  
+5. 如果省略参数`Optional`参数和另一个参数之后没有它的参数列表中，可以将省略自变量的位置标记的参数列表中一个多余的逗号。  
   
      下面的示例调用 Visual Basic<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函数。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "56974388"
 
 - [Sub 过程](./sub-procedures.md)
 - [Function 过程](./function-procedures.md)
-- [属性过程](./property-procedures.md)
+- [Property 过程](./property-procedures.md)
 - [运算符过程](./operator-procedures.md)
 - [如何：为过程定义参数](./how-to-define-a-parameter-for-a-procedure.md)
-- [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)
+- [按值和按引用传递参数](./passing-arguments-by-value-and-by-reference.md)
 - [递归过程](./recursive-procedures.md)
 - [过程重载](./procedure-overloading.md)
 - [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [面向对象的编程 (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [面向对象编程 (Visual Basic)](../../concepts/object-oriented-programming.md)

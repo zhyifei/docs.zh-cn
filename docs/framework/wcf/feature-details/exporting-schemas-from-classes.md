@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: f69fb25df4ed2af79cc5ffa59f0969a1616d38ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185411"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336871"
 ---
 # <a name="exporting-schemas-from-classes"></a>从类导出架构
 若要从数据协定模型中使用的类生成 XML 架构定义语言 (XSD) 架构，请使用 <xref:System.Runtime.Serialization.XsdDataContractExporter> 类。 本主题描述创建架构的过程。  
@@ -25,20 +25,20 @@ ms.locfileid: "59185411"
   
 #### <a name="to-export-schemas"></a>导出架构  
   
-1.  创建 <xref:System.Runtime.Serialization.XsdDataContractExporter>的一个实例。  
+1. 创建 <xref:System.Runtime.Serialization.XsdDataContractExporter>的一个实例。  
   
-2.  可选。 在构造函数中传递一个 <xref:System.Xml.Schema.XmlSchemaSet> 。 在此情况下，会将架构导出期间生成的架构添加到此 <xref:System.Xml.Schema.XmlSchemaSet> 实例中，而不是以空白 <xref:System.Xml.Schema.XmlSchemaSet>开始。  
+2. 可选。 在构造函数中传递一个 <xref:System.Xml.Schema.XmlSchemaSet> 。 在此情况下，会将架构导出期间生成的架构添加到此 <xref:System.Xml.Schema.XmlSchemaSet> 实例中，而不是以空白 <xref:System.Xml.Schema.XmlSchemaSet>开始。  
   
-3.  可选。 调用 <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> 方法中的一种。 该方法确定是否可以导出指定类型。 该方法与下一个步骤中的 `Export` 方法具有相同的重载。  
+3. 可选。 调用 <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> 方法中的一种。 该方法确定是否可以导出指定类型。 该方法与下一个步骤中的 `Export` 方法具有相同的重载。  
   
-4.  调用 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 方法中的一种。 有三个重载采用了 <xref:System.Type>、 <xref:System.Collections.Generic.List%601> 对象的 `Type` ，或 <xref:System.Collections.Generic.List%601> 对象的 <xref:System.Reflection.Assembly> 。 在最后一种情况中，将导出所有给定程序集中的所有类型。  
+4. 调用 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 方法中的一种。 有三个重载采用了 <xref:System.Type>、 <xref:System.Collections.Generic.List%601> 对象的 `Type` ，或 <xref:System.Collections.Generic.List%601> 对象的 <xref:System.Reflection.Assembly> 。 在最后一种情况中，将导出所有给定程序集中的所有类型。  
   
      多次调用 `Export` 方法将导致多个项被添加到同一个 `XmlSchemaSet`中。 如果某个类型已经存在于 `XmlSchemaSet` 中，则不会再在其中生成该类型。 因此，在同一 `Export` 上多次调用 `XsdDataContractExporter` 时最好创建 `XsdDataContractExporter` 类的多个实例。 这可避免生成重复的架构类型。  
   
     > [!NOTE]
     >  如果导出期间出现故障，则 `XmlSchemaSet` 将处于不可预知的状态。  
   
-5.  通过 <xref:System.Xml.Schema.XmlSchemaSet> 属性访问 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 。  
+5. 通过 <xref:System.Xml.Schema.XmlSchemaSet> 属性访问 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 。  
   
 ## <a name="export-options"></a>导出选项  
  您可以将 <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 的 <xref:System.Runtime.Serialization.XsdDataContractExporter> 属性设置为 <xref:System.Runtime.Serialization.ExportOptions> 类的实例以控制导出过程的各个方面。 您可以具体设置以下选项：  

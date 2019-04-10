@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 8dec7451aaa84b5ec0f3f5d6210afa82924500fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199812"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336052"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>如何：设置所有 Windows 窗体的网格选项
 如您习惯在 Visual Studio 开发环境中工作，可以在 Windows 窗体设计器中设置所有窗体和项目使用首的选项。  
@@ -23,9 +23,9 @@ ms.locfileid: "59199812"
   
 ### <a name="to-set-global-windows-forms-options"></a>若要设置全局 Windows 窗体选项  
   
-1.  从**工具**菜单中，选择**选项**。  
+1. 从**工具**菜单中，选择**选项**。  
   
-2.  在左窗格中**选项**对话框中，单击**Windows 窗体设计器**。  
+2. 在左窗格中**选项**对话框中，单击**Windows 窗体设计器**。  
   
      在右窗格中下,**布局设置**标题时，您可以设置默认为所有新窗体的网格设置。 这些设置包括的网格大小、 是否控件对齐，以及它是否在默认情况下。 此外，您可以选择**SnapToGrid**并**对齐线**布局模式。 对齐线的详细信息，请参阅[演练：在 Windows 上排列控件窗体使用对齐线](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
   

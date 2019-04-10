@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341759"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>演练：创建加密应用程序
 本演练演示如何对内容进行加密和解密。 下面的代码示例是特为 Windows 窗体应用程序设计的。 此应用程序不演示实际方案，例如使用智能卡。 而演示加密和解密的基础知识。  
@@ -35,7 +35,7 @@ ms.locfileid: "45964697"
   
 |任务|描述|  
 |----------|-----------------|  
-|创建 Window 窗体应用程序|列出运行该应用程序所需的控件。|  
+|创建 Windows 窗体应用程序|列出运行该应用程序所需的控件。|  
 |声明全局对象|声明字符串路径变量 <xref:System.Security.Cryptography.CspParameters> 和 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 具有 <xref:System.Windows.Forms.Form> 类的全局上下文。|  
 |创建非对称密钥|创建非对称公钥和私钥值对，并为其分配一个密钥容器名称。|  
 |加密文件|显示对话框，以便选择供加密的文件，并对该文件进行加密。|  
@@ -50,10 +50,10 @@ ms.locfileid: "45964697"
   
 -   对 <xref:System.IO> 和 <xref:System.Security.Cryptography> 命名空间的引用。  
   
-## <a name="creating-a-windows-forms-application"></a>创建 Window 窗体应用程序  
+## <a name="creating-a-windows-forms-application"></a>创建 Windows 窗体应用程序  
  本演练中的大多数代码示例均设计为按钮控件的事件处理程序。 下表列出了示例应用程序所需的控件及其匹配代码示例所需的名称。  
   
-|控件|name|文本属性（根据需要）|  
+|控件|名称|文本属性（根据需要）|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|加密文件|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|解密文件|  
@@ -88,15 +88,15 @@ ms.locfileid: "45964697"
   
  `EncryptFile` 方法执行以下操作：  
   
-1.  创建 <xref:System.Security.Cryptography.RijndaelManaged> 对称算法，以便对内容进行加密。  
+1. 创建 <xref:System.Security.Cryptography.RijndaelManaged> 对称算法，以便对内容进行加密。  
   
-2.  创建 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 对象，以便对 <xref:System.Security.Cryptography.RijndaelManaged> 密钥进行加密。  
+2. 创建 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 对象，以便对 <xref:System.Security.Cryptography.RijndaelManaged> 密钥进行加密。  
   
-3.  使用 <xref:System.Security.Cryptography.CryptoStream> 对象读取源文件的 <xref:System.IO.FileStream>，并将其加密到已加密文件的目标 <xref:System.IO.FileStream> 对象中（以字节块为单位）。  
+3. 使用 <xref:System.Security.Cryptography.CryptoStream> 对象读取源文件的 <xref:System.IO.FileStream>，并将其加密到已加密文件的目标 <xref:System.IO.FileStream> 对象中（以字节块为单位）。  
   
-4.  确定加密密钥和 IV 的长度并创建其长度值的字节数组。  
+4. 确定加密密钥和 IV 的长度并创建其长度值的字节数组。  
   
-5.  将密钥、IV 及其长度值写入已加密的包。  
+5. 将密钥、IV 及其长度值写入已加密的包。  
   
  加密包使用以下格式：  
   
@@ -127,15 +127,15 @@ ms.locfileid: "45964697"
   
  `Decrypt` 方法执行以下操作：  
   
-1.  创建 <xref:System.Security.Cryptography.RijndaelManaged> 对称算法，以便对内容进行解密。  
+1. 创建 <xref:System.Security.Cryptography.RijndaelManaged> 对称算法，以便对内容进行解密。  
   
-2.  将已加密包的 <xref:System.IO.FileStream> 的前八个字节读取到字节数组中，以便获取已加密的密钥和 IV 的长度。  
+2. 将已加密包的 <xref:System.IO.FileStream> 的前八个字节读取到字节数组中，以便获取已加密的密钥和 IV 的长度。  
   
-3.  将密钥和 IV 从加密包提取到字节数组中。  
+3. 将密钥和 IV 从加密包提取到字节数组中。  
   
-4.  创建 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 对象，以便对 <xref:System.Security.Cryptography.RijndaelManaged> 密钥进行解密。  
+4. 创建 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 对象，以便对 <xref:System.Security.Cryptography.RijndaelManaged> 密钥进行解密。  
   
-5.  使用 <xref:System.Security.Cryptography.CryptoStream> 对象来读取 <xref:System.IO.FileStream> 加密包的密码文本部分，并将其解密到已解密文件的 <xref:System.IO.FileStream> 对象中（以字节块为单位）。 完成后，解密即完成。  
+5. 使用 <xref:System.Security.Cryptography.CryptoStream> 对象来读取 <xref:System.IO.FileStream> 加密包的密码文本部分，并将其解密到已解密文件的 <xref:System.IO.FileStream> 对象中（以字节块为单位）。 完成后，解密即完成。  
   
  将以下代码添加为 `Decrypt File` 按钮的 `Click` 事件处理程序。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "45964697"
 ## <a name="importing-a-public-key"></a>导入公钥  
  此任务将加载只有公共参数的密钥（由 `Export Public Key` 按钮创建），并将其设置为密钥容器名称。  
   
- 它模拟以下场景：Bob 加载 Alice 的只含公共参数的密钥，从而可以为她加密文件。  
+ 此任务模拟以下场景：Bob 加载 Alice 的只含公共参数的密钥，从而可以为她加密文件。  
   
  将以下代码添加为 `Import Public Key` 按钮 (`buttonImportPublicKey_Click`) 的 `Click` 事件处理程序。  
   
@@ -182,34 +182,34 @@ ms.locfileid: "45964697"
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>创建密钥、加密和解密  
   
-1.  单击 `Create Keys` 按钮。 标签显示密钥名称，并显示它是完整密钥对。  
+1. 单击 `Create Keys` 按钮。 标签显示密钥名称，并显示它是完整密钥对。  
   
-2.  单击 `Export Public Key` 按钮。 请注意，导出公钥参数并不会更改当前密钥。  
+2. 单击 `Export Public Key` 按钮。 请注意，导出公钥参数并不会更改当前密钥。  
   
-3.  单击 `Encrypt File` 按钮并选择文件。  
+3. 单击 `Encrypt File` 按钮并选择文件。  
   
-4.  单击 `Decrypt File` 按钮，然后选择刚刚加密的文件。  
+4. 单击 `Decrypt File` 按钮，然后选择刚刚加密的文件。  
   
-5.  检查刚刚解密的文件。  
+5. 检查刚刚解密的文件。  
   
-6.  关闭应用程序并重启，以便测试检索下一个方案中保留的密钥容器。  
+6. 关闭应用程序并重启，以便测试检索下一个方案中保留的密钥容器。  
   
 #### <a name="to-encrypt-using-the-public-key"></a>使用公钥进行加密  
   
-1.  单击 `Import Public Key` 按钮。 标签显示密钥名称，并显示它仅是公共的。  
+1. 单击 `Import Public Key` 按钮。 标签显示密钥名称，并显示它仅是公共的。  
   
-2.  单击 `Encrypt File` 按钮并选择文件。  
+2. 单击 `Encrypt File` 按钮并选择文件。  
   
-3.  单击 `Decrypt File` 按钮，然后选择刚刚加密的文件。 这将失败，因为必须使用私钥进行解密。  
+3. 单击 `Decrypt File` 按钮，然后选择刚刚加密的文件。 这将失败，因为必须使用私钥进行解密。  
   
  此方案演示了仅使用公钥为他人加密文件。 通常这个人只会为你提供公钥，而保留供解密的私钥。  
   
 #### <a name="to-decrypt-using-the-private-key"></a>使用私钥进行解密  
   
-1.  单击 `Get Private Key` 按钮。 标签显示密钥名称，并显示它是否是完整密钥对。  
+1. 单击 `Get Private Key` 按钮。 标签显示密钥名称，并显示它是否是完整密钥对。  
   
-2.  单击 `Decrypt File` 按钮，然后选择刚刚加密的文件。 这将会成功，因为你具有用于解密的完整密钥对。  
+2. 单击 `Decrypt File` 按钮，然后选择刚刚加密的文件。 这将会成功，因为你具有用于解密的完整密钥对。  
   
 ## <a name="see-also"></a>请参阅
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [加密服务](../../../docs/standard/security/cryptographic-services.md)

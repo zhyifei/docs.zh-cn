@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6d246c56af191189fa775be3248d3099d2aa2544
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203686"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336650"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>演练：创建基于 Windows 的可访问应用程序
 创建具有辅助功能的应用程序具有重要的商业意义。 很多政府都有针对软件购买的辅助功能法规。 Certified for Windows 徽标包括辅助功能需求。 据估计，仅美国就有 3 千万居民（其中很多为潜在客户）受到软件辅助功能的影响。  
@@ -158,7 +158,7 @@ ms.locfileid: "59203686"
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>有效地启用高对比度模式  
   
-1.  创建一种方法将标签颜色设置为系统颜色。  
+1. 创建一种方法将标签颜色设置为系统颜色。  
   
     ```  
     ' Visual Basic  
@@ -188,7 +188,7 @@ ms.locfileid: "59203686"
     }  
     ```  
   
-2.  在窗体构造函数（Visual Basic 中为 `Public Sub New()`，Visual C# 中为 `public class Form1`）调用 `SetColorScheme` 过程。 若要访问 Visual Basic 中的构造函数，需要展开标记了“Windows 窗体设计器生成的代码”的区域。  
+2. 在窗体构造函数（Visual Basic 中为 `Public Sub New()`，Visual C# 中为 `public class Form1`）调用 `SetColorScheme` 过程。 若要访问 Visual Basic 中的构造函数，需要展开标记了“Windows 窗体设计器生成的代码”的区域。  
   
     ```  
     ' Visual Basic   
@@ -206,7 +206,7 @@ ms.locfileid: "59203686"
     }  
     ```  
   
-3.  使用适当签名创建事件过程，以响应 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。  
+3. 使用适当签名创建事件过程，以响应 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。  
   
     ```  
     ' Visual Basic  
@@ -223,7 +223,7 @@ ms.locfileid: "59203686"
     }  
     ```  
   
-4.  在调用 `InitializeComponents` 后将代码添加到窗体构造函数，以便将事件过程挂钩到系统事件。 此方法调用 `SetColorScheme` 过程。  
+4. 在调用 `InitializeComponents` 后将代码添加到窗体构造函数，以便将事件过程挂钩到系统事件。 此方法调用 `SetColorScheme` 过程。  
   
     ```  
     ' Visual Basic  
@@ -246,7 +246,7 @@ ms.locfileid: "59203686"
     }  
     ```  
   
-5.  在调用基类的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法之前将代码添加到窗体 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，以便在应用程序关闭时释放事件。 若要访问 Visual Basic 中的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，需要展开标记为“Windows 窗体设计器生成的代码”区域。  
+5. 在调用基类的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法之前将代码添加到窗体 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，以便在应用程序关闭时释放事件。 若要访问 Visual Basic 中的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，需要展开标记为“Windows 窗体设计器生成的代码”区域。  
   
     > [!NOTE]
     >  系统事件代码运行独立于主应用程序的线程。 如果不释放事件，挂钩到事件的代码在程序关闭后仍将运行。  
@@ -281,38 +281,38 @@ ms.locfileid: "59203686"
     }  
     ```  
   
-6.  按 F5 运行该应用程序。  
+6. 按 F5 运行该应用程序。  
   
 ## <a name="conveying-important-information-by-means-other-than-sound"></a>通过非声音方式传达重要信息  
  在此应用程序中，没有信息是仅靠声音传达的。 如果在应用程序中使用声音，则还应通过其他一些方式提供信息。  
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>以声音以外的其他方式提供信息  
   
-1.  使用 Windows API 函数 FlashWindow 使标题栏闪烁。 有关如何调用 Windows API 函数的示例，请参阅[演练：调用 Windows Api](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
+1. 使用 Windows API 函数 FlashWindow 使标题栏闪烁。 有关如何调用 Windows API 函数的示例，请参阅[演练：调用 Windows Api](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
   
     > [!NOTE]
     >  用户可能已启用 Windows SoundSentry 服务，它也会在系统声音通过计算机内置扬声器播放时使窗口闪烁。  
   
-2.  在非模式窗口中显示重要信息，以便用户可以响应它。  
+2. 在非模式窗口中显示重要信息，以便用户可以响应它。  
   
-3.  显示一个获取键盘焦点消息框。 在用户可能键入时避免使用此方法。  
+3. 显示一个获取键盘焦点消息框。 在用户可能键入时避免使用此方法。  
   
-4.  在任务栏的状态通知区域中显示一个状态指示器。 有关详细信息，请参阅[使用 Windows 窗体 NotifyIcon 组件向任务栏添加应用程序图标](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)。  
+4. 在任务栏的状态通知区域中显示一个状态指示器。 有关详细信息，请参阅[使用 Windows 窗体 NotifyIcon 组件向任务栏添加应用程序图标](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)。  
   
 ## <a name="testing-the-application"></a>测试应用程序  
  在部署应用程序之前，应测试已实现的辅助功能。  
   
 #### <a name="to-test-accessibility-features"></a>测试辅助功能  
   
-1.  若要测试键盘访问，请拔下鼠标，并仅使用键盘导航每个功能的用户界面。 确保只使用键盘即可执行所有任务。  
+1. 若要测试键盘访问，请拔下鼠标，并仅使用键盘导航每个功能的用户界面。 确保只使用键盘即可执行所有任务。  
   
-2.  若要测试高对比度的支持，请在控制面板中选择“辅助功能选项”图标。 单击“显示”选项卡并选择“使用高对比度”复选框。 导航到所有用户界面元素以确保会反映颜色和字体更改。 此外，确保忽略文本后面绘制的图像或图案。  
+2. 若要测试高对比度的支持，请在控制面板中选择“辅助功能选项”图标。 单击“显示”选项卡并选择“使用高对比度”复选框。 导航到所有用户界面元素以确保会反映颜色和字体更改。 此外，确保忽略文本后面绘制的图像或图案。  
   
     > [!NOTE]
     >  Windows NT 4 的控制面板中没有“辅助功能选项”图标。 因此，更改 SystemInformation.HighContrast 设置的此过程不适用于 Windows NT 4。  
   
-3.  其他工具也用于测试应用程序的辅助功能。  
+3. 其他工具也用于测试应用程序的辅助功能。  
   
-4.  若要测试公开键盘焦点，请运行放大镜。 （若要打开它，请单击“开始”菜单，依次指向“程序”、“附件”和“辅助功能”，然后单击“放大镜”）。 使用键盘 Tab 键和鼠标导航用户界面。 确保在“放大镜”中正确跟踪所有导航。  
+4. 若要测试公开键盘焦点，请运行放大镜。 （若要打开它，请单击“开始”菜单，依次指向“程序”、“附件”和“辅助功能”，然后单击“放大镜”）。 使用键盘 Tab 键和鼠标导航用户界面。 确保在“放大镜”中正确跟踪所有导航。  
   
-5.  若要测试公开屏幕元素，请运行检查并使用鼠标和 Tab 键选中每个元素。 确保“检查”窗口中名称、状态、角色、位置和值字段中显示的信息对于 UI 中每个对象的用户都有意义。
+5. 若要测试公开屏幕元素，请运行检查并使用鼠标和 Tab 键选中每个元素。 确保“检查”窗口中名称、状态、角色、位置和值字段中显示的信息对于 UI 中每个对象的用户都有意义。

@@ -1,32 +1,32 @@
 ---
-title: 传输:UDP
+title: 传输：UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332814"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334661"
 ---
-# <a name="transport-udp"></a>传输:UDP
+# <a name="transport-udp"></a>传输：UDP
 UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Communication Foundation (WCF) 传输。 此示例介绍了使用通道框架并遵循 WCF 最佳做法在 WCF 中，创建自定义传输的推荐的过程。 创建自定义传输的步骤如下：  
   
-1.  决定哪些通道[消息交换模式](#MessageExchangePatterns)（IOutputChannel、 IInputChannel、 IDuplexChannel、 IRequestChannel 或 IReplyChannel） 您的 ChannelFactory 和 ChannelListener 将要支持。 然后确定是否要支持这些接口的会话变体。  
+1. 决定哪些通道[消息交换模式](#MessageExchangePatterns)（IOutputChannel、 IInputChannel、 IDuplexChannel、 IRequestChannel 或 IReplyChannel） 您的 ChannelFactory 和 ChannelListener 将要支持。 然后确定是否要支持这些接口的会话变体。  
   
-2.  创建支持您的消息交换模式的通道工厂和侦听器。  
+2. 创建支持您的消息交换模式的通道工厂和侦听器。  
   
-3.  请确保将特定于网络的任何异常正常化为 <xref:System.ServiceModel.CommunicationException> 的相应派生类。  
+3. 请确保将特定于网络的任何异常正常化为 <xref:System.ServiceModel.CommunicationException> 的相应派生类。  
   
-4.  添加[\<绑定 >](../../../../docs/framework/misc/binding.md)将自定义传输添加到通道堆栈的元素。 有关详细信息，请参阅[添加绑定元素](#AddingABindingElement)。  
+4. 添加[\<绑定 >](../../../../docs/framework/misc/binding.md)将自定义传输添加到通道堆栈的元素。 有关详细信息，请参阅[添加绑定元素](#AddingABindingElement)。  
   
-5.  添加一个绑定元素扩展部分，以便将新的绑定元素公开到配置系统。  
+5. 添加一个绑定元素扩展部分，以便将新的绑定元素公开到配置系统。  
   
-6.  添加元数据扩展以将各种功能传递给其他终结点。  
+6. 添加元数据扩展以将各种功能传递给其他终结点。  
   
-7.  添加一个绑定，该绑定根据定义完善的配置文件来预配置绑定元素堆栈。 有关详细信息，请参阅[添加标准绑定](#AddingAStandardBinding)。  
+7. 添加一个绑定，该绑定根据定义完善的配置文件来预配置绑定元素堆栈。 有关详细信息，请参阅[添加标准绑定](#AddingAStandardBinding)。  
   
-8.  添加一个绑定部分和绑定配置元素，以便将该绑定公开到配置系统。 有关详细信息，请参阅[添加配置支持](#AddingConfigurationSupport)。  
+8. 添加一个绑定部分和绑定配置元素，以便将该绑定公开到配置系统。 有关详细信息，请参阅[添加配置支持](#AddingConfigurationSupport)。  
   
 <a name="MessageExchangePatterns"></a>   
 ## <a name="message-exchange-patterns"></a>消息交换模式  
@@ -185,9 +185,9 @@ if (soapBinding != null)
   
  当运行 Svcutil.exe 时，有两个选项可用来获取 Svcutil.exe 以加载 WSDL 导入扩展：  
   
-1.  Svcutil.exe 指向配置文件使用 /SvcutilConfig:\<文件 >。  
+1. Svcutil.exe 指向配置文件使用 /SvcutilConfig:\<文件 >。  
   
-2.  将配置节添加到与 Svcutil.exe 处于同一目录的 Svcutil.exe.config 中。  
+2. 将配置节添加到与 Svcutil.exe 处于同一目录的 Svcutil.exe.config 中。  
   
  `UdpBindingElementImporter` 类型实现 `IWsdlImportExtension` 接口。 `ImportEndpoint` 方法从 WSDL 端口中导入地址。  
   
@@ -247,9 +247,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  然后从已注册的类 (`IPolicyImporterExtension`) 中实现 `UdpBindingElementImporter`。 在 `ImportPolicy()` 中，浏览命名空间中的断言，处理用于生成传输的断言，并检查它是否为多播。 还必须从绑定断言列表中移除已经处理的断言。 同样，当运行 Svcutil.exe 时，有两个用于集成的选项：  
   
-1.  Svcutil.exe 指向配置文件使用 /SvcutilConfig:\<文件 >。  
+1. Svcutil.exe 指向配置文件使用 /SvcutilConfig:\<文件 >。  
   
-2.  将配置节添加到与 Svcutil.exe 处于同一目录的 Svcutil.exe.config 中。  
+2. 将配置节添加到与 Svcutil.exe 处于同一目录的 Svcutil.exe.config 中。  
   
 <a name="AddingAStandardBinding"></a>   
 ## <a name="adding-a-standard-binding"></a>添加标准绑定  
@@ -466,11 +466,11 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+1. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-2.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+2. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-3.  请参阅前面的“UDP 测试服务和客户端”一节。  
+3. 请参阅前面的“UDP 测试服务和客户端”一节。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

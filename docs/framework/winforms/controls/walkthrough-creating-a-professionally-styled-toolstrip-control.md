@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 526cb509d780abdbf3db6e15504616de19daae83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115786"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336546"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>演练：创建具有专业样式的 ToolStrip 控件
 可以为应用程序的<xref:System.Windows.Forms.ToolStrip>控制专业的外观和行为，通过编写自己的类派生自<xref:System.Windows.Forms.ToolStripProfessionalRenderer>类型。  
@@ -45,22 +45,22 @@ ms.locfileid: "59115786"
   
 #### <a name="to-create-the-control-library-project"></a>若要创建的控件库项目  
   
-1.  创建一个名为的新 Windows 控件库项目`StackViewLibrary`。  
+1. 创建一个名为的新 Windows 控件库项目`StackViewLibrary`。  
   
-2.  在中**解决方案资源管理器**，通过删除源文件，具体取决于你选择的语言中名为"UserControl1.cs"或"UserControl1.vb"来删除项目的默认控件。  
+2. 在中**解决方案资源管理器**，通过删除源文件，具体取决于你选择的语言中名为"UserControl1.cs"或"UserControl1.vb"来删除项目的默认控件。  
   
      有关详细信息，请参阅[如何：移除、 删除和排除项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))。  
   
-3.  添加一个新<xref:System.Windows.Forms.UserControl>项**StackViewLibrary**项目。 新的源文件基名称指定为`StackView`。  
+3. 添加一个新<xref:System.Windows.Forms.UserControl>项**StackViewLibrary**项目。 新的源文件基名称指定为`StackView`。  
   
 ## <a name="designing-the-stackview-control"></a>设计 StackView 控件  
  `StackView`控件是一个复合控件具有一个子<xref:System.Windows.Forms.ToolStrip>控件。 关于复合控件的详细信息，请参阅[类型的自定义控件](varieties-of-custom-controls.md)。  
   
 #### <a name="to-design-the-stackview-control"></a>若要设计 StackView 控件  
   
-1.  从**工具箱**，拖动<xref:System.Windows.Forms.ToolStrip>至设计图面上的控件。  
+1. 从**工具箱**，拖动<xref:System.Windows.Forms.ToolStrip>至设计图面上的控件。  
   
-2.  在中**属性**窗口中，设置<xref:System.Windows.Forms.ToolStrip>根据下表控件的属性。  
+2. 在中**属性**窗口中，设置<xref:System.Windows.Forms.ToolStrip>根据下表控件的属性。  
   
     |属性|“值”|  
     |--------------|-----------|  
@@ -73,9 +73,9 @@ ms.locfileid: "59115786"
     |填充|`0, 7, 0, 0`|  
     |RenderMode|<xref:System.Windows.Forms.ToolStripRenderMode.Professional>|  
   
-3.  在 Windows 窗体设计器中，单击<xref:System.Windows.Forms.ToolStrip>控件的**添加**按钮，然后添加<xref:System.Windows.Forms.ToolStripButton>到`stackStrip`控件。  
+3. 在 Windows 窗体设计器中，单击<xref:System.Windows.Forms.ToolStrip>控件的**添加**按钮，然后添加<xref:System.Windows.Forms.ToolStripButton>到`stackStrip`控件。  
   
-4.  在中**属性**窗口中，设置<xref:System.Windows.Forms.ToolStripButton>根据下表控件的属性。  
+4. 在中**属性**窗口中，设置<xref:System.Windows.Forms.ToolStripButton>根据下表控件的属性。  
   
     |属性|“值”|  
     |--------------|-----------|  
@@ -91,7 +91,7 @@ ms.locfileid: "59115786"
     |Text|**邮件**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
-5.  重复步骤 7 的三个<xref:System.Windows.Forms.ToolStripButton>控件。  
+5. 重复步骤 7 的三个<xref:System.Windows.Forms.ToolStripButton>控件。  
   
      命名控件`calendarStackButton`， `contactsStackButton`，和`tasksStackButton`。 设置的值<xref:System.Windows.Forms.Control.Text%2A>属性设置为**日历**，**联系人**，并且**任务**分别。  
   
@@ -100,26 +100,26 @@ ms.locfileid: "59115786"
   
 #### <a name="to-handle-events"></a>若要处理的事件  
   
-1.  在 Windows 窗体设计器中，选择`StackView`控件。  
+1. 在 Windows 窗体设计器中，选择`StackView`控件。  
   
-2.  在“属性”窗口中，单击“事件”。  
+2. 在“属性”窗口中，单击“事件”。  
   
-3.  双击要生成的负载事件`StackView_Load`事件处理程序。  
+3. 双击要生成的负载事件`StackView_Load`事件处理程序。  
   
-4.  在 `StackView_Load` 事件处理程序中，复制并粘贴以下代码。  
+4. 在 `StackView_Load` 事件处理程序中，复制并粘贴以下代码。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#3)]  
   
-5.  在 Windows 窗体设计器中，选择`mailStackButton`控件。  
+5. 在 Windows 窗体设计器中，选择`mailStackButton`控件。  
   
-6.  在“属性”窗口中，单击“事件”。  
+6. 在“属性”窗口中，单击“事件”。  
   
-7.  双击 Click 事件。  
+7. 双击 Click 事件。  
   
      Windows 窗体设计器生成`mailStackButton_Click`事件处理程序。  
   
-8.  重命名`mailStackButton_Click`事件处理程序`stackButton_Click`。  
+8. 重命名`mailStackButton_Click`事件处理程序`stackButton_Click`。  
   
      有关详细信息，请参阅[重命名代码符号重构](/visualstudio/ide/reference/rename)。  
   
@@ -139,12 +139,12 @@ ms.locfileid: "59115786"
   
 #### <a name="to-define-icons"></a>若要定义的图标  
   
-1.  在代码编辑器中，将以下代码插入`StackView`类定义。 此代码将初始化为位图<xref:System.Windows.Forms.ToolStripButton>图标。  
+1. 在代码编辑器中，将以下代码插入`StackView`类定义。 此代码将初始化为位图<xref:System.Windows.Forms.ToolStripButton>图标。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#2)]  
   
-2.  添加对的调用`InitializeImages`中的方法`StackView`类构造函数。  
+2. 添加对的调用`InitializeImages`中的方法`StackView`类构造函数。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
@@ -154,14 +154,14 @@ ms.locfileid: "59115786"
   
 #### <a name="to-implement-a-custom-renderer"></a>若要实现自定义呈现器  
   
-1.  将以下代码插入`StackView`控制定义。  
+1. 将以下代码插入`StackView`控制定义。  
   
      这是用于定义`StackRenderer`类，该类会重写<xref:System.Windows.Forms.ToolStripRenderer.RenderGrip>， <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder>，和<xref:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground>方法生成的自定义外观。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#10)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#10)]  
   
-2.  在中`StackView`控件的构造函数创建的新实例`StackRenderer`类，将分配到此实例`stackStrip`控件的<xref:System.Windows.Forms.ToolStrip.Renderer%2A>属性。  
+2. 在中`StackView`控件的构造函数创建的新实例`StackRenderer`类，将分配到此实例`stackStrip`控件的<xref:System.Windows.Forms.ToolStrip.Renderer%2A>属性。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
@@ -171,9 +171,9 @@ ms.locfileid: "59115786"
   
 #### <a name="to-test-the-stackview-control"></a>若要测试 StackView 控件  
   
-1.  按 F5 以生成项目并启动**UserControl 测试容器**。  
+1. 按 F5 以生成项目并启动**UserControl 测试容器**。  
   
-2.  将指针移动的按钮`StackView`控件，，然后单击按钮以查看其所选状态的外观。  
+2. 将指针移动的按钮`StackView`控件，，然后单击按钮以查看其所选状态的外观。  
   
 ## <a name="next-steps"></a>后续步骤  
  在本演练中，已使用 Office XP 控件的专业的外观来创建可重用的自定义客户端控件。 可以使用<xref:System.Windows.Forms.ToolStrip>实现多种其他用途的控件的系列：  

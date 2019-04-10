@@ -2,12 +2,12 @@
 title: UDP 激活
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 21599990aff1209729a151b4c5a8829e305a1e90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6e19e92872c9b9344db7e787f0cd77e0a315f1a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088595"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337651"
 ---
 # <a name="udp-activation"></a>UDP 激活
 此示例基于[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它扩展[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例，以使用 Windows 进程激活服务 (WAS) 支持进程激活。  
@@ -75,13 +75,13 @@ ms.locfileid: "59088595"
   
 #### <a name="to-set-up-this-sample"></a>设置此示例  
   
-1.  使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
+1. 使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  在 Windows Vista 上生成项目。 编译后，该项目还将在后期生成阶段执行下列操作：  
+2. 在 Windows Vista 上生成项目。 编译后，该项目还将在后期生成阶段执行下列操作：  
   
     -   将 UDP 绑定安装到“默认网站”站点。  
   
@@ -89,13 +89,13 @@ ms.locfileid: "59088595"
   
     -   这还为该虚拟应用程序启用“net.udp”协议。  
   
-3.  启动用户接口应用程序“WasNetActivator.exe”。 单击**安装程序**选项卡上，选中以下复选框，然后单击**安装**安装它们：  
+3. 启动用户接口应用程序“WasNetActivator.exe”。 单击**安装程序**选项卡上，选中以下复选框，然后单击**安装**安装它们：  
   
     -   UDP 侦听器适配器  
   
     -   UDP 协议处理程序  
   
-4.  单击**激活**的用户界面应用程序"WasNetActivator.exe"选项卡。 单击**启动**按钮以启动侦听器适配器。 现在即可运行程序。  
+4. 单击**激活**的用户界面应用程序"WasNetActivator.exe"选项卡。 单击**启动**按钮以启动侦听器适配器。 现在即可运行程序。  
   
     > [!NOTE]
     >  完成此示例后，必须运行 Cleanup.bat，从“默认网站”中移除 net.udp 绑定。  
@@ -113,15 +113,15 @@ ms.locfileid: "59088595"
   
 -   确保所有的必需部分均已正确安装。 下列步骤说明如何运行该示例：  
   
-1.  确保已启动下面的 Windows 服务：  
+1. 确保已启动下面的 Windows 服务：  
   
     -   Windows 进程激活服务 (WAS)。  
   
     -   Internet 信息服务 (IIS):W3SVC.  
   
-2.  然后启动激活器 WasNetActivator.exe。 下**激活**选项卡上的唯一协议**UDP**，在下拉列表中选择。 单击**启动**按钮启动激活器。  
+2. 然后启动激活器 WasNetActivator.exe。 下**激活**选项卡上的唯一协议**UDP**，在下拉列表中选择。 单击**启动**按钮启动激活器。  
   
-3.  启动激活器后，可以通过在命令窗口中运行 Client.exe 来运行客户端代码。 下面是示例输出：  
+3. 启动激活器后，可以通过在命令窗口中运行 Client.exe 来运行客户端代码。 下面是示例输出：  
   
     ```  
     Testing Udp Activation.  

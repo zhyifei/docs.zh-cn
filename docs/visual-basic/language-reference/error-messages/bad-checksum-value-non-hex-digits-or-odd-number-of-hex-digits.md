@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 211f07e7c9dbc7e0583272d46c493ad99628d283
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81156fd7b1c9957486bcdd898c90a2bad2945829
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724104"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340303"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>错误的校验和值、非十六进制数字或奇数个十六进制数字
 校验和值包含无效的十六进制数字，或数字个数为奇数。  
@@ -25,13 +25,13 @@ ms.locfileid: "54724104"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  如果 ASP.NET 正在生成 Visual Basic 源文件，请重新开始项目生成。  
+1. 如果 ASP.NET 正在生成 Visual Basic 源文件，请重新开始项目生成。  
   
-2.  如果重新开始后此警告仍然存在，请重新安装 ASP.NET 并重试生成。  
+2. 如果重新开始后此警告仍然存在，请重新安装 ASP.NET 并重试生成。  
   
-3.  如果警告仍然存在或者你没有使用 ASP.NET，请收集有关此情形的信息，并通知 Microsoft 产品支持服务。  
+3. 如果警告仍然存在或者你没有使用 ASP.NET，请收集有关此情形的信息，并通知 Microsoft 产品支持服务。  
   
 ## <a name="see-also"></a>请参阅
 
 - [ASP.NET 概述](/aspnet/overview)
-- [与我们交流](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

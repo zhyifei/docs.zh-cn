@@ -2,12 +2,12 @@
 title: 导出 WCF 扩展的自定义元数据
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 5107e4d079a51ee94d59aa872c8a4c74f229ea8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201242"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334505"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>导出 WCF 扩展的自定义元数据
 在 Windows Communication Foundation (WCF) 中，元数据导出是描述服务终结点并将它们投影到客户端可用来了解如何使用服务的并行的标准化表示形式的过程。 自定义元数据包含系统提供的元数据导出程序无法导出的 XML 元素。 通常，这包括自定义 WSDL 元素（用于用户定义的行为）、绑定元素和策略断言（与绑定和协定的功能和需求有关）。  
@@ -19,9 +19,9 @@ ms.locfileid: "59201242"
   
  本节介绍以下内容：  
   
-1.  如何实现和使用 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 接口，该接口在发布 WSDL 之前向您公开 WSDL 生成数据。  
+1. 如何实现和使用 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 接口，该接口在发布 WSDL 之前向您公开 WSDL 生成数据。  
   
-2.  如何实现和使用 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 接口，该接口在导出 WSDL 数据中的策略断言之前向您公开策略数据。  
+2. 如何实现和使用 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 接口，该接口在导出 WSDL 数据中的策略断言之前向您公开策略数据。  
   
  有关导入自定义 WSDL 和策略断言的详细信息，请参阅[导入 WCF 扩展的自定义元数据](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)。  
   

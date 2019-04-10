@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 73f2004470d5d1da04199af75832cefd6348ce18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124522"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342453"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>如何：创建 MDI 子窗体
 MDI 子窗体是不可或缺的要素[多文档界面 (MDI) 应用程序](multiple-document-interface-mdi-applications.md)，因为这些窗体是用户交互的中心。  
@@ -26,17 +26,17 @@ MDI 子窗体是不可或缺的要素[多文档界面 (MDI) 应用程序](multip
   
 ### <a name="to-create-mdi-child-forms"></a>创建 MDI 子窗体  
   
-1.  创建新的 Windows 窗体项目。 在中**属性 Windows**对于窗体中，设置其<xref:System.Windows.Forms.Form.IsMdiContainer%2A>属性设置为`true`，并将其`WindowsState`属性设置为`Maximized`。  
+1. 创建新的 Windows 窗体项目。 在中**属性 Windows**对于窗体中，设置其<xref:System.Windows.Forms.Form.IsMdiContainer%2A>属性设置为`true`，并将其`WindowsState`属性设置为`Maximized`。  
   
      这将该表单指定为适合子窗口的 MDI 容器。  
   
-2.  将 <xref:System.Windows.Forms.MenuStrip> 控件从 `Toolbox` 中拖到窗体上。 设置其`Text`属性设置为**文件**。  
+2. 将 <xref:System.Windows.Forms.MenuStrip> 控件从 `Toolbox` 中拖到窗体上。 设置其`Text`属性设置为**文件**。  
   
-3.  单击省略号 （...） 下一步**项**属性，并单击**添加**添加两个子工具条菜单项。 设置`Text`到这些项的属性**新建**并**窗口**。  
+3. 单击省略号 （...） 下一步**项**属性，并单击**添加**添加两个子工具条菜单项。 设置`Text`到这些项的属性**新建**并**窗口**。  
   
-4.  在中**解决方案资源管理器**，右键单击项目，依次指向**添加**，然后选择**添加新项**。  
+4. 在中**解决方案资源管理器**，右键单击项目，依次指向**添加**，然后选择**添加新项**。  
   
-5.  在中**添加新项**对话框中，选择**Windows 窗体**（在 Visual Basic 或 Visual C# 中） 或**Windows 窗体应用程序 (.NET)** (在[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 从**模板**窗格。 在中**名称**框中，将窗体**Form2**。 单击**打开**按钮将窗体添加到项目。  
+5. 在中**添加新项**对话框中，选择**Windows 窗体**（在 Visual Basic 或 Visual C# 中） 或**Windows 窗体应用程序 (.NET)** (在[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 从**模板**窗格。 在中**名称**框中，将窗体**Form2**。 单击**打开**按钮将窗体添加到项目。  
   
     > [!NOTE]
     >  在此步骤中创建的 MDI 子窗体是标准的 Windows 窗体。 因此，它具有 <xref:System.Windows.Forms.Form.Opacity%2A> 属性，该属性允许你控制窗体的透明度。 但是，<xref:System.Windows.Forms.Form.Opacity%2A> 属性旨在用于顶级窗口。 不要将其与 MDI 子窗体同时使用，否则可能会引起绘制问题。  
@@ -45,13 +45,13 @@ MDI 子窗体是不可或缺的要素[多文档界面 (MDI) 应用程序](multip
   
      **Windows 窗体设计器**打开，其中显示**Form2**。  
   
-6.  从**工具箱**，拖动**RichTextBox**到窗体控件。  
+6. 从**工具箱**，拖动**RichTextBox**到窗体控件。  
   
-7.  在中**属性**窗口中，将`Anchor`属性设置为**左上**并`Dock`属性设置为**填充**。  
+7. 在中**属性**窗口中，将`Anchor`属性设置为**左上**并`Dock`属性设置为**填充**。  
   
      这导致即使在调整 MDI 子窗体的大小，<xref:System.Windows.Forms.RichTextBox> 控件也会完全填充该窗体的区域。  
   
-8.  双击**新建**菜单项创建<xref:System.Windows.Forms.Control.Click>事件处理程序。  
+8. 双击**新建**菜单项创建<xref:System.Windows.Forms.Control.Click>事件处理程序。  
   
 9. 插入代码类似于以下内容，以创建新的 MDI 子窗体，当用户单击**新建**菜单项。  
   

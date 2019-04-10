@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 52105a933efc8bccde8d01aa707ade0a2af6be96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fb338a3616bc20542ec940db5977c4ffdab9654c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072931"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335623"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体 DataGridView 控件的交替行样式
 表格数据通常显示其中的交替行具有不同的背景色以类似帐目的格式。 这种格式使用户可以更轻松地分辨每一行的单元格，尤其是有多列的宽表。  
@@ -27,13 +27,13 @@ ms.locfileid: "59072931"
   
 ### <a name="define-styles-for-alternating-rows"></a>定义的交替行样式  
   
-1.  选择<xref:System.Windows.Forms.DataGridView>控件在设计器中的。  
+1. 选择<xref:System.Windows.Forms.DataGridView>控件在设计器中的。  
   
-2.  在中**属性**窗口中，单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>属性。  
+2. 在中**属性**窗口中，单击省略号按钮 (![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁边<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>属性。  
   
-3.  在中**CellStyle 生成器**对话框中，通过设置属性，定义样式，并使用**预览**窗格，以确认所做的选择。 您指定的样式用于在控件中，从第二个显示的所有其他行。  
+3. 在中**CellStyle 生成器**对话框中，通过设置属性，定义样式，并使用**预览**窗格，以确认所做的选择。 您指定的样式用于在控件中，从第二个显示的所有其他行。  
   
-4.  若要定义的剩余行的样式，请重复步骤 2 和 3 使用<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>属性。  
+4. 若要定义的剩余行的样式，请重复步骤 2 和 3 使用<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>属性。  
   
     > [!NOTE]
     >  单元格的显示使用继承自多个属性的样式。 有关样式继承的详细信息，请参阅[Windows 窗体 DataGridView 控件中的单元格样式](cell-styles-in-the-windows-forms-datagridview-control.md)。  

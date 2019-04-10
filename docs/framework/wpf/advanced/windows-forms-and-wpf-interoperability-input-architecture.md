@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160974"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335714"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows 窗体和 WPF 互操作性输入体系结构
 之间的互操作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]要求这两种技术都有相应的键盘输入的处理。 本主题介绍这些技术如何实现键盘和消息处理，以启用混合应用程序中的平滑互操作。  
@@ -57,13 +57,13 @@ ms.locfileid: "59160974"
 ### <a name="surrogate-windows-forms-message-loop"></a>代理项 Windows 窗体消息循环  
  默认情况下<xref:System.Windows.Forms.Application?displayProperty=nameWithType>类包含的主消息循环[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序。 在互操作，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]循环不处理消息的消息。 因此，必须重新生成此逻辑。 处理程序<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>事件执行以下步骤：  
   
-1.  消息使用筛选器<xref:System.Windows.Forms.IMessageFilter>接口。  
+1. 消息使用筛选器<xref:System.Windows.Forms.IMessageFilter>接口。  
   
-2.  调用<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>方法。  
+2. 调用<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>方法。  
   
-3.  将转换并发送消息，如有必要。  
+3. 将转换并发送消息，如有必要。  
   
-4.  如果没有其他控件处理消息，消息传递到将托管控件。  
+4. 如果没有其他控件处理消息，消息传递到将托管控件。  
   
 ### <a name="ikeyboardinputsink-implementation"></a>IKeyboardInputSink 实现  
  代理项消息循环处理键盘管理。 因此，<xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType>方法是唯一<xref:System.Windows.Interop.IKeyboardInputSink>需要中的实现的成员<xref:System.Windows.Forms.Integration.WindowsFormsHost>类。  
@@ -72,11 +72,11 @@ ms.locfileid: "59160974"
   
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>的实现<xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType>方法执行以下步骤：  
   
-1.  查找第一个或最后一个[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]包含由控件<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制且可以接收焦点。 控件选择取决于遍历的信息。  
+1. 查找第一个或最后一个[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]包含由控件<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制且可以接收焦点。 控件选择取决于遍历的信息。  
   
-2.  将焦点设置到控件，并返回`true`。  
+2. 将焦点设置到控件，并返回`true`。  
   
-3.  如果没有控件可以接收焦点，则返回`false`。  
+3. 如果没有控件可以接收焦点，则返回`false`。  
   
 ### <a name="windowsformshost-registration"></a>WindowsFormsHost 注册  
  当窗口的句柄<xref:System.Windows.Forms.Integration.WindowsFormsHost>创建控件，<xref:System.Windows.Forms.Integration.WindowsFormsHost>控件调用注册的消息循环其存在的内部静态方法。  

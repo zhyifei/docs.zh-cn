@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: ccf569aea1363d256728e122818b70284a9e250d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 770dcad385c522a548a0c6fd3b6ef02dfbac82f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830365"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334596"
 ---
 # <a name="-delaysign"></a>-delaysign
 指定程序集是完全签名的还是部分签名的。  
@@ -37,11 +37,11 @@ ms.locfileid: "58830365"
   
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>在 Visual Studio 集成的开发环境中设置-delaysign  
   
-1.  在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。   
+1. 在 **“解决方案资源管理器”** 中选择一个项目。 在“项目”菜单上，单击“属性”。   
   
-2.  单击“签名”选项卡。  
+2. 单击“签名”选项卡。  
   
-3.  中的值设置**仅延迟签名**框。  
+3. 中的值设置**仅延迟签名**框。  
   
 ## <a name="see-also"></a>请参阅
 

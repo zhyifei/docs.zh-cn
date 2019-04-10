@@ -10,25 +10,25 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: f1f7a15d1457390bf77f5e53c7fd657304725df6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218207"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339835"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 令牌和声明
 安全断言标记语言 (SAML)*令牌*的声明的 XML 表示形式。 默认情况下，Windows Communication Foundation (WCF) 在联合的安全方案中使用的 SAML 令牌是*颁发的令牌*。  
   
  SAML 令牌包含由一个实体所生成的关于另一实体的多组声明的语句。 例如，在联合安全方案中，语句是由安全令牌服务针对系统中的某一用户所生成的。 安全令牌服务将对 SAML 令牌进行签名，以指示令牌中所包含语句的真实性。 此外，SAML 令牌与 SAML 令牌用户确实了解的加密密钥材料关联。 这就向依赖方证明了 SAML 令牌实际上是颁发给该用户的。 例如，在典型的方案中：  
   
-1.  客户端向安全令牌服务请求 SAML 令牌，并通过使用 Windows 证书对该安全令牌服务进行身份验证。  
+1. 客户端向安全令牌服务请求 SAML 令牌，并通过使用 Windows 证书对该安全令牌服务进行身份验证。  
   
-2.  安全令牌服务向客户端颁发 SAML 令牌。 SAML 令牌使用与安全令牌服务关联的证书进行签名，并包含针对目标服务所加密的校验密钥。  
+2. 安全令牌服务向客户端颁发 SAML 令牌。 SAML 令牌使用与安全令牌服务关联的证书进行签名，并包含针对目标服务所加密的校验密钥。  
   
-3.  客户端还会收到一份*校验密钥*。 客户端然后将 SAML 令牌提供给应用程序服务 (*信赖方*) 和使用该校验密钥对消息进行签名。  
+3. 客户端还会收到一份*校验密钥*。 客户端然后将 SAML 令牌提供给应用程序服务 (*信赖方*) 和使用该校验密钥对消息进行签名。  
   
-4.  依赖方可通过 SAML 令牌上的签名了解到，该令牌是由安全令牌服务颁发的； 依赖方还可通过使用校验密钥创建的消息签名了解到，该令牌是颁发给客户端的。  
+4. 依赖方可通过 SAML 令牌上的签名了解到，该令牌是由安全令牌服务颁发的； 依赖方还可通过使用校验密钥创建的消息签名了解到，该令牌是颁发给客户端的。  
   
 ## <a name="from-claims-to-samlattributes"></a>从 Claim 到 SamlAttribute  
  在 WCF 中，在 SAML 令牌中的语句被建模为<xref:System.IdentityModel.Tokens.SamlAttribute>对象，可以直接从填充<xref:System.IdentityModel.Claims.Claim>提供的对象<xref:System.IdentityModel.Claims.Claim>对象具有<xref:System.IdentityModel.Claims.Claim.Right%2A>属性<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>和<xref:System.IdentityModel.Claims.Claim.Resource%2A>属性属于类型<xref:System.String>。 例如：  

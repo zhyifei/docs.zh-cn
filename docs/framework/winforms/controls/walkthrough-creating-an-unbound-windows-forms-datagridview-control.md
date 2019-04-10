@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: 375ac3bd3a178cc059239cf84209ebbf5d6aca11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220573"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343463"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>演练：创建未绑定的 Windows 窗体 DataGridView 控件
 您可能经常想要显示不是从数据库的表格数据。 例如，你可能想要显示二维数组的字符串的内容。 <xref:System.Windows.Forms.DataGridView>类提供了简单且高度可自定义的方式来显示数据，而不绑定到数据源。 本演练演示如何填充<xref:System.Windows.Forms.DataGridView>控制和管理的添加和删除"取消绑定"模式中的行。 默认情况下，用户可以添加新行。 若要禁止添加行，将设置<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>属性是`false`。  
@@ -27,19 +27,19 @@ ms.locfileid: "59220573"
   
 #### <a name="to-use-an-unbound-datagridview-control"></a>若要使用未绑定的 DataGridView 控件  
   
-1.  创建派生的类<xref:System.Windows.Forms.Form>并且包含以下变量声明和`Main`方法。  
+1. 创建派生的类<xref:System.Windows.Forms.Form>并且包含以下变量声明和`Main`方法。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#02)]  
   
-2.  实现`SetupLayout`窗体的类定义以设置窗体的布局中的方法。  
+2. 实现`SetupLayout`窗体的类定义以设置窗体的布局中的方法。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#20)]  
   
-3.  创建`SetupDataGridView`方法以设置<xref:System.Windows.Forms.DataGridView>列和属性。  
+3. 创建`SetupDataGridView`方法以设置<xref:System.Windows.Forms.DataGridView>列和属性。  
   
      此方法首先将添加<xref:System.Windows.Forms.DataGridView>控件在窗体的<xref:System.Windows.Forms.Control.Controls%2A>集合。 接下来，使用设置要显示的列数<xref:System.Windows.Forms.DataGridView.ColumnCount%2A>属性。 通过设置来设置列标题的默认样式<xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>， <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>，并<xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>的属性<xref:System.Windows.Forms.DataGridViewCellStyle>返回<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>属性。  
   
@@ -48,14 +48,14 @@ ms.locfileid: "59220573"
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#30)]  
   
-4.  创建`PopulateDataGridView`方法以将行添加到<xref:System.Windows.Forms.DataGridView>控件。  
+4. 创建`PopulateDataGridView`方法以将行添加到<xref:System.Windows.Forms.DataGridView>控件。  
   
      每一行代表一首歌曲和其相关的信息。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#40)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#40)]  
   
-5.  使用实用工具方法后，可以将附加事件处理程序。  
+5. 使用实用工具方法后，可以将附加事件处理程序。  
   
      将处理**添加**和**删除**按钮<xref:System.Windows.Forms.Control.Click>事件、 窗体的<xref:System.Windows.Forms.Form.Load>事件，以及<xref:System.Windows.Forms.DataGridView>控件的<xref:System.Windows.Forms.DataGridView.CellFormatting>事件。  
   

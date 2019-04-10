@@ -10,12 +10,12 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: 2b2a46bf53dd6ec9bc93a74cca37dffaaaf79751
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 02db78b07930676235e55e535fb24f6ff618d823
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193130"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339016"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>如何：在 TableLayoutPanel 控件中跨行和跨列
 中的控件<xref:System.Windows.Forms.TableLayoutPanel>控件可以跨越相邻的行和列。  
@@ -25,15 +25,15 @@ ms.locfileid: "59193130"
   
 ### <a name="to-span-columns-and-rows"></a>若要跨的列和行  
   
-1.  从 <xref:System.Windows.Forms.TableLayoutPanel> “工具箱” **将** 控件拖到你的窗体上。  
+1. 从 <xref:System.Windows.Forms.TableLayoutPanel> “工具箱” **将** 控件拖到你的窗体上。  
   
-2.  拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到的左上角单元格<xref:System.Windows.Forms.TableLayoutPanel>控件。  
+2. 拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到的左上角单元格<xref:System.Windows.Forms.TableLayoutPanel>控件。  
   
-3.  设置<xref:System.Windows.Forms.Button>控件的**ColumnSpan**属性设置为**2**。 请注意，<xref:System.Windows.Forms.Button>控件跨的第一个和第二个列。  
+3. 设置<xref:System.Windows.Forms.Button>控件的**ColumnSpan**属性设置为**2**。 请注意，<xref:System.Windows.Forms.Button>控件跨的第一个和第二个列。  
   
-4.  设置<xref:System.Windows.Forms.Button>控件的**RowSpan**属性设置为**2**。 请注意，<xref:System.Windows.Forms.Button>控件跨的第一个和第二个行。  
+4. 设置<xref:System.Windows.Forms.Button>控件的**RowSpan**属性设置为**2**。 请注意，<xref:System.Windows.Forms.Button>控件跨的第一个和第二个行。  
   
-5.  设置<xref:System.Windows.Forms.Button>控件的**ColumnSpan**属性设置为**1**。 请注意，<xref:System.Windows.Forms.Button>控件将移动到第一列并跨越的第一个和第二个行。  
+5. 设置<xref:System.Windows.Forms.Button>控件的**ColumnSpan**属性设置为**1**。 请注意，<xref:System.Windows.Forms.Button>控件将移动到第一列并跨越的第一个和第二个行。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162719"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335025"
 ---
 # <a name="extending-dispatchers"></a>扩展调度程序
 调度程序负责从基础通道提取出传入的消息，将它们翻译成应用程序代码形式的方法调用，并将结果发送回调用方。 调度程序扩展允许您修改此过程。  您可以实现消息或参数检查器，用来检查或修改消息或参数的内容。  您也可以更改将消息路由到操作的方式或提供其他功能。  
@@ -76,13 +76,13 @@ ms.locfileid: "59162719"
   
  由 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 类公开的调度程序扩展性主要包括以下四个方面：  
   
-1.  通道组件可使用 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 的属性和由 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> 属性返回的关联通道调度程序的属性，来自定义通道调度程序接受和关闭通道的方式。 此类别包括 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> 属性。  
+1. 通道组件可使用 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 的属性和由 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> 属性返回的关联通道调度程序的属性，来自定义通道调度程序接受和关闭通道的方式。 此类别包括 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> 属性。  
   
-2.  可为处理的每个消息自定义消息组件。 此类别包括 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>、<xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>、<xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> 和 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> 属性。  
+2. 可为处理的每个消息自定义消息组件。 此类别包括 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>、<xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>、<xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> 和 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> 属性。  
   
-3.  实例组件可自定义服务类型实例的创建、生存期和处理。 有关服务对象生存期的更多信息，请参见 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性。 此类别包括 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 属性。  
+3. 实例组件可自定义服务类型实例的创建、生存期和处理。 有关服务对象生存期的更多信息，请参见 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性。 此类别包括 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 属性。  
   
-4.  与安全相关的组件可使用以下属性：  
+4. 与安全相关的组件可使用以下属性：  
   
     -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 指示写入审核事件的位置。  
   

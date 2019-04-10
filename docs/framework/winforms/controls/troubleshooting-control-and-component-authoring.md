@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168059"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343410"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>控件和组件创作疑难解答
 本主题列出了开发组件和控件时遇到的常见问题。 有关详细信息，请参阅[使用组件编程](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))。  
@@ -38,9 +38,9 @@ ms.locfileid: "59168059"
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>将控件添加到工具箱  
   
-1.  右键单击“工具箱”，并从快捷菜单中选择“选择项”。  
+1. 右键单击“工具箱”，并从快捷菜单中选择“选择项”。  
   
-2.  在“选择工具箱项”对话框中，添加组件：  
+2. 在“选择工具箱项”对话框中，添加组件：  
   
     -   如果要添加 .NET Framework 组件或控件，请单击“.NET Framework 组件”选项卡。  
   
@@ -48,11 +48,11 @@ ms.locfileid: "59168059"
   
     -   如果要添加 COM 组件或 ActiveX 控件，请单击“COM 组件”选项卡。  
   
-3.  如果对话框中列出了该控件，请务必将它选中，然后单击“确定”。  
+3. 如果对话框中列出了该控件，请务必将它选中，然后单击“确定”。  
   
      该控件即会添加到“工具箱”中。  
   
-4.  如果对话框中未列出该控件，请执行以下操作：  
+4. 如果对话框中未列出该控件，请执行以下操作：  
   
     1.  单击“浏览”按钮。  
   
@@ -73,15 +73,15 @@ ms.locfileid: "59168059"
   
 #### <a name="to-debug-a-control-or-component"></a>调试控件或组件  
   
-1.  在“生成”菜单中，单击“生成解决方案”来生成解决方案。  
+1. 在“生成”菜单中，单击“生成解决方案”来生成解决方案。  
   
-2.  在“文件”菜单中，选择“添加”，然后选择“新建项目”，将测试项目添加到应用程序中。  
+2. 在“文件”菜单中，选择“添加”，然后选择“新建项目”，将测试项目添加到应用程序中。  
   
-3.  在“添加新项目”对话框中选择“Windows 应用程序”作为项目类型。  
+3. 在“添加新项目”对话框中选择“Windows 应用程序”作为项目类型。  
   
-4.  在“解决方案资源管理器”中，右键单击新项目的“引用”节点。 在快捷菜单上单击“添加引用”，为包含控件或组件的项目添加引用。  
+4. 在“解决方案资源管理器”中，右键单击新项目的“引用”节点。 在快捷菜单上单击“添加引用”，为包含控件或组件的项目添加引用。  
   
-5.  在测试项目中创建控件或组件的实例。 如果组件在“工具箱”中，则可将其拖动到设计器图面，或者以编程方式创建实例，如下面的代码示例所示。  
+5. 在测试项目中创建控件或组件的实例。 如果组件在“工具箱”中，则可将其拖动到设计器图面，或者以编程方式创建实例，如下面的代码示例所示。  
   
     ```vb  
     Dim Component1 As New MyNeatComponent()  

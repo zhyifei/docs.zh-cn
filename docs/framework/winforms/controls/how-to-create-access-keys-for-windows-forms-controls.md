@@ -20,19 +20,19 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: fefd322afb938453ec1ea23e8ff6de9f9ae2a851
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e6c829553163359301bad2cd896fc43562ee8069
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141630"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334453"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>如何：创建 Windows 窗体控件的访问键
 *访问密钥*是中的菜单、 菜单项或如按钮控件的标签文本带下划线的字符。 使用访问密钥，用户可以"单击"按钮的同时按下 ALT 键和预定义的访问密钥。 例如，如果某个按钮可运行打印窗体的过程，因此其`Text`属性设置为"打印"、"P"在运行时，按钮文本加下划线的字母"P"将导致字母前添加一个与号。 用户可以运行通过按 ALT + P 与按钮关联的命令。 不能具有不能接收焦点的控件的访问密钥。  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>若要创建用于控件的访问密钥  
   
-1.  设置`Text`属性将成为快捷键的字母前为一个字符串，包含一个 & 号 (&)。  
+1. 设置`Text`属性将成为快捷键的字母前为一个字符串，包含一个 & 号 (&)。  
   
     ```vb  
     ' Set the letter "P" as an access key.  

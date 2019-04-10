@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
-ms.openlocfilehash: e66d8c81114a4550f0473f75a8101e79e8db2c76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 888b1910902819b847d7d622f7b086fec82d669d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334349"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>如何：使用设计器设置 Windows 窗体面板的背景
 Windows 窗体<xref:System.Windows.Forms.Panel>控件可以显示背景色和背景图像。 <xref:System.Windows.Forms.Control.BackColor%2A>属性设置为包含在面板中，例如标签和单选按钮控件的背景色。 如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>未设置属性，<xref:System.Windows.Forms.Control.BackColor%2A>选择将填充所有面板。 如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>属性设置，则图像将显示在面板中包含控件的后面。  
@@ -24,17 +24,17 @@ Windows 窗体<xref:System.Windows.Forms.Panel>控件可以显示背景色和背
   
 ### <a name="to-set-the-background-in-the-windows-forms-designer"></a>若要在 Windows 窗体设计器中设置背景  
   
-1.  选择 <xref:System.Windows.Forms.Panel> 控件。  
+1. 选择 <xref:System.Windows.Forms.Panel> 控件。  
   
-2.  在中**属性**窗口中，单击旁边的箭头按钮<xref:System.Windows.Forms.Control.BackColor%2A>属性来显示具有三个选项卡的窗口。  
+2. 在中**属性**窗口中，单击旁边的箭头按钮<xref:System.Windows.Forms.Control.BackColor%2A>属性来显示具有三个选项卡的窗口。  
   
-3.  选择**自定义**选项卡以显示颜色的调色板。  
+3. 选择**自定义**选项卡以显示颜色的调色板。  
   
-4.  选择**Web**或**系统**选项卡上显示一组预定义的颜色、 名称，然后选择一种颜色。  
+4. 选择**Web**或**系统**选项卡上显示一组预定义的颜色、 名称，然后选择一种颜色。  
   
-5.  在中**属性**窗口中，单击旁边的箭头按钮<xref:System.Windows.Forms.Control.BackgroundImage%2A>属性。  
+5. 在中**属性**窗口中，单击旁边的箭头按钮<xref:System.Windows.Forms.Control.BackgroundImage%2A>属性。  
   
-6.  在中**打开**对话框框中，选择你想要显示的文件。  
+6. 在中**打开**对话框框中，选择你想要显示的文件。  
   
 ## <a name="see-also"></a>请参阅
 

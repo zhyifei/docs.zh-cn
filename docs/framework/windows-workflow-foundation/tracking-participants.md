@@ -2,12 +2,12 @@
 title: 跟踪参与者
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138822"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340173"
 ---
 # <a name="tracking-participants"></a>跟踪参与者
 跟踪参与者是扩展点，允许工作流开发人员访问 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 对象并对其进行处理。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包括一个标准跟踪参与者，它将作为事件跟踪 Windows (ETW) 事件的跟踪记录写入。 如果这不能满足您的需求，您还可以编写自定义跟踪参与者。  
@@ -81,13 +81,13 @@ ms.locfileid: "59138822"
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>启用在事件查看器中查看跟踪记录  
   
-1.  启动事件查看器 (EVENTVWR.EXE)  
+1. 启动事件查看器 (EVENTVWR.EXE)  
   
-2.  选择**事件查看器、 应用程序和服务日志 Microsoft，Windows，应用程序服务器-应用程序**。  
+2. 选择**事件查看器、 应用程序和服务日志 Microsoft，Windows，应用程序服务器-应用程序**。  
   
-3.  右击并确保**视图，显示分析和调试日志**处于选中状态。 如果未选中，请选中它以使选中标记显示在它旁边。 这将显示**Analytic**，**性能**，并**调试**日志。  
+3. 右击并确保**视图，显示分析和调试日志**处于选中状态。 如果未选中，请选中它以使选中标记显示在它旁边。 这将显示**Analytic**，**性能**，并**调试**日志。  
   
-4.  右键单击**Analytic**日志，然后选择**启用日志**。 该日志将存在于 %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl 文件中。  
+4. 右键单击**Analytic**日志，然后选择**启用日志**。 该日志将存在于 %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl 文件中。  
   
 ## <a name="custom-tracking-participant"></a>自定义跟踪参与者  
  跟踪参与者 API 允许以用户提供的跟踪参与者扩展跟踪运行时，该用户提供的跟踪参与者可包括用于对工作流运行时发出的跟踪记录进行处理的自定义逻辑。 若要编写自定义跟踪参与者，开发人员必须对 `Track` 类实现 <xref:System.Activities.Tracking.TrackingParticipant> 方法。 此方法在工作流运行时发出跟踪记录时调用。  

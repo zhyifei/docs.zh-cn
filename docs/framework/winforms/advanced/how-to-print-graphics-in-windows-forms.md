@@ -9,21 +9,21 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: ab2a230b7c6e303d712df058f450334b50c8a676
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 55459482d0994c581164128b17c08a7ca90d0717
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167201"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339094"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>如何：在 Windows 窗体中打印图形
 通常情况下，想要在基于 Windows 的应用程序中打印图形。 <xref:System.Drawing.Graphics>类提供了对象绘制到设备，如屏幕或打印机的方法。  
   
 ### <a name="to-print-graphics"></a>若要打印图形  
   
-1.  添加<xref:System.Drawing.Printing.PrintDocument>向窗体组件。  
+1. 添加<xref:System.Drawing.Printing.PrintDocument>向窗体组件。  
   
-2.  在中<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件处理程序，使用<xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>属性的<xref:System.Drawing.Printing.PrintPageEventArgs>类，以指示要打印的图形类型上的打印机。  
+2. 在中<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件处理程序，使用<xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>属性的<xref:System.Drawing.Printing.PrintPageEventArgs>类，以指示要打印的图形类型上的打印机。  
   
      下面的代码示例显示了用于创建一个蓝色的椭圆的边框内的事件处理程序。 矩形具有的以下位置和尺寸： 开始为 100，150 具有 250 的宽度和高度为 250。  
   

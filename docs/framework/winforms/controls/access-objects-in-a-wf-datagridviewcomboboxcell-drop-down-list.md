@@ -9,12 +9,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 221774895fa5867ad6ec870f7e293c9366e442f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080782"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334271"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>如何：访问 Windows 窗体 DataGridViewComboBoxCell 下拉列表中的对象
 像<xref:System.Windows.Forms.ComboBox>控件，<xref:System.Windows.Forms.DataGridViewComboBoxColumn>和<xref:System.Windows.Forms.DataGridViewComboBoxCell>类型使您能够将任意对象添加到其下拉列表。 使用此功能，可以表示下拉列表中的复杂状态，而无需将相应的对象存储在单独的集合。  
@@ -27,17 +27,17 @@ ms.locfileid: "59080782"
   
 ### <a name="to-add-business-objects-to-the-drop-down-list"></a>若要将业务对象添加到下拉列表  
   
-1.  创建一个新<xref:System.Windows.Forms.DataGridViewComboBoxColumn>并填充其<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>集合。 或者，您可以将列设置<xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>属性设置为业务对象的集合。 在这种情况下，但是，您不能添加"未分配"到下拉列表而无需创建相应的业务对象在集合中。  
+1. 创建一个新<xref:System.Windows.Forms.DataGridViewComboBoxColumn>并填充其<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>集合。 或者，您可以将列设置<xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>属性设置为业务对象的集合。 在这种情况下，但是，您不能添加"未分配"到下拉列表而无需创建相应的业务对象在集合中。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#110)]  
   
-2.  设置 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 和 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 属性。 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 指示在下拉列表中显示的业务对象的属性。 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 指示返回到业务对象的引用的属性。  
+2. 设置 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 和 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 属性。 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 指示在下拉列表中显示的业务对象的属性。 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 指示返回到业务对象的引用的属性。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#115)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#115)]  
   
-3.  请确保你的业务对象类型包含一个属性，它返回对当前实例的引用。 此属性必须具有值分配给名为<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>在上一步。  
+3. 请确保你的业务对象类型包含一个属性，它返回对当前实例的引用。 此属性必须具有值分配给名为<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>在上一步。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#310)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#310)]  
@@ -54,11 +54,11 @@ ms.locfileid: "59080782"
   
  若要查看此示例中的行为，请执行以下步骤：  
   
-1.  更改分配给在`Assigned To`通过从下拉列表中选择不同的值或按 CTRL + 0 中的组合框单元格的列。  
+1. 更改分配给在`Assigned To`通过从下拉列表中选择不同的值或按 CTRL + 0 中的组合框单元格的列。  
   
-2.  单击`Generate Report`以显示当前分配。 此操作演示中的更改`Assigned To`列会自动更新`tasks`集合。  
+2. 单击`Generate Report`以显示当前分配。 此操作演示中的更改`Assigned To`列会自动更新`tasks`集合。  
   
-3.  单击`Request Status`按钮，以调用`RequestStatus`方法的当前`Employee`该行的对象。 此示例演示已成功检索所选的对象。  
+3. 单击`Request Status`按钮，以调用`RequestStatus`方法的当前`Employee`该行的对象。 此示例演示已成功检索所选的对象。  
   
  [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#000)]  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211032"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338470"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>如何：诊断有问题的打印作业
 网络管理员经常接收到有关打印作业无法打印或打印速度慢的用户投诉。 丰富的打印作业属性中公开[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]的 Microsoft.NET Framework 提供了一种方法用于执行快速的打印作业远程诊断。  
@@ -23,7 +23,7 @@ ms.locfileid: "59211032"
 ## <a name="example"></a>示例  
  以下是创建此类实用程序的主要步骤。  
   
-1.  标识用户投诉的打印作业。 用户通常无法准确完成此操作。 他们可能不知道打印服务器或打印机的名称。 它们可能不是设置中使用的描述不同的术语中的打印机的位置及其<xref:System.Printing.PrintQueue.Location%2A>属性。 这样的话，一个好办法是生成用户当前所提交作业的列表。 如果存在多个作业，则可通过用户和打印系统管理员之间的通信来查明出现问题的作业。 子步骤如下。  
+1. 标识用户投诉的打印作业。 用户通常无法准确完成此操作。 他们可能不知道打印服务器或打印机的名称。 它们可能不是设置中使用的描述不同的术语中的打印机的位置及其<xref:System.Printing.PrintQueue.Location%2A>属性。 这样的话，一个好办法是生成用户当前所提交作业的列表。 如果存在多个作业，则可通过用户和打印系统管理员之间的通信来查明出现问题的作业。 子步骤如下。  
   
     1.  获取所有打印服务器的列表。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "59211032"
   
     4.  在每一轮服务器循环访问过程中，循环访问其作业，并收集与投诉用户已提交的作业相关的标识信息。  
   
-2.  当已识别有问题的打印作业时，检查相关属性以查明可能的问题。 例如，作业是否处于错误状态，或服务于队列的打印机是否在打印该作业之前处于脱机状态？  
+2. 当已识别有问题的打印作业时，检查相关属性以查明可能的问题。 例如，作业是否处于错误状态，或服务于队列的打印机是否在打印该作业之前处于脱机状态？  
   
  以下代码是一系列代码示例。 第一个代码示例包含针对打印队列的循环访问操作。 （以上步骤 1c。）在变量`myPrintQueues`是<xref:System.Printing.PrintQueueCollection>当前打印服务器对象。  
   

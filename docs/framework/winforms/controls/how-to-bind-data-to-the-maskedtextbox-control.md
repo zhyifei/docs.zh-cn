@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090597"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342227"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>如何：将数据绑定到 MaskedTextBox 控件
 您可以将数据绑定到<xref:System.Windows.Forms.MaskedTextBox>控制就像可以连接到任何其他 Windows 窗体控件。 但是，如果在数据库中数据的格式与掩码定义所需的格式不匹配，您将需要重新设置数据格式。 下面的过程演示如何执行此操作使用<xref:System.Windows.Forms.Binding.Format>并<xref:System.Windows.Forms.Binding.Parse>的事件<xref:System.Windows.Forms.Binding>类来显示单独的电话号码和电话扩展数据库字段为单一的可编辑字段。  
@@ -24,15 +24,15 @@ ms.locfileid: "59090597"
   
 ### <a name="to-bind-data-to-a-maskedtextbox-control"></a>若要将数据绑定到 MaskedTextBox 控件  
   
-1.  创建新的 Windows 窗体项目。  
+1. 创建新的 Windows 窗体项目。  
   
-2.  将两个<xref:System.Windows.Forms.TextBox>控件拖动到窗体; 它们命名`FirstName`和`LastName`。  
+2. 将两个<xref:System.Windows.Forms.TextBox>控件拖动到窗体; 它们命名`FirstName`和`LastName`。  
   
-3.  拖动<xref:System.Windows.Forms.MaskedTextBox>拖动到窗体控件; 其命名为`PhoneMask`。  
+3. 拖动<xref:System.Windows.Forms.MaskedTextBox>拖动到窗体控件; 其命名为`PhoneMask`。  
   
-4.  设置<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>的属性`PhoneMask`到`(000) 000-0000 x9999`。  
+4. 设置<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>的属性`PhoneMask`到`(000) 000-0000 x9999`。  
   
-5.  添加以下命名空间导入到的窗体。  
+5. 添加以下命名空间导入到的窗体。  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ ms.locfileid: "59090597"
     Imports System.Data.SqlClient  
     ```  
   
-6.  右键单击窗体，然后选择**查看代码**。 将此代码放置在窗体类中的任何位置。  
+6. 右键单击窗体，然后选择**查看代码**。 将此代码放置在窗体类中的任何位置。  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ ms.locfileid: "59090597"
     End Sub  
     ```  
   
-7.  添加事件处理程序<xref:System.Windows.Forms.Binding.Format>并<xref:System.Windows.Forms.Binding.Parse>事件，以合并和拆分`PhoneNumber`并`Extension`绑定中的字段<xref:System.Data.DataSet>。  
+7. 添加事件处理程序<xref:System.Windows.Forms.Binding.Format>并<xref:System.Windows.Forms.Binding.Parse>事件，以合并和拆分`PhoneNumber`并`Extension`绑定中的字段<xref:System.Data.DataSet>。  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ ms.locfileid: "59090597"
     End Sub  
     ```  
   
-8.  添加两个<xref:System.Windows.Forms.Button>到窗体控件。 命名它们`previousButton`和`nextButton`。 双击要添加的每个按钮<xref:System.Windows.Forms.Control.Click>事件处理程序，并填写下面的代码示例中所示的事件处理程序。  
+8. 添加两个<xref:System.Windows.Forms.Button>到窗体控件。 命名它们`previousButton`和`nextButton`。 双击要添加的每个按钮<xref:System.Windows.Forms.Control.Click>事件处理程序，并填写下面的代码示例中所示的事件处理程序。  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  

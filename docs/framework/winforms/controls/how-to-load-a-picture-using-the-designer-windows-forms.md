@@ -8,12 +8,12 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 5aa8ff1efa045d52382cc5c24a0cae1f0f1bb510
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bdf7c3df0ffd97dd88a4c442a8a73593a0447ee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127135"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336377"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>如何：使用设计器 （Windows 窗体） 加载图片
 使用 Windows 窗体<xref:System.Windows.Forms.PictureBox>控件，可以加载和显示的图片在窗体上在设计时通过设置<xref:System.Windows.Forms.PictureBox.Image%2A>属性设置为有效的图片。 下表显示了可接受的文件类型。  
@@ -31,17 +31,17 @@ ms.locfileid: "59127135"
   
 ### <a name="to-display-a-picture-at-design-time"></a>若要在设计时显示的图片  
   
-1.  绘制<xref:System.Windows.Forms.PictureBox>窗体上的控件。  
+1. 绘制<xref:System.Windows.Forms.PictureBox>窗体上的控件。  
   
-2.  在属性窗口中，选择<xref:System.Windows.Forms.PictureBox.Image%2A>属性，然后单击省略号按钮以显示**打开**对话框。  
+2. 在属性窗口中，选择<xref:System.Windows.Forms.PictureBox.Image%2A>属性，然后单击省略号按钮以显示**打开**对话框。  
   
-3.  如果您正在寻找特定文件类型 （例如，.gif 文件），选择在它**类型的文件**框。  
+3. 如果您正在寻找特定文件类型 （例如，.gif 文件），选择在它**类型的文件**框。  
   
-4.  选择你想要显示的文件。  
+4. 选择你想要显示的文件。  
   
 ### <a name="to-clear-the-picture-at-design-time"></a>若要在设计时清除图片  
   
-1.  上**属性**窗口中，选择<xref:System.Windows.Forms.PictureBox.Image%2A>属性并右键单击显示的图像对象名称左侧的小缩略图。 选择**重置**。  
+1. 上**属性**窗口中，选择<xref:System.Windows.Forms.PictureBox.Image%2A>属性并右键单击显示的图像对象名称左侧的小缩略图。 选择**重置**。  
   
 ## <a name="see-also"></a>请参阅
 

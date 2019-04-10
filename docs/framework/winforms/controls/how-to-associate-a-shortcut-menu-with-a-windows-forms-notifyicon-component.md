@@ -10,12 +10,12 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: 702a848631ce45c0efcb8eadfdf64074b454ac7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f2a086cc25eb6996b2643742a887bccf481916d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097985"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337053"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>如何：将快捷菜单与 Windows 窗体 NotifyIcon 组件关联
 > [!NOTE]
@@ -28,23 +28,23 @@ ms.locfileid: "59097985"
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>若要在设计时使用 NotifyIcon 组件关联快捷菜单  
   
-1.  添加<xref:System.Windows.Forms.NotifyIcon>向窗体，组件和设置的重要属性，如<xref:System.Windows.Forms.NotifyIcon.Icon%2A>和<xref:System.Windows.Forms.NotifyIcon.Visible%2A>属性。  
+1. 添加<xref:System.Windows.Forms.NotifyIcon>向窗体，组件和设置的重要属性，如<xref:System.Windows.Forms.NotifyIcon.Icon%2A>和<xref:System.Windows.Forms.NotifyIcon.Visible%2A>属性。  
   
      有关详细信息，请参阅[如何：添加到与 Windows 任务栏的应用程序图标窗体 NotifyIcon 组件](app-icons-to-the-taskbar-with-wf-notifyicon.md)。  
   
-2.  添加<xref:System.Windows.Forms.ContextMenu>向 Windows 窗体组件。  
+2. 添加<xref:System.Windows.Forms.ContextMenu>向 Windows 窗体组件。  
   
      将菜单项添加到表示想要在运行时提供的命令的快捷菜单。 这也是将菜单的增强功能添加到这些菜单项，例如访问密钥的好时机。  
   
-3.  设置<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>属性的<xref:System.Windows.Forms.NotifyIcon>组件添加的快捷菜单。  
+3. 设置<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>属性的<xref:System.Windows.Forms.NotifyIcon>组件添加的快捷菜单。  
   
      设置此属性，单击任务栏上的图标时，将显示的快捷菜单。  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>若要以编程方式使用 NotifyIcon 组件关联快捷菜单  
   
-1.  创建的实例<xref:System.Windows.Forms.NotifyIcon>类和一个<xref:System.Windows.Forms.ContextMenu>类的任何属性设置所需的应用程序 (<xref:System.Windows.Forms.NotifyIcon.Icon%2A>并<xref:System.Windows.Forms.NotifyIcon.Visible%2A>属性<xref:System.Windows.Forms.NotifyIcon>组件、 菜单项<xref:System.Windows.Forms.ContextMenu>组件）。  
+1. 创建的实例<xref:System.Windows.Forms.NotifyIcon>类和一个<xref:System.Windows.Forms.ContextMenu>类的任何属性设置所需的应用程序 (<xref:System.Windows.Forms.NotifyIcon.Icon%2A>并<xref:System.Windows.Forms.NotifyIcon.Visible%2A>属性<xref:System.Windows.Forms.NotifyIcon>组件、 菜单项<xref:System.Windows.Forms.ContextMenu>组件）。  
   
-2.  设置<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>属性的<xref:System.Windows.Forms.NotifyIcon>组件添加的快捷菜单。  
+2. 设置<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>属性的<xref:System.Windows.Forms.NotifyIcon>组件添加的快捷菜单。  
   
      设置此属性，单击任务栏上的图标时，将显示的快捷菜单。  
   

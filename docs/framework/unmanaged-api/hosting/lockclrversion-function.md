@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571a676496683ba3251f13c41600bb017e1ced5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156099"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336689"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 函数
 允许宿主确定在进行显式初始化 CLR 之前将在进程中使用的公共语言运行时 (CLR) 的版本。  
@@ -66,11 +66,11 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  在运行时初始化时将执行以下步骤：  
   
-1.  在宿主调用[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或某个其他运行时初始化函数。 或者，主机无法初始化运行时使用激活 COM 对象。  
+1. 在宿主调用[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或某个其他运行时初始化函数。 或者，主机无法初始化运行时使用激活 COM 对象。  
   
-2.  运行时调用由指定的函数`hostCallback`参数。  
+2. 运行时调用由指定的函数`hostCallback`参数。  
   
-3.  由指定的函数`hostCallback`然后进行以下调用顺序：  
+3. 由指定的函数`hostCallback`然后进行以下调用顺序：  
   
     -   由指定的函数`pBeginHostSetup`参数。  
   

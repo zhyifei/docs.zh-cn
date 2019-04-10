@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144009"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341486"
 ---
 # <a name="how-to-create-thumbnail-images"></a>如何：创建缩略图图像
 缩略图是映像的小版本。 您可以通过调用创建缩略图<xref:System.Drawing.Image.GetThumbnailImage%2A>方法的<xref:System.Drawing.Image>对象。  
@@ -34,19 +34,19 @@ ms.locfileid: "59144009"
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。 若要运行该示例，请按照下列步骤：  
   
-1.  创建新的 Windows 窗体应用程序。  
+1. 创建新的 Windows 窗体应用程序。  
   
-2.  将示例代码添加到窗体。  
+2. 将示例代码添加到窗体。  
   
-3.  创建窗体的一个处理程序<xref:System.Windows.Forms.Control.Paint>事件  
+3. 创建窗体的一个处理程序<xref:System.Windows.Forms.Control.Paint>事件  
   
-4.  在中<xref:System.Windows.Forms.Control.Paint>处理程序，请调用`GetThumbnail`方法并传入`e`为<xref:System.Windows.Forms.PaintEventArgs>。  
+4. 在中<xref:System.Windows.Forms.Control.Paint>处理程序，请调用`GetThumbnail`方法并传入`e`为<xref:System.Windows.Forms.PaintEventArgs>。  
   
-5.  找到你想要的缩略图图像文件。  
+5. 找到你想要的缩略图图像文件。  
   
-6.  在`GetThumbnail`方法中，指定的路径和文件到你的映像的名称。  
+6. 在`GetThumbnail`方法中，指定的路径和文件到你的映像的名称。  
   
-7.  按 F5 以运行该示例。  
+7. 按 F5 以运行该示例。  
   
      100 的 100 缩略图显示在窗体。  
   

@@ -2,12 +2,12 @@
 title: 异步编程
 description: 了解如何F#通过是易于使用和自然语言的语言级别编程模型实现异步编程。
 ms.date: 06/20/2016
-ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343449"
 ---
 # <a name="async-programming-in-f"></a>F 中的异步编程\#
 
@@ -57,7 +57,7 @@ printfn "%s" html
 
 前面曾提到，异步代码将是一种规范，需要对其显式启动另一个上下文中完成工作。 下面是两种主要方法来实现此目的：
 
-1.  `Async.RunSynchronously` 将另一个线程上启动异步工作流，并等待其结果。
+1. `Async.RunSynchronously` 将另一个线程上启动异步工作流，并等待其结果。
 
 ```fsharp
 open System
@@ -78,7 +78,7 @@ let fetchHtmlAsync url =
  printfn "%s" html
  ```
 
-2.  `Async.Start` 将另一个线程上启动的异步工作流，并将**不**等待其结果。
+2. `Async.Start` 将另一个线程上启动的异步工作流，并将**不**等待其结果。
 
 ```fsharp
 open System
@@ -184,9 +184,9 @@ for html in htmlList do
 
 与此相反，F#异步工作流是更自然可取消。 取消是一个简单的三步骤过程。
 
-1.  创建一个新的 `CancellationTokenSource`。
-2.  将它传递到起始函数。
-3.  调用`Cancel`的令牌。
+1. 创建一个新的 `CancellationTokenSource`。
+2. 将它传递到起始函数。
+3. 调用`Cancel`的令牌。
 
 示例:
 
@@ -215,5 +215,5 @@ tokenSource.Cancel()
 ## <a name="further-resources"></a>其他资源：
 
 *   [MSDN 上的异步工作流](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [异步序列 F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-*   [F# HTTP 数据实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)
+*   [异步序列F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+*   [F#HTTP 数据实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)

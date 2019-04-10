@@ -2,12 +2,12 @@
 title: 导入 WCF 扩展的自定义元数据
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: 021790a256448d9c81e7a53a2845edf839ff3534
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 830829be98202c97a9fc2b34e31da25967292efb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090064"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339965"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>导入 WCF 扩展的自定义元数据
 在 Windows Communication Foundation (WCF) 的元数据导入是从其元数据生成的服务或其各个组成部分的抽象表示形式的过程。 例如，可以导入 WCF<xref:System.ServiceModel.Description.ServiceEndpoint>情况下，<xref:System.ServiceModel.Channels.Binding>实例或<xref:System.ServiceModel.Description.ContractDescription>实例从 WSDL 文档的服务。 若要导入 WCF 服务元数据，请使用的实现<xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType>抽象类。 派生的类型<xref:System.ServiceModel.Description.MetadataImporter>类实现的支持，为利用 WS 策略的导入元数据格式导入 WCF 中的逻辑。  
@@ -21,9 +21,9 @@ ms.locfileid: "59090064"
   
  本节介绍以下内容：  
   
-1.  如何实现和使用 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 接口，该接口在生成说明和代码之前向自定义导入程序公开 WSDL 数据。 可以使用此接口检查或修改使用给定元数据集执行的说明类型和代码编译。  
+1. 如何实现和使用 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 接口，该接口在生成说明和代码之前向自定义导入程序公开 WSDL 数据。 可以使用此接口检查或修改使用给定元数据集执行的说明类型和代码编译。  
   
-2.  如何实现和使用 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 接口，该接口在生成说明对象之前向导入程序公开策略断言。 可以使用此接口检查或修改基于所下载策略的绑定或协定。  
+2. 如何实现和使用 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 接口，该接口在生成说明对象之前向导入程序公开策略断言。 可以使用此接口检查或修改基于所下载策略的绑定或协定。  
   
  有关导出自定义 WSDL 和策略断言的详细信息，请参阅[导出 WCF 扩展的自定义元数据](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)。  
   

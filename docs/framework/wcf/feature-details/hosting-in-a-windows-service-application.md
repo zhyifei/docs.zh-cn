@@ -2,12 +2,12 @@
 title: 在 Windows 服务应用程序中承载
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 5cd5a8bd198fe4f2f8cc26a9937029b578eff2e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216751"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335363"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服务应用程序中承载
 Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于下面这样的应用程序的进程模型：必须在长时间运行的可执行程序中生存，并且不显示任何形式的用户界面。 Windows 服务应用程序的进程生存期由服务控制管理器 (SCM) 管理，您可以通过该管理器启动、停止和暂停 Windows 服务应用程序。 可以配置为在计算机启动，使其合适的托管环境的"always on"应用程序时自动启动的 Windows 服务进程。 Windows 服务应用程序的详细信息，请参阅[Windows 服务应用程序](https://go.microsoft.com/fwlink/?LinkId=89450)。  
@@ -24,9 +24,9 @@ Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>在 Windows 服务应用程序内承载 WCF  
   
-1.  创建 Windows 服务应用程序。 可以使用 <xref:System.ServiceProcess> 命名空间中的类以托管代码的形式编写 Windows 服务应用程序。 此应用程序必须包含一个继承自 <xref:System.ServiceProcess.ServiceBase> 的类。  
+1. 创建 Windows 服务应用程序。 可以使用 <xref:System.ServiceProcess> 命名空间中的类以托管代码的形式编写 Windows 服务应用程序。 此应用程序必须包含一个继承自 <xref:System.ServiceProcess.ServiceBase> 的类。  
   
-2.  链接到 Windows 服务应用程序的生存期的 WCF 服务的生存期。 通常，您希望 Windows 服务应用程序，若要在宿主服务启动时变为活动状态，请停止侦听消息时停止，并在 WCF 服务时遇到错误时关闭托管进程宿主服务中承载的 WCF 服务。 这可以通过以下操作实现：  
+2. 链接到 Windows 服务应用程序的生存期的 WCF 服务的生存期。 通常，您希望 Windows 服务应用程序，若要在宿主服务启动时变为活动状态，请停止侦听消息时停止，并在 WCF 服务时遇到错误时关闭托管进程宿主服务中承载的 WCF 服务。 这可以通过以下操作实现：  
   
     -   重写 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 以打开一个或多个 <xref:System.ServiceModel.ServiceHost> 实例。 单个 Windows 服务应用程序可以托管多个 WCF 服务的启动和停止作为一个组。  
   

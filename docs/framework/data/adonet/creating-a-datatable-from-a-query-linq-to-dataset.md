@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204076"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342526"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>从查询创建数据表 (LINQ to DataSet)
 数据绑定是 <xref:System.Data.DataTable> 对象的一种常用形式。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法接收查询结果并将数据复制到 <xref:System.Data.DataTable> 中，后者随后会使用该数据进行数据绑定。 在执行数据操作后，新的 <xref:System.Data.DataTable> 将合并回源 <xref:System.Data.DataTable>。  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法使用下面的过程来通过查询创建 <xref:System.Data.DataTable>：  
   
-1.  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法克隆源表中的 <xref:System.Data.DataTable>（实现 <xref:System.Data.DataTable> 接口的 <xref:System.Linq.IQueryable%601> 对象）。 <xref:System.Collections.IEnumerable> 源通常来源于 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 表达式或方法查询。  
+1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法克隆源表中的 <xref:System.Data.DataTable>（实现 <xref:System.Data.DataTable> 接口的 <xref:System.Linq.IQueryable%601> 对象）。 <xref:System.Collections.IEnumerable> 源通常来源于 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 表达式或方法查询。  
   
-2.  克隆的 <xref:System.Data.DataTable> 的架构从源表中枚举的第一个 <xref:System.Data.DataRow> 对象的列生成，克隆表的名称是源表的名称后面追加单词“query”。  
+2. 克隆的 <xref:System.Data.DataTable> 的架构从源表中枚举的第一个 <xref:System.Data.DataRow> 对象的列生成，克隆表的名称是源表的名称后面追加单词“query”。  
   
-3.  对于源表中的每一行，会将行内容复制到新 <xref:System.Data.DataRow> 对象中，然后将该对象插入到克隆表中。 <xref:System.Data.DataRow.RowState%2A> 和 <xref:System.Data.DataRow.RowError%2A> 属性在整个复制操作过程中保留。 如果源中的 <xref:System.ArgumentException> 对象来自不同的表，则会引发 <xref:System.Data.DataRow>。  
+3. 对于源表中的每一行，会将行内容复制到新 <xref:System.Data.DataRow> 对象中，然后将该对象插入到克隆表中。 <xref:System.Data.DataRow.RowState%2A> 和 <xref:System.Data.DataRow.RowError%2A> 属性在整个复制操作过程中保留。 如果源中的 <xref:System.ArgumentException> 对象来自不同的表，则会引发 <xref:System.Data.DataRow>。  
   
-4.  复制完可查询的输入表中的所有 <xref:System.Data.DataTable> 对象后，将返回克隆的 <xref:System.Data.DataRow>。 如果源序列不包含任何 <xref:System.Data.DataRow> 对象，则该方法将返回一个空 <xref:System.Data.DataTable>。  
+4. 复制完可查询的输入表中的所有 <xref:System.Data.DataTable> 对象后，将返回克隆的 <xref:System.Data.DataRow>。 如果源序列不包含任何 <xref:System.Data.DataRow> 对象，则该方法将返回一个空 <xref:System.Data.DataTable>。  
   
  请注意，调用 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法将导致执行已绑定到源表的查询。  
   

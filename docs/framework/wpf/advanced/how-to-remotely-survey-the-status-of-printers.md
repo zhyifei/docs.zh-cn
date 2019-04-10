@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143541"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340784"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>如何：远程调查打印机的状态
 在大中型公司，在任何给定时间里，都可能发生由于卡纸、纸张用完或某些其他有问题而导致多台打印机无法工作的情况。 打印机属性中公开的丰富[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]的 Microsoft.NET Framework 提供了一种方法用于执行快速调查打印机状态。  
@@ -24,11 +24,11 @@ ms.locfileid: "59143541"
 ## <a name="example"></a>示例  
  以下是创建此类实用程序的主要步骤。  
   
-1.  获取所有打印服务器的列表。  
+1. 获取所有打印服务器的列表。  
   
-2.  循环访问服务器以查询其打印队列。  
+2. 循环访问服务器以查询其打印队列。  
   
-3.  在每一轮服务器循环访问过程中，循环访问所有服务器的队列并读取每个属性，这些属性可能指示队列当前不在工作。  
+3. 在每一轮服务器循环访问过程中，循环访问所有服务器的队列并读取每个属性，这些属性可能指示队列当前不在工作。  
   
  以下代码是一系列代码段。 为简单起见，本示例假定存在通过 CRLF 分隔的打印服务器列表。 在变量`fileOfPrintServers`是<xref:System.IO.StreamReader>此文件的对象。 由于每个服务器名称是在其对应行，任何调用的<xref:System.IO.StreamReader.ReadLine%2A>获取下一步的服务器的名称，并将移动<xref:System.IO.StreamReader>的光标移到下一行的开头。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: c6230d7618b7885d72ddfebc67157bb48ff9cb38
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 932ad347730b35a936e040e116e5aa6af36cd3dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122013"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343306"
 ---
 # <a name="how-to-compare-claims"></a>如何：比较声明
 标识模型基础结构在 Windows Communication Foundation (WCF) 用于执行授权检查。 因此，一个常见的任务是将授权上下文中的声明与执行请求的操作或访问请求的资源所需的声明进行比较。 本主题说明如何比较声明，包括内置和自定义声明类型。 有关标识模型基础结构的详细信息，请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
@@ -36,33 +36,33 @@ ms.locfileid: "59122013"
   
 ### <a name="comparing-built-in-claims"></a>比较内置声明  
   
-1.  给定 <xref:System.IdentityModel.Claims.Claim> 类的两个实例，使用 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 进行比较，如下面的代码所示。  
+1. 给定 <xref:System.IdentityModel.Claims.Claim> 类的两个实例，使用 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 进行比较，如下面的代码所示。  
   
      [!code-csharp[c_CustomClaimComparison#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#5)]
      [!code-vb[c_CustomClaimComparison#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#5)]  
   
 ### <a name="comparing-custom-claims-with-primitive-resource-types"></a>比较具有基元资源类型的自定义声明  
   
-1.  对于具有基元资源类型的自定义声明，可以按照内置声明那样的方式执行比较，如下面的代码所示。  
+1. 对于具有基元资源类型的自定义声明，可以按照内置声明那样的方式执行比较，如下面的代码所示。  
   
      [!code-csharp[c_CustomClaimComparison#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#6)]
      [!code-vb[c_CustomClaimComparison#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#6)]  
   
-2.  对于具有基于结构或类的资源类型的自定义声明，资源类型应重写 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 方法。  
+2. 对于具有基于结构或类的资源类型的自定义声明，资源类型应重写 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 方法。  
   
-3.  首先检查 `obj` 参数是否为 `null`，如果是，则返回 `false`。  
+3. 首先检查 `obj` 参数是否为 `null`，如果是，则返回 `false`。  
   
      [!code-csharp[c_CustomClaimComparison#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#7)]
      [!code-vb[c_CustomClaimComparison#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#7)]  
   
-4.  接下来调用 <xref:System.Object.ReferenceEquals%2A>，并将 `this` 和 `obj` 作为参数传递。 如果它返回 `true`，则返回 `true`。  
+4. 接下来调用 <xref:System.Object.ReferenceEquals%2A>，并将 `this` 和 `obj` 作为参数传递。 如果它返回 `true`，则返回 `true`。  
   
      [!code-csharp[c_CustomClaimComparison#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#8)]
      [!code-vb[c_CustomClaimComparison#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#8)]  
   
-5.  然后尝试将 `obj` 分配给一个类类型的局部变量。 如果此操作失败，则引用为 `null`。 在这种情况下返回 `false`。  
+5. 然后尝试将 `obj` 分配给一个类类型的局部变量。 如果此操作失败，则引用为 `null`。 在这种情况下返回 `false`。  
   
-6.  执行将当前声明与提供的声明进行正确比较所需的自定义比较。  
+6. 执行将当前声明与提供的声明进行正确比较所需的自定义比较。  
   
 ## <a name="example"></a>示例  
  下面的示例显示自定义声明的比较，其中声明资源是非基元类型。  

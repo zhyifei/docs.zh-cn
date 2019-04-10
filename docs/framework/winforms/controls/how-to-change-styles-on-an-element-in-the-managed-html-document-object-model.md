@@ -1,5 +1,5 @@
 ---
-title: 如何：更改在托管的 HTML 文档对象模型中元素的样式
+title: 如何：在托管 HTML 文档对象模型中更改元素的样式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: a1abfaeab735746edbf089d576dc6f56dc4a6eea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 804041991199dd2722e3a0f38800bafd8933bbab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712768"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333660"
 ---
-# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>如何：更改在托管的 HTML 文档对象模型中元素的样式
+# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>如何：在托管 HTML 文档对象模型中更改元素的样式
 
 可以使用以 html 格式的样式来控制文档和其元素的外观。 <xref:System.Windows.Forms.HtmlDocument> 并<xref:System.Windows.Forms.HtmlElement>支持<xref:System.Windows.Forms.HtmlElement.Style%2A>采用以下格式的样式字符串属性：
 
@@ -68,7 +68,7 @@ ms.locfileid: "57712768"
      [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
      [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
   
-7.  运行该项目。 通过在第一个运行光标`DIV`以观察代码的影响。  
+7. 运行该项目。 通过在第一个运行光标`DIV`以观察代码的影响。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示的完整代码`StyleGenerator`类，该类将现有的样式值的分析，支持添加、 更改和移除样式，并返回新的样式值与所请求的更改。  

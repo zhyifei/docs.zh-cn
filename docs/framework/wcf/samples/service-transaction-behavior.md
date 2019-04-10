@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: c4082c7f8ebea54a9abf2f80c992dc871f8408ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db120df1b2efd28cc484c3749bb22fc2196e9dd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183633"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339939"
 ---
 # <a name="service-transaction-behavior"></a>服务事务行为
 此示例演示客户端协调事务的用法，以及为了控制服务事务行为而对 ServiceBehaviorAttribute 和 OperationBehaviorAttribute 进行的设置。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) ，实现计算器服务，但扩展来维护数据库表和有状态运行总数计算器操作中所执行操作的服务器日志。 持久写入服务器日志表依赖于客户端协调事务的结果 - 如果客户端事务未完成，Web 服务事务可以确保不会提交对数据库的更新。  
@@ -206,17 +206,17 @@ Creating new service instance...
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保已安装 SQL Server 2005 Express Edition 或 SQL Server 2005。 在服务的 App.config 文件中，可能设置了数据库 `connectionString`，或者通过将 appSettings `usingSql` 值设置为 `false` 而禁用了数据库交互。  
+1. 确保已安装 SQL Server 2005 Express Edition 或 SQL Server 2005。 在服务的 App.config 文件中，可能设置了数据库 `connectionString`，或者通过将 appSettings `usingSql` 值设置为 `false` 而禁用了数据库交互。  
   
-2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
  如果跨计算机运行示例，必须配置 Microsoft 分布式事务处理协调器 (MSDTC) 以启用网络事务流并使用 WsatConfig.exe 工具启用 Windows Communication Foundation (WCF) 事务网络支持。  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>配置 Microsoft 分布式事务处理协调器 (MSDTC) 以支持跨计算机运行示例  
   
-1.  在服务计算机上，配置 MSDTC 以允许传入网络事务。  
+1. 在服务计算机上，配置 MSDTC 以允许传入网络事务。  
   
     1.  从**启动**菜单中，导航到**控制面板**，然后**管理工具**，然后**组件服务**。  
   
@@ -230,7 +230,7 @@ Creating new service instance...
   
     6.  单击“确定”关闭对话框。  
   
-2.  在服务计算机和客户端计算机上，配置 Windows 防火墙以便在例外应用程序列表中包括 Microsoft 分布式事务处理协调器 (MSDTC)：  
+2. 在服务计算机和客户端计算机上，配置 Windows 防火墙以便在例外应用程序列表中包括 Microsoft 分布式事务处理协调器 (MSDTC)：  
   
     1.  从“控制面板”上运行 Windows 防火墙应用程序。  
   
@@ -242,7 +242,7 @@ Creating new service instance...
   
     5.  单击**确定**以关闭**添加程序**对话框中，然后单击**确定**以关闭 Windows 防火墙小程序。  
   
-3.  在客户端计算机上，配置 MSDTC 以允许传出网络事务：  
+3. 在客户端计算机上，配置 MSDTC 以允许传出网络事务：  
   
     1.  从**启动**菜单中，导航到**控制面板**，然后**管理工具**，然后**组件服务**。  
   

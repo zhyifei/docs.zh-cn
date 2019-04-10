@@ -1,15 +1,15 @@
 ---
-title: .NET Framework 4.5 中的外部化的策略活动
+title: .NET Framework 4.5 中的外部化策略活动
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 622b0f14281d5b068700d9e4fe03485aa1a60fcb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706361"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338275"
 ---
-# <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的外部化的策略活动
+# <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的外部化策略活动
 
 此示例演示 ExternalizedPolicy4 活动如何允许执行现有[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Windows Workflow Foundation (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>中的对象[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]直接通过使用规则引擎的 Windows Workflow Foundation (WF 4.5)在 WF 3.5 中提供的。 通过使用此活动，可以打开并执行任何现有 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 WF 3.5 规则引擎作为 Windows Workflow Foundation 的一部分包含有关的详细信息，请阅读[Windows Workflow Foundation 规则引擎简介](https://go.microsoft.com/fwlink/?LinkId=166079)。 有关迁移的详细信息规则附加到[!INCLUDE[wf1](../../../../includes/wf1-md.md)]中[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]，请阅读上的迁移指南[迁移指南](../migration-guidance.md)。
 
@@ -47,7 +47,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 |RuleSetFilePath|执行活动时要计算的 .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> 文件的路径。|
 |RuleSetName|要在 .rules 文件中使用的 <xref:System.Workflow.Activities.Rules.RuleSet> 的名称。|
 |TargetObject|对其计算 <xref:System.Workflow.Activities.Rules.Rule> 中的 <xref:System.Workflow.Activities.Rules.RuleSet> 对象的对象。|
-|ResultObject|应用规则后的结果对象（例如，对 Input 参数应用规则并将结果存储在 Result 参数中）。|
+|ResultObject|应用规则后的结果对象（例如，对 Input 自变量应用规则并将结果存储在 Result 自变量中）。|
 |ValidationError|在执行前对目标对象验证 <xref:System.Workflow.Activities.Rules.RuleSet> 时由 WF 3.5 规则引擎返回的验证错误的列表。|
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4 活动设计器
@@ -56,8 +56,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 和 ExternalPolicy4
 
-策略活动允许您创建和执行 WF 4.5 工作流中的.NET Framework 3.5 规则集。 
-  <xref:System.Workflow.Activities.Rules.RuleSet> 是 Policy4 活动 XAML 定义中的序列化内联。 ExternalizedPolicy4 示例演示如何使用现有外部 <xref:System.Workflow.Activities.Rules.RuleSet>（包含在 .rules 文件中）。
+策略活动允许您创建和执行 WF 4.5 工作流中的.NET Framework 3.5 规则集。 <xref:System.Workflow.Activities.Rules.RuleSet> 是 Policy4 活动 XAML 定义中的序列化内联。 ExternalizedPolicy4 示例演示如何使用现有外部 <xref:System.Workflow.Activities.Rules.RuleSet>（包含在 .rules 文件中）。
 
 ## <a name="use-this-sample"></a>使用此示例
 
@@ -67,21 +66,21 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>运行 ImperativeCodeClientSample 应用程序
 
-1.  使用 Visual Studio 中，打开*Policy4sample.sln*解决方案文件。
+1. 使用 Visual Studio 中，打开*Policy4sample.sln*解决方案文件。
 
-2.  在中**解决方案资源管理器**，右键单击**ImperativeCodeClientSample**项目，然后选择**设为启动项目**。
+2. 在中**解决方案资源管理器**，右键单击**ImperativeCodeClientSample**项目，然后选择**设为启动项目**。
 
-3.  若要运行项目，请按**Ctrl**+**F5**。
+3. 若要运行项目，请按**Ctrl**+**F5**。
 
 ### <a name="run-the-designerclientsample-application"></a>运行 DesignerClientSample 应用程序
 
-1.  使用 Visual Studio 中，打开*Policy4sample.sln*解决方案文件。
+1. 使用 Visual Studio 中，打开*Policy4sample.sln*解决方案文件。
 
-2.  在中**解决方案资源管理器**，右键单击**DesignerClientSample**项目，然后选择**设为启动项目**。
+2. 在中**解决方案资源管理器**，右键单击**DesignerClientSample**项目，然后选择**设为启动项目**。
 
-3.  按**Ctrl**+**Shift**+**B**以编译该项目。
+3. 按**Ctrl**+**Shift**+**B**以编译该项目。
 
-4.  按**Ctrl**+**F5**以运行该项目。
+4. 按**Ctrl**+**F5**以运行该项目。
 
 > [!IMPORTANT]
 > 您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：

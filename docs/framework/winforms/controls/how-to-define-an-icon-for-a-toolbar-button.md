@@ -13,12 +13,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 0d4a17528ca3eb81f93419491766e370be551b1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2c1c3d8529662c1e1f1a3d28e3853d31f5d940ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153122"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336496"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>如何：定义工具栏按钮的图标
 > [!NOTE]
@@ -28,11 +28,11 @@ ms.locfileid: "59153122"
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>若要以编程方式设置工具栏按钮的图标  
   
-1.  在过程中，实例化<xref:System.Windows.Forms.ImageList>组件和一个<xref:System.Windows.Forms.ToolBar>控件。  
+1. 在过程中，实例化<xref:System.Windows.Forms.ImageList>组件和一个<xref:System.Windows.Forms.ToolBar>控件。  
   
-2.  在相同的过程中，将分配到图像<xref:System.Windows.Forms.ImageList>组件。  
+2. 在相同的过程中，将分配到图像<xref:System.Windows.Forms.ImageList>组件。  
   
-3.  在相同的过程中，将分配<xref:System.Windows.Forms.ImageList>控制对<xref:System.Windows.Forms.ToolBar>控件并将分配<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>各个工具栏按钮的属性。  
+3. 在相同的过程中，将分配<xref:System.Windows.Forms.ImageList>控制对<xref:System.Windows.Forms.ToolBar>控件并将分配<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>各个工具栏按钮的属性。  
   
      在下面的代码示例中，将路径设置的映像的位置是**我的文档**文件夹。 此操作后，因为您可以假定大多数运行 Windows 操作系统的计算机都包含此目录。 这还使得具有最低系统访问级别的用户能够安全运行应用程序。 下面的示例假定窗体具有<xref:System.Windows.Forms.PictureBox>已添加的控件。  
   

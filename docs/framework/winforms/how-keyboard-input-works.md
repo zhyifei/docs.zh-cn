@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204739"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342163"
 ---
 # <a name="how-keyboard-input-works"></a>键盘输入工作原理
 Windows 窗体通过引发键盘事件来处理键盘输入，以响应 Windows 消息。 大多数 Windows 窗体应用程序都通过处理键盘事件来以独占方式处理键盘输入。 但是，必须了解键盘消息的工作方式，才能实现更高级的键盘输入方案（如在按键到达控件之前截获它们）。 本主题描述 Windows 窗体能够识别的按键数据的类型，并概述键盘消息的传送方式。 有关键盘事件的信息，请参阅[使用键盘事件](using-keyboard-events.md)。  
@@ -22,13 +22,13 @@ Windows 窗体通过引发键盘事件来处理键盘输入，以响应 Windows 
 ## <a name="order-of-keyboard-events"></a>键盘事件的顺序  
  正如上面列出的那样，在一个控件上可能出现三个与键盘相关的事件。 以下顺序是发生这些事件的常规顺序：  
   
-1.  用户按"a"键，该键将被预处理和调度，和一个<xref:System.Windows.Forms.Control.KeyDown>事件发生。  
+1. 用户按"a"键，该键将被预处理和调度，和一个<xref:System.Windows.Forms.Control.KeyDown>事件发生。  
   
-2.  用户按住"a"键，该键将被预处理和调度，和一个<xref:System.Windows.Forms.Control.KeyPress>事件发生。  
+2. 用户按住"a"键，该键将被预处理和调度，和一个<xref:System.Windows.Forms.Control.KeyPress>事件发生。  
   
      当用户按住某个键时，此事件会发生多次。  
   
-3.  用户松开"a"键，该键将被预处理和调度和<xref:System.Windows.Forms.Control.KeyUp>事件发生。  
+3. 用户松开"a"键，该键将被预处理和调度和<xref:System.Windows.Forms.Control.KeyUp>事件发生。  
   
 ## <a name="preprocessing-keys"></a>键的预处理  
  在与其他消息一样处理键盘消息<xref:System.Windows.Forms.Control.WndProc%2A>的窗体或控件的方法。 但是，在键盘之前处理消息，<xref:System.Windows.Forms.Control.PreProcessMessage%2A>方法调用可以重写以处理特殊字符键和物理密钥的一个或多个方法。 可以重写这些方法，以便在控件处理消息之前检测并筛选某些按键。 下表按照方法出现的顺序列出了正在执行的操作以及所出现的相关方法。  

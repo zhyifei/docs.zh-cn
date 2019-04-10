@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: 609dfb93e2327ffd6013230cf5d54572e0f9b420
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132700"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340966"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>如何：使用设计器向选项卡页添加控件
 使用 Windows 窗体<xref:System.Windows.Forms.TabControl>是有组织的方式显示其他控件。 这些说明可用于在选项卡页的主要部分中显示的图片。 有关将图标添加到标签部分选项卡页的信息，请参阅[如何：更改 Windows 窗体 TabControl 的外观](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)。  
@@ -23,9 +23,9 @@ ms.locfileid: "59132700"
   
 ### <a name="to-add-a-control-using-the-designer"></a>若要使用设计器添加控件  
   
-1.  单击相应的选项卡页，以便显示于顶部。  
+1. 单击相应的选项卡页，以便显示于顶部。  
   
-2.  绘制选项卡页上的控件。  
+2. 绘制选项卡页上的控件。  
   
 ## <a name="see-also"></a>请参阅
 
