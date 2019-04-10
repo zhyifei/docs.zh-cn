@@ -2,12 +2,12 @@
 title: .NET Framework XAML 服务的 XAML 命名空间
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: e9d644f4f62d70a1feec0030a680067412baa5e6
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: dc2c424306b9ebd705f2541266e4b1e3afe94547
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58030520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153551"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML 服务的 XAML 命名空间
 XAML 命名空间是扩展的定义中的 XML 命名空间的概念。 类似于 XML 命名空间，您可以定义 XAML 命名空间使用`xmlns`标记中的属性。 在 XAML 节点流和其他 XAML 服务 Api 中还表示 XAML 命名空间。 本主题定义 XAML 命名空间概念，并说明如何 XAML 命名空间可以定义和使用的 XAML 架构上下文和.NET Framework XAML 服务的其他方面。  
@@ -64,4 +64,5 @@ XAML 命名空间是扩展的定义中的 XML 命名空间的概念。 类似于
  相关的.NET Framework XAML 服务中处理的 XAML 命名空间的两个其他 API 是属性<xref:System.Windows.Markup.XmlnsDefinitionAttribute>和<xref:System.Windows.Markup.XmlnsPrefixAttribute>。 这些属性适用于程序集。 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 可供 XAML 架构上下文来解释包含 URI 的任何 XAML 命名空间声明。 <xref:System.Windows.Markup.XmlnsPrefixAttribute> 使用发出 XAML，以便特定 XAML 命名空间可以使用可预测的前缀进行序列化的工具。 有关详细信息，请参阅[XAML-Related CLR 特性自定义类型和库的](xaml-related-clr-attributes-for-custom-types-and-libraries.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [了解 XAML 节点流结构和概念](understanding-xaml-node-stream-structures-and-concepts.md)

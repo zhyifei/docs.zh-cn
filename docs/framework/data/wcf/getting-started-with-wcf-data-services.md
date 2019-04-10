@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-ms.openlocfilehash: e8270fc181779950222b21fd196a1a1a6226e2b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4d3ec4ac0dcd02bc7f7a1d28ba383708d1e3f86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142449"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF 数据服务入门
 在本部分中的主题帮助你快速了解[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以及如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公开和使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]馈送通过说明基础技术。 本部分包括这两个概念内容和一个[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)教程。  
@@ -36,9 +36,10 @@ ms.locfileid: "54597239"
  提供指向[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]资源。  
   
 ## <a name="related-sections"></a>相关章节  
- [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)  
+ [WCF 数据服务 (Silverlight)（可能为英文网页）](https://go.microsoft.com/fwlink/?LinkID=143149)  
   
  [入门](../../../../docs/framework/data/adonet/ef/getting-started.md)  
   
 ## <a name="see-also"></a>请参阅
-- [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+
+- [OData SDK（可能为英文网页）](https://go.microsoft.com/fwlink/?LinkID=185248)

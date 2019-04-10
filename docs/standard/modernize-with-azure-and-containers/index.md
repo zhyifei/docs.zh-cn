@@ -4,12 +4,12 @@ description: 了解如何迁移并更新现有应用程序对 Azure 云以及与
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 68d5ce7ad71fae5ed3e1460c56581dd69c3925f3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
-ms.translationtype: MT
+ms.openlocfilehash: ed291309d04e3e5bfed6c73cdf8a67b79431a363
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675921"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156385"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>更新现有.NET 应用程序使用 Azure 云和 Windows 容器 （第二版）
 
@@ -91,7 +91,7 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 
 表 1-1 介绍了选择每种迁移或更新方法的主要优点和原因。
 
-| **云基础结构就绪** <br /> *直接迁移* | **Cloud-Optimized** <br /> *实现现代化* | **Cloud-Native** <br /> *实现现代化、 重构和重写* |
+| **云基础结构准备就绪** <br /> *提升和转移* | **云优化** <br /> *实现现代化* | **云原生** <br /> *实现现代化、 重构和重写* |
 |---|---|---|
 | **应用程序的计算目标** |
 | 部署到 Azure 中 VM 的应用程序 | 单体或 N 层应用程序部署到 Azure 应用服务、 Azure 容器实例 (ACI)、 虚拟机与容器、 Azure Service Fabric 或 AKS （Azure Kubernetes 服务） | Azure Kubernetes 服务 (AKS)、 Service Fabric 和/或基于 Azure Functions 的无服务器微服务上的容器化微服务。 |
@@ -101,7 +101,7 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 | <li>没有任何新的重构代码 <li> 需要的工作量最少，实现快速迁移 <li> Azure 中支持最小公分母 <li> 保证基本可用性 <li> 移动到云后，更容易更新 | <li> 不重新架构 <li> 更改最小代码/配置 <li> 由于容器的原因，改进了部署和 DevOps 发布敏捷性 <li> 增加了密度，降低了部署成本 <li> 应用的可移植性和依赖项 <li> 主机目标的灵活性：PaaS 方法或 IaaS | <li> 架构师的云，则获得最大的好处从云中，但需要新的代码 <li> 微服务云原生方法 <li> 新式任务关键型应用程序，云复原的可高度扩展 <li> 完全托管服务 <li> 优化了规模 <li> 通过子系统优化了自主敏捷性 <li> 基于部署和 DevOps |
 | **挑战** |
 | <li> 除了转移运营费用或关闭数据中心之外，云价值较小 <li> 少托管：无 OS 或中间件修补;可以使用基础结构解决方案，如 Terraform、 Spinnaker 或 Puppet | <li> 容器化是学习曲线，为开发人员和 IT 运营中一个额外的步骤 <li> DevOps 和 CI/CD 管道通常是必需的这种方法。 如果不是当前的区域性组织中存在，它可能是其他挑战| <li> 有关云本机应用程序和微服务体系结构需要体系结构重建而且通常需要大量的代码重构或重写现代化 （增加了的时间和预算） <li> DevOps 和 CI/CD 管道通常是必需的这种方法。 如果不是当前的区域性组织中存在，它可能是其他挑战|
-> **表 1-1**。 现有 .NET 应用程序和服务的更新途径的优势和挑战
+> **表 1-1。** 现有 .NET 应用程序和服务的更新途径的优势和挑战
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>各成熟度级别使用的关键技术和体系结构
 
@@ -113,7 +113,7 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 
 ![用于更新现有 .NET Web 应用程序的每个成熟度级别的主要技术](./media/image1-2.png)
 
-> **图 1-2**。 用于更新现有 .NET Web 应用程序的每个成熟度级别的主要技术
+> **图 1-2。** 用于更新现有 .NET Web 应用程序的每个成熟度级别的主要技术
 
 图 1-2 强调了最常见的方案，但在体系结构方面，可能存在许多混合变体。 例如，成熟度模型不仅适用于现有 Web 应用的单片体系结构，还适用于服务方向、N 层以及其他体系结构样式变体。 更高版本的焦点或上一个或另一个体系结构类型和相关的技术的百分比确定您的应用程序的整体成熟度级别。
 
@@ -129,7 +129,7 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 
 ![每个更新成熟度级别可使用的内部技术](./media/image1-3.png)
 
-> **图 1-3**。 每个更新成熟度级别可使用的内部技术
+> **图 1-3。** 每个更新成熟度级别可使用的内部技术
 
 ## <a name="lift-and-shift-scenario"></a>提升和迁移方案
 
@@ -145,16 +145,15 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 
 ![“挑选”方案示例，使用 IaaS 数据库、DevOps 和容器化资产](./media/image1-5.png)
 
-> **图 1-5**。 “挑选”方案示例，使用 IaaS 数据库、DevOps 和容器化资产
+> **图 1-5。** “挑选”方案示例，使用 IaaS 数据库、DevOps 和容器化资产
 
 接下来，理想的方案的多个现有.NET Framework 应用程序迁移，则无法迁移到云优化应用程序，若要获得一些工作显著的好处。 此方法还设置了云原生，作为可能的未来发展。 图 1-6 显示了一个示例。
 
 ![云优化的应用程序方案示例，使用 Windows 容器和托管的服务](./media/image1-6.png)
 
-> **图 1-6**。 云优化的应用程序方案示例，使用 Windows 容器和托管的服务
+> **图 1-6。** 云优化的应用程序方案示例，使用 Windows 容器和托管的服务
 
 再进一步，可以通过添加适用于特定方案的几个微服务来扩展现有的云优化应用程序。 这会将您部分推向云原生模型，这不是，当前指南的重点的级别。
-
 
 ## <a name="what-this-guide-does-not-cover"></a>本指南未涵盖的内容
 
@@ -162,7 +161,7 @@ Microsoft 和 <https://www.microsoft.com> 上“商标”网页列出的商标�
 
 ![本指南未介绍云原生](./media/image1-7.png)
 
-> **图 1-7** 本指南未介绍云原生
+> **图 1-7。** 本指南未介绍云原生
 
 本指南的重点具有一定的针对性。 它将显示可用于实现的提升和转变现有.NET 应用程序，而无需重新架构，且无需更改代码的路径。 从根本上讲，它演示如何使应用程序云计算得到优化。
 
@@ -202,4 +201,4 @@ GitHub 上的 [EShopModernizing](https://github.com/dotnet-architecture/eShopMod
 本指南旨在帮助你了解改进和更新现有.NET web 应用程序的选项。 本指南以及相关示例应用程序不断更新。 你的反馈是欢迎使用 ！ 如有关于本指南的改进建议，请将其发送到 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)。
 
 >[!div class="step-by-step"]
->[下一页](lift-and-shift-existing-apps-azure-iaas.md)
+>[下一步](lift-and-shift-existing-apps-azure-iaas.md)

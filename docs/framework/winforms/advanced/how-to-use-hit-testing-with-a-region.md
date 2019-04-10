@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit tests [Windows Forms], using regions
 - regions [Windows Forms], hit testing
 ms.assetid: 3a4c07cb-a40a-4d14-ad35-008f531910a8
-ms.openlocfilehash: a9435724e7674fd196ad70bdfd0ab43808a53058
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 136f15f1364fb2aed791b4a61d0f11411b055967
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150496"
 ---
 # <a name="how-to-use-hit-testing-with-a-region"></a>如何：对区域使用命中测试
 命中测试的目的是确定光标是否位于给定的对象，例如图标或按钮。  
@@ -25,9 +25,10 @@ ms.locfileid: "57709739"
  [!code-vb[System.Drawing.MiscLegacyTopics#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，这是 <xref:System.Windows.Forms.PaintEventHandler> 的参数。  
+ 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Drawing.Region>
 - [GDI+ 中的区域](regions-in-gdi.md)
-- [如何：对区域使用剪辑](how-to-use-clipping-with-a-region.md)
+- [如何：对区域使用剪裁](how-to-use-clipping-with-a-region.md)

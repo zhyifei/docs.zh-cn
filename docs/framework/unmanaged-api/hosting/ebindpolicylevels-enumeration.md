@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 635cf7c4e8ff715096728414506b4a7e683727b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8f2b08662e719a3308a62ab5b60f5dc490f2a6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704207"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142202"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels 枚举
 提供用于指定要应用或修改的程序集策略级别的标志。  
@@ -64,8 +64,9 @@ typedef enum {
   
  **库：** MSCorEE.dll  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [ICLRAssemblyIdentityManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
 - [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3a67a92204ffc2041d4ea11c8551064582b7c15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7cfc1917604644090f7f9aebb6c5184269f04b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544960"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144802"
 ---
 # <a name="icordebugobjectvaluegetmanagedcopy-method"></a>ICorDebugObjectValue::GetManagedCopy 方法
 `GetManagedCopy` 已过时。 请勿调用此方法。  
@@ -39,5 +39,3 @@ HRESULT GetManagedCopy (
  **标头：** CorDebug.idl、 CorDebug.h  
   
 ## <a name="see-also"></a>请参阅
-
-
