@@ -97,7 +97,7 @@ F# 函数也是头等函数，也就是说，它们可以作为参数传递，�
 
 ## <a name="functions-to-define-operations-on-objects"></a>用于定义对对象执行的操作的函数。
 
-F# 具有对对象的完整支持，即在需要混合数据和功能时非常有用的数据类型。 F#函数用于操作对象。
+F# 提供对对象（在需要揉合数据和功能时非常有用的数据类型）的完整支持。 F# 函数用于操作对象。
 
 ```fsharp
 type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) =

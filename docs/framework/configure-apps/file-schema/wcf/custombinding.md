@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 9ed5f25a9297edc5f921305edc009edf5076672b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 60ce3cdfd7c78d152c71cdd652532cc96a6be296
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159739"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481114"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
@@ -232,13 +232,13 @@ ms.locfileid: "59159739"
 
 - 接下来是一个可选的安全绑定元素，它提供了授权、身份验证、保护和机密性之类的安全功能。 以下安全绑定元素提供了由 Windows Communication Foundation (WCF):
 
-    - <xref:System.ServiceModel.Channels.SecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 
 - 接着是由下面的绑定元素指定的多个可选消息模式：
 
@@ -246,35 +246,35 @@ ms.locfileid: "59159739"
 
 - 再下面是以下可选的传输升级/帮助器绑定元素：
 
-    - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
+  - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
 
-    - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
 
 - 再接下来是一个必需的消息编码绑定元素。 可以使用自己的传输或者使用以下消息编码绑定之一：
 
-    - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+  - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 
-    - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
+  - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
 
-    - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
+  - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
 - 底层是一个必需的传输元素。 可以使用自己的传输，也可以使用其中一个传输绑定元素提供通过 Windows Communication Foundation (WCF):
 
-    - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
 
-    - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
+  - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
 
-    - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
 
 下表总结了每层的选项。
 
