@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: 0756eb0917e812101006f000db07f55f39afda57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ecfd2c3a31b42b380c593aef0bbc23775874cc7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076817"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>从 DataAdapter 填充数据集
-[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> 是数据的内存驻留表示形式，它提供了独立于数据源的一致关系编程模型。 `DataSet` 表示整个数据集，其中包含表、约束和表之间的关系。 由于 `DataSet` 独立于数据源，因此 `DataSet` 可以包含应用程序本地的数据，也可以包含来自多个数据源的数据。 与现有数据源的交互通过 `DataAdapter`来控制。  
+[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet>是提供一致关系编程模型独立于数据源的数据的驻留内存表示形式。 `DataSet` 表示整个数据集，其中包含表、约束和表之间的关系。 由于 `DataSet` 独立于数据源，因此 `DataSet` 可以包含应用程序本地的数据，也可以包含来自多个数据源的数据。 与现有数据源的交互通过 `DataAdapter`来控制。  
   
  `SelectCommand` 的 `DataAdapter` 属性是一个 `Command` 对象，用于从数据源中检索数据。 `InsertCommand`的 `UpdateCommand`、 `DeleteCommand` 和 `DataAdapter` 属性是 `Command` 对象，用于按照对 `DataSet`中数据的修改来管理对数据源中数据的更新。 中更详细地介绍这些属性[使用 Dataadapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)。  
   
- `Fill` 的 `DataAdapter` 方法用于使用 `DataSet` 的 `SelectCommand` 结果填充 `DataAdapter`。 `Fill` 将要填充的 `DataSet` 、和 `DataTable` 对象（或要使用从 `DataTable` 中返回的行来填充的 `SelectCommand`的名称）作为它的参数。  
+ `Fill` 的 `DataAdapter` 方法用于使用 `DataSet` 的 `SelectCommand` 结果填充 `DataAdapter`。 `Fill` 将作为其参数`DataSet`填充，和一个`DataTable`对象或名称`DataTable`要从返回的行填充`SelectCommand`。  
   
 > [!NOTE]
 >  使用 `DataAdapter` 检索表的全部内容会花费些时间，尤其是在表中有很多行时。 这是因为访问数据库，定位和处理数据，然后将数据传输到客户端是需要很长时间的。 将表中全部内容提取到客户端还会在服务器上锁定所有行。 若要提高性能，您可以使用 `WHERE` 子句使返回客户端的行数大为减少。 还可以通过只显式列出 `SELECT` 语句要求的列减少返回到客户端的数据量。 另一种好的变通方法是以批次检索行（例如一次检索几百行），并且在客户端完成当前批次后只检索下一批次。  
   
- `Fill` 方法使用 `DataReader` 对象来隐式地返回用于在 `DataSet`中创建表的列名称和类型，以及用于填充 `DataSet`中的表行的数据。 表和列仅在不存在时才创建；否则， `Fill` 将使用现有的 `DataSet` 架构。 列类型，作为创建[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中的表[ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。 除非数据源中存在主键且 `DataAdapter`**来控制。**`MissingSchemaAction` 设置为 `MissingSchemaAction`**来控制。**`AddWithKey`来控制。 如果 `Fill` 发现某个表存在主键，对于主键列的值与从数据源返回的行的主键列的值匹配的行，将使用数据源中的数据重写 `DataSet` 中的数据。 如果未找到任何主键，则将数据追加到 `DataSet`中的表。 `Fill` 使用填充时可能存在的任何映射`DataSet`(请参阅[DataAdapter 数据表和 DataColumn 映射](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md))。  
+ `Fill` 方法使用 `DataReader` 对象来隐式地返回用于在 `DataSet`中创建表的列名称和类型，以及用于填充 `DataSet`中的表行的数据。 表和列仅在不存在时才创建；否则， `Fill` 将使用现有的 `DataSet` 架构。 列类型，作为创建[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中的表[ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。 除非数据源中存在不会创建主键和`DataAdapter` **。**`MissingSchemaAction` 设置为 `MissingSchemaAction`**来控制。**`AddWithKey`来控制。 如果 `Fill` 发现某个表存在主键，对于主键列的值与从数据源返回的行的主键列的值匹配的行，将使用数据源中的数据重写 `DataSet` 中的数据。 如果未找到任何主键，则将数据追加到 `DataSet`中的表。 `Fill` 使用填充时可能存在的任何映射`DataSet`(请参阅[DataAdapter 数据表和 DataColumn 映射](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md))。  
   
 > [!NOTE]
 >  如果 `SelectCommand` 返回 OUTER JOIN 的结果，则 `DataAdapter` 不会为生成的 `PrimaryKey` 设置 `DataTable`值。 您必须自己定义 `PrimaryKey` 以确保正确解析重复行。 有关详细信息，请参阅[定义主键](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  
@@ -59,7 +59,7 @@ adapter.Fill(customers, "Customers");
  如果 `DataAdapter` 遇到多个结果集，则将在 `DataSet`中创建多个表。 这些表的命名方式为默认名称 Table 加上*N*，N 从 0 开始递增，如以 Table0 为第一个表名，依次类推。 如果以参数形式向 `Fill` 方法传递表名，则这些表的命名方式为默认名称 TableName 加上*N*，N 从 0 开始递增，如以 TableName0 为第一个表名，依次类推。  
   
 ## <a name="populating-a-dataset-from-multiple-dataadapters"></a>从多个 DataAdapter 填充 DataSet  
- 任意数量的`DataAdapter`对象可以一起使用`DataSet`。 每个 `DataAdapter` 都可用于填充一个或多个 `DataTable` 对象并将更新解析回相关数据源。 `DataRelation` 和 `Constraint` 对象可以在本地添加到 `DataSet` ，这样您就可以关联来自不同数据源的数据。 例如， `DataSet` 可以包含来自 Microsoft SQL Server 数据库、通过 OLE DB 公开的 IBM DB2 数据库以及对 XML 进行流处理的数据源的数据。 一个或多个 `DataAdapter` 对象可以处理与每个数据源的通信。  
+ 任意数量的`DataAdapter`对象可以一起使用`DataSet`。 每个 `DataAdapter` 都可用于填充一个或多个 `DataTable` 对象并将更新解析回相关数据源。 `DataRelation` 并`Constraint`可以将对象添加到`DataSet`本地，这样您就可以关联来自不同数据源的数据。 例如， `DataSet` 可以包含来自 Microsoft SQL Server 数据库、通过 OLE DB 公开的 IBM DB2 数据库以及对 XML 进行流处理的数据源的数据。 一个或多个 `DataAdapter` 对象可以处理与每个数据源的通信。  
   
 ### <a name="example"></a>示例  
  以下代码示例从 Microsoft SQL Server 上的 `Northwind` 数据库填充客户列表，从存储在 Microsoft Access 2000 上的 `Northwind` 数据库填充订单列表。 已填充的表通过 `DataRelation`相关联，这样，客户列表将与相应客户的订单一起显示出来。 有关详细信息`DataRelation`对象，请参阅[添加 Datarelation](../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)并[导航 Datarelation](../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations.md)。  
@@ -120,10 +120,10 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ## <a name="sql-server-decimal-type"></a>SQL Server Decimal 类型  
  默认情况下， `DataSet` 使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据类型存储数据。 对于大多数应用程序，这些类型都提供了一种方便的数据源信息表示形式。 但是，当数据源中的数据类型是 SQL Server decimal 或 numeric 数据类型时，这种表示形式可能会导致问题。  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] `decimal` 数据类型最多允许 28 个有效位，而 SQL Server `decimal` 数据类型则允许 38 个有效位。 如果 `SqlDataAdapter` 在 `Fill` 操作过程中确定 SQL Server `decimal` 字段的精度大于 28 个字符，则不会将当前行添加到 `DataTable`。 此时将发生 `FillError` 事件，使您能够确定是否将发生精度损失并作出适当的响应。 有关详细信息`FillError`事件，请参阅[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。 若要获取 SQL Server `decimal` 值，还可以使用 <xref:System.Data.SqlClient.SqlDataReader> 对象并调用 <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> 方法。  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 增强了对 <xref:System.Data.SqlTypes> 中的 `DataSet`的支持。 有关详细信息，请参阅 [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)。  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 增强了对支持<xref:System.Data.SqlTypes>在`DataSet`。 有关详细信息，请参阅 [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)。  
   
 ## <a name="ole-db-chapters"></a>OLE DB 章节  
- 分层行集或章节（OLE DB 类型 `DBTYPE_HCHAPTER`、ADO 类型 `adChapter`）可用于填充 `DataSet` 的内容。 当 <xref:System.Data.OleDb.OleDbDataAdapter> 在 `Fill` 操作过程中遇到章节列时，将为章节列创建一个 `DataTable` ，并使用章节中的列和行填充该表。 为章节列创建的表使用父表名称和章节列名称来命名，其形式为“*ParentTableNameChapteredColumnName*”。 如果 `DataSet` 中已存在与章节列的名称相匹配的表，则将使用章节数据填充当前表。 如果现有表中不存在与章节中的列相匹配的列，则将添加新列。  
+ 分层行集或章节（OLE DB 类型 `DBTYPE_HCHAPTER`、ADO 类型 `adChapter`）可用于填充 `DataSet`的内容。 当 <xref:System.Data.OleDb.OleDbDataAdapter> 在 `Fill` 操作过程中遇到章节列时，将为章节列创建一个 `DataTable` ，并使用章节中的列和行填充该表。 为章节列创建的表使用父表名称和章节列名称来命名，其形式为“*ParentTableNameChapteredColumnName*”。 如果 `DataSet` 中已存在与章节列的名称相匹配的表，则将使用章节数据填充当前表。 如果现有表中不存在与章节中的列相匹配的列，则将添加新列。  
   
  在使用章节列中的数据填充 `DataSet` 中的表之前，将创建分层行集的父表和子表之间的关系，方法是向父表和子表添加一个整数列，将父列设置为自动递增，然后使用两个表中所添加的列来创建 `DataRelation` 。 所添加的关系使用父表和章节列名称来命名，其形式为“*ParentTableNameChapterColumnName*”。  
   
@@ -182,8 +182,9 @@ adapter.Fill(customers, "Customers");
 |ANATR|10625|1|  
   
 ## <a name="see-also"></a>请参阅
-- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+
+- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
 - [使用 DbDataAdapter 修改数据](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
-- [多重活动结果集 (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [多个活动结果集 (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: a36cdf9f8cce935c8310e2ce9ffc79f67d077fe6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225139"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344346"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
 在 Windows Presentation Foundation (WPF)[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]用于标识和加载在许多方面，包括以下文件：  
@@ -234,15 +234,15 @@ ms.locfileid: "59225139"
   
  为了确定的类型文件的 pack[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]指的是，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]解析[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]本地程序集和内容文件使用以下试探方法内的资源文件：  
   
-1.  探测程序集的元数据<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>匹配的包属性[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  
+1. 探测程序集的元数据<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>匹配的包属性[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  
   
-2.  如果<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>找到属性，包的路径[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]引用的内容文件。  
+2. 如果<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>找到属性，包的路径[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]引用的内容文件。  
   
-3.  如果<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>找不到属性，探测编译到本地程序集的集资源文件。  
+3. 如果<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>找不到属性，探测编译到本地程序集的集资源文件。  
   
-4.  如果匹配的包的路径的资源文件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]找到，则包的路径[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]引用的资源文件。  
+4. 如果匹配的包的路径的资源文件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]找到，则包的路径[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]引用的资源文件。  
   
-5.  如果未找到资源，在内部创建<xref:System.Uri>无效。  
+5. 如果未找到资源，在内部创建<xref:System.Uri>无效。  
   
  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 解析不适用于[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]参阅以下内容：  
   

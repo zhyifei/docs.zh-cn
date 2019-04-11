@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: feccd6978d0a3cf8db60bbd505826433c93e3276
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 826cfc0ea7f681e1f7cbe858008c24a4941f0e11
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227192"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335077"
 ---
 # <a name="navigation-overview"></a>导航概述
 Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使用的浏览器样式导航： 独立应用程序和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。 对包内容的导航窗格中，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供了<xref:System.Windows.Controls.Page>类。 可以从一个导航<xref:System.Windows.Controls.Page>到另一个以声明方式，通过使用<xref:System.Windows.Documents.Hyperlink>，或以编程方式使用<xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日志记住导航过的页和导航回它们。  
@@ -353,13 +353,13 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
   
  默认情况下，每个文本<xref:System.Windows.Controls.Page>中显示**最新网页**系列[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]是[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]为<xref:System.Windows.Controls.Page>。 很多情况下这对用户并没有什么特殊的意义。 幸运的是，可以使用以下选项更改文本：  
   
-1.  附加`JournalEntry.Name`属性值。  
+1. 附加`JournalEntry.Name`属性值。  
   
-2.  `Page.Title`属性值。  
+2. `Page.Title`属性值。  
   
-3.  `Page.WindowTitle`属性值和[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]当前<xref:System.Windows.Controls.Page>。  
+3. `Page.WindowTitle`属性值和[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]当前<xref:System.Windows.Controls.Page>。  
   
-4.  当前 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 的 <xref:System.Windows.Controls.Page>。 (默认)  
+4. 当前 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 的 <xref:System.Windows.Controls.Page>。 (默认)  
   
  选项列出的顺序和查找文本的优先级顺序一致。 例如，如果`JournalEntry.Name`，则将忽略其他值。  
   
@@ -429,19 +429,19 @@ Windows Presentation Foundation (WPF) 支持两种类型的应用程序可以使
   
  幸运的是，该日志提供支持以记住跨数据<xref:System.Windows.Controls.Page>导航，包括控件的数据。 具体而言，每个日志条目<xref:System.Windows.Controls.Page>充当关联的临时容器<xref:System.Windows.Controls.Page>状态。 以下步骤概述了如何使用这种支持时<xref:System.Windows.Controls.Page>从导航到：  
   
-1.  当前的条目<xref:System.Windows.Controls.Page>添加到日志。  
+1. 当前的条目<xref:System.Windows.Controls.Page>添加到日志。  
   
-2.  状态<xref:System.Windows.Controls.Page>存储该页面，添加到后退堆栈的日志条目。  
+2. 状态<xref:System.Windows.Controls.Page>存储该页面，添加到后退堆栈的日志条目。  
   
-3.  新<xref:System.Windows.Controls.Page>导航到。  
+3. 新<xref:System.Windows.Controls.Page>导航到。  
   
  当页面<xref:System.Windows.Controls.Page>是向后导航，使用日志，发生以下步骤：  
   
-1.  <xref:System.Windows.Controls.Page>实例化 （back 堆栈上的最顶部日志条目）。  
+1. <xref:System.Windows.Controls.Page>实例化 （back 堆栈上的最顶部日志条目）。  
   
-2.  <xref:System.Windows.Controls.Page>是使用保存在一起的日记条目的状态刷新<xref:System.Windows.Controls.Page>。  
+2. <xref:System.Windows.Controls.Page>是使用保存在一起的日记条目的状态刷新<xref:System.Windows.Controls.Page>。  
   
-3.  <xref:System.Windows.Controls.Page>向后导航。  
+3. <xref:System.Windows.Controls.Page>向后导航。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 在中使用以下控件时将自动使用这种支持<xref:System.Windows.Controls.Page>:  
   
