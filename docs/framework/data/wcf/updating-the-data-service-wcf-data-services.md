@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 5b8fa13bf5db7f3c3df97febe4bb6f9ee4c184a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231287"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517104"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>更新数据服务（WCF 数据服务）
 当你使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送，库将转换到客户端数据服务类的实例在源中的条目。 通过使用 <xref:System.Data.Services.Client.DataServiceContext> 所属的 <xref:System.Data.Services.Client.DataServiceQuery%601> 跟踪这些数据服务类。 客户端通过使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法跟踪您报告的实体更改。 客户端利用这些方法可跟踪已添加和删除的实体以及您对属性值或对实体实例之间关系的更改。 调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时，将以基于 REST 的操作的形式将这些跟踪的更改发送回数据服务。  
@@ -24,33 +24,33 @@ ms.locfileid: "59231287"
 ## <a name="adding-modifying-and-changing-entities"></a>添加、修改和更改实体  
  当你使用**添加服务引用**在 Visual Studio 将引用添加到对话框[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源，生成客户端数据服务类都具有一个静态*创建*采用其中一个方法每个不可为 null 的实体属性的参数。 可以使用此方法创建实体类型类的实例，如下面的示例所示：  
   
- [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#createnewproduct)]
- [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#createnewproduct)]  
+ [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
+ [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#createnewproduct)]  
   
  若要添加的实体实例，调用适当*AddTo*方法<xref:System.Data.Services.Client.DataServiceContext>生成的类**添加服务引用**对话框中的，如以下示例所示：  
   
- [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addproductspecific)]
- [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addproductspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addproductspecific)]
+ [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addproductspecific)]  
   
  这会将对象添加到上下文和正确的实体集中。 您还可以调用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>，但是必须提供实体集名称。 如果添加的实体具有与其他实体的一种或多种关系，则您可以使用 <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> 方法或使用上述方法之一，还可以显式定义这些链接。 这些操作将在本主题的后面部分进行讨论。  
   
  若要修改现有的实体实例，请首先查询该实体，再对其属性进行必要的更改，然后调用 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 的 <xref:System.Data.Services.Client.DataServiceContext> 方法，以向客户端库指明它需要发送该对象的更新，如下面的示例所示：  
   
- [!code-csharp[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#modifycustomerspecific)]
- [!code-vb[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#modifycustomerspecific)]  
+ [!code-csharp[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#modifycustomerspecific)]
+ [!code-vb[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#modifycustomerspecific)]  
   
  若要删除实体实例，请调用 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 的 <xref:System.Data.Services.Client.DataServiceContext> 方法，如下面的示例所示：  
   
- [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#deleteproductspecific)]
- [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#deleteproductspecific)]  
+ [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#deleteproductspecific)]
+ [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#deleteproductspecific)]  
   
  有关详细信息，请参阅[如何：添加、 修改和删除实体](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)。  
   
 ## <a name="attaching-entities"></a>附加实体  
  通过客户端库，可以保存对实体所做的更新，不必先执行查询来将实体加载到 <xref:System.Data.Services.Client.DataServiceContext>。 使用 <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> 方法将现有对象附加到 <xref:System.Data.Services.Client.DataServiceContext> 中的特定实体集。 然后，可以修改对象，保存对数据服务的更改。 在下面的示例中，已更改的客户对象附加到上下文，然后在调用 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 之前调用 <xref:System.Data.Services.Client.EntityStates.Modified> 以便将附加的对象标记为 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>：  
   
- [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#attachobjectspecific)]
- [!code-vb[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#attachobjectspecific)]  
+ [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#attachobjectspecific)]
+ [!code-vb[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#attachobjectspecific)]  
   
  在附加对象时需要考虑下列注意事项：  
   
@@ -73,20 +73,20 @@ ms.locfileid: "59231287"
 |------------|-----------------|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|在两个相关实体对象之间创建新的链接。 调用此方法相当于同时调用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 和  <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> 以创建新对象并定义与现有对象的关系。|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|在两个相关实体对象之间创建新的链接。|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|更新两个相关实体对象之间的现有链接。 <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> 此外可用于删除链接的零-或---一对一基数 (`0..1:1`) 和一对一 (`1:1`)。 为此，可将相关对象设置为 `null`。|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|更新两个相关实体对象之间的现有链接。 <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> 也可用于删除具有零或一对一基数 (`0..1:1`) 和一对一 (`1:1`) 基数的链接。 为此，可将相关对象设置为 `null`。|  
 |<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|将上下文跟踪的链接标记为在调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时删除。 如果通过先删除指向现有对象的链接、再添加指向新的相关对象的链接的方式删除相关对象或更改关系，请使用此方法。|  
 |<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|通知两个实体对象之间的现有链接的上下文。 该上下文假设此关系已在数据服务中存在，且不尝试在您调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时创建链接。 如果要将对象附加到上下文且还需要附加两者之间的链接，请使用此方法。 如果要定义新关系，则应使用 <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>。|  
 |<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|停止跟踪上下文中的指定链接。 该方法用于删除一对多 (`*:*`) 关系。 对于基数为一的关系链接，则必须使用  <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>。|  
   
  下面的示例演示如何使用 <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> 方法添加新的与现有 `Order_Detail` 实体相关的 `Orders`。 由于新的 `Order_Details` 对象现在由 <xref:System.Data.Services.Client.DataServiceContext> 跟踪，因此所添加的 `Order_Details` 对象与现有 `Products` 实体的关系将通过调用 <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> 方法进行定义：  
   
- [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addorderdetailtoorderspecific)]
- [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorderspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addorderdetailtoorderspecific)]
+ [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addorderdetailtoorderspecific)]  
   
  <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> 方法定义的链接必须在数据服务中创建，要在上下文中的对象中反应这些链接，还必须为对象本身设置导航属性。 在上面的示例中，应当设置如下的导航属性：  
   
- [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#setnavprops)]
- [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#setnavprops)]  
+ [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#setnavprops)]
+ [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#setnavprops)]  
   
  有关详细信息，请参阅[如何：定义实体关系](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "59231287"
   
 ## <a name="see-also"></a>请参阅
 
-- [WCF 数据服务客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
 - [批处理操作](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)

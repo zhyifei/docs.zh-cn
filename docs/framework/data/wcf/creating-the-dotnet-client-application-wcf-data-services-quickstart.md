@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: efea92fa5176641ac64265dfffd44a088115bb61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: dfc08d4623f124a41412907f5a118e8d9ee7833d
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59305931"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517767"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>创建 .NET Framework 客户端应用程序（WCF 数据服务快速入门）
 
@@ -29,7 +29,7 @@ ms.locfileid: "59305931"
 
 4. 打开文件 MainWindow.xaml 并用下列代码替换 XAML 代码：
 
-     [!code-xaml[Astoria Quickstart Client#Window1Xaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml#window1xaml)]
+     [!code-xaml[Astoria Quickstart Client#Window1Xaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml#window1xaml)]
 
 ## <a name="to-add-a-data-service-reference-to-the-project"></a>在项目中添加数据服务引用
 
@@ -49,21 +49,21 @@ ms.locfileid: "59305931"
 
 3. 在中**解决方案资源管理器**下**NorthwindClient**，打开 MainWindow.xaml 文件的代码页，并添加以下`using`语句 (`Imports`在 Visual Basic 中)。
 
-     [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#using)]
-     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#using)]
+     [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#using)]
+     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#using)]
 
 3. 将用于查询数据服务并将结果绑定到 <xref:System.Data.Services.Client.DataServiceCollection%601> 的下列代码插入到 `MainWindow` 类：
 
     > [!NOTE]
     > 必须用承载 Northwind 数据服务的实例的服务器和端口替换主机名 `localhost:12345`。
 
-     [!code-csharp[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#querycode)]
-     [!code-vb[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#querycode)]
+     [!code-csharp[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#querycode)]
+     [!code-vb[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#querycode)]
 
 4. 将用于保存更改的下列代码插入到 `MainWindow` 类：
 
-     [!code-csharp[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#savechanges)]
-     [!code-vb[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#savechanges)]
+     [!code-csharp[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#savechanges)]
+     [!code-vb[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#savechanges)]
 
 ## <a name="to-build-and-run-the-northwindclient-application"></a>生成并运行 NorthwindClient 应用程序
 

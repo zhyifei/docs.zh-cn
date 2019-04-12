@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: f02c551c4382c9db03be2f4a0adbb9061fd4fe65
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332503"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517065"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>如何：将使用项目数据源 （WCF 数据服务） 的数据绑定
 
@@ -49,12 +49,12 @@ ms.locfileid: "59332503"
 
 6. 打开窗体的代码页，并添加以下 `using` 语句（在 Visual Basic 中为 `Imports`）：
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
 
 7. 在定义窗体的分部类中，添加创建 <xref:System.Data.Objects.ObjectContext> 实例并定义 `customerID` 常量的以下代码。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
 
 8. 在设计器中，选择该窗口。
 
@@ -69,8 +69,8 @@ ms.locfileid: "59332503"
 
 11. 在新创建的 <xref:System.Windows.FrameworkElement.Loaded> 事件处理程序中，复制并粘贴以下代码。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdatabindingwpf)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdatabindingwpf)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersdatabindingwpf)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf2.xaml.vb#customersordersdatabindingwpf)]
 
 12. 此代码根据 LINQ 查询（返回 Northwind 数据服务中 <xref:System.Data.Services.Client.DataServiceCollection%601> 和相关 `Customers` 对象的 <xref:System.Collections.Generic.IEnumerable%601>）的执行情况为 `Customers` 类型创建一个 `Orders` 实例，并将其绑定到 `customersViewSource`。
 
@@ -98,13 +98,13 @@ ms.locfileid: "59332503"
 
 6. 打开窗体的代码页，并添加以下 `using` 语句（在 Visual Basic 中为 `Imports`）：
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersusing)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersusing)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersusing)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersusing)]
 
 7. 在定义窗体的分部类中，添加创建 <xref:System.Data.Objects.ObjectContext> 实例并定义 `customerID` 常量的以下代码。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdefinition)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdefinition)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdefinition)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdefinition)]
 
 8. 在窗体设计器中，双击窗体。
 
@@ -112,12 +112,12 @@ ms.locfileid: "59332503"
 
 9. 在 `Load` 事件处理程序中，复制并粘贴以下代码。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdatabinding)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdatabinding)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdatabinding)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdatabinding)]
 
 10. 此代码根据 <xref:System.Data.Services.Client.DataServiceCollection%601>（返回 Northwind 数据服务中 `Customers` 的 <xref:System.Data.Services.Client.DataServiceQuery%601>）的执行情况为 <xref:System.Collections.Generic.IEnumerable%601> 类型创建一个 `Customers` 实例，并将其绑定到 `customersBindingSource`。
 
 ## <a name="see-also"></a>请参阅
 
-- [WCF 数据服务客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [如何：将数据绑定到 Windows Presentation Foundation 元素](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 8e6b0d9c9b5d2b473aebc00063bd0a343b8708c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fb2a7c8e1cf3fbae4c6417dab492343ead991204
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226659"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517871"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>将数据绑定到控件（WCF 数据服务）
 使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可以将 `ComboBox` 和 `ListView` 等控件绑定到 <xref:System.Data.Services.Client.DataServiceCollection%601> 类的实例。 从 <xref:System.Collections.ObjectModel.ObservableCollection%601> 类继承的这一集合包含[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 源中的数据。 此类表示一个动态数据集合，在添加项或移除项时，此集合将提供通知。 当你使用的实例<xref:System.Data.Services.Client.DataServiceCollection%601>进行数据绑定[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库处理这些事件来确保跟踪的对象<xref:System.Data.Services.Client.DataServiceContext>与绑定 UI 元素中的数据保持同步。  
@@ -29,21 +29,21 @@ ms.locfileid: "59226659"
   
  下面的示例演示如何基于提供的 <xref:System.Data.Services.Client.DataServiceCollection%601> 和返回具有相关订单的所有客户的 <xref:System.Data.Services.Client.DataServiceContext> 创建 <xref:System.Data.Services.Client.DataServiceQuery%601> 的实例：  
   
- [!code-csharp[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders2.cs#customersorders2binding)]
- [!code-vb[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders2.vb#customersorders2binding)]  
+ [!code-csharp[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders2.cs#customersorders2binding)]
+ [!code-vb[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders2.vb#customersorders2binding)]  
   
 ## <a name="binding-data-to-windows-presentation-foundation-elements"></a>将数据绑定到 Windows Presentation Foundation 元素  
  因为 <xref:System.Data.Services.Client.DataServiceCollection%601> 类从 <xref:System.Collections.ObjectModel.ObservableCollection%601> 类继承，所以可以在 Windows Presentation Foundation (WPF) 应用程序中将对象绑定到元素或控件，像使用 <xref:System.Collections.ObjectModel.ObservableCollection%601> 类用于绑定时一样。 有关详细信息，请参阅[数据绑定 (Windows Presentation Foundation)](../../../../docs/framework/wpf/data/data-binding-wpf.md)。 将数据服务数据绑定到 WPF 控件的一种方法是将元素的 `DataContext` 属性设置为包含查询结果的 <xref:System.Data.Services.Client.DataServiceCollection%601> 类的实例。 在本例中，使用 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 属性设置该控件的对象源。 使用 <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> 属性指定要显示的绑定对象的属性。 若要将元素绑定到导航属性所返回的相关对象，请在为 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 属性定义的绑定中包含相应的路径。 该路径相对于父控件的 <xref:System.Windows.FrameworkElement.DataContext%2A> 属性所设置的根对象。 下面的示例设置 <xref:System.Windows.FrameworkElement.DataContext%2A> 元素的 <xref:System.Windows.Controls.StackPanel> 属性以将父控件绑定到客户对象的 <xref:System.Data.Services.Client.DataServiceCollection%601>：  
   
- [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
- [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
- [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#masterdetailbinding)]
- [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf.xaml.vb#masterdetailbinding)]
- [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom2.xaml.vb#masterdetailbinding)]  
+ [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
+ [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom.xaml.vb#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf.xaml.vb#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom2.xaml.vb#masterdetailbinding)]  
   
  下面的示例显示 <xref:System.Windows.Controls.DataGrid> 和 <xref:System.Windows.Controls.ComboBox> 子控件的 XAML 绑定定义：  
   
- [!code-xaml[Astoria Northwind Client#MasterDetailXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf.xaml#masterdetailxaml)]  
+ [!code-xaml[Astoria Northwind Client#MasterDetailXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf.xaml#masterdetailxaml)]  
   
  有关详细信息，请参阅[如何：将数据绑定到 Windows Presentation Foundation 元素](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)。  
   
@@ -57,16 +57,16 @@ ms.locfileid: "59226659"
   
  下面的示例将 <xref:System.Data.Services.Client.DataServiceCollection%601> 绑定到 <xref:System.Windows.Forms.ComboBox> 控件：  
   
- [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdatabindingspecific)]
- [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdatabindingspecific)]  
+ [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdatabindingspecific)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdatabindingspecific)]  
   
  当你使用**添加服务引用**对话框生成的客户端数据服务类，数据源还创建了一个项目基于生成<xref:System.Data.Services.Client.DataServiceContext>。 使用此数据源，您可以创建 UI 元素或只需通过将项从显示的数据服务中的数据的控件**数据源**窗口拖到设计器。 这些项将成为绑定到数据源的应用程序 UI 中的元素。 有关详细信息，请参阅[如何：使用项目数据源绑定数据](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)。  
   
 ## <a name="binding-paged-data"></a>绑定分页数据  
  可以配置数据服务来限制单个响应消息中返回的查询数据量。 有关详细信息，请参阅[数据服务配置](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)。 数据服务分页响应数据时，每个响应包含用于返回下一页结果的链接。 有关详细信息，请参阅[加载延迟的内容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。 在这种情况下，必须通过传递从 <xref:System.Data.Services.Client.DataServiceCollection%601.Load%2A> 属性获取的 URI，对 <xref:System.Data.Services.Client.DataServiceCollection%601> 调用 <xref:System.Data.Services.Client.DataServiceQueryContinuation.NextLinkUri%2A> 方法来显式加载页，如下面的示例所示：  
   
- [!code-csharp[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf3.xaml.cs#bindpageddataspecific)]
- [!code-vb[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf3.xaml.vb#bindpageddataspecific)]  
+ [!code-csharp[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf3.xaml.cs#bindpageddataspecific)]
+ [!code-vb[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf3.xaml.vb#bindpageddataspecific)]  
   
  相关对象以类似方式进行加载。 有关详细信息，请参阅[如何：将数据绑定到 Windows Presentation Foundation 元素](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)。  
   
@@ -81,18 +81,18 @@ ms.locfileid: "59226659"
   
  创建 <xref:System.Data.Services.Client.DataServiceCollection%601> 的新实例时，可以选择指定以下参数，定义对处理绑定对象更改后引发事件的方法的委托：  
   
--   `entityChanged` -绑定对象的属性发生更改时调用的方法。 此 <xref:System.Func%602> 委托接受一个 <xref:System.Data.Services.Client.EntityChangedParams> 对象并返回一个布尔值，该值指示对 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 调用 <xref:System.Data.Services.Client.DataServiceContext> 这一默认行为是否仍应发生。  
+-   `entityChanged` - 绑定对象的属性更改后调用的方法。 此 <xref:System.Func%602> 委托接受一个 <xref:System.Data.Services.Client.EntityChangedParams> 对象并返回一个布尔值，该值指示对 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 调用 <xref:System.Data.Services.Client.DataServiceContext> 这一默认行为是否仍应发生。  
   
--   `entityCollectionChanged` -添加或从绑定集合中移除对象时调用的方法。 此 <xref:System.Func%602> 委托接受一个 <xref:System.Data.Services.Client.EntityCollectionChangedParams> 对象并返回一个布尔值，该值指示默认行为（即对 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 调用 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> 操作的 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 或 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 操作的 <xref:System.Data.Services.Client.DataServiceContext>）是否仍应发生。  
+-   `entityCollectionChanged` - 从绑定集合添加或移除对象时调用的方法。 此 <xref:System.Func%602> 委托接受一个 <xref:System.Data.Services.Client.EntityCollectionChangedParams> 对象并返回一个布尔值，该值指示默认行为（即对 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 调用 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> 操作的 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 或 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 操作的 <xref:System.Data.Services.Client.DataServiceContext>）是否仍应发生。  
   
 > [!NOTE]
->  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 不执行验证在这些委托中实现的自定义行为。  
+>  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 不执行在这些委托中实现的自定义行为的验证。  
   
  在下面的示例中，自定义 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 操作以调用 <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 方法来移除属于删除的 `Orders_Details` 实体的 `Orders` 实体。 执行此自定义操作的原因是，删除父实体时不会自动删除依赖实体。  
   
- [!code-csharp[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#customersordersdeleterelated)]
- [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#customersordersdeleterelated)]
- [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom2.xaml.vb#customersordersdeleterelated)]  
+ [!code-csharp[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#customersordersdeleterelated)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom.xaml.vb#customersordersdeleterelated)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom2.xaml.vb#customersordersdeleterelated)]  
   
  有关详细信息，请参阅[如何：自定义数据绑定行为](../../../../docs/framework/data/wcf/how-to-customize-data-binding-behaviors-wcf-data-services.md)。  
   
@@ -101,15 +101,15 @@ ms.locfileid: "59226659"
 ## <a name="data-binding-with-custom-client-data-classes"></a>使用自定义客户端数据类的数据绑定  
  若要能够将对象加载到 <xref:System.Data.Services.Client.DataServiceCollection%601>，对象本身必须实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口。 数据服务使用时生成的客户端类**添加服务引用**对话框中或[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)工具实现此接口。 如果提供你自己的客户端数据类，必须将其他类型的集合用于数据绑定。 如果对象更改，必须在数据绑定控件中处理事件以调用 <xref:System.Data.Services.Client.DataServiceContext> 类的以下方法：  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> -当新对象添加到集合。  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> - 新对象添加到集合时。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> -当从集合中移除对象。  
+-   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> - 从集合中移除对象时。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 的一个属性集合中的对象上的更改时。  
+-   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> - 在集合中的对象上更改属性时。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> -当一个对象添加到相关对象的集合。  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> - 对象添加到相关对象的集合时。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> -当一个对象添加到相关对象的集合。  
+-   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> - 对象添加到相关对象的集合时。  
   
  有关详细信息，请参阅[更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
   

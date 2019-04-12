@@ -8,15 +8,15 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: b63c6d8f3a5a949299a925a321ca8f01c67b1d8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c5514bf32bfe03a65d7d171a500dd5d4cfde35ff
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211967"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517403"
 ---
 # <a name="service-operations-wcf-data-services"></a>服务操作（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以定义数据服务以公开在服务器上的方法上的服务操作。 与其他数据服务资源一样，服务操作也是通过 URI 进行寻址。 使用服务操作可以在数据服务中公开业务逻辑；例如，实现验证逻辑，应用基于角色的安全性或公开专用查询功能。 服务操作是添加到派生自 <xref:System.Data.Services.DataService%601> 的数据服务类的方法。 与所有其他数据服务资源一样，也可以向服务操作方法提供参数。 例如，下面的服务操作 URI (基于[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)数据服务) 将值传递`London`到`city`参数：  
+使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以在数据服务中定义服务操作，以便在服务器上公开方法。 与其他数据服务资源一样，服务操作也是通过 URI 进行寻址。 使用服务操作可以在数据服务中公开业务逻辑；例如，实现验证逻辑，应用基于角色的安全性或公开专用查询功能。 服务操作是添加到派生自 <xref:System.Data.Services.DataService%601> 的数据服务类的方法。 与所有其他数据服务资源一样，也可以向服务操作方法提供参数。 例如，下面的服务操作 URI (基于[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)数据服务) 将值传递`London`到`city`参数：  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -24,8 +24,8 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
  此服务操作的定义如下所示：  
   
- [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
- [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
+ [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
+ [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
  使用 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601> 可以直接访问数据服务正在使用的数据源。 有关详细信息，请参阅[如何：定义服务操作](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)。  
   
@@ -42,7 +42,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   方法必须返回下列值之一：  
   
-    -   `void` (`Nothing`在 Visual Basic 中)  
+    -   `void`（在 Visual Basic 中为 `Nothing`）  
   
     -   <xref:System.Collections.Generic.IEnumerable%601>  
   
@@ -60,7 +60,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
     -   `[WebGet]` 使您能够通过使用 GET 请求调用方法。  
   
-    -   `[WebInvoke(Method = "POST")]` 可以通过使用 POST 请求调用的方法。 其他 <xref:System.ServiceModel.Web.WebInvokeAttribute> 方法不受支持。  
+    -   `[WebInvoke(Method = "POST")]` 使您能够通过使用 POST 请求调用方法。 其他 <xref:System.ServiceModel.Web.WebInvokeAttribute> 方法不受支持。  
   
 -   可以用 <xref:System.Data.Services.SingleResultAttribute> 为服务操作添加批注，指定方法的返回值是一个实体而不是一个实体集。 这一区别确定了生成的响应结果串行化以及用 URI 表示其他导航属性遍历的方式。 例如，当使用 AtomPub 序列化时，单个资源类型实例将表示为一个 entry 元素，而单个实例集将表示为一个 feed 元素。  
   
@@ -77,7 +77,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
   
 |有效的返回类型|URI 规则|  
 |------------------------|---------------|  
-|`void` (`Nothing`在 Visual Basic 中)<br /><br /> 或<br /><br /> 实体类型<br /><br /> 或<br /><br /> 基元类型|URI 必须是作为服务操作名称的单个路径段。 不允许使用查询选项。|  
+|`void`（在 Visual Basic 中为 `Nothing`）<br /><br /> 或<br /><br /> 实体类型<br /><br /> 或<br /><br /> 基元类型|URI 必须是作为服务操作名称的单个路径段。 不允许使用查询选项。|  
 |<xref:System.Collections.Generic.IEnumerable%601>|URI 必须是作为服务操作名称的单个路径段。 由于结果类型不是 <xref:System.Linq.IQueryable%601> 类型，因此不允许使用查询选项。|  
 |<xref:System.Linq.IQueryable%601>|除了作为服务操作名称的路径之外，还允许使用查询路径段。 也允许使用查询选项。|  
   
@@ -90,8 +90,8 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 ## <a name="service-operations-access-control"></a>服务操作访问控制  
  服务操作的服务范围可见性由 <xref:System.Data.Services.IDataServiceConfiguration.SetServiceOperationAccessRule%2A> 类的 <xref:System.Data.Services.IDataServiceConfiguration> 方法控制，其方式与使用 <xref:System.Data.Services.IDataServiceConfiguration.SetEntitySetAccessRule%2A> 方法控制实体集可见性的方式大致相同。 例如，数据服务定义中的以下代码行用于访问 `CustomersByCity` 服务操作。  
   
- [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationconfig)]
- [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationconfig)]  
+ [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationconfig)]
+ [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationconfig)]  
   
 > [!NOTE]
 >  如果服务操作的返回类型已通过限制访问基础实体集的方式被隐藏，则该服务操作将不能用于客户端应用程序。  
@@ -101,8 +101,8 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 ## <a name="raising-exceptions"></a>引发异常  
  在数据服务执行中引发异常时，我们建议您始终使用 <xref:System.Data.Services.DataServiceException> 类。 这是因为数据服务运行时知道如何正确地将此异常对象的属性映射到 HTTP 响应消息。 在服务操作中引发 <xref:System.Data.Services.DataServiceException> 时，返回的异常包装在 <xref:System.Reflection.TargetInvocationException> 中。 若要返回基 <xref:System.Data.Services.DataServiceException> 而不包含 <xref:System.Reflection.TargetInvocationException>，您必须重写 <xref:System.Data.Services.DataService%601.HandleException%2A> 中的 <xref:System.Data.Services.DataService%601> 方法，从 <xref:System.Data.Services.DataServiceException> 中提取 <xref:System.Reflection.TargetInvocationException>，并将其作为顶级错误返回，如以下示例中所示：  
   
- [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#handleexceptions)]
- [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
+ [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#handleexceptions)]
+ [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#handleexceptions)]  
   
 ## <a name="see-also"></a>请参阅
 

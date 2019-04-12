@@ -8,20 +8,20 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 35554c8d5e1dd33ab942cecb80075ec2fb1e131c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 17926e144fae206d702c2bcb4f88dd2093442ed5
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59326250"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517897"
 ---
 # <a name="interceptors-wcf-data-services"></a>拦截器（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使应用程序能够截获请求消息，以便可以向操作添加自定义逻辑。 可以使用此自定义逻辑来验证传入消息中的数据。 还可以使用它进一步限制查询请求的范围，以便基于每个请求插入自定义授权策略。  
   
  侦听由数据服务中具有特殊特性的方法执行。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 在消息处理过程中的适当时刻调用这些方法。 对于每个实体集，定义侦听器，侦听器方法无法像服务操作那样接受请求中的参数。 处理 HTTP GET 请求时调用的查询侦听器方法必须返回查询结果时应返回 lambda 表达式，用于确定是否设置侦听器的实体的实例。 数据服务使用此表达式来进一步优化请求的操作。 下面是查询侦听器的定义示例。  
   
- [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
- [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
+ [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#queryinterceptordef)]
+ [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
  有关详细信息，请参阅[如何：截获数据服务消息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
   
@@ -33,8 +33,8 @@ ms.locfileid: "59326250"
   
  下面是变更侦听器的定义示例。  
   
- [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
- [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  
+ [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#changeinterceptordef)]
+ [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
  有关详细信息，请参阅[如何：截获数据服务消息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
   

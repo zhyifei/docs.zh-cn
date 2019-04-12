@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: dc2fc5de591429d76210b1dacf69485bb3b11b2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189074"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517312"
 ---
 # <a name="feed-customization-wcf-data-services"></a>源自定义（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]将数据作为源公开。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持的数据馈送的 Atom 和 JavaScript 对象表示法 (JSON) 格式。 当使用 Atom 馈送，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供序列化数据，如实体和关系，可以在 HTTP 消息的正文中包含 XML 格式的标准方法。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定义实体中包含的数据与 Atom 元素之间的默认实体-属性映射。 有关详细信息，请参阅[OData:Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)。  
@@ -33,11 +33,11 @@ ms.locfileid: "59189074"
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>使用实体框架提供程序自定义源  
  在 .edmx 文件中，用于[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序的数据模型以 XML 格式表示。 在这种情况下，用于定义自定义源的特性将会添加到表示数据模型中的实体类型和属性的 `EntityType` 和 `Property` 元素中。 这些源自的定义特性中未定义[ \[MC CSDL\]:概念架构定义文件格式](https://go.microsoft.com/fwlink/?LinkId=159072)，这是的格式的[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序用于定义数据模型。 因此，必须在某个特定的架构命名空间中声明源自定义特性，此架构命名空间应按 `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` 格式定义。 以下 XML 片段显示应用于 `Property` 实体类型的 `Products` 元素的源自定义特性，这些特性定义 `ProductName`、`ReorderLevel` 和 `UnitsInStock` 属性。  
   
- [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedattributes)]  
+ [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   
  这些特性为 `Products` 实体集生成以下自定义数据源。 在自定义数据源中，`ProductName` 属性值同时显示在 `author` 元素以及 `ProductName` 属性元素中，`UnitsInStock` 属性显示在具有其自己的唯一命名空间并且其 `ReorderLevel` 属性作为特性的自定义元素中：  
   
- [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
+ [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
   
  有关详细信息，请参阅[如何：使用实体框架提供程序自定义源](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)。  
   
@@ -49,12 +49,12 @@ ms.locfileid: "59189074"
   
 |特性名|描述|  
 |--------------------|-----------------|  
-|`FC_ContentKind`|指示内容类型。 以下关键字定义联合内容类型。<br /><br /> `text:` 属性值在源中显示为文本。<br /><br /> `html:` 属性值在源中显示为 HTML。<br /><br /> `xhtml:` 属性值在源中显示为 XML 格式的 HTML。<br /><br /> 这些关键字等效于用于反射提供程序的 <xref:System.Data.Services.Common.SyndicationTextContentKind> 枚举的值。<br /><br /> 如果使用了 `FC_NsPrefix` 和 `FC_NsUri` 特性，则不支持此特性。<br /><br /> 为 `xhtml` 特性指定值 `FC_ContentKind` 时，必须确保该属性值包含格式正确的 XML。 数据服务返回值，但不执行任何转换。 还必须确保返回的 XML 中任何 XML 元素前缀在映射的源中定义了命名空间 URI 和前缀。|  
+|`FC_ContentKind`|指示内容类型。 以下关键字定义联合内容类型。<br /><br /> `text:` 属性值是在源中显示为文本。<br /><br /> `html:` 属性值是在源中显示为 HTML。<br /><br /> `xhtml:` 属性值是在源中显示为 XML 格式的 HTML。<br /><br /> 这些关键字等效于用于反射提供程序的 <xref:System.Data.Services.Common.SyndicationTextContentKind> 枚举的值。<br /><br /> 如果使用了 `FC_NsPrefix` 和 `FC_NsUri` 特性，则不支持此特性。<br /><br /> 为 `xhtml` 特性指定值 `FC_ContentKind` 时，必须确保该属性值包含格式正确的 XML。 数据服务返回值，但不执行任何转换。 还必须确保返回的 XML 中任何 XML 元素前缀在映射的源中定义了命名空间 URI 和前缀。|  
 |`FC_KeepInContent`|指示是否应将引用的属性值包含到源的内容部分和映射的位置中。 有效值为 `true` 和 `false`。 若要使结果源与早期版本的向后兼容[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，将值指定为`true`以确保将该值包含源的内容部分中。|  
 |`FC_NsPrefix`|非联合映射中的 XML 元素的命名空间前缀。 此特性必须与 `FC_NsUri` 特性一起使用，但不能与 `FC_ContentKind` 特性一起使用。|  
 |`FC_NsUri`|非联合映射中的 XML 元素的命名空间 URI。 此特性必须与 `FC_NsPrefix` 特性一起使用，但不能与 `FC_ContentKind` 特性一起使用。|  
-|`FC_SourcePath`|应用此源映射规则的实体属性的路径。 仅当在 `EntityType` 元素中使用时，才支持此特性。<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 属性无法直接引用复杂类型。 对于复杂类型，必须使用路径表达式，在此路径表达式中，使用反斜杠 (`/`) 字符分隔属性名称。 例如，针对某个实体类型允许以下值`Person`具有整数属性`Age`和复杂属性<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> 不能将 <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 属性设置为包含空格或在属性名称中无效的任何其他字符的值。|  
-|`FC_TargetPath`|属性将映射到的结果源中的目标元素的名称。 此元素可以是按 Atom 规范定义的元素，也可以是自定义元素。<br /><br /> 以下关键字是指向 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源中特定位置的预定义联合目标路径值。<br /><br /> `SyndicationAuthorEmail:` `atom:email` 元素的 `atom:author` 子元素。<br /><br /> `SyndicationAuthorName:` `atom:name` 元素的 `atom:author` 子元素。<br /><br /> `SyndicationAuthorUri:` `atom:uri` 元素的 `atom:author` 子元素。<br /><br /> `SyndicationContributorEmail:` `atom:email` 元素的 `atom:contributor` 子元素。<br /><br /> `SyndicationContributorName:` `atom:name` 元素的 `atom:contributor` 子元素。<br /><br /> `SyndicationContributorUri:` `atom:uri` 元素的 `atom:contributor` 子元素。<br /><br /> `SyndicationCustomProperty:` 自定义属性元素。 映射到自定义元素时，目标必须是路径表达式，在此路径表达式中，使用反斜杠 (`/`) 分隔嵌套元素，并使用 `@` 指定特性。 在以下示例中，字符串 `UnitsInStock/@ReorderLevel` 将属性值映射到根项元素的 `ReorderLevel` 子元素上的 `UnitsInStock` 特性。<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> 如果目标是自定义元素名称，还必须指定 `FC_NsPrefix` 和 `FC_NsUri` 特性。<br /><br /> `SyndicationPublished:` `atom:published` 元素。<br /><br /> `SyndicationRights:` `atom:rights` 元素。<br /><br /> `SyndicationSummary:` `atom:summary` 元素。<br /><br /> `SyndicationTitle:` `atom:title` 元素。<br /><br /> `SyndicationUpdated:` `atom:updated` 元素。<br /><br /> 这些关键字等效于用于反射提供程序的 <xref:System.Data.Services.Common.SyndicationItemProperty> 枚举的值。|  
+|`FC_SourcePath`|应用此源映射规则的实体属性的路径。 仅当在 `EntityType` 元素中使用时，才支持此特性。<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 属性无法直接引用复杂类型。 对于复杂类型，必须使用路径表达式，在此路径表达式中，使用反斜杠 (`/`) 字符分隔属性名称。 例如，针对某个实体类型允许以下值`Person`具有整数属性`Age`和复杂属性<br /><br /> `Address`：<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> 不能将 <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 属性设置为包含空格或在属性名称中无效的任何其他字符的值。|  
+|`FC_TargetPath`|属性将映射到的结果源中的目标元素的名称。 此元素可以是按 Atom 规范定义的元素，也可以是自定义元素。<br /><br /> 以下关键字是指向 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源中特定位置的预定义联合目标路径值。<br /><br /> `SyndicationAuthorEmail:` `atom:email`的子元素`atom:author`元素。<br /><br /> `SyndicationAuthorName:` `atom:name`的子元素`atom:author`元素。<br /><br /> `SyndicationAuthorUri:` `atom:uri`的子元素`atom:author`元素。<br /><br /> `SyndicationContributorEmail:` `atom:email`的子元素`atom:contributor`元素。<br /><br /> `SyndicationContributorName:` `atom:name`的子元素`atom:contributor`元素。<br /><br /> `SyndicationContributorUri:` `atom:uri`的子元素`atom:contributor`元素。<br /><br /> `SyndicationCustomProperty:` 自定义属性元素。 映射到自定义元素时，目标必须是路径表达式，在此路径表达式中，使用反斜杠 (`/`) 分隔嵌套元素，并使用 `@` 指定特性。 在以下示例中，字符串 `UnitsInStock/@ReorderLevel` 将属性值映射到根项元素的 `ReorderLevel` 子元素上的 `UnitsInStock` 特性。<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> 如果目标是自定义元素名称，还必须指定 `FC_NsPrefix` 和 `FC_NsUri` 特性。<br /><br /> `SyndicationPublished:` `atom:published`元素。<br /><br /> `SyndicationRights:` `atom:rights`元素。<br /><br /> `SyndicationSummary:` `atom:summary`元素。<br /><br /> `SyndicationTitle:` `atom:title`元素。<br /><br /> `SyndicationUpdated:` `atom:updated`元素。<br /><br /> 这些关键字等效于用于反射提供程序的 <xref:System.Data.Services.Common.SyndicationItemProperty> 枚举的值。|  
   
 > [!NOTE]
 >  特性名称和值是区分大小写的。 特性可以应用于 `EntityType` 元素，也可以应用于一个或多个 `Property` 元素，但不能同时应用于二者。  
@@ -65,12 +65,12 @@ ms.locfileid: "59189074"
 > [!NOTE]
 >  主题中定义此示例中的数据模型[如何：创建数据服务使用反射提供程序](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)。  
   
- [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria custom feeds/cs/orderitems.svc.cs#customorderfeed)]
- [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria custom feeds/vb/orderitems.svc.vb#customorderfeed)]  
+ [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_custom_feeds/cs/orderitems.svc.cs#customorderfeed)]
+ [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_custom_feeds/vb/orderitems.svc.vb#customorderfeed)]  
   
  这些特性为 `Orders` 实体集生成以下自定义数据源。 在此自定义源中，`OrderId`属性值仅显示在`title`的元素`entry`并`Customer`属性值则同时显示在`author`元素以及`Customer`属性元素：  
   
- [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
+ [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
  有关详细信息，请参阅[如何：使用反射提供程序自定义源](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md)。  
   

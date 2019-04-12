@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
-ms.openlocfilehash: 77dbeba89b352fa470ab0523a830db9175a1a21a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: edc150d118153849dd84eb40f1443d842c7d346d
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122897"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517810"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>如何：启用分页的数据服务结果 （WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以限制由数据服务查询返回的实体数。 页限制在初始化服务时调用的方法中定义，并可为每个实体集单独设置页限制。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使您能够限制由数据服务查询返回的实体数。 页限制在初始化服务时调用的方法中定义，并可为每个实体集单独设置页限制。  
   
  启用分页后，源中的最后一项包含指向下一页数据的链接。 有关详细信息，请参阅[数据服务配置](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)。  
   
@@ -25,8 +25,8 @@ ms.locfileid: "59122897"
   
 -   在数据服务的代码中，用下列代码替换 `InitializeService` 函数中的占位符代码：  
   
-     [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind.svc.cs#dataserviceconfigpaging)]
-     [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
+     [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind.svc.cs#dataserviceconfigpaging)]
+     [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
   
 ## <a name="see-also"></a>请参阅
 

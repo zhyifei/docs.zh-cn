@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: 88e9b20f3ecefbd39789dfbc942af3938a9a2117
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: fc738f7e81c02e44075ce5ed151ed42452650c94
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59326393"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518118"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>如何：定义服务操作 （WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 公开在服务器作为服务操作定义的方法。 服务操作允许数据服务以提供通过在服务器上定义的方法的 URI 的访问权限。 若要定义服务操作，应用 [`WebGet]`或`[WebInvoke]`属性为该方法。 若要支持查询运算符，服务操作必须返回<xref:System.Linq.IQueryable%601>实例。 服务操作可以通过 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601> 属性访问基础数据源。 有关详细信息，请参阅[服务操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 公开在服务器上作为服务操作定义的方法。 服务操作允许数据服务以提供通过在服务器上定义的方法的 URI 的访问权限。 若要定义服务操作，应用 [`WebGet]`或`[WebInvoke]`属性为该方法。 若要支持查询运算符，服务操作必须返回<xref:System.Linq.IQueryable%601>实例。 服务操作可以通过 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601> 属性访问基础数据源。 有关详细信息，请参阅[服务操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。  
   
  本主题中的示例定义一个名为 `GetOrdersByCity` 的服务操作，该操作返回 <xref:System.Linq.IQueryable%601> 和相关 `Orders` 对象的经筛选后的 `Order_Details` 实例。 该示例访问作为 Northwind 示例数据服务数据源的 <xref:System.Data.Objects.ObjectContext> 实例。 此服务创建完成后[WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
   
@@ -26,13 +26,13 @@ ms.locfileid: "59326393"
   
 2. 在 `Northwind` 类中，定义一个名为 `GetOrdersByCity` 的服务操作方法，如下所示：  
   
-     [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
-     [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
+     [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
+     [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
 3. 在 `InitializeService` 类的 `Northwind` 方法中，添加以下代码以支持对服务操作的访问：  
   
-     [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationconfig)]
-     [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationconfig)]  
+     [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationconfig)]
+     [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationconfig)]  
   
 ### <a name="to-query-the-getordersbycity-service-operation"></a>查询 GetOrdersByCity 服务操作  
   
@@ -50,9 +50,9 @@ ms.locfileid: "59326393"
 > [!NOTE]
 >  由于此方法返回了一个 <xref:System.Linq.IQueryable%601> 实例，因此该服务操作终结点支持查询运算符。  
   
- [!code-csharp[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperation)]
- [!code-vb[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperation)]  
+ [!code-csharp[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperation)]
+ [!code-vb[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperation)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [定义 WCF 数据服务](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

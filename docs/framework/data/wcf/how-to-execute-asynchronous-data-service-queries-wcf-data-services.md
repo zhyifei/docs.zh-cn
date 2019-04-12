@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: 4aef253ebb54fb92a0c3b2b661404ac373979e56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f89a5004afeffe5aa9a28cb2d43374aede8a935e
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163548"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518157"
 ---
 # <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>如何：执行异步数据服务查询 （WCF 数据服务）
 通过使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端库，可以采用异步方式执行客户端-服务器操作，如执行查询和保存更改。 有关详细信息，请参阅[异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。  
@@ -26,9 +26,9 @@ ms.locfileid: "59163548"
 ## <a name="example"></a>示例  
  下面的示例显示如何通过调用 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 方法以启动查询来执行异步查询。 内联委托调用 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法以显示查询结果。  
   
- [!code-csharp[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#executequeryasync)]
- [!code-vb[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#executequeryasync)]  
+ [!code-csharp[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#executequeryasync)]
+ [!code-vb[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#executequeryasync)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [WCF 数据服务客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
