@@ -2,12 +2,12 @@
 title: F#代码格式设置准则
 description: 了解有关格式设置准则F#代码。
 ms.date: 02/08/2019
-ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 0a72f96119181650837657afea6ca9d555ce9e5a
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093614"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553857"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#代码格式设置准则
 
@@ -74,7 +74,7 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-对于任何自定义的运算符开头`*`，将需要添加到的要避免编译器不明确的定义开头的空白区域。 因此，建议您只需括起来的单个空白字符的所有运算符的定义。
+对于任何自定义的运算符开头`*`和具有多个字符，您需要添加到的要避免编译器不明确的定义开头的空白区域。 因此，我们建议你只需括起来的单个空白字符的所有运算符的定义。
 
 ### <a name="surround-function-parameter-arrows-with-white-space"></a>环绕含空白区域的函数参数箭头
 
