@@ -4,12 +4,12 @@ description: 了解包、元包和框架的术语。
 author: richlander
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 25247972346fb181279414a762d73d2f3218f0e0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090493"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>包、元包和框架
 
@@ -97,7 +97,6 @@ ms.locfileid: "53168814"
 框架和包之间是一种双向关系。 首先是为一个给定的框架定义了 API，例如 `netstandard1.3`。 以 `netstandard1.3` 为目标的包（或兼容的框架，如 `netstandard1.0`）定义了适用于 `netstandard1.3` 的 API。 听起来像是循环定义，然而并不是。 从“基于包的”这个词本身的角度来讲，框架的 API 定义是来自于包的。 框架本身并不定义任何 API。
 
 其次，是这个双向关系中的资产选择。 包可以包含多个框架的资产。 对于一组包和/或元包的引用，框架需要决定它应选择哪些资产，例如，是 `net46` 还是 `netstandard1.3`。 选择正确的资产很重要。 例如，`net46` 资产可能并不与 .NET Framework 4.0 或 .NET Core 1.0 兼容。
-
 
 可以在下图中看到这种关系。 *API* 选择框架作为目标并定义了框架。 而*框架*用于*资产选择*。 *资产*实现了 API。
 
