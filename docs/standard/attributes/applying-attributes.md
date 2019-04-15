@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836469"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337690"
 ---
 # <a name="applying-attributes"></a>应用特性
 使用以下过程将特性应用于代码的元素。  
   
-1.  定义新特性，或通过从 .NET Framework 导入现有特性的命名空间来使用现有特性。  
+1. 定义新特性，或通过从 .NET Framework 导入现有特性的命名空间来使用现有特性。  
   
-2.  通过将特性置于紧邻元素之前，将该特性应用于代码元素。  
+2. 通过将特性置于紧邻元素之前，将该特性应用于代码元素。  
   
      每种语言都有其自己的特性语法。 在 C++ 和 C# 中，特性是用方括号括起来的，并通过空格与元素分开（可能包括换行符）。 在 Visual Basic 中，特性是用尖括号括起来的，且必须位于同一逻辑线上；如果需要换行符，可使用行继续字符。
   
-3.  指定特性的位置参数和命名参数。  
+3. 指定特性的位置参数和命名参数。  
   
      位置参数是必需的，且必须位于所有命名参数之前；它们对应于特性的其中一个构造函数的参数。 命名参数是可选的且对应于特性的读/写属性。 在 C++ 和 C# 中，为每个可选参数指定 `name`=`value`，其中 `name` 是属性名。 在 Visual Basic 中，指定 `name`:=`value`。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text files [Visual Basic], tasks
 - text files [Visual Basic], reading
 ms.assetid: 99be5692-967a-4e85-993e-cd18139a5a69
-ms.openlocfilehash: 4d6019bd9f39a6ae8db4b8c580db4c5ec9d4d4b8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: de60bbe111de151ac358c1b1c00a14dee225447d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816208"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344060"
 ---
 # <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>如何：在 Visual Basic 中读取定宽文本文件
 `TextFieldParser` 对象提供一种可以轻松而高效地分析结构化文本文件（如日志）的方法。  
@@ -22,19 +22,19 @@ ms.locfileid: "58816208"
   
 ### <a name="to-parse-a-fixed-width-text-file"></a>分析定宽文本文件  
   
-1.  创建一个新的 `TextFieldParser`。 下面的代码创建名为 `Reader` 的 `TextFieldParser`，并打开 `test.log` 文件。  
+1. 创建一个新的 `TextFieldParser`。 下面的代码创建名为 `Reader` 的 `TextFieldParser`，并打开 `test.log` 文件。  
   
      [!code-vb[VbFileIORead#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#9)]  
   
-2.  将 `TextFieldType` 属性定义为 `FixedWidth`（定义宽度和格式）。 下面的代码定义文本的各列；第一列宽度为 5 个字符，第二列宽度为 10 个字符，第三列宽度为 11 个字符，而第四列宽度可变。  
+2. 将 `TextFieldType` 属性定义为 `FixedWidth`（定义宽度和格式）。 下面的代码定义文本的各列；第一列宽度为 5 个字符，第二列宽度为 10 个字符，第三列宽度为 11 个字符，而第四列宽度可变。  
   
      [!code-vb[VbFileIORead#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#10)]  
   
-3.  循环访问文件中的各个字段。 如果有任何行损坏，则报告错误，然后继续分析。  
+3. 循环访问文件中的各个字段。 如果有任何行损坏，则报告错误，然后继续分析。  
   
      [!code-vb[VbFileIORead#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#11)]  
   
-4.  用 `End While` 和 `End Using` 结束 `While` 和 `Using` 块。  
+4. 用 `End While` 和 `End Using` 结束 `While` 和 `Using` 块。  
   
      [!code-vb[VbFileIORead#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#12)]  
   
@@ -63,4 +63,4 @@ ms.locfileid: "58816208"
 - [如何：读取具有多种格式的文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [使用 TextFieldParser 对象分析文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
 - [演练：在 Visual Basic 中操作文件和目录](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
-- [排除故障：读取和写入文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [疑难解答：读取和写入文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

@@ -5,19 +5,19 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835176"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336130"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>移除 DOM 中元素节点的属性
 有多种方法可以移除属性。 一种方法是从属性集合中移除它们。 为此，请执行下列步骤：  
   
-1.  使用 `XmlAttributeCollection attrs = elem.Attributes;` 获取元素的属性集合。  
+1. 使用 `XmlAttributeCollection attrs = elem.Attributes;` 获取元素的属性集合。  
   
-2.  使用以下三种方法之一移除属性集合中的属性：  
+2. 使用以下三种方法之一移除属性集合中的属性：  
   
     -   使用 <xref:System.Xml.XmlAttributeCollection.Remove%2A> 移除特定的属性。  
   

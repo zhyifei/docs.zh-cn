@@ -1,6 +1,6 @@
 ---
 title: 教程：创建 Windows 服务应用
-ms.date: 03/14/2019
+ms.date: 03/27/2019
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 786b9e28607cced0a15793415ff5fd470b559374
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262488"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518027"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>教程：创建 Windows 服务应用
 
@@ -59,7 +59,6 @@ ms.locfileid: "58262488"
 
 3. 从“文件”菜单中选择“全部保存”。
 
-
 ## <a name="add-features-to-the-service"></a>向服务添加功能
 
 在本节中，你会添加自定义事件日志到 Windows 服务。 <xref:System.Diagnostics.EventLog> 组件是可以添加到 Windows 服务的组件类型的示例。
@@ -74,21 +73,7 @@ ms.locfileid: "58262488"
 
 4. 定义自定义事件日志。 对于 C#，编辑现有的 `MyNewService()` 构造函数；对于 Visual Basic，添加 `New()` 构造函数：
 
-   ```csharp
-   public MyNewService()
-   {
-        InitializeComponent();
-
-        eventLog1 = new EventLog();
-        if (!EventLog.SourceExists("MySource"))
-        {
-            EventLog.CreateEventSource("MySource", "MyNewLog");
-        }
-        eventLog1.Source = "MySource";
-        eventLog1.Log = "MyNewLog";
-    }
-   ```
-
+   [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#2)]
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
 5. 将 `using` 语句添加到“MyNewService.cs”（如果它尚不存在）或者，对于 <xref:System.Diagnostics?displayProperty=nameWithType> 命名空间，将 `Imports` 语句添加到“MyNewService.vb”：
@@ -141,7 +126,6 @@ ms.locfileid: "58262488"
 
 2. 将 `using` 语句添加到“MyNewService.cs”，或者，对于 <xref:System.Timers?displayProperty=nameWithType> 命名空间，将 `Imports` 语句添加到“MyNewService.vb”：
 
-
    ```csharp
    using System.Timers;
    ```
@@ -149,7 +133,6 @@ ms.locfileid: "58262488"
    ```vb
    Imports System.Timers
    ```
-
 
 3. 在 `MyNewService` 类中，添加 `OnTimer` 方法来处理 <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> 事件：
 
@@ -185,10 +168,7 @@ ms.locfileid: "58262488"
 
 向 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法插入代码行，以在服务停止时向事件日志添加一个条目：
 
-```csharp
-eventLog1.WriteEntry("In OnStop.");
-```
-
+[!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#4)]
 [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]
 
 ### <a name="define-other-actions-for-the-service"></a>定义服务的其他操作
@@ -200,13 +180,11 @@ eventLog1.WriteEntry("In OnStop.");
 [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
 [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]
 
-
 ## <a name="set-service-status"></a>设置服务状态
 
 服务向[服务控制管理器](/windows/desktop/Services/service-control-manager)报告其状态，以便用户可以判断服务是否运行正常。 默认情况下，从 <xref:System.ServiceProcess.ServiceBase> 继承的服务会报告一组有限的状态设置，包括 SERVICE_STOPPED、SERVICE_PAUSED 和 SERVICE_RUNNING。 如果服务需要一段时间才能启动，则报告 SERVICE_START_PENDING 状态非常有用。 
 
 可以通过添加调用 Windows [ SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 函数的代码来实现 SERVICE_START_PENDING 和 SERVICE_STOP_PENDING 状态设置。
-
 
 ### <a name="implement-service-pending-status"></a>实现服务挂起状态
 
@@ -269,6 +247,9 @@ eventLog1.WriteEntry("In OnStop.");
         Public dwWaitHint As Long
     End Structure
     ```
+
+    > [!NOTE]
+    > 服务控制管理器使用 [SERVICE_STATUS 结构](/windows/desktop/api/winsvc/ns-winsvc-_service_status)的 `dwWaitHint` 和 `dwCheckpoint` 成员来确定等待 Windows 服务启动或关闭所需的时间。 如果 `OnStart` 和 `OnStop` 方法运行时间较长，服务可以使用递增的 `dwCheckPoint` 值再次调用 `SetServiceStatus` 来请求更多时间。
 
 3. 在 `MyNewService` 类中，使用[平台调用](../interop/consuming-unmanaged-dll-functions.md)声明 [SetServiceStatus 函数](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)：
 
@@ -341,9 +322,6 @@ eventLog1.WriteEntry("In OnStop.");
     SetServiceStatus(Me.ServiceHandle, serviceStatus)    
     ```
 
-> [!NOTE]
-> 服务控制管理器使用 [SERVICE_STATUS 结构](/windows/desktop/api/winsvc/ns-winsvc-_service_status)的 `dwWaitHint` 和 `dwCheckpoint` 成员来确定等待 Windows 服务启动或关闭所需的时间。 如果 `OnStart` 和 `OnStop` 方法运行时间较长，服务可以使用递增的 `dwCheckPoint` 值再次调用 `SetServiceStatus` 来请求更多时间。
-
 ## <a name="add-installers-to-the-service"></a>向服务添加安装程序
 
 需要先安装 Windows 服务然后才能运行，这会将其注册到服务控制管理器。 将安装程序添加到项目以处理注册详细信息。
@@ -396,24 +374,8 @@ Windows 服务可以接受命令行参数或启动参数。 将代码添加到�
 
 1. 选择“Program.cs”或“MyNewService.Designer.vb”，然后从快捷菜单中选择“查看代码”。 在 `Main` 方法中，更改代码以添加输入参数并将其传递给服务构造函数：
 
-   ```csharp
-   static void Main(string[] args)
-   {
-       ServiceBase[] ServicesToRun;
-       ServicesToRun = new ServiceBase[]
-       {
-           new MyNewService(args)
-       };
-       ServiceBase.Run(ServicesToRun);
-   }
-   ```
-
-   ```vb
-   Shared Sub Main(ByVal cmdArgs() As String)
-       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewService(cmdArgs)}
-       System.ServiceProcess.ServiceBase.Run(ServicesToRun)
-   End Sub
-   ```
+   [!code-csharp[VbRadconService](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/Program-add-parameter.cs?highlight=1,6)]
+   [!code-vb[VbRadconService](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.Designer-add-parameter.vb?highlight=1-2)]
 
 2. 在“MyNewService.cs”或“MyNewService.vb”中，更改 `MyNewService` 构造函数以处理输入参数，如下所示：
 
@@ -494,7 +456,6 @@ Windows 服务可以接受命令行参数或启动参数。 将代码添加到�
 
    通常，此值包含 Windows 服务的可执行文件的完整路径。 要使服务正确启动，用户必须为路径和每个参数提供引号。 用户可以更改“ImagePath”注册表项中的参数，以更改 Windows 服务的启动参数。 但是，更好的方法是以编程方式更改值，并以用户友好的方式公开功能，例如使用管理或配置实用程序。
 
-
 ## <a name="build-the-service"></a>生成服务
 
 1. 在“解决方案资源管理器”中，从“MyNewService”项目的快捷菜单中选择“属性”。
@@ -561,7 +522,7 @@ Windows 服务可以接受命令行参数或启动参数。 将代码添加到�
 
 如果不再需要 Windows 服务应用，则可以将其删除。 
 
-1. 使用管理凭据打开“Visual Studio 开发人员命令提示”。
+1. 使用管理凭据打开 **“Visual Studio 开发人员命令提示”**。
 
 2. 在“Visual Studio 的开发人员命令提示”窗口中，导航到包含项目输出的文件夹。
 

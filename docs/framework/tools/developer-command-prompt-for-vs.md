@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e648cdadb567919d320ea8a12d30b7be306e67a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: cc88106a54a00b4b12e5043da7961791a98102c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221227"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344359"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 开发人员命令提示
 
 Visual Studio 的开发人员命令提示符使你可以更轻松地使用 .NET Framework 工具。 它是一个自动设置特定环境变量的命令提示符。
 
 > [!div class="button"]
-> [下载 Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+> [下载 Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
 
 ## <a name="search-for-the-command-prompt-on-your-machine"></a>在计算机中搜索命令提示符
 

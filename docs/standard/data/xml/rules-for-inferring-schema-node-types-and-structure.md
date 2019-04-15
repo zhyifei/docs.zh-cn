@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683659"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338704"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>推断架构节点类型和结构的规则
 本主题介绍架构推断过程如何将 XML 文档中的节点类型转换为 XML 架构定义语言 (XSD) 结构。  
@@ -18,21 +18,21 @@ ms.locfileid: "54683659"
 ## <a name="element-inference-rules"></a>元素推断规则  
  本节说明元素声明的推断规则。 其中将推断八种元素声明结构：  
   
-1.  简单类型的元素  
+1. 简单类型的元素  
   
-2.  空元素  
+2. 空元素  
   
-3.  具有属性的空元素  
+3. 具有属性的空元素  
   
-4.  具有属性和简单内容的元素  
+4. 具有属性和简单内容的元素  
   
-5.  具有一系列子元素的元素  
+5. 具有一系列子元素的元素  
   
-6.  具有一系列子元素和属性的元素  
+6. 具有一系列子元素和属性的元素  
   
-7.  具有一系列子元素选择的元素  
+7. 具有一系列子元素选择的元素  
   
-8.  具有一系列子元素和属性选择的元素  
+8. 具有一系列子元素和属性选择的元素  
   
 > [!NOTE]
 >  所有 `complexType` 声明均推断为匿名类型。 唯一推断的全局元素是根元素；所有其他元素都是局部元素。  

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dff5dca159b3e714a027bd2d2ebe86d2b414dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625999"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343566"
 ---
 # <a name="including-or-importing-xml-schemas"></a>包含或导入 XML 架构
 XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 元素。 这些架构元素引用其他 XML 架构，可以用于补充包括或导入这些架构的架构的结构。 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 类映射到架构对象模型 (SOM) API 中的这些元素。  
@@ -26,15 +26,15 @@ XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 
   
  代码示例通过下列步骤包括客户架构。  
   
-1.  将客户架构和地址架构添加到新的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并进行编译。 _在读取或编译架构时遇到的任何架构验证警告和错误由 <xref:System.Xml.Schema.ValidationEventHandler> 委托进行处理。  
+1. 将客户架构和地址架构添加到新的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并进行编译。 _在读取或编译架构时遇到的任何架构验证警告和错误由 <xref:System.Xml.Schema.ValidationEventHandler> 委托进行处理。  
   
-2.  通过循环访问 <xref:System.Xml.Schema.XmlSchema> 属性，从 <xref:System.Xml.Schema.XmlSchemaSet> 中为客户架构和地址架构检索已编译的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 对象。 因为架构已编译，所以，可以访问后架构编译信息集 (PSCI) 属性。  
+2. 通过循环访问 <xref:System.Xml.Schema.XmlSchema> 属性，从 <xref:System.Xml.Schema.XmlSchemaSet> 中为客户架构和地址架构检索已编译的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 对象。 因为架构已编译，所以，可以访问后架构编译信息集 (PSCI) 属性。  
   
-3.  创建一个 <xref:System.Xml.Schema.XmlSchemaImport> 对象，将导入的 <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> 属性设置为地址架构的命名空间，将导入的 <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> 属性设置为地址架构的 <xref:System.Xml.Schema.XmlSchema> 对象，并将导入添加到客户架构的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 属性中。  
+3. 创建一个 <xref:System.Xml.Schema.XmlSchemaImport> 对象，将导入的 <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> 属性设置为地址架构的命名空间，将导入的 <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> 属性设置为地址架构的 <xref:System.Xml.Schema.XmlSchema> 对象，并将导入添加到客户架构的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 属性中。  
   
-4.  使用 <xref:System.Xml.Schema.XmlSchema> 类的 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 和 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法重新处理并编译已修改的客户架构的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并将其写入控制台。  
+4. 使用 <xref:System.Xml.Schema.XmlSchema> 类的 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 和 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法重新处理并编译已修改的客户架构的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并将其写入控制台。  
   
-5.  最后，使用客户架构的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 方法递归式将导入到客户架构的所有架构写入控制台。 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 属性提供对所有添加到架构中的包括、导入或重新定义的访问。  
+5. 最后，使用客户架构的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 方法递归式将导入到客户架构的所有架构写入控制台。 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 属性提供对所有添加到架构中的包括、导入或重新定义的访问。  
   
  以下是完整的代码示例以及写入控制台的客户架构和地址架构。  
   
@@ -102,7 +102,7 @@ XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 
 ## <a name="see-also"></a>请参阅
 
 - [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [读写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)

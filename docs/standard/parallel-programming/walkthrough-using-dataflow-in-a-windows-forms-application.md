@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6d27500332c59f24e121c9c15ac27a36ed93d07
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: fd75bd14b2393d9b316d90070894f214dfa60c88
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465797"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344372"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>演练：在 Windows 窗体应用程序中使用数据流
 本文档演示如何创建在 Windows 窗体应用程序中执行图像处理的数据流块网络。  
@@ -43,15 +43,15 @@ ms.locfileid: "58465797"
   
 #### <a name="to-create-the-windows-forms-application"></a>创建 Windows 窗体应用程序  
   
-1.  在 Visual Studio 中，创建 Visual C# 或 Visual Basic“Windows 窗体应用程序”项目。 在本文档中，该项目名为 `CompositeImages`。  
+1. 在 Visual Studio 中，创建 Visual C# 或 Visual Basic“Windows 窗体应用程序”项目。 在本文档中，该项目名为 `CompositeImages`。  
   
-2.  在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic，则为 Form1.vb）添加了 <xref:System.Windows.Forms.ToolStrip> 控件。  
+2. 在主窗体的窗体设计器中，Form1.cs（对于 Visual Basic，则为 Form1.vb）添加了 <xref:System.Windows.Forms.ToolStrip> 控件。  
   
-3.  向 <xref:System.Windows.Forms.ToolStrip> 控件添加 <xref:System.Windows.Forms.ToolStripButton> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，并将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“Choose Folder”。  
+3. 向 <xref:System.Windows.Forms.ToolStrip> 控件添加 <xref:System.Windows.Forms.ToolStripButton> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，并将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“Choose Folder”。  
   
-4.  向 <xref:System.Windows.Forms.ToolStrip> 控件再添加一个 <xref:System.Windows.Forms.ToolStripButton> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“Cancel”，并将 <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> 属性设置为 `False`。  
+4. 向 <xref:System.Windows.Forms.ToolStrip> 控件再添加一个 <xref:System.Windows.Forms.ToolStripButton> 控件。 将 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 属性设置为 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，将 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为“Cancel”，并将 <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> 属性设置为 `False`。  
   
-5.  向主窗体添加 <xref:System.Windows.Forms.PictureBox> 对象。 将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。  
+5. 向主窗体添加 <xref:System.Windows.Forms.PictureBox> 对象。 将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
 <a name="network"></a>   
 ## <a name="creating-the-dataflow-network"></a>创建数据流网络  
@@ -59,25 +59,25 @@ ms.locfileid: "58465797"
   
 #### <a name="to-create-the-dataflow-network"></a>创建数据流网络  
   
-1.  向项目中添加对 System.Threading.Tasks.Dataflow.dll 的引用。  
+1. 向项目中添加对 System.Threading.Tasks.Dataflow.dll 的引用。  
   
-2.  确保 Form1.cs（对于 Visual Basic，则为 Form1.vb）包含以下 `using`（Visual Basic 中为 `Using`）语句：  
+2. 确保 Form1.cs（对于 Visual Basic，则为 Form1.vb）包含以下 `using`（Visual Basic 中为 `Using`）语句：  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
-3.  将以下数据成员添加到 `Form1` 类：  
+3. 将以下数据成员添加到 `Form1` 类：  
   
      [!code-csharp[TPLDataflow_CompositeImages#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#2)]  
   
-4.  将下面的 `CreateImageProcessingNetwork` 方法添加到 `Form1` 类。 此方法创建图像处理网络。  
+4. 将下面的 `CreateImageProcessingNetwork` 方法添加到 `Form1` 类。 此方法创建图像处理网络。  
   
      [!code-csharp[TPLDataflow_CompositeImages#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#3)]  
   
-5.  实现 `LoadBitmaps` 方法。  
+5. 实现 `LoadBitmaps` 方法。  
   
      [!code-csharp[TPLDataflow_CompositeImages#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#4)]  
   
-6.  实现 `CreateCompositeBitmap` 方法。  
+6. 实现 `CreateCompositeBitmap` 方法。  
   
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
@@ -109,15 +109,15 @@ ms.locfileid: "58465797"
   
 #### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>将数据流网络连接到用户界面  
   
-1.  在主窗体的窗体设计器中，创建“选择文件夹”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
+1. 在主窗体的窗体设计器中，创建“选择文件夹”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
   
-2.  实现“选择文件夹”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
+2. 实现“选择文件夹”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
   
      [!code-csharp[TPLDataflow_CompositeImages#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#6)]  
   
-3.  在主窗体的窗体设计器中，创建“取消”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
+3. 在主窗体的窗体设计器中，创建“取消”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件的事件处理程序。  
   
-4.  实现“取消”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
+4. 实现“取消”按钮的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
