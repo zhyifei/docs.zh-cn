@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1939666b3dd271959c418e3d714b177e170fcd04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176249"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework 中的应用程序兼容性
 
@@ -74,9 +74,8 @@ ms.locfileid: "54595976"
 * [重定目标更改](./retargeting/index.md)
 * [运行时更改](./runtime/index.md)
 
-
 ## <a name="see-also"></a>请参阅
 
 - [版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)
 - [新增功能](../../../docs/framework/whats-new/index.md)
-- [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)
+- [类型库中的已过时功能](../../../docs/framework/whats-new/whats-obsolete.md)

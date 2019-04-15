@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: 33f7971a95b8573168da11d2bd2abc80fa74370e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b87e75bd4866a191e84465e44d53850e6e2e9723
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169918"
 ---
 # <a name="as-c-reference"></a>as（C# 参考）
 可以使用 `as` 运算符在符合的引用类型或[可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)之间执行某些类型的转换。 以下代码显示一个示例。  
@@ -47,6 +47,7 @@ expression is type ? (type)expression : (type)null
 有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的 [As 运算符](~/_csharplang/spec/expressions.md#the-as-operator)。 该语言规范是 C# 语法和用法的权威资料。
  
 ## <a name="see-also"></a>请参阅
+
 - [C# 参考](../../../csharp/language-reference/index.md)
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [C# 关键字](../../../csharp/language-reference/keywords/index.md)

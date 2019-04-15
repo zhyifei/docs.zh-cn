@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881af41828425914c7644d04e07918ac6b97f06
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 075396ae070be5312fa7afe29e8bdf5fa81a3817
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185413"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中的过时成员
 
@@ -800,5 +800,6 @@ ms.locfileid: "58921333"
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` 注册表项仅适用于 Win9x，在此版本的.NET Framework 中不受支持。 改用 `PerformanceData` 注册表项。 此属性将从 Framework 的未来版本中移除。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [类型库中的已过时功能](whats-obsolete.md)
 - [过时类型](obsolete-types.md)

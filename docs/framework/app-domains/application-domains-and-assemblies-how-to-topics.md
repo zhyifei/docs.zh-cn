@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 500ed62c20036eb3cb78952504fbb0ff0f0c11dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1610322e33be81a109dec1cd1d189544a33b17d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095512"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>应用程序域和程序集帮助主题
 以下各节包含使用应用程序域和程序集进行编程的相关概念性文档中的所有操作说明主题链接。  
@@ -35,7 +35,7 @@ ms.locfileid: "54636594"
   
 -   [如何：生成单文件程序集](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
   
--   [如何：生成单文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+-   [如何：生成多文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
   
 -   [如何：创建公钥/私钥对](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
   
@@ -54,4 +54,5 @@ ms.locfileid: "54636594"
 -   [如何：查看程序集内容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
 ## <a name="see-also"></a>请参阅
+
 - [应用程序域和程序集](../../../docs/framework/app-domains/index.md)

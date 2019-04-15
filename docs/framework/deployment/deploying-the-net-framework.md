@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2eb1898f03a52306a8a2763059cf198208b7b88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 096c818c1103835110478953d0a0d9082b33569e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180656"
 ---
 # <a name="deploying-the-net-framework"></a>部署 .NET Framework
 本部分 .NET Framework 文档所提供的信息适用于安装应用程序的同时想一并安装 .NET Framework 的开发人员，以及想在网络中部署 .NET Framework 的管理员。 本文还讨论与部署相关的激活和重启问题，并介绍如何监视 .NET Framework 安装的进度。  
@@ -24,7 +24,7 @@ ms.locfileid: "54551834"
  [面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)  
  说明系统管理员如何通过系统中心配置管理器 (SCCM) 跨网络部署 .NET Framework 及其系统依赖项。  
   
- [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)  
+ [在 .NET Framework 4.5 安装期间减少系统重新启动](../../../docs/framework/deployment/reducing-system-restarts.md)  
  描述在任何可能的情况下可以阻止重启的 Restart Manager，并说明安装 .NET Framework 的应用程序如何利用它。  
   
  [如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
@@ -37,4 +37,5 @@ ms.locfileid: "54551834"
  介绍如何查看和调试 CLR 激活日志，解决使用正确版本的 CLR 运行应用程序时可能遇到的问题。  
   
 ## <a name="see-also"></a>请参阅
+
 - [开发指南](../../../docs/framework/development-guide.md)

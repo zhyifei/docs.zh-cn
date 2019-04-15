@@ -1,6 +1,6 @@
 ---
 title: namespace 关键字 - C# 参考
-ms.custom: seodec18
+ms.custom: seoapril2019
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b5c6b8081c188d5b184930222d54ad8f4b5d7a71
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148754"
 ---
 # <a name="namespace-c-reference"></a>命名空间（C# 参考）
 
@@ -30,13 +30,13 @@ ms.locfileid: "53242758"
 
 - [class](class.md)
 
-- [接口](interface.md)
+- [interface](interface.md)
 
 - [struct](struct.md)
 
 - [enum](enum.md)
 
-- [delegate](delegate.md)
+- [委托](delegate.md)
 
 无论是否在 C# 源文件中显式声明命名空间，编译器都会添加一个默认命名空间。 此未命名的命名空间（有时被称为全局命名空间）存在于每个文件中。 全局命名空间中的任何标识符都可用于已命名的命名空间。
 
@@ -72,4 +72,5 @@ ms.locfileid: "53242758"
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
 - [命名空间关键字](namespace-keywords.md)
-- [using](using.md)
+- [using](using-directive.md)
+- [using static](using-static.md)

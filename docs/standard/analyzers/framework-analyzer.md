@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 562d85d47791ca253655dd05a1c9a268767ba949
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197642"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework 分析器
 
@@ -114,7 +114,6 @@ public class MyItemType
 
 其他信息：[A3075：XML 中不安全的 DTD 处理](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-
 ### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350:请勿使用弱加密算法
 
 随着攻击越来越高级，加密算法会相对退化。 根据加密算法的类型和应用，其加密强度的进一步降低可能会使攻击者读取到加密消息、篡改加密消息、伪造数字签名、篡改经过哈希处理的内容或者破坏基于此算法的所有加密系统。 加密时，请使用 AES 算法（AES-256、AES-192 和 AES-128 都可以）并确保密钥长度大于或等于 128 位。 进行哈希处理时，请使用 SHA-2 系列中的哈希函数，例如 SHA-2 512、SHA-2 384 或 SHA-2 256。
@@ -134,5 +133,3 @@ public class MyItemType
 **严重性：** 警告
 
 其他信息：[CA5351:请勿使用损坏的加密算法](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
-
-

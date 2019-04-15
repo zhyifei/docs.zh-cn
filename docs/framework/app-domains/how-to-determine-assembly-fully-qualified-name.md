@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32beb648bed37281e798f51e6b4a316197c23845
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 60a4ef1f5bde121d5773925437307b2749aa7282
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283512"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097525"
 ---
 # <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>如何：确定程序集的完全限定名
 若要在全局程序集缓存中查找一个程序集的完全限定名，请使用全局程序集缓存工具 ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md))。 请参阅[如何：查看全局程序集缓存的内容](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)。  
@@ -43,6 +43,7 @@ ms.locfileid: "55283512"
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [程序集名称](../../../docs/framework/app-domains/assembly-names.md)
 - [创建程序集](../../../docs/framework/app-domains/create-assemblies.md)
 - [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

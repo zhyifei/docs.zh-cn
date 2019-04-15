@@ -10,12 +10,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 0ed97626d86b380565453191f7840c1d1a180dfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bb3ac545613da68d5f370fefbf94b674b70fe64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200943"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net 类的最佳实践
 以下建议有助于你充分利用 <xref:System.Net> 中包含的类：  
@@ -33,4 +33,5 @@ ms.locfileid: "54689073"
 -   若要访问需要凭据的站点，请使用 <xref:System.Net.CredentialCache> 类创建凭据缓存，而非为每个站点提供请求。 使用 CredentialCache 类可搜索缓存，查找符合请求的合适凭据，如此，你便无需基于 URL 创建和提供凭据。  
   
 ## <a name="see-also"></a>请参阅
+
 - [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)

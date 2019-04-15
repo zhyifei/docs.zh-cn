@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef5c9acab6fd8fa852b619eeeee150eb33b69507
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095095"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送处理不同类型的数组
 数组是包含有一个或多个相同类型的元素的托管代码中的引用类型。 尽管数组是引用类型，但它们却作为 In 参数传递到非托管函数。 此行为与托管数组传递到托管对象的方式不一致，数组作为 In/Out 参数进行传递。 有关其他详细信息，请参阅 [复制和锁定](copying-and-pinning.md)。  
@@ -115,5 +115,6 @@ typedef struct _MYPERSON
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [平台调用数据类型](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [在托管代码中创建原型](creating-prototypes-in-managed-code.md)

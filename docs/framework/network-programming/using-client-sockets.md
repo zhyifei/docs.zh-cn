@@ -16,12 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: 42cea87576ca4c5cbca685c6d71272649eabb844
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b99720b9653b8454419acd35085bfe9a7ac4b5af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562839"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171387"
 ---
 # <a name="using-client-sockets"></a>使用客户端套接字
 在通过 <xref:System.Net.Sockets.Socket> 发起对话之前，必须在应用程序和远程设备之间创建数据管道。 尽管存在其他网络地址系列和协议，但本示例说明如何创建与远程服务的 TCP/IP 连接。  
@@ -78,6 +78,7 @@ try {
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
 - [使用异步客户端套接字](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
 - [如何：创建套接字](../../../docs/framework/network-programming/how-to-create-a-socket.md)

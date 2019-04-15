@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 787406b1fa7e5beb59ff3f8715c1215a734ed895
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086060"
 ---
 # <a name="specifying-an-entry-point"></a>指定入口点
 入口点标识 DLL 中的函数位置。 在托管项目中，目标函数的原始名称或序号入口点跨越互操作边界标识该函数。 此外，可将入口点映射到其他名称，有效地重命名该函数。  
@@ -95,6 +95,7 @@ extern "C" int MsgBox(
 ```
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
 - [平台调用示例](../../../docs/framework/interop/platform-invoke-examples.md)

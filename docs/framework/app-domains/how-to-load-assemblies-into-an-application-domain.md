@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df3fa60c4fcacc84be36e49e40933d195a9e43e5
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188521"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>如何：将程序集加载到应用程序域中
 可通过多种方法将程序集加载到应用程序域中。 推荐方法是使用 <xref:System.Reflection.Assembly?displayProperty=nameWithType> 类的 `static`（在 Visual Basic 中为 `Shared`）<xref:System.Reflection.Assembly.Load%2A> 方法。 加载程序集的其他方法包括：  
@@ -47,9 +47,10 @@ ms.locfileid: "55674927"
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - [对应用程序域进行编程](application-domains.md#programming-with-application-domains)
-- [反射](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [映像](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [使用应用程序域](../../../docs/framework/app-domains/use.md)
 - [如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [应用程序域和程序集](application-domains.md#application-domains-and-assemblies)
