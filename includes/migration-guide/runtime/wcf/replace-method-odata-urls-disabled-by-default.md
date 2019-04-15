@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6dc3669433804a4524c18d5a932f9879343ab508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235080"
+---
 ### <a name="the-replace-method-in-odata-urls-is-disabled-by-default"></a>默认情况下，禁用 OData URL 中的 Replace 方法
 
 |   |   |
@@ -8,4 +16,3 @@
 |版本|4.5|
 |类型|运行时|
 |受影响的 API|<ul><li><xref:System.Data.Services.DataService%601?displayProperty=nameWithType></li></ul>|
-

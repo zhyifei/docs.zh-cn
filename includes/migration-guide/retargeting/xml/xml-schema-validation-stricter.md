@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ef0381dc2ce4373b2a62e8ebefa44152059ca332
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234608"
+---
 ### <a name="xml-schema-validation-is-stricter"></a>XML 架构验证更为严格
 
 |   |   |
@@ -7,4 +15,3 @@
 |范围|次要|
 |版本|4.5|
 |类型|重定目标|
-

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6309cead46dff44ff6360bac9b31666f875be210
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235078"
+---
 ### <a name="marshalsizeof-and-marshalptrtostructure-overloads-break-dynamic-code"></a>Marshal.SizeOf 和 Marshal.PtrToStructure 重载中断动态代码
 
 |   |   |
@@ -7,4 +15,3 @@
 |范围|次要|
 |版本|4.5.1|
 |类型|运行时|
-
