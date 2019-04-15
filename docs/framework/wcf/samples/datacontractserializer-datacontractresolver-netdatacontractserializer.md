@@ -2,18 +2,18 @@
 title: 使用 DataContractSerializer 和 DataContractResolver 实现 NetDataContractSerializer 的功能
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: 481d9d7f30f9c2137ec91a87c9743dcb0a97baf7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0378f8d6e21f44eb1f39e9ebf51ef0dfaf8d8e8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295141"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>使用 DataContractSerializer 和 DataContractResolver 实现 NetDataContractSerializer 的功能
 此示例演示如何将 <xref:System.Runtime.Serialization.DataContractSerializer> 与相应的 <xref:System.Runtime.Serialization.DataContractResolver> 结合使用来提供与 <xref:System.Runtime.Serialization.NetDataContractSerializer> 相同的功能。 此示例演示如何创建相应的 <xref:System.Runtime.Serialization.DataContractResolver> 以及如何将其添加到 <xref:System.Runtime.Serialization.DataContractSerializer>。
 
 ## <a name="sample-details"></a>示例详细信息
- <xref:System.Runtime.Serialization.NetDataContractSerializer> 与 <xref:System.Runtime.Serialization.DataContractSerializer> 之间存在一个重要区别：<xref:System.Runtime.Serialization.NetDataContractSerializer> 在序列化的 XML 中包含 CLR 类型信息，而 <xref:System.Runtime.Serialization.DataContractSerializer> 不包含这种信息。 因此，只有在序列化和反序列化端共享相同的 CLR 类型时，才能使用 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 但是，建议使用 <xref:System.Runtime.Serialization.DataContractSerializer>，因为其性能比 <xref:System.Runtime.Serialization.NetDataContractSerializer> 更佳。 通过将 <xref:System.Runtime.Serialization.DataContractSerializer> 添加到 <xref:System.Runtime.Serialization.DataContractResolver>，可以更改在其中序列化的信息。
+ <xref:System.Runtime.Serialization.NetDataContractSerializer> 不同于<xref:System.Runtime.Serialization.DataContractSerializer>重要的一种方法中：<xref:System.Runtime.Serialization.NetDataContractSerializer>包括序列化的 XML 中的 CLR 类型信息，而<xref:System.Runtime.Serialization.DataContractSerializer>却没有。 因此，只有在序列化和反序列化端共享相同的 CLR 类型时，才能使用 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 但是，建议使用 <xref:System.Runtime.Serialization.DataContractSerializer>，因为其性能比 <xref:System.Runtime.Serialization.NetDataContractSerializer> 更佳。 通过将 <xref:System.Runtime.Serialization.DataContractSerializer> 添加到 <xref:System.Runtime.Serialization.DataContractResolver>，可以更改在其中序列化的信息。
 
  此示例由两个项目组成。 第一个项目使用 <xref:System.Runtime.Serialization.NetDataContractSerializer> 来序列化对象。 第二个项目将 <xref:System.Runtime.Serialization.DataContractSerializer> 与 <xref:System.Runtime.Serialization.DataContractResolver> 结合使用，以提供与第一个项目相同的功能。
 
@@ -57,21 +57,21 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1.  使用 Visual Studio 2012 打开 DCRSample.sln 解决方案文件。
+1. 使用 Visual Studio 2012 打开 DCRSample.sln 解决方案文件。
 
-2.  右键单击解决方案文件，然后选择**属性**。
+2. 右键单击解决方案文件，然后选择**属性**。
 
-3.  在中**解决方案属性页**对话框下**通用属性**，**启动项目**，选择**多个启动项目：**。
+3. 在中**解决方案属性页**对话框下**通用属性**，**启动项目**，选择**多个启动项目：**。
 
-4.  下一步**DCSwithDCR**项目，选择**启动**从**操作**下拉列表。
+4. 下一步**DCSwithDCR**项目，选择**启动**从**操作**下拉列表。
 
-5.  下一步**NetDCS**项目，选择**启动**从**操作**下拉列表。
+5. 下一步**NetDCS**项目，选择**启动**从**操作**下拉列表。
 
-6.  单击**确定**关闭对话框。
+6. 单击**确定**关闭对话框。
 
-7.  要生成解决方案，按 Ctrl+Shift+B。
+7. 要生成解决方案，按 Ctrl+Shift+B。
 
-8.  若要运行解决方案，请按 Ctrl+F5。
+8. 若要运行解决方案，请按 Ctrl+F5。
 
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -81,4 +81,3 @@ class MyDataContractResolver : DataContractResolver
 >  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  
-  

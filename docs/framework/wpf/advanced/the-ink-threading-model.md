@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 8089c857d2406f8cfb357ba2efe188ad84605541
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377020"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335311"
 ---
 # <a name="the-ink-threading-model"></a>墨迹线程处理模型
 Tablet PC 上的优势之一是墨迹的，它极为相似书写一样使用普通的笔和纸。  若要实现此目的，触笔收集输入的数据以高得多的速度比鼠标将手写内容呈现为用户写入。  应用程序的用户界面 (UI) 线程是不够的笔数据和呈现墨迹收集，因为它可能被阻止。  若要解决此问题，问题[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序使用两个其他线程，当用户将墨迹。  
@@ -38,7 +38,7 @@ Tablet PC 上的优势之一是墨迹的，它极为相似书写一样使用普�
   
  ![绘制笔画时的线程处理模型。](./media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
   
-1.  用户绘制笔划时发生的操作  
+1. 用户绘制笔划时发生的操作  
   
     1.  当用户绘制笔划时，触笔接触点在笔线程上。  在触笔插件，包括<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>，接受在笔线程上的触笔接触点，并有机会修改之前已对其<xref:System.Windows.Controls.InkCanvas>接收它们。  
   
@@ -46,7 +46,7 @@ Tablet PC 上的优势之一是墨迹的，它极为相似书写一样使用普�
   
     3.  <xref:System.Windows.Controls.InkCanvas>接收在 UI 线程上的触笔接触点。  
   
-2.  用户结束笔画后发生的操作  
+2. 用户结束笔画后发生的操作  
   
     1.  在用户完成绘制笔画<xref:System.Windows.Controls.InkCanvas>创建<xref:System.Windows.Ink.Stroke>对象，并将其添加到<xref:System.Windows.Controls.InkPresenter>，它将以静态方式呈现它。  
   
@@ -61,13 +61,13 @@ Tablet PC 上的优势之一是墨迹的，它极为相似书写一样使用普�
   
  在上图中，以下行为会发生：  
   
-1.  `StylusPlugin1` 修改的 x 值和 y。  
+1. `StylusPlugin1` 修改的 x 值和 y。  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 接收已修改的触笔接触点，并将它们呈现在动态呈现线程。  
+2. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 接收已修改的触笔接触点，并将它们呈现在动态呈现线程。  
   
-3.  `StylusPlugin2` 接收已修改的触笔接触点，并进一步修改的 x 值和 y。  
+3. `StylusPlugin2` 接收已修改的触笔接触点，并进一步修改的 x 值和 y。  
   
-4.  应用程序收集触笔接触点，并在用户完成笔画，以静态方式呈现笔划。  
+4. 应用程序收集触笔接触点，并在用户完成笔画，以静态方式呈现笔划。  
   
  假设`stylusPlugin1`限制对矩形的触笔接触点和`stylusPlugin2`转换到右侧触笔接触点。  在前面的方案，<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>收到受限制的触笔点，但是不翻译后的触笔接触点。  时用户绘制笔划，笔划的呈现的矩形的边界内，但不会对笔画用户提起笔之前转换。  
   
@@ -83,15 +83,15 @@ Tablet PC 上的优势之一是墨迹的，它极为相似书写一样使用普�
   
  ![墨迹线程处理示意图](./media/inkthreading-visualtree.png "InkThreading_VisualTree")  
   
-1.  用户开始笔画。  
+1. 用户开始笔画。  
   
     1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>创建可视化树。  
   
-2.  用户绘制笔划。  
+2. 用户绘制笔划。  
   
     1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>构建可视化树。  
   
-3.  用户结束笔画。  
+3. 用户结束笔画。  
   
     1.  <xref:System.Windows.Controls.InkPresenter>笔画添加到其可视化树。  
   

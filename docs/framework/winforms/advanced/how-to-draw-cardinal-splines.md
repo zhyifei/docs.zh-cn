@@ -1,5 +1,5 @@
 ---
-title: 如何：绘制基数样条
+title: 如何：绘制基数自由绘制曲线
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 0f5c7a8555130e884b641648d1ffc9865f44dc1e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 2f03177bf97936a2ca9558972d4d82fa3e07463c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204947"
 ---
-# <a name="how-to-draw-cardinal-splines"></a>如何：绘制基数样条
+# <a name="how-to-draw-cardinal-splines"></a>如何：绘制基数自由绘制曲线
 基数样条是平滑地通过一组给定的点的曲线。 若要绘制的基数样条，创建<xref:System.Drawing.Graphics>对象并将传递指向数组的地址<xref:System.Drawing.Graphics.DrawCurve%2A>方法。  
   
 ### <a name="drawing-a-bell-shaped-cardinal-spline"></a>绘制钟形基数样条  
@@ -50,5 +50,6 @@ ms.locfileid: "58464692"
  前面的示例设计为使用 Windows 窗体，它们需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。  
   
 ## <a name="see-also"></a>请参阅
-- [直线、曲线和形状](lines-curves-and-shapes.md)
+
+- [直线、曲线和图形](lines-curves-and-shapes.md)
 - [构造并绘制曲线](constructing-and-drawing-curves.md)

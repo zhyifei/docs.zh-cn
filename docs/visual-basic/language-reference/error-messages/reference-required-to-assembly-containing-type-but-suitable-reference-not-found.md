@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 3cfdf8150c8ccd9e1b4f047cd1ce8ee4ad6bbc1a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9868598b32ae17ef5bfb5dd738f8a7541515f5ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813400"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310666"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>需要对程序集的引用\<assemblyidentity > 包含类型\<类型名称 >，但由于项目之间存在多义性。 找不到合适的引用\<projectname1 > 和\<项目名称 2> >
 表达式使用在项目外部定义的类型，如类、结构、接口、枚举或委托。 但是，你具有对定义该类型的多个程序集的项目引用。  
@@ -25,14 +25,14 @@ ms.locfileid: "58813400"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  确定产生最佳程序集引用的项目。 为便于确定，你可以使用文件访问轻松程度和更新频率等条件。  
+1. 确定产生最佳程序集引用的项目。 为便于确定，你可以使用文件访问轻松程度和更新频率等条件。  
   
-2.  在项目属性中，添加对包含某程序集的文件的引用，该程序集定义正在使用的类型。  
+2. 在项目属性中，添加对包含某程序集的文件的引用，该程序集定义正在使用的类型。  
   
 ## <a name="see-also"></a>请参阅
 
 - [管理项目中的引用](/visualstudio/ide/managing-references-in-a-project)
-- [对已声明元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)
-- [有关无效的引用的疑难解答](/visualstudio/ide/troubleshooting-broken-references)
+- [Troubleshooting Broken References](/visualstudio/ide/troubleshooting-broken-references)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a42a568e7c3f3a1a5c84d2ceae49c262f77d275d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442485"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310533"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>开发全球通用应用程序的最佳做法
 
@@ -71,7 +71,7 @@ ms.locfileid: "56442485"
 
 8. 使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 类来根据区域性检索资源。
 
-9. 使用 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) 创建 Windows 窗体对话框，以便可以使用 [Windows 窗体资源编辑器 (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md) 对它们进行本地化。 不要对 Windows 窗体对话框进行手动编码。
+9. 使用 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 创建 Windows 窗体对话框，以便可以使用 [Windows 窗体资源编辑器 (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md) 对它们进行本地化。 不要对 Windows 窗体对话框进行手动编码。
 
 10. 安排进行专业本地化工作（翻译）。
 
@@ -104,4 +104,4 @@ ms.locfileid: "56442485"
 ## <a name="see-also"></a>请参阅
 
 - [全球化和本地化](../../../docs/standard/globalization-localization/index.md)
-- [桌面应用中的资源](../../../docs/framework/resources/index.md)
+- [桌面应用程序中的资源](../../../docs/framework/resources/index.md)

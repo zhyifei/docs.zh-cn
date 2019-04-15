@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: b56a421dd7b34bf006e1e6609bbb8ecc5f56e0bf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9621f6a01ef4e30bf34b97df3d2c3033e9b62a23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971255"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316019"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>如何：使用 My 命名空间（C# 编程指南）
 <xref:Microsoft.VisualBasic.MyServices> 命名空间（在 Visual Basic 中为 `My`）使访问多个 .NET Framework 类变得轻松直观，让你能够编写与计算机、应用程序、设置、资源等交互的代码。 虽然最初设计用于 Visual Basic，但 `MyServices` 命名空间仍可用于 C# 应用程序。  
@@ -22,9 +22,9 @@ ms.locfileid: "56971255"
   
 #### <a name="to-add-a-reference-to-the-visual-basic-library"></a>添加对 Visual Basic 库的引用  
   
-1.  在解决方案资源管理器中，右键单击“引用”节点并选择“添加引用”。  
+1. 在解决方案资源管理器中，右键单击“引用”节点并选择“添加引用”。  
   
-2.  出现“引用”对话框时，向下滚动列表，然后选择“Microsoft.VisualBasic.dll”。  
+2. 出现“引用”对话框时，向下滚动列表，然后选择“Microsoft.VisualBasic.dll”。  
   
      同时建议将以下行包括在程序开头的 `using` 部分。  
   

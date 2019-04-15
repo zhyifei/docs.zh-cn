@@ -2,12 +2,12 @@
 title: 令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: a0d46419de71cb3504467d1b728fb05f3de0bf45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085744"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336286"
 ---
 # <a name="token-provider"></a>令牌提供程序
 此示例演示如何实现自定义令牌提供程序。 Windows Communication Foundation (WCF) 中的令牌提供程序来提供凭据的安全基础结构。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了默认凭据管理器令牌提供程序。 WCF 还附带[!INCLUDE[infocard](../../../../includes/infocard-md.md)]令牌提供程序。 自定义令牌提供程序在下列情况下有用：
@@ -109,7 +109,7 @@ ms.locfileid: "59085744"
 
  以下步骤演示如何开发自定义令牌提供程序并将其与 WCF 安全框架集成：
 
-1.  编写自定义令牌提供程序。
+1. 编写自定义令牌提供程序。
 
      此示例实现一个用来获取用户名和密码的自定义令牌提供程序。 密码必须与用户名相匹配。 这个自定义的令牌提供程序仅用于演示目的，不建议用在实际部署中。
 
@@ -128,7 +128,7 @@ ms.locfileid: "59085744"
     }
     ```
 
-2.  编写自定义安全令牌管理器。
+2. 编写自定义安全令牌管理器。
 
      使用 <xref:System.IdentityModel.Selectors.SecurityTokenManager>，可以为在 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法中传入该管理器的特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 创建 `CreateSecurityTokenProvider`。 安全令牌管理器还用于创建令牌身份验证器和令牌序列化程序，但它们不包括在此示例中。 在此示例中，自定义安全令牌管理器继承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类并重写 `CreateSecurityTokenProvider` 方法，这样，当所传递令牌的要求指示需要用户名提供程序时，将返回自定义用户名令牌提供程序。
 
@@ -159,7 +159,7 @@ ms.locfileid: "59085744"
     }
     ```
 
-3.  编写自定义客户端凭据。
+3. 编写自定义客户端凭据。
 
      客户端凭据类用于表示为客户端代理配置的凭据并创建一个安全令牌管理器，该管理器用于获取令牌身份验证器、令牌提供程序和令牌序列化程序。
 
@@ -184,7 +184,7 @@ ms.locfileid: "59085744"
     }
     ```
 
-4.  配置客户端以使用自定义客户端凭据。
+4. 配置客户端以使用自定义客户端凭据。
 
      为了让客户端使用自定义客户端凭据，此示例删除了默认的客户端凭据类并提供了新的客户端凭据类。
 
@@ -246,44 +246,44 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例
 
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+2. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
 
-1.  从 Visual Studio 2012 命令提示符下使用管理员特权打开内示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。
+1. 从 Visual Studio 2012 命令提示符下使用管理员特权打开内示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。
 
     > [!NOTE]
     >  Setup.bat 批处理文件旨在为从 Visual Studio 2012 命令提示运行。 在 Visual Studio 2012 命令提示符点设置为包含 Setup.bat 脚本所需的可执行文件的目录路径环境变量。  
   
-2.  启动 service\bin 中的 service.exe。  
+2. 启动 service\bin 中的 service.exe。  
   
-3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
+3. 启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  在用户名提示下，键入一个用户名。  
+4. 在用户名提示下，键入一个用户名。  
   
-5.  在密码提示下，使用已在用户名提示下键入的字符串。  
+5. 在密码提示下，使用已在用户名提示下键入的字符串。  
   
-6.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+6. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
-1.  在服务计算机上为服务二进制文件创建一个目录。  
+1. 在服务计算机上为服务二进制文件创建一个目录。  
   
-2.  将服务程序文件复制到服务计算机上的服务目录。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
+2. 将服务程序文件复制到服务计算机上的服务目录。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-3.  必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新 Service.exe.config 文件以反映此新证书名称。 可以通过修改 Setup.bat 批处理文件来创建服务器证书。 请注意，setup.bat 文件必须在运行从开发人员命令提示符处使用管理员特权打开 Visual studio。 必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。  
+3. 必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新 Service.exe.config 文件以反映此新证书名称。 可以通过修改 Setup.bat 批处理文件来创建服务器证书。 请注意，setup.bat 文件必须在运行从开发人员命令提示符处使用管理员特权打开 Visual studio。 必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。  
   
-4.  将服务器证书复制到客户端的 CurrentUser-TrustedPeople 存储中。 当服务器证书是由客户端的受信任颁发者颁发时，不必执行此操作。  
+4. 将服务器证书复制到客户端的 CurrentUser-TrustedPeople 存储中。 当服务器证书是由客户端的受信任颁发者颁发时，不必执行此操作。  
   
-5.  在服务计算机的 Service.exe.config 文件中，更改基址的值以指定一个完全限定的计算机名称，而不是 localhost。  
+5. 在服务计算机的 Service.exe.config 文件中，更改基址的值以指定一个完全限定的计算机名称，而不是 localhost。  
   
-6.  在服务计算机上，在命令提示符下运行 service.exe。  
+6. 在服务计算机上，在命令提示符下运行 service.exe。  
   
-7.  将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
+7. 将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
   
-8.  在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  
+8. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  
   
 9. 在客户端计算机上，从命令提示窗口中启动 `Client.exe`。  
   
@@ -291,4 +291,4 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
-1.  运行完示例后运行示例文件夹中的 Cleanup.bat。  
+1. 运行完示例后运行示例文件夹中的 Cleanup.bat。  

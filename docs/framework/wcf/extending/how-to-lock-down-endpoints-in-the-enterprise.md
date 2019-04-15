@@ -1,15 +1,15 @@
 ---
-title: 如何：在企业中的锁定终结点
+title: 如何：在企业中锁定终结点
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 5392db25c0e3ae0051a892831dd013063389d863
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663059"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305949"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>如何：在企业中的锁定终结点
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>如何：在企业中锁定终结点
 大企业往往要求开发的应用程序符合企业安全策略。 以下主题讨论如何开发和安装客户端的终结点验证程序，它可以用来验证安装在计算机上的所有 Windows Communication Foundation (WCF) 客户端应用程序。  
   
  在这种情况下，验证程序是客户端验证程序，因为此终结点行为添加到客户端[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config 文件中的部分。 WCF 加载公共终结点行为仅针对客户端应用程序，并加载常见服务行为仅用于服务应用程序。 若要为服务应用程序安装此相同验证程序，验证程序必须为服务行为。 有关详细信息，请参阅[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)部分。  
@@ -25,23 +25,23 @@ ms.locfileid: "54663059"
   
 ### <a name="to-create-the-endpoint-validator"></a>创建终结点验证程序  
   
-1.  使用 <xref:System.ServiceModel.Description.IEndpointBehavior> 方法中所需的验证步骤创建一个 <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A>。 下面的代码提供了一个示例。 (`InternetClientValidatorBehavior`取自[安全验证](../../../../docs/framework/wcf/samples/security-validation.md)示例。)  
+1. 使用 <xref:System.ServiceModel.Description.IEndpointBehavior> 方法中所需的验证步骤创建一个 <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A>。 下面的代码提供了一个示例。 (`InternetClientValidatorBehavior`取自[安全验证](../../../../docs/framework/wcf/samples/security-validation.md)示例。)  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  创建用于注册步骤 1 中创建的终结点验证程序的新 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>。 下面的代码示例演示了此过程。 (此示例中的原始代码位于[安全验证](../../../../docs/framework/wcf/samples/security-validation.md)示例。)  
+2. 创建用于注册步骤 1 中创建的终结点验证程序的新 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>。 下面的代码示例演示了此过程。 (此示例中的原始代码位于[安全验证](../../../../docs/framework/wcf/samples/security-validation.md)示例。)  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  确保用强名称对编译的程序集签名。 有关详细信息，请参阅[强名称工具 (SN。EXE)](https://go.microsoft.com/fwlink/?LinkId=248217)和您的语言的编译器命令。  
+3. 确保用强名称对编译的程序集签名。 有关详细信息，请参阅[强名称工具 (SN。EXE)](https://go.microsoft.com/fwlink/?LinkId=248217)和您的语言的编译器命令。  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>将验证程序安装到目标计算机中  
   
-1.  使用恰当的机制安装终结点验证程序。 在企业中，可以使用组策略和 Systems Management Server (SMS)。  
+1. 使用恰当的机制安装终结点验证程序。 在企业中，可以使用组策略和 Systems Management Server (SMS)。  
   
-2.  强名称程序集安装到全局程序集缓存使用[Gacutil.exe （全局程序集缓存工具）](../../../../docs/framework/tools/gacutil-exe-gac-tool.md)。  
+2. 强名称程序集安装到全局程序集缓存使用[Gacutil.exe （全局程序集缓存工具）](../../../../docs/framework/tools/gacutil-exe-gac-tool.md)。  
   
-3.  使用 <xref:System.Configuration?displayProperty=nameWithType> 命名空间类型执行以下操作：  
+3. 使用 <xref:System.Configuration?displayProperty=nameWithType> 命名空间类型执行以下操作：  
   
     1.  将扩展名添加到[ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)部分使用完全限定的类型名称，并锁定该元素。  
   
@@ -64,5 +64,6 @@ ms.locfileid: "54663059"
  您可能还需要对配置文件元素进行加密。 有关更多信息，请参见“另请参见”部分。  
   
 ## <a name="see-also"></a>请参阅
-- [使用 DPAPI 加密配置文件元素](https://go.microsoft.com/fwlink/?LinkId=94954)
-- [使用 RSA 加密配置文件元素](https://go.microsoft.com/fwlink/?LinkId=94955)
+
+- [使用 DPAPI 对配置文件元素进行加密](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [使用 RSA 对配置文件元素进行加密](https://go.microsoft.com/fwlink/?LinkId=94955)

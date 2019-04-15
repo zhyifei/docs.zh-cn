@@ -2,12 +2,12 @@
 title: 错误处理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136430"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300276"
 ---
 # <a name="error-handling"></a>错误处理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation 中的错误处理  
@@ -34,15 +34,15 @@ ms.locfileid: "59136430"
   
  使用 IErrorHandler，您可以显式控制某一异常引发时您的应用程序的行为。 您可以：  
   
-1.  确定是否将错误发送到客户端  
+1. 确定是否将错误发送到客户端  
   
-2.  使用错误替代异常  
+2. 使用错误替代异常  
   
-3.  使用另一个错误替代错误  
+3. 使用另一个错误替代错误  
   
-4.  执行日志记录或跟踪  
+4. 执行日志记录或跟踪  
   
-5.  执行其他自定义活动  
+5. 执行其他自定义活动  
   
  可通过将自定义错误处理程序添加到您的服务的通道调度程序的 ErrorHandlers 属性，安装该错误处理程序。  可以具有多个错误处理程序，并且按照将这些错误处理程序添加到该集合的顺序调用它们。  
   

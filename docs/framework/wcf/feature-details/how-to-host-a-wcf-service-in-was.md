@@ -1,15 +1,15 @@
 ---
-title: 如何：承载在 WAS 中的 WCF 服务
+title: 如何：在 WAS 中承载 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9094cf04ed1bc9fabe8d9df11b876007f322679a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 157c18d1640ccf1a61f871e5e3e9fef70b6a7e79
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651170"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326497"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>如何：承载在 WAS 中的 WCF 服务
+# <a name="how-to-host-a-wcf-service-in-was"></a>如何：在 WAS 中承载 WCF 服务
 本主题概述了创建 Windows 进程激活服务 (也称为 WAS) 所需的基本步骤的托管 Windows Communication Foundation (WCF) 服务。 WAS 是新的进程激活服务，是对使用非 HTTP 传输协议的 Internet Information Services (IIS) 功能的泛化。 WCF 使用侦听器适配器接口传递激活请求通过非 HTTP 协议支持的 WCF，如 TCP、 命名管道和消息队列接收的请求。  
   
  此主机选项要求正确安装和配置 WAS 激活组件，但不要求编写任何主机代码作为应用程序的一部分。 有关安装和配置 WAS 的详细信息，请参阅[如何：安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
@@ -39,15 +39,15 @@ ms.locfileid: "54651170"
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>创建 WAS 承载的基本服务  
   
-1.  为该类型的服务定义服务协定。  
+1. 为该类型的服务定义服务协定。  
   
      [!code-csharp[C_HowTo_HostInWAS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1121)]  
   
-2.  在服务类中实现该服务协定。 请注意，在服务的实现内部，未指定地址或绑定信息。 而且，不必编写代码也可从配置文件中检索该信息。  
+2. 在服务类中实现该服务协定。 请注意，在服务的实现内部，未指定地址或绑定信息。 而且，不必编写代码也可从配置文件中检索该信息。  
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3.  创建 Web.config 文件，以定义要由 `CalculatorService` 终结点使用的 <xref:System.ServiceModel.NetTcpBinding> 绑定。  
+3. 创建 Web.config 文件，以定义要由 <xref:System.ServiceModel.NetTcpBinding> 终结点使用的 `CalculatorService` 绑定。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -64,40 +64,41 @@ ms.locfileid: "54651170"
     </configuration>  
     ```  
   
-4.  创建包含以下代码的 Service.svc 文件。  
+4. 创建包含以下代码的 Service.svc 文件。  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-5.  将 Service.svc 文件放到 IIS 虚拟目录中。  
+5. 将 Service.svc 文件放到 IIS 虚拟目录中。  
   
 ### <a name="to-create-a-client-to-use-the-service"></a>创建要使用服务的客户端  
   
-1.  使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从命令行以从服务元数据生成代码。  
+1. 使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)从命令行以从服务元数据生成代码。  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   
-2.  生成的客户端包含 `ICalculator` 接口，该接口定义了客户端实现必须满足的服务协定。  
+2. 生成的客户端包含 `ICalculator` 接口，该接口定义了客户端实现必须满足的服务协定。  
   
      [!code-csharp[C_HowTo_HostInWAS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1221)]  
   
-3.  生成的客户端应用程序还包含 `ClientCalculator` 的实现。 请注意，在服务的实现内部，未指定地址和绑定信息。 而且，不必编写代码也可从配置文件中检索该信息。  
+3. 生成的客户端应用程序还包含 `ClientCalculator` 的实现。 请注意，在服务的实现内部，未指定地址和绑定信息。 而且，不必编写代码也可从配置文件中检索该信息。  
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4.  使用 <xref:System.ServiceModel.NetTcpBinding> 的客户端配置也通过 Svcutil.exe 生成。 在使用 Visual Studio 时，应在 App.config 文件中命名此文件。  
+4. 使用 <xref:System.ServiceModel.NetTcpBinding> 的客户端配置也通过 Svcutil.exe 生成。 在使用 Visual Studio 时，应在 App.config 文件中命名此文件。  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   
-5.  在应用程序中创建 `ClientCalculator` 的实例，然后调用服务操作。  
+5. 在应用程序中创建 `ClientCalculator` 的实例，然后调用服务操作。  
   
      [!code-csharp[C_HowTo_HostInWAS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1223)]  
   
-6.  编译并运行客户端。  
+6. 编译并运行客户端。  
   
 ## <a name="see-also"></a>请参阅
+
 - [TCP 激活](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

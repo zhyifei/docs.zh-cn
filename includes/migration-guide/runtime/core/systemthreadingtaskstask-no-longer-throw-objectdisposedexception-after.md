@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ab2907b05bff409fed9a370d5cbebbf3d1575d2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235198"
+---
 ### <a name="systemthreadingtaskstask-no-longer-throw-objectdisposedexception-after-object-is-disposed"></a>释放对象后，System.Threading.Tasks.Task 不再引发 ObjectDisposedException
 
 |   |   |
@@ -7,4 +15,3 @@
 |范围|次要|
 |版本|4.5|
 |类型|运行时|
-

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5c0b5dc2e001121ab54447bae4a5eed3290a580
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a73b2d8948c9a046fd77c02f1bcc87f5738105d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597835"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303994"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>如何：生成单文件程序集
 
@@ -33,7 +33,7 @@ ms.locfileid: "54597835"
 
 ## <a name="to-create-an-assembly-with-an-exe-extension"></a>创建扩展名为 .exe 的程序集
 
-1.  在命令提示符处，键入下列命令：
+1. 在命令提示符处，键入下列命令：
 
      \<compiler command> \<module name>
 
@@ -51,7 +51,7 @@ vbc myCode.vb
 
 ### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>创建扩展名为 .exe 的程序集并指定输出文件名
 
-1.  在命令提示符处，键入下列命令：
+1. 在命令提示符处，键入下列命令：
 
      \<compiler command> /out:\<file name> \<module name>
 
@@ -72,7 +72,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 ### <a name="to-create-a-library-assembly"></a>创建库程序集
 
-1.  在命令提示符处，键入下列命令：
+1. 在命令提示符处，键入下列命令：
 
      \<compiler command> /t:library \<module name>
 
@@ -92,5 +92,5 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 - [创建程序集](../../../docs/framework/app-domains/create-assemblies.md)
 - [多文件程序集](../../../docs/framework/app-domains/multifile-assemblies.md)
-- [如何：生成单文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [如何：生成多文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)

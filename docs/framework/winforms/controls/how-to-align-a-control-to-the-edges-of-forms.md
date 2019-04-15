@@ -1,5 +1,5 @@
 ---
-title: 如何：将控件与窗体边缘对齐
+title: 如何：使控件与窗体边缘对齐
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: 33a3b2e996bdab280eb7a4cd8ad7c59ccb1a1bd2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: beb8881dbd2aedaefe66510c2942ce6c082b9729
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713886"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329968"
 ---
-# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>如何：将控件与窗体边缘对齐
+# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>如何：使控件与窗体边缘对齐
 通过设置 <xref:System.Windows.Forms.Control.Dock%2A> 属性，可以使控件与窗体的边缘对齐。 此属性指定控件在窗体中的驻留位置。 可以将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为下列值：  
   
 |设置|控件上的效果|  
@@ -33,7 +33,7 @@ ms.locfileid: "57713886"
   
 ### <a name="to-set-the-dock-property-for-your-control-at-run-time"></a>在运行时设置控件的 Dock 属性  
   
-1.  在代码中将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为适当的值。  
+1. 在代码中将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为适当的值。  
   
     ```vb  
     ' To set the Dock property internally.  
@@ -50,9 +50,10 @@ ms.locfileid: "57713886"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
 - [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)
-- [如何：锚定和停靠子控件在 FlowLayoutPanel 控件中](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [如何：锚定和停靠在 TableLayoutPanel 控件中的子控件](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [如何：在 FlowLayoutPanel 控件中锚定和停靠子控件](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [如何：在 TableLayoutPanel 控件中锚定和停靠子控件](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [AutoSize 属性概述](autosize-property-overview.md)

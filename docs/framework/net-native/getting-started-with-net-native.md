@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220947"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298469"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 入门
 无论是在编写适用于 Windows 10 的新 Windows 应用，还是在迁移现有的 Windows 应用商店应用，都可以按照同一套过程操作。 若要创建一个 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用，请按照下列步骤操作：  
   
-1.  [开发面向 Windows 10 的通用 Windows 平台 (UWP) 应用](#Step1)，测试应用的调试版本以确保其正常工作。  
+1. [开发面向 Windows 10 的通用 Windows 平台 (UWP) 应用](#Step1)，测试应用的调试版本以确保其正常工作。  
   
-2.  [处理额外的反射和序列化用法](#Step2)。  
+2. [处理额外的反射和序列化用法](#Step2)。  
   
-3.  [部署和测试应用的发布版本](#Step3)。  
+3. [部署和测试应用的发布版本](#Step3)。  
   
-4.  [手动解决丢失的元数据](#Step4)，并重复 [步骤 3](#Step3) 直到所有问题都得到解决。  
+4. [手动解决丢失的元数据](#Step4)，并重复 [步骤 3](#Step3) 直到所有问题都得到解决。  
   
 > [!NOTE]
 >  如果你正在将现有 Windows 应用商店应用迁移到 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，请确保要查看 [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)。  
@@ -29,9 +29,9 @@ ms.locfileid: "56220947"
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>步骤 1：开发和测试 UWP 应用的调试版本  
  不管是开发新的应用还是迁移现有应用，均遵循用于任何 Windows 应用的同一流程进行操作。  
   
-1.  通过使用针对 Visual C# 或 Visual Basic 的通用 Windows 应用模板，在 Visual Studio 中创建新的 UWP 项目。 默认情况下，所有 UWP 应用程序均以 CoreCLR 为目标，且其发布版本通过使用 .NET Native 工具链进行编译。  
+1. 通过使用针对 Visual C# 或 Visual Basic 的通用 Windows 应用模板，在 Visual Studio 中创建新的 UWP 项目。 默认情况下，所有 UWP 应用程序均以 CoreCLR 为目标，且其发布版本通过使用 .NET Native 工具链进行编译。  
   
-2.  请注意，使用 .NET Native 工具链和不使用它来编译 UWP 应用项目之间存在一些已知的兼容性问题。 有关更多信息，请参阅 [迁移指南](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) 。  
+2. 请注意，使用 .NET Native 工具链和不使用它来编译 UWP 应用项目之间存在一些已知的兼容性问题。 有关更多信息，请参阅 [迁移指南](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) 。  
   
  现在可针对在本地系统上（或在模拟器中）运行的 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 表面区域编写 C# 或 Visual Basic 代码。  
   
@@ -106,17 +106,18 @@ ms.locfileid: "56220947"
   
  要了解处理在检测应用的过程中发生的异常和其他问题的特定实例，请参阅：  
   
--   [示例：绑定数据时处理异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [示例:处理绑定数据时出现的异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [示例：故障诊断动态编程](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [示例:动态编程疑难解答](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
--   [.NET Native 应用中的运行时异常](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
+-   [.NET 本机应用中的运行时异常](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>请参阅
-- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET native 安装和配置](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+
+- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [.NET Native 安装和配置](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [.NET Native 和编译](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [反射和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [依赖反射的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
-- [Serialization and Metadata（序列化和元数据）](../../../docs/framework/net-native/serialization-and-metadata.md)
+- [利用反射的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
+- [序列化和元数据](../../../docs/framework/net-native/serialization-and-metadata.md)
 - [将 Windows 应用商店应用迁移到 .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

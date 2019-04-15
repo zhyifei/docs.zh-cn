@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 0c7c843fd3b837cb221e055bd96f735fb5e9c4ed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713276"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319854"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>如何：向 StatusBar 控件添加面板
 > [!IMPORTANT]
@@ -25,7 +25,7 @@ ms.locfileid: "57713276"
   
 ### <a name="to-add-panels-to-a-status-bar"></a>若要添加到状态栏面板  
   
-1.  在过程中，通过将它们添加到创建状态栏面板<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。 指定属性设置为通过其索引的各个面板传递<xref:System.Windows.Forms.StatusBar.Panels%2A>属性。  
+1. 在过程中，通过将它们添加到创建状态栏面板<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。 指定属性设置为通过其索引的各个面板传递<xref:System.Windows.Forms.StatusBar.Panels%2A>属性。  
   
      在下面的代码示例中，将路径设置图标的位置是**我的文档**文件夹。 使用此位置是因为您可以假定大多数运行 Windows 操作系统的计算机将包含该文件夹。 选择此位置还允许具有最少的系统访问级别的用户安全地运行应用程序。 下面的示例要求具有的窗体<xref:System.Windows.Forms.StatusBar>已添加的控件。  
   
@@ -121,10 +121,11 @@ ms.locfileid: "57713276"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [集合编辑器对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
+- [“集合编辑器”对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
 - [如何：设置状态栏面板的大小](how-to-set-the-size-of-status-bar-panels.md)
-- [演练：在运行时的更新状态栏信息](walkthrough-updating-status-bar-information-at-run-time.md)
-- [如何：确定已单击 Windows 窗体 StatusBar 控件中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [演练：在运行时更新状态栏信息](walkthrough-updating-status-bar-information-at-run-time.md)
+- [如何：确定 Windows 窗体 StatusBar 控件中被单击的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar 控件概述](statusbar-control-overview-windows-forms.md)

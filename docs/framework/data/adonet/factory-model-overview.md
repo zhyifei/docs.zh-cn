@@ -2,12 +2,12 @@
 title: 工厂模型概述
 ms.date: 03/30/2017
 ms.assetid: b5dc81c4-7554-44b9-b513-769bd61e2e7b
-ms.openlocfilehash: b45e73dd21cad1381f58b578a19c39a1d89e8c3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b1d438ce5a7dbb22772d6c5dc97f196b3263d38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221829"
 ---
 # <a name="factory-model-overview"></a>工厂模型概述
 ADO.NET 2.0 在 <xref:System.Data.Common> 命名空间中引入了新基类。 基类为抽象类，这意味着它们不能直接实例化。 这些基类包括 <xref:System.Data.Common.DbConnection>、<xref:System.Data.Common.DbCommand> 和 <xref:System.Data.Common.DbDataAdapter>，它们由 .NET Framework 数据提供程序（如 <xref:System.Data.SqlClient> 和 <xref:System.Data.OleDb>）共享。 添加基类简化了向 .NET Framework 数据提供程序添加功能的过程，不再需要创建新接口。  
@@ -20,7 +20,8 @@ ADO.NET 2.0 在 <xref:System.Data.Common> 命名空间中引入了新基类。 �
  从 ADO.NET 2.0 开始，<xref:System.Data.Common.DbProviderFactories> 类提供 `static`（或 Visual Basic 中的 `Shared`）方法以用于创建 <xref:System.Data.Common.DbProviderFactory> 实例。 该实例随后会基于提供程序信息和运行时提供的连接字符串返回正确的强类型对象。  
   
 ## <a name="see-also"></a>请参阅
+
 - [获取 DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
 - [DbConnection、DbCommand 和 DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
 - [使用 DbDataAdapter 修改数据](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

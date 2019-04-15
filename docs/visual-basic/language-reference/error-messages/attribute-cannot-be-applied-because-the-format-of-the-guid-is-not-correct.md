@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: ab821db45ae834e82aa134b6f20ded14d43709ef
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d27c326b6a88271ba4abf0144e71027f6671b17e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832263"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330670"
 ---
 # <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'\<属性 > 无法应用，因为 GUID 的格式\<数 > 不正确
 一个`COMClassAttribute`特性块指定不符合的正确格式生成 guid 的全局唯一标识符 (GUID)。 `COMClassAttribute` 使用 Guid 来唯一标识类、 接口和创建事件。  
@@ -23,11 +23,11 @@ ms.locfileid: "58832263"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  确定正确的 GUID 或 Guid 标识的 COM 对象所需。  
+1. 确定正确的 GUID 或 Guid 标识的 COM 对象所需。  
   
-2.  确保正确复制提供给 `COMClassAttribute` 特性块的 GUID 字符串。  
+2. 确保正确复制提供给 `COMClassAttribute` 特性块的 GUID 字符串。  
   
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Guid>
-- [属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [特性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)

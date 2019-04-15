@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 1d9e01ab1fbabeb7b20fb5d2449ca7bba5f1853a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125959"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332074"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>如何：通过使用设计器使用 Windows 窗体 DataGrid 控件创建主/详细信息列表
 
@@ -27,26 +27,26 @@ ms.locfileid: "59125959"
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>若要在设计器中创建母版-详细信息列表  
   
-1.  添加两个<xref:System.Windows.Forms.DataGrid>到窗体控件。 有关详细信息，请参阅[如何：将控件添加到 Windows 窗体](how-to-add-controls-to-windows-forms.md)。 在 Visual Studio 2005 中，<xref:System.Windows.Forms.DataGrid>控件不在**工具箱**默认情况下。 有关详细信息，请参阅[如何：将项添加到工具箱](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))。  
+1. 添加两个<xref:System.Windows.Forms.DataGrid>到窗体控件。 有关详细信息，请参阅[如何：将控件添加到 Windows 窗体](how-to-add-controls-to-windows-forms.md)。 在 Visual Studio 2005 中，<xref:System.Windows.Forms.DataGrid>控件不在**工具箱**默认情况下。 有关详细信息，请参阅[如何：将项添加到工具箱](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))。  
   
     > [!NOTE]
     >  以下步骤不是适用于 Visual Studio 2005 中，使用**数据源**设计时数据绑定的窗口。 有关详细信息，请参阅[将控件绑定到 Visual Studio 中的数据](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)和[如何：在 Windows 中的数据窗体应用程序中显示相关](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))。  
   
-2.  将从两个或多个表拖**服务器资源管理器**到窗体。  
+2. 将从两个或多个表拖**服务器资源管理器**到窗体。  
   
-3.  从**数据**菜单中，选择**生成数据集**。  
+3. 从**数据**菜单中，选择**生成数据集**。  
   
-4.  设置使用在 XML 设计器在表之间的关系。 有关详细信息，请参阅"如何：创建一个对多关系中的 XML 架构和数据集"MSDN 上。  
+4. 设置使用在 XML 设计器在表之间的关系。 有关详细信息，请参阅"如何：创建一个对多关系中的 XML 架构和数据集"MSDN 上。  
   
-5.  通过选择保存关系**全部保存**从**文件**菜单。  
+5. 通过选择保存关系**全部保存**从**文件**菜单。  
   
-6.  配置<xref:System.Windows.Forms.DataGrid>控制你想要指定主网格中，按如下所示：  
+6. 配置<xref:System.Windows.Forms.DataGrid>控制你想要指定主网格中，按如下所示：  
   
     1.  选择<xref:System.Data.DataSet>从下拉列表中<xref:System.Windows.Forms.DataGrid.DataSource%2A>属性。  
   
     2.  从下拉列表中选择主表 （例如，"客户"）<xref:System.Windows.Forms.DataGrid.DataMember%2A>属性。  
   
-7.  配置<xref:System.Windows.Forms.DataGrid>控件指定详细信息网格中，按如下所示：  
+7. 配置<xref:System.Windows.Forms.DataGrid>控件指定详细信息网格中，按如下所示：  
   
     1.  选择<xref:System.Data.DataSet>从下拉列表中<xref:System.Windows.Forms.DataGrid.DataSource%2A>属性。  
   

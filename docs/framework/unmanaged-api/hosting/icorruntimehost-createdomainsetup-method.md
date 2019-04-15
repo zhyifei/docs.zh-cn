@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2758deaabf9db1cbc5465eb9b5976add534e87b4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 88f5de9882f8a029769d0ccbdac21aec541582a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469660"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157360"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup 方法
 获取的接口指针类型到 IAppDomainSetup<xref:System.AppDomainSetup?displayProperty=nameWithType>实例。 `IAppDomainSetup` 提供方法来配置方面的应用程序域，然后创建它。  
@@ -61,6 +61,7 @@ HRESULT CreateDomainSetup (
  **.NET framework 版本：** 1.0, 1.1  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - <xref:System.AppDomainSetup>

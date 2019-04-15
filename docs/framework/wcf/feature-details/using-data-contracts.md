@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: a93fb708ed6b1790027b1e3a2fc74ca8c5ff2024
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129930"
 ---
 # <a name="using-data-contracts"></a>使用数据协定
 “数据协定”  是在服务与客户端之间达成的正式协议，用于以抽象方式描述要交换的数据。 也就是说，为了进行通信，客户端和服务不必共享相同的类型，而只需共享相同的数据协定。 数据协定为每个参数或返回类型精确定义为进行交换而序列化哪些数据（将哪些数据转换为 XML）。  
@@ -67,6 +67,7 @@ ms.locfileid: "54571669"
  有关定义数据协定的 WCF 服务的完整代码示例，请参阅 [Basic Data Contract](../../../../docs/framework/wcf/samples/basic-data-contract.md) 示例。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - [可序列化类型](../../../../docs/framework/wcf/feature-details/serializable-types.md)
@@ -75,7 +76,7 @@ ms.locfileid: "54571669"
 - [数据成员顺序](../../../../docs/framework/wcf/feature-details/data-member-order.md)
 - [数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
-- [数据协定版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [数据协定版本管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
 - [版本容错序列化回调](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
 - [数据成员默认值](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
 - [数据协定序列化程序支持的类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

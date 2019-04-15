@@ -2,19 +2,19 @@
 title: 筛选数据 (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: dc31a73a8ebbe52f7d22984cd747a038e2556c28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61d80674fd858063e77749342a33d714e3a57c6e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634631"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826062"
 ---
 # <a name="filtering-data-c"></a>筛选数据 (C#)
 筛选是指将结果集限制为仅包含满足指定条件的元素的操作。 它也称为选定内容。  
   
  下图演示了对字符序列进行筛选的结果。 筛选操作的谓词指定字符必须为“A”。  
   
- ![LINQ 筛选操作](../../../../csharp/programming-guide/concepts/linq/media/linq_filter.png "LINQ_Filter")  
+ ![显示 LINQ 筛选操作的图表](./media/filtering-data/linq-filter-operation.png)  
   
  下面一节列出了执行所选内容的标准查询运算符方法。  
   

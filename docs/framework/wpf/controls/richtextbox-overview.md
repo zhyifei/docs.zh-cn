@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-ms.openlocfilehash: 689094bda355f095c30d6cc2a462e6d0e630753b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162706"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox 概述
 <xref:System.Windows.Controls.RichTextBox>控件可以显示或编辑流内容，包括段落、 图像、 表、 和的详细信息。 本主题介绍<xref:System.Windows.Controls.TextBox>类，并提供有关如何在两者中使用它的示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和C#。  
-  
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>使用 TextBox 还是 RichTextBox？  
  这两<xref:System.Windows.Controls.RichTextBox>和<xref:System.Windows.Controls.TextBox>允许用户编辑文本，但是，在不同的方案中使用两个控件。 一个<xref:System.Windows.Controls.RichTextBox>当用户编辑带格式的文本、 图像、 表或其他丰富的内容时，是更好的选择。 例如，编辑文档、 文章或博客需要格式、 图像，最好采用以下等<xref:System.Windows.Controls.RichTextBox>。 一个<xref:System.Windows.Controls.TextBox>需系统资源较少则<xref:System.Windows.Controls.RichTextBox>，仅纯文本必须是编辑 （即在窗体中的使用情况） 时，它是理想选择。 请参阅[TextBox 概述](textbox-overview.md)有关详细信息<xref:System.Windows.Controls.TextBox>。 下表总结了的主要功能<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.RichTextBox>。  
@@ -95,5 +94,6 @@ ms.locfileid: "57378192"
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [帮助主题](richtextbox-how-to-topics.md)
 - [TextBox 概述](textbox-overview.md)

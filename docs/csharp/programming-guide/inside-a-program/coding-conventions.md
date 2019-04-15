@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 4bb5a8134bb9cbcdb70830628895338ec83b28a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55716a9955d12ef3a926efe352a0078044de9990
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614115"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326796"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 编码约定（C# 编程指南）
  编码约定可实现以下目的：  
@@ -135,7 +135,7 @@ ms.locfileid: "54614115"
   
 ### <a name="-and-124124-operators"></a>&& 和 || 运算符  
   
--   若要通过跳过不必要的比较来避免异常并提高性能，请在执行比较时使用 [&&](../../../csharp/language-reference/operators/conditional-and-operator.md)（而不是 [&](../../../csharp/language-reference/operators/and-operator.md)），使用 [||](../../../csharp/language-reference/operators/conditional-or-operator.md) （而不是 [|](../../../csharp/language-reference/operators/or-operator.md)），如下面的示例所示。  
+-   若要通过跳过不必要的比较来避免异常并提高性能，请在执行比较时使用 [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-)（而不是 [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-)），使用 [||](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) （而不是 [|](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)），如下面的示例所示。  
   
      [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
@@ -199,4 +199,4 @@ ms.locfileid: "54614115"
 ## <a name="see-also"></a>请参阅
 
 - [Visual Basic 编码约定](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
-- [安全编码准则](../../../standard/security/secure-coding-guidelines.md)
+- [代码安全维护指南](../../../standard/security/secure-coding-guidelines.md)

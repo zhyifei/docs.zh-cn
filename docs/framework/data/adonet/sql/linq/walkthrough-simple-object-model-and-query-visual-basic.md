@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: c6d00271f412829cb8e030c2b9a338f73327977b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724169"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338067"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>演练：简单对象模型和查询 (Visual Basic)
 本演练提供了复杂性最小的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将创建一个可为示例 Northwind 数据库中的 Customers 表建模的实体类。 然后您将创建一个简单查询，用于列出位于伦敦的客户。  
@@ -46,32 +46,32 @@ ms.locfileid: "54724169"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
-1.  在“文件”菜单上，单击“新建项目”。  
+1. 在“文件”菜单上，单击“新建项目”。  
   
-2.  在中**项目类型**窗格**新项目**对话框中，单击**Visual Basic**。  
+2. 在中**项目类型**窗格**新项目**对话框中，单击**Visual Basic**。  
   
-3.  在“模板”窗格中，单击“控制台应用程序”。  
+3. 在“模板”窗格中，单击“控制台应用程序”。  
   
-4.  在中**名称**框中，键入**LinqConsoleApp**。  
+4. 在中**名称**框中，键入**LinqConsoleApp**。  
   
-5.  单击 **“确定”**。  
+5. 单击 **“确定”**。  
   
 ## <a name="adding-linq-references-and-directives"></a>添加 LINQ 引用和指令  
  本演练用到默认情况下您的项目中可能未安装的程序集。 如果`System.Data.Linq`不作为项目中引用列出 (单击**显示所有文件**中**解决方案资源管理器**展开**引用**节点)，请按照中所述添加它以下步骤。  
   
 #### <a name="to-add-systemdatalinq"></a>添加 System.Data.Linq  
   
-1.  在中**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
+1. 在中**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
   
-2.  在中**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，然后单击**确定**。  
+2. 在中**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，然后单击**确定**。  
   
      此程序集即被添加到项目中。  
   
-3.  另外，请在**添加引用**对话框中，单击 **.NET**中，滚动到并单击 System.Windows.Forms，然后单击**确定**。  
+3. 另外，请在**添加引用**对话框中，单击 **.NET**中，滚动到并单击 System.Windows.Forms，然后单击**确定**。  
   
      此程序集（支持本演练中的消息框）即被添加到项目中。  
   
-4.  在 `Module1` 上方添加以下指令：  
+4. 在 `Module1` 上方添加以下指令：  
   
      [!code-vb[DLinqWalk1VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#1)]  
   
@@ -85,13 +85,13 @@ ms.locfileid: "54724169"
      [!code-vb[DLinqWalk1VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#2)]  
   
 ## <a name="designating-properties-on-the-class-to-represent-database-columns"></a>指定类中的属性表示数据库列  
- 在此步骤中，您要完成几项任务。  
+ 在此步骤中，你要完成几项任务。  
   
 -   您要使用 <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性 (Attribute) 指定实体类中的 `CustomerID` 和 `City` 属性 (Property) 表示数据库表中的列。  
   
 -   您要指定 `CustomerID` 属性表示数据库中的主键列。  
   
--   您要指定 `_CustomerID` 和 `_City` 字段用作私有存储字段。 然后，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 就可以直接存储和检索值，而不用使用可能包含业务逻辑的公共访问器。  
+-   您要指定 `_CustomerID` 和 `_City` 字段用作私有存储字段。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以然后存储和检索值直接，而不是使用可能包含业务逻辑的公共访问器。  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>表示两个数据库列的特性  
   
@@ -100,7 +100,7 @@ ms.locfileid: "54724169"
      [!code-vb[DLinqWalk1VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#3)]  
   
 ## <a name="specifying-the-connection-to-the-northwind-database"></a>指定到 Northwind 数据库的连接  
- 在此步骤中，要使用 <xref:System.Data.Linq.DataContext> 对象在您基于代码的数据结构和数据库本身之间建立连接。 <xref:System.Data.Linq.DataContext> 是您从数据库中检索对象和提交更改的主要通道。  
+ 在此步骤中，要使用 <xref:System.Data.Linq.DataContext> 对象在你基于代码的数据结构和数据库本身之间建立连接。 <xref:System.Data.Linq.DataContext> 是您从数据库中检索对象和提交更改的主要通道。  
   
  您还需声明 `Table(Of Customer)`，用作您针对数据库中 Customers 表的查询的逻辑、类型化表。 您将在后续步骤中创建和执行这些查询。  
   
@@ -128,22 +128,22 @@ ms.locfileid: "54724169"
   
 #### <a name="to-execute-the-query"></a>执行查询  
   
-1.  将下面的代码键入或粘贴到 `Sub Main` 方法的结尾（在查询说明之后）：  
+1. 将下面的代码键入或粘贴到 `Sub Main` 方法的结尾（在查询说明之后）：  
   
      [!code-vb[DLinqWalk1AVB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#6)]  
   
-2.  按 F5 调试该应用程序。  
+2. 按 F5 调试该应用程序。  
   
     > [!NOTE]
     >  如果你的应用程序产生运行时错误，请参阅疑难解答一节[通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。  
   
      消息框会显示一个包含六个客户的列表。 控制台窗口会显示生成的 SQL 代码。  
   
-3.  单击“确定”，关闭该消息框。  
+3. 单击“确定”，关闭该消息框。  
   
      应用程序即会关闭。  
   
-4.  在“文件”菜单上，单击“全部保存”。  
+4. 在“文件”菜单上，单击“全部保存”。  
   
      如果您要继续下一演练，您将需要此应用程序。  
   
@@ -153,4 +153,5 @@ ms.locfileid: "54724169"
  如果您希望进行“跨关系进行查询”演练，请务必保存您刚完成的演练的解决方案，这是一项必备条件。  
   
 ## <a name="see-also"></a>请参阅
+
 - [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

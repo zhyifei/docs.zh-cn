@@ -1,18 +1,18 @@
 ---
-title: 如何：作为对象方法调用模型定义的函数
+title: 如何：调用模型定义的函数作为对象方法
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 3b145c3d2b262729fae9a03b7930b286f7641d36
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825714"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304826"
 ---
-# <a name="how-to-call-model-defined-functions-as-object-methods"></a>如何：作为对象方法调用模型定义的函数
+# <a name="how-to-call-model-defined-functions-as-object-methods"></a>如何：调用模型定义的函数作为对象方法
 本主题介绍如何将模型定义函数作为 <xref:System.Data.Objects.ObjectContext> 对象的方法调用或作为自定义类的静态方法调用。 一个*模型定义函数*是概念模型中定义的函数。 本主题中的过程介绍如何直接调用这些函数，而不是从 LINQ to Entities 查询中调用它们。 有关调用模型定义的函数在 LINQ to Entities 查询的信息，请参阅[如何：在查询中调用模型定义的函数](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)。  
   
  无论您是将模型定义函数作为 <xref:System.Data.Objects.ObjectContext> 方法调用，还是作为自定义类的静态方法调用，首先都必须使用 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 将该方法映射到模型定义函数。 但是，当您定义 <xref:System.Data.Objects.ObjectContext> 类的方法时，必须使用 <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> 属性公开 LINQ 提供程序，而当您定义自定义类的静态方法时，必须使用 <xref:System.Linq.IQueryable.Provider%2A> 属性公开 LINQ 提供程序。 有关更多信息，请参见下述过程后面的示例。  
@@ -21,30 +21,30 @@ ms.locfileid: "55825714"
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>将模型定义函数作为 ObjectContext 对象的方法调用  
   
-1.  添加一个源文件，以扩展派生自 <xref:System.Data.Objects.ObjectContext> 类（该类由实体框架工具自动生成）的分部类。 在单独的源文件中定义 CLR 存根可防止在重新生成文件时丢失所做的更改。  
+1. 添加一个源文件，以扩展派生自 <xref:System.Data.Objects.ObjectContext> 类（该类由实体框架工具自动生成）的分部类。 在单独的源文件中定义 CLR 存根可防止在重新生成文件时丢失所做的更改。  
   
-2.  将一个公共语言运行时 (CLR) 方法添加到 <xref:System.Data.Objects.ObjectContext> 类，该方法可执行以下操作：  
+2. 将一个公共语言运行时 (CLR) 方法添加到 <xref:System.Data.Objects.ObjectContext> 类，该方法可执行以下操作：  
   
     -   映射到在概念模型中定义的函数。 若要映射方法，必须将 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 应用于此方法。 请注意，此特性的 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 和 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 参数分别是概念模型的命名空间名称和概念模型中的函数名称。 LINQ 的函数名称解析区分大小写。  
   
     -   返回由 <xref:System.Linq.IQueryProvider.Execute%2A> 属性返回的 <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> 方法的结果。  
   
-3.  将此方法作为 <xref:System.Data.Objects.ObjectContext> 类的实例的一个成员调用。  
+3. 将此方法作为 <xref:System.Data.Objects.ObjectContext> 类的实例的一个成员调用。  
   
 ### <a name="to-call-a-model-defined-function-as-static-method-on-a-custom-class"></a>将模型定义函数作为自定义类的静态方法调用  
   
-1.  向应用程序添加一个类，该类带有一个静态方法，可执行以下操作：  
+1. 向应用程序添加一个类，该类带有一个静态方法，可执行以下操作：  
   
     -   映射到在概念模型中定义的函数。 若要映射方法，必须将 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 应用于此方法。 请注意，此特性的 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 和 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 参数分别是概念模型的命名空间名称和概念模型中的函数名称。  
   
-    -   接受 <xref:System.Linq.IQueryable> 参数。  
+    -   接受 <xref:System.Linq.IQueryable> 自变量。  
   
     -   返回由 <xref:System.Linq.IQueryProvider.Execute%2A> 属性返回的 <xref:System.Linq.IQueryable.Provider%2A> 方法的结果。  
   
-2.  将此方法作为自定义类的一个静态成员调用  
+2. 将此方法作为自定义类的一个静态成员调用  
   
 ## <a name="example"></a>示例  
- **模型定义函数作为 ObjectContext 对象的方法调用**  
+ **将模型定义函数作为 ObjectContext 对象的一个方法调用**  
   
  下面的示例演示如何将模型定义函数作为 <xref:System.Data.Objects.ObjectContext> 对象的一个方法调用。 该示例使用[AdventureWorks 销售模型](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "55825714"
  [!code-vb[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#9)]  
   
 ## <a name="example"></a>示例  
- **模型定义函数作为自定义类的静态方法调用**  
+ **将模型定义函数作为自定义类的静态方法调用**  
   
  下一个示例演示如何将模型定义函数作为自定义类的静态方法调用。 该示例使用[AdventureWorks 销售模型](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。  
   
@@ -106,6 +106,7 @@ ms.locfileid: "55825714"
  [!code-vb[DP L2E Methods on ObjectContext#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#6)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [.edmx 文件概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [LINQ to Entities 中的查询](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [在 LINQ to Entities 查询中调用函数](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

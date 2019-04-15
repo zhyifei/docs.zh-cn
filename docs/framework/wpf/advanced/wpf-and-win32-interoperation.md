@@ -7,18 +7,16 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: e5a044166023069cdb6e1091339044cd7f964825
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 71c454edc6a124f732f1e6b56e25c28671fa11b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377109"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314407"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF 和 Win32 互操作
-本主题概述如何互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 代码。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，如果对 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 代码投入很大，重复使用部分此代码可能更有效。  
-  
+本主题概述如何互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 代码。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用于创建应用程序的丰富环境。 但是，如果对 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 代码投入很大，重复使用部分此代码可能更有效。  
 
-  
 <a name="basics"></a>   
 ## <a name="wpf-and-win32-interoperation-basics"></a>WPF 和 Win32 互操作基础知识  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 代码间的互操作存在两种基本方法。  
@@ -31,7 +29,7 @@ ms.locfileid: "57377109"
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF 互操作项目  
- 虽然 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 为托管代码，但大多数现有 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程序是以非托管 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 编写而成。  无法从真正的非托管程序调用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 但是，通过使用 [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] 编译器的 `/clr` 选项，可创建托管与非托管混合的程序，在此程序中可无缝混合托管和非托管 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 调用。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] are managed code, but most existing [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2s托管的代码中，但大多数现有[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程序编写的非托管[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]。en无法从真正的非托管程序调用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。n但是，通过使用 [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] 编译器的 `/clr` 选项，可创建托管与非托管混合的程序，在此程序中可无缝混合托管和非托管 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 调用。  
   
  存在的一个项目级问题是无法将 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 文件编译到 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 项目中。  可通过一些项目分离技术对此进行弥补。  
   
@@ -60,15 +58,15 @@ ms.locfileid: "57377109"
 ## <a name="hosting-wpf-content-in-a-microsoft-win32-window"></a>在 Microsoft Win32 窗口中承载 WPF 内容  
  托管的关键[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]上[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口是<xref:System.Windows.Interop.HwndSource>类。 此类在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口中包装 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容，以便 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容可作为子窗口并入 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 以下方法在单个应用程序中合并 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   
-1.  将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容（内容根元素）作为托管类实现。 通常情况下，该类继承的一个类可以包含多个子元素和/或使用作为根元素，如<xref:System.Windows.Controls.DockPanel>或<xref:System.Windows.Controls.Page>。 后续步骤中，此类被称为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容类，此类的实例被称为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象。  
+1. 将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容（内容根元素）作为托管类实现。 通常情况下，该类继承的一个类可以包含多个子元素和/或使用作为根元素，如<xref:System.Windows.Controls.DockPanel>或<xref:System.Windows.Controls.Page>。 后续步骤中，此类被称为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容类，此类的实例被称为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象。  
   
-2.  使用 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 实现 [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)] 应用程序。 若要以现有非托管 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 应用程序开始，可更改项目设置将 `/clr` 编译器标志包括在内，以此来允许应用程序调用托管代码（本主题中未介绍支持 `/clr` 编译可能所需内容的完整范围）。  
+2. 使用 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 实现 [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)] 应用程序。 若要以现有非托管 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 应用程序开始，可更改项目设置将 `/clr` 编译器标志包括在内，以此来允许应用程序调用托管代码（本主题中未介绍支持 `/clr` 编译可能所需内容的完整范围）。  
   
-3.  将线程处理模型设置为单线程单元 (STA)。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用此线程模型。  
+3. 将线程处理模型设置为单线程单元 (STA)。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用此线程模型。  
   
-4.  处理窗口过程中的 WM_CREATE 通知。  
+4. 处理窗口过程中的 WM_CREATE 通知。  
   
-5.  在处理程序（或处理程序调用的函数）中，执行以下操作：  
+5. 在处理程序（或处理程序调用的函数）中，执行以下操作：  
   
     1.  创建一个新<xref:System.Windows.Interop.HwndSource>对象，将父窗口 HWND 作为其`parent`参数。  
   
@@ -78,11 +76,11 @@ ms.locfileid: "57377109"
   
     4.  <xref:System.Windows.Interop.HwndSource>对象<xref:System.Windows.Interop.HwndSource.Handle%2A>属性包含窗口句柄 (HWND)。 要获取可在应用程序的非托管部分中使用的 HWND，需将 `Handle.ToPointer()` 强制装换为 HWND。  
   
-6.  实现一个托管类，该类包含一个用于保存对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象的引用的静态字段。 此类可以获取对引用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容对象从你[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]的代码，但重要的是，它会阻止的详细信息在<xref:System.Windows.Interop.HwndSource>无意中进行垃圾回收。  
+6. 实现一个托管类，该类包含一个用于保存对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象的引用的静态字段。 此类可以获取对引用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容对象从你[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]的代码，但重要的是，它会阻止的详细信息在<xref:System.Windows.Interop.HwndSource>无意中进行垃圾回收。  
   
-7.  通过将处理程序附加到一个或多个 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象事件，接收 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象的通知。  
+7. 通过将处理程序附加到一个或多个 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象事件，接收 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象的通知。  
   
-8.  通过使用存储在静态字段中的引用设置属性、调用方法等，与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象进行通信。  
+8. 通过使用存储在静态字段中的引用设置属性、调用方法等，与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容对象进行通信。  
   
 > [!NOTE]
 >  如果生成一个单独的程序集然后对其进行引用，对于步骤 1，可使用内容类的默认分部类在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中完成部分或全部 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容类定义。 虽然通常包括<xref:System.Windows.Application>对象作为编译的一部分[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]程序集，您不的最终使用该<xref:System.Windows.Application>作为互操作的一部分，您只需使用一个或多个用于根类[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件引用为应用程序和引用其分部类。 该过程的其余部分基本与上述相似。  
@@ -93,17 +91,17 @@ ms.locfileid: "57377109"
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>在 WPF 中承载 Microsoft Win32 窗口  
  托管的关键[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]内其他窗口[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容是<xref:System.Windows.Interop.HwndHost>类。 该类在可添加到 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素树的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素中包装窗口。 <xref:System.Windows.Interop.HwndHost> 此外支持[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，让你执行进程所承载的窗口消息之类的任务。 基本过程：  
   
-1.  为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序创建一个元素树（可通过代码或标记）。 在元素树中查找相应的许可点其中<xref:System.Windows.Interop.HwndHost>实现可添加为子元素。 剩余步骤中，此元素称为保留元素。  
+1. 为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序创建一个元素树（可通过代码或标记）。 在元素树中查找相应的许可点其中<xref:System.Windows.Interop.HwndHost>实现可添加为子元素。 剩余步骤中，此元素称为保留元素。  
   
-2.  派生自<xref:System.Windows.Interop.HwndHost>若要创建一个对象，保存你[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]内容。  
+2. 派生自<xref:System.Windows.Interop.HwndHost>若要创建一个对象，保存你[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]内容。  
   
-3.  在此主机类，重写<xref:System.Windows.Interop.HwndHost>方法<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>。 返回承载窗口的 HWND。 可能需要将实际控件包装为返回窗口的子窗口；在承载窗口中包装控件为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容从控件接收通知提供了一种简单的方式。 此方法有助于更正一些有关主机控件边界处消息处理的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 问题。  
+3. 在此主机类，重写<xref:System.Windows.Interop.HwndHost>方法<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>。 返回承载窗口的 HWND。 可能需要将实际控件包装为返回窗口的子窗口；在承载窗口中包装控件为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容从控件接收通知提供了一种简单的方式。 此方法有助于更正一些有关主机控件边界处消息处理的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 问题。  
   
-4.  重写<xref:System.Windows.Interop.HwndHost>方法<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>和<xref:System.Windows.Interop.HwndHost.WndProc%2A>。 这样做的目的是处理清除和删除对承载内容的引用，尤其是在已创建对非托管对象的引用的情况下。  
+4. 重写<xref:System.Windows.Interop.HwndHost>方法<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>和<xref:System.Windows.Interop.HwndHost.WndProc%2A>。 这样做的目的是处理清除和删除对承载内容的引用，尤其是在已创建对非托管对象的引用的情况下。  
   
-5.  在代码隐藏文件中，创建控件承载类的一个实例，并使其成为保留元素的子元素。 通常会使用事件处理程序如<xref:System.Windows.FrameworkElement.Loaded>，或使用分部类构造函数。 但也可通过运行时行为添加互操作内容。  
+5. 在代码隐藏文件中，创建控件承载类的一个实例，并使其成为保留元素的子元素。 通常会使用事件处理程序如<xref:System.Windows.FrameworkElement.Loaded>，或使用分部类构造函数。 但也可通过运行时行为添加互操作内容。  
   
-6.  处理选择的窗口消息，例如控件通知。 方法有两种。 两种方法提供对消息流的相同访问权限，因此你的选择很大程度上取决于编程简便性。  
+6. 处理选择的窗口消息，例如控件通知。 方法有两种。 两种方法提供对消息流的相同访问权限，因此你的选择很大程度上取决于编程简便性。  
   
     -   实现消息处理的所有消息 （而不仅仅是关闭消息） 中的重写<xref:System.Windows.Interop.HwndHost>方法<xref:System.Windows.Interop.HwndHost.WndProc%2A>。  
   
@@ -111,7 +109,7 @@ ms.locfileid: "57377109"
   
     -   无法处理超出进程使用的 windows 中的消息<xref:System.Windows.Interop.HwndHost.WndProc%2A>。  
   
-7.  通过使用平台调用来调用非托管 `SendMessage` 函数，与承载窗口通信。  
+7. 通过使用平台调用来调用非托管 `SendMessage` 函数，与承载窗口通信。  
   
  按照这些步骤，创建一个处理鼠标输入的应用程序。 可以通过实现为承载窗口添加 tab 键支持<xref:System.Windows.Interop.IKeyboardInputSink>接口。  
   
@@ -157,8 +155,9 @@ ms.locfileid: "57377109"
  接口仅对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 区域间的转换过程中发生的事件提供支持。 在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 区域内，Tab 键行为完全受 Tab 键的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 实现逻辑（若有）控制。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>
 - <xref:System.Windows.Interop>
-- [演练：中承载 Win32 控件在 WPF 中](walkthrough-hosting-a-win32-control-in-wpf.md)
-- [演练：Win32 中承载 WPF 内容](walkthrough-hosting-wpf-content-in-win32.md)
+- [演练：在 WPF 中承载 Win32 控件](walkthrough-hosting-a-win32-control-in-wpf.md)
+- [演练：在 Win32 中承载 WPF 内容](walkthrough-hosting-wpf-content-in-win32.md)

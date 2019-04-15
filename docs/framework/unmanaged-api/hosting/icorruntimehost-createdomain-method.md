@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 662a47f75f2eef75b39ee877ea4645311cae6210
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ea63627bc1e689c93634c8fe8b9048b271758573
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156112"
 ---
 # <a name="icorruntimehostcreatedomain-method"></a>ICorRuntimeHost::CreateDomain 方法
 创建应用程序域。 调用方会接收类型的接口指针<xref:System._AppDomain>类型的实例到<xref:System.AppDomain?displayProperty=nameWithType>。  
@@ -66,6 +66,7 @@ HRESULT CreateDomain (
  **.NET framework 版本：** 1.0, 1.1  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - [ICorRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

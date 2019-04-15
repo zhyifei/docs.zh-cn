@@ -2,12 +2,12 @@
 title: 自定义编码器
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 7b68725346a2de23d405ed21ead93e3a6a8374e6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190569"
 ---
 # <a name="custom-encoders"></a>自定义编码器
 本主题讨论如何创建自定义编码器。  
@@ -30,16 +30,15 @@ ms.locfileid: "58411364"
   
  WCF 提供了以下类型的绑定元素派生自<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>可以为文本、 二进制和消息传输优化机制 (MTOM) 编码提供的类：  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>：互操作性最但效率最低的 XML 消息编码器。 Web 服务或 Web 服务客户端通常都能理解文本 XML。 但是，将大型二进制数据块作为文本传输不是有效的传输方式。  
+-   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>:互操作性最但效率最低的 XML 消息编码器。 Web 服务或 Web 服务客户端通常都能理解文本 XML。 但是，将大型二进制数据块作为文本传输不是有效的传输方式。  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>：表示绑定元素，它指定的字符编码和消息版本控制用于基于二进制的 XML 消息。 这是最有效的编码选项，但互操作性最低，因为它仅支持由 WCF 终结点。  
+-   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>:表示绑定元素，它指定的字符编码和消息版本控制用于基于二进制的 XML 消息。 这是最有效的编码选项，但互操作性最低，因为它仅支持由 WCF 终结点。  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>：表示用于使用消息传输优化机制 (MTOM) 编码的消息的消息版本控制和指定的字符编码的绑定元素。 MTOM 是一种用于在 WCF 消息中传输二进制数据的有效技术。 MTOM 编码器力图在效率和互操作性之间取得平衡。 MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>:表示用于使用消息传输优化机制 (MTOM) 编码的消息的消息版本控制和指定的字符编码的绑定元素。 MTOM 是一种用于在 WCF 消息中传输二进制数据的有效技术。 MTOM 编码器力图在效率和互操作性之间取得平衡。 MTOM 编码以文本形式传输大多数 XML，但是会通过按原样（即不转换为文本）的方式传输来优化大型二进制数据块。  
   
  绑定元素创建二进制、MTOM 或文本 <xref:System.ServiceModel.Channels.MessageEncoderFactory>。 工厂创建二进制、MTOM 或文本 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 实例。 通常，只有一个实例。 但是如果使用会话，将为每个会话提供一个不同的编码器。 二进制编码器用此来调整动态字典（请参见“XML 基础结构”）。  
   
- 
-  <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> 和 <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> 方法是编码器的核心。 这些方法的作用是从流或 <xref:System.Byte> 数组中读取消息。 当在缓冲模式下进行传输时，将使用字节数组。 消息总是写入流中。 如果传输必须缓冲消息，它将提供一个执行缓冲的流。  
+ <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> 和 <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> 方法是编码器的核心。 这些方法的作用是从流或 <xref:System.Byte> 数组中读取消息。 当在缓冲模式下进行传输时，将使用字节数组。 消息总是写入流中。 如果传输必须缓冲消息，它将提供一个执行缓冲的流。  
   
  其他成员则使用支持内容、媒体类型和 <xref:System.ServiceModel.Channels.MessageEncoder.MessageVersion%2A>。 传输调用这些编码器方法来测试传入的消息是否可以使用此方法解码，或者确定传出消息是否对此编码器有效。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "58411364"
 ### <a name="pooling"></a>Pooling  
  每个编码器实现都会尝试生成尽可能多的池。 减少分配是提高托管代码性能的主要方式。 为了完成此生成池操作，实现将使用 `SynchronizedPool` 类。 C# 文件包含此类使用的其他优化的说明。  
   
- <xref:System.Xml.XmlDictionaryReader> 和 <xref:System.Xml.XmlDictionaryWriter> 实例均存入池中，并重新初始化以防止对每条消息添加新的分配。 对于读取器，`OnClose` 回调将在调用 `Close()` 时回收读取器。 编码器也会在构造消息时回收某些已使用的消息状态对象。 这些池的大小可以通过派生自 `MaxReadPoolSize` 的这三个类之一的 `MaxWritePoolSize` 和 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 属性配置。  
+ <xref:System.Xml.XmlDictionaryReader> 和<xref:System.Xml.XmlDictionaryWriter>共用和重新初始化以防止添加新的每个消息分配实例。 对于读取器，`OnClose` 回调将在调用 `Close()` 时回收读取器。 编码器也会在构造消息时回收某些已使用的消息状态对象。 这些池的大小可以通过派生自 `MaxReadPoolSize` 的这三个类之一的 `MaxWritePoolSize` 和 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 属性配置。  
   
 ### <a name="binary-encoding"></a>二进制编码  
  当二进制编码使用会话时，动态字典字符串必须与消息的接收方通信。 这可以通过在消息之前添加动态字典字符串实现。 接收方将剥离这些字符串，然后将它们添加到会话中，再处理消息。 要正确传递字典字符串就需要对传输进行缓冲。  
@@ -61,8 +60,7 @@ ms.locfileid: "58411364"
  除了处理动态字典关键字之外，缓冲的会话消息将采用独有的方式接收。 二进制编码器不是对文档创建一个编码器并处理该文档，而是使用内部 `MessagePatterns` 类解构二进制流。 其理念是，大多数消息都具有某组显示在特定的顺序时生成的 WCF 的标头。 模式系统将基于它所期待的方式拆分消息。 如果成功了，它将初始化 <xref:System.ServiceModel.Channels.MessageHeaders> 对象而无需分析 XML。 如果不成功，将转而使用标准方法。  
   
 ### <a name="mtom-encoding"></a>MTOM 编码  
- 
-  <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 类具有一个称为 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A> 的附加配置属性。 此属性用于设置在读取消息的过程中允许缓冲的数据量上限。 XML 信息集 (Infoset)，或其他 MIME 部分，可能需要进行缓冲以便将所有 MIME 部分集合到一条消息中。  
+ <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 类具有一个称为 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A> 的附加配置属性。 此属性用于设置在读取消息的过程中允许缓冲的数据量上限。 XML 信息集 (Infoset)，或其他 MIME 部分，可能需要进行缓冲以便将所有 MIME 部分集合到一条消息中。  
   
  为了可以正确使用 HTTP，内部 MTOM 消息编码器类为 `GetContentType`（内部）和 `WriteMessage` 提供了一些内部 API，这些 API 是公用的，可以重写。 必须进行更多的通信以确保 HTTP 标头中的值与 MIME 标头中的值一致。  
   
@@ -81,9 +79,9 @@ ms.locfileid: "58411364"
   
 -   您必须重写的此类的主要方法包括：  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>，此方法采用 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 对象并将其写入 <xref:System.IO.Stream> 对象。  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> 此方法采用<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>对象，并将其写入到<xref:System.IO.Stream>对象。  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>，此方法采用 <xref:System.IO.Stream> 对象以及最大标头大小，并返回一个 <xref:System.ServiceModel.Channels.Message> 对象。  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> 此方法采用<xref:System.IO.Stream>对象并最大标头大小，并返回<xref:System.ServiceModel.Channels.Message>对象。  
   
  你写入这些方法中的代码处理标准传输协议和你自定义的编码之间的转换。  
   
@@ -94,9 +92,10 @@ ms.locfileid: "58411364"
  有两个示例提供使用 WCF 来说明此过程的示例代码：[自定义消息编码器：自定义文本编码器](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)和[自定义消息编码器：压缩编码器](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.MessageEncoderFactory>
 - <xref:System.ServiceModel.Channels.MessageEncoder>
 - [数据传输体系结构概述](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
 - [选择消息编码器](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [选择传输方式](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

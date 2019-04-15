@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerNodeAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: 0b50f782-ca06-4a82-aa7f-71f78ddc5177
-ms.openlocfilehash: 1ed037c548f1d833f2a20118ee1e017cd19e3391
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 315122914ebcb3e8e4d72c8d976026a126306168
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219000"
 ---
 # <a name="systemservicemodelchannelspeernodeauthenticationfailure"></a>System.ServiceModel.Channels.PeerNodeAuthenticationFailure
 与潜在邻居的安全握手没有成功。  
@@ -21,6 +21,7 @@ ms.locfileid: "54628231"
  确保所有邻居都具有适当的安全凭据。  
   
 ## <a name="see-also"></a>请参阅
+
 - [对等通道安全性](../../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
 - [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)

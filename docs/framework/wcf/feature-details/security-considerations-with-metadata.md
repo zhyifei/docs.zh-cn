@@ -2,12 +2,12 @@
 title: 元数据的安全注意事项
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0dc060475f868923e8c7e4c87ef43ef5912c7ac5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172960"
 ---
 # <a name="security-considerations-with-metadata"></a>元数据的安全注意事项
 时使用的元数据功能的 Windows Communication Foundation (WCF) 中，请考虑发布、 检索和使用服务元数据的安全隐患。  
@@ -26,8 +26,7 @@ ms.locfileid: "58411908"
  当以不安全方式检索服务元数据时，元数据可能会被篡改或伪造。 被篡改的元数据可能会使您的客户端重定向到恶意服务，包含有害的安全设置或包含恶意 XML 结构。 元数据文档可能很大，并且会频繁地保存到文件系统中。 若要防止篡改或伪造，请使用安全绑定来请求服务元数据（如果有安全绑定）。  
   
 ## <a name="using-safe-techniques-for-processing-metadata"></a>使用安全技术处理元数据  
- 使用标准化协议（如 WS-MetadataExchange (MEX)）通过网络从服务频繁检索服务元数据。 许多元数据格式包含引用机制，用以指向其他元数据。 
-  <xref:System.ServiceModel.Description.MetadataExchangeClient> 类型会为您自动处理 Web 服务描述语言 (WSDL) 文档、XML 架构和 MEX 文档中的引用。 通过检索到的元数据创建的 <xref:System.ServiceModel.Description.MetadataSet> 对象的大小与使用的 <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> 实例的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 值以及该 `MaxReceivedMessageSize` 实例正在使用的绑定的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 值成正比。 将这些配额设置为您的方案所指示的相应值。  
+ 使用标准化协议（如 WS-MetadataExchange (MEX)）通过网络从服务频繁检索服务元数据。 许多元数据格式包含引用机制，用以指向其他元数据。 <xref:System.ServiceModel.Description.MetadataExchangeClient> 类型会为您自动处理 Web 服务描述语言 (WSDL) 文档、XML 架构和 MEX 文档中的引用。 通过检索到的元数据创建的 <xref:System.ServiceModel.Description.MetadataSet> 对象的大小与使用的 <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> 实例的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 值以及该 `MaxReceivedMessageSize` 实例正在使用的绑定的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 值成正比。 将这些配额设置为您的方案所指示的相应值。  
   
  在 WCF 中，服务元数据作为 XML 进行处理。 当处理 XML 文档时，应用程序应保护自己免受恶意 XML 结构的破坏。 使用<xref:System.Xml.XmlDictionaryReader>与处理 XML 时适当配额，并且还设置<xref:System.Xml.XmlTextReader.DtdProcessing%2A>属性设置为<xref:System.Xml.DtdProcessing.Prohibit>。  
   
@@ -40,5 +39,6 @@ ms.locfileid: "58411908"
  服务的应用程序配置文件可以控制是否发布元数据以及如何发布元数据。 最好利用适当的访问控制列表 (ACL) 来保护应用程序配置文件，以确保攻击者无法修改此类设置。  
   
 ## <a name="see-also"></a>请参阅
+
 - [如何：保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
 - [安全性](../../../../docs/framework/wcf/feature-details/security.md)

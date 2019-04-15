@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], about RichTextBox control
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-ms.openlocfilehash: ded2c9bb0e5b3320de700ce6126710314ed9e4f2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201593"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件用于显示、 输入和操作带有格式的文本。 <xref:System.Windows.Forms.RichTextBox>控件的功能无所不包<xref:System.Windows.Forms.TextBox>控件的作用，但它还可以显示字体、 颜色和链接; 从文件; 加载文本和嵌入的图像并查找指定的字符。 <xref:System.Windows.Forms.RichTextBox>控件通常用于提供文本操作和显示功能，类似于 Microsoft Word 等文字处理应用程序。 像<xref:System.Windows.Forms.TextBox>控件，<xref:System.Windows.Forms.RichTextBox>控件可以显示滚动条; 但不同于<xref:System.Windows.Forms.TextBox>控件，其默认设置将显示水平和垂直滚动条，根据需要并包含额外的滚动条设置。  
@@ -25,6 +25,7 @@ Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件用于显示、 输�
  可以撤消和重复大多数编辑操作中的<xref:System.Windows.Forms.RichTextBox>控件通过调用<xref:System.Windows.Forms.TextBoxBase.Undo%2A>和<xref:System.Windows.Forms.RichTextBox.Redo%2A>方法。 <xref:System.Windows.Forms.RichTextBox.CanRedo%2A>方法使您能够确定用户已撤消的上一个操作是否可以重新应用到控件。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 控件](richtextbox-control-windows-forms.md)
 - [TextBox 控件概述](textbox-control-overview-windows-forms.md)

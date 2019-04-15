@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30722
 ms.assetid: 6f452da8-6ef8-41fd-9ab8-6f681cf7d433
-ms.openlocfilehash: 0825ce16869aece54919fa1a514b29f2b49faa44
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7a3b460e7abb0e673457ca6abee2a195912715ce
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843430"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305658"
 ---
 # <a name="evaluation-of-expression-or-statement-timed-out"></a>表达式或语句的计算已超时
 表达式的计算未及时完成。  
@@ -21,9 +21,9 @@ ms.locfileid: "58843430"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  验证输入的代码正确。  
+1. 验证输入的代码正确。  
   
-2.  简化你的表达式，使花费更少的时间来执行。  
+2. 简化你的表达式，使花费更少的时间来执行。  
   
 ## <a name="see-also"></a>请参阅
 

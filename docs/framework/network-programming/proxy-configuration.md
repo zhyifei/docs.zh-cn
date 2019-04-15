@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 30b61a662170b87a557a1a2ea094301ba6401742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200540"
 ---
 # <a name="proxy-configuration"></a>代理配置
 代理服务器处理客户端对资源的请求。 代理可以从其缓存中返回已请求的资源，或将请求转发到资源驻留的服务器。 代理可以通过减少发送到远程服务器的请求数量来提高网络性能。 代理还可以用于限制对资源的访问。  
@@ -55,9 +55,9 @@ ms.locfileid: "54608662"
   
 |特性、属性或配置文件设置|说明|  
 |--------------------------------------------------------|-----------------|  
-|`proxyaddress` 或 <xref:System.Net.WebProxy.Address>|要使用的代理地址。|  
-|`bypassonlocal` 或 <xref:System.Net.WebProxy.BypassProxyOnLocal>|控制是否对本地地址不使用代理。|  
-|`bypasslist` 或 <xref:System.Net.WebProxy.BypassArrayList>|用正则表达式描述不使用代理的一组地址。|  
+|`proxyaddress` or <xref:System.Net.WebProxy.Address>|要使用的代理地址。|  
+|`bypassonlocal` or <xref:System.Net.WebProxy.BypassProxyOnLocal>|控制是否对本地地址不使用代理。|  
+|`bypasslist` or <xref:System.Net.WebProxy.BypassArrayList>|用正则表达式描述不使用代理的一组地址。|  
 |`usesystemdefault`|控制是否应从用户的 Internet Explorer 代理设置读取静态代理设置（代理地址、跳过列表和跳过本地）。 如果此值设置为 `true`，那么将使用来自 Internet Explorer 的静态代理设置。 在 .NET Framework 2.0 中，当这个值设置为 `true` 时，Internet Explorer 代理设置不会被配置文件中的其他代理设置替代。 在 .NET Framework 1.1 中，Internet Explorer 代理设置可以被配置文件中的其他代理设置替代。<br /><br /> 如果此值设置为 `false` 或未设置，那么静态代理设置可在配置中指定并将替代 Internet Explorer 代理设置。 此外，此值必须设置为 `false` 或不设置，才能启用自适应代理。|  
   
  以下示例显示了一个典型的静态代理配置。  
@@ -76,6 +76,7 @@ ms.locfileid: "54608662"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
 - [自动代理检测](../../../docs/framework/network-programming/automatic-proxy-detection.md)

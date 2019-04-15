@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545463"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307452"
 ---
 # <a name="operators-c-programming-guide"></a>运算符（C# 编程指南）
 
@@ -63,7 +63,7 @@ ms.locfileid: "58545463"
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|标识|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|求反|  
-|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|逻辑求反|  
+|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|逻辑求反|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|按位求反|  
 |[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|前递增|  
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|前递减|  
@@ -86,7 +86,7 @@ ms.locfileid: "58545463"
   
  **移位运算符**  
   
-|表达式|说明|  
+|Expression|说明|  
 |----------------|-----------------|  
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|左移|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|右移|  
@@ -109,15 +109,15 @@ ms.locfileid: "58545463"
 |x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|等于|  
 |x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|不等于|  
   
- **逻辑、条件和 Null 运算符**  
+ **逻辑、条件和 null 运算符**  
   
 |类别|表达式|说明|  
 |--------------|----------------|-----------------|  
 |逻辑“与”|x [&](../../../csharp/language-reference/operators/and-operator.md) y|整型按位“与”，布尔型逻辑“与”|  
 |逻辑 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整数型位 XOR，布尔型逻辑 XOR|  
 |逻辑“或”|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整数型位 OR，布尔型逻辑 OR|  
-|条件“与”|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|仅当 x 为 True 时计算 y|  
-|条件“或”|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|仅当 x 为 False 时计算 y|  
+|条件“与”|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|仅当 x 为 True 时计算 y|  
+|条件“或”|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|仅当 x 为 False 时计算 y|  
 |null 合并|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|如果 x 为 Null，则计算结果为 y，否则计算结果为 x|  
 |条件运算|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|如果 x 为 True，则计算结果为 y；如果 x 为 False 则计算结果为 z|  
   

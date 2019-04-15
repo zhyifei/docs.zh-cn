@@ -15,12 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: b4395d26114425556f0457f03667d0f95f786ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78ad06107155408b2aca854a8251c21a24c6577a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166850"
 ---
 # <a name="web-and-socket-permissions"></a>Web 和套接字权限
 <xref:System.Net.WebPermission> 和 <xref:System.Net.SocketPermission> 类为使用 <xref:System.Net> 命名空间的应用程序提供网络安全性。 WebPermission 类控制应用程序从 URI 请求数据或向 Internet 提供 URI 的权限。 SocketPermission 类控制应用程序使用 <xref:System.Net.Sockets.Socket> 在本地端口接受数据或使用传输协议连接其他地址的远程设备的权限（基于主机、端口号和套接字的传输协议）。  
@@ -34,5 +34,6 @@ ms.locfileid: "54677636"
  对于 WebPermission 实例，“接受”意味着应用程序可以将 WebPermission 控制的 URI 导出到外界；“连接”意味着应用程序可以访问该 URI（无论它是远程还是本地的）。  
   
 ## <a name="see-also"></a>请参阅
+
 - [安全性](../../../docs/standard/security/index.md)
 - [网络编程中的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)

@@ -2,12 +2,12 @@
 title: 服务：Calls Failed Per Second（每秒失败的调用次数）
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-ms.openlocfilehash: a043cf30fa67707aca3edf50cf23372ade5e5a42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d87d5f06d0c9a3849ec80a3d1c7badefde7cf372
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167487"
 ---
 # <a name="service-calls-failed-per-second"></a>服务：Calls Failed Per Second（每秒失败的调用次数）
 计数器名称：每秒失败的调用。  
@@ -26,4 +26,5 @@ ms.locfileid: "54559887"
  此服务中每出现一个未处理异常，此计数器就会递增。  
   
 ## <a name="see-also"></a>请参阅
-- [在协定和服务中指定并处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+
+- [在协定和服务中指定和处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 2bbdcc8e5a55f9d2cdbb80bf83443f0ad8850452
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ae2aa4c5629096ee7d888e7c4e334c3b6696db3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105282"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323312"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>如何：使用 PrincipalPermissionAttribute 类限制访问
 控制对 Windows 域计算机上的资源的访问是一项基本的安全任务。 例如，应该只有某些用户才能查看敏感数据，例如工资单信息。 本主题解释如何通过要求用户属于某个预定义组来限制对方法的访问。 有关工作示例，请参阅[对服务操作的授权访问](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)。  
@@ -23,25 +23,25 @@ ms.locfileid: "59105282"
   
 ### <a name="to-create-a-windows-group"></a>创建 Windows 组  
   
-1.  打开**计算机管理**控制台。  
+1. 打开**计算机管理**控制台。  
   
-2.  在左面板中，单击**本地用户和组**。  
+2. 在左面板中，单击**本地用户和组**。  
   
-3.  右键单击**组**，然后单击**新建组**。  
+3. 右键单击**组**，然后单击**新建组**。  
   
-4.  在中**组名称**框中，键入新组的名称。  
+4. 在中**组名称**框中，键入新组的名称。  
   
-5.  在中**说明**框中，键入新组的说明。  
+5. 在中**说明**框中，键入新组的说明。  
   
-6.  单击**添加**按钮将新成员添加到组。  
+6. 单击**添加**按钮将新成员添加到组。  
   
-7.  如果你已经将自己添加到该组中，并且想要测试下面的代码，则必须注销计算机并重新登录，以便将自己包括到该组中。  
+7. 如果你已经将自己添加到该组中，并且想要测试下面的代码，则必须注销计算机并重新登录，以便将自己包括到该组中。  
   
 ### <a name="to-demand-user-membership"></a>要求用户具有成员资格  
   
-1.  打开包含实现的服务协定代码的 Windows Communication Foundation (WCF) 代码文件。 有关实现协定的详细信息，请参阅[实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)。  
+1. 打开包含实现的服务协定代码的 Windows Communication Foundation (WCF) 代码文件。 有关实现协定的详细信息，请参阅[实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)。  
   
-2.  将 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 属性应用于每个必须限制到特定组的方法。 将 <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 属性设置为 <xref:System.Security.Permissions.SecurityAction.Demand>，并将 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 属性设置为组名称。 例如：  
+2. 将 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 属性应用于每个必须限制到特定组的方法。 将 <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 属性设置为 <xref:System.Security.Permissions.SecurityAction.Demand>，并将 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 属性设置为组名称。 例如：  
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
@@ -56,16 +56,16 @@ ms.locfileid: "59105282"
   
 #### <a name="to-control-access-using-a-certificate"></a>使用证书控制访问  
   
-1.  将 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 类应用于您要对其访问进行限制的方法。  
+1. 将 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 类应用于您要对其访问进行限制的方法。  
   
-2.  将属性的操作设置为 <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>。  
+2. 将属性的操作设置为 <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>。  
   
-3.  将 `Name` 属性设置为包含主题名称和证书指纹的字符串。 用一个分号和一个空格将这两个值分隔开，如下面的示例所示：  
+3. 将 `Name` 属性设置为包含主题名称和证书指纹的字符串。 用一个分号和一个空格将这两个值分隔开，如下面的示例所示：  
   
      [!code-csharp[c_PrincipalPermissionAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#2)]
      [!code-vb[c_PrincipalPermissionAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#2)]  
   
-4.  将 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 属性设置为 <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>，如下面的配置示例所示：  
+4. 将 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 属性设置为 <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>，如下面的配置示例所示：  
   
     ```xml  
     <behaviors>  

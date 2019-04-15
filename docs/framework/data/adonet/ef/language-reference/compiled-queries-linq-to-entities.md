@@ -1,18 +1,18 @@
 ---
-title: 已编译的查询 (LINQ to Entities)
+title: 编译的查询 (LINQ to Entities)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: d261418136cfc799e7891da02b2bd8174cf8340a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193065"
 ---
-# <a name="compiled-queries--linq-to-entities"></a>已编译的查询 (LINQ to Entities)
+# <a name="compiled-queries--linq-to-entities"></a>编译的查询 (LINQ to Entities)
 如果应用程序需要在实体框架中多次执行结构类似的查询，通常可以通过仅编译查询一次并在每次执行时使用不同参数的方法来提高性能。 例如，某应用程序要检索特定城市的所有客户，而该城市是运行时由用户在窗体中指定的。 LINQ to Entities 支持将已编译的查询用于此目的。  
   
  从 .NET Framework 4.5 开始，LINQ 查询是自动缓存的。 但是，您仍可以使用已编译的 LINQ 查询来降低后续执行中的这一开销，编译的查询比自动缓存的 LINQ 查询效率更高。 请注意，不自动缓存将 `Enumerable.Contains` 运算符应用到内存中集合的 LINQ to Entities 查询。 此外，不允许在已编译的 LINQ 查询中参数化内存中的集合。  
@@ -69,6 +69,7 @@ ms.locfileid: "54582068"
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [ADO.NET 实体框架](../../../../../../docs/framework/data/adonet/ef/index.md)
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - [实体框架合并选项和已编译的查询](https://go.microsoft.com/fwlink/?LinkId=199591)

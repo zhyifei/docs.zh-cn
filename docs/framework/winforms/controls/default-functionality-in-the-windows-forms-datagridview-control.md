@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-ms.openlocfilehash: 0c0d24111a2fdf856ff1f4ce154ec85afbbd61ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 26633b0abaa8c1c2916153b2236ecf9e4982fd68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719658"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208860"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的默认功能
 Windows 窗体<xref:System.Windows.Forms.DataGridView>控件为用户提供了大量的默认功能。  
@@ -47,5 +47,6 @@ Windows 窗体<xref:System.Windows.Forms.DataGridView>控件为用户提供了�
 -   自动对基于对基础数据，当用户单击列标题的行进行排序。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView 控件](datagridview-control-windows-forms.md)

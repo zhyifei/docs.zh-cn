@@ -10,29 +10,29 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: e7a05a5fb0b2053e92d9f947f197bdb2dcfa7ce0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832276"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312236"
 ---
 # <a name="overload-resolution-visual-basic"></a>重载决策 (Visual Basic)
 当 Visual Basic 编译器遇到多个重载版本中定义的过程调用时，编译器必须确定哪个重载来调用。 做到这一点，请执行以下步骤：  
   
-1.  **辅助功能。** 它消除了一种访问级别，以防止调用代码中调用它的任何重载。  
+1. **可访问性。** 它消除了一种访问级别，以防止调用代码中调用它的任何重载。  
   
-2.  **参数数目。** 它消除了定义不同数量的参数提供的调用中的任何重载。  
+2. **参数数目。** 它消除了定义不同数量的参数提供的调用中的任何重载。  
   
-3.  **参数数据类型。** 编译器则报告实例方法优先于扩展方法。 如果需要仅进行扩大转换来匹配的过程调用找到的任何实例方法，则所有扩展方法将被都删除，并且编译器将通过仅候选实例方法继续。 如果找到此类的实例方法，则将继续使用实例和扩展方法。  
+3. **参数数据类型。** 编译器则报告实例方法优先于扩展方法。 如果需要仅进行扩大转换来匹配的过程调用找到的任何实例方法，则所有扩展方法将被都删除，并且编译器将通过仅候选实例方法继续。 如果找到此类的实例方法，则将继续使用实例和扩展方法。  
   
      在此步骤中，它消除了所有重载的调用参数的数据类型无法转换的重载中定义的参数类型。  
   
-4.  **收缩转换。** 它消除了所有需要收缩转换从调用的参数类型为定义的参数类型的重载。 这是 true 还是类型检查开关 ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`On`或`Off`。  
+4. **收缩转换。** 它消除了所有需要收缩转换从调用的参数类型为定义的参数类型的重载。 这是 true 还是类型检查开关 ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`On`或`Off`。  
   
-5.  **最小扩大。** 编译器会考虑对其余的重载。 对于每个对，它将进行比较已定义的参数的数据的类型。 如果所有的重载之一中的类型扩大到中的其他的相应类型，编译器消除了后者。 也就是说，它将保留要求最少量的扩大转换的重载。  
+5. **最小扩大。** 编译器会考虑对其余的重载。 对于每个对，它将进行比较已定义的参数的数据的类型。 如果所有的重载之一中的类型扩大到中的其他的相应类型，编译器消除了后者。 也就是说，它将保留要求最少量的扩大转换的重载。  
   
-6.  **单个候选项。** 它会持续假设重载直到只有一个成对重载会保留，并解析对重载的调用。 如果编译器不能减少到单个的候选版本的重载，则将生成错误。  
+6. **单个候选项。** 它会持续假设重载直到只有一个成对重载会保留，并解析对重载的调用。 如果编译器不能减少到单个的候选版本的重载，则将生成错误。  
   
  下图显示了确定哪一组重载版本来调用的进程。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "58832276"
 - [过程重载](./procedure-overloading.md)
 - [过程疑难解答](./troubleshooting-procedures.md)
 - [如何：定义一个过程的多个版本](./how-to-define-multiple-versions-of-a-procedure.md)
-- [如何：调用重载的过程](./how-to-call-an-overloaded-procedure.md)
+- [如何：调用重载过程](./how-to-call-an-overloaded-procedure.md)
 - [如何：重载带有可选参数的过程](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [如何：重载的参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [如何：重载参数数量不确定的过程](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [重载过程注意事项](./considerations-in-overloading-procedures.md)
-- [重载](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [扩展方法](./extension-methods.md)

@@ -12,23 +12,23 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 2bff105d5c97a8b98d094a1ce3a4f033aa5971be
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 050af6d10faec3dd09998349dcf96e96ea0f9201
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116072"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306178"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>如何：使用 Windows 窗体 FolderBrowserDialog 组件选择文件夹
 通常，在创建的 Windows 应用程序内，需要提示用户选择文件夹，最常用于保存一组文件。 Windows 窗体<xref:System.Windows.Forms.FolderBrowserDialog>组件可轻松完成此任务。  
   
 ### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>使用 FolderBrowserDialog 组件选择文件夹  
   
-1.  在过程中，检查<xref:System.Windows.Forms.FolderBrowserDialog>组件的<xref:System.Windows.Forms.Form.DialogResult%2A>属性，请参阅如何关闭对话框并获取的值<xref:System.Windows.Forms.FolderBrowserDialog>组件的<xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A>属性。  
+1. 在过程中，检查<xref:System.Windows.Forms.FolderBrowserDialog>组件的<xref:System.Windows.Forms.Form.DialogResult%2A>属性，请参阅如何关闭对话框并获取的值<xref:System.Windows.Forms.FolderBrowserDialog>组件的<xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A>属性。  
   
-2.  如果需要将对话框中的树视图中显示的集最顶层文件夹，则设置<xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>属性，它使用的成员<xref:System.Environment.SpecialFolder>枚举。  
+2. 如果需要将对话框中的树视图中显示的集最顶层文件夹，则设置<xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>属性，它使用的成员<xref:System.Environment.SpecialFolder>枚举。  
   
-3.  此外，可以设置<xref:System.Windows.Forms.FolderBrowserDialog.Description%2A>属性，用于指定文本字符串显示在文件夹浏览器树视图的顶部。  
+3. 此外，可以设置<xref:System.Windows.Forms.FolderBrowserDialog.Description%2A>属性，用于指定文本字符串显示在文件夹浏览器树视图的顶部。  
   
      在以下示例中，<xref:System.Windows.Forms.FolderBrowserDialog>组件用于选择文件夹，类似于当在 Visual Studio 中创建项目和系统会提示选择要将其保存在一个文件夹。 在此示例中，文件夹名称然后显示在<xref:System.Windows.Forms.TextBox>窗体上的控件。 它是一个好办法将位置放在可编辑区域中，例如<xref:System.Windows.Forms.TextBox>控制，以便用户可以编辑其选择在出现错误或其他问题。 此示例假定窗体<xref:System.Windows.Forms.FolderBrowserDialog>组件和一个<xref:System.Windows.Forms.TextBox>控件。  
   

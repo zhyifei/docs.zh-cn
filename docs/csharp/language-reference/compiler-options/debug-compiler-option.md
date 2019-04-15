@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: aa9e98e4ec805006c88188d1d19eb3e9781ad732
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4828e1cdd8b830f10b134b613bc96e69490091fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502958"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338483"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug（C# 编译器选项）
 -debug 选项将使编译器生成调试信息，并将此信息放置在输出文件或文件中。  
@@ -46,13 +46,13 @@ ms.locfileid: "54502958"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的“属性”页。  
+1. 打开项目的“属性”页。  
   
-2.  单击“生成”属性页。  
+2. 单击“生成”属性页。  
   
-3.  单击“高级”按钮。  
+3. 单击“高级”按钮。  
   
-4.  修改“调试信息”属性。  
+4. 修改“调试信息”属性。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>。  
   

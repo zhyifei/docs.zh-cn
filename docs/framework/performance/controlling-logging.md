@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f8e189dce2e5141f7a0743b37ed892540f3bb46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656968"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312093"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 日志记录
 可以使用 Windows 事件跟踪 (ETW) 来记录公共语言运行时 (CLR) 事件。 可以使用以下工具来创建和查看跟踪：  
@@ -45,7 +45,7 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>使用 Logman 捕获 CLR ETW 事件  
   
-1.  在命令提示符处，键入：  
+1. 在命令提示符处，键入：  
   
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`  
   
@@ -55,13 +55,13 @@ Provider                                 GUID
   
     -   `0x1CCBD` 指定将引发的事件的类别。  
   
-    -   `0x5` 设置记录的级别（在本例中为详细级别 (5)）。  
+    -   `0x5` 设置日志记录 （在本例中为 verbose (5)） 的级别。  
   
     -   `-ets` 参数指示 Logman 将命令发送给事件跟踪会话。  
   
     -   `-ct perf` 参数指定 `QueryPerformanceCounter` 函数将用于记录每个事件的时间戳。  
   
-2.  若要停止记录事件，请键入：  
+2. 若要停止记录事件，请键入：  
   
      `logman stop clrevents -ets`  
   
@@ -69,13 +69,13 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-xperf"></a>使用 Xperf 捕获 CLR ETW 事件  
   
-1.  在命令提示符处，键入：  
+1. 在命令提示符处，键入：  
   
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`  
   
      其中 GUID 是 CLR ETW 提供程序 GUID，`0x1CCBD:5` 指跟踪级别 5（详细）及以下级别的所有事件。  
   
-2.  若要停止跟踪，请键入：  
+2. 若要停止跟踪，请键入：  
   
      `Xperf -stop clr`  
   
@@ -109,5 +109,6 @@ Provider                                 GUID
      此命令可使 XPerf 将事件转储为可以查看的逗号分隔值 (CSV) 文件。 由于各个事件具有不同的字段，因此该 CSV 文件中的数据之前有多个标题行。 每行的第一个字段为事件类型，它指示应使用哪一个标题来确定字段的其余部分。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows 性能工具包](/windows-hardware/test/wpt/)
 - [公共语言运行时中的 ETW 事件](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

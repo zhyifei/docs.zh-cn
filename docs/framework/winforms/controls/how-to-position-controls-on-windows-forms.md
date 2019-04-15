@@ -15,12 +15,12 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 22225c97ec082022cb609e47d3cafcdcc052143d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132790"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333998"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>如何：在 Windows 窗体上定位控件
 若要定位控件，使用 Windows 窗体设计器中，或指定<xref:System.Windows.Forms.Control.Location%2A>属性。  
@@ -37,9 +37,9 @@ ms.locfileid: "59132790"
   
 ### <a name="to-position-a-control-using-the-properties-window"></a>若要使用属性窗口将控件放  
   
-1.  单击你想要定位的控件。  
+1. 单击你想要定位的控件。  
   
-2.  在中**属性**窗口中，类型值<xref:System.Windows.Forms.Control.Location%2A>属性，由逗号分隔，以放置在其容器内的控件。  
+2. 在中**属性**窗口中，类型值<xref:System.Windows.Forms.Control.Location%2A>属性，由逗号分隔，以放置在其容器内的控件。  
   
      第一个数字 (X) 是容器的从左边框; 的距离第二个数字 (Y) 是上边界的容器区域中，以像素为单位的距离。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59132790"
   
 ### <a name="to-position-a-control-programmatically"></a>若要以编程方式定位控件  
   
-1.  设置<xref:System.Windows.Forms.Control.Location%2A>到控件属性<xref:System.Drawing.Point>。  
+1. 设置<xref:System.Windows.Forms.Control.Location%2A>到控件属性<xref:System.Drawing.Point>。  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -62,7 +62,7 @@ ms.locfileid: "59132790"
     button1->Location = Point(100, 100);  
     ```  
   
-2.  更改控件的位置的 X 坐标使用<xref:System.Windows.Forms.Control.Left%2A>子属性。  
+2. 更改控件的位置的 X 坐标使用<xref:System.Windows.Forms.Control.Left%2A>子属性。  
   
     ```vb  
     Button1.Left = 300  
@@ -78,7 +78,7 @@ ms.locfileid: "59132790"
   
 ### <a name="to-increment-a-controls-location-programmatically"></a>若要以编程方式递增控件的位置  
   
-1.  设置<xref:System.Windows.Forms.Control.Left%2A>子属性要递增的控件的 X 坐标。  
+1. 设置<xref:System.Windows.Forms.Control.Left%2A>子属性要递增的控件的 X 坐标。  
   
     ```vb  
     Button1.Left += 200  

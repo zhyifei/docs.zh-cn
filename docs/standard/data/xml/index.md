@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1edd267ed388f630cc332caa278d5c47a40d77d5
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2e96515240cdbc1cb05c4d58aee6eb2500e0e313
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835117"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171166"
 ---
 # <a name="xml-documents-and-data"></a>XML 文档和数据
 .NET Framework 提供了一组全面而集成的类，可用来方便地生成可以识别 XML 的应用程序。 通过以下命名空间中的类，可以分析和编写 XML，编辑内存中的 XML 数据，进行数据验证以及 XSLT 转换。  
@@ -39,7 +39,7 @@ ms.locfileid: "56835117"
   
  .NET Framework 中的 XML 类具有以下优点：  
   
--   **高效率。** 通过 [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)，能够更轻松地使用 XML 编程，并且能够得到与 SQL 类似的查询体验。  
+-   **工作效率。** 通过 [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)，能够更轻松地使用 XML 编程，并且能够得到与 SQL 类似的查询体验。  
   
 -   **扩展性。** .NET Framework 中的 XML 类可使用抽象基类和虚拟方法进行扩展。 例如，您可以创建 <xref:System.Xml.XmlUrlResolver> 类的一个派生类，用以将缓存流存储到本地磁盘。  
   
@@ -55,9 +55,7 @@ ms.locfileid: "56835117"
   
      为了在需要进行 XSLT 处理时都获得更佳性能，您可以使用 <xref:System.Xml.XPath.XPathDocument> 类，这是一个用于 XPath 查询的经过优化的只读存储，旨在高效地与 <xref:System.Xml.Xsl.XslCompiledTransform> 类结合使用。  
   
--   **与 ADO.NET 集成。** XML 类和 [ADO.NET](../../../../docs/framework/data/adonet/index.md) 紧密集成，将关系数据和 XML 组合在一起。 
-  <xref:System.Data.DataSet> 类是从数据库中检索到的数据在内存中的缓存。 
-  <xref:System.Data.DataSet> 类能够使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 类读取和写入 XML，以 XML 架构 (XSD) 形式保持其内部关系架构结构，并可以推断 XML 文档的架构结构。  
+-   **与 ADO.NET 集成。** XML 类和 [ADO.NET](../../../../docs/framework/data/adonet/index.md) 紧密集成，将关系数据和 XML 组合在一起。 <xref:System.Data.DataSet> 类是从数据库中检索到的数据在内存中的缓存。 <xref:System.Data.DataSet> 类能够使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 类读取和写入 XML，以 XML 架构 (XSD) 形式保持其内部关系架构结构，并可以推断 XML 文档的架构结构。  
   
 ## <a name="in-this-section"></a>本节内容  
  [XML 处理选项](../../../../docs/standard/data/xml/xml-processing-options.md)  
@@ -87,4 +85,3 @@ ms.locfileid: "56835117"
   
  [安全性](../../../../docs/standard/security/index.md)  
  提供对 .NET Framework 安全系统的概述。  
-  

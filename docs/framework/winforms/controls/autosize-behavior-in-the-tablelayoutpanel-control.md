@@ -11,12 +11,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
-ms.openlocfilehash: 46061108226feb83e821edb21dfce2a57bdd3ac7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 466edeee5f45ec72ef265ef4855049c7852641b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164965"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>TableLayoutPanel 控件中的自动调整大小行为
 ## <a name="distinct-autosize-behaviors"></a>各种自动调整大小行为  
@@ -35,5 +35,6 @@ ms.locfileid: "57708062"
 |`true`|类似于与该异常的上一个交互的<xref:System.Windows.Forms.SizeType.Percent>列或行获取自动调整大小方面。<br /><br /> <xref:System.Windows.Forms.TableLayoutPanel>控件扩展的列或行来创建足够的可用空间，以便任何列或行与<xref:System.Windows.Forms.SizeType.Percent>样式剪辑其内容。 <xref:System.Windows.Forms.TableLayoutPanel>控件分配新空间根据来按比例<xref:System.Windows.Forms.ColumnStyle.Width%2A>或<xref:System.Windows.Forms.RowStyle.Height%2A>属性。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [TableLayoutPanel 控件概述](tablelayoutpanel-control-overview.md)

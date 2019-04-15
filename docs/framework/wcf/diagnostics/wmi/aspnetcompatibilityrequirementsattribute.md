@@ -2,12 +2,12 @@
 title: AspNetCompatibilityRequirementsAttribute
 ms.date: 03/30/2017
 ms.assetid: 00908a39-a21b-4029-bbb9-33e5a6ed25a7
-ms.openlocfilehash: 9f3d810b586ad9748e21d6d739cd0de912382346
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e4b2e0e32ccd3b671e81531833ccb3aa3788389
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199981"
 ---
 # <a name="aspnetcompatibilityrequirementsattribute"></a>AspNetCompatibilityRequirementsAttribute
 AspNetCompatibilityRequirementsAttribute  
@@ -24,7 +24,7 @@ class AspNetCompatibilityRequirementsAttribute : Behavior
 ## <a name="methods"></a>方法  
  AspNetCompatibilityRequirementsAttribute 类不定义任何方法。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
  AspNetCompatibilityRequirementsAttribute 类具有以下属性。  
   
 ### <a name="requirementsmode"></a>RequirementsMode  
@@ -41,4 +41,5 @@ class AspNetCompatibilityRequirementsAttribute : Behavior
 |命名空间|已在 root\ServiceModel 中定义|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.ServiceHostingEnvironment.AspNetCompatibilityEnabled%2A>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175014"
 ---
 # <a name="operator-procedures-visual-basic"></a>运算符过程 (Visual Basic)
 运算符过程是一系列定义标准运算符的行为的 Visual Basic 语句 (如`*`， `<>`，或`And`) 上的类或结构定义。 这也称为*运算符重载*。  
@@ -66,7 +66,7 @@ ms.locfileid: "58815565"
   
  隐式调用运算符过程的语法如下所示：  
   
- `Dim testStruct As`  *structurename*  
+ `Dim testStruct As`  *结构名称*  
   
  `Dim testNewStruct As`  *structurename*  `= testStruct`  *operatorsymbol*  `10`  
   
@@ -78,15 +78,14 @@ ms.locfileid: "58815565"
  下面的示例演示对典型调用`+`上定义的运算符`veryLong`。  
   
  [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
-  
-  
+
 ## <a name="see-also"></a>请参阅
 
 - [过程](./index.md)
 - [Sub 过程](./sub-procedures.md)
 - [Function 过程](./function-procedures.md)
-- [属性过程](./property-procedures.md)
-- [过程参数和自变量](./procedure-parameters-and-arguments.md)
+- [Property 过程](./property-procedures.md)
+- [过程形参和实参](./procedure-parameters-and-arguments.md)
 - [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [如何：定义运算符](./how-to-define-an-operator.md)
 - [如何：定义转换运算符](./how-to-define-a-conversion-operator.md)

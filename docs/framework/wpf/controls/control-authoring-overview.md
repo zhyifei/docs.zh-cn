@@ -8,18 +8,16 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2007ee7680707cd1cc9628cc3900ca1068db8678
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340017"
 ---
 # <a name="control-authoring-overview"></a>控件创作概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 控件模型的扩展性极大地减少了创建新控件的需要。 但在某些情况下，仍可能需要创建自定义控件。 本主题讨论可最大限度减少在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中创建自定义控件以及其他控件创作模型的需要的功能。 本主题还演示如何创建新控件。  
-  
- 
-  
+
 <a name="when_to_write_a_new_control"></a>   
 ## <a name="alternatives-to-writing-a-new-control"></a>编写新控件的替代方法  
  以前，如果要通过现有控件获取自定义体验，只能更改控件的标准属性，例如背景色、边框宽度和字号。 如果希望在这些预定义参数的基础之上扩展控件的外观或行为，则需要创建新控件，常用的方法是继承现有控件并重写负责绘制该控件的方法。  虽然这仍是一种可选方法，但也可以利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的丰富内容模型、样式、模板和触发器来自定义现有的控件。 下表提供了一些示例，演示如何在不创建新控件的情况下使用这些功能来实现一致的自定义体验。  
@@ -43,7 +41,7 @@ ms.locfileid: "57368722"
   
 <a name="models_for_control_authoring"></a>   
 ## <a name="models-for-control-authoring"></a>控件创作模型  
- 通过丰富内容模型、样式、模板和触发器，最大程度地减少创建新控件的需要。 但是，如果确实需要创建新控件，则理解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的不同控件创作模型就显得非常重要。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供三个用于创建控件的常规模型，每个模型都提供不同的功能集和灵活度。 基类的三个模型都<xref:System.Windows.Controls.UserControl>， <xref:System.Windows.Controls.Control>，和<xref:System.Windows.FrameworkElement>。  
+ 通过丰富内容模型、样式、模板和触发器，最大程度地减少创建新控件的需要。 但是，如果确实需要创建新控件，则理解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的不同控件创作模型就显得非常重要。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了用于创建的控件，其中每个提供一组不同的功能和灵活性的三个常规模型。 基类的三个模型都<xref:System.Windows.Controls.UserControl>， <xref:System.Windows.Controls.Control>，和<xref:System.Windows.FrameworkElement>。  
   
 ### <a name="deriving-from-usercontrol"></a>从 UserControl 派生  
  若要创建的控件中的最简单方法[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是从派生<xref:System.Windows.Controls.UserControl>。 当你生成控件的继承<xref:System.Windows.Controls.UserControl>，将添加到现有的组件<xref:System.Windows.Controls.UserControl>，命名组件，并引用中的事件处理程序[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 随后可以在代码中引用命名的元素和定义事件处理程序。 此开发模型与用于在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中开发应用程序的模型非常相似。  
@@ -114,7 +112,7 @@ ms.locfileid: "57368722"
   
 -   通过实现该属性的 `get` 和 `set` 访问器，定义一个名为 `Value`（与用来注册该依赖属性的名称相同）的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 包装器属性。 请注意，`get`并`set`访问器仅调用<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>分别。 建议依赖项属性的访问器不包含其他逻辑，因为客户端和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]取值函数和调用可以绕过<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>直接。 例如，如果属性绑定到数据源，则不会调用该属性的 `set` 访问器。  而不是将额外的逻辑添加到 get 和 set 访问器，请使用<xref:System.Windows.ValidateValueCallback>， <xref:System.Windows.CoerceValueCallback>，和<xref:System.Windows.PropertyChangedCallback>委托进行响应或发生更改时检查的值。  有关这些回叫的详细信息，请参阅[依赖属性回叫和验证](../advanced/dependency-property-callbacks-and-validation.md)。  
   
--   定义一种方法<xref:System.Windows.CoerceValueCallback>名为`CoerceValue`。 `CoerceValue` 确保 `Value` 大于或等于 `MinValue` 且小于或等于 `MaxValue`。  
+-   定义一种方法<xref:System.Windows.CoerceValueCallback>名为`CoerceValue`。 `CoerceValue` 可确保`Value`大于或等于`MinValue`且小于或等于`MaxValue`。  
   
 -   定义一种方法<xref:System.Windows.PropertyChangedCallback>名为`OnValueChanged`。 `OnValueChanged` 创建<xref:System.Windows.RoutedPropertyChangedEventArgs%601>对象，并准备引发`ValueChanged`路由的事件。 路由事件在下一节中讨论。  
   
@@ -184,7 +182,7 @@ ms.locfileid: "57368722"
   
 -   实现一对名为`Set`*属性名称*和`Get`*属性名称*的 `public` `static` CLR 方法。 这两种方法应接受派生自的类<xref:System.Windows.DependencyProperty>作为其第一个参数。 `Set`*属性名称*方法还接受其类型与属性的注册数据类型匹配的参数。 `Get`*属性名称* 方法应返回相同类型的值。 如果缺少 `Set`*属性名称*方法，则该属性标记为只读。  
   
--   `Set` *PropertyName*并`Get` *PropertyName*必须直接路由到<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>方法目标依赖对象，分别。 通过调用方法包装器或直接调用目标依赖对象，设计器可以访问附加属性。  
+-   `Set` **PropertyName*并`Get` *PropertyName*必须直接路由到<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>方法目标依赖对象，分别。D通过调用方法包装器或直接调用目标依赖对象，设计器可以访问附加属性。  
   
  有关附加属性的详细信息，请参阅[附加属性概述](../advanced/attached-properties-overview.md)。  
   
@@ -193,15 +191,15 @@ ms.locfileid: "57368722"
   
  当应用程序查找资源时，它会按以下顺序在三个级别进行查找：  
   
-1.  元素级别。  
+1. 元素级别。  
   
      系统从引用该资源的元素开始搜索，接着搜索逻辑父级的资源，依此类推，直至到达根元素。  
   
-2.  应用程序级别。  
+2. 应用程序级别。  
   
      定义的资源，<xref:System.Windows.Application>对象。  
   
-3.  主题级别。  
+3. 主题级别。  
   
      主题级别的字典存储在名为“Themes”的子文件夹中。  Themes 文件夹中的文件与主题对应。  例如，可能有 Aero.NormalColor.xaml、Luna.NormalColor.xaml、Royale.NormalColor.xaml 等。  可能还有一个名为 generic.xaml 的文件。  当系统在主题级别查找资源时，它会先在特定于主题的文件中查找相应资源，然后在 generic.xaml 中进行查找。  
   
@@ -229,7 +227,7 @@ ms.locfileid: "57368722"
  [!code-csharp[SharedResources#4](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml.cs#4)]  
   
 #### <a name="defining-resources-at-the-theme-level"></a>在主题级别定义资源  
- 通过 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以为不同的 Windows 主题创建资源。  作为控件作者，可以为特定主题定义资源，以根据所使用的主题更改控件的外观。 例如的外观<xref:System.Windows.Controls.Button>在 Windows 经典主题 （Windows 2000 的默认主题） 不同于<xref:System.Windows.Controls.Button>Windows Luna 主题 （Windows XP 的默认主题） 中由于<xref:System.Windows.Controls.Button>使用不同<xref:System.Windows.Controls.ControlTemplate>为每个主题。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以为不同的 Windows 主题创建资源。  作为控件作者，可以为特定主题定义资源，以根据所使用的主题更改控件的外观。 例如的外观<xref:System.Windows.Controls.Button>在 Windows 经典主题 （Windows 2000 的默认主题） 不同于<xref:System.Windows.Controls.Button>Windows Luna 主题 （Windows XP 的默认主题） 中由于<xref:System.Windows.Controls.Button>使用不同<xref:System.Windows.Controls.ControlTemplate>为每个主题。  
   
  特定于主题的资源以特定文件名保留在资源字典中。 这些文件必须位于一个名为 `Themes` 的文件夹中，此文件夹是包含该控件的文件夹的子文件夹。 下表列出了资源字典文件以及与每个文件关联的主题：  
   
@@ -269,6 +267,7 @@ ms.locfileid: "57368722"
  [!code-vb[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [WPF 中的 Pack URI](../app-development/pack-uris-in-wpf.md)
 - [控件自定义](control-customization.md)

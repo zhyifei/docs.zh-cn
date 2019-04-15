@@ -1,5 +1,5 @@
 ---
-title: 如何：创建标准 Windows 窗体打印作业
+title: 如何：创建标准的 Windows 窗体打印作业
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: b0568472dadceb46257a8d35211034a718aef74c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 816da93218e20f73f16c14769ed1a549dd3d8eb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705215"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335402"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a>如何：创建标准 Windows 窗体打印作业
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a>如何：创建标准的 Windows 窗体打印作业
 在 Windows 窗体中打印的基础是<xref:System.Drawing.Printing.PrintDocument>组件 — 具体而言，<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件。 通过编写代码来处理<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件，可以指定打印内容以及如何打印它。  
   
 ### <a name="to-create-a-print-job"></a>若要创建打印作业  
   
-1.  添加<xref:System.Drawing.Printing.PrintDocument>向窗体组件。  
+1. 添加<xref:System.Drawing.Printing.PrintDocument>向窗体组件。  
   
-2.  编写代码以处理 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件。  
+2. 编写代码以处理 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件。  
   
      必须编写打印逻辑的代码。 此外，必须指定要打印的材料。  
   
@@ -77,5 +77,6 @@ ms.locfileid: "57705215"
      有关详细信息的 Windows 窗体的详细信息包括如何以编程方式创建打印作业的打印作业，请参阅<xref:System.Drawing.Printing.PrintPageEventArgs>。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Windows 窗体打印支持](windows-forms-print-support.md)

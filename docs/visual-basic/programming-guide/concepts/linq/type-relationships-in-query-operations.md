@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14f17e89e2a4143580b4a2ca7f9d30013ded58f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822331"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327628"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>查询操作中的类型关系 (Visual Basic)
 中使用的变量[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查询操作为强类型，必须相互兼容。 数据源中、 查询本身，以及在查询执行过程中，使用强类型化。 下图标识术语用于描述[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查询。 有关查询的部分的详细信息，请参阅[基本查询操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
@@ -49,11 +49,11 @@ ms.locfileid: "58822331"
   
  以下关系存在于这两个前面的代码示例，是否隐式或显式确定类型。  
   
-1.  数据源中的元素的类型`names`，是范围变量的类型`name`，在查询中。  
+1. 数据源中的元素的类型`names`，是范围变量的类型`name`，在查询中。  
   
-2.  选择后，该对象的类型`name`，确定查询变量的类型`mNames`。 此处`name`是一个字符串，因此查询变量是在 Visual Basic 中的 IEnumerable (Of String)。  
+2. 选择后，该对象的类型`name`，确定查询变量的类型`mNames`。 此处`name`是一个字符串，因此查询变量是在 Visual Basic 中的 IEnumerable (Of String)。  
   
-3.  中定义的查询`mNames`中执行`For Each`循环。 循环将循环执行查询的结果。 因为`mNames`，在执行时将返回一个字符串，循环迭代变量序列`nm`，也是一个字符串。  
+3. 中定义的查询`mNames`中执行`For Each`循环。 循环将循环执行查询的结果。 因为`mNames`，在执行时将返回一个字符串，循环迭代变量序列`nm`，也是一个字符串。  
   
 ## <a name="queries-that-return-one-field-from-selected-elements"></a>返回从所选元素的一个字段的查询  
  下面的示例演示[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]查询返回的序列包含仅选择数据源中的每个元素的一部分的操作。 查询采用一系列`Customer`对象作为其数据源，并仅适用于项目`Name`结果中的属性。 客户名称是一个字符串，因为查询将生成一个字符串序列作为输出。  
@@ -72,11 +72,11 @@ Next
   
  变量之间的关系是类似于更简单的示例中。  
   
-1.  数据源中的元素的类型`customers`，是范围变量的类型`cust`，在查询中。 在此示例中，类型为`Customer`。  
+1. 数据源中的元素的类型`customers`，是范围变量的类型`cust`，在查询中。 在此示例中，类型为`Customer`。  
   
-2.  `Select`语句返回`Name`每个属性`Customer`对象而不是整个对象。 因为`Name`是一个字符串，查询变量`custNames`，再次将 IEnumerable (Of String)，不属于`Customer`。  
+2. `Select`语句返回`Name`每个属性`Customer`对象而不是整个对象。 因为`Name`是一个字符串，查询变量`custNames`，再次将 IEnumerable (Of String)，不属于`Customer`。  
   
-3.  因为`custNames`表示一个字符串，序列`For Each`循环的迭代变量`custName`，必须为字符串。  
+3. 因为`custNames`表示一个字符串，序列`For Each`循环的迭代变量`custName`，必须为字符串。  
   
  而无需本地类型推断，前面的示例将很难编写和理解，如以下示例所示。  
   
@@ -110,11 +110,11 @@ Next
   
  尽管不能为指定类型的变量上一示例中，关系保持不变。  
   
-1.  数据源中的元素的类型同样是在查询中范围变量的类型。 在此示例中，`cust`的一个实例`Customer`。  
+1. 数据源中的元素的类型同样是在查询中范围变量的类型。 在此示例中，`cust`的一个实例`Customer`。  
   
-2.  因为`Select`语句生成匿名类型，查询变量`nameCityQuery`，必须为匿名类型隐式类型。 匿名类型没有可用的名称，并因此不能显式指定。  
+2. 因为`Select`语句生成匿名类型，查询变量`nameCityQuery`，必须为匿名类型隐式类型。 匿名类型没有可用的名称，并因此不能显式指定。  
   
-3.  中的迭代变量的类型`For Each`循环是在步骤 2 中创建的匿名类型。 该类型具有没有可用的名称，因为必须隐式确定循环迭代变量的类型。  
+3. 中的迭代变量的类型`For Each`循环是在步骤 2 中创建的匿名类型。 该类型具有没有可用的名称，因为必须隐式确定循环迭代变量的类型。  
   
 ## <a name="see-also"></a>请参阅
 

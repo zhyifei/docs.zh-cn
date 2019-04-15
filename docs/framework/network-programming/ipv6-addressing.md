@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50df0e0710c1f722d4e769ad89b653f6a8d5e394
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633847"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121948"
 ---
 # <a name="ipv6-addressing"></a>IPv6 寻址
 在 Internet 协议版本 6（IPv6）中，地址长度为 128 位。 地址空间如此之大的一个原因是将可用地址细分为可以反映 Internet 拓扑的路由域的层次结构。 另一个原因是映射将设备连接到网络的网络适配器（或接口）的地址。 IPv6 有可以解析最低级别的地址（即网络接口级别的地址）的固有功能以及自动配置功能。  
@@ -52,7 +52,7 @@ ms.locfileid: "54633847"
   
  以下是具有 64 位前缀的地址示例。  
   
- `3FFE:FFFF:0:CD30:0:0:0:0/64`。  
+ `3FFE:FFFF:0:CD30:0:0:0:0/64`.  
   
  本示例中的前缀是 `3FFE:FFFF:0:CD30`。 此地址也可以采用压缩形式编写为 `3FFE:FFFF:0:CD30::/64`。  
   
@@ -73,5 +73,6 @@ ms.locfileid: "54633847"
  通常，节点始终具有链接本地地址。 它可能具有站点本地地址和一个或多个全局地址。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [套接字](../../../docs/framework/network-programming/sockets.md)

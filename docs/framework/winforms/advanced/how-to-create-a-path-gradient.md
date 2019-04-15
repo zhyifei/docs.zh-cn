@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186090"
 ---
 # <a name="how-to-create-a-path-gradient"></a>如何：创建路径渐变
 <xref:System.Drawing.Drawing2D.PathGradientBrush>类使您可以自定义用渐变颜色填充形状的方式。 例如，可以指定为路径的中心的一种颜色和路径的边界的另一种颜色。 此外可以为每个路径的多个点边界指定单独的颜色。  
@@ -111,4 +111,5 @@ ms.locfileid: "58126222"
  前面的示例设计为使用 Windows 窗体，它们需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。  
   
 ## <a name="see-also"></a>请参阅
+
 - [使用渐变画笔填充形状](using-a-gradient-brush-to-fill-shapes.md)

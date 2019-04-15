@@ -2,12 +2,12 @@
 title: WCF 服务的简化配置
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: c0d5f46e6ace71ad4732f8d387b3289b1d4105e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47af8dcba35ba31f25597c946596b0cbcac93b4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516364"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304254"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服务的简化配置
 此示例演示如何实现和配置典型的服务和客户端使用 Windows Communication Foundation (WCF)。 此示例是所有其他基本技术示例的基础。  
@@ -57,11 +57,11 @@ ms.locfileid: "54516364"
   
 ### <a name="to-use-this-sample"></a>使用此示例  
   
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  按照以下步骤运行示例：  
+3. 按照以下步骤运行示例：  
   
     1.  右键单击**服务**项目，然后选择**设为启动项目**，然后按**Ctrl + F5**。  
   
@@ -79,5 +79,6 @@ ms.locfileid: "54516364"
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
 ## <a name="see-also"></a>请参阅
+
 - [AppFabric 管理示例](https://go.microsoft.com/fwlink/?LinkId=193960)
 - [简化配置](../../../../docs/framework/wcf/simplified-configuration.md)

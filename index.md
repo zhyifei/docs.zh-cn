@@ -6,12 +6,12 @@ title: .NET 文档
 description: 了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 31e810246528c99a665128d3535b92dbfcb4352d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464510"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427482"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -77,10 +77,10 @@ ms.locfileid: "58464510"
         <h1>.NET 文档</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">文档</a>
+                <a data-default="true" href="#docs">Docs</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">入门</a>
+                        <a href="#getstarted">开始操作</a>
                         <ul id="getstarted" class="cardsF">
                             <li>
                                 <div class="cardSize">
@@ -93,7 +93,7 @@ ms.locfileid: "58464510"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/standard/">.NET 指南</a></h3>
-                                                <p><a href="/dotnet/standard/get-started">入门</a></p>
+                                                <p><a href="/dotnet/standard/get-started">开始操作</a></p>
                                                 <p><a href="/dotnet/standard/tour">.NET 教程</a></p>
                                                 <p><a href="/dotnet/standard/components">.NET 体系结构概念</a></p>
                                             </div>
@@ -112,7 +112,7 @@ ms.locfileid: "58464510"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/core">.NET Core 指南</a></h3>
-                                                <p><a href="/dotnet/core/get-started">入门</a></p>
+                                                <p><a href="/dotnet/core/get-started">开始操作</a></p>
                                                 <p><a href="/dotnet/core/tutorials">教程</a></p>
                                                 <p><a href="/dotnet/core/porting">从 .NET Framework 移植</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
@@ -133,10 +133,10 @@ ms.locfileid: "58464510"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/framework/">.NET Framework 指南</a></h3>
-                                                <p><a href="/dotnet/framework/get-started/">入门</a></p>
+                                                <p><a href="/dotnet/framework/get-started/">开始操作</a></p>
                                                 <p><a href="/dotnet/framework/development-guide">开发指南</a></p>
                                                 <p><a href="/dotnet/framework/develop-client-apps">客户端开发</a></p>
-                                                <p><a href="/aspnet/#pivot=aspnet">ASP.NET 2.0</a></p>
+                                                <p><a href="/aspnet/#pivot=aspnet">ASP.NET</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -173,7 +173,7 @@ ms.locfileid: "58464510"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">C# 指南</a></h3>
-                                                <p><a href="/dotnet/csharp/getting-started">入门</a></p>
+                                                <p><a href="/dotnet/csharp/getting-started">开始操作</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">C# 教程</a></p>
                                                 <p><a href="/dotnet/csharp/whats-new">C# 中的新增功能</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">C# 语言参考</a></p>
@@ -193,7 +193,7 @@ ms.locfileid: "58464510"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/fsharp">F# 指南</a></h3>
-                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">入门</a></p>
+                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">开始操作</a></p>
                                                 <p><a href="/dotnet/fsharp/tour">F# 教程</a></p>
                                                 <p><a href="/dotnet/fsharp/language-reference">F# 语言参考</a></p>
                                             </div>
@@ -212,7 +212,7 @@ ms.locfileid: "58464510"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/visual-basic">Visual Basic 指南</a></h3>
-                                                <p><a href="/dotnet/visual-basic/getting-started">入门</a></p>
+                                                <p><a href="/dotnet/visual-basic/getting-started">开始操作</a></p>
                                                 <p><a href="/dotnet/visual-basic/walkthroughs">Visual Basic 教程</a></p>
                                                 <p><a href="/dotnet/visual-basic/language-reference">Visual Basic 语言参考</a></p>
                                             </div>
@@ -233,7 +233,7 @@ ms.locfileid: "58464510"
                                                 <h3><a href="/dotnet/machine-learning">ML.NET 指南</a></h3>
                                                 <p><a href="/dotnet/machine-learning/tutorials">教程</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources">资源</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources/glossary">术语表</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources/glossary">词汇表</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API 引用</a></p>
                                             </div>
                                         </div>
@@ -434,7 +434,7 @@ ms.locfileid: "58464510"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">移动</a>
+                        <a href="#mobile">移动电话</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
@@ -582,7 +582,7 @@ ms.locfileid: "58464510"
                         <a href="#gaming">游戏</a>
                         <ul id="gaming" class="cardsC">
                             <li>
-                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/">
+                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

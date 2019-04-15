@@ -3,12 +3,12 @@ title: WIF API 参考
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-ms.openlocfilehash: 21b294a58efcad6c3eb7c74e643a2ac3e0ea23fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c94ccd3f25be576c57fda798c6b2b8cc25357022
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172206"
 ---
 # <a name="wif-api-reference"></a>WIF API 参考
 Windows Identity Foundation (WIF) 类可分为以下程序集：`mscorlib` (mscorlib.dll)、`System.IdentityModel` (System.IdentityModel.dll)、`System.IdentityModel.Services` (System.IdentityModel.Services.dll) 和 `System.ServiceModel` (System.ServiceModel.dll)。 本主题提供指向 WIF 命名空间的链接和每个命名空间包含的类的简短说明。  
@@ -47,5 +47,6 @@ Windows Identity Foundation (WIF) 类可分为以下程序集：`mscorlib` (msco
  包含表示 WCF 协定、通道、服务主机和主动 (WS-Trust) 方案中使用的其他项目的类。 命名空间还包括特定于 Windows Communication Foundation (WCF) 并不被 WIF 使用的类。  
   
 ## <a name="see-also"></a>请参阅
+
 - [WIF 配置参考](../../../docs/framework/security/wif-configuration-reference.md)
 - [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)

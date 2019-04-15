@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 6bd950b1648bdf0b0c4673f2a90d67086b338ecd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974765"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342437"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>演练：创建自定义日志侦听器 (Visual Basic)
 本演练演示如何创建自定义日志侦听器，并将其配置为侦听 `My.Application.Log` 对象的输出。  
@@ -37,23 +37,23 @@ ms.locfileid: "56974765"
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>对日志侦听器程序集执行强名称  
   
-1.  在 **“解决方案资源管理器”** 中选择一个项目。 在 **“项目”** 菜单上，选择 **“属性”**。   
+1. 在 **“解决方案资源管理器”** 中选择一个项目。 在 **“项目”** 菜单上，选择 **“属性”**。   
   
-2.  单击“签名”选项卡。  
+2. 单击“签名”选项卡。  
   
-3.  选择“为程序集签名”框。  
+3. 选择“为程序集签名”框。  
   
-4.  在“选择强名称密钥文件”下拉列表中，选择“\<新建>”。  
+4. 在“选择强名称密钥文件”下拉列表中，选择“\<新建>”。  
   
      将打开“创建强名称密钥”对话框。  
   
-5.  在“密钥文件名”框中提供密钥文件的名称。  
+5. 在“密钥文件名”框中提供密钥文件的名称。  
   
-6.  在“输入密码”和“确认密码”框中输入密码。  
+6. 在“输入密码”和“确认密码”框中输入密码。  
   
-7.  单击“确定”。  
+7. 单击“确定”。  
   
-8.  重新生成应用程序。  
+8. 重新生成应用程序。  
   
 ## <a name="adding-the-listener"></a>添加侦听器  
  现在程序集已具有强名称，需要确定侦听器的强名称，以便 `My.Application.Log` 使用日志侦听器。  
@@ -74,7 +74,7 @@ ms.locfileid: "56974765"
   
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>将侦听器添加到 My.Application.Log  
   
-1.  在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。  
+1. 在“解决方案资源管理器”中右键单击 app.config，然后选择“打开”。  
   
      或  
   
@@ -86,17 +86,17 @@ ms.locfileid: "56974765"
   
     3.  单击 **添加**。  
   
-2.  找到 `<listeners>` 部分，该部分位于 `<source>` 属性为“DefaultSource”的 `name` 部分当中，后者又位于 `<sources>` 部分之下。 `<sources>` 部分位于 `<system.diagnostics>` 部分当中，后者又位于顶级 `<configuration>` 部分之下。  
+2. 找到 `<listeners>` 部分，该部分位于 `<source>` 属性为“DefaultSource”的 `name` 部分当中，后者又位于 `<sources>` 部分之下。 `<sources>` 部分位于 `<system.diagnostics>` 部分当中，后者又位于顶级 `<configuration>` 部分之下。  
   
-3.  将此元素添加到 `<listeners>` 部分：  
+3. 将此元素添加到 `<listeners>` 部分：  
   
     ```xml  
     <add name="SimpleLog" />  
     ```  
   
-4.  找到 `<sharedListeners>` 部分，该部分位于 `<system.diagnostics>` 部分当中，后者又位于顶级 `<configuration>` 部分之下。  
+4. 找到 `<sharedListeners>` 部分，该部分位于 `<system.diagnostics>` 部分当中，后者又位于顶级 `<configuration>` 部分之下。  
   
-5.  将此元素添加到该 `<sharedListeners>` 部分：  
+5. 将此元素添加到该 `<sharedListeners>` 部分：  
   
     ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
@@ -105,8 +105,9 @@ ms.locfileid: "56974765"
      将 `SimpleLogStrongName` 的值更改为该侦听器的强名称。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [如何：日志异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [如何：记录异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
 - [如何：写入日志消息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [演练：更改 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [演练：更改 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

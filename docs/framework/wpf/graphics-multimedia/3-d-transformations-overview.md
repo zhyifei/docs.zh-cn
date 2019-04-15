@@ -8,18 +8,16 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: 578c8061271e08e4eac1ec5f11c84e63a3fa37bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbb3c413148bd2e2ab8de8a1a725f2d9a8acf2f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190622"
 ---
 # <a name="3-d-transformations-overview"></a>三维变换概述
 本主题描述如何向 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 图形系统中的 3D 模型应用转换。 开发人员可以借助转换功能对模型进行重定位、大小调整和重定向，而无需更改用来定义模型的基值。  
-  
 
-  
 ## <a name="3-d-coordinate-space"></a>3D 坐标空间  
  三维图形中的内容[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]封装在一个元素， <xref:System.Windows.Controls.Viewport3D>，该元素可以参与二维元素结构。 该图形系统将 Viewport3D 视为一个像 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的许多其他元素一样的二维视觉元素。 Viewport3D 充当三维场景中的窗口（即视区）。 更准确地说，它是 3D 场景所投影到的图面。  尽管可以将 Viewport3D 与其他 2D 绘图对象用在同一个场景图中，但是不能在 Viewport3D 中渗透 2D 和 3D 对象。 以下讨论中所描述的坐标空间包含在 Viewport3D 元素中。  
   
@@ -106,6 +104,7 @@ ScaleVector 示例
  由于照相机也是模型，因此也可以对照相机属性进行转换。  尽管确实可以通过改变照相机的位置或平面距离来改变场景的外观（实际上是变换整个场景的投影），但应注意，对于观察者来说，以这种方法实现的许多效果不如将转换应用于场景中模型的地点或位置更有“视觉意义”。  
   
 ## <a name="see-also"></a>请参阅
-- [3D 图形概述](3-d-graphics-overview.md)
-- [转换概述](transforms-overview.md)
-- [2D 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)
+
+- [三维图形概述](3-d-graphics-overview.md)
+- [变换概述](transforms-overview.md)
+- [2d 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)

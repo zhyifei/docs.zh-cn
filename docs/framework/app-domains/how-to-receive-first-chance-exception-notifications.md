@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed8aaa12e91654dcf0b688b14d7d2f38bc9096ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677730"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314108"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>如何：接收第一机会异常通知
 通过 <xref:System.AppDomain> 类的 <xref:System.AppDomain.FirstChanceException> 事件，可在公共语言运行时开始搜索异常处理程序之前，收到已引发异常的通知。
@@ -31,17 +31,17 @@ ms.locfileid: "54677730"
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>在默认应用程序域中演示最可能发生的异常通知
 
-1.  使用 lambda 函数为 <xref:System.AppDomain.FirstChanceException> 事件定义事件处理程序，并将其附加到此事件。 在此示例中，事件处理程序输出了在其中处理事件的应用程序域的名称和异常的 <xref:System.Exception.Message%2A> 属性。
+1. 使用 lambda 函数为 <xref:System.AppDomain.FirstChanceException> 事件定义事件处理程序，并将其附加到此事件。 在此示例中，事件处理程序输出了在其中处理事件的应用程序域的名称和异常的 <xref:System.Exception.Message%2A> 属性。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#2)]
 
-2.  引发异常并将其捕获。 在运行时找到异常处理程序之前，引发 <xref:System.AppDomain.FirstChanceException> 事件并显示一条消息。 此消息后跟由异常处理程序显示的消息。
+2. 引发异常并将其捕获。 在运行时找到异常处理程序之前，引发 <xref:System.AppDomain.FirstChanceException> 事件并显示一条消息。 此消息后跟由异常处理程序显示的消息。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#3)]
 
-3.  引发异常，但不将其捕获。 在运行时查找异常处理程序之前，引发 <xref:System.AppDomain.FirstChanceException> 事件并显示一条消息。 由于没有任何异常处理程序，因此应用程序将终止。
+3. 引发异常，但不将其捕获。 在运行时查找异常处理程序之前，引发 <xref:System.AppDomain.FirstChanceException> 事件并显示一条消息。 由于没有任何异常处理程序，因此应用程序将终止。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#4)]
@@ -56,12 +56,12 @@ ms.locfileid: "54677730"
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>在创建的应用程序域中接收最可能发生的异常通知
 
-1.  为 <xref:System.AppDomain.FirstChanceException> 事件定义事件处理程序。 此示例使用 `static` 方法（在 Visual Basic 中为 `Shared` 方法），该方法可输出在其中处理事件的应用程序域的名称和异常的 <xref:System.Exception.Message%2A> 属性。
+1. 为 <xref:System.AppDomain.FirstChanceException> 事件定义事件处理程序。 此示例使用 `static` 方法（在 Visual Basic 中为 `Shared` 方法），该方法可输出在其中处理事件的应用程序域的名称和异常的 <xref:System.Exception.Message%2A> 属性。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#3)]
 
-2.  创建一个应用程序域，并为该应用程序域的 <xref:System.AppDomain.FirstChanceException> 事件添加事件处理程序。 在此示例中，该应用程序域的名称为 `AD1`。
+2. 创建一个应用程序域，并为该应用程序域的 <xref:System.AppDomain.FirstChanceException> 事件添加事件处理程序。 在此示例中，该应用程序域的名称为 `AD1`。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#2)]
@@ -70,17 +70,17 @@ ms.locfileid: "54677730"
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-application-domain"></a>在应用程序域中演示最可能发生的异常通知
 
-1.  在上一过程创建的应用程序域中创建一个 `Worker` 对象。 `Worker` 类必须是公共的，且派生自 <xref:System.MarshalByRefObject>，如本文末尾的完整示例中所示。
+1. 在上一过程创建的应用程序域中创建一个 `Worker` 对象。 `Worker` 类必须是公共的，且派生自 <xref:System.MarshalByRefObject>，如本文末尾的完整示例中所示。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#4)]
 
-2.  调用 `Worker` 对象的一个可引发异常的方法。 在此示例中，调用了两次 `Thrower` 方法。 第一次调用时，该方法的参数为 `true`，这使该方法捕获自己的异常。 第二次调用时，该方法的参数为 `false`，并且 `Main()` 方法捕获默认应用程序域中的异常。
+2. 调用 `Worker` 对象的一个可引发异常的方法。 在此示例中，调用了两次 `Thrower` 方法。 第一次调用时，该方法的参数为 `true`，这使该方法捕获自己的异常。 第二次调用时，该方法的参数为 `false`，并且 `Main()` 方法捕获默认应用程序域中的异常。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#6)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#6)]
 
-3.  在 `Thrower` 方法中放置代码以控制该方法是否处理自己的异常。
+3. 在 `Thrower` 方法中放置代码以控制该方法是否处理自己的异常。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#5)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]
@@ -103,4 +103,5 @@ ms.locfileid: "54677730"
 -   此示例是一个命令行应用程序。 若要在 Visual Studio 中编译并运行此代码，请将 C# 代码 `Console.ReadLine();`（在 Visual Basic 中为 `Console.ReadLine()`）添加到 `Main()` 的末尾，阻止命令窗口在你查看输出之前关闭。
 
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.AppDomain.FirstChanceException>

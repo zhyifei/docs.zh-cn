@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: af3fe9a233972e939dc14117fc08343bca9d5fd6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174104"
 ---
 # <a name="code-access-security-and-adonet"></a>代码访问安全性和 ADO.NET
 .NET Framework 提供基于角色的安全性和代码访问安全性 (CAS)，这两种安全性都可以通过公共语言运行库 (CLR) 提供的公共基础结构实现。 对于非托管代码，大多数应用程序都可以使用用户或主体权限执行。 因此，当拥有提升权限的用户运行恶意软件或包含错误的软件时，计算机系统可能会受到损坏并危及私有数据。  
@@ -27,12 +27,11 @@ ms.locfileid: "58411559"
   
  代码访问权限有三种类型：  
   
--   `Code access permissions`从 <xref:System.Security.CodeAccessPermission> 类派生。 需要具有权限才能访问受保护的资源（如文件和环境变量）和执行受保护的操作（如访问托管代码）。  
+-   `Code access permissions` 派生自<xref:System.Security.CodeAccessPermission>类。 需要具有权限才能访问受保护的资源（如文件和环境变量）和执行受保护的操作（如访问托管代码）。  
   
--   `Identity permissions`表示标识程序集的特征。 对程序集授予权限需要基于证据，而证据可以包括如数字签名或代码来源等项。 标识权限也从 <xref:System.Security.CodeAccessPermission> 基类派生。  
+-   `Identity permissions` 表示标识程序集的特征。 对程序集授予权限需要基于证据，而证据可以包括如数字签名或代码来源等项。 标识权限也从 <xref:System.Security.CodeAccessPermission> 基类派生。  
   
--   `Role-based security permissions`基于主体是否具有指定标识或是否是指定角色的成员。 
-  <xref:System.Security.Permissions.PrincipalPermission> 类允许对活动主体进行声明性和强制性权限检查。  
+-   `Role-based security permissions` 基于主体是否具有指定的标识或是指定角色的成员。 <xref:System.Security.Permissions.PrincipalPermission> 类允许对活动主体进行声明性和强制性权限检查。  
   
  为了确定代码是否获得了访问某一资源或执行某一操作的授权，运行库的安全系统将遍历调用堆栈，将每个调用方已获得的权限与要求的权限进行比较。 如果调用堆栈中的任何调用方没有要求的权限，则会引发 <xref:System.Security.SecurityException> 并拒绝访问。  
   
@@ -191,12 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>与非托管代码的互操作性  
- 在 CLR 外部运行的代码称为非托管代码。 因此，安全机制（如 CAS）不能应用于非托管代码。 COM 组件、 ActiveX 接口和 Windows API 函数的非托管代码的示例。 在执行非托管代码时应考虑特殊安全注意事项，以便不会危害应用程序的整体安全性。 有关详细信息，请参阅[与非托管代码交互操作](../../../../docs/framework/interop/index.md)。  
+ 在 CLR 外部运行的代码称为非托管代码。 因此，安全机制（如 CAS）不能应用于非托管代码。 COM 组件、ActiveX 接口和 Windows API 函数都是非托管代码的示例。 在执行非托管代码时应考虑特殊安全注意事项，以便不会危害应用程序的整体安全性。 有关详细信息，请参阅[与非托管代码交互操作](../../../../docs/framework/interop/index.md)。  
   
  .NET Framework 可以通过 COM 互操作提供访问，因此还支持与现有 COM 组件的向后兼容。 通过使用 COM 互操作工具导入相关的 COM 类型，可以将 COM 组件合并到 .NET Framework 应用程序中。 一旦导入后，就可以使用 COM 类型了。 通过将程序集元数据导出到类型库并将托管组件注册为 COM 组件，COM 互操作还可以使 COM 客户端访问托管代码。 有关详细信息，请参阅[高级 COM 互操作性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [本机代码和.NET Framework 代码中的安全性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [本机代码和 .NET Framework 代码的安全性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [基于角色的安全性](../../../../docs/standard/security/role-based-security.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

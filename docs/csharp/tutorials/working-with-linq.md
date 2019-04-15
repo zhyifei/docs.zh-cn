@@ -3,12 +3,12 @@ title: 使用 LINQ
 description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679646"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815578"
 ---
 # <a name="working-with-linq"></a>使用 LINQ
 
@@ -115,7 +115,7 @@ var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit 
 
 此时，运行已生成的示例。 将显示一副纸牌中的所有 52 张纸牌。 在调试器模式下运行此示例来观察 `Suits()` 和 `Ranks()` 方法的执行情况，你可能会觉得非常有用。 可以清楚地看到，每个序列中的所有字符串仅在需要时生成。
 
-![显示应用输出 52 张纸牌的控制台窗口](./media/working-with-linq/console.png)
+![显示应用输出 52 张扑克牌的控制台窗口。](./media/working-with-linq/console-52-card-application.png)
 
 ## <a name="manipulating-the-order"></a>控制顺序
 

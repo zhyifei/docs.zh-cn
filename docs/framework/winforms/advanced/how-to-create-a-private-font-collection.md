@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: 7cfd2a1fd29b58019d49c8cd5df9adb5b0873302
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210681"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>如何：创建专用的字体集合
 <xref:System.Drawing.Text.PrivateFontCollection>类继承自<xref:System.Drawing.Text.FontCollection>抽象基类。 可以使用<xref:System.Drawing.Text.PrivateFontCollection>对象来维护一组专门为应用程序的字体。 专用字体集合可以包含已安装的系统字体，以及在计算机尚未安装的字体。 若要将字体文件添加到专用字体集合，调用<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A>方法的<xref:System.Drawing.Text.PrivateFontCollection>对象。  
@@ -37,9 +37,9 @@ ms.locfileid: "57723772"
   
  如果给定的系列样式组合不可用，<xref:System.Drawing.Font>构造对象时使用该系列和样式。 第一个参数传递给<xref:System.Drawing.Font.%23ctor%2A>构造函数是字体系列名称 (不<xref:System.Drawing.FontFamily>对象的所有其他变体情况一样<xref:System.Drawing.Font.%23ctor%2A>构造函数)。 之后<xref:System.Drawing.Font>构造对象时，传递到<xref:System.Drawing.Graphics.DrawString%2A>方法的<xref:System.Drawing.Graphics>类，以显示该系列的名称以及的样式的名称。  
   
- 以下代码的输出结果类似于下图中所示的输出。  
+ 以下代码的输出结果类似于下图中所示的输出：  
   
- ![字体文本](./media/csfontstext7.png "csfontstext7")  
+ ![在各种字体显示文本的屏幕截图。](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
  Arial.tff （其中已添加到下面的代码示例中的专用字体集合） 是 Arial 常规字形的字体文件。 但请注意，该程序的输出显示了几种可用样式不是常规的 Arial 字体系列。 这是因为[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以模拟中的正则样式的粗体、 斜体和粗体斜体样式。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可以还字形生成下划线和从常规的样式。  
   
@@ -49,8 +49,9 @@ ms.locfileid: "57723772"
  [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，这是 <xref:System.Windows.Forms.PaintEventHandler> 的参数。  
+ 前面的示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Drawing.Text.PrivateFontCollection>
 - [使用字体和文本](using-fonts-and-text.md)

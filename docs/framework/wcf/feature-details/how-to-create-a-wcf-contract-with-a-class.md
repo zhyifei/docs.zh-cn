@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
-ms.openlocfilehash: a514134ed0af3b691a2e66720f81594a51747b6f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 37d0e6fae8ad0f3a91f1bead23fb5823fc52d420
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089518"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313201"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>如何：使用类创建 Windows Communication Foundation 协定
 创建 Windows Communication Foundation (WCF) 协定的首选的方法是使用接口。 有关详细信息，请参阅[如何：定义服务协定](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)。 本文介绍另一种方式，即创建一个类，然后直接对该类应用 <xref:System.ServiceModel.ServiceContractAttribute> 特性，并对该类中作为协定一部分的每个方法应用 <xref:System.ServiceModel.OperationContractAttribute> 特性。  
@@ -22,13 +22,13 @@ ms.locfileid: "59089518"
   
 ### <a name="creating-a-windows-communication-foundation-contract-with-a-class"></a>通过类创建 Windows Communication Foundation 协定  
   
-1.  创建一个新类，使用 Visual Basic 中， C#，或任何将其他公共语言运行时语言。  
+1. 创建一个新类，使用 Visual Basic 中， C#，或任何将其他公共语言运行时语言。  
   
-2.  对该类应用 <xref:System.ServiceModel.ServiceContractAttribute> 类。  
+2. 对该类应用 <xref:System.ServiceModel.ServiceContractAttribute> 类。  
   
-3.  创建该类中的方法。  
+3. 创建该类中的方法。  
   
-4.  将应用<xref:System.ServiceModel.OperationContractAttribute>必须作为公共 WCF 协定的一部分进行公开的每个方法的类。  
+4. 将应用<xref:System.ServiceModel.OperationContractAttribute>必须作为公共 WCF 协定的一部分进行公开的每个方法的类。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示定义服务协定的类。  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event handling [Windows Forms], context menus
 - shortcut menus [Windows Forms], event handling
 ms.assetid: b661b3dd-7815-4cc2-a1aa-a9a391ab3427
-ms.openlocfilehash: 179411da96362fd9ba42e2b97682f335beb894c1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3001480959ef90cb31048cbcf70aeff1632979fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170704"
 ---
 # <a name="how-to-handle-the-contextmenustrip-opening-event"></a>如何：处理 ContextMenuStrip 打开事件
 您可以自定义的行为在<xref:System.Windows.Forms.ContextMenuStrip>控件通过处理<xref:System.Windows.Forms.ToolStripDropDown.Opening>事件。  
@@ -30,6 +30,7 @@ ms.locfileid: "57715446"
  设置<xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=nameWithType>属性设置为`true`以防止打开的菜单。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>
 - <xref:System.Windows.Forms.ToolStripDropDown>

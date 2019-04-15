@@ -2,12 +2,12 @@
 title: 在 LINQ to Entities 查询中调用函数
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 69a0d11893b528d53dfe5bdca97fa36a65b0a45b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6fa1a7204a91a62c30e8683c449cc2be44132b4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312080"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>在 LINQ to Entities 查询中调用函数
 本节中的主题说明如何调用 LINQ to Entities 查询中的函数。  
@@ -16,11 +16,11 @@ ms.locfileid: "59180877"
   
  调用自定义函数的过程需要三个基本步骤：  
   
-1.  在概念模型中定义函数或在存储模型中声明函数。  
+1. 在概念模型中定义函数或在存储模型中声明函数。  
   
-2.  将方法添加到应用程序并将其映射到具有 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 的模型中的函数。  
+2. 将方法添加到应用程序并将其映射到具有 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 的模型中的函数。  
   
-3.  在 LINQ to Entities 查询中调用该函数。  
+3. 在 LINQ to Entities 查询中调用该函数。  
   
  有关更多信息，请参见本节中的各主题。  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a731a54771f3ac589031e856539ba0c21ca22778
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c39ee551dde19d87a75403f3db7433d1ef829f3b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270483"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333985"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > 元素
 指定 Windows 标识不流经异步点，而不考虑当前线程上执行上下文的流设置。  
@@ -42,7 +42,7 @@ ms.locfileid: "55270483"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`false`|<xref:System.Security.Principal.WindowsIdentity> 流经异步点，具体取决于<xref:System.Threading.ExecutionContext>流当前线程的设置。 这是默认设置。|  
 |`true`|<xref:System.Security.Principal.WindowsIdentity> 不流经异步点，而不考虑<xref:System.Threading.ExecutionContext>流当前线程上的设置。|  
@@ -67,11 +67,11 @@ ms.locfileid: "55270483"
   
  您可以更改此默认行为中两种方法：  
   
-1.  在每个线程进行的托管代码。  
+1. 在每个线程进行的托管代码。  
   
      可以通过修改禁止显示上每个线程进行的流<xref:System.Threading.ExecutionContext>并<xref:System.Security.SecurityContext>通过使用设置<xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>，<xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>或<xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>方法。  
   
-2.  在对非托管承载接口来加载公共语言运行时 (CLR) 的调用。  
+2. 在对非托管承载接口来加载公共语言运行时 (CLR) 的调用。  
   
      如果使用非托管承载接口 （而不是一个简单托管可执行文件） 用于将 CLR 加载，则可以对的调用中指定特殊标志[CorBindToRuntimeEx 函数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)函数。 若要启用的整个过程的兼容性模式，设置`flags`参数[CorBindToRuntimeEx 函数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)STARTUP_LEGACY_IMPERSONATION 到。  
   
@@ -116,6 +116,7 @@ ms.locfileid: "55270483"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<alwaysFlowImpersonationPolicy > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

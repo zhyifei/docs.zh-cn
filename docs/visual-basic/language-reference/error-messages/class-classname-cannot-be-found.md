@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: c5003b6d4892839d43ba9da103473c4c7e3d947a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e1a33a56d196b2a8731f2ddb5c632b0de147db3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817131"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346309"
 ---
 # <a name="class-classname-cannot-be-found"></a>类的\<类名 > 找不到
 类的\<类名 > 找不到。 这种情况通常是“Microsoft.VisualBasic.dll”不匹配的结果。  
@@ -23,14 +23,14 @@ ms.locfileid: "58817131"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  再次编译此程序以查看错误是否重复出现。  
+1. 再次编译此程序以查看错误是否重复出现。  
   
-2.  如果错误重复出现，保存所做的工作并重新启动 Visual Studio。  
+2. 如果错误重复出现，保存所做的工作并重新启动 Visual Studio。  
   
-3.  如果错误仍然存在，请重新安装 Visual Basic。  
+3. 如果错误仍然存在，请重新安装 Visual Basic。  
   
-4.  如果在重新安装之后依然出现错误，请通知 Microsoft 产品支持服务。  
+4. 如果在重新安装之后依然出现错误，请通知 Microsoft 产品支持服务。  
   
 ## <a name="see-also"></a>请参阅
 
-- [与我们交流](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

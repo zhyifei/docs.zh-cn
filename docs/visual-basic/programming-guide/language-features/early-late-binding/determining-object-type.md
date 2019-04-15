@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 625ddb8fc153708a80e8cf475f48d595efbe4df2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842624"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302707"
 ---
 # <a name="determining-object-type-visual-basic"></a>确定对象类型 (Visual Basic)
 一般的对象变量 (也就是说，变量声明为`Object`) 可以包含来自任何类的对象。 使用类型的变量时`Object`，可能需要采取不同操作基于对象的类; 例如，某些对象可能的特定属性或方法不支持。 Visual Basic 提供两种方法来确定哪种类型的对象存储在一个对象变量：`TypeName`函数和`TypeOf...Is`运算符。  
@@ -36,11 +36,11 @@ ms.locfileid: "58842624"
   
 #### <a name="to-run-the-example"></a>运行示例  
   
-1.  创建一个新的 Windows 应用程序项目并添加<xref:System.Windows.Forms.Button>控件，<xref:System.Windows.Forms.CheckBox>控件，和一个<xref:System.Windows.Forms.RadioButton>到窗体控件。  
+1. 创建一个新的 Windows 应用程序项目并添加<xref:System.Windows.Forms.Button>控件，<xref:System.Windows.Forms.CheckBox>控件，和一个<xref:System.Windows.Forms.RadioButton>到窗体控件。  
   
-2.  从你的窗体上的按钮，调用`TestObject`过程。  
+2. 从你的窗体上的按钮，调用`TestObject`过程。  
   
-3.  将以下代码添加到你的窗体：  
+3. 将以下代码添加到你的窗体：  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
@@ -48,7 +48,7 @@ ms.locfileid: "58842624"
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [使用字符串名调用属性或方法](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [If...Then...Else 语句](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [String 数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Integer 数据类型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

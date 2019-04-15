@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae0a2a3af532b81d7b346cdd17da1712dfa3cba8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 13bf7342157de48e0183537afea2f2e53d1498dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300302"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset 方法
 通知公共语言运行时 (CLR)，主机具有完成某项任务，并使 CLR 能够重复使用当前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例来表示另一个任务。  
@@ -55,15 +55,15 @@ HRESULT Reset (
 ## <a name="remarks"></a>备注  
  CLR 可以回收之前创建`ICLRTask`实例，以避免重复创建新实例，每次需要新任务时的系统开销。 主机启用此功能通过调用`ICLRTask::Reset`而不是[iclrtask:: Exittask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)时它已完成一个任务。 以下列表总结了正常的生命周期的`ICLRTask`实例：  
   
-1.  在运行时创建一个新`ICLRTask`实例。  
+1. 在运行时创建一个新`ICLRTask`实例。  
   
-2.  运行时调用[ihosttaskmanager:: Getcurrenttask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)获取与当前主机任务的引用。  
+2. 运行时调用[ihosttaskmanager:: Getcurrenttask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)获取与当前主机任务的引用。  
   
-3.  运行时调用[ihosttask:: Setclrtask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md)要与主机任务关联的新实例。  
+3. 运行时调用[ihosttask:: Setclrtask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md)要与主机任务关联的新实例。  
   
-4.  该任务执行，并完成。  
+4. 该任务执行，并完成。  
   
-5.  宿主通过调用销毁任务`ICLRTask::ExitTask`。  
+5. 宿主通过调用销毁任务`ICLRTask::ExitTask`。  
   
  `Reset` 更改此方案的两种方法。 在上面的步骤 5，宿主调用`Reset`将任务重置为空白状态，然后将分离`ICLRTask`实例及其关联[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)实例。 如果需要，也可以缓存主机`IHostTask`以供重复使用的实例。 在上述步骤 1 中，运行时提取回收`ICLRTask`从缓存而不是创建一个新实例。  
   
@@ -76,9 +76,10 @@ HRESULT Reset (
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [ICLRTask 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [IHostTask 接口](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

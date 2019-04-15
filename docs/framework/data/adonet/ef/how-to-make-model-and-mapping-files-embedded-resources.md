@@ -2,12 +2,12 @@
 title: 如何：创建模型及映射文件嵌入资源
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: b00ccdd0a1fc1cb22cf7cc0d0a3177dcc0e8017f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eae3681664ab1fd095487a7b7ed395302faf2588
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138581"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329526"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>如何：创建模型及映射文件嵌入资源
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ，你可以为应用程序的嵌入资源部署模型和映射文件。 包含嵌入模型和映射文件的程序集必须加载到实体连接所在的应用程序域中。 有关详细信息，请参阅[连接字符串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。 默认情况下，[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]工具嵌入模型和映射文件。 手动定义模型和映射文件时，请使用下面的过程以确保文件作为嵌入资源与[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序一起部署。  
@@ -17,13 +17,13 @@ ms.locfileid: "59138581"
   
 ### <a name="to-embed-model-and-mapping-files"></a>嵌入模型和映射文件  
   
-1.  在中**解决方案资源管理器**，选择的概念 (.csdl) 文件。  
+1. 在中**解决方案资源管理器**，选择的概念 (.csdl) 文件。  
   
-2.  在中**属性**窗格中，设置**生成操作**到**嵌入的资源**。  
+2. 在中**属性**窗格中，设置**生成操作**到**嵌入的资源**。  
   
-3.  对存储文件 (.ssdl) 和映射文件 (.msl) 重复步骤 1 和步骤 2。  
+3. 对存储文件 (.ssdl) 和映射文件 (.msl) 重复步骤 1 和步骤 2。  
   
-4.  在中**解决方案资源管理器**，双击 App.config 文件，然后修改`Metadata`中的参数`connectionString`属性基于以下格式之一：  
+4. 在中**解决方案资源管理器**，双击 App.config 文件，然后修改`Metadata`中的参数`connectionString`属性基于以下格式之一：  
   
     -   `Metadata=` `res://<assemblyFullName>/<resourceName>;`  
   

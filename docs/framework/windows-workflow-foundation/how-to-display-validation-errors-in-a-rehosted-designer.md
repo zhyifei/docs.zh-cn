@@ -2,12 +2,12 @@
 title: 如何：在重新承载的设计器中显示验证错误
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
-ms.openlocfilehash: 8f70b190042d167741bbadc4e1645756fe5b830d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512562"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310195"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>如何：在重新承载的设计器中显示验证错误
 本主题说明如何在重新承载的 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 中检索和发布验证错误。 这为我们提供了一个用于确认重新承载的设计器中的工作流是否有效的过程。  
@@ -16,7 +16,7 @@ ms.locfileid: "33512562"
   
 ### <a name="implement-the-ivalidationerrorservice-interface"></a>实现 IValidationErrorService 接口  
   
-1.  下面是一个将验证错误写入调试日志的简单实现的代码示例。  
+1. 下面是一个将验证错误写入调试日志的简单实现的代码示例。  
   
     ```  
     using System.Activities.Presentation.Validation;  
@@ -38,7 +38,7 @@ ms.locfileid: "33512562"
   
 ### <a name="publishing-to-the-editing-context"></a>发布到编辑上下文  
   
-1.  下面是将此内容发布到编辑上下文的代码。  
+1. 下面是将此内容发布到编辑上下文的代码。  
   
     ```  
     wd.Context.Services.Publish<IValidationErrorService>(new DebugValidationErrorService());  

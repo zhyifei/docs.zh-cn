@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: f1acfab747c2309a2860870f8bcec9c0cf3b7bf0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302394"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>如何：使用 Windows 窗体 DataGrid 控件创建主/详细信息列表
 > [!NOTE]
@@ -25,17 +25,17 @@ ms.locfileid: "59094978"
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>若要以编程方式设置主/从关系  
   
-1.  创建两个新<xref:System.Windows.Forms.DataGrid>控制并设置其属性。  
+1. 创建两个新<xref:System.Windows.Forms.DataGrid>控制并设置其属性。  
   
-2.  将表添加到数据集。  
+2. 将表添加到数据集。  
   
-3.  声明类型的变量<xref:System.Data.DataRelation>来表示你想要创建的关系。  
+3. 声明类型的变量<xref:System.Data.DataRelation>来表示你想要创建的关系。  
   
-4.  实例化该关系指定为关系的名称，并指定表、 列和两个表将起到关联的项。  
+4. 实例化该关系指定为关系的名称，并指定表、 列和两个表将起到关联的项。  
   
-5.  添加到关系<xref:System.Data.DataSet>对象的<xref:System.Data.DataSet.Relations%2A>集合。  
+5. 添加到关系<xref:System.Data.DataSet>对象的<xref:System.Data.DataSet.Relations%2A>集合。  
   
-6.  使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法<xref:System.Windows.Forms.DataGrid>要绑定到网格的每个<xref:System.Data.DataSet>。  
+6. 使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法<xref:System.Windows.Forms.DataGrid>要绑定到网格的每个<xref:System.Data.DataSet>。  
   
      下面的示例演示如何设置中以前生成的 Customers 和 Orders 表之间的主/从关系<xref:System.Data.DataSet>(`ds`)。  
   

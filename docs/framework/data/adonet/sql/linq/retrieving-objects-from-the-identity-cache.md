@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569149"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211226"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>从实体缓存检索对象
 本主题介绍从 <xref:System.Data.Linq.DataContext> 管理的标识缓存中返回对象的 LINQ to SQL 查询类型。  
@@ -30,7 +30,7 @@ ms.locfileid: "54569149"
   
  在这些常规形式中，`Function1`、`Function2` 和 `predicate` 定义如下。  
   
- `Function1` 可以是以下任意形式：  
+ `Function1` 可以是以下任一项：  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54569149"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2` 可以是以下任意形式：  
+ `Function2` 可以是以下任一项：  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54569149"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` 必须是一个表达式，并且其中对象的主键属性必须设置为常量值。 如果对象的主键由多个属性定义，则每个主键属性都必须设置为常量值。 下面的示例是 `predicate` 必须采用的形式：  
+ `predicate` 必须在其中对象的主键属性设置为常量值的表达式。 如果对象的主键由多个属性定义，则每个主键属性都必须设置为常量值。 下面的示例是 `predicate` 必须采用的形式：  
   
 -   `c => c.PK == constant_value`  
   
@@ -65,6 +65,7 @@ ms.locfileid: "54569149"
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [查询概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [对象标识](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
 - [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

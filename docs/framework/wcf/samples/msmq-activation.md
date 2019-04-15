@@ -2,12 +2,12 @@
 title: MSMQ 激活
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 0b3d90ed756b2bb2b9bebc0ac9e36789a80df1d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d83759f321abe7fa7e39202daadd4ceda82d8f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745436"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295674"
 ---
 # <a name="msmq-activation"></a>MSMQ 激活
 本示例演示如何在 Windows 进程激活服务 (WAS) 中承载从消息队列读取的应用程序。 此示例使用`netMsmqBinding`，并基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。 本示例中的服务是一个 Web 承载的应用程序，而客户端是自承载的，并输出到控制台以观察提交的采购订单的状态。  
@@ -215,9 +215,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  确保安装了 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，因为 WAS 激活需要它。  
+1. 确保安装了 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，因为 WAS 激活需要它。  
   
-2.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，必须安装 WCF 非 HTTP 激活组件：  
+2. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，必须安装 WCF 非 HTTP 激活组件：  
   
     1.  从“开始”菜单中，选择“控制面板”。  
   
@@ -229,11 +229,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  展开**Microsoft.NET Framework 3.0**节点并检查**Windows Communication Foundation 非 HTTP 激活**功能。  
   
-3.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+3. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-4.  通过从命令窗口执行 client.exe 运行客户端。 这将创建队列并向其发送消息。 让客户端保持运行以观察服务读取消息的结果  
+4. 通过从命令窗口执行 client.exe 运行客户端。 这将创建队列并向其发送消息。 让客户端保持运行以观察服务读取消息的结果  
   
-5.  在默认情况下 MSMQ 激活服务将作为网络服务运行。 因此，用于激活应用程序的队列必须具有对网络服务的接收和查看权限。 可以通过使用消息队列 MMC 来添加这些权限：  
+5. 在默认情况下 MSMQ 激活服务将作为网络服务运行。 因此，用于激活应用程序的队列必须具有对网络服务的接收和查看权限。 可以通过使用消息队列 MMC 来添加这些权限：  
   
     1.  从**启动**菜单上，单击**运行**，然后键入`Compmgmt.msc`然后按 ENTER。  
   
@@ -245,7 +245,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  上**安全**选项卡上，单击**添加**和授予查看和接收对网络服务的权限。  
   
-6.  将 Windows 进程激活服务 (WAS) 配置为支持 MSMQ 激活。  
+6. 将 Windows 进程激活服务 (WAS) 配置为支持 MSMQ 激活。  
   
      为方便起见，在位于示例目录中名为 AddMsmqSiteBinding.cmd 的批处理文件中实现以下步骤。  
   
@@ -272,9 +272,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
          此命令将启用 /servicemodelsamples 应用程序来进行访问`http://localhost/servicemodelsamples`和`net.msmq://localhost/servicemodelsamples`。
   
-7.  如果您以前没有进行此操作，应确保启用 MSMQ 激活服务。 从**启动**菜单上，单击**运行**，然后键入`Services.msc`。 搜索的服务列表**Net.Msmq Listener Adapter**。 右键单击并选择**属性**。 设置**启动类型**到**自动**，单击**应用**然后单击**启动**按钮。 此步骤只能在第一次使用 Net.Msmq Listener Adapter 服务之前操作一次。  
+7. 如果您以前没有进行此操作，应确保启用 MSMQ 激活服务。 从**启动**菜单上，单击**运行**，然后键入`Services.msc`。 搜索的服务列表**Net.Msmq Listener Adapter**。 右键单击并选择**属性**。 设置**启动类型**到**自动**，单击**应用**然后单击**启动**按钮。 此步骤只能在第一次使用 Net.Msmq Listener Adapter 服务之前操作一次。  
   
-8.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 此外，在客户端上更改用于提交采购订单的代码，使其在提交采购订单时在队列的 URI 中反映计算机名。 使用以下代码：  
+8. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 此外，在客户端上更改用于提交采购订单的代码，使其在提交采购订单时在队列的 URI 中反映计算机名。 使用以下代码：  
   
     ```csharp  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
@@ -309,7 +309,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>在加入到工作组的计算机上运行此示例  
   
-1.  如果计算机不是域成员，请将身份验证模式和保护级别设置为 None 以禁用传输安全性，如下面的示例配置所示。  
+1. 如果计算机不是域成员，请将身份验证模式和保护级别设置为 None 以禁用传输安全性，如下面的示例配置所示。  
   
     ```xml  
     <bindings>  
@@ -321,12 +321,12 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     </bindings>  
     ```  
   
-2.  在运行示例前更改服务和客户端上的配置。  
+2. 在运行示例前更改服务和客户端上的配置。  
   
     > [!NOTE]
     >  将 `security mode` 设置为 `None` 等效于将 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全设置为 `None`。  
   
-3.  若要在加入到工作组的计算机上启用激活，必须使用特定用户帐户运行激活服务和辅助进程（两者使用的账户必须相同），并且队列必须具有该特定用户帐户的 ACL。  
+3. 若要在加入到工作组的计算机上启用激活，必须使用特定用户帐户运行激活服务和辅助进程（两者使用的账户必须相同），并且队列必须具有该特定用户帐户的 ACL。  
   
      更改运行辅助进程所用的标识：  
   
@@ -342,13 +342,14 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     2.  右键单击**net.msmq listener Adapter**，然后选择**属性**。  
   
-4.  更改中的帐户**登录**选项卡。  
+4. 更改中的帐户**登录**选项卡。  
   
-5.  在工作组中，服务还必须使用不受限制的令牌来运行。 为此，请在命令窗口中运行下面的命令：  
+5. 在工作组中，服务还必须使用不受限制的令牌来运行。 为此，请在命令窗口中运行下面的命令：  
   
     ```console  
     sc sidtype netmsmqactivator unrestricted  
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

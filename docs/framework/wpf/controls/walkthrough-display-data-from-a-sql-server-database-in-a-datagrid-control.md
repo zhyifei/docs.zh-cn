@@ -1,5 +1,5 @@
 ---
-title: 演练：DataGrid 控件中显示的 SQL Server 数据库中的数据
+title: 演练：在 DataGrid 控件中显示 SQL Server 数据库中的数据
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 022be17c946529583694afc0fe1c61b832aa03e4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 274ec2e8ef16190da53061bb197bc3b1a1fadcf8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351316"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336104"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>演练：DataGrid 控件中显示的 SQL Server 数据库中的数据
 
@@ -29,27 +29,27 @@ ms.locfileid: "57351316"
 
 ## <a name="create-entity-classes"></a>创建实体类
 
-1.  在 Visual Basic 或 C# 中，创建一个新的 WPF 应用程序项目并将其命名`DataGridSQLExample`。
+1. 在 Visual Basic 或 C# 中，创建一个新的 WPF 应用程序项目并将其命名`DataGridSQLExample`。
 
-2.  在解决方案资源管理器中右键单击你的项目，指向**外**，然后选择**新项**。
+2. 在解决方案资源管理器中右键单击你的项目，指向**外**，然后选择**新项**。
 
      添加新项对话框。
 
-3.  在已安装的模板窗格中，选择**数据**，然后在模板列表中，选择**ADO.NET 实体数据模型**。
+3. 在已安装的模板窗格中，选择**数据**，然后在模板列表中，选择**ADO.NET 实体数据模型**。
 
      ![ADO.NET 实体数据模型项模板](../../wcf/feature-details/./media/ado-net-entity-data-model-item-template.png)
 
-4.  将文件命名`AdventureWorksModel.edmx`，然后单击**添加**。
+4. 将文件命名`AdventureWorksModel.edmx`，然后单击**添加**。
 
      此时将显示实体数据模型向导。
 
-5.  在选择模型内容屏幕中，选择**EF 设计器从数据库**，然后单击**下一步**。
+5. 在选择模型内容屏幕中，选择**EF 设计器从数据库**，然后单击**下一步**。
 
-6.  在选择数据连接屏幕中，提供 AdventureWorksLT2008 数据库的连接。 有关详细信息，请参阅[选择数据连接对话框中](https://go.microsoft.com/fwlink/?LinkId=160190)。
+6. 在选择数据连接屏幕中，提供 AdventureWorksLT2008 数据库的连接。 有关详细信息，请参阅[选择数据连接对话框中](https://go.microsoft.com/fwlink/?LinkId=160190)。
 
     请确保名称是`AdventureWorksLT2008Entities`并且**将实体连接设置保存在 App.Config 作为**复选框已选中，然后依次**下一步**。
 
-7.  在选择数据库对象屏幕中，展开表节点，并选择**产品**并**ProductCategory**表。
+7. 在选择数据库对象屏幕中，展开表节点，并选择**产品**并**ProductCategory**表。
 
      您可以为生成实体类的所有表;但是，在此示例中您只能从检索数据这两个表。
 
@@ -63,19 +63,19 @@ ms.locfileid: "57351316"
 
 ## <a name="retrieve-and-present-the-data"></a>检索和呈现数据
 
-1.  打开 MainWindow.xaml 文件。
+1. 打开 MainWindow.xaml 文件。
 
-2.  设置<xref:System.Windows.FrameworkElement.Width%2A>属性上的<xref:System.Windows.Window>到 450。
+2. 设置<xref:System.Windows.FrameworkElement.Width%2A>属性上的<xref:System.Windows.Window>到 450。
 
-3.  在 XAML 编辑器中，添加以下<xref:System.Windows.Controls.DataGrid>标记之间`<Grid>`并`</Grid>`要添加的标记<xref:System.Windows.Controls.DataGrid>名为`dataGrid1`。
+3. 在 XAML 编辑器中，添加以下<xref:System.Windows.Controls.DataGrid>标记之间`<Grid>`并`</Grid>`要添加的标记<xref:System.Windows.Controls.DataGrid>名为`dataGrid1`。
 
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#3)]
 
      ![含 DataGrid 的窗口](./media/datagrid-sql-ef-step6.png "DataGrid_SQL_EF_Step6")
 
-4.  选择 <xref:System.Windows.Window>。
+4. 选择 <xref:System.Windows.Window>。
 
-5.  使用属性窗口或 XAML 编辑器中，创建的事件处理程序<xref:System.Windows.Window>名为`Window_Loaded`为<xref:System.Windows.FrameworkElement.Loaded>事件。 有关详细信息，请参阅[如何：创建一个简单的事件处理程序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))。
+5. 使用属性窗口或 XAML 编辑器中，创建的事件处理程序<xref:System.Windows.Window>名为`Window_Loaded`为<xref:System.Windows.FrameworkElement.Loaded>事件。 有关详细信息，请参阅[如何：创建一个简单的事件处理程序](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))。
 
      下图显示 XAML mainwindow.xaml。
 
@@ -84,14 +84,14 @@ ms.locfileid: "57351316"
 
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#1)]
 
-6.  打开代码隐藏文件 （MainWindow.xaml.vb 或 MainWindow.xaml.cs） <xref:System.Windows.Window>。
+6. 打开代码隐藏文件 （MainWindow.xaml.vb 或 MainWindow.xaml.cs） <xref:System.Windows.Window>。
 
-7.  添加以下代码来联接表中检索特定的值并设置<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>属性的<xref:System.Windows.Controls.DataGrid>到查询的结果。
+7. 添加以下代码来联接表中检索特定的值并设置<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>属性的<xref:System.Windows.Controls.DataGrid>到查询的结果。
 
      [!code-csharp[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml.cs#2)]
      [!code-vb[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/VB/MainWindow.xaml.vb#2)]
 
-8.  运行示例。
+8. 运行示例。
 
      应会看到<xref:System.Windows.Controls.DataGrid>显示数据。
 

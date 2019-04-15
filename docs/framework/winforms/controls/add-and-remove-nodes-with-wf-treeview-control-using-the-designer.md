@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
-ms.openlocfilehash: cfac0d02ec1effdd521ca68ae4cb44b5a5a7a597
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ecf0b758a9c45a0354a68b6cbfecdb1c49ab390f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124847"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322623"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>如何：通过使用设计器添加和删除 Windows 窗体 TreeView 控件中的节点
 因为 Windows 窗体<xref:System.Windows.Forms.TreeView>控件以分层方式，添加您必须特别注意到其父节点是节点时将显示节点。  
@@ -24,15 +24,15 @@ ms.locfileid: "59124847"
   
 ### <a name="to-add-or-remove-nodes-in-the-designer"></a>若要添加或删除在设计器中的节点  
   
-1.  选择 <xref:System.Windows.Forms.TreeView> 控件。  
+1. 选择 <xref:System.Windows.Forms.TreeView> 控件。  
   
-2.  在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.TreeView.Nodes%2A>属性。  
+2. 在中**属性**窗口中，单击**省略号**(![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")) 按钮旁边<xref:System.Windows.Forms.TreeView.Nodes%2A>属性。  
   
      **树节点编辑器**出现。  
   
-3.  若要将节点添加，必须存在的根节点;如果不存在，首先必须通过单击添加根**添加根**按钮。 然后可以通过选择根节点或任何其他节点并单击添加子节点**添加子项**按钮。  
+3. 若要将节点添加，必须存在的根节点;如果不存在，首先必须通过单击添加根**添加根**按钮。 然后可以通过选择根节点或任何其他节点并单击添加子节点**添加子项**按钮。  
   
-4.  若要删除节点，请选择节点以删除，然后单击**删除**按钮。  
+4. 若要删除节点，请选择节点以删除，然后单击**删除**按钮。  
   
 ## <a name="see-also"></a>请参阅
 

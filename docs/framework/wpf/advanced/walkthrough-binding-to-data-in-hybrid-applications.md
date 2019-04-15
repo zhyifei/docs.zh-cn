@@ -1,5 +1,5 @@
 ---
-title: 演练：绑定到混合应用程序中的数据
+title: 演练：在混合应用程序中绑定到数据
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 378ebd5a402006d7e7a88029ced62f812f620aeb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377737"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300861"
 ---
-# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>演练：绑定到混合应用程序中的数据
+# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>演练：在混合应用程序中绑定到数据
 无论您使用数据源绑定到控件是必需的用户提供对基础数据的访问[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 本演练演示如何在混合应用程序中包含这两个使用数据绑定[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件。  
   
  本演练涉及以下任务：  
@@ -49,23 +49,23 @@ ms.locfileid: "57377737"
   
 #### <a name="to-create-and-set-up-the-project"></a>创建并设置项目  
   
-1.  创建一个名为的 WPF 应用程序项目`WPFWithWFAndDatabinding`。  
+1. 创建一个名为的 WPF 应用程序项目`WPFWithWFAndDatabinding`。  
   
-2.  在解决方案资源管理器中，添加对下列程序集的引用。  
+2. 在解决方案资源管理器中，添加对下列程序集的引用。  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms  
   
-3.  打开 MainWindow.xaml 中的[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
+3. 打开 MainWindow.xaml 中的[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
   
-4.  在中<xref:System.Windows.Window>元素中，添加以下[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]命名空间映射。  
+4. 在中<xref:System.Windows.Window>元素中，添加以下[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]命名空间映射。  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  命名为默认值<xref:System.Windows.Controls.Grid>元素`mainGrid`通过将分配<xref:System.Windows.FrameworkElement.Name%2A>属性。  
+5. 命名为默认值<xref:System.Windows.Controls.Grid>元素`mainGrid`通过将分配<xref:System.Windows.FrameworkElement.Name%2A>属性。  
   
      [!code-xaml[WPFWithWFAndDatabinding#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
@@ -120,44 +120,44 @@ ms.locfileid: "57377737"
   
 #### <a name="to-add-the-data-source"></a>添加数据源  
   
-1.  从**数据**菜单中，选择**添加新数据源**。  
+1. 从**数据**菜单中，选择**添加新数据源**。  
   
-2.  在中**数据源配置向导**，使用数据集创建到 Northwind 数据库的连接。 有关详细信息，请参阅[如何：连接到数据库中的数据](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))。  
+2. 在中**数据源配置向导**，使用数据集创建到 Northwind 数据库的连接。 有关详细信息，请参阅[如何：连接到数据库中的数据](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))。  
   
-3.  当提示你**数据源配置向导**，保存连接字符串作为`NorthwindConnectionString`。  
+3. 当提示你**数据源配置向导**，保存连接字符串作为`NorthwindConnectionString`。  
   
-4.  时系统会提示您选择数据库对象，选择`Customers`并`Orders`表和名称生成的数据集`NorthwindDataSet`。  
+4. 时系统会提示您选择数据库对象，选择`Customers`并`Orders`表和名称生成的数据集`NorthwindDataSet`。  
   
 ## <a name="binding-to-the-data-source"></a>绑定到数据源  
  <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType>组件为应用程序的数据源提供了一个统一的界面。 绑定到数据源是在代码隐藏文件中实现的。  
   
 #### <a name="to-bind-to-the-data-source"></a>绑定到数据源  
   
-1.  打开名为 MainWindow.xaml.vb 或 MainWindow.xaml.cs 的代码隐藏文件。  
+1. 打开名为 MainWindow.xaml.vb 或 MainWindow.xaml.cs 的代码隐藏文件。  
   
-2.  以下代码复制到`MainWindow`类定义。  
+2. 以下代码复制到`MainWindow`类定义。  
   
      此代码声明了<xref:System.Windows.Forms.BindingSource>组件和连接到数据库的相关帮助器类。  
   
      [!code-csharp[WPFWithWFAndDatabinding#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
      [!code-vb[WPFWithWFAndDatabinding#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
 
-3.  将以下代码复制到构造函数中。
+3. 将以下代码复制到构造函数中。
 
      此代码将创建并初始化<xref:System.Windows.Forms.BindingSource>组件。
 
      [!code-csharp[WPFWithWFAndDatabinding#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
      [!code-vb[WPFWithWFAndDatabinding#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
 
-4.  打开 MainWindow.xaml。
+4. 打开 MainWindow.xaml。
 
-5.  在设计视图或 XAML 视图中，选择<xref:System.Windows.Window>元素。
+5. 在设计视图或 XAML 视图中，选择<xref:System.Windows.Window>元素。
 
-6.  在属性窗口中，单击**事件**选项卡。
+6. 在属性窗口中，单击**事件**选项卡。
 
-7.  双击<xref:System.Windows.FrameworkElement.Loaded>事件。
+7. 双击<xref:System.Windows.FrameworkElement.Loaded>事件。
 
-8.  以下代码复制到<xref:System.Windows.FrameworkElement.Loaded>事件处理程序。
+8. 以下代码复制到<xref:System.Windows.FrameworkElement.Loaded>事件处理程序。
 
      此代码将分配<xref:System.Windows.Forms.BindingSource>组件作为数据上下文，并填充`Customers`和`Orders`适配器对象。
 
@@ -174,9 +174,10 @@ ms.locfileid: "57377737"
 10. 按 F5 生成并运行该应用程序。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [混合应用程序示例中的数据绑定](https://go.microsoft.com/fwlink/?LinkID=159983)
-- [演练：承载在 WPF 中的 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [演练：承载 WPF 复合控件在 Windows 窗体中](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [演练：在 WPF 中托管 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [演练：在 Windows 窗体中承载 WPF 复合控件](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 5688fbbe2c40e7cd30517fb53fe21ae3d0630f22
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261527"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343046"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>演练：创建自定义客户端和服务凭据
 本主题演示如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用自定义凭据。  
@@ -50,40 +50,40 @@ ms.locfileid: "56261527"
   
 #### <a name="to-implement-custom-client-credentials"></a>实现自定义客户端凭据  
   
-1.  定义一个从 <xref:System.ServiceModel.Description.ClientCredentials> 类派生的新类。  
+1. 定义一个从 <xref:System.ServiceModel.Description.ClientCredentials> 类派生的新类。  
   
-2.  可选。 为新凭据类型添加新方法或新属性。 如果未添加新凭据类型，请跳过此步骤。 下面的示例添加 `CreditCardNumber` 属性。  
+2. 可选。 为新凭据类型添加新方法或新属性。 如果未添加新凭据类型，请跳过此步骤。 下面的示例添加 `CreditCardNumber` 属性。  
   
-3.  重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。 使用自定义客户端凭据时，WCF 安全基础结构自动调用此方法。 此方法负责创建和返回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类实现的实例。  
+3. 重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。 使用自定义客户端凭据时，WCF 安全基础结构自动调用此方法。 此方法负责创建和返回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类实现的实例。  
   
     > [!IMPORTANT]
     >  需要特别注意的是，将重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法以创建自定义安全令牌管理器。 派生自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 的安全令牌管理器必须返回派生自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 的自定义安全令牌提供程序，才能创建实际的安全令牌。 如果不遵循此模式创建安全令牌，则当缓存 <xref:System.ServiceModel.ChannelFactory> 对象（这是 WCF 客户端代理的默认行为）时，您的应用程序可能无法正常工作，从而可能会导致面临特权提升攻击。 自定义凭据对象将作为 <xref:System.ServiceModel.ChannelFactory> 的一部分进行缓存。 然而，在每次调用时都会创建自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager>，只要在 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 中放置了令牌创建逻辑，它就可以缓解安全威胁。  
   
-4.  重写 <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> 方法。  
+4. 重写 <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> 方法。  
   
      [!code-csharp[c_CustomCredentials#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#1)]
      [!code-vb[c_CustomCredentials#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#1)]  
   
 #### <a name="to-implement-a-custom-client-security-token-manager"></a>实现自定义客户端安全令牌管理器  
   
-1.  定义一个从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 派生的新类。  
+1. 定义一个从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 派生的新类。  
   
-2.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。 有关自定义安全令牌提供程序的详细信息，请参阅[如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
+2. 可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。 有关自定义安全令牌提供程序的详细信息，请参阅[如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
   
-3.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。 有关自定义安全令牌身份验证器的详细信息，请参阅[如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
+3. 可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。 有关自定义安全令牌身份验证器的详细信息，请参阅[如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
   
-4.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。 有关自定义安全令牌和自定义安全令牌序列化程序的详细信息，请参阅[如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
+4. 可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。 有关自定义安全令牌和自定义安全令牌序列化程序的详细信息，请参阅[如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
   
      [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
      [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]  
   
 #### <a name="to-use-a-custom-client-credentials-from-application-code"></a>在应用程序代码中使用自定义客户端凭据  
   
-1.  创建生成的表示服务接口的客户端的实例，或创建指向要与之通信的服务的 <xref:System.ServiceModel.ChannelFactory> 的实例。  
+1. 创建生成的表示服务接口的客户端的实例，或创建指向要与之通信的服务的 <xref:System.ServiceModel.ChannelFactory> 的实例。  
   
-2.  从 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 集合中删除系统提供的客户端凭据行为，此集合可以通过 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 属性访问。  
+2. 从 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 集合中删除系统提供的客户端凭据行为，此集合可以通过 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 属性访问。  
   
-3.  创建自定义客户端凭据类的一个新实例并将其添加到 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 集合中，此集合可以通过 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 属性访问。  
+3. 创建自定义客户端凭据类的一个新实例并将其添加到 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 集合中，此集合可以通过 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 属性访问。  
   
      [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
      [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]  
@@ -94,15 +94,15 @@ ms.locfileid: "56261527"
   
 #### <a name="creating-a-configuration-handler-for-custom-client-credentials"></a>创建自定义客户端凭据的配置处理程序  
   
-1.  定义一个从 <xref:System.ServiceModel.Configuration.ClientCredentialsElement> 派生的新类。  
+1. 定义一个从 <xref:System.ServiceModel.Configuration.ClientCredentialsElement> 派生的新类。  
   
-2.  可选。 为所有其他要通过应用程序配置公开的配置参数添加属性。 下面的示例添加一个名为 `CreditCardNumber` 的属性。  
+2. 可选。 为所有其他要通过应用程序配置公开的配置参数添加属性。 下面的示例添加一个名为 `CreditCardNumber` 的属性。  
   
-3.  重写 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> 属性以返回使用配置元素创建的自定义客户端凭据类的类型。  
+3. 重写 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> 属性以返回使用配置元素创建的自定义客户端凭据类的类型。  
   
-4.  重写 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> 方法。 此方法负责根据从配置文件加载的设置创建和返回自定义凭据类的一个实例。 从此方法中调用基 <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> 方法以检索加载到客户端凭据实例中的系统提供的凭据设置。  
+4. 重写 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> 方法。 此方法负责根据从配置文件加载的设置创建和返回自定义凭据类的一个实例。 从此方法中调用基 <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> 方法以检索加载到客户端凭据实例中的系统提供的凭据设置。  
   
-5.  可选。 如果您在步骤 2 中添加了其他属性，则需要重写 <xref:System.Configuration.ConfigurationElement.Properties%2A> 属性，以便注册其他配置设置，使配置框架可以识别它们。 组合使用您的属性与基类属性可以通过此自定义客户端凭据配置元素来配置系统提供的设置。  
+5. 可选。 如果您在步骤 2 中添加了其他属性，则需要重写 <xref:System.Configuration.ConfigurationElement.Properties%2A> 属性，以便注册其他配置设置，使配置框架可以识别它们。 组合使用您的属性与基类属性可以通过此自定义客户端凭据配置元素来配置系统提供的设置。  
   
      [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
      [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]  
@@ -111,11 +111,11 @@ ms.locfileid: "56261527"
   
 #### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>在应用程序配置中注册和使用自定义客户端凭据配置处理程序  
   
-1.  添加 <`extensions`> 元素和一个 <`behaviorExtensions`> 元素的配置文件。  
+1. 添加 <`extensions`> 元素和一个 <`behaviorExtensions`> 元素的配置文件。  
   
-2.  添加 <`add`> 元素为 <`behaviorExtensions`> 元素，并设置`name`属性为适当的值。  
+2. 添加 <`add`> 元素为 <`behaviorExtensions`> 元素，并设置`name`属性为适当的值。  
   
-3.  将 `type` 特性设置为完全限定类型名称。 此外还包括程序集名称和其他程序集属性。  
+3. 将 `type` 特性设置为完全限定类型名称。 此外还包括程序集名称和其他程序集属性。  
   
     ```xml  
     <system.serviceModel>  
@@ -127,7 +127,7 @@ ms.locfileid: "56261527"
     <system.serviceModel>  
     ```  
   
-4.  注册配置处理程序之后, 自定义凭据元素可以使用而不是系统提供相同的配置文件中 <`clientCredentials`> 元素。 可以同时使用系统提供的属性和任何添加到配置处理程序实现的新属性。 下面的示例使用 `creditCardNumber` 属性设置自定义属性的值。  
+4. 注册配置处理程序之后, 自定义凭据元素可以使用而不是系统提供相同的配置文件中 <`clientCredentials`> 元素。 可以同时使用系统提供的属性和任何添加到配置处理程序实现的新属性。 下面的示例使用 `creditCardNumber` 属性设置自定义属性的值。  
   
     ```xml  
     <behaviors>  
@@ -141,37 +141,37 @@ ms.locfileid: "56261527"
   
 #### <a name="to-implement-custom-service-credentials"></a>实现自定义服务凭据  
   
-1.  定义一个从 <xref:System.ServiceModel.Description.ServiceCredentials> 派生的新类。  
+1. 定义一个从 <xref:System.ServiceModel.Description.ServiceCredentials> 派生的新类。  
   
-2.  可选。 添加新属性以为将要添加的新凭据值提供 API。 如果未添加新凭据值，请跳过此步骤。 下面的示例添加 `AdditionalCertificate` 属性。  
+2. 可选。 添加新属性以为将要添加的新凭据值提供 API。 如果未添加新凭据值，请跳过此步骤。 下面的示例添加 `AdditionalCertificate` 属性。  
   
-3.  重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。 使用自定义客户端凭据时，WCF 基础结构自动调用此方法。 此方法负责创建和返回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类的实现的实例（在下一个过程中说明）。  
+3. 重写 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。 使用自定义客户端凭据时，WCF 基础结构自动调用此方法。 此方法负责创建和返回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类的实现的实例（在下一个过程中说明）。  
   
-4.  可选。 重写 <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> 方法。 只有在将新属性或内部字段添加到自定义客户端凭据实现时，才需要此操作。  
+4. 可选。 重写 <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> 方法。 只有在将新属性或内部字段添加到自定义客户端凭据实现时，才需要此操作。  
   
      [!code-csharp[c_CustomCredentials#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#4)]
      [!code-vb[c_CustomCredentials#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#4)]  
   
 #### <a name="to-implement-a-custom-service-security-token-manager"></a>实现自定义服务安全令牌管理器  
   
-1.  定义一个从 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 类派生的新类。  
+1. 定义一个从 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 类派生的新类。  
   
-2.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。 有关自定义安全令牌提供程序的详细信息，请参阅[如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
+2. 可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。 有关自定义安全令牌提供程序的详细信息，请参阅[如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
   
-3.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。 有关自定义安全令牌身份验证器的详细信息，请参阅[如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)主题。  
+3. 可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 实现，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。 有关自定义安全令牌身份验证器的详细信息，请参阅[如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)主题。  
   
-4.  可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。 有关自定义安全令牌和自定义安全令牌序列化程序的详细信息，请参阅[如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
+4. 可选。 如果必须创建一个自定义 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>，则重写 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。 有关自定义安全令牌和自定义安全令牌序列化程序的详细信息，请参阅[如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
   
      [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
      [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]  
   
 #### <a name="to-use-custom-service-credentials-from-application-code"></a>在应用程序代码中使用自定义服务凭据  
   
-1.  创建 <xref:System.ServiceModel.ServiceHost>的一个实例。  
+1. 创建 <xref:System.ServiceModel.ServiceHost>的一个实例。  
   
-2.  从 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中删除系统提供的服务凭据行为。  
+2. 从 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中删除系统提供的服务凭据行为。  
   
-3.  创建自定义服务凭据类的一个新实例并将其添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中。  
+3. 创建自定义服务凭据类的一个新实例并将其添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合中。  
   
      [!code-csharp[c_CustomCredentials#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#6)]
      [!code-vb[c_CustomCredentials#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#6)]  
@@ -179,6 +179,7 @@ ms.locfileid: "56261527"
  使用上面“`To create a configuration handler for custom client credentials`”和“`To register and use a custom client credentials configuration handler in the application configuration`”过程中描述的步骤添加对配置的支持。唯一的区别是使用 <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> 类代替 <xref:System.ServiceModel.Configuration.ClientCredentialsElement> 类作为配置处理程序的基类。 这样，使用系统提供的 `<serviceCredentials>` 元素的任何地方都可以使用自定义服务凭据元素。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Security.SecurityCredentialsManager>

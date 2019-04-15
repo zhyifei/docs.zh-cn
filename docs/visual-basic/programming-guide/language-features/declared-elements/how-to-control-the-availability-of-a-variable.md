@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: fb7c04ac6c24648dfb2a8cfa5e01bf97c6b0b3be
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311521"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>如何：控制变量 (Visual Basic 中) 的可用性
 通过指定控制变量的可用性及其*访问级别*。 访问级别确定哪些代码有权读取或写入到该变量。  
@@ -31,25 +31,25 @@ ms.locfileid: "58841688"
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>若要使变量只能在其模块、 类或结构内访问  
   
-1.  位置[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)内部模块、 类或结构，但在任何过程外部的变量。  
+1. 位置[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)内部模块、 类或结构，但在任何过程外部的变量。  
   
-2.  包括[私有](../../../../visual-basic/language-reference/modifiers/private.md)中的关键字`Dim`语句。  
+2. 包括[私有](../../../../visual-basic/language-reference/modifiers/private.md)中的关键字`Dim`语句。  
   
      可以读取或写入到中的变量中的模块、 类或结构的任意位置，但不能从其外部。  
   
 #### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>若要使变量可从任何可以看到它的代码访问  
   
-1.  成员变量，将放置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。  
+1. 成员变量，将放置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。  
   
-2.  包括[公共](../../../../visual-basic/language-reference/modifiers/public.md)中的关键字`Dim`语句。  
+2. 包括[公共](../../../../visual-basic/language-reference/modifiers/public.md)中的关键字`Dim`语句。  
   
      可读取或从任何互操作的代码与您的程序集写入变量。  
   
  或  
   
-1.  本地变量，将放置`Dim`过程内的变量的语句。  
+1. 本地变量，将放置`Dim`过程内的变量的语句。  
   
-2.  不包括`Public`中的关键字`Dim`语句。  
+2. 不包括`Public`中的关键字`Dim`语句。  
   
      你可以读取或写入过程中的任意位置，但不能从变量到其外部。  
   
@@ -58,17 +58,17 @@ ms.locfileid: "58841688"
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>若要使变量只能从其类和任何派生的类中访问  
   
-1.  位置`Dim`类的内部，但在任何过程外部变量的语句。  
+1. 位置`Dim`类的内部，但在任何过程外部变量的语句。  
   
-2.  包括[受保护](../../../../visual-basic/language-reference/modifiers/protected.md)中的关键字`Dim`语句。  
+2. 包括[受保护](../../../../visual-basic/language-reference/modifiers/protected.md)中的关键字`Dim`语句。  
   
      可读取或写入任意位置在类中，以及从变量的任何类派生，但不能从任何类进行派生链中的外部。  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>若要使变量只能在同一程序集内访问  
   
-1.  位置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。  
+1. 位置`Dim`内部模块、 类或结构，但在任何过程外部变量的语句。  
   
-2.  包括[友元](../../../../visual-basic/language-reference/modifiers/friend.md)中的关键字`Dim`语句。  
+2. 包括[友元](../../../../visual-basic/language-reference/modifiers/friend.md)中的关键字`Dim`语句。  
   
      可读取或写入模块、 类或结构中的任意位置以及从同一程序集中，但不能从任何代码从变量到程序集之外。  
   

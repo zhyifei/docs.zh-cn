@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ee76f894d31fd65fd31011f33f7363f1b09de31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15bdbc001838e3d13a9789c8f54daa80f3b6ef9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219819"
 ---
 # <a name="iclrappdomainresourcemonitor-interface"></a>ICLRAppDomainResourceMonitor 接口
 提供检查应用程序域的内存和 CPU 使用情况的方法。  
@@ -54,10 +54,11 @@ ms.locfileid: "54726801"
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [\<appDomainResourceMonitoring > 元素](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
-- [应用程序域资源监视](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [应用程序域资源监控](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
 - [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [宿主](../../../../docs/framework/unmanaged-api/hosting/index.md)

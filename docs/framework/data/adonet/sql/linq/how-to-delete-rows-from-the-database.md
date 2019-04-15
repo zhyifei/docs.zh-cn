@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 598828f7750fe02082dfccacc64102f96588cb3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554304"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331671"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>如何：从数据库中删除行
 可以通过删除相应删除数据库中的行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对象从其与表相关的集合。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会将更改为相应的 SQL 转换`DELETE`命令。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持且无法识别级联删除操作。 如果要在对行有约束的表中删除行，则必须完成以下任务之一：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持或无法识别级联删除操作。 如果要在对行有约束的表中删除行，则必须完成以下任务之一：  
   
 -   在数据库的外键约束中设置 `ON DELETE CASCADE` 规则。  
   
--   使用您自己的代码先删除阻止删除父对象的子对象。  
+-   使用你自己的代码先删除阻止删除父对象的子对象。  
   
  否则会引发异常。 请参见本主题中后面的第二个代码示例。  
   
@@ -32,11 +32,11 @@ ms.locfileid: "54554304"
   
 ### <a name="to-delete-a-row-in-the-database"></a>删除数据库中的行  
   
-1.  查询数据库中要删除的行。  
+1. 查询数据库中要删除的行。  
   
-2.  调用 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 方法。  
+2. 调用 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 方法。  
   
-3.  将更改提交到数据库。  
+3. 将更改提交到数据库。  
   
 ## <a name="example"></a>示例  
  这第一个代码示例查询数据库中 11000 号订单的详细信息，将这些订单详细信息标记为删除，然后将这些更改提交到数据库。  
@@ -51,6 +51,7 @@ ms.locfileid: "54554304"
  [!code-vb[DLinqCascadeWorkaround#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCascadeWorkaround/vb/Module1.vb#1)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [如何：分配存储过程以便执行更新、插入和删除操作（O/R 设计器）](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
 - [进行和提交数据更改](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

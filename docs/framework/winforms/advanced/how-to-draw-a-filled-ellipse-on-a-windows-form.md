@@ -1,5 +1,5 @@
 ---
-title: 如何：Windows 窗体上绘制实心的椭圆
+title: 如何：在 Windows 窗体上绘制实心椭圆
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
-ms.openlocfilehash: 42316cd0d55b5154b21b4462157e044b30674ebd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2e7be3f2c4c710bb24568dd2e70f6f5cc4706c63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170991"
 ---
-# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>如何：Windows 窗体上绘制实心的椭圆
+# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>如何：在 Windows 窗体上绘制实心椭圆
 此示例窗体上绘制实心的椭圆。  
   
 ## <a name="example"></a>示例  
@@ -37,7 +37,8 @@ ms.locfileid: "57716270"
  应始终调用<xref:System.IDisposable.Dispose%2A>占用系统资源，如任何对象<xref:System.Drawing.Brush>和<xref:System.Drawing.Graphics>对象。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
 - [图形编程入门](getting-started-with-graphics-programming.md)
-- [alpha 值混合处理直线和填充](alpha-blending-lines-and-fills.md)
+- [Alpha 混合线条和填充](alpha-blending-lines-and-fills.md)
 - [使用画笔填充形状](using-a-brush-to-fill-shapes.md)

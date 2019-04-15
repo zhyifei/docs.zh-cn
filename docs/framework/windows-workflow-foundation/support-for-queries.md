@@ -2,12 +2,12 @@
 title: 查询支持
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307946"
 ---
 # <a name="support-for-queries"></a>查询支持
 SQL 工作流实例存储中记录了存储区中的一组已知属性。 用户可以根据这些属性查询实例。 下面的列表包含这些已知属性的一部分：  
@@ -20,7 +20,7 @@ SQL 工作流实例存储中记录了存储区中的一组已知属性。 用户
   
 -   **服务名称。** 服务的名称。  
   
--   **服务 Namespace。** 服务使用的命名空间的名称。  
+-   **服务命名空间。** 服务使用的命名空间的名称。  
   
 -   **当前计算机。**  
   
@@ -39,21 +39,21 @@ SQL 工作流实例存储中记录了存储区中的一组已知属性。 用户
 ### <a name="the-instances-view"></a>Instances 视图  
  Instances 视图包含下列字段：  
   
-1.  **Id**  
+1. **Id**  
   
-2.  **PendingTimer**  
+2. **PendingTimer**  
   
-3.  **CreationTime**  
+3. **CreationTime**  
   
-4.  **LastUpdatedTime**  
+4. **LastUpdatedTime**  
   
-5.  **ServiceDeploymentId**  
+5. **ServiceDeploymentId**  
   
-6.  **SuspensionExceptionName**  
+6. **SuspensionExceptionName**  
   
-7.  **SuspensionReason**  
+7. **SuspensionReason**  
   
-8.  **ActiveBookmarks**  
+8. **ActiveBookmarks**  
   
 9. **CurrentMachine**  
   
@@ -80,23 +80,23 @@ SQL 工作流实例存储中记录了存储区中的一组已知属性。 用户
 ### <a name="the-servicedeployments-view"></a>ServiceDeployments 视图  
  ServiceDeployments 视图包含下列字段：  
   
-1.  **SiteName**  
+1. **SiteName**  
   
-2.  **RelativeServicePath**  
+2. **RelativeServicePath**  
   
-3.  **RelativeApplicationPath**  
+3. **RelativeApplicationPath**  
   
-4.  **ServiceName**  
+4. **ServiceName**  
   
-5.  **ServiceNamespace**  
+5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>InstancePromotedProperties 视图  
  InstancePromotedProperties 视图包含下列字段。 有关升级的属性的详细信息，请参阅[存储扩展性](store-extensibility.md)主题。  
   
-1.  **InstanceId**  
+1. **InstanceId**  
   
-2.  **EncodingOption**  
+2. **EncodingOption**  
   
-3.  **PromotionName**  
+3. **PromotionName**  
   
-4.  **Value #** (一系列中的字段**Value1**到**Value64**)。
+4. **Value #** (一系列中的字段**Value1**到**Value64**)。

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], Toolbox bitmaps
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-ms.openlocfilehash: 9072f96bd6e3485e759ed72819229b3f0c33d641
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715953"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337703"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>如何：为控件提供工具箱位图
 如果你想要有一个特殊的图标为您的控件出现在**工具箱**，可以通过使用指定的特定映像<xref:System.Drawing.ToolboxBitmapAttribute>。 此类是一个特性，是一种可以附加到其他类上的特殊类。 有关属性的详细信息，请参阅[(Visual Basic 中) 的特性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)适用于 Visual Basic 或[特性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)适用于 C#。  
@@ -23,7 +23,7 @@ ms.locfileid: "57715953"
   
 ### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a>指定控件的工具箱位图  
   
-1.  添加<xref:System.Drawing.ToolboxBitmapAttribute>到类声明之前控件的`Class`对于 visual Basic，及更高版本的类声明对于 Visual C# 关键字。  
+1. 添加<xref:System.Drawing.ToolboxBitmapAttribute>到类声明之前控件的`Class`对于 visual Basic，及更高版本的类声明对于 Visual C# 关键字。  
   
     ```vb  
     ' Specifies the bitmap associated with the Button type.  
@@ -58,7 +58,7 @@ ms.locfileid: "57715953"
     }  
     ```  
   
-2.  重新生成项目。  
+2. 重新生成项目。  
   
     > [!NOTE]
     >  对于自动生成的控件和组件，位图不会出现在工具箱中。 若要查看位图，请使用“选择工具箱项”对话框重载控件。 有关详细信息，请参见[演练：自动填充工具箱与自定义组件](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
@@ -66,7 +66,7 @@ ms.locfileid: "57715953"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Drawing.ToolboxBitmapAttribute>
-- [演练：自动填充工具箱与自定义组件](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [演练：使用自定义组件自动填充工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
 - [设计时开发 Windows 窗体控件](developing-windows-forms-controls-at-design-time.md)
 - [特性概述 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [特性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)

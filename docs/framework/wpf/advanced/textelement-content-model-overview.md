@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125115"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336182"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement 内容模型概述
 此内容模型概述介绍了支持的内容<xref:System.Windows.Documents.TextElement>。 <xref:System.Windows.Documents.Paragraph>类是一种<xref:System.Windows.Documents.TextElement>。 内容模型描述哪些对象/元素可包含在其他对象/元素中。 本概述概括了用于从派生的对象的内容模型<xref:System.Windows.Documents.TextElement>。 有关详细信息，请参阅[流文档概述](flow-document-overview.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "59125115"
   
  如上面的关系图所示，元素的子级不一定由类是否派生自<xref:System.Windows.Documents.Block>类或<xref:System.Windows.Documents.Inline>类。 例如， <xref:System.Windows.Documents.Span> (<xref:System.Windows.Documents.Inline>的派生类) 只能有<xref:System.Windows.Documents.Inline>子元素，但<xref:System.Windows.Documents.Figure>(还<xref:System.Windows.Documents.Inline>的派生类) 只能有<xref:System.Windows.Documents.Block>子元素。 因此，关系图可用于快速确定哪些元素可以包含在其他元素中。 例如，让我们使用关系图来确定如何构造流内容的<xref:System.Windows.Controls.RichTextBox>。  
   
-1.  一个<xref:System.Windows.Controls.RichTextBox>必须包含<xref:System.Windows.Documents.FlowDocument>又必须包含<xref:System.Windows.Documents.Block>-派生的对象。 以下是上述关系图中的相应部分。  
+1. 一个<xref:System.Windows.Controls.RichTextBox>必须包含<xref:System.Windows.Documents.FlowDocument>又必须包含<xref:System.Windows.Documents.Block>-派生的对象。 以下是上述关系图中的相应部分。  
   
      ![关系图：RichTextBox 包含规则](./media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
@@ -35,7 +35,7 @@ ms.locfileid: "59125115"
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
-2.  根据关系图中，有几个<xref:System.Windows.Documents.Block>元素可供选择包括<xref:System.Windows.Documents.Paragraph>， <xref:System.Windows.Documents.Section>， <xref:System.Windows.Documents.Table>， <xref:System.Windows.Documents.List>，并<xref:System.Windows.Documents.BlockUIContainer>（请参阅上图中的 Block 派生类）。 假设我们想<xref:System.Windows.Documents.Table>。 上图中，根据<xref:System.Windows.Documents.Table>包含<xref:System.Windows.Documents.TableRowGroup>包含<xref:System.Windows.Documents.TableRow>元素，其中包含<xref:System.Windows.Documents.TableCell>元素包含<xref:System.Windows.Documents.Block>-派生的对象。 以下是有关的对应部分<xref:System.Windows.Documents.Table>取自上述关系图。  
+2. 根据关系图中，有几个<xref:System.Windows.Documents.Block>元素可供选择包括<xref:System.Windows.Documents.Paragraph>， <xref:System.Windows.Documents.Section>， <xref:System.Windows.Documents.Table>， <xref:System.Windows.Documents.List>，并<xref:System.Windows.Documents.BlockUIContainer>（请参阅上图中的 Block 派生类）。 假设我们想<xref:System.Windows.Documents.Table>。 上图中，根据<xref:System.Windows.Documents.Table>包含<xref:System.Windows.Documents.TableRowGroup>包含<xref:System.Windows.Documents.TableRow>元素，其中包含<xref:System.Windows.Documents.TableCell>元素包含<xref:System.Windows.Documents.Block>-派生的对象。 以下是有关的对应部分<xref:System.Windows.Documents.Table>取自上述关系图。  
   
      ![关系图：父&#47;表的子架构](./media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "59125115"
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
-3.  同样，一个或多个<xref:System.Windows.Documents.Block>下需要元素<xref:System.Windows.Documents.TableCell>。 为简单起见，在单元格内部放置一些文本。 我们可以使用执行此类情况的操作<xref:System.Windows.Documents.Paragraph>与<xref:System.Windows.Documents.Run>元素。 下面是显示的关系图中的对应部分<xref:System.Windows.Documents.Paragraph>花费<xref:System.Windows.Documents.Inline>元素，而<xref:System.Windows.Documents.Run>(<xref:System.Windows.Documents.Inline>元素) 只能采用纯文本。  
+3. 同样，一个或多个<xref:System.Windows.Documents.Block>下需要元素<xref:System.Windows.Documents.TableCell>。 为简单起见，在单元格内部放置一些文本。 我们可以使用执行此类情况的操作<xref:System.Windows.Documents.Paragraph>与<xref:System.Windows.Documents.Run>元素。 下面是显示的关系图中的对应部分<xref:System.Windows.Documents.Paragraph>花费<xref:System.Windows.Documents.Inline>元素，而<xref:System.Windows.Documents.Run>(<xref:System.Windows.Documents.Inline>元素) 只能采用纯文本。  
   
      ![关系图：父&#47;paragraph](./media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   

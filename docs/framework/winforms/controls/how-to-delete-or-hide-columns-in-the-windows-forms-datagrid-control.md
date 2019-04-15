@@ -12,12 +12,12 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: e6e8a4a5908d890d34ab6de952917cd97be2b433
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d3f1f013cbb5e41c997014f556602b01bab62914
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120141"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297507"
 ---
 # <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列
 > [!NOTE]
@@ -32,13 +32,13 @@ ms.locfileid: "59120141"
   
 ### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>若要以编程方式从数据网格中删除列  
   
-1.  在你的窗体声明区域中，声明的新实例<xref:System.Windows.Forms.DataGridTableStyle>类。  
+1. 在你的窗体声明区域中，声明的新实例<xref:System.Windows.Forms.DataGridTableStyle>类。  
   
-2.  设置<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType>属性设置为你想要应用该样式在数据源中的表。 下面的示例使用<xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>属性，它假定已设置。  
+2. 设置<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType>属性设置为你想要应用该样式在数据源中的表。 下面的示例使用<xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>属性，它假定已设置。  
   
-3.  添加新<xref:System.Windows.Forms.DataGridTableStyle>到 datagrid 的表样式集合的对象。  
+3. 添加新<xref:System.Windows.Forms.DataGridTableStyle>到 datagrid 的表样式集合的对象。  
   
-4.  调用<xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A>方法<xref:System.Windows.Forms.DataGrid>的<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>集合，指定要删除的列的列索引。  
+4. 调用<xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A>方法<xref:System.Windows.Forms.DataGrid>的<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>集合，指定要删除的列的列索引。  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -79,13 +79,13 @@ ms.locfileid: "59120141"
   
 ### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>若要以编程方式隐藏数据网格中的列  
   
-1.  在你的窗体声明区域中，声明的新实例<xref:System.Windows.Forms.DataGridTableStyle>类。  
+1. 在你的窗体声明区域中，声明的新实例<xref:System.Windows.Forms.DataGridTableStyle>类。  
   
-2.  设置<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>属性的<xref:System.Windows.Forms.DataGridTableStyle>到您想要应用该样式的数据源中的表。 下面的代码示例使用<xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>属性，它假定已设置。  
+2. 设置<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>属性的<xref:System.Windows.Forms.DataGridTableStyle>到您想要应用该样式的数据源中的表。 下面的代码示例使用<xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>属性，它假定已设置。  
   
-3.  添加新<xref:System.Windows.Forms.DataGridTableStyle>到 datagrid 的表样式集合的对象。  
+3. 添加新<xref:System.Windows.Forms.DataGridTableStyle>到 datagrid 的表样式集合的对象。  
   
-4.  通过设置隐藏的列及其`Width`属性设为 0，指定要隐藏的列的列索引。  
+4. 通过设置隐藏的列及其`Width`属性设为 0，指定要隐藏的列的列索引。  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  

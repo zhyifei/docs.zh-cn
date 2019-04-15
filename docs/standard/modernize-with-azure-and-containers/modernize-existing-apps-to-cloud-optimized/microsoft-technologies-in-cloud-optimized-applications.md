@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |云�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2f1d624365c168d14e98ed175d369f6aef18e42e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 45eeee165a1dcbfc7b6dbc5146ce2c4b2be2e643
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153873"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296246"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>云优化的应用程序中的 Microsoft 技术
 
@@ -25,9 +25,9 @@ ms.locfileid: "53153873"
 
 -   **监视遥测，日志记录和审核**:对监视并审核应用程序和在云中运行的容器的能力是关键的任何云计算得到优化的应用程序。 [Azure Application Insights](https://azure.microsoft.com/services/application-insights/)并[Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite)是主要的 Microsoft 工具，为云优化的应用程序提供监视和审核。
 
--   **预配**:自动化工具可帮助你预配基础结构和应用程序部署到多个环境 （生产、 测试、 过渡）。 Chef 和 Puppet 等工具可用于管理应用程序的配置和环境。 此外可以通过使用简单、 更直接的方法实现这一层。 例如，您可以直接通过 Azure 命令行接口 (Azure CLI) 工具、 部署，然后使用连续部署和发布管理管道中的[Azure DevOps 服务](https://visualstudio.microsoft.com/team-services/)。
+-   **预配**:自动化工具可帮助你预配基础结构和应用程序部署到多个环境 （生产、 测试、 过渡）。 Chef 和 Puppet 等工具可用于管理应用程序的配置和环境。 此外可以通过使用简单、 更直接的方法实现这一层。 例如，您可以直接通过 Azure 命令行接口 (Azure CLI) 工具、 部署，然后使用连续部署和发布管理管道中的[Azure DevOps 服务](https://azure.microsoft.com/services/devops/)。
 
--   **应用程序生命周期**:[Azure DevOps 服务](https://visualstudio.microsoft.com/team-services/)和 Jenkins，等其他工具是帮助你的生成的自动化服务器实现 CI/CD 管道，其中包括发布管理。
+-   **应用程序生命周期**:[Azure DevOps 服务](https://azure.microsoft.com/services/devops/)和 Jenkins，等其他工具是帮助你的生成的自动化服务器实现 CI/CD 管道，其中包括发布管理。
 
 本章节中和的相关的演练的下一步部分专门重点介绍有关运行时层 （Windows 容器） 的详细信息。 本指南介绍你可以部署 Windows Server 2016 （和更高版本） 上的 Windows 容器的 Vm 和 Azure 容器实例的方法。 它还介绍了更高级的 PaaS 平台，如 Azure 应用服务和业务流程协调程序类似于 Azure Service Fabric 和 Azure Kubernetes 服务。
 

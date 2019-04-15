@@ -15,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722356"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296155"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>如何：将用户在 Web 控件中输入的数值转换成数字
 由于世界各地的人都可以查看网页，因此用户能够在 <xref:System.Web.UI.WebControls.TextBox> 控件中以几乎无限种格式输入数字数据。 所以，请务必确定网页用户的区域设置和区域性。 分析用户输入后，可以应用用户的区域设置和区域性定义的格式设置约定。  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>将 Web 文本框控件中的数字输入转换为数字的具体步骤  
   
-1.  确定是否已填充 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 属性返回的字符串数组。 如果没有，请继续执行第 6 步。  
+1. 确定是否已填充 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 属性返回的字符串数组。 如果没有，请继续执行第 6 步。  
   
-2.  如果已填充 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组，请检索其中第一个元素。 第一个元素指明用户的默认或首选语言和区域。  
+2. 如果已填充 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组，请检索其中第一个元素。 第一个元素指明用户的默认或首选语言和区域。  
   
-3.  通过调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数，实例化表示用户首选区域性的 <xref:System.Globalization.CultureInfo> 对象。  
+3. 通过调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数，实例化表示用户首选区域性的 <xref:System.Globalization.CultureInfo> 对象。  
   
-4.  调用要将用户输入转换为的数字类型的 `TryParse` 或 `Parse` 方法。 重载 `TryParse` 或 `Parse` 方法（带 `provider` 参数），并将它传递到下面两个对象之一：  
+4. 调用要将用户输入转换为的数字类型的 `TryParse` 或 `Parse` 方法。 重载 `TryParse` 或 `Parse` 方法（带 `provider` 参数），并将它传递到下面两个对象之一：  
   
     -   第 3 步中创建的 <xref:System.Globalization.CultureInfo> 对象。  
   
     -   第 3 步中创建的 <xref:System.Globalization.CultureInfo> 对象的 <xref:System.Globalization.CultureInfo.NumberFormat%2A> 属性返回的 <xref:System.Globalization.NumberFormatInfo> 对象。  
   
-5.  如果转换失败，请对 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组中的每个剩余元素重复执行第 2 步到第 4 步。  
+5. 如果转换失败，请对 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组中的每个剩余元素重复执行第 2 步到第 4 步。  
   
-6.  如果转换仍失败或 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组为空，请使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 属性返回的固定区域性分析字符串。  
+6. 如果转换仍失败或 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组为空，请使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 属性返回的固定区域性分析字符串。  
   
 ## <a name="example"></a>示例  
  下面的示例是 Web 窗体的完整代码隐藏页面，此窗体提示用户在 <xref:System.Web.UI.WebControls.TextBox> 控件中输入数值，并将它转换为数字。 然后，使用与原始输入相同的格式设置规则，加倍并显示数字。  

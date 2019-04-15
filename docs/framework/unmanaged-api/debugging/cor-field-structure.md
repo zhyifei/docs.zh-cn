@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d570f9392bbd66f0d9031c776b139ee3b30541b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 691041632312bf8ac7c82a11724dcd725e14a420
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231053"
 ---
 # <a name="corfield-structure"></a>COR_FIELD 结构
 提供有关对象中的某个字段的信息。  
@@ -55,8 +55,9 @@ typedef struct COR_FIELD{
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

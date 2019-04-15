@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: 4abb6368946f9dac5fdefd6ca44f3adeed55f78f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410809"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317657"
 ---
 # <a name="table-overview"></a>表概述
 <xref:System.Windows.Documents.Table> 为支持流文档内容的基于网格的表示形式的块级别元素。 此元素极具灵活性，因此很有用，但也因此显得更加复杂，从而不容易理解和正确使用。  
@@ -27,15 +27,15 @@ ms.locfileid: "58410809"
   
 -   [基本表结构](#basic_table_structure)  
   
--   [表包含](#table_containment)  
+-   [表包容](#table_containment)  
   
 -   [行分组](#row_groupings)  
   
 -   [背景呈现优先级](#rendering_precedence)  
   
--   [跨行或列 ](#spanning_rows_or_columns)  
+-   [跨行或列](#spanning_rows_or_columns)  
   
--   [使用代码生成表 ](#building_a_table_with_code)  
+-   [使用代码生成表](#building_a_table_with_code)  
   
 -   [相关主题] 
   
@@ -108,15 +108,15 @@ ms.locfileid: "58410809"
 ### <a name="background-rendering-precedence"></a>背景呈现优先级  
  表元素以下列顺序呈现（按 Z 顺序从最低到最高排列）。 此顺序不能更改。 例如，对于这些元素，没有可用于替换此已有顺序的“Z 顺序”属性。  
   
-1.  <xref:System.Windows.Documents.Table>  
+1. <xref:System.Windows.Documents.Table>  
   
-2.  <xref:System.Windows.Documents.TableColumn>  
+2. <xref:System.Windows.Documents.TableColumn>  
   
-3.  <xref:System.Windows.Documents.TableRowGroup>  
+3. <xref:System.Windows.Documents.TableRowGroup>  
   
-4.  <xref:System.Windows.Documents.TableRow>  
+4. <xref:System.Windows.Documents.TableRow>  
   
-5.  <xref:System.Windows.Documents.TableCell>  
+5. <xref:System.Windows.Documents.TableCell>  
   
  请参考以下示例，该示例对表内每个元素的背景色进行定义。  
   
@@ -176,6 +176,7 @@ ms.locfileid: "58410809"
  [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [流文档概述](flow-document-overview.md)
 - [使用 XAML 定义表](how-to-define-a-table-with-xaml.md)
 - [WPF 中的文档](documents-in-wpf.md)

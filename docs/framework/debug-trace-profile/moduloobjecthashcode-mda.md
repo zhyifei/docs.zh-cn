@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a53f433d1b6caca98b2b0d564774820239320f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d8f6975d117d9920d2199c3996246822d1fdb6c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170762"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` 托管调试助手 (MDA) 更改 <xref:System.Object> 类的行为，以便对 <xref:System.Object.GetHashCode%2A> 方法返回的哈希代码执行取模运算。 此 MDA 的模数默认为 1，这将导致 <xref:System.Object.GetHashCode%2A> 对所有对象都返回 0。  
@@ -46,7 +46,7 @@ ms.locfileid: "54739662"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  启用了此 MDA 时，应用程序的运行速度更慢。 此 MDA 只取得原本应该返回的哈希代码，改为返回除以某个模数之后得到的余数。  
   
-## <a name="output"></a>输出  
+## <a name="output"></a>Output  
  此 MDA 没有输出。  
   
 ## <a name="configuration"></a>配置  
@@ -61,6 +61,7 @@ ms.locfileid: "54739662"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
 - [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

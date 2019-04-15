@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: 344a813907483dcb0e9f531b54db68a88d77f3dc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842377"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331645"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>只能根据不带自变量的简单名称或限定名称推断范围变量名称
 在 LINQ 查询中包含一个或多个参数的编程元素。 编译器不能推断该编程元素中的某个范围变量。  
@@ -21,7 +21,7 @@ ms.locfileid: "58842377"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  提供的编程元素的显式变量名称，如下面的代码中所示：  
+1. 提供的编程元素的显式变量名称，如下面的代码中所示：  
   
 ```  
 Dim query = From var1 In collection1   

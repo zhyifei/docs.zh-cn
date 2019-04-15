@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 57802cad0a75ed21bba02a11fec39f821835c5ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710727"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157736"
 ---
 # <a name="events-overview-windows-forms"></a>事件概述（Windows 窗体）
 事件是可以通过代码响应或“处理”的操作。 事件可由用户操作（例如单击鼠标或按某个键）、程序代码或系统生成。  
@@ -44,5 +44,6 @@ ms.locfileid: "57710727"
  与委托一起使用的绑定机制是动态的：委托可在运行时绑定到其签名与事件处理程序的签名相匹配的任何方法上。 借助此功能，你可以根据条件设置或更改绑定方法，并动态地将事件处理程序附加到控件上。  
   
 ## <a name="see-also"></a>请参阅
+
 - [在 Windows 窗体中创建事件处理程序](creating-event-handlers-in-windows-forms.md)
 - [事件处理程序概述](event-handlers-overview-windows-forms.md)

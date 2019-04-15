@@ -2,29 +2,29 @@
 title: 如何：确定文件是否为程序集 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: b8627c64398afdef00fde71121f870b337ac072f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47ac7f29509af86819006a4394ca661140b95ab0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316058"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>如何：确定文件是否为程序集 (Visual Basic)
 当且仅当程序集处于托管状态，并在其元数据中包含程序集条目时，该文件才为程序集。 有关程序集和元数据的详细信息，请参阅主题[程序集清单](../../../../framework/app-domains/assembly-manifest.md)。  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>如何手动确定文件是否为程序集  
   
-1.  启动 [Ildasm.exe（IL 反汇编程序）](../../../../framework/tools/ildasm-exe-il-disassembler.md)。  
+1. 启动 [Ildasm.exe（IL 反汇编程序）](../../../../framework/tools/ildasm-exe-il-disassembler.md)。  
   
-2.  加载要测试的文件。  
+2. 加载要测试的文件。  
   
-3.  如果 **ILDASM** 报告文件不是可移植的可执行 (PE) 文件，则不是程序集。 有关详细信息，请参阅主题[如何：查看程序集内容](../../../../framework/app-domains/how-to-view-assembly-contents.md)。  
+3. 如果 **ILDASM** 报告文件不是可移植的可执行 (PE) 文件，则不是程序集。 有关详细信息，请参阅主题[如何：查看程序集内容](../../../../framework/app-domains/how-to-view-assembly-contents.md)。  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>如何以编程方式确定文件是否为程序集  
   
-1.  调用 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法，传递要测试的文件的完整文件路径和名称。  
+1. 调用 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法，传递要测试的文件的完整文件路径和名称。  
   
-2.  如果引发 <xref:System.BadImageFormatException> 异常，则该文件不是程序集。  
+2. 如果引发 <xref:System.BadImageFormatException> 异常，则该文件不是程序集。  
   
 ## <a name="example"></a>示例  
  此示例测试 DLL 以查看其是否为程序集。  

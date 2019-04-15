@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-ms.openlocfilehash: 48c1d24ce2e966f9c078593655da2bc9d84252c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d7919bf87444ef6c4a64ee236356e762da14853f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112107"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307894"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>如何：在 Windows 窗体的 ToolStrip 控件中启用自动完成
 以下过程将合并<xref:System.Windows.Forms.ToolStripLabel>与<xref:System.Windows.Forms.ToolStripComboBox>，可以删除最近如显示的项，列表访问的网站。 如果用户键入匹配某一项在列表中的第一个字符的字符，会立即显示项。  
@@ -27,7 +27,7 @@ ms.locfileid: "59112107"
   
 ### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a>若要在 ToolStrip 控件中启用自动完成  
   
-1.  创建<xref:System.Windows.Forms.ToolStrip>控制并向其添加项。  
+1. 创建<xref:System.Windows.Forms.ToolStrip>控制并向其添加项。  
   
     ```vb  
     ToolStrip1 = New System.Windows.Forms.ToolStrip  
@@ -41,7 +41,7 @@ ms.locfileid: "59112107"
         {toolStripLabel1, toolStripComboBox1});  
     ```  
   
-2.  设置<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>属性的标签，并向组合框<xref:System.Windows.Forms.ToolStripItemOverflow.Never>，以便列表始终是无论窗体的大小。  
+2. 设置<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>属性的标签，并向组合框<xref:System.Windows.Forms.ToolStripItemOverflow.Never>，以便列表始终是无论窗体的大小。  
   
     ```vb  
     ToolStripLabel1.Overflow = _  
@@ -56,7 +56,7 @@ ms.locfileid: "59112107"
     toolStripComboBox1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never  
     ```  
   
-3.  将字添加到的项集合<xref:System.Windows.Forms.ToolStripComboBox>控件。  
+3. 将字添加到的项集合<xref:System.Windows.Forms.ToolStripComboBox>控件。  
   
     ```vb  
     ToolStripComboBox1.Items.AddRange(New Object() {"First Item", _  
@@ -67,7 +67,7 @@ ms.locfileid: "59112107"
     toolStripComboBox1.Items.AddRange(new object[] {"First item", "Second item", "Third item"});  
     ```  
   
-4.  设置<xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A>属性的组合框<xref:System.Windows.Forms.AutoCompleteMode.Append>。  
+4. 设置<xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A>属性的组合框<xref:System.Windows.Forms.AutoCompleteMode.Append>。  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteMode = _  
@@ -78,7 +78,7 @@ ms.locfileid: "59112107"
     toolStripComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;  
     ```  
   
-5.  设置<xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A>属性的组合框<xref:System.Windows.Forms.AutoCompleteSource.ListItems>。  
+5. 设置<xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A>属性的组合框<xref:System.Windows.Forms.AutoCompleteSource.ListItems>。  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteSource = _  

@@ -2,12 +2,12 @@
 title: 了解 HTTP 身份验证
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 77fbed8cae070285925bcdc13c76fe28c3cb13cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525789"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206390"
 ---
 # <a name="understanding-http-authentication"></a>了解 HTTP 身份验证
 身份验证是判断客户端是否有资格访问资源的过程。 HTTP 协议支持将身份验证作为协商访问安全资源的一种方式。  
@@ -36,6 +36,7 @@ ms.locfileid: "54525789"
 -   服务器不应（在 WWW-Authentication 头中）提供任何它不准备接受或不足以保护受保护资源安全的方案。 客户端可以在服务器提供的任何身份验证方案间自由选择。 某些客户端默认选择安全级别低的身份验证方案，或选择服务器列表中的第一个身份验证方案。  
   
 ## <a name="see-also"></a>请参阅
-- [传输安全性概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
-- [将模拟用于传输安全性](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+
+- [传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
+- [将模拟用于传输安全](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-ms.openlocfilehash: 483491ea7408c1df57f31b4b984116b085ea50ba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367539"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312054"
 ---
 # <a name="data-and-data-objects"></a>数据和数据对象
 拖放操作的一部分传输的数据存储在数据对象。  从概念上讲，数据对象包含一个或多个以下对：  
@@ -87,11 +87,11 @@ ms.locfileid: "57367539"
 ### <a name="removing-data-from-a-data-object"></a>从数据对象中删除数据  
  从数据对象不能直接删除数据。  若要有效地从数据对象中删除数据，请按照下列步骤：  
   
-1.  创建新的数据对象将包含你想要保留数据。  
+1. 创建新的数据对象将包含你想要保留数据。  
   
-2.  "复制"到新的数据对象从旧的数据对象所需的数据。  若要复制数据，请使用之一<xref:System.Windows.DataObject.GetData%2A>方法来检索<xref:System.Object>，其中包含原始数据，然后执行下列任一<xref:System.Windows.DataObject.SetData%2A>方法将数据添加到新的数据对象。  
+2. "复制"到新的数据对象从旧的数据对象所需的数据。  若要复制数据，请使用之一<xref:System.Windows.DataObject.GetData%2A>方法来检索<xref:System.Object>，其中包含原始数据，然后执行下列任一<xref:System.Windows.DataObject.SetData%2A>方法将数据添加到新的数据对象。  
   
-3.  替换为新旧数据对象。  
+3. 替换为新旧数据对象。  
   
 > [!NOTE]
 >  <xref:System.Windows.DataObject.SetData%2A>方法仅将数据添加到数据对象; 但仍数据，即使数据和数据格式完全与上一次调用相同。 调用<xref:System.Windows.DataObject.SetData%2A>两次以相同的数据和数据格式将导致数据/数据格式存在的数据对象中两次。

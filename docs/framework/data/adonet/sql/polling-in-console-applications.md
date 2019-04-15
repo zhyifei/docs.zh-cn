@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 008cf6f0bdb6bb4c459ee97f6cc337b6491a5cb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31239033c56303af33899ac88f1745e90f052377
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151250"
 ---
 # <a name="polling-in-console-applications"></a>在控制台应用程序中轮询
-ADO.NET 中的异步操作使你可以在一个线程上启动需要很长时间的数据库操作，同时在另一个线程上执行其他任务。 但是，在大多数方案中，最终将到达一个临界点，此时，应用程序在数据库操作完成后才应继续。 在这种情况下，可以轮询异步操作，确定操作是否已完成。  
+ADO.NET 中的异步操作使您可以在一个线程上启动需要很长时间的数据库操作，同时在另一个线程上执行其他任务。 但是，在大多数方案中，最终将到达一个临界点，此时，应用程序在数据库操作完成后才应继续。 在这种情况下，可以轮询异步操作，确定操作是否已完成。  
   
  可以使用 <xref:System.IAsyncResult.IsCompleted%2A> 属性确定操作是否已完成。  
   
@@ -191,5 +191,6 @@ class Class1
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [异步操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

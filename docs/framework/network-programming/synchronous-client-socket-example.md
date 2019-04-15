@@ -9,12 +9,12 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 3d1e2c24cbbdcecd9daefab4312076099816ba70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef8669e9e78f65451ffb250283a1f14c89d61270
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219741"
 ---
 # <a name="synchronous-client-socket-example"></a>同步客户端套接字示例
 以下示例程序创建连接到服务器的客户端。 客户端使用同步套接字构建，因此，将暂停执行客户端应用程序，直到服务器返回响应。 应用程序向服务器发送一个字符串，然后控制台上显示服务器返回的字符串。  
@@ -136,6 +136,7 @@ public class SynchronousSocketClient {
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [同步服务器套接字示例](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
 - [使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
 - [Socket 代码示例](../../../docs/framework/network-programming/socket-code-examples.md)

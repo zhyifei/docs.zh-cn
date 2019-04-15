@@ -2,12 +2,12 @@
 title: Entity SQL 快速参考
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 20d8d1cb1e4b5cbf37dffcce6a7e79c2a4c265d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207066"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL 快速参考
 本主题提供 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询的快速参考。 本主题中的查询基于 AdventureWorks 销售模型。  
@@ -27,14 +27,14 @@ ms.locfileid: "54539398"
   
  输出：  
   
-|值|  
+|“值”|  
 |-----------|  
 |hello|  
   
 ### <a name="datetime"></a>DateTime  
  在日期时间文本中，日期部分和时间部分是必须存在的。 这里没有默认值。  
   
- 示例：  
+ 示例:  
   
 ```  
 DATETIME '2006-12-25 01:01:00.000'   
@@ -44,14 +44,14 @@ DATETIME '2006-12-25 01:01'
   
  输出：  
   
-|值|  
+|“值”|  
 |-----------|  
-|25.12.06 01:01:00|  
+|12/25/2006 1:01:00 AM|  
   
-### <a name="integer"></a>Integer  
+### <a name="integer"></a>整数  
  整数文本可以为 Int32 (123)、UInt32 (123U)、Int64 (123L) 和 UInt64 (123UL) 类型。  
   
- 示例：  
+ 示例:  
   
 ```  
 --a collection of integers  
@@ -60,7 +60,7 @@ DATETIME '2006-12-25 01:01'
   
  输出：  
   
-|值|  
+|“值”|  
 |-----------|  
 |1|  
 |2|  
@@ -138,7 +138,7 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  输出：  
   
-|值|  
+|“值”|  
 |-----------|  
 |1|  
 |2|  
@@ -147,7 +147,7 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  下面的示例使用属性提取运算符 (.) 访问实体的属性。 在使用属性提取运算符时，引用将自动被反引用。  
   
- 示例：  
+ 示例:  
   
 ```  
 SELECT VALUE REF(p).Name FROM   
@@ -156,7 +156,7 @@ SELECT VALUE REF(p).Name FROM
   
  输出：  
   
-|值|  
+|“值”|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -166,7 +166,7 @@ SELECT VALUE REF(p).Name FROM
 ### <a name="deref"></a>DEREF  
  [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)取消引用一个引用值并生成的结果。 例如，下面的查询生成 Orders 实体集中每一个 Order 的 Order 实体：`SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2`。  
   
- 示例：  
+ 示例:  
   
 ```  
 SELECT VALUE DEREF(REF(p)).Name FROM   
@@ -175,7 +175,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
   
  输出：  
   
-|值|  
+|“值”|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -206,7 +206,7 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 ### <a name="canonical"></a>规范  
  命名空间[规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)是 Edm 中，如`Edm.Length("string")`。 您无需指定命名空间，除非导入的另一个命名空间中包含与规范函数同名的函数。 如果两个命名空间有相同的函数，用户应指定完整名称。  
   
- 示例：  
+ 示例:  
   
 ```  
 SELECT Length(c. FirstName) As NameLen FROM   
@@ -252,7 +252,7 @@ using SqlServer; LOWER('AA');
   
  输出：  
   
-|值|  
+|“值”|  
 |-----------|  
 |aa|  
   
@@ -268,7 +268,7 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
   
  输出：  
   
-|ID|名称|  
+|Id|名称|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE 和 SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了 SELECT VALUE 子句以跳过隐式行构造。 SELECT VALUE 子句中只能指定一项。 当使用这样的子句、 SELECT 子句中的项会构造没有行包装器和所需形状的集合可生成，例如： `SELECT VALUE a`。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了 SELECT VALUE 子句以跳过隐式行构建。 SELECT VALUE 子句中只能指定一项。 当使用这样的子句、 SELECT 子句中的项会构造没有行包装器和所需形状的集合可生成，例如： `SELECT VALUE a`。  
   
  示例:  
   
@@ -334,9 +334,9 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|  
   
 ### <a name="select"></a>选择  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 还提供了用于构造任意行的行构造函数。 SELECT 接受投影中的一个或多个元素，并生成含有字段的数据记录，例如：`SELECT a, b, c`。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 此外提供了用于构造任意行的行构造函数。 SELECT 接受投影中的一个或多个元素，并生成含有字段的数据记录，例如：`SELECT a, b, c`。  
   
- 示例：  
+ 示例:  
   
  SELECT p.Name, p.ProductID FROM AdventureWorksEntities.Product as p Output:  
   
@@ -358,10 +358,11 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
  输出：  
   
-|值|  
+|“值”|  
 |-----------|  
 |true|  
   
 ## <a name="see-also"></a>请参阅
+
 - [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

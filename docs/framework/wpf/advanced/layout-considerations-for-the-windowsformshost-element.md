@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366538"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327849"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 元素的布局注意事项
 本主题介绍如何<xref:System.Windows.Forms.Integration.WindowsFormsHost>与元素交互[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局系统。  
@@ -40,7 +40,7 @@ ms.locfileid: "57366538"
   
 -   某些情况下，不能调整 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件的大小，或者大小只能调整为特定尺寸。 例如， [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox>控件支持仅的单一高度由控件的字体大小定义。 在中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]其中元素可以垂直拉伸，托管的动态布局<xref:System.Windows.Forms.ComboBox>控件不会按预期方式拉伸。  
   
--   不能旋转或扭曲 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素将引发<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件，如果应用倾斜或旋转转换。 如果不处理<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件，<xref:System.InvalidOperationException>引发。  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件不能旋转或倾斜。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素将引发<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件，如果应用倾斜或旋转转换。 如果不处理<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件，<xref:System.InvalidOperationException>引发。  
   
 -   大多数情况下，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件不支持按比例缩放。 尽管该控件的整体尺寸将会缩放，但其子控件和组件元素可能不会按预期调整大小。 此限制取决于每个 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件支持缩放的程度。 此外，不能缩放[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]缩小到 0 像素的大小的控件。  
   
@@ -84,13 +84,13 @@ ms.locfileid: "57366538"
 ### <a name="sizing-algorithm"></a>调整大小算法  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素使用以下过程来托管的控件的大小：  
   
-1.  <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素会替代<xref:System.Windows.FrameworkElement.MeasureOverride%2A>和<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法。  
+1. <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素会替代<xref:System.Windows.FrameworkElement.MeasureOverride%2A>和<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法。  
   
-2.  若要确定所承载控件的大小<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法调用托管的控件的<xref:System.Windows.Forms.Control.GetPreferredSize%2A>方法使用约束转换从传递给约束<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法。  
+2. 若要确定所承载控件的大小<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法调用托管的控件的<xref:System.Windows.Forms.Control.GetPreferredSize%2A>方法使用约束转换从传递给约束<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法。  
   
-3.  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法会尝试将所承载的控件设置为给定的大小约束。  
+3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法会尝试将所承载的控件设置为给定的大小约束。  
   
-4.  如果托管的控件的<xref:System.Windows.Forms.Control.Size%2A>属性进行匹配指定的约束时，所承载的控件的大小为该约束。  
+4. 如果托管的控件的<xref:System.Windows.Forms.Control.Size%2A>属性进行匹配指定的约束时，所承载的控件的大小为该约束。  
   
  如果<xref:System.Windows.Forms.Control.Size%2A>属性与指定的约束不匹配，所承载的控件不支持连续的大小调整。 例如，<xref:System.Windows.Forms.MonthCalendar>控件允许连续的大小。 此控件的允许的大小包含高度和宽度的整数 （表示的月数）。 中，这种情况下<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素的行为，如下所示：  
   
@@ -99,6 +99,7 @@ ms.locfileid: "57366538"
 -   如果<xref:System.Windows.Forms.Control.Size%2A>属性返回与指定的约束，较小的大小<xref:System.Windows.Forms.Integration.WindowsFormsHost>接受此大小值并返回到值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局系统。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [演练：在 WPF 中排列 Windows 窗体控件](walkthrough-arranging-windows-forms-controls-in-wpf.md)

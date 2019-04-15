@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: 1ab7058d8667344197e8bc1ddc59cc7200f22270
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7b7526dbcbd1948d3d8a27d146efd0462fefaca5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268556"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142839"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 指定 Windows Communication Foundation (WCF) 服务的调试和帮助信息功能。  
@@ -71,8 +71,9 @@ ms.locfileid: "55268556"
  可以利用可选的 `httpHelpPageBinding` 和 `httpHelpPageBinding`属性来配置用于访问服务网页的绑定。 如果未指定这两个属性，则根据情况使用相应的默认绑定（采用 HTTP 时为 `HttpTransportBindingElement`，采用 HTTPS 时为 `HttpsTransportBindingElement`）来访问服务帮助页。 请注意：不能将这些属性用于内置 WCF 绑定。 唯一的内部绑定元素支持 xref:System.ServiceModel.Channels.IReplyChannel 绑定 > 将支持。 此外，绑定的 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 属性必须为 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.ServiceDebugElement>
 - <xref:System.ServiceModel.Description.ServiceDebugBehavior>
-- [在协定和服务中指定并处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [在协定和服务中指定和处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [处理异常和错误](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
 - [服务调试行为](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

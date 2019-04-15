@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: 30ae7928d2c9dd9a636b714d82109ad2f7297523
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 32ee58833b83e2a3356b6c1598abd207364e6ec1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679991"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190510"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>实现 UI 自动化 Dock 控件模式
 > [!NOTE]
@@ -28,7 +28,7 @@ Visual Studio 中的停靠示例，其中“类视图”窗口为 DockPosition.R
 ## <a name="implementation-guidelines-and-conventions"></a>实现准则和约定  
  在实现 Dock 控件模式时，请注意以下准则和约定：  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider> 不公开停靠容器的任何属性，或者停靠在停靠容器内当前控件旁边的控件的任何属性。  
+-   <xref:System.Windows.Automation.Provider.IDockProvider> 不公开停靠容器的任何属性或停靠在停靠容器内当前控件旁边的任何的控件属性。  
   
 -   控件根据其当前的 z 顺序彼此相对停靠；控件的 z 顺序位置越高，则其距停靠容器的指定边缘就越远。  
   
@@ -42,8 +42,8 @@ Visual Studio 中的停靠示例，其中“类视图”窗口为 DockPosition.R
   
 |必需的成员|成员类型|说明|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|属性|无|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|方法|无|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|属性|None|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|方法|None|  
   
  没有与此控件模式关联的事件。  
   
@@ -56,6 +56,7 @@ Visual Studio 中的停靠示例，其中“类视图”窗口为 DockPosition.R
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -当控件不能执行请求的停靠样式。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

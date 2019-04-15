@@ -2,12 +2,12 @@
 title: <scopedCertificates> 元素
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: de85b3230461e876ec48e98887805d767e981e0f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 73e78a6ca27ed45e1eadc7121987b75f79bc6aa5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270357"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145195"
 ---
 # <a name="scopedcertificates-element"></a>\<scopedCertificates > 元素
 表示特定服务为身份验证提供的 X.509（作用域）证书的集合。 此集合通常用于指定联合方案中安全令牌服务的服务证书。  
@@ -74,6 +74,7 @@ endpointBehaviors 部分
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
@@ -82,5 +83,5 @@ endpointBehaviors 部分
 - [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [如何：创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)
-- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
+- [保证客户端的安全](../../../../../docs/framework/wcf/securing-clients.md)
 - [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

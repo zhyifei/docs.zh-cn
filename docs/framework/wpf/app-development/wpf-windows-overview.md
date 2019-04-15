@@ -28,20 +28,19 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466213"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296116"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
 用户与 Windows Presentation Foundation (WPF) 独立应用程序通过 windows 进行交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序使用来提供自己的窗口<xref:System.Windows.Window>类。 本主题介绍<xref:System.Windows.Window>之前介绍的创建和管理独立应用程序中的 windows 基础知识。  
   
 > [!NOTE]
 >  浏览器承载[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序，包括[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]和松散[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]页中，不提供它们自己的窗口。 相反，在 windows 中提供的托管[!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]。 请参阅[WPF XAML 浏览器应用程序概述](wpf-xaml-browser-applications-overview.md)。  
-  
-  
+
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>窗口类  
  下图演示了一个窗口的构成部分：  
@@ -130,8 +129,7 @@ ms.locfileid: "58466213"
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>窗口生存期  
  与所有类一样，窗口也有生存期，开始于首次实例化窗口，在这之后将打开、激活、停用直至最终关闭窗口。  
-  
-  
+
 <a name="Opening_a_Window"></a>   
 ### <a name="opening-a-window"></a>打开窗口  
  若要打开窗口，首先要创建窗口实例，下面的示例演示此操作。  
@@ -258,8 +256,7 @@ ms.locfileid: "58466213"
   
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
- 
-  
+
  <xref:System.Windows.Window.Closing>事件处理程序传递<xref:System.ComponentModel.CancelEventArgs>，它可以实现`Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>属性设置为`true`可以阻止窗口关闭。  
   
  如果<xref:System.Windows.Window.Closing>未处理，或已处理但未取消，将关闭此窗口。 只需在窗口真正关闭之前，<xref:System.Windows.Window.Closed>引发。 此时，无法阻止窗口关闭。  
@@ -275,7 +272,7 @@ ms.locfileid: "58466213"
   
 -   关闭主应用程序窗口和<xref:System.Windows.Application.ShutdownMode%2A>是<xref:System.Windows.ShutdownMode.OnMainWindowClose>。  
   
--   调用 <xref:System.Windows.Application.Shutdown%2A>。  
+-   <xref:System.Windows.Application.Shutdown%2A> 调用。  
   
 > [!NOTE]
 >  窗口在关闭后无法重新打开。  
@@ -296,7 +293,7 @@ ms.locfileid: "58466213"
   
  此外可以指定的初始位置<xref:System.Windows.Window>第一次出现时通过设置<xref:System.Windows.Window.WindowStartupLocation%2A>具有以下项之一属性<xref:System.Windows.WindowStartupLocation>枚举值：  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner>（默认值）  
+-   <xref:System.Windows.WindowStartupLocation.CenterOwner> （默认）  
   
 -   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -328,13 +325,13 @@ ms.locfileid: "58466213"
   
  如果想要的宽度和窗口的高度以适应窗口大小的大小的内容，则可以使用<xref:System.Windows.Window.SizeToContent%2A>属性，它具有以下值：  
   
--   <xref:System.Windows.SizeToContent.Manual>。 不起作用（默认值）。  
+-   <xref:System.Windows.SizeToContent.Manual>. 不起作用（默认值）。  
   
--   <xref:System.Windows.SizeToContent.Width>。 适应内容宽度，具有相同的效果与设置两者<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>到内容的宽度。  
+-   <xref:System.Windows.SizeToContent.Width>. 适应内容宽度，具有相同的效果与设置两者<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>到内容的宽度。  
   
--   <xref:System.Windows.SizeToContent.Height>。 适应内容高度，具有相同的效果与设置两者<xref:System.Windows.FrameworkElement.MinHeight%2A>和<xref:System.Windows.FrameworkElement.MaxHeight%2A>到内容的高度。  
+-   <xref:System.Windows.SizeToContent.Height>. 适应内容高度，具有相同的效果与设置两者<xref:System.Windows.FrameworkElement.MinHeight%2A>和<xref:System.Windows.FrameworkElement.MaxHeight%2A>到内容的高度。  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>。 适应内容宽度和高度，具有相同的效果与设置这两<xref:System.Windows.FrameworkElement.MinHeight%2A>并<xref:System.Windows.FrameworkElement.MaxHeight%2A>的内容和设置这两个高度<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>到内容的宽度。  
+-   <xref:System.Windows.SizeToContent.WidthAndHeight>. 适应内容宽度和高度，具有相同的效果与设置这两<xref:System.Windows.FrameworkElement.MinHeight%2A>并<xref:System.Windows.FrameworkElement.MaxHeight%2A>的内容和设置这两个高度<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>到内容的宽度。  
   
  以下示例显示了一个窗口，它在第一次显示时即自动调整垂直方向和水平方向上的大小以适应内容。  
   
@@ -351,23 +348,23 @@ ms.locfileid: "58466213"
   
  **对于高度属性：**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
+1. <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
+2. <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
+3. <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
-4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **对于宽度属性：**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
+1. <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
+2. <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
+3. <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
-4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
  最大化，后者使用进行管理时，优先顺序还可以确定窗口大小<xref:System.Windows.Window.WindowState%2A>属性。  
   
@@ -384,7 +381,7 @@ ms.locfileid: "58466213"
   
  可以通过设置配置窗口的状态及其<xref:System.Windows.Window.WindowState%2A>属性，它可以具有下列任一<xref:System.Windows.WindowState>枚举值：  
   
--   <xref:System.Windows.WindowState.Normal>（默认值）  
+-   <xref:System.Windows.WindowState.Normal> （默认）  
   
 -   <xref:System.Windows.WindowState.Maximized>  
   
@@ -401,8 +398,7 @@ ms.locfileid: "58466213"
  通过将特定于窗口的内容（例如按钮、标签和文本框）添加到窗口的工作区可以更改它的外观。 若要配置非工作区中，<xref:System.Windows.Window>提供了几个属性，其中包括<xref:System.Windows.Window.Icon%2A>若要设置窗口的图标和<xref:System.Windows.Window.Title%2A>设置其标题。  
   
  还可以通过配置窗口的重设大小模式、窗口样式，以及窗口是否显示为桌面任务栏中的按钮，更改非工作区边框的外观和行为。  
-  
-  
+
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>重设大小模式  
  具体取决于<xref:System.Windows.Window.WindowStyle%2A>属性，可以控制如何 （以及是否） 用户可以调整窗口的大小。 窗口样式的选择会影响用户可以通过拖动鼠标，其边框是否调整窗口是否**最小化**，**最大化**，并**重设大小**按钮在非客户端区域中，会出现并显示时，是否启用它们。  
@@ -413,7 +409,7 @@ ms.locfileid: "58466213"
   
 -   <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize>（默认值）  
+-   <xref:System.Windows.ResizeMode.CanResize> （默认）  
   
 -   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -431,7 +427,7 @@ ms.locfileid: "58466213"
   
 -   <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow>（默认值）  
+-   <xref:System.Windows.WindowStyle.SingleBorderWindow> （默认）  
   
 -   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -484,6 +480,7 @@ ms.locfileid: "58466213"
  对话框是通常用来收集用户信息以完成某项功能的窗口。 例如，当用户想要打开文件时，**打开文件**对话框通常显示应用程序以从用户获取的文件的名称。 有关详细信息，请参阅[对话框概述](dialog-boxes-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 1b24bec6dd7c4b5af10349cf523d9a7e93b385fe
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b2c0c47b359e218111c1629ea574303a6d663046
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831652"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297923"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>未设置对象变量或 With 块变量
 正在引用无效的对象变量。   出现此错误的原因可能有多种：  
@@ -36,7 +36,7 @@ ms.locfileid: "58831652"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  设置`Option Strict`到`On`通过将以下代码添加到该文件的开头：  
+1. 设置`Option Strict`到`On`通过将以下代码添加到该文件的开头：  
   
 ```vb  
 Option Strict On  
@@ -44,13 +44,13 @@ Option Strict On
 
      When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
   
-2.  如果不想要启用`Option Strict`，搜索你的代码没有类型指定了任何变量 (`Dim x`而不是`Dim x As String`) 并将预期的类型添加到声明。  
+2. 如果不想要启用`Option Strict`，搜索你的代码没有类型指定了任何变量 (`Dim x`而不是`Dim x As String`) 并将预期的类型添加到声明。  
   
-3.  请确保不指已被设置为的对象变量`Nothing`。  关键字在代码中搜索`Nothing`，并修改你的代码，以便该对象未设置为`Nothing`直到您在引用它。  
+3. 请确保不指已被设置为的对象变量`Nothing`。  关键字在代码中搜索`Nothing`，并修改你的代码，以便该对象未设置为`Nothing`直到您在引用它。  
   
-4.  请确保访问它们之前创建的任何数组变量。 首次创建数组时，既可以分配一个维度 (`Dim x(5) As String`而不是`Dim x() As String`)，或使用`ReDim`关键字可以在首次访问之前设置数组的维数。  
+4. 请确保访问它们之前创建的任何数组变量。 首次创建数组时，既可以分配一个维度 (`Dim x(5) As String`而不是`Dim x() As String`)，或使用`ReDim`关键字可以在首次访问之前设置数组的维数。  
   
-5.  请确保你`With`块初始化通过执行`With`语句入口点。  
+5. 请确保你`With`块初始化通过执行`With`语句入口点。  
   
 ## <a name="see-also"></a>请参阅
 

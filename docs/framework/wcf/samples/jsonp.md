@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 0e284ee6cce4ab513c03e7be402cc9c0f0c4ee1a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581909"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329656"
 ---
 # <a name="jsonp"></a>JSONP
 本示例演示在 WCF REST 服务中如何支持 JSON with Padding (JSONP)。 JSONP 是通过在当前文档中生成脚本标记来调用跨域脚本时使用的约定。 结果在指定的回调函数中返回。 JSONP 基于如思想`<script src="http://..." >`可以从任何域评估脚本，而这些标记检索的脚本评估在其中可能已定义其他函数的范围。
@@ -64,8 +64,8 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 #### <a name="to-run-the-sample"></a>运行示例  
   
-1.  打开 JSONP 示例的解决方案。  
+1. 打开 JSONP 示例的解决方案。  
   
-2.  按 F5 启动`http://localhost:26648/JSONPClientPage.aspx`在浏览器中。  
+2. 按 F5 启动`http://localhost:26648/JSONPClientPage.aspx`在浏览器中。  
   
-3.  请注意，在页面加载后，"Name"和"Address"的文本输入填充的值。  在浏览器完成呈现页面后，从对 WCF 服务的调用并提供这些值。
+3. 请注意，在页面加载后，"Name"和"Address"的文本输入填充的值。  在浏览器完成呈现页面后，从对 WCF 服务的调用并提供这些值。

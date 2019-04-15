@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5947f1e84bc5b1f35f0bd479a9fc879dbe63c9f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547811"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298899"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>跟踪应用程序和在应用程序中插入检测点
 跟踪是指应用程序正在运行时监视其执行情况的方式。 可在开发 .NET Framework 应用程序时向其添加跟踪和调试检测，也可在开发应用程序时或在部署此应用程序之后使用此检测。 可使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 类将错误和应用程序执行的相关信息记录在日志、文本文件或其他设备中，以供将来分析。  
@@ -58,7 +58,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  上述每个示例将在“输出窗口”中显示“Hello World!” 当应用程序在调试器中运行时。  
   
- 由此，你可以根据应用程序在测试环境中的行为对它进行调试并优化其性能。 在调试版本中调试应用程序时，可以打开 <xref:System.Diagnostics.Debug> 条件特性，以便接收所有调试输出。 当你的应用程序准备好发布时，可以在关闭 <xref:System.Diagnostics.Debug> 条件特性的情况下编译你的发布版本，使编译器不会在最终可执行文件中包含调试代码。 有关详细信息，请参阅[如何：使用跟踪和调试执行有条件编译](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。 有关应用程序的不同生成配置的详细信息，请参阅[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)。  
+ 由此，你可以根据应用程序在测试环境中的行为对它进行调试并优化其性能。 在调试版本中调试应用程序时，可以打开 <xref:System.Diagnostics.Debug> 条件特性，以便接收所有调试输出。 当您的应用程序准备好发布时，可以在关闭 <xref:System.Diagnostics.Debug> 条件特性的情况下编译您的发布版本，使编译器不会在最终可执行文件中包含调试代码。 有关详细信息，请参阅[如何：使用跟踪和调试执行有条件编译](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。 有关应用程序的不同生成配置的详细信息，请参阅[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)。  
   
  你也可以使用 <xref:System.Diagnostics.Trace> 类的方法来跟踪已安装的应用程序中的代码执行情况。 通过将[跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)置于代码中，可控制是否执行跟踪以及执行的范围。 这使你可以监视应用程序在生产环境中的状态。 对使用在多台计算机上运行的多个组件的业务应用程序而言，这一点尤其重要。 可通过配置文件控制如何在部署后使用开关。 有关详细信息，请参阅[如何：创建、 初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
   
@@ -67,11 +67,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 ### <a name="phases-of-code-tracing"></a>代码跟踪的阶段  
  代码跟踪有 3 个阶段：  
   
-1.  检测 - 向应用程序添加跟踪代码。  
+1. 检测 - 向应用程序添加跟踪代码。  
   
-2.  跟踪 - 跟踪代码向指定目标写入相应信息。  
+2. 跟踪 - 跟踪代码向指定目标写入相应信息。  
   
-3.  分析 - 评估跟踪信息以确定和了解应用程序中的问题。  
+3. 分析 - 评估跟踪信息以确定和了解应用程序中的问题。  
   
  开发过程中，所有调试和跟踪输出方法都默认将信息写入 Visual Studio 的输出窗口。 在已部署的应用程序中，方法将跟踪信息写入所指定的目标。 有关指定跟踪或调试的输出目标的详细信息，请参阅[跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)。  
   
@@ -79,17 +79,17 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 ##### <a name="to-use-tracing-in-an-application"></a>若要在应用程序中使用跟踪  
   
-1.  请思考部署应用程序后想要现场接收哪种跟踪输出。  
+1. 请思考部署应用程序后想要现场接收哪种跟踪输出。  
   
-2.  创建一组开关。 有关详细信息，请参阅[如何：配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
+2. 创建一组开关。 有关详细信息，请参阅[如何：配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
   
-3.  向应用程序代码添加跟踪语句。  
+3. 向应用程序代码添加跟踪语句。  
   
-4.  确定要显示跟踪输出的位置并添加相应的侦听器。 有关详细信息，请参阅[创建和初始化跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)。  
+4. 确定要显示跟踪输出的位置并添加相应的侦听器。 有关详细信息，请参阅[创建和初始化跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)。  
   
-5.  测试和调试应用程序及其包含的跟踪代码。  
+5. 测试和调试应用程序及其包含的跟踪代码。  
   
-6.  使用下面一个过程将应用程序编译为可执行代码：  
+6. 使用下面一个过程将应用程序编译为可执行代码：  
   
     -   使用“构建”菜单以及“解决方案资源管理器”中“属性页”对话框的“调试”页。 在 Visual Studio 中编译时，请使用此选项。  
   
@@ -97,11 +97,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     -   对编译的命令行方法使用“跟踪”和“调试”编译器指令。 有关详细信息，请参阅[使用跟踪和调试进行条件编译](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。 从命令行进行编译时，请使用此选项。  
   
-7.  如果在运行时出现问题，请打开相应的跟踪开关。 有关详细信息，请参阅[配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
+7. 如果在运行时出现问题，请打开相应的跟踪开关。 有关详细信息，请参阅[配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
   
      跟踪代码向指定目标写入跟踪消息，如屏幕、文本文件或事件日志。 跟踪侦听器集合中附带的侦听器类型确定目标。  
   
-8.  分析跟踪消息以确定和了解应用程序中的问题。  
+8. 分析跟踪消息以确定和了解应用程序中的问题。  
   
 ## <a name="trace-instrumentation-and-distributed-applications"></a>跟踪检测和分布式应用程序  
  在创建分布式应用程序时，可能难以按要使用的方式测试应用程序。 开发团队几乎都不能测试操作系统或 Web 浏览器（包括所有本地化的语言选项）的所有潜在组合，也不能模拟将同时访问应用程序的大量用户。 在这些情况下，无法测试分布式应用程序将如何响应高容量、不同的设置和最终用户的唯一行为。 此外，分布式应用程序的很多部件都不具有可直接与之交互或可用于查看这些部件的行为的用户界面。  
@@ -120,14 +120,14 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  下表列出了六个写入跟踪信息的 <xref:System.Diagnostics.Debug> 成员和 <xref:System.Diagnostics.Trace> 方法。  
   
-|方法|输出|  
+|方法|Output|  
 |------------|------------|  
-|Assert|指定的文本；若未指定，则为调用堆栈。 只有指定为“Assert”语句中的自变量的条件为“false”时，才写入输出。|  
-|**失败**|指定的文本；若未指定，则为调用堆栈。|  
-|Write|指定的文本。|  
-|WriteIf|如果满足指定为“WriteIf”语句中的自变量的条件，则为指定的文本。|  
+|**Assert**|指定的文本；若未指定，则为调用堆栈。 只有指定为“Assert”语句中的自变量的条件为“false”时，才写入输出。|  
+|**Fail**|指定的文本；若未指定，则为调用堆栈。|  
+|**Write**|指定的文本。|  
+|**WriteIf**|如果满足指定为“WriteIf”语句中的自变量的条件，则为指定的文本。|  
 |**WriteLine**|指定的文本和一个回车符。|  
-|WriteLineIf|如果满足指定为“WriteIf”语句中的自变量的条件，则为指定的文本和一个回车符。|  
+|**WriteLineIf**|如果满足指定为“WriteIf”语句中的自变量的条件，则为指定的文本和一个回车符。|  
   
  <xref:System.Diagnostics.Trace.Listeners%2A> 集合中所有的侦听器都会接收到上表中介绍的消息，但种类不同的侦听器在接到消息后所执行的操作可能也不同。 例如，<xref:System.Diagnostics.DefaultTraceListener> 将在接收到“Fail”或失败的“Assert”通知时显示一个断言对话框，而 <xref:System.Diagnostics.TextWriterTraceListener> 仅将输出写入它的流中。  
   
@@ -142,14 +142,15 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  如果在部署 ASP.NET 应用程序之前未禁用跟踪和调试，你的应用程序可能会泄漏自身的相关信息，从而被恶意程序利用。 有关详细信息，请参阅[如何：使用跟踪和调试进行有条件地编译](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)，[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)，和[如何：创建、 初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。 也可通过 Internet 信息服务 (IIS) 配置调试。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [代码协定](../../../docs/framework/debug-trace-profile/code-contracts.md)
-- [C#, F#, and Visual Basic Project Types](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)（C#、F# 和 Visual Basic 项目类型）
-- [如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [C#、F# 和 Visual Basic 项目类型](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
+- [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [如何：使用跟踪和调试执行有条件编译](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
-- [如何：创建、 初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [如何：创建、初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [如何：创建和初始化跟踪源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [如何：使用 TraceSource 和筛选器与跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [如何：将 TraceSource 和筛选器与跟踪侦听器一起使用](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)

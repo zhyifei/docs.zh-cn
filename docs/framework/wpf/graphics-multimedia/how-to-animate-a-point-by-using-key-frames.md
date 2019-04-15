@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: 2e34ba035c8d7f9132915a9269d545f32033cbed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b706568a0e8221aac737780592882f728f0f9e9c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132582"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328772"
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>如何：使用关键帧对点进行动画处理
 此示例演示如何使用<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>类进行动画处理<xref:System.Windows.Point>。  
@@ -22,11 +22,11 @@ ms.locfileid: "59132582"
 ## <a name="example"></a>示例  
  以下示例沿三角形路径移动椭圆形。 该示例使用<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>类进行动画处理<xref:System.Windows.Media.EllipseGeometry.Center%2A>属性的<xref:System.Windows.Media.EllipseGeometry>。 此动画按以下方式使用三个关键帧：  
   
-1.  在前半秒中，使用的实例<xref:System.Windows.Media.Animation.LinearPointKeyFrame>类将椭圆形沿路径以稳定速率从其起始位置。 之类的线性关键帧<xref:System.Windows.Media.Animation.LinearPointKeyFrame>创建值之间平滑的线性插值。  
+1. 在前半秒中，使用的实例<xref:System.Windows.Media.Animation.LinearPointKeyFrame>类将椭圆形沿路径以稳定速率从其起始位置。 之类的线性关键帧<xref:System.Windows.Media.Animation.LinearPointKeyFrame>创建值之间平滑的线性插值。  
   
-2.  在结束时的下一个前半秒中，使用的实例<xref:System.Windows.Media.Animation.DiscretePointKeyFrame>类将椭圆形沿路径突然移动到下一个位置。 之类的离散关键帧<xref:System.Windows.Media.Animation.DiscretePointKeyFrame>值之间创建突然跳跃。  
+2. 在结束时的下一个前半秒中，使用的实例<xref:System.Windows.Media.Animation.DiscretePointKeyFrame>类将椭圆形沿路径突然移动到下一个位置。 之类的离散关键帧<xref:System.Windows.Media.Animation.DiscretePointKeyFrame>值之间创建突然跳跃。  
   
-3.  在最后两秒内，使用的实例<xref:System.Windows.Media.Animation.SplinePointKeyFrame>类将椭圆形移回其起始位置。 之类的自由绘制曲线关键帧<xref:System.Windows.Media.Animation.SplinePointKeyFrame>创建根据的值在值之间的变量转换<xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A>属性。 在此示例中，动画开始时较为缓慢，然后以指数方式加速，直到时间段结束。  
+3. 在最后两秒内，使用的实例<xref:System.Windows.Media.Animation.SplinePointKeyFrame>类将椭圆形移回其起始位置。 之类的自由绘制曲线关键帧<xref:System.Windows.Media.Animation.SplinePointKeyFrame>创建根据的值在值之间的变量转换<xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A>属性。 在此示例中，动画开始时较为缓慢，然后以指数方式加速，直到时间段结束。  
   
  [!code-csharp[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/PointAnimationUsingKeyFramesExample.cs#pointanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/pointanimationusingkeyframesexample.vb#pointanimationusingkeyframeswholepage)]

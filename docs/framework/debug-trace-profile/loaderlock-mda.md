@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1001777f00524f3a183e1641718b9d3121c94e66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a70b8c3509b785d70b041b449c759e7994e5984
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148715"
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` 托管调试助手 (MDA) 检测在持有 Microsoft Windows 操作系统加载程序锁的线程上执行托管代码的尝试。  任何此类执行都是非法的，因为这样可能会导致死锁，并导致在操作系统的加载程序已初始化 DLL 之前使用 DLL。  
@@ -42,7 +42,7 @@ ms.locfileid: "54637932"
   
  在某些特殊情况下，可能还会在未初始化就被调用的 DLL 中触发访问冲突或类似问题。  
   
-## <a name="output"></a>输出  
+## <a name="output"></a>Output  
  此 MDA 报告正在尝试进行非法托管执行。  需要检查线程的堆栈，确定出现加载程序锁的原因以及如何更正此问题。  
   
 ## <a name="configuration"></a>配置  
@@ -56,4 +56,5 @@ ms.locfileid: "54637932"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: f4aeb3dd60186a4060f7825257c7adb274fc8b24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154409"
 ---
 # <a name="controls"></a>Controls
 <a name="introduction"></a>
@@ -95,10 +95,10 @@ ms.locfileid: "57363145"
   
 -   <xref:System.Windows.Controls.HeaderedItemsControl>-从此类继承的类的示例包括<xref:System.Windows.Controls.MenuItem>， <xref:System.Windows.Controls.TreeViewItem>，和<xref:System.Windows.Controls.ToolBar>。  
 
-  
  有关这些基类的类的详细信息，请参阅[WPF 内容模型](wpf-content-model.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [样式设置和模板化](styling-and-templating.md)
 - [按类别分类的控件](controls-by-category.md)
 - [控件库](control-library.md)
@@ -106,5 +106,5 @@ ms.locfileid: "57363145"
 - [数据绑定概述](../data/data-binding-overview.md)
 - [输入](../advanced/input-wpf.md)
 - [启用命令](../advanced/how-to-enable-a-command.md)
-- [演练：创建自定义的动画的按钮](walkthroughs-create-a-custom-animated-button.md)
+- [演练：创建自定义的动画按钮](walkthroughs-create-a-custom-animated-button.md)
 - [控件自定义](control-customization.md)

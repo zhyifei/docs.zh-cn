@@ -2,12 +2,12 @@
 title: Discovery Find 和 FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: c95f8e1b48c4e58c6d521bd06df4a470999fa375
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095771"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345776"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Discovery Find 和 FindCriteria
 发现查找操作是发现功能中的主要操作之一，它由客户端启动，用于发现一个或多个服务。 执行查找时将通过网络发送一条 WS-Discovery Probe 消息。 与指定条件匹配的服务通过 WS-Discovery ProbeMatch 消息进行答复。 有关发现消息的详细信息，请参阅[Ws-discovery 规范](https://go.microsoft.com/fwlink/?LinkID=122347)。  
@@ -40,9 +40,9 @@ ms.locfileid: "59095771"
   
  终止条件包括：  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 的若要在网络上等待服务所发送答复最长时间。 默认持续时间为 20 秒。  
+1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 的若要在网络上等待服务所发送答复最长时间。 默认持续时间为 20 秒。  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 的等待答复最大数目。 如果在经过 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 之前收到了 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 答复，查找操作将结束。  
+2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 的等待答复最大数目。 如果在经过 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 之前收到了 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 答复，查找操作将结束。  
   
 ## <a name="findresponse"></a>FindResponse  
  <xref:System.ServiceModel.Discovery.FindResponse> 具有<xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A>集合属性，其中包含匹配服务在网络上的发送的任何相关回复。 如果没有任何服务进行答复，该集合将为空。 如果一个或多个服务进行了答复，则各答复将分别存储在一个 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 对象中，该对象包含有关服务的地址、协定以及某些其他信息。  

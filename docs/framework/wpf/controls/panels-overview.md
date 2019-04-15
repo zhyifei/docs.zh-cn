@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 2648296d01f0e237847fc16535b01dbd8e9c5b62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377086"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157867"
 ---
 # <a name="panels-overview"></a>面板概述
 <xref:System.Windows.Controls.Panel> 元素是控制呈现元素的组件，其大小和维度，其位置和子内容的排列方式。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供了许多预定义<xref:System.Windows.Controls.Panel>元素，以及构造自定义的功能<xref:System.Windows.Controls.Panel>元素。  
@@ -81,7 +81,7 @@ ms.locfileid: "57377086"
   
  每个派生<xref:System.Windows.Controls.Panel>元素以不同方式处理大小调整约束。 了解如何<xref:System.Windows.Controls.Panel>中水平或垂直方向的句柄约束可以使布局更可预测。  
   
-|**Panel 名称**|**x 维度**|**y 维度**|  
+|**面板名称**|**x 维度**|**y 维度**|  
 |--------------------|----------------------|----------------------|  
 |<xref:System.Windows.Controls.Canvas>|按内容约束|按内容约束|  
 |<xref:System.Windows.Controls.DockPanel>|约束|约束|  
@@ -242,7 +242,7 @@ ms.locfileid: "57377086"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>本地化/全球化支持  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持多种有助于创建可本地化的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 在创建可本地化的支持功能可帮助许多[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
   
  所有面板元素本身都支持<xref:System.Windows.FrameworkElement.FlowDirection%2A>属性，可用于动态地重排内容基于用户的区域设置或语言设置。 有关详细信息，请参阅 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
   
@@ -253,11 +253,12 @@ ms.locfileid: "57377086"
  有关创建带有可本地化 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的其他信息，请参阅[使用自动布局概述](../advanced/use-automatic-layout-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [WPF 布局库示例](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [布局](../advanced/layout.md)
 - [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [对齐、边距和填充概述](../advanced/alignment-margins-and-padding-overview.md)
+- [Alignment、Margin 和 Padding 概述](../advanced/alignment-margins-and-padding-overview.md)
 - [创建自定义内容换行面板示例](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [附加属性概述](../advanced/attached-properties-overview.md)
 - [使用自动布局概述](../advanced/use-automatic-layout-overview.md)

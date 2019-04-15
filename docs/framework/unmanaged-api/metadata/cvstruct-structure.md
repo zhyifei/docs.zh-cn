@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb73980faa64464c572945fe5ad04e015dc8805b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a5f06b3f79fed5dac5a6f07650e4fabd0aa5867
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142163"
 ---
 # <a name="cvstruct-structure"></a>CVStruct 结构
 包含在安装模块或复合图像时所使用的信息。  
@@ -44,7 +44,7 @@ typedef struct {
 |主要|主要版本的内部版本号。|  
 |次要|次要版本生成号。|  
 |Sub|二次内部版本号。|  
-|生成|生成号。|  
+|Build|生成号。|  
   
 ## <a name="requirements"></a>要求  
  **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -53,7 +53,8 @@ typedef struct {
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [元数据结构](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

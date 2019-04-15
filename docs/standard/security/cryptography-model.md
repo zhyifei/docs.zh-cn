@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e39e9b3cf83be03d9bb3a55e3741915588e755a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a60f03d85997d20b54366360f104519c9c75f5e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499572"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343865"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework 加密模型
 .NET Framework 提供了许多标准加密算法的实现。 这些算法易于使用且具有最安全的可能默认属性。 此外，对象继承、流设计和配置的 .NET Framework 加密模型完全可扩展。  
@@ -32,17 +32,17 @@ ms.locfileid: "54499572"
 ## <a name="how-algorithms-are-implemented-in-the-net-framework"></a>算法在 .NET Framework 中的实现方式  
  作为可用于一种算法的不同实现的示例，请考虑对称算法。 所有对称算法都基于 <xref:System.Security.Cryptography.SymmetricAlgorithm>，它由以下算法继承：  
   
-1.  <xref:System.Security.Cryptography.Aes>  
+1. <xref:System.Security.Cryptography.Aes>  
   
-2.  <xref:System.Security.Cryptography.DES>  
+2. <xref:System.Security.Cryptography.DES>  
   
-3.  <xref:System.Security.Cryptography.RC2>  
+3. <xref:System.Security.Cryptography.RC2>  
   
-4.  <xref:System.Security.Cryptography.Rijndael>  
+4. <xref:System.Security.Cryptography.Rijndael>  
   
-5.  <xref:System.Security.Cryptography.TripleDES>  
+5. <xref:System.Security.Cryptography.TripleDES>  
   
- <xref:System.Security.Cryptography.Aes> 由两个类继承：<xref:System.Security.Cryptography.AesCryptoServiceProvider> 和 <xref:System.Security.Cryptography.AesManaged>。 <xref:System.Security.Cryptography.AesCryptoServiceProvider> 类是围绕 Aes 的 Windows 加密 API (CAPI) 实现的包装器，而 <xref:System.Security.Cryptography.AesManaged> 类完全用托管代码编写。 除托管和 CAPI 实现外，还有第三种类型的实现，即下一代加密技术 (CNG)。 CNG 算法的一个示例是 <xref:System.Security.Cryptography.ECDiffieHellmanCng>。 CNG 算法在 Windows Vista 和更高版本中都可用。  
+ <xref:System.Security.Cryptography.Aes> 由两个类继承：<xref:System.Security.Cryptography.AesCryptoServiceProvider>和<xref:System.Security.Cryptography.AesManaged>。 <xref:System.Security.Cryptography.AesCryptoServiceProvider> 类是围绕 Aes 的 Windows 加密 API (CAPI) 实现的包装器，而 <xref:System.Security.Cryptography.AesManaged> 类完全用托管代码编写。 除托管和 CAPI 实现外，还有第三种类型的实现，即下一代加密技术 (CNG)。 CNG 算法的一个示例是 <xref:System.Security.Cryptography.ECDiffieHellmanCng>。 CNG 算法在 Windows Vista 和更高版本中都可用。  
   
  你可以选择最适合自己的实现。  托管实现在所有支持 .NET Framework 的平台上都可用。  CAPI 实现在较早的操作系统上可用，但不再继续进行开发。 CNG 是将进行新开发的最新实现。 但是，托管实现未获得美国联邦信息处理标准 (FIPS) 认证，并且可能比包装器类更慢。  
   
@@ -89,4 +89,4 @@ ms.locfileid: "54499572"
   
 ## <a name="see-also"></a>请参阅
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [加密服务](../../../docs/standard/security/cryptographic-services.md)

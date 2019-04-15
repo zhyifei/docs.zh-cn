@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 70acbb571921c5f72ecaa26b26136a77532ad220
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234616"
+---
 ### <a name="workflow-30-types-are-obsolete"></a>WorkFlow 3.0 类型已过时
 
 |   |   |
@@ -7,4 +15,3 @@
 |范围|主要|
 |版本|4.5|
 |类型|重定目标|
-

@@ -1,5 +1,5 @@
 ---
-title: 如何：使数据可用于 XAML 中的绑定
+title: 如何：让数据可供 XAML 中的绑定使用
 ms.date: 01/29/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 1f024ddd0be023f77408e3106bc0a4465d068074
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2d51f06da31482c46b04d1eb86172c3eda246c20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145361"
 ---
-# <a name="how-to-make-data-available-for-binding-in-xaml"></a>如何：使数据可用于 XAML 中的绑定
+# <a name="how-to-make-data-available-for-binding-in-xaml"></a>如何：让数据可供 XAML 中的绑定使用
 本主题讨论使数据可用于 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 绑定的各种方法，取决于应用程序的需求。  
   
 ## <a name="example"></a>示例  
@@ -43,5 +43,6 @@ ms.locfileid: "57358283"
  有关指定要绑定到的数据的多种方法的相关信息，请参阅[指定绑定源](how-to-specify-the-binding-source.md)。 有关可以绑定到哪些数据类型或如何实现你自己的[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象以进行绑定的相关信息，请参阅[绑定源概述](binding-sources-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [数据绑定概述](data-binding-overview.md)
 - [帮助主题](data-binding-how-to-topics.md)

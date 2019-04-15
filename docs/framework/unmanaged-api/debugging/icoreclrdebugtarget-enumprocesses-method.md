@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb7e64da5002f438198a8389d2d8385d7a4210a4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8a35f5ff62ca37337b7becb023f2328cbe05aea6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492701"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216036"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses 方法
 枚举远程计算机上运行的进程。  
@@ -68,4 +68,5 @@ HRESULT EnumProcesses (
  **.NET framework 版本：** 3.5 SP1  
   
 ## <a name="see-also"></a>请参阅
+
 - [ICoreClrDebugTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

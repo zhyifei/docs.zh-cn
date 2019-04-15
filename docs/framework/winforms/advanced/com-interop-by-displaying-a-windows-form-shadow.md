@@ -1,5 +1,5 @@
 ---
-title: 如何：通过显示 Windows 窗体使用 ShowDialog 方法来支持 COM 互操作
+title: 如何：通过使用 ShowDialog 方法显示 Windows 窗体来支持 COM 互操作
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [Windows Forms]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 56ded3118d0961f38c77d3db4fc879eb241a7520
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81220ad4c0bf00a38abfe7257d5fc61e92e8d885
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206442"
 ---
-# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>如何：通过显示 Windows 窗体使用 ShowDialog 方法来支持 COM 互操作
+# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>如何：通过使用 ShowDialog 方法显示 Windows 窗体来支持 COM 互操作
 可通过在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 消息循环上显示 Windows 窗体来解决组件对象模型 (COM) 互操作性问题，可使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法来创建该消息循环。  
   
  若要使窗体在 COM 客户端应用程序中正确工作，必须在 Windows 窗体消息循环上运行该窗体。 若要执行此操作，请使用以下方法之一：  
@@ -38,6 +38,7 @@ ms.locfileid: "57715433"
 -   在 <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> 组件中，将所有对 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法的调用替换为对 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 方法的调用。  
   
 ## <a name="see-also"></a>请参阅
+
 - [向 COM 公开 .NET Framework 组件](../../interop/exposing-dotnet-components-to-com.md)
-- [如何：通过在其自己的线程上显示每个 Windows 窗体来支持 COM 互操作](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
-- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
+- [如何：通过在每个 Windows 窗体各自的线程上显示此 Windows 窗体来支持 COM 互操作](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Windows 窗体和非托管应用程序](windows-forms-and-unmanaged-applications.md)

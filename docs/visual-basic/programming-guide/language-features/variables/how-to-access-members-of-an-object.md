@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819641"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322753"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>如何：访问对象 (Visual Basic 中) 的成员
 引用的对象的对象变量后，你通常想要与该对象，例如其方法、 属性、 字段和事件的成员。 例如，一次创建一个新<xref:System.Windows.Forms.Form>对象，你可能想要设置其<xref:System.Windows.Forms.Control.Text%2A>属性或调用其<xref:System.Windows.Forms.Control.Focus%2A>方法。  
@@ -33,7 +33,7 @@ ms.locfileid: "58819641"
   
 #### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>若要访问的对象，您知道该类型在编译时成员  
   
-1.  你想要分配给该变量的对象类型的对象变量声明。  
+1. 你想要分配给该变量的对象类型的对象变量声明。  
   
     ```  
     Dim extraForm As System.Windows.Forms.Form  
@@ -41,7 +41,7 @@ ms.locfileid: "58819641"
   
      与`Option Strict On`，可以仅将分配<xref:System.Windows.Forms.Form>对象 (或类型的对象派生自<xref:System.Windows.Forms.Form>) 到`extraForm`。 如果已定义的类或结构优先于具有拓宽`CType`转换为<xref:System.Windows.Forms.Form>，还可以将该类或结构`extraForm`。  
   
-2.  使用成员访问运算符 (`.`) 之间的对象变量名称和成员名称。  
+2. 使用成员访问运算符 (`.`) 之间的对象变量名称和成员名称。  
   
     ```  
     extraForm.Show()  
@@ -54,7 +54,7 @@ ms.locfileid: "58819641"
   
 #### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>若要访问的对象为其您不知道该类型在编译时成员  
   
-1.  对象变量的声明[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)。 (声明一个变量，作为`Object`等同于其声明为<xref:System.Object?displayProperty=nameWithType>。)  
+1. 对象变量的声明[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)。 (声明一个变量，作为`Object`等同于其声明为<xref:System.Object?displayProperty=nameWithType>。)  
   
     ```  
     Dim someControl As Object  
@@ -62,7 +62,7 @@ ms.locfileid: "58819641"
   
      与`Option Strict On`，可以访问成员上定义的<xref:System.Object>类。  
   
-2.  使用成员访问运算符 (`.`) 之间的对象变量名称和成员名称。  
+2. 使用成员访问运算符 (`.`) 之间的对象变量名称和成员名称。  
   
     ```  
     someControl.GetType()  
@@ -77,5 +77,5 @@ ms.locfileid: "58819641"
 - <xref:System.MemberAccessException>
 - [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [对象变量声明](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

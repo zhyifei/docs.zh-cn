@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: e588118e995694ea899b73d238e00f63e92feea4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 07cfa5bed6e5af131a60a303f0702f18413043e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320220"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>演练：在 WPF 中承载 Direct3D9 内容
 本演练演示如何承载 Windows Presentation Foundation (WPF) 应用程序中的 Direct3D9 内容。  
@@ -48,9 +48,9 @@ ms.locfileid: "57352043"
   
 #### <a name="to-import-direct3d9-content"></a>要导入 Direct3D9 内容  
   
-1.  打开 MainWindow.xaml.cs 在代码编辑器中。  
+1. 打开 MainWindow.xaml.cs 在代码编辑器中。  
   
-2.  自动生成的代码替换为以下代码。  
+2. 自动生成的代码替换为以下代码。  
   
      [!code-csharp[System.Windows.Interop.D3DImage#1](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml.cs#1)]  
   
@@ -59,18 +59,19 @@ ms.locfileid: "57352043"
   
 #### <a name="to-host-the-direct3d9-content"></a>若要承载 Direct3D9 内容  
   
-1.  在 MainWindow.xaml 中，自动生成的 XAML 将替换为以下 XAML。  
+1. 在 MainWindow.xaml 中，自动生成的 XAML 将替换为以下 XAML。  
   
      [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]  
   
-2.  生成项目。  
+2. 生成项目。  
   
-3.  将复制到 bin/Debug 文件夹的 Direct3D9 内容包含的 DLL。  
+3. 将复制到 bin/Debug 文件夹的 Direct3D9 内容包含的 DLL。  
   
-4.  按 F5 运行项目。  
+4. 按 F5 运行项目。  
   
      Direct3D9 内容出现在 WPF 应用程序。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 和 WPF 互操作性的性能注意事项](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

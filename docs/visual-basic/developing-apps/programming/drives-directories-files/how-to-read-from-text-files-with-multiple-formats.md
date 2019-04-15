@@ -11,19 +11,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: d6326bb44d6a84c455c972fcbd191dc957844b74
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3ad34864e162f8f62fed3754bdbcd39c75f7b3f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830092"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334297"
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>如何：在 Visual Basic 中读取具有多种格式的文本文件
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 对象提供一种可以轻松而高效地分析结构化文本文件（如日志）的方法。 可以使用 `PeekChars` 方法处理具有多种格式的文件，以便在分析整个文件时确定每行的格式。  
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>分析具有多种格式的文本文件  
   
-1.  将名为 testfile.txt 的文本文件添加到你的项目中。 向文本文件添加以下内容。  
+1. 将名为 testfile.txt 的文本文件添加到你的项目中。 向文本文件添加以下内容。  
   
     ```  
     Err  1001 Cannot access resource.  
@@ -34,19 +34,19 @@ ms.locfileid: "58830092"
     Acc  10/04/2009User2      Standard user.  
     ```  
   
-2.  定义所需格式和报告错误时使用的格式。 每个数组中的最后一项为 -1，因此假定最后一个字段为可变宽度。 数组中的最后一项小于或等于 0 时，会出现这种情况。  
+2. 定义所需格式和报告错误时使用的格式。 每个数组中的最后一项为 -1，因此假定最后一个字段为可变宽度。 数组中的最后一项小于或等于 0 时，会出现这种情况。  
   
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]  
   
-3.  创建新的 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 对象，定义宽度和格式。  
+3. 创建新的 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 对象，定义宽度和格式。  
   
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]  
   
-4.  依次通过各行，并在读取之前测试格式。  
+4. 依次通过各行，并在读取之前测试格式。  
   
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]  
   
-5.  将错误写入控制台。  
+5. 将错误写入控制台。  
   
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]  
   

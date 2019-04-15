@@ -5,17 +5,16 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-ms.openlocfilehash: d5f53603ea22b2ae12a9846ba6bdce525790ce15
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3250cfd3fd651cb4ed3c4fd6975f5b5c89195f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166367"
 ---
 # <a name="menu-overview"></a>菜单概述
 <xref:System.Windows.Controls.Menu>类可用于组织与命令和事件处理程序的层次结构顺序关联的元素。 每个<xref:System.Windows.Controls.Menu>元素包含一系列<xref:System.Windows.Controls.MenuItem>元素。  
-  
-  
+
 <a name="menu_control"></a>   
 ## <a name="menu-control"></a>Menu 控件  
  <xref:System.Windows.Controls.Menu>控件显示的项的指定命令或应用程序的选项列表。 通常情况下，单击<xref:System.Windows.Controls.MenuItem>打开子菜单或导致应用程序执行某个命令。  
@@ -60,4 +59,5 @@ ms.locfileid: "57360936"
  [!code-xaml[MenuStylesSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)

@@ -1,5 +1,5 @@
 ---
-title: 如何：选择连接到在 Windows 窗体中的用户的计算机的打印机
+title: 如何：在 Windows 窗体中选择附加到用户计算机的打印机
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 8c29a90cf4aa7380297cc2776123fb353b07d8c5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702725"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318801"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>如何：选择连接到在 Windows 窗体中的用户的计算机的打印机
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>如何：在 Windows 窗体中选择附加到用户计算机的打印机
 用户通常希望选择默认打印机之外的打印机进行打印。 可以使用 <xref:System.Windows.Forms.PrintDialog> 组件使用户能够从当前安装的打印机中选择打印机。 通过 <xref:System.Windows.Forms.PrintDialog> 组件，会捕获 <xref:System.Windows.Forms.DialogResult> 组件的 <xref:System.Windows.Forms.PrintDialog> 并用于选择打印机。  
   
  在下面的过程中，选择一个文本文件以打印到默认打印机。 <xref:System.Windows.Forms.PrintDialog> 类随后进行实例化。  
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>选择打印机，然后打印文件  
   
-1.  选择要使用的打印机<xref:System.Windows.Forms.PrintDialog>组件。  
+1. 选择要使用的打印机<xref:System.Windows.Forms.PrintDialog>组件。  
   
      在下面的代码示例中，要处理两个事件。 在第一种<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件，<xref:System.Windows.Forms.PrintDialog>类进行实例化和中捕获用户选择打印机<xref:System.Windows.Forms.DialogResult>属性。  
   
@@ -107,4 +107,5 @@ ms.locfileid: "57702725"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows 窗体打印支持](windows-forms-print-support.md)

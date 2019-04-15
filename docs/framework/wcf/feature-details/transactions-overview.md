@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: c58a5ebc033f75413a975e6b1de4ed71d23a141b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42276a9b450b6f0664901747239195ab13f7c44d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548477"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223103"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation 事务概述
 事务可提供一种分组方法，将一组操作分为单个不可分的执行单元。 事务是指具有下列属性的操作集合：  
@@ -30,7 +30,7 @@ ms.locfileid: "54548477"
   
  你可以使用应用程序配置文件来配置绑定以启用或禁用事务流，以及设置有关绑定的所需事务协定。 此外，你可以使用配置文件在服务级别设置事务超时值。 有关详细信息，请参阅[启用事务流](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)。  
   
- <xref:System.ServiceModel> 命名空间中的事务属性允许您进行以下操作：  
+ <xref:System.ServiceModel> 命名空间中的事务属性允许你进行以下操作：  
   
 -   使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性配置事务超时值以及隔离级别的筛选。  
   
@@ -41,5 +41,6 @@ ms.locfileid: "54548477"
  有关详细信息，请参阅[ServiceModel 事务特性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [ServiceModel 事务特性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
+
+- [ServiceModel 事务属性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
 - [启用事务流](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)

@@ -58,7 +58,7 @@ public enum Rainbow
 }
 ```
 
-可以使用以下包含 swith 表达式的方法将 `Rainbow` 值转换为其 RGB 值：
+可以使用以下包含 switch 表达式的方法将 `Rainbow` 值转换为其 RGB 值：
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>

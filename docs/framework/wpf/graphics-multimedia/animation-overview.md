@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: cf95abc6780b1182582e567f78783388f1d377cb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373733"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337729"
 ---
 # <a name="animation-overview"></a>动画概述
 <a name="introduction"></a>
@@ -35,9 +35,9 @@ ms.locfileid: "57373733"
   
 -   然后，程序用新值更新矩形并重画此矩形。  
   
- 早于[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]开发人员必须创建和管理其自己的计时系统或使用特殊的自定义库。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括通过托管代码公开的高效计时系统和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和的紧密地集成到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]框架。 通过使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画，可以轻松地对控件和其他图形对象进行动画处理。  
+ 早于[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]开发人员必须创建和管理其自己的计时系统或使用特殊的自定义库。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括通过托管代码公开的高效计时系统和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和的紧密地集成到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]框架。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画，可以轻松地对控件和其他图形对象进行动画处理。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以高效地处理管理计时系统和重绘屏幕的所有后台任务。 它提供了计时类，使用户能够重点关注要创造的效果，而非实现这些效果的机制。 此外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 通过公开动画基类（你使用的类可以继承这些类）可以轻松创建自己的动画，这样便可以制作自定义动画。 这些自定义动画获得了标准动画类的许多性能优点。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 处理管理计时系统和高效地重绘屏幕的所有后台任务。 它提供了计时类，使用户能够重点关注要创造的效果，而非实现这些效果的机制。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 此外可以轻松通过公开动画基类您的类可以从该基类继承来创建自己的动画，以便生成自定义的动画。 这些自定义动画获得了标准动画类的许多性能优点。  
   
 <a name="thewpftimingsystem"></a>   
 ## <a name="wpf-property-animation-system"></a>WPF 属性动画系统  
@@ -74,7 +74,7 @@ ms.locfileid: "57373733"
 ### <a name="part-1-create-a-doubleanimation"></a>第 1 部分：创建 DoubleAnimation  
  若要使淡入和移出视图元素的一种方法是要进行动画处理其<xref:System.Windows.UIElement.Opacity%2A>属性。 因为<xref:System.Windows.UIElement.Opacity%2A>属性属于类型<xref:System.Double>，需要生成双精度值的动画。 一个<xref:System.Windows.Media.Animation.DoubleAnimation>是这样的一个动画。 一个<xref:System.Windows.Media.Animation.DoubleAnimation>创建两个双精度值之间的转换。 若要指定其起始值，请设置其<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性。 若要指定其终止值，请设置其<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性。  
   
-1.  不透明度值`1.0`使对象完全不透明，且不透明度值为`0.0`使完全不可见。 可以从动画过渡`1.0`到`0.0`将其<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性设置为`1.0`并将其<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性设置为`0.0`。 以下示例演示如何创建<xref:System.Windows.Media.Animation.DoubleAnimation>在 XAML 中。  
+1. 不透明度值`1.0`使对象完全不透明，且不透明度值为`0.0`使完全不可见。 可以从动画过渡`1.0`到`0.0`将其<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>属性设置为`1.0`并将其<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性设置为`0.0`。 以下示例演示如何创建<xref:System.Windows.Media.Animation.DoubleAnimation>在 XAML 中。  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_2)]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "57373733"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_2)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_2)]  
   
-2.  接下来，必须指定<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>动画的指定从其起始值转到其目标值所需的时间长度。 以下示例演示如何设置<xref:System.Windows.Media.Animation.Timeline.Duration%2A>为 XAML 中的五秒。  
+2. 接下来，必须指定<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>动画的指定从其起始值转到其目标值所需的时间长度。 以下示例演示如何设置<xref:System.Windows.Media.Animation.Timeline.Duration%2A>为 XAML 中的五秒。  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_3)]  
   
@@ -92,7 +92,7 @@ ms.locfileid: "57373733"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_3)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_3)]  
   
-3.  上面的代码显示从转换的动画`1.0`到`0.0`，这将导致目标元素从完全不透明逐渐转变为完全不可见。 若要使元素后再逐渐回到视野，设置<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>到动画属性`true`。 若要使动画无限期地重复，设置其<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>属性设置为<xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>。以下示例演示如何设置<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>和<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>XAML 中的属性。  
+3. 上面的代码显示从转换的动画`1.0`到`0.0`，这将导致目标元素从完全不透明逐渐转变为完全不可见。 若要使元素后再逐渐回到视野，设置<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>到动画属性`true`。 若要使动画无限期地重复，设置其<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>属性设置为<xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>。以下示例演示如何设置<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>和<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>XAML 中的属性。  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_4)]  
   
@@ -105,7 +105,7 @@ ms.locfileid: "57373733"
 ### <a name="part-2-create-a-storyboard"></a>第 2 部分：创建情节提要  
  若要向对象应用动画，您创建<xref:System.Windows.Media.Animation.Storyboard>并用<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>附加属性指定的对象和属性进行动画处理。  
   
-1.  创建<xref:System.Windows.Media.Animation.Storyboard>和将动画添加为子项。 以下示例演示如何创建<xref:System.Windows.Media.Animation.Storyboard>在 XAML 中。  
+1. 创建<xref:System.Windows.Media.Animation.Storyboard>和将动画添加为子项。 以下示例演示如何创建<xref:System.Windows.Media.Animation.Storyboard>在 XAML 中。  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]    
   
@@ -119,7 +119,7 @@ ms.locfileid: "57373733"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_101)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_101)]  
   
-2.  <xref:System.Windows.Media.Animation.Storyboard>必须知道应用动画的位置。 使用<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType>附加属性指定要进行动画处理的对象。 以下示例演示如何设置的目标名称<xref:System.Windows.Media.Animation.DoubleAnimation>到`MyRectangle`在 XAML 中。  
+2. <xref:System.Windows.Media.Animation.Storyboard>必须知道应用动画的位置。 使用<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType>附加属性指定要进行动画处理的对象。 以下示例演示如何设置的目标名称<xref:System.Windows.Media.Animation.DoubleAnimation>到`MyRectangle`在 XAML 中。  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_6](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_6)]  
   
@@ -128,7 +128,7 @@ ms.locfileid: "57373733"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_102)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_102)]  
   
-3.  使用<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>附加属性指定要进行动画处理的属性。 下面演示了如何将动画配置为目标<xref:System.Windows.UIElement.Opacity%2A>属性的<xref:System.Windows.Shapes.Rectangle>在 XAML 中。
+3. 使用<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>附加属性指定要进行动画处理的属性。 下面演示了如何将动画配置为目标<xref:System.Windows.UIElement.Opacity%2A>属性的<xref:System.Windows.Shapes.Rectangle>在 XAML 中。
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_7](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_7)]  
   
@@ -143,15 +143,15 @@ ms.locfileid: "57373733"
 ### <a name="part-3-xaml-associate-the-storyboard-with-a-trigger"></a>第 3 (XAML) 部分：将演示图板与触发器关联  
  应用和启动的最简单办法<xref:System.Windows.Media.Animation.Storyboard>在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]是使用事件触发器。 本部分演示如何将相关联<xref:System.Windows.Media.Animation.Storyboard>与 XAML 中的触发器。  
   
-1.  创建<xref:System.Windows.Media.Animation.BeginStoryboard>对象，并将你的情节提要与它相关联。 一个<xref:System.Windows.Media.Animation.BeginStoryboard>是一种<xref:System.Windows.TriggerAction>应用和启动<xref:System.Windows.Media.Animation.Storyboard>。  
+1. 创建<xref:System.Windows.Media.Animation.BeginStoryboard>对象，并将你的情节提要与它相关联。 一个<xref:System.Windows.Media.Animation.BeginStoryboard>是一种<xref:System.Windows.TriggerAction>应用和启动<xref:System.Windows.Media.Animation.Storyboard>。  
   
      [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_3)]  
   
-2.  创建<xref:System.Windows.EventTrigger>并添加<xref:System.Windows.Media.Animation.BeginStoryboard>到其<xref:System.Windows.EventTrigger.Actions%2A>集合。 设置<xref:System.Windows.EventTrigger.RoutedEvent%2A>的属性<xref:System.Windows.EventTrigger>到想要启动的路由事件<xref:System.Windows.Media.Animation.Storyboard>。 (有关路由事件的详细信息，请参阅[路由事件概述](../advanced/routed-events-overview.md)。)  
+2. 创建<xref:System.Windows.EventTrigger>并添加<xref:System.Windows.Media.Animation.BeginStoryboard>到其<xref:System.Windows.EventTrigger.Actions%2A>集合。 设置<xref:System.Windows.EventTrigger.RoutedEvent%2A>的属性<xref:System.Windows.EventTrigger>到想要启动的路由事件<xref:System.Windows.Media.Animation.Storyboard>。 (有关路由事件的详细信息，请参阅[路由事件概述](../advanced/routed-events-overview.md)。)  
   
      [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_2)]  
   
-3.  添加<xref:System.Windows.EventTrigger>到<xref:System.Windows.FrameworkElement.Triggers%2A>矩形的集合。  
+3. 添加<xref:System.Windows.EventTrigger>到<xref:System.Windows.FrameworkElement.Triggers%2A>矩形的集合。  
   
      [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_1)]  
   
@@ -159,12 +159,12 @@ ms.locfileid: "57373733"
 ### <a name="part-3-code-associate-the-storyboard-with-an-event-handler"></a>第 3 （代码） 部分：将情节提要与事件处理程序相关联  
  应用和启动的最简单办法<xref:System.Windows.Media.Animation.Storyboard>在代码中是使用事件处理程序。 本部分演示如何将相关联<xref:System.Windows.Media.Animation.Storyboard>与代码中的事件处理程序。  
   
-1.  注册<xref:System.Windows.FrameworkElement.Loaded>矩形的事件。  
+1. 注册<xref:System.Windows.FrameworkElement.Loaded>矩形的事件。  
   
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_104)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_104)]  
   
-2.  声明事件处理程序。 在事件处理程序，使用<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法来应用演示图板。  
+2. 声明事件处理程序。 在事件处理程序，使用<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法来应用演示图板。  
   
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_105)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_105)]  
@@ -213,10 +213,10 @@ ms.locfileid: "57373733"
   
 |属性类型|对应的基本 (From/To/By) 动画|对应的关键帧动画|对应的路径动画|用法示例|  
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|  
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|无|进行动画处理<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>或<xref:System.Windows.Media.GradientStop>。|  
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|进行动画处理<xref:System.Windows.Media.SolidColorBrush.Color%2A>的<xref:System.Windows.Media.SolidColorBrush>或<xref:System.Windows.Media.GradientStop>。|  
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|进行动画处理<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Controls.DockPanel>或<xref:System.Windows.FrameworkElement.Height%2A>的<xref:System.Windows.Controls.Button>。|  
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|进行动画处理<xref:System.Windows.Media.EllipseGeometry.Center%2A>位置<xref:System.Windows.Media.EllipseGeometry>。|  
-|<xref:System.String>|无|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|无|进行动画处理<xref:System.Windows.Controls.TextBlock.Text%2A>的<xref:System.Windows.Controls.TextBlock>或<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.Button>。|  
+|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|进行动画处理<xref:System.Windows.Controls.TextBlock.Text%2A>的<xref:System.Windows.Controls.TextBlock>或<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.Button>。|  
   
 <a name="animationsaretimelines"></a>   
 ### <a name="animations-are-timelines"></a>动画是时间线  
@@ -318,7 +318,7 @@ ms.locfileid: "57373733"
 ## <a name="animation-samples"></a>动画示例  
  以下示例有助于开始向应用程序添加动画。  
   
--   [From、To 和 By 动画目标值示例](https://go.microsoft.com/fwlink/?LinkID=159988)  
+-   [从、 To 和 By 动画目标值示例](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      演示不同的 From/To/By 设置。  
   
@@ -329,7 +329,7 @@ ms.locfileid: "57373733"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[动画和计时系统概述](animation-and-timing-system-overview.md)|描述计时系统如何使用<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>类，允许你创建动画。|  
 |[动画提示和技巧](animation-tips-and-tricks.md)|列出用于解决与动画有关的问题（如性能）的有用提示。|  
@@ -343,9 +343,9 @@ ms.locfileid: "57373733"
 |[计时行为概述](timing-behaviors-overview.md)|介绍<xref:System.Windows.Media.Animation.Timeline>类型和动画中使用的属性。|  
 |[计时事件概述](timing-events-overview.md)|介绍可在上找到的事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>对象的点上执行代码中在时间线，如开始、 暂停、 继续、 跳过，或停止。|  
 |[帮助主题](animation-and-timing-how-to-topics.md)|包含演示在应用程序中使用动画和时间线的代码示例。|  
-|[时钟操作说明主题](clocks-how-to-topics.md)|包含代码示例使用<xref:System.Windows.Media.Animation.Clock>在应用程序中的对象。|  
+|[时钟帮助主题](clocks-how-to-topics.md)|包含代码示例使用<xref:System.Windows.Media.Animation.Clock>在应用程序中的对象。|  
 |[关键帧操作说明主题](key-frame-animation-how-to-topics.md)|包含在应用程序中使用关键帧动画的代码示例。|  
-|[路径动画操作说明主题](path-animation-how-to-topics.md)|包含在应用程序中使用路径动画的代码示例。|  
+|[路径动画帮助主题](path-animation-how-to-topics.md)|包含在应用程序中使用路径动画的代码示例。|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>参考  

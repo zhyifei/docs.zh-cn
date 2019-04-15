@@ -2,12 +2,12 @@
 title: <serviceAuthorization> 元素
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: c967993c3a3f7276cd3a9076741de202e1f4c343
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7099c5eca9cf28624153a705e4e16136628214a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157334"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization > 元素
 指定用于授予服务操作访问权限的设置。  
@@ -96,10 +96,11 @@ ms.locfileid: "55257845"
  使用此配置元素的详细示例，请参阅[对服务操作的授权访问](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)并[授权策略](../../../../../docs/framework/wcf/samples/authorization-policy.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
 - [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [授予对服务操作的权限](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [如何：创建自定义授权管理器服务](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [授予对服务操作的访问权限](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
+- [如何：为服务创建自定义授权管理器](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [如何：使用 PrincipalPermissionAttribute 类限制访问](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
 - [授权策略](../../../../../docs/framework/wcf/samples/authorization-policy.md)

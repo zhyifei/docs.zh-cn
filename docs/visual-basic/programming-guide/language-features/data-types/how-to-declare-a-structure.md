@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825087"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343553"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>如何：声明结构 (Visual Basic)
 在开始使用在结构声明[Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)，并结束与`End Structure`语句。 这两个语句之间必须声明至少一个*元素*。 元素可以是任何数据类型，但至少一个必须为非共享的变量或非共享、 非自定义事件。  
@@ -25,7 +25,7 @@ ms.locfileid: "58825087"
   
 ### <a name="to-declare-a-structure"></a>若要声明结构  
   
-1.  创建的开始和结束语句的结构。  
+1. 创建的开始和结束语句的结构。  
   
      可以指定的结构使用的访问级别[公共](../../../../visual-basic/language-reference/modifiers/public.md)，[受保护](../../../../visual-basic/language-reference/modifiers/protected.md)，[友元](../../../../visual-basic/language-reference/modifiers/friend.md)，或者[专用](../../../../visual-basic/language-reference/modifiers/private.md)关键字，或者您可以让它默认为`Public`。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "58825087"
     End Structure  
     ```  
   
-2.  将元素添加到结构的正文。  
+2. 将元素添加到结构的正文。  
   
      一种结构必须具有至少一个元素。 必须声明每个元素，并为其指定访问级别。 如果您使用[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)而无需任何关键字，可访问性默认为`Public`。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "58825087"
 - [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [结构变量](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16c4e03667d4af3ab5cc8b653d77f15eaef25843
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2fecc7160cb41e31bf88f1a461265ad8fdce166
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170386"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult 枚举
 提供如何获取指令指针 (IP) 的值的详细信息。  
@@ -60,7 +60,8 @@ typedef enum CorDebugMappingResult {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

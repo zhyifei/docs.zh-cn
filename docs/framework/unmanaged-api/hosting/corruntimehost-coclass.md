@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c81a39acee31986421c810e2814a4f7e6c4d970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2143fc13db1757ac2fa8a9c5a43f104a0c519ca0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218558"
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost 组件类
 提供用于管理应用程序正在执行公共语言运行时的接口。  
@@ -55,7 +55,8 @@ coclass CorRuntimeHost {
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
-- [承载组件类](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+
+- [承载 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

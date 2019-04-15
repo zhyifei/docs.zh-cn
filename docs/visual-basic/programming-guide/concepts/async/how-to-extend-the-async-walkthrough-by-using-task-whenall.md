@@ -2,28 +2,28 @@
 title: 如何：使用 (Visual Basic) Task.WhenAll 扩展异步演练
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: 80fbe824d62b439fe6f015704bc32194e104cd85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ad2d9cdd85a7bdb67bbf091a38274fd20e5a66f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619300"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331879"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>如何：使用 (Visual Basic) Task.WhenAll 扩展异步演练
-您可以提高的中的异步解决方案性能[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)通过使用<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>方法。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。  
+提高[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)通过使用<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>方法。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。  
   
  你可能已在演练中注意到网站以不同速率进行下载。 有时一个网站非常慢，这会延迟所有其余下载。 运行在演练中生成的异步解决方案时，如果不想等待，则可以方便地结束程序，但更好的选项是同时启动所有下载，并让较快的下载继续进行而不等待延迟的下载。  
   
  可将 `Task.WhenAll` 方法应用于任务的集合。 `WhenAll` 的应用程序返回单个任务，直到集合中的每个任务都已完成之后，该任务才会完成。 任务会表现为并行运行，但不会创建其他线程。 任务可以按任何顺序完成。  
   
 > [!IMPORTANT]
->  下面的过程介绍在开发的异步应用程序的扩展[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可以通过完成演练或从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载代码来开发应用程序。  
+>  下面的过程介绍[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可以通过完成演练或从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载代码来开发应用程序。  
 >   
 >  若要运行示例，必须在计算机上安装 Visual Studio 2012 或更高版本。  
   
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>向你的 GetURLContentsAsync 解决方案中添加 Task.WhenAll  
   
-1.  添加`ProcessURLAsync`中开发的第一个应用程序的方法[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
+1. 将 `ProcessURLAsync` 方法添加到[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
     -   如果你已下载的代码[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)，打开 AsyncWalkthrough 项目，然后添加`ProcessURLAsync`MainWindow.xaml.vb 文件。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "54619300"
     End Function  
     ```  
   
-2.  注释禁止或删除 `SumPageSizesAsync` 中的 `For Each` 循环，如以下代码所示。  
+2. 注释禁止或删除 `SumPageSizesAsync` 中的 `For Each` 循环，如以下代码所示。  
   
     ```vb  
     'Dim total = 0  
@@ -62,7 +62,7 @@ ms.locfileid: "54619300"
     'Next  
     ```  
   
-3.  创建任务集合。 以下代码定义一个[查询](../../../../visual-basic/programming-guide/concepts/linq/index.md)，由 <xref:System.Linq.Enumerable.ToArray%2A> 方法执行该查询时，它会创建下载每个网站内容的任务集合。 计算该查询时，会启动任务。  
+3. 创建任务集合。 以下代码定义一个[查询](../../../../visual-basic/programming-guide/concepts/linq/index.md)，由 <xref:System.Linq.Enumerable.ToArray%2A> 方法执行该查询时，它会创建下载每个网站内容的任务集合。 计算该查询时，会启动任务。  
   
      在 `urlList` 的声明后，将以下代码添加到方法 `SumPageSizesAsync` 中。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "54619300"
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4.  将 `Task.WhenAll` 应用于任务集合 `downloadTasks`。 `Task.WhenAll` 返回单个任务，它在任务集合中的所有任务都已完成时完成。  
+4. 将 `Task.WhenAll` 应用于任务集合 `downloadTasks`。 `Task.WhenAll` 返回完成的任务集合中的所有任务都完成时的单个任务。  
   
      在以下示例中，`Await` 表达式等待 `WhenAll` 返回的单个任务完成。 该表达式的计算结果为整数数组，其中每个整数都是一个下载的网站的长度。 就在上一步添加的代码后，将以下代码添加到 `SumPageSizesAsync` 中。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "54619300"
     'Dim lengths As Integer() = Await whenAllTask  
     ```  
   
-5.  最后，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法计算所有网站的长度总和。 将以下行添加到 `SumPageSizesAsync` 中。  
+5. 最后，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法计算所有网站的长度总和。 将以下行添加到 `SumPageSizesAsync` 中。  
   
     ```vb  
     Dim total = lengths.Sum()  
@@ -96,7 +96,7 @@ ms.locfileid: "54619300"
   
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>向 HttpClient.GetByteArrayAsync 解决方案中添加 Task.WhenAll  
   
-1.  添加以下版本的`ProcessURLAsync`中开发的第二个应用程序[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
+1. 将 `ProcessURLAsync` 的以下版本添加到[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
     -   如果你已下载的代码[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)，打开 AsyncWalkthrough_HttpClient 项目，然后添加`ProcessURLAsync`MainWindow.xaml.vb 文件。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "54619300"
     End Function  
     ```  
   
-2.  注释禁止或删除 `SumPageSizesAsync` 中的 `For Each` 循环，如以下代码所示。  
+2. 注释禁止或删除 `SumPageSizesAsync` 中的 `For Each` 循环，如以下代码所示。  
   
     ```vb  
     'Dim total = 0   
@@ -135,7 +135,7 @@ ms.locfileid: "54619300"
     'Next  
     ```  
   
-3.  定义一个[查询](../../../../visual-basic/programming-guide/concepts/linq/index.md)，由 <xref:System.Linq.Enumerable.ToArray%2A> 方法执行该查询时，它会创建下载每个网站内容的任务集合。 计算该查询时，会启动任务。  
+3. 定义一个[查询](../../../../visual-basic/programming-guide/concepts/linq/index.md)，由 <xref:System.Linq.Enumerable.ToArray%2A> 方法执行该查询时，它会创建下载每个网站内容的任务集合。 计算该查询时，会启动任务。  
   
      在 `client` 和 `urlList` 的声明后，将以下代码添加到方法 `SumPageSizesAsync` 中。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "54619300"
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4.  接下来，将 `Task.WhenAll` 应用于任务集合 `downloadTasks`。 `Task.WhenAll` 返回单个任务，它在任务集合中的所有任务都已完成时完成。  
+4. 接下来，将 `Task.WhenAll` 应用于任务集合 `downloadTasks`。 `Task.WhenAll` 返回完成的任务集合中的所有任务都完成时的单个任务。  
   
      在以下示例中，`Await` 表达式等待 `WhenAll` 返回的单个任务完成。 完成后，`Await` 表达式的计算结果为整数数组，其中每个整数都是一个下载的网站的长度。 就在上一步添加的代码后，将以下代码添加到 `SumPageSizesAsync` 中。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "54619300"
     'Dim lengths As Integer() = Await whenAllTask  
     ```  
   
-5.  最后，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法获取所有网站的长度总和。 将以下行添加到 `SumPageSizesAsync` 中。  
+5. 最后，使用 <xref:System.Linq.Enumerable.Sum%2A> 方法获取所有网站的长度总和。 将以下行添加到 `SumPageSizesAsync` 中。  
   
     ```vb  
     Dim total = lengths.Sum()  
@@ -169,7 +169,7 @@ ms.locfileid: "54619300"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>测试 Task.WhenAll 解决方案  
   
--   对于任一解决方案，按 F5 键以运行程序，然后选择“启动”按钮。 输出应类似于中的异步解决方案的输出[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 但请注意，网站每次会以不同顺序出现。  
+-   对于任一解决方案，按 F5 键以运行程序，然后选择“启动”按钮。 输出应类似于[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 但请注意，网站每次会以不同顺序出现。  
   
 ## <a name="example"></a>示例  
  以下代码演示使用 `GetURLContentsAsync` 方法从 Web 下载内容的项目的扩展。  

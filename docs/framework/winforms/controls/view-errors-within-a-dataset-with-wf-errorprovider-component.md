@@ -1,5 +1,5 @@
 ---
-title: 如何：在一个数据集中使用 Windows 窗体 ErrorProvider 组件查看错误
+title: 如何：使用 Windows 窗体 ErrorProvider 组件查看数据集中的错误
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 6202ac758d2cbf599c7e48a31ed2804608c70977
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705376"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310442"
 ---
-# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>如何：在一个数据集中使用 Windows 窗体 ErrorProvider 组件查看错误
+# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>如何：使用 Windows 窗体 ErrorProvider 组件查看数据集中的错误
 可以使用 Windows 窗体<xref:System.Windows.Forms.ErrorProvider>若要查看的数据集或其他数据源中的列错误的组件。 有关<xref:System.Windows.Forms.ErrorProvider>组件，在窗体上显示数据错误它不一定要直接与控件相关联。 一旦它绑定到数据源，它可以显示绑定到相同的数据源的任何控件旁的错误图标。  
   
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "57705376"
   
 ### <a name="to-display-data-errors"></a>若要显示的数据错误  
   
-1.  将组件绑定到数据表中的特定列。  
+1. 将组件绑定到数据表中的特定列。  
   
     ```vb  
     ' Assumes existence of DataSet1, DataTable1  
@@ -40,7 +40,7 @@ ms.locfileid: "57705376"
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2.  设置<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>到窗体的属性。  
+2. 设置<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>到窗体的属性。  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -50,7 +50,7 @@ ms.locfileid: "57705376"
     errorProvider1.ContainerControl = this;  
     ```  
   
-3.  设置为包含列错误的行的当前记录的位置。  
+3. 设置为包含列错误的行的当前记录的位置。  
   
     ```vb  
     DataTable1.Rows(5).SetColumnError("Name", "Bad data in this row.")  
@@ -63,5 +63,6 @@ ms.locfileid: "57705376"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [ErrorProvider 组件概述](errorprovider-component-overview-windows-forms.md)
-- [如何：对于表格验证使用 Windows 窗体 ErrorProvider 组件显示错误图标](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标](display-error-icons-for-form-validation-with-wf-errorprovider.md)

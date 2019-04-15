@@ -4,12 +4,12 @@ description: 有关可帮助了解 .NET 的 .NET Core、ASP.NET Core 和 C# 语�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "57558945"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330813"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 示例和教程
 
@@ -41,7 +41,7 @@ ms.locfileid: "57558945"
 
 ### <a name="samples"></a>示例
 
-**[迭代器](../csharp/iterators.md)**
+**[Iterators](../csharp/iterators.md)**
 
 本示例演示用于创建和使用 C# 迭代器的语法和功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/iterators)。
 
@@ -79,7 +79,7 @@ ms.locfileid: "57558945"
 
 本教程演示许多 LINQ 功能和支持 LINQ 的语言元素。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq)。
 
-**[借助 Visual Studio for Mac 在 macOS 上开始使用 .NET Core](../core/tutorials/using-on-mac-vs.md)**
+**[借助 Visual Studio for Mac 在 macOS 上开始使用.NET Core](../core/tutorials/using-on-mac-vs.md)**
 
 本教程演示了如何使用 Visual Studio for Mac 生成简单的 .NET Core 控制台应用。
 
@@ -112,6 +112,6 @@ ms.locfileid: "57558945"
 1. 在存储库的文件夹中导航到示例的位置。 当你点击示例链接时，示例位置的相对路径将显示在浏览器的地址栏中。
 1. 要运行示例，你有多个选择：
    * 使用 [dotnet CLI 工具](../core/tools/index.md)：在控制台窗口中，导航到示例的文件夹，然后使用 dotnet CLI 命令。
-   * 退出 [Visual Studio](https://visualstudio.microsoft.com/) 或 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)：从菜单栏中依次选择“文件”>“打开”>“项目/解决方案”来打开示例，导航到示例项目文件夹，然后选择项目文件（.csproj 或 .fsproj）。
+   * 退出 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 或 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)：从菜单栏中依次选择“文件”>“打开”>“项目/解决方案”来打开示例，导航到示例项目文件夹，然后选择项目文件（.csproj 或 .fsproj）。
    * 使用 [Visual Studio Code](https://code.visualstudio.com/)：从菜单栏中选择“文件”>“打开文件夹”来打开示例，然后选择示例的项目文件夹。
    * 使用支持 .NET Core 项目的其他 IDE。

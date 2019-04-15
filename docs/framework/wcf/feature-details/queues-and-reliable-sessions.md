@@ -2,12 +2,12 @@
 title: 队列和可靠会话
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: 2f79e1eac469dc1d9d775cbca0f06046f10dfb20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1fb7d7db36aa51c63789b6daf0ac3689c87ace5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196822"
 ---
 # <a name="queues-and-reliable-sessions"></a>队列和可靠会话
 队列和可靠会话是实现可靠消息传递的 Windows Communication Foundation (WCF) 功能。 在本部分中包含的主题讨论 WCF 可靠消息传递功能。  
@@ -39,6 +39,7 @@ ms.locfileid: "54642904"
  在队列之间与可靠消息传送相耦合的分离，使松耦合的应用程序能够可靠地通信。 与可靠会话不同，源和目标不必同时运行。 这暗示可以出现此类情况：当源产生消息的速率和目标使用消息的速率不匹配时，队列实际上用作一种负载平衡机制。 有关队列的详细信息，请参阅[WCF 中的队列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [WCF 中的队列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
 - [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [可靠会话](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

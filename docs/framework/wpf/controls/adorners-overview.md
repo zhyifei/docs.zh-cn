@@ -7,18 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634526"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320465"
 ---
 # <a name="adorners-overview"></a>装饰器概述
 装饰器是一种特殊的<xref:System.Windows.FrameworkElement>，可用来向用户提供可视提示。 装饰器有很多用途，可用来向元素添加功能句柄，或者提供有关某个控件的状态信息。  
-  
-  
-  
+
 <a name="about_Adorners"></a>   
 ## <a name="about-adorners"></a>关于装饰器  
  <xref:System.Windows.Documents.Adorner>是一个自定义<xref:System.Windows.FrameworkElement>绑定到<xref:System.Windows.UIElement>。 在中呈现装饰器<xref:System.Windows.Documents.AdornerLayer>，这是一个始终是基础装饰的元素或装饰元素的集合上的呈现图面。 呈现装饰器是独立于呈现的<xref:System.Windows.UIElement>装饰器绑定到的。 装饰器通常使用位于装饰元素左上部的标准 2D 坐标原点，相对于其绑定到的元素进行定位。  
@@ -76,9 +74,9 @@ ms.locfileid: "58634526"
 ## <a name="adorning-a-single-uielement"></a>装饰单个 UIElement  
  若要将装饰器绑定到特定<xref:System.Windows.UIElement>，请执行以下步骤：  
   
-1.  调用静态方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>若要获取<xref:System.Windows.Documents.AdornerLayer>对象<xref:System.Windows.UIElement>为要装饰。 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 从指定的可视化树向上<xref:System.Windows.UIElement>，并返回它找到的第一个装饰器层。 （如果未发现装饰器层，该方法将返回 null。）  
+1. 调用静态方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>若要获取<xref:System.Windows.Documents.AdornerLayer>对象<xref:System.Windows.UIElement>为要装饰。 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 从指定的可视化树向上<xref:System.Windows.UIElement>，并返回它找到的第一个装饰器层。 （如果未发现装饰器层，该方法将返回 null。）  
   
-2.  调用<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法以将装饰器绑定到目标<xref:System.Windows.UIElement>。  
+2. 调用<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法以将装饰器绑定到目标<xref:System.Windows.UIElement>。  
   
  下面的示例将 SimpleCircleAdorner （如上所示） 到绑定<xref:System.Windows.Controls.TextBox>名为*myTextBox*。  
   
@@ -92,9 +90,9 @@ ms.locfileid: "58634526"
 ## <a name="adorning-the-children-of-a-panel"></a>装饰面板的子级  
  若要将装饰器绑定到的子级<xref:System.Windows.Controls.Panel>，请执行以下步骤：  
   
-1.  调用`static`方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>其子级是为要装饰的元素查找装饰器层。  
+1. 调用`static`方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>其子级是为要装饰的元素查找装饰器层。  
   
-2.  枚举的子级的父元素并调用<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法将装饰器绑定到每个子元素。  
+2. 枚举的子级的父元素并调用<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法将装饰器绑定到每个子元素。  
   
  下面的示例将 SimpleCircleAdorner （如上所示） 的子级绑定<xref:System.Windows.Controls.StackPanel>名为*myStackPanel*。  
   
@@ -102,8 +100,9 @@ ms.locfileid: "58634526"
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Media.AdornerHitTestResult>
-- [WPF 中的形状和基本绘图概述](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [使用图像、绘图和视觉对象进行绘制](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [WPF 中的形状和基本图形概述](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [使用图像、图形和视觉对象进行绘制](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
 - [Drawing 对象概述](../graphics-multimedia/drawing-objects-overview.md)
 - [帮助主题](adorners-how-to-topics.md)

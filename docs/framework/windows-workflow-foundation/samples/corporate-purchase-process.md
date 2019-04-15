@@ -2,12 +2,12 @@
 title: 企业采购过程
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442238"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313328"
 ---
 # <a name="corporate-purchase-process"></a>企业采购过程
 此示例演示如何使用自动最佳建议书选择来创建基于购买过程的非常基本的征求建议书 (RFP)。 它将 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、<xref:System.Activities.Statements.ForEach%601> 和一个自定义活动组合在一起来创建一个表示该过程的工作流。
@@ -18,7 +18,7 @@ ms.locfileid: "56442238"
 
 -   Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
 ## <a name="demonstrates"></a>演示
 
@@ -50,25 +50,25 @@ ms.locfileid: "56442238"
 ## <a name="description-of-the-process"></a>流程说明  
  此示例演示 Windows Workflow Foundation (WF) 程序，以便从供应商为一般公司收集征求建议书的实现。  
   
-1.  公司 X 的一名员工创建了一份征求建议书 (RFP)。  
+1. 公司 X 的一名员工创建了一份征求建议书 (RFP)。  
   
     1.  该员工键入 RFP 标题和说明。  
   
     2.  该员工选择要请求其提交建议书的供应商。  
   
-2.  该员工提交建议书。  
+2. 该员工提交建议书。  
   
     1.  创建一个工作流实例。  
   
     2.  工作流正在等待所有供应商提交其建议书。  
   
-3.  在收到所有建议书后，工作流将循环访问所有收到的建议书并选择最佳建议书。  
+3. 在收到所有建议书后，工作流将循环访问所有收到的建议书并选择最佳建议书。  
   
     1.  每个供应商都具有一个信誉（此示例将信誉列表存储在 VendorRepository.cs 中）。  
   
     2.  将（供应商键入的值）*（记录的供应商信誉）/100 来计算出建议书的总值。  
   
-4.  原始请求方可以查看所有提交的建议书。 最佳建议书将在报告的某个特殊部分中显示。  
+4. 原始请求方可以查看所有提交的建议书。 最佳建议书将在报告的某个特殊部分中显示。  
   
 ## <a name="process-definition"></a>过程定义  
  示例的核心逻辑使用一个 <xref:System.Activities.Statements.ParallelForEach%601> 活动，该活动等待每个供应商的报价（使用创建书签的自定义活动）并将供应商的建议书注册为 RFP（使用 <xref:System.Activities.Statements.InvokeMethod> 活动）。  
@@ -78,9 +78,9 @@ ms.locfileid: "56442238"
 ## <a name="projects-in-this-sample"></a>此示例中的项目  
  此示例包含以下项目。  
   
-|Project|描述|  
+|项目|描述|  
 |-------------|-----------------|  
-|公共|过程中使用的实体对象（征求建议书、供应商和供应商建议书）。|  
+|通用|过程中使用的实体对象（征求建议书、供应商和供应商建议书）。|  
 |WfDefinition|客户端应用程序用来创建和使用购买过程工作流实例的过程（作为 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 程序）和主机 (`PurchaseProcessHost`) 的定义。|  
 |WebClient|一个 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 客户端应用程序，它允许用户创建和参与购买过程的实例。 此应用程序使用自定义创建的主机与工作流引擎进行交互。|  
 |WinFormsClient|一个 Windows 窗体客户端应用程序，它允许用户创建和参与购买过程的实例。 此应用程序使用自定义创建的主机与工作流引擎进行交互。|  
@@ -99,7 +99,7 @@ ms.locfileid: "56442238"
 |XmlPersistenceParticipant.cs|一个自定义 <xref:System.Activities.Persistence.PersistenceParticipant>，它将征求建议书实例保存到 XML 文件中。|  
 |AsyncResult.cs / CompletedAsyncResult.cs|用于在持久性组件中实现异步模式的帮助器类。|  
   
-### <a name="common"></a>公共  
+### <a name="common"></a>通用  
  下表包含对 Common 项目中最重要的类的说明。  
   
 |类|描述|  
@@ -143,15 +143,15 @@ ms.locfileid: "56442238"
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
-1.  使用 Visual Studio 2010 打开 PurchaseProcess.sln 解决方案文件。  
+1. 使用 Visual Studio 2010 打开 PurchaseProcess.sln 解决方案文件。  
   
-2.  若要执行 Web 客户端项目，请打开**解决方案资源管理器**，然后右键单击**Web 客户端**项目。 选择**设为启动项目**。  
+2. 若要执行 Web 客户端项目，请打开**解决方案资源管理器**，然后右键单击**Web 客户端**项目。 选择**设为启动项目**。  
   
-3.  若要执行 WinForms Client 项目，请打开**解决方案资源管理器**，然后右键单击**WinForms Client**项目。 选择**设为启动项目**。  
+3. 若要执行 WinForms Client 项目，请打开**解决方案资源管理器**，然后右键单击**WinForms Client**项目。 选择**设为启动项目**。  
   
-4.  要生成解决方案，按 Ctrl+Shift+B。  
+4. 要生成解决方案，按 Ctrl+Shift+B。  
   
-5.  若要运行解决方案，请按 Ctrl+F5。  
+5. 若要运行解决方案，请按 Ctrl+F5。  
   
 ### <a name="web-client-options"></a>Web Client 选项  
   

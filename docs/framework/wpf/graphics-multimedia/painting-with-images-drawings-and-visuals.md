@@ -12,17 +12,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: bb66c34a847f78f7921ae925d0c3d0640c11aeec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204193"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>使用图像、图形和视觉对象进行绘制
 本主题介绍如何使用<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，并<xref:System.Windows.Media.VisualBrush>对象，若要使用图像绘制区域<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。  
-    
-  
+
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>系统必备  
  要了解本主题，应熟悉 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供的不同画笔类型及其基本功能。 有关介绍，请参阅 [WPF 画笔概述](wpf-brushes-overview.md)。  
@@ -135,6 +134,7 @@ ms.locfileid: "57361313"
  有关平铺功能的详细信息<xref:System.Windows.Media.TileBrush>对象，请参阅[TileBrush 概述](tilebrush-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
@@ -144,6 +144,6 @@ ms.locfileid: "57361313"
 - [图像处理概述](imaging-overview.md)
 - [Drawing 对象概述](drawing-objects-overview.md)
 - [不透明蒙板概述](opacity-masks-overview.md)
-- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)
+- [WPF 图形呈现疑难解答](wpf-graphics-rendering-overview.md)
 - [ImageBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush 示例](https://go.microsoft.com/fwlink/?LinkID=160049)

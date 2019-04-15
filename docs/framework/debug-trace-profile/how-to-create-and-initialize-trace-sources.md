@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 346fb3399993246eb8d90f7fa900ab382ae12c71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194885"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339432"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>如何：创建和初始化跟踪源
 <xref:System.Diagnostics.TraceSource> 类由应用程序用来生成可与应用程序相关联的跟踪。 <xref:System.Diagnostics.TraceSource> 提供使你能够轻松地跟踪事件，跟踪数据和发出信息跟踪的跟踪方法。 你可以使用或不使用配置文件来创建和初始化 <xref:System.Diagnostics.TraceSource> 的跟踪输出。 本主题提供这两种选项的说明。 但是，建议你使用配置文件，以便于重新配置在运行时由跟踪源生成的跟踪。  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>使用配置文件创建和初始化跟踪源  
   
-1.  创建 Visual Studio 控制台应用程序项目，然后使用以下代码替换提供的代码。 此代码将记录错误和警告，并将其中一些输出到控制台，将其中一些输出到由配置文件中的各个项创建的 myListener 文件。  
+1. 创建 Visual Studio 控制台应用程序项目，然后使用以下代码替换提供的代码。 此代码将记录错误和警告，并将其中一些输出到控制台，将其中一些输出到由配置文件中的各个项创建的 myListener 文件。  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
   
-2.  向项目添加一个应用程序配置文件（如果没有），以初始化步骤 1 代码示例中名为 `TraceSourceApp` 的跟踪源。  
+2. 向项目添加一个应用程序配置文件（如果没有），以初始化步骤 1 代码示例中名为 `TraceSourceApp` 的跟踪源。  
   
-3.  将默认配置文件内容替换为以下设置，以便为步骤 1 中创建的跟踪源初始化控制台跟踪侦听器和文本编写器跟踪侦听器。  
+3. 将默认配置文件内容替换为以下设置，以便为步骤 1 中创建的跟踪源初始化控制台跟踪侦听器和文本编写器跟踪侦听器。  
   
     ```xml  
     <configuration>  

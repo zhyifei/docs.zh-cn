@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: f7e7139aeebea4441f851f7ed28484ba293e9c3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ac98b5c576c065f8944714c72b492539e0d2f05
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543245"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330878"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>如何：使用支持基于事件的异步模式的组件
 许多组件都支持异步执行工作。 例如，通过 <xref:System.Media.SoundPlayer> 和 <xref:System.Windows.Forms.PictureBox> 组件，可以“在后台”加载音频和图像，同时主线程继续运行而不中断。  
@@ -36,9 +36,9 @@ ms.locfileid: "54543245"
   
 ### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>启用 PictureBox 控件以异步加载图像的具体步骤  
   
-1.  在窗体中，创建 <xref:System.Windows.Forms.PictureBox> 组件的实例。  
+1. 在窗体中，创建 <xref:System.Windows.Forms.PictureBox> 组件的实例。  
   
-2.  将事件处理程序分配给 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 事件。  
+2. 将事件处理程序分配给 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 事件。  
   
      检查是否有异步下载期间可能会发生的任何错误。 此时，还检查是否有取消事件。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "54543245"
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3.  将两个按钮 `loadButton` 和 `cancelLoadButton` 添加到窗体。 添加 <xref:System.Windows.Forms.Control.Click> 事件处理程序，以启动和取消下载。  
+3. 将两个按钮 `loadButton` 和 `cancelLoadButton` 添加到窗体。 添加 <xref:System.Windows.Forms.Control.Click> 事件处理程序，以启动和取消下载。  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -56,7 +56,7 @@ ms.locfileid: "54543245"
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#4)]  
   
-4.  运行您的应用程序。  
+4. 运行您的应用程序。  
   
      随着图像继续下载，可以随意移动窗体，也能最小化和最大化窗体。  
   

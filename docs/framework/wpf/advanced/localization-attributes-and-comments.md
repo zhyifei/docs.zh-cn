@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 4e4c4891a905a5e4458ad5fc21a512c1dfe6f74e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092911"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301849"
 ---
 # <a name="localization-attributes-and-comments"></a>本地化特性和注释
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释内部是属性，[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]源代码，提供的开发人员能够提供本地化规则和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释包含两个集的信息： 可本地化性特性和任意形式的本地化注释。 可本地化特性由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 本地化 API 用于指示哪些资源要进行本地化。 任意形式的注释是应用程序作者希望包含的任何信息。  
@@ -19,13 +19,13 @@ ms.locfileid: "59092911"
 ## <a name="localization-comments"></a>本地化注释  
  如果标记应用程序作者对 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 中的特定元素具有一定的要求（如对文本长度、字体系列或字号进行约束），则他们可以借助于 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 代码中的注释将此信息传达给本地化人员。 下面是用来向源代码中添加注释的过程：  
   
-1.  应用程序开发人员向 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 源代码中添加本地化注释。  
+1. 应用程序开发人员向 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 源代码中添加本地化注释。  
   
-2.  在生成过程中，可以在 .proj 文件中指定是将任意形式的本地化注释留在程序集内、去掉部分注释还是去掉所有注释。 去掉的注释放在一个单独的文件中。 可以使用 `LocalizationDirectivesToLocFile` 标记指定你的选项，例如：  
+2. 在生成过程中，可以在 .proj 文件中指定是将任意形式的本地化注释留在程序集内、去掉部分注释还是去掉所有注释。 去掉的注释放在一个单独的文件中。 可以使用 `LocalizationDirectivesToLocFile` 标记指定你的选项，例如：  
   
      `<LocalizationDirectivesToLocFile>` *值* `</LocalizationDirectivesToLocFile>`  
   
-3.  可以分配的值包括：  
+3. 可以分配的值包括：  
   
     -   **None** - 注释和特性都保留在程序集中，不会生成单独的文件。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "59092911"
   
     -   **All** - 从程序集中去掉注释和特性，并将它们两者都放在单独的 LocFile 中。  
   
-4.  从 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 中提取可本地化资源时，可本地化性特性将由 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 本地化 API 保留。  
+4. 从 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 中提取可本地化资源时，可本地化性特性将由 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 本地化 API 保留。  
   
-5.  以后可以将仅包含任意形式的注释的本地化注释文件合并到本地化过程中。  
+5. 以后可以将仅包含任意形式的注释的本地化注释文件合并到本地化过程中。  
   
  以下示例演示如何将本地化注释添加到 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 文件中。  
   

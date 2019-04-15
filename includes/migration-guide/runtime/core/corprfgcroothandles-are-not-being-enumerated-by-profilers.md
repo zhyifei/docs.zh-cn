@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8433899058c6f569e380999800557dbe8ed0a169
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235079"
+---
 ### <a name="corprfgcroothandles-are-not-being-enumerated-by-profilers"></a>探查器未枚举 COR_PRF_GC_ROOT_HANDLEs
 
 |   |   |
@@ -7,4 +15,3 @@
 |范围|次要|
 |版本|4.5.1|
 |类型|运行时|
-

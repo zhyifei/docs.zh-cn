@@ -2,12 +2,12 @@
 title: <endpoint> 的 <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: e3c934ac26a648eea4822cc7ae782dfbbfe0d99e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3af41ad5b5681b08aac44d984372ab5ac66caf5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231196"
 ---
 # <a name="endpoint-of-client"></a>\<终结点 > 的\<客户端 >
 指定通道终结点的协定、绑定和地址属性，客户端使用通道终结点与服务器上的服务终结点连接。  
@@ -37,7 +37,7 @@ ms.locfileid: "55287763"
   
 |特性|描述|  
 |---------------|-----------------|  
-|address|必需的字符串属性。<br /><br /> 指定终结点的地址。 默认值为一个空字符串。 该地址必须为绝对 URI。|  
+|地址|必需的字符串属性。<br /><br /> 指定终结点的地址。 默认值为一个空字符串。 该地址必须为绝对 URI。|  
 |behaviorConfiguration|一个字符串，其中包含要用于实例化终结点的行为的行为名。 定义服务时，该行为名必须在作用域内。 默认值为一个空字符串。|  
 |绑定|必需的字符串属性。<br /><br /> 一个字符串，指示要使用的绑定的类型。 该类型必须具有一个已注册的配置节，才能加以引用。 该类型是按节名而不是绑定的类型名注册的。|  
 |bindingConfiguration|可选。 一个字符串，其中包含实例化终结点时要使用的绑定配置的名称。 定义终结点时，绑定配置必须在作用域内。 默认值为一个空字符串。<br /><br /> 此属性与 `binding` 结合使用，以引用配置文件中的特定绑定配置。 如果尝试使用自定义绑定，请设置此属性。 否则，可能引发异常。|  
@@ -72,6 +72,7 @@ ms.locfileid: "55287763"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>

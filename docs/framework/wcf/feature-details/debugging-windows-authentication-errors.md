@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595131"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299444"
 ---
 # <a name="debugging-windows-authentication-errors"></a>调试 Windows 身份验证错误
 使用 Windows 验证身份作为安全机制时，安全支持提供程序接口 (SSPI) 将处理安全进程。 当 SSPI 层上出现安全错误时，会显示这些由 Windows Communication Foundation (WCF)。 本主题提供一组问题以帮助诊断这些错误。  
@@ -25,11 +25,11 @@ ms.locfileid: "54595131"
 ## <a name="debugging-methodology"></a>调试方法  
  基本方法如下所述：  
   
-1.  确定您是否正在使用 Windows 身份验证。 如果您正在使用任何其他方案，则本主题不适用。  
+1. 确定您是否正在使用 Windows 身份验证。 如果您正在使用任何其他方案，则本主题不适用。  
   
-2.  如果确定使用 Windows 身份验证，确定你的 WCF 配置使用 Kerberos 定向还是协商。  
+2. 如果确定使用 Windows 身份验证，确定你的 WCF 配置使用 Kerberos 定向还是协商。  
   
-3.  确定了配置是使用 Kerberos 协议还是 NTLM 后，您可以在正确的上下文中理解错误消息。  
+3. 确定了配置是使用 Kerberos 协议还是 NTLM 后，您可以在正确的上下文中理解错误消息。  
   
 ### <a name="availability-of-the-kerberos-protocol-and-ntlm"></a>Kerberos 协议和 NTLM 的可用性  
  Kerberos SSP 要求域控制器作为 Kerberos 密钥发行中心 (KDC)。 只有在客户端和服务都使用域标识时，Kerberos 协议才可用。 在其他帐户组合中，将使用 NTLM，如下表摘要所示。  
@@ -81,17 +81,17 @@ ms.locfileid: "54595131"
   
  若要用凭据协商实现 Kerberos，请执行下列步骤：  
   
-1.  通过将 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 设置为 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> 来实现委托。  
+1. 通过将 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 设置为 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> 来实现委托。  
   
-2.  要求 SSPI 协商：  
+2. 要求 SSPI 协商：  
   
     1.  如果要使用标准绑定，请将 `NegotiateServiceCredential` 属性设置为 `true`。  
   
     2.  如果要使用自定义绑定，请将 `AuthenticationMode` 元素的 `Security` 属性设置为 `SspiNegotiated`。  
   
-3.  通过禁用 NTLM 来要求 SSPI 协商使用 Kerberos：  
+3. 通过禁用 NTLM 来要求 SSPI 协商使用 Kerberos：  
   
-    1.  为此，可在代码中使用下面的语句：`ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1.  执行此操作在代码中，使用以下语句： `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
     2.  或者在配置文件中将 `allowNtlm` 属性设置为 `false`。 此属性包含在[ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)。  
   
@@ -145,6 +145,7 @@ ms.locfileid: "54595131"
  如果在一台计算机上开发应用程序，并在另一台计算机上部署它，然后在每台计算机上使用不同的帐户类型进行身份验证，则可能遇到不同的行为。 例如，假定使用 `SSPI Negotiated` 身份验证模式，在 Windows XP Pro 计算机上开发应用程序。 如果使用本地用户帐户进行身份验证，则会使用 NTLM 协议。 在开发应用程序后，将服务部署到使用域帐户运行它的 Windows Server 2003 计算机。 此时，客户端将无法对服务进行身份验证，因为它正在使用 Kerberos 和域控制器。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>

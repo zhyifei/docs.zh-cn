@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 328fe08872a2b57d0bdf87ea9be9224795ca9ad9
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f7d09e315f2ccc7ecdcf22719ca6dce1ee1411b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186285"
 ---
 # <a name="specifying-an-assemblys-location"></a>指定程序集的位置
 有两种方法来指定程序集的位置：  
@@ -66,7 +66,8 @@ ms.locfileid: "55825402"
  **PrivatePath**属性包含运行时应搜索程序集的目录。 如果应用程序位于 C:\Program Files\MyApp，运行时将查找 C:\Program Files\MyApp\Bin、 C:\Program Files\MyApp\Bin2\Subbin 和 C:\Program Files\MyApp\Bin3 中未指定基本代码的程序集。 中指定的目录**privatePath**必须是应用程序基目录的子目录。  
   
 ## <a name="see-also"></a>请参阅
-- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）
+
+- [公共语言运行时中的程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [使用配置文件配置应用程序](index.md)
+- [使用配置文件配置应用](index.md)

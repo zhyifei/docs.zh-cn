@@ -4,12 +4,12 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200281"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167500"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>如何：使用 MMC 管理单元查看证书
 当您创建安全的客户端或服务时，可以使用[证书](working-with-certificates.md)作为凭据。 例如，常见的凭据类型是 X.509 证书，创建具有<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>方法。 
@@ -22,7 +22,6 @@ ms.locfileid: "57200281"
 
 - 服务帐户：在存储区是本地的设备上的特定服务。
 
-  
 ## <a name="view-certificates-in-the-mmc-snap-in"></a>在 MMC 管理单元中查看证书 
 
 下面的过程演示如何检查本地设备以查找相应的证书上的存储区： 
@@ -57,7 +56,6 @@ ms.locfileid: "57200281"
 8. 若要查看你的证书 MMC 管理单元中，选择**控制台根节点**在左窗格中，然后展开**证书 （本地计算机）**。
 
     将显示每种类型的证书的目录的列表。 从每个证书目录中，可以查看、 导出、 导入，并删除其证书。
-  
 
 ## <a name="view-certificates-with-the-certificate-manager-tool"></a>使用证书管理器工具查看证书
 
@@ -79,8 +77,8 @@ ms.locfileid: "57200281"
   
 2. 若要查看您的证书，在**证书-当前用户**在左窗格中，展开你想要查看的证书的类型的目录。
 
-  
 ## <a name="see-also"></a>请参阅
+
 - [使用证书](working-with-certificates.md)
 - [如何：创建开发期间使用的临时证书](how-to-create-temporary-certificates-for-use-during-development.md)
 - [如何：检索证书的指纹](how-to-retrieve-the-thumbprint-of-a-certificate.md)

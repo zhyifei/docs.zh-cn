@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 3930453e2ba3594e19d8eb7c3dfbceb49c3a1e80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540528"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151549"
 ---
 # <a name="how-to-configure-network-tracing"></a>如何：配置网络跟踪
 应用程序或计算机配置文件可保存用于确定网络跟踪的格式和内容的设置。 在执行此过程之前，请确保启用跟踪。 有关如何启用跟踪的信息，请参阅[启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)。  
@@ -98,6 +98,7 @@ ms.locfileid: "54540528"
 |`Tracemode`|可选的 <xref:System.String> 特性。 设置为 `includehex` 将会以十六进制和文本格式显示协议跟踪。 设置为 `protocolonly` 将会仅显示文本。 默认值为 `includehex`。<br /><br /> 如此示例所示，此特性必须在 \<switches> 元素上进行设置。 如果此特性是在 \<source> 元素下的一个元素上设置的，则会引发异常。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [解释网络跟踪](../../../docs/framework/network-programming/interpreting-network-tracing.md)
 - [.NET Framework 中的网络跟踪](../../../docs/framework/network-programming/network-tracing.md)
 - [启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)

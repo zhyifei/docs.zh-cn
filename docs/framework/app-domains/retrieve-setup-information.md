@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c5b43258b3ce501d1302c31a70f51341d3a84d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80c9fe6de0fca86497ffe84cd8dadf0eb8cef6c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588033"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108948"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>从应用程序域中检索安装信息
 应用程序域的每个实例由属性和 <xref:System.AppDomainSetup> 信息组成。 可使用 <xref:System.AppDomain?displayProperty=nameWithType> 类从应用程序域中检索安装信息。 此类提供多个成员，可用于检索应用程序域的相关配置信息。  
@@ -37,5 +37,6 @@ ms.locfileid: "54588033"
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [对应用程序域进行编程](application-domains.md#programming-with-application-domains)
 - [使用应用程序域](../../../docs/framework/app-domains/use.md)

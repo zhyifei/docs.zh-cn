@@ -5,12 +5,12 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 93365c109f015b2ec72b5216dcb8c46258d022e2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164354"
 ---
 # <a name="client"></a>\<client>
 `client` 元素定义客户端可以连接的终结点的列表。  
@@ -35,7 +35,7 @@ ms.locfileid: "55280899"
  下列各节描述了特性、子元素和父元素。  
   
 ### <a name="attributes"></a>特性  
- 无  
+ None  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -73,6 +73,7 @@ ms.locfileid: "55280899"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - [WCF 客户端配置](../../../../../docs/framework/wcf/feature-details/client-configuration.md)

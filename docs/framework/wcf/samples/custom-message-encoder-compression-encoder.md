@@ -2,12 +2,12 @@
 title: 自定义消息编码器：压缩编码器
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 9dd1e2eb25b2f400ba42b6cee75f8563c4d52c31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140681"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310494"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>自定义消息编码器：压缩编码器
 此示例演示如何实现自定义编码器使用 Windows Communication Foundation (WCF) 平台。  
@@ -39,9 +39,9 @@ ms.locfileid: "59140681"
   
  如上所述，在自定义编码器中实现了多个层。 为了更好地阐释各层之间的关系，下面列出了经过简化的服务启动事件顺序的列表：  
   
-1.  服务器启动。  
+1. 服务器启动。  
   
-2.  读取配置信息。  
+2. 读取配置信息。  
   
     1.  服务配置对自定义配置处理程序进行注册。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "59140681"
   
     4.  自定义绑定元素创建并返回消息编码器工厂。  
   
-3.  接收消息。  
+3. 接收消息。  
   
-4.  消息编码器工厂返回消息编码器以读入消息并写出响应。  
+4. 消息编码器工厂返回消息编码器以读入消息并写出响应。  
   
-5.  编码器层是作为类工厂实现的。 对于自定义编码器，只有编码器类工厂才是必须公开的。 在创建 <xref:System.ServiceModel.ServiceHost> 或 <xref:System.ServiceModel.ChannelFactory%601> 对象时，绑定元素会返回工厂对象。 消息编码器可以在缓冲模式或流模式下运行。 此示例对缓冲模式和流模式均进行了演示。  
+5. 编码器层是作为类工厂实现的。 对于自定义编码器，只有编码器类工厂才是必须公开的。 在创建 <xref:System.ServiceModel.ServiceHost> 或 <xref:System.ServiceModel.ChannelFactory%601> 对象时，绑定元素会返回工厂对象。 消息编码器可以在缓冲模式或流模式下运行。 此示例对缓冲模式和流模式均进行了演示。  
   
  在每个模式下，`ReadMessage` 抽象类都随附了 `WriteMessage` 和 `MessageEncoder` 方法。 大部分编码工作都在这些方法中进行。 此示例包装现有的文本和二进制消息编码器。 这允许该示例将对消息网络表示形式的读写操作委托给内部编码器，并允许压缩编码器对结果进行压缩或解压缩。 由于没有消息编码管线，这是在 WCF 中使用多个编码器的唯一模型。 在对消息进行解压缩之后，所得到的消息将立即向上传递到堆栈，供通道堆栈进行处理。 在压缩过程中，所得到的压缩消息都直接写入所提供的流中。  
   
@@ -334,17 +334,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0：  
+1. 使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0：  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+3. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

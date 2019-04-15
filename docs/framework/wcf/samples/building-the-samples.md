@@ -2,12 +2,12 @@
 title: 生成 Windows Communication Foundation 示例
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: b6b541b93661f3da656e36d65ef3f94d76cae0c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658866"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317852"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>生成 Windows Communication Foundation 示例
 
@@ -18,9 +18,9 @@ ms.locfileid: "54658866"
 
 ## <a name="to-build-the-sample-using-a-command-prompt"></a>使用命令提示生成示例
 
-1.  打开 Visual Studio 开发人员命令提示符并导航到安装示例的目录位置下语言特定的子目录。
+1. 打开 Visual Studio 开发人员命令提示符并导航到安装示例的目录位置下语言特定的子目录。
 
-2.  类型`msbuild`在命令行。 生成客户端程序文件*client\bin*和服务程序文件构建到*service\bin*。 如果该服务由 Internet 信息服务 (IIS) 承载，服务程序文件也会复制到*servicemodelsamples*目录并将其*\bin*子目录。
+2. 类型`msbuild`在命令行。 生成客户端程序文件*client\bin*和服务程序文件构建到*service\bin*。 如果该服务由 Internet 信息服务 (IIS) 承载，服务程序文件也会复制到*servicemodelsamples*目录并将其*\bin*子目录。
 
 > [!NOTE]
 > 必须设置 Acl *%systemdrive%\inetpub\wwwroot*授予修改权限的帐户在其下运行。 否则，某些后期生成事件将失败。 或者，您可以将 ACL 保留原样，而以管理员身份运行 SDK 命令提示。
@@ -50,9 +50,9 @@ ms.locfileid: "54658866"
 
 ### <a name="to-regenerate-the-client-and-configuration-files"></a>重新生成客户端和配置文件
 
-1.  打开 SDK 命令提示，然后定位到安装示例的目录位置下的语言特定的子目录。
+1. 打开 SDK 命令提示，然后定位到安装示例的目录位置下的语言特定的子目录。
 
-2.  如果服务是 Web 承载的类型，请使用以下命令。
+2. 如果服务是 Web 承载的类型，请使用以下命令。
 
     ```
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs

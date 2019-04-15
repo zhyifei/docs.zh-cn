@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a9ac7fcc3ea4da699111ac288a5786e9f9f8b572
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320127"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 浏览器应用程序概述
 <a name="introduction"></a>
@@ -100,25 +100,25 @@ ms.locfileid: "58410156"
 ### <a name="debugging-xbaps-that-use-hostscript"></a>调试使用 HostScript 的 XBAP  
  如果 XBAP 使用<xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A>对象与 HTML 窗口中，通信有两个设置，你必须指定用于运行和调试 Visual Studio 中的应用程序。 应用程序必须有权访问其源站点，并且必须使用包含 XBAP 的 HTML 页启动应用程序。 以下步骤介绍如何检查这两个设置：  
   
-1.  在 Visual Studio 中，打开项目属性。  
+1. 在 Visual Studio 中，打开项目属性。  
   
-2.  在“安全性”选项卡上单击“高级”。  
+2. 在“安全性”选项卡上单击“高级”。  
   
      将显示“高级安全设置”对话框。  
   
-3.  请确保选中“授予应用程序对其源站点的访问权”复选框，然后单击“确定”。  
+3. 请确保选中“授予应用程序对其源站点的访问权”复选框，然后单击“确定”。  
   
-4.  在“调试”选项卡上，选择“使用 URL 启动浏览器”选项，然后指定包含 XBAP 的 HTML 页的 URL。  
+4. 在“调试”选项卡上，选择“使用 URL 启动浏览器”选项，然后指定包含 XBAP 的 HTML 页的 URL。  
   
-5.  在 Internet Explorer 中，单击“工具”按钮，然后选择“Internet 选项”。  
+5. 在 Internet Explorer 中，单击“工具”按钮，然后选择“Internet 选项”。  
   
      将显示“Internet 选项”对话框。  
   
-6.  单击“高级”选项卡。  
+6. 单击“高级”选项卡。  
   
-7.  在“安全性”下面的“设置”列表中，选中“允许活动内容在我的计算机上的文件中运行”复选框。  
+7. 在“安全性”下面的“设置”列表中，选中“允许活动内容在我的计算机上的文件中运行”复选框。  
   
-8.  单击 **“确定”**。  
+8. 单击 **“确定”**。  
   
      重启 Internet Explorer 后更改才会生效。  
   
@@ -146,9 +146,9 @@ ms.locfileid: "58410156"
 ### <a name="creating-a-full-trust-xbap"></a>创建完全信任的 XBAP  
  如果 XBAP 需要完全信任，则可以更改项目以启用此权限。 以下步骤介绍如何启用完全信任：  
   
-1.  在 Visual Studio 中，打开项目属性。  
+1. 在 Visual Studio 中，打开项目属性。  
   
-2.  在“安全性”选项卡上，选择“这是完全可信的应用程序”选项。  
+2. 在“安全性”选项卡上，选择“这是完全可信的应用程序”选项。  
   
  此设置将进行以下更改：  
   
@@ -187,5 +187,6 @@ ms.locfileid: "58410156"
  此外，改进了的 ClickOnce 下载序列并发最多 10%改进开始时间。 ClickOnce 下载并验证之后清单、 启动应用程序下载和进度栏将开始更新。  
   
 ## <a name="see-also"></a>请参阅
+
 - [将 Visual Studio 配置为通过调试 XAML 浏览器应用程序来调用 Web 服务](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [部署 WPF 应用程序](deploying-a-wpf-application-wpf.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d90b3c23af39125d888824dbfabf798a3e73985
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: db0493f437d2546302a10bf52aebf326ea8a694c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218731"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345763"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>向 COM 公开 .NET Framework 组件
 对开发人员而言，编写 .NET 类型以及从非托管代码使用该类型是不同的活动。 本部分介绍编写与 COM 客户端互操作的托管代码的几个提示：  
@@ -34,22 +34,23 @@ ms.locfileid: "56218731"
   
 #### <a name="to-consume-a-managed-type-from-com"></a>从 COM 使用托管类型  
   
-1.  [向 COM 注册程序集](../../../docs/framework/interop/registering-assemblies-with-com.md)。  
+1. [向 COM 注册程序集](../../../docs/framework/interop/registering-assemblies-with-com.md)。  
   
      必须在设计时注册程序集（和类型库）中的类型。 如果安装程序未注册程序集，请指示 COM 开发人员使用 Regasm.exe。  
   
-2.  [从 COM 引用 .NET 类型](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)。  
+2. [从 COM 引用 .NET 类型](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)。  
   
      COM 开发人员可使用当前使用的相同工具和技术引用程序集中的类型。  
   
-3.  [调用 .NET 对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))。  
+3. [调用 .NET 对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))。  
   
      COM 开发人员可采用在任何非托管类型上调用方法的方式在 .NET 对象上调用方法。 例如，COM CoCreateInstance API 激活 .NET 对象。  
   
-4.  [为 COM 访问部署应用程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))。  
+4. [为 COM 访问部署应用程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))。  
   
      具有强名称的程序集可安装在全局程序集缓存中，并向其发布者请求签名。 不具有强名称的程序集必须安装在客户端的应用程序目录中。  
   
 ## <a name="see-also"></a>请参阅
+
 - [与非托管代码交互操作](../../../docs/framework/interop/index.md)
 - [COM 互操作示例：COM 客户端和 .NET 服务器](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

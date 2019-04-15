@@ -2,12 +2,12 @@
 title: 重播攻击
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: bceaa1bb723144ee4e3b534aa1537acdc7f65fc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186753"
 ---
 # <a name="replay-attacks"></a>重播攻击
 一个*重播攻击*攻击者复制双方之间的消息流，并重播到一个或多个参与方的流时，会发生。 除非攻击得到缓解，否则，受到攻击的计算机会将该消息流作为合法消息进行处理，从而导致一系列不良后果，例如重复订购某种产品。  
@@ -37,8 +37,9 @@ ms.locfileid: "54712072"
 -   将服务配置为使用传输级安全。  
   
 ## <a name="see-also"></a>请参阅
+
 - [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [信息泄漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [信息泄露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)

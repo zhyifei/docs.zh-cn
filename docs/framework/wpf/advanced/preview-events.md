@@ -7,12 +7,12 @@ helpviewer_keywords:
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-ms.openlocfilehash: 95514cfce88764d92d690fb9c0a51c667a49683b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211384"
 ---
 # <a name="preview-events"></a>预览事件
 预览事件，也称为隧道事件，也是路由的路由的事件，在应用程序根元素引发该事件并报告为事件数据中的源间传递的方向。 并非所有事件方案支持或要求预览事件;本主题介绍的情况下，预览事件存在，应用程序或组件应如何处理它们和在其中创建自定义组件或类中的预览事件可能是适当的情况。  
@@ -30,5 +30,6 @@ ms.locfileid: "57356333"
  上述每种方法有负面影响或限制。 处理预览事件的副作用是在该点处理该事件可能会禁用为能够处理浮升事件的处理程序，并因此的限制是，它通常是不标记为已处理仍在使用 Previ 时一个好办法新路由的一部分。 限制`handledEventsToo`种方法是，不能指定`handledEventsToo`处理程序中的[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]作为属性，你必须注册事件处理程序代码中获取对该元素的对象引用，该处理程序附加后。  
   
 ## <a name="see-also"></a>请参阅
+
 - [将路由事件标记为“已处理”和“类处理”](marking-routed-events-as-handled-and-class-handling.md)
 - [路由事件概述](routed-events-overview.md)

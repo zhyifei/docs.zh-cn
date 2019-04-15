@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: aa0139c4b51bf33f9156eeb9dab6b9b6093524d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6931f9b012a67c2d18995f2a3a56f290be0f0ddb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123443"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313081"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>如何：在代码中模拟鼠标和键盘事件
 Windows 窗体提供多个选项，用于以编程方式模拟鼠标和键盘输入。 本主题将简要阐述这些选项。  
@@ -27,9 +27,9 @@ Windows 窗体提供多个选项，用于以编程方式模拟鼠标和键盘输
   
 #### <a name="to-programmatically-click-the-right-mouse-button"></a>若要以编程方式单击鼠标右键按钮  
   
-1.  创建 <xref:System.Windows.Forms.MouseEventArgs> ，其 <xref:System.Windows.Forms.MouseEventArgs.Button%2A> 属性设置为 <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> 值。  
+1. 创建 <xref:System.Windows.Forms.MouseEventArgs> ，其 <xref:System.Windows.Forms.MouseEventArgs.Button%2A> 属性设置为 <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> 值。  
   
-2.  调用 <xref:System.Windows.Forms.Control.OnMouseClick%2A> 方法，其中参数为此 <xref:System.Windows.Forms.MouseEventArgs> 。  
+2. 调用 <xref:System.Windows.Forms.Control.OnMouseClick%2A> 方法，其中参数为此 <xref:System.Windows.Forms.MouseEventArgs> 。  
   
  有关自定义控件的详细信息，请参阅[设计时开发 Windows 窗体控件](./controls/developing-windows-forms-controls-at-design-time.md)。  
   
@@ -58,7 +58,7 @@ Windows 窗体提供多个选项，用于以编程方式模拟鼠标和键盘输
   
 #### <a name="to-send-a-keystroke-to-the-same-application"></a>若要将击键发送到相同的应用程序  
   
-1.  调用 <xref:System.Windows.Forms.SendKeys.Send%2A> 类或 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 类的 <xref:System.Windows.Forms.SendKeys> 方法。 指定的击键将由应用程序的活动控件接收。 下面的代码示例使用 <xref:System.Windows.Forms.SendKeys.Send%2A> 模拟用户双击窗体表面时按 ENTER 键的操作。 此示例假定 <xref:System.Windows.Forms.Form> 具有一个选项卡索引为 0 的 <xref:System.Windows.Forms.Button> 控件。  
+1. 调用 <xref:System.Windows.Forms.SendKeys.Send%2A> 类或 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 类的 <xref:System.Windows.Forms.SendKeys> 方法。 指定的击键将由应用程序的活动控件接收。 下面的代码示例使用 <xref:System.Windows.Forms.SendKeys.Send%2A> 模拟用户双击窗体表面时按 ENTER 键的操作。 此示例假定 <xref:System.Windows.Forms.Form> 具有一个选项卡索引为 0 的 <xref:System.Windows.Forms.Button> 控件。  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
@@ -66,7 +66,7 @@ Windows 窗体提供多个选项，用于以编程方式模拟鼠标和键盘输
   
 #### <a name="to-send-a-keystroke-to-a-different-application"></a>若要将击键发送到不同的应用程序  
   
-1.  激活将接收击键的应用程序窗口，然后调用 <xref:System.Windows.Forms.SendKeys.Send%2A> 或 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法。 由于托管的方法均不会激活其他应用程序，所以必须使用本机 Windows 方法将焦点强制设置到其他应用程序上。 下面的代码示例使用平台调用来调用 `FindWindow` 和 `SetForegroundWindow` 方法以激活计算器应用程序窗口，然后调用 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 向计算器应用程序发出一系列计算。  
+1. 激活将接收击键的应用程序窗口，然后调用 <xref:System.Windows.Forms.SendKeys.Send%2A> 或 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法。 由于托管的方法均不会激活其他应用程序，所以必须使用本机 Windows 方法将焦点强制设置到其他应用程序上。 下面的代码示例使用平台调用来调用 `FindWindow` 和 `SetForegroundWindow` 方法以激活计算器应用程序窗口，然后调用 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 向计算器应用程序发出一系列计算。  
   
     > [!NOTE]
     >  可查找计算器应用程序的 `FindWindow` 调用的正确参数因 Windows 版本而异。  下面的代码查找 [!INCLUDE[win7](../../../includes/win7-md.md)]上的计算器应用程序。 在 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]上，将第一个参数更改为“SciCalc”。 可使用 Spy++ 工具（Visual Studio 附带）确定正确的参数。  

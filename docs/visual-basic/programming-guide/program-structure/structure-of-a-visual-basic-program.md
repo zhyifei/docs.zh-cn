@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295765"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程序的结构
 从标准构建基块是构建 Visual Basic 程序。 一个*解决方案*由一个或多个项目组成。 一个*项目*又可以包含一个或多个程序集。 每个*程序集*从一个或多个源代码文件编译。 一个*源文件*提供定义和实现的类、 结构、 模块和接口，它们最终包含了所有代码。  
@@ -22,11 +22,11 @@ ms.locfileid: "58828116"
 ## <a name="file-level-programming-elements"></a>文件级别的编程元素  
  当您启动项目或文件，并打开代码编辑器中时，您将看到一些代码已存在并按正确的顺序。 您编写任何代码都应遵循以下顺序：  
   
-1.  `Option` 语句  
+1. `Option` 语句  
   
-2.  `Imports` 语句  
+2. `Imports` 语句  
   
-3.  `Namespace` 语句和命名空间级别的元素  
+3. `Namespace` 语句和命名空间级别的元素  
   
  如果按不同顺序输入语句，可以产生编译错误。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "58828116"
   
 -   [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
 -   [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 -   [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
   
@@ -94,6 +94,6 @@ ms.locfileid: "58828116"
   
 ## <a name="see-also"></a>请参阅
 
-- [在 Visual Basic 中的主要过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic 中的 Main 过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
 - [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Visual Basic 限制](../../../visual-basic/programming-guide/program-structure/limitations.md)

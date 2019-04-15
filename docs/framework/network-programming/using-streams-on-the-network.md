@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: 9849c64b30ed1021c12f34a7920104537292197a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a593ea324d39d8161ad87c4df6d6010970f3e1c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109052"
 ---
 # <a name="using-streams-on-the-network"></a>在网络上使用流
 网络资源在 .NET Framework 中表示为流。 通过对流进行一般处理，.NET Framework 提供下列功能：  
@@ -103,5 +103,6 @@ sr.Close()
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [如何：使用 WebRequest 类请求数据](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
-- [请求数据](../../../docs/framework/network-programming/requesting-data.md)
+- [正在请求数据...](../../../docs/framework/network-programming/requesting-data.md)

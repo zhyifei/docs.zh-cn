@@ -1,15 +1,15 @@
 ---
-title: 传输:UDP 示例上的自定义事务
+title: 传输：UDP 示例上的自定义事务
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 931cedfeb5604b00ec1cf3f4d2742e2dff2eacca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e257c987d93fc7a5b5e8e7f51d79dd8399b45d72
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552199"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310117"
 ---
-# <a name="transport-custom-transactions-over-udp-sample"></a>传输:UDP 示例上的自定义事务
+# <a name="transport-custom-transactions-over-udp-sample"></a>传输：UDP 示例上的自定义事务
 此示例基于[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)在 Windows Communication Foundation (WCF) 示例[传输可扩展性](../../../../docs/framework/wcf/samples/transport-extensibility.md)。 它扩展 UDP 传输示例，以支持自定义事务流并演示 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 属性的用法。  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>UDP 传输示例中的代码更改  
@@ -46,7 +46,7 @@ byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMes
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- `TransactionMessageBuffer.WriteTransactionMessageBuffer` 是一个帮助器方法，包含用于将当前事务的传播程序令牌与消息实体合并，并将合并结果放入缓冲区中的新功能。  
+ `TransactionMessageBuffer.WriteTransactionMessageBuffer` 是一个包含合并与消息实体的当前事务的传播标记并将其放入缓冲区的新功能的帮助器方法。  
   
  对于自定义事务流传输，客户端实现必须知道哪些服务操作要求事务流，并将此信息传递到 WCF。 还应存在用于将用户事务传递到传输层的机制。 此示例使用"WCF 消息检查器"获取此信息。 此处实现的名为 `TransactionFlowInspector` 的客户端消息检查器执行下列任务：  
   
@@ -159,7 +159,7 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- `TransactionMessageBuffer.ReadTransactionMessageBuffer()` 是用于反转 `TransactionMessageBuffer.WriteTransactionMessageBuffer()` 执行的序列化过程的帮助器方法。  
+ `TransactionMessageBuffer.ReadTransactionMessageBuffer()` 是反转所执行的序列化过程的帮助器方法`TransactionMessageBuffer.WriteTransactionMessageBuffer()`。  
   
  如果事务已流入，它会通过 `TransactionMessageProperty` 追加到消息。  
   
@@ -176,11 +176,11 @@ if (transaction != null)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+1. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-2.  当前示例应类似于运行[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 若要运行该示例，请使用 UdpTestService.exe 启动服务。 如果运行的是 [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，必须使用提升的特权启动服务。 为此，请右键单击在 UdpTestService.exe[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]然后单击**以管理员身份运行**。  
+2. 当前示例应类似于运行[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 若要运行该示例，请使用 UdpTestService.exe 启动服务。 如果运行的是 [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]，必须使用提升的特权启动服务。 为此，请右键单击在 UdpTestService.exe[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]然后单击**以管理员身份运行**。  
   
-3.  将生成以下输出。  
+3. 将生成以下输出。  
   
     ```  
     Testing Udp From Code.  
@@ -188,7 +188,7 @@ if (transaction != null)
     Press <ENTER> to terminate the service and start service from config...  
     ```  
   
-4.  此时可以通过运行 UdpTestClient.exe 启动客户端。 客户端生成的输出如下所示。  
+4. 此时可以通过运行 UdpTestClient.exe 启动客户端。 客户端生成的输出如下所示。  
   
     ```  
     0  
@@ -199,7 +199,7 @@ if (transaction != null)
     Press <ENTER> to complete test.  
     ```  
   
-5.  服务输出如下所示。  
+5. 服务输出如下所示。  
   
     ```  
     Hello, world!  
@@ -219,9 +219,9 @@ if (transaction != null)
        adding 4 + 8  
     ```  
   
-6.  如果服务应用程序可以将 `The client transaction has flowed to the service` 操作的 `clientTransactionId` 参数中的客户端发送的事务标识符与服务事务的标识符进行匹配，则服务应用程序会显示消息 `CalculatorService.Add()`。 仅当客户端事务已经流动到服务时才可以获得匹配。  
+6. 如果服务应用程序可以将 `The client transaction has flowed to the service` 操作的 `clientTransactionId` 参数中的客户端发送的事务标识符与服务事务的标识符进行匹配，则服务应用程序会显示消息 `CalculatorService.Add()`。 仅当客户端事务已经流动到服务时才可以获得匹配。  
   
-7.  若要对使用配置发布的终结点运行客户端应用程序，请在服务应用程序窗口中按 Enter，并再次运行测试客户端。 您将在服务上看到如下输出。  
+7. 若要对使用配置发布的终结点运行客户端应用程序，请在服务应用程序窗口中按 Enter，并再次运行测试客户端。 您将在服务上看到如下输出。  
   
     ```  
     Testing Udp From Config.  
@@ -229,7 +229,7 @@ if (transaction != null)
     Press <ENTER> to terminate the service and exit...  
     ```  
   
-8.  现在对服务运行客户端将产生与前面相似的输出。  
+8. 现在对服务运行客户端将产生与前面相似的输出。  
   
 9. 若要使用 Svcutil.exe 重新生成客户端代码和配置，请启动服务应用程序，然后从示例的根目录中运行下面的 Svcutil.exe 命令。  
   
@@ -263,4 +263,5 @@ if (transaction != null)
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
 ## <a name="see-also"></a>请参阅
+
 - [传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

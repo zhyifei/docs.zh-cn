@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592427"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315174"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>配置 WS-Atomic 事务支持
 本主题介绍如何通过 WS-AT 配置实用工具来配置 WS-AtomicTransaction (WS-AT) 支持。  
@@ -56,19 +56,19 @@ ms.locfileid: "54592427"
   
  必须拥有必需的证书才能建立信任。 若要了解如何创建和安装新证书下面的步骤之前，请参阅[如何：创建并在开发过程中在 WCF 中安装临时客户端证书](https://go.microsoft.com/fwlink/?LinkId=158925)。  
   
-1.  在计算机 A 上，使用 MMC“证书”管理单元将现有证书 (certA) 导入 LocalMachine\MY（“个人”节点）和 LocalMachine\ROOT 存储区（“受信任的根证书颁发机构”节点）。 若要将证书导入特定的节点，右键单击节点并选择**所有任务/导入**。  
+1. 在计算机 A 上，使用 MMC“证书”管理单元将现有证书 (certA) 导入 LocalMachine\MY（“个人”节点）和 LocalMachine\ROOT 存储区（“受信任的根证书颁发机构”节点）。 若要将证书导入特定的节点，右键单击节点并选择**所有任务/导入**。  
   
-2.  在计算机 B 上，使用 MMC“证书”管理单元创建或获取带私钥的证书 certB，并将其导入 LocalMachine\MY（“个人”节点）和 LocalMachine\ROOT 存储区（“受信任的根证书颁发机构”节点）。  
+2. 在计算机 B 上，使用 MMC“证书”管理单元创建或获取带私钥的证书 certB，并将其导入 LocalMachine\MY（“个人”节点）和 LocalMachine\ROOT 存储区（“受信任的根证书颁发机构”节点）。  
   
-3.  如果 certA 的公钥还未导出到文件，则完成此操作。  
+3. 如果 certA 的公钥还未导出到文件，则完成此操作。  
   
-4.  如果 certB 的公钥还未导出到文件，则完成此操作。  
+4. 如果 certB 的公钥还未导出到文件，则完成此操作。  
   
 ### <a name="establishing-mutual-trust-between-machines"></a>在两台计算机之间建立相互信任  
   
-1.  在计算机 A 上，将 certB 的文件表示形式导入 LocalMachine\MY 和 LocalMachine\ROOT 存储区。 这表明计算机 A 信任 certB 与之通信。  
+1. 在计算机 A 上，将 certB 的文件表示形式导入 LocalMachine\MY 和 LocalMachine\ROOT 存储区。 这表明计算机 A 信任 certB 与之通信。  
   
-2.  在计算机 B 上，将 certA 的文件表示形式导入 LocalMachine\MY 和 LocalMachine\ROOT 存储区。 这表示计算机 B 信任 certA 与之通信。  
+2. 在计算机 B 上，将 certA 的文件表示形式导入 LocalMachine\MY 和 LocalMachine\ROOT 存储区。 这表示计算机 B 信任 certA 与之通信。  
   
  完成这些步骤之后，即在两台计算机之间建立了信任，这时，就可以将它们配置为使用 WS-AT 相互通信。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "54592427"
   
  可以使用 MMC WS-AT 管理单元进行这一配置。 有关此工具的详细信息，请参阅[WS-AtomicTransaction 配置 MMC 管理单元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)主题。 下面的步骤介绍如何在运行 MSDTC 的两台计算机之间建立信任。  
   
-1.  配置计算机 A 的设置。 对于"终结点证书"，选择 certA。 对于"授权的证书"，选择 certB。  
+1. 配置计算机 A 的设置。 对于"终结点证书"，选择 certA。 对于"授权的证书"，选择 certB。  
   
-2.  配置计算机 B 的设置。 对于"终结点证书"，选择 certB。 对于"授权的证书"，选择 certA。  
+2. 配置计算机 B 的设置。 对于"终结点证书"，选择 certB。 对于"授权的证书"，选择 certA。  
   
 > [!NOTE]
 >  当一台计算机向另一台计算机发送消息时，发送方尝试验证接收方证书的主题名称和接收方计算机的名称是否匹配。 如果不匹配，则证书验证失败，并且两台计算机无法通信。  
@@ -98,13 +98,13 @@ ms.locfileid: "54592427"
   
  通过 ETW 跟踪会话，WS-AT 协议服务还支持集成 ServiceModel 跟踪。 这样，除了现有事务跟踪之外，可提供更多特定于通信的详细跟踪。  若要启用这些附加跟踪，请按照以下步骤操作  
   
-1.  打开**开始/运行**菜单中，输入框中键入"regedit"，然后选择**确定**。  
+1. 打开**开始/运行**菜单中，输入框中键入"regedit"，然后选择**确定**。  
   
-2.  在中**注册表编辑器**，导航到左侧窗格中，Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\ 上的以下文件夹  
+2. 在中**注册表编辑器**，导航到左侧窗格中，Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\ 上的以下文件夹  
   
-3.  右键单击`ServiceModelDiagnosticTracing`右窗格中的值，然后选择**修改**。  
+3. 右键单击`ServiceModelDiagnosticTracing`右窗格中的值，然后选择**修改**。  
   
-4.  在中**数值数据**输入框中，输入要指定你想要启用的跟踪级别的以下有效值之一。  
+4. 在中**数值数据**输入框中，输入要指定你想要启用的跟踪级别的以下有效值之一。  
   
 -   0：关闭  
   
@@ -119,5 +119,6 @@ ms.locfileid: "54592427"
 -   31：详细  
   
 ## <a name="see-also"></a>请参阅
+
 - [WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [WS-AtomicTransaction 配置 MMC 管理单元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：创建用于绘制图形对象
+title: 如何：创建用于绘制的 Graphics 对象
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324196"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>如何：创建用于绘制图形对象
+# <a name="how-to-create-graphics-objects-for-drawing"></a>如何：创建用于绘制的 Graphics 对象
 您可以绘制线条和形状之前，呈现文本，或显示和操作图像[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，你需要创建<xref:System.Drawing.Graphics>对象。 <xref:System.Drawing.Graphics>对象表示[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]绘图图面，并且是用于创建图形的映像的对象。  
   
  使用图形中有两个步骤：  
   
-1.  创建<xref:System.Drawing.Graphics>对象。  
+1. 创建<xref:System.Drawing.Graphics>对象。  
   
-2.  使用<xref:System.Drawing.Graphics>对象来绘制线条和形状、 呈现文本，或显示和操作图像。  
+2. 使用<xref:System.Drawing.Graphics>对象来绘制线条和形状、 呈现文本，或显示和操作图像。  
   
 ## <a name="creating-a-graphics-object"></a>创建图形对象  
  可以在不同的方式创建图形对象。  
@@ -48,11 +48,11 @@ ms.locfileid: "57709043"
   
 #### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>若要获取从中绘制事件 PaintEventArgs 图形对象的引用  
   
-1.  声明<xref:System.Drawing.Graphics>对象。  
+1. 声明<xref:System.Drawing.Graphics>对象。  
   
-2.  分配变量来指代<xref:System.Drawing.Graphics>对象作为的一部分传递<xref:System.Windows.Forms.PaintEventArgs>。  
+2. 分配变量来指代<xref:System.Drawing.Graphics>对象作为的一部分传递<xref:System.Windows.Forms.PaintEventArgs>。  
   
-3.  插入代码以绘制窗体或控件。  
+3. 插入代码以绘制窗体或控件。  
   
      下面的示例演示如何引用<xref:System.Drawing.Graphics>对象从<xref:System.Windows.Forms.PaintEventArgs>中<xref:System.Windows.Forms.Control.Paint>事件：  
   
@@ -165,13 +165,14 @@ ms.locfileid: "57709043"
   
     |若要呈现|查看|  
     |---------------|---------|  
-    |直线|[如何：Windows 窗体上绘制线条](how-to-draw-a-line-on-a-windows-form.md)|  
-    |形状|[如何：绘制空心的形状](how-to-draw-an-outlined-shape.md)|  
+    |直线|[如何：在 Windows 窗体上绘制直线](how-to-draw-a-line-on-a-windows-form.md)|  
+    |形状|[如何：绘制轮廓形状](how-to-draw-an-outlined-shape.md)|  
     |Text|[如何：在 Windows 窗体上绘制文本](how-to-draw-text-on-a-windows-form.md)|  
-    |图像|[如何：使用 GDI + 呈现图像](how-to-render-images-with-gdi.md)|  
+    |图像|[如何：使用 GDI+ 呈现图像](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>请参阅
+
 - [图形编程入门](getting-started-with-graphics-programming.md)
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
-- [直线、曲线和形状](lines-curves-and-shapes.md)
-- [如何：使用 GDI + 呈现图像](how-to-render-images-with-gdi.md)
+- [直线、曲线和图形](lines-curves-and-shapes.md)
+- [如何：使用 GDI+ 呈现图像](how-to-render-images-with-gdi.md)

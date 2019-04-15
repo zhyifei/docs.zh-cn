@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723915"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321895"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows 窗体 BindingSource 组件创建查找表
 查找表是一种数据表，其中有一列显示另一个相关表的记录数据。 在以下过程中，<xref:System.Windows.Forms.ComboBox> 控件可用于显示具有从父表到子表的外键关系的字段。  
@@ -37,8 +37,7 @@ ms.locfileid: "57723915"
   
  在 [ComboBox 控件](combobox-control-windows-forms.md)控件上设置了 4 种重要属性来创建查找表。  
   
--   
-  <xref:System.Windows.Forms.ComboBox.DataSource%2A> 属性包含查找表的名称。  
+-   <xref:System.Windows.Forms.ComboBox.DataSource%2A> 属性包含查找表的名称。  
   
 -   <xref:System.Windows.Forms.ListControl.DisplayMember%2A> 属性包含查找表中要作为控件文本（客户名称）显示的数据列。  
   
@@ -50,21 +49,21 @@ ms.locfileid: "57723915"
   
 ### <a name="to-create-the-user-interface"></a>创建用户界面  
   
-1.  从**工具箱**，拖动<xref:System.Windows.Forms.ComboBox>拖到窗体控件。  
+1. 从**工具箱**，拖动<xref:System.Windows.Forms.ComboBox>拖到窗体控件。  
   
      此控件将显示父表的列。  
   
-2.  拖动其他控件以显示子表的详细信息。 表中数据的格式决定了应当选择哪些控件。 有关详细信息，请参阅[按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)。  
+2. 拖动其他控件以显示子表的详细信息。 表中数据的格式决定了应当选择哪些控件。 有关详细信息，请参阅[按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)。  
   
-3.  将一个 <xref:System.Windows.Forms.BindingNavigator> 控件拖到窗体上；这将允许你导航子表中的数据。  
+3. 将一个 <xref:System.Windows.Forms.BindingNavigator> 控件拖到窗体上；这将允许你导航子表中的数据。  
   
 ### <a name="to-connect-to-the-data-and-bind-it-to-controls"></a>连接到数据并将其绑定到控件  
   
-1.  选择 <xref:System.Windows.Forms.ComboBox> 并单击“智能任务”标志符号，以显示“智能任务”对话框。  
+1. 选择 <xref:System.Windows.Forms.ComboBox> 并单击“智能任务”标志符号，以显示“智能任务”对话框。  
   
-2.  选择“使用数据绑定项”。  
+2. 选择“使用数据绑定项”。  
   
-3.  单击“数据源”下拉框旁边的箭头。 如果以前已经为项目或窗体配置了数据源，将显示该数据源；否则，完成以下步骤（此示例使用 Northwind 示例数据库中的 Customers 表和 Orders 表，并在括号中引用它们）。  
+3. 单击“数据源”下拉框旁边的箭头。 如果以前已经为项目或窗体配置了数据源，将显示该数据源；否则，完成以下步骤（此示例使用 Northwind 示例数据库中的 Customers 表和 Orders 表，并在括号中引用它们）。  
   
     1.  单击“添加项目数据源”以连接到数据并创建一个数据源。  
   
@@ -82,17 +81,18 @@ ms.locfileid: "57723915"
   
     8.  单击 **“完成”**。  
   
-4.  在“显示成员”下拉框中，选择将在组合框中显示的列名（例如，ContactName）。  
+4. 在“显示成员”下拉框中，选择将在组合框中显示的列名（例如，ContactName）。  
   
-5.  在“值成员”下拉框中，选择该列（例如，CustomerID）以在子表中执行查找操作。  
+5. 在“值成员”下拉框中，选择该列（例如，CustomerID）以在子表中执行查找操作。  
   
-6.  在“选定值”下拉框中，导航到“项目数据源”和刚创建的包含父表和子表的数据集。 选择与父表的值成员相同的子表属性（例如，Orders.CustomerID）。 将创建适当的 <xref:System.Windows.Forms.BindingSource>、数据集和表适配器组件，并将其添加到窗体中。  
+6. 在“选定值”下拉框中，导航到“项目数据源”和刚创建的包含父表和子表的数据集。 选择与父表的值成员相同的子表属性（例如，Orders.CustomerID）。 将创建适当的 <xref:System.Windows.Forms.BindingSource>、数据集和表适配器组件，并将其添加到窗体中。  
   
-7.  将 <xref:System.Windows.Forms.BindingNavigator> 控件绑定到子表的 <xref:System.Windows.Forms.BindingSource>（例如，`OrdersBindingSource`）。  
+7. 将 <xref:System.Windows.Forms.BindingNavigator> 控件绑定到子表的 <xref:System.Windows.Forms.BindingSource>（例如，`OrdersBindingSource`）。  
   
-8.  从想要显示的子表的 <xref:System.Windows.Forms.ComboBox>（例如，<xref:System.Windows.Forms.BindingNavigator>）中，将除了 <xref:System.Windows.Forms.BindingSource> 和 `OrdersBindingSource` 外的控件绑定到详细信息字段上。  
+8. 从想要显示的子表的 <xref:System.Windows.Forms.ComboBox>（例如，<xref:System.Windows.Forms.BindingNavigator>）中，将除了 <xref:System.Windows.Forms.BindingSource> 和 `OrdersBindingSource` 外的控件绑定到详细信息字段上。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource 组件](bindingsource-component.md)
 - [ComboBox 控件](combobox-control-windows-forms.md)

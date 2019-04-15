@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 3fefbe9696ba7618dc811c6ac8f600bb6322dad5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228193"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 字符实体和 XAML
 XAML 使用在 XML 中为特殊字符定义的字符实体。 本主题介绍一些特定的字符实体和 XAML 中其他 XML 概念的一般注意事项。  
@@ -46,7 +46,7 @@ XAML 使用在 XML 中为特殊字符定义的字符实体。 本主题介绍一
   
 |字符|实体|说明|  
 |---------------|------------|-----------|  
-|&（"and"符）|\&amp;|必须用于属性值和元素内容两者。|  
+|& （与号）|\&amp;|必须用于属性值和元素内容两者。|  
 |> (大于-号字符)|\&gt;|必须用于属性值，但 > 是可作为内容的元素，只要 < 不之前。|  
 |< (小于-号字符)|\&lt;|必须用于属性值，但\<是可作为内容的元素，只要 > 不跟随其后。|  
 |"（直双引号）|\&quot;|必须用于属性值，但直双引号 (") 可作为元素内容。 请注意，属性值可能括在直单引号 (') 或直双引号 (") 内；首先出现的字符定义属性值的引号，另一个引号则可用作值内部的文字。|  
@@ -63,7 +63,8 @@ XAML 使用在 XML 中为特殊字符定义的字符实体。 本主题介绍一
  XAML 根据 XML 规范处理 XML 处理指令，该规范说明必须传递指令。 在.NET Framework XAML 服务中处理的 XAML 不使用任何处理指令。 使用 XAML 的其他现有框架也不会使用 XAML 中的处理指令。  
   
 ## <a name="see-also"></a>请参阅
+
 - [XAML 概述 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [标记扩展和 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [XamlName 语法](xamlname-grammar.md)
-- [在 XAML 中处理空白](whitespace-processing-in-xaml.md)
+- [XAML 中的空白处理](whitespace-processing-in-xaml.md)

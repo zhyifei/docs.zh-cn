@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-ms.openlocfilehash: 82bab7a42c7a8de131cc53d792cf2d372580af40
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 80ede9b7bc5bf667e03dc0a745fbc0b5f6c2663a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078104"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343280"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器添加和移除 Windows 窗体 DataGridView 控件中的列
 Windows 窗体<xref:System.Windows.Forms.DataGridView>控件必须包含的列才能显示数据。 如果您计划手动填充该控件，您必须自行添加的列。 或者，可以将控件绑定到数据源，生成并自动填充列。 如果数据源包含多于你想要显示的列数，则可以删除不需要的列。  
@@ -24,22 +24,22 @@ Windows 窗体<xref:System.Windows.Forms.DataGridView>控件必须包含的列�
   
 ### <a name="to-add-a-column-using-the-designer"></a>若要添加使用设计器的列  
   
-1.  单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 上的右上角<xref:System.Windows.Forms.DataGridView>控件，然后选择**添加列**。  
+1. 单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 上的右上角<xref:System.Windows.Forms.DataGridView>控件，然后选择**添加列**。  
   
-2.  在中**添加列**对话框框中，选择**数据绑定列**选项和从数据源中，选择一列或选择**未绑定列**选项，并将列定义使用提供的字段。  
+2. 在中**添加列**对话框框中，选择**数据绑定列**选项和从数据源中，选择一列或选择**未绑定列**选项，并将列定义使用提供的字段。  
   
-3.  单击**添加**按钮添加的列，使其出现在设计器中，如果现有的列已填入控件显示区域。  
+3. 单击**添加**按钮添加的列，使其出现在设计器中，如果现有的列已填入控件显示区域。  
   
     > [!NOTE]
     >  您可以修改列属性中的**编辑列**对话框中，使用户能够从控件的智能标记。  
   
 ### <a name="to-remove-a-column-using-the-designer"></a>若要删除某一列使用设计器  
   
-1.  选择**编辑列**从控件的智能标记。  
+1. 选择**编辑列**从控件的智能标记。  
   
-2.  选择一列从**选定列**列表。  
+2. 选择一列从**选定列**列表。  
   
-3.  单击**删除**按钮以删除列，使其从设计器中消失。  
+3. 单击**删除**按钮以删除列，使其从设计器中消失。  
   
 ## <a name="see-also"></a>请参阅
 

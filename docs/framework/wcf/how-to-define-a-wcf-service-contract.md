@@ -7,12 +7,12 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: f93ef787c74a4581d45c24c5a704cc5fb044bd46
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409960"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228388"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>教程：定义 Windows Communication Foundation 服务协定
 
@@ -28,7 +28,6 @@ ms.locfileid: "58409960"
 > [!div class="checklist"]
 > - 创建**WCF 服务库**项目。
 > - 定义服务协定接口。
-
 
 ## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>创建 WCF 服务库项目并定义服务协定接口
 
@@ -54,7 +53,6 @@ ms.locfileid: "58409960"
 
       > [!NOTE]
       > 如果使用 Visual Basic 开发人员环境设置安装 Visual Studio，解决方案可能被隐藏。 如果这种情况，请选择**选项**从**工具**菜单中，然后选择**项目和解决方案** > **常规**中**选项**窗口。 选择**总是显示解决方案**。 此外，检查是否**保存新项目时创建**处于选中状态。
-
 
 3. 从**解决方案资源管理器**，打开**IService1.cs**或**IService1.vb**文件，并其代码替换为以下代码：
 

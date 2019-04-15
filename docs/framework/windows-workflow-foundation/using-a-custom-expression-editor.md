@@ -2,12 +2,12 @@
 title: 使用自定义表达式编辑器
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 2a390dd57d31994e8a2ba6a424d74bf7ee44fc10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101271"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314082"
 ---
 # <a name="using-a-custom-expression-editor"></a>使用自定义表达式编辑器
 可以实现自定义表达式编辑器，以提供更丰富或更简单的表达式编辑体验。 在以下几种情况下，您可能需要使用自定义表达式编辑器：  
@@ -18,11 +18,11 @@ ms.locfileid: "59101271"
   
  实现自定义表达式编辑器需要执行以下三个基本步骤：  
   
-1.  实现 <xref:System.Activities.Presentation.View.IExpressionEditorService> 接口。 此接口可管理表达式编辑器的创建和析构。  
+1. 实现 <xref:System.Activities.Presentation.View.IExpressionEditorService> 接口。 此接口可管理表达式编辑器的创建和析构。  
   
-2.  实现 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 接口。 此接口实现针对表达式编辑 UI 的 UI。  
+2. 实现 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 接口。 此接口实现针对表达式编辑 UI 的 UI。  
   
-3.  在重新承载的工作流应用程序中发布 <xref:System.Activities.Presentation.View.IExpressionEditorService>。  
+3. 在重新承载的工作流应用程序中发布 <xref:System.Activities.Presentation.View.IExpressionEditorService>。  
   
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>在类库中实现自定义表达式编辑器  
  以下是实现 MyExpressionEditorService 库项目中包含的 `MyEditorService` 接口的（概念证明）<xref:System.Activities.Presentation.View.IExpressionEditorService> 类的代码示例。  

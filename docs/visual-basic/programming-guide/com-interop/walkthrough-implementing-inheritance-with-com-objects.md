@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: ee7258a78ad0a434bfad08eebd596a8b889e2304
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826166"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334141"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>演练：使用 COM 对象 (Visual Basic 中) 实现继承
 您可以从 Visual Basic 类进行派生`Public`中 COM 对象，即使这些早期版本的 Visual Basic 中创建的类。 可以重写或重载只是作为属性的属性和方法从 COM 对象继承的类和任何其他基类的方法可以重写或重载。 具有不希望重新编译现有类库时，从 COM 对象的继承非常有用。  
@@ -23,26 +23,26 @@ ms.locfileid: "58826166"
   
 ### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>若要生成本演练中使用的 COM 对象  
   
-1.  在 Visual Basic 6.0 中，打开一个新的 ActiveX DLL 项目。 一个名为项目`Project1`创建。 它具有一个名为类`Class1`。  
+1. 在 Visual Basic 6.0 中，打开一个新的 ActiveX DLL 项目。 一个名为项目`Project1`创建。 它具有一个名为类`Class1`。  
   
-2.  在中**项目资源管理器**，右键单击**Project1**，然后单击**Project1 属性**。 **项目属性**显示对话框。  
+2. 在中**项目资源管理器**，右键单击**Project1**，然后单击**Project1 属性**。 **项目属性**显示对话框。  
   
-3.  上**常规**选项卡**项目属性**对话框框中，通过键入更改项目名称`ComObject1`中**项目名称**字段。  
+3. 上**常规**选项卡**项目属性**对话框框中，通过键入更改项目名称`ComObject1`中**项目名称**字段。  
   
-4.  在中**项目资源管理器**，右键单击`Class1`，然后单击**属性**。 **属性**显示窗口中的类。  
+4. 在中**项目资源管理器**，右键单击`Class1`，然后单击**属性**。 **属性**显示窗口中的类。  
   
-5.  更改`Name`属性设置为`MathFunctions`。  
+5. 更改`Name`属性设置为`MathFunctions`。  
   
-6.  在中**项目资源管理器**，右键单击`MathFunctions`，然后单击**查看代码**。 **代码编辑器**显示。  
+6. 在中**项目资源管理器**，右键单击`MathFunctions`，然后单击**查看代码**。 **代码编辑器**显示。  
   
-7.  添加一个本地变量来保存属性值：  
+7. 添加一个本地变量来保存属性值：  
   
     ```  
     ' Local variable to hold property value  
     Private mvarProp1 As Integer  
     ```  
   
-8.  将属性添加`Let`和属性`Get`属性过程：  
+8. 将属性添加`Let`和属性`Get`属性过程：  
   
     ```  
     Public Property Let Prop1(ByVal vData As Integer)  
@@ -76,31 +76,31 @@ ms.locfileid: "58826166"
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>若要使用 Visual Basic 2005 和更高版本的 COM 对象  
   
-1.  打开一个新的 Visual Basic Windows 应用程序项目。  
+1. 打开一个新的 Visual Basic Windows 应用程序项目。  
   
-2.  在“项目”菜单上，单击“添加引用”。  
+2. 在“项目”菜单上，单击“添加引用”。  
   
      将显示“添加引用”对话框。  
   
-3.  上**COM**选项卡上，双击`ComObject1`中**组件名称**列表，然后单击**确定**。  
+3. 上**COM**选项卡上，双击`ComObject1`中**组件名称**列表，然后单击**确定**。  
   
-4.  在 **“项目”** 菜单上，单击 **“添加新项”**。  
+4. 在 **“项目”** 菜单上，单击 **“添加新项”**。  
   
      随即出现“添加新项”对话框。  
   
-5.  在中**模板**窗格中，单击**类**。  
+5. 在中**模板**窗格中，单击**类**。  
   
      默认文件名的名称， `Class1.vb`，将出现在**名称**字段。 将此字段更改为 MathClass.vb，然后单击**添加**。 这将创建一个名为类`MathClass`，并显示其代码。  
   
-6.  将以下代码添加到顶部`MathClass`从 COM 类继承。  
+6. 将以下代码添加到顶部`MathClass`从 COM 类继承。  
   
      [!code-vb[VbVbalrInterop#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#31)]  
   
-7.  以下代码添加到重载的基类的公共方法`MathClass`:  
+7. 以下代码添加到重载的基类的公共方法`MathClass`:  
   
      [!code-vb[VbVbalrInterop#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#32)]  
   
-8.  通过添加以下代码来扩展继承的类`MathClass`:  
+8. 通过添加以下代码来扩展继承的类`MathClass`:  
   
      [!code-vb[VbVbalrInterop#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#33)]  
   
@@ -108,13 +108,13 @@ ms.locfileid: "58826166"
   
 #### <a name="to-test-the-inherited-class"></a>若要测试继承的类  
   
-1.  启动窗体中，添加一个按钮，然后双击它以查看其代码。  
+1. 启动窗体中，添加一个按钮，然后双击它以查看其代码。  
   
-2.  在按钮的`Click`事件处理程序过程中，添加以下代码创建的实例`MathClass`和调用重载的方法：  
+2. 在按钮的`Click`事件处理程序过程中，添加以下代码创建的实例`MathClass`和调用重载的方法：  
   
      [!code-vb[VbVbalrInterop#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#34)]  
   
-3.  通过按 F5 运行项目。  
+3. 通过按 F5 运行项目。  
   
  单击窗体上的按钮时`AddNumbers`方法首先调用的`Short`数据键入数字和 Visual Basic 会从基类中选择相应的方法。 第二次调用`AddNumbers`定向到从重载方法`MathClass`。 第三个调用调用`SubtractNumbers`方法，它扩展了类。 设置基类中的属性，并显示的值。  
   
@@ -132,5 +132,5 @@ ms.locfileid: "58826166"
 ## <a name="see-also"></a>请参阅
 
 - [.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)

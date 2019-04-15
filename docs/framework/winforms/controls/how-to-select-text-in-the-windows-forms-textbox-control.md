@@ -10,27 +10,27 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: f96ac69f16eefb5bf4a0625ff83e207c289a105b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3bb1245cd47084935d632ff345a32058db6074e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111431"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321702"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>如何：在 Windows 窗体 TextBox 控件中选择文本
 您可以在 Windows 窗体中以编程方式选择文本<xref:System.Windows.Forms.TextBox>控件。 例如，如果创建搜索特定字符串文本的函数，您可以选择要直观地发出警报找到的字符串中的位置的读取器的文本。  
   
 ### <a name="to-select-text-programmatically"></a>若要以编程方式选择文本  
   
-1.  设置<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>到想要选择的文本开头的属性。  
+1. 设置<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>到想要选择的文本开头的属性。  
   
      <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>属性为一个数字，指示插入点内的文本字符串，则为 0 表示最左边的位置。 如果<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>属性设置为值等于或大于的字符数在文本框中，插入点放在最后一个字符之后。  
   
-2.  设置<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>属性设置为你想要选择的文本的长度。  
+2. 设置<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>属性设置为你想要选择的文本的长度。  
   
      <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>属性是设置插入点的宽度的数字值。 设置<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>到之间的数字不是 0 将导致该要选择的字符数，从开始在当前插入点。  
   
-3.  （可选）访问通过所选的文本<xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>属性。  
+3. （可选）访问通过所选的文本<xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>属性。  
   
      选择下面的代码的文本内容框时控件的<xref:System.Windows.Forms.Control.Enter>事件发生。 此示例检查文本框中是否具有的值<xref:System.Windows.Forms.TextBox.Text%2A>属性不是`null`或空字符串。 当文本框中收到焦点时，选择在文本框中的当前文本。 `TextBox1_Enter`事件处理程序必须将绑定到控件; 有关详细信息，请参阅[如何：在运行时为 Windows 窗体创建事件处理程序](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
   

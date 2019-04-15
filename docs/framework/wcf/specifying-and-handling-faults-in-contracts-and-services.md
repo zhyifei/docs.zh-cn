@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: e0a81915d35bc382cb4f51ec6d26a429c8a759c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210667"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>在协定和服务中指定和处理错误
 Windows Communication Foundation (WCF) 应用程序处理错误情况下，通过将托管的异常对象映射到 SOAP 错误对象，并对托管的异常对象的 SOAP 错误对象。 本节中的主题讨论如何设计协定以将错误条件作为自定义 SOAP 错误公开、如何作为服务实现的一部分返回这些错误，以及客户端如何捕捉这些错误。  
@@ -50,12 +50,13 @@ Windows Communication Foundation (WCF) 应用程序处理错误情况下，通�
 >  因此，建议将 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 设置为 `true` 仅用作一种临时调试应用程序的方法。 此外，以这种方式返回未处理的托管异常的方法的 WSDL 并不包含类型为 <xref:System.ServiceModel.FaultException%601> 的 <xref:System.ServiceModel.ExceptionDetail> 的协定。 客户端必须预见未知 SOAP 错误的可能性 (返回给 WCF 客户端作为<xref:System.ServiceModel.FaultException?displayProperty=nameWithType>对象) 以便正确获取调试信息。  
   
 ## <a name="customizing-error-handling-with-ierrorhandler"></a>使用 IErrorHandler 自定义错误处理  
- 如果对于自定义在发生应用程序级别的异常时发送给客户端的响应消息有特殊需求，或者对于在返回响应消息之后执行某些自定义处理有特殊的要求，请实现 <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType> 接口。  
+ 如果对于自定义在发生应用程序级别的异常时发送给客户端的响应消息有特殊要求，或者对于在返回响应消息之后执行某些自定义处理有特殊的要求，请实现 <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType> 接口。  
   
 ## <a name="fault-serialization-issues"></a>错误的序列化问题  
  在反序列化错误协定时，WCF 首先尝试将 SOAP 消息中的错误协定名称与错误协定类型相匹配。 如果找不到精确匹配项，它将按字母顺序在可用错误协定列表中搜索兼容类型。 如果两个错误协定是兼容类型（例如，一个是另一个的子类），则可能会使用错误类型对错误进行反序列化。 仅当错误协定未指定名称、命名空间和操作时，才会发生此状况。 若要防止此问题发生，则通过指定名称、命名空间和操作特性来始终完全限定错误协定。 此外，如果您定义了许多派生自共享基类的相关错误协定，请确保使用 `[DataMember(IsRequired=true)]` 标记所有新成员。 有关此 `IsRequired` 特性的更多信息，请参见 <xref:System.Runtime.Serialization.DataMemberAttribute>。 这将防止基类成为兼容类型，并强制将错误反序列化为正确的派生类型。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.FaultException>

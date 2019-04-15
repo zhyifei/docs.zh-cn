@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: dcc4c5485e59456d75c0f183e9b53b457072ab94
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b8284f45d769f018655ee35a5f0b067703963634
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965847"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199097"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter 参数
 <xref:System.Data.Common.DbDataAdapter> 具有四个用于从数据源检索数据和更新数据源中数据的属性：<xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> 属性返回数据源中的数据；<xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> 属性用于管理数据源中的更改。 调用 `SelectCommand` 的 `Fill` 方法之前必须设置 `DataAdapter` 属性。 在调用 `InsertCommand` 的 `UpdateCommand` 方法之前必须设置 `DeleteCommand`、`Update` 或 `DataAdapter` 属性，具体取决于对 <xref:System.Data.DataTable> 中的数据做了哪些更改。 例如，如果已添加行，在调用 `InsertCommand` 之前必须设置 `Update`。 当 `Update` 正在处理已插入、已更新或已删除的行时，`DataAdapter` 将使用相应的 `Command` 属性来处理该操作。 有关已修改行的当前信息将通过 `Command` 集合传递到 `Parameters` 对象。  
@@ -42,7 +42,7 @@ parameter.SourceVersion = DataRowVersion.Original
 >  对于 `Fill` 的 `DataAdapter` 操作和 `Get` 的 `DataReader` 方法，都将从 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序中返回的类型来推断 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型。 推断出[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中所述的类型和 Microsoft SQL Server、 OLE DB 和 ODBC 数据类型的访问器方法[ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。  
   
 ## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter.SourceColumn，Parameter.SourceVersion  
- `SourceColumn` 和 `SourceVersion` 可以作为参数传递给 `Parameter` 构造函数，也可以设置为现有 `Parameter` 的属性。 `SourceColumn` 是将要从中检索 <xref:System.Data.DataColumn> 值的 <xref:System.Data.DataRow> 中的 `Parameter` 的名称。 `SourceVersion` 指定 `DataRow` 用于检索该值的 `DataAdapter` 版本。  
+ `SourceColumn` 和 `SourceVersion` 可以作为自变量传递给 `Parameter` 构造函数，也可以设置为现有 `Parameter` 的属性。 `SourceColumn` 是将要从中检索 <xref:System.Data.DataColumn> 值的 <xref:System.Data.DataRow> 中的 `Parameter` 的名称。 `SourceVersion` 指定 `DataRow` 用于检索该值的 `DataAdapter` 版本。  
   
  下表显示可以与 <xref:System.Data.DataRowVersion> 一起使用的 `SourceVersion` 枚举值。  
   
@@ -165,9 +165,10 @@ adapter.Fill(customers, "Customers");
 >  如果未为参数提供参数名称，该参数提供参数的默认名称*N* *，* 使用从"Parameter1"开始。 我们建议避免使用 Parameter*N*命名约定时提供参数名称，因为所提供的名称可能与中现有的默认参数名称发生冲突`ParameterCollection`。 如果提供的名称已经存在，将引发异常。  
   
 ## <a name="see-also"></a>请参阅
-- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+
+- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [使用存储过程修改数据](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
 - [ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

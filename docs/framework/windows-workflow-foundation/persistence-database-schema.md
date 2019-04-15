@@ -2,12 +2,12 @@
 title: 持久性数据库架构
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 2c8d74413be64cdf88f7f1821c3678b2bcd2e2b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 38df4b3d629840f1b5def2eafa0d074a2b2397a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515253"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331060"
 ---
 # <a name="persistence-database-schema"></a>持久性数据库架构
 本主题介绍 SQL 工作流实例存储区支持的公共视图。  
@@ -38,7 +38,7 @@ ms.locfileid: "43515253"
 |WriteOnlyComplexDataProperties|Varbinary(max)|包含已序列化的实例数据属性，当加载实例时，这些属性不会重新提供给工作流运行时。<br /><br /> 反序列化程序需要知道此 Blob 中存储的所有对象类型。|  
 |IdentityName|Nvarchar(max)|工作流定义的名称。|  
 |IdentityPackage|Nvarchar(max)|创建工作流时提供的包信息（例如，程序集名称）。|  
-|生成|BigInt|工作流版本的生成号。|  
+|Build|BigInt|工作流版本的生成号。|  
 |主要|BigInt|工作流版本的主版本号。|  
 |次要|BigInt|工作流版本的次版本号。|  
 |Revision|BigInt|工作流版本的修订号。|  
@@ -60,9 +60,9 @@ ms.locfileid: "43515253"
   
  ServiceDeployments 视图还包含一个“删除”触发器。 具有适当权限的用户可以对此视图执行 Delete 语句，这将从数据库移除 ServiceDeployment 项。 请注意：  
   
-1.  从此视图中删除项的开销很大，因为在执行此操作之前必须锁定整个数据库。 为了避免出现工作流实例可能引用一个不存在的 ServiceDeployment 项的情况，这是必需的。 请仅在停机期间/维护期间在此视图中进行删除操作。  
+1. 从此视图中删除项的开销很大，因为在执行此操作之前必须锁定整个数据库。 为了避免出现工作流实例可能引用一个不存在的 ServiceDeployment 项的情况，这是必需的。 请仅在停机期间/维护期间在此视图中进行删除操作。  
   
-2.  若要删除通过中的项引用的 ServiceDeployment 行的任何尝试**实例**视图将导致执行任何操作。 仅可以删除没有任何引用的 ServiceDeployment 行。  
+2. 若要删除通过中的项引用的 ServiceDeployment 行的任何尝试**实例**视图将导致执行任何操作。 仅可以删除没有任何引用的 ServiceDeployment 行。  
   
 ## <a name="instancepromotedproperties-view"></a>InstancePromotedProperties 视图  
  **InstancePromotedProperties**视图包含所有用户指定的已升级属性的信息。 促销属性用作一类属性，用户可以在查询中使用它来检索实例。  例如，用户可以添加 PurchaseOrder 促销，它始终存储中的订单的成本**Value1**列。 这样用户可以查询所有成本超过某个值的购买订单。  

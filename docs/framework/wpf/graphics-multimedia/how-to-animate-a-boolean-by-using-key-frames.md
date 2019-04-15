@@ -1,5 +1,5 @@
 ---
-title: 如何：使用关键帧对布尔属性值进行动画处理
+title: 如何：使用关键帧对布尔值进行动画处理
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], Booleans with key frames
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
-ms.openlocfilehash: 503e8ec8bdaf88bcba4093075b1e7216b7cd3746
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 59a72916721cccbe66f704253f148828fa8cd418
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175027"
 ---
-# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>如何：使用关键帧对布尔属性值进行动画处理
+# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>如何：使用关键帧对布尔值进行动画处理
 此示例演示如何进行动画处理的布尔属性值<xref:System.Windows.Controls.Button>使用关键帧的控件。  
   
 ## <a name="example"></a>示例  
@@ -29,6 +29,7 @@ ms.locfileid: "57361949"
  有关完整示例，请参阅[关键帧动画示例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>
 - <xref:System.Windows.UIElement.IsEnabled%2A>
 - <xref:System.Windows.Controls.Button>

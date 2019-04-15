@@ -1,19 +1,19 @@
 ---
-title: 终结点：地址、 绑定和协定
+title: 终结点：地址、绑定和协定
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: a10d9ac5718bf6b88a3a00902f90045c705f8431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721784"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207521"
 ---
-# <a name="endpoints-addresses-bindings-and-contracts"></a>终结点：地址、 绑定和协定
+# <a name="endpoints-addresses-bindings-and-contracts"></a>终结点：地址、绑定和协定
 与 Windows Communication Foundation (WCF) 服务的所有通信都是通过*终结点*的服务。 终结点向客户端访问 WCF 服务提供的功能。  
   
  每个终结点包含四个属性：  
@@ -78,15 +78,16 @@ ms.locfileid: "54721784"
  [协定](../../../../docs/framework/wcf/feature-details/contracts.md)  
  描述协定如何定义服务的方法。  
   
- [如何：在配置中创建的服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [如何：在配置中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  描述如何在配置中创建服务终结点。  
   
- [如何：在代码中创建的服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [如何：在代码中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  描述如何在代码中创建服务终结点。  
   
  [如何：使用 Svcutil.exe 验证已编译的服务代码](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  介绍了如何不承载服务使用情况下检测服务实现和配置中的错误[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [配置服务](../../../../docs/framework/wcf/configuring-services.md)
+
+- [正在配置服务](../../../../docs/framework/wcf/configuring-services.md)
 - [扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)

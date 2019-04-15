@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 0d336a55ee849ea3e9584cdcfd87e5d6c4befe25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188638"
 ---
 # <a name="dependency-properties-overview"></a>依赖属性概述
 
@@ -36,7 +36,7 @@ Windows Presentation Foundation (WPF) 提供一组服务，这些服务可用于
 在 SDK 参考中，可以根据某个属性的托管引用页上是否存在“依赖属性信息”部分来确定该属性是否为依赖属性。 “依赖属性信息”部分包括一个指向该依赖属性的 <xref:System.Windows.DependencyProperty> 标识符字段的链接，还包括一个为该属性设置的元数据选项列表、每个类的重写信息以及其他详细信息。
 
 ## <a name="dependency-properties-back-clr-properties"></a>依赖属性支持 CLR 属性
-依赖属性和 WPF 属性系统通过提供一个支持属性的类型来扩展属性功能，这是使用专用字段支持该属性的标准模式的替代实现方法。 此类型的名称为 <xref:System.Windows.DependencyProperty>。 定义 WPF 属性系统的另一个重要类型是 <xref:System.Windows.DependencyObject>。 <xref:System.Windows.DependencyObject> 定义可以注册和拥有依赖属性的基类。
+依赖属性和 WPF 属性系统通过提供一个支持属性的类型来扩展属性功能，这是使用专用字段支持该属性的标准模式的替代实现方法。 此类型的名称为 <xref:System.Windows.DependencyProperty>。 定义 WPF 属性系统的另一个重要类型是 <xref:System.Windows.DependencyObject>。 <xref:System.Windows.DependencyObject> 定义可以注册和拥有依赖项属性的基类。
 
 下面列出了与依赖属性一起使用的术语：
 
@@ -91,7 +91,7 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 
 - [样式](#styles)
 
-- [动画](#animations)
+- [Animations](#animations)
 
 - [元数据重写](#metadata-overrides)
 
@@ -197,7 +197,8 @@ XAML 支持多种设置属性的语法格式。 要对特定的属性使用哪�
 - 通常，依赖属性应当被视为公共属性，这些公共属性可以由任何具有实例访问权限的调用方访问，或至少可被这样的调用方发现。 有关详细信息，请参阅[依赖属性的安全性](dependency-property-security.md)。
 
 ## <a name="see-also"></a>请参阅
-- [自定义依赖属性](custom-dependency-properties.md)
+
+- [自定义依赖项属性](custom-dependency-properties.md)
 - [只读依赖项属性](read-only-dependency-properties.md)
 - [XAML 概述 (WPF)](xaml-overview-wpf.md)
 - [WPF 体系结构](wpf-architecture.md)

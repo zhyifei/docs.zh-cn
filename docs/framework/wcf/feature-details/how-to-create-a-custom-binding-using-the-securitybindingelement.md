@@ -1,5 +1,5 @@
 ---
-title: 如何：创建自定义绑定使用 SecurityBindingElement
+title: 如何：使用 SecurityBindingElement 创建自定义绑定
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,21 +7,21 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 2c2aa5703e31b2529e0b98d909a763b8b4b23035
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576146"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316799"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>如何：创建自定义绑定使用 SecurityBindingElement
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>如何：使用 SecurityBindingElement 创建自定义绑定
 Windows Communication Foundation (WCF) 包括多个系统提供的绑定可以配置，但配置 WCF 支持的所有安全选项时未提供最大的灵活性。 本主题演示如何直接从各个绑定元素创建自定义绑定，并着重说明创建这样的绑定时可以指定的一些安全设置。 有关创建自定义绑定的详细信息，请参阅[扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> 不支持 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 通道形状，它是 TCP 传输在 <xref:System.ServiceModel.TransferMode> 设置为 <xref:System.ServiceModel.TransferMode.Buffered> 时使用的默认通道形状。 您必须将 <xref:System.ServiceModel.TransferMode> 设置为 <xref:System.ServiceModel.TransferMode.Streamed>，才能在此方案中使用 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> 不支持<xref:System.ServiceModel.Channels.IDuplexSessionChannel>通道形状，它是默认通道形状使用 tcp 传输何时<xref:System.ServiceModel.TransferMode>设置为<xref:System.ServiceModel.TransferMode.Buffered>。 您必须将 <xref:System.ServiceModel.TransferMode> 设置为 <xref:System.ServiceModel.TransferMode.Streamed>，才能在此方案中使用 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
   
 ## <a name="creating-a-custom-binding"></a>创建自定义绑定  
- WCF 中的所有绑定都构成*绑定元素*。 每个绑定元素都是从 <xref:System.ServiceModel.Channels.BindingElement> 类派生的。 对于系统提供的标准绑定，已为你创建和配置绑定元素，但你仍可以自定义某些属性设置。  
+ WCF 中的所有绑定都构成*绑定元素*。 每个绑定元素都是从 <xref:System.ServiceModel.Channels.BindingElement> 类派生的。 对于系统提供的标准绑定，已为您创建和配置绑定元素，但您仍可以自定义某些属性设置。  
   
  相比之下，若要创建自定义绑定，应创建并配置绑定元素，然后从绑定元素创建 <xref:System.ServiceModel.Channels.CustomBinding>。  
   
@@ -83,19 +83,19 @@ Windows Communication Foundation (WCF) 包括多个系统提供的绑定可以�
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>创建使用 SymmetricSecurityBindingElement 的自定义绑定。  
   
-1.  以 <xref:System.ServiceModel.Channels.BindingElementCollection> 名称创建 `outputBec` 类的实例。  
+1. 以 <xref:System.ServiceModel.Channels.BindingElementCollection> 名称创建 `outputBec` 类的实例。  
   
-2.  调用静态方法 `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`，它将返回 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 类的实例。  
+2. 调用静态方法 `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`，它将返回 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 类的实例。  
   
-3.  通过调用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 类的 `outputBec` 的 `Add` 方法，将 <xref:System.Collections.ObjectModel.Collection%601><xref:System.ServiceModel.Channels.BindingElement>添加到集合 () 中。  
+3. 通过调用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 类的 `outputBec` 的 `Add` 方法，将 <xref:System.Collections.ObjectModel.Collection%601><xref:System.ServiceModel.Channels.BindingElement>添加到集合 () 中。  
   
-4.  创建 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 类的实例并将其添加到集合 (`outputBec`) 中。 这将指定该绑定所使用的编码。  
+4. 创建 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 类的实例并将其添加到集合 (`outputBec`) 中。 这将指定该绑定所使用的编码。  
   
-5.  创建一个 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 并将其添加到集合 (`outputBec`) 中。 这将指定该绑定使用 HTTP 传输。  
+5. 创建一个 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 并将其添加到集合 (`outputBec`) 中。 这将指定该绑定使用 HTTP 传输。  
   
-6.  通过创建 <xref:System.ServiceModel.Channels.CustomBinding> 类的实例并将集合 `outputBec` 传递给构造函数来创建一个新的自定义绑定。  
+6. 通过创建 <xref:System.ServiceModel.Channels.CustomBinding> 类的实例并将集合 `outputBec` 传递给构造函数来创建一个新的自定义绑定。  
   
-7.  生成的自定义绑定具有与标准 <xref:System.ServiceModel.WSHttpBinding> 相同的许多特性。 它指定消息级别的安全性和 Windows 凭据，但禁用安全会话，要求在带外指定服务凭据且不对签名进行加密。 最后一条只能按步骤 4 所示通过设置 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 属性来控制。 其他两条可以使用标准绑定上的设置进行控制。  
+7. 生成的自定义绑定具有与标准 <xref:System.ServiceModel.WSHttpBinding> 相同的许多特性。 它指定消息级别的安全性和 Windows 凭据，但禁用安全会话，要求在带外指定服务凭据且不对签名进行加密。 最后一条只能按步骤 4 所示通过设置 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 属性来控制。 其他两条可以使用标准绑定上的设置进行控制。  
   
 ## <a name="example"></a>示例  
   
@@ -107,6 +107,7 @@ Windows Communication Foundation (WCF) 包括多个系统提供的绑定可以�
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>

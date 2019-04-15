@@ -12,18 +12,16 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365836"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304800"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 外接程序概述
 <a name="Introduction"></a> .NET Framework 包括开发人员可用于创建支持外接程序扩展性的应用程序的外接程序模型。 借助此外接程序模型，可以创建与应用程序功能集成并进行扩展的外接程序。 在某些情况下，应用程序还需要显示外接程序提供的用户界面。本主题介绍 WPF 增加.NET Framework 外接程序模型若要启用这些方案，它、 其优点和局限性的体系结构的内容。  
-  
 
-  
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>系统必备  
  熟悉.NET Framework 外接程序模型是必需的。 有关详细信息，请参阅[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。  
@@ -75,7 +73,7 @@ ms.locfileid: "57365836"
 ## <a name="wpf-add-ins"></a>WPF 外接程序  
  WPF 中，与.NET Framework 外接程序模型，结合使用，可处理各种要求主机应用程序显示外接程序从用户界面的方案。具体而言，处理这些情况由 WPF 使用以下两种编程模型：  
   
-1.  **外接程序返回 UI**。 外接程序返回 UI 到主机应用程序通过方法调用，如协定所定义的。 此方案可用于以下情况：  
+1. **外接程序返回 UI**。 外接程序返回 UI 到主机应用程序通过方法调用，如协定所定义的。 此方案可用于以下情况：  
   
     -   返回的外接程序的 UI 的外观取决于数据或条件可仅在运行时，例如动态生成的报告。  
   
@@ -83,7 +81,7 @@ ms.locfileid: "57365836"
   
     -   外接程序主要执行某项服务的主机应用程序，并向主机应用程序的 ui 报告状态。  
   
-2.  **外接程序为 UI**。 外接程序是一个 UI，如协定所定义的。 此方案可用于以下情况：  
+2. **外接程序为 UI**。 外接程序是一个 UI，如协定所定义的。 此方案可用于以下情况：  
   
     -   外接程序提供的服务都需要显示，例如广告。  
   
@@ -104,13 +102,13 @@ ms.locfileid: "57365836"
   
  WPF UI 类型不可远程处理。 若要解决此问题，WPF 扩展了.NET Framework 外接程序模型以启用 WPF UI 的外接程序创建要显示从主机应用程序。 通过两种类型的 wpf 提供此支持：<xref:System.AddIn.Contract.INativeHandleContract>接口和实现的两个静态方法<xref:System.AddIn.Pipeline.FrameworkElementAdapters>类：<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>和<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 从较高层面来看，这些类型和方法按以下方式使用：  
   
-1.  WPF 要求由外接程序提供的用户界面是直接或间接派生的类<xref:System.Windows.FrameworkElement>，如形状、 控件、 用户控件、 布局面板和页面。  
+1. WPF 要求由外接程序提供的用户界面是直接或间接派生的类<xref:System.Windows.FrameworkElement>，如形状、 控件、 用户控件、 布局面板和页面。  
   
-2.  无论协定声明，将外接程序与主机应用程序之间传递 UI，它必须声明为<xref:System.AddIn.Contract.INativeHandleContract>(不<xref:System.Windows.FrameworkElement>);<xref:System.AddIn.Contract.INativeHandleContract>是外接程序用户界面，可跨隔离边界传递的可远程处理表示形式。  
+2. 无论协定声明，将外接程序与主机应用程序之间传递 UI，它必须声明为<xref:System.AddIn.Contract.INativeHandleContract>(不<xref:System.Windows.FrameworkElement>);<xref:System.AddIn.Contract.INativeHandleContract>是外接程序用户界面，可跨隔离边界传递的可远程处理表示形式。  
   
-3.  然后再从外接程序的应用程序域中，传递<xref:System.Windows.FrameworkElement>打包为<xref:System.AddIn.Contract.INativeHandleContract>通过调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。  
+3. 然后再从外接程序的应用程序域中，传递<xref:System.Windows.FrameworkElement>打包为<xref:System.AddIn.Contract.INativeHandleContract>通过调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。  
   
-4.  之后传递到主机应用程序的应用程序域<xref:System.AddIn.Contract.INativeHandleContract>必须重新打包为<xref:System.Windows.FrameworkElement>通过调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>。  
+4. 之后传递到主机应用程序的应用程序域<xref:System.AddIn.Contract.INativeHandleContract>必须重新打包为<xref:System.Windows.FrameworkElement>通过调用<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>。  
   
  如何<xref:System.AddIn.Contract.INativeHandleContract>， <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>，和<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>使用取决于特定方案。 下面几节介绍每个编程模型的详细信息。  
   
@@ -118,17 +116,17 @@ ms.locfileid: "57365836"
 ## <a name="add-in-returns-a-user-interface"></a>外接程序返回用户界面  
  有关外接程序返回到主机应用程序的 UI，需要以下项：  
   
-1.  主机应用程序、 外接程序和管道必须创建，如.NET Framework 中所述[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文档。  
+1. 主机应用程序、 外接程序和管道必须创建，如.NET Framework 中所述[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文档。  
   
-2.  协定必须实现<xref:System.AddIn.Contract.IContract>并返回一个用户界面，该协定必须声明具有类型的返回值的方法<xref:System.AddIn.Contract.INativeHandleContract>。  
+2. 协定必须实现<xref:System.AddIn.Contract.IContract>并返回一个用户界面，该协定必须声明具有类型的返回值的方法<xref:System.AddIn.Contract.INativeHandleContract>。  
   
-3.  外接程序与主机应用程序之间传递 UI 必须直接或间接派生自<xref:System.Windows.FrameworkElement>。  
+3. 外接程序与主机应用程序之间传递 UI 必须直接或间接派生自<xref:System.Windows.FrameworkElement>。  
   
-4.  必须从转换返回的外接程序的 UI<xref:System.Windows.FrameworkElement>到<xref:System.AddIn.Contract.INativeHandleContract>之前跨越隔离边界。  
+4. 必须从转换返回的外接程序的 UI<xref:System.Windows.FrameworkElement>到<xref:System.AddIn.Contract.INativeHandleContract>之前跨越隔离边界。  
   
-5.  必须从转换返回 UI<xref:System.AddIn.Contract.INativeHandleContract>到<xref:System.Windows.FrameworkElement>后跨越隔离边界。  
+5. 必须从转换返回 UI<xref:System.AddIn.Contract.INativeHandleContract>到<xref:System.Windows.FrameworkElement>后跨越隔离边界。  
   
-6.  主机应用程序显示返回<xref:System.Windows.FrameworkElement>。  
+6. 主机应用程序显示返回<xref:System.Windows.FrameworkElement>。  
   
  有关演示如何实现返回 UI 的外接程序示例，请参阅[创建外接程序返回 UI](how-to-create-an-add-in-that-returns-a-ui.md)。  
   
@@ -136,17 +134,17 @@ ms.locfileid: "57365836"
 ## <a name="add-in-is-a-user-interface"></a>外接程序为用户界面  
  当外接程序是一个 UI 时，具备以下条件：  
   
-1.  主机应用程序、 外接程序和管道必须创建，如.NET Framework 中所述[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文档。  
+1. 主机应用程序、 外接程序和管道必须创建，如.NET Framework 中所述[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文档。  
   
-2.  外接程序的协定接口必须实现<xref:System.AddIn.Contract.INativeHandleContract>。  
+2. 外接程序的协定接口必须实现<xref:System.AddIn.Contract.INativeHandleContract>。  
   
-3.  传递到主机应用程序的外接程序必须直接或间接派生自<xref:System.Windows.FrameworkElement>。  
+3. 传递到主机应用程序的外接程序必须直接或间接派生自<xref:System.Windows.FrameworkElement>。  
   
-4.  外接程序必须从转换<xref:System.Windows.FrameworkElement>到<xref:System.AddIn.Contract.INativeHandleContract>之前跨越隔离边界。  
+4. 外接程序必须从转换<xref:System.Windows.FrameworkElement>到<xref:System.AddIn.Contract.INativeHandleContract>之前跨越隔离边界。  
   
-5.  外接程序必须从转换<xref:System.AddIn.Contract.INativeHandleContract>到<xref:System.Windows.FrameworkElement>后跨越隔离边界。  
+5. 外接程序必须从转换<xref:System.AddIn.Contract.INativeHandleContract>到<xref:System.Windows.FrameworkElement>后跨越隔离边界。  
   
-6.  主机应用程序显示返回<xref:System.Windows.FrameworkElement>。  
+6. 主机应用程序显示返回<xref:System.Windows.FrameworkElement>。  
   
  有关演示如何实现作为 ui 的外接程序示例，请参阅[外接程序，它是创建 UI](how-to-create-an-add-in-that-is-a-ui.md)。  
   
@@ -167,7 +165,7 @@ ms.locfileid: "57365836"
  下面几个小节将详细介绍这些任务。  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>配置用于 ClickOnce 部署的管道和外接程序  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 将下载到 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 部署缓存中的安全文件夹并从该文件夹运行。 为了使 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 能够承载外接程序，还必须将管道和外接程序程序集下载到该安全文件夹。 为此，需要将应用程序清单配置为包含要下载的管道和外接程序程序集。 这在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中最容易实现，但为使 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 检测到管道程序集，管道和外接程序程序集需要位于宿主 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目的根文件夹中。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 下载到和从安全文件夹中运行[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]部署缓存。 为了使 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 能够承载外接程序，还必须将管道和外接程序程序集下载到该安全文件夹。 为此，需要将应用程序清单配置为包含要下载的管道和外接程序程序集。 这在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中最容易实现，但为使 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 检测到管道程序集，管道和外接程序程序集需要位于宿主 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目的根文件夹中。  
   
  因此，第一步是通过设置每个管道程序集和外接程序程序集项目的生成输出，向 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目的根文件夹生成管道和外接程序程序集。 下表显示管道程序集项目和外接程序程序集项目的生成输出路径，这些路径位于与宿主 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目相同的解决方案和根文件夹中。  
   
@@ -183,15 +181,15 @@ ms.locfileid: "57365836"
   
  下一步是通过在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中执行以下操作，将管道程序集和外接程序程序集指定为 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 内容文件：  
   
-1.  通过在“解决方案资源管理器”中右键单击每个管道文件夹，然后选择“包括在项目中”，将管道和外接程序程序集包括在项目中。  
+1. 通过在“解决方案资源管理器”中右键单击每个管道文件夹，然后选择“包括在项目中”，将管道和外接程序程序集包括在项目中。  
   
-2.  在“属性”窗口中，将每个管道程序集和外接程序程序集的“生成操作”都设置为“内容”。  
+2. 在“属性”窗口中，将每个管道程序集和外接程序程序集的“生成操作”都设置为“内容”。  
   
  最后一步是配置应用程序清单，以包含要下载的管道程序集文件和外接程序程序集文件。 这些文件应位于 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 应用程序所占用的 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 缓存的根文件夹下的文件夹中。 通过执行以下操作，可以在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 中实现该配置：  
   
-1.  右键单击 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目，依次单击“属性”、“发布”，然后单击“应用程序文件”按钮。  
+1. 右键单击 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 项目，依次单击“属性”、“发布”，然后单击“应用程序文件”按钮。  
   
-2.  在“应用程序文件”对话框中，将每个管道和外接程序 DLL 的“发布状态”都设置为“包括(自动)”，并将每个管道和外接程序 DLL 的“下载组”都设置为“(必需)”。  
+2. 在“应用程序文件”对话框中，将每个管道和外接程序 DLL 的“发布状态”都设置为“包括(自动)”，并将每个管道和外接程序 DLL 的“下载组”都设置为“(必需)”。  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>从应用程序基使用管道和外接程序  
  为 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 部署配置管道和外接程序时，它们将下载到 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 所在的 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 缓存文件夹中。 若要从 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 中使用管道和外接程序，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 代码必须从应用程序基获取它们。 各种视频类型和模型使用的管道和外接程序的.NET Framework 外接程序的成员对于此方案提供特殊支持。 首先，路径由<xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>枚举值。 将此值用于使用管道的相关外接程序成员的重载，这些成员包括：  
@@ -283,9 +281,10 @@ ms.locfileid: "57365836"
  默认情况下，当使用多个应用程序域时，每个应用程序所需的各种.NET Framework 程序集是所有加载到该应用程序的域。 因此，创建新应用程序域和在应用程序域中启动应用程序所需的时间可能会影响性能。 但是，.NET Framework 提供了一种方法，从而减少启动时间即指示应用程序在应用程序域之间共享程序集，如果他们已加载。 执行此操作通过使用<xref:System.LoaderOptimizationAttribute>属性，必须应用于入口点方法 (`Main`)。 这种情况下，只能使用代码来实现应用程序定义（请参阅[应用程序管理概述](application-management-overview.md)）。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.LoaderOptimizationAttribute>
 - [外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [应用程序域](../../app-domains/application-domains.md)
-- [.NET framework 远程处理概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [.NET Framework 远程处理概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [使对象可远程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [帮助主题](how-to-topics.md)

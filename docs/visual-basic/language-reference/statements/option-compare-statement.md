@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: b092d54e6cf4d8a96a35e6b1cc818fad8f26e3ae
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e7c1e8e4431b7a653bb3a086589c35921f8001b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834070"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300627"
 ---
 # <a name="option-compare-statement"></a>Option Compare 语句
 声明比较字符串数据时要使用的默认比较方法。  
@@ -65,11 +65,11 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>若要在 IDE 中设置 Option Compare  
   
-1.  在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。  
+1. 在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。  
   
-2.  单击“编译”选项卡。  
+2. 单击“编译”选项卡。  
   
-3.  中的值设置**Option Compare**框。  
+3. 中的值设置**Option Compare**框。  
   
  创建项目时**Option Compare**上设置**编译**选项卡设置为**Option Compare**中设置**选项**对话框。 若要更改此设置时，在**工具**菜单上，单击**选项**。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 中的初始默认设置**VB 默认值**是**二进制**。  
   
@@ -96,8 +96,8 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [比较运算符](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [在 Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like 运算符](../../../visual-basic/language-reference/operators/like-operator.md)
 - [字符串函数](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)

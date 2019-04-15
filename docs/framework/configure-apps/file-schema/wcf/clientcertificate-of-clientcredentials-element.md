@@ -2,12 +2,12 @@
 title: <clientCertificate> <clientCredentials>元素
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: 1ca2973b4c0e745f13c1364b2284909d07da738c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5abf0a99beff1b9fb3655cb82d74484f3b88237f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216452"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate > 的\<clientCredentials > 元素
 定义用于针对服务进行客户端身份验证的 X.509 证书。  
@@ -53,6 +53,7 @@ ms.locfileid: "55273120"
  此配置元素指定用于对具有此元素的客户端进行身份验证的证书。 有关详细信息，请参阅[如何：指定客户端凭据值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -61,6 +62,6 @@ ms.locfileid: "55273120"
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [如何：指定客户端凭据值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
+- [保证客户端的安全](../../../../../docs/framework/wcf/securing-clients.md)
 - [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

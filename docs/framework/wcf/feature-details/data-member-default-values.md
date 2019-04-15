@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 30836f7f1cbf742c621254ef92314d20a4fffd83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185687"
 ---
 # <a name="data-member-default-values"></a>数据成员默认值
 在中[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，类型具有的概念*默认值*。 例如，对于任何引用类型，默认值为 `null`，而整型的默认值为零。 如果某个数据成员设置为其默认值，有时会希望序列化数据中不包含该数据成员。 由于成员具有默认值，这个实际值不需要进行序列化；这样处理可以提高性能。  
@@ -57,5 +57,6 @@ ms.locfileid: "54715058"
  在架构导入<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>属性自动设置为`false`时提到的特定于 WCF 的批注以前检测到。 对于 `false` 属性设置为 `nillable` 的引用类型，该属性也设置为 `false`，以支持在使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务时常遇到的特定互操作性方案。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

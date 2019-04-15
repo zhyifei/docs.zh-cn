@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: a1d138bcdc2c4637cd6aa035360ff258d3fe7100
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178784"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338093"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>演练：使用自定义组件自动填充工具箱
 如果由当前打开的解决方案中的项目定义您的组件，它们将自动显示在**工具箱**，由你需执行任何操作。 可以手动填充**工具箱**与使用自定义组件[选择工具箱项对话框 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))，但**工具箱**考虑在解决方案中的项的生成包含所有以下特征的输出结果：  
@@ -45,31 +45,31 @@ ms.locfileid: "59178784"
   
 #### <a name="to-create-the-project"></a>要创建项目  
   
-1.  创建一个名为基于 Windows 的应用程序项目`ToolboxExample`(**文件** > **新建** > **项目** >  **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**)。  
+1. 创建一个名为基于 Windows 的应用程序项目`ToolboxExample`(**文件** > **新建** > **项目** >  **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**)。  
   
-2.  向项目添加新组件。 将其命名为 `DemoComponent`。  
+2. 向项目添加新组件。 将其命名为 `DemoComponent`。  
   
      有关详细信息，请参阅[如何：添加新项目项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))。  
   
-3.  生成项目。  
+3. 生成项目。  
   
-4.  从**工具**菜单上，单击**选项**项。 单击**常规**下**Windows 窗体设计器**项，然后确保**AutoToolboxPopulate**选项设置为**True**。  
+4. 从**工具**菜单上，单击**选项**项。 单击**常规**下**Windows 窗体设计器**项，然后确保**AutoToolboxPopulate**选项设置为**True**。  
   
 ## <a name="creating-an-instance-of-a-custom-component"></a>创建自定义组件的实例  
  下一步是在窗体上创建自定义组件的实例。 因为**工具箱**自动为新的组件的帐户，这非常简单，只创建任何其他组件或控件。  
   
 #### <a name="to-create-an-instance-of-a-custom-component"></a>若要创建自定义组件的实例  
   
-1.  打开中的项目的窗体**窗体设计器**。  
+1. 打开中的项目的窗体**窗体设计器**。  
   
-2.  在中**工具箱**，单击名为的新选项卡**ToolboxExample 组件**。  
+2. 在中**工具箱**，单击名为的新选项卡**ToolboxExample 组件**。  
   
      单击选项卡，会看到**DemoComponent**。  
   
     > [!NOTE]
     >  出于性能原因中的自动填充区域的组件**工具箱**不显示自定义位图和<xref:System.Drawing.ToolboxBitmapAttribute>不受支持。 若要显示的图标中的自定义组件**工具箱**，使用**选择工具箱项**对话框以加载该组件。  
   
-3.  将组件拖到窗体上。  
+3. 将组件拖到窗体上。  
   
      创建并添加到组件的实例**组件栏**。  
   
@@ -78,15 +78,15 @@ ms.locfileid: "59178784"
   
 #### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>尝试卸载和重新加载组件的工具箱上的效果  
   
-1.  卸载该解决方案中的项目。  
+1. 卸载该解决方案中的项目。  
   
      有关卸载的项目的详细信息，请参阅[如何：卸载并重新加载项目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100))。 如果系统提示您保存时，选择**是**。  
   
-2.  添加一个新**Windows 应用程序**到解决方案。 打开中的窗体**设计器**。  
+2. 添加一个新**Windows 应用程序**到解决方案。 打开中的窗体**设计器**。  
   
      **ToolboxExample 组件**选项卡上一个项目现已消失了。  
   
-3.  重新加载`ToolboxExample`项目。  
+3. 重新加载`ToolboxExample`项目。  
   
      **ToolboxExample 组件**选项卡现在再次出现。  
   

@@ -3,12 +3,12 @@ title: 如何：转换传入声明
 ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
-ms.openlocfilehash: 83c6f650580a673d308c7ffd580c785cdb2ab9f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181624"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344632"
 ---
 # <a name="how-to-transform-incoming-claims"></a>如何：转换传入声明
 ## <a name="applies-to"></a>适用于  
@@ -58,19 +58,19 @@ ms.locfileid: "50181624"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>创建一个简单 ASP.NET 应用程序  
   
-1.  以管理员身份在提升模式下启动 Visual Studio。  
+1. 以管理员身份在提升模式下启动 Visual Studio。  
   
-2.  在 Visual Studio 中，单击“文件”，再单击“新建”，然后单击“项目”。  
+2. 在 Visual Studio 中，单击“文件”，再单击“新建”，然后单击“项目”。  
   
-3.  在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。  
+3. 在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。  
   
-4.  在“名称”中，输入 `TestApp`，然后按“确定”。  
+4. 在“名称”中，输入 `TestApp`，然后按“确定”。  
   
-5.  在“解决方案资源管理器”下，右键单击“TestApp”项目，然后选择“标识和访问”。  
+5. 在“解决方案资源管理器”下，右键单击“TestApp”项目，然后选择“标识和访问”。  
   
-6.  “标识和访问”窗口随即出现。 在“提供程序”下，选择“使用本地开发 STS 测试应用程序”，然后单击“应用”。  
+6. “标识和访问”窗口随即出现。 在“提供程序”下，选择“使用本地开发 STS 测试应用程序”，然后单击“应用”。  
   
-7.  在 Default.aspx 文件中，将现有标记替换为以下内容，然后保存文件：  
+7. 在 Default.aspx 文件中，将现有标记替换为以下内容，然后保存文件：  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -87,7 +87,7 @@ ms.locfileid: "50181624"
     </asp:Content>  
     ```  
   
-8.  打开名为 Default.aspx.cs 的代码隐藏文件。 用以下内容替换现有代码，然后保存文件：  
+8. 打开名为 Default.aspx.cs 的代码隐藏文件。 用以下内容替换现有代码，然后保存文件：  
   
     ```csharp  
     using System;  
@@ -113,24 +113,24 @@ ms.locfileid: "50181624"
   
 #### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>使用自定义 ClaimsAuthenticationManager 实现声明转换  
   
-1.  在 Visual Studio 中，右键单击解决方案，单击“添加”，然后单击“新建项目”。  
+1. 在 Visual Studio 中，右键单击解决方案，单击“添加”，然后单击“新建项目”。  
   
-2.  在“添加新建项目”窗口中从“Visual C#”模板列表选择“类库”，输入 `ClaimsTransformation`，然后按“确定”。 系统将在你的解决方案文件夹中创建新项目。  
+2. 在“添加新建项目”窗口中从“Visual C#”模板列表选择“类库”，输入 `ClaimsTransformation`，然后按“确定”。 系统将在你的解决方案文件夹中创建新项目。  
   
-3.  在“ClaimsTransformation”项目下右键单击“引用”，然后单击“添加引用”。  
+3. 在“ClaimsTransformation”项目下右键单击“引用”，然后单击“添加引用”。  
   
-4.  在“引用管理器”窗口选择“System.IdentityModel”，然后单击“确定”。  
+4. 在“引用管理器”窗口选择“System.IdentityModel”，然后单击“确定”。  
   
-5.  打开“Class1.cs”或若它不存在，右键单击“ClaimsTransformation”，再依次单击“添加”、“类…”  
+5. 打开“Class1.cs”或若它不存在，右键单击“ClaimsTransformation”，再依次单击“添加”、“类…”  
   
-6.  使用指令将以下内容添加到代码文件：  
+6. 使用指令将以下内容添加到代码文件：  
   
     ```csharp  
     using System.Security.Claims;  
     using System.Security.Principal;  
     ```  
   
-7.  在代码文件中添加以下类和方法。  
+7. 在代码文件中添加以下类和方法。  
   
     > [!WARNING]
     >  以下代码仅用于演示目的；请确保验证了生产代码中的预期权限。  
@@ -150,7 +150,7 @@ ms.locfileid: "50181624"
     }  
     ```  
   
-8.  保存文件并生成 ClaimsTransformation 项目。  
+8. 保存文件并生成 ClaimsTransformation 项目。  
   
 9. 在 TestApp ASP.NET 项目中，右键单击“引用”，然后单击“添加引用”。  
   
@@ -167,9 +167,9 @@ ms.locfileid: "50181624"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>为使用 Forms 身份验证的声明测试 ASP.NET Web 窗体应用程序  
   
-1.  按 F5 生成并运行该应用程序。 将看到 Default.aspx。  
+1. 按 F5 生成并运行该应用程序。 将看到 Default.aspx。  
   
-2.  在 Default.aspx 页，在“你的声明”标题下应看到一个表格，包括有关帐户的颁发者、原始颁发者、类型、值以及值类型声明信息。 最后一行应以下面的方式显示：  
+2. 在 Default.aspx 页，在“你的声明”标题下应看到一个表格，包括有关帐户的颁发者、原始颁发者、类型、值以及值类型声明信息。 最后一行应以下面的方式显示：  
   
     ||||||  
     |-|-|-|-|-|  

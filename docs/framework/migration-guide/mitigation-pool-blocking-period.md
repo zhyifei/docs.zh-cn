@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4c90a75ebbb9e4bc6248aadd709be8b5285ecd6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: f97650099aed0be7e1983f759cd0f38fc568f857
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082758"
 ---
 # <a name="mitigation-pool-blocking-period"></a>缓解：池阻止时间段
 与 Azure SQL 数据库的连接已删除连接池阻止时间段。  
@@ -34,4 +34,5 @@ ms.locfileid: "58409115"
  可以通过将 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> 属性设置为 <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType> 来还原以前的行为。  
   
 ## <a name="see-also"></a>请参阅
+
 - [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)

@@ -8,30 +8,30 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51d07fadcf359c2b44f22ca9868d0f12e24b80c5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3ef3741ef5cec720c2fb285c9aa60d610acc0be9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873109"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321648"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>创建加密方案
 可结合使用 .NET Framework 的加密组件来创建不同的方案，以加密和解密数据。  
   
  用于加密和解密数据的简单加密方案可能指定以下步骤：  
   
-1.  每个参与方均生成一个公钥/私钥对。  
+1. 每个参与方均生成一个公钥/私钥对。  
   
-2.  双方交换各自的公钥。  
+2. 双方交换各自的公钥。  
   
-3.  例如，每个参与方均生成一个用于加密 TripleDES 的密钥，并使用对方的公钥对新创建的密钥进行加密。  
+3. 例如，每个参与方均生成一个用于加密 TripleDES 的密钥，并使用对方的公钥对新创建的密钥进行加密。  
   
-4.  每个参与方都将数据发送给另一方，并以特定的顺序将对方的密钥与自身的密钥相结合，以创建新密钥。  
+4. 每个参与方都将数据发送给另一方，并以特定的顺序将对方的密钥与自身的密钥相结合，以创建新密钥。  
   
-5.  然后，双方使用对称加密启动一个对话。  
+5. 然后，双方使用对称加密启动一个对话。  
   
  创建加密方案是一项重要任务。
   
 ## <a name="see-also"></a>请参阅
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [加密服务](../../../docs/standard/security/cryptographic-services.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb537950ce240d77282551f847b637a77792a264
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645231"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321726"
 ---
 # <a name="accessing-custom-attributes"></a>访问自定义特性
 特性与程序元素相关联后，可使用反射来查询它们是否存在以及它们的值。 在 .NET Framework 1.0 和 1.1 版本中，在执行上下文中检查自定义特性。 .NET Framework 2.0 版本提供了新的加载上下文（仅反射上下文），可用于检查无法加载执行的代码。  
@@ -56,13 +56,13 @@ public class LocalizationExtenderProvider
   
  如果运行时尝试为附加到 GetLanguage 方法的公共自定义特性类型 <xref:System.ComponentModel.DescriptionAttribute> 检索自定义特性，则它将执行下列操作：  
   
-1.  运行时检查 Type.GetCustomAttributes（类型 type） 的 DescriptionAttribute 类型参数是否是公共类型参数；如果是，则它可见且可访问。  
+1. 运行时检查 Type.GetCustomAttributes（类型 type） 的 DescriptionAttribute 类型参数是否是公共类型参数；如果是，则它可见且可访问。  
   
-2.  运行时检查从 DescriptionAttribute 派生的用户定义类型 MyDescriptionAttribute 在 System.Web.DLL 程序集（它在该程序集中附加到 GetLanguage() 方法）内是否可见和可以访问。  
+2. 运行时检查从 DescriptionAttribute 派生的用户定义类型 MyDescriptionAttribute 在 System.Web.DLL 程序集（它在该程序集中附加到 GetLanguage() 方法）内是否可见和可以访问。  
   
-3.  运行时检查 MyDescriptionAttribute 的构造函数是否在 System.Web.DLL 程序集中可见和可以访问。  
+3. 运行时检查 MyDescriptionAttribute 的构造函数是否在 System.Web.DLL 程序集中可见和可以访问。  
   
-4.  运行时调用带有自定义特性参数的 MyDescriptionAttribute 的构造函数，然后将新对象返回给调用方。  
+4. 运行时调用带有自定义特性参数的 MyDescriptionAttribute 的构造函数，然后将新对象返回给调用方。  
   
  自定义特性反射模型可能会在定义类型的程序集外泄漏用户定义类型的实例。 这与运行时系统库中返回用户定义类型的实例的成员（例如返回 RuntimeMethodInfo 对象数组的 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType>）相同。 为了防止客户端发现关于用户定义的自定义特性类型的信息，请将该类型的成员定义为非公共成员。  
   
@@ -73,6 +73,7 @@ public class LocalizationExtenderProvider
  [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

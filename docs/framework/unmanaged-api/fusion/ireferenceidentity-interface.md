@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb8686342b20bd6afe0a4c4803d64428ed95c98b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd46ea26532074c9ea42da4d07a38ed583aad076
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220157"
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity 接口
 表示代码对象的唯一签名的引用。  
@@ -40,8 +40,9 @@ ms.locfileid: "54665768"
   
  **标头：** Isolation.h  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [IEnumIDENTITY_ATTRIBUTE 接口](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)

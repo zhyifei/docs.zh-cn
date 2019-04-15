@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 6bca368e13a32559bcb7cbb028dcaa1dea0353e3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819783"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294673"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>未定义 Sub 或 Function (Visual Basic)
 一个`Sub`或`Function`必须定义即可调用。 此错误的可能原因包括：  
@@ -24,11 +24,11 @@ ms.locfileid: "58819783"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  请确保过程名称拼写正确。  
+1. 请确保过程名称拼写正确。  
   
-2.  查找包含你想要调用的过程的项目的名称**引用**对话框。 如果未显示，请单击**浏览**按钮对其进行搜索。 选择左侧的项目名称，该复选框，然后单击**确定**。  
+2. 查找包含你想要调用的过程的项目的名称**引用**对话框。 如果未显示，请单击**浏览**按钮对其进行搜索。 选择左侧的项目名称，该复选框，然后单击**确定**。  
   
-3.  检查的例程的名称。  
+3. 检查的例程的名称。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -2,12 +2,12 @@
 title: <security> 的 <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 06c4b537c336804c28492124e6a4fa8cc4ff3091
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6348bc6f6c0d3a9656fbe57bf71f531d1287a949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170087"
 ---
 # <a name="security-of-netpeerbinding"></a>\<security> of \<netPeerBinding>
 定义的安全设置[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)，包括身份验证的类型使用，安全使用消息传输。  
@@ -41,10 +41,10 @@ ms.locfileid: "55266294"
   
 ## <a name="mode-attribute"></a>mode 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |消息|SOAP 安全提供身份验证、完整性和保密性。|  
-|无|禁用安全性。|  
+|None|禁用安全性。|  
 |传输|使用 HTTPS 提供安全性。|  
 |TransportWithMessageCredential|HTTPS 提供身份验证和保密性。 SOAP 消息提供丰富的凭据类型。|  
   
@@ -64,6 +64,7 @@ ms.locfileid: "55266294"
  安全性可以是特定于消息的，也可以是特定于传输的。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>

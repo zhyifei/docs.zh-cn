@@ -7,12 +7,12 @@ helpviewer_keywords:
 - PrintDocument component [Windows Forms], about PrintDocument component
 - printing [Windows Forms], PrintDocument component
 ms.assetid: b59b4b60-dce5-42ca-8421-3a54a2f7bab0
-ms.openlocfilehash: c35c60b651dd3becfeca0f07788efab9d1619117
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a3f08aa4bd5b63769cef35dbea2209d5d83261be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198629"
 ---
 # <a name="printdocument-component-overview-windows-forms"></a>PrintDocument 组件概述（Windows 窗体）
 Windows 窗体 [PrintDocument](printdocument-component-windows-forms.md) 组件用于设置属性，这些属性描述在基于 Windows 的应用程序中要打印什么内容以及打印文档的能力。 此组件可与 [PrintDialog](printdialog-component-windows-forms.md) 组件一起使用，控制文档打印的各个方面。  
@@ -27,6 +27,7 @@ Windows 窗体 [PrintDocument](printdocument-component-windows-forms.md) 组件�
  添加到窗体时<xref:System.Drawing.Printing.PrintDocument>组件在 Windows 窗体设计器底部的任务栏中显示。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Windows 窗体打印支持](../advanced/windows-forms-print-support.md)

@@ -2,12 +2,12 @@
 title: 自定义消息拦截器
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 789b3a2003ab96a9658eab7c092067e6110a46cd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d585e60c9b31e56873b0501425f55541bd647e02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824775"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344268"
 ---
 # <a name="custom-message-interceptor"></a>自定义消息拦截器
 此示例演示通道扩展模型的使用。 特别是，演示如何实现可创建通道工厂和通道侦听器的自定义绑定元素，以便在运行时堆栈的特定点截获所有传入和传出消息。 此示例还包括一个客户端和一个服务器，用于演示这些自定义工厂的使用。  
@@ -28,13 +28,13 @@ ms.locfileid: "58824775"
   
  此示例介绍了使用通道框架并遵循 WCF 最佳做法在 Windows Communication Foundation (WCF) 创建自定义分层的通道的推荐的过程。 创建自定义分层通道的步骤如下所示：  
   
-1.  确定您的通道工厂和通道侦听器将要支持哪些通道形状。  
+1. 确定您的通道工厂和通道侦听器将要支持哪些通道形状。  
   
-2.  创建支持您的通道形状的通道工厂和通道侦听器。  
+2. 创建支持您的通道形状的通道工厂和通道侦听器。  
   
-3.  添加一个绑定元素，用于将自定义分层通道添加到通道堆栈中。  
+3. 添加一个绑定元素，用于将自定义分层通道添加到通道堆栈中。  
   
-4.  添加一个绑定元素扩展部分，以便将新的绑定元素公开到配置系统。  
+4. 添加一个绑定元素扩展部分，以便将新的绑定元素公开到配置系统。  
   
 ## <a name="channel-shapes"></a>通道形状  
  编写自定义分层通道的第一步是确定该通道需要哪些形状。 对于我们的消息拦截器，支持我们下面的层所支持的任何形状（例如，如果我们下面的层可以生成 <xref:System.ServiceModel.Channels.IOutputChannel> 和 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>，则我们也公开 <xref:System.ServiceModel.Channels.IOutputChannel> 和 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>）。  
@@ -147,17 +147,16 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
+1. 使用以下命令安装 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+3. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-5.  先运行 Service.exe，然后运行 Client.exe 并观察两个控制台窗口的输出。  
-  
+5. 先运行 Service.exe，然后运行 Client.exe 并观察两个控制台窗口的输出。  

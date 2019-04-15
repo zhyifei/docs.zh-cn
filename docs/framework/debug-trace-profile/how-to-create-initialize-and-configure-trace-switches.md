@@ -1,5 +1,5 @@
 ---
-title: 如何：创建、 初始化和配置跟踪开关
+title: 如何：创建、初始化和配置跟踪开关
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739610"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325704"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：创建、 初始化和配置跟踪开关
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：创建、初始化和配置跟踪开关
 跟踪开关用于启用、禁用和筛选跟踪输出。  
   
 <a name="create"></a>   
@@ -31,9 +31,9 @@ ms.locfileid: "54739610"
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>若要创建和初始化跟踪开关  
   
-1.  将开关定义为 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 类型或 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 类型并设置开关的名称和说明。  
+1. 将开关定义为 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 类型或 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 类型并设置开关的名称和说明。  
   
-2.  配置跟踪开关。 有关详细信息，请参阅[配置跟踪开关](#configure)。  
+2. 配置跟踪开关。 有关详细信息，请参阅[配置跟踪开关](#configure)。  
   
      以下代码创建两个开关，每种类型一个开关：  
   
@@ -71,13 +71,13 @@ ms.locfileid: "54739610"
   
 #### <a name="to-configure-trace-switches"></a>配置跟踪开关  
   
-1.  要使用跟踪开关，必须根据[创建和初始化跟踪开关](#create)中所述的内容首先创建跟踪开关，然后将它们放入代码中。  
+1. 要使用跟踪开关，必须根据[创建和初始化跟踪开关](#create)中所述的内容首先创建跟踪开关，然后将它们放入代码中。  
   
-2.  如果项目不包含配置文件（app.config 或 Web.config），则从“项目”菜单中选择“添加新项”。  
+2. 如果项目不包含配置文件（app.config 或 Web.config），则从“项目”菜单中选择“添加新项”。  
   
     -   **Visual Basic：** 在中**添加新项**对话框框中，选择**应用程序配置文件**。  
   
-         创建并打开应用程序配置文件。 这是一个根元素为 `<configuration>.` 的 XML 文档  
+         创建并打开应用程序配置文件。 这是一个其根元素为 XML 文档 `<configuration>.`  
   
     -   **Visual C#:** 在中**添加新项**对话框框中，选择**XML 文件**。 将此文件命名为 app.config。XML 编辑器中，在 XML 声明后，添加以下 XML：  
   
@@ -88,7 +88,7 @@ ms.locfileid: "54739610"
   
          编译项目后，app.config 文件会被复制到项目输出文件夹中，并重命名为 applicationname.exe.config。  
   
-3.  在 `<configuration>` 标记之后但在 `</configuration>` 标记前面，添加适当的 XML 以配置开关。 以下示例演示了一个 DisplayName 属性为 `DataMessageSwitch` 的 BooleanSwitch，以及一个 DisplayName 属性为 `TraceLevelSwitch` 的 TraceSwitch。  
+3. 在 `<configuration>` 标记之后但在 `</configuration>` 标记前面，添加适当的 XML 以配置开关。 以下示例演示了一个 DisplayName 属性为 `DataMessageSwitch` 的 BooleanSwitch，以及一个 DisplayName 属性为 `TraceLevelSwitch` 的 TraceSwitch。  
   
     ```xml  
     <system.diagnostics>  
@@ -101,11 +101,11 @@ ms.locfileid: "54739610"
   
      在此配置中，两个开关均为关闭。  
   
-4.  如果需要开启 BooleanSwitch，如前面示例中所示的 `DataMessagesSwitch`，请将“Value”更改为 0 以外的任何整数。  
+4. 如果需要开启 BooleanSwitch，如前面示例中所示的 `DataMessagesSwitch`，请将“Value”更改为 0 以外的任何整数。  
   
-5.  如果需要开启 TraceSwitch，如前面示例中所示的 `TraceLevelSwitch`，请将“Value”更改为适当的级别设置 (1-4)。  
+5. 如果需要开启 TraceSwitch，如前面示例中所示的 `TraceLevelSwitch`，请将“Value”更改为适当的级别设置 (1-4)。  
   
-6.  将注释添加到 .config 文件，以便最终用户清楚地了解适当地配置开关所需更改的值。  
+6. 将注释添加到 .config 文件，以便最终用户清楚地了解适当地配置开关所需更改的值。  
   
      以下示例显示最终代码（包括注释）：  
   
@@ -126,7 +126,8 @@ ms.locfileid: "54739610"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [跟踪和调试设置架构](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

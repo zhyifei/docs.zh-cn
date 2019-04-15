@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17530537e6d74b247aaf8708efed28ef169f9d57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491241"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306386"
 ---
 # <a name="runtime-profiling"></a>运行时分析
 分析是用于在任何开发或部署方案中收集性能数据的方法。 本节面向想要收集有关应用程序性能的信息的开发人员和系统管理员。  
@@ -28,19 +28,19 @@ ms.locfileid: "54491241"
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>在 Windows Vista 和更高版本上运行 Perfmon.exe  
   
-1.  在命令提示符处，键入 **perfmon**。 将出现“性能监视器”  控制台。  
+1. 在命令提示符处，键入 **perfmon**。 将出现“性能监视器”  控制台。  
   
-2.  在“监视工具”  文件夹中，单击“性能监视器” 。  
+2. 在“监视工具”  文件夹中，单击“性能监视器” 。  
   
-3.  在“性能监视器”工具栏上，如果有“添加”  图标（加号），请单击该图标。 如果没有，请在监视器窗口中单击右键，然后选择“添加计数器”  选项。  
+3. 在“性能监视器”工具栏上，如果有“添加”  图标（加号），请单击该图标。 如果没有，请在监视器窗口中单击右键，然后选择“添加计数器”  选项。  
   
      这将打开“添加计数器”  对话框。 “可用计数器”  列表框中显示可用的性能对象。 .NET Framework 应用程序有许多预定义的对象，包括用于内存管理、互操作性、异常处理以及多线程处理的计数器，它们分别是“.NET CLR Memory”**.**、“.NET CLR Interop”、“.NET CLR Exceptions”和“.NET CLR LocksAndThreads”。 每个性能对象均包含多个单一性能计数器。 在性能监视器中的可用性能计数器列表，请参阅 [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)一起安装的.NET Framework 性能计数器中的数据。  
   
-4.  选择性能对象的名称旁边的复选框，以查看它所支持的各个性能计数器的列表。  
+4. 选择性能对象的名称旁边的复选框，以查看它所支持的各个性能计数器的列表。  
   
-5.  单击要查看的性能计数器。  
+5. 单击要查看的性能计数器。  
   
-6.  在“选定对象的实例”列表框中，单击“\<所有实例>”，指定要在全局（也就是在整个系统范围内）监视公共语言运行时的性能计数器。  
+6. 在“选定对象的实例”列表框中，单击“\<所有实例>”，指定要在全局（也就是在整个系统范围内）监视公共语言运行时的性能计数器。  
   
      或  
   
@@ -67,4 +67,5 @@ ms.locfileid: "54491241"
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|为 `NextValue` 指定用于计算 `PerformanceCounter`的方法。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)

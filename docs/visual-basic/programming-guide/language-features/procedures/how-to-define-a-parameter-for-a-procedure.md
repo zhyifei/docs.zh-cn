@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971788"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333829"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>如何：定义参数的过程 (Visual Basic)
 一个*参数*允许调用代码将调用它时，将值传递给过程。 声明过程每个参数相同的方式声明变量，指定其名称和数据类型。 您还指定的传递机制，以及该参数是否可选。  
@@ -22,17 +22,17 @@ ms.locfileid: "56971788"
   
 ### <a name="to-define-a-procedure-parameter"></a>若要定义过程参数  
   
-1.  在过程声明中，将添加到过程的参数列表中，使用逗号将其与其他参数的参数名称。  
+1. 在过程声明中，将添加到过程的参数列表中，使用逗号将其与其他参数的参数名称。  
   
-2.  决定参数的数据类型。  
+2. 决定参数的数据类型。  
   
-3.  在参数名称后的加`As`子句指定的数据类型。  
+3. 在参数名称后的加`As`子句指定的数据类型。  
   
-4.  确定所需的参数的传递机制。 通常情况下，按值传递参数，除非你想要能够调用代码中更改其值的过程。  
+4. 确定所需的参数的传递机制。 通常情况下，按值传递参数，除非你想要能够调用代码中更改其值的过程。  
   
-5.  参数名称前面加上[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)指定的传递机制。 有关详细信息，请参阅[差异之间传递参数值和按引用来](./differences-between-passing-an-argument-by-value-and-by-reference.md)。  
+5. 参数名称前面加上[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)指定的传递机制。 有关详细信息，请参阅[差异之间传递参数值和按引用来](./differences-between-passing-an-argument-by-value-and-by-reference.md)。  
   
-6.  如果参数是可选的前, 加上使用的传递机制[可选](../../../../visual-basic/language-reference/modifiers/optional.md)并按照参数的数据类型以等号 (`=`) 和默认值。  
+6. 如果参数是可选的前, 加上使用的传递机制[可选](../../../../visual-basic/language-reference/modifiers/optional.md)并按照参数的数据类型以等号 (`=`) 和默认值。  
   
      下面的示例定义的大纲`Sub`具有三个参数的过程。 所需的前两个和第三个是可选的。 参数声明由逗号分隔参数列表中。  
   
@@ -58,8 +58,8 @@ ms.locfileid: "56971788"
 - [Sub 过程](./sub-procedures.md)
 - [Function 过程](./function-procedures.md)
 - [如何：将参数传递给过程](./how-to-pass-arguments-to-a-procedure.md)
-- [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)
+- [按值和按引用传递参数](./passing-arguments-by-value-and-by-reference.md)
 - [递归过程](./recursive-procedures.md)
 - [过程重载](./procedure-overloading.md)
 - [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [面向对象的编程 (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [面向对象编程 (Visual Basic)](../../concepts/object-oriented-programming.md)

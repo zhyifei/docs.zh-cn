@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 009115d985c51961bffddaaa3149e15ba9a5502b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679756"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323239"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 以下各节解答了您在实现 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 时可能遇到的一些常见问题。  
@@ -50,12 +50,12 @@ ms.locfileid: "54679756"
 ## <a name="unexpected-query-results"></a>意外的查询结果  
  问： 我的查询返回了意外的结果。 如何检查所发生的情况？  
   
- 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了几种工具用于检查其生成的 SQL 代码。 其中最重要的工具就是 <xref:System.Data.Linq.DataContext.Log%2A>。 有关详细信息，请参阅[调试支持](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)。  
+ 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 用于检查其生成的 SQL 代码提供了几个工具。 其中最重要的工具就是 <xref:System.Data.Linq.DataContext.Log%2A>。 有关详细信息，请参阅[调试支持](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)。  
   
 ## <a name="unexpected-stored-procedure-results"></a>意外的存储过程结果  
  问： 我有一个存储过程，其返回值由 `MAX()` 进行计算。 在将该存储过程拖动到 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]图面时，返回值不正确。  
   
- 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了两种方法来通过存储过程返回数据库生成的值：  
+ 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供两种方法以返回数据库生成的值，通过存储过程：  
   
 -   通过命名输出结果。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54679756"
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>避免在插入或更新时显式设置数据库生成的值  
  问： 我的一个数据库表具有一个默认为 SQL `DateCreated` 的 `Getdate()` 列。 在我试图使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 插入新记录时，该值会设置为 `NULL`。 我希望其设置为数据库默认值。  
   
- 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会自动为标识（自动增加）和 rowguidcol（数据库生成的 GUID）以及时间戳列处理这种情况。 在其他情况下，您应手动设置<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true`并<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>属性。  
+ 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 处理这种情况下，自动为标识 （自动增加） 和 rowguidcol (数据库生成的 GUID) 以及时间戳列。 在其他情况下，您应手动设置<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true`并<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>属性。  
   
 ## <a name="multiple-dataloadoptions"></a>多个 DataLoadOptions  
  问： 是否可以指定其他加载选项而不覆盖原先的选项？  
@@ -149,18 +149,18 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="sql-injection-attacks"></a>SQL 注入式攻击  
  问： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何防范 SQL 注入式攻击？  
   
- 答： 对于通过串联用户输入而组成的传统 SQL 查询，SQL 注入已成为重大风险。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通过在查询中使用 <xref:System.Data.SqlClient.SqlParameter> 来避免这种注入。 用户输入会转换为参数值。 此方法可防止通过客户输入使用恶意命令。  
+ 答： 对于通过串联用户输入而组成的传统 SQL 查询，SQL 注入已成为重大风险。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通过使用避免这种注入<xref:System.Data.SqlClient.SqlParameter>在查询中。 用户输入会转换为参数值。 此方法可防止通过客户输入使用恶意命令。  
   
 ## <a name="changing-read-only-flag-in-dbml-files"></a>更改 DBML 文件中的只读标志  
  问： 如何在从 DBML 文件创建对象模型时消除某些属性中的设置器？  
   
  答： 对于此高级方案，请执行以下步骤：  
   
-1.  在 .dbml 文件中，通过将 <xref:System.Data.Linq.ITable.IsReadOnly%2A> 标志更改为 `True` 来修改属性。  
+1. 在 .dbml 文件中，通过将 <xref:System.Data.Linq.ITable.IsReadOnly%2A> 标志更改为 `True` 来修改属性。  
   
-2.  添加一个分部类。 为只读成员创建一个带参数的构造函数。  
+2. 添加一个分部类。 为只读成员创建一个带参数的构造函数。  
   
-3.  检查默认的 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) 以确定该值对于您的应用程序是否正确。  
+3. 检查默认的 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) 以确定该值对于您的应用程序是否正确。  
   
     > [!CAUTION]
     >  如果使用的[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]在 Visual Studio 中，可能会覆盖所做的更改。  
@@ -175,7 +175,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="mapping-data-from-multiple-tables"></a>映射来自多个表的数据  
  问： 我的实体中的数据来自多个表。 如果映射这些数据？  
   
- 答： 您可以在数据库中创建一个视图并将实体映射到该视图。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会为视图生成 SQL，与它为表生成 SQL 相同。  
+ 答： 您可以在数据库中创建一个视图并将实体映射到该视图。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 与为表生成 SQL 相同的视图。  
   
 > [!NOTE]
 >  这种情况下的视图用法有一些限制。 当基础视图支持在 <xref:System.Data.Linq.Table%601> 上执行的操作时，此方法最为安全。 只有您知道要执行的操作。 例如，大多数应用程序是只读的并且还有相当多执行`Create` / `Update` / `Delete`操作只能通过使用存储过程，针对视图。  
@@ -190,7 +190,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="second-datacontext-is-not-updated"></a>第二个 DataContext 未更新  
  问： 我使用 <xref:System.Data.Linq.DataContext> 的一个实例存储数据库中的值。 但是，相同数据库上的另一个 <xref:System.Data.Linq.DataContext> 未反映更新的值。 第二个 <xref:System.Data.Linq.DataContext> 实例似乎返回缓存的值。  
   
- 答： 此行为是有意安排的。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会继续返回您在第一个实例中看到的相同实例/值。 在进行更新时使用开放式并发。 原始数据用于检查当前数据库状态，以确定该数据实际上仍未更改。 如果该数据已更改，则会发生冲突，您的应用程序必须解决该冲突。 您的应用程序可以选择将原始状态重置为当前数据库状态并尝试再次更新。 有关详细信息，请参阅[如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
+ 答： 此行为是有意安排的。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将继续返回的相同实例/值您看到的第一个实例中。 在进行更新时使用开放式并发。 原始数据用于检查当前数据库状态，以确定该数据实际上仍未更改。 如果该数据已更改，则会发生冲突，您的应用程序必须解决该冲突。 您的应用程序可以选择将原始状态重置为当前数据库状态并尝试再次更新。 有关详细信息，请参阅[如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
   
  您也可以将 <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> 设置为 false，这样可以关闭缓存和更改跟踪。 然后便可以在每次查询时检索最新值。  
   
@@ -200,6 +200,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
  答： 只读模式关闭了上下文跟踪更改的功能。  
   
 ## <a name="see-also"></a>请参阅
-- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+
+- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [疑难解答](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
 - [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

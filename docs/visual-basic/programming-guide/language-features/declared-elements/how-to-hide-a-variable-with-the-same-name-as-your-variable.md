@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: a8a7eda2a636d7f89131d140c82ad4f3c4743211
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826673"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296181"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>如何：隐藏与您的变量 (Visual Basic 中) 同名的变量
 可以隐藏的变量*隐藏*即，它通过将它重新定义具有相同名称的变量。 可以隐藏你想要在两种方法中隐藏的变量：  
@@ -30,7 +30,7 @@ ms.locfileid: "58826673"
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>若要通过范围进行隐藏隐藏变量  
   
-1.  确定定义你想要隐藏的变量的区域，并确定要重新定义它与您的变量在其中一个子区域。  
+1. 确定定义你想要隐藏的变量的区域，并确定要重新定义它与您的变量在其中一个子区域。  
   
     |变量的区域|允许为重新定义它的子区域|  
     |-----------------------|-------------------------------------------|  
@@ -39,9 +39,9 @@ ms.locfileid: "58826673"
   
      不能为例重新在该过程中，块中的过程变量定义中`If`...`End If`构造或`For`循环。  
   
-2.  如果尚不存在，请创建子区域。  
+2. 如果尚不存在，请创建子区域。  
   
-3.  子区域，在编写[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)声明隐藏变量。  
+3. 子区域，在编写[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)声明隐藏变量。  
   
      当子区域内的代码引用的变量名称时，编译器将解析为隐藏变量的引用。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "58826673"
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>若要通过隐藏通过继承隐藏的变量  
   
-1.  请确保你想要隐藏的变量声明在类中，并在类级别 （任何过程之外）。 否则不能通过继承隐藏它。  
+1. 请确保你想要隐藏的变量声明在类中，并在类级别 （任何过程之外）。 否则不能通过继承隐藏它。  
   
-2.  定义派生自变量的类，如果尚不存在的类。  
+2. 定义派生自变量的类，如果尚不存在的类。  
   
-3.  在派生类中，编写`Dim`声明您的变量的语句。 包括[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)声明中的关键字。  
+3. 在派生类中，编写`Dim`声明您的变量的语句。 包括[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)声明中的关键字。  
   
      当在派生类中的代码引用的变量名称时，编译器将解析到您的变量引用。  
   
@@ -105,11 +105,11 @@ ms.locfileid: "58826673"
   
 ## <a name="see-also"></a>请参阅
 
-- [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [在 Visual Basic 中隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Visual Basic 中的隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [隐藏和重写之间的差异](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [如何：隐藏继承的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
 - [如何：访问被派生类隐藏的变量](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [继承的基础知识](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [继承基础知识](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

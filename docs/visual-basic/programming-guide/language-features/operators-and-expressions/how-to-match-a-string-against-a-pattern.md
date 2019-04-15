@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: ca6537d81f080120fcbea0cf083f450dce4e9f62
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826010"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316266"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>如何：匹配字符串与模式 (Visual Basic)
 如果想要找出的表达式[字符串数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)满足一种模式，则可以使用[Like 运算符](../../../../visual-basic/language-reference/operators/like-operator.md)。  
@@ -68,11 +68,11 @@ ms.locfileid: "58826010"
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>针对列表的字符或任何字符的字符串表达式中的字符进行匹配  
   
-1.  调用`Like`两次在同一个运算符的字符串表达式，并使用连接的两个调用[或运算符](../../../../visual-basic/language-reference/operators/or-operator.md)或[OrElse 运算符](../../../../visual-basic/language-reference/operators/orelse-operator.md)。  
+1. 调用`Like`两次在同一个运算符的字符串表达式，并使用连接的两个调用[或运算符](../../../../visual-basic/language-reference/operators/or-operator.md)或[OrElse 运算符](../../../../visual-basic/language-reference/operators/orelse-operator.md)。  
   
-2.  在模式字符串中第一个`Like`子句，包括字符列表中，用方括号括起来 (`[ ]`)。  
+2. 在模式字符串中第一个`Like`子句，包括字符列表中，用方括号括起来 (`[ ]`)。  
   
-3.  在模式字符串中第二个`Like`子句中，不要将放在任何字符的位置有问题。  
+3. 在模式字符串中第二个`Like`子句中，不要将放在任何字符的位置有问题。  
   
      下面的示例测试的七位数电话号码`phoneNum`为 3 个数字后, 跟一个空格、 连字符 (`–`)，一段 (`.`)，或没有字符后, 跟 4 个数字。  
   

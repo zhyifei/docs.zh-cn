@@ -12,28 +12,27 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: 9852c811b00ee7f8d86b7c1daaaa28f28fa5a89f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189126"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF 中的形状和基本图形概述
 本主题概述了如何绘制与<xref:System.Windows.Shapes.Shape>对象。 一个<xref:System.Windows.Shapes.Shape>是一种<xref:System.Windows.UIElement>，使您可以在屏幕上绘制一个形状。 由于它们是 UI 元素<xref:System.Windows.Shapes.Shape>对象可以用在<xref:System.Windows.Controls.Panel>元素和多数控件。  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 为图形和绘制服务提供多层访问。 在顶层，<xref:System.Windows.Shapes.Shape>对象是易于使用和提供许多有用的功能，例如布局和参与[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]事件系统。  
-  
-  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了图形和呈现服务的访问权限的多个层。 在顶层，<xref:System.Windows.Shapes.Shape>对象是易于使用和提供许多有用的功能，例如布局和参与[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]事件系统。  
+
 <a name="shapes"></a>   
 ## <a name="shape-objects"></a>形状对象  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了随时可用的大量<xref:System.Windows.Shapes.Shape>对象。  所有形状对象都继承自<xref:System.Windows.Shapes.Shape>类。 可用形状对象包括<xref:System.Windows.Shapes.Ellipse>， <xref:System.Windows.Shapes.Line>， <xref:System.Windows.Shapes.Path>， <xref:System.Windows.Shapes.Polygon>， <xref:System.Windows.Shapes.Polyline>，并<xref:System.Windows.Shapes.Rectangle>。 <xref:System.Windows.Shapes.Shape> 对象共享以下通用属性。  
   
--   <xref:System.Windows.Shapes.Shape.Stroke%2A>：介绍了如何绘制形状的轮廓。  
+-   <xref:System.Windows.Shapes.Shape.Stroke%2A>:介绍了如何绘制形状的轮廓。  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>：描述形状的轮廓的粗细。  
+-   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>:描述形状的轮廓的粗细。  
   
--   <xref:System.Windows.Shapes.Shape.Fill%2A>：介绍了如何绘制形状的内部。  
+-   <xref:System.Windows.Shapes.Shape.Fill%2A>:介绍了如何绘制形状的内部。  
   
 -   用于指定坐标和顶点的数据属性，以与设备无关的像素来度量。  
   
@@ -155,13 +154,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Stretch 属性采用下列值之一：  
   
--   <xref:System.Windows.Media.Stretch.None>：<xref:System.Windows.Shapes.Shape>对象的内容未拉伸。  
+-   <xref:System.Windows.Media.Stretch.None>:<xref:System.Windows.Shapes.Shape>对象的内容未拉伸。  
   
--   <xref:System.Windows.Media.Stretch.Fill>：<xref:System.Windows.Shapes.Shape>对象的内容被拉伸以填充布局空间。  不保留纵横比。  
+-   <xref:System.Windows.Media.Stretch.Fill>:<xref:System.Windows.Shapes.Shape>对象的内容被拉伸以填充布局空间。  不保留纵横比。  
   
--   <xref:System.Windows.Media.Stretch.Uniform>：<xref:System.Windows.Shapes.Shape>对象的内容将被拉伸以尽可能以填充布局空间，同时保留原始纵横比。  
+-   <xref:System.Windows.Media.Stretch.Uniform>:<xref:System.Windows.Shapes.Shape>对象的内容将被拉伸以尽可能以填充布局空间，同时保留原始纵横比。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>：<xref:System.Windows.Shapes.Shape>对象的内容被拉伸以完全填充布局空间，同时保留原始纵横比。  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>:<xref:System.Windows.Shapes.Shape>对象的内容被拉伸以完全填充布局空间，同时保留原始纵横比。  
   
  请注意，当<xref:System.Windows.Shapes.Shape>对象的内容将被拉伸，<xref:System.Windows.Shapes.Shape>在拉伸后绘制对象的轮廓。  
   
@@ -215,7 +214,8 @@ myPolygon.StrokeThickness = 2;
  在前面的示例中，对每一个形状对象应用了一次转换。 若要将多个转换应用到一个形状 （或任何其他 UI 元素），使用<xref:System.Windows.Media.TransformGroup>。  
   
 ## <a name="see-also"></a>请参阅
-- [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+
+- [二维图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [使用纯色和渐变进行绘制概述](painting-with-solid-colors-and-gradients-overview.md)
 - [Geometry 概述](geometry-overview.md)
 - [演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

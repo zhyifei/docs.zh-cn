@@ -2,12 +2,12 @@
 title: 文本 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 71c77a3cb91d0981614e83221ad82d17067dc321
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bff9b1907d3424dc2e3df80480b6ab12f5ab9261
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209770"
 ---
 # <a name="literals-entity-sql"></a>文本 (Entity SQL)
 本主题介绍 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 对于文字的支持。  
@@ -22,10 +22,10 @@ ms.locfileid: "54643099"
 ## <a name="boolean"></a>Boolean  
  布尔值文字由关键字 `true` 和 `false` 表示。  
   
-## <a name="integer"></a>Integer  
+## <a name="integer"></a>整数  
  整型文字可以为类型 <xref:System.Int32> 或 <xref:System.Int64>。 <xref:System.Int32> 文字是一系列数字字符。 <xref:System.Int64> 文字是一系列数字字符，后跟一个大写 L。  
   
-## <a name="decimal"></a>Decimal  
+## <a name="decimal"></a>十进制  
  固定点数字（小数）是一系列数字字符、一个圆点 (.) 和另一系列数字字符，后跟一个大写“M”。  
   
 ## <a name="float-double"></a>浮点，双精度  
@@ -91,7 +91,7 @@ BINARY    '0f0f0f0F0F0F0F0F0F0F'
 X'' –- empty binary string  
 ```  
   
-## <a name="guid"></a>Guid  
+## <a name="guid"></a>GUID  
  `GUID` 文本表示全局唯一标识符。 它是一个序列，由关键字`GUID`跟十六进制数字构成，采用称为*注册表*格式：包含在单引号内的 8-4-4-4-12。 十六进制数字区分大小写。  
   
  在 GUID 符号与文字负载之间可以存在任意数目的空格，但是不能存在新行。  
@@ -102,4 +102,5 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
 ```  
   
 ## <a name="see-also"></a>请参阅
-- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Entity SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

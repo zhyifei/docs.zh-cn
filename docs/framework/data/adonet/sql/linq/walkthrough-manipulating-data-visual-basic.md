@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0eab5fe5c9455badb7f538307cb827391b254a95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b013cff36fc9063f30aaa4356e9e8249dd960d8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306490"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>演练：操作数据 (Visual Basic)
 本演练提供了用于在数据库中添加、修改和删除数据的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将使用 Northwind 示例数据库的一个副本来添加一位客户，更改该客户的姓名，然后删除一个订单。  
@@ -55,39 +55,39 @@ ms.locfileid: "54626922"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
-1.  在 Visual Studio**文件**菜单上，单击**新项目**。  
+1. 在 Visual Studio**文件**菜单上，单击**新项目**。  
   
-2.  在中**项目类型**窗格中的**新项目**对话框中，单击**Visual Basic**。  
+2. 在中**项目类型**窗格中的**新项目**对话框中，单击**Visual Basic**。  
   
-3.  在“模板”窗格中，单击“控制台应用程序”。  
+3. 在“模板”窗格中，单击“控制台应用程序”。  
   
-4.  在中**名称**框中，键入**LinqDataManipulationApp**。  
+4. 在中**名称**框中，键入**LinqDataManipulationApp**。  
   
-5.  单击 **“确定”**。  
+5. 单击 **“确定”**。  
   
 ## <a name="adding-linq-references-and-directives"></a>添加 LINQ 引用和指令  
  本演练用到默认情况下您的项目中可能未安装的程序集。 如果`System.Data.Linq`不作为项目中引用列出 (单击**显示所有文件**中**解决方案资源管理器**展开**引用**节点)，请按照中所述添加它以下步骤。  
   
 #### <a name="to-add-systemdatalinq"></a>添加 System.Data.Linq  
   
-1.  在中**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
+1. 在中**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
   
-2.  在中**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，然后单击**确定**。  
+2. 在中**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，然后单击**确定**。  
   
      此程序集即被添加到项目中。  
   
-3.  在代码编辑器中，添加以下指令上述**Module1**:  
+3. 在代码编辑器中，添加以下指令上述**Module1**:  
   
      [!code-vb[DLinqWalk3VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#1)]  
   
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>将 Northwind 代码文件添加到项目  
- 以下这些步骤假定您已使用 SQLMetal 工具从 Northwind 示例数据库生成代码文件。 有关更多信息，请参见本演练前面部分的“先决条件”一节。  
+ 以下这些步骤假定你已使用 SQLMetal 工具从 Northwind 示例数据库生成代码文件。 有关更多信息，请参见本演练前面部分的“先决条件”一节。  
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>将 northwind 代码文件添加到项目  
   
-1.  上**项目**菜单上，单击**添加现有项**。  
+1. 上**项目**菜单上，单击**添加现有项**。  
   
-2.  在中**添加现有项**对话框中，定位到 c:\linqtest2\northwind.vb，然后依次**添加**。  
+2. 在中**添加现有项**对话框中，定位到 c:\linqtest2\northwind.vb，然后依次**添加**。  
   
      northwind.vb 文件即被添加到项目中。  
   
@@ -96,11 +96,11 @@ ms.locfileid: "54626922"
   
 #### <a name="to-set-up-and-test-the-database-connection"></a>设置并测试数据库连接  
   
-1.  将下面的代码键入或粘贴到 `Sub Main` 中：  
+1. 将下面的代码键入或粘贴到 `Sub Main` 中：  
   
      [!code-vb[DLinqWalk3VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#2)]  
   
-2.  按 F5 在此点测试应用程序。  
+2. 按 F5 在此点测试应用程序。  
   
      一个**控制台**窗口随即打开。  
   
@@ -113,11 +113,11 @@ ms.locfileid: "54626922"
   
 #### <a name="to-add-a-new-customer-entity-object"></a>添加新的 Customer 实体对象  
   
-1.  通过在 `Customer` 中的 `Console.ReadLine` 前添加如下代码，创建一个新的 `Sub Main`：  
+1. 通过在 `Customer` 中的 `Console.ReadLine` 前添加如下代码，创建一个新的 `Sub Main`：  
   
      [!code-vb[DLinqWalk3VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#3)]  
   
-2.  按 F5 调试解决方案。  
+2. 按 F5 调试解决方案。  
   
      控制台窗口中显示的结果如下：  
   
@@ -129,7 +129,7 @@ ms.locfileid: "54626922"
   
      请注意，新行不会出现在结果中， 因为新数据尚未提交到数据库。  
   
-3.  在中按 Enter**控制台**窗口，停止调试。  
+3. 在中按 Enter**控制台**窗口，停止调试。  
   
 ## <a name="updating-an-entity"></a>更新实体  
  在以下步骤中，您将检索一个 `Customer` 对象并修改其属性之一。  
@@ -156,15 +156,15 @@ ms.locfileid: "54626922"
   
 #### <a name="to-submit-changes-to-the-database"></a>将更改提交到数据库  
   
-1.  将下面的代码插入到 `Console.ReadLine` 上方紧靠它的位置：  
+1. 将下面的代码插入到 `Console.ReadLine` 上方紧靠它的位置：  
   
      [!code-vb[DLinqWalk3VB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#6)]  
   
-2.  将下面的代码插入到 `SubmitChanges` 后面，以显示提交更改前后的效果：  
+2. 将下面的代码插入到 `SubmitChanges` 后面，以显示提交更改前后的效果：  
   
      [!code-vb[DLinqWalk3VB#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#7)]  
   
-3.  按 F5 调试解决方案。  
+3. 按 F5 调试解决方案。  
   
      控制台窗口显示如下：  
   
@@ -181,10 +181,11 @@ ms.locfileid: "54626922"
     Customer ID: RICAR  
     ```  
   
-4.  在中按 Enter**控制台**窗口，停止调试。  
+4. 在中按 Enter**控制台**窗口，停止调试。  
   
 > [!NOTE]
 >  通过提交更改添加了新的客户后，您无法再次按原样执行此解决方案，因为您无法再次按原样添加相同的客户。 若要再次执行此解决方案，请更改要添加的客户 ID 值。  
   
 ## <a name="see-also"></a>请参阅
+
 - [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

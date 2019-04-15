@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 9657d9ec23b0e67625521ee595bc693eb7b992a4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843118"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301160"
 ---
 # <a name="-platform-visual-basic"></a>平台 (Visual Basic)
 指定公共语言运行时 (CLR) 的哪个平台版本可以运行输出文件。  
@@ -68,9 +68,9 @@ ms.locfileid: "58843118"
   
 ### <a name="to-set--platform-in-the-visual-studio-ide"></a>若要设置的 Visual Studio IDE 中的平台  
   
-1.  在中**解决方案资源管理器**，选择项目，打开**项目**菜单，并单击**属性**。  
+1. 在中**解决方案资源管理器**，选择项目，打开**项目**菜单，并单击**属性**。  
   
-2.  上**编译**选项卡上，选中或清除**首选 32 位**复选框，或者，在**目标 CPU**列表中，选择一个值。  
+2. 上**编译**选项卡上，选中或清除**首选 32 位**复选框，或者，在**目标 CPU**列表中，选择一个值。  
   
      有关详细信息，请参阅[编译页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
   

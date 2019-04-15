@@ -2,12 +2,12 @@
 title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: dc95b1a31d582f255740152a235b9ca5e67cf5c6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c7e4dc540458bbfb69318d2f14cfa9776f444c55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411312"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172817"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
 为自定义绑定指定用于传输 SOAP 消息的 HTTP 传输。  
@@ -71,16 +71,16 @@ ms.locfileid: "58411312"
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
- 
-  `httpsTransport` 元素是创建实现 HTTPS 传输协议的自定义绑定的起始点。 HTTPS 是用于安全互操作性用途的主要传输。 通过 Windows Communication Foundation (WCF) 以确保与其他 Web 服务堆栈的互操作支持 HTTPS。  
+ `httpsTransport` 元素是创建实现 HTTPS 传输协议的自定义绑定的起始点。 HTTPS 是用于安全互操作性用途的主要传输。 通过 Windows Communication Foundation (WCF) 以确保与其他 Web 服务堆栈的互操作支持 HTTPS。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Configuration.HttpsTransportElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [选择传输方式](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [绑定](../../../../../docs/framework/wcf/bindings.md)
 - [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 81a442cc39608e6b24db1f0403e85ee627fc4244
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376360"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298326"
 ---
 # <a name="brush-transformation-overview"></a>Brush 变换概述
 Brush 类提供两个转换属性：<xref:System.Windows.Media.Brush.Transform%2A>和<xref:System.Windows.Media.Brush.RelativeTransform%2A>。 使用这些属性，可以旋转、缩放、倾斜和转换画笔的内容。 本主题介绍这两个属性之间的区别，并提供有关它们的用法示例。  
@@ -29,15 +29,15 @@ Brush 类提供两个转换属性：<xref:System.Windows.Media.Brush.Transform%2
   
  当转换应用到画笔的<xref:System.Windows.Media.Brush.RelativeTransform%2A>属性，该转换应用到画笔输出映射到已绘制区域之前。 以下列表介绍处理和转换画笔内容的顺序。  
   
-1.  处理画笔的内容。 有关<xref:System.Windows.Media.GradientBrush>，这意味着确定渐变区域。 有关<xref:System.Windows.Media.TileBrush>，则<xref:System.Windows.Media.TileBrush.Viewbox%2A>映射到<xref:System.Windows.Media.TileBrush.Viewport%2A>。 这成为画笔的输出。  
+1. 处理画笔的内容。 有关<xref:System.Windows.Media.GradientBrush>，这意味着确定渐变区域。 有关<xref:System.Windows.Media.TileBrush>，则<xref:System.Windows.Media.TileBrush.Viewbox%2A>映射到<xref:System.Windows.Media.TileBrush.Viewport%2A>。 这成为画笔的输出。  
   
-2.  将画笔的输出投影到 1 x 1 的转换矩形上。  
+2. 将画笔的输出投影到 1 x 1 的转换矩形上。  
   
-3.  应用画笔的<xref:System.Windows.Media.Brush.RelativeTransform%2A>，如果有的话。  
+3. 应用画笔的<xref:System.Windows.Media.Brush.RelativeTransform%2A>，如果有的话。  
   
-4.  将转换后的输出投影到要绘制的区域上。  
+4. 将转换后的输出投影到要绘制的区域上。  
   
-5.  应用画笔的<xref:System.Windows.Media.Transform>，如果有的话。  
+5. 应用画笔的<xref:System.Windows.Media.Transform>，如果有的话。  
   
  因为<xref:System.Windows.Media.Brush.RelativeTransform%2A>画笔的输出映射到 1 x 1 的矩形，转换中心和偏移的值看起来是相对时应用。 例如，如果您使用<xref:System.Windows.Media.RotateTransform>旋转画笔的输出围绕其中心的 45 度，您将为<xref:System.Windows.Media.RotateTransform><xref:System.Windows.Media.RotateTransform.CenterX%2A>为 0.5 和<xref:System.Windows.Media.RotateTransform.CenterY%2A>为 0.5。  
   
@@ -61,19 +61,19 @@ Brush 类提供两个转换属性：<xref:System.Windows.Media.Brush.Transform%2
   
  请注意，图像会扭曲，即使画笔<xref:System.Windows.Media.TileBrush.Stretch%2A>已设置为<xref:System.Windows.Media.Stretch.UniformToFill>。 这是因为后的画笔应用相对转换<xref:System.Windows.Media.TileBrush.Viewbox%2A>映射到其<xref:System.Windows.Media.TileBrush.Viewport%2A>。 以下列表介绍该过程的每个步骤：  
   
-1.  项目将画笔的内容 (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) 到其基本磁贴上 (<xref:System.Windows.Media.TileBrush.Viewport%2A>) 使用画笔的<xref:System.Windows.Media.TileBrush.Stretch%2A>设置。  
+1. 项目将画笔的内容 (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) 到其基本磁贴上 (<xref:System.Windows.Media.TileBrush.Viewport%2A>) 使用画笔的<xref:System.Windows.Media.TileBrush.Stretch%2A>设置。  
   
      ![拉伸 Viewbox 以适合于视区](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
   
-2.  将基本图块投影到 1 x 1 的转换矩形上。  
+2. 将基本图块投影到 1 x 1 的转换矩形上。  
   
      ![将 Viewport 映射到转换矩形](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
   
-3.  将应用<xref:System.Windows.Media.RotateTransform>。  
+3. 将应用<xref:System.Windows.Media.RotateTransform>。  
   
      ![应用相对转换 ](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
   
-4.  将转换后的基本图块投影到要绘制的区域上。  
+4. 将转换后的基本图块投影到要绘制的区域上。  
   
      ![将转换后的画笔投影到输出区域上](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   
@@ -98,10 +98,11 @@ Brush 类提供两个转换属性：<xref:System.Windows.Media.Brush.Transform%2
  此示例摘自一个更大的示例。 有关完整示例，请参阅[画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)。 有关画笔的详细信息，请参阅 [WPF 画笔概述](wpf-brushes-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Media.Brush.Transform%2A>
 - <xref:System.Windows.Media.Brush.RelativeTransform%2A>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Brush>
 - [使用纯色和渐变进行绘制概述](painting-with-solid-colors-and-gradients-overview.md)
-- [使用图像、绘图和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
-- [转换概述](transforms-overview.md)
+- [使用图像、图形和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
+- [变换概述](transforms-overview.md)

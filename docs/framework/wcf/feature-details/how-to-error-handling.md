@@ -2,12 +2,12 @@
 title: 如何：错误处理
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-ms.openlocfilehash: 7b173997eb53f8cf156ccb14083885a199dc8921
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493592"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334986"
 ---
 # <a name="how-to-error-handling"></a>如何：错误处理
 本主题概述了创建采用错误处理的路由配置所需要的基本步骤。 在本示例中，消息路由到目标终结点。 如果消息因网络或通信相关故障 (<xref:System.ServiceModel.CommunicationException>) 而无法传递，则会将消息重新发送到备用终结点。  
@@ -22,7 +22,7 @@ ms.locfileid: "33493592"
   
 ### <a name="implement-error-handling"></a>实现错误处理  
   
-1.  通过指定由服务公开的服务终结点，创建基本的路由服务配置。 下面的示例将定义一个用于接收消息的服务终结点， 还定义了用于发送消息的客户端终结点；即 deadDestination 和 realDestination。 deadDestination 终结点包含一个未引用正在运行的服务的地址，且该终结点用于模拟向此终结点发送消息时的网络故障。  
+1. 通过指定由服务公开的服务终结点，创建基本的路由服务配置。 下面的示例将定义一个用于接收消息的服务终结点， 还定义了用于发送消息的客户端终结点；即 deadDestination 和 realDestination。 deadDestination 终结点包含一个未引用正在运行的服务的地址，且该终结点用于模拟向此终结点发送消息时的网络故障。  
   
     ```xml  
     <services>  
@@ -57,7 +57,7 @@ ms.locfileid: "33493592"
     </client>  
     ```  
   
-2.  定义用于将消息路由到目标终结点的筛选器。  对于本示例，MatchAll 筛选器用于匹配路由服务接收的所有消息。  
+2. 定义用于将消息路由到目标终结点的筛选器。  对于本示例，MatchAll 筛选器用于匹配路由服务接收的所有消息。  
   
     ```xml  
     <filters>  
@@ -66,7 +66,7 @@ ms.locfileid: "33493592"
     </filters>  
     ```  
   
-3.  定义备份终结点列表，该列表包含在向主目标终结点发送消息期间发生网络或通信故障时，消息发送到的目标终结点。 下面的示例定义的备份列表仅包含一个终结点；但是，可以在备份列表中指定多个终结点。  
+3. 定义备份终结点列表，该列表包含在向主目标终结点发送消息期间发生网络或通信故障时，消息发送到的目标终结点。 下面的示例定义的备份列表仅包含一个终结点；但是，可以在备份列表中指定多个终结点。  
   
      如果备份列表包含多个终结点，则当发生网络或通信故障时，路由服务会尝试将消息发送到该列表中的第一个终结点。 如果在发送到此终结点时发生网络或通信故障，路由服务会尝试将消息发送到该列表包含的下一个终结点。 该服务将继续向备份终结点列表中的每个终结点发送消息，直到成功发送此消息、所有备份终结点均返回网络或通信相关错误，或者发送消息但终结点返回非网络和通信相关错误为止。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "33493592"
     </backupLists>  
     ```  
   
-4.  定义筛选器表，该筛选器表将筛选器与 deadDestination 终结点和备份终结点列表相关联。  路由服务首先尝试向与筛选器关联的目标终结点发送消息。 由于 deadDestination 包含一个未引用正在运行的服务的地址，因此，这会导致网络错误。 然后，路由服务尝试向 backupEndpointlist 中指定的终结点发送消息。  
+4. 定义筛选器表，该筛选器表将筛选器与 deadDestination 终结点和备份终结点列表相关联。  路由服务首先尝试向与筛选器关联的目标终结点发送消息。 由于 deadDestination 包含一个未引用正在运行的服务的地址，因此，这会导致网络错误。 然后，路由服务尝试向 backupEndpointlist 中指定的终结点发送消息。  
   
     ```xml  
     <filterTables>  
@@ -92,7 +92,7 @@ ms.locfileid: "33493592"
           </filterTables>  
     ```  
   
-5.  若要根据筛选器表中包含的筛选器对传入消息求值，必须使用路由行为将筛选器表与服务终结点相关联。  下面的示例演示将"filterTable1"与服务终结点。  
+5. 若要根据筛选器表中包含的筛选器对传入消息求值，必须使用路由行为将筛选器表与服务终结点相关联。  下面的示例演示将"filterTable1"与服务终结点。  
   
     ```xml  
     <behaviors>  

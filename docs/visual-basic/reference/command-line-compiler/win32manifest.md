@@ -6,12 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: bd9a708b99d11b90e47c3413bb0003ce2def13a1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 15fe62457ed11ffcd08a1db3aa8be57080f22869
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300793"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 标识用户定义的 Win32 应用程序清单文件要嵌入到项目的可移植可执行 (PE) 文件。  
@@ -38,9 +38,9 @@ ms.locfileid: "58833708"
   
  如果以下条件之一为 true，你的应用程序会受到虚拟化：  
   
-1.  您使用`-nowin32manifest`选项，并且不提供清单，在更高版本的生成步骤中或者在 Windows 资源 (.res) 文件通过使用`-win32resource`选项。  
+1. 您使用`-nowin32manifest`选项，并且不提供清单，在更高版本的生成步骤中或者在 Windows 资源 (.res) 文件通过使用`-win32resource`选项。  
   
-2.  提供的自定义清单未指定请求执行级别。  
+2. 提供的自定义清单未指定请求执行级别。  
   
  Visual Studio 创建默认 .manifest 文件，并将它与可执行文件一起存储在“调试”和“发布”目录中。 您可以查看或编辑默认应用程序清单文件，方法是单击**查看 UAC 设置**上**应用程序**项目设计器中的选项卡。 有关详细信息，请参阅 [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)（应用程序页、项目设计器 (Visual Basic)。  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: d8efb783fcb5bcbe9c4ee99bc784e27a1aebb0cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707659"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228895"
 ---
 # <a name="system-information-and-windows-forms"></a>系统信息和 Windows 窗体
 有时有必要收集有关你的应用程序运行才能在你的代码中进行决策的计算机的信息。 例如，可能有一个函数，则仅当连接到特定网络域; 适用在这种情况下需要一种方法来确定域并禁用函数，如果域不存在。  
@@ -43,5 +43,6 @@ MessageBox.Show("Good morning " + User + ". You are connected to " _
  一些更有用的成员<xref:System.Windows.Forms.SystemInformation>类包含<xref:System.Windows.Forms.SystemInformation.ComputerName%2A>， <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>， <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>，和<xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.SystemInformation>
 - [Windows 窗体中的电源管理](power-management-in-windows-forms.md)

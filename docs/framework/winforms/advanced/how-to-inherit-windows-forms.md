@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720860"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314537"
 ---
 # <a name="how-to-inherit-windows-forms"></a>如何：继承 Windows 窗体
 通过从基窗体继承创建新的 Windows 窗体是事半功倍的便捷途径，而每次需要用它时，都无需完全重新创建窗体。  
@@ -25,9 +25,9 @@ ms.locfileid: "57720860"
   
 ### <a name="to-inherit-a-form-programmatically"></a>若要以编程方式继承窗体  
   
-1.  在类中，添加对命名空间的引用，该命名空间包含想要被继承的窗体。  
+1. 在类中，添加对命名空间的引用，该命名空间包含想要被继承的窗体。  
   
-2.  在类定义中，将引用添加到将被继承的窗体。 引用应包括包含窗体的命名空间，后跟一个句点，然后是基本窗体本身的名称。  
+2. 在类定义中，将引用添加到将被继承的窗体。 引用应包括包含窗体的命名空间，后跟一个句点，然后是基本窗体本身的名称。  
   
     ```vb  
     Public Class Form2  
@@ -41,7 +41,8 @@ ms.locfileid: "57720860"
  当继承窗体时，请记住，由于每个事件是由基类和继承类一起进行处理的，所以事件处理程序被调用两次时可能会出现问题。 若要深入了解如何避免此问题，请参阅[有关 Visual Basic 中继承的事件处理程序的疑难解答](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [Inherits 语句](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+
+- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports 语句（.NET 命名空间和类型）](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
 - [修改基窗体的外观的效果](effects-of-modifying-base-form-appearance.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: c42dd74ea0dc01b8ae7ffb7eb04737a9784625a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308609"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 语句 (Visual Basic)
 强制显式声明所有变量在文件中，或允许隐式声明的变量。  
@@ -47,11 +47,11 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>若要在 IDE 中设置 Option Explicit  
   
-1.  在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。  
+1. 在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。  
   
-2.  单击“编译”选项卡。  
+2. 单击“编译”选项卡。  
   
-3.  中的值设置**Option Explicit**框。  
+3. 中的值设置**Option Explicit**框。  
   
  创建一个新项目时**Option Explicit**上设置**编译**选项卡设置为**Option Explicit**中设置**VB 默认值**对话框。 访问**VB 默认值**对话框中，在**工具**菜单中，单击**选项**。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 中的初始默认设置**VB 默认值**是`On`。  
   
@@ -71,7 +71,7 @@ Option Explicit { On | Off }
 - [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [ReDim 语句](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Option Compare 语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)

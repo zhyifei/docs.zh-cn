@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data [Windows Forms], formatting in grids
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
-ms.openlocfilehash: 60fc567a700bdfc8cfe088f4d31a68fd5de9aa29
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b5c055bdd12a4bede6e77233726c697de424a055
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722043"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158634"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的数据格式设置
 <xref:System.Windows.Forms.DataGridView>控件提供了单元格的值与父列显示的数据类型之间的自动转换。 文本中的列，例如，显示日期、 时间、 数字和枚举值的字符串表示形式，并将用户输入的字符串值转换为数据存储所需的类型。  
@@ -32,9 +32,10 @@ ms.locfileid: "57722043"
  如果用户指定的值的默认分析不满足你的需求，则可以处理<xref:System.Windows.Forms.DataGridView.CellParsing>事件的<xref:System.Windows.Forms.DataGridView>控件提供自定义分析。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - [在 Windows 窗体 DataGridView 控件中显示数据](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Windows 窗体 DataGridView 控件中的单元格样式](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [如何：Windows 中的数据格式窗体 DataGridView 控件](how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [如何：自定义 Windows 窗体 DataGridView 控件中的数据格式设置](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [如何：设置 Windows 窗体 DataGridView 控件中的数据格式](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [如何：在 Windows 窗体 DataGridView 控件中自定义数据格式设置](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

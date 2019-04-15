@@ -2,19 +2,19 @@
 title: 如何：通过非 MEX 绑定检索元数据
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 04acde96d7e712d8c6bc64988775a37fc79aaeab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074152"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345945"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>如何：通过非 MEX 绑定检索元数据
 本主题介绍如何通过非 MEX 绑定从 MEX 终结点检索元数据。 在此示例中的代码基于[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示例。  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>通过非 MEX 绑定检索元数据  
   
-1.  确定由 MEX 终结点使用的绑定。 对于 Windows Communication Foundation (WCF) 服务，可以通过访问服务的配置文件来确定 MEX 绑定。 在本例中，MEX 绑定在以下服务配置中定义。  
+1. 确定由 MEX 终结点使用的绑定。 对于 Windows Communication Foundation (WCF) 服务，可以通过访问服务的配置文件来确定 MEX 绑定。 在本例中，MEX 绑定在以下服务配置中定义。  
   
     ```xml  
     <services>  
@@ -48,7 +48,7 @@ ms.locfileid: "59074152"
      </bindings>  
     ```  
   
-2.  在客户端配置文件中，配置同样的自定义绑定。 在该配置文件中，客户端还定义了一个 `clientCredentials` 行为以提供证书，用于在请求 MEX 终结点中的元数据时对服务进行身份验证。 在使用 Svcutil.exe 通过自定义绑定请求元数据时，应向 Svcutil.exe 的配置文件 (Svcutil.exe.config) 中添加 MEX 终结点配置，并且终结点配置的名称应与 MEX 终结点地址的 URI 架构匹配，如下面的代码所示。  
+2. 在客户端配置文件中，配置同样的自定义绑定。 在该配置文件中，客户端还定义了一个 `clientCredentials` 行为以提供证书，用于在请求 MEX 终结点中的元数据时对服务进行身份验证。 在使用 Svcutil.exe 通过自定义绑定请求元数据时，应向 Svcutil.exe 的配置文件 (Svcutil.exe.config) 中添加 MEX 终结点配置，并且终结点配置的名称应与 MEX 终结点地址的 URI 架构匹配，如下面的代码所示。  
   
     ```xml  
     <system.serviceModel>  
@@ -83,7 +83,7 @@ ms.locfileid: "59074152"
     </system.serviceModel>  
     ```  
   
-3.  创建一个 `MetadataExchangeClient` 并调用 `GetMetadata`。 有两种方法可以完成此操作：在配置中指定自定义绑定，或在代码中指定自定义绑定，如下面的示例所示。  
+3. 创建一个 `MetadataExchangeClient` 并调用 `GetMetadata`。 有两种方法可以完成此操作：在配置中指定自定义绑定，或在代码中指定自定义绑定，如下面的示例所示。  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -114,14 +114,14 @@ ms.locfileid: "59074152"
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4.  创建 `WsdlImporter` 并调用 `ImportAllEndpoints`，如下面的代码所示。  
+4. 创建 `WsdlImporter` 并调用 `ImportAllEndpoints`，如下面的代码所示。  
   
     ```  
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  此时，您拥有服务终结点的集合。 有关导入元数据的详细信息，请参阅[如何：元数据导入服务终结点](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
+5. 此时，您拥有服务终结点的集合。 有关导入元数据的详细信息，请参阅[如何：元数据导入服务终结点](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -1,14 +1,14 @@
 ---
 title: ML.NET 内容指南
 description: 了解如何使用 ML.NET 生成自定义 AI 解决方案并将其集成到 .NET 应用程序。
-ms.date: 01/18/2019
+ms.date: 04/05/2019
 ms.custom: seodec18
-ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: de681daea5a29a121d350271ced4ccc2c0b1b533
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231326"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET 内容指南
 
@@ -33,7 +33,11 @@ ms.locfileid: "58920761"
 
 [使用回归模型预测价格](./tutorials/taxi-fare.md)演示如何构建一个使用历史数据中的许多因素来确定答案的预测性应用程序。
 
-[根据特征对鸢尾花进行分类](./tutorials/iris-clustering.md)演示如何使用聚类分析模型来分析鸢尾花数据集。 
+[根据特征对鸢尾花进行分类](./tutorials/iris-clustering.md)演示如何使用聚类分析模型来分析鸢尾花数据集。
+
+[使用 ML.NET 创建影片推荐系统](./tutorials/movie-recommmendation.md)演示如何生成推荐应用，以基于用户的历史记录向用户推荐影片。
+
+[使用 TensorFlow 生成 ML.NET 自定义图像分类器](./tutorials/image-classification.md)：演示如何重新训练现有 Tensorflow 模型，以使用 ML.NET 创建自定义图像分类器。
 
 ## <a name="how-to-guide"></a>操作指南
 
@@ -46,7 +50,6 @@ ms.locfileid: "58920761"
 [机器学习任务](./resources/tasks.md)描述任务，例如分类和异常情况检测。 
 
 [数据转换](./resources/transforms.md)介绍 ML.NET 中的数据准备功能。
-
 
 ## <a name="api-reference"></a>API 参考
 

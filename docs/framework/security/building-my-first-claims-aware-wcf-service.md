@@ -3,12 +3,12 @@ title: 生成我的第一个声明感知 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: c982fae4fdbdd4963c92b17b609d517056c34b95
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 13a17473388582e5fa72cd8d335b6a05204ea509
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825763"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306607"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>生成我的第一个声明感知 WCF 服务
 ## <a name="applies-to"></a>适用于  
@@ -22,11 +22,11 @@ ms.locfileid: "58825763"
   
  ![WIF 基本声明感知 WCF 服务组件的图示。](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
   
-1.  WCF 服务客户端（有时称为代理）使用 WIF 将凭据发送到 STS，在成功完成身份验证后，STS 将向此代理颁发令牌。  
+1. WCF 服务客户端（有时称为代理）使用 WIF 将凭据发送到 STS，在成功完成身份验证后，STS 将向此代理颁发令牌。  
   
-2.  代理会将 STS 颁发的令牌发送到 WCF 服务。  
+2. 代理会将 STS 颁发的令牌发送到 WCF 服务。  
   
-3.  声明感知 WCF 服务将配置为信任此 STS 及其颁发的令牌。 声明感知 WCF 服务使用 WIF 验证此令牌并对其进行分析。 开发人员使用适当的 WIF API 和类型（例如 ClaimsPrincipal）来满足应用程序的需要，如对其实现授权。  
+3. 声明感知 WCF 服务将配置为信任此 STS 及其颁发的令牌。 声明感知 WCF 服务使用 WIF 验证此令牌并对其进行分析。 开发人员使用适当的 WIF API 和类型（例如 ClaimsPrincipal）来满足应用程序的需要，如对其实现授权。  
   
  从 .NET 4.5 开始，WIF 便已成为 .NET Framework 包的一部分。 通过使 WIF 类直接在框架中可用，可以在 .NET 中更深度地集成基于声明的标识，从而更轻松地使用声明。 如果使用 WIF 4.5，则无需安装任何带外组件即可开始开发声明感知 Web 应用程序。 WIF 类现在分布在各种程序集中，主要为 System.Security.Claims、System.IdentityModel 和 System.IdentityModel.Services。  
   
@@ -41,4 +41,5 @@ ms.locfileid: "58825763"
  若要生成第一个声明感知 WCF 服务使用 WIF，请参阅[How To:WCF Web 服务应用程序启用 WIF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)。
   
 ## <a name="see-also"></a>请参阅
+
 - [WIF 入门](../../../docs/framework/security/getting-started-with-wif.md)

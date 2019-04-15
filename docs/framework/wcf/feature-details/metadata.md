@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-ms.openlocfilehash: 515bb3cb074fde1fb4631f6e273dab11c55ae19a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10b93f94a5a5193513e20eed4571aaf8f6c882a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629693"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174013"
 ---
 # <a name="metadata"></a>元数据
 Windows Communication Foundation (WCF) 提供了用于导出、 发布、 检索和导入服务元数据的基础结构。 WCF 服务使用元数据来描述如何与服务的终结点交互，以便诸如 Svcutil.exe 之类的工具，可以自动生成用于访问服务的客户端代码。  
@@ -33,8 +33,9 @@ Windows Communication Foundation (WCF) 提供了用于导出、 发布、 检索
  [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  描述使用服务元数据的不同方式。  
   
- [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
  描述在处理服务元数据时的一些重要安全注意事项。  
   
 ## <a name="see-also"></a>请参阅
+
 - [扩展元数据系统](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

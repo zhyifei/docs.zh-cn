@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: fc54bbf8053c07cc3b48a762b6f1c60344de9921
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aad068b5857eb956ded63fa2a57cb163d3cf5c58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822565"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322688"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>没有类的显式实例，就无法从共享方法或共享成员初始值设定项中引用该类的实例成员
 已尝试对从共享的过程中的类的非共享成员，请参阅。 下面的示例演示了这种情况。  
@@ -37,11 +37,11 @@ End Class
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  决定要在类的所有实例间共享或保留单独为每个实例的成员。  
+1. 决定要在类的所有实例间共享或保留单独为每个实例的成员。  
   
-2.  如果你想要在所有实例间共享的成员的一个副本，添加`Shared`向成员声明关键字。 保留`Shared`过程声明中的关键字。  
+2. 如果你想要在所有实例间共享的成员的一个副本，添加`Shared`向成员声明关键字。 保留`Shared`过程声明中的关键字。  
   
-3.  如果您希望每个实例具有其自己的成员的单独副本，未指定`Shared`成员声明。 删除`Shared`过程声明中的关键字。  
+3. 如果您希望每个实例具有其自己的成员的单独副本，未指定`Shared`成员声明。 删除`Shared`过程声明中的关键字。  
   
 ## <a name="see-also"></a>请参阅
 

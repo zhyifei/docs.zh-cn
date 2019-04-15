@@ -2,12 +2,12 @@
 title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 1b2c4615445a906d1c48f386288a3d21e1e1f470
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84a5bc763f898b3d323a6cee468c6e22d27d85a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229597"
 ---
 # <a name="udpbinding"></a>\<udpBinding>
 用于配置 <xref:System.ServiceModel.UdpBinding> 绑定的配置元素。  
@@ -81,7 +81,7 @@ ms.locfileid: "55758724"
  UdpBinding 允许 WCF 服务通过 UDP 传输进行通信。 它允许"发后不理"消息交换的客户端向服务发送一条消息并不期望收到回复。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 <<xref:System.ServiceModel.UdpBinding>> 元素配置 `udpBinding`。  
+ 下面的示例演示如何配置<xref:System.ServiceModel.UdpBinding>使用 <`udpBinding`> 元素。  
   
 ```xml  
 <udpBinding>
@@ -104,6 +104,7 @@ ms.locfileid: "55758724"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>

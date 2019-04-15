@@ -4,12 +4,12 @@ description: Microsoft WCF Web Service Reference Provider 工具概述，该工�
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3566a92e05c03cc77e59a14e3b2521a1d6d0758a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3452a6a598e255dd9a32629d8ef0589b88f9c00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197069"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>使用 WCF Web Service Reference Provider 工具
 
@@ -54,7 +54,6 @@ ms.locfileid: "53245569"
     
     3c. 单击“下一步”按钮，打开“数据类型选项”页和“客户端选项”页。 或者，单击“完成”按钮，使用默认选项。
 
-
 4. “数据类型选项”窗体可用于优化生成的服务引用配置设置：
 
 ![.NET Core 的“Visual Studio 数据类型选项”选项卡](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
@@ -65,7 +64,6 @@ ms.locfileid: "53245569"
 加载类型信息时可能会有延迟，具体取决于项目依赖项和其他系统性能因素的数量。 加载过程中，“完成”按钮被禁用，除非未选中“重新使用引用程序集中的类型”复选框。
 
 5. 完成后，单击“完成”。
-
 
 在显示进度的同时，工具：
 

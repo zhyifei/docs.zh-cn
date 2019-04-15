@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 0abb1bd25c40ba55806fe80b39db1ac418f3f308
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77090a9f22dcf3d55739aa03535bee863793d858
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700944"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172882"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 类型不匹配
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以自动完成对象模型和 SQL Server 之间的大量转换。 不过，有一些情况会阻碍进行精确转换。 以下各部分将介绍公共语言运行库 (CLR) 类型与 SQL Server 数据库类型之间的主要不匹配。 您可以找到有关特定类型映射和函数转换在更多详细信息[SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)并[数据类型及函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以自动进行大部分的对象模型和 SQL Server 之间的转换。 不过，有一些情况会阻碍进行精确转换。 以下各部分将介绍公共语言运行库 (CLR) 类型与 SQL Server 数据库类型之间的主要不匹配。 您可以找到有关特定类型映射和函数转换在更多详细信息[SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)并[数据类型及函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)。  
   
 ## <a name="data-types"></a>数据类型  
  将查询发送给数据库时和将结果发送回对象模型时，CLR 和 SQL Server 之间将发生转换。 例如，下面的 Transact-SQL 查询需要进行两次值转换：  
@@ -116,9 +116,9 @@ or col1 != col2
 ### <a name="type-conversion-and-promotion"></a>类型转换和提升  
  SQL 支持在表达式中使用一组丰富的隐式转换。 C# 中的类似表达式则需要显式强制转换。 例如：  
   
--   `Nvarchar` 和 `DateTime` 类型在 SQL 中可以不经过任何显式强制转换进行比较，而在 C# 中则需要显式转换。  
+-   `Nvarchar` 和`DateTime`而无需任何显式强制转换; 可以在 SQL 中进行比较类型C#需要显式转换。  
   
--   `Decimal` 在 SQL 中隐式转换为 `DateTime`。 C# 不允许使用隐式转换。  
+-   `Decimal` 隐式转换为`DateTime`SQL 中。 C# 不允许使用隐式转换。  
   
  同样，由于基础类型集不同，Transact-SQL 中的类型优先级与 C# 中的类型优先级不同。 实际上，在优先级列表之间没有明确的子集/父集关系。 例如，将 `nvarchar` 和 `varchar` 进行比较会导致 `varchar` 表达式隐式转换为 `nvarchar`。 CLR 不提供等效的提升。  
   
@@ -146,7 +146,7 @@ Where Col1 = Col2
   
  实际上，排序规则子句会创建*受限类型*不可替换。  
   
- 同样，各个类型系统的排序顺序会有明显差异。 这种差异会影响到结果排序。 <xref:System.Guid> 对全部 16 个字节按字典顺序排序 (`IComparable()`)，而 T-SQL 按下面的顺序比较 GUID：node(10-15)、clock-seq(8-9)、time-high(6-7)、time-mid(4-5)、time-low(0-3)。 当 NT 生成的 GUID 具有类似的八位字节顺序时，此排序在 SQL 7.0 中完成。 该方法确保在同一节点群集上生成的 GUID 按时间戳的顺序集合。 该方法还可用于生成索引（插入改为追加而不是随机 IO）。 出于保密考虑，该顺序稍后在 Windows 中加密，但 SQL 必须维护兼容性。 一种解决方法是使用<xref:System.Data.SqlTypes.SqlGuid>而不是<xref:System.Guid>。  
+ 同样，各个类型系统的排序顺序会有明显差异。 这种差异会影响到结果排序。 <xref:System.Guid> 对全部 16 个字节按字典顺序进行排序 (`IComparable()`)，而 T-SQL 按以下顺序比较 Guid: node(10-15)、 clock-seq(8-9)、 time-high(6-7)、 time-mid(4-5)、 time-low(0-3)。 当 NT 生成的 GUID 具有类似的八位字节顺序时，此排序在 SQL 7.0 中完成。 该方法确保在同一节点群集上生成的 GUID 按时间戳的顺序集合。 该方法还可用于生成索引（插入改为追加而不是随机 IO）。 出于保密考虑，该顺序稍后在 Windows 中加密，但 SQL 必须维护兼容性。 一种解决方法是使用<xref:System.Data.SqlTypes.SqlGuid>而不是<xref:System.Guid>。  
   
 ### <a name="operator-and-function-differences"></a>运算符和函数差异  
  本质上可比较的运算符和函数在语义上稍有不同。 例如：  
@@ -157,7 +157,7 @@ Where Col1 = Col2
   
     -   松散转换为`AND` / `OR`运算符可能导致错误，如果C#表达式依赖于计算基于第一个操作数的计算结果的第二个操作数。  
   
--   `Round()` 函数在 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 和 T-SQL 中具有不同的语义。  
+-   `Round()` 函数具有不同的语义[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]和 T-SQL 中。  
   
 -   字符串的起始索引在 CLR 中是 0，而在 SQL 中是 1。 因此，任何具有索引的函数都需要进行索引转换。  
   
@@ -265,7 +265,7 @@ Where Col1 + Col2 > 4
   
 -   类型转换（无论是由 CLR 编译器引入还是由对象关系查询实现引入）可能会限制索引的使用。  
   
-     例如，  
+     例如，应用于对象的  
   
     ```  
     -- Table DDL  
@@ -294,4 +294,5 @@ Where Col1 + Col2 > 4
  除了语义差异，考虑在 SQL Server 与 CLR 类型系统之间切换时对性能的影响非常重要。 对于大型数据集，此类性能问题可能决定应用程序是否可部署。  
   
 ## <a name="see-also"></a>请参阅
+
 - [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

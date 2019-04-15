@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: ff68a8bee17b55f7865d6f6c289ba514729be70d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155930"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>在客户端应用程序中使用数据服务（WCF 数据服务）
 您可以访问公开的服务[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源向 Web 浏览器提供 URI。 URI 提供某个资源的地址，系统将向这些地址发送请求消息以访问或更改该资源表示的基础数据。 浏览器发出 HTTP GET 命令，并以 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源的形式返回请求的资源。 有关详细信息，请参阅[从 Web 浏览器访问服务](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)。  
@@ -21,7 +21,7 @@ ms.locfileid: "56093433"
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 有助于保证公开的服务之间的互操作性[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]馈送和使用的应用程序[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]馈送。 应用程序访问和更改数据在[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于通过发送特定 HTTP 操作的寻址应该对其执行操作的实体资源的 URI，且请求消息的服务。 如果必须提供实体数据，则会在消息正文中以明确编码的负载的形式提供该数据。  
   
 ### <a name="http-actions"></a>HTTP 操作  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持下列 HTTP 操作，以对寻址的资源所表示的实体数据执行创建、读取、更新和删除操作：  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持以下的 HTTP 操作，以执行创建、 读取、 更新和删除寻址的资源表示的实体数据的操作：  
   
 -   **HTTP GET** -这是默认操作时从浏览器访问的资源。 请求消息中不提供负载，将返回具有包含所请求数据的负载的响应方法。  
   
@@ -52,5 +52,6 @@ ms.locfileid: "56093433"
  有现成的编程库可用于使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源中其他类型的客户端应用程序。 有关详细信息，请参阅[OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [访问数据服务资源](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
 - [快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

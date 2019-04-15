@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 70b8e2f28559d5fc54736db1319d2309aa5b86a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5fb175bdd255af1b506dacb973a778b1f6f515f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111327"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329344"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>如何：使用 Windows 凭据保护服务的安全
 本主题演示如何启用驻留在 Windows 域，并且由同一个域中的客户端调用的 Windows Communication Foundation (WCF) 服务上的传输安全。 有关此方案的详细信息，请参阅[使用 Windows 身份验证的传输安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 示例应用程序，请参阅[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)示例。  
@@ -30,15 +30,15 @@ ms.locfileid: "59111327"
   
 #### <a name="to-create-a-wshttpbinding-that-uses-windows-credentials-and-message-security"></a>创建使用 Windows 凭据和消息安全的 WSHttpBinding  
   
-1.  在“示例”一节的服务代码中，将此过程的代码插入到 `Run` 类的 `Test` 方法开头。  
+1. 在“示例”一节的服务代码中，将此过程的代码插入到 `Run` 类的 `Test` 方法开头。  
   
-2.  创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例。  
+2. 创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例。  
   
-3.  将 <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> 类的 <xref:System.ServiceModel.WSHttpSecurity> 属性设置为 <xref:System.ServiceModel.SecurityMode.Message>。  
+3. 将 <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> 类的 <xref:System.ServiceModel.WSHttpSecurity> 属性设置为 <xref:System.ServiceModel.SecurityMode.Message>。  
   
-4.  将 <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 类的 <xref:System.ServiceModel.MessageSecurityOverHttp> 属性设置为 <xref:System.ServiceModel.MessageCredentialType.Windows>。  
+4. 将 <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 类的 <xref:System.ServiceModel.MessageSecurityOverHttp> 属性设置为 <xref:System.ServiceModel.MessageCredentialType.Windows>。  
   
-5.  此过程的代码如下：  
+5. 此过程的代码如下：  
   
      [!code-csharp[c_SecureWindowsService#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#1)]
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
@@ -48,19 +48,19 @@ ms.locfileid: "59111327"
   
 ##### <a name="to-use-a-binding-in-a-service"></a>在服务中使用绑定  
   
-1.  在上一过程的代码之后插入此过程的代码。  
+1. 在上一过程的代码之后插入此过程的代码。  
   
-2.  创建一个名为 <xref:System.Type> 的 `contractType` 变量，并为其分配接口类型 (`ICalculator`)。 当使用 Visual Basic，使用`GetType`运算符; 在使用 C# 中，使用`typeof`关键字。  
+2. 创建一个名为 <xref:System.Type> 的 `contractType` 变量，并为其分配接口类型 (`ICalculator`)。 当使用 Visual Basic，使用`GetType`运算符; 在使用 C# 中，使用`typeof`关键字。  
   
-3.  创建另一个名为 <xref:System.Type> 的 `serviceType` 变量，并为其分配所实现的协定的类型 (`Calculator`)。  
+3. 创建另一个名为 <xref:System.Type> 的 `serviceType` 变量，并为其分配所实现的协定的类型 (`Calculator`)。  
   
-4.  使用该服务的基址创建 <xref:System.Uri> 类的一个实例，该实例名为 `baseAddress`。 基址必须具有与传输匹配的方案。 在这种情况下，传输方案为 HTTP，且地址包含特殊的统一资源标识符 (URI)"localhost"和端口号 (8036) 以及终结点基址 ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`。  
+4. 使用该服务的基址创建 <xref:System.Uri> 类的一个实例，该实例名为 `baseAddress`。 基址必须具有与传输匹配的方案。 在这种情况下，传输方案为 HTTP，且地址包含特殊的统一资源标识符 (URI)"localhost"和端口号 (8036) 以及终结点基址 ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`。  
   
-5.  使用 <xref:System.ServiceModel.ServiceHost> 和 `serviceType` 变量创建 `baseAddress` 类的一个实例。  
+5. 使用 <xref:System.ServiceModel.ServiceHost> 和 `serviceType` 变量创建 `baseAddress` 类的一个实例。  
   
-6.  使用 `contractType`、绑定和终结点名称 (secureCalculator) 将一个终结点添加到服务中。 在启动对服务的调用时，客户端必须将基址和终结点名称连接起来。  
+6. 使用 `contractType`、绑定和终结点名称 (secureCalculator) 将一个终结点添加到服务中。 在启动对服务的调用时，客户端必须将基址和终结点名称连接起来。  
   
-7.  调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 方法以启动该服务。 此过程的代码如下所示：  
+7. 调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 方法以启动该服务。 此过程的代码如下所示：  
   
      [!code-csharp[c_SecureWindowsService#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#2)]
      [!code-vb[c_SecureWindowsService#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#2)]  
@@ -74,19 +74,19 @@ ms.locfileid: "59111327"
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>通过代码在客户端中使用绑定  
   
-1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 有关详细信息，请参阅[如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承<xref:System.ServiceModel.ClientBase%601>类，该类可确保每个客户端具有必要的构造函数、 方法和属性与 WCF 服务进行通信。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
+1. 使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 有关详细信息，请参阅[如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承<xref:System.ServiceModel.ClientBase%601>类，该类可确保每个客户端具有必要的构造函数、 方法和属性与 WCF 服务进行通信。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
   
-2.  在客户端程序的 `Main` 方法的开头插入此过程的代码。  
+2. 在客户端程序的 `Main` 方法的开头插入此过程的代码。  
   
-3.  创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例，并且将其安全模式设置为 `Message`，将其客户端凭据类型设置为 `Windows`。 本示例将变量命名为 `clientBinding`。  
+3. 创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例，并且将其安全模式设置为 `Message`，将其客户端凭据类型设置为 `Windows`。 本示例将变量命名为 `clientBinding`。  
   
-4.  创建 <xref:System.ServiceModel.EndpointAddress> 类的一个实例，该实例名为 `serviceAddress`。 将基址与终结点名称连接起来以初始化该实例。  
+4. 创建 <xref:System.ServiceModel.EndpointAddress> 类的一个实例，该实例名为 `serviceAddress`。 将基址与终结点名称连接起来以初始化该实例。  
   
-5.  使用 `serviceAddress` 和 `clientBinding` 变量创建所生成的客户端类的一个实例。  
+5. 使用 `serviceAddress` 和 `clientBinding` 变量创建所生成的客户端类的一个实例。  
   
-6.  调用 <xref:System.ServiceModel.ClientBase%601.Open%2A> 方法，如下面的代码所示。  
+6. 调用 <xref:System.ServiceModel.ClientBase%601.Open%2A> 方法，如下面的代码所示。  
   
-7.  调用服务并显示结果。  
+7. 调用服务并显示结果。  
   
      [!code-csharp[c_secureWindowsClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#1)]
      [!code-vb[c_secureWindowsClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#1)]  
@@ -100,15 +100,15 @@ ms.locfileid: "59111327"
   
 #### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>使用配置在 Windows 域中的服务上启用传输安全  
   
-1.  添加[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素节的配置文件。  
+1. 添加[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素节的配置文件。  
   
-2.  添加 <`binding`> 元素为 <`WSHttpBinding`> 元素，并设置`configurationName`属性为适合于你的应用程序的值。  
+2. 添加 <`binding`> 元素为 <`WSHttpBinding`> 元素，并设置`configurationName`属性为适合于你的应用程序的值。  
   
-3.  添加 <`security`> 元素，并设置`mode`属性为消息。  
+3. 添加 <`security`> 元素，并设置`mode`属性为消息。  
   
-4.  添加 <`message`> 元素，并设置`clientCredentialType`属性到 Windows。  
+4. 添加 <`message`> 元素，并设置`clientCredentialType`属性到 Windows。  
   
-5.  在服务的配置文件中，使用下面的代码替换 `<bindings>` 节。 如果你还没有服务配置文件，请参阅[到配置服务和客户端使用的绑定](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
+5. 在服务的配置文件中，使用下面的代码替换 `<bindings>` 节。 如果你还没有服务配置文件，请参阅[到配置服务和客户端使用的绑定](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   
     ```xml  
     <bindings>  
@@ -127,17 +127,17 @@ ms.locfileid: "59111327"
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>通过配置在客户端中使用绑定  
   
-1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码和配置文件。 有关详细信息，请参阅[如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+1. 使用 SvcUtil.exe 工具根据服务的元数据生成代理代码和配置文件。 有关详细信息，请参阅[如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
-2.  替换[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)部分与上一节中的配置代码生成的配置文件。  
+2. 替换[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)部分与上一节中的配置代码生成的配置文件。  
   
-3.  在客户端程序的 `Main` 方法的开头插入程序代码。  
+3. 在客户端程序的 `Main` 方法的开头插入程序代码。  
   
-4.  通过将配置文件中的绑定名称作为输入参数进行传递，创建所生成的客户端类的实例。  
+4. 通过将配置文件中的绑定名称作为输入参数进行传递，创建所生成的客户端类的实例。  
   
-5.  调用 <xref:System.ServiceModel.ClientBase%601.Open%2A> 方法，如下面的代码所示。  
+5. 调用 <xref:System.ServiceModel.ClientBase%601.Open%2A> 方法，如下面的代码所示。  
   
-6.  调用服务并显示结果。  
+6. 调用服务并显示结果。  
   
      [!code-csharp[c_secureWindowsClient#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#2)]  
   

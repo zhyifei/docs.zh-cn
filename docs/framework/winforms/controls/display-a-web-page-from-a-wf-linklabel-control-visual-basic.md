@@ -1,5 +1,5 @@
 ---
-title: 如何：显示 Windows 窗体 LinkLabel 控件 (Visual Basic 中) 中的网页
+title: 如何：通过 Windows 窗体 LinkLabel 控件显示 Web 页面 (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: 7e80dba9cd43385be016506ac2a7e887a68dedf2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1be9ff06e749d14b46946e899c6ffb6c3a950d65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170022"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>如何：显示 Windows 窗体 LinkLabel 控件 (Visual Basic 中) 中的网页
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>如何：通过 Windows 窗体 LinkLabel 控件显示 Web 页面 (Visual Basic)
 此示例在默认浏览器中显示网页，当用户单击 Windows 窗体<xref:System.Windows.Forms.LinkLabel>控件。  
   
 ## <a name="example"></a>示例  
@@ -50,5 +50,6 @@ End Sub
  对调用<xref:System.Diagnostics.Process.Start%2A>方法需要完全信任。 有关详细信息，请参阅 <xref:System.Security.SecurityException>。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.LinkLabel>
 - [LinkLabel 控件](linklabel-control-windows-forms.md)

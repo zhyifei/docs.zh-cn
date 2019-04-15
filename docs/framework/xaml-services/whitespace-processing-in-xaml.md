@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102227"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294920"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML 中的空白处理
 XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器实现。 本主题介绍这些 XAML 语言规则。 它还介绍了由定义的其他空格处理[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]XAML 处理器和序列化的 XAML 编写器的实现。  
@@ -25,15 +25,15 @@ XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla
 ## <a name="white-space-normalization"></a>空格规范化  
  默认情况下出现以下空格标准化时[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器处理[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]文件：  
   
-1.  删除中文字符间的换行符。 有关此术语的定义，请稍后参阅本主题中的“中文字符”一节。  
+1. 删除中文字符间的换行符。 有关此术语的定义，请稍后参阅本主题中的“中文字符”一节。  
   
-2.  所有空白字符 （空格、 换行符、 选项卡） 都转换为空格。  
+2. 所有空白字符 （空格、 换行符、 选项卡） 都转换为空格。  
   
-3.  删除所有连续的空格，并替换为一个空格。  
+3. 删除所有连续的空格，并替换为一个空格。  
   
-4.  删除开始标记后紧跟的一个空格。  
+4. 删除开始标记后紧跟的一个空格。  
   
-5.  删除结束标记前紧跟的一个空格。  
+5. 删除结束标记前紧跟的一个空格。  
   
  “默认”对应于由 [xml: space](xml-space-handling-in-xaml.md) 属性的默认值表示的状态。  
   

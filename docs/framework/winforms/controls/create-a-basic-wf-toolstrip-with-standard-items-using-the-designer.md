@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 9f0224a9360d7ce31a85883902c9668b4a1158b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: df6fe22eef338732c14d6f1ff56f25e6d1aa8a2a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119283"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332165"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>如何：创建含有标准项使用设计器的基本 Windows 窗体 ToolStrip
 下面的过程演示如何创建<xref:System.Windows.Forms.ToolStrip>并添加七个<xref:System.Windows.Forms.ToolStripButton>表示典型任务的控件。  
@@ -22,11 +22,11 @@ ms.locfileid: "59119283"
   
 ### <a name="to-add-standard-items-in-the-designer"></a>若要在设计器中添加标准项  
   
-1.  创建<xref:System.Windows.Forms.ToolStrip>控件。  
+1. 创建<xref:System.Windows.Forms.ToolStrip>控件。  
   
-2.  在右上角<xref:System.Windows.Forms.ToolStrip>，单击智能任务箭头以显示**ToolStrip 任务**窗格。  
+2. 在右上角<xref:System.Windows.Forms.ToolStrip>，单击智能任务箭头以显示**ToolStrip 任务**窗格。  
   
-3.  在中**ToolStrip 任务**窗格中，选择**插入标准项**。  
+3. 在中**ToolStrip 任务**窗格中，选择**插入标准项**。  
   
 ## <a name="see-also"></a>请参阅
 

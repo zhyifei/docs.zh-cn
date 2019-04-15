@@ -5,41 +5,41 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442290"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319997"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑难解答快速入门
 本主题列出了一些客户开发 WCF 客户端和服务时所遇到的已知问题。 如果您遇到的问题不在此列表中，我们建议您为您的服务配置跟踪。 这将生成一个跟踪文件，您可以使用跟踪文件查看器查看它并获取有关服务中可能发生的异常的详细信息。 有关配置跟踪的详细信息，请参阅：[配置跟踪](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 跟踪文件查看器的详细信息，请参阅：[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
   
-1.  [安装 Windows 7 和 IIS 后，当我尝试浏览到 WCF 服务时收到以下错误消息：HTTP 错误 404.3 – 找不到](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
+1. [安装 Windows 7 和 IIS 后，当我尝试浏览到 WCF 服务时收到以下错误消息：HTTP 错误 404.3 – 找不到](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
   
      HTTP 错误 404.3 – 找不到：由于扩展配置，无法提供您请求的页面。 如果此页是脚本，请添加处理程序。 如果应下载文件，请添加 MIME 映射。 详细错误 InformationModule StaticFileModule。  
   
-2.  [如果我的客户端在第一次请求后暂时处于空闲，有时我会在第二次请求时收到 MessageSecurityException。发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
+2. [如果我的客户端在第一次请求后暂时处于空闲，有时我会在第二次请求时收到 MessageSecurityException。 发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
   
-3.  [大约有 10 个客户端与我的服务交互后，我的服务开始拒绝新的客户端。发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
+3. [大约有 10 个客户端与我的服务交互后，我的服务开始拒绝新的客户端。 发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
   
-4.  [我是否可以从 WCF 应用程序的配置文件以外的某处加载我的服务配置？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
+4. [我是否可以从 WCF 应用程序的配置文件以外的某处加载我的服务配置？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
   
-5.  [我的服务和客户端工作得很好，但是当客户端位于另一台计算机上时，为何就无法正常工作？发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
+5. [我的服务和客户端工作得很好，但是当客户端位于另一台计算机上时，为何就无法正常工作？ 发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6.  [当我引发 FaultException\<异常 > 的类型为异常，我总是接收客户端上的一个常规 FaultException 类型而不是泛型类型。发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6. [当我引发 FaultException\<异常 > 的类型为异常，我总是接收客户端上的一个常规 FaultException 类型而不是泛型类型。 发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
-7.  [当答复未包含任何数据时，单向操作与请求-答复操作的返回速度似乎基本相同。发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
+7. [当答复未包含任何数据时，单向操作与请求-答复操作的返回速度似乎基本相同。 发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
-8.  [我对我的服务使用的是 X.509 证书，并且获得一个 System.Security.Cryptography.CryptographicException。发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
+8. [我对我的服务使用的是 X.509 证书，并且获得一个 System.Security.Cryptography.CryptographicException。 发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
   
-9. [我将操作的第一个参数从大写更改为了小写，现在我的客户端引发一个异常。发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
+9. [我将操作的第一个参数从大写更改为了小写，现在我的客户端引发一个异常。 发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
   
-10. [我正在使用我的跟踪工具之一，并且获得一个 EndpointNotFoundException。发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q99)  
+10. [我正在使用我的跟踪工具之一，并且获得一个 EndpointNotFoundException。 发生了什么情况？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q99)  
   
 11. [从 WCF SOAP 应用程序调用 WCF Web HTTP 应用程序时该服务将返回以下错误：不允许使用 405 方法](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BK_MK99)  
   
- [何为基址？它如何关联到一个终结点地址？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
+ [何为基址？ 它如何关联到一个终结点地址？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
   
 <a name="bkmk_0"></a>   
 ## <a name="after-installing-windows-7-and-iis-when-i-attempt-to-browse-to-a-wcf-service-i-get-the-following-error-message-http-error-4043--not-found"></a>安装 Windows 7 和 IIS 后，当我尝试浏览到 WCF 服务时收到以下错误消息：HTTP 错误 404.3 – 找不到  
@@ -250,4 +250,5 @@ public string Echo(string input)
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [调试 Windows 身份验证错误](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

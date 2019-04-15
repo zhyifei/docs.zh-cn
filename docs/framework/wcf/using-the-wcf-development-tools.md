@@ -2,12 +2,12 @@
 title: 使用 WCF 开发工具
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: e9a398ac6914582d299658e3e45d17ea5468917d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ffa3be4a6b8976ab978ea995e8b2c1faaacf0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144633"
 ---
 # <a name="using-the-wcf-development-tools"></a>使用 WCF 开发工具
 本部分介绍可以帮助您开发 WCFservice 的 Visual Studio 开发工具。  
@@ -27,7 +27,7 @@ ms.locfileid: "54712085"
   
  WCF 测试客户端 (WcfTestClient.exe) 是一个 GUI 工具，您可以输入任意类型的参数，将该服务，以及查看发回响应服务输入提交。 它提供了完美的服务测试体验与 WCF 服务自动主机结合使用时。  
   
- [通过 XML 生成数据类型类](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
+ [从 XML 生成数据类型类](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
   
  可将存储在剪贴板中的 XML 数据粘贴到代码页中。 数据中定义的类将被转换为代码类型。  
   
@@ -43,6 +43,7 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  有关 Netsh.exe 的详细信息，请参阅[如何使用 Netsh.exe 工具和命令行开关](https://go.microsoft.com/fwlink/?LinkId=97877)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [WCF Visual Studio 模板](../../../docs/framework/wcf/wcf-vs-templates.md)
 - [WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
 - [WCF 测试客户端 (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

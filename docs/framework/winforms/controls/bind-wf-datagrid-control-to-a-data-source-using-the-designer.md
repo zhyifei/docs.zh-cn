@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: a7b03ab5417eacf7962f2a05b674ceb45c7d558c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fe54c650e1d19f36d681053c7da47e12527c5827
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115721"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320881"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>如何：使用设计器将 Windows 窗体 DataGrid 控件绑定到数据源
 
@@ -37,11 +37,11 @@ ms.locfileid: "59115721"
   
 ### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>若要对单个表设计器中数据绑定的 DataGrid 控件  
   
-1.  设置控件的<xref:System.Windows.Forms.DataGrid.DataSource%2A>属性设置为包含你想要将绑定到的数据项目的对象。  
+1. 设置控件的<xref:System.Windows.Forms.DataGrid.DataSource%2A>属性设置为包含你想要将绑定到的数据项目的对象。  
   
-2.  如果数据集数据源，则设置<xref:System.Windows.Forms.DataGrid.DataMember%2A>属性设置为要绑定到的表的名称。  
+2. 如果数据集数据源，则设置<xref:System.Windows.Forms.DataGrid.DataMember%2A>属性设置为要绑定到的表的名称。  
   
-3.  如果数据源的数据集或数据视图基于数据集表，将代码添加到窗体来填充数据集。  
+3. 如果数据源的数据集或数据视图基于数据集表，将代码添加到窗体来填充数据集。  
   
      所使用的确切代码取决于数据集从何处获取数据。 如果要直接从数据库填充数据集，则通常会调用`Fill`的数据适配器，如下面的代码示例使用一个称为数据集来填充中所示方法`DsCategories1`:  
   
@@ -57,17 +57,17 @@ ms.locfileid: "59115721"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  （可选）将适当的表样式和列样式添加到网格中。  
+4. （可选）将适当的表样式和列样式添加到网格中。  
   
      如果没有表样式，您将看到表中，但其格式设置很少，且所有列均可见。  
   
 ### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>若要对多个表中的数据集设计器中数据绑定的 DataGrid 控件  
   
-1.  设置控件的<xref:System.Windows.Forms.DataGrid.DataSource%2A>属性设置为包含你想要将绑定到的数据项目的对象。  
+1. 设置控件的<xref:System.Windows.Forms.DataGrid.DataSource%2A>属性设置为包含你想要将绑定到的数据项目的对象。  
   
-2.  如果数据集包含相关的表 （即，如果它包含关系对象），请将<xref:System.Windows.Forms.DataGrid.DataMember%2A>属性设置为父表的名称。  
+2. 如果数据集包含相关的表 （即，如果它包含关系对象），请将<xref:System.Windows.Forms.DataGrid.DataMember%2A>属性设置为父表的名称。  
   
-3.  编写代码以填充数据集。  
+3. 编写代码以填充数据集。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -14,17 +14,16 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366599"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301030"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML 的 XAML 命名空间和命名空间映射
 本主题进一步解释通常在 WPF XAML 文件的根标记中出现的两个 XAML 命名空间映射的存在性和用途。 此外，还介绍如何生成相似映射以使用代码中和/或单独程序集内定义的元素。  
-  
-  
+
 ## <a name="what-is-a-xaml-namespace"></a>什么是 XAML 命名空间？  
  XAML 命名空间实际上是 XML 命名空间概念的扩展。 指定 XAML 命名空间的方法依赖于 XML 命名空间语法、将 URI 用作命名空间标识符以及使用前缀提供从相同标记源引用多个命名空间等约定。 XML 命名空间的 XAML 定义增添的主要概念是，XAML 命名空间表示标记用法唯一性范围，还影响标记实体可如何受特定 CLR 命名空间和引用程序集支持。 后者也会受 XAML 架构上下文概念影响。 但是出于 WPF 如何处理 XAML 命名空间的目的，对于默认 XAML 命名空间、XAML 语言命名空间以及任何其他由 XAML 标记直接映射到特定支持 CLR 命名空间和引用程序集的 XAML 命名空间，可通常考虑为 XAML 命名空间。  
   
@@ -48,9 +47,9 @@ ms.locfileid: "57366599"
   
  此语法采用以下可能的已命名标记和以下值：  
   
- `clr-namespace:` 在程序集中声明的 CLR 命名空间，此程序集包含要作为元素公开的公共类型。  
+ `clr-namespace:` 包含要作为元素公开的公共类型的程序集内声明的 CLR 命名空间。  
   
- `assembly=` 包含部分或全部引用 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空间的程序集。 此值通常为程序集的名称而不是路径，且不包含扩展名（例如 .dll 或 .exe）。 程序集路径必须创建为包含要映射的 XAML 的项目文件中的项目引用。 版本控制和强名称签名，`assembly`值可以是字符串由定义<xref:System.Reflection.AssemblyName>，而不是简单的字符串名称。  
+ `assembly=` 包含部分或全部引用的程序集[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]命名空间。 此值通常为程序集的名称而不是路径，且不包含扩展名（例如 .dll 或 .exe）。 程序集路径必须创建为包含要映射的 XAML 的项目文件中的项目引用。 版本控制和强名称签名，`assembly`值可以是字符串由定义<xref:System.Reflection.AssemblyName>，而不是简单的字符串名称。  
   
  请注意，分隔 `clr-namespace` 标记和其值的字符是冒号 (:)，而分隔 `assembly` 标记和其值的字符为等号 (=)。 这两个标记之间应使用的字符是分号。 此外，不包括任何空白区域任何位置的声明中。  
   
@@ -100,7 +99,7 @@ End Namespace
 ```  
   
 ### <a name="mapping-to-current-assemblies"></a>映射到当前程序集  
- 如果要在与引用自定义类的应用程序代码相同的程序集内定义引用的 `clr-namespace`，则可省略 `assembly`。 或者，这种情况的等效语法是指定 `assembly=` 且等号后不含任何字符串标记。  
+ `assembly` 如果，则可以省略`clr-namespace`引用所引用的自定义类的应用程序代码在同一程序集中定义。 或者，这种情况的等效语法是指定 `assembly=` 且等号后不含任何字符串标记。  
   
  如果在同一程序集中定义，则自定义类无法用作页面的根元素。 分部类无需映射；仅需映射应用程序中不是页面分部类的类（若要将其引用为 XAML 中的元素）。  
   
@@ -113,22 +112,22 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>设计器命名空间和 XAML 模板中的其他前缀  
  如果使用 WPF XAML 的开发环境和/或设计工具，你可能会注意到 XAML 标记内存在其他定义的 XAML 命名空间/前缀。  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 使用通常映射到前缀 `d:` 的设计器命名空间。 WPF 的较新项目模板可能会预映射此 XAML 命名空间，以支持 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 和其他设计环境之间的交换。 此设计 XAML 命名空间用于在设计器中往返基于 XAML 的 UI 时保持设计状态。 它也用于 `d:IsDataSource`（在设计器中启用运行时数据源）等功能。  
+ [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 使用通常映射到前缀的设计器命名空间`d:`。 WPF 的较新项目模板可能会预映射此 XAML 命名空间，以支持 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 和其他设计环境之间的交换。 此设计 XAML 命名空间用于在设计器中往返基于 XAML 的 UI 时保持设计状态。 它也用于 `d:IsDataSource`（在设计器中启用运行时数据源）等功能。  
   
- 可能看到的另一个映射前缀是 `mc:`。 `mc:` 用于标记兼容，使用一种并不一定特定于 XAML 的标记兼容模式。 某种程度上，标记兼容功能可用于在框架之间或跨后备实现的其他边界交换 XAML、在 XAML 架构上下文之间运行、为设计器中限制模式提供兼容性等。 标记兼容概念和如何与 WPF 的关系的详细信息，请参阅[标记兼容 (mc:)语言功能](markup-compatibility-mc-language-features.md)。  
+ 可能看到的另一个映射前缀是 `mc:`。 `mc:` 用于标记的兼容性，并利用不一定是特定于 XAML 的标记兼容性模式。 某种程度上，标记兼容功能可用于在框架之间或跨后备实现的其他边界交换 XAML、在 XAML 架构上下文之间运行、为设计器中限制模式提供兼容性等。 标记兼容概念和如何与 WPF 的关系的详细信息，请参阅[标记兼容 (mc:)语言功能](markup-compatibility-mc-language-features.md)。  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF 和程序集加载  
  WPF 的 XAML 架构上下文与 WPF 应用程序模型，后者又使用的 CLR 定义概念<xref:System.AppDomain>。 以下序列描述 XAML 架构上下文如何解释如何加载程序集或查找类型在运行的时或设计时，根据 WPF 使用的<xref:System.AppDomain>和其他因素。  
   
-1.  循环访问<xref:System.AppDomain>，寻找匹配名称的所有方面的已加载程序集，从最近加载的程序集。  
+1. 循环访问<xref:System.AppDomain>，寻找匹配名称的所有方面的已加载程序集，从最近加载的程序集。  
   
-2.  如果名称限定，调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名称。  
+2. 如果名称限定，调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名称。  
   
-3.  如果限定名称的短名称和公钥标记匹配从中加载标记的程序集，则返回此程序集。  
+3. 如果限定名称的短名称和公钥标记匹配从中加载标记的程序集，则返回此程序集。  
   
-4.  使用短名称和公钥标记调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
+4. 使用短名称和公钥标记调用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
   
-5.  如果非限定名称，调用<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>。  
+5. 如果非限定名称，调用<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>。  
   
  宽松型 XAML 不使用步骤 3；不存在从中加载标记的程序集。  
   
@@ -137,5 +136,6 @@ End Namespace
  虽然 BAML 也不应包含非限定程序集名称，但是已编译 BAML（通过 PresentationBuildTask 生成）会使用所有步骤。  
   
 ## <a name="see-also"></a>请参阅
+
 - [了解 XML 命名空间](https://go.microsoft.com/fwlink/?LinkId=98069)
 - [XAML 概述 (WPF)](xaml-overview-wpf.md)

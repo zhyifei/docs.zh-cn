@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 了�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 68f88d29a6c88f4ce261a0a2794035d43db1fc0c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826728"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921099"
 ---
 # <a name="common-web-application-architectures"></a>常用 Web 应用程序体系结构
 
@@ -30,7 +30,7 @@ ms.locfileid: "55826728"
 
 ![](./media/image5-1.png)
 
-**图 5-1**。 单项目 ASP.NET Core 应用。
+**图 5-1.** 单项目 ASP.NET Core 应用。
 
 在单项目方案中，通过使用文件夹实现关注点分离。 默认模板包括单独的文件夹，对应于 MVC 模式中的模型、视图和控制器，以及其他数据和服务文件夹。 在这种结构安排中，应尽可能地将展现逻辑限制在“Views”文件夹，将数据访问逻辑限制在“Data”文件夹中保存的类。 业务逻辑应位于“Models”文件夹内的服务和类中。
 
@@ -61,7 +61,7 @@ ms.locfileid: "55826728"
 
 ![](./media/image5-2.png)
 
-**图 5-2**。 典型的应用程序层次。
+**图 5-2.** 典型的应用程序层次。
 
 这些层经常简称为 UI、BLL（业务逻辑层）和 DAL（数据访问层）。 使用此体系结构，用户可通过 UI 层（仅与 BLL 交互）提出请求。 反过来，BLL 可为数据访问请求调用 DAL。 UI 层不应直接向 DAL 提出任何请求，也不得通过其他途径直接与持久性发生交互。 同样，BLL 应仅通过 DAL 与持久性发生交互。 通过这种方式，每层都有自己熟知的职责。
 
@@ -71,19 +71,19 @@ ms.locfileid: "55826728"
 
 ![](./media/image5-3.png)
 
-**图 5-3**。 具有三个项目的简单整体式应用程序。
+**图 5-3.** 具有三个项目的简单整体式应用程序。
 
 尽管出于组织架构目的，此应用程序使用多个项目，但它仍作为单一单位进行部署，且其客户端以单一 Web 应用的形式与其交互。 这使部署过程变得非常简单。 图 5-4 展示了如何使用 Azure 托管此类应用。
 
 ![](./media/image5-4.png)
 
-**图 5-4**。 Azure Web 应用简单部署
+**图 5-4.** Azure Web 应用简单部署
 
 随着应用程序需求增长，可能需要更复杂、更可靠的部署解决方案。 图 5-5 展示了支持其他功能、更复杂的部署计划示例。
 
 ![](./media/image5-5.png)
 
-**图 5-5**。 将 Web 应用部署到 Azure 应用服务
+**图 5-5.** 将 Web 应用部署到 Azure 应用服务
 
 在内部，此项目的组织根据职责分为多个项目，提高了应用程序的可维护性。
 
@@ -93,7 +93,7 @@ ms.locfileid: "55826728"
 
 ![](./media/image5-6.png)
 
-**如 5-6**。 Azure 中的应用服务计划缩放。
+**图 5-6.** Azure 中的应用服务计划缩放。
 
 ## <a name="clean-architecture"></a>干净体系结构
 
@@ -106,7 +106,7 @@ ms.locfileid: "55826728"
 
 ![](./media/image5-7.png)
 
-**图 5-7**。 干净体系结构，洋葱视图
+**图 5-7.** 干净体系结构，洋葱视图
 
 在此关系图中，依赖关系流向最里面的圆。 “应用程序内核”因其位于此关系图的核心位置而得名。 从关系图上可见，该应用程序内核在其他应用程序层上没有任何依赖项。 应用程序的实体和接口位于正中心。 在外圈但仍在应用程序核心中的是域服务，它通常实现内圈中定义的接口。 在应用程序内核外面，UI 和基础结构层均依赖于应用程序内核，但不一定彼此依赖。
 
@@ -114,7 +114,7 @@ ms.locfileid: "55826728"
 
 ![](./media/image5-8.png)
 
-**图 5-8**。 干净体系结构，水平层次视图
+**图 5-8.** 干净体系结构，水平层次视图
 
 注意，实线箭头表示编译时依赖关系，而虚线箭头表示仅运行时依赖关系。 使用干净体系结构，UI 层可使用编译时应用程序内核中定义的接口，理想情况下不应知道体系结构层中定义的实现类型。 但是在运行时，这些实现类型是应用执行所必需的，因此它们需要存在并通过依赖关系注入接通应用程序内核接口。
 
@@ -122,17 +122,17 @@ ms.locfileid: "55826728"
 
 ![ASPNET Core 体系结构](./media/image5-9.png)
 
-**图 5-9**。 遵循干净体系结构的 ASP.NET Core 体系结构关系图。
+**图 5-9.** 遵循干净体系结构的 ASP.NET Core 体系结构关系图。
 
 由于应用程序内核不依赖于基础结构，可轻松为此层次编写自动化单元测试。 图 5-10 和 5-11 展示了测试如何适应此体系结构。
 
 ![UnitTestCore](./media/image5-10.png)
 
-**图 5-10**。 隔离状态下的单元测试应用程序内核。
+**图 5-10.** 隔离状态下的单元测试应用程序内核。
 
 ![IntegrationTests](./media/image5-11.png)
 
-**图 5-11**。 使用外部依赖关系的集成测试基础结构实现。
+**图 5-11.** 使用外部依赖关系的集成测试基础结构实现。
 
 由于 UI 层对基础结构项目中定义的类型没有任何直接依赖关系，同样，可轻松交换实现，无论是为便于测试还是为应对不断变化的应用程序要求。 ASP.NET Core 对内置依赖关系注入的使用及相关支持使此体系结构最适合用于构造重要的整体式应用程序。
 
@@ -140,7 +140,7 @@ ms.locfileid: "55826728"
 
 ![ASP.NET Core 体系结构 2](./media/image5-12.png)
 
-**图 5-12**。 示例 ASP.NET Core 应用的运行时体系结构。
+**图 5-12.** 示例 ASP.NET Core 应用的运行时体系结构。
 
 ### <a name="organizing-code-in-clean-architecture"></a>采用干净体系结构排列代码
 
@@ -263,7 +263,7 @@ networks:
 `docker-compose.yml` 文件引用 `Web` 项目中的 `Dockerfile`。 `Dockerfile` 用于指定将要使用的基容器以及在该容器上配置应用程序的方式。 `Web`' `Dockerfile`：
 
 ```
-FROM microsoft/dotnet:2.2-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
 COPY *.sln .
@@ -273,7 +273,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
 

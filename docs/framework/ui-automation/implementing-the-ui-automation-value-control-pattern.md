@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 8a306fe648c42e1e94126f10b0d4c92f9dfc8831
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cccaf1afa55d786e43863e094a9745a0a1d00870
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174949"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>实现 UI 自动化 Value 控件模式
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "57678068"
   
 -   <xref:System.Windows.Automation.Provider.IValueProvider> 不支持检索格式设置信息或子字符串值。 在这些情况下，请实现 <xref:System.Windows.Automation.Provider.ITextProvider> 。  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> 必须由诸如 **中的“颜色选取器”**[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 选择控件（如下所示）之类的控件实现，该控件支持颜色值（例如，“黄色”）与等效的内部 [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] 结构之间的字符串映射。  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> 必须由控件如实现**颜色选取器**选择控件[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]（如下所示），它支持颜色值 （例如，"黄色"） 与等效的内部之间的字符串映射[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]结构。  
   
  ![突出显示黄色的颜色选取器。](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 颜色样本字符串映射的示例  
@@ -49,9 +49,9 @@ ms.locfileid: "57678068"
   
 |必需的成员|成员类型|说明|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|属性|无|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|属性|无|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|方法|无|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|属性|None|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|属性|None|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|方法|None|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceptions  
@@ -64,6 +64,7 @@ ms.locfileid: "57678068"
 |<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -当尝试操作一个未启用的控件。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

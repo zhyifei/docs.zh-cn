@@ -1,13 +1,13 @@
 ---
-title: <message> 元素 <wsFederationHttpBinding>
+title: <message> 元素（来自  <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: d5e5ba1785dd5c6c3aaeccd5bdd7ac4443f85661
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 79739dd715d7982555e5577c921cb65156af5923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223809"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<消息 > 元素的\<wsFederationHttpBinding >
 定义的消息级安全性设置[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
@@ -93,7 +93,7 @@ ms.locfileid: "55759114"
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |Basic128|使用 Basic128 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。|  
 |Basic192|使用 Basic192 加密，对消息摘要使用 Sha1，对密钥包装使用 Rsa-oaep-mgf1p。|  
@@ -125,9 +125,10 @@ ms.locfileid: "55759114"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|定义绑定的安全设置。|  
+|[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|定义绑定的安全设置。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>

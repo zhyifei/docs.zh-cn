@@ -9,20 +9,19 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825373"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318931"
 ---
 # <a name="decision-structures-visual-basic"></a>决策结构 (Visual Basic)
 Visual Basic，可以测试条件，然后执行不同操作，具体取决于该测试的结果。 你可以测试条件是 true 或 false 的各种值的表达式，或生成时执行的一系列语句的各种异常。  
   
  下图显示了测试条件为 true，并采用不同的操作，具体取决于是否，则返回 true 或 false 的决策结构。  
   
- ![If 的流程图...然后...其他构造](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "IfThenElse")  
-条件为 true，并且为 false 时执行不同操作  
+ ![如果流图表...然后...其他构造。](./media/decision-structures/if-then-else-construction.gif)  
   
 ## <a name="ifthenelse-construction"></a>如果...然后...其他构造  
  `If...Then...Else` 构造，可以对一个或多个条件测试，并运行一个或多个语句，具体取决于每个条件。 您可以测试条件，然后按以下方式执行操作：  

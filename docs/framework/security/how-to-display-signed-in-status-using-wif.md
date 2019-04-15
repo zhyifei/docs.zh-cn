@@ -3,12 +3,12 @@ title: 如何：使用 WIF 显示登录状态
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: 7d3d23dc1f2e081c0a7c53fbdfaef749c9729fd4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584376"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311027"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>如何：使用 WIF 显示登录状态
 ## <a name="applies-to"></a>适用于  
@@ -56,48 +56,48 @@ ms.locfileid: "48584376"
   
 #### <a name="to-install-the-identity-and-access-extension"></a>安装标识和访问扩展  
   
-1.  以管理员身份在提升模式下启动 Visual Studio。  
+1. 以管理员身份在提升模式下启动 Visual Studio。  
   
-2.  在 Visual Studio 中，单击“工具”，然后单击“展开管理器”。 此时将打开“扩展管理器”窗口。  
+2. 在 Visual Studio 中，单击“工具”，然后单击“展开管理器”。 此时将打开“扩展管理器”窗口。  
   
-3.  在“扩展管理器”中，单击左侧菜单中的“联机扩展”，然后选择“Visual Studio 库”。  
+3. 在“扩展管理器”中，单击左侧菜单中的“联机扩展”，然后选择“Visual Studio 库”。  
   
-4.  在“扩展管理器”的右上角，搜索“标识和访问”。  
+4. 在“扩展管理器”的右上角，搜索“标识和访问”。  
   
-5.  此时将在搜索结果中显示“标识和访问”项。 单击该项，然后单击“下载”。  
+5. 此时将在搜索结果中显示“标识和访问”项。 单击该项，然后单击“下载”。  
   
-6.  此时将打开“下载并安装”对话框。 如果同意许可条款，请单击“安装”。  
+6. 此时将打开“下载并安装”对话框。 如果同意许可条款，请单击“安装”。  
   
-7.  “标识和访问”扩展安装完成后，在管理员模式下重启 Visual Studio。  
+7. “标识和访问”扩展安装完成后，在管理员模式下重启 Visual Studio。  
   
 ## <a name="step-2--create-a-relying-party-aspnet-application"></a>步骤 2 – 创建信赖方 ASP.NET 应用程序  
  此步骤介绍如何创建与 WIF 集成的信赖方 ASP.NET Web 窗体应用程序。  
   
 #### <a name="to-create-a-simple-aspnet-application"></a>创建一个简单 ASP.NET 应用程序  
   
-1.  启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。  
+1. 启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。  
   
-2.  在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。  
+2. 在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。  
   
-3.  在“名称”中，输入 `TestApp`，然后按“确定”。  
+3. 在“名称”中，输入 `TestApp`，然后按“确定”。  
   
 ## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a>步骤 3 – 启用本地开发 STS 以验证用户身份  
  此步骤介绍如何在应用程序中启用本地开发 STS。 使用 Visual Studio 的标识和访问扩展可启用本地开发 STS。  
   
 #### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a>在 ASP.NET 应用程序中启用本地开发 STS  
   
-1.  在 Visual Studio 中，右键单击“解决方案资源管理器”下的“TestApp”项目，然后选择“标识和访问”。  
+1. 在 Visual Studio 中，右键单击“解决方案资源管理器”下的“TestApp”项目，然后选择“标识和访问”。  
   
-2.  “标识和访问”窗口随即出现。 在“提供程序”下，选择“使用本地开发 STS 测试应用程序”，然后单击“应用”。  
+2. “标识和访问”窗口随即出现。 在“提供程序”下，选择“使用本地开发 STS 测试应用程序”，然后单击“应用”。  
   
 ## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a>步骤 4 – 修改 ASP.NET 应用程序以显示登录状态  
  此步骤介绍如何修改 ASP.NET 应用程序，以动态显示当前用户是否已登录。 配置 STS 提供程序后，WIF 将处理传入的声明。 现在，需要配置应用程序代码，以显示身份验证的结果。  
   
 #### <a name="to-display-sign-in-status"></a>显示登录状态  
   
-1.  在 Visual Studio 中，打开“Default.aspx”文件下的“TestApp”项目。  
+1. 在 Visual Studio 中，打开“Default.aspx”文件下的“TestApp”项目。  
   
-2.  在“Default.aspx”文件中，将现有标记替换为以下标记：  
+2. 在“Default.aspx”文件中，将现有标记替换为以下标记：  
   
     ```  
     <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -114,12 +114,12 @@ ms.locfileid: "48584376"
     </html>  
     ```  
   
-3.  保存 Default.aspx 文件，然后打开名为 Default.aspx.cs 的代码隐藏文件。  
+3. 保存 Default.aspx 文件，然后打开名为 Default.aspx.cs 的代码隐藏文件。  
   
     > [!NOTE]
     >  在解决方案资源管理器中，Default.aspx.cs 文件可能隐藏在 Default.aspx 文件下。 如果 Default.aspx.cs 文件不可见，请单击文件旁边的三角形，展开 Default.aspx。  
   
-4.  在 Default.aspx 文件中，将现有代码替换为以下代码：  
+4. 在 Default.aspx 文件中，将现有代码替换为以下代码：  
   
     ```csharp  
     using System;  
@@ -144,13 +144,13 @@ ms.locfileid: "48584376"
     }  
     ```  
   
-5.  保存 Default.aspx.cs，并生成该应用程序。  
+5. 保存 Default.aspx.cs，并生成该应用程序。  
   
 ## <a name="step-5--test-the-integration-between-wif-and-your-aspnet-application"></a>步骤 5 - 测试 WIF 和 ASP.NET 应用程序之间的集成  
  此步骤介绍如何测试 WIF 和 ASP.NET 应用程序之间的集成。  
   
 #### <a name="to-test-the-integration-between-wif-and-aspnet"></a>测试 WIF 和 ASP.NET 之间的集成  
   
-1.  在 Visual Studio 中，按“F5”开始调试应用程序。 如果未发现任何错误，将打开一个新的浏览器窗口。  
+1. 在 Visual Studio 中，按“F5”开始调试应用程序。 如果未发现任何错误，将打开一个新的浏览器窗口。  
   
-2.  你可能会注意到，浏览器会以无提示方式将请求重定向到 STS，然后打开 Default.aspx 页。 如果 WIF 配置正确，站点应会显示以下文本：“你已登录”。
+2. 你可能会注意到，浏览器会以无提示方式将请求重定向到 STS，然后打开 Default.aspx 页。 如果 WIF 配置正确，应看到显示以下文本的站点：**"登录"**。

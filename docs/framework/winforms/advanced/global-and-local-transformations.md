@@ -9,12 +9,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], global
 - transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-ms.openlocfilehash: 07ef61e3a41448f051fb9b7da2cfd91d7cbf26b5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e4ed103e781cc2e59d62c11f3233357c77b81cb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213748"
 ---
 # <a name="global-and-local-transformations"></a>全局变换和局部变换
 全局转换是适用于由绘制每个项的转换给定<xref:System.Drawing.Graphics>对象。 与此相反，本地转换是适用于特定项要绘制的转换。  
@@ -61,5 +61,6 @@ ms.locfileid: "57711845"
  ![Transformations](./media/aboutgdip05-art16.gif "AboutGdip05_art16")  
   
 ## <a name="see-also"></a>请参阅
-- [坐标系统和转换](coordinate-systems-and-transformations.md)
-- [在托管 GDI+ 中使用转换](using-transformations-in-managed-gdi.md)
+
+- [坐标系和坐标转换](coordinate-systems-and-transformations.md)
+- [在托管 GDI+ 中使用变换](using-transformations-in-managed-gdi.md)

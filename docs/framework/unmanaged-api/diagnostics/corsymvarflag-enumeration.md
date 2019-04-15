@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50367358ba5bcf335f8cc2ca3222f6cf7ea2ff70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c797378f5e13f39c1c786237a3a7b9cf577fccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670129"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198850"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag 枚举
 指示变量是否由编译器生成。  
@@ -45,4 +45,5 @@ typedef enum CorSymVarFlag
  **标头：** CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>请参阅
+
 - [诊断符号存储区枚举](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

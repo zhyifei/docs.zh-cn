@@ -2,12 +2,12 @@
 title: SQL Server 二进制和大值数据
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
-ms.openlocfilehash: f6bd62d2e9d2f87947e01b7964c5d151690b62bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b7a3f16726d6363cd702fb912bb7be281a25000
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192961"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server 二进制和大值数据
 SQL Server 提供 `max` 说明符，它可扩展 `varchar`、`nvarchar` 和 `varbinary` 数据类型的存储容量。 `varchar(max)``nvarchar(max)`，并`varbinary(max)`统称为*大型值数据类型*。 您可以使用大值数据类型来存储最大为 2^31-1 个字节的数据。  
@@ -22,7 +22,8 @@ SQL Server 提供 `max` 说明符，它可扩展 `varchar`、`nvarchar` 和 `var
  描述如何使用在 SQL Server 2008 中通过 FILESTREAM 属性存储的大值数据。  
   
 ## <a name="see-also"></a>请参阅
+
 - [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [ADO.NET 中的 SQL Server 数据操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

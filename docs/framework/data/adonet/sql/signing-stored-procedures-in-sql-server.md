@@ -2,12 +2,12 @@
 title: 在 SQL Server 中对存储过程签名
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094614"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313913"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>在 SQL Server 中对存储过程签名
  数字签名是用签名人的私钥加密的数据摘要。 该私钥可确保数字签名对于其持有者或所有者是唯一的。 可以注册存储的过程、 （除内联表值函数） 的函数、 触发器和程序集。  
@@ -23,25 +23,25 @@ ms.locfileid: "59094614"
   
  有两个必需的步骤中为模块签名涉及：  
   
-1.  使用 Transact-SQL `CREATE CERTIFICATE [certificateName]` 语句创建一个证书。 此语句具有多个用于设置开始日期、结束日期和密码的选项。 默认的到期日期为一年。  
+1. 使用 Transact-SQL `CREATE CERTIFICATE [certificateName]` 语句创建一个证书。 此语句具有多个用于设置开始日期、结束日期和密码的选项。 默认的到期日期为一年。  
   
-1.  使用 Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` 语句通过证书为过程签名。  
+1. 使用 Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` 语句通过证书为过程签名。  
 
 一旦已签名模块，一个或多个主体需要创建才能保存应与证书相关联的其他权限。  
 
 如果模块所需的其他数据库级权限：  
   
-1.  使用 Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]` 语句创建与该证书关联的数据库用户。 此用户只在数据库中存在，除非也从该相同的证书创建一个登录名不与登录名相关联。  
+1. 使用 Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]` 语句创建与该证书关联的数据库用户。 此用户只在数据库中存在，除非也从该相同的证书创建一个登录名不与登录名相关联。  
   
-1.  向证书用户授予所需的数据库级权限。  
+1. 向证书用户授予所需的数据库级权限。  
   
 如果模块所需的其他服务器级权限：  
   
-1.  将证书复制到`master`数据库。  
+1. 将证书复制到`master`数据库。  
  
-1.  创建与使用 Transact SQL 该证书关联的登录名`CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]`语句。  
+1. 创建与使用 Transact SQL 该证书关联的登录名`CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]`语句。  
   
-1.  证书登录名授予所需的服务器级别权限。  
+1. 证书登录名授予所需的服务器级别权限。  
   
 > [!NOTE]  
 >  证书不能向用户授予已经使用 DENY 语句撤消的权限。 DENY 始终优先于 GRANT，以防止调用方继承授予给证书用户的权限。  

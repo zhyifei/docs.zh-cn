@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 03b37dae72be0ffa589159b2aedc2ac16e35139e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314875"
 ---
 # <a name="accessing-services-using-a-client"></a>使用客户端访问服务
 客户端应用程序必须创建、 配置和使用 WCF 客户端或通道对象与服务进行通信。 [WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)主题提供了对象和步骤中创建基本的客户端和通道对象并使用它们所涉及的概述。  
@@ -83,21 +83,22 @@ ms.locfileid: "54583202"
   
  如果使用显式方法，应用程序必须按顺序执行下面的操作：  
   
-1.  调用 <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType>（或异步版本）。  
+1. 调用 <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType>（或异步版本）。  
   
-2.  当初始值设定项已返回时，针对 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 对象或从 <xref:System.ServiceModel.IClientChannel> 属性返回的 <xref:System.ServiceModel.IClientChannel> 对象来调用 <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> 方法。  
+2. 当初始值设定项已返回时，针对 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 对象或从 <xref:System.ServiceModel.IClientChannel> 属性返回的 <xref:System.ServiceModel.IClientChannel> 对象来调用 <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> 方法。  
   
-3.  调用操作。  
+3. 调用操作。  
   
  建议通过采用显式方法，由可投入实际生产运行的应用程序来控制用户界面过程。  
   
  使用隐式方法的应用程序调用用户界面初始值设定项，但是如果应用程序的用户没有在绑定的发送超时期限内做出响应，则当用户界面返回时，将引发异常。  
   
 ## <a name="see-also"></a>请参阅
+
 - [双工服务](../../../../docs/framework/wcf/feature-details/duplex-services.md)
-- [如何：访问服务使用单向和请求-答复协定](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [如何：使用单向和请求-答复协定访问服务](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
 - [如何：使用双工协定访问服务](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [如何：访问 WSE 3.0 服务](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [如何：考虑使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
 - [如何：以异步方式调用服务操作](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
 - [中间层客户端应用程序](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

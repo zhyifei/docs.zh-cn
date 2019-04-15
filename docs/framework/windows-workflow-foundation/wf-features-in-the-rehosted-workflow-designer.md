@@ -2,12 +2,12 @@
 title: 重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: bed49e4a62e597c9cffd113b24551872ee1053d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714939"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324157"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 中的 Windows Workflow Foundation (WF)[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引入了许多新功能，包括多个工作流设计器体验的增强功能。 本主题详细介绍重新承载的设计器中支持哪些功能以及当前不支持哪些功能。
@@ -33,7 +33,7 @@ ms.locfileid: "57714939"
 >  [快速查找](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)并[在文件中查找](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)重新承载的设计器不支持。
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>删除变量和自变量设计器中的上下文菜单项
- 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只能使用键盘来删除设计器中的变量和参数。 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，可以使用上下文菜单来删除变量和参数。 重新承载的编辑器支持此功能。
+ 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只能使用键盘来删除设计器中的变量和自变量。 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，可以使用上下文菜单来删除变量和自变量。 重新承载的编辑器支持此功能。
 
  以下屏幕快照显示了变量和自变量设计器的上下文菜单。
 
@@ -88,7 +88,7 @@ ms.locfileid: "57714939"
  重新承载的设计器支持自动连接和自动插入。
 
 ### <a name="designer-annotations"></a>设计器批注
- 为促进开发较大型的工作流，设计器现在支持添加批注以帮助跟踪设计过程。 可以向活动、状态、流程图节点、变量和参数添加批注。 以下屏幕快照显示了用于将批注添加到设计器的上下文菜单。
+ 为促进开发较大型的工作流，设计器现在支持添加批注以帮助跟踪设计过程。 可以向活动、状态、流程图节点、变量和自变量添加批注。 以下屏幕快照显示了用于将批注添加到设计器的上下文菜单。
 
  ![注释上下文菜单](./media/annotationdialog.png "annotationdialog")
 
@@ -124,13 +124,13 @@ ms.locfileid: "57714939"
 ### <a name="state-machine-workflows"></a>状态机工作流  
  状态机工作流中的.NET Framework 4.0.1 的一部分引入了[Microsoft.NET Framework 4 平台更新 1](https://go.microsoft.com/fwlink/?LinkID=215092)。 此更新包括多个新类和活动，允许开发人员创建状态机工作流。 这些类和活动已针对 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 进行更新。 更新包括：  
   
-1.  能够对状态设置断点  
+1. 能够对状态设置断点  
   
-2.  能够在工作流设计器中复制和粘贴转换  
+2. 能够在工作流设计器中复制和粘贴转换  
   
-3.  设计器支持共享触发器转换创建  
+3. 设计器支持共享触发器转换创建  
   
-4.  用于创建状态机工作流的活动，包括：<xref:System.Activities.Statements.StateMachine>、<xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition>  
+4. 活动用于创建状态机工作流，包括： <xref:System.Activities.Statements.StateMachine>， <xref:System.Activities.Statements.State>，和 <xref:System.Activities.Statements.Transition>  
   
  以下屏幕截图显示完成的状态机工作流从[入门教程](getting-started-tutorial.md)步骤[如何：创建状态机工作流](how-to-create-a-state-machine-workflow.md)。  
   

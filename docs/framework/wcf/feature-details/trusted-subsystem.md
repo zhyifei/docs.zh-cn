@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: a2b8f4f49afb987243ed96c29a09d7f0ec842945
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744578"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319360"
 ---
 # <a name="trusted-subsystem"></a>受信任的子系统
 客户端访问分布在网络上的一个或多个 Web 服务。 Web 服务的设计使对其他资源（比如数据库或其他 Web 服务）的访问包装在 Web 服务的企业逻辑中。 必须保护这些资源不受到未经授权的访问。 下图描述了一个受信任的子系统过程。  
@@ -19,15 +19,15 @@ ms.locfileid: "54744578"
   
  以下步骤说明如图所示的受信任子系统过程：  
   
-1.  客户端向受信任的子系统随凭据一起提交请求。  
+1. 客户端向受信任的子系统随凭据一起提交请求。  
   
-2.  受信任的子系统对用户进行身份验证和授权。  
+2. 受信任的子系统对用户进行身份验证和授权。  
   
-3.  受信任的子系统向远程资源发送请求消息。 此请求伴随受信任子系统（或在其下执行受信任子系统过程的服务帐户）的凭据。  
+3. 受信任的子系统向远程资源发送请求消息。 此请求伴随受信任子系统（或在其下执行受信任子系统过程的服务帐户）的凭据。  
   
-4.  后端资源对受信任子系统进行身份验证和授权。 然后处理请求并对受信任子系统发出响应。  
+4. 后端资源对受信任子系统进行身份验证和授权。 然后处理请求并对受信任子系统发出响应。  
   
-5.  受信任子系统处理响应并对客户端发出其自己的响应。  
+5. 受信任子系统处理响应并对客户端发出其自己的响应。  
   
 |特征|描述|  
 |--------------------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "54744578"
 |完整性|是|  
 |保密性|是|  
 |传输|客户端和受信任子系统服务之间采用 HTTP。<br /><br /> 受信任子系统服务和资源（后端服务）之间采用 NET.TCP。|  
-|绑定|<xref:System.ServiceModel.WSHttpBinding> 并<xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|绑定|<xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>资源（后端服务）  
   
@@ -211,5 +211,6 @@ ms.locfileid: "54744578"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

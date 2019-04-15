@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: a3846c952969a4814151757c5210d9df6f3c97b4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823488"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338561"
 ---
 # <a name="option-infer-statement"></a>Option Infer 语句
 允许声明变量时使用局部类型推理。  
@@ -63,11 +63,11 @@ Option Infer { On | Off }
   
 #### <a name="to-set-option-infer-in-the-ide"></a>若要在 IDE 中设置 Option Infer  
   
-1.  在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。  
+1. 在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。  
   
-2.  单击“编译”选项卡。  
+2. 单击“编译”选项卡。  
   
-3.  中的值设置**Option infer**框。  
+3. 中的值设置**Option infer**框。  
   
  创建一个新项目时**Option Infer**上设置**编译**选项卡设置为**Option Infer**中设置**VB 默认值**对话框。 访问**VB 默认值**对话框中，在**工具**菜单中，单击**选项**。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 中的初始默认设置**VB 默认值**是`On`。  
   
@@ -101,7 +101,7 @@ Option Infer { On | Off }
 - [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Compare 语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [“选项”对话框 ->“项目”->“Visual Basic 默认值”](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

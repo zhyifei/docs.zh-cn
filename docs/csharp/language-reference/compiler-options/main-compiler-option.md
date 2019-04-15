@@ -8,12 +8,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 36e5f10a61711e3245fa4b69dc583f4bb78e55e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 133aa22f16285f94f58722cb18c83b96f1ff885c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558575"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302785"
 ---
 # <a name="-main-c-compiler-options"></a>-main（C# 编译器选项）
 如果多个类包含 **Main** 方法，此选项将指定包含程序入口点的类。  
@@ -36,11 +36,11 @@ ms.locfileid: "54558575"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的“属性”页。  
+1. 打开项目的“属性”页。  
   
-2.  单击“应用程序”属性页。  
+2. 单击“应用程序”属性页。  
   
-3.  修改“启动对象”属性。  
+3. 修改“启动对象”属性。  
   
      若要以编程方式设置此编译器选项，请参阅 <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>。  
   

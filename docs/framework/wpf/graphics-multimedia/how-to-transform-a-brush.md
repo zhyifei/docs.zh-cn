@@ -1,5 +1,5 @@
 ---
-title: 如何：变换画笔
+title: 如何：转换画笔
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], Transform property
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
-ms.openlocfilehash: 990c82b4844ce3ca7f5b553b180280b6b37496ca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a83f3b1c046e94faa8816e8c310f438b4711048a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162993"
 ---
-# <a name="how-to-transform-a-brush"></a>如何：变换画笔
+# <a name="how-to-transform-a-brush"></a>如何：转换画笔
 此示例演示如何转换<xref:System.Windows.Media.Brush>通过使用其两个转换属性对象：<xref:System.Windows.Media.Brush.RelativeTransform%2A>和<xref:System.Windows.Media.Brush.Transform%2A>。  
   
  下面的示例使用<xref:System.Windows.Media.RotateTransform>旋转的内容<xref:System.Windows.Media.ImageBrush>旋转 45 度。  
@@ -45,6 +45,7 @@ ms.locfileid: "57373759"
  有关完整示例，请参阅[画笔示例](https://go.microsoft.com/fwlink/?LinkID=159973)。 有关画笔的详细信息，请参阅[使用纯色和渐变进行绘制概述](painting-with-solid-colors-and-gradients-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [画笔转换概述](brush-transformation-overview.md)
+
+- [Brush 变换概述](brush-transformation-overview.md)
 - [使用纯色和渐变进行绘制概述](painting-with-solid-colors-and-gradients-overview.md)
-- [转换概述](transforms-overview.md)
+- [变换概述](transforms-overview.md)

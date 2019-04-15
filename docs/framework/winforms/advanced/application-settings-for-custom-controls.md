@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714341"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317293"
 ---
 # <a name="application-settings-for-custom-controls"></a>自定义控件的应用程序设置
 必须完成某些任务，以使能够保持应用程序设置时的控件都承载在第三方应用程序中的自定义控件。  
@@ -22,9 +22,9 @@ ms.locfileid: "57714341"
   
  此外，应为应用程序设置以便在设计时环境，如 Visual Studio 中正常工作的自定义控件来实现以下：  
   
-1.  具有采用的构造函数的自定义应用程序设置类<xref:System.ComponentModel.IComponent>作为单个参数。 使用此类来保存和加载的所有应用程序设置。 当创建此类的新实例时，请传递自定义控件使用的构造函数。  
+1. 具有采用的构造函数的自定义应用程序设置类<xref:System.ComponentModel.IComponent>作为单个参数。 使用此类来保存和加载的所有应用程序设置。 当创建此类的新实例时，请传递自定义控件使用的构造函数。  
   
-2.  创建控件并将其放置在窗体，如在窗体的后创建此自定义设置类<xref:System.Windows.Forms.Form.Load>事件处理程序。  
+2. 创建控件并将其放置在窗体，如在窗体的后创建此自定义设置类<xref:System.Windows.Forms.Form.Load>事件处理程序。  
   
  有关创建自定义设置类的说明，请参阅[如何：创建应用程序设置](how-to-create-application-settings.md)。  
   
@@ -46,6 +46,7 @@ ms.locfileid: "57714341"
  未提供的值的控件的任何实例<xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A>将共享相同的设置。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
 - [应用程序设置体系结构](application-settings-architecture.md)

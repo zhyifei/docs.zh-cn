@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5688559bcadea309bb0ddb4b156f94540e7be624
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664325"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298417"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>在 DOM 中验证 XML 文档
 默认情况下，在文档对象模型 (DOM) 中，<xref:System.Xml.XmlDocument> 类不针对 XML 架构定义语言 (XSD) 架构或文档类型定义 (DTD) 验证 XML；只验证 XML 的格式是否正确。  
@@ -29,15 +29,15 @@ ms.locfileid: "54664325"
 ### <a name="creating-an-xml-schema-validating-xmlreader"></a>创建 XML 架构验证 XmlReader  
  要创建 XML 架构验证 <xref:System.Xml.XmlReader>，请执行下列步骤。  
   
-1.  构造一个新的 <xref:System.Xml.XmlReaderSettings> 实例。  
+1. 构造一个新的 <xref:System.Xml.XmlReaderSettings> 实例。  
   
-2.  将 XML 架构添加到 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 实例的 <xref:System.Xml.XmlReaderSettings> 属性中。  
+2. 将 XML 架构添加到 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 实例的 <xref:System.Xml.XmlReaderSettings> 属性中。  
   
-3.  将 `Schema` 指定为 <xref:System.Xml.XmlReaderSettings.ValidationType%2A>。  
+3. 将 `Schema` 指定为 <xref:System.Xml.XmlReaderSettings.ValidationType%2A>。  
   
-4.  可以选择指定 <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> 和 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>，用于处理在验证期间遇到的架构验证错误和警告。  
+4. 可以选择指定 <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> 和 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>，用于处理在验证期间遇到的架构验证错误和警告。  
   
-5.  最后，将 <xref:System.Xml.XmlReaderSettings> 对象与 XML 文档一起传递给 <xref:System.Xml.XmlReader.Create%2A> 类的 <xref:System.Xml.XmlReader> 方法，创建架构验证 <xref:System.Xml.XmlReader>。  
+5. 最后，将 <xref:System.Xml.XmlReaderSettings> 对象与 XML 文档一起传递给 <xref:System.Xml.XmlReader.Create%2A> 类的 <xref:System.Xml.XmlReader> 方法，创建架构验证 <xref:System.Xml.XmlReader>。  
   
 ### <a name="example"></a>示例  
  在下面的代码示例中，架构验证 <xref:System.Xml.XmlReader> 验证加载到 DOM 的 XML 数据。 对 XML 文档进行无效的修改，然后重新验证文档，造成架构验证错误。 最后，更正其中一个错误，然后对 XML 文档的一部分进行部分验证。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707395"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343709"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>如何：将数据发送到活动的 MDI 子窗体
 通常情况下中的上下文[多文档界面 (MDI) 应用程序](multiple-document-interface-mdi-applications.md)，需要将数据发送到活动子窗口，例如当用户将数据从剪贴板粘贴到 MDI 应用程序。  
@@ -25,7 +25,7 @@ ms.locfileid: "57707395"
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>若要从剪贴板将数据发送到活动的 MDI 子窗口  
   
-1.  在方法中，将剪贴板上的文本复制到活动子窗体的活动控件。  
+1. 在方法中，将剪贴板上的文本复制到活动子窗体的活动控件。  
   
     > [!NOTE]
     >  此示例假定的 MDI 父窗体 (`Form1`) 具有一个或多个 MDI 子窗口包含<xref:System.Windows.Forms.RichTextBox>控件。 有关详细信息，请参阅[创建 MDI 父窗体](how-to-create-mdi-parent-forms.md)。  
@@ -92,6 +92,7 @@ ms.locfileid: "57707395"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [多文档界面 (MDI) 应用程序](multiple-document-interface-mdi-applications.md)
 - [如何：创建 MDI 父窗体](how-to-create-mdi-parent-forms.md)
 - [如何：创建 MDI 子窗体](how-to-create-mdi-child-forms.md)

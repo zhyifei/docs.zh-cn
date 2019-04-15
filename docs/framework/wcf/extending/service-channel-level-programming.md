@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197192"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329125"
 ---
 # <a name="service-channel-level-programming"></a>服务通道级编程
 本主题介绍如何编写 Windows Communication Foundation (WCF) 服务应用程序而无需使用<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>及其关联的对象模型。  
@@ -18,15 +18,15 @@ ms.locfileid: "50197192"
 ## <a name="receiving-messages"></a>接收消息  
  若要准备接收并处理消息，必须执行下列步骤：  
   
-1.  创建绑定。  
+1. 创建绑定。  
   
-2.  生成通道侦听器。  
+2. 生成通道侦听器。  
   
-3.  打开通道侦听器。  
+3. 打开通道侦听器。  
   
-4.  读取请求并发送答复。  
+4. 读取请求并发送答复。  
   
-5.  关闭所有通道对象。  
+5. 关闭所有通道对象。  
   
 #### <a name="creating-a-binding"></a>创建绑定  
  侦听和接收消息的第一步是创建绑定。 WCF 配有可直接通过实例化其中一个的多个内置或系统提供绑定。 另外，你还可以创建自己的自定义绑定，方法是实例化 CustomBinding 类，这同时也是列表 1 中的代码所执行的操作。  
@@ -36,7 +36,7 @@ ms.locfileid: "50197192"
 #### <a name="building-a-channellistener"></a>生成 ChannelListener  
  在创建绑定后，我们调用 <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> 来生成通道侦听器，其中类型参数就是要创建的通道形状。 在此示例中使用 <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>，这是因为我们希望以请求/答复消息交换模式侦听传入的消息。  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> 用于接收请求消息，并发回答复消息。 调用 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> 会返回一个 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>，可以用于接收请求消息以及发回答复消息。  
+ <xref:System.ServiceModel.Channels.IReplyChannel> 用于接收请求消息并发送回答复消息。 调用 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> 会返回一个 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>，可以用于接收请求消息以及发回答复消息。  
   
  当创建侦听器时，我们传递发生侦听的网络地址，在此示例中为 `http://localhost:8080/channelapp`。 通常，每个传输通道支持一个或可能多个地址方案，例如，HTTP 传输对 http 和 https 方案均予以支持。  
   

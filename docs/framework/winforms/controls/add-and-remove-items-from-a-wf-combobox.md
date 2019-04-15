@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 13f1e18753ad5b49a9cc530cf340579087908b4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bd6614c76c63a44a7367ac7c7113c4db260c9a02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188879"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322727"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：在 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件中添加或移除项
 项可以添加到 Windows 窗体组合框中，列表框中，或检查列表框中有许多种情况下，因为这些控件可以绑定到各种数据源。 但是，本主题演示了最简单方法，并且不需要数据绑定。 显示的项通常是字符串;但是，可以使用任何对象。 在控件中显示的文本是由该对象返回的值`ToString`方法。  
   
 ### <a name="to-add-items"></a>若要添加项目  
   
-1.  通过使用添加到列表的字符串或对象`Add`方法的`ObjectCollection`类。 使用引用集合`Items`属性：  
+1. 通过使用添加到列表的字符串或对象`Add`方法的`ObjectCollection`类。 使用引用集合`Items`属性：  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +42,7 @@ ms.locfileid: "59188879"
   
      - 或 -  
   
-2.  在使用列表中的所需点处插入字符串或对象`Insert`方法：  
+2. 在使用列表中的所需点处插入字符串或对象`Insert`方法：  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -58,7 +58,7 @@ ms.locfileid: "59188879"
   
      - 或 -  
   
-3.  分配到整个数组`Items`集合：  
+3. 分配到整个数组`Items`集合：  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -89,7 +89,7 @@ ms.locfileid: "59188879"
   
 ### <a name="to-remove-an-item"></a>若要删除项  
   
-1.  调用`Remove`或`RemoveAt`方法来删除项。  
+1. 调用`Remove`或`RemoveAt`方法来删除项。  
   
      `Remove` 有一个参数，指定要移除的项。`RemoveAt` 移除具有指定的索引号的项。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "59188879"
   
 ### <a name="to-remove-all-items"></a>若要删除的所有项  
   
-1.  调用`Clear`方法从集合中移除所有项：  
+1. 调用`Clear`方法从集合中移除所有项：  
   
     ```vb  
     ListBox1.Items.Clear()  

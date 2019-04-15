@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: 46614ad43e7be72c8396f47ba7f5d02185f62827
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837086"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335480"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>如何：调用运算符过程 (Visual Basic)
 通过在表达式中使用的运算符符号调用运算符过程。 转换运算符，如果您调用[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)将值从一种数据类型转换为另一个。  
@@ -27,19 +27,19 @@ ms.locfileid: "58837086"
   
 ### <a name="to-call-an-operator-procedure"></a>若要调用运算符过程  
   
-1.  以普通方式在表达式中使用的运算符符号。  
+1. 以普通方式在表达式中使用的运算符符号。  
   
-2.  请确保操作数的数据类型是相应的运算符和正确的顺序。  
+2. 请确保操作数的数据类型是相应的运算符和正确的顺序。  
   
-3.  运算符按预期方式影响表达式的值。  
+3. 运算符按预期方式影响表达式的值。  
   
 ### <a name="to-call-a-conversion-operator-procedure"></a>若要调用的转换运算符过程  
   
-1.  使用`CType`在表达式中。  
+1. 使用`CType`在表达式中。  
   
-2.  为确保操作数数据类型进行转换，并按正确的顺序。  
+2. 为确保操作数数据类型进行转换，并按正确的顺序。  
   
-3.  `CType` 调用转换运算符过程并返回转换后的值。  
+3. `CType` 调用转换运算符过程并返回转换后的值。  
   
 ## <a name="example"></a>示例  
  下面的示例创建两个<xref:System.TimeSpan>结构，并将它们相加，并将结果存储在第三个<xref:System.TimeSpan>结构。 <xref:System.TimeSpan>结构定义多个标准运算符重载的运算符过程。  
@@ -64,4 +64,4 @@ ms.locfileid: "58837086"
 - [Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [如何：声明结构](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [隐式转换和显式转换](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [扩大转换和收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

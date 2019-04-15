@@ -2,12 +2,12 @@
 title: C# 6 中的新增功能 - C# 指南
 description: 了解 C# 版本 6 中的新增功能
 ms.date: 12/12/2018
-ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654570"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920670"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 中的新增功能
 
@@ -106,7 +106,7 @@ Null 条件运算符使 null 检查更轻松、更流畅。 将成员访问 `.` 
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-确保左侧只计算一次，这使得你可以在 `?.` 的左侧使用任何表达式（包括方法调用）
+确保左侧只计算一次，这还可以实现在此运算符的左侧使用任何表达式（包括方法调用）： `?.`
 
 ## <a name="string-interpolation"></a>字符串内插
 
@@ -127,7 +127,7 @@ FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-要开始使用字符串内插，请参阅 [C# 中的字符串内插](../tutorials/intro-to-csharp/interpolated-strings.yml)交互式教程、[字符串内插](../language-reference/tokens/interpolated.md)一文和 [C# 中字符串内插](../tutorials/string-interpolation.md)教程。
+要开始使用字符串内插，请参阅 [C# 中的字符串内插](../tutorials/exploration/interpolated-strings.yml)交互式教程、[字符串内插](../language-reference/tokens/interpolated.md)一文和 [C# 中字符串内插](../tutorials/string-interpolation.md)教程。
 
 ## <a name="exception-filters"></a>异常筛选器
 

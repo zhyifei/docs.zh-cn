@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 736633733ab9c882c1d1520a5acf20c49324eeb3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 92a0bac3cf6ac6b57792419c913ec481ff0ee6c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828017"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333387"
 ---
 # <a name="srmp"></a>SRMP
 本示例演示如何使用 HTTP 上的消息队列 (MSMQ) 来执行事务处理排队通信。  
@@ -18,21 +18,21 @@ ms.locfileid: "58828017"
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-4.  运行示例之前**添加/删除 Windows 组件**，确保安装了 MSMQ 和 HTTP 支持。 安装 HTTP 支持时，会自动安装 Internet 信息服务 (IIS)，并会在 IIS 中添加对 MSMQ 的协议支持。  
+4. 运行示例之前**添加/删除 Windows 组件**，确保安装了 MSMQ 和 HTTP 支持。 安装 HTTP 支持时，会自动安装 Internet 信息服务 (IIS)，并会在 IIS 中添加对 MSMQ 的协议支持。  
   
-5.  如果想要确保使用 HTTP 进行通信，则可以启用 MSMQ 以便在加强模式中运行。 这可确保任何消息都不能使用任何非 HTTP 传输到达计算机上承载的任何队列。  
+5. 如果想要确保使用 HTTP 进行通信，则可以启用 MSMQ 以便在加强模式中运行。 这可确保任何消息都不能使用任何非 HTTP 传输到达计算机上承载的任何队列。  
   
-6.  选择 MSMQ 以在加强模式中运行后，如果系统为 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，计算机需要重新启动。  
+6. 选择 MSMQ 以在加强模式中运行后，如果系统为 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，计算机需要重新启动。  
   
-7.  运行服务。  
+7. 运行服务。  
   
-8.  运行客户端。 确保将终结点地址更改为指向计算机名或 IP 地址而不是 localhost。 客户端将发送消息并退出。  
+8. 运行客户端。 确保将终结点地址更改为指向计算机名或 IP 地址而不是 localhost。 客户端将发送消息并退出。  
   
 ## <a name="requirements"></a>要求  
  若要运行此示例，服务计算机和客户端计算机上除了 MSMQ 外，还必须安装 IIS。  
@@ -95,4 +95,3 @@ OrderDetails
 >  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  
-  

@@ -2,12 +2,12 @@
 title: 实体数据模型
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: f6f3d02a27ce9df152753b7aeec9ceb251bca532
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197914"
 ---
 # <a name="entity-data-model"></a>实体数据模型
 实体数据模型 (EDM) 是一组描述数据结构（而不管其存储形式如何）的概念。 EDM 借自于 Peter Chen 于 1976 年所描述的实体关系模型，但它是在实体关系模型基础上构建的并扩展了其传统用途。  
@@ -31,21 +31,21 @@ ms.locfileid: "55904829"
   
  [关联端重数](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
- [关联集](../../../../docs/framework/data/adonet/association-set.md)  
+ [Association Set — 关联集](../../../../docs/framework/data/adonet/association-set.md)  
   
  [关联集端](../../../../docs/framework/data/adonet/association-set-end.md)  
   
  [关联类型](../../../../docs/framework/data/adonet/association-type.md)  
   
- [复杂类型](../../../../docs/framework/data/adonet/complex-type.md)  
+ [Complex Type — 复杂类型](../../../../docs/framework/data/adonet/complex-type.md)  
   
- [实体容器](../../../../docs/framework/data/adonet/entity-container.md)  
+ [Entity Container — 实体容器](../../../../docs/framework/data/adonet/entity-container.md)  
   
  [实体键](../../../../docs/framework/data/adonet/entity-key.md)  
   
  [实体集](../../../../docs/framework/data/adonet/entity-set.md)  
   
- [实体类型](../../../../docs/framework/data/adonet/entity-type.md)  
+ [Entity Type — 实体类型](../../../../docs/framework/data/adonet/entity-type.md)  
   
  [facet](../../../../docs/framework/data/adonet/facet.md)  
   
@@ -55,13 +55,14 @@ ms.locfileid: "55904829"
   
  [模型定义函数](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
- [导航属性](../../../../docs/framework/data/adonet/navigation-property.md)  
+ [Navigation Property — 导航属性](../../../../docs/framework/data/adonet/navigation-property.md)  
   
  [属性](../../../../docs/framework/data/adonet/property.md)  
   
  [引用完整性约束](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>请参阅
+
 - [ADO.NET 实体数据模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [.edmx 文件概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [CSDL 规范](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

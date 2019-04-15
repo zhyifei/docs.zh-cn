@@ -1,5 +1,5 @@
 ---
-title: 如何：确保多个控件绑定到相同的数据源保持同步
+title: 如何：确保绑定到同一数据源的多个控件保持同步
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721380"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170334"
 ---
-# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>如何：确保多个控件绑定到相同的数据源保持同步
+# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>如何：确保绑定到同一数据源的多个控件保持同步
 通常在使用 Windows 窗体中的数据绑定，多个控件绑定到同一数据源。 在某些情况下，可能需要采取额外步骤来确保控件的绑定的属性保持同步以及数据源。 这些步骤是在两种情况下需要：  
   
 -   如果数据源不实现<xref:System.ComponentModel.IBindingList>，并因此生成<xref:System.ComponentModel.IBindingList.ListChanged>类型的事件<xref:System.ComponentModel.ListChangedType.ItemChanged>。  
@@ -41,6 +41,7 @@ ms.locfileid: "57721380"
 -   一个具有窗体<xref:System.Windows.Forms.Form.Load>处理事件和调用`InitializeControlsAndDataSource`从窗体的示例中的方法<xref:System.Windows.Forms.Form.Load>事件处理程序。  
   
 ## <a name="see-also"></a>请参阅
+
 - [如何：使用 BindingSource 组件跨窗体共享绑定数据](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
 - [Windows 窗体数据绑定中的更改通知](change-notification-in-windows-forms-data-binding.md)
 - [与数据绑定相关的接口](interfaces-related-to-data-binding.md)

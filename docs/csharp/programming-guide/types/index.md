@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 2017e7ed1df18ea0b469207cd06396c74125cb19
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 92156bcd05ba1eb559714a71a23efacfdd29fc52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465494"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219507"
 ---
 # <a name="types-c-programming-guide"></a>类型（C# 编程指南）
 ## <a name="types-variables-and-values"></a>类型、变量和值  
@@ -75,8 +75,7 @@ ms.locfileid: "58465494"
  下图展示了 CTS 中值类型和引用类型之间的关系。
 
  下图显示 CTS 中的值类型和引用类型： 
-  
-  
+
  ![屏幕截图显示了 CTS 值类型和引用类型。](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
@@ -190,5 +189,5 @@ stringList.Add(4);
 
 - [C# 参考](../../../csharp/language-reference/index.md)
 - [C# 编程指南](../../../csharp/programming-guide/index.md)
-- [XML 数据类型转换](../../../standard/data/xml/conversion-of-xml-data-types.md)
+- [XML 数据类型的转换](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)

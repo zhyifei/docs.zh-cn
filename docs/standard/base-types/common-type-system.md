@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096259"
 ---
 # <a name="common-type-system"></a>常规类型系统
 通用类型系统定义了如何在公共语言运行时中声明、使用和管理类型，同时也是运行时跨语言集成支持的一个重要组成部分。 常规类型系统执行以下功能：  
@@ -165,9 +165,7 @@ ms.locfileid: "54722657"
   
 > [!NOTE]
 >  不需要将这些方法用于 C#、C++ 和 Visual Basic 中的事件处理程序委托，因为这些语言为添加和移除事件处理程序提供了语法。  
-  
- 
-  
+
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>类型定义  
  类型定义包括以下内容：  
@@ -226,9 +224,7 @@ ms.locfileid: "54722657"
  一个类型可以从另一个类型继承值和行为。 常规类型系统不允许类型从多个基本类型进行继承。  
   
  一个类型可以实现任何数量的接口。 要实现接口，类型必须实现该接口的所有虚拟成员。 虚方法可以由派生的类型来实现，既可静态调用，也可动态调用。  
-  
-  
-  
+
 <a name="type_members"></a>   
 ## <a name="type-members"></a>类型成员  
  运行时允许您定义指定类型行为和状态的类型成员。 类型成员包括以下内容：  
@@ -290,9 +286,7 @@ ms.locfileid: "54722657"
  嵌套类型是作为某其他类型的成员的类型。 嵌套类型应与其包含类型紧密关联，并且不得用作通用类型。 在声明类型使用和创建嵌套类型实例时，嵌套类型很有用，但不在公共成员中公开嵌套类型的使用。  
   
  嵌套类型可能会使有些开发人员感到困惑，因此除非有必要的理由，否则嵌套类型不应是公开可见的。 在设计完善的库中，开发人员几乎不需要使用嵌套类型实例化对象或声明变量。  
-  
-  
-  
+
 <a name="characteristics_of_type_members"></a>   
 ## <a name="characteristics-of-type-members"></a>类型成员的特征  
  通用类型系统允许类型成员具有多种特征，但并不要求语言能支持所有这些特征。 下表介绍了这些成员特征。  

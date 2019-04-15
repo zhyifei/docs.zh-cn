@@ -3,12 +3,12 @@ title: <cancelRequestedQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: eab5af7e-76fa-434d-9d36-873e995cee05
-ms.openlocfilehash: 989d6e99457108336c38fb1eece4c9ac2444c974
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 32a37fb3cc2b93046bea133f351185638b0d7545
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271494"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163158"
 ---
 # <a name="cancelrequestedqueries"></a>\<cancelRequestedQueries>
 表示一个查询集合，这些查询用于跟踪父活动取消子活动的请求。 跟踪参与者需要用此查询来订阅取消请求记录对象。  
@@ -55,5 +55,6 @@ ms.locfileid: "55271494"
 |[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含由标识为特定工作流的所有查询**activityDefinitionId**属性。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

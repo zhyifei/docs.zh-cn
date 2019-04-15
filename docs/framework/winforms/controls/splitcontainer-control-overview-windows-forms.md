@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: e99683bf6746cc5a85448bb22a996c04b7dcaa8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219416"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件可视为一个复合控件；它是由可移动条隔开的两个面板。 当鼠标指针位于条上方时，指针将改变形状以表示条可移动。  
@@ -38,7 +38,7 @@ Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件可视为一个�
   
 ## <a name="commonly-used-properties-methods-and-events"></a>常用的属性、方法和事件  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> 属性|确定哪个面板将保持相同大小后<xref:System.Windows.Forms.SplitContainer>调整控件的大小。|  
 |<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 属性|确定是否可以使用键盘或鼠标移动拆分器。|  
@@ -46,10 +46,11 @@ Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件可视为一个�
 |<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 属性|确定在从左边缘或上边缘到可移动拆分条的像素的距离。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 属性|确定的最小距离，以像素为单位，用户可以移动拆分器。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> 属性|确定的粗细，以像素为单位的拆分器。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> 事件|当拆分器移动时发生。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> 事件|当拆分器移动时发生。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Event — 事件|当拆分器移动时发生。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> Event — 事件|当拆分器移动时发生。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 控件](splitcontainer-control-windows-forms.md)
 - [SplitContainer 控件示例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/0ffz7d1b(v=vs.90))

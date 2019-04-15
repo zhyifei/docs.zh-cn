@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2cf9e1b4349d83a378f6b17e8740c95546bbe4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573957"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308713"
 ---
 # <a name="editing-xml-schemas"></a>编辑 XML 架构
 编辑 XML 架构是架构对象模型 (SOM) 最重要的功能之一。 SOM 的所有前架构编译属性均可以用于更改 XML 架构中的现有值。 然后，可以重新编译 XML 架构以反映更改。  
@@ -27,19 +27,19 @@ ms.locfileid: "54573957"
 ### <a name="phonenumber-element-example"></a>PhoneNumber 元素示例  
  第一个代码示例向客户架构的 `PhoneNumber` 元素中添加新的 `Customer` 元素。 代码示例通过下列步骤编辑客户架构。  
   
-1.  将客户架构添加到新的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并进行编译。 在读取或编译架构时遇到的任何架构验证警告和错误由 <xref:System.Xml.Schema.ValidationEventHandler> 委托进行处理。  
+1. 将客户架构添加到新的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并进行编译。 在读取或编译架构时遇到的任何架构验证警告和错误由 <xref:System.Xml.Schema.ValidationEventHandler> 委托进行处理。  
   
-2.  通过循环访问 <xref:System.Xml.Schema.XmlSchema> 属性，从 <xref:System.Xml.Schema.XmlSchemaSet> 中检索已编译的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 对象。 因为架构已编译，所以，可以访问后架构编译信息集 (PSCI) 属性。  
+2. 通过循环访问 <xref:System.Xml.Schema.XmlSchema> 属性，从 <xref:System.Xml.Schema.XmlSchemaSet> 中检索已编译的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 对象。 因为架构已编译，所以，可以访问后架构编译信息集 (PSCI) 属性。  
   
-3.  使用 `PhoneNumber` 类创建 <xref:System.Xml.Schema.XmlSchemaElement> 元素，使用 `xs:string` 和 <xref:System.Xml.Schema.XmlSchemaSimpleType> 类创建 <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> 简单类型限制，将模式方面添加到限制的 <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> 属性，然后将限制添加到简单类型的 <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> 并将简单类型添加到 <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> 元素的 `PhoneNumber`。  
+3. 使用 `PhoneNumber` 类创建 <xref:System.Xml.Schema.XmlSchemaElement> 元素，使用 `xs:string` 和 <xref:System.Xml.Schema.XmlSchemaSimpleType> 类创建 <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> 简单类型限制，将模式方面添加到限制的 <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> 属性，然后将限制添加到简单类型的 <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> 并将简单类型添加到 <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> 元素的 `PhoneNumber`。  
   
-4.  在后架构编译 <xref:System.Xml.Schema.XmlSchemaElement> 集合的 <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> 集合中循环访问每个 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>。  
+4. 在后架构编译 <xref:System.Xml.Schema.XmlSchemaElement> 集合的 <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> 集合中循环访问每个 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>。  
   
-5.  如果元素的 <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> 为 `"Customer"`，请使用 `Customer` 类获取 <xref:System.Xml.Schema.XmlSchemaComplexType> 元素的复杂类型并使用 <xref:System.Xml.Schema.XmlSchemaSequence> 类获取复杂类型的序列粒子。  
+5. 如果元素的 <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> 为 `"Customer"`，请使用 `Customer` 类获取 <xref:System.Xml.Schema.XmlSchemaComplexType> 元素的复杂类型并使用 <xref:System.Xml.Schema.XmlSchemaSequence> 类获取复杂类型的序列粒子。  
   
-6.  使用序列的前架构编译 `PhoneNumber` 集合将新的 `FirstName` 元素添加到包含现有 `LastName` 和 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> 元素的序列中。  
+6. 使用序列的前架构编译 `PhoneNumber` 集合将新的 `FirstName` 元素添加到包含现有 `LastName` 和 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> 元素的序列中。  
   
-7.  最后，使用 <xref:System.Xml.Schema.XmlSchema> 类的 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 和 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法重新处理并编译已修改的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并将其写入控制台。  
+7. 最后，使用 <xref:System.Xml.Schema.XmlSchema> 类的 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 和 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法重新处理并编译已修改的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并将其写入控制台。  
   
  以下是完整的代码示例。  
   
@@ -76,34 +76,34 @@ ms.locfileid: "54573957"
   
  代码示例通过下列步骤编辑客户架构。  
   
-1.  将客户架构添加到新的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并进行编译。 在读取或编译架构时遇到的任何架构验证警告和错误由 <xref:System.Xml.Schema.ValidationEventHandler> 委托进行处理。  
+1. 将客户架构添加到新的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并进行编译。 在读取或编译架构时遇到的任何架构验证警告和错误由 <xref:System.Xml.Schema.ValidationEventHandler> 委托进行处理。  
   
-2.  通过循环访问 <xref:System.Xml.Schema.XmlSchema> 属性，从 <xref:System.Xml.Schema.XmlSchemaSet> 中检索已编译的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 对象。 因为架构已编译，所以，可以访问后架构编译信息集 (PSCI) 属性。  
+2. 通过循环访问 <xref:System.Xml.Schema.XmlSchema> 属性，从 <xref:System.Xml.Schema.XmlSchemaSet> 中检索已编译的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 对象。 因为架构已编译，所以，可以访问后架构编译信息集 (PSCI) 属性。  
   
-3.  使用 `FirstName` 类为 <xref:System.Xml.Schema.XmlSchemaComplexType> 元素创建新的复杂类型。  
+3. 使用 `FirstName` 类为 <xref:System.Xml.Schema.XmlSchemaComplexType> 元素创建新的复杂类型。  
   
-4.  使用 `xs:string` 和 <xref:System.Xml.Schema.XmlSchemaSimpleContent> 类创建新的简单内容扩展，基类型为 <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension>。  
+4. 使用 `xs:string` 和 <xref:System.Xml.Schema.XmlSchemaSimpleContent> 类创建新的简单内容扩展，基类型为 <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension>。  
   
-5.  使用 `Title` 类创建新的 <xref:System.Xml.Schema.XmlSchemaAttribute> 属性，<xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> 为 `xs:string`，并将该属性添加到简单内容扩展。  
+5. 使用 `Title` 类创建新的 <xref:System.Xml.Schema.XmlSchemaAttribute> 属性，<xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> 为 `xs:string`，并将该属性添加到简单内容扩展。  
   
-6.  将简单内容的内容模型设置为简单内容扩展，将复杂类型的内容模型设置为简单内容。  
+6. 将简单内容的内容模型设置为简单内容扩展，将复杂类型的内容模型设置为简单内容。  
   
-7.  将新的复杂类型添加到前架构编译 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 集合。  
+7. 将新的复杂类型添加到前架构编译 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 集合。  
   
-8.  在前架构编译 <xref:System.Xml.Schema.XmlSchemaObject> 集合中循环访问每个 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>。  
+8. 在前架构编译 <xref:System.Xml.Schema.XmlSchemaObject> 集合中循环访问每个 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>。  
   
 > [!NOTE]
 >  因为 `FirstName` 元素不是架构中的全局元素，所以，不能在 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 或 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合中使用。 代码示例通过首先定位 `FirstName` 元素来定位 `Customer` 元素。  
 >   
 >  第一个代码示例使用后架构编译 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合遍历了架构。 在此示例中，前架构编译 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 集合用于遍历架构。 尽管两个集合均提供对架构中的全局元素的访问，但是循环访问 <xref:System.Xml.Schema.XmlSchema.Items%2A> 集合使用的时间更长，因为必须循环访问架构中的所有全局元素，没有任何 PSCI 属性。 PSCI 集合（<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>、<xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>、<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> 等）提供对其全局元素、属性和类型及其 PSCI 属性的直接访问。  
   
-1.  如果 <xref:System.Xml.Schema.XmlSchemaObject> 为元素，该元素的 <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> 为 `"Customer"`，请使用 `Customer` 类获取 <xref:System.Xml.Schema.XmlSchemaComplexType> 元素的复杂类型并使用 <xref:System.Xml.Schema.XmlSchemaSequence> 类获取复杂类型的序列粒子。  
+1. 如果 <xref:System.Xml.Schema.XmlSchemaObject> 为元素，该元素的 <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> 为 `"Customer"`，请使用 `Customer` 类获取 <xref:System.Xml.Schema.XmlSchemaComplexType> 元素的复杂类型并使用 <xref:System.Xml.Schema.XmlSchemaSequence> 类获取复杂类型的序列粒子。  
   
-2.  在前架构编译 <xref:System.Xml.Schema.XmlSchemaParticle> 集合中循环访问每个 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>。  
+2. 在前架构编译 <xref:System.Xml.Schema.XmlSchemaParticle> 集合中循环访问每个 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>。  
   
-3.  如果 <xref:System.Xml.Schema.XmlSchemaParticle> 为元素，该元素的 <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> 为 `"FirstName"`，请将 <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 元素的 `FirstName` 设置为新的 `FirstName` 复杂类型。  
+3. 如果 <xref:System.Xml.Schema.XmlSchemaParticle> 为元素，该元素的 <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> 为 `"FirstName"`，请将 <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 元素的 `FirstName` 设置为新的 `FirstName` 复杂类型。  
   
-4.  最后，使用 <xref:System.Xml.Schema.XmlSchema> 类的 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 和 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法重新处理并编译已修改的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并将其写入控制台。  
+4. 最后，使用 <xref:System.Xml.Schema.XmlSchema> 类的 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 和 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法重新处理并编译已修改的 <xref:System.Xml.Schema.XmlSchemaSet> 对象并将其写入控制台。  
   
  以下是完整的代码示例。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "54573957"
 ## <a name="see-also"></a>请参阅
 
 - [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [读写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)

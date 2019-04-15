@@ -10,12 +10,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: f840e042321b636443b6763e168abd144b05edae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8e7c1d2943dcbfa8d9faa0b2e53bae57c767101
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717449"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216478"
 ---
 # <a name="deriving-from-webrequest"></a>从 WebRequest 派生
 <xref:System.Net.WebRequest> 类是一个抽象基类，可为创建适合 .NET Framework 可插入协议模型的协议特定的请求处理程序提供基本方法和属性。 使用 WebRequest 类的应用程序可使用任何支持的协议请求数据，而无需指定所使用的协议。  
@@ -89,6 +89,7 @@ ms.locfileid: "54717449"
  GetResponse 方法负责创建适当的 WebResponse 后代来包含传入的响应。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.FileWebRequest>

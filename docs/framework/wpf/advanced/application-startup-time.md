@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 0bd7875f1e819497ea3a4d846a2876084a54ab80
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173025"
 ---
 # <a name="application-startup-time"></a>应用程序启动时间
 启动 WPF 应用程序所需的时间可能存在极大差异。 本主题介绍用于减少 Windows Presentation Foundation (WPF) 应用程序假设启动时间和实际启动时间的各种技巧。  
@@ -123,10 +123,11 @@ ms.locfileid: "57379102"
  而不是使用 XAML 来设置<xref:System.Windows.FrameworkElement.DataContext%2A>以声明方式对于主窗口中，请考虑在以编程方式设置<xref:System.Windows.Application.OnActivated%2A>方法。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.SplashScreen>
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
 - [向 WPF 应用程序添加初始屏幕](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe（本机映像生成器）](../../tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence> 元素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<generatePublisherEvidence > 元素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

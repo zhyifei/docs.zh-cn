@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 197361020ad8c6a88a5fc8617b8e24f420799e14
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377092"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341187"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>互操作性疑难解答 (Visual Basic)
 当 COM 和托管的代码之间互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，可能会遇到一个或多个以下常见的问题。  
@@ -42,9 +42,9 @@ ms.locfileid: "57377092"
   
  重命名可能会导致为 COM 对象的使用者的两个问题。  
   
-1.  客户端可能不希望生成的方法名称。  
+1. 客户端可能不希望生成的方法名称。  
   
-2.  新重载添加到类或其基本类时，可以更改中公开为 COM 对象的类的生成的方法名称。 这会导致版本控制问题。  
+2. 新重载添加到类或其基本类时，可以更改中公开为 COM 对象的类的生成的方法名称。 这会导致版本控制问题。  
   
  若要解决这两个问题，请为每个方法提供一个唯一的名称，而不是使用重载，开发时将公开为 COM 对象的对象。  
   
@@ -133,5 +133,5 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 - [Tlbimp.exe（类型库导入程序）](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe（类型库导出程序）](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [演练：使用 COM 对象实现继承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [全局程序集缓存](../../../framework/app-domains/gac.md)

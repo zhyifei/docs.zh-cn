@@ -2,12 +2,12 @@
 title: 处理异步应用程序 (Visual Basic 中) 中的重新进入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 151cdcb841a7a67ba0bf8f5560d3f6baf999c365
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374879"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324781"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>处理异步应用程序 (Visual Basic 中) 中的重新进入
 在应用中包含异步代码时，应考虑并且可以阻止重新进入（指在异步操作完成之前重新进入它）。 如果不识别并处理重新进入的可能性，则它可能会导致意外结果。  
@@ -20,11 +20,11 @@ ms.locfileid: "57374879"
   
     -   [禁用“开始”按钮](#BKMK_DisableTheStartButton)  
   
-    -   [取消和重启操作](#BKMK_CancelAndRestart)  
+    -   [取消和重新启动操作](#BKMK_CancelAndRestart)  
   
     -   [运行多个操作并将输出排入队列](#BKMK_RunMultipleOperations)  
   
--   [检查并运行示例应用](#BKMD_SettingUpTheExample)  
+-   [检查并运行此示例应用程序](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  若要运行该示例，计算机上必须安装 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
@@ -93,7 +93,7 @@ TOTAL bytes returned:  890591
   
      在操作运行期间禁用“开始”按钮，以便用户无法中断它。  
   
--   [取消和重启操作](#BKMK_CancelAndRestart)  
+-   [取消和重新启动操作](#BKMK_CancelAndRestart)  
   
      当用户再次选择“开始”按钮时取消仍在运行的任何操作，然后让最近请求的操作继续运行。  
   
@@ -136,7 +136,7 @@ End Sub
   
  若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载压缩文件。 此项目的名称是 CancelAndRestart。  
   
-1.  声明 <xref:System.Threading.CancellationTokenSource> 变量 `cts`，它处于所有方法的范围内。  
+1. 声明 <xref:System.Threading.CancellationTokenSource> 变量 `cts`，它处于所有方法的范围内。  
   
     ```vb  
     Class MainWindow // Or Class MainPage  
@@ -145,7 +145,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  在 `StartButton_Click` 中，确定操作是否已在进行。 如果的值`cts`是`Nothing`，没有任何操作处于活动状态。 如果该值不`Nothing`，将取消已在运行该操作。  
+2. 在 `StartButton_Click` 中，确定操作是否已在进行。 如果的值`cts`是`Nothing`，没有任何操作处于活动状态。 如果该值不`Nothing`，将取消已在运行该操作。  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -154,7 +154,7 @@ End Sub
     End If  
     ```  
   
-3.  将 `cts` 设置为表示当前进程的不同值。  
+3. 将 `cts` 设置为表示当前进程的不同值。  
   
     ```vb  
     ' *** Now set cts to cancel the current process if the button is chosen again.  
@@ -162,7 +162,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  在末尾`StartButton_Click`，当前的过程已完成，因此设置的值`cts`回`Nothing`。  
+4. 在末尾`StartButton_Click`，当前的过程已完成，因此设置的值`cts`回`Nothing`。  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>AccessTheWebAsync 方法  
  此示例将 `AccessTheWebAsync` 拆分为两个方法。 第一个方法 `AccessTheWebAsync` 会为组启动所有下载任务并设置 `pendingWork` 以控制显示进程。 该方法使用语言集成查询（LINQ 查询）和 <xref:System.Linq.Enumerable.ToArray%2A> 同时启动所有下载任务。  
   
- `AccessTheWebAsync` 随后调用 `FinishOneGroupAsync` 以等待每个下载完成并显示其长度。  
+ `AccessTheWebAsync` 然后，调用`FinishOneGroupAsync`要等待的每个下载完成并显示其长度。  
   
- `FinishOneGroupAsync` 会返回在 `AccessTheWebAsync` 中分配给 `pendingWork` 的任务。 该值会在任务完成之前阻止另一个操作进行中断。  
+ `FinishOneGroupAsync` 返回一个任务分配给`pendingWork`在`AccessTheWebAsync`。 该值会在任务完成之前阻止另一个操作进行中断。  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  
@@ -535,42 +535,42 @@ End Function
   
 ### <a name="BKMK_DownloadingTheApp"></a>下载应用  
   
-1.  从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载压缩文件。  
+1. 从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载压缩文件。  
   
-2.  解压缩下载的文件，然后启动 Visual Studio。  
+2. 解压缩下载的文件，然后启动 Visual Studio。  
   
-3.  在菜单栏上，依次选择 **“文件”**、 **“打开”** 和 **“项目/解决方案”**。  
+3. 在菜单栏上，依次选择 **“文件”**、 **“打开”** 和 **“项目/解决方案”**。  
   
-4.  导航到保存解压缩的示例代码的文件夹，然后打开解决方案 (.sln) 文件。  
+4. 导航到保存解压缩的示例代码的文件夹，然后打开解决方案 (.sln) 文件。  
   
-5.  在“解决方案资源管理器”中，打开要运行的项目的快捷菜单，然后选择“设置为 StartUpProject”。  
+5. 在“解决方案资源管理器”中，打开要运行的项目的快捷菜单，然后选择“设置为 StartUpProject”。  
   
-6.  选择 CTRL+F5 键以生成并运行项目。  
+6. 选择 CTRL+F5 键以生成并运行项目。  
   
 ### <a name="BKMK_BuildingTheApp"></a>生成应用  
  以下部分提供用于将示例生成为 WPF 应用的代码。  
   
 ##### <a name="to-build-a-wpf-app"></a>生成 WPF 应用程序  
   
-1.  启动 Visual Studio。  
+1. 启动 Visual Studio。  
   
-2.  在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。  
+2. 在菜单栏上，依次选择“文件” 、“新建” 、“项目” 。  
   
      **“新建项目”** 对话框随即打开。  
   
-3.  在中**已安装的模板**窗格中，展开**Visual Basic**，然后展开**Windows**。  
+3. 在中**已安装的模板**窗格中，展开**Visual Basic**，然后展开**Windows**。  
   
-4.  在项目类型列表中，选择“WPF 应用程序”。  
+4. 在项目类型列表中，选择“WPF 应用程序”。  
   
-5.  将项目命名为 `WebsiteDownloadWPF`，然后选择“确定”按钮。  
+5. 将项目命名为 `WebsiteDownloadWPF`，然后选择“确定”按钮。  
   
      新项目将出现在“解决方案资源管理器”中。  
   
-6.  在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。  
+6. 在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。  
   
      如果此选项卡不可见，则在“解决方案资源管理器”中，打开 MainWindow.xaml 的快捷菜单，然后选择“查看代码”。  
   
-7.  在 MainWindow.xaml 的“XAML”视图中，将代码替换为以下代码。  
+7. 在 MainWindow.xaml 的“XAML”视图中，将代码替换为以下代码。  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -590,7 +590,7 @@ End Function
   
      MainWindow.xaml 的“设计”视图中将显示一个简单的窗口，其中包含一个文本框和一个按钮。  
   
-8.  对 <xref:System.Net.Http> 添加引用。  
+8. 对 <xref:System.Net.Http> 添加引用。  
   
 9. 在中**解决方案资源管理器**，打开 MainWindow.xaml.vb，快捷菜单，然后选择**查看代码**。  
   

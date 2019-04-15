@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be5d580c28a15a58cad6c5a2231d3a87e25c0e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 839e698c8921f916fad174bae4f4cc8bb4d02994
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157321"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 结构
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
@@ -59,7 +59,7 @@ typedef struct _CorDebugEHClause {
   
  `flags` 字段可以包含以下标志。 请注意，它们不会在 CorDebug.idl 或 CorDebug.h 中定义。  
   
-|Flag|值|描述|  
+|Flag|“值”|描述|  
 |----------|-----------|-----------------|  
 |`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|0x00000000|键入的异常子句。|  
 |`COR_ILEXCEPTION_CLAUSE_FILTER`|0x00000001|异常筛选器和处理程序子句。|  
@@ -73,8 +73,9 @@ typedef struct _CorDebugEHClause {
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [GetEHClauses 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)
 - [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

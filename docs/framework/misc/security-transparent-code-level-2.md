@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8425b294328d4fc7546a372b329d8fa834a088d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c25b14fa7b3867bbdbcb2f1e08cc16ce349e72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156073"
 ---
 # <a name="security-transparent-code-level-2"></a>安全透明的代码，级别 2
 <a name="top"></a>
@@ -73,15 +73,15 @@ ms.locfileid: "54567017"
   
 -   没有属性：如果未指定任何属性，在运行时将所有代码解释为安全关键的除非安全关键违反继承规则 (例如，当重写或实现透明虚拟或接口方法)。 在这些情况下，方法是可靠关键方法。 指定无特性会导致公用语言运行时为你确定透明度规则。  
   
--   `SecurityTransparent`：所有代码都是透明的;整个程序集不会执行任何特权或不安全。  
+-   `SecurityTransparent`:所有代码都是透明的;整个程序集不会执行任何特权或不安全。  
   
--   `SecurityCritical`：由此类型引入此程序集的所有代码都是关键代码；其他所有代码都是透明的。 这种情况类似于不指定任何特性，但公共语言运行时不会自动确定透明度规则。 例如，如果重写虚拟方法或抽象方法或者实现接口方法，默认情况下，该方法是透明的。 你必须将方法显式批注为 `SecurityCritical` 或 `SecuritySafeCritical`；否则加载时将引发 <xref:System.TypeLoadException>。 当基类和派生类位于相同的程序集时，此规则也适用。  
+-   `SecurityCritical`:由此类型引入此程序集的所有代码都是关键代码；其他所有代码都是透明的。 这种情况类似于不指定任何特性，但公共语言运行时不会自动确定透明度规则。 例如，如果重写虚拟方法或抽象方法或者实现接口方法，默认情况下，该方法是透明的。 你必须将方法显式批注为 `SecurityCritical` 或 `SecuritySafeCritical`；否则加载时将引发 <xref:System.TypeLoadException>。 当基类和派生类位于相同的程序集时，此规则也适用。  
   
 -   `AllowPartiallyTrustedCallers` （级别 2 仅）：所有代码默认都是透明的。 但是，各个类型和成员可以有其他特性。  
   
  下表比较了 2 级与 1 级的程序集级别行为。  
   
-|Assembly 特性|级别2|级别1|  
+|Assembly 特性|级别2|等级 1|  
 |------------------------|-------------|-------------|  
 |部分信任的程序集上无特性|类型和成员默认是透明的，但可以是安全关键或安全可靠关键的。|所有类型和成员都是透明的。|  
 |无特性|指定无特性会导致公用语言运行时为你确定透明度规则。 所有类型和成员都是安全关键的，除非安全关键违反继承规则。|在完全信任的程序集上（在全局程序缓集缓存或 `AppDomain` 中标识为完全信任的程序集中），所有类型都是透明的，所有成员都是安全可靠关键的。|  
@@ -92,12 +92,12 @@ ms.locfileid: "54567017"
 ### <a name="type-and-member-annotation"></a>类型和成员批注  
  适用于安全类型的安全特性也适用于该类型引入的成员。 但是，这些规则不适用于基类或接口实现的虚拟或抽象重写。 以下规则适用于类型和成员级别的特性使用：  
   
--   `SecurityCritical`：类型或成员至关重要，可以通过完全信任代码调用。 安全关键类型中引入的方法是关键的。  
+-   `SecurityCritical`:类型或成员至关重要，可以通过完全信任代码调用。 安全关键类型中引入的方法是关键的。  
   
     > [!IMPORTANT]
     >  基类或接口中引入的以及安全关键类中重写或实现的虚拟和抽象方法默认是透明的。 这些方法必须标识为 `SecuritySafeCritical` 或 `SecurityCritical`。  
   
--   `SecuritySafeCritical`：类型或成员是可靠关键的。 但是，类型或成员可以从透明（部分信任的）代码调用，并且与任何其他关键代码一样。 必须审核代码的安全性。  
+-   `SecuritySafeCritical`:类型或成员是可靠关键的。 但是，类型或成员可以从透明（部分信任的）代码调用，并且与任何其他关键代码一样。 必须审核代码的安全性。  
   
  [返回页首](#top)  
   
@@ -192,5 +192,6 @@ ms.locfileid: "54567017"
  <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 属性默认为 `false`，因此该属性必须设置为 `true` 才能跳过验证。 只能出于优化目的跳过验证。 应确保在程序集中的透明代码是通过使用验证`transparent`选项[PEVerify 工具](../../../docs/framework/tools/peverify-exe-peverify-tool.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [安全透明代码，级别 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [安全更改](../../../docs/framework/security/security-changes.md)
+- [安全性更改](../../../docs/framework/security/security-changes.md)

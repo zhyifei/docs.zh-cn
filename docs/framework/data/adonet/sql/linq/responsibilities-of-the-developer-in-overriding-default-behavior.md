@@ -2,12 +2,12 @@
 title: 开发人员在重写默认行为中的责任
 ms.date: 03/30/2017
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-ms.openlocfilehash: 4773d4d5cf8192dfa1f8bfad6b5846c03ab1d2c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12ea526d71946cdc7ab821f5e38948fcbb57d158
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555617"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184764"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>开发人员在重写默认行为中的责任
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不强制实施以下要求，但如果未满足这些要求，则未定义行为。  
@@ -27,4 +27,5 @@ ms.locfileid: "54555617"
 -   最后，重写方法应执行明确的操作。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 操作（如紧急加载、延迟加载和 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>）的语义要求重写提供明确的服务。 例如，只返回空集合而不检查数据库内容的加载重写有可能会造成数据不一致。  
   
 ## <a name="see-also"></a>请参阅
+
 - [自定义插入、更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

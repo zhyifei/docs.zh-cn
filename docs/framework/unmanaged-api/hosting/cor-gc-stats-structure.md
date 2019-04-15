@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fc212321b28545f62f0a1c2965281d02ac73e40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d335a62545f06a66d4044b59aa9499d3f7ede515
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208470"
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS 结构
 提供有关垃圾回收机制的公共语言运行时 (CLR) 的统计信息。  
@@ -84,9 +84,10 @@ pCLRGCManager->GetStats(&GCStats);
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [承载结构](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [自动内存管理](../../../../docs/standard/automatic-memory-management.md)
 - [垃圾回收](../../../../docs/standard/garbage-collection/index.md)

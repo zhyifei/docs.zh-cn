@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: cb8ad8cb4a1ec13611edfcc3de7f4b7eb33fc553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6c5ec6d953d174b525dee7ad3034d2d01ae4950f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829923"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344944"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue 运算符 (Visual Basic)
 确定表达式是否为`True`。  
@@ -24,15 +24,15 @@ ms.locfileid: "58829923"
 ## <a name="compiler-use-of-istrue"></a>为 true 时的编译器使用  
  如果已定义类或结构，可以使用中该类型的变量`For`， `If`， `Else If`，或`While`语句，或在`When`子句。 如果这样做，则编译器会要求将转换到类型的运算符`Boolean`值以便可以测试条件。 它会搜索合适的运算符按以下顺序：  
   
-1.  在类或结构的扩大转换运算符`Boolean`。  
+1. 在类或结构的扩大转换运算符`Boolean`。  
   
-2.  在类或结构的扩大转换运算符`Boolean?`。  
+2. 在类或结构的扩大转换运算符`Boolean?`。  
   
-3.  `IsTrue`运算符在类或结构上的。  
+3. `IsTrue`运算符在类或结构上的。  
   
-4.  收缩转换到`Boolean?`，并不涉及从转换`Boolean`到`Boolean?`。  
+4. 收缩转换到`Boolean?`，并不涉及从转换`Boolean`到`Boolean?`。  
   
-5.  在类或结构的收缩转换运算符`Boolean`。  
+5. 在类或结构的收缩转换运算符`Boolean`。  
   
  如果您未定义任何转换为`Boolean`或`IsTrue`运算符，编译器会引发错误。  
   

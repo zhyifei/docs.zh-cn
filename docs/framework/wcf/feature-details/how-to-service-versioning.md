@@ -2,12 +2,12 @@
 title: 如何：服务版本控制
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: dc81fcde3c4f731257bf759cbd3f31542483618d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085371"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346283"
 ---
 # <a name="how-to-service-versioning"></a>如何：服务版本控制
 本主题概述了创建路由配置以将消息路由到同一服务的不同版本所需采取的基本步骤。 在本示例中，消息将路由到计算器服务的两个不同版本：`roundingCalc` (v1) 和 `regularCalc` (v2)。 这两个实现都支持相同的操作，但较早的服务 `roundingCalc` 在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用较新的 `regularCalc` 服务。  
@@ -37,7 +37,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
   
 ### <a name="implement-service-versioning"></a>实现服务版本控制  
   
-1.  通过指定由服务公开的服务终结点，创建基本的路由服务配置。 下面的示例定义了一个用于接收消息的服务终结点， 还定义用于将消息发送到 `roundingCalc` (v1) 和 `regularCalc` (v2) 服务的客户端终结点。  
+1. 通过指定由服务公开的服务终结点，创建基本的路由服务配置。 下面的示例定义了一个用于接收消息的服务终结点， 还定义用于将消息发送到 `roundingCalc` (v1) 和 `regularCalc` (v2) 服务的客户端终结点。  
   
     ```xml  
     <services>  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2.  定义用于将消息路由到目标终结点的筛选器。  对于此示例中，XPath 筛选器用于检测"CalcVer"自定义标头来确定应将消息路由到哪个版本的值。 XPath 筛选器还用于检测到不包含"CalcVer"标头的消息。 下面的示例定义所需的筛选器和命名空间表。  
+2. 定义用于将消息路由到目标终结点的筛选器。  对于此示例中，XPath 筛选器用于检测"CalcVer"自定义标头来确定应将消息路由到哪个版本的值。 XPath 筛选器还用于检测到不包含"CalcVer"标头的消息。 下面的示例定义所需的筛选器和命名空间表。  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -96,7 +96,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     > [!NOTE]
     > S12 命名空间前缀在命名空间表中，默认情况下定义和表示的命名空间`http://www.w3.org/2003/05/soap-envelope`。
   
-3.  定义筛选器表，该表将各个筛选器与客户端终结点相关联。 如果消息中包含"CalcVer"标头值为 1，它将发送到 regularCalc 服务。 如果标头包含值 2，则系统将该消息发送到 roundingCalc 服务。 如果没有标头，则系统将该消息路由到 regularCalc。  
+3. 定义筛选器表，该表将各个筛选器与客户端终结点相关联。 如果消息中包含"CalcVer"标头值为 1，它将发送到 regularCalc 服务。 如果标头包含值 2，则系统将该消息发送到 roundingCalc 服务。 如果没有标头，则系统将该消息路由到 regularCalc。  
   
      以下代码定义筛选器表并添加前面定义的筛选器。  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。 下面的示例演示如何将相关联`filterTable1`与服务终结点：  
+4. 若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。 下面的示例演示如何将相关联`filterTable1`与服务终结点：  
   
     ```xml  
     <behaviors>  

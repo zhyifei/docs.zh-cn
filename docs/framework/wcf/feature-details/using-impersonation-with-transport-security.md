@@ -2,12 +2,12 @@
 title: 将模拟用于传输安全
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 803edee3e051c40a65ad63db620c65bcdbdcae50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151432"
 ---
 # <a name="using-impersonation-with-transport-security"></a>将模拟用于传输安全
 *模拟*是服务器应用程序的客户端标识的能力。 服务在验证对资源的访问时常常使用模拟。 服务器应用程序使用服务帐户运行，但当服务器接受客户端连接时，它模拟客户端，以便使用客户端凭据执行访问检查。 传输安全是一种传递凭据和使用这些凭据确保通信安全的机制。 本主题介绍使用模拟功能具有 Windows Communication Foundation (WCF) 中的传输安全性。 有关使用消息安全的模拟的详细信息，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
@@ -17,7 +17,7 @@ ms.locfileid: "54532703"
   
 |模拟级别|描述|  
 |-------------------------|-----------------|  
-|无|服务器应用程序不尝试模拟客户端。|  
+|None|服务器应用程序不尝试模拟客户端。|  
 |匿名|服务器应用程序可以对照客户端凭据执行访问检查，但不接收有关客户端标识的任何信息。 此模拟级别仅对计算机上的通信（例如命名管道）有意义。 将 `Anonymous` 用于远程连接会将模拟级别提高到 Identify。|  
 |Identify|服务器应用程序知道客户端的标识，并且可以对照客户端凭据执行访问验证，但不能模拟客户端。 标识是用于 SSPI 凭据在 WCF 中，除非令牌提供程序提供了不同的模拟级别的默认模拟级别。|  
 |Impersonate|服务器应用程序除了执行访问检查以外，还可以像客户端一样访问服务器计算机上的资源。 服务器应用程序不能使用客户端标识访问远程计算机上的资源，这是因为模拟的令牌没有网络凭据|  
@@ -55,7 +55,8 @@ ms.locfileid: "54532703"
  有关 HTTP 传输的详细信息，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
 - [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [如何：模拟服务上的客户端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [如何：在服务上模拟客户端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [了解 HTTP 身份验证](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

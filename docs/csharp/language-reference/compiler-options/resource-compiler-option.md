@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 056207185f89aa219faf1b721598d372394e1061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725696"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302564"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource（C# 编译器选项）
 将指定资源嵌入输出文件。  
@@ -50,13 +50,13 @@ ms.locfileid: "54725696"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  向项目添加资源文件。  
+1. 向项目添加资源文件。  
   
-2.  选择要嵌入解决方案资源管理器的文件。  
+2. 选择要嵌入解决方案资源管理器的文件。  
   
-3.  在“属性”窗口中为文件选择“生成操作”。  
+3. 在“属性”窗口中为文件选择“生成操作”。  
   
-4.  将“生成操作”设置为“嵌入的资源”。  
+4. 将“生成操作”设置为“嵌入的资源”。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.FileProperties2.BuildAction%2A>。  
   

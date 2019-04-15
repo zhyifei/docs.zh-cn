@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 5479c312ae7eb7a166803a6e1238806aae9bd656
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835656"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336078"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 强制执行严格类型语义来限制隐式类型转换。  
@@ -39,11 +39,11 @@ ms.locfileid: "58835656"
   
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>若要在 Visual Studio IDE 中设置-optionstrict  
   
-1.  在 **“解决方案资源管理器”** 中选择一个项目。 上**项目**菜单上，单击**属性。**   
+1. 在 **“解决方案资源管理器”** 中选择一个项目。 上**项目**菜单上，单击**属性。**   
   
-2.  单击“编译”选项卡。  
+2. 单击“编译”选项卡。  
   
-3.  修改中的值**Option Strict**框。  
+3. 修改中的值**Option Strict**框。  
   
 ### <a name="to-set--optionstrict-programmatically"></a>若要以编程方式设置-optionstrict  
   
@@ -65,5 +65,5 @@ vbc -optionstrict+ test.vb
 - [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
 - [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [“选项”对话框 ->“项目”->“Visual Basic 默认值”](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

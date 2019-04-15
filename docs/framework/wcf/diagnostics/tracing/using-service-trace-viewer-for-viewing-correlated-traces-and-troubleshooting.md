@@ -2,12 +2,12 @@
 title: 使用服务跟踪查看器查看相关跟踪和进行故障诊断
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465056"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329045"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>使用服务跟踪查看器查看相关跟踪和进行故障诊断
 本主题介绍跟踪数据的格式，如何查看它，以及使用服务跟踪查看器对应用程序进行故障诊断的方法。  
@@ -45,7 +45,7 @@ ms.locfileid: "58465056"
   
 -   `<SubType>` （跟踪级别）。  
   
--   `<TimeCreated>`。  
+-   `<TimeCreated>`.  
   
 -   `<Source>` （跟踪源名称）。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "58465056"
   
 -   `<Execution>` (进程和线程 id)。  
   
--   `<Computer>`。  
+-   `<Computer>`.  
   
 -   `<ExtendedData>`其中包括`<Action>`，`<MessageID>`和`<ActivityId>`发送一条消息时消息标头中设置。  
   
@@ -152,25 +152,24 @@ ms.locfileid: "58465056"
   
  在服务上，活动模型映射到 WCF 概念，如下所示：  
   
-1.  构造并打开 ServiceHost（这可能创建几个与主机相关的活动，例如在出于安全性的情况下）。  
+1. 构造并打开 ServiceHost（这可能创建几个与主机相关的活动，例如在出于安全性的情况下）。  
   
-2.  在 ServiceHost 中为每个侦听器创建“侦听”活动（包括传入和传出“打开 ServiceHost”）。  
+2. 在 ServiceHost 中为每个侦听器创建“侦听”活动（包括传入和传出“打开 ServiceHost”）。  
   
-3.  当侦听器检测到由客户端发起的通信请求时，它将传输到"接收字节"活动，在其中处理从客户端发送的所有字节。 在此活动中，可以看到在客户端-服务交互期间发生的任何连接错误。  
+3. 当侦听器检测到由客户端发起的通信请求时，它将传输到"接收字节"活动，在其中处理从客户端发送的所有字节。 在此活动中，可以看到在客户端-服务交互期间发生的任何连接错误。  
   
-4.  对于每个组接收的字节对应一条消息，我们处理这些字节在"进程内消息"活动中，我们在其中创建 WCF 消息对象。 在此活动中，可看到与错误信封或格式不正确的消息相关的错误。  
+4. 对于每个组接收的字节对应一条消息，我们处理这些字节在"进程内消息"活动中，我们在其中创建 WCF 消息对象。 在此活动中，可看到与错误信封或格式不正确的消息相关的错误。  
   
-5.  形成消息后，传输到“处理操作”活动。 如果在客户端和服务上 `propagateActivity` 都设置为 `true`，则此活动具有与客户端中定义的活动相同的 ID，如前所述。 此阶段中我们将受益于直接关联的跨终结点，因为在 WCF 中发出的与请求相关的所有跟踪都都位于该同一活动，包括响应消息的处理。  
+5. 形成消息后，传输到“处理操作”活动。 如果在客户端和服务上 `propagateActivity` 都设置为 `true`，则此活动具有与客户端中定义的活动相同的 ID，如前所述。 此阶段中我们将受益于直接关联的跨终结点，因为在 WCF 中发出的与请求相关的所有跟踪都都位于该同一活动，包括响应消息的处理。  
   
-6.  对于进程外操作，我们将创建"执行用户代码"活动以隔离在 WCF 中的用户代码中发出的跟踪。 在前面的示例中，"服务发送添加响应"跟踪有可能的话将不在客户端传播的活动的"执行用户代码"活动中发出。  
+6. 对于进程外操作，我们将创建"执行用户代码"活动以隔离在 WCF 中的用户代码中发出的跟踪。 在前面的示例中，"服务发送添加响应"跟踪有可能的话将不在客户端传播的活动的"执行用户代码"活动中发出。  
   
  在下图中，左侧的第一个活动是根活动 (0000)，它是默认活动。 接下来的三个活动用于打开 ServiceHost。 第 5 列中的活动是侦听器，剩余的活动（6 到 8）说明消息的 WCF 处理，从字节处理到用户代码激活。  
 
  下图显示了 WCF 服务活动的关系图视图：   
 
  ![屏幕截图的跟踪查看器显示的 WCF 服务活动的列表](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
-  
-  
+
  下面的屏幕快照显示客户端和服务的活动，并突出显示跨进程的“处理操作添加”活动（橙色）。 箭头使客户端和服务发送和接收的请求和响应消息相关。 跨进程处理操作的跟踪在图形中单独显示，但在右上面板中作为同一活动的一部分显示。 在此面板中，可以看到已发送消息的客户端跟踪，后跟已接收和已处理消息的服务跟踪。  
   
  下图显示了这两个 WCF 客户端和服务活动的关系图视图  
@@ -189,8 +188,7 @@ ms.locfileid: "58465056"
   
   下图显示了如何选择红色或黄色活动，以找到问题的根源。   
  ![用于查找问题根源的红色或黄色活动的屏幕截图。](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
- 
-  
+
  在右上面板上，可以检查在左侧选择的活动的跟踪。 然后，可以检查该面板中的红色或黄色跟踪以及查看它们是如何相关的。 在前面的图形中，我们看到客户端和服务的警告跟踪都在同一处理操作活动中。  
   
  如果这些跟踪未提供错误的根本原因，则可以通过双击左面板上的所选活动（此处为处理操作）来利用图形。 随后将显示具有相关活动的图形。 您可以展开相关的活动 （通过单击"+"符号） 查找红色或黄色的相关活动中的第一个发出的跟踪。 在传输到相关活动或跨终结点的消息流之后，一直展开刚好在相关的红色或黄色跟踪之前发生的活动，直到查明问题的根本原因为止。  
@@ -207,6 +205,7 @@ ms.locfileid: "58465056"
 若要开始进行故障排除，还可以选择红色或黄色的消息跟踪并双击它以查明根本原因。  
   
 ## <a name="see-also"></a>请参阅
+
 - [端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

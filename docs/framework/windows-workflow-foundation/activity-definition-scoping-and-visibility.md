@@ -2,19 +2,19 @@
 title: 活动定义范围和可见性
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 27c43323a176c841f3d90cb9c52f25599bc0686d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723837"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325210"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>活动定义范围和可见性
 正如对象的范围和可见性一样，活动定义范围和可见性是其他对象或活动访问此活动成员的能力。 通过以下实现来执行活动定义：  
   
-1.  确定活动可向其用户公开的成员（<xref:System.Activities.Argument>、<xref:System.Activities.Variable> 和 <xref:System.Activities.ActivityDelegate> 对象以及子活动）。  
+1. 确定活动可向其用户公开的成员（<xref:System.Activities.Argument>、<xref:System.Activities.Variable> 和 <xref:System.Activities.ActivityDelegate> 对象以及子活动）。  
   
-2.  实现活动的执行逻辑  
+2. 实现活动的执行逻辑  
   
  该实现可能涉及未向活动的使用者公开但却作为该实现的详细信息的成员。  与类型定义类似，作者利用活动模型可以限定与要定义的活动定义有关的活动成员的可见性。  此可见性控制成员使用的各个方面，如数据范围。  
   
@@ -25,11 +25,11 @@ ms.locfileid: "57723837"
  通过创作新活动，通过从基本活动类继承，并使用来自活动编写的工作流[内置活动库](net-framework-4-5-built-in-activity-library.md)。 若要使用某个活动，该活动的作者必须配置其定义的每个组件的可见性。  
   
 ### <a name="activity-members"></a>活动成员  
- 活动模型定义活动提供给使用者的参数、变量、委托和子活动。 其中每个成员均可声明为 `public` 或 `private`。 公共成员由活动的使用者进行配置，而`private`成员使用活动的作者确定的实现。 数据范围的可见性规则如下：  
+ 活动模型定义活动提供给使用者的自变量、变量、委托和子活动。 其中每个成员均可声明为 `public` 或 `private`。 公共成员由活动的使用者进行配置，而`private`成员使用活动的作者确定的实现。 数据范围的可见性规则如下：  
   
-1.  公共成员和公共子活动的公共成员可引用公共变量。  
+1. 公共成员和公共子活动的公共成员可引用公共变量。  
   
-2.  私有成员和公共子活动的公共成员可引用参数和私有变量。  
+2. 私有成员和公共子活动的公共成员可引用参数和私有变量。  
   
  绝对不要将可由活动的使用者设置的成员设置为私有成员。  
   
@@ -37,24 +37,24 @@ ms.locfileid: "57723837"
  通过使用 <xref:System.Activities.NativeActivity>、<xref:System.Activities.Activity>、<xref:System.Activities.CodeActivity> 或 <xref:System.Activities.AsyncCodeActivity> 定义自定义活动。 派生自这些类的活动可公开具有不同可见性的不同成员类型。  
   
 #### <a name="nativeactivity"></a>NativeActivity  
- 派生自 <xref:System.Activities.NativeActivity> 的活动具有使用命令性代码编写的行为，而且还可选择使用现有活动定义这些活动。 从 <xref:System.Activities.NativeActivity> 派生活动可授予对运行时公开的所有功能的访问权限。 此类活动的任何成员都可通过使用公共或私有可见性（只能声明为 `public` 的参数除外）进行定义。  
+ 派生自 <xref:System.Activities.NativeActivity> 的活动具有使用命令性代码编写的行为，而且还可选择使用现有活动定义这些活动。 从 <xref:System.Activities.NativeActivity> 派生活动可授予对运行时公开的所有功能的访问权限。 此类活动的任何成员都可通过使用公共或私有可见性（只能声明为 `public` 的自变量除外）进行定义。  
   
  使用传递给 <xref:System.Activities.NativeActivity> 方法的 <xref:System.Activities.NativeActivityMetadata> 结构，将派生自 <xref:System.Activities.NativeActivity.CacheMetadata%2A> 的类的成员声明为运行时。  
   
-#### <a name="activity"></a>Activity  
- 使用 <xref:System.Activities.Activity> 创建的活动具有通过撰写其他活动而严格设计的行为。 <xref:System.Activities.Activity> 类具有一个实现子活动，该活动由运行时通过使用 <xref:System.Activities.Activity.Implementation%2A> 获取。 派生自 <xref:System.Activities.Activity> 的活动可定义公共参数、公共变量、导入的 ActivityDelegates 以及导入的 Activities。  
+#### <a name="activity"></a>活动  
+ 使用 <xref:System.Activities.Activity> 创建的活动具有通过撰写其他活动而严格设计的行为。 <xref:System.Activities.Activity> 类具有一个实现子活动，该活动由运行时通过使用 <xref:System.Activities.Activity.Implementation%2A> 获取。 派生自 <xref:System.Activities.Activity> 的活动可定义公共自变量、公共变量、导入的 ActivityDelegates 以及导入的 Activities。  
   
  导入的 ActivityDelegates 和 Activities 声明为活动的公共子活动，但不能由活动直接计划。 验证期间使用此信息，可避免在从不执行活动的位置运行面向父活动的验证。 另外，正如公共子活动一样，导入的子活动也可由活动的实现进行引用和计划。 这意味着，用来导入 Activity1 的活动可将 <xref:System.Activities.Statements.Sequence> 包含在其计划 Activity1 的实现中。  
   
 #### <a name="codeactivity-asynccodeactivity"></a>CodeActivity/ AsyncCodeActivity  
- 此基类用于使用命令性代码创作行为。 派生自此类的活动仅具有对其公开的参数的访问权限。 这意味着仅这些活动能够公开的成员为公共参数。 任何其他成员或可见性都不适用于这些活动。  
+ 此基类用于使用命令性代码创作行为。 派生自此类的活动仅具有对其公开的自变量的访问权限。 这意味着仅这些活动能够公开的成员为公共自变量。 任何其他成员或可见性都不适用于这些活动。  
   
 #### <a name="summary-of-visibilities"></a>可见性摘要  
  下表汇总了本节前面的信息。  
   
-|成员类型|NativeActivity|Activity|CodeActivity/ AsyncCodeActivity|  
+|成员类型|NativeActivity|活动|CodeActivity/ AsyncCodeActivity|  
 |-----------------|--------------------|--------------|--------------------------------------|  
-|参数|公共/私有|Public|不适用|  
+|自变量|公共/私有|Public|不适用|  
 |变量|公共/私有|Public|不适用|  
 |子活动|公共/私有|公共，在实现中定义的一个固定的私有子活动。|不适用|  
 |ActivityDelegates|公共/私有|Public|不适用|  

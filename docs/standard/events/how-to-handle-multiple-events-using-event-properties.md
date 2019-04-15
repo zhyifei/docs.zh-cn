@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 158313bcecc8e4bd89f358aecf92324c10789b43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8d68770fe60f4d9fb3d9982cf426376d54b229e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592216"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330111"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>如何：使用事件属性处理多个事件
 若要使用事件属性，请在引发事件的类中定义事件属性，然后在处理事件的类中设置事件属性的委托。 若要在类中实现多个事件属性，此类必须在内部存储和维护为每个事件定义的委托。 典型的方法是实现通过事件键索引的委托集合。  
@@ -30,15 +30,15 @@ ms.locfileid: "54592216"
   
 ### <a name="to-handle-multiple-events-using-event-properties"></a>使用事件属性处理多个事件  
   
-1.  定义引发事件的类中的委托集合。  
+1. 定义引发事件的类中的委托集合。  
   
-2.  定义每个事件的键。  
+2. 定义每个事件的键。  
   
-3.  定义引发事件的类中的事件属性。  
+3. 定义引发事件的类中的事件属性。  
   
-4.  使用委托集合实现添加和移除事件属性的 add 和 remove 访问器方法。  
+4. 使用委托集合实现添加和移除事件属性的 add 和 remove 访问器方法。  
   
-5.  使用公共事件属性来添加和移除处理事件的类中的事件处理程序委托。  
+5. 使用公共事件属性来添加和移除处理事件的类中的事件处理程序委托。  
   
 ## <a name="example"></a>示例  
  下面的 C# 示例实现事件属性 `MouseDown` 和 `MouseUp`，其中使用 <xref:System.ComponentModel.EventHandlerList> 来存储每个事件的委托。 事件属性构造的关键字是粗体类型。  

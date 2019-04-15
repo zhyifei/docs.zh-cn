@@ -6,12 +6,12 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: 3b20e903ce7eef7c69f55328f459d52537a1e85d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a93402be30cb461ac6a0ed9daa4a684598a85da1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132053"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318242"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>演练：使用 Windows 窗体控件上的智能标记执行常规任务
 在 Windows 窗体应用程序构造窗体和控件，如有需要反复执行的许多任务。 以下是一些你将遇到的执行常用任务：  
@@ -44,26 +44,26 @@ ms.locfileid: "59132053"
   
 #### <a name="to-create-the-project"></a>要创建项目  
   
-1.  创建一个名为"SmartTagsExample"的基于 Windows 的应用程序项目 (**文件** > **新建** > **项目** >  **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**)。  
+1. 创建一个名为"SmartTagsExample"的基于 Windows 的应用程序项目 (**文件** > **新建** > **项目** >  **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**)。  
   
-2.  选择中的窗体**Windows 窗体设计器**。  
+2. 选择中的窗体**Windows 窗体设计器**。  
   
 ## <a name="using-smart-tags"></a>使用智能标记  
  智能标记上将其提供的控件的设计时将始终可用。  
   
 #### <a name="to-use-smart-tags"></a>若要使用智能标记  
   
-1.  拖动<xref:System.Windows.Forms.TabControl>从**工具箱**拖动到窗体。 请注意的智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 旁边的显示<xref:System.Windows.Forms.TabControl>。  
+1. 拖动<xref:System.Windows.Forms.TabControl>从**工具箱**拖动到窗体。 请注意的智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 旁边的显示<xref:System.Windows.Forms.TabControl>。  
   
-2.  单击智能标记标志符号。 在标志符号旁边显示的快捷菜单，选择**添加选项卡**项。 观察到的新选项卡页添加到<xref:System.Windows.Forms.TabControl>。  
+2. 单击智能标记标志符号。 在标志符号旁边显示的快捷菜单，选择**添加选项卡**项。 观察到的新选项卡页添加到<xref:System.Windows.Forms.TabControl>。  
   
-3.  从 <xref:System.Windows.Forms.TableLayoutPanel> “工具箱” **将** 控件拖到你的窗体上。  
+3. 从 <xref:System.Windows.Forms.TableLayoutPanel> “工具箱” **将** 控件拖到你的窗体上。  
   
-4.  单击智能标记标志符号。 在标志符号旁边显示的快捷菜单，选择**添加列**项。 观察新列添加到<xref:System.Windows.Forms.TableLayoutPanel>控件。  
+4. 单击智能标记标志符号。 在标志符号旁边显示的快捷菜单，选择**添加列**项。 观察新列添加到<xref:System.Windows.Forms.TableLayoutPanel>控件。  
   
-5.  从 <xref:System.Windows.Forms.SplitContainer> “工具箱” **将** 控件拖到你的窗体上。  
+5. 从 <xref:System.Windows.Forms.SplitContainer> “工具箱” **将** 控件拖到你的窗体上。  
   
-6.  单击智能标记标志符号。 在标志符号旁边显示的快捷菜单，选择**水平拆分器方向**项。 观察<xref:System.Windows.Forms.SplitContainer>现在是控件的分隔条水平。  
+6. 单击智能标记标志符号。 在标志符号旁边显示的快捷菜单，选择**水平拆分器方向**项。 观察<xref:System.Windows.Forms.SplitContainer>现在是控件的分隔条水平。  
   
 ## <a name="see-also"></a>请参阅
 

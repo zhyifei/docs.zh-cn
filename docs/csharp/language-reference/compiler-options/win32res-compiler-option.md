@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 522d80ce6be277c048fa62cc1a7b077d8bb08bfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4026fcbd7dc2ef29c1e7ee01a0f37b3ff471b187
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544693"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322369"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res（C# 编译器选项）
 -win32res 选项会在输出文件中插入 Win32 资源。  
@@ -38,11 +38,11 @@ ms.locfileid: "54544693"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的“属性”页。  
+1. 打开项目的“属性”页。  
   
-2.  单击“应用程序”属性页。  
+2. 单击“应用程序”属性页。  
   
-3.  单击“资源文件”按钮，然后使用组合框选择一个文件。  
+3. 单击“资源文件”按钮，然后使用组合框选择一个文件。  
   
 ## <a name="example"></a>示例  
  编译 `in.cs` 并附加 Win32 资源文件 `rf.res` 以生成 `in.exe`：  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: 7f74d56b47629ff76f9b935d26278ace8df4c353
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 121c0a95a3a6bb695d9c73347c733cba215a0de4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842325"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304150"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>类型的表达式\<类型 > 不可查询
 类型的表达式\<类型 > 不可查询。 请确保不缺少程序集引用和/或命名空间导入 LINQ 提供程序。  
@@ -29,9 +29,9 @@ ms.locfileid: "58842325"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  添加`Import`语句<xref:System.Linq>， <xref:System.Data.Linq>，或<xref:System.Xml.Linq>到你的代码文件的命名空间。 您可以还使用导入命名空间为你的项目**引用**的项目设计器页 (**我的项目**)。  
+1. 添加`Import`语句<xref:System.Linq>， <xref:System.Data.Linq>，或<xref:System.Xml.Linq>到你的代码文件的命名空间。 您可以还使用导入命名空间为你的项目**引用**的项目设计器页 (**我的项目**)。  
   
-2.  请确保已标识为您的查询的源是可查询类型的类型。 也就是说，实现的类型<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。  
+2. 请确保已标识为您的查询的源是可查询类型的类型。 也就是说，实现的类型<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。  
   
 ## <a name="see-also"></a>请参阅
 

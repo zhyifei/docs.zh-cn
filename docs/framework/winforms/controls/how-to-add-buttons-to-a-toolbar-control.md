@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 1a8666124c09d27d9d2ef936d36e7739d473a996
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad4384f8cc2a1d0c15f8c7681e6e5d8bf75e4451
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085982"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343683"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>如何：向 ToolBar 控件添加按钮
 > [!NOTE]
@@ -29,9 +29,9 @@ ms.locfileid: "59085982"
   
 ### <a name="to-add-buttons-programmatically"></a>若要以编程方式添加按钮  
   
-1.  在过程中，创建工具栏按钮将它们添加到<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合。  
+1. 在过程中，创建工具栏按钮将它们添加到<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合。  
   
-2.  通过传递通过按钮的索引指定个别按钮的属性设置<xref:System.Windows.Forms.ToolBar.Buttons%2A>属性。  
+2. 通过传递通过按钮的索引指定个别按钮的属性设置<xref:System.Windows.Forms.ToolBar.Buttons%2A>属性。  
   
      下面的示例假定窗体具有<xref:System.Windows.Forms.ToolBar>已添加的控件。  
   

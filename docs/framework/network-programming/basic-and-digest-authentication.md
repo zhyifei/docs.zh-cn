@@ -19,12 +19,12 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-ms.openlocfilehash: 2c764909514eac74cb930df055cdb846bab7b249
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f70d2aef3bb064a3df9db9c87671040776332a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089817"
 ---
 # <a name="basic-and-digest-authentication"></a>基本和摘要式身份验证
 基本和摘要式身份验证的 <xref:System.Net> 实现遵循 RFC2617 – HTTP 身份验证：基本和摘要式身份验证（可在[万维网联合会](https://www.w3.org)网站上找到）。  
@@ -47,5 +47,6 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 >  使用基本和摘要式身份验证发送的数据不会加密，因此攻击者会看到数据。 此外，基本身份验证凭据（用户名和密码）是以明文形式发送的，会被截取。  
   
 ## <a name="see-also"></a>请参阅
+
 - [NTLM 和 Kerberos 身份验证](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
 - [Internet 身份验证](../../../docs/framework/network-programming/internet-authentication.md)

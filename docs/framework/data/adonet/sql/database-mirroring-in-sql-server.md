@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: e70624a43945d29c1690fbed6e39da4f8da6cfe4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599980"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325691"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server 中的数据库镜像
 通过 SQL Server 中的数据库镜像，可以在备用服务器上保留 SQL Server 数据库的副本（即镜像）。 镜像可以确保数据始终存在两个独立的副本，从而提供高可用性和完整的数据冗余。 用于 SQL Server 的 .NET 数据提供程序提供了数据库镜像的隐式支持，这样，在为 SQL Server 数据库配置了镜像之后，开发人员无需采取任何措施或编写任何代码。 此外，<xref:System.Data.SqlClient.SqlConnection> 对象支持显式连接模式，该模式允许在 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 中提供故障转移合作伙伴服务器的名称。  
   
  对于连接目标为某个配置为镜像的数据库的 <xref:System.Data.SqlClient.SqlConnection> 对象将发生以下简化的事件序列：  
   
-1.  客户端应用程序成功连接到主体数据库上，服务器发送回合作伙伴服务器的名称，然后将该名称缓存在客户端上。  
+1. 客户端应用程序成功连接到主体数据库上，服务器发送回合作伙伴服务器的名称，然后将该名称缓存在客户端上。  
   
-2.  如果包含主体数据库的服务器失败或连接中断，连接和事务状态将丢失。 客户端应用程序尝试重新建立与主体数据库的连接，但是失败。  
+2. 如果包含主体数据库的服务器失败或连接中断，连接和事务状态将丢失。 客户端应用程序尝试重新建立与主体数据库的连接，但是失败。  
   
-3.  然后，客户端应用程序透明地尝试与合作伙伴服务器上的镜像数据库建立连接。 如果成功，连接将重定向到镜像数据库，而该镜像数据库将成为新的主体数据库。  
+3. 然后，客户端应用程序透明地尝试与合作伙伴服务器上的镜像数据库建立连接。 如果成功，连接将重定向到镜像数据库，而该镜像数据库将成为新的主体数据库。  
   
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>在连接字符串中指定故障转移合作伙伴  
  如果在连接字符串中提供故障转移合作伙伴服务器的名称，当客户端应用程序初次连接时，主体数据库不可用，客户端将直接尝试与故障转移合作伙伴建立连接。  
@@ -61,7 +61,8 @@ string activeServer = connection.DataSource;
   
 |资源|描述|  
 |--------------|-----------------|  
-|[数据库镜像](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|说明如何在 SQL Server 中设置和配置镜像。|  
+|[Database Mirroring](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|说明如何在 SQL Server 中设置和配置镜像。|  
   
 ## <a name="see-also"></a>请参阅
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

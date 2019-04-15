@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: a3ac0f321a20624deea1fe382d04a8d4e1b6c510
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 88bdfe6e659e6e83365b3d17c9067581f209d154
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135195"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331515"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>在服务协定中指定数据传输
 Windows Communication Foundation (WCF) 将视为消息传送基础结构。 服务操作可以接收消息、处理消息以及发送消息。 消息是使用操作协定描述的。 例如，请考虑以下协定。  
@@ -566,11 +566,11 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  前面的三种情况（.NET 类型保留、对象图保留和完全基于 `XmlObjectSerializer` 的自定义序列化）都需要插入一个自定义序列化程序。 为此，请执行下列步骤：  
   
-1.  编写自己的派生自 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 的行为。  
+1. 编写自己的派生自 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 的行为。  
   
-2.  重写两个 `CreateSerializer` 方法以返回自己的序列化程序（<xref:System.Runtime.Serialization.NetDataContractSerializer>、将 <xref:System.Runtime.Serialization.DataContractSerializer> 设置为 `preserveObjectReferences` 的 `true` 或自己的自定义 <xref:System.Runtime.Serialization.XmlObjectSerializer>）。  
+2. 重写两个 `CreateSerializer` 方法以返回自己的序列化程序（<xref:System.Runtime.Serialization.NetDataContractSerializer>、将 <xref:System.Runtime.Serialization.DataContractSerializer> 设置为 `preserveObjectReferences` 的 `true` 或自己的自定义 <xref:System.Runtime.Serialization.XmlObjectSerializer>）。  
   
-3.  在打开服务主机或创建客户端通道之前，移除现有的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行为并插入在前面的步骤中创建的自定义派生类。  
+3. 在打开服务主机或创建客户端通道之前，移除现有的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行为并插入在前面的步骤中创建的自定义派生类。  
   
  有关高级序列化概念的详细信息，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   

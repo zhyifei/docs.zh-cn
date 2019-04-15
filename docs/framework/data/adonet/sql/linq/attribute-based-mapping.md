@@ -2,12 +2,12 @@
 title: 基于特性的映射
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: bd16731684a04ca7a92dbb6560b5c008558896cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713897"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223558"
 ---
 # <a name="attribute-based-mapping"></a>基于特性的映射
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 映射到 SQL Server 数据库[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对象模型通过应用属性或通过使用外部映射文件。 本主题概述了基于属性的方法。  
@@ -26,18 +26,18 @@ ms.locfileid: "54713897"
   
 |属性|类型|默认|描述|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|请参见<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|与其 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 属性一起使用，用于指定数据库的名称。|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|查看 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|与其 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 属性一起使用，用于指定数据库的名称。|  
   
- 有关详细信息，请参见<xref:System.Data.Linq.Mapping.DatabaseAttribute>。  
+ 有关详细信息，请参阅 <xref:System.Data.Linq.Mapping.DatabaseAttribute>。  
   
 ## <a name="tableattribute-attribute"></a>TableAttribute 属性  
- 使用此属性可将类指定为与数据库表或视图关联的实体类。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将具有此属性的类视为持久性类。 下表介绍了 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 属性。  
+ 使用此属性可将类指定为与数据库表或视图关联的实体类。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将类视为持久性类具有此特性的类。 下表介绍了 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 属性。  
   
 |属性|类型|默认|描述|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|String|与类名相同的字符串|将类指定为与数据库表关联的实体类。|  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.TableAttribute>。  
+ 有关详细信息，请参阅 <xref:System.Data.Linq.Mapping.TableAttribute>。  
   
 ## <a name="columnattribute-attribute"></a>ColumnAttribute 属性  
  使用此属性可指定实体类的某个成员表示数据库表中的列。 您可以将此属性 (Attribute) 应用于任何字段或属性 (Property)。  
@@ -56,9 +56,9 @@ ms.locfileid: "54713897"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|指示列包含 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 继承层次结构的鉴别器值。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|指定此类成员表示作为表主键或表主键一部分的列。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|将成员的列类型标识为数据库时间戳或版本号。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|除非对某个成员而言 `Always` 为 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>，否则为 `true`|指定 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何实现开放式并发冲突的检测。|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`除非<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>是`true`成员|指定 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何实现开放式并发冲突的检测。|  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.ColumnAttribute>。  
+ 有关详细信息，请参阅 <xref:System.Data.Linq.Mapping.ColumnAttribute>。  
   
 > [!NOTE]
 >  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。 例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。 这适用于所有.NET 编程语言，甚至那些不是通常区分大小写，包括 Visual Basic。 有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
@@ -71,13 +71,13 @@ ms.locfileid: "54713897"
 |属性|类型|默认|描述|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boolean|`false`|当放置在其外键成员均不可以为 null 的关联上时，如果该关联设置为 null，则删除对象。|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|无|向关联添加删除行为。|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|None|向关联添加删除行为。|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boolean|`false`|如果为 true，则将成员指定为表示数据库关系的关联中的外键。|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boolean|`false`|如果为 true，则指示对外键的唯一性约束。|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|String|相关类的 ID|将目标实体类的一个或多个成员指定为关联的另一端上的键值。|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|String|包含类的 ID|指定此实体类的成员表示关联的此端上的键值。|  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.AssociationAttribute>。  
+ 有关详细信息，请参阅 <xref:System.Data.Linq.Mapping.AssociationAttribute>。  
   
 > [!NOTE]
 >  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。 例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。 这适用于所有.NET 编程语言，甚至那些不是通常区分大小写，包括 Visual Basic。 有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
@@ -93,7 +93,7 @@ ms.locfileid: "54713897"
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boolean|`false`|如果为 true，则在存储区中没有与指定值中的任何一个值匹配的鉴别器值时实例化此类型的对象。|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|类型|无。 必须提供值。|指定层次结构中的类的类型。|  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>。  
+ 有关详细信息，请参阅 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>。  
   
 ## <a name="functionattribute-attribute"></a>FunctionAttribute 属性  
  使用此属性可指定方法表示数据库中的存储过程或用户定义函数。  
@@ -105,7 +105,7 @@ ms.locfileid: "54713897"
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boolean|`false`|如果为 false，则指示映射到存储过程。 如果为 true，则指示映射到用户定义的函数。|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|String|与数据库中的名称相同的字符串|指定存储过程或用户定义函数的名称。|  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.FunctionAttribute>。  
+ 有关详细信息，请参阅 <xref:System.Data.Linq.Mapping.FunctionAttribute>。  
   
 ## <a name="parameterattribute-attribute"></a>ParameterAttribute 属性  
  使用此属性可映射存储过程方法中的输入参数。  
@@ -114,10 +114,10 @@ ms.locfileid: "54713897"
   
 |属性|类型|默认|描述|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|String|无|指定数据库类型。|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|String|None|指定数据库类型。|  
 |<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|String|与数据库中的参数名相同的字符串|指定参数的名称。|  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.ParameterAttribute>。  
+ 有关详细信息，请参阅 <xref:System.Data.Linq.Mapping.ParameterAttribute>。  
   
 ## <a name="resulttypeattribute-attribute"></a>ResultTypeAttribute 属性  
  使用此属性可指定结果类型。  
@@ -128,7 +128,7 @@ ms.locfileid: "54713897"
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|类型|（无）|用于映射到返回 <xref:System.Data.Linq.IMultipleResults> 的存储过程的方法。 为存储过程声明有效的或预期的类型映射。|  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.ResultTypeAttribute>。  
+ 有关详细信息，请参阅 <xref:System.Data.Linq.Mapping.ResultTypeAttribute>。  
   
 ## <a name="dataattribute-attribute"></a>DataAttribute 属性  
  使用此属性可指定名称和私有存储字段。  
@@ -143,4 +143,5 @@ ms.locfileid: "54713897"
  有关详细信息，请参阅 <xref:System.Data.Linq.Mapping.DataAttribute>。  
   
 ## <a name="see-also"></a>请参阅
-- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+
+- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

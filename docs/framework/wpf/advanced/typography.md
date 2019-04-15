@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: f9257414a90cd3d4f64653893c5fa6e19963ad3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369547"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195509"
 ---
 # <a name="typography"></a>版式
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 还支持丰富的文本内容演示。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文本通过 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 技术呈现，该技术增强了文本的清晰度和可读性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 此外支持[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体，它提供的定义之外的其他功能[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]格式。  
@@ -25,10 +25,11 @@ ms.locfileid: "57369547"
  [绘制格式化文本](drawing-formatted-text.md)  
  [高级文本格式设置](advanced-text-formatting.md)  
  [字体](fonts-wpf.md)  
- [字形](glyphs.md)  
+ [标志符号](glyphs.md)  
  [帮助主题](typography-how-to-topics.md)  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Documents.Typography>
 - [WPF 中的文档](documents-in-wpf.md)
 - [OpenType 字体功能](opentype-font-features.md)

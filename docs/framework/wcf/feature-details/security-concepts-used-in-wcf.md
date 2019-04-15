@@ -2,12 +2,12 @@
 title: WCF 中使用的安全概念
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: 2dd820d4b6ba38f194074465ac7c1f40289fd928
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541789"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295544"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF 中使用的安全概念
 Windows Communication Foundation (WCF) 安全是基于已在使用的概念和各种安全基础结构中部署。  
@@ -34,18 +34,19 @@ Windows Communication Foundation (WCF) 安全是基于已在使用的概念和�
 ## <a name="access-control-mechanisms"></a>访问控制机制  
  WCF 提供了多种服务或操作的访问控制方式。 其中包括：  
   
-1.  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
+1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2.  ASP.NET 成员身份提供程序  
+2. ASP.NET 成员身份提供程序  
   
-3.  ASP.NET 角色提供程序  
+3. ASP.NET 角色提供程序  
   
-4.  授权管理器  
+4. 授权管理器  
   
-5.  标识模型  
+5. 标识模型  
   
  有关这些主题，请参阅[的访问控制机制](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   
 ## <a name="see-also"></a>请参阅
+
 - [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

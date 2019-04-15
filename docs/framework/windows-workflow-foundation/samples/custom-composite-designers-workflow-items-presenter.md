@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118100"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344866"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>自定义复合设计器 — 工作流项演示器
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 是 WF 设计器编程模型中的一个重要类型，可用于编辑包含元素的集合。 此示例演示如何生成一个呈现此类可编辑集合的活动设计器。
@@ -25,9 +25,9 @@ ms.locfileid: "59118100"
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例
 
-1.  打开**UsingWorkflowItemsPresenter.sln**适用于 C# 或 Visual Studio 2010 中的 VB 示例解决方案。
+1. 打开**UsingWorkflowItemsPresenter.sln**适用于 C# 或 Visual Studio 2010 中的 VB 示例解决方案。
 
-2.  生成和运行解决方案。 重写承载的工作流设计器应用程序应会打开，并且您可以将活动拖动到画布上。
+2. 生成和运行解决方案。 重写承载的工作流设计器应用程序应会打开，并且您可以将活动拖动到画布上。
 
 ## <a name="sample-highlights"></a>示例重点
  此示例的代码演示了以下内容：

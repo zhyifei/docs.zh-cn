@@ -10,12 +10,12 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078871"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295791"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>演练：使用两个 Windows 窗体 DataGridView 控件创建一个主/详细信息窗体
 使用的最常见方案之一<xref:System.Windows.Forms.DataGridView>控件是*母版/详细信息*窗体，其中显示了两个数据库表之间的父/子关系。 在主表中选择行，则会导致要使用的相应子数据更新的详细信息表。  
@@ -33,14 +33,14 @@ ms.locfileid: "59078871"
   
 #### <a name="to-create-a-masterdetail-form"></a>若要创建主/从窗体  
   
-1.  创建派生的类<xref:System.Windows.Forms.Form>和包含两个<xref:System.Windows.Forms.DataGridView>控件和两个<xref:System.Windows.Forms.BindingSource>组件。 下面的代码提供了基本窗体初始化并包括`Main`方法。 如果使用 Visual Studio 设计器来创建你的窗体，可以使用设计器生成的代码而不是此代码中，但一定要使用的变量的声明中所示的名称。  
+1. 创建派生的类<xref:System.Windows.Forms.Form>和包含两个<xref:System.Windows.Forms.DataGridView>控件和两个<xref:System.Windows.Forms.BindingSource>组件。 下面的代码提供了基本窗体初始化并包括`Main`方法。 如果使用 Visual Studio 设计器来创建你的窗体，可以使用设计器生成的代码而不是此代码中，但一定要使用的变量的声明中所示的名称。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#02)]  
   
-2.  用于处理连接到数据库的详细信息窗体的类定义中实现的方法。 此示例使用`GetData`方法来填充<xref:System.Data.DataSet>对象，将添加<xref:System.Data.DataRelation>对象的数据集和绑定到<xref:System.Windows.Forms.BindingSource>组件。 请确保将 `connectionString` 变量设置为适合数据库的值。  
+2. 用于处理连接到数据库的详细信息窗体的类定义中实现的方法。 此示例使用`GetData`方法来填充<xref:System.Data.DataSet>对象，将添加<xref:System.Data.DataRelation>对象的数据集和绑定到<xref:System.Windows.Forms.BindingSource>组件。 请确保将 `connectionString` 变量设置为适合数据库的值。  
   
     > [!IMPORTANT]
     >  将敏感信息（如密码）存储在连接字符串中可能会影响应用程序的安全性。 若要控制对数据库的访问，一种较为安全的方法是使用 Windows 身份验证（也称为集成安全性）。 有关详细信息，请参阅[保护连接信息](../../data/adonet/protecting-connection-information.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "59078871"
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#20)]  
   
-3.  实现窗体的一个处理程序<xref:System.Windows.Forms.Form.Load>绑定的事件<xref:System.Windows.Forms.DataGridView>控件添加到<xref:System.Windows.Forms.BindingSource>组件，并调用`GetData`方法。 下面的示例包含调整大小的代码<xref:System.Windows.Forms.DataGridView>列以适合显示的数据。  
+3. 实现窗体的一个处理程序<xref:System.Windows.Forms.Form.Load>绑定的事件<xref:System.Windows.Forms.DataGridView>控件添加到<xref:System.Windows.Forms.BindingSource>组件，并调用`GetData`方法。 下面的示例包含调整大小的代码<xref:System.Windows.Forms.DataGridView>列以适合显示的数据。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]  

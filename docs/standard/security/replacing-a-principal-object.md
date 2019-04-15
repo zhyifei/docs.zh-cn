@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5193756861f407315ec82e4419f1d04495c7dd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f33be207dd6166b16a04844f3d92b6e017d1c7a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606028"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345438"
 ---
 # <a name="replacing-a-principal-object"></a>替换 Principal 对象
 提供身份验证服务的应用程序必须能够为给定的线程替换 **主体** 对象 (<xref:System.Security.Principal.IPrincipal>)。 此外，安全系统必须帮助保护这种替换 **主体** 对象的能力，因为恶意附加的不正确的 **主体** 会通过声明一个不真实的身份或角色危及应用程序的安全。 因此，必须向需要能够替换 **主体** 对象的应用程序授予 <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> 对象，以进行主体控制。 （请注意，对于执行基于角色的安全检查或创建 **主体** 对象，此权限不是必需的。）  
   
  可通过执行以下任务替换当前 **主体** 对象：  
   
-1.  创建替换的 **主体** 对象和关联的 **标识** 对象。  
+1. 创建替换的 **主体** 对象和关联的 **标识** 对象。  
   
-2.  将新的 **主体** 附加到调用上下文。  
+2. 将新的 **主体** 附加到调用上下文。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何创建一般主体对象并用该对象来设置线程的主体。  

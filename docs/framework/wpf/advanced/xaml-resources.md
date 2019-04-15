@@ -7,20 +7,19 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: f5d6ae2d21058e7e6dd9fa9736800237082766d1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364744"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344918"
 ---
 # <a name="xaml-resources"></a>XAML 资源
 资源是可以在应用程序中的不同位置重复使用的对象。 资源的示例包括画笔和样式。 本概述介绍如何使用中的资源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 此外可以创建并使用代码，或者通过互换使用代码访问资源和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 有关详细信息，请参阅[资源和代码](resources-and-code.md)。  
   
 > [!NOTE]
 >  本主题中所述的资源文件是不同的资源文件中所述[WPF 应用程序资源、 内容和数据文件](../app-development/wpf-application-resource-content-and-data-files.md)和不同于嵌入或链接的资源中所述[管理应用程序资源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)。  
-  
-  
+
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>在 XAML 中使用资源  
  下面的示例定义<xref:System.Windows.Media.SolidColorBrush>作为页面的根元素上的资源。 该示例然后引用的资源，并使用它来设置多个子元素，其中包括的属性<xref:System.Windows.Shapes.Ellipse>、 一个<xref:System.Windows.Controls.TextBlock>，和一个<xref:System.Windows.Controls.Button>。  
@@ -70,11 +69,11 @@ ms.locfileid: "57364744"
   
 #### <a name="static-resource-lookup-behavior"></a>静态资源查找行为  
   
-1.  查找进程在用于设置属性的元素所定义的资源字典中查找请求的键。  
+1. 查找进程在用于设置属性的元素所定义的资源字典中查找请求的键。  
   
-2.  查找进程随后会向上遍历逻辑树，以查找父元素及其资源字典。 直至到达根元素，遍历操作才会停止。  
+2. 查找进程随后会向上遍历逻辑树，以查找父元素及其资源字典。 直至到达根元素，遍历操作才会停止。  
   
-3.  接下来，将检查应用程序资源。 应用程序的资源是由定义的资源字典中的这些资源<xref:System.Windows.Application>对象在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
+3. 接下来，将检查应用程序资源。 应用程序的资源是由定义的资源字典中的这些资源<xref:System.Windows.Application>对象在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
   
  从资源字典中进行的静态资源引用必须引用已在资源引用前进行过词法定义的资源。 静态资源引用无法解析前向引用。 因此，如果使用静态资源引用，则必须对资源字典的结构进行设计，以便在每个相应资源字典的开头或临近位置定义要按资源使用的资源。  
   
@@ -102,19 +101,19 @@ ms.locfileid: "57364744"
 #### <a name="dynamic-resource-lookup-behavior"></a>动态资源查找行为  
  动态资源引用的资源查找行为与在代码中的查找行为，如果您调用<xref:System.Windows.FrameworkElement.FindResource%2A>或<xref:System.Windows.FrameworkElement.SetResourceReference%2A>。  
   
-1.  查找进程在用于设置属性的元素所定义的资源字典中查找请求的键。  
+1. 查找进程在用于设置属性的元素所定义的资源字典中查找请求的键。  
   
     -   如果该元素定义<xref:System.Windows.FrameworkElement.Style%2A>属性，<xref:System.Windows.Style.Resources%2A>中的字典<xref:System.Windows.Style>检查。  
   
     -   如果该元素定义<xref:System.Windows.Controls.Control.Template%2A>属性，<xref:System.Windows.FrameworkTemplate.Resources%2A>中的字典<xref:System.Windows.FrameworkTemplate>检查。  
   
-2.  查找进程随后会向上遍历逻辑树，以查找父元素及其资源字典。 直至到达根元素，遍历操作才会停止。  
+2. 查找进程随后会向上遍历逻辑树，以查找父元素及其资源字典。 直至到达根元素，遍历操作才会停止。  
   
-3.  接下来，将检查应用程序资源。 应用程序的资源是由定义的资源字典中的这些资源<xref:System.Windows.Application>对象在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
+3. 接下来，将检查应用程序资源。 应用程序的资源是由定义的资源字典中的这些资源<xref:System.Windows.Application>对象在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
   
-4.  在主题资源字典中查找当前处于活动状态的主题。 如果主题在运行时发生更改，则会重新计算值。  
+4. 在主题资源字典中查找当前处于活动状态的主题。 如果主题在运行时发生更改，则会重新计算值。  
   
-5.  检查系统资源。  
+5. 检查系统资源。  
   
  异常行为（如果有）各不相同：  
   
@@ -129,7 +128,7 @@ ms.locfileid: "57364744"
   
 -   要设置的属性必须是属性上<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 属性必须为后盾<xref:System.Windows.DependencyProperty>。  
   
--   中的值是引用<xref:System.Windows.Style> <xref:System.Windows.Setter>。  
+-   引用的是内的某个值<xref:System.Windows.Style><xref:System.Windows.Setter>。  
   
 -   要设置的属性必须是属性上<xref:System.Windows.Freezable>提供的值作为<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>属性，或<xref:System.Windows.Setter>值。  
   
@@ -145,7 +144,7 @@ ms.locfileid: "57364744"
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- 该样式实际上有一个键： 隐式键`typeof(` <xref:System.Windows.Controls.Button> `)`。 在标记中，可以指定<xref:System.Windows.Style.TargetType%2A>直接作为类型名称 (或者可以根据需要使用[{x: Type...}](../../xaml-services/x-type-markup-extension.md) 若要返回<xref:System.Type>。  
+ 该样式实际上有一个键： 隐式键`typeof(`<xref:System.Windows.Controls.Button>`)`。 在标记中，可以指定<xref:System.Windows.Style.TargetType%2A>直接作为类型名称 (或者可以根据需要使用[{x: Type...}](../../xaml-services/x-type-markup-extension.md) 若要返回<xref:System.Type>。  
   
  通过使用的默认主题样式机制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，为运行时样式的应用样式<xref:System.Windows.Controls.Button>页上，即使<xref:System.Windows.Controls.Button>本身不会尝试指定其<xref:System.Windows.FrameworkElement.Style%2A>属性或特定资源引用的样式。 比主题字典样式，使用相同键的主题字典样式位于查找序列中先前找到的页中定义的样式。 您可能只需指定`<Button>Hello</Button>`页上，使用定义的样式中的任意位置<xref:System.Windows.Style.TargetType%2A>的`Button`会应用于该按钮。 如果需要，可以仍显式键使用类型值与相同的样式<xref:System.Windows.Style.TargetType%2A>、 清楚起见，在您的标记，但这是可选的。  
   
@@ -154,6 +153,7 @@ ms.locfileid: "57364744"
  <xref:System.Windows.DataTemplate> 还有一个隐式键。 隐式键<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>属性值。 <xref:System.Windows.DataTemplate.DataType%2A> 也可以指定为的类型名称而不是使用显式[{x: Type...}](../../xaml-services/x-type-markup-extension.md). 有关详细信息，请参阅[数据模板化概述](../data/data-templating-overview.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.ResourceDictionary>
 - [应用程序资源](optimizing-performance-application-resources.md)
 - [资源和代码](resources-and-code.md)

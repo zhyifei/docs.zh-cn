@@ -2,12 +2,12 @@
 title: 设计模式：基于列表的发布-订阅
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 59b56ce5b3be031a598c690976d5f9c23932fc66
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815025"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312041"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>设计模式：基于列表的发布-订阅
 此示例演示基于列表的发布-订阅模式实现作为 Windows Communication Foundation (WCF) 的程序。  
@@ -112,23 +112,23 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例  
   
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
+2. 若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>在同一计算机上运行示例  
   
-1.  测试是否可以访问使用浏览器通过输入以下地址的服务： `http://localhost/servicemodelsamples/service.svc`。 在响应中应显示确认页。  
+1. 测试是否可以访问使用浏览器通过输入以下地址的服务： `http://localhost/servicemodelsamples/service.svc`。 在响应中应显示确认页。  
   
-2.  从 \client\bin 运行 Client.exe\\，从特定于语言的文件夹下。 客户端活动将显示在客户端控制台窗口上。 启动多个客户端。  
+2. 从 \client\bin 运行 Client.exe\\，从特定于语言的文件夹下。 客户端活动将显示在客户端控制台窗口上。 启动多个客户端。  
   
-3.  从 \datasource\bin 运行 Datasource.exe\\，从特定于语言的文件夹下。 数据源活动将显示在控制台窗口中。 数据源向服务发送信息后，信息应传递到每个客户端。  
+3. 从 \datasource\bin 运行 Datasource.exe\\，从特定于语言的文件夹下。 数据源活动将显示在控制台窗口中。 数据源向服务发送信息后，信息应传递到每个客户端。  
   
-4.  如果客户端、 数据源和服务程序能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果客户端、 数据源和服务程序能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-machines"></a>跨计算机运行示例  
   
-1.  安装服务计算机：  
+1. 安装服务计算机：  
   
     1.  在服务计算机上创建一个名为 ServiceModelSamples 的虚拟目录。 批处理文件 Setupvroot.bat[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)可用于创建磁盘目录和虚拟目录。  
   
@@ -136,21 +136,21 @@ public class PriceChangeEventArgs : EventArgs
   
     3.  测试是否可使用浏览器从客户端计算机访问服务。  
   
-2.  安装客户端计算机：  
+2. 安装客户端计算机：  
   
     1.  将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。  
   
     2.  在每个客户端配置文件中，更改终结点定义的地址值以与服务的新地址相匹配。 在地址中将任何对“localhost”的引用替换为一个完全限定的域名。  
   
-3.  安装数据源计算机：  
+3. 安装数据源计算机：  
   
     1.  将 \datasource\bin\ 文件夹（在语言特定文件夹内）中的数据源程序文件复制到数据源计算机上。  
   
     2.  在数据源配置文件中，更改终结点定义的地址值以与服务的新地址相匹配。 在地址中将任何对“localhost”的引用替换为一个完全限定的域名。  
   
-4.  在客户端计算机上的命令提示符下启动 Client.exe。  
+4. 在客户端计算机上的命令提示符下启动 Client.exe。  
   
-5.  在数据源计算机上的命令提示符下启动 Datasource.exe。  
+5. 在数据源计算机上的命令提示符下启动 Datasource.exe。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -160,4 +160,3 @@ public class PriceChangeEventArgs : EventArgs
 >  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
-  

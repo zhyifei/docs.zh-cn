@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e020b65966dc03bf326220ab0bab26bc61155c0c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f17ecfe683de0739e4e1e063d38836eecf949336
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485481"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146988"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC 函数
 通过使用当前线程的默认区域性将 HRESULT 值转换成一条错误消息。  
@@ -70,8 +70,9 @@ HRESULT LoadStringRC (
   
  **库：** MSCorEE.dll 和 Mscorwks.dll。 使用而不是 Mscorwks.dll MSCorEE.dll 确保面向.NET Framework 的正确版本。  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [LoadStringRCEx 函数](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)
 - [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

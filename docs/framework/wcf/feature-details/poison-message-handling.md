@@ -2,12 +2,12 @@
 title: 病毒消息处理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: ec7603e547c065b4b86f2c81650c6e8a2ce09e6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745800"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305021"
 ---
 # <a name="poison-message-handling"></a>病毒消息处理
 一个*有害消息*是一条消息，已超出向应用程序的交付尝试最大数目。 当基于队列的应用程序由于错误而无法处理消息时，可能会引起这种情况。 为符合可靠性要求，排队的应用程序是在事务中接收消息的。 中止已接收某个排队消息的事务时，该消息仍会保留在队列中，这样当开始一个新事务时，将对该消息重试操作。 如果导致事务中止的问题未得到更正，则直到超出最大传递尝试次数并导致产生病毒消息时，接收应用程序才会中断接收和中止同一消息的循环。  
@@ -21,9 +21,9 @@ ms.locfileid: "54745800"
   
 -   `ReceiveRetryCount`. 一个整数值，指示将某个消息从应用程序队列传递到应用程序的最大重试次数。 默认值为 5。 对于立即重试就可以修复问题（如数据库出现临时死锁）的情况，这个数值已足够了。  
   
--   `MaxRetryCycles`. 一个整数值，指示最大重试周期数。 一个重试周期包括将消息从应用程序队列传送到重试子队列，在经过可配置的延迟后，从重试子队列将消息传送回应用程序队列以便重新尝试传递。 默认值为 2。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，消息尝试最多 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) 次。 对于 `MaxRetryCycles` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，将忽略 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
+-   `MaxRetryCycles`. 一个整数值，指示最大重试周期数。 一个重试周期包括将消息从应用程序队列传送到重试子队列，在经过可配置的延迟后，从重试子队列将消息传送回应用程序队列以便重新尝试传递。 默认值为 2。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，消息尝试最多 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) 次。 `MaxRetryCycles` 上，将忽略[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]和[!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
--   `RetryCycleDelay`. 重试周期之间的时间延迟。 默认值为 30 分钟。 `MaxRetryCycles` 和 `RetryCycleDelay` 共同提供一个机制，用于解决周期性延迟之后重试可修复问题的问题。 例如，这种机制可以处理 SQL Server 挂起的事务提交中锁定的行集。  
+-   `RetryCycleDelay`. 重试周期之间的时间延迟。 默认值为 30 分钟。 `MaxRetryCycles` 和`RetryCycleDelay`共同提供了一种机制来解决周期性延迟之后重试可修复该问题。 例如，这种机制可以处理 SQL Server 挂起的事务提交中锁定的行集。  
   
 -   `ReceiveErrorHandling`. 一个枚举，指示对在已尝试过最大重试次数后仍无法传递的消息所采取的操作。 可能的值包括“错误”、“删除”、“拒绝”和“移动”。 默认选项为“错误”。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "54745800"
   
  WCF 提供了两个标准排队的绑定：  
   
--   <xref:System.ServiceModel.NetMsmqBinding>。 一个[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]适合于执行基于队列的通信与其他 WCF 终结点的绑定。  
+-   <xref:System.ServiceModel.NetMsmqBinding>. 一个[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]适合于执行基于队列的通信与其他 WCF 终结点的绑定。  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 这种绑定适用于与现有消息队列应用程序之间的通信。  
+-   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. 这种绑定适用于与现有消息队列应用程序之间的通信。  
   
 > [!NOTE]
 >  您可以更改基于您的 WCF 服务的要求这些绑定中的属性。 对于接收应用程序来说，整个病毒消息处理机制都是本地的。 处理过程对于发送应用程序是不可见的，除非接收应用程序最终停止接收并将否定确认发送回发送方。 这种情况下，该消息会移动到发送方的死信队列中。  
@@ -66,20 +66,18 @@ ms.locfileid: "54745800"
   
  应用程序可能要求对病毒消息能进行某种自动处理，也就是将病毒消息移动至病毒消息队列，以便服务可以访问队列中的其他消息。 唯一需要使用错误处理程序机制来侦听病毒消息异常情况的情形是 <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> 设置被设置为 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 时。 Message Queuing 3.0 的病毒消息示例阐释了这一行为。 下面说明了处理病毒消息应执行的步骤，包括最佳方案：  
   
-1.  确保您的病毒消息设置可以反映您的应用程序需要。 在进行设置时，确保您对 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 之间消息队列功能的差异有所了解。  
+1. 确保您的病毒消息设置可以反映您的应用程序需求。 在进行设置时，确保您对 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 之间消息队列功能的差异有所了解。  
   
-2.  如果需要，请实现 `IErrorHandler` 以处理病毒消息错误。 由于将 `ReceiveErrorHandling` 设置为 `Fault` 需要一个手动机制以便将病毒消息移出队列或更正外部相关问题，因此当 `IErrorHandler` 设置为 `ReceiveErrorHandling` 时，该机制的典型用法就是实现 `Fault`，如下面的代码中所示。  
+2. 如果需要，请实现 `IErrorHandler` 以处理病毒消息错误。 由于将 `ReceiveErrorHandling` 设置为 `Fault` 需要一个手动机制以便将病毒消息移出队列或更正外部相关问题，因此当 `IErrorHandler` 设置为 `ReceiveErrorHandling` 时，该机制的典型用法就是实现 `Fault`，如下面的代码中所示。  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
-3.  创建服务行为可以使用的 `PoisonBehaviorAttribute`。 该行为会在调度程序上安装 `IErrorHandler`。 请参见下面的代码示例。  
+3. 创建服务行为可以使用的 `PoisonBehaviorAttribute`。 该行为会在调度程序上安装 `IErrorHandler`。 请参见下面的代码示例。  
   
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
-4.  确保您的服务已使用病毒行为属性批注过。  
-  
-  
-  
+4. 确保你的服务已使用病毒行为属性批注过。  
+
  另外，如果 `ReceiveErrorHandling` 设置为 `Fault`，则 `ServiceHost` 会在遇到病毒消息时出现错误。 您可以挂钩出错的事件，并关闭服务，采取更正措施，然后重新启动。 例如，可以记下传播到 `LookupId` 的 <xref:System.ServiceModel.MsmqPoisonMessageException> 中的 `IErrorHandler`，当服务主机出错时，您可以使用 `System.Messaging` API 从队列接收消息，同时使用 `LookupId` 从队列中移除该消息，并将该消息存储在外部存储区或其他队列中。 然后，您可以重新启动 `ServiceHost` 以继续正常处理。 [MSMQ 4.0 中的病毒消息处理](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)演示此行为。  
   
 ## <a name="transaction-time-out-and-poison-messages"></a>事务超时和病毒消息  
@@ -94,7 +92,7 @@ ms.locfileid: "54745800"
  如果某条消息变为病毒消息，并且是某个批处理的一部分，则整个批处理将回滚，通道会返回到一次读取一条消息的状态。 有关批处理的详细信息，请参阅[在事务中的批处理消息](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>对病毒队列中的消息进行病毒消息处理  
- 只要有消息放入病毒消息队列中，病毒消息处理就不会结束。 还必须读取和处理病毒消息队列中的消息。 当从最终病毒子队列读取消息时，可以使用病毒消息处理设置的子集。 适用的设置有 `ReceiveRetryCount` 和 `ReceiveErrorHandling`。 您可以将 `ReceiveErrorHandling` 设置为“删除”、“拒绝”或“错误”。 如果 `MaxRetryCycles` 设置为“移动”，`ReceiveErrorHandling` 将被忽略并引发异常。  
+ 只要有消息放入病毒消息队列中，病毒消息处理就不会结束。 还必须读取和处理病毒消息队列中的消息。 当从最终病毒子队列读取消息时，可以使用病毒消息处理设置的子集。 适用的设置有 `ReceiveRetryCount` 和 `ReceiveErrorHandling`。 您可以将 `ReceiveErrorHandling` 设置为“删除”、“拒绝”或“错误”。 `MaxRetryCycles` 将被忽略，如果将引发异常`ReceiveErrorHandling`设置为移动。  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista、Windows Server 2003 和 Windows XP 之间的差异  
  如上所述，并非所有病毒消息处理设置均适用于 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。 下面列出了 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的消息队列在病毒消息处理方面的主要差异：  
@@ -106,6 +104,7 @@ ms.locfileid: "54745800"
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的消息队列支持用于记录消息传递尝试次数的消息属性。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 WCF 会维护中止计数在内存中，所以，此属性可能包含不精确的值时由场中的多个 WCF 服务读取同一条消息。  
   
 ## <a name="see-also"></a>请参阅
+
 - [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
-- [在协定和服务中指定并处理错误](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [在协定和服务中指定和处理错误](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

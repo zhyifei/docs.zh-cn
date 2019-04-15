@@ -3,12 +3,12 @@ title: Iterators
 description: 了解如何使用内置 C# 迭代器以及如何创建自己的自定义迭代器方法。
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 37ed45fc563eacf0c6bf412dcfb28dbc6db2bb17
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: f1be4e9a8b67f0e71615c730af4316253224b888
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126040"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155215"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -238,5 +238,3 @@ finally
 ```
 
 幸运地是，无需记住所有这些细节。 `foreach` 语句会为你处理所有这些细微差别。 编译器会为所有这些构造生成正确的代码。 
-
-

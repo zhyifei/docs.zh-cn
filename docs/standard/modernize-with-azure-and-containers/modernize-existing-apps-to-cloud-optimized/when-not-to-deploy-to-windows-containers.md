@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |何�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 940e94b45dcfb4e301b095cbe4ef5bcaf6752c4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 75db31a8f4599e9681c2c4156d93db5416d2ca96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200735"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>何时不部署到 Windows 容器
 
@@ -34,7 +34,6 @@ Windows 容器不支持某些 Windows 技术。 在这些情况下，仍需要�
 -   UI 应用程序 （使用可视用户界面的客户端应用程序） 不受支持的方案。
 
 -   Windows 基础结构角色 (DNS、 DHCP、 DC、 NTP，打印，文件服务器，IAM 等) 不受支持的方案。
-
 
 其他不受支持的方案和来自社区的请求，请参阅 UserVoice 论坛用于 Windows 容器： <https://windowsserver.uservoice.com/forums/304624-containers>。
 

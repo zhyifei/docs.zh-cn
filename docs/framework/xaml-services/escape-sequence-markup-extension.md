@@ -11,14 +11,14 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: eaee0a1f92d8b7cb3810651eda21f1cc800ebf57
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9f6743dd8a82891ac2233978550e5679130de0be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018547"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182061"
 ---
-# <a name="-escape-sequence--markup-extension"></a>{} 转义序列 / 标记扩展
+# <a name="-escape-sequence--markup-extension"></a>{} 转义序列/标记扩展
 为属性值提供 XAML 转义序列。 转义序列允许后续值中的属性将被解释为文本。  
   
 ## <a name="xaml-attribute-usage"></a>XAML 属性用法  
@@ -59,5 +59,6 @@ ms.locfileid: "58018547"
  [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [XAML 的类型转换器和标记扩展](type-converters-and-markup-extensions-for-xaml.md)
 - [XML 字符实体和 XAML](xml-character-entities-and-xaml.md)

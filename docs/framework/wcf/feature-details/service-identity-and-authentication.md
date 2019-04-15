@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145621"
 ---
 # <a name="service-identity-and-authentication"></a>服务标识和身份验证
 服务的*终结点标识*是从服务 Web Services 描述语言 (WSDL) 生成的值。 此值可传播到任何客户端，用于对服务进行身份验证。 在客户端启动与终结点的通信并且服务向客户端验证自己的身份之后，客户端将终结点标识值与终结点身份验证过程返回的实际值进行比较。 如果二者匹配，则客户端确信其已与预期的服务终结点联系。 这作为防范*仿冒网站*通过防止客户端被重定向到恶意服务承载的终结点。  
@@ -54,13 +54,9 @@ ms.locfileid: "57212516"
   
 ## <a name="using-the-identity-element-in-configuration"></a>使用\<标识 > 配置中的元素  
  如果将前面演示的绑定中的客户端凭据类型更改为 `Certificate,`，则生成的 WSDL 将包含一个 Base64 序列化 X.509 证书作为标识值，如下面的代码所示。 这是除 Windows 之外的所有客户端凭据类型的默认值。  
-  
-  
-  
+
  可以更改默认服务标识的值，也可以使用更改的标识类型`<identity>`元素在配置中或通过在代码中设置标识。 下面的配置代码使用值 `contoso.com` 设置域名系统 (DNS) 标识。  
-  
-  
-  
+
 ## <a name="setting-identity-programmatically"></a>以编程方式设置标识  
  你的服务无需显式指定标识，因为 WCF 会自动确定。 但是，WCF 允许您终结点上指定标识必要。 下面的代码使用特定的 DNS 标识添加了一个新的服务终结点。  
   
@@ -69,16 +65,12 @@ ms.locfileid: "57212516"
   
 ## <a name="specifying-identity-at-the-client"></a>在客户端上指定标识  
  在设计时，客户端开发人员通常使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成客户端配置。 生成的配置文件（适用于客户端使用）包含服务器的标识。 例如，下面的代码是从指定 DNS 标识的服务生成的，如前面的示例中所示。 请注意，客户端的终结点标识值与服务的标识值匹配。 在此情况下，客户端接收服务的 Windows (Kerberos) 凭据，期望的值为 `contoso.com`。  
-  
-  
-  
+
  如果接收的不是 Windows 凭据，则服务指定作为客户端凭据类型的证书，然后证书的 DNS 属性的值应为 `contoso.com`。 （或者，如果 DNS 属性为 `null`，则证书的使用者名称必须是 `contoso.com`。）  
   
 #### <a name="using-a-specific-value-for-identity"></a>使用特定的标识值  
  下面的客户端配置文件演示了服务的标识如何应为一个特定的值。 在下面的示例中，客户端可以与两个终结点进行通信。 第一个终结点使用证书指纹进行标识，第二个终结点使用证书 RSA 密钥进行标识。 即，一个只包含一个公钥/私钥对、但不是由受信任的颁发机构颁发的证书。  
-  
-  
-  
+
 ## <a name="identity-checking-at-run-time"></a>运行时标识检查  
  在设计时，客户端开发人员通过服务的元数据确定其标识。 在运行时，在服务上调用任何终结点之前执行标识检查。  
   
@@ -113,7 +105,8 @@ ms.locfileid: "57212516"
  详细了解如何堆叠绑定元素正确自定义绑定，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。 有关创建自定义绑定的详细信息<xref:System.ServiceModel.Channels.SecurityBindingElement>，请参阅[如何：为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+
+- [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [如何：为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
 - [如何：创建自定义客户端标识验证工具](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)

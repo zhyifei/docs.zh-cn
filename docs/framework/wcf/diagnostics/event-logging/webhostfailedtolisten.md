@@ -2,12 +2,12 @@
 title: WebHostFailedToListen
 ms.date: 03/30/2017
 ms.assetid: 328468a6-6388-425a-a122-49306e303d19
-ms.openlocfilehash: 30f4a6fa3018faf00b73d08495dc767443e734bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2aa1f27431cf62bcf643f822e47a3e7f7768ac3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193713"
 ---
 # <a name="webhostfailedtolisten"></a>WebHostFailedToListen
 ID:112  
@@ -20,5 +20,6 @@ ID:112
  此事件指示在尝试侦听特定 URL 时出现错误。 已终止该辅助进程。 此事件列出了异常、进程名称和进程 ID。  
   
 ## <a name="see-also"></a>请参阅
+
 - [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

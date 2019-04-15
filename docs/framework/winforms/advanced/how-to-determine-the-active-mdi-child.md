@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714316"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300601"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>如何：确定活动的 MDI 子窗体
 有时，想要运行的命令提供当前处于活动状态的子窗体具有焦点的控件上。 例如，假设你想要从子窗体的文本框中选定的文本复制到剪贴板。 将创建一个过程，将所选的文本复制到剪贴板使用<xref:System.Windows.Forms.Control.Click>复制菜单项在标准的编辑菜单上的事件。  
@@ -27,7 +27,7 @@ ms.locfileid: "57714316"
   
 ### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>若要确定活动的 MDI 子 （若要将其文本复制到剪贴板）  
   
-1.  在方法中，将活动子窗体的活动控件的文本复制到剪贴板。  
+1. 在方法中，将活动子窗体的活动控件的文本复制到剪贴板。  
   
     > [!NOTE]
     >  此示例假定的 MDI 父窗体 (`Form1`) 具有一个或多个 MDI 子窗口包含<xref:System.Windows.Forms.RichTextBox>控件。 有关详细信息，请参阅[创建 MDI 父窗体](how-to-create-mdi-parent-forms.md)。  
@@ -84,6 +84,7 @@ ms.locfileid: "57714316"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [多文档界面 (MDI) 应用程序](multiple-document-interface-mdi-applications.md)
 - [如何：创建 MDI 父窗体](how-to-create-mdi-parent-forms.md)
 - [如何：创建 MDI 子窗体](how-to-create-mdi-child-forms.md)

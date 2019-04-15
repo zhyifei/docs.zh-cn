@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: e067e5c6e108a27ecaf9e4b0e3e6a33938ad0b59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11cfad81e40e76691db9f99efd1d60f5528600d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230169"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema 和架构集合
 **连接**中每个.NET Framework 托管提供程序实现的类**GetSchema**方法用于检索有关当前连接的数据库的架构信息和从返回的架构信息**GetSchema**方法适用于以下形式的<xref:System.Data.DataTable>。 **GetSchema**方法是重载的方法，提供可选参数来指定架构集合返回，并限制返回的信息量。  
@@ -105,5 +105,6 @@ class Program
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [检索数据库架构信息](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

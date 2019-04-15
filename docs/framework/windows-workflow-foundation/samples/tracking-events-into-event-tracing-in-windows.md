@@ -2,12 +2,12 @@
 title: 在 Windows 事件跟踪中跟踪事件
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592843"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300640"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件跟踪中跟踪事件
 此示例演示如何启用 Windows Workflow Foundation (WF) 工作流服务跟踪和发出跟踪事件中事件跟踪 Windows (ETW)。 为了将工作流跟踪记录发到 ETW 中，该示例使用 ETW 跟踪参与者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。
@@ -20,7 +20,7 @@ ms.locfileid: "54592843"
 |组件|描述|
 |---------------|-----------------|
 |跟踪运行时|提供基础结构以发出跟踪记录。|
-|跟踪参与者|访问跟踪记录。 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 附带了一个跟踪参与者，它作为 Windows 跟踪记录 (ETW) 事件写入跟踪记录。|
+|跟踪参与者|访问跟踪记录。 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 附随的跟踪参与者将作为事件跟踪 Windows (ETW) 事件的跟踪记录写入。|
 |跟踪配置文件|筛选机制，允许跟踪参与者订阅从工作流实例发出的跟踪记录的子集。|
 
  下表详细介绍工作流运行时发出的跟踪记录。
@@ -39,33 +39,33 @@ ms.locfileid: "54592843"
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1.  使用 Visual Studio 2010 打开 EtwTrackingParticipantSample.sln 解决方案文件。
+1. 使用 Visual Studio 2010 打开 EtwTrackingParticipantSample.sln 解决方案文件。
 
-2.  要生成解决方案，按 Ctrl+Shift+B。
+2. 要生成解决方案，按 Ctrl+Shift+B。
 
-3.  若要运行解决方案，请按 F5。
+3. 若要运行解决方案，请按 F5。
 
      默认情况下，该服务正在侦听端口 53797 (http://localhost:53797/SampleWorkflowService.xamlx)。
 
-4.  使用 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]，打开 WCF 测试客户端。
+4. 使用 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]，打开 WCF 测试客户端。
 
      WCF 测试客户端 (WcfTestClient.exe) 位于\<Visual Studio 2010 安装文件夹 > \Common7\IDE\ 文件夹。
 
      默认 Visual Studio 2010 安装文件夹为 C:\Program Files\Microsoft Visual Studio 10.0。
 
-5.  在 WCF 测试客户端，选择**添加的服务**从**文件**菜单。
+5. 在 WCF 测试客户端，选择**添加的服务**从**文件**菜单。
 
      在输入框中添加终结点地址。 默认值为 `http://localhost:53797/SampleWorkflowService.xamlx`。
 
-6.  打开事件查看器应用程序。
+6. 打开事件查看器应用程序。
 
      调用服务，才能开始从事件查看器**启动**菜单中，选择**运行**并键入`eventvwr.exe`。 确保事件日志正在侦听从工作流服务发出的跟踪事件。
 
-7.  在事件查看器树视图中，导航到**事件查看器**，**应用程序和服务日志**，并**Microsoft**。 右键单击**Microsoft** ，然后选择**视图**，然后**显示分析和调试日志**启用分析和调试日志
+7. 在事件查看器树视图中，导航到**事件查看器**，**应用程序和服务日志**，并**Microsoft**。 右键单击**Microsoft** ，然后选择**视图**，然后**显示分析和调试日志**启用分析和调试日志
 
      絋粄**显示分析和调试日志**选项处于选中状态。
 
-8.  在事件查看器中树视图中，导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**， **应用程序服务器-应用程序**。 右键单击**Analytic** ，然后选择**启用日志**若要启用**分析**日志。
+8. 在事件查看器中树视图中，导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**， **应用程序服务器-应用程序**。 右键单击**Analytic** ，然后选择**启用日志**若要启用**分析**日志。
 
 9. 通过双击 `GetData`，使用 WCF 测试客户端测试服务。
 
@@ -81,7 +81,7 @@ ms.locfileid: "54592843"
 
 11. 通过输入不为 0 的数据来重复步骤 9 和 10，以便不会引发错误。
 
- 通过跟踪配置文件，可以订阅运行时在工作流实例的状态发生更改时发出的事件。 根据监视要求，可以创建一个非常粗陋的配置文件，用于订阅对工作流进行的一小组高级状态更改。 另一方面，可以创建一个非常精确的配置文件，其输出足够丰富，可在以后重新构造执行。 该示例使用发出一小组事件的 `HealthMonitoring Tracking Profile`，演示从工作流运行时向 ETW 发出的事件。 Web.config 中还提供了另一个发出更多工作流跟踪事件的配置文件，该文件名为 `Troubleshooting Tracking Profile`。 安装 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 时，会在 Machine.config 文件中配置一个具有空名称的默认配置文件。 当未指定配置文件名称或指定了空配置文件名称时，此配置文件由 ETW 跟踪行为配置使用。
+ 通过跟踪配置文件，可以订阅运行时在工作流实例的状态发生更改时发出的事件。 根据监视需求，可以创建一个非常粗陋的配置文件，用于订阅对工作流进行的一小组高级状态更改。 另一方面，可以创建一个非常精确的配置文件，其输出足够丰富，可在以后重新构造执行。 该示例使用发出一小组事件的 `HealthMonitoring Tracking Profile`，演示从工作流运行时向 ETW 发出的事件。 Web.config 中还提供了另一个发出更多工作流跟踪事件的配置文件，该文件名为 `Troubleshooting Tracking Profile`。 安装 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 时，会在 Machine.config 文件中配置一个具有空名称的默认配置文件。 当未指定配置文件名称或指定了空配置文件名称时，此配置文件由 ETW 跟踪行为配置使用。
 
  运行状况监视跟踪配置文件发出工作流实例记录和活动错误传播记录。 通过将以下跟踪配置文件添加到 Web.config 配置文件来创建此配置文件。
 
@@ -123,13 +123,13 @@ ms.locfileid: "54592843"
 
 #### <a name="to-clean-up-optional"></a>清理（可选）
 
-1.  打开事件查看器。
+1. 打开事件查看器。
 
-2.  导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，**应用程序服务器应用程序**。 右键单击**Analytic** ，然后选择**禁用日志**。
+2. 导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，**应用程序服务器应用程序**。 右键单击**Analytic** ，然后选择**禁用日志**。
 
-3.  导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，**应用程序服务器应用程序**。 右键单击**Analytic** ，然后选择**清除日志**。
+3. 导航到**事件查看器**，**应用程序和服务日志**， **Microsoft**， **Windows**，**应用程序服务器应用程序**。 右键单击**Analytic** ，然后选择**清除日志**。
 
-4.  选择**清除**选项可清除这些事件。
+4. 选择**清除**选项可清除这些事件。
 
 ## <a name="known-issue"></a>已知问题
 
@@ -150,4 +150,5 @@ ms.locfileid: "54592843"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>请参阅
+
 - [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -1,5 +1,5 @@
 ---
-title: 如何：转换节点片断
+title: 如何：转换节点片段
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,27 +8,27 @@ dev_langs:
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb258b61664e1fdbf6604afdf69074c48cf5bda4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45597263"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345165"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>如何：转换节点片断
+# <a name="how-to-transform-a-node-fragment"></a>如何：转换节点片段
 在转换 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 对象中包含的数据时，XSLT 转换应用于整个文档。 换句话说，如果你传入文档根节点以外的一个节点，并不能防止转换进程访问已加载文档的所有节点。 若要转换节点片段，必须创建一个仅包含节点片段的独立对象，并将该对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
 ## <a name="procedures"></a>过程  
   
 #### <a name="to-transform-a-node-fragment"></a>转换节点片断  
   
-1.  创建一个包含源文档的对象。  
+1. 创建一个包含源文档的对象。  
   
-2.  找到要转换的节点片断。  
+2. 找到要转换的节点片断。  
   
-3.  创建仅包含该节点片断的独立对象。  
+3. 创建仅包含该节点片断的独立对象。  
   
-4.  将该节点片断传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
+4. 将该节点片断传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
 ## <a name="example"></a>示例  
  以下示例转换节点片断并将结果输出到控制台。  
@@ -44,7 +44,7 @@ ms.locfileid: "45597263"
 ##### <a name="singlexsl"></a>single.xsl  
  [!code-xml[XSLT_NodeFrag#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_NodeFrag/XML/single.xsl#2)]  
   
-### <a name="output"></a>输出  
+### <a name="output"></a>Output  
  书名为 The Confidence Man。  
   
 ## <a name="see-also"></a>请参阅

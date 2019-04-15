@@ -2,12 +2,12 @@
 title: 发现安全示例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: c77bedbea3d9002b24556d240d5b788fe6c53d67
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e956b9f8162d55891233a3ab664b05658d50eeab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815195"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318398"
 ---
 # <a name="discovery-security-sample"></a>发现安全示例
 Discovery 规范不要求参与发现过程的终结点是安全的。 增强发现消息的安全性可缓解各种类型的攻击（消息更改、拒绝服务、重播、欺骗）。 本示例实现自定义通道，这些通道计算和验证使用精简签名格式（在 WS-Discovery 规范的第 8.2 节中进行了介绍）的消息签名。 本示例支持[2005 Discovery 规范](https://go.microsoft.com/fwlink/?LinkId=177912)并[1.1 版](https://go.microsoft.com/fwlink/?LinkId=179677)。  
@@ -60,11 +60,11 @@ Discovery 规范不要求参与发现过程的终结点是安全的。 增强发
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
-1.  Visual Studio 通过开发人员命令提示执行 Setup.bat 脚本。 本示例使用证书对消息进行签名和验证。 该脚本使用 Makecert.exe 创建证书，然后使用 Certmgr.exe 安装这些证书。 该脚本必须使用管理员特权运行。  
+1. Visual Studio 通过开发人员命令提示执行 Setup.bat 脚本。 本示例使用证书对消息进行签名和验证。 该脚本使用 Makecert.exe 创建证书，然后使用 Certmgr.exe 安装这些证书。 该脚本必须使用管理员特权运行。  
   
-2.  若要生成并运行示例，在 Visual Studio 中打开 Security.sln 文件，然后选择**全部重新生成**。 更新解决方案属性以启动多个项目： 选择**启动**对除 discoverysecurechannels 以外的所有项目。 正常运行解决方案。  
+2. 若要生成并运行示例，在 Visual Studio 中打开 Security.sln 文件，然后选择**全部重新生成**。 更新解决方案属性以启动多个项目： 选择**启动**对除 discoverysecurechannels 以外的所有项目。 正常运行解决方案。  
   
-3.  完成示例后，执行 Cleanup.bat 脚本移除为此示例创建的证书。  
+3. 完成示例后，执行 Cleanup.bat 脚本移除为此示例创建的证书。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -74,4 +74,3 @@ Discovery 规范不要求参与发现过程的终结点是安全的。 增强发
 >  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
-  

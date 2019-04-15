@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 17b6fd604b5eca54d6323701dafdd38f9f6e7328
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131010"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298339"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>创建具有可自定义外观的控件
 <a name="introduction"></a>
@@ -94,15 +94,15 @@ ms.locfileid: "59131010"
   
  以下做法可确保控件正确响应与缺少<xref:System.Windows.FrameworkElement>对象：  
   
-1.  设置`x:Name`为每个属性<xref:System.Windows.FrameworkElement>，您需要在代码中引用。  
+1. 设置`x:Name`为每个属性<xref:System.Windows.FrameworkElement>，您需要在代码中引用。  
   
-2.  为每个定义私有属性<xref:System.Windows.FrameworkElement>需要与之交互。  
+2. 为每个定义私有属性<xref:System.Windows.FrameworkElement>需要与之交互。  
   
-3.  订阅和取消订阅您的控件以处理任何事件<xref:System.Windows.FrameworkElement>属性的 set 访问器。  
+3. 订阅和取消订阅您的控件以处理任何事件<xref:System.Windows.FrameworkElement>属性的 set 访问器。  
   
-4.  设置<xref:System.Windows.FrameworkElement>中定义的属性中的步骤 2<xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>方法。 这是最早的<xref:System.Windows.FrameworkElement>在<xref:System.Windows.Controls.ControlTemplate>可供该控件。 使用`x:Name`的<xref:System.Windows.FrameworkElement>若要从中获取此<xref:System.Windows.Controls.ControlTemplate>。  
+4. 设置<xref:System.Windows.FrameworkElement>中定义的属性中的步骤 2<xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>方法。 这是最早的<xref:System.Windows.FrameworkElement>在<xref:System.Windows.Controls.ControlTemplate>可供该控件。 使用`x:Name`的<xref:System.Windows.FrameworkElement>若要从中获取此<xref:System.Windows.Controls.ControlTemplate>。  
   
-5.  检查<xref:System.Windows.FrameworkElement>不是`null`之前访问其成员。  如果它是`null`，不报告错误。  
+5. 检查<xref:System.Windows.FrameworkElement>不是`null`之前访问其成员。  如果它是`null`，不报告错误。  
   
  下面的示例演示如何`NumericUpDown`控件与交互<xref:System.Windows.FrameworkElement>根据前面的列表中建议的对象。  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d085fe8b9cf11e2f195468a93b3fa9b3f0817503
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 71cc69eba17de8465cc7999f334c724e4ec14e7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224372"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > 元素
 指示运行时在过程的生命周期过程中收集所有应用程序域的统计数据。  
@@ -39,7 +39,7 @@ ms.locfileid: "55286554"
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`true`|收集应用程序域资源监控的统计信息。|  
 |`false`|不收集有关应用程序域资源监控的统计信息。|  
@@ -73,6 +73,7 @@ ms.locfileid: "55286554"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
 - [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

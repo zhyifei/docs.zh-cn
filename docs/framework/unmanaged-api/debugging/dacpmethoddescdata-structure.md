@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: e9037fc035693e079e2471ad37263108656b8c01
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 567dc3942f79b6bfd29338b9103083aa64e66451
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203192"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData 结构
 
@@ -73,18 +73,18 @@ struct DacpMethodDescData
 | `rejitDataRequested`         | Rejit 请求的本机地址信息。                                             |
 | `cJittedRejitVersions`       | 该方法已通过检测 rejitted 次数。                           |
 
-
 ## <a name="remarks"></a>备注
 
 此结构存在于运行时内，不通过任何标头或库文件公开。 若要使用它，如上所示定义的结构。
 
 ## <a name="requirements"></a>要求
 **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**标头：** 无  
-**库：** 无  
-**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**标头：** None  
+**库：** None  
+**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>请参阅
+
 - [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [常见数据类型](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

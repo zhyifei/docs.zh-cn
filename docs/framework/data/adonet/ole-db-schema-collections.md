@@ -2,12 +2,12 @@
 title: OLE DB 架构集合
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f753f35aab0a0200da5de463a73abb9813253d11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164679"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB 架构集合
 本节讨论对适用于 Microsoft SQL Server、Oracle 和 Microsoft Jet 的 OLE DB 提供程序的架构集合支持  
@@ -17,7 +17,7 @@ ms.locfileid: "54658450"
   
 -   表  
   
--   Columns  
+-   列  
   
 -   过程  
   
@@ -35,13 +35,13 @@ ms.locfileid: "54658450"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|Guid|  
-|DESCRIPTION|String|  
+|TABLE_GUID|GUID|  
+|描述|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>列  
   
 |列名|数据类型|  
 |----------------|--------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "54658450"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
@@ -57,7 +57,7 @@ ms.locfileid: "54658450"
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -72,7 +72,7 @@ ms.locfileid: "54658450"
 |DOMAIN_CATALOG|String|  
 |DOMAIN_SCHEMA|String|  
 |DOMAIN_NAME|String|  
-|DESCRIPTION|String|  
+|描述|String|  
 |COLUMN_LCID|Int32|  
 |COLUMN_COMPFLAGS|Int32|  
 |COLUMN_SORTID|Int32|  
@@ -88,7 +88,7 @@ ms.locfileid: "54658450"
 |PROCEDURE_NAME|String|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|String|  
-|DESCRIPTION|String|  
+|描述|String|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54658450"
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|DESCRIPTION|String|  
+|描述|String|  
 |TYPE_NAME|String|  
 |LOCAL_TYPE_NAME|String|  
   
@@ -119,7 +119,7 @@ ms.locfileid: "54658450"
 |列名|数据类型|  
 |----------------|--------------|  
 |CATALOG_NAME|String|  
-|DESCRIPTION|String|  
+|描述|String|  
   
 ### <a name="indexes"></a>索引  
   
@@ -143,10 +143,10 @@ ms.locfileid: "54658450"
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
-|CARDINALITY|Decimal|  
+|CARDINALITY|十进制|  
 |PAGES|Int32|  
 |FILTER_CONDITION|String|  
 |INTEGRATED|Boolean|  
@@ -156,7 +156,7 @@ ms.locfileid: "54658450"
   
 -   表  
   
--   Columns  
+-   列  
   
 -   过程  
   
@@ -164,7 +164,7 @@ ms.locfileid: "54658450"
   
 -   ProcedureParameters  
   
--   视图  
+-   Views  
   
 -   索引  
   
@@ -176,13 +176,13 @@ ms.locfileid: "54658450"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|Guid|  
-|DESCRIPTION|String|  
+|TABLE_GUID|GUID|  
+|描述|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>列  
   
 |列名|数据类型|  
 |----------------|--------------|  
@@ -190,7 +190,7 @@ ms.locfileid: "54658450"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
@@ -198,7 +198,7 @@ ms.locfileid: "54658450"
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -213,7 +213,7 @@ ms.locfileid: "54658450"
 |DOMAIN_CATALOG|String|  
 |DOMAIN_SCHEMA|String|  
 |DOMAIN_NAME|String|  
-|DESCRIPTION|String|  
+|描述|String|  
   
 ### <a name="procedures"></a>过程  
   
@@ -224,7 +224,7 @@ ms.locfileid: "54658450"
 |PROCEDURE_NAME|String|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|String|  
-|DESCRIPTION|String|  
+|描述|String|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -236,21 +236,21 @@ ms.locfileid: "54658450"
 |PROCEDURE_SCHEMA|String|  
 |PROCEDURE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ROWSET_NUMBER|Int64|  
 |ORDINAL_POSITION|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|DESCRIPTION|String|  
+|描述|String|  
 |OVERLOAD|Int16|  
   
-### <a name="views"></a>视图  
+### <a name="views"></a>Views  
   
 |列名|数据类型|  
 |----------------|--------------|  
@@ -260,7 +260,7 @@ ms.locfileid: "54658450"
 |VIEW_DEFINITION|String|  
 |CHECK_OPTION|Boolean|  
 |IS_UPDATABLE|Boolean|  
-|DESCRIPTION|String|  
+|描述|String|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -286,10 +286,10 @@ ms.locfileid: "54658450"
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
-|CARDINALITY|Decimal|  
+|CARDINALITY|十进制|  
 |PAGES|Int32|  
 |FILTER_CONDITION|String|  
 |INTEGRATED|Boolean|  
@@ -299,11 +299,11 @@ ms.locfileid: "54658450"
   
 -   表  
   
--   Columns  
+-   列  
   
 -   过程  
   
--   视图  
+-   Views  
   
 -   索引  
   
@@ -315,13 +315,13 @@ ms.locfileid: "54658450"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|Guid|  
-|DESCRIPTION|String|  
+|TABLE_GUID|GUID|  
+|描述|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>列  
   
 |列名|数据类型|  
 |----------------|--------------|  
@@ -329,7 +329,7 @@ ms.locfileid: "54658450"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
@@ -337,7 +337,7 @@ ms.locfileid: "54658450"
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -352,7 +352,7 @@ ms.locfileid: "54658450"
 |DOMAIN_CATALOG|String|  
 |DOMAIN_SCHEMA|String|  
 |DOMAIN_NAME|String|  
-|DESCRIPTION|String|  
+|描述|String|  
   
 ### <a name="procedures"></a>过程  
   
@@ -363,11 +363,11 @@ ms.locfileid: "54658450"
 |PROCEDURE_NAME|String|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|String|  
-|DESCRIPTION|String|  
+|描述|String|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="views"></a>视图  
+### <a name="views"></a>Views  
   
 |列名|数据类型|  
 |----------------|--------------|  
@@ -377,7 +377,7 @@ ms.locfileid: "54658450"
 |VIEW_DEFINITION|String|  
 |CHECK_OPTION|Boolean|  
 |IS_UPDATABLE|Boolean|  
-|DESCRIPTION|String|  
+|描述|String|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -403,13 +403,14 @@ ms.locfileid: "54658450"
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
-|CARDINALITY|Decimal|  
+|CARDINALITY|十进制|  
 |PAGES|Int32|  
 |FILTER_CONDITION|String|  
 |INTEGRATED|Boolean|  
   
 ## <a name="see-also"></a>请参阅
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

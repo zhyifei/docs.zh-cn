@@ -3,12 +3,12 @@ title: 自定义令牌处理程序
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-ms.openlocfilehash: c27abb5df7f895a9dec5f7f784f1a3ff0b31edb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200875"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312106"
 ---
 # <a name="custom-token-handlers"></a>自定义令牌处理程序
 本主题讨论 WIF 中的令牌处理程序，以及如何使用它们处理令牌。 还介绍为 WIF 中默认不支持的令牌类型创建自定义令牌处理程序所需的内容。  
@@ -42,9 +42,9 @@ ms.locfileid: "47200875"
   
 #### <a name="adding-a-custom-token-handler"></a>添加自定义令牌处理程序  
   
-1.  创建一个从 <xref:System.IdentityModel.Tokens.SecurityTokenHandler> 派生的新类。  
+1. 创建一个从 <xref:System.IdentityModel.Tokens.SecurityTokenHandler> 派生的新类。  
   
-2.  重写以下方法，提供自己的实现：  
+2. 重写以下方法，提供自己的实现：  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47200875"
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  在应用于 WIF 的 \<system.identityModel> 部分内的 Web.config 或 App.config 文件中，添加对新自定义令牌处理程序的引用。 例如，以下配置标记指定了位于 CustomToken 命名空间中名为 MyCustomTokenHandler 的新令牌处理程序。  
+3. 在应用于 WIF 的 \<system.identityModel> 部分内的 Web.config 或 App.config 文件中，添加对新自定义令牌处理程序的引用。 例如，以下配置标记指定了位于 CustomToken 命名空间中名为 MyCustomTokenHandler 的新令牌处理程序。  
   
     ```xml  
     <system.identityModel>  

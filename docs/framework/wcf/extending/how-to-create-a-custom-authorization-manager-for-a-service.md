@@ -1,5 +1,5 @@
 ---
-title: 如何：创建自定义授权管理器服务
+title: 如何：为服务创建自定义授权管理器
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: e3d0143cd68bc94c6ff07e65ca5a3c8971b45f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465134"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337833"
 ---
-# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>如何：创建自定义授权管理器服务
+# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>如何：为服务创建自定义授权管理器
 标识模型基础结构在 Windows Communication Foundation (WCF) 支持可扩展的基于声明的授权模型。 声明是从令牌中提取的，自定义授权策略将有选择地对其进行处理，然后放入 <xref:System.IdentityModel.Policy.AuthorizationContext> 中。 授权管理器检查 <xref:System.IdentityModel.Policy.AuthorizationContext> 中的声明，从而作出授权决策。  
   
  默认情况下，授权决策由 <xref:System.ServiceModel.ServiceAuthorizationManager> 类作出；但是，可通过创建自定义授权管理器来覆盖这些决策。 若要创建自定义授权管理器，请创建一个从 <xref:System.ServiceModel.ServiceAuthorizationManager> 派生的类，并实现 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法。 授权决策是在 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法中作出的，如果允许访问，该方法返回 `true`，如果拒绝访问，则返回 `false`。  
@@ -28,12 +28,12 @@ ms.locfileid: "58465134"
   
 ### <a name="to-create-a-custom-authorization-manager"></a>创建自定义授权管理器  
   
-1.  从 <xref:System.ServiceModel.ServiceAuthorizationManager> 类派生一个类。  
+1. 从 <xref:System.ServiceModel.ServiceAuthorizationManager> 类派生一个类。  
   
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
   
-2.  重写 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> 方法。  
+2. 重写 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> 方法。  
   
      使用传给 <xref:System.ServiceModel.OperationContext> 方法的 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> 进行授权决策。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "58465134"
   
 ### <a name="to-register-a-custom-authorization-manager-using-code"></a>使用代码注册自定义授权管理器  
   
-1.  创建自定义授权管理器的一个实例，然后将其分配给 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> 属性。  
+1. 创建自定义授权管理器的一个实例，然后将其分配给 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> 属性。  
   
      使用 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 属性可以访问 <xref:System.ServiceModel.ServiceHostBase.Authorization%2A>。  
   
@@ -55,17 +55,17 @@ ms.locfileid: "58465134"
   
 ### <a name="to-register-a-custom-authorization-manager-using-configuration"></a>使用配置注册自定义授权管理器  
   
-1.  打开服务的配置文件。  
+1. 打开服务的配置文件。  
   
-2.  添加[ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)到[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)。  
+2. 添加[ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)到[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)。  
   
      向[ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)，添加`serviceAuthorizationManagerType`属性并将其值设置为表示自定义授权管理器的类型。  
   
-3.  添加一个保护客户端和服务之间的通信的绑定。  
+3. 添加一个保护客户端和服务之间的通信的绑定。  
   
      为此通信选择的绑定决定了添加到 <xref:System.IdentityModel.Policy.AuthorizationContext> 的声明，自定义授权管理器使用这些声明来进行授权决策。 有关系统提供的绑定的更多详细信息，请参阅[System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)。  
   
-4.  添加到服务终结点，行为将相关联[\<服务 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)元素和设置的值`behaviorConfiguration`属性的 name 属性的值设[\<行为>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)元素。  
+4. 添加到服务终结点，行为将相关联[\<服务 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)元素和设置的值`behaviorConfiguration`属性的 name 属性的值设[\<行为>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)元素。  
   
      有关配置服务终结点的详细信息，请参阅[如何：在配置中创建的服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)。  
   
@@ -118,5 +118,6 @@ ms.locfileid: "58465134"
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [授权策略](../../../../docs/framework/wcf/samples/authorization-policy.md)

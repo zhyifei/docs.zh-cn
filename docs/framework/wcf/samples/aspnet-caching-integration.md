@@ -2,12 +2,12 @@
 title: ASP.NET 缓存集成
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197443"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309467"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 缓存集成
 此示例演示如何通过 WCF WEB HTTP 编程模型使用 ASP.NET 输出缓存。 本主题重点介绍 ASP.NET 输出缓存集成功能。  
@@ -34,31 +34,31 @@ ms.locfileid: "47197443"
 ## <a name="to-run-the-sample"></a>运行示例  
  该示例由三个项目组成：  
   
--   **服务**： 包含在 ASP.NET 中承载的 WCF HTTP 服务的 Web 应用程序项目。  
+-   **服务**：一个包含在 ASP.NET 中承载的 WCF HTTP 服务的 Web 应用程序项目。  
   
--   **客户端**： 对服务进行调用的控制台应用程序项目。  
+-   **客户端**:一个对服务进行调用的控制台应用程序项目。  
   
--   **常见**： 一个共享的库，包含客户端和服务使用的客户类型。  
+-   **常见**:包含使用客户端和服务的客户类型的共享的库。  
   
  在客户端控制台应用程序运行时，客户端会对服务进行请求，并将响应中的相关信息写入控制台窗口。  
   
 #### <a name="to-run-the-sample"></a>运行示例  
   
-1.  打开 ASP.NET 缓存集成示例的解决方案。  
+1. 打开 ASP.NET 缓存集成示例的解决方案。  
   
-2.  按 Ctrl+Shift+B 生成解决方案。  
+2. 按 Ctrl+Shift+B 生成解决方案。  
   
-3.  如果**解决方案资源管理器**窗口尚未打开，请按 CTRL + W + S。  
+3. 如果**解决方案资源管理器**窗口尚未打开，请按 CTRL + W + S。  
   
-4.  从**解决方案资源管理器**窗口中，右键单击**服务**项目，然后选择**启动新实例**。 这将启动承载服务的 ASP.NET 开发服务器。  
+4. 从**解决方案资源管理器**窗口中，右键单击**服务**项目，然后选择**启动新实例**。 这将启动承载服务的 ASP.NET 开发服务器。  
   
-5.  从**解决方案资源管理器**窗口中，右键单击**客户端**项目，然后选择**启动新实例**。  
+5. 从**解决方案资源管理器**窗口中，右键单击**客户端**项目，然后选择**启动新实例**。  
   
-6.  出现客户端控制台窗口，该窗口提供了正在运行的服务的 URI，以及该服务的 HTML 帮助页的 URI。 可随时通过在浏览器中键入 HTML 帮助页的 URI 来查看该帮助页。  
+6. 出现客户端控制台窗口，该窗口提供了正在运行的服务的 URI，以及该服务的 HTML 帮助页的 URI。 可随时通过在浏览器中键入 HTML 帮助页的 URI 来查看该帮助页。  
   
-7.  在示例运行时，客户端将写入当前活动的状态。  
+7. 在示例运行时，客户端将写入当前活动的状态。  
   
-8.  按任意键可终止客户端控制台应用程序。  
+8. 按任意键可终止客户端控制台应用程序。  
   
 9. 按 Shift+F5 可停止调试服务。  
   

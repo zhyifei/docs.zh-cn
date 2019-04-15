@@ -2,12 +2,12 @@
 title: TransactionFlowBindingElement
 ms.date: 03/30/2017
 ms.assetid: 0a9656fe-2400-45ca-ad79-92715c8cf190
-ms.openlocfilehash: d0311837ebb8112d9492fb548492bcd3e10230e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a58d5620abbb636480ceea3020552246ae284842
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150080"
 ---
 # <a name="transactionflowbindingelement"></a>TransactionFlowBindingElement
 TransactionFlowBindingElement  
@@ -26,7 +26,7 @@ class TransactionFlowBindingElement : BindingElement
 ## <a name="methods"></a>方法  
  TransactionFlowBindingElement 类未定义任何方法。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>属性  
  TransactionFlowBindingElement 类具有以下属性：  
   
 ### <a name="issuedtokens"></a>IssuedTokens  
@@ -34,7 +34,7 @@ class TransactionFlowBindingElement : BindingElement
   
  访问类型：只读  
   
- 指定对已颁发的安全令牌标头（来自 WS-Trust 的 IssuedTokens）的需求。  
+ 指定对已颁发的安全令牌标头（来自 WS-Trust 的 IssuedTokens）的要求。  
   
 ### <a name="transactionprotocol"></a>TransactionProtocol  
  数据类型：String  
@@ -57,4 +57,5 @@ class TransactionFlowBindingElement : BindingElement
 |命名空间|已在 root\ServiceModel 中定义|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>

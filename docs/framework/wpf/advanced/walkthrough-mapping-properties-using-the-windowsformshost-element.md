@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 86a7a8a937b9407690d7f1981b91857d1b44ded1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373876"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296519"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>演练：使用 WindowsFormsHost 元素映射属性
 
@@ -45,11 +45,11 @@ ms.locfileid: "57373876"
 
 ## <a name="create-and-set-up-the-project"></a>创建并设置项目
 
-1.  创建**WPF 应用程序**名为项目`PropertyMappingWithWfhSample`。
+1. 创建**WPF 应用程序**名为项目`PropertyMappingWithWfhSample`。
 
-2.  在中**解决方案资源管理器**，添加对 WindowsFormsIntegration 程序集，它名为 WindowsFormsIntegration.dll 的引用。
+2. 在中**解决方案资源管理器**，添加对 WindowsFormsIntegration 程序集，它名为 WindowsFormsIntegration.dll 的引用。
 
-3.  在中**解决方案资源管理器**，添加对 System.Drawing 和 System.Windows.Forms 程序集的引用。
+3. 在中**解决方案资源管理器**，添加对 System.Drawing 和 System.Windows.Forms 程序集的引用。
 
 ## <a name="defining-the-application-layout"></a>定义应用程序布局
 
@@ -57,15 +57,15 @@ ms.locfileid: "57373876"
 
 ### <a name="to-define-the-application-layout"></a>定义应用程序布局
 
-1.  打开 Window1.xaml 中的[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。
+1. 打开 Window1.xaml 中的[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。
 
-2.  用下面的代码替换现有代码。
+2. 用下面的代码替换现有代码。
 
      [!code-xaml[PropertyMappingWithWfhSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml#1)]
 
-3.  在代码编辑器中打开 Window1.xaml.cs。
+3. 在代码编辑器中打开 Window1.xaml.cs。
 
-4.  在该文件顶部导入以下命名空间。
+4. 在该文件顶部导入以下命名空间。
 
      [!code-csharp[PropertyMappingWithWfhSample#20](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#20)]
      [!code-vb[PropertyMappingWithWfhSample#20](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#20)]
@@ -138,7 +138,7 @@ ms.locfileid: "57373876"
 
 ### <a name="to-initialize-your-property-mappings"></a>初始化属性映射
 
-1.  将以下代码复制到用于定义`Window1`类。
+1. 将以下代码复制到用于定义`Window1`类。
 
      [!code-csharp[PropertyMappingWithWfhSample#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#11)]
      [!code-vb[PropertyMappingWithWfhSample#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#11)]
@@ -151,7 +151,7 @@ ms.locfileid: "57373876"
 
     -   将初始值分配给映射的属性。
 
-2.  按 F5 生成并运行该应用程序。 单击复选框可查看的效果<xref:System.Windows.FrameworkElement.FlowDirection%2A>映射。 单击复选框时，布局会反转其左右方向。
+2. 按 F5 生成并运行该应用程序。 单击复选框可查看的效果<xref:System.Windows.FrameworkElement.FlowDirection%2A>映射。 单击复选框时，布局会反转其左右方向。
 
 ## <a name="see-also"></a>请参阅
 
@@ -160,4 +160,4 @@ ms.locfileid: "57373876"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Windows 窗体和 WPF 属性映射](windows-forms-and-wpf-property-mapping.md)
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [演练：承载在 WPF 中的 Windows 窗体控件](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [演练：在 WPF 中承载 Windows 窗体控件](walkthrough-hosting-a-windows-forms-control-in-wpf.md)

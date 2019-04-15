@@ -2,12 +2,12 @@
 title: Null 语义
 ms.date: 03/30/2017
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
-ms.openlocfilehash: 272c19d7ee64381baa93cb2eda1cc035c42a025d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb1e96ba44c5d64e8366a654c2d06d89c9b46c9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689086"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172752"
 ---
 # <a name="null-semantics"></a>Null 语义
 下表提供了指向各个组成部分[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档位置`null`(`Nothing`在 Visual Basic 中) 的问题进行讨论。  
@@ -20,4 +20,5 @@ ms.locfileid: "54689086"
 |[计算数值序列中值的和](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)|介绍如何<xref:System.Linq.Enumerable.Sum%2A>运算符的计算结果为`null`(`Nothing`在 Visual Basic 中) 而不是 0 一个序列，其中只包含 null 或空序列。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [数据类型和函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

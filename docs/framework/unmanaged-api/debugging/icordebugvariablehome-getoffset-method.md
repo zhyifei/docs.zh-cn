@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6880584fe407d651010fad885c2dd5983ad4dfcf
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 864cb893511bceabd61ce0064065b3866ce01dfe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492460"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212591"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome::GetOffset 方法
 获取从基寄存器变量的偏移量。  
@@ -42,7 +42,7 @@ HRESULT GetOffset(
 ## <a name="return-value"></a>返回值  
  此方法返回以下值：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`S_OK`|该变量是在寄存器相对内存位置。|  
 |`E_FAIL`|变量不是在寄存器相对内存位置。|  
@@ -54,7 +54,8 @@ HRESULT GetOffset(
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [ICorDebugVariableHome 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

@@ -2,25 +2,25 @@
 title: 如何：调用委托方法 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: 42d56fca7e1d33c071db2e7e38935aa00caa5b7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac3e32010e7c20ba76e39915d694b11ab3a65d40
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319607"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>如何：调用委托方法 (Visual Basic)
 此示例演示如何将一种方法与委托相关联，然后调用该方法通过委托。  
   
 ### <a name="create-the-delegate-and-matching-procedures"></a>创建委托和匹配过程  
   
-1.  创建名为的委托`MySubDelegate`。  
+1. 创建名为的委托`MySubDelegate`。  
   
     ```  
     Delegate Sub MySubDelegate(ByVal x As Integer)  
     ```  
   
-2.  声明一个类，包含具有相同的签名与委托的方法。  
+2. 声明一个类，包含具有相同的签名与委托的方法。  
   
     ```  
     Class class1  
@@ -30,7 +30,7 @@ ms.locfileid: "54676206"
     End Class  
     ```  
   
-3.  定义一个方法，创建委托的实例并调用该方法通过调用内置与委托相关联`Invoke`方法。  
+3. 定义一个方法，创建委托的实例并调用该方法通过调用内置与委托相关联`Invoke`方法。  
   
     ```  
     Protected Sub DelegateTest()  

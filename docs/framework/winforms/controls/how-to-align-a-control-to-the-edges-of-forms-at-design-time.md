@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: 8f74a6b56e99e016bfb27bbe1b271f6c71af8f87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8ca6fd64edbd73301fd298f42c3d4d97d021888a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140889"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331854"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>如何：在设计时将控件与窗体边缘对齐
 可以使控件与窗体的边缘对齐通过设置<xref:System.Windows.Forms.Control.Dock%2A>。 此属性指定控件在窗体中的驻留位置。 可以将 <xref:System.Windows.Forms.Control.Dock%2A> 属性设置为下列值：  
@@ -31,15 +31,15 @@ ms.locfileid: "59140889"
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>若要在设计时设置控件的 Dock 属性  
   
-1.  在 Windows 窗体设计器中，选择您的控件。  
+1. 在 Windows 窗体设计器中，选择您的控件。  
   
-2.  在中**属性**窗口中，单击下拉列表框旁边的<xref:System.Windows.Forms.Control.Dock%2A>属性。  
+2. 在中**属性**窗口中，单击下拉列表框旁边的<xref:System.Windows.Forms.Control.Dock%2A>属性。  
   
      表示六种可能的图形界面<xref:System.Windows.Forms.Control.Dock%2A>显示设置。  
   
-3.  选择合适的设置。  
+3. 选择合适的设置。  
   
-4.  您的控件现在将停靠的设置指定的方式。  
+4. 您的控件现在将停靠的设置指定的方式。  
   
 ## <a name="see-also"></a>请参阅
 

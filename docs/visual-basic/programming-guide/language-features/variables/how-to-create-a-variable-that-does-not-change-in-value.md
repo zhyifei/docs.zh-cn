@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823319"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342929"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>如何：在值 (Visual Basic 中) 创建一个变量，不会更改
 不会更改其值的变量的概念可能似乎是矛盾。 但有些情况下常量不可行时，并可用于具有固定值的变量。 在这种情况下，你可以定义具有的成员变量[ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)关键字。  
@@ -25,7 +25,7 @@ ms.locfileid: "58823319"
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>若要在值中创建一个变量，不会更改  
   
-1.  在模块级别声明的成员变量[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)，并包括[ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)关键字。  
+1. 在模块级别声明的成员变量[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)，并包括[ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)关键字。  
   
     ```  
     Dim ReadOnly timeStarted  
@@ -33,7 +33,7 @@ ms.locfileid: "58823319"
   
      您可以指定`ReadOnly`仅在成员变量上。 这意味着您必须定义在模块级别，任何过程之外的变量。  
   
-2.  如果可以计算在编译时的单个语句中的值，使用中的初始化子句`Dim`语句。 请按照[作为](../../../../visual-basic/language-reference/statements/as-clause.md)子句以等号 (`=`) 后, 跟表达式。 请确保编译器可以计算此表达式为常量值。  
+2. 如果可以计算在编译时的单个语句中的值，使用中的初始化子句`Dim`语句。 请按照[作为](../../../../visual-basic/language-reference/statements/as-clause.md)子句以等号 (`=`) 后, 跟表达式。 请确保编译器可以计算此表达式为常量值。  
   
     ```  
     Dim ReadOnly timeStarted As Date = Now  

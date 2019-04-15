@@ -1,5 +1,5 @@
 ---
-title: bypasslist -> <clear> 元素（网络设置）
+title: <clear> Bypasslist （网络设置） 的元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: b3a1d8a0801168283f83160242c4e9d7e151f847
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7499d15f1d57887ffc3e78b83ed686c0c0f46cf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203517"
 ---
 # <a name="clear-element-for-bypasslist-network-settings"></a>\<清除 > bypasslist （网络设置） 的元素
 清除代理跳过列表。  
@@ -43,7 +43,7 @@ ms.locfileid: "55276336"
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**说明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
   
@@ -71,5 +71,6 @@ ms.locfileid: "55276336"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

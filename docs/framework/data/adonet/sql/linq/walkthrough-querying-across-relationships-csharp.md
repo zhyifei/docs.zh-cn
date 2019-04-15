@@ -2,12 +2,12 @@
 title: 演练：跨关系查询 (C#)
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: 52623b79492908a6c387715fef002d4b8927169c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325366"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>演练：跨关系查询 (C#)
 本演练演示如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*关联*来表示数据库中的外键关系。  
@@ -51,16 +51,16 @@ ms.locfileid: "59184881"
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>使用 Customer 对象访问 Order 对象  
   
-1.  通过将下面的代码键入或粘贴到 `Main` 方法中修改此方法：  
+1. 通过将下面的代码键入或粘贴到 `Main` 方法中修改此方法：  
   
      [!code-csharp[DLinqWalk2CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#3)]  
   
-2.  按 F5 调试应用程序。  
+2. 按 F5 调试应用程序。  
   
     > [!NOTE]
     >  你可以通过注释掉 `db.Log = Console.Out;` 来消除控制台窗口中的 SQL 代码。  
   
-3.  在控制台窗口中按 Enter，以停止调试。  
+3. 在控制台窗口中按 Enter，以停止调试。  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>创建数据库的强类型化视图  
  从数据库的强类型化视图着手要容易得多。 通过将 <xref:System.Data.Linq.DataContext> 对象强类型化，您无需调用 <xref:System.Data.Linq.DataContext.GetTable%2A>。 当您使用强类型化的 <xref:System.Data.Linq.DataContext> 对象时，您可以在所有查询中使用强类型化表。  
@@ -69,21 +69,21 @@ ms.locfileid: "59184881"
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>对 DataContext 对象进行强类型化  
   
-1.  将下面的代码添加到 `Customer` 类声明的上方。  
+1. 将下面的代码添加到 `Customer` 类声明的上方。  
   
      [!code-csharp[DLinqWalk2CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#4)]  
   
-2.  将 `Main` 方法修改为使用强类型化的 <xref:System.Data.Linq.DataContext>，如下所示：  
+2. 将 `Main` 方法修改为使用强类型化的 <xref:System.Data.Linq.DataContext>，如下所示：  
   
      [!code-csharp[DLinqWalk2CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#5)]  
   
-3.  按 F5 调试应用程序。  
+3. 按 F5 调试应用程序。  
   
      控制台窗口输出如下：  
   
      `ID=WHITC`  
   
-4.  在控制台窗口中按 Enter，以停止调试。  
+4. 在控制台窗口中按 Enter，以停止调试。  
   
 ## <a name="next-steps"></a>后续步骤  
  下一个演练 ([演练：操作数据 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) 演示如何操作数据。 该演练不要求您保存本系列中已经完成的两个演练的结果。  

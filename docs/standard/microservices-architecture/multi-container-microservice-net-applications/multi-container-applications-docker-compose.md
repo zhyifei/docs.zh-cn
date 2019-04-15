@@ -4,12 +4,12 @@ description: 如何使用 docker-compose.yml 指定多容器应用程序的微�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: df185950d8155d61b60c9b54e3a8751ec3980408
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4f4918a6f26a617fad38c7955415c4ff559a9187
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463522"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920774"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定义多容器应用程序
 
@@ -433,7 +433,7 @@ Docker-compose 要求 .env 文件中的每行都是 \<variable\>=\<value\> 格�
 如果查看 Internet 上源代码的 Docker 和 .NET Core ，则会发现 Dockerfiles 会将源代码源复制到容器，展现生成 Docker 映像的简单性。 这些示例表明，使用简单配置，即可拥有 Docker 映像，同时应用程序还会带有环境。 以下示例显示在此情况下的简单 Dockerfile。
 
 ```Dockerfile
-FROM microsoft/dotnet
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -446,7 +446,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 开发人员会在容器和微服务模型中不断启动容器。 使用容器时，通常不会重启睡眠容器，因为该容器为一次性容器。 业务流程协调程序（如 Kubernetes 和 Azure Service Fabric）只创建映像的新实例。 这意味着，需要在生成应用程序时，通过预编译应用程序进行优化，这样可加快实例化过程。 当容器启动时，它应已准备好运行。 不应在运行时使用 dotnet CLI 中的 `dotnet restore` 和 `dotnet build` 命令进行还原和编译，正如许多有关 .NET Core 和 Docker 的博客文章所述。
 
-.NET 团队一直致力于使 .NET Core 和 ASP.NET Core 成为容器优化的框架。 .NET Core 不仅是一个内存占用少的轻量级框架；该团队还致力于针对三种主要方案优化了 Docker 映像，并在版本 2.1 及更高版本中，在 *microsoft/dotnet* 的 Docker 中心注册表中发布了这些映像：
+.NET 团队一直致力于使 .NET Core 和 ASP.NET Core 成为容器优化的框架。 .NET Core 不仅是一个内存占用少的轻量级框架；该团队还致力于针对三种主要方案优化了 Docker 映像，并在版本 2.1 及更高版本中，在 dotnet/core 的 Docker 中心注册表中发布了这些映像：
 
 1. **开发**：实现快速迭代和调试更改为优先事项，大小次之。
 
@@ -454,11 +454,12 @@ ENTRYPOINT ["dotnet", "run"]
 
 3. **生产**：其重点是实现快速部署和容器启动，所以这些映像仅限于二进制文件和运行应用程序所需的内容。
 
-为实现此目的，.NET 团队在 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/)（位于 Docker 中心）中提供了三个基本变体：
+为实现此目的，.NET 团队在 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)（位于 Docker 中心）中提供了四个基本变体：
 
-1. **sdk**：用于开发和生成方案。
-2. **runtime**：用于生产方案
-3. **runtime-deps**：用于[自包含应用程序](../../../core/deploying/index.md#self-contained-deployments-scd)的生产方案。
+1. **sdk**：用于开发和生成方案
+1. **aspnet**：用于 ASP.NET 生产方案
+1. **runtime**：用于 .NET 生产方案
+1. **runtime-deps**：用于[自包含应用程序](../../../core/deploying/index.md#self-contained-deployments-scd)的生产方案。
 
 为了更快启动，运行时映像还会自动将 aspnetcore\_url 设置为端口 80，并使用 Ngen 创建程序集的本机映像缓存。
 

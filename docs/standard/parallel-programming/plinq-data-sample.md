@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e7ef42bab2d7567741a433cbcacf10a5e689f6a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867928"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298900"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 数据示例
 此示例包含 .csv 格式的示例数据，以及将它转换为“客户”、“产品”、“订单”和“订单详情”内存中集合的方法。 若要进一步试验 PLINQ，可以将其他一些主题中的代码示例粘贴到本主题的代码中，并通过 `Main` 方法调用它。 也可以将此类数据用于自己的 PLINQ 查询。  
@@ -27,13 +27,13 @@ ms.locfileid: "43867928"
   
 ### <a name="to-set-up-this-sample"></a>设置此示例  
   
-1.  创建 Visual Basic 或 Visual C# 控制台应用项目。  
+1. 创建 Visual Basic 或 Visual C# 控制台应用项目。  
   
-2.  通过运行下面这些步骤后面的代码，替换 Module1.vb 或 Program.cs 的内容。  
+2. 通过运行下面这些步骤后面的代码，替换 Module1.vb 或 Program.cs 的内容。  
   
-3.  在 **“项目”** 菜单上，单击 **“添加新项”**。 选择“文本文件”，再单击“确定”。 复制此主题中的数据，再将它粘贴到新的文本文件中。 在“文件”菜单上，单击“保存”，将文件命名为“Plinqdata.csv”，再将它保存到包含源代码文件的文件夹中。  
+3. 在 **“项目”** 菜单上，单击 **“添加新项”**。 选择“文本文件”，再单击“确定”。 复制此主题中的数据，再将它粘贴到新的文本文件中。 在“文件”菜单上，单击“保存”，将文件命名为“Plinqdata.csv”，再将它保存到包含源代码文件的文件夹中。  
   
-4.  按 F5 以验证项目是否正确生成和运行。 下面的输出应显示在控制台窗口中。  
+4. 按 F5 以验证项目是否正确生成和运行。 下面的输出应显示在控制台窗口中。  
   
     ```  
     Customer count: 50  

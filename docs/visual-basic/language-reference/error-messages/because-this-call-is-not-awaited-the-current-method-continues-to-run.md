@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 5c8767db154c79d9e3b37a22410ac1e4705b7a44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609793"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304222"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>由于不等待此调用，因此在调用完成之前，当前方法将继续运行
 在调用完成之前，会继续执行当前方法，原因是此调用不处于等待状态。 请考虑向调用结果应用“Await”运算符。  
@@ -95,13 +95,13 @@ ms.locfileid: "54609793"
 ## <a name="example"></a>示例  
  以下 Windows Presentation Foundation (WPF) 应用程序包含上一示例中的方法。 下列步骤用于设置该应用程序。  
   
-1.  创建一个 WPF 应用程序，将其命名为 `AsyncWarning`。  
+1. 创建一个 WPF 应用程序，将其命名为 `AsyncWarning`。  
   
-2.  在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。  
+2. 在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。  
   
      如果此选项卡不可见，则在解决方案资源管理器 中，打开 MainWindow.xaml 的快捷菜单，然后选择“查看代码” 。  
   
-3.  在“XAML”  视图中，将 MainWindow.xaml 的代码替换为下面的代码。  
+3. 在“XAML”  视图中，将 MainWindow.xaml 的代码替换为下面的代码。  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -117,9 +117,9 @@ ms.locfileid: "54609793"
   
      MainWindow.xaml 的“设计”  视图中将显示一个简单的窗口，其中包含一个按钮和一个文本框。  
   
-     有关 XAML 设计器的详细信息，请参阅[使用 XAML 设计器创建 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。 有关如何生成简单 UI 的信息，请参阅"创建 WPF 应用程序"和"设计简单的 WPF MainWindow"的部分[演练：使用 Async 和 Await 访问 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
+     有关 XAML 设计器的详细信息，请参阅[使用 XAML 设计器创建 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。 有关如何自行生成简单 UI 的信息，请参阅“创建 WPF 应用程序的步骤”和“设计简单 WPF MainWindow 的步骤”两个部分，这两个部分位于[演练：使用 Async 和 Await 访问 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
-4.  将 MainWindow.xaml.vb 中的代码替换为以下代码。  
+4. 将 MainWindow.xaml.vb 中的代码替换为以下代码。  
   
     ```vb  
     Class MainWindow   
@@ -199,7 +199,7 @@ ms.locfileid: "54609793"
     ' Exiting the Click event handler.  
     ```  
   
-5.  按 F5 键以运行程序，然后选择 **“启动”** 按钮。  
+5. 按 F5 键以运行程序，然后选择 **“启动”** 按钮。  
   
      预期的输出显示在代码末尾。  
   

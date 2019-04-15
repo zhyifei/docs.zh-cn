@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: 1c589ddbc7276ca13fc82513effd3bcae3cd61fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718736"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231573"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>使用 LINQ to SQL 可执行的操作
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持您作为 SQL 开发人员所期望的所有关键功能。 您可以查询表中的信息、在表中插入信息以及更新和删除表中的信息。  
   
 ## <a name="selecting"></a>选择  
- 通过在您自己的编程语言中编写*查询，然后执行此查询以检索结果，即可以实现选择（投影*[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] ）。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 自行将所有必要操作转换为您所熟悉的必要 SQL 操作。 有关详细信息，请参阅 [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)。  
+ 通过在您自己的编程语言中编写*查询，然后执行此查询以检索结果，即可以实现选择（投影*[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] ）。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 自行将转换为使用者熟悉的必要 SQL 操作的所有必要操作。 有关详细信息，请参阅 [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)。  
   
  在下面的示例中，检索来自伦敦的客户的公司名称并将其显示在控制台窗口中。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54718736"
  [!code-csharp[DLinqGettingStarted#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#3)]
  [!code-vb[DLinqGettingStarted#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#3)]  
   
-## <a name="deleting"></a>Deleting  
+## <a name="deleting"></a>正在删除  
  若要 `Delete` 某一项，请从其所属集合中移除该项，然后对 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 调用 <xref:System.Data.Linq.DataContext> 以提交所做的更改。  
   
 > [!NOTE]
@@ -51,6 +51,7 @@ ms.locfileid: "54718736"
  [!code-vb[DLinqGettingStarted#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#4)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [编程指南](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
 - [LINQ to SQL 对象模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
 - [入门](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

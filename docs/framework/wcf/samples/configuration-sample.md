@@ -2,12 +2,12 @@
 title: 配置示例
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: b999c84fc6fd4d1a367b4e1476de8376858008a2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332516"
 ---
 # <a name="configuration-sample"></a>配置示例
 此示例演示如何使用配置文件使服务成为可发现的服务。  
@@ -261,11 +261,10 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 #### <a name="to-use-this-sample"></a>使用此示例  
   
-1.  此示例使用 HTTP 终结点，若要运行此示例，正确的 URL Acl 必须添加，请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)有关详细信息。 使用提升的特权执行下面的命令应添加相应的 ACL。 如果该命令无效，则可能需要使用你的域和用户名替换以下自变量。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 此示例使用 HTTP 终结点，若要运行此示例，正确的 URL Acl 必须添加，请参阅[配置 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)有关详细信息。 使用提升的特权执行下面的命令应添加相应的 ACL。 如果该命令无效，则可能需要使用你的域和用户名替换以下自变量。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  生成解决方案。  
+2. 生成解决方案。  
   
-3.  从生成目录运行服务可执行文件。  
+3. 从生成目录运行服务可执行文件。  
   
-4.  运行客户端可执行文件。 请注意，客户端能够查找该服务。  
-  
+4. 运行客户端可执行文件。 请注意，客户端能够查找该服务。  

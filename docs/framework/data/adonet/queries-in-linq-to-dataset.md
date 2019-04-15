@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 461ff195ab4f147f98c7bc2ac83f5e8f12edc4c0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f4458639aa2c78e7c78bdae66fa2b20d5546743c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102539"
 ---
 # <a name="queries-in-linq-to-dataset"></a>在 LINQ to DataSet 中查询
-查询是一种从数据源检索数据的表达式。 查询通常用专用查询语言表示，如用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们查询的每种类型的数据源或数据格式，都不得不学习一种新的查询语言。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 提供了一种较为简单的一致模型，适用于各种数据源和格式的数据。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查询中，您始终使用编程对象。  
+查询是一种从数据源检索数据的表达式。 查询通常用专用查询语言表示，如用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们查询的每种类型的数据源或数据格式，都不得不学习一种新的查询语言。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 提供了更简单的一致模型，用于跨各种数据源和格式处理数据。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查询中，您始终使用编程对象。  
   
  一个 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查询操作包含三个操作：获取数据源、创建查询和执行查询。  
   
@@ -54,13 +54,13 @@ ms.locfileid: "56093263"
   
  执行一个查询后，不会再编写其他查询，并且所有后续查询都将使用驻留在内存中的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 运算符。 当在 `foreach` 或 `For Each` 语句中循环访问查询变量或通过调用可导致立即执行的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 转换运算符之一时，查询将会开始执行。 这些运算符包括：<xref:System.Linq.Enumerable.ToList%2A>、<xref:System.Linq.Enumerable.ToArray%2A>、<xref:System.Linq.Enumerable.ToLookup%2A> 和 <xref:System.Linq.Enumerable.ToDictionary%2A>。  
   
- 在下面的示例中，第一个查询返回按定价排序的所有产品。 
-  <xref:System.Linq.Enumerable.ToArray%2A> 方法用于强制立即执行查询：  
+ 在下面的示例中，第一个查询返回按定价排序的所有产品。 <xref:System.Linq.Enumerable.ToArray%2A> 方法用于强制立即执行查询：  
   
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
 - [查询数据集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
 - [C# 中的 LINQ 入门](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

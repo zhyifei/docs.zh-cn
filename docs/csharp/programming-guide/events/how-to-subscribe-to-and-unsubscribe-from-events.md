@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 4d06899303110d0b06729f2a02c47b9096bec724
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306594"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何：订阅和取消订阅事件（C# 编程指南）
 如果想编写引发事件时调用的自定义代码，则可以订阅由其他类发布的事件。 例如，可以订阅某个按钮的 `click` 事件，以使应用程序在用户单击该按钮时执行一些有用的操作。  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>使用 Visual Studio IDE 订阅事件  
   
-1.  如果看不到“属性”窗口，请在“设计”视图中，右键单击要为其创建事件处理程序的窗体或控件，然后选择“属性”。  
+1. 如果看不到“属性”窗口，请在“设计”视图中，右键单击要为其创建事件处理程序的窗体或控件，然后选择“属性”。  
   
-2.  在“属性”窗口的顶部，单击“事件”图标。  
+2. 在“属性”窗口的顶部，单击“事件”图标。  
   
-3.  双击要创建的事件，例如 `Load` 事件。  
+3. 双击要创建的事件，例如 `Load` 事件。  
   
      Visual C# 会创建一个空事件处理程序方法，并将其添加到你的代码中。 或者，也可以在“代码”视图中手动添加代码。 例如，下面的代码行声明了一个在 `Form` 类引发 `Load` 事件时调用的事件处理程序方法。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "56981798"
   
 ### <a name="to-subscribe-to-events-programmatically"></a>以编程方式订阅事件  
   
-1.  定义一个事件处理程序方法，其签名与该事件的委托签名匹配。 例如，如果事件基于 <xref:System.EventHandler> 委托类型，则下面的代码表示方法存根：  
+1. 定义一个事件处理程序方法，其签名与该事件的委托签名匹配。 例如，如果事件基于 <xref:System.EventHandler> 委托类型，则下面的代码表示方法存根：  
   
     ```csharp
     void HandleCustomEvent(object sender, CustomEventArgs a)  
@@ -46,7 +46,7 @@ ms.locfileid: "56981798"
     }  
     ```  
   
-2.  使用加法赋值运算符 (`+=`) 来为事件附加事件处理程序。 在下面的示例中，假设名为 `publisher` 的对象拥有一个名为 `RaiseCustomEvent` 的事件。 请注意，订户类需要引用发行者类才能订阅其事件。  
+2. 使用加法赋值运算符 (`+=`) 来为事件附加事件处理程序。 在下面的示例中，假设名为 `publisher` 的对象拥有一个名为 `RaiseCustomEvent` 的事件。 请注意，订户类需要引用发行者类才能订阅其事件。  
   
     ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
@@ -102,7 +102,7 @@ ms.locfileid: "56981798"
 ## <a name="see-also"></a>请参阅
 
 - [事件](../../../csharp/programming-guide/events/index.md)
-- [event](../../../csharp/language-reference/keywords/event.md)
+- [Event — 事件](../../../csharp/language-reference/keywords/event.md)
 - [如何：发布符合 .NET Framework 准则的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [-= 运算符（C# 参考）](../../language-reference/operators/subtraction-assignment-operator.md)
 - [+= 运算符](../../../csharp/language-reference/operators/addition-assignment-operator.md)

@@ -9,29 +9,29 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: af81e65dfd4661d62d7aa4a3e6075be312765cb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201051"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517815"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>如何： 开发在 IIS 上运行的 WCF 数据服务
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>如何：开发在 IIS 上运行的 WCF 数据服务
 
 本主题演示如何使用 WCF 数据服务创建基于由 Internet 信息服务 (IIS) 上运行的 ASP.NET Web 应用程序承载的 Northwind 示例数据库的数据服务。 有关如何创建作为 ASP.NET Development Server 运行的 ASP.NET Web 应用程序相同的 Northwind 数据服务的示例，请参阅[WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。
 
 > [!NOTE]
-> 若要创建 Northwind 数据服务，您的本地计算机上必须已安装 Northwind 示例数据库。 若要下载此示例数据库，请下载页[SQL Server 的示例数据库](https://go.microsoft.com/fwlink/?linkid=24758)。
+> 若要创建 Northwind 数据服务，您的本地计算机上必须已安装 Northwind 示例数据库。 若要下载此示例数据库，请访问 [SQL Server 的示例数据库](https://go.microsoft.com/fwlink/?linkid=24758)下载页。
 
  本主题说明如何使用实体框架提供程序创建数据服务。 还有其他一些数据服务提供程序可以使用。 有关详细信息，请参阅[数据服务提供商](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。
 
- 在创建服务之后，您必须显式提供对数据服务资源的访问权限。 有关详细信息，请参阅[如何： 启用对数据服务的访问权限](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)。
+ 在创建服务之后，您必须显式提供对数据服务资源的访问权限。 有关详细信息，请参阅[如何：启用对数据服务的访问](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)。
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>创建在 IIS 运行的 ASP.NET web 应用程序
 
 1. 在 Visual Studio 中，在**文件**菜单中，选择**新建** > **项目**。
 
-2. 在中**新的项目**对话框中，选择**已安装**> [**Visual C#** 或者**Visual Basic**] > **Web**类别。
+2. 在中**新的项目**对话框中，选择**已安装**> [**Visual C#** 或**Visual Basic**] > **Web**类别。
 
 3. 选择**ASP.NET Web 应用程序**模板。
 
@@ -132,7 +132,7 @@ ms.locfileid: "47201051"
 
 5. 连接到数据库的数据模型，通过执行以下步骤之一，然后单击**下一步**:
 
-    -   如果没有已配置的数据库连接，请单击**新的连接**和创建新的连接。 有关详细信息，请参阅[如何： 创建到 SQL Server 数据库的连接](https://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 实例必须附加了 Northwind 示例数据库。
+    -   如果没有已配置的数据库连接，请单击**新的连接**和创建新的连接。 有关详细信息，请参阅[如何：创建连接到 SQL Server 数据库](https://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 实例必须附加了 Northwind 示例数据库。
 
          \- 或 -
 
@@ -159,8 +159,8 @@ ms.locfileid: "47201051"
 
 4. 在数据服务的代码中，用数据模型的实体容器的类型（在此示例中为 `/* TODO: put your data source class name here */`）替换定义数据服务的类定义中的注释 `NorthwindEntities`。 该类定义应如下所示：
 
-     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
-     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
+     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
 ## <a name="see-also"></a>请参阅
 

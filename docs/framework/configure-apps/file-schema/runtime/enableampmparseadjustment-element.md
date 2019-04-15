@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3316184aaa624fffdd18f472a7f3a709b42045a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 57d1a14199debbb90827c1ea95347d485a636329
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222505"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment > 元素
 确定是否日期和时间分析方法使用调整后的规则集来分析日期字符串包含天、 月、 小时和 AM/PM 指示符。  
@@ -35,7 +35,7 @@ ms.locfileid: "55269206"
   
 ### <a name="enabled-attribute"></a>enabled 特性  
   
-|值|描述|  
+|“值”|Description|  
 |-----------|-----------------|  
 |0|日期和时间分析方法不使用调整后的规则用于分析包含仅日、 月、 小时和 AM/PM 指示符的日期字符串。|  
 |1|日期和时间分析方法的分析包含仅日、 月、 小时和 AM/PM 指示符的日期字符串使用调整后的规则。|  
@@ -82,5 +82,6 @@ ms.locfileid: "55269206"
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>请参阅
+
 - [\<运行时 > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
-- [\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
+- [\<配置 > 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1cb6e12e7badff9bcd00196f50bf1291df630122
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92370751b38029435b12c177b75cd4d9402369b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220937"
 ---
 # <a name="icorprofilerobjectenum-interface"></a>ICorProfilerObjectEnum 接口
 提供了按顺序循环访问由生成的冻结对象的集合的方法[Ngen.exe （本机映像生成器）](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "54500179"
 |[Skip 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-skip-method.md)|因此跳过指定的数量的元素，请从其当前位置前移此枚举器的光标。|  
   
 ## <a name="remarks"></a>备注  
- `ICorProfilerObjectEnum` 接口是一个枚举器。 它可以让数组接收器以其合适的速率从发送器提取元素。 换而言之，接收方是可以显式控制数组元素流，从而避免将大型数组作为方法参数传递到相关的问题。  
+ `ICorProfilerObjectEnum` 接口是一个枚举器。 它可以让数组接收器以其合适的速率从发送器拉取元素。 换而言之，接收方是可以显式控制数组元素流，从而避免将大型数组作为方法参数传递到相关的问题。  
   
  使用[ICorProfilerInfo2::EnumModuleFrozenObjects](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-enummodulefrozenobjects-method.md)若要获取的指针`ICorProfilerObjectEnum`接口。  
   
@@ -48,8 +48,9 @@ ms.locfileid: "54500179"
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
-- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+
+- [分析接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [EnumModuleFrozenObjects 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-enummodulefrozenobjects-method.md)

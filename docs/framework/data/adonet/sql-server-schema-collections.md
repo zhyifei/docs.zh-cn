@@ -2,12 +2,12 @@
 title: SQL Server 架构集合
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224547"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server 架构集合
 除了通用架构集合之外，适用于 SQL Server 的 Microsoft .NET Framework 数据提供程序还支持其他架构集合。 架构集合因使用的 SQL Server 的版本而稍有不同。 若要确定支持的架构集合的列表，请调用**GetSchema**不带任何参数，或使用架构集合名称"MetaDataCollections"的方法。 此时将返回 <xref:System.Data.DataTable>，包含支持的架构集合列表、每个架构集合支持的限制数以及所使用的标识符部分数。  
@@ -119,7 +119,7 @@ ms.locfileid: "54635034"
 |TABLE_NAME|String|表名。|  
 |TABLE_TYPE|String|表的类型。 可以是 VIEW 或 BASE TABLE。|  
   
-## <a name="columns"></a>Columns  
+## <a name="columns"></a>列  
   
 |列名|数据类型|描述|  
 |----------------|--------------|-----------------|  
@@ -207,7 +207,7 @@ ms.locfileid: "54635034"
 |IS_SPARSE|String|YES，如果列是稀疏列。<br /><br /> NO，如果列不是稀疏列。|  
 |IS_COLUMN_SET|String|YES，如果列是一个列集列。<br /><br /> NO            |  
   
-## <a name="users"></a>Users  
+## <a name="users"></a>用户  
   
 |列名|数据类型|描述|  
 |----------------|--------------|-----------------|  
@@ -216,7 +216,7 @@ ms.locfileid: "54635034"
 |createdate|DateTime|添加帐户的日期。|  
 |updatedate|DateTime|上次更改帐户的日期。|  
   
-## <a name="views"></a>视图  
+## <a name="views"></a>Views  
   
 |列名|数据类型|描述|  
 |----------------|--------------|-----------------|  
@@ -256,5 +256,6 @@ ms.locfileid: "54635034"
 |Permission_set_desc|String|程序集的权限集/安全级别的友好名称。|  
   
 ## <a name="see-also"></a>请参阅
+
 - [检索数据库架构信息](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

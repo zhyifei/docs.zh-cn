@@ -2,12 +2,12 @@
 title: 序列化联编程序的用法
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 5fd90febac8c75df9fa2472e4aab591a5630076e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47a1974386927316ea9230ec27cf647d7245c44a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503153"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329838"
 ---
 # <a name="usage-of-serialization-binder"></a>序列化联编程序的用法
 此示例演示如何使用 <xref:System.Runtime.Serialization.SerializationBinder> 在序列化泛型类型时更改其版本。  
@@ -24,10 +24,10 @@ ms.locfileid: "33503153"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  若要执行客户端，请右击解决方案 SBGenericsVTS （6 个项目），然后选择**属性**。  
+1. 若要执行客户端，请右键单击解决方案，SBGenericsVTS （6 项目），然后选择**属性**。  
   
-2.  在**通用属性**，选择**启动项目**，然后选择**多启动项目**。  
+2. 在中**常见属性**，选择**启动项目**，然后选择**多个启动项目**。  
   
-3.  选择**服务器**第一个，然后**Client20**然后**Client40**。 选择**启动**操作为这三个项目，并将其余设置为保留**无**。  
+3. 选择**服务器**第一个，然后**Client20** ，然后**Client40**。 选择**启动**为这三个操作项目，并将设置为其余设置保留**None**。  
   
-4.  单击**确定**，然后按 F5 运行示例。
+4. 单击**确定**，然后按 F5 运行示例。

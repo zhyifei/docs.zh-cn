@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: a5866bae5217b8c8ea22ba66a344b464694583ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720966"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319919"
 ---
 # <a name="how-to-run-a-workflow"></a>如何：运行工作流
 本主题是 Windows Workflow Foundation 入门教程的延续，讨论如何创建工作流宿主并运行在以前定义的工作流[如何：创建工作流](how-to-create-a-workflow.md)主题。
@@ -23,27 +23,27 @@ ms.locfileid: "57720966"
   
 ### <a name="to-create-the-workflow-host-project"></a>创建工作流宿主项目  
   
-1.  从以前打开的解决方案[如何：创建活动](how-to-create-an-activity.md)通过使用 Visual Studio 2012 的主题。  
+1. 从以前打开的解决方案[如何：创建活动](how-to-create-an-activity.md)通过使用 Visual Studio 2012 的主题。  
   
-2.  在 **解决方案资源管理器** 中右键单击 **WF45GettingStartedTutorial** 解决方案，选择 **“添加”** 和 **“新建项目”**。  
+2. 在 **解决方案资源管理器** 中右键单击 **WF45GettingStartedTutorial** 解决方案，选择 **“添加”** 和 **“新建项目”**。  
   
     > [!TIP]
     >  如果未显示 **解决方案资源管理器** 窗口，请从 **“视图”** 菜单选择 **“解决方案资源管理器** 。
 
-3.  在 **“已安装”** 节点中，选择 **“Visual C#”**、 **“工作流”** （或 **“Visual Basic”**、 **“工作流”**）。
+3. 在 **“已安装”** 节点中，选择 **“Visual C#”**、 **“工作流”** （或 **“Visual Basic”**、 **“工作流”**）。
 
     > [!NOTE]
     >  根据在 Visual Studio 中配置为主要语言的编程语言的不同， **“Visual C#”** 或 **“Visual Basic”** 节点可能位于 **“已安装”** 节点下的 **“其他语言”** 节点中。
 
      请确保在 .NET Framework 版本下拉列表中选择 **“.NET Framework 4.5”** 。 从 **“工作流”** 列表中选择 **“工作流控制台应用程序”** 。 类型`NumberGuessWorkflowHost`成**名称**框，然后单击**确定**。 这将创建适合初学者的工作流应用程序，它具备基本的工作流承载支持。 基本承载代码将修改用于运行工作流应用程序。
 
-4.  在 **解决方案资源管理器** 中右键单击新添加的 **NumberGuessWorkflowHost** ，然后选择 **“添加引用”**。 在 **“添加引用”** 列表中选择 **“解决方案”** ，选中 **NumberGuessWorkflowActivities**旁边的复选框，然后单击 **“确定”**。
+4. 在 **解决方案资源管理器** 中右键单击新添加的 **NumberGuessWorkflowHost** ，然后选择 **“添加引用”**。 在 **“添加引用”** 列表中选择 **“解决方案”** ，选中 **NumberGuessWorkflowActivities**旁边的复选框，然后单击 **“确定”**。
 
-5.  在 **解决方案资源管理器** 中右键单击 **Workflow1.xaml** ，然后选择 **“删除”**。 单击 **“确定”** 以确认。
+5. 在 **解决方案资源管理器** 中右键单击 **Workflow1.xaml** ，然后选择 **“删除”**。 单击 **“确定”** 以确认。
 
 ### <a name="to-modify-the-workflow-hosting-code"></a>修改工作流承载代码
 
-1.  在 **解决方案资源管理器** 中双击 **“Program.cs”** 或 **“Module1.vb”** ，以显示其代码。
+1. 在 **解决方案资源管理器** 中双击 **“Program.cs”** 或 **“Module1.vb”** ，以显示其代码。
 
     > [!TIP]
     >  如果未显示 **解决方案资源管理器** 窗口，请从 **“视图”** 菜单选择 **“解决方案资源管理器** 。
@@ -62,7 +62,7 @@ ms.locfileid: "57720966"
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     生成的承载代码使用 <xref:System.Activities.WorkflowInvoker>。 <xref:System.Activities.WorkflowInvoker> 提供一种简单工作流调用方法，就像方法调用一样，仅可用于不使用持久性的工作流。 <xref:System.Activities.WorkflowApplication> 为执行工作流（包括生命周期事件通知、执行控制、书签恢复和持久性）提供更丰富的模型。 此示例使用书签并且将 <xref:System.Activities.WorkflowApplication> 用于承载工作流。 在 `using` Program.cs **或** Module1.vb **顶部的现有** using **或** Imports **语句下面，添加以下** 或 **Imports** 语句。
+     生成的承载代码使用 <xref:System.Activities.WorkflowInvoker>。 <xref:System.Activities.WorkflowInvoker> 像它像方法调用，并且可以仅用于不使用暂留的工作流调用工作流提供一个简单的方法。 <xref:System.Activities.WorkflowApplication> 执行包括通知生命周期事件、 执行控制、 书签恢复和持久性的工作流提供更丰富的模型。 此示例使用书签并且将 <xref:System.Activities.WorkflowApplication> 用于承载工作流。 在 `using` Program.cs **或** Module1.vb **顶部的现有** using **或** Imports **语句下面，添加以下** 或 **Imports** 语句。
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -86,12 +86,12 @@ ms.locfileid: "57720966"
 
 ### <a name="to-set-input-arguments-of-a-workflow"></a>设置工作流的输入参数
 
-1.  在 **“Program.cs”** 或 **“Module1.vb”** 顶部的现有 `using` 或 `Imports` 语句下面，添加以下语句。
+1. 在 **“Program.cs”** 或 **“Module1.vb”** 顶部的现有 `using` 或 `Imports` 语句下面，添加以下语句。
 
      [!code-csharp[CFX_WF_GettingStarted#5](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#5)]
      [!code-vb[CFX_WF_GettingStarted#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#5)]
 
-2.  将创建新 <xref:System.Activities.WorkflowApplication> 的代码行替换为以下代码，该代码创建一个参数字典并在创建后将其传递给工作流。
+2. 将创建新 <xref:System.Activities.WorkflowApplication> 的代码行替换为以下代码，该代码创建一个参数字典并在创建后将其传递给工作流。
 
     > [!NOTE]
     >  请替换`Workflow1`在这些示例中使用`FlowchartNumberGuessWorkflow`， `SequentialNumberGuessWorkflow`，或`StateMachineNumberGuessWorkflow`，具体在以前完成的工作流取决于[如何：创建工作流](how-to-create-a-workflow.md)步骤。 如果不替换 `Workflow1` ，在尝试生成或运行工作流时会出现生成错误。
@@ -99,23 +99,23 @@ ms.locfileid: "57720966"
      [!code-csharp[CFX_WF_GettingStarted#6](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
 
-     此字典包含一个键为 `MaxNumber`的元素。 输入字典中的键对应工作流根活动的输入参数。 工作流使用`MaxNumber` 来确定随机生成数的上边界。
+     此字典包含一个键为 `MaxNumber`的元素。 输入字典中的键对应工作流根活动的输入参数。 `MaxNumber` 来确定随机生成数的上边界。
 
 ### <a name="to-retrieve-output-arguments-of-a-workflow"></a>检索工作流的输出参数
 
-1.  修改 <xref:System.Activities.WorkflowApplication.Completed%2A> 处理程序以检索并显示工作流使用的轮数。
+1. 修改 <xref:System.Activities.WorkflowApplication.Completed%2A> 处理程序以检索并显示工作流使用的轮数。
 
      [!code-csharp[CFX_WF_GettingStarted#7](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#7)]
      [!code-vb[CFX_WF_GettingStarted#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#7)]
 
 ### <a name="to-resume-a-bookmark"></a>继续执行书签
 
-1.  将以下代码添加到 `Main` 方法顶部，紧接在现有 <xref:System.Threading.AutoResetEvent> 声明之后。
+1. 将以下代码添加到 `Main` 方法顶部，紧接在现有 <xref:System.Threading.AutoResetEvent> 声明之后。
 
      [!code-csharp[CFX_WF_GettingStarted#8](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#8)]
      [!code-vb[CFX_WF_GettingStarted#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#8)]
 
-2.  将以下 <xref:System.Activities.WorkflowApplication.Idle%2A> 处理程序添加到 `Main`中，紧接在现有的三个工作流生命周期处理程序的下面。
+2. 将以下 <xref:System.Activities.WorkflowApplication.Idle%2A> 处理程序添加到 `Main`中，紧接在现有的三个工作流生命周期处理程序的下面。
 
      [!code-csharp[CFX_WF_GettingStarted#9](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#9)]
      [!code-vb[CFX_WF_GettingStarted#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#9)]
@@ -125,7 +125,7 @@ ms.locfileid: "57720966"
     > [!NOTE]
     >  在本示例中，宿主应用程序在 <xref:System.Activities.WorkflowApplication.Completed%2A> 和 <xref:System.Activities.WorkflowApplication.Idle%2A> 处理程序中使用自动重置事件将宿主应用程序与工作流的进度同步。 在继续执行书签之前，不需要阻止并等待工作流变为空闲状态，但在此示例中需要同步事件，以使宿主知道工作流是否已完成，或是否在等待使用 <xref:System.Activities.Bookmark>的更多用户输入。 有关详细信息，请参阅[书签](bookmarks.md)。
 
-3.  移除对 `WaitOne`的调用，并替换为收集用户输入并恢复 <xref:System.Activities.Bookmark>的代码。
+3. 移除对 `WaitOne`的调用，并替换为收集用户输入并恢复 <xref:System.Activities.Bookmark>的代码。
 
      移除下面的代码行。
 
@@ -139,9 +139,9 @@ ms.locfileid: "57720966"
 
 ## <a name="BKMK_ToRunTheApplication"></a> 生成并运行应用程序
 
-1.  在 **解决方案资源管理器** 中，右键单击 **NumberGuessWorkflowHost** 项目，然后选择 **“设为启动项目”**。
+1. 在 **解决方案资源管理器** 中，右键单击 **NumberGuessWorkflowHost** 项目，然后选择 **“设为启动项目”**。
 
-2.  按 Ctrl+F5 生成并运行应用程序。 尝试以尽可能少的次数猜出该数。
+2. 按 Ctrl+F5 生成并运行应用程序。 尝试以尽可能少的次数猜出该数。
 
      要尝试其他工作流样式的应用程序，请用 `Workflow1` 、 <xref:System.Activities.WorkflowApplication> 或 `FlowchartNumberGuessWorkflow`（取决于所需工作流样式）替换代码中用于创建 `SequentialNumberGuessWorkflow`的 `StateMachineNumberGuessWorkflow`。
 
@@ -166,6 +166,6 @@ ms.locfileid: "57720966"
 - [Windows Workflow Foundation 编程](programming.md)
 - [入门教程](getting-started-tutorial.md)
 - [如何：创建工作流](how-to-create-a-workflow.md)
-- [如何：创建和运行长时间运行工作流](how-to-create-and-run-a-long-running-workflow.md)
+- [如何：创建和运行长期运行的工作流](how-to-create-and-run-a-long-running-workflow.md)
 - [在工作流中等待输入](waiting-for-input-in-a-workflow.md)
-- [托管工作流](hosting-workflows.md)
+- [承载工作流](hosting-workflows.md)

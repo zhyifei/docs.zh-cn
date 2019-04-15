@@ -2,12 +2,12 @@
 title: 演练：操作数据 (C#)
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5418bdbdeee162bbc8c0abcb11fd39f2cc82ce73
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637302"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330774"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>演练：操作数据 (C#)
 本演练提供了用于在数据库中添加、修改和删除数据的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将使用 Northwind 示例数据库的一个副本来添加一位客户，更改该客户的姓名，然后删除一个订单。  
@@ -53,41 +53,41 @@ ms.locfileid: "54637302"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
-1.  在 Visual Studio**文件**菜单，依次指向**新建**，然后单击**项目**。  
+1. 在 Visual Studio**文件**菜单，依次指向**新建**，然后单击**项目**。  
   
-2.  在中**项目类型**窗格中的**新项目**对话框中，单击**Visual C#** 。  
+2. 在中**项目类型**窗格中的**新项目**对话框中，单击**Visual C#** 。  
   
-3.  在“模板”窗格中，单击“控制台应用程序”。  
+3. 在“模板”窗格中，单击“控制台应用程序”。  
   
-4.  在中**名称**框中，键入**LinqDataManipulationApp**。  
+4. 在中**名称**框中，键入**LinqDataManipulationApp**。  
   
-5.  在中**位置**框中，确认你想要用于存储项目文件。  
+5. 在中**位置**框中，确认你想要用于存储项目文件。  
   
-6.  单击 **“确定”**。  
+6. 单击 **“确定”**。  
   
 ## <a name="adding-linq-references-and-directives"></a>添加 LINQ 引用和指令  
  本演练用到默认情况下您的项目中可能未安装的程序集。 如果在您的项目中未将 System.Data.Linq 作为引用列出，请按照以下步骤中的说明添加它。  
   
 #### <a name="to-add-systemdatalinq"></a>添加 System.Data.Linq  
   
-1.  在中**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
+1. 在中**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
   
-2.  在中**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，然后单击**确定**。  
+2. 在中**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，然后单击**确定**。  
   
      此程序集即被添加到项目中。  
   
-3.  在 Program.cs 的顶部添加以下指令：  
+3. 在 Program.cs 的顶部添加以下指令：  
   
      [!code-csharp[DLinqWalk3CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#1)]  
   
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>将 Northwind 代码文件添加到项目  
- 以下这些步骤假定您已使用 SQLMetal 工具从 Northwind 示例数据库生成代码文件。 有关更多信息，请参见本演练前面部分的“先决条件”一节。  
+ 以下这些步骤假定你已使用 SQLMetal 工具从 Northwind 示例数据库生成代码文件。 有关更多信息，请参见本演练前面部分的“先决条件”一节。  
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>将 northwind 代码文件添加到项目  
   
-1.  上**项目**菜单上，单击**添加现有项**。  
+1. 上**项目**菜单上，单击**添加现有项**。  
   
-2.  在中**添加现有项**对话框中，导航到 c:\linqtest6\northwind.cs，然后依次**添加**。  
+2. 在中**添加现有项**对话框中，导航到 c:\linqtest6\northwind.cs，然后依次**添加**。  
   
      northwind.cs 文件即被添加到项目中。  
   
@@ -96,11 +96,11 @@ ms.locfileid: "54637302"
   
 #### <a name="to-set-up-and-test-the-database-connection"></a>设置并测试数据库连接  
   
-1.  将下面的代码键入或粘贴到 Program 类的 `Main` 方法中：  
+1. 将下面的代码键入或粘贴到 Program 类的 `Main` 方法中：  
   
      [!code-csharp[DLinqWalk3CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#2)]  
   
-2.  按 F5 在此点测试应用程序。  
+2. 按 F5 在此点测试应用程序。  
   
      一个**控制台**窗口随即打开。  
   
@@ -113,13 +113,13 @@ ms.locfileid: "54637302"
   
 #### <a name="to-add-a-new-customer-entity-object"></a>添加新的 Customer 实体对象  
   
-1.  通过在 `Customer` 方法中的 `Console.ReadLine();` 前添加如下代码，创建一个新的 `Main`：  
+1. 通过在 `Customer` 方法中的 `Console.ReadLine();` 前添加如下代码，创建一个新的 `Main`：  
   
      [!code-csharp[DLinqWalk3CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#3)]  
   
-2.  按 F5 调试解决方案。  
+2. 按 F5 调试解决方案。  
   
-3.  在中按 Enter**控制台**窗口以停止调试并继续本演练。  
+3. 在中按 Enter**控制台**窗口以停止调试并继续本演练。  
   
 ## <a name="updating-an-entity"></a>更新实体  
  在以下步骤中，您将检索一个 `Customer` 对象并修改其属性之一。  
@@ -146,20 +146,21 @@ ms.locfileid: "54637302"
   
 #### <a name="to-submit-changes-to-the-database"></a>将更改提交到数据库  
   
-1.  将下面的代码插入到 `Console.ReadLine` 上方紧靠它的位置：  
+1. 将下面的代码插入到 `Console.ReadLine` 上方紧靠它的位置：  
   
      [!code-csharp[DLinqWalk3CS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#6)]  
   
-2.  将下面的代码插入到 `SubmitChanges` 后面，以显示提交更改前后的效果：  
+2. 将下面的代码插入到 `SubmitChanges` 后面，以显示提交更改前后的效果：  
   
      [!code-csharp[DLinqWalk3CS#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#7)]  
   
-3.  按 F5 调试解决方案。  
+3. 按 F5 调试解决方案。  
   
-4.  在中按 Enter**控制台**窗口关闭应用程序。  
+4. 在中按 Enter**控制台**窗口关闭应用程序。  
   
 > [!NOTE]
 >  通过提交更改添加了新的客户后，您无法再次按原样执行此解决方案。 若要再次执行此解决方案，请更改要添加的客户姓名和客户 ID。  
   
 ## <a name="see-also"></a>请参阅
+
 - [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

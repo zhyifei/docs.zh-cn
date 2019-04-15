@@ -10,12 +10,12 @@ helpviewer_keywords:
 - brushes [Windows Forms], examples
 - brushes [Windows Forms], creating solid
 ms.assetid: 85c3fe7d-fb1d-4591-8a9f-d75b556b90af
-ms.openlocfilehash: d7fb7c11a69cae69210dd2eece3336bc40c505c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ed9ec1f52b41c83b3cc6e36dedf97f1c00db42e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213436"
 ---
 # <a name="how-to-create-a-solid-brush"></a>如何：创建实心画笔
 此示例将创建<xref:System.Drawing.SolidBrush>对象，它可由<xref:System.Drawing.Graphics>用于填充形状的对象。  
@@ -29,8 +29,9 @@ ms.locfileid: "57711975"
  使用它们完成后，应调用<xref:System.IDisposable.Dispose%2A>占用系统资源，例如画笔对象的对象。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Drawing.SolidBrush>
 - <xref:System.Drawing.Brush>
 - [图形编程入门](getting-started-with-graphics-programming.md)
-- [GDI+ 中的画笔和填充形状](brushes-and-filled-shapes-in-gdi.md)
+- [GDI+ 中的画笔和实心形状](brushes-and-filled-shapes-in-gdi.md)
 - [使用画笔填充形状](using-a-brush-to-fill-shapes.md)

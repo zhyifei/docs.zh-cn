@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: b03c450b84a376de5c5c7d3582c01a31bc417a11
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366772"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317904"
 ---
 # <a name="property-animation-techniques-overview"></a>属性动画技术概述
 本主题介绍了处理动画属性的不同方法：情节提要、本地动画、时钟和基于帧的动画。  
@@ -42,13 +42,13 @@ ms.locfileid: "57366772"
   
  一个<xref:System.Windows.Media.Animation.Storyboard>是一种特殊的容器<xref:System.Windows.Media.Animation.Timeline>，提供它所包含的动画的目标信息。 若要使用进行动画处理<xref:System.Windows.Media.Animation.Storyboard>，完成以下三个步骤。  
   
-1.  声明<xref:System.Windows.Media.Animation.Storyboard>和一个或多个动画。  
+1. 声明<xref:System.Windows.Media.Animation.Storyboard>和一个或多个动画。  
   
-2.  使用<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>附加属性，以指定目标对象和每个动画的属性。  
+2. 使用<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>附加属性，以指定目标对象和每个动画的属性。  
   
-3.  （仅代码）定义<xref:System.Windows.NameScope>有关<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 注册的对象进行动画处理的名称<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。  
+3. （仅代码）定义<xref:System.Windows.NameScope>有关<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 注册的对象进行动画处理的名称<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。  
   
-4.  开始<xref:System.Windows.Media.Animation.Storyboard>。  
+4. 开始<xref:System.Windows.Media.Animation.Storyboard>。  
   
  从开始<xref:System.Windows.Media.Animation.Storyboard>将动画应用到它们进行动画处理的属性，并启动它们。 有两种方法开始<xref:System.Windows.Media.Animation.Storyboard>： 可以使用<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法提供<xref:System.Windows.Media.Animation.Storyboard>类，也可以使用<xref:System.Windows.Media.Animation.BeginStoryboard>操作。 中进行动画处理的唯一办法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]是使用<xref:System.Windows.Media.Animation.BeginStoryboard>操作。 一个<xref:System.Windows.Media.Animation.BeginStoryboard>操作可在<xref:System.Windows.EventTrigger>，属性<xref:System.Windows.Trigger>，或<xref:System.Windows.DataTrigger>。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "57366772"
 |<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.EventTrigger>|是|是|是|是|[使用情节提要对属性进行动画处理](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> 和属性 <xref:System.Windows.Trigger>|否|是|是|是|[在属性值更改时触发动画](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> 和 <xref:System.Windows.DataTrigger>|否|是|是|是|[如何：数据发生更改时触发动画](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法|是|No|否|否|[使用情节提要对属性进行动画处理](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法|是|否|否|否|[使用情节提要对属性进行动画处理](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  有关详细信息<xref:System.Windows.Media.Animation.Storyboard>对象，请参阅[演示图板概述](storyboards-overview.md)。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "57366772"
   
  若要使用本地动画进行动画处理，应完成以下步骤。  
   
-1.  创建<xref:System.Windows.Media.Animation.AnimationTimeline>对象。  
+1. 创建<xref:System.Windows.Media.Animation.AnimationTimeline>对象。  
   
-2.  使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法的对象的要进行动画处理来应用<xref:System.Windows.Media.Animation.AnimationTimeline>到您指定的属性。  
+2. 使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法的对象的要进行动画处理来应用<xref:System.Windows.Media.Animation.AnimationTimeline>到您指定的属性。  
   
  下面的示例演示如何进行动画处理的宽度和背景颜色<xref:System.Windows.Controls.Button>。  
   
@@ -87,11 +87,11 @@ ms.locfileid: "57366772"
   
  若要将应用一个<xref:System.Windows.Media.Animation.Clock>到属性，完成以下步骤。  
   
-1.  创建<xref:System.Windows.Media.Animation.AnimationTimeline>对象。  
+1. 创建<xref:System.Windows.Media.Animation.AnimationTimeline>对象。  
   
-2.  使用<xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A>方法<xref:System.Windows.Media.Animation.AnimationTimeline>若要创建<xref:System.Windows.Media.Animation.AnimationClock>。  
+2. 使用<xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A>方法<xref:System.Windows.Media.Animation.AnimationTimeline>若要创建<xref:System.Windows.Media.Animation.AnimationClock>。  
   
-3.  使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A>方法的对象的要进行动画处理来应用<xref:System.Windows.Media.Animation.AnimationClock>到你指定的属性。  
+3. 使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A>方法的对象的要进行动画处理来应用<xref:System.Windows.Media.Animation.AnimationClock>到你指定的属性。  
   
  下面的示例演示如何创建<xref:System.Windows.Media.Animation.AnimationClock>并将其应用到两个相似的属性。  
   
@@ -100,11 +100,11 @@ ms.locfileid: "57366772"
   
  如果想要创建一个计时树并用其处理动画属性，应完成以下几个步骤。  
   
-1.  使用<xref:System.Windows.Media.Animation.ParallelTimeline>和<xref:System.Windows.Media.Animation.AnimationTimeline>对象来创建一个计时树。  
+1. 使用<xref:System.Windows.Media.Animation.ParallelTimeline>和<xref:System.Windows.Media.Animation.AnimationTimeline>对象来创建一个计时树。  
   
-2.  使用<xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A>的根<xref:System.Windows.Media.Animation.ParallelTimeline>若要创建<xref:System.Windows.Media.Animation.ClockGroup>。  
+2. 使用<xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A>的根<xref:System.Windows.Media.Animation.ParallelTimeline>若要创建<xref:System.Windows.Media.Animation.ClockGroup>。  
   
-3.  循环访问<xref:System.Windows.Media.Animation.ClockGroup.Children%2A>的<xref:System.Windows.Media.Animation.ClockGroup>，并应用其子<xref:System.Windows.Media.Animation.Clock>对象。 每个<xref:System.Windows.Media.Animation.AnimationClock>子级，使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A>方法的对象的要进行动画处理来应用<xref:System.Windows.Media.Animation.AnimationClock>到你指定的属性  
+3. 循环访问<xref:System.Windows.Media.Animation.ClockGroup.Children%2A>的<xref:System.Windows.Media.Animation.ClockGroup>，并应用其子<xref:System.Windows.Media.Animation.Clock>对象。 每个<xref:System.Windows.Media.Animation.AnimationClock>子级，使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A>方法的对象的要进行动画处理来应用<xref:System.Windows.Media.Animation.AnimationClock>到你指定的属性  
   
  有关时钟对象的详细信息，请参阅[动画和计时系统概述](animation-and-timing-system-overview.md)。  
   
@@ -122,6 +122,7 @@ ms.locfileid: "57366772"
  有关详细信息，请参阅<xref:System.Windows.Media.CompositionTarget.Rendering>页。  
   
 ## <a name="see-also"></a>请参阅
+
 - [动画概述](animation-overview.md)
 - [演示图板概述](storyboards-overview.md)
 - [动画和计时系统概述](animation-and-timing-system-overview.md)

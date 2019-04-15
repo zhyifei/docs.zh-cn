@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: e456aab0d36ae611f3bfe4974aa3603efff27379
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351965"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209965"
 ---
 # <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>如何：通过 RowGroups 属性操作表的行组
 此示例演示了一些较常见的操作可通过表的行组上执行<xref:System.Windows.Documents.Table.RowGroups%2A>属性。  
@@ -84,6 +84,7 @@ ms.locfileid: "57351965"
  [!code-vb[TableSnippets2#_Table_RowGroups_Clear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_clear)]  
   
 ## <a name="see-also"></a>请参阅
-- [操作说明：操作流内容元素通过 Inlines 属性](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
-- [通过 Blocks 属性控制 FlowDocument](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
-- [通过 Columns 属性控制表列](how-to-manipulate-table-columns-through-the-columns-property.md)
+
+- [操作说明：通过 Inlines 属性操作流内容元素](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [通过 Blocks 属性操作 FlowDocument](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [通过 Columns 属性操作表的列](how-to-manipulate-table-columns-through-the-columns-property.md)

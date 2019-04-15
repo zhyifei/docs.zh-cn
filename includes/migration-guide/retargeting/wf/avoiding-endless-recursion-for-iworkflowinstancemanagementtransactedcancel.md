@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f78f31f4328a45b5ef3f25cdf6eddac1b17fb6e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233936"
+---
 ### <a name="avoiding-endless-recursion-for-iworkflowinstancemanagementtransactedcancel-and-iworkflowinstancemanagementtransactedterminate"></a>避免 IWorkflowInstanceManagement.TransactedCancel 和 IWorkflowInstanceManagement.TransactedTerminate 无限递归
 
 |   |   |
@@ -7,4 +15,3 @@
 |范围|边缘|
 |版本|4.7.2|
 |类型|重定目标|
-

@@ -1,5 +1,5 @@
 ---
-title: 如何：执行自定义操作在基于 Windows 窗体 DataGridView 控件单元格中的更改
+title: 如何：根据 Windows 窗体 DataGridView 控件的单元格中的更改执行自定义操作
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], detecting changes in cells
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
-ms.openlocfilehash: ad1c60c34fc5461de21e2ad5d4d02f5b2abd6dfd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0573199e9afb7e52c7542d36a2f3e39730dacdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229155"
 ---
-# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>如何：执行自定义操作在基于 Windows 窗体 DataGridView 控件单元格中的更改
+# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>如何：根据 Windows 窗体 DataGridView 控件的单元格中的更改执行自定义操作
 <xref:System.Windows.Forms.DataGridView>控件具有可用于检测的状态中的更改的事件数<xref:System.Windows.Forms.DataGridView>单元格。 两个最常使用的是<xref:System.Windows.Forms.DataGridView.CellValueChanged>和<xref:System.Windows.Forms.DataGridView.CellStateChanged>事件。  
   
 ### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a>若要检测 DataGridView 单元格的值中的更改  
@@ -41,6 +41,7 @@ ms.locfileid: "57705579"
 -   对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>

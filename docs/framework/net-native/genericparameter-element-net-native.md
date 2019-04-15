@@ -1,15 +1,15 @@
 ---
-title: <GenericParameter>元素 (.NET Native)
+title: <GenericParameter> 元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db9876727244d528ec3b7f1c3c9875bb5ca645b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111652"
 ---
 # <a name="genericparameter-element-net-native"></a>\<泛型参数 > 元素 (.NET Native)
 将策略应用到一个泛型类型或方法的参数类型。  
@@ -51,15 +51,15 @@ ms.locfileid: "55257767"
   
 ## <a name="name-attribute"></a>Name 特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|generic_parameter_name|必需的特性。 泛型类型参数的名称。 例如，对于泛型委托 <xref:System.Func%603>，“TResult”的一个 generic_parameter_name 值将运行时策略应用到该委托的返回值。|  
+|*泛型_参数_名称*|必需的特性。 泛型类型参数的名称。 例如，对于泛型委托 <xref:System.Func%603>，“TResult”的一个 generic_parameter_name 值将运行时策略应用到该委托的返回值。|  
   
 ## <a name="all-other-attributes"></a>所有其他特性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
-|policy_setting|该设置将应用到这种策略类型。 可能值为 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
+|*策略_设置*|该设置将应用到这种策略类型。 可能值为 `All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 以及 `Required All`。 有关详细信息，请参阅[运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -68,7 +68,7 @@ ms.locfileid: "55257767"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|将运行时反射策略应用到一个构造函数或方法。|  
+|[\<方法 >](../../../docs/framework/net-native/method-element-net-native.md)|将运行时反射策略应用到一个构造函数或方法。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|将运行时反射策略应用到一个特定类型，例如一个类或结构。|  
   
 ## <a name="remarks"></a>备注  
@@ -87,8 +87,9 @@ ms.locfileid: "55257767"
 ```  
   
 ## <a name="see-also"></a>请参阅
-- [\<Method> 元素](../../../docs/framework/net-native/method-element-net-native.md)
+
+- [\<方法 > 元素](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<类型 > 元素](../../../docs/framework/net-native/type-element-net-native.md)
-- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令 (rd.xml) 配置文件引用](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)

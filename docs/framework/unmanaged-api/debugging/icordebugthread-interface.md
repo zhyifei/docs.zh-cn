@@ -16,16 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f2223230b18f175427bfbfeaa46bf1406d8c7e5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: db322bbdc7293410968542d0d22c572edb87795a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184699"
 ---
 # <a name="icordebugthread-interface"></a>ICorDebugThread 接口
-表示进程中的线程。 
-  `ICorDebugThread` 实例的生存期与它表示的线程的生存期相同。  
+表示进程中的线程。 `ICorDebugThread` 实例的生存期与它表示的线程的生存期相同。  
   
 ## <a name="methods"></a>方法  
   
@@ -60,7 +59,8 @@ ms.locfileid: "56976351"
   
  **库：** CorGuids.lib  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

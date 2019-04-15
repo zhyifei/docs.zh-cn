@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442719"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320920"
 ---
 # <a name="using-sessions"></a>使用会话
 在 Windows Communication Foundation (WCF) 应用程序中*会话*将一组消息关联起来形成对话。 WCF 会话是中提供的会话对象不同[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]应用程序，支持不同的行为，并且以不同的方式进行控制。 本主题介绍在 WCF 中的会话启用的功能的应用程序以及如何使用它们。  
@@ -32,11 +32,11 @@ ms.locfileid: "56442719"
   
  如果你熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>类中[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]它提供应用程序和功能，您可能注意到该类型的会话和 WCF 会话之间的以下差异：  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 会话总是由服务器启动。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 会话始终都是服务器启动的。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 会话原本是无序的。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 会话是隐式无序的。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 会话提供了一种跨请求的常规数据存储机制。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 会话在请求之间提供一种常规数据存储机制。  
   
  本主题描述：  
   
@@ -53,9 +53,9 @@ ms.locfileid: "56442719"
   
  在 WCF 服务接受客户端会话后，默认情况下启用以下功能：  
   
-1.  WCF 客户端对象之间的所有调用都由同一个服务实例都处理。  
+1. WCF 客户端对象之间的所有调用都由同一个服务实例都处理。  
   
-2.  不同的基于会话的绑定还会提供其他功能。  
+2. 不同的基于会话的绑定还会提供其他功能。  
   
 ## <a name="system-provided-session-types"></a>系统提供的会话类型  
  基于会话的绑定支持服务实例与特定会话的默认关联。 但是，除了启用前面介绍的基于会话的实例化控制之外，不同的基于会话的绑定还支持不同的功能。  
@@ -108,14 +108,14 @@ ms.locfileid: "56442719"
 > [!NOTE]
 >  尽管默认的行为与本地构造函数和析构函数有相似之处，但仅仅是相似。 任何 WCF 服务操作可以启动或终止操作，或同时在这两者。 另外，在默认情况下，可以按任意顺序调用启动操作任意次数；一旦建立会话并与实例相关联后，便不会再创建其他会话，除非显式控制服务实例的生存期（通过操作 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> 对象）。 最后，状态与会话相关联，而不是与服务对象相关联。  
   
- 例如，`ICalculatorSession`前面的示例中使用的协定需要 WCF 客户端对象第一次调用`Clear`操作之前执行其他任何操作，此 WCF 客户端对象的会话应该终止时它会调用`Equals`操作。 下面的代码示例演示强制执行这些要求的协定。 必须首先调用`Clear` 来启动会话，并且会话在调用 `Equals` 时结束。  
+ 例如，`ICalculatorSession`前面的示例中使用的协定需要 WCF 客户端对象第一次调用`Clear`操作之前执行其他任何操作，此 WCF 客户端对象的会话应该终止时它会调用`Equals`操作。 下面的代码示例演示强制执行这些要求的协定。 `Clear` 必须首先调用以启动会话，会话结束时`Equals`调用。  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
  服务不会启动与客户端的会话。 在 WCF 客户端应用程序，基于会话的通道的生存期和会话本身的生存期之间存在直接的关系。 因此，客户端可通过创建新的基于会话的通道来创建新会话，并通过正常关闭基于会话的通道来关闭现有的会话。 客户端通过调用以下项目之一来启动与服务终结点的会话：  
   
--   通过调用<xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 返回的通道上的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+-   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 通过调用返回的通道上<xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 生成的 WCF 客户端对象上[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "56442719"
   
  通常，客户端通过调用以下项目之一来结束与服务终结点的会话：  
   
--   通过调用<xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 返回的通道上的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+-   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 通过调用返回的通道上<xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> 在由 Svcutil.exe 生成的 WCF 客户端对象。  
   
@@ -146,5 +146,6 @@ ms.locfileid: "56442719"
 >  MaxConcurrentSessions 在此情况下不会产生任何影响，因为只有一个“会话”可用。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

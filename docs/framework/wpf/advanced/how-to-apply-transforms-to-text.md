@@ -1,5 +1,5 @@
 ---
-title: 如何：向文本应用变换
+title: 如何：向文本应用转换
 ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], rotated text
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: be0b6a0bbe927f248be434afd15dde6a66791fe6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "58126118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208665"
 ---
-# <a name="how-to-apply-transforms-to-text"></a>如何：向文本应用变换
+# <a name="how-to-apply-transforms-to-text"></a>如何：向文本应用转换
 应用变换可以改变应用程序中文本的显示。 下面的示例使用不同类型的呈现变换来影响中文本的显示<xref:System.Windows.Controls.TextBlock>控件。  
   
 ## <a name="example"></a>示例  
@@ -65,4 +65,5 @@ ms.locfileid: "58126118"
 >  <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>提供丰富的功能来产生阴影效果。 有关详细信息，请参阅[创建具有阴影的文本](how-to-create-text-with-a-shadow.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [向文本应用动画](how-to-apply-animations-to-text.md)

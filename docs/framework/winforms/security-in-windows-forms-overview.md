@@ -8,19 +8,19 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 8a1a7fe9f7b356f318a99dfecb425a66c1f70bd6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193702"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows 窗体中的安全性概述
 在发布 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 之前，用户计算机上运行的所有代码都有相同的权利或权限来访问该计算机的用户所拥有的资源。 例如，如果允许用户访问文件系统，则会允许代码访问文件系统；如果允许用户访问数据库，则会允许代码访问数据库。 尽管这些权利或权限对用户显式安装在本地计算机上的可执行文件中的代码来说是可接受的，但对来自 Internet 或本地 Intranet 的恶意代码来说可能是不可接受的。 此代码没有权限时应不能访问用户的计算机资源。  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 引入了称为代码访问安全性的基础结构，它让你能够区分代码拥有的权限或权利与用户拥有的权利。 默认情况下，来自 Internet 和 Intranet 的代码仅能在所谓的部分信任模式下运行。 部分信任使应用程序受一系列限制的约束：此外，应用程序被限制访问本地硬盘，且无法运行非托管代码。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 控制允许代码基于代码标识访问的资源：它来自哪里、是否具有[强名称程序集](../app-domains/strong-named-assemblies.md)以及是否使用证书签名等等。  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 技术用于部署 Windows 窗体应用程序，有助于让你更轻松地开发可在部分信任、完全信任或具有提升的权限的部分信任中运行的应用程序。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 提供了如“权限提升”和“受信任的应用程序部署”等功能，从而使你的应用程序能以可靠的方式从本地用户请求完全信任或提升的权限。  
+ [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 技术，用于部署 Windows 窗体应用程序，有助于使其更轻松地开发应用程序在部分信任环境中，在完全信任，或在部分信任环境中运行使用提升的权限。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 提供功能，如权限提升和受信任的应用程序部署，以便你的应用程序能够可靠的方式从本地用户请求完全信任或提升的权限。  
   
 ## <a name="understanding-security-in-the-net-framework"></a>了解 .NET Framework 中的安全性  
  代码访问安全性根据代码源以及代码标识的其他方面，使代码可以获得不同等级的受信度。 若要深入了解公共语言运行时用于确定安全策略的证据，请参阅[证据](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100))。 它有助于保护计算机系统不受恶意代码危害，并帮助防止受信任的代码有意或无意地折损安全性。 代码访问安全性还可让你更好地控制应用程序所能执行的操作，因为你可以指定你需要应用程序拥有的哪些权限。 代码访问安全性会影响面向公共语言运行时的所有托管代码，即使该代码不执行单个代码访问安全性权限检查。 有关 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中安全性的详细信息，请参阅[关键的安全性概念](../../standard/security/key-security-concepts.md)和[代码访问安全性基础知识](../misc/code-access-security-basics.md)。  
@@ -62,9 +62,9 @@ ms.locfileid: "57708194"
 -  
   
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>用适当的权限部署应用程序  
- 将 Windows 窗体应用程序部署到客户端电脑最常见的方式是使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，它是一种描述应用程序运行所需的所有组件的部署技术。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 使用称为清单的 XML 文件来描述组成应用程序的程序集和文件以及应用程序所需的权限。  
+ 将 Windows 窗体应用程序部署到客户端电脑最常见的方式是使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，它是一种描述应用程序运行所需的所有组件的部署技术。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 使用 XML 文件称为清单，以描述程序集和构成应用程序的文件，还在应用程序所需权限。  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 有两种在客户端计算机上请求提升的权限的技术。 两种技术都依赖于验证码证书的使用。 该证书有助于为你的用户提供一些保证，保证应用程序来自受信任的源。  
+ [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 有两种技术的请求的客户端计算机上提升的权限。 两种技术都依赖于验证码证书的使用。 该证书有助于为你的用户提供一些保证，保证应用程序来自受信任的源。  
   
  下表对这些技术进行了介绍。  
   
@@ -83,6 +83,7 @@ ms.locfileid: "57708194"
  如果已通过使用 Visual Studio 部署 Windows 窗体应用程序，可以启用在部分信任或受限的权限集从开发环境中进行调试。  另请参阅[如何：使用受限权限调试 ClickOnce 应用程序](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows 窗体安全](windows-forms-security.md)
 - [代码访问安全性基础知识](../misc/code-access-security-basics.md)
 - [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)

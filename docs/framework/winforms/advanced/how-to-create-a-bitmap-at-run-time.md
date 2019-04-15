@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], creating
 - bitmaps [Windows Forms], examples [Visual Basic]
 ms.assetid: 737bae30-e599-4e1d-bf30-bab8280b32be
-ms.openlocfilehash: edcf413bf6b3cb92e4570867afe8222c1f8b84f6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3acaf18afa621a182c26f00c0594516ac573e281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213658"
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>如何：在运行时创建位图
 此示例创建并在绘制<xref:System.Drawing.Bitmap>对象，并在现有的 Windows 窗体中显示<xref:System.Windows.Forms.PictureBox>控件。  
@@ -28,5 +28,6 @@ ms.locfileid: "57714211"
 -   Windows 窗体的导入 System、 System.Drawing 和 System.Windows.Forms 程序集。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Drawing.Bitmap>
 - [图像、位图和图元文件](images-bitmaps-and-metafiles.md)

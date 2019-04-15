@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: a51330e774e7e627d8719562a47c7d9da163cf5b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1b0d374c9dc3e24302a8acfbc56cd9468f41def5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159830"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>客户端的 UI 自动化控件模式
 > [!NOTE]
@@ -45,6 +45,7 @@ ms.locfileid: "57673777"
  实现自定义控件类型的控件可以具有表示其功能所需的任何控件模式集。  
   
 ## <a name="see-also"></a>请参阅
+
 - [UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
 - [UI 自动化文本模式](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)
 - [使用 UI 自动化调用控件](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 52f93acacec434ce6f7ba93678615c104aa94b24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 009011100af86e315aa41beb822b1448e2f21b25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150444"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>为 Windows Communication Foundation 服务配置绑定
 创建应用程序时，您经常需要将一些决策交给管理员在部署应用程序后制定。 例如，通常没有办法提前知道服务地址或统一资源标识符 (URI)。 最好允许管理员在创建服务后指定地址，而不是对地址进行硬编码。 这种灵活性是通过配置实现的。  
@@ -58,7 +58,7 @@ ms.locfileid: "54704038"
 </service>  
 ```  
   
- 在本示例中，`name` 属性表示使用该配置的服务类型。 当你用 `HelloWorld` 协定通过代码中创建服务时，它将以示例配置中定义的所有终结点进行初始化。 如果此程序集实现只有一个服务协定，`name`属性可以省略，因为服务使用唯一可用的类型。 该属性采用字符串，该字符串必须遵循以下格式：`Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ 在本示例中，`name` 属性表示使用该配置的服务类型。 当您用 `HelloWorld` 协定通过代码中创建服务时，它将以示例配置中定义的所有终结点进行初始化。 如果此程序集实现只有一个服务协定，`name`属性可以省略，因为服务使用唯一可用的类型。 该属性采用的格式必须为一个字符串 `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
  `address` 属性指定其他终结点用于与该服务通信的 URI。 该 URI 可以是绝对路径，也可以是相对路径。 如果提供的是相对地址，则需要主机提供适合于绑定中所使用的传输方案的基址。 如果未配置地址，则假定基址为该终结点的地址。  
   
@@ -162,6 +162,7 @@ ms.locfileid: "54704038"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [简化配置](../../../docs/framework/wcf/simplified-configuration.md)
 - [系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)
 - [终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)

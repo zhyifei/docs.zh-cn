@@ -2,12 +2,12 @@
 title: 标准终结点的用法
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584281"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304605"
 ---
 # <a name="usage-of-standard-endpoints"></a>标准终结点的用法
 
@@ -139,9 +139,9 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1.  使用 Visual Studio 2012 打开 StandardEndpoints.sln 文件。
+1. 使用 Visual Studio 2012 打开 StandardEndpoints.sln 文件。
 
-2.  使多个项目可以启动。
+2. 使多个项目可以启动。
 
     1.  在中**解决方案资源管理器**，右键单击该标准终结点解决方案，然后选择**属性**。
 
@@ -153,7 +153,7 @@ public class CustomEndpoint : ServiceEndpoint
 
          这指定客户端项目在服务项目之后执行。
 
-3.  若要运行解决方案，请按 F5。
+3. 若要运行解决方案，请按 F5。
 
 > [!NOTE]
 > 如果这些步骤不起作用，请确保，你的环境已正确设置，使用以下步骤：

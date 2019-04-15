@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31aa9f18729bf5d85e28d484f5fd1f5aac762470
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 459465064fe9db9f2f0aebb4153a3caea173af4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223636"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
 如果委托作为函数指针从托管代码封送到非托管代码，并且对委托进行垃圾回收后在该函数指针上放置了一个回调，则 `callbackOnCollectedDelegate` 托管调试助手 (MDA) 被激活。  
@@ -44,7 +44,7 @@ ms.locfileid: "54593532"
 ## <a name="effect-on-the-runtime"></a>对运行时的影响  
  将委托作为指针函数封送时，运行时分配一个 thunk，用于执行从非托管到托管的转换。 此 thunk 是非托管代码在最终调用托管委托前实际调用的对象。 如果未启用 `callbackOnCollectedDelegate` MDA，收集委托时将删除非托管封送处理代码。 如果启用了 `callbackOnCollectedDelegate` MDA，收集委托时不会立即删除非托管封送处理代码。 相反，在默认情况下，最后 1000 个实例都保持活动状态，然后在调用时更改以激活 MDA。 在收集了另外 1001 个封送的委托后，将最终删除此 thunk。  
   
-## <a name="output"></a>输出  
+## <a name="output"></a>Output  
  MDA 报告委托的类型名称，在尝试调用该委托的非托管函数指针前，收集该委托。  
   
 ## <a name="configuration"></a>配置  
@@ -112,6 +112,7 @@ public class Entry
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)

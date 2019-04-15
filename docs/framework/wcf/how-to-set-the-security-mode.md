@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 652fcef75f8d5a8dee824bb89bf4695f1629fed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116397"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339380"
 ---
 # <a name="how-to-set-the-security-mode"></a>如何：设置安全模式
 Windows Communication Foundation (WCF) 安全有三种常见的安全模式的大多数预定义绑定上找到： 传输、 消息和"使用消息凭据的传输"。 另外，还有两种特定于两个绑定的模式：<xref:System.ServiceModel.BasicHttpBinding> 上的“transport-credential only”模式和 <xref:System.ServiceModel.NetMsmqBinding> 上的“Both”模式。 不过，本主题主要讨论三种常见安全模式：<xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message> 和 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
@@ -25,9 +25,9 @@ Windows Communication Foundation (WCF) 安全有三种常见的安全模式的�
   
 ### <a name="to-set-the-security-mode-in-code"></a>在代码中设置安全模式  
   
-1.  创建要使用的绑定类的一个实例。 预定义绑定的列表，请参阅[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。 此示例创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例。  
+1. 创建要使用的绑定类的一个实例。 预定义绑定的列表，请参阅[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。 此示例创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例。  
   
-2.  设置 `Mode` 属性所返回的对象的 `Security` 属性。  
+2. 设置 `Mode` 属性所返回的对象的 `Security` 属性。  
   
      [!code-csharp[c_SettingSecurityMode#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#1)]
      [!code-vb[c_SettingSecurityMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#1)]  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) 安全有三种常见的安全模式的�
      [!code-csharp[c_SettingSecurityMode#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#3)]
      [!code-vb[c_SettingSecurityMode#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#3)]  
   
-3.  此外，还可以在绑定的构造函数中设置模式，如下面的代码所示。  
+3. 此外，还可以在绑定的构造函数中设置模式，如下面的代码所示。  
   
      [!code-csharp[c_SettingSecurityMode#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#4)]
      [!code-vb[c_SettingSecurityMode#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#4)]  
@@ -52,35 +52,35 @@ Windows Communication Foundation (WCF) 安全有三种常见的安全模式的�
   
 #### <a name="to-set-the-clientcredentialtype-property-for-transport-mode"></a>针对传输模式设置 ClientCredentialType 属性  
   
-1.  创建绑定的一个实例。  
+1. 创建绑定的一个实例。  
   
-2.  将 `Mode` 属性设置为 `Transport`。  
+2. 将 `Mode` 属性设置为 `Transport`。  
   
-3.  将 `ClientCredential` 属性设置为适当的值。 下面的代码将该属性设置为 `Windows`。  
+3. 将 `ClientCredential` 属性设置为适当的值。 下面的代码将该属性设置为 `Windows`。  
   
      [!code-csharp[c_SettingSecurityMode#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#5)]
      [!code-vb[c_SettingSecurityMode#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#5)]  
   
 #### <a name="to-set-the-clientcredentialtype-property-for-message-mode"></a>针对消息模式设置 ClientCredentialType 属性  
   
-1.  创建绑定的一个实例。  
+1. 创建绑定的一个实例。  
   
-2.  将 `Mode` 属性设置为 `Message`。  
+2. 将 `Mode` 属性设置为 `Message`。  
   
-3.  将 `ClientCredential` 属性设置为适当的值。 下面的代码将该属性设置为 `Certificate`。  
+3. 将 `ClientCredential` 属性设置为适当的值。 下面的代码将该属性设置为 `Certificate`。  
   
      [!code-csharp[c_SettingSecurityMode#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#6)]
      [!code-vb[c_SettingSecurityMode#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#6)]  
   
 #### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>在配置中设置 Mode 和 ClientCredentialType 属性  
   
-1.  添加到相应的绑定元素[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)配置文件元素。 以下示例将添加[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素。  
+1. 添加到相应的绑定元素[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)配置文件元素。 以下示例将添加[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素。  
   
-2.  添加`<binding>`元素，并设置其`name`属性为适当的值。  
+2. 添加`<binding>`元素，并设置其`name`属性为适当的值。  
   
-3.  添加一个 `<security>` 元素，并将 `mode` 属性设置为 `Message`、`Transport` 或 `TransportWithMessageCredential`。  
+3. 添加一个 `<security>` 元素，并将 `mode` 属性设置为 `Message`、`Transport` 或 `TransportWithMessageCredential`。  
   
-4.  如果模式设置为 `Transport`，则添加一个 `<transport>` 元素，并将 `clientCredential` 属性设置为适当的值。  
+4. 如果模式设置为 `Transport`，则添加一个 `<transport>` 元素，并将 `clientCredential` 属性设置为适当的值。  
   
      下面的示例将模式设置为 "`Transport"`，并将 `clientCredentialType` 元素的 `<transport>` 属性设置为 "`Windows"`。  
   

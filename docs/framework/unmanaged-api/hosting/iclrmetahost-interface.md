@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b52b12df9953dbafaeebfe223313288de0e559b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584043"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143944"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost 接口
 提供一些方法，返回特定版本的公共语言运行时 (CLR) 基于其版本号，列出所有已安装的 Clr、 列表中指定的进程加载的所有运行时中，发现用于编译为程序集，请退出一个过程的 CLR 版本使用正常的运行时关闭和查询旧 API 绑定。  
@@ -54,8 +54,9 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [宿主](../../../../docs/framework/unmanaged-api/hosting/index.md)

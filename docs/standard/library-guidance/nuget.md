@@ -4,12 +4,12 @@ description: 使用 .NET 库的 NuGet 打包的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198174"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -46,7 +46,7 @@ NuGet 包 (`*.nupkg`) 是一个 zip 文件，其中包含 .NET 程序集和关�
 
 NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含 NuGet.org 上的每个包应提供的核心元数据：
 
-| MSBuild 属性名称              | Nuspec 名称              | 说明​​  |
+| MSBuild 属性名称              | Nuspec 名称              | 说明  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | 包标识符。 如果标识符的前缀满足[条件](/nuget/reference/id-prefix-reservation)，则可以保留该前缀。 |
 | `PackageVersion`                   | `version`                  | NuGet 包版本。 有关详细信息，请参阅 [NuGet 包版本](./versioning.md#nuget-package-version)。             |
@@ -119,7 +119,6 @@ NuGet.org 托管了自己的[符号服务器存储库](/nuget/create-packages/sy
 > 符号包 (`*.snupkg`) 为开发人员提供了良好的按需调试体验，而不会使主程序包大小膨胀，也不会影响那些不打算调试 NuGet 包的用户的还原性能。
 >
 > 需要注意的是，他们需要在其 IDE 中查找和配置 NuGet 符号服务器（作为一次性设置）来获取符号文件。 Visual Studio 2019 计划将 NuGet.org 符号服务器作为现成选项之一提供。 
-
 
 >[!div class="step-by-step"]
 >[上一页](strong-naming.md)

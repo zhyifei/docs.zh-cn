@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 1bc82fe9ecee577125c4353677fb19cd3a57b0cf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9121041f936c091cda0e2af41b4f5be8d826d582
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837060"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318438"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>如何：定义一个类，可对不同的数据类型 (Visual Basic 中) 提供相同的功能
 你可以定义这样一个类：你可以通过该类创建可在不同数据类型上提供相同功能的对象。 为此，你可以在定义中指定一个或多个 *类型形参* 。 然后，该类将能够充当使用不同数据类型的对象的模板。 通过这种方式定义的类称为 *泛型类*。  
@@ -42,13 +42,13 @@ ms.locfileid: "58837060"
   
 ### <a name="to-define-a-class-with-a-type-parameter"></a>使用类型形参定义类  
   
-1.  采用常规方式定义类。  
+1. 采用常规方式定义类。  
   
-2.  直接在类名称之后添加 `(Of` *typeparameter*`)` ，以指定一个类型形参。  
+2. 直接在类名称之后添加 `(Of` *typeparameter*`)` ，以指定一个类型形参。  
   
-3.  如果有一个以上的类型形参，请在括号内列出这些参数（以逗号分隔）。 不要重复 `Of` 关键字。  
+3. 如果有一个以上的类型形参，请在括号内列出这些参数（以逗号分隔）。 不要重复 `Of` 关键字。  
   
-4.  如果代码是对类型形参执行操作，而不是简单的赋值，请在该类型形参后添加一个 `As` 子句，以便添加一个或多个 *约束*。 约束可保证为该类型形参提供的类型满足如下所示的要求：  
+4. 如果代码是对类型形参执行操作，而不是简单的赋值，请在该类型形参后添加一个 `As` 子句，以便添加一个或多个 *约束*。 约束可保证为该类型形参提供的类型满足如下所示的要求：  
   
     -   支持代码执行的运算（如 `>`）  
   
@@ -58,9 +58,9 @@ ms.locfileid: "58837060"
   
      如果未指定任何约束，则代码只能使用 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)支持的那些运算和成员。 有关详细信息，请参阅 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)。  
   
-5.  标识要使用所提供类型声明的每个类成员，然后将其声明为 `As` `typeparameter`。 这适用于内部存储、过程参数和返回值。  
+5. 标识要使用所提供类型声明的每个类成员，然后将其声明为 `As` `typeparameter`。 这适用于内部存储、过程参数和返回值。  
   
-6.  确保代码只使用它可提供给 `itemType`的任何数据类型所支持的运算和方法。  
+6. 确保代码只使用它可提供给 `itemType`的任何数据类型所支持的运算和方法。  
   
      下面的示例定义了一个类，用于管理一个非常简单的列表。 它将列表保存在内部数组 `items`中，并且使用代码可声明列表元素的数据类型。 参数化构造函数允许使用代码设置 `items`的上限，默认构造函数将此上限设置为 9（总共 10 项）。  
   
@@ -80,6 +80,6 @@ ms.locfileid: "58837060"
 - [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [语言独立性和与语言无关的组件](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [类型列表](../../../../visual-basic/language-reference/statements/type-list.md)
+- [Type List](../../../../visual-basic/language-reference/statements/type-list.md)
 - [如何：使用泛型类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)

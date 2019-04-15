@@ -1,30 +1,28 @@
 ---
-title: 演练：Win32 中承载 WPF 内容
+title: 演练：在 Win32 中承载 WPF 内容
 ms.date: 03/30/2017
 dev_langs:
 - cpp
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 1f1ac68e49b5f84a41e3091b1a81010e7aa7cc0b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ad31d5f58ae3d22ce8760a396b1f9696912dc475
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296103"
 ---
-# <a name="walkthrough-hosting-wpf-content-in-win32"></a>演练：Win32 中承载 WPF 内容
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当你对 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 代码有大量投入时，向应用程序添加 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能（而不是重写原始代码）可能更有效。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一个简单的机制，用于托管[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的内容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口。  
+# <a name="walkthrough-hosting-wpf-content-in-win32"></a>演练：在 Win32 中承载 WPF 内容
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用于创建应用程序的丰富环境。 但是，当你对 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 代码有大量投入时，向应用程序添加 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能（而不是重写原始代码）可能更有效。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一个简单的机制，用于托管[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的内容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口。  
   
  本教程介绍如何编写示例应用程序，[在 Win32 窗口示例中承载 WPF 内容](https://go.microsoft.com/fwlink/?LinkID=160004)，则该主机[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的内容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口。 你可以扩展此示例，使其可托管任何 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 窗口。 由于涉及混合托管代码和非托管代码，应用程序是在 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 中编写的。  
-  
- 
-  
+
 <a name="requirements"></a>   
 ## <a name="requirements"></a>要求  
  本教程假定你已基本熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 编程。 有关的基本介绍[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]编程，请参见[Getting Started](../getting-started/index.md)。 以大致[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]进行编程，可参考有关该主题的众多书籍特别*编程 Windows* Charles Petzold 的。  
   
- 由于此教程中随附的示例实现中，因此[!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]，本教程假定你熟悉使用[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]编程[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]并且了解托管的代码编程。 熟悉 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 将有所帮助，但并非必备条件。  
+ 由于此教程中随附的示例实现中，因此[!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]，本教程假定你熟悉使用[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]到程序[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]并且了解托管的代码编程。 熟悉 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 将有所帮助，但并非必备条件。  
   
 > [!NOTE]
 >  本教程包括来自相关示例的一些代码示例。 但是，出于可读性考虑，不包括完整的示例代码。 有关完整的示例代码，请参阅[承载 WPF 内容在 Win32 窗口示例中](https://go.microsoft.com/fwlink/?LinkID=160004)。  
@@ -35,13 +33,13 @@ ms.locfileid: "57363158"
   
  托管的关键[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]上的内容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口是<xref:System.Windows.Interop.HwndSource>类。 此类将包装[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的内容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口中，使其能够合并到您[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]用作子窗口。 以下方法在单个应用程序中合并 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   
-1.  实现你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容作为托管类。  
+1. 实现你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容作为托管类。  
   
-2.  使用 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 实现 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 应用程序。 如果从现有应用程序和非托管 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] 代码开始，你通常可以通过更改项目设置以包括 `/clr` 编译器标志来使其可以调用托管代码。  
+2. 使用 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 实现 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 应用程序。 如果从现有应用程序和非托管 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] 代码开始，你通常可以通过更改项目设置以包括 `/clr` 编译器标志来使其可以调用托管代码。  
   
-3.  将线程处理模型设置为单线程单元 (STA)。  
+3. 将线程处理模型设置为单线程单元 (STA)。  
   
-4.  处理[WM_CREATE](/windows/desktop/winmsg/wm-create)中窗口过程并执行以下通知：  
+4. 处理[WM_CREATE](/windows/desktop/winmsg/wm-create)中窗口过程并执行以下通知：  
   
     1.  创建一个新的 <xref:System.Windows.Interop.HwndSource> 对象，将父窗口用作其 `parent` 参数。  
   
@@ -51,13 +49,13 @@ ms.locfileid: "57363158"
   
     4.  获取该内容的 HWND。 <xref:System.Windows.Interop.HwndSource.Handle%2A> 对象的 <xref:System.Windows.Interop.HwndSource> 属性包含窗口句柄 (HWND)。 要获取可在应用程序的非托管部分中使用的 HWND，需将 `Handle.ToPointer()` 强制装换为 HWND。  
   
-5.  实现一个托管类，该类包含一个用于保存对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的引用的静态字段。 该类使你可以从 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 代码获取对 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 内容的引用。  
+5. 实现一个托管类，该类包含一个用于保存对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容的引用的静态字段。 该类使你可以从 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 代码获取对 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 内容的引用。  
   
-6.  向静态字段分配 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。  
+6. 向静态字段分配 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容。  
   
-7.  接收来自通知[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]通过将一个处理程序附加到一个或多个内容[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件。  
+7. 接收来自通知[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]通过将一个处理程序附加到一个或多个内容[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件。  
   
-8.  通过使用存储在静态字段中用于设置属性等的引用来与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容通信。  
+8. 通过使用存储在静态字段中用于设置属性等的引用来与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内容通信。  
   
 > [!NOTE]
 >  此外可以使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]来实现您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容。 但是，你必须将其作为 [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)] 单独编译并从 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 应用程序引用 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]。 该过程的其余部分与上述相似。
@@ -79,13 +77,13 @@ ms.locfileid: "57363158"
 ### <a name="the-basic-application"></a>基本应用程序
  主机应用程序的起点是创建 Visual Studio 2005 模板。
 
-1.  打开 Visual Studio 2005 中，并选择**新的项目**从**文件**菜单。
+1. 打开 Visual Studio 2005 中，并选择**新的项目**从**文件**菜单。
 
-2.  选择**Win32**从列表中的[!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)]项目类型。 如果默认语言不是[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]，你会发现这些项目类型下的**其他语言**。
+2. 选择**Win32**从列表中的[!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)]项目类型。 如果默认语言不是[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]，你会发现这些项目类型下的**其他语言**。
 
-3.  选择**Win32 项目**模板，为项目分配一个名称，然后单击**确定**以启动**Win32 应用程序向导**。
+3. 选择**Win32 项目**模板，为项目分配一个名称，然后单击**确定**以启动**Win32 应用程序向导**。
 
-4.  接受向导的默认设置，然后单击**完成**以启动项目。
+4. 接受向导的默认设置，然后单击**完成**以启动项目。
 
  该模板将创建一个基本的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 应用程序，包括：
 
@@ -99,18 +97,18 @@ ms.locfileid: "57363158"
 
  第一项是将项目作为托管代码进行编译。 默认情况下，项目将作为非托管代码进行编译。 但是，由于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是在托管代码中实现的，因此必须将项目进行相应编译。
 
-1.  右键单击项目名称在**解决方案资源管理器**，然后选择**属性**从上下文菜单以启动**属性页**对话框。
+1. 右键单击项目名称在**解决方案资源管理器**，然后选择**属性**从上下文菜单以启动**属性页**对话框。
 
-2.  选择**配置属性**从左窗格中的树视图。
+2. 选择**配置属性**从左窗格中的树视图。
 
-3.  选择**公共语言运行时**支持从**项目默认值**右窗格中的列表。
+3. 选择**公共语言运行时**支持从**项目默认值**右窗格中的列表。
 
-4.  选择**公共语言运行时支持 (/ clr)** 从下拉列表框。
+4. 选择**公共语言运行时支持 (/ clr)** 从下拉列表框。
 
 > [!NOTE]
 >  此编译器标志使你能够在应用程序中使用托管代码，但非托管代码将仍将像以前一样进行编译。
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用单线程单元 (STA) 线程处理模型。 为了正常使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容代码，您必须在应用程序的线程模型设置为 STA 通过将属性应用于入口点。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用单线程单元 (STA 线程模型)。 为了正常使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容代码，您必须在应用程序的线程模型设置为 STA 通过将属性应用于入口点。
 
  [!code-cpp[Win32HostingWPFPage#WinMain](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#winmain)]
 

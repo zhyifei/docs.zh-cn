@@ -2,12 +2,12 @@
 title: 消息检查器
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 248e74e039c0ebb0b1580ec2cb4f19d713d95c51
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c9d2c47a816e7fd8c5d219009128ed530564b81b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830144"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334947"
 ---
 # <a name="message-inspectors"></a>消息检查器
 本示例演示如何实现和配置客户端和服务消息检查器。  
@@ -41,7 +41,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  任何服务（调度程序）消息检查器都必须实现两个 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> 方法：<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 和 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>。  
   
- 当通道堆栈接收到消息、处理消息并将消息分配给服务后且在将消息反序列化并调度到操作之前，调度程序将调用 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>。 如果传入消息是加密的消息，则在消息到达消息检查器之时，已经对消息解密。 该方法获取作为引用参数进行传递的 `request` 消息，这允许根据需要检查、操作或替换消息。 返回值可以是任何对象，并可用作服务对当前消息返回答复时传递给 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> 的相关状态对象。 在本示例中，<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 将消息的检查（验证）委托给本地私有方法 `ValidateMessageBody` 而不返回相关状态对象。 此方法可确保不会将无效的消息传入服务。  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 调用调度程序消息接收、 处理由通道堆栈并分配到一种服务，但它是反序列化并调度到操作之前。 如果传入消息是加密的消息，则在消息到达消息检查器之时，已经对消息解密。 该方法获取作为引用参数进行传递的 `request` 消息，这允许根据需要检查、操作或替换消息。 返回值可以是任何对象，并可用作服务对当前消息返回答复时传递给 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> 的相关状态对象。 在本示例中，<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 将消息的检查（验证）委托给本地私有方法 `ValidateMessageBody` 而不返回相关状态对象。 此方法可确保不会将无效的消息传入服务。  
   
 ```  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
@@ -56,7 +56,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- 每当准备好要发回客户端的答复时，或在单向消息的情况下已处理完传入消息时，均会调用 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>。 这允许对称地调用所需的扩展，而不管 MEP 如何。 与 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 一样，消息作为引用参数进行传递，并可以进行检查、修改或替换。 在本示例中执行的消息验证也委托给 `ValidMessageBody` 方法，但本例中处理验证错误的方式略有不同。  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> 每当回复已准备好发送回客户端，或对于单向消息，在处理传入消息时调用。 这允许对称地调用所需的扩展，而不管 MEP 如何。 与 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 一样，消息作为引用参数进行传递，并可以进行检查、修改或替换。 在本示例中执行的消息验证也委托给 `ValidMessageBody` 方法，但本例中处理验证错误的方式略有不同。  
   
  如果在服务上发生验证错误，则 `ValidateMessageBody` 方法将引发从 <xref:System.ServiceModel.FaultException> 派生的异常。 在 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 中，可以将这些异常放入服务模型基础结构中，异常在基础结构中将自动转换为 SOAP 错误并中继到客户端。 在 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> 中，不能将 <xref:System.ServiceModel.FaultException> 异常放入基础结构中，因为由服务引发的错误异常的转换将在调用消息检查器之前发生。 因此，下面的实现捕捉已知的 `ReplyValidationFault` 异常并用显式错误消息替换答复消息。 此方法可确保服务实现不会返回无效的消息。  
   
@@ -82,7 +82,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  客户端消息检查器非常相似。 必须从 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> 实现的两个方法是 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A> 和 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>。  
   
- 客户端应用程序或操作格式化程序在撰写消息后将调用 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>。 与调度程序消息检查器一样，可以只检查消息，也可以完全替换消息。 在本示例中，检查器向同一本地 `ValidateMessageBody` 帮助器方法进行委托，该方法也可用于调度消息检查器。  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> 客户端应用程序或操作格式化程序在撰写消息时调用。 与调度程序消息检查器一样，可以只检查消息，也可以完全替换消息。 在本示例中，检查器向同一本地 `ValidateMessageBody` 帮助器方法进行委托，该方法也可用于调度消息检查器。  
   
  客户端验证和服务验证（在构造函数中指定）之间的行为差异是客户端验证引发放在用户代码中的本地异常，因为这些异常发生在本地而不是由于服务失败造成的。 一般规则是服务调度程序检查器引发错误，而客户端检查器引发异常。  
   
@@ -398,11 +398,11 @@ catch (Exception e)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -412,4 +412,3 @@ catch (Exception e)
 >  如果此目录不存在，请转到[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 示例](https://go.microsoft.com/fwlink/?LinkId=150780)若要下载所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
-  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: afd35b67fc11cb556159ed0d37130cd86d72c30f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00c54a59ccfe2a49dcf35b322ca077a10a48ae7d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354825"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839634"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>使用 Application 日志 (Visual Basic)
 
@@ -23,11 +23,11 @@ ms.locfileid: "57354825"
 
 下图演示如何将写入 `WriteEntry` 方法的消息传递到日志的跟踪侦听器的 `WriteLine` 方法：
 
-![My 日志调用](../../../../visual-basic/developing-apps/programming/log-info/media/mylogcall.png "MyLogCall")
+![显示 My 日志调用的图。](./media/working-with-application-logs/my-log-call-messages.png)
 
 可以通过更改应用程序的配置文件来更改日志和跟踪侦听器的行为。 下图演示日志和配置文件各个部分之间的对应关系。
 
-![My 日志配置](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")
+![显示 My 日志配置的图。](./media/working-with-application-logs/my-log-configuration.png)
 
 ## <a name="where-messages-are-logged"></a>记录消息的位置
 

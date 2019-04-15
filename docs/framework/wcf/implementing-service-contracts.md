@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-ms.openlocfilehash: d22d0ada44ca4374da0b8feccf0a37ff1016dc80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 766e0c4d30a4fa0eed9ce154ca932f5371a43211
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576494"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196315"
 ---
 # <a name="implementing-service-contracts"></a>实现服务协定
 服务是一个类，会在一个或多个终结点公开客户端可用的功能。 若要创建服务时，编写实现 Windows Communication Foundation (WCF) 协定的类。 可以通过两种方法执行此操作。 可以将协定单独定义为接口，然后创建一个实现该接口的类。 或者，可以通过将 <xref:System.ServiceModel.ServiceContractAttribute> 属性放在该类本身，将 <xref:System.ServiceModel.OperationContractAttribute> 属性放在服务的客户端可用的方法上，来直接创建类和协定。  
@@ -58,6 +58,7 @@ class MathService
  在实现服务协定后，必须为该服务创建一个或多个终结点。 有关详细信息，请参阅[终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)。 有关如何运行服务的详细信息，请参阅[托管服务](../../../docs/framework/wcf/hosting-services.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [如何：使用协定类创建服务](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
 - [如何：使用协定接口创建服务](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)

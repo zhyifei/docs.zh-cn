@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ee807ae17e4d53d3f6f3963f5a91df0a2dddd0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1522d643a69c47eec03770a8f51756dd4250075a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099867"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309415"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable 方法
 获取提供的可用寄存器位图的字节数组。  
@@ -46,11 +46,11 @@ HRESULT GetRegistersAvailable (
 ## <a name="remarks"></a>备注  
  CorDebugRegister 枚举的值指定不同的微处理器的寄存器。 每个值的上限五位均为中的索引`availableRegChunks`的字节数组。 每个值的三个低位标识内的索引的字节的位位置。 给定`CorDebugRegister`值，该值指定特定寄存器中，掩码中的寄存器的位置确定，如下所示：  
   
-1.  提取访问中的正确字节所需的索引`availableRegChunks`数组：  
+1. 提取访问中的正确字节所需的索引`availableRegChunks`数组：  
   
      `CorDebugRegister` 值 >> 3  
   
-2.  提取其中位零是最低有效位的位位置内的索引的字节：  
+2. 提取其中位零是最低有效位的位位置内的索引的字节：  
   
      `CorDebugRegister` 值和 7  
   

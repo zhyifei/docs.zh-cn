@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 52d4fc32836a5d20bd99d8ebfd3119c761376e30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098710"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304774"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>如何：向 Windows 窗体 BindingNavigator 控件添加“加载”、“保存”和“取消”按钮
 <xref:System.Windows.Forms.BindingNavigator>控件是特殊用途<xref:System.Windows.Forms.ToolStrip>旨在用于导航和操作绑定到数据窗体上的控件的控件。  
@@ -24,21 +24,21 @@ ms.locfileid: "59098710"
   
 ### <a name="to-add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>若要添加负载，保存和取消按钮的 BindingNavigator 组件  
   
-1.  向窗体添加一个 <xref:System.Windows.Forms.TextBox> 控件。  
+1. 向窗体添加一个 <xref:System.Windows.Forms.TextBox> 控件。  
   
-2.  将其绑定到<xref:System.Windows.Forms.BindingSource>，后者已绑定到数据源。 此示例中，为<xref:System.Windows.Forms.BindingSource>绑定到数据库。  
+2. 将其绑定到<xref:System.Windows.Forms.BindingSource>，后者已绑定到数据源。 此示例中，为<xref:System.Windows.Forms.BindingSource>绑定到数据库。  
   
-3.  生成数据集和表适配器后，请将<xref:System.Windows.Forms.BindingNavigator>到窗体控件。  
+3. 生成数据集和表适配器后，请将<xref:System.Windows.Forms.BindingNavigator>到窗体控件。  
   
-4.  设置<xref:System.Windows.Forms.BindingNavigator>控件的<xref:System.Windows.Forms.BindingNavigator.BindingSource%2A>属性设置为<xref:System.Windows.Forms.BindingSource>绑定到控件的窗体上。  
+4. 设置<xref:System.Windows.Forms.BindingNavigator>控件的<xref:System.Windows.Forms.BindingNavigator.BindingSource%2A>属性设置为<xref:System.Windows.Forms.BindingSource>绑定到控件的窗体上。  
   
-5.  选择 <xref:System.Windows.Forms.BindingNavigator> 控件。  
+5. 选择 <xref:System.Windows.Forms.BindingNavigator> 控件。  
   
-6.  单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，因此**BindingNavigator 任务**对话框，然后选择**编辑项**.  
+6. 单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，因此**BindingNavigator 任务**对话框，然后选择**编辑项**.  
   
      **项集合编辑器**出现。  
   
-7.  在中**项集合编辑器**，完成下列操作：  
+7. 在中**项集合编辑器**，完成下列操作：  
   
     1.  添加<xref:System.Windows.Forms.ToolStripSeparator>和三个<xref:System.Windows.Forms.ToolStripButton>通过选择适当类型的项<xref:System.Windows.Forms.ToolStripItem>，然后单击**添加**按钮。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59098710"
   
     5.  单击**确定**以关闭对话框。这些按钮将添加到<xref:System.Windows.Forms.ToolStrip>。  
   
-8.  右键单击窗体，然后选择**查看代码**。  
+8. 右键单击窗体，然后选择**查看代码**。  
   
 9. 在代码编辑器中，找到将数据加载到表适配器的代码的行。 此代码生成设置在步骤 2 中的数据绑定时。 代码应如下所示： `TableAdapterName.Fill(DataSetName.TableName)`。 它将很有可能是窗体的<xref:System.Windows.Forms.Form.Load>事件。  
   

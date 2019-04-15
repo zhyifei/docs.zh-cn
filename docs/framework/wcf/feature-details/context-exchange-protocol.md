@@ -2,12 +2,12 @@
 title: 上下文交换协议
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: b1c2b293f8e23f9bc43fba32551233d92666793e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216998"
 ---
 # <a name="context-exchange-protocol"></a>上下文交换协议
 本部分介绍 Windows Communication Foundation (WCF) 版本.NET Framework 版本 3.5 中引入的上下文交换协议。 此协议允许客户端通道接受某个服务提供的上下文，并将其应用于通过相同客户端通道实例发送的针对该服务的所有后续请求。 上下文交换协议的实现可以使用以下两个机制之一在服务器和客户端之间传播上下文：HTTP cookie 或 SOAP 标头。  
@@ -51,7 +51,7 @@ ms.locfileid: "54494764"
   
  在传输过程中必须保护上下文的值，使之不会被修改，其原因与保护 WS-Addressing 标头的原因相同（标头可用于确定在将请求调度到服务上的何处）。 因此，当绑定提供消息保护功能时，需要在 SOAP 或传输级对 `wsc:Context` 标头进行数字签名或进行签名并加密。 当使用 HTTP Cookie 来传播上下文时，应使用传输安全来保护 HTTP Cookie。  
   
- 要求支持上下文交换协议的服务终结点可以在其发布的策略中明确此要求。 已经引入了两个新的策略断言来表示需求客户端在 SOAP 级支持上下文交换协议或启用 HTTP Cookie 支持。 由 <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> 属性控制如何将这些断言生成到服务策略中，如下所示：  
+ 要求支持上下文交换协议的服务终结点可以在其发布的策略中明确此要求。 已经引入了两个新的策略断言来表示要求客户端在 SOAP 级支持上下文交换协议或启用 HTTP Cookie 支持。 由 <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> 属性控制如何将这些断言生成到服务策略中，如下所示：  
   
 -   对于 <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>，将生成以下断言：  
   
@@ -68,4 +68,5 @@ ms.locfileid: "54494764"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [Web 服务协议互操作性指南](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

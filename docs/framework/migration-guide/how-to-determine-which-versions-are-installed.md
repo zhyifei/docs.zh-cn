@@ -1,6 +1,6 @@
 ---
 title: 如何：确定已安装的 .NET Framework 版本
-ms.date: 03/18/2019
+ms.date: 04/02/2019
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176301"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：确定已安装的 .NET Framework 版本
 
@@ -37,7 +37,6 @@ ms.locfileid: "58504426"
 >
 > 有关版本的详细信息，请参见 [.NET Framework 版本和依赖关系](versions-and-dependencies.md)。
 
-
 若要获取计算机上安装的 .NET Framework 版本列表，请访问注册表。 可使用注册表编辑器查看注册表或使用代码进行查询：
  
 - 查找较新的 .NET Framework 版本（4.5 及更高版本）： 
@@ -54,7 +53,6 @@ ms.locfileid: "58504426"
 - [使用代码查询 Environment 类](#clr_b)  
 
 有关检测安装的每个 .NET Framework 版本的更新的信息，请参阅[如何：确定已安装的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。 
-  
 
 ## <a name="find-newer-net-framework-versions-45-and-later"></a>查找较新的 .NET Framework 版本（4.5 及更高版本）
 
@@ -74,11 +72,7 @@ ms.locfileid: "58504426"
 
      ![.NET Framework 4.5 的注册表项](media/clr-installdir.png "Registry entry for the .NET Framework 4.5")
 
-下表列出每个 .NET Framework 版本“Release”条目的最小值。 可以使用这些值，如下所示：
-
-- 若要确定是否存在 .NET Framework 最低版本，测试在注册表中找到的“Release”DWORD 值是大于还是等于表中列出的值。 例如，如果应用程序需要 .NET Framework 4.7 或更高版本，则测试最小版本密钥值是否为 460798。
-
-- 若要测试多个版本，请从最新的 .NET Framework 版本开始，然后对每个后续的早期版本进行测试。
+下表列出了 .NET Framework 4.5 及更高版本的独立操作系统的 Release DWORD 的值。
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
@@ -86,18 +80,23 @@ ms.locfileid: "58504426"
 
 |.NET Framework 版本|Release DWORD 的值|
 |--------------------------------|-------------|
-|.NET Framework 4.5|378389|
-|.NET Framework 4.5.1|378675|
-|.NET Framework 4.5.2|379893|
-|.NET Framework 4.6|393295|
-|.NET Framework 4.6.1|394254|
-|.NET Framework 4.6.2|394802|
-|.NET Framework 4.7|460798|
-|.NET Framework 4.7.1|461308|
-|.NET Framework 4.7.2|461808|
+|.NET Framework 4.5|所有 Windows 操作系统：378389|
+|.NET Framework 4.5.1|在 Windows 8.1 和 Windows Server 2012 R2 上：378675<br />在所有其他 Windows 操作系统上：378758|
+|.NET Framework 4.5.2|所有 Windows 操作系统：379893|
+|.NET Framework 4.6|在 Windows 10 上：393295<br />在所有其他 Windows 操作系统上：393297|
+|.NET Framework 4.6.1|在 Windows 10 11 月更新系统上：394254<br />在所有其他 Windows 操作系统（包括 Windows 10）上：394271|
+|.NET Framework 4.6.2|在 Windows 10 周年更新和 Windows Server 2016 上：394802<br />在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：394806|
+|.NET Framework 4.7|在 Windows 10 创意者更新上：460798<br />在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：460805| 
+|.NET Framework 4.7.1|在 Windows 10 Fall Creators Update 和 Windows Server 版本 1709 上：461308<br/>在所有其他 Windows 操作系统（包括其他 Windows 10 操作系统）上：461310|
+|.NET Framework 4.7.2|在 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 上：461808<br/>在除 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 之外的所有 Windows 操作系统上：461814|  
 
-有关完整的适用于特定 Windows 操作系统版本的 .NET Framework 的版本密钥表，请参阅 [.NET Framework 版本密钥和 Windows 操作系统版本](release-keys-and-os-versions.md)。
+可以使用这些值，如下所示：
 
+- 若要确定具体的 Windows 操作系统版本上是否安装了特定版本的 .NET Framework，请测试 Release DWORD 值是否等于表中列出的值。 例如，若要确定 Windows 10 系统上是否安装了 .NET Framework 4.6，请测试 Release 值是否等于 393295。
+
+- 若要确定是否安装了最低版本的 .NET Framework，请对该版本使用较小的 RELEASE DWORD 值。 例如，如果应用程序在 .NET Framework 4.6 或更高版本下运行，请测试 RELEASE DWORD 值是否大于或等于 393295。 若要查看仅列出每个 .NET Framework 版本的最小 RELEASE DWORD 值的表，请参阅 [.NET Framework 4.5 及更高版本的最小 Release DWORD 值](minimum-release-dword.md)。
+
+- 若要测试多个版本，请先测试值是否大于或等于最新 .NET Framework 版本的较小 DWORD 值，然后将该值与每个连续较旧版本的较小 DWORD 值进行比较。 例如，如果应用程序需要 .NET Framework 4.7 或更高版本，且你希望确定是否安装了特定版本的 .NET Framework，请先测试 RELEASE DWORD 值是否大于或等于 461808（.NET Framework 4.7.2 的较小 DWORD 值）。 然后，将 RELEASE DWORD 值与每个更新版本的 .NET Framework 的较小值进行比较。 若要查看仅列出每个 .NET Framework 版本的最小 RELEASE DWORD 值的表，请参阅 [.NET Framework 4.5 及更高版本的最小 Release DWORD 值](minimum-release-dword.md)。
 
 <a name="net_d"></a> 
 ### <a name="find-net-framework-versions-45-and-later-with-code"></a>使用代码查找 .NET Framework 4.5 及更高版本
@@ -170,7 +169,6 @@ ms.locfileid: "58504426"
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
 [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
-
 ## <a name="find-clr-versions"></a>查找 CLR 版本
   
 <a name="clr_a"></a> 
@@ -208,8 +206,6 @@ ms.locfileid: "58504426"
 
    - 对于整个版本字符串（例如，4.0.30319.18010），请使用 <xref:System.Version.ToString%2A?displayProperty=nameWithType> 方法。 此方法返回一个值，该值反映正在执行代码的运行时的版本。 它不返回可能安装在计算机上的程序集版本或其他运行时版本。
 
-
-
 以下示例使用 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 属性检索 CLR 版本信息：
 
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
@@ -218,5 +214,5 @@ ms.locfileid: "58504426"
 ## <a name="see-also"></a>请参阅
 
 - [如何：确定安装了哪些 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)
-- [安装面向开发者的 .NET Framework](../install/guide-for-developers.md)
+- [安装面向开发人员的 .NET Framework](../install/guide-for-developers.md)
 - [.NET Framework 版本和依赖关系](versions-and-dependencies.md)

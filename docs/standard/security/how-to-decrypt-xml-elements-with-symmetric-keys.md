@@ -1,5 +1,5 @@
 ---
-title: 如何：使用对称密钥解密 XML 元素
+title: 如何：用对称密钥对 XML 元素进行解密
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19ee0e3244d9a9bf7d7eddc9be4eb7c50b467cf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c569407bac247e60075834e67fde9327ce6bc4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502619"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334622"
 ---
-# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>如何：使用对称密钥解密 XML 元素
+# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>如何：用对称密钥对 XML 元素进行解密
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类加密 XML 文档内的元素。  XML 加密可用于存储或传输敏感 XML，而无需担心数据被轻易读取。  此代码示例使用高级加密标准 (AES) 算法（也称为 Rijndael）对 XML 元素进行解密。  
   
  有关如何加密 XML 元素使用此过程的信息，请参阅[如何：使用对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)。  
@@ -33,24 +33,24 @@ ms.locfileid: "54502619"
   
 ### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a>若要使用对称密钥解密 XML 元素  
   
-1.  使用以前生成的密钥使用中所述的技术加密 XML 元素[如何：使用对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)。  
+1. 使用以前生成的密钥使用中所述的技术加密 XML 元素[如何：使用对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)。  
   
-2.  在包含加密的 XML 的 <xref:System.Xml.XmlDocument> 对象中查找 <`EncryptedData`> 元素（由 XML 加密标准定义），然后创建一个新的 <xref:System.Xml.XmlElement> 对象来表示该元素。  
+2. 找到 <`EncryptedData`> 元素 （由 XML 加密标准定义） 中的<xref:System.Xml.XmlDocument>对象，其中包含加密的 XML，并创建一个新<xref:System.Xml.XmlElement>对象来表示该元素。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#10)]  
   
-3.  通过从之前创建的 <xref:System.Xml.XmlElement> 对象加载原始 XML 数据来创建 <xref:System.Security.Cryptography.Xml.EncryptedData> 对象。  
+3. 通过从之前创建的 <xref:System.Xml.XmlElement> 对象加载原始 XML 数据来创建 <xref:System.Security.Cryptography.Xml.EncryptedData> 对象。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#11)]
      [!code-vb[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#11)]  
   
-4.  创建一个新的 <xref:System.Security.Cryptography.Xml.EncryptedXml> 对象并使用它对使用与加密相同密钥的 XML 数据进行解密。  
+4. 创建一个新的 <xref:System.Security.Cryptography.Xml.EncryptedXml> 对象并使用它对使用与加密相同密钥的 XML 数据进行解密。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#12)]
      [!code-vb[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#12)]  
   
-5.  将加密的元素替换为 XML 文档内的新解密的纯文本元素。  
+5. 将加密的元素替换为 XML 文档内的新解密的纯文本元素。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#13)]
      [!code-vb[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#13)]  
@@ -84,4 +84,4 @@ ms.locfileid: "54502619"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Security.Cryptography.Xml>
-- [如何：使用对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)
+- [如何：用对称密钥对 XML 元素进行加密](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)

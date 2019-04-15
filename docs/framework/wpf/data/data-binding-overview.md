@@ -10,21 +10,20 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634552"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315317"
 ---
 # <a name="data-binding-overview"></a>数据绑定概述
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定为应用程序呈现数据并与数据交互提供了一种简单且一致的方式。 元素能够以 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 形式绑定到来自各种数据源的数据。 <xref:System.Windows.Controls.ContentControl>如 s<xref:System.Windows.Controls.Button>并<xref:System.Windows.Controls.ItemsControl>如 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>具有内置功能，使灵活的样式设置单个数据项的集合。 可基于数据生成排序、筛选和分组视图。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定提供了简单而一致的方式，应用程序能够显示和与数据交互。 元素能够以 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 形式绑定到来自各种数据源的数据。 <xref:System.Windows.Controls.ContentControl>如 s<xref:System.Windows.Controls.Button>并<xref:System.Windows.Controls.ItemsControl>如 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>具有内置功能，使灵活的样式设置单个数据项的集合。 可基于数据生成排序、筛选和分组视图。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的数据绑定功能与传统模型相比具有几个优点，包括本质上支持数据绑定的大量属性、灵活的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 数据 UI 表示形式以及业务逻辑与 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的完全分离。  
   
  本主题首先讨论基本概念[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的使用情况数据绑定，然后<xref:System.Windows.Data.Binding>类和数据绑定的其他功能。  
-  
-  
+
 <a name="what_is_data_binding"></a>   
 ## <a name="what-is-data-binding"></a>什么是数据绑定？  
  数据绑定是在应用程序 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 和业务逻辑之间建立连接的过程。 如果绑定具有正确的设置，并且数据提供适当的通知，则在数据更改其值时，绑定到该数据的元素会自动反映更改。 数据绑定还意味着，如果元素中数据的外部表示形式发生更改，则基础数据可以自动进行更新以反映更改。 例如，如果用户编辑中的值<xref:System.Windows.Controls.TextBox>元素，则基础数据值自动更新以反映所做的更改。  
@@ -33,7 +32,7 @@ ms.locfileid: "58634552"
   
  有关数据绑定的示例，请参阅[数据绑定演示](https://go.microsoft.com/fwlink/?LinkID=163703)中的以下应用程序 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]：  
   
- ![数据绑定示例屏幕快照](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
+ ![数据绑定示例屏幕截图](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
   
  以上是一个显示拍卖项列表的应用程序 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 应用程序演示了数据绑定的以下功能：  
   
@@ -69,7 +68,7 @@ ms.locfileid: "58634552"
   
 -   目标属性必须为依赖属性。 大多数<xref:System.Windows.UIElement>属性是依赖关系属性和大多数依赖项属性，除了只读属性，默认情况下支持数据绑定。 (仅<xref:System.Windows.DependencyObject>类型可以定义依赖关系属性和所有<xref:System.Windows.UIElement>派生自<xref:System.Windows.DependencyObject>。)  
   
--   尽管图中并未指出，但请注意，绑定源对象并不限于自定义 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 数据绑定支持 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象和 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 形式的数据。 若要提供一些示例，绑定源可以是<xref:System.Windows.UIElement>，任何列表对象、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]与关联的对象[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]数据或 Web 服务或 XmlNode 包含你[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据。 有关详细信息，请参阅[绑定源概述](binding-sources-overview.md)。  
+-   尽管图中并未指出，但请注意，绑定源对象并不限于自定义 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 数据绑定支持的数据中的窗体[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]对象和[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]。 若要提供一些示例，绑定源可以是<xref:System.Windows.UIElement>，任何列表对象、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]与关联的对象[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]数据或 Web 服务或 XmlNode 包含你[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据。 有关详细信息，请参阅[绑定源概述](binding-sources-overview.md)。  
   
  在通读其他 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 主题时，请务必记住：在建立绑定时，需要将绑定目标绑定*到*绑定源。 例如，如果您要显示某些基础[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]中的数据<xref:System.Windows.Controls.ListBox>使用数据绑定时，要绑定您<xref:System.Windows.Controls.ListBox>到[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据。  
   
@@ -232,8 +231,7 @@ ms.locfileid: "58634552"
 <a name="collection_views"></a>   
 ### <a name="collection-views"></a>集合视图  
  一次你<xref:System.Windows.Controls.ItemsControl>绑定到数据集合，您可能需要排序、 筛选或分组数据。 若要执行此操作，应使用集合视图，这是实现的类<xref:System.ComponentModel.ICollectionView>接口。  
-  
-  
+
 #### <a name="what-are-collection-views"></a>什么是集合视图？  
  集合视图这一层基于绑定源集合，它允许基于排序、筛选和分组查询来导航并显示源集合，而无需更改基础源集合本身。 集合视图还维护一个指向集合中当前项的指针。 如果源集合实现<xref:System.Collections.Specialized.INotifyCollectionChanged>接口，所做的更改引起<xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged>事件传播到视图。  
   
@@ -406,17 +404,17 @@ ms.locfileid: "58634552"
   
  下面描述了*验证*过程。 注意，只要在验证过程中发生验证错误或其他类型的错误，该过程就会中断。  
   
-1.  绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.RawProposedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>到其中一个运行时遇到错误或直到全部规则都通过为止。  
+1. 绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.RawProposedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>到其中一个运行时遇到错误或直到全部规则都通过为止。  
   
-2.  绑定引擎随后会调用转换器（如果存在）。  
+2. 绑定引擎随后会调用转换器（如果存在）。  
   
-3.  如果转换器成功，绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>直到其中一个运行一个规则出错或者全部规则都通过。  
+3. 如果转换器成功，绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>直到其中一个运行一个规则出错或者全部规则都通过。  
   
-4.  绑定引擎设置源属性。  
+4. 绑定引擎设置源属性。  
   
-5.  绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>直到其中一个运行一个规则出错或者全部规则都通过。 如果<xref:System.Windows.Controls.DataErrorValidationRule>与绑定相关联并将其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为默认情况下， <xref:System.Windows.Controls.ValidationStep.UpdatedValue>，则<xref:System.Windows.Controls.DataErrorValidationRule>此时检查。 这也是点时具有的绑定<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>设置为`true`检查。  
+5. 绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>直到其中一个运行一个规则出错或者全部规则都通过。 如果<xref:System.Windows.Controls.DataErrorValidationRule>与绑定相关联并将其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为默认情况下， <xref:System.Windows.Controls.ValidationStep.UpdatedValue>，则<xref:System.Windows.Controls.DataErrorValidationRule>此时检查。 这也是点时具有的绑定<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>设置为`true`检查。  
   
-6.  绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.CommittedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.CommittedValue>直到其中一个运行一个规则出错或者全部规则都通过。  
+6. 绑定引擎会检查是否有任何自定义<xref:System.Windows.Controls.ValidationRule>对象定义其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.CommittedValue>为该<xref:System.Windows.Data.Binding>，在这种情况下它将调用<xref:System.Windows.Controls.ValidationRule.Validate%2A>上每个方法<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.CommittedValue>直到其中一个运行一个规则出错或者全部规则都通过。  
   
  如果<xref:System.Windows.Controls.ValidationRule>没有通过在此过程的任意时间，绑定引擎创建<xref:System.Windows.Controls.ValidationError>对象，并将其添加到<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>的绑定元素集合。 之前绑定引擎在运行<xref:System.Windows.Controls.ValidationRule>对象在任何给定的步骤，它会删除任何<xref:System.Windows.Controls.ValidationError>已添加到<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>在该步骤附加属性的绑定元素。 例如，如果<xref:System.Windows.Controls.ValidationRule>其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>失败下, 一次验证过程时，绑定引擎会移除该<xref:System.Windows.Controls.ValidationError>立即之前调用任意<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>设置为<xref:System.Windows.Controls.ValidationStep.UpdatedValue>.  
   
@@ -430,8 +428,9 @@ ms.locfileid: "58634552"
  可以设置附加的属性<xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType>上与绑定相关的对象，以接收特定绑定状态信息。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Controls.DataErrorValidationRule>
-- [WPF 版本 4.5 中的新增功能](../getting-started/whats-new.md)
+- [WPF 版本 4.5 的新增功能](../getting-started/whats-new.md)
 - [绑定到 LINQ 查询结果](how-to-bind-to-the-results-of-a-linq-query.md)
 - [数据绑定](../advanced/optimizing-performance-data-binding.md)
 - [数据绑定演示](https://go.microsoft.com/fwlink/?LinkID=163703)

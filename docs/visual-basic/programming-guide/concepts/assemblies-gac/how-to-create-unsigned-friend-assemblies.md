@@ -2,21 +2,21 @@
 title: 如何：创建未签名的友元程序集 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: 814c2584ea9e1e14c3af003a0515166f53b6d913
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4771d0fe116d1532c270cf41b209665d5403a9b8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819380"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339172"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>如何：创建未签名的友元程序集 (Visual Basic)
 本示例演示如何将友元程序集和未签名的程序集一起使用。  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>创建程序集和友元程序集  
   
-1.  打开命令提示。  
+1. 打开命令提示。  
   
-2.  创建一个名为 Visual Basic 文件`friend_signed_A.`，其中包含以下代码。 该代码使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性将 friend_signed_B 声明为友元程序集。  
+2. 创建一个名为 Visual Basic 文件`friend_signed_A.`，其中包含以下代码。 该代码使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性将 friend_signed_B 声明为友元程序集。  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -42,13 +42,13 @@ ms.locfileid: "58819380"
     End Class  
     ```  
   
-3.  使用以下命令编译 friend_signed_A 并为其签名。  
+3. 使用以下命令编译 friend_signed_A 并为其签名。  
   
     ```console  
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  创建一个名为 Visual Basic 文件`friend_unsigned_B`，其中包含以下代码。 由于 friend_unsigned_A 将 friend_unsigned_B 指定为友元程序集，因此 friend_unsigned_B 中的代码可以访问 friend_unsigned_A 中的 `Friend` 类型和成员。  
+4. 创建一个名为 Visual Basic 文件`friend_unsigned_B`，其中包含以下代码。 由于 friend_unsigned_A 将 friend_unsigned_B 指定为友元程序集，因此 friend_unsigned_B 中的代码可以访问 friend_unsigned_A 中的 `Friend` 类型和成员。  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -69,7 +69,7 @@ ms.locfileid: "58819380"
     End Module  
     ```  
   
-5.  使用以下命令编译 friend_signed_B。  
+5. 使用以下命令编译 friend_signed_B。  
   
     ```console
     vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
@@ -77,7 +77,7 @@ ms.locfileid: "58819380"
   
      编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。 通过使用可以显式设置程序集`/out`编译器选项。  
   
-6.  运行 friend_signed_B.exe 文件。  
+6. 运行 friend_signed_B.exe 文件。  
   
      程序将显示两个字符串：“Class1.Test”和“Class2.Test”。  
   

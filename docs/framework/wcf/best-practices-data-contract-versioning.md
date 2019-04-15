@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118997"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334921"
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：数据协定版本管理
 本主题列出了创建容易随时间而改变的数据协定的最佳做法。 有关数据协定的详细信息，请参阅中的主题[Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
@@ -50,21 +50,21 @@ ms.locfileid: "59118997"
   
  必须严格遵守其中某些准则，以便能在接受类型的旧版本的地方发送类型的新版本，或在接受类型的新版本的地方发送类型的旧版本。 而其他准则，我们则不需要严格遵守，但此处也列出了，因为它们可能会受将来架构版本管理的影响。  
   
-1.  不要尝试通过类型继承对数据协定进行版本管理。 若要创建较新的版本，可更改现有类型上的数据协定，也可创建新的不相关类型。  
+1. 不要尝试通过类型继承对数据协定进行版本管理。 若要创建较新的版本，可更改现有类型上的数据协定，也可创建新的不相关类型。  
   
-2.  可以结合使用继承和数据协定，前提是不将继承用作版本管理机制，并且遵守某些规则。 如果某个类型派生于某个基类型，则在将来的版本中不要使它派生于其他基类型（除非版本具有相同的数据协定）。 其中存在一个例外，您可以将类型插入到数据协定类型及其基类型之间的层次结构中，但前提是该类型包含的数据成员名称与该层次结构中其他类型的任何可能版本中的其他成员名称不同。 通常情况下，在同一继承层次结构的不同级别使用具有相同名称的数据成员可导致严重的版本管理问题，因此应该避免。  
+2. 可以结合使用继承和数据协定，前提是不将继承用作版本管理机制，并且遵守某些规则。 如果某个类型派生于某个基类型，则在将来的版本中不要使它派生于其他基类型（除非版本具有相同的数据协定）。 其中存在一个例外，您可以将类型插入到数据协定类型及其基类型之间的层次结构中，但前提是该类型包含的数据成员名称与该层次结构中其他类型的任何可能版本中的其他成员名称不同。 通常情况下，在同一继承层次结构的不同级别使用具有相同名称的数据成员可导致严重的版本管理问题，因此应该避免。  
   
-3.  从数据协定的第一个版本开始，始终实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 可启用往返。 有关详细信息，请参阅[向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 如果已经释放了某个类型的一个或多个版本，而没有实现此接口，则在该类型的下一个版本中实现它。  
+3. 从数据协定的第一个版本开始，始终实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 可启用往返。 有关详细信息，请参阅[向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 如果已经释放了某个类型的一个或多个版本，而没有实现此接口，则在该类型的下一个版本中实现它。  
   
-4.  在较新的版本中，不要更改数据协定名称或命名空间。 如果更改该类型在数据协定下的名称或命名空间，请确保使用适当的机制（例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 属性）保留数据协定名称和命名空间。 有关命名的详细信息，请参阅[数据协定名称](../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
+4. 在较新的版本中，不要更改数据协定名称或命名空间。 如果更改该类型在数据协定下的名称或命名空间，请确保使用适当的机制（例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 属性）保留数据协定名称和命名空间。 有关命名的详细信息，请参阅[数据协定名称](../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
   
-5.  在以后的版本中，不要更改任何数据成员的名称。 如果更改数据成员下的字段、属性或事件的名称，请使用 `Name` 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性以保留现有数据成员名称。  
+5. 在以后的版本中，不要更改任何数据成员的名称。 如果更改数据成员下的字段、属性或事件的名称，请使用 `Name` 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性以保留现有数据成员名称。  
   
-6.  在以后的版本中，不要更改数据成员下的任何字段、属性或事件的类型，否则该数据成员的结果数据协定会发生变化。 请记住，接口类型等效于 <xref:System.Object>，用于确定需要的数据协定。  
+6. 在以后的版本中，不要更改数据成员下的任何字段、属性或事件的类型，否则该数据成员的结果数据协定会发生变化。 请记住，接口类型等效于 <xref:System.Object>，用于确定需要的数据协定。  
   
-7.  在以后的版本中，不要通过调整 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 属性 (Attribute) 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Property) 来更改现有数据成员的顺序。  
+7. 在以后的版本中，不要通过调整 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 属性 (Attribute) 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Property) 来更改现有数据成员的顺序。  
   
-8.  在以后的版本中，可以添加新的数据成员。 它们应始终遵循以下规则：  
+8. 在以后的版本中，可以添加新的数据成员。 它们应始终遵循以下规则：  
   
     1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性应始终保留其默认值 `false`。  
   

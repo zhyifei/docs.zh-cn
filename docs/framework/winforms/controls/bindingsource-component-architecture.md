@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-ms.openlocfilehash: 9348d44697b2c617481b55242faa83ab517e6226
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165342"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 组件体系结构
 使用<xref:System.Windows.Forms.BindingSource>组件，普遍可以将所有 Windows 窗体控件都绑定到数据源。  
@@ -149,7 +149,7 @@ ms.locfileid: "57707815"
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>。  
+-   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.  
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
   
@@ -169,6 +169,7 @@ ms.locfileid: "57707815"
  可以使用<xref:System.Windows.Forms.BindingSource>组件将任何 Windows 窗体控件绑定到数据源，但<xref:System.Windows.Forms.BindingNavigator>控件专门用于处理<xref:System.Windows.Forms.BindingSource>组件。 <xref:System.Windows.Forms.BindingNavigator>控件提供用户界面，用于控制<xref:System.Windows.Forms.BindingSource>组件的当前项。 默认情况下<xref:System.Windows.Forms.BindingNavigator>控件提供导航方法相对应的按钮<xref:System.Windows.Forms.BindingSource>组件。 有关详细信息，请参阅[如何：使用 Windows 窗体 BindingNavigator 控件导航数据](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [BindingSource 组件概述](bindingsource-component-overview.md)
@@ -176,4 +177,4 @@ ms.locfileid: "57707815"
 - [Windows 窗体数据绑定](../windows-forms-data-binding.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
 - [如何：将 Windows 窗体控件绑定到类型](how-to-bind-a-windows-forms-control-to-a-type.md)
-- [如何：反映在使用 BindingSource 的 Windows 窗体控件中的数据源更新](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+- [如何：使用 BindingSource 在 Windows 窗体控件中反映数据源更新](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

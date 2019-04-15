@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: beba15f12b0ae2b819c641de9af8485767ad1a78
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 18bef548b11f1a680c1361027b86f6952bedaad0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373408"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227104"
 ---
 # <a name="calendar-styles-and-templates"></a>Calendar 样式和模板
 本主题介绍的样式和模板的<xref:System.Windows.Controls.Calendar>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
@@ -83,7 +83,7 @@ ms.locfileid: "57373408"
 |已设定焦点|FocusStates|该按钮具有焦点。|  
 |失去焦点|FocusStates|该按钮不具有焦点。|  
 |活动的|ActiveStates|该按钮处于活动状态。|  
-|非活动状态|ActiveStates|该按钮处于非活动状态。|  
+|非活动|ActiveStates|该按钮处于非活动状态。|  
 |RegularDay|DayStates|该按钮不表示<xref:System.DateTime.Today%2A?displayProperty=nameWithType>。|  
 |今天|DayStates|此按钮表示<xref:System.DateTime.Today%2A?displayProperty=nameWithType>。|  
 |NormalDay|BlackoutDayStates|此按钮表示可以选择一天。|  
@@ -111,7 +111,7 @@ ms.locfileid: "57373408"
 |已设定焦点|FocusStates|该按钮具有焦点。|  
 |失去焦点|FocusStates|该按钮不具有焦点。|  
 |活动的|ActiveStates|该按钮处于活动状态。|  
-|非活动状态|ActiveStates|该按钮处于非活动状态。|  
+|非活动|ActiveStates|该按钮处于非活动状态。|  
 |有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
@@ -128,9 +128,10 @@ ms.locfileid: "57373408"
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [控件样式和模板](control-styles-and-templates.md)
+- [Control 样式和模板](control-styles-and-templates.md)
 - [控件自定义](control-customization.md)
 - [样式设置和模板化](styling-and-templating.md)
 - [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)

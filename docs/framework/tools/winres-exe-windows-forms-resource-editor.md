@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221090"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296649"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe（Windows 资源本地化编辑器）
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>自变量
 
-|参数|说明​​|
+|参数|说明|
 |--------------|-----------------|
 |`resourceFile`|要本地化的资源文件。 此文件必须是由 Visual Studio 设计器生成的 Windows 窗体 .resx 或 .resources 文件。 Winres.exe 无法打开一般的 .resx 或 .resources 文件。|
 
-|选项|说明​​|
+|选项|说明|
 |------------|-----------------|
 |**/?**|显示该工具的命令语法和选项。|
 
@@ -106,9 +106,9 @@ Winres.exe 具有下列特性和功能：
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>本地化与窗体关联的 .resx 或 .resources 文件
 
-1.  在开发人员命令提示符处键入 `winres` 以运行 Winres.exe。
+1. 在开发人员命令提示符处键入 `winres` 以运行 Winres.exe。
 
-2.  若要打开要本地化的窗体的默认资源，请单击“文件”菜单中的“打开”命令，然后导航到该文件打开它。
+2. 若要打开要本地化的窗体的默认资源，请单击“文件”菜单中的“打开”命令，然后导航到该文件打开它。
 
      或
 
@@ -129,11 +129,11 @@ Winres.exe 具有下列特性和功能：
     > [!NOTE]
     > 如果正在对其资源进行编辑的窗体是一个被继承的窗体，则包含被继承的窗体的程序集和包含继承（派生的）窗体的程序集都必须在全局程序集缓存 (GAC) 中进行注册，或者必须与 WinRes.exe 位于同一个目录中。 有关将 .NET Framework 组件安装到 GAC 中的详细信息，请参阅[全局程序集缓存](../../../docs/framework/app-domains/gac.md)。
 
-3.  选择窗体中的控件，然后更改其 <xref:System.Windows.Forms.Control.Text%2A> 和其他属性，以便反映本地化的区域性及其语言。 根据需要移动控件或调整其大小，以适应本地化后的文本。
+3. 选择窗体中的控件，然后更改其 <xref:System.Windows.Forms.Control.Text%2A> 和其他属性，以便反映本地化的区域性及其语言。 根据需要移动控件或调整其大小，以适应本地化后的文本。
 
-4.  若要保存 .resx 或 .resources 文件的本地化版本，请单击“保存”图标或“文件”菜单中的相同命令。 该工具会显示“选择区域性”窗口。
+4. 若要保存 .resx 或 .resources 文件的本地化版本，请单击“保存”图标或“文件”菜单中的相同命令。 该工具会显示“选择区域性”窗口。
 
-5.  选择相应的区域性和文件模式，然后单击“确定”。
+5. 选择相应的区域性和文件模式，然后单击“确定”。
 
    该工具会使用运行时希望用于本地化资源文件的命名约定来保存文件。 例如，如果将 `TestApp.resources` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resources`。 如果将 `TestApp.resx` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resx`。 有关资源命名约定的详细信息，请参阅[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 有关运行时使用的预定义区域性名称的列表，请参阅 <xref:System.Globalization.CultureInfo> 类。
 
@@ -145,5 +145,5 @@ Winres.exe 具有下列特性和功能：
 - <xref:System.Resources.ResourceReader>
 - <xref:System.Resources.ResourceWriter>
 - [工具](../../../docs/framework/tools/index.md)
-- [桌面应用中的资源](../../../docs/framework/resources/index.md)
+- [桌面应用程序中的资源](../../../docs/framework/resources/index.md)
 - [全球化和本地化](../../../docs/standard/globalization-localization/index.md)

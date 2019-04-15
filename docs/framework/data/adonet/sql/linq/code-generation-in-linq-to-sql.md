@@ -2,21 +2,21 @@
 title: LINQ to SQL 中的代码生成
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 01ba89f2161430b046eb6f3151bc33dbd659b0d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627962"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321583"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL 中的代码生成
 可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 命令行工具生成表示数据库的代码。 在任一情况下，端到端代码生成都分成三个阶段：  
   
-1.  *DBML 提取器*从数据库提取架构信息，并重新组合到一个 XML 格式的 DBML 文件的信息。  
+1. *DBML 提取器*从数据库提取架构信息，并重新组合到一个 XML 格式的 DBML 文件的信息。  
   
-2.  DBML 文件由扫描*DBML 验证程序*的错误。  
+2. DBML 文件由扫描*DBML 验证程序*的错误。  
   
-3.  如果未显示验证错误，文件将传递到代码生成器。  
+3. 如果未显示验证错误，文件将传递到代码生成器。  
   
  有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。 使用 Visual Studio 的开发人员还可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]生成代码。 请参阅[LINQ to SQL 工具在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
@@ -270,8 +270,9 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [如何：对象模型作为外部文件生成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [如何：将对象模型作为外部文件生成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
 - [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

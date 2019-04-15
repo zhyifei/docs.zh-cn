@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841155"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342084"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>如何：使用“继承选择器”对话框继承窗体
 继承窗体或其他对象最简单的方法是使用“继承选择器”对话框。 通过该对话框，可以充分利用在其他解决方案中创建的代码或用户界面 (UI)。  
@@ -23,23 +23,23 @@ ms.locfileid: "58841155"
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>通过使用继承选择器创建继承自现有窗体的 Windows 窗体  
   
-1.  从“项目”菜单中，选择“添加 Windows 窗体”。  
+1. 从“项目”菜单中，选择“添加 Windows 窗体”。  
   
      此时将打开“添加新项”对话框。  
   
-2.  搜索**继承的窗体**模板从 searchbox 或通过单击**Windows 窗体**类别中，选择它，并将其在命名**名称**框。 单击“添加”按钮继续。  
+2. 搜索**继承的窗体**模板从 searchbox 或通过单击**Windows 窗体**类别中，选择它，并将其在命名**名称**框。 单击“添加”按钮继续。  
   
      此时将打开“继承选择器”。 如果当前项目已经包含窗体，则它们将显示在“继承选择器”对话框中。  
   
-3.  若要继承另一个程序集中的窗体，请单击“浏览”按钮。  
+3. 若要继承另一个程序集中的窗体，请单击“浏览”按钮。  
   
-4.  在“选择包含要继承组件的文件”对话框中，导航到包含所需窗体或模块的项目。  
+4. 在“选择包含要继承组件的文件”对话框中，导航到包含所需窗体或模块的项目。  
   
-5.  单击 .exe 或 .dll 文件的名称以选中该文件，然后单击“打开”按钮。  
+5. 单击 .exe 或 .dll 文件的名称以选中该文件，然后单击“打开”按钮。  
   
      此操作将返回到“继承选择器”对话框，对话框中现在列出了组件及组件所在的项目。  
   
-6.  选择组件。  
+6. 选择组件。  
   
      在“解决方案资源管理器”中，将组件添加到项目。 如果它具有 UI，将用标志符号标记属于继承窗体的控件 (![的 Visual Basic 继承符号。 屏幕截图](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif))，并选中时，有一个边框指示的控件具有的安全级别超类窗体。 下表中列出了与不同安全级别相对应的行为。  
   
@@ -57,7 +57,8 @@ ms.locfileid: "58841155"
     >  将继承的控件和组件与 Windows 窗体上的标准控件和组件组合到一起时，可能会与 Z 排序发生冲突。 可通过修改 z 顺序纠正冲突，方法是单击“格式”菜单，指向“排序”，然后单击“置于顶层”或“置于底层”。 控件的 z 顺序的详细信息，请参阅[如何：在 Windows 窗体上的对象分层](../controls/how-to-layer-objects-on-windows-forms.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [Inherits 语句](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+
+- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
 - [修改基窗体的外观的效果](effects-of-modifying-base-form-appearance.md)
 - [Windows 窗体可视化继承](windows-forms-visual-inheritance.md)

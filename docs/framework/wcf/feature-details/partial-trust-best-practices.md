@@ -2,12 +2,12 @@
 title: 部分信任最佳实践
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: d63c9de4b1ea935b35f718056d191689f28c3813
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184075"
 ---
 # <a name="partial-trust-best-practices"></a>部分信任最佳实践
 本主题介绍在部分信任环境中运行 Windows Communication Foundation (WCF) 时的最佳做法。  
@@ -29,7 +29,7 @@ ms.locfileid: "54640103"
   
 -   必须将处理序列化事件的方法（如 `OnSerializing`、`OnSerialized`、`OnDeserializing` 和 `OnDeserialized`）声明为公共的。 但是，同时支持 <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29> 的显式实现和隐式实现。  
   
--   在程序集中实现的、使用 `[DataContract]` 标记的 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 类型不得在类型构造函数中执行与安全相关的操作，因为在反序列化期间 <xref:System.Runtime.Serialization.DataContractSerializer> 不调用新实例化的对象的构造函数。 具体说来，对于 `[DataContract]` 类型，必须避免使用以下常见安全技术：  
+-   `[DataContract]` 在程序集中实现的类型标有<xref:System.Security.AllowPartiallyTrustedCallersAttribute>必须为执行与安全相关的操作，在类型构造函数中<xref:System.Runtime.Serialization.DataContractSerializer>不反序列化期间调用的新实例化对象的构造函数。 具体说来，对于 `[DataContract]` 类型，必须避免使用以下常见安全技术：  
   
 -   尝试通过使类型的构造函数变为内部或私有来限制部分信任访问。  
   
@@ -66,5 +66,6 @@ ms.locfileid: "54640103"
  作为最佳实践，避免通过调用 <xref:System.Security.PermissionSet.Assert%2A>、<xref:System.Security.PermissionSet.PermitOnly%2A> 或 <xref:System.Security.PermissionSet.Deny%2A> 创建线程特定的权限上下文。 而是对应用程序本身授予或拒绝特权，以便不需要 <xref:System.Security.PermissionSet.Assert%2A>、<xref:System.Security.PermissionSet.Deny%2A> 或 <xref:System.Security.PermissionSet.PermitOnly%2A>。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>

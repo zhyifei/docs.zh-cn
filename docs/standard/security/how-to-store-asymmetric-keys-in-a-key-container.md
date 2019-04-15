@@ -1,5 +1,5 @@
 ---
-title: 如何：将非对称密钥存储在密钥容器
+title: 如何：将非对称密钥存储在密钥容器中
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,31 +17,31 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff86db89eadc36faf3ebdcd1f653d73fc958595a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972789"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326185"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>如何：将非对称密钥存储在密钥容器
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>如何：将非对称密钥存储在密钥容器中
 非对称私钥永远不应以原义或纯文本形式存储在本地计算机上。 如果需要存储私钥，则应使用密钥容器。 有关密钥容器的详细信息，请参阅[了解计算机级别和用户级别的 RSA 密钥容器](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))。  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>创建非对称密钥并且将它保存在密钥容器中  
   
-1.  创建的新实例<xref:System.Security.Cryptography.CspParameters>类，并将您想要调用到密钥容器名称传递<xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>字段。  
+1. 创建的新实例<xref:System.Security.Cryptography.CspParameters>类，并将您想要调用到密钥容器名称传递<xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>字段。  
   
-2.  创建派生的类的新实例<xref:System.Security.Cryptography.AsymmetricAlgorithm>类 (通常**RSACryptoServiceProvider**或**DSACryptoServiceProvider**)，并将传递先前创建**CspParameters**给其构造函数的对象。  
+2. 创建派生的类的新实例<xref:System.Security.Cryptography.AsymmetricAlgorithm>类 (通常**RSACryptoServiceProvider**或**DSACryptoServiceProvider**)，并将传递先前创建**CspParameters**给其构造函数的对象。  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>从密钥容器删除密钥  
   
-1.  创建 **CspParameters** 类的一个新实例，并将想让密钥容器使用的名称传递给 **CspParameters.KeyContainerName** 字段。  
+1. 创建 **CspParameters** 类的一个新实例，并将想让密钥容器使用的名称传递给 **CspParameters.KeyContainerName** 字段。  
   
-2.  为从 **AsymmetricAlgorithm** 类派生的一个类（通常是 **RSACryptoServiceProvider** 或 **DSACryptoServiceProvider**）创建一个新实例，并将先前创建的 **CspParameters** 对象传递给其构造函数。  
+2. 为从 **AsymmetricAlgorithm** 类派生的一个类（通常是 **RSACryptoServiceProvider** 或 **DSACryptoServiceProvider**）创建一个新实例，并将先前创建的 **CspParameters** 对象传递给其构造函数。  
   
-3.  将从 **AsymmetricAlgorithm** 派生的类的 **PersistKeyInCSP** 属性设置为 **false**（在 Visual Basic 中为 **False**）。  
+3. 将从 **AsymmetricAlgorithm** 派生的类的 **PersistKeyInCSP** 属性设置为 **false**（在 Visual Basic 中为 **False**）。  
   
-4.  调用从 **AsymmetricAlgorithm** 派生的类的 **Clear** 方法。 该方法释放该类所有的资源并清除密钥容器。  
+4. 调用从 **AsymmetricAlgorithm** 派生的类的 **Clear** 方法。 该方法释放该类所有的资源并清除密钥容器。  
   
 ## <a name="example"></a>示例  
  下面的示例说明下面这一过程：创建一个非对称密钥，将其保存在密钥容器中，以后检索此密钥，最后从该容器中删除此密钥。  
@@ -225,7 +225,7 @@ Key deleted.
   
 ## <a name="see-also"></a>请参阅
 
-- [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [生成加密和解密的密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [加密数据](../../../docs/standard/security/encrypting-data.md)
 - [解密数据](../../../docs/standard/security/decrypting-data.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [加密服务](../../../docs/standard/security/cryptographic-services.md)

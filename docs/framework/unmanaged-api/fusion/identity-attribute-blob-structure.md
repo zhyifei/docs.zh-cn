@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cda9f6c71361d3865b40669c7ba09f2c2fb0c253
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102981"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314069"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 结构
 包含有关某个特性的程序集的信息，并由三个`DWORD`s。 每个`DWORD`是由字符缓冲区偏移量`CurrentIntoBuffer`方法[IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)接口  
@@ -49,13 +49,13 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 ## <a name="sample"></a>示例  
  下面的示例说明了几个基本步骤，最终会生成一个填充`IDENTITY_ATTRIBUTE_BLOB`结构：  
   
-1.  获取[IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)程序集。  
+1. 获取[IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)程序集。  
   
-2.  调用`IReferenceIdentity::EnumAttributes`方法，并获取[IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)。  
+2. 调用`IReferenceIdentity::EnumAttributes`方法，并获取[IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)。  
   
-3.  创建字符缓冲区，并将其转换为`IDENTITY_ATTRIBUTE_BLOB`结构。  
+3. 创建字符缓冲区，并将其转换为`IDENTITY_ATTRIBUTE_BLOB`结构。  
   
-4.  调用`CurrentIntoBuffer`方法的`IEnumIDENTITY_ATTRIBUTE`接口。 此方法将这些属性复制`Namespace`， `Name`，和`Value`字符缓冲区中。 为这些字符串的三个偏移量将变为可用在`IDENTITY_ATTRIBUTE_BLOB`结构。  
+4. 调用`CurrentIntoBuffer`方法的`IEnumIDENTITY_ATTRIBUTE`接口。 此方法将这些属性复制`Namespace`， `Name`，和`Value`字符缓冲区中。 为这些字符串的三个偏移量将变为可用在`IDENTITY_ATTRIBUTE_BLOB`结构。  
   
 ```  
 // EnumAssemblyAttributes.cpp : main project file.  

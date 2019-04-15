@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Timelines [WPF], description
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
-ms.openlocfilehash: 83f87e911d9d5412eaba1eb88aea74b9325bc899
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bdae1689ffeb8c54d756b9debbd26d57a052892d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198785"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>如何：设置动画的持续时间
 一个<xref:System.Windows.Media.Animation.Timeline>表示一个时间段和段的长度由时间线的<xref:System.Windows.Duration>。 当<xref:System.Windows.Media.Animation.Timeline>到达其持续时间，就会停止播放。 如果<xref:System.Windows.Media.Animation.Timeline>具有子时间线，它们也会停止播放。 播放动画时，<xref:System.Windows.Duration>指定动画需要花多长转换从其起始值为终止值。  
@@ -24,5 +24,6 @@ ms.locfileid: "57351620"
  [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Duration>
 - [动画概述](animation-overview.md)

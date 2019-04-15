@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-ms.openlocfilehash: 78d2bb3e49ae971b54d521585184a9565c4ff105
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53b20e7f11f5accd1436f29063817142681e4f74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213254"
 ---
 # <a name="access-control-mechanisms"></a>访问控制机制
 您可以控制采用多种方式使用 Windows Communication Foundation (WCF) 的访问。 本主题简要讨论各种机制并提供关于何时使用每种机制的建议；旨在帮助您选择使用正确的机制。 访问技术按复杂程度顺序列出。 最简单的是 <xref:System.Security.Permissions.PrincipalPermissionAttribute>；而最复杂的是标识模型。  
@@ -30,7 +30,7 @@ ms.locfileid: "54512601"
 > [!NOTE]
 >  您首先必须填充数据库使用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]功能 WCF 服务才能使用它进行授权。  
   
- 如果已拥有现有 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 网站的成员资格数据库并希望使相同的用户可以使用你的服务（使用相同的用户名和密码授权的），则也可以使用成员资格功能。  
+ 如果已拥有现有 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 网站的成员资格数据库并希望使相同的用户可以使用您的服务（使用相同的用户名和密码授权的），则也可以使用成员资格功能。  
   
  有关使用 WCF 服务中的成员资格功能的详细信息，请参阅[如何：使用 ASP.NET 成员资格提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54512601"
  有关使用角色提供程序功能的详细信息，请参阅[如何：与服务一起使用 ASP.NET 角色提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)。  
   
 ## <a name="authorization-manager"></a>授权管理器  
- 另一个功能将授权管理器 (AzMan) 与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序结合在一起对客户端进行授权。 当 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 承载 Web 服务时，可以将 AzMan 集成到应用程序中，以便可以通过 AzMan 完成向服务的授权。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色管理器提供了一个 API，该 API 使您能够管理应用程序角色、在角色中添加和移除用户以及检查角色的成员资格，但不允许您查询用户是否经授权可执行命名的任务或操作。 AzMan 允许您定义单个操作，然后将这些操作组合成任务。 使用 AZMan，除了可以执行角色检查以外，还可以检查用户是否可以执行某项任务。 角色分配和任务授权可以在应用程序外部配置，也可以在应用程序内部以编程方式执行。 使用 AzMan 管理 Microsoft 管理控制台 (MMC) 管理单元，管理员可以更改角色可以在运行时执行的任务，还可以管理每个用户的角色成员资格。  
+ 另一个功能将授权管理器 (AzMan) 与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序结合在一起对客户端进行授权。 当 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 承载 Web 服务时，可以将 AzMan 集成到应用程序中，以便可以通过 AzMan 完成向服务的授权。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色管理器提供了一个 API，可用于管理应用程序角色、 添加和删除角色的用户以及检查角色成员资格，但它不允许你查询用户是否有权执行命名的任务或操作。 AzMan 允许您定义单个操作，然后将这些操作组合成任务。 使用 AZMan，除了可以执行角色检查以外，还可以检查用户是否可以执行某项任务。 角色分配和任务授权可以在应用程序外部配置，也可以在应用程序内部以编程方式执行。 使用 AzMan 管理 Microsoft 管理控制台 (MMC) 管理单元，管理员可以更改角色可以在运行时执行的任务，还可以管理每个用户的角色成员资格。  
   
  如果已拥有对现有 AzMan 安装的访问权并希望使用 AzMan/角色提供程序组合功能向服务用户进行授权，则也可以使用 AzMan 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供程序。  
   
@@ -58,9 +58,10 @@ ms.locfileid: "54512601"
  有关标识模型的详细信息，请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [如何：使用 PrincipalPermissionAttribute 类限制访问](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [如何：与服务一起使用 ASP.NET 角色提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
-- [如何：将用于服务 ASP.NET 授权管理器角色提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
+- [如何：将 ASP.NET 角色提供程序与服务一起使用](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [如何：将 ASP.NET 授权管理器角色提供程序与服务一起使用](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
 - [使用标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

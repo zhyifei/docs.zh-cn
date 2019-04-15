@@ -7,45 +7,45 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 0dd025b8b7adc97420699eb2f5099ab1ee75b820
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 634489ced9b437d7b273eb5fa1092165cc6a935f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125749"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311105"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>如何：审核 Windows Communication Foundation 安全事件
 Windows Communication Foundation (WCF)，可安全事件记录到 Windows 事件日志中，可以使用 Windows 事件查看器查看。 本主题说明如何设置应用程序以使其记录安全事件。 有关 WCF 审核的详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
   
 ### <a name="to-audit-security-events-in-code"></a>通过代码审核安全事件  
   
-1.  指定审核日志位置。 为此，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A> 类的 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> 属性设置为 <xref:System.ServiceModel.AuditLogLocation> 枚举值之一，如下面的代码中所示。  
+1. 指定审核日志位置。 为此，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A> 类的 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> 属性设置为 <xref:System.ServiceModel.AuditLogLocation> 枚举值之一，如下面的代码中所示。  
   
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
      <xref:System.ServiceModel.AuditLogLocation>枚举具有三个值： `Application`， `Security`，或`Default`。 该值指定在事件查看器中可见的日志之一：安全日志或应用程序日志。 如果您使用 `Default` 值，则实际的日志将取决于运行应用程序的操作系统。 如果启用审核，但未指定日志位置，则对于支持写入安全日志的平台，默认值为 `Security` 日志；对于其他平台，则写入 `Application` 日志。 默认情况下，仅 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 支持写入安全日志。  
   
-2.  设置要审核的事件的类型。 您可以同时审核服务级事件或消息级授权事件。 为此，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> 属性或 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> 属性设置为 <xref:System.ServiceModel.AuditLevel> 枚举值之一，如下面的代码所示。  
+2. 设置要审核的事件的类型。 您可以同时审核服务级事件或消息级授权事件。 为此，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> 属性或 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> 属性设置为 <xref:System.ServiceModel.AuditLevel> 枚举值之一，如下面的代码所示。  
   
      [!code-csharp[AuditingSecurityEvents#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#3)]
      [!code-vb[AuditingSecurityEvents#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#3)]  
   
-3.  指定是向应用程序隐匿还是公开日志审核失败事件。 将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true` 或 `false`，如下面的代码所示。  
+3. 指定是向应用程序隐匿还是公开日志审核失败事件。 将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true` 或 `false`，如下面的代码所示。  
   
      [!code-csharp[AuditingSecurityEvents#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#4)]
      [!code-vb[AuditingSecurityEvents#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#4)]  
   
      默认 `SuppressAuditFailure` 属性为 `true`，因此审核失败不会影响应用程序。 否则会引发异常。 对于任何成功的审核，都将写入详细跟踪。 对于任何失败的审核，都将在错误级别写入跟踪。  
   
-4.  从在 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> 的说明中找到的行为集合中移除现有 <xref:System.ServiceModel.ServiceHost>。 该行为集合通过 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 属性来访问，而该属性又通过 <xref:System.ServiceModel.ServiceHostBase.Description%2A> 属性来访问。 然后，向同一集合中添加新的 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>，如下面的代码所示。  
+4. 从在 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> 的说明中找到的行为集合中移除现有 <xref:System.ServiceModel.ServiceHost>。 该行为集合通过 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 属性来访问，而该属性又通过 <xref:System.ServiceModel.ServiceHostBase.Description%2A> 属性来访问。 然后，向同一集合中添加新的 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>，如下面的代码所示。  
   
      [!code-csharp[AuditingSecurityEvents#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#5)]
      [!code-vb[AuditingSecurityEvents#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#5)]  
   
 ### <a name="to-set-up-auditing-in-configuration"></a>通过配置方式设置审核  
   
-1.  若要设置中配置的审核，添加[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)元素[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) web.config 文件部分。 然后添加[ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)元素，并设置各个属性，如下面的示例中所示。  
+1. 若要设置中配置的审核，添加[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)元素[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) web.config 文件部分。 然后添加[ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)元素，并设置各个属性，如下面的示例中所示。  
   
     ```xml  
     <behaviors>  
@@ -58,7 +58,7 @@ Windows Communication Foundation (WCF)，可安全事件记录到 Windows 事件
     </behaviors>  
     ```  
   
-2.  您必须为服务指定行为，如下面的示例所示。  
+2. 您必须为服务指定行为，如下面的示例所示。  
   
     ```xml  
     <services>  

@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 86d4d4628313ff248618f37637b0a25e80820b06
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191908"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 ADO.NET 为创建分布式数据共享应用程序提供了一组丰富的组件。 它提供了对关系数据、XML 和应用程序数据的访问，因此是 .NET Framework 中不可缺少的一部分。 ADO.NET 支持多种开发需求，包括创建由应用程序、工具、语言或 Internet 浏览器使用的前端数据库客户端和中间层业务对象。  
@@ -50,7 +50,7 @@ ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 A
  [语言集成查询 (LINQ) 的 Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
  提供指向 LINQ 主题和使用 Visual Basic 示例。  
   
- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
+ [WCF 数据服务 4.5](../../../../docs/framework/data/wcf/index.md)  
  描述如何使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]在实现开放式数据协议 (OData) 的 Web 或 Intranet 上部署数据服务。  
   
  [.NET Framework 开发指南](../../development-guide.md)  
@@ -60,5 +60,6 @@ ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 A
  提供.NET 示例和教程的列表。
   
 ## <a name="see-also"></a>请参阅
+
 - [在 Visual Studio 中访问数据](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

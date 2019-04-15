@@ -3,12 +3,12 @@ title: WSFederation 身份验证模块概述
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092458"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310247"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 身份验证模块概述
 Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-FAM) 对 ASP.NET 应用程序中联合身份验证的支持。 本主题有助于理解联合身份验证的工作原理和使用方法。  
@@ -18,26 +18,26 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
   
  ![联合身份验证方案](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
   
-1.  Fabrikam 信任域中的客户端向 Contoso 信任域中的信赖方 (RP) 应用发送请求。  
+1. Fabrikam 信任域中的客户端向 Contoso 信任域中的信赖方 (RP) 应用发送请求。  
   
-2.  RP 将客户端重定向到 Contoso 信任域中的 STS。 此 STS 完全不了解该客户端。  
+2. RP 将客户端重定向到 Contoso 信任域中的 STS。 此 STS 完全不了解该客户端。  
   
-3.  Contoso STS 将该客户端重定向到 Fabrikam 信任域中的 STS，此信任域与 Contoso 信任域之间存在信任关系。  
+3. Contoso STS 将该客户端重定向到 Fabrikam 信任域中的 STS，此信任域与 Contoso 信任域之间存在信任关系。  
   
-4.  Fabrikam STS 验证客户端的标识，并向 Contoso STS 颁发安全令牌。  
+4. Fabrikam STS 验证客户端的标识，并向 Contoso STS 颁发安全令牌。  
   
-5.  Contoso STS 使用 Fabrikam 令牌来创建自己的令牌（可由 RP 使用）并将其发送到 RP。  
+5. Contoso STS 使用 Fabrikam 令牌来创建自己的令牌（可由 RP 使用）并将其发送到 RP。  
   
-6.  RP 从安全令牌中提取客户端声明并做出授权决策。  
+6. RP 从安全令牌中提取客户端声明并做出授权决策。  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>将联合身份验证模块与 ASP.NET 搭配使用  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) 是一个 HTTP 模块，允许您添加到联合身份验证[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]应用程序。 联合身份验证将身份验证逻辑交由 STS 处理，让你可以集中注意力编写业务逻辑。  
   
  可以配置 WS-FAM 来指定未经身份验证的请求应重定向到的 STS。 使用 WIF，可采用两种方式对用户进行身份验证：  
   
-1.  被动重定向：当未经身份验证的用户尝试访问受保护的资源，并且想要将它们重定向到 STS 而无需登录页时，这是正确的方法。 STS 验证用户标识，并颁发包含适合该用户的声明的安全令牌。 此选项需要将 WS-FAM 添加到 HTTP 模块管道。 可以使用用于 Visual Studio 2012 的标识和访问工具修改应用程序配置文件，以便使用 WS FAM 以及与 STS 联合。 有关详细信息，请参阅[用于 Visual Studio 2012 的标识和访问工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
+1. 被动重定向：当未经身份验证的用户尝试访问受保护的资源，并且想要将它们重定向到 STS 而无需登录页时，这是正确的方法。 STS 验证用户标识，并颁发包含适合该用户的声明的安全令牌。 此选项需要将 WS-FAM 添加到 HTTP 模块管道。 可以使用用于 Visual Studio 2012 的标识和访问工具修改应用程序配置文件，以便使用 WS FAM 以及与 STS 联合。 有关详细信息，请参阅[用于 Visual Studio 2012 的标识和访问工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
   
-2.  对于信赖方应用程序中的登录页，可以从代码隐藏调用 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> 方法或 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> 方法。  
+2. 对于信赖方应用程序中的登录页，可以从代码隐藏调用 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> 方法或 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> 方法。  
   
  在被动重定向中，所有通信通过来自客户端（通常为浏览器）的响应/重定向执行。 可将 WS-FAM 添加到应用程序的 HTTP 管道，它将在管道中监视未经身份验证的用户请求并将用户重定向到指定的 STS。  
   

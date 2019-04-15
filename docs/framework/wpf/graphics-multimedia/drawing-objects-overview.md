@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 3589ba1d13c4ec57cfcec8c52b61556344e8def2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325509"
 ---
 # <a name="drawing-objects-overview"></a>Drawing 对象概述
 本主题介绍<xref:System.Windows.Media.Drawing>对象，并说明如何使用它们来有效地绘制形状、 位图、 文本和媒体。 使用<xref:System.Windows.Media.Drawing>对象在创建剪贴画时绘制<xref:System.Windows.Media.DrawingBrush>，或使用<xref:System.Windows.Media.Visual>对象。  
-  
- 
-  
+
 <a name="whatisadrawingsection"></a>   
 ## <a name="what-is-a-drawing-object"></a>什么是 Drawing 对象？  
  一个<xref:System.Windows.Media.Drawing>对象描述可见内容，如形状、 位图、 视频或文本行。 不同类型的图形描述不同类型的内容。 下面是不同类型图形对象的列表。  
@@ -96,27 +94,27 @@ ms.locfileid: "57368332"
   
  若要播放的媒体，而无需创建您自己<xref:System.Windows.Media.MediaTimeline>，执行以下步骤。  
   
-1.  创建 <xref:System.Windows.Media.MediaPlayer> 对象。  
+1. 创建 <xref:System.Windows.Media.MediaPlayer> 对象。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline1)]  
   
-2.  使用<xref:System.Windows.Media.MediaPlayer.Open%2A>方法加载媒体文件。  
+2. 使用<xref:System.Windows.Media.MediaPlayer.Open%2A>方法加载媒体文件。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline2)]  
   
-3.  创建 <xref:System.Windows.Media.VideoDrawing>。  
+3. 创建 <xref:System.Windows.Media.VideoDrawing>。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline3)]  
   
-4.  指定的大小和位置，通过设置绘制媒体<xref:System.Windows.Media.VideoDrawing.Rect%2A>属性的<xref:System.Windows.Media.VideoDrawing>。  
+4. 指定的大小和位置，通过设置绘制媒体<xref:System.Windows.Media.VideoDrawing.Rect%2A>属性的<xref:System.Windows.Media.VideoDrawing>。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline4)]  
   
-5.  设置<xref:System.Windows.Media.VideoDrawing.Player%2A>的属性<xref:System.Windows.Media.VideoDrawing>与<xref:System.Windows.Media.MediaPlayer>创建。  
+5. 设置<xref:System.Windows.Media.VideoDrawing.Player%2A>的属性<xref:System.Windows.Media.VideoDrawing>与<xref:System.Windows.Media.MediaPlayer>创建。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline5](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline5)]  
   
-6.  使用<xref:System.Windows.Media.MediaPlayer.Play%2A>方法的<xref:System.Windows.Media.MediaPlayer>开始播放媒体。  
+6. 使用<xref:System.Windows.Media.MediaPlayer.Play%2A>方法的<xref:System.Windows.Media.MediaPlayer>开始播放媒体。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline6](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline6)]  
   
@@ -126,19 +124,19 @@ ms.locfileid: "57368332"
   
  若要获得对媒体的额外计时控制，请使用<xref:System.Windows.Media.MediaTimeline>与<xref:System.Windows.Media.MediaPlayer>和<xref:System.Windows.Media.VideoDrawing>对象。 <xref:System.Windows.Media.MediaTimeline>使您能够指定是否应重复显示视频。 若要使用<xref:System.Windows.Media.MediaTimeline>与<xref:System.Windows.Media.VideoDrawing>，执行以下步骤：  
   
-1.  声明<xref:System.Windows.Media.MediaTimeline>并设置其计时行为。  
+1. 声明<xref:System.Windows.Media.MediaTimeline>并设置其计时行为。  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline1)]  
   
-2.  创建<xref:System.Windows.Media.MediaClock>从<xref:System.Windows.Media.MediaTimeline>。  
+2. 创建<xref:System.Windows.Media.MediaClock>从<xref:System.Windows.Media.MediaTimeline>。  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline2)]  
   
-3.  创建<xref:System.Windows.Media.MediaPlayer>并用<xref:System.Windows.Media.MediaClock>若要设置其<xref:System.Windows.Media.MediaPlayer.Clock%2A>属性。  
+3. 创建<xref:System.Windows.Media.MediaPlayer>并用<xref:System.Windows.Media.MediaClock>若要设置其<xref:System.Windows.Media.MediaPlayer.Clock%2A>属性。  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline3)]  
   
-4.  创建<xref:System.Windows.Media.VideoDrawing>，并将分配<xref:System.Windows.Media.MediaPlayer>到<xref:System.Windows.Media.VideoDrawing.Player%2A>属性的<xref:System.Windows.Media.VideoDrawing>。  
+4. 创建<xref:System.Windows.Media.VideoDrawing>，并将分配<xref:System.Windows.Media.MediaPlayer>到<xref:System.Windows.Media.VideoDrawing.Player%2A>属性的<xref:System.Windows.Media.VideoDrawing>。  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline4)]  
   
@@ -234,12 +232,13 @@ DrawingGroup 操作的顺序
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
-- [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [使用图像、绘图和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
+- [二维图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [使用图像、图形和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)
 - [Geometry 概述](geometry-overview.md)
-- [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)
-- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)
+- [WPF 中的形状和基本图形概述](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF 图形呈现疑难解答](wpf-graphics-rendering-overview.md)
 - [Freezable 对象概述](../advanced/freezable-objects-overview.md)
 - [帮助主题](drawings-how-to-topics.md)

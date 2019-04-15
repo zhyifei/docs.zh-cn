@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 1f9881cd1a63e00aaf414f93c91885e57ea0b145
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155085"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>使用标识模型管理声明和授权
 授权是确定哪些实体具有更改、查看或其他访问计算机资源权限的过程。 例如，在一个企业中，可能只有经理们才可以访问其员工的文件。 Windows Communication Foundation (WCF) 执行授权处理支持两种机制。 第一种机制使您能够使用现有的公共语言运行库 (CLR) 构造来控制授权。 第二个是名为基于声明的模型*标识模型*。 WCF 使用标识模型创建的声明从传入消息;可以扩展标识模型类以支持自定义授权方案的新声明类型。 本主题概述标识模型功能的主要编程概念，并提供此功能使用的最重要的类的列表。  
@@ -22,7 +22,7 @@ ms.locfileid: "54540554"
  以下方案演示标识模型的使用方式。  
   
 ### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>方案 1:支持标识、 角色和组声明  
- 用户向 Web 服务发送消息。 Web 服务的访问控制需求使用标识、角色或组。 消息发送方映射到一个角色或组的集中。 角色或组信息用于执行访问检查。  
+ 用户向 Web 服务发送消息。 Web 服务的访问控制要求使用标识、角色或组。 消息发送方映射到一个角色或组的集中。 角色或组信息用于执行访问检查。  
   
 ### <a name="scenario-2-supporting-rich-claims"></a>方案 2:支持多信息声明  
  用户向 Web 服务发送消息。 Web 服务的访问控制要求需要比标识、角色或组更丰富的模型。 Web 服务确定给定的用户是否有权使用基于多信息声明的模型访问特定的受保护资源。 例如，某个用户也许能读取特定信息（如薪金信息），而其他用户无此权限。  
@@ -60,7 +60,7 @@ ms.locfileid: "54540554"
  颁发者  
  一个声明集，它至少包含一个标识声明，并且被认为已颁发另一个声明集。  
   
- Properties  
+ 属性  
  与评估上下文或授权上下文关联的一组信息。  
   
  受保护的资源  
@@ -117,7 +117,7 @@ ms.locfileid: "54540554"
  授权管理器按说明来评估各个授权策略，结果是产生一个授权上下文（一组声明集和一些关联的属性）。 可以检查授权上下文以确定该上下文中存在的声明和这些不同的声明（例如，颁发声明集）之间的关系，最后将它们与其访问资源时必须满足的要求进行比较。  
   
 ### <a name="locks"></a>锁  
- 如果授权上下文（一组声明）是一把钥匙，那么授予对特定的受保护资源的访问权限时所必须满足的要求便构成了该钥匙必须相适合的锁。 标识模型不会规定这些要求的表达形式，但鉴于系统在本质上是基于声明的，所以它们确实涉及了将授权上下文中的声明与某一必需的声明集进行比较。  
+ 如果授权上下文（一组声明）是一把钥匙，那么授予对特定的受保护资源的访问权限时所必须满足的需求便构成了该钥匙必须相适合的锁。 标识模型不会规定这些需求的表达形式，但鉴于系统在本质上是基于声明的，所以它们确实涉及了将授权上下文中的声明与某一必需的声明集进行比较。  
   
 ### <a name="a-recap"></a>扼要重述  
  标识模型基于声明的概念。 声明以集的形式进行组合并在授权上下文中聚合。 授权上下文包含一组声明，它是对一个或多个与授权管理器关联的授权策略进行评估所取得的结果。 可以检查这些声明集以确定是否符合访问要求。 下图显示了这些不同的标识模型概念之间的关系。  
@@ -160,6 +160,7 @@ ms.locfileid: "54540554"
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|为服务指定的自定义授权策略的集合。 除了评估与传入消息中的凭据关联的策略外，还评估这些策略。|  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Policy.EvaluationContext>
@@ -176,6 +177,6 @@ ms.locfileid: "54540554"
 - [如何：创建自定义声明](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
 - [如何：比较声明](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
 - [如何：创建自定义授权策略](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
-- [如何：创建自定义授权管理器服务](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [如何：为服务创建自定义授权管理器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

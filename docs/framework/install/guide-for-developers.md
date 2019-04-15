@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac6dbf4792df9e287c849ba2a1a93468a444d221
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715680"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327862"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安装面向开发人员的 .NET Framework
 
@@ -44,8 +44,8 @@ ms.locfileid: "57715680"
 |**4.6.1**|[.NET Framework 4.6.1 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=690706)|[4.6.1 Web 安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [4.6.1 脱机安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=671744)|**可以安装于：**<br /><br/> Windows 10 <br /> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
 |**4.6**|包含在 Visual Studio 2015 中。<br /><br /> [Microsoft .NET Framework 4.6 目标包](https://go.microsoft.com/fwlink/?LinkId=528261)|[4.6 Web 安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [4.6 脱机安装程序下载页](https://go.microsoft.com/fwlink/?LinkId=528233)|**包含于：** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **还可以安装于：**<br /><br/> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
 |**4.5.2**|[Microsoft .NET Framework 4.5.2 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> 适用于 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.2 Web 安装程序下载页](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [4.5.2 脱机安装程序下载页](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**可以安装于：**<br /><br/> Windows 8.1 和更早版本<br /> Windows Server 2012 R2 和更早版本<br /> （有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
-|**4.5.1**|[Microsoft .NET Framework 4.5.1 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> 适用于 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.1 Web 安装程序下载页](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [4.5.1 脱机安装程序下载页](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**包含于：**<br /> <br/>[!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **还可以安装于：**<br /><br/> [!INCLUDE[win8](../../../includes/win8-md.md)] 和更早版本<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 和更早版本<br />（有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
-|**4.5**|包含于 Visual Studio 2012 中<br /><br /> 也可作为 [Windows 8 SDK](/windows/downloads/sdk-archive) 的一部分提供|[4.5 Web 安装程序下载页](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**包含于：** <br/><br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **还可以安装于：**<br/><br /> Windows 7 和更早版本<br /> Windows Server 2008 SP2 和更早版本<br />（有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
+|**4.5.1**|[Microsoft .NET Framework 4.5.1 开发人员工具包](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> 适用于 Visual Studio 2013、Visual Studio 2012 或其他 IDE|[4.5.1 Web 安装程序下载页](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [4.5.1 脱机安装程序下载页](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**包含于：**<br /> <br/>[!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **还可以安装于：**<br /><br/> [!INCLUDE[win8](../../../includes/win8-md.md)] 和更低版本<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 和更低版本<br />（有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
+|**4.5**|包含于 Visual Studio 2012 中<br /><br /> 也可作为 Windows 8 SDK 的一部分提供|[4.5 Web 安装程序下载页](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**包含于：** <br/><br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **还可以安装于：**<br/><br /> Windows 7 和更早版本<br /> Windows Server 2008 SP2 和更早版本<br />（有关完整列表，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)）|
 
 可以在所有支持的平台上针对特定版本的 .NET Framework（如果有）安装开发人员工具包。
 
@@ -107,7 +107,7 @@ ms.locfileid: "57715680"
 
 Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)），但不支持基于 Itanium 的计算机。
 
-1.  打开要安装的 .NET Framework 版本的下载页：
+1. 打开要安装的 .NET Framework 版本的下载页：
 
     - .NET Framework 4.7.2（[Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=863262)或[脱机安装程序](https://go.microsoft.com/fwlink/p/?LinkId=863265)）
 
@@ -163,7 +163,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 > [!IMPORTANT]
 > 语言包不包含运行应用程序所需的 .NET Framework 组件，因此，你必须在安装语言包之前运行 Web 安装程序或脱机安装程序。 如果已安装语言包，请将其卸载，安装 .NET Framework，然后重新安装语言包。
 
-1.  打开已安装的 .NET Framework 版本的语言包下载页：
+1. 打开已安装的 .NET Framework 版本的语言包下载页：
 
     - [.NET Framework 4.7.2 语言包](https://go.microsoft.com/fwlink/?LinkID=863258)
 
@@ -183,9 +183,9 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 
     - [.NET Framework 4.5 语言包](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
-2.  在语言列表中，选择要下载的语言，并等待几秒钟，以便使用该语言重新加载页面。
+2. 在语言列表中，选择要下载的语言，并等待几秒钟，以便使用该语言重新加载页面。
 
-3.  选择“下载”。
+3. 选择“下载”。
 
 下表列出了支持的语言。
 

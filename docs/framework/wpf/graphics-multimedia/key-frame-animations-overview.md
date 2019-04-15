@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: a4606b73835087a406d989960d7a6e24ad218769
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362976"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316734"
 ---
 # <a name="key-frame-animations-overview"></a>关键帧动画概述
 本主题介绍关键帧动画。 通过关键帧动画，可以使用两个以上的目标值进行动画处理，并控制动画的内插方法。  
@@ -50,7 +50,7 @@ ms.locfileid: "57362976"
   
  其中 *\<Type>* 为该类进行动画处理的值的类型。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了以下关键帧动画类。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供以下关键帧动画类。  
   
 |属性类型|对应的 From/To/By 动画类|支持的内插方法|  
 |-------------------|------------------------------------------------|-------------------------------------|  
@@ -259,9 +259,9 @@ ms.locfileid: "57362976"
   
  下表描述了为关键帧动画的关键帧解析关键时间的过程。  
   
-1.  解决<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>值。  
+1. 解决<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>值。  
   
-2.  确定动画的*总内插时间*，即关键帧动画完成向前迭代所需的全部时间。  
+2. 确定动画的*总内插时间*，即关键帧动画完成向前迭代所需的全部时间。  
   
     1.  如果该动画<xref:System.Windows.Media.Animation.Timeline.Duration%2A>不是<xref:System.Windows.Duration.Automatic%2A>或<xref:System.Windows.Duration.Forever%2A>，总内插时间为动画的值<xref:System.Windows.Media.Animation.Timeline.Duration%2A>属性。  
   
@@ -269,21 +269,22 @@ ms.locfileid: "57362976"
   
     3.  否则，总内插时间为 1 秒。  
   
-3.  使用总内插时间值来解决<xref:System.Windows.Media.Animation.KeyTimeType.Percent><xref:System.Windows.Media.Animation.KeyTime>值。  
+3. 使用总内插时间值来解决<xref:System.Windows.Media.Animation.KeyTimeType.Percent><xref:System.Windows.Media.Animation.KeyTime>值。  
   
-4.  如果最后一个关键帧尚未在之前步骤中解析，则将解析该关键帧。 如果<xref:System.Windows.Media.Animation.KeyTime>的最后一个关键帧是<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>或<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，其解析的时间将等于总内插时间。  
+4. 如果最后一个关键帧尚未在之前步骤中解析，则将解析该关键帧。 如果<xref:System.Windows.Media.Animation.KeyTime>的最后一个关键帧是<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>或<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，其解析的时间将等于总内插时间。  
   
      如果<xref:System.Windows.Media.Animation.KeyTime>的第一个关键帧<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>和此动画具有多个关键帧，解决其<xref:System.Windows.Media.Animation.KeyTime>值为零; 如果只有一个关键帧并将其<xref:System.Windows.Media.Animation.KeyTime>值是<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，被解析为总计内插时间，如前一步骤中所述。  
   
-5.  解析其余<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>值： 系统将每个提供的可用时间的相等份额。  在此过程中，无法解析<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值将临时视为<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>值，并获得临时解析时间。  
+5. 解析其余<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>值： 系统将每个提供的可用时间的相等份额。  在此过程中，无法解析<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值将临时视为<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>值，并获得临时解析时间。  
   
-6.  解决<xref:System.Windows.Media.Animation.KeyTime>的关键帧的值未指定关键时间使用声明距离它们最近解决的关键帧<xref:System.Windows.Media.Animation.KeyTime>值。  
+6. 解决<xref:System.Windows.Media.Animation.KeyTime>的关键帧的值未指定关键时间使用声明距离它们最近解决的关键帧<xref:System.Windows.Media.Animation.KeyTime>值。  
   
-7.  解析其余<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值。 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 使用<xref:System.Windows.Media.Animation.KeyTime>相邻的值的关键帧，以确定其解析的时间。  目的是确保动画速度在此关键帧的解析时间内保持固定不变。  
+7. 解析其余<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值。 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 使用<xref:System.Windows.Media.Animation.KeyTime>相邻的值的关键帧，以确定其解析的时间。  目的是确保动画速度在此关键帧的解析时间内保持固定不变。  
   
-8.  即对关键帧的解析时间 （主键）、 顺序和声明 （辅助密钥） 的顺序进行排序，使用一个稳定排序根据解析关键帧<xref:System.Windows.Media.Animation.KeyTime>值。  
+8. 即对关键帧的解析时间 （主键）、 顺序和声明 （辅助密钥） 的顺序进行排序，使用一个稳定排序根据解析关键帧<xref:System.Windows.Media.Animation.KeyTime>值。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>

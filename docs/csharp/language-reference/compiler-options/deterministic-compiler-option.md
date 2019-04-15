@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 819e0c44d933b491091c05d1c28b30827ead85ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c6d0c7128becb154955664cfdcf96d020de9369
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499839"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480659"
 ---
 # <a name="-deterministic"></a>-deterministic
 
-如果输入相同，则会导致编译器生成的程序集其逐字节输出在整个编译期间中相同。 
+如果输入相同，则会导致编译器生成的程序集其逐字节输出在整个编译期间中相同。
 
 ## <a name="syntax"></a>语法
 
@@ -37,22 +37,22 @@ ms.locfileid: "54499839"
 - 所用编译器的精确版本及其引用的程序集。
 - 当前目录路径。
 - 直接或间接地显式传递到编译器的所有文件的二进制内容，包括：
-    - 源文件
-    - 引用的程序集
-    - 引用的模块
-    - 资源
-    - 强名称密钥文件
-    - @ 响应文件
-    - 分析器
-    - 规则集
-    - 分析器可能使用的其他文件
+  - 源文件
+  - 引用的程序集
+  - 引用的模块
+  - 资源
+  - 强名称密钥文件
+  - @ 响应文件
+  - 分析器
+  - 规则集
+  - 分析器可能使用的其他文件
 - 当前区域性（针对生成诊断和异常消息的语言）。
 - 在未指定编码情况下使用的默认编码（或当前代码页）。
 - 编译器搜索路径（例如，由`/lib` 或 `/recurse` 指定）上文件是否存在及其内容。
 - 运行编译器的 CLR 平台。
 - `%LIBPATH%` 的值，该值会影响分析器的依赖项加载。
 
-当源公开可用时，可使用确定性编译来确定是否从可信源编译二进制内容。 它还可有效用于连续生成系统，确定是否需要执行依赖于二进制内容更改的生成步骤。 
+当源公开可用时，可使用确定性编译来确定是否从可信源编译二进制内容。 它还可有效用于连续生成系统，确定是否需要执行依赖于二进制内容更改的生成步骤。
 
 ## <a name="see-also"></a>请参阅
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 208841d880ffcbfb2bbeb9e235cc8cdf0fa2f041
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185531"
 ---
 # <a name="hosting-services"></a>承载服务
 要变为活动状态，服务必须承载于创建它并控制它的上下文和生存期的运行时环境中。 Windows Communication Foundation (WCF) 服务设计为支持托管代码的任何 Windows 进程中运行。  
@@ -45,7 +45,7 @@ ms.locfileid: "54637919"
 |-------------------------|----------------------|----------------------------------|  
 |托管应用程序（“自承载”）|在开发过程中使用的控制台应用程序。<br />丰富 WinForm 和[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]访问服务的客户端应用程序。|-灵活。<br />-易于部署。<br />-未服务的企业解决方案。|  
 |Windows 服务（以前称为 NT 服务）|IIS 外部承载的长时间运行 WCF 服务。|服务进程生存期由操作系统，不是消息激活控制。<br />-支持的所有版本的 Windows。<br />安全环境。|  
-|IIS 5.1、 [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-运行 WCF 服务与并行[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]使用 HTTP 协议在 Internet 上的内容。|-进程回收。<br />-空闲时关闭。<br />-处理运行状况监视。<br />-基于消息的激活。<br />-仅限 HTTP。|  
+|IIS 5.1 中， [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-运行 WCF 服务与并行[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]使用 HTTP 协议在 Internet 上的内容。|-进程回收。<br />-空闲时关闭。<br />-处理运行状况监视。<br />-基于消息的激活。<br />-仅限 HTTP。|  
 |Windows 进程激活服务 (WAS)|-运行而无需使用各种传输协议在 Internet 上安装 IIS 的 WCF 服务。|不需要 IIS。<br />-进程回收。<br />-空闲时关闭。<br />-处理运行状况监视。<br />-基于消息的激活。<br />-适用于 HTTP、 TCP、 命名的管道和 MSMQ。|  
 |IIS 7.0|-运行 WCF 服务使用[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]内容。<br />-使用各种传输协议在 Internet 上运行的 WCF 服务。|-已优势。<br />-与集成[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]和 IIS 内容。|  
   
@@ -62,10 +62,11 @@ ms.locfileid: "54637919"
  值得注意的是，从不受信任的主机运行服务或任何扩展会危害安全。 另请注意，通过模拟打开 <xref:System.ServiceModel.ServiceHost> 时，应用程序必须确保未注销用户，例如通过缓存用户的 <xref:System.Security.Principal.WindowsIdentity> 。  
   
 ## <a name="see-also"></a>请参阅
+
 - [系统要求](../../../docs/framework/wcf/wcf-system-requirements.md)
 - [基本编程生命周期](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)
-- [如何：承载在 IIS 中的 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [如何：承载在 WAS 中的 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [如何：主机托管的 Windows 服务中的 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
-- [如何：承载于托管应用程序的 WCF 服务](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [如何：在 IIS 中承载 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [如何：在 WAS 中承载 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [如何：在托管 Windows 服务中承载 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [如何：在托管应用程序中承载 WCF 服务](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

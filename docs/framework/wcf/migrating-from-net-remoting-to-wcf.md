@@ -2,12 +2,12 @@
 title: 从 .NET 远程处理迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 38ec11b529c7b0444d47971938fb711fe40bee3d
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: c6bc16e97a87461be7b2c4877777329a0005a497
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333061"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296194"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>从 .NET 远程处理迁移到 WCF
 本文介绍如何迁移借助 .NET 远程处理来使用 Windows Communication Foundation (WCF) 的应用程序。 本文对这些产品之间的相似概念进行比较，并介绍如何在 WCF 中完成若干常见的远程处理方案。  
@@ -17,7 +17,7 @@ ms.locfileid: "56333061"
 ## <a name="comparing-net-remoting-to-wcf"></a>比较 .NET 远程处理与 WCF  
  本节将对 .NET 远程处理的基本构建基块与其 WCF 等效物进行比较。 稍后我们将使用这些构建基块创建一些 WCF 中常见的客户端-服务器方案。下表总结了 .NET 远程处理和 WCF 之间的主要异同。  
   
-||.NET 远程处理|WCF|  
+||.NET Remoting|WCF|  
 |-|-------------------|---------|  
 |服务器类型|子类 MarshalByRefObject|标记为具有 [ServiceContract] 属性|  
 |服务操作|服务器类型上的公共方法|标记为具有 [OperationContract] 属性|  
@@ -105,7 +105,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
 -   [使用配置文件配置服务](configuring-services-using-configuration-files.md)  
   
--   [托管服务](hosting-services.md)  
+-   [承载服务](hosting-services.md)  
   
 ### <a name="client-implementation-comparison"></a>客户端实现比较  
   
@@ -149,11 +149,11 @@ Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received
 ### <a name="serialization-usage"></a>序列化用法  
  .NET 远程处理和 WCF 均使用序列化发送客户端和服务器之间的对象，但它们在这些重要的方面有所区别：  
   
-1.  它们使用不同的序列化程序和约定来指示如何序列化。  
+1. 它们使用不同的序列化程序和约定来指示如何序列化。  
   
-2.  .NET 远程处理支持“按引用”序列化，即允许一个层上的方法或属性访问执行另一个层上的代码；此为跨安全边界。 这种功能会公开安全漏洞，并且也是为什么远程处理终结点应永远不向不受信任的客户端公开的主要原因之一。  
+2. .NET 远程处理支持“按引用”序列化，即允许一个层上的方法或属性访问执行另一个层上的代码；此为跨安全边界。 这种功能会公开安全漏洞，并且也是为什么远程处理终结点应永远不向不受信任的客户端公开的主要原因之一。  
   
-3.  远程处理使用的序列化会选择退出（显式排除不进行序列化的成员）和 WCF 序列化会选择性加入（显式标记要序列化的成员）。  
+3. 远程处理使用的序列化会选择退出（显式排除不进行序列化的成员）和 WCF 序列化会选择性加入（显式标记要序列化的成员）。  
   
 #### <a name="serialization-in-net-remoting"></a>.NET 远程处理中的序列化  
  .NET 远程处理支持两种序列化和反序列化客户端和服务器之间的对象的方法：  
@@ -297,7 +297,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **创建数据协定。** 定义将在服务器和客户端之间进行交换的数据类型，并将其标记为 [DataContract] 属性。 标记允许客户端利用 [DataMember] 使用的所有字段和属性。  
   
--   **创建错误协定 （可选）。** 遇到错误时，请创建将在服务器和客户端之间进行交换的类型。 将这些类型标记为 [DataContract] 和 [DataMember] 以使其可序列化。 对于标记为 [OperationContract] 的所有服务操作，还可将其标记为 [FaultContract]，以指示它们可能会返回哪些错误。  
+-   **创建错误协定（可选）。** 遇到错误时，请创建将在服务器和客户端之间进行交换的类型。 将这些类型标记为 [DataContract] 和 [DataMember] 以使其可序列化。 对于标记为 [OperationContract] 的所有服务操作，还可将其标记为 [FaultContract]，以指示它们可能会返回哪些错误。  
   
 -   **配置和承载服务。** 完成创建服务协定后，下一步则是配置一个绑定以公开终结点中的服务。 有关详细信息，请参阅[终结点：地址、 绑定和协定](./feature-details/endpoints-addresses-bindings-and-contracts.md)。  
   
@@ -310,11 +310,11 @@ catch (FaultException<CustomerServiceFault> fault)
 ### <a name="migration-scenarios"></a>迁移方案  
  现在让我们了解如何完成以下 WCF 中的常见远程处理方案：  
   
-1.  服务器将对象按值返回到客户端  
+1. 服务器将对象按值返回到客户端  
   
-2.  服务器将对象按引用返回到客户端  
+2. 服务器将对象按引用返回到客户端  
   
-3.  客户端按值向服务器发送对象  
+3. 客户端按值向服务器发送对象  
   
 > [!NOTE]
 >  WCF 中不允许从客户端将对象按引用发送到服务器。  
@@ -338,7 +338,7 @@ public class RemotingServer : MarshalByRefObject
 #### <a name="scenario-1-service-returns-an-object-by-value"></a>方案 1:服务按值返回对象  
  此方案演示服务器按值将对象返回至客户端。 WCF 始终按值从服务器中返回对象，因此以下步骤仅描述了如何创建普通 WCF 服务。  
   
-1.  首先定义 WCF 服务的公共接口并标记 [ServiceContract] 属性。 使用 [OperationContract] 标识客户端将调用的服务器端方法。  
+1. 首先定义 WCF 服务的公共接口并标记 [ServiceContract] 属性。 使用 [OperationContract] 标识客户端将调用的服务器端方法。  
   
    ```csharp
    [ServiceContract]  
@@ -352,7 +352,7 @@ public class RemotingServer : MarshalByRefObject
    }  
    ```  
   
-2.  下一步则是创建此服务的数据约定。 通过创建具有 [DataContract] 属性标记的类（非接口）来执行此操作。 希望对客户端和服务器可见的单独属性或字段标记为 [DataMember]。 如果希望使用允许派生的类型，则必须使用 [KnownType] 属性来进行标记。 WCF 中允许为此服务进行序列化或反序列化的唯一类型是服务接口类型和“已知类型”。 拒绝尝试交换不在此列表中的任何其他类型。  
+2. 下一步则是创建此服务的数据约定。 通过创建具有 [DataContract] 属性标记的类（非接口）来执行此操作。 希望对客户端和服务器可见的单独属性或字段标记为 [DataMember]。 如果希望使用允许派生的类型，则必须使用 [KnownType] 属性来进行标记。 WCF 中允许为此服务进行序列化或反序列化的唯一类型是服务接口类型和“已知类型”。 拒绝尝试交换不在此列表中的任何其他类型。  
   
    ```csharp
    [DataContract]  
@@ -377,7 +377,7 @@ public class RemotingServer : MarshalByRefObject
    }  
    ```  
   
-3.  接下来，将提供服务接口的实现。  
+3. 接下来，将提供服务接口的实现。  
   
    ```csharp  
    public class CustomerService : ICustomerService  
@@ -394,7 +394,7 @@ public class RemotingServer : MarshalByRefObject
    }  
    ```  
   
-4.  若要运行 WCF 服务，则需要声明终结点将公开使用特定 WCF 绑定的特定 URL 中的该服务接口。 这通常通过向服务器项目的 web.config 文件中添加以下各节而实现的。  
+4. 若要运行 WCF 服务，则需要声明终结点将公开使用特定 WCF 绑定的特定 URL 中的该服务接口。 这通常通过向服务器项目的 web.config 文件中添加以下各节而实现的。  
   
     ```xml  
     <configuration>  
@@ -410,7 +410,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-5.  然后，可用下面的代码中启动 WCF 服务：  
+5. 然后，可用下面的代码中启动 WCF 服务：  
   
    ```csharp
    ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
@@ -419,7 +419,7 @@ public class RemotingServer : MarshalByRefObject
   
      当启动此 ServiceHost 时，它会使用 web.config 文件以建立适当的协定、绑定和终结点。 有关配置文件的详细信息，请参阅[使用配置文件配置服务](./configuring-services-using-configuration-files.md)。 这种启动服务器的样式称为自我托管。 若要了解有关托管 WCF 服务的其他选项的详细信息，请参阅[托管服务](./hosting-services.md)。  
   
-6.  客户端项目的 app.config 必须声明匹配服务终结点的绑定信息。 Visual Studio 中执行此操作的最简单方法是使用**添加服务引用**，然后将自动更新 app.config 文件。 或者，可以手动添加这些相同的更改。  
+6. 客户端项目的 app.config 必须声明匹配服务终结点的绑定信息。 Visual Studio 中执行此操作的最简单方法是使用**添加服务引用**，然后将自动更新 app.config 文件。 或者，可以手动添加这些相同的更改。  
   
     ```xml  
     <configuration>  
@@ -436,7 +436,7 @@ public class RemotingServer : MarshalByRefObject
   
      有关使用详细信息**添加服务引用**，请参阅[如何：添加、 更新或删除服务引用](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)。  
   
-7.  现在可以从客户端中调用 WCF 服务。 可通过创建该服务的通道工厂、要求提供通道以及直接调用想要用在该通道中的方法实现此操作。 可进行此操作的原因是通道可实现服务接口，并为我们处理基础的请求/答复逻辑。 此方法调用的返回值是服务器响应的反序列化副本。  
+7. 现在可以从客户端中调用 WCF 服务。 可通过创建该服务的通道工厂、要求提供通道以及直接调用想要用在该通道中的方法实现此操作。 可进行此操作的原因是通道可实现服务接口，并为我们处理基础的请求/答复逻辑。 此方法调用的返回值是服务器响应的反序列化副本。  
   
    ```csharp
    ChannelFactory<ICustomerService> factory =  
@@ -451,7 +451,7 @@ public class RemotingServer : MarshalByRefObject
 #### <a name="scenario-2-server-returns-an-object-by-reference"></a>方案 2:服务器按引用返回的对象  
  此方案演示服务器按引用向客户端提供对象。 在 .NET 远程处理中，这会自动处理任何派生自 MarshalByRefObject 的类型，即序列化的引用。 此方案的一个示例是允许多个客户端拥有独立会话的服务端对象。 正如前面所述，WCF 服务返回的对象始终按值返回，因此并没有直接对等的按引用对象，但是有可能实现类似于使用 <xref:System.ServiceModel.EndpointAddress10> 对象的按引用语义。 这是客户端用于获取服务器上会话按引用对象的可序列化的值对象。 这将使多个客户端拥有独立会话的服务器端对象的方案得以实现。  
   
-1.  首先，需要定义与会话对象本身对应的 WCF 服务协定。  
+1. 首先，需要定义与会话对象本身对应的 WCF 服务协定。  
   
    ```csharp
    [ServiceContract(SessionMode = SessionMode.Allowed)]  
@@ -468,7 +468,7 @@ public class RemotingServer : MarshalByRefObject
     > [!TIP]
     >  请注意该会话对象用 [ServiceContract] 进行了标记，使其成为普通的 WCF 服务接口。 设置 SessionMode 属性指示其将为会话服务。 在 WCF 中，会话是使两个终结点之间发送的多个消息关联的一种方法。 这意味着一旦客户端获取与此服务的连接，将会建立客户端和服务器之间的会话。 对于此单个会话中的所有交互，客户端都将使用服务器端对象的单个唯一实例。  
   
-2.  接下来，需要提供此服务接口的实现。 通过使用 [ServiceBehavior] 进行表示，并设置 InstanceContextMode，将告知 WCF 希望使用每个会话的此类型的唯一实例。  
+2. 接下来，需要提供此服务接口的实现。 通过使用 [ServiceBehavior] 进行表示，并设置 InstanceContextMode，将告知 WCF 希望使用每个会话的此类型的唯一实例。  
   
    ```csharp
    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
@@ -489,7 +489,7 @@ public class RemotingServer : MarshalByRefObject
        }  
    ```  
   
-3.  现在，需要一种方法以获取此会话对象的实例。 通过创建返回 EndpointAddress10 对象的另一个 WCF 服务接口来执行此操作。 这是一种客户端可用来创建会话对象的终结点的可序列化形式。  
+3. 现在，需要一种方法以获取此会话对象的实例。 通过创建返回 EndpointAddress10 对象的另一个 WCF 服务接口来执行此操作。 这是一种客户端可用来创建会话对象的终结点的可序列化形式。  
   
    ```csharp
    [ServiceContract]  
@@ -522,7 +522,7 @@ public class RemotingServer : MarshalByRefObject
   
      此实现维护单一实例通道工厂以创建会话对象。 当调用 GetInstanceAddress() 时，它会创建一个通道，并创建一个有效地指向与此通道关联的远程地址的 EndpointAddress10 对象。 EndpointAddress10 只是一种可按值返回至客户端的数据类型。  
   
-4.  需要通过执行以下两个事件，修改服务器的配置文件，如下面的示例所示：  
+4. 需要通过执行以下两个事件，修改服务器的配置文件，如下面的示例所示：  
   
     1.  声明\<客户端 > 描述会话对象终结点的部分。 此声明是必需的，原因是在此情况下此服务器还可作为客户端。  
   
@@ -568,7 +568,7 @@ public class RemotingServer : MarshalByRefObject
    sessionHost.Open();  
    ```  
   
-5.  可通过声明其项目 app.config 文件中这些相同的终结点配置客户端。  
+5. 可通过声明其项目 app.config 文件中这些相同的终结点配置客户端。  
   
     ```xml  
     <configuration>  
@@ -591,7 +591,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-6.  为了创建和使用此会话对象，客户端必须执行以下步骤：  
+6. 为了创建和使用此会话对象，客户端必须执行以下步骤：  
   
     1.  创建 ISessionBoundFactory 服务的通道。  
   
@@ -634,9 +634,9 @@ public class RemotingServer : MarshalByRefObject
 #### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>方案 3:客户端向服务器发送按值实例  
  此方案演示客户端按值向服务器发送一个非基元对象实例。 由于 WCF 仅发送按值对象，因此此方案演示正常使用 WCF 的情况。  
   
-1.  使用与方案 1 中相同的 WCF 服务。  
+1. 使用与方案 1 中相同的 WCF 服务。  
   
-2.  使用客户端创建一个新的按值对象（客户）、创建与 ICustomerService 服务进行通信的通道，并向其发送该对象。  
+2. 使用客户端创建一个新的按值对象（客户）、创建与 ICustomerService 服务进行通信的通道，并向其发送该对象。  
   
    ```csharp
    ChannelFactory<ICustomerService> factory =  

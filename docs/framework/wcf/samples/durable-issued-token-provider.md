@@ -2,12 +2,12 @@
 title: 持久性已颁发令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 72c8b4e74607a1ed7f616959a6445f21b595a956
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103254"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329747"
 ---
 # <a name="durable-issued-token-provider"></a>持久性已颁发令牌提供程序
 此示例演示如何实现一个自定义客户端已颁发令牌提供程序。  
@@ -114,7 +114,7 @@ ms.locfileid: "59103254"
   
 #### <a name="to-develop-a-custom-token-provider"></a>开发自定义安全令牌提供程序  
   
-1.  编写自定义令牌提供程序。  
+1. 编写自定义令牌提供程序。  
   
      此示例实现一个自定义令牌提供程序，它返回从缓存中检索的安全令牌。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "59103254"
     }  
     ```  
   
-2.  编写自定义安全令牌管理器。  
+2. 编写自定义安全令牌管理器。  
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> 用于为在 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法中传递给它的特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 创建 `CreateSecurityTokenProvider`。 安全令牌管理器还用于创建令牌身份验证器和令牌序列化程序，但本示例不涉及这些内容。 在此示例中，自定义安全令牌管理器从 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类集成，并重写 `CreateSecurityTokenProvider` 方法，以便在所传递的令牌需求指示需要一个已颁发的令牌时返回自定义令牌提供程序。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "59103254"
     }  
     ```  
   
-3.  编写自定义客户端凭据。  
+3. 编写自定义客户端凭据。  
   
      客户端凭据类用于表示为客户端代理配置的凭据并创建一个安全令牌管理器，该管理器用于获取令牌身份验证器、令牌提供程序和令牌序列化程序。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "59103254"
     }  
     ```  
   
-4.  实现令牌缓存。 该示例实现使用一个抽象基类，给定令牌缓存的使用方通过该基类与缓存进行交互。  
+4. 实现令牌缓存。 该示例实现使用一个抽象基类，给定令牌缓存的使用方通过该基类与缓存进行交互。  
   
     ```  
     public abstract class IssuedTokenCache  
@@ -233,17 +233,17 @@ ms.locfileid: "59103254"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
-1.  运行 Setup.cmd 文件以创建所需的证书。  
+1. 运行 Setup.cmd 文件以创建所需的证书。  
   
-2.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。 确保生成解决方案中的所有项目（Shared、RSTRSTR、Service、SecurityTokenService 和 Client）。  
+2. 若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。 确保生成解决方案中的所有项目（Shared、RSTRSTR、Service、SecurityTokenService 和 Client）。  
   
-3.  确保 Service.exe 和 SecurityTokenService.exe 都使用管理员权限运行。  
+3. 确保 Service.exe 和 SecurityTokenService.exe 都使用管理员权限运行。  
   
-4.  运行 Client.exe。  
+4. 运行 Client.exe。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
-1.  运行完示例后运行示例文件夹中的 Cleanup.cmd。  
+1. 运行完示例后运行示例文件夹中的 Cleanup.cmd。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

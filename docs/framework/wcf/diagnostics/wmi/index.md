@@ -2,12 +2,12 @@
 title: 使用 Windows Management Instrumentation 进行诊断
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a5dae1479c9be7954b9eec1eed197f358eb48e4f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239509"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308583"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 进行诊断
 Windows Communication Foundation (WCF) 公开在通过 WCF Windows Management Instrumentation (WMI) 提供程序的运行时服务的检测数据。  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) 公开在通过 WCF Windows Management In
  此配置项公开 WMI 接口。 现在，您可以通过此接口连接管理应用程序并访问应用程序的管理规范。  
   
 ## <a name="accessing-wmi-data"></a>访问 WMI 数据  
- 可以采用多种不同方式访问 WMI 数据。 Microsoft 提供脚本、 Visual Basic 应用程序、 c + + 应用程序的 WMI Api 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]。 有关详细信息，请参阅[使用 WMI](https://go.microsoft.com/fwlink/?LinkId=95183)。  
+ 可以采用多种不同方式访问 WMI 数据。 Microsoft 提供脚本、 Visual Basic 应用程序，WMI ApiC++应用程序，并[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]。 有关详细信息，请参阅[使用 WMI](https://go.microsoft.com/fwlink/?LinkId=95183)。  
   
 > [!CAUTION]
 >  如果您使用 .NET Framework 提供的方法以编程方式访问 WMI 数据，您应注意此类方法可能会在建立连接时引发异常。 连接并不是在构建 <xref:System.Management.ManagementObject> 实例的过程中建立的，而是在涉及实际数据交换的第一次请求时建立的。 因此，您应该使用 `try..catch` 块来捕捉可能的异常。  
@@ -56,26 +56,26 @@ Windows Communication Foundation (WCF) 公开在通过 WCF Windows Management In
   
  若要修改用户特权级别，请使用下列步骤。  
   
-1.  单击开始，然后运行并键入**compmgmt.msc**。  
+1. 单击开始，然后运行并键入**compmgmt.msc**。  
   
-2.  右键单击**服务和应用程序 /WMI 控制**以选择**属性**。  
+2. 右键单击**服务和应用程序 /WMI 控制**以选择**属性**。  
   
-3.  选择**安全**选项卡上，并导航到**Root/ServiceModel**命名空间。 单击**安全**按钮。  
+3. 选择**安全**选项卡上，并导航到**Root/ServiceModel**命名空间。 单击**安全**按钮。  
   
-4.  选择的特定组或你想要控制访问和使用的用户**允许**或**拒绝**复选框配置权限。  
+4. 选择的特定组或你想要控制访问和使用的用户**允许**或**拒绝**复选框配置权限。  
   
 ## <a name="granting-wcf-wmi-registration-permissions-to-additional-users"></a>向其他用户授予 WCF WMI 注册权限  
  WCF 将管理数据公开到 WMI。 它会通过托管的进程内 WMI 提供程序，有时称为"分离式提供程序"。 对于要公开的管理数据，注册此提供程序的帐户必须具有适当的权限。 在 Windows 中，默认情况下只有一小组特权帐户可以注册分离的提供程序。 这是一个问题，因为用户通常要从不在默认集中的帐户下运行的 WCF 服务公开 WMI 数据。  
   
  若要提供此访问权，管理员必须按以下顺序向其他帐户授予以下权限：  
   
-1.  用于访问 WCF WMI 命名空间的权限。  
+1. 用于访问 WCF WMI 命名空间的权限。  
   
-2.  用于注册 WCF 分离 WMI 提供程序的权限。  
+2. 用于注册 WCF 分离 WMI 提供程序的权限。  
   
 #### <a name="to-grant-wmi-namespace-access-permission"></a>授予 WMI 命名空间访问权限  
   
-1.  运行下面的 PowerShell 脚本。  
+1. 运行下面的 PowerShell 脚本。  
   
     ```powershell  
     write-host ""  
@@ -122,7 +122,7 @@ Windows Communication Foundation (WCF) 公开在通过 WCF Windows Management In
   
 #### <a name="to-grant-provider-registration-access"></a>向提供程序授予注册访问权  
   
-1.  运行下面的 PowerShell 脚本。  
+1. 运行下面的 PowerShell 脚本。  
   
     ```powershell  
     write-host ""  
@@ -157,16 +157,16 @@ Whoami /user
   
  **%windir%\Program Files\WMI 工具\\**  
   
-1.  在中**连接到命名空间：** 窗口中，键入**root\ServiceModel**单击**确定。**  
+1. 在中**连接到命名空间：** 窗口中，键入**root\ServiceModel**单击**确定。**  
   
-2.  在中**WMI CIM Studio 登录**窗口中，单击**选项 >>** 按钮展开该窗口。 选择**数据包保密性**有关**身份验证级别**，然后单击**确定**。  
+2. 在中**WMI CIM Studio 登录**窗口中，单击**选项 >>** 按钮展开该窗口。 选择**数据包保密性**有关**身份验证级别**，然后单击**确定**。  
   
 ### <a name="windows-management-instrumentation-tester"></a>Windows Management Instrumentation 测试器  
  此工具由 Windows 安装。 若要运行它，启动命令控制台，通过键入**cmd.exe**中**开始/运行**对话框中，单击**确定**。 然后，键入**wbemtest.exe**命令窗口中。 Windows Management Instrumentation 测试器工具随即启动。  
   
-1.  单击**Connect**在窗口右上角的按钮。  
+1. 单击**Connect**在窗口右上角的按钮。  
   
-2.  在新窗口中，输入**root\ServiceModel**有关**Namespace**字段，然后选择**数据包保密性**有关**身份验证级别**。 单击“连接” 。  
+2. 在新窗口中，输入**root\ServiceModel**有关**Namespace**字段，然后选择**数据包保密性**有关**身份验证级别**。 单击“连接” 。  
   
 ### <a name="using-managed-code"></a>使用托管代码  
  您还可以通过使用由 <xref:System.Management> 命名空间提供的类以编程方式访问远程 WMI 实例。 下面的代码示例演示如何实现此操作。  

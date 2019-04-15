@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 59b54cfd731c21982cae9a07fd1e37d97f3747db
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ae2305e0f5d3ca4de386d8e7933a1107450e0be4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486975"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341499"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform（C# 编译器选项）
 指定公共语言运行时 (CLR) 的哪个版本可以运行程序集。  
@@ -60,11 +60,11 @@ ms.locfileid: "57486975"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的“属性”  页。  
+1. 打开项目的“属性”  页。  
   
-2.  单击“生成”属性页。  
+2. 单击“生成”属性页。  
   
-3.  修改“目标平台”属性，对于针对 .NET Framework 4.5 的项目，选择或清除“首选 32 位”复选框。  
+3. 修改“目标平台”属性，对于针对 .NET Framework 4.5 的项目，选择或清除“首选 32 位”复选框。  
   
  请注意，-platform 在 Visual C# Express 的开发环境中不可用。  
   

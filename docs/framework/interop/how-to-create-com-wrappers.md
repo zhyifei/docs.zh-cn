@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540970"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324119"
 ---
 # <a name="how-to-create-com-wrappers"></a>如何：创建 COM 包装
 
@@ -28,13 +28,13 @@ ms.locfileid: "54540970"
 
 ### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>使用 Visual Studio 创建运行时可调用包装器
 
-1.  打开托管应用程序的项目。
+1. 打开托管应用程序的项目。
 
-2.  在“项目”菜单上，单击“显示所有文件”。
+2. 在“项目”菜单上，单击“显示所有文件”。
 
-3.  在“项目”菜单上，单击“添加引用”。
+3. 在“项目”菜单上，单击“添加引用”。
 
-4.  在“添加引用”对话框中，单击“COM”选项卡，选择要使用的组件，然后单击“确定”。
+4. 在“添加引用”对话框中，单击“COM”选项卡，选择要使用的组件，然后单击“确定”。
 
      在“解决方案资源管理器”中检查 COM 组件是否已添加到项目的“引用”文件夹中。
 
@@ -53,15 +53,15 @@ ms.locfileid: "54540970"
   
 ### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>使用 Visual Studio 创建 COM 可调用包装器  
   
-1.  为要在本机代码中运行的托管类创建类库项目。 此类必须具有默认的构造函数。  
+1. 为要在本机代码中运行的托管类创建类库项目。 此类必须具有默认的构造函数。  
   
      在 AssemblyInfo 文件中验证程序集是否具有由四部分构成的完整版本号。 在 Windows 注册表中维护版本控制需要此版本号。 有关版本号的详细信息，请参阅[程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)。  
   
-2.  在“项目”菜单上，单击“属性”。  
+2. 在“项目”菜单上，单击“属性”。  
   
-3.  单击“编译”选项卡。  
+3. 单击“编译”选项卡。  
   
-4.  选择“为 COM 互操作注册”复选框。  
+4. 选择“为 COM 互操作注册”复选框。  
   
  生成项目时，将自动为 COM 互操作注册程序集。 如果要在 Visual Studio 2005 中生成本机应用程序，可以通过单击“项目”菜单上的“添加引用”来使用此程序集。  
   
@@ -75,5 +75,5 @@ ms.locfileid: "54540970"
   
 ## <a name="see-also"></a>请参阅
 
-- [运行时可调用包装器](../../../docs/framework/interop/runtime-callable-wrapper.md)
-- [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)
+- [运行时可调用包装](../../../docs/framework/interop/runtime-callable-wrapper.md)
+- [COM 可调用包装](../../../docs/framework/interop/com-callable-wrapper.md)

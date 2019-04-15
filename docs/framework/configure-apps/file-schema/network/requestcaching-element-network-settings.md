@@ -1,5 +1,5 @@
 ---
-title: <requestCaching> 元素（网络设置）
+title: <requestCaching> 元素 （网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: d78325438ba158c0c1d0e322d0b02d0a0a2a57f0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: af290e4b9258a08425a15e297ff538502edea916
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277701"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164848"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching > 元素 （网络设置）
 控制网络请求的缓存机制。  
@@ -49,7 +49,7 @@ ms.locfileid: "55277701"
   
 ## <a name="policylevel-attribute"></a>policyLevel 属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`Default`|如果资源是最新、 内容长度是准确的并且存在过期、 修改和内容长度属性将，返回缓存的资源。|  
 |`BypassCache`|从服务器返回的资源。|  
@@ -87,5 +87,6 @@ ms.locfileid: "55277701"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Net.Cache?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

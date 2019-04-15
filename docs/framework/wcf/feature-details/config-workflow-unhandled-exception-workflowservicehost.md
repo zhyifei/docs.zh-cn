@@ -1,20 +1,20 @@
 ---
-title: 如何：配置工作流未经处理的异常行为使用 WorkflowServiceHost
+title: 如何：使用 WorkflowServiceHost 配置工作流未经处理的异常行为
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
-ms.openlocfilehash: 9a13bb9390e891295491722898bd780bc1cac587
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd3729019b5371b5313bba3814758c723c0d448a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636152"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318737"
 ---
-# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>如何：配置工作流未经处理的异常行为使用 WorkflowServiceHost
+# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>如何：使用 WorkflowServiceHost 配置工作流未经处理的异常行为
 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 行为可用于指定 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 承载的工作流中出现未经处理的异常时所采取的操作。 本主题演示如何在配置文件中配置此行为。  
   
 ### <a name="to-configure-workflowunhandledexceptionbehavior"></a>配置 WorkflowUnhandledExceptionBehavior  
   
-1.  添加 <`workflowUnhandledException`> 元素中的 <`behavior`> 元素中的 <`serviceBehaviors`> 元素中，使用`action`特性以指定要执行下面的示例中所示发生未处理的异常时的操作。  
+1. 添加 <`workflowUnhandledException`> 元素中的 <`behavior`> 元素中的 <`serviceBehaviors`> 元素中，使用`action`特性以指定要执行下面的示例中所示发生未处理的异常时的操作。  
   
     ```xml  
     <behaviors>  
@@ -52,5 +52,6 @@ ms.locfileid: "54636152"
      有关详细信息<xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>，请参阅[Workflow Service Host Extensibility](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)。  
   
 ## <a name="see-also"></a>请参阅
-- [工作流服务主机扩展性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
+
+- [工作流服务主机可扩展性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
 - [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)

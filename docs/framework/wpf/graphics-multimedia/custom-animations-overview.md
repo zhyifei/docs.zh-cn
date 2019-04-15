@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358517"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313939"
 ---
 # <a name="custom-animations-overview"></a>自定义动画概述
 本主题介绍如何以及何时通过以下方法来扩展 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统：创建自定义关键帧、动画类或者使用每帧回叫来绕过它。  
@@ -99,9 +99,9 @@ ms.locfileid: "57358517"
   
  推荐的范例（由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画使用）是使用两个继承级别：  
   
-1.  创建一个抽象*\<类型 >* AnimationBase 类派生自<xref:System.Windows.Media.Animation.AnimationTimeline>。 此类应重写<xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>方法。 它还应引入新的抽象方法 GetCurrentValueCore，并重写<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>，以便它验证默认原始值和默认目标值参数的类型，然后调用 GetCurrentValueCore。  
+1. 创建一个抽象*\<类型 >* AnimationBase 类派生自<xref:System.Windows.Media.Animation.AnimationTimeline>。 此类应重写<xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>方法。 它还应引入新的抽象方法 GetCurrentValueCore，并重写<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>，以便它验证默认原始值和默认目标值参数的类型，然后调用 GetCurrentValueCore。  
   
-2.  创建另一个类继承的新*\<类型 >* AnimationBase 类并重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法中，你引入的 GetCurrentValueCore 方法和<xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>属性。  
+2. 创建另一个类继承的新*\<类型 >* AnimationBase 类并重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法中，你引入的 GetCurrentValueCore 方法和<xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>属性。  
   
  **替代方法**  
   
@@ -124,6 +124,7 @@ ms.locfileid: "57358517"
  有关详细信息，请参阅<xref:System.Windows.Media.CompositionTarget.Rendering>页。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
 - [属性动画技术概述](property-animation-techniques-overview.md)

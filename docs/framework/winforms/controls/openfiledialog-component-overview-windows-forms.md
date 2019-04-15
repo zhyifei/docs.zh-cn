@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OpenFileDialog component [Windows Forms], about OpenFileDialog
 - Open File dialog box [Windows Forms], displaying in Windows Forms
 ms.assetid: cd717300-46b6-4f82-8207-b218fa7fa407
-ms.openlocfilehash: ad2fea74f0f3110ab2868064c588a7611d4261e3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ec275a5923d332d23205c79442fa23bc6e402e3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147327"
 ---
 # <a name="openfiledialog-component-overview-windows-forms"></a>OpenFileDialog 组件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.OpenFileDialog> 组件是一个预配置的对话框。 它是相同**打开的文件**公开的 Windows 操作系统的对话框。 它继承自 <xref:System.Windows.Forms.CommonDialog> 类。  
@@ -25,5 +25,6 @@ Windows 窗体 <xref:System.Windows.Forms.OpenFileDialog> 组件是一个预配�
  添加到窗体时<xref:System.Windows.Forms.OpenFileDialog>组件在 Windows 窗体设计器底部的任务栏中显示。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.OpenFileDialog>
 - [OpenFileDialog 组件](openfiledialog-component-windows-forms.md)

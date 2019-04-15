@@ -2,15 +2,15 @@
 title: 导出 WCF 扩展的自定义元数据
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: fa6a2751f8ef3326febc7fa6bed85e10603701c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616051"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334505"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>导出 WCF 扩展的自定义元数据
-在 Windows Communication Foundation (WCF) 中，元数据导出是描述服务终结点并将它们投影到客户端可用来了解如何使用服务的并行的标准化表示形式的过程。 自定义元数据包含系统提供的元数据导出程序无法导出的 XML 元素。 通常，这包括自定义 WSDL 元素（用于用户定义的行为）、绑定元素和策略断言（与绑定和协定的功能和要求有关）。  
+在 Windows Communication Foundation (WCF) 中，元数据导出是描述服务终结点并将它们投影到客户端可用来了解如何使用服务的并行的标准化表示形式的过程。 自定义元数据包含系统提供的元数据导出程序无法导出的 XML 元素。 通常，这包括自定义 WSDL 元素（用于用户定义的行为）、绑定元素和策略断言（与绑定和协定的功能和需求有关）。  
   
  本节介绍如何导出自定义 WSDL 或策略断言，而不关注导出过程本身。 有关如何使用导出和导入元数据，而不管元数据是自定义的还是系统构造的类型的详细信息，请参阅[导出和导入元数据](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
   
@@ -19,9 +19,9 @@ ms.locfileid: "54616051"
   
  本节介绍以下内容：  
   
-1.  如何实现和使用 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 接口，该接口在发布 WSDL 之前向您公开 WSDL 生成数据。  
+1. 如何实现和使用 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 接口，该接口在发布 WSDL 之前向您公开 WSDL 生成数据。  
   
-2.  如何实现和使用 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 接口，该接口在导出 WSDL 数据中的策略断言之前向您公开策略数据。  
+2. 如何实现和使用 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 接口，该接口在导出 WSDL 数据中的策略断言之前向您公开策略数据。  
   
  有关导入自定义 WSDL 和策略断言的详细信息，请参阅[导入 WCF 扩展的自定义元数据](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)。  
   
@@ -42,6 +42,7 @@ ms.locfileid: "54616051"
  有关详细信息，请参阅[如何：导出自定义策略断言](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [如何：导出自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
 - [如何：导出自定义策略断言](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)
 - [导入 WCF 扩展的自定义元数据](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

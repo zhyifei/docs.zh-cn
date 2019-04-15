@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: befa74f02ccb0dde4448f36c0698feebaf6201ce
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286398"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297482"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 配置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) 时使用联合身份验证通过 WS 联合身份验证协议。 配置<xref:System.Security.Claims.ClaimsAuthorizationManager>使用时<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>类以提供基于声明的访问控制。  
@@ -58,13 +58,13 @@ ms.locfileid: "55286398"
   
  无论何种方案，在运行时加载默认联合身份验证配置。 行为定义，如下所示：  
   
-1.  如果没有任何`<federationConfiguration>`元素不存在，运行时创建的联合身份验证配置，并使用默认值填充它。 这种默认联合身份验证配置将引用的默认标识配置。  
+1. 如果没有任何`<federationConfiguration>`元素不存在，运行时创建的联合身份验证配置，并使用默认值填充它。 这种默认联合身份验证配置将引用的默认标识配置。  
   
-2.  如果某个`<federationConfiguration>`元素存在，它是无论它是名为还是未命名的默认联合身份验证配置。 如果其`identityConfiguration`指定属性，引用名为的标识配置; 否则，引用默认标识配置。  
+2. 如果某个`<federationConfiguration>`元素存在，它是无论它是名为还是未命名的默认联合身份验证配置。 如果其`identityConfiguration`指定属性，引用名为的标识配置; 否则，引用默认标识配置。  
   
-3.  如果未命名`<federationConfiguration>`元素存在，它是默认的联合身份验证配置。 如果其`identityConfiguration`指定属性，引用名为的标识配置; 否则，引用默认标识配置。  
+3. 如果未命名`<federationConfiguration>`元素存在，它是默认的联合身份验证配置。 如果其`identityConfiguration`指定属性，引用名为的标识配置; 否则，引用默认标识配置。  
   
-4.  如果多个名为`<federationConfiguration>`元素是否存在以及是否未命名`<federationConfiguration>`元素存在，将引发异常。  
+4. 如果多个名为`<federationConfiguration>`元素是否存在以及是否未命名`<federationConfiguration>`元素存在，将引发异常。  
   
  通常情况下，只有一个`<federationConfiguration>`定义部分。 本部分是默认联合身份验证配置。 你可以指定多个唯一命名`<federationConfiguration>`元素; 但是，在这种情况下，如果你想要加载而未命名的联合身份验证配置，则必须提供的处理程序。 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> 事件并设置<xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType>属性的处理程序内<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>对象从相应的值初始化`<federationConfiguration>`配置文件中的元素。  
   
@@ -92,6 +92,7 @@ ms.locfileid: "55286398"
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

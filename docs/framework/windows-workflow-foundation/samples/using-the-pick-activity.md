@@ -2,12 +2,12 @@
 title: 使用 Pick 活动
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 59f99d2e0a69d796c1ec64093cf73e07b88887c9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848278"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302969"
 ---
 # <a name="using-the-pick-activity"></a>使用 Pick 活动
 此示例演示如何使用 <xref:System.Activities.Statements.Pick> 活动。
@@ -24,25 +24,25 @@ ms.locfileid: "48848278"
 
  设计器工作流设计器版本的示例演示如何在设计器中创建工作流。 包含以下文件：
 
--   Program.cs：包含执行示例工作流的 `Main` 函数。
+-   Program.cs:包括`Main`执行示例工作流函数。
 
--   ReadString.cs：一个从控制台读取一些输入的自定义活动。
+-   ReadString.cs:从控制台读取一些输入自定义活动。
 
--   Sequence1.xaml：一个通过使用 Pick 的设计器创建的工作流。
+-   Sequence1.xaml:使用 Pick 的设计器创建一个工作流。
 
  编码工作流示例的编码版本演示如何在设计器中创建工作流。 包含以下文件：
 
--   Program.cs：包含执行示例工作流的 `Main` 函数。
+-   Program.cs:包括`Main`执行示例工作流函数。
 
--   ReadString.cs：一个从控制台读取一些输入的自定义活动。
+-   ReadString.cs:从控制台读取一些输入自定义活动。
 
 #### <a name="to-use-this-sample"></a>使用此示例
 
-1.  使用 Visual Studio 2010 打开 Pick.sln 文件。
+1. 使用 Visual Studio 2010 打开 Pick.sln 文件。
 
-2.  要生成解决方案，按 Ctrl+Shift+B。
+2. 要生成解决方案，按 Ctrl+Shift+B。
 
-3.  若要运行解决方案，请按 F5。
+3. 若要运行解决方案，请按 F5。
 
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

@@ -2,12 +2,12 @@
 title: LINQ to Objects (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: dd4c30bc-1c9b-4781-a482-b5eada38deb2
-ms.openlocfilehash: 87c804a831272b2a0c08ac85a552fec86d665e7f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c1e2e8fbaaf984fec69322a459fc7c55890965ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185462"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326874"
 ---
 # <a name="linq-to-objects-visual-basic"></a>LINQ to Objects (Visual Basic)
 术语“LINQ to Objects”指直接将 LINQ 查询与任何 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 集合一起使用，而不使用中间 LINQ 提供程序或 API，例如 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) 或 [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)。 可以使用 LINQ 来查询任何可枚举的集合，例如 <xref:System.Collections.Generic.List%601>、<xref:System.Array> 或 <xref:System.Collections.Generic.Dictionary%602>。 该集合可以是用户定义的集合，也可以是由 .NET Framework API 返回的集合。  
@@ -16,11 +16,11 @@ ms.locfileid: "44185462"
   
  此外，LINQ 查询与传统 `For Each` 循环相比具有三大优势：  
   
-1.  它们更简明、更易读，尤其在筛选多个条件时。  
+1. 它们更简明、更易读，尤其在筛选多个条件时。  
   
-2.  它们使用最少的应用程序代码提供强大的筛选、排序和分组功能。  
+2. 它们使用最少的应用程序代码提供强大的筛选、排序和分组功能。  
   
-3.  无需修改或只需做很小的修改即可将它们移植到其他数据源。  
+3. 无需修改或只需做很小的修改即可将它们移植到其他数据源。  
   
  通常，对数据执行的操作越复杂，就越能体会到 LINQ 相较于传统迭代技术的优势。  
   
@@ -36,10 +36,10 @@ ms.locfileid: "44185462"
  [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
  阐释如何使用 LINQ 来与文件系统进行交互。 还包括指向演示这些概念的主题的链接。  
   
- [如何： 使用 LINQ (Visual Basic) 查询 ArrayList](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ [如何：使用 LINQ (Visual Basic) 查询 ArrayList](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
  演示如何使用 C# 查询 ArrayList。  
   
- [如何： 为 LINQ 查询 (Visual Basic 中) 添加自定义方法](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ [如何：为 LINQ 查询 (Visual Basic 中) 添加自定义方法](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
  阐释如何通过向 <xref:System.Collections.Generic.IEnumerable%601> 接口中添加扩展方法来扩展可用于 LINQ 查询的方法集。  
   
  [语言集成查询 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  

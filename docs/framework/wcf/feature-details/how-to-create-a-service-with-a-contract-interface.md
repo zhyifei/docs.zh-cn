@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
-ms.openlocfilehash: c31a954d659b3f686f8b9780276a4719064e60cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0aa5429d771aeda0b392b89ec4cc1a07de30973f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298534"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>如何：使用协定接口创建服务
 若要创建 Windows Communication Foundation (WCF) 协定的首选的方法是使用接口。 此协定指定访问服务提供的操作所必需的消息的集合和结构。 此接口通过将 <xref:System.ServiceModel.ServiceContractAttribute> 类应用到该接口并将 <xref:System.ServiceModel.OperationContractAttribute> 类应用到要公开的方法来定义输入和输出类型。  
@@ -19,13 +19,13 @@ ms.locfileid: "59128708"
   
 ### <a name="creating-a-wcf-contract-with-an-interface"></a>使用接口创建 WCF 协定  
   
-1.  创建新的接口使用 Visual Basic 中， C#，或任何将其他公共语言运行时语言。  
+1. 创建新的接口使用 Visual Basic 中， C#，或任何将其他公共语言运行时语言。  
   
-2.  将 <xref:System.ServiceModel.ServiceContractAttribute> 类应用到该接口。  
+2. 将 <xref:System.ServiceModel.ServiceContractAttribute> 类应用到该接口。  
   
-3.  定义该接口中的方法。  
+3. 定义该接口中的方法。  
   
-4.  将应用<xref:System.ServiceModel.OperationContractAttribute>必须作为公共 WCF 协定的一部分进行公开的每个方法的类。  
+4. 将应用<xref:System.ServiceModel.OperationContractAttribute>必须作为公共 WCF 协定的一部分进行公开的每个方法的类。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示一个定义服务协定的接口。  

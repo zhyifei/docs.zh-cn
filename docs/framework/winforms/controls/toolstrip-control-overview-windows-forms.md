@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144568"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.ToolStrip>控制和及其关联的类将用户界面元素组合到工具栏、 状态栏和菜单提供一个通用框架。 <xref:System.Windows.Forms.ToolStrip> 控件提供丰富的设计时体验，包括就地激活和编辑、 自定义布局和漂浮，即工具栏共享水平或垂直空间的能力。  
@@ -46,7 +46,7 @@ Windows 窗体<xref:System.Windows.Forms.ToolStrip>控制和及其关联的类�
   
 ### <a name="important-toolstrip-members"></a>重要 ToolStrip 成员  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|获取或设置父容器的边缘<xref:System.Windows.Forms.ToolStrip>停靠。|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|获取或设置一个用于指示是否专门由 <xref:System.Windows.Forms.ToolStrip> 类处理拖放和项重新排序操作的值。|  
@@ -62,7 +62,7 @@ Windows 窗体<xref:System.Windows.Forms.ToolStrip>控制和及其关联的类�
   
 ### <a name="important-toolstrip-companion-classes"></a>重要 ToolStrip 伴生类  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|替换并添加了功能<xref:System.Windows.Forms.MainMenu>类。|  
 |<xref:System.Windows.Forms.StatusStrip>|替换并添加了功能<xref:System.Windows.Forms.StatusBar>类。|  
@@ -80,6 +80,7 @@ Windows 窗体<xref:System.Windows.Forms.ToolStrip>控制和及其关联的类�
  有关详细信息，请参阅[ToolStrip 技术摘要](toolstrip-technology-summary.md)并[ToolStrip 控件体系结构](toolstrip-control-architecture.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

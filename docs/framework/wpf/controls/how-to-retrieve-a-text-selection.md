@@ -1,5 +1,5 @@
 ---
-title: 如何：检索文本选定内容
+title: 如何：检索选定文本内容
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - TextBox control [WPF], retrieving text
 - retrieving text [WPF]
 ms.assetid: d5793172-1e11-4a39-9be0-73f336ed858d
-ms.openlocfilehash: fdd0e3974964e141c4b65e1c8851f3c371a4d501
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7f0b9ee02a7ace717787fc8eeb6e15649829a49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224580"
 ---
-# <a name="how-to-retrieve-a-text-selection"></a>如何：检索文本选定内容
+# <a name="how-to-retrieve-a-text-selection"></a>如何：检索选定文本内容
 此示例演示使用一种方法<xref:System.Windows.Controls.TextBox.SelectedText%2A>属性来检索用户已经选择了中的文本<xref:System.Windows.Controls.TextBox>控件。  
   
 ## <a name="example"></a>示例  
@@ -33,5 +33,6 @@ ms.locfileid: "57357607"
  [!code-vb[TextBox_MiscCode#_SelectText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_selecttext)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [TextBox 概述](textbox-overview.md)
 - [RichTextBox 概述](richtextbox-overview.md)

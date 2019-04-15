@@ -3,12 +3,12 @@ title: 如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 83b5808ced1bc6243294b23d9784ec7993e3ba4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 74f15c3ac6e5192ce3565579d515198d3b7e39f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207149"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302265"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>如何：使用 WIF 生成声明感知 ASP.NET Web 窗体应用程序
 ## <a name="applies-to"></a>适用于  
@@ -51,18 +51,18 @@ ms.locfileid: "47207149"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>创建一个简单 ASP.NET 应用程序  
   
-1.  启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。  
+1. 启动 Visual Studio，然后依次单击“文件”、“新建”和“项目”。  
   
-2.  在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。  
+2. 在“新建项目”窗口中，单击“ASP.NET Web 窗体应用程序”。  
   
-3.  在“名称”中，输入 `TestApp`，然后按“确定”。  
+3. 在“名称”中，输入 `TestApp`，然后按“确定”。  
   
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>第 2 步 – 为基于声明的身份验证配置 ASP.NET Web 窗体应用程序  
  在此步骤中，将配置条目添加到 ASP.NET Web 窗体应用程序的 Web.config 配置文件中，以使其可感知声明。  
   
 #### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>为基于声明的身份验证配置 ASP.NET Web 应用程序  
   
-1.  将以下配置节条目紧随添加到 Web.config 配置文件中的 \<configuration> 起始元素后：  
+1. 将以下配置节条目紧随添加到 Web.config 配置文件中的 \<configuration> 起始元素后：  
   
     ```xml  
     <configSections>  
@@ -71,7 +71,7 @@ ms.locfileid: "47207149"
     </configSections>  
     ```  
   
-2.  添加 \<location> 元素，用于启用对应用程序的联合元数据的访问权限：  
+2. 添加 \<location> 元素，用于启用对应用程序的联合元数据的访问权限：  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -83,7 +83,7 @@ ms.locfileid: "47207149"
     </location>  
     ```  
   
-3.  在 \<system.web> 元素内添加以下配置条目以拒绝用户、禁用本机身份验证并启用 WIF 来管理身份验证。  
+3. 在 \<system.web> 元素内添加以下配置条目以拒绝用户、禁用本机身份验证并启用 WIF 来管理身份验证。  
   
     ```xml  
     <authorization>  
@@ -92,7 +92,7 @@ ms.locfileid: "47207149"
     <authentication mode="None" />  
     ```  
   
-4.  添加 \<system.webServer> 元素，用于为联合身份验证定义模块。 请注意，PublicKeyToken 特性必须与之前为 \<configSections > 条目添加的 PublicKeyToken 特性相同：  
+4. 添加 \<system.webServer> 元素，用于为联合身份验证定义模块。 请注意，PublicKeyToken 特性必须与之前为 \<configSections > 条目添加的 PublicKeyToken 特性相同：  
   
     ```xml  
     <system.webServer>  
@@ -103,7 +103,7 @@ ms.locfileid: "47207149"
     </system.webServer>  
     ```  
   
-5.  添加以下 Windows Identity Foundation 相关配置条目，并确保 ASP.NET 应用程序的 URL 和端口号与 \<audienceUris> 条目、\<wsFederation> 元素的“realm”特性和 \<wsFederation> 元素的“reply”特性中的值相匹配。 还需确保“issuer”值与安全令牌服务 (STS) URL 相适应。  
+5. 添加以下 Windows Identity Foundation 相关配置条目，并确保 ASP.NET 应用程序的 URL 和端口号与 \<audienceUris> 条目、\<wsFederation> 元素的“realm”特性和 \<wsFederation> 元素的“reply”特性中的值相匹配。 还需确保“issuer”值与安全令牌服务 (STS) URL 相适应。  
   
     ```xml  
     <system.identityModel>  
@@ -127,16 +127,16 @@ ms.locfileid: "47207149"
     </system.identityModel.services>  
     ```  
   
-6.  将引用添加到 <xref:System.IdentityModel> 程序集。  
+6. 将引用添加到 <xref:System.IdentityModel> 程序集。  
   
-7.  编译此解决方案，确保没有任何错误。  
+7. 编译此解决方案，确保没有任何错误。  
   
 ## <a name="step-3--test-your-solution"></a>步骤 3 - 测试你的解决方案  
  在此步骤中，将测试为基于声明的身份验证配置的 ASP.NET Web 窗体应用程序。 若要执行基本测试，需添加用于在安全令牌服务 (STS) 颁发的令牌中显示声明的代码。  
   
 #### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>为基于声明的身份验证测试 ASP.NET Web 窗体应用程序  
   
-1.  打开 TestApp 项目下的 Default.aspx 文件，并将现有标记替换为以下标记：  
+1. 打开 TestApp 项目下的 Default.aspx 文件，并将现有标记替换为以下标记：  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -158,12 +158,12 @@ ms.locfileid: "47207149"
     </html>  
     ```  
   
-2.  保存 Default.aspx 文件，然后打开名为 Default.aspx.cs 的代码隐藏文件。  
+2. 保存 Default.aspx 文件，然后打开名为 Default.aspx.cs 的代码隐藏文件。  
   
     > [!NOTE]
     >  在解决方案资源管理器中，Default.aspx.cs 文件可能隐藏在 Default.aspx 文件下。 如果 Default.aspx.cs 文件不可见，请单击文件旁边的三角形，展开 Default.aspx。  
   
-3.  将 Default.aspx.cs 的 Page_Load 方法中的现有代码替换为以下代码：  
+3. 将 Default.aspx.cs 的 Page_Load 方法中的现有代码替换为以下代码：  
   
     ```csharp  
     using System;  
@@ -202,8 +202,8 @@ ms.locfileid: "47207149"
     }  
     ```  
   
-4.  保存 Default.aspx.cs，并生成解决方案。  
+4. 保存 Default.aspx.cs，并生成解决方案。  
   
-5.  按 F5 键运行解决方案。  
+5. 按 F5 键运行解决方案。  
   
-6.  应当会看到在安全令牌服务颁发给你的令牌中显示声明的页面。
+6. 应当会看到在安全令牌服务颁发给你的令牌中显示声明的页面。

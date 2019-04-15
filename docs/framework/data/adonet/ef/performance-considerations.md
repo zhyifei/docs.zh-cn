@@ -2,12 +2,12 @@
 title: 性能注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: d0ee92b96a22b0ecb59ee76fb2f2e9d64442ce22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087945"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324040"
 ---
 # <a name="performance-considerations-entity-framework"></a>性能注意事项（实体框架）
 本主题介绍 ADO.NET 实体框架的性能特征，并提供一些注意事项帮助改善实体框架应用程序的性能。  
@@ -82,11 +82,11 @@ ms.locfileid: "59087945"
 ### <a name="query-paths"></a>查询路径  
  默认情况下，当您执行 <xref:System.Data.Objects.ObjectQuery%601> 时，并不返回相关对象（但返回表示关系自身的对象）。 可以采用以下三种方法之一加载相关对象：  
   
-1.  在执行 <xref:System.Data.Objects.ObjectQuery%601> 前设置查询路径。  
+1. 在执行 <xref:System.Data.Objects.ObjectQuery%601> 前设置查询路径。  
   
-2.  对于对象公开的导航属性调用 `Load` 方法。  
+2. 对于对象公开的导航属性调用 `Load` 方法。  
   
-3.  将 <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> 上的 <xref:System.Data.Objects.ObjectContext> 选项设置为 `true`。 请注意，这是自动生成对象层代码时[实体数据模型设计器](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))。 有关详细信息请参阅[生成的代码概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100))。  
+3. 将 <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> 上的 <xref:System.Data.Objects.ObjectContext> 选项设置为 `true`。 请注意，这是自动生成对象层代码时[实体数据模型设计器](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))。 有关详细信息请参阅[生成的代码概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100))。  
   
  在考虑要使用哪个选项时，请注意在对数据库的请求数与单个查询中返回的数据量之间进行权衡。 有关详细信息，请参阅[加载相关对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))。  
   

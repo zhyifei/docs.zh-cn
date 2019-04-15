@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: d0b3bd649da301c563a19450d7d9b42e9d0b29e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611756"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165173"
 ---
 # <a name="datatable-constraints"></a>数据表约束
 为了维护数据的完整性，可以使用约束来对 <xref:System.Data.DataTable> 中的数据施加限制。 约束是应用于某列或相关各列的自动规则，它决定了某行的值以某种方式更改时的操作过程。 强制执行约束时`System.Data.DataSet.EnforceConstraints`的属性<xref:System.Data.DataSet>是**true**。 有关显示如何设置 `EnforceConstraints` 属性的代码示例，请参见 <xref:System.Data.DataSet.EnforceConstraints%2A> 参考主题。  
@@ -27,7 +27,7 @@ ms.locfileid: "54611756"
 |**Cascade**|删除或更新相关的行。|  
 |**SetNull**|在相关的行中设置值**DBNull**。|  
 |**SetDefault**|将相关行中的值设置为默认值。|  
-|**无**|对相关行不执行任何操作。 这是默认设置。|  
+|**None**|对相关行不执行任何操作。 这是默认设置。|  
   
  一个**ForeignKeyConstraint**可以限制，并传播到更改相关列。 具体取决于对设置的属性**ForeignKeyConstraint**的列，如果**EnforceConstraints**属性**数据集**是**true**，执行对父行的某些操作将导致异常。 例如，如果**DeleteRule**的属性**ForeignKeyConstraint**是**None**，如果有子行不能删除父行。  
   
@@ -61,7 +61,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 |规则设置|描述|  
 |------------------|-----------------|  
 |**Cascade**|接受或拒绝对子行的更改。|  
-|**无**|对子行不执行任何操作。 这是默认设置。|  
+|**None**|对子行不执行任何操作。 这是默认设置。|  
   
 ### <a name="example"></a>示例  
  下面的示例创建一个 <xref:System.Data.ForeignKeyConstraint>，设置它的一些属性（包括 <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>），并将它添加到 <xref:System.Data.ConstraintCollection> 对象的 <xref:System.Data.DataTable>。  
@@ -93,10 +93,11 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Data.DataRelation>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.ForeignKeyConstraint>
 - <xref:System.Data.UniqueConstraint>
 - [数据表架构定义](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
 - [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

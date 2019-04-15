@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 62309bb9965d1aa538e211dc66c44876671e0242
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 671e37c7d6dc40046d6d717d7785b03b6b545c7e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134974"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333673"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows 窗体中的鼠标事件
 当处理鼠标输入时，通常想要知道鼠标指针的位置和鼠标按钮的状态。 本主题详细介绍如何从鼠标事件获取此信息，并说明在 Windows 窗体控件中引发的鼠标单击事件的顺序。 列表和所有鼠标事件的说明，请参阅[鼠标输入工作原理在 Windows 窗体中](how-mouse-input-works-in-windows-forms.md)。  另请参阅[事件处理程序概述 （Windows 窗体）](event-handlers-overview-windows-forms.md)并[事件概述 （Windows 窗体）](events-overview-windows-forms.md)。  
@@ -36,31 +36,31 @@ ms.locfileid: "59134974"
 ## <a name="standard-click-event-behavior"></a>标准单击事件行为  
  如果想要以正确的顺序处理鼠标单击事件，则需要了解在 Windows 窗体控件中引发的单击事件的顺序。 当按下鼠标按钮（不论哪个鼠标按钮）并释放时，所有 Windows 窗体控件将以相同的顺序引发单击事件，下表中注明的个别控件除外： 下表显示单击鼠标按钮所引发事件的顺序：  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> 事件的参数。  
+1. <xref:System.Windows.Forms.Control.MouseDown> 事件的参数。  
   
-2.  <xref:System.Windows.Forms.Control.Click> 事件的参数。  
+2. <xref:System.Windows.Forms.Control.Click> 事件的参数。  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> 事件的参数。  
+3. <xref:System.Windows.Forms.Control.MouseClick> 事件的参数。  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> 事件的参数。  
+4. <xref:System.Windows.Forms.Control.MouseUp> 事件的参数。  
   
  下表显示双击鼠标按钮所引发事件的顺序：  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> 事件的参数。  
+1. <xref:System.Windows.Forms.Control.MouseDown> 事件的参数。  
   
-2.  <xref:System.Windows.Forms.Control.Click> 事件的参数。  
+2. <xref:System.Windows.Forms.Control.Click> 事件的参数。  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> 事件的参数。  
+3. <xref:System.Windows.Forms.Control.MouseClick> 事件的参数。  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> 事件的参数。  
+4. <xref:System.Windows.Forms.Control.MouseUp> 事件的参数。  
   
-5.  <xref:System.Windows.Forms.Control.MouseDown> 事件的参数。  
+5. <xref:System.Windows.Forms.Control.MouseDown> 事件的参数。  
   
-6.  <xref:System.Windows.Forms.Control.DoubleClick> 事件的参数。 （此顺序可能不同，具体取决于相关控件的 <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> 样式位是否设置为 `true`。 有关如何设置 <xref:System.Windows.Forms.ControlStyles> 位的详细信息，请参阅 <xref:System.Windows.Forms.Control.SetStyle%2A> 方法。）  
+6. <xref:System.Windows.Forms.Control.DoubleClick> 事件的参数。 （此顺序可能不同，具体取决于相关控件的 <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> 样式位是否设置为 `true`。 有关如何设置 <xref:System.Windows.Forms.ControlStyles> 位的详细信息，请参阅 <xref:System.Windows.Forms.Control.SetStyle%2A> 方法。）  
   
-7.  <xref:System.Windows.Forms.Control.MouseDoubleClick> 事件的参数。  
+7. <xref:System.Windows.Forms.Control.MouseDoubleClick> 事件的参数。  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp> 事件的参数。  
+8. <xref:System.Windows.Forms.Control.MouseUp> 事件的参数。  
   
  有关代码示例演示顺序的鼠标单击事件，请参阅[如何：事件在 Windows 窗体控件中处理用户输入](how-to-handle-user-input-events-in-windows-forms-controls.md)。  
   
@@ -122,21 +122,21 @@ ms.locfileid: "59134974"
 ### <a name="painting-behavior-of-toggle-controls"></a>切换控件的绘制行为  
  切换控件（如派生自 <xref:System.Windows.Forms.ButtonBase> 类的控件）具有独特的绘制行为和鼠标单击事件：  
   
-1.  用户按下鼠标按钮。  
+1. 用户按下鼠标按钮。  
   
-2.  控件以按下状态进行绘制。  
+2. 控件以按下状态进行绘制。  
   
-3.  引发 <xref:System.Windows.Forms.Control.MouseDown> 事件。  
+3. 引发 <xref:System.Windows.Forms.Control.MouseDown> 事件。  
   
-4.  用户释放鼠标按钮。  
+4. 用户释放鼠标按钮。  
   
-5.  控件以引发状态进行绘制。  
+5. 控件以引发状态进行绘制。  
   
-6.  引发 <xref:System.Windows.Forms.Control.Click> 事件。  
+6. 引发 <xref:System.Windows.Forms.Control.Click> 事件。  
   
-7.  引发 <xref:System.Windows.Forms.Control.MouseClick> 事件。  
+7. 引发 <xref:System.Windows.Forms.Control.MouseClick> 事件。  
   
-8.  引发 <xref:System.Windows.Forms.Control.MouseUp> 事件。  
+8. 引发 <xref:System.Windows.Forms.Control.MouseUp> 事件。  
   
     > [!NOTE]
     >  如果用户在鼠标按钮处于按下状态时将指针移出切换控件（例如在鼠标按下时将鼠标从 <xref:System.Windows.Forms.Button> 控件移出），那么切换控件将以引发状态进行绘制，并且只发生 <xref:System.Windows.Forms.Control.MouseUp> 事件。 在这种情况下，将不会发生 <xref:System.Windows.Forms.Control.Click> 或 <xref:System.Windows.Forms.Control.MouseClick> 事件。  

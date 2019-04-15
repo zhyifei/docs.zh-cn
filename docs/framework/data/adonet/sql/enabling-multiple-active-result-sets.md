@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: bbd70631a365c8687ad9b7ed89639e9041e4366e
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845661"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304397"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>启用多个活动结果集
 多个活动结果集 (MARS) 是一项用于 SQL Server 的功能，可用来对单个连接执行多个批处理。 如果对 SQL Server 启用了 MARS，使用的每个命令对象将向该连接添加一个会话。  
@@ -102,15 +102,16 @@ string connectionString = "Data Source=MSSQL1;" +
   
  可以通过三种方式处理此方案：  
   
-1.  在创建读取器之后开始事务，使读取器不是事务的一部分。 每次更新将变为读取器自己的事务。  
+1. 在创建读取器之后开始事务，使读取器不是事务的一部分。 每次更新将变为读取器自己的事务。  
   
-2.  在读取器关闭之后提交所有工作。 对于大量的更新批处理，可能会这样做。  
+2. 在读取器关闭之后提交所有工作。 对于大量的更新批处理，可能会这样做。  
   
-3.  不使用 MARS；而是对每个命令对象使用独立的连接，就像在 MARS 之前一样。  
+3. 不使用 MARS；而是对每个命令对象使用独立的连接，就像在 MARS 之前一样。  
   
 ### <a name="detecting-mars-support"></a>检测 MARS 支持  
  应用程序可以通过读取 `SqlConnection.ServerVersion` 值来检查 MARS 支持。  SQL Server 2005 的主版本号应为 9，SQL Server 2008 的主版本号应为 10。  
   
 ## <a name="see-also"></a>请参阅
-- [多重活动结果集 (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [多个活动结果集 (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

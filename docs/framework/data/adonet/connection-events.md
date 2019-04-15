@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: 2d11a2e3a3ca7218aecd5d38dd9dd036f99d7687
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a71758781511f18ddf5451feaf0d308af1b4a652
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191726"
 ---
 # <a name="connection-events"></a>连接事件
 所有.NET Framework 数据提供程序都具有**连接**若要从数据源中检索信息性消息，或若要确定是否可以使用的两个事件的对象的状态**连接**具有更改。 下表描述的事件**连接**对象。  
   
-|事件|描述|  
+|Event|描述|  
 |-----------|-----------------|  
 |**InfoMessage**|当从数据源中返回信息性消息时发生。 信息性消息是数据源中不会引发异常的消息。|  
 |**StateChange**|发生时的状态**连接**更改。|  
@@ -106,5 +106,6 @@ protected static void OnStateChange(object sender,
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

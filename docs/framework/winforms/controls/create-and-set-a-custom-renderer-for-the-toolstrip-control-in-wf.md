@@ -1,5 +1,5 @@
 ---
-title: 如何：创建并设置自定义呈现器在 Windows 窗体的 ToolStrip 控件
+title: 如何：在 Windows 窗体中为 ToolStrip 控件创建和设置自定义呈现器
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-ms.openlocfilehash: 379cb8862ce5dda5cfffc625cc72906cf6a2c305
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ca1a7444c029632f83b1600e5855a13c83777594
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721003"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296376"
 ---
-# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>如何：创建并设置自定义呈现器在 Windows 窗体的 ToolStrip 控件
+# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>如何：在 Windows 窗体中为 ToolStrip 控件创建和设置自定义呈现器
 <xref:System.Windows.Forms.ToolStrip> 控件向主题和样式易于支持。 可以通过设置实现完全自定义外观和行为 （外观和感受）<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>属性或<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>属性设置为自定义呈现器。  
   
  可以将呈现器分配给每个单独<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>， <xref:System.Windows.Forms.ContextMenuStrip>，或<xref:System.Windows.Forms.StatusStrip>控件，也可以使用<xref:System.Windows.Forms.ToolStripManager.Renderer%2A>属性以影响的所有对象通过设置<xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType>属性设置为<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>。  
@@ -27,9 +27,9 @@ ms.locfileid: "57721003"
   
 ### <a name="to-create-a-custom-renderer"></a>若要创建自定义呈现器  
   
-1.  扩展<xref:System.Windows.Forms.ToolStripRenderer>类。  
+1. 扩展<xref:System.Windows.Forms.ToolStripRenderer>类。  
   
-2.  实现所需的自定义呈现通过重写相应*上...* 成员  
+2. 实现所需的自定义呈现通过重写相应*上...* 成员  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -59,7 +59,7 @@ ms.locfileid: "57721003"
   
 ### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>若要设置为当前的呈现器的自定义呈现器  
   
-1.  若要设置一个自定义呈现器<xref:System.Windows.Forms.ToolStrip>，请将<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>属性设置为自定义呈现器。  
+1. 若要设置一个自定义呈现器<xref:System.Windows.Forms.ToolStrip>，请将<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>属性设置为自定义呈现器。  
   
     ```vb  
     toolStrip1.Renderer = New RedTextRenderer()  
@@ -69,7 +69,7 @@ ms.locfileid: "57721003"
     toolStrip1.Renderer = new RedTextRenderer();  
     ```  
   
-2.  或设置所有的自定义呈现器<xref:System.Windows.Forms.ToolStrip>你的应用程序中包含的类：设置<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>属性设置为的自定义呈现器并设置<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>属性设置为<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>。  
+2. 或设置所有的自定义呈现器<xref:System.Windows.Forms.ToolStrip>你的应用程序中包含的类：设置<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>属性设置为的自定义呈现器并设置<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>属性设置为<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>。  
   
     ```vb  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode  
@@ -82,6 +82,7 @@ ms.locfileid: "57721003"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>

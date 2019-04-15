@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: 2685be197d6b47cf174c5fbd062bd3c37a19f5eb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356905"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212422"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer 概述
 用户界面中的内容通常比计算机屏幕的显示区域大。 <xref:System.Windows.Controls.ScrollViewer>控件提供了方便地启用中的内容滚动[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。 本主题介绍<xref:System.Windows.Controls.ScrollViewer>元素，并提供了几个用法示例。  
@@ -29,7 +29,7 @@ ms.locfileid: "57356905"
   
 <a name="scrollviewer_physical_vs_logical"></a>   
 ## <a name="physical-vs-logical-scrolling"></a>物理滚动与逻辑滚动  
- 物理滚动用于按预设的物理增量（通常按以像素为单位声明的值）滚动内容。 逻辑滚动用于滚动到逻辑树中的下一项。 物理滚动是大多数的默认滚动行为<xref:System.Windows.Controls.Panel>元素。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 同时支持这两种类型的滚动。  
+ 物理滚动用于按预设的物理增量（通常按以像素为单位声明的值）滚动内容。 逻辑滚动用于滚动到逻辑树中的下一项。 物理滚动是大多数的默认滚动行为<xref:System.Windows.Controls.Panel>元素。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持两种类型的滚动。  
   
 #### <a name="the-iscrollinfo-interface"></a>IScrollInfo 接口  
  <xref:System.Windows.Controls.Primitives.IScrollInfo>接口表示的主滚动区域内<xref:System.Windows.Controls.ScrollViewer>或派生的控件。 该接口定义的滚动属性和方法，可由实现<xref:System.Windows.Controls.Panel>需要按逻辑单元，而不按物理增量滚动元素。 实例转换<xref:System.Windows.Controls.Primitives.IScrollInfo>到派生<xref:System.Windows.Controls.Panel>，然后使用其滚动方法提供了一种滚动到下一个逻辑单位子集合，而不是按像素增量有效方式。 默认情况下，<xref:System.Windows.Controls.ScrollViewer>控件支持按物理单位滚动。  
@@ -61,10 +61,11 @@ ms.locfileid: "57356905"
  有关文档格式和演示选项的其他信息，请参阅 [WPF 中的文档](../advanced/documents-in-wpf.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
 - [如何：创建滚动查看器](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
 - [WPF 中的文档](../advanced/documents-in-wpf.md)
 - [ScrollBar 样式和模板](scrollbar-styles-and-templates.md)
-- [控件](../advanced/optimizing-performance-controls.md)
+- [Controls](../advanced/optimizing-performance-controls.md)

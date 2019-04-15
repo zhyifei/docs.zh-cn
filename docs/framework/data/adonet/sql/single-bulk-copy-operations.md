@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 4fdd578f1537e3521093fd12655a452feaa5a38d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b2783779965505d09f73c7203770c19ccaa78d26
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112063"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323364"
 ---
 # <a name="single-bulk-copy-operations"></a>单个批量复制操作
 执行 SQL Server 批量复制操作最简单的方法就是对数据库执行单次操作。 默认情况下，批量复制操作是作为一个独立的操作执行的：该复制操作以非事务处理方式进行，不可进行回滚。  
@@ -22,19 +22,19 @@ ms.locfileid: "59112063"
   
  执行批量复制操作的一般步骤如下所示：  
   
-1.  连接到源服务器上并获取要复制的数据。 如果可以从 <xref:System.Data.IDataReader> 或 <xref:System.Data.DataTable> 对象检索数据，则这些数据还可能来自其他源。  
+1. 连接到源服务器上并获取要复制的数据。 如果可以从 <xref:System.Data.IDataReader> 或 <xref:System.Data.DataTable> 对象检索数据，则这些数据还可能来自其他源。  
   
-2.  连接到目标服务器 (除非您希望**SqlBulkCopy**来为您建立的连接)。  
+2. 连接到目标服务器 (除非您希望**SqlBulkCopy**来为您建立的连接)。  
   
-3.  创建一个 <xref:System.Data.SqlClient.SqlBulkCopy> 对象，设置任何必要的属性。  
+3. 创建一个 <xref:System.Data.SqlClient.SqlBulkCopy> 对象，设置任何必要的属性。  
   
-4.  设置**DestinationTableName**属性以指示目标表用于大容量插入操作。  
+4. 设置**DestinationTableName**属性以指示目标表用于大容量插入操作。  
   
-5.  调用之一**WriteToServer**方法。  
+5. 调用之一**WriteToServer**方法。  
   
-6.  还可以更新属性并调用**WriteToServer**根据需要再次。  
+6. 还可以更新属性并调用**WriteToServer**根据需要再次。  
   
-7.  调用 <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>，或将批量复制操作包装在 `Using` 语句中。  
+7. 调用 <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>，或将批量复制操作包装在 `Using` 语句中。  
   
 > [!CAUTION]
 >  我们建议源列和目标列的数据类型匹配。 如果数据类型不匹配， **SqlBulkCopy**尝试将每个源值转换为目标数据类型，使用采用的规则<xref:System.Data.SqlClient.SqlParameter.Value%2A>。 转换可能会影响性能，还可能会导致意外的错误。 例如，大多数情况下，`Double` 数据类型可以转换为 `Decimal` 数据类型，但是有时就不能。  

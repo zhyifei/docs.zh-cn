@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 485579df9c3976d70d2560c10d74f0402f48492e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161065"
 ---
 # <a name="security-transparent-code-level-1"></a>安全透明代码，级别 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -30,7 +30,7 @@ ms.locfileid: "54590375"
   
 -   [1 级透明度模型](#the_level_1_transparency_model)  
   
--   [透明性属性](#transparency_attributes)  
+-   [透明度特性](#transparency_attributes)  
   
 -   [安全透明度示例](#security_transparency_examples)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "54590375"
   
 -   若有任何必须在安全透明的代码中执行的不安全代码（不可验证的代码），都会引起对 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 安全权限的完全要求。  
   
- 在执行期间，公共语言运行时 (CLR) 会强制执行这些规则。 安全透明的代码会将其调用的代码的所有安全要求全部传递回调用方。 流过安全透明代码的要求不能提升特权。 如果低信任应用程序调用安全透明的代码并导致对高特权的要求，该要求将流回低信任代码并失败。 由于安全透明的代码不能执行断言操作，因此该代码不能停止该要求。 从完全信任代码中调用相同的安全透明代码将使要求成功。  
+ 在执行期间，公共语言运行时 (CLR) 会强制执行这些规则。 安全透明的代码会将其调用的代码的所有安全需求全部传递回调用方。 流过安全透明代码的要求不能提升特权。 如果低信任应用程序调用安全透明的代码并导致对高特权的要求，该要求将流回低信任代码并失败。 由于安全透明的代码不能执行断言操作，因此该代码不能停止该要求。 从完全信任代码中调用相同的安全透明代码将使要求成功。  
   
  安全关键与安全透明相反。 安全关键代码以完全信任模式执行，可以执行所有特权操作。 安全可靠关键代码是特权代码，并经过全面的安全审核，已确认它不允许部分信任的调用方使用它们无权访问的资源。  
   
@@ -131,5 +131,6 @@ public class B
  除 `Critical` 方法显式标记为安全关键之外，前面的代码都是透明的。 即使使用程序集级别的 <xref:System.Security.SecurityCriticalAttribute> 特性，透明度也是默认设置。  
   
 ## <a name="see-also"></a>请参阅
-- [安全透明代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
-- [安全更改](../../../docs/framework/security/security-changes.md)
+
+- [安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [安全性更改](../../../docs/framework/security/security-changes.md)

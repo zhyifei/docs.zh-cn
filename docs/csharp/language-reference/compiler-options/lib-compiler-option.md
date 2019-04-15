@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677870"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319399"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib（C# 编译器选项）
 -lib 选项指定通过 [-reference（C# 编译器选项）](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)选项引用的程序集的位置。  
@@ -34,13 +34,13 @@ ms.locfileid: "54677870"
 ## <a name="remarks"></a>备注  
  编译器按以下顺序搜索未完全限定的程序集引用：  
   
-1.  当前工作目录。 该目录为从其调用编译器的目录。  
+1. 当前工作目录。 该目录为从其调用编译器的目录。  
   
-2.  公共语言运行时系统目录。  
+2. 公共语言运行时系统目录。  
   
-3.  由 -lib 指定的目录。  
+3. 由 -lib 指定的目录。  
   
-4.  由 LIB 环境变量指定的目录。  
+4. 由 LIB 环境变量指定的目录。  
   
  使用 -reference 指定程序集引用。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "54677870"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的“属性页”  对话框。  
+1. 打开项目的“属性页”  对话框。  
   
-2.  单击“引用路径”属性页。  
+2. 单击“引用路径”属性页。  
   
-3.  修改列表框的内容。  
+3. 修改列表框的内容。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>。  
   

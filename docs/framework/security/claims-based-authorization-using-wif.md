@@ -3,12 +3,12 @@ title: 使用 WIF 的基于声明的授权
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872914"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312171"
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 的基于声明的授权
 在依赖方应用程序中，授权可确定允许已经过身份验证的标识访问的资源以及允许该标识对这些资源执行的操作。 授权不当会导致信息泄露和数据篡改。 本主题概述了可用于通过 Windows Identity Foundation (WIF) 和安全令牌服务 (STS) 来实现针对声明感知 ASP.NET Web 应用程序和服务（例如，Microsoft Azure 访问控制服务 (ACS)）的授权的方法。  
@@ -42,7 +42,7 @@ ms.locfileid: "48872914"
   
 -   **在令牌颁发过程中**。 对用户进行身份验证时，可由标识提供程序 STS 或联合身份验证提供程序（如 Microsoft Azure 访问控制服务 (ACS)）发布角色声明。  
   
--   **使用 ClaimsAuthenticationManager 将任意声明转换为声明角色类型**。 ClaimsAuthenticationManager 是作为 WIF 的一部分附带的组件。 它允许在请求启动应用程序时拦截请求，并通过添加、更改或删除声明来检查并转换令牌。 有关如何使用 ClaimsAuthenticationManager 来转换声明的详细信息，请参阅[如何： 实现角色基于访问控制 (RBAC) 中的声明感知 ASP.NET 应用程序使用 WIF 和 ACS](https://go.microsoft.com/fwlink/?LinkID=247445)。  
+-   **使用 ClaimsAuthenticationManager 将任意声明转换为声明角色类型**。 ClaimsAuthenticationManager 是作为 WIF 的一部分附带的组件。 它允许在请求启动应用程序时拦截请求，并通过添加、更改或删除声明来检查并转换令牌。 有关如何使用 ClaimsAuthenticationManager 来转换声明的详细信息，请参阅[How To:实现基于角色的访问控制 (RBAC) 在声明感知 ASP.NET 应用程序应用程序使用 WIF 和 ACS](https://go.microsoft.com/fwlink/?LinkID=247445)。  
   
 -   使用 samlSecurityTokenRequirement 配置节将任意声明映射到角色类型 - 一种声明性方法，其中仅使用配置完成声明转换且无需编码。  
   
@@ -50,14 +50,14 @@ ms.locfileid: "48872914"
 ## <a name="claims-based-authorization"></a>基于声明的授权  
  基于声明的授权是一种方法，其中授予访问权或拒绝访问的授权决策基于使用声明中的可用数据做出决策的任意逻辑。 请记住，对于 RBAC，仅使用角色类型声明。 角色类型声明用于检查用户是否属于特定角色。 若要阐释使用基于声明的授权方法做出授权决策的过程，请考虑以下步骤：  
   
-1.  应用程序收到要求对用户进行身份验证的请求。  
+1. 应用程序收到要求对用户进行身份验证的请求。  
   
-2.  WIF 将用户重定向到其标识提供程序，在对用户进行身份验证后，使用关联的安全令牌（表示包含有关声明的用户）发出应用程序请求。 WIF 将这些声明与表示用户的主体相关联。  
+2. WIF 将用户重定向到其标识提供程序，在对用户进行身份验证后，使用关联的安全令牌（表示包含有关声明的用户）发出应用程序请求。 WIF 将这些声明与表示用户的主体相关联。  
   
-3.  应用程序将声明传递给决策逻辑机制。 它可以是内存中的代码、对 Web 服务的调用、对数据库的查询、复杂的规则引擎或使用 ClaimsAuthorizationManager。  
+3. 应用程序将声明传递给决策逻辑机制。 它可以是内存中的代码、对 Web 服务的调用、对数据库的查询、复杂的规则引擎或使用 ClaimsAuthorizationManager。  
   
-4.  决策机制根据声明计算结果。  
+4. 决策机制根据声明计算结果。  
   
-5.  如果结果为 true，则授予访问权；如果结果为 false，则拒绝访问。 例如，规则可能是年龄为 21 岁或以上且居住在华盛顿州的用户。  
+5. 如果结果为 true，则授予访问权；如果结果为 false，则拒绝访问。 例如，规则可能是年龄为 21 岁或以上且居住在华盛顿州的用户。  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> 有助于在应用程序中具体化基于声明的授权的决策逻辑。 ClaimsAuthorizationManager 是作为 .NET 4.5 的一部分附带的 WIF 组件。 ClaimsAuthorizationManager 允许您拦截传入请求，并实现选定的任何逻辑以根据传入声明做出授权决策。 在需要更改授权逻辑时，这变得非常重要。 在这种情况下，使用 ClaimsAuthorizationManager 将不会影响应用程序的完整性，从而降低了更改导致应用程序错误的可能性。 了解有关如何使用 ClaimsAuthorizationManager 实现基于声明的访问控制的详细信息，请参阅[操作方法：使用 WIF 和 ACS 在声明感知 ASP.NET 应用程序中实现声明授权](https://go.microsoft.com/fwlink/?LinkID=247446)。
+ <xref:System.Security.Claims.ClaimsAuthorizationManager> 可用于具体化基于声明的应用程序中的授权决策逻辑。 ClaimsAuthorizationManager 是作为 .NET 4.5 的一部分附带的 WIF 组件。 ClaimsAuthorizationManager 允许您拦截传入请求，并实现选定的任何逻辑以根据传入声明做出授权决策。 在需要更改授权逻辑时，这变得非常重要。 在这种情况下，使用 ClaimsAuthorizationManager 将不会影响应用程序的完整性，从而降低了更改导致应用程序错误的可能性。 若要了解有关如何使用 ClaimsAuthorizationManager 实现基于声明的访问控制的详细信息，请参阅[How To:实现声明授权在声明感知 ASP.NET 应用程序应用程序使用 WIF 和 ACS](https://go.microsoft.com/fwlink/?LinkID=247446)。

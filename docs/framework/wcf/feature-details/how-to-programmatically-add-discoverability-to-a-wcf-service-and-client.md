@@ -2,29 +2,29 @@
 title: 如何：以编程方式向 WCF 服务和客户端添加可发现性
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: a0240d09c07a23c2c578008885e5bca00169acdd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643125"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336585"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可发现性
 本主题说明如何使 Windows Communication Foundation (WCF) 服务可发现。 它基于[自托管](https://go.microsoft.com/fwlink/?LinkId=145523)示例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>针对 Discovery 配置现有自承载服务示例  
   
-1.  在 Visual Studio 2012 中打开自承载解决方案。 示例位于 TechnologySamples\Basic\Service\Hosting\SelfHost 目录中。  
+1. 在 Visual Studio 2012 中打开自承载解决方案。 示例位于 TechnologySamples\Basic\Service\Hosting\SelfHost 目录中。  
   
-2.  将对 `System.ServiceModel.Discovery.dll` 的引用添加到服务项目中。 可能会看到错误消息，指出"系统。 ServiceModel.Discovery.dll 或其某个依赖项需要更高版本的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]比项目中指定..."如果看到此消息，请右键单击解决方案资源管理器中的项目并选择**属性**。 在中**项目属性**窗口中，请确保**目标框架**是[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
+2. 将对 `System.ServiceModel.Discovery.dll` 的引用添加到服务项目中。 可能会看到错误消息，指出"系统。 ServiceModel.Discovery.dll 或其某个依赖项需要更高版本的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]比项目中指定..."如果看到此消息，请右键单击解决方案资源管理器中的项目并选择**属性**。 在中**项目属性**窗口中，请确保**目标框架**是[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
   
-3.  打开 Service.cs 文件并添加下面的 `using` 语句。  
+3. 打开 Service.cs 文件并添加下面的 `using` 语句。  
   
     ```csharp  
     using System.ServiceModel.Discovery;  
     ```  
   
-4.  在 `Main()` 方法的 `using` 语句内部，将一个 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 实例添加到服务主机中。  
+4. 在 `Main()` 方法的 `using` 语句内部，将一个 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 实例添加到服务主机中。  
   
     ```csharp  
     public static void Main()  
@@ -42,7 +42,7 @@ ms.locfileid: "54643125"
   
      <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 指定自身应用到的服务可供检测。  
   
-5.  将 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 添加到服务主机中，位置紧随添加 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 的代码之后。  
+5. 将 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 添加到服务主机中，位置紧随添加 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 的代码之后。  
   
     ```csharp  
     // Add ServiceDiscoveryBehavior  
@@ -56,15 +56,15 @@ ms.locfileid: "54643125"
   
 ### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a>创建使用发现功能调用服务的客户端应用程序  
   
-1.  向名为 `DiscoveryClientApp` 的解决方案添加一个新控制台应用程序。  
+1. 向名为 `DiscoveryClientApp` 的解决方案添加一个新控制台应用程序。  
   
-2.  添加对 `System.ServiceModel.dll` 和 `System.ServiceModel.Discovery.dll` 的引用  
+2. 添加对引用`System.ServiceModel.dll`和 `System.ServiceModel.Discovery.dll`  
   
-3.  将 GeneratedClient.cs 和 App.config 文件从现有客户端项目复制到新的 DiscoveryClientApp 项目。 若要执行此操作，右键单击中的文件**解决方案资源管理器**，选择**副本**，然后选择**DiscoveryClientApp**项目中，右键单击，然后选择**粘贴**。  
+3. 将 GeneratedClient.cs 和 App.config 文件从现有客户端项目复制到新的 DiscoveryClientApp 项目。 若要执行此操作，右键单击中的文件**解决方案资源管理器**，选择**副本**，然后选择**DiscoveryClientApp**项目中，右键单击，然后选择**粘贴**。  
   
-4.  打开 Program.cs。  
+4. 打开 Program.cs。  
   
-5.  添加下面的 `using` 语句。  
+5. 添加下面的 `using` 语句。  
   
     ```csharp  
     using System.ServiceModel;  
@@ -72,7 +72,7 @@ ms.locfileid: "54643125"
     using Microsoft.ServiceModel.Samples;  
     ```  
   
-6.  将一个名为 `FindCalculatorServiceAddress()` 的静态方法添加到 `Program` 类。  
+6. 将一个名为 `FindCalculatorServiceAddress()` 的静态方法添加到 `Program` 类。  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -82,7 +82,7 @@ ms.locfileid: "54643125"
   
      此方法使用发现功能搜索 `CalculatorService` 服务。  
   
-7.  在 `FindCalculatorServiceAddress` 方法内部，创建新 <xref:System.ServiceModel.Discovery.DiscoveryClient> 实例，以将 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 传递给构造函数。  
+7. 在 `FindCalculatorServiceAddress` 方法内部，创建新 <xref:System.ServiceModel.Discovery.DiscoveryClient> 实例，以将 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 传递给构造函数。  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -94,7 +94,7 @@ ms.locfileid: "54643125"
   
      这将告知 WCF 的<xref:System.ServiceModel.Discovery.DiscoveryClient>类应使用标准 UDP 发现终结点发送和接收发现消息。  
   
-8.  在下一行，调用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法并指定包含要搜索的服务协定的 <xref:System.ServiceModel.Discovery.FindCriteria> 实例。 在本示例中，指定的是 `ICalculator`。  
+8. 在下一行，调用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法并指定包含要搜索的服务协定的 <xref:System.ServiceModel.Discovery.FindCriteria> 实例。 在本示例中，指定的是 `ICalculator`。  
   
     ```csharp  
     // Find ICalculatorService endpoints              
@@ -190,11 +190,11 @@ ms.locfileid: "54643125"
   
 ### <a name="to-test-the-application"></a>测试应用程序  
   
-1.  打开具有特权的命令提示符并运行 Service.exe。  
+1. 打开具有特权的命令提示符并运行 Service.exe。  
   
-2.  打开命令提示符并运行 Discoveryclientapp.exe。  
+2. 打开命令提示符并运行 Discoveryclientapp.exe。  
   
-3.  service.exe 的输出应类似于以下输出。  
+3. service.exe 的输出应类似于以下输出。  
   
     ```Output  
     Received Add(100,15.99)  
@@ -207,7 +207,7 @@ ms.locfileid: "54643125"
     Return: 6.25390869293308  
     ```  
   
-4.  Discoveryclientapp.exe 的输出应类似于以下输出。  
+4. Discoveryclientapp.exe 的输出应类似于以下输出。  
   
     ```Output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  
@@ -341,5 +341,6 @@ namespace DiscoveryClientApp
 ```  
 
 ## <a name="see-also"></a>请参阅
-- [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [WCF 发现对象模型](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+
+- [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [WCF Discovery 对象模型](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eeef33745ebc8209fc7f69a9337af4093c1e8a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dc05d27b0316c82c5314a766fcad929dc5f3698
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331047"
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>如何：将程序集加载到仅反射上下文中
 通过仅反射加载上下文，可检查为其他平台或 .NET Framework 的其他版本编译的程序集。 只能检查，不能执行加载到此上下文中的代码。 这意味着无法创建对象，因为无法执行构造函数。 因为该代码无法执行，所以不会自动加载依赖项。 如果需要对依赖项进行检查，必须自行加载。  
   
 ### <a name="to-load-an-assembly-into-the-reflection-only-load-context"></a>将程序集加载到仅反射加载上下文中  
   
-1.  使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29> 方法重载可加载给定了显示名称的程序集，而使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法可加载给定了路径的程序集。 如果该程序集为二进制文件映像，则使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29> 方法重载。  
+1. 使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29> 方法重载可加载给定了显示名称的程序集，而使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法可加载给定了路径的程序集。 如果该程序集为二进制文件映像，则使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29> 方法重载。  
   
     > [!NOTE]
     >  不能使用仅反射上下文从非执行上下文中的 .NET Framework 版本加载 mscorlib.dll 版本。  
   
-2.  如果该程序集具有依赖项，<xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 方法不会加载这些依赖项。 如果需要对依赖项进行检查，必须自行加载。  
+2. 如果该程序集具有依赖项，<xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 方法不会加载这些依赖项。 如果需要对依赖项进行检查，必须自行加载。  
   
-3.  使用程序集的 <xref:System.Reflection.Assembly.ReflectionOnly%2A> 属性确定是否已将程序集加载到仅反射上下文中。  
+3. 使用程序集的 <xref:System.Reflection.Assembly.ReflectionOnly%2A> 属性确定是否已将程序集加载到仅反射上下文中。  
   
-4.  如果向程序集或程序集中的类型应用了特性，则应使用 <xref:System.Reflection.CustomAttributeData> 类检查这些特性，确保未尝试在仅反射上下文中执行代码。 使用 <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> 方法的适当重载获取表示应用于程序集、成员、模块或参数的特性的 <xref:System.Reflection.CustomAttributeData> 对象。  
+4. 如果向程序集或程序集中的类型应用了特性，则应使用 <xref:System.Reflection.CustomAttributeData> 类检查这些特性，确保未尝试在仅反射上下文中执行代码。 使用 <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> 方法的适当重载获取表示应用于程序集、成员、模块或参数的特性的 <xref:System.Reflection.CustomAttributeData> 对象。  
   
     > [!NOTE]
     >  应用于程序集或其内容的特性可能是在该程序集中定义的，也可能是在加载到仅反射上下文中的另一个程序集中定义的。 无法事先知悉这些特性是在何处定义的。  
@@ -53,6 +53,7 @@ ms.locfileid: "54567043"
  [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - <xref:System.Reflection.Assembly.ReflectionOnly%2A>
 - <xref:System.Reflection.CustomAttributeData>

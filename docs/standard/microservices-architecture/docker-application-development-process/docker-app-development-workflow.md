@@ -4,12 +4,12 @@ description: 了解用于开发基于 Docker 的应用程序的工作流的详�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a8016b2b55313cb6e1d84bfb2c50a62347858de9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464354"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921086"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 应用开发工作流
 
@@ -31,7 +31,7 @@ ms.locfileid: "58464354"
 
 ![Docker 应用的开发流程：1 - 编写应用代码，2 - 编写 Dockerfile/s，3 - 创建在 Dockerfile/s 上定义的映像，4 -（可选）在 docker-compose.yml 文件中编写服务，5 - 运行容器或 docker-compose 应用，6 - 测试应用或微服务，7 - 推送到存储库并重复操作。 ](./media/image1.png)
 
-**图 5-1**。 开发 Docker 容器化应用的分步工作流
+**图 5-1.** 开发 Docker 容器化应用的分步工作流
 
 本部分详细介绍了整个流程，并着重通过 Visual Studio 环境解释了每个主要步骤。
 
@@ -51,7 +51,7 @@ ms.locfileid: "58464354"
 
 首先，请务必按以下说明所述安装适用于 Windows 的 [Docker 社区版 (CE)](https://docs.docker.com/docker-for-windows/)：
 
-[Get started with Docker CE for Windows](https://docs.docker.com/docker-for-windows/)（适用于 Windows 的 Docker CE 入门）
+[适用于 Windows 的 Docker CE 入门](https://docs.docker.com/docker-for-windows/)
 
 此外，需要安装了“.NET Core 跨平台开发”工作负载的 Visual Studio 2017 版本 15.7 或更高版本，如图 5-2 所示。
 
@@ -97,14 +97,14 @@ ms.locfileid: "58464354"
 
 开发人员通常以基础映像（从 [Docker 中心](https://hub.docker.com/)注册表等官方存储库中获取）为基础生成容器的自定义映像。 确切地说，在 Visual Studio 中启用 Docker 支持后就可以执行此操作。 Dockerfile 将使用现有的 `aspnetcore` 映像。
 
-之前我们介绍了根据开发人员选择的框架和操作系统可使用的 Docker 映像和存储库。 例如，如果想使用 ASP.NET Core（Linux 或 Windows），则使用的映像是 `microsoft/dotnet:2.2-aspnetcore-runtime`。 因此，只需指定用于容器的基础 Docker 映像即可。 为此，将 `FROM microsoft/dotnet:2.2-aspnetcore-runtime` 添加到 Dockerfile。 Visual Studio 会自动执行此操作，但若要更新版本，则需更新此值。
+之前我们介绍了根据开发人员选择的框架和操作系统可使用的 Docker 映像和存储库。 例如，如果想使用 ASP.NET Core（Linux 或 Windows），则使用的映像是 `mcr.microsoft.com/dotnet/core/aspnet:2.2`。 因此，只需指定用于容器的基础 Docker 映像即可。 为此，将 `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2` 添加到 Dockerfile。 Visual Studio 会自动执行此操作，但若要更新版本，则需更新此值。
 
 使用从 Docker 中心获取的带版本号的官方 .NET 映像存储库可确保能在所有计算机（包括用于开发、测试和生产的计算机）上使用相同的语言功能。
 
 以下示例显示了 ASP.NET Core 容器的示例 Dockerfile。
 
 ```Dockerfile
-FROM microsoft/dotnet:2.2-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,7 +112,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-在此情况下，该映像以官方 ASP.NET Core Docker 映像的版本 2.2（适用于 Linux 和 Windows 的多体系结构）为基础。 这是 `FROM microsoft/dotnet:2.2-aspnetcore-runtime` 设置。 （有关此基础映像的详细信息，请参阅 [.NET Core Docker 映像页](https://hub.docker.com/r/microsoft/dotnet/)页面。）在 Dockerfile 中，还需指示 Docker 侦听要在运行时使用的 TCP 端口（示例中由 EXPOSE 设置配置的 TPC 端口为 80）。
+在此情况下，该映像以官方 ASP.NET Core Docker 映像的版本 2.2（适用于 Linux 和 Windows 的多体系结构）为基础。 这是 `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2` 设置。 （有关此基础映像的详细信息，请参阅 [.NET Core Docker 映像页](https://hub.docker.com/_/microsoft-dotnet-core/)页面。）在 Dockerfile 中，还需指示 Docker 侦听要在运行时使用的 TCP 端口（示例中由 EXPOSE 设置配置的 TPC 端口为 80）。
 
 可在 Dockerfile 中指定其他配置设置，具体取决于使用的语言和框架。 例如，带有 `["dotnet", "MySingleContainerWebApp.dll"]` 的 ENTRYPOINT 行可指示 Docker 运行 .NET Core 应用程序。 如果使用 SDK 和 .NET Core CLI (dotnet CLI) 来生成和运行 .NET 应用程序，则此设置会有所不同。 底部的 ENTRYPOINT 行和其他设置会有所不同，具体取决于为应用程序选择的语言和平台。
 
@@ -132,7 +132,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 ### <a name="using-multi-arch-image-repositories"></a>使用多体系结构映像存储库
 
-单个存储库中可包含平台变量，如 Linux 映像和 Windows 映像。 借助此功能，Microsoft （基础映像创建者）等供应商可创建涵盖多个平台（即 Linux 和 Windows）的单个存储库。 例如，Docker 中心注册表中提供的 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) 存储库可使用相同的存储库名称为 Linux 和 Windows Nano Server 提供支持。
+单个存储库中可包含平台变量，如 Linux 映像和 Windows 映像。 借助此功能，Microsoft （基础映像创建者）等供应商可创建涵盖多个平台（即 Linux 和 Windows）的单个存储库。 例如，Docker 中心注册表中提供的 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) 存储库可使用相同的存储库名称为 Linux 和 Windows Nano Server 提供支持。
 
 如果指定了标签，请明确指定一个平台，如下所示：
 
@@ -174,11 +174,11 @@ Dockerfile 类似于批处理脚本。 类似于在必须从命令行设置计�
 初始 Dockerfile 可能如下所示：
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+ 1  FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.2-sdk AS build
+ 5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
@@ -266,11 +266,11 @@ RUN dotnet restore
 生成的文件为：
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+ 1  FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.2-sdk AS publish
+ 5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
@@ -321,7 +321,7 @@ RUN dotnet restore
 
 ![docker 映像命令中列出的映像的屏幕视图](./media/image9.png)
 
-**如 5-6**。 使用 docker images 命令查看现有映像
+**图 5-6.** 使用 docker images 命令查看现有映像
 
 ### <a name="creating-docker-images-with-visual-studio"></a>使用 Visual Studio 创建 Docker 映像
 
@@ -524,7 +524,7 @@ docker-compose.yml 文件不仅指定正在使用的容器，还指定如何单�
 - 在本地 Docker 容器中调试应用 \
   [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
-- **Steve Lasker。Build, Debug, Deploy ASP.NET Core Apps with Docker**（使用 Docker 生成、调试、部署 ASP.NET Core 应用）。 视频。 \
+- **Steve Lasker。 使用 Docker 生成、调试、部署 ASP.NET Core 应用。** 视频。 \
   [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>使用 Visual Studio 可简化开发容器的工作流

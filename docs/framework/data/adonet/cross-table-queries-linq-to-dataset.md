@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-ms.openlocfilehash: b897be62a940f1d27e9a8cf2eb54eec460b60468
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e22df1148fab9148c1ca46f27e8603f55f71b34b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193598"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>跨表查询 (LINQ to DataSet)
 除了查询单个表外，也可以在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中执行交叉表查询。 这是通过使用*联接*。 联接就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象（例如产品或联系人 ID）相关联。 在面向对象的编程中，由于每个对象都有引用另一个对象的成员，所以对象间的关系相对较容易导航。 但在外部数据库表中，导航关系不像这样简单。 数据库表不包含内置关系。 在这些情况下，可以通过联接操作来匹配每个源中的元素。 例如，假设有两个分别包含产品信息和销售信息的表，您可以使用联接操作来匹配同一销售订单的销售信息和产品。  
@@ -30,6 +30,7 @@ ms.locfileid: "55825935"
  [!code-vb[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#join)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [查询数据集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
 - [单表查询](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
 - [查询类型化数据集](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
