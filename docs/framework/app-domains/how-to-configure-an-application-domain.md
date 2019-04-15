@@ -11,28 +11,29 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8989d7695f44b0cd2e8b0ce3ec8bd74a6e802102
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe0c7ecf1b0daf0e9ea56ec590083fe1ccd2d693
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225074"
 ---
-# <a name="how-to-configure-an-application-domain"></a><span data-ttu-id="6e442-102">如何：配置应用程序域</span><span class="sxs-lookup"><span data-stu-id="6e442-102">How to: Configure an Application Domain</span></span>
-<span data-ttu-id="6e442-103">可以使用 <xref:System.AppDomainSetup> 类为新应用程序域提供含配置信息的公共语言运行时。</span><span class="sxs-lookup"><span data-stu-id="6e442-103">You can provide the common language runtime with configuration information for a new application domain using the <xref:System.AppDomainSetup> class.</span></span> <span data-ttu-id="6e442-104">创建自己的应用程序域时，最重要的属性是 <xref:System.AppDomainSetup.ApplicationBase%2A>。</span><span class="sxs-lookup"><span data-stu-id="6e442-104">When creating your own application domains, the most important property is <xref:System.AppDomainSetup.ApplicationBase%2A>.</span></span> <span data-ttu-id="6e442-105">其他 AppDomainSetup 属性主要由运行时宿主用于配置特殊的应用程序域。</span><span class="sxs-lookup"><span data-stu-id="6e442-105">The other **AppDomainSetup** properties are used mainly by runtime hosts to configure a particular application domain.</span></span>  
+# <a name="how-to-configure-an-application-domain"></a><span data-ttu-id="e5049-102">如何：配置应用程序域</span><span class="sxs-lookup"><span data-stu-id="e5049-102">How to: Configure an Application Domain</span></span>
+<span data-ttu-id="e5049-103">可以使用 <xref:System.AppDomainSetup> 类为新应用程序域提供含配置信息的公共语言运行时。</span><span class="sxs-lookup"><span data-stu-id="e5049-103">You can provide the common language runtime with configuration information for a new application domain using the <xref:System.AppDomainSetup> class.</span></span> <span data-ttu-id="e5049-104">创建自己的应用程序域时，最重要的属性是 <xref:System.AppDomainSetup.ApplicationBase%2A>。</span><span class="sxs-lookup"><span data-stu-id="e5049-104">When creating your own application domains, the most important property is <xref:System.AppDomainSetup.ApplicationBase%2A>.</span></span> <span data-ttu-id="e5049-105">其他 AppDomainSetup 属性主要由运行时宿主用于配置特殊的应用程序域。</span><span class="sxs-lookup"><span data-stu-id="e5049-105">The other **AppDomainSetup** properties are used mainly by runtime hosts to configure a particular application domain.</span></span>  
   
- <span data-ttu-id="6e442-106">ApplicationBase 属性定义应用程序的根目录。</span><span class="sxs-lookup"><span data-stu-id="6e442-106">The **ApplicationBase** property defines the root directory of the application.</span></span> <span data-ttu-id="6e442-107">当运行时需要满足类型请求时，它会在 ApplicationBase 属性指定的目录中探测包含该类型的程序集。</span><span class="sxs-lookup"><span data-stu-id="6e442-107">When the runtime needs to satisfy a type request, it probes for the assembly containing the type in the directory specified by the **ApplicationBase** property.</span></span>  
+ <span data-ttu-id="e5049-106">ApplicationBase 属性定义应用程序的根目录。</span><span class="sxs-lookup"><span data-stu-id="e5049-106">The **ApplicationBase** property defines the root directory of the application.</span></span> <span data-ttu-id="e5049-107">当运行时需要满足类型请求时，它会在 ApplicationBase 属性指定的目录中探测包含该类型的程序集。</span><span class="sxs-lookup"><span data-stu-id="e5049-107">When the runtime needs to satisfy a type request, it probes for the assembly containing the type in the directory specified by the **ApplicationBase** property.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6e442-108">新的应用程序域只继承创建者的 ApplicationBase 属性。</span><span class="sxs-lookup"><span data-stu-id="6e442-108">A new application domain inherits only the **ApplicationBase** property of the creator.</span></span>  
+>  <span data-ttu-id="e5049-108">新的应用程序域只继承创建者的 ApplicationBase 属性。</span><span class="sxs-lookup"><span data-stu-id="e5049-108">A new application domain inherits only the **ApplicationBase** property of the creator.</span></span>  
   
- <span data-ttu-id="6e442-109">以下示例创建 AppDomainSetup 类的实例，使用此类创建新的应用程序域，将信息写入控制台，然后卸载应用程序域。</span><span class="sxs-lookup"><span data-stu-id="6e442-109">The following example creates an instance of the **AppDomainSetup** class, uses this class to create a new application domain, writes the information to console, and then unloads the application domain.</span></span>  
+ <span data-ttu-id="e5049-109">以下示例创建 AppDomainSetup 类的实例，使用此类创建新的应用程序域，将信息写入控制台，然后卸载应用程序域。</span><span class="sxs-lookup"><span data-stu-id="e5049-109">The following example creates an instance of the **AppDomainSetup** class, uses this class to create a new application domain, writes the information to console, and then unloads the application domain.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6e442-110">示例</span><span class="sxs-lookup"><span data-stu-id="6e442-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e5049-110">示例</span><span class="sxs-lookup"><span data-stu-id="e5049-110">Example</span></span>  
  [!code-cpp[ADApplicationBase#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADApplicationBase/CPP/source2.cpp#2)]
  [!code-csharp[ADApplicationBase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADApplicationBase/CS/source2.cs#2)]
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="6e442-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="6e442-111">See also</span></span>
-- [<span data-ttu-id="6e442-112">对应用程序域进行编程</span><span class="sxs-lookup"><span data-stu-id="6e442-112">Programming with Application Domains</span></span>](application-domains.md#programming-with-application-domains)
-- [<span data-ttu-id="6e442-113">使用应用程序域</span><span class="sxs-lookup"><span data-stu-id="6e442-113">Using Application Domains</span></span>](../../../docs/framework/app-domains/use.md)
+## <a name="see-also"></a><span data-ttu-id="e5049-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="e5049-111">See also</span></span>
+
+- [<span data-ttu-id="e5049-112">对应用程序域进行编程</span><span class="sxs-lookup"><span data-stu-id="e5049-112">Programming with Application Domains</span></span>](application-domains.md#programming-with-application-domains)
+- [<span data-ttu-id="e5049-113">使用应用程序域</span><span class="sxs-lookup"><span data-stu-id="e5049-113">Using Application Domains</span></span>](../../../docs/framework/app-domains/use.md)

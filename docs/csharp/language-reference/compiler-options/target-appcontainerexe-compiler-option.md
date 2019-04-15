@@ -2,48 +2,48 @@
 title: -target:appcontainerexe（C# 编译器选项）
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-ms.openlocfilehash: 4f8c59d94b76dd0f3415846f7e682d62cc1771ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3819c0582c414e1f1e3b75ab5bfe517873a1eb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707604"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311066"
 ---
-# <a name="-targetappcontainerexe-c-compiler-options"></a><span data-ttu-id="fb6a2-102">-target:appcontainerexe（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="fb6a2-102">-target:appcontainerexe (C# Compiler Options)</span></span>
-<span data-ttu-id="fb6a2-103">如果使用 -target:appcontainerexe 编译器选项，则编译器会创建一个 Windows 可执行 (.exe) 文件，该文件必须在应用容器中运行。</span><span class="sxs-lookup"><span data-stu-id="fb6a2-103">If you use the **-target:appcontainerexe** compiler option, the compiler creates a Windows executable (.exe) file that must be run in an app container.</span></span> <span data-ttu-id="fb6a2-104">此选项与 [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) 等效，但专门用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用。</span><span class="sxs-lookup"><span data-stu-id="fb6a2-104">This option is equivalent to [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) but is designed for [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] apps.</span></span>  
+# <a name="-targetappcontainerexe-c-compiler-options"></a><span data-ttu-id="28142-102">-target:appcontainerexe（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="28142-102">-target:appcontainerexe (C# Compiler Options)</span></span>
+<span data-ttu-id="28142-103">如果使用 -target:appcontainerexe 编译器选项，则编译器会创建一个 Windows 可执行 (.exe) 文件，该文件必须在应用容器中运行。</span><span class="sxs-lookup"><span data-stu-id="28142-103">If you use the **-target:appcontainerexe** compiler option, the compiler creates a Windows executable (.exe) file that must be run in an app container.</span></span> <span data-ttu-id="28142-104">此选项与 [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) 等效，但专门用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用。</span><span class="sxs-lookup"><span data-stu-id="28142-104">This option is equivalent to [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) but is designed for [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] apps.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fb6a2-105">语法</span><span class="sxs-lookup"><span data-stu-id="fb6a2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="28142-105">语法</span><span class="sxs-lookup"><span data-stu-id="28142-105">Syntax</span></span>  
   
 ```console  
 -target:appcontainerexe  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="fb6a2-106">备注</span><span class="sxs-lookup"><span data-stu-id="fb6a2-106">Remarks</span></span>  
- <span data-ttu-id="fb6a2-107">为了要求应用在应用容器中运行，此选项在[可移植可执行](/windows/desktop/Debug/pe-format) (PE) 文件中设置了一个位。</span><span class="sxs-lookup"><span data-stu-id="fb6a2-107">To require the app to run in an app container, this option sets a bit in the [Portable Executable](/windows/desktop/Debug/pe-format) (PE) file.</span></span> <span data-ttu-id="fb6a2-108">设置该位时，如果 CreateProcess 方法尝试在应用容器外启动该可执行文件，就会发生错误。</span><span class="sxs-lookup"><span data-stu-id="fb6a2-108">When that bit is set, an error occurs if the CreateProcess method tries to launch the executable file outside an app container.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="28142-106">备注</span><span class="sxs-lookup"><span data-stu-id="28142-106">Remarks</span></span>  
+ <span data-ttu-id="28142-107">为了要求应用在应用容器中运行，此选项在[可移植可执行](/windows/desktop/Debug/pe-format) (PE) 文件中设置了一个位。</span><span class="sxs-lookup"><span data-stu-id="28142-107">To require the app to run in an app container, this option sets a bit in the [Portable Executable](/windows/desktop/Debug/pe-format) (PE) file.</span></span> <span data-ttu-id="28142-108">设置该位时，如果 CreateProcess 方法尝试在应用容器外启动该可执行文件，就会发生错误。</span><span class="sxs-lookup"><span data-stu-id="28142-108">When that bit is set, an error occurs if the CreateProcess method tries to launch the executable file outside an app container.</span></span>  
   
- <span data-ttu-id="fb6a2-109">除非使用 [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) 选项，否则输出文件名采用包含 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 方法的输入文件的名称。</span><span class="sxs-lookup"><span data-stu-id="fb6a2-109">Unless you use the [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the input file that contains the [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method.</span></span>  
+ <span data-ttu-id="28142-109">除非使用 [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) 选项，否则输出文件名采用包含 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 方法的输入文件的名称。</span><span class="sxs-lookup"><span data-stu-id="28142-109">Unless you use the [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the input file that contains the [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method.</span></span>  
   
- <span data-ttu-id="fb6a2-110">如果在命令提示符处指定此选项，则在下一个 -out 或 -target 选项之前，会使用所有文件来创建可执行文件。</span><span class="sxs-lookup"><span data-stu-id="fb6a2-110">When you specify this option at a command prompt, all files until the next **-out** or **-target** option are used to create the executable file.</span></span>  
+ <span data-ttu-id="28142-110">如果在命令提示符处指定此选项，则在下一个 -out 或 -target 选项之前，会使用所有文件来创建可执行文件。</span><span class="sxs-lookup"><span data-stu-id="28142-110">When you specify this option at a command prompt, all files until the next **-out** or **-target** option are used to create the executable file.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-ide"></a><span data-ttu-id="fb6a2-111">在 IDE 中设置此编译器选项</span><span class="sxs-lookup"><span data-stu-id="fb6a2-111">To set this compiler option in the IDE</span></span>  
+### <a name="to-set-this-compiler-option-in-the-ide"></a><span data-ttu-id="28142-111">在 IDE 中设置此编译器选项</span><span class="sxs-lookup"><span data-stu-id="28142-111">To set this compiler option in the IDE</span></span>  
   
-1.  <span data-ttu-id="fb6a2-112">在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“属性”。</span><span class="sxs-lookup"><span data-stu-id="fb6a2-112">In **Solution Explorer**, open the shortcut menu for your project, and then choose **Properties**.</span></span>  
+1. <span data-ttu-id="28142-112">在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“属性”。</span><span class="sxs-lookup"><span data-stu-id="28142-112">In **Solution Explorer**, open the shortcut menu for your project, and then choose **Properties**.</span></span>  
   
-2.  <span data-ttu-id="fb6a2-113">在“应用程序”选项卡上，在“输出类型”列表中选择“Windows 应用商店应用”。</span><span class="sxs-lookup"><span data-stu-id="fb6a2-113">On the **Application** tab, in the **Output type** list, choose **Windows Store App**.</span></span>  
+2. <span data-ttu-id="28142-113">在“应用程序”选项卡上，在“输出类型”列表中选择“Windows 应用商店应用”。</span><span class="sxs-lookup"><span data-stu-id="28142-113">On the **Application** tab, in the **Output type** list, choose **Windows Store App**.</span></span>  
   
-     <span data-ttu-id="fb6a2-114">此选项仅可用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用模板。</span><span class="sxs-lookup"><span data-stu-id="fb6a2-114">This option is available only for [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] app templates.</span></span>  
+     <span data-ttu-id="28142-114">此选项仅可用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用模板。</span><span class="sxs-lookup"><span data-stu-id="28142-114">This option is available only for [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] app templates.</span></span>  
   
- <span data-ttu-id="fb6a2-115">有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。</span><span class="sxs-lookup"><span data-stu-id="fb6a2-115">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
+ <span data-ttu-id="28142-115">有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。</span><span class="sxs-lookup"><span data-stu-id="28142-115">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fb6a2-116">示例</span><span class="sxs-lookup"><span data-stu-id="fb6a2-116">Example</span></span>  
- <span data-ttu-id="fb6a2-117">以下命令将 `filename.cs` 编译为一个只能在应用容器中运行的 Windows 可执行文件。</span><span class="sxs-lookup"><span data-stu-id="fb6a2-117">The following command compiles `filename.cs` into a Windows executable file that can be run only in an app container.</span></span>  
+## <a name="example"></a><span data-ttu-id="28142-116">示例</span><span class="sxs-lookup"><span data-stu-id="28142-116">Example</span></span>  
+ <span data-ttu-id="28142-117">以下命令将 `filename.cs` 编译为一个只能在应用容器中运行的 Windows 可执行文件。</span><span class="sxs-lookup"><span data-stu-id="28142-117">The following command compiles `filename.cs` into a Windows executable file that can be run only in an app container.</span></span>  
   
 ```console  
 csc -target:appcontainerexe filename.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fb6a2-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="fb6a2-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28142-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="28142-118">See also</span></span>
 
-- [<span data-ttu-id="fb6a2-119">-target（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="fb6a2-119">-target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [<span data-ttu-id="fb6a2-120">-target:winexe（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="fb6a2-120">-target:winexe (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)
-- [<span data-ttu-id="fb6a2-121">C# 编译器选项</span><span class="sxs-lookup"><span data-stu-id="fb6a2-121">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="28142-119">-target（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="28142-119">-target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
+- [<span data-ttu-id="28142-120">-target:winexe（C# 编译器选项）</span><span class="sxs-lookup"><span data-stu-id="28142-120">-target:winexe (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)
+- [<span data-ttu-id="28142-121">C# 编译器选项</span><span class="sxs-lookup"><span data-stu-id="28142-121">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
