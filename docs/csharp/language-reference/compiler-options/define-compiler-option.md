@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 56028bcf3b843a4f6884e2d7cc7d409621adba34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46ceca3a84e8ffbe6d07886c1b93d062f3ccd2d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558810"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305255"
 ---
 # <a name="-define-c-compiler-options"></a>-define（C# 编译器选项）
 -define 选项将 `name` 定义为程序中所有源代码文件的符号。  
@@ -28,7 +28,7 @@ ms.locfileid: "54558810"
 ```  
   
 ## <a name="arguments"></a>自变量  
- `name`， `name2`  
+ `name`, `name2`  
  一个或多个要定义的符号的名称。  
   
 ## <a name="remarks"></a>备注  
@@ -51,9 +51,9 @@ ms.locfileid: "54558810"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的“属性”页。  
+1. 打开项目的“属性”页。  
   
-2.  在“生成”选项卡上，键入要在“条件编译符号”框中定义的符号。 例如，如果使用以下代码示例，只需在文本框中键入 `xx`。  
+2. 在“生成”选项卡上，键入要在“条件编译符号”框中定义的符号。 例如，如果使用以下代码示例，只需在文本框中键入 `xx`。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>。  
   

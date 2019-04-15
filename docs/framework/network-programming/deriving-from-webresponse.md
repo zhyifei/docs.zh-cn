@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: f07e20bc3d81c328390ad5da43e55aab457a62a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226040"
 ---
 # <a name="deriving-from-webresponse"></a>从 WebResponse 派生
 <xref:System.Net.WebResponse> 类是一个抽象基类，可为创建适合 .NET Framework 可插入协议模型的协议特定的响应提供基本方法和属性。 使用 <xref:System.Net.WebRequest> 类从资源请求数据的应用程序会在 WebResponse 中接收响应。 协议特定的 WebResponse 后代必须实现 WebResponse 类的抽象成员。  
@@ -39,6 +39,7 @@ ms.locfileid: "54598862"
  GetResponseStream 方法返回的流实例为应用程序所有，无需关闭 WebResponse 即可将其关闭。 按照惯例，调用 WebResponse.Close 方法也会关闭 GetResponse 返回的流。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>

@@ -2,19 +2,19 @@
 title: 如何：查找两个列表之间的差集 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 13166aaeba50d8cca33861d5489d7839d3933099
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a00b3ea6bcab13bbb3af56027c4c49a9bb562c3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712728"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306307"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>如何：查找两个列表之间的差集 (LINQ) (C#)
 此示例演示如何使用 LINQ 对两个字符串列表进行比较，并输出那些位于 names1.txt 中但不在 names2.txt 中的行。  
   
 ### <a name="to-create-the-data-files"></a>创建数据文件  
   
-1.  按照[如何：组合和比较字符串集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md) 中的说明，将 names1.txt 和 names2.txt 复制到解决方案文件夹中。  
+1. 按照[如何：组合和比较字符串集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md) 中的说明，将 names1.txt 和 names2.txt 复制到解决方案文件夹中。  
   
 ## <a name="example"></a>示例  
   

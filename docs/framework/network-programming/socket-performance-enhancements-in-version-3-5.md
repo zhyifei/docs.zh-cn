@@ -2,12 +2,12 @@
 title: 版本 3.5 中的套接字性能增强
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 590caba9080119386454671e2cab597a22e4d49b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28f2543d1f8c81efd32ffbb644265fb5709a9bb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587760"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333283"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>版本 3.5 中的套接字性能增强
 版本 3.5 中增强了 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 类，以供使用异步网络 I/O 实现最高性能的应用程序使用。 已添加了一系列新类，作为 <xref:System.Net.Sockets.Socket> 类的一组增强功能的一部分，这些增强功能提供了一种可供专用高性能套接字应用程序使用的替代异步模式。 这些增强功能专为需要高性能的网络服务器应用程序而设计。 应用程序可以独占方式使用增强型异步模式，或仅在其应用程序的目标热区域（例如，接收大量数据时）使用。  
@@ -19,21 +19,22 @@ ms.locfileid: "54587760"
   
  使用此类执行异步套接字操作的模式包括以下步骤：  
   
-1.  分配一个新的 <xref:System.Net.Sockets.SocketAsyncEventArgs> 上下文对象，或从应用程序池中获取一个空闲对象。  
+1. 分配一个新的 <xref:System.Net.Sockets.SocketAsyncEventArgs> 上下文对象，或从应用程序池中获取一个空闲对象。  
   
-2.  将上下文对象的属性设置为要执行的操作（例如，回调代理方法和数据缓冲区）。  
+2. 将上下文对象的属性设置为要执行的操作（例如，回调代理方法和数据缓冲区）。  
   
-3.  调用适当的套接字方法 (xxxAsync) 以启动异步操作。  
+3. 调用适当的套接字方法 (xxxAsync) 以启动异步操作。  
   
-4.  如果异步套接字方法 (xxxAsync) 在回调中返回 true，请查询完成状态的上下文属性。  
+4. 如果异步套接字方法 (xxxAsync) 在回调中返回 true，请查询完成状态的上下文属性。  
   
-5.  如果异步套接字方法 (xxxAsync) 在回调中返回 false，则已同步完成该操作。 可查询上下文属性获取操作结果。  
+5. 如果异步套接字方法 (xxxAsync) 在回调中返回 false，则已同步完成该操作。 可查询上下文属性获取操作结果。  
   
-6.  重新使用上下文进行另一项操作，将其放回池中，或放弃它。  
+6. 重新使用上下文进行另一项操作，将其放回池中，或放弃它。  
   
  新的异步套接字操作上下文对象的生存期由应用程序代码中的引用和异步 I/O 引用确定。 作为参数提交给异步套接字操作方法之一后，应用程序不必保留对异步套接字操作上下文对象的引用。 完成回调返回之前，应用程序会继续引用它。 然而，应用程序保留对上下文对象的引用是有利的，这样可将其重新用于将来的异步套接字操作。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbb681567090cb26d20a31e8645c0b651bef9244
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675947"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305190"
 ---
 # <a name="assembly-versioning"></a>程序集版本控制
 使用公共语言运行时的程序集的所有版本控制都在程序集级别上进行。 一个程序集的特定版本和依赖程序集的版本在该程序集的清单中记录下来。 除非被配置文件（应用程序配置文件、发行者策略文件和计算机的管理员配置文件）中的显式版本策略重写，否则运行时的默认版本策略是，应用程序只与它们生成和测试时所用的程序集版本一起运行。  
@@ -25,13 +25,13 @@ ms.locfileid: "58675947"
   
  运行时执行以下几步来解析程序集绑定请求：  
   
-1.  检查原程序集引用，以确定该程序集的版本是否被绑定。  
+1. 检查原程序集引用，以确定该程序集的版本是否被绑定。  
   
-2.  检查所有适用的配置文件以应用版本策略。  
+2. 检查所有适用的配置文件以应用版本策略。  
   
-3.  通过原程序集引用和配置文件中指定的任何重定向来确定正确的程序集，并且确定应绑定到调用程序集的版本。  
+3. 通过原程序集引用和配置文件中指定的任何重定向来确定正确的程序集，并且确定应绑定到调用程序集的版本。  
   
-4.  检查全局程序集缓存和在配置文件中指定的基本代码，然后使用在[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)中解释的探测规则检查该应用程序的目录和子目录。  
+4. 检查全局程序集缓存和在配置文件中指定的基本代码，然后使用在[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)中解释的探测规则检查该应用程序的目录和子目录。  
   
  下图说明了这些步骤：  
   
@@ -70,7 +70,8 @@ ms.locfileid: "58675947"
  信息性版本用自定义特性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> 表示。 有关信息性版本特性的更多信息，请参阅[设置程序集特性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [配置应用程序](../../../docs/framework/configure-apps/index.md)
+- [配置应用](../../../docs/framework/configure-apps/index.md)
 - [设置程序集特性](../../../docs/framework/app-domains/set-assembly-attributes.md)
-- [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）
+- [公共语言运行时中的程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

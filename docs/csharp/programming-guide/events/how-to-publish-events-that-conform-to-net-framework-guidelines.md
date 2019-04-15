@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: b2ee31f6f6c746c276428222aa1d3c33c55f34bf
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3ea5f5fb3b94c3edfd129a08a57c4c584b1412aa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200450"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306581"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>如何：发布符合 .NET Framework 准则的事件（C# 编程指南）
 下面的过程演示了如何将遵循标准 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 模式的事件添加到类和结构中。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库中的所有事件均基于 <xref:System.EventHandler> 委托，定义如下：  
@@ -26,7 +26,7 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 ### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>发布基于 EventHandler 模式的事件  
   
-1.  （如果无需随事件一起发送自定义数据，请跳过此步骤转到步骤 3a。）将自定义数据的类声明为对发布服务器和订阅者类均可见的范围。 然后添加所需成员以保留自定义事件数据。 在此示例中，将返回一个简单的字符串。  
+1. （如果无需随事件一起发送自定义数据，请跳过此步骤转到步骤 3a。）将自定义数据的类声明为对发布服务器和订阅者类均可见的范围。 然后添加所需成员以保留自定义事件数据。 在此示例中，将返回一个简单的字符串。  
   
     ```csharp  
     public class CustomEventArgs : EventArgs  
@@ -43,13 +43,13 @@ public delegate void EventHandler(object sender, EventArgs e);
     }  
     ```  
   
-2.  （如果正在使用泛型版本 <xref:System.EventHandler%601>，请跳过此步骤。）声明发布类中的委托。 为以 EventHandler 结尾的委托命名。 第二个参数指定自定义 EventArgs 类型。  
+2. （如果正在使用泛型版本 <xref:System.EventHandler%601>，请跳过此步骤。）声明发布类中的委托。 为以 EventHandler 结尾的委托命名。 第二个参数指定自定义 EventArgs 类型。  
   
     ```csharp  
     public delegate void CustomEventHandler(object sender, CustomEventArgs a);  
     ```  
   
-3.  使用下列步骤之一来声明发布类中的事件。  
+3. 使用下列步骤之一来声明发布类中的事件。  
   
     1.  如果没有任何自定义 EventArgs 类，事件类型将为非泛型 EventHandler 委托。 你无需声明该委托，因为它已在创建 C# 项目时包括的 <xref:System> 命名空间中声明。 将以下代码添加到发布服务器类。  
   

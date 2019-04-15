@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642826"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324469"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>如何：取消任务及其子级
 这些示例展示了如何执行下列任务：  
   
-1.  创建并启动可取消任务。  
+1. 创建并启动可取消任务。  
   
-2.  将取消令牌传递给用户委托，并视需要传递给任务实例。  
+2. 将取消令牌传递给用户委托，并视需要传递给任务实例。  
   
-3.  注意并响应用户委托中的取消请求。  
+3. 注意并响应用户委托中的取消请求。  
   
-4.  （可选）注意已取消任务的调用线程。  
+4. （可选）注意已取消任务的调用线程。  
   
  调用线程不会强制结束任务，只会提示取消请求已发出。 如果任务已在运行，至于怎样才能注意请求并适当响应，取决于用户委托的选择。 如果取消请求在任务运行前发出，用户委托绝不会执行，任务对象的状态会转换为“已取消”。  
   
@@ -45,5 +45,5 @@ ms.locfileid: "54642826"
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
 - [基于任务的异步编程](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
-- [附加和分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)
+- [已附加和已分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)
 - [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

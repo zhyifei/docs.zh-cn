@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c008809606372c84b05a2facd1cac1293382aed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234903"
+---
 ### <a name="aescryptoserviceprovider-decryptor-provides-a-reusable-transform"></a>AesCryptoServiceProvider 解密器提供了可重用的转换
 
 |   |   |
@@ -8,4 +16,3 @@
 |版本|4.6.2|
 |类型|重定目标|
 |受影响的 API|<ul><li><xref:System.Security.Cryptography.AesCryptoServiceProvider.CreateDecryptor?displayProperty=nameWithType></li></ul>|
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604296"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305333"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>如何：取消 PLINQ 查询
 下面的示例展示了取消 PLINQ 查询的两种方法。 第一个示例展示了如何取消主要由数据遍历组成的查询。 第二个示例展示了如何取消包含计算成本很高的用户函数的查询。  
@@ -34,9 +34,9 @@ ms.locfileid: "54604296"
   
  关于取消的一般性指南如下：  
   
-1.  如果执行用户委托取消，应将外部 <xref:System.Threading.CancellationToken> 告知给 PLINQ，并抛出 <xref:System.OperationCanceledException>(externalCT)。  
+1. 如果执行用户委托取消，应将外部 <xref:System.Threading.CancellationToken> 告知给 PLINQ，并抛出 <xref:System.OperationCanceledException>(externalCT)。  
   
-2.  如果发生取消且没有抛出其他任何异常，应处理 <xref:System.OperationCanceledException>，而不是 <xref:System.AggregateException>。  
+2. 如果发生取消且没有抛出其他任何异常，应处理 <xref:System.OperationCanceledException>，而不是 <xref:System.AggregateException>。  
   
 ## <a name="example"></a>示例  
  下面的示例展示了如何在用户代码中使用计算成本高的函数时处理取消。  

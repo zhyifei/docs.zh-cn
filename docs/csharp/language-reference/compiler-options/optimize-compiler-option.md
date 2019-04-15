@@ -12,12 +12,12 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: 92d5faa870623b5b7d7d1bad16ad0f1ba3f1bf76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25a9ee1b27836dfb00dcbc72712ed068639fa2fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636990"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320027"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize（C# 编译器选项）
 -optimize 选项启用或禁用编译器执行的优化，使输出文件更小、更快、更有效。  
@@ -41,11 +41,11 @@ ms.locfileid: "54636990"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的“属性”页。  
+1. 打开项目的“属性”页。  
   
-2.  单击“生成”属性页。  
+2. 单击“生成”属性页。  
   
-3.  修改“优化代码”属性。  
+3. 修改“优化代码”属性。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>。  
   

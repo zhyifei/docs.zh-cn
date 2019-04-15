@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 44a86a2e1ab9346280f655d4ee75e7282c6c9cd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 814e8f3aa7130c6a64e7e27951854bed7b7cbe6c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578378"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333933"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked（C# 编译器选项）
 -checked 选项指定，不在 [checked](../../../csharp/language-reference/keywords/checked.md) 或 [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 关键字的范围内、并且产生的值超出数据类型范围的整数算法语句是否将导致运行时异常。  
@@ -35,13 +35,13 @@ ms.locfileid: "54578378"
  
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的“属性”页。 有关详细信息，请参阅 [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+1. 打开项目的“属性”页。 有关详细信息，请参阅 [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
-2.  单击“生成”属性页。  
+2. 单击“生成”属性页。  
   
-3.  单击“高级”按钮。  
+3. 单击“高级”按钮。  
   
-4.  修改“检查算术溢出/下溢”属性。  
+4. 修改“检查算术溢出/下溢”属性。  
   
  要以编程方式访问此编译器选项，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>。  
   

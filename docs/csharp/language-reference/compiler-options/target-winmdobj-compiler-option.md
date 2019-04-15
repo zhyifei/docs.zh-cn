@@ -2,12 +2,12 @@
 title: -target:winmdobj（C# 编译器选项）
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 4000394a35c8990d3c5793c1313fc768a61c3271
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cc85bf582d737114bc0e621a9568bbb9acb791b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608961"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319295"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj（C# 编译器选项）
 如果使用 -target:winmdobj 编译器选项，则编译器会创建一个中间 .winmdobj 文件，你可以将这个文件转换为 Windows 运行时二进制 (.winmd) 文件。 之后，除了托管语言程序外，JavaScript 和 C++ 程序也可以使用该 .winmd 文件。  
@@ -29,11 +29,11 @@ ms.locfileid: "54608961"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>在 Visual Studio IDE 中为 Windows 应用商店应用程序设置此编译器选项  
   
-1.  在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“属性”。  
+1. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“属性”。  
   
-2.  选择“应用程序”选项卡。  
+2. 选择“应用程序”选项卡。  
   
-3.  在“输出类型”列表中，选择“WinMD 文件”。  
+3. 在“输出类型”列表中，选择“WinMD 文件”。  
   
      “WinMD 文件”选项只能用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用模板。  
   

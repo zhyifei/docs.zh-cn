@@ -15,51 +15,51 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857653"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320153"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>如何：向 Web 用户显示本地化的日期和时间信息
 由于世界各地的人都可以查看网页，因此在与用户交互时，分析和设置日期和时间值的格式的操作不得依赖默认格式（通常是 Web 服务器本地区域性的格式）。 相反，处理用户输入的日期和时间字符串的 Web 窗体，应使用用户的首选区域性分析字符串。 同样，日期和时间数据应以符合用户区域性的格式向用户显示。 本主题演示如何执行此操作。  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>分析用户输入的日期和时间字符串的具体步骤  
   
-1.  确定是否已填充 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 属性返回的字符串数组。 如果没有，请继续执行第 6 步。  
+1. 确定是否已填充 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 属性返回的字符串数组。 如果没有，请继续执行第 6 步。  
   
-2.  如果已填充 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组，请检索其中第一个元素。 第一个元素指明用户的默认或首选语言和区域。  
+2. 如果已填充 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组，请检索其中第一个元素。 第一个元素指明用户的默认或首选语言和区域。  
   
-3.  通过调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数，实例化表示用户首选区域性的 <xref:System.Globalization.CultureInfo> 对象。  
+3. 通过调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数，实例化表示用户首选区域性的 <xref:System.Globalization.CultureInfo> 对象。  
   
-4.  调用 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 类型的 `TryParse` 或 `Parse` 方法，尝试执行转换。 重载 `TryParse` 或 `Parse` 方法（带 `provider` 参数），并将它传递到下面两个对象之一：  
+4. 调用 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 类型的 `TryParse` 或 `Parse` 方法，尝试执行转换。 重载 `TryParse` 或 `Parse` 方法（带 `provider` 参数），并将它传递到下面两个对象之一：  
   
     -   第 3 步中创建的 <xref:System.Globalization.CultureInfo> 对象。  
   
     -   第 3 步中创建的 <xref:System.Globalization.CultureInfo> 对象的 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 属性返回的 <xref:System.Globalization.DateTimeFormatInfo> 对象。  
   
-5.  如果转换失败，请对 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组中的每个剩余元素重复执行第 2 步到第 4 步。  
+5. 如果转换失败，请对 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组中的每个剩余元素重复执行第 2 步到第 4 步。  
   
-6.  如果转换仍失败或 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组为空，请使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 属性返回的固定区域性分析字符串。  
+6. 如果转换仍失败或 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组为空，请使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 属性返回的固定区域性分析字符串。  
   
 ## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>分析用户请求的本地日期和时间的具体步骤  
   
-1.  向 Web 窗体添加 <xref:System.Web.UI.WebControls.HiddenField> 控件。  
+1. 向 Web 窗体添加 <xref:System.Web.UI.WebControls.HiddenField> 控件。  
   
-2.  通过将当前日期和时间以及本地时区与协调世界时 (UTC) 的偏移写入 <xref:System.Web.UI.WebControls.HiddenField.Value%2A> 属性，创建用于处理 `Submit` 按钮的 `onClick` 事件的 JavaScript 函数。 使用分隔符（如分号）将字符串的两个组成部分分开。  
+2. 通过将当前日期和时间以及本地时区与协调世界时 (UTC) 的偏移写入 <xref:System.Web.UI.WebControls.HiddenField.Value%2A> 属性，创建用于处理 `Submit` 按钮的 `onClick` 事件的 JavaScript 函数。 使用分隔符（如分号）将字符串的两个组成部分分开。  
   
-3.  使用 Web 窗体的 <xref:System.Web.UI.Control.PreRender> 事件，通过将脚本文本传递给 <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType> 方法，将函数注入 HTML 输出流中。  
+3. 使用 Web 窗体的 <xref:System.Web.UI.Control.PreRender> 事件，通过将脚本文本传递给 <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType> 方法，将函数注入 HTML 输出流中。  
   
-4.  通过将 JavaScript 函数名称提供给 `Submit` 按钮的 `OnClientClick` 属性，将事件处理程序连接到 `Submit` 按钮的 `onClick` 事件。  
+4. 通过将 JavaScript 函数名称提供给 `Submit` 按钮的 `OnClientClick` 属性，将事件处理程序连接到 `Submit` 按钮的 `onClick` 事件。  
   
-5.  创建 `Submit` 按钮的 <xref:System.Web.UI.WebControls.Button.Click> 事件的处理程序。  
+5. 创建 `Submit` 按钮的 <xref:System.Web.UI.WebControls.Button.Click> 事件的处理程序。  
   
-6.  在事件处理程序中，确定是否已填充 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 属性返回的字符串数组。 如果没有，请继续执行第 14 步。  
+6. 在事件处理程序中，确定是否已填充 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 属性返回的字符串数组。 如果没有，请继续执行第 14 步。  
   
-7.  如果已填充 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组，请检索其中第一个元素。 第一个元素指明用户的默认或首选语言和区域。  
+7. 如果已填充 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组，请检索其中第一个元素。 第一个元素指明用户的默认或首选语言和区域。  
   
-8.  通过调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数，实例化表示用户首选区域性的 <xref:System.Globalization.CultureInfo> 对象。  
+8. 通过调用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数，实例化表示用户首选区域性的 <xref:System.Globalization.CultureInfo> 对象。  
   
 9. 将分配给 <xref:System.Web.UI.WebControls.HiddenField.Value%2A> 属性的字符串传递给 <xref:System.String.Split%2A> 方法，以将用户的本地日期和时间的字符串表示形式以及用户的本地时区偏移的字符串表示形式存储到单独的数组元素中。  
   

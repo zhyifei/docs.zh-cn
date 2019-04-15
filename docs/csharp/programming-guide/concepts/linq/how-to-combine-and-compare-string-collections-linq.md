@@ -2,19 +2,19 @@
 title: 如何：组合和比较字符串集合 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 9788973df42b91aa2da690c5bf1b0f6b4d41b127
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f8d734738606ada2db6db7f3c8e6c08ca57a543
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514772"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323741"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>如何：组合和比较字符串集合 (LINQ) (C#)
 此示例演示如何合并包含文本行的文件，并对结果排序。 具体而言，此示例演示如何对两组文本行执行简单的串联、联合和交集。  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>设置项目和文本文件  
   
-1.  将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：  
+1. 将下面的姓名复制到名为 names1.txt 的文本文件，然后将此文件保存到项目文件夹：  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "54514772"
     Garcia, Debra  
     ```  
   
-2.  将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹。 请注意，这两个文件拥有一些共同的名称。  
+2. 将下面的姓名复制到名为 names2.txt 的文本文件，然后将此文件保存到项目文件夹。 请注意，这两个文件拥有一些共同的名称。  
   
     ```  
     Liu, Jinghao  

@@ -5,20 +5,20 @@ ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b1fb4abe8ca0ba7afcefe996de59ceaf67a249
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a37220816ab320340b2dd5c048cc4ff2ad9724a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252774"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330228"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>对 msxsl:node-set() 函数的支持
-`msxsl:node-set` 函数使您能够将结果树片段转换成节点集。 生成的节点集总是包含单个节点并且是树的根节点。  
+`msxsl:node-set` 函数使你能够将结果树片段转换成节点集。 生成的节点集总是包含单个节点并且是树的根节点。  
   
 > [!NOTE]
 >  <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。  
   
- `msxsl:node-set` 函数使您能够将结果树片段转换成节点集。 生成的节点集总是包含单个节点并且是树的根节点。  
+ `msxsl:node-set` 函数使你能够将结果树片段转换成节点集。 生成的节点集总是包含单个节点并且是树的根节点。  
   
 ## <a name="example"></a>示例  
  在下面的示例中，`$var` 是一个变量，是样式表中的一个节点树。 for-each 语句与 `node-set` 函数组合使用，允许用户将此节点树作为节点集循环访问。  
@@ -38,14 +38,14 @@ ms.locfileid: "44252774"
     <xsl:template match="/">  
         <authors>  
             <xsl:for-each select="msxsl:node-set($books)/book">   
-                <author><xsl:value-of select="@author"/)</author>  
+                <author><xsl:value-of select="@author"/></author>  
             </xsl:for-each>  
         </authors>  
     </xsl:template>  
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>输出  
+## <a name="output"></a>Output  
  转换的输出为  
   
 ```xml  

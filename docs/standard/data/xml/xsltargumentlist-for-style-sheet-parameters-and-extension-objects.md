@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fb973dcde1ca31a57fbc3022d3eb1c92a2a9d0f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322402"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>样式表参数和扩展对象的 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 类包含可扩展样式表语言转换 (XSLT) 参数和 XSLT 扩展对象。 传入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法后，这些参数和扩展对象可以从样式表中进行调用。  
@@ -50,11 +50,11 @@ ms.locfileid: "45988083"
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>要使用 XSLT 参数，用户需要执行以下操作：  
   
-1.  创建 <xref:System.Xml.Xsl.XsltArgumentList> 并使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 添加对象。  
+1. 创建 <xref:System.Xml.Xsl.XsltArgumentList> 并使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 添加对象。  
   
-2.  从样式表调用参数。  
+2. 从样式表调用参数。  
   
-3.  将 <xref:System.Xml.Xsl.XsltArgumentList> 传递到 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
+3. 将 <xref:System.Xml.Xsl.XsltArgumentList> 传递到 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
   
 ### <a name="example"></a>示例  
  下面的示例使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 方法创建一个参数来保存计算的折扣日期。 折扣日期计算为从订单日期算起的 20 天时间。  
@@ -171,7 +171,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>输出  
+### <a name="output"></a>Output  
   
 ```xml  
 <order>  
@@ -191,11 +191,11 @@ public class Sample
   
 #### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>要使用 XSLT 扩展对象，用户需要执行以下操作：  
   
-1.  创建 <xref:System.Xml.Xsl.XsltArgumentList> 并使用 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 添加扩展对象。  
+1. 创建 <xref:System.Xml.Xsl.XsltArgumentList> 并使用 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 添加扩展对象。  
   
-2.  从样式表调用扩展对象。  
+2. 从样式表调用扩展对象。  
   
-3.  将 <xref:System.Xml.Xsl.XsltArgumentList> 传递到 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
+3. 将 <xref:System.Xml.Xsl.XsltArgumentList> 传递到 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
   
 ### <a name="example"></a>示例  
  已知圆的半径，下面的示例计算圆的周长。  
@@ -343,7 +343,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>输出  
+### <a name="output"></a>Output  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

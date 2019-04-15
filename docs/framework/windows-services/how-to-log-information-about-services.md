@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: ff3eb0dd27f097899fc19f57142034ffd2bb382a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfcfb7370ffd59a50cf6d0b01e84e581ddc6fc52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660133"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306516"
 ---
 # <a name="how-to-log-information-about-services"></a>如何：记录关于服务的信息
 默认情况下，所有 Windows 服务项目都具有与应用程序事件日志进行交互并向其中写入信息和异常的功能。 使用 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性可指示是否希望应用程序具有此功能。 默认情况下，用 Windows 服务项目模板创建的所有服务的记录都是打开的。 可以使用静态形式的 <xref:System.Diagnostics.EventLog> 类将服务信息写入日志，而无需创建 <xref:System.Diagnostics.EventLog> 组件的实例或手动注册源。  
@@ -46,18 +46,18 @@ ms.locfileid: "54660133"
   
 ### <a name="to-set-up-logging-to-a-custom-log"></a>将记录设置为自定义日志  
   
-1.  将 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性设置为 `false`。  
+1. 将 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 属性设置为 `false`。  
   
     > [!NOTE]
     >  若要使用自定义日志，必须将 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 设置为 false 。  
   
-2.  在 Windows 服务应用程序中设置 <xref:System.Diagnostics.EventLog> 组件的一个实例。  
+2. 在 Windows 服务应用程序中设置 <xref:System.Diagnostics.EventLog> 组件的一个实例。  
   
-3.  通过调用 <xref:System.Diagnostics.EventLog.CreateEventSource%2A> 方法，并指定源字符串和要创建的日志文件的名称，创建一个自定义日志。  
+3. 通过调用 <xref:System.Diagnostics.EventLog.CreateEventSource%2A> 方法，并指定源字符串和要创建的日志文件的名称，创建一个自定义日志。  
   
-4.  将 <xref:System.Diagnostics.EventLog.Source%2A> 组件实例上的 <xref:System.Diagnostics.EventLog> 属性设置为在步骤 3 中创建的源字符串。  
+4. 将 <xref:System.Diagnostics.EventLog.Source%2A> 组件实例上的 <xref:System.Diagnostics.EventLog> 属性设置为在步骤 3 中创建的源字符串。  
   
-5.  通过访问 <xref:System.Diagnostics.EventLog.WriteEntry%2A> 组件实例上的 <xref:System.Diagnostics.EventLog> 方法来编写项。  
+5. 通过访问 <xref:System.Diagnostics.EventLog.WriteEntry%2A> 组件实例上的 <xref:System.Diagnostics.EventLog> 方法来编写项。  
   
      下面的代码演示如何将记录设置为自定义日志。  
   
@@ -70,4 +70,5 @@ ms.locfileid: "54660133"
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

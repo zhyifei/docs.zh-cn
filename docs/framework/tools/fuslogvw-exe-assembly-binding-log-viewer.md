@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57f62f6d03a95860e06e0a457884dd30d186643a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574152"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329513"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe（程序集绑定日志查看器）
 程序集绑定日志查看器显示程序集绑定的详细信息。 这些信息有助于你诊断 .NET Framework 无法在运行时找到程序集的原因。 这些失败通常由以下因素导致：部署到错误位置的程序集、不再有效的本机映像或者版本号或区域性不匹配。 如果公共语言运行时未能找到程序集，则通常会在你的应用程序中表现为 <xref:System.TypeLoadException>。  
@@ -36,18 +36,18 @@ fuslogvw
   
 ### <a name="to-change-the-log-location-view"></a>更改日志位置视图  
   
-1.  选择“默认”选项按钮以查看所有应用程序类型的绑定失败。 默认情况下，日志条目存储在磁盘上 wininet 缓存中基于用户的目录中。  
+1. 选择“默认”选项按钮以查看所有应用程序类型的绑定失败。 默认情况下，日志条目存储在磁盘上 wininet 缓存中基于用户的目录中。  
   
-2.  选择“自定义”选项按钮以查看指定的自定义目录中的绑定失败。 必须指定希望运行时存储日志的自定义位置，方法是在“日志设置”对话框中将自定义日志位置设置为有效的目录名。 此目录应是干净的，并且仅包含运行时所生成的文件。 如果该目录中包含了一个生成要记录下来的失败的可执行文件，则将不会记录该失败，因为此工具会尝试创建一个与该可执行文件同名的目录。 此外，从日志位置运行可执行文件的尝试也将失败。  
+2. 选择“自定义”选项按钮以查看指定的自定义目录中的绑定失败。 必须指定希望运行时存储日志的自定义位置，方法是在“日志设置”对话框中将自定义日志位置设置为有效的目录名。 此目录应是干净的，并且仅包含运行时所生成的文件。 如果该目录中包含了一个生成要记录下来的失败的可执行文件，则将不会记录该失败，因为此工具会尝试创建一个与该可执行文件同名的目录。 此外，从日志位置运行可执行文件的尝试也将失败。  
   
     > [!NOTE]
     >  默认的绑定位置优于自定义绑定位置。 运行时将默认绑定位置存储在 wininet 缓存中，因而可以自动清除该位置。如果你指定了自定义绑定位置，则需负责将其清除。  
   
 ### <a name="to-view-details-about-a-specific-failure"></a>查看有关特定失败的详细信息  
   
-1.  在查看器中选择所需条目的应用程序名称。  
+1. 在查看器中选择所需条目的应用程序名称。  
   
-2.  单击“查看日志”按钮。 或者，你可以双击所选条目。  
+2. 单击“查看日志”按钮。 或者，你可以双击所选条目。  
   
      该工具将显示以下有关所选绑定失败的详细信息：  
   
@@ -99,9 +99,9 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-a-single-entry-from-the-log"></a>从日志中删除单一条目  
   
-1.  在查看器中选择一个条目。  
+1. 在查看器中选择一个条目。  
   
-2.  单击“删除条目”按钮。  
+2. 单击“删除条目”按钮。  
   
 ### <a name="to-delete-all-entries-from-the-log"></a>从日志中删除所有条目  
   
@@ -210,9 +210,9 @@ Discarding native image.
   
 #### <a name="to-enable-a-custom-log-path"></a>启用自定义日志路径  
   
-1.  选择“启用自定义日志路径”选项按钮。  
+1. 选择“启用自定义日志路径”选项按钮。  
   
-2.  在“自定义日志路径”文本框中输入路径。  
+2. 在“自定义日志路径”文本框中输入路径。  
   
 > [!NOTE]
 >  [程序集绑定日志查看器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 使用 Internet Explorer (IE) 缓存来存储其绑定日志。 由于 IE 缓存中偶尔会出现损坏，因此[程序集绑定日志查看器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 有时会停止在查看窗口中显示新的绑定日志。 受此损坏的影响，.NET 绑定基础结构（合成）将无法写入或读取绑定日志。 （如果使用自定义日志路径，则不会遇到此问题。）若要修复损坏并允许合成再次显示绑定日志，请通过在 IE 的“Internet 选项”对话框中删除临时的 Internet 文件来清除 IE 缓存。  
@@ -221,14 +221,15 @@ Discarding native image.
   
 #### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>为运行在 Windows 应用程序容器中的应用程序启用日志记录  
   
-1.  启用自定义日志路径，如上一过程所述。 默认情况下，在 Windows 应用程序容器中运行的应用程序对硬盘具有有限的访问权限。 你指定的目录将对应用程序容器中的所有应用程序具有读/写权限。  
+1. 启用自定义日志路径，如上一过程所述。 默认情况下，在 Windows 应用程序容器中运行的应用程序对硬盘具有有限的访问权限。 你指定的目录将对应用程序容器中的所有应用程序具有读/写权限。  
   
-2.  选中“启用沉浸式日志记录”复选框。  
+2. 选中“启用沉浸式日志记录”复选框。  
   
     > [!NOTE]
     >  此框只能在 Windows 8 或更高版本上启用。  
   
 ## <a name="see-also"></a>请参阅
+
 - <xref:System.TypeLoadException>
 - [工具](../../../docs/framework/tools/index.md)
 - [全局程序集缓存](../../../docs/framework/app-domains/gac.md)

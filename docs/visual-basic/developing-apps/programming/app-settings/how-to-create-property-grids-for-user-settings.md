@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: 20c475fd7bd4b2cec6c6e10182a88a43fa7c56f1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5f4b962762aeecea65748c5456bc4a2d75595d4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843040"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311612"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>如何：在 Visual Basic 中为用户设置创建属性网格
 可通过使用 `My.Settings` 对象的用户设置属性填充 <xref:System.Windows.Forms.PropertyGrid> 控件，创建用户设置的属性网格。  
@@ -29,17 +29,17 @@ ms.locfileid: "58843040"
   
 ### <a name="to-add-a-user-setting-property-grid"></a>添加用户设置属性网格  
   
-1.  将“PropertyGrid”控件从“工具箱”添加到应用程序的设计图面上（假定此处为 `Form1`）。  
+1. 将“PropertyGrid”控件从“工具箱”添加到应用程序的设计图面上（假定此处为 `Form1`）。  
   
      属性网格控件的默认名称为 `PropertyGrid1`。  
   
-2.  双击 `Form1` 的设计图面打开窗体加载事件处理程序的代码。  
+2. 双击 `Form1` 的设计图面打开窗体加载事件处理程序的代码。  
   
-3.  将 `My.Settings` 对象设置为属性网格的选定对象。  
+3. 将 `My.Settings` 对象设置为属性网格的选定对象。  
   
      [!code-vb[VbVbalrMyResources#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#11)]  
   
-4.  将属性网格配置为只显示用户设置。  
+4. 将属性网格配置为只显示用户设置。  
   
      [!code-vb[VbVbalrMyResources#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#12)]  
   
@@ -54,5 +54,5 @@ ms.locfileid: "58843040"
 - [My.Settings 对象](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [如何：在 Visual Basic 中读取应用程序设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
 - [如何：在 Visual Basic 中更改用户设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [如何：在 Visual Basic 中暂留用户设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [如何：在 Visual Basic 中保存用户设置](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
 - [管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

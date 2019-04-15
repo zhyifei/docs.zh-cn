@@ -4,12 +4,12 @@ description: 了解如何在二元分类方案中使用 ML.NET，以了解如何
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: c5373f63927ff39e7c819cd1fc0bc2bec1843b3e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 202edc5127388df2397053d5703d33a39046374f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921112"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303110"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教程：在情绪分析二元分类方案中使用 ML.NET
 
@@ -39,7 +39,7 @@ ms.locfileid: "58921112"
 
 ## <a name="prerequisites"></a>系统必备
 
-* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
+* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 
 * [UCI Sentiment Labeled Sentences 数据集 zip 文件](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)
 

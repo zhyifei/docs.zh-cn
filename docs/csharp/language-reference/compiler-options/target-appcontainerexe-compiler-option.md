@@ -2,12 +2,12 @@
 title: -target:appcontainerexe（C# 编译器选项）
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-ms.openlocfilehash: 4f8c59d94b76dd0f3415846f7e682d62cc1771ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3819c0582c414e1f1e3b75ab5bfe517873a1eb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707604"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311066"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe（C# 编译器选项）
 如果使用 -target:appcontainerexe 编译器选项，则编译器会创建一个 Windows 可执行 (.exe) 文件，该文件必须在应用容器中运行。 此选项与 [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) 等效，但专门用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用。  
@@ -27,9 +27,9 @@ ms.locfileid: "54707604"
   
 ### <a name="to-set-this-compiler-option-in-the-ide"></a>在 IDE 中设置此编译器选项  
   
-1.  在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“属性”。  
+1. 在“解决方案资源管理器”中，打开项目的快捷菜单，然后选择“属性”。  
   
-2.  在“应用程序”选项卡上，在“输出类型”列表中选择“Windows 应用商店应用”。  
+2. 在“应用程序”选项卡上，在“输出类型”列表中选择“Windows 应用商店应用”。  
   
      此选项仅可用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用模板。  
   

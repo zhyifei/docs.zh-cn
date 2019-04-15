@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2c54912e5c29b2ed8f4c8163550050e12e367263
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 68da7216890da1819a994161507355a0b5ea1f9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236015"
 ---
 ### <a name="signedxml-and-encryptedxml-breaking-changes"></a>SignedXml 和 EncryptedXml 的重大更改
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760601"
 |版本|4.6.2|
 |类型|运行时|
 |受影响的 API|<ul><li><xref:System.Security.Cryptography.Xml.Transform?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform?displayProperty=nameWithType></li></ul>|
-

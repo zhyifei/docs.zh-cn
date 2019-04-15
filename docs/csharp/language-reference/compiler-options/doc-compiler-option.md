@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: baf0084e6caa3fce8ca8c375bdcc2bcd135fa21e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c46118a9b02df653844a0ca04f9e8f9952a957c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646797"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333595"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc（C# 编译器选项）
 -doc 选项可让你在 XML 文件中放置文档注释。  
@@ -52,11 +52,11 @@ ms.locfileid: "54646797"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的“属性”页。  
+1. 打开项目的“属性”页。  
   
-2.  单击“生成”选项卡。  
+2. 单击“生成”选项卡。  
   
-3.  修改“XML 文档文件”属性。  
+3. 修改“XML 文档文件”属性。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>。  
   

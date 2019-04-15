@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 439a4976482639cd2e4e17315ec1a53ca54aa477
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235145"
+---
 ### <a name="profiling-aspnet-mvc4-apps-can-lead-to-fatal-execution-engine-error"></a>分析 ASP.Net MVC4 应用可能导致严重的执行引擎错误
 
 |   |   |
@@ -7,4 +15,3 @@
 |范围|边缘|
 |版本|4.5|
 |类型|运行时|
-

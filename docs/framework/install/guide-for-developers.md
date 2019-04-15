@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f52b34e6fb99b52e5775482dec3c59ed6738b31
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920553"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327862"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安装面向开发人员的 .NET Framework
 
@@ -107,7 +107,7 @@ ms.locfileid: "58920553"
 
 Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)），但不支持基于 Itanium 的计算机。
 
-1.  打开要安装的 .NET Framework 版本的下载页：
+1. 打开要安装的 .NET Framework 版本的下载页：
 
     - .NET Framework 4.7.2（[Web 安装程序](https://go.microsoft.com/fwlink/?LinkId=863262)或[脱机安装程序](https://go.microsoft.com/fwlink/p/?LinkId=863265)）
 
@@ -163,7 +163,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 > [!IMPORTANT]
 > 语言包不包含运行应用程序所需的 .NET Framework 组件，因此，你必须在安装语言包之前运行 Web 安装程序或脱机安装程序。 如果已安装语言包，请将其卸载，安装 .NET Framework，然后重新安装语言包。
 
-1.  打开已安装的 .NET Framework 版本的语言包下载页：
+1. 打开已安装的 .NET Framework 版本的语言包下载页：
 
     - [.NET Framework 4.7.2 语言包](https://go.microsoft.com/fwlink/?LinkID=863258)
 
@@ -183,9 +183,9 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 
     - [.NET Framework 4.5 语言包](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
-2.  在语言列表中，选择要下载的语言，并等待几秒钟，以便使用该语言重新加载页面。
+2. 在语言列表中，选择要下载的语言，并等待几秒钟，以便使用该语言重新加载页面。
 
-3.  选择“下载”。
+3. 选择“下载”。
 
 下表列出了支持的语言。
 

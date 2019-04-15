@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 9ec1a003d981db99bec20778790fa4a3507ad0b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587955"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295453"
 ---
 # <a name="internet-authentication"></a>Internet 身份验证
 <xref:System.Net> 类支持多种客户端身份验证机制，包括标准 Internet 身份验证方法、基本、摘要式、协商、NTLM 和 Kerberos 身份验证，以及可以创建的自定义方法。  
@@ -33,13 +33,14 @@ ms.locfileid: "54587955"
   
  Internet 资源请求身份验证时，<xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> 方法将 <xref:System.Net.WebRequest> 发送给 AuthenticationManager，同时会发送对凭据的请求。 之后会根据以下过程对请求进行身份验证：  
   
-1.  AuthenticationManager 按照注册的顺序在每个已注册的身份验证模块上调用 <xref:System.Net.IAuthenticationModule.Authenticate%2A> 方法。 AuthenticationManager 使用第一个不返回 null 的模块来执行身份验证过程。 此过程的详细信息根据所涉及到的身份验证模块类型而异。  
+1. AuthenticationManager 按照注册的顺序在每个已注册的身份验证模块上调用 <xref:System.Net.IAuthenticationModule.Authenticate%2A> 方法。 AuthenticationManager 使用第一个不返回 null 的模块来执行身份验证过程。 此过程的详细信息根据所涉及到的身份验证模块类型而异。  
   
-2.  完成身份验证过程后，此身份验证模块向包含访问 Internet 资源所需的信息的 WebRequest 返回 <xref:System.Net.Authorization>。  
+2. 完成身份验证过程后，此身份验证模块向包含访问 Internet 资源所需的信息的 WebRequest 返回 <xref:System.Net.Authorization>。  
   
  某些身份验证方案可以对用户进行身份验证，而无需首先对资源发出请求。 应用程序可以使用资源预先对用户进行身份验证以节省时间，这样可以减少至少到服务器的一个往返。 或者，它也可以在程序启动期间执行身份验证，便于稍后更好地响应用户。 可以使用预身份验证的身份验证方案将 <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> 属性设置为“true”。  
   
 ## <a name="see-also"></a>请参阅
+
 - [基本和摘要式身份验证](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
 - [NTLM 和 Kerberos 身份验证](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
 - [网络编程中的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)

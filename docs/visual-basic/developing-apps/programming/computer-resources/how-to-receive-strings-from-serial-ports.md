@@ -6,47 +6,47 @@ helpviewer_keywords:
 - strings [Visual Basic], retrieving from serial ports
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
-ms.openlocfilehash: 1a7aa88cfb90f347caed24bec0b5123dafb4c533
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6c832cd9ef5df904850261f4de2d769bfc28c3cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822838"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296714"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>如何：在 Visual Basic 中从串行端口接收字符串
 本主题介绍在 Visual Basic 中如何使用 `My.Computer.Ports` 从计算机的串行端口接收字符串。  
   
 ### <a name="to-receive-strings-from-the-serial-port"></a>从串行端口接收字符串  
   
-1.  初始化返回字符串。  
+1. 初始化返回字符串。  
   
      [!code-vb[VbVbalrMyComputer#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#38)]  
   
-2.  确定应提供字符串的串行端口。 此示例假定它是 `COM1`。  
+2. 确定应提供字符串的串行端口。 此示例假定它是 `COM1`。  
   
-3.  使用 `My.Computer.Ports.OpenSerialPort` 方法获取对端口的引用。 有关更多信息，请参见<xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
+3. 使用 `My.Computer.Ports.OpenSerialPort` 方法获取对端口的引用。 有关更多信息，请参见<xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
   
      `Try...Catch...Finally` 块允许应用程序在即使会生成异常的情况下也关闭串行端口。 操作串行端口的所有代码都应出现在此块中。  
   
      [!code-vb[VbVbalrMyComputer#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#39)]  
   
-4.  创建 `Do` 循环，用于读取文本行，直到没有更多行可用。  
+4. 创建 `Do` 循环，用于读取文本行，直到没有更多行可用。  
   
      [!code-vb[VbVbalrMyComputer#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#40)]  
   
-5.  使用 <xref:System.IO.Ports.SerialPort.ReadLine> 方法来从串行端口读取下一个可用的文本行。  
+5. 使用 <xref:System.IO.Ports.SerialPort.ReadLine> 方法来从串行端口读取下一个可用的文本行。  
   
      [!code-vb[VbVbalrMyComputer#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#41)]  
   
-6.  使用 `If` 语句可确定 <xref:System.IO.Ports.SerialPort.ReadLine> 方法是否返回 `Nothing`（这意味着没有更多文本可用）。 如果它未返回 `Nothing`，则退出 `Do` 循环。  
+6. 使用 `If` 语句可确定 <xref:System.IO.Ports.SerialPort.ReadLine> 方法是否返回 `Nothing`（这意味着没有更多文本可用）。 如果它未返回 `Nothing`，则退出 `Do` 循环。  
   
      [!code-vb[VbVbalrMyComputer#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#42)]  
   
-7.  向 `If` 语句添加 `Else` 块以处理实际读取字符串的情况。 该块将来自串行端口的字符串追加到返回字符串。  
+7. 向 `If` 语句添加 `Else` 块以处理实际读取字符串的情况。 该块将来自串行端口的字符串追加到返回字符串。  
   
      [!code-vb[VbVbalrMyComputer#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#43)]  
   
-8.  返回字符串。  
+8. 返回字符串。  
   
      [!code-vb[VbVbalrMyComputer#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#44)]  
   

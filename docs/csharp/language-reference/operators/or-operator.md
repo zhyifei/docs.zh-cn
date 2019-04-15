@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '| operator [C#]'
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
-ms.openlocfilehash: 185ea3aabff4794ec08cca541773dbec3574ab4b
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 38f8e21dbd07868441e0c4fbb6074f9897905222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333507"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312873"
 ---
 # <a name="-operator-c-reference"></a>| 运算符（C# 参考）
 
@@ -22,7 +22,7 @@ ms.locfileid: "54333507"
 
 ## <a name="remarks"></a>备注
 
-二元 `|` 运算符计算两个操作数，无论第一个操作数的值是什么。这与[条件 OR 运算符](conditional-or-operator.md) `||` 相反。
+二元 `|` 运算符计算两个操作数，无论第一个操作数的值是什么。这与[条件 OR 运算符](boolean-logical-operators.md#conditional-logical-or-operator-) `||` 相反。
 
 用户定义的类型可以重载 `|` 运算符（请参阅[运算符](../keywords/operator.md)）。
 

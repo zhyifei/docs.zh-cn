@@ -6,19 +6,19 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: ee5c7cbea09c6183b48fe1b0acd051d65bdd1875
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819029"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312705"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>如何：将事件信息写入文本文件 (Visual Basic)
 可以使用 `My.Application.Log` 和 `My.Log` 对象来记录有关应用程序中所发生事件的信息。 本示例演示如何使用 `My.Application.Log.WriteEntry` 方法将跟踪信息记录到日志文件中。  
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>添加和配置文件日志侦听器  
   
-1.  在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。  
+1. 在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。  
   
      \- 或 -  
   
@@ -30,19 +30,19 @@ ms.locfileid: "58819029"
   
     3.  单击 **“添加”**。  
   
-2.  在应用程序配置文件中找到 `<listeners>` 部分。  
+2. 在应用程序配置文件中找到 `<listeners>` 部分。  
   
      \<侦听器> 部分位于 name 属性为“DefaultSource”的 \<源> 部分中，后者嵌套在 \<system.diagnostics> 部分中，该部分又嵌套在顶级 \<配置> 部分下。  
   
-3.  将此元素添加到该 `<listeners>` 部分：  
+3. 将此元素添加到该 `<listeners>` 部分：  
   
     ```xml  
     <add name="FileLogListener" />  
     ```  
   
-4.  找到 `<sharedListeners>` 部分，该部分位于 `<system.diagnostics>` 部分中，后者嵌套在顶级 `<configuration>` 部分之下。  
+4. 找到 `<sharedListeners>` 部分，该部分位于 `<system.diagnostics>` 部分中，后者嵌套在顶级 `<configuration>` 部分之下。  
   
-5.  将此元素添加到该 `<sharedListeners>` 部分：  
+5. 将此元素添加到该 `<sharedListeners>` 部分：  
   
     ```xml  
     <add name="FileLogListener"   
@@ -71,4 +71,4 @@ ms.locfileid: "58819029"
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [如何：日志异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [如何：记录异常](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

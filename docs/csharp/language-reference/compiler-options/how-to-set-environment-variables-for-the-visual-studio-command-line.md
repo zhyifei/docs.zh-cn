@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: ffc75a01230df078073f163c97a8c77229d3b2a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c906a2274f57f5a89fb16198c8f6ed2e3a335e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590872"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322116"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>如何：设置 Visual Studio 命令行的环境变量
 
@@ -33,11 +33,11 @@ VsDevCmd.bat 文件设置适当的环境变量来生成命令行。
   
 ### <a name="to-run-vsdevcmdbat"></a>若要运行 VsDevCmd.BAT  
   
-1.  从“开始”菜单，打开“VS 2017 开发人员命令提示”。  该提示位于“Visual Studio 2017”文件夹中。
+1. 从“开始”菜单，打开“VS 2017 开发人员命令提示”。  该提示位于“Visual Studio 2017”文件夹中。
   
-2.  更改为安装目录的 \Program Files\Microsoft Visual Studio\\Version\\Offering\Common7\Tools 或 \Program Files (x86)\Microsoft Visual Studio\\Version\\Offering\Common7\Tools 子目录。  （Version 为 2017，即当前版本。 Offering 是 Enterprise、Professional 或 Community。）
+2. 更改为安装目录的 \Program Files\Microsoft Visual Studio\\Version\\Offering\Common7\Tools 或 \Program Files (x86)\Microsoft Visual Studio\\Version\\Offering\Common7\Tools 子目录。  （Version 为 2017，即当前版本。 Offering 是 Enterprise、Professional 或 Community。）
   
-3.  通过键入“VsDevCmd”运行 VsDevCmd.bat。  
+3. 通过键入“VsDevCmd”运行 VsDevCmd.bat。  
   
     > [!CAUTION]
     >  VsDevCmd.bat 可能因计算机而异。 请勿使用其他计算机上的 VsDevCmd.bat 替换缺失或损坏的 VsDevCmd.bat 文件。 而是应重新运行安装程序以替换丢失的文件。  

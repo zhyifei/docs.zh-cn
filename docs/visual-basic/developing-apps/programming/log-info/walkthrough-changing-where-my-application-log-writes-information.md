@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: ed7f88b20e4d519e67c8ef7b9f74909a38ea9c14
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829312"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327641"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>演练：更改 My.Application.Log 写入信息的位置 (Visual Basic)
 可以使用 `My.Application.Log` 和 `My.Log` 对象来记录有关应用程序中所发生事件的信息。 本演练将演示如何重写默认设置，以及如何使 `Log` 对象将信息写入其他日志侦听器。  
@@ -22,7 +22,7 @@ ms.locfileid: "58829312"
   
 ### <a name="to-add-listeners"></a>添加侦听器  
   
-1.  在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。  
+1. 在“解决方案资源管理器” 中右键单击 app.config，然后选择“打开”。  
   
      \- 或 -  
   
@@ -34,9 +34,9 @@ ms.locfileid: "58829312"
   
     3.  单击 **“添加”**。  
   
-2.  找到 `<listeners>` 部分，该部分位于 `<source>` 属性为“DefaultSource”的 `name` 部分当中，后者又位于 `<sources>` 部分之下。 `<sources>` 部分位于 `<system.diagnostics>` 部分当中，后者又位于顶级 `<configuration>` 部分之下。  
+2. 找到 `<listeners>` 部分，该部分位于 `<source>` 属性为“DefaultSource”的 `name` 部分当中，后者又位于 `<sources>` 部分之下。 `<sources>` 部分位于 `<system.diagnostics>` 部分当中，后者又位于顶级 `<configuration>` 部分之下。  
   
-3.  将这些元素添加到该 `<listeners>` 部分。  
+3. 将这些元素添加到该 `<listeners>` 部分。  
   
     ```xml  
     <!-- Uncomment to connect the application file log. -->  
@@ -51,11 +51,11 @@ ms.locfileid: "58829312"
     <!-- <add name="Console" /> -->  
     ```  
   
-4.  取消注释希望接收 `Log` 消息的日志侦听器。  
+4. 取消注释希望接收 `Log` 消息的日志侦听器。  
   
-5.  找到 `<sharedListeners>` 部分，该部分位于 `<system.diagnostics>` 部分当中，后者又位于顶级 `<configuration>` 部分之下。  
+5. 找到 `<sharedListeners>` 部分，该部分位于 `<system.diagnostics>` 部分当中，后者又位于顶级 `<configuration>` 部分之下。  
   
-6.  将这些元素添加到该 `<sharedListeners>` 部分。  
+6. 将这些元素添加到该 `<sharedListeners>` 部分。  
   
     ```xml  
     <add name="FileLog"  
@@ -86,7 +86,7 @@ ms.locfileid: "58829312"
          initializeData="true" />  
     ```  
   
-7.  app.config 文件的内容应类似于下面的 XML：  
+7. app.config 文件的内容应类似于下面的 XML：  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -147,9 +147,9 @@ ms.locfileid: "58829312"
   
 ### <a name="to-reconfigure-a-listener"></a>重新配置侦听器  
   
-1.  在 `<add>` 部分找到侦听器的 `<sharedListeners>` 元素。  
+1. 在 `<add>` 部分找到侦听器的 `<sharedListeners>` 元素。  
   
-2.  `type` 特性提供了侦听器类型的名称。 此类型必须继承自 <xref:System.Diagnostics.TraceListener> 类。 请使用强名称类型名称以确保使用正确的类型。 有关详细信息，请参阅下面的“引用强名称类型”部分。  
+2. `type` 特性提供了侦听器类型的名称。 此类型必须继承自 <xref:System.Diagnostics.TraceListener> 类。 请使用强名称类型名称以确保使用正确的类型。 有关详细信息，请参阅下面的“引用强名称类型”部分。  
   
      可以使用的类型有：  
   
@@ -163,17 +163,17 @@ ms.locfileid: "58829312"
   
      有关其他类型的日志侦听器写入信息的位置的信息，请参阅该类型的文档。  
   
-3.  当应用程序创建日志侦听器对象时，它将传递 `initializeData` 特性作为构造函数参数。 `initializeData` 特性的含义取决于跟踪侦听器。  
+3. 当应用程序创建日志侦听器对象时，它将传递 `initializeData` 特性作为构造函数参数。 `initializeData` 特性的含义取决于跟踪侦听器。  
   
-4.  创建日志侦听器后，应用程序将设置该侦听器的属性。 这些属性由 `<add>` 元素中的其他特性定义。 有关特定侦听器的属性的详细信息，请参阅该侦听器类型的文档。  
+4. 创建日志侦听器后，应用程序将设置该侦听器的属性。 这些属性由 `<add>` 元素中的其他特性定义。 有关特定侦听器的属性的详细信息，请参阅该侦听器类型的文档。  
   
 ### <a name="to-reference-a-strongly-named-type"></a>引用强名称类型  
   
-1.  为确保日志侦听器使用正确的类型，请确保使用完全限定的类型名称和强名称程序集名称。 强名称类型的语法如下所示：  
+1. 为确保日志侦听器使用正确的类型，请确保使用完全限定的类型名称和强名称程序集名称。 强名称类型的语法如下所示：  
   
      \<*type name*>, \<*assembly name*>, \<*version number*>, \<*culture*>, \<*strong name*>  
   
-2.  本代码示例将演示如何在这种情况下确定完全限定类型“System.Diagnostics.FileLogTraceListener”的强命名类型。  
+2. 本代码示例将演示如何在这种情况下确定完全限定类型“System.Diagnostics.FileLogTraceListener”的强命名类型。  
   
      [!code-vb[VbVbalrMyApplicationLog#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#15)]  
   

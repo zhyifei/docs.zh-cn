@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 811de96748fcc095e289905e73845c8cfdd8eea7
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 79b8abd0fb01062900b2ae4e14c02d8844bb6ef9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921073"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295973"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>教程：在 ML.NET 中使用回归学习器预测费用
 
@@ -36,7 +36,7 @@ ms.locfileid: "58921073"
 
 ## <a name="prerequisites"></a>系统必备
 
-* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
+* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 
 ## <a name="understand-the-problem"></a>了解问题
 
@@ -272,7 +272,6 @@ Console.WriteLine($"*------------------------------------------------");
 [!code-csharp[DisplayRMS](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#19 "Display the RMS metric.")]
 
 ## <a name="use-the-model-for-predictions"></a>使用预测模型
-
 
 ## <a name="predict-the-test-data-outcome-with-the-model-and-a-single-comment"></a>使用模型和单个注释预测测试数据结果
 

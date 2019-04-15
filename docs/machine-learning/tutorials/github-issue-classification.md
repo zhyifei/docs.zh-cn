@@ -4,12 +4,12 @@ description: 了解如何在多类分类方案中使用 ML.NET 对 GitHub 问题
 ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: fc21a37fe585ed4b9880ec86ee26815e0668108c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: e25f044247064db26e4e1e74590d6f4970fe4477
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920982"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318775"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>教程：在多类分类场景中使用 ML.NET 对 GitHub 问题进行分类
 
@@ -39,7 +39,7 @@ ms.locfileid: "58920982"
 
 ## <a name="prerequisites"></a>系统必备
 
-* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
+* 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 
 * [Github 问题制表符分隔文件 (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv)。
 * [Github 问题测试制表符分隔文件 (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv)。
