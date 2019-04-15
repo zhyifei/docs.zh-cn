@@ -95,7 +95,7 @@ let handleWithdrawal amount =
 
 F# 函数也是头等函数，也就是说，它们可以作为参数传递，还可以从其他函数返回。
 
-## <a name="functions-to-define-operations-on-objects"></a>用于定义对对象执行操作的函数
+## <a name="functions-to-define-operations-on-objects"></a>用于定义对对象执行的操作的函数。
 
 F# 提供对对象（在需要揉合数据和功能时非常有用的数据类型）的完整支持。F# 函数用于操作对象。
 
