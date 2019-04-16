@@ -4,16 +4,16 @@ description: 获取开发基于 Docker 应用程序的选项的高级概述。 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/27/2018
-ms.openlocfilehash: 55d80e3d9f464b940d17b13a598bdab57631a8e4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: de4ec036be4611ee56823ced3e0cddca5c32b900
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324079"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610790"
 ---
 # <a name="development-process-for-docker-based-applications"></a>基于 Docker 的应用程序的开发流程
 
-*用你喜欢的方式开发容器化 .NET 应用程序：主要使用 IDE，可辅以 Visual Studio 和 Visual Studio Tools for Docker；也可以主要使用 CLI/编辑器，辅以 Docker CLI 和 Visual Studio Code。*
+用你喜欢的方式开发容器化 .NET 应用程序：主要使用 IDE，可辅以 Visual Studio 和 Visual Studio tools for Docker，；主要使用 CLI/编辑器，可辅以 Docker CLI 和 Visual Studio Code。
 
 ## <a name="development-environment-for-docker-apps"></a>Docker 应用的开发环境
 
@@ -35,7 +35,7 @@ ms.locfileid: "59324079"
   [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 - **Visual Studio Code**. 官方网站。 \
-  [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+  <https://code.visualstudio.com/download>
 
 - **适用于 Mac 和 Windows 的 Docker 社区版 (CE)** \
   [https://www.docker.com/community-editions](https://www.docker.com/community-edition)

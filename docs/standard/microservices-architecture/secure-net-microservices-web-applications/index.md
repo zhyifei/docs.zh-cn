@@ -4,12 +4,12 @@ description: .NET 微服务和 Web 应用中的安全性 - 了解 ASP.NET Core W
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 3e2598f58bf2fb34a7ad7c107066d34e0e7c3408
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 0894465858e3503e2eddb5299b404f7ba95fdd6a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464809"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611557"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>确保 .NET 微服务和 Web 应用的安全性
 
@@ -289,13 +289,13 @@ JWT 持有者身份验证中间件还可以支持更高级的方案，例如颁�
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
 - **Michell Anicas。OAuth 2 简介** \
-  [https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
+  <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **AspNet.Security.OAuth.Providers**（ASP.NET OAuth 提供程序的 GitHub 存储库）\
-  [https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
+  <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
 - **Danny Strockis。将 Azure AD 集成到 ASP.NET Core Web 应用中** \
-  [https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
+  <https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/>
 
 - **IdentityServer4。官方文档** \
   <https://identityserver4.readthedocs.io/en/latest/>

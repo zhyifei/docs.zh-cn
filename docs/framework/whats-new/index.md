@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22f6c6827b2574ba887839f749df8fc7ae6605ea
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: d67626a72e04cd1163e749339d8d5fac22959a3a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59328629"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613754"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 
@@ -59,8 +59,8 @@ ms.locfileid: "59328629"
 .NET Framework 4.7.2 在以下几个领域新增了功能：
 
 - [核心](#core-472)
-- [ASP.NET](#asp-net472)
-- [网络](#net472)
+- [ASP.NET 2.0](#asp-net472)
+- [网络连接](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -93,7 +93,9 @@ Using rsa = RSA.Create()
    ' Other code to execute using the rsa instance.
 End Using
 ```
+
 采用类似如下所示的代码：
+
 ```csharp
 // Starting with .NET Framework 4.7.2
 using (RSA rsa = RSA.Create(rsaParameters))
@@ -101,6 +103,7 @@ using (RSA rsa = RSA.Create(rsaParameters))
    // Other code to execute using the rsa instance.
 }
 ```
+
 ```vb
 ' Starting with .NET Framework 4.7.2
 Using rsa = RSA.Create(rsaParameters)
@@ -180,7 +183,7 @@ PFX 导入可以选择绕过硬盘直接从内存加载私钥。 如果在 <xre
 
 **新的 SignerInfo 成员**
 
-从 .NET Framework 4.7.2 开始，<xref:System.Security.Cryptography.Pkcs.SignerInfo> 类将公开更多有关签名的信息。 你可以检索 <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignatureAlgorithm?displayProperty=fullName> 属性的值，以确定签名者采用的签名算法。 <xref:System.Security.Cryptography.Pkcs.SignerInfo.GetSignature%2A?displayProperty=nameWithType> 可以调用以获取此签名者的加密签名副本。
+从 .NET Framework 4.7.2 开始，<xref:System.Security.Cryptography.Pkcs.SignerInfo> 类将公开更多有关签名的信息。 你可以检索 <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignatureAlgorithm?displayProperty=fullName> 属性的值，以确定签名者采用的签名算法。 可以调用 <xref:System.Security.Cryptography.Pkcs.SignerInfo.GetSignature%2A?displayProperty=nameWithType> 来获取此签名者的加密签名副本。
 
 **在 CryptoStream 释放后保持包装流打开**
 
@@ -266,6 +269,7 @@ c.SameSite = SameSiteMode.Lax;
 Dim c As New HttpCookie("secureCookie", "same origin")
 c.SameSite = SameSiteMode.Lax
 ```
+
 还可以通过修改 web.config 文件，在应用程序级别配置 SameSite cookie：
 
 ```xml
@@ -273,6 +277,7 @@ c.SameSite = SameSiteMode.Lax
    <httpCookies sameSite="Strict" />
 </system.web>
 ```
+
 通过修改 Web 配置文件，可以为 <xref:System.Web.Security.FormsAuthentication> 和 <xref:System.Web.SessionState> cookie 添加 SameSite：
 
 ```xml
@@ -315,7 +320,7 @@ NET Framework 4.7.2 为基于 enclave 的 Always Encrypted 添加支持。 Alway
 
 - <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType>，为基于 enclave 的 Always Encrypted 指定 URI。
 
-- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider>，一个抽象类，所有 enclave 提供程序都派生自该类。
+- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider>，一个抽象类，所有 enclave 提供程序都自它派生。
 
 - <xref:System.Data.SqlClient.SqlEnclaveSession>，封装给定 enclave 会话的状态。
 
@@ -434,8 +439,8 @@ Windows 窗体的 HDPI 感知应用程序、Windows Presentation Foundation (WPF
 
 - [核心](#core471)
 - [公共语言运行时 (CLR)](#clr)
-- [网络](#net471)
-- [ASP.NET](#asp-net471)
+- [网络连接](#net471)
+- [ASP.NET 2.0](#asp-net471)
 
 此外，.NET Framework 4.7.1 的重点是改进了辅助功能，使应用程序能为辅助技术的用户提供最佳体验。 有关 .NET Framework 4.7.1 中辅助功能改进的信息，请参阅 [.NET Framework 中辅助功能的新增功能](whats-new-in-accessibility.md)。
 
@@ -516,8 +521,8 @@ ASP.NET 处理包括 23 个事件的预定义管道中的请求。 ASP.NET 执�
 .NET Framework 4.7 在以下几个领域新增了功能：
 
 - [核心](#Core47)
-- [网络](#net47)
-- [ASP.NET](#ASP-NET47)
+- [网络连接](#net47)
+- [ASP.NET 2.0](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows 窗体](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
@@ -538,7 +543,7 @@ ASP.NET 处理包括 23 个事件的预定义管道中的请求。 ASP.NET 执�
 
 有关 [.NET Framework 4.7 加密改进示例](https://gist.github.com/richlander/5a182899895a87a296c21ada97f7a54e)，请访问 GitHub。
 
-**DataContractJsonSerializer 提供更出色的控制字符支持**
+**通过 DataContractJsonSerializer 提供更出色的控制字符支持**
 
 在 .NET Framework 4.7 中，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 串行化符合 ECMAScript 6 标准的控制字符。 定位 .NET Framework 4.7 的应用程序默认启用此行为，而对于在 .NET Framework 4.7 控制下运行，但定位的是旧版 .NET Framework 的应用程序来说，这就是一项选择启用功能。 有关详细信息，请参阅 [.NET Framework 4.7 中的重定目标更改](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。
 
@@ -625,11 +630,11 @@ WCF 包含大量代码更改，消除了争用条件，从而提升了序列化�
 
 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 包括以下几个方面的新功能：
 
-- [ASP.NET](#ASPNET462)
+- [ASP.NET 2.0](#ASPNET462)
 
 - [字符类别](#Strings)
 
-- [密码](#Crypto462)
+- [加密](#Crypto462)
 
 - [SqlClient](#SQLClient)
 
@@ -653,7 +658,7 @@ WCF 包含大量代码更改，消除了争用条件，从而提升了序列化�
 
 在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中，ASP.NET 包括以下增强功能：
 
-**改进了对数据批注验证程序中本地化错误消息的支持**
+**改进了对数据注释验证程序中本地化错误消息的支持**
 
 数据批注验证程序使你能够通过将一个或多个属性添加到类属性来执行验证。 如果验证失败，该属性的 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 元素定义错误消息的文本。 从 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 开始，ASP.NET 可以轻松地本地化错误消息。 如果有以下情况，将本地化错误消息：
 
@@ -692,7 +697,7 @@ End Class
 
  此外，数据批注本地化可扩展。 开发人员可以通过实现 <xref:System.Web.Globalization.IStringLocalizerProvider> 接口插入自己的字符串本地化工具提供程序，以将本地化字符串存储在资源文件以外的某个位置。
 
- **使用会话状态存储提供程序进行异步支持**
+ **会话状态存储提供程序的异步支持**
 
  ASP.NET 现允许将返回任务的方法与会话状态存储提供程序一起使用，从而允许 ASP.NET 应用获取异步的可伸缩性优势。 要使用会话状态存储提供程序支持异步操作，ASP.NET 包括一个新的接口 <xref:System.Web.SessionState.ISessionStateModule?displayProperty=nameWithType>，它继承自 <xref:System.Web.IHttpModule> 并允许开发人员实现其自己的会话状态模块和异步会话存储提供程序。 接口定义如下：
 
@@ -705,7 +710,7 @@ public interface ISessionStateModule : IHttpModule {
 
  此外，<xref:System.Web.SessionState.SessionStateUtility> 类包括两种新方法：<xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> 和 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>，可用来支持异步操作。
 
- **输出缓存提供程序的异步支持**
+ **对输出缓存提供程序的异步支持**
 
  从 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 开始，返回任务的方法可以与输出缓存提供程序一起使用，以提供异步的可伸缩性优势。  实现这些方法的提供程序减少了 Web 服务器上的线程阻止，并提高 ASP.NET 服务的可伸缩性。
 
@@ -741,7 +746,7 @@ public interface ISessionStateModule : IHttpModule {
 
 ### <a name="cryptography"></a>密码
 
-**包含 FIPS 186-3 DSA 在内的 X509 证书支持**
+**对包含 FIPS 186-3 DSA 的 X509 证书的支持**
 
 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 添加了对密钥超过 FIPS 186-2 1024 位限制的 DSA（数字签名算法）X509 证书的支持。
 
@@ -941,7 +946,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 </runtime>
 ```
 
-启用此功能后，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 对象使用 <xref:System.TimeZoneInfo> 类型（而不是 <xref:System.TimeZone> 类型）来反序列化日期和时间数据。 <xref:System.TimeZoneInfo> 支持多个调整规则，这样就可以使用历史时区数据；<xref:System.TimeZone> 不支持。
+启用此功能后，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 对象使用 <xref:System.TimeZoneInfo> 类型（而不是 <xref:System.TimeZone> 类型）来反序列化日期和时间数据。 <xref:System.TimeZoneInfo> 支持多个调整规则，这样就可以使用历史时区数据；<xref:System.TimeZone> 却不支持。
 
 若要详细了解 <xref:System.TimeZoneInfo> 结构和时区调整，请参阅[时区概述](../../standard/datetime/time-zone-overview.md)。
 
@@ -1012,7 +1017,7 @@ WCF 包含可以在客户端应用程序上设置以确保它们始终连接到�
 
 在 .NET framework 的早期版本中，WPF 应用程序不能在不禁用 WPF 笔/触摸手势支持的情况下选择加入焦点跟踪。  因此，WPF 应用程序必须选择完整的 WPF 触摸支持或依赖于 Windows 鼠标提升。
 
-**每监视器 DPI**
+**按监视器 DPI**
 
 为了支持 WPF 应用的高 DPI 和混合 DPI 环境最近的增加，[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的 WPF 启用了每监视器感知功能。 有关如何使 WPF 应用成为按监视器 DPI 感知的详细信息，请参阅 GitHub 上的[示例和开发人员指南](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI)。
 
@@ -1036,8 +1041,7 @@ WCF 包含可以在客户端应用程序上设置以确保它们始终连接到�
 
 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，WF 在 Visual Studio 设计器和代码工作流中都支持 C# 表达式。 重新托管的工作流设计器是 WF 的一项重要功能，允许工作流设计器位于 Visual Studio 外部的应用程序中（如 WPF 中）。  Windows Workflow Foundation 提供在重新托管的工作流设计器中支持 C# 表达式和 IntelliSense 的功能。 有关详细信息，请参阅 [Windows Workflow Foundation 博客](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)。
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`
-在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 之前的 .NET Framework 版本中，当客户从 Visual Studio 重新生成工作流项目时，WF 设计器 IntelliSense 会中断。 虽然项目生成成功，但在设计器中找不到该工作流类型，并且来自 IntelliSense 的缺少工作流类型的警告会出现在**错误列表**窗口中。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 解决这个问题，并使 IntelliSense 可用。
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` 在低于 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的 .NET Framework 版本中，客户从 Visual Studio 重新生成工作流项目时，WF 设计器 IntelliSense 会中断。 虽然项目生成成功，但在设计器中找不到该工作流类型，并且来自 IntelliSense 的缺少工作流类型的警告会出现在**错误列表**窗口中。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 解决这个问题，并使 IntelliSense 可用。
 
 **启用了工作流跟踪的工作流 V1 应用程序现以 FIPS 模式运行**
 
@@ -1087,7 +1091,7 @@ Windows 现在提供将现有 Windows 桌面应用（包括 WPF 和 Windows 窗�
 
 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包括以下几个方面的新功能：
 
-- [密码](#Crypto)
+- [加密](#Crypto)
 
 - [ADO.NET](#ADO.NET461)
 
@@ -1131,7 +1135,7 @@ ECDSA 可提供更好的性能，是一种比 RSA 更安全的加密算法，从
 
 以下内容已添加到 ADO.NET 中：
 
-**针对硬件保护密钥的始终加密支持**
+**针对硬件保护密钥的 Always Encrypted 支持**
 
 ADO.NET 现在支持以本机方式在硬件安全模块 (HSM) 中存储始终加密列主密钥。 借助此支持，客户可以利用存储在 HSM 中的非对称密钥，而不必编写自定义列主密钥存储提供程序并在应用程序中注册它们。
 
@@ -1147,7 +1151,7 @@ SqlClient 现在可自动提供与 AlwaysOn 可用性组 (AG) 之间的更快连
 
 Windows Presentation Foundation 包括一些改进和更改。
 
-**增强的性能**
+**提升了性能**
 
 在 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 中修复了触发触摸事件时的延迟。 此外在快速输入过程中，在 <xref:System.Windows.Controls.RichTextBox> 控件中输入不再占用呈现线程。
 
@@ -1353,7 +1357,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
              [!code-csharp[WhatsNew.Casting#2](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
              [!code-vb[WhatsNew.Casting#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
 
-    - **支持将日期和时间转换为 UNIX 时间或将 UNIX 时间转换为日期和时间**
+    - **支持将日期和时间与 UNIX 时间相互转换**
 
          以下新方法已添加到 <xref:System.DateTimeOffset> 结构，以支持将日期和时间转换为 UNIX 时间或将 UNIX 时间转换为日期和时间：
 
@@ -1528,7 +1532,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
      默认值为 `false`。
 
-- **网络**
+- **网络连接**
 
     - **套接字重用**
 
@@ -1544,7 +1548,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
          调用 <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> 等方法时，编写仅限套接字的应用程序的开发人员可以指定 <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> 选项，以便出站套接字在绑定期间重用本地端口。
 
-    - **国际域名和 PunyCode 支持**
+    - **对国际域名和 PunyCode 的支持**
 
          一个新属性 <xref:System.Uri.IdnHost%2A> 已添加到了 <xref:System.Uri> 类，以更好地支持国际域名和 PunyCode。
 
@@ -1609,7 +1613,7 @@ WPF 包括一个 [NuGet 包](https://go.microsoft.com/fwlink/?LinkID=691342)，�
 
     - 使用 <xref:System.Transactions.IPromotableSinglePhaseNotification> 替换 <xref:System.Transactions.ISinglePhaseNotification>，它是支持单阶段提交的持久性登记。
 
-     此操作可以在相同的应用域内执行，而且不需要任何用于与 MSDTC 交互的额外非托管代码即可执行提升。 仅当存在从 <xref:System.Transactions?displayProperty=nameWithType> 对由可提升登记实现的 <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` 方法进行的未处理调用时，才可调用新方法。
+     此操作可以在相同的应用域内执行，而且不需要任何用于与 MSDTC 交互的额外非托管代码即可执行提升。 仅当存在从 <xref:System.Transactions?displayProperty=nameWithType> 对由可提升登记实现的 <xref:System.Transactions.IPromotableSinglePhaseNotification> `Promote` 方法进行的未处理调用时，才可调用新方法。
 
 - **分析改进。** 以下新的非托管分析 API 提供更强大的分析功能：
 
@@ -1929,7 +1933,7 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用程序为特定窗体因素而设计，并利用 Windows 操作系统的功能。 通过使用 C# 或 Visual Basic，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或 4.5.1 的子集可用于生成面向 Windows 的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用。 该子集称为 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 开发人员中心的[概述](https://go.microsoft.com/fwlink/?LinkId=228491)中进行讨论。
+[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用程序为特定窗体因素而设计，并利用 Windows 操作系统的功能。 通过使用 C# 或 Visual Basic，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或 4.5.1 的子集可用于生成面向 Windows 的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用。 该子集称为 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 开发人员中心的[概述](https://go.microsoft.com/fwlink/?LinkId=228491)中进行讨论。
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>可移植类库<a name="portable" />
 
@@ -1940,5 +1944,5 @@ ASP.NET 4.5 和 4.5.1 为 Web 窗体、WebSocket 支持、异步处理程序、�
 - [.NET Framework 和带外版本](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework 中辅助功能的新增功能](whats-new-in-accessibility.md)
 - [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-in-visual-studio)
-- [ASP.NET](/aspnet)
+- [ASP.NET 2.0](/aspnet)
 - [Visual C++ 中的新增功能](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
