@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |通�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7776edd91f73aa6ca74b82ae4d144635bb6c36a4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147471"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613871"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>通过监视和遥测对应用进行现代化
 
@@ -69,31 +69,31 @@ Application Insights 是面向 web 开发人员可以在多个平台上的可扩
 
 -   **Microsoft Azure 中的监视概述**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **什么是 Application Insights？**
 
-[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+<https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
 -   **什么是 Log Analytics？**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+<https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **在 Log Analytics 中的容器监视解决方案**
+-   **Azure Monitor 中的容器监视解决方案**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+<https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
 -   **Azure Monitor 概述**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **什么是 Operations Management Suite (OMS)？**
 
-[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+<https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
 -   **监视 Service Fabric 和 OMS 中的 Windows Server 容器**
 
-[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[上一页](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

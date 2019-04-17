@@ -2,12 +2,12 @@
 title: 暂停和继续工作流
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-ms.openlocfilehash: 99455f117e5e8591750565452c3c40b74bf45ba1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa0431b18f6d0e4b96d7494ec2e65acd355992c7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513479"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612597"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>暂停和继续工作流
 工作流将暂停并恢复以响应书签和阻止活动（如 <xref:System.Activities.Statements.Delay>），但也可使用持久性来显式暂停、卸载和恢复工作流。  
@@ -70,7 +70,7 @@ static void LoadAndCompleteInstance(Guid id)
     Console.WriteLine("Press <enter> to load the persisted workflow");  
     Console.ReadLine();  
     AutoResetEvent waitHandler = new AutoResetEvent(false);  
-    WorkflowApplication wfApp = new WorkflowApplication(new Workflow1());  
+    WorkflowApplication wfApp = new WorkflowApplication(GetDelayedWF());  
     wfApp.InstanceStore =  
         new SqlWorkflowInstanceStore(ConfigurationManager.AppSettings["SqlWF4PersistenceConnectionString"].ToString());  
     wfApp.Completed = (workflowApplicationCompletedEventArgs) => {  

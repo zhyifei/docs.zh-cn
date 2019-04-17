@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff9ea8cdc8aea66b1dd1f54c8be881882f6e27f7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214866"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611531"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 函数
+
 通过 DCOM 创建到指定计算机上的 WMI 命名空间的连接。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
 ## <a name="syntax"></a>语法
 
-```
+```cpp
 HRESULT ConnectServerWmi (
    [in] BSTR               strNetworkResource,
    [in] BSTR               strUser,
@@ -40,10 +41,11 @@ HRESULT ConnectServerWmi (
    [in] BSTR               strAuthority,
    [in] IWbemContext*      pCtx,
    [out] IWbemServices**   ppNamespace,
-   [in] DWORD              impLevel, 
+   [in] DWORD              impLevel,
    [in] DWORD              authLevel
 );
 ```
+
 ## <a name="parameters"></a>参数
 
 `strNetworkResource`\
@@ -56,8 +58,8 @@ HRESULT ConnectServerWmi (
 [in]指向一个有效的指针`BSTR`包含的密码。 一个`null`指示当前的安全上下文。 空字符串 ("") 指示有效长度为零的密码。
 
 `strLocale`\
-[in]指向一个有效的指针`BSTR`，该值指示正确的区域设置的信息检索。 对于 Microsoft 区域设置标识符的字符串的格式是"MS\_*xxx*"，其中*xxx*是一个字符串中指示的区域设置标识符 (LCID) 的十六进制格式。 如果指定了无效的区域设置，该方法返回`WBEM_E_INVALID_PARAMETER`上 Windows 7，其中的服务器的默认区域设置改为使用除外。 如果使用 null1，当前区域设置。 
- 
+[in]指向一个有效的指针`BSTR`，该值指示正确的区域设置的信息检索。 对于 Microsoft 区域设置标识符的字符串的格式是"MS\_*xxx*"，其中*xxx*是一个字符串中指示的区域设置标识符 (LCID) 的十六进制格式。 如果指定了无效的区域设置，该方法返回`WBEM_E_INVALID_PARAMETER`上 Windows 7，其中的服务器的默认区域设置改为使用除外。 如果使用 null1，当前区域设置。
+
 `lSecurityFlags`\
 [in]要传递给标志`ConnectServerWmi`方法。 此参数为零 (0) 的值将导致调用`ConnectServerWmi`返回才建立到服务器的连接。 这可能导致应用程序未响应无限期地服务器已中断。 其他有效值为：
 
@@ -76,7 +78,7 @@ HRESULT ConnectServerWmi (
 | NTLMDOMAIN:*域名* | 使用 NT LAN Manager 身份验证，并且此参数包含的 NTLM 域名。 |
 
 `pCtx`\
-[in]通常情况下，此参数是`null`。 否则，它是一个指向[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)对象所需的一个或多个动态类提供程序。 
+[in]通常情况下，此参数是`null`。 否则，它是一个指向[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)对象所需的一个或多个动态类提供程序。
 
 `ppNamespace`\
 [out]当函数返回时，接收一个指向[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)对象绑定到指定的命名空间。 它设置为指向`null`时出现错误。
@@ -112,8 +114,8 @@ HRESULT ConnectServerWmi (
 
  **标头：** WMINet_Utils.idl
 
- **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器（非托管 API 参考）](index.md)
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

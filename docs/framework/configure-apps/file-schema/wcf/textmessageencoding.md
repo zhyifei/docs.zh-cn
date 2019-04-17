@@ -2,12 +2,12 @@
 title: <textMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: e9942ce3ccbec949160ee70dd103d3c1799bd44d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e6e6d1907d89a09a72594a836f2192e9ad9c4290
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186298"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59614111"
 ---
 # <a name="textmessageencoding"></a>\<textMessageEncoding>
 指定用于基于文本的 XML 消息的字符编码和消息版本控制。  
@@ -36,7 +36,7 @@ ms.locfileid: "59186298"
 |---------------|-----------------|  
 |maxReadPoolSize|一个整数，指定在无需分配新读取器的情况下可以同时读取的消息数。 池越大，系统允许的活动峰值就越大，但工作集也会随之增大。 默认值为 64。|  
 |maxWritePoolSize|一个整数，指定在无需分配新编写器的情况下可以同时发送的消息数。 池越大，系统允许的活动峰值就越大，但工作集也会随之增大。 默认值为 16。|  
-|messageVersion|指定使用此绑定发送的消息的 SOAP 版本。 有效值为<br /><br /> -   Soap11Addressing10<br />-   Soap12Addressing10<br /><br /> 默认值为 Soap12Addressing10。 此属性的类型为 <xref:System.ServiceModel.Channels.MessageVersion>。|  
+|messageVersion|指定使用此绑定发送的消息的 SOAP 版本。 有效值为<br /><br /> -   Soap11Addressing10<br />-   Soap12Addressing10<br />-   Soap11<br />-  Soap12<br /><br />默认值为 Soap12Addressing10。 此属性的类型为 <xref:System.ServiceModel.Channels.MessageVersion>。|  
 |writeEncoding|指定要用来在绑定上发出消息的字符集编码。 有效值为<br /><br /> -UnicodeFffeTextEncoding:Unicode BigEndian 编码<br />-Utf16TextEncoding:Unicode 编码<br />-Utf8TextEncoding:8 位编码<br /><br /> 默认值为 Utf8TextEncoding。 此属性的类型为 <xref:System.Text.Encoding>。|  
   
 ### <a name="child-elements"></a>子元素  

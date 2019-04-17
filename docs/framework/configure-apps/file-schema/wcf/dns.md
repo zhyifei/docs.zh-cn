@@ -2,12 +2,12 @@
 title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: ce12d0a82c8a443994559ed772496897f359b4e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 26b45b17ecd7bbd3fffb5d03553834ec22eedc62
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166668"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611167"
 ---
 # <a name="dns"></a>\<dns>
 指定服务器的所需标识。 如果服务器的证书包含具有相同值的 DNS，则此标识对于 X509 证书身份验证模式有效。 如果 SPN 具有相同值，则它对于 Windows 身份验证模式同样有效。  
@@ -30,7 +30,7 @@ ms.locfileid: "59166668"
   
 |特性|描述|  
 |---------------|-----------------|  
-|值|证书的 DNS。 DNS 是一个用于在基于 IP 网络上定位计算机的行业标准协议。 用户可以记住显示名称，如[ https://go.microsoft.com/fwlink/?prd=10929 ](https://go.microsoft.com/fwlink/?prd=10929)或[ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165)、 比基于数字的地址，如 207.46.131.137 更容易。|  
+|值|证书的 DNS。 DNS 是一个用于在基于 IP 网络上定位计算机的行业标准协议。 用户可以记住显示名称，如<https://go.microsoft.com/fwlink/?prd=10929>或[ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165)、 比基于数字的地址，如 207.46.131.137 更容易。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  

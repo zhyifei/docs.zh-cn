@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序使用 Azure 云和 Windows 容器。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2b987d43f476f261bfdbd1b2af6ca7f792178cf8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0f9ff19c8e346560960a09d3b7c52976c478f2f3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266619"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612870"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>提升并转移到 Azure IaaS （云基础结构的） 现有.NET 应用程序
 
@@ -85,27 +85,27 @@ Azure Migrate 提供的工作负荷可以对业务影响最小迁移并按预期
 
 - **Azure Migrate Datasheet**
 
-    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
+    <https://aka.ms/azuremigration\_datasheet>
 
 - **Azure Migrate**
 
-    [https://aka.ms/azuremigrate](https://aka.ms/azuremigrate)
+    <https://aka.ms/azuremigrate>
 
 - **Azure 迁移中心**
 
-    [https://azure.microsoft.com/migration/](https://azure.microsoft.com/migration/)
+    <https://azure.microsoft.com/migration/>
 
 - **使用 Site Recovery 迁移到 Azure**
 
-    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
+    <https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure>
 
 - **Azure Site Recovery 服务概述**
 
-    [https://docs.microsoft.com/azure/site-recovery/site-recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
+    <https://docs.microsoft.com/azure/site-recovery/site-recovery-overview>
 
 - **将 Vm 迁移到 Azure Vm 的 AWS 中**
 
-    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
+    <https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure>
 
 >[!div class="step-by-step"]
 >[上一页](index.md)

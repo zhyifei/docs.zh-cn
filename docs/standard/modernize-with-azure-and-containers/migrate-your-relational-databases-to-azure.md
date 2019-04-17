@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序使用 Azure 云和 Windows 容器 |�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 8cadfc99a4c3d32e24d4a44e8cf4ce17a2ba7a07
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 600c47b6b0ccaf704c8e7b638c759e990acaaacf
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677547"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611414"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>将关系数据库迁移到 azure
 
@@ -108,23 +108,23 @@ Azure SQL 数据库提供以下优势：
 
 - **选择云 SQL Server 选项：Azure SQL 数据库 (PaaS) 或 Azure VM (IaaS) 上的 SQL Server**
 
-    [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+    <https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas>
 
 - **转到 Azure SQL 数据库托管实例和数据库迁移服务通过更快地在云中**
 
-    [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
+    <https://channel9.msdn.com/Events/Build/2017/P4008>
 
 - **将 SQL Server 数据库迁移到云中的 SQL 数据库**
 
-    [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
+    <https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate>
 
 - **Azure SQL 数据库**
 
-    [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
+    <https://azure.microsoft.com/services/sql-database/?v=16.50>
 
 - **虚拟机上的 SQL Server**
 
-    [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
+    <https://azure.microsoft.com/services/virtual-machines/sql-server/>
 
 > [!div class="step-by-step"]
 > [上一页](lift-and-shift-existing-apps-azure-iaas.md)

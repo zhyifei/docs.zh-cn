@@ -1,17 +1,17 @@
 ---
-title: 将迁移到混合云方案
+title: 迁移到混合云方案
 description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |将迁移到混合云方案
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 3d6fc272854654d890559d5db032b05667627d94
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b04c6edecf5b63f191cb2e0f808fb1d0f801d0a3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147328"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612571"
 ---
-# <a name="migrate-to-hybrid-cloud-scenarios"></a>将迁移到混合云方案
+# <a name="migrate-to-hybrid-cloud-scenarios"></a>迁移到混合云方案
 
 某些组织和企业不能将其某些应用程序到 Microsoft Azure 等公有云或由于法规或他们自己的策略的任何其他公有云迁移。 但是，可能是任何组织可能具有一些在公有云与其他应用程序的本地应用程序受益。 但在环境中由于不同的平台和技术在公有云与本地环境中使用过多的复杂性可能会导致混合的环境。
 
@@ -49,23 +49,23 @@ Microsoft Azure Stack 开发工具包是单节点部署的 Azure Stack，可用�
 
 -   **Azure 混合云**
 
-    [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
+    <https://azure.microsoft.com/overview/hybrid-cloud/>
 
 -   **Azure Stack**
 
-    [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
+    <https://azure.microsoft.com/overview/azure-stack/>
 
 -   **Active Directory 服务帐户用于 Windows 容器**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
+    <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
 -   **创建具有 Active Directory 支持的容器**
 
-    [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
+    <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
 -   **Azure 混合权益许可**
 
-    [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
+    <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
 >[上一页](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)

@@ -54,8 +54,7 @@ TAP 使用单个方法表示异步操作的开始和完成。 这与异步编程
  TAP 方法的调用方可能会同步等待生成的任务，以阻止等待 TAP 方法完成，也可能会在异步操作完成时运行其他（延续）代码。 延续代码的创建者可以控制该代码的执行位置。 你可以通过 <xref:System.Threading.Tasks.Task> 类上的方法（例如，<xref:System.Threading.Tasks.Task.ContinueWith%2A>）显式创建延续代码，也可以使用基于延续（例如，C# 中的 `await`、Visual Basic 中的 `Await` 和 F# 中的 `AwaitValue`）构建的语言支持隐式创建延续代码。  
   
 ## <a name="task-status"></a>任务状态  
- 
-  <xref:System.Threading.Tasks.Task> 类提供了异步操作的生命周期，且该周期由 <xref:System.Threading.Tasks.TaskStatus> 枚举表示。 为了支持派生自 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 的类型的个别案例，并支持调度时分离构造，<xref:System.Threading.Tasks.Task> 类公开了 <xref:System.Threading.Tasks.Task.Start%2A> 方法。 公共 <xref:System.Threading.Tasks.Task> 构造函数创建的任务称为“冷任务”，因为它们在非计划 <xref:System.Threading.Tasks.TaskStatus.Created> 状态下开始生命周期，并仅在对这些实例调用 <xref:System.Threading.Tasks.Task.Start%2A> 时才被排入计划。 
+ <xref:System.Threading.Tasks.Task> 类提供了异步操作的生命周期，且该周期由 <xref:System.Threading.Tasks.TaskStatus> 枚举表示。 为了支持派生自 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 的类型的个别案例，并支持调度时分离构造，<xref:System.Threading.Tasks.Task> 类公开了 <xref:System.Threading.Tasks.Task.Start%2A> 方法。 公共 <xref:System.Threading.Tasks.Task> 构造函数创建的任务称为“冷任务”，因为它们在非计划 <xref:System.Threading.Tasks.TaskStatus.Created> 状态下开始生命周期，并仅在对这些实例调用 <xref:System.Threading.Tasks.Task.Start%2A> 时才被排入计划。 
  
  所有其他任务在热状态下开始其生命周期，这意味着它们表示的异步操作已启动，并且其任务状态是 <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 以外的枚举值。 必须激活从 TAP 方法返回的所有任务。 **如果 TAP 方法在内部使用任务的构造函数来实例化要返回的任务，TAP 方法必须在返回前先对 <xref:System.Threading.Tasks.Task> 对象调用 <xref:System.Threading.Tasks.Task.Start%2A>。** TAP 方法的使用者可以安全地假设返回的任务处于活动状态且不应尝试对从 TAP 方法返回的任何 <xref:System.Threading.Tasks.Task.Start%2A> 调用 <xref:System.Threading.Tasks.Task>。 对活动的任务调用 <xref:System.Threading.Tasks.Task.Start%2A> 将引发 <xref:System.InvalidOperationException> 异常。  
   
@@ -65,8 +64,7 @@ TAP 使用单个方法表示异步操作的开始和完成。 这与异步编程
  [!code-csharp[Conceptual.TAP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#1)]
  [!code-vb[Conceptual.TAP#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap/vb/examples1.vb#1)]  
   
- 该异步操作监视取消请求的此标记。 如果它收到取消请求，则可以选择接受该请求并取消操作。 如果取消请求导致过早地结束工作，则 TAP 方法返回一个在 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态下结束的任务；没有可用结果且不引发异常。  
-  <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态被视为任务的最终（完成）状态，以及 <xref:System.Threading.Tasks.TaskStatus.Faulted> 和 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 状态。 因此，如果一个任务处于 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态，则其 <xref:System.Threading.Tasks.Task.IsCompleted%2A> 属性将返回 `true`。 在 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态下完成任务时，将计划或执行向任务注册的任何延续，除非延续选项（如 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnCanceled>）特定于取消延续。 任何通过使用语言功能异步等待已取消的任务的代码都将继续运行，但不接收 <xref:System.OperationCanceledException> 或其中派生的异常。 通过诸如 <xref:System.Threading.Tasks.Task.Wait%2A> 的方法同步阻止的代码等待任务，并且 <xref:System.Threading.Tasks.Task.WaitAll%2A> 将继续运行但出现异常。  
+ 该异步操作监视取消请求的此标记。 如果它收到取消请求，则可以选择接受该请求并取消操作。 如果取消请求导致过早地结束工作，则 TAP 方法返回一个在 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态下结束的任务；没有可用结果且不引发异常。  <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态被视为任务的最终（完成）状态，以及 <xref:System.Threading.Tasks.TaskStatus.Faulted> 和 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 状态。 因此，如果一个任务处于 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态，则其 <xref:System.Threading.Tasks.Task.IsCompleted%2A> 属性将返回 `true`。 在 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态下完成任务时，将计划或执行向任务注册的任何延续，除非延续选项（如 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnCanceled>）特定于取消延续。 任何通过使用语言功能异步等待已取消的任务的代码都将继续运行，但不接收 <xref:System.OperationCanceledException> 或其中派生的异常。 通过诸如 <xref:System.Threading.Tasks.Task.Wait%2A> 的方法同步阻止的代码等待任务，并且 <xref:System.Threading.Tasks.Task.WaitAll%2A> 将继续运行但出现异常。  
   
  如果取消标记请求在接受调用标记的 TAP 方法之前取消，TAP 方法应返回 <xref:System.Threading.Tasks.TaskStatus.Canceled> 任务。  但是，如果在运行异步操作时请求取消，则异步操作不需要接受该取消请求。  仅当该操作如取消请求的结果那样结束时，返回的任务才应以 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态结束。 如果已请求取消，但仍然生成了结果或异常，则任务应在 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 或 <xref:System.Threading.Tasks.TaskStatus.Faulted> 状态下结束。 
  
@@ -97,9 +95,7 @@ TAP 使用单个方法表示异步操作的开始和完成。 这与异步编程
  如果 TAP 实现提供接受 `progress` 参数的重载，则必须允许该自变量成为 `null`，在这种情况下，不会报告任何进度。 TAP 实现应该同步将进度报告到 <xref:System.Progress%601> 对象，使异步方法能够快速提供进度，并允许进度的使用者确定处理信息的最佳方式和位置。 例如，进度实例可以选择将回调封送，并引发有关捕获到的同步上下文的事件。  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T> 实现  
- 
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供单个 <xref:System.IProgress%601> 实现：<xref:System.Progress%601>。 
-  <xref:System.Progress%601> 类的声明方式如下：  
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供单个 <xref:System.IProgress%601> 实现：<xref:System.Progress%601>。 <xref:System.Progress%601> 类的声明方式如下：  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  
@@ -120,8 +116,7 @@ Public Class Progress(Of T) : Inherits IProgress(Of T)
 End Class  
 ```  
   
- 
-  <xref:System.Progress%601> 的实例公开 <xref:System.Progress%601.ProgressChanged> 事件，此事件在异步操作每次报告进度更新时引发。 实例化 <xref:System.Progress%601.ProgressChanged> 实例后，会在捕获到的 <xref:System.Threading.SynchronizationContext> 对象上引发 <xref:System.Progress%601> 事件。 如果没有可用的同步上下文，则使用针对线程池的默认上下文。 可以向此事件注册处理程序。 为了方便起见，也可将单个处理程序提供给 <xref:System.Progress%601> 构造函数，并且行为与 <xref:System.Progress%601.ProgressChanged> 事件的事件处理程序一样。 异步引发进度更新以避免延迟异步操作，同时执行事件处理程序。 另一个 <xref:System.IProgress%601> 实现可以选择应用不同的语义。  
+ <xref:System.Progress%601> 的实例公开 <xref:System.Progress%601.ProgressChanged> 事件，此事件在异步操作每次报告进度更新时引发。 实例化 <xref:System.Progress%601.ProgressChanged> 实例后，会在捕获到的 <xref:System.Threading.SynchronizationContext> 对象上引发 <xref:System.Progress%601> 事件。 如果没有可用的同步上下文，则使用针对线程池的默认上下文。 可以向此事件注册处理程序。 为了方便起见，也可将单个处理程序提供给 <xref:System.Progress%601> 构造函数，并且行为与 <xref:System.Progress%601.ProgressChanged> 事件的事件处理程序一样。 异步引发进度更新以避免延迟异步操作，同时执行事件处理程序。 另一个 <xref:System.IProgress%601> 实现可以选择应用不同的语义。  
   
 ## <a name="choosing-the-overloads-to-provide"></a>选择要提供的重载  
  如果 TAP 实现使用可选的 <xref:System.Threading.Tasks.TaskFactory.CancellationToken%2A> 和可选的 <xref:System.IProgress%601> 参数，则可能需要多达四次的重载：  

@@ -2,12 +2,12 @@
 title: ETW 跟踪
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: b445606677fba23ec81e896cce564330cedd6a19
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: a5c2f173978f514aa4627caa476a595d8d45d4f9
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300679"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613741"
 ---
 # <a name="etw-tracing"></a>ETW 跟踪
 本示例演示如何通过使用 Windows 事件跟踪 (ETW) 和本示例提供的 `ETWTraceListener` 来实现端对端 (E2E) 跟踪。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)并包括 ETW 跟踪。  
@@ -50,7 +50,7 @@ ms.locfileid: "59300679"
  在使用此侦听器之前，必须启动 ETW 跟踪会话。 可以通过使用 Logman.exe 或 Tracelog.exe 来启动此会话。 本示例随附一个 SetupETW.bat 文件，您可以和 CleanupETW.bat 文件一起使用此文件来设置 ETW 跟踪会话，以便关闭会话并完成日志文件。  
   
 > [!NOTE]
->  本主题的最后介绍了此示例的设置过程和生成说明。 有关这些工具的详细信息，请参阅 [https://go.microsoft.com/fwlink/?LinkId=56580](https://go.microsoft.com/fwlink/?LinkId=56580)  
+>  本主题的最后介绍了此示例的设置过程和生成说明。 有关这些工具的详细信息，请参阅 <https://go.microsoft.com/fwlink/?LinkId=56580>  
   
  使用 ETWTraceListener 时，将在二进制 .etl 文件中记录跟踪。 在打开 ServiceModel 跟踪的情况下，所有生成的跟踪都显示在同一个文件中。 使用[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)用于查看.etl 和.svclog 日志文件。 该查看器可创建系统的端对端视图，可以从消息源到消息目标和使用点来跟踪消息。  
   

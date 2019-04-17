@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 3efe8b8716a264848d07ecc37d4e11d07a8ba0a0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5c2ff8ac3b424a2541ba7604b5952b2a3ed0a21a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172492"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611050"
 ---
 # <a name="transport-security-with-basic-authentication"></a>通过基本身份验证确保的传输安全
-下图显示了 Windows Communication Foundation (WCF) 服务和客户端。 服务器需要一个有效的可用于安全套接字层 (SSL) 的 X.509 证书，并且客户端必须信任此服务器证书。 而且，Web 服务已经有了一个可以使用的 SSL 实现。 有关详细信息启用基本身份验证在 Internet 信息服务 (IIS)，请参阅[ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822)。  
+下图显示了 Windows Communication Foundation (WCF) 服务和客户端。 服务器需要一个有效的可用于安全套接字层 (SSL) 的 X.509 证书，并且客户端必须信任此服务器证书。 而且，Web 服务已经有了一个可以使用的 SSL 实现。 有关详细信息启用基本身份验证在 Internet 信息服务 (IIS)，请参阅<https://go.microsoft.com/fwlink/?LinkId=83822>。  
   
  ![屏幕截图，显示使用基本身份验证的传输安全。](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   

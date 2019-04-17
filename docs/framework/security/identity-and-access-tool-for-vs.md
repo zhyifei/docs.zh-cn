@@ -3,15 +3,15 @@ title: 适用于 Visual Studio 2012 的标识和访问工具
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: 9216298889637780e79d1bfc7ac060458c745968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 65d771b87cd3198848ffac387446abb17df18250
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170113"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611583"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>适用于 Visual Studio 2012 的标识和访问工具
-本主题描述了适用于 Visual Studio 11 的新的标识和访问工具。 可以从以下 URL 下载此工具： [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849)或直接从 Visual Studio 11 中搜索"标识"直接在扩展管理器中。  
+本主题描述了适用于 Visual Studio 11 的新的标识和访问工具。 可以从以下 URL 下载此工具：<https://go.microsoft.com/fwlink/?LinkID=245849>或直接从 Visual Studio 11 中搜索"标识"直接在扩展管理器中。  
   
  适用于 Visual Studio 11 的新的标识和访问工具提供了开发时间大大减少的体验，并具有如下要点：  
   

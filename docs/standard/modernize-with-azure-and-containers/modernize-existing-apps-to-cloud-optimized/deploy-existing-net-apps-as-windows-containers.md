@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |将�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216660"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611245"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>将现有 .NET 应用部署为 Windows 容器
 
@@ -93,14 +93,14 @@ Docker 容器 (为简单起见，*容器*) 可以在 Linux 和 Windows 上本机
 
 时映像名称添加到 Dockerfile 文件后，可以选择的操作系统和版本，使用标记，如基于.NET Framework 的 Windows 容器映像的以下示例所示：
 
-> | **标记** | **系统和版本** |
+> | **Tag** | **系统和版本** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x Windows Server Core 上 |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x 与其他 ASP.NET 自定义，在 Windows Server Core 上 |
 
 为.NET Core （适用于 Linux 和 Windows 跨平台），标记将如下所示：
 
-> | **标记** | **系统和版本**
+> | **Tag** | **系统和版本**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 仅运行时在 Linux 上 |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET Core 2.0 仅运行时在 Windows Nano Server 上 |
@@ -125,15 +125,15 @@ Linux 容器，如 Windows Server 容器通过 Docker 引擎管理。 与 Linux 
 
 -   **Windows 容器文档**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/>
 
 -   **Windows 容器基础知识**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/about/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
 -   **信息图：Microsoft 和容器**
 
-    [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
+    <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
 ## <a name="the-container-ecosystem-in-azure"></a>Azure 中的容器生态系统
 
@@ -156,7 +156,7 @@ Azure 支持的容器在同一时间多置于 PaaS （平台即服务） 级别�
 -   **Azure 应用服务**
 -   **Azure Kubernetes 服务 （AKS 和 ACS）**
 -   **Azure Service Fabric** 
--   **Azure 批处理** 
+-   **Azure Batch** 
 
 然后，Azure 容器注册表是可以从所有以前的产品注册和部署你的自定义容器映像时使用的 Azure 中托管的高可缩放的容器注册表。
 

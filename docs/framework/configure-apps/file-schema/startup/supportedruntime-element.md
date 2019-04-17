@@ -9,16 +9,16 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 93e69290062e1b82dddbb68f7a139763695a42fb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 98284b09c4f2b88cd434d66740ea068a7244e26d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271767"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613991"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > 元素
 
-指定应用程序支持的公共语言运行时版本。 此元素应由用 .NET Framework 1.1 版或更高版本生成的所有应用程序使用。  
+指定的公共语言运行时版本和 （可选） 应用程序的.NET Framework 版本支持。  
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
 &nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
@@ -46,7 +46,9 @@ ms.locfileid: "55271767"
 > [!NOTE]
 >  如果您使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函数以指定配置文件，则必须使用`<requiredRuntime>`所有版本的运行时的元素。 `<supportedRuntime>`使用时，将忽略元素[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。  
   
-对于支持从 .NET Framework 1.1 到 3.5 的运行时版本的应用，支持多个运行时版本时，第一个元素应指定优先级最高的版本，最后一个元素应指定优先级最低的版本。 对于支持 .NET Framework 4.0 或更高版本的应用，`version` 特性指示普遍适用于 .NET Framework 4 及更高版本的 CLR 版本，而 `sku` 特性指示应用所面向的单个 .NET Framework 版本。  
+对于支持从 .NET Framework 1.1 到 3.5 的运行时版本的应用，支持多个运行时版本时，第一个元素应指定优先级最高的版本，最后一个元素应指定优先级最低的版本。 对于支持的.NET Framework 4.0 或更高版本的应用`version`属性指示的 CLR 版本，这是普遍适用于.NET Framework 4 和更高版本，并且`sku`属性指示的单个.NET Framework 版本的应用程序的目标。 
+
+如果 **\<supportedRuntime >** 具有元素`sku`属性配置文件中存在且已安装的.NET Framework 版本为较低则指定的受支持的版本，该应用程序无法运行，而是显示一条消息询问要安装受支持的版本。 否则为应用程序尝试任何已安装的版本上运行，但它可能出现意外行为是否不与该版本完全兼容。 (有关兼容性的.NET Framework 版本之间的差异，请参阅[.NET Framework 中的应用程序兼容性](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility)。)因此，我们建议您在更容易错误诊断的应用程序配置文件中包含此元素。 （已创建新项目时由 Visual Studio 自动生成的配置文件包含它。）
   
 > [!NOTE]
 >  如果你的应用程序使用旧式激活路径，如[CorBindToRuntimeEx 函数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)，并且希望这些路径来激活而不是早期版本的 CLR 版本 4 或如果你的应用程序使用生成[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]具有依赖关系，但在上使用.NET Framework 的早期版本构建的混合模式程序集，它不是只需指定[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]在受支持运行时列表中。 此外，在[\<启动 > 元素](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)在配置文件中，必须设置`useLegacyV2RuntimeActivationPolicy`归于`true`。 但是，将此特性设置为 `true` 意味着，用 .NET Framework 早期版本生成的所有组件都使用 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]（而不是生成它们时所用的运行时）运行。  
@@ -57,7 +59,7 @@ ms.locfileid: "55271767"
 ## <a name="runtime-version-values"></a>“运行时版本”值  
 `runtime`属性指定给定应用程序所需的公共语言运行时 (CLR) 版本。 请注意，所有.NET Framework v4.x 版本都指定`v4.0`CLR。 下表列出了有效值*运行时版本*的值`version`属性。  
 
-|.NET Framework 版本|`version` 特性|  
+|.NET Framework 版本|`version` 属性|  
 |----------------------------|-------------------------|  
 |1.0|"v1.0.3705"|  
 |1.1|"v1.1.4322"|  
@@ -71,7 +73,7 @@ ms.locfileid: "55271767"
 
 `sku`特性使用目标框架名字对象 (TFM) 以指示应用所面向并运行所需的.NET framework 版本。 下表列出了受支持的有效值`sku`属性，从.NET Framework 4 开始。
   
-|.NET Framework 版本|`sku` 特性|  
+|.NET Framework 版本|`sku` 属性|  
 |----------------------------|---------------------|  
 |4.0|".NETFramework,Version=v4.0"|  
 |4.0，客户端配置文件|".NETFramework,Version=v4.0,Profile=Client"|  

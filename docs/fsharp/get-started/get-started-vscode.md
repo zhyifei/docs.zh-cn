@@ -2,12 +2,12 @@
 title: 开始使用F#在 Visual Studio Code
 description: 了解如何使用F#使用 Visual Studio Code 和 Ionide 插件套件。
 ms.date: 12/23/2018
-ms.openlocfilehash: 3e526d33a8b52e3c1241ed861d5ceb37eac10451
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 7c2ecab14b3351d441249e7fc7cb3188a4ee7eba
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846566"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612883"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>开始使用F#在 Visual Studio Code
 
@@ -153,6 +153,7 @@ REPL 驱动开发的下一步是将移动到的工作代码F#实现文件。 然
 #load "ClassLibraryDemo.fs"
 open ClassLibraryDemo
 ```
+
 选择这两个行文本，然后按 Alt + Enter 可在 FSI 中执行这些行。 这些将将 Pig Latin 库的内容加载到 FSI 过程并`open``ClassLibraryDemo`命名空间，以便您具有对功能的访问。
 
 接下来，在 FSI 窗口中，调用与函数`PigLatin`前面定义的模块：
