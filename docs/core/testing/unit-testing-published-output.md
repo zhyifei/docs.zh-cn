@@ -5,12 +5,12 @@ author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 9d842f26336d0ddf5375d49676523086bb632684
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 660b966c6d02353b855e5728094083042a561558
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126082"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>通过 dotnet vstest 测试已发布的输出
 
@@ -37,6 +37,7 @@ dotnet vstest out/MyProject.Tests.dll
 > 注意:如果你的应用以 `netcoreapp` 之外的框架为目标，则仍然可以通过使用框架标志传入目标框架来运行 `dotnet vstest` 命令。 例如 `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`。 在 Visual Studio 2017 Update 5 中，自动检测所需的框架。
 
 ## <a name="see-also"></a>请参阅
-- [使用 dotnet 测试和 xUnit 进行单元测试](unit-testing-with-dotnet-test.md)
-- [使用 dotnet 测试和 NUnit 进行单元测试](unit-testing-with-nunit.md)
-- [使用 dotnet 测试和 MSTest 进行单元测试](unit-testing-with-mstest.md)
+
+- [使用 dotnet test 和 xUnit 进行单元测试](unit-testing-with-dotnet-test.md)
+- [使用 dotnet test 和 NUnit 进行单元测试](unit-testing-with-nunit.md)
+- [使用 dotnet test 和 MSTest 进行单元测试](unit-testing-with-mstest.md)

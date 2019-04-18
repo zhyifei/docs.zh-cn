@@ -4,12 +4,12 @@ description: 了解从本机代码托管 .NET Core 运行时，以支持需要�
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 27717cd68d2ef7c19289a9e06f99bb8767f2f582
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 53cdc13d5a356a2975182c58374a0e9c6639ec17
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654050"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481140"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>编写自定义 .NET Core 主机以从本机代码控制 .NET 运行时
 
@@ -52,11 +52,11 @@ ms.locfileid: "58654050"
 
 CoreClrHost 有几个可用于承载 .NET Core 的重要方法：
 
-* `coreclr_initialize`：启动 .NET Core 运行时并设置默认（且仅设置）AppDomain。
-* `coreclr_execute_assembly`：执行托管程序集。
-* `coreclr_create_delegate`：创建指向托管方法的函数指针。
-* `coreclr_shutdown`：关闭 .NET Core 运行时。
-* `coreclr_shutdown_2`：如 `coreclr_shutdown`，但还会检索托管代码的退出代码。
+* `coreclr_initialize`:启动 .NET Core 运行时并设置默认（且仅设置）AppDomain。
+* `coreclr_execute_assembly`:执行托管程序集。
+* `coreclr_create_delegate`:创建指向托管方法的函数指针。
+* `coreclr_shutdown`:关闭 .NET Core 运行时。
+* `coreclr_shutdown_2`:如 `coreclr_shutdown`，但还会检索托管代码的退出代码。
 
 加载 CoreCLR 库之后，下一步是使用 `GetProcAddress`（对于 Windows）或 `dlsym`（对于 Linux/Mac）引用这些函数。
 
@@ -68,8 +68,10 @@ CoreClrHost 有几个可用于承载 .NET Core 的重要方法：
 
 常用属性包括：
 
-* `TRUSTED_PLATFORM_ASSEMBLIES` 这是程序集路径列表（对于 Windows，使用“;”分隔，对于 Linux，使用“:”分隔），运行时在默认情况下能够解析这些路径。 一些主机有硬编码清单，其中列出了它们可以加载的程序集。 其他主机将把任何库放在这个列表上的特定位置（例如 coreclr.dll 旁边）。
-* `APP_PATHS` 这是一个用来探测程序集的路径的列表（如果在受信任的平台程序集 (TPA) 列表中找不到程序集）。 因为主机使用 TPA 列表可以更好地控制加载哪些程序集，所以对于主机来说，确定要加载的程序集并显式列出它们是最佳做法。 但是，如果需要探测运行时，则此属性可以支持该方案。
+* `TRUSTED_PLATFORM_ASSEMBLIES`
+  这是程序集路径列表（在 Windows 上，以“;”分隔；在 Linux 上，以“:”分隔），运行时默认能够解析这些路径。 一些主机有硬编码清单，其中列出了它们可以加载的程序集。 其他主机将把任何库放在这个列表上的特定位置（例如 coreclr.dll 旁边）。
+* `APP_PATHS`
+  这是为在受信任的平台程序集 (TPA) 列表中找不到的程序集探测的路径列表。 因为主机使用 TPA 列表可以更好地控制加载哪些程序集，所以对于主机来说，确定要加载的程序集并显式列出它们是最佳做法。 但是，如果需要探测运行时，则此属性可以支持该方案。
 *  `APP_NI_PATHS` 此列表与 APP_PATHS 相似，不同之处在于其中的路径用于探测本机映像。
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` 此属性是一个路径列表，加载程序在查找通过 p/invoke 调用的本机库时应使用这些路径进行探测。
 *  `PLATFORM_RESOURCE_ROOTS` 此列表包含的路径用于探测资源附属程序集（在区域性特定的子目录中）。
@@ -114,7 +116,7 @@ int hr = executeAssembly(
 
 [!code-cpp[CoreClrHost#6](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#6)]
 
-请记住使用 `FreeLibrary`（对于 Windows）或 `dlclose`（对于 Linux/Mac）卸载 CoreCLR 库。
+CoreCLR 不支持重新初始化或卸载。 请勿重新调用 `coreclr_initialize` 或卸载 CoreCLR 库。
 
 ## <a name="create-a-host-using-mscoreeh"></a>使用 Mscoree.h 创建主机
 
@@ -164,8 +166,10 @@ AppDomain 标志指定与安全性和互操作性相关的 AppDomain 行为。 �
 
 常见 AppDomain 属性包括：
 
-* `TRUSTED_PLATFORM_ASSEMBLIES` 这是一个程序集路径的列表（在 Windows 上以 `;` 分隔，在 Linux/Mac 上以 `:` 分隔），AppDomain 应优先加载它们并对其授予完全信任（甚至在部分受信任域中也一样）。 此列表应包含“框架”程序集和其他受信任的模块，与 .NET Framework 方案中的 GAC 类似。 一些主机会将任何库置于此列表上的 *coreclr.dll* 旁，其他主机具有硬编码的清单，其中列出了用于所需用途的受信任程序集。
-* `APP_PATHS` 这是一个用来探测程序集的路径的列表（如果在受信任的平台程序集 (TPA) 列表中找不到程序集）。 因为主机使用 TPA 列表可以更好地控制加载哪些程序集，所以对于主机来说，确定要加载的程序集并显式列出它们是最佳做法。 但是，如果需要探测运行时，则此属性可以支持该方案。
+* `TRUSTED_PLATFORM_ASSEMBLIES`
+  这是程序集路径列表（在 Windows 上，以 `;` 分隔；在 Linux/Mac 上，以 `:` 分隔），AppDomain 应优先加载它们，并完全信任它们（甚至是在部分信任的域中，也不例外）。 此列表应包含“框架”程序集和其他受信任的模块，与 .NET Framework 方案中的 GAC 类似。 一些主机会将任何库置于此列表上的 *coreclr.dll* 旁，其他主机具有硬编码的清单，其中列出了用于所需用途的受信任程序集。
+* `APP_PATHS`
+  这是为在受信任的平台程序集 (TPA) 列表中找不到的程序集探测的路径列表。 因为主机使用 TPA 列表可以更好地控制加载哪些程序集，所以对于主机来说，确定要加载的程序集并显式列出它们是最佳做法。 但是，如果需要探测运行时，则此属性可以支持该方案。
 *  `APP_NI_PATHS` 此列表与 APP_PATHS 非常相似，不同之处在于其中的路径用于探测本机映像。
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` 此属性是一个路径列表，加载程序在查找通过 p/invoke 调用的本机 DLL 时应使用这些路径进行探测。
 *  `PLATFORM_RESOURCE_ROOTS` 此列表包含的路径用于探测资源附属程序集（在区域性特定的子目录中）。
@@ -202,6 +206,8 @@ hr = runtimeHost->CreateDelegate(
 最后，主机应随后通过卸载 Appdomain、停止运行时并释放 `ICLRRuntimeHost4` 引用来进行清理。
 
 [!code-cpp[NetCoreHost#9](~/samples/core/hosting/HostWithMscoree/host.cpp#9)]
+
+CoreCLR 不支持卸载。 请勿卸载 CoreCLR 库。
 
 ## <a name="conclusion"></a>结束语
 构建主机后，可以通过从命令行运行主机并传递其所需的任何参数（例如，要运行用于 mscoree 示例主机的托管应用）来对主机进行测试。 指定主机要运行的 .NET Core 应用时，请务必使用 `dotnet build` 生成的 .dll。 `dotnet publish` 为独立应用程序生成的可执行文件（.exe 文件）实际上是默认的 .NET Core 主机（以便可直接从主流方案中的命令行启动应用）；用户代码被编译为具有相同名称的 dll。

@@ -1,13 +1,14 @@
 ---
 title: Windows 上 .NET Core 的先决条件
 description: 了解在 Windows 计算机上开发和运行 .NET Core 应用程序所需的依赖项。
-ms.date: 12/14/2018
-ms.openlocfilehash: 2209c6e74413204c38ba54ffc538846f27d0bdf6
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.custom: updateeachvsrelease
+ms.date: 04/08/2019
+ms.openlocfilehash: 2941721dfa4b87d4113e4f4b529845e47f3dc1b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656110"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313705"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的先决条件
 
@@ -54,17 +55,17 @@ ms.locfileid: "53656110"
 * 通过 .zip 文件安装 .NET Core。 这可能包括 build/CI/CD 服务器。
 
 > [!NOTE]
-> 对于 Windows 8.1 和更早版本，或 Windows Server 2012 R2 和更早版本：
+> **对于 Windows 8.1 及更低版本，或 Windows Server 2012 R2 及更低版本：**
 >
-> 确保 Windows 安装是最新版本，并且包括可通过 Windows 更新安装的 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)。 如果没有安装此更新，则在启动 .NET Core 应用程序时会看到如下错误：`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> 确保 Windows 安装是最新版本，并且包括可通过 Windows 更新安装的 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)。 如果没有安装此更新，便会在启动 .NET Core 应用时看到如下错误： `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
-> 对于 Windows 7 或 Windows Server 2008 R2：
+> **对于 Windows 7 或 Windows Server 2008 R2：**
 >
 > 除 KB2999226 以外，请确保还安装了 [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)。 如果没有安装此更新，则在启动 .NET Core 应用程序时会看到如下错误：`The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`。
 
-## <a name="prerequisites-for-net-core-30-preview-1"></a>.NET Core 3.0 预览版 1 的先决条件
+## <a name="prerequisites-for-net-core-30-preview-3"></a>.NET Core 3.0 预览版 3 的先决条件
 
-.NET core 3.0 预览版 1 与其他版本的 .NET Core 具有相同的先决条件。 但是，如果要使用 Visual Studio 创建 .NET Core 3.0 项目，则必须使用 [Visual Studio 2019 预览版](https://visualstudio.microsoft.com/vs/preview/)。 Visual Studio 2019 预览版可与其他版本的 Visual studio 并行安装，不会发生冲突。
+.NET core 3.0 预览版 3 的先决条件与其他 .NET Core 版本相同。 不过，若要使用 Visual Studio 创建 .NET Core 3.0 项目，必须使用 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 Visual Studio 2019 可以与其他 Visual studio 版本并行安装，而不会发生冲突。
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 的先决条件
     
@@ -72,7 +73,7 @@ ms.locfileid: "53656110"
 
 在[发行说明](/visualstudio/releasenotes/vs2017-relnotes)中可以详细了解 Visual Studio 2017 中的更改。
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
 
 若要使用 .NET Core 2.2 SDK 在 Visual Studio 2017 中开发 .NET Core 应用：
 
@@ -100,7 +101,7 @@ ms.locfileid: "53656110"
 * 将 .NET Core 1.x 和 2.x 项目重定目标到 .NET Core 2.2，再生成并运行。
 * 新建 .NET Core 2.2 项目。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
 
 若要在 Visual Studio 中开发 .NET Core 1.x 应用程序，请[下载并安装 Visual Studio 2017](/visualstudio/install/install-visual-studio)，并选择“其他工具集”部分中的“.NET Core 跨平台开发”工作负载。
 
@@ -122,7 +123,7 @@ ms.locfileid: "53656110"
 >
 > * 在“帮助”菜单上，选择“关于 Microsoft Visual Studio”。
 > * 在“关于 Microsoft Visual Studio”对话框中，验证版本号。
->   * 对于 .NET Core 3.0 Preview 1 应用，Visual Studio 2019 版本应为预览版 1 或更高版本。
+>   * 对于 .NET Core 3.0 预览版 3 应用，Visual Studio 2019 版本应为 16.0 或更高版本。
 >   * 对于 .NET Core 2.2 应用，Visual Studio 2017 版本应为 15.9 或更高版本。
 >   * 对于 .NET Core 2.1 应用，Visual Studio 2017 版本应为 15.7 或更高版本。
 >   * 对于 .NET Core 1.x 应用，Visual Studio 2017 版本应为 15.0 或更高版本。

@@ -4,12 +4,12 @@ description: 本主题演示了构建包含可重用的库和单元测试的 .NE
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3c515c3771f8204bbc7b6944f81fed463c309bc3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: be0aebb1ac700de07a52c4c50383f45d1191b7f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203397"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327745"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案
 
@@ -26,7 +26,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 - OpenSSL（如果运行 .NET Core 1.1）：请参阅 [Mac 上 .NET Core 的先决条件](../macos-prerequisites.md)主题。
 - [.NET Core SDK 1.1 或更高版本](https://www.microsoft.com/net/core#macos)
-- [Visual Studio 2017 for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)
+- [Visual Studio 2017 for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 有关先决条件的详细信息，请参阅 [Mac 上的 .NET Core 的先决条件](../../core/macos-prerequisites.md)。 有关 Visual Studio 2017 for Mac 完整系统要求的信息，请参阅 [Visual Studio 2017 for Mac 产品系列系统要求](/visualstudio/productinfo/vs2017-system-requirements-mac)。
 
@@ -164,7 +164,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
 
-1. 如要在控制台窗口而不是在 IDE 中运行应用，右键单击 `WordCounterApp` 项目，选择“选项”，然后打开“配置”下的“默认”节点。 选中“在外部控制台上运行”框。 使“暂停控制台输出”选项保持选中状态。 此设置使应用在控制台窗口中生成，以便可以为 `Console.ReadLine` 语句键入输入。 如果使应用在 IDE 中持续运行，则仅能看到 `Console.WriteLine` 语句的输出。 `Console.ReadLine` 语句无法在 IDE 的“应用程序输出”面板中运行。
+1. 如要在控制台窗口而不是在 IDE 中运行应用，右键单击 `WordCounterApp` 项目，选择“选项”，然后打开“配置”下的“默认”节点。 选中“在外部控制台上运行”框。 使“暂停控制台输出”选项保持选中状态。 此设置使应用在控制台窗口中生成，以便可以为 `Console.ReadLine` 语句键入输入。 如果使应用在 IDE 中持续运行，则仅能看到 `Console.WriteLine` 语句的输出。 `Console.ReadLine` 语句无法在 IDE 的“应用输出”面板中运行。
 
    ![Visual Studio for Mac 项目选项窗口](./media/using-on-mac-vs-full-solution/visual-studio-mac-project-options.png)
 

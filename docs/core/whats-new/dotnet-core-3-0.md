@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679731"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341720"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0（预览版 2）的新增功能
 
@@ -31,10 +31,9 @@ ms.locfileid: "57679731"
 
 .NET Core 3.0 支持 C#8，从 .NET Core 3.0 预览版 2 开始支持这些新功能。 有关 C# 8.0 功能的详细信息，请参阅以下博客文章：
 
-- [使用 C# 8.0 中的模式执行更多操作](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
-- [尝试使用 C# 8.0](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
+- [发掘 C# 8.0 中模式的更多功能](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
+- [试用 C# 8.0](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
 - [生成 C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
-
 
 ### <a name="ranges-and-indices"></a>范围和索引
 
@@ -71,8 +70,8 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 除了能够 `await foreach`，还可以创建异步迭代器，例如，一个返回 `IAsyncEnumerable/IAsyncEnumerator` 的迭代器，可以在其中进行 `await` 和 `yield` 操作。 对于需要处理的对象，可以使用各种 BCL 类型（如 `Stream` 和 `Timer`）实现的 `IAsyncDisposable`。
 
->[!NOTE]
->如果要使用 Visual Studio 2019 预览版 2 或[适用于 Visual Studio Code 的 C# 扩展](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5)的最新预览版进行开发，则需要 .NET Core 3.0 预览版 2，因为要使用异步流。 如果在命令行处使用 .NET Core 3.0 预览版 2，所有内容将按预期工作。
+> [!NOTE]
+> 若要使用 Visual Studio 2019 或[适用于 Visual Studio Code 的 C# 扩展](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5)的最新预览版进行开发，需要借助 .NET Core 3.0 预览版 2 来使用异步流。 如果在命令行处使用 .NET Core 3.0 预览版 2，所有内容将按预期工作。
 
 ### <a name="using-declarations"></a>Using 声明
 
@@ -102,7 +101,7 @@ static string Display(object o) => o switch
 };
 ```
 
-此示例中有两种模式发挥作用。 `o` 首先匹配 `Point` 类型模式，然后匹配{大括号}内部的属性模式。 `_` 描述 `discard pattern`，与 Switch 语句的 `default` 相同。
+此示例中有两种模式发挥作用。 `o` 先匹配 `Point` 类型模式，再匹配 {大括号} 内部的属性模式。 `_` 描述 `discard pattern`，与 Switch 语句的 `default` 相同。
 
 通过模式，可以编写捕获意图的声明性代码，而不是相关测试的过程化代码。 编译器负责实现这些令人乏味的过程化代码，并保证操作始终正确。
 
@@ -151,7 +150,7 @@ static string Display(object o) => o switch
 
 * [实现简单的 SSE2 硬件内部函数](https://github.com/dotnet/coreclr/pull/15585)
 * [实现 SSE 硬件内部函数](https://github.com/dotnet/coreclr/pull/15538)
-* [Arm64 基 HW 内部函数](https://github.com/dotnet/coreclr/pull/16822)
+* [Arm64 基础 HW 内部函数](https://github.com/dotnet/coreclr/pull/16822)
 * [对 Locate{First|Last}Found{Byte|Char} 使用 TZCNT 和 LZCNT](https://github.com/dotnet/coreclr/pull/21073)
 
 有关详细信息，请参阅[依赖 .NET 平台的内部函数](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md)，它定义了用于定义此硬件基础结构的方法，允许 Microsoft、芯片供应商或其他任何公司或个人定义应向 .NET 代码公开的硬件/芯片 API。
@@ -167,19 +166,18 @@ static string Display(object o) => o switch
 
 ## <a name="build-copies-dependencies"></a>生成副本依赖项
 
-`dotnet build` 现将应用程序的 NuGet 依赖项从 NuGet 缓存复制到生成输出文件夹。 此前，依赖项仅作为 `dotnet publish` 的一部分复制。 
+`dotnet build` 现将应用的 NuGet 依赖项从 NuGet 缓存复制到生成输出文件夹。 此前，依赖项仅作为 `dotnet publish` 的一部分复制。 
 
 有些操作，比如链接和 razor 页面发布仍需要发布。
-
 
 ## <a name="local-dotnet-tools"></a>本地 dotnet 工具
 
 >[!WARNING]
 >.NET Core 3.0 预览版 1 至 .NET Core 3.0 预览版 2 中的 .NET Core 本地工具发生了更改。  如果在预览版 1 中通过运行 `dotnet tool restore` 或 `dotnet tool install` 等命令试用本地工具，则需要删除本地工具缓存文件夹，然后本地工具才能在预览版 2 中正常工作。 此文件夹位于：
 >
->在 mac、Linux 上：`rm -r $HOME/.dotnet/toolResolverCache`
+>在 mac、Linux 上： `rm -r $HOME/.dotnet/toolResolverCache`
 >
->在 Windows 上：`rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+>在 Windows 上： `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 >
 >如果不删除此文件夹，将收到错误。
 
@@ -269,7 +267,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Visual Studio 2019 预览版 2 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“新建项目”模板。 设计器仍然不受支持。 可以在 Visual Studio 2019 中打开、启动和调试这些项目。
+Visual Studio 2019 添加了适用于 .NET Core 3.0 Windows 窗体和 WPF 的“新建项目”模板。 设计器仍然不受支持。 可以在 Visual Studio 2019 中打开、启动和调试这些项目。
 
 Visual Studio 2017 15.9 添加了[支持 .NET Core 预览版](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/)的功能，但用户需要先启用该功能，而此操作不受支持。
 
@@ -309,7 +307,7 @@ Visual Studio 2017 15.9 添加了[支持 .NET Core 预览版](https://devblogs.m
 
 [MSIX](https://docs.microsoft.com/windows/msix/) 是新的 Windows 应用包格式。 可以使用它将 .NET Core 3.0 桌面应用程序部署到 Windows 10。
 
-Visual Studio 2019 预览版 2 中提供 [Windows 应用程序打包项目](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)，允许用户使用[独立式](../deploying/index.md#self-contained-deployments-scd) .NET Core 应用程序创建 MSIX 包。
+使用 Visual Studio 2019 中的 [Windows 应用打包项目](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)，可以创建包含[独立式](../deploying/index.md#self-contained-deployments-scd) .NET Core 应用的 MSIX 包。
 
 >注意:.NET Core 项目文件必须在 `<RuntimeIdentifiers>` 属性中指定支持的运行时：
 ```xml
@@ -324,7 +322,7 @@ Visual Studio 2019 预览版 2 中提供 [Windows 应用程序打包项目](http
 
 ### <a name="utf8jsonreader"></a>Utf8JsonReader
 
-`System.Text.Json.Utf8JsonReader` 是面向 UTF-8 编码 JSON 文本的一个高性能、低分配、只进读取器，从 `ReadOnlySpan<byte>` 读取信息。 `Utf8JsonReader` 是一种基本的低级类型，可用于构建自定义分析器和反序列化程序。 使用新的 `Utf8JsonReader` 读取 JSON 有效负载要比使用 **Json.NET** 的读取器快 2 倍。 在需要将 JSON 令牌实现为 (UTF-16) 字符串之前，它不会进行分配。
+`System.Text.Json.Utf8JsonReader` 是面向 UTF-8 编码 JSON 文本的高性能、低分配、只进读取器（从 `ReadOnlySpan<byte>` 读取信息）。 `Utf8JsonReader` 是一种基本的低级类型，可用于构建自定义分析器和反序列化程序。 使用新的 `Utf8JsonReader` 读取 JSON 有效负载要比使用 **Json.NET** 的读取器快 2 倍。 在需要将 JSON 令牌实现为 (UTF-16) 字符串之前，它不会进行分配。
 
 此新 API 将包含以下部件：
 
@@ -381,7 +379,7 @@ public static void Utf8JsonReaderLoop(ReadOnlySpan<byte> dataUtf8)
 
 ### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-`System.Text.Json.Utf8JsonWriter` 提供了一种高性能、非缓存的只进方式，通过常见 .NET 类型（例如，`String`、`Int32` 和 `DateTime`）编写 UTF-8 编码的 JSON 文本。 与阅读器一样，编写器是一种基本的低级类型，可用于构建自定义序列化程序。 使用新的 `Utf8JsonWriter` 编写 JSON 有效负载比通过 Json.NET 使用编写器快 30-80%，且无需分配。
+`System.Text.Json.Utf8JsonWriter` 提供了一种高性能、非缓存的只进方式，通过常见 .NET 类型（如 `String`、`Int32` 和 `DateTime`）编写 UTF-8 编码 JSON 文本。 与阅读器一样，编写器是一种基本的低级类型，可用于构建自定义序列化程序。 使用新的 `Utf8JsonWriter` 编写 JSON 有效负载比通过 Json.NET 使用编写器快 30-80%，且无需分配。
 
 下面是可用作起始点的 `Utf8JsonWriter` 的示例用法：
 
@@ -427,7 +425,7 @@ static int WriteJson(IBufferWriter<byte> output, long[] extraData)
 
 ### <a name="jsondocument"></a>JsonDocument
 
-`System.Text.Json.JsonDocument` 是基于 `Utf8JsonReader` 构建的。 `JsonDocument` 可分析 JSON 数据并生成只读文档对象模型 (DOM)，可对模型进行查询，以支持随机访问和枚举。 可以通过 `JsonElement` 类型（由 `JsonDocument` 公开为名为 `RootElement` 的属性）访问构成数据的 JSON 元素。 `JsonElement` 包含 JSON 数组和对象枚举器，以及用于将 JSON 文本转换为常见 .NET 类型的 API。 使用 `JsonDocument` 分析常规 JSON 有效负载并访问其所有成员比使用 Json.NET 快 2-3 倍，且为合理大小（即 < 1 MB）的数据所分配的量非常少。
+`System.Text.Json.JsonDocument` 是在 `Utf8JsonReader` 基础之上生成。 `JsonDocument` 可分析 JSON 数据并生成只读文档对象模型 (DOM)，可对模型进行查询，以支持随机访问和枚举。 可以通过 `JsonElement` 类型（由 `JsonDocument` 公开为名为 `RootElement` 的属性）访问构成数据的 JSON 元素。 `JsonElement` 包含 JSON 数组和对象枚举器，以及用于将 JSON 文本转换为常见 .NET 类型的 API。 使用 `JsonDocument` 分析常规 JSON 有效负载并访问其所有成员比使用 Json.NET 快 2-3 倍，且为合理大小（即 < 1 MB）的数据所分配的量非常少。
 
 下面是可用作起始点的 `JsonDocument` 和 `JsonElement` 的示例用法：
 
@@ -484,7 +482,6 @@ Windows 提供丰富的本机 API，包括平面 C API、COM 和 WinRT 的形式
 
 可参阅结合使用 COM 和 [Excel 演示源代码](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)的示例。
 
-
 ## <a name="type-sequencereader"></a>类型：SequenceReader
 
 在 .NET Core 3.0 中，已添加可用作 `ReadOnlySequence<T>` 读取器的 `System.Buffers.SequenceReader`。 这样可以对跨多个支持缓冲区的 `System.IO.Pipelines` 数据进行简单、高性能、低分配分析。 
@@ -520,9 +517,9 @@ public static void ReadLines(ReadOnlySequence<byte> sequence)
 
 ## <a name="type-metadataloadcontext"></a>类型：MetadataLoadContext
 
-添加了 `MetadataLoadContext` 类型，该类型支持读取程序集元数据，而不会影响调用方的应用程序域。 程序集作为数据读取，包括为与当前运行时环境不同的体系结构和平台构建的程序集。 `MetadataLoadContext` 与 <xref:System.Reflection.Assembly.ReflectionOnlyLoad*> 重叠，后者仅在 .NET Framework 中可用。
+添加了 `MetadataLoadContext` 类型，该类型支持读取程序集元数据，而不会影响调用方的应用程序域。 程序集作为数据读取，包括为与当前运行时环境不同的体系结构和平台构建的程序集。 `MetadataLoadContext` 与 <xref:System.Reflection.Assembly.ReflectionOnlyLoad*> 重叠，后者仅可用于 .NET Framework。
 
-[System.Reflection.MetadataLoadContext 包](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext) 现已推出 `MetdataLoadContext`。 它是一个 .NET Standard 2.0 包。
+`MetdataLoadContext` 现已可用于 [System.Reflection.MetadataLoadContext 包](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext)。 它是一个 .NET Standard 2.0 包。
 
 `MetadataLoadContext` 公开的 API 类似于 <xref:System.Runtime.Loader.AssemblyLoadContext> 类型，但不是基于该类型。 与 <xref:System.Runtime.Loader.AssemblyLoadContext> 非常相似，`MetadataLoadContext` 支持在一个独立的程序集加载范围内加载程序集。 `MetdataLoadContext` API 返回 <xref:System.Reflection.Assembly> 对象，支持使用熟悉的反射 API。 不允许以执行为导向的 API，如 [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127)，并将引发 InvalidOperationException。
 
@@ -773,7 +770,6 @@ sudo snap alias dotnet-sdk.dotnet dotnet
 GPIO 包包括用于 GPIO、SPI、I2C 和 PWM 设备的 API。 IoT 绑定包包括针对各种芯片和传感器的[设备绑定](https://github.com/dotnet/iot/blob/master/src/devices/README.md)，与 [dotnet/iot - src/devices](https://github.com/dotnet/iot/tree/master/src/devices) 提供的相同。
 
 这些包中不包含作为 .NET Core 3.0 预览版 1 一部分的已更新的串行端口 API，但这些 API 可作为 .NET Core 平台的一部分提供。
-
 
 ## <a name="platform-support"></a>平台支持
 

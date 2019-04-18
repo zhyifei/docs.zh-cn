@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 3a50b5f085aee4afc2f388aeac8a4f68823b92c7
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675856"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327160"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>如何：将 Windows 窗体桌面应用程序移植到 .NET Core
 
@@ -27,7 +27,7 @@ ms.locfileid: "58675856"
 
 ## <a name="prerequisites"></a>系统必备
 
-- 适用于要执行的任何设计器工作的 [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=winforms+core)。
+- 适用于要执行的任何设计器工作的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
 
   安装以下 Visual Studio 工作负载：
   - .NET 桌面开发
@@ -37,9 +37,8 @@ ms.locfileid: "58675856"
 - 项目必须使用 C# 进行编码。 
 - 安装最新 [.NET Core 3.0](https://aka.ms/netcore3download) 预览版。
 
-
 >[!NOTE]
->Visual Studio 2017 不支持 .NET Core 3.0 项目。 Visual Studio 2019 预览版/RC 支持 .NET Core 3.0 项目，但尚不支持适用于 .NET Core 3.0 Windows 窗体项目的可视化设计器。 要使用可视化设计器，解决方案中必须包含可与 .NET Core 项目共享窗体文件的 .NET Windows 窗体项目。
+>Visual Studio 2017 不支持 .NET Core 3.0 项目。 Visual Studio 2019 支持 .NET Core 3.0 项目，但尚不支持适用于 .NET Core 3.0 Windows 窗体项目的可视化设计器。 要使用可视化设计器，解决方案中必须包含可与 .NET Core 项目共享窗体文件的 .NET Windows 窗体项目。
 
 ### <a name="consider"></a>考虑
 
@@ -61,7 +60,7 @@ ms.locfileid: "58675856"
 
     在执行任何迁移之前使用最新版 NuGet 包始终是一个不错的做法。 如果应用程序引用任何 NuGet 包，请将它们更新到最新版本。 确保成功生成应用程序。 升级后，如果存在任何包错误，请将包降级到不会破坏代码的最新版本。
 
-01. Visual Studio 2019 预览版/RC 尚不支持适用于 .NET Core 3.0 的窗体设计器
+01. Visual Studio 2019 尚不支持适用于 .NET Core 3.0 的窗体设计器
 
     目前，如果要从 Visual Studio 中使用窗体设计器，需要保留现有的 .NET Framework Windows 窗体项目文件。
 
@@ -295,7 +294,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ## <a name="windows-forms-designer"></a>Windows Forms Designer — Windows 窗体设计器
 
-如本文所述，Visual Studio 2019 预览版/RC 仅支持 .NET Framework 项目中的窗体设计器。 通过创建并行 .NET Core 项目，可以在使用 .NET Framework 项目设计窗体时通过 .NET Core 测试项目。 解决方案文件包括 .NET Framework 和 .NET Core 项目。 在 .NET Framework 项目中添加和设计窗体和控件，并且根据添加到 .NET Core 项目的文件 glob 模式，任何新的或更改的文件将自动包含在 .NET Core 项目中。
+如本文所述，Visual Studio 2019 仅支持 .NET Framework 项目中的窗体设计器。 通过创建并行 .NET Core 项目，可以在使用 .NET Framework 项目设计窗体时通过 .NET Core 测试项目。 解决方案文件包括 .NET Framework 和 .NET Core 项目。 在 .NET Framework 项目中添加和设计窗体和控件，并且根据添加到 .NET Core 项目的文件 glob 模式，任何新的或更改的文件将自动包含在 .NET Core 项目中。
 
 一旦 Visual Studio 2019 支持 Windows 窗体设计器，就可以将 .NET Core 项目文件的内容复制/粘贴到 .NET Framework 项目文件中。 然后删除使用 `<Source>` 和 `<EmbeddedResource>` 项添加的文件 glob 模式。 修复由应用程序使用的任何项目引用的路径。 这可以有效地将 .NET Framework 项目升级到 .NET Core 项目。
  

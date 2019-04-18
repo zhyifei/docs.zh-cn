@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410259"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306061"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>使用 CLI 发布 .NET Core 应用
 
@@ -33,8 +33,7 @@ ms.locfileid: "58410259"
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
-> [!IMPORTANT]
-> \*使用 SDK 版本 3.0 时，依赖于框架的可执行文件是运行基本 `dotnet publish` 命令时的默认发布模式。 这仅适用于面向 .NET Core 2.1 或 .NET Core 3.0 的项目。
+\* 使用 SDK 版本 3.0 时，框架依赖可执行文件是运行基本 `dotnet publish` 命令时的默认发布模式。 仅当项目定目标到 .NET Core 2.1 或 .NET Core 3.0 时，这才适用。
 
 ## <a name="publishing-basics"></a>发布基本知识
 
@@ -129,13 +128,14 @@ End Module
 
 必须通过 `dotnet publish` 命令使用以下开关来发布 FDE（面向当前平台时，.NET Core 3.x 除外）：
 
-- `-r <RID>` 此开关使用标识符 (RID) 来指定目标平台。 有关运行时标识符的详细信息，请参阅[运行时标识符 (RID) 目录](../rid-catalog.md)。
+- `-r <RID>`
+  此开关使用标识符 (RID) 来指定目标平台。 有关运行时标识符的详细信息，请参阅[运行时标识符 (RID) 目录](../rid-catalog.md)。
 
 - `--self-contained false` 此开关告知 .NET Core SDK 创建可执行文件作为 FDE。
 
-每次使用 `-r` 开关时，输出文件路都将更改为：`./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
+每当你使用 `-r` 开关时，输出文件夹路径更改为： `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
-如果使用[示例应用](#sample-app)，请运行 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`。 此命令将创建以下可执行文件：`./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
+如果使用[示例应用](#sample-app)，请运行 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`。 此命令创建以下可执行文件： `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
 > 可以通过启用全局固定模式来降低部署的总大小。 此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。 有关全局固定模式及其启用方式的详细信息，请参阅 [.NET Core 全局固定模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
@@ -148,15 +148,15 @@ End Module
 
 必须通过 `dotnet publish` 命令使用以下开关来发布 SCD：
 
-- `-r <RID>` 此开关使用标识符 (RID) 来指定目标平台。 有关运行时标识符的详细信息，请参阅[运行时标识符 (RID) 目录](../rid-catalog.md)。
+- `-r <RID>`
+  此开关使用标识符 (RID) 来指定目标平台。 有关运行时标识符的详细信息，请参阅[运行时标识符 (RID) 目录](../rid-catalog.md)。
 
 - `--self-contained true` 此开关告知 .NET Core SDK 创建可执行文件作为 SCD。
 
 > [!NOTE]
 > 可以通过启用全局固定模式来降低部署的总大小。 此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。 有关全局固定模式及其启用方式的详细信息，请参阅 [.NET Core 全局固定模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
-
 ## <a name="see-also"></a>请参阅
 
-- [.NET Core 应用程序部署概述](index.md)
+- [.NET Core 应用部署概述](index.md)
 - [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)

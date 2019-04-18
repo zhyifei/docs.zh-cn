@@ -3,12 +3,12 @@ title: 关于 .NET Core
 description: 了解 .NET Core。
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675961"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296402"
 ---
 # <a name="about-net-core"></a>关于 .NET Core
 
@@ -24,7 +24,7 @@ ms.locfileid: "57675961"
 
 ## <a name="languages"></a>语言
 
-可以使用 C#、Visual Basic 和 F# 语言编写适用于 .NET Core 的应用程序和库。 这些语言已集成或可以集成到你最喜欢的文本编辑器和 IDE，包括 [Visual Studio](https://visualstudio.microsoft.com/vs/)、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text 和 Vim。 这种集成部分由 [OmniSharp](https://www.omnisharp.net/) 和 [Ionide](http://ionide.io) 项目的高手提供。
+可以使用 C#、Visual Basic 和 F# 语言编写适用于 .NET Core 的应用程序和库。 这些语言已集成或可以集成到你最喜欢的文本编辑器和 IDE，包括 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text 和 Vim。 这种集成部分由 [OmniSharp](https://www.omnisharp.net/) 和 [Ionide](http://ionide.io) 项目的高手提供。
 
 ## <a name="apis"></a>API
 

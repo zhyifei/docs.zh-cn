@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: b543ab2e200e8169a251db8ddfb1493c5583ed69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f4699b5277c5feeac4d9116ac85e096247aa748
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360246"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427443"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 单元测试最佳做法
 
@@ -18,7 +18,7 @@ ms.locfileid: "57360246"
 
 本指南将介绍一些在编写单元测试时的最佳做法，使测试具有弹性且易于理解。
 
-作者是 [John Reese](https://reese.dev) 且特别感谢 [Roy Osherove](http://osherove.com/)
+作者是 [John Reese](https://reese.dev) 且特别感谢 [Roy Osherove](https://osherove.com/)
 
 ## <a name="why-unit-test"></a>为什么要执行单元测试？
 
@@ -82,7 +82,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-通过将类重命名为 `FakeOrder`，使类更通用，类可以用作 mock 或 stub。 以更适合测试用例者为准。 在上述示例中，`FakeOrder` 用作 stub。 在断言期间，没有以任何形状或形式使用 `FakeOrder`。 `FakeOrder` 只传递到 `Purchase` 类，以满足构造函数的要求。
+通过将类重命名为 `FakeOrder`，使类更通用，类可以用作 mock 或 stub。 以更适合测试用例者为准。 在上述示例中，`FakeOrder` 用作 stub。 在断言期间，没有以任何形状或形式使用 `FakeOrder`。 `FakeOrder` 直接传递到 `Purchase` 类，以满足构造函数的要求。
 
 要将其用作 Mock，可执行如下操作
 
@@ -250,17 +250,17 @@ Assert.True(mockOrder.Validated);
 ```csharp
 public string ParseLogLine(string input)
 {
-    var sanitizedInput = trimInput(input);
+    var sanitizedInput = TrimInput(input);
     return sanitizedInput;
 }
 
-private string trimInput(string input)
+private string TrimInput(string input)
 {
     return input.Trim();
 }
 ```
 
-你的第一反应可能是开始为 `trimInput` 编写测试，因为想要确保该方法按预期工作。 但是，`ParseLogLine` 完全有可能以一种你所不期望的方式操纵 `sanitizedInput`，使得对 `trimInput` 的测试变得毫无用处。 
+你的第一反应可能是开始为 `TrimInput` 编写测试，因为想要确保该方法按预期工作。 但是，`ParseLogLine` 完全有可能以一种你所不期望的方式操纵 `sanitizedInput`，使得对 `TrimInput` 的测试变得毫无用处。 
 
 真正的测试应该针对面向公共的方法 `ParseLogLine` 进行，因为这是你最终应该关心的。 
 

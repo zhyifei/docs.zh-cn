@@ -3,12 +3,12 @@ title: Docker 简介
 description: 本文简要概述 .NET Core 应用程序上下文中的 Docker。
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 725d8301a27f1109c85a89945f0fb8403e255ab4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: acf1307c241d9462278bc0fce5cf59fdde0750a3
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817250"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480724"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 简介
 
@@ -58,6 +58,9 @@ Microsoft 提供适合特定场景的映像。 例如，[ASP.NET Core 存储库]
 * [Azure 应用服务](https://azure.microsoft.com/services/app-service/containers/)\
 在 PaaS 环境中使用 Linux 容器部署 Web 应用或 API。
 
+* [Azure 容器实例](https://azure.microsoft.com/services/container-instances/)\
+将容器托管在云中，而不使用任何高级管理服务。
+
 * [Azure Batch](https://azure.microsoft.com/services/batch/)\
 使用容器运行重复的计算作业。
 
@@ -69,5 +72,5 @@ Microsoft 提供适合特定场景的映像。 例如，[ASP.NET Core 存储库]
 
 ## <a name="next-steps"></a>后续步骤
 
-* [了解如何使 .NET Core 应用程序容器化。](build-docker-netcore-container.md)
-* [试用“学习 ASP.NET Core 微服务”教程。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+* [了解如何容器化 .NET Core 应用。](build-docker-netcore-container.md)
+* [试学“ASP.NET Core 微服务”教程。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)

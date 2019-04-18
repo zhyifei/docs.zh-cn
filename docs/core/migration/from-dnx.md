@@ -3,12 +3,12 @@ title: 从 DNX 迁移到 .NET Core CLI
 description: 从使用 DNX 工具迁移到 .NET Core CLI 工具。
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 006e909be03ec3d090135f32f7ba13311201f81e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "57845717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160831"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>从 DNX 迁移到 .NET Core CLI (project.json)
 
@@ -46,7 +46,6 @@ DNVM 现已停用，因为其功能集可能由于 .NET Core CLI 即将推出的
 如果使用的是 DNX，则使用某些来自其三个部件（DNX、DNU 或 DNVM）之一的命令。 借助 CLI，其中的某些命令发生了改变，有些命令不再适用，有些保持不变，但语义稍有不同。
 
 下表显示了 DNX/DNU 命令及其 CLI 对应项之间的映射。
-
 
 | DNX 命令                    | CLI 命令    | 说明                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
@@ -118,8 +117,8 @@ CLI 和 DNX 都使用基于 `project.json` 文件的相同基本项目系统。 
 
 调用想要的可移植性类型后，需要更改目标框架。 如果是为 .NET Core 编写应用程序，很可能要使用 `dnxcore50` 作为目标框架。 鉴于 CLI 和全新 [.NET Standard](../../standard/net-standard.md) 引入的变化，框架需要为下列之一：
 
-1. `netcoreapp1.0` - 如果要在 .NET Core 上编写应用程序（包括 ASP.NET Core 应用程序）
-2. `netstandard1.6` - 如果要为 .NET Core 编写类库
+1. `netcoreapp1.0` - 若要在 .NET Core 上编写应用（包括 ASP.NET Core 应用）
+2. `netstandard1.6` - 若要为 .NET Core 编写类库
 
 如果要使用其他 `dnx` 目标，如 `dnx451`，则还需要更改这些内容。 `dnx451` 应更改为 `net451`。
 有关详细信息，请参阅 [.NET Standard](../../standard/net-standard.md) 主题。

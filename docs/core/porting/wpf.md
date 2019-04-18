@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 29ea308ee5147cfb18df312887e933615e349803
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 5c7e3aca0a473abb831693244d1b194985f2ef7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677545"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342201"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>如何：将 WPF 桌面应用移植到 .NET Core
 
@@ -27,7 +27,7 @@ ms.locfileid: "58677545"
 
 ## <a name="prerequisites"></a>系统必备
 
-- 适用于要执行的任何设计器工作的 [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=wpf+core)。
+- 适用于要执行的任何设计器工作的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
 
   安装以下 Visual Studio 工作负载：
   - .NET 桌面开发
@@ -37,9 +37,8 @@ ms.locfileid: "58677545"
 - 项目必须使用 C# 进行编码。 
 - 安装最新 [.NET Core 3.0](https://aka.ms/netcore3download) 预览版。
 
-
 >[!NOTE]
->Visual Studio 2017 不支持 .NET Core 3.0 项目。 “Visual Studio 2019 预览版/RC”支持 .NET Core 3.0 项目，但尚不支持适用于 .NET Core 3.0 WPF 项目的可视化设计器。 要使用可视化设计器，解决方案中必须包含可与 .NET Core 项目共享其文件的 .NET WPF 项目。
+>Visual Studio 2017 不支持 .NET Core 3.0 项目。 Visual Studio 2019 支持 .NET Core 3.0 项目，但尚不支持适用于 .NET Core 3.0 WPF 项目的可视化设计器。 要使用可视化设计器，解决方案中必须包含可与 .NET Core 项目共享其文件的 .NET WPF 项目。
 
 ### <a name="consider"></a>考虑
 
@@ -61,7 +60,7 @@ ms.locfileid: "58677545"
 
     在执行任何迁移之前使用最新版 NuGet 包始终是一个不错的做法。 如果应用程序引用任何 NuGet 包，请将它们更新到最新版本。 确保成功生成应用程序。 升级后，如果存在任何包错误，请将包降级到不会破坏代码的最新版本。
 
-01. Visual Studio 2019 预览版/RC 尚不支持适用于 .NET Core 3.0 的 WPF 设计器
+01. Visual Studio 2019 尚不支持适用于 .NET Core 3.0 的 WPF 设计器
 
     目前，如果要从 Visual Studio 中使用 WPF 设计器，需要保留现有的 .NET Framework WPF 项目文件。
 
@@ -216,7 +215,7 @@ dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibili
 
 ## <a name="wpf-designer"></a>WPF 设计器
 
-如本文所述，Visual Studio 2019 预览版/RC 仅支持 .NET Framework 项目中的 WPF 设计器。 通过创建并行 .NET Core 项目，可以在使用 .NET Framework 项目设计窗体时通过 .NET Core 测试项目。 解决方案文件包括 .NET Framework 和 .NET Core 项目。 在 .NET Framework 项目中添加和设计窗体和控件，并且根据添加到 .NET Core 项目的文件 glob 模式，任何新的或更改的文件将自动包含在 .NET Core 项目中。
+如本文所述，Visual Studio 2019 仅支持 .NET Framework 项目中的 WPF 设计器。 通过创建并行 .NET Core 项目，可以在使用 .NET Framework 项目设计窗体时通过 .NET Core 测试项目。 解决方案文件包括 .NET Framework 和 .NET Core 项目。 在 .NET Framework 项目中添加和设计窗体和控件，并且根据添加到 .NET Core 项目的文件 glob 模式，任何新的或更改的文件将自动包含在 .NET Core 项目中。
 
 一旦 Visual Studio 2019 支持 WPF 设计器，就可以将 .NET Core 项目文件的内容复制/粘贴到 .NET Framework 项目文件中。 然后删除使用 `<Source>` 和 `<EmbeddedResource>` 项添加的文件 glob 模式。 修复由应用程序使用的任何项目引用的路径。 这可以有效地将 .NET Framework 项目升级到 .NET Core 项目。
  

@@ -1,13 +1,13 @@
 ---
 title: .NET Core 的 csproj 格式的新增内容
 description: 了解现有文件和 .NET Core csproj 文件之间的区别
-ms.date: 09/22/2017
-ms.openlocfilehash: e196be28f622873359153f32c5dd9b0b5a514c0f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.date: 04/08/2019
+ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654648"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517325"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -15,7 +15,7 @@ ms.locfileid: "58654648"
 
 ## <a name="implicit-package-references"></a>隐式包引用
 
-基于项目文件的 `<TargetFramework>` 或 `<TargetFrameworks>` 属性中指定的目标框架对元包进行隐式引用。 如果指定了 `<TargetFramework>`，则忽略 `<TargetFrameworks>`，而与顺序无关。
+基于项目文件的 `<TargetFramework>` 或 `<TargetFrameworks>` 属性中指定的目标框架对元包进行隐式引用。 如果指定了 `<TargetFramework>`，则忽略 `<TargetFrameworks>`，而与顺序无关。 有关详细信息，请参阅[包、元包和框架](../packages.md)。 
 
 ```xml
  <PropertyGroup>
@@ -31,15 +31,39 @@ ms.locfileid: "58654648"
 
 ### <a name="recommendations"></a>建议
 
-由于隐式引用了 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包，以下是建议的最佳做法：
+由于隐式引用了 `Microsoft.NETCore.App` 或 `NETStandard.Library` 元包，以下是建议的最佳做法：
 
-* 面向 .NET Core 或 .NET Standard 时，绝不通过项目文件中的 `<PackageReference>` 项，对 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包进行显式引用。
+* 面向 .NET Core 或 .NET Standard 时，绝不通过项目文件中的 `<PackageReference>` 项，对 `Microsoft.NETCore.App` 或 `NETStandard.Library` 元包进行显式引用。
 * 面向 .NET Core 时，如果需要特定版本的运行时，应使用项目中的 `<RuntimeFrameworkVersion>` 属性（例如，`1.0.4`），而不是引用元包。
-    * 例如，如果使用[独立部署](../deploying/index.md#self-contained-deployments-scd)且需要 1.0.0 LTS 运行时的特定修补程序版本，可能会发生这种情况。
-* 面向 .NET Standard 时，如果需要特定版本的 `NetStandard.Library` 元包，可以使用 `<NetStandardImplicitPackageVersion>` 属性并设置所需版本。
-* 请勿在 .NET Framework 项目中显式添加或更新对 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包的引用。 使用基于 .NET Standard 的 NuGet 包时，如果需要任意版本的 `NetStandard.Library`，NuGet 可自动安装该版本。
+  * 例如，如果使用[独立部署](../deploying/index.md#self-contained-deployments-scd)且需要 1.0.0 LTS 运行时的特定修补程序版本，可能会发生这种情况。
+* 面向 .NET Standard 时，如果需要特定版本的 `NETStandard.Library` 元包，可以使用 `<NetStandardImplicitPackageVersion>` 属性并设置所需版本。
+* 请勿在 .NET Framework 项目中显式添加或更新对 `Microsoft.NETCore.App` 或 `NETStandard.Library` 元包的引用。 使用基于 .NET Standard 的 NuGet 包时，如果需要任意版本的 `NETStandard.Library`，NuGet 可自动安装该版本。
+
+## <a name="implicit-version-for-some-package-references"></a>一些包引用的隐式版本
+
+[`<PackageReference>`](#packagereference) 的大多数用法都要求设置 `Version` 属性，用于指定要使用的 NuGet 包版本。 不过，如果使用的是 .NET Core 2.1 或 2.2，且引用 [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) 或 [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage)，就没有必要设置此属性。 .NET Core SDK 可自动选择应使用的包版本。
+
+### <a name="recommendation"></a>建议
+
+引用 `Microsoft.AspNetCore.App` 或 `Microsoft.AspNetCore.All` 包时，不要指定包版本。 如果你指定版本，SDK 可能会生成警告 NETSDK1071。 若要修复此警告，请删除包版本，如下面的示例所示：
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Microsoft.AspNetCore.App" />
+</ItemGroup>
+```
+
+> 已知问题：.NET Core 2.1 SDK 只在项目还使用 Microsoft.NET.Sdk.Web 时才支持这种语法。 .NET Core 2.2 SDK 中解决了此问题。
+
+这些对 ASP.NET Core 元包的引用行为与大多数普通 NuGet 包略有不同。 使用这些元包的应用的[框架依赖部署](../deploying/index.md#framework-dependent-deployments-fdd)自动使用 ASP.NET Core 共享框架。 使用元包时，引用的 ASP.NET Core NuGet 包中的任何资产都不会与应用一起部署。也就是说，ASP.NET Core 共享框架包含这些资产。 共享框架中的资产更适合目标平台，旨在缩短应用启动时间。 若要详细了解共享框架，请参阅 [.NET Core 分发打包](../build/distribution-packaging.md)。
+
+如果指定版本，这会被视为框架依赖部署的 ASP.NET Core 共享框架的最低版本，并被视为独立式部署的确切版本。 这可能会导致以下后果：
+
+* 如果服务器上安装的 ASP.NET Core 版本低于 PackageReference 中指定的版本，.NET Core 进程便会无法启动。 元包更新通常先可用于 NuGet.org，再可用于托管环境（如 Azure）。 将 PackageReference 中的版本更新为 ASP.NET Core 可能会导致部署的应用失败。
+* 如果应用部署为[独立式部署](../deploying/index.md#self-contained-deployments-scd)，应用可能不包含 .NET Core 的最新安全更新程序。 如果未指定版本，SDK 可以自动在独立式部署中包含 ASP.NET Core 的最新版本。
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core 项目中默认包含的编译项
+
 已通过移动到最新 SDK 版本中的 *csproj* 格式，将默认的编译项和嵌入资源的包含项和排除项移至 SDK 属性文件。 这意味着不需要再在项目文件中指定这些项。
 
 执行此操作的主要目的是减少项目文件中的混杂。 SDK 中的默认设置应涵盖最常见的用例，由此便无需在创建的每个项目中重复这些设置。 这可使项目文件更小，更易于理解和进行手动编辑（如果需要）。
@@ -100,6 +124,7 @@ ms.locfileid: "58654648"
 ## <a name="additions"></a>新增内容
 
 ### <a name="sdk-attribute"></a>Sdk 特性
+
 .csproj 文件的根 `<Project>` 元素具有名为 `Sdk` 的新特性。 `Sdk` 指定项目将使用的 SDK。 如[分层文档](cli-msbuild-architecture.md)中所述，SDK 是一组可生成 .NET Core 代码的 MSBuild [任务](/visualstudio/msbuild/msbuild-tasks)和[目标](/visualstudio/msbuild/msbuild-targets)。 .NET Core 工具随附了三个主要 SDK：
 
 1. ID 为 `Microsoft.NET.Sdk` 的 .NET Core SDK
@@ -282,7 +307,6 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
 
 适用于包的许可证的 URL。 （自 Visual Studio 15.9.4、.NET SDK 2.1.502 和 2.2.101 起已弃用）
-
 
 ### <a name="packageiconurl"></a>PackageIconUrl
 
