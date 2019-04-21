@@ -43,7 +43,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54734865"
 ---
-# <a name="type-characters-visual-basic"></a>键入字符 (Visual Basic)
+# <a name="type-characters-visual-basic"></a>类型字符 (Visual Basic)
 
 除了在声明语句中指定的数据类型，您可以强制使用一些编程元素的数据类型*类型字符*。 类型字符必须紧跟具有不允许插入字符的任何类型的元素。
 
