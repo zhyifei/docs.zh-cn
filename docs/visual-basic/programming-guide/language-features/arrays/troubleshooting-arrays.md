@@ -10,10 +10,10 @@ helpviewer_keywords:
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
 ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58833368"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>数组疑难解答 (Visual Basic)
@@ -55,7 +55,7 @@ ms.locfileid: "58833368"
  如果另一个组件将数组传递给你的代码，例如作为过程自变量，您不知道该数组的大小或它的维的长度。 在尝试访问任何元素之前，您应首先确定数组的每个维度的上限。 如果已通过 Visual Basic 以外的某种方式创建数组`New`子句，更低绑定可能不是 0，并且是最安全，以确定该下限。  
   
 ### <a name="specifying-the-dimension"></a>指定维度  
- 在确定一个多维数组的边界时，请注意如何指定的维度。 `dimension`的参数<xref:System.Array.GetLowerBound%2A>并<xref:System.Array.GetUpperBound%2A>方法是基于 0 的同时`Rank`参数的 Visual Basic<xref:Microsoft.VisualBasic.Information.LBound%2A>和<xref:Microsoft.VisualBasic.Information.UBound%2A>函数都是基于 1 的。  
+ 在确定一个多维数组的边界时，请注意如何指定的维度。 `dimension`的参数<xref:System.Array.GetLowerBound%2A>并<xref:System.Array.GetUpperBound%2A>方法是基于 0 的同时`Rank`参数的 Visual basic<xref:Microsoft.VisualBasic.Information.LBound%2A>和<xref:Microsoft.VisualBasic.Information.UBound%2A>函数都是基于 1 的。  
   
 ## <a name="see-also"></a>请参阅
 

@@ -3,10 +3,10 @@ title: 分区数据 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
 ms.openlocfilehash: 2da63a1f6b73c8592d6036a90fa374a0d4385f4c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58839569"
 ---
 # <a name="partitioning-data-visual-basic"></a>分区数据 (Visual Basic)
@@ -14,7 +14,7 @@ LINQ 中的分区是指将输入序列划分为两个部分的操作，无需重
   
  下图显示对字符序列进行三种不同的分区操作的结果。 第一个操作返回序列中的前三个元素。 第二个操作跳过前三个元素，返回剩余元素。 第三个操作跳过序列中的前两个元素，返回接下来的三个元素。  
   
- ![显示三个 LINQ 分区操作的图例。](./media/partitioning-data/linq-partitioning-operations.png)  
+ ![显示三个 LINQ 分区操作的图示。](./media/partitioning-data/linq-partitioning-operations.png)  
   
  下面一节列出了对序列进行分区的标准查询运算符方法。  
   

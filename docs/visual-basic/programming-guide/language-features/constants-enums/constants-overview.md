@@ -5,10 +5,10 @@ helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
 ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58841266"
 ---
 # <a name="constants-overview-visual-basic"></a>常量概述 (Visual Basic)
@@ -40,7 +40,7 @@ ms.locfileid: "58841266"
   
 |定义|术语|  
 |---|---|  
-|[常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)|列出预定义的 Visual Basic 的常量。|  
+|[常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)|列出预定义的 Visual basic 的常量。|  
 |[Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)|介绍`Const`语句和它的使用。|  
 |[Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|介绍`Option Strict`语句和它的使用。|  
   

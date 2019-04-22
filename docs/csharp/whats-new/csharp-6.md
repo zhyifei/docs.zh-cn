@@ -3,10 +3,10 @@ title: C# 6 中的新增功能 - C# 指南
 description: 了解 C# 版本 6 中的新增功能
 ms.date: 12/12/2018
 ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920670"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 中的新增功能
@@ -106,7 +106,7 @@ Null 条件运算符使 null 检查更轻松、更流畅。 将成员访问 `.` 
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-确保左侧只计算一次，这还可以实现在此运算符的左侧使用任何表达式（包括方法调用）： `?.`
+确保左侧只计算一次，这使得你可以在 `?.` 的左侧使用任何表达式（包括方法调用）
 
 ## <a name="string-interpolation"></a>字符串内插
 

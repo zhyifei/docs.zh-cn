@@ -23,10 +23,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: b872eda97d1e349ad781b12810e4b166d6e46fe1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58837307"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>按位置和名称传递自变量 (Visual Basic)
@@ -64,7 +64,7 @@ ms.locfileid: "58837307"
   
  在前面的示例中，没有多余的逗号，才可保存的位置的省略`age`自变量，因为`birth`按名称传递了。  
   
-在 Visual Basic 15.5 之前的版本，在你的混合位置和名称、 位置自变量形式提供参数时都必须放在第一个。 按名称提供参数后, 剩下的自变量必须所有传递的名称。  例如，以下调用到`Display`方法会显示编译器错误[BC30241:需要命名参数](../../../misc/bc30241.md)。
+在 Visual basic 15.5 之前的版本，在你的混合位置和名称、 位置自变量形式提供参数时都必须放在第一个。 按名称提供参数后, 剩下的自变量必须所有传递的名称。  例如，以下调用到`Display`方法会显示编译器错误[BC30241:需要命名参数](../../../misc/bc30241.md)。
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 

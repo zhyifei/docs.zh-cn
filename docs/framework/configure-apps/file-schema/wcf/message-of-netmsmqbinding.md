@@ -3,10 +3,10 @@ title: <message> 的 <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
 ms.openlocfilehash: c623b7daf1e91c9c1800b9653525cd51b1087506
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890561"
 ---
 # <a name="message-of-netmsmqbinding"></a>\<message> of \<netMsmqBinding>
@@ -54,7 +54,7 @@ None
 
 |元素|描述|
 |-------------|-----------------|
-|[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|定义绑定的安全设置。|
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|定义绑定的安全设置。|
 
 ## <a name="see-also"></a>请参阅
 

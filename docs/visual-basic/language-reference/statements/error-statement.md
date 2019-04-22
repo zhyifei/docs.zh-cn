@@ -11,10 +11,10 @@ helpviewer_keywords:
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
 ms.openlocfilehash: 8ac7cee2f9959bc75df165d00d3a0a67e1dd9af0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58837528"
 ---
 # <a name="error-statement"></a>Error 语句
@@ -35,7 +35,7 @@ Error errornumber
   
  如果`errornumber`定义，则`Error`语句的属性后调用错误处理程序`Err`对象分配以下默认值：  
   
-|属性|值|  
+|属性|“值”|  
 |--------------|-----------|  
 |`Number`|值指定为参数`Error`语句。 可以是任何有效的错误号。|  
 |`Source`|当前的 Visual Basic 项目的名称。|  

@@ -3,10 +3,10 @@ title: 筛选数据 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
 ms.openlocfilehash: a673126d928a97bf522783e73fc254debe2a9de8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58837438"
 ---
 # <a name="filtering-data-visual-basic"></a>筛选数据 (Visual Basic)
@@ -14,7 +14,7 @@ ms.locfileid: "58837438"
   
  下图演示了对字符序列进行筛选的结果。 筛选操作的谓词指定字符必须为“A”。  
   
- ![显示 LINQ 筛选操作的关系图](./media/filtering-data/linq-filter-operation.png)  
+ ![显示 LINQ 筛选操作的图表](./media/filtering-data/linq-filter-operation.png)  
   
  下面一节列出了执行所选内容的标准查询运算符方法。  
   
