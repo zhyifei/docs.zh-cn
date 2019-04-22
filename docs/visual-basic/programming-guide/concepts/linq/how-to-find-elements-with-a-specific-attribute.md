@@ -3,21 +3,21 @@ title: 如何：查找具有特定特性 (XPATH-LINQ to XML) 的元素 (Visual B
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
 ms.openlocfilehash: 17c5e9abf607df7311ff2552b7e9c54cbf30fd59
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825334"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="8fc4e-102">如何：查找具有特定特性 (XPATH-LINQ to XML) 的元素 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8fc4e-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="8fc4e-103">有时需要查找具有特定属性的所有元素。</span><span class="sxs-lookup"><span data-stu-id="8fc4e-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="8fc4e-104">您并不关心属性的内容，</span><span class="sxs-lookup"><span data-stu-id="8fc4e-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="8fc4e-105">而是根据属性是否存在进行选择。</span><span class="sxs-lookup"><span data-stu-id="8fc4e-105">Instead, you want to select based on the existence of the attribute.</span></span>  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="f04a2-102">如何：查找具有特定特性 (XPATH-LINQ to XML) 的元素 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f04a2-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="f04a2-103">有时需要查找具有特定属性的所有元素。</span><span class="sxs-lookup"><span data-stu-id="f04a2-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="f04a2-104">您并不关心属性的内容，</span><span class="sxs-lookup"><span data-stu-id="f04a2-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="f04a2-105">而是根据属性是否存在进行选择。</span><span class="sxs-lookup"><span data-stu-id="f04a2-105">Instead, you want to select based on the existence of the attribute.</span></span>  
   
- <span data-ttu-id="8fc4e-106">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="8fc4e-106">The XPath expression is:</span></span>  
+ <span data-ttu-id="f04a2-106">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="f04a2-106">The XPath expression is:</span></span>  
   
  `./*[@Select]`  
   
-## <a name="example"></a><span data-ttu-id="8fc4e-107">示例</span><span class="sxs-lookup"><span data-stu-id="8fc4e-107">Example</span></span>  
- <span data-ttu-id="8fc4e-108">下面的代码选择具有 `Select` 属性的所有元素。</span><span class="sxs-lookup"><span data-stu-id="8fc4e-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="f04a2-107">示例</span><span class="sxs-lookup"><span data-stu-id="f04a2-107">Example</span></span>  
+ <span data-ttu-id="f04a2-108">下面的代码选择具有 `Select` 属性的所有元素。</span><span class="sxs-lookup"><span data-stu-id="f04a2-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
   
 ```vb  
 Dim doc As XElement = _   
@@ -51,7 +51,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="8fc4e-109">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="8fc4e-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="f04a2-109">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="f04a2-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -59,6 +59,6 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8fc4e-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="8fc4e-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f04a2-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="f04a2-110">See also</span></span>
 
-- [<span data-ttu-id="8fc4e-111">LINQ to XML 针对 XPath 用户 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8fc4e-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="f04a2-111">LINQ to XML 针对 XPath 用户 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f04a2-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

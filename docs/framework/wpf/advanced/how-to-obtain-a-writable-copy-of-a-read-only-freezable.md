@@ -9,28 +9,28 @@ helpviewer_keywords:
 - Freezable objects [WPF], modifiable clones
 ms.assetid: d028de61-bbe9-4d62-b656-8fe3b1b2ca24
 ms.openlocfilehash: 910c5dada6ca82f68992722e4df6b35f9f7497c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206468"
 ---
-# <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a><span data-ttu-id="278e5-102">如何：获取只读 Freezable 的可写副本</span><span class="sxs-lookup"><span data-stu-id="278e5-102">How to: Obtain a Writable Copy of a Read-Only Freezable</span></span>
-<span data-ttu-id="278e5-103">此示例演示如何使用<xref:System.Windows.Freezable.Clone%2A>方法来创建一个只读的可写副本<xref:System.Windows.Freezable>。</span><span class="sxs-lookup"><span data-stu-id="278e5-103">This example shows how to use the <xref:System.Windows.Freezable.Clone%2A> method to create a writable copy of a read-only <xref:System.Windows.Freezable>.</span></span>  
+# <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a><span data-ttu-id="e431d-102">如何：获取只读 Freezable 的可写副本</span><span class="sxs-lookup"><span data-stu-id="e431d-102">How to: Obtain a Writable Copy of a Read-Only Freezable</span></span>
+<span data-ttu-id="e431d-103">此示例演示如何使用<xref:System.Windows.Freezable.Clone%2A>方法来创建一个只读的可写副本<xref:System.Windows.Freezable>。</span><span class="sxs-lookup"><span data-stu-id="e431d-103">This example shows how to use the <xref:System.Windows.Freezable.Clone%2A> method to create a writable copy of a read-only <xref:System.Windows.Freezable>.</span></span>  
   
- <span data-ttu-id="278e5-104">之后<xref:System.Windows.Freezable>对象标记为只读的 （"冻结"），您不能修改它。</span><span class="sxs-lookup"><span data-stu-id="278e5-104">After a <xref:System.Windows.Freezable> object is marked as read-only ("frozen"), you cannot modify it.</span></span> <span data-ttu-id="278e5-105">但是，可以使用<xref:System.Windows.Freezable.Clone%2A>方法来创建冻结对象的可修改复本。</span><span class="sxs-lookup"><span data-stu-id="278e5-105">However, you can use the <xref:System.Windows.Freezable.Clone%2A> method to create a modifiable clone of the frozen object.</span></span>  
+ <span data-ttu-id="e431d-104">之后<xref:System.Windows.Freezable>对象标记为只读的 （"冻结"），您不能修改它。</span><span class="sxs-lookup"><span data-stu-id="e431d-104">After a <xref:System.Windows.Freezable> object is marked as read-only ("frozen"), you cannot modify it.</span></span> <span data-ttu-id="e431d-105">但是，可以使用<xref:System.Windows.Freezable.Clone%2A>方法来创建冻结对象的可修改复本。</span><span class="sxs-lookup"><span data-stu-id="e431d-105">However, you can use the <xref:System.Windows.Freezable.Clone%2A> method to create a modifiable clone of the frozen object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="278e5-106">示例</span><span class="sxs-lookup"><span data-stu-id="278e5-106">Example</span></span>  
- <span data-ttu-id="278e5-107">下面的示例创建的冻结的可修改复本<xref:System.Windows.Media.SolidColorBrush>对象。</span><span class="sxs-lookup"><span data-stu-id="278e5-107">The following example creates a modifiable clone of a frozen <xref:System.Windows.Media.SolidColorBrush> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="e431d-106">示例</span><span class="sxs-lookup"><span data-stu-id="e431d-106">Example</span></span>  
+ <span data-ttu-id="e431d-107">下面的示例创建的冻结的可修改复本<xref:System.Windows.Media.SolidColorBrush>对象。</span><span class="sxs-lookup"><span data-stu-id="e431d-107">The following example creates a modifiable clone of a frozen <xref:System.Windows.Media.SolidColorBrush> object.</span></span>  
   
  [!code-csharp[freezablesample_procedural#CloneExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
  [!code-vb[freezablesample_procedural#CloneExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
   
- <span data-ttu-id="278e5-108">有关详细信息<xref:System.Windows.Freezable>对象，请参阅[Freezable 对象概述](freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="278e5-108">For more information about <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](freezable-objects-overview.md).</span></span>  
+ <span data-ttu-id="e431d-108">有关详细信息<xref:System.Windows.Freezable>对象，请参阅[Freezable 对象概述](freezable-objects-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e431d-108">For more information about <xref:System.Windows.Freezable> objects, see the [Freezable Objects Overview](freezable-objects-overview.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="278e5-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="278e5-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e431d-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="e431d-109">See also</span></span>
 
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CloneCurrentValue%2A>
-- [<span data-ttu-id="278e5-110">Freezable 对象概述</span><span class="sxs-lookup"><span data-stu-id="278e5-110">Freezable Objects Overview</span></span>](freezable-objects-overview.md)
-- [<span data-ttu-id="278e5-111">帮助主题</span><span class="sxs-lookup"><span data-stu-id="278e5-111">How-to Topics</span></span>](base-elements-how-to-topics.md)
+- [<span data-ttu-id="e431d-110">Freezable 对象概述</span><span class="sxs-lookup"><span data-stu-id="e431d-110">Freezable Objects Overview</span></span>](freezable-objects-overview.md)
+- [<span data-ttu-id="e431d-111">帮助主题</span><span class="sxs-lookup"><span data-stu-id="e431d-111">How-to Topics</span></span>](base-elements-how-to-topics.md)
