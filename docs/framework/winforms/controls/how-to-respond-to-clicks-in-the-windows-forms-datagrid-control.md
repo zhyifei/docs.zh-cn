@@ -13,10 +13,10 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
 ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191895"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>如何：响应 Windows 窗体 DataGrid 控件中的单击
@@ -143,4 +143,4 @@ ms.locfileid: "59191895"
 ## <a name="see-also"></a>请参阅
 
 - [DataGrid 控件](datagrid-control-windows-forms.md)
-- [如何：更改 Windows 窗体 DataGrid 控件中在运行时显示的数据](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [如何：更改在运行时在 Windows 窗体 DataGrid 控件中显示的数据](change-displayed-data-at-run-time-wf-datagrid-control.md)

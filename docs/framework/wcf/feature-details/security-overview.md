@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136950"
 ---
 # <a name="security-overview"></a>安全性概述
@@ -100,7 +100,7 @@ Windows Communication Foundation (WCF) 是一个 SOAP 基于消息的分布式�
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [保证服务的安全](../../../../docs/framework/wcf/securing-services.md)
+- [保护服务](../../../../docs/framework/wcf/securing-services.md)
 - [常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
 - [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -9,10 +9,10 @@ ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1d059a5d4df402b309f628bf3e9393114c4cdeec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191388"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>公共语言运行时中的 ETW 事件
@@ -37,4 +37,4 @@ ms.locfileid: "59191388"
   
 ## <a name="see-also"></a>请参阅
 
-- [ETW Events in the .NET Framework](../../../docs/framework/performance/etw-events.md)
+- [.NET Framework 中的 ETW 事件](../../../docs/framework/performance/etw-events.md)

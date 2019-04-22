@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 2adc58339012095c9dc58d633a9b3815cf7aba3f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c993f962d84ca3fc859ab704489300192536ee74
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463340"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611271"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>使用作为容器而运行的数据库服务器
 
@@ -48,10 +48,10 @@ eShopOnContainers 应用程序提供在启动时在数据库中设定数据，�
 #### <a name="additional-resources"></a>其他资源
 
 - **Run the SQL Server Docker image on Linux, Mac, or Windows** \（在 Linux、Mac 或 Windows 上运行 SQL Server Docker 映像）
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](/sql/linux/sql-server-linux-setup-docker)
 
 - **Connect and query SQL Server on Linux with sqlcmd** \（使用 sqlcmd 连接和查询 Linux 上的 SQL Server）
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>在 Web 应用程序启动时设定测试数据
 
@@ -165,7 +165,7 @@ public class Startup
 
 Redis 提供使用 Redis 的 Docker 映像。 该映像可在 Docker 中心获得，请访问此 URL：
 
-[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
+<https://hub.docker.com/\_/redis/>
 
 可在命令提示符中执行以下 Docker CLI 命令来直接运行 Docker Redis 容器：
 

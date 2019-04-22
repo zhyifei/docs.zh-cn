@@ -21,10 +21,10 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
 ms.openlocfilehash: 5e4b8511145e758bf3d6328141be0e526965dccf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826569"
 ---
 # <a name="inheritance-basics-visual-basic"></a>继承的基础知识 (Visual Basic)
@@ -43,7 +43,7 @@ ms.locfileid: "58826569"
   
 -   `NotInheritable` 修饰符，使程序员使用类作为基类。  
   
--   `MustInherit` 修饰符-指定类旨在用作仅基类。 实例`MustInherit`类不能直接创建; 他们只能在创建的派生类作为基类的类实例。 (其他编程语言，如 c + + 和C#，使用术语*抽象类*来描述此类的类。)  
+-   `MustInherit` 修饰符-指定类旨在用作仅基类。 实例`MustInherit`类不能直接创建; 他们只能在创建的派生类作为基类的类实例。 (其他编程语言，如C++和C#，使用术语*抽象类*来描述此类的类。)  
   
 ## <a name="overriding-properties-and-methods-in-derived-classes"></a>属性和方法在派生类中的重写  
  默认情况下，派生的类从其基类中继承属性和方法。 如果继承的属性或方法的行为必须以不同的方式在派生类中它可以是*重写*。 也就是说，您可以在派生类中定义方法的新实现。 下列修饰符用于控制如何重写属性和方法：  

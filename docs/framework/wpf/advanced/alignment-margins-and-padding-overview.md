@@ -11,10 +11,10 @@ helpviewer_keywords:
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
 ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209159"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Alignment、Margin 和 Padding 概述
@@ -55,7 +55,7 @@ ms.locfileid: "59209159"
 |<xref:System.Windows.HorizontalAlignment.Left>|子元素与父元素的已分配布局空间的左端对齐。|  
 |<xref:System.Windows.HorizontalAlignment.Center>|子元素与父元素的已分配布局空间的中心对齐。|  
 |<xref:System.Windows.HorizontalAlignment.Right>|子元素与父元素的已分配布局空间的右端对齐。|  
-|<xref:System.Windows.HorizontalAlignment.Stretch> (默认)|拉伸子元素以填充父元素的已分配布局空间。 显式<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值优先。|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> （默认值）|拉伸子元素以填充父元素的已分配布局空间。 显式<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值优先。|  
   
  下面的示例演示如何应用<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>属性设置为<xref:System.Windows.Controls.Button>元素。 显示每个特性值，以便更好地阐释各种呈现行为。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "59209159"
 |<xref:System.Windows.VerticalAlignment.Top>|子元素与父元素的已分配布局空间的顶端对齐。|  
 |<xref:System.Windows.VerticalAlignment.Center>|子元素与父元素的已分配布局空间的中心对齐。|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|子元素与父元素的已分配布局空间的底端对齐。|  
-|<xref:System.Windows.VerticalAlignment.Stretch> (默认)|拉伸子元素以填充父元素的已分配布局空间。 显式<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值优先。|  
+|<xref:System.Windows.VerticalAlignment.Stretch> （默认值）|拉伸子元素以填充父元素的已分配布局空间。 显式<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值优先。|  
   
  下面的示例演示如何应用<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>属性设置为<xref:System.Windows.Controls.Button>元素。 显示每个特性值，以便更好地阐释各种呈现行为。 对于此示例中，<xref:System.Windows.Controls.Grid>带有可见网格线的元素用作父项，以更好地说明每个属性值的布局行为。  
   

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166239"
 ---
 # <a name="sorting-and-filtering-data"></a>对数据进行排序和筛选
@@ -30,13 +30,13 @@ ms.locfileid: "59166239"
     |DataViewRowState 选项|描述|  
     |------------------------------|-----------------|  
     |**CurrentRows**|**当前**行版本的所有**Unchanged**， **Added**，并**Modified**行。 这是默认设置。|  
-    |**已添加**|**当前**行版本的所有**Added**行。|  
-    |**Deleted**|**原始**行版本的所有**Deleted**行。|  
+    |**添加**|**当前**行版本的所有**Added**行。|  
+    |**已删除**|**原始**行版本的所有**Deleted**行。|  
     |**ModifiedCurrent**|**当前**行版本的所有**Modified**行。|  
     |**ModifiedOriginal**|**原始**行版本的所有**Modified**行。|  
-    |**None**|没有行。|  
+    |**无**|没有行。|  
     |**OriginalRows**|**原始**行版本的所有**Unchanged**， **Modified**，以及**已删除**行。|  
-    |**Unchanged**|**当前**行版本的所有**Unchanged**行。|  
+    |**保持不变**|**当前**行版本的所有**Unchanged**行。|  
   
  有关行状态和行版本的详细信息，请参阅[行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
   
@@ -62,5 +62,5 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 - <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
-- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

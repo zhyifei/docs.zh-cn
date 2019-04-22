@@ -3,10 +3,10 @@ title: 分布式事务
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
 ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150197"
 ---
 # <a name="distributed-transactions"></a>分布式事务
@@ -39,7 +39,7 @@ ms.locfileid: "59150197"
 >  在某个事务中显式登记了连接之后，在该事务完成之前，连接将无法取消登记或在另一个事务中登记。  
   
 > [!CAUTION]
->  `EnlistTransaction` 如果连接已经开始使用的连接的事务将引发异常<xref:System.Data.Common.DbConnection.BeginTransaction%2A>方法。 但是，如果事务是在数据源上开始的本地事务（例如使用 <xref:System.Data.SqlClient.SqlCommand> 显式执行 BEGIN TRANSACTION 语句），`EnlistTransaction` 将回滚该本地事务并根据请求在现有分布式事务中登记。 你不会接收本地事务已回滚的通知，必须管理任何未使用 <xref:System.Data.Common.DbConnection.BeginTransaction%2A> 开始的本地事务。 如果您将用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 与 SQL Server 结合使用，则尝试登记会引发异常。 所有其他情况将无法发现。  
+>  如果连接已使用连接的 `EnlistTransaction` 方法开始了某个事务，<xref:System.Data.Common.DbConnection.BeginTransaction%2A> 将引发异常。 但是，如果事务是在数据源上开始的本地事务（例如使用 <xref:System.Data.SqlClient.SqlCommand> 显式执行 BEGIN TRANSACTION 语句），`EnlistTransaction` 将回滚该本地事务并根据请求在现有分布式事务中登记。 你不会接收本地事务已回滚的通知，必须管理任何未使用 <xref:System.Data.Common.DbConnection.BeginTransaction%2A> 开始的本地事务。 如果您将用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 与 SQL Server 结合使用，则尝试登记会引发异常。 所有其他情况将无法发现。  
   
 ## <a name="promotable-transactions-in-sql-server"></a>SQL Server 中的可提升事务  
  SQL Server 支持可提升的事务，在此类事务中，本地轻型事务可以仅在需要时自动提升为分布式事务。 可提升的事务不会调用分布式事务增加的系统开销，除非需要增加的系统开销。 有关详细信息和代码示例，请参阅[System.Transactions 与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)。  
@@ -51,4 +51,4 @@ ms.locfileid: "59150197"
 
 - [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [System.Transactions 与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

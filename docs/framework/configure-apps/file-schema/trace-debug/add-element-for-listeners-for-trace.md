@@ -9,10 +9,10 @@ helpviewer_keywords:
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
 ms.openlocfilehash: ba0ffc4f95b9af7fcd319068501ce0bb9714c2ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089557"
 ---
 # <a name="add-element-for-listeners-for-trace"></a>\<添加 > 元素\<侦听器 > 为\<跟踪 >
@@ -39,7 +39,7 @@ ms.locfileid: "59089557"
   
 |特性|描述|  
 |---------------|-----------------|  
-|**类型**|必需的特性。<br /><br /> 指定的侦听器的类型。 必须使用满足要求中指定的字符串[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
+|**type**|必需的特性。<br /><br /> 指定的侦听器的类型。 必须使用满足要求中指定的字符串[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
 |**initializeData**|可选特性。<br /><br /> 传递给构造函数为指定类的字符串。|  
 |**name**|可选特性。<br /><br /> 指定侦听器的名称。|  
   

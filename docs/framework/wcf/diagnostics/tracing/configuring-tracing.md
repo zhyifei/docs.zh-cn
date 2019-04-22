@@ -5,10 +5,10 @@ helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162876"
 ---
 # <a name="configuring-tracing"></a>配置跟踪
@@ -152,7 +152,7 @@ ms.locfileid: "59162876"
   
 |跟踪级别|被跟踪事件的特性|被跟踪事件的内容|被跟踪事件|用户目标|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
-|Off|不可用|不可用|不发出任何跟踪。|不可用|  
+|Off|不适用|不适用|不发出任何跟踪。|不适用|  
 |严重|"负"事件： 表示意外的处理或错误条件的事件。||将记录包括下列各项的未经处理的异常：<br /><br /> -   OutOfMemoryException<br />-ThreadAbortException （CLR 调用任何 ThreadAbortExceptionHandler）<br />-StackOverflowException （无法捕获）<br />-   ConfigurationErrorsException<br />-   SEHException<br />-应用程序启动错误<br />-故障快速报警事件<br />-系统挂起<br />-有害消息： 消息会导致应用程序失败的跟踪。|管理员<br /><br /> 应用程序开发人员|  
 |Error|"负"事件： 表示意外的处理或错误条件的事件。|已发生意外处理。 应用程序未能执行预期的任务。 然而，应用程序仍处于开启状态并在运行。|记录所有异常。|管理员<br /><br /> 应用程序开发人员|  
 |警告|"负"事件： 表示意外的处理或错误条件的事件。|可能的问题已经出现或可能出现，但是，应用程序仍在正常工作。 不过，该应用程序可能不会继续正常工作。|-应用程序正在接收比其遏制设置所允许的更多请求。<br />-接收队列即将达到其最大配置的容量。<br />已超过超时。<br />-凭据被拒绝。|管理员<br /><br /> 应用程序开发人员|  
@@ -185,4 +185,4 @@ ms.locfileid: "59162876"
 - [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [如何：创建和初始化跟踪侦听器](https://go.microsoft.com/fwlink/?LinkId=94648)
-- [Creating a Custom TraceListener（创建自定义 TraceListener）](https://go.microsoft.com/fwlink/?LinkId=96239)
+- [创建自定义 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)

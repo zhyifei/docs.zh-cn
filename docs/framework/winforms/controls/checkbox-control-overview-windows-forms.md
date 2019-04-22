@@ -9,10 +9,10 @@ helpviewer_keywords:
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
 ms.openlocfilehash: 2a18327d9836d1dbbcd5d5d6e73f217637736d20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121781"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>CheckBox 控件概述（Windows 窗体）
@@ -28,5 +28,5 @@ Windows 窗体 <xref:System.Windows.Forms.CheckBox> 控件指示特定条件处�
 
 - <xref:System.Windows.Forms.CheckBox>
 - [如何：使用 Windows 窗体 CheckBox 控件设置选项](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [如何：响应 Windows 窗体 CheckBox 的单击](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [如何：响应 Windows 窗体 CheckBox 控件单击](how-to-respond-to-windows-forms-checkbox-clicks.md)
 - [CheckBox 控件](checkbox-control-windows-forms.md)

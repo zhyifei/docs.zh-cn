@@ -3,10 +3,10 @@ title: WCF Web HTTP 错误处理
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
 ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152693"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP 错误处理
@@ -23,7 +23,7 @@ Public string Operation1()
 }  
 ```  
   
- 下面的示例演示如何在用户定义的类型中返回 HTTP 状态代码和额外信息。 `MyErrorDetail` 是包含有关发生的错误的额外信息的用户定义类型。  
+ 下面的示例演示如何在用户定义的类型中返回 HTTP 状态代码和额外信息。 `MyErrorDetail` 是用户定义的类型，其中包含有关所出现错误的额外信息。  
   
 ```  
 Public string Operation2()  
@@ -47,7 +47,7 @@ Public string Operation2()
   
  有关这些值如何影响操作的格式设置的详细信息，请参阅[WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)。  
   
- <xref:System.ServiceModel.Web.WebFaultException> 是<xref:System.ServiceModel.FaultException>，因此可以用作错误异常编程模型的服务的公开 SOAP 终结点，以及 web HTTP 终结点。  
+ <xref:System.ServiceModel.Web.WebFaultException> 是一个 <xref:System.ServiceModel.FaultException>，因此可用作公开 SOAP 终结点和 Web HTTP 终结点的服务的错误异常编程模型。  
   
 ## <a name="see-also"></a>请参阅
 

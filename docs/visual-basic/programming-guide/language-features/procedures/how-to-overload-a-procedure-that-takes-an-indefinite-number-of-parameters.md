@@ -11,10 +11,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
 ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316448"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>如何：重载的参数 (Visual Basic 中) 的数量不确定的过程
@@ -56,12 +56,12 @@ ms.locfileid: "59316448"
 ## <a name="see-also"></a>请参阅
 
 - [过程](./index.md)
-- [过程形参和实参](./procedure-parameters-and-arguments.md)
+- [过程参数和自变量](./procedure-parameters-and-arguments.md)
 - [可选参数](./optional-parameters.md)
 - [参数数组](./parameter-arrays.md)
 - [过程重载](./procedure-overloading.md)
 - [过程疑难解答](./troubleshooting-procedures.md)
 - [如何：定义一个过程的多个版本](./how-to-define-multiple-versions-of-a-procedure.md)
-- [如何：调用重载过程](./how-to-call-an-overloaded-procedure.md)
+- [如何：调用重载的过程](./how-to-call-an-overloaded-procedure.md)
 - [如何：重载带有可选参数的过程](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [重载决策](./overload-resolution.md)

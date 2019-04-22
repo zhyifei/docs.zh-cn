@@ -9,10 +9,10 @@ helpviewer_keywords:
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
 ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188430"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>如何：创建和绑定到 ObservableCollection
@@ -143,7 +143,7 @@ End Class
 ## <a name="see-also"></a>请参阅
 
 - [在视图中对数据进行排序](how-to-sort-data-in-a-view.md)
-- [筛选视图中的数据](how-to-filter-data-in-a-view.md)
+- [在视图中筛选数据](how-to-filter-data-in-a-view.md)
 - [在 XAML 中使用视图对数据进行排序和分组](how-to-sort-and-group-data-using-a-view-in-xaml.md)
 - [数据绑定概述](data-binding-overview.md)
 - [帮助主题](data-binding-how-to-topics.md)
