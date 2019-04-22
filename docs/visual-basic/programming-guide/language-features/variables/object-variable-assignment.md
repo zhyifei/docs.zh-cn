@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
 ms.openlocfilehash: dff1b9bb9e87f827663786cac3f33531db41b2c1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58840271"
 ---
-# <a name="object-variable-assignment-visual-basic"></a><span data-ttu-id="d50ed-102">对象变量赋值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d50ed-102">Object Variable Assignment (Visual Basic)</span></span>
-<span data-ttu-id="d50ed-103">使用普通赋值语句将对象分配给对象变量。</span><span class="sxs-lookup"><span data-stu-id="d50ed-103">You use a normal assignment statement to assign an object to an object variable.</span></span> <span data-ttu-id="d50ed-104">可以分配对象表达式或[Nothing](../../../../visual-basic/language-reference/nothing.md)关键字，如下面的示例说明了。</span><span class="sxs-lookup"><span data-stu-id="d50ed-104">You can assign an object expression or the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, as the following example illustrates.</span></span>  
+# <a name="object-variable-assignment-visual-basic"></a><span data-ttu-id="3577a-102">对象变量赋值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3577a-102">Object Variable Assignment (Visual Basic)</span></span>
+<span data-ttu-id="3577a-103">使用普通赋值语句将对象分配给对象变量。</span><span class="sxs-lookup"><span data-stu-id="3577a-103">You use a normal assignment statement to assign an object to an object variable.</span></span> <span data-ttu-id="3577a-104">可以分配对象表达式或[Nothing](../../../../visual-basic/language-reference/nothing.md)关键字，如下面的示例说明了。</span><span class="sxs-lookup"><span data-stu-id="3577a-104">You can assign an object expression or the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, as the following example illustrates.</span></span>  
   
 ```  
 Dim thisObject As Object  
@@ -31,20 +31,20 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- <span data-ttu-id="d50ed-105">`Nothing` 意味着没有当前分配给变量对象。</span><span class="sxs-lookup"><span data-stu-id="d50ed-105">`Nothing` means there is no object currently assigned to the variable.</span></span>  
+ <span data-ttu-id="3577a-105">`Nothing` 意味着没有当前分配给变量对象。</span><span class="sxs-lookup"><span data-stu-id="3577a-105">`Nothing` means there is no object currently assigned to the variable.</span></span>  
   
-## <a name="initialization"></a><span data-ttu-id="d50ed-106">初始化</span><span class="sxs-lookup"><span data-stu-id="d50ed-106">Initialization</span></span>  
- <span data-ttu-id="d50ed-107">当你的代码开始运行，您的对象变量初始化为`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="d50ed-107">When your code begins running, your object variables are initialized to `Nothing`.</span></span> <span data-ttu-id="d50ed-108">这些声明中包含的初始化被重新初始化时执行的声明语句指定的值。</span><span class="sxs-lookup"><span data-stu-id="d50ed-108">Those whose declarations include initialization are reinitialized to the values you specify when the declaration statements are executed.</span></span>  
+## <a name="initialization"></a><span data-ttu-id="3577a-106">初始化</span><span class="sxs-lookup"><span data-stu-id="3577a-106">Initialization</span></span>  
+ <span data-ttu-id="3577a-107">当你的代码开始运行，您的对象变量初始化为`Nothing`。</span><span class="sxs-lookup"><span data-stu-id="3577a-107">When your code begins running, your object variables are initialized to `Nothing`.</span></span> <span data-ttu-id="3577a-108">这些声明中包含的初始化被重新初始化时执行的声明语句指定的值。</span><span class="sxs-lookup"><span data-stu-id="3577a-108">Those whose declarations include initialization are reinitialized to the values you specify when the declaration statements are executed.</span></span>  
   
- <span data-ttu-id="d50ed-109">通过使用包括在声明中初始化[新建](../../../../visual-basic/language-reference/operators/new-operator.md)关键字。</span><span class="sxs-lookup"><span data-stu-id="d50ed-109">You can include initialization in your declaration by using the [New](../../../../visual-basic/language-reference/operators/new-operator.md) keyword.</span></span> <span data-ttu-id="d50ed-110">下面的声明语句声明对象变量`testUri`和`ver`并向其分配特定的对象。</span><span class="sxs-lookup"><span data-stu-id="d50ed-110">The following declaration statements declare object variables `testUri` and `ver` and assign specific objects to them.</span></span> <span data-ttu-id="d50ed-111">每个可以使用一种合适的类的重载构造函数来初始化对象。</span><span class="sxs-lookup"><span data-stu-id="d50ed-111">Each uses one of the overloaded constructors of the appropriate class to initialize the object.</span></span>  
+ <span data-ttu-id="3577a-109">通过使用包括在声明中初始化[新建](../../../../visual-basic/language-reference/operators/new-operator.md)关键字。</span><span class="sxs-lookup"><span data-stu-id="3577a-109">You can include initialization in your declaration by using the [New](../../../../visual-basic/language-reference/operators/new-operator.md) keyword.</span></span> <span data-ttu-id="3577a-110">下面的声明语句声明对象变量`testUri`和`ver`并向其分配特定的对象。</span><span class="sxs-lookup"><span data-stu-id="3577a-110">The following declaration statements declare object variables `testUri` and `ver` and assign specific objects to them.</span></span> <span data-ttu-id="3577a-111">每个可以使用一种合适的类的重载构造函数来初始化对象。</span><span class="sxs-lookup"><span data-stu-id="3577a-111">Each uses one of the overloaded constructors of the appropriate class to initialize the object.</span></span>  
   
 ```  
 Dim testUri As New System.Uri("https://www.microsoft.com")  
 Dim ver As New System.Version(6, 1, 0)  
 ```  
   
-## <a name="disassociation"></a><span data-ttu-id="d50ed-112">解除关联</span><span class="sxs-lookup"><span data-stu-id="d50ed-112">Disassociation</span></span>  
- <span data-ttu-id="d50ed-113">将对象变量设置为`Nothing`终止与任何特定对象的变量的关联。</span><span class="sxs-lookup"><span data-stu-id="d50ed-113">Setting an object variable to `Nothing` discontinues the association of the variable with any specific object.</span></span> <span data-ttu-id="d50ed-114">这会防止意外更改通过更改变量的对象。</span><span class="sxs-lookup"><span data-stu-id="d50ed-114">This prevents you from accidentally changing the object by changing the variable.</span></span> <span data-ttu-id="d50ed-115">它还允许您测试对象变量是否指向有效的对象，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="d50ed-115">It also allows you to test whether the object variable points to a valid object, as the following example shows.</span></span>  
+## <a name="disassociation"></a><span data-ttu-id="3577a-112">解除关联</span><span class="sxs-lookup"><span data-stu-id="3577a-112">Disassociation</span></span>  
+ <span data-ttu-id="3577a-113">将对象变量设置为`Nothing`终止与任何特定对象的变量的关联。</span><span class="sxs-lookup"><span data-stu-id="3577a-113">Setting an object variable to `Nothing` discontinues the association of the variable with any specific object.</span></span> <span data-ttu-id="3577a-114">这会防止意外更改通过更改变量的对象。</span><span class="sxs-lookup"><span data-stu-id="3577a-114">This prevents you from accidentally changing the object by changing the variable.</span></span> <span data-ttu-id="3577a-115">它还允许您测试对象变量是否指向有效的对象，如以下示例所示。</span><span class="sxs-lookup"><span data-stu-id="3577a-115">It also allows you to test whether the object variable points to a valid object, as the following example shows.</span></span>  
   
 ```  
 If otherObject IsNot Nothing Then  
@@ -52,16 +52,16 @@ If otherObject IsNot Nothing Then
 End If  
 ```  
   
- <span data-ttu-id="d50ed-116">如果您的变量是指该对象是另一个应用程序中，该应用程序是否已终止或只是失效的对象无法确定此测试。</span><span class="sxs-lookup"><span data-stu-id="d50ed-116">If the object your variable refers to is in another application, this test cannot determine whether that application has terminated or just invalidated the object.</span></span>  
+ <span data-ttu-id="3577a-116">如果您的变量是指该对象是另一个应用程序中，该应用程序是否已终止或只是失效的对象无法确定此测试。</span><span class="sxs-lookup"><span data-stu-id="3577a-116">If the object your variable refers to is in another application, this test cannot determine whether that application has terminated or just invalidated the object.</span></span>  
   
- <span data-ttu-id="d50ed-117">值为对象变量`Nothing`也称为*null 引用*。</span><span class="sxs-lookup"><span data-stu-id="d50ed-117">An object variable with a value of `Nothing` is also called a *null reference*.</span></span>  
+ <span data-ttu-id="3577a-117">值为对象变量`Nothing`也称为*null 引用*。</span><span class="sxs-lookup"><span data-stu-id="3577a-117">An object variable with a value of `Nothing` is also called a *null reference*.</span></span>  
   
-## <a name="current-instance"></a><span data-ttu-id="d50ed-118">当前实例</span><span class="sxs-lookup"><span data-stu-id="d50ed-118">Current Instance</span></span>  
- <span data-ttu-id="d50ed-119">*当前实例*的对象是当前正在其中执行代码。</span><span class="sxs-lookup"><span data-stu-id="d50ed-119">The *current instance* of an object is the one in which the code is currently executing.</span></span> <span data-ttu-id="d50ed-120">在过程内执行所有代码，因为当前实例是在其中调用该过程。</span><span class="sxs-lookup"><span data-stu-id="d50ed-120">Since all code executes inside a procedure, the current instance is the one in which the procedure was invoked.</span></span>  
+## <a name="current-instance"></a><span data-ttu-id="3577a-118">当前实例</span><span class="sxs-lookup"><span data-stu-id="3577a-118">Current Instance</span></span>  
+ <span data-ttu-id="3577a-119">*当前实例*的对象是当前正在其中执行代码。</span><span class="sxs-lookup"><span data-stu-id="3577a-119">The *current instance* of an object is the one in which the code is currently executing.</span></span> <span data-ttu-id="3577a-120">在过程内执行所有代码，因为当前实例是在其中调用该过程。</span><span class="sxs-lookup"><span data-stu-id="3577a-120">Since all code executes inside a procedure, the current instance is the one in which the procedure was invoked.</span></span>  
   
- <span data-ttu-id="d50ed-121">`Me`关键字作为对象变量引用当前实例。</span><span class="sxs-lookup"><span data-stu-id="d50ed-121">The `Me` keyword acts as an object variable referring to the current instance.</span></span> <span data-ttu-id="d50ed-122">如果不是一个过程[共享](../../../../visual-basic/language-reference/modifiers/shared.md)，可以使用`Me`关键字来获取当前实例的指针。</span><span class="sxs-lookup"><span data-stu-id="d50ed-122">If a procedure is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), it can use the `Me` keyword to obtain a pointer to the current instance.</span></span> <span data-ttu-id="d50ed-123">共享的过程不能与类的特定实例相关联。</span><span class="sxs-lookup"><span data-stu-id="d50ed-123">Shared procedures cannot be associated with a specific instance of a class.</span></span>  
+ <span data-ttu-id="3577a-121">`Me`关键字作为对象变量引用当前实例。</span><span class="sxs-lookup"><span data-stu-id="3577a-121">The `Me` keyword acts as an object variable referring to the current instance.</span></span> <span data-ttu-id="3577a-122">如果不是一个过程[共享](../../../../visual-basic/language-reference/modifiers/shared.md)，可以使用`Me`关键字来获取当前实例的指针。</span><span class="sxs-lookup"><span data-stu-id="3577a-122">If a procedure is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), it can use the `Me` keyword to obtain a pointer to the current instance.</span></span> <span data-ttu-id="3577a-123">共享的过程不能与类的特定实例相关联。</span><span class="sxs-lookup"><span data-stu-id="3577a-123">Shared procedures cannot be associated with a specific instance of a class.</span></span>  
   
- <span data-ttu-id="d50ed-124">使用`Me`对于当前的实例传递到另一个模块中的过程非常有用。</span><span class="sxs-lookup"><span data-stu-id="d50ed-124">Using `Me` is particularly useful for passing the current instance to a procedure in another module.</span></span> <span data-ttu-id="d50ed-125">例如，假设你有多个 XML 文档，想要将一些标准文本添加到所有这些。</span><span class="sxs-lookup"><span data-stu-id="d50ed-125">For example, suppose you have a number of XML documents and wish to add some standard text to all of them.</span></span> <span data-ttu-id="d50ed-126">下面的示例定义一个过程来执行此操作。</span><span class="sxs-lookup"><span data-stu-id="d50ed-126">The following example defines a procedure to do this.</span></span>  
+ <span data-ttu-id="3577a-124">使用`Me`对于当前的实例传递到另一个模块中的过程非常有用。</span><span class="sxs-lookup"><span data-stu-id="3577a-124">Using `Me` is particularly useful for passing the current instance to a procedure in another module.</span></span> <span data-ttu-id="3577a-125">例如，假设你有多个 XML 文档，想要将一些标准文本添加到所有这些。</span><span class="sxs-lookup"><span data-stu-id="3577a-125">For example, suppose you have a number of XML documents and wish to add some standard text to all of them.</span></span> <span data-ttu-id="3577a-126">下面的示例定义一个过程来执行此操作。</span><span class="sxs-lookup"><span data-stu-id="3577a-126">The following example defines a procedure to do this.</span></span>  
   
 ```  
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)  
@@ -69,17 +69,17 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub  
 ```  
   
- <span data-ttu-id="d50ed-127">然后，每个 XML 文档对象无法调用该过程，并作为参数传递它的当前实例。</span><span class="sxs-lookup"><span data-stu-id="d50ed-127">Every XML document object could then call the procedure and pass its current instance as an argument.</span></span> <span data-ttu-id="d50ed-128">下面的示例演示这一操作。</span><span class="sxs-lookup"><span data-stu-id="d50ed-128">The following example demonstrates this.</span></span>  
+ <span data-ttu-id="3577a-127">然后，每个 XML 文档对象无法调用该过程，并作为参数传递它的当前实例。</span><span class="sxs-lookup"><span data-stu-id="3577a-127">Every XML document object could then call the procedure and pass its current instance as an argument.</span></span> <span data-ttu-id="3577a-128">下面的示例演示这一操作。</span><span class="sxs-lookup"><span data-stu-id="3577a-128">The following example demonstrates this.</span></span>  
   
 ```  
 addStandardText(Me)  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d50ed-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="d50ed-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3577a-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="3577a-129">See also</span></span>
 
-- [<span data-ttu-id="d50ed-130">对象变量</span><span class="sxs-lookup"><span data-stu-id="d50ed-130">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="d50ed-131">对象变量声明</span><span class="sxs-lookup"><span data-stu-id="d50ed-131">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [<span data-ttu-id="d50ed-132">对象变量值</span><span class="sxs-lookup"><span data-stu-id="d50ed-132">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [<span data-ttu-id="d50ed-133">如何：声明对象变量并在 Visual Basic 中为其分配对象</span><span class="sxs-lookup"><span data-stu-id="d50ed-133">How to: Declare an Object Variable and Assign an Object to It in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
-- [<span data-ttu-id="d50ed-134">如何：使对象变量不引用任何实例</span><span class="sxs-lookup"><span data-stu-id="d50ed-134">How to: Make an Object Variable Not Refer to Any Instance</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)
-- [<span data-ttu-id="d50ed-135">Me、My、MyBase 和 MyClass</span><span class="sxs-lookup"><span data-stu-id="d50ed-135">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [<span data-ttu-id="3577a-130">对象变量</span><span class="sxs-lookup"><span data-stu-id="3577a-130">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="3577a-131">对象变量声明</span><span class="sxs-lookup"><span data-stu-id="3577a-131">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [<span data-ttu-id="3577a-132">对象变量值</span><span class="sxs-lookup"><span data-stu-id="3577a-132">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [<span data-ttu-id="3577a-133">如何：声明对象变量并在 Visual Basic 中为其分配对象</span><span class="sxs-lookup"><span data-stu-id="3577a-133">How to: Declare an Object Variable and Assign an Object to It in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [<span data-ttu-id="3577a-134">如何：使对象变量不引用任何实例</span><span class="sxs-lookup"><span data-stu-id="3577a-134">How to: Make an Object Variable Not Refer to Any Instance</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)
+- [<span data-ttu-id="3577a-135">Me、My、MyBase 和 MyClass</span><span class="sxs-lookup"><span data-stu-id="3577a-135">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

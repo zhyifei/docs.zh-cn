@@ -8,27 +8,27 @@ helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
 ms.openlocfilehash: 64bd7771820c2a4073350b7a5189d3a32c4775be
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58832355"
 ---
-# <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a><span data-ttu-id="45673-103">\<interfacename >。\<成员名称 > 已经由基类的实现\<a m e >。</span><span class="sxs-lookup"><span data-stu-id="45673-103">'\<interfacename>.\<membername>' is already implemented by the base class '\<baseclassname>'.</span></span> <span data-ttu-id="45673-104">重新实现\<类型 > 假定</span><span class="sxs-lookup"><span data-stu-id="45673-104">Re-implementation of \<type> assumed</span></span>
-<span data-ttu-id="45673-105">属性、 过程或派生类中的事件使用`Implements`子句，用于指定已在基类中实现的接口成员。</span><span class="sxs-lookup"><span data-stu-id="45673-105">A property, procedure, or event in a derived class uses an `Implements` clause specifying an interface member that is already implemented in the base class.</span></span>  
+# <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a><span data-ttu-id="cacb6-103">\<interfacename >。\<成员名称 > 已经由基类的实现\<a m e >。</span><span class="sxs-lookup"><span data-stu-id="cacb6-103">'\<interfacename>.\<membername>' is already implemented by the base class '\<baseclassname>'.</span></span> <span data-ttu-id="cacb6-104">重新实现\<类型 > 假定</span><span class="sxs-lookup"><span data-stu-id="cacb6-104">Re-implementation of \<type> assumed</span></span>
+<span data-ttu-id="cacb6-105">属性、 过程或派生类中的事件使用`Implements`子句，用于指定已在基类中实现的接口成员。</span><span class="sxs-lookup"><span data-stu-id="cacb6-105">A property, procedure, or event in a derived class uses an `Implements` clause specifying an interface member that is already implemented in the base class.</span></span>  
   
- <span data-ttu-id="45673-106">派生类可以重新实现由其基类实现的接口成员。</span><span class="sxs-lookup"><span data-stu-id="45673-106">A derived class can reimplement an interface member that is implemented by its base class.</span></span> <span data-ttu-id="45673-107">这与重写基类实现不同。</span><span class="sxs-lookup"><span data-stu-id="45673-107">This is not the same as overriding the base class implementation.</span></span> <span data-ttu-id="45673-108">有关详细信息，请参阅 [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="45673-108">For more information, see [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).</span></span>  
+ <span data-ttu-id="cacb6-106">派生类可以重新实现由其基类实现的接口成员。</span><span class="sxs-lookup"><span data-stu-id="cacb6-106">A derived class can reimplement an interface member that is implemented by its base class.</span></span> <span data-ttu-id="cacb6-107">这与重写基类实现不同。</span><span class="sxs-lookup"><span data-stu-id="cacb6-107">This is not the same as overriding the base class implementation.</span></span> <span data-ttu-id="cacb6-108">有关详细信息，请参阅 [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="cacb6-108">For more information, see [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).</span></span>  
   
- <span data-ttu-id="45673-109">默认情况下，此消息是一个警告。</span><span class="sxs-lookup"><span data-stu-id="45673-109">By default, this message is a warning.</span></span> <span data-ttu-id="45673-110">有关隐藏警告或将警告视为错误的信息，请参见 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="45673-110">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="cacb6-109">默认情况下，此消息是一个警告。</span><span class="sxs-lookup"><span data-stu-id="cacb6-109">By default, this message is a warning.</span></span> <span data-ttu-id="cacb6-110">有关隐藏警告或将警告视为错误的信息，请参见 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="cacb6-110">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="45673-111">**错误 ID:** BC42015</span><span class="sxs-lookup"><span data-stu-id="45673-111">**Error ID:** BC42015</span></span>  
+ <span data-ttu-id="cacb6-111">**错误 ID:** BC42015</span><span class="sxs-lookup"><span data-stu-id="cacb6-111">**Error ID:** BC42015</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="45673-112">更正此错误</span><span class="sxs-lookup"><span data-stu-id="45673-112">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cacb6-112">更正此错误</span><span class="sxs-lookup"><span data-stu-id="cacb6-112">To correct this error</span></span>  
   
--   <span data-ttu-id="45673-113">如果要重新实现接口成员，则无需执行任何操作。</span><span class="sxs-lookup"><span data-stu-id="45673-113">If you intend to reimplement the interface member, you do not need to take any action.</span></span> <span data-ttu-id="45673-114">在派生类中的代码可访问重新实现的成员，除非您使用`MyBase`关键字访问基类实现。</span><span class="sxs-lookup"><span data-stu-id="45673-114">Code in your derived class accesses the reimplemented member unless you use the `MyBase` keyword to access the base class implementation.</span></span>  
+-   <span data-ttu-id="cacb6-113">如果要重新实现接口成员，则无需执行任何操作。</span><span class="sxs-lookup"><span data-stu-id="cacb6-113">If you intend to reimplement the interface member, you do not need to take any action.</span></span> <span data-ttu-id="cacb6-114">在派生类中的代码可访问重新实现的成员，除非您使用`MyBase`关键字访问基类实现。</span><span class="sxs-lookup"><span data-stu-id="cacb6-114">Code in your derived class accesses the reimplemented member unless you use the `MyBase` keyword to access the base class implementation.</span></span>  
   
--   <span data-ttu-id="45673-115">如果不打算重新实现接口成员，请从属性、过程或事件声明中删除 `Implements` 子句。</span><span class="sxs-lookup"><span data-stu-id="45673-115">If you do not intend to reimplement the interface member, remove the `Implements` clause from the property, procedure, or event declaration.</span></span>  
+-   <span data-ttu-id="cacb6-115">如果不打算重新实现接口成员，请从属性、过程或事件声明中删除 `Implements` 子句。</span><span class="sxs-lookup"><span data-stu-id="cacb6-115">If you do not intend to reimplement the interface member, remove the `Implements` clause from the property, procedure, or event declaration.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="45673-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="45673-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cacb6-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="cacb6-116">See also</span></span>
 
-- [<span data-ttu-id="45673-117">接口</span><span class="sxs-lookup"><span data-stu-id="45673-117">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [<span data-ttu-id="cacb6-117">接口</span><span class="sxs-lookup"><span data-stu-id="cacb6-117">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
