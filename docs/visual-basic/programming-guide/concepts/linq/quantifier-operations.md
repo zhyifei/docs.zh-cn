@@ -3,10 +3,10 @@ title: 限定符运算 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
 ms.openlocfilehash: e871a77caf0b7cfe361f11462085180c17bf2057
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58816039"
 ---
 # <a name="quantifier-operations-visual-basic"></a>限定符运算 (Visual Basic)
@@ -14,7 +14,7 @@ ms.locfileid: "58816039"
   
  下图描述了两个不同源序列上的两个不同限定符运算。 第一个运算询问是否有一个或多个元素为字符“A”，结果为 `true`。 第二个运算询问是否所有元素都为字符“A”，结果为 `true`。  
   
- ![LINQ 限定符操作](./media/quantifier-operations/linq-quantifier-operations.png)  
+ ![LINQ 限定符运算](./media/quantifier-operations/linq-quantifier-operations.png)  
   
  下节列出了执行限定符运算的标准查询运算符方法。  
   

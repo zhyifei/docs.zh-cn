@@ -3,10 +3,10 @@ title: 设置操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
 ms.openlocfilehash: 59ab09607462c762758e6a246ec218a92e01f5de
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825776"
 ---
 # <a name="set-operations-visual-basic"></a>设置操作 (Visual Basic)
@@ -28,7 +28,7 @@ LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在
 ### <a name="distinct"></a>Distinct  
  下图演示字符序列上 <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> 方法的行为。 返回的序列包含输入序列的唯一元素。  
   
- ![图示： Distinct 的行为&#40;&#41;。](./media/set-operations/distinct-method-behavior.png)  
+ ![显示 Distinct() 的行为的图。](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>Except  
  下图演示 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> 的行为。 返回的序列只包含位于第一个输入序列但不位于第二个输入序列的元素。  
@@ -42,7 +42,7 @@ LINQ 中的集运算是指根据相同或不同集合（或集）中是否存在
 ### <a name="union"></a>联合  
  下图演示对两个字符序列执行的联合操作。 返回的序列包含两个输入序列的唯一元素。  
   
- ![显示两个序列的联合的图。](./media/set-operations/union-operation-two-sequences.png)    
+ ![显示两个序列的并集的图。](./media/set-operations/union-operation-two-sequences.png)    
 ## <a name="query-expression-syntax-example"></a>查询表达式语法示例  
  下面的示例使用`Distinct`LINQ 查询从整数列表返回的唯一数字中的子句。  
   

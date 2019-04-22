@@ -3,10 +3,10 @@ title: 可区分联合
 description: 了解如何使用F#可区分联合。
 ms.date: 05/16/2016
 ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821421"
 ---
 # <a name="discriminated-unions"></a>可区分联合
@@ -26,7 +26,7 @@ type [accessibility-modifier] type-name =
 
 ## <a name="remarks"></a>备注
 
-可区分的联合类似于其他语言中的联合类型，但有差异。 作为使用 c + + 中的联合类型或在 Visual Basic 中的变量类型的值中存储的数据不被固定;它可以是若干个不同选项之一。 与这些其他语言中的联合不同，为每个可能的选项提供*用例标识符*。 用例标识符是有关此类型的对象可能是; 的值的各种可能的类型名称值是可选的。 如果值不存在，这种情况相当于枚举用例。 如果值存在，则每个值可以是单个值的指定的类型或聚合多个字段的相同或不同类型的元组。 可以为单个字段命名，但名称是可选的即使在相同情况下的其他字段的名称。
+可区分的联合类似于其他语言中的联合类型，但有差异。 中的联合类型与C++或变体类型在 Visual Basic 中，不固定的值中存储的数据;它可以是若干个不同选项之一。 与这些其他语言中的联合不同，为每个可能的选项提供*用例标识符*。 用例标识符是有关此类型的对象可能是; 的值的各种可能的类型名称值是可选的。 如果值不存在，这种情况相当于枚举用例。 如果值存在，则每个值可以是单个值的指定的类型或聚合多个字段的相同或不同类型的元组。 可以为单个字段命名，但名称是可选的即使在相同情况下的其他字段的名称。
 
 可区分联合可访问性默认为`public`。
 

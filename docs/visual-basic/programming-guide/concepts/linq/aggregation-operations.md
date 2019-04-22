@@ -3,10 +3,10 @@ title: 聚合操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
 ms.openlocfilehash: 72268e27fdf6d573279e98438fd884a076e0c8a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58817235"
 ---
 # <a name="aggregation-operations-visual-basic"></a>聚合操作 (Visual Basic)
@@ -14,7 +14,7 @@ ms.locfileid: "58817235"
   
  下图显示对数字序列进行两种不同聚合操作所得结果。 第一个操作累加数字。 第二个操作返回序列中的最大值。  
   
- ![显示 LINQ 聚合操作的图例。](./media/aggregation-operations/linq-aggregation-operations.png)  
+ ![显示 LINQ 聚合运算的插图。](./media/aggregation-operations/linq-aggregation-operations.png)  
   
  下节列出了执行聚合运算的标准查询运算符方法。  
   

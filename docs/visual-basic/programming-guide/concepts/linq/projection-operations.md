@@ -3,10 +3,10 @@ title: 投影运算 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
 ms.openlocfilehash: e2af45f9cbbed9eb88095a30e2b77a7730740898
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820979"
 ---
 # <a name="projection-operations-visual-basic"></a>投影运算 (Visual Basic)
@@ -85,11 +85,11 @@ MsgBox(sb.ToString())
   
  下图描述 `Select()` 如何返回一个与源集合具有相同元素数目的集合。  
   
- ![显示选择的操作的图&#40;&#41;](./media/projection-operations/select-action-graphic.png)  
+ ![显示 Select() 的操作的图](./media/projection-operations/select-action-graphic.png)  
   
  下图描述 `SelectMany()` 如何将中间数组序列串联为一个最终结果值，其中包含每个中间数组中的每个值。  
   
- ![显示 SelectMany 操作&#40;&#41;。](./media/projection-operations/select-many-action-graphic.png )  
+ ![显示 SelectMany() 的操作的图。](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>代码示例  
  下面的示例比较 `Select()` 和 `SelectMany()` 的行为。 代码通过从源集合的每个花卉名称列表中提取前两项来创建一个“花束”。 此示例中，transform 函数 <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> 使用的“单值”本身即是值的集合。 这需要额外的 `For Each` 循环，以便枚举每个子序列中的每个字符串。  

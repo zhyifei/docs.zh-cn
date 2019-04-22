@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827362"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>按类别列出的 Visual Basic 编译器选项
@@ -18,7 +18,7 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
   
 ## <a name="compiler-output"></a>编译器输出  
   
-|Option|用途|  
+|选项|用途|  
 |---|---|  
 |[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|禁止显示编译器横幅信息。|  
 |[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|显示使用 UTF-8 编码的编译器输出。|  
@@ -28,14 +28,14 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
   
 ## <a name="optimization"></a>优化  
   
-|Option|用途|  
+|选项|用途|  
 |---|---|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|指定输出文件各节的对齐位置。|  
 |[-optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|启用/禁用优化。|  
   
 ## <a name="output-files"></a>输出文件  
   
-|Option|用途|  
+|选项|用途|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|处理 XML 文件的文档注释。|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|如果输入相同，则会导致编译器输出的程序集其二进制内容在整个编译中相同。|
@@ -47,7 +47,7 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
   
 ## <a name="net-assemblies"></a>.NET 程序集  
   
-|Option|用途|  
+|选项|用途|  
 |---|---|  
 |[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|使编译器让指定文件中的所有类型信息可供当前正在编译的项目使用。|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|指定程序集是完全签名的还是部分签名的。|  
@@ -62,7 +62,7 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
   
 ## <a name="debuggingerror-checking"></a>调试/错误检查  
   
-|Option|用途|  
+|选项|用途|  
 |---|---|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|创建一个文件，其中包含可以轻松报告 bug 的信息。|  
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|生成调试信息。|  
@@ -74,14 +74,14 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
   
 ## <a name="help"></a>Help  
   
-|Option|用途|  
+|选项|用途|  
 |---|---|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|显示编译器选项。 此命令等同于指定 `-help` 选项。 未进行编译。|  
 |[-help](../../../visual-basic/reference/command-line-compiler/help.md)|显示编译器选项。 此命令等同于指定 `-?` 选项。 未进行编译。|  
   
 ## <a name="language"></a>语言  
   
-|Option|用途|  
+|选项|用途|  
 |---|---|  
 |[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定语言版本：9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|强制执行显式声明变量。|  
@@ -91,13 +91,13 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
   
 ## <a name="preprocessor"></a>预处理器  
   
-|Option|用途|  
+|选项|用途|  
 |---|---|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|定义条件编译的符号。|  
   
 ## <a name="resources"></a>资源  
   
-|Option|用途|  
+|选项|用途|  
 |---|---|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|创建指向托管资源的链接。|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|将托管资源嵌入程序集。|  
@@ -106,7 +106,7 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
   
 ## <a name="miscellaneous"></a>杂项  
   
-|Option|用途|  
+|选项|用途|  
 |---|---|  
 |[@（指定响应文件）](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|指定响应文件。|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|指定的 DLL 的基址。|  
