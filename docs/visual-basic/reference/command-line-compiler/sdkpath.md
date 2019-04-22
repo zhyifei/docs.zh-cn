@@ -10,43 +10,43 @@ helpviewer_keywords:
 - sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
 ms.openlocfilehash: 2024ccadb06fdea0c24d9d304c2fe040f8cce1d5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814317"
 ---
-# <a name="-sdkpath"></a><span data-ttu-id="f55ca-102">-sdkpath</span><span class="sxs-lookup"><span data-stu-id="f55ca-102">-sdkpath</span></span>
-<span data-ttu-id="f55ca-103">指定 mscorlib.dll 和 Microsoft.VisualBasic.dll 的位置。</span><span class="sxs-lookup"><span data-stu-id="f55ca-103">Specifies the location of mscorlib.dll and Microsoft.VisualBasic.dll.</span></span>  
+# <a name="-sdkpath"></a><span data-ttu-id="3260f-102">-sdkpath</span><span class="sxs-lookup"><span data-stu-id="3260f-102">-sdkpath</span></span>
+<span data-ttu-id="3260f-103">指定 mscorlib.dll 和 Microsoft.VisualBasic.dll 的位置。</span><span class="sxs-lookup"><span data-stu-id="3260f-103">Specifies the location of mscorlib.dll and Microsoft.VisualBasic.dll.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f55ca-104">语法</span><span class="sxs-lookup"><span data-stu-id="f55ca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3260f-104">语法</span><span class="sxs-lookup"><span data-stu-id="3260f-104">Syntax</span></span>  
   
 ```  
 -sdkpath:path  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="f55ca-105">自变量</span><span class="sxs-lookup"><span data-stu-id="f55ca-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="3260f-105">自变量</span><span class="sxs-lookup"><span data-stu-id="3260f-105">Arguments</span></span>  
  `path`  
- <span data-ttu-id="f55ca-106">包含 mscorlib.dll 和 Microsoft.VisualBasic.dll 用于编译的版本的目录。</span><span class="sxs-lookup"><span data-stu-id="f55ca-106">The directory containing the versions of mscorlib.dll and Microsoft.VisualBasic.dll to use for compilation.</span></span> <span data-ttu-id="f55ca-107">它才不验证此路径。</span><span class="sxs-lookup"><span data-stu-id="f55ca-107">This path is not verified until it is loaded.</span></span> <span data-ttu-id="f55ca-108">将目录名称括在引号 ("") 如果包含空格。</span><span class="sxs-lookup"><span data-stu-id="f55ca-108">Enclose the directory name in quotation marks (" ") if it contains a space.</span></span>  
+ <span data-ttu-id="3260f-106">包含 mscorlib.dll 和 Microsoft.VisualBasic.dll 用于编译的版本的目录。</span><span class="sxs-lookup"><span data-stu-id="3260f-106">The directory containing the versions of mscorlib.dll and Microsoft.VisualBasic.dll to use for compilation.</span></span> <span data-ttu-id="3260f-107">它才不验证此路径。</span><span class="sxs-lookup"><span data-stu-id="3260f-107">This path is not verified until it is loaded.</span></span> <span data-ttu-id="3260f-108">将目录名称括在引号 ("") 如果包含空格。</span><span class="sxs-lookup"><span data-stu-id="3260f-108">Enclose the directory name in quotation marks (" ") if it contains a space.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f55ca-109">备注</span><span class="sxs-lookup"><span data-stu-id="f55ca-109">Remarks</span></span>  
- <span data-ttu-id="f55ca-110">此选项会告知 Visual Basic 编译器从非默认位置加载的 mscorlib.dll 和 Microsoft.VisualBasic.dll 文件。</span><span class="sxs-lookup"><span data-stu-id="f55ca-110">This option tells the Visual Basic compiler to load the mscorlib.dll and Microsoft.VisualBasic.dll files from a non-default location.</span></span> <span data-ttu-id="f55ca-111">`-sdkpath`选项旨在用于[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)。</span><span class="sxs-lookup"><span data-stu-id="f55ca-111">The `-sdkpath` option was designed to be used with [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md).</span></span> <span data-ttu-id="f55ca-112">[!INCLUDE[Compact](~/includes/compact-md.md)]使用不同版本的这些支持库，以避免使用类型和语言功能的设备上找不到。</span><span class="sxs-lookup"><span data-stu-id="f55ca-112">The [!INCLUDE[Compact](~/includes/compact-md.md)] uses different versions of these support libraries to avoid the use of types and language features not found on the devices.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3260f-109">备注</span><span class="sxs-lookup"><span data-stu-id="3260f-109">Remarks</span></span>  
+ <span data-ttu-id="3260f-110">此选项会告知 Visual Basic 编译器从非默认位置加载的 mscorlib.dll 和 Microsoft.VisualBasic.dll 文件。</span><span class="sxs-lookup"><span data-stu-id="3260f-110">This option tells the Visual Basic compiler to load the mscorlib.dll and Microsoft.VisualBasic.dll files from a non-default location.</span></span> <span data-ttu-id="3260f-111">`-sdkpath`选项旨在用于[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)。</span><span class="sxs-lookup"><span data-stu-id="3260f-111">The `-sdkpath` option was designed to be used with [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md).</span></span> <span data-ttu-id="3260f-112">[!INCLUDE[Compact](~/includes/compact-md.md)]使用不同版本的这些支持库，以避免使用类型和语言功能的设备上找不到。</span><span class="sxs-lookup"><span data-stu-id="3260f-112">The [!INCLUDE[Compact](~/includes/compact-md.md)] uses different versions of these support libraries to avoid the use of types and language features not found on the devices.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f55ca-113">`-sdkpath`选项不适用于从 Visual Studio 开发环境中，仅当从命令行编译时便可。</span><span class="sxs-lookup"><span data-stu-id="f55ca-113">The `-sdkpath` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span> <span data-ttu-id="f55ca-114">`-sdkpath`加载 Visual Basic 设备项目时，设置选项。</span><span class="sxs-lookup"><span data-stu-id="f55ca-114">The `-sdkpath` option is set when a Visual Basic device project is loaded.</span></span>  
+>  <span data-ttu-id="3260f-113">`-sdkpath`选项不适用于从 Visual Studio 开发环境中，仅当从命令行编译时便可。</span><span class="sxs-lookup"><span data-stu-id="3260f-113">The `-sdkpath` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span> <span data-ttu-id="3260f-114">`-sdkpath`加载 Visual Basic 设备项目时，设置选项。</span><span class="sxs-lookup"><span data-stu-id="3260f-114">The `-sdkpath` option is set when a Visual Basic device project is loaded.</span></span>  
   
- <span data-ttu-id="f55ca-115">您可以指定通过使用编译器应编译而无需对 Visual Basic 运行时库的引用`-vbruntime`编译器选项。</span><span class="sxs-lookup"><span data-stu-id="f55ca-115">You can specify that the compiler should compile without a reference to the Visual Basic Runtime Library by using the `-vbruntime` compiler option.</span></span> <span data-ttu-id="f55ca-116">有关详细信息，请参阅[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)。</span><span class="sxs-lookup"><span data-stu-id="f55ca-116">For more information, see [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).</span></span>  
+ <span data-ttu-id="3260f-115">您可以指定通过使用编译器应编译而无需对 Visual Basic 运行时库的引用`-vbruntime`编译器选项。</span><span class="sxs-lookup"><span data-stu-id="3260f-115">You can specify that the compiler should compile without a reference to the Visual Basic Runtime Library by using the `-vbruntime` compiler option.</span></span> <span data-ttu-id="3260f-116">有关详细信息，请参阅[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)。</span><span class="sxs-lookup"><span data-stu-id="3260f-116">For more information, see [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f55ca-117">示例</span><span class="sxs-lookup"><span data-stu-id="f55ca-117">Example</span></span>  
- <span data-ttu-id="f55ca-118">下面的代码编译`Myfile.vb`与[!INCLUDE[Compact](~/includes/compact-md.md)]，使用版本的 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的默认安装目录中找到[!INCLUDE[Compact](~/includes/compact-md.md)]C 驱动器上。</span><span class="sxs-lookup"><span data-stu-id="f55ca-118">The following code compiles `Myfile.vb` with the [!INCLUDE[Compact](~/includes/compact-md.md)], using the versions of Mscorlib.dll and Microsoft.VisualBasic.dll found in the default installation directory of the [!INCLUDE[Compact](~/includes/compact-md.md)] on the C drive.</span></span> <span data-ttu-id="f55ca-119">通常情况下，将使用最新版本的[!INCLUDE[Compact](~/includes/compact-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="f55ca-119">Typically, you would use the most recent version of the [!INCLUDE[Compact](~/includes/compact-md.md)].</span></span>  
+## <a name="example"></a><span data-ttu-id="3260f-117">示例</span><span class="sxs-lookup"><span data-stu-id="3260f-117">Example</span></span>  
+ <span data-ttu-id="3260f-118">下面的代码编译`Myfile.vb`与[!INCLUDE[Compact](~/includes/compact-md.md)]，使用版本的 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的默认安装目录中找到[!INCLUDE[Compact](~/includes/compact-md.md)]C 驱动器上。</span><span class="sxs-lookup"><span data-stu-id="3260f-118">The following code compiles `Myfile.vb` with the [!INCLUDE[Compact](~/includes/compact-md.md)], using the versions of Mscorlib.dll and Microsoft.VisualBasic.dll found in the default installation directory of the [!INCLUDE[Compact](~/includes/compact-md.md)] on the C drive.</span></span> <span data-ttu-id="3260f-119">通常情况下，将使用最新版本的[!INCLUDE[Compact](~/includes/compact-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="3260f-119">Typically, you would use the most recent version of the [!INCLUDE[Compact](~/includes/compact-md.md)].</span></span>  
   
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f55ca-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="f55ca-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3260f-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="3260f-120">See also</span></span>
 
-- [<span data-ttu-id="f55ca-121">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="f55ca-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="f55ca-122">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="f55ca-122">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [<span data-ttu-id="f55ca-123">-netcf</span><span class="sxs-lookup"><span data-stu-id="f55ca-123">-netcf</span></span>](../../../visual-basic/reference/command-line-compiler/netcf.md)
-- [<span data-ttu-id="f55ca-124">-vbruntime</span><span class="sxs-lookup"><span data-stu-id="f55ca-124">-vbruntime</span></span>](../../../visual-basic/reference/command-line-compiler/vbruntime.md)
+- [<span data-ttu-id="3260f-121">Visual Basic 命令行编译器</span><span class="sxs-lookup"><span data-stu-id="3260f-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="3260f-122">示例编译命令行</span><span class="sxs-lookup"><span data-stu-id="3260f-122">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="3260f-123">-netcf</span><span class="sxs-lookup"><span data-stu-id="3260f-123">-netcf</span></span>](../../../visual-basic/reference/command-line-compiler/netcf.md)
+- [<span data-ttu-id="3260f-124">-vbruntime</span><span class="sxs-lookup"><span data-stu-id="3260f-124">-vbruntime</span></span>](../../../visual-basic/reference/command-line-compiler/vbruntime.md)

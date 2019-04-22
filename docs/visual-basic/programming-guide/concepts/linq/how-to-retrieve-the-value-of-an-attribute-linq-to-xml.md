@@ -3,17 +3,17 @@ title: 如何：检索特性 (LINQ to XML) 的值 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f4b3790-c83f-4eb3-a889-e3587edf3ca1
 ms.openlocfilehash: 7cdd3e1f3e4c15d99511e944fd9bc2faac17dc5c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824346"
 ---
-# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a><span data-ttu-id="0cfc5-102">如何：检索特性 (LINQ to XML) 的值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0cfc5-102">How to: Retrieve the Value of an Attribute (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="0cfc5-103">本主题说明如何获取属性的值。</span><span class="sxs-lookup"><span data-stu-id="0cfc5-103">This topic shows how to obtain the value of attributes.</span></span> <span data-ttu-id="0cfc5-104">主要有两种方法：可以将 <xref:System.Xml.Linq.XAttribute> 强制转换为所需的类型；然后，显式转换运算符将元素或属性的内容转换为指定的类型。</span><span class="sxs-lookup"><span data-stu-id="0cfc5-104">There are two main ways: You can cast an <xref:System.Xml.Linq.XAttribute> to the desired type; the explicit conversion operator then converts the contents of the element or attribute to the specified type.</span></span> <span data-ttu-id="0cfc5-105">此外，还可以使用 <xref:System.Xml.Linq.XAttribute.Value%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="0cfc5-105">Alternatively, you can use the <xref:System.Xml.Linq.XAttribute.Value%2A> property.</span></span> <span data-ttu-id="0cfc5-106">但是，强制转换通常是更好的方法。</span><span class="sxs-lookup"><span data-stu-id="0cfc5-106">However, casting is generally the better approach.</span></span> <span data-ttu-id="0cfc5-107">在检索可能存在也可能不存在的属性的值时，如果将属性强制转换为可以为 null 的类型，则代码会更易于编写。</span><span class="sxs-lookup"><span data-stu-id="0cfc5-107">If you cast the attribute to a nullable type, the code is simpler to write when retrieving the value of an attribute that might or might not exist.</span></span> <span data-ttu-id="0cfc5-108">有关此技术的示例，请参见[如何：检索元素 (LINQ to XML) 的值 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="0cfc5-108">For examples of this technique, see [How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).</span></span>  
+# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a><span data-ttu-id="612a0-102">如何：检索特性 (LINQ to XML) 的值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="612a0-102">How to: Retrieve the Value of an Attribute (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="612a0-103">本主题说明如何获取属性的值。</span><span class="sxs-lookup"><span data-stu-id="612a0-103">This topic shows how to obtain the value of attributes.</span></span> <span data-ttu-id="612a0-104">主要有两种方法：可以将 <xref:System.Xml.Linq.XAttribute> 强制转换为所需的类型；然后，显式转换运算符将元素或属性的内容转换为指定的类型。</span><span class="sxs-lookup"><span data-stu-id="612a0-104">There are two main ways: You can cast an <xref:System.Xml.Linq.XAttribute> to the desired type; the explicit conversion operator then converts the contents of the element or attribute to the specified type.</span></span> <span data-ttu-id="612a0-105">此外，还可以使用 <xref:System.Xml.Linq.XAttribute.Value%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="612a0-105">Alternatively, you can use the <xref:System.Xml.Linq.XAttribute.Value%2A> property.</span></span> <span data-ttu-id="612a0-106">但是，强制转换通常是更好的方法。</span><span class="sxs-lookup"><span data-stu-id="612a0-106">However, casting is generally the better approach.</span></span> <span data-ttu-id="612a0-107">在检索可能存在也可能不存在的属性的值时，如果将属性强制转换为可以为 null 的类型，则代码会更易于编写。</span><span class="sxs-lookup"><span data-stu-id="612a0-107">If you cast the attribute to a nullable type, the code is simpler to write when retrieving the value of an attribute that might or might not exist.</span></span> <span data-ttu-id="612a0-108">有关此技术的示例，请参见[如何：检索元素 (LINQ to XML) 的值 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="612a0-108">For examples of this technique, see [How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0cfc5-109">示例</span><span class="sxs-lookup"><span data-stu-id="0cfc5-109">Example</span></span>  
- <span data-ttu-id="0cfc5-110">在 Visual Basic 中，可以使用集成的属性 (Attribute) 属性 (Property) 来检索属性 (Attribute) 的值。</span><span class="sxs-lookup"><span data-stu-id="0cfc5-110">In Visual Basic, you can use the integrated attribute property to retrieve the value of an attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="612a0-109">示例</span><span class="sxs-lookup"><span data-stu-id="612a0-109">Example</span></span>  
+ <span data-ttu-id="612a0-110">在 Visual Basic 中，可以使用集成的属性 (Attribute) 属性 (Property) 来检索属性 (Attribute) 的值。</span><span class="sxs-lookup"><span data-stu-id="612a0-110">In Visual Basic, you can use the integrated attribute property to retrieve the value of an attribute.</span></span>  
   
 ```vb  
 Dim root As XElement = <Root Attr="abcde"/>  
@@ -22,15 +22,15 @@ Dim str As String = root.@Attr
 Console.WriteLine(str)  
 ```  
   
- <span data-ttu-id="0cfc5-111">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="0cfc5-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="612a0-111">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="612a0-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Root Attr="abcde" />  
 abcde  
 ```  
   
-## <a name="example"></a><span data-ttu-id="0cfc5-112">示例</span><span class="sxs-lookup"><span data-stu-id="0cfc5-112">Example</span></span>  
- <span data-ttu-id="0cfc5-113">在 Visual Basic 中，可以使用集成的属性 (Attribute) 属性 (Property) 来设置属性 (Attribute) 的值。</span><span class="sxs-lookup"><span data-stu-id="0cfc5-113">In Visual Basic, you can use the integrated attribute property to set the value of an attribute.</span></span> <span data-ttu-id="0cfc5-114">此外，如果使用集成的属性 (Attribute) 属性 (Property) 来设置不存在的属性 (Attribute) 的值，则会创建该属性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="0cfc5-114">Further, if you use the integrated attribute property to set the value of an attribute that does not exist, the attribute will be created.</span></span>  
+## <a name="example"></a><span data-ttu-id="612a0-112">示例</span><span class="sxs-lookup"><span data-stu-id="612a0-112">Example</span></span>  
+ <span data-ttu-id="612a0-113">在 Visual Basic 中，可以使用集成的属性 (Attribute) 属性 (Property) 来设置属性 (Attribute) 的值。</span><span class="sxs-lookup"><span data-stu-id="612a0-113">In Visual Basic, you can use the integrated attribute property to set the value of an attribute.</span></span> <span data-ttu-id="612a0-114">此外，如果使用集成的属性 (Attribute) 属性 (Property) 来设置不存在的属性 (Attribute) 的值，则会创建该属性 (Attribute)。</span><span class="sxs-lookup"><span data-stu-id="612a0-114">Further, if you use the integrated attribute property to set the value of an attribute that does not exist, the attribute will be created.</span></span>  
   
 ```vb  
 Dim root As XElement = <Root Att1="content"/>  
@@ -39,14 +39,14 @@ root.@Att2 = "new attribute"
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="0cfc5-115">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="0cfc5-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="612a0-115">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="612a0-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root Att1="new content" Att2="new attribute" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="0cfc5-116">示例</span><span class="sxs-lookup"><span data-stu-id="0cfc5-116">Example</span></span>  
- <span data-ttu-id="0cfc5-117">下面的示例演示在属性处于命名空间中时，如何检索属性的值。</span><span class="sxs-lookup"><span data-stu-id="0cfc5-117">The following example shows how to retrieve the value of an attribute where the attribute is in a namespace.</span></span> <span data-ttu-id="0cfc5-118">有关详细信息，请参阅[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="0cfc5-118">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="612a0-116">示例</span><span class="sxs-lookup"><span data-stu-id="612a0-116">Example</span></span>  
+ <span data-ttu-id="612a0-117">下面的示例演示在属性处于命名空间中时，如何检索属性的值。</span><span class="sxs-lookup"><span data-stu-id="612a0-117">The following example shows how to retrieve the value of an attribute where the attribute is in a namespace.</span></span> <span data-ttu-id="612a0-118">有关详细信息，请参阅[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="612a0-118">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -60,12 +60,12 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="0cfc5-119">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="0cfc5-119">This example produces the following output:</span></span>  
+ <span data-ttu-id="612a0-119">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="612a0-119">This example produces the following output:</span></span>  
   
 ```  
 abcde  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0cfc5-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="0cfc5-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="612a0-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="612a0-120">See also</span></span>
 
-- [<span data-ttu-id="0cfc5-121">LINQ to XML 轴 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0cfc5-121">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [<span data-ttu-id="612a0-121">LINQ to XML 轴 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="612a0-121">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

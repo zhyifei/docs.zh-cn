@@ -3,21 +3,21 @@ title: 如何：查找子元素 (XPATH-LINQ to XML) 的后代 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
 ms.openlocfilehash: 178729640898556244657e6e2917373825a4e51e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58819003"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="adcf0-102">如何：查找子元素 (XPATH-LINQ to XML) 的后代 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="adcf0-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="adcf0-103">本主题演示如何获取具有特定名称的子元素的后代元素。</span><span class="sxs-lookup"><span data-stu-id="adcf0-103">This topic shows how to get the descendant elements of a child element with a particular name.</span></span>  
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="925dd-102">如何：查找子元素 (XPATH-LINQ to XML) 的后代 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="925dd-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="925dd-103">本主题演示如何获取具有特定名称的子元素的后代元素。</span><span class="sxs-lookup"><span data-stu-id="925dd-103">This topic shows how to get the descendant elements of a child element with a particular name.</span></span>  
   
- <span data-ttu-id="adcf0-104">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="adcf0-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="925dd-104">XPath 表达式为：</span><span class="sxs-lookup"><span data-stu-id="925dd-104">The XPath expression is:</span></span>  
   
  `./Paragraph//Text/text()`  
   
-## <a name="example"></a><span data-ttu-id="adcf0-105">示例</span><span class="sxs-lookup"><span data-stu-id="adcf0-105">Example</span></span>  
- <span data-ttu-id="adcf0-106">本示例模拟从文字处理文档的 XML 表示形式中提取文本的问题。</span><span class="sxs-lookup"><span data-stu-id="adcf0-106">This example simulates the problems of extracting text from an XML representation of a word processing document.</span></span> <span data-ttu-id="adcf0-107">示例首先选择所有 `Paragraph` 元素，然后选择每个 `Text` 元素的所有 `Paragraph` 后代元素。</span><span class="sxs-lookup"><span data-stu-id="adcf0-107">It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element.</span></span> <span data-ttu-id="adcf0-108">它不选择 `Text` 元素的后代 `Comment` 元素。</span><span class="sxs-lookup"><span data-stu-id="adcf0-108">This doesn't select the descendant `Text` elements of the `Comment` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="925dd-105">示例</span><span class="sxs-lookup"><span data-stu-id="925dd-105">Example</span></span>  
+ <span data-ttu-id="925dd-106">本示例模拟从文字处理文档的 XML 表示形式中提取文本的问题。</span><span class="sxs-lookup"><span data-stu-id="925dd-106">This example simulates the problems of extracting text from an XML representation of a word processing document.</span></span> <span data-ttu-id="925dd-107">示例首先选择所有 `Paragraph` 元素，然后选择每个 `Text` 元素的所有 `Paragraph` 后代元素。</span><span class="sxs-lookup"><span data-stu-id="925dd-107">It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element.</span></span> <span data-ttu-id="925dd-108">它不选择 `Text` 元素的后代 `Comment` 元素。</span><span class="sxs-lookup"><span data-stu-id="925dd-108">This doesn't select the descendant `Text` elements of the `Comment` element.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -62,13 +62,13 @@ End If
 Console.WriteLine(str2)  
 ```  
   
- <span data-ttu-id="adcf0-109">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="adcf0-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="925dd-109">该示例产生下面的输出：</span><span class="sxs-lookup"><span data-stu-id="925dd-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="adcf0-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="adcf0-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="925dd-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="925dd-110">See also</span></span>
 
-- [<span data-ttu-id="adcf0-111">LINQ to XML 针对 XPath 用户 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="adcf0-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="925dd-111">LINQ to XML 针对 XPath 用户 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="925dd-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

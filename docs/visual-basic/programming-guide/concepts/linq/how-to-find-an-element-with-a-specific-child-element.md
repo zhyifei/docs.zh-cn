@@ -3,19 +3,19 @@ title: 如何：查找具有特定子元素的元素 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
 ms.openlocfilehash: 1b226f009776f397f73ab9ee7826484eb8869f28
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827050"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a><span data-ttu-id="f5e0e-102">如何：查找具有特定子元素的元素 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5e0e-102">How to: Find an Element with a Specific Child Element (Visual Basic)</span></span>
-<span data-ttu-id="f5e0e-103">本主题演示如何查找特定元素，该特定元素包含具有特定值的子元素。</span><span class="sxs-lookup"><span data-stu-id="f5e0e-103">This topic shows how to find a particular element that has a child element with a specific value.</span></span>  
+# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a><span data-ttu-id="6a1e4-102">如何：查找具有特定子元素的元素 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6a1e4-102">How to: Find an Element with a Specific Child Element (Visual Basic)</span></span>
+<span data-ttu-id="6a1e4-103">本主题演示如何查找特定元素，该特定元素包含具有特定值的子元素。</span><span class="sxs-lookup"><span data-stu-id="6a1e4-103">This topic shows how to find a particular element that has a child element with a specific value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f5e0e-104">示例</span><span class="sxs-lookup"><span data-stu-id="f5e0e-104">Example</span></span>  
- <span data-ttu-id="f5e0e-105">示例查找 `Test` 元素，该元素包含具有值为“Examp2.EXE”的 `CommandLine` 子元素。</span><span class="sxs-lookup"><span data-stu-id="f5e0e-105">The example finds the `Test` element that has a `CommandLine` child element with the value of "Examp2.EXE".</span></span>  
+## <a name="example"></a><span data-ttu-id="6a1e4-104">示例</span><span class="sxs-lookup"><span data-stu-id="6a1e4-104">Example</span></span>  
+ <span data-ttu-id="6a1e4-105">示例查找 `Test` 元素，该元素包含具有值为“Examp2.EXE”的 `CommandLine` 子元素。</span><span class="sxs-lookup"><span data-stu-id="6a1e4-105">The example finds the `Test` element that has a `CommandLine` child element with the value of "Examp2.EXE".</span></span>  
   
- <span data-ttu-id="f5e0e-106">此示例使用下面的 XML 文档：[示例 XML 文件：测试配置 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="f5e0e-106">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="6a1e4-106">此示例使用下面的 XML 文档：[示例 XML 文件：测试配置 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="6a1e4-106">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim root As XElement = XElement.Load("TestConfig.xml")  
@@ -28,19 +28,19 @@ For Each el as XElement In tests
 Next  
 ```  
   
- <span data-ttu-id="f5e0e-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="f5e0e-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="6a1e4-107">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="6a1e4-107">This code produces the following output:</span></span>  
   
 ```  
 0002  
 0006  
 ```  
   
- <span data-ttu-id="f5e0e-108">请注意，此示例中使用[XML 子轴属性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)，则[XML 特性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)，并[XML 值属性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。</span><span class="sxs-lookup"><span data-stu-id="f5e0e-108">Note that this example uses the [XML Child axis property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), the [XML Attribute axis property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), and the [XML Value property](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
+ <span data-ttu-id="6a1e4-108">请注意，此示例中使用[XML 子轴属性](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)，则[XML 特性轴属性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)，并[XML 值属性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。</span><span class="sxs-lookup"><span data-stu-id="6a1e4-108">Note that this example uses the [XML Child axis property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), the [XML Attribute axis property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), and the [XML Value property](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f5e0e-109">示例</span><span class="sxs-lookup"><span data-stu-id="f5e0e-109">Example</span></span>  
- <span data-ttu-id="f5e0e-110">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="f5e0e-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="f5e0e-111">有关详细信息，请参阅[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="f5e0e-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="6a1e4-109">示例</span><span class="sxs-lookup"><span data-stu-id="6a1e4-109">Example</span></span>  
+ <span data-ttu-id="6a1e4-110">下面的示例演示如何对命名空间中的 XML 进行同样的查询。</span><span class="sxs-lookup"><span data-stu-id="6a1e4-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="6a1e4-111">有关详细信息，请参阅[使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="6a1e4-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="f5e0e-112">此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的测试配置](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="f5e0e-112">This example uses the following XML document: [Sample XML File: Test Configuration in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="6a1e4-112">此示例使用下面的 XML 文档：[示例 XML 文件：命名空间中的测试配置](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="6a1e4-112">This example uses the following XML document: [Sample XML File: Test Configuration in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -59,17 +59,17 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="f5e0e-113">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="f5e0e-113">This code produces the following output:</span></span>  
+ <span data-ttu-id="6a1e4-113">此代码生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="6a1e4-113">This code produces the following output:</span></span>  
   
 ```  
 0002  
 0006  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f5e0e-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="f5e0e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a1e4-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="6a1e4-114">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [<span data-ttu-id="f5e0e-115">基本查询 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5e0e-115">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [<span data-ttu-id="f5e0e-116">标准查询运算符概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5e0e-116">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="f5e0e-117">投影运算 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5e0e-117">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [<span data-ttu-id="6a1e4-115">基本查询 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6a1e4-115">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="6a1e4-116">标准查询运算符概述 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6a1e4-116">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="6a1e4-117">投影运算 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6a1e4-117">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

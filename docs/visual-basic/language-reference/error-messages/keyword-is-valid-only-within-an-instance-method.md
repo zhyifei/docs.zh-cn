@@ -8,23 +8,23 @@ helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
 ms.openlocfilehash: 5ff82b932f9bea4c7fd087651e34277ef94bc27c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820707"
 ---
-# <a name="keyword-is-valid-only-within-an-instance-method"></a><span data-ttu-id="d193d-102">\<关键字 > 只在实例方法中有效</span><span class="sxs-lookup"><span data-stu-id="d193d-102">'\<keyword>' is valid only within an instance method</span></span>
-<span data-ttu-id="d193d-103">`Me`， `MyClass`，和`MyBase`关键字是指特定类实例。</span><span class="sxs-lookup"><span data-stu-id="d193d-103">The `Me`, `MyClass`, and `MyBase` keywords refer to specific class instances.</span></span> <span data-ttu-id="d193d-104">不能使用它们在共享内`Function`或`Sub`过程。</span><span class="sxs-lookup"><span data-stu-id="d193d-104">You cannot use them inside a shared `Function` or `Sub` procedure.</span></span>  
+# <a name="keyword-is-valid-only-within-an-instance-method"></a><span data-ttu-id="39855-102">\<关键字 > 只在实例方法中有效</span><span class="sxs-lookup"><span data-stu-id="39855-102">'\<keyword>' is valid only within an instance method</span></span>
+<span data-ttu-id="39855-103">`Me`， `MyClass`，和`MyBase`关键字是指特定类实例。</span><span class="sxs-lookup"><span data-stu-id="39855-103">The `Me`, `MyClass`, and `MyBase` keywords refer to specific class instances.</span></span> <span data-ttu-id="39855-104">不能使用它们在共享内`Function`或`Sub`过程。</span><span class="sxs-lookup"><span data-stu-id="39855-104">You cannot use them inside a shared `Function` or `Sub` procedure.</span></span>  
   
- <span data-ttu-id="d193d-105">**错误 ID:** BC30043</span><span class="sxs-lookup"><span data-stu-id="d193d-105">**Error ID:** BC30043</span></span>  
+ <span data-ttu-id="39855-105">**错误 ID:** BC30043</span><span class="sxs-lookup"><span data-stu-id="39855-105">**Error ID:** BC30043</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="d193d-106">更正此错误</span><span class="sxs-lookup"><span data-stu-id="d193d-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="39855-106">更正此错误</span><span class="sxs-lookup"><span data-stu-id="39855-106">To correct this error</span></span>  
   
--   <span data-ttu-id="d193d-107">从过程中删除关键字或删除`Shared`过程声明中的关键字。</span><span class="sxs-lookup"><span data-stu-id="d193d-107">Remove the keyword from the procedure, or remove the `Shared` keyword from the procedure declaration.</span></span>  
+-   <span data-ttu-id="39855-107">从过程中删除关键字或删除`Shared`过程声明中的关键字。</span><span class="sxs-lookup"><span data-stu-id="39855-107">Remove the keyword from the procedure, or remove the `Shared` keyword from the procedure declaration.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d193d-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="d193d-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39855-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="39855-108">See also</span></span>
 
-- [<span data-ttu-id="d193d-109">对象变量赋值</span><span class="sxs-lookup"><span data-stu-id="d193d-109">Object Variable Assignment</span></span>](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [<span data-ttu-id="d193d-110">Me、My、MyBase 和 MyClass</span><span class="sxs-lookup"><span data-stu-id="d193d-110">Me, My, MyBase, and MyClass</span></span>](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [<span data-ttu-id="d193d-111">继承的基础知识</span><span class="sxs-lookup"><span data-stu-id="d193d-111">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [<span data-ttu-id="39855-109">对象变量赋值</span><span class="sxs-lookup"><span data-stu-id="39855-109">Object Variable Assignment</span></span>](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
+- [<span data-ttu-id="39855-110">Me、My、MyBase 和 MyClass</span><span class="sxs-lookup"><span data-stu-id="39855-110">Me, My, MyBase, and MyClass</span></span>](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [<span data-ttu-id="39855-111">继承的基础知识</span><span class="sxs-lookup"><span data-stu-id="39855-111">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
