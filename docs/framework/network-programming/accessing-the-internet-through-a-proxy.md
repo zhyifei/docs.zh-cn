@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 ms.openlocfilehash: 14e5a7f47c1c1f2cbaf0457be34019454ff041f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230559"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>通过代理访问 Internet
@@ -28,7 +28,7 @@ ms.locfileid: "59230559"
   
 -   [自动代理检测](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
   
--   [如何：使 WebRequest 能够使用代理以与 Internet 通信](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+-   [如何：使 WebRequest 能够使用代理与 Internet 通信](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
 -   [如何：重写全局代理选择](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   

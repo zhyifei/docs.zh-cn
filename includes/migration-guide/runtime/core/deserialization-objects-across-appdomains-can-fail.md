@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 891c29b731214fb0028e960256b79cfc267d86b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59803307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235081"
 ---
 ### <a name="deserialization-of-objects-across-appdomains-can-fail"></a>跨应用域的对象的反序列化可能失败
 

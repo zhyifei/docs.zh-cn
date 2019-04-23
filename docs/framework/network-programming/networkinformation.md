@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: de8cb03e6205a83d2cc93ee300eb3fcac1ac5b74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0820ad6a6d5000ef7ea575e856d883ba5325b1b0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497165"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59230975"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 <xref:System.Net.NetworkInformation> 命名空间使你能够收集有关网络事件、更改、统计信息和属性的信息。 还可使用 <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> 类来确定是否可以访问远程主机。  
@@ -24,6 +24,7 @@ ms.locfileid: "54497165"
  可使用 <xref:System.Net.NetworkInformation.Ping> 类来确定远程主机是否运行、是否在线及是否可访问。 有关详细信息，请参阅[如何：Ping 主机](../../../docs/framework/network-programming/how-to-ping-a-host.md)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)
 - [网络信息技术示例](https://go.microsoft.com/fwlink/?LinkID=179564)
 - [NetStat 工具技术示例](https://go.microsoft.com/fwlink/?LinkID=179562)

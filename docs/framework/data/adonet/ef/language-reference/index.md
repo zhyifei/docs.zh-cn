@@ -3,10 +3,10 @@ title: Entity SQL 语言参考
 ms.date: 03/30/2017
 ms.assetid: bb07282c-161d-47e8-856d-b2374ba18181
 ms.openlocfilehash: 158240678eec7eb4699263c4febe9b6991196e11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59231508"
 ---
 # <a name="entity-sql-language-reference"></a>Entity SQL 语言参考
@@ -17,7 +17,7 @@ ms.locfileid: "59231508"
   
  [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
- [Entity SQL 语言](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
+ [实体 SQL 语言](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
   
  [规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
   
