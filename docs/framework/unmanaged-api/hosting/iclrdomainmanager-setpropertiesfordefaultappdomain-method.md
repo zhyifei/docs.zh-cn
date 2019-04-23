@@ -16,10 +16,10 @@ ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4c42297e848844617ffdc6c85c81846b5805eb4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181321"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain 方法
@@ -63,9 +63,9 @@ HRESULT SetPropertiesForDefaultAppDomain(
   
  **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [宿主](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)
 - [ICLRDomainManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)

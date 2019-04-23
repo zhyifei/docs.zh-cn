@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193091"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet 函数
@@ -47,7 +47,7 @@ HRESULT GetQualifierSet (
 [in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
 
 `ppQualSet`  
-[out]接收允许对类对象的限定符访问的接口指针。 `ppQualSet` 不能为`null`。 如果发生错误，未返回一个新的对象，并且指针保持不变。 
+[out]接收允许对类对象的限定符访问的接口指针。 `ppQualSet` 不能为 `null`。 如果发生错误，未返回一个新的对象，并且指针保持不变。 
 
 ## <a name="return-value"></a>返回值
 
@@ -72,8 +72,8 @@ HRESULT GetQualifierSet (
   
  **标头：** WMINet_Utils.idl  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [WMI 和性能计数器（非托管 API 参考）](index.md)
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

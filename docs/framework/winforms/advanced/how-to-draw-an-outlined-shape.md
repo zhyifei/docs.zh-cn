@@ -20,10 +20,10 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
 ms.openlocfilehash: 019bbc19cc4b26c42f8539eccd93ec4ff87fab12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192195"
 ---
 # <a name="how-to-draw-an-outlined-shape"></a>如何：绘制轮廓形状
@@ -46,5 +46,5 @@ ms.locfileid: "59192195"
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>
 - [图形编程入门](getting-started-with-graphics-programming.md)
-- [使用钢笔绘制线条和形状](using-a-pen-to-draw-lines-and-shapes.md)
+- [使用笔绘制直线和形状](using-a-pen-to-draw-lines-and-shapes.md)
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
 ms.openlocfilehash: dbc5c0b51024c7b88b8c6cd9a052addd74e6f7e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191024"
 ---
 # <a name="workflow-tracking-and-tracing"></a>工作流跟踪
@@ -22,9 +22,9 @@ Windows 工作流跟踪是专为查看工作流执行情况而设计的一个 [!
   
  为了了解编程模型，本主题中介绍了跟踪基础结构的主要组件：  
   
--   <xref:System.Activities.Tracking.TrackingRecord> 从工作流运行时发出的对象。 有关详细信息，请参阅[跟踪记录](tracking-records.md)。  
+-   从工作流运行时发出的 <xref:System.Activities.Tracking.TrackingRecord> 对象。 有关详细信息，请参阅[跟踪记录](tracking-records.md)。  
   
--   <xref:System.Activities.Tracking.TrackingParticipant> 对象订阅<xref:System.Activities.Tracking.TrackingRecord>对象。 跟踪参与者包含用于处理 <xref:System.Activities.Tracking.TrackingRecord> 对象中负载的逻辑（例如，它们可以选择向某个文件写入）。 有关详细信息，请参阅[跟踪参与者](tracking-participants.md)。  
+-   <xref:System.Activities.Tracking.TrackingParticipant> 对象订阅 <xref:System.Activities.Tracking.TrackingRecord> 对象。 跟踪参与者包含用于处理 <xref:System.Activities.Tracking.TrackingRecord> 对象中负载的逻辑（例如，它们可以选择向某个文件写入）。 有关详细信息，请参阅[跟踪参与者](tracking-participants.md)。  
   
 -   <xref:System.Activities.Tracking.TrackingProfile> 对象筛选从工作流实例发出的跟踪记录。 有关详细信息，请参阅[跟踪配置文件](tracking-profiles.md)。  
   
@@ -45,7 +45,7 @@ Windows 工作流跟踪是专为查看工作流执行情况而设计的一个 [!
  [跟踪参与者](tracking-participants.md)  
  介绍如何使用系统提供的跟踪参与者或如何创建自定义的跟踪参与者。  
   
- [为工作流配置跟踪](configuring-tracking-for-a-workflow.md)  
+ [配置工作流跟踪](configuring-tracking-for-a-workflow.md)  
  介绍如何为工作流配置跟踪。  
   
  [工作流跟踪](workflow-tracing.md)  

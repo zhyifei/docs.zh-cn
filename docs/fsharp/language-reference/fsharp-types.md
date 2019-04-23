@@ -3,10 +3,10 @@ title: F# 类型
 description: 了解有关在中使用的类型F#以及F#类型命名和描述。
 ms.date: 05/16/2016
 ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193585"
 ---
 # <a name="f-types"></a>F# 类型
@@ -54,7 +54,7 @@ F#提供记住函数式编程设计的有用的集合类型。 使用这些集�
 |主题|描述|
 |-----|-----------|
 |[基元类型](primitive-types.md)|介绍内置简单类型，例如整型、 布尔值类型和字符类型。|
-|[unit 类型](unit-type.md)|介绍`unit`类型中，键入，以包含一个值，将由 （）; 等效于`void`中C#并`Nothing`Visual Basic 中。|
+|[Unit 类型](unit-type.md)|介绍`unit`类型中，键入，以包含一个值，将由 （）; 等效于`void`中C#并`Nothing`Visual Basic 中。|
 |[元组](tuples.md)|介绍了元组类型、 包含分组中对、 三元组、 四重等任何类型的关联值的类型。|
 |[选项](options.md)|介绍选项类型，该类型可能具有的值或为空。|
 |[列表](lists.md)|介绍列表，它是元素的有序的、 不可变系列所有相同的类型。|
@@ -68,5 +68,5 @@ F#提供记住函数式编程设计的有用的集合类型。 使用这些集�
 |[接口](interfaces.md)|介绍接口类型，它们是表示一组的成员提供某种功能，但不包含数据的类型。 必须由要非常有用的对象类型实现接口类型。|
 |[委托](delegates.md)|描述表示一个函数作为对象的委托类型。|
 |[枚举](enumerations.md)|介绍枚举类型，其值属于一组命名的值。|
-|[特性](attributes.md)|描述了属性，用来指定另一种类型的元数据。|
+|[属性](attributes.md)|描述了属性，用来指定另一种类型的元数据。|
 |[异常类型](exception-handling/exception-types.md)|介绍了异常，指定错误的信息。|

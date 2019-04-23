@@ -3,10 +3,10 @@ title: <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
 ms.openlocfilehash: 14c1b6940099fa2b34716ed785bd00756c3e435e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181228"
 ---
 # <a name="nethttpbinding"></a>\<netHttpBinding>
@@ -85,7 +85,7 @@ ms.locfileid: "59181228"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定义绑定的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定义绑定的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>。|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父元素  

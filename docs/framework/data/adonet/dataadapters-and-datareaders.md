@@ -3,10 +3,10 @@ title: DataAdapter 和 DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
 ms.openlocfilehash: af1d44b1e320557ab7906ce65dbeb5415b5c09dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189674"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter 和 DataReader
@@ -50,4 +50,4 @@ ms.locfileid: "59189674"
 - [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [数据集、数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

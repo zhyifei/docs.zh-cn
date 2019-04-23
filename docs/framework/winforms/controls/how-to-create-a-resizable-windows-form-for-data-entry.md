@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Windows Forms, resizable
 ms.assetid: babdf198-404c-485d-a914-ed370c6ecd99
 ms.openlocfilehash: ebccad248927d8a201bd5758e5ddf2d5414455f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189652"
 ---
 # <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>如何：创建可重设大小的 Windows 窗体以供输入数据
@@ -39,6 +39,6 @@ ms.locfileid: "59189652"
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [如何：在 TableLayoutPanel 控件中锚定和停靠子控件](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [如何：设计非常适合本地化的 Windows 窗体布局](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
-- [Microsoft Windows 用户体验，用户界面开发人员和设计人员的官方指南。 Redmond，WA:Microsoft Press，1999年。 (USBN:0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [如何：锚定和停靠在 TableLayoutPanel 控件中的子控件](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [如何：设计很好地响应本地化 Windows 窗体布局](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [Microsoft Windows 用户体验，用户界面开发人员和设计人员的官方指南。Redmond，WA:Microsoft Press，1999年。(USBN:0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control types, Hyperlink
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
 ms.openlocfilehash: e239919426297d879a9ac90928481b554157e7e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186272"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>UI 自动化对 Hyperlink 控件类型的支持
@@ -57,13 +57,13 @@ ms.locfileid: "59186272"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|是|所有超链接控件必须支持 Invoke 模式。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|视情况而定|当链接包含可用且对用户有意义的信息时，超链接控件应支持 Value 控件模式。|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|例如，应用于对象的 `"https://www...."`|Internet 或 Intranet 地址的 URL 是一个包含对用户有意义的信息的超链接示例。 但是，以编程方式的链接仅对应用程序有意义，不建议用于 Value 属性。|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|例如，`"https://www...."`|Internet 或 Intranet 地址的 URL 是一个包含对用户有意义的信息的超链接示例。 但是，以编程方式的链接仅对应用程序有意义，不建议用于 Value 属性。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出需要由所有超链接控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event|支持|说明|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|说明|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|必需|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|None|  

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
 ms.openlocfilehash: 8dc45e1cedca6a4c73ada057168e0d3194bef741
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192272"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel 控件
-`ToolStripPanel` 控件实现在停靠时在工具区域中水平或垂直空间的共享和排列<xref:System.Windows.Forms.ToolStrip>控制当不需要的四个面板和中央面板<xref:System.Windows.Forms.ToolStripContainer>。  
+`ToolStripPanel` 控件在工具区域内启用停靠时共享水平或垂直空间，并且当无需四个面板和 <xref:System.Windows.Forms.ToolStripContainer> 的中心面板时启用排列 <xref:System.Windows.Forms.ToolStrip> 控件。  
   
  本节中的主题介绍可用于将 `ToolStripPanel` 功能构建到应用程序中的概念和技术。  
   
@@ -24,10 +24,10 @@ ms.locfileid: "59192272"
  [ToolStripPanel 控件概述](toolstrippanel-control-overview.md)  
  提供介绍 Windows 窗体 <xref:System.Windows.Forms.ToolStripContainer> 控件的用途和主要概念的主题。  
   
- [如何：联接 ToolStripPanel](how-to-join-toolstrippanels.md)  
+ [如何：Join ToolStripPanels](how-to-join-toolstrippanels.md)  
  演示将 <xref:System.Windows.Forms.ToolStrip> 控件添加到 `ToolStripPanel`。  
   
- [如何：将 ToolStripPanel 用于 MDI](how-to-use-toolstrippanels-for-mdi.md)  
+ [如何：MDI 中使用 Toolstrippanel](how-to-use-toolstrippanels-for-mdi.md)  
  演示多文档界面应用程序中 `ToolStripPanel` 控件提供的灵活性。  
   
 ## <a name="reference"></a>参考  

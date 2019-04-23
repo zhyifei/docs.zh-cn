@@ -3,14 +3,14 @@ title: 简化配置
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
 ms.openlocfilehash: 13cf8bd46ef3aabb011cb2ddd207963235468662
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184049"
 ---
 # <a name="simplified-configuration"></a>简化配置
-配置 Windows Communication Foundation (WCF) 服务可能相当复杂的任务。 该任务涉及多个不同选项，并且有时会很难确定需要哪些设置。 虽然配置文件提高灵活性的 WCF 服务，它们也是带来了许多难以发现的问题。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 解决这些问题，并提供了一种方法来减少的大小和服务配置的复杂性。  
+配置 Windows Communication Foundation (WCF) 服务可能相当复杂的任务。 该任务涉及多个不同选项，并且有时会很难确定需要哪些设置。 虽然配置文件提高灵活性的 WCF 服务，它们也是带来了许多难以发现的问题。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]解决了这些问题，并向用户提供了一种减小服务配置大小和降低复杂性的方法。  
   
 ## <a name="simplified-configuration"></a>简化配置  
  在 WCF 服务配置文件，<`system.serviceModel`> 部分包含 <`service`> 托管每个服务的元素。 <`service`> 元素包含一系列 <`endpoint`> 指定的每个服务和一组服务行为 （可选） 公开的终结点元素。 <`endpoint`> 元素指定地址、 绑定和协定公开终结点，也可以选择绑定配置和终结点行为。 <`system.serviceModel`> 部分还包含 <`behaviors`> 元素，它允许您指定服务或终结点行为。 下面的示例演示 <`system.serviceModel`> 配置文件的部分。  
@@ -118,6 +118,6 @@ ms.locfileid: "59184049"
 - [使用配置文件配置服务](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [配置服务绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [配置系统提供的绑定](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [正在配置服务](../../../docs/framework/wcf/configuring-services.md)
+- [配置服务](../../../docs/framework/wcf/configuring-services.md)
 - [配置 WCF 服务](configuring-services.md)
 - [在代码中配置 WCF 服务](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
 ms.openlocfilehash: bbb3c413148bd2e2ab8de8a1a725f2d9a8acf2f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190622"
 ---
 # <a name="3-d-transformations-overview"></a>三维变换概述
@@ -105,6 +105,6 @@ ScaleVector 示例
   
 ## <a name="see-also"></a>请参阅
 
-- [三维图形概述](3-d-graphics-overview.md)
-- [变换概述](transforms-overview.md)
-- [2d 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [3D 图形概述](3-d-graphics-overview.md)
+- [转换概述](transforms-overview.md)
+- [2D 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)

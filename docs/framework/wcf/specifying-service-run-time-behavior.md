@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
 ms.openlocfilehash: 9fa6e4114e9579079705700708840f2814b03b99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186870"
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服务运行时行为
@@ -77,50 +77,50 @@ ms.locfileid: "59186870"
 ### <a name="service-behaviors"></a>服务行为  
  下面的行为在服务上运行。  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. 应用到 WCF 服务，以指示是否可在运行该服务[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]兼容性模式。  
+-   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>。 应用到 WCF 服务，以指示是否可在运行该服务[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]兼容性模式。  
   
--   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. 控制服务如何向客户端声明授权。  
+-   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>。 控制服务如何向客户端声明授权。  
   
--   <xref:System.ServiceModel.Description.ServiceCredentials>. 配置服务凭据。 使用此类可指定服务的凭据，如 X.509 证书。  
+-   <xref:System.ServiceModel.Description.ServiceCredentials>。 配置服务凭据。 使用此类可指定服务的凭据，如 X.509 证书。  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. 启用调试和帮助信息功能的 WCF 服务。  
+-   <xref:System.ServiceModel.Description.ServiceDebugBehavior>。 启用调试和帮助信息功能的 WCF 服务。  
   
--   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. 控制服务元数据和相关信息的发布。  
+-   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>。 控制服务元数据和相关信息的发布。  
   
--   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. 指定安全性事件的审核行为。  
+-   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>。 指定安全性事件的审核行为。  
   
--   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. 配置运行时吞吐量设置，这些设置可以让您优化服务性能。  
+-   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>。 配置运行时吞吐量设置，这些设置可以让您优化服务性能。  
   
 ### <a name="endpoint-behaviors"></a>终结点行为  
  下面的行为在终结点上运行。 许多这些行为在客户端应用程序中使用。  
   
--   <xref:System.ServiceModel.CallbackBehaviorAttribute>. 在双工客户端应用程序中配置回调服务实现。  
+-   <xref:System.ServiceModel.CallbackBehaviorAttribute>。 在双工客户端应用程序中配置回调服务实现。  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. 启用服务调试 WCF 回调对象。  
+-   <xref:System.ServiceModel.Description.CallbackDebugBehavior>。 启用服务调试 WCF 回调对象。  
   
--   <xref:System.ServiceModel.Description.ClientCredentials>. 允许用户配置客户端和服务凭据以及服务凭据身份验证设置以便在客户端上使用。  
+-   <xref:System.ServiceModel.Description.ClientCredentials>。 允许用户配置客户端和服务凭据以及服务凭据身份验证设置以便在客户端上使用。  
   
--   <xref:System.ServiceModel.Description.ClientViaBehavior>. 由客户端使用以指定应为其创建传输通道的统一资源标识符 (URI)。  
+-   <xref:System.ServiceModel.Description.ClientViaBehavior>。 由客户端使用以指定应为其创建传输通道的统一资源标识符 (URI)。  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. 指示 WCF 在禁用`MustUnderstand`处理。  
+-   <xref:System.ServiceModel.Description.MustUnderstandBehavior>。 指示 WCF 在禁用`MustUnderstand`处理。  
   
--   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. 指示运行库对通道使用同步接收进程。  
+-   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>。 指示运行库对通道使用同步接收进程。  
   
--   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. 优化支持事务性接收的传输的接收操作。  
+-   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>。 优化支持事务性接收的传输的接收操作。  
   
 ### <a name="contract-behaviors"></a>协定行为  
- <xref:System.ServiceModel.DeliveryRequirementsAttribute>. 指定绑定必须提供给服务或客户端实现的功能要求。  
+ <xref:System.ServiceModel.DeliveryRequirementsAttribute>。 指定绑定必须提供给服务或客户端实现的功能要求。  
   
 ### <a name="operation-behaviors"></a>操作行为  
  下面的操作行为指定操作的序列化和事务控制。  
   
--   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. 表示 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>的运行时行为。  
+-   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>。 表示 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>的运行时行为。  
   
--   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. 控制 `XmlSerializer` 的运行时行为并将其与某个操作相关联。  
+-   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>。 控制 `XmlSerializer` 的运行时行为并将其与某个操作相关联。  
   
--   <xref:System.ServiceModel.TransactionFlowAttribute>. 指定服务操作接受事务标头所处的级别。  
+-   <xref:System.ServiceModel.TransactionFlowAttribute>。 指定服务操作接受事务标头所处的级别。  
   
 ## <a name="see-also"></a>请参阅
 
-- [正在配置服务](../../../docs/framework/wcf/configuring-services.md)
+- [配置服务](../../../docs/framework/wcf/configuring-services.md)
 - [如何：控制服务实例化](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

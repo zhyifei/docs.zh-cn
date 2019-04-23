@@ -8,20 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
-ms.openlocfilehash: f6d7c3b3e57b236007ac267dfa8cf7aba1da1d55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1ee9dc731f3cb96bd40935b94113c7c2aa91ff4
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703687"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59183191"
 ---
 # <a name="default-c-reference"></a>default（C# 参考）
 
-`default` 关键字可用于 `switch` 语句或默认值表达式中：
-
-- [switch 语句](switch.md)：指定默认标签。
-
-- [默认值表达式](../../programming-guide/statements-expressions-operators/default-value-expressions.md)：生成类型的默认值。
+`default` 关键字有两种用法：
+- 指定默认标签的 [`switch` 语句](switch.md)。
+- 生成类型的默认值的[默认值表达式](../../programming-guide/statements-expressions-operators/default-value-expressions.md)。
 
 ## <a name="see-also"></a>请参阅
 

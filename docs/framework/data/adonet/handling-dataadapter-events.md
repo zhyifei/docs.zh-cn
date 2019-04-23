@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
 ms.openlocfilehash: 864a9072b38054557b2583f505e6e7827c02d2de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180747"
 ---
 # <a name="handling-dataadapter-events"></a>处理 DataAdapter 事件
@@ -22,7 +22,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> 公开三个可用于响应数据�
 |`FillError`|执行 `Fill` 操作期间出错。|  
   
 ## <a name="rowupdating-and-rowupdated"></a>RowUpdating 和 RowUpdated  
- `RowUpdating` 某行的任何更新之前引发<xref:System.Data.DataSet>在数据源中处理。 `RowUpdated` 某行的任何更新之后引发`DataSet`在数据源中处理。 因此，可以使用 `RowUpdating` 执行下列操作：在更新行为发生之前对其进行修改，在更新将发生时提供附加处理，保留对已更新行的引用，取消当前更新并将其安排在以后进行批处理，等等。 `RowUpdated` 对于响应更新期间发生的错误和异常非常有用。 您可以向 `DataSet` 以及重试逻辑等添加错误信息。  
+ 在数据源中处理对  `RowUpdating` 中某行的任何更新之前，将引发 <xref:System.Data.DataSet>。 在数据源中处理对 `RowUpdated` 中某行的任何更新之后，将引发 `DataSet`。 因此，可以使用 `RowUpdating` 执行下列操作：在更新行为发生之前对其进行修改，在更新将发生时提供附加处理，保留对已更新行的引用，取消当前更新并将其安排在以后进行批处理，等等。 `RowUpdated` 对于响应更新期间发生的错误和异常是非常有用的。 您可以向 `DataSet` 以及重试逻辑等添加错误信息。  
   
  传递给 <xref:System.Data.Common.RowUpdatingEventArgs> 和 <xref:System.Data.Common.RowUpdatedEventArgs> 事件的 `RowUpdating` 和 `RowUpdated` 自变量包括：`Command` 属性，它引用用来执行更新的 `Command` 对象；`Row` 属性，它引用包含更新信息的 `DataRow` 对象；`StatementType` 属性，它指示所执行的更新类型；`TableMapping`（如果适用）；以及操作的 `Status`。  
   
@@ -188,8 +188,8 @@ protected static void FillError(object sender, FillErrorEventArgs args)
   
 ## <a name="see-also"></a>请参阅
 
-- [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [处理数据集事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
 - [处理数据表事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
 - [事件](../../../../docs/standard/events/index.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
 ms.openlocfilehash: a71758781511f18ddf5451feaf0d308af1b4a652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191726"
 ---
 # <a name="connection-events"></a>连接事件
@@ -108,4 +108,4 @@ protected static void OnStateChange(object sender,
 ## <a name="see-also"></a>请参阅
 
 - [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

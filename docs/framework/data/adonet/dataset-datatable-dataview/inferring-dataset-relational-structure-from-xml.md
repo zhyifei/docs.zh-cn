@@ -3,10 +3,10 @@ title: 从 XML 推断数据集关系结构
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
 ms.openlocfilehash: 9a9dc7d94728ea797a8930d3f77068fdd3ebfb5c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191532"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>从 XML 推断数据集关系结构
@@ -19,7 +19,7 @@ ms.locfileid: "59191532"
  并非所有出现在 XML 文档中的属性都应包含在推断过程中。 由命名空间限定的属性可以包含对 XML 文档重要但对 <xref:System.Data.DataSet> 架构不重要的元数据。 使用 <xref:System.Data.DataSet.InferXmlSchema%2A>，您可以指定要在推断过程中忽略的命名空间。 有关详细信息，请参阅[从 XML 加载数据集架构信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
- [数据集架构接口过程摘要](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/summary-of-the-dataset-schema-inference-process.md)  
+ [数据集架构推断过程摘要](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/summary-of-the-dataset-schema-inference-process.md)  
  提供从 XML 推断 <xref:System.Data.DataSet> 架构的规则的简要概述。  
   
  [推断表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)  
@@ -49,4 +49,4 @@ ms.locfileid: "59191532"
   
 ## <a name="see-also"></a>请参阅
 
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

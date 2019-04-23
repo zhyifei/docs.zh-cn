@@ -3,10 +3,10 @@ title: 保护连接信息
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
 ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184439"
 ---
 # <a name="protecting-connection-information"></a>保护连接信息
@@ -44,4 +44,4 @@ ms.locfileid: "59184439"
 - [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [使用受保护的配置加密配置信息](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
 - [.NET 中的安全性](../../../standard/security/index.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

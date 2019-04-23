@@ -3,10 +3,10 @@ title: 管理数据服务上下文（WCF 数据服务）
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
 ms.openlocfilehash: 33e7ce17eea5d534b941d778fd13144ad51b4094
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184738"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>管理数据服务上下文（WCF 数据服务）
@@ -20,7 +20,7 @@ ms.locfileid: "59184738"
 ## <a name="managing-concurrency"></a>管理并发  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持数据服务能够以检测更新冲突的乐观并发。 可以按这种方式配置数据服务提供程序，使得数据服务能够使用并发标记检查实体是否更改。 此标记包含实体类型的一个或多个属性，数据服务通过验证这些属性来确定某个资源是否已更改。 并发标记包含在发出的请求以及来自数据服务的响应的 eTag 标头中，管理为你[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端。 有关详细信息，请参阅[更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
   
- <xref:System.Data.Services.Client.DataServiceContext> 通过使用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 或通过 <xref:System.Data.Services.Client.DataServiceCollection%601> 跟踪已手动报告的对对象所做的更改。 当调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时，客户端将更改发送回数据服务。 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 当客户端中的数据更改与数据服务中的更改发生冲突时可能会失败。 当发生这种情况时，您必须再次查询实体资源以接收更新数据。 若要覆盖数据服务中的更改，请使用 <xref:System.Data.Services.Client.MergeOption.PreserveChanges> 合并选项执行查询。 再次调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 时，只要尚未对数据服务中的资源进行其他更改，客户端上保留的更改将永久保存到数据服务。  
+ <xref:System.Data.Services.Client.DataServiceContext> 通过使用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 或通过 <xref:System.Data.Services.Client.DataServiceCollection%601> 跟踪已手动报告的对对象所做的更改。 当调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时，客户端将更改发送回数据服务。 如果客户端中的数据更改与数据服务中的更改冲突，则 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 会失败。 当发生这种情况时，您必须再次查询实体资源以接收更新数据。 若要覆盖数据服务中的更改，请使用 <xref:System.Data.Services.Client.MergeOption.PreserveChanges> 合并选项执行查询。 再次调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 时，只要尚未对数据服务中的资源进行其他更改，客户端上保留的更改将永久保存到数据服务。  
   
 ## <a name="saving-changes"></a>保存更改  
  在 <xref:System.Data.Services.Client.DataServiceContext> 实例中对更改进行跟踪，但不会将更改立即发送到服务器。 在完成对指定活动的所需更改后，调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 以将所有更改提交给数据服务。 <xref:System.Data.Services.Client.DataServiceResponse> 操作完成后，会返回 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 对象。 <xref:System.Data.Services.Client.DataServiceResponse> 对象包括一系列 <xref:System.Data.Services.Client.OperationResponse> 对象，这些对象依次又包含一系列表示已保留或尝试的更改的 <xref:System.Data.Services.Client.EntityDescriptor> 或 <xref:System.Data.Services.Client.LinkDescriptor> 实例。 在数据服务中创建或修改实体之后，<xref:System.Data.Services.Client.EntityDescriptor> 包含对已更新实体的引用，其中包括所有服务器生成的属性值，例如上面示例中生成的 `ProductID` 值。 客户端库将使用这些新值自动更新 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象。  
@@ -38,7 +38,7 @@ ms.locfileid: "59184738"
   
 ## <a name="see-also"></a>请参阅
 
-- [WCF 数据服务客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)
 - [异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
 - [批处理操作](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)

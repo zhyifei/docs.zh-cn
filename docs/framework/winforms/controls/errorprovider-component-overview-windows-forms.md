@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
 ms.openlocfilehash: 485e7a17073d72618b9599113179cddde748e697
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181176"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider 组件概述（Windows 窗体）
@@ -29,5 +29,5 @@ Windows 窗体[ErrorProvider](errorprovider-component-windows-forms.md)组件用
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.ErrorProvider>
-- [如何：使用 Windows 窗体 ErrorProvider 组件查看数据集中的错误](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
-- [如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [如何：在一个数据集中使用 Windows 窗体 ErrorProvider 组件查看错误](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [如何：对于表格验证使用 Windows 窗体 ErrorProvider 组件显示错误图标](display-error-icons-for-form-validation-with-wf-errorprovider.md)

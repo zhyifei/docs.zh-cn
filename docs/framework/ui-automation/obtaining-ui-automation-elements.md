@@ -6,10 +6,10 @@ helpviewer_keywords:
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
 ms.openlocfilehash: 89c9397ba579f04d81eee7af6363f8fee3abfe1d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191271"
 ---
 # <a name="obtaining-ui-automation-elements"></a>获取 UI 自动化元素
@@ -34,9 +34,9 @@ ms.locfileid: "59191271"
 ## <a name="conditions"></a>条件  
  对于用于检索 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 元素的大多数方法，必须指定一个 <xref:System.Windows.Automation.Condition>，这是一组用于定义要检索的元素的条件。  
   
- 最简单的条件是 <xref:System.Windows.Automation.Condition.TrueCondition>，这是一个指定要返回搜索范围内的所有元素的预定义对象。 <xref:System.Windows.Automation.Condition.FalseCondition>的反向<xref:System.Windows.Automation.Condition.TrueCondition>，十分不太有用，因为它将阻止找到任何元素。  
+ 最简单的条件是 <xref:System.Windows.Automation.Condition.TrueCondition>，这是一个指定要返回搜索范围内的所有元素的预定义对象。 <xref:System.Windows.Automation.Condition.FalseCondition>是 <xref:System.Windows.Automation.Condition.TrueCondition>的对立条件，其作用不大，因为它将阻止找到任何元素。  
   
- 下面是三个其他的预定义条件，这些条件既可以单独使用，也可以与其他条件一起使用： <xref:System.Windows.Automation.Automation.ContentViewCondition>、 <xref:System.Windows.Automation.Automation.ControlViewCondition>和 <xref:System.Windows.Automation.Automation.RawViewCondition>。 <xref:System.Windows.Automation.Automation.RawViewCondition>由自身使用，相当于<xref:System.Windows.Automation.Condition.TrueCondition>，因为它不会筛选元素由其<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A>或<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>属性。  
+ 下面是三个其他的预定义条件，这些条件既可以单独使用，也可以与其他条件一起使用： <xref:System.Windows.Automation.Automation.ContentViewCondition>、 <xref:System.Windows.Automation.Automation.ControlViewCondition>和 <xref:System.Windows.Automation.Automation.RawViewCondition>。 单独使用的<xref:System.Windows.Automation.Automation.RawViewCondition>等效于 <xref:System.Windows.Automation.Condition.TrueCondition>，因为它不根据元素的 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> 或 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 属性来筛选元素。  
   
  其他条件是根据一个或多个 <xref:System.Windows.Automation.PropertyCondition> 对象（每个对象都指定一个属性值）建立的。 例如，个 <xref:System.Windows.Automation.PropertyCondition> 可以指定元素处于启用状态或元素支持某种控件模式。  
   

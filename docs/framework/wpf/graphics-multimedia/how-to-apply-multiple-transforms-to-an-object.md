@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
 ms.openlocfilehash: 26dcd4a64fc7aa2c3cb9cc599ceaef292efb1b6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192753"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>如何：向一个对象应用多个转换
@@ -32,5 +32,5 @@ ms.locfileid: "59192753"
 
 - <xref:System.Windows.UIElement.RenderTransform%2A>
 - <xref:System.Windows.Media.TransformGroup>
-- [变换概述](transforms-overview.md)
-- [2d 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [转换概述](transforms-overview.md)
+- [2D 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)

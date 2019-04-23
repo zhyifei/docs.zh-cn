@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183971"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>使用 UI 自动化进行自动化测试
@@ -19,9 +19,9 @@ ms.locfileid: "59183971"
   
  本概述介绍可如何将 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 用作一个用于在自动测试方案中进行编程访问的框架。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供统一的对象模型，使所有[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]框架可访问且易于实现自动化的方式公开复杂且丰富的功能。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供一个统一的对象模型，该模型使所有的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 框架均能够以可访问并易于实现自动化的方式公开复杂且丰富的功能。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 已开发的后继为[!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]。 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 现有框架旨在使控件和应用程序可以访问提供的解决方案。 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 设计时不考虑测试自动化记住即使它发展成为由于非常相似的可访问性和自动化要求该角色也是如此。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]除了提供更完善的解决方案的可访问性，还专门用于提供强大的功能进行自动测试。 例如， [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 依赖于单个接口来公开 UI 相关信息和收集 AT 产品所需信息； [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 将这两个模型分开。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 是作为 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]的后续活动而开发的。 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 为现有框架，旨在提供使控件和应用程序可以访问的解决方案。 即使[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 因辅助功能和自动化非常相似的要求发展成为该角色，但在设计时并未考虑测试自动化。 除了为辅助功能提供更完善的解决方案以外，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]还专门用于提供进行自动测试的强大功能。 例如， [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 依赖于单个接口来公开 UI 相关信息和收集 AT 产品所需信息； [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 将这两个模型分开。  
   
  实现 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需要提供程序和客户端，以便使其可以用作自动测试工具。 UI 自动化提供程序是 Microsoft Word、Excel 等应用程序以及其他第三方应用程序或基于 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 操作系统的控件。 UI 自动化客户端包括自动测试脚本和辅助技术应用程序。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59183971"
   
 <a name="Programmatic_Access"></a>   
 ### <a name="programmatic-access"></a>编程访问  
- 使用编程访问可以通过代码模仿由传统鼠标和键盘输入展开的任何交互和体验。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 可以编程方式访问通过五个组件：  
+ 使用编程访问可以通过代码模仿由传统鼠标和键盘输入展开的任何交互和体验。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 通过五个组件实现编程访问：  
   
 -   借助 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树，可以方便地在 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]结构中导航。 树是基于 hWnd 的集合生成的。 有关详细信息，请参阅 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
   
@@ -76,16 +76,16 @@ ms.locfileid: "59183971"
  由于可以对 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 中的任何控件进行唯一标识，并且以后还能查找该控件，因此，自动测试应用程序可在此基础上对该 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]执行相应的操作。 客户端和提供程序使用一些 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 属性来帮助实现此功能。  
   
 #### <a name="automationid"></a>AutomationID  
- 将自动化元素从其同级中单独标识出来。 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 未本地化，与不同的属性如<xref:System.Windows.Automation.AutomationElement.NameProperty>，通常已本地化如果产品获取以多种语言提供。 请参阅 [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md)。  
+ 将自动化元素从其同级中单独标识出来。 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 不同于 <xref:System.Windows.Automation.AutomationElement.NameProperty> 等属性，前者并未经过本地化；而对于后者，如果产品需要以多种语言提供，则这些属性通常已本地化。 请参阅 [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 不保证整个自动化树的唯一标识。 例如，一个应用程序可能包含具有多个顶级菜单项的菜单控件，而这些顶级菜单项又具有多个子菜单项。 可以通过常规架构（如“Item1、Item2、Item3 等”）标识这些二级菜单项，并允许顶级菜单项中的子菜单项使用重复的标识符。  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 不保证整个自动化树使用唯一标识。 例如，一个应用程序可能包含具有多个顶级菜单项的菜单控件，而这些顶级菜单项又具有多个子菜单项。 可以通过常规架构（如“Item1、Item2、Item3 等”）标识这些二级菜单项，并允许顶级菜单项中的子菜单项使用重复的标识符。  
   
 #### <a name="controltype"></a>ControlType  
  标识由自动化元素表示的控件类型。 通过了解控件类型可以推断出重要的信息。 请参阅 [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)。  
   
 #### <a name="nameproperty"></a>NameProperty  
- 这是标识或说明控件的文本字符串。 <xref:System.Windows.Automation.AutomationElement.NameProperty> 应谨慎使用由于可本地化。 请参阅 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)。  
+ 这是标识或说明控件的文本字符串。 应谨慎使用<xref:System.Windows.Automation.AutomationElement.NameProperty> ，因为可对其进行本地化。 请参阅 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)。  
   
 <a name="Steps_Required_To_Automate_the_UI_in_a_Test_Application"></a>   
 ### <a name="implementing-ui-automation-in-a-test-application"></a>在测试应用程序中实现 UI 自动化  
