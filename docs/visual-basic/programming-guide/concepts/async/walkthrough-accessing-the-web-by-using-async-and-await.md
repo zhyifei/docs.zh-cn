@@ -3,10 +3,10 @@ title: 演练：访问 Web 使用 Async 和 Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335896"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>演练：访问 Web 使用 Async 和 Await (Visual Basic)
@@ -137,13 +137,13 @@ ms.locfileid: "59335896"
   
 3. 该同步解决方案的代码包含以下四个方法：  
   
-    -   `SumPageSizes`它将获取从网页 Url 列表`SetUpURLList`，然后调用`GetURLContents`和`DisplayResults`来处理每个 URL。  
+    -   `SumPageSizes`，从 `SetUpURLList` 获取网页 URL 列表并随后调用 `GetURLContents` 和 `DisplayResults` 以处理每个 URL。  
   
-    -   `SetUpURLList`生成并返回 web 地址的列表。  
+    -   `SetUpURLList`，生成并返回 Web 地址列表。  
   
-    -   `GetURLContents`其中的每个网站内容下载，并将内容作为字节数组返回。  
+    -   `GetURLContents`，下载每个网站的内容并将内容作为字节数组返回。  
   
-    -   `DisplayResults`其中显示的字节数组中每个 URL 的字节数。  
+    -   `DisplayResults`，显示每个 URL 的字节数组中的字节数。  
   
      复制以下四个方法，并将粘贴下进行`startButton_Click`MainWindow.xaml.vb 中的事件处理程序：  
   
@@ -263,7 +263,7 @@ ms.locfileid: "59335896"
     Using response As WebResponse = webReq.GetResponseAsync()  
     ```  
   
-2. `GetResponseAsync` 返回<xref:System.Threading.Tasks.Task%601>。 在这种情况下，任务返回变量 `TResult` 具有类型 <xref:System.Net.WebResponse>。 该任务是在请求的任务已下载且任务已完成运行后，生成实际 `WebResponse` 对象的承诺。  
+2. `GetResponseAsync` 返回 <xref:System.Threading.Tasks.Task%601>。 在这种情况下，任务返回变量 `TResult` 具有类型 <xref:System.Net.WebResponse>。 该任务是在请求的任务已下载且任务已完成运行后，生成实际 `WebResponse` 对象的承诺。  
   
      若要检索`WebResponse`值从任务时，请将应用[Await](../../../../visual-basic/language-reference/operators/await-operator.md)对的调用到运算符`GetResponseAsync`，如下面的代码所示。  
   

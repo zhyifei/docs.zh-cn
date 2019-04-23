@@ -16,10 +16,10 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343397"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>演练：实现使用后台操作的窗体
@@ -166,7 +166,7 @@ ms.locfileid: "59343397"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
-- [托管线程处理](../../../standard/threading/index.md)
+- [托管线程](../../../standard/threading/index.md)
 - [托管线程处理的最佳做法](../../../standard/threading/managed-threading-best-practices.md)
 - [基于事件的异步模式概述](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
 - [如何：实现使用后台操作的窗体](how-to-implement-a-form-that-uses-a-background-operation.md)

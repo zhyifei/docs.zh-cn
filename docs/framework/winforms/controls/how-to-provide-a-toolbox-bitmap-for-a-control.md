@@ -10,10 +10,10 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
 ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337703"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>如何：为控件提供工具箱位图
@@ -66,7 +66,7 @@ ms.locfileid: "59337703"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Drawing.ToolboxBitmapAttribute>
-- [演练：使用自定义组件自动填充工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [演练：自动填充工具箱与自定义组件](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
 - [设计时开发 Windows 窗体控件](developing-windows-forms-controls-at-design-time.md)
 - [特性概述 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [特性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)

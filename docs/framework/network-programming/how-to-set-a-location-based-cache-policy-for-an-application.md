@@ -11,21 +11,21 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 4ac0d6449fea4980154eef8c88d03d13230a6a62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06d458828c77f61e03d18f635ec00f6a7267bab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514044"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59341863"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>如何：为应用程序设置基于位置的缓存策略
 基于位置的缓存策略允许应用程序基于所请求资源的位置显式定义缓存行为。 本主题演示如何以编程方式设置缓存策略。 有关使用配置文件为应用程序设置策略的信息，请参阅 [ \<requestCaching > 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>为应用程序设置基于位置的缓存策略  
   
-1.  创建 <xref:System.Net.Cache.RequestCachePolicy> 或 <xref:System.Net.Cache.HttpRequestCachePolicy> 对象。  
+1. 创建 <xref:System.Net.Cache.RequestCachePolicy> 或 <xref:System.Net.Cache.HttpRequestCachePolicy> 对象。  
   
-2.  将策略对象设置为应用程序域的默认对象。  
+2. 将策略对象设置为应用程序域的默认对象。  
   
 ### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>设置获取来自缓存的请求资源的策略  
   
@@ -154,6 +154,7 @@ ms.locfileid: "54514044"
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [缓存策略](../../../docs/framework/network-programming/cache-policy.md)
 - [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)

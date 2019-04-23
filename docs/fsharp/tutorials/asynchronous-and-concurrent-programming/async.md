@@ -3,10 +3,10 @@ title: 异步编程
 description: 了解如何F#通过是易于使用和自然语言的语言级别编程模型实现异步编程。
 ms.date: 06/20/2016
 ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343449"
 ---
 # <a name="async-programming-in-f"></a>F 中的异步编程\#
@@ -215,5 +215,5 @@ tokenSource.Cancel()
 ## <a name="further-resources"></a>其他资源：
 
 *   [MSDN 上的异步工作流](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [异步序列F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-*   [F#HTTP 数据实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)
+*   [异步序列 F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+*   [F# HTTP 数据实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)

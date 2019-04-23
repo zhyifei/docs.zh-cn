@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 15b790f4a4d3348e2bef3e7e929d72c09da8690c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 1abb64f7d76b772168ed97024f5f1381670c6882
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441874"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59321440"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>如何：调试 Windows 服务应用程序
 必须从服务控制管理器的上下文中而不是 Visual Studio 中运行服务。 因此，调试服务不像调试其他 Visual Studio 应用程序类型一样简单。 要调试服务，必须启动该服务，然后将调试器附加到该服务正在其中运行的进程中。 然后你可以使用所有 Visual Studio 的标准调试功能来调试你的应用程序。  
@@ -36,23 +36,23 @@ ms.locfileid: "56441874"
   
 ### <a name="to-debug-a-service"></a>调试服务  
   
-1.  在调试配置中生成你的服务。  
+1. 在调试配置中生成你的服务。  
   
-2.  安装你的服务。 有关详细信息，请参阅[如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
+2. 安装你的服务。 有关详细信息，请参阅[如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
-3.  从“服务控制管理器”、“服务器资源管理器”或代码启动服务。 有关详细信息，请参阅[如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)。  
+3. 从“服务控制管理器”、“服务器资源管理器”或代码启动服务。 有关详细信息，请参阅[如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)。  
   
-4.  使用管理凭据启动 Visual Studio,那么你就能附加到系统进程。  
+4. 使用管理凭据启动 Visual Studio,那么你就能附加到系统进程。  
   
-5.  （可选）在 Visual Studio 菜单栏上，选择“工具”、“选项”。 在“选项”对话框中，选择“调试”、“符号”，选择“Microsoft 符号服务器”复选框，然后选择“确定”按钮。  
+5. （可选）在 Visual Studio 菜单栏上，选择“工具”、“选项”。 在“选项”对话框中，选择“调试”、“符号”，选择“Microsoft 符号服务器”复选框，然后选择“确定”按钮。  
   
-6.  在菜单栏上，从“调试”或“工具”菜单选择“附加到进程”。 （键盘：Ctrl+Alt+P）  
+6. 在菜单栏上，从“调试”或“工具”菜单选择“附加到进程”。 （键盘：Ctrl+Alt+P）  
   
      这将显示“进程”对话框。  
   
-7.  选择“显示所有用户的进程”复选框。  
+7. 选择“显示所有用户的进程”复选框。  
   
-8.  在“可用进程”部分,为服务选择进程，然后选择“附加”。  
+8. 在“可用进程”部分,为服务选择进程，然后选择“附加”。  
   
     > [!TIP]
     >  该进程的名称将与你的服务的可执行文件相同。  
@@ -75,9 +75,9 @@ ms.locfileid: "56441874"
   
  尝试更改常规控制台应用程序的程序。 为此，请按如下所示重写 `Main` 方法，这样它可以作为 Windows 服务和控制台应用程序运行，具体取决于启动方式。  
   
-#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>如何：将 Windows 服务作为控制台应用程序运行  
+#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>如何：将 Windows 服务作为控制台应用运行  
   
-1.  向你运行 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法的服务添加一个方法：  
+1. 向你运行 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法的服务添加一个方法：  
   
     ```csharp  
     internal void TestStartupAndStop(string[] args)  
@@ -88,7 +88,7 @@ ms.locfileid: "56441874"
     }  
     ```  
   
-2.  按如下所示重写 `Main` 方法：  
+2. 按如下所示重写 `Main` 方法：  
   
     ```csharp  
     static void Main(string[] args)  
@@ -105,15 +105,16 @@ ms.locfileid: "56441874"
     }
     ```  
   
-3.  在项目属性的“应用程序”选项卡中，将“输出类型”设置为“控制台应用程序”。  
+3. 在项目属性的“应用程序”选项卡中，将“输出类型”设置为“控制台应用程序”。  
   
-4.  选择“启动调试”(F5)。  
+4. 选择“启动调试”(F5)。  
   
-5.  若要将该程序再次作为 Windows 服务运行，请安装它并像通常启动 Windows 服务一样启动它。 不必恢复这些更改。  
+5. 若要将该程序再次作为 Windows 服务运行，请安装它并像通常启动 Windows 服务一样启动它。 不必恢复这些更改。  
   
  在某些情况下，你必须使用 Windows 调试器，比如当你想要调试仅在系统启动时发生的问题时。 [下载 Windows 驱动程序工具包 (WDK)](/windows-hardware/drivers/download-the-wdk)，并查看[如何调试 Windows 服务](https://support.microsoft.com/kb/824344)。  
   
 ## <a name="see-also"></a>请参阅
+
 - [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)

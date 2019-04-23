@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
 ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336052"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>如何：设置所有 Windows 窗体的网格选项
@@ -31,13 +31,13 @@ ms.locfileid: "59336052"
   
 ## <a name="see-also"></a>请参阅
 
-- [演练：使用对齐线在 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [“选项”对话框 ->“Windows 窗体设计器”->“常规”](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [演练：使用对齐线的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [通常，Windows 窗体设计器选项对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [Windows 窗体控件](index.md)
 - [如何：向 Windows 窗体添加控件](how-to-add-controls-to-windows-forms.md)
-- [排列 Windows 窗体上的控件](arranging-controls-on-windows-forms.md)
-- [如何：设置 Windows 窗体上的 Tab 键顺序](how-to-set-the-tab-order-on-windows-forms.md)
-- [如何：设置 Windows 窗体控件显示的文本](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [将控件放在 Windows 窗体上](putting-controls-on-windows-forms.md)
+- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
+- [如何：设置 Windows 窗体上 tab 键顺序](how-to-set-the-tab-order-on-windows-forms.md)
+- [如何：设置显示的文本的 Windows 窗体控件](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [将控件置于 Windows 窗体上](putting-controls-on-windows-forms.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
-- [根据功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)
+- [按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)

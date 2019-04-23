@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_MinusOneOrGTZero1
 ms.assetid: 22c6bf5f-5194-43ec-8a8c-88f781801927
 ms.openlocfilehash: 789bed10022d38eb9b88cadfdffeb78be444e0fa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337196"
 ---
 # <a name="argument-argumentname-must-be-greater-than-0-or-equal-to--1"></a>参数\<argumentname > 必须大于 0 或等于-1
@@ -22,4 +22,4 @@ ms.locfileid: "59337196"
   
 ## <a name="see-also"></a>请参阅
 
-- [按值和按引用传递参数](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [按值和按引用传递自变量](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

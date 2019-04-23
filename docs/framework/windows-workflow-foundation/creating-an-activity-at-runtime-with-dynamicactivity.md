@@ -3,17 +3,17 @@ title: 使用 DynamicActivity 在运行时创建活动
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
 ms.openlocfilehash: ed133e972caa9a3a62ab2ac1310cb1bd666947ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321221"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>使用 DynamicActivity 在运行时创建活动
-<xref:System.Activities.DynamicActivity> 是一个公共构造函数的具体的密封类。 <xref:System.Activities.DynamicActivity> 可用于在运行时通过使用活动 DOM 组合活动功能  
+<xref:System.Activities.DynamicActivity> 是一个带有公共构造函数的具体的密封类。 通过使用活动 DOM，<xref:System.Activities.DynamicActivity> 可用于在运行时组合活动功能。  
   
 ## <a name="dynamicactivity-features"></a>DynamicActivity 功能  
- <xref:System.Activities.DynamicActivity> 有权访问执行属性、 参数和变量，但不是能访问运行时服务，例如安排子活动或跟踪。  
+ <xref:System.Activities.DynamicActivity> 有权访问执行属性、自变量和变量，但无权访问运行时服务（例如安排子活动或跟踪）。  
   
  使用工作流 <xref:System.Activities.Argument> 对象可以设置顶级属性。 在命令性代码中，使用新类型的 CLR 属性创建这些参数。 在 XAML 中，使用 `x:Class` 和 `x:Member` 标记声明这些参数。  
   
@@ -98,4 +98,4 @@ ms.locfileid: "59321221"
   
 ## <a name="see-also"></a>请参阅
 
-- [使用命令性代码创作工作流、活动和表达式](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [使用强制性代码创建工作流、活动和表达式](authoring-workflows-activities-and-expressions-using-imperative-code.md)

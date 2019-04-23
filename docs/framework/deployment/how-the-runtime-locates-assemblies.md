@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661862"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59342332"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 若要成功部署 .NET Framework 应用程序，必须了解公共语言运行时如何查找和绑定到构成应用程序的程序集。 默认情况下，运行时尝试与生成应用程序的程序集的准确版本绑定。 可通过配置文件设置重写此默认行为。  
@@ -40,16 +40,16 @@ ms.locfileid: "54661862"
   
  运行时使用以下步骤解析程序集引用：  
   
-1.  通过检查适用的配置文件（包括应用程序配置文件、发布服务器策略文件和计算机配置文件）[确定正确的程序集版本](#step1) 。 如果配置文件位于远程计算机，运行时必须首先查找并下载此应用程序配置文件。  
+1. 通过检查适用的配置文件（包括应用程序配置文件、发布服务器策略文件和计算机配置文件）[确定正确的程序集版本](#step1) 。 如果配置文件位于远程计算机，运行时必须首先查找并下载此应用程序配置文件。  
   
-2.  [检查之前是否已绑定程序集名称](#step2) ，若如此，请使用先前加载的程序集。 如果加载程序集的先前请求失败，此请求会立即失败且不会尝试加载程序集。  
+2. [检查之前是否已绑定程序集名称](#step2) ，若如此，请使用先前加载的程序集。 如果加载程序集的先前请求失败，此请求会立即失败且不会尝试加载程序集。  
   
     > [!NOTE]
     >  程序集绑定故障缓存是 .NET Framework 2.0 版本中的新增功能。  
   
-3.  [检查全局程序集缓存](#step3)。 如果此处存在程序集，则运行时使用此程序集。  
+3. [检查全局程序集缓存](#step3)。 如果此处存在程序集，则运行时使用此程序集。  
   
-4.  使用以下步骤[探测程序集](#step4) ：  
+4. 使用以下步骤[探测程序集](#step4) ：  
   
     1.  如果配置和发布服务器策略均不影响原始引用且绑定请求是使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法创建的，运行时将检查是否存在位置提示。  
   
@@ -154,9 +154,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>步骤 4：通过基本代码或探测定位程序集  
  在通过使用调用程序集引用和配置文件中的信息确定正确的程序集版本，且已在全局程序集缓存中检查此版本（仅针对强名称程序集）之后，公共语言运行时将尝试查找此程序集。 查找程序集的过程涉及以下步骤：  
   
-1.  如果在应用程序配置文件中找到 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，则运行时会检查指定的位置。 如果找到匹配项，则使用此程序集且不执行探测。 如果此处不存在程序集，则绑定请求失败。  
+1. 如果在应用程序配置文件中找到 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，则运行时会检查指定的位置。 如果找到匹配项，则使用此程序集且不执行探测。 如果此处不存在程序集，则绑定请求失败。  
   
-2.  然后，运行时使用本节稍后指定的规则探测引用的程序集。  
+2. 然后，运行时使用本节稍后指定的规则探测引用的程序集。  
   
 > [!NOTE]
 >  如果目录中有多个版本的程序集，并且要引用该程序集的某个特定版本，则必须使用 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素而不是 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性。 如果使用 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素，则运行时首次找到与引用的简单程序集名称匹配的程序集时，无论此匹配项是否正确，运行时都会停止探测。 如果此匹配项正确，则使用此程序集。 如果此匹配项不正确，则停止探测且绑定失败。  
@@ -248,5 +248,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  例如，如果 Assembly1 引用 Assembly2 且 Assembly1 是从 `http://www.code.microsoft.com/utils` 下载的，则此位置被视为可提示 Assembly2.dll 的位置。 然后运行时会在 `http://www.code.microsoft.com/utils/Assembly2.dll` 和 `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll` 中探测程序集。 如果在这两个位置中均未找到 Assembly2，则运行时将查询 Windows Installer。  
   
 ## <a name="see-also"></a>请参阅
+
 - [适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [部署](../../../docs/framework/deployment/index.md)

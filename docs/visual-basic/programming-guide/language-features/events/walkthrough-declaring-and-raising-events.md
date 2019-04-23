@@ -10,10 +10,10 @@ helpviewer_keywords:
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
 ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320686"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>演练：声明和引发事件 (Visual Basic)
@@ -38,7 +38,7 @@ ms.locfileid: "59320686"
     |------------|--------------|-------------|  
     |`Button1`|`Text`|启动任务|  
     |`Button2`|`Text`|取消|  
-    |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
+    |`Label`|`(Name)`， `Text`|lblPercentDone, 0|  
   
 4. 上**项目**菜单中，选择**添加类**若要添加一个名为类`Widget.vb`到项目。  
   

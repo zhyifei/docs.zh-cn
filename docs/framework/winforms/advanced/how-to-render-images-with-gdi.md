@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
 ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342539"
 ---
 # <a name="how-to-render-images-with-gdi"></a>如何：使用 GDI+ 呈现图像
@@ -84,9 +84,9 @@ ms.locfileid: "59342539"
 ## <a name="see-also"></a>请参阅
 
 - [图形编程入门](getting-started-with-graphics-programming.md)
-- [如何：创建用于绘制的 Graphics 对象](how-to-create-graphics-objects-for-drawing.md)
+- [如何：创建用于绘制图形对象](how-to-create-graphics-objects-for-drawing.md)
 - [GDI+ 中的笔、直线和矩形](pens-lines-and-rectangles-in-gdi.md)
 - [如何：在 Windows 窗体上绘制文本](how-to-draw-text-on-a-windows-form.md)
 - [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
-- [绘制线条或闭合图形](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
+- [绘制线条或闭合的图形](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
 - [图标的图像编辑器](/cpp/windows/image-editor-for-icons)

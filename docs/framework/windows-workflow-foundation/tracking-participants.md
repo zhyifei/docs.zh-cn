@@ -3,14 +3,14 @@ title: 跟踪参与者
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
 ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340173"
 ---
 # <a name="tracking-participants"></a>跟踪参与者
-跟踪参与者是扩展点，允许工作流开发人员访问 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 对象并对其进行处理。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包括一个标准跟踪参与者，它将作为事件跟踪 Windows (ETW) 事件的跟踪记录写入。 如果这不能满足您的需求，您还可以编写自定义跟踪参与者。  
+跟踪参与者是扩展点，允许工作流开发人员访问 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 对象并对其进行处理。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包括一个标准跟踪参与者，可将跟踪记录作为 Windows 事件跟踪 (ETW) 事件写入。 如果这不能满足您的需求，您还可以编写自定义跟踪参与者。  
   
 ## <a name="tracking-participants"></a>跟踪参与者  
  跟踪基础结构允许对传出跟踪记录应用筛选器，以便参与者可订阅该记录的子集。 应用筛选器的机制是通过跟踪配置文件来实现的。  
@@ -18,7 +18,7 @@ ms.locfileid: "59340173"
  中的 Windows Workflow Foundation (WF)[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]提供跟踪参与者的跟踪记录写入 ETW 会话。 通过在配置文件中添加特定于跟踪的行为，可以对工作流服务配置参与者。 通过启用 ETW 跟踪参与者，可以在事件查看器中查看跟踪记录。 基于 ETW 的跟踪的 SDK 示例是一种很好的方法，可使用基于 ETW 的跟踪参与者来熟悉 WF 跟踪。  
   
 ## <a name="etw-tracking-participant"></a>ETW 跟踪参与者  
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 包括一个 ETW 跟踪参与者的跟踪记录写入 ETW 会话。 它的实现方式非常高效，对应用程序的性能或对服务器的吞吐量影响非常小。 使用标准 ETW 跟踪参与者的一个优点是，它接收的跟踪记录可以在 Windows 事件查看器中与其他应用程序日志及系统日志一起查看。  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 包括一个 ETW 跟踪参与者，可将跟踪记录写入 ETW 会话。 它的实现方式非常高效，对应用程序的性能或对服务器的吞吐量影响非常小。 使用标准 ETW 跟踪参与者的一个优点是，它接收的跟踪记录可以在 Windows 事件查看器中与其他应用程序日志及系统日志一起查看。  
   
  在 Web.config 文件中配置标准 ETW 跟踪参与者，如下例所示。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "59340173"
 ## <a name="custom-tracking-participant"></a>自定义跟踪参与者  
  跟踪参与者 API 允许以用户提供的跟踪参与者扩展跟踪运行时，该用户提供的跟踪参与者可包括用于对工作流运行时发出的跟踪记录进行处理的自定义逻辑。 若要编写自定义跟踪参与者，开发人员必须对 `Track` 类实现 <xref:System.Activities.Tracking.TrackingParticipant> 方法。 此方法在工作流运行时发出跟踪记录时调用。  
   
- 跟踪参与者从 <xref:System.Activities.Tracking.TrackingParticipant> 类派生。 系统提供的 <xref:System.Activities.Tracking.EtwTrackingParticipant> 为每个收到的跟踪记录发出一个 Windows 事件跟踪 (ETW) 事件。 若要创建自定义跟踪参与者，应创建从 <xref:System.Activities.Tracking.TrackingParticipant> 派生的类。 若要提供基本跟踪功能，应重写 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>。 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 跟踪记录发送的运行时，并可按所需的方式处理时调用。 在以下示例中，定义了自定义跟踪参与者类，该类将所有跟踪记录发到控制台窗口。 还可以实现一个 <xref:System.Activities.Tracking.TrackingParticipant> 对象，该对象使用其 `BeginTrack` 和 `EndTrack` 方法异步处理跟踪记录。  
+ 跟踪参与者从 <xref:System.Activities.Tracking.TrackingParticipant> 类派生。 系统提供的 <xref:System.Activities.Tracking.EtwTrackingParticipant> 为每个收到的跟踪记录发出一个 Windows 事件跟踪 (ETW) 事件。 若要创建自定义跟踪参与者，应创建从 <xref:System.Activities.Tracking.TrackingParticipant> 派生的类。 若要提供基本跟踪功能，应重写 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>。 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 在运行时发出跟踪记录时调用，并可按所需的方式进行处理。 在以下示例中，定义了自定义跟踪参与者类，该类将所有跟踪记录发到控制台窗口。 还可以实现一个 <xref:System.Activities.Tracking.TrackingParticipant> 对象，该对象使用其 `BeginTrack` 和 `EndTrack` 方法异步处理跟踪记录。  
   
 ```csharp  
 class ConsoleTrackingParticipant : TrackingParticipant  

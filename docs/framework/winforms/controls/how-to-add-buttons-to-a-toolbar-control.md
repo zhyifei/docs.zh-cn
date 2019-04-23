@@ -13,10 +13,10 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
 ms.openlocfilehash: ad4384f8cc2a1d0c15f8c7681e6e5d8bf75e4451
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343683"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>如何：向 ToolBar 控件添加按钮
@@ -151,7 +151,7 @@ ms.locfileid: "59343683"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.ToolBar>
-- [如何：定义工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
+- [如何：定义的工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
 - [如何：触发工具栏按钮的菜单事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar 控件概述](toolbar-control-overview-windows-forms.md)
 - [ToolBar 控件](toolbar-control-windows-forms.md)

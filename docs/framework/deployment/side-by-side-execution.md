@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654596"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59341070"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>在 .NET Framework 中并行执行
 并行执行是在同一台计算机上运行应用程序或组件的多个版本的能力。 在同一台计算机上，可以同时安装公共语言运行时的多个版本，还可以同时安装使用运行时的某个版本的应用程序和组件的多个版本。  
@@ -75,11 +75,11 @@ ms.locfileid: "58654596"
   
  如果应用程序配置文件存在，则运行时根据以下过程的结果确定要加载的适当运行时版本：  
   
-1.  运行时检查应用程序配置文件中的 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素。 如果 \<supportedRuntime> 元素中指定了一个或多个支持的运行时版本，则运行时加载第一个 \<supportedRuntime> 元素指定的运行时版本。 如果这一版本不可用，则运行时检查下一个 \<supportedRuntime> 元素，并尝试加载所指定的运行时版本。 如果这一运行时版本仍不可用，则检查后面的 \<supportedRuntime> 元素。 如果受支持的运行时版本均不可用，则运行时无法加载运行时版本，并向用户显示一条消息（请参阅步骤 3）。  
+1. 运行时检查应用程序配置文件中的 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 元素。 如果 \<supportedRuntime> 元素中指定了一个或多个支持的运行时版本，则运行时加载第一个 \<supportedRuntime> 元素指定的运行时版本。 如果这一版本不可用，则运行时检查下一个 \<supportedRuntime> 元素，并尝试加载所指定的运行时版本。 如果这一运行时版本仍不可用，则检查后面的 \<supportedRuntime> 元素。 如果受支持的运行时版本均不可用，则运行时无法加载运行时版本，并向用户显示一条消息（请参阅步骤 3）。  
   
-2.  运行时读取应用程序可执行文件的 PE 文件头。 如果 PE 文件头指定的运行时版本可用，则运行时加载此版本。 如果指定的运行时版本不可用，运行时将搜索 Microsoft 确定与 PE 文件头中的运行时版本兼容的运行时版本。 如果找不到此版本，则继续执行到步骤 3。  
+2. 运行时读取应用程序可执行文件的 PE 文件头。 如果 PE 文件头指定的运行时版本可用，则运行时加载此版本。 如果指定的运行时版本不可用，运行时将搜索 Microsoft 确定与 PE 文件头中的运行时版本兼容的运行时版本。 如果找不到此版本，则继续执行到步骤 3。  
   
-3.  运行时显示一条消息，指出应用程序支持的运行时版本不可用。 未加载运行时。  
+3. 运行时显示一条消息，指出应用程序支持的运行时版本不可用。 未加载运行时。  
   
     > [!NOTE]
     >  通过使用注册表项 HKLM\Software\Microsoft\\.NETFramework 下的 NoGuiFromShim 值或使用环境变量 COMPLUS_NoGuiFromShim，可取消此消息的显示。 例如，可取消显示通常不与用户交互的应用程序的消息（如无人参与的安装或 Windows 服务）。 当取消显示此消息时，运行时将向事件日志写入一条消息。  将注册表值 NoGuiFromShim 设置为 1 可向计算机上的所有应用程序取消此消息的显示。 或者，将 COMPLUS_NoGuiFromShim 环境变量设置为 1 以针对特定用户上下中运行的应用程序取消此消息的显示。  

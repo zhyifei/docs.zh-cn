@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
 ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336871"
 ---
 # <a name="exporting-schemas-from-classes"></a>从类导出架构
@@ -43,9 +43,9 @@ ms.locfileid: "59336871"
 ## <a name="export-options"></a>导出选项  
  您可以将 <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 的 <xref:System.Runtime.Serialization.XsdDataContractExporter> 属性设置为 <xref:System.Runtime.Serialization.ExportOptions> 类的实例以控制导出过程的各个方面。 您可以具体设置以下选项：  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. 这一 `Type` 集合表示要导出的类型的已知类型。 (有关详细信息，请参阅[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)每次调用 `Export` 时，除了导出已传递给 `Export` 方法的类型外，还导出这些已知类型。  
+-   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>。 这一 `Type` 集合表示要导出的类型的已知类型。 (有关详细信息，请参阅[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)每次调用 `Export` 时，除了导出已传递给 `Export` 方法的类型外，还导出这些已知类型。  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. 通过此属性可以提供 <xref:System.Runtime.Serialization.IDataContractSurrogate> ，该属性将自定义导出过程。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
+-   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>。 通过此属性可以提供 <xref:System.Runtime.Serialization.IDataContractSurrogate> ，该属性将自定义导出过程。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
   
 ## <a name="helper-methods"></a>帮助器方法  
  除了具有导出架构的主要作用， `XsdDataContractExporter` 还具有几个有用的帮助器方法，它们可提供有关类型的信息。 这些问题包括：  

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
 ms.openlocfilehash: a7bdfc244b0ff1c2ed625235df7e74ced026c542
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343605"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>如何：启用消息重放检测
@@ -30,13 +30,13 @@ ms.locfileid: "59343605"
   
 2. 使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> 属性返回对 <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> 类的引用，并根据需要设置任何下列属性：  
   
-    1.  `DetectReplay`. 一个布尔值。 该值控制客户端是否应当检测来自服务器的重播。 默认值为 `true`。  
+    1.  `DetectReplay`。 一个布尔值。 该值控制客户端是否应当检测来自服务器的重播。 默认值为 `true`。  
   
-    2.  `MaxClockSkew`. 一个 <xref:System.TimeSpan> 值。 控制重播机制在客户端和服务器之间可以容忍多大程度的时间偏差。 该安全机制检查发送的时间戳，并确定在过去它是否返回过快。 默认值为 5 分钟。  
+    2.  `MaxClockSkew`。 一个 <xref:System.TimeSpan> 值。 控制重播机制在客户端和服务器之间可以容忍多大程度的时间偏差。 该安全机制检查发送的时间戳，并确定在过去它是否返回过快。 默认值为 5 分钟。  
   
-    3.  `ReplayWindow`. 一个 `TimeSpan` 值。 该值控制某消息在由服务器（通过中间方）发送之后、到达客户端之前在网络中存留的时间。 客户端跟踪在最后一个 `ReplayWindow` 中发送的消息的签名，以进行重播检测。  
+    3.  `ReplayWindow`。 一个 `TimeSpan` 值。 该值控制某消息在由服务器（通过中间方）发送之后、到达客户端之前在网络中存留的时间。 客户端跟踪在最后一个 `ReplayWindow` 中发送的消息的签名，以进行重播检测。  
   
-    4.  `ReplayCacheSize`. 一个整数值。 客户端在缓存中存储消息的签名。 此设置指定缓存中可以存储的签名数目。 如果最后一个重播窗口中发送的消息数达到缓存限制，则拒绝新消息，直到最旧的缓存签名达到时间限制为止。 默认值为 500000。  
+    4.  `ReplayCacheSize`。 一个整数值。 客户端在缓存中存储消息的签名。 此设置指定缓存中可以存储的签名数目。 如果最后一个重播窗口中发送的消息数达到缓存限制，则拒绝新消息，直到最旧的缓存签名达到时间限制为止。 默认值为 500000。  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>使用代码在服务上控制重播检测  
   
@@ -88,9 +88,9 @@ ms.locfileid: "59343605"
   
  如果不使用安全对话会话，则重播检测不保证在服务器场方案中和回收进程时检测重播。 这适用于系统提供的下列绑定：  
   
--   <xref:System.ServiceModel.BasicHttpBinding>.  
+-   <xref:System.ServiceModel.BasicHttpBinding>。  
   
--   <xref:System.ServiceModel.WSHttpBinding> 与<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>属性设置为`false`。  
+-   <xref:System.ServiceModel.WSHttpBinding>，其 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 属性设置为 `false`。  
   
 ## <a name="compiling-the-code"></a>编译代码  
   
@@ -108,4 +108,4 @@ ms.locfileid: "59343605"
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - [安全对话和安全会话](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
 - [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
-- [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

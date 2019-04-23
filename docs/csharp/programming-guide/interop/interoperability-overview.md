@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 160403b938a95ae5bb03703f73fa906de5fc3ded
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410753"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59337547"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互操作性概述（C# 编程指南）
 本主题描述在 C# 托管代码和非托管代码之间实现互操作性的方法。  
@@ -33,26 +33,26 @@ ms.locfileid: "58410753"
 ## <a name="exposing-com-components-to-c"></a>向 C\# 公开 COM 组件
  可以使用 C# 项目中的 COM 组件。 常规步骤如下所示：  
   
-1.  找到要使用的 COM 组件并注册。 使用 regsvr32.exe 注册或注销 COM DLL。  
+1. 找到要使用的 COM 组件并注册。 使用 regsvr32.exe 注册或注销 COM DLL。  
   
-2.  向项目添加对 COM 组件或类型库的引用。  
+2. 向项目添加对 COM 组件或类型库的引用。  
   
      添加引用时，Visual Studio 使用 [Tlbimp.exe（类型库导入程序）](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)。此程序需要使用类型库作为输入，以输出 .NET Framework 互操作程序集。 该程序集又称为运行时可调用包装器 (RCW)，其中包含包装类型库中的 COM 类和接口的托管类和接口。 Visual Studio 向项目添加对生成程序集的引用。  
   
-3.  创建在 RCW 中定义的类的实例。 这会创建 COM 对象的实例。  
+3. 创建在 RCW 中定义的类的实例。 这会创建 COM 对象的实例。  
   
-4.  像使用其他托管对象那样使用该对象。 当垃圾回收对该对象进行回收后，COM 对象的实例也会从内存中释放出来。  
+4. 像使用其他托管对象那样使用该对象。 当垃圾回收对该对象进行回收后，COM 对象的实例也会从内存中释放出来。  
   
  有关详细信息，请参阅[向 .NET Framework 公开 COM 组件](../../../../docs/framework/interop/exposing-com-components.md)。  
   
 ## <a name="exposing-c-to-com"></a>向 COM 公开 C#  
  COM 客户端可以使用已经正确公开的 C# 类型。 公开 C# 类型的基本步骤如下所示：  
   
-1.  在 C# 项目中添加互操作特性。  
+1. 在 C# 项目中添加互操作特性。  
   
      可通过修改 Visual C# 项目属性使程序集 COM 可见。 有关详细信息，请参阅[“程序集信息”对话框](/visualstudio/ide/reference/assembly-information-dialog-box)。  
   
-2.  生成 COM 类型库并对它进行注册以供 COM 使用。  
+2. 生成 COM 类型库并对它进行注册以供 COM 使用。  
   
      可修改 Visual C# 项目属性以自动注册 COM 互操作的 C# 程序集。 Visual Studio 通过 `/tlb` 命令行开关使用 [Regasm.exe（程序集注册工具）](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)。此工具使用托管组件作为输入，以生成类型库。 此类型库描述程序集中的 `public` 类型并添加注册表项，以便 COM 客户端可以创建托管类。  
   

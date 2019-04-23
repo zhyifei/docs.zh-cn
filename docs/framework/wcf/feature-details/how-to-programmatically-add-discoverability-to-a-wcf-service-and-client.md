@@ -3,10 +3,10 @@ title: 如何：以编程方式向 WCF 服务和客户端添加可发现性
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
 ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336585"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可发现性
@@ -58,7 +58,7 @@ ms.locfileid: "59336585"
   
 1. 向名为 `DiscoveryClientApp` 的解决方案添加一个新控制台应用程序。  
   
-2. 添加对引用`System.ServiceModel.dll`和 `System.ServiceModel.Discovery.dll`  
+2. 添加对 `System.ServiceModel.dll` 和 `System.ServiceModel.Discovery.dll` 的引用  
   
 3. 将 GeneratedClient.cs 和 App.config 文件从现有客户端项目复制到新的 DiscoveryClientApp 项目。 若要执行此操作，右键单击中的文件**解决方案资源管理器**，选择**副本**，然后选择**DiscoveryClientApp**项目中，右键单击，然后选择**粘贴**。  
   
@@ -342,5 +342,5 @@ namespace DiscoveryClientApp
 
 ## <a name="see-also"></a>请参阅
 
-- [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [WCF Discovery 对象模型](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+- [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [WCF 发现对象模型](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

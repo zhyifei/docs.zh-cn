@@ -3,12 +3,12 @@ title: 使用 ASP.NET Core Web API 提供机器学习模型
 description: 使用 ASP.NET Core Web API 通过 Internet 提供 ML.NET 情绪分析机器学习模型
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: af51ccaac263202fc34d36e746722d2da46404f8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58307910"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59321220"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>操作说明：通过 ASP.NET Core Web API 提供机器学习模型
 
@@ -21,7 +21,7 @@ ms.locfileid: "58307910"
 
 ## <a name="prerequisites"></a>系统必备
 
-- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
+- 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
 - PowerShell。
 - 预先定型的模型。
     - 根据 [ML.NET 情绪分析教程](../tutorials/sentiment-analysis.md)生成你自己的模型。

@@ -3,10 +3,10 @@ title: 处理异常和错误
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343423"
 ---
 # <a name="handling-exceptions-and-faults"></a>处理异常和错误
@@ -20,7 +20,7 @@ ms.locfileid: "59343423"
   
 |异常类型|含义|内部异常的内容|恢复策略|  
 |--------------------|-------------|-----------------------------|-----------------------|  
-|<xref:System.ServiceModel.AddressAlreadyInUseException>|为进行侦听而指定的终结点地址已在使用。|如果存在，则提供有关引起此异常的传输错误的更多详细信息。 例如， <xref:System.IO.PipeException><xref:System.Net.HttpListenerException>，或<xref:System.Net.Sockets.SocketException>。|请尝试使用其他地址。|  
+|<xref:System.ServiceModel.AddressAlreadyInUseException>|为进行侦听而指定的终结点地址已在使用。|如果存在，则提供有关引起此异常的传输错误的更多详细信息。 例如， <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException> 或 <xref:System.Net.Sockets.SocketException>。|请尝试使用其他地址。|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|不允许该进程访问为进行侦听而指定的终结点地址。|如果存在，则提供有关引起此异常的传输错误的更多详细信息。 例如，<xref:System.IO.PipeException> 或 <xref:System.Net.HttpListenerException>。|请尝试使用其他凭据。|  
 |<xref:System.ServiceModel.CommunicationObjectFaultedException>|<xref:System.ServiceModel.ICommunicationObject>正在使用处于出错状态 (有关详细信息，请参阅[了解状态更改](../../../../docs/framework/wcf/extending/understanding-state-changes.md))。 请注意，当具有多个挂起调用的对象转变为“出错”状态时，只有一个调用引发与该故障有关的异常，而其余调用都引发 <xref:System.ServiceModel.CommunicationObjectFaultedException>。 引发此异常的原因通常在于，应用程序忽略了某个异常并尝试使用已出错的对象，而在其中使用该对象的线程可能不是捕获原始异常的线程。|如果存在，则提供有关内部异常的详细信息。|新建一个对象。 请注意，根据首先导致 <xref:System.ServiceModel.ICommunicationObject> 出错的原因，可能还需要完成其他工作来进行恢复。|  
 |<xref:System.ServiceModel.CommunicationObjectAbortedException>|<xref:System.ServiceModel.ICommunicationObject>正在使用已中止 (有关详细信息，请参阅[了解状态更改](../../../../docs/framework/wcf/extending/understanding-state-changes.md))。 与 <xref:System.ServiceModel.CommunicationObjectFaultedException> 相似，此异常指示应用程序已在该对象上调用了 <xref:System.ServiceModel.ICommunicationObject.Abort%2A>（有可能是从另一个线程调用的），而且该对象会因此而不再可用。|如果存在，则提供有关内部异常的详细信息。|新建一个对象。 请注意，根据首先导致 <xref:System.ServiceModel.ICommunicationObject> 中止的原因，可能还需要完成其他工作来进行恢复。|  
@@ -302,14 +302,14 @@ public class MessageFault
 }  
 ```  
   
- `IsMustUnderstandFault` 返回`true`如果错误为`mustUnderstand`容错。 `WasHeaderNotUnderstood` 返回`true`如果具有指定的名称和命名空间的标头将包括在将错误作为一个 NotUnderstood 标头。  否则，它将返回 `false`。  
+ 如果故障是 `IsMustUnderstandFault` 故障，`true` 返回 `mustUnderstand`。 如果具有指定名称和命名空间的标头以 NotUnderstood 标头的形式包括在该错误中，则 `WasHeaderNotUnderstood` 将返回 `true`。  否则，它将返回 `false`。  
   
  如果某个通道发出一个带有 MustUnderstand = true 标记的标头，则该层还应实现异常生成 API 模式，而且应按照前面的说明将该头所引起的 `mustUnderstand` 错误转换为更为有用的异常。  
   
 ## <a name="tracing"></a>跟踪  
  .NET Framework 提供了一种用来跟踪程序执行情况的机制，使用此机制，可以在无法简单地附加一个调试器并逐句通过代码时帮助诊断成品应用程序或中间问题。 此机制的核心组件位于 <xref:System.Diagnostics?displayProperty=nameWithType> 命名空间中，此机制中包含下列组件：  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>它是要写入的跟踪信息的源<xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>，这是具体侦听器接收要从跟踪的信息的抽象基类<xref:System.Diagnostics.TraceSource>并将其输出到特定于侦听器的目标。 例如，<xref:System.Diagnostics.XmlWriterTraceListener> 将跟踪信息输出到 XML 文件中。) 以及 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>（允许应用程序用户控制跟踪的详细级别，通常在配置中指定）。  
+-   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>（要写入的跟踪信息的源）、<xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>（具体侦听器的抽象基类，具体侦听器接收要从 <xref:System.Diagnostics.TraceSource> 跟踪的信息并将其输出到侦听器特定的目标， 例如，<xref:System.Diagnostics.XmlWriterTraceListener> 将跟踪信息输出到 XML 文件中。) 以及 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>（允许应用程序用户控制跟踪的详细级别，通常在配置中指定）。  
   
 -   除了核心组件，你可以使用[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)以查看和搜索 WCF 跟踪。 该工具专为跟踪文件生成的 WCF，写出使用<xref:System.Diagnostics.XmlWriterTraceListener>。 下图演示了跟踪中涉及到的各种组件。  
   
@@ -368,7 +368,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 ```  
   
 #### <a name="tracing-structured-data"></a>跟踪结构化数据  
- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 具有<xref:System.Diagnostics.TraceSource.TraceData%2A>方法采用一个或多个对象都将包括在跟踪条目。 通常，会在每个对象上调用 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法，而且所生成的字符串会作为跟踪项的一部分来写入。 在使用 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 来输出跟踪内容时，可以将 <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> 作为数据对象传递给 <xref:System.Diagnostics.TraceSource.TraceData%2A>。 所生成的跟踪项包括由 <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType> 提供的 XML。 下面是 XML 应用程序数据的示例项：  
+ <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 具有一个 <xref:System.Diagnostics.TraceSource.TraceData%2A> 方法，该方法采用一个或多个要包括在跟踪项中的对象。 通常，会在每个对象上调用 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法，而且所生成的字符串会作为跟踪项的一部分来写入。 在使用 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 来输出跟踪内容时，可以将 <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> 作为数据对象传递给 <xref:System.Diagnostics.TraceSource.TraceData%2A>。 所生成的跟踪项包括由 <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType> 提供的 XML。 下面是 XML 应用程序数据的示例项：  
   
 ```xml  
 <E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">  

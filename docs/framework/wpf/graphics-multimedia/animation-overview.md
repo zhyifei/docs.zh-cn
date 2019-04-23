@@ -9,10 +9,10 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337729"
 ---
 # <a name="animation-overview"></a>动画概述
@@ -35,9 +35,9 @@ ms.locfileid: "59337729"
   
 -   然后，程序用新值更新矩形并重画此矩形。  
   
- 早于[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]开发人员必须创建和管理其自己的计时系统或使用特殊的自定义库。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括通过托管代码公开的高效计时系统和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和的紧密地集成到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]框架。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画，可以轻松地对控件和其他图形对象进行动画处理。  
+ 早于[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]开发人员必须创建和管理其自己的计时系统或使用特殊的自定义库。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括通过托管代码公开的高效计时系统和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和的紧密地集成到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]框架。 通过使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画，可以轻松地对控件和其他图形对象进行动画处理。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 处理管理计时系统和高效地重绘屏幕的所有后台任务。 它提供了计时类，使用户能够重点关注要创造的效果，而非实现这些效果的机制。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 此外可以轻松通过公开动画基类您的类可以从该基类继承来创建自己的动画，以便生成自定义的动画。 这些自定义动画获得了标准动画类的许多性能优点。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以高效地处理管理计时系统和重绘屏幕的所有后台任务。 它提供了计时类，使用户能够重点关注要创造的效果，而非实现这些效果的机制。 此外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 通过公开动画基类（你使用的类可以继承这些类）可以轻松创建自己的动画，这样便可以制作自定义动画。 这些自定义动画获得了标准动画类的许多性能优点。  
   
 <a name="thewpftimingsystem"></a>   
 ## <a name="wpf-property-animation-system"></a>WPF 属性动画系统  
@@ -318,7 +318,7 @@ ms.locfileid: "59337729"
 ## <a name="animation-samples"></a>动画示例  
  以下示例有助于开始向应用程序添加动画。  
   
--   [从、 To 和 By 动画目标值示例](https://go.microsoft.com/fwlink/?LinkID=159988)  
+-   [From、To 和 By 动画目标值示例](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      演示不同的 From/To/By 设置。  
   
@@ -343,9 +343,9 @@ ms.locfileid: "59337729"
 |[计时行为概述](timing-behaviors-overview.md)|介绍<xref:System.Windows.Media.Animation.Timeline>类型和动画中使用的属性。|  
 |[计时事件概述](timing-events-overview.md)|介绍可在上找到的事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>对象的点上执行代码中在时间线，如开始、 暂停、 继续、 跳过，或停止。|  
 |[帮助主题](animation-and-timing-how-to-topics.md)|包含演示在应用程序中使用动画和时间线的代码示例。|  
-|[时钟帮助主题](clocks-how-to-topics.md)|包含代码示例使用<xref:System.Windows.Media.Animation.Clock>在应用程序中的对象。|  
+|[时钟操作说明主题](clocks-how-to-topics.md)|包含代码示例使用<xref:System.Windows.Media.Animation.Clock>在应用程序中的对象。|  
 |[关键帧操作说明主题](key-frame-animation-how-to-topics.md)|包含在应用程序中使用关键帧动画的代码示例。|  
-|[路径动画帮助主题](path-animation-how-to-topics.md)|包含在应用程序中使用路径动画的代码示例。|  
+|[路径动画操作说明主题](path-animation-how-to-topics.md)|包含在应用程序中使用路径动画的代码示例。|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>参考  

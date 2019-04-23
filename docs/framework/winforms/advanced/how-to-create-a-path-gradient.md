@@ -9,19 +9,21 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186090"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975749"
 ---
 # <a name="how-to-create-a-path-gradient"></a>如何：创建路径渐变
 <xref:System.Drawing.Drawing2D.PathGradientBrush>类使您可以自定义用渐变颜色填充形状的方式。 例如，可以指定为路径的中心的一种颜色和路径的边界的另一种颜色。 此外可以为每个路径的多个点边界指定单独的颜色。  
   
 > [!NOTE]
->  在中[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，路径是一系列直线和曲线由维护<xref:System.Drawing.Drawing2D.GraphicsPath>对象。 有关详细信息[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]路径，请参阅[GDI + 中的图形路径](graphics-paths-in-gdi.md)并[Constructing 和绘制路径](constructing-and-drawing-paths.md)。  
-  
+>  在 GDI + 中，路径是一系列直线和曲线由维护<xref:System.Drawing.Drawing2D.GraphicsPath>对象。 关于 GDI + 路径的详细信息，请参阅[GDI + 中的图形路径](graphics-paths-in-gdi.md)并[Constructing 和绘制路径](constructing-and-drawing-paths.md)。  
+
+这篇文章中的示例是从控件的调用的方法，<xref:System.Windows.Forms.Control.Paint>事件处理程序。  
+
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>使用路径渐变填充椭圆，  
   
 -   下面的示例用填充椭圆路径渐变画笔。 从中心色设置为蓝色并的边界颜色设置为浅绿色。 下图显示了实心的椭圆。  
@@ -30,7 +32,7 @@ ms.locfileid: "59186090"
   
      默认情况下，路径渐变画笔不会扩展路径的边界之外。 如果路径渐变画笔用于填充图形超出路径的边界，则不会填充路径外部屏幕区域。  
   
-     如果更改会发生什么情况如下图所示<xref:System.Drawing.Graphics.FillEllipse%2A>到下面的代码中调用`e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     如果更改会发生什么情况如下图所示<xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType>到下面的代码中调用`e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
      ![渐变路径扩展的路径中的边界之外。](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   

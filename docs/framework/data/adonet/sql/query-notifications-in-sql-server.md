@@ -3,10 +3,10 @@ title: SQL Server 中的查询通知
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
 ms.openlocfilehash: e31a733635cf56a9c5e539dfb1d71d7d7037175a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336663"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server 中的查询通知
@@ -30,13 +30,13 @@ ms.locfileid: "59336663"
   
 -   [使用查询通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
--   [创建通知查询](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+-   [为通知创建查询](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
 -   [开发 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
 -   [Service Broker 开发人员信息中心](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Developer's Guide (Service Broker)（开发人员指南 (Service Broker)）](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+-   [开发人员指南 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>本节内容  
  [启用查询通知](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "59336663"
  [使用 SqlDependency 检测更改](../../../../../docs/framework/data/adonet/sql/detecting-changes-with-sqldependency.md)  
  演示如何检测查询结果与最初检索到的结果是否相同。  
   
- [使用 SqlNotificationRequest 执行 SqlCommand](../../../../../docs/framework/data/adonet/sql/sqlcommand-execution-with-a-sqlnotificationrequest.md)  
+ [使用 SqlNotificationRequest 的 SqlCommand 执行](../../../../../docs/framework/data/adonet/sql/sqlcommand-execution-with-a-sqlnotificationrequest.md)  
  演示如何将 <xref:System.Data.SqlClient.SqlCommand> 对象配置为处理查询通知。  
   
 ## <a name="reference"></a>参考  
@@ -64,4 +64,4 @@ ms.locfileid: "59336663"
 ## <a name="see-also"></a>请参阅
 
 - [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

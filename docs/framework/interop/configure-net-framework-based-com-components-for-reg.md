@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093536"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59336572"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 基于 .NET Framework 的组件的免注册激活略复杂于 COM 组件的免注册激活。 安装需要两个清单：  
@@ -28,9 +28,9 @@ ms.locfileid: "56093536"
   
 ### <a name="to-create-an-application-manifest"></a>创建应用程序清单  
   
-1.  使用 XML 编辑器创建（或修改）COM 应用程序拥有的应用程序清单，该应用程序与一个或多个托管组件进行交互操作。  
+1. 使用 XML 编辑器创建（或修改）COM 应用程序拥有的应用程序清单，该应用程序与一个或多个托管组件进行交互操作。  
   
-2.  在文件开头插入以下标准标头：  
+2. 在文件开头插入以下标准标头：  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -39,7 +39,7 @@ ms.locfileid: "56093536"
   
      有关清单元素及其属性的信息，请参阅[应用程序清单](/windows/desktop/SbsCs/application-manifests)。  
   
-3.  标识清单的所有者。 以下示例中，`myComApp` 版本 1 拥有清单文件。  
+3. 标识清单的所有者。 以下示例中，`myComApp` 版本 1 拥有清单文件。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -51,7 +51,7 @@ ms.locfileid: "56093536"
       />  
     ```  
   
-4.  标识依赖程序集。 以下示例中，`myComApp` 依赖于 `myManagedComp`。  
+4. 标识依赖程序集。 以下示例中，`myComApp` 依赖于 `myManagedComp`。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -75,22 +75,22 @@ ms.locfileid: "56093536"
     </assembly>  
     ```  
   
-5.  保存并命名清单文件。 应用程序清单的名称是程序集可执行文件的名称后加 .manifest 扩展名。 例如，myComApp.exe 的应用程序清单文件名称是 myComApp.exe.manifest。  
+5. 保存并命名清单文件。 应用程序清单的名称是程序集可执行文件的名称后加 .manifest 扩展名。 例如，myComApp.exe 的应用程序清单文件名称是 myComApp.exe.manifest。  
   
  可在与 COM 应用程序相同的目录中安装应用程序清单。 或者，可将其作为资源添加到应用程序的 .exe 文件。 有关其他信息，请参阅[关于并行程序集](/windows/desktop/SbsCs/about-side-by-side-assemblies-)。  
   
 #### <a name="to-create-a-component-manifest"></a>创建组件清单  
   
-1.  使用 XML 编辑器创建组件清单，描述托管程序集。  
+1. 使用 XML 编辑器创建组件清单，描述托管程序集。  
   
-2.  在文件开头插入以下标准标头：  
+2. 在文件开头插入以下标准标头：  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3.  标识文件的所有者。 应用程序清单文件中 `<dependentAssembly>` 元素的 `<assemblyIdentity>` 元素必须与组件清单中的该元素相匹配。 以下示例中，`myManagedComp` 版本 1.2.3.4 拥有清单文件。  
+3. 标识文件的所有者。 应用程序清单文件中 `<dependentAssembly>` 元素的 `<assemblyIdentity>` 元素必须与组件清单中的该元素相匹配。 以下示例中，`myManagedComp` 版本 1.2.3.4 拥有清单文件。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -103,9 +103,9 @@ ms.locfileid: "56093536"
            />  
     ```  
   
-4.  标识程序集中的每个类。 使用 `<clrClass>` 元素来唯一地标识托管程序集中的每个类。 该元素是 `<assembly>` 元素的子元素，具有下表中描述的属性。  
+4. 标识程序集中的每个类。 使用 `<clrClass>` 元素来唯一地标识托管程序集中的每个类。 该元素是 `<assembly>` 元素的子元素，具有下表中描述的属性。  
   
-    |特性|说明​​|必需|  
+    |特性|说明|必需|  
     |---------------|-----------------|--------------|  
     |`clsid`|用于指定要激活的类的标识符。|是|  
     |`description`|用于通知用户组件相关信息的字符串。 空字符串为默认值。|No|  
@@ -146,25 +146,25 @@ ms.locfileid: "56093536"
     </assembly>  
     ```  
   
-5.  保存并命名清单文件。 组件清单名称是程序集库名称后加 .manifest 扩展名。 例如，myManagedComp.dll 的名称是 myManagedComp.manifest。  
+5. 保存并命名清单文件。 组件清单名称是程序集库名称后加 .manifest 扩展名。 例如，myManagedComp.dll 的名称是 myManagedComp.manifest。  
   
  必须将组件清单作为资源嵌入程序集。  
   
 #### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>将组件清单嵌入托管程序集  
   
-1.  创建包含以下语句的资源脚本：  
+1. 创建包含以下语句的资源脚本：  
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
      在此语句中，`myManagedComp.manifest` 是正在嵌入的组件清单的名称。 对于此示例，脚本文件名称是 `myresource.rc`。  
   
-2.  使用 Microsoft Windows 资源编译器 (rc.exe) 编译脚本。 在命令提示符处，键入下列命令：  
+2. 使用 Microsoft Windows 资源编译器 (rc.exe) 编译脚本。 在命令提示符处，键入下列命令：  
   
      `rc myresource.rc`  
   
      Rc.exe 生成 `myresource.res` 资源文件。  
   
-3.  再次编译该程序集的源文件，并使用 /win32res 选项指定资源文件：  
+3. 再次编译该程序集的源文件，并使用 /win32res 选项指定资源文件：  
   
     ```  
     /win32res:myresource.res  
@@ -173,6 +173,7 @@ ms.locfileid: "56093536"
      同样，`myresource.res` 是包含嵌入资源的资源文件的名称。  
   
 ## <a name="see-also"></a>请参阅
+
 - [免注册 COM 互操作](registration-free-com-interop.md)
 - [免注册 COM 互操作的需求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
 - [将 COM 组件配置为免注册激活](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))

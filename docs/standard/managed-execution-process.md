@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652009"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59336143"
 ---
 # <a name="managed-execution-process"></a>托管执行过程
 <a name="introduction"></a> 托管的执行过程包括以下步骤，在本主题后面将对此进行详细讨论：  
   
-1.  [选择编译器](#choosing_a_compiler)。  
+1. [选择编译器](#choosing_a_compiler)。  
   
      若要获取公共语言运行时提供的好处，必须使用一个或多个面向运行时的语言编译器。  
   
-2.  [将代码编译为 MSIL](#compiling_to_msil)。  
+2. [将代码编译为 MSIL](#compiling_to_msil)。  
   
      编译将你的源代码转换为 Microsoft 中间语言 (MSIL) 并生成必需的元数据。  
   
-3.  [将 MSIL 编译为本机代码](#compiling_msil_to_native_code)。  
+3. [将 MSIL 编译为本机代码](#compiling_msil_to_native_code)。  
   
      在执行时，实时 (JIT) 编译器将 MSIL 转换为本机代码。 在此编译期间，代码必须通过检查 MSIL 和元数据的验证过程以查明是否可以将代码确定为类型安全。  
   
-4.  [运行代码](#running_code)。  
+4. [运行代码](#running_code)。  
   
      公共语言运行时提供启用要发生的执行的基础结构以及执行期间可使用的服务。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "54652009"
   
  在 Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] 和 [!INCLUDE[windowsver](../../includes/windowsver-md.md)]中，操作系统加载程序通过检查 COFF 标头中的一个位检查托管模块。 所设置的位表示托管模块。 如果加载程序检测到托管模块，它将加载 mscoree.dll， `_CorValidateImage` 并且 `_CorImageUnloading` 在加载和卸载托管模块映像时通知加载程序。 `_CorValidateImage` 执行以下操作：  
   
-1.  确保代码是有效的托管代码。  
+1. 确保代码是有效的托管代码。  
   
-2.  将映像中的入口点更改为运行时中的入口点。  
+2. 将映像中的入口点更改为运行时中的入口点。  
   
  在 64 位 Windows 上， `_CorValidateImage` 通过将其从 PE32 转换为 PE32+ 格式修改内存中的映像。  
   

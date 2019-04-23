@@ -9,10 +9,10 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
 ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340719"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>演练：在 Windows 窗体中执行拖放操作
@@ -109,5 +109,5 @@ ms.locfileid: "59340719"
 ## <a name="see-also"></a>请参阅
 
 - [如何：将数据添加到剪贴板](how-to-add-data-to-the-clipboard.md)
-- [如何：从剪贴板检索数据](how-to-retrieve-data-from-the-clipboard.md)
+- [如何：从剪贴板中检索数据](how-to-retrieve-data-from-the-clipboard.md)
 - [拖放操作和剪贴板支持](drag-and-drop-operations-and-clipboard-support.md)

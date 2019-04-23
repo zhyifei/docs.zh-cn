@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
 ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336182"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement 内容模型概述
@@ -57,11 +57,11 @@ ms.locfileid: "59336182"
 ## <a name="working-with-textelement-content-programmatically"></a>以编程方式处理 TextElement 内容  
  内容<xref:System.Windows.Documents.TextElement>组成的集合，因此以编程方式操作的内容<xref:System.Windows.Documents.TextElement>对象通过使用这些集合。 有三个不同的集合使用<xref:System.Windows.Documents.TextElement>-派生的类：  
   
--   <xref:System.Windows.Documents.InlineCollection>:表示 <xref:System.Windows.Documents.Inline> 元素的集合。 <xref:System.Windows.Documents.InlineCollection> 定义允许的子内容的<xref:System.Windows.Documents.Paragraph>， <xref:System.Windows.Documents.Span>，和<xref:System.Windows.Controls.TextBlock>元素。  
+-   <xref:System.Windows.Documents.InlineCollection>：表示 <xref:System.Windows.Documents.Inline> 元素的集合。 <xref:System.Windows.Documents.InlineCollection> 定义 <xref:System.Windows.Documents.Paragraph>、<xref:System.Windows.Documents.Span> 和 <xref:System.Windows.Controls.TextBlock> 元素允许的子内容。  
   
--   <xref:System.Windows.Documents.BlockCollection>:表示 <xref:System.Windows.Documents.Block> 元素的集合。 <xref:System.Windows.Documents.BlockCollection> 定义允许的子内容的<xref:System.Windows.Documents.FlowDocument>， <xref:System.Windows.Documents.Section>， <xref:System.Windows.Documents.ListItem>， <xref:System.Windows.Documents.TableCell>， <xref:System.Windows.Documents.Floater>，并<xref:System.Windows.Documents.Figure>元素。  
+-   <xref:System.Windows.Documents.BlockCollection>：表示 <xref:System.Windows.Documents.Block> 元素的集合。 <xref:System.Windows.Documents.BlockCollection> 定义 <xref:System.Windows.Documents.FlowDocument>、<xref:System.Windows.Documents.Section>、<xref:System.Windows.Documents.ListItem>、<xref:System.Windows.Documents.TableCell>、<xref:System.Windows.Documents.Floater> 和 <xref:System.Windows.Documents.Figure> 元素允许的子内容。  
   
--   <xref:System.Windows.Documents.ListItemCollection>:流内容元素，表示特定内容项中有序或无序<xref:System.Windows.Documents.List>。  
+-   <xref:System.Windows.Documents.ListItemCollection>：流内容元素，表示特定内容项中有序或无序<xref:System.Windows.Documents.List>。  
   
  您可以操作 （添加或删除项目） 从这些集合使用的相应属性**Inlines**，**块**，和**ListItems**。 以下示例演示如何操作 s p a n 使用的内容**Inlines**属性。  
   
@@ -102,8 +102,8 @@ ms.locfileid: "59336182"
   
 ## <a name="see-also"></a>请参阅
 
-- [通过 Blocks 属性操作 FlowDocument](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
-- [通过 Blocks 属性操作流内容元素](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
-- [通过 Blocks 属性操作 FlowDocument](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
-- [通过 Columns 属性操作表的列](how-to-manipulate-table-columns-through-the-columns-property.md)
+- [通过 Blocks 属性控制 FlowDocument](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [通过 Blocks 属性控制流内容元素](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
+- [通过 Blocks 属性控制 FlowDocument](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [通过 Columns 属性控制表列](how-to-manipulate-table-columns-through-the-columns-property.md)
 - [通过 RowGroups 属性操作表的行组](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
