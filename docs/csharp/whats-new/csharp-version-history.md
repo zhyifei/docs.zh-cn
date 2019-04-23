@@ -3,12 +3,12 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126144"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59303357"
 ---
 # <a name="the-history-of-c"></a>C\# 发展历史
 
@@ -20,11 +20,11 @@ ms.locfileid: "58126144"
 C# 生成工具将最新的主要语言版本视为默认语言版本。 主要版本之间可能有单点修正发行版。有关详细信息，请参阅本节中的其他文章。 若要使用单点版本中的最新功能，需要[配置编译器语言版本](../language-reference/configure-language-version.md)并选择版本。 自 C# 7.0 起，已有三个单点修正发行版：
 
 * [C# 7.3](csharp-7-3.md)：
-  - C# 7.3 目前在 [Visual Studio 2017 版本 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) 和 [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md) 中可用。
+  - 自 [Visual Studio 2017 版本 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md) 起，开始随附 C# 7.3。
 * [C# 7.2](csharp-7-2.md)：
-  - C# 7.2 目前在 [Visual Studio 2017 版本 15.5](https://visualstudio.microsoft.com/vs/whatsnew/), 和 [.NET Core 2.0 SDK](../../core/whats-new/index.md) 中可用。
+  - 自 [Visual Studio 2017 版本 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 起，开始随附 C# 7.2。
 * [C# 7.1](csharp-7-1.md)：
-  - [Visual Studio 2017 版本 15.3](https://visualstudio.microsoft.com/vs/whatsnew/), 和 [.NET Core 2.0 SDK](../../core/whats-new/index.md) 中增加了这些功能。
+  - 自 [Visual Studio 2017 版本 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 起，开始随附 C# 7.1。
 
 ## <a name="c-version-10"></a>C# 1.0 版
 

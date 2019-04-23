@@ -9,10 +9,10 @@ helpviewer_keywords:
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
 ms.openlocfilehash: 5e2676a0880092a78405fe5dafa0469161b85610
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302928"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>如何：获取一个值，从属性 (Visual Basic)
@@ -41,12 +41,12 @@ ms.locfileid: "59302928"
 ## <a name="see-also"></a>请参阅
 
 - [过程](./index.md)
-- [Property 过程](./property-procedures.md)
-- [过程形参和实参](./procedure-parameters-and-arguments.md)
-- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Visual Basic 中属性和变量的差异](./differences-between-properties-and-variables.md)
+- [属性过程](./property-procedures.md)
+- [过程参数和自变量](./procedure-parameters-and-arguments.md)
+- [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [在 Visual Basic 中属性和变量之间的差异](./differences-between-properties-and-variables.md)
 - [如何：创建属性](./how-to-create-a-property.md)
-- [如何：声明具有混合访问级别的属性](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [如何：声明具有混合的访问级别的属性](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [如何：调用 Property 过程](./how-to-call-a-property-procedure.md)
 - [如何：声明并在 Visual Basic 中调用默认属性](./how-to-declare-and-call-a-default-property.md)
 - [如何：在属性中放置值](./how-to-put-a-value-in-a-property.md)

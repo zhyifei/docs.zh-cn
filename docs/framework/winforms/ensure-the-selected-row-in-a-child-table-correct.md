@@ -17,10 +17,10 @@ helpviewer_keywords:
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
 ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303136"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>如何：确保子表中的选定行保持在正确的位置
@@ -85,6 +85,6 @@ ms.locfileid: "59303136"
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：确保绑定到同一数据源的多个控件保持同步](multiple-controls-bound-to-data-source-synchronized.md)
+- [如何：确保多个控件绑定到相同的数据源保持同步](multiple-controls-bound-to-data-source-synchronized.md)
 - [BindingSource 组件](./controls/bindingsource-component.md)
 - [数据绑定和 Windows 窗体](data-binding-and-windows-forms.md)

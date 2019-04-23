@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826897"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59303415"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用强名称为程序集签名
 可通过许多方法为程序集签署强名称：  
@@ -35,13 +35,13 @@ ms.locfileid: "55826897"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>使用 Visual Studio 创建程序集并为程序集签署强名称  
   
-1.  在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。  
+1. 在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。  
   
-2.  选择 **“签名”** 选项卡。  
+2. 选择 **“签名”** 选项卡。  
   
-3.  选择“为程序集签名”框。  
+3. 选择“为程序集签名”框。  
   
-4.  在“选择强名称密钥文件”框中，选择“\<浏览…>”，然后导航到该密钥文件。 若要创建新的密钥文件，请选择“\<新建…>”，然后在“创建强名称密钥”对话框中输入其名称。  
+4. 在“选择强名称密钥文件”框中，选择“\<浏览…>”，然后导航到该密钥文件。 若要创建新的密钥文件，请选择“\<新建…>”，然后在“创建强名称密钥”对话框中输入其名称。  
   
 > [!NOTE]
 >  为了[延迟为程序集签名](../../../docs/framework/app-domains/delay-sign-assembly.md)，请选择公钥文件。  
@@ -73,9 +73,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 #### <a name="to-sign-an-assembly-with-a-strong-name-by-using-attributes"></a>使用特性为程序集签署强名称  
   
-1.  将 <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 特性添加到源代码文件中，并指定包含为程序集签署强名称时要使用的密钥对的文件或容器的名称。  
+1. 将 <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 特性添加到源代码文件中，并指定包含为程序集签署强名称时要使用的密钥对的文件或容器的名称。  
   
-2.  通常会编译源代码文件。  
+2. 通常会编译源代码文件。  
   
 > [!NOTE]
 >  当 C# 和 Visual Basic 编译器在源代码中遇到 <xref:System.Reflection.AssemblyKeyFileAttribute> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 特性时，会发出编译器警告（分别为 CS1699 和 BC41008）。 你可以忽略这些警告。  
@@ -101,6 +101,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [如何：创建公钥/私钥对](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)

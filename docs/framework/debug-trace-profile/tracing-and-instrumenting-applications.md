@@ -16,10 +16,10 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298899"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>跟踪应用程序和在应用程序中插入检测点
@@ -123,11 +123,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 |方法|Output|  
 |------------|------------|  
 |**Assert**|指定的文本；若未指定，则为调用堆栈。 只有指定为“Assert”语句中的自变量的条件为“false”时，才写入输出。|  
-|**Fail**|指定的文本；若未指定，则为调用堆栈。|  
-|**Write**|指定的文本。|  
-|**WriteIf**|如果满足指定为“WriteIf”语句中的自变量的条件，则为指定的文本。|  
+|**失败**|指定的文本；若未指定，则为调用堆栈。|  
+|Write|指定的文本。|  
+|WriteIf|如果满足指定为“WriteIf”语句中的自变量的条件，则为指定的文本。|  
 |**WriteLine**|指定的文本和一个回车符。|  
-|**WriteLineIf**|如果满足指定为“WriteIf”语句中的自变量的条件，则为指定的文本和一个回车符。|  
+|WriteLineIf|如果满足指定为“WriteIf”语句中的自变量的条件，则为指定的文本和一个回车符。|  
   
  <xref:System.Diagnostics.Trace.Listeners%2A> 集合中所有的侦听器都会接收到上表中介绍的消息，但种类不同的侦听器在接到消息后所执行的操作可能也不同。 例如，<xref:System.Diagnostics.DefaultTraceListener> 将在接收到“Fail”或失败的“Assert”通知时显示一个断言对话框，而 <xref:System.Diagnostics.TextWriterTraceListener> 仅将输出写入它的流中。  
   
@@ -146,11 +146,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [代码协定](../../../docs/framework/debug-trace-profile/code-contracts.md)
-- [C#、F# 和 Visual Basic 项目类型](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [C#, F#, and Visual Basic Project Types](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)（C#、F# 和 Visual Basic 项目类型）
+- [如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [如何：使用跟踪和调试执行有条件编译](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
-- [如何：创建、初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [如何：创建、 初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [如何：创建和初始化跟踪源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [如何：将 TraceSource 和筛选器与跟踪侦听器一起使用](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [如何：使用 TraceSource 和筛选器与跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)

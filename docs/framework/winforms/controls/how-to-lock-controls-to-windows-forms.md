@@ -6,10 +6,10 @@ helpviewer_keywords:
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
 ms.openlocfilehash: ac5fbf33564ed2dd1a030132a35b36164f777519
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301693"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>如何：将控件锁定到 Windows 窗体
@@ -49,7 +49,7 @@ ms.locfileid: "59301693"
 ## <a name="see-also"></a>请参阅
 
 - [Windows 窗体控件](index.md)
-- [排列 Windows 窗体上的控件](arranging-controls-on-windows-forms.md)
-- [标记单个 Windows 窗体控件并提供它们的快捷方式](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
+- [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
-- [根据功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)
+- [按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)

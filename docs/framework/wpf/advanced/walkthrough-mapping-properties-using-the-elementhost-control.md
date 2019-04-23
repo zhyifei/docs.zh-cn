@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
 ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300913"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>演练：使用 ElementHost 控件映射属性
@@ -147,4 +147,4 @@ ms.locfileid: "59300913"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Windows 窗体和 WPF 属性映射](windows-forms-and-wpf-property-mapping.md)
 - [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [演练：在 Windows 窗体中承载 WPF 复合控件](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [演练：承载 WPF 复合控件在 Windows 窗体中](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303474"
 ---
 # <a name="large-udts"></a>大型 UDT
@@ -137,4 +137,4 @@ End Using
 - [检索数据库架构信息](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET 托管提供程序和 DataSet 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

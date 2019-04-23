@@ -3,10 +3,10 @@ title: 消息安全示例
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
 ms.openlocfilehash: ad579705fa30e9b5179f2de4b829bd7f4a5817c2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302954"
 ---
 # <a name="message-security-sample"></a>消息安全示例
@@ -143,7 +143,7 @@ Press <ENTER> to terminate client.
   
 5. 在服务器上运行 `setup.bat service`。 运行`setup.bat`与`service`参数与计算机的完全限定域名创建一个服务证书，并将服务证书导出到名为 Service.cer 的文件。  
   
-6. 编辑 Service.exe.config 以反映新的证书名称 (在`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)元素) 与计算机的完全限定域名相同。 若要指定完全限定的计算机名称而不是 localhost 的基址的值还更改`.`  
+6. 编辑 Service.exe.config 以反映新的证书名称 (在`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)元素) 与计算机的完全限定域名相同。 还要更改基址的值以指定一个完全限定的计算机名（而不是 localhost）。`.`  
   
 7. 将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   

@@ -3,10 +3,10 @@ title: 如何：并行发起多个 Web 请求，使用 Async 和 Await (Visual B
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
 ms.openlocfilehash: c799fa83c0157019961da6adcf89b6ab6f906763
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303461"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>如何：并行发起多个 Web 请求，使用 Async 和 Await (Visual Basic)
@@ -68,9 +68,9 @@ Dim result = Await myTask
   
 3. 向项目中添加以下支持方法：  
   
-    -   `ProcessURLAsync` 使用<xref:System.Net.Http.HttpClient>方法下载网站作为字节数组的内容。 支持方法 `ProcessURLAsync` 随后显示并返回数组的长度。  
+    -   `ProcessURLAsync` 使用 <xref:System.Net.Http.HttpClient> 方法将网站内容下载为字节数组。 支持方法 `ProcessURLAsync` 随后显示并返回数组的长度。  
   
-    -   `DisplayResults` 显示字节数组中每个 URL 的字节数。 当所有任务完成下载后显示。  
+    -   `DisplayResults` 显示每个 URL 的字节数组中的字节数。 当所有任务完成下载后显示。  
   
      复制以下方法，并将它们后粘贴`startButton_Click`MainWindow.xaml.vb 中的事件处理程序。  
   

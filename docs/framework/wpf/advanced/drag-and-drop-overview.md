@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301394"
 ---
 # <a name="drag-and-drop-overview"></a>拖放概述
@@ -54,7 +54,7 @@ ms.locfileid: "59301394"
  拖放操作的源和目标均为 UI 元素；然而，实际正在传输的数据通常不具有可视表示形式。 可以编写代码来提供拖动的数据的可视表示形式（比如当在 Windows 资源管理器中拖动文件时会出现这种情况）。 默认情况下，通过更改光标将反馈提供给用户，以便表示拖放操作将对数据产生的影响，例如将移动数据还是复制数据。  
   
 ### <a name="drag-and-drop-effects"></a>拖放效果  
- 拖放操作对传输的数据可具有不同的效果。 例如，可以复制数据，或者可以移动数据。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定义<xref:System.Windows.DragDropEffects>枚举，它可用于指定拖放操作的效果。 在拖动源中，可以指定源在 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法中允许的效果。 在拖放目标中，可以指定目标在 <xref:System.Windows.DragEventArgs.Effects%2A> 类的 <xref:System.Windows.DragEventArgs> 属性的中预期的效果。 当拖放目标指定其在 <xref:System.Windows.DragDrop.DragOver> 事件中的预期效果时，该信息将被传递回 <xref:System.Windows.DragDrop.GiveFeedback> 事件中的拖动源。 拖动源则使用此信息通知用户拖放目标想要对数据产生的效果。 放置数据时，拖放目标指定其在 <xref:System.Windows.DragDrop.Drop> 事件中的实际效果。 该信息会作为 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法的返回值传递回拖动源。 如果拖放目标返回并不在 `allowedEffects` 拖动源列表中的效果，那么将取消拖放操作，且不会进行任何数据传输。  
+ 拖放操作对传输的数据可具有不同的效果。 例如，可以复制数据，或者可以移动数据。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定义可用于指定拖放操作效果的 <xref:System.Windows.DragDropEffects> 枚举。 在拖动源中，可以指定源在 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法中允许的效果。 在拖放目标中，可以指定目标在 <xref:System.Windows.DragEventArgs.Effects%2A> 类的 <xref:System.Windows.DragEventArgs> 属性的中预期的效果。 当拖放目标指定其在 <xref:System.Windows.DragDrop.DragOver> 事件中的预期效果时，该信息将被传递回 <xref:System.Windows.DragDrop.GiveFeedback> 事件中的拖动源。 拖动源则使用此信息通知用户拖放目标想要对数据产生的效果。 放置数据时，拖放目标指定其在 <xref:System.Windows.DragDrop.Drop> 事件中的实际效果。 该信息会作为 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法的返回值传递回拖动源。 如果拖放目标返回并不在 `allowedEffects` 拖动源列表中的效果，那么将取消拖放操作，且不会进行任何数据传输。  
   
  请务必记住，在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，<xref:System.Windows.DragDropEffects> 值仅用于提供有关拖放操作效果的拖动源和拖放目标之间的通信。 拖放操作的实际效果取决于你在应用程序中编写的相应代码。  
   
@@ -146,11 +146,11 @@ ms.locfileid: "59301394"
   
  在 <xref:System.Windows.UIElement.MouseMove> 事件处理程序中，调用 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法启动拖放操作。 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法采用三个参数：  
   
--   `dragSource` – 对依赖项对象的传输的数据; 源的引用这通常是源的<xref:System.Windows.UIElement.MouseMove>事件。  
+-   `dragSource` – 引用作为传输的数据的源的依赖项对象；通常是 <xref:System.Windows.UIElement.MouseMove> 事件的源。  
   
--   `data` -一个对象，包含传输的数据包装在<xref:System.Windows.DataObject>。  
+-   `data` - 包含传输的数据（包装在 <xref:System.Windows.DataObject> 中）的对象。  
   
--   `allowedEffects` -一个<xref:System.Windows.DragDropEffects>枚举值，该值指定允许的拖放操作的效果。  
+-   `allowedEffects` - 指定拖放操作允许的效果的 <xref:System.Windows.DragDropEffects> 枚举值之一。  
   
  任何可序列化对象都可以在 `data` 参数中传递。 如果数据尚未包装在 <xref:System.Windows.DataObject> 中，则它将自动包装在一个新的 <xref:System.Windows.DataObject> 中。 若要传递多个数据项，必须自行创建 <xref:System.Windows.DataObject>，并将其传递到 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法。 有关详细信息，请参阅[数据和数据对象](data-and-data-objects.md)。  
   
@@ -218,6 +218,6 @@ ms.locfileid: "59301394"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Clipboard>
-- [演练：在用户控件上启用拖放功能](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [演练：启用拖放用户控件](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
 - [帮助主题](drag-and-drop-how-to-topics.md)
 - [拖放](drag-and-drop.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303487"
 ---
 # <a name="flow-document-overview"></a>流文档概述
@@ -96,7 +96,7 @@ ms.locfileid: "59303487"
  下面简要介绍了这两个类别中的每个类。  
   
 ### <a name="block-derived-classes"></a>Block 派生类  
- **段落**  
+ **Paragraph**  
   
  <xref:System.Windows.Documents.Paragraph> 常用于将内容分组到一个段落。 Paragraph 的最简单且最常见的用途是创建文本段落。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "59303487"
   
  ![在流内容中嵌入显示 UIElement 的屏幕截图。](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
- **列表**  
+ **List**  
   
  <xref:System.Windows.Documents.List> 用于创建项目符号列表或数值列表。 设置<xref:System.Windows.Documents.List.MarkerStyle%2A>属性设置为<xref:System.Windows.TextMarkerStyle>枚举值，以确定列表的样式。 下例演示了如何创建简单列表。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "59303487"
   
  **注意：** <xref:System.Windows.Documents.List>是使用的唯一流元素<xref:System.Windows.Documents.ListItemCollection>来管理子元素。  
   
- **表**  
+ **Table**  
   
  <xref:System.Windows.Documents.Table> 用于创建表。 <xref:System.Windows.Documents.Table> 类似于<xref:System.Windows.Controls.Grid>元素，但它会提供更多功能，因此，需要更大的资源开销。 因为<xref:System.Windows.Controls.Grid>是<xref:System.Windows.UIElement>，除非它包含在不能在流内容中使用它<xref:System.Windows.Documents.BlockUIContainer>或<xref:System.Windows.Documents.InlineUIContainer>。 有关详细信息<xref:System.Windows.Documents.Table>，请参阅[表概述](table-overview.md)。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "59303487"
   
  **注意：** 在中启动[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]，则<xref:System.Windows.Documents.Run.Text%2A>属性的<xref:System.Windows.Documents.Run>对象是依赖项属性。 可以将绑定<xref:System.Windows.Documents.Run.Text%2A>属性设置为数据源，如<xref:System.Windows.Controls.TextBlock>。 <xref:System.Windows.Documents.Run.Text%2A>属性完全支持单向绑定。 <xref:System.Windows.Documents.Run.Text%2A>属性还支持双向绑定，除<xref:System.Windows.Controls.RichTextBox>。 有关示例，请参见 <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>。  
   
- **s p a n**  
+ **Span**  
   
  <xref:System.Windows.Documents.Span> 其他内联内容元素组合在一起。 中的内容应用任何继承呈现<xref:System.Windows.Documents.Span>元素。 但是，元素的继承自<xref:System.Windows.Documents.Span>包括<xref:System.Windows.Documents.Hyperlink>， <xref:System.Windows.Documents.Bold>，<xref:System.Windows.Documents.Italic>和<xref:System.Windows.Documents.Underline>是否将格式应用于文本。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "59303487"
   
  <xref:System.Windows.Documents.Figure> 和<xref:System.Windows.Documents.Floater>在几个方面存在差异，并可用于不同的方案。  
   
- **图：**  
+ **Figure：**  
   
 -   可定位：您可以设置其水平和垂直定位点，以停放它相对于页面、 内容、 列或段落。 此外可以使用其<xref:System.Windows.Documents.Figure.HorizontalOffset%2A>和<xref:System.Windows.Documents.Figure.VerticalOffset%2A>属性以指定任意偏移量。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "59303487"
   
 -   不分页：如果中的内容<xref:System.Windows.Documents.Figure>不适合在<xref:System.Windows.Documents.Figure>，它会呈现能够容纳的内容和其余内容将丢失  
   
- **浮标：**  
+ **Floater：**  
   
 -   无法定位，可在能够为其提供空间的任何位置呈现。 不能设置偏移量或定位点<xref:System.Windows.Documents.Floater>。  
   
@@ -348,7 +348,7 @@ ms.locfileid: "59303487"
   
 ## <a name="see-also"></a>请参阅
 
-- [Text](optimizing-performance-text.md)
+- [文本](optimizing-performance-text.md)
 - [WPF 中的版式](typography-in-wpf.md)
 - [帮助主题](flow-content-elements-how-to-topics.md)
 - [TextElement 内容模型概述](textelement-content-model-overview.md)

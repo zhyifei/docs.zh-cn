@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
 ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304553"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定
@@ -64,4 +64,4 @@ ms.locfileid: "59304553"
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [添加新数据源](/visualstudio/data-tools/add-new-data-sources)
-- [“数据源”窗口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
+- [数据源窗口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))

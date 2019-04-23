@@ -6,33 +6,33 @@ helpviewer_keywords:
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62d11c5f098887bf26ab71c0d8d072972437210d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: f834eb52476e9b04ed6aaf294deed88213961045
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220057"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59304241"
 ---
 # <a name="how-to-create-wrappers-manually"></a>如何：手动创建包装器
 如果决定在托管源代码中手动声明 COM 类型，则最佳的着手点是现有的接口定义语言 (IDL) 文件或类型库。 不具备 IDL 文件或无法生成类型库文件时，可以通过创建托管的声明并将生成的程序集导出到类型库来模拟 COM 类型。  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>从托管源模拟 COM 类型  
   
-1.  在符合公共语言规范 (CLS) 的语言中声明类型并编译文件。  
+1. 在符合公共语言规范 (CLS) 的语言中声明类型并编译文件。  
   
-2.  使用[类型库导出程序 (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) 导出包含类型的程序集。  
+2. 使用[类型库导出程序 (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) 导出包含类型的程序集。  
   
-3.  将导出的 COM 类型库用作声明面向 COM 托管类型的基础。  
+3. 将导出的 COM 类型库用作声明面向 COM 托管类型的基础。  
   
 ### <a name="to-create-a-runtime-callable-wrapper-rcw"></a>创建运行时可调用包装器 (RCW)  
   
-1.  假设你有一个 IDL 文件或类型库文件，请决定要在自定义 RCW 中包含哪些类和接口。 可以排除不打算在应用程序中直接或间接使用的任何类型。  
+1. 假设你有一个 IDL 文件或类型库文件，请决定要在自定义 RCW 中包含哪些类和接口。 可以排除不打算在应用程序中直接或间接使用的任何类型。  
   
-2.  在符合 CLS 的语言中创建一个源文件，并声明类型。 有关导入转换过程的完整说明，请参阅[有关从类型库转换到程序集的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))。 实际上，创建自定义 RCW 时，需要手动执行由[类型库导入程序 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) 所提供的类型转换活动。 下一章节的示例显示 IDL 或类型库文件中的类型以及它们在 C# 代码中的对应类型。  
+2. 在符合 CLS 的语言中创建一个源文件，并声明类型。 有关导入转换过程的完整说明，请参阅[有关从类型库转换到程序集的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))。 实际上，创建自定义 RCW 时，需要手动执行由[类型库导入程序 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) 所提供的类型转换活动。 下一章节的示例显示 IDL 或类型库文件中的类型以及它们在 C# 代码中的对应类型。  
   
-3.  完成声明后，请像编译任何其他托管源代码一样编译此文件。  
+3. 完成声明后，请像编译任何其他托管源代码一样编译此文件。  
   
-4.  与使用 Tlbimp.exe 导入的类型相同，某些类型需要其他信息，你可以将其直接添加到自己的代码中。 有关详细信息，请参阅[如何：编辑互操作程序集](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))。  
+4. 与使用 Tlbimp.exe 导入的类型相同，某些类型需要其他信息，你可以将其直接添加到自己的代码中。 有关详细信息，请参阅[如何：编辑互操作程序集](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))。  
   
 ## <a name="example"></a>示例  
  以下代码演示了 IDL 中的 `ISATest` 接口和 `SATest` 类以及 C# 源代码中相应类型的示例。  
@@ -100,6 +100,7 @@ namespace SAServer
 ```  
   
 ## <a name="see-also"></a>请参阅
+
 - [自定义运行时可调用包装器](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
 - [COM 数据类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
 - [如何：编辑互操作程序集](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))

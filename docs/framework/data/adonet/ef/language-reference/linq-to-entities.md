@@ -3,10 +3,10 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304572"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
@@ -82,7 +82,7 @@ LINQ to Entities 提供语言集成查询 (LINQ) 支持，它允许开发人员�
   
  [LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
   
- [CLR 方法至规范函数映射](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
+ [CLR 方法至 Canonical 函数映射](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
   
  [支持和不支持的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
   
@@ -91,7 +91,7 @@ LINQ to Entities 提供语言集成查询 (LINQ) 支持，它允许开发人员�
 ## <a name="see-also"></a>请参阅
 
 - [LINQ to Entities 中的已知问题和注意事项](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
-- [语言集成查询 (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
-- [语言集成查询 (LINQ) 的 Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [语言集成查询 (LINQ) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [语言集成查询 (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ 和 ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [ADO.NET 实体框架](../../../../../../docs/framework/data/adonet/ef/index.md)

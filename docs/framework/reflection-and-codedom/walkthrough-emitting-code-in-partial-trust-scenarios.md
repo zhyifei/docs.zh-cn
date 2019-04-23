@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712569"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59299470"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>演练：在部分信任应用场景中发出代码
 反射发出以完全信任或部分信任形式使用相同的 API 集，但某些功能在部分受信任代码中需要特殊权限。 此外，反射发出具有一个功能，即匿名托管动态方法，旨在由安全透明的程序集采用部分信任的形式使用。  
@@ -59,12 +59,12 @@ ms.locfileid: "54712569"
   
 ##### <a name="to-create-an-application-domain-with-partial-trust"></a>创建部分信任的应用程序域  
   
-1.  创建一个权限集，将其授予沙盒应用程序域中的程序集。 在这种情况下，使用的是 Internet 区域的权限集。  
+1. 创建一个权限集，将其授予沙盒应用程序域中的程序集。 在这种情况下，使用的是 Internet 区域的权限集。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#2)]
      [!code-vb[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#2)]  
   
-2.  创建一个 <xref:System.AppDomainSetup> 对象，使用应用程序路径初始化应用程序域。  
+2. 创建一个 <xref:System.AppDomainSetup> 对象，使用应用程序路径初始化应用程序域。  
   
     > [!IMPORTANT]
     >  为简单起见，此代码示例使用当前文件夹。 要运行实际来自 Internet 的代码，请为不受信任的代码使用单独的文件夹，如[如何：运行沙盒中部分受信任的代码](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。  
@@ -72,7 +72,7 @@ ms.locfileid: "54712569"
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
   
-3.  创建应用程序域，为在应用程序域中执行的所有程序集指定应用程序域设置信息和授予集。  
+3. 创建应用程序域，为在应用程序域中执行的所有程序集指定应用程序域设置信息和授予集。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
@@ -89,7 +89,7 @@ ms.locfileid: "54712569"
   
 ##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>创建部分信任的应用程序域和 RMA  
   
-1.  创建一个具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) 标记的 <xref:System.Security.Permissions.ReflectionPermission> 新对象，并使用 <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> 方法向授予集添加该权限。  
+1. 创建一个具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) 标记的 <xref:System.Security.Permissions.ReflectionPermission> 新对象，并使用 <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> 方法向授予集添加该权限。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#7)]
      [!code-vb[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#7)]  
@@ -99,7 +99,7 @@ ms.locfileid: "54712569"
     > [!NOTE]
     >  RMA 是匿名托管动态方法的一项功能。 当普通动态方法跳过 JIT 可见性检查时，发出的代码要求完全信任。  
   
-2.  创建应用程序域，指定应用程序域设置信息和授予集。  
+2. 创建应用程序域，指定应用程序域设置信息和授予集。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#8)]
      [!code-vb[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#8)]  
@@ -110,24 +110,24 @@ ms.locfileid: "54712569"
   
 #### <a name="to-define-and-execute-a-method-in-an-application-domain"></a>在应用程序域中定义和执行方法  
   
-1.  定义一个从 <xref:System.MarshalByRefObject> 派生的类。 这使你可在其它应用程序域中创建类的实例，并在应用程序域边界之间进行方法调用。 此例中将该类命名为 `Worker`。  
+1. 定义一个从 <xref:System.MarshalByRefObject> 派生的类。 这使你可在其它应用程序域中创建类的实例，并在应用程序域边界之间进行方法调用。 此例中将该类命名为 `Worker`。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#10)]
      [!code-vb[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#10)]  
   
-2.  定义包含要执行的代码的公共方法。 在此示例中，代码发出一个简单的动态方法，创建一个委托来执行方法，并调用该委托。  
+2. 定义包含要执行的代码的公共方法。 在此示例中，代码发出一个简单的动态方法，创建一个委托来执行方法，并调用该委托。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#11)]
      [!code-vb[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#11)]  
   
-3.  在主程序中，获取程序集的显示名称。 在沙盒应用程序域中创建 `Worker` 类的实例时，将用到此名称。  
+3. 在主程序中，获取程序集的显示名称。 在沙盒应用程序域中创建 `Worker` 类的实例时，将用到此名称。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#14)]
      [!code-vb[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#14)]  
   
-4.  在主程序中，按本演练[过程一](#Setting_up)中所述，创建一个沙盒应用程序域。 无需向 `Internet` 权限集添加任何权限，因为 `SimpleEmitDemo` 方法仅使用公共方法。  
+4. 在主程序中，按本演练[过程一](#Setting_up)中所述，创建一个沙盒应用程序域。 无需向 `Internet` 权限集添加任何权限，因为 `SimpleEmitDemo` 方法仅使用公共方法。  
   
-5.  在主程序中，在沙盒应用程序域中创建 `Worker` 类的实例。  
+5. 在主程序中，在沙盒应用程序域中创建 `Worker` 类的实例。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#12)]
      [!code-vb[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#12)]  
@@ -137,7 +137,7 @@ ms.locfileid: "54712569"
     > [!NOTE]
     >  如果在 Visual Studio 中使用该代码，则必须更改类名，使其包括命名空间。 默认情况下，命名空间是项目的名称。 例如，如果项目是“PartialTrust”，那么类名必须为“PartialTrust.Worker”。  
   
-6.  添加用于调用 `SimpleEmitDemo` 方法的代码。 跨应用程序域边界对调用进行封送，并在沙盒应用程序域中执行该代码。  
+6. 添加用于调用 `SimpleEmitDemo` 方法的代码。 跨应用程序域边界对调用进行封送，并在沙盒应用程序域中执行该代码。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#13)]
      [!code-vb[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#13)]  
@@ -212,5 +212,6 @@ ms.locfileid: "54712569"
 -   如果在 Visual Studio 中生成此代码示例，则必须更改类名，以便在将命名空间传递给 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法时包括该命名空间。 默认情况下，命名空间是项目的名称。 例如，如果项目是“PartialTrust”，那么类名必须为“PartialTrust.Worker”。  
   
 ## <a name="see-also"></a>请参阅
+
 - [反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [如何：运行沙盒中部分受信任的代码](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

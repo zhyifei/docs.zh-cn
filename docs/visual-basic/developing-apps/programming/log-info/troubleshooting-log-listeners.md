@@ -7,10 +7,10 @@ helpviewer_keywords:
 - troubleshooting event logs
 ms.assetid: ac6eb760-3d5d-461e-aedd-40599ee22e49
 ms.openlocfilehash: 12282df50bc42d2a153a9aa8db01f2654acd91ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299522"
 ---
 # <a name="troubleshooting-log-listeners-visual-basic"></a>疑难解答：日志侦听器 (Visual Basic)
@@ -42,4 +42,4 @@ ms.locfileid: "59299522"
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [使用应用程序日志](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [演练：确定 My.Application.Log 写入信息的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [演练：确定 My.Application.Log 在哪里写入信息](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)

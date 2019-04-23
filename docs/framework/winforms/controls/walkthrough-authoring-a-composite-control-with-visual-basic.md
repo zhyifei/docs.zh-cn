@@ -14,10 +14,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
 ms.openlocfilehash: 6404e5933f886578b4ad8afd0d3da324541fc3f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299977"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>演练：使用 Visual Basic 创作复合控件
@@ -35,7 +35,7 @@ ms.locfileid: "59299977"
   
 2. 从 Visual Basic 项目的列表中选择**Windows 控件库**项目模板中，键入`ctlClockLib`中**名称**框中，然后依次**确定**。  
   
-     默认情况下，项目名称 `ctlClockLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集提供名为的组件`ctlClock`，可以指定您`ctlClock`组件使用 `ctlClockLib.ctlClock.`  
+     默认情况下，项目名称 `ctlClockLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集都提供名为 `ctlClock` 的组件，则可以使用 `ctlClockLib.ctlClock.` 指定 `ctlClock` 组件  
   
 3. 在解决方案资源管理器中，右键单击“UserControl1.vb”，然后单击“重命名”。 将文件名更改为 `ctlClock.vb`。 当系统询问是否重命名对代码元素“UserControl1”的所有引用时，单击“是”按钮。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "59299977"
     |属性|更改为|  
     |--------------|---------------|  
     |**名称**|`lblDisplay`|  
-    |**Text**|`(blank space)`|  
+    |**文本**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -245,7 +245,7 @@ ms.locfileid: "59299977"
     |属性|设置|  
     |--------------|-------------|  
     |**名称**|`lblAlarm`|  
-    |**Text**|**警报 ！**|  
+    |**文本**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**可见**|`False`|  
   
@@ -358,7 +358,7 @@ ms.locfileid: "59299977"
   
     |控件|属性|“值”|  
     |-------------|--------------|-----------|  
-    |`label1`|**Text**|`(blank space)`|  
+    |`label1`|**文本**|`(blank space)`|  
     ||**名称**|`lblTest`|  
     |`dateTimePicker1`|**名称**|`dtpTest`|  
     ||**格式**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
@@ -399,4 +399,4 @@ ms.locfileid: "59299977"
 
 - [各种自定义控件](varieties-of-custom-controls.md)
 - [如何：创作复合控件](how-to-author-composite-controls.md)
-- [如何：在“选择工具箱项”对话框中显示控件](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [如何：中显示控件选择工具箱项对话框](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

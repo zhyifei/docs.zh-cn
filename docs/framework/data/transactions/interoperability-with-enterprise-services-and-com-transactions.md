@@ -3,10 +3,10 @@ title: 与企业服务和 COM+ 事务的互操作性
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301901"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>与企业服务和 COM+ 事务的互操作性
@@ -21,11 +21,11 @@ ms.locfileid: "59301901"
   
  <xref:System.Transactions.TransactionScope> 类提供的构造函数接受 <xref:System.Transactions.EnterpriseServicesInteropOption> 作为参数。  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.None>如名称所暗示，意味着没有之间没有互操作性<xref:System.EnterpriseServices>上下文与事务范围。 在用 <xref:System.Transactions.TransactionScope> 创建 <xref:System.Transactions.EnterpriseServicesInteropOption.None> 对象后，对 <xref:System.Transactions.Transaction.Current%2A> 的任何更改都不会在 COM+ 上下文中反映出来。 同样，对 COM+ 上下文中事务的更改也不会在 <xref:System.Transactions.Transaction.Current%2A> 中反映出来。 对于 <xref:System.Transactions>，这是最快的操作模式，因为没有所需的额外同步。 <xref:System.Transactions.EnterpriseServicesInteropOption.None> 通过使用的默认值<xref:System.Transactions.TransactionScope>与所有构造函数不接受<xref:System.Transactions.EnterpriseServicesInteropOption>作为参数。  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.None>如名称所暗示，意味着没有之间没有互操作性<xref:System.EnterpriseServices>上下文与事务范围。 在用 <xref:System.Transactions.TransactionScope> 创建 <xref:System.Transactions.EnterpriseServicesInteropOption.None> 对象后，对 <xref:System.Transactions.Transaction.Current%2A> 的任何更改都不会在 COM+ 上下文中反映出来。 同样，对 COM+ 上下文中事务的更改也不会在 <xref:System.Transactions.Transaction.Current%2A> 中反映出来。 对于 <xref:System.Transactions>，这是最快的操作模式，因为没有所需的额外同步。 <xref:System.Transactions.EnterpriseServicesInteropOption.None> 是由具有所有构造函数的 <xref:System.Transactions.TransactionScope> 使用的默认值，这些构造函数不接受 <xref:System.Transactions.EnterpriseServicesInteropOption> 作为参数。  
   
  如果需要将 <xref:System.EnterpriseServices> 事务与环境事务组合在一起，则需要使用 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 或 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>。 由于这两个值都依赖于一项无需组件即可调用服务的功能，因此在使用它们时，应在 Windows XP Service Pack 2 或 Windows Server 2003 上运行。  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 指定的环境事务<xref:System.Transactions>和<xref:System.EnterpriseServices>始终是相同。 这会创建一个新的 <xref:System.EnterpriseServices> 事务性上下文，并使 <xref:System.Transactions.TransactionScope> 的当前事务成为该上下文的当前事务。 因此，<xref:System.Transactions.Transaction.Current%2A> 中的事务与 <xref:System.EnterpriseServices.ContextUtil.Transaction%2A> 中的事务完全保持同步。 该值会导致性能损失，因为可能会创建新的 COM+ 上下文。  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 指定 <xref:System.Transactions> 和 <xref:System.EnterpriseServices> 的环境事务始终是相同的。 这会创建一个新的 <xref:System.EnterpriseServices> 事务性上下文，并使 <xref:System.Transactions.TransactionScope> 的当前事务成为该上下文的当前事务。 因此，<xref:System.Transactions.Transaction.Current%2A> 中的事务与 <xref:System.EnterpriseServices.ContextUtil.Transaction%2A> 中的事务完全保持同步。 该值会导致性能损失，因为可能会创建新的 COM+ 上下文。  
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> 指定以下要求：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59301901"
   
 3. 如果需要创建新事务，则会生成 <xref:System.Transactions.EnterpriseServicesInteropOption> 的下列值：  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>： 创建与 COM + 上下文关联的事务。  
+    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>：创建与 COM+ 上下文关联的事务。  
   
     -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>:<xref:System.Transactions>创建事务。  
   
