@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 86711d107636505ab7aa23f0f72f70bd3e27635d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167767"
 ---
-# <a name="imetadataemitdefineparam-method"></a><span data-ttu-id="48c85-102">IMetaDataEmit::DefineParam 方法</span><span class="sxs-lookup"><span data-stu-id="48c85-102">IMetaDataEmit::DefineParam Method</span></span>
-<span data-ttu-id="48c85-103">创建具有指定的签名为指定的标记所引用的方法的参数定义，并为该参数定义中获取的标记。</span><span class="sxs-lookup"><span data-stu-id="48c85-103">Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.</span></span>  
+# <a name="imetadataemitdefineparam-method"></a><span data-ttu-id="99872-102">IMetaDataEmit::DefineParam 方法</span><span class="sxs-lookup"><span data-stu-id="99872-102">IMetaDataEmit::DefineParam Method</span></span>
+<span data-ttu-id="99872-103">创建具有指定的签名为指定的标记所引用的方法的参数定义，并为该参数定义中获取的标记。</span><span class="sxs-lookup"><span data-stu-id="99872-103">Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48c85-104">语法</span><span class="sxs-lookup"><span data-stu-id="48c85-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="99872-104">语法</span><span class="sxs-lookup"><span data-stu-id="99872-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineParam (  
@@ -42,44 +42,44 @@ HRESULT DefineParam (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="48c85-105">参数</span><span class="sxs-lookup"><span data-stu-id="48c85-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="99872-105">参数</span><span class="sxs-lookup"><span data-stu-id="99872-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="48c85-106">[in]要定义其参数的方法的标记。</span><span class="sxs-lookup"><span data-stu-id="48c85-106">[in] The token for the method whose parameter is being defined.</span></span>  
+ <span data-ttu-id="99872-106">[in]要定义其参数的方法的标记。</span><span class="sxs-lookup"><span data-stu-id="99872-106">[in] The token for the method whose parameter is being defined.</span></span>  
   
  `ulParamSeq`  
- <span data-ttu-id="48c85-107">[in]参数序列号。</span><span class="sxs-lookup"><span data-stu-id="48c85-107">[in] The parameter sequence number.</span></span>  
+ <span data-ttu-id="99872-107">[in]参数序列号。</span><span class="sxs-lookup"><span data-stu-id="99872-107">[in] The parameter sequence number.</span></span>  
   
  `szName`  
- <span data-ttu-id="48c85-108">[in]以 unicode 格式参数的名称。</span><span class="sxs-lookup"><span data-stu-id="48c85-108">[in] The name of the parameter in Unicode.</span></span>  
+ <span data-ttu-id="99872-108">[in]以 unicode 格式参数的名称。</span><span class="sxs-lookup"><span data-stu-id="99872-108">[in] The name of the parameter in Unicode.</span></span>  
   
  `dwParamFlags`  
- <span data-ttu-id="48c85-109">[in]参数的的标志。</span><span class="sxs-lookup"><span data-stu-id="48c85-109">[in] Flags for the parameter.</span></span> <span data-ttu-id="48c85-110">这是一个位掩码的`CorParamAttr`值。</span><span class="sxs-lookup"><span data-stu-id="48c85-110">This is a bitmask of `CorParamAttr` values.</span></span>  
+ <span data-ttu-id="99872-109">[in]参数的的标志。</span><span class="sxs-lookup"><span data-stu-id="99872-109">[in] Flags for the parameter.</span></span> <span data-ttu-id="99872-110">这是一个位掩码的`CorParamAttr`值。</span><span class="sxs-lookup"><span data-stu-id="99872-110">This is a bitmask of `CorParamAttr` values.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="48c85-111">[in]`ELEMENT_TYPE_` *\** 的常量值。</span><span class="sxs-lookup"><span data-stu-id="48c85-111">[in] `ELEMENT_TYPE_`*\** for the constant value.</span></span>  
+ <span data-ttu-id="99872-111">[in]`ELEMENT_TYPE_` *\** 的常量值。</span><span class="sxs-lookup"><span data-stu-id="99872-111">[in] `ELEMENT_TYPE_`*\** for the constant value.</span></span>  
   
  `pValue`  
- <span data-ttu-id="48c85-112">[in]参数的常量值。</span><span class="sxs-lookup"><span data-stu-id="48c85-112">[in] The constant value for the parameter.</span></span>  
+ <span data-ttu-id="99872-112">[in]参数的常量值。</span><span class="sxs-lookup"><span data-stu-id="99872-112">[in] The constant value for the parameter.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="48c85-113">[in]大小，以 Unicode 字符的`pValue`。</span><span class="sxs-lookup"><span data-stu-id="48c85-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
+ <span data-ttu-id="99872-113">[in]大小，以 Unicode 字符的`pValue`。</span><span class="sxs-lookup"><span data-stu-id="99872-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
   
  `ppd`  
- <span data-ttu-id="48c85-114">[out]`mdParamDef`分配标记。</span><span class="sxs-lookup"><span data-stu-id="48c85-114">[out] The `mdParamDef` token assigned.</span></span>  
+ <span data-ttu-id="99872-114">[out]`mdParamDef`分配标记。</span><span class="sxs-lookup"><span data-stu-id="99872-114">[out] The `mdParamDef` token assigned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="48c85-115">备注</span><span class="sxs-lookup"><span data-stu-id="48c85-115">Remarks</span></span>  
- <span data-ttu-id="48c85-116">中的顺序值`ulParamSeq`参数 1 开头。</span><span class="sxs-lookup"><span data-stu-id="48c85-116">The sequence values in `ulParamSeq` begin with 1 for parameters.</span></span> <span data-ttu-id="48c85-117">返回值具有的序列号为 0。</span><span class="sxs-lookup"><span data-stu-id="48c85-117">A return value has a sequence number of 0.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="99872-115">备注</span><span class="sxs-lookup"><span data-stu-id="99872-115">Remarks</span></span>  
+ <span data-ttu-id="99872-116">中的顺序值`ulParamSeq`参数 1 开头。</span><span class="sxs-lookup"><span data-stu-id="99872-116">The sequence values in `ulParamSeq` begin with 1 for parameters.</span></span> <span data-ttu-id="99872-117">返回值具有的序列号为 0。</span><span class="sxs-lookup"><span data-stu-id="99872-117">A return value has a sequence number of 0.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="48c85-118">要求</span><span class="sxs-lookup"><span data-stu-id="48c85-118">Requirements</span></span>  
- <span data-ttu-id="48c85-119">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="48c85-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="99872-118">要求</span><span class="sxs-lookup"><span data-stu-id="99872-118">Requirements</span></span>  
+ <span data-ttu-id="99872-119">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="99872-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="48c85-120">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="48c85-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="99872-120">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="99872-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="48c85-121">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="48c85-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="99872-121">**库：** 用作 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="99872-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="48c85-122">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="48c85-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="99872-122">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99872-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48c85-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="48c85-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="99872-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="99872-123">See also</span></span>
 
-- [<span data-ttu-id="48c85-124">IMetaDataEmit 接口</span><span class="sxs-lookup"><span data-stu-id="48c85-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="48c85-125">IMetaDataEmit2 接口</span><span class="sxs-lookup"><span data-stu-id="48c85-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="99872-124">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="99872-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="99872-125">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="99872-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

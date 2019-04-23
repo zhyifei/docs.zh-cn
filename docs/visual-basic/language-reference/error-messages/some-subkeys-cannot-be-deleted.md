@@ -3,20 +3,20 @@ title: 无法删除某些子项
 ms.date: 07/20/2015
 ms.assetid: 14562137-af43-4972-84c1-a380a90f7d6c
 ms.openlocfilehash: c1dd54f9905585c7c16b9a23fa58de04631e7a63
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816585"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980117"
 ---
-# <a name="some-subkeys-cannot-be-deleted"></a><span data-ttu-id="36c1d-102">无法删除某些子项</span><span class="sxs-lookup"><span data-stu-id="36c1d-102">Some subkeys cannot be deleted</span></span>
-<span data-ttu-id="36c1d-103">尝试删除注册表项，但操作失败，因为无法删除某些子项。</span><span class="sxs-lookup"><span data-stu-id="36c1d-103">An attempt has been made to delete a registry key, but the operation failed because some subkeys cannot be deleted.</span></span> <span data-ttu-id="36c1d-104">通常这是由于缺少权限。</span><span class="sxs-lookup"><span data-stu-id="36c1d-104">Usually this is due to a lack of permissions.</span></span>  
+# <a name="some-subkeys-cannot-be-deleted"></a><span data-ttu-id="d791c-102">无法删除某些子项</span><span class="sxs-lookup"><span data-stu-id="d791c-102">Some subkeys cannot be deleted</span></span>
+<span data-ttu-id="d791c-103">尝试删除注册表项，但操作失败，因为无法删除某些子项。</span><span class="sxs-lookup"><span data-stu-id="d791c-103">An attempt has been made to delete a registry key, but the operation failed because some subkeys cannot be deleted.</span></span> <span data-ttu-id="d791c-104">通常这是由于缺少权限。</span><span class="sxs-lookup"><span data-stu-id="d791c-104">Usually this is due to a lack of permissions.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="36c1d-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="36c1d-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d791c-105">更正此错误</span><span class="sxs-lookup"><span data-stu-id="d791c-105">To correct this error</span></span>  
   
--   <span data-ttu-id="36c1d-106">请确保您具有足够权限删除指定的子项。</span><span class="sxs-lookup"><span data-stu-id="36c1d-106">Make sure you have sufficient permissions to delete the specified subkeys.</span></span>  
+-   <span data-ttu-id="d791c-106">请确保您具有足够权限删除指定的子项。</span><span class="sxs-lookup"><span data-stu-id="d791c-106">Make sure you have sufficient permissions to delete the specified subkeys.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36c1d-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="36c1d-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d791c-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="d791c-107">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>

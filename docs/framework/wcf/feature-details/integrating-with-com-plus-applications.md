@@ -10,31 +10,31 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
 ms.openlocfilehash: cd72265fe8e49c7def91ebbf05ad84618dd71d19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162498"
 ---
-# <a name="integrating-with-com-applications"></a><span data-ttu-id="7d60d-102">与 COM+ 应用程序集成</span><span class="sxs-lookup"><span data-stu-id="7d60d-102">Integrating with COM+ Applications</span></span>
-<span data-ttu-id="7d60d-103">Windows Communication Foundation (WCF) 提供了用于创建分布式应用程序的丰富环境。</span><span class="sxs-lookup"><span data-stu-id="7d60d-103">Windows Communication Foundation (WCF) provides a rich environment for creating distributed applications.</span></span> <span data-ttu-id="7d60d-104">如果您在 COM + 中承载的基于组件的应用程序逻辑有大量投入时，可以使用 WCF 来扩展现有的逻辑，而不是无需将其重写。</span><span class="sxs-lookup"><span data-stu-id="7d60d-104">If you have a substantial investment in component-based application logic hosted in COM+, you can use WCF to extend your existing logic rather than having to rewrite it.</span></span> <span data-ttu-id="7d60d-105">本部分中的主题介绍如何通过 WCF 使用 COM +。</span><span class="sxs-lookup"><span data-stu-id="7d60d-105">The topics within this section describe how to use COM+ with WCF.</span></span>  
+# <a name="integrating-with-com-applications"></a><span data-ttu-id="959ce-102">与 COM+ 应用程序集成</span><span class="sxs-lookup"><span data-stu-id="959ce-102">Integrating with COM+ Applications</span></span>
+<span data-ttu-id="959ce-103">Windows Communication Foundation (WCF) 提供了用于创建分布式应用程序的丰富环境。</span><span class="sxs-lookup"><span data-stu-id="959ce-103">Windows Communication Foundation (WCF) provides a rich environment for creating distributed applications.</span></span> <span data-ttu-id="959ce-104">如果您在 COM + 中承载的基于组件的应用程序逻辑有大量投入时，可以使用 WCF 来扩展现有的逻辑，而不是无需将其重写。</span><span class="sxs-lookup"><span data-stu-id="959ce-104">If you have a substantial investment in component-based application logic hosted in COM+, you can use WCF to extend your existing logic rather than having to rewrite it.</span></span> <span data-ttu-id="959ce-105">本部分中的主题介绍如何通过 WCF 使用 COM +。</span><span class="sxs-lookup"><span data-stu-id="959ce-105">The topics within this section describe how to use COM+ with WCF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7d60d-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="7d60d-106">In This Section</span></span>  
- [<span data-ttu-id="7d60d-107">与 COM+ 应用程序集成的概述</span><span class="sxs-lookup"><span data-stu-id="7d60d-107">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
- <span data-ttu-id="7d60d-108">概述何时以及如何集成 COM+ 组件。</span><span class="sxs-lookup"><span data-stu-id="7d60d-108">Gives an overview of when and how to integrate COM+ components.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="959ce-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="959ce-106">In This Section</span></span>  
+ [<span data-ttu-id="959ce-107">与 COM+ 应用程序集成的概述</span><span class="sxs-lookup"><span data-stu-id="959ce-107">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ <span data-ttu-id="959ce-108">概述何时以及如何集成 COM+ 组件。</span><span class="sxs-lookup"><span data-stu-id="959ce-108">Gives an overview of when and how to integrate COM+ components.</span></span>  
   
- [<span data-ttu-id="7d60d-109">如何：使用 COM+ 服务模型配置工具</span><span class="sxs-lookup"><span data-stu-id="7d60d-109">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
- <span data-ttu-id="7d60d-110">介绍如何使用 COM + 服务模块配置命令行工具 (ComSvcConfig.exe) 来配置要作为 WCF 服务公开的应用程序接口。</span><span class="sxs-lookup"><span data-stu-id="7d60d-110">Explains how to use the COM+ Service Model Configuration command-line tool (ComSvcConfig.exe) to configure the application interfaces that you want exposed as WCF services.</span></span>  
+ [<span data-ttu-id="959ce-109">如何：使用 COM + 服务模型配置工具</span><span class="sxs-lookup"><span data-stu-id="959ce-109">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
+ <span data-ttu-id="959ce-110">介绍如何使用 COM + 服务模块配置命令行工具 (ComSvcConfig.exe) 来配置要作为 WCF 服务公开的应用程序接口。</span><span class="sxs-lookup"><span data-stu-id="959ce-110">Explains how to use the COM+ Service Model Configuration command-line tool (ComSvcConfig.exe) to configure the application interfaces that you want exposed as WCF services.</span></span>  
   
- [<span data-ttu-id="7d60d-111">如何：配置 COM+ 服务设置</span><span class="sxs-lookup"><span data-stu-id="7d60d-111">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
- <span data-ttu-id="7d60d-112">介绍如何为 WCF 服务配置的 COM + 对象。</span><span class="sxs-lookup"><span data-stu-id="7d60d-112">Explains how to configure a COM+ object as a WCF service.</span></span>  
+ [<span data-ttu-id="959ce-111">如何：配置 COM + 服务设置</span><span class="sxs-lookup"><span data-stu-id="959ce-111">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ <span data-ttu-id="959ce-112">介绍如何为 WCF 服务配置的 COM + 对象。</span><span class="sxs-lookup"><span data-stu-id="959ce-112">Explains how to configure a COM+ object as a WCF service.</span></span>  
   
- [<span data-ttu-id="7d60d-113">如何：部署 COM+ 集成应用程序</span><span class="sxs-lookup"><span data-stu-id="7d60d-113">How to: Deploy a COM+ Integration Application</span></span>](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
- <span data-ttu-id="7d60d-114">介绍如何移动 COM+ 集成应用程序。</span><span class="sxs-lookup"><span data-stu-id="7d60d-114">Explains how to move a COM+ integration application.</span></span>  
+ [<span data-ttu-id="959ce-113">如何：将 COM + 集成应用程序部署</span><span class="sxs-lookup"><span data-stu-id="959ce-113">How to: Deploy a COM+ Integration Application</span></span>](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
+ <span data-ttu-id="959ce-114">介绍如何移动 COM+ 集成应用程序。</span><span class="sxs-lookup"><span data-stu-id="959ce-114">Explains how to move a COM+ integration application.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="7d60d-115">参考</span><span class="sxs-lookup"><span data-stu-id="7d60d-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="959ce-115">参考</span><span class="sxs-lookup"><span data-stu-id="959ce-115">Reference</span></span>  
  <xref:System.ServiceModel>  
   
-## <a name="see-also"></a><span data-ttu-id="7d60d-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="7d60d-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="959ce-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="959ce-116">See also</span></span>
 
-- [<span data-ttu-id="7d60d-117">与 COM 应用程序集成</span><span class="sxs-lookup"><span data-stu-id="7d60d-117">Integrating with COM Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+- [<span data-ttu-id="959ce-117">与 COM 应用程序集成</span><span class="sxs-lookup"><span data-stu-id="959ce-117">Integrating with COM Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

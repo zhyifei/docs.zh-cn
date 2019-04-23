@@ -3,62 +3,62 @@ title: <compositeDuplex>
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
 ms.openlocfilehash: 1e5ecc2b937aa0cdb159a6cbd1222fe6d4af79fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159843"
 ---
-# <a name="compositeduplex"></a><span data-ttu-id="16be1-101">\<compositeDuplex></span><span class="sxs-lookup"><span data-stu-id="16be1-101">\<compositeDuplex></span></span>
-<span data-ttu-id="16be1-102">定义绑定元素，客户端在必须公开一个终结点以使服务可以将消息发送回客户端时使用此元素。</span><span class="sxs-lookup"><span data-stu-id="16be1-102">Defines the binding element that is used when the client must expose an endpoint for the service to send messages back to the client.</span></span>  
+# <a name="compositeduplex"></a><span data-ttu-id="65294-101">\<compositeDuplex></span><span class="sxs-lookup"><span data-stu-id="65294-101">\<compositeDuplex></span></span>
+<span data-ttu-id="65294-102">定义绑定元素，客户端在必须公开一个终结点以使服务可以将消息发送回客户端时使用此元素。</span><span class="sxs-lookup"><span data-stu-id="65294-102">Defines the binding element that is used when the client must expose an endpoint for the service to send messages back to the client.</span></span>  
   
- <span data-ttu-id="16be1-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="16be1-103">\<system.serviceModel></span></span>  
-<span data-ttu-id="16be1-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="16be1-104">\<bindings></span></span>  
-<span data-ttu-id="16be1-105">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="16be1-105">\<customBinding></span></span>  
-<span data-ttu-id="16be1-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="16be1-106">\<binding></span></span>  
-<span data-ttu-id="16be1-107">\<compositeDuplex></span><span class="sxs-lookup"><span data-stu-id="16be1-107">\<compositeDuplex></span></span>  
+ <span data-ttu-id="65294-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="65294-103">\<system.serviceModel></span></span>  
+<span data-ttu-id="65294-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="65294-104">\<bindings></span></span>  
+<span data-ttu-id="65294-105">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="65294-105">\<customBinding></span></span>  
+<span data-ttu-id="65294-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="65294-106">\<binding></span></span>  
+<span data-ttu-id="65294-107">\<compositeDuplex></span><span class="sxs-lookup"><span data-stu-id="65294-107">\<compositeDuplex></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16be1-108">语法</span><span class="sxs-lookup"><span data-stu-id="16be1-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="65294-108">语法</span><span class="sxs-lookup"><span data-stu-id="65294-108">Syntax</span></span>  
   
 ```xml  
 <compositeDuplex clientBaseAddress="URI" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="16be1-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="16be1-109">Attributes and Elements</span></span>  
- <span data-ttu-id="16be1-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="16be1-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="65294-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="65294-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="65294-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="65294-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="16be1-111">特性</span><span class="sxs-lookup"><span data-stu-id="16be1-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="65294-111">特性</span><span class="sxs-lookup"><span data-stu-id="65294-111">Attributes</span></span>  
   
-|<span data-ttu-id="16be1-112">特性</span><span class="sxs-lookup"><span data-stu-id="16be1-112">Attribute</span></span>|<span data-ttu-id="16be1-113">描述</span><span class="sxs-lookup"><span data-stu-id="16be1-113">Description</span></span>|  
+|<span data-ttu-id="65294-112">特性</span><span class="sxs-lookup"><span data-stu-id="65294-112">Attribute</span></span>|<span data-ttu-id="65294-113">描述</span><span class="sxs-lookup"><span data-stu-id="65294-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="16be1-114">clientBaseAddress</span><span class="sxs-lookup"><span data-stu-id="16be1-114">clientBaseAddress</span></span>|<span data-ttu-id="16be1-115">一个在双工模式下设置反向通道地址的 URI。</span><span class="sxs-lookup"><span data-stu-id="16be1-115">A URI that sets the address of the back channel in duplex mode.</span></span> <span data-ttu-id="16be1-116">服务使用该地址与客户端进行联系和建立连接。</span><span class="sxs-lookup"><span data-stu-id="16be1-116">The service uses this address to make contact and establish a connection with the client.</span></span><br /><br /> <span data-ttu-id="16be1-117">如果此属性未设置，默认地址"`full qualified name+default port\TemporaryIndigoAddress\guid`"生成。</span><span class="sxs-lookup"><span data-stu-id="16be1-117">If this attribute is not set, a default address "`full qualified name+default port\TemporaryIndigoAddress\guid`" is generated.</span></span> <span data-ttu-id="16be1-118">默认值为 `null`。</span><span class="sxs-lookup"><span data-stu-id="16be1-118">The default is `null`.</span></span>|  
+|<span data-ttu-id="65294-114">clientBaseAddress</span><span class="sxs-lookup"><span data-stu-id="65294-114">clientBaseAddress</span></span>|<span data-ttu-id="65294-115">一个在双工模式下设置反向通道地址的 URI。</span><span class="sxs-lookup"><span data-stu-id="65294-115">A URI that sets the address of the back channel in duplex mode.</span></span> <span data-ttu-id="65294-116">服务使用该地址与客户端进行联系和建立连接。</span><span class="sxs-lookup"><span data-stu-id="65294-116">The service uses this address to make contact and establish a connection with the client.</span></span><br /><br /> <span data-ttu-id="65294-117">如果此属性未设置，默认地址"`full qualified name+default port\TemporaryIndigoAddress\guid`"生成。</span><span class="sxs-lookup"><span data-stu-id="65294-117">If this attribute is not set, a default address "`full qualified name+default port\TemporaryIndigoAddress\guid`" is generated.</span></span> <span data-ttu-id="65294-118">默认值为 `null`。</span><span class="sxs-lookup"><span data-stu-id="65294-118">The default is `null`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="16be1-119">子元素</span><span class="sxs-lookup"><span data-stu-id="16be1-119">Child Elements</span></span>  
- <span data-ttu-id="16be1-120">None</span><span class="sxs-lookup"><span data-stu-id="16be1-120">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="65294-119">子元素</span><span class="sxs-lookup"><span data-stu-id="65294-119">Child Elements</span></span>  
+ <span data-ttu-id="65294-120">None</span><span class="sxs-lookup"><span data-stu-id="65294-120">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="16be1-121">父元素</span><span class="sxs-lookup"><span data-stu-id="16be1-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="65294-121">父元素</span><span class="sxs-lookup"><span data-stu-id="65294-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="16be1-122">元素</span><span class="sxs-lookup"><span data-stu-id="16be1-122">Element</span></span>|<span data-ttu-id="16be1-123">描述</span><span class="sxs-lookup"><span data-stu-id="16be1-123">Description</span></span>|  
+|<span data-ttu-id="65294-122">元素</span><span class="sxs-lookup"><span data-stu-id="65294-122">Element</span></span>|<span data-ttu-id="65294-123">描述</span><span class="sxs-lookup"><span data-stu-id="65294-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="16be1-124">\<binding></span><span class="sxs-lookup"><span data-stu-id="16be1-124">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="16be1-125">定义自定义绑定的所有绑定功能。</span><span class="sxs-lookup"><span data-stu-id="16be1-125">Defines all binding capabilities of the custom binding.</span></span>|  
+|[<span data-ttu-id="65294-124">\<binding></span><span class="sxs-lookup"><span data-stu-id="65294-124">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="65294-125">定义自定义绑定的所有绑定功能。</span><span class="sxs-lookup"><span data-stu-id="65294-125">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="16be1-126">备注</span><span class="sxs-lookup"><span data-stu-id="16be1-126">Remarks</span></span>  
- <span data-ttu-id="16be1-127">此配置元素与本身不允许进行双工通信的传输（例如，HTTP）一起使用。</span><span class="sxs-lookup"><span data-stu-id="16be1-127">This configuration element is used with transports that do not allow duplex communications natively, for example, HTTP.</span></span> <span data-ttu-id="16be1-128">与此相反，TCP 本身允许进行双工通信，并且不要求服务在将消息发送回客户端时使用此绑定元素。</span><span class="sxs-lookup"><span data-stu-id="16be1-128">TCP, by contrast, allows duplex communications natively, and does not require the use of this binding element for the service to send messages back to a client.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="65294-126">备注</span><span class="sxs-lookup"><span data-stu-id="65294-126">Remarks</span></span>  
+ <span data-ttu-id="65294-127">此配置元素与本身不允许进行双工通信的传输（例如，HTTP）一起使用。</span><span class="sxs-lookup"><span data-stu-id="65294-127">This configuration element is used with transports that do not allow duplex communications natively, for example, HTTP.</span></span> <span data-ttu-id="65294-128">与此相反，TCP 本身允许进行双工通信，并且不要求服务在将消息发送回客户端时使用此绑定元素。</span><span class="sxs-lookup"><span data-stu-id="65294-128">TCP, by contrast, allows duplex communications natively, and does not require the use of this binding element for the service to send messages back to a client.</span></span>  
   
- <span data-ttu-id="16be1-129">客户端必须公开一个地址，以便服务进行联系和建立连接。</span><span class="sxs-lookup"><span data-stu-id="16be1-129">The client must expose an address for the service to make contact and establish a connection.</span></span> <span data-ttu-id="16be1-130">此客户端地址由 `clientBaseAddress` 属性提供。</span><span class="sxs-lookup"><span data-stu-id="16be1-130">This client address is provided by the `clientBaseAddress` attribute.</span></span> <span data-ttu-id="16be1-131">请注意，如果用户未显式设置 ClientBaseAddress，则 Windows Communication Foundation (WCF) 将自动生成一个 ClientBaseAddress。</span><span class="sxs-lookup"><span data-stu-id="16be1-131">Note that Windows Communication Foundation (WCF) auto-generates a ClientBaseAddress if one is not explicitly set by the user.</span></span>  
+ <span data-ttu-id="65294-129">客户端必须公开一个地址，以便服务进行联系和建立连接。</span><span class="sxs-lookup"><span data-stu-id="65294-129">The client must expose an address for the service to make contact and establish a connection.</span></span> <span data-ttu-id="65294-130">此客户端地址由 `clientBaseAddress` 属性提供。</span><span class="sxs-lookup"><span data-stu-id="65294-130">This client address is provided by the `clientBaseAddress` attribute.</span></span> <span data-ttu-id="65294-131">请注意，如果用户未显式设置 ClientBaseAddress，则 Windows Communication Foundation (WCF) 将自动生成一个 ClientBaseAddress。</span><span class="sxs-lookup"><span data-stu-id="65294-131">Note that Windows Communication Foundation (WCF) auto-generates a ClientBaseAddress if one is not explicitly set by the user.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="16be1-132">示例</span><span class="sxs-lookup"><span data-stu-id="16be1-132">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="65294-132">示例</span><span class="sxs-lookup"><span data-stu-id="65294-132">Example</span></span>  
   
 ```xml  
 <compositeDuplex clientBaseAddress="http://www.contoso.com" />
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="16be1-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="16be1-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65294-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="65294-133">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.CompositeDuplexElement>
 - <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [<span data-ttu-id="16be1-134">绑定</span><span class="sxs-lookup"><span data-stu-id="16be1-134">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
-- [<span data-ttu-id="16be1-135">扩展绑定</span><span class="sxs-lookup"><span data-stu-id="16be1-135">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [<span data-ttu-id="16be1-136">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="16be1-136">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [<span data-ttu-id="16be1-137">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="16be1-137">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [<span data-ttu-id="65294-134">绑定</span><span class="sxs-lookup"><span data-stu-id="65294-134">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="65294-135">扩展绑定</span><span class="sxs-lookup"><span data-stu-id="65294-135">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="65294-136">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="65294-136">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [<span data-ttu-id="65294-137">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="65294-137">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

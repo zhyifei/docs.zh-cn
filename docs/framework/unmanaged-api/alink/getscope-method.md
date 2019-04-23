@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 571612796d4e66be9dd8469d748c2380c839ddfa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165773"
 ---
-# <a name="getscope-method"></a><span data-ttu-id="7c048-102">GetScope 方法</span><span class="sxs-lookup"><span data-stu-id="7c048-102">GetScope Method</span></span>
-<span data-ttu-id="7c048-103">获取导入范围。</span><span class="sxs-lookup"><span data-stu-id="7c048-103">Gets an import scope.</span></span>  
+# <a name="getscope-method"></a><span data-ttu-id="c3831-102">GetScope 方法</span><span class="sxs-lookup"><span data-stu-id="c3831-102">GetScope Method</span></span>
+<span data-ttu-id="c3831-103">获取导入范围。</span><span class="sxs-lookup"><span data-stu-id="c3831-103">Gets an import scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7c048-104">语法</span><span class="sxs-lookup"><span data-stu-id="7c048-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3831-104">语法</span><span class="sxs-lookup"><span data-stu-id="c3831-104">Syntax</span></span>  
   
 ```  
 HRESULT GetScope(  
@@ -37,27 +37,27 @@ HRESULT GetScope(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7c048-105">参数</span><span class="sxs-lookup"><span data-stu-id="7c048-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c3831-105">参数</span><span class="sxs-lookup"><span data-stu-id="c3831-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="7c048-106">要导入到程序集的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="7c048-106">Unique ID of assembly to import to.</span></span>  
+ <span data-ttu-id="c3831-106">要导入到程序集的唯一 ID。</span><span class="sxs-lookup"><span data-stu-id="c3831-106">Unique ID of assembly to import to.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="7c048-107">唯一 ID 的文件从导入。</span><span class="sxs-lookup"><span data-stu-id="7c048-107">Unique ID of the file to import from.</span></span>  
+ <span data-ttu-id="c3831-107">唯一 ID 的文件从导入。</span><span class="sxs-lookup"><span data-stu-id="c3831-107">Unique ID of the file to import from.</span></span>  
   
  `dwScope`  
- <span data-ttu-id="7c048-108">要导入的从零开始范围。</span><span class="sxs-lookup"><span data-stu-id="7c048-108">Zero-based scope to import.</span></span>  
+ <span data-ttu-id="c3831-108">要导入的从零开始范围。</span><span class="sxs-lookup"><span data-stu-id="c3831-108">Zero-based scope to import.</span></span>  
   
  `ppImportScope`  
- <span data-ttu-id="7c048-109">接收[IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)作用域的接口。</span><span class="sxs-lookup"><span data-stu-id="7c048-109">Receives [IMetaDataImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface for the scope.</span></span>  
+ <span data-ttu-id="c3831-109">接收[IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)作用域的接口。</span><span class="sxs-lookup"><span data-stu-id="c3831-109">Receives [IMetaDataImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface for the scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7c048-110">返回值</span><span class="sxs-lookup"><span data-stu-id="7c048-110">Return Value</span></span>  
- <span data-ttu-id="7c048-111">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="7c048-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c3831-110">返回值</span><span class="sxs-lookup"><span data-stu-id="c3831-110">Return Value</span></span>  
+ <span data-ttu-id="c3831-111">如果该方法成功，返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="c3831-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7c048-112">要求</span><span class="sxs-lookup"><span data-stu-id="7c048-112">Requirements</span></span>  
- <span data-ttu-id="7c048-113">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="7c048-113">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3831-112">要求</span><span class="sxs-lookup"><span data-stu-id="c3831-112">Requirements</span></span>  
+ <span data-ttu-id="c3831-113">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="c3831-113">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7c048-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="7c048-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3831-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="c3831-114">See also</span></span>
 
-- [<span data-ttu-id="7c048-115">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="7c048-115">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="7c048-116">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="7c048-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="7c048-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="7c048-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="c3831-115">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="c3831-115">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="c3831-116">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="c3831-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="c3831-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="c3831-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

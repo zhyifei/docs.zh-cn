@@ -19,18 +19,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37ff40e1c009b8e1e0509a4a3333d5a2a70bbfd2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159882"
 ---
-# <a name="destroyiceefilegen-function"></a><span data-ttu-id="518ef-102">DestroyICeeFileGen 函数</span><span class="sxs-lookup"><span data-stu-id="518ef-102">DestroyICeeFileGen Function</span></span>
-<span data-ttu-id="518ef-103">销毁[ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)对象。</span><span class="sxs-lookup"><span data-stu-id="518ef-103">Destroys an [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) object.</span></span>  
+# <a name="destroyiceefilegen-function"></a><span data-ttu-id="1b7c3-102">DestroyICeeFileGen 函数</span><span class="sxs-lookup"><span data-stu-id="1b7c3-102">DestroyICeeFileGen Function</span></span>
+<span data-ttu-id="1b7c3-103">销毁[ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)对象。</span><span class="sxs-lookup"><span data-stu-id="1b7c3-103">Destroys an [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) object.</span></span>  
   
- <span data-ttu-id="518ef-104">此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="518ef-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="1b7c3-104">此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="1b7c3-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="518ef-105">语法</span><span class="sxs-lookup"><span data-stu-id="518ef-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1b7c3-105">语法</span><span class="sxs-lookup"><span data-stu-id="1b7c3-105">Syntax</span></span>  
   
 ```  
 HRESULT DestroyICeeFileGen (  
@@ -38,25 +38,25 @@ HRESULT DestroyICeeFileGen (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="518ef-106">参数</span><span class="sxs-lookup"><span data-stu-id="518ef-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1b7c3-106">参数</span><span class="sxs-lookup"><span data-stu-id="1b7c3-106">Parameters</span></span>  
  `ceeFileGen`  
- <span data-ttu-id="518ef-107">[in]`ICeeFileGen`要销毁对象。</span><span class="sxs-lookup"><span data-stu-id="518ef-107">[in] The `ICeeFileGen` object to destroy.</span></span>  
+ <span data-ttu-id="1b7c3-107">[in]`ICeeFileGen`要销毁对象。</span><span class="sxs-lookup"><span data-stu-id="1b7c3-107">[in] The `ICeeFileGen` object to destroy.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="518ef-108">返回值</span><span class="sxs-lookup"><span data-stu-id="518ef-108">Return Value</span></span>  
- <span data-ttu-id="518ef-109">此方法返回标准 COM 错误代码。</span><span class="sxs-lookup"><span data-stu-id="518ef-109">This method returns standard COM error codes.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1b7c3-108">返回值</span><span class="sxs-lookup"><span data-stu-id="1b7c3-108">Return Value</span></span>  
+ <span data-ttu-id="1b7c3-109">此方法返回标准 COM 错误代码。</span><span class="sxs-lookup"><span data-stu-id="1b7c3-109">This method returns standard COM error codes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="518ef-110">备注</span><span class="sxs-lookup"><span data-stu-id="518ef-110">Remarks</span></span>  
- `DestroyICeeFileGen` <span data-ttu-id="518ef-111">销毁`ICeeFileGen`对象创建[CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="518ef-111">destroys the `ICeeFileGen` object created by the [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1b7c3-110">备注</span><span class="sxs-lookup"><span data-stu-id="1b7c3-110">Remarks</span></span>  
+ <span data-ttu-id="1b7c3-111">`DestroyICeeFileGen` 销毁`ICeeFileGen`对象创建[CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md)函数。</span><span class="sxs-lookup"><span data-stu-id="1b7c3-111">`DestroyICeeFileGen` destroys the `ICeeFileGen` object created by the [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="518ef-112">要求</span><span class="sxs-lookup"><span data-stu-id="518ef-112">Requirements</span></span>  
- <span data-ttu-id="518ef-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="518ef-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1b7c3-112">要求</span><span class="sxs-lookup"><span data-stu-id="1b7c3-112">Requirements</span></span>  
+ <span data-ttu-id="1b7c3-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1b7c3-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="518ef-114">**标头：** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="518ef-114">**Header:** ICeeFileGen.h</span></span>  
+ <span data-ttu-id="1b7c3-114">**标头：** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="1b7c3-114">**Header:** ICeeFileGen.h</span></span>  
   
- <span data-ttu-id="518ef-115">**库：** MSCorPE.dll</span><span class="sxs-lookup"><span data-stu-id="518ef-115">**Library:** MSCorPE.dll</span></span>  
+ <span data-ttu-id="1b7c3-115">**库：** MSCorPE.dll</span><span class="sxs-lookup"><span data-stu-id="1b7c3-115">**Library:** MSCorPE.dll</span></span>  
   
- **<span data-ttu-id="518ef-116">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="518ef-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="1b7c3-116">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b7c3-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="518ef-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="518ef-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1b7c3-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="1b7c3-117">See also</span></span>
 
-- [<span data-ttu-id="518ef-118">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="518ef-118">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="1b7c3-118">弃用的 CLR 承载函数</span><span class="sxs-lookup"><span data-stu-id="1b7c3-118">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
