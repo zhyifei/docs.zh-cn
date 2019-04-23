@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: faf1be65d308b223490f3ae67eed3d8a2b1688b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223064"
 ---
-# <a name="corsegment-structure"></a><span data-ttu-id="fe033-102">COR_SEGMENT 结构</span><span class="sxs-lookup"><span data-stu-id="fe033-102">COR_SEGMENT Structure</span></span>
-<span data-ttu-id="fe033-103">包含有关托管堆中的内存区域的信息。</span><span class="sxs-lookup"><span data-stu-id="fe033-103">Contains information about a region of memory in the managed heap.</span></span>  
+# <a name="corsegment-structure"></a><span data-ttu-id="c35b9-102">COR_SEGMENT 结构</span><span class="sxs-lookup"><span data-stu-id="c35b9-102">COR_SEGMENT Structure</span></span>
+<span data-ttu-id="c35b9-103">包含有关托管堆中的内存区域的信息。</span><span class="sxs-lookup"><span data-stu-id="c35b9-103">Contains information about a region of memory in the managed heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fe033-104">语法</span><span class="sxs-lookup"><span data-stu-id="fe033-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c35b9-104">语法</span><span class="sxs-lookup"><span data-stu-id="c35b9-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_SEGMENT {  
@@ -37,30 +37,30 @@ typedef struct _COR_SEGMENT {
 } COR_SEGMENT;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="fe033-105">成员</span><span class="sxs-lookup"><span data-stu-id="fe033-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c35b9-105">成员</span><span class="sxs-lookup"><span data-stu-id="c35b9-105">Members</span></span>  
   
-|<span data-ttu-id="fe033-106">成员</span><span class="sxs-lookup"><span data-stu-id="fe033-106">Member</span></span>|<span data-ttu-id="fe033-107">描述</span><span class="sxs-lookup"><span data-stu-id="fe033-107">Description</span></span>|  
+|<span data-ttu-id="c35b9-106">成员</span><span class="sxs-lookup"><span data-stu-id="c35b9-106">Member</span></span>|<span data-ttu-id="c35b9-107">描述</span><span class="sxs-lookup"><span data-stu-id="c35b9-107">Description</span></span>|  
 |------------|-----------------|  
-|`start`|<span data-ttu-id="fe033-108">内存区域的起始地址。</span><span class="sxs-lookup"><span data-stu-id="fe033-108">The starting address of the memory region.</span></span>|  
-|`end`|<span data-ttu-id="fe033-109">内存区域的结束地址。</span><span class="sxs-lookup"><span data-stu-id="fe033-109">The ending address of the memory region.</span></span>|  
-|`gen`|<span data-ttu-id="fe033-110">显示内存区域生成的 [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) 枚举成员。</span><span class="sxs-lookup"><span data-stu-id="fe033-110">A [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) enumeration member that indicates the generation of the memory region.</span></span>|  
-|`heap`|<span data-ttu-id="fe033-111">内存区域驻留的堆数。</span><span class="sxs-lookup"><span data-stu-id="fe033-111">The heap number in which the memory region resides.</span></span> <span data-ttu-id="fe033-112">有关详细信息，请参阅备注部分。</span><span class="sxs-lookup"><span data-stu-id="fe033-112">See the Remarks section for more information.</span></span>|  
+|`start`|<span data-ttu-id="c35b9-108">内存区域的起始地址。</span><span class="sxs-lookup"><span data-stu-id="c35b9-108">The starting address of the memory region.</span></span>|  
+|`end`|<span data-ttu-id="c35b9-109">内存区域的结束地址。</span><span class="sxs-lookup"><span data-stu-id="c35b9-109">The ending address of the memory region.</span></span>|  
+|`gen`|<span data-ttu-id="c35b9-110">显示内存区域生成的 [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) 枚举成员。</span><span class="sxs-lookup"><span data-stu-id="c35b9-110">A [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) enumeration member that indicates the generation of the memory region.</span></span>|  
+|`heap`|<span data-ttu-id="c35b9-111">内存区域驻留的堆数。</span><span class="sxs-lookup"><span data-stu-id="c35b9-111">The heap number in which the memory region resides.</span></span> <span data-ttu-id="c35b9-112">有关详细信息，请参阅备注部分。</span><span class="sxs-lookup"><span data-stu-id="c35b9-112">See the Remarks section for more information.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fe033-113">备注</span><span class="sxs-lookup"><span data-stu-id="fe033-113">Remarks</span></span>  
- <span data-ttu-id="fe033-114">`COR_SEGMENTS` 结构表示托管堆中的内存区域。</span><span class="sxs-lookup"><span data-stu-id="fe033-114">The `COR_SEGMENTS` structure represents a region of memory in the managed heap.</span></span>  `COR_SEGMENTS` <span data-ttu-id="fe033-115">对象是的成员[ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)集合对象，通过调用来填充[ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="fe033-115">objects are members of the [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) collection object, which is populated by calling the [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c35b9-113">备注</span><span class="sxs-lookup"><span data-stu-id="c35b9-113">Remarks</span></span>  
+ <span data-ttu-id="c35b9-114">`COR_SEGMENTS` 结构表示托管堆中的内存区域。</span><span class="sxs-lookup"><span data-stu-id="c35b9-114">The `COR_SEGMENTS` structure represents a region of memory in the managed heap.</span></span>  <span data-ttu-id="c35b9-115">`COR_SEGMENTS` 对象是 [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) 集合对象的成员，通过调用 [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) 方法填充。</span><span class="sxs-lookup"><span data-stu-id="c35b9-115">`COR_SEGMENTS` objects are members of the [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) collection object, which is populated by calling the [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) method.</span></span>  
   
- <span data-ttu-id="fe033-116">`heap` 字段是处理器编号，对应报告的堆。</span><span class="sxs-lookup"><span data-stu-id="fe033-116">The `heap` field is the processor number, which corresponds to the heap being reported.</span></span> <span data-ttu-id="fe033-117">对于工作站垃圾回收器，其值始终为零，因为工作站仅有一个垃圾回收堆。</span><span class="sxs-lookup"><span data-stu-id="fe033-117">For workstation garbage collectors, its value is always zero, because workstations have only one garbage collection heap.</span></span> <span data-ttu-id="fe033-118">对于服务器垃圾回收器，其值对应于堆附加到的处理器。</span><span class="sxs-lookup"><span data-stu-id="fe033-118">For server garbage collectors, its value corresponds to the processor the heap is attached to.</span></span> <span data-ttu-id="fe033-119">请注意，根据垃圾回收器的实现细节，垃圾回收堆可能多于或少于实际的处理器。</span><span class="sxs-lookup"><span data-stu-id="fe033-119">Note that there may be more or fewer garbage collection heaps than there are actual processors due to the implementation details of the garbage collector.</span></span>  
+ <span data-ttu-id="c35b9-116">`heap` 字段是处理器编号，对应报告的堆。</span><span class="sxs-lookup"><span data-stu-id="c35b9-116">The `heap` field is the processor number, which corresponds to the heap being reported.</span></span> <span data-ttu-id="c35b9-117">对于工作站垃圾回收器，其值始终为零，因为工作站仅有一个垃圾回收堆。</span><span class="sxs-lookup"><span data-stu-id="c35b9-117">For workstation garbage collectors, its value is always zero, because workstations have only one garbage collection heap.</span></span> <span data-ttu-id="c35b9-118">对于服务器垃圾回收器，其值对应于堆附加到的处理器。</span><span class="sxs-lookup"><span data-stu-id="c35b9-118">For server garbage collectors, its value corresponds to the processor the heap is attached to.</span></span> <span data-ttu-id="c35b9-119">请注意，根据垃圾回收器的实现细节，垃圾回收堆可能多于或少于实际的处理器。</span><span class="sxs-lookup"><span data-stu-id="c35b9-119">Note that there may be more or fewer garbage collection heaps than there are actual processors due to the implementation details of the garbage collector.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fe033-120">要求</span><span class="sxs-lookup"><span data-stu-id="fe033-120">Requirements</span></span>  
- <span data-ttu-id="fe033-121">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fe033-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c35b9-120">要求</span><span class="sxs-lookup"><span data-stu-id="c35b9-120">Requirements</span></span>  
+ <span data-ttu-id="c35b9-121">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c35b9-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fe033-122">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fe033-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c35b9-122">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c35b9-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fe033-123">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fe033-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c35b9-123">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c35b9-123">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="fe033-124">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="fe033-124">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="c35b9-124">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c35b9-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fe033-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="fe033-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c35b9-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="c35b9-125">See also</span></span>
 
-- [<span data-ttu-id="fe033-126">调试结构</span><span class="sxs-lookup"><span data-stu-id="fe033-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="fe033-127">调试</span><span class="sxs-lookup"><span data-stu-id="fe033-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="c35b9-126">调试结构</span><span class="sxs-lookup"><span data-stu-id="c35b9-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="c35b9-127">调试</span><span class="sxs-lookup"><span data-stu-id="c35b9-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

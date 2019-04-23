@@ -16,16 +16,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da0e62250dbef9be93ccee7020e23c3f83e85592
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223264"
 ---
-# <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a><span data-ttu-id="b1855-102">ICorDebugComObjectValue::GetCachedInterfacePointers 方法</span><span class="sxs-lookup"><span data-stu-id="b1855-102">ICorDebugComObjectValue::GetCachedInterfacePointers Method</span></span>
-<span data-ttu-id="b1855-103">获取缓存在当前运行时可调用包装 (RCW) 上的原始接口指针。</span><span class="sxs-lookup"><span data-stu-id="b1855-103">Gets the raw interface pointers cached on the current runtime callable wrapper (RCW).</span></span>  
+# <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a><span data-ttu-id="f446c-102">ICorDebugComObjectValue::GetCachedInterfacePointers 方法</span><span class="sxs-lookup"><span data-stu-id="f446c-102">ICorDebugComObjectValue::GetCachedInterfacePointers Method</span></span>
+<span data-ttu-id="f446c-103">获取缓存在当前运行时可调用包装 (RCW) 上的原始接口指针。</span><span class="sxs-lookup"><span data-stu-id="f446c-103">Gets the raw interface pointers cached on the current runtime callable wrapper (RCW).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b1855-104">语法</span><span class="sxs-lookup"><span data-stu-id="b1855-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f446c-104">语法</span><span class="sxs-lookup"><span data-stu-id="f446c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCachedInterfacePointers(  
@@ -35,31 +35,31 @@ HRESULT GetCachedInterfacePointers(
     [out, size_is(celt), length_is(*pceltFetched) CORDB_ADDRESS *ptrs);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b1855-105">参数</span><span class="sxs-lookup"><span data-stu-id="b1855-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f446c-105">参数</span><span class="sxs-lookup"><span data-stu-id="f446c-105">Parameters</span></span>  
  `bIInspectableOnly`  
- <span data-ttu-id="b1855-106">[in]一个值，指示该方法将返回仅[!INCLUDE[wrt](../../../../includes/wrt-md.md)]接口 (`IInspectable`接口) 或所有缓存的运行时可调用包装 (RCW) 的 COM 接口。</span><span class="sxs-lookup"><span data-stu-id="b1855-106">[in] A value that indicates whether the method will return only [!INCLUDE[wrt](../../../../includes/wrt-md.md)] interfaces (`IInspectable` interfaces) or all COM interfaces that are cached by the runtime callable wrapper (RCW).</span></span>  
+ <span data-ttu-id="f446c-106">[in]一个值，指示该方法将返回仅[!INCLUDE[wrt](../../../../includes/wrt-md.md)]接口 (`IInspectable`接口) 或所有缓存的运行时可调用包装 (RCW) 的 COM 接口。</span><span class="sxs-lookup"><span data-stu-id="f446c-106">[in] A value that indicates whether the method will return only [!INCLUDE[wrt](../../../../includes/wrt-md.md)] interfaces (`IInspectable` interfaces) or all COM interfaces that are cached by the runtime callable wrapper (RCW).</span></span>  
   
  `celt`  
- <span data-ttu-id="b1855-107">[in]要从中检索其地址的对象数。</span><span class="sxs-lookup"><span data-stu-id="b1855-107">[in] The number of objects whose addresses are to be retrieved.</span></span>  
+ <span data-ttu-id="f446c-107">[in]要从中检索其地址的对象数。</span><span class="sxs-lookup"><span data-stu-id="f446c-107">[in] The number of objects whose addresses are to be retrieved.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="b1855-108">[out]指向数`CORDB_ADDRESS`中实际返回的值`ptrs`。</span><span class="sxs-lookup"><span data-stu-id="b1855-108">[out] A pointer to the number of `CORDB_ADDRESS` values actually returned in `ptrs`.</span></span>  
+ <span data-ttu-id="f446c-108">[out]指向数`CORDB_ADDRESS`中实际返回的值`ptrs`。</span><span class="sxs-lookup"><span data-stu-id="f446c-108">[out] A pointer to the number of `CORDB_ADDRESS` values actually returned in `ptrs`.</span></span>  
   
  `ptrs`  
- <span data-ttu-id="b1855-109">指向数组的起始地址的指针`CORDB_ADDRESS`包含的地址的值缓存接口的对象。</span><span class="sxs-lookup"><span data-stu-id="b1855-109">A pointer to the starting address of an array of `CORDB_ADDRESS` values that contain the addresses of cached interface objects.</span></span>  
+ <span data-ttu-id="f446c-109">指向数组的起始地址的指针`CORDB_ADDRESS`包含的地址的值缓存接口的对象。</span><span class="sxs-lookup"><span data-stu-id="f446c-109">A pointer to the starting address of an array of `CORDB_ADDRESS` values that contain the addresses of cached interface objects.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b1855-110">备注</span><span class="sxs-lookup"><span data-stu-id="b1855-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f446c-110">备注</span><span class="sxs-lookup"><span data-stu-id="f446c-110">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b1855-111">要求</span><span class="sxs-lookup"><span data-stu-id="b1855-111">Requirements</span></span>  
- <span data-ttu-id="b1855-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b1855-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f446c-111">要求</span><span class="sxs-lookup"><span data-stu-id="f446c-111">Requirements</span></span>  
+ <span data-ttu-id="f446c-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f446c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b1855-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b1855-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f446c-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f446c-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b1855-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b1855-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f446c-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f446c-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="b1855-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="b1855-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="f446c-115">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f446c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b1855-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="b1855-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f446c-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="f446c-116">See also</span></span>
 
-- [<span data-ttu-id="b1855-117">ICorDebugComObjectValue 接口</span><span class="sxs-lookup"><span data-stu-id="b1855-117">ICorDebugComObjectValue Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)
-- [<span data-ttu-id="b1855-118">调试接口</span><span class="sxs-lookup"><span data-stu-id="b1855-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="f446c-117">ICorDebugComObjectValue 接口</span><span class="sxs-lookup"><span data-stu-id="f446c-117">ICorDebugComObjectValue Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)
+- [<span data-ttu-id="f446c-118">调试接口</span><span class="sxs-lookup"><span data-stu-id="f446c-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
