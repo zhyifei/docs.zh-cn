@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc36468a2016822e884ec3a36a23c75477a00a2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217193"
 ---
-# <a name="corsavesize-enumeration"></a><span data-ttu-id="02ef4-102">CorSaveSize 枚举</span><span class="sxs-lookup"><span data-stu-id="02ef4-102">CorSaveSize Enumeration</span></span>
-<span data-ttu-id="02ef4-103">包含一些值，用于指示查询保存操作的大小时所需的精度级别。</span><span class="sxs-lookup"><span data-stu-id="02ef4-103">Contains values indicating the level of precision required when querying for the size of a save operation.</span></span>  
+# <a name="corsavesize-enumeration"></a><span data-ttu-id="41eb3-102">CorSaveSize 枚举</span><span class="sxs-lookup"><span data-stu-id="41eb3-102">CorSaveSize Enumeration</span></span>
+<span data-ttu-id="41eb3-103">包含一些值，用于指示查询保存操作的大小时所需的精度级别。</span><span class="sxs-lookup"><span data-stu-id="41eb3-103">Contains values indicating the level of precision required when querying for the size of a save operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="02ef4-104">语法</span><span class="sxs-lookup"><span data-stu-id="02ef4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41eb3-104">语法</span><span class="sxs-lookup"><span data-stu-id="41eb3-104">Syntax</span></span>  
   
 ```  
 typedef enum CorSaveSize {  
@@ -36,23 +36,23 @@ typedef enum CorSaveSize {
 } CorSaveSize;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="02ef4-105">成员</span><span class="sxs-lookup"><span data-stu-id="02ef4-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="41eb3-105">成员</span><span class="sxs-lookup"><span data-stu-id="41eb3-105">Members</span></span>  
   
-|<span data-ttu-id="02ef4-106">成员</span><span class="sxs-lookup"><span data-stu-id="02ef4-106">Member</span></span>|<span data-ttu-id="02ef4-107">描述</span><span class="sxs-lookup"><span data-stu-id="02ef4-107">Description</span></span>|  
+|<span data-ttu-id="41eb3-106">成员</span><span class="sxs-lookup"><span data-stu-id="41eb3-106">Member</span></span>|<span data-ttu-id="41eb3-107">描述</span><span class="sxs-lookup"><span data-stu-id="41eb3-107">Description</span></span>|  
 |------------|-----------------|  
-|`cssAccurate`|<span data-ttu-id="02ef4-108">指定返回值应为完全。</span><span class="sxs-lookup"><span data-stu-id="02ef4-108">Specifies that the return value should be exact.</span></span>|  
-|`cssQuick`|<span data-ttu-id="02ef4-109">指定应估计的返回值。</span><span class="sxs-lookup"><span data-stu-id="02ef4-109">Specifies that the return value should be estimated.</span></span>|  
-|`cssDiscardTransientCAs`|<span data-ttu-id="02ef4-110">指定应删除丢弃的类型。</span><span class="sxs-lookup"><span data-stu-id="02ef4-110">Specifies that discardable types should be removed.</span></span>|  
+|`cssAccurate`|<span data-ttu-id="41eb3-108">指定返回值应为完全。</span><span class="sxs-lookup"><span data-stu-id="41eb3-108">Specifies that the return value should be exact.</span></span>|  
+|`cssQuick`|<span data-ttu-id="41eb3-109">指定应估计的返回值。</span><span class="sxs-lookup"><span data-stu-id="41eb3-109">Specifies that the return value should be estimated.</span></span>|  
+|`cssDiscardTransientCAs`|<span data-ttu-id="41eb3-110">指定应删除丢弃的类型。</span><span class="sxs-lookup"><span data-stu-id="41eb3-110">Specifies that discardable types should be removed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="02ef4-111">要求</span><span class="sxs-lookup"><span data-stu-id="02ef4-111">Requirements</span></span>  
- <span data-ttu-id="02ef4-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="02ef4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41eb3-111">要求</span><span class="sxs-lookup"><span data-stu-id="41eb3-111">Requirements</span></span>  
+ <span data-ttu-id="41eb3-112">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="41eb3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="02ef4-113">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="02ef4-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="41eb3-113">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="41eb3-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="02ef4-114">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="02ef4-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="41eb3-114">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="41eb3-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="02ef4-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="02ef4-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="41eb3-115">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41eb3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="02ef4-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="02ef4-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="41eb3-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="41eb3-116">See also</span></span>
 
-- [<span data-ttu-id="02ef4-117">元数据枚举</span><span class="sxs-lookup"><span data-stu-id="02ef4-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="41eb3-117">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="41eb3-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

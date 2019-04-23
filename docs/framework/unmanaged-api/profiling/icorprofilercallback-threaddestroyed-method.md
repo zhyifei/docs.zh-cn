@@ -18,39 +18,39 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4c45290b1ef4360e51b5ed8e1b0fac3dcdde727
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217336"
 ---
-# <a name="icorprofilercallbackthreaddestroyed-method"></a><span data-ttu-id="071c3-102">ICorProfilerCallback::ThreadDestroyed 方法</span><span class="sxs-lookup"><span data-stu-id="071c3-102">ICorProfilerCallback::ThreadDestroyed Method</span></span>
-<span data-ttu-id="071c3-103">通知探查器线程已销毁。</span><span class="sxs-lookup"><span data-stu-id="071c3-103">Notifies the profiler that a thread has been destroyed.</span></span>  
+# <a name="icorprofilercallbackthreaddestroyed-method"></a><span data-ttu-id="a4f97-102">ICorProfilerCallback::ThreadDestroyed 方法</span><span class="sxs-lookup"><span data-stu-id="a4f97-102">ICorProfilerCallback::ThreadDestroyed Method</span></span>
+<span data-ttu-id="a4f97-103">通知探查器线程已销毁。</span><span class="sxs-lookup"><span data-stu-id="a4f97-103">Notifies the profiler that a thread has been destroyed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="071c3-104">语法</span><span class="sxs-lookup"><span data-stu-id="071c3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4f97-104">语法</span><span class="sxs-lookup"><span data-stu-id="a4f97-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadDestroyed(  
     [in] ThreadID threadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="071c3-105">参数</span><span class="sxs-lookup"><span data-stu-id="071c3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a4f97-105">参数</span><span class="sxs-lookup"><span data-stu-id="a4f97-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="071c3-106">[in]已被销毁线程的 ID。</span><span class="sxs-lookup"><span data-stu-id="071c3-106">[in] The ID of the thread that has been destroyed.</span></span>  
+ <span data-ttu-id="a4f97-106">[in]已被销毁线程的 ID。</span><span class="sxs-lookup"><span data-stu-id="a4f97-106">[in] The ID of the thread that has been destroyed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="071c3-107">备注</span><span class="sxs-lookup"><span data-stu-id="071c3-107">Remarks</span></span>  
- <span data-ttu-id="071c3-108">`threadId`值不再有效时的此调用。</span><span class="sxs-lookup"><span data-stu-id="071c3-108">The `threadId` value is no longer valid at the time of this call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a4f97-107">备注</span><span class="sxs-lookup"><span data-stu-id="a4f97-107">Remarks</span></span>  
+ <span data-ttu-id="a4f97-108">`threadId`值不再有效时的此调用。</span><span class="sxs-lookup"><span data-stu-id="a4f97-108">The `threadId` value is no longer valid at the time of this call.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="071c3-109">要求</span><span class="sxs-lookup"><span data-stu-id="071c3-109">Requirements</span></span>  
- <span data-ttu-id="071c3-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="071c3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4f97-109">要求</span><span class="sxs-lookup"><span data-stu-id="a4f97-109">Requirements</span></span>  
+ <span data-ttu-id="a4f97-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a4f97-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="071c3-111">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="071c3-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a4f97-111">**标头：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a4f97-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="071c3-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="071c3-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a4f97-112">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a4f97-112">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="071c3-113">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="071c3-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="a4f97-113">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4f97-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="071c3-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="071c3-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4f97-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="a4f97-114">See also</span></span>
 
-- [<span data-ttu-id="071c3-115">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="071c3-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="071c3-116">ThreadCreated 方法</span><span class="sxs-lookup"><span data-stu-id="071c3-116">ThreadCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)
+- [<span data-ttu-id="a4f97-115">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="a4f97-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="a4f97-116">ThreadCreated 方法</span><span class="sxs-lookup"><span data-stu-id="a4f97-116">ThreadCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)

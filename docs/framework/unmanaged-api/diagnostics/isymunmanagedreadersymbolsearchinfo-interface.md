@@ -17,25 +17,25 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2a872774b1c4510c8d0325c59ae7678c867c1aff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216803"
 ---
-# <a name="isymunmanagedreadersymbolsearchinfo-interface"></a><span data-ttu-id="54b60-102">ISymUnmanagedReaderSymbolSearchInfo 接口</span><span class="sxs-lookup"><span data-stu-id="54b60-102">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>
-<span data-ttu-id="54b60-103">提供用于获取符号搜索信息的方法。</span><span class="sxs-lookup"><span data-stu-id="54b60-103">Provides methods that get symbol search information.</span></span> <span data-ttu-id="54b60-104">通过调用来获取此接口`QueryInterface`上实现的对象[ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="54b60-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
+# <a name="isymunmanagedreadersymbolsearchinfo-interface"></a><span data-ttu-id="724a5-102">ISymUnmanagedReaderSymbolSearchInfo 接口</span><span class="sxs-lookup"><span data-stu-id="724a5-102">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>
+<span data-ttu-id="724a5-103">提供用于获取符号搜索信息的方法。</span><span class="sxs-lookup"><span data-stu-id="724a5-103">Provides methods that get symbol search information.</span></span> <span data-ttu-id="724a5-104">通过调用来获取此接口`QueryInterface`上实现的对象[ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)接口。</span><span class="sxs-lookup"><span data-stu-id="724a5-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="54b60-105">方法</span><span class="sxs-lookup"><span data-stu-id="54b60-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="724a5-105">方法</span><span class="sxs-lookup"><span data-stu-id="724a5-105">Methods</span></span>  
   
-|<span data-ttu-id="54b60-106">方法</span><span class="sxs-lookup"><span data-stu-id="54b60-106">Method</span></span>|<span data-ttu-id="54b60-107">描述</span><span class="sxs-lookup"><span data-stu-id="54b60-107">Description</span></span>|  
+|<span data-ttu-id="724a5-106">方法</span><span class="sxs-lookup"><span data-stu-id="724a5-106">Method</span></span>|<span data-ttu-id="724a5-107">描述</span><span class="sxs-lookup"><span data-stu-id="724a5-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="54b60-108">GetSymbolSearchInfo 方法</span><span class="sxs-lookup"><span data-stu-id="54b60-108">GetSymbolSearchInfo Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|<span data-ttu-id="54b60-109">获取符号搜索信息。</span><span class="sxs-lookup"><span data-stu-id="54b60-109">Gets symbol search information.</span></span>|  
-|[<span data-ttu-id="54b60-110">GetSymbolSearchInfoCount 方法</span><span class="sxs-lookup"><span data-stu-id="54b60-110">GetSymbolSearchInfoCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|<span data-ttu-id="54b60-111">获取符号搜索信息的计数。</span><span class="sxs-lookup"><span data-stu-id="54b60-111">Gets a count of symbol search information.</span></span>|  
+|[<span data-ttu-id="724a5-108">GetSymbolSearchInfo 方法</span><span class="sxs-lookup"><span data-stu-id="724a5-108">GetSymbolSearchInfo Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|<span data-ttu-id="724a5-109">获取符号搜索信息。</span><span class="sxs-lookup"><span data-stu-id="724a5-109">Gets symbol search information.</span></span>|  
+|[<span data-ttu-id="724a5-110">GetSymbolSearchInfoCount 方法</span><span class="sxs-lookup"><span data-stu-id="724a5-110">GetSymbolSearchInfoCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|<span data-ttu-id="724a5-111">获取符号搜索信息的计数。</span><span class="sxs-lookup"><span data-stu-id="724a5-111">Gets a count of symbol search information.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="54b60-112">要求</span><span class="sxs-lookup"><span data-stu-id="54b60-112">Requirements</span></span>  
- <span data-ttu-id="54b60-113">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="54b60-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="724a5-112">要求</span><span class="sxs-lookup"><span data-stu-id="724a5-112">Requirements</span></span>  
+ <span data-ttu-id="724a5-113">**标头：** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="724a5-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54b60-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="54b60-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="724a5-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="724a5-114">See also</span></span>
 
-- [<span data-ttu-id="54b60-115">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="54b60-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="724a5-115">诊断符号存储区接口</span><span class="sxs-lookup"><span data-stu-id="724a5-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

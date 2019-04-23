@@ -17,29 +17,29 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cc7cc4ecf710090b2cbe55657a85cb081b2fe33c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214749"
 ---
-# <a name="iinstallreferenceitem-interface"></a><span data-ttu-id="d8cca-102">IInstallReferenceItem 接口</span><span class="sxs-lookup"><span data-stu-id="d8cca-102">IInstallReferenceItem Interface</span></span>
-<span data-ttu-id="d8cca-103">表示安装在全局程序集缓存中的项。</span><span class="sxs-lookup"><span data-stu-id="d8cca-103">Represents an item installed in the global assembly cache.</span></span>  
+# <a name="iinstallreferenceitem-interface"></a><span data-ttu-id="e2629-102">IInstallReferenceItem 接口</span><span class="sxs-lookup"><span data-stu-id="e2629-102">IInstallReferenceItem Interface</span></span>
+<span data-ttu-id="e2629-103">表示安装在全局程序集缓存中的项。</span><span class="sxs-lookup"><span data-stu-id="e2629-103">Represents an item installed in the global assembly cache.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d8cca-104">方法</span><span class="sxs-lookup"><span data-stu-id="d8cca-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="e2629-104">方法</span><span class="sxs-lookup"><span data-stu-id="e2629-104">Methods</span></span>  
   
-|<span data-ttu-id="d8cca-105">方法</span><span class="sxs-lookup"><span data-stu-id="d8cca-105">Method</span></span>|<span data-ttu-id="d8cca-106">描述</span><span class="sxs-lookup"><span data-stu-id="d8cca-106">Description</span></span>|  
+|<span data-ttu-id="e2629-105">方法</span><span class="sxs-lookup"><span data-stu-id="e2629-105">Method</span></span>|<span data-ttu-id="e2629-106">描述</span><span class="sxs-lookup"><span data-stu-id="e2629-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="d8cca-107">GetReference 方法</span><span class="sxs-lookup"><span data-stu-id="d8cca-107">GetReference Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|<span data-ttu-id="d8cca-108">获取一个指向`FUSION_INSTALL_REFERENCE`由此结构`IInstallReferenceItem`。</span><span class="sxs-lookup"><span data-stu-id="d8cca-108">Gets a pointer to the `FUSION_INSTALL_REFERENCE` structure represented by this `IInstallReferenceItem`.</span></span>|  
+|[<span data-ttu-id="e2629-107">GetReference 方法</span><span class="sxs-lookup"><span data-stu-id="e2629-107">GetReference Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|<span data-ttu-id="e2629-108">获取一个指向`FUSION_INSTALL_REFERENCE`由此结构`IInstallReferenceItem`。</span><span class="sxs-lookup"><span data-stu-id="e2629-108">Gets a pointer to the `FUSION_INSTALL_REFERENCE` structure represented by this `IInstallReferenceItem`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d8cca-109">要求</span><span class="sxs-lookup"><span data-stu-id="d8cca-109">Requirements</span></span>  
- <span data-ttu-id="d8cca-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d8cca-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e2629-109">要求</span><span class="sxs-lookup"><span data-stu-id="e2629-109">Requirements</span></span>  
+ <span data-ttu-id="e2629-110">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e2629-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d8cca-111">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="d8cca-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="e2629-111">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="e2629-111">**Header:** Fusion.h</span></span>  
   
- **<span data-ttu-id="d8cca-112">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="d8cca-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="e2629-112">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e2629-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8cca-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="d8cca-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2629-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="e2629-113">See also</span></span>
 
-- [<span data-ttu-id="d8cca-114">合成接口</span><span class="sxs-lookup"><span data-stu-id="d8cca-114">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [<span data-ttu-id="d8cca-115">FUSION_INSTALL_REFERENCE 结构</span><span class="sxs-lookup"><span data-stu-id="d8cca-115">FUSION_INSTALL_REFERENCE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+- [<span data-ttu-id="e2629-114">合成接口</span><span class="sxs-lookup"><span data-stu-id="e2629-114">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="e2629-115">FUSION_INSTALL_REFERENCE 结构</span><span class="sxs-lookup"><span data-stu-id="e2629-115">FUSION_INSTALL_REFERENCE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
