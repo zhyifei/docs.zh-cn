@@ -17,37 +17,37 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ccc45482f691d9950c641ef126a657052a280e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213624"
 ---
-# <a name="icordebugprocess3-interface"></a><span data-ttu-id="e9f02-102">ICorDebugProcess3 接口</span><span class="sxs-lookup"><span data-stu-id="e9f02-102">ICorDebugProcess3 Interface</span></span>
-<span data-ttu-id="e9f02-103">控制自定义调试器通知。</span><span class="sxs-lookup"><span data-stu-id="e9f02-103">Controls custom debugger notifications.</span></span>  
+# <a name="icordebugprocess3-interface"></a><span data-ttu-id="9d063-102">ICorDebugProcess3 接口</span><span class="sxs-lookup"><span data-stu-id="9d063-102">ICorDebugProcess3 Interface</span></span>
+<span data-ttu-id="9d063-103">控制自定义调试器通知。</span><span class="sxs-lookup"><span data-stu-id="9d063-103">Controls custom debugger notifications.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="e9f02-104">方法</span><span class="sxs-lookup"><span data-stu-id="e9f02-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="9d063-104">方法</span><span class="sxs-lookup"><span data-stu-id="9d063-104">Methods</span></span>  
   
-|<span data-ttu-id="e9f02-105">方法</span><span class="sxs-lookup"><span data-stu-id="e9f02-105">Method</span></span>|<span data-ttu-id="e9f02-106">描述</span><span class="sxs-lookup"><span data-stu-id="e9f02-106">Description</span></span>|  
+|<span data-ttu-id="9d063-105">方法</span><span class="sxs-lookup"><span data-stu-id="9d063-105">Method</span></span>|<span data-ttu-id="9d063-106">描述</span><span class="sxs-lookup"><span data-stu-id="9d063-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="e9f02-107">SetEnableCustomNotification 方法</span><span class="sxs-lookup"><span data-stu-id="e9f02-107">SetEnableCustomNotification Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|<span data-ttu-id="e9f02-108">启用和禁用的指定类型的自定义调试器通知。</span><span class="sxs-lookup"><span data-stu-id="e9f02-108">Enables and disables custom debugger notifications of the specified type.</span></span>|  
+|[<span data-ttu-id="9d063-107">SetEnableCustomNotification 方法</span><span class="sxs-lookup"><span data-stu-id="9d063-107">SetEnableCustomNotification Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|<span data-ttu-id="9d063-108">启用和禁用的指定类型的自定义调试器通知。</span><span class="sxs-lookup"><span data-stu-id="9d063-108">Enables and disables custom debugger notifications of the specified type.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e9f02-109">备注</span><span class="sxs-lookup"><span data-stu-id="e9f02-109">Remarks</span></span>  
- <span data-ttu-id="e9f02-110">此接口进行逻辑扩展的 ICorDebugProcess 和 ICorDebugProcess2 接口。</span><span class="sxs-lookup"><span data-stu-id="e9f02-110">This interface logically extends the ICorDebugProcess and ICorDebugProcess2 interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9d063-109">备注</span><span class="sxs-lookup"><span data-stu-id="9d063-109">Remarks</span></span>  
+ <span data-ttu-id="9d063-110">此接口进行逻辑扩展的 ICorDebugProcess 和 ICorDebugProcess2 接口。</span><span class="sxs-lookup"><span data-stu-id="9d063-110">This interface logically extends the ICorDebugProcess and ICorDebugProcess2 interfaces.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e9f02-111">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="e9f02-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="9d063-111">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="9d063-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9f02-112">要求</span><span class="sxs-lookup"><span data-stu-id="e9f02-112">Requirements</span></span>  
- <span data-ttu-id="e9f02-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e9f02-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d063-112">要求</span><span class="sxs-lookup"><span data-stu-id="9d063-112">Requirements</span></span>  
+ <span data-ttu-id="9d063-113">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9d063-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9f02-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e9f02-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9d063-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9d063-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e9f02-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e9f02-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9d063-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9d063-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="e9f02-116">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="e9f02-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="9d063-116">**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d063-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9f02-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="e9f02-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d063-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="9d063-117">See also</span></span>
 
-- [<span data-ttu-id="e9f02-118">调试接口</span><span class="sxs-lookup"><span data-stu-id="e9f02-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="e9f02-119">调试</span><span class="sxs-lookup"><span data-stu-id="e9f02-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="9d063-118">调试接口</span><span class="sxs-lookup"><span data-stu-id="9d063-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="9d063-119">调试</span><span class="sxs-lookup"><span data-stu-id="9d063-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

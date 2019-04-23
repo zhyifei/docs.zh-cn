@@ -7,26 +7,26 @@ helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
 ms.openlocfilehash: 4dbe2e8257bfc92f354d032d7bb6e2ba7a693075
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206936"
 ---
-# <a name="documents"></a><span data-ttu-id="a56a2-102">文档</span><span class="sxs-lookup"><span data-stu-id="a56a2-102">Documents</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="a56a2-103">提供了通用组组件，使开发人员能够生成具有高级的文档功能和改进的阅读体验的应用程序。</span><span class="sxs-lookup"><span data-stu-id="a56a2-103">provides a versatile set of components that enable developers to build applications with advanced document features and an improved reading experience.</span></span> <span data-ttu-id="a56a2-104">除增强功能和质量外，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 还针对文档打包、安全性和存储提供简单的管理服务。</span><span class="sxs-lookup"><span data-stu-id="a56a2-104">In addition to enhanced capabilities and quality, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] also provides simplified management services for document packaging, security, and storage.</span></span>  
+# <a name="documents"></a><span data-ttu-id="dca30-102">文档</span><span class="sxs-lookup"><span data-stu-id="dca30-102">Documents</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="dca30-103">提供一组功能丰富的组件，使用这些组件，开发人员能够生成具有高级文档功能和提供更好阅读体验的应用程序。</span><span class="sxs-lookup"><span data-stu-id="dca30-103">provides a versatile set of components that enable developers to build applications with advanced document features and an improved reading experience.</span></span> <span data-ttu-id="dca30-104">除增强功能和质量外，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 还针对文档打包、安全性和存储提供简单的管理服务。</span><span class="sxs-lookup"><span data-stu-id="dca30-104">In addition to enhanced capabilities and quality, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] also provides simplified management services for document packaging, security, and storage.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a56a2-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="a56a2-105">In This Section</span></span>  
- [<span data-ttu-id="a56a2-106">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="a56a2-106">Documents in WPF</span></span>](documents-in-wpf.md)  
- [<span data-ttu-id="a56a2-107">文档序列化和存储</span><span class="sxs-lookup"><span data-stu-id="a56a2-107">Document Serialization and Storage</span></span>](document-serialization-and-storage.md)  
- [<span data-ttu-id="a56a2-108">批注</span><span class="sxs-lookup"><span data-stu-id="a56a2-108">Annotations</span></span>](annotations.md)  
- [<span data-ttu-id="a56a2-109">流内容</span><span class="sxs-lookup"><span data-stu-id="a56a2-109">Flow Content</span></span>](flow-content.md)  
- [<span data-ttu-id="a56a2-110">版式</span><span class="sxs-lookup"><span data-stu-id="a56a2-110">Typography</span></span>](typography.md)  
- [<span data-ttu-id="a56a2-111">打印和打印系统管理</span><span class="sxs-lookup"><span data-stu-id="a56a2-111">Printing and Print System Management</span></span>](printing-and-print-system-management.md)  
+## <a name="in-this-section"></a><span data-ttu-id="dca30-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="dca30-105">In This Section</span></span>  
+ [<span data-ttu-id="dca30-106">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="dca30-106">Documents in WPF</span></span>](documents-in-wpf.md)  
+ [<span data-ttu-id="dca30-107">文档序列化和存储</span><span class="sxs-lookup"><span data-stu-id="dca30-107">Document Serialization and Storage</span></span>](document-serialization-and-storage.md)  
+ [<span data-ttu-id="dca30-108">批注</span><span class="sxs-lookup"><span data-stu-id="dca30-108">Annotations</span></span>](annotations.md)  
+ [<span data-ttu-id="dca30-109">流内容</span><span class="sxs-lookup"><span data-stu-id="dca30-109">Flow Content</span></span>](flow-content.md)  
+ [<span data-ttu-id="dca30-110">版式</span><span class="sxs-lookup"><span data-stu-id="dca30-110">Typography</span></span>](typography.md)  
+ [<span data-ttu-id="dca30-111">打印和打印系统管理</span><span class="sxs-lookup"><span data-stu-id="dca30-111">Printing and Print System Management</span></span>](printing-and-print-system-management.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a56a2-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="a56a2-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dca30-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="dca30-112">See also</span></span>
 
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps>
-- [<span data-ttu-id="a56a2-113">isXPS.exe（isXPS 合规性工具）</span><span class="sxs-lookup"><span data-stu-id="a56a2-113">isXPS.exe (isXPS Conformance Tool)</span></span>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+- <span data-ttu-id="dca30-113">[isXPS.exe（isXPS 合规性工具）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="dca30-113">[isXPS.exe (isXPS Conformance Tool)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))</span></span>
