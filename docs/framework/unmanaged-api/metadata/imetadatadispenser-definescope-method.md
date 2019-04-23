@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 76a439effad9cb3f6dcdd232590cf2196ee7ab99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101401"
 ---
-# <a name="imetadatadispenserdefinescope-method"></a><span data-ttu-id="2b019-102">IMetaDataDispenser::DefineScope 方法</span><span class="sxs-lookup"><span data-stu-id="2b019-102">IMetaDataDispenser::DefineScope Method</span></span>
-<span data-ttu-id="2b019-103">可在其中创建新的元数据的内存中创建一个新的区域。</span><span class="sxs-lookup"><span data-stu-id="2b019-103">Creates a new area in memory in which you can create new metadata.</span></span>  
+# <a name="imetadatadispenserdefinescope-method"></a><span data-ttu-id="69853-102">IMetaDataDispenser::DefineScope 方法</span><span class="sxs-lookup"><span data-stu-id="69853-102">IMetaDataDispenser::DefineScope Method</span></span>
+<span data-ttu-id="69853-103">可在其中创建新的元数据的内存中创建一个新的区域。</span><span class="sxs-lookup"><span data-stu-id="69853-103">Creates a new area in memory in which you can create new metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b019-104">语法</span><span class="sxs-lookup"><span data-stu-id="2b019-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="69853-104">语法</span><span class="sxs-lookup"><span data-stu-id="69853-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineScope (  
@@ -38,39 +38,39 @@ HRESULT DefineScope (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2b019-105">参数</span><span class="sxs-lookup"><span data-stu-id="2b019-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="69853-105">参数</span><span class="sxs-lookup"><span data-stu-id="69853-105">Parameters</span></span>  
  `rclsid`  
- <span data-ttu-id="2b019-106">[in]若要创建版本的元数据结构的 CLSID。</span><span class="sxs-lookup"><span data-stu-id="2b019-106">[in] The CLSID of the version of metadata structures to be created.</span></span> <span data-ttu-id="2b019-107">此值必须是.NET Framework 2.0 版的 CLSID_CorMetaDataRuntime。</span><span class="sxs-lookup"><span data-stu-id="2b019-107">This value must be CLSID_CorMetaDataRuntime for the .NET Framework version 2.0.</span></span>  
+ <span data-ttu-id="69853-106">[in]若要创建版本的元数据结构的 CLSID。</span><span class="sxs-lookup"><span data-stu-id="69853-106">[in] The CLSID of the version of metadata structures to be created.</span></span> <span data-ttu-id="69853-107">此值必须是.NET Framework 2.0 版的 CLSID_CorMetaDataRuntime。</span><span class="sxs-lookup"><span data-stu-id="69853-107">This value must be CLSID_CorMetaDataRuntime for the .NET Framework version 2.0.</span></span>  
   
  `dwCreateFlags`  
- <span data-ttu-id="2b019-108">[in]指定选项的标志。</span><span class="sxs-lookup"><span data-stu-id="2b019-108">[in] Flags that specify options.</span></span> <span data-ttu-id="2b019-109">此值必须为零的.NET Framework 2.0。</span><span class="sxs-lookup"><span data-stu-id="2b019-109">This value must be zero for the .NET Framework 2.0.</span></span>  
+ <span data-ttu-id="69853-108">[in]指定选项的标志。</span><span class="sxs-lookup"><span data-stu-id="69853-108">[in] Flags that specify options.</span></span> <span data-ttu-id="69853-109">此值必须为零的.NET Framework 2.0。</span><span class="sxs-lookup"><span data-stu-id="69853-109">This value must be zero for the .NET Framework 2.0.</span></span>  
   
  `riid`  
- <span data-ttu-id="2b019-110">[in]要返回; 所需的元数据接口的 IID调用方将使用接口创建新的元数据。</span><span class="sxs-lookup"><span data-stu-id="2b019-110">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to create the new metadata.</span></span>  
+ <span data-ttu-id="69853-110">[in]要返回; 所需的元数据接口的 IID调用方将使用接口创建新的元数据。</span><span class="sxs-lookup"><span data-stu-id="69853-110">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to create the new metadata.</span></span>  
   
- <span data-ttu-id="2b019-111">值`riid`必须指定一个"发出"接口。</span><span class="sxs-lookup"><span data-stu-id="2b019-111">The value of `riid` must specify one of the "emit" interfaces.</span></span> <span data-ttu-id="2b019-112">有效值为 IID_IMetaDataEmit、 IID_IMetaDataAssemblyEmit 或 IID_IMetaDataEmit2。</span><span class="sxs-lookup"><span data-stu-id="2b019-112">Valid values are IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit, or IID_IMetaDataEmit2.</span></span>  
+ <span data-ttu-id="69853-111">值`riid`必须指定一个"发出"接口。</span><span class="sxs-lookup"><span data-stu-id="69853-111">The value of `riid` must specify one of the "emit" interfaces.</span></span> <span data-ttu-id="69853-112">有效值为 IID_IMetaDataEmit、 IID_IMetaDataAssemblyEmit 或 IID_IMetaDataEmit2。</span><span class="sxs-lookup"><span data-stu-id="69853-112">Valid values are IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit, or IID_IMetaDataEmit2.</span></span>  
   
  `ppIUnk`  
- <span data-ttu-id="2b019-113">[out]对返回的接口指针。</span><span class="sxs-lookup"><span data-stu-id="2b019-113">[out] The pointer to the returned interface.</span></span>  
+ <span data-ttu-id="69853-113">[out]对返回的接口指针。</span><span class="sxs-lookup"><span data-stu-id="69853-113">[out] The pointer to the returned interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2b019-114">备注</span><span class="sxs-lookup"><span data-stu-id="2b019-114">Remarks</span></span>  
- `DefineScope` <span data-ttu-id="2b019-115">创建一系列内存中元数据的表、 生成元数据，一个唯一 GUID （模块版本标识符或时产生的 MVID） 和为编译单元发出模块表中创建一个条目。</span><span class="sxs-lookup"><span data-stu-id="2b019-115">creates a set of in-memory metadata tables, generates a unique GUID (module version identifier, or MVID) for the metadata, and creates an entry in the module table for the compilation unit being emitted.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="69853-114">备注</span><span class="sxs-lookup"><span data-stu-id="69853-114">Remarks</span></span>  
+ <span data-ttu-id="69853-115">`DefineScope` 创建一系列内存中元数据的表、 生成元数据，一个唯一 GUID （模块版本标识符或时产生的 MVID） 和为编译单元发出模块表中创建一个条目。</span><span class="sxs-lookup"><span data-stu-id="69853-115">`DefineScope` creates a set of in-memory metadata tables, generates a unique GUID (module version identifier, or MVID) for the metadata, and creates an entry in the module table for the compilation unit being emitted.</span></span>  
   
- <span data-ttu-id="2b019-116">您可以将属性附加到元数据范围作为一个整体使用[imetadataemit:: Setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)或[imetadataemit:: Definecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)方法，根据需要。</span><span class="sxs-lookup"><span data-stu-id="2b019-116">You can attach attributes to the metadata scope as a whole by using the [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) or [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) method, as appropriate.</span></span>  
+ <span data-ttu-id="69853-116">您可以将属性附加到元数据范围作为一个整体使用[imetadataemit:: Setmoduleprops](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)或[imetadataemit:: Definecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)方法，根据需要。</span><span class="sxs-lookup"><span data-stu-id="69853-116">You can attach attributes to the metadata scope as a whole by using the [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) or [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) method, as appropriate.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2b019-117">要求</span><span class="sxs-lookup"><span data-stu-id="2b019-117">Requirements</span></span>  
- <span data-ttu-id="2b019-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2b019-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="69853-117">要求</span><span class="sxs-lookup"><span data-stu-id="69853-117">Requirements</span></span>  
+ <span data-ttu-id="69853-118">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="69853-118">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2b019-119">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2b019-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="69853-119">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="69853-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2b019-120">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="2b019-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="69853-120">**库：** 用作 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="69853-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="2b019-121">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="2b019-121">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="69853-121">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="69853-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b019-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="2b019-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="69853-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="69853-122">See also</span></span>
 
-- [<span data-ttu-id="2b019-123">IMetaDataDispenser 接口</span><span class="sxs-lookup"><span data-stu-id="2b019-123">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [<span data-ttu-id="2b019-124">IMetaDataDispenserEx 接口</span><span class="sxs-lookup"><span data-stu-id="2b019-124">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="2b019-125">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="2b019-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [<span data-ttu-id="2b019-126">IMetaDataEmit 接口</span><span class="sxs-lookup"><span data-stu-id="2b019-126">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="2b019-127">IMetaDataEmit2 接口</span><span class="sxs-lookup"><span data-stu-id="2b019-127">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="69853-123">IMetaDataDispenser 接口</span><span class="sxs-lookup"><span data-stu-id="69853-123">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="69853-124">IMetaDataDispenserEx 接口</span><span class="sxs-lookup"><span data-stu-id="69853-124">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="69853-125">IMetaDataAssemblyEmit 接口</span><span class="sxs-lookup"><span data-stu-id="69853-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="69853-126">IMetaDataEmit Interface</span><span class="sxs-lookup"><span data-stu-id="69853-126">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="69853-127">IMetaDataEmit2 Interface</span><span class="sxs-lookup"><span data-stu-id="69853-127">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ec66a3e8ec09da31ef935d9f875e139fe3645bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097429"
 ---
-# <a name="iassemblycachecreateassemblyscavenger-method"></a><span data-ttu-id="ec65c-102">IAssemblyCache::CreateAssemblyScavenger 方法</span><span class="sxs-lookup"><span data-stu-id="ec65c-102">IAssemblyCache::CreateAssemblyScavenger Method</span></span>
-<span data-ttu-id="ec65c-103">合成技术，保留供内部使用。</span><span class="sxs-lookup"><span data-stu-id="ec65c-103">Reserved for internal use by the fusion technology.</span></span>  
+# <a name="iassemblycachecreateassemblyscavenger-method"></a><span data-ttu-id="c5cd1-102">IAssemblyCache::CreateAssemblyScavenger 方法</span><span class="sxs-lookup"><span data-stu-id="c5cd1-102">IAssemblyCache::CreateAssemblyScavenger Method</span></span>
+<span data-ttu-id="c5cd1-103">合成技术，保留供内部使用。</span><span class="sxs-lookup"><span data-stu-id="c5cd1-103">Reserved for internal use by the fusion technology.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec65c-104">语法</span><span class="sxs-lookup"><span data-stu-id="ec65c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5cd1-104">语法</span><span class="sxs-lookup"><span data-stu-id="c5cd1-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAssemblyScavenger (  
@@ -35,17 +35,17 @@ HRESULT CreateAssemblyScavenger (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ec65c-105">参数</span><span class="sxs-lookup"><span data-stu-id="ec65c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c5cd1-105">参数</span><span class="sxs-lookup"><span data-stu-id="c5cd1-105">Parameters</span></span>  
  `ppUnkReserved`  
- <span data-ttu-id="ec65c-106">[out]返回`IUnknown`指针。</span><span class="sxs-lookup"><span data-stu-id="ec65c-106">[out] The returned `IUnknown` pointer.</span></span>  
+ <span data-ttu-id="c5cd1-106">[out]返回`IUnknown`指针。</span><span class="sxs-lookup"><span data-stu-id="c5cd1-106">[out] The returned `IUnknown` pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ec65c-107">要求</span><span class="sxs-lookup"><span data-stu-id="ec65c-107">Requirements</span></span>  
- <span data-ttu-id="ec65c-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ec65c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5cd1-107">要求</span><span class="sxs-lookup"><span data-stu-id="c5cd1-107">Requirements</span></span>  
+ <span data-ttu-id="c5cd1-108">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c5cd1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ec65c-109">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="ec65c-109">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="c5cd1-109">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="c5cd1-109">**Header:** Fusion.h</span></span>  
   
- **<span data-ttu-id="ec65c-110">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="ec65c-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="c5cd1-110">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5cd1-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec65c-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="ec65c-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c5cd1-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="c5cd1-111">See also</span></span>
 
-- [<span data-ttu-id="ec65c-112">IAssemblyCache 接口</span><span class="sxs-lookup"><span data-stu-id="ec65c-112">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [<span data-ttu-id="c5cd1-112">IAssemblyCache 接口</span><span class="sxs-lookup"><span data-stu-id="c5cd1-112">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

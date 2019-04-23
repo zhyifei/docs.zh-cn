@@ -3,20 +3,20 @@ title: System.ServiceModel.SkipBehavior
 ms.date: 03/30/2017
 ms.assetid: dd18b390-0624-4a38-aad3-802e8a07f6ce
 ms.openlocfilehash: ed87677609f737d35b43f6dc2fd7a2ec7c6cc274
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100387"
 ---
-# <a name="systemservicemodelskipbehavior"></a><span data-ttu-id="13067-102">System.ServiceModel.SkipBehavior</span><span class="sxs-lookup"><span data-stu-id="13067-102">System.ServiceModel.SkipBehavior</span></span>
-<span data-ttu-id="13067-103">System.ServiceModel.SkipBehavior</span><span class="sxs-lookup"><span data-stu-id="13067-103">System.ServiceModel.SkipBehavior</span></span>  
+# <a name="systemservicemodelskipbehavior"></a><span data-ttu-id="8fdab-102">System.ServiceModel.SkipBehavior</span><span class="sxs-lookup"><span data-stu-id="8fdab-102">System.ServiceModel.SkipBehavior</span></span>
+<span data-ttu-id="8fdab-103">System.ServiceModel.SkipBehavior</span><span class="sxs-lookup"><span data-stu-id="8fdab-103">System.ServiceModel.SkipBehavior</span></span>  
   
-## <a name="description"></a><span data-ttu-id="13067-104">描述</span><span class="sxs-lookup"><span data-stu-id="13067-104">Description</span></span>  
- <span data-ttu-id="13067-105">行为类型并非预期的类型。</span><span class="sxs-lookup"><span data-stu-id="13067-105">Behavior type is not of the expected type.</span></span>  
+## <a name="description"></a><span data-ttu-id="8fdab-104">描述</span><span class="sxs-lookup"><span data-stu-id="8fdab-104">Description</span></span>  
+ <span data-ttu-id="8fdab-105">行为类型并非预期的类型。</span><span class="sxs-lookup"><span data-stu-id="8fdab-105">Behavior type is not of the expected type.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="13067-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="13067-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8fdab-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="8fdab-106">See also</span></span>
 
-- [<span data-ttu-id="13067-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="13067-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="13067-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="13067-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="13067-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="13067-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="8fdab-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="8fdab-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="8fdab-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="8fdab-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="8fdab-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="8fdab-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

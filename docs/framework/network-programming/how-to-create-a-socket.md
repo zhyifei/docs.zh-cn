@@ -18,17 +18,17 @@ helpviewer_keywords:
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
 ms.openlocfilehash: 0bbdab11201171bf8d730276c7f94cbc5317acdd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101115"
 ---
-# <a name="how-to-create-a-socket"></a><span data-ttu-id="2ee09-102">如何：创建套接字</span><span class="sxs-lookup"><span data-stu-id="2ee09-102">How to: Create a Socket</span></span>
-<span data-ttu-id="2ee09-103">必须先使用协议和网络地址信息初始化套接字，然后才能使用套接字与远程设备进行通信。</span><span class="sxs-lookup"><span data-stu-id="2ee09-103">Before you can use a socket to communicate with remote devices, the socket must be initialized with protocol and network address information.</span></span> <span data-ttu-id="2ee09-104"><xref:System.Net.Sockets.Socket> 类的构造函数包含的参数可以指定地址系列、套接字类型，以及套接字用于建立连接的协议类型。</span><span class="sxs-lookup"><span data-stu-id="2ee09-104">The constructor for the <xref:System.Net.Sockets.Socket> class has parameters that specify the address family, socket type, and protocol type that the socket uses to make connections.</span></span>  
+# <a name="how-to-create-a-socket"></a><span data-ttu-id="17693-102">如何：创建套接字</span><span class="sxs-lookup"><span data-stu-id="17693-102">How to: Create a Socket</span></span>
+<span data-ttu-id="17693-103">必须先使用协议和网络地址信息初始化套接字，然后才能使用套接字与远程设备进行通信。</span><span class="sxs-lookup"><span data-stu-id="17693-103">Before you can use a socket to communicate with remote devices, the socket must be initialized with protocol and network address information.</span></span> <span data-ttu-id="17693-104"><xref:System.Net.Sockets.Socket> 类的构造函数包含的参数可以指定地址系列、套接字类型，以及套接字用于建立连接的协议类型。</span><span class="sxs-lookup"><span data-stu-id="17693-104">The constructor for the <xref:System.Net.Sockets.Socket> class has parameters that specify the address family, socket type, and protocol type that the socket uses to make connections.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2ee09-105">示例</span><span class="sxs-lookup"><span data-stu-id="2ee09-105">Example</span></span>  
- <span data-ttu-id="2ee09-106">下例创建的套接字可用于与基于 TCP/IP 的网络（例如 Internet）进行通信。</span><span class="sxs-lookup"><span data-stu-id="2ee09-106">The following example creates a Socket that can be used to communicate on a TCP/IP-based network, such as the Internet.</span></span>  
+## <a name="example"></a><span data-ttu-id="17693-105">示例</span><span class="sxs-lookup"><span data-stu-id="17693-105">Example</span></span>  
+ <span data-ttu-id="17693-106">下例创建的套接字可用于与基于 TCP/IP 的网络（例如 Internet）进行通信。</span><span class="sxs-lookup"><span data-stu-id="17693-106">The following example creates a Socket that can be used to communicate on a TCP/IP-based network, such as the Internet.</span></span>  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,   
@@ -40,7 +40,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
    SocketType.Stream, ProtocolType.Tcp)  
 ```  
   
- <span data-ttu-id="2ee09-107">使用 UDP 而不是 TCP更改协议类型，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="2ee09-107">To use UDP instead of TCP, change the protocol type, as in the following example:</span></span>  
+ <span data-ttu-id="17693-107">使用 UDP 而不是 TCP更改协议类型，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="17693-107">To use UDP instead of TCP, change the protocol type, as in the following example:</span></span>  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,   
@@ -52,15 +52,15 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
    SocketType.Dgram, ProtocolType.Udp)  
 ```  
   
- <span data-ttu-id="2ee09-108"><xref:System.Net.Sockets.AddressFamily> 枚举指定 Socket 类用其解析网络地址的标准地址系列（例如，AddressFamily.InterNetwork 成员指定 IP 版本 4 地址系列）。</span><span class="sxs-lookup"><span data-stu-id="2ee09-108">The <xref:System.Net.Sockets.AddressFamily> enumeration specifies the standard address families used by the **Socket** class to resolve network addresses (for example, the **AddressFamily.InterNetwork** member specifies the IP version 4 address family).</span></span>  
+ <span data-ttu-id="17693-108"><xref:System.Net.Sockets.AddressFamily> 枚举指定 Socket 类用其解析网络地址的标准地址系列（例如，AddressFamily.InterNetwork 成员指定 IP 版本 4 地址系列）。</span><span class="sxs-lookup"><span data-stu-id="17693-108">The <xref:System.Net.Sockets.AddressFamily> enumeration specifies the standard address families used by the **Socket** class to resolve network addresses (for example, the **AddressFamily.InterNetwork** member specifies the IP version 4 address family).</span></span>  
   
- <span data-ttu-id="2ee09-109"><xref:System.Net.Sockets.SocketType> 枚举指定套接字的类型（例如，SocketType.Stream 成员指定用流控制来发送和接收数据的标准套接字）。</span><span class="sxs-lookup"><span data-stu-id="2ee09-109">The <xref:System.Net.Sockets.SocketType> enumeration specifies the type of socket (for example, the **SocketType.Stream** member indicates a standard socket for sending and receiving data with flow control).</span></span>  
+ <span data-ttu-id="17693-109"><xref:System.Net.Sockets.SocketType> 枚举指定套接字的类型（例如，SocketType.Stream 成员指定用流控制来发送和接收数据的标准套接字）。</span><span class="sxs-lookup"><span data-stu-id="17693-109">The <xref:System.Net.Sockets.SocketType> enumeration specifies the type of socket (for example, the **SocketType.Stream** member indicates a standard socket for sending and receiving data with flow control).</span></span>  
   
- <span data-ttu-id="2ee09-110"><xref:System.Net.Sockets.ProtocolType> 枚举指定通信时套接字使用的网络协议（例如：ProtocolType.Tcp 表示套接字使用 TCP；ProtocolType.Udp 表示套接字使用 UDP）。</span><span class="sxs-lookup"><span data-stu-id="2ee09-110">The <xref:System.Net.Sockets.ProtocolType> enumeration specifies the network protocol to use when communicating on the **Socket** (for example, **ProtocolType.Tcp** indicates that the socket uses TCP; **ProtocolType.Udp** indicates that the socket uses UDP).</span></span>  
+ <span data-ttu-id="17693-110"><xref:System.Net.Sockets.ProtocolType> 枚举指定通信时套接字使用的网络协议（例如：ProtocolType.Tcp 表示套接字使用 TCP；ProtocolType.Udp 表示套接字使用 UDP）。</span><span class="sxs-lookup"><span data-stu-id="17693-110">The <xref:System.Net.Sockets.ProtocolType> enumeration specifies the network protocol to use when communicating on the **Socket** (for example, **ProtocolType.Tcp** indicates that the socket uses TCP; **ProtocolType.Udp** indicates that the socket uses UDP).</span></span>  
   
- <span data-ttu-id="2ee09-111">套接字创建完成后，可启动与远程终结点的连接或接收来自远程设备的连接。</span><span class="sxs-lookup"><span data-stu-id="2ee09-111">After a **Socket** is created, it can either initiate a connection to a remote endpoint or receive connections from remote devices.</span></span>  
+ <span data-ttu-id="17693-111">套接字创建完成后，可启动与远程终结点的连接或接收来自远程设备的连接。</span><span class="sxs-lookup"><span data-stu-id="17693-111">After a **Socket** is created, it can either initiate a connection to a remote endpoint or receive connections from remote devices.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ee09-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="2ee09-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="17693-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="17693-112">See also</span></span>
 
-- [<span data-ttu-id="2ee09-113">使用客户端套接字</span><span class="sxs-lookup"><span data-stu-id="2ee09-113">Using Client Sockets</span></span>](../../../docs/framework/network-programming/using-client-sockets.md)
-- [<span data-ttu-id="2ee09-114">使用套接字侦听</span><span class="sxs-lookup"><span data-stu-id="2ee09-114">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [<span data-ttu-id="17693-113">使用客户端套接字</span><span class="sxs-lookup"><span data-stu-id="17693-113">Using Client Sockets</span></span>](../../../docs/framework/network-programming/using-client-sockets.md)
+- [<span data-ttu-id="17693-114">使用套接字侦听</span><span class="sxs-lookup"><span data-stu-id="17693-114">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)
