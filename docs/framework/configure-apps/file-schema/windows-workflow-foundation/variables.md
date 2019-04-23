@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: da0fd144-dda9-4613-b650-fe6325076513
 ms.openlocfilehash: 61a786efc67f4e9afa585864e1f62b966b5cdff8
 ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105373"

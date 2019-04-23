@@ -11,16 +11,16 @@ ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ac7cf92fb9c57491ff45e664513c0e82f22db9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111717"
 ---
-# <a name="certtimestampauthenticodelicense-function"></a><span data-ttu-id="4e6e4-102">CertTimestampAuthenticodeLicense 函数</span><span class="sxs-lookup"><span data-stu-id="4e6e4-102">CertTimestampAuthenticodeLicense Function</span></span>
-<span data-ttu-id="4e6e4-103">为验证码 XrML 许可证添加时间戳。</span><span class="sxs-lookup"><span data-stu-id="4e6e4-103">Time-stamps an Authenticode XrML license.</span></span>  
+# <a name="certtimestampauthenticodelicense-function"></a><span data-ttu-id="f1323-102">CertTimestampAuthenticodeLicense 函数</span><span class="sxs-lookup"><span data-stu-id="f1323-102">CertTimestampAuthenticodeLicense Function</span></span>
+<span data-ttu-id="f1323-103">为验证码 XrML 许可证添加时间戳。</span><span class="sxs-lookup"><span data-stu-id="f1323-103">Time-stamps an Authenticode XrML license.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4e6e4-104">语法</span><span class="sxs-lookup"><span data-stu-id="4e6e4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1323-104">语法</span><span class="sxs-lookup"><span data-stu-id="f1323-104">Syntax</span></span>  
   
 ```  
 HRESULT CertTimestampAuthenticodeLicense (  
@@ -30,22 +30,22 @@ HRESULT CertTimestampAuthenticodeLicense (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4e6e4-105">参数</span><span class="sxs-lookup"><span data-stu-id="4e6e4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f1323-105">参数</span><span class="sxs-lookup"><span data-stu-id="f1323-105">Parameters</span></span>  
  `pSignedLicenseBlob`  
- <span data-ttu-id="4e6e4-106">[in] 要添加时间戳的已签名验证码 XrML 许可证。</span><span class="sxs-lookup"><span data-stu-id="4e6e4-106">[in] The signed Authenticode XrML license to be time-stamped.</span></span> <span data-ttu-id="4e6e4-107">请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。</span><span class="sxs-lookup"><span data-stu-id="4e6e4-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="f1323-106">[in] 要添加时间戳的已签名验证码 XrML 许可证。</span><span class="sxs-lookup"><span data-stu-id="f1323-106">[in] The signed Authenticode XrML license to be time-stamped.</span></span> <span data-ttu-id="f1323-107">请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。</span><span class="sxs-lookup"><span data-stu-id="f1323-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `pwszTimestampURI`  
- <span data-ttu-id="4e6e4-108">[in] 时间戳服务器的 URI。</span><span class="sxs-lookup"><span data-stu-id="4e6e4-108">[in] The time-stamp server's URI.</span></span>  
+ <span data-ttu-id="f1323-108">[in] 时间戳服务器的 URI。</span><span class="sxs-lookup"><span data-stu-id="f1323-108">[in] The time-stamp server's URI.</span></span>  
   
  `pTimestampSignatureBlob`  
- <span data-ttu-id="4e6e4-109">[out] 指向 CRYPT_DATA_BLOB 的指针，用于接收 base64 编码的时间戳签名。</span><span class="sxs-lookup"><span data-stu-id="4e6e4-109">[out] A pointer to CRYPT_DATA_BLOB to receive the base64-encoded time-stamp signature.</span></span> <span data-ttu-id="4e6e4-110">它是调用方负责释放`pTimestampSignatureBlob` -> `pbData`与`HepFree()`后使用。</span><span class="sxs-lookup"><span data-stu-id="4e6e4-110">It is the caller's responsibility to free `pTimestampSignatureBlob`->`pbData` with `HepFree()` after use.</span></span> <span data-ttu-id="4e6e4-111">请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。</span><span class="sxs-lookup"><span data-stu-id="4e6e4-111">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="f1323-109">[out] 指向 CRYPT_DATA_BLOB 的指针，用于接收 base64 编码的时间戳签名。</span><span class="sxs-lookup"><span data-stu-id="f1323-109">[out] A pointer to CRYPT_DATA_BLOB to receive the base64-encoded time-stamp signature.</span></span> <span data-ttu-id="f1323-110">它是调用方负责释放`pTimestampSignatureBlob` -> `pbData`与`HepFree()`后使用。</span><span class="sxs-lookup"><span data-stu-id="f1323-110">It is the caller's responsibility to free `pTimestampSignatureBlob`->`pbData` with `HepFree()` after use.</span></span> <span data-ttu-id="f1323-111">请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。</span><span class="sxs-lookup"><span data-stu-id="f1323-111">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4e6e4-112">备注</span><span class="sxs-lookup"><span data-stu-id="4e6e4-112">Remarks</span></span>  
- <span data-ttu-id="4e6e4-113">时间戳签名实际上是一条 PKCS #7 SignedData 消息，其内容是许可证签名中 SignatureValue 的二进制格式。</span><span class="sxs-lookup"><span data-stu-id="4e6e4-113">The time-stamp signature is actually a PKCS #7 SignedData message whose content is the binary form of the SignatureValue from the license's signature.</span></span> <span data-ttu-id="4e6e4-114">基本上，它充当许可证的副署。</span><span class="sxs-lookup"><span data-stu-id="4e6e4-114">Basically, this acts as a counter-signature of the license.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f1323-112">备注</span><span class="sxs-lookup"><span data-stu-id="f1323-112">Remarks</span></span>  
+ <span data-ttu-id="f1323-113">时间戳签名实际上是一条 PKCS #7 SignedData 消息，其内容是许可证签名中 SignatureValue 的二进制格式。</span><span class="sxs-lookup"><span data-stu-id="f1323-113">The time-stamp signature is actually a PKCS #7 SignedData message whose content is the binary form of the SignatureValue from the license's signature.</span></span> <span data-ttu-id="f1323-114">基本上，它充当许可证的副署。</span><span class="sxs-lookup"><span data-stu-id="f1323-114">Basically, this acts as a counter-signature of the license.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4e6e4-115">返回值</span><span class="sxs-lookup"><span data-stu-id="4e6e4-115">Return Value</span></span>  
- `S_OK` <span data-ttu-id="4e6e4-116">如果函数成功。</span><span class="sxs-lookup"><span data-stu-id="4e6e4-116">if the function succeeds.</span></span> <span data-ttu-id="4e6e4-117">否则，返回错误代码。</span><span class="sxs-lookup"><span data-stu-id="4e6e4-117">Otherwise, returns an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f1323-115">返回值</span><span class="sxs-lookup"><span data-stu-id="f1323-115">Return Value</span></span>  
+ <span data-ttu-id="f1323-116">如果此函数成功，则返回 `S_OK`。</span><span class="sxs-lookup"><span data-stu-id="f1323-116">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="f1323-117">否则，返回错误代码。</span><span class="sxs-lookup"><span data-stu-id="f1323-117">Otherwise, returns an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4e6e4-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="4e6e4-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f1323-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="f1323-118">See also</span></span>
 
-- [<span data-ttu-id="4e6e4-119">验证码</span><span class="sxs-lookup"><span data-stu-id="4e6e4-119">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [<span data-ttu-id="f1323-119">验证码</span><span class="sxs-lookup"><span data-stu-id="f1323-119">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)

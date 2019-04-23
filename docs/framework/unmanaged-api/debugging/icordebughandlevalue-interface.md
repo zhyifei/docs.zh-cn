@@ -17,38 +17,38 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a9eb63e681b47f058901b0ff002015baffe6048
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117438"
 ---
-# <a name="icordebughandlevalue-interface"></a><span data-ttu-id="6a338-102">ICorDebugHandleValue 接口</span><span class="sxs-lookup"><span data-stu-id="6a338-102">ICorDebugHandleValue Interface</span></span>
+# <a name="icordebughandlevalue-interface"></a><span data-ttu-id="b84cb-102">ICorDebugHandleValue 接口</span><span class="sxs-lookup"><span data-stu-id="b84cb-102">ICorDebugHandleValue Interface</span></span>
 
-<span data-ttu-id="6a338-103">ICorDebugReferenceValue 表示调试器已为其创建垃圾回收的句柄的引用值的子类。</span><span class="sxs-lookup"><span data-stu-id="6a338-103">A subclass of ICorDebugReferenceValue that represents a reference value to which the debugger has created a handle for garbage collection.</span></span>  
+<span data-ttu-id="b84cb-103">ICorDebugReferenceValue 表示调试器已为其创建垃圾回收的句柄的引用值的子类。</span><span class="sxs-lookup"><span data-stu-id="b84cb-103">A subclass of ICorDebugReferenceValue that represents a reference value to which the debugger has created a handle for garbage collection.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="6a338-104">方法</span><span class="sxs-lookup"><span data-stu-id="6a338-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b84cb-104">方法</span><span class="sxs-lookup"><span data-stu-id="b84cb-104">Methods</span></span>  
   
-|<span data-ttu-id="6a338-105">方法</span><span class="sxs-lookup"><span data-stu-id="6a338-105">Method</span></span>|<span data-ttu-id="6a338-106">描述</span><span class="sxs-lookup"><span data-stu-id="6a338-106">Description</span></span>|  
+|<span data-ttu-id="b84cb-105">方法</span><span class="sxs-lookup"><span data-stu-id="b84cb-105">Method</span></span>|<span data-ttu-id="b84cb-106">描述</span><span class="sxs-lookup"><span data-stu-id="b84cb-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="6a338-107">Dispose 方法</span><span class="sxs-lookup"><span data-stu-id="6a338-107">Dispose Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|<span data-ttu-id="6a338-108">释放此引用的句柄`ICorDebugHandleValue`而无需显式地释放接口指针的对象。</span><span class="sxs-lookup"><span data-stu-id="6a338-108">Releases the handle referenced by this `ICorDebugHandleValue` object without explicitly releasing the interface pointer.</span></span>|  
-|[<span data-ttu-id="6a338-109">GetHandleType 方法</span><span class="sxs-lookup"><span data-stu-id="6a338-109">GetHandleType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|<span data-ttu-id="6a338-110">获取说明的句柄引用的类型的 CorDebugHandleType 值`ICorDebugHandleValue`。</span><span class="sxs-lookup"><span data-stu-id="6a338-110">Gets a CorDebugHandleType value that describes the kind of handle referenced by this `ICorDebugHandleValue`.</span></span>|  
+|[<span data-ttu-id="b84cb-107">Dispose 方法</span><span class="sxs-lookup"><span data-stu-id="b84cb-107">Dispose Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|<span data-ttu-id="b84cb-108">释放此引用的句柄`ICorDebugHandleValue`而无需显式地释放接口指针的对象。</span><span class="sxs-lookup"><span data-stu-id="b84cb-108">Releases the handle referenced by this `ICorDebugHandleValue` object without explicitly releasing the interface pointer.</span></span>|  
+|[<span data-ttu-id="b84cb-109">GetHandleType 方法</span><span class="sxs-lookup"><span data-stu-id="b84cb-109">GetHandleType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|<span data-ttu-id="b84cb-110">获取说明的句柄引用的类型的 CorDebugHandleType 值`ICorDebugHandleValue`。</span><span class="sxs-lookup"><span data-stu-id="b84cb-110">Gets a CorDebugHandleType value that describes the kind of handle referenced by this `ICorDebugHandleValue`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6a338-111">备注</span><span class="sxs-lookup"><span data-stu-id="6a338-111">Remarks</span></span>  
- <span data-ttu-id="6a338-112">`ICorDebugReferenceValue`对象失效的调试代码执行过程中中断。</span><span class="sxs-lookup"><span data-stu-id="6a338-112">An `ICorDebugReferenceValue` object is invalidated by a break in the execution of debugged code.</span></span> <span data-ttu-id="6a338-113">`ICorDebugHandleValue`显式释放前将保留在中断和继续符，其引用。</span><span class="sxs-lookup"><span data-stu-id="6a338-113">An `ICorDebugHandleValue` maintains its reference through breaks and continuations, until it is explicitly released.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b84cb-111">备注</span><span class="sxs-lookup"><span data-stu-id="b84cb-111">Remarks</span></span>  
+ <span data-ttu-id="b84cb-112">`ICorDebugReferenceValue`对象失效的调试代码执行过程中中断。</span><span class="sxs-lookup"><span data-stu-id="b84cb-112">An `ICorDebugReferenceValue` object is invalidated by a break in the execution of debugged code.</span></span> <span data-ttu-id="b84cb-113">`ICorDebugHandleValue`显式释放前将保留在中断和继续符，其引用。</span><span class="sxs-lookup"><span data-stu-id="b84cb-113">An `ICorDebugHandleValue` maintains its reference through breaks and continuations, until it is explicitly released.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6a338-114">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="6a338-114">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="b84cb-114">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="b84cb-114">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a338-115">要求</span><span class="sxs-lookup"><span data-stu-id="6a338-115">Requirements</span></span>  
- <span data-ttu-id="6a338-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6a338-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b84cb-115">要求</span><span class="sxs-lookup"><span data-stu-id="b84cb-115">Requirements</span></span>  
+ <span data-ttu-id="b84cb-116">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b84cb-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a338-117">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6a338-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b84cb-117">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b84cb-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6a338-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6a338-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b84cb-118">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b84cb-118">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="6a338-119">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="6a338-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="b84cb-119">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b84cb-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a338-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="6a338-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b84cb-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="b84cb-120">See also</span></span>
 
-- [<span data-ttu-id="6a338-121">调试接口</span><span class="sxs-lookup"><span data-stu-id="6a338-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="b84cb-121">调试接口</span><span class="sxs-lookup"><span data-stu-id="b84cb-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

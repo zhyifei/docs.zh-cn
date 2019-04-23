@@ -15,18 +15,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 62e4328b75a7f6fecc28cd620ec3ac18460316c5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111132"
 ---
-# <a name="writeablemetadataupdatemode-enumeration"></a><span data-ttu-id="79004-102">WriteableMetadataUpdateMode 枚举</span><span class="sxs-lookup"><span data-stu-id="79004-102">WriteableMetadataUpdateMode Enumeration</span></span>
-<span data-ttu-id="79004-103">[仅在 .NET Framework 4.5.2 及更高版本中受支持]</span><span class="sxs-lookup"><span data-stu-id="79004-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="writeablemetadataupdatemode-enumeration"></a><span data-ttu-id="7144f-102">WriteableMetadataUpdateMode 枚举</span><span class="sxs-lookup"><span data-stu-id="7144f-102">WriteableMetadataUpdateMode Enumeration</span></span>
+<span data-ttu-id="7144f-103">[仅在 .NET Framework 4.5.2 及更高版本中受支持]</span><span class="sxs-lookup"><span data-stu-id="7144f-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="79004-104">提供用于指定元数据的内存中更新对调试器是否可见的值。</span><span class="sxs-lookup"><span data-stu-id="79004-104">Provides values that specify whether in-memory updates to metadata are visible to a debugger.</span></span>  
+ <span data-ttu-id="7144f-104">提供用于指定元数据的内存中更新对调试器是否可见的值。</span><span class="sxs-lookup"><span data-stu-id="7144f-104">Provides values that specify whether in-memory updates to metadata are visible to a debugger.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79004-105">语法</span><span class="sxs-lookup"><span data-stu-id="79004-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7144f-105">语法</span><span class="sxs-lookup"><span data-stu-id="7144f-105">Syntax</span></span>  
   
 ```cpp
 typedef enum WriteableMetadataUpdateMode {  
@@ -35,28 +35,28 @@ typedef enum WriteableMetadataUpdateMode {
 } WriteableMetadataUpdateMode;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="79004-106">成员</span><span class="sxs-lookup"><span data-stu-id="79004-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7144f-106">成员</span><span class="sxs-lookup"><span data-stu-id="7144f-106">Members</span></span>  
   
-|<span data-ttu-id="79004-107">成员名称</span><span class="sxs-lookup"><span data-stu-id="79004-107">Member name</span></span>|<span data-ttu-id="79004-108">描述</span><span class="sxs-lookup"><span data-stu-id="79004-108">Description</span></span>|  
+|<span data-ttu-id="7144f-107">成员名称</span><span class="sxs-lookup"><span data-stu-id="7144f-107">Member name</span></span>|<span data-ttu-id="7144f-108">描述</span><span class="sxs-lookup"><span data-stu-id="7144f-108">Description</span></span>|  
 |-----------------|-----------------|  
-|`LegacyCompatPolicy`|<span data-ttu-id="79004-109">当使元数据的内存中更新可见时，保持与 .NET Framework 早期版本的兼容性。</span><span class="sxs-lookup"><span data-stu-id="79004-109">Maintain compatibility with previous versions of the .NET Framework when making in-memory updates to metadata visible.</span></span> <span data-ttu-id="79004-110">有关详细信息，请参阅备注部分。</span><span class="sxs-lookup"><span data-stu-id="79004-110">See the Remarks section for more information.</span></span>|  
-|`AlwaysShowUpdates`|<span data-ttu-id="79004-111">使元数据的内存中更新对调试器可见。</span><span class="sxs-lookup"><span data-stu-id="79004-111">Make in-memory updates to metadata visible to the debugger.</span></span>|  
+|`LegacyCompatPolicy`|<span data-ttu-id="7144f-109">当使元数据的内存中更新可见时，保持与 .NET Framework 早期版本的兼容性。</span><span class="sxs-lookup"><span data-stu-id="7144f-109">Maintain compatibility with previous versions of the .NET Framework when making in-memory updates to metadata visible.</span></span> <span data-ttu-id="7144f-110">有关详细信息，请参阅备注部分。</span><span class="sxs-lookup"><span data-stu-id="7144f-110">See the Remarks section for more information.</span></span>|  
+|`AlwaysShowUpdates`|<span data-ttu-id="7144f-111">使元数据的内存中更新对调试器可见。</span><span class="sxs-lookup"><span data-stu-id="7144f-111">Make in-memory updates to metadata visible to the debugger.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="79004-112">备注</span><span class="sxs-lookup"><span data-stu-id="79004-112">Remarks</span></span>  
- <span data-ttu-id="79004-113">成员`WriteableMetadataUpdateMode`枚举可以传递给[SetWriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)方法可控制的内存中是否更新目标进程中元数据是对调试器可见。</span><span class="sxs-lookup"><span data-stu-id="79004-113">A member of the `WriteableMetadataUpdateMode` enumeration can be passed to the [SetWriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md) method to control whether in-memory updates to metadata in the target process are visible to the debugger.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7144f-112">备注</span><span class="sxs-lookup"><span data-stu-id="7144f-112">Remarks</span></span>  
+ <span data-ttu-id="7144f-113">成员`WriteableMetadataUpdateMode`枚举可以传递给[SetWriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)方法可控制的内存中是否更新目标进程中元数据是对调试器可见。</span><span class="sxs-lookup"><span data-stu-id="7144f-113">A member of the `WriteableMetadataUpdateMode` enumeration can be passed to the [SetWriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md) method to control whether in-memory updates to metadata in the target process are visible to the debugger.</span></span>  
   
- <span data-ttu-id="79004-114">`LegacyCompatPolicy` 选项将强制执行与 4.5.2 之前的 .NET Framework 版本相同的行为。</span><span class="sxs-lookup"><span data-stu-id="79004-114">The `LegacyCompatPolicy` option enforces the same behavior as in versions of the .NET Framework before 4.5.2.</span></span> <span data-ttu-id="79004-115">这通常代表更新中的元数据不可见。</span><span class="sxs-lookup"><span data-stu-id="79004-115">This often means that metadata from updates is not visible.</span></span> <span data-ttu-id="79004-116">但是，对大量调试方法的调用会隐式强迫调试器使更新变得可见。</span><span class="sxs-lookup"><span data-stu-id="79004-116">However, calls to a number of debugging methods implicitly coerce the debugger to make updates visible.</span></span> <span data-ttu-id="79004-117">例如，如果调试器将传递[icordebugilframe:: Getlocalvariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md)找不到该方法的原始元数据，所有元数据中的模块更新为匹配的当前状态的快照的变量的索引过程。</span><span class="sxs-lookup"><span data-stu-id="79004-117">For example, if the debugger passes [ICorDebugILFrame::GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) the index of a variable not found in the method's original metadata, all metadata for the module is updated to a snapshot matching the current state of the process.</span></span> <span data-ttu-id="79004-118">也就是说，借助 `LegacyCompatPolicy` 选项，调试器可能看不见任何可用的元数据更新，或者可能看见一些或者所有可用的元数据更新，具体取决于它使用非托管调试 API 的其他部分的方式。</span><span class="sxs-lookup"><span data-stu-id="79004-118">In other words, with the `LegacyCompatPolicy` option, the debugger might see none, some, or all of the available metadata updates, depending on how it uses other parts of the unmanaged debugging API.</span></span>  
+ <span data-ttu-id="7144f-114">`LegacyCompatPolicy` 选项将强制执行与 4.5.2 之前的 .NET Framework 版本相同的行为。</span><span class="sxs-lookup"><span data-stu-id="7144f-114">The `LegacyCompatPolicy` option enforces the same behavior as in versions of the .NET Framework before 4.5.2.</span></span> <span data-ttu-id="7144f-115">这通常代表更新中的元数据不可见。</span><span class="sxs-lookup"><span data-stu-id="7144f-115">This often means that metadata from updates is not visible.</span></span> <span data-ttu-id="7144f-116">但是，对大量调试方法的调用会隐式强迫调试器使更新变得可见。</span><span class="sxs-lookup"><span data-stu-id="7144f-116">However, calls to a number of debugging methods implicitly coerce the debugger to make updates visible.</span></span> <span data-ttu-id="7144f-117">例如，如果调试器将传递[icordebugilframe:: Getlocalvariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md)找不到该方法的原始元数据，所有元数据中的模块更新为匹配的当前状态的快照的变量的索引过程。</span><span class="sxs-lookup"><span data-stu-id="7144f-117">For example, if the debugger passes [ICorDebugILFrame::GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) the index of a variable not found in the method's original metadata, all metadata for the module is updated to a snapshot matching the current state of the process.</span></span> <span data-ttu-id="7144f-118">也就是说，借助 `LegacyCompatPolicy` 选项，调试器可能看不见任何可用的元数据更新，或者可能看见一些或者所有可用的元数据更新，具体取决于它使用非托管调试 API 的其他部分的方式。</span><span class="sxs-lookup"><span data-stu-id="7144f-118">In other words, with the `LegacyCompatPolicy` option, the debugger might see none, some, or all of the available metadata updates, depending on how it uses other parts of the unmanaged debugging API.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="79004-119">要求</span><span class="sxs-lookup"><span data-stu-id="79004-119">Requirements</span></span>  
- <span data-ttu-id="79004-120">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="79004-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7144f-119">要求</span><span class="sxs-lookup"><span data-stu-id="7144f-119">Requirements</span></span>  
+ <span data-ttu-id="7144f-120">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7144f-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79004-121">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="79004-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7144f-121">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7144f-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="79004-122">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="79004-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7144f-122">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7144f-122">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="79004-123">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="79004-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ <span data-ttu-id="7144f-123">**.NET Framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7144f-123">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79004-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="79004-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7144f-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="7144f-124">See also</span></span>
 
-- [<span data-ttu-id="79004-125">调试枚举</span><span class="sxs-lookup"><span data-stu-id="79004-125">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [<span data-ttu-id="79004-126">SetWriteableMetadataUpdateMode 方法</span><span class="sxs-lookup"><span data-stu-id="79004-126">SetWriteableMetadataUpdateMode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
+- [<span data-ttu-id="7144f-125">调试枚举</span><span class="sxs-lookup"><span data-stu-id="7144f-125">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="7144f-126">SetWriteableMetadataUpdateMode 方法</span><span class="sxs-lookup"><span data-stu-id="7144f-126">SetWriteableMetadataUpdateMode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)

@@ -6,28 +6,28 @@ helpviewer_keywords:
 - GridView [WPF], displaying ListView contents
 ms.assetid: 5bc1e767-ab46-4f14-bd41-3d5d39e1d000
 ms.openlocfilehash: 9b467c95d541c326a41d1ed4bd9eb5c87e25bd5c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112783"
 ---
-# <a name="how-to-display-listview-contents-by-using-a-gridview"></a><span data-ttu-id="4f8c4-102">如何：使用 GridView 显示 ListView 内容</span><span class="sxs-lookup"><span data-stu-id="4f8c4-102">How to: Display ListView Contents by Using a GridView</span></span>
-<span data-ttu-id="4f8c4-103">此示例演示如何定义<xref:System.Windows.Controls.GridView>视图模式<xref:System.Windows.Controls.ListView>控件。</span><span class="sxs-lookup"><span data-stu-id="4f8c4-103">This example shows how to define a <xref:System.Windows.Controls.GridView> view mode for a <xref:System.Windows.Controls.ListView> control.</span></span>  
+# <a name="how-to-display-listview-contents-by-using-a-gridview"></a><span data-ttu-id="9d964-102">如何：使用 GridView 显示 ListView 内容</span><span class="sxs-lookup"><span data-stu-id="9d964-102">How to: Display ListView Contents by Using a GridView</span></span>
+<span data-ttu-id="9d964-103">此示例演示如何定义<xref:System.Windows.Controls.GridView>视图模式<xref:System.Windows.Controls.ListView>控件。</span><span class="sxs-lookup"><span data-stu-id="9d964-103">This example shows how to define a <xref:System.Windows.Controls.GridView> view mode for a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4f8c4-104">示例</span><span class="sxs-lookup"><span data-stu-id="4f8c4-104">Example</span></span>  
- <span data-ttu-id="4f8c4-105">您可以定义的视图模式<xref:System.Windows.Controls.GridView>通过指定<xref:System.Windows.Controls.GridViewColumn>对象。</span><span class="sxs-lookup"><span data-stu-id="4f8c4-105">You can define the view mode of a <xref:System.Windows.Controls.GridView> by specifying <xref:System.Windows.Controls.GridViewColumn> objects.</span></span> <span data-ttu-id="4f8c4-106">下面的示例演示如何定义<xref:System.Windows.Controls.GridViewColumn>绑定到为指定的数据内容的对象<xref:System.Windows.Controls.ListView>控件。</span><span class="sxs-lookup"><span data-stu-id="4f8c4-106">The following example shows how to define <xref:System.Windows.Controls.GridViewColumn> objects that bind to the data content that is specified for the <xref:System.Windows.Controls.ListView> control.</span></span> <span data-ttu-id="4f8c4-107">这<xref:System.Windows.Controls.GridView>的示例指定三个<xref:System.Windows.Controls.GridViewColumn>映射到的对象`FirstName`， `LastName`，并`EmployeeNumber`的字段`EmployeeInfoDataSource`设置为<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>的<xref:System.Windows.Controls.ListView>控件。</span><span class="sxs-lookup"><span data-stu-id="4f8c4-107">This <xref:System.Windows.Controls.GridView> example specifies three <xref:System.Windows.Controls.GridViewColumn> objects that map to the `FirstName`, `LastName`, and `EmployeeNumber` fields of the `EmployeeInfoDataSource` that is set as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> of the <xref:System.Windows.Controls.ListView> control.</span></span>  
+## <a name="example"></a><span data-ttu-id="9d964-104">示例</span><span class="sxs-lookup"><span data-stu-id="9d964-104">Example</span></span>  
+ <span data-ttu-id="9d964-105">您可以定义的视图模式<xref:System.Windows.Controls.GridView>通过指定<xref:System.Windows.Controls.GridViewColumn>对象。</span><span class="sxs-lookup"><span data-stu-id="9d964-105">You can define the view mode of a <xref:System.Windows.Controls.GridView> by specifying <xref:System.Windows.Controls.GridViewColumn> objects.</span></span> <span data-ttu-id="9d964-106">下面的示例演示如何定义<xref:System.Windows.Controls.GridViewColumn>绑定到为指定的数据内容的对象<xref:System.Windows.Controls.ListView>控件。</span><span class="sxs-lookup"><span data-stu-id="9d964-106">The following example shows how to define <xref:System.Windows.Controls.GridViewColumn> objects that bind to the data content that is specified for the <xref:System.Windows.Controls.ListView> control.</span></span> <span data-ttu-id="9d964-107">这<xref:System.Windows.Controls.GridView>的示例指定三个<xref:System.Windows.Controls.GridViewColumn>映射到的对象`FirstName`， `LastName`，并`EmployeeNumber`的字段`EmployeeInfoDataSource`设置为<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>的<xref:System.Windows.Controls.ListView>控件。</span><span class="sxs-lookup"><span data-stu-id="9d964-107">This <xref:System.Windows.Controls.GridView> example specifies three <xref:System.Windows.Controls.GridViewColumn> objects that map to the `FirstName`, `LastName`, and `EmployeeNumber` fields of the `EmployeeInfoDataSource` that is set as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> of the <xref:System.Windows.Controls.ListView> control.</span></span>  
   
  [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- <span data-ttu-id="4f8c4-108">下图显示了此示例中的显示方式。</span><span class="sxs-lookup"><span data-stu-id="4f8c4-108">The following illustration shows how this example appears.</span></span>  
+ <span data-ttu-id="9d964-108">下图显示了此示例中的显示方式。</span><span class="sxs-lookup"><span data-stu-id="9d964-108">The following illustration shows how this example appears.</span></span>  
   
  ![显示具有 GridView 输出的 ListView 的屏幕截图。](./media/gridview-overview/listview-gridview-output.jpg)  
   
-## <a name="see-also"></a><span data-ttu-id="4f8c4-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="4f8c4-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d964-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="9d964-110">See also</span></span>
 
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [<span data-ttu-id="4f8c4-111">ListView 概述</span><span class="sxs-lookup"><span data-stu-id="4f8c4-111">ListView Overview</span></span>](listview-overview.md)
-- [<span data-ttu-id="4f8c4-112">GridView 概述</span><span class="sxs-lookup"><span data-stu-id="4f8c4-112">GridView Overview</span></span>](gridview-overview.md)
-- [<span data-ttu-id="4f8c4-113">帮助主题</span><span class="sxs-lookup"><span data-stu-id="4f8c4-113">How-to Topics</span></span>](listview-how-to-topics.md)
+- [<span data-ttu-id="9d964-111">ListView 概述</span><span class="sxs-lookup"><span data-stu-id="9d964-111">ListView Overview</span></span>](listview-overview.md)
+- [<span data-ttu-id="9d964-112">GridView 概述</span><span class="sxs-lookup"><span data-stu-id="9d964-112">GridView Overview</span></span>](gridview-overview.md)
+- [<span data-ttu-id="9d964-113">帮助主题</span><span class="sxs-lookup"><span data-stu-id="9d964-113">How-to Topics</span></span>](listview-how-to-topics.md)

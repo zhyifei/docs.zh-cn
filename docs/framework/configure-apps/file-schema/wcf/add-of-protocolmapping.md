@@ -3,20 +3,20 @@ title: <add> 的 <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
 ms.openlocfilehash: 85d09c920de2ca1ab4971551ff98ea58c4492f44
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109260"
 ---
-# <a name="add-of-protocolmapping"></a><span data-ttu-id="efd96-102">\<add> of \<protocolMapping></span><span class="sxs-lookup"><span data-stu-id="efd96-102">\<add> of \<protocolMapping></span></span>
-<span data-ttu-id="efd96-103">表示传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 Windows Communication Foundation (WCF) 绑定之间的默认协议映射。</span><span class="sxs-lookup"><span data-stu-id="efd96-103">Represents a default protocol mapping between a transport protocol scheme (e.g., http, net.tcp, net.pipe, etc.) and a Windows Communication Foundation (WCF) binding.</span></span> <span data-ttu-id="efd96-104">当在运行时创建默认终结点，WCF 查看已配置的映射，并决定要用于特定的绑定基于此地址。</span><span class="sxs-lookup"><span data-stu-id="efd96-104">When creating default endpoints at runtime, WCF looks at the configured mappings and decides on which binding to use for a particular based address.</span></span>  
+# <a name="add-of-protocolmapping"></a><span data-ttu-id="f0cdd-102">\<add> of \<protocolMapping></span><span class="sxs-lookup"><span data-stu-id="f0cdd-102">\<add> of \<protocolMapping></span></span>
+<span data-ttu-id="f0cdd-103">表示传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 Windows Communication Foundation (WCF) 绑定之间的默认协议映射。</span><span class="sxs-lookup"><span data-stu-id="f0cdd-103">Represents a default protocol mapping between a transport protocol scheme (e.g., http, net.tcp, net.pipe, etc.) and a Windows Communication Foundation (WCF) binding.</span></span> <span data-ttu-id="f0cdd-104">当在运行时创建默认终结点，WCF 查看已配置的映射，并决定要用于特定的绑定基于此地址。</span><span class="sxs-lookup"><span data-stu-id="f0cdd-104">When creating default endpoints at runtime, WCF looks at the configured mappings and decides on which binding to use for a particular based address.</span></span>  
   
- <span data-ttu-id="efd96-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="efd96-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="efd96-106">\<protocolMapping></span><span class="sxs-lookup"><span data-stu-id="efd96-106">\<protocolMapping></span></span>  
-<span data-ttu-id="efd96-107">\<add></span><span class="sxs-lookup"><span data-stu-id="efd96-107">\<add></span></span>  
+ <span data-ttu-id="f0cdd-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="f0cdd-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="f0cdd-106">\<protocolMapping></span><span class="sxs-lookup"><span data-stu-id="f0cdd-106">\<protocolMapping></span></span>  
+<span data-ttu-id="f0cdd-107">\<add></span><span class="sxs-lookup"><span data-stu-id="f0cdd-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="efd96-108">语法</span><span class="sxs-lookup"><span data-stu-id="efd96-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f0cdd-108">语法</span><span class="sxs-lookup"><span data-stu-id="f0cdd-108">Syntax</span></span>  
   
 ```xml  
 <protocolMapping>
@@ -26,28 +26,28 @@ ms.locfileid: "59109260"
 </protocolMapping>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="efd96-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="efd96-109">Attributes and Elements</span></span>  
- <span data-ttu-id="efd96-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="efd96-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f0cdd-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="f0cdd-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="f0cdd-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="f0cdd-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="efd96-111">特性</span><span class="sxs-lookup"><span data-stu-id="efd96-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f0cdd-111">特性</span><span class="sxs-lookup"><span data-stu-id="f0cdd-111">Attributes</span></span>  
   
-|<span data-ttu-id="efd96-112">元素</span><span class="sxs-lookup"><span data-stu-id="efd96-112">Element</span></span>|<span data-ttu-id="efd96-113">描述</span><span class="sxs-lookup"><span data-stu-id="efd96-113">Description</span></span>|  
+|<span data-ttu-id="f0cdd-112">元素</span><span class="sxs-lookup"><span data-stu-id="f0cdd-112">Element</span></span>|<span data-ttu-id="f0cdd-113">描述</span><span class="sxs-lookup"><span data-stu-id="f0cdd-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="efd96-114">绑定</span><span class="sxs-lookup"><span data-stu-id="efd96-114">binding</span></span>|<span data-ttu-id="efd96-115">一个字符串，指定在创建默认终结点时要用于终结点的绑定类型。</span><span class="sxs-lookup"><span data-stu-id="efd96-115">A string that specifies the type of binding to be used for an endpoint during default endpoint creation.</span></span>|  
-|<span data-ttu-id="efd96-116">bindingConfiguration</span><span class="sxs-lookup"><span data-stu-id="efd96-116">bindingConfiguration</span></span>|<span data-ttu-id="efd96-117">一个字符串，指定要引用的绑定配置节的名称。</span><span class="sxs-lookup"><span data-stu-id="efd96-117">A string that specifies the name of the binding configuration section to be referenced.</span></span>|  
-|<span data-ttu-id="efd96-118">scheme</span><span class="sxs-lookup"><span data-stu-id="efd96-118">scheme</span></span>|<span data-ttu-id="efd96-119">要用于默认终结点的传输协议方案。</span><span class="sxs-lookup"><span data-stu-id="efd96-119">The transport protocol scheme to be used for the default endpoint.</span></span>|  
+|<span data-ttu-id="f0cdd-114">绑定</span><span class="sxs-lookup"><span data-stu-id="f0cdd-114">binding</span></span>|<span data-ttu-id="f0cdd-115">一个字符串，指定在创建默认终结点时要用于终结点的绑定类型。</span><span class="sxs-lookup"><span data-stu-id="f0cdd-115">A string that specifies the type of binding to be used for an endpoint during default endpoint creation.</span></span>|  
+|<span data-ttu-id="f0cdd-116">bindingConfiguration</span><span class="sxs-lookup"><span data-stu-id="f0cdd-116">bindingConfiguration</span></span>|<span data-ttu-id="f0cdd-117">一个字符串，指定要引用的绑定配置节的名称。</span><span class="sxs-lookup"><span data-stu-id="f0cdd-117">A string that specifies the name of the binding configuration section to be referenced.</span></span>|  
+|<span data-ttu-id="f0cdd-118">scheme</span><span class="sxs-lookup"><span data-stu-id="f0cdd-118">scheme</span></span>|<span data-ttu-id="f0cdd-119">要用于默认终结点的传输协议方案。</span><span class="sxs-lookup"><span data-stu-id="f0cdd-119">The transport protocol scheme to be used for the default endpoint.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="efd96-120">子元素</span><span class="sxs-lookup"><span data-stu-id="efd96-120">Child Elements</span></span>  
- <span data-ttu-id="efd96-121">无。</span><span class="sxs-lookup"><span data-stu-id="efd96-121">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f0cdd-120">子元素</span><span class="sxs-lookup"><span data-stu-id="f0cdd-120">Child Elements</span></span>  
+ <span data-ttu-id="f0cdd-121">无。</span><span class="sxs-lookup"><span data-stu-id="f0cdd-121">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="efd96-122">父元素</span><span class="sxs-lookup"><span data-stu-id="efd96-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f0cdd-122">父元素</span><span class="sxs-lookup"><span data-stu-id="f0cdd-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="efd96-123">元素</span><span class="sxs-lookup"><span data-stu-id="efd96-123">Element</span></span>|<span data-ttu-id="efd96-124">描述</span><span class="sxs-lookup"><span data-stu-id="efd96-124">Description</span></span>|  
+|<span data-ttu-id="f0cdd-123">元素</span><span class="sxs-lookup"><span data-stu-id="f0cdd-123">Element</span></span>|<span data-ttu-id="f0cdd-124">描述</span><span class="sxs-lookup"><span data-stu-id="f0cdd-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="efd96-125">\<protocolMapping></span><span class="sxs-lookup"><span data-stu-id="efd96-125">\<protocolMapping></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|<span data-ttu-id="efd96-126">表示用于定义传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 Windows Communication Foundation (WCF) 绑定之间的默认协议映射的配置节。</span><span class="sxs-lookup"><span data-stu-id="efd96-126">Represents a configuration section for defining default protocol mappings between transport protocol schemes (e.g., http, net.tcp, net.pipe, etc.) and Windows Communication Foundation (WCF) bindings.</span></span>|  
+|[<span data-ttu-id="f0cdd-125">\<protocolMapping></span><span class="sxs-lookup"><span data-stu-id="f0cdd-125">\<protocolMapping></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|<span data-ttu-id="f0cdd-126">表示用于定义传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 Windows Communication Foundation (WCF) 绑定之间的默认协议映射的配置节。</span><span class="sxs-lookup"><span data-stu-id="f0cdd-126">Represents a configuration section for defining default protocol mappings between transport protocol schemes (e.g., http, net.tcp, net.pipe, etc.) and Windows Communication Foundation (WCF) bindings.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="efd96-127">示例</span><span class="sxs-lookup"><span data-stu-id="efd96-127">Example</span></span>  
- <span data-ttu-id="efd96-128">下面的配置示例演示 machine.config 文件中的默认协议映射。</span><span class="sxs-lookup"><span data-stu-id="efd96-128">The following configuration example shows the default protocol mapping in the machine.config file.</span></span> <span data-ttu-id="efd96-129">您可以通过修改 machine.config 文件在计算机级别重写此默认映射。</span><span class="sxs-lookup"><span data-stu-id="efd96-129">You can override this default mapping at the machine level by modifying the machine.config file.</span></span> <span data-ttu-id="efd96-130">或者，如果您只希望在应用程序范围内重写此映射，则可以在应用程序配置文件中重写此节，并为单独的协议方案更改映射。</span><span class="sxs-lookup"><span data-stu-id="efd96-130">Or if you would only like to override it within the scope of an application, you can override this section within your application configuration file and change the mapping for individual protocol schemes.</span></span>  
+## <a name="example"></a><span data-ttu-id="f0cdd-127">示例</span><span class="sxs-lookup"><span data-stu-id="f0cdd-127">Example</span></span>  
+ <span data-ttu-id="f0cdd-128">下面的配置示例演示 machine.config 文件中的默认协议映射。</span><span class="sxs-lookup"><span data-stu-id="f0cdd-128">The following configuration example shows the default protocol mapping in the machine.config file.</span></span> <span data-ttu-id="f0cdd-129">您可以通过修改 machine.config 文件在计算机级别重写此默认映射。</span><span class="sxs-lookup"><span data-stu-id="f0cdd-129">You can override this default mapping at the machine level by modifying the machine.config file.</span></span> <span data-ttu-id="f0cdd-130">或者，如果您只希望在应用程序范围内重写此映射，则可以在应用程序配置文件中重写此节，并为单独的协议方案更改映射。</span><span class="sxs-lookup"><span data-stu-id="f0cdd-130">Or if you would only like to override it within the scope of an application, you can override this section within your application configuration file and change the mapping for individual protocol schemes.</span></span>  
   
 ```xml  
 <protocolMapping>
@@ -62,7 +62,7 @@ ms.locfileid: "59109260"
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="efd96-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="efd96-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0cdd-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="f0cdd-131">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>
