@@ -2,12 +2,12 @@
 title: dotnet pack 命令
 description: dotnet pack 命令可为 .NET Core 项目创建 NuGet 包。
 ms.date: 12/04/2018
-ms.openlocfilehash: 4b665140f7c660c5851fb68b07ecec2d9391b925
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 8faa99bf35d9802b16f951082b20644d45a939c7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464471"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672121"
 ---
 # <a name="dotnet-pack"></a>dotnet 包
 
@@ -20,17 +20,21 @@ ms.locfileid: "58464471"
 ## <a name="synopsis"></a>摘要
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
     [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>说明
@@ -109,6 +113,7 @@ dotnet pack [-h|--help]
 
 > [!NOTE]
 > 默认情况下，Web 项目不可打包。 若要覆盖默认行为，请将以下属性添加到 .csproj 文件中：
+>
 > ```xml
 > <PropertyGroup>
 >    <IsPackable>true</IsPackable>
@@ -208,5 +213,5 @@ dotnet pack [-h|--help]
 * 使用 [.nuspec 文件](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)打包项目：
 
   ```console
-  dotnet pack  ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  dotnet pack ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
   ```
