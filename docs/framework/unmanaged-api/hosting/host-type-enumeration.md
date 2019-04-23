@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dfb1cff3e95c5ff86d22913745b7d14982766b48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175222"
 ---
-# <a name="hosttype-enumeration"></a><span data-ttu-id="6b6d2-102">HOST_TYPE 枚举</span><span class="sxs-lookup"><span data-stu-id="6b6d2-102">HOST_TYPE Enumeration</span></span>
-<span data-ttu-id="6b6d2-103">包含指定的启动应用程序的宿主类型的值。</span><span class="sxs-lookup"><span data-stu-id="6b6d2-103">Contains values that specify the type of host that is launching an application.</span></span>  
+# <a name="hosttype-enumeration"></a><span data-ttu-id="b5069-102">HOST_TYPE 枚举</span><span class="sxs-lookup"><span data-stu-id="b5069-102">HOST_TYPE Enumeration</span></span>
+<span data-ttu-id="b5069-103">包含指定的启动应用程序的宿主类型的值。</span><span class="sxs-lookup"><span data-stu-id="b5069-103">Contains values that specify the type of host that is launching an application.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6b6d2-104">语法</span><span class="sxs-lookup"><span data-stu-id="6b6d2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b5069-104">语法</span><span class="sxs-lookup"><span data-stu-id="b5069-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -36,23 +36,23 @@ typedef enum {
 } HOST_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="6b6d2-105">成员</span><span class="sxs-lookup"><span data-stu-id="6b6d2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b5069-105">成员</span><span class="sxs-lookup"><span data-stu-id="b5069-105">Members</span></span>  
   
-|<span data-ttu-id="6b6d2-106">成员</span><span class="sxs-lookup"><span data-stu-id="6b6d2-106">Member</span></span>|<span data-ttu-id="6b6d2-107">描述</span><span class="sxs-lookup"><span data-stu-id="6b6d2-107">Description</span></span>|  
+|<span data-ttu-id="b5069-106">成员</span><span class="sxs-lookup"><span data-stu-id="b5069-106">Member</span></span>|<span data-ttu-id="b5069-107">描述</span><span class="sxs-lookup"><span data-stu-id="b5069-107">Description</span></span>|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|<span data-ttu-id="6b6d2-108">启动从 AppLaunch.exe 应用程序。</span><span class="sxs-lookup"><span data-stu-id="6b6d2-108">Launch the application from AppLaunch.exe.</span></span><br /><br /> <span data-ttu-id="6b6d2-109">对于部分受信任的应用程序中使用此值。</span><span class="sxs-lookup"><span data-stu-id="6b6d2-109">Use this value for partially-trusted applications.</span></span>|  
-|`HOST_TYPE_CORFLAG`|<span data-ttu-id="6b6d2-110">直接启动应用程序。</span><span class="sxs-lookup"><span data-stu-id="6b6d2-110">Launch the application directly.</span></span> <span data-ttu-id="6b6d2-111">也就是说，启动应用程序从其自己的.exe 文件。</span><span class="sxs-lookup"><span data-stu-id="6b6d2-111">That is, launch the application from its own .exe file.</span></span><br /><br /> <span data-ttu-id="6b6d2-112">此值用于完全受信任的应用程序。</span><span class="sxs-lookup"><span data-stu-id="6b6d2-112">Use this value for fully-trusted applications.</span></span>|  
-|`HOST_TYPE_DEFAULT`|<span data-ttu-id="6b6d2-113">HOST_TYPE_APPLAUNCH 相同。</span><span class="sxs-lookup"><span data-stu-id="6b6d2-113">Same as HOST_TYPE_APPLAUNCH.</span></span>|  
+|`HOST_TYPE_APPLAUNCH`|<span data-ttu-id="b5069-108">启动从 AppLaunch.exe 应用程序。</span><span class="sxs-lookup"><span data-stu-id="b5069-108">Launch the application from AppLaunch.exe.</span></span><br /><br /> <span data-ttu-id="b5069-109">对于部分受信任的应用程序中使用此值。</span><span class="sxs-lookup"><span data-stu-id="b5069-109">Use this value for partially-trusted applications.</span></span>|  
+|`HOST_TYPE_CORFLAG`|<span data-ttu-id="b5069-110">直接启动应用程序。</span><span class="sxs-lookup"><span data-stu-id="b5069-110">Launch the application directly.</span></span> <span data-ttu-id="b5069-111">也就是说，启动应用程序从其自己的.exe 文件。</span><span class="sxs-lookup"><span data-stu-id="b5069-111">That is, launch the application from its own .exe file.</span></span><br /><br /> <span data-ttu-id="b5069-112">此值用于完全受信任的应用程序。</span><span class="sxs-lookup"><span data-stu-id="b5069-112">Use this value for fully-trusted applications.</span></span>|  
+|`HOST_TYPE_DEFAULT`|<span data-ttu-id="b5069-113">HOST_TYPE_APPLAUNCH 相同。</span><span class="sxs-lookup"><span data-stu-id="b5069-113">Same as HOST_TYPE_APPLAUNCH.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="6b6d2-114">要求</span><span class="sxs-lookup"><span data-stu-id="6b6d2-114">Requirements</span></span>  
- <span data-ttu-id="6b6d2-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6b6d2-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b5069-114">要求</span><span class="sxs-lookup"><span data-stu-id="b5069-114">Requirements</span></span>  
+ <span data-ttu-id="b5069-115">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b5069-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6b6d2-116">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6b6d2-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b5069-116">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b5069-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="6b6d2-117">**库：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6b6d2-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="b5069-117">**库：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b5069-117">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="6b6d2-118">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="6b6d2-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="b5069-118">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5069-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b6d2-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="6b6d2-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5069-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="b5069-119">See also</span></span>
 
-- [<span data-ttu-id="6b6d2-120">承载枚举</span><span class="sxs-lookup"><span data-stu-id="6b6d2-120">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="b5069-120">承载枚举</span><span class="sxs-lookup"><span data-stu-id="b5069-120">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

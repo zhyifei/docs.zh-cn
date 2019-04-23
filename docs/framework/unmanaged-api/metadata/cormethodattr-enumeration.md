@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 249de91483117db6b497fa8eae6f97c3eb0a0587
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176990"
 ---
-# <a name="cormethodattr-enumeration"></a><span data-ttu-id="db2a3-102">CorMethodAttr 枚举</span><span class="sxs-lookup"><span data-stu-id="db2a3-102">CorMethodAttr Enumeration</span></span>
-<span data-ttu-id="db2a3-103">包含描述一种方法的功能的值。</span><span class="sxs-lookup"><span data-stu-id="db2a3-103">Contains values that describe the features of a method.</span></span>  
+# <a name="cormethodattr-enumeration"></a><span data-ttu-id="5f21c-102">CorMethodAttr 枚举</span><span class="sxs-lookup"><span data-stu-id="5f21c-102">CorMethodAttr Enumeration</span></span>
+<span data-ttu-id="5f21c-103">包含描述一种方法的功能的值。</span><span class="sxs-lookup"><span data-stu-id="5f21c-103">Contains values that describe the features of a method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db2a3-104">语法</span><span class="sxs-lookup"><span data-stu-id="db2a3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f21c-104">语法</span><span class="sxs-lookup"><span data-stu-id="5f21c-104">Syntax</span></span>  
   
 ```  
 typedef enum CorMethodAttr {  
@@ -64,42 +64,42 @@ typedef enum CorMethodAttr {
 } CorMethodAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="db2a3-105">成员</span><span class="sxs-lookup"><span data-stu-id="db2a3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5f21c-105">成员</span><span class="sxs-lookup"><span data-stu-id="5f21c-105">Members</span></span>  
   
-|<span data-ttu-id="db2a3-106">成员</span><span class="sxs-lookup"><span data-stu-id="db2a3-106">Member</span></span>|<span data-ttu-id="db2a3-107">描述</span><span class="sxs-lookup"><span data-stu-id="db2a3-107">Description</span></span>|  
+|<span data-ttu-id="5f21c-106">成员</span><span class="sxs-lookup"><span data-stu-id="5f21c-106">Member</span></span>|<span data-ttu-id="5f21c-107">描述</span><span class="sxs-lookup"><span data-stu-id="5f21c-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdMemberAccessMask`|<span data-ttu-id="db2a3-108">指定成员访问权限。</span><span class="sxs-lookup"><span data-stu-id="db2a3-108">Specifies member access.</span></span>|  
-|`mdPrivateScope`|<span data-ttu-id="db2a3-109">指定该成员不能被引用。</span><span class="sxs-lookup"><span data-stu-id="db2a3-109">Specifies that the member cannot be referenced.</span></span>|  
-|`mdPrivate`|<span data-ttu-id="db2a3-110">指定该成员是只能由父类型访问。</span><span class="sxs-lookup"><span data-stu-id="db2a3-110">Specifies that the member is accessible only by the parent type.</span></span>|  
-|`mdFamANDAssem`|<span data-ttu-id="db2a3-111">指定该成员是仅在此程序集中的子类型访问。</span><span class="sxs-lookup"><span data-stu-id="db2a3-111">Specifies that the member is accessible by subtypes only in this assembly.</span></span>|  
-|`mdAssem`|<span data-ttu-id="db2a3-112">指定该成员是可访问的程序集中的任何人。</span><span class="sxs-lookup"><span data-stu-id="db2a3-112">Specifies that the member is accessibly by anyone in the assembly.</span></span>|  
-|`mdFamily`|<span data-ttu-id="db2a3-113">指定该成员是只能由类型和子类型访问。</span><span class="sxs-lookup"><span data-stu-id="db2a3-113">Specifies that the member is accessible only by type and subtypes.</span></span>|  
-|`mdFamORAssem`|<span data-ttu-id="db2a3-114">指定该成员是可由派生类中它的程序集的其他类型访问。</span><span class="sxs-lookup"><span data-stu-id="db2a3-114">Specifies that the member is accessible by derived classes and by other types in its assembly.</span></span>|  
-|`mdPublic`|<span data-ttu-id="db2a3-115">指定该成员是由下列所有类型与访问作用域可访问。</span><span class="sxs-lookup"><span data-stu-id="db2a3-115">Specifies that the member is accessible by all types with access to the scope.</span></span>|  
-|`mdStatic`|<span data-ttu-id="db2a3-116">指定为该类型的一部分而不是实例成员定义成员。</span><span class="sxs-lookup"><span data-stu-id="db2a3-116">Specifies that the member is defined as part of the type rather than as a member of an instance.</span></span>|  
-|`mdFinal`|<span data-ttu-id="db2a3-117">指定不能重写该方法。</span><span class="sxs-lookup"><span data-stu-id="db2a3-117">Specifies that the method cannot be overridden.</span></span>|  
-|`mdVirtual`|<span data-ttu-id="db2a3-118">指定可以重写该方法。</span><span class="sxs-lookup"><span data-stu-id="db2a3-118">Specifies that the method can be overridden.</span></span>|  
-|`mdHideBySig`|<span data-ttu-id="db2a3-119">指定的方法按名称和签名，而不是只按名称隐藏。</span><span class="sxs-lookup"><span data-stu-id="db2a3-119">Specifies that the method hides by name and signature, rather than just by name.</span></span>|  
-|`mdVtableLayoutMask`|<span data-ttu-id="db2a3-120">指定虚拟表布局。</span><span class="sxs-lookup"><span data-stu-id="db2a3-120">Specifies virtual table layout.</span></span>|  
-|`mdReuseSlot`|<span data-ttu-id="db2a3-121">指定用于此方法在虚拟表中的槽在重用。</span><span class="sxs-lookup"><span data-stu-id="db2a3-121">Specifies that the slot used for this method in the virtual table be reused.</span></span> <span data-ttu-id="db2a3-122">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="db2a3-122">This is the default.</span></span>|  
-|`mdNewSlot`|<span data-ttu-id="db2a3-123">指定此方法总是获取虚拟表中的新槽。</span><span class="sxs-lookup"><span data-stu-id="db2a3-123">Specifies that the method always gets a new slot in the virtual table.</span></span>|  
-|`mdCheckAccessOnOverride`|<span data-ttu-id="db2a3-124">指定可以通过向其是可见的相同类型中重写该方法。</span><span class="sxs-lookup"><span data-stu-id="db2a3-124">Specifies that the method can be overridden by the same types to which it is visible.</span></span>|  
-|`mdAbstract`|<span data-ttu-id="db2a3-125">指定未实现方法。</span><span class="sxs-lookup"><span data-stu-id="db2a3-125">Specifies that the method is not implemented.</span></span>|  
-|`mdSpecialName`|<span data-ttu-id="db2a3-126">指定的方法是特殊字符，其名称描述如何。</span><span class="sxs-lookup"><span data-stu-id="db2a3-126">Specifies that the method is special, and that its name describes how.</span></span>|  
-|`mdPinvokeImpl`|<span data-ttu-id="db2a3-127">指定使用 PInvoke 转发该方法的实现。</span><span class="sxs-lookup"><span data-stu-id="db2a3-127">Specifies that the method implementation is forwarded using PInvoke.</span></span>|  
-|`mdUnmanagedExport`|<span data-ttu-id="db2a3-128">指定的方法是导出到非托管代码的托管的方法。</span><span class="sxs-lookup"><span data-stu-id="db2a3-128">Specifies that the method is a managed method exported to unmanaged code.</span></span>|  
-|`mdReservedMask`|<span data-ttu-id="db2a3-129">公共语言运行时，保留供内部使用。</span><span class="sxs-lookup"><span data-stu-id="db2a3-129">Reserved for internal use by the common language runtime.</span></span>|  
-|`mdRTSpecialName`|<span data-ttu-id="db2a3-130">指定公共语言运行时应检查的方法名称的编码。</span><span class="sxs-lookup"><span data-stu-id="db2a3-130">Specifies that the common language runtime should check the encoding of the method name.</span></span>|  
-|`mdHasSecurity`|<span data-ttu-id="db2a3-131">指定该方法具有与之关联的安全。</span><span class="sxs-lookup"><span data-stu-id="db2a3-131">Specifies that the method has security associated with it.</span></span>|  
-|`mdRequireSecObject`|<span data-ttu-id="db2a3-132">指定该方法调用包含安全代码的另一种方法。</span><span class="sxs-lookup"><span data-stu-id="db2a3-132">Specifies that the method calls another method containing security code.</span></span>|  
+|`mdMemberAccessMask`|<span data-ttu-id="5f21c-108">指定成员访问权限。</span><span class="sxs-lookup"><span data-stu-id="5f21c-108">Specifies member access.</span></span>|  
+|`mdPrivateScope`|<span data-ttu-id="5f21c-109">指定该成员不能被引用。</span><span class="sxs-lookup"><span data-stu-id="5f21c-109">Specifies that the member cannot be referenced.</span></span>|  
+|`mdPrivate`|<span data-ttu-id="5f21c-110">指定该成员是只能由父类型访问。</span><span class="sxs-lookup"><span data-stu-id="5f21c-110">Specifies that the member is accessible only by the parent type.</span></span>|  
+|`mdFamANDAssem`|<span data-ttu-id="5f21c-111">指定该成员是仅在此程序集中的子类型访问。</span><span class="sxs-lookup"><span data-stu-id="5f21c-111">Specifies that the member is accessible by subtypes only in this assembly.</span></span>|  
+|`mdAssem`|<span data-ttu-id="5f21c-112">指定该成员是可访问的程序集中的任何人。</span><span class="sxs-lookup"><span data-stu-id="5f21c-112">Specifies that the member is accessibly by anyone in the assembly.</span></span>|  
+|`mdFamily`|<span data-ttu-id="5f21c-113">指定该成员是只能由类型和子类型访问。</span><span class="sxs-lookup"><span data-stu-id="5f21c-113">Specifies that the member is accessible only by type and subtypes.</span></span>|  
+|`mdFamORAssem`|<span data-ttu-id="5f21c-114">指定该成员是可由派生类中它的程序集的其他类型访问。</span><span class="sxs-lookup"><span data-stu-id="5f21c-114">Specifies that the member is accessible by derived classes and by other types in its assembly.</span></span>|  
+|`mdPublic`|<span data-ttu-id="5f21c-115">指定该成员是由下列所有类型与访问作用域可访问。</span><span class="sxs-lookup"><span data-stu-id="5f21c-115">Specifies that the member is accessible by all types with access to the scope.</span></span>|  
+|`mdStatic`|<span data-ttu-id="5f21c-116">指定为该类型的一部分而不是实例成员定义成员。</span><span class="sxs-lookup"><span data-stu-id="5f21c-116">Specifies that the member is defined as part of the type rather than as a member of an instance.</span></span>|  
+|`mdFinal`|<span data-ttu-id="5f21c-117">指定不能重写该方法。</span><span class="sxs-lookup"><span data-stu-id="5f21c-117">Specifies that the method cannot be overridden.</span></span>|  
+|`mdVirtual`|<span data-ttu-id="5f21c-118">指定可以重写该方法。</span><span class="sxs-lookup"><span data-stu-id="5f21c-118">Specifies that the method can be overridden.</span></span>|  
+|`mdHideBySig`|<span data-ttu-id="5f21c-119">指定的方法按名称和签名，而不是只按名称隐藏。</span><span class="sxs-lookup"><span data-stu-id="5f21c-119">Specifies that the method hides by name and signature, rather than just by name.</span></span>|  
+|`mdVtableLayoutMask`|<span data-ttu-id="5f21c-120">指定虚拟表布局。</span><span class="sxs-lookup"><span data-stu-id="5f21c-120">Specifies virtual table layout.</span></span>|  
+|`mdReuseSlot`|<span data-ttu-id="5f21c-121">指定用于此方法在虚拟表中的槽在重用。</span><span class="sxs-lookup"><span data-stu-id="5f21c-121">Specifies that the slot used for this method in the virtual table be reused.</span></span> <span data-ttu-id="5f21c-122">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="5f21c-122">This is the default.</span></span>|  
+|`mdNewSlot`|<span data-ttu-id="5f21c-123">指定此方法总是获取虚拟表中的新槽。</span><span class="sxs-lookup"><span data-stu-id="5f21c-123">Specifies that the method always gets a new slot in the virtual table.</span></span>|  
+|`mdCheckAccessOnOverride`|<span data-ttu-id="5f21c-124">指定可以通过向其是可见的相同类型中重写该方法。</span><span class="sxs-lookup"><span data-stu-id="5f21c-124">Specifies that the method can be overridden by the same types to which it is visible.</span></span>|  
+|`mdAbstract`|<span data-ttu-id="5f21c-125">指定未实现方法。</span><span class="sxs-lookup"><span data-stu-id="5f21c-125">Specifies that the method is not implemented.</span></span>|  
+|`mdSpecialName`|<span data-ttu-id="5f21c-126">指定的方法是特殊字符，其名称描述如何。</span><span class="sxs-lookup"><span data-stu-id="5f21c-126">Specifies that the method is special, and that its name describes how.</span></span>|  
+|`mdPinvokeImpl`|<span data-ttu-id="5f21c-127">指定使用 PInvoke 转发该方法的实现。</span><span class="sxs-lookup"><span data-stu-id="5f21c-127">Specifies that the method implementation is forwarded using PInvoke.</span></span>|  
+|`mdUnmanagedExport`|<span data-ttu-id="5f21c-128">指定的方法是导出到非托管代码的托管的方法。</span><span class="sxs-lookup"><span data-stu-id="5f21c-128">Specifies that the method is a managed method exported to unmanaged code.</span></span>|  
+|`mdReservedMask`|<span data-ttu-id="5f21c-129">公共语言运行时，保留供内部使用。</span><span class="sxs-lookup"><span data-stu-id="5f21c-129">Reserved for internal use by the common language runtime.</span></span>|  
+|`mdRTSpecialName`|<span data-ttu-id="5f21c-130">指定公共语言运行时应检查的方法名称的编码。</span><span class="sxs-lookup"><span data-stu-id="5f21c-130">Specifies that the common language runtime should check the encoding of the method name.</span></span>|  
+|`mdHasSecurity`|<span data-ttu-id="5f21c-131">指定该方法具有与之关联的安全。</span><span class="sxs-lookup"><span data-stu-id="5f21c-131">Specifies that the method has security associated with it.</span></span>|  
+|`mdRequireSecObject`|<span data-ttu-id="5f21c-132">指定该方法调用包含安全代码的另一种方法。</span><span class="sxs-lookup"><span data-stu-id="5f21c-132">Specifies that the method calls another method containing security code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="db2a3-133">要求</span><span class="sxs-lookup"><span data-stu-id="db2a3-133">Requirements</span></span>  
- <span data-ttu-id="db2a3-134">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="db2a3-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f21c-133">要求</span><span class="sxs-lookup"><span data-stu-id="5f21c-133">Requirements</span></span>  
+ <span data-ttu-id="5f21c-134">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5f21c-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="db2a3-135">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="db2a3-135">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="5f21c-135">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="5f21c-135">**Header:** CorHdr.h</span></span>  
   
- **<span data-ttu-id="db2a3-136">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="db2a3-136">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="5f21c-136">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f21c-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db2a3-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="db2a3-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f21c-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="5f21c-137">See also</span></span>
 
-- [<span data-ttu-id="db2a3-138">元数据枚举</span><span class="sxs-lookup"><span data-stu-id="db2a3-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="5f21c-138">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="5f21c-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

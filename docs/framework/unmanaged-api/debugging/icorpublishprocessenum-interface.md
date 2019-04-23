@@ -17,36 +17,36 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5186df61eb82b29fcfa9776408498b748068e122
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173649"
 ---
-# <a name="icorpublishprocessenum-interface"></a><span data-ttu-id="b6898-102">ICorPublishProcessEnum 接口</span><span class="sxs-lookup"><span data-stu-id="b6898-102">ICorPublishProcessEnum Interface</span></span>
-<span data-ttu-id="b6898-103">子类[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)接口所提供的方法来遍历一系列[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="b6898-103">A subclass of the [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) interface that provides methods to traverse a collection of [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) objects.</span></span>  
+# <a name="icorpublishprocessenum-interface"></a><span data-ttu-id="bc4ff-102">ICorPublishProcessEnum 接口</span><span class="sxs-lookup"><span data-stu-id="bc4ff-102">ICorPublishProcessEnum Interface</span></span>
+<span data-ttu-id="bc4ff-103">子类[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)接口所提供的方法来遍历一系列[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="bc4ff-103">A subclass of the [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) interface that provides methods to traverse a collection of [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) objects.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b6898-104">方法</span><span class="sxs-lookup"><span data-stu-id="b6898-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="bc4ff-104">方法</span><span class="sxs-lookup"><span data-stu-id="bc4ff-104">Methods</span></span>  
   
-|<span data-ttu-id="b6898-105">方法</span><span class="sxs-lookup"><span data-stu-id="b6898-105">Method</span></span>|<span data-ttu-id="b6898-106">描述</span><span class="sxs-lookup"><span data-stu-id="b6898-106">Description</span></span>|  
+|<span data-ttu-id="bc4ff-105">方法</span><span class="sxs-lookup"><span data-stu-id="bc4ff-105">Method</span></span>|<span data-ttu-id="bc4ff-106">描述</span><span class="sxs-lookup"><span data-stu-id="bc4ff-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b6898-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="b6898-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-next-method.md)|<span data-ttu-id="b6898-108">获取指定的数目的`ICorPublishProcess`实例从集合中，从当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="b6898-108">Gets the specified number of `ICorPublishProcess` instances from the collection, starting at the current position.</span></span>|  
+|[<span data-ttu-id="bc4ff-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="bc4ff-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-next-method.md)|<span data-ttu-id="bc4ff-108">获取指定的数目的`ICorPublishProcess`实例从集合中，从当前位置开始。</span><span class="sxs-lookup"><span data-stu-id="bc4ff-108">Gets the specified number of `ICorPublishProcess` instances from the collection, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b6898-109">备注</span><span class="sxs-lookup"><span data-stu-id="b6898-109">Remarks</span></span>  
- <span data-ttu-id="b6898-110">`ICorPublishProcessEnum`接口实现的抽象接口，方法[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="b6898-110">The `ICorPublishProcessEnum` interface implements the methods of the abstract interface, [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bc4ff-109">备注</span><span class="sxs-lookup"><span data-stu-id="bc4ff-109">Remarks</span></span>  
+ <span data-ttu-id="bc4ff-110">`ICorPublishProcessEnum`接口实现的抽象接口，方法[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="bc4ff-110">The `ICorPublishProcessEnum` interface implements the methods of the abstract interface, [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md).</span></span>  
   
- <span data-ttu-id="b6898-111">`ICorPublishProcessEnum`实例创建的[icorpublish:: Enumprocesses](../../../../docs/framework/unmanaged-api/debugging/icorpublish-enumprocesses-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="b6898-111">An `ICorPublishProcessEnum` instance is created by the [ICorPublish::EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icorpublish-enumprocesses-method.md) method.</span></span> <span data-ttu-id="b6898-112">集合的遍历`ICorPublishProcess`对象基于在时提供的筛选器条件`ICorPublishProcessEnum`创建实例。</span><span class="sxs-lookup"><span data-stu-id="b6898-112">The traversal of the collection of `ICorPublishProcess` objects is based on the filter criteria given at the time the `ICorPublishProcessEnum` instance was created.</span></span>  
+ <span data-ttu-id="bc4ff-111">`ICorPublishProcessEnum`实例创建的[icorpublish:: Enumprocesses](../../../../docs/framework/unmanaged-api/debugging/icorpublish-enumprocesses-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="bc4ff-111">An `ICorPublishProcessEnum` instance is created by the [ICorPublish::EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icorpublish-enumprocesses-method.md) method.</span></span> <span data-ttu-id="bc4ff-112">集合的遍历`ICorPublishProcess`对象基于在时提供的筛选器条件`ICorPublishProcessEnum`创建实例。</span><span class="sxs-lookup"><span data-stu-id="bc4ff-112">The traversal of the collection of `ICorPublishProcess` objects is based on the filter criteria given at the time the `ICorPublishProcessEnum` instance was created.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6898-113">要求</span><span class="sxs-lookup"><span data-stu-id="b6898-113">Requirements</span></span>  
- <span data-ttu-id="b6898-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b6898-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bc4ff-113">要求</span><span class="sxs-lookup"><span data-stu-id="bc4ff-113">Requirements</span></span>  
+ <span data-ttu-id="bc4ff-114">**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bc4ff-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6898-115">**标头：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="b6898-115">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="bc4ff-115">**标头：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="bc4ff-115">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="b6898-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b6898-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bc4ff-116">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bc4ff-116">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="b6898-117">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="b6898-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="bc4ff-117">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc4ff-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6898-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="b6898-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bc4ff-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="bc4ff-118">See also</span></span>
 
-- [<span data-ttu-id="b6898-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="b6898-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="b6898-120">CorpubPublish Coclass</span><span class="sxs-lookup"><span data-stu-id="b6898-120">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [<span data-ttu-id="bc4ff-119">调试接口</span><span class="sxs-lookup"><span data-stu-id="bc4ff-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="bc4ff-120">CorpubPublish 组件类</span><span class="sxs-lookup"><span data-stu-id="bc4ff-120">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

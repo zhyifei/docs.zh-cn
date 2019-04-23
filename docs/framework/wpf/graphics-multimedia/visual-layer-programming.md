@@ -10,25 +10,25 @@ helpviewer_keywords:
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
 ms.openlocfilehash: 599ef73e2e8c772559badb3a562a12f8311e9c60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172063"
 ---
-# <a name="visual-layer-programming"></a><span data-ttu-id="9ac03-102">可视化层编程</span><span class="sxs-lookup"><span data-stu-id="9ac03-102">Visual Layer Programming</span></span>
-<span data-ttu-id="9ac03-103"><xref:System.Windows.Media.Visual>对象是一项核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]对象，它的主要角色是提供呈现支持。</span><span class="sxs-lookup"><span data-stu-id="9ac03-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="9ac03-104">用户界面控件，如<xref:System.Windows.Controls.Button>并<xref:System.Windows.Controls.TextBox>，派生自<xref:System.Windows.Media.Visual>类，并使用该类来保持其呈现数据。</span><span class="sxs-lookup"><span data-stu-id="9ac03-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
+# <a name="visual-layer-programming"></a><span data-ttu-id="8ed3b-102">可视化层编程</span><span class="sxs-lookup"><span data-stu-id="8ed3b-102">Visual Layer Programming</span></span>
+<span data-ttu-id="8ed3b-103"><xref:System.Windows.Media.Visual>对象是一项核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]对象，它的主要角色是提供呈现支持。</span><span class="sxs-lookup"><span data-stu-id="8ed3b-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="8ed3b-104">用户界面控件，如<xref:System.Windows.Controls.Button>并<xref:System.Windows.Controls.TextBox>，派生自<xref:System.Windows.Media.Visual>类，并使用该类来保持其呈现数据。</span><span class="sxs-lookup"><span data-stu-id="8ed3b-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9ac03-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="9ac03-105">In This Section</span></span>  
- [<span data-ttu-id="9ac03-106">可视化层中的命中测试</span><span class="sxs-lookup"><span data-stu-id="9ac03-106">Hit Testing in the Visual Layer</span></span>](hit-testing-in-the-visual-layer.md)  
- [<span data-ttu-id="9ac03-107">使用 DrawingVisual 对象</span><span class="sxs-lookup"><span data-stu-id="9ac03-107">Using DrawingVisual Objects</span></span>](using-drawingvisual-objects.md)  
- [<span data-ttu-id="9ac03-108">教程：在 Win32 应用程序中承载视觉对象</span><span class="sxs-lookup"><span data-stu-id="9ac03-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [<span data-ttu-id="9ac03-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="9ac03-109">How-to Topics</span></span>](visual-layer-programming-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8ed3b-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="8ed3b-105">In This Section</span></span>  
+ [<span data-ttu-id="8ed3b-106">可视化层中的命中测试</span><span class="sxs-lookup"><span data-stu-id="8ed3b-106">Hit Testing in the Visual Layer</span></span>](hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="8ed3b-107">使用 DrawingVisual 对象</span><span class="sxs-lookup"><span data-stu-id="8ed3b-107">Using DrawingVisual Objects</span></span>](using-drawingvisual-objects.md)  
+ [<span data-ttu-id="8ed3b-108">教程：在 Win32 应用程序中承载视觉对象</span><span class="sxs-lookup"><span data-stu-id="8ed3b-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [<span data-ttu-id="8ed3b-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="8ed3b-109">How-to Topics</span></span>](visual-layer-programming-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9ac03-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="9ac03-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ed3b-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="8ed3b-110">See also</span></span>
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="9ac03-111">WPF 图形呈现疑难解答</span><span class="sxs-lookup"><span data-stu-id="9ac03-111">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="9ac03-112">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="9ac03-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="8ed3b-111">WPF 图形呈现概述</span><span class="sxs-lookup"><span data-stu-id="8ed3b-111">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="8ed3b-112">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="8ed3b-112">Graphics and Multimedia</span></span>](index.md)
