@@ -3,11 +3,11 @@ title: 基本示例
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
 ms.openlocfilehash: 1ceee6dd11b59ab9b43797ca8b1fd80c232fc8ea
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327966"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976412"
 ---
 # <a name="basic-sample"></a>基本示例
 此示例演示如何使服务可发现以及如何搜索和调用可发现服务。 此示例由两个项目组成：服务项目和客户端项目。

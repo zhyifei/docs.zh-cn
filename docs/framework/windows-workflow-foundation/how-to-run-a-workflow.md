@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319919"
 ---
 # <a name="how-to-run-a-workflow"></a>如何：运行工作流
@@ -62,7 +62,7 @@ ms.locfileid: "59319919"
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     生成的承载代码使用 <xref:System.Activities.WorkflowInvoker>。 <xref:System.Activities.WorkflowInvoker> 像它像方法调用，并且可以仅用于不使用暂留的工作流调用工作流提供一个简单的方法。 <xref:System.Activities.WorkflowApplication> 执行包括通知生命周期事件、 执行控制、 书签恢复和持久性的工作流提供更丰富的模型。 此示例使用书签并且将 <xref:System.Activities.WorkflowApplication> 用于承载工作流。 在 `using` Program.cs **或** Module1.vb **顶部的现有** using **或** Imports **语句下面，添加以下** 或 **Imports** 语句。
+     生成的承载代码使用 <xref:System.Activities.WorkflowInvoker>。 <xref:System.Activities.WorkflowInvoker> 提供一种简单工作流调用方法，就像方法调用一样，仅可用于不使用持久性的工作流。 <xref:System.Activities.WorkflowApplication> 为执行工作流（包括生命周期事件通知、执行控制、书签恢复和持久性）提供更丰富的模型。 此示例使用书签并且将 <xref:System.Activities.WorkflowApplication> 用于承载工作流。 在 `using` Program.cs **或** Module1.vb **顶部的现有** using **或** Imports **语句下面，添加以下** 或 **Imports** 语句。
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -99,7 +99,7 @@ ms.locfileid: "59319919"
      [!code-csharp[CFX_WF_GettingStarted#6](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
 
-     此字典包含一个键为 `MaxNumber`的元素。 输入字典中的键对应工作流根活动的输入参数。 `MaxNumber` 来确定随机生成数的上边界。
+     此字典包含一个键为 `MaxNumber`的元素。 输入字典中的键对应工作流根活动的输入参数。 工作流使用`MaxNumber` 来确定随机生成数的上边界。
 
 ### <a name="to-retrieve-output-arguments-of-a-workflow"></a>检索工作流的输出参数
 
@@ -166,6 +166,6 @@ ms.locfileid: "59319919"
 - [Windows Workflow Foundation 编程](programming.md)
 - [入门教程](getting-started-tutorial.md)
 - [如何：创建工作流](how-to-create-a-workflow.md)
-- [如何：创建和运行长期运行的工作流](how-to-create-and-run-a-long-running-workflow.md)
+- [如何：创建和运行长时间运行工作流](how-to-create-and-run-a-long-running-workflow.md)
 - [在工作流中等待输入](waiting-for-input-in-a-workflow.md)
-- [承载工作流](hosting-workflows.md)
+- [托管工作流](hosting-workflows.md)

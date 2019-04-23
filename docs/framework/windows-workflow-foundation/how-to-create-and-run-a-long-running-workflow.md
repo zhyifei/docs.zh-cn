@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320042"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>如何：创建和运行长期运行的工作流
@@ -23,25 +23,25 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
   
 ## <a name="in-this-topic"></a>在本主题中  
   
--   [创建持久性数据库](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+-   [若要创建持久性数据库](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [添加对 DurableInstancing 程序集的引用](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+-   [若要添加对 DurableInstancing 程序集的引用](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [创建工作流主机窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+-   [若要创建工作流主机窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [添加窗体的属性和帮助器方法](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [若要添加的属性和帮助器方法的窗体](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [配置实例存储、工作流生命周期处理程序和扩展](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+-   [若要配置实例存储、 工作流生命周期处理程序和扩展](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [支持启动和恢复多个工作流类型](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [若要启用启动和恢复多个工作流类型](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [启动新工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+-   [若要启动新工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [恢复工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+-   [若要恢复的工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
 -   [终止工作流](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [生成并运行应用程序](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+-   [若要生成并运行应用程序](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> 若要创建持久性数据库  
   
@@ -50,7 +50,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     > [!NOTE]
     >  请确保已**Create Database**本地服务器上创建数据库前的权限。  
   
-2. 选择**开放**，**文件**从**文件**菜单。 浏览到以下文件夹： `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
+2. 选择**开放**，**文件**从**文件**菜单。 浏览到以下文件夹：`C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
   
      选择以下两个文件，然后单击**打开**。  
   
@@ -95,11 +95,11 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     |控件|属性：“值”|  
     |-------------|---------------------|  
     |**Button**|姓名:NewGame<br /><br /> 位置：13, 13<br /><br /> 字号:75, 23<br /><br /> 文本：新游戏|  
-    |**Label**|位置：94, 18<br /><br /> 文本：猜测一个数字，从 1 到|  
+    |**标签**|位置：94, 18<br /><br /> 文本：猜测一个数字，从 1 到|  
     |**组合框**|姓名:NumberRange<br /><br /> DropDownStyle:DropDownList<br /><br /> 项：10, 100, 1000<br /><br /> 位置：228, 12<br /><br /> 字号:143, 21|  
-    |**Label**|位置：13, 43<br /><br /> 文本：工作流类型|  
+    |**标签**|位置：13, 43<br /><br /> 文本：工作流类型|  
     |**组合框**|姓名:WorkflowType<br /><br /> DropDownStyle:DropDownList<br /><br /> 项：StateMachineNumberGuessWorkflow，FlowchartNumberGuessWorkflow，SequentialNumberGuessWorkflow<br /><br /> 位置：94, 40<br /><br /> 字号:277, 21|  
-    |**Label**|姓名:WorkflowVersion<br /><br /> 位置：13, 362<br /><br /> 文本：工作流版本|  
+    |**标签**|姓名:WorkflowVersion<br /><br /> 位置：13, 362<br /><br /> 文本：工作流版本|  
     |**GroupBox**|位置：13, 67<br /><br /> 字号:358, 287<br /><br /> 文本：游戏|  
   
     > [!NOTE]
@@ -107,9 +107,9 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
   
     |控件|属性：“值”|  
     |-------------|---------------------|  
-    |**Label**|位置：7, 20<br /><br /> 文本：工作流实例 ID|  
+    |**标签**|位置：7, 20<br /><br /> 文本：工作流实例 ID|  
     |**组合框**|姓名:InstanceId<br /><br /> DropDownStyle:DropDownList<br /><br /> 位置：121, 17<br /><br /> 字号:227, 21|  
-    |**Label**|位置：7, 47<br /><br /> 文本：猜测|  
+    |**标签**|位置：7, 47<br /><br /> 文本：猜测|  
     |**文本框**|姓名:猜测<br /><br /> 位置：50, 44<br /><br /> 字号:65, 20|  
     |**Button**|姓名:EnterGuess<br /><br /> 位置：121, 42<br /><br /> 字号:75, 23<br /><br /> 文本：输入猜测|  
     |**Button**|姓名:QuitGame<br /><br /> 位置：274, 42<br /><br /> 字号:75, 23<br /><br /> 文本：退出|  
@@ -341,7 +341,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     }  
     ```  
   
-     `ListPersistedWorkflows` 查询实例存储中的持久化工作流实例，并将添加到的实例 id`cboInstanceId`组合框。  
+     `ListPersistedWorkflows` 查询持久性工作流实例的实例存储，并将实例 ID 添加到 `cboInstanceId` 组合框。  
   
 10. 将下面的 `UpdateStatus` 方法和对应的委托添加到窗体类中。 此方法使用当前正在运行的工作流的状态来更新窗体上的状态窗口。  
   
@@ -574,7 +574,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     };  
     ```  
   
-     <xref:System.Activities.PersistableIdleAction> 枚举有三个值：<xref:System.Activities.PersistableIdleAction.None>、 <xref:System.Activities.PersistableIdleAction.Persist> 和 <xref:System.Activities.PersistableIdleAction.Unload>。 <xref:System.Activities.PersistableIdleAction.Persist> 会导致工作流持久保存，但它不会导致工作流卸载。 <xref:System.Activities.PersistableIdleAction.Unload> 导致持久保存并卸载工作流。  
+     <xref:System.Activities.PersistableIdleAction> 枚举有三个值：<xref:System.Activities.PersistableIdleAction.None>、 <xref:System.Activities.PersistableIdleAction.Persist> 和 <xref:System.Activities.PersistableIdleAction.Unload>。 <xref:System.Activities.PersistableIdleAction.Persist> 会导致工作流持久保存，但不会导致工作流卸载。 <xref:System.Activities.PersistableIdleAction.Unload> 会导致工作流持久保存并卸载。  
   
      以下示例是完成的 `ConfigureWorkflowApplication` 方法。  
   
@@ -692,7 +692,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     ```  
   
 ### <a name="BKMK_WorkflowVersionMap"></a> 若要启用启动和恢复多个工作流类型  
- 要恢复工作流实例，主机必须提供工作流定义。 在此教程中有三个工作流类型，且后续教程步骤会介绍这些类型的多个版本。 `WorkflowIdentity` 提供要将标识信息与持久化工作流实例相关联的主机应用程序的方法。 本节中的步骤演示了如何创建一个实用工具类，以帮助将工作流标识从持久化工作流实例映射到对应的工作流定义。 有关详细信息`WorkflowIdentity`和版本控制，请参阅[使用 WorkflowIdentity 和版本控制](using-workflowidentity-and-versioning.md)。  
+ 要恢复工作流实例，主机必须提供工作流定义。 在此教程中有三个工作流类型，且后续教程步骤会介绍这些类型的多个版本。 主机应用程序可通过 `WorkflowIdentity` 将标识信息与持久化工作流实例相关联。 本节中的步骤演示了如何创建一个实用工具类，以帮助将工作流标识从持久化工作流实例映射到对应的工作流定义。 有关详细信息`WorkflowIdentity`和版本控制，请参阅[使用 WorkflowIdentity 和版本控制](using-workflowidentity-and-versioning.md)。  
   
 1. 右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**，然后选择**添加**，**类**。 类型`WorkflowVersionMap`成**名称**框，然后单击**添加**。  
   
@@ -806,7 +806,7 @@ Windows Workflow Foundation (WF) 的主要功能之一是保留和卸载到数�
     }  
     ```  
   
-     `WorkflowVersionMap` 包含本教程中，将映射到三个工作流定义的三个工作流标识，启动和恢复工作流时以下各节中使用。  
+     `WorkflowVersionMap` 包含与此教程中的三个工作流定义对应的三个工作流标识，并在以下各节中工作流启动和恢复时使用。  
   
 ### <a name="BKMK_StartWorkflow"></a> 若要启动新工作流  
   

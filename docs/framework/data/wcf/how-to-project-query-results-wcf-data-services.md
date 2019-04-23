@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
 ms.openlocfilehash: 4b0646c2ad45a86691b86b1dd5f112f598ee2dfd
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59518189"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974778"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>如何：项目查询结果 （WCF 数据服务）
 投影提供减少查询返回的数据量的机制，方法是指定在响应中仅返回某个实体的某些属性。 可以执行的结果的投影[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]查询通过使用`$select`查询选项或使用[选择](~/docs/csharp/language-reference/keywords/select-clause.md)子句 ([选择](~/docs/visual-basic/language-reference/queries/select-clause.md)在 Visual Basic 中) 中的 LINQ 查询。 有关详细信息，请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
