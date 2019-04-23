@@ -13,27 +13,27 @@ ms.locfileid: "59331970"
 
 你可以通过多种方式安装F#，具体取决于你的环境。
 
-## <a name="install-f-with-visual-studio"></a>使用 Visual Studio安装F#
+## <a name="install-f-with-visual-studio"></a>使用 Visual Studio安装 F#
 
-如果在下载[Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)第一次，它将首先安装 Visual Studio 安装程序。 安装程序安装在相应 SKU 的 Visual Studio。 如果你已安装，请单击**修改**。
+如果你是初次下载[Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)，它将首先安装 Visual Studio 安装程序。 从 Visual Studio 安装程序安装相应的 SKU。 如果你已安装 Visual Studio，请单击**修改**。
 
-接下来，您将看到工作负荷列表。 选择**ASP.NET 和 web 开发**哪一项将安装F#ASP.NET Core 项目的支持和.NET Core 支持。
+接下来，您将看到工作负荷列表。 选择**ASP.NET 和 web 开发**，这将为您安装 F# 和 .NET Core 对 ASP.NET Core 项目的支持。
 
-接下来，单击**修改**右下角中。  这将安装所选的所有内容。 然后可以打开带有 Visual Studio 2017F#语言支持通过单击**启动**。
+接下来，单击右下角中的**修改**。这将安装您所选的所有内容。然后可以通过单击**启动**打开带有 F# 语言支持的 Visual Studio 2017。
 
-## <a name="install-f-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac安装F#
+## <a name="install-f-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac安装 F#
 
-F#在默认情况下安装[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)，无论哪种配置选择。
+在[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)中将会默认安装 F#，无论您选择哪种配置。
 
-在安装完成后，选择"启动 Visual Studio"。 您还可以启动它通过 Finder 在 macOS 上。
+在安装完成后，选择"启动 Visual Studio"。 您还可以通过macOS 上的 Finder 启动它。
 
-## <a name="install-f-with-visual-studio-code"></a>使用 Visual Studio Code安装F#
+## <a name="install-f-with-visual-studio-code"></a>使用 Visual Studio Code安装 F#
 
-您必须具有[安装 git](https://git-scm.com/download)且适用于你的路径以使项目模板使用。 你可以验证是否已正确安装通过键入`git --version`在命令提示符，然后按**Enter**。
+您必须先[安装 git](https://git-scm.com/download)且适用于你的路径以使用项目模板。 你可以通过在命令提示符键入`git --version`，然后按**Enter**验证是否已正确安装。
 
 ### [macOS](#tab/macos)
 
-[Mono](https://www.mono-project.com)用于[F#交互式](../tutorials/fsharp-interactive/index.md)支持。 通过 Homebrew 在 macOS 上安装 Mono 的最简单方法。 只需为你的终端中键入以下内容：
+[Mono](https://www.mono-project.com)用于 [F# 交互式](../tutorials/fsharp-interactive/index.md)支持。 在 macOS 上安装 Mono 的最简单方法是通过 Homebrew 进行安装。 只需在你的终端中键入以下内容：
 
 ```console
 brew install mono
@@ -43,7 +43,7 @@ brew install mono
 
 ### [Linux](#tab/linux)
 
-[Mono](https://www.mono-project.com)用于[F#交互式](../tutorials/fsharp-interactive/index.md)支持。 如果您在 Debian 或 Ubuntu 上，可以使用以下：
+[Mono](https://www.mono-project.com)用于[F# 交互式](../tutorials/fsharp-interactive/index.md)支持。 如果您在 Debian 或 Ubuntu 上，可以使用以下：
 
 ```console
 sudo apt-get update
@@ -54,7 +54,7 @@ sudo apt-get install mono-complete fsharp
 
 ### [Windows](#tab/windows)
 
-安装[Visual Studio 中使用F#支持](#install-f-with-visual-studio)。 这将安装所有必要的组件来编写、 编译和执行F#代码。
+安装[Visual Studio 上的 F# 支持](#install-f-with-visual-studio)。 这将安装所有编写、 编译和执行 F# 代码所必要的组件。
 
 此外安装[.NET Core SDK](https://www.microsoft.com/net/download/)。
 
