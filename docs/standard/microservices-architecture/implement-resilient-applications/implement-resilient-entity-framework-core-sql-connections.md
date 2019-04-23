@@ -4,18 +4,18 @@ description: 了解如何实现复原 Entity Framework Core SQL 连接。 在云
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 022fa482cf7b629be00a979550b02a2616830d09
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: b056df033a584bc51fed5ccd52a58a6331298aa6
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462573"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612246"
 ---
-# <a name="implement-resilient-entity-framework-core-sql-connections"></a><span data-ttu-id="1d6c1-104">实现复原 Entity Framework Core SQL 连接</span><span class="sxs-lookup"><span data-stu-id="1d6c1-104">Implement resilient Entity Framework Core SQL connections</span></span>
+# <a name="implement-resilient-entity-framework-core-sql-connections"></a><span data-ttu-id="8bb79-104">实现复原 Entity Framework Core SQL 连接</span><span class="sxs-lookup"><span data-stu-id="8bb79-104">Implement resilient Entity Framework Core SQL connections</span></span>
 
-<span data-ttu-id="1d6c1-105">对于 Azure SQL DB，Entity Framework Core (EF) 早已提供了内部数据库连接复原和重试逻辑。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-105">For Azure SQL DB, Entity Framework (EF) Core already provides internal database connection resiliency and retry logic.</span></span> <span data-ttu-id="1d6c1-106">但如果想要[复原 EF Core 连接](/ef/core/miscellaneous/connection-resiliency)，则需要为每个 <xref:Microsoft.EntityFrameworkCore.DbContext> 连接启用 Entity Framework 执行策略。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-106">But you need to enable the Entity Framework execution strategy for each <xref:Microsoft.EntityFrameworkCore.DbContext> connection if you want to have [resilient EF Core connections](/ef/core/miscellaneous/connection-resiliency).</span></span>
+<span data-ttu-id="8bb79-105">对于 Azure SQL DB，Entity Framework Core (EF) 早已提供了内部数据库连接复原和重试逻辑。</span><span class="sxs-lookup"><span data-stu-id="8bb79-105">For Azure SQL DB, Entity Framework (EF) Core already provides internal database connection resiliency and retry logic.</span></span> <span data-ttu-id="8bb79-106">但如果想要[复原 EF Core 连接](/ef/core/miscellaneous/connection-resiliency)，则需要为每个 <xref:Microsoft.EntityFrameworkCore.DbContext> 连接启用 Entity Framework 执行策略。</span><span class="sxs-lookup"><span data-stu-id="8bb79-106">But you need to enable the Entity Framework execution strategy for each <xref:Microsoft.EntityFrameworkCore.DbContext> connection if you want to have [resilient EF Core connections](/ef/core/miscellaneous/connection-resiliency).</span></span>
 
-<span data-ttu-id="1d6c1-107">例如，EF Core 连接级别的下列代码可启用复原 SQL 连接，此连接在连接失败时会重试。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-107">For instance, the following code at the EF Core connection level enables resilient SQL connections that are retried if the connection fails.</span></span>
+<span data-ttu-id="8bb79-107">例如，EF Core 连接级别的下列代码可启用复原 SQL 连接，此连接在连接失败时会重试。</span><span class="sxs-lookup"><span data-stu-id="8bb79-107">For instance, the following code at the EF Core connection level enables resilient SQL connections that are retried if the connection fails.</span></span>
 
 ```csharp
 // Startup.cs from any ASP.NET Core Web API
@@ -41,17 +41,17 @@ public class Startup
 }
 ```
 
-## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a><span data-ttu-id="1d6c1-108">使用 BeginTransaction 和多个 DbContext 的执行策略和显式事务</span><span class="sxs-lookup"><span data-stu-id="1d6c1-108">Execution strategies and explicit transactions using BeginTransaction and multiple DbContexts</span></span>
+## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a><span data-ttu-id="8bb79-108">使用 BeginTransaction 和多个 DbContext 的执行策略和显式事务</span><span class="sxs-lookup"><span data-stu-id="8bb79-108">Execution strategies and explicit transactions using BeginTransaction and multiple DbContexts</span></span>
 
-<span data-ttu-id="1d6c1-109">在 EF Core 连接中启用重试时，使用 EF Core 执行的每项操作都会成为其自己的可重试操作。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-109">When retries are enabled in EF Core connections, each operation you perform using EF Core becomes its own retriable operation.</span></span> <span data-ttu-id="1d6c1-110">如果发生暂时性故障，每个查询和 `SaveChanges` 的每次调用都会作为一个单元进行重试。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-110">Each query and each call to `SaveChanges` will be retried as a unit if a transient failure occurs.</span></span>
+<span data-ttu-id="8bb79-109">在 EF Core 连接中启用重试时，使用 EF Core 执行的每项操作都会成为其自己的可重试操作。</span><span class="sxs-lookup"><span data-stu-id="8bb79-109">When retries are enabled in EF Core connections, each operation you perform using EF Core becomes its own retriable operation.</span></span> <span data-ttu-id="8bb79-110">如果发生暂时性故障，每个查询和 `SaveChanges` 的每次调用都会作为一个单元进行重试。</span><span class="sxs-lookup"><span data-stu-id="8bb79-110">Each query and each call to `SaveChanges` will be retried as a unit if a transient failure occurs.</span></span>
 
-<span data-ttu-id="1d6c1-111">但是，如果你的代码使用 `BeginTransaction` 启动事务，则自行定义一组需要作为一个单元来处理的操作。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-111">However, if your code initiates a transaction using `BeginTransaction`, you're defining your own group of operations that need to be treated as a unit.</span></span> <span data-ttu-id="1d6c1-112">如果发生故障，则必须回滚事务中的所有内容。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-112">Everything inside the transaction has to be rolled back if a failure occurs.</span></span>
+<span data-ttu-id="8bb79-111">但是，如果你的代码使用 `BeginTransaction` 启动事务，则自行定义一组需要作为一个单元来处理的操作。</span><span class="sxs-lookup"><span data-stu-id="8bb79-111">However, if your code initiates a transaction using `BeginTransaction`, you're defining your own group of operations that need to be treated as a unit.</span></span> <span data-ttu-id="8bb79-112">如果发生故障，则必须回滚事务中的所有内容。</span><span class="sxs-lookup"><span data-stu-id="8bb79-112">Everything inside the transaction has to be rolled back if a failure occurs.</span></span>
 
-<span data-ttu-id="1d6c1-113">如果在使用 EF 执行策略（重试策略）时尝试执行该事务，并从多个 DbContext 调用 `SaveChanges`，则会收到与下列情况类似的异常：</span><span class="sxs-lookup"><span data-stu-id="1d6c1-113">If you try to execute that transaction when using an EF execution strategy (retry policy) and you call `SaveChanges` from multiple DbContexts, you'll get an exception like this one:</span></span>
+<span data-ttu-id="8bb79-113">如果在使用 EF 执行策略（重试策略）时尝试执行该事务，并从多个 DbContext 调用 `SaveChanges`，则会收到与下列情况类似的异常：</span><span class="sxs-lookup"><span data-stu-id="8bb79-113">If you try to execute that transaction when using an EF execution strategy (retry policy) and you call `SaveChanges` from multiple DbContexts, you'll get an exception like this one:</span></span>
 
-> <span data-ttu-id="1d6c1-114">System.InvalidOperationException：已配置的执行策略“SqlServerRetryingExecutionStrategy”不支持用户启动的事务。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-114">System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user initiated transactions.</span></span> <span data-ttu-id="1d6c1-115">使用由“DbContext.Database.CreateExecutionStrategy()”返回的执行策略执行事务（作为一个可回溯单元）中的所有操作。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-115">Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.</span></span>
+> <span data-ttu-id="8bb79-114">System.InvalidOperationException：已配置的执行策略“SqlServerRetryingExecutionStrategy”不支持用户启动的事务。</span><span class="sxs-lookup"><span data-stu-id="8bb79-114">System.InvalidOperationException: The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user initiated transactions.</span></span> <span data-ttu-id="8bb79-115">使用由“DbContext.Database.CreateExecutionStrategy()”返回的执行策略执行事务（作为一个可回溯单元）中的所有操作。</span><span class="sxs-lookup"><span data-stu-id="8bb79-115">Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.</span></span>
 
-<span data-ttu-id="1d6c1-116">该解决方案通过代表所有需要执行的委托来手动调用 EF 执行策略。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-116">The solution is to manually invoke the EF execution strategy with a delegate representing everything that needs to be executed.</span></span> <span data-ttu-id="1d6c1-117">如果发生暂时性故障，执行策略会再次调用委托。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-117">If a transient failure occurs, the execution strategy will invoke the delegate again.</span></span> <span data-ttu-id="1d6c1-118">例如，以下代码演示了在更新产品时，如何使用两个 DbContext（\_ catalogContext 和 IntegrationEventLogContext）在 eShopOnContainers 中实现该操作，然后保存需要使用不同 DbContext 的 ProductPriceChangedIntegrationEvent 对象。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-118">For example, the following code show how it's implemented in eShopOnContainers with two multiple DbContexts (\_catalogContext and the IntegrationEventLogContext) when updating a product and then saving the ProductPriceChangedIntegrationEvent object, which needs to use a different DbContext.</span></span>
+<span data-ttu-id="8bb79-116">该解决方案通过代表所有需要执行的委托来手动调用 EF 执行策略。</span><span class="sxs-lookup"><span data-stu-id="8bb79-116">The solution is to manually invoke the EF execution strategy with a delegate representing everything that needs to be executed.</span></span> <span data-ttu-id="8bb79-117">如果发生暂时性故障，执行策略会再次调用委托。</span><span class="sxs-lookup"><span data-stu-id="8bb79-117">If a transient failure occurs, the execution strategy will invoke the delegate again.</span></span> <span data-ttu-id="8bb79-118">例如，以下代码演示了在更新产品时，如何使用两个 DbContext（\_ catalogContext 和 IntegrationEventLogContext）在 eShopOnContainers 中实现该操作，然后保存需要使用不同 DbContext 的 ProductPriceChangedIntegrationEvent 对象。</span><span class="sxs-lookup"><span data-stu-id="8bb79-118">For example, the following code show how it's implemented in eShopOnContainers with two multiple DbContexts (\_catalogContext and the IntegrationEventLogContext) when updating a product and then saving the ProductPriceChangedIntegrationEvent object, which needs to use a different DbContext.</span></span>
 
 ```csharp
 public async Task<IActionResult> UpdateProduct(
@@ -90,9 +90,9 @@ public async Task<IActionResult> UpdateProduct(
 }
 ```
 
-<span data-ttu-id="1d6c1-119">第一个 <xref:Microsoft.EntityFrameworkCore.DbContext> 是 `_catalogContext`，第二个 `DbContext` 在 `_integrationEventLogService` 对象中。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-119">The first <xref:Microsoft.EntityFrameworkCore.DbContext> is `_catalogContext` and the second `DbContext` is within the `_integrationEventLogService` object.</span></span> <span data-ttu-id="1d6c1-120">通过使用 EF 执行策略在所有 `DbContext` 对象之间执行“提交”操作。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-120">The Commit action is performed across all `DbContext` objects using an EF execution strategy.</span></span>
+<span data-ttu-id="8bb79-119">第一个 <xref:Microsoft.EntityFrameworkCore.DbContext> 是 `_catalogContext`，第二个 `DbContext` 在 `_integrationEventLogService` 对象中。</span><span class="sxs-lookup"><span data-stu-id="8bb79-119">The first <xref:Microsoft.EntityFrameworkCore.DbContext> is `_catalogContext` and the second `DbContext` is within the `_integrationEventLogService` object.</span></span> <span data-ttu-id="8bb79-120">通过使用 EF 执行策略在所有 `DbContext` 对象之间执行“提交”操作。</span><span class="sxs-lookup"><span data-stu-id="8bb79-120">The Commit action is performed across all `DbContext` objects using an EF execution strategy.</span></span>
 
-<span data-ttu-id="1d6c1-121">若要实现此多个 `DbContext` 提交，`SaveEventAndCatalogContextChangesAsync` 要使用 `ResilientTransaction` 类，如以下代码所示：</span><span class="sxs-lookup"><span data-stu-id="1d6c1-121">To achieve this multiple `DbContext` commit, the `SaveEventAndCatalogContextChangesAsync` uses a `ResilientTransaction` class, as shown in the following code:</span></span>
+<span data-ttu-id="8bb79-121">若要实现此多个 `DbContext` 提交，`SaveEventAndCatalogContextChangesAsync` 要使用 `ResilientTransaction` 类，如以下代码所示：</span><span class="sxs-lookup"><span data-stu-id="8bb79-121">To achieve this multiple `DbContext` commit, the `SaveEventAndCatalogContextChangesAsync` uses a `ResilientTransaction` class, as shown in the following code:</span></span>
 
 ```csharp
 public class CatalogIntegrationEventService : ICatalogIntegrationEventService
@@ -116,7 +116,7 @@ public class CatalogIntegrationEventService : ICatalogIntegrationEventService
 }
 ```
 
-<span data-ttu-id="1d6c1-122">基本上，`ResilientTransaction.ExecuteAsync` 方法从传递的 `DbContext` (`_catalogContext`) 开始一个事务，然后让 `EventLogService` 使用该事务保存来自 `IntegrationEventLogContext` 的更改，然后提交整个事务。</span><span class="sxs-lookup"><span data-stu-id="1d6c1-122">The `ResilientTransaction.ExecuteAsync` method basically begins a transaction from the passed `DbContext` (`_catalogContext`) and then makes the `EventLogService` use that transaction to save changes from the `IntegrationEventLogContext` and then commits the whole transaction.</span></span>
+<span data-ttu-id="8bb79-122">基本上，`ResilientTransaction.ExecuteAsync` 方法从传递的 `DbContext` (`_catalogContext`) 开始一个事务，然后让 `EventLogService` 使用该事务保存来自 `IntegrationEventLogContext` 的更改，然后提交整个事务。</span><span class="sxs-lookup"><span data-stu-id="8bb79-122">The `ResilientTransaction.ExecuteAsync` method basically begins a transaction from the passed `DbContext` (`_catalogContext`) and then makes the `EventLogService` use that transaction to save changes from the `IntegrationEventLogContext` and then commits the whole transaction.</span></span>
 
 ```csharp
 public class ResilientTransaction
@@ -146,15 +146,15 @@ public class ResilientTransaction
 }
 ```
 
-## <a name="additional-resources"></a><span data-ttu-id="1d6c1-123">其他资源</span><span class="sxs-lookup"><span data-stu-id="1d6c1-123">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="8bb79-123">其他资源</span><span class="sxs-lookup"><span data-stu-id="8bb79-123">Additional resources</span></span>
 
-- <span data-ttu-id="1d6c1-124">**ASP.NET MVC 应用程序中的 EF 的连接复原和命令截获** \\</span><span class="sxs-lookup"><span data-stu-id="1d6c1-124">**Connection Resiliency and Command Interception with EF in an ASP.NET MVC Application** \\</span></span>
+- <span data-ttu-id="8bb79-124">**ASP.NET MVC 应用程序中的 EF 的连接复原和命令截获** \\</span><span class="sxs-lookup"><span data-stu-id="8bb79-124">**Connection Resiliency and Command Interception with EF in an ASP.NET MVC Application** \\</span></span>
   [https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application)
 
-- <span data-ttu-id="1d6c1-125">**Cesar de la Torre。使用复原 Entity Framework Core SQL 连接和事务** \\</span><span class="sxs-lookup"><span data-stu-id="1d6c1-125">**Cesar de la Torre. Using Resilient Entity Framework Core SQL Connections and Transactions** \\</span></span>
-  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/)
+- <span data-ttu-id="8bb79-125">**Cesar de la Torre。使用复原 Entity Framework Core SQL 连接和事务** \\</span><span class="sxs-lookup"><span data-stu-id="8bb79-125">**Cesar de la Torre. Using Resilient Entity Framework Core SQL Connections and Transactions** \\</span></span>
+  <https://devblogs.microsoft.com/cesardelatorre/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="1d6c1-126">[上一页](implement-retries-exponential-backoff.md)
->[下一页](explore-custom-http-call-retries-exponential-backoff.md)</span><span class="sxs-lookup"><span data-stu-id="1d6c1-126">[Previous](implement-retries-exponential-backoff.md)
+><span data-ttu-id="8bb79-126">[上一页](implement-retries-exponential-backoff.md)
+>[下一页](explore-custom-http-call-retries-exponential-backoff.md)</span><span class="sxs-lookup"><span data-stu-id="8bb79-126">[Previous](implement-retries-exponential-backoff.md)
 [Next](explore-custom-http-call-retries-exponential-backoff.md)</span></span>
