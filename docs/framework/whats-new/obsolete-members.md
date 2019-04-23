@@ -10,10 +10,10 @@ ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 075396ae070be5312fa7afe29e8bdf5fa81a3817
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185413"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中的过时成员
@@ -159,7 +159,7 @@ ms.locfileid: "59185413"
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|<xref:System.IO.FileStream.%23ctor%28System.IntPtr%2CSystem.IO.FileAccess%2CSystem.Boolean%2CSystem.Int32%2CSystem.Boolean%29>|此构造函数已弃用。 请改用 <xref:System.IO.FileStream.%23ctor%28Microsoft.Win32.SafeHandles.SafeFileHandle%2CSystem.IO.FileAccess%2CSystem.Int32%2CSystem.Boolean%29?displayProperty=nameWithType>，如果需要，也可以选择通过 `ownsHandle`= `false` 设置新 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle?displayProperty=nameWithType>。|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|<xref:System.IO.FileStream.Handle%2A>|此属性已弃用。 改用 <xref:System.IO.FileStream.SafeFileHandle%2A?displayProperty=nameWithType> 属性。|  
 |<xref:System.IO.Path?displayProperty=nameWithType>|<xref:System.IO.Path.InvalidPathChars>|请改用 <xref:System.IO.Path.GetInvalidPathChars%2A?displayProperty=nameWithType> 或 <xref:System.IO.Path.GetInvalidFileNameChars%2A?displayProperty=nameWithType>。|  
-|<xref:System.IO.Stream?displayProperty=nameWithType>|<xref:System.IO.Stream.CreateWaitHandle%2A>|<xref:System.IO.Stream.CreateWaitHandle%2A> 最终将被移除。 请改用 `new ManualResetEvent(false)`。|  
+|<xref:System.IO.Stream?displayProperty=nameWithType>|<xref:System.IO.Stream.CreateWaitHandle%2A>|最终将移除 <xref:System.IO.Stream.CreateWaitHandle%2A>。 请改用 `new ManualResetEvent(false)`。|  
 |<xref:System.IO.Stream?displayProperty=nameWithType>|<xref:System.IO.Stream.ObjectInvariant%2A>|在 .NET Framework 4.5 中首次被废弃。<br /><br /> 请勿调用或重写此方法。|  
 |<xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>|<xref:System.IO.IsolatedStorage.IsolatedStorage.CurrentSize%2A>|<xref:System.IO.IsolatedStorage.IsolatedStorage.CurrentSize%2A> 已弃用，因为它不符合 CLS。 若要获得当前大小，请使用 <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A?displayProperty=nameWithType>。|  
 |<xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>|<xref:System.IO.IsolatedStorage.IsolatedStorage.MaximumSize%2A>|<xref:System.IO.IsolatedStorage.IsolatedStorage.MaximumSize%2A> 已弃用，因为它不符合 CLS。 若要获得最大大小，请使用 <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A?displayProperty=nameWithType>。|  
@@ -218,7 +218,7 @@ ms.locfileid: "59185413"
 |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.SavePolicy%2A>|此方法已过时，并将从 .NET Framework 的未来版本中移除。|  
 |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.SavePolicyLevel%2A>|此方法已过时，并将从 .NET Framework 的未来版本中移除。|  
 |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.SecurityEnabled%2A>|由于安全性再也无法关闭，因此 <xref:System.Security.SecurityManager.SecurityEnabled%2A> 属性将不再起作用。|  
-|<xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=nameWithType>|<xref:System.Security.Cryptography.PasswordDeriveBytes.GetBytes%2A>|<xref:System.Security.Cryptography.Rfc2898DeriveBytes?displayProperty=nameWithType> 替换 <xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=nameWithType> 以从密码派生密钥材料，并且在新应用程序中为首选。|  
+|<xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=nameWithType>|<xref:System.Security.Cryptography.PasswordDeriveBytes.GetBytes%2A>|<xref:System.Security.Cryptography.Rfc2898DeriveBytes?displayProperty=nameWithType> 替换 <xref:System.Security.Cryptography.PasswordDeriveBytes?displayProperty=nameWithType> 从密码派生密钥材料，并且在新应用程序中为首选。|  
 |<xref:System.Security.Cryptography.X509Certificates.X509Certificate?displayProperty=nameWithType>|<xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetIssuerName%2A>|此方法已被否决。 改用 <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Issuer%2A?displayProperty=nameWithType> 属性。|  
 |<xref:System.Security.Cryptography.X509Certificates.X509Certificate?displayProperty=nameWithType>|<xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetName%2A>|此方法已被否决。 改用 <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Subject%2A?displayProperty=nameWithType> 属性。|  
 |<xref:System.Security.Permissions.FileIOPermissionAttribute?displayProperty=nameWithType>|<xref:System.Security.Permissions.FileIOPermissionAttribute.All%2A>|改用 <xref:System.Security.Permissions.FileIOPermissionAttribute.ViewAndModify%2A?displayProperty=nameWithType> 属性。|  
@@ -263,7 +263,7 @@ ms.locfileid: "59185413"
 |----------|------------|-------------|  
 |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffect%2A>|位图效果已弃用，并将不再工作。 请考虑在适用处改用 <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>。|  
 |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffectInput%2A>|位图效果已弃用，并将不再工作。 请考虑在适用处改用 <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>。|  
-|<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.PersistId%2A>|<xref:System.Windows.UIElement.PersistId%2A> 是一个过时的属性，可能会从未来版本中移除。 未定义此属性的值。|  
+|<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.PersistId%2A>|<xref:System.Windows.UIElement.PersistId%2A> 是一个过时的属性，并可能会从未来版本中移除。 未定义此属性的值。|  
 |<xref:System.Windows.Media.ContainerVisual?displayProperty=nameWithType>|<xref:System.Windows.Media.ContainerVisual.BitmapEffect%2A>|位图效果已弃用，并将不再工作。 请考虑在适用处改用 <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>。|  
 |<xref:System.Windows.Media.ContainerVisual?displayProperty=nameWithType>|<xref:System.Windows.Media.ContainerVisual.BitmapEffectInput%2A>|位图效果已弃用，并将不再工作。 请考虑在适用处改用 <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>。|  
 |<xref:System.Windows.Media.DrawingContext?displayProperty=nameWithType>|<xref:System.Windows.Media.DrawingContext.PushEffect%2A>|位图效果已弃用，并将不再工作。 请考虑在适用处改用 <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>。|  
@@ -668,7 +668,7 @@ ms.locfileid: "59185413"
 |<xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A>|此属性已过时。 不使用 <xref:System.Web.UI.ScriptManager.ScriptPath%2A?displayProperty=nameWithType>，改为对每个 <xref:System.Web.UI.ScriptReference?displayProperty=nameWithType> 设置 [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A) 属性。|  
 |<xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReference.IsFromSystemWebExtensions%2A>|请使用 <xref:System.Web.UI.ScriptReference.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>。|  
 |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReferenceBase.IsFromSystemWebExtensions%2A>|请使用 <xref:System.Web.UI.ScriptReferenceBase.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>。|  
-|<xref:System.Web.UI.ScriptReferenceBase?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A>|<xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A> 在脚本引用中不再需要。|  
+|<xref:System.Web.UI.ScriptReferenceBase?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A>|脚本引用不再需要 <xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A>。|  
 |<xref:System.Web.UI.ScriptResourceAttribute?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptResourceAttribute.ScriptResourceName%2A>|此属性已过时。 请改用 <xref:System.Web.UI.ScriptResourceAttribute.StringResourceName%2A?displayProperty=nameWithType>。|  
 |<xref:System.Web.UI.ScriptResourceAttribute?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptResourceAttribute.TypeName%2A>|此属性已过时。 请改用 <xref:System.Web.UI.ScriptResourceAttribute.StringResourceClientTypeName%2A?displayProperty=nameWithType>。|  
   
@@ -740,7 +740,7 @@ ms.locfileid: "59185413"
   
 |类型|成员|消息|  
 |----------|------------|-------------|  
-|<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=nameWithType>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|建议的替代项为 <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType>。 <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=nameWithType> 将导入程序接口指针视为 <xref:System.IntPtr?displayProperty=nameWithType> 而不是 <xref:System.Int32?displayProperty=nameWithType>，实现同时在 32 位和 64 位体系结构上工作。|  
+|<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=nameWithType>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|建议的替代项为 <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType>。 <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=nameWithType> 将导入程序接口指针视为 <xref:System.IntPtr?displayProperty=nameWithType> 而不是 <xref:System.Int32?displayProperty=nameWithType>，因此可以同时在 32 位和 64 位体系结构上工作。|  
   
 <a name="conversion"></a>   
 ### <a name="assembly-microsoftbuildconversionv40dll"></a>程序集：Microsoft.Build.Conversion.v4.0.dll  
@@ -801,5 +801,5 @@ ms.locfileid: "59185413"
   
 ## <a name="see-also"></a>请参阅
 
-- [类型库中的已过时功能](whats-obsolete.md)
+- [类库中过时的内容](whats-obsolete.md)
 - [过时类型](obsolete-types.md)

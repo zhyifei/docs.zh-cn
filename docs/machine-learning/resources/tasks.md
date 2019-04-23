@@ -2,21 +2,20 @@
 title: 机器学习任务 - ML.NET
 description: 浏览 ML.NET 中支持的不同机器学习任务和关联的任务。
 ms.custom: seodec18
-ms.date: 01/15/2019
-author: jralexander
-ms.openlocfilehash: 02b454d18eca36c94c27ae15665af5df2ec87905
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.date: 04/12/2019
+author: natke
+ms.openlocfilehash: bfed9cf12f8d539c4327549e5305415ce096e022
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415697"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613156"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 中的机器学习任务
 
-在生成机器学习模型时，首先需要定义你希望通过数据实现的目标。 之后，可以根据你的实际情况选取正确的机器学习任务。 下面介绍了可以从中选择的不同机器学习任务，以及一些常见用例。
+在生成机器学习模型时，首先需要定义你希望通过数据实现的目标。 这样可以根据你的实际情况选择正确的机器学习任务。 下面介绍了可以从中选择的不同机器学习任务，以及一些常见用例。
 
-> [!NOTE]
-> ML.NET 当前处于预览状态。 目前并不支持所有机器学习任务。 若要提交请求以获取某项任务，请在 [dotnet/machinelearning 存储库](https://github.com/dotnet/machinelearning/issues)中打开一个问题。
+决定适合场景的任务后，则需要选择最佳算法来训练模型。 本节列出了每个任务的可用算法。
 
 ## <a name="binary-classification"></a>二元分类
 
@@ -29,30 +28,22 @@ ms.locfileid: "54415697"
 
 有关详细信息，请参阅 Wikipedia 上的[二元分类](https://en.wikipedia.org/wiki/Binary_classification)一文。
 
-推荐的二元分类学习器：
+### <a name="binary-classification-training-algorithms"></a>二元分类训练算法
 
-* AveragedPerceptronTrainer
-* StochasticGradientDescentClassificationTrainer
-* LightGbmBinaryTrainer
-* FastTreeBinaryClassificationTrainer
-* SymSgdClassificationTrainer
+可以使用以下算法训练二元分类模型：
 
-### <a name="binary-classification-learners"></a>二元分类学习器
-
-以下学习器可用于二元分类任务：
-
-* [AveragedPerceptronTrainer](xref:Microsoft.ML.Trainers.Online.AveragedPerceptronTrainer)
-* [BinaryClassificationGamTrainer](xref:Microsoft.ML.Trainers.FastTree.BinaryClassificationGamTrainer)
-* [FastForestClassification](xref:Microsoft.ML.Trainers.FastTree.FastForestClassification)
-* [FastTreeBinaryClassificationTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryClassificationTrainer)
-* [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.FactorizationMachine.FieldAwareFactorizationMachineTrainer)
-* [LightGbmBinaryTrainer](xref:Microsoft.ML.LightGBM.LightGbmBinaryTrainer)
-* [LinearSvmTrainer](xref:Microsoft.ML.Trainers.Online.LinearSvmTrainer)
-* [LogisticRegression](xref:Microsoft.ML.Learners.LogisticRegression)
-* [PriorTrainer](xref:Microsoft.ML.Trainers.PriorTrainer)
-* [RandomTrainer](xref:Microsoft.ML.Trainers.RandomTrainer)
-* [StochasticGradientDescentClassificationTrainer](xref:Microsoft.ML.Trainers.StochasticGradientDescentClassificationTrainer)
-* [SymSgdClassificationTrainer](xref:Microsoft.ML.Trainers.SymSgd.SymSgdClassificationTrainer)
+* <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.PriorTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
 
 ## <a name="multiclass-classification"></a>多类分类
 
@@ -64,28 +55,22 @@ ms.locfileid: "54415697"
 
 有关详细信息，请参阅 Wikipedia 上的[多类分类](https://en.wikipedia.org/wiki/Multiclass_classification)一文。
 
-推荐的多类学习器：
-
-* OVA-AveragedPerceptronTrainer
-* SdcaMultiClassTrainer
-* LightGbmMulticlassTrainer
-* OVA-FastTreeBinaryClassificationTrainer
-
 >[!NOTE]
->OVA 和 PKPD 升级任何[二元分类学习器](#binary-classification)，以便对多类数据集进行操作。 有关详细信息，请参阅 [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)。
+>一个与所有升级任何[二元分类学习器](#binary-classification)，以便对多类数据集进行操作。 有关详细信息，请参阅 [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)。
 
-### <a name="multiclass-classification-learners"></a>多类分类学习器
+### <a name="multiclass-classification-training-algorithms"></a>多类分类训练算法
 
-以下学习器可用于多类分类任务：
+可以使用以下训练算法训练多类分类模型：
 
-* [LightGbmMulticlassTrainer](xref:Microsoft.ML.LightGBM.LightGbmMulticlassTrainer)
-* [MetaMulticlassTrainer<TTransformer,TModel>](xref:Microsoft.ML.Learners.MetaMulticlassTrainer%602)
-* [MultiClassNaiveBayesTrainer](xref:Microsoft.ML.Trainers.MultiClassNaiveBayesTrainer)
-* [Ova](xref:Microsoft.ML.Trainers.Ova)
-* [Pkpd](xref:Microsoft.ML.Trainers.Pkpd)
-* [SdcaMultiClassTrainer](xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer)
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
 
-## <a name="regression"></a>回归
+## <a name="regression"></a>回归测试
 
 [监管式机器学习](glossary.md#supervised-machine-learning)任务，用于从一组相关特征中预测标签值。 标签可以是任何实际值，而不是像在分类任务中那样来自一组有限的值。 回归算法模拟其相关特征上的标签依赖关系，以确定标签将如何随着特征值的变化而变化。 回归算法输入是一组带已知值标签的示例。 回归算法输出是一个函数，可用于预测任何一组新输入特征的标签值。 回归方案示例包括：
 
@@ -93,27 +78,19 @@ ms.locfileid: "54415697"
 * 基于历史数据和当前市场趋势预测将来的股票价格。
 * 基于广告预算预测产品销售。
 
-推荐的回归学习器：
+### <a name="regression-training-algorithms"></a>回归训练算法
 
-* FastTreeTweedieTrainer 
-* LightGbmRegressorTrainer 
-* SdcaRegressionTrainer 
-* FastTreeRegressionTrainer
+可以使用以下算法训练回归模型：
 
-### <a name="regression-learners"></a>回归学习器
-
-以下学习器可用于回归任务：
-
-* [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer)
-* [FastTreeTweedieTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer)
-* [LightGbmRegressorTrainer](xref:Microsoft.ML.LightGBM.LightGbmRegressorTrainer)
-* [OlsLinearRegressionTrainer](xref:Microsoft.ML.Trainers.HalLearners.OlsLinearRegressionTrainer)
-* [OnlineGradientDescentTrainer](xref:Microsoft.ML.Trainers.Online.OnlineGradientDescentTrainer)
-* [PoissonRegression](xref:Microsoft.ML.Trainers.PoissonRegression)
-* [RegressionGamTrainer](xref:Microsoft.ML.Trainers.FastTree.RegressionGamTrainer)
-* [SdcaRegressionTrainer](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer)
-* [FastTree.SingleTrainer](xref:Microsoft.ML.Trainers.FastTree.SingleTrainer)
-* [LightGBM.SingleTrainer](xref:Microsoft.ML.LightGBM.SingleTrainer)
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
 
 ## <a name="clustering"></a>聚类分析
 
@@ -123,11 +100,11 @@ ms.locfileid: "54415697"
 * 确定客户群和人口统计信息来帮助生成目标广告活动。
 * 基于生产指标对清单进行分类。
 
-### <a name="clustering-learners"></a>聚类分析学习器
+### <a name="clustering-training-algorithms"></a>聚类分析训练算法
 
-以下学习器可用于聚类分析任务：
+可以使用以下算法训练聚类分析模型：
 
-* [KMeansPlusPlusTrainer](xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer)
+* <xref:Microsoft.ML.Trainers.KMeansTrainer>
 
 ## <a name="anomaly-detection"></a>异常情况检测
 
@@ -144,30 +121,29 @@ PCA 是机器学习中已建立的一种技术，由于它揭示了数据的内�
 
 根据定义，异常情况属于罕见事件，因此很难收集具有代表性的数据样本用于建模。 此类别中包含的算法是专门设计用来解决使用不平衡数据集建立和定型模型的核心挑战。
 
-### <a name="anomaly-detection-learners"></a>异常情况检测学习器
+### <a name="anomaly-detection-training-algorithms"></a>异常情况检测训练算法
 
-以下学习器可用于异常情况检测任务：
+可以使用以下算法训练异常情况检测模型：
 
-* [RandomizedPcaTrainer](xref:Microsoft.ML.Trainers.PCA.RandomizedPcaTrainer)
+* <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
 
 ## <a name="ranking"></a>排名
 
 排名任务从一组标记的示例构建排名程序。 该示例集由实例组组成，这些实例组可以使用给定的标准进行评分。 每个实例的排名标签是 { 0, 1, 2, 3, 4 }。  排名程序定型为用每个实例的未知分数对新实例组进行排名。 ML.NET 排名学习器基于[机器已学习的排名](https://en.wikipedia.org/wiki/Learning_to_rank)。
 
-### <a name="ranking-learners"></a>排名学习器
+### <a name="ranking-training-algorithms"></a>排名训练算法
 
-以下学习器可用于排名任务：
+可以使用以下算法训练排名模型：
 
-* [FastTreeRankingTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer)
-* [LightGbmRankingTrainer](xref:Microsoft.ML.LightGBM.LightGbmRankingTrainer)
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
 
 ## <a name="recommendation"></a>建议
 
 推荐任务支持生成推荐产品或服务的列表。 ML.NET 使用[矩阵因子分解 (MF)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29)，这是一种[协作筛选](https://en.wikipedia.org/wiki/Collaborative_filtering)算法，当目录中有历史产品评级数据时，推荐使用该算法。 例如，你为用户提供历史电影评级数据，并希望向他们推荐接下来可能观看的其他电影。
 
-### <a name="recommendation-learners"></a>推荐学习器
+### <a name="recommendation-training-algorithms"></a>建议训练算法
 
-以下学习器可用于推荐任务：
+可以使用以下算法训练建议模型：
 
-* [MatrixFactorizationTrainer](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer)
-* [MatrixFactorizationPredictionTransformer](xref:Microsoft.ML.Trainers.Recommender.MatrixFactorizationPredictionTransformer)
+* <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>

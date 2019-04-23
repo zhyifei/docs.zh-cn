@@ -4,12 +4,12 @@ description: .NET 微服务和 Web 应用程序中的安全性 - Azure Key Vault
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 99049dca3d127f82ba5312c94d5246940bb71ba8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 63bf357c95b82a820b6dfb6a2d24a5d89f66de72
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466122"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672415"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>在生产时使用 Azure Key Vault 保护机密
 
@@ -19,13 +19,13 @@ Microsoft.Extensions.Configuration.AzureKeyVault 包允许 ASP.NET Core 应用�
 
 1. 将应用程序注册为 Azure AD 应用程序。 （对密钥保管库的访问由 Azure AD 管理。）可以通过 Azure 管理门户完成此操作。\
 
-   或者，如果希望应用程序使用凭据而非密码或客户端密码进行身份验证，则可以使用 [New-AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet。 向 Azure Key Vault 注册的证书仅需要公钥。 （你的应用程序将使用私钥。）
+   或者，如果希望应用程序使用证书而不是密码或客户端密码进行身份验证，可以使用 [New-AzADApplication](/powershell/module/az.resources/new-azadapplication) PowerShell cmdlet。 向 Azure Key Vault 注册的证书仅需要公钥。 应用程序将使用私钥。
 
 2. 通过创建新的服务主体授予已注册应用程序访问密钥保管库的权限。 可以使用以下 PowerShell 命令来执行此操作：
 
    ```powershell
-   $sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
-   Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
+   $sp = New-AzADServicePrincipal -ApplicationId "<Application ID guid>"
+   Set-AzKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
    ```
 
 3. 创建 <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> 实例时通过调用 <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> 扩展方法将密钥保管库作为配置源包括在应用程序中。 请注意，调用 `AddAzureKeyVault` 将需要前面步骤中已注册并已获取密钥保管库访问权限的应用程序 ID。
@@ -50,7 +50,7 @@ Microsoft.Extensions.Configuration.AzureKeyVault 包允许 ASP.NET Core 应用�
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
 
 - Microsoft.Extensions.Configuration.KeyPerFile GitHub 存储库。 \
-  [https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
+  <https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile>
 
 >[!div class="step-by-step"]
 >[上一页](developer-app-secrets-storage.md)
