@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 785defaa69609fc30852be9996531e6063586ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092378"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977738"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="c880b-102">ICorDebugCode::GetEnCRemapSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="c880b-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
-<span data-ttu-id="c880b-103">当前版本的.NET Framework 中未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="c880b-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="615df-102">ICorDebugCode::GetEnCRemapSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="615df-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+<span data-ttu-id="615df-103">当前版本的.NET Framework 中未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="615df-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c880b-104">语法</span><span class="sxs-lookup"><span data-stu-id="c880b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="615df-104">语法</span><span class="sxs-lookup"><span data-stu-id="615df-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEnCRemapSequencePoints(  
@@ -38,4 +38,4 @@ HRESULT GetEnCRemapSequencePoints(
 );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c880b-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="c880b-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="615df-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="615df-105">See also</span></span>

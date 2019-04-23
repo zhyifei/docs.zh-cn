@@ -3,20 +3,20 @@ title: 如何：查找两个列表之间的差集 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
 ms.openlocfilehash: a00b3ea6bcab13bbb3af56027c4c49a9bb562c3f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306307"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a><span data-ttu-id="7b85e-102">如何：查找两个列表之间的差集 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="7b85e-102">How to: Find the Set Difference Between Two Lists (LINQ) (C#)</span></span>
-<span data-ttu-id="7b85e-103">此示例演示如何使用 LINQ 对两个字符串列表进行比较，并输出那些位于 names1.txt 中但不在 names2.txt 中的行。</span><span class="sxs-lookup"><span data-stu-id="7b85e-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a><span data-ttu-id="cc9e6-102">如何：查找两个列表之间的差集 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="cc9e6-102">How to: Find the Set Difference Between Two Lists (LINQ) (C#)</span></span>
+<span data-ttu-id="cc9e6-103">此示例演示如何使用 LINQ 对两个字符串列表进行比较，并输出那些位于 names1.txt 中但不在 names2.txt 中的行。</span><span class="sxs-lookup"><span data-stu-id="cc9e6-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="7b85e-104">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="7b85e-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="cc9e6-104">创建数据文件</span><span class="sxs-lookup"><span data-stu-id="cc9e6-104">To create the data files</span></span>  
   
-1. <span data-ttu-id="7b85e-105">按照[如何：组合和比较字符串集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md) 中的说明，将 names1.txt 和 names2.txt 复制到解决方案文件夹中。</span><span class="sxs-lookup"><span data-stu-id="7b85e-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
+1. <span data-ttu-id="cc9e6-105">按照[如何：组合和比较字符串集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md) 中的说明，将 names1.txt 和 names2.txt 复制到解决方案文件夹中。</span><span class="sxs-lookup"><span data-stu-id="cc9e6-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7b85e-106">示例</span><span class="sxs-lookup"><span data-stu-id="7b85e-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="cc9e6-106">示例</span><span class="sxs-lookup"><span data-stu-id="cc9e6-106">Example</span></span>  
   
 ```csharp  
 class CompareLists  
@@ -52,11 +52,11 @@ class CompareLists
      */  
 ```  
   
- <span data-ttu-id="7b85e-107">C# 中某些类型的查询操作（例如 <xref:System.Linq.Enumerable.Except%2A>、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Union%2A> 和 <xref:System.Linq.Enumerable.Concat%2A>）只能用基于方法的语法表示。</span><span class="sxs-lookup"><span data-stu-id="7b85e-107">Some types of query operations in C#, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
+ <span data-ttu-id="cc9e6-107">C# 中某些类型的查询操作（例如 <xref:System.Linq.Enumerable.Except%2A>、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Union%2A> 和 <xref:System.Linq.Enumerable.Concat%2A>）只能用基于方法的语法表示。</span><span class="sxs-lookup"><span data-stu-id="cc9e6-107">Some types of query operations in C#, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="7b85e-108">编译代码</span><span class="sxs-lookup"><span data-stu-id="7b85e-108">Compiling the Code</span></span>  
- <span data-ttu-id="7b85e-109">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="7b85e-109">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="cc9e6-108">编译代码</span><span class="sxs-lookup"><span data-stu-id="cc9e6-108">Compiling the Code</span></span>  
+ <span data-ttu-id="cc9e6-109">创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和针对 System.Linq 和 System.IO 命名空间的 `using` 指令。</span><span class="sxs-lookup"><span data-stu-id="cc9e6-109">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7b85e-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="7b85e-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc9e6-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="cc9e6-110">See also</span></span>
 
-- [<span data-ttu-id="7b85e-111">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="7b85e-111">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="cc9e6-111">LINQ 和字符串 (C#)</span><span class="sxs-lookup"><span data-stu-id="cc9e6-111">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
