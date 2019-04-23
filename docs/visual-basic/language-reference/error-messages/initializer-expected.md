@@ -8,30 +8,30 @@ helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
 ms.openlocfilehash: 0795fdc1c4b177e13979d7555cd7588217b8cb4c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334960"
 ---
-# <a name="initializer-expected"></a><span data-ttu-id="09498-102">应为初始值设定项</span><span class="sxs-lookup"><span data-stu-id="09498-102">Initializer expected</span></span>
-<span data-ttu-id="09498-103">已尝试通过使用对象初始值设定项中的初始化列表为空，如下面的示例中所示声明类的实例。</span><span class="sxs-lookup"><span data-stu-id="09498-103">You have tried to declare an instance of a class by using an object initializer in which the initialization list is empty, as shown in the following example.</span></span>  
+# <a name="initializer-expected"></a><span data-ttu-id="95b55-102">应为初始值设定项</span><span class="sxs-lookup"><span data-stu-id="95b55-102">Initializer expected</span></span>
+<span data-ttu-id="95b55-103">已尝试通过使用对象初始值设定项中的初始化列表为空，如下面的示例中所示声明类的实例。</span><span class="sxs-lookup"><span data-stu-id="95b55-103">You have tried to declare an instance of a class by using an object initializer in which the initialization list is empty, as shown in the following example.</span></span>  
   
  `' Not valid.`  
   
  `' Dim aStudent As New Student With {}`  
   
- <span data-ttu-id="09498-104">下面的示例中所示，必须在初始值设定项列表中，初始化至少一个字段或属性。</span><span class="sxs-lookup"><span data-stu-id="09498-104">At least one field or property must be initialized in the initializer list, as shown in the following example.</span></span>  
+ <span data-ttu-id="95b55-104">下面的示例中所示，必须在初始值设定项列表中，初始化至少一个字段或属性。</span><span class="sxs-lookup"><span data-stu-id="95b55-104">At least one field or property must be initialized in the initializer list, as shown in the following example.</span></span>  
   
  `Dim aStudent As New Student With {.year = "Senior"}`  
   
- <span data-ttu-id="09498-105">**错误 ID:** BC30996</span><span class="sxs-lookup"><span data-stu-id="09498-105">**Error ID:** BC30996</span></span>  
+ <span data-ttu-id="95b55-105">**错误 ID:** BC30996</span><span class="sxs-lookup"><span data-stu-id="95b55-105">**Error ID:** BC30996</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="09498-106">更正此错误</span><span class="sxs-lookup"><span data-stu-id="09498-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="95b55-106">更正此错误</span><span class="sxs-lookup"><span data-stu-id="95b55-106">To correct this error</span></span>  
   
-1. <span data-ttu-id="09498-107">初始化至少一个字段或属性初始值设定项，或不使用对象初始值设定项。</span><span class="sxs-lookup"><span data-stu-id="09498-107">Initialize at least one field or property in the initializer, or do not use an object initializer.</span></span>  
+1. <span data-ttu-id="95b55-107">初始化至少一个字段或属性初始值设定项，或不使用对象初始值设定项。</span><span class="sxs-lookup"><span data-stu-id="95b55-107">Initialize at least one field or property in the initializer, or do not use an object initializer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09498-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="09498-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95b55-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="95b55-108">See also</span></span>
 
-- [<span data-ttu-id="09498-109">对象初始值设定项：命名和匿名类型</span><span class="sxs-lookup"><span data-stu-id="09498-109">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [<span data-ttu-id="09498-110">如何：使用对象初始值设定项声明对象</span><span class="sxs-lookup"><span data-stu-id="09498-110">How to: Declare an Object by Using an Object Initializer</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+- [<span data-ttu-id="95b55-109">对象初始值设定项：命名和匿名类型</span><span class="sxs-lookup"><span data-stu-id="95b55-109">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [<span data-ttu-id="95b55-110">如何：使用对象初始值设定项声明对象</span><span class="sxs-lookup"><span data-stu-id="95b55-110">How to: Declare an Object by Using an Object Initializer</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

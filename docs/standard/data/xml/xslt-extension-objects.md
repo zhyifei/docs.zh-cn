@@ -6,39 +6,39 @@ ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320413"
 ---
-# <a name="xslt-extension-objects"></a><span data-ttu-id="bc946-102">XSLT 扩展对象</span><span class="sxs-lookup"><span data-stu-id="bc946-102">XSLT Extension Objects</span></span>
-<span data-ttu-id="bc946-103">扩展对象用于扩展样式表的功能。</span><span class="sxs-lookup"><span data-stu-id="bc946-103">Extension objects are used to extend the functionality of style sheets.</span></span> <span data-ttu-id="bc946-104">扩展对象通过 <xref:System.Xml.Xsl.XsltArgumentList> 类来维护。</span><span class="sxs-lookup"><span data-stu-id="bc946-104">Extension objects are maintained by the <xref:System.Xml.Xsl.XsltArgumentList> class.</span></span>  
+# <a name="xslt-extension-objects"></a><span data-ttu-id="ce778-102">XSLT 扩展对象</span><span class="sxs-lookup"><span data-stu-id="ce778-102">XSLT Extension Objects</span></span>
+<span data-ttu-id="ce778-103">扩展对象用于扩展样式表的功能。</span><span class="sxs-lookup"><span data-stu-id="ce778-103">Extension objects are used to extend the functionality of style sheets.</span></span> <span data-ttu-id="ce778-104">扩展对象通过 <xref:System.Xml.Xsl.XsltArgumentList> 类来维护。</span><span class="sxs-lookup"><span data-stu-id="ce778-104">Extension objects are maintained by the <xref:System.Xml.Xsl.XsltArgumentList> class.</span></span>  
   
- <span data-ttu-id="bc946-105">与使用嵌入脚本相比，使用扩展对象具有以下优点：</span><span class="sxs-lookup"><span data-stu-id="bc946-105">The following are advantages to using an extension object rather than embedded script:</span></span>  
+ <span data-ttu-id="ce778-105">与使用嵌入脚本相比，使用扩展对象具有以下优点：</span><span class="sxs-lookup"><span data-stu-id="ce778-105">The following are advantages to using an extension object rather than embedded script:</span></span>  
   
--   <span data-ttu-id="bc946-106">改善了类的包装和重用。</span><span class="sxs-lookup"><span data-stu-id="bc946-106">Provides better encapsulation and reuse of classes.</span></span>  
+-   <span data-ttu-id="ce778-106">改善了类的包装和重用。</span><span class="sxs-lookup"><span data-stu-id="ce778-106">Provides better encapsulation and reuse of classes.</span></span>  
   
--   <span data-ttu-id="bc946-107">使样式表可以更小而且更容易维护。</span><span class="sxs-lookup"><span data-stu-id="bc946-107">Allows style sheets to be smaller and more maintainable.</span></span>  
+-   <span data-ttu-id="ce778-107">使样式表可以更小而且更容易维护。</span><span class="sxs-lookup"><span data-stu-id="ce778-107">Allows style sheets to be smaller and more maintainable.</span></span>  
   
- <span data-ttu-id="bc946-108">使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法将 XSLT 扩展对象添加到 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 对象。</span><span class="sxs-lookup"><span data-stu-id="bc946-108">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> object using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="bc946-109">此时，限定名和命名空间 URI 与扩展对象关联。</span><span class="sxs-lookup"><span data-stu-id="bc946-109">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
+ <span data-ttu-id="ce778-108">使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法将 XSLT 扩展对象添加到 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 对象。</span><span class="sxs-lookup"><span data-stu-id="ce778-108">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> object using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="ce778-109">此时，限定名和命名空间 URI 与扩展对象关联。</span><span class="sxs-lookup"><span data-stu-id="ce778-109">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="bc946-110">调用 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 方法要求具有 FullTrust 权限集。</span><span class="sxs-lookup"><span data-stu-id="bc946-110">The FullTrust permission set is required to call the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="bc946-111">有关详细信息，请参阅[代码访问安全性](../../../../docs/framework/misc/code-access-security.md)和[命名权限集](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="bc946-111">For more information, see [Code Access Security](../../../../docs/framework/misc/code-access-security.md) and [Named Permission Sets](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).</span></span>  
+>  <span data-ttu-id="ce778-110">调用 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 方法要求具有 FullTrust 权限集。</span><span class="sxs-lookup"><span data-stu-id="ce778-110">The FullTrust permission set is required to call the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="ce778-111">有关详细信息，请参阅[代码访问安全性](../../../../docs/framework/misc/code-access-security.md)和[命名权限集](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="ce778-111">For more information, see [Code Access Security](../../../../docs/framework/misc/code-access-security.md) and [Named Permission Sets](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).</span></span>  
   
- <span data-ttu-id="bc946-112">从扩展对象返回的数据类型是四种 XPath 基本数据类型之一：`number`、`string`、`Boolean` 和 `node set`。</span><span class="sxs-lookup"><span data-stu-id="bc946-112">The data types returned from extension objects are one of the four basic XPath data types of `number`, `string`, `Boolean`, and `node set`.</span></span>  
+ <span data-ttu-id="ce778-112">从扩展对象返回的数据类型是四种 XPath 基本数据类型之一：`number`、`string`、`Boolean` 和 `node set`。</span><span class="sxs-lookup"><span data-stu-id="ce778-112">The data types returned from extension objects are one of the four basic XPath data types of `number`, `string`, `Boolean`, and `node set`.</span></span>  
   
- <span data-ttu-id="bc946-113">任何使用 `params` 关键字定义的方法允许传递未指定的参数数目，<xref:System.Xml.Xsl.XslCompiledTransform> 类目前不支持。</span><span class="sxs-lookup"><span data-stu-id="bc946-113">Any method that is defined with the `params` keyword, which allows an unspecified number of parameters to be passed, is not currently supported by the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="bc946-114">利用通过 `params` 关键字定义的方法的 XSLT 样式表也无法正确使用。</span><span class="sxs-lookup"><span data-stu-id="bc946-114">XSLT style sheets that utilize any method defined with the `params` keyword will not work correctly.</span></span> <span data-ttu-id="bc946-115">有关详细信息，请参阅 [params](~/docs/csharp/language-reference/keywords/params.md)。</span><span class="sxs-lookup"><span data-stu-id="bc946-115">For details, see [params](~/docs/csharp/language-reference/keywords/params.md).</span></span>  
+ <span data-ttu-id="ce778-113">任何使用 `params` 关键字定义的方法允许传递未指定的参数数目，<xref:System.Xml.Xsl.XslCompiledTransform> 类目前不支持。</span><span class="sxs-lookup"><span data-stu-id="ce778-113">Any method that is defined with the `params` keyword, which allows an unspecified number of parameters to be passed, is not currently supported by the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="ce778-114">利用通过 `params` 关键字定义的方法的 XSLT 样式表也无法正确使用。</span><span class="sxs-lookup"><span data-stu-id="ce778-114">XSLT style sheets that utilize any method defined with the `params` keyword will not work correctly.</span></span> <span data-ttu-id="ce778-115">有关详细信息，请参阅 [params](~/docs/csharp/language-reference/keywords/params.md)。</span><span class="sxs-lookup"><span data-stu-id="ce778-115">For details, see [params](~/docs/csharp/language-reference/keywords/params.md).</span></span>  
   
-### <a name="to-use-an-xslt-extension-object"></a><span data-ttu-id="bc946-116">使用 XSLT 扩展对象</span><span class="sxs-lookup"><span data-stu-id="bc946-116">To use an XSLT extension object</span></span>  
+### <a name="to-use-an-xslt-extension-object"></a><span data-ttu-id="ce778-116">使用 XSLT 扩展对象</span><span class="sxs-lookup"><span data-stu-id="ce778-116">To use an XSLT extension object</span></span>  
   
-1. <span data-ttu-id="bc946-117">创建 <xref:System.Xml.Xsl.XsltArgumentList> 对象并使用 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 方法添加扩展对象。</span><span class="sxs-lookup"><span data-stu-id="bc946-117">Create an <xref:System.Xml.Xsl.XsltArgumentList> object and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span>  
+1. <span data-ttu-id="ce778-117">创建 <xref:System.Xml.Xsl.XsltArgumentList> 对象并使用 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 方法添加扩展对象。</span><span class="sxs-lookup"><span data-stu-id="ce778-117">Create an <xref:System.Xml.Xsl.XsltArgumentList> object and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span>  
   
-2. <span data-ttu-id="bc946-118">从样式表调用扩展对象。</span><span class="sxs-lookup"><span data-stu-id="bc946-118">Call the extension object from the style sheet.</span></span>  
+2. <span data-ttu-id="ce778-118">从样式表调用扩展对象。</span><span class="sxs-lookup"><span data-stu-id="ce778-118">Call the extension object from the style sheet.</span></span>  
   
-3. <span data-ttu-id="bc946-119">将 <xref:System.Xml.Xsl.XsltArgumentList> 对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="bc946-119">Pass the <xref:System.Xml.Xsl.XsltArgumentList> object to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  
+3. <span data-ttu-id="ce778-119">将 <xref:System.Xml.Xsl.XsltArgumentList> 对象传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="ce778-119">Pass the <xref:System.Xml.Xsl.XsltArgumentList> object to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc946-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="bc946-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce778-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="ce778-120">See also</span></span>
 
-- [<span data-ttu-id="bc946-121">XSLT 转换</span><span class="sxs-lookup"><span data-stu-id="bc946-121">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [<span data-ttu-id="bc946-122">XSLT 安全注意事项</span><span class="sxs-lookup"><span data-stu-id="bc946-122">XSLT Security Considerations</span></span>](../../../../docs/standard/data/xml/xslt-security-considerations.md)
+- [<span data-ttu-id="ce778-121">XSLT 转换</span><span class="sxs-lookup"><span data-stu-id="ce778-121">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [<span data-ttu-id="ce778-122">XSLT 安全注意事项</span><span class="sxs-lookup"><span data-stu-id="ce778-122">XSLT Security Considerations</span></span>](../../../../docs/standard/data/xml/xslt-security-considerations.md)

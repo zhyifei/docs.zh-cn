@@ -8,39 +8,40 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6987dea6f122819b9f1c0d334440d87545368942
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 2b7aa028afeaf4230ee079f0d4071a5cd6a21c65
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220098"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59320907"
 ---
-# <a name="exposing-com-components-to-the-net-framework"></a><span data-ttu-id="bd8d9-102">向 .NET Framework 公开 COM 组件</span><span class="sxs-lookup"><span data-stu-id="bd8d9-102">Exposing COM Components to the .NET Framework</span></span>
-<span data-ttu-id="bd8d9-103">本部分概述向托管代码公开现有 COM 组件所需的步骤。</span><span class="sxs-lookup"><span data-stu-id="bd8d9-103">This section summarizes the process needed to expose an existing COM component to managed code.</span></span> <span data-ttu-id="bd8d9-104">有关编写与 .NET Framework 紧密集成的 COM 服务器的详细信息，请参阅[互操作的设计注意事项](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="bd8d9-104">For details about writing COM servers that tightly integrate with the .NET Framework, see [Design Considerations for Interoperation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).</span></span>
+# <a name="exposing-com-components-to-the-net-framework"></a><span data-ttu-id="4fe05-102">向 .NET Framework 公开 COM 组件</span><span class="sxs-lookup"><span data-stu-id="4fe05-102">Exposing COM Components to the .NET Framework</span></span>
+<span data-ttu-id="4fe05-103">本部分概述向托管代码公开现有 COM 组件所需的步骤。</span><span class="sxs-lookup"><span data-stu-id="4fe05-103">This section summarizes the process needed to expose an existing COM component to managed code.</span></span> <span data-ttu-id="4fe05-104">有关编写与 .NET Framework 紧密集成的 COM 服务器的详细信息，请参阅[互操作的设计注意事项](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="4fe05-104">For details about writing COM servers that tightly integrate with the .NET Framework, see [Design Considerations for Interoperation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).</span></span>
   
- <span data-ttu-id="bd8d9-105">作为中间层业务应用程序或独立功能，现有 COM 组件是托管代码中的宝贵资源。</span><span class="sxs-lookup"><span data-stu-id="bd8d9-105">Existing COM components are valuable resources in managed code as middle-tier business applications or as isolated functionality.</span></span> <span data-ttu-id="bd8d9-106">理想的组件具有主互操作程序集，且完全符合 COM 实施的编程标准。</span><span class="sxs-lookup"><span data-stu-id="bd8d9-106">An ideal component has a primary interop assembly and conforms tightly to the programming standards imposed by COM.</span></span>  
+ <span data-ttu-id="4fe05-105">作为中间层业务应用程序或独立功能，现有 COM 组件是托管代码中的宝贵资源。</span><span class="sxs-lookup"><span data-stu-id="4fe05-105">Existing COM components are valuable resources in managed code as middle-tier business applications or as isolated functionality.</span></span> <span data-ttu-id="4fe05-106">理想的组件具有主互操作程序集，且完全符合 COM 实施的编程标准。</span><span class="sxs-lookup"><span data-stu-id="4fe05-106">An ideal component has a primary interop assembly and conforms tightly to the programming standards imposed by COM.</span></span>  
   
-#### <a name="to-expose-com-components-to-the-net-framework"></a><span data-ttu-id="bd8d9-107">向 .NET Framework 公开 COM 组件</span><span class="sxs-lookup"><span data-stu-id="bd8d9-107">To expose COM components to the .NET Framework</span></span>  
+#### <a name="to-expose-com-components-to-the-net-framework"></a><span data-ttu-id="4fe05-107">向 .NET Framework 公开 COM 组件</span><span class="sxs-lookup"><span data-stu-id="4fe05-107">To expose COM components to the .NET Framework</span></span>  
   
-1.  <span data-ttu-id="bd8d9-108">[将类型库当作程序集导入](importing-a-type-library-as-an-assembly.md)。</span><span class="sxs-lookup"><span data-stu-id="bd8d9-108">[Import a type library as an assembly](importing-a-type-library-as-an-assembly.md).</span></span>  
+1. <span data-ttu-id="4fe05-108">[将类型库当作程序集导入](importing-a-type-library-as-an-assembly.md)。</span><span class="sxs-lookup"><span data-stu-id="4fe05-108">[Import a type library as an assembly](importing-a-type-library-as-an-assembly.md).</span></span>  
   
-     <span data-ttu-id="bd8d9-109">公共语言运行时需要包括 COM 类型在内的所有类型的元数据。</span><span class="sxs-lookup"><span data-stu-id="bd8d9-109">The common language runtime requires metadata for all types, including COM types.</span></span> <span data-ttu-id="bd8d9-110">有多种方法来获取包含 COM 类型（作为元数据导入）的程序集。</span><span class="sxs-lookup"><span data-stu-id="bd8d9-110">There are several ways to obtain an assembly containing COM types imported as metadata.</span></span>  
+     <span data-ttu-id="4fe05-109">公共语言运行时需要包括 COM 类型在内的所有类型的元数据。</span><span class="sxs-lookup"><span data-stu-id="4fe05-109">The common language runtime requires metadata for all types, including COM types.</span></span> <span data-ttu-id="4fe05-110">有多种方法来获取包含 COM 类型（作为元数据导入）的程序集。</span><span class="sxs-lookup"><span data-stu-id="4fe05-110">There are several ways to obtain an assembly containing COM types imported as metadata.</span></span>  
   
-2.  <span data-ttu-id="bd8d9-111">[在托管代码中使用 COM 类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="bd8d9-111">[Use COM types in managed Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).</span></span>  
+2. <span data-ttu-id="4fe05-111">[在托管代码中使用 COM 类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="4fe05-111">[Use COM types in managed Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).</span></span>  
   
-     <span data-ttu-id="bd8d9-112">可检查 COM 类型、激活实例，并采用在任何托管类型上进行调用的方式在 COM 对象上调用方法。</span><span class="sxs-lookup"><span data-stu-id="bd8d9-112">You can inspect COM types, activate instances, and invoke methods on the COM object the same way you do for any managed type.</span></span>  
+     <span data-ttu-id="4fe05-112">可检查 COM 类型、激活实例，并采用在任何托管类型上进行调用的方式在 COM 对象上调用方法。</span><span class="sxs-lookup"><span data-stu-id="4fe05-112">You can inspect COM types, activate instances, and invoke methods on the COM object the same way you do for any managed type.</span></span>  
   
-3.  <span data-ttu-id="bd8d9-113">[编译互操作项目](compiling-an-interop-project.md)。</span><span class="sxs-lookup"><span data-stu-id="bd8d9-113">[Compile an interop project](compiling-an-interop-project.md).</span></span>  
+3. <span data-ttu-id="4fe05-113">[编译互操作项目](compiling-an-interop-project.md)。</span><span class="sxs-lookup"><span data-stu-id="4fe05-113">[Compile an interop project](compiling-an-interop-project.md).</span></span>  
   
-     <span data-ttu-id="bd8d9-114">[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 为符合公共语言规范 (CLS) 的多种语言提供编译器，包括 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++。</span><span class="sxs-lookup"><span data-stu-id="bd8d9-114">The [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] provides compilers for several languages compliant with the Common Language Specification (CLS), including [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C#, and C++.</span></span>  
+     <span data-ttu-id="4fe05-114">[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 为符合公共语言规范 (CLS) 的多种语言提供编译器，包括 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++。</span><span class="sxs-lookup"><span data-stu-id="4fe05-114">The [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] provides compilers for several languages compliant with the Common Language Specification (CLS), including [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C#, and C++.</span></span>  
   
-4.  <span data-ttu-id="bd8d9-115">[部署互操作应用程序](deploying-an-interop-application.md)。</span><span class="sxs-lookup"><span data-stu-id="bd8d9-115">[Deploy an interop application](deploying-an-interop-application.md).</span></span>  
+4. <span data-ttu-id="4fe05-115">[部署互操作应用程序](deploying-an-interop-application.md)。</span><span class="sxs-lookup"><span data-stu-id="4fe05-115">[Deploy an interop application](deploying-an-interop-application.md).</span></span>  
   
-     <span data-ttu-id="bd8d9-116">最好将互操作应用程序部署为全局程序集缓存中具有[强名称](../app-domains/strong-named-assemblies.md)的签名程序集。</span><span class="sxs-lookup"><span data-stu-id="bd8d9-116">Interop applications are best deployed as [strong-named](../app-domains/strong-named-assemblies.md), signed assemblies in the global assembly cache.</span></span>  
+     <span data-ttu-id="4fe05-116">最好将互操作应用程序部署为全局程序集缓存中具有[强名称](../app-domains/strong-named-assemblies.md)的签名程序集。</span><span class="sxs-lookup"><span data-stu-id="4fe05-116">Interop applications are best deployed as [strong-named](../app-domains/strong-named-assemblies.md), signed assemblies in the global assembly cache.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd8d9-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="bd8d9-117">See also</span></span>
-- [<span data-ttu-id="bd8d9-118">与非托管代码交互操作</span><span class="sxs-lookup"><span data-stu-id="bd8d9-118">Interoperating with Unmanaged Code</span></span>](index.md)
-- <span data-ttu-id="bd8d9-119">[互操作的设计注意事项](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="bd8d9-119">[Design Considerations for Interoperation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))</span></span>
-- [<span data-ttu-id="bd8d9-120">COM 互操作示例：.NET 客户端和 COM 服务器</span><span class="sxs-lookup"><span data-stu-id="bd8d9-120">COM Interop Sample: .NET Client and COM Server</span></span>](com-interop-sample-net-client-and-com-server.md)
-- [<span data-ttu-id="bd8d9-121">语言独立性和与语言无关的组件</span><span class="sxs-lookup"><span data-stu-id="bd8d9-121">Language Independence and Language-Independent Components</span></span>](../../standard/language-independence-and-language-independent-components.md)
-- [<span data-ttu-id="bd8d9-122">Gacutil.exe（全局程序集缓存工具）</span><span class="sxs-lookup"><span data-stu-id="bd8d9-122">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../tools/gacutil-exe-gac-tool.md)
+## <a name="see-also"></a><span data-ttu-id="4fe05-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="4fe05-117">See also</span></span>
+
+- [<span data-ttu-id="4fe05-118">与非托管代码交互操作</span><span class="sxs-lookup"><span data-stu-id="4fe05-118">Interoperating with Unmanaged Code</span></span>](index.md)
+- <span data-ttu-id="4fe05-119">[互操作的设计注意事项](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="4fe05-119">[Design Considerations for Interoperation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))</span></span>
+- [<span data-ttu-id="4fe05-120">COM 互操作示例：.NET 客户端和 COM 服务器</span><span class="sxs-lookup"><span data-stu-id="4fe05-120">COM Interop Sample: .NET Client and COM Server</span></span>](com-interop-sample-net-client-and-com-server.md)
+- [<span data-ttu-id="4fe05-121">语言独立性和与语言无关的组件</span><span class="sxs-lookup"><span data-stu-id="4fe05-121">Language Independence and Language-Independent Components</span></span>](../../standard/language-independence-and-language-independent-components.md)
+- [<span data-ttu-id="4fe05-122">Gacutil.exe（全局程序集缓存工具）</span><span class="sxs-lookup"><span data-stu-id="4fe05-122">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../tools/gacutil-exe-gac-tool.md)
